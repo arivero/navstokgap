@@ -1,4 +1,12 @@
-# Sources for the first comparison
+# Source catalogue
+
+## Mechanics investigation
+
+- [Newton, Motte/Chittenden 1846 opening material](Newton_Principia_Motte1846.md), with local HTML and two selected historical figures.
+- [Newton, Book I Section I, Motte/Wilkins excerpt](Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md), with local PDF and readable formulae.
+- [Feynman, action and path phases](Feynman_LeastAction_II19.md), online reading note; direct HTML download returned 403.
+
+## Original comparison sources
 
 Retrieved 2026-09-05 from Clay and versioned arXiv PDFs. Each PDF has a short
 Markdown companion recording the portions used and limits of the reading.
@@ -18,5 +26,5 @@ the extraction is not offered as a faithful equation transcription. Formulae in
 our comparison are written in our stated conventions and explicitly derived where
 needed. None of the research papers has undergone a full proof audit here.
 
-PDF byte identity is recorded in [SHA256SUMS](SHA256SUMS); verify from the repository
+Downloaded source byte identity is recorded in [SHA256SUMS](SHA256SUMS); verify from the repository
 root with `sha256sum -c docs/SHA256SUMS`.

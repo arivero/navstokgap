@@ -1,10 +1,19 @@
-# Navier–Stokes and Yang–Mills assessment
+# Newtonian trajectories and action scales
 
-Initial orientation: 2026-09-05. This repository is for assessing arguments about
-the Navier–Stokes and Yang–Mills existence and mass gap Millennium problems.
-The first comparison milestone is complete. The next discussion concerns a more
-complicated toy model to be supplied by the user; work on the Millennium problems
-themselves is outside the present scope.
+Initial orientation: 2026-09-05. The Millennium comparison was preparation for the
+actual project: Newtonian trajectories, central potentials, and a proposed physical
+action-scale restriction. The first comparison milestone is complete; work on the
+Millennium problems themselves is outside the present scope.
+
+## Active mechanics investigation
+
+- [Principia and constant-force action](notes/principia-constant-force-action.md): historical reading, exact geometric areas, action differences and the limits of the quantum interpretation.
+- [Reusable skill](skills/principia-action/SKILL.md): context for main and subagent sessions, routed by [AGENTS.md](AGENTS.md).
+- [Exact checks](out/constant-force-checks.json) and [diagram](out/constant-force-areas.svg), reproduced with `python3 scripts/constant_force_geometry.py`.
+
+A positive action gap remains a hypothesis to formulate and test. The current
+constant-force result is an exact relation between a chord-curve area and an
+action difference, not a derivation of Planck's constant.
 
 ## First milestone
 
@@ -13,7 +22,7 @@ themselves is outside the present scope.
 - [Source catalogue](docs/README.md): five local PDFs with reading notes and checksums.
 - [Milestone review](reviews/first-milestone.md): verification scope and remaining limitations.
 
-## Mathematical scope
+## Mathematical scope of the completed comparison
 
 See [the problem definitions](notes/millennium-problem-definitions.md) for the
 equations, admissibility conditions, alternatives A–D and quantum mass gap requirement.
@@ -54,10 +63,11 @@ reputation of the problems.
 
 Local executable discovery on 2026-09-05 found `python3`, `pdftotext`, `pandoc`
 and `git` on PATH. It did not find `julia`, `sage`, `lean`, `lake` or `latexmk`.
-This is not a complete software inventory; Python packages were not inspected.
-No software was installed during this orientation.
+This was not a complete software inventory. The mechanics calculation subsequently
+verified SymPy 1.14.0 and Matplotlib 3.10.9 as available. No scientific software
+installation was needed.
 
-## Proposed agent roles
+## Agent roles proposed for the original comparison
 
 These are roles to activate for bounded tasks, not agents launched for this note.
 The session currently permits the coordinator plus three simultaneous subagents;
@@ -85,14 +95,16 @@ Create directories when they acquire actual content:
 docs/          Source catalogue, originals and checked reading notes
 notes/         Problem statements, common notation and comparisons
 claims/        Claims, assumptions, dependencies, status and objections
-experiments/   Reproducible scripts and outputs
+scripts/       Reproducible calculations and figure generation
+out/           Calculation outputs and figures
+skills/        Maintained research-context skills
 formal/        Selected formal lemmas and pinned toolchain
 reviews/       Independent assessments and resolved or outstanding objections
 ```
 
-The first substantive deliverable is linked above. When the user's toy model arrives,
-identify its own mathematical target and compare its structures with the documented
-bridges before assessing any argument about it.
+The first substantive deliverable is linked above. The mechanics discussion now
+has its own note and reusable skill. As its physical hypothesis is refined, identify
+the exact target and distinguish it from the preparatory Millennium analogies.
 Use statuses such as sourced theorem, checked derivation, conditional claim,
 heuristic, numerical evidence and refuted claim. Do not count one as another.
 
