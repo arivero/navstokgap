@@ -8,6 +8,15 @@ equivalent or report the mismatch. Do not silently choose a larger paid model.
 
 ## Dispatch
 
+Never select `ultra`: the user prohibited it to conserve tokens (2026-09-06).
+This applies to every worker, reviewer and descendant, regardless of model.
+Explicitly request a supported non-ultra effort for each spawn; use fresh or
+limited context when full-history inheritance would prevent the override. Do not
+spawn with unknown inherited effort. Prefer low/medium for routine source work;
+use higher non-ultra settings only when the bounded task warrants them. Announce
+the task ID, model and effort before dispatch. This is a project instruction, not
+a claim that the hosting application's settings were changed.
+
 Coordinator: pass a concrete task ID, paths to AGENTS/PROGRAMME/role instructions,
 the exact question and allowed write paths. For Luna/Sol overrides use a bounded
 context rather than a full conversation fork. Require workers to read applicable
@@ -31,7 +40,9 @@ searching selected words.
 
 Save `research/handoffs/<task-id>.md` containing:
 
-- Task, model/role, date, input revisions or paths and output paths.
+- Task, role, explicitly requested model and reasoning effort, date, input
+  revisions or paths and output paths. Distinguish requested settings from
+  independently reported effective settings; do not invent the latter.
 - Searches/open routes attempted, identifiers and edition choices.
 - Exact reading coverage, extraction defects and uncertain mathematical symbols.
 - Findings with source anchors; claims NOT established by the source.

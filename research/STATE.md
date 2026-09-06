@@ -4,6 +4,10 @@ Updated: 2026-09-06. Milestone complete: persistent research programme and first
 
 ## What a fresh agent should know
 
+- User cost constraint: never select `ultra`, including through subagent
+  inheritance. Explicitly choose a supported non-ultra effort and announce/record
+  model plus effort for each dispatch. See `agents/PROTOCOL.md`. This rule was
+  added after the first milestone; it does not relabel historical dispatches.
 - Actual project: Newtonian trajectories, action scales and mechanisms for gaps.
   The Millennium comparison is completed preparation, not permission to attempt
   either Millennium problem in this repository now.

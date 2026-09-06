@@ -11,6 +11,12 @@ blanket permission for unbounded autonomous teams. The coordinator owns the shar
 task board, bibliography, claim ledger and manuscript integration. Workers edit
 only their assigned paths and do not commit unless explicitly assigned to do so.
 
+User cost constraint (2026-09-06): never request `ultra` reasoning effort for any
+run this agent controls, including subagents and descendants. Set a supported
+non-ultra effort explicitly when spawning; do not inherit unknown/ultra settings.
+Use a fresh or limited-context dispatch if a full-history fork prevents an effort
+override. Announce the selected model and effort and record both in the handoff.
+
 # Research context
 
 The active project concerns Newtonian trajectories and proposed quantum action-scale
