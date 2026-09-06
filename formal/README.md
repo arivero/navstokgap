@@ -1,26 +1,22 @@
-# Formal verification candidates (not certificates)
+# Formalisation plan
 
-No Lean environment is installed here and no formal theorem is claimed. This
-directory records what would justify introducing one, rather than storing
-uncompiled `.lean` sketches that could be mistaken for proofs.
-
-F01's first candidate is the elementary real statement
+Task F01 begins with the real-number statement
 
 $$\forall C>0\;\forall\epsilon>0\;\exists a\ne0:
 \quad 0<C a^2<\epsilon.$$
 
-It captures the algebraic core of C002. It does NOT formalise the action integral,
-its domain or the derivation of $C=mT^3/6$. Those are separate bridge obligations.
-The next candidate is that polynomial integral identity, only if supporting
-integration libraries make the task proportionate.
+This captures the algebraic core of C002. A second step would formalise the
+polynomial action integral and the identification $C=mT^3/6$.
 
-Acceptance requires a pinned `lean-toolchain`, `lakefile` and dependency manifest,
-a clean `lake build`, statement/definition review, and recorded `#print axioms`
-output. Reject `sorryAx`, hidden custom axioms that assume the conclusion, and
-claims that native numerical evaluation alone certifies an analytic theorem.
-Document ordinary logical axioms separately from physical assumptions. A new
-formalisation must have a human-readable theorem and proof in the paper.
+Status: candidate statements prepared; toolchain installation and proof
+implementation belong to F01.
 
-Do not update the toolchain implicitly between sessions. If installation becomes
-necessary, keep project artifacts here and caches ignored, and record download
-size/toolchain choices in the F01 handoff.
+Acceptance requires a pinned `lean-toolchain`, Lake configuration and
+dependency manifest, a clean build, statement/definition review and recorded
+`#print axioms` output. Check the correspondence between the formal
+statement and the paper's theorem. Reject `sorryAx` and hidden assumptions
+of the conclusion; identify logical axioms and physical premises separately.
+
+Each certificate accompanies a human-readable theorem and proof. Record toolchain
+changes, installation size and validation in the F01 handoff. Keep project files
+here and generated caches ignored.

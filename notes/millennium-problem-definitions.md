@@ -55,7 +55,7 @@ Source: [Arthur Jaffe and Edward Witten, §§3–5, pp. 5–7](https://www.claym
 
 For every compact simple gauge group $G$, construct a nontrivial quantum Yang–Mills theory on $\mathbb R^4$ with a positive mass gap. Here four dimensions describe spacetime.
 
-**Existence** requires axiomatic strength at least that of the cited Wightman or Osterwalder–Schrader formulations. The physical description includes a Hilbert space $\mathcal H$, Poincaré covariance, positive energy, a vacuum $\Omega$ unique up to phase, and locality. This list explains the requirement; it does not replace the full axioms.
+**Existence** requires axiomatic strength at least that of the cited Wightman or Osterwalder–Schrader formulations. The physical description includes a Hilbert space $\mathcal H$, Poincaré covariance, positive energy, a vacuum $\Omega$ unique up to phase, and locality, subject to the full axiomatic requirements in the source.
 
 Local quantum observables must correspond, with renormalisation subtleties, to gauge-invariant polynomials in curvature and covariant derivatives. Short-distance correlations must match asymptotic freedom and perturbative renormalisation, including the prescribed stress tensor and operator product behaviour.
 
@@ -67,6 +67,8 @@ H\Omega=0,\qquad H\geq0,\qquad
 \quad\text{for some }\Delta>0.
 $$
 
-The supremum of such $\Delta$ must be finite: $0<m<\infty$. Thus nonvacuum energies cannot approach zero.
+The supremum of such $\Delta$ must be finite: $0<m<\infty$. Thus the lower edge of nonvacuum energies is strictly positive and finite.
 
-A classical solution or finite regulator calculation alone does not supply this quantum theory. Confinement and an isolated one-particle state are listed as further questions, not substitutes for the stated target.
+The construction concerns the continuum quantum theory in infinite volume.
+Confinement and an isolated one-particle state are listed as further questions
+beyond the stated existence and mass-gap target.

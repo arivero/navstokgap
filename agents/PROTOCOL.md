@@ -1,65 +1,66 @@
 # Bounded agent work and handoff
 
-The repository state is the authority for continuity. Agent role cards describe
-work, not persistent processes or auto-starting Codex configurations. The user
-requested smaller agents for minor bibliography/transcription tasks. Model names
-are preferences, not a claim about future availability: use the available
-equivalent or report the mismatch. Do not silently choose a larger paid model.
+Each agent receives a concrete question and produces a reviewable artifact.
+The coordinator maintains shared state and integrates the results. Role cards
+describe the intended work; the task board records its current status.
 
-## Dispatch
+## Dispatch and cost
 
-Never select `ultra`: the user prohibited it to conserve tokens (2026-09-06).
-This applies to every worker, reviewer and descendant, regardless of model.
-Explicitly request a supported non-ultra effort for each spawn; use fresh or
-limited context when full-history inheritance would prevent the override. Do not
-spawn with unknown inherited effort. Prefer low/medium for routine source work;
-use higher non-ultra settings only when the bounded task warrants them. Announce
-the task ID, model and effort before dispatch. This is a project instruction, not
-a claim that the hosting application's settings were changed.
+Never select `ultra`: the user prohibited it to conserve tokens
+(2026-09-06). Explicitly request a supported effort for every worker, reviewer and
+descendant. Use fresh or limited context when a full-history fork prevents an
+override. Announce task ID, model and effort before dispatch.
 
-Coordinator: pass a concrete task ID, paths to AGENTS/PROGRAMME/role instructions,
-the exact question and allowed write paths. For Luna/Sol overrides use a bounded
-context rather than a full conversation fork. Require workers to read applicable
-skills themselves. Workers do not edit shared indexes, task state, claims, papers
-or other workers' files; return proposed integration changes in the handoff.
+Use low/medium for routine sources and higher permitted effort when the task
+requires substantial reasoning. A model substitution that raises cost requires
+user direction. The concurrency budget is one coordinator and one active
+subagent across the entire team (user instruction, 2026-09-06). Delegate smaller
+tasks to Sol or Luna in sequence. The coordinator waits for the worker to finish,
+then reviews its handoff before continuing or dispatching another. Run review
+agents sequentially, and pass this limit to every descendant.
 
-The initial concurrency budget is one coordinator plus at most two source workers.
-This leaves room for a bounded independent reviewer when useful. These are
-cost-control choices, not assertions about mathematical independence.
+Pass the question, input paths, applicable skills, allowed output paths and a
+finite source/page budget. The coordinator owns shared indexes, claim acceptance,
+paper integration and commits. Workers return changes to these shared artifacts
+as proposals in their handoffs.
 
-## Evidence levels
+## Evidence and writing
 
-`metadata` means identifier/title verified; `abstract` means abstract read;
-`passage` means a named section/page/folio read; `full-read` means all specified
-text read; `proof-audited` means the proof and imported assumptions were checked.
-These labels are not interchangeable. Search snippets are leads, not quotations
-from a full source. Do not label a whole collected manuscript fully read after
-searching selected words.
+Lead each output with findings and source anchors. Use the following reading
+labels consistently:
 
-## Return format
+| Level | Work completed |
+| --- | --- |
+| metadata | Title and identifier verified |
+| abstract | Abstract read |
+| passage | Named section, page or folio read |
+| full-read | Entire specified text read |
+| proof-audited | Proof and imported assumptions checked |
 
-Save `research/handoffs/<task-id>.md` containing:
+Treat search snippets as discovery leads. Record the coverage and extraction
+limits once, alongside the findings they affect. Follow AGENTS.md's writing rule.
 
-- Task, role, explicitly requested model and reasoning effort, date, input
-  revisions or paths and output paths. Distinguish requested settings from
-  independently reported effective settings; do not invent the latter.
-- Searches/open routes attempted, identifiers and edition choices.
-- Exact reading coverage, extraction defects and uncertain mathematical symbols.
-- Findings with source anchors; claims NOT established by the source.
-- Tests/validation performed, unresolved dependencies and suggested next task.
+## Handoff
 
-For sources use `references/SOURCE_POLICY.md`. No access-control bypass, external
-publication or correspondence. Mark unavailable sources and stop at the task's
-budget; a lawful source stub is a valid output.
+Save `research/handoffs/<task-id>.md` with:
 
-## Acceptance
+- Task, role, requested model/effort, date, inputs and outputs.
+- Effective model/effort when independently reported.
+- Source routes, identifiers, edition choices and exact reading coverage.
+- Findings with anchors, extraction defects and unresolved dependencies.
+- Checks performed and the next bounded task.
 
-Coordinator checks metadata and at least every passage used for a substantive
-claim. Formula transcriptions need visual verification against the source.
-Translations and editorial expansions must be labeled. Only reviewed material
-enters the shared bibliography or supports an accepted claim. Agreement between
-models is not a proof or independent historical evidence.
+Use lawful routes and `references/SOURCE_POLICY.md`. A source stub
+recording an access failure is a valid outcome at the task's stopping point.
+External publication, correspondence and paid services require user direction.
 
-If the session ends unexpectedly, a future coordinator may reclaim an active task
-after checking for live workers and existing outputs. Preserve partial artifacts
-and state their incompleteness; do not blindly restart downloads or overwrite them.
+## Acceptance and restart
+
+The coordinator verifies metadata and every passage supporting a substantive
+claim. Formula transcription includes visual source checking; translations and
+editorial expansions carry labels. Mathematical acceptance rests on the argument,
+its assumptions and tests.
+
+After interruption, check live workers and existing outputs before reclaiming a
+task. Preserve partial artifacts, record their coverage and resume from the
+remaining work.

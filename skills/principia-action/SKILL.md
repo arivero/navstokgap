@@ -1,66 +1,65 @@
 ---
 name: principia-action
-description: Bring the navstokgap project's Newton and action-scale research context into work on Principia limits, projectile areas, central-force trajectories, or proposed quantum action bounds. Use for this project's mechanics discussion, including subagent tasks; not for unrelated physics work.
+description: Bring the navstokgap project's Newton and action-scale research context into work on Principia limits, projectile areas, central-force trajectories, or proposed quantum action bounds. Scoped to this project's mechanics discussion and subagent tasks.
 ---
 
-# Principia and action-scale assessment
+# Principia and action-scale research
 
-This project studies whether a physically meaningful action-scale restriction can
-be connected to Newtonian geometry. The existence of such a restriction is an
-open hypothesis here, not an established result or an instruction to manufacture
-a proof. The Millennium comparison is preparatory background.
+This project connects Newtonian trajectory geometry, action variations and
+operational resolution. Its research targets are quantum reconstruction and a
+toy mechanism for gap formation.
 
-Locate the repository through its `AGENTS.md` or the resolved location of this
-skill: the repository is two directories above this skill's directory. Read
-`notes/principia-constant-force-action.md` for relevant tasks. Its historical
-section and exact constant-force calculation are the maintained starting context.
-For a fresh research session, first read `research/STATE.md`,
-`research/PROGRAMME.md` and the assigned entry in `research/TASKS.md`.
-The repository is a multi-session programme with working LaTeX papers, not merely
-the original chat. `claims/LEDGER.md` records which conclusions are established,
-conditional, open or rejected. `ideas/` deliberately preserves unproved proposals.
+Locate the repository through AGENTS.md or this skill's resolved location:
+the repository is two directories above the skill directory. On a fresh session
+read `research/STATE.md`, `research/PROGRAMME.md` and the assigned task.
+For a calculation or historical argument using the constant-force example, read
+`notes/principia-constant-force-action.md`. For metadata work, use the
+relevant source companion and the task's stated question.
 
-For a source claim, inspect the indicated passage in
-`docs/Newton_Principia_Motte1846.html` or
-`docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.pdf`, using the companion
-Markdown notes for edition and reading limits. The 1846 HTML contains image-based
-formulae and modern image descriptions; do not attribute the latter to Newton.
+## Working context
 
-Key distinctions that change the assessment:
+- The constant-force chord–curve relation is
+  $\Delta S=F^2T^3/(24m)=T\delta E/12$, where $\delta E=\Delta K=-\Delta V$.
+  The family $\eta=a t(T-t)$ has positive action differences approaching zero.
+- The free Dirichlet Hessian bounds quadratic cost relative to a norm.
+  Jacobi fields solve the linearized equations; the full variational path class
+  also includes off-shell fluctuations.
+- Quantum two-arm distinguishability uses explicit state, phase and measurement
+  premises. Its threshold depends on copy count and target success probability.
+  Keep the perfect-discrimination endpoint separate.
+- A distributional kernel calculation specifies the variable, normalization,
+  test-function space and limit. The free short-time kernel gives a delta and
+  a second-derivative correction.
+- For each model, name the force, frame, endpoints, energy quantity and units.
+  Track mesh refinement, semiclassical limits and spectral limits separately.
 
-- Newton's “quantity of motion” is momentum. “Action” in his definitions and laws
-  is not automatically Hamilton's time-integrated Lagrangian.
-- The projectile Scholium, Lemma X, and Lemma XI Corollaries 4–5 are the direct
-  anchors for the constant-force geometry. Proposition I's central swept triangles
-  and chord-curve error lenses are different objects.
-- Name the force, frame, endpoints and energy quantity. With perpendicular launch,
-  work is quadratic in interval length and the tangent triangle is cubic.
-- The same-endpoint action difference is preferable to a dimensional identification
-  of spatial area with action. Check the coefficient against the maintained note.
-- Mesh refinement, semiclassical approximation, energy uncertainty, phase periodicity
-  and discrete spectra are distinct statements. Do not infer a universal gap from
-  units or from equality of phases alone.
-- Treat “Newton implicitly assumed h tends to zero” as a modern interpretive
-  hypothesis. The passages read do not settle its historiography or novelty.
-- Distinguish Jacobi fields (linearized solutions) from arbitrary variations;
-  a Hessian gap after normalization is not a minimum unnormalized action value.
-- For a proposed delta or delta-prime limit name the integration variable,
-  normalization, test-function space and limiting parameter.
-- A finite-resource distinguishability threshold assumes a measurement model;
-  it must not be promoted to an intrinsic action gap or a derivation of its input
-  Planck constant. Keep the perfect-discrimination endpoint separate.
-- NATP00385 is the added calculus-priority fragment collection. Read its companion
-  and audit before historical use; normalized text hides deleted material and is
-  not a complete edition of the Book III Classical Scholia.
+The technical paper contains the maintained proofs. `claims/LEDGER.md`
+records evidence status; `ideas/` records proposals and their tests.
 
-Use `scripts/constant_force_geometry.py` when changing the maintained formulae or
-figure. Keep new hypotheses separate from source facts and derived identities.
-When a user changes the model, state which existing assumptions cease to apply;
-do not force the new model into this constant-force example.
+## Historical anchors
 
-For a subagent task already authorised by the user, provide this skill path and
-the bounded question so the agent can read the source context itself. This skill
-does not require spawning agents. Installation makes implicit selection possible;
-repository `AGENTS.md` supplies the explicit routing instruction for later sessions.
-Use `agents/PROTOCOL.md` for authorised workers and disjoint source batches. A
-worker's output is provisional until its passages and metadata are reviewed.
+For source claims, inspect the relevant passage in the local Principia HTML or
+Motte/Wilkins PDF through its companion. Use Lemmas X–XI and the projectile
+Scholium for constant-force geometry; use Proposition I for central swept areas.
+Newton's quantity of motion is momentum. Translate historical uses of “action”
+in their local context before introducing Hamilton's integral.
+
+The 1846 HTML contains image-based equations and modern image descriptions.
+Attribute the latter to the electronic edition. NATP00385 supplies a
+calculus-priority fragment collection; its diplomatic/XML versions expose
+revisions hidden in the normalized view. The Classical Scholia have their own
+H02/H03 corpus tasks.
+
+The proposed implicit $h\to0$ reading is a modern historical conjecture. Track
+its supporting passages and chronology in the historical audit.
+
+## Writing and verification
+
+Lead with the result or question. Put assumptions at their point of use and
+record reading coverage once in the source companion. Follow AGENTS.md's
+results-first writing rule.
+
+Use `scripts/constant_force_geometry.py` when changing the maintained
+formulae or figure. For a changed model, identify the inherited assumptions and
+the new ones. Authorised subagents use `agents/PROTOCOL.md`, including
+the explicit effort setting and ultra prohibition.

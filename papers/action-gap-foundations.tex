@@ -13,63 +13,60 @@
 \title{Action Differences, Fluctuations and Operational Bounds\\
 \large Control results for a research programme on mechanical gaps}
 \author{navstokgap research working notes}
-\date{5 September 2026 --- working draft, not externally peer reviewed}
+\date{6 September 2026 --- working draft}
 \begin{document}
 \maketitle
 \begin{abstract}
-We distinguish a nonzero action scale from a gap in action values, an uncertainty
-bound and a spectral gap. A constant-force trajectory gives an exact relation
-between a geometric error area and a fixed-endpoint action difference. The same
-model excludes an intrinsic positive action-value gap on the unrestricted path
-space. We give an elementary extension to nondegenerate variations, distinguish
-Jacobi fields from arbitrary path fluctuations, and test a proposed delta-derivative
-interpretation using the normalized free quantum kernel. Under explicitly quantum
-measurement assumptions we derive a finite-resource distinguishability threshold,
-which is not a universal gap. These are control calculations, not a derivation of
-quantum mechanics or a claim of novelty. They specify what an extended model would
-need to change and what remains to be established.
+For a particle launched perpendicular to a constant force, we derive the exact
+chord--curve action difference $\Delta S=F^2T^3/(24m)=T\delta E/12$ and relate it
+to the geometric error area. Positive fixed-endpoint action differences accumulate
+at zero; a Taylor argument extends this result to nondegenerate variations.
+For constant force, the Dirichlet Jacobi operator has a positive lowest eigenvalue,
+separating normalized fluctuation cost from action amplitude. The free quantum kernel
+converges to a delta with a second-derivative short-time correction. Finally,
+within a specified quantum two-arm measurement model, we derive an exact
+action-resolution threshold for $N$ independent copies and target success
+probability $p$. For fixed $1/2<p<1$, the threshold decreases as $N^{-1/2}$.
+These results connect trajectory geometry, fluctuation spectra and operational
+resolution in a tractable setting for studying gap formation.
 \end{abstract}
 
-\section{Question, notation and evidence status}
+\section{Action values, fluctuations and resolution}
 The motivating question is whether limitations on Newtonian trajectories can
 explain a nonzero action scale, and whether a useful toy model can isolate the
 formation of a gap. We write $h=2\pi\hbar$ for Planck's constants, $\eta$ for a path
-variation, and $J$ for a second-variation operator. These are distinct objects.
-An additional physical field would require its own definition, degrees of freedom
-and dynamics; it is not supplied by naming $\eta$ an ``$h$ field.''
+variation, and $J$ for a second-variation operator. An additional field $\chi$
+would enter through a specified extended action $S[q,\chi]$.
 
 For a path class $\mathcal P$ and reference $q_*$, one possible action-gap question is
 \[
  g_S=\inf\{ |S[q]-S[q_*]|:q\in\mathcal P,\ S[q]\ne S[q_*]\}>0.
 \]
-The set must be nonempty and the path class, topology, endpoints and duration
-specified. This is different from the Hamiltonian question
+Assume the set is nonempty and specify the path class, topology, endpoints and
+duration. The corresponding Hamiltonian gap question is
 $\operatorname{spec}(H)\cap(E_0,E_0+\Delta)=\varnothing$ for some $\Delta>0$.
-For the latter, existence of a ground sector, the operator domain and the meaning
-of $E_0$ must also be stated. Neither follows merely from an action parameter's units.
+Here $E_0$ is the ground energy of a specified self-adjoint Hamiltonian. The
+path-space infimum and spectral interval give two precise meanings of a gap.
 
-Newton's opening geometric constructions motivate our area comparison
-\cite{Newton1846,NewtonWilkins}. Our use of Hamilton's action and quantum states is
-modern. The repository records reading coverage by edition and passage. It has
-not completed a reading of all the Classical Scholia or established that doubts
-about vanishing areas delayed the 1687 edition. The newly added miscellaneous
-fragment collection NATP00385 \cite{NewtonNATP00385} is not itself a complete
-edition of those scholia. Historical motivation is independent of the proofs below.
+Newton's geometry motivates the area comparison
+\cite{Newton1846,NewtonWilkins}. NATP00385 \cite{NewtonNATP00385} supplies Newton's
+later account of analytic discovery and synthetic presentation. The following
+calculation expresses the geometric comparison through Hamilton's action.
 
-\section{Constant force and the action-value obstruction}
+\section{Constant force: geometry and action}
 Fix $m,F,T,v_0>0$, set $V(y)=-Fy$, and impose
 $x(0)=y(0)=\dot y(0)=0$, $\dot x(0)=v_0$. Newton's equations give
 \[
  x_*(t)=v_0t,\qquad y_*(t)=\frac{F t^2}{2m},\qquad 0\le t\le T.
 \]
-The kinetic-energy gain, not total-energy change, is
-$\delta E=F^2T^2/(2m)$. The triangle between initial tangent, endpoint vertical
+The kinetic-energy gain is $\delta E=F^2T^2/(2m)=-\Delta V$; total mechanical
+energy is conserved. The triangle between initial tangent, endpoint vertical
 and chord has area $v_0FT^3/(4m)$. The chord--curve lens has one third of this:
 \[
  \mathcal A_{\rm lens}=\frac{v_0FT^3}{12m}.
 \]
-These configuration-space areas are frame dependent; they are not canonical
-phase-space areas or variances of conjugate observables.
+These are frame-dependent areas in configuration space. The factor relating
+the lens area to action will follow from a matched-endpoint variation.
 
 Hold $x=x_*$ fixed and consider the same-endpoint paths $y=y_*+\eta$ with
 $\eta\in H^1_0(0,T)$, the Sobolev space with square-integrable weak derivative
@@ -81,8 +78,8 @@ The linear variation vanishes by integration by parts and $m\ddot y_*=F$:
 \begin{equation}\label{eq:quadratic}
  S[x_*,y_*+\eta]-S[x_*,y_*]=\frac m2\int_0^T\dot\eta^2\,\dd t.
 \end{equation}
-The straight chord $y_{\rm ch}=FTt/(2m)$ is admissible but is not another solution
-under the same constant force. Substitution into \eqref{eq:quadratic} gives
+The straight chord $y_{\rm ch}=FTt/(2m)$ is an admissible off-shell comparison
+path. Substitution into \eqref{eq:quadratic} gives
 \begin{equation}\label{eq:area}
  \Delta S_{\rm ch,*}=\frac{F^2T^3}{24m}
  =\frac{F}{2v_0}\mathcal A_{\rm lens}=\frac{T\delta E}{12}.
@@ -91,7 +88,7 @@ Adding the same total time derivative $\dd G(q,t)/\dd t$ to both Lagrangians
 leaves this difference unchanged because configuration endpoints and duration
 coincide. A velocity-dependent endpoint function requires additional endpoint data.
 
-\begin{proposition}[No unrestricted classical action gap]\label{prop:no-gap}
+\begin{proposition}[Zero infimum of action differences]\label{prop:no-gap}
 For this fixed-endpoint path class the infimum of positive action differences
 from the classical path is zero, although the classical path is the unique
 minimizer within the class with fixed horizontal motion.
@@ -123,11 +120,10 @@ occur in every path-space neighbourhood of $q_0$, additionally require
 $q_a\to q_0$ in the specified path topology. The polynomial family above converges
 in $H^1$ (and in $C^1$).
 
-These propositions do not cover discrete path classes, non-smooth restricted
-actions, different topological sectors or operational equivalence relations.
-Such changes may be interesting, but must be separately motivated. They also do
-not resolve existence through singular Kepler collisions: admissible off-shell
-paths and solutions of an initial-value problem are different sets.
+The admissible small-amplitude family is the mechanism behind both propositions.
+Discrete path classes, topological sectors and operational equivalence relations
+offer concrete ways to change this admissibility question. Kepler collisions pose
+a separate IVP question about continuation through a singular force.
 
 \section{Jacobi fields and normalized fluctuation gaps}
 For $S[q]=\int_0^T(m\dot q^2/2-V(q))\dd t$ about a smooth classical solution,
@@ -138,7 +134,8 @@ the second variation is
 \]
 For smooth bounded $V''(q_*(t))$ take the Dirichlet operator domain
 $H^2(0,T)\cap H^1_0(0,T)$ in $L^2(0,T)$. A variation through classical solutions
-satisfies the Jacobi equation $J\eta=0$; arbitrary off-shell variations do not.
+satisfies the Jacobi equation $J\eta=0$. The full variational path class also
+contains off-shell fluctuations.
 For constant force a Jacobi field is $A+Bt$, so fixed zero endpoints force it to
 vanish. Equation \eqref{eq:quadratic} nevertheless admits nonzero fluctuations.
 
@@ -147,23 +144,21 @@ eigenvalues $\lambda_n=m(n\pi/T)^2$, $n\ge1$. Thus
 \[
  Q[\eta]\ge\frac{m\pi^2}{T^2}\|\eta\|_{L^2}^2.
 \]
-This is coercivity relative to a norm, not a smallest nonzero value of $Q$.
-Rescaling $\eta$ rescales $Q$ quadratically. Moreover $\lambda_n$ has units
+This is coercivity relative to the $L^2$ norm: rescaling $\eta$ rescales $Q$
+quadratically. The eigenvalue $\lambda_n$ has units
 mass/time$^2$, while $\|\eta\|_{L^2}^2$ has units length$^2$ time, producing action.
-Calling $\lambda_1$ a Planck constant would be dimensionally incorrect.
 
 For the oscillator $V=m\omega^2q^2/2$, the corresponding eigenvalues become
 $m[(n\pi/T)^2-\omega^2]$. Zero modes occur at $T=n\pi/\omega$; positivity of
 all modes fails after the first such time. This explicit calculation is a useful
-next comparison with the quantum oscillator Hamiltonian, whose energy spectrum
-requires a separate operator and quantization assumptions. Stationary action
-need not mean a global minimum for arbitrary durations and potentials.
+next comparison with the quantum oscillator Hamiltonian. Its energy spectrum
+and the duration-dependent Hessian spectrum can then be studied side by side.
 
 \section{What distribution is the oscillatory kernel?}
 The quantum path-phase input is $\exp(iS/\hbar)$, with time-integrated action,
-as in the Feynman formulation \cite{Feynman1948,FeynmanLectures}. A bare exponential
-is not by itself a normalized distributional approximation to a delta derivative.
-The free one-dimensional Schr\"odinger kernel provides a precise control case.
+as in the Feynman formulation \cite{Feynman1948,FeynmanLectures}. To study its
+distributional meaning, specify a kernel, normalization and limiting parameter.
+The free one-dimensional Schr\"odinger kernel provides an exact example.
 For $\hbar,m,\tau>0$ let
 \[
  K_\tau(z)=\left(\frac{m}{2\pi i\hbar\tau}\right)^{1/2}
@@ -186,31 +181,28 @@ $|e^{-iu}-1+iu|\le u^2/2$ for real $u$, further gives
  \quad\hbox{in the sense of pairing with each fixed Schwartz test function.}
 \]
 The remainder estimate follows by integrating $k^4$ times the absolute value of
-the transformed test function. The limit is a delta, and the first correction is
-its second derivative, not its first derivative. The free kernel is even in $z$.
-One can obtain $\delta'$ by differentiating $K_\tau$ with respect to $z$, but that
-is a different distribution. A Fourier constraint integral, for example
-$\int e^{i\lambda z/\hbar}\dd\lambda/(2\pi\hbar)=\delta(z)$, also needs an
-integration variable and normalization. Substitution of a nonlinear constraint
+the transformed test function. The even free kernel gives $\delta$ at leading
+order and $\delta''$ at first order in time. Differentiating the kernel with
+respect to $z$ instead gives a family converging to $\delta'$.
+A Fourier constraint integral provides another construction:
+$\int e^{i\lambda z/\hbar}\dd\lambda/(2\pi\hbar)=\delta(z)$.
+Substitution of a nonlinear constraint
 requires further regularity and Jacobian conditions.
 
-This calculation neither constructs a general real-time path-integral measure nor
-proves a stationary-phase theorem on infinite-dimensional path space. It tests
-one exact model and keeps the short-time limit separate from semiclassical
-reasoning and from any proposed physical cutoff.
+The limit above is short time at fixed $\hbar$. A semiclassical analysis instead
+varies $\hbar$; each limit has its own test functions and convergence statement.
 
 \section{A conditional operational action threshold}
 Assume the quantum state/measurement framework, a specified positive $\hbar$,
 and a coherently controlled two-arm system realizing a relative phase
-$\phi=\Delta S/\hbar$. A global phase on a single state is unobservable. Instead
-compare two known hypotheses with equal priors:
+$\phi=\Delta S/\hbar$. The relative arm phase encodes two known hypotheses
+with equal priors:
 \[
  |\psi_0\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2},\qquad
  |\psi_\phi\rangle=\frac{|0\rangle+e^{i\phi}|1\rangle}{\sqrt2}.
 \]
 Allow $N\ge1$ independent identical copies and any joint binary quantum
-measurement. This is an idealized hypothesis test, not parameter estimation with
-an unknown phase and not a claim about all possible resource protocols.
+measurement. These assumptions define the resource budget and the hypothesis test.
 
 \begin{proposition}[Finite-copy bound]\label{prop:measurement}
 The optimal equal-prior success probability is
@@ -245,49 +237,55 @@ $1/2<p<1$ the asymptotic threshold is
 \[
  d_{N,p}\sim2\hbar\sqrt{\frac{-\log(4p(1-p))}{N}}.
 \]
-There is no monotone lower-bound interpretation over all phases: at $\phi=2\pi n$
-the hypotheses coincide again. This model proves a positive operational threshold
-at fixed resources and accuracy, not a smallest nonzero action in nature. It
-also assumes, rather than derives, the positive $\hbar$ in the phase rule.
+The threshold is positive at fixed resources and accuracy. Its dependence on $N$
+quantifies the improvement in resolution from repeated preparations. Phase
+periodicity explains the first-lobe restriction: at $\phi=2\pi n$ the hypotheses
+coincide again.
 
 If an apparatus realizes the particular relative action \eqref{eq:area}, with
 all control and recombination phases included, its first-lobe threshold would be
 \[
  T\ge \left(\frac{24m d_{N,p}}{F^2}\right)^{1/3}.
 \]
-The upper first-lobe condition $F^2T^3/(24m\hbar)\le\pi$ must be retained. The chord
-is not an alternative trajectory under the original force alone, so this
-substitution is conditional on a physical implementation, not an experimental
-prediction for the unmodified projectile problem.
+The upper first-lobe condition $F^2T^3/(24m\hbar)\le\pi$ must be retained.
+Realizing the off-shell chord as an experimental arm requires a control force;
+the displayed substitution applies when the full apparatus has the specified
+relative action.
 
 \section{Finite propagation and the field-theory companion}
-Finite $c$ alone does not forbid small variations. A concrete control uses the
-free relativistic particle, $L=-mc^2\sqrt{1-\dot q^2/c^2}$, fixed endpoints zero,
-and $q_a=a t(T-t)$. If $|a|T<c$, the path has a strict speed margin. Relative to
+For the free relativistic Lagrangian $L=-mc^2\sqrt{1-\dot q^2/c^2}$, consider
+the fixed-endpoint family $q_a=a t(T-t)$, with both endpoints zero.
+If $|a|T<c$, the path has a strict speed margin. Relative to
 the rest path its action excess is positive for $a\ne0$ and
 \[
  \Delta S(a)=mc^2\int_0^T
  \left(1-\sqrt{1-a^2(T-2t)^2/c^2}\right)\dd t
  =\frac{ma^2T^3}{6}+O(a^4)\longrightarrow0.
 \]
-Thus the speed restriction itself supplies no positive action-value gap in this
-class. This example concerns relativistic particle kinematics, not a complete
-causal theory of interactions.
+Thus positive action differences accumulate at zero within the strict speed
+margin, just as in the Newtonian example. This gives a kinematic comparison
+at finite $c$.
 
 Navier--Stokes and Yang--Mills remain complementary comparisons, with their
 official targets kept intact \cite{Fefferman,JaffeWitten}. A diffusion or
 Dirichlet coercivity bound can depend on time, domain and normalization; a physical
 quantum mass gap concerns a different operator and limiting problem. Any future
 bridge must identify the spaces, physical versus auxiliary time, estimates and
-limits it preserves. Neither the preceding obstruction nor the operational
-threshold proves fluid regularity or a four-dimensional quantum-field mass gap.
+limits it preserves. The fluid target is regularity of evolution; the field-theory
+target includes construction of the physical quantum theory and its vacuum gap.
 
-\section{Reproduction, limitations and next experiments}
+\section{Scope, reproduction and next experiments}
+The results concern the stated mechanical path classes and quantum measurement
+model. Hilbert states, the Born rule and positive $\hbar$ are physical inputs to
+Section 5. Deriving these premises belongs to the reconstruction branch of the
+companion programme. The proofs received internal review; novelty assessment and
+external review are publication-stage tasks.
+
 The repository's \texttt{make check} verifies the exact polynomial action
 identities, the oscillator-mode residual, the Fourier expansion coefficient and
-elementary discrimination cross-checks. These tests supplement the displayed
-proofs; they are not formal proof certificates. \texttt{make papers} rebuilds this
-note and the companion programme PDF. No Lean proof is supplied in this draft.
+elementary discrimination cross-checks. \texttt{make papers} rebuilds this note
+and the companion programme PDF. The formalisation queue begins with the
+small-amplitude polynomial lemma.
 
 The next bounded work is to compare oscillator Hessian and Hamiltonian gaps,
 free motion on a line and circle, and central-potential collision assumptions.

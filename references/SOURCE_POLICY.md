@@ -1,32 +1,33 @@
-# References, originals and transcription policy
+# Sources and transcription
 
-`docs/` remains the single archive of source originals and source-facing Markdown
-companions. `references/` holds shared BibTeX, search batches and this protocol.
-`notes/` contains our derivations; `ideas/` contains explicitly speculative models.
-Do not duplicate a source into both docs and references.
+Store each original once in `docs/` with its source-facing companion.
+Use `references/` for shared BibTeX and search batches,
+`notes/` for our derivations and `ideas/` for model proposals.
 
-Every downloaded or substantially used source needs a companion stating title,
-authors/editor, date/version, DOI/arXiv/manuscript ID, source URL, retrieval date,
-local original if present, extraction method, rights/access caveats, and reading
-coverage. A digest is not a full transcription. Quote sparingly; preserve lawful
-downloaded originals without presenting copyrighted full text as authored output.
+## Companion contents
 
-Source status progresses independently through retrieval, extraction, selected
-reading, scan/formula verification and proof audit. Record uncertain symbols and
-editorial changes. For manuscript texts preserve folio anchors; do not invent PDF
-page correspondences. Record the difference between electronic normalization,
-diplomatic transcription and a facsimile.
+Record title, authors/editor, date/version, DOI/arXiv/manuscript ID, source URL,
+retrieval date, local original, extraction method, rights and reading coverage.
+Lead the digest with the source's result or relevant passage. Label a digest,
+transcription and translation by the work actually performed.
 
-Worker batches are provisional. The coordinator integrates reviewed metadata into
-`references/library.bib` with stable keys and registers originals in
-`docs/SHA256SUMS`. Public/archive URLs should accompany local paths, so the research
-remains inspectable without this exact machine. Checksums certify byte identity,
-not historical authenticity or theorem correctness.
+Track retrieval, extraction, selected reading, formula/scan verification and proof
+audit separately. Preserve uncertain symbols, editorial changes and manuscript
+folio anchors. Record confirmed correspondences between editions or page systems.
 
-Prefer primary sources. For unclear high-energy citations use INSPIRE metadata
-first; use arXiv versioned identifiers for the version read. For Newton use the
-Newton Project, holding libraries, scholarly editions and historians' original
-research. Record access failures and missing parts. Do not bypass paywalls.
+For each source, consolidate access and reading limits in its coverage section.
+In research prose retain the qualifications that affect the claim being used.
 
-Before publication verify redistribution rights for archived editorial material;
-permission to download and inspect is not a blanket redistribution license.
+## Integration
+
+The coordinator checks worker batches, integrates metadata into
+`references/library.bib` and registers original bytes in
+`docs/SHA256SUMS`. Keep public/archive URLs beside local paths.
+Checksums verify byte identity; source interpretation and proof checking have
+their own review records.
+
+Prefer primary sources and lawful open routes. For unclear high-energy citations,
+start with INSPIRE metadata and follow its versioned links. For Newton, use the
+Newton Project, holding libraries, scholarly editions and historians' research.
+Record access failures and outstanding pages at the task's stopping point.
+Verify redistribution rights before publishing archived editorial material.

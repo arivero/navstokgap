@@ -1,45 +1,56 @@
-# Start here: persistent research project
+# Start here
 
-On a fresh session read `research/STATE.md`, then `research/PROGRAMME.md` and
-`research/TASKS.md`. Read only the source and technical notes needed for the selected
-task. The repository, not a previous chat or a product-level goal, is the durable
-record. Update the state and task handoff before ending substantive work.
+Read `research/STATE.md`, `research/PROGRAMME.md` and the selected entry in
+`research/TASKS.md`. Then load the notes and sources needed for that task.
+Update task state and the handoff when substantive work ends. Preserve existing
+user changes in the worktree.
 
-For delegated work also read `agents/PROTOCOL.md`. The user has requested bounded
-bibliography/search/transcription work by smaller agents (Luna/Sol). This is not
-blanket permission for unbounded autonomous teams. The coordinator owns the shared
-task board, bibliography, claim ledger and manuscript integration. Workers edit
-only their assigned paths and do not commit unless explicitly assigned to do so.
+# Research and writing
 
-User cost constraint (2026-09-06): never request `ultra` reasoning effort for any
-run this agent controls, including subagents and descendants. Set a supported
-non-ultra effort explicitly when spawning; do not inherit unknown/ultra settings.
-Use a fresh or limited-context dispatch if a full-history fork prevents an effort
-override. Announce the selected model and effort and record both in the handoff.
+The project studies Newtonian trajectories, action scales and mechanisms for
+gaps. The Millennium comparison supplies the companion PDE/field-theory context.
 
-# Research context
+Lead each document and section with its result, definition, question or next
+action. State assumptions where they enter the argument. Keep evidence status
+in the claim ledger and source coverage in the source companion. Consolidate
+general scope qualifications into one short passage per document where needed.
+Replace repeated disclaimers and defensive contrasts with precise statements of
+what the calculation establishes. Preserve mathematical negations, counterexamples
+and qualifications that change a theorem's meaning.
 
-The active project concerns Newtonian trajectories and proposed quantum action-scale
-restrictions. The Navier–Stokes/Yang–Mills comparison is completed background,
-not the research objective. Do not assume that an action gap has been proved.
+For mechanics, Principia or action-scale work, read
+`skills/principia-action/SKILL.md` and its routed note. This also applies
+to subagents on those subjects.
 
-For work on this project's mechanics, Principia, or action-scale hypotheses, read
-`skills/principia-action/SKILL.md` and its indicated research note. This applies to
-the main session and to subagents working on these subjects. No agent spawning is
-required by this file.
+Specify the object, domain, units, normalization and limits of each gap. In a
+reconstruction, track every physical premise to its use, including the source of
+any action parameter. Distinguish Newton's wording, modern derivations and model
+hypotheses through attribution and evidence labels.
 
-Use `docs/` for source originals and source-facing companions, `notes/` for our
-interpretations and derivations, and `scripts/` plus `out/` for reproducible checks.
-Identify editions and proposition/lemma anchors. Preserve the distinction between
-what Newton wrote, a modern calculation and an additional physical hypothesis.
+# Agent work and cost
 
-Use `ideas/` for conjectures, including unsuccessful ones; never silently promote
-them into `claims/LEDGER.md`. Use `references/` for shared bibliographic metadata,
-not a second copy of source originals. Human-readable papers live in `papers/`,
-with built PDFs in `out/papers/`. See `research/TOOLS.md` for build and proof scope.
+The user authorizes bounded source tasks for smaller agents. Read
+`agents/PROTOCOL.md` before delegation. The coordinator owns shared task
+state, bibliography, claim acceptance, manuscript integration and commits. Workers
+write their assigned paths and return reviewable handoffs.
 
-An action scale, action-value gap, uncertainty bound, Hessian eigenvalue gap,
-Hamiltonian energy gap and quantum-field mass gap are different targets. Record
-the object, domain, units, normalization, assumptions and limiting procedure.
-No assumed commutator or path phase may be advertised as a derivation of its own
-nonzero Planck constant. Negative results are valid deliverables.
+Never select `ultra` for any controlled run, including descendants. Set a
+supported effort explicitly at dispatch. Use fresh or limited context when a
+full-history fork prevents an override. Announce the model and effort and record
+both in the handoff.
+
+Delegate smaller tasks to Sol or Luna sequentially. Run at most one active
+subagent, including descendants; the coordinator waits for its completion, then
+reviews the handoff before continuing or launching the next task. Keep delegation
+selective to conserve the user's usage allowance.
+
+# Repository map
+
+- `docs/`: source originals and companions, with edition/page/folio anchors.
+- `references/`: bibliographic metadata and search batches.
+- `notes/`, `claims/`, `ideas/`: derivations, evidence status and proposals.
+- `papers/`, `out/papers/`: human-readable LaTeX and PDFs.
+- `scripts/`, `out/`, `formal/`, `reviews/`: checks, outputs, formalisation and review.
+
+Promote an idea into the ledger through an explicit derivation and review.
+See `research/TOOLS.md` for reproduction and tool decisions.

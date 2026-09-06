@@ -1,58 +1,96 @@
-# Focused audit of Newton Project NATP00385
+# Newton on discovery, demonstration and limiting ratios
 
-Date: 2026-09-05. Scope: H01, a bounded source audit of the normalized,
-diplomatic, and TEI/XML representations of Newton Project text NATP00385. This
-is not a full read of the e-text and not an audit of the six Book III Classical
-Scholia.
+H01 source audit, 2026-09-05; exposition revised 2026-09-06.
 
-## Result in brief
+## Findings
 
-The selected passages are useful evidence for a **retrospective methodological
-defence**: they distinguish finite fluxional velocities from momentary
-increments, privilege first/last ratios over nascent/evanescent quantities, and
-say that propositions used in the *Principia* were found analytically but
-presented synthetically so that they would count as geometry. Because the
-material is an extensively revised, polemical dossier with a catalogue date of
-*c.* 1665-1727, those statements are not by themselves contemporaneous evidence
-of Newton's state of mind before publication in 1687.
+NATP00385 preserves Newton's retrospective account of how he developed and
+presented his mathematics. Its central distinction is between analysis as a
+method of discovery and synthesis as a form of geometrical demonstration.
+His discussions of moments and fluxions explain the role of generated quantities
+and their first and last ratios.
 
-The focused search found no passage linking doubts about shrinking areas,
-evanescent quantities, or limit reasoning to a delay of the 1687 edition. A
-passage about Newton being discouraged from earlier publication concerns his
-mathematical **methods** and a treatise communicated in 1669, is textually
-awkward and heavily revised, and does not say that the *Principia* was delayed.
-Another passage says that Newton avoided asserting priority in the published
-*Principia* to avoid controversy; that concerns presentation/priority, not its
-publication schedule. This selected-source absence is not a universal
-refutation of the proposed delay claim.
+[Paragraphs 520 and 522](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par520)
+say that the ancients discovered propositions by analysis and demonstrated them
+by synthesis. Newton presents his own practice in that tradition. In paragraph
+522 he describes the *Principia* propositions as discovered through fluxions and
+published in synthetic form. Parallel passages occur at
+[141, 149 and 155](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par141).
 
-## Source identity and evidential character
+### Generated quantities and ratios
 
-- Official title: *Unarranged fragments, mostly relating to the dispute with
-  Leibniz*.
-- Catalogue attribution: Isaac Newton.
-- Shelfmark: Cambridge University Library, MS Add. 3968, ff. 594r-619v.
-- Electronic editor: Robert Ralley; transcription begun 29 March 2019 and
-  completed 31 January 2020. The TEI publication statement is dated 2020.
-- Catalogue date/extent: *c.* 1665-1727; *c.* 113,053 words; “16 ff.”
-- Languages: English, Latin, and French.
-- Official representations: [normalized](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385),
-  [diplomatic](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00385),
+- [Paragraph 489](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par489)
+  treats time as uniformly flowing, fluxions as velocities of increase and moments
+  as parts generated during a moment of time. Successive moments use powers of
+  the symbol `o`. Approximation belongs to investigation; exact geometrical
+  treatment belongs to demonstration. The contrast between first moments and
+  ratios of nascent moments is a supralinear addition in the TEI.
+- [Paragraph 490](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par490)
+  locates the method in first and last ratios. Its diplomatic version records
+  additions to the terms describing nascent and evanescent quantities.
+- [Paragraphs 484–485](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par484)
+  use a finite velocity for a fluxion and an infinitely small particle for
+  `o`. [Paragraph 334](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par334)
+  develops the contrast with indivisibles.
+- [Paragraph 9](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par9)
+  describes moments as infinitely small generated parts;
+  [paragraph 796](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par796)
+  uses infinitely short lines and narrow surfaces, distinguishing these from
+  geometrical points and lines.
+
+These passages show several explanatory registers within one revised dossier.
+Their draft layers and vocabulary are material for the historical interpretation
+of Newton's limiting arguments.
+
+### Publication and controversy
+
+| Passage | Object discussed | What Newton's account says |
+| --- | --- | --- |
+| [558, 564](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par558), [793](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par793) | Composition of the *Principia* | Writing in 1684/1685 and publication in 1687 |
+| [686](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par686) | Earlier mathematical methods, including a treatise communicated in 1669 | Contentions discouraged earlier publication; the syntax is heavily revised |
+| [701](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par701) | Priority assertion within the *Principia* | Newton says he avoided controversy by omitting the assertion |
+| [1093](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par1093) | A 1671 fluxions/series treatise | Newton attributes its nonpublication to a preference for quiet |
+
+In paragraph 686 a long supralinear addition and an `addSpan` make the
+construction around “was soon ... after ... about it” unstable. In paragraph
+701 the statement about subsequently declining contention is an addition.
+These revision details matter when dating and interpreting the claims.
+
+The proposed link between doubts about shrinking areas and a delay of the 1687
+edition remains open (H002). The passages above concern methods, presentation
+and controversy. A causal account of the book's timing requires dated evidence
+connecting the limiting argument to a publication decision; H02/H03 carry that
+chronological task.
+
+The normalized search found one `delay*` hit,
+[paragraph 975](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par975),
+about Leibniz's alleged suppression of an invention. The `doubt*` hits
+concern receipt of letters or documentary sincerity; the search returned zero
+`classical` hits.
+
+## Source identity
+
+- Title: *Unarranged fragments, mostly relating to the dispute with Leibniz*.
+- Catalogue author: Isaac Newton; the collection includes several hands, copied
+  letters and quotations.
+- Shelfmark: Cambridge University Library, MS Add. 3968, ff. 594r–619v.
+- Electronic editor: Robert Ralley; work begun 29 March 2019 and completed
+  31 January 2020; TEI publication statement dated 2020.
+- Catalogue date/extent: *c.* 1665–1727; *c.* 113,053 words; “16 ff.”
+- Languages: English, Latin and French.
+- Representations: [normalized](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385),
+  [diplomatic](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00385)
   and [TEI/XML](https://www.newtonproject.ox.ac.uk/view/texts/xml/NATP00385).
 
-The author field must not be used to attribute every embedded document directly
-to Newton. The TEI identifies several hands, and the compilation includes copied
-letters and quotations. The passages assessed below generally occur in Newton's
-first-person or third-person priority argument, but their quoted claims about
-Leibniz, Wallis, Craig, Halley, and others are not independent corroboration.
+The catalogue extent, shelfmark span and internal labels from `<1r>` to `<158v>`
+need a verified concordance. The table below therefore uses displayed electronic
+labels with stable paragraph/line anchors. Some page breaks fall within a
+paragraph. Claims attributed to other people in the priority argument retain
+their status as Newton's report of those people.
 
-The catalogue's “16 ff.”, its shelfmark span of ff. 594r-619v, and the e-text's
-large set of internal labels (`<1r>` through `<158v>`, with gaps and repetitions)
-do not supply a transparent folio concordance. The table therefore records the
-**displayed electronic labels** and stable paragraph/line anchors. It does not
-pretend that `<83r>` means CUL MS Add. 3968 f. 83r or map it to f. 594r-619v.
-Some TEI page breaks fall inside a paragraph, so a row's opening label can cover
-only the start of the selected text.
+The dossier's recurrent scholium reference concerns Book II, Lemma II.
+The six Book III Classical Scholia have a separate witness/edition inventory
+in H02, followed by the selected-edition reading in H03.
 
 ## Exact focused reading coverage
 
@@ -80,132 +118,15 @@ checked for the passages on which the assessment depends.
 | 142v | [paras 974-975; lines 6450-6456](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par974) | normalized only | The sole `delay*` hit concerns Leibniz's alleged suppression of an invention |
 | 156r-158v | [paras 1093, 1097-1098; lines 7313-7435](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par1093) | para 1093 revision context checked | 1671 methods treatise not published; 1687 date; later priority defence |
 
-This is a passage-level read, not a full read of all 1,100 TEI paragraph IDs or
-all deletion strata. Formulae were not transcribed or checked against manuscript
-images.
+## Reading and extraction status
 
-## Findings by theme
+The audit is a passage-level reading of the listed runs, with selected
+diplomatic/TEI revision checks. Normalized HTML hides 7,123 encoded deletions
+and silently incorporates additions. Full deletion-stratum reading, manuscript
+image comparison, equation verification and individual-leaf dating remain open.
 
-### Moments, fluxions, and vanishing quantities
-
-1. [Paragraph 489, lines 3163-3183](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#l3163)
-   treats time as uniformly flowing, fluxions as velocities of increase, and
-   moments as parts generated in moments of time. It represents successive
-   moments with fluxional symbols multiplied by powers of `o`. It distinguishes
-   exploratory work, where approximations and suppression of `o` are allowed,
-   from demonstration, which is said to proceed exactly by geometry. The crucial
-   formulation is “not prima momenta but primas momentorum nascentium rationes.”
-   In the TEI, that contrast is a supralinear **addition**, not unrevised base
-   text.
-
-2. [Paragraph 490, lines 3184-3186](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#l3184)
-   sharpens the position: “there are no quantitates primæ nascentes or ultimæ
-   evanescentes”; what it admits are their first and last ratios. The diplomatic
-   text shows revisions within this very short paragraph: “Leibnitian
-   differences,” `primæ`, and `ultimæ` are additions. This is strong evidence for
-   the final wording of this draft layer, not for an unrevised or precisely dated
-   1687 belief.
-
-3. [Paragraphs 484-485](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par484)
-   call a fluxional symbol a finite velocity and `o` a particle usually supposed
-   infinitely little. They defend first ratios and continual generation against
-   indivisibles. [Paragraph 334](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par334)
-   develops the same polemical contrast.
-
-4. The dossier does not speak with a single simple vocabulary. [Paragraph 9](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par9)
-   calls moments infinitely small parts generated by fluxion, while
-   [paragraph 796](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par796)
-   explains moments as infinitely short lines or narrow surfaces, with explicit
-   qualifications that they are not geometrical points or lines. These
-   explanatory registers coexist with the ratio-only defence in paragraph 490.
-   They should not be collapsed into either a modern infinitesimal ontology or a
-   blanket rejection of all small increments.
-
-### Geometrical demonstration and the *Principia*
-
-[Paragraphs 520 and 522, lines 3505-3527](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par520)
-say the ancients used analysis for discovery and synthesis for demonstration;
-Newton says he followed that model so the propositions would be admitted into
-geometry. Paragraph 522 characterizes the *Principia* propositions as found “by
-Analysis” and presented “by synthesis.” Parallel formulations occur at
-[paragraphs 141, 149, and 155](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par141).
-
-This supports a claim about Newton's later stated **method of discovery and
-presentation**. It does not give a start date, an interval of hesitation, a
-publication schedule, or a statement that difficulty with limits caused delay.
-Inferring such a delay from the value placed on synthetic demonstration would be
-a new historical inference requiring chronological evidence outside this text.
-
-[Paragraph 793, lines 5575-5581](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#l5575)
-places Newton in the act of writing the book in 1685 and says he explained the
-differential calculus to Craig. [Paragraphs 558 and 564](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par558)
-say he was writing it in 1684 and that it appeared in 1687. These are retrospective
-chronological assertions embedded in a priority defence; they neither mention a
-limit doubt nor describe a delay.
-
-## Audit of the “doubts delayed the 1687 edition” claim
-
-### What might look suggestive but does not establish the claim
-
-- [Paragraph 686, lines 4832-4844](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par686)
-  answers the objection that Newton should have published his methods earlier.
-  It points to a treatise communicated to friends in 1669 and says contentions
-  discouraged him. The diplomatic/TEI syntax is unstable: a long supralinear
-  addition and an `addSpan` produce an awkward construction around “was soon ...
-  after ... about it,” while “arising” is another addition. The paragraph then
-  distinguishes this earlier-method publication issue from *Principia*
-  propositions, which it says Newton did publish first. It does not identify
-  shrinking areas, limits, doubt, or delay of the 1687 book.
-
-- [Paragraph 701, lines 4996-5000](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#l4996)
-  says Newton refrained from asserting his priority in the *Principia* to avoid
-  controversy. The claim that he thereafter declined contention is a
-  supralinear addition. This can support a narrowly qualified claim about the
-  dossier's explanation for an omission of priority polemic; it does not say the
-  book itself was delayed.
-
-- [Paragraph 1093, lines 7313-7315](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#l7313)
-  says a 1671 book on the methods of fluxions and series was not published for
-  the sake of quiet. The named object is that earlier methods treatise, not the
-  1687 *Principia*, and no limit problem is named.
-
-### Search-level negative result
-
-Within the normalized transcription, the single `delay*` occurrence is the
-fragment at [paragraph 975](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00385#par975),
-which concerns Leibniz's alleged suppression of an invention so that others could
-not accuse him of stepping ahead. The `doubt*` occurrences concern whether
-Leibniz received or saw letters and whether documents were sincere, not Newtonian
-limits or the timing of the *Principia*. No `classical` occurrence was found.
-
-Therefore the claim “Newton's doubts about shrinking areas delayed the 1687
-edition” remains **not established by the selected text**. This finding is scoped
-to the terms and passages above. Hidden deletions, unsearched paraphrases, other
-Newton manuscripts, correspondence, publishing records, and modern historical
-scholarship could alter the larger assessment; only a dated chronological audit
-can do so responsibly.
-
-## Relation to the Classical Scholia
-
-NATP00385 is not an edition or catalogue of the six Book III Classical Scholia.
-Its repeated scholium anchor is especially the Scholium to Book II, Lemma II in
-the fluxions priority dispute. A mention of a scholium, limits, or the
-*Principia* inside this dossier does not identify one of the Book III Classical
-Scholia. Locating witnesses and editions for those six texts, building a
-six-entry concordance, and reading their deletion strata belong to H02/H03 and
-were deliberately not attempted here.
-
-## Extraction and use limits
-
-- Normalized HTML hides all 7,123 encoded deletions and silently incorporates
-  additions; absence in it cannot settle absence from the manuscript draft.
-- Diplomatic HTML and XML were downloaded, but only selected revision sites were
-  read. Thousands of deletion strata were not searched as a full corpus.
-- The plain-text dumps flatten MathML, layout, hands, and nested revision markup.
-  All cited wording was checked back against HTML/TEI anchors.
-- No manuscript images were downloaded or visually inspected. Formulae and
-  uncertain glyphs were not audited.
-- Individual leaves are not securely dated by the broad catalogue date. The
-  dossier's retrospective assertions require external chronological control.
-- The electronic edition is source evidence; the interpretations and negative
-  assessment above are project analysis, not Newton Project editorial claims.
+Plain-text dumps served as search aids; consequential wording was checked
+against HTML/TEI anchors. The broad catalogue date leaves the chronology of
+individual passages unresolved. The findings above are project interpretations
+of the electronic edition. Exact source bytes and source-facing coverage are
+preserved in the companions and checksum register.

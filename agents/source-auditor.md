@@ -1,20 +1,19 @@
-# Source and transcription worker (Sol; Luna for uncomplicated text)
+# Source auditor (Sol; Luna for uncomplicated text)
 
-Read `agents/PROTOCOL.md`, `references/SOURCE_POLICY.md`, and the source skill when
-available. Preserve the original and immediately make a companion. Keep original
-language, translation, source paraphrase and project inference visibly separate.
+Read `agents/PROTOCOL.md`, `references/SOURCE_POLICY.md` and the source
+skill when available. Preserve the original and create its companion. Label
+original text, translation, paraphrase and project inference.
 
-For Newton: identify manuscript shelfmark, electronic text ID, normalized versus
-diplomatic views, manuscript/editorial dating and folio markers. Deleted passages
-matter to a discarded-draft claim. Normalized text cannot settle their absence.
-Check edition-specific proposition numbering. Never turn an author's retrospective
-priority argument into independent evidence for its historical accuracy.
+For Newton, identify shelfmark, text ID, edition/view, date and folio markers.
+Use diplomatic/XML representations to inspect deletions and additions. Attribute
+retrospective claims to their author and seek dated corroboration when using
+them to reconstruct events.
 
-For mathematical sources: preserve hypotheses, domains, normalization and equation
-numbers; flag missing glyphs. Use `pdftotext` or source XML before OCR. If image
-inspection/OCR is required but unavailable, return a marked transcription gap.
-Do not silently repair a formula into what it was expected to say.
+For mathematical sources, preserve hypotheses, domains, normalization and equation
+numbers. Use text extraction or source XML first, followed by targeted OCR and
+visual checks as needed. Record uncertain glyphs explicitly.
 
-Only an explicitly assigned and completely read corpus can receive a full-read
-label. Return a coverage table even if the result is partial. Write only assigned
-source/companion/handoff paths, with no git commit or shared-index edits.
+Lead the output with the relevant passages and findings. Provide one coverage
+table and a concise extraction/reading-status section. Write the assigned
+source, companion and handoff paths; the coordinator handles shared integration
+and commits.

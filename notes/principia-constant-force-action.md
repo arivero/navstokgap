@@ -1,9 +1,10 @@
 # Newton's vanishing areas and the proposed action scale
 
-2026-09-05. The actual project is now Newtonian trajectories and a possible
-action-scale restriction. The earlier Millennium comparison is background.
-The user's proposal is investigated here as a heuristic; a positive action gap
-is not assumed as a conclusion.
+For perpendicular launch under constant force, the chord–curve lens area is
+proportional to a matched-endpoint action difference. We compute the coefficient,
+show how positive action differences approach zero, and relate the result to
+quantum phase resolution. Newton's Lemmas X–XI provide the geometric anchors.
+Calculation recorded 2026-09-05; exposition revised 2026-09-06.
 
 ## 1. What was read
 
@@ -11,8 +12,8 @@ We downloaded [the Motte/Chittenden 1846 text](../docs/Newton_Principia_Motte184
 and read Definitions I–VIII and Scholium, the Laws with corollaries and Scholium,
 Book I Section I, and Section II Propositions I–II. A
 [Motte 1729 excerpt edited by Wilkins](../docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md)
-supplies readable formulae for Section I. These are later English witnesses, not
-a study of the original 1687 Latin or of all historical commentary.
+supplies readable formulae for Section I. The reading coverage is these later
+English witnesses and the passages listed below.
 
 The closest passages are quite specific:
 
@@ -25,23 +26,21 @@ The closest passages are quite specific:
 | Lemmas I–III (95–96) | Limits and convergence of inscribed/circumscribed figures |
 | Lemma X (99–100) | Initial force-generated displacement is quadratic in time |
 | Lemma XI, Corollaries 4–5 (101) | Tangent triangles and curved segments scale cubically; segment is one third of the triangle |
-| Section I closing Scholium (102–103) | Vanishing magnitudes mean limits, not smallest indivisible magnitudes |
+| Section I closing Scholium (102–103) | Defines vanishing magnitudes through limiting ratios |
 | Proposition I (103–105) | Equal swept areas for a polygon under central impulses, then a curve limit |
 | Proposition II (105–106) | Converse relating area law to direction of resultant force |
 
 Newton writes in the closing Scholium that he means “evanescent divisible
-quantities”; he explicitly denies a smallest determinate magnitude in these
-geometric constructions. This supports a continuity interpretation. It supplies
-no historical assertion about Planck's constant. Nor is his example of an
-“ultimate velocity” in that Scholium a universal speed limit: it is a limiting
-velocity at an event.
+quantities” and defines the construction through limiting ratios. His example of
+an “ultimate velocity” means the limiting velocity at an event. These passages
+give the historical vocabulary for the continuity argument.
 
-The source HTML contains modern image descriptions; these were not treated as
-Newton's prose. Some equations are images; the Wilkins PDF was used where HTML
+The source HTML contains modern editorial image descriptions. Some equations are
+images; the Wilkins PDF was used where HTML
 extraction omitted them. Selected historical figures were visually inspected:
 [projectile](../docs/images/i_090a.jpg), [central polygon](../docs/images/i_104.jpg).
 
-## 2. Make the proposed area unambiguous
+## 2. Constant-force geometry
 
 Take a particle of mass $m>0$, a constant force $F>0$ in the positive $y$
 direction, $V(y)=-Fy$, and initial data
@@ -56,9 +55,8 @@ $$
 x(t)=v_0t,\qquad y(t)=\frac{F}{2m}t^2.
 $$
 
-The particle deflects along the force and loses potential energy. It does not
-initially rise against it when its initial velocity is perpendicular to it.
-Reversing the vertical convention reverses the relevant signs, not the magnitudes.
+The particle deflects along the force and loses potential energy. Reversing the
+vertical convention reverses the signs while preserving magnitudes.
 Define the energy transfer by
 
 $$
@@ -67,8 +65,9 @@ $$
 =F\Delta y=\frac{F^2\varepsilon^2}{2m}.
 $$
 
-Total mechanical energy is constant; $\delta E$ is not its change or a quantum
-standard deviation. The proportionality constant in $\Delta y=K_{\rm conv}\delta E$
+Total mechanical energy is constant. Here $\delta E$ denotes deterministic work;
+quantum energy spread will be written $\sigma_H$ below.
+The proportionality constant in $\Delta y=K_{\rm conv}\delta E$
 is $K_{\rm conv}=1/F$, which has dimensions of inverse force.
 
 Let $A=(0,0)$, $B=(v_0\varepsilon,0)$ be the inertial endpoint and
@@ -81,8 +80,8 @@ $$
 $$
 
 This confirms the proposed proportionality, with an explicit factor and energy
-definition. It is an area in configuration space. Multiplication by $F/v_0$
-converts its units to action; it is not already a canonical phase-space area.
+definition. Multiplying this configuration-space area by $F/v_0$ gives action
+units. Section 3 obtains the action coefficient by direct integration.
 
 For $y(x)=Fx^2/(2mv_0^2)$ the other two areas are
 
@@ -94,16 +93,15 @@ $$
 $$
 
 These are the ratios in Lemma XI, Corollary 5, exact for this parabola. The tangent
-triangle is cubic in $\varepsilon$, rather than quadratic, because the initial
-vertical velocity is zero. About a later point, the deflection from its local
-tangent is still quadratic; its absolute vertical displacement need not be.
+triangle is cubic in $\varepsilon$ because the initial vertical velocity is zero.
+About a later point, deflection from the local tangent is again quadratic, while
+absolute vertical displacement also includes the existing vertical velocity.
 
 ![Areas for the constant-force launch](../out/constant-force-areas.svg)
 
-## 3. A stronger bridge: an actual action difference
+## 3. Matched-endpoint action difference
 
-The same-endpoint straight chord is an admissible comparison path in a variational
-calculation, although not a solution under the constant force. On
+The same-endpoint straight chord is an admissible off-shell comparison path. On
 $0\leq t\leq\varepsilon$, set
 
 $$
@@ -135,12 +133,11 @@ $$
 =\frac{\varepsilon\delta E}{12}.}
 $$
 
-This is a genuine action difference, not solely dimensional analysis. Its numerical
-factor differs from the converted tangent-triangle area. For this pair of paths,
-an identical total time derivative added to the Lagrangian cancels in the action
-difference because endpoints agree.
+The action integral fixes the coefficient relating the lens to the action
+difference. Adding the same point-function term $dG(q,t)/dt$ to the Lagrangian
+preserves the difference because endpoints and times agree.
 
-But nothing discretises the neighbouring paths: choosing
+The neighbouring paths form a continuous family. Choosing
 $\eta=\alpha t(\varepsilon-t)$ gives
 
 $$
@@ -148,17 +145,16 @@ $$
 \quad\text{as }\alpha\to0.
 $$
 
-Thus there is no positive lower bound on nonzero action differences in this
-classical path family. A restriction could still be proposed for physical
-distinguishability or allowed states; it would require an additional definition
-and premise. This calculation does not prejudge those alternatives.
+Positive action differences in this family therefore have infimum zero.
+A physical distinguishability relation or a restriction of allowed states changes
+the admissible comparison; defining that change is the next modelling question.
 
-## 4. What Newton's limit does and does not assert
+## 4. Polygonal approximation and its error
 
 Proposition I proves equality of finite swept triangles already at the polygonal
-stage, using central impulses. As the mesh shrinks, individual swept areas vanish
-but their sum over a fixed time need not vanish. They are not the small error
-lenses between a chord and a curved arc.
+stage, using central impulses. Its swept triangles sum to the swept area over a
+fixed time. By contrast, chord–curve lenses measure the error of the polygonal
+approximation; their total has a different limit.
 
 For the constant-force parabola, dividing a fixed duration $T$ into $N$ equal
 intervals gives $N$ chord lenses, each of area $v_0F(T/N)^3/(12m)$. Their sum is
@@ -167,24 +163,21 @@ $$
 \mathcal A_{\rm error,total}=\frac{v_0FT^3}{12mN^2}\to0.
 $$
 
-This is an exact polygonal approximation statement. A constant parallel force is
-not a central force towards a fixed finite point, so its trajectory cannot simply
-be substituted into Proposition I's area-law hypothesis. Its direct Newtonian
-anchors are the projectile Scholium and Lemmas X–XI.
+This gives the exact $N^{-2}$ convergence of the polygonal error. The constant
+parallel force belongs to the projectile Scholium and Lemmas X–XI; Proposition I
+assumes a force directed towards a fixed centre.
 
-The opening geometry is not a modern global existence theorem for all force laws.
 For constant force the displayed solution exists globally. Singular central forces
-need separate collision and continuation analysis. None of these facts identifies
-the mesh limit $\varepsilon\to0$ with $\hbar\to0$.
+require collision and continuation analysis. The approximation above takes a mesh
+limit; a semiclassical calculation instead varies the parameter $\hbar$.
 
-## 5. Path phases, uncertainty and the surviving question
+## 5. Phase resolution, uncertainty and reference frames
 
 The [Feynman chapter](../docs/Feynman_LeastAction_II19.md) supplies the quantum
 interpretation through phases $e^{iS/\hbar}$. Equal phase occurs when an action
-**difference** is $nh$, since $h=2\pi\hbar$. It does not select all paths with
-absolute action $nh$, impose a smallest action difference, or guarantee that two
-terms dominate the full integral. Classical stationarity concerns neighbourhoods
-of paths and their phase cancellation.
+**difference** is $nh$, since $h=2\pi\hbar$. This is periodicity of the relative
+phase. Classical stationarity concerns neighbourhoods of paths and their phase
+cancellation.
 
 For our specific chord comparison,
 
@@ -200,13 +193,12 @@ $$
 \varepsilon_{\rm phase}\sim\left(\frac{24m\hbar}{F^2}\right)^{1/3}.
 $$
 
-This is a scale for this chosen pair of paths, not a minimum time or a proved
-action gap. In particular the integration-mesh limit of a continuum quantum
-formulation is distinct from its semiclassical limit. Introducing $\hbar$ through
-the phase rule is new physical input relative to Newton's laws.
+This comparison scale marks an order-one phase difference for the selected pair
+of paths. The phase rule introduces a specified $\hbar$ as quantum input.
+The [technical paper](../papers/action-gap-foundations.tex) turns relative phase
+into an exact resolution threshold for a fixed measurement protocol and copy count.
 
-Energy-time uncertainty needs another distinction. If $B$ is an observable without
-explicit time dependence, the usual quantum commutator variance inequality and
+For a time-independent observable $B$, the quantum commutator variance inequality and
 Heisenberg evolution imply
 
 $$
@@ -217,39 +209,38 @@ $$
 $$
 
 when domains and variances are appropriate and the denominator is nonzero.
-This derivation uses a state energy spread and an observable-change timescale.
-Neither is automatically the deterministic work $\delta E$ and chosen mesh
-$\varepsilon$ above. Likewise a wavepacket uncertainty area concerns a distribution
-in conjugate variables, not a geometric area swept by one orbit.
+Here $\sigma_H$ is a state energy spread and $\tau_B$ an observable-change
+timescale. The earlier $\delta E$ and $\varepsilon$ describe deterministic work
+and a chosen trajectory interval. A wavepacket uncertainty area concerns the
+distribution of conjugate observables.
 
 The spatial area also changes under a horizontal Galilean boost. In the frame
 moving at $v_0$, horizontal launch velocity and the plotted spatial area vanish.
 The action difference above stays finite and unchanged: both paths share the
-same horizontal motion, whose action contribution cancels. The formula dividing
-by $v_0$ is therefore a conversion for $v_0\neq0$, not a universal area invariant.
+same horizontal motion, whose action contribution cancels. Thus the area
+conversion uses a frame with $v_0\neq0$, while the matched-endpoint action
+difference survives the boost.
 
-Adding a speed cap alone also supplies no positive minimum interval: for
-$v_0<c$, the constant-force solution stays below $c$ whenever
+For $v_0<c$, the constant-force solution stays below $c$ whenever
 $0<\varepsilon<(m/F)\sqrt{c^2-v_0^2}$. Arbitrarily small intervals remain possible.
-This is only a consistency check on a finite Newtonian segment, not a relativistic
-force model or a theory of finite-speed force propagation.
+This checks the speed of a finite Newtonian segment. Section 6 of the technical
+paper supplies a corresponding small-variation calculation for the free
+relativistic Lagrangian.
 
-The promising question is consequently whether an independently justified quantum
-notion of distinguishability can be related to this exact geometric action
-difference. That is more precise than asserting a universal minimum triangle,
-and it leaves open how action bounds and discrete spectra might arise under
-additional state, boundary or periodicity conditions.
+These results lead to an operational question: how does the action difference
+determine distinguishability under specified preparations and measurements?
+The complementary spectral question studies the effects of state space,
+boundary conditions and periodicity.
 
-## 6. Historical status and reproducibility
+## 6. Historical interpretation and reproduction
 
-An admissible modern interpretation is that Newton's geometry permits arbitrarily
-fine classical trajectories and does not encode a quantum action scale. Calling
-this an implicit $h\to0$ axiom is a retrospective hypothesis, not an assertion
-found in the passages read. We have not surveyed enough historical scholarship
-to claim that nobody has made or noticed such an interpretation.
+The modern interpretation starts from Newton's use of arbitrarily fine geometric
+limits. The proposed implicit $h\to0$ reading is recorded as a historical
+conjecture. Its chronology, relationship to the Classical Scholia and place in
+the existing literature are tasks H02/H03.
 
 The exact polynomial identities and the diagram are reproduced with
 `python3 scripts/constant_force_geometry.py`. The
 [check output](../out/constant-force-checks.json) records the assumptions and
-verified identities. These checks verify the calculation, not the quantum
-interpretation or an existence theorem beyond constant force.
+verified identities. The written derivation supplies the argument connecting the
+geometric construction to the action integral.

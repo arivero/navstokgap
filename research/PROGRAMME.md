@@ -1,152 +1,151 @@
 # Research programme: action, trajectories and gaps
 
-Version 1, 2026-09-05. This is a multi-session research programme, not a claimed
-solution or a promise that the desired conclusion is true.
+Version 2, 2026-09-06.
 
-## Aim and possible outcomes
+## Aim
 
-Understand whether a precisely stated extension or reinterpretation of mechanical
-trajectories explains a nonzero action scale, and which Lagrangians, state spaces
-and boundary conditions produce an actual lower bound. The originating heuristic
-relates Newton's vanishing geometric areas to action differences. Two admissible
-positive outcomes are:
+Explain the relationship between mechanical trajectories, an action scale and
+gap formation. We pursue two connected outcomes:
 
-1. A reconstruction/formalism for quantum mechanics, with its independent physical
-   assumptions exposed and its relationship to existing reconstructions established.
-2. A rigorous toy-model account of gap formation, identifying the quantity bounded
-   and the hypotheses responsible for the bound.
+1. A reconstruction of quantum mechanics from explicit physical premises, with
+   a derivation of the role and necessity of an action parameter.
+2. A rigorous toy model that identifies which Lagrangians, state spaces and
+   boundary conditions produce a positive lower bound.
 
-These outcomes can coexist. A rigorous obstruction, counterexample or demonstration
-that a proposed reconstruction assumes the desired conclusion is also a result.
-Novelty requires a literature comparison and ultimately specialist review.
+Newton's shrinking-area construction provides the initial geometric model.
+The work proceeds through exact mechanical examples, operational definitions,
+operator spectra and comparisons of limiting procedures.
 
-## Questions that must not be conflated
+## Starting results
 
-| Target | Precise question | Current status |
+For $V=-Fy$, duration $T>0$, perpendicular launch speed $v_0>0$ and mass $m>0$,
+the chord–curve action difference is
+
+$$\Delta S=\frac{F^2T^3}{24m}
+=\frac{F}{2v_0}\mathcal A_{\rm lens}
+=\frac{T\delta E}{12},\qquad \delta E=\Delta K=-\Delta V.$$
+
+The variation $\eta(t)=a t(T-t)$ gives $\Delta S=ma^2T^3/6$.
+Thus positive action differences in this fixed-endpoint class have infimum zero.
+The chord is an off-shell comparison path; the parabola solves the constant-force
+equation. This identifies admissibility of neighbouring paths as a substantive
+choice for the proposed gap mechanism.
+
+A second result concerns quantum measurement. For two known, equally likely
+two-arm pure states whose relative phase is $\Delta S/\hbar$, $N$ independent
+copies and arbitrary joint binary measurements give the first-lobe threshold
+
+$$d_{N,p}=2\hbar\arccos\!\left([4p(1-p)]^{1/(2N)}\right),
+\qquad |\Delta S|\le\pi\hbar,\quad \tfrac12<p\le1.$$
+
+Success probability at least $p$ is achievable exactly when
+$|\Delta S|\ge d_{N,p}$. For fixed $\tfrac12<p<1$, this threshold scales as
+$N^{-1/2}$; perfect discrimination has threshold $\pi\hbar$ for every finite $N$.
+The calculation connects an action difference to a resource-dependent resolution.
+
+The [technical paper](../papers/action-gap-foundations.tex) supplies the proofs,
+the Jacobi-operator calculation and the normalized free-kernel limit.
+The [ledger](../claims/LEDGER.md) records their evidence and review status.
+
+## Questions and mathematical objects
+
+| Target | Question | Starting point |
 | --- | --- | --- |
-| Q0: classical existence | For which initial data, force regularity and collision conventions does an ODE trajectory exist uniquely and globally? | Constant force solved; central singularities not audited |
-| Q1: action-value gap | Is the infimum of positive same-endpoint action differences over a specified path class positive? | No for the unrestricted constant-force variation family |
-| Q2: nonzero action scale | Can independent operational/composition premises force a parameter with action units to be nonzero? | Open programme; Newtonian equations alone do not force it |
-| Q3: operational bound | With a fixed measurement protocol, resource budget and error target, what relative action is distinguishable? | Conditional two-arm threshold derived; quantum inputs explicit |
-| Q4: spectral gap | For a specified self-adjoint operator and Hilbert space, is the spectrum separated above its ground sector? | Separate classical Hessian and quantum Hamiltonian tests |
-| Q5: field-theory transfer | Which toy-model estimates survive removal of cutoffs, infinite volume and interactions? | Future comparison only; no Yang–Mills reduction |
+| Q0: classical existence | Which force regularity, initial data and collision conventions give unique global trajectories? | Constant force; next, central potentials |
+| Q1: action-value gap | Is the infimum of positive matched-endpoint action differences positive on the chosen path class? | Infimum zero for the constant-force family |
+| Q2: action scale | Which physical premises force a universal parameter with action units to be positive? | Reconstruction axiom comparison |
+| Q3: operational bound | How do protocol, resources and error target determine action resolution? | Exact two-arm finite-copy threshold |
+| Q4: spectral gap | Which self-adjoint operator has a separated ground sector, and how does its gap depend on parameters? | Dirichlet Hessian and quantum Hamiltonian |
+| Q5: transfer across limits | Which estimates survive continuum and infinite-volume limits and interactions? | Companion PDE/field-theory comparisons |
 
-Always distinguish $h=2\pi\hbar$ from a proposed new field. Write trajectory
-variations as $\eta$, a fluctuation operator as $J$, and any hypothetical field as
-$\chi$. None is identified with $\hbar$ by notation. Absolute Hamilton actions
-change under endpoint terms; specify endpoint matching or a gauge convention.
+Use $h=2\pi\hbar$ for Planck's constants, $\eta$ for trajectory variations,
+$J$ for a fluctuation operator and $\chi$ for a proposed additional field.
+Use matched endpoints when comparing actions under additions of $dG(q,t)/dt$.
 
-## Starting evidence and obstructions
+## Model sequence
 
-For $V=-Fy$, fixed duration $T>0$, perpendicular launch speed $v_0>0$ and mass
-$m>0$, the checked chord comparison gives
+1. **Constant force:** derive the area–action relation and study small variations.
+2. **Harmonic oscillator:** compare the duration-dependent Hessian eigenvalues
+   with the quantum Hamiltonian spacing. Track normalization and conjugate times.
+3. **Free line, circle and box:** isolate confinement and boundary conditions,
+   and calculate gap closure as the spatial domain grows.
+4. **Central potentials and Kepler:** establish IVP assumptions, collision
+   continuation and action-angle variables; then compare quantum spectra.
+5. **Interacting and multiwell models:** identify a gap-producing mechanism and
+   its dependence on coupling, tunnelling and limiting parameters.
 
-$$\Delta S=\frac{F^2T^3}{24m}=\frac{F}{2v_0}\mathcal A_{\rm lens}
-=\frac{T\delta E}{12}.$$
+## Work packages
 
-Here $\delta E=\Delta K=-\Delta V$, not total-energy change or a variance.
-The family $\eta(t)=a t(T-t)$ has $\Delta S=m a^2T^3/6\to0$.
-Consequently Q1 cannot be proved for this unrestricted path class. Comparing
-off-shell paths is not comparing distinct solutions of the same initial-value
-problem. A reformulation must say what is restricted and why.
-
-The quantum weight is $\exp(iS/\hbar)$, not $\exp(iL/h)$ without a time integral.
-Equal phases modulo $2\pi$ do not impose an action gap. Investigate the proposed
-delta-prime mechanism through explicitly normalized kernels and distributional
-limits, not through visual resemblance. Jacobi fields describe linearized
-classical solutions, whereas arbitrary path variations need not be Jacobi fields.
-
-## Work packages and gates
-
-| Package | Deliverable and acceptance gate | Dependencies |
+| Package | Deliverable / acceptance gate | Dependencies |
 | --- | --- | --- |
-| WP0: durable foundations | Restart instructions, claim ledger, task queue, source rules and a working LaTeX/PDF build | Current milestone |
-| WP1: Newton audit | Edition/folio concordance; Book I limits separated from Book III Classical Scholia; chronological support for every historical claim | Source access; no mathematical conjecture assumed |
-| WP2: classical control cases | Short proofs for constant force, regular central potentials and Kepler collision cases; explicit action-gap obstruction | WP0; precise path topology |
-| WP3: fluctuations and kernels | Jacobi operator/domain, conjugate-time examples, normalized free kernel and distributional limit; test delta-prime proposal | WP2; functional-analytic review |
-| WP4: operational reconstruction | Finite-resource distinguishability theorem; then an axiom/dependency audit of reconstruction candidates | WP3; bibliography batch B01 |
-| WP5: gap laboratory | Free particle, oscillator, compact configuration space, Coulomb and selected confining potentials; explain which parameters and limits close gaps | WP2–4 as relevant; self-adjoint domains |
-| WP6: companion limits | Nonrelativistic/relativistic comparison; viscosity, coercivity and auxiliary-flow gaps; explicit transfer failures to NS/YM | WP5; Millennium definitions remain fixed |
-| WP7: papers and review | Human-readable proofs, reproducible checks, adversarial review, citation audit and optional selected formal certificates | An accepted result from a previous package |
+| WP0: foundations | Restart instructions, ledger, tasks, source rules and LaTeX/PDF build | Complete |
+| WP1: Newton | Edition/folio concordance, six-scholium corpus and dated evidence for the publication-history question | Source access |
+| WP2: classical mechanics | Proofs for constant force, regular central forces and specified Kepler collision cases | Path class and topology |
+| WP3: fluctuations and kernels | Jacobi operator/domain, conjugate times and normalized distributional limits | WP2 |
+| WP4: operational reconstruction | Measurement bounds and a dependency map of candidate quantum axioms | WP3; bibliography B01 |
+| WP5: gap laboratory | Operator domains, explicit bounds and parameter-dependent gap closure | Relevant WP2–4 results |
+| WP6: companion limits | Relativistic, parabolic and quantum-field comparisons with a specified transferable estimate | WP5; Millennium definitions |
+| WP7: papers and review | Readable proofs, checked citations, reproduced results and selected formal certificates | Accepted package result |
 
-Packages WP1 and the bibliography parts of WP4–6 can run in parallel. Do not block
-an exact modern calculation on a disputed historical interpretation. Do not start
-an infinite-dimensional field-theory construction before the toy target is stable.
+Historical reading and mathematical calculations have separate task tracks.
+Delegate bounded tasks to Sol or Luna sequentially, with the coordinator waiting
+for each worker and reviewing its handoff before continuing. The
+finite-dimensional examples establish the definitions and estimates for the
+later field-theory comparison. A package finishes with a theorem, counterexample,
+conditional result or precisely stated open obligation.
 
-## Model progression
+## Reconstruction branches
 
-1. Constant force on a finite interval: exact action geometry and no-gap control.
-2. Harmonic oscillator: compare the time-dependent Dirichlet action Hessian with
-   the quantum energy spacing. A positive Hessian coefficient is not a minimum
-   nonzero value of an unnormalized quadratic form.
-3. Free particle on a line versus a circle/box: expose confinement, volume and
-   boundary-condition dependence. A finite-size gap may vanish at infinite volume.
-4. Central potentials: separate local ODE existence, bound classical orbits,
-   action-angle variables and quantum spectral claims. Kepler collision
-   regularisation does not establish a quantum lower action bound.
-5. Selected interacting or multiwell models only after the single-particle cases
-   have defined the gap notion; tunnelling and parameter limits are explicit.
+**Branch A: consequences of quantum premises.** Start with Hilbert states, Born
+probabilities and the phase $e^{iS/\hbar}$ for a specified $\hbar>0$. Derive
+operational bounds, spectra and their dependence on model parameters.
 
-## The two reconstruction branches
+**Branch B: origin of quantum structure.** Choose operational premises about
+composition, continuity, reversible transformations and distinguishability.
+Construct models satisfying subsets of these premises and identify the step that
+selects quantum structure. Then establish how action enters the dynamics and what
+forces its scale to be positive. Numerical calibration is a further empirical task.
 
-**Branch A: quantum input admitted.** Assume Hilbert states, Born probabilities and
-$e^{iS/\hbar}$ with $\hbar>0$. Derive operational bounds and spectral examples.
-This can explain consequences of quantum mechanics, not its existence.
+**Additional-field proposal.** Specify the field space, coupling and measure for
+$S[q,\chi]$, then calculate the effective action after eliminating $\chi$.
+The [idea register](../ideas/I001-action-field.md) sets out the candidate
+interpretations and their immediate tests.
 
-**Branch B: quantum input to be derived.** List candidate non-quantum premises
-(composition, continuity, reversible transformations, distinguishability, etc.).
-Find classical models satisfying subsets; identify precisely which premise excludes
-them. Compare existing reconstructions before selecting an axiom set. Establishing
-the form of a theory, the necessity of a nonzero scale and the numerical value of
-that scale are three separate obligations. Dimensionful numerical values require
-units and empirical calibration.
+## Reading priorities
 
-An effective action generated by coarse graining is another candidate, but the
-measure, degrees of freedom and scale must be specified. A symbol called an
-“h field” is an idea, not yet a model.
+Start Q01 with [Hardy's five axioms](https://arxiv.org/abs/quant-ph/0101012v4)
+and [Chiribella–D'Ariano–Perinotti's informational derivation](https://arxiv.org/abs/1011.6451v3).
+Use [Masanes–Müller](https://arxiv.org/abs/1004.1483v4) as a third comparison.
+For each, trace how its premises constrain state spaces, transformations and
+composition.
 
-## Initial reading priorities
+Branch A draws on [Feynman's path-phase formulation](https://doi.org/10.1103/RevModPhys.20.367),
+[Wootters's finite-sample statistical distance](https://doi.org/10.1103/PhysRevD.23.357)
+and the [quantum Chernoff asymptotic error bound](https://arxiv.org/abs/quant-ph/0610027v1).
+The [B01 batch](../references/batches/B01.md) records verified metadata and selected
+reading coverage. Full reconstruction-proof reading belongs to Q01.
 
-The first bounded bibliography batch supplies three alternative reconstruction
-starting points: [Hardy's five axioms (2001)](https://arxiv.org/abs/quant-ph/0101012v4),
-[Chiribella–D'Ariano–Perinotti's informational derivation (2011)](https://arxiv.org/abs/1011.6451v3),
-and [Masanes–Müller's physical requirements (2011)](https://arxiv.org/abs/1004.1483v4).
-Their different premises must be compared, not merged without argument. The
-coordinator has checked their abstracts/identifiers; no complete proof audit is
-claimed. Q01 should begin with Hardy and Chiribella–D'Ariano–Perinotti, using the
-third as a comparison, and track where classical alternatives cease to satisfy
-the chosen premises.
+## $1/c$, Navier–Stokes and Yang–Mills
 
-For the admitted-quantum branch, use [Feynman's primary phase formulation
-(1948)](https://doi.org/10.1103/RevModPhys.20.367), [Wootters's statistical-distance
-paper (1981)](https://doi.org/10.1103/PhysRevD.23.357), and the [quantum Chernoff
-bound (2007)](https://arxiv.org/abs/quant-ph/0610027v1). These are reading targets
-with different finite-sample/asymptotic scopes, not evidence for a classical
-action gap. The technical foundations paper supplies its elementary two-state
-calculation in full rather than borrowing a stronger unread theorem.
+Track $\hbar$, $c^{-1}$, viscosity $\nu$, time and volume independently.
+The free relativistic particle retains the small-amplitude action family within
+a strict speed margin. The nonrelativistic quantum model retains $\hbar>0$ at
+$c^{-1}=0$. These examples separate the roles of the two parameters.
 
-## $1/c$, Navier–Stokes and Yang–Mills companions
+A bridge must specify its source and target spaces, operators, physical or
+auxiliary time, units, preserved estimate and limits. The useful comparison is
+how coercivity and control of fluctuations survive changes of scale.
+For Navier–Stokes, the target is evolution regularity under the official
+hypotheses. For Yang–Mills, it includes the physical Hilbert space and a vacuum
+spectral gap through the continuum and infinite-volume limits.
 
-Keep $\hbar$, $c^{-1}$, viscosity $\nu$, observation time and volume as separate
-parameters. A relativistic speed limit alone still allows arbitrarily small
-trajectory variations with a strict speed margin. A nonrelativistic quantum model
-can have $\hbar>0$ with $c^{-1}=0$. These control models prevent identifying the
-parameters prematurely.
+## Scope and publication
 
-For every proposed bridge record source/target spaces, operators, physical versus
-auxiliary time, units, preserved estimate and limits. In particular a Poincare gap
-for a bounded-domain diffusion operator is not a proof of 3D Navier–Stokes
-regularity, and an oscillator gap is not a four-dimensional Yang–Mills vacuum gap.
-For a mass gap one must say how energy and mass are related (including $c$) and
-retain the physical Hilbert space and infinite-volume/continuum requirements.
+The programme's reconstruction and gap-formation questions are open research
+targets. The present results concern the explicitly defined toy models; the
+Millennium problems supply comparison targets. Novelty and publication readiness
+will be assessed through literature comparison and specialist review.
 
-## Publication and stopping rules
-
-The initial papers are a programme/protocol paper and a technical foundations note.
-They must be readable without this chat, and labeled working drafts until reviewed.
-Do not submit, post to arXiv, contact authors or spend money without user direction.
-
-A work package finishes with a theorem, a counterexample, a documented conditional
-result, or a sharply stated unresolved obligation. Repeatedly renaming a failed
-gap claim is not progress. Record changes of target and their reason. See the
-task queue for bounded next work and the claim ledger for evidence status.
+Maintain human-readable proofs alongside calculations and formal artifacts.
+Record changes of model or target with their reasons. Submission, public posting,
+author correspondence and paid services require user direction.
