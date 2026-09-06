@@ -1,0 +1,23 @@
+{
+  "scope": "symbolic identities and finite numerical cross-checks, not formal certificates",
+  "assumptions": "m,T,F,hbar > 0; matched endpoints; ideal quantum two-arm pure states; N independent copies",
+  "symbolic_checks": {
+    "fixed_endpoints": "passed",
+    "action_variation": "passed",
+    "small_amplitude_limit": "passed",
+    "oscillator_mode": "passed",
+    "kernel_first_derivative": "passed",
+    "density_trace": "passed",
+    "density_square": "passed",
+    "relativistic_leading_action": "passed"
+  },
+  "numerical_checks": "threshold inversion, phase periodicity, perfect-discrimination endpoint, invalid copy counts",
+  "threshold_over_hbar_at_p_0_75": {
+    "1": 1.0471975511965976,
+    "2": 0.7494688654174801,
+    "10": 0.33841121199013835,
+    "100": 0.10724628925063222,
+    "10000": 0.01072717470921111
+  },
+  "perfect_discrimination_threshold_over_hbar": 3.141592653589793
+}

@@ -5,9 +5,38 @@ actual project: Newtonian trajectories, central potentials, and a proposed physi
 action-scale restriction. The first comparison milestone is complete; work on the
 Millennium problems themselves is outside the present scope.
 
+## Start or restart here
+
+This is now a multi-session research repository. A fresh Codex session should read
+[AGENTS.md](AGENTS.md), [restart state](research/STATE.md), the
+[research programme](research/PROGRAMME.md), and its selected
+[bounded task](research/TASKS.md). No earlier conversation is required.
+
+- [Programme PDF](out/papers/research-programme.pdf): aims, distinctions, work packages and acceptance gates.
+- [Technical foundations PDF](out/papers/action-gap-foundations.pdf): elementary no-gap results, Jacobi variations, a kernel test and a conditional quantum measurement bound.
+- [LaTeX sources and build](papers/README.md), [claim ledger](claims/LEDGER.md), [ideas](ideas/README.md).
+- [Agent protocol](agents/PROTOCOL.md): bounded Luna bibliography and Sol transcription/audit work, with reviewable handoffs.
+- [Source policy](references/SOURCE_POLICY.md), [shared BibTeX](references/library.bib) and [first bibliography batch](references/batches/B01.md).
+
+Reproduce with `make check` and `make papers`; see [tooling decisions](research/TOOLS.md).
+The existing tools suffice for these drafts. Lean installation is deferred to a
+specific [formalisation feasibility task](formal/README.md), not presented as an
+existing certificate.
+
+The programme permits two positive outcomes: a justified quantum reconstruction
+and/or a rigorous toy mechanism for a specified gap. Neither is assumed. Finite
+$c$, Navier–Stokes and Yang–Mills remain explicit companion comparisons, with no
+asserted reduction. The papers are working drafts, not externally reviewed results.
+
+An example bounded restart instruction is: “Read AGENTS.md and STATE.md; execute
+M03, recording its assumptions, checks and handoff. Do not expand into Q01 or the
+Millennium problems.”
+
 ## Active mechanics investigation
 
 - [Principia and constant-force action](notes/principia-constant-force-action.md): historical reading, exact geometric areas, action differences and the limits of the quantum interpretation.
+- [Technical continuation](notes/jacobi-kernels-distinguishability.md): routes to the maintained proofs in the first technical paper.
+- [NATP00385 source audit](notes/newton-NATP00385-audit.md): the user-supplied Newton Project fragment collection, reading coverage and historical limits.
 - [Reusable skill](skills/principia-action/SKILL.md): context for main and subagent sessions, routed by [AGENTS.md](AGENTS.md).
 - [Exact checks](out/constant-force-checks.json) and [diagram](out/constant-force-areas.svg), reproduced with `python3 scripts/constant_force_geometry.py`.
 
@@ -19,7 +48,7 @@ action difference, not a derivation of Planck's constant.
 
 - [Exact definitions](notes/millennium-problem-definitions.md): equations, assumptions and official targets.
 - [Comparison and bridges](notes/comparison-and-bridges.md): scaling, geometric and parabolic connections, and distinctions between spectral gaps.
-- [Source catalogue](docs/README.md): five local PDFs with reading notes and checksums.
+- [Source catalogue](docs/README.md): the original five-PDF comparison dossier plus the growing mechanics/history collection.
 - [Milestone review](reviews/first-milestone.md): verification scope and remaining limitations.
 
 ## Mathematical scope of the completed comparison
@@ -45,6 +74,9 @@ parabolic methods, but their auxiliary time must be distinguished from physical
 time. Results in lower dimension must keep that qualification.
 
 ## Proposed tools
+
+This initial-milestone inventory is retained for context. The maintained build,
+installation choices and verification scope are now in [research/TOOLS.md](research/TOOLS.md).
 
 | Tool | Purpose | When to introduce |
 | --- | --- | --- |
@@ -89,16 +121,22 @@ on evidence, with external specialist review for substantive new claims.
 
 ## Suggested growth of the repository
 
-Create directories when they acquire actual content:
+Directories now have the following responsibilities; create further ones only
+when they acquire actual content:
 
 ```text
 docs/          Source catalogue, originals and checked reading notes
+references/    Shared bibliography, source policy and bounded search batches
+research/      Programme, restart state, tasks and worker handoffs
+agents/        Role cards and delegation protocol (not auto-starting processes)
 notes/         Problem statements, common notation and comparisons
-claims/        Claims, assumptions, dependencies, status and objections
+ideas/         Speculative proposals and explicit tests, including rejected ideas
+claims/        Claim ledger, assumptions, status and objections
+papers/        Human-readable LaTeX papers and programme template
 scripts/       Reproducible calculations and figure generation
-out/           Calculation outputs and figures
+out/           Calculation outputs, figures and final working-paper PDFs
 skills/        Maintained research-context skills
-formal/        Selected formal lemmas and pinned toolchain
+formal/        Formalisation targets; no installed toolchain/certificates yet
 reviews/       Independent assessments and resolved or outstanding objections
 ```
 

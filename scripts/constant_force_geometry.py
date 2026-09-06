@@ -6,6 +6,7 @@ Dependencies used in this run: SymPy 1.14.0, Matplotlib 3.10.9.
 
 from pathlib import Path
 import json
+import argparse
 
 import sympy as s
 import matplotlib
@@ -15,6 +16,9 @@ import matplotlib.pyplot as plt
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check-only", action="store_true", help="Verify identities without rewriting figures or reports")
+    args = parser.parse_args()
     m, F, v, T = s.symbols("m F v T", positive=True)
     t, alpha = s.symbols("t alpha", real=True)
     x = v * t
@@ -52,6 +56,9 @@ def main():
         "chord_minus_classical_action": str(deltaS),
         "arbitrary_variation_action": str(varied),
     }
+    if args.check_only:
+        print(json.dumps(report, indent=2))
+        return
     (output / "constant-force-checks.json").write_text(json.dumps(report, indent=2) + "\n")
 
     # Dimensionless axes X=x/(v*T), Y=y/(F*T**2/(2*m)).
