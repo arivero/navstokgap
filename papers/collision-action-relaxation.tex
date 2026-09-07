@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\title{Physical-Time Action Relaxation in an Elastic Collision Bath}
+\author{navstokgap research working notes}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An elastic repeated-collision model produces an action-valued covariance
+observable that relaxes exponentially in physical time to a positive constant.
+We derive its rate and plateau directly from the masses, bath velocity variance
+and collision frequency. Bounded bath velocities keep every collision below a
+fixed speed ceiling. The exact parameter dependence isolates the additional
+law needed for a universal action scale: energy and momentum conservation
+determine the collision map, while the reservoir statistics set the plateau.
+\end{abstract}
+
+\section{A momentum receiver and a classical stochastic clock}
+A tracer of mass $m\ge M>0$ meets fresh bath particles of mass $M$ on the
+line. Collisions occur at an independent Poisson rate $\nu>0$. Incoming bath
+velocities $W_n$ are independent, identically distributed, centered and obey
+$|W_n|\le w<c/3$, with variance $s^2>0$. Initial tracer velocity is independent
+of the bath and clock, centered, and bounded by $w$. Between collisions it is
+constant; $X(t)=X(0)+\int_0^t V(r)\,dr$.
+
+The nontrivial one-dimensional elastic collision map is
+\begin{equation}\label{eq:map}
+ V'=aV+bW,\quad W'=\frac{2m}{m+M}V-aW,\qquad
+ a=\frac{m-M}{m+M},\quad b=\frac{2M}{m+M}=1-a.
+\end{equation}
+Direct substitution gives $mV'+MW'=mV+MW$ and
+$m(V')^2+M(W')^2=mV^2+MW^2$.
+Since $0\le a<1$, the tracer update is a convex combination and preserves
+$|V|\le w$. The departing particle obeys
+$|W'|\le(3m-M)w/(m+M)<3w<c$.
+
+The model specifies a refreshed reservoir and a velocity-independent clock.
+Each collision accounts for momentum and energy transfer; the complete stream
+supplies fresh particles and removes departing ones. A spatial gas realization
+would additionally derive encounter rates and incoming velocity statistics.
+The speed ceiling here is a kinematic restriction on Newtonian collisions in
+the reservoir frame, rather than a Lorentz-covariant collision law.
+
+\section{Stationary covariance and the action plateau}
+Define the two inverse-time rates
+\begin{equation}\label{eq:rates}
+ \gamma=\nu(1-a)=\frac{2\nu M}{m+M},\qquad
+ \beta=\nu(1-a^2)=\frac{4\nu mM}{(m+M)^2}.
+\end{equation}
+The velocity generator acts on bounded functions as
+$Lf(v)=\nu\{\E[f(av+bW)]-f(v)\}$.
+
+\begin{proposition}[Collision plateau]\label{prop:plateau}
+The stationary velocity law is unique on $[-w,w]$ and is represented by the
+convergent series $V_*\overset{d}=b\sum_{j=0}^\infty a^jW_j$.
+Its variance and autocovariance are
+\begin{equation}\label{eq:cov}
+ S_*:=\Var V_*=\frac{b^2s^2}{1-a^2}=\frac{M}{m}s^2,
+ \qquad C(r)=S_*e^{-\gamma r}.
+\end{equation}
+Thus the stationary displacement observable
+$\mathsf h(\Delta)=m\Var[X(t+\Delta)-X(t)]/\Delta$ satisfies
+\begin{equation}\label{eq:h}
+ \mathsf h(\Delta)=H_*\left[1-\frac{1-e^{-\gamma\Delta}}
+ {\gamma\Delta}\right],\qquad
+ H_*:=\frac{2mS_*}{\gamma}=\frac{(m+M)s^2}{\nu}>0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The series converges absolutely and stays in $[-w,w]$, since
+$b\sum a^j=1$ (for $a=0$ it is simply $W_0$).
+Separating its first term proves invariance under one collision. Coupling two
+initial velocities to the same clock and bath multiplies their difference by
+$a^{N_t}$. Its mean contraction factor is
+$\E a^{N_t}=e^{-\nu(1-a)t}$, also for $a=0$ with $0^0=1$.
+Hence invariant probability laws on the bounded interval coincide.
+Independence and centering give the variance in \eqref{eq:cov}.
+Conditioning on the collision count yields
+$\E[V(t+r)\mid V(t)]=e^{-\gamma r}V(t)$; stationary covariance follows.
+Integrating the covariance over the displacement square gives
+$\mathsf h(\Delta)=2m\int_0^\Delta(1-r/\Delta)C(r)\,dr$,
+which evaluates to \eqref{eq:h}.
+\end{proof}
+
+This proof uses a contracting affine collision update; it requires neither a
+finite velocity state space nor detailed balance of the refreshed bath.
+The energy-valued reservoir parameter $\Theta:=Ms^2$ gives
+$mS_*=\Theta$ and $H_*=\Theta(m+M)/(\nu M)$.
+For a general bounded bath, $\Theta$ denotes twice the mean incoming kinetic
+energy, without assuming a thermodynamic equilibrium distribution.
+
+\section{An observable relaxing in physical time}
+The integrated future-lag covariance defines a second operational quantity:
+\begin{equation}\label{eq:field}
+ \mathsf a(t):=2m\int_0^\infty\Cov[V(t+r),V(t)]\,dr.
+\end{equation}
+It has action units and uses physical preparation time $t$, with the lag
+integrated out. Its definition differs from the finite-duration displacement
+observable; both share the same stationary long-duration plateau.
+
+\begin{proposition}[Physical-time relaxation]\label{prop:relax}
+For the centered initial ensemble specified above, with $S_0=\Var V(0)$,
+\begin{align}
+ S(t)&=S_*+(S_0-S_*)e^{-\beta t},\label{eq:variance}\\
+ \mathsf a(t)&=\frac{2mS(t)}\gamma
+ =H_*+(\mathsf a(0)-H_*)e^{-\beta t},\qquad
+ \dot{\mathsf a}=\beta(H_*-\mathsf a).\label{eq:relax}
+\end{align}
+In particular a tracer prepared at rest has
+$\mathsf a(t)=H_*(1-e^{-\beta t})>0$ for every $t>0$ and
+$\mathsf a(t)\to H_*>0$ as $t\to\infty$.
+\end{proposition}
+\begin{proof}
+The generator gives $Lv=-\gamma v$ and
+$L(v^2)=-\beta v^2+\nu b^2s^2$. Centering is preserved, so
+$\dot S=-\beta S+\nu b^2s^2=\beta(S_*-S)$.
+The conditional mean from Proposition~\ref{prop:plateau} gives, even away from
+stationarity, $\Cov[V(t+r),V(t)]=e^{-\gamma r}S(t)$.
+Integration proves \eqref{eq:relax}.
+\end{proof}
+
+The original displacement definition retains a distinct duration parameter:
+\begin{equation}\label{eq:window}
+ \mathsf h_\Delta(t)=\frac{2m}{\gamma\Delta}
+ \int_0^\Delta S(t+r)\bigl[1-e^{-\gamma(\Delta-r)}\bigr]\,dr.
+\end{equation}
+Indeed, for $r\le s$ the covariance inside its double integral is
+$e^{-\gamma(s-r)}S(t+r)$; integrating over $s$ proves the formula.
+At fixed $\Delta$, it approaches the stationary value in \eqref{eq:h}
+exponentially at rate $\beta$. At every fixed $t$ it tends to zero as
+$\Delta\downarrow0$, with $\mathsf h_\Delta(t)\sim mS(t)\Delta$ when
+$S(t)>0$. Its long-duration limit is $H_*$, since the transient contribution
+to \eqref{eq:window} is bounded in magnitude by
+$2m|S_0-S_*|e^{-\beta t}/(\gamma\beta\Delta)$.
+
+\section{What would select a common constant?}
+For fixed bath mass, variance and clock, the plateau grows as $m+M$.
+Achieving the same $H_*$ for different tracer masses requires
+\begin{equation}\label{eq:universality}
+ \nu_m=\frac{(m+M)s_m^2}{H_*}.
+\end{equation}
+This equation is a diagnostic of a proposed encounter law. Binary energy and
+momentum conservation alone place no restriction of this form on the external
+clock or reservoir preparation.
+
+More explicitly, take a fixed admissible bath and a tracer initially at rest.
+For any $0<\epsilon\le1$, replace every incoming velocity by
+$W_n^{(\epsilon)}=\epsilon W_n$, keeping masses and clock unchanged.
+Every elastic collision, centering assumption and speed bound remains valid.
+Both $H_*$ and $\mathsf a(t)$ are multiplied by $\epsilon^2$.
+Consequently this entire class admits arbitrarily small positive plateaus even
+though every nondegenerate member relaxes to its own positive constant.
+This is a countermodel test for these specified stochastic collision premises.
+
+The next model should replace the supplied clock by a spatial encounter law
+and test how it scales with reservoir velocity and density. The physical-time
+relaxation mechanism is already explicit: persistent injection of velocity
+variance balances collisional contraction. A universal quantum action scale
+requires an additional physical relation that fixes this balance across systems.
+
+% B10 will supply verified prior-art citations before acceptance and PDF integration.
+\end{document}

@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-07. Current milestone: A01 classical action-field selection.
+Updated: 2026-09-07. Current milestone: A02 collision action relaxation.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
@@ -32,6 +32,10 @@ coordinator proof/source review and 16 exact checks.
 Next: **A02**, test a mechanical origin and mass-universal correlation law from
 [the central target](ACTION_FIELD_TARGET.md). The observation-duration limit
 is distinct from physical-time relaxation of an independent field.
+The A02 draft in `papers/collision-action-relaxation.tex` now derives a
+covariance observable relaxing in physical time to $(m+M)s^2/\nu$ for an
+elastic refreshed bath. Fifteen exact checks pass. B10 audits its sources and
+assumptions before ledger acceptance and PDF integration.
 **M06** remains the force/acceleration and relativistic-action diagnostic from
 [the M05 note](../notes/two-regulator-audit.md).
 **B07a** completed the Wilson–Kogut common-observable reading and test;
