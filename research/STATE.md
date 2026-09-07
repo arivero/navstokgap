@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-07. Current milestone: A03/B12 completed; physical-cut test A05 next.
+Updated: 2026-09-08. Current milestone: A05/B13 complete; phase-space cut test A06 next.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
@@ -39,7 +39,12 @@ proves the nonuniform chord bound and fixed-parameter restriction test.
 At fixed Gaussian preparation each inserted node adds expected kinetic action
 $\kappa/2$; retaining finite total defect by shrinking $\kappa$ changes old
 node marginals. C027–C029 have a Luna medium audit and nine exact checks.
-Next is **A05**, the physical-cut test in [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md).
+**A05/B13 are complete.** The [physical-cut note](../notes/physical-cut-speed.md)
+gives an elastic momentum receiver, the sharp midpoint action bound
+$\kappa_{\rm mid}\le m\Delta(u-|v|)^2$, and a deterministic-drift theorem
+for ballistic position convolution laws. C030–C032 have a Luna medium audit
+and twelve exact checks. Next is **A06**, a finite-speed bridge retaining
+position and velocity, in [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md).
 A04 preserves the
 spatial-clock question as a secondary diagnostic.
 **B11 is waiting:** the fresh Sol medium audit of the supplied polygon ideas
@@ -113,6 +118,8 @@ TeX's file-write security settings.
 
 ## History and handoffs
 
+- [A05 handoff](handoffs/A05.md): conservation, finite-speed support and the
+  need for velocity memory in the chosen cut model. Eight PDFs now build.
 - [A03 handoff](handoffs/A03.md): refinement consistency, source review and
   the next intervention-versus-sampling test. Seven PDFs now build.
 - [A02 handoff](handoffs/A02.md): reviewed bath diagnostic and return to cut

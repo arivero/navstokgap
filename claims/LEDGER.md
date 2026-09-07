@@ -35,6 +35,9 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C027 | For constant-force sampled chords on arbitrary positive partitions, $D_\pi=F^2\sum\tau_j^3/(24m)\le F^2T|\pi|^2/(24m)$; equal steps minimize at fixed count, and every split reduces the error | Cut-point note §1; matched endpoints; B12 and exact checks |
 | C028 | In the scalar Gaussian endpoint-bridge family at fixed mass/times, exact restriction consistency forces fixed $\kappa\ge0$; for positive $\kappa$, $D_\pi\to\infty$ in probability but $2D_\pi/(N-1)\to\kappa$ in mean square | Cut-point note §§2–3; covariance proof, C014 finite chi-square law and Chebyshev; B12 |
 | C029 | Inserting a node after lengths $a,b>0$ in the fixed-$\kappa$ free bridge adds conditional mean kinetic action $\kappa/2$, using variance $\kappa ab/[m(a+b)]$ | Cut-point note §4; square completion; B12 and nine-check suite |
+| C030 | Equal-mass particles prepared with opposite velocities $\pm u$ and separation $u\Delta$ exchange velocities at the midpoint; the tracer returns with $\kappa_{\rm mid}=mu^2\Delta$ and action $\kappa_{\rm mid}/2$ | Physical-cut note §1; total energy $mu^2$, momentum zero, preparation changes with duration; B13 and twelve checks |
+| C031 | For absolutely continuous paths with fixed endpoints and speed at most $u$, $\kappa_{\rm mid}=4m\operatorname{Var}Y/\Delta\le m\Delta(u-|v|)^2$, $v=(z-x)/\Delta$; the bound is sharp | Physical-cut note §2; endpoint-conditioned laws, two-segment action with explicit bias term; B13 |
+| C032 | A probability convolution semigroup on position with support in $[-ut,ut]$ for all $t\ge0$ is $\delta_{bt}$, $|b|\le u$ | Physical-cut note §3; variance additivity and ballistic bound; spatially homogeneous stationary independent increments only; B13 |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -69,6 +72,8 @@ consequences are identified separately.
 | C024 | Elementary parameter-scaling countermodel | B10; bounded coverage, novelty unassessed |
 | C027 | Elementary arbitrary-partition extension of the audited constant-force formula | [B12](../references/batches/B12.md); existing Newton source route |
 | C028–C029 | Elementary Gaussian restriction, chi-square and conditional-variance consequences; action interpretation is project-specific | B12; Pitman–Yor selected bridge/Markov passages, novelty unassessed |
+| C030 | Elementary construction using the established equal-mass elastic collision map | [B13](../references/batches/B13.md); Barkai (2)–(3) |
+| C031–C032 | Elementary support/variance and convolution consequences; exact statements unmatched in the two-source coverage | B13; novelty unassessed; Cinque supplies the memory comparison, not these theorems |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.

@@ -1,0 +1,147 @@
+# A physical cut: elastic reversal, finite speed and memory
+
+A05, reviewed with B13, 2026-09-07. An equal-mass elastic collision realizes a random
+midpoint with exact energy and momentum conservation. Its action cost tends
+to zero with the interval duration at fixed speed. A sharp midpoint bound
+extends this conclusion to every bounded-speed bridge law. Finally, a
+position-only convolution law with ballistic support is necessarily a
+deterministic drift. Together these tests identify velocity memory as a
+concrete ingredient for the next refinement model.
+
+## 1. One collision with a momentum receiver
+
+Fix $m>0$, $0<u<c$ and duration $\Delta>0$. Choose a common random sign
+$\sigma=\pm1$ with equal probabilities. At time zero, a labelled tracer
+is at $0$ with velocity $\sigma u$, and a second particle of the same mass
+is at $\sigma u\Delta$ with velocity $-\sigma u$. Both move freely on
+the line until their instantaneous elastic collision at time $\Delta/2$.
+The equal-mass collision exchanges their velocities. Thus the tracer follows
+
+$$X(t)=\begin{cases}\sigma ut,&0\le t\le\Delta/2,\\
+\sigma u(\Delta-t),&\Delta/2\le t\le\Delta.\end{cases}$$
+
+Its midpoint $Y=\sigma u\Delta/2$ is random, while $X(0)=X(\Delta)=0$.
+The other particle returns to its own initial position. Throughout the
+motion, total momentum is zero and total kinetic energy is $mu^2$.
+Each labelled velocity changes sign at the collision, with opposite impulses
+of magnitude $2mu$. Both particles stay below $c$ in the chosen frame.
+
+The tracer's free kinetic action relative to the stationary path with the
+same position endpoints is
+
+$$D=\frac m2\int_0^\Delta\dot X^2dt=\frac{mu^2\Delta}{2}.
+\qquad \operatorname{Var}Y=\frac{u^2\Delta^2}{4}.$$
+
+Define the midpoint action parameter in A03's normalization by
+$\kappa_{\rm mid}=4m\operatorname{Var}Y/\Delta$. This gives
+$\kappa_{\rm mid}=mu^2\Delta$ and $\mathbb E D=\kappa_{\rm mid}/2$.
+At fixed energy and speed, both tend to zero as $\Delta\downarrow0$.
+Keeping a supplied $\kappa_{\rm mid}>0$ instead requires
+$u^2=\kappa_{\rm mid}/(m\Delta)$ and pair energy
+$\kappa_{\rm mid}/\Delta$.
+
+This is an exactly specified hard-collision model with random initial data.
+The timing follows from the prepared initial separation $u\Delta$, rather
+than a new stochastic clock. Changing $\Delta$ changes that separation.
+The stationary comparison shares positions and times, not initial velocities
+or apparatus state. Consequently the construction preserves the coarse
+position endpoints, but does not implement an invisible intervention on a
+fixed full phase-space preparation. Smooth collision potentials and a
+Lorentz-covariant dynamics are separate models.
+
+## 2. Sharp midpoint support and variance bound
+
+Let any absolutely continuous path on $[0,\Delta]$ have endpoints $x,z$ and
+$|\dot X|\le u<c$ almost everywhere. Write
+$v=(z-x)/\Delta$, with $|v|\le u$, and
+$\zeta=X(\Delta/2)-(x+z)/2$. Each half-interval gives
+
+$$X(\Delta/2)\in[x-u\Delta/2,x+u\Delta/2]
+\cap[z-u\Delta/2,z+u\Delta/2].$$
+
+This intersection is centered at $(x+z)/2$ with half-width
+$r=\Delta(u-|v|)/2$. Therefore any probability law on these admissible
+paths satisfies
+
+$$\operatorname{Var}Y\le r^2,
+\qquad 0\le\kappa_{\rm mid}:=\frac{4m}{\Delta}\operatorname{Var}Y
+\le m\Delta(u-|v|)^2.$$
+
+Proof of the variance bound: $\operatorname{Var}Y\le
+\mathbb E(Y-(x+z)/2)^2\le r^2$. Equal probabilities at the two extremal
+midpoints saturate it; the corresponding two-segment paths obey the speed
+bound. For $x=z$ the elastic example realizes this sharp case.
+
+The two-segment interpolant through $Y$ has excess kinetic action
+$D_{\rm poly}=2m\zeta^2/\Delta$. When the midpoint law is centered on
+$(x+z)/2$, $\mathbb E D_{\rm poly}=\kappa_{\rm mid}/2$.
+For a biased midpoint there is the additional term
+$2m(\mathbb E\zeta)^2/\Delta$. This distinction avoids identifying a
+variance with all action costs.
+
+A Gaussian midpoint with variance $\kappa\Delta/(4m)$ has unbounded
+support for every $\kappa>0$ and so fails the exact speed constraint at
+every duration. Even a bounded replacement matching only that variance
+requires $\kappa\le m\Delta(u-|v|)^2$. The latter inequality gives a
+necessary resolution restriction, not a derivation of $\kappa$.
+
+At $|v|=u$ the allowable midpoint is unique. Indeed a path achieving the
+maximum displacement $u\Delta$ must have velocity $u$ almost everywhere.
+Thus after choosing an extremal midpoint in the return-path example, each
+half is already a saturated straight segment: finer admissible sampling
+inside that half is deterministic. Reapplying a nonzero midpoint fluctuation
+rule independently at every cut would change the coarse law or violate speed.
+
+## 3. Finite speed and a position-only convolution law
+
+**Proposition.** Suppose probability measures $\mu_t$ on the line satisfy
+$\mu_0=\delta_0$, $\mu_{s+t}=\mu_s*\mu_t$, and
+$\operatorname{supp}\mu_t\subset[-ut,ut]$ for every $t\ge0$, with a
+fixed finite $u$. Then $\mu_t=\delta_{bt}$ for some $|b|\le u$.
+
+**Proof.** For fixed $T>0$ and every positive integer $n$, convolution and
+bounded support give
+
+$$\operatorname{Var}\mu_T=n\operatorname{Var}\mu_{T/n}
+\le n u^2(T/n)^2=u^2T^2/n.$$
+
+Let $n\to\infty$ to obtain zero variance at every $T$. Write
+$\mu_t=\delta_{a(t)}$. The convolution law makes $a$ additive, while
+$|a(t)|\le ut$ implies continuity at zero. Hence $a(t)=bt$, $|b|\le u$.
+This proof even derives the needed continuity from the support bound.
+
+The proposition concerns stationary, spatially homogeneous, independent
+increment composition on position alone. It leaves room for stochastic
+bounded-speed trajectories with velocity memory. For example A01's telegraph
+process is Markov in $(X,V)$; deleting $V$ removes the information needed for
+such position-only convolution. General state-dependent Markov motion is
+also outside the stated convolution hypothesis.
+
+## 4. Consequence for the cut-point programme
+
+Finite propagation does not supply a positive microscopic midpoint action
+coefficient in these models. It identifies a structural requirement: a
+stochastic refinement law with strict speed must retain correlations or
+additional state information, rather than resetting independent position
+increments. The elastic construction makes this visible at a single cut.
+
+The next bounded task is to derive a finite-speed bridge on $(X,V)$, including
+its conditional midpoint law and endpoint atoms, and compare coarse and fine
+restrictions of the same experiment. Then separate a finite observation-window
+action scale from a microscopic refinement remainder. The universal positive
+scale remains a selection question about the physical premises.
+
+## Proof and literature record
+
+The [B13 audit](../references/batches/B13.md) reviews C030–C032 as derived
+consequences. Barkai, *Stable Equilibrium Based on Lévy Statistics* (2003),
+[arXiv:cond-mat/0303255v1](https://arxiv.org/abs/cond-mat/0303255v1), pp. 3–4,
+(2)–(3), supplies the elastic map. The equal-mass map is well-defined even
+though the divided-density representation (5) excludes that mass ratio.
+Cinque, *A Note on the Conditional Probabilities of the Telegraph Process*
+(2022), [arXiv:2202.01904v1](https://arxiv.org/abs/2202.01904v1), pp. 1–2,
+supplies the velocity-memory and endpoint-atom comparison. The midpoint and
+convolution proofs above follow directly from their stated hypotheses;
+neither selected source states those combined results. The
+[source companion](../docs/batches/B13/B13-source-companion.md) records the
+bounded coverage. No priority claim follows from this audit.

@@ -30,12 +30,16 @@ def main():
          "-V", "note-title=Cut-point consistency and an action remainder",
          "-o", "papers/cut-point-consistency.tex"])
     # Use repo-relative bibliography paths regardless of the aux output directory.
+    run(["pandoc", "notes/physical-cut-speed.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=A physical cut: elastic reversal, finite speed and memory",
+         "-o", "papers/physical-cut-speed.tex"])
     env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
                   "classical-action-field", "collision-action-relaxation",
-                  "cut-point-consistency", "research-programme"):
+                  "cut-point-consistency", "physical-cut-speed", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

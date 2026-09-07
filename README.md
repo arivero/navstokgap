@@ -9,6 +9,12 @@ about estimates and limits.
 
 ## Results to read first
 
+A conserved elastic collision realizes a random midpoint, while finite speed
+imposes the sharp action-coefficient bound $\kappa_{\rm mid}\le
+m\Delta(u-|v|)^2$. The [physical-cut paper](out/papers/physical-cut-speed.pdf)
+also shows why stochastic finite-speed refinement needs more information than
+independent position increments. The next bridge model retains velocity.
+
 Inserting cut points into the same Gaussian bridge experiment preserves its
 action parameter $\kappa$ and adds mean kinetic action $\kappa/2$ per node.
 The earlier finite-defect scaling changes the experiment's coarse variances.

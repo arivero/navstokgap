@@ -20,10 +20,14 @@
   [the maintained note](../notes/cut-point-consistency.md); arbitrary cuts,
   fixed-parameter bridge consistency and one-node action cost.
   [PDF](../out/papers/cut-point-consistency.pdf), B12 audit and nine checks.
+- [physical-cut-speed.tex](physical-cut-speed.tex): generated from
+  [the maintained note](../notes/physical-cut-speed.md); elastic midpoint cuts,
+  sharp finite-speed variance bound and ballistic convolution theorem.
+  [PDF](../out/papers/physical-cut-speed.pdf), B13 audit and twelve checks.
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all seven
+Run `make papers` from the root to regenerate the programme and build all eight
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

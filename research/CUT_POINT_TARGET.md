@@ -39,7 +39,12 @@ from refinement. A02 supplies a physical-time relaxation mechanism whose
 plateau comes from bath energy and a clock. M06 retains the force-control test;
 a spatial collision clock is a secondary A04 diagnostic.
 
-## A05: the physical meaning of a cut
+## A05: completed physical-cut test
+
+[The physical-cut note](../notes/physical-cut-speed.md) implements equal-mass
+elastic reversal with a momentum receiver. It proves the sharp midpoint bound
+$\kappa_{\rm mid}\le m\Delta(u-|v|)^2$ and that ballistic position-only
+convolution laws are deterministic. C030–C032 and B13 close this chosen test.
 
 Specify whether a cut is a coordinate observation or an executed interaction.
 For one concrete interaction, derive its conditional node law and momentum/
@@ -48,6 +53,17 @@ and test a hard speed ceiling. The fixed Gaussian law is a reference model;
 its parameter is supplied and its support has no strict speed ceiling. The
 research obligation is a classical mechanism selecting a positive consistent
 fluctuation law, followed by universality of its action parameter.
+
+## A06: retain the state needed at each cut
+
+Construct the telegraph bridge on $(X,V)$ at fixed $u<c$ and reversal rate.
+Start with fixed initial velocity and an attainable terminal position/velocity.
+Separate atomic endpoints from the interior density before conditioning.
+Derive the midpoint law, sum over the midpoint velocity, and verify that
+inserting another cut preserves the old joint marginals. Compare with an
+independent midpoint-reset rule. Track the initial/bath premises setting the
+reversal rate and scale, and distinguish the microscopic coefficient from
+A01's long-duration plateau. This is the next bounded source-driven test.
 
 ## The supplied polygon proposal
 

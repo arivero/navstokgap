@@ -41,8 +41,11 @@ bath, with plateau $(m+M)s^2/\nu$ set by reservoir parameters. The
 completed **A03** [cut-point test](CUT_POINT_TARGET.md) proves that exact
 Gaussian restriction consistency fixes its fluctuation parameter, while the
 finite-defect scaling changes retained-node marginals. Each inserted node
-contributes mean kinetic action $\kappa/2$ at fixed preparation. **A05** now
-asks which physical cut mechanism could select that conditional variance.
+contributes mean kinetic action $\kappa/2$ at fixed preparation. **A05** adds
+an elastic physical-cut example and the sharp finite-speed midpoint bound
+$\kappa_{\rm mid}\le m\Delta(u-|v|)^2$. Its convolution theorem identifies
+the need for memory in a stochastic finite-speed refinement model. **A06**
+now constructs a bridge retaining both position and velocity.
 The bath results remain diagnostics within [the broader target](ACTION_FIELD_TARGET.md).
 Necessity, convergence, universality and identification with $\hbar$ remain
 separate proof obligations. M06 and spectral examples support this central task.

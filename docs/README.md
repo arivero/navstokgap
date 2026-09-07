@@ -14,6 +14,8 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B13](../references/batches/B13.md): elastic physical cuts, bounded midpoint
+  variance and ballistic convolution; [source companion](batches/B13/B13-source-companion.md).
 - [B12](../references/batches/B12.md): cut-point consistency and inserted-node
   action audit using the [existing bridge source](batches/B12/PitmanYor2018.md).
 - [B10](../references/batches/B10.md): elastic collision and covariance audit,
