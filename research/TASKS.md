@@ -32,7 +32,9 @@ handoff with the remaining dependency.
 | B09 | done | Four-source per-result literature/assumption audit; 12 PDF pages plus APS abstract; coordinator verification and source-to-model comparison integrated | One Luna medium librarian | A01 draft |
 | A02 | done | Reviewed collision bath: physical-time action relaxation, mass/rate plateau and scaling countermodels; C022–C024 and 15 checks | Coordinator + B10 | A01/B09 |
 | B10 | done | Three-source A02 audit; seven worker pages plus one coordinator page; constants and source assumptions verified | One Luna medium librarian | A02 draft |
-| A03 | ready | Cut-point selection: nonuniform chord error, refinement consistency of positive action defects and remaining physical selection condition | Coordinator, then one small librarian | User reminder; M05/A02 |
+| A03 | done | Arbitrary-partition chord error, exact Gaussian refinement consistency, fixed-preparation action estimator and one-node cost; C027–C029, B12 and nine checks | Coordinator + Luna medium audit | User reminder; M05/A02 |
+| B12 | done | Bounded prior-art/assumption audit of A03 using existing bridge and Newton routes; coordinator source verification | One Luna medium librarian | A03 draft |
+| A05 | ready | Specify a physically executed cut versus coordinate sampling; test refinement consistency, energy/momentum and finite-speed compatibility before scale selection | Coordinator, then one small librarian | A03/B12 |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | waiting | Sol medium audit of supplied polygon ideas, receding-centre limit and threshold inference interrupted by token-refresh failure; no worker artifacts; coordinator geometry checks saved | One Sol medium librarian | Authentication restored; drafts and 12 checks available |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
@@ -52,7 +54,7 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A03 from `research/CUT_POINT_TARGET.md`. The user reaffirmed the
+Execute A05 from `research/CUT_POINT_TARGET.md`. A03/B12 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a
 supporting force-control calculation, A04 a secondary spatial-clock test.

@@ -16,10 +16,14 @@
 - [collision-action-relaxation.tex](collision-action-relaxation.tex): physical-time
   action relaxation in an elastic refreshed bath, with explicit scale inputs;
   [PDF](../out/papers/collision-action-relaxation.pdf). B10 audit and 15 checks.
+- [cut-point-consistency.tex](cut-point-consistency.tex): generated from
+  [the maintained note](../notes/cut-point-consistency.md); arbitrary cuts,
+  fixed-parameter bridge consistency and one-node action cost.
+  [PDF](../out/papers/cut-point-consistency.pdf), B12 audit and nine checks.
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all six
+Run `make papers` from the root to regenerate the programme and build all seven
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

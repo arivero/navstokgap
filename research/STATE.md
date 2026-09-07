@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-07. Current milestone: return to cut-point refinement (A03).
+Updated: 2026-09-07. Current milestone: A03/B12 completed; physical-cut test A05 next.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
@@ -34,8 +34,13 @@ partition refinement and physical-time relaxation separate.
 **A02/B10 are complete:** `papers/collision-action-relaxation.tex` derives a
 covariance observable relaxing in physical time to $(m+M)s^2/\nu$ for an
 elastic refreshed bath. Fifteen checks and a sequential Luna medium audit
-support C022–C024. Next is **A03**, the user's reaffirmed cut-point focus,
-following [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md). A04 preserves the
+support C022–C024. **A03/B12 are complete:** [cut-point consistency](../notes/cut-point-consistency.md)
+proves the nonuniform chord bound and fixed-parameter restriction test.
+At fixed Gaussian preparation each inserted node adds expected kinetic action
+$\kappa/2$; retaining finite total defect by shrinking $\kappa$ changes old
+node marginals. C027–C029 have a Luna medium audit and nine exact checks.
+Next is **A05**, the physical-cut test in [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md).
+A04 preserves the
 spatial-clock question as a secondary diagnostic.
 **B11 is waiting:** the fresh Sol medium audit of the supplied polygon ideas
 failed on authentication and left no worker artifacts. The coordinator's
@@ -108,6 +113,8 @@ TeX's file-write security settings.
 
 ## History and handoffs
 
+- [A03 handoff](handoffs/A03.md): refinement consistency, source review and
+  the next intervention-versus-sampling test. Seven PDFs now build.
 - [A02 handoff](handoffs/A02.md): reviewed bath diagnostic and return to cut
   points; [B11 restart](handoffs/B11.md) records the authentication interruption.
 - [A01 handoff](handoffs/A01.md): positive classical velocity-memory plateau,

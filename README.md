@@ -9,6 +9,12 @@ about estimates and limits.
 
 ## Results to read first
 
+Inserting cut points into the same Gaussian bridge experiment preserves its
+action parameter $\kappa$ and adds mean kinetic action $\kappa/2$ per node.
+The earlier finite-defect scaling changes the experiment's coarse variances.
+The [cut-point paper](out/papers/cut-point-consistency.pdf) proves this distinction
+and the vanishing chord-error bound for arbitrary nonuniform partitions.
+
 A finite reversible classical velocity process produces a positive limiting
 action coefficient, $H_*=2m\int_0^\infty C(s)\,ds$. For a particle moving
 at $\pm u$ with reversal rate $\lambda$, this is $mu^2/\lambda$.

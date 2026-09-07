@@ -11,8 +11,10 @@ Never select `ultra`: the user prohibited it to conserve tokens
 descendant. Use fresh or limited context when a full-history fork prevents an
 override. Announce task ID, model and effort before dispatch.
 
-Use low/medium for routine sources and higher permitted effort when the task
-requires substantial reasoning. A model substitution that raises cost requires
+Use low/medium for routine sources. The user excludes high and xhigh for
+controlled runs (2026-09-07), and permits a selective max-effort subagent for
+a meditated second opinion. Reserve that exception for a concrete unresolved
+issue; never use ultra. A model substitution that raises cost requires
 user direction. The concurrency budget is one coordinator and one active
 subagent across the entire team (user instruction, 2026-09-06). Delegate smaller
 tasks to Sol or Luna in sequence. The coordinator waits for the worker to finish,

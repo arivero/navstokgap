@@ -14,6 +14,8 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B12](../references/batches/B12.md): cut-point consistency and inserted-node
+  action audit using the [existing bridge source](batches/B12/PitmanYor2018.md).
 - [B10](../references/batches/B10.md): elastic collision and covariance audit,
   using [Barkai](batches/B10/barkai-2003-companion.md),
   [Barbier–Trizac](batches/B10/barbier-trizac-2012-companion.md) and

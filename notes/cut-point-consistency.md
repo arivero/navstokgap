@@ -1,0 +1,144 @@
+# A surviving action defect and consistency under inserting cuts
+
+A03, reviewed with B12, 2026-09-07. Two exact tests separate refinement of one experiment
+from a changing family of fluctuation preparations. Constant-force chord errors
+vanish on every mesh tending to zero. Within the scalar Gaussian bridge family,
+exact consistency under retaining old nodes fixes the fluctuation parameter.
+These statements locate the next selection obligation at the refinement law.
+
+## 1. Arbitrary partitions of the constant-force trajectory
+
+Fix $m,F,T>0$, $x(t)=v_0t$ with $v_0>0$, $y(t)=Ft^2/(2m)$, and the
+Lagrangian $L=m(\dot x^2+\dot y^2)/2+Fy$. Let
+$\pi=(0=t_0<\cdots<t_N=T)$, $\tau_j=t_j-t_{j-1}$, and let $q_\pi$
+linearly interpolate the exact trajectory at these times. Both global
+endpoints and all sampled positions are fixed in this comparison.
+
+On interval $j$, with $s=t-t_{j-1}$, the interpolation error is
+$\eta_j(s)=Fs(\tau_j-s)/(2m)$. The classical first variation vanishes
+on that interval. Adding the exact local quadratic action differences gives
+
+$$D_\pi:=S[q_\pi]-S[q_{\rm cl}]
+=\frac{F^2}{24m}\sum_j\tau_j^3
+\le\frac{F^2T}{24m}|\pi|^2\longrightarrow0.$$
+
+The unsigned chord–arc lens areas similarly add to
+$A_\pi=v_0F\sum_j\tau_j^3/(12m)$, so $D_\pi=F A_\pi/(2v_0)$.
+The existing constant-force calculation applies after subtracting the local
+linear tangent; its slope cancels from the lens difference.
+
+For fixed $N$, convexity yields $\sum_j\tau_j^3\ge T^3/N^2$, attained
+by equal steps. Splitting one interval into positive lengths $a,b$ reduces
+the action defect by
+
+$$\frac{F^2}{24m}[(a+b)^3-a^3-b^3]
+=\frac{F^2}{8m}ab(a+b)>0.$$
+
+Thus nonuniform cuts cannot defeat convergence when the maximum step tends
+to zero. This calculation concerns sampled chords; Newton's impulsive
+polygon is a separate approximation scheme requiring its own error estimate.
+
+## 2. Exact consistency of Gaussian node laws
+
+Fix the free-line experiment on $[0,T]$, mass $m>0$ and fixed endpoints.
+For each partition with at least one internal node, let the centered node
+vector be Gaussian with covariance
+
+$$\operatorname{Cov}_{\pi}(\eta_i,\eta_j)
+=\frac{\kappa_\pi}{m}G(t_i,t_j),\qquad
+G(s,t)=\min(s,t)-st/T,\quad \kappa_\pi\ge0.$$
+
+The zero value denotes a point mass at the classical straight path. Exact
+refinement consistency means that when $\pi'\supset\pi$, deleting the new
+coordinates from the finer law gives precisely the coarser law, with the
+same physical times, positions and mass.
+
+**Proposition.** Within this family, consistency forces
+$\kappa_{\pi'}=\kappa_\pi$ for every refinement retaining an interior node.
+Conversely a fixed $\kappa$ gives consistent Gaussian node laws.
+
+**Proof.** At any retained interior time $s$, equality of the one-node
+marginals implies
+$\kappa_{\pi'}s(T-s)/(mT)=\kappa_\pi s(T-s)/(mT)$. The factor multiplying
+$\kappa$ is positive. Conversely the restriction of a centered Gaussian
+vector has the corresponding covariance submatrix, which here is exactly
+the coarse covariance. On the directed family of all partitions, any two
+nontrivial partitions have a common refinement, so their parameters agree.
+The endpoint-only partition has no observable variance and places no extra
+constraint. This completes the proof.
+
+For nested $\pi_N$ retaining an interior point $s$, M05's finite-defect
+scaling $(N-1)\kappa_N\to\ell>0$ makes that retained variance approach
+zero. It therefore describes changing preparations, rather than exact
+marginals of one positive-width bridge experiment. It remains a valid
+triangular-array limit, with the action defect proved in C014.
+
+## 3. What survives at fixed preparation?
+
+Let $d=N-1$. Under the fixed-$\kappa>0$ bridge, the polygon's free action
+excess satisfies $2D_\pi/\kappa\sim\chi_d^2$, independent of the actual
+positive step lengths (C014's finite law). Consequently
+
+$$\mathbb E D_\pi=d\kappa/2,\qquad
+\operatorname{Var}D_\pi=d\kappa^2/2,$$
+
+and $D_\pi\to\infty$ in probability as $d\to\infty$. Indeed,
+Chebyshev gives
+$\Pr\{D_\pi<d\kappa/4\}\le8/d$.
+The normalized estimator
+
+$$\widehat\kappa_\pi=\frac{2D_\pi}{d}$$
+
+has mean $\kappa$ and variance $2\kappa^2/d$, hence converges to $\kappa$
+in mean square, even on nonuniform partitions. It estimates the supplied
+bridge parameter. It is not an additive accumulated action; division by the
+number of internal nodes is essential. For $\kappa=0$ every defect vanishes.
+
+Thus exact consistency permits a fixed positive action parameter and a
+consistent estimator of it, while the unnormalized kinetic action diverges.
+It also permits the deterministic zero family. Selection of a positive scale
+still requires a physical premise excluding that family and fixing the scale.
+
+## 4. One inserted cut and the fluctuation it introduces
+
+On a coarse interval of length $a+b$, fix endpoint positions $x,z$ and insert
+$y$ after duration $a$, with $a,b>0$. Set
+$\bar y=(bx+az)/(a+b)$ and $\zeta=y-\bar y$. Completing the square gives
+
+$$\frac m2\left[\frac{(y-x)^2}{a}+\frac{(z-y)^2}{b}
+-\frac{(z-x)^2}{a+b}\right]
+=\frac{m(a+b)}{2ab}\zeta^2.$$
+
+At fixed bridge parameter $\kappa$, conditional Gaussian variance is
+$\operatorname{Var}(\zeta\mid x,z)=\kappa ab/[m(a+b)]$.
+The expected extra action from inserting one node is therefore $\kappa/2$,
+independent of the interval lengths. For deterministic interpolation
+$\zeta=0$ it is zero. The kinetic splitting identity is nonnegative, whereas
+section 1's total constant-force chord error decreases under refinement:
+the latter includes the potential term and moves the inserted node onto the
+accelerated classical curve.
+
+This is a local, testable formulation of the missing premise: does inserting
+a physical cut introduce a nonzero conditional fluctuation, and what law sets
+its variance? Supplying the Gaussian rule answers the first question by
+assumption. A classical derivation would have to produce that rule or a
+different consistent fluctuation mechanism from independent physics.
+
+## 5. Next test and prior-art gate
+
+The [B12 audit](../references/batches/B12.md) classifies C027–C029 as
+elementary consequences. Pitman and Yor, *A guide to Brownian motion and related
+stochastic processes* (2018), [arXiv:1802.09679v1](https://arxiv.org/abs/1802.09679v1),
+printed pp. 6, 10, 12–13, supply the Gaussian bridge and restriction framework.
+The [source companion](../docs/batches/B12/PitmanYor2018.md) records coverage.
+The constant-force identity extends the [existing calculation](../notes/principia-constant-force-action.md).
+The action law and moments in section 3 are proved in
+[the regulator-limits paper](../papers/regulator-limits.tex). The combined
+selection test is the research use of these established ingredients.
+
+Next distinguish coordinate sampling from a physically executed intervention
+at a cut. A candidate intervention law must state its effect on energy,
+momentum, conditional variance and coarse observables. Test consistency first,
+then positivity, scale universality and compatibility with finite speed.
+The Gaussian conditional law is a reference model for that audit, not yet
+a model with a hard physical speed ceiling.

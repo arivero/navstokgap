@@ -10,7 +10,14 @@ $|\pi_N|\to0$ in a fixed mechanical experiment. Keep physical time, cut index
 and fluctuation parameter separate. State whether cuts sample one trajectory,
 define impulsive approximations, or introduce new random degrees of freedom.
 
-## A03: next bounded calculation
+## A03: completed calculation
+
+[The reviewed note](../notes/cut-point-consistency.md) and B12 complete the
+five tests below. Chord errors vanish on arbitrary shrinking meshes. Exact
+Gaussian restriction consistency fixes $\kappa$, whereas the finite-defect
+scaling changes the retained-node distribution. At fixed $\kappa$, each inserted
+node contributes mean kinetic action $\kappa/2$, and $2D_\pi/(N-1)$ estimates
+that parameter in mean square. C027–C029 record the precise hypotheses.
 
 1. Derive the constant-force chord action error for arbitrary nonuniform
    partitions; identify the mesh and force controls responsible for its limit.
@@ -31,6 +38,16 @@ supplies the equal-partition vanishing-error baseline. A01 separates duration
 from refinement. A02 supplies a physical-time relaxation mechanism whose
 plateau comes from bath energy and a clock. M06 retains the force-control test;
 a spatial collision clock is a secondary A04 diagnostic.
+
+## A05: the physical meaning of a cut
+
+Specify whether a cut is a coordinate observation or an executed interaction.
+For one concrete interaction, derive its conditional node law and momentum/
+energy bookkeeping. Compare its coarse marginals across successive insertions,
+and test a hard speed ceiling. The fixed Gaussian law is a reference model;
+its parameter is supplied and its support has no strict speed ceiling. The
+research obligation is a classical mechanism selecting a positive consistent
+fluctuation law, followed by universality of its action parameter.
 
 ## The supplied polygon proposal
 

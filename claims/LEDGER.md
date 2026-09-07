@@ -32,6 +32,9 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C022 | A centered bounded refreshed bath, $m\ge M>0$ and independent rate $\nu>0$ give unique stationary tracer variance $S_*=Ms^2/m$, covariance $S_*e^{-\gamma r}$ and action plateau $(m+M)s^2/\nu$, $\gamma=2\nu M/(m+M)$ | Collision-action-relaxation Proposition 1; invariant series and contraction; B10 and coordinator review |
 | C023 | With centered bounded initial velocity, $\mathsf a(t)=2m\int_0^\infty\operatorname{Cov}(V(t+r),V(t))dr$ obeys $\dot{\mathsf a}=\beta(H_*-\mathsf a)$, $\beta=4\nu mM/(m+M)^2$; displacement retains a separate window formula | Collision-action-relaxation Proposition 2; physical preparation time and action units; B10 and 15 checks |
 | C024 | At fixed masses/clock and rest preparation, scaling incoming velocities by $0<\epsilon\le1$ preserves the collision premises and scales $H_*$ and $\mathsf a(t)$ by $\epsilon^2$ | Collision-action-relaxation §4; class countermodel to a uniform positive plateau; B10 review |
+| C027 | For constant-force sampled chords on arbitrary positive partitions, $D_\pi=F^2\sum\tau_j^3/(24m)\le F^2T|\pi|^2/(24m)$; equal steps minimize at fixed count, and every split reduces the error | Cut-point note §1; matched endpoints; B12 and exact checks |
+| C028 | In the scalar Gaussian endpoint-bridge family at fixed mass/times, exact restriction consistency forces fixed $\kappa\ge0$; for positive $\kappa$, $D_\pi\to\infty$ in probability but $2D_\pi/(N-1)\to\kappa$ in mean square | Cut-point note §§2–3; covariance proof, C014 finite chi-square law and Chebyshev; B12 |
+| C029 | Inserting a node after lengths $a,b>0$ in the fixed-$\kappa$ free bridge adds conditional mean kinetic action $\kappa/2$, using variance $\kappa ab/[m(a+b)]$ | Cut-point note §4; square completion; B12 and nine-check suite |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -64,6 +67,8 @@ consequences are identified separately.
 | C022 | Exact affine collision and bath model in Barkai; bounded invariant law and moments are consequences; stationary covariance matches Barbier–Trizac | [B10](../references/batches/B10.md) |
 | C023 | Established stationary covariance integral; preparation-time and window formulas derived for the specified ensemble | B10; combined statement unmatched in selected pages, novelty unassessed |
 | C024 | Elementary parameter-scaling countermodel | B10; bounded coverage, novelty unassessed |
+| C027 | Elementary arbitrary-partition extension of the audited constant-force formula | [B12](../references/batches/B12.md); existing Newton source route |
+| C028–C029 | Elementary Gaussian restriction, chi-square and conditional-variance consequences; action interpretation is project-specific | B12; Pitman–Yor selected bridge/Markov passages, novelty unassessed |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.

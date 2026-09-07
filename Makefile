@@ -9,6 +9,7 @@ check:
 	$(PYTHON) scripts/regulator_limit_checks.py
 	$(PYTHON) scripts/classical_action_field_checks.py
 	$(PYTHON) scripts/collision_action_checks.py
+	$(PYTHON) scripts/cut_point_checks.py
 	$(PYTHON) scripts/check_repository.py
 	sha256sum -c docs/SHA256SUMS
 
