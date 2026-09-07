@@ -14,6 +14,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B15](../references/batches/B15.md): checkerboard source triage for the
+  composition/crossover programme; [coverage companion](batches/B15/checkerboard-source-companion.md).
+
 - [B14](../references/batches/B14.md): conditional telegraph return bridge,
   midpoint atom and cut/action audit; [source companion](batches/B14/B14-source-companion.md).
 

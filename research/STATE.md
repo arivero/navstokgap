@@ -1,9 +1,26 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A06/B14 complete; bounded-force return test A07 next.
+Updated: 2026-09-08. Current milestone: six-direction review/B15 complete;
+composition and preparation-independence test A08 next.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
+
+**The six-direction programme review is complete.**
+[The critical review](../reviews/six-directions-2026-09-08.md) puts **A08**
+composition first: mass additivity of the coefficient, its preparation domain,
+correlations and full-law closure. **A09** follows with finite-speed crossover,
+conditional bridge moments and real-versus-complex checkerboard dynamics.
+**B15** (one Luna medium, coordinator review) verified the two remembered
+1984 journal identifiers; full formula passages remain to be read. **G01**
+gets the velocity-gap product and a slow-mode observability test. A07 remains
+a supporting force-control calculation. The review changes priorities; C001–C034
+retain their existing acceptance status, and prospective results await their
+dedicated prior-art audits. See [selection target](ACTION_FIELD_TARGET.md).
+An independent session then verified the A08/A09/G01 starting calculations
+in [the six-direction checks note](../notes/composition-crossover-gap-checks.md):
+product-chain composition, the cubic midpoint onset of the C033 bridge, the
+slow-mode gap test and both continuation routes, with 28 exact checks.
 
 The [technical paper](../papers/action-gap-foundations.tex) establishes the exact
 constant-force area–action identity, accumulation of positive action differences
@@ -55,8 +72,9 @@ opposite endpoint velocities, then test their scaling.
 See [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md).
 A04 preserves the
 spatial-clock question as a secondary diagnostic.
-**B11 is waiting:** the fresh Sol medium audit of the supplied polygon ideas
-failed on authentication and left no worker artifacts. The coordinator's
+**B11 is ready to resume:** the original Sol medium audit of the supplied polygon
+ideas failed on authentication and left no worker artifacts; B12–B15 have since
+run successfully. The coordinator's
 [receding-centre draft](../notes/receding-centre-area-audit.md) and twelve exact
 checks are saved; claim acceptance awaits the resumed librarian audit.
 **M06** remains the force/acceleration and relativistic-action diagnostic from
@@ -125,6 +143,11 @@ inside `.build/<paper>/` with the repository on `BIBINPUTS`, preserving
 TeX's file-write security settings.
 
 ## History and handoffs
+
+- [Six-direction review handoff](handoffs/P01-six-directions.md): A08/A09/G01
+  priority, B15 metadata verification and preserved acceptance gates.
+- [P02 checks handoff](handoffs/P02-six-direction-checks.md): exact verification
+  and extension of those directions; sampler table and uncompiled Lean draft.
 
 - [A06 handoff](handoffs/A06.md): exact return bridge, midpoint atom and
   endpoint-version choice; vanishing polygon error. Nine PDFs now build.

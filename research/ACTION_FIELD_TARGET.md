@@ -8,9 +8,10 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A02: [the cut-point refinement test](CUT_POINT_TARGET.md),
-reaffirmed by the user on 2026-09-07. Bath relaxation is a comparison mechanism;
-the core question concerns a remainder surviving $|\pi_N|\to0$.
+Immediate priority after A06 and the 2026-09-08 proposal review: **A08**, the
+composition test below. The [cut-point refinement test](CUT_POINT_TARGET.md)
+has completed its chosen constructions; it remains the consistency condition
+for any candidate field. Bath relaxation supplies a comparison mechanism.
 
 Use $\mathsf h_\varepsilon(t)$ for the candidate field, with physical time $t$
 and resolution $\varepsilon$ kept separate. An additional observation duration
@@ -30,6 +31,33 @@ The target has five proof obligations:
 The assumptions should state physical properties independently of the desired
 answer. A fixed-point prescription containing a supplied $\hbar$ is a comparison
 model. Each proposed axiom receives an explicit deterministic-countermodel test.
+
+## A08: composition as a universality premise
+
+For independent constituents, transform the covariance to centre and relative
+coordinates with total and reduced masses. Test the claim that a nonnegative
+coefficient depending only on mass and preserved by this composition is mass
+independent. State the admissible mass domain and prove the additive-function
+step. Then test preparation parameters, correlated constituents, and closure of
+the full velocity law. A composite of independent two-speed particles generally
+requires more velocity states. The intended output addresses obligation 4's
+mass dependence; preparation independence and positivity have their own gates.
+
+## A09/G01: crossover, quantum role and spectral control
+
+Use C018/C031 to obtain the necessary window $\Delta\ge K/(mu^2)$ for a
+positive prescribed coefficient. Distinguish this condition from exact Gaussian
+support, and the stationary A01 observable from A06's conditioned midpoint.
+Read the B15 checkerboard leads at formula level, then compare real Poisson
+recurrences, complex corner amplitudes and their continuum/nonrelativistic
+limits. Trace the identification $K=\hbar$ separately from its mass law.
+
+For G01 start with $-Q$ on finite $L^2(\pi)$, the product bounds of C019 and
+the two-state equality. Compare inverse-time relaxation gap, energy units,
+Dirac branch separation and vacuum excitation gap explicitly. Test hidden slow
+modes before proposing a lower spectral bound from a velocity susceptibility.
+These are the next obligations, as assessed in the
+[six-direction review](../reviews/six-directions-2026-09-08.md).
 
 ## First bounded experiment: A01
 

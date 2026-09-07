@@ -9,7 +9,10 @@ This captures the algebraic core of C002. A second step would formalise the
 polynomial action integral and the identification $C=mT^3/6$.
 
 Status: candidate statements prepared; toolchain installation and proof
-implementation belong to F01.
+implementation belong to F01. The P01 review moves the finite-speed crossover
+inequality $\kappa\Delta/m\le u^2\Delta^2\Rightarrow\Delta\ge\kappa/(mu^2)$ to the
+first certificate; [`Crossover.lean`](Crossover.lean) drafts it and is
+uncompiled until the toolchain exists.
 
 Acceptance requires a pinned `lean-toolchain`, Lake configuration and
 dependency manifest, a clean build, statement/definition review and recorded

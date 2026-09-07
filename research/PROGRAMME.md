@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 7, 2026-09-08.
+Version 8, 2026-09-08.
 
 ## Aim
 
@@ -29,6 +29,32 @@ Each result has a separate librarian audit of prior literature, recording
 established matches, derived consequences or a candidate contribution with
 explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
+
+## Current priority: composition and scale selection
+
+The [six-direction review](../reviews/six-directions-2026-09-08.md) promotes
+**A08** to the next main task: derive the mass-composition law for a
+nonnegative action coefficient and test its physical premises. Distinguish
+mass independence within one preparation class from independence of environment,
+and coefficient closure from closure of the composite trajectory law.
+The deliverable is a short proof note, five algebra checks and one sequential
+Luna-low prior-art audit. C033–C034 already belong to A06; new claims keep new IDs.
+
+**A09** combines the finite-speed crossover bound with the checkerboard source
+route. Verify real probability and complex-amplitude recurrences separately;
+compare stationary-increment and conditioned-midpoint observables. The
+[B15 source companion](../docs/batches/B15/checkerboard-source-companion.md)
+records verified 1984 identifiers and remaining direct-passage obligations.
+The Compton-scale substitution uses an additional identification with $\hbar$;
+particle creation is a separate field-theory construction.
+
+**G01** now has a concrete finite-state model: the velocity-generator gap and
+its susceptibility product. Include a slow-mode observability countertest before
+seeking a lower gap estimate transferable to WP6. A03/A05/A06 close the chosen
+cut-consistency constructions; their observables remain distinct in the central
+selection problem. **A07** stays available as the bounded-force diagnostic.
+M03 retains its independent proof/build gates, and B11 is ready for its saved
+geometry audit. This reprioritization leaves the accepted claim set unchanged.
 
 ## Starting results
 

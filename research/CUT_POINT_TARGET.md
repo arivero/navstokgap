@@ -19,6 +19,13 @@ scaling changes the retained-node distribution. At fixed $\kappa$, each inserted
 node contributes mean kinetic action $\kappa/2$, and $2D_\pi/(N-1)$ estimates
 that parameter in mean square. C027–C029 record the precise hypotheses.
 
+After the 2026-09-08 review, A03/A05/A06 are closed as the chosen structural
+tests. The main next task is A08 composition in
+[ACTION_FIELD_TARGET.md](ACTION_FIELD_TARGET.md). Preserve the separate
+Gaussian node estimator, finite-window variance coefficient and long-window
+plateau; transferring the C028 estimator to bounded-speed fixed-duration paths
+does not preserve its positive limit. A07 remains a supporting force test.
+
 1. Derive the constant-force chord action error for arbitrary nonuniform
    partitions; identify the mesh and force controls responsible for its limit.
 2. Compare geometric approximation with the fluctuating-node families of

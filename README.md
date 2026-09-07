@@ -62,6 +62,12 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
+Next is the mass-composition test, followed by crossover/checkerboard dynamics
+and a susceptibility–spectral-gap comparison. The
+[six-direction review](reviews/six-directions-2026-09-08.md) records the
+adopted premises, countertests and source leads. Bounded-force returns remain
+the supporting mechanical diagnostic.
+
 Return to the [cut-point continuum limit](research/CUT_POINT_TARGET.md): test
 which physical refinement condition could force a positive action remainder.
 The [collision paper](out/papers/collision-action-relaxation.pdf) supplies a

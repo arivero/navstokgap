@@ -38,14 +38,19 @@ handoff with the remaining dependency.
 | B13 | done | Six-page A05 source/proof audit; collision and memory ingredients separated from derived support/convolution results | One Luna medium librarian | A05 draft |
 | A06 | complete | Velocity-resolved return bridge, midpoint atom, conditioning version and consistent cut/action limits; C033–C034 | Coordinator + sequential Luna medium B14 | 12 symbolic checks, 45 rational partition cases |
 | B14 | complete | Cinque occupation-law and return-bridge prior-art audit; coordinator corrected discovery-source attribution | Luna medium, sequential | C033–C034 reviewed |
+| P01 | done | Critical review of six proposed directions; composition/checkerboard/gap priorities with explicit premises and preserved acceptance gates | Coordinator + B15 | A06/B14 |
+| B15 | done | Bounded checkerboard journal metadata/abstract and book-location leads; direct formula reading still pending | One Luna medium, sequential, coordinator review | P01; companion records access limits |
+| P02 | done | Independent-session verification for A08/A09/G01: product-chain composition and bath countertest, cubic bridge-midpoint onset with exact sampler, gap/slow-mode test, continuation routes; 28 exact checks, no claim IDs | Fable session, no subagents | P01; [checks note](../notes/composition-crossover-gap-checks.md) |
+| A08 | ready | Composition universality: all-positive-mass domain, nonnegative coefficient, COM/relative covariance, preparation and correlated/full-law countertests; short note, five checks, per-result audit | Coordinator then one Luna low librarian | P01; next main task |
+| A09 | ready | Necessary crossover window and conditioned midpoint moments; direct checkerboard source passages, real/complex recurrences and nonrelativistic scaling; audit each result | Coordinator then one Luna medium librarian | B15 leads; A08 coefficient premises |
 | A07 | ready | Bounded-acceleration return with opposite endpoint velocities: sharp duration and kinetic-action bounds, speed/force scaling and sampled-cut limit | Coordinator, then one small librarian | A06/B14; M06 connection |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
-| B11 | waiting | Sol medium audit of supplied polygon ideas, receding-centre limit and threshold inference interrupted by token-refresh failure; no worker artifacts; coordinator geometry checks saved | One Sol medium librarian | Authentication restored; drafts and 12 checks available |
+| B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Drafts and 12 checks available; after A08 priority |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
-| G01 | waiting | Choose one gap notion/model; prove a bound with operator domain, parameter dependence and gap-closing limits | Analyst + adversarial reviewer | M03, Q01 as relevant |
+| G01 | ready | Finite-state susceptibility/gap product and two-state equality; hidden slow-mode test, energy normalization, Dirac-branch versus vacuum gap; audited extension for M03 | Coordinator then one small sequential reviewer | C019; P01; M03 retains existing acceptance gates |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
-| F01 | waiting | Lean feasibility spike for positive quadratic action values approaching zero; pin toolchain, state/axiom audit, no `sorry` | Sol formalisation, reviewer | M01 and tooling decision |
+| F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
 | W01 | waiting | Revise technical manuscript from accepted claims only; citation/notation/proof audit, reproducible PDF | Scientific writer + reviewer | R01 and next accepted result |
 
 ## Worker task envelope
@@ -58,7 +63,9 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A07 from `research/CUT_POINT_TARGET.md`. A06/B14 are complete. The user reaffirmed the
+Execute A08 from `research/ACTION_FIELD_TARGET.md`, then A09 and G01 as assessed
+in `reviews/six-directions-2026-09-08.md`. A07 remains the bounded-force
+diagnostic. A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a
 supporting force-control calculation, A04 a secondary spatial-clock test.
