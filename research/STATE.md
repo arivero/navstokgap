@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-07. Current milestone: A02 collision action relaxation.
+Updated: 2026-09-07. Current milestone: return to cut-point refinement (A03).
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
@@ -29,13 +29,18 @@ proves a positive model-specific plateau from finite reversible velocity memory:
 $H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi$, and $H_*=mu^2/\lambda$ for
 two velocities. C018–C021 have a sequential Luna medium source audit,
 coordinator proof/source review and 16 exact checks.
-Next: **A02**, test a mechanical origin and mass-universal correlation law from
-[the central target](ACTION_FIELD_TARGET.md). The observation-duration limit
-is distinct from physical-time relaxation of an independent field.
-The A02 draft in `papers/collision-action-relaxation.tex` now derives a
+The [central target](ACTION_FIELD_TARGET.md) keeps observation duration,
+partition refinement and physical-time relaxation separate.
+**A02/B10 are complete:** `papers/collision-action-relaxation.tex` derives a
 covariance observable relaxing in physical time to $(m+M)s^2/\nu$ for an
-elastic refreshed bath. Fifteen exact checks pass. B10 audits its sources and
-assumptions before ledger acceptance and PDF integration.
+elastic refreshed bath. Fifteen checks and a sequential Luna medium audit
+support C022–C024. Next is **A03**, the user's reaffirmed cut-point focus,
+following [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md). A04 preserves the
+spatial-clock question as a secondary diagnostic.
+**B11 is waiting:** the fresh Sol medium audit of the supplied polygon ideas
+failed on authentication and left no worker artifacts. The coordinator's
+[receding-centre draft](../notes/receding-centre-area-audit.md) and twelve exact
+checks are saved; claim acceptance awaits the resumed librarian audit.
 **M06** remains the force/acceleration and relativistic-action diagnostic from
 [the M05 note](../notes/two-regulator-audit.md).
 **B07a** completed the Wilson–Kogut common-observable reading and test;
@@ -83,6 +88,7 @@ identifiers and selected readings; Q01 will examine the reconstruction proofs.
 | M04/B06 | Free-refinement proofs and algebra checks; Luna medium prior-art/assumption audit, coordinator source verification |
 | M05/B07a/B08 | Joint path/action limit, partition normalization and regulator map; Wilson–Kogut source-to-model test; Sol medium four-source audit; 24 exact checks |
 | A01/B09 | Finite-speed action observable, positive reversible-velocity plateau, exact telegraph and iterated limits; Luna medium audit and coordinator source/proof review; 16 checks |
+| A02/B10 | Elastic collision bath and physical-time covariance-action relaxation; explicit parameter scaling; Luna medium audit and 15 checks |
 
 NATP00385 documents Newton's account of analytic discovery and synthetic
 presentation. H02/H03 address the six Classical Scholia, the manuscript-folio
@@ -102,6 +108,8 @@ TeX's file-write security settings.
 
 ## History and handoffs
 
+- [A02 handoff](handoffs/A02.md): reviewed bath diagnostic and return to cut
+  points; [B11 restart](handoffs/B11.md) records the authentication interruption.
 - [A01 handoff](handoffs/A01.md): positive classical velocity-memory plateau,
   B09 prior-art audit, five-PDF build and the next A02 universality test.
 - `31908fb`: official Millennium definitions and comparison.

@@ -14,6 +14,10 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B10](../references/batches/B10.md): elastic collision and covariance audit,
+  using [Barkai](batches/B10/barkai-2003-companion.md),
+  [Barbier–Trizac](batches/B10/barbier-trizac-2012-companion.md) and
+  [Ben-Naim–Krapivsky](batches/B10/ben-naim-krapivsky-2003-companion.md).
 - [B09](../references/batches/B09.md): action-plateau audit using
   [Pavliotis](Pavliotis_GreenKubo_2010.md),
   [Cinque](batches/B09/Cinque_Telegraph_2022.md),

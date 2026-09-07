@@ -4,6 +4,8 @@
 \usepackage{lmodern,amsmath,amssymb,amsthm,booktabs}
 \usepackage[margin=27mm]{geometry}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Physical-Time Action Relaxation in an Elastic Collision Bath},
+pdfauthor={navstokgap research working notes}}
 \setlength{\emergencystretch}{3em}
 \newtheorem{proposition}{Proposition}
 \newcommand{\E}{\mathbb E}
@@ -44,6 +46,9 @@ $|V|\le w$. The departing particle obeys
 $|W'|\le(3m-M)w/(m+M)<3w<c$.
 
 The model specifies a refreshed reservoir and a velocity-independent clock.
+These are Barkai's collision-model premises
+\cite[pp.~3--5, (2)--(12)]{Barkai2003StableEquilibrium}, specialized here to a
+bounded bath and $m\ge M$.
 Each collision accounts for momentum and energy transfer; the complete stream
 supplies fresh particles and removes departing ones. A spatial gas realization
 would additionally derive encounter rates and incoming velocity statistics.
@@ -97,6 +102,10 @@ The energy-valued reservoir parameter $\Theta:=Ms^2$ gives
 $mS_*=\Theta$ and $H_*=\Theta(m+M)/(\nu M)$.
 For a general bounded bath, $\Theta$ denotes twice the mean incoming kinetic
 energy, without assuming a thermodynamic equilibrium distribution.
+The stationary covariance and Green--Kubo integral also follow from
+Barbier and Trizac's field-free Maxwell-kernel specialization
+\cite[p.~19, (89)--(98)]{BarbierTrizac2012Field}. Their kernel exponent
+called $\nu$ is zero there; our $\nu$ is a positive collision frequency.
 
 \section{An observable relaxing in physical time}
 The integrated future-lag covariance defines a second operational quantity:
@@ -167,5 +176,21 @@ relaxation mechanism is already explicit: persistent injection of velocity
 variance balances collisional contraction. A universal quantum action scale
 requires an additional physical relation that fixes this balance across systems.
 
-% B10 will supply verified prior-art citations before acceptance and PDF integration.
+Ben-Naim and Krapivsky provide a useful clock comparison: exponential decay
+in collision number becomes algebraic decay in physical time in their cooling
+model \cite[p.~6, (14)--(17)]{BenNaimKrapivsky2003InelasticMaxwell}.
+
+\section{Return to the partition question}
+The project's central question concerns a sequence of time partitions
+$\pi_N=\{0=t_0^{(N)}<\cdots<t_N^{(N)}=T\}$ with mesh tending to zero.
+The present relaxation law describes preparation time under a supplied bath.
+It therefore serves as a comparison mechanism for the partition problem:
+one must derive, from admissible cut-point refinements, both the quantity
+that survives and the condition selecting its positive value. The collision
+calculation isolates how a positive constant can instead enter through
+reservoir energy and a clock. The next partition test tracks these inputs
+explicitly when a refinement law is proposed.
+
+\bibliographystyle{plain}
+\bibliography{references/library}
 \end{document}

@@ -43,8 +43,13 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-Test a mechanical origin for a common mass-weighted velocity correlation,
-following [A02](research/ACTION_FIELD_TARGET.md). Alongside it, test how
+Return to the [cut-point continuum limit](research/CUT_POINT_TARGET.md): test
+which physical refinement condition could force a positive action remainder.
+The [collision paper](out/papers/collision-action-relaxation.pdf) supplies a
+physical-time relaxation comparison, with its reservoir scale explicit.
+The [supplied polygon ideas](ideas/I002-newton-polygon-threshold.md) and
+[receding-centre draft audit](notes/receding-centre-area-audit.md) sharpen the
+geometry and threshold premises. Alongside this, test how
 force control and a relativistic kinetic action affect the shrinking
 oscillations and their action defect. The [M06 plan](notes/two-regulator-audit.md)
 connects that calculation to the bibliography and the physical scale-selection

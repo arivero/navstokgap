@@ -8,6 +8,10 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
+Immediate priority after A02: [the cut-point refinement test](CUT_POINT_TARGET.md),
+reaffirmed by the user on 2026-09-07. Bath relaxation is a comparison mechanism;
+the core question concerns a remainder surviving $|\pi_N|\to0$.
+
 Use $\mathsf h_\varepsilon(t)$ for the candidate field, with physical time $t$
 and resolution $\varepsilon$ kept separate. An additional observation duration
 $\Delta$ may enter an operational definition. A refinement limit, a long-time

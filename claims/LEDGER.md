@@ -29,6 +29,9 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C019 | A stationary finite irreducible reversible velocity chain with nonzero centered velocity gives $\mathsf h(\Delta)\uparrow H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi>0$, with spectral bounds and convergence estimate | Classical-action-field Proposition 2; fixed-model action plateau, mean-zero inverse; spectral proof and B09 review |
 | C020 | Symmetric velocities $\pm u$, $0<u<c$, reversed at rate $\lambda>0$, give $H_*=mu^2/\lambda$; universality across masses requires $\lambda_m=mu_m^2/H_*$ | Classical-action-field §§4, 6; exact correlation, variance and telegraph equations; 16-check suite and B09 review |
 | C021 | In the formal scaling $u_\lambda^2=a\lambda$, $a>0$, iterated second-moment action limits are $ma$ (rate first) and zero (duration first) | Classical-action-field §5; explicit formula; scaling leaves a fixed speed ceiling; B09 review |
+| C022 | A centered bounded refreshed bath, $m\ge M>0$ and independent rate $\nu>0$ give unique stationary tracer variance $S_*=Ms^2/m$, covariance $S_*e^{-\gamma r}$ and action plateau $(m+M)s^2/\nu$, $\gamma=2\nu M/(m+M)$ | Collision-action-relaxation Proposition 1; invariant series and contraction; B10 and coordinator review |
+| C023 | With centered bounded initial velocity, $\mathsf a(t)=2m\int_0^\infty\operatorname{Cov}(V(t+r),V(t))dr$ obeys $\dot{\mathsf a}=\beta(H_*-\mathsf a)$, $\beta=4\nu mM/(m+M)^2$; displacement retains a separate window formula | Collision-action-relaxation Proposition 2; physical preparation time and action units; B10 and 15 checks |
+| C024 | At fixed masses/clock and rest preparation, scaling incoming velocities by $0<\epsilon\le1$ preserves the collision premises and scales $H_*$ and $\mathsf a(t)$ by $\epsilon^2$ | Collision-action-relaxation §4; class countermodel to a uniform positive plateau; B10 review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -58,6 +61,9 @@ consequences are identified separately.
 | C019 | Exact Green–Kubo/Poisson backbone in Pavliotis; finite-state bounds and monotonicity are spectral consequences | B09; combined package unmatched in bounded coverage, novelty unassessed |
 | C020 | Exact telegraph construction/PDE in Cinque; action normalization and mass-rate law are elementary consequences | B09 |
 | C021 | Elementary iterated-limit consequence; related Kac scaling in Cinque | B09; exact double-limit statement unmatched in selected passages |
+| C022 | Exact affine collision and bath model in Barkai; bounded invariant law and moments are consequences; stationary covariance matches Barbier–Trizac | [B10](../references/batches/B10.md) |
+| C023 | Established stationary covariance integral; preparation-time and window formulas derived for the specified ensemble | B10; combined statement unmatched in selected pages, novelty unassessed |
+| C024 | Elementary parameter-scaling countermodel | B10; bounded coverage, novelty unassessed |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -83,6 +89,12 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B10](../reviews/collision-action-B10.md) audited C022–C024. Coordinator
+verified collision coefficients, covariance, source versions/hashes and the
+cooling-clock contrast; added Barkai p. 3 and corrected source page counts.
+Receding-centre and polygon-threshold derivations remain drafts pending the
+interrupted B11 librarian audit, outside the accepted claim set.
 
 [B09](../reviews/classical-action-field-B09.md) audited C018–C021 after the
 draft derivation. Coordinator review checked source formula images and hashes,

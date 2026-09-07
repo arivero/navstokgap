@@ -30,8 +30,11 @@ handoff with the remaining dependency.
 | M06 | ready | Test force/acceleration control and a strict-speed relativistic action on the shrinking oscillations; state the action-defect survival criterion and review it | Coordinator, then one small librarian | M05/B08 |
 | A01 | done | Reviewed finite-speed action observable, reversible-generator positivity and persistent-flight limits; C018–C021, PDF and 16 exact checks | Coordinator + B09 | M05 and sharpened user target |
 | B09 | done | Four-source per-result literature/assumption audit; 12 PDF pages plus APS abstract; coordinator verification and source-to-model comparison integrated | One Luna medium librarian | A01 draft |
-| A02 | review | Elastic refreshed-bath draft derives physical-time action relaxation, mass/rate plateau and bath-scaling countermodels; 15 checks pass; B10 audit pending | Coordinator, then one small librarian | A01/B09 |
-| B10 | active | Audit A02 collision law, invariant moments/covariance, physical-time observable and scaling countermodels; at most three sources and eight selected pages | One Luna medium librarian | A02 draft |
+| A02 | done | Reviewed collision bath: physical-time action relaxation, mass/rate plateau and scaling countermodels; C022–C024 and 15 checks | Coordinator + B10 | A01/B09 |
+| B10 | done | Three-source A02 audit; seven worker pages plus one coordinator page; constants and source assumptions verified | One Luna medium librarian | A02 draft |
+| A03 | ready | Cut-point selection: nonuniform chord error, refinement consistency of positive action defects and remaining physical selection condition | Coordinator, then one small librarian | User reminder; M05/A02 |
+| A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
+| B11 | waiting | Sol medium audit of supplied polygon ideas, receding-centre limit and threshold inference interrupted by token-refresh failure; no worker artifacts; coordinator geometry checks saved | One Sol medium librarian | Authentication restored; drafts and 12 checks available |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | waiting | Choose one gap notion/model; prove a bound with operator domain, parameter dependence and gap-closing limits | Analyst + adversarial reviewer | M03, Q01 as relevant |
@@ -49,10 +52,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A02 from `research/ACTION_FIELD_TARGET.md`. Start with a bounded source
-task only when a specific mechanical-model choice needs it; retain explicit
-momentum exchange, environment parameters and the correlation invariant test.
-A01/B09 are complete. M06 remains a supporting force-control calculation.
+Execute A03 from `research/CUT_POINT_TARGET.md`. The user reaffirmed the
+continuum limit of cut points as the central problem. A02/B10 are complete;
+their collision mechanism is a diagnostic of supplied scales. M06 remains a
+supporting force-control calculation, A04 a secondary spatial-clock test.
 B07b retains the tangent-groupoid theorem reading.
 M05/B07a/B08 are complete. M03 retains its draft and completed B04
 audit; its independent mathematical review and build integration remain.

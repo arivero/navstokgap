@@ -13,10 +13,13 @@
   plateau from finite reversible velocity memory, exact telegraph example and
   limit-order test; [PDF](../out/papers/classical-action-field.pdf).
   B09 source audit, coordinator proof review and 16 exact checks.
+- [collision-action-relaxation.tex](collision-action-relaxation.tex): physical-time
+  action relaxation in an elastic refreshed bath, with explicit scale inputs;
+  [PDF](../out/papers/collision-action-relaxation.pdf). B10 audit and 15 checks.
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all five
+Run `make papers` from the root to regenerate the programme and build all six
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

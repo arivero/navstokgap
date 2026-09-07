@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 5, 2026-09-07.
+Version 6, 2026-09-07.
 
 ## Aim
 
@@ -36,8 +36,11 @@ as its axioms and quantifiers become precise.
 memory: $H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi$, with the two-velocity
 value $mu^2/\lambda$. The [paper](../papers/classical-action-field.tex) and
 B09 audit separate established transport formulas from their action-valued
-consequences. **A02** now tests a mechanical origin for a common mass-weighted
-correlation integral, following [ACTION_FIELD_TARGET.md](ACTION_FIELD_TARGET.md).
+consequences. **A02** adds physical-time covariance relaxation in an elastic
+bath, with plateau $(m+M)s^2/\nu$ set by reservoir parameters. The immediate
+priority is **A03**, the [cut-point selection test](CUT_POINT_TARGET.md): which
+physical condition forces a positive action remainder as the mesh tends to zero?
+The bath results remain diagnostics within [the broader target](ACTION_FIELD_TARGET.md).
 Necessity, convergence, universality and identification with $\hbar$ remain
 separate proof obligations. M06 and spectral examples support this central task.
 

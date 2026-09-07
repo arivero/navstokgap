@@ -13,3 +13,10 @@ Reading scope: Definitions I–VIII and their Scholium; Laws I–III, corollarie
 Printed pp. 73–82 define mechanics and discuss space/time; pp. 83–94 give the laws; pp. 95–102 discuss ultimate ratios; pp. 103–106 introduce the polygonal area argument and converse. The downloaded HTML's image paths refer to upstream assets; locally preserved selected figures are indexed separately below when used. No full-book reading or first-edition textual comparison is claimed.
 
 Selected figures: [p. 90 projectile](images/i_090a.jpg), [p. 104 central polygon](images/i_104.jpg), downloaded from the edition's `images/` directory and visually inspected. Other source images remain upstream. Where equations extracted as empty brackets, the Wilkins Section I PDF was consulted. The closing Scholium extends onto p. 103.
+
+Coordinator rereading, 2026-09-07, for B11 fallback: closing Scholium pp. 102–103
+and Proposition I pp. 103–104. Newton presents and answers the objection to
+ultimate proportions, distinguishes limits from least determinate magnitudes,
+and uses the limiting polygon in the area-law argument. This passage-level
+check supports attribution; the modern receding-centre derivation has its own
+[draft audit](../notes/receding-centre-area-audit.md).

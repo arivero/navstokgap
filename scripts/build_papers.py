@@ -30,7 +30,7 @@ def main():
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
-                  "classical-action-field", "research-programme"):
+                  "classical-action-field", "collision-action-relaxation", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
@@ -38,7 +38,7 @@ def main():
                    f"papers/{paper}.tex"]
         run(command, env)
         if paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
-                     "classical-action-field"):
+                     "classical-action-field", "collision-action-relaxation"):
             run(["bibtex", paper], env, cwd=build)
         run(command, env)
         run(command, env)
