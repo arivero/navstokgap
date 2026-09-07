@@ -28,7 +28,8 @@ handoff with the remaining dependency.
 | B07b | ready | Tangent-groupoid quantization theorem: exact hypotheses, limit topology and completion scope; return one test for the strong target | One Luna/Sol source worker | M04 |
 | B08 | done | Four-source, 13-page per-result prior-art and proof audit of M05, reviewed by coordinator | One Sol medium librarian | M05 draft |
 | M06 | ready | Test force/acceleration control and a strict-speed relativistic action on the shrinking oscillations; state the action-defect survival criterion and review it | Coordinator, then one small librarian | M05/B08 |
-| A01 | active | Define the candidate action field, compute the finite-speed persistent-flight test, audit classical premises and scale origin; reviewed paper and exact checks | Coordinator, then one Sol/Luna audit | M05 and sharpened user target |
+| A01 | review | Draft finite-speed action observable, reversible-generator positivity and persistent-flight limits written; 16 exact checks pass; B09 audit next | Coordinator, then one Sol/Luna audit | M05 and sharpened user target |
+| B09 | active | Bounded per-result literature and assumption audit of A01; source-to-model comparison with the origin of stochastic/ensemble action coefficients | One Luna medium librarian | A01 draft |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | waiting | Choose one gap notion/model; prove a bound with operator domain, parameter dependence and gap-closing limits | Analyst + adversarial reviewer | M03, Q01 as relevant |

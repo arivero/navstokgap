@@ -29,6 +29,9 @@ that force a positive limiting constant. Start from
 [the central target](ACTION_FIELD_TARGET.md). Its first bounded test is a
 finite-speed persistent random flight. **M06** remains the force/acceleration
 and relativistic-action diagnostic from [the M05 note](../notes/two-regulator-audit.md).
+The A01 draft is now in `papers/classical-action-field.tex`, with 16 exact
+checks. It awaits B09's bounded source/proof audit before ledger acceptance
+and inclusion in the PDF build.
 **B07a** completed the Wilson–Kogut common-observable reading and test;
 **B07b** retains the tangent-groupoid theorem. Each source task should change
 a premise, calculation or proof obligation.

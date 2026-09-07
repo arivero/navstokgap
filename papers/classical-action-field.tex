@@ -1,0 +1,248 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A Positive Action Plateau from Classical Velocity Memory},
+pdfauthor={navstokgap research working notes}}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\ha}{\mathsf h}
+\title{A Positive Action Plateau from Classical Velocity Memory}
+\author{navstokgap research working notes}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A finite reversible classical velocity process determines a positive limiting
+action coefficient through its integrated velocity correlation. We define the
+coefficient operationally as mass times displacement variance divided by
+observation duration, derive its exact spectral formula and bounds, and compute
+a two-velocity example. Finite speed forces the short-duration coefficient to
+vanish while a positive long-duration plateau survives. This separates
+microscopic resolution from observation time and identifies the correlation
+law that a universal action-scale proposal must explain.
+\end{abstract}
+
+\section{The observable and its classical premises}
+The candidate action field is an ensemble observable
+\begin{equation}\label{eq:def}
+ \ha_\Delta(t)=\frac{m}{\Delta}\Var[X(t+\Delta)-X(t)],\qquad m,\Delta>0.
+\end{equation}
+Here $X$ is position on the line, $t$ is physical time and $\Delta$ is an
+observation duration. Its units are mass times length squared per time, hence
+action. For Gaussian increments with variance $\kappa\Delta/m$, this
+normalization yields $\ha_\Delta=\kappa$, matching the earlier free-kernel
+model. For stationary velocity statistics the observable is independent of
+$t$, and we write $\ha(\Delta)$.
+
+The present premises are classical stochastic ones: a finite set of velocities,
+ordinary probabilities, finite transition rates, a stationary ensemble and
+detailed balance. Their mathematical consequences give a positive transport
+scale. The project's stronger target adds a physical origin for these premises,
+universality across systems, and a derivation identifying the scale with
+$\hbar$. We reserve $h=2\pi\hbar$ for Planck's constants and use $\ha$ for
+the candidate observable. An independent dynamical field would require an
+additional state variable and its equation of motion.
+
+\section{Finite speed and the correlation formula}
+The observation duration determines which part of the velocity dynamics is
+resolved. In particular, bounded velocity gives a sharp elementary constraint.
+
+\begin{proposition}[Microscopic limit]\label{prop:short}
+If $X$ has absolutely continuous paths with $|\dot X|\le u<c$ almost
+everywhere, almost surely, then
+\[
+ 0\le\ha_\Delta(t)\le m u^2\Delta\longrightarrow0
+ \quad(\Delta\downarrow0).
+\]
+\end{proposition}
+\begin{proof}
+The displacement has absolute value at most $u\Delta$.
+Its variance is at most its second moment, which is at most $u^2\Delta^2$.
+Divide by $\Delta/m$.
+\end{proof}
+
+For a real centered stationary velocity $V$ with finite second moment, set
+$X(t)=\int_0^t V(s)\,ds$ and $C(s)=\E[V(s)V(0)]$. Fubini's theorem on
+each finite square is justified by Cauchy--Schwarz and stationarity. Symmetry
+of the covariance gives
+\begin{equation}\label{eq:correlation}
+ \ha(\Delta)=2m\int_0^\Delta(1-s/\Delta)C(s)\,ds.
+\end{equation}
+If $C\in L^1(0,\infty)$, dominated convergence yields
+\begin{equation}\label{eq:gk}
+ H_*:=\lim_{\Delta\to\infty}\ha(\Delta)
+ =2m\int_0^\infty C(s)\,ds=2mD.
+\end{equation}
+This is the Green--Kubo diffusion coefficient $D$, with an action normalization
+\cite[(1.3), Proposition 2.1]{Pavliotis2010}. The finite-state assumptions
+below make its strict positivity and convergence explicit.
+
+\section{A positive plateau from finite reversible dynamics}
+Let $J_t$ be a stationary irreducible continuous-time Markov chain on
+$\{1,\ldots,k\}$, $k\ge2$, with invariant probabilities $\pi_i>0$ and
+generator $Q$. Thus $Q_{ij}\ge0$ for $i\ne j$, $Q\mathbf1=0$ and
+$\pi_iQ_{ij}=\pi_jQ_{ji}$. All rates are finite. Assign velocities $v_i$ with
+\[
+ \sum_i\pi_i v_i=0,\qquad \sigma_v^2:=\sum_i\pi_i v_i^2>0,
+ \qquad |v_i|\le u<c.
+\]
+Set $V(t)=v_{J_t}$ and integrate to obtain $X$. The Markov state is $(X,J)$;
+the velocity label retains the information required for future motion.
+Paths are piecewise linear, with finitely many velocity jumps on compact
+intervals almost surely. These jumps represent impulsive interactions rather
+than a smooth prescribed force law.
+
+Use $\langle f,g\rangle_\pi=\sum_i\pi_if_ig_i$. On the mean-zero
+subspace, $-Q$ is positive definite: detailed balance gives
+\[
+ \langle f,-Qf\rangle_\pi
+ =\tfrac12\sum_{i,j}\pi_iQ_{ij}(f_j-f_i)^2,
+\]
+and irreducibility makes its nullspace consist of constants. Let its positive
+eigenvalues be $\gamma_j$, with an orthonormal eigenbasis $e_j$, and write
+$v=\sum_{j=1}^{k-1}a_je_j$.
+
+\begin{proposition}[Classical action plateau]\label{prop:plateau}
+Under these premises,
+\begin{align}
+ \ha(\Delta)&=2m\sum_{j=1}^{k-1}\frac{a_j^2}{\gamma_j}
+ \left[1-\frac{1-e^{-\gamma_j\Delta}}{\gamma_j\Delta}\right],
+ \label{eq:spectral}\\
+ H_*&=2m\langle v,(-Q)^{-1}v\rangle_\pi
+ =2m\sum_{j=1}^{k-1}\frac{a_j^2}{\gamma_j}>0.\label{eq:plateau}
+\end{align}
+The inverse acts on mean-zero functions. Writing
+$\gamma_{\min}=\min_j\gamma_j$ and $\gamma_{\max}=\max_j\gamma_j$ gives
+\begin{equation}\label{eq:bounds}
+ \frac{2m\sigma_v^2}{\gamma_{\max}}\le H_*
+ \le\frac{2m\sigma_v^2}{\gamma_{\min}},\qquad
+ 0\le1-\frac{\ha(\Delta)}{H_*}\le\frac{1}{\gamma_{\min}\Delta}.
+\end{equation}
+Moreover $\ha(\Delta)$ increases strictly from zero to $H_*$; in particular
+$\ha(\Delta)\ge H_*/2$ for $\Delta\ge2/\gamma_{\min}$.
+\end{proposition}
+\begin{proof}
+The transition semigroup gives
+$C(s)=\langle v,e^{sQ}v\rangle_\pi=\sum_j a_j^2e^{-\gamma_js}$.
+Inserting this into \eqref{eq:correlation} and integrating each exponential
+proves \eqref{eq:spectral}. At least one $a_j$ is nonzero, so the limit is
+strictly positive. The identity $\sum_j a_j^2=\sigma_v^2$ gives the two
+spectral bounds. Each relative correction is bounded above by
+$1/(\gamma_{\min}\Delta)$, which gives the convergence estimate.
+Finally the scalar function $f(y)=1-(1-e^{-y})/y$ satisfies
+$f'(y)=[1-(1+y)e^{-y}]/y^2>0$ for $y>0$, since $e^y>1+y$.
+Its endpoint limits are zero and one. Positive weighted summation proves
+strict monotonicity and the stated duration-dependent bound.
+\end{proof}
+
+This is a finite-state spectral specialization of the generator Poisson
+representation in \cite[\S2]{Pavliotis2010}. The bounds concern the observable
+\eqref{eq:def} and fixed model parameters. Within the same axiom class,
+replacing $Q$ by $rQ$ for $r>0$ changes $H_*$ to $H_*/r$. Thus a uniform
+lower bound over models requires control of the transition rates as well as
+nonzero velocity variance. The spectral gap of the velocity generator has
+inverse-time units; $H_*$ has action units.
+
+\section{Two velocities: the full time dependence}
+Choose velocities $\pm u$, each with stationary probability $1/2$, and a
+reversal rate $\lambda>0$:
+\[
+ Q=\begin{pmatrix}-\lambda&\lambda\\\lambda&-\lambda\end{pmatrix},
+ \qquad V(t)=u\sigma_0(-1)^{N_t}.
+\]
+Here $N_t$ is a Poisson counting process of rate $\lambda$, independent of
+the uniform sign $\sigma_0$. Its generating function gives
+$\E[(-1)^{N_s}]=e^{-2\lambda s}$, hence
+\begin{equation}\label{eq:telegraph}
+ C(s)=u^2e^{-2\lambda s},\qquad
+ \ha(\Delta)=\frac{mu^2}{\lambda}
+ \left[1-\frac{1-e^{-2\lambda\Delta}}{2\lambda\Delta}\right].
+\end{equation}
+Therefore
+\[
+ \ha(\Delta)\sim mu^2\Delta\quad(\Delta\downarrow0),\qquad
+ H_*=\frac{mu^2}{\lambda}>0\quad(\Delta\to\infty).
+\]
+The correlation time is $1/(2\lambda)$, so the limiting action is twice
+mass times velocity variance times correlation time. A particle starting at
+$X(0)=0$ has support inside $[-u\Delta,u\Delta]$ at time $\Delta$;
+the no-reversal events give atoms at both endpoints. The model uses probability
+measures, including these atoms, rather than assuming a Gaussian density at
+every duration.
+
+The two conditional position measures $p_+,p_-$ satisfy, distributionally,
+\[
+ \partial_t p_+=-u\partial_xp_+-\lambda p_++\lambda p_-,\qquad
+ \partial_t p_-=u\partial_xp_-+\lambda p_+-\lambda p_-.
+\]
+Adding and subtracting these equations and eliminating their difference gives
+the telegraph equation for $p=p_++p_-$,
+\[
+ \partial_t^2p+2\lambda\partial_tp=u^2\partial_x^2p.
+\]
+This is the persistent-flight construction associated with the classical
+telegraph process; its exact source match is part of the A01 librarian audit.
+
+\section{Which limit keeps the action?}
+Microscopic resolution and diffusion scaling give different values of the
+same observable. Fix $a>0$ with diffusion units and take the formal family
+$u_\lambda^2=a\lambda$. For every fixed $\Delta>0$,
+\[
+ \ha_\lambda(\Delta)=ma
+ \left[1-\frac{1-e^{-2\lambda\Delta}}{2\lambda\Delta}\right]
+ \longrightarrow ma.
+\]
+Consequently the iterated limits are
+\begin{equation}\label{eq:orders}
+ \lim_{\Delta\downarrow0}\lim_{\lambda\to\infty}\ha_\lambda(\Delta)=ma,
+ \qquad
+ \lim_{\lambda\to\infty}\lim_{\Delta\downarrow0}\ha_\lambda(\Delta)=0.
+\end{equation}
+This is an exact statement about second moments. The formal scaling sends
+$u_\lambda\to\infty$ and therefore leaves any fixed physical speed ceiling.
+At fixed $u<c$ and fixed $\lambda$, the positive plateau instead occurs for
+observation durations long compared with the correlation time.
+
+\section{Axiom audit and the universality question}
+Each premise has a visible mathematical role:
+\begin{center}
+\begin{tabular}{@{}p{0.36\linewidth}p{0.58\linewidth}@{}}
+\toprule
+Classical premise & Consequence in the proof\\
+\midrule
+Stationary centered ensemble & Correlation depends on elapsed time; mean drift is removed\\
+Finite irreducible transition dynamics & Inverse generator exists on mean-zero functions\\
+Detailed balance & Real orthogonal velocity modes with positive decay rates\\
+Nonzero velocity variance & At least one mode contributes to the positive plateau\\
+Finite speed & Short-duration action coefficient tends to zero\\
+Mass and transition rates & Set the numerical value and units of the plateau\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These premises establish positivity for each model in the class. Independent
+composition permits particles with different transition rates, so universality
+adds a further dynamical requirement. For the two-velocity family, a common
+limiting value $H_*$ across masses requires
+\begin{equation}\label{eq:masslaw}
+ \lambda_m=\frac{m u_m^2}{H_*}.
+\end{equation}
+Equation \eqref{eq:masslaw} states the rate law to explain. It is not supplied
+by independent composition. Likewise, the present effective model specifies
+impulsive reversals externally; a closed mechanical realization must account
+for their momentum exchange and correlation law.
+
+The next research step is to test whether such a realization can enforce the
+mass-weighted correlation integral in \eqref{eq:gk} as a shared invariant.
+That would advance the scale-selection target beyond a family of independent
+transport coefficients. A separate phase/composition argument must then
+identify the common constant with $\hbar$.
+
+\bibliographystyle{plain}
+\bibliography{references/library}
+\end{document}
