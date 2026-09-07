@@ -18,12 +18,16 @@ make figures
 | Command | Checks or output |
 | --- | --- |
 | `make check` | Exact algebra, finite measurement examples, source checksums, companions, local links and citation keys |
-| `make papers` | Regenerates programme LaTeX and builds both PDFs; checks unresolved references and layout overflow |
+| `make papers` | Regenerates programme LaTeX and builds the three accepted PDFs; checks unresolved references and layout overflow |
 | `make figures` | Regenerates the constant-force illustration |
 
 The manuscript supplies the analytic arguments; these commands verify their
 computational and document artifacts. TeX runs with shell escape disabled,
 intermediates in `.build/` and final PDFs in `out/papers/`.
+
+`scripts/time_refinement_checks.py` verifies square completion, blocking
+normalization, bridge variance and Fourier composition. M03's spectral manuscript
+is a saved draft awaiting its dedicated checks and build integration.
 
 ## Dependencies
 

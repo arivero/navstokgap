@@ -1,0 +1,177 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Time Refinement and an Action Scale},pdfauthor={navstokgap research working notes}}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}
+\title{Time Refinement and an Action Scale}
+\author{navstokgap research working notes}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Free-particle kernels give an exact test of refinement-based proposals for an
+action scale. Integrating over an inserted position preserves a Gaussian family;
+time homogeneity makes its variance linear in duration. The proportionality
+constant remains a model parameter. Fixed-endpoint bridges concentrate on the
+Newtonian straight path as that parameter vanishes. We use these standard
+calculations to isolate the physical selection question in the proposed
+connection between geometric subdivision, renormalisation and quantum mechanics.
+\end{abstract}
+
+\section{A source-driven experiment}
+The experiment is to refine a time interval, integrate out the inserted
+positions, and track the remaining parameters. Rivero's cone discussion
+\cite{RiveroCone1999} motivates retaining rescaled data as sections approach;
+his path-integral proposal \cite{RiveroFeynman1998} motivates a finite blocking
+map. Brouder's rooted-tree correspondence \cite{Brouder1999} supplies an
+algebraic route to nonlinear composition, and the tangent-groupoid construction
+\cite{CarinenaEtAl1999} supplies a separate quantum-completion reading.
+
+This note works on the free line with mass $m>0$. Positions have units of
+length, $s,t,T>0$ are durations, and $\kappa$ has units of action.
+An identification $\kappa=\hbar=h/(2\pi)$ is a physical interpretation of a
+selected oscillatory model. The present calculations classify a free family;
+the selection of its physical member is the open reconstruction question.
+
+\section{Eliminating an inserted position}
+The normalized positive kernel is
+\begin{equation}\label{eq:kernel}
+ G_t^\kappa(x)=\sqrt{\frac{m}{2\pi\kappa t}}
+ \exp\left(-\frac{mx^2}{2\kappa t}\right),\qquad \kappa>0.
+\end{equation}
+It is a probability density on $\mathbb R$ with variance $\kappa t/m$;
+the standard Brownian normalization is given in
+\cite[\S4.1, (23)--(25)]{PitmanYor2018}.
+Its exponent is minus the free straight-segment action divided by $\kappa$.
+Here positivity defines a probability model; the oscillatory model enters
+in Section~\ref{sec:quantum}.
+
+\begin{proposition}[Exact blocking]\label{prop:block}
+For $s,t,\kappa>0$ and $x,z\in\mathbb R$,
+\[
+ \int_{\mathbb R}G_t^\kappa(z-y)G_s^\kappa(y-x)\,dy
+ =G_{s+t}^\kappa(z-x).
+\]
+\end{proposition}
+\begin{proof}
+Set $\mu=(tx+sz)/(s+t)$. Completing the square gives
+\[
+ \frac{(y-x)^2}{s}+\frac{(z-y)^2}{t}
+ =\frac{(z-x)^2}{s+t}+\frac{s+t}{st}(y-\mu)^2.
+\]
+The remaining Gaussian integral is
+$\sqrt{2\pi\kappa st/[m(s+t)]}$. Multiplication by the two prefactors in
+\eqref{eq:kernel} gives exactly the prefactor at duration $s+t$.
+\end{proof}
+
+Consequently, for any finite partition $0=t_0<\cdots<t_n=T$,
+integrating the product of the $n$ kernels over its $n-1$ internal positions
+gives $G_T^\kappa(z-x)$. The action parameter is unchanged at every finite
+refinement; this identity requires no continuum path measure.
+
+\begin{proposition}[The Gaussian parameter left by composition]\label{prop:classify}
+Let $(\mu_t)_{t\ge0}$ be a weakly continuous convolution semigroup of centered
+Gaussian probability measures on $\mathbb R$, allowing a degenerate Gaussian,
+with $\mu_0=\delta_0$. Then $\mu_t$ has variance $w(t)=at$ for one $a\ge0$.
+Conversely every $a\ge0$ defines such a family.
+\end{proposition}
+\begin{proof}
+Characteristic functions are $\widehat\mu_t(k)=\exp[-w(t)k^2/2]$.
+Composition implies $w(s+t)=w(s)+w(t)$. Weak continuity, evaluated at $k=1$,
+makes $w$ continuous. Additivity first yields $w(r)=r w(1)$ for nonnegative
+rational $r$, and continuity extends this to every real $t\ge0$.
+Nonnegative variance gives $a=w(1)\ge0$. These characteristic functions
+verify the converse.
+\end{proof}
+
+At fixed mass set $\kappa=ma$; since $[a]=\text{length}^2/\text{time}$,
+$[\kappa]=\text{action}$. All $\kappa>0$ satisfy the same composition law,
+and $a=0$ supplies the identity convolution family. Positive-width densities
+select $a>0$ as an additional premise. Even that subclass has
+$\inf\{\kappa:\kappa>0\}=0$: positivity of each member and a uniform lower
+bound over a class are distinct questions.
+
+\section{A bridge to the Newtonian path}
+Conditioning on endpoints gives an exact trajectory comparison. The standard
+bridge construction is given in \cite[\S3.4]{PitmanYor2018}.
+For $0<s<T$, define the normalized intermediate-position density
+\[
+ \rho_s^\kappa(y\mid x,z)=
+ \frac{G_{T-s}^\kappa(z-y)G_s^\kappa(y-x)}{G_T^\kappa(z-x)}.
+\]
+Proposition~\ref{prop:block} makes its integral one. The same square completion
+gives mean and variance
+\begin{equation}\label{eq:bridge}
+ q_{\rm cl}(s)=x+\frac{s}{T}(z-x),\qquad
+ \sigma_s^2=\frac{\kappa s(T-s)}{mT}.
+\end{equation}
+The mean is the unique free Newtonian trajectory with these endpoints.
+For any displacement tolerance $r>0$, Chebyshev's inequality gives
+\[
+ \Pr\{|Y_s-q_{\rm cl}(s)|\ge r\}
+ \le\frac{\kappa s(T-s)}{mTr^2}\longrightarrow0.
+\]
+For any fixed finite set of internal times, the product-kernel bridge has these
+marginals, and a union bound proves joint concentration on the sampled straight
+path. This is a finite-dimensional classical-path limit in a positive-measure
+model. Quantum phase-space correspondence is a further limiting problem.
+
+The zero-variance convolution family describes a stationary position. General
+free classical motion instead has the phase-space transition measure
+\[
+ P_t((q,p),dq'\,dp')=
+ \delta_{q+pt/m}(dq')\,\delta_p(dp'),
+\]
+whose composition follows by substitution. This keeps the deterministic
+comparison on its appropriate state space.
+
+\section{The oscillatory family and its coefficient}\label{sec:quantum}
+For each $\kappa>0$, the free oscillatory kernel is
+\[
+ K_t^\kappa(x)=\sqrt{\frac{m}{2\pi i\kappa t}}
+ \exp\left(\frac{imx^2}{2\kappa t}\right),\qquad t>0.
+\]
+Use the unitary transform
+$\mathcal Ff(k)=(2\pi)^{-1/2}\int_{\mathbb R}e^{-ikx}f(x)\,dx$.
+The kernel's precise meaning is the tempered-distribution kernel of the Fourier
+multiplier $\exp[-i\kappa t k^2/(2m)]$, with the square-root branch fixed by
+continuation from positive real Gaussian variance. On $L^2(\mathbb R)$,
+these multipliers define a strongly continuous unitary group for real $t$:
+the group law follows by multiplication, unitarity by modulus one, and strong
+continuity by dominated convergence. Its Hamiltonian in the convention
+$i\kappa\partial_t\psi=H_\kappa\psi$ is
+\[
+ H_\kappa=-\frac{\kappa^2}{2m}\frac{d^2}{dx^2},
+ \qquad D(H_\kappa)=H^2(\mathbb R).
+\]
+These are the usual free-particle formulas \cite[\S7.3]{Teschl2009}.
+Operator composition defines the oscillatory convolution, avoiding an
+unqualified interchange of conditionally convergent integrals.
+
+Writing the positive family as $\exp[t\kappa\partial_x^2/(2m)]$ and continuing
+$t$ to $it$ yields this unitary family. That continuation is a specified model
+choice. Both constructions retain a free coefficient with action units.
+
+\section{The selection problem now exposed}
+The first task is to find a physical principle that selects a positive action
+scale and explains its universality under composition of interacting systems.
+Three parameters stay separate: temporal mesh size, the action scale $\kappa$,
+and any finite-speed parameter $c^{-1}$. The present free nonrelativistic model
+allows arbitrarily fine temporal meshes at each fixed $\kappa$.
+
+The next source-guided experiment audits the two regulators in
+\cite{RiveroFeynman1998}, starting with a finite-dimensional quadratic action
+and its exact normalization. A second task extracts the hypotheses and limiting
+topology of \cite{CarinenaEtAl1999}. Together they test whether refinement
+consistency constructs a quantum completion, and which additional premise
+selects its physical action parameter. Interactions and finite propagation
+then become explicit changes of model.
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{references/library}
+\end{document}

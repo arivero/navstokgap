@@ -1,7 +1,7 @@
 # Restart state
 
-Updated: 2026-09-06. Current milestone: results-first revision and repository
-introduction prepared for publication.
+Updated: 2026-09-07. Current milestone: source-driven time-refinement experiment,
+with a verified early printed cone passage and a new LaTeX/PDF paper.
 
 ## Current results and next tasks
 
@@ -11,10 +11,23 @@ at zero, and a finite-copy quantum action-resolution threshold. It also computes
 the Dirichlet fluctuation spectrum and the free-kernel short-time limit.
 [Claims C001–C008](../claims/LEDGER.md) give assumptions and review status.
 
-Next mathematical task: **M03**, comparing oscillator Hessian and Hamiltonian
-gaps, then free motion on a line and a circle. Next source task: **H02**, a
-six-entry Classical Scholia inventory using the saved
-[search seeds](../references/batches/H02-seeds.md).
+The [time-refinement paper](../papers/time-refinement.tex) adds exact Gaussian
+blocking, a classification of its surviving parameter, and finite-dimensional
+bridge concentration. M04/B06 are complete. The strong target is the independent
+physical selection of a positive universal action scale, alongside construction
+of the classical limit; the current Gaussian family supplies the test setting.
+
+Next: **M05**, finite-dimensional normalization and the two-regulator proposal,
+using [the source-to-model note](../notes/cone-time-refinement.md). Pair it with
+the targeted **B07** reading of Wilson--Kogut and tangent-groupoid hypotheses.
+Each source task should change a premise, calculation or proof obligation.
+
+**M03 remains an unfinished draft** in `papers/spectral-gap-laboratory.tex`.
+Its B04 literature audit is complete; independent proof review, dedicated checks
+and PDF build integration remain. It is saved for continuation, outside the
+accepted-paper build. **H02/H03** retain the Classical Scholia task and
+[search seeds](../references/batches/H02-seeds.md). **H04** verified Xylander
+1570 pp. 823–824; **H05** will test author-specific cone reception.
 
 Q01 starts with Hardy and Chiribella–D'Ariano–Perinotti. B01 supplies verified
 identifiers and selected readings; Q01 will examine the reconstruction proofs.
@@ -42,6 +55,10 @@ identifiers and selected readings; Q01 will examine the reconstruction proofs.
 | R01 | Internal proof review; endpoint-gauge and path-continuity clarifications incorporated |
 | B01 | Luna bibliography batch: six primary leads; metadata/abstract checks and selected passages |
 | H01 | Sol NATP00385 retrieval and passage-level audit, with normalized/diplomatic/XML originals |
+| B04 | M03 prior-art matches and derived-consequence classifications; source passages checked |
+| B05 | Retrospective C001–C008 audit; Holevo–Helstrom and free-propagator anchors integrated |
+| H04 | Luna medium, sequential; 1570 cone passage visually verified by coordinator |
+| M04/B06 | Free-refinement proofs and algebra checks; Luna medium prior-art/assumption audit, coordinator source verification |
 
 NATP00385 documents Newton's account of analytic discovery and synthetic
 presentation. H02/H03 address the six Classical Scholia, the manuscript-folio
@@ -65,10 +82,12 @@ TeX's file-write security settings.
 - `2cb1554`: Principia dossier, constant-force calculation and context skill.
 - `5816e35`: restartable programme and first papers; [P00 handoff](handoffs/P00.md).
 - `79f1134`: ultra-effort prohibition.
-- Current editorial revision: results-first prose across the active documents,
+- `fc72c72`: results-first prose across the active documents,
   regenerated PDFs and compact session instructions. Mathematical assumptions
   and evidence classifications are preserved; prior reviews and source originals
   remain archival records.
+- [M04 handoff](handoffs/M04.md): source-driven refinement milestone, review
+  corrections, remaining M03 work and next M05/B07 calculation.
 - [Editorial review](../reviews/results-first-edit.md): verification and scope
   of the rewrite.
 - [Blog introduction](../docs/blog/introducing-navstokgap.md): first-person

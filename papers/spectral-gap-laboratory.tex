@@ -1,0 +1,365 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=27mm]{geometry}
+\usepackage{booktabs,tabularx}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A Gap Laboratory: Oscillators, Circles and Winding Sectors},pdfauthor={navstokgap research working notes}}
+\newtheorem{proposition}{Proposition}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\title{A Gap Laboratory:\\Oscillators, Circles and Winding Sectors}
+\author{navstokgap research working notes}
+\date{6 September 2026 --- M03 working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+A free classical particle on a circle has minimum action $mw^2L^2/(2T)$
+in winding sector $w$. Comparing sector minima produces the positive action
+gap $mL^2/(2T)$. The quantum particle on the same circle has energy gap
+$2\pi^2\hbar^2/(mL^2)$, which closes as the circumference grows.
+For the oscillator, the fixed-endpoint action Hessian has eigenvalues
+$m[(n\pi/T)^2-\omega^2]$, while the quantum Hamiltonian has energy spacing
+$\hbar\omega$. We derive the domains, bounds and limiting behaviour of these
+objects. The comparison isolates normalization, confinement and topological
+sector selection as mechanisms for positive lower bounds, and identifies a
+precise route to an action-valued spectral spacing in the quantum oscillator.
+\end{abstract}
+
+\section{Three objects to compare}
+Fix mass $m>0$, duration $T>0$, and, for quantum models, an input action
+parameter $\hbar>0$. The oscillator has frequency $\omega>0$; the circle has
+circumference $L>0$. We use $h=2\pi\hbar$.
+
+A quadratic fluctuation form $Q$ has a normalized lower bound
+$Q[\eta]\ge\mu\|\eta\|^2$. A Hamiltonian with ground energy $E_0$ and ground
+projection $P_0$ has excitation gap
+\[
+ \Delta_H=\inf\spec\bigl(H|_{\operatorname{Ran}(I-P_0)}\bigr)-E_0.
+\]
+For a classical path class split into sectors $\mathcal P_w$, let
+$s_w=\inf_{q\in\mathcal P_w}S[q]$. Comparing the $s_w$ defines a third object:
+a gap between sector minima. The choice of object fixes the normalization,
+units and admissible comparisons.
+
+The Schr\"odinger constructions below use the standard Fourier and oscillator
+realizations. Teschl's first edition supplies conventions and spectral background
+\cite[\S7.2, \S8.3]{Teschl2009}. The derivations here retain physical constants
+and give the particular bounds used by the research programme.
+
+\section{Oscillator action: duration and normalization}
+Consider real paths with $q(0)=q(T)=0$ and
+\[
+ S[q]=\frac m2\int_0^T(\dot q^2-\omega^2q^2)\dd t.
+\]
+The rest path $q_*=0$ is a classical solution for every $T$. Its exact action
+difference is $S[\eta]-S[0]=Q_T[\eta]/2$, where
+\[
+ Q_T[\eta]=m\int_0^T(\dot\eta^2-\omega^2\eta^2)\dd t,
+ \qquad \eta\in H^1_0(0,T).
+\]
+Complexification gives the corresponding sesquilinear form and self-adjoint
+operator on $L^2(0,T)$:
+\[
+ J_T=-m\frac{\dd^2}{\dd t^2}-m\omega^2,
+ \qquad D(J_T)=H^2(0,T)\cap H^1_0(0,T).
+\]
+This specializes the classical second-variation and Jacobi framework
+\cite[\S8.2]{Cristoferi2016CalculusVariations}.
+
+\begin{proposition}[Duration-dependent fluctuation spectrum]\label{prop:hessian}
+An orthonormal eigenbasis is
+\[
+ e_n(t)=\sqrt{2/T}\sin(n\pi t/T),\qquad
+ \lambda_n=m[(n\pi/T)^2-\omega^2],\quad n\ge1.
+\]
+The best $L^2$ lower-bound constant is
+$\mu_T=m[(\pi/T)^2-\omega^2]$.
+The form is strictly positive for $T<\pi/\omega$, is nonnegative with a
+one-dimensional kernel at $T=\pi/\omega$, and has a negative direction for
+$T>\pi/\omega$. At $T=k\pi/\omega$, $k\ge1$, its kernel is spanned by $e_k$.
+For every $T>0$, positive action differences from $q_*=0$ accumulate at zero.
+\end{proposition}
+\begin{proof}
+The sine basis diagonalizes the Dirichlet Laplacian. Its diagonal domain is
+the stated Sobolev domain, and adding the bounded scalar $-m\omega^2$ shifts
+each eigenvalue. For $\eta\in H^1_0$ with coefficients $b_n$,
+\[
+ Q_T[\eta]=\sum_{n\ge1}\lambda_n|b_n|^2
+ \ge\lambda_1\sum_{n\ge1}|b_n|^2.
+\]
+Equality is attained on $e_1$, proving optimality. The signs and kernels follow
+by comparing $n$ with $\omega T/\pi$. In particular, the number of negative
+eigenvalues is $\lceil\omega T/\pi\rceil-1$.
+Choose an integer $n>\omega T/\pi$. Then
+\[
+ S[A\sin(n\pi t/T)]-S[0]
+ =\frac{mA^2T}{4}[(n\pi/T)^2-\omega^2]>0\quad(A\ne0).
+\]
+This tends to zero with $A$, and the paths converge to zero in $H^1$.
+\end{proof}
+
+At a conjugate duration $T=k\pi/\omega$, the zero mode is itself a variation
+through classical solutions $A\sin(\omega t)$ with the prescribed endpoints.
+After the first conjugate duration, the rest path is a saddle. These changes
+concern a boundary-value variational problem at selected duration.
+
+With $\|\eta\|_2^2=\int_0^T|\eta|^2\dd t$, the coefficient $\mu_T$ has units
+mass/time$^2$, and $Q_T$ has action units. If instead one uses the time-average
+norm $T^{-1}\int_0^T|\eta|^2\dd t$, the coefficient is $T\mu_T$.
+Fixing an amplitude norm is therefore part of interpreting a fluctuation bound.
+
+\section{Oscillator Hamiltonian and an action-valued spectrum}
+The quantum oscillator acts on $L^2(\R,\dd x)$ through
+\[
+ H_\omega=-\frac{\hbar^2}{2m}\frac{\dd^2}{\dd x^2}
+           +\frac{m\omega^2x^2}{2}.
+\]
+We take its self-adjoint closure from finite sums of Hermite eigenfunctions.
+The proof below constructs that realization and specifies its full domain.
+
+\begin{proposition}[Confinement and action spacing]\label{prop:oscillator}
+For $m,\omega,\hbar>0$ the oscillator has simple eigenvalues
+\[
+ E_n=\hbar\omega(n+\tfrac12),\qquad n=0,1,2,\ldots,
+ \qquad \Delta_\omega=\hbar\omega.
+\]
+The operator $\widehat I=H_\omega/\omega$ has action-valued spectrum
+$\hbar(n+\tfrac12)$ and excitation spacing $\hbar$.
+At fixed $\hbar$, the energy gap closes as $\omega\downarrow0$; at fixed
+$\omega$, it closes as $\hbar\downarrow0$.
+\end{proposition}
+\begin{proof}
+Set $\ell=\sqrt{\hbar/(m\omega)}$ and $u=x/\ell$. The unitary change
+$U\psi(u)=\sqrt\ell\,\psi(\ell u)$ gives
+\[
+ UH_\omega U^{-1}=\frac{\hbar\omega}{2}
+       \left(-\frac{\dd^2}{\dd u^2}+u^2\right)
+       =\hbar\omega(B^*B+\tfrac12),
+ \quad B=\frac{u+\partial_u}{\sqrt2}.
+\]
+On polynomial times Gaussian functions, $B^*=(u-\partial_u)/\sqrt2$ and
+$[B,B^*]=1$. Starting from $\phi_0=\pi^{-1/4}e^{-u^2/2}$, define
+\[
+ \phi_n=(n!)^{-1/2}(B^*)^n\phi_0.
+\]
+Integration by parts, $B\phi_0=0$ and the commutator give orthonormality,
+$B^*B\phi_n=n\phi_n$, and the stated eigenvalues.
+
+For completeness, a function $f\in L^2(\R)$ orthogonal to all $\phi_n$ is
+orthogonal to every polynomial times $e^{-u^2/2}$. The function
+\[
+ F(z)=\int_\R\overline{f(u)}e^{-u^2/2}e^{zu}\dd u
+\]
+is entire: Cauchy--Schwarz gives integrable bounds for every derivative,
+uniformly on compact $z$ sets. All derivatives at zero vanish, so $F=0$.
+On the imaginary axis this is the Fourier transform of the integrable function
+$\overline f e^{-u^2/2}$; Fourier uniqueness gives $f=0$.
+
+Put $\psi_n=U^{-1}\phi_n$. In this basis the full operator domain is
+\[
+ D(H_\omega)=\left\{\psi=\sum_{n\ge0}c_n\psi_n:
+                \sum_{n\ge0}E_n^2|c_n|^2<\infty\right\},
+ \qquad H_\omega\psi=\sum_{n\ge0}E_nc_n\psi_n.
+\]
+A real diagonal operator on this maximal domain is self-adjoint. Finite
+partial sums converge in its graph norm, identifying the claimed closure.
+The spectrum and both gap limits now follow from the diagonal entries.
+\end{proof}
+
+For any normalized state in the form domain, expansion in this basis gives
+\begin{equation}\label{eq:osc-coercivity}
+ \langle H_\omega\rangle_\psi-E_0
+ \ge\hbar\omega(1-|\langle\psi_0,\psi\rangle|^2).
+\end{equation}
+The expectation denotes the quadratic-form value when the state is outside
+the operator domain. It is a sharp bound: equality holds in the span of the
+ground and first excited states. Orthogonality to the ground yields the full
+gap; an arbitrarily small excited component gives a correspondingly small
+positive mean energy excess.
+
+The classical reduced action variable is $I=(2\pi)^{-1}\oint p\dd q=E/\omega$.
+Indeed the energy ellipse
+$p^2/(2m)+m\omega^2q^2/2=E$ has area $2\pi E/\omega$.
+Its values vary continuously with $E\ge0$. The quantized operator above has
+spacing $\hbar$, or spacing $h$ for $2\pi\widehat I$.
+For one classical period $P=2\pi/\omega$, Hamilton's time-integrated action is
+instead
+\[
+ S_{\rm period}=\oint p\dd q-EP=0.
+\]
+This identifies precisely which action-like object acquires the quantum spacing.
+The inputs are the Schr\"odinger state space and the specified $\hbar$.
+
+\section{Free motion: circle, interval and line}
+For a circle of circumference $L$, use $L^2(0,L)$ and periodic conditions on
+both the function and its derivative:
+\[
+ H_L=-\frac{\hbar^2}{2m}\partial_x^2,\quad
+ D(H_L)=\{\psi\in H^2(0,L):\psi(L)=\psi(0),\ \psi'(L)=\psi'(0)\}.
+\]
+This selects the untwisted periodic sector.
+The momentum and energy quantisation from periodicity is the standard ring
+calculation \cite[Lecture 23, chapter 2]{YalePHYS201Lecture23}.
+
+\begin{proposition}[Spatial-size gap and its closure]\label{prop:circle}
+The circle has normalized eigenfunctions and energies
+\[
+ v_n(x)=L^{-1/2}e^{2\pi inx/L},\qquad
+ E_n=\frac{2\pi^2\hbar^2n^2}{mL^2},\qquad n\in\Z.
+\]
+The ground state is the constant $v_0$, and its excitation gap is
+\[
+ \Delta_L=\frac{2\pi^2\hbar^2}{mL^2}.
+\]
+For the Dirichlet interval $(0,L)$ the energies are
+$E_n^{\rm D}=\pi^2\hbar^2n^2/(2mL^2)$, $n\ge1$, and the ground-to-first-excited
+gap is $3\pi^2\hbar^2/(2mL^2)$. Both gaps tend to zero as $L\to\infty$.
+On the line, $H_\R=-\hbar^2\partial_x^2/(2m)$ with domain $H^2(\R)$ has
+spectrum $[0,\infty)$ and an empty point spectrum.
+\end{proposition}
+\begin{proof}
+Fourier series diagonalize the circle operator. Its domain corresponds to
+$\sum_{n\in\Z}n^4|c_n|^2<\infty$, exactly the periodic $H^2$ domain.
+The complete exponential basis proves the spectrum and self-adjointness.
+The first excitation consists of the $n=\pm1$ pair. Replacing exponentials
+by the complete sine basis and using domain $H^2(0,L)\cap H^1_0(0,L)$ proves
+the interval statements; its excitation gap is $E_2^{\rm D}-E_1^{\rm D}$.
+
+On the line the unitary Fourier transform converts the operator into
+multiplication by $\hbar^2k^2/(2m)$ on its maximal domain. The essential range
+is $[0,\infty)$, and every level set has Lebesgue measure zero, so there are
+no square-integrable eigenvectors. For any $\epsilon>0$, a normalized Fourier
+function supported in
+$0<|k|<\sqrt{2m\epsilon}/\hbar$ has energy expectation in $(0,\epsilon)$.
+\end{proof}
+
+In particular the line's zero spectral edge has a different ground-state
+structure from the circle's normalized constant ground state. The comparison
+of gaps above gives their exact dependence on spatial size; an operator limit
+between varying Hilbert spaces also requires a specified identification.
+
+For a circle form-domain vector, Parseval gives the sharp estimate
+\begin{equation}\label{eq:circle-coercivity}
+ \frac{\hbar^2}{2m}\int_0^L|\psi'|^2\dd x
+ \ge\Delta_L\left(\|\psi\|^2-|\langle v_0,\psi\rangle|^2\right).
+\end{equation}
+The same periodic Poincar\'e constant $\kappa_L=(2\pi/L)^2$ gives mean-zero
+heat relaxation rate $\nu\kappa_L$ and quantum energy gap
+$\hbar^2\kappa_L/(2m)$. Their units and generators fix their different roles.
+The $L^{-2}$ factor closes both bounds in growing volume.
+
+\section{A positive classical action gap between winding sectors}
+Describe a circle-valued loop based at zero by its absolutely continuous lift
+$q\in H^1(0,T;\R)$, with $q(0)=0$ and $q(T)=wL$ for $w\in\Z$.
+This makes the winding sectors explicit:
+\[
+ \mathcal P_w=\{q\in H^1(0,T;\R):q(0)=0,\ q(T)=wL\},
+ \quad S[q]=\frac m2\int_0^T\dot q^2\dd t.
+\]
+
+\begin{proposition}[Sector minimum action]\label{prop:winding}
+The unique minimizing lift in sector $w$ is $q_w(t)=wLt/T$, with
+\[
+ s_w=S[q_w]=\frac{mw^2L^2}{2T},\qquad
+ g_{\rm wind}:=\inf_{w\ne0}(s_w-s_0)=\frac{mL^2}{2T}>0.
+\]
+These minima are also the action values of all free classical solutions with
+the prescribed circle endpoints and duration. Within each individual sector,
+positive action excesses above its minimum accumulate at zero.
+\end{proposition}
+\begin{proof}
+Cauchy--Schwarz yields
+\[
+ (wL)^2=\left(\int_0^T\dot q\dd t\right)^2
+ \le T\int_0^T\dot q^2\dd t.
+\]
+Equality holds exactly when $\dot q$ is constant almost everywhere, fixing
+the minimizing lift. Free classical solutions solve $\ddot q=0$, hence are
+precisely these constant-speed lifts. Minimizing $w^2$ over nonzero integers
+gives the gap. For $\eta\in H^1_0(0,T)$ the cross term integrates to zero:
+\[
+ S[q_w+\eta]-S[q_w]=\frac m2\int_0^T\dot\eta^2\dd t.
+\]
+Taking $\eta=A\sin(\pi t/T)$ gives $mA^2\pi^2/(4T)$, positive for $A\ne0$
+and approaching zero with $A$.
+\end{proof}
+
+The positive bound concerns nonzero winding, or comparison of the stationary
+solutions across sectors. It depends on the global length $L$ and duration $T$:
+$g_{\rm wind}\to0$ as $T\to\infty$ at fixed $L$, or as $L\downarrow0$ at fixed
+$T$. At fixed $T$ it grows with $L$, while the quantum circle gap decreases.
+Their exact product is
+\[
+ g_{\rm wind}\Delta_L=\frac{\pi^2\hbar^2}{T}.
+\]
+The product records reciprocal $L$ scaling for two different quantities.
+
+\section{Finite speed in the winding example}
+Finite $c>0$ can be kept as an independent input. For the standard relativistic
+free-particle Lagrangian \cite{FeynmanLectures}, measure action relative to rest:
+\[
+ \Delta S_c[q]=mc^2\int_0^T\left(1-\sqrt{1-\dot q^2/c^2}\right)\dd t.
+\]
+Use absolutely continuous lifted paths with $|\dot q|<c$ almost everywhere.
+A winding sector is admissible exactly when $|w|L<cT$. Necessity follows
+from $|w|L\le\int_0^T|\dot q|\dd t<cT$; a constant-speed lift proves
+sufficiency. The velocity integrand is strictly convex, with second derivative
+$m(1-v^2/c^2)^{-3/2}$. Jensen's inequality therefore gives its unique minimum:
+\[
+ s^c_w=mc^2T\left(1-\sqrt{1-\frac{w^2L^2}{c^2T^2}}\right).
+\]
+When $L<cT$, the first nonzero sector has gap
+\[
+ g^c_{\rm wind}=mc^2T\left(1-\sqrt{1-\frac{L^2}{c^2T^2}}\right)
+ =\frac{mL^2}{2T}+\frac{mL^4}{8c^2T^3}+O(c^{-4})
+\]
+at fixed $m,L,T$ as $c\to\infty$. For $L\ge cT$ the admissible class contains
+only the zero-winding sector. This is absence of a comparison sector, so the
+finite gap formula applies precisely on $L<cT$.
+At fixed finite $c,L$, increasing $T$ again closes the gap.
+
+\section{What the laboratory selects next}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+Object & Lower bound or spacing & Gap-closing parameter \\
+\midrule
+Oscillator Hessian & $m[(\pi/T)^2-\omega^2]$ in the $L^2$ norm & $T\uparrow\pi/\omega$ \\
+Quantum oscillator & $\Delta_\omega=\hbar\omega$ & $\omega\downarrow0$ \\
+Oscillator action & spacing of $H_\omega/\omega$: $\hbar$ & $\hbar\downarrow0$ \\
+Quantum circle & $\Delta_L=2\pi^2\hbar^2/(mL^2)$ & $L\to\infty$ \\
+Classical winding & $g_{\rm wind}=mL^2/(2T)$ & $T\to\infty$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The oscillator supplies a confinement-generated energy gap in unbounded
+configuration space. The circle supplies a geometry-generated quantum gap and
+a classical action gap after a specified sector selection. Equations
+\eqref{eq:osc-coercivity} and \eqref{eq:circle-coercivity} identify the exact
+orthogonality condition that turns a spectral spacing into a statewise bound.
+
+For the programme's next gap model, choose the sector, state space or coupling,
+then ask whether the lower bound survives removal of the chosen duration or
+size constraint. An interacting oscillator chain is a concrete next test of
+uniformity in system size. The periodic Poincar\'e comparison also supplies a
+precise companion to the fluid discussion: the shared estimate and its loss
+at large volume can be followed explicitly.
+
+The quantum spectra use a prescribed $\hbar$ and the stated Schr\"odinger
+realizations. The classical sector bounds use topology and endpoint data.
+Reconstructing a universal action parameter remains the separate physical-premise
+question. The present results are standard solvable-model derivations assembled
+to distinguish and test gap mechanisms.
+
+The repository's \texttt{make check} verifies the maintained algebra and finite
+cross-checks; \texttt{make papers} builds the manuscripts and checks references
+and layout. The source companion records edition and reading coverage.
+\bibliographystyle{plain}
+\bibliography{references/library}
+\end{document}

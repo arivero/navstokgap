@@ -9,6 +9,18 @@ URL, actual reading coverage and relevance to the project. Describe the source's
 result with its hypotheses. Flag verified version changes and access restrictions.
 The coordinator integrates metadata and assigns deeper proof or novelty review.
 
+End each batch with one source-driven model test: a premise to examine, a
+construction to implement or a proof obligation to resolve. Bibliography should
+put useful ideas into the current calculation as well as establish prior art.
+
+Every mathematical result needs a librarian prior-literature audit. Match each
+assigned claim to a theorem, equation or passage and compare its hypotheses.
+Classify exact established matches separately from derived consequences and
+unmatched candidate contributions. Record queries, inspected sources and coverage
+for an unmatched claim. A search's stopping point records coverage, not a proof
+of novelty. Apply the same procedure to earlier results and to proposed
+action-gap principles when their statements become precise.
+
 Write the assigned batch and companions under `docs/batches/<id>/`.
 Keep candidate BibTeX in the batch for coordinator review. End at the task's
 budget with findings, remaining questions and the standard handoff.

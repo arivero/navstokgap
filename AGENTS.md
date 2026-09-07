@@ -54,3 +54,13 @@ selective to conserve the user's usage allowance.
 
 Promote an idea into the ledger through an explicit derivation and review.
 See `research/TOOLS.md` for reproduction and tool decisions.
+
+For each mathematical result, commission a sequential librarian audit of prior
+literature. Record precise source matches or bounded search coverage; distinguish
+established results, derived consequences and candidate contributions. Maintain
+proof status and literature status separately. Apply this to earlier results
+and to the proposed principles forcing a positive action parameter.
+
+Use bibliography to develop the toy model: each source batch should supply a
+premise, construction or proof obligation for a named research step. Keep this
+idea-generating role alongside the prior-art audit.

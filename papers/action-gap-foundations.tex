@@ -139,6 +139,7 @@ contains off-shell fluctuations.
 For constant force a Jacobi field is $A+Bt$, so fixed zero endpoints force it to
 vanish. Equation \eqref{eq:quadratic} nevertheless admits nonzero fluctuations.
 
+The second-variation framework is classical \cite[\S8.2]{Cristoferi2016CalculusVariations}.
 For constant force the Dirichlet eigenfunctions are $\sin(n\pi t/T)$ with
 eigenvalues $\lambda_n=m(n\pi/T)^2$, $n\ge1$. Thus
 \[
@@ -151,14 +152,16 @@ mass/time$^2$, while $\|\eta\|_{L^2}^2$ has units length$^2$ time, producing act
 For the oscillator $V=m\omega^2q^2/2$, the corresponding eigenvalues become
 $m[(n\pi/T)^2-\omega^2]$. Zero modes occur at $T=n\pi/\omega$; positivity of
 all modes fails after the first such time. This explicit calculation is a useful
-next comparison with the quantum oscillator Hamiltonian. Its energy spectrum
-and the duration-dependent Hessian spectrum can then be studied side by side.
+comparison with the quantum oscillator Hamiltonian. The companion working draft
+\emph{A Gap Laboratory: Oscillators, Circles and Winding Sectors} derives both
+spectra, their domains and their distinct gap-closing limits.
 
 \section{What distribution is the oscillatory kernel?}
 The quantum path-phase input is $\exp(iS/\hbar)$, with time-integrated action,
 as in the Feynman formulation \cite{Feynman1948,FeynmanLectures}. To study its
 distributional meaning, specify a kernel, normalization and limiting parameter.
-The free one-dimensional Schr\"odinger kernel provides an exact example.
+The free one-dimensional Schr\"odinger kernel provides an exact example
+\cite[\S7.3, (7.30)]{Teschl2009}. The expansion below is its Fourier consequence.
 For $\hbar,m,\tau>0$ let
 \[
  K_\tau(z)=\left(\frac{m}{2\pi i\hbar\tau}\right)^{1/2}
@@ -203,6 +206,9 @@ with equal priors:
 \]
 Allow $N\ge1$ independent identical copies and any joint binary quantum
 measurement. These assumptions define the resource budget and the hypothesis test.
+
+The following is a pure-state specialization of the Holevo--Helstrom theorem
+\cite[Theorem 3.4]{Watrous2018}, followed by the specified action-phase encoding.
 
 \begin{proposition}[Finite-copy bound]\label{prop:measurement}
 The optimal equal-prior success probability is
@@ -287,10 +293,11 @@ elementary discrimination cross-checks. \texttt{make papers} rebuilds this note
 and the companion programme PDF. The formalisation queue begins with the
 small-amplitude polynomial lemma.
 
-The next bounded work is to compare oscillator Hessian and Hamiltonian gaps,
-free motion on a line and circle, and central-potential collision assumptions.
-In parallel, primary-source bibliography will compare quantum reconstruction
-axioms and complete the historical corpus inventory. A successful extension must
+The companion \emph{Time Refinement and an Action Scale} develops the free
+Gaussian blocking test. Next steps audit the regulator proposal and quantum
+reconstruction axioms, alongside central-potential models and the historical
+corpus inventory, with sequential source audits.
+A successful extension must
 identify which premise excludes the classical small-amplitude families, or else
 choose an operational or spectral gap instead and state the change of target.
 Deriving a theory's form, forcing a nonzero universal scale and determining its

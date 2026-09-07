@@ -1,4 +1,4 @@
-"""Check local Markdown targets, source companions and technical-paper citation keys."""
+"""Check local Markdown targets, source companions and all paper citation keys."""
 
 from pathlib import Path
 import re
@@ -38,11 +38,11 @@ def main():
     keys = re.findall(r"@\w+\s*\{\s*([^,\s]+)\s*,", bib)
     if len(keys) != len(set(keys)):
         errors.append("Duplicate shared bibliography key")
-    paper = (ROOT / "papers" / "action-gap-foundations.tex").read_text()
-    for group in re.findall(r"\\cite(?:\[[^]]*\])?\{([^}]+)\}", paper):
-        for key in group.split(","):
-            if key.strip() not in keys:
-                errors.append(f"Missing bibliography key: {key}")
+    for paper_path in (ROOT / "papers").glob("*.tex"):
+        for group in re.findall(r"\\cite(?:\[[^]]*\])?\{([^}]+)\}", paper_path.read_text()):
+            for key in group.split(","):
+                if key.strip() not in keys:
+                    errors.append(f"{paper_path.name}: missing bibliography key: {key}")
     if errors:
         raise SystemExit("\n".join(errors))
     print(f"Repository checks passed: {link_count} local Markdown links, source companions, citation keys")

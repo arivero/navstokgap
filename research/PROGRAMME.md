@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 2, 2026-09-06.
+Version 3, 2026-09-07.
 
 ## Aim
 
@@ -16,7 +16,35 @@ Newton's shrinking-area construction provides the initial geometric model.
 The work proceeds through exact mechanical examples, operational definitions,
 operator spectra and comparisons of limiting procedures.
 
+The user's strong target (2026-09-06) is to identify independently motivated
+physical principles that force quantum structure with a positive action
+parameter, with classical mechanics recovered as a specified limit. This has
+two proof obligations: exclusion of the classical model under the selected
+principles, and construction of the classical limit. The statement that every
+admissible classical theory has a quantum completion is a further universal
+claim whose domain and notion of quantisation must be fixed.
+
+Solvable-model spectra and sector gaps are test cases for this programme.
+Each result has a separate librarian audit of prior literature, recording
+established matches, derived consequences or a candidate contribution with
+explicit search coverage. The strong target receives its own prior-art audit
+as its axioms and quantifiers become precise.
+
 ## Starting results
+
+The current refinement experiment is an exact free-particle blocking map.
+Gaussian kernels compose while preserving their action parameter; endpoint
+bridges concentrate on the Newtonian straight path as that parameter tends to
+zero. [Time Refinement and an Action Scale](../papers/time-refinement.tex)
+gives the proofs and identifies the open physical selection step.
+The [source-to-model note](../notes/cone-time-refinement.md) connects this test
+to Plutarch's cone, Rivero's regulator proposal, Brouder's rooted-tree algebra
+and tangent-groupoid quantization.
+
+Bibliography is an input to model design as well as a prior-art check. Every
+bounded reading should return a premise to test, a construction to implement,
+or a proof obligation to resolve. Read only the passages needed for the current
+calculation; use one small worker at a time, followed by coordinator review.
 
 For $V=-Fy$, duration $T>0$, perpendicular launch speed $v_0>0$ and mass $m>0$,
 the chord–curve action difference is
@@ -112,6 +140,13 @@ The [idea register](../ideas/I001-action-field.md) sets out the candidate
 interpretations and their immediate tests.
 
 ## Reading priorities
+
+For M05, first audit the finite-dimensional normalization and two regulators
+in [Rivero's 1998 proposal](https://arxiv.org/abs/quant-ph/9803035v1).
+Use the already checked Brownian bridge/Markov product to compute the partition
+covariance and determinant. B07 then reads Wilson--Kogut chapter 12 and the
+precise tangent-groupoid quantization hypotheses. This ordering joins source
+reading to a calculation instead of growing a detached reading queue.
 
 Start Q01 with [Hardy's five axioms](https://arxiv.org/abs/quant-ph/0101012v4)
 and [Chiribella–D'Ariano–Perinotti's informational derivation](https://arxiv.org/abs/1011.6451v3).

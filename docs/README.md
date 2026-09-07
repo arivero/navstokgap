@@ -14,6 +14,18 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [Cone and time-refinement source-to-model map](../notes/cone-time-refinement.md):
+  [Rivero 1998](Rivero_FeynmanFormula_1998.md), [Rivero 1999](Rivero_Cone_1999.md),
+  [Brouder](Brouder_RungeKutta_1999.md), and
+  [Cariñena et al.](CarinenaEtAl_TangentGroupoid_1999.md).
+- [H04](../references/batches/H04.md): verified 1570 Plutarch pages and bounded
+  reception search, with saved public-domain scans.
+- [B04](../references/batches/B04.md), [B05](../references/batches/B05.md),
+  [B06](../references/batches/B06.md): per-result literature audits for the
+  spectral draft, earlier foundations and current refinement paper.
+- [Teschl 2009](Teschl_QuantumMechanics_2009.md) and
+  [Pitman–Yor 2018](batches/B06/PitmanYor2018.md): verified operator and bridge anchors.
+
 - [B01: six primary bibliography leads](../references/batches/B01.md): quantum reconstructions, path phases and distinguishability, with individual reading-coverage records.
 - [Lean documentation reading note](Lean_ProofValidation.md): the formalisation gate.
 - [Source/transcription policy](../references/SOURCE_POLICY.md) and [shared BibTeX](../references/library.bib).

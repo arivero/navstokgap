@@ -1,4 +1,4 @@
-"""Build the two tracked paper PDFs from the repository root, without shell escape."""
+"""Build accepted paper PDFs from the repository root, without shell escape."""
 
 from pathlib import Path
 import os
@@ -29,14 +29,14 @@ def main():
     env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
-    for paper in ("action-gap-foundations", "research-programme"):
+    for paper in ("action-gap-foundations", "time-refinement", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
                    "-interaction=nonstopmode", f"-output-directory={build}",
                    f"papers/{paper}.tex"]
         run(command, env)
-        if paper == "action-gap-foundations":
+        if paper in ("action-gap-foundations", "time-refinement"):
             run(["bibtex", paper], env, cwd=build)
         run(command, env)
         run(command, env)
