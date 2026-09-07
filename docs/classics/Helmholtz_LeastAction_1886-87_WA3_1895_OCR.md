@@ -1,6 +1,6 @@
 # Helmholtz, on the physical meaning of the principle of least action, and its history (1886–87)
 
-> Source: [Internet Archive, Google scan `wissenschaftlic03helmgoog`](https://archive.org/details/wissenschaftlic03helmgoog); local OCR excerpt [`.txt`](Helmholtz_LeastAction_1886-87_WA3_1895_OCR.txt), lines 10662–14413 of the archive's `_djvu.txt`, retrieved 2026-09-08.
+> Source: [Internet Archive, Google scan `wissenschaftlic03helmgoog`](https://archive.org/details/wissenschaftlic03helmgoog); local OCR excerpt [`.txt`](Helmholtz_LeastAction_1886-87_WA3_1895_OCR.txt), lines 10662–13885 of the archive's `_djvu.txt`, retrieved 2026-09-08.
 > Metadata: Hermann von Helmholtz, “Ueber die physikalische Bedeutung des Princips der kleinsten Wirkung”, *Journal für die reine und angewandte Mathematik* 100 (1887), 137–166 and 213–222, read 1886; and “Zur Geschichte des Princips der kleinsten Action” (1887); both reprinted in *Wissenschaftliche Abhandlungen*, dritter Band (Leipzig: Johann Ambrosius Barth, 1895), pp. 203–248 and 249 onward, numbered CXX and CXXI in the volume's table of contents.
 > Extraction: archive.org OCR of the 1895 printing; running heads such as “Die physikal. Bedeutung des Princips der kleinsten Wirkung” remain, and displayed formulae are fragmentary. The journal's publisher copy is paywalled and the Göttingen manifest route failed on 2026-09-08.
 > Rights: public domain.

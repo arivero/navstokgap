@@ -26,6 +26,7 @@ supplies to the project. Retrieval date for both batches: 2026-09-08
 | [Lagrange, Mécanique analytique II.III](Lagrange_MecaniqueAnalytique_P2S3_Oeuvres_wikisource.md) | 1788/1811; Œuvres XI | HTML, transcription | Least-action property derived from the general formula, §VI |
 | [Helmholtz, physical meaning and history of least action](Helmholtz_LeastAction_1886-87_WA3_1895_OCR.md) | 1886–87; 1895 | OCR excerpt | Least action as the universal law of reversible physics |
 | [Hertz, Principles of Mechanics, Introduction](Hertz_PrinciplesOfMechanics_Introduction_1899_wikisource.md) | 1894; 1899 | HTML, transcription | Three images of mechanics; concealed masses |
+| [Thomson and Tait, Treatise, §§318–330](ThomsonTait_TreatiseNaturalPhilosophy_Sec318-330_OCR.md) | 1867/1879 | OCR excerpt | Varying action and Maupertuis's principle in the standard textbook form |
 | [Planck, Energieverteilung im Normalspectrum](Planck_Energieverteilung_1901_de_wikisource.md) | Dec. 1900; 1901 | HTML, transcription | Energy elements hν and the first value of h |
 
 OCR excerpts keep the archive's text as served, including page headers and
