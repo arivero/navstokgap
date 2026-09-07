@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 4, 2026-09-07.
+Version 5, 2026-09-07.
 
 ## Aim
 
@@ -31,6 +31,13 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Starting results
+
+The immediate priority is **A01**, the classical action-field selection test
+specified in [ACTION_FIELD_TARGET.md](ACTION_FIELD_TARGET.md). Define the field,
+derive its limiting behavior, and track the classical premise responsible for
+any positive constant. Necessity, convergence, universality and identification
+with $\hbar$ are separate proof obligations. M06 and the spectral examples are
+supporting diagnostics for this central task.
 
 The two-regulator calculation proves an exact finite action-defect limit.
 With $d=N-1$ internal positions, $\kappa_N\to0$ and $d\kappa_N\to\ell$,
@@ -194,4 +201,6 @@ will be assessed through literature comparison and specialist review.
 
 Maintain human-readable proofs alongside calculations and formal artifacts.
 Record changes of model or target with their reasons. Submission, public posting,
-author correspondence and paid services require user direction.
+author correspondence and paid services require user direction. The user has
+authorized commits and pushes to the existing repository after each innovation
+or relevant status change (2026-09-07).

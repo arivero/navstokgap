@@ -1,7 +1,7 @@
 # Restart state
 
-Updated: 2026-09-07. Current milestone: M05 two-regulator experiment,
-with a finite action-defect theorem, source audit and LaTeX/PDF paper.
+Updated: 2026-09-07. Current milestone: A01 classical action-field selection.
+The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
 
@@ -24,9 +24,11 @@ It supplies exact partition normalization, a strict-speed oscillatory control,
 quadratic stationary-phase weights and an explicit running-coefficient map.
 C013–C017 have a sequential Sol medium audit (B08) and coordinator review.
 
-Next: **M06**, test force/acceleration control and the relativistic kinetic
-action on the shrinking oscillations. Start from
-[the M05 source-to-model note](../notes/two-regulator-audit.md).
+Active: **A01**, define an action-valued observable and audit classical premises
+that force a positive limiting constant. Start from
+[the central target](ACTION_FIELD_TARGET.md). Its first bounded test is a
+finite-speed persistent random flight. **M06** remains the force/acceleration
+and relativistic-action diagnostic from [the M05 note](../notes/two-regulator-audit.md).
 **B07a** completed the Wilson–Kogut common-observable reading and test;
 **B07b** retains the tangent-groupoid theorem. Each source task should change
 a premise, calculation or proof obligation.
@@ -54,6 +56,8 @@ identifiers and selected readings; Q01 will examine the reconstruction proofs.
   reclaiming a task after interruption.
 - Update task state and a handoff at completion. The repository carries the
   continuation record across sessions.
+- Commit and push each innovation or relevant status change to the existing
+  GitHub repository, as authorized on 2026-09-07.
 
 ## Completed work
 

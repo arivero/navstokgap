@@ -28,6 +28,7 @@ handoff with the remaining dependency.
 | B07b | ready | Tangent-groupoid quantization theorem: exact hypotheses, limit topology and completion scope; return one test for the strong target | One Luna/Sol source worker | M04 |
 | B08 | done | Four-source, 13-page per-result prior-art and proof audit of M05, reviewed by coordinator | One Sol medium librarian | M05 draft |
 | M06 | ready | Test force/acceleration control and a strict-speed relativistic action on the shrinking oscillations; state the action-defect survival criterion and review it | Coordinator, then one small librarian | M05/B08 |
+| A01 | active | Define the candidate action field, compute the finite-speed persistent-flight test, audit classical premises and scale origin; reviewed paper and exact checks | Coordinator, then one Sol/Luna audit | M05 and sharpened user target |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | waiting | Choose one gap notion/model; prove a bound with operator domain, parameter dependence and gap-closing limits | Analyst + adversarial reviewer | M03, Q01 as relevant |
@@ -45,9 +46,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute M06 from `notes/two-regulator-audit.md`: add one dynamical premise to
-the explicit shrinking-oscillation model, calculate its effect, then commission
-one bounded prior-art audit. B07b retains the tangent-groupoid theorem reading.
+Execute A01 from `research/ACTION_FIELD_TARGET.md`. First define the observable
+and derive the finite-speed classical test, then commission one bounded
+prior-art/assumption audit. M06 remains a supporting force-control calculation.
+B07b retains the tangent-groupoid theorem reading.
 M05/B07a/B08 are complete. M03 retains its draft and completed B04
 audit; its independent mathematical review and build integration remain.
 H02 continues from `references/batches/H02-seeds.md`; H05 uses H04's exact

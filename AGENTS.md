@@ -64,3 +64,8 @@ and to the proposed principles forcing a positive action parameter.
 Use bibliography to develop the toy model: each source batch should supply a
 premise, construction or proof obligation for a named research step. Keep this
 idea-generating role alongside the prior-art audit.
+
+The user authorizes commits and pushes to the existing GitHub repository after
+each innovation or relevant status change (2026-09-07). The coordinator owns
+these checkpoints. External submissions, correspondence and paid services
+require separate direction.
