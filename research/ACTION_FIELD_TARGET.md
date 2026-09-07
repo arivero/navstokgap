@@ -51,6 +51,36 @@ momentum exchange and relationship to smooth Newtonian force laws are explicit
 questions for a mechanical realization. M06 remains the complementary
 force-control and relativistic-action calculation.
 
+## A01 result and the next bounded test: A02
+
+The [reviewed paper](../papers/classical-action-field.tex) proves
+$\mathsf h(\Delta)\uparrow H_*>0$ under finite irreducible reversible velocity
+dynamics with nonzero variance. Two velocities give $H_*=mu^2/\lambda$.
+Finite speed gives $\mathsf h(\Delta)\to0$ as $\Delta\downarrow0$;
+the positive limit concerns long observation duration. [B09](../references/batches/B09.md)
+identifies the Green–Kubo and telegraph prior art and the reconstruction premises
+in Nelson and Hall–Reginatto.
+
+A02 asks whether mechanical exchange can select the same
+$2m\int_0^\infty C_m(s)\,ds$ across masses and preparations.
+
+1. Select one tractable collision or coupled-particle model. Specify the
+   momentum receiver, invariant ensemble, energy budget and speed regime.
+2. Derive its velocity correlation or a controlled approximation, including
+   where a Markov description and detailed balance enter.
+3. Compute mass, density, energy and interaction-rate dependence. In the
+   two-velocity reduction the diagnostic is $\lambda_m/(m u_m^2)=1/H_*$.
+4. Test zero-variance and rapid-decorrelation families, and whether any stated
+   conservation/composition principle excludes them. Record a countermodel
+   as a completed test when it settles the chosen axiom set.
+5. Commission one bounded librarian audit of each resulting mathematical
+   claim before ledger acceptance. Use its sources to choose the next premise.
+
+An equilibrium ensemble makes $\mathsf h_\Delta(t)$ independent of $t$;
+physical-time attraction of a dynamical field needs an additional construction.
+The immediate test targets universality of the plateau, keeping this distinction
+visible. M06 retains the finite-speed and force-control companion.
+
 ## Current evidence and workflow
 
 M04 proves that Gaussian composition preserves an arbitrary action scale.

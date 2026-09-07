@@ -25,6 +25,10 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C015 | Smooth fixed-endpoint sine perturbations with amplitude proportional to $1/n$ retain excess Newtonian action $mv_*^2T/4$ within a strict speed bound; acceleration grows with $n$ | Regulator-limits §4; off-shell paths, direct integration and B08 review |
 | C016 | At one SPD quadratic critical point, the normalized oscillatory amplitude has a scalar squared-modulus limit $|O(q_*)|^2/\det A=\langle\delta^{(d)}(\nabla F),|O|^2\rangle$ for each Schwartz test function | Regulator-limits §5; fixed dimension, Fourier proof; B08 constants review |
 | C017 | For a physical free Lagrangian, $\epsilon=b\tau$ gives energy units to $b$; choosing the bare coefficient $m_B=\epsilon m_R/\kappa_R$ exactly preserves the normalized reference kernels | Regulator-limits §6; explicit reference condition, fixed square-root branch; B08 algebra/units review |
+| C018 | For almost-sure absolutely continuous paths with speed at most $u<c$, $\mathsf h_\Delta=m\operatorname{Var}(X(t+\Delta)-X(t))/\Delta$ lies in $[0,mu^2\Delta]$ and tends to zero as $\Delta\downarrow0$ | Classical-action-field Proposition 1; elementary variance proof; B09 and coordinator review |
+| C019 | A stationary finite irreducible reversible velocity chain with nonzero centered velocity gives $\mathsf h(\Delta)\uparrow H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi>0$, with spectral bounds and convergence estimate | Classical-action-field Proposition 2; fixed-model action plateau, mean-zero inverse; spectral proof and B09 review |
+| C020 | Symmetric velocities $\pm u$, $0<u<c$, reversed at rate $\lambda>0$, give $H_*=mu^2/\lambda$; universality across masses requires $\lambda_m=mu_m^2/H_*$ | Classical-action-field §§4, 6; exact correlation, variance and telegraph equations; 16-check suite and B09 review |
+| C021 | In the formal scaling $u_\lambda^2=a\lambda$, $a>0$, iterated second-moment action limits are $ma$ (rate first) and zero (duration first) | Classical-action-field §5; explicit formula; scaling leaves a fixed speed ceiling; B09 review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -50,6 +54,10 @@ consequences are identified separately.
 | C015 | Elementary mechanics instance of the established oscillatory weak-limit mechanism | B08; Rindler §§2.1, 3.3 |
 | C016 | Exact quadratic Fourier identity in Guillemin–Sternberg (14.7); scalar limit and delta pullback are consequences | B08 |
 | C017 | Explicit elementary scaling construction motivated by Rivero; exact map unmatched in the selected sources | B08; bounded coverage, novelty unassessed |
+| C018 | Elementary bounded-displacement variance consequence | [B09](../references/batches/B09.md) |
+| C019 | Exact Green–Kubo/Poisson backbone in Pavliotis; finite-state bounds and monotonicity are spectral consequences | B09; combined package unmatched in bounded coverage, novelty unassessed |
+| C020 | Exact telegraph construction/PDE in Cinque; action normalization and mass-rate law are elementary consequences | B09 |
+| C021 | Elementary iterated-limit consequence; related Kac scaling in Cinque | B09; exact double-limit statement unmatched in selected passages |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -75,6 +83,13 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B09](../reviews/classical-action-field-B09.md) audited C018–C021 after the
+draft derivation. Coordinator review checked source formula images and hashes,
+the mean-zero inverse, rate convention, limit order and model-specific bounds.
+Velocity-resolved measures were defined as joint subprobability measures.
+The written proofs support the general statements; 16 exact checks support
+their finite algebraic instances. The next obligation is physical universality.
 
 [R01](../reviews/action-gap-foundations-R01.md) audited the three propositions
 and supporting calculations behind C001–C008. Its two scope clarifications are

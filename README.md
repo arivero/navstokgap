@@ -9,11 +9,18 @@ about estimates and limits.
 
 ## Results to read first
 
+A finite reversible classical velocity process produces a positive limiting
+action coefficient, $H_*=2m\int_0^\infty C(s)\,ds$. For a particle moving
+at $\pm u$ with reversal rate $\lambda$, this is $mu^2/\lambda$.
+The [new paper](out/papers/classical-action-field.pdf) gives the proof,
+finite-speed short-time bound and source audit. The next question is which
+mechanical law could make this coefficient universal.
+
 Paths can approach a classical trajectory uniformly while retaining finite
 excess kinetic action. In the exactly soluble Gaussian bridge, $d$ internal
 positions give mean excess $d\kappa/2$; taking $\kappa\to0$ with
 $d\kappa\to\ell$ leaves residual action $\ell/2$. The
-[new paper](out/papers/regulator-limits.pdf) gives the proof, a bounded-speed
+[regulator-limits paper](out/papers/regulator-limits.pdf) gives the proof, a bounded-speed
 control example and the two-regulator normalization audit.
 
 For a perpendicular launch in a constant force, the chord–curve comparison gives
@@ -36,7 +43,9 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-Test how force control and a relativistic kinetic action affect the shrinking
+Test a mechanical origin for a common mass-weighted velocity correlation,
+following [A02](research/ACTION_FIELD_TARGET.md). Alongside it, test how
+force control and a relativistic kinetic action affect the shrinking
 oscillations and their action defect. The [M06 plan](notes/two-regulator-audit.md)
 connects that calculation to the bibliography and the physical scale-selection
 question. The oscillator/free-particle spectral draft, Classical Scholia corpus

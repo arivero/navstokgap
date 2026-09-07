@@ -149,7 +149,7 @@ nonzero velocity variance. The spectral gap of the velocity generator has
 inverse-time units; $H_*$ has action units.
 
 \section{Two velocities: the full time dependence}
-Choose velocities $\pm u$, each with stationary probability $1/2$, and a
+Choose velocities $\pm u$, $0<u<c$, each with stationary probability $1/2$, and a
 reversal rate $\lambda>0$:
 \[
  Q=\begin{pmatrix}-\lambda&\lambda\\\lambda&-\lambda\end{pmatrix},
@@ -175,7 +175,8 @@ the no-reversal events give atoms at both endpoints. The model uses probability
 measures, including these atoms, rather than assuming a Gaussian density at
 every duration.
 
-The two conditional position measures $p_+,p_-$ satisfy, distributionally,
+The velocity-resolved position measures
+$p_\pm(A,t)=\Pr\{X(t)\in A,V(t)=\pm u\}$ satisfy, distributionally,
 \[
  \partial_t p_+=-u\partial_xp_+-\lambda p_++\lambda p_-,\qquad
  \partial_t p_-=u\partial_xp_-+\lambda p_+-\lambda p_-.
@@ -186,7 +187,7 @@ the telegraph equation for $p=p_++p_-$,
  \partial_t^2p+2\lambda\partial_tp=u^2\partial_x^2p.
 \]
 This is the persistent-flight construction associated with the classical
-telegraph process; its exact source match is part of the A01 librarian audit.
+telegraph process \cite[pp.~1--2, (1.1)--(1.3)]{Cinque2022}.
 
 \section{Which limit keeps the action?}
 Microscopic resolution and diffusion scaling give different values of the
@@ -237,7 +238,15 @@ by independent composition. Likewise, the present effective model specifies
 impulsive reversals externally; a closed mechanical realization must account
 for their momentum exchange and correlation law.
 
-The next research step is to test whether such a realization can enforce the
+Two reconstruction sources sharpen this requirement. Nelson's stated
+Brownian hypothesis supplies $D=\hbar/(2m)$ at the outset
+\cite[abstract]{Nelson1966}. Hall and Reginatto instead add momentum
+fluctuations whose strength scales inversely with position uncertainty;
+their ensemble coefficient $C$ is identified with $(\hbar/2)^2$
+\cite[pp.~5, 8]{HallReginatto2002}. These are concrete comparison premises
+for the origin of a shared scale.
+
+The next research step is to test whether a mechanical realization can enforce the
 mass-weighted correlation integral in \eqref{eq:gk} as a shared invariant.
 That would advance the scale-selection target beyond a family of independent
 transport coefficients. A separate phase/composition argument must then

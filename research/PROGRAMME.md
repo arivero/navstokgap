@@ -32,12 +32,14 @@ as its axioms and quantifiers become precise.
 
 ## Starting results
 
-The immediate priority is **A01**, the classical action-field selection test
-specified in [ACTION_FIELD_TARGET.md](ACTION_FIELD_TARGET.md). Define the field,
-derive its limiting behavior, and track the classical premise responsible for
-any positive constant. Necessity, convergence, universality and identification
-with $\hbar$ are separate proof obligations. M06 and the spectral examples are
-supporting diagnostics for this central task.
+**A01** establishes a positive action plateau from finite reversible velocity
+memory: $H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi$, with the two-velocity
+value $mu^2/\lambda$. The [paper](../papers/classical-action-field.tex) and
+B09 audit separate established transport formulas from their action-valued
+consequences. **A02** now tests a mechanical origin for a common mass-weighted
+correlation integral, following [ACTION_FIELD_TARGET.md](ACTION_FIELD_TARGET.md).
+Necessity, convergence, universality and identification with $\hbar$ remain
+separate proof obligations. M06 and spectral examples support this central task.
 
 The two-regulator calculation proves an exact finite action-defect limit.
 With $d=N-1$ internal positions, $\kappa_N\to0$ and $d\kappa_N\to\ell$,

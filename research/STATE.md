@@ -24,14 +24,16 @@ It supplies exact partition normalization, a strict-speed oscillatory control,
 quadratic stationary-phase weights and an explicit running-coefficient map.
 C013–C017 have a sequential Sol medium audit (B08) and coordinator review.
 
-Active: **A01**, define an action-valued observable and audit classical premises
-that force a positive limiting constant. Start from
-[the central target](ACTION_FIELD_TARGET.md). Its first bounded test is a
-finite-speed persistent random flight. **M06** remains the force/acceleration
-and relativistic-action diagnostic from [the M05 note](../notes/two-regulator-audit.md).
-The A01 draft is now in `papers/classical-action-field.tex`, with 16 exact
-checks. It awaits B09's bounded source/proof audit before ledger acceptance
-and inclusion in the PDF build.
+**A01/B09 are complete.** The [classical action-field paper](../papers/classical-action-field.tex)
+proves a positive model-specific plateau from finite reversible velocity memory:
+$H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi$, and $H_*=mu^2/\lambda$ for
+two velocities. C018–C021 have a sequential Luna medium source audit,
+coordinator proof/source review and 16 exact checks.
+Next: **A02**, test a mechanical origin and mass-universal correlation law from
+[the central target](ACTION_FIELD_TARGET.md). The observation-duration limit
+is distinct from physical-time relaxation of an independent field.
+**M06** remains the force/acceleration and relativistic-action diagnostic from
+[the M05 note](../notes/two-regulator-audit.md).
 **B07a** completed the Wilson–Kogut common-observable reading and test;
 **B07b** retains the tangent-groupoid theorem. Each source task should change
 a premise, calculation or proof obligation.
@@ -76,6 +78,7 @@ identifiers and selected readings; Q01 will examine the reconstruction proofs.
 | H04 | Luna medium, sequential; 1570 cone passage visually verified by coordinator |
 | M04/B06 | Free-refinement proofs and algebra checks; Luna medium prior-art/assumption audit, coordinator source verification |
 | M05/B07a/B08 | Joint path/action limit, partition normalization and regulator map; Wilson–Kogut source-to-model test; Sol medium four-source audit; 24 exact checks |
+| A01/B09 | Finite-speed action observable, positive reversible-velocity plateau, exact telegraph and iterated limits; Luna medium audit and coordinator source/proof review; 16 checks |
 
 NATP00385 documents Newton's account of analytic discovery and synthetic
 presentation. H02/H03 address the six Classical Scholia, the manuscript-folio
@@ -95,6 +98,8 @@ TeX's file-write security settings.
 
 ## History and handoffs
 
+- [A01 handoff](handoffs/A01.md): positive classical velocity-memory plateau,
+  B09 prior-art audit, five-PDF build and the next A02 universality test.
 - `31908fb`: official Millennium definitions and comparison.
 - `2cb1554`: Principia dossier, constant-force calculation and context skill.
 - `5816e35`: restartable programme and first papers; [P00 handoff](handoffs/P00.md).

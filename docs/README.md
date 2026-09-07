@@ -14,6 +14,11 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B09](../references/batches/B09.md): action-plateau audit using
+  [Pavliotis](Pavliotis_GreenKubo_2010.md),
+  [Cinque](batches/B09/Cinque_Telegraph_2022.md),
+  [Nelson's abstract](batches/B09/Nelson_APS_1966.md) and
+  [Hall–Reginatto](batches/B09/Hall_Reginatto_2002.md).
 - [Cone and time-refinement source-to-model map](../notes/cone-time-refinement.md):
   [Rivero 1998](Rivero_FeynmanFormula_1998.md), [Rivero 1999](Rivero_Cone_1999.md),
   [Brouder](Brouder_RungeKutta_1999.md), and

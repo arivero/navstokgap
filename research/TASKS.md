@@ -28,8 +28,9 @@ handoff with the remaining dependency.
 | B07b | ready | Tangent-groupoid quantization theorem: exact hypotheses, limit topology and completion scope; return one test for the strong target | One Luna/Sol source worker | M04 |
 | B08 | done | Four-source, 13-page per-result prior-art and proof audit of M05, reviewed by coordinator | One Sol medium librarian | M05 draft |
 | M06 | ready | Test force/acceleration control and a strict-speed relativistic action on the shrinking oscillations; state the action-defect survival criterion and review it | Coordinator, then one small librarian | M05/B08 |
-| A01 | review | Draft finite-speed action observable, reversible-generator positivity and persistent-flight limits written; 16 exact checks pass; B09 audit next | Coordinator, then one Sol/Luna audit | M05 and sharpened user target |
-| B09 | active | Bounded per-result literature and assumption audit of A01; source-to-model comparison with the origin of stochastic/ensemble action coefficients | One Luna medium librarian | A01 draft |
+| A01 | done | Reviewed finite-speed action observable, reversible-generator positivity and persistent-flight limits; C018–C021, PDF and 16 exact checks | Coordinator + B09 | M05 and sharpened user target |
+| B09 | done | Four-source per-result literature/assumption audit; 12 PDF pages plus APS abstract; coordinator verification and source-to-model comparison integrated | One Luna medium librarian | A01 draft |
+| A02 | ready | Test one classical momentum-exchange model for a common mass-weighted correlation integral; derive its mass/rate dependence and gap-closing families; sequential prior-art audit before claim acceptance | Coordinator, then one small librarian | A01/B09 |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | waiting | Choose one gap notion/model; prove a bound with operator domain, parameter dependence and gap-closing limits | Analyst + adversarial reviewer | M03, Q01 as relevant |
@@ -47,9 +48,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A01 from `research/ACTION_FIELD_TARGET.md`. First define the observable
-and derive the finite-speed classical test, then commission one bounded
-prior-art/assumption audit. M06 remains a supporting force-control calculation.
+Execute A02 from `research/ACTION_FIELD_TARGET.md`. Start with a bounded source
+task only when a specific mechanical-model choice needs it; retain explicit
+momentum exchange, environment parameters and the correlation invariant test.
+A01/B09 are complete. M06 remains a supporting force-control calculation.
 B07b retains the tangent-groupoid theorem reading.
 M05/B07a/B08 are complete. M03 retains its draft and completed B04
 audit; its independent mathematical review and build integration remain.

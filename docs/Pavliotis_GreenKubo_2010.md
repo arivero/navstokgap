@@ -10,15 +10,18 @@ This supplies A01's test of a positive action-valued transport coefficient.
   ignored `.build/a01/Pavliotis2010.pdf`; extracted with `pdftotext -layout`.
 - The generated title-page date is November 2018; the versioned submission
   supplies the bibliographic year. This companion uses preprint page numbers.
-- Reading in progress: §1, pp. 1–3, and §2, pp. 4–5, especially (1.3) and
-  Proposition 2.1, (2.3)–(2.5). Formula images and checksums will be checked at
-  integration. Subsequent proofs and examples have not yet been audited.
+- Coverage: coordinator text reading of §1, pp. 1–3, and §2, pp. 4–6;
+  B09 focused audit of pp. 2, 4–6. Coordinator visually verified p. 5,
+  (2.3)–(2.8), including the sign of the Poisson equation.
+- SHA-256: `accd38a7a292d92d35583c9ae0d4421fefb67b26b2cf7acf177a71cb08b408a3`;
+  independently recalculated at integration. Subsequent examples remain unread.
 - Rights: arXiv research copy; redistribution permission unresolved, so the
   original remains outside the published repository.
 
-## Construction to test
+## Accepted construction
 
-For a finite reversible Markov velocity process, solve the generator Poisson
-equation on mean-zero functions. Determine how positivity and eigenvalue bounds
-translate into a positive limiting coefficient with action units. Track which
-assumptions exclude zero velocity and arbitrarily rapid decorrelation.
+The [A01 paper](../papers/classical-action-field.tex) specializes the generator
+Poisson equation to finite reversible dynamics. Its action plateau is
+$H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi>0$ for nonzero centered velocity.
+Finite-duration monotonicity and spectral bounds are elementary consequences;
+[B09](../references/batches/B09.md) separates these from the exact source match.
