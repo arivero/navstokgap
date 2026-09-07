@@ -1,0 +1,4323 @@
+% This paper has been transcribed in Plain TeX by
+% David R. Wilkins
+% School of Mathematics, Trinity College, Dublin 2, Ireland
+% (dwilkins@maths.tcd.ie)
+%
+% Trinity College, 2000.
+
+\magnification=\magstep1
+\vsize=227 true mm \hsize=170 true mm
+   \voffset=-0.4 true mm \hoffset=-5.4 true mm
+
+\def\folio{\ifnum\pageno>0 \number\pageno \else
+   \ifnum\pageno<0 \romannumeral-\pageno \else\fi\fi}
+
+\font\Largebf=cmbx10  scaled \magstep2
+\font\largerm=cmr12
+\font\largeit=cmti12
+\font\largesc=cmcsc10  scaled \magstep1
+\font\sc=cmcsc10
+
+\def\multieqalign#1{\null\,\vcenter{\openup1\jot \mathsurround=0pt
+   \ialign{\strut\hfil$\displaystyle{##}$&$\displaystyle{{}##}$\hfil
+   &&\quad \strut\hfil$\displaystyle{##}$&$\displaystyle{{}##}$\hfil
+    \crcr#1\crcr}}\,}
+
+\def\sum{\mathop{\Sigma}\nolimits}
+
+\def\sectiontitle{\it\noindent}
+
+\pageno=0
+
+\null\vskip72pt
+
+\centerline{\Largebf SECOND ESSAY ON A}
+
+\vskip12pt
+
+\centerline{\Largebf GENERAL METHOD IN DYNAMICS}
+
+\vskip24pt
+
+\centerline{\Largebf By}
+
+\vskip24pt
+
+\centerline{\Largebf William Rowan Hamilton}
+
+\vskip24pt
+
+\centerline{\largerm (Philosophical Transactions of the Royal Society,
+   part~I for 1835, pp.\ 95--144.)}
+
+\vskip36pt
+
+\vfill
+
+\centerline{\largerm Edited by David R. Wilkins}
+
+\vskip 12pt
+
+\centerline{\largerm 2000}
+
+\vskip36pt\eject
+
+\pageno=-1
+
+\null\vskip36pt
+
+\centerline{\Largebf NOTE ON THE TEXT}
+
+\bigskip
+
+This edition is based on the original publication in the {\it
+Philosophical Transactions of the Royal Society}, part~I for
+1835.
+
+The following errors in the original published text have been
+corrected:
+
+\smallskip
+
+\item{}
+a term $dt$, missing from the integral (R${}^1$.) has been inserted;
+
+\smallskip
+
+\item{}
+a factor $t^2$ has been inserted in the
+integrand in the second integral of equation (160.).
+
+\smallskip
+
+The {\it Second Essay on a General Method in Dynamics} has also
+been republished in {\it The Mathematical Papers of Sir
+William Rowan Hamilton, Volume II: Dynamics}, edited for
+the Royal Irish Academy by A.~W. Conway and A.~J. McConnell, and
+published by Cambridge University Press in 1940.
+
+\bigbreak\bigskip
+
+\line{\hfil David R. Wilkins}
+
+\vskip3pt
+
+\line{\hfil Dublin, February 2000}
+
+
+\vskip6pt
+
+\line{\hfil Corrected March 2005}
+
+\vfill\eject
+
+\pageno=1
+
+\null\vskip36pt
+
+\noindent
+{\largeit
+Second Essay on a General Method in Dynamics.
+By {\largesc William Rowan Hamilton}, Member of several Scientific
+Societies in Great Britain and in Foreign Countries,
+Andrews' Professor of Astronomy in the University of Dublin,
+and Royal Astronomer of Ireland.  Communicated by
+Captain {\largesc Beaufort}, R.N. F.R.S.}
+
+\vskip12pt
+
+\centerline{Received October 29, 1834,---Read January 15, 1835.}
+\vskip12pt
+\centerline{[{\it Philosophical Transactions of the Royal Society},
+   part~I for 1835, pp.\ 95--144.]}
+
+\bigbreak
+
+{\sectiontitle
+Introductory Remarks.\par}
+
+\nobreak\bigskip
+
+The former Essay\footnote*{Philosophical Transactions for the
+year 1834, Second Part.}
+contained a general method for reducing all the
+most important problems of dynamics to the study of one
+characteristic function, one central or radical relation.  It was
+remarked at the close of that Essay, that many eliminations
+required by this method in its first conception, might be avoided
+by a general transformation, introducing the time explicitly into
+a part~$S$ of the whole characteristic function~$V$; and it is
+now proposed to fix the attention chiefly on this part~$S$,
+and to call it the {\it Principal Function}.  The properties
+of this part or function~$S$, which were noticed briefly in the
+former Essay, are now more fully set forth; and especially its
+uses in questions of perturbation, in which it dispenses with
+many laborious and circuitous processes, and enables us to
+express accurately the disturbed configuration of a system by the
+rules of undisturbed motion, if only the initial components of
+velocities be changed in a suitable manner.  Another manner of
+extending rigorously to disturbed motion the rules of
+undisturbed, by the gradual variation of elements, in number
+double the number of coordinates or other marks of position of
+the system, which was first invented by {\sc Lagrange}, and was
+afterwards improved by {\sc Poisson}, is considered in this Second
+Essay under a form perhaps a little more general; and the general
+method of calculation which has already been applied to other
+analogous questions in optics and in dynamics by the author of the
+present Essay, is now applied to the integration of the equations
+which determine these elements.  This general method is founded
+chiefly on a combination of the principles of variations with
+those of partial differentials, and may furnish, when it shall be
+matured by the labours of other analysts, a separate branch of
+algebra, which may be called perhaps the {\it Calculus of
+Principal Functions\/}; because, in all the chief applications of
+algebra to physics, and in a very extensive class of purely
+mathematical questions, it reduces the determination of many
+mutually connected functions to the search and study of one
+principal or central relation.  When applied to the integration
+of the equations of varying elements, it suggests, as is now
+shown, the consideration of a certain {\it Function of Elements},
+which may be variously chosen, and may either be rigorously
+determined, or at least approached to, with an indefinite
+accuracy, by a corollary of the general method.  And to
+illustrate all these new general processes, but especially those
+which are connected with problems of perturbation, they are
+applied in this Essay to a very simple example, suggested by the
+motions of projectiles, the parabolic path being treated as the
+undisturbed.  As a more important example, the problem of
+determining the motions of a ternary or multiple system, with any
+laws of attraction or repulsion, and with one predominant mass,
+which was touched on in the former Essay, is here resumed in a
+new way, by forming and integrating the differential equations of
+a new set of varying elements, entirely distinct in theory
+(though little differing in practice) from the elements conceived
+by {\sc Lagrange}, and having this advantage, that the differentials of
+all the new elements for {\it both\/} the disturbed and
+disturbing masses may be expressed by the coefficients of
+{\it one\/} disturbing function.
+
+\vfill\eject
+
+{\sectiontitle
+Transformations of the Differential Equations of Motion of an
+Attracting or Repelling System.\par}
+
+\nobreak\bigskip
+
+1.
+It is well known to mathematicians, that the differential
+equations of motion of any system of free points, attracting or
+repelling one another according to any functions of their distances,
+and not disturbed by any foreign force, may be comprised in the
+following formula:
+$$\sum \mathbin{.} m (x'' \delta x + y'' \delta y + z'' \delta z)
+   = \delta U:
+   \eqno {\rm (1.)}$$
+the sign of summation $\sum$ extending to all the points of the
+system; $m$ being, for any one such point, the constant called its
+mass, and $x$~$y$~$z$ being its rectangular coordinates; while
+$x''$~$y''$~$z''$ are the accelerations, or second differential
+coefficients taken with respect to the time, and $\delta x$,
+$\delta y$, $\delta z$ are any arbitrary infinitesimal variations
+of those coordinates, and $U$ is a certain {\it force-function},
+introduced into dynamics by {\sc Lagrange}, and involving the masses and
+mutual distances of the several points of the system.  If the number
+of those points be $n$, the formula (1.) may be decomposed into $3n$
+ordinary differential equations of the second order, between the
+coordinates and the time,
+$$m_i x''_i = {\delta U \over \delta x_i};\quad
+  m_i y''_i = {\delta U \over \delta y_i};\quad
+  m_i z''_i = {\delta U \over \delta z_i}:
+   \eqno {\rm (2.)}$$
+and to integrate these differential equations of motion of an
+attracting or repelling system, or some transformations of these, is
+the chief and perhaps ultimately the only problem of mathematical
+dynamics.
+
+\medskip
+
+2.
+To facilitate and generalize the solution of this problem, it is
+useful to express previously the $3n$ rectangular coordinates
+$x$~$y$~$z$ as functions of $3n$ other and more general marks of
+position $\eta_1 \, \eta_2 \,\ldots\, \eta_{3n}$; and then the
+differential equations of motion take this more general form,
+discovered by {\sc Lagrange},
+$${d \over dt} {\delta T \over \delta \eta_i'}
+   - {\delta T \over \delta \eta_i}
+   = {\delta U \over \delta \eta_i},
+   \eqno {\rm (3.)}$$
+in which
+$$T = {\textstyle {1 \over 2}} \sum \mathbin{.} m
+         (x'^2 + y'^2 + z'^2).
+   \eqno {\rm (4.)}$$
+
+For, from the equations (2.) or (1.),
+$$\left. \eqalign{
+{\delta U \over \delta \eta_i}
+   &= \sum \mathbin{.} m \left(
+           x'' {\delta x \over \delta \eta_i}
+         + y'' {\delta y \over \delta \eta_i}
+         + z'' {\delta z \over \delta \eta_i}
+         \right) \cr
+   &= {d \over dt} \sum \mathbin{.} m \left(
+           x' {\delta x \over \delta \eta_i}
+         + y' {\delta y \over \delta \eta_i}
+         + z' {\delta z \over \delta \eta_i}
+         \right) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+       - \sum \mathbin{.} m \left(
+           x' {d \over dt} {\delta x \over \delta \eta_i}
+         + y' {d \over dt} {\delta y \over \delta \eta_i}
+         + z' {d \over dt} {\delta z \over \delta \eta_i}
+         \right);\cr}
+   \right\}
+   \eqno {\rm (5.)}$$
+in which
+$$\left. \eqalign{
+   &\mathrel{\phantom{=}} \mathord{}
+      \sum \mathbin{.} m \left(
+           x' {\delta x \over \delta \eta_i}
+         + y' {\delta y \over \delta \eta_i}
+         + z' {\delta z \over \delta \eta_i}
+         \right) \cr
+   &= \sum \mathbin{.} m \left(
+           x' {\delta x' \over \delta \eta_i'}
+         + y' {\delta y' \over \delta \eta_i'}
+         + z' {\delta z' \over \delta \eta_i'}
+         \right)
+      = {\delta T \over \delta \eta_i'},\cr}
+   \right\}
+   \eqno {\rm (6.)}$$
+and
+$$\left. \eqalign{
+   &\mathrel{\phantom{=}} \mathord{}
+      \sum \mathbin{.} m \left(
+           x' {d \over dt} {\delta x \over \delta \eta_i}
+         + y' {d \over dt} {\delta y \over \delta \eta_i}
+         + z' {d \over dt} {\delta z \over \delta \eta_i}
+         \right) \cr
+   &= \sum \mathbin{.} m \left(
+           x' {\delta x' \over \delta \eta_i}
+         + y' {\delta y' \over \delta \eta_i}
+         + z' {\delta z' \over \delta \eta_i}
+         \right)
+      = {\delta T \over \delta \eta_i},\cr}
+   \right\}
+   \eqno {\rm (7.)}$$
+$T$ being here considered as a function of the $6n$ quantities
+of the forms $\eta'$ and $\eta$, obtained by introducing into its
+definition (4.), the values
+$$x' =   \eta_1' {\delta x \over \delta \eta_1}
+       + \eta_2' {\delta x \over \delta \eta_2}
+       + \cdots
+       + \eta_{3n}' {\delta x \over \delta \eta_{3n}},
+   \hbox{ \&c.}
+   \eqno {\rm (8.)}$$
+
+A different proof of this important transformation (3.) is
+given in the M\'{e}canique Analytique.
+
+\medskip
+
+3.
+The function $T$, being homogeneous of the second dimension
+with respect to the quantities $\eta'$, must satisfy the condition
+$$2T = \sum \mathbin{.} \eta' {\delta T \over \delta \eta'};
+   \eqno {\rm (9.)}$$
+and since the variation of the same function~$T$ may evidently
+be expressed as follows,
+$$\delta T = \sum \left( {\delta T \over \delta \eta'} \delta \eta'
+                         + {\delta T \over \delta \eta} \delta \eta
+                         \right),
+   \eqno {\rm (10.)}$$
+we see that this variation may be expressed in this other way,
+$$\delta T = \sum \left( \eta' \delta {\delta T \over \delta \eta'}
+                         - {\delta T \over \delta \eta} \delta \eta
+                         \right).
+   \eqno {\rm (11.)}$$
+
+If then we put, for abridgement,
+$${\delta T \over \delta \eta_1'}    = \varpi_1,\quad \ldots \quad
+  {\delta T \over \delta \eta_{3n}'} = \varpi_{3n},
+   \eqno {\rm (12.)}$$
+and consider $T$ (as we may) as a function of the following form,
+$$T = F(\varpi_1, \varpi_2,\ldots\, \varpi_{3n},
+        \eta_1, \eta_2,\ldots\, \eta_{3n}),
+   \eqno {\rm (13.)}$$
+we see that
+$${\delta F \over \delta \varpi_1} = \eta_1',\quad \ldots \quad
+  {\delta F \over \delta \varpi_{3n}} = \eta_{3n}',
+   \eqno {\rm (14.)}$$
+and
+$${\delta F \over \delta \eta_1}
+  = - {\delta T \over \delta \eta_1},\quad \ldots \quad
+  {\delta F \over \delta \eta_{3n}}
+  = - {\delta T \over \delta \eta_{3n}};
+   \eqno {\rm (15.)}$$
+and therefore that the general equation (3.) may receive this
+new transformation,
+$${d \varpi_i \over dt} = {\delta (U - F) \over \delta \eta_i}.
+   \eqno {\rm (16.)}$$
+
+If then we introduce, for abridgement, the following expression~$H$,
+$$H = F - U = F(\varpi_1, \varpi_2,\ldots\, \varpi_{3n},
+                \eta_1, \eta_2,\ldots\, \eta_{3n})
+              - U(\eta_1, \eta_2,\ldots\, \eta_{3n}),
+   \eqno {\rm (17.)}$$
+we are conducted to this new manner of presenting the differential
+equations of motion of a system of $n$ points, attracting or
+repelling one another:
+$$\left. \multieqalign{
+      {d \eta_1 \over dt} &= {\delta H \over \delta \varpi_1}; &
+      {d \varpi_1 \over dt} & = - {\delta H \over \delta \eta_1};\cr
+      {d \eta_2 \over dt} &= {\delta H \over \delta \varpi_2}; &
+      {d \varpi_2 \over dt} &= - {\delta H \over \delta \eta_2};\cr
+   \noalign{\vskip6pt\hbox{.........}\vskip6pt}
+      {d \eta_{3n} \over dt} &= {\delta H \over \delta \varpi_{3n}}; &
+      {d \varpi_{3n} \over dt} &= - {\delta H \over \delta \eta_{3n}}.\cr}
+   \right\}
+   \eqno {\rm (A.)}$$
+In this view, the problem of mathematical dynamics, for a system of
+$n$ points, is to integrate a system (A.) of $6n$ ordinary differential
+equations of the first order, between the $6n$ variables
+$\eta_i$~$\varpi_i$ and the time~$t$; and the solution of the problem
+must consist in assigning these $6n$ variables as functions of the time,
+and of their own initial values, which we may call $e_i$~$p_i$.
+And all these $6n$ functions, or $6n$ relations to determine them,
+may be expressed, with perfect generality and rigour, by the method
+of the former Essay, or by the following simplified process.
+
+\bigbreak
+
+{\sectiontitle
+Integration of the Equations of Motion, by means of one
+Principal Function.\par}
+
+\nobreak\bigskip
+
+4.
+If we take the variation of the definite integral
+$$S = \int_0^t \left( \sum \mathbin{.}
+         \varpi {\delta H \over \delta \varpi} - H \right) dt
+   \eqno {\rm (18.)}$$
+without varying $t$ or $dt$, we find, by the Calculus of Variations,
+$$\delta S = \int_0^t \delta S' \mathbin{.} dt,
+   \eqno {\rm (19.)}$$
+in which
+$$S' = \sum \mathbin{.} \varpi {\delta H \over \delta \varpi} - H,
+   \eqno {\rm (20.)}$$
+and therefore
+$$\delta S'
+   = \sum \left( \varpi \, \delta {\delta H \over \delta \varpi}
+                 - {\delta H \over \delta \eta} \delta \eta \right),
+   \eqno {\rm (21.)}$$
+that is, by the equations of motion (A.),
+$$\delta S'
+   = \sum \left( \varpi \, \delta {d \eta \over dt}
+                 + {d \varpi \over dt} \delta \eta \right)
+   = {d \over dt} \sum \mathbin{.} \varpi \, \delta \eta;
+   \eqno {\rm (22.)}$$
+the variation of the integral~$S$ is therefore
+$$\delta S = \sum ( \varpi \, \delta \eta - p \, \delta e),
+   \eqno {\rm (23.)}$$
+($p$ and $e$ being still initial values,) and it decomposes itself
+into the following $6n$ expressions, when $S$ is considered as
+a function of the $6n$ quantities $\eta_i$~$e_i$, (involving also
+the time,)
+$$\left. \multieqalign{
+      \varpi_1 &= {\delta S \over \delta \eta_1}; &
+      p_1 &= - {\delta S \over \delta e_1};\cr
+      \varpi_2 &= {\delta S \over \delta \eta_2}; &
+      p_2 &= - {\delta S \over \delta e_2};\cr
+   \noalign{\vskip6pt\hbox{.........}\vskip6pt}
+      \varpi_{3n} &= {\delta S \over \delta \eta_{3n}}; &
+      p_{3n} &= - {\delta S \over \delta e_{3n}};\cr}
+   \right\}
+   \eqno {\rm (B.)}$$
+which are evidently forms for the sought integrals of the $6n$
+differential equations of motion (A.), containing only one
+unknown function~$S$.  The difficulty of mathematical dynamics
+is therefore reduced to the search and study of this one function~$S$,
+which may for that reason be called the {\sc Principal Function}
+of motion of a system.
+
+This function~$S$ was introduced in the first Essay under the form
+$$S = \int_0^t (T + U) \, dt,$$
+the symbols $T$ and $U$ having in this form their recent meanings;
+and it is worth observing, that when $S$ is expressed by this definite
+integral, the conditions for its variation vanishing (if the final
+and initial coordinates and the time be given) are precisely the
+differential equations of motion (3.), under the forms assigned
+by {\sc Lagrange}.  The variation of this definite integral~$S$ has
+therefore the double property, of giving the differential equations
+of motion for any transformed coordinates when the extreme positions
+are regarded as fixed, and of giving the integrals of those
+differential equations when the extreme positions are treated
+as varying.
+
+\medskip
+
+5.
+Although the function~$S$ seems to deserve the name here given
+it of {\it Principal Function}, as serving to express, in what
+appears the simplest way, the integrals of the equations of motion,
+and the differential equations themselves; yet the same analysis
+conducts to other functions, which also may be used to express the
+integrals of the same equations.  Thus if we put
+$$Q = \int_0^t \left( - \sum \mathbin{.} \eta
+                      {\delta H \over \delta \eta} + H \right) dt,
+   \eqno {\rm (24.)}$$
+and take the variation of this integral~$Q$ without varying $t$
+or $dt$, we find, by a similar process,
+$$\delta Q = \sum ( \eta \, \delta \varpi - e \, \delta p);
+   \eqno {\rm (25.)}$$
+so that if we consider $Q$ as a function of the $6n$ quantities
+$\varpi_i$~$p_i$ and of the time, we shall have $6n$ expressions
+$$\eta_i = + {\delta Q \over \delta \varpi_i},\quad
+  e_i    = - {\delta Q \over \delta p_i},
+   \eqno {\rm (26.)}$$
+which are other forms of the integrals of the equations of
+motion (A.), involving the function~$Q$ instead of $S$.  We might
+also employ the integral
+$$V = \int_0^t \sum \mathbin{.} \varpi {\delta H \over \delta \varpi} \,dt
+    = \sum \int_e^\eta \varpi \,d\eta,
+   \eqno {\rm (27.)}$$
+which was called the {\it Characteristic Function\/} in the former
+Essay, and of which, when considered as a function of the $6n + 1$
+quantities $\eta_i$~$e_i$~$H$, the variation is
+$$\delta V = \sum (\varpi \, \delta \eta - p \, \delta e)
+      + t \, \delta H.
+   \eqno {\rm (28.)}$$
+And all these functions $S$, $Q$, $V$, are connected in such a way,
+that the forms and properties of any one may be deduced from those
+of any other.
+
+\bigbreak
+
+{\sectiontitle
+Investigation of a Pair of Partial Differential Equations of the
+first Order, which the Principal Function must satisfy.\par}
+
+\nobreak\bigskip
+
+6.
+In forming the variation (23.), or the partial differential
+coefficients (B.) of the Principal Function~$S$, the variation
+of the time was omitted; but it is easy to calculate the coefficient
+$\displaystyle {\delta S \over \delta t}$ corresponding to this
+variation, since the evident equation
+$${d S \over dt}
+   = {\delta S \over \delta t}
+      + \sum {\delta S \over \delta \eta} {d\eta \over dt}
+   \eqno {\rm (29.)}$$
+gives, by (20.), and by (A.), (B.),
+$${\delta S \over \delta t}
+   = S' - \sum \mathbin{.} \varpi {\delta H \over \delta \varpi}
+   = -H.
+   \eqno {\rm (30.)}$$
+
+It is evident also that this coefficient, or the quantity $-H$,
+is constant, so as not to alter during the motion of the system;
+because the differential equations of motion (A.) give
+$${dH \over dt} = \sum \left(
+        {\delta H \over \delta \eta}{d\eta \over dt}
+      + {\delta H \over \delta \varpi}{d\varpi \over dt} \right)
+   = 0.
+   \eqno {\rm (31.)}$$
+If, therefore, we attend to the equation (17.), and observe that
+the function~$F$ is necessarily rational and integer and homogeneous
+of the second dimension with respect to the quantities $\varpi_i$,
+we shall perceive that the principal function~$S$ must satisfy the
+two following equations between its partial differential coefficients
+of the first order, which offer the chief means of discovering
+its form:
+$$\left. \eqalign{
+{\delta S \over \delta t}
+   + F \left( {\delta S \over \delta \eta_1},
+              {\delta S \over \delta \eta_2},\ldots\,
+              {\delta S \over \delta \eta_{3n}},
+              \eta_1, \eta_2,\ldots\, \eta_{3n}
+              \right)
+   &= U(\eta_1, \eta_2,\ldots\, \eta_{3n}),\cr
+{\delta S \over \delta t}
+   + F \left( {\delta S \over \delta e_1},
+              {\delta S \over \delta e_2},\ldots\,
+              {\delta S \over \delta e_{3n}},
+              e_1, e_2,\ldots\, e_{3n}
+              \right)
+   &= U(e_1, e_2,\ldots\, e_{3n}).\cr}
+   \right\}
+   \eqno {\rm (C.)}$$
+
+Reciprocally, if the form of $S$ be known, the forms of these
+equations (C.) can be deduced from it, by elimination of the quantities
+$e$ or $\eta$ between the expressions of its partial differential
+coefficients; and thus we can return from the principal function~$S$
+to the functions $F$ and $U$, and consequently to the expression~$H$,
+and the equations of motion (A.)
+
+Analogous remarks apply to the functions $Q$ and $V$, which must
+satisfy the partial differential equations,
+$$\left. \eqalign{
+-{\delta Q \over \delta t}
+    + F \left( \varpi_1, \varpi_2,\ldots, \varpi_{3n},
+               {\delta Q \over \delta \varpi_1},
+               {\delta Q \over \delta \varpi_2},\ldots\,
+               {\delta Q \over \delta \varpi_{3n}}
+               \right)
+   &= U \left( {\delta Q \over \delta \varpi_1},
+               {\delta Q \over \delta \varpi_2},\ldots\,
+               {\delta Q \over \delta \varpi_{3n}}
+               \right),\cr
+-{\delta Q \over \delta t}
+    + F \left( p_1, p_2,\ldots, p_{3n},
+               -{\delta Q \over \delta p_1},
+               -{\delta Q \over \delta p_2},\ldots\,
+               -{\delta Q \over \delta p_{3n}}
+               \right)
+   &= U \left( -{\delta Q \over \delta p_1},
+               -{\delta Q \over \delta p_2},\ldots\,
+               -{\delta Q \over \delta p_{3n}}
+               \right),\cr}
+   \right\}
+   \eqno {\rm (32.)}$$
+and
+$$\left. \eqalign{
+F \left( {\delta V \over \delta \eta_1},
+         {\delta V \over \delta \eta_2},\ldots\,
+         {\delta V \over \delta \eta_{3n}},
+         \eta_1, \eta_2,\ldots\, \eta_{3n}
+              \right)
+   &= H + U(\eta_1, \eta_2,\ldots\, \eta_{3n}),\cr
+F \left( {\delta V \over \delta e_1},
+         {\delta V \over \delta e_2},\ldots\,
+         {\delta V \over \delta e_{3n}},
+         e_1, e_2,\ldots\, e_{3n}
+              \right)
+   &= H + U(e_1, e_2,\ldots\, e_{3n}).\cr}
+   \right\}
+   \eqno {\rm (33.)}$$
+
+\bigbreak
+
+{\sectiontitle
+General Method of improving an approximate Expression for the
+Principal Function in any Problem of Dynamics.\par}
+
+\nobreak\bigskip
+
+7.
+If we separate the principal function~$S$ into any two parts,
+$$S_1 +S_2 = S,
+   \eqno {\rm (34.)}$$
+and substitute their sum for $S$ in the first equation (C.), the
+function~$F$, from its rational and integer and homogeneous form
+and dimension, may be expressed in this new way,
+$$\left. \eqalign{
+   & F \left( {\delta S \over \delta \eta_1},\ldots\,
+              {\delta S \over \delta \eta_{3n}},
+              \eta_1,\ldots\, \eta_{3n} \right)
+   = F \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+              {\delta S_1 \over \delta \eta_{3n}},
+              \eta_1,\ldots\, \eta_{3n} \right) \cr
+   &\qquad\mathrel{\phantom{=}} \mathord{}
+   + F' \left( {\delta S_1 \over \delta \eta_1} \right)
+               {\delta S_2 \over \delta \eta_1} + \cdots
+   + F' \left( {\delta S_1 \over \delta \eta_{3n}} \right)
+               {\delta S_2 \over \delta \eta_{3n}}
+   + F \left( {\delta S_2 \over \delta \eta_1},\ldots\,
+              {\delta S_2 \over \delta \eta_{3n}},
+              \eta_1,\ldots\, \eta_{3n} \right) \cr
+   &\qquad
+   = F \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+              {\delta S_1 \over \delta \eta_{3n}},
+              \eta_1,\ldots\, \eta_{3n} \right)
+   - F \left( {\delta S_2 \over \delta \eta_1},\ldots\,
+              {\delta S_2 \over \delta \eta_{3n}},
+              \eta_1,\ldots\, \eta_{3n} \right) \cr
+   &\qquad\mathrel{\phantom{=}} \mathord{}
+   + F' \left( {\delta S   \over \delta \eta_1} \right)
+               {\delta S_2 \over \delta \eta_1} + \cdots
+   + F' \left( {\delta S   \over \delta \eta_{3n}} \right)
+               {\delta S_2 \over \delta \eta_{3n}},\cr}
+   \right\}
+   \eqno {\rm (35.)}$$
+because
+$$F' \left( {\delta S_1 \over \delta \eta_i} \right)
+   =   F' \left( {\delta S   \over \delta \eta_i} \right)
+     - F' \left( {\delta S_2 \over \delta \eta_i} \right),
+   \eqno {\rm (36.)}$$
+and
+$$\sum \mathbin{.}  F' \left( {\delta S_2 \over \delta \eta} \right)
+                    {\delta S_2 \over \delta \eta}
+  = 2F \left( {\delta S_2 \over \delta \eta_1},\ldots\,
+              {\delta S_2 \over \delta \eta_{3n}},
+              \eta_1,\ldots\, \eta_{3n} \right);
+   \eqno {\rm (37.)}$$
+and since, by (A.) and (B.),
+$$F' \left( {\delta S   \over \delta \eta_i} \right)
+   = F'(\varpi_i) = {\delta H \over \delta \varpi_i}
+   = {d\eta_i \over dt},
+   \eqno {\rm (38.)}$$
+we easily transform the first equation (C.) to the following,
+$$\left. \eqalign{
+{d S_2 \over dt}
+  &= - {\delta S_1 \over \delta t}
+     + U(\eta_1,\ldots\, \eta_{3n})
+     - F \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+                {\delta S_1 \over \delta \eta_{3n}},
+                \eta_1,\ldots\, \eta_{3n} \right) \cr
+  &\mathrel{\phantom{=}} \mathord{}
+     + F \left( {\delta S_2 \over \delta \eta_1},\ldots\,
+                {\delta S_2 \over \delta \eta_{3n}},
+                \eta_1,\ldots\, \eta_{3n} \right),\cr}
+   \right\}
+   \eqno {\rm (D.)}$$
+which gives rigorously
+$$\left. \eqalign{
+S_2 &= \int_0^t \left\{
+        - {\delta S_1 \over \delta t}
+        + U(\eta_1,\ldots\, \eta_{3n})
+        - F \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+                   {\delta S_1 \over \delta \eta_{3n}},
+                   \eta_1,\ldots\, \eta_{3n} \right)
+     \right\} dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + \int_0^t
+          F \left( {\delta S_2 \over \delta \eta_1},\ldots\,
+                   {\delta S_2 \over \delta \eta_{3n}},
+                   \eta_1,\ldots\, \eta_{3n} \right) dt,\cr}
+   \right\}
+   \eqno {\rm (E.)}$$
+supposing only that the two parts $S_1$, $S_2$, like the whole
+principal function~$S$, are chosen so as to vanish with the time.
+
+This general and rigorous transformation offers a general method
+of improving an approximate expression for the principal function~$S$,
+in any problem of dynamics.  For if the part~$S_1$ be such an approximate
+expression, then the remaining part~$S_2$ will be small; and the
+homogeneous function~$F$ involving the squares and products of the
+coefficients of this small part, in the second definite integral
+(E.), will be in general also small, and of a higher order of
+smallness; we may therefore in general neglect this second definite
+integral, in passing to a second approximation, and may in general
+improve a first approximate expresssion~$S_1$ by adding to it
+the following correction,
+$$\Delta S_1 = \int_0^t \left\{
+        - {\delta S_1 \over \delta t}
+        + U(\eta_1,\ldots\, \eta_{3n})
+        - F \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+                   {\delta S_1 \over \delta \eta_{3n}},
+                   \eta_1,\ldots\, \eta_{3n} \right)
+     \right\} dt;
+   \eqno {\rm (F.)}$$
+in calculating which definite integral we may employ the following
+approximate forms for the integrals of the equations of motion,
+$$p_1    = - {\delta S_1 \over \delta e_1},\quad
+  p_2    = - {\delta S_1 \over \delta e_2},\quad \ldots \quad
+  p_{3n} = - {\delta S_1 \over \delta e_{3n}},
+   \eqno {\rm (39.)}$$
+expressing first, by these, the variables $\eta_i$ as functions
+of the time and of the $6n$ constants $e_i$~$p_i$, and then
+eliminating, after the integration, the $3n$ quantities $p_i$,
+by the same approximate forms.  And when an improved expression,
+or second approximate value $S_1 + \Delta S_1$, for the principal
+function $S$, has been thus obtained, it may be substituted in
+like manner for the first approximate value~$S_1$, so as to obtain
+a still closer approximation, and the process may be repeated
+indefinitely.
+
+An analogous process applies to the indefinite improvement of a
+first approximate expression for the function $Q$ or $V$.
+
+\bigbreak
+
+{\sectiontitle
+Rigorous Theory of Perturbations, founded on the Properties
+of the Disturbing Part of the whole Principal Function.\par}
+
+\nobreak\bigskip
+
+8.
+If we separate the expression $H$ (17.) into any two
+parts of the same kind,
+$$H_1 + H_2 = H,
+   \eqno {\rm (40.)}$$
+in which
+$$H_1 = F_1(\varpi_1, \varpi_2,\ldots\, \varpi_{3n},
+            \eta_1, \eta_2,\ldots\, \eta_{3n})
+        - U_1(\eta_1, \eta_2,\ldots\, \eta_{3n}),
+   \eqno {\rm (41.)}$$
+and
+$$H_2 = F_2(\varpi_1, \varpi_2,\ldots\, \varpi_{3n},
+            \eta_1, \eta_2,\ldots\, \eta_{3n})
+        - U_2(\eta_1, \eta_2,\ldots\, \eta_{3n}),
+   \eqno {\rm (42.)}$$
+the functions $F_1$~$F_2$~$U_1$~$U_2$ being such that
+$$F_1 + F_2 = F,\quad U_1 + U_2 = U;
+   \eqno {\rm (43.)}$$
+the differential equations of motion (A.) will take this form,
+$${d \eta_i \over dt}
+   =   {\delta H_1 \over \delta \varpi_i}
+     + {\delta H_2 \over \delta \varpi_i},\quad
+{d \varpi_i \over dt}
+   = - {\delta H_1 \over \delta \eta_i}
+     - {\delta H_2 \over \delta \eta_i},
+   \eqno {\rm (G.)}$$
+and if the part~$H_2$ and its coefficients be small, they will not
+differ much from these other differential equations,
+$${d \eta_i \over dt}
+   =   {\delta H_1 \over \delta \varpi_i},\quad
+{d \varpi_i \over dt}
+   = - {\delta H_1 \over \delta \eta_i};
+   \eqno {\rm (H.)}$$
+so that the rigorous integrals of the latter system will be
+approximate integrals of the former.  Whenever then, by a
+proper choice of the predominant term $H_1$, a system of
+$6n$ equations such as (H.) has been formed and rigorously
+integrated, giving expressions for the $6n$ variables
+$\eta_i$~$\varpi_i$ as functions of the time~$t$, and of their
+own initial values $e_i$~$p_i$, which may be thus denoted:
+$$\eta_i   = \phi_i(t, e_1, e_2,\ldots\, e_{3n},
+                    p_1, p_2,\ldots\, p_{3n}),
+   \eqno {\rm (44.)}$$
+and
+$$\varpi_i = \psi_i(t, e_1, e_2,\ldots\, e_{3n},
+                    p_1, p_2,\ldots\, p_{3n});
+   \eqno {\rm (45.)}$$
+the simpler motion thus defined by the rigorous integrals of (H.)
+may be called the {\it undisturbed motion\/} of the proposed system
+of $n$ points, and the more complex motion expressed by the rigorous
+integrals of (G.) may be called by contrast the {\it disturbed motion\/}
+of that system; and to pass from one to the other, may be called a
+{\it Problem of Perturbation}.
+
+\medskip
+
+9.
+To accomplish this passage, let us observe that the differential
+equations of undisturbed motion (H.), being of the same form as the
+original equations (A.), may have their integrals similarly expressed,
+that is, as follows:
+$$\varpi_i =   {\delta S_1 \over \delta \eta_i},\quad
+  p_i      = - {\delta S_1 \over \delta e_i},
+   \eqno {\rm (I.)}$$
+$S_1$ being here the {\it principal function of undisturbed motion},
+or the definite integral
+$$S_1 = \int_0^t \left(
+            \sum \mathbin{.} \varpi {\delta H_1 \over \delta \varpi} - H_1
+            \right) dt,
+   \eqno {\rm (46.)}$$
+considered as a function of the time and of the
+quantities $\eta_i$~$e_i$.  In like manner if we represent
+by $S_1 +S_2$ the whole principal function of disturbed motion,
+the rigorous integrals of (G.) may be expressed by (B.), as follows:
+$$\varpi_i =   {\delta S_1 \over \delta \eta_i}
+             + {\delta S_2 \over \delta \eta_i},\quad
+  p_i      = - {\delta S_1 \over \delta e_i}
+             - {\delta S_2 \over \delta e_i}.
+   \eqno {\rm (K.)}$$
+Comparing the forms (44.) with the second set of equations (I.)
+for the integrals of undisturbed motion, we find that the following
+relations between the functions $\phi_i$~$S_1$ must be rigorously
+and {\it identically\/} true:
+$$\eta_i   = \phi_i \left( t, e_1, e_2,\ldots\, e_{3n},
+                           - {\delta S_1 \over \delta e_1},
+                           - {\delta S_1 \over \delta e_2},\ldots\,
+                           - {\delta S_1 \over \delta e_{3n}}
+                           \right);
+   \eqno {\rm (47.)}$$
+and therefore, by (K.), that the integrals of disturbed motion
+may be put under the following forms,
+$$\eta_i   = \phi_i \left( t, e_1, e_2,\ldots\, e_{3n},
+                           p_1    + {\delta S_2 \over \delta e_1},
+                           p_2    + {\delta S_2 \over \delta e_2},\ldots\,
+                           p_{3n} + {\delta S_2 \over \delta e_{3n}}
+                           \right).
+   \eqno {\rm (L.)}$$
+We may therefore calculate rigorously the disturbed variables $\eta_i$
+by the rules of undisturbed motion (44.), if without altering the
+time~$t$, or the initial values $e_i$ of those variables, which
+determine the initial configuration, we alter (in general) the
+initial velocities and directions, by adding to the elements~$p_i$
+the following perturbational terms,
+$$\Delta p_1 = {\delta S_2 \over \delta e_1},\quad
+  \Delta p_2 = {\delta S_2 \over \delta e_2},\quad \ldots \quad
+  \Delta p_{3n} = {\delta S_2 \over \delta e_{3n}}:
+   \eqno {\rm (M.)}$$
+a remarkable result, which includes the whole theory of perturbation.
+We might deduce from it the differential coefficients $\eta_i'$, or
+the connected quantities $\varpi_i$, which determine the disturbed
+directions and velocities of motion at any time~$t$; but a similar
+reasoning gives at once the general expression,
+$$\varpi_i = {\delta S_2 \over \delta \eta_i}
+      + \psi_i \left( t, e_1, e_2,\ldots\,e_{3n},
+                      p_1    + {\delta S_2 \over \delta e_1},
+                      p_2    + {\delta S_2 \over \delta e_2},\ldots\,
+                      p_{3n} + {\delta S_2 \over \delta e_{3n}}
+                      \right),
+   \eqno {\rm (N.)}$$
+implying, that after altering the initial velocities and directions
+or the elements $p_i$ as before, by the perturbational terms (M.),
+we may then employ the rules of undisturbed motion (45.) to
+calulate the velocities and directions at the time~$t$, or the
+varying quantities $\varpi_i$, if we finally apply to these
+quantities thus calculated the following new corrections for
+perturbation:
+$$\Delta \varpi_1 = {\delta S_2\over \delta \eta_1},\quad
+  \Delta \varpi_2 = {\delta S_2\over \delta \eta_2},\quad \ldots \quad
+  \Delta \varpi_{3n} = {\delta S_2\over \delta \eta_{3n}}.
+   \eqno {\rm (O.)}$$
+
+\bigbreak
+
+{\sectiontitle
+Approximate expressions deduced from the foregoing rigorous Theory.\par}
+
+\nobreak\bigskip
+
+10.
+The foregoing theory gives indeed rigorous expressions for the
+perturbations, in passing from the simpler motion (H.) or (I.)
+to the more complex motion (G.) or (K.): but it may seem that these
+expressions are of little use, because they involve an unknown
+{\it disturbing function\/} $S_2$, (namely, the perturbational part
+of the whole principal function $S$,) and also unknown or disturbed
+coordinates or marks of position~$\eta_i$.  However, it was lately
+shown that whenever a first approximate form for the principal
+function~$S$, such as here the principal function $S_1$ of
+undisturbed motion, has been found, the correction $S_2$ can in
+general be assigned, with an indefinitely increasing accuracy;
+and since the perturbations (M.) and (O.) involve the disturbed
+coordinates $\eta_i$ only as they enter into the coefficients
+of this small disturbing function $S_2$, it is evidently
+permitted to substitute for these coordinates, at first, their
+undisturbed values, and then to correct the results by
+substituting more accurate expressions.
+
+\medskip
+
+11.
+The function $S_1$ of undisturbed motion must satisfy rigorously
+two partial differential equations of the form (C.), namely,
+$$\left. \eqalign{
+{\delta S_1 \over \delta t}
+   + F_1 \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+                {\delta S_1 \over \delta \eta_{3n}},
+                \eta_1,\ldots\, \eta_{3n}
+                \right)
+   &= U_1(\eta_1,\ldots\, \eta_{3n}),\cr
+{\delta S_1 \over \delta t}
+   + F_1 \left( {\delta S_1 \over \delta e_1},\ldots\,
+                {\delta S_1 \over \delta e_{3n}},
+                e_1,\ldots\, e_{3n}
+                \right)
+   &= U_1(e_1,\ldots\, e_{3n});\cr}
+   \right\}
+   \eqno {\rm (P.)}$$
+and therefore, by (D.), the disturbing function $S_2$ must
+satisfy rigorously the following other condition:
+$$\left. \eqalign{
+{d S_2 \over dt}
+  &= U_2(\eta_1,\ldots\, \eta_{3n})
+     - F_2 \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+                  {\delta S_1 \over \delta \eta_{3n}},
+                  \eta_1,\ldots\, \eta_{3n} \right) \cr
+  &\mathrel{\phantom{=}} \mathord{}
+     + F \left( {\delta S_2 \over \delta \eta_1},\ldots\,
+                {\delta S_2 \over \delta \eta_{3n}},
+                \eta_1,\ldots\, \eta_{3n} \right),\cr}
+   \right\}
+   \eqno {\rm (Q.)}$$
+and may, on account of the homogeneity and dimension of $F$,
+be approximately expressed as follows:
+$$S_2 = \int_0^t \left\{
+      U_2(\eta_1,\ldots\, \eta_{3n})
+      - F_2 \left( {\delta S_1 \over \delta \eta_1},\ldots\,
+                   {\delta S_1 \over \delta \eta_{3n}},
+                   \eta_1,\ldots\, \eta_{3n} \right)
+      \right\} dt,
+   \eqno {\rm (R.)}$$
+or thus, by (I.),
+$$S_2 = \int_0^t \left\{
+      U_2(\eta_1,\ldots\, \eta_{3n})
+      - F_2 \left( \varpi_1,\ldots\, \varpi_{3n},
+                   \eta_1,\ldots\, \eta_{3n} \right)
+      \right\} dt,
+   \eqno {\rm (S.)}$$
+that is, by (42.),
+$$S_2 = - \int_0^t H_2 \,dt.
+   \eqno {\rm (T.)}$$
+In this expression, $H_2$ is given immediately as a function
+of the varying quantities $\eta_i$~$\varpi_i$, but it may
+be considered in the same order of approximation as a known
+function of their initial values $e_i$~$p_i$ and of the
+time~$t$, obtained by substituting for $\eta_i$~$\varpi_i$
+their undisturbed values (44.), (45.) as functions of those
+quantities; its variation may therefore be expressed in either
+of the two following ways:
+$$\delta H_2 = \sum \left(
+           {\delta H_2 \over \delta \eta} \delta \eta
+         + {\delta H_2 \over \delta \varpi} \delta \varpi
+           \right),
+   \eqno {\rm (48.)}$$
+or
+$$\delta H_2 = \sum \left(
+           {\delta H_2 \over \delta e} \delta e
+         + {\delta H_2 \over \delta p} \delta p
+           \right)
+         + {\delta H_2 \over \delta t} \delta t.
+   \eqno {\rm (49.)}$$
+
+Adopting the latter view, and effecting the integration (T.)
+with respect to the time, by treating the elements $e_i$~$p_i$
+as constant, we are afterwards to substitute for the quantities
+$p_i$ their undisturbed expressions (39.) or (I.), and then
+we find for the variation of the disturbing function $S_2$
+the expression
+$$\delta S_2 = - H_2 \, \delta t + \sum \left(
+         - \delta e \mathbin{.} \int_0^t {\delta H_2 \over \delta e} dt
+         + \delta {\delta S_1 \over \delta e}
+            \mathbin{.} \int_0^t {\delta H_2 \over \delta p} dt
+         \right),
+   \eqno {\rm (50.)}$$
+which enables us to transform the perturbational terms (M.), (O.)
+into the following approximate forms:
+$$\Delta p_i = - \int_0^t {\delta H_2 \over \delta e_i} dt
+      + \sum \mathbin{.} {\delta^2 S_1 \over \delta e \, \delta e_i}
+            \int_0^t {\delta H_2 \over \delta p} dt,
+   \eqno {\rm (U.)}$$
+and
+$$\Delta \varpi_i
+   = \sum \mathbin{.} {\delta^2 S_1 \over \delta e \, \delta \eta_i}
+            \int_0^t {\delta H_2 \over \delta p} dt,
+   \eqno {\rm (V.)}$$
+containing only functions and quantities which may be regarded
+as given, by the theory of undisturbed motion.
+
+\medskip
+
+12.
+In the same order of approximation, if the variation of
+the expression (44.) for an undisturbed coordinate $\eta_i$
+be thus denoted,
+$$\delta \eta_i
+   = {\delta \eta_i \over \delta t} \delta t + \sum \left(
+         {\delta \eta_i \over \delta e} \delta e
+       + {\delta \eta_i \over \delta p} \delta p \right),
+   \eqno {\rm (51.)}$$
+the perturbation of that coordinate may be expressed as follows:
+$$\Delta \eta_i
+   = \sum \mathbin{.} {\delta \eta_i \over \delta p} \Delta p;
+   \eqno {\rm (W.)}$$
+that is, by (U.),
+$$\left. \eqalign{\Delta \eta_i
+   &=  - {\delta \eta_i \over \delta p_1}
+         \int_0^t {\delta H_2 \over \delta e_1} dt
+       - {\delta \eta_i \over \delta p_2}
+         \int_0^t {\delta H_2 \over \delta e_2} dt
+       - \cdots
+       - {\delta \eta_i \over \delta p_{3n}}
+         \int_0^t {\delta H_2 \over \delta e_{3n}} dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+    + \left(
+         {\delta \eta_i \over \delta p_1}
+         {\delta^2 S_1 \over \delta e_1^2}
+       + {\delta \eta_i \over \delta p_2}
+         {\delta^2 S_1 \over \delta e_1 \, \delta e_2}
+       + \cdots
+       + {\delta \eta_i \over \delta p_{3n}}
+         {\delta^2 S_1 \over \delta e_1 \, \delta e_{3n}}
+         \right) \int_0^t {\delta H_2 \over \delta p_1} dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+    + \ldots\ldots \cr
+   &\mathrel{\phantom{=}} \mathord{}
+    + \left(
+         {\delta \eta_i \over \delta p_1}
+         {\delta^2 S_1 \over \delta e_{3n} \, \delta e_1}
+       + {\delta \eta_i \over \delta p_2}
+         {\delta^2 S_1 \over \delta e_{3n} \, \delta e_2}
+       + \cdots
+       + {\delta \eta_i \over \delta p_{3n}}
+         {\delta^2 S_1 \over \delta e_{3n}^2}
+         \right) \int_0^t {\delta H_2 \over \delta p_{3n}} dt.\cr}
+   \right\}
+   \eqno {\rm (52.)}$$
+Besides, the identical equation (47.) gives
+$${\delta \eta_i \over \delta e_k}
+   =   {\delta \eta_i \over \delta p_1}
+       {\delta^2 S_1 \over \delta e_k \, \delta e_1}
+     + {\delta \eta_i \over \delta p_2}
+       {\delta^2 S_1 \over \delta e_k \, \delta e_2}
+     + \cdots
+     + {\delta \eta_i \over \delta p_{3n}}
+       {\delta^2 S_1 \over \delta e_k \, \delta e_{3n}};
+   \eqno {\rm (53.)}$$
+the expression (52.) may therefore be thus abridged,
+$$\left. \eqalign{
+\Delta \eta_i
+   &=  - {\delta \eta_i \over \delta p_1}
+         \int_0^t {\delta H_2 \over \delta e_1} dt
+       - \cdots
+       - {\delta \eta_i \over \delta p_{3n}}
+         \int_0^t {\delta H_2 \over \delta e_{3n}} dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+       + {\delta \eta_i \over \delta e_1}
+         \int_0^t {\delta H_2 \over \delta p_1} dt
+       + \cdots
+       + {\delta \eta_i \over \delta e_{3n}}
+         \int_0^t {\delta H_2 \over \delta p_{3n}} dt,\cr}
+   \right\}
+   \eqno {\rm (X.)}$$
+and shows that instead of the rigorous perturbational terms (M.)
+we may approximately employ the following,
+$$\Delta p_i
+   = - \int_0^t {\delta H_2 \over \delta e_i} dt,
+   \eqno {\rm (Y.)}$$
+in order to calculate the disturbed configuration at any time~$t$
+by the rules of undisturbed motion, provided that besides thus
+altering the initial velocities and directions we alter also the
+initial configuration, by the formula
+$$\Delta e_i
+   =   \int_0^t {\delta H_2 \over \delta p_i} dt.
+   \eqno {\rm (Z.)}$$
+It would not be difficult to calculate, in like manner, approximate
+expressions for the disturbed directions and velocities at any
+time~$t$; but it is better to resume, in another way, the
+rigorous problem of perturbation.
+
+\bigbreak
+
+{\sectiontitle
+Other Rigorous Theory of Perturbation, founded on the properties
+of the disturbing part of the constant of living force, and giving
+formul{\ae} for the Variation of Elements more analogous to
+those already known.\par}
+
+\nobreak\bigskip
+
+13.
+Suppose that the theory of undisturbed motion has given the
+$6n$ constants $e_i$~$p_i$ or any combinations of these,
+$\kappa_1, \kappa_2,\ldots, \kappa_{6n}$, as functions of the
+$6n$ variables $\eta_i$~$\varpi_i$, and of the time~$t$, which
+may be thus denoted:
+$$\kappa_i = \chi_i(t,\eta_1, \eta_2,\ldots\, \eta_{3n},
+                    \varpi_1, \varpi_2,\ldots\, \varpi_{3n}),
+   \eqno {\rm (54.)}$$
+and which give reciprocally expressions for the variables
+$\eta_i$~$\varpi_i$ in terms of these elements and of the time,
+analogous to (44.) and (45.), and capable of being denoted
+similarly,
+$$\eta_i   = \phi_i(t,\kappa_1, \kappa_2,\ldots\, \kappa_{6n}),\quad
+  \varpi_i = \psi_i(t,\kappa_1, \kappa_2,\ldots\, \kappa_{6n});
+   \eqno {\rm (55.)}$$
+then, the total differential coefficient of every such {\it element}
+or function $\kappa_i$, taken with respect to the time, (both as
+it enters explicitly and implicitly into the expressions (54.),)
+must vanish in the undisturbed motion; so that, by the differential
+equations of such motion (H.), the following general relation must
+be rigorously and {\it identically\/} true:
+$$0  = {\delta \kappa_i \over \delta t} + \sum \left(
+            {\delta \kappa_i \over \delta \eta}
+            {\delta H_1 \over \delta \varpi}
+          - {\delta \kappa_i \over \delta \varpi}
+            {\delta H_1 \over \delta \eta}
+   \right).
+   \eqno {\rm (56.)}$$
+
+In passing to disturbed motion, if we retain the equation (54.)
+as a {\it definition\/} of the quantity $\kappa_i$, that quantity
+will no longer be constant, but it will continue to satisfy the
+inverse relations (55.), and may be called, by analogy, a
+{\it varying element\/} of the motion; and its total differential
+coefficient, taken with respect to the time, may, by the identical
+equation (56.), and by the differential equations of disturbed motion
+(G.), be rigorously expressed as follows:
+$${d\kappa_i \over dt}
+   = \sum \left( {\delta \kappa_i \over \delta \eta}
+                 {\delta H_2 \over \delta \varpi}
+               - {\delta \kappa_i \over \delta \varpi}
+                 {\delta H_2 \over \delta \eta}
+   \right).
+   \eqno {\rm (A^1.)}$$
+
+\medskip
+
+14.
+This result (A${}^1$.) contains the whole theory of the gradual
+variation of the elements of disturbed motion of a system; but it
+may receive an advantageous transformation, by the substitution
+of the expressions (55.) for the variables $\eta_i$~$\varpi_i$
+as functions of the time and of the elements; since it will thus
+conduct to a system of $6n$ rigorous and ordinary differential
+equations of the first order between those varying elements
+and the time.  Expressing, therefore, the quantity $H_2$ as
+a function of these latter variables, its variation $\delta H_2$
+takes this new form,
+$$\delta H_2
+   = \sum \mathbin{.} {\delta H_2 \over \delta \kappa} \delta \kappa
+     + {\delta H_2 \over \delta t} \delta t,
+   \eqno {\rm (57.)}$$
+and gives, by comparison with the form (48.), and by (54.),
+$${\delta H_2 \over \delta \eta_r}
+   = \sum \mathbin{.} {\delta H_2 \over \delta \kappa}
+            {\delta \kappa \over \delta \eta_r};\quad
+  {\delta H_2 \over \delta \varpi_r}
+   = \sum \mathbin{.} {\delta H_2 \over \delta \kappa}
+            {\delta \kappa \over \delta \varpi_r};
+   \eqno {\rm (58.)}$$
+and thus the general equation (A${}^1$.) is transformed to
+the following,
+$${d\kappa_i \over dt}
+   =   a_{i,1}  {\delta H_2 \over \delta \kappa_1}
+     + a_{i,2}  {\delta H_2 \over \delta \kappa_2}
+     + \cdots
+     + a_{i,6n} {\delta H_2 \over \delta \kappa_{6n}},
+   \eqno {\rm (B^1.)}$$
+in which
+$$a_{i,s} = \sum \left(
+         {\delta \kappa_i \over \delta \eta}
+         {\delta \kappa_s \over \delta \varpi}
+       - {\delta \kappa_i \over \delta \varpi}
+         {\delta \kappa_s \over \delta \eta}
+         \right):
+   \eqno {\rm (C^1.)}$$
+so that it only remains to eliminate the variables $\eta$~$\varpi$
+from the expressions of these latter coefficients.  Now it is
+remarkable that this elimination removes the symbol~$t$ also,
+and leaves the coefficients $a_{i,s}$ expressed as functions
+of the elements $\kappa$ alone, not explicitly involving
+the time.  This general theorem of dynamics, which is, perhaps,
+a little more extensive than the analogous results discovered by
+{\sc Lagrange} and by {\sc Poisson}, since it does not limit the
+disturbing terms in the differential equations of motion to depend
+on the configuration only, may be investigated in the following way.
+
+\medskip
+
+\def\hamiltonsum#1#2#3{\sum
+      \lower.5ex\hbox{${}_{#1\,#2}$}\raise.5ex\llap{${}^{#3}$}}
+
+15.
+The sign of summation $\sum$ in (C${}^1$.), like the same
+sign in those other analogous equations in which it has already
+occurred without an index in this Essay, refers not to the
+expressed indices, such as here $i$, $s$, in the quantity to
+be summed, but to an index which is not expressed and which
+may be here called~$r$; so that if we introduce for greater
+clearness this variable index and its limits, the expression
+(C${}^1$.) becomes
+$$a_{i,s} = \hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_i \over \delta \eta_r}
+         {\delta \kappa_s \over \delta \varpi_r}
+       - {\delta \kappa_i \over \delta \varpi_r}
+         {\delta \kappa_s \over \delta \eta_r}
+         \right):
+   \eqno {\rm (59.)}$$
+and its total differential coefficient, taken with respect
+to time, may be separated into the two following parts,
+$$\left. \eqalign{
+{d \over dt} a_{i,s}
+   &= \hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_i \over \delta \eta_r}
+         {d \over dt}
+         {\delta \kappa_s \over \delta \varpi_r}
+       - {\delta \kappa_s \over \delta \eta_r}
+         {d \over dt}
+         {\delta \kappa_i \over \delta \varpi_r}
+         \right) \cr
+   &\mathrel{+} \hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_s \over \delta \varpi_r}
+         {d \over dt}
+         {\delta \kappa_i \over \delta \eta_r}
+       - {\delta \kappa_i \over \delta \varpi_r}
+         {d \over dt}
+         {\delta \kappa_s \over \delta \eta_r}
+         \right),\cr}
+   \right\}
+   \eqno {\rm (60.)}$$
+which we shall proceed to calculate separately, and then to add
+them together.  By the definition (54.), and the differential
+equations of disturbed motion (G.),
+$${d \over dt} {\delta \kappa_i \over \delta \varpi_r}
+   = {\delta^2 \kappa_i \over \delta t \, \delta \varpi_r}
+      + \hamiltonsum{(u)}{1}{3n} \left\{
+         {\delta^2 \kappa_i \over \delta \eta_u \, \delta \varpi_r}
+         \left(   {\delta H_1 \over \delta \varpi_u}
+                + {\delta H_2 \over \delta \varpi_u} \right)
+      - {\delta^2 \kappa_i \over \delta \varpi_u \, \delta \varpi_r}
+         \left(   {\delta H_1 \over \delta \eta_u}
+                + {\delta H_2 \over \delta \eta_u} \right)
+      \right\},
+   \eqno {\rm (61.)}$$
+in which, by the identical equation (56.),
+$${\delta^2 \kappa_i \over \delta t \, \delta \varpi_r}
+   = - {\delta \over \delta \varpi_r}
+      \hamiltonsum{(u)}{1}{3n} \left(
+         {\delta \kappa_i \over \delta \eta_u}
+         {\delta H_1 \over \delta \varpi_u}
+       - {\delta \kappa_i \over \delta \varpi_u}
+         {\delta H_1 \over \delta \eta_u}
+         \right);
+   \eqno {\rm (62.)}$$
+we have therefore
+$${d \over dt} {\delta \kappa_i \over \delta \varpi_r}
+   = \hamiltonsum{(u)}{1}{3n} \left(
+         {\delta^2 \kappa_i \over \delta \eta_u \, \delta \varpi_r}
+         {\delta H_2 \over \delta \varpi_u}
+       - {\delta^2 \kappa_i \over \delta \varpi_u \, \delta \varpi_r}
+         {\delta H_2 \over \delta \eta_u}
+       + {\delta \kappa_i \over \delta \varpi_u}
+         {\delta^2 H_1 \over \delta \eta_u \delta \varpi_r}
+       - {\delta \kappa_i \over \delta \eta_u}
+         {\delta^2 H_1 \over \delta \varpi_u \delta \varpi_r}
+         \right),
+   \eqno {\rm (63.)}$$
+and
+$\displaystyle {d \over dt} {\delta \kappa_s \over \delta \varpi_r}$
+may be found from this, by merely changing $i$ to $s$: so that
+$$\left. \eqalign{
+\hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_i \over \delta \eta_r}
+         {d \over dt}
+         {\delta \kappa_s \over \delta \varpi_r}
+       - {\delta \kappa_s \over \delta \eta_r}
+         {d \over dt}
+         {\delta \kappa_i \over \delta \varpi_r}
+         \right)
+   \hskip -14em \cr
+   &= \hamiltonsum{(r,u)}{1,1}{3n,3n} \biggl\{ \left(
+         {\delta \kappa_s \over \delta \eta_r}
+         {\delta^2 \kappa_i \over \delta \varpi_u \, \delta \varpi_r}
+       - {\delta \kappa_i \over \delta \eta_r}
+         {\delta^2 \kappa_s \over \delta \varpi_u \, \delta \varpi_r}
+         \right) {\delta H_2 \over \delta \eta_u} \cr
+   &\mathrel{\phantom{=}} \quad \mathord{}
+       + \left(
+         {\delta \kappa_i \over \delta \eta_r}
+         {\delta^2 \kappa_s \over \delta \eta_u \, \delta \varpi_r}
+       - {\delta \kappa_s \over \delta \eta_r}
+         {\delta^2 \kappa_i \over \delta \eta_u \, \delta \varpi_r}
+         \right) {\delta H_2 \over \delta \varpi_u} \cr
+   &\mathrel{\phantom{=}} \quad \mathord{}
+       + \left(
+         {\delta \kappa_i \over \delta \eta_r}
+         {\delta \kappa_s \over \delta \varpi_u}
+       - {\delta \kappa_s \over \delta \eta_r}
+         {\delta \kappa_i \over \delta \varpi_u}
+         \right) {\delta^2 H_1 \over \delta \eta_u \, \delta \varpi_r}
+       + \left(
+         {\delta \kappa_s \over \delta \eta_r}
+         {\delta \kappa_i \over \delta \eta_u}
+       - {\delta \kappa_i \over \delta \eta_r}
+         {\delta \kappa_s \over \delta \eta_u}
+         \right) {\delta^2 H_1 \over \delta \varpi_u \, \delta \varpi_r}
+   \biggr\},\cr}
+   \right\}
+   \eqno {\rm (64.)}$$
+and similarly,
+$$\left. \eqalign{
+\hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_s \over \delta \varpi_r}
+         {d \over dt}
+         {\delta \kappa_i \over \delta \eta_r}
+       - {\delta \kappa_i \over \delta \varpi_r}
+         {d \over dt}
+         {\delta \kappa_s \over \delta \eta_r}
+         \right)
+   \hskip -14em \cr
+   &= \hamiltonsum{(r,u)}{1,1}{3n,3n} \biggl\{ \left(
+         {\delta \kappa_s \over \delta \varpi_r}
+         {\delta^2 \kappa_i \over \delta \eta_u \, \delta \eta_r}
+       - {\delta \kappa_i \over \delta \varpi_r}
+         {\delta^2 \kappa_s \over \delta \eta_u \, \delta \eta_r}
+         \right) {\delta H_2 \over \delta \varpi_u} \cr
+   &\mathrel{\phantom{=}} \quad \mathord{}
+       + \left(
+         {\delta \kappa_i \over \delta \varpi_r}
+         {\delta^2 \kappa_s \over \delta \varpi_u \, \delta \eta_r}
+       - {\delta \kappa_s \over \delta \varpi_r}
+         {\delta^2 \kappa_i \over \delta \varpi_u \, \delta \eta_r}
+         \right) {\delta H_2 \over \delta \eta_u} \cr
+   &\mathrel{\phantom{=}} \quad \mathord{}
+       + \left(
+         {\delta \kappa_i \over \delta \varpi_r}
+         {\delta \kappa_s \over \delta \eta_u}
+       - {\delta \kappa_s \over \delta \varpi_r}
+         {\delta \kappa_i \over \delta \eta_u}
+         \right) {\delta^2 H_1 \over \delta \varpi_u \, \delta \eta_r}
+       + \left(
+         {\delta \kappa_s \over \delta \varpi_r}
+         {\delta \kappa_i \over \delta \varpi_u}
+       - {\delta \kappa_i \over \delta \varpi_r}
+         {\delta \kappa_s \over \delta \varpi_u}
+         \right) {\delta^2 H_1 \over \delta \eta_u \, \delta \eta_r}
+   \biggr\}.\cr}
+   \right\}
+   \eqno {\rm (65.)}$$
+Adding, therefore, the two last expressions, and making the
+reductions which present themselves, we find, by (60.),
+$${d \over dt} a_{i,s} = \hamiltonsum{(u)}{1}{3n} \left(
+         A_{i,s}^{(u)} {\delta H_2 \over \delta \eta_u}
+       + B_{i,s}^{(u)} {\delta H_2 \over \delta \varpi_u}
+         \right),
+   \eqno {\rm (D^1.)}$$
+in which
+$$\left. \eqalign{
+A_{i,s}^{(u)}
+   &= \hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_s \over \delta \eta_r}
+         {\delta^2 \kappa_i \over \delta \varpi_u \, \delta \varpi_r}
+       - {\delta \kappa_i \over \delta \eta_r}
+         {\delta^2 \kappa_s \over \delta \varpi_u \, \delta \varpi_r}
+       + {\delta \kappa_i \over \delta \varpi_r}
+         {\delta^2 \kappa_s \over \delta \varpi_u \, \delta \eta_r}
+       - {\delta \kappa_s \over \delta \varpi_r}
+         {\delta^2 \kappa_i \over \delta \varpi_u \, \delta \eta_r}
+         \right),\cr
+B_{i,s}^{(u)}
+   &= \hamiltonsum{(r)}{1}{3n} \left(
+         {\delta \kappa_s \over \delta \varpi_r}
+         {\delta^2 \kappa_i \over \delta \eta_u \, \delta \eta_r}
+       - {\delta \kappa_i \over \delta \varpi_r}
+         {\delta^2 \kappa_s \over \delta \eta_u \, \delta \eta_r}
+       + {\delta \kappa_i \over \delta \eta_r}
+         {\delta^2 \kappa_s \over \delta \eta_u \, \delta \varpi_r}
+       - {\delta \kappa_s \over \delta \eta_r}
+         {\delta^2 \kappa_i \over \delta \eta_u \, \delta \varpi_r}
+         \right);\cr}
+   \right\}
+   \eqno {\rm (66.)}$$
+and since this general form (D${}^1$.) for
+$\displaystyle {d \over dt} a_{i,s}$
+contains no term independent of the disturbing quantities
+$\displaystyle {\delta H_2 \over \delta \eta}$,
+$\displaystyle {\delta H_2 \over \delta \varpi}$,
+it is easy to infer from it the important consequence already
+mentioned, namely, that the coefficients $a_{i,s}$, in the
+differentials (B${}^1$.) of the elements, may be expressed
+as functions of those elements alone, not explicitly involving
+the time.
+
+It is evident also, that these coefficients $a_{i,s}$
+have the property
+$$a_{s,i} = - a_{i,s}
+   \eqno {\rm (67.)}$$
+and
+$$a_{i,i} = 0;
+   \eqno {\rm (68.)}$$
+the term proportional to
+$\displaystyle {\delta H_2 \over \delta \kappa_i}$
+disappears therefore from the expression (B${}^1$.) for
+$\displaystyle {d\kappa_i \over dt}$;
+and the term
+$${\delta H_2 \over \delta \kappa_i} \mathbin{.} a_{i,s} \mathbin{.}
+  {\delta H_2 \over \delta \kappa_s}
+\quad\hbox{in}\quad
+  {\delta H_2 \over \delta \kappa_i} {d\kappa_i \over dt},$$
+destroys the term
+$${\delta H_2 \over \delta \kappa_s} \mathbin{.} a_{s,i} \mathbin{.}
+  {\delta H_2 \over \delta \kappa_i}
+\quad\hbox{in}\quad
+  {\delta H_2 \over \delta \kappa_s} {d\kappa_s \over dt},$$
+when these terms are added together; we have, therefore,
+$$\sum \mathbin{.} {\delta H_2 \over \delta \kappa} {d\kappa \over dt}
+   = 0,
+   \eqno {\rm (E^1.)}$$
+or
+$${d H_2 \over dt} = {\delta H_2 \over \delta t};
+   \eqno {\rm (F^1.)}$$
+that is, in taking the first total differential coefficient
+of the disturbing expression $H_2$ with respect to the time,
+the elements may be treated as constant.
+
+\bigbreak
+
+{\sectiontitle
+Simplification of the differential equations which determine these
+gradually varying elements, in any problem of Perturbation; and
+Integration of the simplified equations by means of certain
+Functions of Elements.\par}
+
+\nobreak\bigskip
+
+16.
+The most natural choice of these elements is that which
+makes them correspond, in undisturbed motion, to the initial
+quantities $e_i$~$p_i$.  These quantities, by the differential
+equations (H.), may be expressed in undisturbed motion as follows,
+$$e_i = \eta_i   - \int_0^t {\delta H_1 \over \delta \varpi_i} dt,\quad
+  p_i = \varpi_i + \int_0^t {\delta H_1 \over \delta \eta_i}   dt;
+   \eqno {\rm (69.)}$$
+and if we suppose them found, by elimination, under the forms
+$$\left. \eqalign{
+e_i &= \eta_i
+      + \Phi_i(t, \eta_1, \eta_2,\ldots\, \eta_{3n},
+                  \varpi_1, \varpi_2,\ldots\, \varpi_{3n} ),\cr
+p_i &= \varpi_i
+      + \Psi_i(t, \eta_1, \eta_2,\ldots\, \eta_{3n},
+                  \varpi_1, \varpi_2,\ldots\, \varpi_{3n} ),\cr}
+   \right\}
+   \eqno {\rm (70.)}$$
+it is easy to see that the following equations must be rigorously
+and identically true, for all values of $\eta_i$~$\varpi_i$,
+$$\left. \eqalign{
+0 &= \Phi_i(0, \eta_1, \eta_2,\ldots\, \eta_{3n},
+                  \varpi_1, \varpi_2,\ldots\, \varpi_{3n} ),\cr
+0 &= \Psi_i(0, \eta_1, \eta_2,\ldots\, \eta_{3n},
+                  \varpi_1, \varpi_2,\ldots\, \varpi_{3n} ).\cr}
+   \right\}
+   \eqno {\rm (71.)}$$
+When, therefore, in passing to disturbed motion, we establish the
+equations of definition,
+$$\left. \eqalign{
+\kappa_i &= \eta_i
+      + \Phi_i(t, \eta_1, \eta_2,\ldots\, \eta_{3n},
+                  \varpi_1, \varpi_2,\ldots\, \varpi_{3n} ),\cr
+\lambda_i &= \varpi_i
+      + \Psi_i(t, \eta_1, \eta_2,\ldots\, \eta_{3n},
+                  \varpi_1, \varpi_2,\ldots\, \varpi_{3n} ),\cr}
+   \right\}
+   \eqno {\rm (72.)}$$
+introducing $6n$ varying elements $\kappa_i$~$\lambda_i$, of
+which the set $\lambda_i$ would have been represented in our
+recent notation as follows:
+$$\lambda_i = \kappa_{3n+i};
+   \eqno {\rm (73.)}$$
+we see that all the partial differential coefficients of the forms
+$\displaystyle {\delta \kappa_i  \over \delta \eta_r}$,
+$\displaystyle {\delta \kappa_i  \over \delta \varpi_r}$,
+$\displaystyle {\delta \lambda_i \over \delta \eta_r}$,
+$\displaystyle {\delta \lambda_i \over \delta \varpi_r}$,
+vanish when $t = 0$, except the following:
+$${\delta \kappa_i  \over \delta \eta_i}   = 1,\quad
+  {\delta \lambda_i \over \delta \varpi_i} = 1;
+   \eqno {\rm (74.)}$$
+and, therefore, that when $t$ is made $= 0$, in the coefficients
+$a_{i,s}$, (59.), all those coefficients vanish, except the following:
+$$a_{r, 3n+r} = 1,\quad a_{3n+r,r} = -1.
+   \eqno {\rm (75.)}$$
+
+   But it has been proved that these coefficients $a_{i,s}$, when
+expressed as functions of the elements, do not contain the time
+explicitly; and the supposition $t = 0$ introduces no relation
+between those $6n$ elements $\kappa_i$~$\lambda_i$, which still
+remain independent: the coefficients $a_{i,s}$, therefore, could
+not acquire the values $1$, $0$, $-1$, by the supposition $t = 0$,
+unless they had those values constantly, and independently of that
+supposition.  The differential equations of the forms (B${}^1$.)
+may therefore be expressed, for the present system of varying
+elements, in the following simpler way:
+$${d \kappa_i \over dt}  =   {\delta H_2 \over \delta \lambda_i};\quad
+  {d \lambda_i \over dt} = - {\delta H_2 \over \delta \kappa_i};
+   \eqno {\rm (G^1.)}$$
+and an easy verification of these expressions is offered by the
+formula (E${}^1$.), which takes now this form,
+$$\sum \left( {\delta H_2 \over \delta \kappa}  {d\kappa  \over dt}
+            + {\delta H_2 \over \delta \lambda} {d\lambda \over dt}
+              \right) = 0.
+   \eqno {\rm (H^1.)}$$
+
+\medskip
+
+17.
+The initial values of the varying elements $\kappa_i$~$\lambda_i$
+are evidently $e_i$~$p_i$, by the definitions (72.), and by the
+identical equations (71.); the problem of integrating rigorously
+the equations of disturbed motion (G.), between the variables
+$\eta_i$~$\varpi_i$ and the time, or of determining these
+variables as functions of the time and of their own initial values
+$e_i$~$p_i$, is therefore rigorously transformed into the problem
+of integrating the equations (G${}^1$.), or of determining the $6n$
+elements $\kappa_i$~$\lambda_i$ as functions of the time and of the
+same initial values.  The chief advantage of this transformation is,
+that if the perturbations be small, the new variables (namely
+the elements,) alter but little: and that, since the new
+differential equations are of the same form as the old,
+they may be integrated by a similar method.  Considering,
+therefore, the definite integral
+$$E = \int_0^t \left(
+      \sum \mathbin{.} \lambda {\delta H_2 \over \delta \lambda} - H_2
+      \right) dt,
+   \eqno {\rm (76.)}$$
+as a function of the time and of the $6n$ quantities
+$\kappa_1, \kappa_2,\ldots\, \kappa_{3n}, e_1, e_2,\ldots\, e_n$,
+and observing that its variation, taken with respect to the latter
+quantities, may be shown by a process similar to that of the
+fourth number of this Essay to be
+$$\delta E = \sum ( \lambda \, \delta \kappa - p \, \delta e),
+   \eqno {\rm (I^1.)}$$
+we find that the rigorous integrals of the differential
+equations (G${}^1$.) may be expressed in the following manner:
+$$\lambda_i = {\delta E \over \delta \kappa_i},\quad
+  p_i = - {\delta E \over \delta e_i},
+   \eqno {\rm (K^1.)}$$
+in which there enters only one unknown {\it function of elements}~$E$,
+to the search and study of which single function the problem of
+perturbation is reduced by this new method.
+
+We might also have put
+$$C = \int_0^t \left(
+      - \sum \mathbin{.} \kappa {\delta H_2 \over \delta \kappa} + H_2
+        \right) dt,
+   \eqno {\rm (77.)}$$
+and considered this definite integral~$C$ as a function of the
+time and of the $6n$ quantities $\lambda_i$~$p_i$; and then
+we should have found the following other forms for the integrals
+of the differential equations of varying elements,
+$$\kappa_i = + {\delta C \over \delta \lambda_i},\quad
+  e_i = - {\delta C \over \delta p_i},
+   \eqno {\rm (L^1.)}$$
+And each of these {\it functions of elements}, $C$ and $E$, must
+satisfy a certain partial differential equation, analogous to the
+first equation of each pair mentioned in the sixth number of this
+Essay, and deduced on similar principles.
+
+\medskip
+
+18.
+Thus, it is evident, by the form of the function $E$, and by
+the equations (K${}^1$.), (G${}^1$.), and (76.), that the
+partial differential coefficient of this function, taken with
+respect to the time, is
+$${\delta E \over \delta t}
+   = {dE \over dt}
+      - \sum \mathbin{.} {\delta E \over \delta \kappa} {d\kappa \over dt}
+   = - H_2;
+   \eqno {\rm (M^1.)}$$
+and therefore that if we separate this function~$E$ into any two parts
+$$E_1 + E_2 = E,
+   \eqno {\rm (N^1.)}$$
+and if, for greater clearness, we put the expression $H_2$
+under the form
+$$H_2 = H_2(t,\kappa_1, \kappa_2,\ldots\, \kappa_{3n},
+              \lambda_1, \lambda_2,\ldots\, \lambda_{3n}),
+   \eqno {\rm (O^1.)}$$
+we shall have rigorously the partial differential equation
+$$0 =   {\delta E_1 \over \delta t}
+      + {\delta E_2 \over \delta t}
+      + H_2 \left( t,\kappa_1,\ldots\, \kappa_{3n},
+                     {\delta E_1 \over \delta \kappa_1}
+                   + {\delta E_2 \over \delta \kappa_1},\ldots\,
+                     {\delta E_1 \over \delta \kappa_{3n}}
+                   + {\delta E_2 \over \delta \kappa_{3n}}
+                   \right):
+   \eqno {\rm (P^1.)}$$
+which gives, approximately, by (G${}^1$.) and (K${}^1$),
+when the part $E_2$ is small, and when we neglect the squares
+and products of its partial differential coefficients,
+$$0 =   {d E_2 \over dt}
+      + {\delta E_1 \over \delta t}
+      + H_2 \left( t,\kappa_1,\ldots\, \kappa_{3n},
+                     {\delta E_1 \over \delta \kappa_1},\ldots\,
+                     {\delta E_1 \over \delta \kappa_{3n}}
+                   \right).
+   \eqno {\rm (Q^1.)}$$
+Hence, in the same order of approximation, if the part $E_1$,
+like the whole function $E$, be chosen so as to vanish with
+the time, we shall have
+$$E_2 = - \int_0^t \left\{
+        {\delta E_1 \over \delta t}
+      + H_2 \left( t,\kappa_1,\ldots\, \kappa_{3n},
+                     {\delta E_1 \over \delta \kappa_1},\ldots\,
+                     {\delta E_1 \over \delta \kappa_{3n}}
+                   \right) \right\} dt:
+   \eqno {\rm (R^1.)}$$
+and thus a first approximate expression $E_1$ can be successively
+and indefinitely corrected.
+
+Again, by (L${}^1$.) and (G${}^1$.), and by the definition (77.),
+$${\delta C \over \delta t}
+   = {dC \over dt}
+      - \sum \mathbin{.}
+         {\delta C \over \delta \lambda} {d\lambda \over dt}
+   = H_2;
+   \eqno {\rm (S^1.)}$$
+the function~$C$ must therefore satisfy rigorously the partial
+differential equation,
+$${\delta C \over \delta t}
+   = H_2 \left( t, {\delta C \over \delta \lambda_1},\ldots\,
+                   {\delta C \over \delta \lambda_{3n}},
+                   \lambda_1,\ldots\, \lambda_{3n} \right):
+   \eqno {\rm (T^1.)}$$
+and if we put
+$$C = C_1 + C_2,
+   \eqno {\rm (U^1.)}$$
+and suppose that the part $C_2$ is small, then the rigorous equation
+$${\delta C_1 \over \delta t} + {\delta C_2 \over \delta t}
+   = H_2 \left( t, {\delta C_1 \over \delta \lambda_1}
+                 + {\delta C_2 \over \delta \lambda_1},\ldots\,
+                   {\delta C_1 \over \delta \lambda_{3n}}
+                 + {\delta C_2 \over \delta \lambda_{3n}},
+                   \lambda_1,\ldots\, \lambda_{3n} \right)
+   \eqno {\rm (V^1.)}$$
+becomes approximately, by (G${}^1$.) and (L${}^1$.),
+$${d C_2 \over dt}
+   = - {\delta C_1 \over \delta t}
+     + H_2 \left( t, {\delta C_1 \over \delta \lambda_1},\ldots\,
+                     {\delta C_1 \over \delta \lambda_{3n}},
+                     \lambda_1,\ldots\, \lambda_{3n} \right),
+   \eqno {\rm (W^1.)}$$
+and gives by integration,
+$$C_2 = \int_0^t \left\{
+     - {\delta C_1 \over \delta t}
+     + H_2 \left( t, {\delta C_1 \over \delta \lambda_1},\ldots\,
+                     {\delta C_1 \over \delta \lambda_{3n}},
+                     \lambda_1,\ldots\, \lambda_{3n} \right)
+   \right\} dt,
+   \eqno {\rm (X^1.)}$$
+the parts $C_1$ and $C_2$ being supposed to vanish separately when
+$t = 0$, like the whole function of elements $C$.
+
+And to obtain such a first approximation, $E_1$ or $C_1$, to either
+of these two functions of elements $E$, $C$, we may change, in the
+definitions (76.), (77.), the varying elements $\kappa$~$\lambda$,
+to their initial values $e$~$p$, and then eliminate one set of
+these initial values by the corresponding set of the following
+approximate equations, deduced from the formul{\ae} (G${}^1$.):
+$$\kappa_i = e_i + \int_0^t {\delta H_2 \over \delta p_i} dt;
+   \eqno {\rm (Y^1.)}$$
+and
+$$\lambda_i = p_i - \int_0^t {\delta H_2 \over \delta e_i} dt.
+   \eqno {\rm (Z^1.)}$$
+
+It is easy also to see that these two functions of elements
+$C$ and $E$ are connected with each other, and with the
+disturbing function $S_2$, so that the form of any one
+may be deduced from that of any other, when the function $S_1$
+of undisturbed motion is known.
+
+
+\bigbreak
+
+{\sectiontitle
+Analogous formul{\ae} for the motion of a Single Point.\par}
+
+\nobreak\bigskip
+
+19.
+Our general method in dynamics, though intended chiefly for the
+study of attracting and repelling systems, is not confined to such,
+but may be used in all questions to which the law of living forces
+applies.  And all the analysis of this Essay, but especially the
+theory of perturbations, may usefully be illustrated by the following
+analogous reasonings and results respecting the motion of a single
+point.
+
+Imagine then such a point, having for its three rectangular
+coordinates $x$~$y$~$z$, and moving in an orbit determined
+by three ordinary differential equations of the second order
+of forms analogous to the equations (2.), namely,
+$$x'' = {\delta U \over \delta x};\quad
+  y'' = {\delta U \over \delta y};\quad
+  z'' = {\delta U \over \delta z};
+   \eqno {\rm (78.)}$$
+$U$ being any given function of the coordinates not expressly
+involving the time: and let us establish the following definition,
+analogous to (4.),
+$$T = {\textstyle {1 \over 2}} (x'^2 + y'^2 + z'^2),
+   \eqno {\rm (79.)}$$
+$x'$~$y'$~$z'$ being the first, and $x''$~$y''$~$z''$ being the
+second differential coefficients of the coordinates, considered
+as functions of the time~$t$.  If we express, for greater generality
+or facility, the rectangular coordinates $x$~$y$~$z$ as functions
+of three other marks of position $\eta_1$~$\eta_2$~$\eta_3$,
+$T$ will become a homogeneous function of the second dimension
+of their first differential coefficients $\eta_1'$~$\eta_2'$
+$\eta_3'$ taken with respect to time; and if we put, for abridgement,
+$$\varpi_1 = {\delta T \over \delta \eta_1'},\quad
+  \varpi_2 = {\delta T \over \delta \eta_2'},\quad
+  \varpi_3 = {\delta T \over \delta \eta_3'},
+   \eqno {\rm (80.)}$$
+$T$ may considered also as a function of the form
+$$T = F(\varpi_1, \varpi_2, \varpi_3, \eta_1, \eta_2, \eta_3),
+   \eqno {\rm (81.)}$$
+which will be homogeneous of the second dimension with respect
+to $\varpi_1$~$\varpi_2$~$\varpi_3$.  We may also put,
+for abridgement,
+$$T = F(\varpi_1, \varpi_2, \varpi_3, \eta_1, \eta_2, \eta_3)
+      - U(\eta_1, \eta_2, \eta_3) = H;
+   \eqno {\rm (82.)}$$
+and then, instead of the three differential equations of the
+second order (78.), we may employ the six following of the
+first order, analogous to the equations (A.), and obtained
+by a similar reasoning,
+$$\left. \multieqalign{
+{d \eta_1 \over dt}   &= + {\delta H \over \delta \varpi_1}, &
+{d \eta_2 \over dt}   &= + {\delta H \over \delta \varpi_2}, &
+{d \eta_3 \over dt}   &= + {\delta H \over \delta \varpi_3}, \cr
+{d \varpi_1 \over dt} &= - {\delta H \over \delta \eta_1},   &
+{d \varpi_2 \over dt} &= - {\delta H \over \delta \eta_2},   &
+{d \varpi_3 \over dt} &= - {\delta H \over \delta \eta_3},   \cr}
+   \right\}
+   \eqno {\rm (83.)}$$
+
+\medskip
+
+20.
+The rigorous integrals of these six differential equations
+may be expressed under the following forms, analogous to (B.),
+$$\left. \multieqalign{
+\varpi_1 &=   {\delta S \over \delta \eta_1}, &
+\varpi_2 &=   {\delta S \over \delta \eta_2}, &
+\varpi_3 &=   {\delta S \over \delta \eta_3}, \cr
+p_1      &= - {\delta S \over \delta e_1},    &
+p_2      &= - {\delta S \over \delta e_2},    &
+p_3      &= - {\delta S \over \delta e_3},    \cr}
+   \right\}
+   \eqno {\rm (84.)}$$
+in which $e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$ are the
+initial values, or values at the time $0$, of
+$\eta_1$~$\eta_2$~$\eta_3$ $\varpi_1$~$\varpi_2$~$\varpi_3$;
+and $S$ is the definite integral
+$$S = \int_0^t \left(
+        \varpi_1 {\delta H \over \delta \varpi_1}
+      + \varpi_2 {\delta H \over \delta \varpi_2}
+      + \varpi_3 {\delta H \over \delta \varpi_3}
+      - H \right) dt,
+   \eqno {\rm (85.)}$$
+considered as a function of $\eta_1$~$\eta_2$~$\eta_3$
+$e_1$~$e_2$~$e_3$ and $t$.  The quantity~$H$ does not change in
+the course of the motion, and the function~$S$ must satisfy the following
+pair of partial differential equations of the first order, analogous
+to the pair (C.),
+$$\left. \eqalign{
+{\delta S \over \delta t} + F \left(
+      {\delta S \over \delta \eta_1},
+      {\delta S \over \delta \eta_2},
+      {\delta S \over \delta \eta_3},
+      \eta_1, \eta_2, \eta_3 \right)
+   &= U(\eta_1, \eta_2, \eta_3);\cr
+{\delta S \over \delta t} + F \left(
+      {\delta S \over \delta e_1},
+      {\delta S \over \delta e_2},
+      {\delta S \over \delta e_3},
+      e_1, e_2, e_3 \right)
+   &= U(e_1, e_2, e_3).\cr}
+   \right\}
+   \eqno {\rm (86.)}$$
+This important function~$S$, which may be called the
+{\it principal function\/} of the motion, may hence be
+rigorously expressed under the following form, obtained by
+reasonings analogous to those of the seventh number of this Essay:
+$$\left. \eqalign{
+S &= S_1 + \int_0^t \left\{
+      - {\delta S_1 \over \delta t}
+      + U( \eta_1, \eta_2, \eta_3 )
+      - F \left(
+         {\delta S_1 \over \delta \eta_1},
+         {\delta S_1 \over \delta \eta_2},
+         {\delta S_1 \over \delta \eta_3},
+         \eta_1, \eta_2, \eta_3 \right)
+      \right\} dt \cr
+  &\phantom{= S_1} \mathord{}
+    + \int_0^t
+        F \left(
+         {\delta S \over \delta \eta_1}
+          - {\delta S_1 \over \delta \eta_1},
+         {\delta S \over \delta \eta_2}
+          - {\delta S_1 \over \delta \eta_2},
+         {\delta S \over \delta \eta_3}
+          - {\delta S_1 \over \delta \eta_3},
+         \eta_1, \eta_2, \eta_3 \right) dt;\cr}
+   \right\}
+   \eqno {\rm (87.)}$$
+$S_1$ being any arbitrary function of the same quantities
+$\eta_1$~$\eta_2$~$\eta_3$ $e_1$~$e_2$~$e_3$~$t$, so chosen
+as to vanish with the time.  And if this arbitrary function $S_1$
+be chosen so as to be a first approximate value of the principal
+function~$S$, we may neglect, in a second approximation, the
+second definite integral in (87.).
+
+\bigbreak
+
+21.
+A first approximation of this kind can be obtained, whenever, by
+separating the expression~$H$, (82.) into a predominant and a
+smaller part, $H_1$ and $H_2$, and by neglecting the part $H_2$,
+we have changed the differential equations (83.) to others, namely,
+$$\left. \multieqalign{
+{d \eta_1 \over dt}   &=   {\delta H_1 \over \delta \varpi_1}, &
+{d \eta_2 \over dt}   &=   {\delta H_1 \over \delta \varpi_2}, &
+{d \eta_3 \over dt}   &=   {\delta H_1 \over \delta \varpi_3}, \cr
+{d \varpi_1 \over dt} &= - {\delta H_1 \over \delta \eta_1},   &
+{d \varpi_2 \over dt} &= - {\delta H_1 \over \delta \eta_2},   &
+{d \varpi_3 \over dt} &= - {\delta H_1 \over \delta \eta_3},   \cr}
+   \right\}
+   \eqno {\rm (88.)}$$
+and have succeeded in integrating rigorously these simplified
+equations, belonging to a simpler motion, which may be called the
+{\it undisturbed motion\/} of the point.  For the principal function
+of such undisturbed motion, namely, the definite integral
+$$S_1 = \int_0^t \left(
+        \varpi_1 {\delta H_1 \over \delta \varpi_1}
+      + \varpi_2 {\delta H_1 \over \delta \varpi_2}
+      + \varpi_3 {\delta H_1 \over \delta \varpi_3}
+      - H_1 \right) dt,
+   \eqno {\rm (89.)}$$
+considered as a function of
+$\eta_1$~$\eta_2$~$\eta_3$ $e_1$~$e_2$~$e_3$~$t$,
+will then be an approximate value for the original function
+of disturbed motion $S$, which original function corresponds
+to the more complex differential equations,
+$$\left. \multieqalign{
+{d \eta_1 \over dt}   &=   {\delta H_1 \over \delta \varpi_1}
+                         + {\delta H_2 \over \delta \varpi_1}, &
+{d \eta_2 \over dt}   &=   {\delta H_1 \over \delta \varpi_2}
+                         + {\delta H_2 \over \delta \varpi_2}, &
+{d \eta_3 \over dt}   &=   {\delta H_1 \over \delta \varpi_3}
+                         + {\delta H_2 \over \delta \varpi_3}, \cr
+{d \varpi_1 \over dt} &= - {\delta H_1 \over \delta \eta_1}
+                         - {\delta H_2 \over \delta \eta_1},   &
+{d \varpi_2 \over dt} &= - {\delta H_1 \over \delta \eta_2}
+                         - {\delta H_2 \over \delta \eta_2},   &
+{d \varpi_3 \over dt} &= - {\delta H_1 \over \delta \eta_3}
+                         - {\delta H_2 \over \delta \eta_3}.   \cr}
+   \right\}
+   \eqno {\rm (90.)}$$
+The function $S_1$ of undisturbed motion must satisfy a pair
+of partial differential equations of the first order, analogous
+to the pair (86.); and the integrals of undisturbed motion
+may be represented thus,
+$$\left. \multieqalign{
+\varpi_1 &=   {\delta S_1 \over \delta \eta_1}, &
+\varpi_2 &=   {\delta S_1 \over \delta \eta_2}, &
+\varpi_3 &=   {\delta S_1 \over \delta \eta_3}, \cr
+p_1      &= - {\delta S_1 \over \delta e_1},    &
+p_2      &= - {\delta S_1 \over \delta e_2},    &
+p_3      &= - {\delta S_1 \over \delta e_3}:    \cr}
+   \right\}
+   \eqno {\rm (91.)}$$
+while the integrals of disturbed motion may be expressed with
+equal rigour under the following analogous forms,
+$$\left. \multieqalign{
+\varpi_1 &=   {\delta S_1 \over \delta \eta_1}
+            + {\delta S_2 \over \delta \eta_1}, &
+\varpi_2 &=   {\delta S_1 \over \delta \eta_2}
+            + {\delta S_2 \over \delta \eta_2}, &
+\varpi_3 &=   {\delta S_1 \over \delta \eta_3}
+            + {\delta S_2 \over \delta \eta_3}, \cr
+p_1      &= - {\delta S_1 \over \delta e_1}
+            - {\delta S_2 \over \delta e_1},    &
+p_2      &= - {\delta S_1 \over \delta e_2}
+            - {\delta S_2 \over \delta e_2},    &
+p_3      &= - {\delta S_1 \over \delta e_3}
+            - {\delta S_2 \over \delta e_3},    \cr}
+   \right\}
+   \eqno {\rm (92.)}$$
+if $S_1$ denote the rigorous correction of $S_1$, or the
+disturbing part of the whole principal function~$S$.  And by
+the foregoing general theory of approximation, this disturbing
+part or function $S_2$ may be approximately represented by the
+definite integral (T.),
+$$S_2 = - \int_0^t H_2 \,dt;
+   \eqno {\rm (93.)}$$
+in calculating which definite integral the equations (91.) may
+be employed.
+
+\bigbreak
+
+22.
+If the integrals of undisturbed motion (91.) have given
+$$\left. \eqalign{
+\eta_1   &= \phi_1(t, e_1, e_2, e_3, p_1, p_2, p_3),\cr
+\eta_2   &= \phi_2(t, e_1, e_2, e_3, p_1, p_2, p_3),\cr
+\eta_3   &= \phi_3(t, e_1, e_2, e_3, p_1, p_2, p_3),\cr}
+   \right\}
+   \eqno {\rm (94.)}$$
+and
+$$\left. \eqalign{
+\varpi_1 &= \psi_1(t, e_1, e_2, e_3, p_1, p_2, p_3),\cr
+\varpi_2 &= \psi_2(t, e_1, e_2, e_3, p_1, p_2, p_3),\cr
+\varpi_3 &= \psi_3(t, e_1, e_2, e_3, p_1, p_2, p_3),\cr}
+   \right\}
+   \eqno {\rm (95.)}$$
+then the integrals of disturbed motion (92.) may be
+rigorously transformed as follows,
+$$\left. \eqalign{
+\eta_1
+   &= \phi_1 \left( t, e_1, e_2, e_3,
+         p_1 + {\delta S_2 \over \delta e_1},
+         p_2 + {\delta S_2 \over \delta e_2},
+         p_3 + {\delta S_2 \over \delta e_3}
+         \right),\cr
+\eta_2
+   &= \phi_2 \left( t, e_1, e_2, e_3,
+         p_1 + {\delta S_2 \over \delta e_1},
+         p_2 + {\delta S_2 \over \delta e_2},
+         p_3 + {\delta S_2 \over \delta e_3}
+         \right),\cr
+\eta_3
+   &= \phi_3 \left( t, e_1, e_2, e_3,
+         p_1 + {\delta S_2 \over \delta e_1},
+         p_2 + {\delta S_2 \over \delta e_2},
+         p_3 + {\delta S_2 \over \delta e_3}
+         \right),\cr}
+   \right\}
+   \eqno {\rm (96.)}$$
+and
+$$\left. \eqalign{
+\varpi_1
+   &= {\delta S_2 \over \delta \eta_1}
+      + \psi_1 \left( t, e_1, e_2, e_3,
+         p_1 + {\delta S_2 \over \delta e_1},
+         p_2 + {\delta S_2 \over \delta e_2},
+         p_3 + {\delta S_2 \over \delta e_3}
+         \right),\cr
+\varpi_2
+   &= {\delta S_2 \over \delta \eta_2}
+      + \psi_2 \left( t, e_1, e_2, e_3,
+         p_1 + {\delta S_2 \over \delta e_1},
+         p_2 + {\delta S_2 \over \delta e_2},
+         p_3 + {\delta S_2 \over \delta e_3}
+         \right),\cr
+\varpi_3
+   &= {\delta S_2 \over \delta \eta_3}
+      + \psi_3 \left( t, e_1, e_2, e_3,
+         p_1 + {\delta S_2 \over \delta e_1},
+         p_2 + {\delta S_2 \over \delta e_2},
+         p_3 + {\delta S_2 \over \delta e_3}
+         \right),\cr}
+   \right\}
+   \eqno {\rm (97.)}$$
+$S_2$ being here the rigorous disturbing function.  And the
+perturbations of position, at any time~$t$, may be approximately
+expressed by the following formula,
+$$\left. \eqalign{\Delta \eta_1
+   &=    {\delta \eta_1 \over \delta e_1}
+            \int_0^t {\delta H_2 \over \delta p_1} dt
+       + {\delta \eta_1 \over \delta e_2}
+            \int_0^t {\delta H_2 \over \delta p_2} dt
+       + {\delta \eta_1 \over \delta e_3}
+            \int_0^t {\delta H_2 \over \delta p_3} dt \cr
+   &\mathrel{-}
+         {\delta \eta_1 \over \delta p_1}
+            \int_0^t {\delta H_2 \over \delta e_1} dt
+       - {\delta \eta_1 \over \delta p_2}
+            \int_0^t {\delta H_2 \over \delta e_2} dt
+       - {\delta \eta_1 \over \delta p_3}
+            \int_0^t {\delta H_2 \over \delta e_3} dt,\cr}
+   \right\}
+   \eqno {\rm (98.)}$$
+together with two similar formul{\ae} for the perturbations of the
+two other coordinates, or marks of position $\eta_2$, $\eta_3$.
+In these formul{\ae}, the coordinates and $H_2$ are supposed
+to be expressed, by the theory of undisturbed motion, as functions
+of the time~$t$, and of the constants
+$e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$.
+
+\bigbreak
+
+23.
+Again, if the integrals of undisturbed motion have given, by
+elimination, expressions for these constants, of the forms
+$$\left. \eqalign{
+e_1 &= \eta_1
+      + \Phi_1(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+e_2 &= \eta_2
+      + \Phi_2(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+e_3 &= \eta_3
+      + \Phi_3(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr}
+   \right\}
+   \eqno {\rm (99.)}$$
+and
+$$\left. \eqalign{
+p_1 &= \varpi_1
+      + \Psi_1(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+p_2 &= \varpi_2
+      + \Psi_2(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+p_3 &= \varpi_3
+      + \Psi_3(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3);\cr}
+   \right\}
+   \eqno {\rm (100.)}$$
+and if, for disturbed motion, we establish the definitions
+$$\left. \eqalign{
+\kappa_1 &= \eta_1
+      + \Phi_1(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+\kappa_2 &= \eta_2
+      + \Phi_2(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+\kappa_3 &= \eta_3
+      + \Phi_3(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr}
+   \right\}
+   \eqno {\rm (101.)}$$
+and
+$$\left. \eqalign{
+\lambda_1 &= \varpi_1
+      + \Psi_1(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+\lambda_2 &= \varpi_2
+      + \Psi_2(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3),\cr
+\lambda_3 &= \varpi_3
+      + \Psi_3(t, \eta_1, \eta_2, \eta_3,
+                  \varpi_1, \varpi_2, \varpi_3);\cr}
+   \right\}
+   \eqno {\rm (102.)}$$
+we shall have, for such disturbed motion, the following
+rigorous equations, of the forms (94.) and (95.),
+$$\left. \eqalign{
+\eta_1   &= \phi_1(t, \kappa_1, \kappa_2, \kappa_3,
+                      \lambda_1, \lambda_2, \lambda_3),\cr
+\eta_2   &= \phi_2(t, \kappa_1, \kappa_2, \kappa_3,
+                      \lambda_1, \lambda_2, \lambda_3),\cr
+\eta_3   &= \phi_3(t, \kappa_1, \kappa_2, \kappa_3,
+                      \lambda_1, \lambda_2, \lambda_3),\cr}
+   \right\}
+   \eqno {\rm (103.)}$$
+and
+$$\left. \eqalign{
+\varpi_1 &= \psi_1(t, \kappa_1, \kappa_2, \kappa_3,
+                      \lambda_1, \lambda_2, \lambda_3),\cr
+\varpi_2 &= \psi_2(t, \kappa_1, \kappa_2, \kappa_3,
+                      \lambda_1, \lambda_2, \lambda_3),\cr
+\varpi_3 &= \psi_3(t, \kappa_1, \kappa_2, \kappa_3,
+                      \lambda_1, \lambda_2, \lambda_3);\cr}
+   \right\}
+   \eqno {\rm (104.)}$$
+and may call the quantities
+$\kappa_1$~$\kappa_2$~$\kappa_3$
+$\lambda_1$~$\lambda_2$~$\lambda_3$
+the 6 {\it varying elements\/} of the motion.  To determine these six
+varying elements, we may employ the six following rigorous equations
+in ordinary differentials of the first order, in which $H_2$ is
+supposed to have been expressed by (103.) and (104.) as a function
+of the elements and of the time:
+$$\left. \multieqalign{
+{d\kappa_1 \over dt}
+  &=   {\delta H_2 \over \delta \lambda_1}, &
+{d\kappa_2 \over dt}
+  &=   {\delta H_2 \over \delta \lambda_2}, &
+{d\kappa_3 \over dt}
+  &=   {\delta H_2 \over \delta \lambda_3}, \cr
+{d\lambda_1 \over dt}
+  &= - {\delta H_2 \over \delta \kappa_1},  &
+{d\lambda_2 \over dt}
+  &= - {\delta H_2 \over \delta \kappa_2},  &
+{d\lambda_3 \over dt}
+  &= - {\delta H_2 \over \delta \kappa_3};  \cr}
+   \right\}
+   \eqno {\rm (105.)}$$
+and the rigorous integrals of these 6 equations may be expressed
+in the following manner,
+$$\left. \multieqalign{
+\lambda_1 &= {\delta E \over \delta \kappa_1}, &
+\lambda_2 &= {\delta E \over \delta \kappa_2}, &
+\lambda_3 &= {\delta E \over \delta \kappa_3}, \cr
+p_1 &= - {\delta E \over \delta e_1}, &
+p_2 &= - {\delta E \over \delta e_2}, &
+p_3 &= - {\delta E \over \delta e_3}, \cr}
+   \right\}
+   \eqno {\rm (106.)}$$
+the constants $e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$ retaining
+their recent meanings, and being therefore the initial values
+of the elements
+$\kappa_1$~$\kappa_2$~$\kappa_3$
+$\lambda_1$~$\lambda_2$~$\lambda_3$;
+while the function~$E$, which may be called the
+{\it function of elements}, because its form determines the
+laws of their variations, is the definite integral
+$$E = \int_0^t \left(
+        \lambda_1 {\delta H_2 \over \delta \lambda_1}
+      + \lambda_2 {\delta H_2 \over \delta \lambda_2}
+      + \lambda_3 {\delta H_2 \over \delta \lambda_3}
+      - H_2 \right) dt,
+   \eqno {\rm (107.)}$$
+considered as depending on $\kappa_1$~$\kappa_2$~$\kappa_3$
+$e_1$~$e_2$~$e_3$ and $t$.  The integrals of the equations
+(105.) may also be expressed in this other way,
+$$\left. \multieqalign{
+\kappa_1 &= + {\delta C \over \delta \lambda_1}, &
+\kappa_2 &= + {\delta C \over \delta \lambda_2}, &
+\kappa_3 &= + {\delta C \over \delta \lambda_3}, \cr
+e_1 &= - {\delta C \over \delta p_1}, &
+e_2 &= - {\delta C \over \delta p_2}, &
+e_3 &= - {\delta C \over \delta p_3}, \cr}
+   \right\}
+   \eqno {\rm (108.)}$$
+$C$ being the definite integral
+$$C = - \int_0^t \left(
+        \kappa_1 {\delta H_2 \over \delta \kappa_1}
+      + \kappa_2 {\delta H_2 \over \delta \kappa_2}
+      + \kappa_3 {\delta H_2 \over \delta \kappa_3}
+      - H_2 \right) dt,
+   \eqno {\rm (109.)}$$
+regarded as a function of $\lambda_1$~$\lambda_2$~$\lambda_3$
+$p_1$~$p_2$~$p_3$ and $t$: and it is easy to prove that each
+of these two {\it functions of elements}, $C$ and $E$, must
+satisfy a partial differential equation of the first order,
+which can be previously assigned, and which may assist in
+discovering the forms of these two functions, and especially
+in improving an approximate expression for either.  All these
+results for the motion of a single point, are analogous to the
+results already deduced in this Essay, for an attracting or
+repelling system.
+
+\bigbreak
+
+{\sectiontitle
+Mathematical Example, suggested by the motion of Projectiles.\par}
+
+\nobreak\bigskip
+
+24.
+If the three marks of position $\eta_1$~$\eta_2$~$\eta_3$ of the
+moving point are the rectangular coordinates themselves, and if
+the function~$U$ has the form
+$$U = - g\eta_3 - {\textstyle {1 \over 2}} \{
+      \mu^2 (\eta_1^2 + \eta_2^2) + \nu^2 \eta_3^2 \},
+   \eqno {\rm (110.)}$$
+$g$, $\mu$, $\nu$ being constants; then the expression
+$$H = {\textstyle {1 \over 2}}(\varpi_1^2 + \varpi_2^2 + \varpi_3^2)
+      + g\eta_3 + {\textstyle {1 \over 2}} \{
+      \mu^2 (\eta_1^2 + \eta_2^2) + \nu^2 \eta_3^2 \}
+   \eqno {\rm (111.)}$$
+is that which must be substituted in the general forms (83.),
+in order to form the 6 differential equations of motion
+of the first order, namely,
+$$\left. \multieqalign{
+{d\eta_1 \over dt} &= \varpi_1, &
+{d\eta_2 \over dt} &= \varpi_2, &
+{d\eta_3 \over dt} &= \varpi_3, \cr
+{d\varpi_1 \over dt} &= - \mu^2 \eta_1, &
+{d\varpi_2 \over dt} &= - \mu^2 \eta_2, &
+{d\varpi_3 \over dt} &= -g - \nu^2 \eta_3. \cr}
+   \right\}
+   \eqno {\rm (112.)}$$
+These differential equations have for their rigorous integrals
+the six following,
+$$\left. \eqalign{
+\eta_1 &= e_1 \cos \mu t + {p_1 \over \mu} \sin \mu t,\cr
+\eta_2 &= e_2 \cos \mu t + {p_2 \over \mu} \sin \mu t,\cr
+\eta_3 &= e_3 \cos \nu t + {p_3 \over \nu} \sin \nu t
+            - {g \over \nu^2} \mathop{\rm vers} \nu t,\cr}
+   \right\}
+   \eqno {\rm (113.)}$$
+and
+$$\left. \eqalign{
+\varpi_1 &= p_1 \cos \mu t - \mu e_1 \sin \mu t,\cr
+\varpi_2 &= p_2 \cos \mu t - \mu e_2 \sin \mu t,\cr
+\varpi_3 &= p_3 \cos \nu t
+      - \left( \nu e_3 + {g \over \nu} \right) \sin \nu t;\cr}
+   \right\}
+   \eqno {\rm (114.)}$$
+$e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$ being still
+the initial values of
+$\eta_1$~$\eta_2$~$\eta_3$ $\varpi_1$~$\varpi_2$~$\varpi_3$.
+
+Employing these rigorous integral equations to calculate the
+function~$S$, that is, by (85.) and (110.) (111.), the
+definite integral
+$$S = \int_0^t \left(
+      {\varpi_1^2 + \varpi_2^2 + \varpi_3^2 \over 2}
+      + U \right) dt,
+   \eqno {\rm (115.)}$$
+we find
+$$\left. \eqalign{
+{\textstyle {1 \over 2}} (\varpi_1^2 + \varpi_2^2 + \varpi_3^2)
+   &= {\textstyle {1 \over 4}} \left\{
+         p_1^2 + p_2^2 + p_3^2 + \mu^2 (e_1^2 + e_2^2)
+         + \left( \nu e_3 + {g \over \nu} \right)^2 \right\} \cr
+      &\mathrel{\phantom{=}} \mathord{}
+       + {\textstyle {1 \over 4}} \{
+         p_1^2 + p_2^2 - \mu^2(e_1^2 + e_2^2) \} \cos 2\mu t
+       - {\textstyle {1 \over 2}} \mu (e_1 p_1 + e_2 p_2) \sin 2\mu t \cr
+      &\mathrel{\phantom{=}} \mathord{}
+       + {\textstyle {1 \over 4}} \left\{
+         p_3^2 - \left(\nu e_3 + {g \over \nu} \right)^2
+         \right\} \cos 2\nu t
+       - {\textstyle {1 \over 2}} \left( \nu e_3 + {g \over \nu} \right)
+            p_3 \sin 2\nu t,\cr}
+   \right\}
+   \eqno {\rm (116.)}$$
+and
+$$\left. \eqalign{
+U  &= {g^2 \over 2 \nu^2}
+       - {\textstyle {1 \over 4}} \left\{
+         p_1^2 + p_2^2 + p_3^2 + \mu^2 (e_1^2 + e_2^2)
+         + \left( \nu e_3 + {g \over \nu} \right)^2 \right\} \cr
+      &\mathrel{\phantom{=}} \mathord{}
+       + {\textstyle {1 \over 4}} \{
+         p_1^2 + p_2^2 - \mu^2(e_1^2 + e_2^2) \} \cos 2\mu t
+       - {\textstyle {1 \over 2}} \mu (e_1 p_1 + e_2 p_2) \sin 2\mu t \cr
+      &\mathrel{\phantom{=}} \mathord{}
+       + {\textstyle {1 \over 4}} \left\{
+         p_3^2 - \left(\nu e_3 + {g \over \nu} \right)^2
+         \right\} \cos 2\nu t
+       - {\textstyle {1 \over 2}} \left( \nu e_3 + {g \over \nu} \right)
+            p_3 \sin 2\nu t,\cr}
+   \right\}
+   \eqno {\rm (117.)}$$
+and therefore,
+$$\left. \eqalign{
+S  &= {g^2 t \over 2 \nu^2}
+       + \{ p_1^2 + p_2^2 - \mu^2(e_1^2 + e_2^2) \}
+            {\sin 2\mu t \over 4 \mu}
+       - {\textstyle {1 \over 2}} (e_1 p_1 + e_2 p_2)
+            \mathop{\rm vers} 2\mu t \cr
+      &\mathrel{\phantom{=}} \mathord{}
+       + \left\{ p_3^2 - \left(\nu e_3 + {g \over \nu} \right)^2 \right\}
+            {\sin 2\nu t \over 4 \nu}
+       - {\textstyle {1 \over 2}} p_3 \left( e_3 + {g \over \nu^2} \right)
+            \mathop{\rm vers} 2\nu t.\cr}
+   \right\}
+   \eqno {\rm (118.)}$$
+
+In order, however, to express this function~$S$, as supposed by our
+general method, in terms of the final and initial coordinates and
+of the time, we must employ the analogous expressions for the
+constants $p_1$~$p_2$~$p_3$, deduced from the integrals (113.),
+namely, the following:
+$$\left. \eqalign{
+p_1 &= {\mu \eta_1 - \mu e_1 \cos \mu t \over \sin \mu t},\cr
+p_2 &= {\mu \eta_2 - \mu e_2 \cos \mu t \over \sin \mu t},\cr
+p_3 &= {\displaystyle \nu \eta_3 + {g \over \nu}
+            - \left( \nu e_3 + {g \over \nu} \right) \cos \nu t
+         \over \sin \nu t};\cr}
+   \right\}
+   \eqno {\rm (119.)}$$
+and then we find
+$$\left. \eqalign{
+S  &= {g^2 t \over 2 \nu^2}
+    + {\mu \over 2} \mathbin{.}
+      {(\eta_1 - e_1)^2 + (\eta_2 - e_2)^2 \over \tan \mu t}
+    + {\nu \over 2} \mathbin{.}
+      {(\eta_3 - e_3)^2 \over \tan \nu t} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+    - \mu (\eta_1 e_1 + \eta_2 e_2) \tan {\mu t \over 2}
+    - \nu \left( \eta_3 + {g \over \nu^2} \right)
+          \left( e_3    + {g \over \nu^2} \right)
+          \tan {\nu t \over 2}.\cr}
+   \right\}
+   \eqno {\rm (120.)}$$
+
+This {\it principal function\/}~$S$ satisfies the following pair
+of partial differential equations of the first order, of the
+kind (86.),
+$$\left. \eqalign{
+{\delta S \over \delta t} + {1 \over 2} \left\{
+         \left( {\delta S \over \delta \eta_1} \right)^2
+       + \left( {\delta S \over \delta \eta_2} \right)^2
+       + \left( {\delta S \over \delta \eta_3} \right)^2 \right\}
+   &= - g\eta_3 - {\mu^2 \over 2} (\eta_1^2 + \eta_2^2)
+       - {\nu^2 \over 2} \eta_3^2,\cr
+{\delta S \over \delta t} + {1 \over 2} \left\{
+         \left( {\delta S \over \delta e_1} \right)^2
+       + \left( {\delta S \over \delta e_2} \right)^2
+       + \left( {\delta S \over \delta e_3} \right)^2 \right\}
+   &= - ge_3 - {\mu^2 \over 2} (e_1^2 + e_2^2)
+       - {\nu^2 \over 2} e_3^2,\cr}
+   \right\}
+   \eqno {\rm (121.)}$$
+and {\it if its form had been previously found}, by the help
+of this pair, or in any other way, {\it the integrals of the
+equations of motion might (by our general method) have been
+deduced from it}, under the forms,
+$$\left. \eqalign{
+\varpi_1 &= {\delta S \over \delta \eta_1}
+          = \mu (\eta_1 - e_1) \mathop{ \rm cotan} \mu t
+               - \mu e_1 \tan {\mu t \over 2},\cr
+\varpi_2 &= {\delta S \over \delta \eta_2}
+          = \mu (\eta_2 - e_2) \mathop{ \rm cotan} \mu t
+               - \mu e_2 \tan {\mu t \over 2},\cr
+\varpi_3 &= {\delta S \over \delta \eta_3}
+          = \nu (\eta_3 - e_3) \mathop{ \rm cotan} \nu t
+               - \left( \nu e_3 + {g \over \nu} \right)
+               \tan {\nu t \over 2},\cr}
+   \right\}
+   \eqno {\rm (122.)}$$
+and
+$$\left. \eqalign{
+p_1 &= - {\delta S \over \delta e_1}
+          = \mu (\eta_1 - e_1) \mathop{ \rm cotan} \mu t
+               + \mu \eta_1 \tan {\mu t \over 2},\cr
+p_2 &= - {\delta S \over \delta e_2}
+          = \mu (\eta_2 - e_2) \mathop{ \rm cotan} \mu t
+               + \mu \eta_2 \tan {\mu t \over 2},\cr
+p_3 &= - {\delta S \over \delta e_3}
+          = \nu (\eta_3 - e_3) \mathop{ \rm cotan} \nu t
+               + \left( \nu \eta_3 + {g \over \nu} \right)
+               \tan {\nu t \over 2}:\cr}
+   \right\}
+   \eqno {\rm (123.)}$$
+the last of these two sets of equations coinciding with the set
+(119.), or (113.), and conducting, when combined with the first
+set, (122.), to the other former set of integrals, (114.).
+
+\bigbreak
+
+25.
+Suppose now, to illustrate the theory of perturbation, that the
+constants $\mu$, $\nu$ are small, and that, after separating
+the expression (111.) for $H$ into two parts,
+$$H_1 = {\textstyle {1 \over 2}}
+            (\varpi_1^2 + \varpi_2^2 + \varpi_3^2)
+         + g \eta_3,
+   \eqno {\rm (124.)}$$
+and
+$$H_2 = {\textstyle {1 \over 2}} \{
+      \mu^2 (\eta_1^2 + \eta_2^2) + \nu^2 \eta_3^2 \},
+   \eqno {\rm (125.)}$$
+we suppress at first the small part $H_2$, and so form, by (88.),
+these other and simpler differential equations of a motion
+which we shall call {\it undisturbed\/}:
+$$\left. \multieqalign{
+{d\eta_1 \over dt} &= \varpi_1, &
+{d\eta_2 \over dt} &= \varpi_2, &
+{d\eta_3 \over dt} &= \varpi_3, \cr
+{d\varpi_1 \over dt} &= 0, &
+{d\varpi_2 \over dt} &= 0, &
+{d\varpi_3 \over dt} &= -g. \cr}
+   \right\}
+   \eqno {\rm (126.)}$$
+
+These new equations have for their rigorous integrals, of the
+forms (94.) and (95.),
+$$\eta_1 = e_1 + p_1 t,\quad
+  \eta_2 = e_2 + p_2 t,\quad
+  \eta_3 = e_3 + p_3 t - {\textstyle {1 \over 2}} g t^2,
+   \eqno {\rm (127.)}$$
+and
+$$\varpi_1 = p_1,\quad
+  \varpi_2 = p_2,\quad
+  \varpi_3 = p_3 - gt;
+   \eqno {\rm (128.)}$$
+and the {\it principal function\/} $S_1$ of the same undisturbed
+motion is, by (89.),
+$$\left. \eqalign{
+S_1 &= \int_0^t \left(
+         {\varpi_1^2 + \varpi_2^2 + \varpi_3^2 \over 2}
+         - g \eta_3 \right) dt \cr
+    &= \int_0^t \left(
+         {p_1^2 + p_2^2 + p_3^2 \over 2}
+         - g e_3 - 2 g p_3 t + g^2 t^2 \right) dt \cr
+    &= \left( {p_1^2 + p_2^2 + p_3^2 \over 2} - g e_3 \right) t
+       - g p_3 t^2 + {\textstyle {1 \over 3}}g^2 t^3,\cr}
+   \right\}
+   \eqno {\rm (129.)}$$
+or finally, by (127.),
+$$S_1 = {(\eta_1 - e_1)^2 + (\eta_2 - e_2)^2 + (\eta_3 - e_3)^2
+            \over 2t}
+   - {\textstyle {1 \over 2}} gt (\eta_3 + e_3)
+   - {\textstyle {1 \over 24}} g^2 t^3.
+   \eqno {\rm (130.)}$$
+
+This function satisfies, as it ought, the following pair of
+partial differential equations,
+$$\left. \eqalign{
+{\delta S_1 \over \delta t} + {1 \over 2} \left\{
+         \left( {\delta S_1 \over \delta \eta_1} \right)^2
+       + \left( {\delta S_1 \over \delta \eta_2} \right)^2
+       + \left( {\delta S_1 \over \delta \eta_3} \right)^2 \right\}
+   &= - g\eta_3,\cr
+{\delta S_1 \over \delta t} + {1 \over 2} \left\{
+         \left( {\delta S_1 \over \delta e_1} \right)^2
+       + \left( {\delta S_1 \over \delta e_2} \right)^2
+       + \left( {\delta S_1 \over \delta e_3} \right)^2 \right\}
+   &= - ge_3.\cr}
+   \right\}
+   \eqno {\rm (131.)}$$
+And if, by the help of this pair, or in any other way, the form
+(130.) of this {\it principal function\/} $S_1$ had been found,
+the integral equations (127.) and (128.) might have been deduced
+from it, by our general method, as follows:
+$$\left. \eqalign{
+\varpi_1 &= {\delta S_1 \over \delta \eta_1}
+            = {\eta_1 - e_1 \over t},\cr
+\varpi_2 &= {\delta S_1 \over \delta \eta_2}
+            = {\eta_2 - e_2 \over t},\cr
+\varpi_3 &= {\delta S_1 \over \delta \eta_3}
+            = {\eta_3 - e_3 \over t} - {\textstyle {1 \over 2}} gt,\cr}
+   \right\}
+   \eqno {\rm (132.)}$$
+and
+$$\left. \eqalign{
+p_1 &= - {\delta S_1 \over \delta e_1}
+            = {\eta_1 - e_1 \over t},\cr
+p_2 &= - {\delta S_1 \over \delta e_2}
+            = {\eta_2 - e_2 \over t},\cr
+p_3 &= - {\delta S_1 \over \delta e_3}
+            = {\eta_3 - e_3 \over t} + {\textstyle {1 \over 2}} gt,\cr}
+   \right\}
+   \eqno {\rm (133.)}$$
+the latter of these two sets coinciding with (127.), and the former
+set conducting to (128.).
+
+\bigbreak
+
+26.
+Returning now from this simpler motion to the more complex motion
+first mentioned, and denoting by $S_2$ the {\it disturbing part\/}
+or function which must be added to $S_1$ in order to make up the
+whole principal function $S$ of that more complex motion; we have,
+by applying our general method, the following rigorous expression
+for this disturbing function,
+$$S_2 = - \int_0^t H_2 \,dt + \int_0^t {1 \over 2} \left\{
+            \left( {\delta S_2 \over \delta \eta_1} \right)^2
+          + \left( {\delta S_2 \over \delta \eta_2} \right)^2
+          + \left( {\delta S_2 \over \delta \eta_3} \right)^2
+            \right\} dt,
+   \eqno {\rm (134.)}$$
+in which we may, approximately, neglect the second definite
+integral, and calculate the first by the help of the equations
+of undisturbed motion.  In this manner we find, approximately,
+by (125.), (127.),
+$$-H_2 = - {\mu^2 \over 2} \{ (e_1 + p_1 t)^2 + (e_2 + p_2 t)^2 \}
+         - {\nu^2 \over 2} (e_3 + p_3 t
+            - {\textstyle {1 \over 2}} g t^2)^2,
+   \eqno {\rm (135.)}$$
+and therefore, by integration,
+$$\left. \eqalign{S_2
+   &= - {\textstyle {1 \over 2}} \{
+            \mu^2 (e_1^2 + e_2^2) + \nu^2 e_3^2 \} t
+      - {\textstyle {1 \over 2}} \{
+            \mu^2 (e_1 p_1 + e_2 p_2) + \nu^2 e_3 p_3 \} t^2 \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {\textstyle {1 \over 6}} \{
+            \mu^2 (p_1^2 + p_2^2) + \nu^2 (p_3^2 - g e_3) \} t^3
+      + {\textstyle {1 \over 8}} \nu^2 g p_3 t^4
+      - {\textstyle {1 \over 40}} \nu^2 g^2 t^5,\cr}
+   \right\}
+   \eqno {\rm (136.)}$$
+or, by (133.),
+$$\left. \eqalign{S_2
+   &= - {\mu^2 t \over 6} (\eta_1^2 + e_1 \eta_1+ e_1^2
+            + \eta_2^2 + e_2 \eta_2 + e_2^2) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {\nu^2 t \over 6} \{ \eta_3^2 + e_3 \eta_3+ e_3^2
+            + {\textstyle {1 \over 4}} g (\eta_3 + e_3) t^2
+            + {\textstyle {1 \over 40}} g^2 t^4 \}:\cr}
+   \right\}
+   \eqno {\rm (137.)}$$
+the error being of the fourth order, with respect to the small
+quantities $\mu$, $\nu$.  And neglecting this small error, we
+can deduce, by our general method, approximate forms for the
+integrals of the equations of disturbed motion, from the
+corrected function $S_1 + S_2$, as follows:
+$$\left. \eqalign{
+\varpi_1 &= {\delta S_1 \over \delta \eta_1}
+                + {\delta S_2 \over \delta \eta_1}
+            = {\eta_1 - e_1 \over t} - {\mu^2 t \over 3} (\eta_1
+                + {\textstyle {1 \over 2}} e_1),\cr
+\varpi_2 &= {\delta S_1 \over \delta \eta_2}
+                + {\delta S_2 \over \delta \eta_2}
+            = {\eta_2 - e_2 \over t} - {\mu^2 t \over 3} (\eta_2
+                + {\textstyle {1 \over 2}} e_2),\cr
+\varpi_3 &= {\delta S_1 \over \delta \eta_3}
+                + {\delta S_2 \over \delta \eta_3}
+            = {\eta_3 - e_3 \over t}
+                - {\textstyle {1 \over 2}} gt
+                - {\nu^2 t \over 3} (\eta_3
+                + {\textstyle {1 \over 2}} e_3
+                + {\textstyle {1 \over 8}} g t^2);\cr}
+   \right\}
+   \eqno {\rm (138.)}$$
+and
+$$\left. \eqalign{
+p_1 &= - {\delta S_1 \over \delta e_1}
+                - {\delta S_2 \over \delta e_1}
+            = {\eta_1 - e_1 \over t} + {\mu^2 t \over 3} (e_1
+                + {\textstyle {1 \over 2}} \eta_1),\cr
+p_2 &= - {\delta S_1 \over \delta e_2}
+                - {\delta S_2 \over \delta e_2}
+            = {\eta_2 - e_2 \over t} + {\mu^2 t \over 3} (e_2
+                + {\textstyle {1 \over 2}} \eta_2),\cr
+p_3 &= - {\delta S_1 \over \delta e_3}
+                - {\delta S_2 \over \delta e_3}
+            = {\eta_3 - e_3 \over t}
+                + {\textstyle {1 \over 2}} gt
+                + {\nu^2 t \over 3} (e_3
+                + {\textstyle {1 \over 2}} \eta_3
+                + {\textstyle {1 \over 8}} g t^2);\cr}
+   \right\}
+   \eqno {\rm (139.)}$$
+or, in the same order of approximation,
+$$\left. \eqalign{
+\eta_1 &= e_1 + p_1 t - {\textstyle {1 \over 2}} \mu^2 t^2
+            (e_1 + {\textstyle {1 \over 3}} p_1 t),\cr
+\eta_2 &= e_2 + p_2 t - {\textstyle {1 \over 2}} \mu^2 t^2
+            (e_2 + {\textstyle {1 \over 3}} p_2 t),\cr
+\eta_3 &= e_3 + p_3 t
+            - {\textstyle {1 \over 2}} g t^2
+            - {\textstyle {1 \over 2}} \nu^2 t^2
+            (e_3 + {\textstyle {1 \over 3}} p_3 t
+            - {\textstyle {1 \over 12}} g t^2),\cr}
+   \right\}
+   \eqno {\rm (140.)}$$
+and
+$$\left. \eqalign{
+\varpi_1 &= p_1 - \mu^2 t (e_1 + {\textstyle {1 \over 2}} p_1 t),\cr
+\varpi_2 &= p_2 - \mu^2 t (e_2 + {\textstyle {1 \over 2}} p_2 t),\cr
+\varpi_3 &= p_3  - gt - \nu^2 t (e_3
+            + {\textstyle {1 \over 2}} p_3 t
+            - {\textstyle {1 \over 6}} g t^2).\cr}
+   \right\}
+   \eqno {\rm (141.)}$$
+Accordingly, if we develope the rigorous integrals of disturbed
+motion, (113.) and (114.), as far as the squares (inclusive)
+of the small quantities $\mu$ and $\nu$, we are conducted to
+these approximate integrals; and if we develope the rigorous
+expression (120.) for the principal function of such motion,
+to the same degree of accuracy, we obtain the sum of the
+two expressions (130.) and (137.).
+
+\bigbreak
+
+27.
+To illustrate still further, in the present example, our general
+method of successive approximation, let $S_3$ denote the small
+unknown correction of the approximate expression (137.), so that
+we shall now have, rigorously, for the present disturbed motion,
+$$S = S_1 + S_2 + S_3,
+   \eqno {\rm (142.)}$$
+$S_1$ and $S_2$ being here determined rigorously by (130.)
+and (137).  Then, substituting $S_1 + S_2$ for $S_1$ in the
+general transformation (87.), we find, rigorously, in the
+present question,
+$$\left. \eqalign{S_3
+   &= - \int_0^t {1 \over 2} \left\{
+            \left( {\delta S_2 \over \delta \eta_1} \right)^2
+          + \left( {\delta S_2 \over \delta \eta_2} \right)^2
+          + \left( {\delta S_2 \over \delta \eta_3} \right)^2
+            \right\} dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + \int_0^t {1 \over 2} \left\{
+            \left( {\delta S_3 \over \delta \eta_1} \right)^2
+          + \left( {\delta S_3 \over \delta \eta_2} \right)^2
+          + \left( {\delta S_3 \over \delta \eta_3} \right)^2
+            \right\} dt:\cr}
+   \right\}
+   \eqno {\rm (143.)}$$
+and if we neglect only terms of the eighth and higher dimensions
+with respect to the small quantities $\mu$, $\nu$, we may confine
+ourselves to the first of these two definite integrals, and may
+employ, in calculating it, the approximate expressions (140.)
+for the coordinates of disturbed motion.  In this manner we
+obtain the very approximate expression,
+$$\left. \eqalign{S_3
+   &= - {\mu^4 \over 18} \int_0^t t^2 \{
+            (\eta_1 + {\textstyle {1 \over 2}} e_1)^2
+          + (\eta_2 + {\textstyle {1 \over 2}} e_2)^2 \} dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {\nu^4 \over 18} \int_0^t t^2
+            (\eta_3 + {\textstyle {1 \over 2}} e_3
+                    + {\textstyle {1 \over 8}} g t^2)^2 dt \cr
+   &= - {\mu^4 t^3 \over 360}
+            ( 4 \eta_1^2 + 7 \eta_1 e_1 + 4 e_1^2
+            + 4 \eta_2^2 + 7 \eta_2 e_2 + 4 e_2^2 ) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {\nu^4 t^3 \over 360}
+            ( 4 \eta_3^2 + 7 \eta_3 e_3 + 4 e_3^2 )
+      - {\nu^4 g t^5 \over 240} (\eta_3 + e_3)
+      - {17 \nu^4 g^2 t^7 \over 40320} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {\mu^6 t^5 \over 945}
+            ( \eta_1^2 + {\textstyle {31 \over 16}} \eta_1 e_1 + e_1^2
+            + \eta_2^2 + {\textstyle {31 \over 16}} \eta_2 e_2 + e_2^2 ) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {\nu^6 t^5 \over 945}
+            ( \eta_3^2 + {\textstyle {31 \over 16}} \eta_3 e_3 + e_3^2 )
+      - {17 \nu^6 g t^7 \over 40320} (\eta_3 + e_3)
+      - {31 \nu^6 g^2 t^9 \over 725760};\cr}
+   \right\}
+   \eqno {\rm (144.)}$$
+which is accordingly the sum of the tems of the fourth and sixth
+dimensions in the development of the rigorous expression (120.),
+and gives, by our general method, correspondingly approximate
+expressions for the integrals of disturbed motion, under the forms
+$$\left. \eqalign{
+\varpi_1 &=   {\delta S_1 \over \delta \eta_1}
+            + {\delta S_2 \over \delta \eta_1}
+            + {\delta S_3 \over \delta \eta_1},\cr
+\varpi_2 &=   {\delta S_1 \over \delta \eta_2}
+            + {\delta S_2 \over \delta \eta_2}
+            + {\delta S_3 \over \delta \eta_2},\cr
+\varpi_3 &=   {\delta S_1 \over \delta \eta_3}
+            + {\delta S_2 \over \delta \eta_3}
+            + {\delta S_3 \over \delta \eta_3},\cr}
+   \right\}
+   \eqno {\rm (145.)}$$
+and
+$$\left. \eqalign{
+p_1 &= - {\delta S_1 \over \delta e_1}
+       - {\delta S_2 \over \delta e_1}
+       - {\delta S_3 \over \delta e_1},\cr
+p_2 &= - {\delta S_1 \over \delta e_2}
+       - {\delta S_2 \over \delta e_2}
+       - {\delta S_3 \over \delta e_2},\cr
+p_3 &= - {\delta S_1 \over \delta e_3}
+       - {\delta S_2 \over \delta e_3}
+       - {\delta S_3 \over \delta e_3}.\cr}
+   \right\}
+   \eqno {\rm (146.)}$$
+
+\medskip
+
+28.
+To illustrate by the same example the theory of gradually varying
+elements, let us establish the following definitions, for the
+present disturbed motion,
+$$\left. \multieqalign{
+\kappa_1 &= \eta_1 - \varpi_1 t, &
+\kappa_2 &= \eta_2 - \varpi_2 t, &
+\kappa_3 &= \eta_3 - \varpi_3 t - {\textstyle {1 \over 2}} g t^2,\cr
+\lambda_1 &= \varpi_1, &
+\lambda_2 &= \varpi_2, &
+\lambda_3 &= \varpi_3 + gt,\cr}
+   \right\}
+   \eqno {\rm (147.)}$$
+and let us call these six quantities
+$\kappa_1$~$\kappa_2$~$\kappa_3$
+$\lambda_1$~$\lambda_2$~$\lambda_3$
+the {\it varying elements\/} of that motion, by analogy to the
+six constant quantities $e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$,
+which may, for the undisturbed motion, be represented in a similar
+way, namely, by (127.) and (128.),
+$$\left. \multieqalign{
+e_1 &= \eta_1 - \varpi_1 t, &
+e_2 &= \eta_2 - \varpi_2 t, &
+e_3 &= \eta_3 - \varpi_3 t - {\textstyle {1 \over 2}} g t^2,\cr
+p_1 &= \varpi_1, &
+p_2 &= \varpi_2, &
+p_3 &= \varpi_3 + gt.\cr}
+   \right\}
+   \eqno {\rm (148.)}$$
+We shall then have rigorously, for the six disturbed variables
+$\eta_1$~$\eta_2$~$\eta_3$ $\varpi_1$~$\varpi_2$~$\varpi_3$,
+expressions of the same forms as in the integrals (127.) and (128.)
+of undisturbed motion, but with variable instead of constant elements,
+namely, the following:
+$$\left. \multieqalign{
+\eta_1 &= \kappa_1 + \lambda_1 t, &
+\eta_2 &= \kappa_2 + \lambda_2 t, &
+\eta_3 &= \kappa_3 + \lambda_3 t - {\textstyle {1 \over 2}} g t^2,\cr
+\varpi_1 &= \lambda_1, &
+\varpi_2 &= \lambda_2, &
+\varpi_3 &= \lambda_3 - gt;\cr}
+   \right\}
+   \eqno {\rm (149.)}$$
+and the rigorous determination of the six varying elements
+$\kappa_1$~$\kappa_2$~$\kappa_3$
+$\lambda_1$~$\lambda_2$~$\lambda_3$,
+as functions of the time and of their own initial values
+$e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$,
+depends on the integration of the 6 following equations,
+in ordinary differentials of the first order, of the forms (105.):
+$$\left. \eqalign{
+{d\kappa_1 \over dt} &= {\delta H_2 \over \delta \lambda_1}
+      = \mu^2 t (\kappa_1 + \lambda_1 t),\cr
+{d\kappa_2 \over dt} &= {\delta H_2 \over \delta \lambda_2}
+      = \mu^2 t (\kappa_2 + \lambda_2 t),\cr
+{d\kappa_3 \over dt} &= {\delta H_2 \over \delta \lambda_3}
+      = \nu^2 t (\kappa_3 + \lambda_3 t
+            - {\textstyle {1 \over 2}} g t^2),\cr}
+   \right\}
+   \eqno {\rm (150.)}$$
+and
+$$\left. \eqalign{
+{d\lambda_1 \over dt} &= - {\delta H_2 \over \delta \kappa_1}
+      = - \mu^2 (\kappa_1 + \lambda_1 t),\cr
+{d\lambda_2 \over dt} &= - {\delta H_2 \over \delta \kappa_2}
+      = - \mu^2 (\kappa_2 + \lambda_2 t),\cr
+{d\lambda_3 \over dt} &= - {\delta H_2 \over \delta \kappa_3}
+      = - \nu^2 (\kappa_3 + \lambda_3 t
+            - {\textstyle {1 \over 2}} g t^2),\cr}
+   \right\}
+   \eqno {\rm (151.)}$$
+$H_2$ being here the expression
+$$H_2 = {\mu^2 \over 2} \{
+           (\kappa_1 + \lambda_1 t)^2 + (\kappa_2 + \lambda_2 t)^2 \}
+         + {\nu^2 \over 2}
+           (\kappa_3 + \lambda_3 t - {\textstyle {1 \over 2}} g t^2)^2,
+   \eqno {\rm (152.)}$$
+which is obtained from (125.) by substituting for the disturbed
+coordinates $\eta_1$~$\eta_2$~$\eta_3$ their values (149.),
+as functions of the varying elements and of the time.  It is
+not difficult to integrate rigorously this system of equations
+(150.) and (151.); and we shall soon have occasion to state their
+complete and accurate integrals: but we shall continue for a while
+to treat these rigorous integrals as unknown, that we may take
+this oppportunity to exemplify our general method of indefinite
+approximation, for all such dynamical systems, founded on the
+properties of the {\it functions of elements\/} $C$ and $E$.
+Of these two functions either may be employed, and we shall
+use here the function $C$.
+
+\bigbreak
+
+29.
+This function, by (109.) and (152.), may rigorously be expressed
+as follows:
+$$C = {\mu^2 \over 2} \int_0^t
+         ( \lambda_1^2 t^2 - \kappa_1^2
+         + \lambda_2^2 t^2 - \kappa_2^2 ) \, dt
+      + {\nu^2 \over 2} \int_0^t
+         \{ ( \lambda_3 t - {\textstyle {1 \over 2}} g t^2)^2
+            - \kappa_3^2 \} \, dt;
+   \eqno {\rm (153.)}$$
+and has therefore the following for a first approximate value,
+obtained by treating the elements
+$\kappa_1$~$\kappa_2$~$\kappa_3$
+$\lambda_1$~$\lambda_2$~$\lambda_3$
+as constant and equal to their initial values
+$e_1$~$e_2$~$e_3$ $p_1$~$p_2$~$p_3$,
+$$\left. \eqalign{C
+   &= - {t \over 2} \{ \mu^2 (e_1^2 + e_2^2) + \nu^2 e_3^2 \}
+      + {t^3 \over 6} \{ \mu^2 (p_1^2 + p_2^2) + \nu^2 p_3^2 \} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {t^4 \over 8} \nu^2 g p_3
+      + {t^5 \over 40} \nu^2 g^2.\cr}
+   \right\}
+   \eqno {\rm (154.)}$$
+In like manner we have, as first approximations, of the kind
+expressed by the general formula (Z${}^1$.), the following
+results deduced from the equations (151.),
+$$\left. \eqalign{
+\lambda_1 &= p_1 - \mu^2 (e_1 t + {\textstyle {1 \over 2}} p_1 t^2 ),\cr
+\lambda_2 &= p_2 - \mu^2 (e_2 t + {\textstyle {1 \over 2}} p_2 t^2 ),\cr
+\lambda_3 &= p_3 - \nu^2 (e_3 t + {\textstyle {1 \over 2}} p_3 t^2
+               - {\textstyle {1 \over 6}} g t^3),\cr}
+   \right\}
+   \eqno {\rm (155.)}$$
+and therefore, as approximations of the same kind,
+$$\left. \eqalign{
+e_1 &= - {\textstyle {1 \over 2}} p_1 t
+         - {\lambda_1 - p_1 \over \mu^2 t},\cr
+e_2 &= - {\textstyle {1 \over 2}} p_2 t
+         - {\lambda_2 - p_2 \over \mu^2 t},\cr
+e_3 &= - {\textstyle {1 \over 2}} p_3 t + {\textstyle {1 \over 6}} g t^2
+         - {\lambda_3 - p_3 \over \nu^2 t}.\cr}
+   \right\}
+   \eqno {\rm (156.)}$$
+Substituting these values for the initial constants $e_1$~$e_2$~$e_3$
+in the approximate value (154.) for the function of elements $C$,
+we obtain the following approximate expression $C_1$ for that
+function, of the form supposed by our theory:
+$$\left. \eqalign{C_1
+   &= - {1\over 2t} \left\{
+         {(\lambda_1 - p_1)^2 + (\lambda_2 - p_2)^2 \over \mu^2}
+         + {(\lambda_3 - p_3)^2 \over \nu^2} \right\} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {t \over 2} \{ (\lambda_1 - p_1) p_1 + (\lambda_2 - p_2) p_2
+            + (\lambda_3 - p_3) (p_3  - {\textstyle {1 \over 3}} gt) \} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {t^3 \over 24} \{ \mu^2 (p_1^2 + p_2^2) + \nu^2 p_3^2 \}
+      - {t^4 \over 24} \nu^2 g p_3 + {t^5 \over 90} \nu^2 g^2.\cr}
+   \right\}
+   \eqno {\rm (157.)}$$
+The rigorous function~$C$ must satisfy, in the present question,
+by the principles of the eighteenth number, the partial differential
+equation,
+$${\delta C \over \delta t}
+   = {\mu^2 \over 2} \left\{
+         \left( {\delta C \over \delta \lambda_1} + \lambda_1 t \right)^2
+       + \left( {\delta C \over \delta \lambda_2} + \lambda_2 t \right)^2
+         \right\}
+   + {\nu^2 \over 2}
+         \left( {\delta C \over \delta \lambda_3} + \lambda_3 t
+       - {\textstyle {1 \over 2}} g t^2 \right)^2;
+   \eqno {\rm (158.)}$$
+and if it be put under the form (U${}^1$.),
+$$C = C_1 + C_2,$$
+$C_1$ being a first approximation, supposed to vanish with the time,
+then the correction~$C_2$ must satisfy rigorously the condition
+$$\left. \eqalign{C_2
+  &= \int_0^t \biggl\{ - {\delta C_1 \over \delta t}
+   + {\mu^2 \over 2}
+         \left( {\delta C_1 \over \delta \lambda_1} + \lambda_1 t \right)^2
+       + {\mu^2 \over 2}
+         \left( {\delta C_1 \over \delta \lambda_2} + \lambda_2 t \right)^2 \cr
+  &\hskip 6em
+   + {\nu^2 \over 2}
+         \left( {\delta C_1 \over \delta \lambda_3} + \lambda_3 t
+       - {\textstyle {1 \over 2}} g t^2 \right)^2 \biggr\} \, dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+   - {1 \over 2} \int_0^t \left\{
+         \mu^2 \left( {\delta C_2 \over \delta \lambda_1} \right)^2
+       + \mu^2 \left( {\delta C_2 \over \delta \lambda_2} \right)^2
+       + \nu^2 \left( {\delta C_2 \over \delta \lambda_3} \right)^2
+         \right\} dt.\cr}
+   \right\}
+   \eqno {\rm (159.)}$$
+
+In passing to a second approximation we may neglect the second
+definite integral, and may calculate the first with the help of the
+approximate equations (155.); which give, in this manner,
+$$\left. \eqalign{C_2
+   &= - \int_0^t \{ (\lambda_1 - p_1)^2 + (\lambda_2 - p_2)^2
+                  + (\lambda_3 - p_3)^2 \} \, dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {\mu^2 \over 2} \int_0^t \{ \lambda_1 (\lambda_1 - p_1)
+         + \lambda_2 (\lambda_2 - p_2) \} \, t^2 \, dt \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {\nu^2 \over 2} \int_0^t
+         (\lambda_3 - {\textstyle {2 \over 3}} gt)
+         (\lambda_3 - p_3) \, t^2 \,dt \cr
+   &= - {t \over 3} \{ (\lambda_1 - p_1)^2 + (\lambda_2 - p_2)^2
+                     + (\lambda_3 - p_3)^2 \} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {t^3 \over 24} \{ \mu^2 p_1 (\lambda_1 - p_1)
+                        + \mu^2 p_2 (\lambda_2 - p_2)
+                        + \nu^2 p_3 (\lambda_3 - p_3) \} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {t^4 \over 45} \nu^2 g (\lambda_3 - p_3)
+      + {t^5 \over 240} (\mu^4 p_1^2 + \mu^4 p_2^2 + \nu^4 p_3^2) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {t^6 \over 240} \nu^4 g p_3 + {t^7 \over 945} \nu^4 g^2.\cr}
+   \right\}
+   \eqno {\rm (160.)}$$
+We might improve this second approximation in like manner, by
+calculating a new definite integral $C_3$, with the help of the
+following more approximate forms for the relations between the
+varying elements $\lambda_1$~$\lambda_2$~$\lambda_3$ and the
+initial constants, deduced by our general method:
+$$\left. \eqalign{
+e_1  =  - {\delta C_1 \over \delta p_1} - {\delta C_2 \over \delta p_1}
+    &=  - {\lambda_1 - p_1 \over \mu^2 t}  \left(
+            1 + {\mu^2 t^2 \over 6} + {\mu^4 t^4 \over 24} \right)
+        - {t p_1 \over 2} \left(
+            1 + {\mu^2 t^2 \over 12} + {\mu^4 t^4 \over 60} \right),\cr
+e_2  =  - {\delta C_1 \over \delta p_2} - {\delta C_2 \over \delta p_2}
+    &=  - {\lambda_2 - p_2 \over \mu^2 t}  \left(
+            1 + {\mu^2 t^2 \over 6} + {\mu^4 t^4 \over 24} \right)
+        - {t p_2 \over 2} \left(
+            1 + {\mu^2 t^2 \over 12} + {\mu^4 t^4 \over 60} \right),\cr
+e_3  =  - {\delta C_1 \over \delta p_3} - {\delta C_2 \over \delta p_3}
+    &=  - {\lambda_3 - p_3 \over \nu^2 t}  \left(
+            1 + {\nu^2 t^2 \over 6} + {\nu^4 t^4 \over 24} \right)
+        - {t p_3 \over 2} \left(
+            1 + {\nu^2 t^2 \over 12} + {\nu^4 t^4 \over 60} \right) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+        + {g t^2 \over 6} \left(
+            1 + {7 \nu^2 t^2 \over 60} + {\nu^4 t^4 \over 40} \right);\cr}
+   \right\}
+   \eqno {\rm (161.)}$$
+in which we can only depend on the terms as far as the second order,
+but which acquire a correctness of the fourth order when cleared of
+the small divisors, and give then
+$$\left. \eqalign{
+\lambda_1 &= p_1 - \mu^2 t (e_1 + {\textstyle {1 \over 2}} p_1 t)
+            + {\textstyle {1 \over 6}} \mu^4 t^3
+              (e_1 + {\textstyle {1 \over 4}} p_1 t),\cr
+\lambda_2 &= p_2 - \mu^2 t (e_2 + {\textstyle {1 \over 2}} p_2 t)
+            + {\textstyle {1 \over 6}} \mu^4 t^3
+              (e_2 + {\textstyle {1 \over 4}} p_2 t),\cr
+\lambda_3 &= p_3 - \nu^2 t (e_3 + {\textstyle {1 \over 2}} p_3 t
+                  - {\textstyle {1 \over 6}} g t^2)
+            + {\textstyle {1 \over 6}} \nu^4 t^3
+              (e_3 + {\textstyle {1 \over 4}} p_3 t
+                  - {\textstyle {1 \over 20}} g t^2).\cr}
+   \right\}
+   \eqno {\rm (162.)}$$
+But a little attention to the nature of this process shows that
+all the successive corrections to which it conducts can be only
+rational and integer and homogeneous functions, of the second
+dimension, of the quantities
+$\lambda_1$~$\lambda_2$~$\lambda_3$ $p_1$~$p_2$~$p_3$~$g$,
+and that they may all be put under the following form, which is
+therefore the form of their sum, or of the whole sought function~$C$;
+$$\left. \eqalign{C
+   &= \mathbin{\phantom{+}}
+        \mu^{-2} a_\mu (\lambda_1 - p_1)^2
+      + b_\mu p_1 (\lambda_1 - p_1) + \mu^2 c_\mu p_1^2 \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + \mu^{-2} a_\mu (\lambda_2 - p_2)^2
+      + b_\mu p_2 (\lambda_2 - p_2) + \mu^2 c_\mu p_2^2 \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + \nu^{-2} a_\nu (\lambda_3 - p_3)^2
+      + b_\nu p_3 (\lambda_3 - p_3) + \nu^2 c_\nu p_3^2 \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + f_\nu g (\lambda_3 - p_3) + \nu^2 h_\nu g p_3
+      + \nu^2 i_\nu g^2,\cr}
+   \right\}
+   \eqno {\rm (163.)}$$
+the cofficients $a_\mu$~$a_\nu$, \&c. being functions of the small
+quantities $\mu$, $\nu$, and also of the time, of which it remains
+to discover the forms.  Denoting therefore their differentials,
+taken with respect to the time, as follows,
+$$d a_\mu = a_\mu' \,dt,\quad d a_\nu = a_\nu' dt, \hbox{ \&c.,}
+   \eqno {\rm (164.)}$$
+and substituting the expression (163.) in the rigorous partial
+differential equation (158.), we are conducted to the six
+following equations in ordinary differentials of the first order:
+$$\left. \multieqalign{
+2 a_\nu' &= (2 a_\nu + \nu^2 t)^2; &
+  b_\nu' &= (2 a_\nu + \nu^2 t)(b_\nu + t); &
+  c_\nu' &= {\textstyle {1 \over 2}} (b_\nu + t)^2;\cr
+  f_\nu' &= (2 a_\nu + \nu^2 t)(f_\nu - {\textstyle {1 \over 2}} t^2); &
+  h_\nu' &= (b_\nu + t)(f_\nu - {\textstyle {1 \over 2}} t^2); &
+  i_\nu' &= {\textstyle {1 \over 2}}
+               (f_\nu - {\textstyle {1 \over 2}} t^2)^2;\cr}
+   \right\}
+   \eqno {\rm (165.)}$$
+along with the 6 following conditions, to determine the 6
+arbitrary constants introduced by integration,
+$$a_0 = - {1 \over 2t};\quad
+  b_0 = - {t \over 2};\quad
+  f_0 =   {t^2 \over 6};\quad
+  c_0 =   {t^3 \over 24};\quad
+  h_0 = - {t^4 \over 24};\quad
+  i_0 =   {t^5 \over 90}.\quad
+   \eqno {\rm (166.)}$$
+
+In this manner we find, without difficulty, observing that
+$a_\mu$~$b_\mu$~$c_\mu$ may be formed from
+$a_\nu$~$b_\nu$~$c_\nu$ by changing $\nu$ to $\mu$,
+$$\left. \multieqalign{
+a_\nu &= - {\textstyle {1 \over 2}} \nu^2 t
+         - {\textstyle {1 \over 2}} \nu \mathop{\rm cotan} \nu t, &
+a_\mu &= - {\textstyle {1 \over 2}} \mu^2 t
+         - {\textstyle {1 \over 2}} \mu \mathop{\rm cotan} \mu t, \cr
+b_\nu &= - t + {1 \over \nu} \tan {\nu t \over 2}, &
+b_\mu &= - t + {1 \over \mu} \tan {\mu t \over 2}, \cr
+c_\nu &= - {t \over 2 \nu^2} + {1 \over \nu^3} \tan {\nu t \over 2}, &
+c_\mu &= - {t \over 2 \mu^2} + {1 \over \mu^3} \tan {\mu t \over 2}, \cr
+f_\nu &= {\textstyle {1 \over 2}} t^2 - {1 \over \nu^2}
+         + {t \over \nu} \mathop{\rm cotan} \nu t,\cr
+h_\nu &= {t^2 \over 2 \nu^2} - {t \over \nu^3} \tan {\nu t \over 2}, \cr
+i_\nu &= {t \over 2 \nu^4} - {t^3 \over 6 \nu^2}
+         - {t^2 \over 2 \nu^3} \mathop{\rm cotan} \nu t.\cr}
+   \right\}
+   \eqno {\rm (167.)}$$
+
+The form of the function~$C$ is therefore entirely known,
+and we have for this {\it function of elements\/} the following
+rigorous expression,
+$$\left. \eqalign{C
+   &= - {(\lambda_1 - p_1)^2 + (\lambda_2 - p_2)^2 \over 2\mu \tan \mu t}
+      - {(\lambda_3 - p_3)^2 \over 2\nu \tan \nu t} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {t \over 2} \{ (\lambda_1 - p_1)^2 + (\lambda_2 - p_2)^2
+                     + (\lambda_3 - p_3)^2 \} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - t \{ p_1 (\lambda_1 - p_1) + p_2 (\lambda_2 - p_2)
+           + p_3 (\lambda_3 - p_3) \} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {1 \over \mu} \{ p_1 (\lambda_1 - p_1)
+                       + p_2 (\lambda_2 - p_2) \} \tan {\mu t \over 2}
+      + {1 \over \nu}    p_3 (\lambda_3 - p_3)    \tan {\nu t \over 2} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {t \over 2} (p_1^2 + p_2 ^2 + p_3^2)
+      + {1 \over \mu} (p_1^2 + p_2^2) \tan {\mu t \over 2}
+      + {1 \over \nu} p_3^2 \tan {\nu t \over 2} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + \left( {t^2 \over 2} - {1 \over \nu^2}
+            + {t \over \nu} \mathop{\rm cotan} \nu t \right)
+            g (\lambda_3 - p_3)
+      + \left( {t^2 \over 2} - {t \over \nu} \tan {\nu t \over 2} \right)
+            g p_3 \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + \left( {t \over 2\nu^2} - {t^2 \over 6}
+            - {t^2 \over 2\nu} \mathop{\rm cotan} \nu t \right) g^2,\cr}
+   \right\}
+   \eqno {\rm (168.)}$$
+which may be variously transformed, and gives by our general method
+the following systems of rigorous integrals of the differential
+equations of varying elements, (150.), (151.):
+$$\left. \eqalign{
+e_1 = - {\delta C \over \delta p_1}
+   &= - {\lambda_1 - p_1 \over \mu \sin \mu t}
+           - {p_1 \over \mu} \tan {\mu t \over 2},\cr
+e_2 = - {\delta C \over \delta p_2}
+   &= - {\lambda_2 - p_2 \over \mu \sin \mu t}
+           - {p_2 \over \mu} \tan {\mu t \over 2},\cr
+e_3 = - {\delta C \over \delta p_3}
+   &= - {\lambda_3 - p_3 \over \nu \sin \nu t}
+      - {p_3 \over \nu} \tan {\nu t \over 2}
+      + {g \over \nu} \left( {t \over \sin \nu t}
+         - {1 \over \nu} \right),\cr}
+   \right\}
+   \eqno {\rm (169.)}$$
+and
+$$\left. \eqalign{
+\kappa_1 = {\delta C \over \delta \lambda_1}
+   &= - (\lambda_1 - p_1) \left(
+            t + {1 \over \mu} \mathop{\rm cotan} \mu t \right)
+      + p_1 \left( -t + {1 \over \mu} \tan {\mu t \over 2} \right),\cr
+\kappa_2 = {\delta C \over \delta \lambda_2}
+   &= - (\lambda_2 - p_2) \left(
+            t + {1 \over \mu} \mathop{\rm cotan} \mu t \right)
+      + p_2 \left( -t + {1 \over \mu} \tan {\mu t \over 2} \right),\cr
+\kappa_3 = {\delta C \over \delta \lambda_3}
+   &= - (\lambda_3 - p_3) \left(
+            t + {1 \over \nu} \mathop{\rm cotan} \nu t \right)
+      + p_3 \left( -t + {1 \over \nu} \tan {\nu t \over 2} \right) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + g \left( {t^2 \over 2} - {1 \over \nu^2}
+            + {t \over \nu} \mathop{\rm cotan} \nu t \right);\cr}
+   \right\}
+   \eqno {\rm (170.)}$$
+that is,
+$$\left. \eqalign{
+\lambda_1 &= p_1 \cos \mu t - e_1 \mu \sin \mu t,\cr
+\lambda_2 &= p_2 \cos \mu t - e_2 \mu \sin \mu t,\cr
+\lambda_3 &= p_3 \cos \nu t - e_3 \nu \sin \nu t
+      + g \left( t - {1 \over \nu} \sin \nu t \right),\cr}
+   \right\}
+   \eqno {\rm (171.)}$$
+and
+$$\left. \eqalign{
+\kappa_1 &= e_1 (\cos \mu t + \mu t \sin \mu t)
+      + p_1 \left( {1 \over \mu} \sin \mu t - t \cos \mu t \right),\cr
+\kappa_2 &= e_2 (\cos \mu t + \mu t \sin \mu t)
+      + p_2 \left( {1 \over \mu} \sin \mu t - t \cos \mu t \right),\cr
+\kappa_3 &= e_3 (\cos \nu t + \nu t \sin \nu t)
+      + p_3 \left( {1 \over \nu} \sin \nu t - t \cos \nu t \right) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - g \left( {\mathop{\rm vers} \nu t \over \nu^2}
+         - {t \over \nu} \sin \nu t + {t^2 \over 2} \right).\cr}
+   \right\}
+   \eqno {\rm (172.)}$$
+
+Accordingly, these rigorous expressions for the 6 varying elements,
+in the present dynamical question, agree with the results obtained
+by the ordinary methods of integration from the 6 ordinary
+differential equations (150.) and (151.), and with those obtained
+by elimination from the equations (113.), (114.), (147.).
+
+\bigbreak
+
+{\sectiontitle
+Remarks on the foregoing Example.\par}
+
+\nobreak\bigskip
+
+30.
+The example which has occupied us in the last six numbers is not
+altogether ideal, but is realised to some extent by the motion
+of a projectile in a void.  For if we consider the earth as a
+sphere, of radius~$R$, and suppose the accelerating force of
+gravity to vary inversely as the square of the distance~$r$
+from the centre, and to be $= g$ at the surface, this force will
+be represented generally by
+$\displaystyle {g R^2 \over r^2}$;
+and to adapt the differential equations (78.) to the motion
+of a projectile in a void, it will be sufficient to make
+$$U = g R^2 \left( {1 \over r} - {1 \over R} \right)
+   \eqno {\rm (173.)}$$
+
+If we place the origin of rectangular coordinates at the earth's
+surface, and suppose the semiaxis of $+z$ to be directed vertically
+upwards, we shall have
+$$r = \sqrt{(R + z)^2 + x^2 + y^2},
+   \eqno {\rm (174.)}$$
+and
+$$U = -gz + {gz^2 \over R} - {g(x^2 + y^2) \over 2R},
+   \eqno {\rm (175.)}$$
+neglecting only those very small terms which have the square of the
+earth's radius for a divisor: neglecting therefore such terms, the
+force-function $U$ in this question is of that form (110.) on which
+all the reasonings of the example have been founded; the small
+constants $\mu$, $\nu$, being the real and imaginary quantities
+$\displaystyle \sqrt{ {g \over R} }$,
+$\displaystyle \sqrt{ {-2g \over R} }$,
+respectively.  We may therefore apply the results of the recent
+numbers to the motions of projectiles in a void, by substituting
+these values for the constants, and altering, where necessary,
+trigonometric to exponential functions.  But besides the theoretical
+facility and the little practical importance of researches respecting
+such projectiles, the results would only be accurate as far as the
+first negative power (inclusive) of the earth's radius, because the
+expression (110.) for the force-function $U$ is only accurate
+only so far; and therefore the rigorous and approximate investigations
+of the six preceding numbers, founded on that expression, are offered
+only as mathematical illustrations of a general {\it method},
+extending to all problems of dynamics, at least to all those
+to which the law of living forces applies.
+
+\bigbreak
+
+{\sectiontitle
+Attracting Systems resumed: Differential Equations of internal
+or Relative Motion; Integration by the Principal Function.\par}
+
+\nobreak\bigskip
+
+31.
+Returning now from this digression on the motion of a single point,
+to the more important study of an attracting or repelling system,
+let us resume the differential equations (A.), which may be
+thus summed up:
+$$dt \, \delta H
+   = \sum (d\eta \, \delta \varpi - d \varpi \delta \eta);
+   \eqno {\rm (A^2.)}$$
+and in order to separate the absolute motion of the whole system
+in space from the motions of its points among themselves,
+let us choose the following marks of position:
+$$x_{\prime\prime} = {\sum \mathbin{.} mx \over \sum m},\quad
+  y_{\prime\prime} = {\sum \mathbin{.} my \over \sum m},\quad
+  z_{\prime\prime} = {\sum \mathbin{.} mz \over \sum m},
+   \eqno {\rm (176.)}$$
+and
+$$\xi_i   = x_i - x_n,\quad
+  \eta_i  = y_i - y_n,\quad
+  \zeta_i = z_i - z_n;
+   \eqno {\rm (177.)}$$
+that is, the 3 rectangular coordinates of the centre of gravity
+of the system, referred to an origin fixed in space, and the
+$3n - 3$ rectangular coordinates of the $n - 1$ masses
+$m_1, m_2,\ldots\, m_{n-1}$, referred to the $n$th mass $m_n$,
+as an internal and moveable origin, but to axes parallel to
+the former.  We then find, as in the former Essay,
+$$\left. \eqalign{T
+   &= {\textstyle {1 \over 2}}
+         (x_{\prime\prime}'^2 + y_{\prime\prime}'^2 + z_{\prime\prime}'^2)
+         \sum m
+      + {\textstyle {1 \over 2}}
+         \sum\nolimits_\prime \mathbin{.} m (\xi'^2 + \eta'^2 + \zeta'^2) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      - {1 \over 2 \sum m}
+            \left\{
+               \left( \sum\nolimits_\prime \mathbin{.} m\xi' \right)^2
+             + \left( \sum\nolimits_\prime \mathbin{.} m\eta' \right)^2
+             + \left( \sum\nolimits_\prime \mathbin{.} m\zeta' \right)^2
+            \right\},\cr}
+   \right\}
+   \eqno {\rm (178.)}$$
+the sign of summation $\sum\nolimits_\prime$ referring to the first
+$n - 1$ masses only; and therefore,
+$$\left. \eqalign{T
+   &= {1 \over 2 \sum m}
+         \left\{
+            \left( {\delta T \over \delta x_{\prime\prime}'} \right)^2
+          + \left( {\delta T \over \delta y_{\prime\prime}'} \right)^2
+          + \left( {\delta T \over \delta z_{\prime\prime}'} \right)^2
+         \right\} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {\textstyle {1 \over 2}} \sum\nolimits_\prime \mathbin{.} {1 \over m}
+         \left\{
+            \left( {\delta T \over \delta \xi'}   \right)^2
+          + \left( {\delta T \over \delta \eta'}  \right)^2
+          + \left( {\delta T \over \delta \zeta'} \right)^2
+         \right\} \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {1 \over 2 m_n} \left\{
+           \left( \sum\nolimits_\prime
+                  {\delta T \over \delta \xi'}   \right)^2
+         + \left( \sum\nolimits_\prime
+                  {\delta T \over \delta \eta'}  \right)^2
+         + \left( \sum\nolimits_\prime
+                  {\delta T \over \delta \zeta'} \right)^2
+         \right\}.\cr}
+   \right\}
+   \eqno {\rm (179.)}$$
+
+If then we put for abridgement,
+$$\left. \eqalign{
+x_\prime' &= {1 \over m} {\delta T \over \delta \xi'}
+      = \xi' - {\sum\nolimits_\prime \mathbin{.} m \xi' \over \sum m},\cr
+y_\prime' &= {1 \over m} {\delta T \over \delta \eta'}
+      = \eta' - {\sum\nolimits_\prime \mathbin{.} m \eta' \over \sum m},\cr
+z_\prime' &= {1 \over m} {\delta T \over \delta \zeta'}
+      = \zeta' - {\sum\nolimits_\prime \mathbin{.} m \zeta' \over \sum m},\cr}
+   \right\}
+   \eqno {\rm (180.)}$$
+we shall have the expression
+$$\left. \eqalign{H
+   &= {\textstyle {1 \over 2}} (x_{\prime\prime}'^2 + y_{\prime\prime}^2
+            + z_{\prime\prime}'^2) \sum m
+         + {\textstyle {1 \over 2}} \sum\nolimits_\prime \mathbin{.}
+            m (x_\prime'^2 + y_\prime'^2 + z_\prime'^2) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+      + {1 \over 2 m_n} \left\{
+              \left( \sum\nolimits_\prime \mathbin{.} m x_\prime' \right)^2
+            + \left( \sum\nolimits_\prime \mathbin{.} m y_\prime' \right)^2
+            + \left( \sum\nolimits_\prime \mathbin{.} m z_\prime' \right)^2
+            \right\} - U,\cr}
+   \right\}
+   \eqno {\rm (B^2.)}$$
+of which the variation is to be compared with the following form
+of (A${}^2$.),
+$$\left. \eqalign{dt \, \delta H
+   &= ( dx_{\prime\prime}  \, \delta x_{\prime\prime}'
+      - dx_{\prime\prime}' \, \delta x_{\prime\prime}
+      + dy_{\prime\prime}  \, \delta y_{\prime\prime}'
+      - dy_{\prime\prime}' \, \delta y_{\prime\prime}
+      + dz_{\prime\prime}  \, \delta z_{\prime\prime}'
+      - dz_{\prime\prime}' \, \delta z_{\prime\prime} )
+      \sum m \cr
+   &\mathrel{\phantom{=}} \mathord{}
+    + \sum\nolimits_\prime \mathbin{.} m
+      ( d\xi       \, \delta x_\prime'
+      - dx_\prime' \, \delta \xi
+      + d\eta      \, \delta y_\prime'
+      - dy_\prime' \, \delta \eta
+      + d\zeta     \, \delta z_\prime'
+      - dz_\prime' \, \delta \zeta ),\cr}
+   \right\}
+   \eqno {\rm (C^2.)}$$
+in order to form, by our general process, $6n$ differential
+equations of the first order, between the $6n$ quantities
+$x_{\prime\prime}$~$y_{\prime\prime}$~$z_{\prime\prime}$
+$x_{\prime\prime}'$~$y_{\prime\prime}'$~$z_{\prime\prime}'$
+$\xi$~$\eta$~$\zeta$ $x_\prime'$~$y_\prime'$~$z_\prime'$
+and the time~$t$.  In thus taking the variation of $H$, we are
+to remember that the force-function $U$ depends only on the
+$3n - 3$ internal coordinates $\xi$~$\eta$~$\zeta$, being of
+the form
+$$\left. \eqalign{U
+   &= m_n ( m_1 f_1 + m_2 f_2 + \cdots + m_{n-1} f_{n-1} ) \cr
+   &\mathrel{\phantom{=}} \mathord{}
+    + m_1 m_2 f_{1,2} + m_1 m_3 f_{1,3} + \cdots
+       + m_{n-2} m_{n-1} f_{n-2, n-1},\cr}
+   \right\}
+   \eqno {\rm (D^2.)}$$
+in which $f_i$ is a function of the distance of $m_i$ from $m_n$,
+and $f_{i,k}$ is a function of the distance of $m_i$ from $m_k$,
+such that their derived functions or first differential coefficients,
+taken with respect to the distances, express that laws of mutual
+repulsion, being negative in the case of attraction; and then
+we obtain, as we desired, two separate groups of equations,
+for the motion of the whole system of points in space, and
+for the motions of those points among themselves; namely,
+first, the group
+$$\left. \multieqalign{
+dx_{\prime\prime}  &= x_{\prime\prime}' \, dt, &
+dx_{\prime\prime}' &= 0,\cr
+dy_{\prime\prime}  &= y_{\prime\prime}' \, dt, &
+dy_{\prime\prime}' &= 0,\cr
+dz_{\prime\prime}  &= z_{\prime\prime}' \, dt, &
+dz_{\prime\prime}' &= 0,\cr}
+   \right\}
+   \eqno {\rm (181.)}$$
+and secondly the group
+$$\left. \multieqalign{
+d\xi   &= \left( x_\prime'
+            + {1 \over m_n} \sum\nolimits_\prime \mathbin{.} m x_\prime'
+            \right) dt, &
+dx_\prime' &= {1 \over m} {\delta U \over \delta \xi}   dt,\cr
+d\eta  &= \left( y_\prime'
+            + {1 \over m_n} \sum\nolimits_\prime \mathbin{.} m y_\prime'
+            \right) dt, &
+dy_\prime' &= {1 \over m} {\delta U \over \delta \eta}  dt,\cr
+d\zeta &= \left( z_\prime'
+            + {1 \over m_n} \sum\nolimits_\prime \mathbin{.} m z_\prime'
+            \right) dt, &
+dz_\prime' &= {1 \over m} {\delta U \over \delta \zeta} dt.\cr}
+   \right\}
+   \eqno {\rm (182.)}$$
+
+The six differential equations of the first order (181.),
+between
+$x_{\prime\prime}$~$y_{\prime\prime}$~$z_{\prime\prime}$,
+$x_{\prime\prime}'$~$y_{\prime\prime}'$~$z_{\prime\prime}'$
+and $t$, contain the law of rectilinear and uniform motion of
+the centre of gravity of the system; and the $6n - 6$ equations
+of the same order, (182.), between the $6n - 6$ variables
+$\xi$~$\eta$~$\zeta$ $x_\prime'$~$y_\prime'$~$z_\prime'$
+and the time, are forms for the differential equations of internal
+or relative motion.  We might eliminate the $3n - 3$ auxiliary
+variables $x_\prime'$~$y_\prime'$~$z_\prime'$ between these
+last equations, and so obtain the following other group of
+$3n - 3$ equations of the second order, involving only the
+relative coordinates and the time,
+$$\left. \eqalign{
+\xi''   &= {1 \over m} {\delta U \over \delta \xi}
+            + {1 \over m_n} \sum\nolimits_\prime
+               {\delta U \over \delta \xi},\cr
+\eta''  &= {1 \over m} {\delta U \over \delta \eta}
+            + {1 \over m_n} \sum\nolimits_\prime
+               {\delta U \over \delta \eta},\cr
+\zeta'' &= {1 \over m} {\delta U \over \delta \zeta}
+            + {1 \over m_n} \sum\nolimits_\prime
+               {\delta U \over \delta \zeta};\cr}
+   \right\}
+   \eqno {\rm (183.)}$$
+but it is better for many purposes to retain them under the
+forms (182.), omitting, however, for simplicity, the lower
+accents of the auxiliary variables
+$x_\prime'$~$y_\prime'$~$z_\prime'$,
+because it is easy to prove that these auxiliary variables
+(180.) are the components of centrobaric velocity, and because,
+in investigating the properties of internal or relative motion,
+we are a liberty to suppose that the centre of gravity of the
+system is fixed in space, at the origin of $x$~$y$~$z$.
+We may also, for simplicity, omit the lower accent of
+$\sum\nolimits_\prime$, understanding that the summations
+are to fall only on the first $n - 1$ masses, and denoting for
+greater distinctness the $n$th mass by a separate symbol~$M$;
+and then we may comprise the differential equations of relative
+motion in the following simplified formula,
+$$dt \, \delta H = \sum \mathbin{.} m
+      ( d\xi   \, \delta x'
+      - dx'    \, \delta \xi
+      + d\eta  \, \delta y'
+      - dy'    \, \delta \eta
+      + d\zeta \, \delta z'
+      - dz'    \, \delta \zeta ),
+   \eqno {\rm (E^2.)}$$
+in which
+$$H = {\textstyle {1 \over 2}} \sum \mathbin{.}  m (x'^2 + y'^2 + z'^2)
+      + {1 \over 2 M} \left\{
+              \left( \sum \mathbin{.} m x' \right)^2
+            + \left( \sum \mathbin{.} m y' \right)^2
+            + \left( \sum \mathbin{.} m z' \right)^2
+            \right\} - U,
+   \eqno {\rm (F^2.)}$$
+
+And the integrals of these equations of relative motion are
+contained (by our general method) in the formula
+$$\delta S = \sum \mathbin{.} m ( x' \, \delta \xi   - a' \delta \alpha
+                      + y' \, \delta \eta  - b' \delta \beta
+                      + z' \, \delta \zeta - c' \delta \gamma),
+   \eqno {\rm (G^2.)}$$
+in which $\alpha$~$\beta$~$\gamma$ $a'$~$b'$~$c'$ denote
+the initial values of $\xi$~$\eta$~$\zeta$ $x'$~$y'$~$z'$,
+and $S$ is the {\it principal function of relative motion\/}
+of the system; that is, the former function~$S$, simplified
+by the omission of the part which vanishes when the centre of
+gravity is fixed, and which gives in general the laws of
+motion of that centre, or the integrals of the equations (181.).
+
+\bigbreak
+
+{\sectiontitle
+Second Example: Case of a Ternary or Multiple System with one
+Predominant Mass; Equations of the undisturbed motions of the
+other masses about this, in their several Binary Systems;
+Differentials of all their Elements, expressed by the
+coefficients of one Disturbing Function.\par}
+
+\nobreak\bigskip
+
+32.
+Let us now suppose that the $n - 1$ masses $m$ are small in
+comparision with the $n$th mass $M$; and let us separate the
+expression (F${}^2$.) for $H$ into the two following parts,
+$$\left. \eqalign{
+H_1 &= \sum \mathbin{.} {m \over 2} \left( 1 + {m \over M} \right)
+         (x'^2 + y'^2 + z'^2) - M \sum \mathbin{.} mf,\cr
+H_2 &=   {m_1 m_2 \over M} (x_1' x_2' + y_1' y_2' + z_1' z_2'
+              - M f_{1,2} ) + \cdots \cr
+   &\mathrel{\phantom{=}} \mathord{}
+       + {m_i m_k \over M} (x_i' x_k' + y_i' y_k' + z_i' z_k'
+              - M f_{i,k} ) + \cdots,\cr}
+   \right\}
+   \eqno {\rm (H^2.)}$$
+of which the latter is small in comparision with the former,
+and may be neglected in a first approximation.  Suppressing
+it accordingly, we are conducted to the following $6n - 6$
+differential equations of the 1st order, belonging to a simpler
+motion, which may be called the {\it undisturbed\/}:
+$$\left. \multieqalign{
+{d\xi   \over dt} &= {1 \over m} {\delta H_1 \over \delta x'}
+      = \left( 1 + {m \over M} \right) x'; &
+{dx' \over dt} &= - {1 \over m} {\delta H_1 \over \delta \xi}
+      = M {\delta f \over \delta \xi}; \cr
+{d\eta  \over dt} &= {1 \over m} {\delta H_1 \over \delta y'}
+      = \left( 1 + {m \over M} \right) y'; &
+{dy' \over dt} &= - {1 \over m} {\delta H_1 \over \delta \eta}
+      = M {\delta f \over \delta \eta}; \cr
+{d\zeta \over dt} &= {1 \over m} {\delta H_1 \over \delta z'}
+      = \left( 1 + {m \over M} \right) z'; &
+{dz' \over dt} &= - {1 \over m} {\delta H_1 \over \delta \zeta}
+      = M {\delta f \over \delta \zeta}. \cr}
+   \right\}
+   \eqno {\rm (I^2.)}$$
+
+These equations arrange themselves in $n - 1$ groups,
+corresponding to the $n - 1$ binary systems $(m, M)$; and
+it is easy to integrate the equations of each group separately.
+We may suppose, then, these integrals found, under the forms,
+$$\left. \multieqalign{
+\kappa  &= \chi^{(1)} (t, \xi, \eta, \zeta, x', y', z'), &
+\nu     &= \chi^{(4)} (t, \xi, \eta, \zeta, x', y', z'),\cr
+\lambda &= \chi^{(2)} (t, \xi, \eta, \zeta, x', y', z'), &
+\tau    &= \chi^{(5)} (t, \xi, \eta, \zeta, x', y', z'),\cr
+\mu     &= \chi^{(3)} (t, \xi, \eta, \zeta, x', y', z'), &
+\omega  &= \chi^{(6)} (t, \xi, \eta, \zeta, x', y', z'),\cr}
+   \right\}
+   \eqno {\rm (K^2.)}$$
+the six quantities
+$\kappa$~$\lambda$~$\mu$~$\nu$~$\tau$~$\omega$
+being constant for the undisturbed motion of any one binary
+system; and therefore the six functions $\chi^{(1)}$,
+$\chi^{(2)}$, $\chi^{(3)}$, $\chi^{(4)}$, $\chi^{(5)}$, $\chi^{(6)}$, 
+or $\kappa$, $\lambda$, $\mu$, $\nu$, $\tau$, $\omega$,
+being such as to satisfy {\it identically\/} the following equation,
+$$0 = m {\delta \kappa \over \delta t}
+      + {\delta \kappa \over \delta \xi}   {\delta H_1 \over \delta x'}
+      - {\delta \kappa \over \delta x'}    {\delta H_1 \over \delta \xi}
+      + {\delta \kappa \over \delta \eta}  {\delta H_1 \over \delta y'}
+      - {\delta \kappa \over \delta y'}    {\delta H_1 \over \delta \eta}
+      + {\delta \kappa \over \delta \zeta} {\delta H_1 \over \delta z'}
+      - {\delta \kappa \over \delta z'}    {\delta H_1 \over \delta \zeta},
+   \eqno {\rm (L^2.)}$$
+with five other analogous, for the five other elements
+$\lambda$, $\mu$, $\nu$, $\tau$, $\omega$,
+in any one binary system $(m,M)$.
+
+\medskip
+
+33.
+Returning now to the original multiple system, we may retain
+as definitions the equations (K${}^2$.), but then we can
+no longer consider the elements
+$\kappa_i$~$\lambda_i$~$\mu_i$~$\nu_i$~$\tau_i$~$\omega_i$
+of the binary system $(m_i, M)$ as constant, because this
+system is now disturbed by the other masses $m_k$; however,
+the $6n - 6$ equations of disturbed relative motion, when
+put under the forms
+$$\left. \multieqalign{
+m {d\xi   \over dt}
+   &=   {\delta H_1 \over \delta x'}    + {\delta H_2 \over \delta x'},   &
+m {dx'    \over dt}
+   &= - {\delta H_1 \over \delta \xi}   - {\delta H_2 \over \delta \xi},  \cr
+m {d\eta  \over dt}
+   &=   {\delta H_1 \over \delta y'}    + {\delta H_2 \over \delta y'},   &
+m {dy'    \over dt}
+   &= - {\delta H_1 \over \delta \eta}  - {\delta H_2 \over \delta \eta}, \cr
+m {d\zeta \over dt}
+   &=   {\delta H_1 \over \delta z'}    + {\delta H_2 \over \delta z'},   &
+m {dz'  \over dt}
+   &= - {\delta H_1 \over \delta \zeta} - {\delta H_2 \over \delta \zeta},\cr}
+   \right\}
+   \eqno {\rm (M^2.)}$$
+and combined with the identical equations of the kind (L${}^2$.)
+give the following simple expression for the differential of the
+element~$\kappa$, in its disturbed and variable state,
+$$m {d\kappa \over dt}
+   =    {\delta \kappa \over \delta \xi}   {\delta H_2 \over \delta x'}
+      - {\delta \kappa \over \delta x'}    {\delta H_2 \over \delta \xi}
+      + {\delta \kappa \over \delta \eta}  {\delta H_2 \over \delta y'}
+      - {\delta \kappa \over \delta y'}    {\delta H_2 \over \delta \eta}
+      + {\delta \kappa \over \delta \zeta} {\delta H_2 \over \delta z'}
+      - {\delta \kappa \over \delta z'}    {\delta H_2 \over \delta \zeta},
+   \eqno {\rm (N^2.)}$$
+together with analogous expressions for the differentials of the
+other elements.  And if we express
+$\xi$~$\eta$~$\zeta$ $x'$~$y'$~$z'$,
+and therefore $H_2$ itself, as depending on the time and on
+these varying elements, we may transform the $6n - 6$ differential
+equations of the 1st order (M${}^2$.), between
+$\xi$~$\eta$~$\zeta$ $x'$~$y'$~$z'$~$t$,
+into the same number of equations of the same order between the
+varying elements and the time; which will be of the forms:
+$$\left. \eqalign{
+m {d \kappa \over dt}
+   &=   \{ \kappa,  \lambda \}  {\delta H_2 \over \delta \lambda}
+      + \{ \kappa,  \mu     \}  {\delta H_2 \over \delta \mu}
+      + \{ \kappa,  \nu     \}  {\delta H_2 \over \delta \nu}
+      + \{ \kappa,  \tau    \}  {\delta H_2 \over \delta \tau}
+      + \{ \kappa,  \omega  \}  {\delta H_2 \over \delta \omega},\cr
+m {d \lambda \over dt}
+   &=   \{ \lambda, \kappa  \}  {\delta H_2 \over \delta \kappa}
+      + \{ \lambda, \mu     \}  {\delta H_2 \over \delta \mu}
+      + \{ \lambda, \nu     \}  {\delta H_2 \over \delta \nu}
+      + \{ \lambda, \tau    \}  {\delta H_2 \over \delta \tau}
+      + \{ \lambda, \omega  \}  {\delta H_2 \over \delta \omega},\cr
+m {d \mu \over dt}
+   &=   \{ \mu,     \kappa  \}  {\delta H_2 \over \delta \kappa}
+      + \{ \mu,     \lambda \}  {\delta H_2 \over \delta \lambda}
+      + \{ \mu,     \nu     \}  {\delta H_2 \over \delta \nu}
+      + \{ \mu,     \tau    \}  {\delta H_2 \over \delta \tau}
+      + \{ \mu,     \omega  \}  {\delta H_2 \over \delta \omega},\cr
+m {d \nu \over dt}
+   &=   \{ \nu,     \kappa  \}  {\delta H_2 \over \delta \kappa}
+      + \{ \nu,     \lambda \}  {\delta H_2 \over \delta \lambda}
+      + \{ \nu,     \mu     \}  {\delta H_2 \over \delta \mu}
+      + \{ \nu,     \tau    \}  {\delta H_2 \over \delta \tau}
+      + \{ \nu,     \omega  \}  {\delta H_2 \over \delta \omega},\cr
+m {d \tau \over dt}
+   &=   \{ \tau,    \kappa  \}  {\delta H_2 \over \delta \kappa}
+      + \{ \tau,    \lambda \}  {\delta H_2 \over \delta \lambda}
+      + \{ \tau,    \mu     \}  {\delta H_2 \over \delta \mu}
+      + \{ \tau,    \nu     \}  {\delta H_2 \over \delta \nu}
+      + \{ \tau,    \omega  \}  {\delta H_2 \over \delta \omega},\cr
+m {d \omega \over dt}
+   &=   \{ \omega,  \kappa  \}  {\delta H_2 \over \delta \kappa}
+      + \{ \omega,  \lambda \}  {\delta H_2 \over \delta \lambda}
+      + \{ \omega,  \mu     \}  {\delta H_2 \over \delta \mu}
+      + \{ \omega,  \nu     \}  {\delta H_2 \over \delta \nu}
+      + \{ \omega,  \tau    \}  {\delta H_2 \over \delta \tau},\cr}
+   \right\}
+   \eqno {\rm (O^2.)}$$
+if we put, for abridgement,
+$$\{ \kappa, \lambda \}
+   =   {\delta \kappa \over \delta \xi}   {\delta \lambda \over \delta x'}
+     - {\delta \kappa \over \delta x'}   {\delta \lambda \over \delta \xi}
+     + {\delta \kappa \over \delta \eta}  {\delta \lambda \over \delta y'}
+     - {\delta \kappa \over \delta y'}   {\delta \lambda \over \delta \eta}
+     + {\delta \kappa \over \delta \zeta} {\delta \lambda \over \delta z'}
+     - {\delta \kappa \over \delta z'}   {\delta \lambda \over \delta \zeta},
+   \eqno {\rm (P^2.)}$$
+and form the other symbols $\{ \kappa, \mu \}$,
+$\{ \lambda, \kappa \}$, \&c., from this, by interchanging the
+letters.  It is evident that these symbols have the properties,
+$$\{ \lambda, \kappa \} = - \{ \kappa, \lambda \},\quad
+  \{ \kappa, \kappa \} = 0;
+   \eqno {\rm (184.)}$$
+and it results from the principles of the 15th number, that
+these combinations $\{ \kappa, \lambda \}$, \&c., when expressed
+as functions of the elements, do not contain the time explicitly.
+There are, in general, by (184.), only 15 such distinct combinations
+for each of the $n - 1$ binary systems; but there would thus be,
+in all, $15 n - 15$, if they admitted of no further reductions:
+however it results from the principles of the 16th number, that
+$12 n - 12$ of these combinations may be made to vanish
+by a suitable choice of the elements.  The following is another
+way of effecting as great a simplification, at least for that
+extensive class of cases in which the undisturbed distance
+between the two points of each binary system $(m,M)$ admits
+of a minimum value.
+
+\bigbreak
+
+{\sectiontitle
+Simplification of the Differential Expressions by a
+suitable choice of the Elements.\par}
+
+\nobreak\bigskip
+
+34.
+When the undisturbed distance~$r$ of $m$ from $M$ admists of such
+a minimum~$q$, corresponding to a time~$\tau$, and satisfying
+at that time the conditions
+$$r' = 0,\quad r'' > 0,
+   \eqno {\rm (185.)}$$
+then the integrals of the group (I${}^2$.), or the known rules
+of the undisturbed motion of $m$ about $M$, may be presented in
+the following manner:
+$$\left. \eqalign{
+\kappa  &= \surd \{ (\xi y' - \eta x')^2 + (\eta z' - \zeta y')^2
+                    + (\zeta x' - \xi z')^2 \};\cr
+\lambda &= \kappa - \xi y' + \eta x';\cr
+\mu     &= {M + m \over 2M} (x'^2 + y'^2 + z'^2) - M f(r);\cr
+\nu     &= \tan^{-1} \mathbin{.}
+               {\eta z' - \zeta y' \over \xi z' - \zeta x'};\cr
+\tau    &= t - \int_q^r {\displaystyle
+               \sqrt{ {M \over M + m} } \mathbin{.}
+               {dr \over \sqrt{dr^2}} \mathbin{.} dr
+            \over \displaystyle
+               \sqrt{ \vphantom{\bigr(} }
+               \left\{ 2 \mu + 2 M f(r) -
+                  \left( 1 + {m \over M} \right)
+                  {\kappa^2 \over r^2} \right\} };\cr
+\omega  &= \nu + \sin^{-1}. {\kappa \zeta r^{-1}
+               \over \sqrt{2 \lambda \kappa - \lambda^2}}
+             - \int_q^r {\displaystyle
+               \sqrt{ {M + m \over M} } \mathbin{.}
+               {dr \over \sqrt{dr^2}} \mathbin{.}
+                  {\kappa \over r^2} \mathbin{.} dr
+            \over \displaystyle
+               \sqrt{ \vphantom{\bigr(} }
+               \left\{ 2 \mu + 2 M f(r) -
+                  \left( 1 + {m \over M} \right)
+                  {\kappa^2 \over r^2} \right\} };\cr}
+   \right\}
+   \eqno {\rm (Q^2.)}$$
+the minimum distance~$q$ being a function of the two elements
+$\kappa$, $\mu$, which must satisfy the conditions
+$$2 \mu + 2 M f(q) - \left( 1 + {m \over M} \right)
+                  {\kappa^2 \over q^2} = 0,\quad
+  M f'(q) + \left( 1 + {m \over M} \right)
+                  {\kappa^2 \over q^3} > 0;
+   \eqno {\rm (186.)}$$
+and $\sin^{-1} s$, $\tan^{-1} t$, being used (according to
+Sir {\sc John Herschel's} notation) to express, {\it not\/} the
+cosecant and cotangent, but the {\it inverse functions\/}
+corresponding to sine and cosine, or the arcs which are more
+commonly called
+$\mathop{\rm arc} (\sin = s)$, $\mathop{\rm arc} (\tan = t)$.
+It must also be observed that the factor
+$\displaystyle {dr \over \sqrt{dr^2}}$, which we have
+introduced under the signs of integration, is not
+superfluous, but is designed to be taken as equal to
+positive or negative unity, according as $dr$ is positive
+or negative; that is, according as $r$ is increasing or
+diminishing, so as to make the element under each integral
+sign constantly positive.  In general, it appears to be
+a useful rule, though not always followed by analysts,
+to employ the real radical symbol $\sqrt{R}$ only for
+positive quantities, unless the negative sign be expressly
+prefixed; and then
+$\displaystyle {r \over \sqrt{r^2}}$ will denote
+positive or negative unity, according as $r$ is positive
+or negative.  The arc given by its sine, in the expression
+of the element $\omega$, is supposed to be so chosen as to
+increase continually with the time.
+
+\medskip
+
+35.
+After these remarks on the notation, let us apply the formula (P${}^2$.)
+to calculate the values of the 15 combinations such as
+$\{ \kappa, \lambda \}$, of the 6 constants or elements (Q${}^2$.).
+
+Since
+$$r = \surd \{ \xi^2 + \eta^2 + \zeta^2 \},
+   \eqno {\rm (187.)}$$
+it is easy to perceive that the six combinations of the
+4 first elements are as follows:
+$$\{ \kappa,  \lambda \} = 0,\quad
+  \{ \kappa,  \mu \} = 0,\quad
+  \{ \kappa,  \nu \} = 0,\quad
+  \{ \lambda, \mu \} = 0,\quad
+  \{ \lambda, \nu \} = 1,\quad
+  \{ \mu,     \nu \} = 0.
+   \eqno {\rm (188.)}$$
+
+To form the 4 combinations of these first 4 elements with $\tau$,
+we may observe, that this 5th element~$\tau$, as expressed
+in (Q${}^2$.), involves explicitly (besides the time) the
+distance~$r$, and the two elements $\kappa$, $\mu$; but
+the combinations already determined show that these two
+elements may be treated as constant in forming the
+four combinations now sought; we need only attend,
+therefore, to the variation of $r$, and if we interpret
+by the rule (P${}^2$.) the symbols
+$\{ \kappa, r \}$, $\{ \lambda, r \}$, $\{ \mu, r \}$, $\{ \nu, r \}$, 
+and attend to the equations (I${}^2$.), we see that
+$$\{ \kappa, r \} = 0,\quad
+  \{ \lambda, r \} = 0,\quad
+  \{ \mu, r \} = - {dr \over dt},\quad
+  \{ \nu, r \} = 0,
+   \eqno {\rm (189.)}$$
+$\displaystyle {dr \over dt}$ being the total differential
+coefficient of $r$ in the undisturbed motion, as determined
+by the equations (I${}^2$); and, therefore, that
+$$\{ \kappa, \tau \} = 0,\quad
+  \{ \lambda, \tau \} = 0,\quad
+  \{ \nu, \tau \} = 0,
+   \eqno {\rm (190.)}$$
+and
+$$\{ \mu, \tau \}
+   = - {\delta \tau \over \delta r}{dr \over dt}
+   = + {dt \over dr}{dr \over dt} = 1:
+   \eqno {\rm (191.)}$$
+observing that in differentiating the expressions of the
+elements (Q${}^2$), we may treat those elements as constant,
+if we change the differentials of
+$\xi$~$\eta$~$\zeta$ $x'$~$y'$~$z'$
+to their undisturbed values.  It remains to calculate the
+5 combinations of these elements with the last element~$\omega$;
+which is given by (Q${}^2$.) as a function of the distance~$r$,
+the coordinate $\zeta$, and the 4 elements
+$\kappa$, $\lambda$, $\mu$, $\nu$; so that we may employ
+this formula,
+$$\{ e, \omega \}
+   =   {\delta \omega \over \delta r}       \{ e, r \}
+     + {\delta \omega \over \delta \zeta}   \{ e, \zeta \}
+     + {\delta \omega \over \delta \kappa}  \{ e, \kappa \}
+     + {\delta \omega \over \delta \lambda} \{ e, \lambda \}
+     + {\delta \omega \over \delta \mu}     \{ e, \mu \}
+     + {\delta \omega \over \delta \nu}     \{ e, \nu \},
+   \eqno {\rm (192.)}$$
+in which, if $e$ be any of the first five elements, or the
+distance~$r$,
+$$\{ e, r \} = - {1 \over r} \left(
+        \xi   {\delta e \over \delta x'}
+      + \eta  {\delta e \over \delta y'}
+      + \zeta {\delta e \over \delta z'} \right),\quad
+  \{ e, \zeta \} = - {\delta e \over \delta z'},\quad
+  \{ e, \kappa \} = 0,
+   \eqno {\rm (193.)}$$
+and
+$${\delta \omega \over \delta \zeta}
+      = \left( {\delta \kappa \over \delta z'} \right)^{-1},\quad
+  {\delta \omega \over \delta r}
+      = - {d \zeta \over dr} {\delta \omega \over \delta \zeta},\quad
+  {\delta \omega \over \delta \nu} = 1;
+   \eqno {\rm (194.)}$$
+the formula (192.) may therefore be thus written:
+$$\{ e,\omega \}
+   = \left\{ {\displaystyle z' \left(
+           \xi   {\delta e \over \delta x'}
+         + \eta  {\delta e \over \delta y'}
+         + \zeta {\delta e \over \delta z'} \right) \over
+         \xi x' + \eta y' + \zeta z'}
+      - {\delta e \over \delta z'} \right\}
+      \left( {\delta \kappa \over \delta z'} \right)^{-1}
+   + \{ e, \nu \}
+   + {\delta \omega \over \delta \lambda} \{ e, \lambda \}
+   + {\delta \omega \over \delta \mu} \{ e, \mu \}.
+   \eqno {\rm (195.)}$$
+We easily find, by this formula, that
+$$\{ \kappa, \omega \} = -1;\quad
+  \{ \lambda, \omega \} = 0;\quad
+  \{ \mu, \omega \} = 0;\quad
+  \{ r, \omega \} = {dr \over dt}{\delta \omega \over \delta \mu};
+   \eqno {\rm (196.)}$$
+and
+$$\{ \nu, \omega \}
+   = - {\delta \nu \over \delta z'} {\delta \omega \over \delta \zeta}
+      - {\delta \omega \over \delta \lambda} = 0.
+   \eqno {\rm (197.)}$$
+
+The formula (195.) extends to the combination $\{ \tau, \omega \}$
+also; but in calculating this last combination we are to remember
+that $\tau$ is given by (Q${}^2$.) as a function of
+$\kappa$, $\mu$, $r$, such that
+$${\delta \tau \over \delta r} = - {dt \over dr};
+   \eqno {\rm (198.)}$$
+and thus we see, with the help of the combinations (196.) already
+determined, that
+$$\{ \tau, \omega \}
+   = - {\delta \tau \over \delta \kappa} - {\delta \omega \over \delta \mu}
+   =   {\delta \over \delta \kappa} \int_q^r \Theta_r \,dr
+     + {\delta \over \delta \mu}    \int_q^r \Omega_r \,dr,
+   \eqno {\rm (199.)}$$
+if we represent for abridgement by $\Theta_r$ and $\Omega_r$
+the coefficients of $dr$ under the interal signs in (Q${}^2$.),
+namely,
+$$\left. \eqalign{
+\Theta_r &= \sqrt{ {M \over M + m} } \mathbin{.} {dr \over \sqrt{dr^2}}
+               \left\{ 2 \mu + 2 M f(r) -
+                  {M + m \over M} \mathbin{.}
+                  {\kappa^2 \over r^2} \right\}^{-{1 \over 2}},\cr
+\Omega_r &= {\kappa \over r^2}
+            \sqrt{ {M + m \over M} } \mathbin{.} {dr \over \sqrt{dr^2}}
+               \left\{ 2 \mu + 2 M f(r) -
+                  {M + m \over M} \mathbin{.}
+                  {\kappa^2 \over r^2} \right\}^{-{1 \over 2}},\cr}
+   \right\}
+   \eqno {\rm (200.)}$$
+These coefficients are evidently connected by the relation
+$${\delta \Theta_r \over \delta \kappa}
+  + {\delta \Omega_r \over \delta \mu} = 0,
+   \eqno {\rm (201.)}$$
+which gives
+$${\delta \over \delta \kappa} \int_{r_\prime}^r \Theta_r \,dr
+   + {\delta \over \delta \mu} \int_{r_\prime}^r \Omega_r \,dr
+  = 0,
+   \eqno {\rm (202.)}$$
+$r_\prime$ being any quantity which does not vary with the
+elements $\kappa$ and $\mu$; we might therefore at once
+conclude by (199.) that the combination $\{ \tau, \omega \}$
+vanishes, if a difficulty were not occasioned by the
+necessity of varying the lower limit $q$, which depends on
+those two elements, and by the circumstance that at this
+lower limit the coefficients $\Theta_r$~$\Omega_r$ become
+infinite.  However, the relation (202.) shows that we
+may express the combination $\{ \tau, \omega \}$ as follows:
+$$\{ \tau, \omega \}
+   =   {\delta \over \delta \kappa} \int_q^{r_\prime} \Theta_r \,dr
+     + {\delta \over \delta \mu}    \int_q^{r_\prime} \Omega_r \,dr,
+   \eqno {\rm (203.)}$$
+$r_\prime$ being an auxiliary and arbitrary quantity, which cannot
+really affect the result, but may be made to facilitate the
+calculation; or in other words, we may assign to the distance~$r$
+any arbitrary value, not varying for infinitesimal variations
+of $\kappa$, $\mu$, which may assist in calculating the value
+of the expression (199.).  We may therefore suppose that the
+increase of distance $r - q$ is small, and corresponds to a
+small positive interval of time $t - \tau$, during which the
+distance~$r$ and its differential coefficient $r'$ are
+constantly increasing; and then after the first moment~$\tau$,
+the quantity
+$$\Theta_r = {1 \over r'}
+   \eqno {\rm (204.)}$$
+will be constantly finite, positive, and decreasing, during the
+same interval, so that its integral must be greater than if it had
+constantly its final value; that is,
+$$t - \tau = \int_q^r \Theta_r \,dr > (r - q) \Theta_r.
+   \eqno {\rm (205.)}$$
+Hence, although $\Theta_r$ tends to infinity, yet
+$(r - q) \Theta_r$ tends to zero, when by diminishing the
+interval we make $r$ tend to $q$; and therefore the
+following difference
+$$\int_q^r \Omega_r \,dr
+      - {M + m \over M} {\kappa \over q^2} \int_q^r \Theta_r \,dr
+   = {M + m \over M} \int_q^r \left(
+      {\kappa \over r^2} - {\kappa \over q^2}
+      \right) \Theta_r \,dr
+   \eqno {\rm (206.)}$$
+will also tend to $0$, and so will also its partial differential
+coefficient of the first order, taken with respect to $\mu$.
+We find therefore the following formula for $\{ \tau, \omega \}$,
+(remembering that this combination has been shown to be independent
+of $r$,)
+$$\{ \tau, \omega \} = \mathop{\Lambda}\limits_{r = q}
+      \left\{ {\delta \over \delta \kappa} \int_q^r \Theta_r \,dr
+              + {M + m \over M} {\kappa \over q^2}
+              {\delta \over \delta \mu} \int_q^r \Omega_r \,dr
+              \right\};
+   \eqno {\rm (207.)}$$
+the sign $\displaystyle \mathop{\Lambda}\limits_{r = q}$
+implying that the limit is to be taken to which the expression
+tends when $r$ tends to $q$.  In this last formula, as in (199.),
+the integral
+$\displaystyle \int_q^r \Theta_r \,dr$
+may be considered as a known function of $r$, $q$, $\kappa$, $\mu$,
+or simply of $r$, $q$, $\kappa$, if $\mu$ be eliminated by the
+first condition (186.); and since it vanishes independently of
+$\kappa$ when $r = q$, it may thus be denoted:
+$$\int_q^r \Theta_r \,dr = \phi(r,q,\kappa) - \phi(q,q,\kappa),
+   \eqno {\rm (208.)}$$
+the form of the function~$\phi$ depending on the law of
+attraction or repulsion.  This integral therefore, when
+considered as depending on $\kappa$ and $\mu$, by depending
+on $\kappa$ and $q$, need not be varied with respect to
+$\kappa$, in calculating $\{ \tau, \omega \}$ by (207.),
+because its partial differential coefficient
+$\displaystyle \left(
+   {\delta \over \delta \kappa} \int_q^r \Theta_r \,dr \right)$,
+obtained by treating $q$ as constant, vanishes at the limit $r = q$;
+nor need it be varied with respect to $q$, because, by (186.),
+$${\delta q \over \delta \kappa}
+   + {M + m \over M} {\kappa \over q^2} {\delta q \over \delta \mu}
+      = 0;
+   \eqno {\rm (209.)}$$
+it may therefore be treated as constant, and we find at last
+$$\{ \tau, \omega \} = 0,
+   \eqno {\rm (210.)}$$
+the two terms (199.) or (203.) both tending to infinity
+when $r$ tends to $q$, but always destroying each other.
+
+\medskip
+
+36.
+Collecting now our results, and presenting for greater clearness
+each combination under the two forms in which it occurs when
+the order of the elements is changed, we have, for each binary
+system, the following thirty expressions:
+$$\left. \multieqalign{
+\{ \kappa,  \lambda \} &=  0, &
+\{ \kappa,  \mu     \} &=  0, &
+\{ \kappa,  \nu     \} &=  0, &
+\{ \kappa,  \tau    \} &=  0, &
+\{ \kappa,  \omega  \} &= -1, \cr
+\{ \lambda, \kappa  \} &=  0, &
+\{ \lambda, \mu     \} &=  0, &
+\{ \lambda, \nu     \} &=  1, &
+\{ \lambda, \tau    \} &=  0, &
+\{ \lambda, \omega  \} &=  0, \cr
+\{ \mu,     \kappa  \} &=  0, &
+\{ \mu,     \lambda \} &=  0, &
+\{ \mu,     \nu     \} &=  0, &
+\{ \mu,     \tau    \} &=  1, &
+\{ \mu,     \omega  \} &=  0, \cr
+\{ \nu,     \kappa  \} &=  0, &
+\{ \nu,     \lambda \} &= -1, &
+\{ \nu,     \mu     \} &=  0, &
+\{ \nu,     \tau    \} &=  0, &
+\{ \nu,     \omega  \} &=  0, \cr
+\{ \tau,    \kappa  \} &=  0, &
+\{ \tau,    \lambda \} &=  0, &
+\{ \tau,    \mu     \} &= -1, &
+\{ \tau,    \nu     \} &=  0, &
+\{ \tau,    \omega  \} &=  0, \cr
+\{ \omega,  \kappa  \} &=  1, &
+\{ \omega,  \lambda \} &=  0, &
+\{ \omega,  \mu     \} &=  0, &
+\{ \omega,  \nu     \} &=  0, &
+\{ \omega,  \tau    \} &=  0; \cr}
+   \right\}
+   \eqno {\rm (R^2.)}$$
+so that the three combinations
+$$\{ \mu, \tau \},\quad \{ \omega, \kappa \},\quad \{ \lambda, \nu \}$$
+are each equal to positive unity; the three inverse combinations
+$$\{ \tau, \mu \},\quad \{ \kappa, \omega \},\quad \{ \nu, \lambda \}$$
+are each equal to negative unity; and all the others vanish.  The six
+differential equations of the first order, for the 6 varying elements
+of any one binary system $(m,M)$, are therefore, by (O${}^2$.),
+$$\left. \multieqalign{
+m {d\mu \over dt}     &=   {\delta H_2 \over \delta \tau}, &
+m {d\tau \over dt}    &= - {\delta H_2 \over \delta \mu},\cr
+m {d\omega \over dt}  &=   {\delta H_2 \over \delta \kappa}, &
+m {d\kappa \over dt}  &= - {\delta H_2 \over \delta \omega},\cr
+m {d\lambda \over dt} &=   {\delta H_2 \over \delta \nu}, &
+m {d\nu \over dt}     &= - {\delta H_2 \over \delta \lambda},\cr}
+   \right\}
+   \eqno {\rm (S^2.)}$$
+and if we still omit the variation of $t$, they may all be
+summed up in this form for the variation of $H_2$,
+$$\delta H_2
+   = \sum \mathbin{.} m (\mu' \delta \tau - \tau' \delta \mu
+      + \omega' \delta \kappa - \kappa' \delta \omega
+      + \lambda' \delta \nu - \nu' \delta \lambda),
+   \eqno {\rm (T^2.)}$$
+which single formula enables us to derive all the $6n - 6$
+differential equations of the first order, for all the
+varying elements of all the binary systems, from the variation
+or from the partial differential coefficients of a single
+quantity $H_2$, expressed as a function of those elements.
+
+If we choose to introduce into the expression (T${}^2$.),
+for $\delta H_2$, the variation of the time~$t$, we have only
+to change $\delta \tau$ to $\delta \tau - \delta t$, because,
+by (Q${}^2$.), $\delta t$ enters only so accompanied; that is,
+$t$ enters only under the form $t - \tau_i$, in the expressions
+of $\xi_i$~$\eta_i$~$\zeta_i$ $x'_i$~$y'_i$~$z'_i$
+as functions of the time and of the elements; we have,
+therefore
+$${\delta H_2 \over \delta t}
+   = - \sum {\delta H_2 \over \delta \tau}
+   = - \sum \mathbin{.} m \mu';
+   \eqno {\rm (211.)}$$
+and since, by (H${}^2$.), (Q${}^2$),
+$$H_1 = \sum \mathbin{.} m \mu,
+   \eqno {\rm (212.)}$$
+we find, finally,
+$${d H_1 \over dt} = - {\delta H_2 \over \delta t}.
+   \eqno {\rm (U^2.)}$$
+
+This remarkable form for the differential of $H_1$, considered
+as a varying element, is general for all problems of dynamics.
+It may be deduced by the general method from the formul{\ae}
+of the 13th and 14th numbers, which give
+$$\left. \eqalign{
+{d H_1 \over dt}
+   &=   {\delta H_2 \over \delta \kappa_1}    \sum \left(
+            {\delta H_1 \over \delta \eta}
+            {\delta \kappa_1 \over \delta \varpi}
+          - {\delta H_1 \over \delta \varpi}
+            {\delta \kappa_1 \over \delta \eta} \right)
+      + \cdots
+      + {\delta H_2 \over \delta \kappa_{6n}} \sum \left(
+            {\delta H_1 \over \delta \eta}
+            {\delta \kappa_{6n} \over \delta \varpi}
+          - {\delta H_1 \over \delta \varpi}
+            {\delta \kappa_{6n} \over \delta \eta} \right) \cr
+   &=    {\delta H_2 \over \delta \kappa_1}
+            {\delta \kappa_1 \over \delta t}
+       + {\delta H_2 \over \delta \kappa_2}
+            {\delta \kappa_2 \over \delta t}
+       + \cdots
+       + {\delta H_2 \over \delta \kappa_{6n}}
+            {\delta \kappa_{6n} \over \delta t}
+    =  - {\delta H_2 \over \delta t},\cr}
+   \right\}
+   \eqno {\rm (213.)}$$
+$\kappa_1 \, \kappa_2 \,\ldots\, \kappa_{6n}$ being any $6n$
+elements of a system expressed as functions of the time and of
+the quantities $\eta$~$\omega$; or concisely by this special
+consideration, that $H_1 + H_2$ is constant in the disturbed
+motion, and that in taking the first total differential
+coefficient of $H_2$ with respect to the time, the elements
+may by (F${}^1$.) be treated as constant.  It is also a
+remarkable corollary of the general principles just referred
+to, but not one difficult to verify, that the first
+partial differential coefficient
+$\displaystyle {\delta \kappa_s \over \delta t}$, of any
+element $\kappa_s$, taken with respect to the time, may
+be expressed as a function of the elements alone, not
+involving the time explicitly.
+
+\bigbreak
+
+{\sectiontitle
+On the essential distinction between the Systems of Varying Elements
+considered in this Essay and those hitherto employed by mathematicians.\par}
+
+\nobreak\bigskip
+
+37.
+When we shall have integrated the differential equations of
+varying elements (S${}^2$.), we can then calculate the varying
+relative coordinates $\xi$~$\eta$~$\zeta$, for any binary
+system $(m,M)$, by the rules of undisturbed motion, as expressed
+by the equations (I${}^2$.), (Q${}^2$.), or by the following
+connected formul{\ae}:
+$$\left. \eqalign{
+\xi   &= r \left( \cos \theta
+                  + {\lambda \over \kappa} \sin (\theta - \nu) \sin \nu
+                  \right),\cr
+\eta  &= r \left( \sin \theta
+                  - {\lambda \over \kappa} \sin (\theta - \nu) \cos \nu
+                  \right),\cr
+\zeta &= {r \over \kappa}
+            \sqrt{2\lambda \kappa - \lambda^2}
+            \sin (\theta - \nu);\cr}
+   \right\}
+   \eqno {\rm (V^2.)}$$
+in which the distance~$r$ is determined as a function of the
+time~$t$ and of the elements $\tau$, $\kappa$, $\mu$, by
+the 5th equation (Q${}^2$.), and in which
+$$\theta = \omega + \int_q^r {\displaystyle
+               \sqrt{ {M + m \over M} } \mathbin{.}
+               {dr \over \sqrt{dr^2}} \mathbin{.}
+                  {\kappa \over r^2} dr
+            \over \displaystyle
+               \sqrt{ \vphantom{\bigr(} }
+               \left\{ 2 \mu + 2 M f(r) -
+                  \left( 1 + {m \over M} \right)
+                  {\kappa^2 \over r^2} \right\} },
+   \eqno {\rm (W^2.)}$$
+$q$ being still the minimum of $r$, when the orbit is treated
+as constant, and being still connected with the elements
+$\kappa$, $\mu$, by the first equation of condition (186.).
+In astronomical language, $M$ is the sun, $m$ a planet,
+$\xi$~$\eta$~$\zeta$ are the heliocentric rectangular
+coordinates, $r$ is the radius vector, $\theta$ the longitude
+in the orbit, $\omega$ the longitude of the perihelion,
+$\nu$ of the node, $\theta - \omega$ is the true anomaly,
+$\theta - \nu$ the argument of latitude, $\mu$ the constant
+part of the half square of undisturbed heliocentric velocity,
+diminished in the ratio of the sun's mass ($M$) to the
+sum ($M + m$) of masses of sun and planet, $\kappa$ is the double
+of the areal velocity diminished in the same ratio,
+$\displaystyle {\lambda \over \kappa}$
+is the versed sine of the inclination of the orbit, $q$ the
+perihelion distance, and $\tau$ the time of perihelion
+passage.  The law of attraction or repulsion is here left
+undetermined; for {\sc Newton's} law, $\mu$ is the sun's mass
+divided by the axis major of the orbit taken negatively,
+and $\kappa$ is the square root of the semiparameter,
+multiplied by the sun's mass, and divided by the square
+root of the sum of the masses of sun and planet.
+But the varying ellipse or other orbit, which the foregoing
+formul{\ae} require, differs essentially (though little)
+from that hitherto employed by astronomers: because it
+gives correctly the heliocentric coordinates, but {\it not\/}
+the heliocentric components of velocity, without differentiating
+the elements in the calculation; and therefore does {\it not
+touch\/} but {\it cuts\/}, (though under a very small angle,)
+the actual heliocentric orbit, described under the influence
+of all the disturbing forces.
+
+\medskip
+
+38.
+For it results from the foregoing theory, that if we differentiate
+the expressions (V${}^2$.) for the heliocentric coordinates,
+without differentiating the elements, and then assign to those
+new varying elements their values as functions of the time,
+obtained from the equations (S${}^2$), and deduce the centrobaric
+components of velocity by the formul{\ae} (I${}^2$.), or by
+the following:
+$$x' = {M \xi'   \over M + m},\quad
+  y' = {M \eta'  \over M + m},\quad
+  z' = {M \zeta' \over M + m};
+   \eqno {\rm (214.)}$$
+then these centrobaric components will be the same functions
+of the time and of the new varying elements which might
+be otherwise deduced by elimination from the integrals (Q${}^2$.),
+and will represent rigorously (by the extension given in the
+theory to those last-mentioned integrals) the components of
+velocity of the disturbed planet~$m$, relatively to the centre
+of gravity of the whole solar system.  We chose, as more
+suitable to the general course of our method, that these
+centrobaric components of velocity should be the auxiliary
+variables to be combined with the heliocentric coordinates,
+and to have their disturbed values rigorously expressed
+by the formul{\ae} of undisturbed motion; but in making
+this choice it became necessary to modify these latter
+formul{\ae}, and to determine a varying orbit essentially
+distinct in theory (though little differing in practice)
+from that conceived so beautifully by {\sc Lagrange}.  The orbit
+which he imagined was more simply connected with the
+heliocentric motion of a {\it single planet}, since it
+gave, for such heliocentric motion, the velocity as
+well as the position; the orbit which we have chosen
+is perhaps more closely combined with the conception of a
+{\it multiple system}, moving about its common centre of
+gravity, and influenced in every part by the actions of
+all the rest.  Whichever orbit shall be hereafter adopted
+by astronomers, they will remember that both are equally
+fit to represent the celestial appearances, if the numeric
+elements of either set be suitable determined by
+observation, and the elements of the other set of orbits
+be deduced from these by calculation.  Meantime mathematicians
+will judge, whether in sacrificing a part of the simplicity
+of that geometrical conception on which the theories of
+{\sc Lagrange} and {\sc Poisson} are founded, a simplicity of
+another kind has not been introduced, which was wanting in
+those admirable theories; by our having succeeded in expressing
+rigorously the differentials of {\it all\/} our own new
+varying elements through the coefficients of a {\it single\/}
+function: whereas it has seemed necessary hitherto to
+employ one function for the Earth disturbed by Venus, and
+another function for Venus disturbed by the Earth.
+
+\bigbreak
+
+{\sectiontitle
+Integration of the Simplified Equations, which determine the
+new varying Elements.\par}
+
+\nobreak\bigskip
+
+39.
+The simplified differential equations of varying elements,
+(S${}^2$.), are of the same form as the equations (A.),
+and may be integrated in a similar manner.  If we put,
+for abridgement,
+$$(\tau, \kappa, \nu)
+   = \int_0^t \left\{ \sum \left(
+           \tau {\delta H_2 \over \delta \tau}
+         + \kappa {\delta H_2 \over \delta \kappa}
+         + \nu {\delta H_2 \over \delta \nu}
+         \right) - H_2 \right\} dt,
+   \eqno {\rm (X^2.)}$$
+and interpret similarly the symbols $(\mu, \omega, \lambda)$, \&c.,
+we can easily assign the variations of the following 8 combinations,
+$(\tau, \kappa, \nu)$, $(\mu, \omega, \lambda)$, $(\mu, \kappa, \nu)$,
+$(\tau, \omega, \lambda)$, $(\tau, \omega, \nu)$, $(\mu, \kappa, \lambda)$,
+$(\tau, \kappa, \lambda)$, $(\mu, \omega, \nu)$; namely
+$$\left. \eqalign{
+\delta (\tau, \kappa, \nu) &= \sum \mathbin{.} m
+         ( \tau \, \delta \mu - \tau_0 \, \delta \mu_0
+         + \kappa \, \delta \omega - \kappa_0 \, \delta \omega_0
+         + \nu \, \delta \lambda - \nu_0 \, \delta \lambda_0 )
+         - H_2 \, \delta t,\cr
+\delta (\mu, \omega, \lambda) &= \sum \mathbin{.} m
+         ( \mu_0 \, \delta \tau_0 - \mu \, \delta \tau
+         + \omega_0 \, \delta \kappa_0 - \omega \, \delta \kappa
+         + \lambda_0 \, \delta \nu_0 - \lambda \, \delta \nu )
+         - H_2 \, \delta t,\cr
+\delta (\mu, \kappa, \nu) &= \sum \mathbin{.} m
+         ( \mu_0 \, \delta \tau_0 - \mu \, \delta \tau
+         + \kappa \, \delta \omega - \kappa_0 \, \delta \omega_0
+         + \nu \, \delta \lambda - \nu_0 \, \delta \lambda_0 )
+         - H_2 \, \delta t,\cr
+\delta (\tau, \omega, \lambda) &= \sum \mathbin{.} m
+         ( \tau \, \delta \mu - \tau_0 \, \delta \mu_0
+         + \omega_0 \, \delta \kappa_0 - \omega \, \delta \kappa
+         + \lambda_0 \, \delta \nu_0 - \lambda \, \delta \nu )
+         - H_2 \, \delta t,\cr
+\delta (\tau, \omega, \nu) &= \sum \mathbin{.} m
+         ( \tau \, \delta \mu - \tau_0 \, \delta \mu_0
+         + \omega_0 \, \delta \kappa_0 - \omega \, \delta \kappa
+         + \nu \, \delta \lambda - \nu_0 \, \delta \lambda_0 )
+         - H_2 \, \delta t,\cr
+\delta (\mu, \kappa, \lambda) &= \sum \mathbin{.} m
+         ( \mu_0 \, \delta \tau_0 - \mu \, \delta \tau
+         + \kappa \, \delta \omega - \kappa_0 \, \delta \omega_0
+         + \lambda_0 \, \delta \nu_0 - \lambda \, \delta \nu )
+         - H_2 \, \delta t,\cr
+\delta (\tau, \kappa, \lambda) &= \sum \mathbin{.} m
+         ( \tau \, \delta \mu - \tau_0 \, \delta \mu_0
+         + \kappa \, \delta \omega - \kappa_0 \, \delta \omega_0
+         + \lambda_0 \, \delta \nu_0 - \lambda \, \delta \nu )
+         - H_2 \, \delta t,\cr
+\delta (\mu, \omega, \nu) &= \sum \mathbin{.} m
+         ( \mu_0 \, \delta \tau_0 - \mu \, \delta \tau
+         + \omega_0 \, \delta \kappa_0 - \omega \, \delta \kappa
+         + \nu \, \delta \lambda - \nu_0 \, \delta \lambda_0 )
+         - H_2 \, \delta t,\cr}
+   \right\}
+   \eqno {\rm (Y^2.)}$$
+$\kappa_0$~$\lambda_0$~$\mu_0$~$\nu_0$~$\tau_0$~$\omega_0$
+being the initial values of the varying elements
+$\kappa$~$\lambda$~$\mu$~$\nu$~$\tau$~$\omega$.
+If, then, we consider, for example, the first of these 8
+combinations $(\tau, \kappa, \nu)$, as a function of all of
+the $3n - 3$ elements $\mu_i$~$\omega_i$~$\lambda_i$,
+and of their initial values
+$\mu_{0,i}$~$\omega_{0,i}$~$\lambda_{0,i}$,
+involving also in general the time explicitly, we shall have
+the following forms for the $6n - 6$ rigorous integrals
+of the $6n - 6$ equations (S${}^2$.):
+$$\left. \multieqalign{
+m_i \tau_i
+   &=   {\delta \over \delta \mu_i} (\tau, \kappa, \nu); &
+m_i \tau_{0,i}
+   &= - {\delta \over \delta \mu_{0,i}} (\tau, \kappa, \nu); \cr
+m_i \kappa_i
+   &=   {\delta \over \delta \omega_i} (\tau, \kappa, \nu); &
+m_i \kappa_{0,i}
+   &= - {\delta \over \delta \omega_{0,i}} (\tau, \kappa, \nu); \cr
+m_i \nu_i
+   &=   {\delta \over \delta \lambda_i} (\tau, \kappa, \nu); &
+m_i \nu_{0,i}
+   &= - {\delta \over \delta \lambda_{0,i}} (\tau, \kappa, \nu); \cr}
+   \right\}
+   \eqno {\rm (Z^2.)}$$
+and in like manner we can deduce forms for the same rigorous
+integrals, from any one of the eight combinations (Y${}^2$.).
+The determination of all the varying elements would therefore
+be fully accomplished, if we could find the complete expression
+for any one of these 8 combinations.
+
+\bigbreak
+
+40.
+A first approximate expression for any one of them can be found
+from the form under which we have supposed $H_2$ to be put,
+namely, as a function of the elements and of the time,
+which may be thus denoted:
+$$H_2 = H_2(t,
+   \kappa_1, \lambda_1, \mu_1, \nu_1, \tau_1, \omega_1,\cdots\,
+   \kappa_{n-1}, \lambda_{n-1}, \mu_{n-1}, \nu_{n-1}, \tau_{n-1},
+   \omega_{n-1} );
+   \eqno {\rm (A^3.)}$$
+by changing in this function the varying elements to their
+initial values, and employing the following approximate integrals
+of the equations (S${}^2$.),
+$$\left. \multieqalign{
+\mu &= \mu_0 + {1 \over m} \int_0^t
+         {\delta H_2 \over \delta \tau_0} \, dt, &
+\tau &= \tau_0 - {1 \over m} \int_0^t
+         {\delta H_2 \over \delta \mu_0} \, dt, \cr
+\omega &= \omega_0 + {1 \over m} \int_0^t
+         {\delta H_2 \over \delta \kappa_0} \, dt, &
+\kappa &= \kappa_0 - {1 \over m} \int_0^t
+         {\delta H_2 \over \delta \omega_0} \, dt, \cr
+\lambda &= \lambda_0 + {1 \over m} \int_0^t
+         {\delta H_2 \over \delta \nu_0} \, dt, &
+\nu &= \nu_0 - {1 \over m} \int_0^t
+         {\delta H_2 \over \delta \lambda_0} \, dt. \cr}
+   \right\}
+   \eqno {\rm (B^3.)}$$
+For if we denote, for example, the first of the 8 combinations
+(Y${}^2$.) by $G$, so that
+$$G = (\tau, \kappa, \nu),
+   \eqno {\rm (C^3.)}$$
+we shall have, as a first approximate value,
+$$G_1 = \int_0^t \left\{ \sum \left(
+           \tau_0 {\delta H_2 \over \delta \tau_0}
+         + \kappa_0 {\delta H_2 \over \delta \kappa_0}
+         + \nu_0 {\delta H_2 \over \delta \nu_0}
+         \right) - H_2 \right\} dt;
+   \eqno {\rm (D^3.)}$$
+and after thus expressing $G_1$ as a function of the time,
+and of the initial elements, we can eliminate the initial
+quantities of the forms $\tau_0$~$\kappa_0$~$\nu_0$,
+and introduce in their stead the final quantities
+$\mu$~$\omega$~$\lambda$, so as to obtain an
+expression for $G_1$ of the kind supposed in (Z${}^2$.),
+namely, a function of the time~$t$, the varying elements
+$\mu$~$\omega$~$\lambda$, and their initial values
+$\mu_0$~$\omega_0$~$\lambda_0$.  An approximate
+expression thus found may be corrected by a process of
+that kind, which has often been employed in this Essay
+for other similar purposes.  For the function $G$, or the
+combination $(\tau, \kappa, \nu)$, must satisfy rigorously,
+by (Y${}^2$.), (A${}^3$.), the following partial differential
+equation:
+$$0 = {\delta G \over \delta t} + H_2 \left( t,
+         {1 \over m_1} {\delta G \over \delta \omega_1},
+         \lambda_1, \mu_1,
+         {1 \over m_1} {\delta G \over \delta \lambda_1},
+         {1 \over m_1} {\delta G \over \delta \mu_1},
+         \omega_1,
+         {1 \over m_2} {\delta G \over \delta \omega_2},
+         \cdots \, \omega_{n-1} \right);
+   \eqno {\rm (E^3.)}$$
+and each of the other analogous functions or combinations (Y${}^2$.)
+must satisfy an analogous equation: if then we change $G$ to
+$G_1 + G_2$, and neglect the squares and products of the
+coefficients of the small correction $G_2$, $G_1$ being a
+first approximation such as that already found, we are conducted,
+as a second approximation on principles already explained, to
+the following expression for this correction $G_2$:
+$$G_2 = - \int_0^t \left\{ {\delta G_1 \over \delta t} + H_2 \left(
+         {1 \over m_1} {\delta G_1 \over \delta \omega_1},
+         \lambda_1, \mu_1,
+         {1 \over m_1} {\delta G_1 \over \delta \lambda_1},
+         {1 \over m_1} {\delta G_1 \over \delta \mu_1},
+         \omega_1,\cdots \,
+         \right) \right\} dt:
+   \eqno {\rm (F^3.)}$$
+which may be continually and indefinitely improved by a repetition
+of the same process of correction.  We may therefore, theoretically,
+consider the problem as solved; but it must remain for future
+consideration, and perhaps for actual trial, to determine which
+of all these various processes of successive and indefinite
+approximation, deduced in the present Essay and in the former,
+as corollaries of one general Method, and as consequences of one
+central Idea, is best adapted for numeric application, and for the
+mathematical study of phenomena.
+
+\bye

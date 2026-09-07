@@ -148,6 +148,8 @@ TeX's file-write security settings.
   priority, B15 metadata verification and preserved acceptance gates.
 - [P02 checks handoff](handoffs/P02-six-direction-checks.md): exact verification
   and extension of those directions; sampler table and uncompiled Lean draft.
+- [H06 handoff](handoffs/H06.md): pre-1901 primary sources in `docs/classics/`
+  for retrieval context, with companions, checksums and BibTeX.
 
 - [A06 handoff](handoffs/A06.md): exact return bridge, midpoint atom and
   endpoint-version choice; vanishing polygon error. Nine PDFs now build.
