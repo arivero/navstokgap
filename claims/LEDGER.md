@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-07. The current mathematical evidence consists of written
+Updated 2026-09-08. The current mathematical evidence consists of written
 derivations, symbolic checks and internal proof review. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
 
@@ -38,6 +38,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C030 | Equal-mass particles prepared with opposite velocities $\pm u$ and separation $u\Delta$ exchange velocities at the midpoint; the tracer returns with $\kappa_{\rm mid}=mu^2\Delta$ and action $\kappa_{\rm mid}/2$ | Physical-cut note §1; total energy $mu^2$, momentum zero, preparation changes with duration; B13 and twelve checks |
 | C031 | For absolutely continuous paths with fixed endpoints and speed at most $u$, $\kappa_{\rm mid}=4m\operatorname{Var}Y/\Delta\le m\Delta(u-|v|)^2$, $v=(z-x)/\Delta$; the bound is sharp | Physical-cut note §2; endpoint-conditioned laws, two-segment action with explicit bias term; B13 |
 | C032 | A probability convolution semigroup on position with support in $[-ut,ut]$ for all $t\ge0$ is $\delta_{bt}$, $|b|\le u$ | Physical-cut note §3; variance additivity and ballistic bound; spatially homogeneous stationary independent increments only; B13 |
+| C033 | The explicit density-disintegrated telegraph return bridge from $(0,+u)$ to $(0,-u)$ has odd-count weights $w_k=(\lambda T/2)^{2k}/[(k!)^2I_0(\lambda T)]$ and midpoint atom $1/I_0(\lambda T)$ at $uT/2$ | [Return-bridge note](../notes/telegraph-return-bridge.md) §§1–3; fixed $u,\lambda,T>0$, independent occupation simplexes, right-continuous velocity version; B14 and coordinator proof/source review |
+| C034 | This fixed bridge has consistent cut restrictions and $0\le S[X]-S_\pi\le(mu^2/2)N_T|\pi|$, giving almost-sure and $L^1$ polygon-action convergence to $mu^2T/2$ | Return-bridge note §§4–5; positional samples, kinetic functional, deterministic shrinking meshes; B14, 12 symbolic checks and 45 rational partition cases |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -74,6 +76,8 @@ consequences are identified separately.
 | C028–C029 | Elementary Gaussian restriction, chi-square and conditional-variance consequences; action interpretation is project-specific | B12; Pitman–Yor selected bridge/Markov passages, novelty unassessed |
 | C030 | Elementary construction using the established equal-mass elastic collision map | [B13](../references/batches/B13.md); Barkai (2)–(3) |
 | C031–C032 | Elementary support/variance and convolution consequences; exact statements unmatched in the two-source coverage | B13; novelty unassessed; Cinque supplies the memory comparison, not these theorems |
+| C033 | Equal-rate occupation density specializes Cinque (2.6); bridge normalization, midpoint atom and version/protocol comparison are derived consequences | [B14](../references/batches/B14.md); pp. 1–4 and two worker searches; exact combined statement unmatched, novelty unassessed |
+| C034 | Elementary pathwise restriction and kinetic square-completion consequences | B14; exact action estimate unmatched in bounded source coverage, novelty unassessed |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -99,6 +103,13 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B14](../reviews/telegraph-return-B14.md) audited C033–C034. Coordinator
+verified Cinque (2.6) against the PDF image, strengthened the affine-simplex
+absolute-continuity argument, and corrected a discovery-only source's authors
+to Bogachev–Ratanov. Exact conditioning uses a specified path version; the
+endpoint-window velocity mixture is a distinct protocol. Algebra and rational
+partition checks accompany the general written proof.
 
 [B10](../reviews/collision-action-B10.md) audited C022–C024. Coordinator
 verified collision coefficients, covariance, source versions/hashes and the

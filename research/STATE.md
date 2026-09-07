@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A05/B13 complete; phase-space cut test A06 next.
+Updated: 2026-09-08. Current milestone: A06/B14 complete; bounded-force return test A07 next.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
@@ -43,8 +43,16 @@ node marginals. C027–C029 have a Luna medium audit and nine exact checks.
 gives an elastic momentum receiver, the sharp midpoint action bound
 $\kappa_{\rm mid}\le m\Delta(u-|v|)^2$, and a deterministic-drift theorem
 for ballistic position convolution laws. C030–C032 have a Luna medium audit
-and twelve exact checks. Next is **A06**, a finite-speed bridge retaining
-position and velocity, in [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md).
+and twelve exact checks. **A06/B14 are complete:** the
+[return-bridge note](../notes/telegraph-return-bridge.md) constructs a
+velocity-resolved bridge with midpoint atom $1/I_0(\lambda T)$ and exact
+restriction consistency. Its polygon action error is bounded by
+$mu^2N_T|\pi|/2$ and vanishes in mean and almost surely. C033–C034 have
+a Luna medium audit, coordinator review, 12 symbolic checks and 45 rational
+partition cases. **A07** replaces impulses by bounded-acceleration turns:
+derive the sharp return-duration and kinetic-action bounds at prescribed
+opposite endpoint velocities, then test their scaling.
+See [CUT_POINT_TARGET.md](CUT_POINT_TARGET.md).
 A04 preserves the
 spatial-clock question as a secondary diagnostic.
 **B11 is waiting:** the fresh Sol medium audit of the supplied polygon ideas
@@ -117,6 +125,9 @@ inside `.build/<paper>/` with the repository on `BIBINPUTS`, preserving
 TeX's file-write security settings.
 
 ## History and handoffs
+
+- [A06 handoff](handoffs/A06.md): exact return bridge, midpoint atom and
+  endpoint-version choice; vanishing polygon error. Nine PDFs now build.
 
 - [A05 handoff](handoffs/A05.md): conservation, finite-speed support and the
   need for velocity memory in the chosen cut model. Eight PDFs now build.

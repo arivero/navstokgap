@@ -1,0 +1,169 @@
+# A finite-speed return bridge and its polygonal action
+
+A velocity-resolved telegraph bridge gives one consistent random trajectory at
+every cut resolution. Its midpoint has a discrete probability mass, while the
+action error of sampled polygons vanishes at a controlled rate. The construction
+isolates velocity memory from the introduction of fresh noise at each cut.
+
+## 1. Model and endpoint convention
+
+Fix mass $m>0$, speed $0<u<c$, reversal rate $\lambda>0$ and duration $T>0$.
+In an inertial frame set $X_0=0$, $V_0=u$ and
+
+$$V_t=u(-1)^{N_t},\qquad X_t=\int_0^t V_s\,ds,$$
+
+where $N$ is a homogeneous Poisson process of rate $\lambda$. Velocity is
+right-continuous. The rate is a supplied classical stochastic clock. This reduced
+model describes impulsive reversals; momentum receivers require the extra
+interaction bookkeeping of the physical-cut model (C030).
+
+We construct the bridge to $(X_T,V_T)=(0,-u)$ by disintegrating switch-time
+densities at the interior position $X_T=0$. The explicit simplex construction
+below fixes the version of this zero-probability conditioning. Before conditioning,
+the zero-switch event has probability $e^{-\lambda T}$ and lies at
+$(uT,+u)$; the chosen terminal velocity selects odd positive switch counts.
+
+The free kinetic functional is $S[X]=(m/2)\int_0^T V_t^2dt$, in action units.
+We compare it with the sampled polygon and with the zero-position chord.
+The chord matches position endpoints; its velocity endpoints differ from the
+bridge. All comparisons below name this positional endpoint convention.
+
+## 2. Exact conditional path law
+
+Write $N_T=2K+1$ and $z=\lambda T$. The bridge count law is
+
+$$\boxed{\Pr(K=k\mid\text{bridge})=
+ w_k=\frac{(z/2)^{2k}}{(k!)^2 I_0(z)},\qquad k=0,1,\ldots,}$$
+
+where $I_0(z)=\sum_{k\ge0}(z/2)^{2k}/(k!)^2$. Given $K=k$, independently
+choose uniform simplex vectors $(P_0,\ldots,P_k)$ and $(M_0,\ldots,M_k)$,
+each summing to $T/2$. Follow velocities $+u,-u,+u,-u,\ldots$ for durations
+$P_0,M_0,P_1,M_1,\ldots,P_k,M_k$. For $k=0$ each simplex is a singleton.
+This specifies the entire conditioned path, including all later observations.
+
+**Derivation.** Given $N_T=2k+1$, the ordered switch times are uniform in
+$0<s_1<\cdots<s_{2k+1}<T$. Their $2k+2$ spacings are uniform on the
+simplex of total length $T$. The total positive duration $A$ has density
+
+$$f_k(a)=\frac{(2k+1)!}{(k!)^2 T^{2k+1}}
+              a^k(T-a)^k,\qquad 0<a<T.$$
+
+Since $X_T=u(2A-T)$, the position Jacobian is $da/dx=1/(2u)$.
+Multiplication by the Poisson count weight gives the joint density
+
+$$\left.\frac{\Pr(X_T\in dx,N_T=2k+1)}{dx}\right|_{x=0}
+ =\frac{e^{-\lambda T}\lambda^{2k+1}}{2u(k!)^2}(T/2)^{2k}.$$
+
+Its sum is $e^{-\lambda T}\lambda I_0(z)/(2u)>0$. Division gives $w_k$.
+Conditioning the uniform spacings on $A=T/2$ leaves the two independent
+simplexes stated above. The occupation-time backbone is the equal-rate
+specialization of Cinque's Theorem 2.1, (2.6), printed p. 4;
+[the source](https://arxiv.org/abs/2202.01904v1) also gives the alternating
+switch representation (2.4), p. 3.
+
+## 3. Midpoint law, including the atom
+
+The exact midpoint law is an explicit pushforward of the preceding mixture.
+Let $d=(P_0,M_0,\ldots,P_k,M_k)$, $s_0=0$ and
+$s_j=\sum_{i<j}d_i$. Then
+
+$$Y=X_{T/2}=u\sum_{j=0}^{2k+1}(-1)^j
+        \min\{d_j,\max(0,T/2-s_j)\}.$$
+
+For any bounded measurable $g$, its expectation is
+$\sum_k w_k\mathbb E_k[g(Y)]$, where $\mathbb E_k$ is integration over the
+two normalized simplexes. This formula sums over midpoint velocities. The joint
+law retains $V_{T/2}=u(-1)^j$ on $s_j\le T/2<s_{j+1}$.
+
+In particular,
+
+$$\boxed{\Pr(Y=uT/2)=\frac1{I_0(\lambda T)}.}$$
+
+For $K=0$ the unique switch occurs at $T/2$, and $Y=uT/2$ with
+right-continuous velocity $-u$. For $k\ge1$, all simplex coordinates are
+strictly positive almost surely. Attaining $Y=uT/2$ would use all positive
+duration before the midpoint, leaving extra positive intervals with zero length.
+Attaining $Y=-uT/2$ would require zero initial positive duration. Both are
+simplex boundary events. The midpoint lies in an interval with index
+$1\le j\le2k$. For odd $j$ its position is
+$u(2\sum_{i<j,\ i\text{ even}}d_i-T/2)$; for even $j$ it is
+$u(T/2-2\sum_{i<j,\ i\text{ odd}}d_i)$.
+Each sum is a nonempty proper prefix of its simplex vector, so on each such
+region $Y$ is a nonconstant affine function of the free simplex coordinates.
+Thus the $k\ge1$ contribution is absolutely continuous on $(-uT/2,uT/2)$.
+
+**The velocity convention matters at the atom.** On the one-switch component,
+conditioning instead on $|X_T|<\epsilon$ makes the switch time uniform in a
+symmetric interval around $T/2$. Half of these paths still have velocity $+u$
+at the midpoint and half have $-u$. As $\epsilon\downarrow0$, their position
+paths converge uniformly to the one-switch return path, but their midpoint
+velocity laws retain that equal mixture. Evaluation of velocity at a jump is
+discontinuous. Our exact bridge uses the right-continuous path version above;
+an endpoint-window measurement is a separate specified protocol.
+
+## 4. Cuts sample one preparation
+
+Every finite set of cuts is evaluated on this same count/simplex probability
+space. If $\rho$ refines $\pi$, deleting the extra coordinates of
+$(X_t,V_t)_{t\in\rho}$ returns $(X_t,V_t)_{t\in\pi}$ pointwise. Hence their
+joint laws satisfy exact restriction consistency. This argument handles atoms
+without multiplying singular transition densities.
+
+An independent midpoint-reset rule fails a direct test. Conditional on
+$Y=uT/2$, speed at most $u$ forces velocity $+u$ almost everywhere on the
+first half and $-u$ almost everywhere on the second half. In particular
+$X_{T/4}=X_{3T/4}=uT/4$ deterministically. Giving either quarter point fresh
+nonzero variance changes the old preparation or violates its speed support.
+Velocity and the endpoint conditioning carry the required memory.
+
+## 5. Exact action limit under arbitrary cuts
+
+For any partition $\pi$ of $[0,T]$, let $X^\pi$ be the sampled linear
+interpolant, $|\pi|$ its largest interval, and $S_\pi=S[X^\pi]$. Then
+
+$$S[X]=\frac{mu^2T}{2},\qquad
+0\le S[X]-S_\pi\le\frac{mu^2}{2}N_T|\pi|.$$
+
+Indeed the polygon velocity on interval $I$ is the average $\bar V_I$, and
+
+$$S[X]-S_\pi=\frac m2\sum_{I\in\pi}
+                  \int_I(V_t-\bar V_I)^2dt.$$
+
+An interval without an interior switch contributes zero. Every other interval
+contributes at most $mu^2|I|/2$; their total length is at most $N_T|\pi|$.
+The count is finite almost surely. Differentiating the convergent positive
+series for $I_0$, with $I_1=I_0'$, also gives
+
+$$\mathbb E[N_T\mid\text{bridge}]
+       =1+z\frac{I_1(z)}{I_0(z)}.$$
+
+Consequently $S_\pi\to mu^2T/2$ almost surely and in $L^1$ on any deterministic
+shrinking meshes, with the displayed expected error bound. Also
+$\|X^\pi-X\|_\infty\le2u|\pi|$. Along nested partitions $S_\pi$ increases,
+by square completion at each inserted node.
+
+The surviving action relative to the zero-position chord is the kinetic cost
+of the fixed returning path. The polygon approximation error tends to zero.
+Its value $mu^2T/2$ tends to zero with duration or speed. These are separate
+limits from A01's long-observation stationary coefficient $H_*=mu^2/\lambda$.
+For the bridge midpoint observable, C031 gives
+$0\le\kappa_{\rm mid}=4m\operatorname{Var}(Y)/T\le mu^2T$.
+Its mean is generally biased, so midpoint action uses
+$2m\mathbb E[Y^2]/T$, rather than variance alone.
+
+## 6. Consequence for the action-gap programme
+
+Finite speed, velocity memory and exact cut consistency coexist with vanishing
+polygon error and arbitrarily small action scales. Their combination provides
+a concrete classical admissible family against which a proposed selection
+principle can be tested. A positive universal remainder requires an additional
+restriction on this family, traced to its physical role.
+
+The next test is force control: replace impulses by bounded-acceleration turns
+and determine the minimum duration of a return with prescribed opposite
+endpoint velocities. This introduces an energy/force timescale through a
+mechanical constraint, making its action dependence and scaling testable.
+
+Claims and source coverage are maintained separately in the ledger and the B14
+audit. The present path law is a specialization of established telegraph
+probability; the cut/action consequences are derived here for the project test.

@@ -54,7 +54,13 @@ its parameter is supplied and its support has no strict speed ceiling. The
 research obligation is a classical mechanism selecting a positive consistent
 fluctuation law, followed by universality of its action parameter.
 
-## A06: retain the state needed at each cut
+## A06: completed velocity-resolved return bridge
+
+[The return-bridge note](../notes/telegraph-return-bridge.md) and B14 close
+this test with an explicit count/simplex path law, midpoint atom, right-continuous
+velocity convention and exact cut restriction. The polygon action error vanishes
+at rate bounded by switch count times mesh; its mean has an explicit Bessel bound.
+The endpoint-window protocol at a forced jump is distinct from exact conditioning.
 
 Construct the telegraph bridge on $(X,V)$ at fixed $u<c$ and reversal rate.
 Start with fixed initial velocity and an attainable terminal position/velocity.
@@ -63,7 +69,21 @@ Derive the midpoint law, sum over the midpoint velocity, and verify that
 inserting another cut preserves the old joint marginals. Compare with an
 independent midpoint-reset rule. Track the initial/bath premises setting the
 reversal rate and scale, and distinguish the microscopic coefficient from
-A01's long-duration plateau. This is the next bounded source-driven test.
+A01's long-duration plateau. These steps are complete in C033–C034.
+
+## A07: finite-duration turns under force control
+
+On the line take $X\in W^{2,\infty}([0,T])$ with $X(0)=X(T)=0$,
+$\dot X(0)=u$, $\dot X(T)=-u$, $0<u<c$, $|\dot X|\le u$ and
+$|\ddot X|\le a$, where $a>0$ is a specified classical acceleration ceiling.
+Find the sharp feasible duration and the infimum of
+$(m/2)\int_0^T\dot X^2dt$, with an attaining path when feasible.
+Then study sampled-polygon action convergence and vary $u,a,m$ within the
+physical premises. Distinguish an endpoint-conditioned bound from a universal
+action scale. Repeat the scaling interpretation when the fixed input is force
+$F_{\max}=ma$ rather than acceleration. This joins M06's force-control question
+to the central cut-point test. Commission one bounded librarian audit covering
+the optimal-control inequality and its mechanics interpretation before acceptance.
 
 ## The supplied polygon proposal
 

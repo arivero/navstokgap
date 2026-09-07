@@ -14,6 +14,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B14](../references/batches/B14.md): conditional telegraph return bridge,
+  midpoint atom and cut/action audit; [source companion](batches/B14/B14-source-companion.md).
+
 - [B13](../references/batches/B13.md): elastic physical cuts, bounded midpoint
   variance and ballistic convolution; [source companion](batches/B13/B13-source-companion.md).
 - [B12](../references/batches/B12.md): cut-point consistency and inserted-node

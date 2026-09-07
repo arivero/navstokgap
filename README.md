@@ -9,11 +9,18 @@ about estimates and limits.
 
 ## Results to read first
 
+A finite-speed return bridge retains velocity memory and a discrete midpoint
+mass while allowing arbitrarily fine, consistent observation cuts. The
+[return-bridge paper](out/papers/telegraph-return-bridge.pdf) proves that the
+sampled polygon's action converges to the path's kinetic action, with error
+bounded by switch count times mesh. Next we test finite-duration turns under
+an acceleration ceiling.
+
 A conserved elastic collision realizes a random midpoint, while finite speed
 imposes the sharp action-coefficient bound $\kappa_{\rm mid}\le
 m\Delta(u-|v|)^2$. The [physical-cut paper](out/papers/physical-cut-speed.pdf)
 also shows why stochastic finite-speed refinement needs more information than
-independent position increments. The next bridge model retains velocity.
+independent position increments. The return bridge implements that memory.
 
 Inserting cut points into the same Gaussian bridge experiment preserves its
 action parameter $\kappa$ and adds mean kinetic action $\kappa/2$ per node.

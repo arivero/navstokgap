@@ -36,7 +36,9 @@ handoff with the remaining dependency.
 | B12 | done | Bounded prior-art/assumption audit of A03 using existing bridge and Newton routes; coordinator source verification | One Luna medium librarian | A03 draft |
 | A05 | done | Elastic physical-cut test, sharp midpoint support/variance bound, ballistic convolution drift theorem; C030–C032, twelve checks and B13 | Coordinator + Luna medium | A03/B12 |
 | B13 | done | Six-page A05 source/proof audit; collision and memory ingredients separated from derived support/convolution results | One Luna medium librarian | A05 draft |
-| A06 | ready | Finite-speed phase-space bridge: conditional midpoint with endpoint velocities and atoms; consistent coarse/fine restrictions and action limits | Coordinator, then one small librarian | A05/B13 |
+| A06 | complete | Velocity-resolved return bridge, midpoint atom, conditioning version and consistent cut/action limits; C033–C034 | Coordinator + sequential Luna medium B14 | 12 symbolic checks, 45 rational partition cases |
+| B14 | complete | Cinque occupation-law and return-bridge prior-art audit; coordinator corrected discovery-source attribution | Luna medium, sequential | C033–C034 reviewed |
+| A07 | ready | Bounded-acceleration return with opposite endpoint velocities: sharp duration and kinetic-action bounds, speed/force scaling and sampled-cut limit | Coordinator, then one small librarian | A06/B14; M06 connection |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | waiting | Sol medium audit of supplied polygon ideas, receding-centre limit and threshold inference interrupted by token-refresh failure; no worker artifacts; coordinator geometry checks saved | One Sol medium librarian | Authentication restored; drafts and 12 checks available |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
@@ -56,7 +58,7 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A06 from `research/CUT_POINT_TARGET.md`. A05/B13 are complete. The user reaffirmed the
+Execute A07 from `research/CUT_POINT_TARGET.md`. A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a
 supporting force-control calculation, A04 a secondary spatial-clock test.

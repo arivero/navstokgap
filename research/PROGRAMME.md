@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 6, 2026-09-07.
+Version 7, 2026-09-08.
 
 ## Aim
 
@@ -45,7 +45,10 @@ contributes mean kinetic action $\kappa/2$ at fixed preparation. **A05** adds
 an elastic physical-cut example and the sharp finite-speed midpoint bound
 $\kappa_{\rm mid}\le m\Delta(u-|v|)^2$. Its convolution theorem identifies
 the need for memory in a stochastic finite-speed refinement model. **A06**
-now constructs a bridge retaining both position and velocity.
+now supplies a bridge retaining both position and velocity: the exact return
+law has a midpoint atom, consistent cut restrictions and vanishing polygon
+action error. **A07** replaces impulses by bounded acceleration and tests sharp
+return-duration and kinetic-action bounds at fixed endpoint velocities.
 The bath results remain diagnostics within [the broader target](ACTION_FIELD_TARGET.md).
 Necessity, convergence, universality and identification with $\hbar$ remain
 separate proof obligations. M06 and spectral examples support this central task.

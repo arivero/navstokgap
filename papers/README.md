@@ -24,10 +24,15 @@
   [the maintained note](../notes/physical-cut-speed.md); elastic midpoint cuts,
   sharp finite-speed variance bound and ballistic convolution theorem.
   [PDF](../out/papers/physical-cut-speed.pdf), B13 audit and twelve checks.
+- [telegraph-return-bridge.tex](telegraph-return-bridge.tex): generated from
+  [the maintained note](../notes/telegraph-return-bridge.md); conditional
+  count/simplex construction, midpoint atom and consistent polygon-action limit.
+  [PDF](../out/papers/telegraph-return-bridge.pdf), B14 audit, 12 symbolic checks
+  and 45 rational partition cases.
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all eight
+Run `make papers` from the root to regenerate the programme and build all nine
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.
