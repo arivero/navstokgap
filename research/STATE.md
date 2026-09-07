@@ -1,7 +1,7 @@
 # Restart state
 
-Updated: 2026-09-07. Current milestone: source-driven time-refinement experiment,
-with a verified early printed cone passage and a new LaTeX/PDF paper.
+Updated: 2026-09-07. Current milestone: M05 two-regulator experiment,
+with a finite action-defect theorem, source audit and LaTeX/PDF paper.
 
 ## Current results and next tasks
 
@@ -17,10 +17,19 @@ bridge concentration. M04/B06 are complete. The strong target is the independent
 physical selection of a positive universal action scale, alongside construction
 of the classical limit; the current Gaussian family supplies the test setting.
 
-Next: **M05**, finite-dimensional normalization and the two-regulator proposal,
-using [the source-to-model note](../notes/cone-time-refinement.md). Pair it with
-the targeted **B07** reading of Wilson--Kogut and tangent-groupoid hypotheses.
-Each source task should change a premise, calculation or proof obligation.
+The [regulator-limits paper](../papers/regulator-limits.tex) now proves a stronger
+path/action distinction: $\kappa_N\to0$ and $(N-1)\kappa_N\to\ell$ give
+uniformly classical paths with excess action converging in $L^2$ to $\ell/2$.
+It supplies exact partition normalization, a strict-speed oscillatory control,
+quadratic stationary-phase weights and an explicit running-coefficient map.
+C013–C017 have a sequential Sol medium audit (B08) and coordinator review.
+
+Next: **M06**, test force/acceleration control and the relativistic kinetic
+action on the shrinking oscillations. Start from
+[the M05 source-to-model note](../notes/two-regulator-audit.md).
+**B07a** completed the Wilson–Kogut common-observable reading and test;
+**B07b** retains the tangent-groupoid theorem. Each source task should change
+a premise, calculation or proof obligation.
 
 **M03 remains an unfinished draft** in `papers/spectral-gap-laboratory.tex`.
 Its B04 literature audit is complete; independent proof review, dedicated checks
@@ -59,6 +68,7 @@ identifiers and selected readings; Q01 will examine the reconstruction proofs.
 | B05 | Retrospective C001–C008 audit; Holevo–Helstrom and free-propagator anchors integrated |
 | H04 | Luna medium, sequential; 1570 cone passage visually verified by coordinator |
 | M04/B06 | Free-refinement proofs and algebra checks; Luna medium prior-art/assumption audit, coordinator source verification |
+| M05/B07a/B08 | Joint path/action limit, partition normalization and regulator map; Wilson–Kogut source-to-model test; Sol medium four-source audit; 24 exact checks |
 
 NATP00385 documents Newton's account of analytic discovery and synthetic
 presentation. H02/H03 address the six Classical Scholia, the manuscript-folio
@@ -88,6 +98,8 @@ TeX's file-write security settings.
   remain archival records.
 - [M04 handoff](handoffs/M04.md): source-driven refinement milestone, review
   corrections, remaining M03 work and next M05/B07 calculation.
+- [M05 handoff](handoffs/M05.md): action-defect theorem, review and source
+  corrections, reproduction and next M06 test.
 - [Editorial review](../reviews/results-first-edit.md): verification and scope
   of the rewrite.
 - [Blog introduction](../docs/blog/introducing-navstokgap.md): first-person

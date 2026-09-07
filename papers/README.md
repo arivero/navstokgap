@@ -5,10 +5,14 @@
 - [time-refinement.tex](time-refinement.tex): exact Gaussian blocking, surviving
   action parameter, conditioned classical-path limit and oscillatory counterpart;
   [PDF](../out/papers/time-refinement.pdf). Literature/assumption audit B06.
+- [regulator-limits.tex](regulator-limits.tex): arbitrary-partition normalization,
+  finite action defect in a classical-path limit, speed control, stationary phase
+  and a two-regulator scaling map; [PDF](../out/papers/regulator-limits.pdf).
+  Per-result source/proof audit B08 and 24 exact finite checks.
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all three
+Run `make papers` from the root to regenerate the programme and build all four
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

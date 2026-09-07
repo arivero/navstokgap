@@ -9,6 +9,13 @@ about estimates and limits.
 
 ## Results to read first
 
+Paths can approach a classical trajectory uniformly while retaining finite
+excess kinetic action. In the exactly soluble Gaussian bridge, $d$ internal
+positions give mean excess $d\kappa/2$; taking $\kappa\to0$ with
+$d\kappa\to\ell$ leaves residual action $\ell/2$. The
+[new paper](out/papers/regulator-limits.pdf) gives the proof, a bounded-speed
+control example and the two-regulator normalization audit.
+
 For a perpendicular launch in a constant force, the chord–curve comparison gives
 
 $$\Delta S=\frac{F^2T^3}{24m}
@@ -22,17 +29,18 @@ positive resolution threshold. Together these results identify the path class
 and measurement resources as central choices in a gap model.
 
 - [Technical foundations PDF](out/papers/action-gap-foundations.pdf): proofs of the action identities, variation result and finite-copy threshold; Jacobi operator and free-kernel calculations.
+- [Time-refinement PDF](out/papers/time-refinement.pdf): exact Gaussian blocking and its surviving action parameter.
 - [Research programme PDF](out/papers/research-programme.pdf): questions, model sequence and work packages.
 - [Claim ledger](claims/LEDGER.md): assumptions, evidence status and review record.
 - [LaTeX sources and build](papers/README.md).
 
 ## Next experiments
 
-Compare the oscillator's action Hessian with its quantum Hamiltonian, then
-compare free motion on a line and a circle. These examples isolate the effects of
-duration, normalization, confinement and volume on a gap. The source track inventories
-the six Classical Scholia and compares the Hardy and
-Chiribella–D'Ariano–Perinotti reconstruction axioms.
+Test how force control and a relativistic kinetic action affect the shrinking
+oscillations and their action defect. The [M06 plan](notes/two-regulator-audit.md)
+connects that calculation to the bibliography and the physical scale-selection
+question. The oscillator/free-particle spectral draft, Classical Scholia corpus
+and quantum reconstruction axioms remain complementary work tracks.
 
 The [programme](research/PROGRAMME.md) develops this sequence. The
 [idea register](ideas/I001-action-field.md) preserves the proposed extra

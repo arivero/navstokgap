@@ -6,6 +6,7 @@ check:
 	$(PYTHON) scripts/constant_force_geometry.py --check-only
 	$(PYTHON) scripts/action_gap_checks.py
 	$(PYTHON) scripts/time_refinement_checks.py
+	$(PYTHON) scripts/regulator_limit_checks.py
 	$(PYTHON) scripts/check_repository.py
 	sha256sum -c docs/SHA256SUMS
 

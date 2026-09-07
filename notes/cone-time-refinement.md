@@ -19,9 +19,10 @@ Proof and literature status are recorded separately in the claim ledger.
 | [Brouder, 1999](../docs/Brouder_RungeKutta_1999.md) | Rooted-tree algebra for composed numerical flows and renormalisation | Organise nonlinear corrections after the Gaussian calculation |
 | [Cariñena et al., 1999](../docs/CarinenaEtAl_TangentGroupoid_1999.md) | Quantum and classical structures in a single geometric construction | Audit the precise quantum-completion and classical-limit theorem |
 
-The Wilson–Kogut connection presently enters through Rivero's explicit use of
-their scaling construction. Direct reading of their 1974 review, especially the
-chapter 12 cited in the 1998 note, remains a bounded source task. Brouder supplies
+The Wilson–Kogut connection now has a direct
+[§12.2 source reading](../docs/WilsonKogut_1974.md): compare theories at a common
+physical correlation length. M05 implements that idea by fixing a reference
+bridge variance and running the bare kinetic coefficient. Brouder supplies
 the specific Butcher/Connes–Kreimer algebraic link. These are separate source
 links, each with a mathematical operation to investigate.
 
@@ -86,16 +87,13 @@ record ownership, quotation and mathematical use separately. The hypothesis
 of disciplinary separation between philosophical reception and mathematical
 practice can then be tested against those records.
 
-## Next bounded work: M05/B07
+## Refinement milestone and continuation
 
-1. Audit Rivero's finite-dimensional oscillatory proposal: use a quadratic
-   function, fix Fourier normalization and stationary-phase weights, and
-   distinguish a distribution on critical points from a path amplitude.
-2. Extract the exact map and parameters from Wilson–Kogut chapter 12 and
-   Rivero's equation (6). Apply the map to the already normalized Gaussian
-   family before introducing a nonlinear interaction.
-3. Read the tangent-groupoid quantization theorem's hypotheses and limit
-   topology. Match them to the strong target's quantum-completion branch.
+M05/B07a/B08 completed the quadratic normalization, exact scaling map and
+source audit. The new [two-regulator note](two-regulator-audit.md) records
+the finite action-defect theorem and routes it into M06's dynamical test.
+B07b retains the tangent-groupoid theorem's hypotheses and limit topology;
+match these to the strong target's quantum-completion branch.
 
 Each source task must end with a premise to test, a construction to implement,
 or a proof obligation to resolve. Use one small worker at a time and review its

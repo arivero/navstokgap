@@ -16,7 +16,7 @@ For a bridge from \(x\) to \(y\) over \([0,T]\), §3.4, printed p. 10, construct
 \[
 B^{x,y,T}_u=x+B_u-(u/T)B_T+(u/T)(y-x),
 \]
-using independence of the centered Gaussian bridge component and \(B_T\). The standard bridge is centered Gaussian with covariance \(s(1-t)\) for \(s\le t\) (printed p. 5, eqs. (4)–(5)); hence its one-time variance is \(u(T-u)/T\) after scaling.
+using independence of the centered Gaussian bridge component and \(B_T\). The standard bridge is centered Gaussian with covariance \(s(1-t)\) for \(s\le t\) (printed p. 6, eqs. (4)–(5)); hence its one-time variance is \(u(T-u)/T\) after scaling.
 
 The source supports the stochastic/heat-kernel setting, not the project’s action notation. Replacing Brownian variance \(t\) by \(\kappa t/m\) is a direct scaling. The finite-dimensional concentration as \(\kappa\to0\) is a derived Chebyshev/union-bound consequence, not a theorem quoted from this source.
 
@@ -35,5 +35,5 @@ established, so original bytes stay outside the published repository.
 
 - Printed p. 12–13, eqs. (20)–(25): transition kernels, Chapman–Kolmogorov, finite-dimensional products, and normalized Brownian density.
 - Printed p. 10, §3.4: endpoint bridge construction and linear mean.
-- Printed p. 5, eqs. (4)–(5): centered Gaussian standard bridge and covariance.
+- Printed p. 6, eqs. (4)–(5): centered Gaussian standard bridge and covariance.
 - Printed p. 16, eqs. (31)–(32): Brownian generator and heat equation; this supports the heat-kernel interpretation but not the project’s mass/action rescaling verbatim.

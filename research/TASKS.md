@@ -23,8 +23,11 @@ handoff with the remaining dependency.
 | H05 | ready | Author-specific cone reception: Newton Plutarch references and Leibniz continuum corpus; separate ownership, quotation and use | One Luna/Sol source worker | H04 |
 | M04 | done | Exact free Gaussian blocking, semigroup parameter and bridge concentration; oscillatory counterpart; readable paper and checks | Coordinator | Rivero 1998/1999 |
 | B06 | done | Prior-art and assumption audit of each M04 result; source corrections verified and integrated | One Luna librarian | M04 draft |
-| M05 | ready | Audit the two-regulator proposal on a quadratic finite-dimensional action, with explicit normalization and scaling map | Coordinator | M04/B06 |
-| B07 | ready | Source-to-model batch: Wilson–Kogut ch. 12 and tangent-groupoid theorem hypotheses; each reading yields an M05 test | One Luna/Sol source worker | M04 |
+| M05 | done | Two-regulator quadratic audit: exact normalization, joint action-defect limit, stationary phase and explicit scaling map; reviewed paper and checks | Coordinator | M04/B06 |
+| B07a | done | Wilson–Kogut §12.2 common-correlation-length construction read; reference-observable test implemented in M05 | Coordinator source reading | M04 |
+| B07b | ready | Tangent-groupoid quantization theorem: exact hypotheses, limit topology and completion scope; return one test for the strong target | One Luna/Sol source worker | M04 |
+| B08 | done | Four-source, 13-page per-result prior-art and proof audit of M05, reviewed by coordinator | One Sol medium librarian | M05 draft |
+| M06 | ready | Test force/acceleration control and a strict-speed relativistic action on the shrinking oscillations; state the action-defect survival criterion and review it | Coordinator, then one small librarian | M05/B08 |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | waiting | Choose one gap notion/model; prove a bound with operator domain, parameter dependence and gap-closing limits | Analyst + adversarial reviewer | M03, Q01 as relevant |
@@ -42,8 +45,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute M05 with the targeted B07 reading. The source-to-model
-map is `notes/cone-time-refinement.md`. M03 retains its draft and completed B04
+Execute M06 from `notes/two-regulator-audit.md`: add one dynamical premise to
+the explicit shrinking-oscillation model, calculate its effect, then commission
+one bounded prior-art audit. B07b retains the tangent-groupoid theorem reading.
+M05/B07a/B08 are complete. M03 retains its draft and completed B04
 audit; its independent mathematical review and build integration remain.
 H02 continues from `references/batches/H02-seeds.md`; H05 uses H04's exact
 cone-passage witnesses.

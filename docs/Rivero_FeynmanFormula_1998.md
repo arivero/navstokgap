@@ -18,6 +18,17 @@ composing kernels over inserted positions. This supplies the next toy-model test
 
 ## Use in this project
 
+M05 retrieved a stable copy on 2026-09-07:
+`.build/m05/Rivero_FeynmanFormula_1998.pdf`, SHA-256
+`f4ac9355052c93c724c55c0354b080b6851cd6185eb4d84bbfdc60d51617349b`.
+Printed p. 2, equations (5)–(9), was visually checked. The exponent in (5)
+contains the time step multiplying the Lagrangian sum. Track that factor
+explicitly when interpreting the proposed proportionality of regulators.
+
 Write the finite-dimensional blocking map first, including its normalization,
 then track mesh size and action scale independently. The
 [research note](../notes/cone-time-refinement.md) routes this reading into M04.
+The completed [M05 audit](../papers/regulator-limits.tex) now supplies the
+partition determinant, single-quadratic critical-point normalization and an
+explicit running-coefficient map. Printed p. 1 was visually checked again
+during coordinator review of B08.

@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 3, 2026-09-07.
+Version 4, 2026-09-07.
 
 ## Aim
 
@@ -31,6 +31,16 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Starting results
+
+The two-regulator calculation proves an exact finite action-defect limit.
+With $d=N-1$ internal positions, $\kappa_N\to0$ and $d\kappa_N\to\ell$,
+Gaussian polygonal bridges converge uniformly to the classical path while
+their excess action converges in $L^2$ to $\ell/2$.
+[Classical Paths with a Finite Action Defect](../papers/regulator-limits.tex)
+also supplies the partition determinant, a strict-speed oscillatory example,
+quadratic stationary-phase normalization and an explicit bare-coefficient map.
+B08 provides its per-result source and proof audit. M06 next tests force
+control and the relativistic kinetic action on the oscillatory sequence.
 
 The current refinement experiment is an exact free-particle blocking map.
 Gaussian kernels compose while preserving their action parameter; endpoint
@@ -141,12 +151,13 @@ interpretations and their immediate tests.
 
 ## Reading priorities
 
-For M05, first audit the finite-dimensional normalization and two regulators
-in [Rivero's 1998 proposal](https://arxiv.org/abs/quant-ph/9803035v1).
-Use the already checked Brownian bridge/Markov product to compute the partition
-covariance and determinant. B07 then reads Wilson--Kogut chapter 12 and the
-precise tangent-groupoid quantization hypotheses. This ordering joins source
-reading to a calculation instead of growing a detached reading queue.
+M05 and B07a have implemented the normalization audit of
+[Rivero's 1998 proposal](https://arxiv.org/abs/quant-ph/9803035v1) and the
+common-observable construction in Wilson--Kogut §12.2. The
+[next source-to-model note](../notes/two-regulator-audit.md) turns Rindler's
+oscillation framework into M06's force-control test. B07b retains the precise
+tangent-groupoid quantization hypotheses and their classical-limit topology.
+This ordering joins source reading to a named calculation.
 
 Start Q01 with [Hardy's five axioms](https://arxiv.org/abs/quant-ph/0101012v4)
 and [Chiribella–D'Ariano–Perinotti's informational derivation](https://arxiv.org/abs/1011.6451v3).

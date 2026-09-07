@@ -1,0 +1,284 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Classical Paths with a Finite Action Defect},
+pdfauthor={navstokgap research working notes}}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\title{Classical Paths with a Finite Action Defect\\
+\large An exact two-regulator experiment}
+\author{navstokgap research working notes}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A shrinking Gaussian bridge can converge uniformly to the free classical path
+while its excess kinetic action converges to a positive constant. With $d$
+internal positions and fluctuation action scale $\kappa$, that constant is
+controlled by $d\kappa$: the exact mean excess is $d\kappa/2$.
+We derive the partition Hessian, normalization and limiting law, then audit a
+two-regulator path-integral proposal. A bounded-speed oscillatory example
+isolates the role of derivative control. The calculation turns the search for
+an action gap into a concrete selection question: which physical premise
+fixes a positive surviving quantity across changes of resolution?
+\end{abstract}
+
+\section{The object retained by a limit}
+The central object is the \emph{action defect}
+$\lim_N(S[q_N]-S[q_{\rm cl}])$ for specified convergent paths and fixed
+endpoints. Uniform path convergence and convergence of kinetic action impose
+different demands on their derivatives. This distinction is familiar from
+oscillations in the calculus of variations \cite[\S\S2.1,3.3]{Rindler2017};
+here it gives an exactly soluble mechanics test.
+
+Work on the free line during $[0,T]$, with $T>0$, mass $m>0$ and endpoints
+$x,z\in\R$. Positions have length units. The parameter $\kappa>0$ has action
+units and defines a positive Gaussian path model. We separately examine a
+complex oscillatory integral with action parameter $\epsilon>0$.
+The paths integrated over are off-shell comparison paths; the free solution
+is $q_{\rm cl}(t)=x+t(z-x)/T$. The results concern these specified models.
+For the proposed universal quantum scale, the physical selection principle
+and the justification of a phase rule remain the research obligations.
+
+\section{Exact normalization at any partition}
+Let $\pi=(0=t_0<\cdots<t_N=T)$, $N\ge2$, $\tau_j=t_j-t_{j-1}$ and
+$d=N-1$. The piecewise-linear path with nodes $q_0=x,q_N=z$ has action
+\[
+ S_\pi(q)=\frac m2\sum_{j=1}^N\frac{(q_j-q_{j-1})^2}{\tau_j}.
+\]
+Set $\eta_j=q_j-q_{\rm cl}(t_j)$, with $\eta_0=\eta_N=0$. Summation of
+the cross term gives
+\begin{equation}\label{eq:split}
+ S_\pi=S_{\rm cl}+\tfrac12\eta^TA_\pi\eta,
+ \qquad S_{\rm cl}=\frac{m(z-x)^2}{2T}.
+\end{equation}
+The $d\times d$ matrix has entries
+\[
+ (A_\pi)_{jj}=m(\tau_j^{-1}+\tau_{j+1}^{-1}),\qquad
+ (A_\pi)_{j,j+1}=(A_\pi)_{j+1,j}=-m\tau_{j+1}^{-1},
+\]
+and zeros elsewhere. Its units are mass/time, since its quadratic form acts
+on node displacements. The continuous Hessian with the $L^2(dt)$ inner product
+instead has eigenvalues with units mass/time squared.
+
+\begin{proposition}[Partition determinant and covariance]\label{prop:partition}
+The matrix $A_\pi$ is positive definite and
+\begin{equation}\label{eq:detgreen}
+ \det A_\pi=\frac{m^dT}{\prod_{j=1}^N\tau_j},\qquad
+ (A_\pi^{-1})_{ij}=\frac1m\left(\min(t_i,t_j)-\frac{t_it_j}{T}\right).
+\end{equation}
+The normalized endpoint bridge density with respect to $d\eta_1\cdots d\eta_d$
+is
+\begin{equation}\label{eq:density}
+ \rho_\pi^\kappa(\eta)=
+ \frac{\sqrt{\det A_\pi}}{(2\pi\kappa)^{d/2}}
+ \exp\left(-\frac{\eta^TA_\pi\eta}{2\kappa}\right),
+ \qquad \operatorname{Cov}(\eta)=\kappa A_\pi^{-1}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The quadratic form is $m\sum_j(\eta_j-\eta_{j-1})^2/\tau_j$; its vanishing
+forces every node to zero. For the leading $k\times k$ minor, the tridiagonal
+determinant recurrence gives
+$D_k=m^k(\tau_1+\cdots+\tau_{k+1})/(\tau_1\cdots\tau_{k+1})$.
+This holds at $k=0,1$, and substitution into
+$D_k=m(\tau_k^{-1}+\tau_{k+1}^{-1})D_{k-1}
+-m^2\tau_k^{-2}D_{k-2}$ proves it inductively.
+For each column of the proposed inverse, the piecewise-linear Green function
+vanishes at the endpoints, has constant slope on either side of its node,
+and a slope decrease of $1/m$ there. Multiplication by $A_\pi$ therefore
+gives the corresponding coordinate vector. Diagonalizing the positive matrix
+then gives the Gaussian integral and covariance in \eqref{eq:density}.
+\end{proof}
+
+There are $N$ transition densities and $d=N-1$ integrated positions:
+\begin{equation}\label{eq:kernel}
+ \left(\prod_{j=1}^N\sqrt{\frac{m}{2\pi\kappa\tau_j}}\right)
+ \int_{\R^d}e^{-S_\pi(q)/\kappa}\,dq
+ =\sqrt{\frac{m}{2\pi\kappa T}}e^{-S_{\rm cl}/\kappa}.
+\end{equation}
+Thus the determinant restores exactly the free transition kernel at duration
+$T$. Dividing the product by that kernel yields \eqref{eq:density}.
+This is the Brownian transition/bridge construction
+\cite[\S\S3.4,4.1]{PitmanYor2018}, with variance parameter $\kappa/m$.
+
+\section{A classical path limit with residual action}
+The number of modes and their individual scale enter the action through their
+product. This gives the promised two-regulator calculation.
+
+\begin{proposition}[Exact defect law and joint limit]\label{prop:defect}
+Under \eqref{eq:density}, the excess $\Delta S_\pi=S_\pi-S_{\rm cl}$ satisfies
+\begin{equation}\label{eq:chi}
+ \frac{2\Delta S_\pi}{\kappa}\sim\chi_d^2,\qquad
+ \E\Delta S_\pi=\frac{d\kappa}{2},\qquad
+ \operatorname{Var}(\Delta S_\pi)=\frac{d\kappa^2}{2}.
+\end{equation}
+Let $N\to\infty$, $d=N-1$, and choose partitions with maximum interval tending
+to zero. If $\kappa_N\to0$ and $d\kappa_N\to\ell\in[0,\infty)$, their
+polygonal bridges admit a coupling for which
+\[
+ q_N\longrightarrow q_{\rm cl}\quad\hbox{uniformly almost surely},\qquad
+ \Delta S_{\pi_N}\longrightarrow\ell/2\quad\hbox{in }L^2.
+\]
+The quantity $\ell$ has action units.
+\end{proposition}
+\begin{proof}
+Whitening gives $Z=A_\pi^{1/2}\eta/\sqrt\kappa$ with independent standard
+normal coordinates. Equation \eqref{eq:split} becomes
+$\Delta S_\pi=\kappa\sum_{j=1}^d Z_j^2/2$. The normal moments
+$\E Z_j^2=1$, $\E Z_j^4=3$ prove \eqref{eq:chi} and imply
+\[
+ \E(\Delta S_{\pi_N}-\ell/2)^2
+ =d\kappa_N^2/2+(d\kappa_N-\ell)^2/4\longrightarrow0.
+\]
+For the path limit, take one continuous standard Brownian bridge
+$B_t^T=B_t-(t/T)B_T$ on $[0,T]$ and let $I_\pi$ denote linear interpolation
+at the partition nodes. Its covariance is $\min(s,t)-st/T$
+\cite[p.~6, (4)--(5)]{PitmanYor2018}. Consequently
+$q_N=q_{\rm cl}+\sqrt{\kappa_N/m}\,I_{\pi_N}B^T$ has the required law, and
+\[
+ \|q_N-q_{\rm cl}\|_\infty
+ \le\sqrt{\kappa_N/m}\,\|B^T\|_\infty\longrightarrow0
+\]
+almost surely by continuity on a compact interval. The action moment identity
+holds under this coupling as well.
+\end{proof}
+
+For equal steps $\tau=T/N$ and $\kappa_N=b\tau$, where $b>0$ has energy
+units, $\ell=bT$ and the residual action is $bT/2$. More generally,
+$d\kappa_N\to0$ gives zero residual action, whereas $d\kappa_N\to\infty$
+gives divergence in probability: the relative variance is $2/d$.
+At fixed $d,\kappa>0$, the support of $\Delta S_\pi$ is $[0,\infty)$.
+Thus the positive residual is a selected limiting value, rather than a hard
+lower bound on the positive actions of admissible finite paths.
+
+\section{A bounded-speed control example}\label{sec:speed}
+A speed bound alone still permits action defects. For the Newtonian action
+on $H^1([0,T])$ with fixed endpoints, choose $c>|z-x|/T$ and
+$0<v_*<c-|z-x|/T$. The smooth off-shell paths
+\begin{equation}\label{eq:sine}
+ q_n(t)=q_{\rm cl}(t)+\frac{v_*T}{2\pi n}\sin(2\pi nt/T)
+\end{equation}
+converge uniformly to $q_{\rm cl}$ and satisfy $|\dot q_n|<c$, while
+\begin{equation}\label{eq:sineaction}
+ S[q_n]-S[q_{\rm cl}]=\frac{mv_*^2T}{4}>0.
+\end{equation}
+Indeed the cross term integrates to zero and
+$\int_0^T\cos^2(2\pi nt/T)dt=T/2$. Their acceleration amplitude grows as
+$2\pi n v_*/T$. This isolates derivative and force control as the next
+dynamical test. Here $c$ is an imposed kinematic bound on the Newtonian model;
+a relativistic Lagrangian is a separate choice.
+
+The example is an elementary oscillation mechanism of the kind organized by
+Young measures \cite[\S3.3]{Rindler2017}. Its coefficient varies continuously
+with $v_*$. Strong convergence of velocities in $L^2$ would instead make this
+quadratic action converge to the action of the limiting path.
+
+\section{Quadratic stationary phase and critical-point weights}\label{sec:phase}
+For one nondegenerate quadratic stationary point, a normalized oscillatory
+amplitude gives a precise version of Rivero's finite-dimensional construction
+\cite[p.~1, (2)--(4)]{RiveroFeynman1998}. Let
+$F(q)=F_*+(q-q_*)^TA(q-q_*)/2$ with $A$ real symmetric positive definite on
+$\R^d$, and $O\in\mathcal S(\R^d)$. Here $F$ has action units and $A$
+has action/length squared units. Define
+\[
+ I_\epsilon[O]=(2\pi\epsilon)^{-d/2}
+ \int_{\R^d}e^{iF(q)/\epsilon}O(q)\,dq.
+\]
+Use $\widehat O(k)=(2\pi)^{-d/2}\int e^{-ik\cdot q}O(q)\,dq$.
+The Gaussian Fourier identity \cite[p.~464, (14.7)]{GuilleminSternberg2010} gives
+\begin{align*}
+ e^{-iF_*/\epsilon}I_\epsilon[O]
+ &=\frac{e^{i\pi d/4}}{\sqrt{\det A}}(2\pi)^{-d/2}
+ \int_{\R^d}e^{ik\cdot q_*}
+ e^{-i\epsilon k^TA^{-1}k/2}\widehat O(k)\,dk\\
+ &\longrightarrow\frac{e^{i\pi d/4}}{\sqrt{\det A}}O(q_*).
+\end{align*}
+One can obtain the identity by inserting Gaussian damping in the quadratic
+Fourier integral and removing it in tempered distributions. The limit follows
+from $\widehat O\in L^1$ and dominated convergence. In particular,
+\begin{equation}\label{eq:criticaldelta}
+ \lim_{\epsilon\downarrow0}|I_\epsilon[O]|^2
+ =\frac{|O(q_*)|^2}{\det A}
+ =\langle\delta^{(d)}(\nabla F),|O|^2\rangle.
+\end{equation}
+The last equality is the change of variables $p=A(q-q_*)$.
+Equation \eqref{eq:criticaldelta} is a scalar limit for each fixed test
+function $O$; the distribution on its right acts linearly on $|O|^2$.
+The amplitude carries a square-root determinant weight and a removable global
+phase; its squared modulus gives the gradient-delta weight. Rivero uses
+$\epsilon^{-d/2}$, so the corresponding squared limit acquires $(2\pi)^d$
+under the present Fourier convention. This is a delta supported on the
+critical point, not a derivative of a delta. The argument fixes $d$; joint
+refinement requires control of the dimension-dependent weights and observables.
+
+\section{The two regulators and an explicit scaling map}\label{sec:map}
+Rivero's equation (5) contains
+\[
+ \exp\left(\frac{i\tau}{\epsilon}
+ \sum_j L^\tau\!\left(q_j,\frac{q_{j+1}-q_j}{\tau}\right)\right),
+\]
+and (7) takes the two regulators proportional. Under the literal physical
+identification $L^\tau=mv^2/2$ with fixed $m$ and fixed physical coordinates,
+the exponent is $iS_\pi/\epsilon$. Therefore $[\epsilon]=\text{action}$,
+$[\tau]=\text{time}$, and $\epsilon=b\tau$ assigns energy units to $b$.
+The positive Gaussian counterpart is precisely the finite-defect scaling in
+Proposition~\ref{prop:defect}, with its path width tending to zero.
+
+The source also permits changing $L$ and the coordinate scale, and leaves its
+map (6) to be specified. Here is an exact free-model choice. Fix reference
+values $m_R>0$, $\kappa_R>0$ and set the bare kinetic coefficient to
+\begin{equation}\label{eq:bare}
+ m_B(\tau)=\frac{\epsilon(\tau)}{\kappa_R}m_R.
+\end{equation}
+At every partition this yields
+\[
+ \frac{S_{\pi,B}}{\epsilon}=\frac{S_{\pi,R}}{\kappa_R},\qquad
+ \sqrt{\frac{m_B}{2\pi\epsilon\tau}}
+ =\sqrt{\frac{m_R}{2\pi\kappa_R\tau}}.
+\]
+Both the positive Gaussian family and its oscillatory counterpart are therefore
+fixed exactly, with the latter using $i$ in the prefactor and the branch
+$1/\sqrt{i}=e^{-i\pi/4}$ for positive time. As $\epsilon\to0$, this map sends
+$m_B\to0$ while holding the reference mass $m_R$ fixed. In the oscillatory
+case the bare phase corresponds to a fixed reference quantum coefficient;
+in the positive case the observable bridge variance is
+\begin{equation}\label{eq:renormobs}
+ \operatorname{Var}(q(s)\mid x,z)=\frac{\kappa_R s(T-s)}{m_RT}.
+\end{equation}
+Choosing this variance at one interior time fixes the ratio $\kappa_R/m_R$;
+a separately fixed reference mass then fixes $\kappa_R$.
+
+Wilson--Kogut \cite[\S12.2, pp.~166--168, Fig.~12.7]{WilsonKogut1974}
+provides the design principle: compare cutoff theories at a common physical
+correlation length. Their construction specifies a renormalized mass and
+compares rescaled trajectories on the surface with dimensionless correlation
+length one. Under the topology discussed there, the renormalized mass remains
+a free parameter. In our model, \eqref{eq:renormobs} plays the role of the
+reference observable and \eqref{eq:bare} implements its preservation. This is
+an explicit toy scaling map, with the physical scale supplied by the
+renormalization condition.
+
+\section{The next physical selection test}
+The surviving information is now explicit: path locations, velocity
+oscillations, total excess action and normalized fluctuation width can have
+different limits. The next bounded task is to impose a physical dynamical
+condition on the oscillations and calculate which of these quantities survives.
+Uniform force control, a finite-speed relativistic action, and a prescribed
+fluctuation observable supply concrete alternative tests. For a universal
+positive action parameter, a selection argument must also relate different
+masses, durations and interacting systems, and explain the phase coefficient.
+
+For the companion PDE question, this example motivates tracking the topology
+in which derivatives and quadratic quantities pass to a limit. The
+Yang--Mills target additionally concerns the physical Hamiltonian spectrum;
+the present defect is an action difference in a fixed-endpoint mechanics model.
+
+\bibliographystyle{plain}
+\bibliography{references/library}
+\end{document}

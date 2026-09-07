@@ -20,6 +20,11 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C010 | A weakly continuous centered Gaussian convolution semigroup has variance $at$, $a\ge0$; at fixed mass $\kappa=ma$ remains free | Time-refinement Proposition 2; characteristic-function proof, including the degenerate family |
 | C011 | Fixed-endpoint Gaussian bridges have linear mean and variance $\kappa s(T-s)/(mT)$; fixed finite-dimensional laws concentrate on the free classical path as $\kappa\to0$ | Time-refinement §3; square completion, Chebyshev and union bound |
 | C012 | For every $\kappa>0$, the free multiplier $\exp[-i\kappa t k^2/(2m)]$ gives a strongly continuous unitary group on $L^2(\mathbb R)$ with Hamiltonian domain $H^2$ | Time-refinement §4; Fourier proof and composition check; B06 assumption audit |
+| C013 | At any positive finite time partition, the free endpoint Hessian has determinant $m^{N-1}T/\prod\tau_j$ and inverse $[\min(t_i,t_j)-t_it_j/T]/m$; these give the normalized bridge law | Regulator-limits Proposition 1; B08 proof review; exact nonuniform-partition checks |
+| C014 | Under that bridge, $2\Delta S/\kappa\sim\chi^2_{N-1}$; if $\kappa_N\to0$ and $(N-1)\kappa_N\to\ell<\infty$, a common coupling gives uniform almost-sure path convergence and $L^2$ action excess $\ell/2$ | Regulator-limits Proposition 2; B08 review of covariance coupling and moments |
+| C015 | Smooth fixed-endpoint sine perturbations with amplitude proportional to $1/n$ retain excess Newtonian action $mv_*^2T/4$ within a strict speed bound; acceleration grows with $n$ | Regulator-limits §4; off-shell paths, direct integration and B08 review |
+| C016 | At one SPD quadratic critical point, the normalized oscillatory amplitude has a scalar squared-modulus limit $|O(q_*)|^2/\det A=\langle\delta^{(d)}(\nabla F),|O|^2\rangle$ for each Schwartz test function | Regulator-limits §5; fixed dimension, Fourier proof; B08 constants review |
+| C017 | For a physical free Lagrangian, $\epsilon=b\tau$ gives energy units to $b$; choosing the bare coefficient $m_B=\epsilon m_R/\kappa_R$ exactly preserves the normalized reference kernels | Regulator-limits §6; explicit reference condition, fixed square-root branch; B08 algebra/units review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -40,6 +45,11 @@ consequences are identified separately.
 | C010 | Elementary characteristic-function/additivity consequence within the Gaussian class | B06 |
 | C011 | Standard Brownian bridge with rescaling; finite-dimensional concentration is a consequence | B06 |
 | C012 | Standard free Schrödinger group and domain, with restored units | B06 |
+| C013 | Elementary determinant/Green-function consequence of the standard Gaussian bridge | [B08](../references/batches/B08.md) |
+| C014 | Finite chi-square law and joint limit derived from standard Gaussian facts; exact combined statement unmatched in the four-source coverage | B08; bounded coverage, novelty unassessed |
+| C015 | Elementary mechanics instance of the established oscillatory weak-limit mechanism | B08; Rindler §§2.1, 3.3 |
+| C016 | Exact quadratic Fourier identity in Guillemin–Sternberg (14.7); scalar limit and delta pullback are consequences | B08 |
+| C017 | Explicit elementary scaling construction motivated by Rivero; exact map unmatched in the selected sources | B08; bounded coverage, novelty unassessed |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -71,3 +81,9 @@ and supporting calculations behind C001–C008. Its two scope clarifications are
 incorporated: endpoint terms mean $dG(q,t)/dt$, and path-space locality requires
 continuity of the parameterized paths. The current editorial revision retains
 the theorem statements, proof arguments and evidence classifications.
+
+[B08](../reviews/regulator-limits-B08.md) independently checked C013–C017.
+Coordinator review verified the source formulas, retained the distinction
+between path and action convergence, specified the oscillatory branch and
+made the scalar test-function interpretation explicit. All 24 finite checks
+pass; the general analytic statements rest on the written proofs.
