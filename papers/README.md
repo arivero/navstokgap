@@ -33,10 +33,14 @@
   from [the composition note](../notes/composition-universality.md); conditional
   mass universality, positive reference and preparation tests.
   [PDF](../out/papers/composition-universality.pdf), B16 and five algebra checks.
+- [bridge-crossover.tex](bridge-crossover.tex): exact beta midpoint law and
+  crossover, cubic onset, plateau proof and small-mass window constraint;
+  [PDF](../out/papers/bridge-crossover.pdf). B17 audit, 29 exact checks and
+  seven quadrature comparisons; maintained in [the note](../notes/bridge-crossover.md).
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all ten
+Run `make papers` from the root to regenerate the programme and build all eleven
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

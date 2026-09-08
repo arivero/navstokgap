@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 9, 2026-09-08.
+Version 10, 2026-09-08.
 
 ## Aim
 
@@ -32,12 +32,20 @@ as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
 
+**A09a/B17 are complete.** The [crossover note](../notes/bridge-crossover.md)
+derives a beta midpoint law and the exact interpolation from cubic short-window
+variance to the common long-window plateau. C038 proves that a fixed finite
+window and uniform speed ceiling cannot realize a positive shared coefficient
+over arbitrarily small masses. **A09b** now addresses the direct checkerboard
+source passages and real-versus-complex two-component dynamics. The full A09
+programme remains active until that work is reviewed.
+
 **A08/B16 are complete.** The [composition note](../notes/composition-universality.md)
 proves that a nonnegative mass-only coefficient preserved by independent
 composition is constant on positive masses. A finite-rate, nonzero-speed
 reference makes the common Green–Kubo plateau positive. C035–C036 retain
 the preparation-class premise, and product-state closure accommodates more
-than two centre velocities. **A09 is now the next task.** The original
+than two centre velocities. The original
 priority decision and its countertests follow.
 
 The [six-direction review](../reviews/six-directions-2026-09-08.md) promotes

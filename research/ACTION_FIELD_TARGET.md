@@ -8,7 +8,7 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A08/B16: **A09**, the crossover/checkerboard test
+Immediate priority after A09a/B17: **A09b**, the checkerboard recurrence test
 below. The [cut-point refinement test](CUT_POINT_TARGET.md)
 has completed its chosen constructions; it remains the consistency condition
 for any candidate field. Bath relaxation supplies a comparison mechanism.
@@ -53,6 +53,13 @@ strict positivity. Test this combined conditional route explicitly, alongside
 families of finite-rate models whose shared coefficients approach zero.
 
 ## A09/G01: crossover, quantum role and spectral control
+
+**A09a is complete:** [the crossover note](../notes/bridge-crossover.md),
+C037–C038 and B17 give the exact conditioned midpoint curve and the necessary
+window/mass constraint. Its plateau limit concerns $T\to\infty$ at fixed mass;
+uniformity over masses approaching zero fails at a common finite window.
+**A09b** next uses B15's direct-passage leads to derive the real/complex
+two-component recurrence with explicit corner normalization and initial data.
 
 Use C018/C031 to obtain the necessary window $\Delta\ge K/(mu^2)$ for a
 positive prescribed coefficient. Distinguish this condition from exact Gaussian

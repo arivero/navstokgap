@@ -15,6 +15,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B17](../references/batches/B17.md): exact bridge crossover and common-window
+  constraint; [source companion](batches/B17/crossover-source-companion.md).
+
 - [B16](../references/batches/B16.md): composition universality and positive
   reference audit; [source companion](batches/B16/composition-source-companion.md).
 

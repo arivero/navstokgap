@@ -69,6 +69,10 @@ separate preparation obligation.
 
 ## 2. Crossover and the conditioned midpoint (A09)
 
+Coordinator update, A09a/B17: [the exact crossover proof](bridge-crossover.md)
+now gives the full beta mixture and plateau limit. It corrects the earlier
+unscaled-mean interpretation below; the sampler remains numerical evidence.
+
 **Necessary window.** C018 and C031 give, for any coefficient $K$ realized at
 window $\Delta$ under speed bound $u$, the condition $\Delta\ge\Delta_*:=K/(mu^2)$.
 For the stationary telegraph observable of C020 the bound reads
@@ -96,8 +100,10 @@ The exact sampler confirms the cubic onset and the plateau, with $m=u=1$:
 | 8 | 0.940 | — | 0.545 | 0.002 | 0.002 |
 | 32 | 0.985 | — | 0.508 | 0.000 | 0.000 |
 
-The variance coefficient rises to $H_*$; the second-moment version rises to
-$H_*/2$ because the mean midpoint tends to zero. An earlier Monte Carlo with
+The variance coefficient converges to $H_*$; the second-moment version converges
+to $H_*/2$. The unscaled mean tends to $u/(2\lambda)$, while its contribution
+to the action divided by $T$ vanishes. Monotonicity is not established here;
+the second-moment table already shows an overshoot. An earlier Monte Carlo with
 position-only conditioning, which admits both terminal velocities, showed a
 quadratic onset. The small-window exponent therefore depends on the
 conditioning protocol; $\Delta_*$ and the plateau are the same in both.

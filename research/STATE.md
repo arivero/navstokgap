@@ -1,10 +1,20 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A08/B16 complete;
-crossover and checkerboard task A09 next.
+Updated: 2026-09-08. Current milestone: A09a/B17 complete;
+checkerboard recurrence task A09b next.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
+
+**A09a/B17 are complete.** [The crossover note](../notes/bridge-crossover.md)
+gives the exact count-conditioned beta midpoint law and the full action-valued
+crossover $g(z)=zR(z)[1-R(z)]$, with cubic onset and limit one.
+It proves the common-finite-window obstruction to positive universality across
+arbitrarily small masses. C037–C038 have one sequential Luna-medium audit,
+coordinator review, 29 exact checks and seven numerical comparisons.
+Eleven PDFs now build. **A09b is next:** direct checkerboard passages and the
+real/complex two-component recurrence. The broader A09 task remains active;
+preparation independence and quantum identification stay open.
 
 **A08/B16 are complete.** [The composition note](../notes/composition-universality.md)
 proves conditional mass universality and a positive-reference theorem:
@@ -12,7 +22,7 @@ composition plus one finite-rate, nonzero-speed telegraph constituent fixes a
 common positive Green–Kubo plateau. C035–C036 have one Luna-low audit,
 coordinator source/proof review and five dedicated algebra checks, alongside
 P02's product-chain checks. Preparation independence and the quantum role
-remain explicit A09 obligations. Ten PDFs now build. **A09 is next**, using
+remain explicit A09 obligations. **A09 uses**
 P02's existing crossover/midpoint/continuation calculations as drafts, followed
 by G01. B11 and A07 retain their secondary tasks.
 
@@ -153,6 +163,9 @@ inside `.build/<paper>/` with the repository on `BIBINPUTS`, preserving
 TeX's file-write security settings.
 
 ## History and handoffs
+
+- [A09a handoff](handoffs/A09a.md): exact beta midpoint law, crossover limits,
+  boundary-mean correction and common-window mass constraint; B17 audit.
 
 - [A08 handoff](handoffs/A08.md): conditional shared positive plateau,
   product-state closure, preparation/correlation tests and B16 source review.

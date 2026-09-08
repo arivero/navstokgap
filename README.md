@@ -9,6 +9,12 @@ about estimates and limits.
 
 ## Results to read first
 
+The finite-speed return bridge now has an exact midpoint crossover: cubic
+short-window variance converges to its shared long-window action plateau.
+The [crossover paper](out/papers/bridge-crossover.pdf) proves the beta mixture
+and shows why a positive coefficient across arbitrarily small masses requires
+mass-dependent observation windows. Checkerboard dynamics is the next test.
+
 Independent composition makes a nonnegative mass-only action coefficient
 universal within a stated preparation class. One finite-rate, nonzero-speed
 reference then makes its shared plateau positive. The

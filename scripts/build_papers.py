@@ -42,13 +42,17 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=A shared action coefficient from classical composition",
          "-o", "papers/composition-universality.tex"])
+    run(["pandoc", "notes/bridge-crossover.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Exact midpoint crossover for a finite-speed return bridge",
+         "-o", "papers/bridge-crossover.tex"])
     env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
                   "classical-action-field", "collision-action-relaxation",
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
-                  "composition-universality", "research-programme"):
+                  "composition-universality", "bridge-crossover", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
