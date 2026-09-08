@@ -1,0 +1,70 @@
+# I003: the cut paradox, the arrow, and an obstruction to refining time and position together
+
+Status: user-originated heuristic, recorded 2026-09-08 from three remarks made
+during the H08 source session. Sources are collected in
+[`docs/classics/`](../docs/classics/README.md) under batch H08.
+
+## The remarks
+
+1. Zeno's arrow looks like the Wick-rotated version of Democritus's cone: the
+   cone asks whether adjacent spatial sections are equal or unequal, the arrow
+   asks whether adjacent instants carry equal or unequal states of motion.
+2. Somewhere deep there is an obstruction that does not allow mapping time to
+   positions indefinitely as a double limit, and that forces the existence of a
+   minimum action $h$.
+3. Or at least of an $h$ that controls the convergence.
+
+## What the repository already contains on each
+
+- The cone: C032 proves that a position-only law with ballistic support and
+  independent stationary increments is deterministic drift, so adjacent
+  sections of such a law are equal; the P01 review keeps this as a modern
+  analogy rather than a reception claim. The ancient answers are Chrysippus's
+  “neither equal nor unequal” (Plutarch), the Mohist endpoint at which halving
+  stops, Liu Hui's cutting until it cannot be cut, and the kalām atom.
+- The arrow: Aristotle's diagnosis is that time is taken to be composed of
+  nows (Physics VI.9). The C033 bridge has a midpoint atom, a state in which
+  the body is exactly where its one-switch path puts it, and the finite-speed
+  bridge retains velocity at every cut; al-Naẓẓām's leap is the discrete
+  crossing of a divisible interval.
+- The double limit: C021 shows that the mass-weighted second-moment coefficient
+  has different iterated limits, rate first or duration first, and the
+  crossover $\Delta_*=K/(mu^2)$ of the P02 note shows that a window-independent
+  coefficient cannot exist below $\Delta_*$ at finite speed. Jacobson and
+  Schulman's passage from $\Delta x\sim\Delta t$ to $(\Delta x)^2\sim\Delta t$
+  (B15) is the same double limit in the checkerboard.
+
+## The proposed reading
+
+The continuation that turns the telegraph process into the Dirac checkerboard
+(A09) exchanges a Euclidean cut question for a Lorentzian one. Under it, the
+cone dilemma about equal sections and the arrow dilemma about equal instants
+are the same question. The obstruction in remark 2 is then the statement that
+refining cuts in time and resolving positions cannot both be taken to zero
+while a nonzero action coefficient survives; at finite speed the coefficient
+vanishes below the crossover window, and the surviving constant is the plateau
+above it. Remark 3 is the weaker and presently provable form: the coefficient
+controls the rate at which the bridge's midpoint variance and the window
+observable approach their limits, as in the cubic onset $H_*z^3/6$.
+
+## Tests
+
+1. State both paradoxes as restriction-consistency questions: adjacent
+   sections of a solid under a slicing law, adjacent instants of a motion under
+   a cut law. Check whether C032 and the C033 midpoint atom are the two
+   Euclidean and Lorentzian faces of one statement under $\lambda\to i\omega$.
+2. Formalize “mapping time to positions as a double limit”: mesh
+   $|\pi|\to0$ and spatial resolution $\varepsilon\to0$ for a refinement
+   law with speed bound $u$. Identify the obstruction with $\Delta_*$ and
+   test whether it survives when the speed bound is removed (the Gaussian
+   family admits the double limit, so finite speed is the source).
+3. Decide between remark 2 and remark 3: positivity of the surviving
+   coefficient needs the A08 composition premise and a nonzero-variance
+   premise; convergence control needs only the plateau. Record which premises
+   each version uses.
+4. Prior-art audit: the ancient and medieval sources in H08, then the modern
+   literature on the arrow and quantum measurement, before any claim ID.
+
+Related: [I001](I001-action-field.md), [I002](I002-newton-polygon-threshold.md),
+the [cut-point target](../research/CUT_POINT_TARGET.md) and the
+[six-direction checks](../notes/composition-crossover-gap-checks.md).

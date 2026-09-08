@@ -152,6 +152,8 @@ TeX's file-write security settings.
   for retrieval context, with companions, checksums and BibTeX.
 - [H07 handoff](handoffs/H07.md): second batch, least action across physics,
   Newton's Book III rules and scholium, and Planck's first value of h.
+- [H08 handoff](handoffs/H08.md): the paradox of the cut from Democritus to
+  Cavalieri, with Arabic and Chinese witnesses, and the I003 idea entry.
 
 - [A06 handoff](handoffs/A06.md): exact return bridge, midpoint atom and
   endpoint-version choice; vanishing polygon error. Nine PDFs now build.
