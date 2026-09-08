@@ -9,6 +9,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     errors = []
+    # User hard rule: the default verification target is document integrity only.
+    makefile = (ROOT / "Makefile").read_text()
+    match = re.search(r"^check:\n((?:\t[^\n]*\n)*)", makefile, re.MULTILINE)
+    allowed = ["$(PYTHON) scripts/check_repository.py", "sha256sum -c docs/SHA256SUMS"]
+    if match is None or [line.strip() for line in match.group(1).splitlines()] != allowed:
+        errors.append("Hard rule: make check must contain only document/source integrity commands")
     link_count = 0
     registered = {
         line.split(maxsplit=1)[1].strip().lstrip("*")

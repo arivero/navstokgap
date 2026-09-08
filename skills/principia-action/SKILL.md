@@ -102,7 +102,10 @@ Lead with the result or question. Put assumptions at their point of use and
 record reading coverage once in the source companion. Follow AGENTS.md's
 results-first writing rule.
 
-Use `scripts/constant_force_geometry.py` when changing the maintained
-formulae or figure. For a changed model, identify the inherited assumptions and
+Verify changed formulae through written derivation and source review. Follow
+AGENTS.md's hard prohibition on Python numerical/symbolic verification scripts;
+historical script commands in notes are reproduction records, not instructions
+to run them. Figure generation and document builds remain separate tooling.
+For a changed model, identify the inherited assumptions and
 the new ones. Authorised subagents use `agents/PROTOCOL.md`, including
 the explicit effort setting and ultra prohibition.

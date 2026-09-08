@@ -35,6 +35,14 @@ hypotheses through attribution and evidence labels.
 
 # Agent work and cost
 
+**Hard rule (2026-09-09): do not create or run Python scripts to verify numerics.** This includes routine
+numerical experiments and symbolic/algebraic spot-check scripts used as theorem
+verification. Use written derivations and source/proof review instead. Existing
+scripts and outputs remain historical artifacts, not a required acceptance gate.
+Python for document builds, source extraction, links, metadata or file integrity
+is allowed. Do not substitute another scripting language merely to evade this
+cost rule. Any new computational-verification workflow needs user direction.
+
 The user authorizes bounded source tasks for smaller agents. Read
 `agents/PROTOCOL.md` before delegation. The coordinator owns shared task
 state, bibliography, claim acceptance, manuscript integration and commits. Workers

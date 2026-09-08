@@ -6,6 +6,12 @@ describe the intended work; the task board records its current status.
 
 ## Dispatch and cost
 
+**Hard user rule, 2026-09-09: no Python scripts for numerical verification**, including
+routine symbolic/algebraic spot checks. Do not assign such work to a worker.
+Review mathematical arguments and source passages directly. Existing numerical
+scripts are historical; document/source/link tooling remains allowed. Changing
+languages to perform the same prohibited verification does not satisfy the rule.
+
 Never select `ultra`: the user prohibited it to conserve tokens
 (2026-09-06). Explicitly request a supported effort for every worker, reviewer and
 descendant. Use fresh or limited context when a full-history fork prevents an

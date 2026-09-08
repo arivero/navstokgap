@@ -32,6 +32,10 @@ shared index updates and claim acceptance.
 
 ## Cost and evidence
 
+Apply AGENTS.md's hard no-Python-numerical-verification rule when turning a source
+idea into a test. Prefer a written estimate or counterexample; existing script
+references in old handoffs do not authorize new numerical or symbolic runs.
+
 Use local companions on restart. Launch web research or a librarian only for a
 specific missing passage or audit within the active task's authorization and
 budget. Reuse a capsule retained in a compaction summary when its task and

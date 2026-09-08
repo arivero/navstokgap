@@ -3,25 +3,6 @@ PYTHON ?= python3
 .PHONY: check papers figures programme
 
 check:
-	$(PYTHON) scripts/constant_force_geometry.py --check-only
-	$(PYTHON) scripts/action_gap_checks.py
-	$(PYTHON) scripts/time_refinement_checks.py
-	$(PYTHON) scripts/regulator_limit_checks.py
-	$(PYTHON) scripts/classical_action_field_checks.py
-	$(PYTHON) scripts/collision_action_checks.py
-	$(PYTHON) scripts/cut_point_checks.py
-	$(PYTHON) scripts/physical_cut_checks.py
-	$(PYTHON) scripts/telegraph_bridge_checks.py
-	$(PYTHON) scripts/composition_checks.py
-	$(PYTHON) scripts/bridge_crossover_checks.py
-	$(PYTHON) scripts/checkerboard_checks.py
-	$(PYTHON) scripts/susceptibility_gap_checks.py
-	$(PYTHON) scripts/observable_access_checks.py
-	$(PYTHON) scripts/harmonic_receiver_checks.py
-	$(PYTHON) scripts/bounded_acceleration_checks.py
-	$(PYTHON) scripts/six_direction_checks.py
-	$(PYTHON) scripts/cut_paradox_checks.py
-	$(PYTHON) scripts/i003_double_limit_checks.py
 	$(PYTHON) scripts/check_repository.py
 	sha256sum -c docs/SHA256SUMS
 
