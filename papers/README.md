@@ -45,6 +45,12 @@ PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.
 
+Run `make condensed` to concatenate the thirteen accepted paper PDFs, in
+chronological (build) order, into a single
+[`out/papers/condensed-papers.pdf`](../out/papers/condensed-papers.pdf) via
+`scripts/condense_papers.py`. The programme summary and the unbuilt
+`spectral-gap-laboratory.tex` draft are excluded.
+
 `spectral-gap-laboratory.tex` is the preserved M03 working draft. Its B04
 literature audit is complete; proof review, dedicated checks and build integration
 are pending. It is outside the accepted-paper build.

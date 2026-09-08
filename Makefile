@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: check papers figures programme
+.PHONY: check papers figures programme condensed
 
 check:
 	$(PYTHON) scripts/constant_force_geometry.py --check-only
@@ -28,6 +28,9 @@ programme:
 
 papers:
 	$(PYTHON) scripts/build_papers.py
+
+condensed:
+	$(PYTHON) scripts/condense_papers.py
 
 figures:
 	$(PYTHON) scripts/constant_force_geometry.py
