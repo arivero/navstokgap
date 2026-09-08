@@ -63,7 +63,9 @@ handoff with the remaining dependency.
 | B20 | done | Green–Kubo source and bounded spectral/frame audit; Sokal discovery-only | One Luna low, sequential | C041–C042, coordinator review |
 | G02 | done | Injective-velocity fixed-plateau closing-gap family and local-frame independent-product bound C045–C046; 14 grouped checks and expanded PDF | Coordinator; saved Luna-low audit | [G02 handoff](handoffs/G02.md) |
 | B22 | done | Product-chain source and weak-observability audit; source images, metadata, clock and proof-index correction verified | One Luna low, sequential | C045–C046; coordinator review |
-| A10 | ready | Finite conservative harmonic receiver: specify Hamiltonian and invariant ensemble, derive correlation and action estimator, separate centre motion, compare window and reservoir-size limits | Coordinator then one bounded librarian | A07/G02; preparation-independent selection diagnostic |
+| A10 | done | Finite conservative harmonic receiver covariance, exact action observable, centre-motion alternatives and necessary large-receiver bound C047; 15 checks and PDF | Coordinator + Luna-low B23 | [A10 handoff](handoffs/A10.md) |
+| B23 | done | Ford–Kac–Mazur/Zwanzig harmonic-bath audit, coordinator source-image and proof review; reported nine-page coverage corrected | One Luna low, sequential | C047; assigned six pages, worker exceeded by three |
+| A11 | ready | Increasing harmonic network: tagged spectral measure and energy scaling; compare receiver-size/window limits, distinguish friction kernel and velocity covariance, test preparation independence | Coordinator then one bounded librarian | A10/B23 |
 | S01 | done | Action-target skill upgrade and source-idea context-recovery skill, AGENTS hook and local routing validation | Coordinator, no additional worker | [handoff](handoffs/restart-skills-2026-09-08.md) |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
@@ -79,9 +81,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A10's conservative harmonic receiver test after completed G02/B22.
-Start with a finite quadratic Hamiltonian and explicit invariant ensemble;
-derive rather than assume a Markov correlation law. A09 retains the physical scale-selection
+Execute A11's increasing harmonic reservoir test after completed A10/B23.
+Choose a spring network and preparation with explicit tagged spectral weights;
+compare receiver-size and observation limits. Derive rather than assume a
+Markov correlation law. A09 retains the physical scale-selection
 target. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a

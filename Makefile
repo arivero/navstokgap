@@ -17,6 +17,7 @@ check:
 	$(PYTHON) scripts/checkerboard_checks.py
 	$(PYTHON) scripts/susceptibility_gap_checks.py
 	$(PYTHON) scripts/observable_access_checks.py
+	$(PYTHON) scripts/harmonic_receiver_checks.py
 	$(PYTHON) scripts/bounded_acceleration_checks.py
 	$(PYTHON) scripts/six_direction_checks.py
 	$(PYTHON) scripts/cut_paradox_checks.py

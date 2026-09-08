@@ -1,7 +1,15 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: G02/B22 complete;
-A10 conservative harmonic receiver is next.
+Updated: 2026-09-08. Current milestone: A10/B23 complete;
+A11 increasing harmonic reservoir is next.
+
+**A10/B23 are complete.** The [conservative receiver note](../notes/conservative-harmonic-receiver.md)
+derives the exact finite-network covariance and action observable from an
+invariant fixed-energy preparation. Its long-window limit is zero at fixed
+centre velocity; random centre velocity adds a ballistic term. C047 has
+coordinator review, one Luna-low audit and 15 exact checks. **A11** next fixes
+an increasing network, tagged spectral measure and energy allocation, then
+compares receiver-size and window limits. See [A10 handoff](handoffs/A10.md).
 
 **G02/B22 are complete.** The [expanded gap note](../notes/susceptibility-gap.md)
 gives an injective-velocity fixed-plateau gap-closing family and a local-frame

@@ -8,10 +8,11 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after G02/B22: **A10**, a finite conservative harmonic
-receiver. Derive the observed velocity correlation and action estimator from
-its normal modes and an explicit invariant preparation. Resolve centre drift,
-then compare long-window and reservoir-size limits. G02 supplies the calibrated
+Immediate priority after A10/B23: **A11**, an increasing harmonic reservoir.
+A10 gives a zero long-window limit for each fixed finite receiver, and identifies
+the displacement weight whose uniform bound must fail for a positive joint
+limit. Specify the network, energy allocation and tagged spectral measure,
+then compare receiver-size and observation limits. G02 supplies the calibrated
 access/product benchmark; A07 supplies the controlled-reversal benchmark.
 The [cut-point refinement test](CUT_POINT_TARGET.md)
 has completed its chosen constructions; it remains the consistency condition

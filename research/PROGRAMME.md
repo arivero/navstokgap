@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 14, 2026-09-08.
+Version 15, 2026-09-08.
 
 ## Aim
 
@@ -31,6 +31,15 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
+
+**A10/B23 are complete.** Finite conservative harmonic receivers give an exact
+cosine covariance and vanishing long-window action observable at fixed centre
+velocity. Random centre velocity gives ballistic variance instead. **A11**
+now specifies an increasing network and its preparation: determine the tagged
+low-frequency spectral weight and compare the receiver-size and window limits.
+Harmonic-bath sources supply a reduced memory equation; its friction kernel
+must be distinguished from the tracer covariance. This advances the mechanical
+origin and preparation-independence gates of the action-selection target.
 
 **G02/B22 are complete.** Weakening observable access can keep an action
 plateau fixed while the full gap closes, even with distinct velocity states.

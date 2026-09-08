@@ -52,6 +52,7 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C044 | Lipschitz velocity gives sharp chord kinetic error $0\le S_K-S_\pi\le ma^2\sum d_i^3/24\le ma^2T|\pi|^2/24$ | Bounded-turn note §3; arbitrary partition, pair-variance proof, affine equality case; uniform fixed-$m,a,T$ convergence; B21 |
 | C045 | Four distinct bounded velocities can have fixed positive $H=mu^2/\lambda$ and closing gap $2\lambda\delta^2$; recovering the slow sign requires gain at least $\sqrt2/\delta$ | Spectral-control note §6; independent signs, $\epsilon=\lambda\delta^2$, $0<\delta\le1/4$, fixed $m,u,\lambda>0$; B22 and exact checks |
 | C046 | Independent reversible factors with local frame bounds satisfy $\gamma_{\rm prod}=\min_i\gamma_i\ge\min_i\alpha_i/S_i$ despite an unobserved mixed sector | Spectral-control note §7; tensor eigenbasis, unchanged constituent clocks, $S_i=\sum_aH_i/(2m_i)$; B22 and product-matrix checks |
+| C047 | Finite connected harmonic receiver at fixed centre velocity and independent fixed-energy uniform phases has $h_i(\Delta)=2m_i\sum_j w_{ij}(1-\cos\omega_j\Delta)/(\Delta\omega_j^2)\to0$; independent random centre velocity adds $m_i\sigma_0^2\Delta$ | [Conservative receiver note](../notes/conservative-harmonic-receiver.md); exact modal/two-body proof, bounded-energy speed margin, necessary joint-limit bound; B23 review and 15 checks |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -99,6 +100,7 @@ consequences are identified separately.
 | C043–C044 | Elementary bounded-control and Lipschitz-variance specializations; exact combined prior-art match not found in bounded search | [B21](../references/batches/B21.md); two worker searches, one coordinator search and Liberzon framework passage; no novelty claim |
 | C045 | Elementary product-chain and response counterexample; exact example publication not established, no novelty claim | [B22](../references/batches/B22.md); saved Luna-low audit and coordinator review |
 | C046 | Standard tensorization and derived local-frame consequence | B22; Levin–Peres §12.4, direct continuous-generator proof and clock audit |
+| C047 | Elementary finite harmonic propagation and displacement-variance consequence; phase-torus and centre conventions explicit | [B23](../references/batches/B23.md); Ford–Kac–Mazur and Zwanzig source ingredients; bounded audit, no novelty claim |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -124,6 +126,11 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B23](../reviews/harmonic-receiver-B23.md) supports C047 through one Luna-low
+audit and coordinator source/proof review. Eight identities, three network
+checks and four bound cases pass. Finite-size and large-receiver limits remain
+separate; the friction kernel is distinguished from velocity covariance.
 
 [B22](../reviews/observable-access-B22.md) supports C045–C046: saved Luna-low
 audit, coordinator source-image and proof review, six identities, three

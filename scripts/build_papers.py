@@ -59,13 +59,18 @@ def main():
          "-V", "note-title=A sharp mechanical cost for a finite-duration reversal",
          "-o", "papers/bounded-acceleration-return.tex"])
     env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
+    run(["pandoc", "notes/conservative-harmonic-receiver.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=A conservative receiver and the origin of a correlation scale",
+         "-o", "papers/conservative-harmonic-receiver.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
                   "classical-action-field", "collision-action-relaxation",
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
                   "composition-universality", "bridge-crossover", "checkerboard-dynamics",
-                  "susceptibility-gap", "bounded-acceleration-return", "research-programme"):
+                  "susceptibility-gap", "bounded-acceleration-return",
+                  "conservative-harmonic-receiver", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

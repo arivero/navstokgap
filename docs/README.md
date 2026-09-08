@@ -15,6 +15,8 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B23](../references/batches/B23.md): conservative harmonic receiver;
+  [source companion](batches/B23/harmonic-receiver-source-companion.md).
 - [B22](../references/batches/B22.md): observable access and independent products;
   [source companion](batches/B22/observable-access-source-companion.md).
 - [B21](../references/batches/B21.md): bounded-acceleration return, kinetic

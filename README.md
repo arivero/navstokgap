@@ -9,6 +9,12 @@ about estimates and limits.
 
 ## Results to read first
 
+The [conservative-receiver paper](out/papers/conservative-harmonic-receiver.pdf)
+derives the action observable from an isolated harmonic network. At fixed
+finite size and centre velocity, its long-window value tends to zero.
+This identifies the next physical test: which large-receiver limit and
+preparation could sustain a positive shared scale?
+
 The [bounded-turn paper](out/papers/bounded-acceleration-return.pdf) proves
 the sharp reversal cost $mu^3/(3a)$ and minimum duration $2u/a$. Its polygon
 error vanishes quadratically with the mesh. The cost comes from prescribed
