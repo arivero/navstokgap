@@ -44,6 +44,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C036 | Under C035 for Green–Kubo plateaus, one stationary two-state reference with $m_0,u_0>0$ and $0<\lambda_0<\infty$ forces the shared coefficient $K=m_0u_0^2/\lambda_0>0$ | Composition note §§3–4; C020 input; finite-product consistency family and preparation/correlation countertests; B16 and coordinator proof/source review |
 | C037 | In the C033 bridge, $(Q+1)/2\mid K=k$ is Beta$(k+1,k)$ for $k\ge1$, with $Q=1$ at $k=0$; $\kappa_{\rm mid}/H_*=zR(1-R)$, $R=\int_0^zI_0(s)ds/[zI_0(z)]$, has cubic onset and limit one | [Crossover note](../notes/bridge-crossover.md) §§1–3; same density-disintegrated return preparation, $Q=2X_{T/2}/(uT)$; factorial convolution, beta moments, Bessel integral proof; B17 and 29 exact checks |
 | C038 | A prescribed positive increment or return-midpoint coefficient requires $T\ge K_*/(mu^2)$; a common finite window and uniform speed ceiling force a mass-independent coefficient to zero if admissible masses approach zero | Crossover note §4; C018/C031 necessary bounds, explicit small-mass limit; B17 and coordinator review |
+| C039 | The normalized coin $C_\varepsilon=(I-i\omega\varepsilon\sigma_x)/\sqrt{1+\omega^2\varepsilon^2}$ with opposite translations gives $U_{T/N}^N\to e^{-iTH_D/K}$ strongly on $L^2$; the rest-subtracted positive branch tends to free Schrödinger evolution as $c\to\infty$ | [Checkerboard note](../notes/checkerboard-dynamics.md) §§1–4; supplied $m,c,K>0$, $\omega=mc^2/K$, complex amplitudes; self-adjoint domain $H^1$, Fourier/dominated-convergence proof; B18, 28 exact checks and three mode tests |
+| C040 | Ideal direction measurement after every coherent step gives flip probability $q_\varepsilon=\omega^2\varepsilon^2/(1+\omega^2\varepsilon^2)$ and probability of any flip at most $\omega^2T\varepsilon\to0$, a ballistic limit | Checkerboard note §5; initial definite direction, Born rule and repeated projective measurement, fixed $\omega,T$; B18 addendum and coordinator proof review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -84,6 +86,8 @@ consequences are identified separately.
 | C034 | Elementary pathwise restriction and kinetic square-completion consequences | B14; exact action estimate unmatched in bounded source coverage, novelty unassessed |
 | C035–C036 | Standard covariance/product-chain and nonnegative-additivity consequences, with project-specific composition/positive-reference premises | [B16](../references/batches/B16.md); two searches and two cached source pages; combined statement unmatched in bounded coverage, novelty unassessed |
 | C037–C038 | Derived midpoint/count specialization and necessary-window consequences; standard telegraph occupation and Bessel-integral ingredients | [B17](../references/batches/B17.md); two searches, Cinque pp. 3–4 and DLMF 10.32.1; exact combined statements unmatched, novelty unassessed |
+| C039 | Established normalized checkerboard reconstruction; elementary wavepacket and spectral-limit consequences | [B18](../references/batches/B18.md); Skopenkov–Ustinov Definition 2, Propositions 5–6, direct basis match and coordinator proof |
+| C040 | Elementary measurement-protocol consequence of the audited coin, with no novelty claim | B18 bounded addendum checks Born probability and union bound; exact prior-art formulation not separately searched |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -109,6 +113,12 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B18](../reviews/checkerboard-B18.md) audited C039–C040 with one Luna-medium
+worker and a bounded addendum. Coordinator checked source pp. 12, 13, 19,
+31 visually; corrected version date, proof-page anchor and kernel scope;
+proved the explicit basis map and strong wavepacket limit. Fourteen algebra
+identities, fourteen finite path/norm checks and three numerical mode tests pass.
 
 [B17](../reviews/bridge-crossover-B17.md) audited C037–C038 with one
 Luna-medium worker. Coordinator verified the even/odd segment density factors,

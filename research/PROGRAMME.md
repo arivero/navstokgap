@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 10, 2026-09-08.
+Version 11, 2026-09-08.
 
 ## Aim
 
@@ -32,13 +32,19 @@ as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
 
+**A09b/B18 are complete.** [The checkerboard note](../notes/checkerboard-dynamics.md)
+proves the normalized Dirac wavepacket limit and a repeated-measurement
+ballistic cut limit. C039–C040 separate a classical flip probability from a
+coherent corner amplitude. **G01 is next:** spectral control by the velocity
+susceptibility. A09 retains the physical premise identifying the positive
+plateau with the coherent action parameter, across preparations.
+
 **A09a/B17 are complete.** The [crossover note](../notes/bridge-crossover.md)
 derives a beta midpoint law and the exact interpolation from cubic short-window
 variance to the common long-window plateau. C038 proves that a fixed finite
 window and uniform speed ceiling cannot realize a positive shared coefficient
-over arbitrarily small masses. **A09b** now addresses the direct checkerboard
-source passages and real-versus-complex two-component dynamics. The full A09
-programme remains active until that work is reviewed.
+over arbitrarily small masses. A09b supplies the subsequent direct checkerboard
+source passages and real-versus-complex two-component comparison.
 
 **A08/B16 are complete.** The [composition note](../notes/composition-universality.md)
 proves that a nonnegative mass-only coefficient preserved by independent

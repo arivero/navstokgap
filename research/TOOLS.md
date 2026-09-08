@@ -18,7 +18,7 @@ make figures
 | Command | Checks or output |
 | --- | --- |
 | `make check` | Exact algebra, finite measurement examples, source checksums, companions, local links and citation keys |
-| `make papers` | Regenerates programme LaTeX and builds the three accepted PDFs; checks unresolved references and layout overflow |
+| `make papers` | Regenerates programme/note LaTeX and builds twelve accepted PDFs; checks unresolved references and layout overflow |
 | `make figures` | Regenerates the constant-force illustration |
 
 The manuscript supplies the analytic arguments; these commands verify their
@@ -31,7 +31,8 @@ is a saved draft awaiting its dedicated checks and build integration.
 
 ## Dependencies
 
-`requirements.txt` pins the two directly used Python libraries. For a
+`requirements.txt` pins the directly used Python libraries, including NumPy
+for A09b's finite Fourier-matrix convergence checks. For a
 project-local environment:
 
 ```sh

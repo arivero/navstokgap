@@ -46,10 +46,11 @@ handoff with the remaining dependency.
 | P02 | done | Independent-session verification for A08/A09/G01: product-chain composition and bath countertest, cubic bridge-midpoint onset with exact sampler, gap/slow-mode test, continuation routes; 28 exact checks, no claim IDs | Fable session, no subagents | P01; [checks note](../notes/composition-crossover-gap-checks.md) |
 | A08 | done | Conditional mass universality and positive-reference theorem, product-state closure and preparation/correlation tests; C035–C036, five checks, PDF | Coordinator + sequential Luna-low B16 | P01/P02; reviewed |
 | B16 | done | Two-search/two-page composition prior-art audit; coordinator verified formula images and corrected titles | One Luna low, sequential | C035–C036 |
-| A09 | active | Crossover and checkerboard programme: A09a complete, A09b recurrence and quantum-role tests remain | Coordinator then one small sequential librarian | B15 leads; A08 |
+| A09 | active | A09a/A09b complete; preparation independence and physical quantum-role selection remain | Coordinator then one small sequential librarian | B15–B18; C035–C040 |
 | A09a | done | Exact beta midpoint mixture, full crossover limits and common-finite-window mass constraint; C037–C038, 29 checks, seven numerical comparisons, PDF | Coordinator + Luna-medium B17 | C033, P02; reviewed |
 | B17 | done | Two-search prior-art audit; Cinque pp. 3–4 and DLMF 10.32.1, coordinator source/proof review | One Luna medium, sequential | C037–C038 |
-| A09b | ready | Direct checkerboard passages; real probability versus complex-amplitude two-component recurrence, corner normalization, continuum and nonrelativistic limits | Coordinator then one Luna medium librarian | B15 routes; A09a; next main task |
+| A09b | done | Primary recurrence, normalized basis map, strong wavepacket and nonrelativistic limits; measured-cut countertest C039–C040 | Coordinator + Luna-medium B18 | 28 exact checks, three mode tests, PDF |
+| B18 | done | Modern checkerboard passage audit and measured-cut addendum; coordinator source/proof review | One Luna medium, sequential | C039–C040; older original pages remain B15 |
 | A07 | ready | Bounded-acceleration return with opposite endpoint velocities: sharp duration and kinetic-action bounds, speed/force scaling and sampled-cut limit | Coordinator, then one small librarian | A06/B14; M06 connection |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Drafts and 12 checks available; after A08 priority |
@@ -70,7 +71,7 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A09b from `research/ACTION_FIELD_TARGET.md`, then G01 as assessed
+Execute G01 from `research/ACTION_FIELD_TARGET.md` after completed A09b, as assessed
 in `reviews/six-directions-2026-09-08.md`. A07 remains the bounded-force
 diagnostic. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;

@@ -15,6 +15,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B18](../references/batches/B18.md): normalized checkerboard recurrence and
+  repeated-measurement audit; [source companion](batches/B18/checkerboard-recurrence-source-companion.md).
+
 - [B17](../references/batches/B17.md): exact bridge crossover and common-window
   constraint; [source companion](batches/B17/crossover-source-companion.md).
 

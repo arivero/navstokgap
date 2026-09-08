@@ -9,11 +9,17 @@ about estimates and limits.
 
 ## Results to read first
 
+The [checkerboard paper](out/papers/checkerboard-dynamics.pdf) compares two
+path-composition rules at the same action scale: classical transitions and
+coherent amplitudes. It proves the Dirac wavepacket limit and shows why
+measuring direction at every cut instead gives a ballistic limit. The next
+test asks which spectral modes the classical plateau controls.
+
 The finite-speed return bridge now has an exact midpoint crossover: cubic
 short-window variance converges to its shared long-window action plateau.
 The [crossover paper](out/papers/bridge-crossover.pdf) proves the beta mixture
 and shows why a positive coefficient across arbitrarily small masses requires
-mass-dependent observation windows. Checkerboard dynamics is the next test.
+mass-dependent observation windows.
 
 Independent composition makes a nonnegative mass-only action coefficient
 universal within a stated preparation class. One finite-rate, nonzero-speed

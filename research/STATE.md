@@ -1,10 +1,19 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A09a/B17 complete;
-checkerboard recurrence task A09b next.
-The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
+Updated: 2026-09-08. Current milestone: A09b/B18 complete;
+G01 susceptibility and spectral-control test next.
 
 ## Current results and next tasks
+
+**A09b/B18 are complete.** [The checkerboard note](../notes/checkerboard-dynamics.md)
+matches the primary recurrence in an explicit basis and proves its strong
+Dirac wavepacket limit. Repeated direction measurements give a ballistic
+fixed-coefficient cut limit, distinct from finite-rate telegraph motion.
+C039–C040 have one sequential Luna-medium audit and addendum, coordinator
+source/proof review, 28 exact checks and three Fourier-mode tests. Twelve PDFs
+now build. **G01 is next:** velocity susceptibility, spectral product and hidden
+slow modes. Parent A09 retains preparation independence and the physical
+identification of the classical plateau with the coherent action parameter.
 
 **A09a/B17 are complete.** [The crossover note](../notes/bridge-crossover.md)
 gives the exact count-conditioned beta midpoint law and the full action-valued
@@ -12,7 +21,7 @@ crossover $g(z)=zR(z)[1-R(z)]$, with cubic onset and limit one.
 It proves the common-finite-window obstruction to positive universality across
 arbitrarily small masses. C037–C038 have one sequential Luna-medium audit,
 coordinator review, 29 exact checks and seven numerical comparisons.
-Eleven PDFs now build. **A09b is next:** direct checkerboard passages and the
+This preceded A09b's direct checkerboard passages and the
 real/complex two-component recurrence. The broader A09 task remains active;
 preparation independence and quantum identification stay open.
 
