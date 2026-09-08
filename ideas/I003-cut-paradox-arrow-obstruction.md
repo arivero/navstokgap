@@ -49,6 +49,10 @@ observable approach their limits, as in the cubic onset $H_*z^3/6$.
 
 ## Tests
 
+Status 2026-09-08: test 1 is drafted in
+[`notes/cut-paradox-two-faces.md`](../notes/cut-paradox-two-faces.md) with nine
+checks; tests 2–4 are open.
+
 1. State both paradoxes as restriction-consistency questions: adjacent
    sections of a solid under a slicing law, adjacent instants of a motion under
    a cut law. Check whether C032 and the C033 midpoint atom are the two

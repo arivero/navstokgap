@@ -16,6 +16,7 @@ check:
 	$(PYTHON) scripts/bridge_crossover_checks.py
 	$(PYTHON) scripts/checkerboard_checks.py
 	$(PYTHON) scripts/six_direction_checks.py
+	$(PYTHON) scripts/cut_paradox_checks.py
 	$(PYTHON) scripts/check_repository.py
 	sha256sum -c docs/SHA256SUMS
 

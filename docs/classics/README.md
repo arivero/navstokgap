@@ -4,7 +4,7 @@ Each entry stores a public-domain original or a lawful transcription in this
 directory with a companion that records route, metadata, extraction, rights,
 passage anchors and reading coverage. Companions lead with what the source
 supplies to the project. Retrieval date for all batches: 2026-09-08
-([H06](../../references/batches/H06.md), [H07](../../references/batches/H07.md), [H08](../../references/batches/H08.md) on the cut paradox).
+([H06](../../references/batches/H06.md), [H07](../../references/batches/H07.md), [H08](../../references/batches/H08.md) on the cut paradox, [H09](../../references/batches/H09.md) on its verification and Latin reception).
 
 | Work | Date | Local files | Supplies |
 | --- | --- | --- | --- |
@@ -39,6 +39,10 @@ supplies to the project. Retrieval date for all batches: 2026-09-08
 | [Galileo, First Day: wheel, indivisibles, bowl and cone](Galileo_TwoNewSciences_FirstDay_CrewDeSalvio1914_OCR.md), [Italian](Galileo_Discorsi_GiornataPrima_Favaro_it_wikisource.md) | 1638; 1898, 1914 | OCR excerpt, HTML | Point equal to a circumference at the last cut |
 | [Cavalieri to Galileo 1621–1622](Galileo_Opere_XIII_Cavalieri_letters_1621-1622_OCR.md), [1634 reply with Aproino and Santini](Galileo_Opere_XVI_indivisibles_letters_1634-1636_OCR.md), [1639–1641 letters](Galileo_Opere_XVIII_indivisibles_letters_1639-1641_OCR.md) | 1621–1641; 1902–1906 | OCR excerpts | All the lines; the bowl-and-cone objection and reply; Torricelli, Rocca, Mersenne |
 | [Cavalieri, Geometria 1635](Cavalieri_Geometria_1635_Praefatio_LiberII_OCR.md) and [Exercitationes 1647, against Guldin](Cavalieri_Exercitationes_1647_ExercitatioIII_Guldin_OCR.md) | 1635, 1647 | OCR excerpts, Latin | All the lines; aggregates compared, never composed |
+| [Guldin, Centrobaryca IV, preface and chapter V](Guldin_Centrobaryca_LiberIV_1641_pages.md) | 1641 | 14 page images | Galileo's Dialogue concludes against Cavalieri; the objections answered in 1647 |
+| [Aristotle, De generatione I.2, Greek](Aristotle_GC_BookI_Greek_el_wikisource.md) and [French 1866](Aristotle_GC_I2_BarthelemySaintHilaire1866_fr_wikisource.md) | c. 350 BCE; 1866 | HTML, transcriptions | Divisible everywhere: what remains after the cut |
+| [Aquinas, Summa contra Gentiles III.69](Aquinas_SummaContraGentiles_III_64-77_corpusthomisticum.md) | c. 1264 | HTML, transcription | The Loquentes of the kalām in Latin scholasticism |
+| [Duns Scotus, Opus Oxoniense II d.2](Scotus_OpusOxoniense_II_d2_Vives1891_indivisibles_OCR.md) | c. 1300; 1891 | OCR excerpt, Latin | Time not composed of nows; space not composed of points |
 
 OCR excerpts keep the archive's text as served, including page headers and
 recognition errors, so that line anchors stay stable; every formula in them

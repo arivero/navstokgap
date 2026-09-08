@@ -189,6 +189,8 @@ TeX's file-write security settings.
   Newton's Book III rules and scholium, and Planck's first value of h.
 - [H08 handoff](handoffs/H08.md): the paradox of the cut from Democritus to
   Cavalieri, with Arabic and Chinese witnesses, and the I003 idea entry.
+- [H09 handoff](handoffs/H09.md): the 1634 letter verified as no. 2992 of
+  2 October, Guldin's Book IV pages, the Latin reception, and test 1 of I003.
 
 - [A06 handoff](handoffs/A06.md): exact return bridge, midpoint atom and
   endpoint-version choice; vanishing polygon error. Nine PDFs now build.

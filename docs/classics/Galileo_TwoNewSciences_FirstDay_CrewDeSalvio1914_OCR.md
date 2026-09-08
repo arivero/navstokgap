@@ -7,7 +7,7 @@
 
 ## Source digest
 
-The First Day treats the continuum through Aristotle's wheel, the infinite number of indivisible vacua, and the bowl and cone taken from Luca Valerio: a plane cutting a hemispherical bowl and an inscribed cone leaves equal areas at every height, and as the plane rises both vanish, one into a point and the other into a circumference. Galileo lets Salviati draw the moral that the last cut may be equal and yet incomparable. For this project, this is the early modern form of Democritus's dilemma and the objection Galileo put to Cavalieri, answered in the [letter of 12 September 1634](Galileo_Opere_XVI_indivisibles_letters_1634-1636_OCR.md).
+The First Day treats the continuum through Aristotle's wheel, the infinite number of indivisible vacua, and the bowl and cone taken from Luca Valerio: a plane cutting a hemispherical bowl and an inscribed cone leaves equal areas at every height, and as the plane rises both vanish, one into a point and the other into a circumference. Galileo lets Salviati draw the moral that the last cut may be equal and yet incomparable. For this project, this is the early modern form of Democritus's dilemma and the objection Galileo put to Cavalieri, answered in the [letter of 2 October 1634](Galileo_Opere_XVI_indivisibles_letters_1634-1636_OCR.md).
 
 ## Passage anchors
 
