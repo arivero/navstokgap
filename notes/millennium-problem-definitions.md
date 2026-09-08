@@ -49,6 +49,15 @@ Proving any one alternative suffices:
 
 Thus breakdown alternatives permit forcing; existence alternatives specify zero forcing.
 
+The forced side is where the current work sits. As of 2026-09-08, finite-time blowup with a
+space–time smooth force is proved for the incompressible porous media equation, the 2D inviscid
+Boussinesq system and the 3D axisymmetric Euler equations, by the multiscale programme of Córdoba
+and Martínez-Zoroa as extended in [B19](../references/batches/B19.md). None of those equations is
+Navier–Stokes, so alternatives C and D remain open: they additionally require a viscous term and a
+force obeying the decay bound above. A smooth-force hypodissipative Navier–Stokes result is claimed
+but unreleased, and a reported internal OpenAI proof of forced Navier–Stokes blowup has no public
+artifact. Both stay outside the citable record.
+
 ## Yang–Mills: quantum existence and mass gap
 
 Source: [Arthur Jaffe and Edward Witten, §§3–5, pp. 5–7](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf).

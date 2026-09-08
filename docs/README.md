@@ -15,6 +15,11 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B19](../references/batches/B19.md): forced multiscale blowup for IPM,
+  Boussinesq and Euler, released 2026-09-08; the refinement correspondence and
+  the F01 formalisation test. Four archived originals and a
+  [coverage companion](batches/B19/forced-blowup-source-companion.md).
+
 - [B18](../references/batches/B18.md): normalized checkerboard recurrence and
   repeated-measurement audit; [source companion](batches/B18/checkerboard-recurrence-source-companion.md).
 
@@ -82,6 +87,13 @@ some mathematical symbols require visual checking. Its prose theorem was checked
 Formulae in our comparison use the stated conventions and have explicit
 derivations where needed. Reading depth for the selected research papers is
 recorded in their companions.
+
+The 2026 forced-blowup line extends this comparison. [B19](../references/batches/B19.md)
+archives the Alpöge–Buckmaster IPM, Boussinesq and Euler preprints of 2026-09-08 with
+Buckmaster's release statement. Those results are for Euler, Boussinesq and IPM, and they
+buy a singularity with a smooth force, whereas Tao's averaged equation modifies the
+nonlinearity and keeps the force zero. Fefferman's alternatives C and D permit forcing
+under decay conditions; alternatives A and B require none.
 
 Downloaded source byte identity is recorded in [SHA256SUMS](SHA256SUMS); verify from the repository
 root with `sha256sum -c docs/SHA256SUMS`.
