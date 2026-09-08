@@ -38,13 +38,17 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=A finite-speed return bridge and its polygonal action",
          "-o", "papers/telegraph-return-bridge.tex"])
+    run(["pandoc", "notes/composition-universality.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=A shared action coefficient from classical composition",
+         "-o", "papers/composition-universality.tex"])
     env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
                   "classical-action-field", "collision-action-relaxation",
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
-                  "research-programme"):
+                  "composition-universality", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

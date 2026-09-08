@@ -1,0 +1,164 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A shared action coefficient from classical composition},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{a-shared-action-coefficient-from-classical-composition}{%
+\section{A shared action coefficient from classical
+composition}\label{a-shared-action-coefficient-from-classical-composition}}
+
+A nonnegative mass-dependent fluctuation coefficient becomes mass
+independent when independent composition preserves its value as a
+whole-body observable. A single finite-rate, nonzero-speed reference
+constituent then makes the shared coefficient strictly positive. This
+conditional result separates the composition premise from the physical
+clock that sets the value.
+
+\hypertarget{observable-and-independent-composition}{%
+\subsection{1. Observable and independent
+composition}\label{observable-and-independent-composition}}
+
+All masses are positive, positions are on the line, and coefficients
+have action units. For centered independent displacement variables over
+a common window \(\Delta>0\), define
+\(\operatorname{Var}(\Delta X_i)=\kappa_i\Delta/m_i\). Let
+\(M=m_1+m_2\), \(\mu=m_1m_2/M\), \(R=(m_1X_1+m_2X_2)/M\) and
+\(r=X_1-X_2\). Variance addition gives
+
+\[\kappa_{\rm cm}:=\frac M\Delta\operatorname{Var}(\Delta R)
+ =\frac{m_1\kappa_1+m_2\kappa_2}{M},\qquad
+\kappa_{\rm rel}:=\frac\mu\Delta\operatorname{Var}(\Delta r)
+ =\frac{m_2\kappa_1+m_1\kappa_2}{M}.\]
+
+Thus \(\kappa_{\rm cm}+\kappa_{\rm rel}=\kappa_1+\kappa_2\) and
+\(\operatorname{Cov}(\Delta R,\Delta r)=\Delta(\kappa_1-\kappa_2)/M\).
+For independent Gaussian bridges replace \(\Delta\) by their common
+covariance kernel; the same coefficient transformation holds. In that
+Gaussian setting, centre/relative process independence is equivalent to
+\(\kappa_1=\kappa_2\).
+
+For independent stationary finite irreducible reversible chains \(J^i\),
+take centered velocities \(v_i(J^i)\) and
+\(X_i(t)=\int_0^t v_i(J^i_s)ds\). C019 defines
+\(H_i=2m_i\int_0^\infty C_i(s)ds\). Independence gives
+\(C_{\rm cm}=(m_1^2C_1+m_2^2C_2)/M^2\), so the same formulas hold with
+\(H\) in place of \(\kappa\) in the long-window limit. The product state
+has generator \(Q_1\otimes I+I\otimes Q_2\) and invariant law
+\(\pi_1\otimes\pi_2\); detailed balance and irreducibility hold
+factorwise. Retain this state even if distinct state pairs share one
+velocity value: the projected velocity alone need not be Markov. If each
+constituent speed is at most \(u<c\), the centre speed has the same
+bound. Relative velocity may reach \(2u\); it is a coordinate
+difference, not a separate particle speed premise.
+
+\hypertarget{mass-universality-theorem}{%
+\subsection{2. Mass-universality
+theorem}\label{mass-universality-theorem}}
+
+\textbf{Assumptions.} Fix a preparation class. Every mass
+\(m\in(0,\infty)\) has a finite coefficient \(\kappa(m)\ge0\) depending
+only on its mass within this class. Independent constituents can be
+composed, and the coefficient assigned to their whole, of mass \(M\),
+equals the centre coefficient calculated above. Choose either the
+common-window coefficient, a Gaussian coefficient, or the Green--Kubo
+plateau throughout; the theorem does not exchange these observables.
+
+\textbf{Conclusion.} There is a constant \(K\ge0\) such that
+\(\kappa(m)=K\) for every \(m>0\).
+
+\textbf{Proof.} Set \(f(m)=m\kappa(m)\). Composition says
+\(f(a+b)=f(a)+f(b)\) on positive reals. For \(b>a\), nonnegativity gives
+\(f(b)-f(a)=f(b-a)\ge0\). Fix a mass unit \(m_0>0\). Additivity yields
+\(f(qm_0)=qf(m_0)\) for every positive rational \(q\). For any \(m>0\),
+choose rationals \(q_n\uparrow m/m_0\) and \(r_n\downarrow m/m_0\).
+Monotonicity sandwiches \(f(m)\) between \(q_nf(m_0)\) and
+\(r_nf(m_0)\). Hence \(f(m)=mf(m_0)/m_0\), and \(K=f(m_0)/m_0\). This
+also covers \(K=0\).
+
+The premise equating independently composed and whole-body preparations
+does the physical work. All-positive-mass admissibility makes the
+rational argument available; a restricted species list needs a
+separately stated domain theorem.
+
+\hypertarget{positive-reference-theorem}{%
+\subsection{3. Positive reference
+theorem}\label{positive-reference-theorem}}
+
+Apply the preceding theorem to Green--Kubo plateaus. Suppose the class
+contains one reference constituent of mass \(m_0\), stationary symmetric
+velocities \(\pm u_0\), with \(0<u_0<c\) and reversal rate
+\(0<\lambda_0<\infty\). C020 gives
+
+\[\boxed{K=H(m_0)=\frac{m_0u_0^2}{\lambda_0}>0,
+\qquad H(m)=K\quad(m>0).}\]
+
+This excludes an attained zero in that preparation class using classical
+probability, nonzero motion, a finite positive clock and the composition
+premise. The value comes from the reference constituent. Other two-state
+members consequently obey \(\lambda_m=mu_m^2/K\).
+
+For any chosen \(K>0\) and common \(0<u<c\), take independent two-state
+members with \(\lambda_m=mu^2/K\) and include all their finite products.
+Every product has the same plateau when normalized by its total mass.
+This realizes coefficient closure even though its centre velocity
+generally has more than two values. It is a consistency example for the
+assumptions, not a derivation of the assigned rate law. Across such
+examples \(K\) can approach zero while each individual rate remains
+finite. A class-wide numerical lower bound needs uniform controls, for
+example \(u_0\ge u_{\min}>0\) and \(\lambda_0\le\Lambda<\infty\) at
+fixed \(m_0\).
+
+\hypertarget{preparation-and-correlation-tests}{%
+\subsection{4. Preparation and correlation
+tests}\label{preparation-and-correlation-tests}}
+
+An environmental label \(\theta\) allows \(\kappa(m,\theta)=K(\theta)\)
+under the same composition proof at each fixed \(\theta\). Universality
+across such classes requires a preparation-equivalence premise. If cross
+covariance is \(C_{12}=\operatorname{Cov}(\Delta X_1,\Delta X_2)\), the
+centre coefficient has an additional \(2m_1m_2 C_{12}/(M\Delta)\);
+independence fixes it to zero. Bound bodies and common reservoirs must
+be tested with their actual correlations.
+
+In A02, separately prepared tracers in otherwise identical refreshed
+baths have plateau \(H(m)=(m+M_b)s^2/\nu\). Treating their total mass as
+one tracer changes the coefficient by
+
+\[H(m_a+m_b)-\frac{m_aH(m_a)+m_bH(m_b)}{m_a+m_b}
+ =\frac{2m_am_bs^2}{\nu(m_a+m_b)}.\]
+
+The positive discrepancy for \(s>0\) identifies failure of the
+preparation equivalence premise, while preserving the earlier bath
+calculation. The comparison is between these specified experiments;
+dynamics of an actual bound composite require their own mechanical
+model.
+
+\hypertarget{scope-source-chain-and-next-test}{%
+\subsection{5. Scope, source chain and next
+test}\label{scope-source-chain-and-next-test}}
+
+The theorem establishes a conditional universal positive
+\textbf{long-window coefficient}, with action units and a specified
+preparation class. Its role as a quantum phase constant and its
+physical-time attraction are subsequent obligations. At bounded speed
+the microscopic variance coefficient still tends to zero by C018. The
+next A09 calculation connects these separate windows to the real
+telegraph and complex checkerboard propagators.
+
+This note develops the user's composition suggestion and the independent
+P02 product-chain calculation. C019--C020 supply the reviewed
+correlation input; \href{https://arxiv.org/abs/1002.4103v1}{Pavliotis
+(2010)} gives its Poisson-equation source, and
+\href{https://arxiv.org/abs/1802.09679v1}{Pitman--Yor (2018)} the
+Gaussian covariance background. Per-result prior-art status belongs to
+B16. The five dedicated algebra checks cover the two coefficients, their
+sum, their cross covariance and the bath discrepancy. Existing P02
+checks also test a nine-state product generator. The written proofs
+supply the general additive-function and positive-reference conclusions.
+\end{document}

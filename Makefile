@@ -12,6 +12,7 @@ check:
 	$(PYTHON) scripts/cut_point_checks.py
 	$(PYTHON) scripts/physical_cut_checks.py
 	$(PYTHON) scripts/telegraph_bridge_checks.py
+	$(PYTHON) scripts/composition_checks.py
 	$(PYTHON) scripts/six_direction_checks.py
 	$(PYTHON) scripts/check_repository.py
 	sha256sum -c docs/SHA256SUMS

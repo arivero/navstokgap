@@ -29,10 +29,14 @@
   count/simplex construction, midpoint atom and consistent polygon-action limit.
   [PDF](../out/papers/telegraph-return-bridge.pdf), B14 audit, 12 symbolic checks
   and 45 rational partition cases.
+- [composition-universality.tex](composition-universality.tex): generated
+  from [the composition note](../notes/composition-universality.md); conditional
+  mass universality, positive reference and preparation tests.
+  [PDF](../out/papers/composition-universality.pdf), B16 and five algebra checks.
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all nine
+Run `make papers` from the root to regenerate the programme and build all ten
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

@@ -9,6 +9,12 @@ about estimates and limits.
 
 ## Results to read first
 
+Independent composition makes a nonnegative mass-only action coefficient
+universal within a stated preparation class. One finite-rate, nonzero-speed
+reference then makes its shared plateau positive. The
+[composition paper](out/papers/composition-universality.pdf) proves these
+conditional results and tests their preparation and correlation premises.
+
 A finite-speed return bridge retains velocity memory and a discrete midpoint
 mass while allowing arbitrarily fine, consistent observation cuts. The
 [return-bridge paper](out/papers/telegraph-return-bridge.pdf) proves that the
@@ -62,7 +68,7 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-Next is the mass-composition test, followed by crossover/checkerboard dynamics
+The mass-composition test is complete; next are crossover/checkerboard dynamics
 and a susceptibility–spectral-gap comparison. The
 [six-direction review](reviews/six-directions-2026-09-08.md) records the
 adopted premises, countertests and source leads. Bounded-force returns remain

@@ -1,12 +1,22 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: six-direction review/B15 complete;
-composition and preparation-independence test A08 next.
+Updated: 2026-09-08. Current milestone: A08/B16 complete;
+crossover and checkerboard task A09 next.
 The M05 checkpoint `f1157b0` has been pushed to `origin/main`.
 
 ## Current results and next tasks
 
-**The six-direction programme review is complete.**
+**A08/B16 are complete.** [The composition note](../notes/composition-universality.md)
+proves conditional mass universality and a positive-reference theorem:
+composition plus one finite-rate, nonzero-speed telegraph constituent fixes a
+common positive Green–Kubo plateau. C035–C036 have one Luna-low audit,
+coordinator source/proof review and five dedicated algebra checks, alongside
+P02's product-chain checks. Preparation independence and the quantum role
+remain explicit A09 obligations. Ten PDFs now build. **A09 is next**, using
+P02's existing crossover/midpoint/continuation calculations as drafts, followed
+by G01. B11 and A07 retain their secondary tasks.
+
+**The six-direction programme review is complete** (priority history).
 [The critical review](../reviews/six-directions-2026-09-08.md) puts **A08**
 composition first: mass additivity of the coefficient, its preparation domain,
 correlations and full-law closure. **A09** follows with finite-speed crossover,
@@ -143,6 +153,9 @@ inside `.build/<paper>/` with the repository on `BIBINPUTS`, preserving
 TeX's file-write security settings.
 
 ## History and handoffs
+
+- [A08 handoff](handoffs/A08.md): conditional shared positive plateau,
+  product-state closure, preparation/correlation tests and B16 source review.
 
 - [Six-direction review handoff](handoffs/P01-six-directions.md): A08/A09/G01
   priority, B15 metadata verification and preserved acceptance gates.

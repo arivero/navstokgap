@@ -40,6 +40,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C032 | A probability convolution semigroup on position with support in $[-ut,ut]$ for all $t\ge0$ is $\delta_{bt}$, $|b|\le u$ | Physical-cut note §3; variance additivity and ballistic bound; spatially homogeneous stationary independent increments only; B13 |
 | C033 | The explicit density-disintegrated telegraph return bridge from $(0,+u)$ to $(0,-u)$ has odd-count weights $w_k=(\lambda T/2)^{2k}/[(k!)^2I_0(\lambda T)]$ and midpoint atom $1/I_0(\lambda T)$ at $uT/2$ | [Return-bridge note](../notes/telegraph-return-bridge.md) §§1–3; fixed $u,\lambda,T>0$, independent occupation simplexes, right-continuous velocity version; B14 and coordinator proof/source review |
 | C034 | This fixed bridge has consistent cut restrictions and $0\le S[X]-S_\pi\le(mu^2/2)N_T|\pi|$, giving almost-sure and $L^1$ polygon-action convergence to $mu^2T/2$ | Return-bridge note §§4–5; positional samples, kinetic functional, deterministic shrinking meshes; B14, 12 symbolic checks and 45 rational partition cases |
+| C035 | Independent composition gives the mass-weighted COM coefficient and complementary reduced-mass coefficient; if a finite nonnegative mass-only coefficient on all $m>0$ equals its COM-composed value, it is constant | [Composition note](../notes/composition-universality.md) §§1–2; common observable and preparation class, product-state memory retained; monotone additive-function proof, B16 and five checks |
+| C036 | Under C035 for Green–Kubo plateaus, one stationary two-state reference with $m_0,u_0>0$ and $0<\lambda_0<\infty$ forces the shared coefficient $K=m_0u_0^2/\lambda_0>0$ | Composition note §§3–4; C020 input; finite-product consistency family and preparation/correlation countertests; B16 and coordinator proof/source review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -78,6 +80,7 @@ consequences are identified separately.
 | C031–C032 | Elementary support/variance and convolution consequences; exact statements unmatched in the two-source coverage | B13; novelty unassessed; Cinque supplies the memory comparison, not these theorems |
 | C033 | Equal-rate occupation density specializes Cinque (2.6); bridge normalization, midpoint atom and version/protocol comparison are derived consequences | [B14](../references/batches/B14.md); pp. 1–4 and two worker searches; exact combined statement unmatched, novelty unassessed |
 | C034 | Elementary pathwise restriction and kinetic square-completion consequences | B14; exact action estimate unmatched in bounded source coverage, novelty unassessed |
+| C035–C036 | Standard covariance/product-chain and nonnegative-additivity consequences, with project-specific composition/positive-reference premises | [B16](../references/batches/B16.md); two searches and two cached source pages; combined statement unmatched in bounded coverage, novelty unassessed |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -103,6 +106,14 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B16](../reviews/composition-B16.md) audited C035–C036 with one Luna-low
+worker. Coordinator verified Pavliotis p. 5 and Pitman–Yor printed p. 6
+visually, corrected source titles, and retained the preparation class,
+all-positive-mass domain, Markov product label and finite-rate assumptions.
+Five dedicated algebra checks and P02's independent product-chain checks
+support the written proofs. Positivity concerns the common plateau inside
+the selected class; rate scaling across classes remains possible.
 
 [B14](../reviews/telegraph-return-B14.md) audited C033–C034. Coordinator
 verified Cinque (2.6) against the PDF image, strengthened the affine-simplex

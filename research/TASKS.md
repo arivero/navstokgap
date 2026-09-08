@@ -44,7 +44,8 @@ handoff with the remaining dependency.
 | H07 | done | Second pre-1901 batch: Newton Book III rules and General Scholium, Lagrange Part II Sections I and III, Helmholtz 1886–87, Hertz 1899 Introduction, Planck 1901; companions, checksums, BibTeX | Fable session, no subagents | [batch note](../references/batches/H07.md) |
 | H08 | done | Cut-paradox sources: Heath's Method note, Physics VI.9, Diogenes IX, al-Shahrastānī and Maimonides, Zhuangzi with Legge, Mohist Canons, Liu Hui, Galileo's First Day, Cavalieri's letters and treatises; I003 idea entry | Fable session, no subagents | [batch note](../references/batches/H08.md) |
 | P02 | done | Independent-session verification for A08/A09/G01: product-chain composition and bath countertest, cubic bridge-midpoint onset with exact sampler, gap/slow-mode test, continuation routes; 28 exact checks, no claim IDs | Fable session, no subagents | P01; [checks note](../notes/composition-crossover-gap-checks.md) |
-| A08 | ready | Composition universality: all-positive-mass domain, nonnegative coefficient, COM/relative covariance, preparation and correlated/full-law countertests; short note, five checks, per-result audit | Coordinator then one Luna low librarian | P01; next main task |
+| A08 | done | Conditional mass universality and positive-reference theorem, product-state closure and preparation/correlation tests; C035–C036, five checks, PDF | Coordinator + sequential Luna-low B16 | P01/P02; reviewed |
+| B16 | done | Two-search/two-page composition prior-art audit; coordinator verified formula images and corrected titles | One Luna low, sequential | C035–C036 |
 | A09 | ready | Necessary crossover window and conditioned midpoint moments; direct checkerboard source passages, real/complex recurrences and nonrelativistic scaling; audit each result | Coordinator then one Luna medium librarian | B15 leads; A08 coefficient premises |
 | A07 | ready | Bounded-acceleration return with opposite endpoint velocities: sharp duration and kinetic-action bounds, speed/force scaling and sampled-cut limit | Coordinator, then one small librarian | A06/B14; M06 connection |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
@@ -66,9 +67,9 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A08 from `research/ACTION_FIELD_TARGET.md`, then A09 and G01 as assessed
+Execute A09 from `research/ACTION_FIELD_TARGET.md`, then G01 as assessed
 in `reviews/six-directions-2026-09-08.md`. A07 remains the bounded-force
-diagnostic. A06/B14 are complete. The user reaffirmed the
+diagnostic. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a
 supporting force-control calculation, A04 a secondary spatial-clock test.

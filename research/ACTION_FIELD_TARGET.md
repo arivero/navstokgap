@@ -8,8 +8,8 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A06 and the 2026-09-08 proposal review: **A08**, the
-composition test below. The [cut-point refinement test](CUT_POINT_TARGET.md)
+Immediate priority after A08/B16: **A09**, the crossover/checkerboard test
+below. The [cut-point refinement test](CUT_POINT_TARGET.md)
 has completed its chosen constructions; it remains the consistency condition
 for any candidate field. Bath relaxation supplies a comparison mechanism.
 
@@ -33,6 +33,11 @@ answer. A fixed-point prescription containing a supplied $\hbar$ is a comparison
 model. Each proposed axiom receives an explicit deterministic-countermodel test.
 
 ## A08: composition as a universality premise
+
+Completed in [the composition note](../notes/composition-universality.md),
+C035–C036 and B16. The shared positive plateau follows conditionally on
+coefficient closure and one positive finite-rate reference. Preparation
+independence and identification with the quantum phase scale continue in A09.
 
 For independent constituents, transform the covariance to centre and relative
 coordinates with total and reduced masses. Test the claim that a nonnegative

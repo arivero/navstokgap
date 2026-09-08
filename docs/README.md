@@ -15,6 +15,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B16](../references/batches/B16.md): composition universality and positive
+  reference audit; [source companion](batches/B16/composition-source-companion.md).
+
 - [B15](../references/batches/B15.md): checkerboard source triage for the
   composition/crossover programme; [coverage companion](batches/B15/checkerboard-source-companion.md).
 

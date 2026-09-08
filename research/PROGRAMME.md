@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 8, 2026-09-08.
+Version 9, 2026-09-08.
 
 ## Aim
 
@@ -31,6 +31,14 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
+
+**A08/B16 are complete.** The [composition note](../notes/composition-universality.md)
+proves that a nonnegative mass-only coefficient preserved by independent
+composition is constant on positive masses. A finite-rate, nonzero-speed
+reference makes the common Green–Kubo plateau positive. C035–C036 retain
+the preparation-class premise, and product-state closure accommodates more
+than two centre velocities. **A09 is now the next task.** The original
+priority decision and its countertests follow.
 
 The [six-direction review](../reviews/six-directions-2026-09-08.md) promotes
 **A08** to the next main task: derive the mass-composition law for a
