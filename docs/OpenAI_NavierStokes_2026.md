@@ -28,4 +28,14 @@ Source routes for continuation:
 
 The PDF retrieval cache is `.build/openai-ns/navier-stokes.pdf`; redistribution
 rights are unestablished, so the original remains outside tracked sources.
-SHA-256: `8c8a94ad9ac824c8b605b9827cadf7beaca48bd10b380de3cfc872a2c37afa81`.
+Librarian verification on 2026-09-08: the existing official PDF is complete
+(`pdfinfo`: 165 pages, 2,955,931 bytes), and its SHA-256 is
+`8c8a94ad9ac824c8b605b9827cadf7beaca48bd10b380de3cfc872a2c37afa81`, matching
+the recorded digest. A full layout-preserving extraction is cached at
+`.build/openai-ns/navier-stokes.layout.txt` (673,086 bytes, 8,652 lines), made
+with `pdftotext -layout`. The librarian read only the first two pages: the abstract and
+Theorem 1.1 state finite-time unbounded velocity with uniformly bounded kinetic
+energy for every positive viscosity, using smooth compact forcing and zero
+initial velocity; the contents lists the construction, stress-correction and
+compact-forcing sections. This is extraction plus bounded first-reading, not a
+proof audit.
