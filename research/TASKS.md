@@ -65,11 +65,21 @@ handoff with the remaining dependency.
 | B22 | done | Product-chain source and weak-observability audit; source images, metadata, clock and proof-index correction verified | One Luna low, sequential | C045–C046; coordinator review |
 | A10 | done | Finite conservative harmonic receiver covariance, exact action observable, centre-motion alternatives and necessary large-receiver bound C047; 15 checks and PDF | Coordinator + Luna-low B23 | [A10 handoff](handoffs/A10.md) |
 | B23 | done | Ford–Kac–Mazur/Zwanzig harmonic-bath audit, coordinator source-image and proof review; reported nine-page coverage corrected | One Luna low, sequential | C047; assigned six pages, worker exceeded by three |
-| A11 | ready | Increasing harmonic network: tagged spectral measure and energy scaling; compare receiver-size/window limits, distinguish friction kernel and velocity covariance, test preparation independence | Coordinator then one bounded librarian | A10/B23 |
+| A11 | done | Periodic-chain density, noncommuting limits, joint regime and fixed-phase speed-support obstruction C048–C049 | Coordinator + Luna-low B24 | Receiver paper §§5–6; exact and numerical checks |
+| B24 | done | Three-page Ford–Kac–Mazur audit, zero searches; coordinator transcription and proof review | One Luna low, sequential | C048–C049 |
+| A12 | ready | Select a bounded-velocity interacting receiver and invariant preparation; derive or bound tagged low-frequency response and test energy dependence | Coordinator then one bounded librarian | A11/B24; scope/model decision first |
 | S01 | done | Action-target skill upgrade and source-idea context-recovery skill, AGENTS hook and local routing validation | Coordinator, no additional worker | [handoff](handoffs/restart-skills-2026-09-08.md) |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
 | W01 | waiting | Revise technical manuscript from accepted claims only; citation/notation/proof audit, reproducible PDF | Scientific writer + reviewer | R01 and next accepted result |
+
+## Hard verification constraint
+
+No Python numerical or symbolic verification scripts may be created or run.
+This applies to coordinator and all workers, overriding historical check-script
+instructions in task descriptions and handoffs. Use written derivations and
+source/proof review. `make check` is document/source integrity only. No language
+substitution to evade this rule; new computational verification needs user direction.
 
 ## Worker task envelope
 
@@ -81,7 +91,8 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A11's increasing harmonic reservoir test after completed A10/B23.
+The A06/A09a consolidation is complete; the review maps remaining opportunities.
+Select A12's bounded-velocity receiver and preparation.
 Choose a spring network and preparation with explicit tagged spectral weights;
 compare receiver-size and observation limits. Derive rather than assume a
 Markov correlation law. A09 retains the physical scale-selection

@@ -12,8 +12,11 @@ about estimates and limits.
 The [conservative-receiver paper](out/papers/conservative-harmonic-receiver.pdf)
 derives the action observable from an isolated harmonic network. At fixed
 finite size and centre velocity, its long-window value tends to zero.
-This identifies the next physical test: which large-receiver limit and
-preparation could sustain a positive shared scale?
+Its increasing-chain extension gives a positive plateau
+$\Theta\sqrt{m/k}$ in the opposite order of size/window limits. A common
+hard speed ceiling in that phase preparation instead closes the response.
+This identifies the next physical test: a bounded-velocity reservoir with
+explicit low-frequency response and preparation dependence.
 
 The [bounded-turn paper](out/papers/bounded-acceleration-return.pdf) proves
 the sharp reversal cost $mu^3/(3a)$ and minimum duration $2u/a$. Its polygon
@@ -37,7 +40,7 @@ test, now developed above, asks which spectral modes the classical plateau contr
 
 The finite-speed return bridge now has an exact midpoint crossover: cubic
 short-window variance converges to its shared long-window action plateau.
-The [crossover paper](out/papers/bridge-crossover.pdf) proves the beta mixture
+The [combined return-bridge paper](out/papers/telegraph-return-bridge.pdf) proves the beta mixture
 and shows why a positive coefficient across arbitrarily small masses requires
 mass-dependent observation windows.
 

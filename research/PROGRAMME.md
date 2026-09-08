@@ -1,8 +1,15 @@
 # Research programme: action, trajectories and gaps
 
-Version 15, 2026-09-08.
+Version 16, 2026-09-09.
 
 ## Aim
+
+**Hard verification rule (2026-09-09):** mathematical work uses written proofs
+and source review. Creating or running Python numerical/symbolic verification
+scripts is prohibited for coordinator and workers. Existing scripts are
+historical artifacts, even where older task entries mention checks. Document
+and source-management tooling remains allowed; switching languages is not a
+workaround. A new computational-verification workflow requires user direction.
 
 Explain the relationship between mechanical trajectories, an action scale and
 gap formation. We pursue two connected outcomes:
@@ -31,6 +38,15 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
+
+**A11/B24 are complete.** The consolidated receiver paper gives a periodic
+chain plateau $\Theta\sqrt{m/k}$ in one order of limits, zero in the reverse
+order, and closure under a common hard speed ceiling in the stated phase
+preparation. **A12** next selects a bounded-velocity interacting receiver and
+its invariant preparation, before attempting a low-frequency response proof.
+A06/A09a are consolidated in one return-bridge manuscript; the
+[paper review](../reviews/paper-consolidation-2026-09-09.md) identifies further
+A01–A09 groupings while preserving distinct hypotheses.
 
 **A10/B23 are complete.** Finite conservative harmonic receivers give an exact
 cosine covariance and vanishing long-window action observable at fixed centre

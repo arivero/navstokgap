@@ -13,11 +13,13 @@
 \section{A conservative receiver and the origin of a correlation
 scale}\label{a-conservative-receiver-and-the-origin-of-a-correlation-scale}}
 
-A finite harmonic receiver with fixed centre velocity has a vanishing
-long-window displacement-action observable. Random centre velocity
-instead adds a ballistic term. The exact normal-mode formula identifies
-the quantity that must lose uniform control before a large receiver can
-sustain a positive plateau: its low-frequency displacement weight.
+A finite harmonic receiver has a vanishing long-window action observable
+at fixed centre velocity. An increasing periodic chain instead has
+plateau \(\Theta\sqrt{m/k}\) when its size tends to infinity first, with
+mode energy \(\Theta\) and spring stiffness \(k\). A common hard
+particle-speed ceiling on the stated phase preparation forces this
+plateau to close. The comparison locates the positive scale in the
+low-frequency weights and energy preparation.
 
 \hypertarget{hamiltonian-and-invariant-preparation}{%
 \subsection{1. Hamiltonian and invariant
@@ -149,8 +151,123 @@ duration to infinity in opposite orders. Derive any surviving constant
 from these mechanical inputs. Mesh refinement of the same smooth
 trajectories is a third, distinct limit.
 
+\hypertarget{an-increasing-periodic-chain-c048}{%
+\subsection{5. An increasing periodic chain
+(C048)}\label{an-increasing-periodic-chain-c048}}
+
+Take odd \(N\ge3\) equal masses \(m\) on a ring, with spring energy
+\(\frac{k}{2}\sum_{i=0}^{N-1}(x_{i+1}-x_i)^2\) (indices modulo \(N\)).
+Fix the centre position and momentum. Give every real internal normal
+mode energy \(\Theta>0\) and independent uniform phase. Here \(\Theta\)
+is a preparation energy, and total energy is \((N-1)\Theta\). The mode
+frequencies and tagged covariance are
+
+\[
+\omega_j=\Omega\sin(\pi j/N),\quad \Omega=2\sqrt{k/m},\qquad
+C_N(t)=\frac{\Theta}{mN}\sum_{j=1}^{N-1}\cos(\omega_jt).
+\]
+
+The real sine/cosine eigenvectors have equal mode energies, so their
+paired squared components sum to \(2/N\) at each site. Applying §2 gives
+
+\[
+h_N(\Delta)=\frac{2\Theta}{N\Delta}\sum_{j=1}^{N-1}
+\frac{1-\cos(\omega_j\Delta)}{\omega_j^2}.
+\]
+
+For each fixed \(\Delta\), this Riemann sum converges to
+
+\[
+h_\infty(\Delta)=\frac{2m}{\Delta}\int_0^\Omega
+\frac{1-\cos(\omega\Delta)}{\omega^2}\rho(\omega)\,d\omega,
+\quad \rho(\omega)=\frac{2\Theta}{\pi m\sqrt{\Omega^2-\omega^2}}.
+\]
+
+This is a statement about limits of tagged covariances and increment
+variances; it does not require a stationary absolute-position law for
+the infinite chain. The density is integrable at its upper edge and
+continuous at zero. Splitting at any fixed \(0<a<\Omega\), the
+contribution from \([a,\Omega]\) is \(O(1/\Delta)\). In the lower
+interval substitute \(y=\omega\Delta\). Dominated convergence, using
+\((1-\cos y)/y^2\in L^1(0,\infty)\) and bounded \(\rho\) on \([0,a]\),
+gives
+
+\[
+\lim_{\Delta\to\infty}h_\infty(\Delta)
+=\pi m\rho(0)=\frac{2\Theta}{\Omega}=\Theta\sqrt{m/k}.
+\]
+
+The integral \(\int_0^\infty(1-\cos y)y^{-2}dy=\pi/2\) follows by
+integration by parts and the Dirichlet sine integral. Thus
+
+\[
+\lim_{\Delta\to\infty}\lim_{N\to\infty}h_N(\Delta)=2\Theta/\Omega,
+\qquad
+\lim_{N\to\infty}\lim_{\Delta\to\infty}h_N(\Delta)=0.
+\]
+
+A joint regime is also explicit. Write
+\(f(z)=2(1-\cos z)/z^2=2\int_0^1(1-r)\cos(zr)\,dr\) with \(f(0)=1\).
+Then \(|f'|\le1/3\). The integrand
+\(\Theta\Delta f(\Omega\Delta\sin\pi x)\) is Lipschitz with constant at
+most \(\pi\Theta\Omega\Delta^2/3\). A left Riemann sum error is at most
+that constant divided by \(2N\); removing its zero mode contributes
+\(\Theta\Delta/N\). Therefore
+
+\[
+|h_N(\Delta)-h_\infty(\Delta)|
+\le\frac{\pi\Theta\Omega\Delta^2}{6N}+\frac{\Theta\Delta}{N}.
+\]
+
+At fixed \(m,k,\Theta\), \(\Omega\Delta_N\to\infty\) and
+\((\Omega\Delta_N)^2/N\to0\) give the positive joint limit
+\(2\Theta/\Omega\). The action scale is selected by the input energy and
+spring timescale.
+
+\hypertarget{energy-and-a-common-speed-ceiling-c049}{%
+\subsection{6. Energy and a common speed ceiling
+(C049)}\label{energy-and-a-common-speed-ceiling-c049}}
+
+The positive-plateau preparation has extensive total energy. Its phase
+support also contains increasingly large tagged velocities. At site zero
+use the standard real Fourier basis. Only the \((N-1)/2\) cosine modes
+contribute; each has maximal velocity contribution
+\(2\sqrt{\Theta/(mN)}\). Phases can align, so the exact support maximum
+is
+
+\[
+\sup_{\phi}|v_0|=(N-1)\sqrt{\Theta/(mN)}.
+\]
+
+Every neighbourhood of the maximizing phases has positive preparation
+measure. A common ceiling \(|v_i|\le c\) for all supported trajectories
+thus requires \(\Theta_N\le mc^2N/(N-1)^2=O(1/N)\). This is a necessary
+condition from one site; no sufficiency for all sites is inferred from
+that maximum.
+
+Both bounded total energy and this necessary speed condition close the
+response uniformly in the window. Indeed, \(1-\cos z\le z^2/2\) gives
+\(h_N(\Delta)\le\Theta_N\Delta\). The identity
+\(\sum_{j=1}^{N-1}\csc^2(\pi j/N)=(N^2-1)/3\) gives
+
+\[
+h_N(\Delta)\le
+\frac{4\Theta_N(N^2-1)}{3N\Omega^2\Delta},\qquad
+\sup_{\Delta>0}h_N(\Delta)
+\le\frac{2\Theta_N}{\Omega}\sqrt{\frac{N^2-1}{3N}}.
+\]
+
+The trigonometric identity follows by differentiating
+\(\sum_{j=0}^{N-1}\cot(x+\pi j/N)=N\cot(Nx)\) and subtracting the
+\(j=0\) singularity as \(x\to0\). The last inequality uses
+\(\min(A\Delta,B/\Delta)\le\sqrt{AB}\). For \(\Theta_N=O(1/N)\) the
+uniform bound tends to zero. Thus this explicit positive reservoir
+plateau uses a different preparation class from a family with a common
+strict particle-speed ceiling. Its dependence on \(\Theta\) also leaves
+preparation-independent action selection open.
+
 \hypertarget{source-input-and-reproduction}{%
-\subsection{5. Source input and
+\subsection{7. Source input and
 reproduction}\label{source-input-and-reproduction}}
 
 Ford--Kac--Mazur, printed p.~505, (2)--(5), supplies the matrix harmonic
@@ -165,8 +282,21 @@ coefficient.
 
 \href{../references/batches/B23.md}{B23} records the established
 ingredients, derived finite-network consequence and bounded reading
-coverage. Run \texttt{python3\ scripts/harmonic\_receiver\_checks.py}
-for the exact modal, two-body and three-body checks. C047 has
-coordinator proof review and a sequential Luna-low prior-art audit. Its
-limits concern the stated observable and preparation class.
+coverage. Historical modal, two-body and three-body checks accompany
+C047's proof. C047 has coordinator proof review and a sequential
+Luna-low prior-art audit. Its limits concern the stated observable and
+preparation class.
+
+\href{../references/batches/B24.md}{B24} audits §§5--6 against
+Ford--Kac--Mazur's cyclic Fourier construction and its
+finite-sum/infinite-chain distinction, printed p.~506, (12)--(24). The
+tagged density, plateau and speed-support bounds are derived here with
+fixed-energy phases. Six exact identities, four finite ring
+spectrum/cosecant comparisons and four Riemann-bound tests were recorded
+before the hard no-Python-verification rule; the handoff records that
+history. The new uncommitted verification script and output were
+withdrawn under the rule. Current mathematical verification uses the
+written proofs and source review. The next mechanism must retain bounded
+velocities while supplying low-frequency response; its preparation
+dependence remains a separate selection test.
 \end{document}

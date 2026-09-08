@@ -1,7 +1,21 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A10/B23 complete;
-A11 increasing harmonic reservoir is next.
+**Hard rule, 2026-09-09:** no creation or execution of Python numerical or
+symbolic verification scripts, by coordinator or workers. Use written proofs
+and source review. Historical check commands are inactive records. Document,
+source, link and integrity tooling remains allowed; no language workaround.
+
+Updated: 2026-09-09. Current milestone: A11/B24 complete;
+A06/A09a paper consolidation complete; A12 bounded-velocity receiver design next.
+
+**A11/B24 are complete.** The existing receiver paper now contains the
+periodic-chain limit $\Theta\sqrt{m/k}$, opposite iterated limits, a joint
+window regime and the fixed-phase speed-ceiling obstruction C048–C049.
+One Luna-low audit and coordinator proof/check review support the extension.
+The A06/A09a return-bridge papers are consolidated, preserving their proofs
+and source records; the paper review maps further A01–A09 opportunities.
+A12 will specify a bounded-velocity receiver
+and its preparation before attempting another plateau derivation.
 
 **A10/B23 are complete.** The [conservative receiver note](../notes/conservative-harmonic-receiver.md)
 derives the exact finite-network covariance and action observable from an

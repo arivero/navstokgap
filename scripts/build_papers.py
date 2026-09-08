@@ -36,16 +36,12 @@ def main():
          "-o", "papers/physical-cut-speed.tex"])
     run(["pandoc", "notes/telegraph-return-bridge.md", "--standalone", "--to=latex",
          "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A finite-speed return bridge and its polygonal action",
+         "-V", "note-title=A finite-speed return bridge: cuts and midpoint crossover",
          "-o", "papers/telegraph-return-bridge.tex"])
     run(["pandoc", "notes/composition-universality.md", "--standalone", "--to=latex",
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=A shared action coefficient from classical composition",
          "-o", "papers/composition-universality.tex"])
-    run(["pandoc", "notes/bridge-crossover.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Exact midpoint crossover for a finite-speed return bridge",
-         "-o", "papers/bridge-crossover.tex"])
     run(["pandoc", "notes/checkerboard-dynamics.md", "--standalone", "--to=latex",
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=One action scale, two rules for composing paths",
@@ -68,7 +64,7 @@ def main():
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
                   "classical-action-field", "collision-action-relaxation",
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
-                  "composition-universality", "bridge-crossover", "checkerboard-dynamics",
+                  "composition-universality", "checkerboard-dynamics",
                   "susceptibility-gap", "bounded-acceleration-return",
                   "conservative-harmonic-receiver", "research-programme"):
         build = ROOT / ".build" / paper

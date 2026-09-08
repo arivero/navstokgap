@@ -4,7 +4,7 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Memory, observability and a mechanical receiver — A09/A11
+## Memory, observability and a mechanical receiver — A09/A12
 
 **Source construction:** Pavliotis converts an integrated velocity correlation
 into a generator Poisson equation. Read the [source companion](../docs/Pavliotis_GreenKubo_2010.md),
@@ -29,6 +29,10 @@ Zwanzig gives an exact reduced memory equation. Read their
 especially the distinction between friction memory and tagged velocity
 covariance. Choose an increasing spring network and energy preparation, then
 test the tagged low-frequency weights and order of limits.
+A11 now supplies that ring calculation: a positive extensive-energy plateau,
+and closure under its common hard-speed condition. Read
+[B24](batches/B24.md) and receiver §§5–6 before choosing A12's next model.
+The next source idea must address bounded velocity and preparation together.
 
 ## Composition versus preparation — A09 obligation 4
 

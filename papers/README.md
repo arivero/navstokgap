@@ -26,24 +26,30 @@
   [PDF](../out/papers/physical-cut-speed.pdf), B13 audit and twelve checks.
 - [telegraph-return-bridge.tex](telegraph-return-bridge.tex): generated from
   [the maintained note](../notes/telegraph-return-bridge.md); conditional
-  count/simplex construction, midpoint atom and consistent polygon-action limit.
-  [PDF](../out/papers/telegraph-return-bridge.pdf), B14 audit, 12 symbolic checks
-  and 45 rational partition cases.
+  count/simplex construction, midpoint atom, consistent polygon-action limit,
+  exact beta law and midpoint crossover. A06 and A09a are consolidated here
+  with shared preparation and count weights.
+  [PDF](../out/papers/telegraph-return-bridge.pdf), B14 and B17 audits.
 - [composition-universality.tex](composition-universality.tex): generated
   from [the composition note](../notes/composition-universality.md); conditional
   mass universality, positive reference and preparation tests.
   [PDF](../out/papers/composition-universality.pdf), B16 and five algebra checks.
-- [bridge-crossover.tex](bridge-crossover.tex): exact beta midpoint law and
-  crossover, cubic onset, plateau proof and small-mass window constraint;
-  [PDF](../out/papers/bridge-crossover.pdf). B17 audit, 29 exact checks and
-  seven quadrature comparisons; maintained in [the note](../notes/bridge-crossover.md).
+- [conservative-harmonic-receiver.tex](conservative-harmonic-receiver.tex):
+  A10 and A11 together, from finite modal response to periodic-chain limits
+  and the speed-support test. [PDF](../out/papers/conservative-harmonic-receiver.pdf).
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 
-Run `make papers` from the root to regenerate the programme and build all eleven
+Run `make papers` from the root to regenerate the programme and build all fourteen
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.
+
+The [consolidation review](../reviews/paper-consolidation-2026-09-09.md)
+maps further opportunities across A01–A09. Historical numerical check outputs
+are retained, but the hard rule prohibits running Python numerical/symbolic
+verification scripts. Current verification uses proofs, source review and
+document integrity checks.
 
 `spectral-gap-laboratory.tex` is the preserved M03 working draft. Its B04
 literature audit is complete; proof review, dedicated checks and build integration
