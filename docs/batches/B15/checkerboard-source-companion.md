@@ -19,10 +19,10 @@ coefficient or a mass-additivity theorem.
   and Path Integrals*, McGraw–Hill, New York, 1965, International Series in
   Pure and Applied Physics; ISBN 0-07-020650-3; 365 pages (catalogue
   pagination xiv + 365).
-- **Relevant location:** Problem 2-6, pp. 34–36 in the first edition. The
-  page range is corroborated by the Durham thesis search record and multiple
-  catalogue/reference leads; the first-edition pages themselves were not
-  lawfully read in this run.
+- **Relevant location lead:** Problem 2-6, reported pp. 34–36. The worker
+  used secondary search records, including a Durham thesis whose bibliography
+  cites an emended edition. Coordinator review therefore leaves first-edition
+  pagination unverified. The book pages were not directly read in this run.
 - **Lawful metadata route:** CERN record 100771,
   <https://cds.cern.ch/record/100771>; Google Books catalogue,
   <https://books.google.com/books?id=14ApAQAAMAAJ&output=html_text>.
@@ -93,12 +93,20 @@ explicit observable and noise model.
 
 ## Access and extraction limits
 
-Searches were limited to four targeted query batches and four page-opening
-attempts, with no more than two formula-page attempts. APS full text returned
+The worker handoff lists four targeted query batches and an additional
+composition query, with four page-opening attempts. This exceeded the dispatch's
+four-query budget by the reported extra query; no broader search was requested.
+Coordinator verification added two targeted metadata queries and DOI/CiNii
+opening attempts. APS full text returned
 HTTP 403/authorization; the IOP formula route was not retrievable. No PDF was
 downloaded, no OCR was performed, and no source formula was visually checked.
 Search snippets were used only to locate metadata or bounded abstract-level
 claims. Rights and redistribution of book scans remain unresolved.
+
+Coordinator independently verified the APS abstract and CiNii's Crossref-based
+Jacobson–Schulman metadata. The indexed Jacobson–Schulman abstract remains a
+reading lead; its Compton-scale derivation and corner factors await a directly
+checked primary passage. No new formula is accepted from that extraction.
 
 ## Next proof obligation
 

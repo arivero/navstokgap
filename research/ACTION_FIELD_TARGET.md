@@ -42,6 +42,10 @@ step. Then test preparation parameters, correlated constituents, and closure of
 the full velocity law. A composite of independent two-speed particles generally
 requires more velocity states. The intended output addresses obligation 4's
 mass dependence; preparation independence and positivity have their own gates.
+If this coefficient is shared with a stationary two-state constituent of
+nonzero fixed speed and finite positive reversal rate, C020 gives modelwise
+strict positivity. Test this combined conditional route explicitly, alongside
+families of finite-rate models whose shared coefficients approach zero.
 
 ## A09/G01: crossover, quantum role and spectral control
 

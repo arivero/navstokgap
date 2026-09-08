@@ -123,6 +123,15 @@ $\lambda_m=mc^2/K$ in every model. It establishes positivity within a chosen
 model, not a uniform positive floor across that family. Moreover a speed ceiling
 $|V|\le c$ and the two-valued rule $V=\pm c$ are different premises.
 
+The positive conclusion is substantive: **if A08 establishes coefficient
+universality in a class containing a stationary two-state constituent with
+speed $c>0$ and $0<\lambda<\infty$, its shared coefficient is strictly
+positive.** This is a conditional classical universality-and-positivity route.
+The remaining tests concern the physical justification and consistency of
+those premises, preparation independence and the quantum role of the resulting
+constant. Excluding an attained zero and proving a uniform lower bound over
+allowed models are distinct versions of the strong target.
+
 ## 4. Spectral toy: adopt in G01 with a gap-observability test
 
 C019 already gives
