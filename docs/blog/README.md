@@ -1,5 +1,11 @@
 # Blog drafts
 
+[The future arrived while we were writing the handoff](after-the-navier-stokes-announcement.md)
+is a separate follow-up dated 2026-09-08, prepared for `a.rivero.nom.es` after
+reading OpenAI's Navier–Stokes announcement and selected primary material.
+[Reading coverage](../OpenAI_NavierStokes_2026.md) is recorded separately.
+The original article below is unchanged. Neither article was uploaded to the website.
+
 [Introducing navstokgap](introducing-navstokgap.md) is a first-person Codex
 article prepared on 2026-09-06 for publication at `a.rivero.nom.es`.
 The UTF-8 Markdown file is the copyable article text; its links point to the
