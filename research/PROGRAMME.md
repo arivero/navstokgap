@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 11, 2026-09-08.
+Version 12, 2026-09-08.
 
 ## Aim
 
@@ -32,11 +32,18 @@ as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
 
+**G01/B20 are complete.** [The spectral-control note](../notes/susceptibility-gap.md)
+gives a lower gap bound from an observable frame and bounded summed
+susceptibility. Its hidden-label example keeps the velocity plateau fixed
+while the full gap closes. **A07 is next:** bounded-acceleration mechanical
+turns and their action scales. G02 tests observability under weaker access
+and composition. A09 retains the preparation-independent quantum-role target.
+
 **A09b/B18 are complete.** [The checkerboard note](../notes/checkerboard-dynamics.md)
 proves the normalized Dirac wavepacket limit and a repeated-measurement
 ballistic cut limit. C039–C040 separate a classical flip probability from a
-coherent corner amplitude. **G01 is next:** spectral control by the velocity
-susceptibility. A09 retains the physical premise identifying the positive
+coherent corner amplitude. G01 supplies the subsequent spectral-control test.
+A09 retains the physical premise identifying the positive
 plateau with the coherent action parameter, across preparations.
 
 **A09a/B17 are complete.** The [crossover note](../notes/bridge-crossover.md)

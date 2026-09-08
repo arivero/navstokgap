@@ -1,0 +1,192 @@
+# When an action plateau controls a spectral gap
+
+A complete collection of observables with bounded total susceptibility gives
+a lower relaxation-gap bound. A single positive velocity plateau instead
+gives an upper bound, and can miss an arbitrarily slow internal mode.
+We prove both statements for finite reversible dynamics and specify the
+energy normalization needed for the Dirac comparison.
+
+## 1. Operator, observable and units
+
+Let $Q$ generate an irreducible continuous-time Markov chain on a finite set
+of $n\ge2$ states, with stationary probabilities $\pi_i>0$ and detailed
+balance $\pi_iQ_{ij}=\pi_jQ_{ji}$. The generator acts on functions, with row
+sums zero. On $L^2(\pi)$ use
+$\langle f,g\rangle_\pi=\sum_i\pi_i\overline{f_i}g_i$.
+The centered space $\mathcal H_0=\{f:\langle1,f\rangle_\pi=0\}$ has
+dimension $n-1$. All domains are the entire indicated finite-dimensional space.
+
+Set $A=-Q|_{\mathcal H_0}$. It is positive self-adjoint with eigenvalues
+$0<\gamma_1\le\cdots\le\gamma_{n-1}$. The full relaxation gap is
+$\gamma_1$, in inverse-time units. For a real centered observable $v$ with
+velocity units, define
+
+$$
+\chi(v)=\langle v,A^{-1}v\rangle_\pi
+=\int_0^\infty\langle v,e^{tQ}v\rangle_\pi\,dt,
+\qquad H(v)=2m\chi(v),\quad m>0.
+$$
+
+$\chi$ has units length squared per time, and $H$ has action units. This
+is C019's long-observation plateau for the integrated velocity. The
+Green–Kubo/Poisson representation is matched to Pavliotis in
+[B20](../references/batches/B20.md); the finite-dimensional consequences
+below are derived explicitly. Time here is the chain's evolution parameter.
+
+## 2. One observable: the product and its direction (C041)
+
+Write $v=\sum_j a_je_j$ in an orthonormal eigenbasis of $A$, and
+$\sigma_v^2=\|v\|_\pi^2>0$. Then
+
+$$
+H(v)=2m\sum_j\frac{|a_j|^2}{\gamma_j},\qquad
+H(v)\gamma_1\le2m\sigma_v^2\le H(v)\gamma_{n-1}.
+$$
+
+**Proof.** Integrate each exponential in
+$\langle v,e^{tQ}v\rangle_\pi=\sum_j|a_j|^2e^{-\gamma_jt}$ and use
+$\sum_j|a_j|^2=\sigma_v^2$. The left inequality gives
+$\gamma_1\le2m\sigma_v^2/H(v)$: an upper gap bound.
+The normalized integral time
+$\tau_v=\chi(v)/\sigma_v^2$ is a weighted average of $1/\gamma_j$;
+in particular $\tau_v\le1/\gamma_1$.
+
+For the two-state chain $Q=\lambda(\sigma_x-I)$ and $v=u(1,-1)$,
+$\pi=(1/2,1/2)$, with $u,\lambda>0$, the centered space is one-dimensional.
+Therefore
+
+$$
+\gamma_1=2\lambda,\qquad H(v)=\frac{mu^2}{\lambda},\qquad
+H(v)\gamma_1=2mu^2.
+$$
+
+Here $\sigma_x$ exchanges the two signs. This equality identifies the source
+of the two-state product: every centered mode is visible to velocity.
+
+## 3. Fixed plateau with a closing full gap (C041)
+
+Take two independent signs $s,r\in\{-1,1\}$ with rates $\lambda>0$ and
+$\epsilon>0$, respectively, and define velocity $v(s,r)=us$, with fixed
+$0<u<c$. The four-state generator is
+
+$$
+Q_{\lambda,\epsilon}=\lambda(\sigma_x-I)\otimes I
++I\otimes\epsilon(\sigma_x-I).
+$$
+
+The uniform measure is stationary and reversible. The functions
+$1,s,r,sr$ form an orthonormal eigenbasis with eigenvalues of $-Q$
+equal to $0,2\lambda,2\epsilon,2(\lambda+\epsilon)$.
+Velocity overlaps only the $s$ mode. Thus
+
+$$
+H(v)=\frac{mu^2}{\lambda},\qquad
+\gamma_1=2\min(\lambda,\epsilon)\longrightarrow0
+\quad\hbox{as }\epsilon\downarrow0.
+$$
+
+Every positive-$\epsilon$ member is irreducible, with the same bounded speed
+and the same positive plateau. At the limiting parameter the label becomes
+conserved. The velocity path law itself is unchanged throughout the family.
+The missing information is the label's relaxation: finite-rate assumptions
+for each member give positivity member by member, while a uniform lower gap
+requires additional control over the family.
+
+## 4. A sufficient condition: complete observability (C042)
+
+Choose centered velocity-unit observables $f_1,\ldots,f_r$ and suppose
+that, for every $g\in\mathcal H_0$,
+
+$$
+\sum_{a=1}^r|\langle f_a,g\rangle_\pi|^2
+\ge\alpha\|g\|_\pi^2,\qquad\alpha>0.
+$$
+
+This *frame bound* means that the collection detects every centered mode;
+$\alpha$ has velocity-squared units. Put
+$S=\sum_a\chi(f_a)$. Then
+
+$$
+\boxed{\gamma_1\ge\frac{\alpha}{S}.}
+$$
+
+If $H(f_a)\le B_a$, it follows that
+$\gamma_1\ge2m\alpha/\sum_aB_a$.
+
+**Proof.** Set $b_j=\sum_a|\langle e_j,f_a\rangle_\pi|^2$.
+The frame hypothesis gives $b_j\ge\alpha$ for every unit eigenvector. Hence
+
+$$
+S=\sum_j\frac{b_j}{\gamma_j}\ge\frac{\alpha}{\gamma_1}.
+$$
+
+Multiplication by $\gamma_1/S$ proves the result. Equivalently, the frame
+operator $F=\sum_a|f_a\rangle\langle f_a|$ satisfies $F\ge\alpha I$ and
+$S=\operatorname{Tr}(A^{-1}F)$.
+
+For a family, uniform $\alpha\ge\alpha_0>0$ and $S\le S_0<\infty$
+give the uniform bound $\gamma_1\ge\alpha_0/S_0$. When masses vary, the
+action-valued version must control $\sum_aB_a/(2m)$, rather than merely
+$\sum_aB_a$. The frame can have full rank only if $r\ge n-1$.
+These requirements expose the cost of carrying the estimate to larger systems.
+
+The exact all-observable formulation is
+
+$$
+\sup_{f\in\mathcal H_0\setminus\{0\}}
+\frac{\chi(f)}{\|f\|_\pi^2}=\|A^{-1}\|=\frac1{\gamma_1}.
+$$
+
+The spectral expansion proves the upper bound, and a slowest eigenvector
+attains equality. It is the inverse-operator version of a Poincaré bound.
+
+In the four-state example choose $f_1=us$, $f_2=ur$, $f_3=usr$. They give
+$F=u^2I$ on $\mathcal H_0$, and
+
+$$
+S=u^2\left[\frac1{2\lambda}+\frac1{2\epsilon}
++\frac1{2(\lambda+\epsilon)}\right].
+$$
+
+The complete collection detects the approaching gap closure through
+$\chi(f_2)\to\infty$. Each observable stays bounded in magnitude by $u$.
+Thus speed control and susceptibility control address different premises.
+
+## 5. Energy normalization and the companion field problem
+
+On full $L^2(\pi)$ define $\mathcal E=K(-Q)$ with a supplied action unit
+$K>0$. Constants form its unique zero-energy ground space; its excitation
+gap is $\Delta_{\mathcal E}=K\gamma_1$. In the two-state model, setting
+$K=H(v)$ gives
+
+$$
+\Delta_{\mathcal E}=2mu^2.
+$$
+
+The numerical substitution $u=c$ matches C039's Dirac rest-branch separation
+$2mc^2$. The two operators have different state spaces and spectral meanings:
+$\mathcal E$ is a nonnegative finite-state relaxation operator, while the
+Dirac operator has positive and negative single-particle branches. A quantum
+field vacuum gap additionally requires its physical Hilbert space and the
+continuum/infinite-volume construction.
+
+For the companion programme, C042 supplies a candidate form of estimate:
+observable coverage bounded below, inverse-generator response bounded above.
+Transferring it requires identifying the physical generator and proving that
+both bounds survive the relevant limits. An algorithmic sampling chain's
+relaxation time is a distinct object from physical Euclidean time evolution.
+
+## 6. Next test and reproduction
+
+G02 asks whether mechanical composition preserves a useful observable
+collection and its quantitative coverage. Start with the four-state example,
+then weaken access to the label. Track the smallest frame eigenvalue and total
+susceptibility together; a gap bound based on either one alone loses the
+information isolated above. A09 continues the independent action-scale and
+coherent-composition selection task.
+
+Run `python3 scripts/susceptibility_gap_checks.py`. The
+[B20 companion](../docs/batches/B20/susceptibility-source-companion.md)
+records the Green–Kubo source match and the bounded prior-art coverage.
+C041 is a spectral/product-chain consequence of C019; C042 is an elementary
+finite-dimensional observability criterion, with no novelty claim.

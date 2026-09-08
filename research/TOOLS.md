@@ -18,7 +18,7 @@ make figures
 | Command | Checks or output |
 | --- | --- |
 | `make check` | Exact algebra, finite measurement examples, source checksums, companions, local links and citation keys |
-| `make papers` | Regenerates programme/note LaTeX and builds twelve accepted PDFs; checks unresolved references and layout overflow |
+| `make papers` | Regenerates programme/note LaTeX and builds thirteen accepted PDFs; checks unresolved references and layout overflow |
 | `make figures` | Regenerates the constant-force illustration |
 
 The manuscript supplies the analytic arguments; these commands verify their

@@ -58,7 +58,9 @@ handoff with the remaining dependency.
 | B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Drafts and 12 checks available; after A08 priority |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
-| G01 | ready | Finite-state susceptibility/gap product and two-state equality; hidden slow-mode test, energy normalization, Dirac-branch versus vacuum gap; audited extension for M03 | Coordinator then one small sequential reviewer | C019; P01; M03 retains existing acceptance gates |
+| G01 | done | Susceptibility/gap product, hidden-label family and complete-observable lower gap bound C041–C042; explicit energy units | Coordinator + Luna-low B20 | 20 checks and PDF; M03 retains separate gates |
+| B20 | done | Green–Kubo source and bounded spectral/frame audit; Sokal discovery-only | One Luna low, sequential | C041–C042, coordinator review |
+| G02 | ready | Weaken access to the internal label; track frame eigenvalue and total susceptibility under composition, including varying mass | Coordinator then one small librarian | C042; companion after A07 |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
 | W01 | waiting | Revise technical manuscript from accepted claims only; citation/notation/proof audit, reproducible PDF | Scientific writer + reviewer | R01 and next accepted result |
@@ -73,9 +75,9 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute G01 from `research/ACTION_FIELD_TARGET.md` after completed A09b, as assessed
-in `reviews/six-directions-2026-09-08.md`. A07 remains the bounded-force
-diagnostic. A08/B16 and A06/B14 are complete. The user reaffirmed the
+Execute A07's bounded-acceleration return after completed G01/B20. G02 is
+the observable-coverage companion; A09 retains the physical scale-selection
+target. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a
 supporting force-control calculation, A04 a secondary spatial-clock test.

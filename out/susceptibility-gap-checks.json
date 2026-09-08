@@ -1,0 +1,55 @@
+{
+  "scope": "Exact finite checks; general bounds proved in notes/susceptibility-gap.md",
+  "identities": {
+    "row_sums": "passed",
+    "detailed_balance": "passed",
+    "orthonormal_basis": "passed",
+    "four_eigenmodes": "passed",
+    "centered_inverse": "passed",
+    "unchanged_velocity_plateau": "passed",
+    "two_state_product": "passed",
+    "full_observable_frame": "passed",
+    "frame_trace_identity": "passed",
+    "positive_hidden_rate_gap_limit": "passed",
+    "fixed_plateau_hidden_limit": "passed"
+  },
+  "gap_bound_examples": [
+    {
+      "lambda": "1",
+      "epsilon": "1",
+      "gap": "2",
+      "frame_lower_bound": "4/5",
+      "velocity_plateau": "1"
+    },
+    {
+      "lambda": "3",
+      "epsilon": "1",
+      "gap": "2",
+      "frame_lower_bound": "24/19",
+      "velocity_plateau": "1/3"
+    },
+    {
+      "lambda": "1",
+      "epsilon": "3",
+      "gap": "2",
+      "frame_lower_bound": "24/19",
+      "velocity_plateau": "1"
+    },
+    {
+      "lambda": "2",
+      "epsilon": "1/10",
+      "gap": "1/5",
+      "frame_lower_bound": "84/461",
+      "velocity_plateau": "1/2"
+    },
+    {
+      "lambda": "2",
+      "epsilon": "1/1000",
+      "gap": "1/500",
+      "frame_lower_bound": "8004/4006001",
+      "velocity_plateau": "1/2"
+    }
+  ],
+  "nonuniform_reversible_checks": 4,
+  "nonuniform_susceptibility": "2/7"
+}

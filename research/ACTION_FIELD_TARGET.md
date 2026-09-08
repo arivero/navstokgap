@@ -8,8 +8,9 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A09b/B18: **G01**, the susceptibility/gap test
-below. The [cut-point refinement test](CUT_POINT_TARGET.md)
+Immediate priority after G01/B20: **A07**, bounded-acceleration mechanical
+returns; **G02** keeps the observability/gap companion below active.
+The [cut-point refinement test](CUT_POINT_TARGET.md)
 has completed its chosen constructions; it remains the consistency condition
 for any candidate field. Bath relaxation supplies a comparison mechanism.
 
@@ -72,7 +73,11 @@ Read the B15 checkerboard leads at formula level, then compare real Poisson
 recurrences, complex corner amplitudes and their continuum/nonrelativistic
 limits. Trace the identification $K=\hbar$ separately from its mass law.
 
-For G01 start with $-Q$ on finite $L^2(\pi)$, the product bounds of C019 and
+G01 is complete in [the susceptibility/gap note](../notes/susceptibility-gap.md),
+C041–C042 and B20. Complete observable coverage plus bounded total response
+gives a lower spectral bound, while a single plateau misses hidden slow modes.
+G02 tests how mechanical access and composition affect those two premises.
+The original G01 construction starts with $-Q$ on finite $L^2(\pi)$, the product bounds of C019 and
 the two-state equality. Compare inverse-time relaxation gap, energy units,
 Dirac branch separation and vacuum excitation gap explicitly. Test hidden slow
 modes before proposing a lower spectral bound from a velocity susceptibility.

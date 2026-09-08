@@ -9,11 +9,16 @@ about estimates and limits.
 
 ## Results to read first
 
+The [spectral-control paper](out/papers/susceptibility-gap.pdf) gives a
+sufficient condition for a lower relaxation gap: observables must detect every
+mode, and their total susceptibility must stay bounded. A four-state example
+shows how a fixed positive velocity plateau can miss a slowing internal mode.
+
 The [checkerboard paper](out/papers/checkerboard-dynamics.pdf) compares two
 path-composition rules at the same action scale: classical transitions and
 coherent amplitudes. It proves the Dirac wavepacket limit and shows why
 measuring direction at every cut instead gives a ballistic limit. The next
-test asks which spectral modes the classical plateau controls.
+test, now developed above, asks which spectral modes the classical plateau controls.
 
 The finite-speed return bridge now has an exact midpoint crossover: cubic
 short-window variance converges to its shared long-window action plateau.

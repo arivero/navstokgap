@@ -1,9 +1,18 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A09b/B18 complete;
-G01 susceptibility and spectral-control test next.
+Updated: 2026-09-08. Current milestone: G01/B20 complete;
+A07 bounded-acceleration mechanics next, with G02 observability as companion.
 
 ## Current results and next tasks
+
+**G01/B20 are complete.** [The susceptibility/gap note](../notes/susceptibility-gap.md)
+proves a lower gap bound from complete observable coverage and bounded total
+response. A fixed positive velocity plateau can miss a closing internal-label
+gap. C041–C042 have one sequential Luna-low audit, coordinator review and
+20 finite checks. Thirteen PDFs now build. **A07 is next** to mechanically
+realize finite-duration reversals and test force-dependent action bounds;
+**G02** follows the observability criterion under weakened access/composition.
+A09 retains the independent preparation and coherent-action selection tasks.
 
 **A09b/B18 are complete.** [The checkerboard note](../notes/checkerboard-dynamics.md)
 matches the primary recurrence in an explicit basis and proves its strong
@@ -11,8 +20,8 @@ Dirac wavepacket limit. Repeated direction measurements give a ballistic
 fixed-coefficient cut limit, distinct from finite-rate telegraph motion.
 C039–C040 have one sequential Luna-medium audit and addendum, coordinator
 source/proof review, 28 exact checks and three Fourier-mode tests. Twelve PDFs
-now build. **G01 is next:** velocity susceptibility, spectral product and hidden
-slow modes. Parent A09 retains preparation independence and the physical
+were built at that checkpoint. G01 then tested velocity susceptibility,
+spectral products and hidden slow modes. Parent A09 retains preparation independence and the physical
 identification of the classical plateau with the coherent action parameter.
 
 **A09a/B17 are complete.** [The crossover note](../notes/bridge-crossover.md)

@@ -15,6 +15,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B20](../references/batches/B20.md): susceptibility and complete-observable
+  spectral bound; [source companion](batches/B20/susceptibility-source-companion.md).
+
 - [B19](../references/batches/B19.md): forced multiscale blowup for IPM,
   Boussinesq and Euler, released 2026-09-08; the refinement correspondence and
   the F01 formalisation test. Four archived originals and a

@@ -46,6 +46,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C038 | A prescribed positive increment or return-midpoint coefficient requires $T\ge K_*/(mu^2)$; a common finite window and uniform speed ceiling force a mass-independent coefficient to zero if admissible masses approach zero | Crossover note §4; C018/C031 necessary bounds, explicit small-mass limit; B17 and coordinator review |
 | C039 | The normalized coin $C_\varepsilon=(I-i\omega\varepsilon\sigma_x)/\sqrt{1+\omega^2\varepsilon^2}$ with opposite translations gives $U_{T/N}^N\to e^{-iTH_D/K}$ strongly on $L^2$; the rest-subtracted positive branch tends to free Schrödinger evolution as $c\to\infty$ | [Checkerboard note](../notes/checkerboard-dynamics.md) §§1–4; supplied $m,c,K>0$, $\omega=mc^2/K$, complex amplitudes; self-adjoint domain $H^1$, Fourier/dominated-convergence proof; B18, 28 exact checks and three mode tests |
 | C040 | Ideal direction measurement after every coherent step gives flip probability $q_\varepsilon=\omega^2\varepsilon^2/(1+\omega^2\varepsilon^2)$ and probability of any flip at most $\omega^2T\varepsilon\to0$, a ballistic limit | Checkerboard note §5; initial definite direction, Born rule and repeated projective measurement, fixed $\omega,T$; B18 addendum and coordinator proof review |
+| C041 | The C019 product bounds give an upper bound on the full relaxation gap; an independent slow label keeps $H=mu^2/\lambda$ fixed while $\gamma_1=2\min(\lambda,\epsilon)\to0$ | [Spectral-control note](../notes/susceptibility-gap.md) §§1–3,5; finite reversible $L^2(\pi)$, fixed positive $m,u,\lambda$, supplied energy unit; B20, 20 finite checks |
+| C042 | If centered velocity-unit observables have frame lower bound $\alpha>0$ and total susceptibility $S$, then $\gamma_1\ge\alpha/S$; uniform coverage and response bounds give a uniform family gap | Spectral-control note §4; full centered-space frame, eigenbasis proof, varying-mass normalization; B20 and coordinator review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -88,6 +90,8 @@ consequences are identified separately.
 | C037–C038 | Derived midpoint/count specialization and necessary-window consequences; standard telegraph occupation and Bessel-integral ingredients | [B17](../references/batches/B17.md); two searches, Cinque pp. 3–4 and DLMF 10.32.1; exact combined statements unmatched, novelty unassessed |
 | C039 | Established normalized checkerboard reconstruction; elementary wavepacket and spectral-limit consequences | [B18](../references/batches/B18.md); Skopenkov–Ustinov Definition 2, Propositions 5–6, direct basis match and coordinator proof |
 | C040 | Elementary measurement-protocol consequence of the audited coin, with no novelty claim | B18 bounded addendum checks Born probability and union bound; exact prior-art formulation not separately searched |
+| C041 | Standard finite reversible spectral/product-chain consequence of the established Green–Kubo representation | [B20](../references/batches/B20.md); Pavliotis pp. 4–5, coordinator proof; explicit hidden-label specialization |
+| C042 | Elementary frame/inverse-operator consequence; exact combined formulation unmatched and not independently searched | B20 bounded algebra/prior-art audit; novelty unassessed, no novelty claim |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -113,6 +117,12 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B20](../reviews/susceptibility-B20.md) audited C041–C042 with one Luna-low
+worker. Coordinator verified the weighted centered-space inverse, inequality
+directions, frame hypothesis, parameter-family limits and Pavliotis p. 5
+visually. Eleven identities, five rational bound cases and four weighted-chain
+checks pass. Sokal remains a discovery-only route, not a passage attribution.
 
 [B18](../reviews/checkerboard-B18.md) audited C039–C040 with one Luna-medium
 worker and a bounded addendum. Coordinator checked source pp. 12, 13, 19,

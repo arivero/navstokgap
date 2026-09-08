@@ -26,6 +26,11 @@ finite source/page budget. The coordinator owns shared indexes, claim acceptance
 paper integration and commits. Workers return changes to these shared artifacts
 as proposals in their handoffs.
 
+Before allocating a batch ID, inspect the live `references/batches/`,
+`docs/batches/` and handoff paths, alongside recent commits: another user session
+may have allocated the next number. Recheck before integration. On collision,
+renumber the new audit and preserve the existing source collection and links.
+
 ## Evidence and writing
 
 Lead each output with findings and source anchors. Use the following reading
