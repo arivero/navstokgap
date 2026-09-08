@@ -51,7 +51,10 @@ observable approach their limits, as in the cubic onset $H_*z^3/6$.
 
 Status 2026-09-08: test 1 is drafted in
 [`notes/cut-paradox-two-faces.md`](../notes/cut-paradox-two-faces.md) with nine
-checks; tests 2–4 are open.
+checks. Tests 2 and 3, and the general form of test 1, are drafted in
+[`notes/i003-double-limit-rigidity.md`](../notes/i003-double-limit-rigidity.md):
+light-cone rigidity to first-order systems, the commutator scale, and the
+rounding-model double limit; test 4 is listed there as prior art to audit.
 
 1. State both paradoxes as restriction-consistency questions: adjacent
    sections of a solid under a slicing law, adjacent instants of a motion under
