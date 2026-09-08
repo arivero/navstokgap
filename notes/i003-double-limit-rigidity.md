@@ -163,6 +163,18 @@ resolution is refined diffusively with the window. The genuine coefficient is
 the plateau obtained with $\varepsilon\to0$ first and $\Delta\gg\Delta_*$,
 and the crossover function $g$ of C037 describes how it is approached.
 
+The same artifact appears in the project's own cut estimator. Rounding the
+node positions of a sampled path to a lattice of spacing $\varepsilon$ adds
+independent errors of variance $\varepsilon^2/12$ at each node, so every chord
+of duration $\Delta$ gains expected kinetic action $m\varepsilon^2/(12\Delta)$
+and the estimator $2D_\pi/(N-1)$ of C028 gains $m\varepsilon^2/(6\Delta)$.
+For a finite-speed path, whose own estimator tends to zero by C034, the
+rounded estimator tends to the resolution term alone; for the Gaussian family
+it tends to $\kappa+m\varepsilon^2/(6\Delta)$. A genuine coefficient is
+therefore recognized by its independence from the resolution rule: it must
+survive $\varepsilon\to0$ at fixed mesh, whereas a rounding coefficient
+changes with every choice of $\varepsilon(\Delta)$.
+
 Removing the speed bound removes the first obstruction: the Gaussian family of
 C009–C011 has $\mathsf h\equiv\kappa$ at every window, so the ordered limit
 exists at every scale. Finite speed is therefore the source of the obstruction,
@@ -178,6 +190,18 @@ the obstruction sits at the commutator scale.
 | Positivity of the coefficient | If and only if $[G_1,G_0]\ne0$ | Same, plus a nonzero velocity variance |
 | A minimum window and length | Yes: $\Delta_*\ge K/(mu^2)$ | A prescribed positive $K$ and the speed bound (C018, C031, C038) |
 | A minimum $h$ forced (remark 2) | Only as a common value | Composition invariance and a positive reference (C035–C036); the value itself stays a parameter |
+
+In the Lorentzian face the mass is defined by the switching rate and the
+action unit, $m=K\omega_0/c^2$, since the class knows only $A$, $B$ and
+$K$: rest energy is switching rate in action units, and the Zitterbewegung
+frequency $2\omega_0=2mc^2/\hbar$ is the gap of C019 read in energy units.
+Universality of $K$ across species is then the statement that rest energy and
+switching rate are proportional with one constant, which is C020's law
+$\lambda_m=mu_m^2/H_*$ continued to $\omega_0=mc^2/K$, and it is what
+C035–C036 derive from composition together with one positive reference
+species. In the Euclidean face the tracer mass is an independent parameter
+and the same law is a constraint on the rates; the continuation turns a
+constraint into a definition.
 
 Two premises are external to the class. The identification $K=\hbar$ is a
 unit choice for the Hermitian switching matrix, and the mass law
@@ -216,7 +240,8 @@ factorization and straight-line motion in the commuting case, the Dirac and
 telegraph symbols as instances of the affine class with entire entries, the
 Bernstein bound on a Dirac entry over a grid, the Duhamel first-order identity
 on a two-state example by comparison with finite differences, the rounding
-model's iterated and path limits, and the Gaussian control case. Next: an
+model's iterated and path limits, the rounded cut-estimator term, and the
+Gaussian control case. Next: an
 adversarial review of the theorem's measure-theoretic steps, the prior-art
 audit above, and the composition of two affine systems as the A08 test inside
 this class.

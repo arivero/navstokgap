@@ -97,6 +97,15 @@ def main():
     record("rounding_ballistic_diagonal_limit", sp.limit(h_eps.subs(eps, u*D), D, 0))
     record("gaussian_control_window_independent", sp.diff(sp.symbols("kappa")*D/m*m/D, D))
 
+    # 7. Rounded cut estimator: two independent uniform(-eps/2, eps/2) node errors give chord excess m eps^2/(12 Delta)
+    e1, e2 = sp.symbols("e1 e2", real=True)
+    dens = 1/eps**2
+    Edelta2 = sp.integrate(sp.integrate((e1 - e2)**2*dens, (e1, -eps/2, eps/2)), (e2, -eps/2, eps/2))
+    record("rounding_node_difference_variance", Edelta2 - eps**2/6)
+    record("rounded_chord_excess_action", m*Edelta2/(2*D) - m*eps**2/(12*D))
+    N = sp.symbols("N", positive=True, integer=True)
+    record("rounded_estimator_term", 2*(N*m*eps**2/(12*D))/N - m*eps**2/(6*D))
+
     report = {"scope": "Finite algebra for notes/i003-double-limit-rigidity.md; the rigidity theorem's proof is in the note",
               "checks": checks}
     out = Path(__file__).resolve().parents[1]/"out"/"i003-double-limit-checks.json"
