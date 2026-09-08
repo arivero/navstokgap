@@ -15,6 +15,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B21](../references/batches/B21.md): bounded-acceleration return, kinetic
+  minimum and sharp polygon error; [source companion](batches/B21/acceleration-source-companion.md).
+
 - [B20](../references/batches/B20.md): susceptibility and complete-observable
   spectral bound; [source companion](batches/B20/susceptibility-source-companion.md).
 

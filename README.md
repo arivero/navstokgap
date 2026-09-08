@@ -9,6 +9,11 @@ about estimates and limits.
 
 ## Results to read first
 
+The [bounded-turn paper](out/papers/bounded-acceleration-return.pdf) proves
+the sharp reversal cost $mu^3/(3a)$ and minimum duration $2u/a$. Its polygon
+error vanishes quadratically with the mesh. The cost comes from prescribed
+endpoint motion; lowering that speed closes the bound.
+
 The [spectral-control paper](out/papers/susceptibility-gap.pdf) gives a
 sufficient condition for a lower relaxation gap: observables must detect every
 mode, and their total susceptibility must stay bounded. A four-state example

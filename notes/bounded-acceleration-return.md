@@ -1,0 +1,152 @@
+# A sharp mechanical cost for a finite-duration reversal
+
+A return with prescribed endpoint velocities $+u$ and $-u$ and acceleration
+ceiling $a$ requires duration at least $2u/a$. Its minimum kinetic action is
+$mu^3/(3a)$, independent of any additional waiting time. Meanwhile its sampled
+polygon action converges with a sharp quadratic mesh bound. The endpoint
+reversal cost and the refinement error therefore have different limits.
+
+## 1. Model and sharp minimum (C043)
+
+Fix $m,a,T>0$ and $0<u<c$ in a specified inertial frame. The admissible paths
+are $X\in W^{2,\infty}(0,T)$, with continuous velocity representative $v=\dot X$,
+
+$$
+X(0)=X(T)=0,\quad v(0)=u,\quad v(T)=-u,\quad
+|v|\le u,\quad |\dot v|\le a\quad\hbox{almost everywhere}.
+$$
+
+The functional is the kinetic cost $S_K[X]=(m/2)\int_0^T v^2dt$, in action
+units. The acceleration is an admissible external control, with force $m\dot v$.
+This is a bounded-control mechanics problem; a prescribed autonomous potential,
+its potential contribution to Hamilton's action and a dynamical momentum
+receiver would specify additional physical data.
+
+**Proposition.** The class is nonempty exactly when $T\ge2u/a$. For such $T$,
+the unique minimizing velocity is, with $\tau=u/a$,
+
+$$
+v_*(t)=\begin{cases}
+u-at,&0\le t\le\tau,\\
+0,&\tau\le t\le T-\tau,\\
+-a(t-T+\tau),&T-\tau\le t\le T.
+\end{cases}
+\qquad S_{K,\min}=\frac{mu^3}{3a}.
+$$
+
+**Proof.** Lipschitz continuity gives $2u=|v(T)-v(0)|\le aT$.
+For a feasible duration the intervals $[0,\tau]$ and $[T-\tau,T]$ have
+disjoint interiors. On the first, $v(t)\ge u-at\ge0$; on the last,
+$v(t)\le-u+a(T-t)\le0$. Hence
+
+$$
+\int_0^T v^2dt\ge
+\int_0^\tau(u-at)^2dt+
+\int_{T-\tau}^T[u-a(T-t)]^2dt=\frac{2u^3}{3a}.
+$$
+
+The displayed $v_*$ has zero total integral and therefore returns to the
+starting position. It obeys both ceilings and attains equality. Equality
+forces each endpoint ramp and zero velocity in the middle almost everywhere;
+continuity gives uniqueness. Integration with $X(0)=0$ fixes the path.
+The maximum excursion is $u^2/(2a)$, reached at the waiting segment.
+
+At $T=2u/a$ the velocity is $u-at$ throughout. Indeed equality in the total
+velocity-change bound forces $\dot v=-a$ almost everywhere, so the whole
+admissible class is then a singleton. At longer durations the admissible
+class includes variations even though the minimizing path remains unique.
+
+## 2. Which premises hold the cost above zero?
+
+The bound depends on prescribed nonzero endpoint speed and a finite
+acceleration ceiling. At fixed force ceiling $F_{\max}=ma$ it becomes
+
+$$
+S_{K,\min}=\frac{m^2u^3}{3F_{\max}}.
+$$
+
+For fixed $m,a,T$, choosing successively smaller positive $u$ eventually
+preserves feasibility and gives $S_{K,\min}\to0$. An upper speed ceiling
+allows this family. Likewise, increasing the permitted acceleration at fixed
+$m,u,T$ drives the minimum to zero. Uniform positivity over a preparation
+class requires corresponding lower bounds on mass and endpoint speed and an
+upper bound on acceleration, or another premise controlling their combination.
+
+For $T>2u/a$, choose a nonzero smooth function $\phi$ supported strictly
+inside the waiting interval, with $\int\phi=0$. Such functions are obtained
+by differentiating a nonconstant smooth compactly supported bump. For small
+$b\ne0$, $v_b=v_*+b\phi$ satisfies the same speed/acceleration bounds and
+all endpoint conditions. Since the supports of $\phi$ and the nonzero part
+of $v_*$ are disjoint,
+
+$$
+S_K[v_b]-S_K[v_*]=\frac{mb^2}{2}\int\phi^2dt\longrightarrow0.
+$$
+
+Thus the positive minimum total cost coexists with positive excess costs
+accumulating at zero. Its source is the endpoint-conditioned motion, rather
+than a discrete spacing of admissible action values. The cost is frame-specific:
+the endpoint velocities and return condition already select that frame.
+
+## 3. The sampled polygon error (C044)
+
+For any partition $\pi:0=t_0<\cdots<t_N=T$, write $d_i=t_{i+1}-t_i$,
+$|\pi|=\max_i d_i$, and define the chord kinetic action
+
+$$
+S_\pi=\frac m2\sum_i\frac{[X(t_{i+1})-X(t_i)]^2}{d_i}.
+$$
+
+For every admissible path, and more generally every velocity with Lipschitz
+constant at most $a$,
+
+$$
+0\le S_K-S_\pi\le\frac{ma^2}{24}\sum_i d_i^3
+\le\frac{ma^2T}{24}|\pi|^2.
+$$
+
+**Proof.** The chord velocity on each cell is its average $\bar v_i$.
+Square completion and the pair-variance identity give
+
+$$
+S_K-S_\pi=\frac m2\sum_i\int_{t_i}^{t_{i+1}}(v-\bar v_i)^2dt,
+$$
+
+$$
+\int_I(v-\bar v_I)^2dt
+=\frac1{2d}\int_I\int_I[v(s)-v(t)]^2ds\,dt
+\le\frac{a^2}{2d}\int_0^d\int_0^d(s-t)^2ds\,dt
+=\frac{a^2d^3}{12}.
+$$
+
+Summing proves the claim. The constant $1/24$ is sharp: the feasible
+minimum-duration return has affine velocity with slope $-a$ on every cell,
+and attains the first upper bound for every partition. Equal-width cells
+also attain the mesh bound. In the longer-duration minimizer, cells contained
+inside a ramp saturate the local bound and cells inside the waiting interval
+have zero error.
+
+At fixed $m,a,T$ this convergence is uniform over the admissible class.
+For families with increasing acceleration bound $a_N$, the estimate still
+forces the defect to vanish if $a_N|\pi_N|\to0$ (fixed $m,T$). Maintaining
+a positive defect along shrinking meshes therefore requires loss of this
+uniform acceleration control. This is a necessary condition, not a
+construction of a positive remainder.
+
+## 4. Source comparison and next mechanical step
+
+[Liberzon's double-integrator example](https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html)
+provides the bounded-acceleration control framework and a minimum-time problem
+with running cost one. Here the endpoint data and running cost $mv^2/2$ are
+different; the endpoint-envelope proof above establishes the exact result.
+[B21](../references/batches/B21.md) records the bounded prior-art search.
+
+The next mechanical question is to realize finite-duration turns with a
+specified conservative receiver or interaction, then derive its correlation
+law. A07's external-control class provides a benchmark for such a realization.
+In the companion G02 task, the receiver's internal degrees of freedom also
+test which modes the available observables detect.
+
+Run `python3 scripts/bounded_acceleration_checks.py` for exact integrals,
+matching conditions, variations and rational partition tests. The written
+proofs establish the general minima and uniform convergence.

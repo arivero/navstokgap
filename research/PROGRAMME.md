@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 12, 2026-09-08.
+Version 13, 2026-09-08.
 
 ## Aim
 
@@ -31,6 +31,12 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
+
+**A07/B21 are complete.** [The bounded-turn paper](../notes/bounded-acceleration-return.md)
+gives a positive endpoint-conditioned kinetic cost and a vanishing polygon
+error under uniform acceleration control. **G02 is next:** access to internal
+modes and observability under composition. The mechanical follow-up must
+specify a conservative receiver; A09 retains the universal scale-selection task.
 
 **G01/B20 are complete.** [The spectral-control note](../notes/susceptibility-gap.md)
 gives a lower gap bound from an observable frame and bounded summed

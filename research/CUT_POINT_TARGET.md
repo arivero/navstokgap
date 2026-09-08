@@ -83,7 +83,10 @@ A01's long-duration plateau. These steps are complete in C033–C034.
 On the line take $X\in W^{2,\infty}([0,T])$ with $X(0)=X(T)=0$,
 $\dot X(0)=u$, $\dot X(T)=-u$, $0<u<c$, $|\dot X|\le u$ and
 $|\ddot X|\le a$, where $a>0$ is a specified classical acceleration ceiling.
-Find the sharp feasible duration and the infimum of
+Completed in [the bounded-turn note](../notes/bounded-acceleration-return.md),
+C043–C044 and B21: $T_{\min}=2u/a$, $S_{K,\min}=mu^3/(3a)$ and
+uniform sharp polygon error $ma^2T|\pi|^2/24$. The original task was to
+find the sharp feasible duration and the infimum of
 $(m/2)\int_0^T\dot X^2dt$, with an attaining path when feasible.
 Then study sampled-polygon action convergence and vary $u,a,m$ within the
 physical premises. Distinguish an endpoint-conditioned bound from a universal

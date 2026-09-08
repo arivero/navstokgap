@@ -54,6 +54,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=When an action plateau controls a spectral gap",
          "-o", "papers/susceptibility-gap.tex"])
+    run(["pandoc", "notes/bounded-acceleration-return.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=A sharp mechanical cost for a finite-duration reversal",
+         "-o", "papers/bounded-acceleration-return.tex"])
     env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
@@ -61,7 +65,7 @@ def main():
                   "classical-action-field", "collision-action-relaxation",
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
                   "composition-universality", "bridge-crossover", "checkerboard-dynamics",
-                  "susceptibility-gap", "research-programme"):
+                  "susceptibility-gap", "bounded-acceleration-return", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

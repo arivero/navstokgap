@@ -48,6 +48,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C040 | Ideal direction measurement after every coherent step gives flip probability $q_\varepsilon=\omega^2\varepsilon^2/(1+\omega^2\varepsilon^2)$ and probability of any flip at most $\omega^2T\varepsilon\to0$, a ballistic limit | Checkerboard note §5; initial definite direction, Born rule and repeated projective measurement, fixed $\omega,T$; B18 addendum and coordinator proof review |
 | C041 | The C019 product bounds give an upper bound on the full relaxation gap; an independent slow label keeps $H=mu^2/\lambda$ fixed while $\gamma_1=2\min(\lambda,\epsilon)\to0$ | [Spectral-control note](../notes/susceptibility-gap.md) §§1–3,5; finite reversible $L^2(\pi)$, fixed positive $m,u,\lambda$, supplied energy unit; B20, 20 finite checks |
 | C042 | If centered velocity-unit observables have frame lower bound $\alpha>0$ and total susceptibility $S$, then $\gamma_1\ge\alpha/S$; uniform coverage and response bounds give a uniform family gap | Spectral-control note §4; full centered-space frame, eigenbasis proof, varying-mass normalization; B20 and coordinator review |
+| C043 | The bounded-acceleration return is feasible iff $T\ge2u/a$ and has unique minimum kinetic cost $mu^3/(3a)$; longer durations allow positive excess costs tending to zero | [Bounded-turn note](../notes/bounded-acceleration-return.md) §§1–2; $W^{2,\infty}$, prescribed $\pm u$, return endpoints, $m,u,a>0$; external-control kinetic functional; B21 and 27 checks |
+| C044 | Lipschitz velocity gives sharp chord kinetic error $0\le S_K-S_\pi\le ma^2\sum d_i^3/24\le ma^2T|\pi|^2/24$ | Bounded-turn note §3; arbitrary partition, pair-variance proof, affine equality case; uniform fixed-$m,a,T$ convergence; B21 |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -92,6 +94,7 @@ consequences are identified separately.
 | C040 | Elementary measurement-protocol consequence of the audited coin, with no novelty claim | B18 bounded addendum checks Born probability and union bound; exact prior-art formulation not separately searched |
 | C041 | Standard finite reversible spectral/product-chain consequence of the established Green–Kubo representation | [B20](../references/batches/B20.md); Pavliotis pp. 4–5, coordinator proof; explicit hidden-label specialization |
 | C042 | Elementary frame/inverse-operator consequence; exact combined formulation unmatched and not independently searched | B20 bounded algebra/prior-art audit; novelty unassessed, no novelty claim |
+| C043–C044 | Elementary bounded-control and Lipschitz-variance specializations; exact combined prior-art match not found in bounded search | [B21](../references/batches/B21.md); two worker searches, one coordinator search and Liberzon framework passage; no novelty claim |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.

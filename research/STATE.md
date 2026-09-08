@@ -1,9 +1,17 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: G01/B20 complete;
-A07 bounded-acceleration mechanics next, with G02 observability as companion.
+Updated: 2026-09-08. Current milestone: A07/B21 complete;
+G02 observability and internal-receiver access next.
 
 ## Current results and next tasks
+
+**A07/B21 are complete.** [The bounded-turn note](../notes/bounded-acceleration-return.md)
+proves the sharp duration and kinetic-cost minimum and uniform quadratic
+polygon-error bound. C043–C044 have one sequential Luna-low audit,
+coordinator proof/source review and 27 finite checks. Fourteen PDFs now build.
+**G02 is next:** weakened access to internal modes and composition. Mechanical
+realization by a specified conservative receiver remains a separate step;
+A09 retains preparation independence and coherent-action scale selection.
 
 **G01/B20 are complete.** [The susceptibility/gap note](../notes/susceptibility-gap.md)
 proves a lower gap bound from complete observable coverage and bounded total

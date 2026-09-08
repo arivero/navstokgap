@@ -8,8 +8,9 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after G01/B20: **A07**, bounded-acceleration mechanical
-returns; **G02** keeps the observability/gap companion below active.
+Immediate priority after A07/B21: **G02**, weakened access to internal modes
+and observable coverage. A07 supplies the sharp controlled-reversal benchmark;
+a conservative receiver remains the next mechanics realization.
 The [cut-point refinement test](CUT_POINT_TARGET.md)
 has completed its chosen constructions; it remains the consistency condition
 for any candidate field. Bath relaxation supplies a comparison mechanism.

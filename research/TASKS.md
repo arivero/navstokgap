@@ -53,7 +53,8 @@ handoff with the remaining dependency.
 | B17 | done | Two-search prior-art audit; Cinque pp. 3–4 and DLMF 10.32.1, coordinator source/proof review | One Luna medium, sequential | C037–C038 |
 | A09b | done | Primary recurrence, normalized basis map, strong wavepacket and nonrelativistic limits; measured-cut countertest C039–C040 | Coordinator + Luna-medium B18 | 28 exact checks, three mode tests, PDF |
 | B18 | done | Modern checkerboard passage audit and measured-cut addendum; coordinator source/proof review | One Luna medium, sequential | C039–C040; older original pages remain B15 |
-| A07 | ready | Bounded-acceleration return with opposite endpoint velocities: sharp duration and kinetic-action bounds, speed/force scaling and sampled-cut limit | Coordinator, then one small librarian | A06/B14; M06 connection |
+| A07 | done | Sharp reversal duration and kinetic cost, parameter/excess-cost limits and uniform sharp polygon bound C043–C044 | Coordinator + Luna-low B21 | 27 finite checks and PDF |
+| B21 | done | Bounded-control and Lipschitz-variance prior-art audit; corrected envelope sign, elementary specialization | One Luna low, sequential | C043–C044; coordinator proof and source review |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Drafts and 12 checks available; after A08 priority |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
@@ -75,8 +76,8 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute A07's bounded-acceleration return after completed G01/B20. G02 is
-the observable-coverage companion; A09 retains the physical scale-selection
+Execute G02's weakened observable-access test after completed A07/B21. A
+conservative receiver is the next mechanics realization; A09 retains the physical scale-selection
 target. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a
