@@ -15,6 +15,8 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 ## Bibliography and tooling
 
+- [B22](../references/batches/B22.md): observable access and independent products;
+  [source companion](batches/B22/observable-access-source-companion.md).
 - [B21](../references/batches/B21.md): bounded-acceleration return, kinetic
   minimum and sharp polygon error; [source companion](batches/B21/acceleration-source-companion.md).
 

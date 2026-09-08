@@ -4,7 +4,7 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Memory, observability and a mechanical receiver — A09/G02
+## Memory, observability and a mechanical receiver — A09/A10
 
 **Source construction:** Pavliotis converts an integrated velocity correlation
 into a generator Poisson equation. Read the [source companion](../docs/Pavliotis_GreenKubo_2010.md),
@@ -17,6 +17,12 @@ readout constants under weak coupling. This tests whether the positive plateau
 has a mechanical origin and whether a response bound controls the full gap.
 The finite-state inverse-generator construction is the source ingredient;
 uniform mechanical access is the additional proof obligation.
+
+G02 has now added the [B22 product-chain reading](batches/B22.md): local
+readouts can control a full gap through independent mixed-mode rate addition.
+A10 replaces the rate model by a finite conservative harmonic receiver.
+Derive its correlation, centre-motion convention and preparation dependence;
+then test which reservoir limit could sustain a positive action plateau.
 
 ## Composition versus preparation — A09 obligation 4
 

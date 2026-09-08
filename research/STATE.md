@@ -1,14 +1,21 @@
 # Restart state
 
-Updated: 2026-09-08. Current milestone: A07/B21 complete;
-G02 observability and internal-receiver access next.
+Updated: 2026-09-08. Current milestone: G02/B22 complete;
+A10 conservative harmonic receiver is next.
+
+**G02/B22 are complete.** The [expanded gap note](../notes/susceptibility-gap.md)
+gives an injective-velocity fixed-plateau gap-closing family and a local-frame
+product bound. C045–C046 have the saved Luna-low audit, coordinator source/proof
+review and 14 grouped finite checks. **A10** now tests a finite conservative
+harmonic receiver: derive its velocity correlation and action observable,
+separate centre drift from internal modes, and identify the limit needed for
+a preparation-independent positive plateau. See [G02 handoff](handoffs/G02.md).
 
 **Restart tooling updated:** `skills/principia-action/SKILL.md` now routes work
 through the five action-selection obligations. The new
 `skills/navstokgap-bibliography/SKILL.md`, loaded by AGENTS on context recovery,
 uses [source-idea cards](../references/IDEA_BRIDGES.md) to supply a concrete
-next test. G02's Luna-low B22 handoff is saved; coordinator source verification,
-proof integration and claim acceptance remain pending. See the
+next test. G02's saved Luna-low B22 audit has now been integrated. See the
 [restart-skills handoff](handoffs/restart-skills-2026-09-08.md).
 
 ## Current results and next tasks

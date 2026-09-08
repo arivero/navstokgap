@@ -50,6 +50,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C042 | If centered velocity-unit observables have frame lower bound $\alpha>0$ and total susceptibility $S$, then $\gamma_1\ge\alpha/S$; uniform coverage and response bounds give a uniform family gap | Spectral-control note §4; full centered-space frame, eigenbasis proof, varying-mass normalization; B20 and coordinator review |
 | C043 | The bounded-acceleration return is feasible iff $T\ge2u/a$ and has unique minimum kinetic cost $mu^3/(3a)$; longer durations allow positive excess costs tending to zero | [Bounded-turn note](../notes/bounded-acceleration-return.md) §§1–2; $W^{2,\infty}$, prescribed $\pm u$, return endpoints, $m,u,a>0$; external-control kinetic functional; B21 and 27 checks |
 | C044 | Lipschitz velocity gives sharp chord kinetic error $0\le S_K-S_\pi\le ma^2\sum d_i^3/24\le ma^2T|\pi|^2/24$ | Bounded-turn note §3; arbitrary partition, pair-variance proof, affine equality case; uniform fixed-$m,a,T$ convergence; B21 |
+| C045 | Four distinct bounded velocities can have fixed positive $H=mu^2/\lambda$ and closing gap $2\lambda\delta^2$; recovering the slow sign requires gain at least $\sqrt2/\delta$ | Spectral-control note §6; independent signs, $\epsilon=\lambda\delta^2$, $0<\delta\le1/4$, fixed $m,u,\lambda>0$; B22 and exact checks |
+| C046 | Independent reversible factors with local frame bounds satisfy $\gamma_{\rm prod}=\min_i\gamma_i\ge\min_i\alpha_i/S_i$ despite an unobserved mixed sector | Spectral-control note §7; tensor eigenbasis, unchanged constituent clocks, $S_i=\sum_aH_i/(2m_i)$; B22 and product-matrix checks |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -95,6 +97,8 @@ consequences are identified separately.
 | C041 | Standard finite reversible spectral/product-chain consequence of the established Green–Kubo representation | [B20](../references/batches/B20.md); Pavliotis pp. 4–5, coordinator proof; explicit hidden-label specialization |
 | C042 | Elementary frame/inverse-operator consequence; exact combined formulation unmatched and not independently searched | B20 bounded algebra/prior-art audit; novelty unassessed, no novelty claim |
 | C043–C044 | Elementary bounded-control and Lipschitz-variance specializations; exact combined prior-art match not found in bounded search | [B21](../references/batches/B21.md); two worker searches, one coordinator search and Liberzon framework passage; no novelty claim |
+| C045 | Elementary product-chain and response counterexample; exact example publication not established, no novelty claim | [B22](../references/batches/B22.md); saved Luna-low audit and coordinator review |
+| C046 | Standard tensorization and derived local-frame consequence | B22; Levin–Peres §12.4, direct continuous-generator proof and clock audit |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -120,6 +124,11 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[B22](../reviews/observable-access-B22.md) supports C045–C046: saved Luna-low
+audit, coordinator source-image and proof review, six identities, three
+rational velocity cases, three product spectra and two frame checks. The
+source's clock normalization and printed proof index are explicitly corrected.
 
 [B20](../reviews/susceptibility-B20.md) audited C041–C042 with one Luna-low
 worker. Coordinator verified the weighted centered-space inverse, inequality

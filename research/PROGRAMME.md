@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 13, 2026-09-08.
+Version 14, 2026-09-08.
 
 ## Aim
 
@@ -31,6 +31,15 @@ explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
+
+**G02/B22 are complete.** Weakening observable access can keep an action
+plateau fixed while the full gap closes, even with distinct velocity states.
+Independent composition instead lets local-frame bounds control mixed modes.
+**A10 is next:** a specified finite conservative harmonic receiver, with its
+normal-mode correlation, preparation dependence and centre-motion convention.
+Compare refinement, long observation and reservoir-size limits to determine
+which physical premise could sustain the positive action target. A09 retains
+the universal coherent-action identification.
 
 **A07/B21 are complete.** [The bounded-turn paper](../notes/bounded-acceleration-return.md)
 gives a positive endpoint-conditioned kinetic cost and a vanishing polygon

@@ -8,9 +8,11 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A07/B21: **G02**, weakened access to internal modes
-and observable coverage. A07 supplies the sharp controlled-reversal benchmark;
-a conservative receiver remains the next mechanics realization.
+Immediate priority after G02/B22: **A10**, a finite conservative harmonic
+receiver. Derive the observed velocity correlation and action estimator from
+its normal modes and an explicit invariant preparation. Resolve centre drift,
+then compare long-window and reservoir-size limits. G02 supplies the calibrated
+access/product benchmark; A07 supplies the controlled-reversal benchmark.
 The [cut-point refinement test](CUT_POINT_TARGET.md)
 has completed its chosen constructions; it remains the consistency condition
 for any candidate field. Bath relaxation supplies a comparison mechanism.

@@ -1,25 +1,27 @@
 # B22 observable access: source companion
 
-Status: worker draft awaiting coordinator metadata, normalization and visual
-source review; see the [checkpoint handoff](../../../research/handoffs/restart-skills-2026-09-08.md).
+Status: coordinator reviewed for G02; see the
+[review](../../../reviews/observable-access-B22.md).
 
 Result: Levin–Peres–Wilmer supplies the exact product-chain spectral facts
 needed for C045–C046, but in two distinct normalizations. Chapter 12 treats a
 discrete-time random-scan chain with coordinate weights; Chapter 20 treats a
-continuous-time chain whose generator is the (uniform) lifted sum. The source
+continuous-time chain based on the uniform average of lifted transitions. The source
 supports the tensor-product eigenbasis and the corresponding minimum-gap rule,
 not the proposed four-state observable counterexample itself.
 
 ## Source identity and route
 
-David A. Levin, Yuval Peres and Elizabeth L. Wilmer, *Markov Chains and
+David A. Levin and Yuval Peres, with contributions by Elizabeth L. Wilmer, *Markov Chains and
 Mixing Times*, 2nd ed., American Mathematical Society (2017), author-hosted
 PDF: <https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf>. Downloaded to the
 bounded audit cache as `.build/b22/mcmt2e.pdf`; SHA-256
 `9ef39f9467d9647ff3f5e8747b9ce24b7a90d13be2f8156fbd827b95b661a772`.
-Metadata and source route are verified; the specified passages were read from
-the PDF text extraction (layout retained). No scan/equation visual defect was
-encountered in these pages.
+The coordinator verified authorship against the title-page extraction and
+author-hosted book page, independently checked the hash, and visually read
+printed pp. 169–170 and 285 (PDF pages 185–186 and 301). The worker read
+pp. 169–170 and 285–286 through layout-preserving text extraction.
+Redistribution rights remain unestablished; the original stays in the cache.
 
 ## Exact passages read
 
@@ -65,3 +67,17 @@ are not claimed as literature novelty. C046's independent-product gap rule,
 local-sector frame decomposition, and mixed-sector rate addition are standard
 tensorization consequences. A fresh audit is required once factors are coupled
 or the receiver is constrained dynamically.
+
+## Coordinator proof correction
+
+Corollary 12.13's displayed gap formula is correct for reversible factors and
+positive coordinate weights. Its printed proof's index-selection sentence
+uses `max w_i lambda_i`; the needed index minimizes `w_i gamma_i` among
+nonconstant factor modes. G02 proves the generator result directly from all
+eigenvalue sums, rather than importing that sentence. The printed eigenvalue-set
+display also lists the probability-weight constraints; weights are fixed by
+the chosen chain. The coordinator confirmed these features in the page image.
+
+Search coverage: one worker primary PDF and four selected pages; the worker
+handoff supplies no exact discovery-query count. Coordinator opened the
+author's book page and used the saved PDF; no broader novelty search was added.

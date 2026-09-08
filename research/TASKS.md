@@ -61,8 +61,9 @@ handoff with the remaining dependency.
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | done | Susceptibility/gap product, hidden-label family and complete-observable lower gap bound C041–C042; explicit energy units | Coordinator + Luna-low B20 | 20 checks and PDF; M03 retains separate gates |
 | B20 | done | Green–Kubo source and bounded spectral/frame audit; Sokal discovery-only | One Luna low, sequential | C041–C042, coordinator review |
-| G02 | active | Weak-access and independent-composition derivations prepared; B22 saved, coordinator verification and proof/check integration pending | Coordinator; Luna-low worker complete | C042; [B22 handoff](handoffs/B22.md) |
-| B22 | review | Product-chain source and weak-observability formula audit saved; verify metadata, clock normalization and page images before acceptance | One Luna low, sequential | G02; worker artifacts saved |
+| G02 | done | Injective-velocity fixed-plateau closing-gap family and local-frame independent-product bound C045–C046; 14 grouped checks and expanded PDF | Coordinator; saved Luna-low audit | [G02 handoff](handoffs/G02.md) |
+| B22 | done | Product-chain source and weak-observability audit; source images, metadata, clock and proof-index correction verified | One Luna low, sequential | C045–C046; coordinator review |
+| A10 | ready | Finite conservative harmonic receiver: specify Hamiltonian and invariant ensemble, derive correlation and action estimator, separate centre motion, compare window and reservoir-size limits | Coordinator then one bounded librarian | A07/G02; preparation-independent selection diagnostic |
 | S01 | done | Action-target skill upgrade and source-idea context-recovery skill, AGENTS hook and local routing validation | Coordinator, no additional worker | [handoff](handoffs/restart-skills-2026-09-08.md) |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
@@ -78,8 +79,9 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Execute G02's weakened observable-access test after completed A07/B21. A
-conservative receiver is the next mechanics realization; A09 retains the physical scale-selection
+Execute A10's conservative harmonic receiver test after completed G02/B22.
+Start with a finite quadratic Hamiltonian and explicit invariant ensemble;
+derive rather than assume a Markov correlation law. A09 retains the physical scale-selection
 target. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a

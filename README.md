@@ -16,8 +16,12 @@ endpoint motion; lowering that speed closes the bound.
 
 The [spectral-control paper](out/papers/susceptibility-gap.pdf) gives a
 sufficient condition for a lower relaxation gap: observables must detect every
-mode, and their total susceptibility must stay bounded. A four-state example
-shows how a fixed positive velocity plateau can miss a slowing internal mode.
+mode, and their total susceptibility must stay bounded. Its four-state example
+keeps a fixed positive plateau while the gap closes, even with distinct observed
+velocities. Independent composition gives a complementary route: local
+measurements control the full gap through the additive mixed-mode spectrum.
+Next is an explicit conservative receiver, deriving its correlation scale from
+mechanics and preparation.
 
 The [checkerboard paper](out/papers/checkerboard-dynamics.pdf) compares two
 path-composition rules at the same action scale: classical transitions and
