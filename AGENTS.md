@@ -5,6 +5,12 @@ Read `research/STATE.md`, `research/PROGRAMME.md` and the selected entry in
 Update task state and the handoff when substantive work ends. Preserve existing
 user changes in the worktree.
 
+On a fresh session, or after context compaction when the source-to-task context
+has been lost, read `skills/navstokgap-bibliography/SKILL.md` and load its
+task-relevant source-idea capsule. Reuse a current capsule already retained in
+the handoff/summary. This applies to source workers within their assigned
+budget; context recovery itself launches no additional worker or web sweep.
+
 # Research and writing
 
 The project studies Newtonian trajectories, action scales and mechanisms for

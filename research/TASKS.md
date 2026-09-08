@@ -61,7 +61,9 @@ handoff with the remaining dependency.
 | Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
 | G01 | done | Susceptibility/gap product, hidden-label family and complete-observable lower gap bound C041–C042; explicit energy units | Coordinator + Luna-low B20 | 20 checks and PDF; M03 retains separate gates |
 | B20 | done | Green–Kubo source and bounded spectral/frame audit; Sokal discovery-only | One Luna low, sequential | C041–C042, coordinator review |
-| G02 | ready | Weaken access to the internal label; track frame eigenvalue and total susceptibility under composition, including varying mass | Coordinator then one small librarian | C042; companion after A07 |
+| G02 | active | Weak-access and independent-composition derivations prepared; B22 saved, coordinator verification and proof/check integration pending | Coordinator; Luna-low worker complete | C042; [B22 handoff](handoffs/B22.md) |
+| B22 | review | Product-chain source and weak-observability formula audit saved; verify metadata, clock normalization and page images before acceptance | One Luna low, sequential | G02; worker artifacts saved |
+| S01 | done | Action-target skill upgrade and source-idea context-recovery skill, AGENTS hook and local routing validation | Coordinator, no additional worker | [handoff](handoffs/restart-skills-2026-09-08.md) |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
 | W01 | waiting | Revise technical manuscript from accepted claims only; citation/notation/proof audit, reproducible PDF | Scientific writer + reviewer | R01 and next accepted result |

@@ -3,6 +3,14 @@
 Updated: 2026-09-08. Current milestone: A07/B21 complete;
 G02 observability and internal-receiver access next.
 
+**Restart tooling updated:** `skills/principia-action/SKILL.md` now routes work
+through the five action-selection obligations. The new
+`skills/navstokgap-bibliography/SKILL.md`, loaded by AGENTS on context recovery,
+uses [source-idea cards](../references/IDEA_BRIDGES.md) to supply a concrete
+next test. G02's Luna-low B22 handoff is saved; coordinator source verification,
+proof integration and claim acceptance remain pending. See the
+[restart-skills handoff](handoffs/restart-skills-2026-09-08.md).
+
 ## Current results and next tasks
 
 **A07/B21 are complete.** [The bounded-turn note](../notes/bounded-acceleration-return.md)

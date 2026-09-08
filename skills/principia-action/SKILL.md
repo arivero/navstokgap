@@ -1,20 +1,60 @@
 ---
 name: principia-action
-description: Bring the navstokgap project's Newton and action-scale research context into work on Principia limits, projectile areas, central-force trajectories, or proposed quantum action bounds. Scoped to this project's mechanics discussion and subagent tasks.
+description: Guide navstokgap research on classical mechanisms selecting a positive universal action scale, Newtonian cut limits, mechanical receivers and gap estimates. Load the project's proof obligations and task-specific notes for mechanics research or its source audits.
 ---
 
 # Principia and action-scale research
 
-This project connects Newtonian trajectory geometry, action variations and
-operational resolution. Its research targets are quantum reconstruction and a
-toy mechanism for gap formation.
+The central target is a classically defined action-valued quantity
+$\mathsf h_\varepsilon(t)$ converging to a positive universal constant, with its
+quantum role derived from the dynamics. Each research step should discharge an
+obligation, supply a mechanism, or settle a candidate premise by counterexample.
 
 Locate the repository through AGENTS.md or this skill's resolved location:
 the repository is two directories above the skill directory. On a fresh session
 read `research/STATE.md`, `research/PROGRAMME.md` and the assigned task.
+For model design, read `research/ACTION_FIELD_TARGET.md` and the relevant
+route below. At a context restart, follow the bibliography-ideas hook in AGENTS.
 For a calculation or historical argument using the constant-force example, read
 `notes/principia-constant-force-action.md`. For metadata work, use the
 relevant source companion and the task's stated question.
+
+## Select the next proof obligation
+
+Track five gates separately: classical definition and units; exclusion of zero;
+convergence in a stated topology; universality across masses and preparations;
+and identification with the quantum phase/action parameter. Record which gate
+the selected task advances and which physical premise supplies that advance.
+
+For every limit, name the varying parameter: physical time $t$, mesh
+$\varepsilon$, observation duration $\Delta$, action parameter, volume or
+$c^{-1}$. A stationary ensemble's long-window plateau and physical-time
+attraction of a dynamical field require different arguments.
+
+Choose the smallest relevant route, then read its maintained note:
+
+- **Positive plateau or receiver:** `papers/classical-action-field.tex` and
+  `research/ACTION_FIELD_TARGET.md`. For an explicit bath use
+  `papers/collision-action-relaxation.tex`. Trace variance and correlation time
+  to energy, preparation and interaction parameters; test zero-variance and
+  rapid-decorrelation families within the proposed premises.
+- **Universality:** `notes/composition-universality.md`. Separate mass-only
+  coefficient closure, full-state composition and preparation independence.
+  Locate the positive reference input before invoking the mass-additivity result.
+- **Cut refinement and finite speed:** `research/CUT_POINT_TARGET.md`, then
+  `notes/bridge-crossover.md` or `notes/bounded-acceleration-return.md` as the
+  task requires. Keep sampling cuts, conditioned bridges and physical
+  interventions distinct; track uniform force and mass bounds.
+- **Gap mechanism:** `notes/susceptibility-gap.md`. Specify the operator,
+  domain, invariant law, clock and observable access. Test hidden slow modes
+  and the constants needed uniformly across the proposed family.
+- **Quantum role:** `notes/checkerboard-dynamics.md`. Record the source of
+  complex amplitudes, the measurement rule and the dimensional action constant;
+  compare their cut limits with the real stochastic model.
+
+Use `claims/LEDGER.md` for acceptance and `research/TASKS.md` for live priority;
+source-inspired drafts retain their own review status. Prefer a mechanical
+selection test over another solvable spectrum when it advances the central gate.
 
 ## Working context
 
@@ -32,6 +72,9 @@ relevant source companion and the task's stated question.
   a second-derivative correction.
 - For each model, name the force, frame, endpoints, energy quantity and units.
   Track mesh refinement, semiclassical limits and spectral limits separately.
+- Distinguish a positive prescribed-endpoint cost, the infimum of positive
+  excess costs, an action-valued response plateau and an operator spectral gap.
+  Converting a relaxation rate to energy requires a specified action factor.
 
 The technical paper contains the maintained proofs. `claims/LEDGER.md`
 records evidence status; `ideas/` records proposals and their tests.
