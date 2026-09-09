@@ -18,7 +18,9 @@ handoff with the remaining dependency.
 | B30 | done | Two-query, two-HTML-source scaling audit; coordinator source and written-proof review | One Luna low, sequential | C056–C057 |
 | A17 | done | Fixed smooth force-bounded potential has stable small circles of vanishing action; independent speed floor gives positive circular bound C058–C059 | Coordinator + Luna-low B31 | [A17 handoff](handoffs/A17.md) |
 | B31 | done | Two queries, one primary source Sections II–III; circular balance/stability audit and coordinator review | One Luna low | A17 |
-| A18 | ready | Extend force-ceiling and excitation-floor bound to general closed regular trajectories; audit total-curvature input and identify equality/domain assumptions | Coordinator then one bounded librarian | C059 |
+| A18 | done | Sharp orbit-action bound for regular closed trajectories from total curvature, force ceiling and speed floor; C060–C061 | Coordinator + Luna-low B32 | [A18 handoff](handoffs/A18.md) |
+| B32 | done | Milnor printed pp. 248, 254; one-query primary-source audit and coordinator visual/proof review | One Luna low | A18 |
+| A19 | ready | Replace pointwise speed floor by peak momentum or kinetic excursion, allowing turning-point stops; prove force-limited excursion cost or identify missing premise | Coordinator then one bounded librarian | C060 and A07 |
 | R02 | ready | Audit scalar and matrix finite-propagation candidates in I003; conservation, Fourier convention and noise model explicit; prior-art audit before claim promotion | Coordinator then one small librarian | P03 corrections |
 | G03 | ready | Extend G02 beyond independent products using an explicit interaction estimate and uniform observable calibration | Coordinator then sequential librarian | C045–C046 |
 | B01 | done | Six primary bibliography leads; identifiers/abstracts reviewed and shared metadata integrated | Luna + coordinator | Programme |
@@ -108,7 +110,8 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start A18's noncircular force/excitation bound, with a total-curvature audit.
+Start A19's peak-excitation test, allowing speed to vanish at turning points.
+A18/B32 completed the sharp closed-trajectory action bound C060–C061.
 A17/B31 completed the fixed-potential small-circle and positive floor tests.
 A16/B30 completed the conditional dilation obstruction C056–C057.
 A15/B29 completed the circular bound-system comparison, C054–C055.

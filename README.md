@@ -9,6 +9,13 @@ about estimates and limits.
 
 ## Results to read first
 
+The [closed-orbit bound](notes/closed-orbit-force-action.md) extends the
+circular result: a force ceiling and a positive speed floor give a sharp
+lower canonical action bound for every regular closed trajectory. Total
+turning supplies the geometry; a smooth-potential circle attains equality.
+B32 verifies the curvature input. Next is a peak-excitation condition that
+allows the particle to stop at turning points.
+
 The [fixed-force test](notes/fixed-force-small-circles.md) keeps one smooth
 confining potential and its global force ceiling fixed: stable circles still
 have action approaching zero. Adding an independent lower speed instead gives
@@ -128,7 +135,7 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-Start A18's force/excitation bound for general closed trajectories, extending A17.
+Start A19's peak-excitation test, extending A18 to allow turning-point stops.
 A14 remains the bounded renewal-preparation test; R02 audits the
 preserved finite-propagation ideas. The
 [six-direction review](reviews/six-directions-2026-09-08.md) records the

@@ -71,11 +71,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C058 | One fixed smooth confining potential with global force ceiling admits radially stable uniform-phase circles with $\ell_R\sim\sqrt{mK}R^2\to0$, vanishing speed/acceleration and finite limiting period | [A17 proof](../notes/fixed-force-small-circles.md); exact force balance, effective energy and asymptotics; B31 |
 | C059 | Relativistic circular motion with $f\le F_{\max}$ and independent speed floor $v\ge v_*>0$ satisfies $\ell\ge m^2v_*^3/[F_{\max}(1-v_*^2/c^2)]$ | A17 identity $\ell=P^2v/f$ and monotonicity; uniform-phase covariance transfer C055; B31 and coordinator review |
 
+| C060 | Regular closed $C^2$ trajectories with speed floor, stated momentum law and force ceiling satisfy $T\ge P_*\mathcal K/F_{\max}$ and normalized orbit action $J\ge P_*^2v_*\mathcal K/(2\pi F_{\max})\ge P_*^2v_*/F_{\max}$ | [A18 proof](../notes/closed-orbit-force-action.md); Fenchel–Borsuk input, momentum derivative and monotonicity; B32 and coordinator review |
+| C061 | C060's lower constant is attained by a circle in a smooth globally force-bounded confining potential | A18 cutoff construction; equality over the admissible model class, not every fixed potential; B32 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C060–C061: [B32](../references/batches/B32.md) verifies the classical
+Fenchel–Borsuk input in Milnor (1950). Mechanical inequalities and the smooth
+equality construction are derived consequences, with novelty unassessed in
+the bounded one-query, two-page audit.
 
 C058–C059: [B31](../references/batches/B31.md) matches the established
 relativistic circular-balance and radial-stability framework. The fixed smooth

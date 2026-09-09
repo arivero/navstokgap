@@ -6,7 +6,14 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
-**Current capsule — A17 complete, A18 next:** [B31](batches/B31.md),
+**Current capsule — A18 complete, A19 next:** [B32](batches/B32.md), Milnor
+pp. 248 and 254, gives total turning at least $2\pi$. A18 combines it with
+momentum-force control and a speed floor to obtain a sharp action bound.
+Next test force-limited momentum excursions instead of a speed floor, so
+ordinary oscillations with stopping points enter the domain. Peak excitation
+is a proposed premise to test, not yet a proved sufficient condition.
+
+**Circular input:** [B31](batches/B31.md),
 Aguirregabiria et al. Sections II–III, supplies circular force balance and
 radial stability. A17 combines a force ceiling with an independent speed floor
 to get a positive circular-action bound. Next borrow total turning of a closed

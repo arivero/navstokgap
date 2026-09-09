@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 21, 2026-09-09.
+Version 22, 2026-09-09.
 
 ## Aim
 
@@ -54,9 +54,10 @@ and singular/softened threshold transfer. **A16/B30 are complete:** the [dilatio
 proves a conditional zero-infimum theorem for contraction-closed model classes
 (C056–C057). **A17/B31 are complete:** one fixed smooth force-bounded potential
 has stable small circles of vanishing action, while an independent speed floor
-gives a positive circular bound (C058–C059). **A18 is next:** extend the positive
-bound to general closed regular trajectories, auditing the total-curvature
-input. The singular-core benchmark remains
+gives a positive circular bound (C058–C059). **A18/B32 are complete:** total
+turning extends this sharp bound to closed regular trajectories (C060–C061),
+with Milnor's curvature theorem audited. **A19 is next:** test a peak-excitation
+premise allowing speed to vanish at turning points. The singular-core benchmark remains
 coupling-dependent; the softened model tests the extra premise needed for a
 positive infimum. [B27](../references/batches/B27.md) supplies the established
 Boyer classification and [B28](../references/batches/B28.md) the bounded follow-up.

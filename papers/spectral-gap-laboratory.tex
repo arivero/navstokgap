@@ -551,6 +551,47 @@ the Newtonian formula omits the relativistic denominator. The floor is a
 separate kinetic-excitation premise. A18 will test a corresponding bound
 for general closed regular trajectories using their total turning.
 
+\section{Closed trajectories: total turning gives an action bound}
+The circular force/excitation bound extends sharply to regular closed
+trajectories (C060--C061). Let $q:\mathbb R/T\mathbb Z\to\mathbb R^d$,
+$d\ge2$, be $C^2$, with $v=|\dot q|\ge v_*>0$. Put $n=\dot q/v$ and
+$p=P(v)n$, where $P(v)=mv$ or $m\gamma v$, requiring $v<c$ in the latter
+case. Assume $|\dot p|\le F_{\max}$ in one inertial frame. Self-intersections
+are allowed and endpoint tangents match.
+
+Total curvature is $\mathcal K=\int_0^T|\dot n|dt\ge2\pi$ by
+Fenchel--Borsuk\cite{Milnor1950TotalCurvature}, Theorem 3.4. Arclength
+reparametrization identifies this with integrated tangent turning.
+Orthogonality gives, with $P_*=P(v_*)$,
+\[
+ |\dot p|^2=\dot P^2+P^2|\dot n|^2,\qquad
+ |\dot n|\le F_{\max}/P_*.
+\]
+Integration and monotonicity of $P(v)v$ prove
+\[
+ T\ge\frac{P_*\mathcal K}{F_{\max}},\qquad
+ J:=\frac1{2\pi}\int_0^T p\cdot\dot q\,dt
+ \ge\frac{P_*^2v_*\mathcal K}{2\pi F_{\max}}
+ \ge\frac{P_*^2v_*}{F_{\max}}.
+\]
+This is normalized canonical orbit action for the stated scalar-potential
+momentum. A vector potential needs separate momentum bookkeeping, and the
+general orbit has no asserted covariance-area identity.
+
+A circle at speed $v_*$ and radius $R_*=P_*v_*/F_{\max}$ attains equality.
+Choose smooth nondecreasing $\chi\in[0,1]$, zero on $[0,1/4]$ and one on
+$[1/2,\infty)$, and set $V(r)=F_{\max}\int_0^r\chi(s/R_*)ds$.
+The Cartesian potential is smooth, constant near zero and confining, with
+global force ceiling $F_{\max}$. At $R_*$ it supplies exact circular balance.
+Thus equality is attained within the model class.
+
+Closedness supplies turning, force control supplies duration, and the speed
+floor supplies action cost. The relativistic constant is
+$m^2v_*^3/[F_{\max}(1-v_*^2/c^2)]$; its Newtonian limit omits the denominator.
+It closes as $v_*\downarrow0$. A19 next tests a peak-excitation premise that
+allows stops at turning points. Persistent excitation and universal scale
+selection retain their separate physical obligations.
+
 \section{What the laboratory selects next}
 \begin{center}
 \begin{tabularx}{\linewidth}{@{}lXl@{}}

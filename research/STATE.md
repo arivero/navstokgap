@@ -5,12 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A17/B31 complete.
+Updated: 2026-09-09. Current milestone: A18/B32 complete.
 
 ## Current restart decision
 
-Start **A18**, extending the positive force/excitation bound to general closed
-regular trajectories with a total-curvature source audit. **A17/B31** gives
+Start **A19**, replacing the pointwise speed floor by a peak-momentum or
+kinetic-excursion premise that permits turning-point stops. **A18/B32** proves
+the sharp general closed-orbit action bound from total turning, force ceiling
+and speed floor (C060–C061). Read [A18 handoff](handoffs/A18.md).
+**A17/B31** gives
 stable small circles with vanishing action in one fixed globally force-bounded
 potential (C058), and a positive circular-action bound when an independent
 speed floor is imposed (C059). See [A17 handoff](handoffs/A17.md).

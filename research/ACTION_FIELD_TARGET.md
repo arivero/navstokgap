@@ -8,7 +8,12 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A17/B31: **A18**, extend the positive circular-action
+Immediate priority after A18/B32: **A19**, test peak excitation rather than
+a pointwise speed floor, retaining the force ceiling. A18 gives a sharp
+canonical action bound for closed regular trajectories; turning-point stops
+motivate the weaker premise. See [A18](../notes/closed-orbit-force-action.md).
+
+Earlier priority after A17/B31: **A18**, extend the positive circular-action
 bound from force ceiling plus speed floor to closed regular trajectories.
 A17's fixed-potential small-circle family isolates lower excitation as a
 separate physical premise. See [A17](../notes/fixed-force-small-circles.md).
