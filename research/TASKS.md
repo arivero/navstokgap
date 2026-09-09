@@ -12,7 +12,8 @@ handoff with the remaining dependency.
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
 | B28 | done | Bounded softened-core audit; two queries, no new primary pages, coordinator corrected escape-energy wording | One Luna low, sequential | C052–C053; B27 source reuse |
-| A15 | ready | In one confined model compare local conditional fluctuations, intermediate window and long transport response with orbital action; specify estimator for physical-time field | Coordinator then sequential librarian | C047, C051, M07 benchmark |
+| A15 | done | Circular conditional/transport variance, window-ratio bound and canonical covariance estimator; C054–C055 | Coordinator + sequential Luna-low B29 | [A15 handoff](handoffs/A15.md) |
+| B29 | done | Two-query, two-page rms-emittance audit and A15 written-proof review | One Luna low + coordinator | A15 |
 | A16 | ready | Test simultaneous space/time dilation against admissibility axioms; track couplings, preparation and action; prove exact closure statement | Coordinator then sequential librarian | A15 model selection |
 | R02 | ready | Audit scalar and matrix finite-propagation candidates in I003; conservation, Fourier convention and noise model explicit; prior-art audit before claim promotion | Coordinator then one small librarian | P03 corrections |
 | G03 | ready | Extend G02 beyond independent products using an explicit interaction estimate and uniform observable calibration | Coordinator then sequential librarian | C045–C046 |
@@ -103,7 +104,9 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start A15's bound-system observable comparison. M07/B28 completed the
+Start A16's scale-closure test using A15's canonical covariance estimator.
+A15/B29 completed the circular bound-system comparison, C054–C055.
+M07/B28 completed the
 Kepler benchmark and softened-core countertest (C052–C053). I004 and P03 carry the rationale.
 R02 owns the repaired finite-propagation draft; A16 tests model-class scaling.
 The A06/A09a consolidation is complete; the review maps remaining opportunities.

@@ -416,6 +416,54 @@ These circles leave the singular model's regular domain. Consequently
 $\lim_{a\downarrow0}g_\theta(a)=0$, whereas $g_\theta=k/c$ at the singular
 potential. This limit is pointwise in fixed subcritical $\ell$.
 
+\section{A bound-orbit action estimator}
+Uniform circular phase gives a canonical covariance area equal to orbital
+action, while displacement transport vanishes at both window extremes
+(C054--C055). Write $q=R(\cos\theta,\sin\theta)$,
+$p=P(-\sin\theta,\cos\theta)$, $\theta=\omega t+\Phi$, with uniform
+$\Phi$ and $\ell=RP=\gamma mR^2\omega$,
+$\gamma=(1-R^2\omega^2/c^2)^{-1/2}$.
+For $x=q_1$, phase averaging gives
+$\mathbb E[x(t)x(t+\Delta)]=(R^2/2)\cos z$, $z=\omega\Delta$, hence
+\[
+ \mathsf h_x(\Delta)=\frac m\Delta\operatorname{Var}(x(t+\Delta)-x(t))
+ =\frac{\ell}{\gamma}\frac{1-\cos z}{z}.
+\]
+Given $x(t)=x$, the equal-weight next positions are
+$x\cos z\pm\sqrt{R^2-x^2}\sin z$. The conditional variance is
+$(R^2-x^2)\sin^2z$, with continuous zero endpoint extension; its
+phase-averaged action coefficient is $\ell\sin^2z/(2\gamma z)$.
+Both coefficients vanish at zero and infinite window. Since
+$1-\cos z\le\min(z^2/2,2)$,
+\[
+ \mathsf h_x\ge\eta\ell\quad\Longrightarrow\quad
+ 2\gamma\eta\le z\le2/(\gamma\eta),\qquad\eta>0.
+\]
+Every interval above that fixed positive fraction has endpoint ratio at most
+$1/(\gamma^2\eta^2)$; a broad plateau needs additional time scales.
+
+For centered covariance $\Sigma$ of $(x,p_x)$, define
+$\mathcal A_{\rm cov}=2\sqrt{\det\Sigma}$. Uniform phase gives
+$\Sigma=\operatorname{diag}(R^2/2,P^2/2)$, hence
+$\mathcal A_{\rm cov}=RP=\ell$. The projected ellipse area is $\pi RP$,
+half the full planar canonical orbit integral. This fixes the factor two
+relative to rms emittance\cite{Groening2018Busch}; here momenta have physical
+canonical units, while the cited beam convention normalizes momenta.
+
+An affine canonical map in this plane has $\Sigma'=S\Sigma S^T$ and
+$\det S=1$, preserving the determinant. The projected orbit map is
+\[
+ S_t=\begin{pmatrix}\cos\omega t&(R/P)\sin\omega t\\
+ -(P/R)\sin\omega t&\cos\omega t\end{pmatrix}.
+\]
+It preserves covariance area for every phase law, including the zero area
+of a point phase with $\ell>0$. Uniform phase, or matching first and second
+moments, suffices for equality to orbital action. This is conservation of a
+prepared value on the fixed orbit, rather than attraction to a common value.
+Uniform singular-Kepler circles have $\inf\mathcal A_{\rm cov}=k/c$;
+any fixed softened core has infimum zero by the preceding proposition.
+The estimator transfers the threshold with its preparation and core premises.
+
 \section{What the laboratory selects next}
 \begin{center}
 \begin{tabularx}{\linewidth}{@{}lXl@{}}

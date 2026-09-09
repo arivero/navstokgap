@@ -47,6 +47,12 @@ an actual scale-separation estimate. The task should establish which estimator
 can track a physical-time field $h(t)$ and which limit represents relaxation.
 Its source audit must cover the selected estimator as well as the model.
 
+**Completed A15/B29:** [the circular-orbit note](../notes/bound-orbit-action-observable.md)
+gives vanishing transport response at both window extremes and a finite bound
+on window ratios above a fixed action fraction. Twice the canonical covariance
+area equals orbital action under uniform phase. Each phase law preserves its
+own area; A16 now tests scale closure of this preparation-dependent estimator.
+
 ## Scale selection test — A16
 
 Test a simultaneous space/time dilation $q_a(t)=a q(t/a)$, which preserves

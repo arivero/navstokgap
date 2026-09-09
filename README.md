@@ -9,6 +9,14 @@ about estimates and limits.
 
 ## Results to read first
 
+The [bound-orbit calculation](notes/bound-orbit-action-observable.md) gives a
+constant classical action estimator: twice the projected canonical covariance
+area equals orbital action under uniform circular phase. Displacement transport
+instead vanishes at both observation-window extremes. Each phase preparation
+preserves its own covariance area; this separates a usable bound-state observable
+from the remaining mechanism selecting its value. B29 verifies its rms-emittance
+prior art. The calculation is integrated into the existing gap-laboratory draft.
+
 The [repository review](reviews/repository-review-2026-09-09.md) maps the proof
 families, repairs the I003 draft and identifies the next research pair:
 the known relativistic Kepler threshold $|L|>k/c$, and an action observable
@@ -114,8 +122,8 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-Start M07's relativistic Kepler benchmark and A15's confined-system observable
-comparison. A14 remains the bounded renewal-preparation test; R02 audits the
+Start A16's scaling test using A15's canonical estimator and M07's orbit domain.
+A14 remains the bounded renewal-preparation test; R02 audits the
 preserved finite-propagation ideas. The
 [six-direction review](reviews/six-directions-2026-09-08.md) records the
 earlier adopted premises, countertests and source leads. Bounded-force returns remain

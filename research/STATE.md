@@ -5,11 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: M07/B28 complete.
+Updated: 2026-09-09. Current milestone: A15/B29 complete.
 
 ## Current restart decision
 
-Start **A15**, selecting an action observable for bound mechanics.
+Start **A16**, testing space/time scaling against the classical axioms.
+**A15/B29** gives a canonical covariance estimator equal to orbital action
+under uniform circular phase, while transport response vanishes at both
+window extremes. Each phase preparation preserves its own covariance area.
+Read [A15 handoff](handoffs/A15.md); C054–C055 record acceptance.
 **M07/B28** integrated the known Kepler threshold and proved that any fixed
 softened core admits arbitrarily small angular actions (C052–C053).
 See [M07 handoff](handoffs/M07.md). Long-window displacement response is a transport observable; the

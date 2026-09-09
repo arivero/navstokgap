@@ -8,7 +8,12 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A13/B26: **A14**, independent stationary renewal
+Immediate priority after A15/B29: **A16**, test dilation closure for the
+canonical covariance estimator and its orbit/preparation class. A15 gives a
+constant-in-time bound-orbit estimator whose value remains prepared. See
+[the A15 note](../notes/bound-orbit-action-observable.md).
+
+Earlier transport priority after A13/B26: **A14**, independent stationary renewal
 streams with fixed mean gap and variable gap variance. A13's ordered streams
 close the response at A12's mechanical scales and mean rate. Derive the Palm
 residual law and determine which quantitative fluctuation premise survives

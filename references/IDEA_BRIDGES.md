@@ -6,7 +6,14 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
-**Current capsule — M07 complete, A15 next:** [B27](batches/B27.md), Boyer pp. 5, 6, 9–10,
+**Current capsule — A15 complete, A16 next:** [B29](batches/B29.md),
+Groening et al. p. 2 Eq. (9), supplies the rms-emittance determinant.
+A15 uses physical canonical units and obtains $2\sqrt{\det\Sigma}=\ell$
+for uniform circular phase. Borrow its symplectic covariance rule; next test
+space/time dilation of the estimator while tracking coupling and preparation.
+Physical-time rotation conserves the prepared value, exposing the selection gate.
+
+**Kepler capsule:** [B27](batches/B27.md), Boyer pp. 5, 6, 9–10,
 supplies the classical bound-orbit threshold $|L|>k/c$. Borrow the effective
 radial potential and compare its angular action with the transport estimator
 of C047/C051. The next test is an observable appropriate to confined dynamics;

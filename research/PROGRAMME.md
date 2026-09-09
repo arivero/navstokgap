@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 18, 2026-09-09.
+Version 19, 2026-09-09.
 
 ## Aim
 
@@ -46,8 +46,12 @@ angular action at fixed coupling and speed limit (C053); the core-collapse
 limit explains the domain change. One Luna-low follow-up audit and coordinator
 written proof/source review support these results.
 
-**A15 is next:** compare orbital action and a bound-system fluctuation
-observable in one explicit preparation. The singular-core benchmark remains
+**A15/B29 are complete:** the [bound-orbit note](../notes/bound-orbit-action-observable.md)
+compares transport and conditional variance with twice the canonical covariance
+area. The latter equals orbital action for uniform circular phase; each phase
+preparation conserves its own value. C054–C055 include the window-ratio bound
+and singular/softened threshold transfer. **A16 is next:** test dilation closure
+and scale-fixing premises. The singular-core benchmark remains
 coupling-dependent; the softened model tests the extra premise needed for a
 positive infimum. [B27](../references/batches/B27.md) supplies the established
 Boyer classification and [B28](../references/batches/B28.md) the bounded follow-up.

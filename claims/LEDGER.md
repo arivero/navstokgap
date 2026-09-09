@@ -62,11 +62,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C052 | Fixed external relativistic Kepler potential has regular bound domain $\lvert L\rvert>k/c$, $E_{\min}(L)\le E<mc^2$ and excluded angular-action infimum $k/c$ | [M07 note](../notes/relativistic-kepler-threshold.md); written effective-potential, continuation and endpoint-time proofs; B27/B28 and coordinator visual/source review |
 | C053 | For every fixed softened core $a>0$ and $m,k,c>0$, every $\lvert L\rvert>0$ admits a regular bound circle, giving angular-action infimum zero; at each fixed $0<\lvert L\rvert<k/c$ minimizing radii tend to zero as $a\downarrow0$ | M07 note and gap laboratory Kepler section; compact-sublevel and scaling proofs; B28 and coordinator review; no computational verification |
 
+| C054 | Uniform circular phase gives transport response $\ell(1-\cos z)/(\gamma z)$ and averaged position-conditioned coefficient $\ell\sin^2z/(2\gamma z)$; fixed positive action fraction bounds window ratios | [A15 note](../notes/bound-orbit-action-observable.md), $z=\omega\Delta$; phase-average proofs and B29 |
+| C055 | Twice the projected canonical covariance area equals orbital action for uniform circular phase and is affine-symplectic invariant; other phase preparations conserve their own value, including zero; C052/C053 thresholds transfer within uniform preparation | A15 covariance/orbit-map proofs, gap laboratory, B29 and coordinator source review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C054–C055 have the bounded [B29 audit](../references/batches/B29.md):
+covariance determinant and affine symplectic invariance are established
+rms-emittance machinery; circular formulas and threshold transfer are derived
+specializations, with novelty unassessed. Uniform phase is sufficient for the
+action equality; matching its first and second moments also suffices.
 
 Proof status above and literature status below are independent. Each accepted
 result has a bounded librarian audit; exact source inputs and elementary
