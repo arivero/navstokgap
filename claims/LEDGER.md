@@ -68,11 +68,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C056 | External-potential dilation preserves mass, velocity, energy and invariant pushforward preparation; normalized orbit action, covariance area and corresponding-window response scale by $a$ | [A16 proof](../notes/action-scale-dilation.md); smooth transformed domain, finite moments; B30 and coordinator written review |
 | C057 | A class containing arbitrarily small contractions of one positive finite degree-one action observable has positive-value infimum zero; a common finite value must be zero under any nontrivial admitted contraction | A16 closure proposition; model/preparation class explicit; coupling and force countertests; B30 |
 
+| C058 | One fixed smooth confining potential with global force ceiling admits radially stable uniform-phase circles with $\ell_R\sim\sqrt{mK}R^2\to0$, vanishing speed/acceleration and finite limiting period | [A17 proof](../notes/fixed-force-small-circles.md); exact force balance, effective energy and asymptotics; B31 |
+| C059 | Relativistic circular motion with $f\le F_{\max}$ and independent speed floor $v\ge v_*>0$ satisfies $\ell\ge m^2v_*^3/[F_{\max}(1-v_*^2/c^2)]$ | A17 identity $\ell=P^2v/f$ and monotonicity; uniform-phase covariance transfer C055; B31 and coordinator review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C058–C059: [B31](../references/batches/B31.md) matches the established
+relativistic circular-balance and radial-stability framework. The fixed smooth
+force-bounded example and conditional speed-floor inequality are derived
+consequences; exact prior publication is unassessed in the bounded search.
 
 C056–C057 have the bounded [B30 audit](../references/batches/B30.md):
 conformally symplectic scaling has established geometric prior art; the exact

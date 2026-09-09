@@ -9,6 +9,12 @@ about estimates and limits.
 
 ## Results to read first
 
+The [fixed-force test](notes/fixed-force-small-circles.md) keeps one smooth
+confining potential and its global force ceiling fixed: stable circles still
+have action approaching zero. Adding an independent lower speed instead gives
+an explicit positive bound. This isolates persistent excitation as a physical
+premise to explain. A18 next tests the bound beyond circular trajectories.
+
 The [bound-orbit calculation](notes/bound-orbit-action-observable.md) gives a
 constant classical action estimator: twice the projected canonical covariance
 area equals orbital action under uniform circular phase. Displacement transport
@@ -122,7 +128,7 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-Start A16's scaling test using A15's canonical estimator and M07's orbit domain.
+Start A18's force/excitation bound for general closed trajectories, extending A17.
 A14 remains the bounded renewal-preparation test; R02 audits the
 preserved finite-propagation ideas. The
 [six-direction review](reviews/six-directions-2026-09-08.md) records the

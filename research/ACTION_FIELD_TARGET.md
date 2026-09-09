@@ -8,7 +8,12 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A15/B29: **A16**, test dilation closure for the
+Immediate priority after A17/B31: **A18**, extend the positive circular-action
+bound from force ceiling plus speed floor to closed regular trajectories.
+A17's fixed-potential small-circle family isolates lower excitation as a
+separate physical premise. See [A17](../notes/fixed-force-small-circles.md).
+
+Earlier priority after A15/B29: **A16**, test dilation closure for the
 canonical covariance estimator and its orbit/preparation class. A15 gives a
 constant-in-time bound-orbit estimator whose value remains prepared. See
 [the A15 note](../notes/bound-orbit-action-observable.md).

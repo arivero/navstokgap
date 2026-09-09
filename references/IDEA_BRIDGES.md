@@ -6,7 +6,14 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
-**Current capsule — A16 complete, A17 next:** [B30](batches/B30.md) connects
+**Current capsule — A17 complete, A18 next:** [B31](batches/B31.md),
+Aguirregabiria et al. Sections II–III, supplies circular force balance and
+radial stability. A17 combines a force ceiling with an independent speed floor
+to get a positive circular-action bound. Next borrow total turning of a closed
+regular curve to test the noncircular extension; audit that source first.
+Keep the excitation floor visible as the physical selection obligation.
+
+**Dilation capsule:** [B30](batches/B30.md) connects
 conformally symplectic scaling to a conditional action-infimum obstruction.
 Hold the potential and force ceiling fixed for the next small-circle test;
 loss of contraction closure alone supplies no positive bound.

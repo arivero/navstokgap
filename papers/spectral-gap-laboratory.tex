@@ -505,6 +505,52 @@ examines small-radius circles. Breaking dilation closure alone does not
 prove a positive action floor. The external-potential construction imposes
 no propagation law for a mediator.
 
+\section{Fixed force ceiling and circular excitation}
+A single smooth confining potential with a global force ceiling still admits
+positive circular actions tending to zero (C058). Fix $m,c,K,b>0$ and take
+\[
+ V(r)=Kb^2(\sqrt{1+r^2/b^2}-1),\qquad
+ f(r)=V'(r)=\frac{Kr}{\sqrt{1+r^2/b^2}}<Kb.
+\]
+On Cartesian configuration space the potential is smooth at the origin and
+confining. Finite energy bounds position and momentum, so trajectories are
+complete. Choose $Kb\le F_{\max}$ for a global force ceiling.
+Relativistic circular balance is $Pv/R=f(R)$, the established central-force
+relation\cite{Aguirregabiria2004Circular}. Set $s=Rf(R)$ and solve it as
+\[
+ \gamma_R=\tfrac12\left(s/(mc^2)+\sqrt{[s/(mc^2)]^2+4}\right),
+ \quad v_R=c\sqrt{1-\gamma_R^{-2}},\quad \ell_R=mR\gamma_Rv_R.
+\]
+These give an exact circle for every $R>0$. At fixed $\ell_R$, differentiating
+the radial energy gives
+\[
+ U''_{\ell_R}(R)=f'(R)+(3-v_R^2/c^2)f(R)/R>0,
+ \qquad f'(R)=K(1+R^2/b^2)^{-3/2}.
+\]
+Thus each circle is a strict radial minimum, stable under small radial
+perturbations at fixed angular momentum. For fixed parameters, expansion at
+$R\downarrow0$ yields
+\[
+ v_R\sim\sqrt{K/m}R,\qquad \ell_R\sim\sqrt{mK}R^2,\qquad
+ \omega_R\to\sqrt{K/m},\qquad H-mc^2\sim KR^2.
+\]
+Force and coordinate acceleration tend to zero; the period tends to a finite
+constant. All sufficiently small circles meet any positive speed and
+acceleration ceilings. Uniform phase transfers the zero action infimum to
+$\mathcal A_{\rm cov}$. The limit is the smooth central equilibrium.
+
+An independent lower excitation condition supplies a positive bound (C059).
+For any relativistic circle with $f(R)\le F_{\max}$ and $v\ge v_*>0$,
+$v_*<c$, balance gives
+\[
+ \ell=\frac{P^2v}{f(R)}
+ \ge\frac{m^2v_*^3}{F_{\max}(1-v_*^2/c^2)}>0.
+\]
+Here $m^2v^3/(1-v^2/c^2)$ is increasing on $(0,c)$. The units are action;
+the Newtonian formula omits the relativistic denominator. The floor is a
+separate kinetic-excitation premise. A18 will test a corresponding bound
+for general closed regular trajectories using their total turning.
+
 \section{What the laboratory selects next}
 \begin{center}
 \begin{tabularx}{\linewidth}{@{}lXl@{}}

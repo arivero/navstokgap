@@ -5,11 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A16/B30 complete.
+Updated: 2026-09-09. Current milestone: A17/B31 complete.
 
 ## Current restart decision
 
-Start **A17**, testing small circular orbits at fixed potential and force ceiling.
+Start **A18**, extending the positive force/excitation bound to general closed
+regular trajectories with a total-curvature source audit. **A17/B31** gives
+stable small circles with vanishing action in one fixed globally force-bounded
+potential (C058), and a positive circular-action bound when an independent
+speed floor is imposed (C059). See [A17 handoff](handoffs/A17.md).
 **A16/B30** proves action scales by $a$ under simultaneous space/time
 contraction, with zero infimum for any class closed under arbitrarily small
 contractions. Couplings and force ceilings can obstruct this map; they need

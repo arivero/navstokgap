@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 20, 2026-09-09.
+Version 21, 2026-09-09.
 
 ## Aim
 
@@ -52,8 +52,11 @@ area. The latter equals orbital action for uniform circular phase; each phase
 preparation conserves its own value. C054–C055 include the window-ratio bound
 and singular/softened threshold transfer. **A16/B30 are complete:** the [dilation note](../notes/action-scale-dilation.md)
 proves a conditional zero-infimum theorem for contraction-closed model classes
-(C056–C057). **A17 is next:** test small circles at fixed potential and force
-ceiling, where dilation closure may fail. The singular-core benchmark remains
+(C056–C057). **A17/B31 are complete:** one fixed smooth force-bounded potential
+has stable small circles of vanishing action, while an independent speed floor
+gives a positive circular bound (C058–C059). **A18 is next:** extend the positive
+bound to general closed regular trajectories, auditing the total-curvature
+input. The singular-core benchmark remains
 coupling-dependent; the softened model tests the extra premise needed for a
 positive infimum. [B27](../references/batches/B27.md) supplies the established
 Boyer classification and [B28](../references/batches/B28.md) the bounded follow-up.
