@@ -6,9 +6,15 @@ identification of that constant with $\hbar$ must follow from its role in the
 derived dynamics. This is now the central task; spectrum examples and action
 defects serve as tests of its premises.
 
+**R03/B33 completed:** [the cut-state test](../notes/classical-cut-state.md)
+separates exact phase-state composition from independent position-conditioned
+resets, whose terminal refinement limit freezes motion. **R04 is next:** keep
+tagged momentum and eliminate an independent receiver mode, deriving the memory
+needed at the interface. A19 remains a supporting excitation test.
+
 ## Variables and proof obligations
 
-Immediate priority after A18/B32: **A19**, test peak excitation rather than
+Supporting priority after A18/B32: **A19**, test peak excitation rather than
 a pointwise speed floor, retaining the force ceiling. A18 gives a sharp
 canonical action bound for closed regular trajectories; turning-point stops
 motivate the weaker premise. See [A18](../notes/closed-orbit-force-action.md).

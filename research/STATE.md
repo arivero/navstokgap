@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A18/B32 complete.
+Updated: 2026-09-09. Current milestone: R03/B33 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -13,14 +13,21 @@ claim status unchanged; see the [editorial handoff](handoffs/zenos-constant-2026
 
 ## Current restart decision
 
-**User redirection, 2026-09-09:** return to the classics before continuing the
-inequality queue. Read [I005](../ideas/I005-classical-cuts-and-relations.md).
-Start **R03**, defining what a physical cut retains and comparing composition
-before/after elimination of interface variables in one fixed classical model.
-The source-informed reflection is a research proposal, with no new claim ID.
-The following A19 priority is retained as the supporting mechanical track.
+**R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
+compares full evolution and stationary conditional resets in the fixed A10
+two-body receiver. Position kernels fail composition; independent direction
+resets freeze terminal position under refinement while preserving stationary
+one-time marginals. Full phase-state cuts compose exactly. C062–C063 have
+one Luna-low two-page audit and coordinator source/proof review.
 
-Start **A19**, replacing the pointwise speed floor by a peak-momentum or
+Start **R04**: retain tagged position and momentum in a three-body spring
+receiver, eliminate one independent receiver mode, and derive the interface
+memory needed for exact composition. Keep the experiment and preparation
+fixed. Read [R03 handoff](handoffs/R03.md) and
+[I005](../ideas/I005-classical-cuts-and-relations.md). A19 remains the
+supporting mechanical track.
+
+Supporting task **A19** replaces the pointwise speed floor by a peak-momentum or
 kinetic-excursion premise that permits turning-point stops. **A18/B32** proves
 the sharp general closed-orbit action bound from total turning, force ceiling
 and speed floor (C060–C061). Read [A18 handoff](handoffs/A18.md).

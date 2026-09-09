@@ -10,6 +10,12 @@ $|\pi_N|\to0$ in a fixed mechanical experiment. Keep physical time, cut index
 and fluctuation parameter separate. State whether cuts sample one trajectory,
 define impulsive approximations, or introduce new random degrees of freedom.
 
+**R03/B33 completed:** [the cut-state test](../notes/classical-cut-state.md)
+separates exact phase-state composition from independent position-conditioned
+resets, whose terminal refinement limit freezes motion. **R04 is next:** keep
+tagged momentum and eliminate an independent receiver mode, deriving the memory
+needed at the interface. A19 remains a supporting excitation test.
+
 ## A03: completed calculation
 
 **Renewed priority, 2026-09-09:** [I005](../ideas/I005-classical-cuts-and-relations.md)

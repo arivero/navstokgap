@@ -299,4 +299,51 @@ withdrawn under the rule. Current mathematical verification uses the
 written proofs and source review. The next mechanism must retain bounded
 velocities while supplying low-frequency response; its preparation
 dependence remains a separate selection test.
+
+\hypertarget{what-information-survives-a-cut}{%
+\subsection{8. What information survives a
+cut?}\label{what-information-survives-a-cut}}
+
+The fixed-energy two-body receiver gives an exact cut-state countertest:
+position-only stationary conditional kernels fail composition, while
+retaining momentum restores it. Independently refreshing direction at
+every inserted cut preserves one-time position marginals but freezes
+terminal position as the mesh shrinks. These are C062--C063; the full
+maps and proof are in \href{classical-cut-state.md}{the cut-state note},
+with the \href{../references/batches/B33.md}{B33 audit}.
+
+With \(q=x-X\), \(\mu=mM/(m+M)\), \(\omega=\sqrt{k/\mu}\) and
+\(A=\sqrt{2E/k}\), uniform phase on the energy ellipse gives the
+conditional one-segment positions
+
+\[q'=q\cos\omega t\ \pm\sqrt{A^2-q^2}\sin\omega t\]
+
+with equal weights. Thus the full mean after \(s+t\) is
+\(q\cos\omega(s+t)\), whereas independent conditional composition gives
+\(q\cos\omega s\cos\omega t\). The missing interface variable is
+\(p_s=\mu\dot q_s\) in
+\(q_{s+t}=q_s\cos\omega t+p_s\sin\omega t/(\mu\omega)\). It has momentum
+units. Keeping this full internal state composes exactly; marginalizing
+the true joint path law also preserves all cut restrictions.
+
+For \(N\) independent resets at intervals \(T/N\), direct iteration
+gives
+
+\[\mathbb E Q_N=q[\cos(\omega T/N)]^N,\] \[\mathbb E Q_N^2=\frac{A^2}{2}
+ +\left(q^2-\frac{A^2}{2}\right)[\cos(2\omega T/N)]^N.\]
+
+The first limit is \(q\) and the second is \(q^2\), proving terminal
+conditional \(L^2\) convergence to the starting position. Under the
+original stationary preparation the reset two-time correlation tends to
+\(A^2/2\), while the true value is \((A^2/2)\cos\omega T\). A cut that
+only observes the motion performs no reset and leaves the true
+correlation unchanged.
+
+The normalized orbital action is \(J=(2\pi)^{-1}\oint p\,dq=E/\omega\):
+integrating \(\mu\omega A^2\sin^2\phi\) over a cycle proves the formula.
+Uniform-phase covariance also has square-root determinant \(E/\omega\).
+Cooling \(E\downarrow0\) at fixed Hamiltonian closes both, with exact
+phase-state composition intact. R04 next retains tagged momentum while
+eliminating an independent receiver mode, testing the additional memory
+exposed by Zwanzig's reduced equation.
 \end{document}

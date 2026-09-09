@@ -8,7 +8,9 @@ handoff with the remaining dependency.
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
-| R03 | ready | Classics-led cut-state test: define full/reduced states and compare composition with elimination in one fixed mechanical experiment; identify required memory/interface term and its units before a scale-selection claim | Coordinator then bounded source/proof audit | [I005](../ideas/I005-classical-cuts-and-relations.md); user redirection |
+| R03 | done | Fixed-energy receiver cut maps, nonsemigroup position kernel, reset freezing limit and phase-state restoration; C062–C063 | Coordinator + Luna-low B33 | [R03 handoff](handoffs/R03.md) |
+| B33 | done | Two cached primary pages, zero searches; cut-state source/proof audit and coordinator coverage correction | One Luna low, sequential | R03 |
+| R04 | ready | Three-body spring receiver: retain tagged position and momentum, eliminate one receiver mode, derive interface memory and finite-history recovery at fixed preparation | Coordinator then one bounded librarian | R03/B33; Zwanzig p. 219 |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -111,8 +113,9 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-User redirection: start R03 from I005's classical-source reflection. Preserve
-A19 below as a supporting mechanical calculation rather than the main target.
+Start R04 from the completed R03/B33 cut-state test: retain tagged phase state
+and eliminate an independent receiver mode. Preserve A19 below as a supporting
+mechanical calculation. R03 established C062–C063; see its handoff.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.
 A18/B32 completed the sharp closed-trajectory action bound C060–C061.

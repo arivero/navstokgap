@@ -74,11 +74,21 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C060 | Regular closed $C^2$ trajectories with speed floor, stated momentum law and force ceiling satisfy $T\ge P_*\mathcal K/F_{\max}$ and normalized orbit action $J\ge P_*^2v_*\mathcal K/(2\pi F_{\max})\ge P_*^2v_*/F_{\max}$ | [A18 proof](../notes/closed-orbit-force-action.md); Fenchel–Borsuk input, momentum derivative and monotonicity; B32 and coordinator review |
 | C061 | C060's lower constant is attained by a circle in a smooth globally force-bounded confining potential | A18 cutoff construction; equality over the admissible model class, not every fixed potential; B32 review |
 
+| C062 | Fixed-energy uniform-phase two-body spring receiver: stationary position-conditioned kernels have mean composition defect $-q\sin\omega s\sin\omega t$; phase state restores exact composition, and two positions recover momentum off half-period sampling | [R03 §§1–2](../notes/classical-cut-state.md); written derivation, B33 and coordinator review |
+| C063 | At fixed duration and initial position, independent equal-step conditional direction resets converge terminally in $L^2$ to that position; stationary one-time law is preserved but two-time correlation freezes. Canonical $J=E/\omega$ tends to zero across cooled preparations at fixed Hamiltonian | R03 §§3–4; explicit moment recurrences and ellipse integral; B33 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C062–C063: [B33](../references/batches/B33.md) audits two cached primary
+pages with zero searches. Harmonic propagation and bath-memory reduction are
+established ingredients; the fixed-energy conditional kernel, reset limit and
+action comparison are elementary derived consequences, with novelty unassessed.
+[Coordinator review](../reviews/classical-cut-state-B33.md) accepts the written
+proofs and corrects the worker's source-page coverage.
 
 C060–C061: [B32](../references/batches/B32.md) verifies the classical
 Fenchel–Borsuk input in Milnor (1950). Mechanical inequalities and the smooth

@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 22, 2026-09-09.
+Version 23, 2026-09-09.
 
 ## Aim
 
@@ -37,7 +37,20 @@ established matches, derived consequences or a candidate contribution with
 explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
-## Current priority: bound action and scale selection
+## Current priority: classical cuts and receiver memory
+
+**R03/B33 are complete:** the [cut-state note](../notes/classical-cut-state.md)
+proves that stationary position-conditioned kernels in a fixed-energy spring
+receiver fail composition. Independent direction resets freeze terminal position
+under refinement while leaving one-time marginals invariant. Full phase state
+restores exact composition, and its action $E/\omega$ remains prepared.
+C062–C063 have a two-page Luna-low audit and coordinator written/source review.
+**R04 is next:** retain tagged position and momentum while eliminating an
+independent receiver mode in a three-body spring experiment. Derive the exact
+memory/interface term and test finite-history recovery. This follows
+[I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
+
+## Supporting track: bound action and scale selection
 
 **M07/B28 are complete.** The [Kepler note](../notes/relativistic-kepler-threshold.md)
 and gap laboratory specify the regular bound domain and angular-action

@@ -4,6 +4,18 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
+## Classical cut state and receiver memory — R04
+
+**R03/B33 capsule:** Ford–Kac–Mazur p. 505 (2)–(5) supplies the full harmonic
+propagator; Zwanzig p. 219 (21)–(24) supplies elimination into a memory equation.
+Read [B33 companion](../docs/batches/B33/cut-state-source-companion.md) and
+[the R03 note](../notes/classical-cut-state.md). Position-conditioned independent
+resets lose momentum correlation and freeze under refinement; retaining the
+full two-body phase state restores composition. Next retain tagged position
+and momentum in a three-body receiver and eliminate an independent mode.
+The deciding premise is whether interface history or receiver state is retained;
+any action normalization must still trace its preparation dependence.
+
 ## Memory, observability and a mechanical receiver — A09/A12
 
 **Current capsule — A18 complete, A19 next:** [B32](batches/B32.md), Milnor
