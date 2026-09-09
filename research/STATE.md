@@ -9,6 +9,13 @@ Updated: 2026-09-09. Current milestone: A18/B32 complete.
 
 ## Current restart decision
 
+**User redirection, 2026-09-09:** return to the classics before continuing the
+inequality queue. Read [I005](../ideas/I005-classical-cuts-and-relations.md).
+Start **R03**, defining what a physical cut retains and comparing composition
+before/after elimination of interface variables in one fixed classical model.
+The source-informed reflection is a research proposal, with no new claim ID.
+The following A19 priority is retained as the supporting mechanical track.
+
 Start **A19**, replacing the pointwise speed floor by a peak-momentum or
 kinetic-excursion premise that permits turning-point stops. **A18/B32** proves
 the sharp general closed-orbit action bound from total turning, force ceiling

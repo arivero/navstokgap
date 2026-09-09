@@ -8,6 +8,7 @@ handoff with the remaining dependency.
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
+| R03 | ready | Classics-led cut-state test: define full/reduced states and compare composition with elimination in one fixed mechanical experiment; identify required memory/interface term and its units before a scale-selection claim | Coordinator then bounded source/proof audit | [I005](../ideas/I005-classical-cuts-and-relations.md); user redirection |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -109,6 +110,9 @@ and review its handoff before continuing or dispatching again. End each search
 at its stated budget with findings and the next question.
 
 ## Next bounded session
+
+User redirection: start R03 from I005's classical-source reflection. Preserve
+A19 below as a supporting mechanical calculation rather than the main target.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.
 A18/B32 completed the sharp closed-trajectory action bound C060–C061.

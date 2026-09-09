@@ -12,6 +12,12 @@ define impulsive approximations, or introduce new random degrees of freedom.
 
 ## A03: completed calculation
 
+**Renewed priority, 2026-09-09:** [I005](../ideas/I005-classical-cuts-and-relations.md)
+and R03 ask what relational data must survive a cut. Compare composing full
+dynamics before eliminating interface variables with composing the reduced
+segments. Fix the experiment and preparation; identify ordinary classical
+memory before proposing an unavoidable action-valued remainder.
+
 [The reviewed note](../notes/cut-point-consistency.md) and B12 complete the
 five tests below. Chord errors vanish on arbitrary shrinking meshes. Exact
 Gaussian restriction consistency fixes $\kappa$, whereas the finite-defect

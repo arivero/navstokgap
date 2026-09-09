@@ -1,5 +1,10 @@
 # Idea incubator
 
+[I005](I005-classical-cuts-and-relations.md) returns the programme to the
+classical cut arguments: what relational information must survive subdivision,
+and how elimination of interface variables changes composition. R03 is the
+next conceptual model-design task; A19 remains a supporting inequality test.
+
 [I004](I004-bound-action-and-transport.md) supplies the current M07/A15/A16
 research pair and scale-selection test, grounded in B27's Kepler source audit.
 
