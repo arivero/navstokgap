@@ -6,6 +6,14 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
+**Current capsule, A12 to A13:** [B25](batches/B25.md),
+Balakrishnan–Bena–Van den Broeck pp. 7–8, 17–19, supplies the two-speed
+hard-point gas and exponential covariance. Collision paper §5 derives
+$\lambda=\rho u$ and $H_*=mu/\rho$ from Poisson gaps. Borrow the
+free-line/label-exchange construction; keep mass, speed and density fixed
+and change spacing correlations. Independence of spatial gaps is the deciding
+premise. Infinite gas and long observation are separate limits.
+
 **Source construction:** Pavliotis converts an integrated velocity correlation
 into a generator Poisson equation. Read the [source companion](../docs/Pavliotis_GreenKubo_2010.md),
 §2, pp. 4–6, especially the visually checked p. 5.

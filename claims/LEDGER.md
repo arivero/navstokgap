@@ -1,7 +1,8 @@
 # Results and claim ledger
 
-Updated 2026-09-08. The current mathematical evidence consists of written
-derivations, symbolic checks and internal proof review. Each entry names its
+Updated 2026-09-09. Current verification uses written derivations and source/proof
+review. Script checks in earlier entries are historical under AGENTS.md's hard
+rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
 
 ## Mechanical and operational results
@@ -55,6 +56,7 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C047 | Finite connected harmonic receiver at fixed centre velocity and independent fixed-energy uniform phases has $h_i(\Delta)=2m_i\sum_j w_{ij}(1-\cos\omega_j\Delta)/(\Delta\omega_j^2)\to0$; independent random centre velocity adds $m_i\sigma_0^2\Delta$ | [Conservative receiver note](../notes/conservative-harmonic-receiver.md); exact modal/two-body proof, bounded-energy speed margin, necessary joint-limit bound; B23 review and 15 checks |
 | C048 | Equal-mode-energy odd harmonic rings have iterated action limits $2\Theta/\Omega$ and zero in opposite size/window orders; $z\to\infty$, $z^2/N\to0$ gives the positive joint limit | Receiver note §5; $\Omega=2\sqrt{k/m}$, fixed $m,k,\Theta>0$, zero centre mode, density and Lipschitz proofs; B24 |
 | C049 | A common hard speed ceiling in C048's phase preparation forces $\Theta_N=O(N^{-1})$ and $\sup_\Delta h_N\to0$; bounded total energy also suffices for this closure | Receiver note §6; exact site-zero support maximum, cosecant sum and uniform bound; B24 and checks |
+| C050 | Equal-mass Poisson hard-point gas at density $\rho$ with iid velocities $\pm u$ and Palm tag has independent reversal waits of rate $\rho u$ and plateau $mu/\rho$; fixed-density cooling scales it linearly | Collision paper §5; ordered-gap proof, stationary velocity preparation, infinite gas first; [B25 review](../reviews/jepsen-receiver-B25.md) |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -104,6 +106,7 @@ consequences are identified separately.
 | C046 | Standard tensorization and derived local-frame consequence | B22; Levin–Peres §12.4, direct continuous-generator proof and clock audit |
 | C047 | Elementary finite harmonic propagation and displacement-variance consequence; phase-torus and centre conventions explicit | [B23](../references/batches/B23.md); Ford–Kac–Mazur and Zwanzig source ingredients; bounded audit, no novelty claim |
 | C048–C049 | Harmonic-chain spectral ingredients established; normalized limit and fixed-phase speed-support consequences derived | [B24](../references/batches/B24.md); three-page bounded audit, coordinator proof/source review; no novelty claim |
+| C050 | Established dichotomic Jepsen-gas covariance and Markov interpretation; explicit gap proof and action/scaling consequences | [B25](../references/batches/B25.md); source pp. 7–8, 17–19 and coordinator proof review |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.

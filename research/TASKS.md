@@ -67,7 +67,9 @@ handoff with the remaining dependency.
 | B23 | done | Ford–Kac–Mazur/Zwanzig harmonic-bath audit, coordinator source-image and proof review; reported nine-page coverage corrected | One Luna low, sequential | C047; assigned six pages, worker exceeded by three |
 | A11 | done | Periodic-chain density, noncommuting limits, joint regime and fixed-phase speed-support obstruction C048–C049 | Coordinator + Luna-low B24 | Receiver paper §§5–6; exact and numerical checks |
 | B24 | done | Three-page Ford–Kac–Mazur audit, zero searches; coordinator transcription and proof review | One Luna low, sequential | C048–C049 |
-| A12 | ready | Select a bounded-velocity interacting receiver and invariant preparation; derive or bound tagged low-frequency response and test energy dependence | Coordinator then one bounded librarian | A11/B24; scope/model decision first |
+| A12 | done | Two-speed Poisson hard-point gas generates rate $\rho u$ and plateau $mu/\rho$; C050 and cooling test | Coordinator + one Luna-low B25 | Existing collision paper §5; [handoff](handoffs/A12.md) |
+| B25 | done | Jepsen-gas covariance and Markov interpretation; corrected initial-state distinction | One Luna low, sequential | C050; worker exceeded five-page scope |
+| A13 | ready | Test spacing correlations at fixed mass, speed and density; specify stationary correlated preparation and tagged variance | Coordinator then one bounded librarian | A12/B25; isolate Poisson-gap premise |
 | S01 | done | Action-target skill upgrade and source-idea context-recovery skill, AGENTS hook and local routing validation | Coordinator, no additional worker | [handoff](handoffs/restart-skills-2026-09-08.md) |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
@@ -92,10 +94,10 @@ at its stated budget with findings and the next question.
 ## Next bounded session
 
 The A06/A09a consolidation is complete; the review maps remaining opportunities.
-Select A12's bounded-velocity receiver and preparation.
-Choose a spring network and preparation with explicit tagged spectral weights;
-compare receiver-size and observation limits. Derive rather than assume a
-Markov correlation law. A09 retains the physical scale-selection
+Start A13: hold mass, speed and density fixed and change spacing correlations.
+A12 derives the Markov clock from Poisson gaps; its plateau depends on preparation.
+A04's equal-mass spatial-clock subcase is covered by A12; general velocity laws
+retain incoming-speed bias. A09 retains the physical scale-selection
 target. A08/B16 and A06/B14 are complete. The user reaffirmed the
 continuum limit of cut points as the central problem. A02/B10 are complete;
 their collision mechanism is a diagnostic of supplied scales. M06 remains a

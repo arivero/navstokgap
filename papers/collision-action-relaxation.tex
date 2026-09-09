@@ -13,7 +13,7 @@ pdfauthor={navstokgap research working notes}}
 \newcommand{\Cov}{\operatorname{Cov}}
 \title{Physical-Time Action Relaxation in an Elastic Collision Bath}
 \author{navstokgap research working notes}
-\date{7 September 2026}
+\date{9 September 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -24,6 +24,8 @@ and collision frequency. Bounded bath velocities keep every collision below a
 fixed speed ceiling. The exact parameter dependence isolates the additional
 law needed for a universal action scale: energy and momentum conservation
 determine the collision map, while the reservoir statistics set the plateau.
+An equal-mass two-speed gas supplies a spatial realization: independent
+Poisson spacings generate reversal rate $\rho u$ and plateau $mu/\rho$.
 \end{abstract}
 
 \section{A momentum receiver and a classical stochastic clock}
@@ -179,6 +181,95 @@ requires an additional physical relation that fixes this balance across systems.
 Ben-Naim and Krapivsky provide a useful clock comparison: exponential decay
 in collision number becomes algebraic decay in physical time in their cooling
 model \cite[p.~6, (14)--(17)]{BenNaimKrapivsky2003InelasticMaxwell}.
+
+\section{A spatial receiver with an exact collision clock}\label{sec:spatial}
+An infinite equal-mass hard-point gas realizes the two-speed action plateau
+with every particle's speed bounded by $u<c$. Its encounter clock follows
+from the initial spatial statistics. This is the dichotomic Jepsen-gas case
+analyzed by Balakrishnan, Bena and Van den Broeck
+\cite[pp.~7--8, (11)--(12), pp.~17--19]{BalakrishnanBenaVanDenBroeck2002}.
+The following construction makes its clock explicit.
+
+Fix $m,\rho,u>0$. Put a tagged particle at the origin and independently put
+Poisson particles of intensity $\rho$ on the rest of the line. Give every
+particle an independent sign, with velocities $+u$ and $-u$ equally likely.
+This is the Palm preparation: a typical particle is placed at zero, with
+independent gas on either side. Particles move freely between instantaneous
+elastic collisions, exchanging velocities and preserving their spatial order.
+Each collision conserves momentum and kinetic energy. The initial energy
+per unit length has mean $\rho m u^2/2$; the reservoir has infinite extent.
+
+The equivalent free-trajectory construction lets particles cross and exchanges
+their physical labels at crossings. Each marked Poisson stream is translated
+rigidly, so the untagged homogeneous marked-gas law is invariant. A tagged
+path on $[0,T]$ lies inside $[-uT,uT]$; only free lines starting in
+$[-2uT,2uT]$ can intersect that region during this interval. There are almost
+surely finitely many such lines and crossings. This constructs the local
+dynamics without an accumulation of collisions. Positions are continuous
+and piecewise linear; velocities are right-continuous with impulsive changes.
+
+\begin{proposition}[Spatially generated reversals]\label{prop:spatial}
+In this preparation the tagged velocity is a stationary symmetric two-state
+Markov chain with reversal rate $\lambda=\rho u$. Consequently
+\begin{align}
+ C(s)&=u^2e^{-2\rho u s},\\
+ \mathsf h(\Delta)&=\frac{mu}{\rho}
+ \left[1-\frac{1-e^{-2\rho u\Delta}}{2\rho u\Delta}\right],
+ & H_*&=\frac{mu}{\rho}>0.
+ \label{eq:spatial-plateau}
+\end{align}
+Here $\mathsf h(\Delta)=m\Var[X(t+\Delta)-X(t)]/\Delta$,
+and the limit is $\Delta\to\infty$ at fixed $m,\rho,u$ in the infinite gas.
+\end{proposition}
+\begin{proof}
+Condition first on tagged initial velocity $+u$. Write $B_1<B_2<\cdots$
+for the initial positions of negative-velocity free lines to its right, and
+$-A_1>-A_2>\cdots$ for positive-velocity lines to its left; set $A_0=B_0=0$.
+Independent thinning makes $(A_j)$ and $(B_j)$ independent Poisson arrival
+sequences of intensity $\rho/2$. Their successive gaps are independent
+exponentials of that rate.
+
+The tag first switches from the line $ut$ to $B_1-ut$, then to $-A_1+ut$,
+then to $B_2-ut$, and so on. Lines with the same velocity remain parallel;
+at each switch the next opposing line is the next unused member of the
+corresponding ordered sequence. Solving these intersections gives
+\[
+ t_{2j-1}=\frac{B_j+A_{j-1}}{2u},\qquad
+ t_{2j}=\frac{B_j+A_j}{2u}.
+\]
+Thus successive waiting times alternate between
+$(B_j-B_{j-1})/(2u)$ and $(A_j-A_{j-1})/(2u)$: all are independent
+exponentials of rate $\rho u$. Reflection proves the same law for initial
+velocity $-u$. The independent uniform initial sign is the stationary law
+of this chain. Its covariance follows by taking the parity of its Poisson
+reversal count. Integrating
+$2m\int_0^\Delta(1-s/\Delta)C(s)\,ds$ proves the action formula.
+\end{proof}
+
+The mechanical statement agrees with the source's covariance (12). Its
+discussion distinguishes a tag initially at $\pm u$ from a tag initially at
+rest: p.~19 gives the ballistic term $e^{-\rho ut}\delta(X\mp ut)$ in the
+former case, and a Bessel-weighted atom at zero in the latter. Our proposition
+uses the former preparation throughout.
+
+\subsection{The scale supplied by spatial preparation}
+The mean collision duration is $1/(\rho u)$, and the plateau has the
+action units of momentum times mean spacing: $H_*=mu/\rho$.
+At fixed density, cooling $u\mapsto\epsilon u$ changes the collision rate
+by $\epsilon$ and the plateau by $\epsilon$, rather than the quadratic
+scaling of the independently clocked bath. At fixed $u$, increasing
+$\rho$ also closes the plateau. Each family retains the hard speed ceiling.
+A shared value $K$ across these gases therefore requires
+$\rho_m=mu_m/K$; a preparation law would have to select this relation.
+
+This realization advances the mechanical-clock obligation and inherits the
+two-speed bridge and cut results through equality of the tagged path laws.
+The positive plateau concerns long observation windows; microscopic refinement
+still gives $\mathsf h(\Delta)\sim mu^2\Delta\to0$. The next test holds
+$m,u,\rho$ fixed while changing spacing correlations, to identify how much of
+the plateau is supplied by Poisson preparation. This is a classical impulsive
+gas in a chosen frame, with a kinematic speed ceiling; a relativistic collision
+theory or a smooth-force realization would add further dynamics.
 
 \section{Return to the partition question}
 The project's central question concerns a sequence of time partitions

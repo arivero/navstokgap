@@ -5,8 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A11/B24 complete;
-A06/A09a paper consolidation complete; A12 bounded-velocity receiver design next.
+Updated: 2026-09-09. Current milestone: A12/B25 complete; A13 next.
+
+**A12/B25 are complete.** The collision paper derives a mechanical clock from
+the two-speed Poisson hard-point gas: $\lambda=\rho u$, $H_*=mu/\rho$.
+Every particle retains speed $u<c$. Independent spatial gaps supply the waiting
+times; density and prepared speed supply the action value. C050 has a Luna-low
+source audit and coordinator written proof/source review, with no numerical
+scripts. **A13** holds mass, speed and density fixed and changes spacing
+correlations. See [A12 handoff](handoffs/A12.md).
 
 **A11/B24 are complete.** The existing receiver paper now contains the
 periodic-chain limit $\Theta\sqrt{m/k}$, opposite iterated limits, a joint

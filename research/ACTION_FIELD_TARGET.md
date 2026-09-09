@@ -8,7 +8,11 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A11/B24: **A12**, choose a bounded-velocity receiver
+Immediate priority after A12/B25: **A13**, change spacing correlations at fixed
+mass, speed and density. A12 derives $\lambda=\rho u$ and plateau $mu/\rho$
+from independent Poisson gaps; A13 tests that preparation premise.
+
+The preceding priority after A11/B24 was **A12**, choose a bounded-velocity receiver
 and its invariant preparation. A11 derives a positive periodic-chain limit
 from extensive mode energy, but its common hard-speed condition closes the
 response uniformly in the window. The next model must address that preparation

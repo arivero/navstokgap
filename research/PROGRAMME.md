@@ -39,6 +39,12 @@ as its axioms and quantifiers become precise.
 
 ## Current priority: composition and scale selection
 
+**A12/B25 are complete.** The collision manuscript derives the clock
+$\lambda=\rho u$ from independent spatial gaps in a two-speed equal-mass
+gas, giving $H_*=mu/\rho$ with a common hard speed ceiling. **A13** next
+changes spacing correlations at fixed mass, speed and density, testing which
+part of the response is selected by preparation.
+
 **A11/B24 are complete.** The consolidated receiver paper gives a periodic
 chain plateau $\Theta\sqrt{m/k}$ in one order of limits, zero in the reverse
 order, and closure under a common hard speed ceiling in the stated phase
