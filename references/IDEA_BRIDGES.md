@@ -6,6 +6,14 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
+**Current capsule, A13 to A14:** [B26](batches/B26.md) supplied bounded
+background coverage and the preparation comparison. Collision paper §6
+proves that ordered streams cancel periodically at A12's mechanical scales.
+Next borrow the free-line intersection formula for independent stationary
+renewal streams. Track the Palm forward residual, ordinary subsequent gaps
+and variance growth. The deciding issue is a quantitative lower fluctuation
+bound, not just an invariant preparation or a fixed mean rate.
+
 **Current capsule, A12 to A13:** [B25](batches/B25.md),
 Balakrishnan–Bena–Van den Broeck pp. 7–8, 17–19, supplies the two-speed
 hard-point gas and exponential covariance. Collision paper §5 derives

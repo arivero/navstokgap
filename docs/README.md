@@ -83,6 +83,9 @@ the repository introduction prepared for `a.rivero.nom.es`.
 
 The [B25 Jepsen-gas companion](batches/B25/jepsen-source-companion.md)
 supplies the mechanical receiver and preparation test in A12/A13.
+The [B26 ordered-preparation audit](batches/B26/ordered-source-companion.md)
+records source coverage for the fixed-scale periodic countertest and A14's
+renewal-stream direction.
 
 Retrieved 2026-09-05 from Clay and versioned arXiv PDFs. Each PDF has a short
 Markdown companion recording the portions used and reading coverage.

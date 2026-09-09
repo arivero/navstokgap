@@ -26,6 +26,8 @@ law needed for a universal action scale: energy and momentum conservation
 determine the collision map, while the reservoir statistics set the plateau.
 An equal-mass two-speed gas supplies a spatial realization: independent
 Poisson spacings generate reversal rate $\rho u$ and plateau $mu/\rho$.
+Ordered streams instead give periodic tagged motion and a zero plateau at
+the same mass, density, speed and mean collision frequency.
 \end{abstract}
 
 \section{A momentum receiver and a classical stochastic clock}
@@ -270,6 +272,73 @@ $m,u,\rho$ fixed while changing spacing correlations, to identify how much of
 the plateau is supplied by Poisson preparation. This is a classical impulsive
 gas in a chosen frame, with a kinematic speed ceiling; a relativistic collision
 theory or a smooth-force realization would add further dynamics.
+
+\section{Ordered streams at fixed mechanical scales}\label{sec:ordered}
+Spatial correlations can cancel displacement while collisions continue at
+the same mean frequency. Fix the preceding $m,\rho,u$ and put $a=2/\rho$.
+Positive free lines start at $a\mathbb Z+U_+$ and negative lines at
+$a\mathbb Z+U_-$, with independent uniform phases on $[0,a)$.
+Their union has density $\rho$, equal one-particle probabilities for $\pm u$
+and energy density $\rho mu^2/2$. Uniform phases make the marked law
+invariant under translation and under
+$(U_+,U_-)\mapsto(U_++ut,U_--ut)\pmod a$.
+Elastic label exchange gives the same hard-point dynamics. This changes
+joint position--velocity correlations, including independence of the marks.
+
+\begin{proposition}[Periodic cancellation]\label{prop:ordered}
+For a typical particle placed at zero, set $d=a/(2u)=1/(\rho u)$.
+Its stationary velocity is a uniform-phase square wave with period $2d$.
+For $\Delta>0$, put
+\[
+ \delta=\Delta-2d\left\lfloor\frac{\Delta}{2d}\right\rfloor,
+ \qquad s=\min\{\delta,2d-\delta\}.
+\]
+Then
+\[
+ \mathsf h(\Delta)=\frac{mu^2}{\Delta}
+ \left(s^2-\frac{2s^3}{3d}\right),\qquad
+ 0\le\mathsf h(\Delta)\le\frac{m}{3\rho^2\Delta}
+ \longrightarrow0\quad(\Delta\to\infty).
+\]
+\end{proposition}
+\begin{proof}
+The equal stream intensities give the Palm tag a uniform sign. Conditional
+on positive sign, its own stream is $a\mathbb Z$ and the opposing stream
+has independent uniform phase $U\in(0,a)$. The intersection formulas in
+Proposition~\ref{prop:spatial} apply with $A_j=ja$ and $B_j=U+(j-1)a$.
+The first collision time is $R=U/(2u)$, uniform on $(0,d)$; all subsequent
+waits are $d$. Reflection treats negative sign. Uniform sign and residual
+duration give the stationary square-wave law. Its integral has zero
+displacement over each period $2d$.
+
+For $0\le s\le d$ there is at most one reversal. No reversal has probability
+$1-s/d$; a residual time $r\in(0,s)$ gives displacement of magnitude
+$u|2r-s|$. Sign symmetry gives zero mean, hence
+\[
+ \Var[X(t+s)-X(t)]
+ =u^2\left[(1-s/d)s^2+\frac1d\int_0^s(2r-s)^2\,dr\right]
+ =u^2\left(s^2-\frac{2s^3}{3d}\right).
+\]
+Periodicity reduces any duration modulo $2d$. For $\delta>d$, zero full-period
+displacement and stationary phase identify its variance with that of the
+complementary duration $2d-\delta$. The polynomial increases on $[0,d]$
+to $d^2/3$. Multiplication by $m/\Delta$ proves the bound.
+\end{proof}
+
+Both preparations have collision frequency $1/d=\rho u$, velocity variance
+$u^2$ and the same energy density. The ordered case reverses forever while
+displacement cancels periodically. Its phase law retains conserved global
+information and is not mixing. Local finiteness ensures existence on every
+finite window; simultaneous collisions at distinct lattice sites are disjoint
+binary events, and initial phase coincidences have probability zero.
+
+This comparison isolates correlation control as a further ingredient for
+preparation-independent positivity. The next test replaces each lattice by
+an independent stationary renewal stream with the same mean gap, and asks
+how gap variance controls the plateau. It will distinguish positivity for
+one preparation from a uniform lower bound over preparations. The explicit
+ordered construction is derived here; B26 records its bounded prior-art
+search separately.
 
 \section{Return to the partition question}
 The project's central question concerns a sequence of time partitions

@@ -8,7 +8,13 @@ defects serve as tests of its premises.
 
 ## Variables and proof obligations
 
-Immediate priority after A12/B25: **A13**, change spacing correlations at fixed
+Immediate priority after A13/B26: **A14**, independent stationary renewal
+streams with fixed mean gap and variable gap variance. A13's ordered streams
+close the response at A12's mechanical scales and mean rate. Derive the Palm
+residual law and determine which quantitative fluctuation premise survives
+near-ordered preparations.
+
+The preceding priority after A12/B25 was **A13**, change spacing correlations at fixed
 mass, speed and density. A12 derives $\lambda=\rho u$ and plateau $mu/\rho$
 from independent Poisson gaps; A13 tests that preparation premise.
 

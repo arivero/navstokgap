@@ -5,7 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A12/B25 complete; A13 next.
+Updated: 2026-09-09. Current milestone: A13/B26 complete; A14 next.
+
+**A13/B26 are complete.** Collision paper §6 compares ordered and Poisson
+streams at fixed mass, speed, density and mean collision rate. The ordered
+Palm tag is a stationary square wave; its displacement variance stays bounded,
+giving $\mathsf h(\Delta)\le m/(3\rho^2\Delta)\to0$. C051 changes joint
+position–velocity correlations, including mark independence. **A14** tests
+stationary renewal streams with variable gap variance at fixed mean gap.
+See [A13 handoff](handoffs/A13.md). One Luna-low audit; written verification only.
 
 **A12/B25 are complete.** The collision paper derives a mechanical clock from
 the two-speed Poisson hard-point gas: $\lambda=\rho u$, $H_*=mu/\rho$.

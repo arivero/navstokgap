@@ -57,6 +57,7 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C048 | Equal-mode-energy odd harmonic rings have iterated action limits $2\Theta/\Omega$ and zero in opposite size/window orders; $z\to\infty$, $z^2/N\to0$ gives the positive joint limit | Receiver note §5; $\Omega=2\sqrt{k/m}$, fixed $m,k,\Theta>0$, zero centre mode, density and Lipschitz proofs; B24 |
 | C049 | A common hard speed ceiling in C048's phase preparation forces $\Theta_N=O(N^{-1})$ and $\sup_\Delta h_N\to0$; bounded total energy also suffices for this closure | Receiver note §6; exact site-zero support maximum, cosecant sum and uniform bound; B24 and checks |
 | C050 | Equal-mass Poisson hard-point gas at density $\rho$ with iid velocities $\pm u$ and Palm tag has independent reversal waits of rate $\rho u$ and plateau $mu/\rho$; fixed-density cooling scales it linearly | Collision paper §5; ordered-gap proof, stationary velocity preparation, infinite gas first; [B25 review](../reviews/jepsen-receiver-B25.md) |
+| C051 | Independent uniform phases of two opposite-speed lattices, each spacing $2/\rho$, give a stationary square-wave tag and $0\le\mathsf h(\Delta)\le m/(3\rho^2\Delta)\to0$ at C050's mass, speed, density and mean collision rate | Collision paper §6; Palm/intersection proof and folded cubic variance; [B26 review](../reviews/ordered-preparation-B26.md); joint mark/position preparation changes |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -107,6 +108,7 @@ consequences are identified separately.
 | C047 | Elementary finite harmonic propagation and displacement-variance consequence; phase-torus and centre conventions explicit | [B23](../references/batches/B23.md); Ford–Kac–Mazur and Zwanzig source ingredients; bounded audit, no novelty claim |
 | C048–C049 | Harmonic-chain spectral ingredients established; normalized limit and fixed-phase speed-support consequences derived | [B24](../references/batches/B24.md); three-page bounded audit, coordinator proof/source review; no novelty claim |
 | C050 | Established dichotomic Jepsen-gas covariance and Markov interpretation; explicit gap proof and action/scaling consequences | [B25](../references/batches/B25.md); source pp. 7–8, 17–19 and coordinator proof review |
+| C051 | Explicit ordered-preparation consequence; exact ensemble unmatched in two-query search, novelty unassessed | [B26](../references/batches/B26.md); two HTML documents, coordinator proof review |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.

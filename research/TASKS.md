@@ -69,7 +69,9 @@ handoff with the remaining dependency.
 | B24 | done | Three-page Ford–Kac–Mazur audit, zero searches; coordinator transcription and proof review | One Luna low, sequential | C048–C049 |
 | A12 | done | Two-speed Poisson hard-point gas generates rate $\rho u$ and plateau $mu/\rho$; C050 and cooling test | Coordinator + one Luna-low B25 | Existing collision paper §5; [handoff](handoffs/A12.md) |
 | B25 | done | Jepsen-gas covariance and Markov interpretation; corrected initial-state distinction | One Luna low, sequential | C050; worker exceeded five-page scope |
-| A13 | ready | Test spacing correlations at fixed mass, speed and density; specify stationary correlated preparation and tagged variance | Coordinator then one bounded librarian | A12/B25; isolate Poisson-gap premise |
+| A13 | done | Ordered counterpropagating streams give periodic tag and zero plateau at fixed mechanical scales and mean rate; C051 | Coordinator + one Luna-low B26 | Collision paper §6; [handoff](handoffs/A13.md) |
+| B26 | done | Ordered-preparation prior-art audit: two queries, two HTML sources; no exact match in coverage | One Luna low, sequential | C051; coordinator metadata and proof review |
+| A14 | ready | Independent stationary renewal streams at fixed mean gap: Palm residual law, tagged variance growth and gap-variance dependence | Coordinator then one bounded librarian | A13/B26; test quantitative preparation control, including near-ordered limits |
 | S01 | done | Action-target skill upgrade and source-idea context-recovery skill, AGENTS hook and local routing validation | Coordinator, no additional worker | [handoff](handoffs/restart-skills-2026-09-08.md) |
 | C01 | ready | Companion map: finite-c mechanics, heat/Poincare coercivity, NS/YM; explicit non-implications and candidate transferable estimate | Analyst | Existing Millennium notes |
 | F01 | waiting | Lean feasibility: crossover real-arithmetic lemma first, quadratic no-gap family second; pin toolchain and audit axioms, no `sorry` | Sol formalisation, reviewer | A09 acceptance and tooling decision |
@@ -94,7 +96,11 @@ at its stated budget with findings and the next question.
 ## Next bounded session
 
 The A06/A09a consolidation is complete; the review maps remaining opportunities.
-Start A13: hold mass, speed and density fixed and change spacing correlations.
+Start A14: replace ordered streams by independent stationary renewal streams
+at fixed mean gap. Derive the Palm residual law and tagged variance growth;
+test whether mixing supplies a uniform bound as gap variance decreases.
+A13 holds mass, speed, density and mean collision rate fixed while closing
+the response through periodic cancellation.
 A12 derives the Markov clock from Poisson gaps; its plateau depends on preparation.
 A04's equal-mass spatial-clock subcase is covered by A12; general velocity laws
 retain incoming-speed bias. A09 retains the physical scale-selection
