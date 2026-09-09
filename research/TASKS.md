@@ -10,7 +10,9 @@ handoff with the remaining dependency.
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
 | R03 | done | Fixed-energy receiver cut maps, nonsemigroup position kernel, reset freezing limit and phase-state restoration; C062–C063 | Coordinator + Luna-low B33 | [R03 handoff](handoffs/R03.md) |
 | B33 | done | Two cached primary pages, zero searches; cut-state source/proof audit and coordinator coverage correction | One Luna low, sequential | R03 |
-| R04 | ready | Three-body spring receiver: retain tagged position and momentum, eliminate one receiver mode, derive interface memory and finite-history recovery at fixed preparation | Coordinator then one bounded librarian | R03/B33; Zwanzig p. 219 |
+| R04 | done | Exact three-body memory, canonical/physical tagged momentum conversion, two-time phase recovery and cooling countertest; C064–C065 | Coordinator + Luna-low B34 | [R04 handoff](handoffs/R04.md) |
+| B34 | done | Two searches, three primary pages; Zwanzig elimination and Hermann–Krener observability, coordinator source/proof review | One Luna low, sequential | R04 |
+| R05 | ready | Specify a classical mechanical readout of R04 tagged phase; track accuracy, disturbance and resources under refinement, testing quiet/scalable preparations before any action-floor inference | Coordinator then bounded librarian | R04/B34; observability conditioning |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -113,9 +115,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R04 from the completed R03/B33 cut-state test: retain tagged phase state
-and eliminate an independent receiver mode. Preserve A19 below as a supporting
-mechanical calculation. R03 established C062–C063; see its handoff.
+Start R05 from the completed R04/B34 receiver-memory test: specify the
+mechanical readout and test precision, disturbance and resource scaling.
+Preserve A19 below as a supporting mechanical calculation. R04 established
+C064–C065; see its handoff.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.
 A18/B32 completed the sharp closed-trajectory action bound C060–C061.

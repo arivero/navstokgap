@@ -343,7 +343,44 @@ The normalized orbital action is \(J=(2\pi)^{-1}\oint p\,dq=E/\omega\):
 integrating \(\mu\omega A^2\sin^2\phi\) over a cycle proves the formula.
 Uniform-phase covariance also has square-root determinant \(E/\omega\).
 Cooling \(E\downarrow0\) at fixed Hamiltonian closes both, with exact
-phase-state composition intact. R04 next retains tagged momentum while
-eliminating an independent receiver mode, testing the additional memory
-exposed by Zwanzig's reduced equation.
+phase-state composition intact. R04 extends this test to a third body,
+as follows.
+
+\hypertarget{a-third-body-exact-memory-and-recoverable-history}{%
+\subsection{9. A third body: exact memory and recoverable
+history}\label{a-third-body-exact-memory-and-recoverable-history}}
+
+Retaining tagged momentum leaves receiver memory in the equal-mass open
+three-body chain. At zero centre position and momentum, let \(x=x_1\),
+\(y=x_2-x_3\), \(\mu=3m/2\), \(\nu=m/2\), \(P=\mu\dot x\) and
+\(Q=\nu\dot y\). Physical tagged momentum is \(p_1=2P/3\). The internal
+Hamiltonian is
+
+\[H=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
++\frac{9k}{8}x^2-\frac{3k}{4}xy+\frac{5k}{8}y^2.\]
+
+For fixed microcanonical energy \(E>0\), eliminate \(y,Q\) exactly. With
+\(g=3k/4\), \(d=5k/4\) and \(\Omega^2=5k/(2m)\),
+
+\[\mu\ddot x+\frac{9k}{5}x
++\int_0^t\frac{9k}{20}\cos\Omega(t-s)\dot x(s)\,ds=F_0(t),\]
+
+\[F_0(t)=g\left(y_0-\frac gd x_0\right)\cos\Omega t
++\frac{gQ_0}{\nu\Omega}\sin\Omega t.\]
+
+These inherited quadratures carry the receiver information across a cut.
+The kernel has stiffness units; its convolution is a force. The full
+proof in \href{three-body-cut-memory.md}{R04} also recovers the hidden
+pair from tagged phase at two sufficiently close times. The relevant
+block determinant is \(g^2\delta^4/(12\mu\nu)+O(\delta^6)\); inverse
+entries grow up to \(\delta^{-3}\). Exact recovery and finite-precision
+physical readout therefore pose different requirements.
+
+The internal frequencies are \(\sqrt{k/m}\) and \(\sqrt{3k/m}\), and
+modal actions are \(E_j/\omega_j\). Cooling scales the actions to zero
+while keeping the memory kernel fixed. C064--C065 and
+\href{../references/batches/B34.md}{B34} record this derived
+specialization of harmonic-bath elimination and observability. R05 next
+specifies the measurement interaction and tests its precision,
+disturbance and resource scaling.
 \end{document}

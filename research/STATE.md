@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: R03/B33 complete.
+Updated: 2026-09-10. Current milestone: R04/B34 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -20,12 +20,18 @@ resets freeze terminal position under refinement while preserving stationary
 one-time marginals. Full phase-state cuts compose exactly. C062–C063 have
 one Luna-low two-page audit and coordinator source/proof review.
 
-Start **R04**: retain tagged position and momentum in a three-body spring
-receiver, eliminate one independent receiver mode, and derive the interface
-memory needed for exact composition. Keep the experiment and preparation
-fixed. Read [R03 handoff](handoffs/R03.md) and
-[I005](../ideas/I005-classical-cuts-and-relations.md). A19 remains the
-supporting mechanical track.
+**R04/B34 complete:** [the three-body note](../notes/three-body-cut-memory.md)
+derives exact receiver memory even with tagged momentum retained. Two nearby
+exact tagged-phase observations restore the full state; the inverse becomes
+ill-conditioned as their separation shrinks. Coupling fixes the memory kernel,
+while cooling closes prepared action scales. C064–C065 have one completed
+Luna-low audit and coordinator written/source review.
+
+Start **R05**: specify a mechanical readout and track its precision,
+back-reaction and resources under refinement. Test quiet and scalable
+preparations before inferring an action floor from finite-precision recovery.
+Read [R04 handoff](handoffs/R04.md) and [I005](../ideas/I005-classical-cuts-and-relations.md).
+A19 remains the supporting mechanical track.
 
 Supporting task **A19** replaces the pointwise speed floor by a peak-momentum or
 kinetic-excursion premise that permits turning-point stops. **A18/B32** proves

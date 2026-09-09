@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 23, 2026-09-09.
+Version 24, 2026-09-10.
 
 ## Aim
 
@@ -45,9 +45,13 @@ receiver fail composition. Independent direction resets freeze terminal position
 under refinement while leaving one-time marginals invariant. Full phase state
 restores exact composition, and its action $E/\omega$ remains prepared.
 C062–C063 have a two-page Luna-low audit and coordinator written/source review.
-**R04 is next:** retain tagged position and momentum while eliminating an
-independent receiver mode in a three-body spring experiment. Derive the exact
-memory/interface term and test finite-history recovery. This follows
+**R04/B34 are complete:** the [three-body note](../notes/three-body-cut-memory.md)
+derives the surviving receiver memory with tagged momentum retained, two-time
+phase reconstruction and its short-separation conditioning. C064–C065 separate
+the fixed coupling kernel from prepared action scales that close under cooling.
+**R05 is next:** specify a mechanical readout with explicit accuracy,
+disturbance and resources. Test whether its refinement requirement selects a
+scale or simply demands a more precise preparation. This follows
 [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection

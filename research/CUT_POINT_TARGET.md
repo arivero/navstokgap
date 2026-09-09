@@ -12,9 +12,11 @@ define impulsive approximations, or introduce new random degrees of freedom.
 
 **R03/B33 completed:** [the cut-state test](../notes/classical-cut-state.md)
 separates exact phase-state composition from independent position-conditioned
-resets, whose terminal refinement limit freezes motion. **R04 is next:** keep
-tagged momentum and eliminate an independent receiver mode, deriving the memory
-needed at the interface. A19 remains a supporting excitation test.
+resets, whose terminal refinement limit freezes motion. **R04/B34 completed:**
+[the three-body test](../notes/three-body-cut-memory.md) retains tagged momentum
+and derives the receiver memory and two-time recovery map. **R05 is next:**
+model the physical readout needed for that increasingly sensitive reconstruction.
+A19 remains a supporting excitation test.
 
 ## A03: completed calculation
 

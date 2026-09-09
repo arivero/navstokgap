@@ -18,6 +18,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B34](../references/batches/B34.md): three-body receiver memory and
+  finite-history recovery; [source companion](batches/B34/receiver-memory-source-companion.md).
+
 - [B23](../references/batches/B23.md): conservative harmonic receiver;
   [source companion](batches/B23/harmonic-receiver-source-companion.md).
 - [B22](../references/batches/B22.md): observable access and independent products;

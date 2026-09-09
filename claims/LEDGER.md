@@ -77,11 +77,21 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C062 | Fixed-energy uniform-phase two-body spring receiver: stationary position-conditioned kernels have mean composition defect $-q\sin\omega s\sin\omega t$; phase state restores exact composition, and two positions recover momentum off half-period sampling | [R03 §§1–2](../notes/classical-cut-state.md); written derivation, B33 and coordinator review |
 | C063 | At fixed duration and initial position, independent equal-step conditional direction resets converge terminally in $L^2$ to that position; stationary one-time law is preserved but two-time correlation freezes. Canonical $J=E/\omega$ tends to zero across cooled preparations at fixed Hamiltonian | R03 §§3–4; explicit moment recurrences and ellipse integral; B33 review |
 
+| C064 | Centre-reduced equal-mass three-body chain with tagged phase retained has exact cosine memory $\Gamma(t)=(9k/20)\cos(\sqrt{5k/(2m)}t)$ and inherited receiver quadratures; identical tagged phase can have different futures at fixed energy | [R04 §§1–3](../notes/three-body-cut-memory.md); canonical reduction, elimination and fixed-energy pair; B34 review |
+| C065 | Two sufficiently close exact tagged-phase samples recover the receiver pair through $\det B_\delta=g^2\delta^4/(12\mu\nu)+O(\delta^6)$; inverse sensitivity grows while cooling closes modal actions without changing the memory kernel | R04 §§4–5; Taylor coefficients, analytic determinant and normal-mode scaling; B34 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C064–C065: [B34](../references/batches/B34.md) covers Zwanzig's exact
+oscillator-bath reduction and Hermann–Krener's observability framework in
+two searches and three primary pages. Chain coefficients, sampled determinant
+and scaling are derived specializations; exact prior publication is unassessed.
+[Coordinator review](../reviews/three-body-memory-B34.md) accepts the written
+proofs separately from the bounded literature coverage.
 
 C062–C063: [B33](../references/batches/B33.md) audits two cached primary
 pages with zero searches. Harmonic propagation and bath-memory reduction are
