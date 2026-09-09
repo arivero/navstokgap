@@ -114,8 +114,9 @@ premises visible. It gives a constant-in-time classical action observable;
 the remaining selection problem is a physical mechanism fixing its value and
 its preparation across systems.
 
-A16 should test scale-changing transformations of this canonical estimator,
-including their effect on the external coupling and preparation. A future
+[A16](action-scale-dilation.md) now proves the conditional dilation obstruction,
+including its effect on coupling and preparation. A17 tests a fixed potential
+and force ceiling. A future
 receiver extension of A15 would need two separated time scales before an
 intermediate-window plateau is proposed. The [B29 audit](../references/batches/B29.md)
 and coordinator review complete this single-orbit test.

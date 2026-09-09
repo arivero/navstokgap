@@ -65,11 +65,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C054 | Uniform circular phase gives transport response $\ell(1-\cos z)/(\gamma z)$ and averaged position-conditioned coefficient $\ell\sin^2z/(2\gamma z)$; fixed positive action fraction bounds window ratios | [A15 note](../notes/bound-orbit-action-observable.md), $z=\omega\Delta$; phase-average proofs and B29 |
 | C055 | Twice the projected canonical covariance area equals orbital action for uniform circular phase and is affine-symplectic invariant; other phase preparations conserve their own value, including zero; C052/C053 thresholds transfer within uniform preparation | A15 covariance/orbit-map proofs, gap laboratory, B29 and coordinator source review |
 
+| C056 | External-potential dilation preserves mass, velocity, energy and invariant pushforward preparation; normalized orbit action, covariance area and corresponding-window response scale by $a$ | [A16 proof](../notes/action-scale-dilation.md); smooth transformed domain, finite moments; B30 and coordinator written review |
+| C057 | A class containing arbitrarily small contractions of one positive finite degree-one action observable has positive-value infimum zero; a common finite value must be zero under any nontrivial admitted contraction | A16 closure proposition; model/preparation class explicit; coupling and force countertests; B30 |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C056–C057 have the bounded [B30 audit](../references/batches/B30.md):
+conformally symplectic scaling has established geometric prior art; the exact
+model map and conditional infimum statements are elementary derived consequences.
+No exact match was found in the two-source coverage; novelty is unassessed.
+[Coordinator review](../reviews/dilation-B30.md) accepts the written proofs.
 
 C054–C055 have the bounded [B29 audit](../references/batches/B29.md):
 covariance determinant and affine symplectic invariance are established

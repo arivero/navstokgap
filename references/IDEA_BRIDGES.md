@@ -6,7 +6,12 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
-**Current capsule — A15 complete, A16 next:** [B29](batches/B29.md),
+**Current capsule — A16 complete, A17 next:** [B30](batches/B30.md) connects
+conformally symplectic scaling to a conditional action-infimum obstruction.
+Hold the potential and force ceiling fixed for the next small-circle test;
+loss of contraction closure alone supplies no positive bound.
+
+**A15 input:** [B29](batches/B29.md),
 Groening et al. p. 2 Eq. (9), supplies the rms-emittance determinant.
 A15 uses physical canonical units and obtains $2\sqrt{\det\Sigma}=\ell$
 for uniform circular phase. Borrow its symplectic covariance rule; next test

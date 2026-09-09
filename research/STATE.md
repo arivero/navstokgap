@@ -5,11 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A15/B29 complete.
+Updated: 2026-09-09. Current milestone: A16/B30 complete.
 
 ## Current restart decision
 
-Start **A16**, testing space/time scaling against the classical axioms.
+Start **A17**, testing small circular orbits at fixed potential and force ceiling.
+**A16/B30** proves action scales by $a$ under simultaneous space/time
+contraction, with zero infimum for any class closed under arbitrarily small
+contractions. Couplings and force ceilings can obstruct this map; they need
+a separate positive-bound test. See [A16 handoff](handoffs/A16.md), C056–C057.
 **A15/B29** gives a canonical covariance estimator equal to orbital action
 under uniform circular phase, while transport response vanishes at both
 window extremes. Each phase preparation preserves its own covariance area.
@@ -23,8 +27,8 @@ Read [I004](../ideas/I004-bound-action-and-transport.md), the
 [repository review](../reviews/repository-review-2026-09-09.md).
 
 **A14** remains a bounded renewal-preparation diagnostic. **R02** preserves and
-audits the repaired I003 finite-propagation ideas. **A16** tests scale-changing
-dilations against the proposed axioms. M06, G03, Q01 and the historical/source
+audits the repaired I003 finite-propagation ideas. **A16** completed the conditional scale-changing
+dilation test; **A17** examines the fixed-force class. M06, G03, Q01 and the historical/source
 queues remain live supporting tracks. No new claim ID was accepted in P03.
 
 The hard-rule loophole in `make figures` is closed; it now refuses to execute

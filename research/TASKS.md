@@ -14,7 +14,9 @@ handoff with the remaining dependency.
 | B28 | done | Bounded softened-core audit; two queries, no new primary pages, coordinator corrected escape-energy wording | One Luna low, sequential | C052–C053; B27 source reuse |
 | A15 | done | Circular conditional/transport variance, window-ratio bound and canonical covariance estimator; C054–C055 | Coordinator + sequential Luna-low B29 | [A15 handoff](handoffs/A15.md) |
 | B29 | done | Two-query, two-page rms-emittance audit and A15 written-proof review | One Luna low + coordinator | A15 |
-| A16 | ready | Test simultaneous space/time dilation against admissibility axioms; track couplings, preparation and action; prove exact closure statement | Coordinator then sequential librarian | A15 model selection |
+| A16 | done | Exact external-potential dilation and conditional zero-infimum theorem C056–C057; couplings, preparation and force constraints explicit | Coordinator + Luna-low B30 | [A16 handoff](handoffs/A16.md) |
+| B30 | done | Two-query, two-HTML-source scaling audit; coordinator source and written-proof review | One Luna low, sequential | C056–C057 |
+| A17 | ready | Fixed smooth confining potential and force ceiling: small-radius circular action test, with explicit energy and preparation premises | Coordinator then bounded librarian | A16 closure obstruction |
 | R02 | ready | Audit scalar and matrix finite-propagation candidates in I003; conservation, Fourier convention and noise model explicit; prior-art audit before claim promotion | Coordinator then one small librarian | P03 corrections |
 | G03 | ready | Extend G02 beyond independent products using an explicit interaction estimate and uniform observable calibration | Coordinator then sequential librarian | C045–C046 |
 | B01 | done | Six primary bibliography leads; identifiers/abstracts reviewed and shared metadata integrated | Luna + coordinator | Programme |
@@ -104,11 +106,12 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start A16's scale-closure test using A15's canonical covariance estimator.
+Start A17's fixed-potential, fixed-force-ceiling small-circle test.
+A16/B30 completed the conditional dilation obstruction C056–C057.
 A15/B29 completed the circular bound-system comparison, C054–C055.
 M07/B28 completed the
 Kepler benchmark and softened-core countertest (C052–C053). I004 and P03 carry the rationale.
-R02 owns the repaired finite-propagation draft; A16 tests model-class scaling.
+R02 owns the repaired finite-propagation draft; A17 tests the fixed-force class.
 The A06/A09a consolidation is complete; the review maps remaining opportunities.
 For the next bounded transport test, A14 replaces ordered streams by independent stationary renewal streams
 at fixed mean gap. Derive the Palm residual law and tagged variance growth;

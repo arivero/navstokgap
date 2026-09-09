@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 19, 2026-09-09.
+Version 20, 2026-09-09.
 
 ## Aim
 
@@ -50,8 +50,10 @@ written proof/source review support these results.
 compares transport and conditional variance with twice the canonical covariance
 area. The latter equals orbital action for uniform circular phase; each phase
 preparation conserves its own value. C054–C055 include the window-ratio bound
-and singular/softened threshold transfer. **A16 is next:** test dilation closure
-and scale-fixing premises. The singular-core benchmark remains
+and singular/softened threshold transfer. **A16/B30 are complete:** the [dilation note](../notes/action-scale-dilation.md)
+proves a conditional zero-infimum theorem for contraction-closed model classes
+(C056–C057). **A17 is next:** test small circles at fixed potential and force
+ceiling, where dilation closure may fail. The singular-core benchmark remains
 coupling-dependent; the softened model tests the extra premise needed for a
 positive infimum. [B27](../references/batches/B27.md) supplies the established
 Boyer classification and [B28](../references/batches/B28.md) the bounded follow-up.
