@@ -219,5 +219,5 @@ discussion p. 19. The [source companion](../docs/batches/B18/checkerboard-recurr
 records exact coverage and the older-source page tasks. C039 is a reconstruction
 with an elementary wavepacket proof; C040 is a derived protocol consequence.
 
-Run `python3 scripts/checkerboard_checks.py` for algebra, finite paths and
-Fourier-mode convergence checks. The general limits rest on the proofs above.
+The general limits rest on the written proofs above. Earlier algebra and
+Fourier-mode scripts remain historical artifacts, outside the active workflow.

@@ -18,17 +18,16 @@ From the repository root:
 ```sh
 make check
 make papers
-make figures
 ```
 
 | Command | Checks or output |
 | --- | --- |
 | `make check` | Source checksums, companions, local links and citation keys only |
 | `make papers` | Regenerates programme/note LaTeX and accepted PDFs; checks unresolved references and layout overflow |
-| `make figures` | Regenerates the constant-force illustration |
+| `make figures` | Disabled: the legacy generator also executes symbolic verification |
 
 The manuscript supplies the analytic arguments; these commands verify their
-computational and document artifacts. TeX runs with shell escape disabled,
+document artifacts. TeX runs with shell escape disabled,
 intermediates in `.build/` and final PDFs in `out/papers/`.
 
 The earlier mathematical scripts record past work and are excluded from
@@ -36,13 +35,13 @@ The earlier mathematical scripts record past work and are excluded from
 
 ## Dependencies
 
-`requirements.txt` pins the directly used Python libraries, including NumPy
-for A09b's finite Fourier-matrix convergence checks. For a
-project-local environment:
+`requirements.txt` preserves the historical mathematical/plotting environment.
+The current document-check and build scripts use Python's standard library;
+installing those mathematical dependencies is unnecessary for this workflow.
+For an optional project-local document environment:
 
 ```sh
 python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
 make check PYTHON=.venv/bin/python
 ```
 

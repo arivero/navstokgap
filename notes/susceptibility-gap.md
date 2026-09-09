@@ -279,9 +279,8 @@ correlation and measurement scales. Interactions require a fresh estimate;
 the independence premise must be replaced by a proved dynamical bound.
 A09 retains preparation independence and coherent-action scale selection.
 
-Run `python3 scripts/susceptibility_gap_checks.py`. The
-G02 extension runs through `python3 scripts/observable_access_checks.py`.
-The
+The written proofs are the mathematical verification route. Earlier scripts
+are historical artifacts under the repository's hard verification rule. The
 [B20 companion](../docs/batches/B20/susceptibility-source-companion.md)
 records the Green–Kubo source match and the bounded prior-art coverage.
 C041 is a spectral/product-chain consequence of C019; C042 is an elementary

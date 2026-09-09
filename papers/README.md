@@ -14,8 +14,9 @@
   limit-order test; [PDF](../out/papers/classical-action-field.pdf).
   B09 source audit, coordinator proof review and 16 exact checks.
 - [collision-action-relaxation.tex](collision-action-relaxation.tex): physical-time
-  action relaxation in an elastic refreshed bath, with explicit scale inputs;
-  [PDF](../out/papers/collision-action-relaxation.pdf). B10 audit and 15 checks.
+  action relaxation in a refreshed bath, the Poisson spatial collision clock
+  and ordered-stream cancellation at fixed scales (A02/A12/A13);
+  [PDF](../out/papers/collision-action-relaxation.pdf). B10/B25/B26 audits.
 - [cut-point-consistency.tex](cut-point-consistency.tex): generated from
   [the maintained note](../notes/cut-point-consistency.md); arbitrary cuts,
   fixed-parameter bridge consistency and one-node action cost.
@@ -39,6 +40,12 @@
   and the speed-support test. [PDF](../out/papers/conservative-harmonic-receiver.pdf).
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
+- [checkerboard-dynamics.tex](checkerboard-dynamics.tex): coherent wavepacket
+  and repeated-measurement limits; [PDF](../out/papers/checkerboard-dynamics.pdf).
+- [susceptibility-gap.tex](susceptibility-gap.tex): observable frames, hidden
+  modes and independent products; [PDF](../out/papers/susceptibility-gap.pdf).
+- [bounded-acceleration-return.tex](bounded-acceleration-return.tex): sharp
+  turn cost and polygon error; [PDF](../out/papers/bounded-acceleration-return.pdf).
 
 Run `make papers` from the root to regenerate the programme and build all fourteen
 PDFs in `out/papers/`. Bibliographic metadata lives in
@@ -52,7 +59,7 @@ verification scripts. Current verification uses proofs, source review and
 document integrity checks.
 
 `spectral-gap-laboratory.tex` is the preserved M03 working draft. Its B04
-literature audit is complete; proof review, dedicated checks and build integration
+literature audit is complete; written proof review and build integration
 are pending. It is outside the accepted-paper build.
 
 The current technical draft has written proofs and internal review R01.

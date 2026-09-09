@@ -6,6 +6,13 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
+**Review capsule — M07/A15:** [B27](batches/B27.md), Boyer pp. 5, 6, 9–10,
+supplies the classical bound-orbit threshold $|L|>k/c$. Borrow the effective
+radial potential and compare its angular action with the transport estimator
+of C047/C051. The next test is an observable appropriate to confined dynamics;
+coupling dependence remains the scale-selection obligation. See
+[I004](../ideas/I004-bound-action-and-transport.md).
+
 **Current capsule, A13 to A14:** [B26](batches/B26.md) supplied bounded
 background coverage and the preparation comparison. Collision paper §6
 proves that ordered streams cancel periodically at A12's mechanical scales.

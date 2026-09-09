@@ -147,6 +147,6 @@ law. A07's external-control class provides a benchmark for such a realization.
 In the companion G02 task, the receiver's internal degrees of freedom also
 test which modes the available observables detect.
 
-Run `python3 scripts/bounded_acceleration_checks.py` for exact integrals,
-matching conditions, variations and rational partition tests. The written
-proofs establish the general minima and uniform convergence.
+The written proofs establish the general minima and uniform convergence.
+Earlier integral and partition scripts remain historical artifacts, outside
+the active verification workflow.

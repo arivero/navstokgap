@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 16, 2026-09-09.
+Version 17, 2026-09-09.
 
 ## Aim
 
@@ -37,7 +37,27 @@ established matches, derived consequences or a candidate contribution with
 explicit search coverage. The strong target receives its own prior-art audit
 as its axioms and quantifiers become precise.
 
-## Current priority: composition and scale selection
+## Current priority: bound action and scale selection
+
+The [repository review](../reviews/repository-review-2026-09-09.md) identifies
+the next pair: **M07**, a positive classical angular-action threshold in the
+relativistic Kepler model, and **A15**, a fluctuation observable appropriate to
+bound dynamics. Boyer's known threshold $|L|>k/c$ is audited in
+[B27](../references/batches/B27.md). It provides a coupling-dependent benchmark
+for the programme's stronger universal-scale question.
+
+Keep the transport laboratory and its preparation tests. **A14** is the next
+bounded renewal calculation; **A16** tests scale-changing transformations
+against the axioms. **R02** audits the repaired finite-propagation draft, and
+**G03** extends spectral control beyond independent products. The
+[new idea card](../ideas/I004-bound-action-and-transport.md) specifies the
+observables and limits; TASKS governs dispatch. Quantum reconstruction Q01 and
+the Newton-specific historical source questions retain their separate gates.
+
+## Milestone history: composition and scale selection
+
+The following dated milestones preserve the development of the programme;
+their next-step wording records earlier decisions, superseded by the priority above.
 
 **A13/B26 are complete.** Ordered streams give zero response at the same
 mass, speed, density and mean collision rate as the Poisson receiver, through

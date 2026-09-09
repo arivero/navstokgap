@@ -239,8 +239,7 @@ limits. The proposed implicit $h\to0$ reading is recorded as a historical
 conjecture. Its chronology, relationship to the Classical Scholia and place in
 the existing literature are tasks H02/H03.
 
-The exact polynomial identities and the diagram are reproduced with
-`python3 scripts/constant_force_geometry.py`. The
-[check output](../out/constant-force-checks.json) records the assumptions and
-verified identities. The written derivation supplies the argument connecting the
-geometric construction to the action integral.
+The written derivation connects the geometric construction to the action
+integral. The saved diagram and [earlier check output](../out/constant-force-checks.json)
+remain historical artifacts. Their legacy generator is inactive because it
+also executes symbolic verification.

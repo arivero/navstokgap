@@ -5,7 +5,31 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: A13/B26 complete; A14 next.
+Updated: 2026-09-09. Current milestone: P03 repository review and B27 complete.
+
+## Current restart decision
+
+Start **M07**, integrating the known relativistic Kepler threshold $|L|>k/c$
+into the gap laboratory, then **A15**, selecting an action observable for bound
+mechanics. Long-window displacement response is a transport observable; the
+original bound-orbit target needs an explicit local/mesoscopic comparison.
+Read [I004](../ideas/I004-bound-action-and-transport.md), the
+[B27 source capsule](../references/batches/B27.md) and the
+[repository review](../reviews/repository-review-2026-09-09.md).
+
+**A14** remains a bounded renewal-preparation diagnostic. **R02** preserves and
+audits the repaired I003 finite-propagation ideas. **A16** tests scale-changing
+dilations against the proposed axioms. M06, G03, Q01 and the historical/source
+queues remain live supporting tracks. No new claim ID was accepted in P03.
+
+The hard-rule loophole in `make figures` is closed; it now refuses to execute
+the legacy symbolic-check generator. Use `make check` and `make papers` for
+document validation. See [P03 handoff](handoffs/P03.md).
+
+## Milestone history
+
+The following entries preserve the sequence of decisions. Their “next” tasks
+are historical; the current restart decision above and TASKS govern dispatch.
 
 **A13/B26 are complete.** Collision paper §6 compares ordered and Poisson
 streams at fixed mass, speed, density and mean collision rate. The ordered

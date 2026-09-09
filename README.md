@@ -9,6 +9,17 @@ about estimates and limits.
 
 ## Results to read first
 
+The [repository review](reviews/repository-review-2026-09-09.md) maps the proof
+families, repairs the I003 draft and identifies the next research pair:
+the known relativistic Kepler threshold $|L|>k/c$, and an action observable
+suited to bound motion. [I004](ideas/I004-bound-action-and-transport.md)
+connects this positive classical benchmark to the universal-scale target.
+
+The [collision paper](out/papers/collision-action-relaxation.pdf) now derives
+$H_*=mu/\rho$ from Poisson spatial gaps, then compares ordered streams at the
+same mass, speed, density and mean collision rate. Their periodic cancellation
+gives zero long-window response. This isolates the role of preparation.
+
 The [conservative-receiver paper](out/papers/conservative-harmonic-receiver.pdf)
 derives the action observable from an isolated harmonic network. At fixed
 finite size and centre velocity, its long-window value tends to zero.
@@ -103,10 +114,11 @@ and measurement resources as central choices in a gap model.
 
 ## Next experiments
 
-The mass-composition test is complete; next are crossover/checkerboard dynamics
-and a susceptibility–spectral-gap comparison. The
+Start M07's relativistic Kepler benchmark and A15's confined-system observable
+comparison. A14 remains the bounded renewal-preparation test; R02 audits the
+preserved finite-propagation ideas. The
 [six-direction review](reviews/six-directions-2026-09-08.md) records the
-adopted premises, countertests and source leads. Bounded-force returns remain
+earlier adopted premises, countertests and source leads. Bounded-force returns remain
 the supporting mechanical diagnostic.
 
 Return to the [cut-point continuum limit](research/CUT_POINT_TARGET.md): test
@@ -142,8 +154,9 @@ Delegation is sequential: one Sol or Luna worker, followed by coordinator review
 
 ## Reproduce and inspect
 
-Run `make check` and `make papers` from the root. Python/SymPy and the
-existing LaTeX tools support the present results. The
+Run `make check` and `make papers` from the root. Python handles document
+integrity/build orchestration; Pandoc and LaTeX produce the papers. Mathematical
+verification uses written proofs and source review. The
 [tooling guide](research/TOOLS.md) describes dependencies and build checks;
 [formalisation task F01](formal/README.md) defines the first Lean target.
 

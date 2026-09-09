@@ -36,6 +36,13 @@ during the H08 source session. Sources are collected in
 
 ## The proposed reading
 
+**Review, 2026-09-09:** retain the following as the originating heuristic.
+The repaired [matrix note](../notes/i003-double-limit-rigidity.md) separates
+finite propagation, probability conservation, a two-state commutator identity
+and a specified resolution-noise model. Commuting random velocities can have
+ballistic variance; positivity of evolution alone allows killing. R02 owns
+the remaining theorem/source audit. The user's three remarks above are preserved.
+
 The continuation that turns the telegraph process into the Dirac checkerboard
 (A09) exchanges a Euclidean cut question for a Lorentzian one. Under it, the
 cone dilemma about equal sections and the arrow dilemma about equal instants

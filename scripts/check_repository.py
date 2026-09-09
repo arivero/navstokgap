@@ -15,6 +15,9 @@ def main():
     allowed = ["$(PYTHON) scripts/check_repository.py", "sha256sum -c docs/SHA256SUMS"]
     if match is None or [line.strip() for line in match.group(1).splitlines()] != allowed:
         errors.append("Hard rule: make check must contain only document/source integrity commands")
+    figures = re.search(r"^figures:\n((?:\t[^\n]*\n)*)", makefile, re.MULTILINE)
+    if figures is None or not figures.group(1).strip().startswith("$(error Disabled:"):
+        errors.append("Hard rule: legacy make figures must remain disabled pending user direction")
     link_count = 0
     registered = {
         line.split(maxsplit=1)[1].strip().lstrip("*")

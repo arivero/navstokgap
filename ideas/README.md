@@ -1,5 +1,8 @@
 # Idea incubator
 
+[I004](I004-bound-action-and-transport.md) supplies the current M07/A15/A16
+research pair and scale-selection test, grounded in B27's Kepler source audit.
+
 Each idea records its origin, model, observable, premises, a decisive test and
 the next calculation. Keep successful and unsuccessful tests together so later
 work can use their conclusions. Promote results to the claim ledger through

@@ -13,4 +13,4 @@ papers:
 	$(PYTHON) scripts/build_papers.py
 
 figures:
-	$(PYTHON) scripts/constant_force_geometry.py
+	$(error Disabled: the legacy figure script runs mathematical verification; preserve existing figures and use written proofs)

@@ -1,10 +1,13 @@
 # The cut paradox in two signatures: sections of a solid and instants of a motion
 
 Test 1 of [I003](../ideas/I003-cut-paradox-arrow-obstruction.md), drafted
-2026-09-08 by the independent Claude Fable 5.1 session. The identities are
-checked in [`scripts/cut_paradox_checks.py`](../scripts/cut_paradox_checks.py).
+2026-09-08 by the independent Claude Fable 5.1 session. Earlier scripts are
+historical artifacts; current verification uses written proof and source review.
 The proposition below is a working derivation awaiting review and a prior-art
-audit; no claim ID is assigned.
+audit; no claim ID is assigned. The 2026-09-09 review preserves the scalar
+rigidity candidate and routes proof and source review to R02. The cone/arrow
+connection below is a modern heuristic; analytic continuation relates the
+specified evolution equations, rather than establishing a historical identity.
 
 **Result.** The Euclidean statement C032, that a position-only law with
 ballistic support and independent stationary increments is a deterministic
@@ -76,20 +79,20 @@ $m_t(k)=e^{-it\omega(k)}$ for a real measurable $\omega$. The support
 hypothesis and the Paley–Wiener–Schwartz theorem extend each $m_t$ to an
 entire function with $|m_t(k)|\le C_t(1+|k|)^{N}e^{u|t||\operatorname{Im}k|}$.
 The identity $m_tm_{-t}=1$ holds on the real axis, hence on $\mathbb C$, so
-$m_t$ has no zeros and $G_t=\log m_t$ is entire. The group law and continuity
-in $t$ give $G_t=tG$ for one entire $G$, and unimodularity on the real axis
-gives $\operatorname{Re}G=0$ there, so $G=-i\omega$ with $\omega$ entire and
-real on $\mathbb R$. The growth bound at $t=\pm1$ yields
-$|\operatorname{Im}\omega(x+iy)|\le u|y|+N\log(1+|k|)+C$. A harmonic function
-of at most linear growth is a harmonic polynomial of degree at most one, so
-$\operatorname{Im}\omega=\alpha x+\beta y+\gamma$; vanishing on the real axis
-forces $\alpha=\gamma=0$, hence $\omega(k)=\beta k+b$ with real $b$, and the
-bound gives $|\beta|\le u$. Then $m_t(k)=e^{-it(\beta k+b)}$, which is the
-stated translation with $a=\beta$. $\square$
+$m_t$ has no zeros and $G_t=\log m_t$ is entire. For fixed $t$, the bounds
+for $m_t$ and $m_{-t}$ give
+$|\operatorname{Re}G_t(z)|\le u|t||\operatorname{Im}z|+N_t\log(1+|z|)+C_t$.
+Harmonic derivative estimates make this function affine; its value on the
+real axis is zero. Thus $m_t(k)=e^{-i(a_tk+b_t)}$, with real $a_t,b_t$ and
+$|a_t|\le u|t|$. The group law makes $a_t$ additive; the bound implies
+$a_t=at$. Strong continuity makes the remaining phase a continuous character,
+hence $e^{-ibt}$. This proves the form without selecting logarithms
+continuously in time. $\square$
 
-**Reading.** The massless chiral evolutions $\omega=\pm uk$ are the only
-scalar light-cone evolutions; they are the Lorentzian translates of C032's
-drift $\delta_{bt}$, with the constant phase $b$ as rest energy. The Dirac
+**Reading.** Scalar evolutions in this class are translations at any
+$|a|\le u$, with an arbitrary constant phase rate. The massless chiral
+choices $a=\pm u$ saturate the speed bound. Interpreting phase rate as
+energy requires an action conversion factor. The Dirac
 evolution keeps light-cone support and unitarity by carrying two components;
 its scalar reduction has $\omega(k)=\sqrt{u^2k^2+\omega_0^2}$, which is real on
 the axis but has branch points at $k=\pm i\omega_0/u$ and so cannot be the
@@ -112,13 +115,10 @@ class. The surviving constant is the plateau, and $g$ is the rate it controls.
 Which premise makes that plateau positive and common to all bodies is A08's
 question, and this note adds nothing to it.
 
-## 5. Checks and next step
+## 5. Review and next step
 
-The script verifies the C032 variance step, the saturation of the linear
-dispersion, the failure of a quadratic dispersion, the branch points of the
-Klein–Gordon dispersion and their Compton value, the evenness of the telegraph
-transform in $s$, the continuation of $s$ at $\lambda=i\omega_0$, the cone
-section derivative, and the harmonic-polynomial instance. The next step is a
-prior-art audit of the proposition, whose ingredients are the Paley–Wiener
-theorem and the Liouville theorem for harmonic functions, and then test 2 of
-I003 with the speed bound removed.
+R02 will audit the scalar proof and its Paley–Wiener/harmonic-growth ingredients,
+then examine the matrix extension in
+[the revised I003 note](i003-double-limit-rigidity.md). The historical analogy
+remains available for idea generation. Its mathematical content must be
+established model by model.
