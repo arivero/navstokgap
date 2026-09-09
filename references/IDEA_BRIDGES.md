@@ -6,11 +6,14 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
-**Review capsule — M07/A15:** [B27](batches/B27.md), Boyer pp. 5, 6, 9–10,
+**Current capsule — M07 complete, A15 next:** [B27](batches/B27.md), Boyer pp. 5, 6, 9–10,
 supplies the classical bound-orbit threshold $|L|>k/c$. Borrow the effective
 radial potential and compare its angular action with the transport estimator
 of C047/C051. The next test is an observable appropriate to confined dynamics;
-coupling dependence remains the scale-selection obligation. See
+M07/C053 now shows that softening the core closes the angular threshold.
+Use a circular bound preparation for A15 and separate angular action from
+displacement fluctuations; core admissibility and coupling dependence remain
+scale-selection premises. See
 [I004](../ideas/I004-bound-action-and-transport.md).
 
 **Current capsule, A13 to A14:** [B26](batches/B26.md) supplied bounded

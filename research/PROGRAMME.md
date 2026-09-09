@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 17, 2026-09-09.
+Version 18, 2026-09-09.
 
 ## Aim
 
@@ -39,12 +39,18 @@ as its axioms and quantifiers become precise.
 
 ## Current priority: bound action and scale selection
 
-The [repository review](../reviews/repository-review-2026-09-09.md) identifies
-the next pair: **M07**, a positive classical angular-action threshold in the
-relativistic Kepler model, and **A15**, a fluctuation observable appropriate to
-bound dynamics. Boyer's known threshold $|L|>k/c$ is audited in
-[B27](../references/batches/B27.md). It provides a coupling-dependent benchmark
-for the programme's stronger universal-scale question.
+**M07/B28 are complete.** The [Kepler note](../notes/relativistic-kepler-threshold.md)
+and gap laboratory specify the regular bound domain and angular-action
+threshold $k/c$ (C052). A softened core admits bound circles for every positive
+angular action at fixed coupling and speed limit (C053); the core-collapse
+limit explains the domain change. One Luna-low follow-up audit and coordinator
+written proof/source review support these results.
+
+**A15 is next:** compare orbital action and a bound-system fluctuation
+observable in one explicit preparation. The singular-core benchmark remains
+coupling-dependent; the softened model tests the extra premise needed for a
+positive infimum. [B27](../references/batches/B27.md) supplies the established
+Boyer classification and [B28](../references/batches/B28.md) the bounded follow-up.
 
 Keep the transport laboratory and its preparation tests. **A14** is the next
 bounded renewal calculation; **A16** tests scale-changing transformations

@@ -14,7 +14,7 @@
 \newcommand{\Z}{\mathbb Z}
 \title{A Gap Laboratory:\\Oscillators, Circles and Winding Sectors}
 \author{navstokgap research working notes}
-\date{6 September 2026 --- M03 working draft}
+\date{9 September 2026 --- M03 draft with reviewed M07 extension}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -28,6 +28,8 @@ $\hbar\omega$. We derive the domains, bounds and limiting behaviour of these
 objects. The comparison isolates normalization, confinement and topological
 sector selection as mechanisms for positive lower bounds, and identifies a
 precise route to an action-valued spectral spacing in the quantum oscillator.
+The relativistic Kepler model adds an angular-action threshold $k/c$;
+softening its singular core closes that threshold at fixed coupling.
 \end{abstract}
 
 \section{Three objects to compare}
@@ -62,8 +64,8 @@ difference is $S[\eta]-S[0]=Q_T[\eta]/2$, where
  Q_T[\eta]=m\int_0^T(\dot\eta^2-\omega^2\eta^2)\dd t,
  \qquad \eta\in H^1_0(0,T).
 \]
-Complexification gives the corresponding sesquilinear form and self-adjoint
-operator on $L^2(0,T)$:
+Complexification gives a sesquilinear form. Its self-adjoint operator on
+$L^2(0,T)$ is:
 \[
  J_T=-m\frac{\dd^2}{\dd t^2}-m\omega^2,
  \qquad D(J_T)=H^2(0,T)\cap H^1_0(0,T).
@@ -223,8 +225,9 @@ On the line, $H_\R=-\hbar^2\partial_x^2/(2m)$ with domain $H^2(\R)$ has
 spectrum $[0,\infty)$ and an empty point spectrum.
 \end{proposition}
 \begin{proof}
-Fourier series diagonalize the circle operator. Its domain corresponds to
-$\sum_{n\in\Z}n^4|c_n|^2<\infty$, exactly the periodic $H^2$ domain.
+Fourier series diagonalize the circle operator. The domain condition is
+\[\sum_{n\in\Z}n^4|c_n|^2<\infty,\]
+which defines the periodic $H^2$ domain.
 The complete exponential basis proves the spectrum and self-adjointness.
 The first excitation consists of the $n=\pm1$ pair. Replacing exponentials
 by the complete sine basis and using domain $H^2(0,L)\cap H^1_0(0,L)$ proves
@@ -323,6 +326,96 @@ only the zero-winding sector. This is absence of a comparison sector, so the
 finite gap formula applies precisely on $L<cT$.
 At fixed finite $c,L$, increasing $T$ again closes the gap.
 
+\section{A singular-core angular-action threshold}
+The relativistic Kepler model has a positive infimum of angular action among
+regular bound trajectories. Softening its central singularity closes that
+infimum at fixed coupling and speed limit. For this section write angular
+momentum as $J$ to reserve $L$ for the circle's circumference. On the planar
+canonical domain $r>0$, use
+\[
+ H=\sqrt{m^2c^4+c^2(p_r^2+J^2/r^2)}-k/r,\qquad m,k,c>0.
+\]
+The potential is static and external; recoil, radiation and field dynamics
+are absent. Energy includes rest energy. A regular bound trajectory is complete
+and has radius in a compact subset of $(0,\infty)$. Normalize the angular
+canonical cycle by $I_\theta=(2\pi)^{-1}|\int_0^{2\pi}J\dd\theta|=|J|$,
+which does not require a closed spatial rosette. Define
+\[
+ g_\theta=\inf\{|J|:\text{a regular bound trajectory exists}\}.
+\]
+This is an admissibility threshold with action units, since $[k/c]$ is action.
+
+\begin{proposition}[Kepler threshold and core dependence]\label{prop:kepler}
+For the singular potential, regular bound motion exists exactly for
+\[
+ |J|>k/c,\qquad
+ mc^2\sqrt{1-k^2/(c^2J^2)}\le E<mc^2.
+\]
+The lower energy endpoint is circular. Thus $g_\theta=k/c$ is an excluded
+infimum, and the admitted angular actions above it are continuous.
+For $V_a(r)=-k/\sqrt{r^2+a^2}$ with any fixed $a>0$, every $|J|>0$
+admits a regular bound circle, so $g_\theta(a)=0$.
+\end{proposition}
+\begin{proof}
+Put $\ell=|J|$ and $x=1/r$. At zero radial momentum the singular energy is
+\[
+ F_\ell(x)=\sqrt{m^2c^4+c^2\ell^2x^2}-kx.
+\]
+For $\ell>0$ it is strictly convex, with derivative $-k$ at zero and limiting
+derivative $c\ell-k$ at infinity. A finite minimum therefore exists exactly
+when $c\ell>k$. Solving $F'_\ell=0$ gives the stated energy and radius
+$r_0=\ell\sqrt{c^2\ell^2-k^2}/(mkc)$.
+For energies strictly between this minimum and $mc^2$, the allowed radial
+interval lies between two finite positive turning radii. Energy also bounds
+the momentum, so smooth Hamiltonian continuation gives completeness.
+The minimum gives a circle; $E\ge mc^2$ has no finite outer turning radius.
+
+At $c\ell=k$, $F_\ell$ decreases to zero at the excluded centre; below
+threshold it decreases to minus infinity, with the $\ell=0$ case immediate.
+There is no well. The inward branch satisfies
+\[
+ c^2p_r^2=E^2-m^2c^4+2Ek/r+(k^2-c^2\ell^2)/r^2,
+ \qquad \dot r=c^2p_r/(E+k/r).
+\]
+Below threshold, its speed tends to $c\sqrt{k^2-c^2\ell^2}/k$.
+At threshold allowed energies have $E>0$, and
+$|\dot r|\sim c\sqrt{2E/k}\sqrt r$. Both yield finite collision time;
+no collision continuation belongs to the specified regular domain.
+This recovers Boyer's classification
+\cite[Eqs.~(19)--(20), (37)--(42)]{Boyer2004UnfamiliarTrajectories}.
+
+For the softened core and any $\ell>0$, the effective energy is
+\[
+ U_{a,\ell}(r)=\sqrt{m^2c^4+c^2\ell^2/r^2}-k/\sqrt{r^2+a^2}.
+\]
+It diverges at zero and has large-radius expansion
+$mc^2-k/r+\ell^2/(2mr^2)+O(r^{-3})$.
+It thus takes values below its limit $mc^2$ and attains a global minimum
+at finite positive radius. With $p_r=0$, the vanishing radial derivative
+gives a complete circular Hamiltonian trajectory. All positive $\ell$ are
+therefore admitted. For any energy between the minimum and $mc^2$, allowed
+radial components are compact as well.
+\end{proof}
+
+At fixed $k$, the singular threshold closes as $c\to\infty$; at fixed $c$
+it closes as $k\downarrow0$. The latter is a limit through positive couplings:
+the zero-coupling model has no nonstationary bound orbits. At fixed $\ell,k,m$, the circular
+radius tends to $\ell^2/(mk)$ and the rest-subtracted minimum energy tends to
+$-mk^2/(2\ell^2)$ in the Newtonian limit.
+
+The core limit is singular even at fixed coupling. For each fixed
+$0<\ell<k/c$, choose $y$ large enough that
+$c\ell/y<k/\sqrt{1+y^2}$. Then
+\[
+ \lim_{a\downarrow0}aU_{a,\ell}(ay)
+ =c\ell/y-k/\sqrt{1+y^2}<0.
+\]
+The minimum tends to minus infinity, while on $r\ge\delta>0$ the energy is
+bounded below by $mc^2-k/\delta$. Hence every minimizing radius tends to zero.
+These circles leave the singular model's regular domain. Consequently
+$\lim_{a\downarrow0}g_\theta(a)=0$, whereas $g_\theta=k/c$ at the singular
+potential. This limit is pointwise in fixed subcritical $\ell$.
+
 \section{What the laboratory selects next}
 \begin{center}
 \begin{tabularx}{\linewidth}{@{}lXl@{}}
@@ -334,6 +427,7 @@ Quantum oscillator & $\Delta_\omega=\hbar\omega$ & $\omega\downarrow0$ \\
 Oscillator action & spacing of $H_\omega/\omega$: $\hbar$ & $\hbar\downarrow0$ \\
 Quantum circle & $\Delta_L=2\pi^2\hbar^2/(mL^2)$ & $L\to\infty$ \\
 Classical winding & $g_{\rm wind}=mL^2/(2T)$ & $T\to\infty$ \\
+Kepler angular action & $g_\theta=k/c$ & $c\to\infty$ \\
 \bottomrule
 \end{tabularx}
 \end{center}

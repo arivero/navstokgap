@@ -5,13 +5,14 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-09. Current milestone: P03 repository review and B27 complete.
+Updated: 2026-09-09. Current milestone: M07/B28 complete.
 
 ## Current restart decision
 
-Start **M07**, integrating the known relativistic Kepler threshold $|L|>k/c$
-into the gap laboratory, then **A15**, selecting an action observable for bound
-mechanics. Long-window displacement response is a transport observable; the
+Start **A15**, selecting an action observable for bound mechanics.
+**M07/B28** integrated the known Kepler threshold and proved that any fixed
+softened core admits arbitrarily small angular actions (C052–C053).
+See [M07 handoff](handoffs/M07.md). Long-window displacement response is a transport observable; the
 original bound-orbit target needs an explicit local/mesoscopic comparison.
 Read [I004](../ideas/I004-bound-action-and-transport.md), the
 [B27 source capsule](../references/batches/B27.md) and the
@@ -255,10 +256,9 @@ concordance and the publication-delay hypothesis. The
 
 ## Reproduction
 
-Run `make check` and `make papers`. Checks cover algebra, measurement examples,
-local links, source companions, citation keys and source checksums. The PDF build
-checks reference resolution and layout overflow. The current evidence level is
-written proofs with internal review and symbolic checks; Lean work starts at F01.
+Run `make check` and `make papers`. Checks cover local links, source companions, citation keys and source checksums. The PDF build
+checks reference resolution and layout overflow. Current mathematical verification uses written proofs and source review;
+symbolic checks are historical artifacts. Lean work starts at F01.
 
 Python/SymPy/Matplotlib, Pandoc, pdfLaTeX and BibTeX are available. BibTeX runs
 inside `.build/<paper>/` with the repository on `BIBINPUTS`, preserving

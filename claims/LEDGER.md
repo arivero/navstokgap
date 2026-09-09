@@ -59,6 +59,9 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C050 | Equal-mass Poisson hard-point gas at density $\rho$ with iid velocities $\pm u$ and Palm tag has independent reversal waits of rate $\rho u$ and plateau $mu/\rho$; fixed-density cooling scales it linearly | Collision paper §5; ordered-gap proof, stationary velocity preparation, infinite gas first; [B25 review](../reviews/jepsen-receiver-B25.md) |
 | C051 | Independent uniform phases of two opposite-speed lattices, each spacing $2/\rho$, give a stationary square-wave tag and $0\le\mathsf h(\Delta)\le m/(3\rho^2\Delta)\to0$ at C050's mass, speed, density and mean collision rate | Collision paper §6; Palm/intersection proof and folded cubic variance; [B26 review](../reviews/ordered-preparation-B26.md); joint mark/position preparation changes |
 
+| C052 | Fixed external relativistic Kepler potential has regular bound domain $\lvert L\rvert>k/c$, $E_{\min}(L)\le E<mc^2$ and excluded angular-action infimum $k/c$ | [M07 note](../notes/relativistic-kepler-threshold.md); written effective-potential, continuation and endpoint-time proofs; B27/B28 and coordinator visual/source review |
+| C053 | For every fixed softened core $a>0$ and $m,k,c>0$, every $\lvert L\rvert>0$ admits a regular bound circle, giving angular-action infimum zero; at each fixed $0<\lvert L\rvert<k/c$ minimizing radii tend to zero as $a\downarrow0$ | M07 note and gap laboratory Kepler section; compact-sublevel and scaling proofs; B28 and coordinator review; no computational verification |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
@@ -71,6 +74,8 @@ consequences are identified separately.
 
 | Claims | Literature classification | Audit |
 | --- | --- | --- |
+| C052 | Established Boyer orbit classification, with explicit domain and normalization | [B27](../references/batches/B27.md), [B28](../references/batches/B28.md) |
+| C053 | Elementary effective-potential consequence; no exact match in two-query follow-up coverage; novelty unassessed | B28 |
 | C001–C004, C008 | Classical geometry/variation framework; specialized formulas are elementary consequences | [B05](../references/batches/B05.md) |
 | C005 | Teschl's standard free kernel; Taylor correction is a Fourier consequence | B05 |
 | C006–C007 | Holevo–Helstrom theorem specialized to the stated pure-state protocol; threshold inversion and limits are consequences | B05 |

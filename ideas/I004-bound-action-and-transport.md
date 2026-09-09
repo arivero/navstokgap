@@ -22,10 +22,12 @@ allowed angular momenta above it remain continuous. This is Boyer's known
 classification, with source passages and a written effective-potential
 derivation in the [B27 companion](../docs/batches/B27/relativistic-kepler-source-companion.md).
 
-M07 should integrate this benchmark into the existing gap laboratory, naming
+M07 completed this integration in the [Kepler note](../notes/relativistic-kepler-threshold.md)
+and gap laboratory (C052–C053), naming
 the domain of globally regular bound trajectories, the critical/plunging
-endpoint and the limits $c\to\infty$ and $k\to0$. Then ask how regularising
-the central singularity changes the threshold. The fixed external potential
+endpoint and the limits $c\to\infty$ and $k\to0$. Any fixed softened core $-k/\sqrt{r^2+a^2}$ admits bound circles for every
+positive angular action; subcritical minimizing circles collapse to the
+centre as $a\downarrow0$. The fixed external potential
 is part of the model; radiation and a dynamical second body belong to a later
 extension. Units: $[k/c]=[L]=$ action.
 
