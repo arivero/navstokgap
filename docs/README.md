@@ -3,6 +3,9 @@
 For public-facing writing, see the [blog drafts](blog/README.md), including
 the repository introduction prepared for `a.rivero.nom.es`.
 
+Original fiction: [Zeno's Constant](fiction/zenos-constant.md), an alternate
+history in which Newton carries interference from optics into mechanics.
+
 ## Mechanics investigation
 
 - [Classics: pre-1901 primary sources](classics/README.md): Archimedes, Plutarch, Galileo, Gregory, Berkeley, Euler, Maupertuis, Hamilton, Jacobi and Mach, each with a companion and registered checksums ([H06](../references/batches/H06.md)).

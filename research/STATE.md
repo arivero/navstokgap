@@ -7,6 +7,10 @@ source, link and integrity tooling remains allowed; no language workaround.
 
 Updated: 2026-09-09. Current milestone: A18/B32 complete.
 
+Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
+is a user-requested alternate-history story. It leaves research priorities and
+claim status unchanged; see the [editorial handoff](handoffs/zenos-constant-2026-09-09.md).
+
 ## Current restart decision
 
 **User redirection, 2026-09-09:** return to the classics before continuing the
