@@ -4,7 +4,17 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R09
+## Classical cut state, receiver memory and readout — R10
+
+**R09/B40 capsule:** Rohou–Jaulin's publisher abstract/introduction supplies
+bounded-error set-membership estimation; Debin–Fillastre §2 supplies classical
+mixed-area and support-function operations. [R09](../notes/finite-precision-cut.md)
+derives the exact clipped-lens area. R10 applies two position-strip constraints
+with exact propagation between them, testing momentum recovery against the
+competing precision and force errors. The physical question is attainable
+precision/timing, distinct from optimization of a mathematical error bound.
+[B40 companion](../docs/batches/B40/finite-precision-source-companion.md)
+records source scope, including the unread estimator theorem hypotheses.
 
 **R08/B39 capsule:** Bird et al., arXiv:2106.14831v3, abstract and §4.1
 Theorem 8, supply exact set propagation in a discrete hybrid setting.

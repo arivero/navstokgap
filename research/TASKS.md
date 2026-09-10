@@ -21,7 +21,9 @@ handoff with the remaining dependency.
 | B38 | done | Two queries, one primary HTML passage and two failed retrievals; bounded-input control precedent and coordinator proof/source review | One Luna low, sequential | R07 |
 | R08 | done | Exact joint cut composition, rectangle counterexample, observed position fibre and terminal area C072–C073 | Coordinator + Luna-low B39 | [R08 handoff](handoffs/R08.md) |
 | B39 | done | Two queries and two primary passages; bounded reachability precedent, no direct conditional-area match; coordinator proof/source review | One Luna low, sequential | R08 |
-| R09 | ready | Replace exact position record by error interval; derive compatible terminal set and area in joint precision/delay limit at fixed force class | Coordinator then bounded librarian | R08/B39 |
+| R09 | done | Exact clipped-lens terminal area and uniform joint precision/delay closure, C074–C075 | Coordinator + Luna-low B40 | [R09 handoff](handoffs/R09.md) |
+| B40 | done | Bounded-error estimator and mixed-area passages; coordinator proof/source review, novelty unassessed | One Luna low, sequential | R09 |
+| R10 | ready | Two bounded-error position records: momentum reconstruction, force/precision competition and full-state recovery at fixed horizon | Coordinator then bounded librarian | R09/B40 |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -124,10 +126,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R09 from the completed R08/B39 cut-composition test. Replace the exact
-position record by a deterministic error interval of half-width $\varepsilon$.
-Derive the terminal compatible set and area as precision and residual delay
-vary, retaining position–momentum correlations. See [R08 handoff](handoffs/R08.md).
+Start R10 from the completed R09/B40 finite-precision test. Use two position
+records and derive momentum reconstruction bounds, retaining joint compatible
+sets. Compare the precision/separation and force/separation terms before
+proposing an apparatus constraint. See [R09 handoff](handoffs/R09.md).
 Preserve A19 below as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.

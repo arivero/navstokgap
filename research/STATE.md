@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R08/B39 complete.
+Updated: 2026-09-10. Current milestone: R09/B40 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -35,9 +35,14 @@ area after phase or position observation. Position-conditioned area can close
 while momentum uncertainty stays finite. C072–C073 have one Luna-low bounded
 audit and coordinator written proof/source review.
 
-Start **R09**: replace the exact position record by an error interval of
-half-width $\varepsilon$; derive the compatible terminal set and area in the
-joint precision/delay limit at fixed force class. Read [R08 handoff](handoffs/R08.md)
+**R09/B40 complete:** [finite position precision](../notes/finite-precision-cut.md)
+gives the exact clipped-lens terminal area and uniform closure for every joint
+precision/delay limit, C074–C075. One Luna-low audit and coordinator review
+separate the derived formula from set-membership and mixed-area precedents.
+
+Start **R10**: two bounded-error position records at fixed total horizon.
+Derive momentum reconstruction bounds and compare full-state recovery with
+area closure, keeping the force class fixed. Read [R09 handoff](handoffs/R09.md)
 and the ancient-cut provenance below.
 R06's deterministic reconstruction and B36 thermal reading remain comparisons.
 

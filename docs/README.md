@@ -21,6 +21,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B40](../references/batches/B40.md): finite-precision position records and
+  mixed area; [source companion](batches/B40/finite-precision-source-companion.md).
+
 - [B38](../references/batches/B38.md): delayed force information and bounded-input
   reachability; [source companion](batches/B38/causal-information-source-companion.md).
 

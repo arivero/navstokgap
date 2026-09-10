@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 28, 2026-09-10.
+Version 29, 2026-09-10.
 
 ## Aim
 
@@ -64,8 +64,10 @@ $2F^2\ell^3/(3m)$ (C070–C071). The input class and delay supply this scale;
 it closes when either shrinks. **R08/B39 are complete:** exact joint reachable
 sets compose across unobserved cuts; an observed position leaves a calculable
 momentum fibre and terminal area (C072–C073). That area can close while momentum
-uncertainty persists. **R09 is next:** replace exact position records by finite
-error intervals and test the joint precision/delay limit at fixed force class.
+uncertainty persists. **R09/B40 are complete:** finite-precision records give
+an exact clipped-lens area and uniform closure in the joint precision/delay
+limit (C074–C075). **R10 is next:** two bounded-error position records and
+momentum recovery, with the force class and total horizon fixed.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection

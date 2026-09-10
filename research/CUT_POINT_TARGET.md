@@ -23,8 +23,10 @@ concentrated preparation. Refining reported samples needs no extra probes.
 gives sharp prediction errors and a joint reachable canonical area. **R08/B39
 completed:** [exact cut composition](../notes/reachable-cut-composition.md)
 preserves that area at unobserved cuts and calculates its reduction with new
-records. Area closure alone need not recover momentum. **R09 is next:**
-finite-precision position records and their joint precision/delay limit. A19
+records. Area closure alone need not recover momentum. **R09/B40 complete:**
+[finite precision](../notes/finite-precision-cut.md) gives an exact terminal
+area and uniform precision/delay closure. **R10 is next:** two position
+records and recovery of momentum as well as position. A19
 supports this track.
 
 ## A03: completed calculation

@@ -91,11 +91,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C072 | For arbitrary measurable bounded force, $K_T=S_bK_a+K_b$ at every interior cut; all unobserved refinements preserve the endpoint set, while replacing the intermediate lens by its marginal rectangle strictly enlarges it | [R08 §§1–2](../notes/reachable-cut-composition.md); split/concatenate proof and saturated-impulse counterexample; [B39 review](../reviews/cut-composition-B39.md) |
 | C073 | Exact cut position leaves momentum interval of width $D(\zeta)=Fa[\sqrt{2-4\zeta}+\sqrt{2+4\zeta}-2]$ and terminal canonical area $2F^2b^3/(3m)+Fb^2D(\zeta)/m$; area tends uniformly to zero as $b\to0$ although the central momentum width stays positive | R08 §§3–4; ideal available records, lens inversion and determinant-one shear; B39 written review |
 
+| C074 | A bounded-error position strip clipped to the force lens has terminal area $A_C+2F^2b^3/(3m)+2Fbw+Fb^2D_*/m$, with strip width $w$ and extreme compatible momentum span $D_*$ | [R09 §§1–2](../notes/finite-precision-cut.md); segment extrusion, monotone fibres and [B40 review](../reviews/finite-precision-B40.md) |
+| C075 | At fixed $F,m,T$, R09's area is at most $4FT\varepsilon+2F^2ab^2/m+2F^2b^3/(3m)$ and closes uniformly as precision error and delay vanish at any relative rates; central momentum uncertainty persists | R09 §3; written bound and exact/full/no-delay endpoint checks; B40 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C074–C075: [B40](../references/batches/B40.md) identifies bounded-error
+set-membership and classical mixed-area precedents. The clipped-lens area
+and joint bound are derived specializations; novelty is unassessed. Proof
+acceptance and limited source coverage are separated in the coordinator review.
 
 C072–C073: [B39](../references/batches/B39.md) records the bounded double-integrator
 and discrete hybrid reachable-set precedents. Continuous-time composition,

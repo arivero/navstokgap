@@ -16,8 +16,9 @@ shrinking preparation widths; C068–C069 close its accuracy–disturbance produ
 **R07/B38 completed:** bounded unresolved force gives a delayed prediction
 region. **R08/B39 completed:** exact cut composition and observed-position
 fibres quantify its information dependence; area can close without momentum
-recovery. **R09 is next:** finite-precision position records and the joint
-precision/delay limit. See [R08](../notes/reachable-cut-composition.md). C066–C067 concern
+recovery. **R09/B40 complete:** finite-precision records yield an exact area
+and uniform joint precision/delay closure. **R10 is next:** two bounded-error
+position records and full-state reconstruction. See [R09](../notes/finite-precision-cut.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.
 
 ## Variables and proof obligations

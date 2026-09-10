@@ -470,5 +470,27 @@ but the central-record momentum width tends to $2(\sqrt2-1)FT$.
 Area closure alone therefore does not establish momentum recovery.
 
 C072–C073: [proof and assumptions](reachable-cut-composition.md),
-[B39 audit](../references/batches/B39.md). R09 replaces the ideal position
-record by a finite error interval and tests the joint precision/delay limit.
+[B39 audit](../references/batches/B39.md). The finite-precision extension follows.
+
+## 14. Finite precision and residual delay
+
+A record $|q-y|\le\varepsilon$ clips the cut lens to a convex set $C$ with
+position interval $[l,r]$. Let its increasing momentum-fibre endpoints be
+$L(q),U(q)$, its area $A_C$, its width $w=r-l$, and
+$D_*=U(r)-L(l)$. The exact terminal set is $S_bC+K_b$, with area
+
+$$|S_bC+K_b|=A_C+\frac{2F^2b^3}{3m}+2Fbw+\frac{Fb^2}{m}D_*.$$
+
+After the inverse shear, each future-force segment adds a transverse width
+$w+sD_*/m$; integrating its extrusion gives the two mixed terms. Exact
+position and unobserved full-lens records recover the preceding formulas.
+Since $w\le2\varepsilon$, $D_*\le2Fa$ and $A_C\le2Fa w$,
+
+$$|S_bC+K_b|\le4FT\varepsilon+\frac{2F^2ab^2}{m}
++\frac{2F^2b^3}{3m}\longrightarrow0$$
+
+for every joint precision/delay limit at fixed $F,m,T=a+b$.
+Central records still leave finite momentum uncertainty. R10 therefore tests
+two position records, separating recovery of both coordinates from area closure.
+C074–C075: [complete formula and proof](finite-precision-cut.md),
+[B40 audit](../references/batches/B40.md).
