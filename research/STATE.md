@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R04/B34 complete.
+Updated: 2026-09-10. Current milestone: R05/B35 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -27,14 +27,23 @@ ill-conditioned as their separation shrinks. Coupling fixes the memory kernel,
 while cooling closes prepared action scales. C064–C065 have one completed
 Luna-low audit and coordinator written/source review.
 
-Start **R05**: specify a mechanical readout and track its precision,
-back-reaction and resources under refinement. Test quiet and scalable
-preparations before inferring an action floor from finite-precision recovery.
-Read [R04 handoff](handoffs/R04.md) and [I005](../ideas/I005-classical-cuts-and-relations.md).
-A19 remains the supporting mechanical track.
+**R05/B35 complete:** [the readout note](../notes/classical-readout-refinement.md)
+gives exact canonical probe errors and back-reaction. Shrinking incoming widths
+close the support action products; fourth-power mesh preparation yields uniform
+first-power hidden-state recovery and third-power trajectory disturbance.
+C066–C067 have one Luna-low audit and coordinator written/source review.
+This externally switched impulsive instrument uses increasingly many prepared
+probes and ideal records; finite-duration implementation remains open.
+
+Start **R06**: replace ideal kicks with a finite-duration mechanical apparatus,
+with positive kinetic energy, a clock and a record. Specify fixed total mass,
+coupling/force bounds and preparation resources before testing refinement.
+Read [R05 handoff](handoffs/R05.md); B35's Theurel abstract is a lead for a
+bounded full-model passage reading. Retain [I005](../ideas/I005-classical-cuts-and-relations.md)
+and A19 as the supporting force/excitation track.
 
 **Source clarification, 2026-09-10:** retain [the ancient-cut provenance](../notes/ancient-cuts-provenance.md)
-alongside R05. Aristotle I.2 supplies the question about jointly realised
+alongside R06. Aristotle I.2 supplies the question about jointly realised
 divisions; readjustment of neighbouring trajectory vertices is our modern
 extension. Sampling, re-solving a discretisation and conditioning a path law
 have different effects on old nodes. No research claim status changed.

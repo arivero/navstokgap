@@ -6,11 +6,13 @@ identification of that constant with $\hbar$ must follow from its role in the
 derived dynamics. This is now the central task; spectrum examples and action
 defects serve as tests of its premises.
 
-**R03/B33 completed:** [the cut-state test](../notes/classical-cut-state.md)
-separates exact phase-state composition from independent position-conditioned
-resets, whose terminal refinement limit freezes motion. **R04 is next:** keep
-tagged momentum and eliminate an independent receiver mode, deriving the memory
-needed at the interface. A19 remains a supporting excitation test.
+**R05/B35 completed:** [the classical readout test](../notes/classical-readout-refinement.md)
+adds physical probe back-reaction to R04's receiver-memory reconstruction.
+Quiet scalable preparations close the instrument's action products while
+preserving asymptotically accurate recovery. **R06 is next:** test finite-duration
+readout with fixed apparatus, preparation, clock and recording resources.
+C066–C067 concern ideal impulses and growing probe supply. A19 remains the
+supporting force/excitation test.
 
 ## Variables and proof obligations
 

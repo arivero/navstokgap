@@ -120,6 +120,20 @@ pieces or alternatives. Proving a nonzero universal scale remains the main
 goal. A19 and the force/excitation inequalities remain useful diagnostic
 results, while R03 returns the next investigation to the original cut problem.
 
+## R05 consequence and next test
+
+[The readout test](../notes/classical-readout-refinement.md) adds two classical
+canonical probes to R04. The measured finite-mesh experiments change as cuts
+are added; they are not restrictions of one measured path law. With shrinking
+incoming widths, however, they converge uniformly to the same undisturbed
+classical flow and recover the receiver state. The support action products
+close in this scalable impulsive instrument. C066–C067 and B35 record the
+written result and bounded prior-art audit.
+
+R06 must now account for finite-duration interactions, clock, record and fixed
+apparatus resources. This keeps the ancient compatibility question attached
+to a concrete distinction between observational cuts and physical interventions.
+
 ## Reading record
 
 Coordinator reread the local Plutarch section, Diogenes IX.72, Aristotle I.2

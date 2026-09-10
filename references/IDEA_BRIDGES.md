@@ -4,7 +4,7 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R05
+## Classical cut state, receiver memory and readout — R06
 
 **Classical-source capsule:** Aristotle, *Generation and Corruption* I.2,
 around 317a, challenges simultaneous division via supposed consecutive points.
@@ -13,14 +13,24 @@ and [provenance note](../notes/ancient-cuts-provenance.md). Borrow the
 compatibility question; label neighbouring-vertex readjustment as the modern
 extension. Compare sampling with re-solving before assigning an effect to a cut.
 
+**R05/B35 capsule:** Katagiri v2 §5 supplies a classical canonical pointer
+coupling; [B35 companion](../docs/batches/B35/readout-source-companion.md)
+records the source-sign caveat. Two shears give preparation-dependent support
+action products. [R05](../notes/classical-readout-refinement.md) overcomes
+cubic observation sensitivity by fourth-power probe-width scaling, at growing
+probe count. Theurel's APS abstract supplies a finite-temperature apparatus
+lead, with full-model assumptions still unread. R06 should derive a preparation
+restriction from finite-duration apparatus dynamics; a lower energy bound
+alone does not imply a position-momentum width product.
+
 **R04/B34 capsule:** Zwanzig p. 219 supplies exact harmonic memory;
 Hermann–Krener p. 733 supplies local observability via a rank condition.
 Read [B34 companion](../docs/batches/B34/receiver-memory-source-companion.md)
 and [the three-body note](../notes/three-body-cut-memory.md). Two exact tagged
 phase samples recover the hidden receiver pair, with inverse entries up to
-order $\delta^{-3}$. R05 should model how such samples are obtained: specify
-readout precision, mechanical disturbance and resources, then test whether
-their scaling selects an action or leaves it preparation dependent.
+order $\delta^{-3}$. R05 obtained such samples with ideal probes and tracked
+readout precision, disturbance and resources. The support action products
+remain preparation dependent; R06 tests the physical implementation.
 
 **R03/B33 capsule:** Ford–Kac–Mazur p. 505 (2)–(5) supplies the full harmonic
 propagator; Zwanzig p. 219 (21)–(24) supplies elimination into a memory equation.

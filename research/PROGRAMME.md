@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 24, 2026-09-10.
+Version 25, 2026-09-10.
 
 ## Aim
 
@@ -49,10 +49,14 @@ C062–C063 have a two-page Luna-low audit and coordinator written/source review
 derives the surviving receiver memory with tagged momentum retained, two-time
 phase reconstruction and its short-separation conditioning. C064–C065 separate
 the fixed coupling kernel from prepared action scales that close under cooling.
-**R05 is next:** specify a mechanical readout with explicit accuracy,
-disturbance and resources. Test whether its refinement requirement selects a
-scale or simply demands a more precise preparation. This follows
-[I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
+**R05/B35 are complete:** [the readout note](../notes/classical-readout-refinement.md)
+proves that shrinking classical probe widths can overcome cubic observation
+sensitivity with vanishing accumulated disturbance. C066–C067 record the
+conditional result for ideal impulses, exact pointer records and a growing
+probe supply. **R06 is next:** specify finite-duration interactions, a clock,
+a record and fixed apparatus resources, then test whether their restrictions
+select an action scale or a resource/time bound.
+This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection
 

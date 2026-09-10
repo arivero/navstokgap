@@ -380,7 +380,42 @@ The internal frequencies are \(\sqrt{k/m}\) and \(\sqrt{3k/m}\), and
 modal actions are \(E_j/\omega_j\). Cooling scales the actions to zero
 while keeping the memory kernel fixed. C064--C065 and
 \href{../references/batches/B34.md}{B34} record this derived
-specialization of harmonic-bath elimination and observability. R05 next
-specifies the measurement interaction and tests its precision,
-disturbance and resource scaling.
+specialization of harmonic-bath elimination and observability. R05
+supplies the following readout test.
+
+\hypertarget{readout-precision-and-a-scalable-classical-instrument}{%
+\subsection{10. Readout precision and a scalable classical
+instrument}\label{readout-precision-and-a-scalable-classical-instrument}}
+
+Two sequential classical probes read the tagged pair with vanishing
+error and back-reaction under increasingly concentrated preparations.
+With canonical probe pairs \((q,\pi)\), \((r,\rho)\) and integrated
+interaction Hamiltonians \(G_x=\alpha x\pi\), \(G_P=\beta P\rho\), the
+pre-cut estimates and kicks are
+
+\[\widehat x=x+q/\alpha,\qquad
+\widehat P=P+r/\beta-\alpha\pi,\]
+\[d_x=\beta\rho,\qquad d_P=-\alpha\pi.\]
+
+Here \(\alpha\) is dimensionless and \(\beta\) has units \(T/M\). For
+incoming rectangular support half-widths \((s_q,t_q,s_r,t_r)\), the
+intrinsic support accuracy-disturbance products are \(s_qt_q\) and
+\(s_rt_r\), in action units. Both can approach zero across ordinary
+positive-volume classical preparations.
+
+At fixed horizon \(T\), put \(\eta=(T/N)/t_*\) with fixed time unit
+\(t_*\). Widths \(O(\eta^4)\) yield hidden-state recovery error
+\(O(\eta)\) after the cubic inverse amplification, including the
+intervening kick. The accumulated state disturbance is \(O(\eta^3)\)
+uniformly over the horizon. The original receiver preparation stays
+fixed, while fresh probe count and total fixed-mass probe mass grow as
+\(O(\eta^{-1})\).
+
+C066--C067, the \href{classical-readout-refinement.md}{full readout
+proof} and \href{../references/batches/B35.md}{B35} specify this
+externally switched impulsive instrument. Its ideal position records and
+shrinking probe widths leave preparation and recording resources open.
+Finite-duration implementation with fixed apparatus resources is R06;
+readout conditioning and canonical reaction alone have not excluded zero
+action.
 \end{document}

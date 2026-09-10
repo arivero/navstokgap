@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-09. Current verification uses written derivations and source/proof
+Updated 2026-09-10. Current verification uses written derivations and source/proof
 review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
@@ -80,11 +80,22 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C064 | Centre-reduced equal-mass three-body chain with tagged phase retained has exact cosine memory $\Gamma(t)=(9k/20)\cos(\sqrt{5k/(2m)}t)$ and inherited receiver quadratures; identical tagged phase can have different futures at fixed energy | [R04 §§1–3](../notes/three-body-cut-memory.md); canonical reduction, elimination and fixed-energy pair; B34 review |
 | C065 | Two sufficiently close exact tagged-phase samples recover the receiver pair through $\det B_\delta=g^2\delta^4/(12\mu\nu)+O(\delta^6)$; inverse sensitivity grows while cooling closes modal actions without changing the memory kernel | R04 §§4–5; Taylor coefficients, analytic determinant and normal-mode scaling; B34 review |
 
+| C066 | Two ordered canonical probe shears give exact pre-cut phase errors and back-reaction; intrinsic rectangular-support products are $s_qt_q$ and $s_rt_r$, with zero infimum across shrinking positive-volume probe preparations | [R05 §§1–2](../notes/classical-readout-refinement.md); fixed gains, ideal impulses and records; B35 and coordinator written review |
+| C067 | At fixed receiver, system preparation and horizon, fresh probe widths $O(\eta^4)$ give uniform hidden-state reconstruction error $O(\eta)$ and trajectory disturbance $O(\eta^3)$, while probe count and fixed-mass apparatus mass grow as $O(\eta^{-1})$ | R05 §§3–4; exact kick-inclusive error identity and bounded-flow sum; B35 review; scalable impulsive instrument |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C066–C067: [B35](../references/batches/B35.md) covers Katagiri v2 §5 and
+Theurel's APS abstract with two queries and two bounded primary readings.
+Canonical pointer coupling is established; the support-width and finite-chain
+refinement estimates are derived consequences with novelty unassessed.
+[Coordinator review](../reviews/classical-readout-B35.md) accepts the written
+proofs for scalable impulsive probes; finite-duration fixed-resource realization
+and a full reading of Theurel's apparatus assumptions remain R06.
 
 C064–C065: [B34](../references/batches/B34.md) covers Zwanzig's exact
 oscillator-bath reduction and Hermann–Krener's observability framework in
