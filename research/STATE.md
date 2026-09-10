@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R07/B38 complete.
+Updated: 2026-09-10. Current milestone: R08/B39 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -29,10 +29,16 @@ C070–C071 quantify a genuine new-information task. The scale depends on force
 budget and delay and closes when either shrinks. One Luna-low bounded source
 audit and coordinator written proof/source review are complete.
 
-Start **R08**: insert an unobserved or observed intermediate cut into that
-same experiment. Compose the joint reachable sets, test information lost by
-position-only descriptions and keep the force class and horizon fixed.
-Read [R07 handoff](handoffs/R07.md) and the ancient-cut provenance below.
+**R08/B39 complete:** [reachable cut composition](../notes/reachable-cut-composition.md)
+preserves the endpoint lens across unobserved cuts and gives the exact terminal
+area after phase or position observation. Position-conditioned area can close
+while momentum uncertainty stays finite. C072–C073 have one Luna-low bounded
+audit and coordinator written proof/source review.
+
+Start **R09**: replace the exact position record by an error interval of
+half-width $\varepsilon$; derive the compatible terminal set and area in the
+joint precision/delay limit at fixed force class. Read [R08 handoff](handoffs/R08.md)
+and the ancient-cut provenance below.
 R06's deterministic reconstruction and B36 thermal reading remain comparisons.
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)

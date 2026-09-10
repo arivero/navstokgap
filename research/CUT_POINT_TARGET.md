@@ -20,9 +20,12 @@ the quiet-preparation test with scalable impulsive probes. **R06/B37** supplies
 at fixed mass and observation latency, with exact record access and increasingly
 concentrated preparation. Refining reported samples needs no extra probes.
 **R07/B38 completed:** [delayed bounded-force information](../notes/causal-force-information.md)
-gives sharp prediction errors and a joint reachable canonical area. **R08 is
-next:** compose that region across an unobserved cut and compare an observed
-cut, preserving the same force class and horizon. A19 supports this track.
+gives sharp prediction errors and a joint reachable canonical area. **R08/B39
+completed:** [exact cut composition](../notes/reachable-cut-composition.md)
+preserves that area at unobserved cuts and calculates its reduction with new
+records. Area closure alone need not recover momentum. **R09 is next:**
+finite-precision position records and their joint precision/delay limit. A19
+supports this track.
 
 ## A03: completed calculation
 

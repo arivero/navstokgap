@@ -440,5 +440,35 @@ area $2F^2\ell^3/(3m)$, without a $2\pi$ normalization. This area describes
 admissible alternatives, not a lower action for each individual motion.
 
 C070–C071: [proof](causal-force-information.md), [source audit](../references/batches/B38.md).
-The area closes with force budget or delay. R08 tests phase-space composition
-across an inserted cut at fixed horizon.
+The area closes with force budget or delay. R08 supplies the cut-composition result below.
+
+## 13. Exact cuts and observed-position information
+
+At fixed total horizon $T=a+b$, an unobserved cut preserves the bounded-force
+reachable set exactly. Write $S_b(q,p)=(q+bp/m,p)$ and let $K_t$ be the
+increment lens above with duration $t$. Splitting and concatenating admissible
+force inputs proves
+
+$$K_T=S_bK_a+K_b.$$
+
+The sum is Minkowski addition; every finite unobserved refinement therefore
+leaves the old endpoint region and its canonical area unchanged. Replacing
+$K_a$ by its marginal rectangle admits incompatible position–momentum pairs
+and strictly enlarges the propagated set.
+
+An exact, non-disturbing phase-state record at the cut leaves a translate of
+$K_b$, with area $2F^2b^3/(3m)$. An exact position record instead leaves a
+momentum interval of width
+
+$$D=Fa\,[\sqrt{2-4\zeta}+\sqrt{2+4\zeta}-2],\qquad
+\zeta=\frac{m(q_a-q_0-p_0a/m)}{Fa^2}\in[-1/2,1/2].$$
+
+Its terminal area is $2F^2b^3/(3m)+Fb^2D/m$. To obtain the added area,
+shear the momentum segment vertically: each convex section lengthens by $D$
+over a transverse width $Fb^2/m$. As $b\to0$, this area vanishes uniformly,
+but the central-record momentum width tends to $2(\sqrt2-1)FT$.
+Area closure alone therefore does not establish momentum recovery.
+
+C072–C073: [proof and assumptions](reachable-cut-composition.md),
+[B39 audit](../references/batches/B39.md). R09 replaces the ideal position
+record by a finite error interval and tests the joint precision/delay limit.

@@ -19,7 +19,9 @@ handoff with the remaining dependency.
 | B37 | done | Zero searches, four cached primary pages; finite-duration pointer and observability comparison, coordinator source/proof review | One Luna low, sequential | C068–C069 |
 | R07 | done | Delayed bounded-force prediction: sharp minimax errors and joint reachable canonical area; explicit information restriction and gap-closing limits C070–C071 | Coordinator + Luna-low B38 | [R07 handoff](handoffs/R07.md) |
 | B38 | done | Two queries, one primary HTML passage and two failed retrievals; bounded-input control precedent and coordinator proof/source review | One Luna low, sequential | R07 |
-| R08 | ready | Insert an unobserved versus observed cut into R07; exact joint reachable-set composition and position-only loss; track action area at fixed force class and horizon | Coordinator then bounded librarian | R07/B38; ancient-cut provenance |
+| R08 | done | Exact joint cut composition, rectangle counterexample, observed position fibre and terminal area C072–C073 | Coordinator + Luna-low B39 | [R08 handoff](handoffs/R08.md) |
+| B39 | done | Two queries and two primary passages; bounded reachability precedent, no direct conditional-area match; coordinator proof/source review | One Luna low, sequential | R08 |
+| R09 | ready | Replace exact position record by error interval; derive compatible terminal set and area in joint precision/delay limit at fixed force class | Coordinator then bounded librarian | R08/B39 |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -122,10 +124,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R08 from the completed R07/B38 delayed-force information test. Compose
-joint reachable sets across an inserted cut while holding force class and
-horizon fixed; distinguish eliminating the node from observing it. C070–C071
-give the exact original region and minimax error benchmark. See R07 handoff.
+Start R09 from the completed R08/B39 cut-composition test. Replace the exact
+position record by a deterministic error interval of half-width $\varepsilon$.
+Derive the terminal compatible set and area as precision and residual delay
+vary, retaining position–momentum correlations. See [R08 handoff](handoffs/R08.md).
 Preserve A19 below as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.

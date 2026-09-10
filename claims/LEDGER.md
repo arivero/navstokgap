@@ -88,11 +88,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C070 | Exact delayed past records with unresolved force $f\in L^\infty$, $|f|\le F$, give coordinate minimax prediction errors $F\ell^2/(2m)$ and $F\ell$, simultaneously attained by inertial prediction; risk product is $F^2\ell^3/(2m)$ | [R07 §§1–2](../notes/causal-force-information.md); identical-record force pair and endpoint-integral upper bounds; B38 review |
 | C071 | R07's exact joint reachable region satisfies $|z-d/2|\le(1-d^2)/4$, $|d|\le1$, and has canonical area $2F^2\ell^3/(3m)$; force-budget or delay closure sends the area to zero | R07 §§3–4; fixed-impulse extremizers, convex interpolation and area integral; B38 review |
 
+| C072 | For arbitrary measurable bounded force, $K_T=S_bK_a+K_b$ at every interior cut; all unobserved refinements preserve the endpoint set, while replacing the intermediate lens by its marginal rectangle strictly enlarges it | [R08 §§1–2](../notes/reachable-cut-composition.md); split/concatenate proof and saturated-impulse counterexample; [B39 review](../reviews/cut-composition-B39.md) |
+| C073 | Exact cut position leaves momentum interval of width $D(\zeta)=Fa[\sqrt{2-4\zeta}+\sqrt{2+4\zeta}-2]$ and terminal canonical area $2F^2b^3/(3m)+Fb^2D(\zeta)/m$; area tends uniformly to zero as $b\to0$ although the central momentum width stays positive | R08 §§3–4; ideal available records, lens inversion and determinant-one shear; B39 written review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C072–C073: [B39](../references/batches/B39.md) records the bounded double-integrator
+and discrete hybrid reachable-set precedents. Continuous-time composition,
+the rectangle counterexample and conditional areas are derived specializations;
+novelty is unassessed. [Coordinator review](../reviews/cut-composition-B39.md)
+accepts the written proofs separately from the two-query source coverage.
 
 C070–C071: [B38](../references/batches/B38.md) verifies Liberzon's classical
 double-integrator and one-switch time-optimal control passage. The fixed-time

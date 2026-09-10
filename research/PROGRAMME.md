@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 27, 2026-09-10.
+Version 28, 2026-09-10.
 
 ## Aim
 
@@ -61,8 +61,11 @@ to zero (C068–C069). Exact final records and known dynamics are supplied.
 **R07/B38 are complete:** exact delayed records plus unresolved bounded force
 give sharp prediction-risk lower bounds and a joint reachable canonical area
 $2F^2\ell^3/(3m)$ (C070–C071). The input class and delay supply this scale;
-it closes when either shrinks. **R08 is next:** compare reachable-set
-composition across unobserved and observed cuts at fixed force class and horizon.
+it closes when either shrinks. **R08/B39 are complete:** exact joint reachable
+sets compose across unobserved cuts; an observed position leaves a calculable
+momentum fibre and terminal area (C072–C073). That area can close while momentum
+uncertainty persists. **R09 is next:** replace exact position records by finite
+error intervals and test the joint precision/delay limit at fixed force class.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection

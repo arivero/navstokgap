@@ -13,8 +13,11 @@ preserving asymptotically accurate recovery. **R06/B37 completed:**
 [finite-duration autonomous readout](../notes/autonomous-finite-readout.md)
 retains fixed finite mass and pulse widths, with delayed exact records and
 shrinking preparation widths; C068–C069 close its accuracy–disturbance product.
-**R07 is next:** specify causal new information and a justified preparation or
-record-resolution restriction before deriving a lower bound. C066–C067 concern
+**R07/B38 completed:** bounded unresolved force gives a delayed prediction
+region. **R08/B39 completed:** exact cut composition and observed-position
+fibres quantify its information dependence; area can close without momentum
+recovery. **R09 is next:** finite-precision position records and the joint
+precision/delay limit. See [R08](../notes/reachable-cut-composition.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.
 
 ## Variables and proof obligations

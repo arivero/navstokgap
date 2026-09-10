@@ -112,15 +112,14 @@ trajectory. A derivation of a universal action scale must explain what fixes
 the relevant force–delay combination and why the observer's information
 boundary is physically unavoidable.
 
-## 5. Next comparison: insert a cut inside the hidden window
+## 5. Completed comparison: insert a cut inside the hidden window
 
-R08 should compose the reachable descriptions before and after inserting a
-time node. Keep the same bounded-force class and distinguish an unobserved
-node, which must be eliminated, from an observed node, which supplies new
-information. Determine which joint position–momentum correlations must be
-carried for the old endpoint region to remain unchanged. This connects the
-[ancient-cut compatibility question](ancient-cuts-provenance.md) to an explicit
-classical information region rather than merely to a newly sampled point.
+[R08](reachable-cut-composition.md) proves exact joint composition across an
+unobserved cut and derives the momentum fibre and terminal area after an
+observed position. It retains the same bounded-force class and total horizon.
+This connects the [ancient-cut compatibility question](ancient-cuts-provenance.md)
+to an explicit classical information region. R09 now tests finite-precision
+position records and the joint precision/delay limit.
 
 The present formulas are elementary bounded-input reachability and deterministic
 minimax specializations. [Liberzon §4.4.1](https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html)

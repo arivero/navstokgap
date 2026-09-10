@@ -4,7 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R08
+## Classical cut state, receiver memory and readout — R09
+
+**R08/B39 capsule:** Bird et al., arXiv:2106.14831v3, abstract and §4.1
+Theorem 8, supply exact set propagation in a discrete hybrid setting.
+[R08](../notes/reachable-cut-composition.md) derives continuous-time
+composition and observed-position fibres directly. R09 borrows propagation
+of the compatible joint set: intersect the old lens with a finite-width
+position strip before propagating; keep mass, force class and horizon fixed.
+[B39 companion](../docs/batches/B39/cut-composition-source-companion.md)
+records the source scope and the absent direct conditional-area match.
 
 **R07/B38 capsule:** [Liberzon §4.4.1](https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html)
 supplies bounded-input double-integrator extremals. [R07](../notes/causal-force-information.md)
