@@ -4,7 +4,18 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R12
+## Classical cut state, receiver memory and readout — R13
+
+**R12/B43 capsule:** product central fibres yield additive scalar radii;
+[the composition note](../notes/minimax-composition.md) gives extensive
+identical-copy action products and exact aggregate-record information loss.
+Ruan–Chirikjian §3.1 supplies Minkowski-sum context; the exact one-body input
+remains Seeber–Haimovich's hidden pair and sharp upper bound. R13 removes
+the long preparation horizon: maximize terminal phase deviations under the
+whole record band and known initial state, then compare constituent transients.
+The deciding premise is the time available to create hidden alternatives.
+[B43 companion](../docs/batches/B43/composition-source-companion.md) also
+suggests testing a shared-force/error constraint that destroys product fibres.
 
 **R11/B42 capsule:** Seeber–Haimovich Proposition 3.1, (10)–(12), already
 constructs a prepared zero-initial-state pair hidden by one complete noisy

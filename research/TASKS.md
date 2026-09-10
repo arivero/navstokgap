@@ -27,7 +27,9 @@ handoff with the remaining dependency.
 | B41 | done | Differentiation audit with coordinator exact formula match in Seeber–Haimovich §4; source corrections and proof review | One Luna low, sequential | R10 |
 | R11 | done | Symmetric-fibre recovery and sharp phase minimax risks from shared-initial-state motions, valid for entire noisy history C078–C079 | Coordinator + Luna-low B42 | [R11 handoff](handoffs/R11.md) |
 | B42 | done | Exact differentiation lower-bound pair and upper bound; coordinator initial-data and factor-two corrections | One Luna low, sequential | R11 |
-| R12 | ready | Compose worst-case information scales under product inputs/errors; compare constituent and whole-body records with A08 variance universality | Coordinator then bounded librarian | R11/B42; A08; I006 |
+| R12 | done | Product minimax radii, extensive risk product, exact aggregate record image and strict heterogeneous information loss C080–C081 | Coordinator + Luna-low B43 | [R12 handoff](handoffs/R12.md) |
+| B43 | done | Bounded convex-sum context and reused exact differentiation bounds; coordinator source and written proof review | One Luna low, sequential | R12; passage-count ambiguity recorded |
+| R13 | ready | Exact finite-horizon phase minimax risks with known initial data; compose constituents crossing the preparation-time regime | Coordinator then bounded librarian | R12/B43; R11; preserve product input/error class |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -130,10 +132,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R12 from R11/B42 and A08. Derive composition for the same minimax
-observable and product error class, with records specified at constituent
-and whole-body levels. Test transfer of the variance universality law instead
-of assuming it from action units. See [R11 handoff](handoffs/R11.md) and I006.
+Start R13 from R12/B43. Derive the exact finite-horizon risks before the
+R11 hidden pair can be prepared from known initial data. Compare product
+constituent and aggregate records across different transient regimes.
+See [R12 handoff](handoffs/R12.md) and I006.
 Preserve A19 below as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.

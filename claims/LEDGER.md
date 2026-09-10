@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-10. Current verification uses written derivations and source/proof
+Updated 2026-09-11. Current verification uses written derivations and source/proof
 review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
@@ -99,12 +99,21 @@ assumptions and supporting artifact. IDs remain stable through revision.
 
 | C078 | For compact centrally symmetric convex inputs, linear records with bounded errors and a scalar linear target, global minimax error equals the maximal target magnitude in the central compatible fibre | [R11 §1](../notes/indistinguishable-phase-bound.md); half-difference and midpoint proof; [B42 review](../reviews/indistinguishability-B42.md) |
 | C079 | At $d=2\sqrt{m\varepsilon/F}$, $T-b\ge2d$, two position records and the entire bounded-error position history have identical coordinate minimax risks $P_*=Fd+Fb$ and $Q_*=\varepsilon+Fdb/m+Fb^2/(2m)$; at $b=0$ their product is $2\sqrt{mF}\varepsilon^{3/2}$ | R11 §§2–3; established prepared opposite-motion pair, R10 upper bound, blind-delay extension; B42 review |
+| C080 | Product symmetric convex input/error classes with all constituent records give exact scalar minimax radius $\sum_i \lvert a_i\rvert r_i$; canonical centre/relative radii follow, and n identical copies have $H_R=nH_1$. Mass-only nonnegative coordinate-radius closure on all positive masses forces $Q(m)=q_*$, $P(m)=p_*m$ | [R12 §§1,4](../notes/minimax-composition.md); product-fibre extremizers and nonnegative additivity; [B43 written review](../reviews/minimax-composition-B43.md) |
+| C081 | For product bounded forces/errors, complete records, known initial states and $T\ge\max_i4\sqrt{m_i\varepsilon_i/F_i}$, centre risks are $Q_A=E$, $P_A=2\sum_i\sqrt{m_iF_i\varepsilon_i}$; retaining only the centre record gives $Q_B=E$, $P_B=2\sqrt{MF_\Sigma E}$, strictly larger momentum risk unless $F_i/(m_i\varepsilon_i)$ is common | R12 §§2–3; R11 sharp radii, exact force/error image, Cauchy–Schwarz; B43 written review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C080–C081: [B43](../references/batches/B43.md) reuses Seeber–Haimovich's
+established one-body bounds. Product support addition, canonical composition,
+aggregate image equality, strict information loss and radius-closure conclusions
+are derived here from explicit hypotheses. Ruan–Chirikjian supplies geometric
+context, with no exact minimax match in the bounded coverage. Novelty remains
+unassessed; proof acceptance rests on the written argument and coordinator review.
 
 C078–C079: [B42](../references/batches/B42.md) matches C079's prepared
 zero-initial-state pair exactly to Seeber–Haimovich Proposition 3.1 and its

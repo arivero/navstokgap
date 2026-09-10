@@ -549,5 +549,47 @@ any compatible pair has an admissible half-difference, and the symmetric
 central pair realizes its diameter.
 
 C078–C079: [proof and precise information classes](indistinguishable-phase-bound.md),
-[B42 audit](../references/batches/B42.md). R12 next tests whether this worst-case
-action scale has the composition law needed for mass universality.
+[B42 audit](../references/batches/B42.md). The following composition test
+settles the proposed transfer to mass universality.
+
+
+## 17. Worst-case composition and the cost of aggregate records
+
+Product bounded-force/error classes add scalar minimax radii linearly. For
+positive masses with known initial states, complete position records of errors
+$\varepsilon_i>0$, forces $|f_i|\le F_i$ and common terminal time
+$T\ge\max_i4\sqrt{m_i\varepsilon_i/F_i}$, put
+$M=\sum_i m_i$, $E=\sum_i m_i\varepsilon_i/M$ and $F_\Sigma=\sum_iF_i$.
+With all constituent records retained, the exact centre position and total
+momentum risks are
+
+$$Q_A=E,\qquad P_A=2\sum_i\sqrt{m_iF_i\varepsilon_i}.$$
+
+The central compatible fibre is a Cartesian product. Its support in a scalar
+sum direction is the sum of the supports, attained by aligned symmetric
+extremizers; R11's midpoint argument converts that radius into exact minimax
+risk. For n identical constituents the product is therefore $H_A=nH_1$.
+It does not obey A08's invariant variance-coefficient law.
+
+Keeping only the weighted sum of the records gives exactly the single-body
+force/error class $(M,F_\Sigma,E)$. To lift any aggregate force f and error e
+back to the original constituents, choose
+$f_i=F_i f/F_\Sigma$ and $e_i=\varepsilon_i e/E$, preserving each initial
+state. Thus its exact risks are
+
+$$Q_B=E,\qquad P_B=2\sqrt{M F_\Sigma E}\ge P_A.$$
+
+Equality holds precisely when $F_i/(m_i\varepsilon_i)$ is common to all
+constituents. Otherwise losing the individual records strictly increases the
+momentum risk in the same mechanical model.
+
+If mass-only nonnegative coordinate radii are closed under product composition
+for every positive mass, additivity forces $Q(m)=q_*$, $P(m)=p_*m$.
+Their action product is extensive; a mass-independent product must be zero.
+Fixed acceleration bound $F(m)=am$ and common precision realize the positive
+extensive case, whose value still comes from a and the record band. R13 next
+examines the finite-horizon regime before the hidden pair can be prepared.
+
+C080–C081: [complete proof and information classes](minimax-composition.md),
+[B43 audit](../references/batches/B43.md). These products multiply coordinate
+minimax risks and are not simultaneous error lower bounds on each motion.

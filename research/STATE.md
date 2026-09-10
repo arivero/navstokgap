@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R11/B42 complete.
+Updated: 2026-09-11. Current milestone: R12/B43 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -50,11 +50,19 @@ give exact coordinate minimax risks even for the entire noisy position history,
 with shared initial state (C078–C079). The established prepared pair connects
 reachability to recovery; positive precision supplies the scale.
 
-Start **R12**: compare composition of these worst-case action scales with A08's
-variance-based universality law. Specify product input/error classes and the
-records available for constituent versus whole-body estimation. Read
-[R11 handoff](handoffs/R11.md) and [I006](../ideas/I006-discovery-by-connecting-results.md)
-and the ancient-cut provenance below.
+**R12/B43 complete:** [minimax composition](../notes/minimax-composition.md)
+proves additive scalar radii for product information and an extensive canonical
+risk product for identical copies. Keeping only the centre record has an exact
+single-body image and strictly worsens momentum risk for unequal force/precision
+ratios. Mass-only coordinate-radius closure gives an extensive action product,
+so A08's variance universality does not transfer (C080–C081). One Luna-low
+bounded audit and coordinator written/source review are complete.
+
+Start **R13**: derive finite-horizon phase minimax risks from known initial
+state before R11's hidden pair can be prepared; compare constituent and aggregate
+records when constituents enter the record-limited regime at different times.
+Read [R12 handoff](handoffs/R12.md) and [I006](../ideas/I006-discovery-by-connecting-results.md).
+Shared force/error restrictions remain a source-inspired supporting test.
 R06's deterministic reconstruction and B36 thermal reading remain comparisons.
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)

@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 31, 2026-09-10.
+Version 32, 2026-09-11.
 
 ## Aim
 
@@ -71,15 +71,21 @@ as well, with estimator-specific errors and an explicit vanishing action
 product (C076–C077); the differentiation bound has an exact prior-art match.
 **R11/B42 are complete:** a symmetric-fibre theorem and an established prepared
 trajectory pair give exact phase minimax risks, even with the entire noisy
-position history (C078–C079). **R12 is next:** connect these worst-case action
-scales to composition, checking whether A08's variance universality transfers.
+position history (C078–C079). **R12/B43 are complete:** product minimax radii add linearly, so identical
+copies have an extensive canonical risk product. Aggregate records have an
+exact single-body image and strictly larger momentum risk when force/precision
+ratios differ (C080–C081). Mass-only coordinate-radius closure forces an
+extensive product; A08's variance universality does not transfer. **R13 is
+next:** remove the long preparation-time assumption and compare finite-horizon
+risks and composition across constituent transient regimes.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
 [I006](../ideas/I006-discovery-by-connecting-results.md). Each proposed bridge
 must specify its source and destination observables, preserved premises and
-a decisive test. R11 joins reachability to optimal recovery; R12 now tests
-the connection to an already established universality argument in this repo.
+a decisive test. R11 joins reachability to optimal recovery; R12 resolves the connection to
+A08 by deriving the different worst-case aggregation law. R13 checks the
+finite-horizon boundary of that result.
 
 ## Supporting track: bound action and scale selection
 

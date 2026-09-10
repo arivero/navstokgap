@@ -24,10 +24,11 @@ from being presented as discovery.
 | Composition → universal constant | Positive coefficient in a stated preparation class | Establish preparation independence as well as mass dependence |
 | Universal coefficient → quantum phase | Action parameter in the composition of amplitudes | Supply the dynamical identification; dimensions alone do not identify it |
 
-The immediate task is R12, the third row. It uses a genuine lower bound from
-R11, rather than a chosen estimator's error, and tests whether A08's
-universality mechanism applies to it. This is a connection between work already
-done in different parts of the repository.
+R12 completed the third-row test: [product minimax radii](../notes/minimax-composition.md)
+give an extensive identical-copy action product and quantify the cost of losing
+constituent records. A08's invariant variance law does not transfer to this
+observable. R13 now tests the finite-horizon boundary, with known initial data
+and too little time to prepare R11's extremal pair.
 
 ## Working rule
 
