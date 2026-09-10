@@ -21,6 +21,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B41](../references/batches/B41.md): two-record recovery and established
+  differentiation bounds; [source companion](batches/B41/two-record-source-companion.md).
+
 - [B40](../references/batches/B40.md): finite-precision position records and
   mixed area; [source companion](batches/B40/finite-precision-source-companion.md).
 

@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R09/B40 complete.
+Updated: 2026-09-10. Current milestone: R10/B41 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -40,9 +40,14 @@ gives the exact clipped-lens terminal area and uniform closure for every joint
 precision/delay limit, C074–C075. One Luna-low audit and coordinator review
 separate the derived formula from set-membership and mixed-area precedents.
 
-Start **R10**: two bounded-error position records at fixed total horizon.
-Derive momentum reconstruction bounds and compare full-state recovery with
-area closure, keeping the force class fixed. Read [R09 handoff](handoffs/R09.md)
+**R10/B41 complete:** [two-record recovery](../notes/two-position-recovery.md)
+gives exact estimator-specific errors and a positive-delay sequence recovering
+both coordinates with vanishing action-error product (C076–C077). The core
+finite-difference bound and optimum have an exact literature match.
+
+Start **R11**: a minimax lower-bound test with shared initial state and identical
+two-record data. Compare indistinguishable bounded-force trajectories with
+R10's estimator bound. Read [R10 handoff](handoffs/R10.md)
 and the ancient-cut provenance below.
 R06's deterministic reconstruction and B36 thermal reading remain comparisons.
 

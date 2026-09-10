@@ -4,7 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R10
+## Classical cut state, receiver memory and readout — R11
+
+**R10/B41 capsule:** Seeber–Haimovich v2 §4, Lemma 4.3 and Theorem 4.1,
+exactly match the equal-error finite-difference estimate and its optimum.
+Section 6.2 supplies indistinguishable sampled parabolic arcs as a lower-bound
+strategy. R11 must preserve the same known initial state while constructing
+two compatible records; keep its estimator class separate from quasi-exact
+differentiators. [B41 companion](../docs/batches/B41/two-record-source-companion.md)
+records the source corrections and [R10](../notes/two-position-recovery.md)
+the delayed mechanical upper bound to compare.
 
 **R09/B40 capsule:** Rohou–Jaulin's publisher abstract/introduction supplies
 bounded-error set-membership estimation; Debin–Fillastre §2 supplies classical

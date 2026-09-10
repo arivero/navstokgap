@@ -94,11 +94,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C074 | A bounded-error position strip clipped to the force lens has terminal area $A_C+2F^2b^3/(3m)+2Fbw+Fb^2D_*/m$, with strip width $w$ and extreme compatible momentum span $D_*$ | [R09 §§1–2](../notes/finite-precision-cut.md); segment extrusion, monotone fibres and [B40 review](../reviews/finite-precision-B40.md) |
 | C075 | At fixed $F,m,T$, R09's area is at most $4FT\varepsilon+2F^2ab^2/m+2F^2b^3/(3m)$ and closes uniformly as precision error and delay vanish at any relative rates; central momentum uncertainty persists | R09 §3; written bound and exact/full/no-delay endpoint checks; B40 review |
 
+| C076 | Two bounded-error positions give exact compatible-set propagation and estimator-specific worst-case terminal errors $R_p=B+Fb$, $R_q=\varepsilon_2+bB/m+Fb^2/(2m)$, where $B=m(\varepsilon_1+\varepsilon_2)/\delta+F\delta/2$ | [R10 §§1–2](../notes/two-position-recovery.md); weighted force integral and simultaneous saturation; [B41 review](../reviews/two-record-B41.md) |
+| C077 | If $\delta,b\to0$ and $(\varepsilon_1+\varepsilon_2)/\delta\to0$, both coordinate errors close uniformly; equal errors and $b=\delta_*=2\sqrt{m\varepsilon/F}$ give action-error product $28\sqrt{mF}\varepsilon^{3/2}$ at fixed horizon | R10 §3; timing feasibility and written bounds; established equal-error differentiation optimum, derived mechanical product |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C076–C077: [B41](../references/batches/B41.md) identifies the exact equal-error
+finite-difference bound and optimum in Seeber–Haimovich §4. These are established
+results. The fixed mechanical experiment, unequal-error delayed phase estimate
+and action-product consequences are derived here; novelty is unassessed.
 
 C074–C075: [B40](../references/batches/B40.md) identifies bounded-error
 set-membership and classical mixed-area precedents. The clipped-lens area

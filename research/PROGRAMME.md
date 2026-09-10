@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 29, 2026-09-10.
+Version 30, 2026-09-10.
 
 ## Aim
 
@@ -66,8 +66,11 @@ sets compose across unobserved cuts; an observed position leaves a calculable
 momentum fibre and terminal area (C072–C073). That area can close while momentum
 uncertainty persists. **R09/B40 are complete:** finite-precision records give
 an exact clipped-lens area and uniform closure in the joint precision/delay
-limit (C074–C075). **R10 is next:** two bounded-error position records and
-momentum recovery, with the force class and total horizon fixed.
+limit (C074–C075). **R10/B41 are complete:** two positions recover momentum
+as well, with estimator-specific errors and an explicit vanishing action
+product (C076–C077); the differentiation bound has an exact prior-art match.
+**R11 is next:** indistinguishable-trajectory minimax lower bounds, with shared
+initial state, force class and total horizon fixed.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection

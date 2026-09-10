@@ -23,7 +23,9 @@ handoff with the remaining dependency.
 | B39 | done | Two queries and two primary passages; bounded reachability precedent, no direct conditional-area match; coordinator proof/source review | One Luna low, sequential | R08 |
 | R09 | done | Exact clipped-lens terminal area and uniform joint precision/delay closure, C074–C075 | Coordinator + Luna-low B40 | [R09 handoff](handoffs/R09.md) |
 | B40 | done | Bounded-error estimator and mixed-area passages; coordinator proof/source review, novelty unassessed | One Luna low, sequential | R09 |
-| R10 | ready | Two bounded-error position records: momentum reconstruction, force/precision competition and full-state recovery at fixed horizon | Coordinator then bounded librarian | R09/B40 |
+| R10 | done | Two-record estimator-specific sharp errors and positive-delay full-state recovery with vanishing action product, C076–C077 | Coordinator + Luna-low B41 | [R10 handoff](handoffs/R10.md) |
+| B41 | done | Differentiation audit with coordinator exact formula match in Seeber–Haimovich §4; source corrections and proof review | One Luna low, sequential | R10 |
+| R11 | ready | Indistinguishable bounded-force trajectories with shared initial state and two records; minimax momentum lower bound at fixed precision | Coordinator then bounded librarian | R10/B41 |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -126,10 +128,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R10 from the completed R09/B40 finite-precision test. Use two position
-records and derive momentum reconstruction bounds, retaining joint compatible
-sets. Compare the precision/separation and force/separation terms before
-proposing an apparatus constraint. See [R09 handoff](handoffs/R09.md).
+Start R11 from R10/B41. Construct identical-record trajectory pairs with
+shared initial state and derive a momentum lower bound for every estimator.
+Compare with R10's sharp estimator-specific upper bound before introducing
+an apparatus constraint. See [R10 handoff](handoffs/R10.md).
 Preserve A19 below as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.

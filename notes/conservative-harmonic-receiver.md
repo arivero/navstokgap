@@ -494,3 +494,25 @@ Central records still leave finite momentum uncertainty. R10 therefore tests
 two position records, separating recovery of both coordinates from area closure.
 C074–C075: [complete formula and proof](finite-precision-cut.md),
 [B40 audit](../references/batches/B40.md).
+
+## 15. Two records and recovery of momentum
+
+Positions recorded at $t_1=T-b-\delta$ and $t_2=T-b$, with errors bounded
+by $\varepsilon_1,\varepsilon_2$, give the momentum estimate
+$\widehat p=m(y_2-y_1)/\delta$. Define
+
+$$B=\frac{m(\varepsilon_1+\varepsilon_2)}\delta+\frac{F\delta}2.
+\qquad R_p=B+Fb,\qquad
+R_q=\varepsilon_2+\frac{bB}{m}+\frac{Fb^2}{2m}.$$
+
+These errors of $\widehat p$ and $\widehat q_T=y_2+b\widehat p/m$ are
+simultaneously attained by constant force and adverse record errors.
+The compatible-set area is at most $4R_qR_p$. If $\delta,b\to0$ and
+$(\varepsilon_1+\varepsilon_2)/\delta\to0$, both coordinates are recovered.
+
+For equal errors, the established finite-difference optimum is
+$\delta_*=2\sqrt{m\varepsilon/F}$. Choosing positive delay $b=\delta_*$
+gives $R_p=4\sqrt{mF\varepsilon}$, $R_q=7\varepsilon$, and an action-error
+product $28\sqrt{mF}\varepsilon^{3/2}\to0$. R11 tests minimax lower bounds.
+C076–C077: [proof](two-position-recovery.md),
+[exact prior-art match](../references/batches/B41.md).

@@ -25,8 +25,10 @@ completed:** [exact cut composition](../notes/reachable-cut-composition.md)
 preserves that area at unobserved cuts and calculates its reduction with new
 records. Area closure alone need not recover momentum. **R09/B40 complete:**
 [finite precision](../notes/finite-precision-cut.md) gives an exact terminal
-area and uniform precision/delay closure. **R10 is next:** two position
-records and recovery of momentum as well as position. A19
+area and uniform precision/delay closure. **R10/B41 complete:**
+[two records](../notes/two-position-recovery.md) recover both coordinates
+under the stated precision/timing limits. **R11 is next:** shared-initial-state
+indistinguishable pairs and minimax lower bounds. A19
 supports this track.
 
 ## A03: completed calculation
