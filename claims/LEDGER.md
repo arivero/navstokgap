@@ -85,11 +85,21 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C068 | Fixed finite-mass clock and four probes with smooth coordinate coupling $\lambda K\sum f_j(s)X(x)R(q_j)$ give persistent momentum records $\boldsymbol\pi(T)=\boldsymbol\pi(0)-\lambda\mathcal A z_0+O(\lambda b+\lambda^3)$ with invertible fixed-width pulse matrix; receiver disturbance is $O(\lambda b+\lambda^2)$ at fixed horizon | [R06 §§1–3](../notes/autonomous-finite-readout.md); positive kinetic energy, compact receiver preparation, bounded forces, clock reaction included; B37 and coordinator written review |
 | C069 | For C068 with known dynamics and exact final momentum records, incoming apparatus width $b=\lambda^3$ gives delayed initial-state reconstruction and trajectory disturbance $O(\lambda^2)$; canonical initial-position error times finite-horizon momentum disturbance tends to zero as $O(\lambda^4)$ | R06 §4; fixed masses, pulse widths and clock mean energy; increasingly precise preparation and weak coupling; reporting refinement is sampling after fixed latency; B37 review |
 
+| C070 | Exact delayed past records with unresolved force $f\in L^\infty$, $|f|\le F$, give coordinate minimax prediction errors $F\ell^2/(2m)$ and $F\ell$, simultaneously attained by inertial prediction; risk product is $F^2\ell^3/(2m)$ | [R07 §§1–2](../notes/causal-force-information.md); identical-record force pair and endpoint-integral upper bounds; B38 review |
+| C071 | R07's exact joint reachable region satisfies $|z-d/2|\le(1-d^2)/4$, $|d|\le1$, and has canonical area $2F^2\ell^3/(3m)$; force-budget or delay closure sends the area to zero | R07 §§3–4; fixed-impulse extremizers, convex interpolation and area integral; B38 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C070–C071: [B38](../references/batches/B38.md) verifies Liberzon's classical
+double-integrator and one-switch time-optimal control passage. The fixed-time
+lens, information restriction and deterministic minimax proof are derived
+specializations, with novelty unassessed. Two other source routes were
+unreadable. [Coordinator review](../reviews/causal-information-B38.md) verifies
+the self-contained proof separately from this bounded prior-art coverage.
 
 C068–C069: [B37](../references/batches/B37.md) uses zero searches and four
 cached primary pages: Theurel pp. 5–7 and Hermann–Krener p. 733. Conserved

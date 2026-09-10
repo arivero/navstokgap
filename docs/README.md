@@ -21,6 +21,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B38](../references/batches/B38.md): delayed force information and bounded-input
+  reachability; [source companion](batches/B38/causal-information-source-companion.md).
+
 - [B34](../references/batches/B34.md): three-body receiver memory and
   finite-history recovery; [source companion](batches/B34/receiver-memory-source-companion.md).
 

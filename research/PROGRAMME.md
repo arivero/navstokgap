@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 26, 2026-09-10.
+Version 27, 2026-09-10.
 
 ## Aim
 
@@ -58,8 +58,11 @@ one clock and four probes has fixed finite mass, fixed pulse widths and uniform
 force ceilings. Weak coupling and concentrated preparations give accurate,
 weakly disturbing delayed reconstruction; its specified action product tends
 to zero (C068–C069). Exact final records and known dynamics are supplied.
-**R07 is next:** require causal new information and a justified preparation or
-record-resolution restriction, then derive a lower bound for that task.
+**R07/B38 are complete:** exact delayed records plus unresolved bounded force
+give sharp prediction-risk lower bounds and a joint reachable canonical area
+$2F^2\ell^3/(3m)$ (C070–C071). The input class and delay supply this scale;
+it closes when either shrinks. **R08 is next:** compare reachable-set
+composition across unobserved and observed cuts at fixed force class and horizon.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection

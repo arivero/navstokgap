@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R06/B37 complete.
+Updated: 2026-09-10. Current milestone: R07/B38 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -22,11 +22,18 @@ C068–C069 have one sequential Luna-low four-page audit and coordinator written
 proof/source review. Observation latency stays fixed; exact final record access
 and known receiver dynamics remain supplied resources.
 
-Start **R07**: specify a causal new-information task and a justified lower
-preparation-width or final-record-resolution restriction. Derive an estimator
-lower bound before inferring an action floor; R06's noisy-record upper estimate
-alone proves no impossibility theorem. Read [R06 handoff](handoffs/R06.md).
-The pre-existing B36 Theurel reading is preserved and integrated unchanged.
+**R07/B38 complete:** [the delayed-force note](../notes/causal-force-information.md)
+uses exact past records and an unresolved bounded force to give sharp
+worst-case prediction errors and canonical reachable area $2F^2\ell^3/(3m)$.
+C070–C071 quantify a genuine new-information task. The scale depends on force
+budget and delay and closes when either shrinks. One Luna-low bounded source
+audit and coordinator written proof/source review are complete.
+
+Start **R08**: insert an unobserved or observed intermediate cut into that
+same experiment. Compose the joint reachable sets, test information lost by
+position-only descriptions and keep the force class and horizon fixed.
+Read [R07 handoff](handoffs/R07.md) and the ancient-cut provenance below.
+R06's deterministic reconstruction and B36 thermal reading remain comparisons.
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

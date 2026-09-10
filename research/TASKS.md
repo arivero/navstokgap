@@ -17,7 +17,9 @@ handoff with the remaining dependency.
 | R06 | done | Fixed finite-mass autonomous clock and four persistent probe records; smooth finite pulses, uniform force bounds, delayed reconstruction and action-product closure C068–C069 | Coordinator + one sequential Luna-low B37 | [R06 handoff](handoffs/R06.md); exact records and concentrated preparations |
 | B36 | done | Preserved existing Theurel full-model audit; coordinator rechecked pp. 5–7 and metadata during R06 | Existing source artifacts; historical worker scope recorded in batch | R06; preparation-dependent impulsive model |
 | B37 | done | Zero searches, four cached primary pages; finite-duration pointer and observability comparison, coordinator source/proof review | One Luna low, sequential | C068–C069 |
-| R07 | ready | Specify causal new-information task with justified preparation or record-resolution restriction; derive estimator lower bound and identify latency/precision versus action consequence | Coordinator then one bounded librarian | R06/B37; fixed-error upper estimate alone is insufficient |
+| R07 | done | Delayed bounded-force prediction: sharp minimax errors and joint reachable canonical area; explicit information restriction and gap-closing limits C070–C071 | Coordinator + Luna-low B38 | [R07 handoff](handoffs/R07.md) |
+| B38 | done | Two queries, one primary HTML passage and two failed retrievals; bounded-input control precedent and coordinator proof/source review | One Luna low, sequential | R07 |
+| R08 | ready | Insert an unobserved versus observed cut into R07; exact joint reachable-set composition and position-only loss; track action area at fixed force class and horizon | Coordinator then bounded librarian | R07/B38; ancient-cut provenance |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -120,12 +122,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R07 from the completed R06/B37 finite-duration apparatus. Fix a causal
-new-information task and a physically justified lower preparation-width or
-record-resolution restriction. Derive a lower bound for the admitted estimators;
-the noisy-record upper estimate in R06 is not such a theorem. C068–C069 use
-four delayed records and known dynamics, with fixed mass and pulse widths but
-increasingly precise preparation and record access. See the R06 handoff.
+Start R08 from the completed R07/B38 delayed-force information test. Compose
+joint reachable sets across an inserted cut while holding force class and
+horizon fixed; distinguish eliminating the node from observing it. C070–C071
+give the exact original region and minimax error benchmark. See R07 handoff.
 Preserve A19 below as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.

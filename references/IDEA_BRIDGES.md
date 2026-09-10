@@ -4,7 +4,15 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R07
+## Classical cut state, receiver memory and readout — R08
+
+**R07/B38 capsule:** [Liberzon §4.4.1](https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html)
+supplies bounded-input double-integrator extremals. [R07](../notes/causal-force-information.md)
+derives the fixed-time reachable lens and its canonical area under delayed
+records. R08 should compose the two joint phase-space reachable sets across
+an inserted node; compare eliminating the node with actually observing it.
+Keep $F,m,\ell$ and the permitted input profiles fixed. [B38 companion](../docs/batches/B38/causal-information-source-companion.md)
+records the bounded source match.
 
 **R06/B37 capsule:** Theurel v2 pp. 5–7 supplies conserved momentum records
 and a preparation-dependent quality scale; Hermann–Krener p. 733 supplies

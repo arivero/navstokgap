@@ -19,8 +19,10 @@ the quiet-preparation test with scalable impulsive probes. **R06/B37** supplies
 [four finite-duration autonomous records](../notes/autonomous-finite-readout.md)
 at fixed mass and observation latency, with exact record access and increasingly
 concentrated preparation. Refining reported samples needs no extra probes.
-**R07 is next:** require causal new information and a justified precision
-restriction, then test for a resource or action lower bound. A19 supports it.
+**R07/B38 completed:** [delayed bounded-force information](../notes/causal-force-information.md)
+gives sharp prediction errors and a joint reachable canonical area. **R08 is
+next:** compose that region across an unobserved cut and compare an observed
+cut, preserving the same force class and horizon. A19 supports this track.
 
 ## A03: completed calculation
 
