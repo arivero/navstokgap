@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R10/B41 complete.
+Updated: 2026-09-10. Current milestone: R11/B42 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -45,9 +45,15 @@ gives exact estimator-specific errors and a positive-delay sequence recovering
 both coordinates with vanishing action-error product (C076–C077). The core
 finite-difference bound and optimum have an exact literature match.
 
-Start **R11**: a minimax lower-bound test with shared initial state and identical
-two-record data. Compare indistinguishable bounded-force trajectories with
-R10's estimator bound. Read [R10 handoff](handoffs/R10.md)
+**R11/B42 complete:** [indistinguishable motions](../notes/indistinguishable-phase-bound.md)
+give exact coordinate minimax risks even for the entire noisy position history,
+with shared initial state (C078–C079). The established prepared pair connects
+reachability to recovery; positive precision supplies the scale.
+
+Start **R12**: compare composition of these worst-case action scales with A08's
+variance-based universality law. Specify product input/error classes and the
+records available for constituent versus whole-body estimation. Read
+[R11 handoff](handoffs/R11.md) and [I006](../ideas/I006-discovery-by-connecting-results.md)
 and the ancient-cut provenance below.
 R06's deterministic reconstruction and B36 thermal reading remain comparisons.
 

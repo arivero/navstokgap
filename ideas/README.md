@@ -1,5 +1,9 @@
 # Idea incubator
 
+[I006](I006-discovery-by-connecting-results.md) records the user's
+discovery-by-connection strategy. R11 joins reachability to minimax recovery;
+R12 tests its connection to the earlier composition/universality argument.
+
 [I005](I005-classical-cuts-and-relations.md) returns the programme to the
 classical cut arguments: what relational information must survive subdivision,
 and how elimination of interface variables changes composition. R03 is the

@@ -19,8 +19,11 @@ fibres quantify its information dependence; area can close without momentum
 recovery. **R09/B40 complete:** finite-precision records yield an exact area
 and uniform joint precision/delay closure. **R10/B41 complete:** two records
 give full-state reconstruction with an explicitly vanishing action-error product.
-**R11 is next:** lower bounds for every estimator at fixed record precision.
-See [R10](../notes/two-position-recovery.md). C066–C067 concern
+**R11/B42 complete:** exact minimax risks survive dense noisy records at fixed
+tolerance. **R12 is next:** the composition law of these worst-case scales,
+compared with A08's variance universality. See
+[R11](../notes/indistinguishable-phase-bound.md) and
+[I006](../ideas/I006-discovery-by-connecting-results.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.
 
 ## Variables and proof obligations

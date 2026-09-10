@@ -4,7 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R11
+## Classical cut state, receiver memory and readout — R12
+
+**R11/B42 capsule:** Seeber–Haimovich Proposition 3.1, (10)–(12), already
+constructs a prepared zero-initial-state pair hidden by one complete noisy
+history. [R11](../notes/indistinguishable-phase-bound.md) combines this with
+R10 and symmetric convex recovery to give exact phase risks. R12 joins this
+result to [A08](../notes/composition-universality.md): derive worst-case radius
+composition before transferring a variance-addition universality theorem.
+[B42 companion](../docs/batches/B42/minimax-source-companion.md) records the
+exact source match and the initially missed preparation premise.
 
 **R10/B41 capsule:** Seeber–Haimovich v2 §4, Lemma 4.3 and Theorem 4.1,
 exactly match the equal-error finite-difference estimate and its optimum.

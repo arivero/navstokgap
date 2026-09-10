@@ -21,6 +21,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B42](../references/batches/B42.md): indistinguishable motions and minimax
+  recovery; [source companion](batches/B42/minimax-source-companion.md).
+
 - [B41](../references/batches/B41.md): two-record recovery and established
   differentiation bounds; [source companion](batches/B41/two-record-source-companion.md).
 

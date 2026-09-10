@@ -516,3 +516,38 @@ gives $R_p=4\sqrt{mF\varepsilon}$, $R_q=7\varepsilon$, and an action-error
 product $28\sqrt{mF}\varepsilon^{3/2}\to0$. R11 tests minimax lower bounds.
 C076–C077: [proof](two-position-recovery.md),
 [exact prior-art match](../references/batches/B41.md).
+
+## 16. A gap that survives dense noisy records
+
+At fixed position tolerance $\varepsilon>0$, even the entire noisy position
+history leaves a sharp momentum uncertainty. Put
+$d=2\sqrt{m\varepsilon/F}$, $t_2=T-b$, $t_1=t_2-d$, and assume $t_2\ge2d$.
+Starting from zero displacement and velocity, forces $-F,+F$ for successive
+times $d/2$ prepare displacement $-\varepsilon$ with zero velocity at $t_1$.
+Force $+F$ for the next $d$ reaches $+\varepsilon$ and momentum $Fd$.
+The entire observed displacement stays in $[-\varepsilon,\varepsilon]$.
+
+This trajectory and its opposite have the same initial state and admit the
+same inertial position record, with opposite allowed record errors. Continuing
+their forces through the blind interval yields terminal half-separations
+
+$$P_*=Fd+Fb,\qquad
+Q_*=\varepsilon+\frac{Fdb}{m}+\frac{Fb^2}{2m}.$$
+
+Every estimator has worst-case coordinate errors at least $P_*,Q_*$.
+The preceding two-record estimator attains both; these are therefore exact
+coordinate minimax risks for two records and for the complete noisy history.
+At zero blind delay their product is
+$2\sqrt{mF}\varepsilon^{3/2}>0$. Densifying records preserves this bound;
+improving their tolerance closes it.
+
+The construction is established in Seeber–Haimovich Proposition 3.1. R11
+connects it to reachable fibres and delayed phase prediction. The general
+principle is that, for symmetric convex inputs and bounded linear record
+errors, the central compatible fibre maximizes scalar output uncertainty:
+any compatible pair has an admissible half-difference, and the symmetric
+central pair realizes its diameter.
+
+C078–C079: [proof and precise information classes](indistinguishable-phase-bound.md),
+[B42 audit](../references/batches/B42.md). R12 next tests whether this worst-case
+action scale has the composition law needed for mass universality.

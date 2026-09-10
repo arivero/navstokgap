@@ -97,11 +97,21 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C076 | Two bounded-error positions give exact compatible-set propagation and estimator-specific worst-case terminal errors $R_p=B+Fb$, $R_q=\varepsilon_2+bB/m+Fb^2/(2m)$, where $B=m(\varepsilon_1+\varepsilon_2)/\delta+F\delta/2$ | [R10 §§1–2](../notes/two-position-recovery.md); weighted force integral and simultaneous saturation; [B41 review](../reviews/two-record-B41.md) |
 | C077 | If $\delta,b\to0$ and $(\varepsilon_1+\varepsilon_2)/\delta\to0$, both coordinate errors close uniformly; equal errors and $b=\delta_*=2\sqrt{m\varepsilon/F}$ give action-error product $28\sqrt{mF}\varepsilon^{3/2}$ at fixed horizon | R10 §3; timing feasibility and written bounds; established equal-error differentiation optimum, derived mechanical product |
 
+| C078 | For compact centrally symmetric convex inputs, linear records with bounded errors and a scalar linear target, global minimax error equals the maximal target magnitude in the central compatible fibre | [R11 §1](../notes/indistinguishable-phase-bound.md); half-difference and midpoint proof; [B42 review](../reviews/indistinguishability-B42.md) |
+| C079 | At $d=2\sqrt{m\varepsilon/F}$, $T-b\ge2d$, two position records and the entire bounded-error position history have identical coordinate minimax risks $P_*=Fd+Fb$ and $Q_*=\varepsilon+Fdb/m+Fb^2/(2m)$; at $b=0$ their product is $2\sqrt{mF}\varepsilon^{3/2}$ | R11 §§2–3; established prepared opposite-motion pair, R10 upper bound, blind-delay extension; B42 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C078–C079: [B42](../references/batches/B42.md) matches C079's prepared
+zero-initial-state pair exactly to Seeber–Haimovich Proposition 3.1 and its
+upper bound to §4. The blind-delay phase risks are derived consequences.
+C078 has a written proof but no direct source match in this bounded batch;
+novelty remains unassessed. The review corrects the worker's initial-data
+and half-separation statements.
 
 C076–C077: [B41](../references/batches/B41.md) identifies the exact equal-error
 finite-difference bound and optimum in Seeber–Haimovich §4. These are established

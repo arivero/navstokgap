@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 30, 2026-09-10.
+Version 31, 2026-09-10.
 
 ## Aim
 
@@ -69,9 +69,17 @@ an exact clipped-lens area and uniform closure in the joint precision/delay
 limit (C074–C075). **R10/B41 are complete:** two positions recover momentum
 as well, with estimator-specific errors and an explicit vanishing action
 product (C076–C077); the differentiation bound has an exact prior-art match.
-**R11 is next:** indistinguishable-trajectory minimax lower bounds, with shared
-initial state, force class and total horizon fixed.
+**R11/B42 are complete:** a symmetric-fibre theorem and an established prepared
+trajectory pair give exact phase minimax risks, even with the entire noisy
+position history (C078–C079). **R12 is next:** connect these worst-case action
+scales to composition, checking whether A08's variance universality transfers.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
+
+The user's discovery-by-connection strategy is saved in
+[I006](../ideas/I006-discovery-by-connecting-results.md). Each proposed bridge
+must specify its source and destination observables, preserved premises and
+a decisive test. R11 joins reachability to optimal recovery; R12 now tests
+the connection to an already established universality argument in this repo.
 
 ## Supporting track: bound action and scale selection
 

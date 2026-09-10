@@ -27,8 +27,10 @@ records. Area closure alone need not recover momentum. **R09/B40 complete:**
 [finite precision](../notes/finite-precision-cut.md) gives an exact terminal
 area and uniform precision/delay closure. **R10/B41 complete:**
 [two records](../notes/two-position-recovery.md) recover both coordinates
-under the stated precision/timing limits. **R11 is next:** shared-initial-state
-indistinguishable pairs and minimax lower bounds. A19
+under the stated precision/timing limits. **R11/B42 complete:**
+[indistinguishable pairs](../notes/indistinguishable-phase-bound.md) give sharp
+minimax bounds surviving dense records at fixed tolerance. **R12 is next:**
+composition of that same observable and comparison with A08's variance law. A19
 supports this track.
 
 ## A03: completed calculation
