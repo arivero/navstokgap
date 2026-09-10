@@ -5,7 +5,15 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestone: R12/B43 complete.
+Updated: 2026-09-11. Current milestones: R12/B43 and H10 complete.
+
+**H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
+connects Indian contact arguments, Chinese solid dissection and statics, and an
+access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.md).
+One sequential Luna-medium worker supplied the Indian reading; coordinator
+corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
+supporting fixed-time compatibility test; H11 strengthens two source witnesses.
+R13 remains the next mathematical task. No mathematical claim status changed.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and

@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 32, 2026-09-11.
+Version 33, 2026-09-11.
 
 ## Aim
 
@@ -86,6 +86,18 @@ must specify its source and destination observables, preserved premises and
 a decisive test. R11 joins reachability to optimal recovery; R12 resolves the connection to
 A08 by deriving the different worst-case aggregation law. R13 checks the
 finite-horizon boundary of that result.
+
+## Supporting source route: static compatibility
+
+[H10](../notes/static-composition-classics.md) supplies a question before the
+time cut: what allows distinct local contacts or observations to belong to
+one whole? The selected Indian, Chinese and Avicennian passages motivate
+explicit interfaces, controlled spatial remainders and apparatus relations.
+[I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
+measurement arrangements and their overlaps, test classical joint-state
+models, then identify where an action-valued calibration enters. R12's exact
+cost of record aggregation is a benchmark; R13 keeps main-track priority.
+H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection
 

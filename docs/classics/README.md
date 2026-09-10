@@ -1,5 +1,11 @@
 # Classics: pre-1901 primary sources for the action and limit questions
 
+[H10's companion visit](../../references/batches/H10.md), read 2026-09-10,
+adds Indian contact/traversal, Chinese solid dissection and statics, and an
+access-limited Avicennian passage. Its modern edition and source companions
+are in `docs/batches/H10/`; [the synthesis](../../notes/static-composition-classics.md)
+connects them to fixed-time compatibility.
+
 Each entry stores a public-domain original or a lawful transcription in this
 directory with a companion that records route, metadata, extraction, rights,
 passage anchors and reading coverage. Companions lead with what the source

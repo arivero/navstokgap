@@ -6,6 +6,15 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Classical cut state, receiver memory and readout — R13
 
+**H10 supporting capsule:** [the static-source synthesis](../notes/static-composition-classics.md)
+connects Vasubandhu's six contacts, Liu Hui's solid remainder and the Mohist
+body/effect distinction to explicit interface and apparatus variables.
+[H10 coverage](batches/H10.md) distinguishes the verified Sanskrit and Mohist
+edition from uncollated Chinese transcription and indexed Avicennian translation.
+Borrow the compatibility question for K01: can local fixed-time descriptions
+share one classical joint state? Track action calibration separately.
+R13 remains the next calculation; H11 strengthens two source witnesses.
+
 **R12/B43 capsule:** product central fibres yield additive scalar radii;
 [the composition note](../notes/minimax-composition.md) gives extensive
 identical-copy action products and exact aggregate-record information loss.

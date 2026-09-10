@@ -7,6 +7,9 @@ handoff with the remaining dependency.
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| H10 | done | Indian contact/traversal, Chinese solid dissection and Mohist statics, access-limited Avicennian comparison; reviewed passages and source capsule | Coordinator + one sequential Luna medium | [H10 handoff](handoffs/H10.md) |
+| H11 | ready | Collate Liu Hui juan 5 facsimile pages 18–19; retrieve Ibn Sina Physics III.4 contact/millstone passage; record exact access and wording | One bounded source worker, sequential | H10; two witness targets, no regional sweep |
+| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); supporting track, R13 first |
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
 | R03 | done | Fixed-energy receiver cut maps, nonsemigroup position kernel, reset freezing limit and phase-state restoration; C062–C063 | Coordinator + Luna-low B33 | [R03 handoff](handoffs/R03.md) |
 | B33 | done | Two cached primary pages, zero searches; cut-state source/proof audit and coordinator coverage correction | One Luna low, sequential | R03 |

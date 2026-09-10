@@ -1,5 +1,10 @@
 # Idea incubator
 
+[I007](I007-static-compatibility.md) supplies H10's static-composition route:
+fixed-time compatibility of local measurement descriptions, with an explicit
+classical model test before any action-scale claim. Supporting task K01 follows
+the main R13 priority.
+
 [I006](I006-discovery-by-connecting-results.md) records the user's
 discovery-by-connection strategy. R11 joins reachability to minimax recovery;
 R12 tests its connection to the earlier composition/universality argument.

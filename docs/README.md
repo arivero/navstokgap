@@ -8,6 +8,10 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Before the arrow: static composition](../notes/static-composition-classics.md):
+  H10's Indian, Chinese and Persianate source visit, with
+  [verified passages and access levels](../references/batches/H10.md).
+
 - [Aristotle I.2: cuts and consecutive points](classics/Aristotle_GC_I2_Joachim_cut_passages.md):
   Joachim passage digest and provenance of the modern refinement analogy.
 
