@@ -8,6 +8,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Aristotle I.2: cuts and consecutive points](classics/Aristotle_GC_I2_Joachim_cut_passages.md):
+  Joachim passage digest and provenance of the modern refinement analogy.
+
 - [Classics: pre-1901 primary sources](classics/README.md): Archimedes, Plutarch, Galileo, Gregory, Berkeley, Euler, Maupertuis, Hamilton, Jacobi and Mach, each with a companion and registered checksums ([H06](../references/batches/H06.md)).
 - [Newton, Motte/Chittenden 1846 opening material](Newton_Principia_Motte1846.md), with local HTML and two selected historical figures.
 - [Newton, Book I Section I, Motte/Wilkins excerpt](Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md), with local PDF and readable formulae.

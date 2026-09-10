@@ -54,6 +54,12 @@ the whole. This is directly relevant to inserting instants in a path integral:
 one must specify the rule that combines the pieces, along with the values
 assigned to the inserted instants.
 
+**Provenance clarification, 2026-09-10:** [the anchored comparison](../notes/ancient-cuts-provenance.md)
+locates this complication principally in Aristotle I.2, around 317a. The
+further claim that inserting a node can move old vertices belongs to our modern
+discrete variational interpretation. Preserve that distinction when reusing
+the classical-source analogy.
+
 ## 4. Vacuum: separation and cohesion belong in the same experiment
 
 Galileo's *Two New Sciences*, First Day, places indivisible vacua inside an

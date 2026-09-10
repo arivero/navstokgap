@@ -33,6 +33,12 @@ preparations before inferring an action floor from finite-precision recovery.
 Read [R04 handoff](handoffs/R04.md) and [I005](../ideas/I005-classical-cuts-and-relations.md).
 A19 remains the supporting mechanical track.
 
+**Source clarification, 2026-09-10:** retain [the ancient-cut provenance](../notes/ancient-cuts-provenance.md)
+alongside R05. Aristotle I.2 supplies the question about jointly realised
+divisions; readjustment of neighbouring trajectory vertices is our modern
+extension. Sampling, re-solving a discretisation and conditioning a path law
+have different effects on old nodes. No research claim status changed.
+
 Supporting task **A19** replaces the pointwise speed floor by a peak-momentum or
 kinetic-excursion premise that permits turning-point stops. **A18/B32** proves
 the sharp general closed-orbit action bound from total turning, force ceiling

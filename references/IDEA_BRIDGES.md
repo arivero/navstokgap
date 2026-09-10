@@ -6,6 +6,13 @@ live acceptance and priority records. Proposed tests below are research actions.
 
 ## Classical cut state, receiver memory and readout — R05
 
+**Classical-source capsule:** Aristotle, *Generation and Corruption* I.2,
+around 317a, challenges simultaneous division via supposed consecutive points.
+Read [the passage companion](../docs/classics/Aristotle_GC_I2_Joachim_cut_passages.md)
+and [provenance note](../notes/ancient-cuts-provenance.md). Borrow the
+compatibility question; label neighbouring-vertex readjustment as the modern
+extension. Compare sampling with re-solving before assigning an effect to a cut.
+
 **R04/B34 capsule:** Zwanzig p. 219 supplies exact harmonic memory;
 Hermann–Krener p. 733 supplies local observability via a rank condition.
 Read [B34 companion](../docs/batches/B34/receiver-memory-source-companion.md)
