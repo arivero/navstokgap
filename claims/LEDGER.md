@@ -82,6 +82,8 @@ assumptions and supporting artifact. IDs remain stable through revision.
 
 | C066 | Two ordered canonical probe shears give exact pre-cut phase errors and back-reaction; intrinsic rectangular-support products are $s_qt_q$ and $s_rt_r$, with zero infimum across shrinking positive-volume probe preparations | [R05 §§1–2](../notes/classical-readout-refinement.md); fixed gains, ideal impulses and records; B35 and coordinator written review |
 | C067 | At fixed receiver, system preparation and horizon, fresh probe widths $O(\eta^4)$ give uniform hidden-state reconstruction error $O(\eta)$ and trajectory disturbance $O(\eta^3)$, while probe count and fixed-mass apparatus mass grow as $O(\eta^{-1})$ | R05 §§3–4; exact kick-inclusive error identity and bounded-flow sum; B35 review; scalable impulsive instrument |
+| C068 | Fixed finite-mass clock and four probes with smooth coordinate coupling $\lambda K\sum f_j(s)X(x)R(q_j)$ give persistent momentum records $\boldsymbol\pi(T)=\boldsymbol\pi(0)-\lambda\mathcal A z_0+O(\lambda b+\lambda^3)$ with invertible fixed-width pulse matrix; receiver disturbance is $O(\lambda b+\lambda^2)$ at fixed horizon | [R06 §§1–3](../notes/autonomous-finite-readout.md); positive kinetic energy, compact receiver preparation, bounded forces, clock reaction included; B37 and coordinator written review |
+| C069 | For C068 with known dynamics and exact final momentum records, incoming apparatus width $b=\lambda^3$ gives delayed initial-state reconstruction and trajectory disturbance $O(\lambda^2)$; canonical initial-position error times finite-horizon momentum disturbance tends to zero as $O(\lambda^4)$ | R06 §4; fixed masses, pulse widths and clock mean energy; increasingly precise preparation and weak coupling; reporting refinement is sampling after fixed latency; B37 review |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -89,13 +91,22 @@ domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
 
+C068–C069: [B37](../references/batches/B37.md) uses zero searches and four
+cached primary pages: Theurel pp. 5–7 and Hermann–Krener p. 733. Conserved
+pointer records and the observability rank condition are established ingredients.
+The autonomous construction, integrated signal map and uniform bounds are
+derived consequences, with novelty unassessed. [Coordinator review](../reviews/autonomous-readout-B37.md)
+accepts the written proofs under the explicit preparation, record-access and
+latency premises. B36's existing source work is preserved and integrated.
+
 C066–C067: [B35](../references/batches/B35.md) covers Katagiri v2 §5 and
 Theurel's APS abstract with two queries and two bounded primary readings.
 Canonical pointer coupling is established; the support-width and finite-chain
 refinement estimates are derived consequences with novelty unassessed.
 [Coordinator review](../reviews/classical-readout-B35.md) accepts the written
-proofs for scalable impulsive probes; finite-duration fixed-resource realization
-and a full reading of Theurel's apparatus assumptions remain R06.
+proofs for scalable impulsive probes. R06/B37 now supplies a finite-mass,
+finite-duration delayed reconstruction and selected full-model Theurel readings;
+causal new information with restricted precision remains R07.
 
 C064–C065: [B34](../references/batches/B34.md) covers Zwanzig's exact
 oscillator-bath reduction and Hermann–Krener's observability framework in

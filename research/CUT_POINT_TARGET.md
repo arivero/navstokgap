@@ -14,9 +14,13 @@ define impulsive approximations, or introduce new random degrees of freedom.
 separates exact phase-state composition from independent position-conditioned
 resets, whose terminal refinement limit freezes motion. **R04/B34 completed:**
 [the three-body test](../notes/three-body-cut-memory.md) retains tagged momentum
-and derives the receiver memory and two-time recovery map. **R05 is next:**
-model the physical readout needed for that increasingly sensitive reconstruction.
-A19 remains a supporting excitation test.
+and derives the receiver memory and two-time recovery map. **R05/B35** closes
+the quiet-preparation test with scalable impulsive probes. **R06/B37** supplies
+[four finite-duration autonomous records](../notes/autonomous-finite-readout.md)
+at fixed mass and observation latency, with exact record access and increasingly
+concentrated preparation. Refining reported samples needs no extra probes.
+**R07 is next:** require causal new information and a justified precision
+restriction, then test for a resource or action lower bound. A19 supports it.
 
 ## A03: completed calculation
 

@@ -415,7 +415,63 @@ C066--C067, the \href{classical-readout-refinement.md}{full readout
 proof} and \href{../references/batches/B35.md}{B35} specify this
 externally switched impulsive instrument. Its ideal position records and
 shrinking probe widths leave preparation and recording resources open.
-Finite-duration implementation with fixed apparatus resources is R06;
-readout conditioning and canonical reaction alone have not excluded zero
-action.
+R06 supplies the finite-duration construction below; readout
+conditioning and canonical reaction alone have not excluded zero action.
+
+\hypertarget{finite-duration-readout-with-an-autonomous-clock}{%
+\subsection{11. Finite-duration readout with an autonomous
+clock}\label{finite-duration-readout-with-an-autonomous-clock}}
+
+One mechanical clock and four free probes suffice for delayed
+reconstruction of the three-body receiver at fixed total apparatus mass.
+Let \((s,p_s)\) be the clock pair, \((q_j,\pi_j)\) the probe pairs, and
+all five masses be positive and fixed. With fixed stiffness \(K\) and
+dimensionless \(0<\lambda\le\lambda_0\), the autonomous Hamiltonian is
+
+\[H_\lambda=H+\frac{p_s^2}{2M_c}
+ +\sum_{j=1}^4\frac{\pi_j^2}{2M_j}
+ +\lambda K\sum_{j=1}^4f_j(s)X(x)R(q_j).\]
+
+The functions \(X,R\) are bounded smooth coordinate cutoffs, equal to
+their arguments on the admitted trajectories. Fixed smooth bumps \(f_j\)
+switch the couplings as a prepared clock moves through them. Pulse
+widths and observation time \(T>0\) stay fixed. The interaction forces
+are globally bounded; harmonic forces are uniformly bounded on the fixed
+receiver energy preparation and bounded apparatus energy class. All
+kinetic terms are positive.
+
+The reference output \(x^0(t)\) determines \(z_0=(x_0,P_0,y_0,Q_0)\):
+its first four derivative rows have triangular diagonal
+\(1,1/\mu,g/\mu,g/(\mu\nu)\). Analyticity supplies four independent time
+evaluation rows. Choosing sufficiently narrow but fixed positive-width
+bumps preserves independence of the integrated matrix
+
+\[\mathcal A_{j\cdot}=K\int_0^T f_j(s_0+vt)e_x\Phi_t\,dt.\]
+
+For incoming apparatus support widths \(b\) in fixed component units,
+Hamilton's equations and finite-horizon integration give
+
+\[\boldsymbol\pi(T)=\boldsymbol\pi(0)-\lambda\mathcal A z_0
+ +O(\lambda b+\lambda^3),\qquad
+\sup_t\|z(t)-\Phi_tz_0\|=O(\lambda b+\lambda^2).\]
+
+These estimates include clock reaction. The clock leaves the pulse
+supports with positive momentum, after which the four probe momenta are
+conserved. Exact access to them gives the calibrated estimate
+\(\widehat z_0=-\mathcal A^{-1}\boldsymbol\pi(T)/\lambda\), with error
+\(O(b/\lambda+b+\lambda^2)\). Choosing \(b=\lambda^3\) makes
+reconstruction and disturbance both \(O(\lambda^2)\) at fixed nonzero
+clock mean energy. Initial canonical position error times maximum
+canonical momentum disturbance is then \(O(L_*P_*\lambda^4)\), in action
+units for fixed units \(L_*,P_*\).
+
+C068--C069 and \href{autonomous-finite-readout.md}{the full autonomous
+proof} specify the compact preparation domain, cutoff continuation and
+uniform estimates; \href{../references/batches/B37.md}{B37} audits the
+pointer and observability precedents. The result uses increasingly
+precise preparation, exact final records and known dynamics. All
+reported cuts may be refined from the same four records after fixed
+latency \(T\). A causal new-information task with restricted record
+precision remains R07; no positive universal action scale follows from
+the upper mass, duration and force resources alone.
 \end{document}

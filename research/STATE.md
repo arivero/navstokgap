@@ -5,13 +5,28 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-10. Current milestone: R05/B35 complete.
+Updated: 2026-09-10. Current milestone: R06/B37 complete.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
 claim status unchanged; see the [editorial handoff](handoffs/zenos-constant-2026-09-09.md).
 
 ## Current restart decision
+
+**R06/B37 complete:** [the autonomous apparatus](../notes/autonomous-finite-readout.md)
+uses a finite-mass clock and four probes, smooth fixed-duration coordinate
+couplings and persistent momentum records. Weak coupling with shrinking
+incoming preparation widths gives uniform second-order reconstruction and
+disturbance bounds and a fourth-order vanishing accuracy–disturbance product.
+C068–C069 have one sequential Luna-low four-page audit and coordinator written
+proof/source review. Observation latency stays fixed; exact final record access
+and known receiver dynamics remain supplied resources.
+
+Start **R07**: specify a causal new-information task and a justified lower
+preparation-width or final-record-resolution restriction. Derive an estimator
+lower bound before inferring an action floor; R06's noisy-record upper estimate
+alone proves no impossibility theorem. Read [R06 handoff](handoffs/R06.md).
+The pre-existing B36 Theurel reading is preserved and integrated unchanged.
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10
@@ -33,14 +48,13 @@ close the support action products; fourth-power mesh preparation yields uniform
 first-power hidden-state recovery and third-power trajectory disturbance.
 C066–C067 have one Luna-low audit and coordinator written/source review.
 This externally switched impulsive instrument uses increasingly many prepared
-probes and ideal records; finite-duration implementation remains open.
+probes and ideal records. R06 below supplies finite-duration delayed records;
+causal measurement with restricted precision remains R07.
 
-Start **R06**: replace ideal kicks with a finite-duration mechanical apparatus,
-with positive kinetic energy, a clock and a record. Specify fixed total mass,
-coupling/force bounds and preparation resources before testing refinement.
-Read [R05 handoff](handoffs/R05.md); B35's Theurel abstract is a lead for a
-bounded full-model passage reading. Retain [I005](../ideas/I005-classical-cuts-and-relations.md)
-and A19 as the supporting force/excitation track.
+R06 completed the finite-duration test for delayed reconstruction, as above.
+Read [R05 handoff](handoffs/R05.md) for its impulsive predecessor. Retain
+[I005](../ideas/I005-classical-cuts-and-relations.md) and A19 as the supporting
+force/excitation track. B36/B37 now provide Theurel's selected full-model passages.
 
 **Source clarification, 2026-09-10:** retain [the ancient-cut provenance](../notes/ancient-cuts-provenance.md)
 alongside R06. Aristotle I.2 supplies the question about jointly realised

@@ -9,10 +9,13 @@ defects serve as tests of its premises.
 **R05/B35 completed:** [the classical readout test](../notes/classical-readout-refinement.md)
 adds physical probe back-reaction to R04's receiver-memory reconstruction.
 Quiet scalable preparations close the instrument's action products while
-preserving asymptotically accurate recovery. **R06 is next:** test finite-duration
-readout with fixed apparatus, preparation, clock and recording resources.
-C066–C067 concern ideal impulses and growing probe supply. A19 remains the
-supporting force/excitation test.
+preserving asymptotically accurate recovery. **R06/B37 completed:**
+[finite-duration autonomous readout](../notes/autonomous-finite-readout.md)
+retains fixed finite mass and pulse widths, with delayed exact records and
+shrinking preparation widths; C068–C069 close its accuracy–disturbance product.
+**R07 is next:** specify causal new information and a justified preparation or
+record-resolution restriction before deriving a lower bound. C066–C067 concern
+ideal impulses and growing probe supply. A19 remains the supporting test.
 
 ## Variables and proof obligations
 

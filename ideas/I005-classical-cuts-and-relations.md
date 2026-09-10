@@ -130,9 +130,15 @@ classical flow and recover the receiver state. The support action products
 close in this scalable impulsive instrument. C066–C067 and B35 record the
 written result and bounded prior-art audit.
 
-R06 must now account for finite-duration interactions, clock, record and fixed
-apparatus resources. This keeps the ancient compatibility question attached
-to a concrete distinction between observational cuts and physical interventions.
+[R06](../notes/autonomous-finite-readout.md) now provides an autonomous clock
+and four finite-duration probes at fixed total mass. Delayed exact records
+recover the known receiver trajectory with vanishing error and disturbance
+under weak coupling and concentrated preparations (C068–C069, B37).
+Refining only the reported samples retains the old nodes and needs no extra
+interaction. R07 should require causal new information and specify a justified
+precision restriction before seeking a lower bound. This keeps the ancient
+compatibility question attached to a concrete distinction between observational
+cuts and physical interventions.
 
 ## Reading record
 

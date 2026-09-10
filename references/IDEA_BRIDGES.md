@@ -4,7 +4,17 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R06
+## Classical cut state, receiver memory and readout — R07
+
+**R06/B37 capsule:** Theurel v2 pp. 5–7 supplies conserved momentum records
+and a preparation-dependent quality scale; Hermann–Krener p. 733 supplies
+the sufficient observability rank condition. [B37 companion](../docs/batches/B37/autonomous-readout-source-companion.md)
+records precise coverage. [R06](../notes/autonomous-finite-readout.md) builds
+a fixed-mass clock and four finite-duration probes with delayed reconstruction.
+Weak coupling and concentrated preparation close its action product; arbitrary
+reporting refinement uses the same four records. R07 should impose a causal
+new-information task and a justified preparation or record-resolution bound,
+then prove a lower estimate rather than infer one from inverse sensitivity.
 
 **Classical-source capsule:** Aristotle, *Generation and Corruption* I.2,
 around 317a, challenges simultaneous division via supposed consecutive points.
@@ -18,10 +28,10 @@ coupling; [B35 companion](../docs/batches/B35/readout-source-companion.md)
 records the source-sign caveat. Two shears give preparation-dependent support
 action products. [R05](../notes/classical-readout-refinement.md) overcomes
 cubic observation sensitivity by fourth-power probe-width scaling, at growing
-probe count. Theurel's APS abstract supplies a finite-temperature apparatus
-lead, with full-model assumptions still unread. R06 should derive a preparation
-restriction from finite-duration apparatus dynamics; a lower energy bound
-alone does not imply a position-momentum width product.
+probe count. Theurel's APS abstract led to the selected full-model reading in
+[B36](../docs/batches/B36/theurel-source-companion.md) and B37. A lower energy
+bound alone does not imply a position-momentum width product: R06 retains
+fixed positive clock mean energy while its measurement product closes.
 
 **R04/B34 capsule:** Zwanzig p. 219 supplies exact harmonic memory;
 Hermann–Krener p. 733 supplies local observability via a rank condition.

@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 25, 2026-09-10.
+Version 26, 2026-09-10.
 
 ## Aim
 
@@ -53,9 +53,13 @@ the fixed coupling kernel from prepared action scales that close under cooling.
 proves that shrinking classical probe widths can overcome cubic observation
 sensitivity with vanishing accumulated disturbance. C066–C067 record the
 conditional result for ideal impulses, exact pointer records and a growing
-probe supply. **R06 is next:** specify finite-duration interactions, a clock,
-a record and fixed apparatus resources, then test whether their restrictions
-select an action scale or a resource/time bound.
+probe supply. **R06/B37 are complete:** a smooth autonomous apparatus with
+one clock and four probes has fixed finite mass, fixed pulse widths and uniform
+force ceilings. Weak coupling and concentrated preparations give accurate,
+weakly disturbing delayed reconstruction; its specified action product tends
+to zero (C068–C069). Exact final records and known dynamics are supplied.
+**R07 is next:** require causal new information and a justified preparation or
+record-resolution restriction, then derive a lower bound for that task.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 ## Supporting track: bound action and scale selection

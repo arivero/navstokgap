@@ -14,7 +14,10 @@ handoff with the remaining dependency.
 | B34 | done | Two searches, three primary pages; Zwanzig elimination and Hermann–Krener observability, coordinator source/proof review | One Luna low, sequential | R04 |
 | R05 | done | Canonical probe errors and support products; scalable quiet preparations give uniform receiver recovery and vanishing disturbance, C066–C067 | Coordinator + Luna-low B35 | [R05 handoff](handoffs/R05.md); ideal impulse model |
 | B35 | done | Two-query, two-source classical pointer audit; Katagiri §5 and Theurel abstract, coordinator sign/novelty/proof review | One Luna low, sequential | R05 |
-| R06 | ready | Replace ideal kicks by finite-duration mechanical readout with clock and record; fix apparatus mass, coupling/force bounds and preparation resources; audit Theurel full-model premises before any positive action inference | Coordinator then one bounded librarian | R05/B35; fixed-resource implementation remains open |
+| R06 | done | Fixed finite-mass autonomous clock and four persistent probe records; smooth finite pulses, uniform force bounds, delayed reconstruction and action-product closure C068–C069 | Coordinator + one sequential Luna-low B37 | [R06 handoff](handoffs/R06.md); exact records and concentrated preparations |
+| B36 | done | Preserved existing Theurel full-model audit; coordinator rechecked pp. 5–7 and metadata during R06 | Existing source artifacts; historical worker scope recorded in batch | R06; preparation-dependent impulsive model |
+| B37 | done | Zero searches, four cached primary pages; finite-duration pointer and observability comparison, coordinator source/proof review | One Luna low, sequential | C068–C069 |
+| R07 | ready | Specify causal new-information task with justified preparation or record-resolution restriction; derive estimator lower bound and identify latency/precision versus action consequence | Coordinator then one bounded librarian | R06/B37; fixed-error upper estimate alone is insufficient |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -117,13 +120,13 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R06 from the completed R05/B35 impulsive readout test. Specify a
-finite-duration apparatus with positive kinetic energy, clock and record;
-fix its total mass, force/coupling ceilings and preparation resources before
-testing refinement. B35 supplies Theurel's abstract as a bounded full-model
-reading lead. C066–C067 show why quiet scalable probes defeat an action floor
-under the ideal impulse assumptions. See the R05 handoff. Preserve A19 below
-as the supporting mechanical calculation.
+Start R07 from the completed R06/B37 finite-duration apparatus. Fix a causal
+new-information task and a physically justified lower preparation-width or
+record-resolution restriction. Derive a lower bound for the admitted estimators;
+the noisy-record upper estimate in R06 is not such a theorem. C068–C069 use
+four delayed records and known dynamics, with fixed mass and pulse widths but
+increasingly precise preparation and record access. See the R06 handoff.
+Preserve A19 below as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.
 A18/B32 completed the sharp closed-trajectory action bound C060–C061.
