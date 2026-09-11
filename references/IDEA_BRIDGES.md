@@ -4,7 +4,7 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R13
+## Classical cut state, receiver memory and readout — R14
 
 **H10 supporting capsule:** [the static-source synthesis](../notes/static-composition-classics.md)
 connects Vasubandhu's six contacts, Liu Hui's solid remainder and the Mohist
@@ -13,7 +13,15 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R13 remains the next calculation; H11 strengthens two source witnesses.
+R14 is the next calculation; H11 strengthens two source witnesses.
+
+**R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
+uses an acceleration rearrangement and the whole position strip to interpolate
+between free reachability and the established prepared pair. Position saturates
+at sqrt(2) scaled time; momentum at 4. R14 borrows the central-fibre formulation
+but replaces the Cartesian error bands by a shared quadratic budget. Test the
+aggregate image and centre risks before asserting a changed composition law.
+[B44](batches/B44.md) records bounded coverage and corrected source metadata.
 
 **R12/B43 capsule:** product central fibres yield additive scalar radii;
 [the composition note](../notes/minimax-composition.md) gives extensive

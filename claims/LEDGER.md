@@ -102,11 +102,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C080 | Product symmetric convex input/error classes with all constituent records give exact scalar minimax radius $\sum_i \lvert a_i\rvert r_i$; canonical centre/relative radii follow, and n identical copies have $H_R=nH_1$. Mass-only nonnegative coordinate-radius closure on all positive masses forces $Q(m)=q_*$, $P(m)=p_*m$ | [R12 §§1,4](../notes/minimax-composition.md); product-fibre extremizers and nonnegative additivity; [B43 written review](../reviews/minimax-composition-B43.md) |
 | C081 | For product bounded forces/errors, complete records, known initial states and $T\ge\max_i4\sqrt{m_i\varepsilon_i/F_i}$, centre risks are $Q_A=E$, $P_A=2\sum_i\sqrt{m_iF_i\varepsilon_i}$; retaining only the centre record gives $Q_B=E$, $P_B=2\sqrt{MF_\Sigma E}$, strictly larger momentum risk unless $F_i/(m_i\varepsilon_i)$ is common | R12 §§2–3; R11 sharp radii, exact force/error image, Cauchy–Schwarz; B43 written review |
 
+
+| C082 | Known initial phase, complete position records of error epsilon and arbitrary force bound F give exact finite-horizon radii $Q=\varepsilon\min(s^2/2,1)$ and $P=\sqrt{mF\varepsilon}V(s)$, with $s=T\sqrt{F/(m\varepsilon)}$ and $V=s,\sqrt{2s^2+4}-s,2$ on intervals split at sqrt(2),4; blind-delay radii are $P+Fb$, $Q+bP/m+Fb^2/(2m)$ | [R13 §§1–2](../notes/finite-horizon-minimax.md); rearrangement and path-strip extremizers; [B44 written review](../reviews/finite-horizon-B44.md) |
+| C083 | R12 product and aggregate radius formulas extend to every horizon using C082; aggregate position risk strictly increases exactly when some $F_iT^2/2<m_i\varepsilon_i$ and another is strictly greater. The F,16F example loses both phase coordinates; identical-copy risk products remain extensive at every horizon | R13 §3; product fibres, exact image and minimum-of-sums identity; B44 written review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C082–C083: [B44](../references/batches/B44.md) retains the established prepared
+pair; the finite-horizon law, blind-delay extension and transient composition
+are derived consequences. No exact match was obtained in the bounded coverage;
+novelty remains unassessed. Coordinator corrected source attribution and timing.
 
 C080–C081: [B43](../references/batches/B43.md) reuses Seeber–Haimovich's
 established one-body bounds. Product support addition, canonical composition,

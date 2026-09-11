@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R12/B43 and H10 complete.
+Updated: 2026-09-11. Current milestones: R13/B44 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-R13 remains the next mathematical task. No mathematical claim status changed.
+H10 changed no mathematical claim status. R13 is now complete; R14 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -66,12 +66,18 @@ ratios. Mass-only coordinate-radius closure gives an extensive action product,
 so A08's variance universality does not transfer (C080–C081). One Luna-low
 bounded audit and coordinator written/source review are complete.
 
-Start **R13**: derive finite-horizon phase minimax risks from known initial
-state before R11's hidden pair can be prepared; compare constituent and aggregate
-records when constituents enter the record-limited regime at different times.
-Read [R12 handoff](handoffs/R12.md) and [I006](../ideas/I006-discovery-by-connecting-results.md).
-Shared force/error restrictions remain a source-inspired supporting test.
-R06's deterministic reconstruction and B36 thermal reading remain comparisons.
+**R13/B44 complete:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
+proves three exact momentum regimes, earlier position saturation and sharp
+blind-delay risks from known initial phase. Product/aggregate composition
+holds at every horizon; mixed regimes can lose both position and momentum
+information (C082–C083). One Luna-low bounded audit and coordinator written
+proof/source review are complete; novelty remains unassessed.
+
+Start **R14**: impose a pointwise shared quadratic record-error budget on two
+identical bounded-force constituents. Derive centre-coordinate minimax risks
+and the aggregate-record image; test which extensive-product conclusions
+survive losing Cartesian error freedom. Read [R13 handoff](handoffs/R13.md).
+R06's apparatus and B36's thermal reading remain physical comparisons.
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

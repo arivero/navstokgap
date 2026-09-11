@@ -593,3 +593,51 @@ examines the finite-horizon regime before the hidden pair can be prepared.
 C080–C081: [complete proof and information classes](minimax-composition.md),
 [B43 audit](../references/batches/B43.md). These products multiply coordinate
 minimax risks and are not simultaneous error lower bounds on each motion.
+
+## 18. Exact recovery before the preparation time
+
+The complete noisy history has exact finite-horizon phase risks even before
+R11's hidden pair can be fully prepared. Keep known initial data, arbitrary
+measurable forces bounded by F, position errors bounded by epsilon, and no
+speed ceiling. With $\tau=\sqrt{m\varepsilon/F}$ and $s=T/\tau$,
+
+$$Q(T)=\varepsilon\min\{s^2/2,1\},\qquad
+P(T)=\sqrt{mF\varepsilon}\,V(s),$$
+
+$$V(s)=\begin{cases}
+s,&0\le s\le\sqrt2,\\
+\sqrt{2s^2+4}-s,&\sqrt2\le s\le4,\\
+2,&s\ge4.
+\end{cases}$$
+
+In scaled coordinates, the hidden path obeys $x(0)=x'(0)=0$,
+$|x''|\le1$, $|x|\le1$. Its terminal velocity v is bounded by s.
+Putting negative acceleration first minimizes terminal position at fixed v,
+giving $x(s)\ge(v^2+2sv-s^2)/4$ and the middle upper bound. Integrating
+$x'(t)\ge v-(s-t)$ over the final v time units gives $v^2/2\le2$.
+The lower envelope of these three bounds is V. Constant positive acceleration
+attains the first branch. Negative acceleration for
+$h=s-\sqrt{s^2/2+1}$ followed by positive acceleration attains the middle;
+its minimum position is $-h^2\ge-1$ and endpoint position is 1.
+The prepared R11 pair attains the final branch. Each momentum extremizer also
+maximizes endpoint position, so a blind interval b has exact risks
+
+$$P_b=P(T)+Fb,\qquad Q_b=Q(T)+bP(T)/m+Fb^2/(2m).$$
+
+Product constituent records still give $Q_A=\sum_i m_iQ_i/M$ and
+$P_A=\sum_iP_i$. Retaining only their centre record gives the single-body
+formula with $(M,F_\Sigma,E)$ at every horizon. Position information is
+strictly lost exactly when some $F_iT^2/2<m_i\varepsilon_i$ and another
+$F_jT^2/2>m_j\varepsilon_j$. Thus the transient can lose both phase
+coordinates. For equal m and epsilon, forces F and 16F at
+$T=\sqrt{m\varepsilon/F}$ give
+
+$$Q_A=3\varepsilon/4,\quad Q_B=\varepsilon,\quad
+P_A=9\sqrt{mF\varepsilon},\quad
+P_B=(\sqrt{714}-17)\sqrt{mF\varepsilon}>P_A.$$
+
+Identical copies retain $H_A=H_B=nH_1(T)$. At fixed precision the early
+product is $F^2T^3/(2m)$; at fixed positive T it closes as precision improves.
+R14 tests a shared apparatus error budget that prevents freely aligned
+full-width errors. C082–C083: [complete written proof](finite-horizon-minimax.md)
+and [B44 bounded audit](../references/batches/B44.md).

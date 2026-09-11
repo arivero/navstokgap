@@ -27,8 +27,9 @@ from being presented as discovery.
 R12 completed the third-row test: [product minimax radii](../notes/minimax-composition.md)
 give an extensive identical-copy action product and quantify the cost of losing
 constituent records. A08's invariant variance law does not transfer to this
-observable. R13 now tests the finite-horizon boundary, with known initial data
-and too little time to prepare R11's extremal pair.
+observable. R13 resolves the finite-horizon boundary with three exact momentum regimes
+and a transient loss of both phase coordinates under aggregation. R14 tests
+a shared apparatus error budget that removes Cartesian error freedom.
 
 ## Working rule
 
