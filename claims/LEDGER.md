@@ -115,11 +115,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C088 | R06's nominal four-record map has $F_\lambda=-\lambda\mathcal A z+O_{C^1}(\lambda^3)$ on a fixed convex receiver neighbourhood, hence a uniform lower Lipschitz bound at fixed sufficiently small positive coupling | [R16 §2](../notes/fixed-coupling-calibration.md); variational equations, compact bounds and matrix margin; [B47 review](../reviews/fixed-calibration-B47.md) |
 | C089 | At that fixed coupling, exact nonlinear minimum-residual calibration has uniform initial-state error bounded by $C_\lambda(b+\rho)$ for preparation width b and four final-record errors rho. Accuracy–disturbance and canonical reconstruction-error products close as b,rho tend to zero at fixed apparatus masses, duration and geometry | R16 §§3–4; compact minimization, C088 and R06 disturbance bound; B47 review |
 
+| C090 | At fixed sufficiently small positive coupling and incoming preparation width b, unknown initial probe momenta compensate every shell-state displacement at most b/(4L lambda), preserving all four exact nonlinear records with at least b/2 preparation margin | [R17 §§1–2](../notes/fixed-preparation-ambiguity.md); compact smooth dependence, contraction and shell chart; [B48 written review](../reviews/fixed-preparation-B48.md) |
+| C091 | A common-record shell patch projects onto a canonical rectangle of half-widths L_*r and P_*r, r=min(r_0,b/(4LC_0 lambda)); every deterministic estimator has coordinate risks at least these half-widths, reconstruction product at least L_*P_*r^2, and compatible projected area at least 4L_*P_*r^2 | R17 §§2–3; exact shell chart and endpoint triangle inequality; B48 review; fixed product support and four-record access |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C090–C091: [B48](../references/batches/B48.md) supplies established contraction
+and two-point lower-bound precedents. Exact nonlinear apparatus compensation,
+energy-shell patch and canonical projected area are derived consequences;
+novelty remains unassessed. Coordinator corrected source metadata and coverage
+and reviewed the written proof independently of the statistical comparison.
 
 C088–C089: [B47](../references/batches/B47.md) checks a standard smooth-ODE
 dependence premise and inherits the Theurel pointer comparison from B37.

@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R17
+## Classical cut state, receiver memory and readout — R18
+
+**R17/B48 capsule:** the [contraction precedent](../docs/batches/B48/fixed-preparation-source-companion.md)
+provides a quantitative compensation method. [R17](../notes/fixed-preparation-ambiguity.md)
+uses the incoming-momentum identity derivative and an interior preparation
+ball to hide a receiver shell patch from exact final records. R18 should
+reveal those initial momenta and test the initial-position response block;
+its rank/image and preparation margin decide whether compensation survives.
 
 **R16/B47 capsule:** Sideris Theorem 6.1 supplies smooth finite-time flow
 dependence. [R16](../notes/fixed-coupling-calibration.md) differentiates the
@@ -39,7 +46,7 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R17 is the next calculation; H11 strengthens two source witnesses.
+R18 is the next calculation; H11 strengthens two source witnesses.
 
 **R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
 uses an acceleration rearrangement and the whole position strip to interpolate

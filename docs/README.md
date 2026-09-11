@@ -25,6 +25,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B48](../references/batches/B48.md): fixed preparation and exact record
+  ambiguity; [source companion](batches/B48/fixed-preparation-source-companion.md).
+
 - [B47](../references/batches/B47.md): fixed-coupling nonlinear calibration;
   [source companion](batches/B47/fixed-calibration-source-companion.md).
 

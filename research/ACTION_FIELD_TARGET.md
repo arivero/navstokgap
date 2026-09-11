@@ -26,8 +26,10 @@ changes the saturated copy-count exponent to 1-3/(2r). **R15/B46 complete:**
 independent identical block apparatuses restore an extensive product at r=3/2
 (C086–C087). **R16/B47 complete:** exact nonlinear calibration permits
 preparation/error contraction at fixed nonzero coupling (C088–C089).
-**R17 is next:** hold incoming probe width positive and test nonlinear
-record ambiguity. See [R16](../notes/fixed-coupling-calibration.md) and
+**R17/B48 complete:** a common-record energy-shell patch gives positive
+preparation-dependent reconstruction risks (C090–C091).
+**R18 is next:** reveal initial momenta and test whether unknown probe positions
+still compensate receiver changes. See [R17](../notes/fixed-preparation-ambiguity.md) and
 [I006](../ideas/I006-discovery-by-connecting-results.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.
 

@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R16/B47 and H10 complete.
+Updated: 2026-09-11. Current milestones: R17/B48 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R16 is now complete; R17 is next.
+H10 changed no mathematical claim status. R17 is now complete; R18 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -92,10 +92,16 @@ preparation and final-record errors closes the accuracy–disturbance product
 at fixed nonzero coupling, masses and duration (C088–C089). Disturbance itself
 is merely bounded. One Luna-low source audit and coordinator review completed.
 
-Start **R17**: fix a positive incoming probe-width box and exact final-record
-access. Test whether unknown initial probe momenta can compensate receiver
-changes under the nonlinear record map, and bound the resulting ambiguity.
-Read [R16 handoff](handoffs/R16.md). B36's thermal reading is a comparison.
+**R17/B48 complete:** [fixed preparation ambiguity](../notes/fixed-preparation-ambiguity.md)
+constructs a two-dimensional fixed-energy shell patch with one exact final
+record, compensated by unknown incoming probe momenta with interior box
+margins. Both canonical reconstruction risks and their product have positive
+preparation-dependent lower bounds (C090–C091). One sequential Luna-low audit
+and coordinator written/source review are complete; novelty is unassessed.
+
+Start **R18**: reveal the initial probe momenta while keeping positive unknown
+probe-position widths. Test the position-to-final-momentum derivative's rank
+and its ability to compensate receiver shell changes. Read [R17 handoff](handoffs/R17.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

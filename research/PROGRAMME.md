@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 37, 2026-09-11.
+Version 38, 2026-09-11.
 
 ## Aim
 
@@ -85,8 +85,10 @@ restore an extensive saturated product even at r=3/2. Exact finite-horizon
 block risks and resource-set comparisons give C086–C087. **R16/B47 complete:**
 exact nonlinear calibration closes reconstruction/action products at fixed
 nonzero coupling when incoming preparation and final-record errors contract
-(C088–C089). **R17 is next:** hold incoming width positive and test nonlinear
-record ambiguity from unknown probe momenta.
+(C088–C089). **R17/B48 complete:** unknown incoming probe momenta preserve
+one exact record across a receiver-shell patch, giving positive
+preparation-dependent reconstruction bounds (C090–C091). **R18 is next:**
+reveal incoming momenta and test compensation by unknown probe positions.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -97,7 +99,8 @@ A08 by deriving the different worst-case aggregation law. R13 resolves its
 finite-horizon boundary; R14 shows how error geometry selects the exponent.
 R15 settles the regrouping test: fresh independent block budgets multiply the
 product by the block count. R16 removes a systematic calibration remainder;
-R17 tests a fixed positive preparation-width premise.
+R17 proves a fixed-preparation ambiguity; R18 tests which extra records
+remove it.
 
 ## Supporting source route: static compatibility
 
@@ -108,7 +111,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R17 keeps main-track priority.
+cost of record aggregation is a benchmark; R18 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

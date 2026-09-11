@@ -728,3 +728,40 @@ error also vanishes. Exact calibration and improving record access are supplied
 resources. R17 holds incoming width positive to test whether unknown probe
 momenta can hide distinct receiver states. C088–C089:
 [proof and domain](fixed-coupling-calibration.md), [B47 audit](../references/batches/B47.md).
+
+## 22. Positive preparation width leaves exact record ambiguity
+
+Keep the four final momentum records as the only data, with a fixed positive
+incoming apparatus box of half-width $b$ and sufficiently small coupling
+$\lambda>0$. In fixed component units the derivative of final records with
+respect to incoming probe momenta $u$ is uniformly within $1/2$ of $I$. The nominal
+receiver derivative is bounded by $L\lambda$. Thus the map
+
+$$T_w(u)=u-G_\lambda(w,u)+F_\lambda(z_*)$$
+
+contracts the ball $\|u\|\le b/2$ into itself whenever
+$\|w-z_*\|\le b/(4L\lambda)$. Its fixed point supplies exact nonlinear record
+compensation, with an interior preparation margin.
+
+At the shell point $z_*=(0,0,\sqrt{2E/d},0)$, completing the square gives the
+local chart
+
+$$y=\frac gd x+\sqrt{\frac{2E-(a-g^2/d)x^2-P^2/\mu}{d}},\qquad Q=0.$$
+
+Let $r_0$ be a fixed dimensionless chart-square radius and $C_0$ its Lipschitz
+bound in fixed length/momentum units $L_*,P_*$. With
+
+$$r=\min(r_0,b/(4LC_0\lambda)),$$
+
+the entire square $|x|\le L_*r$, $|P|\le P_*r$ has one common exact record.
+Every initial-state estimator therefore has worst-case errors
+
+$$\epsilon_x\ge L_*r,\qquad\epsilon_P\ge P_*r,\qquad
+\mathcal H_{\rm rec}\ge L_*P_*r^2>0.$$
+
+The compatible fibre's canonical $(x,P)$ projection has area at least
+$4L_*P_*r^2$. This reconstruction bound depends on the positive product
+preparation support and four-record access; its small-b rate matches section
+21's upper bound. R18 reveals incoming momenta and tests whether unknown
+probe positions still hide receiver changes. C090–C091:
+[proof and domain](fixed-preparation-ambiguity.md), [B48 audit](../references/batches/B48.md).
