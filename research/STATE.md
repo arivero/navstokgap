@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R20/B51 and H10 complete.
+Updated: 2026-09-11. Current milestones: R21/B52 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R20 is now complete; R21 is next.
+H10 changed no mathematical claim status. R21 is now complete; R22 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -118,10 +118,17 @@ leaves a receiver phase interval and positive canonical risk product (C096–C09
 The interval and preparation supply the scale. One sequential Luna-low audit
 and coordinator source/proof review are complete.
 
-Start **R21**: reveal initial clock position only. Use energy transversality
-to test local joint recovery with initial clock momentum still unknown;
-separate uniform local stability from global shell recovery. Read
-[R20 handoff](handoffs/R20.md).
+**R21/B52 complete:** [clock-position local recovery](../notes/clock-position-local-recovery.md)
+uses exact receiver energy and revealed clock position to recover the receiver,
+probe positions and hidden initial clock momentum on one fixed local shell
+patch. A uniform inverse bound closes the canonical error product with final
+record error at fixed coupling (C098–C099). One sequential Luna-low audit and
+coordinator source/proof review are complete; global shell recovery is open.
+
+Start **R22**: test distinct-speed common records with clock position revealed
+and receiver energy known, now across the full shell. Compare
+H_s(A_{v'}^{-1}A_v z) with H_s(z), then address positive-coupling persistence
+and preparation margins. Read [R21 handoff](handoffs/R21.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

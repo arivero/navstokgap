@@ -127,11 +127,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C096 | An admissible fixed four-pulse design has clock-speed signal determinant derivative -partial_v log abs(det A)=10/v_0+O(epsilon)>0; two implicit equations give an exact common-eight-record receiver energy-shell curve with both canonical phase derivatives nonzero when initial clock data are hidden | [R20 §§1–4](../notes/hidden-clock-ambiguity.md); moment determinant, quadratic-energy transversality and preparation margins; [B51 review](../reviews/hidden-clock-B51.md) |
 | C097 | On that fixed-domain family, clock offsets of half-width sigma give every deterministic estimator canonical risks at least k_x sigma and k_P sigma and product at least k_x k_P sigma squared, uniformly at sufficiently small positive coupling | R20 §5; common-record endpoints, fixed positive preparation margins; B51 review; action units, no positive-area conclusion |
 
+| C098 | With revealed initial clock position, known zero probe momenta and exact receiver energy, the augmented eight-record/energy map has a uniform local lower Lipschitz bound gamma/2 on a fixed convex neighbourhood of R20's transverse shell point, for all sufficiently small coupling | [R21 §§1–3](../notes/clock-position-local-recovery.md); kernel reduction tau dv=0, fixed-unit derivative margin and segment integration; [B52 review](../reviews/clock-position-B52.md) |
+| C099 | On a compact local shell patch times independent fixed apparatus boxes, minimum-residual fitting recovers receiver/probe positions and unknown initial clock momentum with joint error at most 4 delta/gamma and canonical product at most 16 L_*P_* delta squared/gamma squared, delta=max(rho_pi/lambda,rho_q) | R21 §4; compact fit, exact energy and triangle inequality; fixed positive coupling record-error limit closes the product; B52 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C098–C099: [B52](../references/batches/B52.md) identifies the established
+small-Lipschitz-perturbation inverse method in Freire's institutional lecture
+notes. The energy-speed Schur complement, uniform physical domain and
+canonical recovery bound are model-derived. One sequential Luna-low audit
+and coordinator source/proof review are complete; novelty is unassessed.
 
 C096–C097: [B51](../references/batches/B51.md) supplies a bounded Sontag
 input-output-equivalence precedent and inherits B50 smooth-flow methods.

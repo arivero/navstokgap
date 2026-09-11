@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R21
+## Classical cut state, receiver memory and readout — R22
+
+**R21/B52 capsule:** [the inverse perturbation method](../docs/batches/B52/clock-position-source-companion.md)
+supports local recovery once exact energy supplies the missing speed equation.
+[R21](../notes/clock-position-local-recovery.md) proves a fixed-domain estimate;
+R22 tests full-shell ambiguity by comparing H_s(A_{v'}^{-1}A_v z) with H_s(z)
+for distinct speeds, then checking persistence in the interacting record map.
+Loss of a local inverse margin alone does not establish a common-record pair.
 
 **R20/B51 capsule:** [Sontag's equivalence viewpoint](../docs/batches/B51/hidden-clock-source-companion.md)
 suggests explicit common-output families rather than dimension counting.

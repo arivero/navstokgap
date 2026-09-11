@@ -30,7 +30,10 @@ preparation/error contraction at fixed nonzero coupling (C088–C089).
 preparation-dependent reconstruction risks (C090–C091).
 **R20/B51 complete:** hidden clock data leave an exact receiver phase family
 and a preparation-dependent action-risk product with eight final pointer
-records. R21 tests recovery after revealing clock position alone.
+records. **R21/B52 complete:** revealing clock position and supplying exact
+receiver energy gives uniform local recovery with hidden clock momentum;
+final record refinement closes the action-risk product on a fixed shell patch
+(C098–C099). R22 tests distinct-speed ambiguity across the full shell.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity
 after incoming momenta are revealed (C092–C093). **R19/B50 complete:** known

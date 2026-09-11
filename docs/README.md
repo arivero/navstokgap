@@ -151,3 +151,5 @@ under decay conditions; alternatives A and B require none.
 
 Downloaded source byte identity is recorded in [SHA256SUMS](SHA256SUMS); verify from the repository
 root with `sha256sum -c docs/SHA256SUMS`.
+
+- [B52: clock-position local inverse audit](batches/B52/clock-position-source-companion.md): quantitative inverse-method precedent and corrected passage coverage.

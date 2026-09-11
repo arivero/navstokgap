@@ -877,3 +877,50 @@ so the result asserts coordinate risks rather than positive canonical area.
 R21 reveals offset alone and tests local recovery through energy transversality.
 C096–C097: [proof and domain](hidden-clock-ambiguity.md),
 [B51 audit](../references/batches/B51.md).
+
+## 26. Clock position and exact energy permit stable local recovery
+
+Revealing initial clock position alone removes section 25's phase ambiguity
+on a fixed local receiver preparation patch. Initial clock speed remains
+unknown, incoming probe momenta are known at zero, and the initial receiver
+energy is supplied exactly. Use the same fixed transverse pulse design and
+shell point $z_*$ as in section 25. In fixed component units, append energy to
+the eight scaled records:
+
+$$\mathcal G_\lambda(z,q,v)
+ =\big(F_\lambda(z,q,v),H_s(z)/E_*\big),\qquad
+ F_0(z,q,v)=(-A_{s_0,v}z,q).$$
+
+The derivative kernel at zero coupling obeys
+
+$$dq=0,\qquad dz=Bz_*\,dv,\qquad
+ B=-A_0^{-1}(\partial_v A)_0,\qquad
+ (z_*^T GBz_*)\,dv=0.$$
+
+The positive transverse factor established in section 25 makes the reference
+derivative J invertible. Put gamma=1/||J^{-1}||. Continuity and uniform C1
+convergence give one fixed convex neighbourhood $U$ and $\lambda_0>0$ with
+
+$$\sup_U||D\mathcal G_\lambda-J||\le\gamma/2,\qquad
+||\mathcal G_\lambda(w)-\mathcal G_\lambda(w')||
+ \ge\tfrac12\gamma||w-w'||.$$
+
+The second inequality follows by integrating along the segment inside $U$.
+Choose a compact shell patch times independent positive probe-position and
+clock-speed boxes contained in $U$. On this physical set the energy outputs
+agree, so the eight records alone determine all unknowns. For final momentum
+and position error bounds $\rho_\pi,\rho_q$, a minimum-residual fit gives
+
+$$||\widehat w-w||\le\frac4\gamma
+ \max(\rho_\pi/\lambda,\rho_q),\qquad
+\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\gamma^2}
+ \max(\rho_\pi/\lambda,\rho_q)^2.$$
+
+The canonical product has action units and closes with record error at fixed
+positive coupling and fixed local preparation. Initial clock momentum is
+recovered as well. The zero-coupling extension is a proof device; physical
+recovery requires a nonzero signal. Exact energy and knowledge of the local
+patch are supplied information. R22 tests distinct-speed common records
+across the entire shell. C098–C099:
+[proof and domain](clock-position-local-recovery.md),
+[B52 audit](../references/batches/B52.md).
