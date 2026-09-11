@@ -25,6 +25,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B54](../references/batches/B54.md): global recovery from final clock momentum;
+  [source companion](batches/B54/final-clock-source-companion.md).
 - [B53](../references/batches/B53.md): full-shell clock-speed ambiguity;
   [source companion](batches/B53/global-clock-source-companion.md).
 - [B51](../references/batches/B51.md): hidden clock and fixed-energy ambiguity;

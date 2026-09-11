@@ -967,3 +967,45 @@ This action-valued risk depends on the allowed speed interval and full-shell
 preparation. R23 adds the persistent final clock momentum to test global
 recovery from physical clock information. C100–C101:
 [proof and domain](global-clock-speed-ambiguity.md), [B53 audit](../references/batches/B53.md).
+
+## 28. A final clock-momentum record restores global recovery
+
+Add the persistent final clock momentum to the eight pointer records, with
+initial clock position still known. The nine records determine receiver state,
+incoming probe positions and initial clock speed on a whole bounded domain.
+Exact receiver energy and the local-patch prior are unnecessary.
+
+In fixed component units, including clock momentum unit $M_cV_*$, the map is
+
+$$\mathcal F_\lambda(z,q,v)=
+\left(\pi(T)/\lambda,q(T),p_s(T)/M_c\right)
+=L(z,q,v)+R_\lambda,\qquad L=(-A_vz,q,v),\quad
+\|R_\lambda\|_{C^1}\le C\lambda.$$
+
+The last block includes the exact reaction
+
+$$p_s(T)=M_cv-\lambda K\sum_j\int_0^T f'_j(s(t))x(t)q_j(t)\,dt.$$
+
+Let $\alpha$ be a uniform lower bound for $A_v$, and
+$D=\sup\|(\partial_v A_v)z\|$ on the fixed convex preparation domain.
+The speed and position blocks bound their input differences directly;
+the receiver block then yields
+
+$$\|L(w)-L(w')\|\ge\beta\|w-w'\|,\qquad
+\beta=\min(1,\alpha/(1+D)).$$
+
+Subtracting the remainder's Lipschitz bound gives an exact inverse margin
+$\beta/2$ whenever $C\lambda\le\beta/2$. This is a global estimate for a
+nonlinear leading map, rather than a pointwise rank argument.
+For final record errors $\rho_\pi,\rho_q,\rho_c$, a compact minimum-residual
+fit gives
+
+$$\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\beta^2}
+\max(\rho_\pi/\lambda,\rho_q,\rho_c)^2.$$
+
+The action-valued error product closes with record precision at fixed coupling
+and positive preparation widths. Clock back-reaction is jointly calibrated;
+the final momentum is not substituted as an exact initial momentum. Joint
+record access remains supplied. R24 adds final clock position and hides
+initial offset. C102–C103: [proof and domain](final-clock-momentum-recovery.md),
+[B54 audit](../references/batches/B54.md).

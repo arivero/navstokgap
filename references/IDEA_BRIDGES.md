@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R23
+## Classical cut state, receiver memory and readout — R24
+
+**R23/B54 capsule:** [the inverse perturbation precedent](../docs/batches/B54/final-clock-source-companion.md)
+supports a strict global margin once the nonlinear leading map is controlled.
+R23's speed record gives that control directly, without a convex image or
+known energy. R24 adds final clock position: invert the leading clock block
+(s+vT,v), then control A_(s,v) across a fixed small clock box. Time-stamped
+positions and persistent momenta remain distinct physical record resources.
 
 **R22/B53 capsule:** [the local/global distinction](../docs/batches/B53/global-clock-source-companion.md)
 requires an actual pair rather than a rank-loss diagnostic. R22 supplies one

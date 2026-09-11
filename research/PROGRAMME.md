@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 43, 2026-09-11.
+Version 44, 2026-09-11.
 
 ## Aim
 
@@ -102,8 +102,11 @@ uniform local recovery even with clock momentum unknown; the canonical error
 product closes with final record errors on a fixed prepared patch (C098–C099).
 **R22/B53 complete:** two distinct clock speeds give exact equal-energy,
 equal-record receiver pairs across the full shell, persisting at positive
-coupling with canonical risk bounds (C100–C101). **R23 is next:** add final
-clock momentum and test uniform global recovery.
+coupling with canonical risk bounds (C100–C101). **R23/B54 complete:** final
+clock momentum restores uniform global recovery on a bounded receiver domain,
+without exact energy or local patch information; record-error products close
+with preparation fixed (C102–C103). **R24 is next:** hide initial offset,
+add final clock position, and test the full apparatus record.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -127,7 +130,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R23 keeps main-track priority.
+cost of record aggregation is a benchmark; R24 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

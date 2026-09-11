@@ -133,11 +133,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C100 | For a sufficiently early fixed R20 pulse design, two distinct fixed clock speeds and revealed offset admit equal-energy distinct receiver states with identical eight scaled zero-coupling pointer records; the limiting energy-speed quadratic form has both signs and the actual pair follows by continuity | [R22 §§1–2](../notes/global-clock-speed-ambiguity.md); derivative-row expansion and normalized shell path; [B53 review](../reviews/global-clock-B53.md) |
 | C101 | These common-record pairs persist with full back-reaction for all sufficiently small positive coupling inside fixed preparation margins; both canonical separations stay positive and every deterministic estimator has error product at least c_x c_P d_v squared/16 | R22 §§3–4; uniform implicit continuation, endpoint signs and two-point risks; B53 review; full shell and fixed speed separation |
 
+| C102 | With known initial offset and zero incoming probe momenta, eight final pointer coordinates plus final clock momentum recover receiver state, incoming positions and unknown initial speed globally on a fixed bounded convex domain; the nonlinear leading map has lower Lipschitz constant beta=min(1,alpha/(1+D)), and the exact map at least beta/2 | [R23 §§1–2](../notes/final-clock-momentum-recovery.md); full clock reaction, uniform C1 perturbation and direct global bound; [B54 review](../reviews/final-clock-B54.md) |
+| C103 | Under C102, minimum-residual recovery has canonical error product at most 16 L_*P_* max(rho_pi/lambda,rho_q,rho_c) squared/beta squared; it closes with record error at fixed coupling and positive preparation widths, without supplying exact receiver energy | R23 §3; compact fit, clock-record normalization and action units; B54 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C102–C103: [B54](../references/batches/B54.md) rechecks the existing Freire
+perturbation precedent in three pages, with zero discovery queries. The
+nonlinear leading-map bound, clock calibration and risk closure are derived
+consequences. One Luna-low audit and coordinator source/proof review complete;
+novelty unassessed.
 
 C100–C101: [B53](../references/batches/B53.md) audits the local/global
 identifiability distinction in Quaiser et al. (2011). The shell pair,

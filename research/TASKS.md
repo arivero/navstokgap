@@ -50,7 +50,9 @@ handoff with the remaining dependency.
 | B52 | done | One-query inverse perturbation audit; corrected primary page anchors and coordinator source/proof review | One Luna low, sequential | R21; standard method, model-derived application, novelty unassessed |
 | R22 | done | Distinct-speed equal-energy common-record pairs across full shell, positive-coupling persistence and canonical risks C100–C101 | Coordinator + Luna-low B53 | [R22 handoff](handoffs/R22.md) |
 | B53 | done | One-query local/global identifiability audit; coordinator corrected metadata and checked primary definitions | One Luna low, sequential | R22; derived model result, novelty unassessed |
-| R23 | ready | Add persistent final clock momentum to eight pointer records and test uniform full-shell recovery of receiver, incoming positions and initial speed | Coordinator then bounded librarian | R22/B53; known offset, full clock back-reaction and fixed preparation boxes |
+| R23 | done | Nine final records restore uniform global recovery and canonical precision closure without exact receiver energy; C102–C103 | Coordinator + Luna-low B54 | [R23 handoff](handoffs/R23.md); known offset retained |
+| B54 | done | Zero-query, three-page existing-source perturbation audit with coordinator source/proof review | One Luna low, sequential | R23; nonlinear leading bound model-derived |
+| R24 | ready | Hide initial clock offset, add final clock position and test full ten-coordinate apparatus recovery; consolidate preparation versus record access | Coordinator then bounded librarian | R23/B54; known observation time, both clock reactions and global inverse |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -153,10 +155,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R23 from R22/B53: add the persistent final clock momentum to the eight
-pointer records. Keep initial clock position revealed and speed unknown.
-Test a uniform global inverse on the full shell and fixed apparatus boxes,
-including clock back-reaction and record precision. See [R22 handoff](handoffs/R22.md).
+Start R24 from R23/B54: hide initial offset and add final clock position.
+Test global recovery with full final apparatus phase records at known T,
+then consolidate which incoming data each record replaces.
+See [R23 handoff](handoffs/R23.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record
