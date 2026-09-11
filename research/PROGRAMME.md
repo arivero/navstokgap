@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 34, 2026-09-11.
+Version 35, 2026-09-11.
 
 ## Aim
 
@@ -78,8 +78,10 @@ ratios differ (C080–C081). Mass-only coordinate-radius closure forces an
 extensive product; A08's variance universality does not transfer. **R13/B44 are complete:** the exact finite-horizon phase risks have three
 momentum regimes and earlier position saturation. Mixed constituent regimes
 can lose both phase coordinates under record aggregation (C082–C083).
-**R14 is next:** test a shared quadratic apparatus error budget for two
-identical constituents, replacing Cartesian error freedom.
+**R14/B45 are complete:** shared l^r record budgets give exact centre risks
+and saturated copy-count exponent 1-3/(2r), with invariance at r=3/2
+(C084–C085). **R15 is next:** compare independent block budgets with a
+single global budget while keeping apparatus resources explicit.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -87,7 +89,8 @@ The user's discovery-by-connection strategy is saved in
 must specify its source and destination observables, preserved premises and
 a decisive test. R11 joins reachability to optimal recovery; R12 resolves the connection to
 A08 by deriving the different worst-case aggregation law. R13 resolves its
-finite-horizon boundary; R14 tests a shared error constraint.
+finite-horizon boundary; R14 shows how error geometry selects the exponent.
+R15 tests whether the invariant case survives apparatus regrouping.
 
 ## Supporting source route: static compatibility
 
@@ -98,7 +101,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R14 keeps main-track priority.
+cost of record aggregation is a benchmark; R15 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

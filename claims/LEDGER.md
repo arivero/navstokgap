@@ -106,11 +106,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C082 | Known initial phase, complete position records of error epsilon and arbitrary force bound F give exact finite-horizon radii $Q=\varepsilon\min(s^2/2,1)$ and $P=\sqrt{mF\varepsilon}V(s)$, with $s=T\sqrt{F/(m\varepsilon)}$ and $V=s,\sqrt{2s^2+4}-s,2$ on intervals split at sqrt(2),4; blind-delay radii are $P+Fb$, $Q+bP/m+Fb^2/(2m)$ | [R13 §§1–2](../notes/finite-horizon-minimax.md); rearrangement and path-strip extremizers; [B44 written review](../reviews/finite-horizon-B44.md) |
 | C083 | R12 product and aggregate radius formulas extend to every horizon using C082; aggregate position risk strictly increases exactly when some $F_iT^2/2<m_i\varepsilon_i$ and another is strictly greater. The F,16F example loses both phase coordinates; identical-copy risk products remain extensive at every horizon | R13 §3; product fibres, exact image and minimum-of-sums identity; B44 written review |
 
+| C084 | Two identical constituents with pointwise quadratic shared record-error budget have exactly the one-body centre risks at mass 2m, force bound 2F and precision epsilon/sqrt(2), for full or averaged records, at every horizon; blind-delay extension and saturated factor 2^(1/4) follow | [R14 §§1–2](../notes/shared-record-budget.md); exact projection/synchronous lift and C082; [B45 written review](../reviews/shared-budget-B45.md) |
+| C085 | For n identical constituents with fixed pointwise l^r budget, 1<=r<=infinity, effective centre precision is epsilon n^(-1/r), with equal full/aggregate scalar risks; saturated canonical product is n^(1-3/(2r)) times the one-copy product, including invariant copy-count scaling at r=3/2 | R14 §3; norm inequality, synchronous lift, canonical mass and C082; B45 written review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C084–C085: [B45](../references/batches/B45.md) supplies bounded optimal-recovery
+and convex-norm context. Exact mechanical projection, finite-horizon transfer
+and copy-count exponents are derived consequences; no exact match was obtained
+in the two-query coverage. Novelty remains unassessed.
 
 C082–C083: [B44](../references/batches/B44.md) retains the established prepared
 pair; the finite-horizon law, blind-delay extension and transient composition

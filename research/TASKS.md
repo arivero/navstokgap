@@ -9,7 +9,7 @@ handoff with the remaining dependency.
 | --- | --- | --- | --- | --- |
 | H10 | done | Indian contact/traversal, Chinese solid dissection and Mohist statics, access-limited Avicennian comparison; reviewed passages and source capsule | Coordinator + one sequential Luna medium | [H10 handoff](handoffs/H10.md) |
 | H11 | ready | Collate Liu Hui juan 5 facsimile pages 18–19; retrieve Ibn Sina Physics III.4 contact/millstone passage; record exact access and wording | One bounded source worker, sequential | H10; two witness targets, no regional sweep |
-| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); supporting track, R14 first |
+| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); supporting track, R15 first |
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
 | R03 | done | Fixed-energy receiver cut maps, nonsemigroup position kernel, reset freezing limit and phase-state restoration; C062–C063 | Coordinator + Luna-low B33 | [R03 handoff](handoffs/R03.md) |
 | B33 | done | Two cached primary pages, zero searches; cut-state source/proof audit and coordinator coverage correction | One Luna low, sequential | R03 |
@@ -34,7 +34,9 @@ handoff with the remaining dependency.
 | B43 | done | Bounded convex-sum context and reused exact differentiation bounds; coordinator source and written proof review | One Luna low, sequential | R12; passage-count ambiguity recorded |
 | R13 | done | Exact three-regime finite-horizon phase risks, blind delay and transient composition loss C082–C083 | Coordinator + Luna-low B44 | [R13 handoff](handoffs/R13.md) |
 | B44 | done | Bounded finite-horizon differentiation audit; corrected author metadata and future-supremum timing, no exact transient match | One Luna low, sequential | R13; two sources, four selected passages |
-| R14 | ready | Two identical constituents with pointwise shared quadratic error budget: centre minimax risks, aggregate image and composition test | Coordinator then bounded librarian | R13/B44; replace Cartesian error class explicitly |
+| R14 | done | Exact shared-budget centre projection/lift and finite-horizon risks; n-copy l^r exponent and r=3/2 saturated invariance C084–C085 | Coordinator + Luna-low B45 | [R14 handoff](handoffs/R14.md) |
+| B45 | done | Two-query optimal-recovery/norm audit; corrected version anchors and explicit bounded coverage, no exact mechanical match | One Luna low, sequential | R14 |
+| R15 | ready | Compare independent block apparatus budgets with one global budget; derive regrouping risks and resource conditions for r=3/2 invariance | Coordinator then bounded librarian | R14/B45; fixed resource accounting |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -137,10 +139,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R14 from R13/B44: for two identical bounded-force constituents impose
-sum_i (e_i/epsilon)^2 <= 1 at every observed time. Derive centre phase risks
-and the aggregate record image, preserving known initial data and the common
-horizon. Compare with the product-error case. See [R13 handoff](handoffs/R13.md).
+Start R15 from R14/B45: partition identical constituents into independently
+budgeted blocks and compare their centre records with one globally budgeted
+apparatus. Track the error set and supplied readout resources under regrouping,
+especially at r=3/2. See [R14 handoff](handoffs/R14.md).
 Preserve A19 as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.

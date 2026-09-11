@@ -50,7 +50,7 @@ u=2w-1 with 0<=w<=1 and integral w=(s+v)/2. The endpoint position
 is integral (s-t)u(t)dt. Its minimum places w=1 on the final interval
 of length (s+v)/2, since the weight s-t is decreasing. For a direct proof, let w_* be that final-interval indicator and c its
 left endpoint. Since integral (w-w_*)=0 and
-[(s-t)-(s-c)](w-w_*) >= 0 pointwise, integrating proves the minimum. Hence
+$((s-t)-(s-c))(w-w_*)\ge0$ pointwise, integrating proves the minimum. Hence
 
 $$x(s)\ge\frac{v^2+2sv-s^2}{4},\qquad
 v\le\sqrt{2s^2+4}-s.$$

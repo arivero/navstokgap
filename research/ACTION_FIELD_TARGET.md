@@ -20,9 +20,11 @@ recovery. **R09/B40 complete:** finite-precision records yield an exact area
 and uniform joint precision/delay closure. **R10/B41 complete:** two records
 give full-state reconstruction with an explicitly vanishing action-error product.
 **R11/B42 complete:** exact minimax risks survive dense noisy records at fixed
-tolerance. **R12 is next:** the composition law of these worst-case scales,
-compared with A08's variance universality. See
-[R11](../notes/indistinguishable-phase-bound.md) and
+tolerance. **R12–R14 are complete:** product errors give extensive action
+products, finite-horizon risks have exact transients, and a shared l^r budget
+changes the saturated copy-count exponent to 1-3/(2r). **R15 is next:**
+test the r=3/2 invariant case under explicit block-apparatus composition. See
+[R14](../notes/shared-record-budget.md) and
 [I006](../ideas/I006-discovery-by-connecting-results.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.
 

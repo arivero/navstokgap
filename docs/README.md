@@ -25,6 +25,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B45](../references/batches/B45.md): shared record budgets and norm-dependent
+  composition; [source companion](batches/B45/shared-budget-source-companion.md).
+
 - [B42](../references/batches/B42.md): indistinguishable motions and minimax
   recovery; [source companion](batches/B42/minimax-source-companion.md).
 

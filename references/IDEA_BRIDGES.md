@@ -4,7 +4,15 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R14
+## Classical cut state, receiver memory and readout — R15
+
+**R14/B45 capsule:** [shared-budget recovery](../notes/shared-record-budget.md)
+uses the norm bound for an average and a synchronous lift to give exact centre
+risks. The saturated product scales as n^(1-3/(2r)); r=3/2 is invariant
+under copy count with one fixed global budget. [B45](batches/B45.md) supplies
+optimal-recovery and convex-norm context. Borrow the error-set viewpoint for
+R15: compare separately supplied block budgets with the global ball before
+equating their preparations. This is the deciding composition premise.
 
 **H10 supporting capsule:** [the static-source synthesis](../notes/static-composition-classics.md)
 connects Vasubandhu's six contacts, Liu Hui's solid remainder and the Mohist
@@ -13,7 +21,7 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R14 is the next calculation; H11 strengthens two source witnesses.
+R15 is the next calculation; H11 strengthens two source witnesses.
 
 **R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
 uses an acceleration rearrangement and the whole position strip to interpolate

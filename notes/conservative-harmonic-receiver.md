@@ -641,3 +641,28 @@ product is $F^2T^3/(2m)$; at fixed positive T it closes as precision improves.
 R14 tests a shared apparatus error budget that prevents freely aligned
 full-width errors. C082–C083: [complete written proof](finite-horizon-minimax.md)
 and [B44 bounded audit](../references/batches/B44.md).
+
+## 19. Shared error geometry controls composition
+
+For n identical constituents with known initial phases, force ceiling F and
+complete position records, impose one pointwise apparatus budget
+$\|e(t)\|_r\le\varepsilon$, $1\le r\le\infty$. Set
+$E_n=\varepsilon n^{-1/r}$, with $1/\infty=0$. Averaging has error at
+most E_n by the norm inequality, and force at most nF at mass nm. Equal
+errors and forces lift every such scalar experiment. Equal displacement
+paths also lift its entire central compatible fibre. Thus retaining all
+records or only their average gives identical scalar centre minimax risks:
+
+$$Q_n=E_n\min(s_n^2/2,1),\qquad
+P_n=n\sqrt{mFE_n}\,V(s_n),\qquad
+s_n=T\sqrt{F/(mE_n)},$$
+
+where V is section 18's function. For $s_n\ge4$,
+
+$$\boxed{H_n^{\rm sat}=n^{1-3/(2r)}H_1^{\rm sat},\qquad
+H_1^{\rm sat}=2\sqrt{mF}\,\varepsilon^{3/2}.}$$
+
+A quadratic budget gives $n^{1/4}$; $r=3/2$ gives copy-count invariance.
+R15 tests independent block budgets against this shared preparation.
+C084–C085: [proof and scope](shared-record-budget.md),
+[B45 audit](../references/batches/B45.md).

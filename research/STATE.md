@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R13/B44 and H10 complete.
+Updated: 2026-09-11. Current milestones: R14/B45 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R13 is now complete; R14 is next.
+H10 changed no mathematical claim status. R14 is now complete; R15 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -73,10 +73,16 @@ holds at every horizon; mixed regimes can lose both position and momentum
 information (C082–C083). One Luna-low bounded audit and coordinator written
 proof/source review are complete; novelty remains unassessed.
 
-Start **R14**: impose a pointwise shared quadratic record-error budget on two
-identical bounded-force constituents. Derive centre-coordinate minimax risks
-and the aggregate-record image; test which extensive-product conclusions
-survive losing Cartesian error freedom. Read [R13 handoff](handoffs/R13.md).
+**R14/B45 complete:** [shared budgets](../notes/shared-record-budget.md)
+give exact centre risks by synchronous projection/lift. A quadratic budget
+changes the saturated n-copy product to n^(1/4); a general l^r budget gives
+n^(1-3/(2r)), including copy-count invariance at r=3/2 (C084–C085).
+One Luna-low audit and coordinator written/source review are complete.
+
+Start **R15**: compare independent block apparatus budgets with one shared
+global budget, preserving the readout resources under regrouping. Test whether
+the r=3/2 invariant product survives that composition premise. Read
+[R14 handoff](handoffs/R14.md). The supplied precision still sets positivity.
 R06's apparatus and B36's thermal reading remain physical comparisons.
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
