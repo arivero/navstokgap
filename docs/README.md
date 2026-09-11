@@ -25,6 +25,9 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B47](../references/batches/B47.md): fixed-coupling nonlinear calibration;
+  [source companion](batches/B47/fixed-calibration-source-companion.md).
+
 - [B45](../references/batches/B45.md): shared record budgets and norm-dependent
   composition; [source companion](batches/B45/shared-budget-source-companion.md).
 

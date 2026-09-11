@@ -4,7 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R16
+## Classical cut state, receiver memory and readout — R17
+
+**R16/B47 capsule:** Sideris Theorem 6.1 supplies smooth finite-time flow
+dependence. [R16](../notes/fixed-coupling-calibration.md) differentiates the
+apparatus equations, obtains a uniform inverse bound and removes the nominal
+calibration remainder at fixed coupling. [B47](batches/B47.md) preserves
+source coverage. R17 should hold incoming width fixed: use the derivative of
+final records with respect to initial probe momenta to test compensating
+receiver changes. A preparation lower bound, rather than nominal calibration
+error, is the premise under examination.
 
 **R15/B46 capsule:** [independent block apparatuses](../notes/block-apparatus-composition.md)
 combine R12 product supports with R14 synchronous lifts. At r=3/2 independent
@@ -30,7 +39,7 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R16 is the next calculation; H11 strengthens two source witnesses.
+R17 is the next calculation; H11 strengthens two source witnesses.
 
 **R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
 uses an acceleration rearrangement and the whole position strip to interpolate

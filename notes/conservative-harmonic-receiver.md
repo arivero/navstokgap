@@ -698,3 +698,33 @@ concavity of the square root makes momentum risk larger unless all $E_j$ agree.
 R16 tests contraction of finite mechanical record errors at fixed apparatus
 parameters. C086–C087: [proof](block-apparatus-composition.md) and
 [B46 audit](../references/batches/B46.md).
+
+## 21. Exact calibration at fixed nonzero coupling
+
+Keep section 11's apparatus and one sufficiently small positive coupling
+$\lambda$ fixed. Its nominal four-momentum map has the uniform expansion
+
+$$F_\lambda(z)=-\lambda\mathcal A z+\mathcal R_\lambda(z),
+\qquad\|\mathcal R_\lambda\|_{C^1}\le C\lambda^3.$$
+
+Differentiating the smooth flow preserves the probe $O(\lambda)$ and
+receiver/clock reaction $O(\lambda^2)$ bounds. The integrated record
+remainder is therefore cubic in coupling also in first derivative. On a convex
+neighbourhood of the energy shell, the matrix margin alpha>0 gives
+
+$$\|F_\lambda(z)-F_\lambda(w)\|\ge
+\tfrac12\lambda\alpha\|z-w\|.$$
+
+Let incoming apparatus uncertainty have width b, and the four final-record
+errors have width rho, in fixed component units. The exact nonlinear
+minimum-residual calibration on the compact receiver shell then satisfies
+
+$$\|\widehat z-z\|\le\frac4{\lambda\alpha}(C_\lambda b+\rho).$$
+
+Thus reconstruction error vanishes as b and rho shrink with coupling, masses
+and duration fixed. Momentum disturbance remains bounded by
+$CP_*(\lambda b+\lambda^2)$, so its product with position-reconstruction
+error also vanishes. Exact calibration and improving record access are supplied
+resources. R17 holds incoming width positive to test whether unknown probe
+momenta can hide distinct receiver states. C088–C089:
+[proof and domain](fixed-coupling-calibration.md), [B47 audit](../references/batches/B47.md).

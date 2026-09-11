@@ -112,11 +112,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C086 | Independent blocks of identical bounded-force constituents, pointwise l^r budgets and known initial phases have exact full/block-record centre risks Q=sum w_j q(T,E_j), P=sum n_j p(T,E_j), E_j=epsilon_j n_j^(-1/r); whole-centre-only records give q(T,bar E), Np(T,bar E). Saturated momentum loss is strict unless all E_j coincide | [R15 §§1–2](../notes/block-apparatus-composition.md); product fibres and exact aggregate lift; [B46 written review](../reviews/block-apparatus-B46.md) |
 | C087 | k independent equal blocks of a constituents have saturated H=k a^(1-3/(2r)) H_1, hence k H_1 at r=3/2. Finite-r product block budgets differ from every single unweighted global ball; equal centre risks can occur despite strict set inclusion. Matching fixed global-budget centre risks requires block allowance epsilon k^(-1/r) | R15 §§3–4; copy-count substitution, enclosing radius and explicit strict inclusion; B46 written review |
 
+| C088 | R06's nominal four-record map has $F_\lambda=-\lambda\mathcal A z+O_{C^1}(\lambda^3)$ on a fixed convex receiver neighbourhood, hence a uniform lower Lipschitz bound at fixed sufficiently small positive coupling | [R16 §2](../notes/fixed-coupling-calibration.md); variational equations, compact bounds and matrix margin; [B47 review](../reviews/fixed-calibration-B47.md) |
+| C089 | At that fixed coupling, exact nonlinear minimum-residual calibration has uniform initial-state error bounded by $C_\lambda(b+\rho)$ for preparation width b and four final-record errors rho. Accuracy–disturbance and canonical reconstruction-error products close as b,rho tend to zero at fixed apparatus masses, duration and geometry | R16 §§3–4; compact minimization, C088 and R06 disturbance bound; B47 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C088–C089: [B47](../references/batches/B47.md) checks a standard smooth-ODE
+dependence premise and inherits the Theurel pointer comparison from B37.
+Uniform record-map remainder, nonlinear calibration and fixed-coupling product
+closure are derived consequences. The bounded assumption audit leaves novelty
+unassessed; fresh and inherited coverage are recorded separately.
 
 C086–C087: [B46](../references/batches/B46.md) supplies bounded optimal-recovery
 and convex-support context, with no exact mechanical match in two queries

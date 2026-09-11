@@ -9,7 +9,7 @@ handoff with the remaining dependency.
 | --- | --- | --- | --- | --- |
 | H10 | done | Indian contact/traversal, Chinese solid dissection and Mohist statics, access-limited Avicennian comparison; reviewed passages and source capsule | Coordinator + one sequential Luna medium | [H10 handoff](handoffs/H10.md) |
 | H11 | ready | Collate Liu Hui juan 5 facsimile pages 18–19; retrieve Ibn Sina Physics III.4 contact/millstone passage; record exact access and wording | One bounded source worker, sequential | H10; two witness targets, no regional sweep |
-| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); supporting track, R16 first |
+| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); supporting track, R17 first |
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
 | R03 | done | Fixed-energy receiver cut maps, nonsemigroup position kernel, reset freezing limit and phase-state restoration; C062–C063 | Coordinator + Luna-low B33 | [R03 handoff](handoffs/R03.md) |
 | B33 | done | Two cached primary pages, zero searches; cut-state source/proof audit and coordinator coverage correction | One Luna low, sequential | R03 |
@@ -38,7 +38,9 @@ handoff with the remaining dependency.
 | B45 | done | Two-query optimal-recovery/norm audit; corrected version anchors and explicit bounded coverage, no exact mechanical match | One Luna low, sequential | R14 |
 | R15 | done | Exact block risks, aggregate information loss and extensive independent-block product at r=3/2; resource-set comparison C086–C087 | Coordinator + Luna-low B46 | [R15 handoff](handoffs/R15.md) |
 | B46 | done | Two-query, two-passage optimal-recovery/norm audit; corrected exponent label and source anchor, no exact mechanical match | One Luna low, sequential | R15 |
-| R16 | ready | Test preparation-error contraction in R06 at fixed apparatus mass, coupling and duration; declare finite record access and physical precision premise | Coordinator then bounded librarian | R15/B46 and R06; no complete-history oracle transfer |
+| R16 | done | Exact nonlinear four-record calibration at fixed nonzero coupling; uniform inverse and preparation/error contraction C088–C089 | Coordinator + Luna-low B47 | [R16 handoff](handoffs/R16.md) |
+| B47 | done | Smooth-ODE dependence source audit and inherited pointer context; corrected page and reading coverage | One Luna low, sequential | R16 |
+| R17 | ready | Fixed positive incoming probe-width box: implicit compensation of receiver changes by unknown probe momenta, with exact final records and quantified ambiguity | Coordinator then bounded librarian | R16/B47; preserve preparation margins and known energy shell |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -141,11 +143,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R16 from R15/B46 and R06: specify a finite mechanical record-error
-vector and its preparation class, hold apparatus mass, coupling and duration
-fixed, and test whether those premises prevent contraction of its errors.
-Keep finite delayed records distinct from complete-history access.
-See [R15 handoff](handoffs/R15.md).
+Start R17 from R16/B47: fix positive incoming preparation width and exact
+final-record access. Test whether initial probe momenta compensate changes in
+receiver state, preserving all four nonlinear records. Quantify ambiguity and
+box margins; see [R16 handoff](handoffs/R16.md).
 Preserve A19 as the supporting mechanical calculation.
 
 Start A19's peak-excitation test, allowing speed to vanish at turning points.
