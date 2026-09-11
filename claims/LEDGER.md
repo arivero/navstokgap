@@ -130,11 +130,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C098 | With revealed initial clock position, known zero probe momenta and exact receiver energy, the augmented eight-record/energy map has a uniform local lower Lipschitz bound gamma/2 on a fixed convex neighbourhood of R20's transverse shell point, for all sufficiently small coupling | [R21 §§1–3](../notes/clock-position-local-recovery.md); kernel reduction tau dv=0, fixed-unit derivative margin and segment integration; [B52 review](../reviews/clock-position-B52.md) |
 | C099 | On a compact local shell patch times independent fixed apparatus boxes, minimum-residual fitting recovers receiver/probe positions and unknown initial clock momentum with joint error at most 4 delta/gamma and canonical product at most 16 L_*P_* delta squared/gamma squared, delta=max(rho_pi/lambda,rho_q) | R21 §4; compact fit, exact energy and triangle inequality; fixed positive coupling record-error limit closes the product; B52 review |
 
+| C100 | For a sufficiently early fixed R20 pulse design, two distinct fixed clock speeds and revealed offset admit equal-energy distinct receiver states with identical eight scaled zero-coupling pointer records; the limiting energy-speed quadratic form has both signs and the actual pair follows by continuity | [R22 §§1–2](../notes/global-clock-speed-ambiguity.md); derivative-row expansion and normalized shell path; [B53 review](../reviews/global-clock-B53.md) |
+| C101 | These common-record pairs persist with full back-reaction for all sufficiently small positive coupling inside fixed preparation margins; both canonical separations stay positive and every deterministic estimator has error product at least c_x c_P d_v squared/16 | R22 §§3–4; uniform implicit continuation, endpoint signs and two-point risks; B53 review; full shell and fixed speed separation |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C100–C101: [B53](../references/batches/B53.md) audits the local/global
+identifiability distinction in Quaiser et al. (2011). The shell pair,
+positive-coupling continuation and canonical risk bound are model-derived.
+One sequential Luna-low worker and coordinator source/proof review completed;
+source metadata was corrected and novelty remains unassessed.
 
 C098–C099: [B52](../references/batches/B52.md) identifies the established
 small-Lipschitz-perturbation inverse method in Freire's institutional lecture

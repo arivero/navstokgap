@@ -25,6 +25,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B53](../references/batches/B53.md): full-shell clock-speed ambiguity;
+  [source companion](batches/B53/global-clock-source-companion.md).
 - [B51](../references/batches/B51.md): hidden clock and fixed-energy ambiguity;
   [source companion](batches/B51/hidden-clock-source-companion.md).
 - [B49](../references/batches/B49.md): position preparation and finite-clock

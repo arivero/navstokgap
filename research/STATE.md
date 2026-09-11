@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R21/B52 and H10 complete.
+Updated: 2026-09-11. Current milestones: R22/B53 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R21 is now complete; R22 is next.
+H10 changed no mathematical claim status. R22 is now complete; R23 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -123,12 +123,17 @@ uses exact receiver energy and revealed clock position to recover the receiver,
 probe positions and hidden initial clock momentum on one fixed local shell
 patch. A uniform inverse bound closes the canonical error product with final
 record error at fixed coupling (C098–C099). One sequential Luna-low audit and
-coordinator source/proof review are complete; global shell recovery is open.
+coordinator source/proof review are complete. R22 settles the full-shell test.
 
-Start **R22**: test distinct-speed common records with clock position revealed
-and receiver energy known, now across the full shell. Compare
-H_s(A_{v'}^{-1}A_v z) with H_s(z), then address positive-coupling persistence
-and preparation margins. Read [R21 handoff](handoffs/R21.md).
+**R22/B53 complete:** [global speed ambiguity](../notes/global-clock-speed-ambiguity.md)
+constructs actual equal-energy, equal-record pairs at distinct fixed clock
+speeds, with revealed offset. The early-pulse energy response has both signs;
+implicit continuation and an intermediate-value argument preserve the pairs
+at positive coupling. C100–C101 give preparation-dependent canonical risks.
+
+Start **R23**: add the persistent final clock momentum to the eight pointer
+records. Test uniform full-shell recovery with unknown initial clock speed.
+Read [R22 handoff](handoffs/R22.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

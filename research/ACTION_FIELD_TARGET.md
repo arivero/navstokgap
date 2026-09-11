@@ -33,7 +33,9 @@ and a preparation-dependent action-risk product with eight final pointer
 records. **R21/B52 complete:** revealing clock position and supplying exact
 receiver energy gives uniform local recovery with hidden clock momentum;
 final record refinement closes the action-risk product on a fixed shell patch
-(C098–C099). R22 tests distinct-speed ambiguity across the full shell.
+(C098–C099). **R22/B53 complete:** distinct-speed equal-record shell pairs
+persist at positive coupling (C100–C101). R23 adds final clock momentum to
+test whether a persistent physical clock record restores global recovery.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity
 after incoming momenta are revealed (C092–C093). **R19/B50 complete:** known

@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R22
+## Classical cut state, receiver memory and readout — R23
+
+**R22/B53 capsule:** [the local/global distinction](../docs/batches/B53/global-clock-source-companion.md)
+requires an actual pair rather than a rank-loss diagnostic. R22 supplies one
+by opposite energy signs and exact interacting continuation. For R23 add
+final clock momentum: its leading value M_c v suggests replacing a hidden
+parameter by a stored output. Test a uniform inverse, retaining reaction and
+record-error scaling; known offset remains a premise.
 
 **R21/B52 capsule:** [the inverse perturbation method](../docs/batches/B52/clock-position-source-companion.md)
 supports local recovery once exact energy supplies the missing speed equation.

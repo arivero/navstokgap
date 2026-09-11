@@ -924,3 +924,46 @@ patch are supplied information. R22 tests distinct-speed common records
 across the entire shell. C098–C099:
 [proof and domain](clock-position-local-recovery.md),
 [B52 audit](../references/batches/B52.md).
+
+## 27. Full-shell recovery fails at two distinct clock speeds
+
+The local preparation patch in section 26 carries genuine information.
+With the full receiver energy shell admitted, a fixed early-pulse design
+gives distinct-speed preparations with identical eight final pointer records.
+Clock offset and receiver energy remain known.
+
+Let $O$ have rows $e_xM^n$, $n=0,1,2,3$. Factoring the pulse moment matrix
+before inversion gives, for a small fixed design duration $\varepsilon$,
+
+$$B_\varepsilon=-A_{v_0}^{-1}\partial_v A_{v_0}
+=\frac1{v_0}O^{-1}\operatorname{diag}(1,2,3,4)O+O(\varepsilon).$$
+
+For $Q=0$, its limiting energy response is
+
+$$v_0 z^TGB^{(0)}z=g(x-y)(9x-5y)+\frac{2P^2}{\mu}.$$
+
+Take $x=L>0$, $P=p>0$ sufficiently small and vary $y$ from zero to $7L/5$,
+normalizing the entire path onto $H_s=E$. The endpoint energy responses have
+opposite signs and both canonical coordinates stay positive. Choose the
+design first and then a small fixed speed separation $d_v>0$. Equality of
+scaled zero-coupling records at $v_0$ and $v_1=v_0+d_v$ gives
+
+$$z'=A_{v_1}^{-1}A_{v_0}z=z+d_v B_\varepsilon z+O(d_v^2).$$
+
+The energy mismatch changes sign along the path, while both coordinate
+separations are bounded below by positive multiples of $d_v$. Intermediate
+value supplies an actual equal-energy pair.
+
+At positive coupling solve the exact eight-record equation at the second
+speed for receiver state and incoming positions. Its invertible leading
+derivative gives uniform $O(\lambda)$ continuation along the compact path.
+For sufficiently small coupling the endpoint signs, preparation margins and
+canonical separations persist. Another intermediate-value argument gives
+exact equal-energy, equal-record states, and consequently
+
+$$\epsilon_x\epsilon_P\ge\frac{c_xc_Pd_v^2}{16}>0.$$
+
+This action-valued risk depends on the allowed speed interval and full-shell
+preparation. R23 adds the persistent final clock momentum to test global
+recovery from physical clock information. C100–C101:
+[proof and domain](global-clock-speed-ambiguity.md), [B53 audit](../references/batches/B53.md).
