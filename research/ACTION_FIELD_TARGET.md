@@ -28,9 +28,13 @@ independent identical block apparatuses restore an extensive product at r=3/2
 preparation/error contraction at fixed nonzero coupling (C088–C089).
 **R17/B48 complete:** a common-record energy-shell patch gives positive
 preparation-dependent reconstruction risks (C090–C091).
+**R20/B51 complete:** hidden clock data leave an exact receiver phase family
+and a preparation-dependent action-risk product with eight final pointer
+records. R21 tests recovery after revealing clock position alone.
+
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity
-after incoming momenta are revealed (C092–C093). **R19 is next:** reveal initial
-clock data and both final pointer coordinates; test uniform joint recovery.
+after incoming momenta are revealed (C092–C093). **R19/B50 complete:** known
+initial clock data and both final pointer coordinates give uniform joint recovery.
 See [R18](../notes/position-preparation-ambiguity.md) and
 [I006](../ideas/I006-discovery-by-connecting-results.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.

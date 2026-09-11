@@ -835,3 +835,45 @@ resources. This is delayed reconstruction; disturbance need only stay bounded.
 R20 hides the initial clock data and tests an exact common-record shell family.
 C094–C095: [proof and domain](full-pointer-recovery.md),
 [B50 audit](../references/batches/B50.md).
+
+## 25. A hidden clock leaves an exact receiver phase interval
+
+With clock offset and speed hidden, eight exact final pointer records admit
+an energy-preserving receiver phase family for a fixed admissible pulse design.
+Incoming probe momenta remain known at zero. Write clock data as $c=(s,v)$,
+receiver flow as $\exp(Mt)$, and $H_s(z)=z^TGz/2$. Section 24's scaled map
+extends smoothly to zero coupling. The implicit-function theorem solves
+
+$$F_{\lambda,c}(z_\lambda(c),q_\lambda(c))=Y_\lambda,\qquad
+z_0(c)=A_c^{-1}A_{c_0}z_*.$$
+
+Interior supports give $\partial_s A=-AM/v$. Consequently the offset
+derivative is $Mz_*/v_0$ and preserves receiver energy at zero coupling.
+For four pulses at times of order a small design duration $\varepsilon$,
+the independent observation rows $e_xM^n$, $n=0,1,2,3$, give
+
+$$\det A_{s_0,v}=D(r\varepsilon)^{10}(1+O(\varepsilon)),
+\quad r=v_0/v,\quad D\ne0,$$
+$$\operatorname{tr}(-A^{-1}\partial_v A)=10/v_0+O(\varepsilon)>0.$$
+
+The exponent counts four integration factors and derivative orders
+$0+1+2+3$. Fix this design. Positive trace supplies a shell point with
+$\partial_v H_s(z_0(c))>0$ and both canonical phase derivatives nonzero.
+A second implicit equation therefore solves $H_s(z_\lambda(c))=E$ for
+$v=v_\lambda(s)$, with
+
+$$v'_\lambda(s_0)=O(\lambda),\qquad
+z'_\lambda(s_0)=Mz_*/v_0+O(\lambda).$$
+
+On a small fixed clock-offset interval of half-width $\sigma$, both canonical
+derivatives retain magnitudes at least $k_x,k_P>0$. Clock-speed and incoming
+position adjustments are $O(\lambda\sigma)$, preserving preparation margins.
+Common-record endpoints then imply
+
+$$\epsilon_x\epsilon_P\ge k_xk_P\sigma^2>0.$$
+
+This action-valued product is a clock-preparation cost. The family is a curve,
+so the result asserts coordinate risks rather than positive canonical area.
+R21 reveals offset alone and tests local recovery through energy transversality.
+C096–C097: [proof and domain](hidden-clock-ambiguity.md),
+[B51 audit](../references/batches/B51.md).

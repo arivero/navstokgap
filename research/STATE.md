@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R19/B50 and H10 complete.
+Updated: 2026-09-11. Current milestones: R20/B51 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R19 is now complete; R20 is next.
+H10 changed no mathematical claim status. R20 is now complete; R21 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -111,10 +111,17 @@ incoming clock data and probe momenta. The unknown initial-position box stays
 fixed; improving final record precision closes the canonical error product
 (C094–C095). One sequential Luna-low audit and coordinator review are complete.
 
-Start **R20**: retain the eight final records and known incoming probe momenta,
-but hide initial clock position and momentum. Test exact common-record families
-on the receiver energy shell with fixed preparation margins. Read
-[R19 handoff](handoffs/R19.md).
+**R20/B51 complete:** [hidden clock ambiguity](../notes/hidden-clock-ambiguity.md)
+gives an exact common-eight-record family on the receiver energy shell. A fixed
+pulse design supplies the transverse energy-speed derivative; unknown offset
+leaves a receiver phase interval and positive canonical risk product (C096–C097).
+The interval and preparation supply the scale. One sequential Luna-low audit
+and coordinator source/proof review are complete.
+
+Start **R21**: reveal initial clock position only. Use energy transversality
+to test local joint recovery with initial clock momentum still unknown;
+separate uniform local stability from global shell recovery. Read
+[R20 handoff](handoffs/R20.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

@@ -4,7 +4,15 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R20
+## Classical cut state, receiver memory and readout — R21
+
+**R20/B51 capsule:** [Sontag's equivalence viewpoint](../docs/batches/B51/hidden-clock-source-companion.md)
+suggests explicit common-output families rather than dimension counting.
+R20 uses a compensated phase curve and an energy-speed derivative to preserve
+the shell exactly. R21 fixes offset: use that same transverse derivative to
+test local inversion for clock speed together with receiver/probe coordinates.
+The source's all-input/all-time equivalence and this finite-record task have
+different observation domains.
 
 **R19/B50 capsule:** [Sideris](../docs/batches/B50/full-pointer-source-companion.md)
 supplies smooth dependence and variational equations. [R19](../notes/full-pointer-recovery.md)

@@ -124,11 +124,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C094 | With known incoming clock data and probe momenta in fixed small boxes, the eight final pointer records uniformly determine receiver state and unknown incoming positions: the scaled record map is C1-close to (-A_c z,q) on a convex domain and has lower Lipschitz constant beta/2 at sufficiently small positive coupling | [R19 §§1–3](../notes/full-pointer-recovery.md); fixed pulse/cutoff margins, uniform clock signal rank, written variational and segment estimates; [B50 review](../reviews/full-pointer-B50.md) |
 | C095 | Under C094, minimum-residual recovery gives canonical error product at most 16 L_*P_* max(rho_pi/lambda,rho_q)^2 / beta^2; it closes with final record errors at fixed positive coupling and fixed positive preparation widths | R19 §4; compact fit and triangle inequality, action units without 2 pi factor; B50 review; exact incoming clock/momentum information and joint final access supplied |
 
+| C096 | An admissible fixed four-pulse design has clock-speed signal determinant derivative -partial_v log abs(det A)=10/v_0+O(epsilon)>0; two implicit equations give an exact common-eight-record receiver energy-shell curve with both canonical phase derivatives nonzero when initial clock data are hidden | [R20 §§1–4](../notes/hidden-clock-ambiguity.md); moment determinant, quadratic-energy transversality and preparation margins; [B51 review](../reviews/hidden-clock-B51.md) |
+| C097 | On that fixed-domain family, clock offsets of half-width sigma give every deterministic estimator canonical risks at least k_x sigma and k_P sigma and product at least k_x k_P sigma squared, uniformly at sufficiently small positive coupling | R20 §5; common-record endpoints, fixed positive preparation margins; B51 review; action units, no positive-area conclusion |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C096–C097: [B51](../references/batches/B51.md) supplies a bounded Sontag
+input-output-equivalence precedent and inherits B50 smooth-flow methods.
+The pulse determinant, exact shell family and risk product are model-derived;
+novelty is unassessed. One sequential Luna-low worker and coordinator source
+and written proof reviews are complete.
 
 C094–C095: [B50](../references/batches/B50.md) verifies the standard smooth-ODE
 dependence premise in four selected Sideris pages. The uniform block inverse

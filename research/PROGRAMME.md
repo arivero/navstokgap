@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 40, 2026-09-11.
+Version 41, 2026-09-11.
 
 ## Aim
 
@@ -94,8 +94,11 @@ of radius proportional to coupling times preparation width (C092–C093).
 **R19/B50 complete:** eight final pointer coordinates uniformly recover receiver
 state and unknown incoming positions on a fixed preparation box, with known
 initial clock data and probe momenta. Improving final record precision closes
-the canonical reconstruction product (C094–C095). **R20 is next:** hide initial
-clock data and test an exact common-record family on the receiver shell.
+the canonical reconstruction product (C094–C095). **R20/B51 complete:** hidden
+clock offset and speed leave an exact common-record shell curve in a fixed
+pulse design, giving positive preparation-dependent canonical risks (C096–C097).
+**R21 is next:** reveal clock position only and test local recovery using the
+energy constraint, with clock momentum still unknown.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in

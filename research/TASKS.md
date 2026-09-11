@@ -44,7 +44,9 @@ handoff with the remaining dependency.
 | R18 | complete | Revealed incoming momenta still permit position compensation through full-rank receiver/clock response in a fixed pulse design; canonical bounds C092–C093 | Coordinator and saved Luna-low librarian | R17/B48; B49 audit and written review |
 | R19 | done | Uniform global recovery from eight final pointer coordinates on fixed preparation boxes, with known incoming clock data and probe momenta; record-error product closure C094–C095 | Coordinator + Luna-low B50 | [R19 handoff](handoffs/R19.md) |
 | B50 | done | One-query, four-page smooth-flow premise audit; global inverse and product closure are model-derived, novelty unassessed | One Luna low, sequential | R19; coordinator source and written proof review |
-| R20 | ready | Hide initial clock position/momentum while retaining eight final pointer records and known incoming probe momenta; test exact common-record families on the receiver shell | Coordinator then bounded librarian | R19/B50; fixed preparation margins, dimension counting insufficient |
+| R20 | done | Exact common-record energy-shell phase family with hidden clock data, explicit transverse pulse design and canonical risk product C096–C097 | Coordinator + Luna-low B51 | [R20 handoff](handoffs/R20.md) |
+| B51 | done | One-query primary input-output equivalence audit; model-specific determinant and shell construction separately reviewed | One Luna low, sequential | R20; novelty unassessed |
+| R21 | ready | Reveal initial clock position only; test uniform local recovery with hidden initial clock momentum using exact receiver energy | Coordinator then bounded librarian | R20/B51; transverse derivative, local domain and noise stability; global shell separate |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -147,7 +149,12 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R20 from R19/B50: retain eight final pointer records and known incoming
+Start R21 from R20/B51: reveal initial clock position, retain eight final pointer
+records and known incoming probe momenta, and leave clock momentum unknown.
+Use the transverse energy derivative to prove or refute uniform local recovery
+and stability. See [R20 handoff](handoffs/R20.md).
+
+Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record
 family preserving the exact receiver energy shell and fixed box margins.
 See [R19 handoff](handoffs/R19.md).
