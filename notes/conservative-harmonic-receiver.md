@@ -898,7 +898,7 @@ $$dq=0,\qquad dz=Bz_*\,dv,\qquad
  (z_*^T GBz_*)\,dv=0.$$
 
 The positive transverse factor established in section 25 makes the reference
-derivative J invertible. Put gamma=1/||J^{-1}||. Continuity and uniform C1
+derivative $J$ invertible. Put $\gamma=1/\|J^{-1}\|$. Continuity and uniform $C^1$
 convergence give one fixed convex neighbourhood $U$ and $\lambda_0>0$ with
 
 $$\sup_U||D\mathcal G_\lambda-J||\le\gamma/2,\qquad
