@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R18
+## Classical cut state, receiver memory and readout — R19
+
+**R18/B49 capsule:** [Hermann–Krener](../docs/batches/B49/position-preparation-source-companion.md)
+distinguishes local observability from global record recovery. R18's full
+clock-response calculation gives exact position compensation despite known
+incoming momenta. R19 adds final positions and known initial clock data:
+use the scaled leading record map (-A z,q) to seek a uniform inverse estimate,
+keeping preparation and record access explicit.
 
 **R17/B48 capsule:** the [contraction precedent](../docs/batches/B48/fixed-preparation-source-companion.md)
 provides a quantitative compensation method. [R17](../notes/fixed-preparation-ambiguity.md)
@@ -46,7 +53,7 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R18 is the next calculation; H11 strengthens two source witnesses.
+R19 is the next calculation; H11 strengthens two source witnesses.
 
 **R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
 uses an acceleration rearrangement and the whole position strip to interpolate

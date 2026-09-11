@@ -118,11 +118,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C090 | At fixed sufficiently small positive coupling and incoming preparation width b, unknown initial probe momenta compensate every shell-state displacement at most b/(4L lambda), preserving all four exact nonlinear records with at least b/2 preparation margin | [R17 §§1–2](../notes/fixed-preparation-ambiguity.md); compact smooth dependence, contraction and shell chart; [B48 written review](../reviews/fixed-preparation-B48.md) |
 | C091 | A common-record shell patch projects onto a canonical rectangle of half-widths L_*r and P_*r, r=min(r_0,b/(4LC_0 lambda)); every deterministic estimator has coordinate risks at least these half-widths, reconstruction product at least L_*P_*r^2, and compatible projected area at least 4L_*P_*r^2 | R17 §§2–3; exact shell chart and endpoint triangle inequality; B48 review; fixed product support and four-record access |
 
+| C092 | For an admissible fixed R06 pulse design, unknown initial probe positions have final-momentum derivative lambda squared B plus a uniform order-three remainder; the finite-clock response makes B lower triangular with nonzero diagonal near the selected shell point | [R18 §§1–2](../notes/position-preparation-ambiguity.md); variational equations and pulse integration by parts; [B49 review](../reviews/position-preparation-B49.md) |
+| C093 | With four initial and four final probe momenta revealed, a positive unknown initial-position box hides an exact shell square of radius r=min(r_0,lambda b/(4CC_0)); canonical reconstruction product is at least L_*P_*r squared and projected compatible area at least four times that value | R18 §§3–4; contraction with interior margin and R17 shell chart; B49 review; fixed design, small positive coupling and Cartesian preparation support |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C092–C093: [B49](../references/batches/B49.md) verifies a standard local
+observability precedent and inherits smooth-flow/contraction methods from
+B47/B48. The clock-response matrix and exact position compensation are derived
+consequences. The bounded audit leaves novelty unassessed; coordinator scan
+review corrected the article and theorem pagination.
 
 C090–C091: [B48](../references/batches/B48.md) supplies established contraction
 and two-point lower-bound precedents. Exact nonlinear apparatus compensation,

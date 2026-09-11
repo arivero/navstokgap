@@ -877,4 +877,44 @@ matches section 21's upper bound. R18 reveals incoming momenta and tests
 whether unknown probe positions still hide receiver changes. C090--C091:
 \href{fixed-preparation-ambiguity.md}{proof and domain},
 \href{../references/batches/B48.md}{B48 audit}.
+
+\hypertarget{position-uncertainty-survives-incoming-momentum-calibration}{%
+\subsection{23. Position uncertainty survives incoming momentum
+calibration}\label{position-uncertainty-survives-incoming-momentum-calibration}}
+
+Revealing the four incoming probe momenta still leaves a common-record
+shell patch for one fixed admissible pulse design. On the
+zero-incoming-momentum, nominal-clock slice, the derivative with respect
+to initial probe positions is
+
+\[D_qG_\lambda=\lambda^2 B(z)+O(\lambda^3).\]
+
+Both receiver and clock reaction contribute to \(B\). Ordered disjoint
+pulses make it lower triangular. For pulses
+\(f_j(s_0+vt)=\phi((t-t_j)/\delta)\) with \(x_j=x^0(t_j)\ne0\), its
+diagonal obeys
+
+\[B_{jj}=-\frac{K^2x_j^2\delta}{M_cv^2}\int\phi^2+O(\delta^2).\]
+
+Choose independent signal times avoiding the isolated zeros of \(x^0\)
+and then a sufficiently small positive duration \(\delta\), held fixed
+thereafter. Every diagonal is nonzero. The clock contribution, of order
+\(\delta\), dominates the receiver's order-\(\delta^3\) term.
+
+In fixed component units, multiplication by \((\lambda^2 B(z_*))^{-1}\)
+gives a contraction on the position ball \(b/2\) whenever
+\(\|w-z_*\|\le\lambda b/(4C)\). Its fixed point preserves all eight
+initial and final momentum records exactly. Using section 22's shell
+chart gives
+
+\[r=\min\left(r_0,\frac{\lambda b}{4CC_0}\right),\qquad
+\epsilon_x\epsilon_P\ge L_*P_*r^2,\qquad
+\operatorname{area}_{x,P}\ge4L_*P_*r^2.\]
+
+These bounds quantify the unknown position support; at fixed width their
+displayed lower bound closes with coupling. R19 adds final pointer
+positions and known initial clock position and momentum to test uniform
+joint recovery. C092--C093:
+\href{position-preparation-ambiguity.md}{proof and domain},
+\href{../references/batches/B49.md}{B49 audit}.
 \end{document}

@@ -25,6 +25,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B49](../references/batches/B49.md): position preparation and finite-clock
+  response; [source companion](batches/B49/position-preparation-source-companion.md).
 - [B48](../references/batches/B48.md): fixed preparation and exact record
   ambiguity; [source companion](batches/B48/fixed-preparation-source-companion.md).
 
