@@ -4,7 +4,15 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R19
+## Classical cut state, receiver memory and readout — R20
+
+**R19/B50 capsule:** [Sideris](../docs/batches/B50/full-pointer-source-companion.md)
+supplies smooth dependence and variational equations. [R19](../notes/full-pointer-recovery.md)
+uses the uniform block map (-A_c z,q) to recover all unknowns at fixed known
+clock data. For R20 vary the clock and solve the eight-record constraint for
+receiver and probe positions, then impose the receiver energy shell. The
+clock derivative, shell constraint and interior margins decide whether an
+exact ambiguous family remains; a dimension count is insufficient.
 
 **R18/B49 capsule:** [Hermann–Krener](../docs/batches/B49/position-preparation-source-companion.md)
 distinguishes local observability from global record recovery. R18's full

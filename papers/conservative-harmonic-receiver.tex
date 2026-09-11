@@ -917,4 +917,44 @@ positions and known initial clock position and momentum to test uniform
 joint recovery. C092--C093:
 \href{position-preparation-ambiguity.md}{proof and domain},
 \href{../references/batches/B49.md}{B49 audit}.
+
+\hypertarget{full-pointer-records-remove-the-fixed-position-ambiguity}{%
+\subsection{24. Full pointer records remove the fixed-position
+ambiguity}\label{full-pointer-records-remove-the-fixed-position-ambiguity}}
+
+With initial clock data \(c\) and probe momenta \(u\) revealed, all
+eight final pointer coordinates determine both receiver state \(z\) and
+unknown incoming positions \(q\). The initial positions occupy a fixed
+positive box. Clock data may range over a fixed sufficiently small
+known-data box, on which the free signal matrices \(A_c\) have a uniform
+inverse margin \(\alpha>0\). Free drift is \(d_j(u)=T u_j/M_j\).
+
+In fixed component units the scaled exact record map satisfies
+
+\[F(z,q)=\left(\frac{\pi(T)-u}{\lambda},q(T)-d(u)\right)
+ =(-A_c z,q)+R(z,q),\qquad ||R||_{C^1}\le C\lambda.\]
+
+The receiver and clock reactions are uniformly order \(\lambda\) on this
+fixed preparation domain. Integrating the pointer equations and their
+variations gives the displayed estimate on a convex neighbourhood of the
+energy ball times the position box. For \(\beta=\min(\alpha,1)\) and
+\(C\lambda\le\beta/2\), segment integration yields the global bound
+
+\[||F(v)-F(w)||\ge\tfrac12\beta||v-w||.\]
+
+Thus exact joint records remove section 23's ambiguity. If final
+momentum and position errors are at most \(\rho_\pi\) and \(\rho_q\) in
+fixed units, a minimum-residual fit on the shell times the box gives
+
+\[\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\beta^2}
+ \max(\rho_\pi/\lambda,\rho_q)^2\longrightarrow0\]
+
+as both record errors vanish at fixed positive coupling. Preparation
+widths, masses and observation time stay fixed. Exact incoming
+clock/momentum data and improving simultaneous final position/momentum
+access are supplied resources. This is delayed reconstruction;
+disturbance need only stay bounded. R20 hides the initial clock data and
+tests an exact common-record shell family. C094--C095:
+\href{full-pointer-recovery.md}{proof and domain},
+\href{../references/batches/B50.md}{B50 audit}.
 \end{document}

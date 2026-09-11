@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 39, 2026-09-11.
+Version 40, 2026-09-11.
 
 ## Aim
 
@@ -91,8 +91,11 @@ preparation-dependent reconstruction bounds (C090–C091). **R18/B49 complete:**
 revealing incoming momenta leaves exact position-mediated ambiguity in a fixed
 pulse design: clock reaction gives an invertible response and a shell patch
 of radius proportional to coupling times preparation width (C092–C093).
-**R19 is next:** reveal initial clock data and both final pointer coordinates;
-test uniform joint recovery of receiver state and unknown initial positions.
+**R19/B50 complete:** eight final pointer coordinates uniformly recover receiver
+state and unknown incoming positions on a fixed preparation box, with known
+initial clock data and probe momenta. Improving final record precision closes
+the canonical reconstruction product (C094–C095). **R20 is next:** hide initial
+clock data and test an exact common-record family on the receiver shell.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -104,7 +107,8 @@ finite-horizon boundary; R14 shows how error geometry selects the exponent.
 R15 settles the regrouping test: fresh independent block budgets multiply the
 product by the block count. R16 removes a systematic calibration remainder;
 R17 proves a fixed-preparation ambiguity; R18 locates its position-mediated
-successor. R19 tests whether full pointer records remove it.
+successor. R19 removes it with full pointer records and known initial clock
+data. R20 tests the cost of that clock information.
 
 ## Supporting source route: static compatibility
 
@@ -115,7 +119,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R19 keeps main-track priority.
+cost of record aggregation is a benchmark; R20 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

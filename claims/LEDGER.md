@@ -121,11 +121,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C092 | For an admissible fixed R06 pulse design, unknown initial probe positions have final-momentum derivative lambda squared B plus a uniform order-three remainder; the finite-clock response makes B lower triangular with nonzero diagonal near the selected shell point | [R18 §§1–2](../notes/position-preparation-ambiguity.md); variational equations and pulse integration by parts; [B49 review](../reviews/position-preparation-B49.md) |
 | C093 | With four initial and four final probe momenta revealed, a positive unknown initial-position box hides an exact shell square of radius r=min(r_0,lambda b/(4CC_0)); canonical reconstruction product is at least L_*P_*r squared and projected compatible area at least four times that value | R18 §§3–4; contraction with interior margin and R17 shell chart; B49 review; fixed design, small positive coupling and Cartesian preparation support |
 
+| C094 | With known incoming clock data and probe momenta in fixed small boxes, the eight final pointer records uniformly determine receiver state and unknown incoming positions: the scaled record map is C1-close to (-A_c z,q) on a convex domain and has lower Lipschitz constant beta/2 at sufficiently small positive coupling | [R19 §§1–3](../notes/full-pointer-recovery.md); fixed pulse/cutoff margins, uniform clock signal rank, written variational and segment estimates; [B50 review](../reviews/full-pointer-B50.md) |
+| C095 | Under C094, minimum-residual recovery gives canonical error product at most 16 L_*P_* max(rho_pi/lambda,rho_q)^2 / beta^2; it closes with final record errors at fixed positive coupling and fixed positive preparation widths | R19 §4; compact fit and triangle inequality, action units without 2 pi factor; B50 review; exact incoming clock/momentum information and joint final access supplied |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C094–C095: [B50](../references/batches/B50.md) verifies the standard smooth-ODE
+dependence premise in four selected Sideris pages. The uniform block inverse
+and canonical error-product bound are model-derived consequences of standard
+perturbation and residual estimates. This bounded premise audit leaves novelty
+unassessed and supplies no exact apparatus match.
 
 C092–C093: [B49](../references/batches/B49.md) verifies a standard local
 observability precedent and inherits smooth-flow/contraction methods from
