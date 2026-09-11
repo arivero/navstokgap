@@ -22,9 +22,11 @@ give full-state reconstruction with an explicitly vanishing action-error product
 **R11/B42 complete:** exact minimax risks survive dense noisy records at fixed
 tolerance. **R12–R14 are complete:** product errors give extensive action
 products, finite-horizon risks have exact transients, and a shared l^r budget
-changes the saturated copy-count exponent to 1-3/(2r). **R15 is next:**
-test the r=3/2 invariant case under explicit block-apparatus composition. See
-[R14](../notes/shared-record-budget.md) and
+changes the saturated copy-count exponent to 1-3/(2r). **R15/B46 complete:**
+independent identical block apparatuses restore an extensive product at r=3/2
+(C086–C087). **R16 is next:** test preparation-error contraction at fixed
+mechanical apparatus parameters, preserving finite record access. See
+[R15](../notes/block-apparatus-composition.md) and
 [I006](../ideas/I006-discovery-by-connecting-results.md). C066–C067 concern
 ideal impulses and growing probe supply. A19 remains the supporting test.
 

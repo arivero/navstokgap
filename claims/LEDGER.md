@@ -109,11 +109,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C084 | Two identical constituents with pointwise quadratic shared record-error budget have exactly the one-body centre risks at mass 2m, force bound 2F and precision epsilon/sqrt(2), for full or averaged records, at every horizon; blind-delay extension and saturated factor 2^(1/4) follow | [R14 §§1–2](../notes/shared-record-budget.md); exact projection/synchronous lift and C082; [B45 written review](../reviews/shared-budget-B45.md) |
 | C085 | For n identical constituents with fixed pointwise l^r budget, 1<=r<=infinity, effective centre precision is epsilon n^(-1/r), with equal full/aggregate scalar risks; saturated canonical product is n^(1-3/(2r)) times the one-copy product, including invariant copy-count scaling at r=3/2 | R14 §3; norm inequality, synchronous lift, canonical mass and C082; B45 written review |
 
+| C086 | Independent blocks of identical bounded-force constituents, pointwise l^r budgets and known initial phases have exact full/block-record centre risks Q=sum w_j q(T,E_j), P=sum n_j p(T,E_j), E_j=epsilon_j n_j^(-1/r); whole-centre-only records give q(T,bar E), Np(T,bar E). Saturated momentum loss is strict unless all E_j coincide | [R15 §§1–2](../notes/block-apparatus-composition.md); product fibres and exact aggregate lift; [B46 written review](../reviews/block-apparatus-B46.md) |
+| C087 | k independent equal blocks of a constituents have saturated H=k a^(1-3/(2r)) H_1, hence k H_1 at r=3/2. Finite-r product block budgets differ from every single unweighted global ball; equal centre risks can occur despite strict set inclusion. Matching fixed global-budget centre risks requires block allowance epsilon k^(-1/r) | R15 §§3–4; copy-count substitution, enclosing radius and explicit strict inclusion; B46 written review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C086–C087: [B46](../references/batches/B46.md) supplies bounded optimal-recovery
+and convex-support context, with no exact mechanical match in two queries
+and two selected passages. These are derived consequences of the stated
+model; novelty remains unassessed. Coordinator corrected a worker exponent
+label and versioned source anchor before acceptance.
 
 C084–C085: [B45](../references/batches/B45.md) supplies bounded optimal-recovery
 and convex-norm context. Exact mechanical projection, finite-horizon transfer

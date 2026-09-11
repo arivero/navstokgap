@@ -4,7 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R15
+## Classical cut state, receiver memory and readout — R16
+
+**R15/B46 capsule:** [independent block apparatuses](../notes/block-apparatus-composition.md)
+combine R12 product supports with R14 synchronous lifts. At r=3/2 independent
+identical blocks multiply the saturated product by their count. Matching one
+fixed global-budget risk requires shrinking block tolerances; equal risks do
+not imply equal error sets. [B46](batches/B46.md) supplies norm/support context.
+Borrow explicit preparation-set accounting for R16: test whether fixed R06
+apparatus parameters prevent contraction of finite record errors. Record
+access and a physical positive precision premise decide the next step.
 
 **R14/B45 capsule:** [shared-budget recovery](../notes/shared-record-budget.md)
 uses the norm bound for an average and a synchronous lift to give exact centre
@@ -21,7 +30,7 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R15 is the next calculation; H11 strengthens two source witnesses.
+R16 is the next calculation; H11 strengthens two source witnesses.
 
 **R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
 uses an acceleration rearrangement and the whole position strip to interpolate
