@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-11. Current milestones: R23/B54 and H10 complete.
+Updated: 2026-09-12. Current milestones: R24/B55 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R23 is now complete; R24 is next.
+H10 changed no mathematical claim status. R24 is now complete; R25 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -138,9 +138,16 @@ the inverse holds on a bounded convex receiver domain. Record precision closes
 the canonical product with preparation fixed (C102–C103). One Luna-low
 existing-source audit and coordinator source/proof review completed.
 
-Start **R24**: hide initial clock position, add final clock position at T,
-and test recovery from the full ten-coordinate apparatus record. Then
-consolidate the preparation/record-access comparison. Read [R23 handoff](handoffs/R23.md).
+**R24/B55 complete:** [full clock phase](../notes/full-clock-phase-recovery.md)
+replaces both initial clock coordinates by their final records. A global
+inverse and canonical precision closure hold on the bounded receiver domain
+(C104–C105). The note consolidates R19–R24 by preparation and record access.
+One Luna-low inherited-source audit and coordinator proof review completed.
+
+Start **R25**: make all initial apparatus coordinates unknown in a fixed
+positive box, retain full final apparatus records and receiver shell energy,
+and test exact compensation via the free apparatus-flow derivative. Read
+[R24 handoff](handoffs/R24.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

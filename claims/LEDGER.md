@@ -136,11 +136,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C102 | With known initial offset and zero incoming probe momenta, eight final pointer coordinates plus final clock momentum recover receiver state, incoming positions and unknown initial speed globally on a fixed bounded convex domain; the nonlinear leading map has lower Lipschitz constant beta=min(1,alpha/(1+D)), and the exact map at least beta/2 | [R23 §§1–2](../notes/final-clock-momentum-recovery.md); full clock reaction, uniform C1 perturbation and direct global bound; [B54 review](../reviews/final-clock-B54.md) |
 | C103 | Under C102, minimum-residual recovery has canonical error product at most 16 L_*P_* max(rho_pi/lambda,rho_q,rho_c) squared/beta squared; it closes with record error at fixed coupling and positive preparation widths, without supplying exact receiver energy | R23 §3; compact fit, clock-record normalization and action units; B54 review |
 
+| C104 | All ten final apparatus coordinates recover receiver state, incoming probe positions and both initial clock coordinates globally on a fixed bounded convex domain at sufficiently small positive coupling, with known zero incoming probe momenta and time T | [R24 §§1–2](../notes/full-clock-phase-recovery.md); explicit clock shear, uniform signal variation and complete C1 remainder; [B55 review](../reviews/full-clock-B55.md) |
+| C105 | Under C104, minimum-residual fitting gives canonical error product at most 16 L_*P_* max(rho_pi/lambda,rho_q,rho_s,rho_c) squared/beta squared, closing with record precision at fixed apparatus and preparation without initial clock calibration or exact receiver energy | R24 §3; compact fit, unit conversion and fixed/joint limit conditions; B55 review |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C104–C105: [B55](../references/batches/B55.md) is a zero-query inherited-source
+audit of B54/B50 inverse and smooth-flow methods. The full clock extension and
+canonical precision bound are model-derived; novelty unassessed. One Luna-low
+worker and coordinator written review completed, with no fresh passage claim.
 
 C102–C103: [B54](../references/batches/B54.md) rechecks the existing Freire
 perturbation precedent in three pages, with zero discovery queries. The

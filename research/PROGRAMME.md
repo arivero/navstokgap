@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 44, 2026-09-11.
+Version 45, 2026-09-12.
 
 ## Aim
 
@@ -105,8 +105,11 @@ equal-record receiver pairs across the full shell, persisting at positive
 coupling with canonical risk bounds (C100–C101). **R23/B54 complete:** final
 clock momentum restores uniform global recovery on a bounded receiver domain,
 without exact energy or local patch information; record-error products close
-with preparation fixed (C102–C103). **R24 is next:** hide initial offset,
-add final clock position, and test the full apparatus record.
+with preparation fixed (C102–C103). **R24/B55 complete:** full final clock
+phase removes initial clock calibration while preserving global recovery
+(C104–C105). The R19–R24 comparison isolates known incoming probe momenta as
+the shared preparation premise. **R25 is next:** make all incoming apparatus
+coordinates unknown and test exact compensation with full final records.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -130,7 +133,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R24 keeps main-track priority.
+cost of record aggregation is a benchmark; R25 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

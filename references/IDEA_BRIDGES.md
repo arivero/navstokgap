@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R24
+## Classical cut state, receiver memory and readout — R25
+
+**R24/B55 capsule:** [inherited inverse/flow methods](../docs/batches/B55/full-clock-source-companion.md)
+complete the clock-information comparison. The next issue is preparation:
+with all initial apparatus coordinates unknown, their free final map is an
+invertible shear. Borrow R17's contraction method to compensate receiver
+changes while retaining the full final apparatus record and exact shell.
+Quantify margins before attributing a positive risk to a physical action floor.
 
 **R23/B54 capsule:** [the inverse perturbation precedent](../docs/batches/B54/final-clock-source-companion.md)
 supports a strict global margin once the nonlinear leading map is controlled.

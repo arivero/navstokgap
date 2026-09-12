@@ -1150,4 +1150,52 @@ momentum. Joint record access remains supplied. R24 adds final clock
 position and hides initial offset. C102--C103:
 \href{final-clock-momentum-recovery.md}{proof and domain},
 \href{../references/batches/B54.md}{B54 audit}.
+
+\hypertarget{full-clock-records-replace-its-initial-preparation-data}{%
+\subsection{29. Full clock records replace its initial preparation
+data}\label{full-clock-records-replace-its-initial-preparation-data}}
+
+Add final clock position at the known time \(T\), and make its initial
+offset unknown. With the initial probe momenta still known at zero, all
+ten final apparatus coordinates recover receiver state, incoming probe
+positions and both initial clock coordinates on a bounded domain.
+
+Use clock units \(S_*,V_*\) and \(\theta=TV_*/S_*\). The leading
+dimensionless map and exact remainder are
+
+\[L(z,q,s,v)=(-A_{s,v}z,q,s+\theta v,v),\qquad
+\mathcal F_\lambda=L+R_\lambda,\quad\|R_\lambda\|_{C^1}\le C\lambda.\]
+
+The extra reaction term in physical clock position is exactly
+
+\[s(T)-s-vT=-\frac{\lambda K}{M_c}\sum_j
+\int_0^T(T-t)f'_j(s(t))x(t)q_j(t)\,dt.\]
+
+Let \(d\) be the leading output difference. Inverting the clock shear
+gives \(|\Delta v|\le d\) and \(|\Delta s|\le(1+\theta)d\). With uniform
+signal inverse margin \(\alpha\) and bounds \(D_s,D_v\) for its
+parameter derivatives applied to receiver states, the receiver
+difference obeys
+
+\[\alpha\|\Delta z\|\le[1+D_s(1+\theta)+D_v]d.\]
+
+These bounds give a global leading inverse margin
+
+\[\beta=\min\{(1+\theta)^{-1},
+\alpha/[1+D_s(1+\theta)+D_v]\}>0.\]
+
+The remainder reduces it by at most \(C\lambda\), giving margin
+\(\beta/2\) at small positive coupling. For final pointer and clock
+errors set \(\delta=\max(\rho_\pi/\lambda,\rho_q,\rho_s,\rho_c)\);
+compact fitting yields
+\(\epsilon_x\epsilon_P\le16L_*P_*\delta^2/\beta^2\).
+
+Sections 24--29 isolate the information trade: final clock phase
+replaces initial clock calibration, while exact incoming probe momenta
+remain shared preparation data. The
+\href{full-clock-phase-recovery.md}{comparison table} collects all six
+cases. R25 makes the entire incoming apparatus state unknown and tests
+compensation even with full final records. C104--C105:
+\href{full-clock-phase-recovery.md}{proof and domain},
+\href{../references/batches/B55.md}{B55 audit}.
 \end{document}

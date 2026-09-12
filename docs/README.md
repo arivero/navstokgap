@@ -25,6 +25,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B55](../references/batches/B55.md): full clock phase and consolidated record access;
+  [source companion](batches/B55/full-clock-source-companion.md).
 - [B54](../references/batches/B54.md): global recovery from final clock momentum;
   [source companion](batches/B54/final-clock-source-companion.md).
 - [B53](../references/batches/B53.md): full-shell clock-speed ambiguity;
