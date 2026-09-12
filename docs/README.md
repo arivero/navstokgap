@@ -25,6 +25,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B60](../references/batches/B60.md): two calibrations, local inverses and global branches;
+  [source companion](batches/B60/two-calibration-source-companion.md).
 - [B57](../references/batches/B57.md): exact two-energy receiver ambiguity;
   [source companion](batches/B57/energy-symmetry-source-companion.md).
 - [B55](../references/batches/B55.md): full clock phase and consolidated record access;

@@ -44,7 +44,9 @@ hides the entire receiver shell and saturates no-record minimax risks
 antipodal common-record pair (C108–C109). R27/B58 retains full-state ambiguity
 with a nonzero calibrated probe displacement. R28/B59 constructs a fixed smooth pulse design with an exact
 common-record curve varying in both x and P and a positive canonical product
-at weak coupling (C112–C113). R29 adds a second calibrated displacement.
+at weak coupling (C112–C113). **R29/B60 complete:** a second calibration
+gives local inverses at two globally ambiguous branches (C114–C115).
+R30 tests global recovery after adding a third calibrated displacement.
 The current lower scale remains preparation- and receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity

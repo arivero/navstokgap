@@ -62,7 +62,9 @@ handoff with the remaining dependency.
 | B58 | done | Direct Borsuk–Ulam theorem passage audit; mechanical chart and quantitative bound reviewed separately | One Luna low, sequential | R27; one query, two opens; novelty unassessed |
 | R28 | done | Fixed pulse design gives an exact common-record curve separated in both x and P under calibrated displacement and exact energies, C112–C113 | Coordinator + Luna-low B59 | [R28 handoff](handoffs/R28.md); preparation-dependent canonical product |
 | B59 | done | Bounded inherited-method audit with coordinator Freire pp. 1–3 check; scaled constraints and pulse construction reviewed separately | One Luna low, sequential | R28; novelty unassessed |
-| R29 | ready | Add q_2=0 calibration; test local inverse from the extra scaled row and whether global common-record pairs remain | Coordinator then bounded librarian | R28/B59; retain exact two energies and full final records |
+| R29 | done | Two calibrated probe positions give local recovery at two globally ambiguous branches and canonical risks C114–C115 | Coordinator + Luna-low B60 | [R29 handoff](handoffs/R29.md) |
+| B60 | done | Inherited B59 method audit, zero queries/retrievals; new kernel and branches reviewed separately | One Luna low, sequential | R29; exact matches and novelty unassessed |
+| R30 | ready | Add q_3=0, choose four independent leading residual rows and test uniform global recovery beyond disappearance of the current roots | Coordinator then bounded librarian | R29/B60; fixed domains, record conditioning and role of receiver energy |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -165,10 +167,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R29 from R28/B59: reveal q_2=0 as a second calibrated incoming
-displacement, keeping both exact energies and full final apparatus records.
-Test the extra scaled row against the canonical curve tangent and distinguish
-local inversion from global recovery. See [R28 handoff](handoffs/R28.md).
+Start R30 from R29/B60: reveal q_3=0 as a third calibrated incoming position.
+Select its divided row nonzero on the remaining kernel, then test a uniform
+global inverse on the admitted domain and record-error conditioning. Check
+whether exact receiver energy is still required. See [R29 handoff](handoffs/R29.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

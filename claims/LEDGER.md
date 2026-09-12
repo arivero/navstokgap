@@ -151,11 +151,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C112 | For a fixed smooth pulse design, nonzero q_1 calibration and exact receiver/apparatus energies admit an exact common-ten-record curve with both canonical derivatives bounded away from zero on a fixed weak-coupling rectangle | [R28 §§1–3](../notes/calibrated-canonical-ambiguity.md); scaled compensator constraints, pulse kernel and uniform implicit continuation; [B59 review](../reviews/calibrated-canonical-B59.md) |
 | C113 | Under C112, every deterministic estimator has canonical risk product at least delta squared times absolute v_x v_P divided by 4, uniformly for sufficiently weak positive coupling at fixed preparation | R28 §4; exact common-record endpoints and triangle inequality; action units, design/preparation/energy-dependent, no area or minimax equality |
 
+| C114 | A fixed smooth pulse design with q_1=c nonzero, q_2=0 and exact energies E,H_0 has two exact common-record branches tending to opposite receiver shell points; the augmented fourteen-coordinate map is locally invertible at each branch for fixed small positive coupling | [R29 §§1–4](../notes/two-calibration-branches.md); rank-three pulse rows, regular shell roots, compensator continuation and block elimination; [B60 review](../reviews/two-calibration-B60.md) |
+| C115 | The branches in C114 differ in both canonical coordinates; every global receiver estimator has an action-unit error-product lower bound tending to abs(z_bar_x z_bar_P)>0 as coupling decreases at fixed preparation and design | R29 §4; common-record endpoint bounds; B60 review; local inverse margins may depend on coupling, no area or exact minimax claim |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C114–C115: [B60](../references/batches/B60.md) audits inherited B59
+inverse/flow/contraction methods, with zero discovery or retrieval. The pulse
+kernel, two branches and canonical risks are model-derived; exact matches
+and novelty are unassessed. One Luna-low audit and coordinator proof review
+completed, with no fresh source-reading claim.
 
 C112–C113: [B59](../references/batches/B59.md) audits inherited smooth-flow,
 contraction and inverse methods, with coordinator checking Freire pp. 1–3.

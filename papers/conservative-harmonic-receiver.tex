@@ -1387,4 +1387,47 @@ on preparation, energy and pulse design. C112--C113:
 \href{calibrated-canonical-ambiguity.md}{proof and limits},
 \href{../references/batches/B59.md}{B59 audit}. R29 adds a second
 calibrated displacement and tests local versus global recovery.
+
+\hypertarget{a-second-calibration-leaves-two-locally-recoverable-branches}{%
+\subsection{34. A second calibration leaves two locally recoverable
+branches}\label{a-second-calibration-leaves-two-locally-recoverable-branches}}
+
+Add \(q_2=0\) while retaining \(q_1=c\ne0\), both exact initial energies
+and the ten final apparatus records. The new divided compensator
+residual has limit \(-(K/M_2)A_2(w-z_{\rm bar})\), where
+\(A_2=\int t f_2 x_w\). The three linear rows are now \(A_1,B_1,A_2\).
+
+Choose narrow positive pulses near \(\tau\) and \(2\tau\). Their
+limiting rows are \(x(\tau),\dot x(\tau),x(2\tau)\). On their kernel the
+state at \(\tau\) has form \((0,0,Y,Q)\), with
+\(Y=-Q\tau/(3\nu)+O(\tau^3)\), and its initial canonical components obey
+
+\[v_x=-\frac{gQ}{3\mu\nu}\tau^3+O(\tau^5),\qquad
+v_P=\frac{5gQ}{6\nu}\tau^2+O(\tau^4).\]
+
+Fix sufficiently small times and positive widths, preserving rank three
+and these nonzero components. The resulting kernel line meets the
+receiver energy shell at \(\pm z_{\rm bar}\). At both points the
+derivative rows \(dH_s,A_1,B_1,A_2\) are independent. The exact scaled
+residual equations therefore have two continued roots
+
+\[w_+(\lambda)=z_{\rm bar},\qquad
+w_-(\lambda)=-z_{\rm bar}+O(\lambda).\]
+
+The compensating apparatus preparations preserve both calibrations, both
+energies, one exact complete record and the positive box margins. At
+each fixed positive coupling, eliminating the apparatus-record
+derivative proves a local inverse of the augmented map around each root.
+It does not choose between them globally. Common-record endpoint
+inequalities give
+
+\[\epsilon_x\epsilon_P\ge
+\tfrac14|(w_+-w_-)_x(w_+-w_-)_P|
+\longrightarrow |(z_{\rm bar})_x(z_{\rm bar})_P|>0.\]
+
+This is a preparation-dependent action-risk lower bound, not an area or
+exact minimax value. R30 adds \(q_3=0\) and tests a uniform global
+inverse, including its record conditioning. C114--C115:
+\href{two-calibration-branches.md}{proof and domain},
+\href{../references/batches/B60.md}{B60 audit}.
 \end{document}

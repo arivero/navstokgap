@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 46, 2026-09-12.
+Version 47, 2026-09-12.
 
 ## Aim
 
@@ -121,8 +121,10 @@ sphere and the flow estimate give a positive full-state risk (C110–C111).
 **R28/B59 complete:** a fixed smooth pulse design gives an exact common-record
 curve separated in both x and P under the same calibration and energies.
 The canonical risk product stays positive at weak coupling with fixed
-preparation (C112–C113). **R29 is next:** add a second calibrated initial
-displacement and test local inversion separately from global uniqueness.
+preparation (C112–C113). **R29/B60 complete:** a second calibrated displacement
+leaves two exact common-record branches with local inverses at each and a
+positive global canonical risk bound (C114–C115). **R30 is next:** add a third
+calibrated displacement and test uniform global recovery.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -146,7 +148,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R29 keeps main-track priority.
+cost of record aggregation is a benchmark; R30 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

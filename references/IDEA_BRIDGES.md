@@ -4,7 +4,14 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R29
+## Classical cut state, receiver memory and readout — R30
+
+**R29/B60 capsule:** [inherited inverse and continuation methods](../docs/batches/B60/two-calibration-source-companion.md)
+separate local invertibility from two exact global roots. The three divided
+linear constraints leave a kernel line whose opposite shell points continue.
+R30 adds A_3 nonzero on that line; test a strict uniform four-row inverse
+margin for the exact scaled constraints, including variation of the final
+record and the full preparation domain.
 
 **R28/B59 capsule:** [scaled constraints and inverse methods](../docs/batches/B59/calibrated-canonical-source-companion.md)
 turn the exact apparatus compensator into two regular receiver constraints
