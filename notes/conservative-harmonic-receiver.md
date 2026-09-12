@@ -1419,3 +1419,37 @@ The selected family proves simultaneous feasibility; the action-unit constants
 remain design- and preparation-dependent. C121:
 [full polynomial and pulse proof](single-calibration-fibres.md),
 [B64 audit](../references/batches/B64.md).
+
+## 39. Correlated errors suppress the canonical fibre
+
+For the correlated report $C-C_*=\alpha L e_y$, $|\alpha|\le\epsilon$,
+the exact reference-record curve has a hidden-coordinate limit:
+
+$$w_\lambda(s)=T_\lambda^{-1}(s L e_y),\qquad
+w_0(s)=s e_y,\qquad |s|\le s_\epsilon=
+\min(s_0,\epsilon/\lambda).$$
+
+Here the pulses, box, scalar error normalization and local interval are fixed.
+Smooth mixed derivatives and $w_\lambda(0)=0$ give
+$\|w_\lambda(s)-s e_y\|\le K_1\lambda|s|$. The optimal scalar errors
+conditional on this compact common-record segment consequently satisfy
+
+$$R_x^{\rm loc}R_P^{\rm loc}\le
+L_*P_*K_1^2\min(\lambda s_0,\epsilon)^2.$$
+
+Hidden-state ambiguity persists at fixed positive tolerance, while these
+canonical ranges close with coupling. This conditional estimate concerns one
+local fibre, rather than a global estimator across all final records.
+
+To identify the first surviving term, retain the moving coupled reference in
+$N(\lambda,w)=C(\eta_\lambda(w,a_\lambda))-C_*$ and put
+$V(w)=\tfrac12\partial_\lambda^2N(0,w)$. The inverse expansion is
+
+$$w_\lambda(s)=s e_y-\lambda L^{-1}V(s e_y)
++O(\lambda^2|s|).$$
+
+The next mechanical calculation is therefore the two canonical entries of
+$-L^{-1}D V(0)e_y$. Nonzero entries yield matching conditional lower order;
+vanishing entries call for higher terms or an exact symmetry. C122:
+[derivation and units](correlated-calibration-response.md),
+[B65 audit](../references/batches/B65.md).

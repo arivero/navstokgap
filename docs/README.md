@@ -164,3 +164,4 @@ root with `sha256sum -c docs/SHA256SUMS`.
 
 - [B52: clock-position local inverse audit](batches/B52/clock-position-source-companion.md): quantitative inverse-method precedent and corrected passage coverage.
 - [B63: single-calibration fibres](batches/B63/single-calibration-source-companion.md): inverse neighbourhood and conditional canonical-risk method audit.
+- [B65: correlated calibration response](batches/B65/correlated-response-source-companion.md): smooth inverse expansion and conditional-risk scope.

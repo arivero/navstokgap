@@ -71,7 +71,8 @@ handoff with the remaining dependency.
 | R32 | done | Exact single-tolerance curves and explicit fixed early-pulse selection with all canonical inverse entries nonzero, C120–C121 | Coordinator + sequential Luna-low B63/B64 | [R32 handoff](handoffs/R32.md); fixed box for the selected design |
 | B63 | done | Freire inverse-neighbourhood method audit and inherited scalar information radius | One Luna low, sequential | R32 stage 1; nonvanishing subfamily now supplied by C121 |
 | B64 | done | Hermite interpolation method audit; coordinator finite-width estimate and proof/source review | One Luna low, sequential | R32/C121 |
-| R33 | ready | Correlated calibration line r=L e_y has zero leading canonical response; test exact/higher-order curve at fixed pulse design | Coordinator then bounded librarian | R32; preserve fixed units, box and nonlinear compensator |
+| R33 | in progress | Stage 1 proves conditional canonical suppression and identifies second-coupling coefficient (C122); next evaluate that mechanical coefficient | Coordinator + completed Luna-low B65 | [R33 handoff](handoffs/R33.md); local-fibre versus global risks |
+| B65 | done | Smooth inverse/Taylor method audit; coordinator corrected matrix-inversion page anchor | One Luna low, sequential | R33 stage 1; coefficient remains open |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -174,12 +175,12 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R33: retain R32's selected fixed design and replace the coordinate
-calibration line by r=L e_y (rescaled in fixed output units if desired).
-The exact family T_lambda^{-1}(s r) has zero leading canonical tangent.
-Compute the first nonzero nonlinear/coupling response, or prove exact
-canonical constancy; a vanishing leading entry alone is not recovery.
-See [R32 handoff](handoffs/R32.md).
+Continue R33: evaluate V(w)=partial_lambda^2 N(0,w)/2 using the exact
+compensator and moving coupled reference. Test both components of
+-Pi L^{-1} D V(0)e_y. Stage 1 already proves local canonical suppression;
+nonzero response or exact constancy still needs the mechanical variational
+calculation. Keep local conditional radii distinct from full-class minimax
+risk. See [R33 handoff](handoffs/R33.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

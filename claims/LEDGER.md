@@ -164,11 +164,18 @@ assumptions and supporting artifact. IDs remain stable through revision.
 
 | C121 | An explicit R30 pulse subfamily with first centres tau, 2 tau, 3 tau and sufficiently small fixed positive widths has all eight canonical entries of L inverse nonzero; hence C120 gives matched single-tolerance canonical risk-product order for every j | [R32 §4](../notes/single-calibration-fibres.md); scaled ODE, four cubic cardinal polynomials, normalized width estimate and inverse margins; [B64 review](../reviews/pulse-column-B64.md); existence within the design class |
 
+| C122 | For the fixed correlated calibration line r=L e_y at R32's exact reference, the local common-record curve has w_lambda(s)=s e_y-lambda L^{-1}V(s e_y)+O(lambda squared abs(s)), with V=partial_lambda squared N/2; its conditional canonical risk product is at most a fixed action constant times min(lambda s_0,epsilon) squared | [R33 stage 1](../notes/correlated-calibration-response.md); smooth inverse and anchored mixed derivatives; [B65 review](../reviews/correlated-response-B65.md); local-fibre upper bound, coefficient nonvanishing and global risk open |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C122: [B65](../references/batches/B65.md) matches smooth inverse and Taylor
+methods, with one Luna-low audit and coordinator source/proof review. The
+coordinator corrected a page anchor. Exact model matches and novelty remain
+unassessed; the higher coupling coefficient is an open model calculation.
 
 C121: [B64](../references/batches/B64.md) matches standard polynomial
 interpolation and confluence methods in NIST DLMF §3.3. The pulse selection

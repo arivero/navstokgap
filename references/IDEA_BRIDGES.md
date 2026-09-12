@@ -16,6 +16,13 @@ acceptance. The note's proposed H10/H11 split does not replace the live tasks.
 
 ## Classical cut state, receiver memory and readout — R33
 
+**R33 stage 1/B65 capsule:** [smooth inverse response](../docs/batches/B65/correlated-response-source-companion.md)
+-> anchored Taylor expansion along a hidden-coordinate calibration line
+-> conditional canonical suppression, with coefficient -Pi L^{-1}D V(0)e_y
+-> compute the second coupling derivative of the full compensated map,
+including the moving reference. Scalar information radii here are conditional
+on one local curve, not global estimator guarantees.
+
 **R32 stage 2/B64 capsule:** [DLMF interpolation and confluence](../docs/batches/B64/pulse-column-source-companion.md)
 -> early-time cubic Hermite map -> all four inverse columns move x and P
 for one fixed admissible pulse design -> row normalization and finite-width

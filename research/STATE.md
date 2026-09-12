@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R32 is complete; R33 is ready.
+H10 changed no mathematical claim status. R32 is complete; R33 is in progress.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -23,7 +23,7 @@ Bibliography addition, 2026-09-12: the user-supplied
 [nota unificada](../references/nota_unificada.md) is preserved in full with a
 [separate mathematical selection](../references/nota_unificada-seleccion-matematica.md).
 See the [incorporation handoff](handoffs/nota-unificada-bibliography.md).
-The supplied source statuses are inherited reports; R33 is the next task after R32.
+The supplied source statuses are inherited reports; R33 remains the active task.
 
 ## Current restart decision
 
@@ -206,6 +206,14 @@ preserves the eight entry margins. One sequential Luna-low audit and
 coordinator proof/source review are complete. R33 tests correlated calibration
 directions with zero leading canonical response.
 Read [R32 handoff](handoffs/R32.md).
+
+**R33 stage 1/B65 complete:** correlated errors along L e_y leave finite
+hidden-state ambiguity while the local canonical ranges are O(lambda) at fixed
+tolerance (C122). The conditional product is O(min(lambda s_0,epsilon)^2).
+The next coefficient is -Pi L^{-1}D V(0)e_y, where V is half the second
+coupling derivative of the exact compensated calibration map. Evaluate it
+mechanically next; global risks remain a separate question.
+Read [R33 handoff](handoffs/R33.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

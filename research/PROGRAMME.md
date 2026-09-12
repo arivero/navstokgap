@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 48, 2026-09-12.
+Version 49, 2026-09-12.
 
 ## Aim
 
@@ -136,7 +136,10 @@ receiver curve with leading direction L^{-1}e_j (C120). An explicit fixed
 early-pulse subfamily makes both canonical entries nonzero for all four
 columns (C121), giving matched single-tolerance risk order on a zero-area
 curve. R33 tests correlated calibration directions whose leading canonical
-entries vanish, retaining the exact nonlinear map.
+entries vanish, retaining the exact nonlinear map. Its first stage proves
+local canonical risk product O(min(lambda s_0,epsilon)^2) and identifies the
+second coupling derivative that decides the residual response (C122). This
+is a conditional-fibre estimate; full-class minimax recovery is separate.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
