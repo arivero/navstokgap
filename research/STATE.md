@@ -19,6 +19,12 @@ Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant
 is a user-requested alternate-history story. It leaves research priorities and
 claim status unchanged; see the [editorial handoff](handoffs/zenos-constant-2026-09-09.md).
 
+Bibliography addition, 2026-09-12: the user-supplied
+[nota unificada](../references/nota_unificada.md) is preserved in full with a
+[separate mathematical selection](../references/nota_unificada-seleccion-matematica.md).
+See the [incorporation handoff](handoffs/nota-unificada-bibliography.md).
+The supplied source statuses are inherited reports; R31 remains next.
+
 ## Current restart decision
 
 **R06/B37 complete:** [the autonomous apparatus](../notes/autonomous-finite-readout.md)

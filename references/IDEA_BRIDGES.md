@@ -4,6 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
+## User-supplied historical bibliography: mathematical reading selection
+
+The [complete Spanish note](nota_unificada.md) is preserved unchanged; the
+[mathematical selection](nota_unificada-seleccion-matematica.md) ranks its
+references by concrete proof questions and records primary-reading gaps.
+E57 suggests K01's compatibility comparison; E31 suggests apparatus-calibration
+questions for R31; E20 supplies a facsimile route for the existing H11 task.
+These are supplied-report leads, with no new source verification or claim
+acceptance. The note's proposed H10/H11 split does not replace the live tasks.
+
 ## Classical cut state, receiver memory and readout — R31
 
 **R30/B61 capsule:** [inverse margins and smooth flow](../docs/batches/B61/three-calibration-source-companion.md)
