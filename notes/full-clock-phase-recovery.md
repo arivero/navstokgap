@@ -102,15 +102,15 @@ as well as the other three errors. These are sufficient upper bounds.
 | R22 | Clock position, probe momenta, energy; full shell | Eight probe coordinates | Distinct-speed exact ambiguity |
 | R23 | Clock position and probe momenta | Eight probe coordinates plus clock momentum | Whole bounded receiver domain |
 | R24 | Probe momenta | All ten apparatus coordinates at known T | Whole bounded receiver domain |
+| R25 | Receiver energy; full unknown apparatus box | All ten apparatus coordinates at known T | Exact shell ambiguity; whole-shell saturation at sufficiently weak coupling |
 
-Thus the physical final clock phase replaces its initial calibration. The
-common remaining preparation premise is exact incoming probe momenta. Joint
+Thus the physical final clock phase replaces its initial calibration. Across
+R19–R24, exact incoming probe momenta remain a common preparation premise. Joint
 final record access is also supplied; a second readout apparatus has not been
 implemented by adding an output coordinate to the mathematical map.
 
-Next R25: let every initial apparatus coordinate, including probe momenta,
-be unknown within a fixed positive box. Retain full final apparatus records
-and a receiver energy shell. Test whether the free apparatus flow's invertible
-initial-to-final derivative permits exact compensation of receiver changes
-with interior preparation margins. This directly targets the remaining
-preparation premise rather than adding another clock coordinate.
+[R25](full-apparatus-preparation-ambiguity.md) completes this preparation test:
+the invertible free apparatus shear permits exact compensation with b/2
+interior margins. At fixed positive width, sufficiently weak coupling hides
+the entire receiver shell behind one full final record. R26 adds exact initial
+apparatus energy to test which compensating states remain admissible.

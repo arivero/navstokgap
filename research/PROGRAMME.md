@@ -108,8 +108,12 @@ without exact energy or local patch information; record-error products close
 with preparation fixed (C102–C103). **R24/B55 complete:** full final clock
 phase removes initial clock calibration while preserving global recovery
 (C104–C105). The R19–R24 comparison isolates known incoming probe momenta as
-the shared preparation premise. **R25 is next:** make all incoming apparatus
-coordinates unknown and test exact compensation with full final records.
+the shared preparation premise. **R25/B56 complete:** a full unknown apparatus
+box permits exact compensation of all ten final records with interior margins
+(C106). At fixed box width and sufficiently weak coupling, the entire receiver
+shell has one record and coordinate minimax risks equal their no-record values
+(C107). **R26 is next:** supply exact initial apparatus energy and test its
+scalar constraint along the compensating family.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -133,7 +137,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R25 keeps main-track priority.
+cost of record aggregation is a benchmark; R26 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

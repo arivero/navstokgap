@@ -4,7 +4,16 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R25
+## Classical cut state, receiver memory and readout — R26
+
+**R25/B56 capsule:** [contraction and smooth-flow methods](../docs/batches/B56/full-apparatus-source-companion.md)
+give a free-shear preconditioned apparatus compensator. Its displacement is
+O(lambda times receiver displacement), with an explicit b/2 box margin.
+At fixed width, sufficiently weak coupling hides the whole energy shell even
+with all final records. R26 adds exact initial apparatus energy: restrict
+H_app(eta(w)) to its nominal level on the receiver shell and test an actual
+family or inverse bound. The extra conserved scalar must be imposed on the
+compensator, not inferred to restore recovery from conservation alone.
 
 **R24/B55 capsule:** [inherited inverse/flow methods](../docs/batches/B55/full-clock-source-companion.md)
 complete the clock-information comparison. The next issue is preparation:

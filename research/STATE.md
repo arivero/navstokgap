@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-12. Current milestones: R24/B55 and H10 complete.
+Updated: 2026-09-12. Current milestones: R25/B56 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R24 is now complete; R25 is next.
+H10 changed no mathematical claim status. R25 is now complete; R26 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -144,10 +144,18 @@ inverse and canonical precision closure hold on the bounded receiver domain
 (C104–C105). The note consolidates R19–R24 by preparation and record access.
 One Luna-low inherited-source audit and coordinator proof review completed.
 
-Start **R25**: make all initial apparatus coordinates unknown in a fixed
-positive box, retain full final apparatus records and receiver shell energy,
-and test exact compensation via the free apparatus-flow derivative. Read
-[R24 handoff](handoffs/R24.md).
+**R25/B56 complete:** [full preparation ambiguity](../notes/full-apparatus-preparation-ambiguity.md)
+compensates receiver changes in all ten final apparatus coordinates with a
+b/2 interior preparation margin (C106). At fixed positive box width and
+sufficiently weak coupling, one record hides the entire receiver energy shell;
+the coordinate minimax risks equal their no-record values exactly (C107).
+One sequential Luna-low inherited-source audit and coordinator written review
+completed; novelty is unassessed.
+
+Start **R26**: add exact initial apparatus energy to the full-record task and
+test its scalar constraint along R25's unique compensator. Establish an actual
+shell family with preparation margins or a recovery bound. Read
+[R25 handoff](handoffs/R25.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

@@ -1051,3 +1051,43 @@ preparation data. The [comparison table](full-clock-phase-recovery.md)
 collects all six cases. R25 makes the entire incoming apparatus state unknown
 and tests compensation even with full final records. C104–C105:
 [proof and domain](full-clock-phase-recovery.md), [B55 audit](../references/batches/B55.md).
+
+## 30. Unknown full apparatus preparation hides the receiver shell
+
+With all incoming apparatus coordinates unknown in a fixed positive box,
+all ten exact final coordinates admit receiver-shell ambiguity. At sufficiently
+weak coupling, the worst-case coordinate risks equal their no-record values.
+
+Let $\eta$ denote the ten initial apparatus coordinates in fixed component
+units, centred at $\eta_*$. The unscaled final-record map $G_\lambda$ has free
+limit $S\eta$, where $S$ sends each apparatus pair $(q,p)$ of mass $M$ to
+$(q+Tp/M,p)$. Thus $F_\lambda=S^{-1}G_\lambda$ satisfies uniformly on the
+convex receiver energy ball and a small fixed apparatus box
+
+$$\|D_\eta F_\lambda-I\|\le1/2,\qquad
+\|D_zF_\lambda\|\le L\lambda.$$
+
+For a nominal shell point $z_*$, the map
+$\eta\mapsto\eta-F_\lambda(w,\eta)+F_\lambda(z_*,\eta_*)$
+contracts the radius-$b/2$ preparation ball whenever
+$\|w-z_*\|\le b/(4L\lambda)$. Its fixed point gives
+
+$$G_\lambda(w,\eta(w))=G_\lambda(z_*,\eta_*),\qquad
+\|\eta(w)-\eta_*\|\le2L\lambda\|w-z_*\|\le b/2.$$
+
+At fixed $b>0$, take $\lambda\le\min(\lambda_0,b/(4LD))$, where
+$D=\max_{H_s(w)=E}\|w-z_*\|$. One full record then hides the whole shell.
+Writing $k_x=a-g^2/d>0$, its canonical projection is the ellipse
+$k_xx^2+P^2/\mu\le2E$. Common-record endpoints force both semiaxis errors;
+the constant estimator $(0,0)$ attains them over the entire admitted class:
+
+$$R_x=\sqrt{2E/k_x},\qquad R_P=\sqrt{2\mu E},\qquad
+\inf_{(\widehat x,\widehat P)}\epsilon_x\epsilon_P
+=2E\sqrt{\mu/k_x}.$$
+
+The projected compatible area is $\pi$ times this action-valued product.
+The fixed-width weak-coupling condition supplies the admissibility margin;
+receiver energy and stiffness supply the saturated value. Exact initial
+apparatus energy is not supplied. R26 imposes that extra scalar constraint on
+$\eta(w)$. C106–C107: [proof and limits](full-apparatus-preparation-ambiguity.md),
+[B56 audit](../references/batches/B56.md).

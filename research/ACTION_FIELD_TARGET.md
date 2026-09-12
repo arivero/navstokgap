@@ -37,8 +37,12 @@ final record refinement closes the action-risk product on a fixed shell patch
 persist at positive coupling (C100–C101). **R23/B54 complete:** final clock
 momentum restores uniform global recovery without exact initial energy
 (C102–C103). **R24/B55 complete:** full clock phase records remove initial
-clock calibration (C104–C105). R25 tests the remaining exact incoming-momentum
-premise by admitting a full unknown apparatus preparation box.
+clock calibration (C104–C105). **R25/B56 complete:** a full unknown apparatus
+box permits exact complete-record compensation; sufficiently weak coupling
+hides the entire receiver shell and saturates no-record minimax risks
+(C106–C107). R26 tests the effect of exact initial apparatus energy on this
+compensating family. The current lower scale remains preparation- and
+receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity
 after incoming momenta are revealed (C092–C093). **R19/B50 complete:** known
