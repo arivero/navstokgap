@@ -145,11 +145,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C108 | A backward trajectory from zero terminal probe phase, with terminal total energy E+H_0 and scalar amplitude adjustment, gives exact initial receiver energy E and apparatus energy H_0 with O(lambda) apparatus displacement and b/2 preparation margin | [R26 §§1–2](../notes/energy-constrained-apparatus-ambiguity.md); smooth inverse flow, derivative 2E, exact conservation; [B57 review](../reviews/energy-symmetry-B57.md) |
 | C109 | Simultaneous receiver/probe sign reversal gives an exact antipodal initial receiver pair with identical full final apparatus records and both initial energies; the canonical risk-product lower bound tends to E sqrt(mu/(a-g squared/d)) as coupling vanishes at fixed positive preparation width | R26 §§3–4; local equation symmetry, zero terminal probes and two-point risk; B57 review; lower-bound limit, not exact minimax or area |
 
+| C110 | With one nonzero calibrated initial probe displacement and exact receiver/apparatus energies, an eleven-coordinate preparation chart and Borsuk–Ulam give distinct initial states with identical ten final apparatus coordinates and positive box margins | [R27 §§1–2](../notes/calibrated-displacement-ambiguity.md); exact energy charts, compact S^10 and continuous record map; [B58 review](../reviews/calibrated-displacement-B58.md) |
+| C111 | Under C110, the inverse-shear flow estimate forces receiver separation at least 2r/sqrt(1+4L squared lambda squared) and full-state minimax error at least r/sqrt(1+4L squared lambda squared), in fixed Euclidean component units | R27 §3; ambient convex-domain derivative bounds and parameter projection; B58 review; dimensionless full-state bound, canonical product unresolved |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C110–C111: [B58](../references/batches/B58.md) directly verifies the established
+Borsuk–Ulam theorem in Arora's Princeton Lecture 13, Theorem 1, PDF p. 1.
+The constrained chart and quantitative receiver separation are model-derived
+consequences. One sequential Luna-low audit and coordinator source/proof review
+completed; exact mechanical prior-art matches and novelty remain unassessed.
 
 C108–C109: [B57](../references/batches/B57.md) audits inherited smooth-flow
 and implicit/contraction methods, with zero queries or retrievals. The

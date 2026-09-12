@@ -1132,3 +1132,48 @@ area. R27 tests a known nonzero initial probe displacement; breaking this
 involution must be distinguished from proving global recovery. C108–C109:
 [proof and domain](energy-constrained-apparatus-ambiguity.md),
 [B57 audit](../references/batches/B57.md).
+
+## 32. One calibrated displacement leaves full receiver ambiguity
+
+Fix a known nonzero incoming probe displacement $q_1=c$, with
+$|c|/L_1<b/4$, while retaining exact initial energies $E,H_0$ and all ten final
+apparatus coordinates. Full receiver recovery still fails for sufficiently
+small positive coupling. The new proof uses a preparation chart rather than
+the sign involution, which would send $c$ to $-c$.
+
+Before the pulses, solve the apparatus energy for positive clock momentum,
+
+$$p_s=\sqrt{2M_c\left(H_0-\sum_{j=1}^4\frac{\pi_j^2}{2M_j}\right)}.$$
+
+Eight independent apparatus coordinates remain: $q_2,q_3,q_4$, the four probe
+momenta and $s$. On the receiver shell use $x,P,Q$ near zero and solve
+
+$$y=\frac gd x+
+\sqrt{\frac{2E-k_xx^2-P^2/\mu-Q^2/\nu}{d}},\qquad k_x=a-g^2/d>0.$$
+
+In fixed component units this gives an injective eleven-coordinate chart
+$\Psi$ containing a closed parameter ball of radius $r>0$, independent of
+coupling, with strict radicands and half-box preparation margins. Its boundary
+is $S^{10}$. The continuous map taking each chart point to its ten final
+apparatus coordinates has an equal-image antipodal pair by Borsuk–Ulam.
+Both preparations have exactly the supplied energies and calibration.
+
+For the inverse-shear record $F_\lambda$, the uniform ambient bounds give
+
+$$\|D_\eta F_\lambda-I\|\le\tfrac12,\qquad
+\|D_zF_\lambda\|\le L\lambda.$$
+
+Hence equal records imply
+$\|\eta_+-\eta_-\|_2\le2L\lambda\|z_+-z_-\|_2$.
+The eleven chart coordinates are a projection of the full initial state;
+the antipodal parameter distance is $2r$. Therefore the full receiver-state
+minimax risk in these fixed Euclidean component units obeys
+
+$$R_z\ge\frac12\|z_+-z_-\|_2
+\ge\frac{r}{\sqrt{1+4L^2\lambda^2}}>0.$$
+
+This is a dimensionless full-state error bound. The difference may lie in
+internal coordinates; R28 tests separation in both $x$ and $P$ and a possible
+canonical error product. C110–C111:
+[proof and margins](calibrated-displacement-ambiguity.md),
+[B58 theorem audit](../references/batches/B58.md).
