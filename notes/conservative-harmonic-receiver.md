@@ -1091,3 +1091,44 @@ receiver energy and stiffness supply the saturated value. Exact initial
 apparatus energy is not supplied. R26 imposes that extra scalar constraint on
 $\eta(w)$. C106–C107: [proof and limits](full-apparatus-preparation-ambiguity.md),
 [B56 audit](../references/batches/B56.md).
+
+## 31. Exact initial energies leave an antipodal ambiguity
+
+Supply the initial apparatus energy $H_0=M_cv_0^2/2$ as well as receiver
+energy $E$. An exact common-record receiver pair still exists. Choose a
+receiver shell point $z_*$ and prescribe terminal zero probe phase, clock
+position $s_0+v_0T$, and
+
+$$z(T)=r\Phi_Tz_*,\qquad
+p_s(T)=\sqrt{2M_c[H_0+E(1-r^2)]}.$$
+
+Terminal total energy is exactly $E+H_0$. Backward Hamiltonian flow gives
+initial receiver state $Z_\lambda(r)$; at zero coupling its energy is $r^2E$.
+The derivative $2E$ at $r=1$ supplies an implicit adjustment with
+$H_s(Z_\lambda(r_\lambda))=E$. Endpoint pulses vanish, so conservation gives
+initial apparatus energy $H_0$ exactly. Terminal zero probes imply
+
+$$r_\lambda=1+O(\lambda^2),\qquad Z_\lambda=z_*+O(\lambda^2),$$
+
+while the full incoming apparatus displacement is $O(\lambda)$ and fits
+inside half the fixed preparation box for sufficiently small coupling.
+
+The simultaneous sign involution
+$(z,q,\pi,s,p_s)\mapsto(-z,-q,-\pi,s,p_s)$ preserves the equations in the
+linear cutoff regions. It leaves the clock and both quadratic energies
+unchanged. Because terminal probes vanish, both preparations have identical
+complete final apparatus records and exactly opposite initial receiver states.
+
+Put $k_x=a-g^2/d$ and choose
+$z_*=(\sqrt{E/k_x},\sqrt{\mu E},(g/d)\sqrt{E/k_x},0)$.
+Common-record endpoints then give
+
+$$\epsilon_x\epsilon_P\ge |(Z_\lambda)_x(Z_\lambda)_P|
+\longrightarrow E\sqrt{\mu/k_x}>0.$$
+
+The limit concerns the displayed lower bound, with action units. It is
+energy-dependent and supplies neither exact minimax saturation nor positive
+area. R27 tests a known nonzero initial probe displacement; breaking this
+involution must be distinguished from proving global recovery. C108–C109:
+[proof and domain](energy-constrained-apparatus-ambiguity.md),
+[B57 audit](../references/batches/B57.md).

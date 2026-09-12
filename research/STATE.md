@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-12. Current milestones: R25/B56 and H10 complete.
+Updated: 2026-09-12. Current milestones: R26/B57 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R25 is now complete; R26 is next.
+H10 changed no mathematical claim status. R26 is now complete; R27 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -152,10 +152,16 @@ the coordinate minimax risks equal their no-record values exactly (C107).
 One sequential Luna-low inherited-source audit and coordinator written review
 completed; novelty is unassessed.
 
-Start **R26**: add exact initial apparatus energy to the full-record task and
-test its scalar constraint along R25's unique compensator. Establish an actual
-shell family with preparation margins or a recovery bound. Read
-[R25 handoff](handoffs/R25.md).
+**R26/B57 complete:** [energy-constrained ambiguity](../notes/energy-constrained-apparatus-ambiguity.md)
+constructs an antipodal receiver pair with the same full final apparatus
+record and exact initial energies E,H_0. Backward flow and a scalar adjustment
+preserve box margins; sign symmetry preserves the record. C108–C109 give a
+positive energy-dependent risk lower bound. One inherited-source Luna-low
+audit and coordinator proof review completed.
+
+Start **R27**: test a known nonzero incoming probe displacement, keeping exact
+initial energies and full final records. Distinguish breaking this sign pair
+from global recovery. Read [R26 handoff](handoffs/R26.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

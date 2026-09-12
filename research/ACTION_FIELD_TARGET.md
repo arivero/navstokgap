@@ -40,8 +40,9 @@ momentum restores uniform global recovery without exact initial energy
 clock calibration (C104–C105). **R25/B56 complete:** a full unknown apparatus
 box permits exact complete-record compensation; sufficiently weak coupling
 hides the entire receiver shell and saturates no-record minimax risks
-(C106–C107). R26 tests the effect of exact initial apparatus energy on this
-compensating family. The current lower scale remains preparation- and
+(C106–C107). **R26/B57 complete:** exact initial apparatus energy retains an
+antipodal common-record pair (C108–C109). R27 tests a nonzero calibrated probe
+displacement. The current lower scale remains preparation- and
 receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity

@@ -142,11 +142,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C106 | With every initial apparatus coordinate unknown in a full positive box, the inverse free shear gives exact compensation of all ten final records for receiver changes of norm at most b/(4 L lambda), with b/2 preparation margin; an exact energy-shell chart gives positive coordinate risks and projected area | [R25 §§1–2](../notes/full-apparatus-preparation-ambiguity.md); compact smooth-flow derivatives, self-mapping contraction, canonical shell chart; [B56 review](../reviews/full-apparatus-B56.md) |
 | C107 | Under C106, if lambda<=min(lambda_0,b/(4 L D)), one full apparatus record is compatible with the entire receiver shell; coordinate minimax risks are sqrt(2E/k_x) and sqrt(2mu E), the optimal error product is 2E sqrt(mu/k_x), and projected compatible area is pi times that product | R25 §3; k_x=a-g^2/d>0, exact shell ellipse, endpoint lower bounds and constant estimator attaining both; B56 review; fixed positive width, no known exact apparatus energy |
 
+| C108 | A backward trajectory from zero terminal probe phase, with terminal total energy E+H_0 and scalar amplitude adjustment, gives exact initial receiver energy E and apparatus energy H_0 with O(lambda) apparatus displacement and b/2 preparation margin | [R26 §§1–2](../notes/energy-constrained-apparatus-ambiguity.md); smooth inverse flow, derivative 2E, exact conservation; [B57 review](../reviews/energy-symmetry-B57.md) |
+| C109 | Simultaneous receiver/probe sign reversal gives an exact antipodal initial receiver pair with identical full final apparatus records and both initial energies; the canonical risk-product lower bound tends to E sqrt(mu/(a-g squared/d)) as coupling vanishes at fixed positive preparation width | R26 §§3–4; local equation symmetry, zero terminal probes and two-point risk; B57 review; lower-bound limit, not exact minimax or area |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C108–C109: [B57](../references/batches/B57.md) audits inherited smooth-flow
+and implicit/contraction methods, with zero queries or retrievals. The
+backward terminal construction, two-energy sign pair and canonical risks are
+model-derived. One Luna-low audit and coordinator written review completed;
+exact prior-art matches and novelty remain unassessed.
 
 C106–C107: [B56](../references/batches/B56.md) audits inherited B48/B55
 contraction, inverse and smooth-flow methods with zero queries or retrievals.

@@ -56,7 +56,9 @@ handoff with the remaining dependency.
 | B55 | done | Inherited B54/B50 source-to-claim audit, zero queries/retrievals; coordinator proof and coverage review | One Luna low, sequential | R24; model-derived extension, novelty unassessed |
 | R25 | done | Unknown full incoming apparatus box permits exact full-record compensation and weak-coupling whole-shell minimax saturation, C106–C107 | Coordinator + Luna-low B56 | [R25 handoff](handoffs/R25.md); b/2 preparation margin |
 | B56 | done | Inherited B48/B55 contraction and flow audit, zero queries/retrievals; coordinator proof and coverage review | One Luna low, sequential | R25; model-derived consequences, novelty unassessed |
-| R26 | ready | Add exact initial apparatus energy to full final records; test its level set along R25's compensator on the receiver shell | Coordinator then bounded librarian | R25/B56; exact admissible family or recovery bound, quantified margins |
+| R26 | done | Exact receiver/apparatus energies retain an antipodal common-record pair with preparation margins and canonical risks C108–C109 | Coordinator + Luna-low B57 | [R26 handoff](handoffs/R26.md) |
+| B57 | done | Inherited-source smooth-flow/implicit-method audit, zero retrievals or queries; symmetry and energy proof reviewed separately | One Luna low, sequential | R26; exact matches and novelty unassessed |
+| R27 | ready | Test a known nonzero incoming probe displacement with both initial energies fixed and full final apparatus records | Coordinator then bounded librarian | R26/B57; nonempty constrained preparation and actual pairs versus broken involution |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -159,10 +161,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R26 from R25/B56: add exact initial apparatus energy and test the scalar
-constraint along the complete-record compensator. Retain exact receiver shell
-energy, known T and fixed positive preparation margins. Prove an actual
-common-record family or recovery bound. See [R25 handoff](handoffs/R25.md).
+Start R27 from R26/B57: fix a nonzero incoming probe displacement while
+retaining exact initial energies and full final records. Establish the
+admissible preparation intersection and test actual ambiguity or recovery;
+loss of sign symmetry alone settles neither. See [R26 handoff](handoffs/R26.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

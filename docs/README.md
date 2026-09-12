@@ -25,6 +25,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [B57](../references/batches/B57.md): exact two-energy receiver ambiguity;
+  [source companion](batches/B57/energy-symmetry-source-companion.md).
 - [B55](../references/batches/B55.md): full clock phase and consolidated record access;
   [source companion](batches/B55/full-clock-source-companion.md).
 - [B54](../references/batches/B54.md): global recovery from final clock momentum;

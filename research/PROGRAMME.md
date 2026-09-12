@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 45, 2026-09-12.
+Version 46, 2026-09-12.
 
 ## Aim
 
@@ -112,8 +112,11 @@ the shared preparation premise. **R25/B56 complete:** a full unknown apparatus
 box permits exact compensation of all ten final records with interior margins
 (C106). At fixed box width and sufficiently weak coupling, the entire receiver
 shell has one record and coordinate minimax risks equal their no-record values
-(C107). **R26 is next:** supply exact initial apparatus energy and test its
-scalar constraint along the compensating family.
+(C107). **R26/B57 complete:** exact initial apparatus energy still permits an
+antipodal receiver pair with identical complete records; a backward terminal
+construction preserves both energies and preparation margins (C108–C109).
+**R27 is next:** add a nonzero calibrated probe displacement and test which
+part of the symmetry-based ambiguity survives.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -137,7 +140,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R26 keeps main-track priority.
+cost of record aggregation is a benchmark; R27 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection
