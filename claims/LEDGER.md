@@ -164,7 +164,9 @@ assumptions and supporting artifact. IDs remain stable through revision.
 
 | C121 | An explicit R30 pulse subfamily with first centres tau, 2 tau, 3 tau and sufficiently small fixed positive widths has all eight canonical entries of L inverse nonzero; hence C120 gives matched single-tolerance canonical risk-product order for every j | [R32 §4](../notes/single-calibration-fibres.md); scaled ODE, four cubic cardinal polynomials, normalized width estimate and inverse margins; [B64 review](../reviews/pulse-column-B64.md); existence within the design class |
 
-| C122 | For the fixed correlated calibration line r=L e_y at R32's exact reference, the local common-record curve has w_lambda(s)=s e_y-lambda L^{-1}V(s e_y)+O(lambda squared abs(s)), with V=partial_lambda squared N/2; its conditional canonical risk product is at most a fixed action constant times min(lambda s_0,epsilon) squared | [R33 stage 1](../notes/correlated-calibration-response.md); smooth inverse and anchored mixed derivatives; [B65 review](../reviews/correlated-response-B65.md); local-fibre upper bound, coefficient nonvanishing and global risk open |
+| C122 | For the fixed correlated calibration line r=L e_y at R32's exact reference, the local common-record curve has w_lambda(s)=s e_y-lambda L^{-1}V(s e_y)+O(lambda squared abs(s)), with V=partial_lambda squared N/2; its conditional canonical risk product is at most a fixed action constant times min(lambda s_0,epsilon) squared | [R33 stage 1](../notes/correlated-calibration-response.md); smooth inverse and anchored mixed derivatives; [B65 review](../reviews/correlated-response-B65.md); local-fibre upper bound; C123 settles the tangent cancellation, curvature and global risk open |
+
+| C123 | On R33's fixed linear-cutoff chart, N(-lambda,-w)=N(lambda,w), D V(0)=0 and V is the homogeneous quadratic map (13); for S=min(s_0,epsilon/lambda), conditional canonical product is bounded by a fixed action constant times (lambda S squared + lambda squared S) squared | [R33 stage 2](../notes/correlated-calibration-response.md); terminal variational equations with explicit moving-reference cancellation; [B66 review](../reviews/correlated-variation-B66.md); curvature nonvanishing and full-class minimax risk remain open |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -172,10 +174,15 @@ domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
 
+C123: [B66](../references/batches/B66.md) supplies standard variational-method
+support from Teschl after one Luna-low audit returned a secondary route.
+Coordinator written proof/source review accepts the model-derived cancellation
+and quadratures. Exact model matches and novelty remain unassessed.
+
 C122: [B65](../references/batches/B65.md) matches smooth inverse and Taylor
 methods, with one Luna-low audit and coordinator source/proof review. The
 coordinator corrected a page anchor. Exact model matches and novelty remain
-unassessed; the higher coupling coefficient is an open model calculation.
+unassessed; C123 now evaluates V, leaving its projected curvature test open.
 
 C121: [B64](../references/batches/B64.md) matches standard polynomial
 interpolation and confluence methods in NIST DLMF §3.3. The pulse selection

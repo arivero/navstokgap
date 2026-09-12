@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-12. Current milestones: R32/B64 and H10 complete.
+Updated: 2026-09-12. Current milestones: R33 stage 2/B66 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -210,9 +210,10 @@ Read [R32 handoff](handoffs/R32.md).
 **R33 stage 1/B65 complete:** correlated errors along L e_y leave finite
 hidden-state ambiguity while the local canonical ranges are O(lambda) at fixed
 tolerance (C122). The conditional product is O(min(lambda s_0,epsilon)^2).
-The next coefficient is -Pi L^{-1}D V(0)e_y, where V is half the second
-coupling derivative of the exact compensated calibration map. Evaluate it
-mechanically next; global risks remain a separate question.
+**Stage 2/B66 (C123)** proves that tangent coefficient is exactly zero by
+signed-coupling symmetry and derives V as explicit homogeneous quadratic pulse
+integrals. Next test beta=-Pi L^{-1}V(e_y): centre-to-endpoint curvature can
+survive the cancellation. Its nonvanishing and global risks remain open.
 Read [R33 handoff](handoffs/R33.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)

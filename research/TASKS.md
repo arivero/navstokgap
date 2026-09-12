@@ -71,8 +71,9 @@ handoff with the remaining dependency.
 | R32 | done | Exact single-tolerance curves and explicit fixed early-pulse selection with all canonical inverse entries nonzero, C120–C121 | Coordinator + sequential Luna-low B63/B64 | [R32 handoff](handoffs/R32.md); fixed box for the selected design |
 | B63 | done | Freire inverse-neighbourhood method audit and inherited scalar information radius | One Luna low, sequential | R32 stage 1; nonvanishing subfamily now supplied by C121 |
 | B64 | done | Hermite interpolation method audit; coordinator finite-width estimate and proof/source review | One Luna low, sequential | R32/C121 |
-| R33 | in progress | Stage 1 proves conditional canonical suppression and identifies second-coupling coefficient (C122); next evaluate that mechanical coefficient | Coordinator + completed Luna-low B65 | [R33 handoff](handoffs/R33.md); local-fibre versus global risks |
-| B65 | done | Smooth inverse/Taylor method audit; coordinator corrected matrix-inversion page anchor | One Luna low, sequential | R33 stage 1; coefficient remains open |
+| R33 | in progress | Stages 1–2 prove suppression, exact zero tangent and quadratic response (C122–C123); next test projected curvature | Coordinator + completed Luna-low B65/B66 | [R33 handoff](handoffs/R33.md); local-fibre versus global risks |
+| B65 | done | Smooth inverse/Taylor method audit; coordinator corrected matrix-inversion page anchor | One Luna low, sequential | R33 stage 1 |
+| B66 | done | Variational-method audit; coordinator supplied primary Teschl passage after secondary worker route | One Luna low, sequential | R33 stage 2/C123; curvature nonvanishing open |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -175,12 +176,12 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Continue R33: evaluate V(w)=partial_lambda^2 N(0,w)/2 using the exact
-compensator and moving coupled reference. Test both components of
--Pi L^{-1} D V(0)e_y. Stage 1 already proves local canonical suppression;
-nonzero response or exact constancy still needs the mechanical variational
-calculation. Keep local conditional radii distinct from full-class minimax
-risk. See [R33 handoff](handoffs/R33.md).
+Continue R33: evaluate beta=-Pi L^{-1}V(e_y) from the explicit quadratic
+pulse integrals in (13). C123 proves D V(0)=0 by signed-coupling symmetry,
+so test curvature using centre-to-endpoint separation and fixed finite-width
+control. Nonzero response or exact constancy remains open. Preserve the
+S/lambda regime and local conditional versus full-class minimax distinction.
+See [R33 handoff](handoffs/R33.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

@@ -1448,8 +1448,25 @@ $V(w)=\tfrac12\partial_\lambda^2N(0,w)$. The inverse expansion is
 $$w_\lambda(s)=s e_y-\lambda L^{-1}V(s e_y)
 +O(\lambda^2|s|).$$
 
-The next mechanical calculation is therefore the two canonical entries of
-$-L^{-1}D V(0)e_y$. Nonzero entries yield matching conditional lower order;
-vanishing entries call for higher terms or an exact symmetry. C122:
+The mechanical tangent coefficient vanishes exactly. On the fixed
+linear-cutoff chart, receiver reversal with coupling reversal preserves every
+apparatus record. The coupled reference is even in coupling, so the unique
+compensator gives $N(-\lambda,-w)=N(\lambda,w)$ and $D V(0)=0$.
+Backward terminal variational equations, after subtracting the moving coupled
+reference, give a homogeneous quadratic map V; explicit finite-width pulse
+integrals appear in the linked derivation, equations (10)–(13).
+
+Put $\beta=-\Pi_{x,P}L^{-1}V(e_y)$ and $S=\min(s_0,\epsilon/\lambda)$.
+Then
+
+$$\Pi_{x,P}w_\lambda(s)=\lambda s^2\beta+O(\lambda^2|s|),\qquad
+R_x^{\rm loc}R_P^{\rm loc}\le
+L_*P_*K_2^2(\lambda S^2+\lambda^2 S)^2.$$
+
+Both beta components remain to be tested for the selected pulses. If both
+are nonzero and S/lambda is sufficiently large, centre-to-endpoint comparison
+gives a lower bound $L_*P_*|\beta_x\beta_P|\lambda^2 S^4/16$.
+Opposite endpoints cancel the displayed curvature term. These are conditional
+local-fibre statements. C122–C123:
 [derivation and units](correlated-calibration-response.md),
-[B65 audit](../references/batches/B65.md).
+[B65 audit](../references/batches/B65.md), [B66 audit](../references/batches/B66.md).

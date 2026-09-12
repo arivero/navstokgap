@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 49, 2026-09-12.
+Version 50, 2026-09-12.
 
 ## Aim
 
@@ -140,6 +140,9 @@ entries vanish, retaining the exact nonlinear map. Its first stage proves
 local canonical risk product O(min(lambda s_0,epsilon)^2) and identifies the
 second coupling derivative that decides the residual response (C122). This
 is a conditional-fibre estimate; full-class minimax recovery is separate.
+Stage 2/B66 proves D V(0)=0 by signed-coupling symmetry and gives explicit
+quadratic V (C123). Next test beta=-Pi L^{-1}V(e_y) for the fixed pulse
+family; centre-to-endpoint separation is required for this curvature term.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in

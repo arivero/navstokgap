@@ -71,9 +71,9 @@ ideal impulses and growing probe supply. A19 remains the supporting test.
 
 R33 stage 1 (C122) distinguishes hidden-state ambiguity from canonical
 uncertainty: along a fixed correlated calibration line, the former persists
-while the local canonical ranges close with coupling. Evaluating the exact
-second-order response is next; the fixed-reference estimate does not establish
-global recovery. See [R33](../notes/correlated-calibration-response.md).
+while the local canonical ranges close with coupling. Stage 2 (C123) proves the tangent coefficient vanishes and gives the exact
+quadratic response as pulse integrals. Evaluating both canonical curvature
+components is next; these conditional estimates do not establish global recovery. See [R33](../notes/correlated-calibration-response.md).
 
 Supporting priority after A18/B32: **A19**, test peak excitation rather than
 a pointwise speed floor, retaining the force ceiling. A18 gives a sharp

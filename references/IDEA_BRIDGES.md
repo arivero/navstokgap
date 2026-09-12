@@ -16,6 +16,12 @@ acceptance. The note's proposed H10/H11 split does not replace the live tasks.
 
 ## Classical cut state, receiver memory and readout — R33
 
+**R33 stage 2/B66 capsule:** [variational source](../docs/batches/B66/correlated-variation-source-companion.md)
+-> smooth parameter flow with variable data -> subtract the moving terminal
+reference -> V is quadratic and D V(0)=0. Test beta=-Pi L^{-1}V(e_y) from
+explicit pulse integrals; compare centre with endpoint, since opposite endpoints
+cancel this curvature term. Preserve the S/lambda regime for its lower bound.
+
 **R33 stage 1/B65 capsule:** [smooth inverse response](../docs/batches/B65/correlated-response-source-companion.md)
 -> anchored Taylor expansion along a hidden-coordinate calibration line
 -> conditional canonical suppression, with coefficient -Pi L^{-1}D V(0)e_y
