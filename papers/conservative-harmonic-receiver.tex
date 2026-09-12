@@ -1478,4 +1478,61 @@ error vanishes, with preparation width fixed. Joint limits require
 \href{../references/batches/B61.md}{B61 audit}. R31 tests errors in the
 supplied calibrations and apparatus energy; the current theorem assumes
 both exact.
+
+\hypertarget{calibration-tolerance-sets-the-recovery-crossover}{%
+\subsection{36. Calibration tolerance sets the recovery
+crossover}\label{calibration-tolerance-sets-the-recovery-crossover}}
+
+On section 35's unchanged apparatus box and receiver ball
+\(Z=\{H_s\le E_{\max}\}\), allow deterministic errors \(\epsilon\) in
+the four supplied quantities \(C=(q_1,q_2,q_3,H_{\rm app})\) and
+\(\delta\) in all ten final records. All component units, nonzero
+nominal displacement, pulse widths and masses remain fixed. Comparing
+the actual \(C\) values in the divided inverse chart gives
+
+\[\|w-w'\|\le\frac K\lambda
+(\|C-C'\|+\|Y-Y'\|).\]
+
+A compact feasible-set estimator therefore has
+
+\[\|\widehat w-w\|\le\frac{2K}{\lambda}(\epsilon+\delta),\qquad
+\epsilon_x\epsilon_P\le4L_*P_*K^2
+\left(\frac{\epsilon+\delta}{\lambda}\right)^2.\]
+
+An exact common-record construction supplies a matching lower rate for
+\(\delta=0\). Take \(Y_\lambda=G_\lambda(0,\eta_c)\) and reported
+calibration \(C_*=C(\eta_c)\). The apparatus inverse chart obeys
+
+\[G_\lambda(w,\eta_\lambda(w))=Y_\lambda,\qquad
+\|\eta_\lambda(w)-\eta_c\|\le B\lambda\|w\|.\]
+
+A fixed coupling ceiling keeps this compensator inside half the
+preparation box for every \(w\in Z\). Let \(M>0\) bound \(\|DC\|\) and
+\(R_Z=\max_Z\|w\|\). Then the same reported data admit every receiver
+state in \(tZ\), where
+
+\[t=\min\{1,\epsilon/(MB\lambda R_Z)\}.\]
+
+Writing \(k_x=a-g^2/d>0\), the canonical extrema of \(Z\) are
+\(X_E=\sqrt{2E_{\max}/k_x}\) and \(P_E=\sqrt{2\mu E_{\max}}\).
+Common-record endpoints force every estimator to satisfy
+\(\epsilon_x\ge tX_E\) and \(\epsilon_P\ge tP_E\). Together with
+feasible estimates and coordinatewise zero estimates, this proves that
+the optimal canonical product has order
+\(\min\{1,(\epsilon/\lambda)^2\}\), up to fixed positive action-unit
+constants. When \(\epsilon\ge MB\lambda R_Z\), the zero estimator
+attains the lower bounds:
+
+\[R_x=X_E,\qquad R_P=P_E,\qquad
+\inf\epsilon_x\epsilon_P=2E_{\max}\sqrt{\mu/k_x}.\]
+
+This is a sufficient saturation threshold. The projected compatible area
+is \(\pi X_EP_E\); the risk product has no \(2\pi\) normalization. All
+four supplied constraints have positive tolerance in the lower
+construction. R32 retains three exact constraints and tests the
+canonical fibre left by one uncertain quantity. The scale here depends
+on receiver energy and mechanical parameters; at fixed coupling
+calibration refinement closes it. C118--C119:
+\href{calibration-tolerance-recovery.md}{proof and domain},
+\href{../references/batches/B62.md}{B62 information-radius audit}.
 \end{document}

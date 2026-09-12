@@ -66,7 +66,9 @@ handoff with the remaining dependency.
 | B60 | done | Inherited B59 method audit, zero queries/retrievals; new kernel and branches reviewed separately | One Luna low, sequential | R29; exact matches and novelty unassessed |
 | R30 | done | Three calibrations give global recovery on a reduced fixed apparatus box, without exact receiver energy; C116–C117 | Coordinator + Luna-low B61 | [R30 handoff](handoffs/R30.md); O(1/lambda) record bound |
 | B61 | done | Inherited three-companion audit plus coordinator Freire/Sideris recheck | One Luna low, sequential | R30; exact matches and novelty unassessed |
-| R31 | ready | Allow calibration and apparatus-energy errors; test stability ratios and actual canonical ambiguity at fixed tolerance | Coordinator then bounded librarian | R30/B61; same fixed box, c bounded away from zero |
+| R31 | done | Calibration tolerance gives matched canonical risk order and exact weak-coupling saturation on the same box; C118–C119 | Coordinator + saved Luna-low B62 | [R31 handoff](handoffs/R31.md); all four tolerances positive for lower bound |
+| B62 | done | One-source information-radius audit; coordinator corrected passage anchors and reviewed compensation proof | One Luna low, sequential, inherited completed output | R31; method match, novelty unassessed |
+| R32 | ready | Keep three constraints exact and allow only one tolerance; first test apparatus-energy error with exact positions | Coordinator then bounded librarian | R31/B62; actual canonical fibres, same fixed box |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -169,10 +171,11 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R31 from R30/B61: give finite errors to the three supplied initial
-positions and apparatus energy. Derive the required precision/coupling ratios
-and test an actual canonical common-record family at fixed tolerance, within
-R30's same fixed box. Keep c away from zero. See [R30 handoff](handoffs/R30.md).
+Start R32 from R31/B62: keep q_1,q_2,q_3 exact and allow only apparatus-energy
+tolerance. On the same fixed box and pulse design, identify the exact
+common-record receiver fibre and its canonical projections. Then compare which
+single calibration is uncertain. The max-tolerance upper bound cannot establish
+equivalent lower risks. Keep c away from zero. See [R31 handoff](handoffs/R31.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

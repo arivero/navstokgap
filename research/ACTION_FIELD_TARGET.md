@@ -48,8 +48,11 @@ at weak coupling (C112–C113). **R29/B60 complete:** a second calibration
 gives local inverses at two globally ambiguous branches (C114–C115).
 **R30/B61 complete:** a third calibration gives global recovery on a
 sufficiently small fixed apparatus box without exact receiver energy. Final
-record refinement closes its canonical product (C116–C117). R31 tests finite
-calibration and apparatus-energy tolerance. Earlier positive lower scales
+record refinement closes its canonical product (C116–C117). **R31/B62 complete:**
+finite errors in all four supplied constraints give matched canonical risk order
+min(1,(epsilon/lambda)^2) for exact records, and exact no-record saturation at
+weak coupling (C118–C119). R32 isolates one uncertain constraint at a time,
+starting with apparatus energy and three exact positions. Earlier positive lower scales
 remain preparation- and receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity

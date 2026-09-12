@@ -157,11 +157,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C116 | Three exact initial positions q_1=c nonzero, q_2=q_3=0, exact apparatus energy and ten final records give uniform global receiver/apparatus recovery on a bounded convex receiver domain and sufficiently small fixed box about eta_c, without exact receiver energy | [R30 §§1–3](../notes/three-calibration-global-recovery.md); four-row pulse rank, varying-record chart and uniform segment estimate; [B61 review](../reviews/three-calibration-B61.md) |
 | C117 | Under C116 the receiver inverse is bounded by K_z/lambda times final-record error; minimum-residual fitting gives canonical error product at most 4 L_* P_* K_z squared times (delta/lambda) squared | R30 §4; fixed physical units and positive preparation width; closes at fixed coupling as delta tends to zero; no sharp minimax or larger-box claim |
 
+| C118 | On R30's unchanged fixed preparation box, errors epsilon in supplied C=(q_1,q_2,q_3,H_app) and delta in full final records permit a feasible estimator with receiver error at most 2K(epsilon+delta)/lambda and canonical product at most 4 L_*P_* K squared ((epsilon+delta)/lambda) squared | [R31 §1](../notes/calibration-tolerance-recovery.md); general two-data chart estimate and compact feasible selector; [B62 review](../reviews/calibration-tolerance-B62.md) |
+| C119 | With equal positive calibration tolerances epsilon and exact final records, one compatible set contains tZ for t=min(1,epsilon/(MB lambda R_Z)); the optimal canonical product has order min(1,(epsilon/lambda) squared), and at t=1 equals the no-record value 2E_max sqrt(mu/(a-g squared/d)) exactly | R31 §§2–3; exact compensator, full energy-ball geometry, matched coordinate bounds and zero estimator; B62 review; sufficient saturation threshold |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C118–C119: [B62](../references/batches/B62.md) verifies Werschulz's standard
+information-radius interpretation, with one mathematical source and one
+query. The tolerance/coupling estimate, compatible ball and exact saturation
+are model-derived. Coordinator corrected page anchors and reviewed the proof;
+novelty remains unassessed.
 
 C116–C117: [B61](../references/batches/B61.md) audits inherited inverse and
 smooth-flow methods with one Luna-low worker; coordinator rechecked two

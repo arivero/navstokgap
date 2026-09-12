@@ -14,7 +14,15 @@ questions for R31; E20 supplies a facsimile route for the existing H11 task.
 These are supplied-report leads, with no new source verification or claim
 acceptance. The note's proposed H10/H11 split does not replace the live tasks.
 
-## Classical cut state, receiver memory and readout — R31
+## Classical cut state, receiver memory and readout — R32
+
+**R31/B62 capsule:** [information radius](../docs/batches/B62/calibration-tolerance-source-companion.md),
+Werschulz pp. 3–4 -> compatible-set coordinate extrema and a centre estimator
+-> R31's exact compensator ball gives matching calibration/coupling risk order
+and no-record saturation. R32 intersects the compensator with three exact
+constraint levels, then varies the remaining tolerance. The canonical projection
+of that actual fibre decides the lower risk; a max-tolerance estimate does not.
+
 
 **R30/B61 capsule:** [inverse margins and smooth flow](../docs/batches/B61/three-calibration-source-companion.md)
 support the four-row constrained inverse on a fixed small apparatus box.
