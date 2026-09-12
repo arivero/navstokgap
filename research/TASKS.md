@@ -60,7 +60,9 @@ handoff with the remaining dependency.
 | B57 | done | Inherited-source smooth-flow/implicit-method audit, zero retrievals or queries; symmetry and energy proof reviewed separately | One Luna low, sequential | R26; exact matches and novelty unassessed |
 | R27 | done | Nonzero calibrated displacement retains exact equal-record receiver pairs and a positive full-state risk via a constrained chart and Borsuk–Ulam, C110–C111 | Coordinator + Luna-low B58 | [R27 handoff](handoffs/R27.md); canonical product unresolved |
 | B58 | done | Direct Borsuk–Ulam theorem passage audit; mechanical chart and quantitative bound reviewed separately | One Luna low, sequential | R27; one query, two opens; novelty unassessed |
-| R28 | ready | Test equal-record separation in both x and P under the calibrated displacement and two exact initial energies | Coordinator then bounded librarian | R27/B58; distinguish internal-state ambiguity from a canonical risk product |
+| R28 | done | Fixed pulse design gives an exact common-record curve separated in both x and P under calibrated displacement and exact energies, C112–C113 | Coordinator + Luna-low B59 | [R28 handoff](handoffs/R28.md); preparation-dependent canonical product |
+| B59 | done | Bounded inherited-method audit with coordinator Freire pp. 1–3 check; scaled constraints and pulse construction reviewed separately | One Luna low, sequential | R28; novelty unassessed |
+| R29 | ready | Add q_2=0 calibration; test local inverse from the extra scaled row and whether global common-record pairs remain | Coordinator then bounded librarian | R28/B59; retain exact two energies and full final records |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -163,10 +165,10 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R28 from R27/B58: retain the nonzero calibrated displacement, exact
-initial energies and full final records. Find actual equal-record pairs with
-separation in both x and P, or establish canonical recovery on the stated
-class. The full-state bound may concern y,Q. See [R27 handoff](handoffs/R27.md).
+Start R29 from R28/B59: reveal q_2=0 as a second calibrated incoming
+displacement, keeping both exact energies and full final apparatus records.
+Test the extra scaled row against the canonical curve tangent and distinguish
+local inversion from global recovery. See [R28 handoff](handoffs/R28.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

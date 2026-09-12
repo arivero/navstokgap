@@ -41,9 +41,11 @@ clock calibration (C104–C105). **R25/B56 complete:** a full unknown apparatus
 box permits exact complete-record compensation; sufficiently weak coupling
 hides the entire receiver shell and saturates no-record minimax risks
 (C106–C107). **R26/B57 complete:** exact initial apparatus energy retains an
-antipodal common-record pair (C108–C109). R27 tests a nonzero calibrated probe
-displacement. The current lower scale remains preparation- and
-receiver-energy-dependent.
+antipodal common-record pair (C108–C109). R27/B58 retains full-state ambiguity
+with a nonzero calibrated probe displacement. R28/B59 constructs a fixed smooth pulse design with an exact
+common-record curve varying in both x and P and a positive canonical product
+at weak coupling (C112–C113). R29 adds a second calibrated displacement.
+The current lower scale remains preparation- and receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity
 after incoming momenta are revealed (C092–C093). **R19/B50 complete:** known

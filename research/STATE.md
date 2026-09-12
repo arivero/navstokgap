@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-12. Current milestones: R27/B58 and H10 complete.
+Updated: 2026-09-12. Current milestones: R28/B59 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R27 is now complete; R28 is next.
+H10 changed no mathematical claim status. R28 is now complete; R29 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -165,9 +165,15 @@ An eleven-coordinate preparation chart and Borsuk–Ulam give the pair; uniform
 flow bounds give a positive full-state risk in fixed component units (C110–C111).
 One sequential Luna-low theorem audit and coordinator proof review completed.
 
-Start **R28**: test separation in both x and P under R27's calibrated two-energy
-preparation. Full-state ambiguity may reside in internal coordinates and does
-not yet imply a canonical product bound. Read [R27 handoff](handoffs/R27.md).
+**R28/B59 complete:** [calibrated canonical ambiguity](../notes/calibrated-canonical-ambiguity.md)
+constructs a fixed smooth pulse design and exact common-record curve with
+separation in both x and P, retaining nonzero calibration and both energies.
+C112–C113 give a preparation- and energy-dependent canonical risk product
+uniform at weak coupling. One Luna-low audit and coordinator review completed.
+
+Start **R29**: add a second calibrated incoming displacement q_2=0. Test the
+additional scaled constraint for local recovery and global common-record pairs.
+Read [R28 handoff](handoffs/R28.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

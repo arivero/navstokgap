@@ -118,9 +118,11 @@ construction preserves both energies and preparation margins (C108–C109).
 **R27/B58 complete:** a known nonzero initial probe displacement still admits
 exact equal-record receiver pairs. Borsuk–Ulam on a constrained preparation
 sphere and the flow estimate give a positive full-state risk (C110–C111).
-**R28 is next:** test separation in both canonical coordinates under the same
-calibration and two-energy constraints; the full-state bound does not give
-an action-valued product.
+**R28/B59 complete:** a fixed smooth pulse design gives an exact common-record
+curve separated in both x and P under the same calibration and energies.
+The canonical risk product stays positive at weak coupling with fixed
+preparation (C112–C113). **R29 is next:** add a second calibrated initial
+displacement and test local inversion separately from global uniqueness.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -144,7 +146,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R28 keeps main-track priority.
+cost of record aggregation is a benchmark; R29 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

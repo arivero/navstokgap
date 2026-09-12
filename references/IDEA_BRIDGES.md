@@ -4,15 +4,22 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R28
+## Classical cut state, receiver memory and readout — R29
+
+**R28/B59 capsule:** [scaled constraints and inverse methods](../docs/batches/B59/calibrated-canonical-source-companion.md)
+turn the exact apparatus compensator into two regular receiver constraints
+after division by coupling. A pulse-kernel direction and the positive energy
+form supply a canonical common-record curve. R29 adds q_2=0: its leading
+row is integral t f_2 x. Test the augmented derivative for a local inverse,
+then seek global pairs; local rank alone cannot settle global recovery.
 
 **R27/B58 capsule:** [Borsuk–Ulam, Princeton Lecture 13, Theorem 1](../docs/batches/B58/calibrated-displacement-source-companion.md)
 supplies exact equal-image antipodes for a continuous S^10 to R^10 map.
 The model's two energy charts plus one calibrated displacement leave an
 eleven-coordinate preparation chart. Borrow the sphere construction for
 full-record ambiguity; the inverse-shear estimate forces receiver separation.
-R28 must locate that separation in both x and P before inferring an
-action-valued error product. Fixed positive preparation width supplies the
+R28 located separation in both x and P for a selected fixed pulse design
+using the scaled-constraint construction above. Fixed positive preparation width supplies the
 chart radius; the topological theorem alone does not locate the hidden coordinates.
 
 **R26/B57 capsule:** [inherited smooth-flow and implicit methods](../docs/batches/B57/energy-symmetry-source-companion.md)

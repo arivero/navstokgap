@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-11. Current verification uses written derivations and source/proof
+Updated 2026-09-12. Current verification uses written derivations and source/proof
 review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
@@ -148,11 +148,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C110 | With one nonzero calibrated initial probe displacement and exact receiver/apparatus energies, an eleven-coordinate preparation chart and Borsuk–Ulam give distinct initial states with identical ten final apparatus coordinates and positive box margins | [R27 §§1–2](../notes/calibrated-displacement-ambiguity.md); exact energy charts, compact S^10 and continuous record map; [B58 review](../reviews/calibrated-displacement-B58.md) |
 | C111 | Under C110, the inverse-shear flow estimate forces receiver separation at least 2r/sqrt(1+4L squared lambda squared) and full-state minimax error at least r/sqrt(1+4L squared lambda squared), in fixed Euclidean component units | R27 §3; ambient convex-domain derivative bounds and parameter projection; B58 review; dimensionless full-state bound, canonical product unresolved |
 
+| C112 | For a fixed smooth pulse design, nonzero q_1 calibration and exact receiver/apparatus energies admit an exact common-ten-record curve with both canonical derivatives bounded away from zero on a fixed weak-coupling rectangle | [R28 §§1–3](../notes/calibrated-canonical-ambiguity.md); scaled compensator constraints, pulse kernel and uniform implicit continuation; [B59 review](../reviews/calibrated-canonical-B59.md) |
+| C113 | Under C112, every deterministic estimator has canonical risk product at least delta squared times absolute v_x v_P divided by 4, uniformly for sufficiently weak positive coupling at fixed preparation | R28 §4; exact common-record endpoints and triangle inequality; action units, design/preparation/energy-dependent, no area or minimax equality |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C112–C113: [B59](../references/batches/B59.md) audits inherited smooth-flow,
+contraction and inverse methods, with coordinator checking Freire pp. 1–3.
+The scaled Hamiltonian constraints, fixed pulse-kernel design, exact curve
+and canonical bounds are model-derived; novelty unassessed. One sequential
+Luna-low worker and coordinator written proof review completed.
 
 C110–C111: [B58](../references/batches/B58.md) directly verifies the established
 Borsuk–Ulam theorem in Arora's Princeton Lecture 13, Theorem 1, PDF p. 1.

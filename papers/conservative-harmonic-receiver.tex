@@ -1343,4 +1343,48 @@ in internal coordinates; R28 tests separation in both \(x\) and \(P\)
 and a possible canonical error product. C110--C111:
 \href{calibrated-displacement-ambiguity.md}{proof and margins},
 \href{../references/batches/B58.md}{B58 theorem audit}.
+
+\hypertarget{calibrated-records-still-hide-both-canonical-coordinates}{%
+\subsection{33. Calibrated records still hide both canonical
+coordinates}\label{calibrated-records-still-hide-both-canonical-coordinates}}
+
+A fixed smooth pulse design preserves a positive canonical risk product
+under R27's nonzero calibration \(q_1=c\), both exact initial energies
+and all ten final apparatus coordinates. Let \(\eta_c\) have only
+\(q_1=c\) nonzero among probe coordinates. The exact record compensator
+about a receiver shell point \(\bar z\) satisfies
+
+\[G_\lambda(w,\eta_\lambda(w))=G_\lambda(\bar z,\eta_c),\qquad
+\|\eta_\lambda(w)-\eta_c\|\le2L\lambda\|w-\bar z\|.\]
+
+Put \(h(t)=f_1(s_0+v_0t)\). Dividing the calibration and initial
+apparatus-energy residuals by \(\lambda\) gives smooth zero-coupling
+limits \(-(K/M_1)A(w-\bar z)\) and \(-Kc B(w-\bar z)\), where
+
+\[A(w)=\int_0^T th(t)x_w(t)\,dt,\qquad
+B(w)=\int_0^T h(t)\dot x_w(t)\,dt.\]
+
+A first pulse near a small fixed \(\tau\) makes the normalized rows
+approximate \(x(\tau)\) and \(P(\tau)/\mu\). Their kernel contains a
+direction close to \(\Phi_{-\tau}(0,0,Y,0)\), whose initial canonical
+components are \(gY\tau^2/(2\mu)+O(\tau^4)\) and \(-gY\tau+O(\tau^3)\).
+Both are nonzero. A positive fixed pulse width preserves this property;
+three further disjoint pulses retain R06's four-record signal rank.
+
+In the two-dimensional kernel plane choose \(\bar z\) on \(H_s=E\)
+orthogonal to that direction \(v\) in the energy inner product. Then
+\(dH_s,A,B\) are independent. The implicit-function theorem applied to
+the divided residuals, receiver energy and a curve parameter gives exact
+common-record states \(w_\lambda(t)\). A fixed rectangle
+\(|t|\le\delta\), \(0<\lambda\le\lambda_1\) retains preparation margins
+and canonical derivatives of magnitude at least \(|v_x|/2\) and
+\(|v_P|/2\). Its endpoints imply
+
+\[\epsilon_x\epsilon_P\ge\frac{\delta^2|v_xv_P|}{4}>0.\]
+
+The action-valued bound is uniform on this coupling interval and depends
+on preparation, energy and pulse design. C112--C113:
+\href{calibrated-canonical-ambiguity.md}{proof and limits},
+\href{../references/batches/B59.md}{B59 audit}. R29 adds a second
+calibrated displacement and tests local versus global recovery.
 \end{document}
