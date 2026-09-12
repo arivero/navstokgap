@@ -1350,3 +1350,37 @@ quantity. The scale here depends on receiver energy and mechanical parameters;
 at fixed coupling calibration refinement closes it. C118–C119:
 [proof and domain](calibration-tolerance-recovery.md),
 [B62 information-radius audit](../references/batches/B62.md).
+
+## 37. One uncertain calibration: a curve instead of a ball
+
+Keeping three supplied constraints exact leaves a common-record curve when
+the fourth has positive tolerance. For the exact coupled reference through
+receiver zero and nominal apparatus, let
+
+$$T_\lambda(w)=
+\frac{C(\eta_\lambda(w,a_\lambda))-C_*}{\lambda}.$$
+
+Its smooth extension satisfies $T_\lambda(0)=0$ and $T_0(w)=Lw$.
+The uniform local inverse supplies fixed $s_0>0$ and an exact family
+
+$$w_{\lambda,j}(s)=T_\lambda^{-1}(s e_j),\qquad
+|s|\le\min\{s_0,\epsilon/\lambda\}.$$
+
+All ten final apparatus coordinates agree; only supplied constraint $j$
+changes, by $\lambda s$. The leading receiver direction is $d_j=L^{-1}e_j$.
+For apparatus-energy uncertainty, $j=4$, the three position-response rows
+annihilate this vector. Its two canonical entries decide the endpoint test.
+If both are nonzero, shrinking the common local interval gives
+
+$$\epsilon_x\epsilon_P\ge
+\frac{L_*P_*}{4}|(d_j)_x(d_j)_P|
+\min\{s_0,\epsilon/\lambda\}^2.$$
+
+Together with section 36's upper bound, this gives matching product order
+conditional on the two-entry test. The smooth projected curve has zero planar
+area even when both coordinate diameters are positive. A positive estimation
+product therefore need not be the area of the compatible states. R32 continues
+with the pulse-specific nonvanishing test, starting with $d_4$; the local
+construction alone establishes receiver-state ambiguity. C120:
+[full derivation](single-calibration-fibres.md),
+[B63 audit](../references/batches/B63.md).

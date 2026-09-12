@@ -52,7 +52,10 @@ record refinement closes its canonical product (C116–C117). **R31/B62 complete
 finite errors in all four supplied constraints give matched canonical risk order
 min(1,(epsilon/lambda)^2) for exact records, and exact no-record saturation at
 weak coupling (C118–C119). R32 isolates one uncertain constraint at a time,
-starting with apparatus energy and three exact positions. Earlier positive lower scales
+starting with apparatus energy and three exact positions. Its first stage
+constructs an exact one-dimensional fibre and identifies L^{-1}e_j as the
+canonical nonvanishing test (C120). Positive coordinate risk products and
+positive compatible-state areas are distinct targets. Earlier positive lower scales
 remain preparation- and receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity

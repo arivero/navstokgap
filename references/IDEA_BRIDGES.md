@@ -16,6 +16,13 @@ acceptance. The note's proposed H10/H11 split does not replace the live tasks.
 
 ## Classical cut state, receiver memory and readout — R32
 
+**R32 stage 1/B63 capsule:** [Freire inverse neighbourhood](../docs/batches/B63/single-calibration-source-companion.md)
+-> pull a coordinate line back through the exact divided calibration map
+-> one uncertain constraint leaves a curve, with tangent L^{-1}e_j
+-> test both canonical entries for the fixed pulse family. Information-radius
+thinking permits positive coordinate risk on a zero-area curve; the convex hull
+and the actual compatible set carry different areas.
+
 **R31/B62 capsule:** [information radius](../docs/batches/B62/calibration-tolerance-source-companion.md),
 Werschulz pp. 3–4 -> compatible-set coordinate extrema and a centre estimator
 -> R31's exact compensator ball gives matching calibration/coupling risk order

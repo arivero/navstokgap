@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R31 is now complete; R32 is next.
+H10 changed no mathematical claim status. R31 is complete; R32 is in progress.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -23,7 +23,7 @@ Bibliography addition, 2026-09-12: the user-supplied
 [nota unificada](../references/nota_unificada.md) is preserved in full with a
 [separate mathematical selection](../references/nota_unificada-seleccion-matematica.md).
 See the [incorporation handoff](handoffs/nota-unificada-bibliography.md).
-The supplied source statuses are inherited reports; R32 remains next.
+The supplied source statuses are inherited reports; R32 remains the active task.
 
 ## Current restart decision
 
@@ -198,10 +198,12 @@ min(1,(epsilon/lambda)^2); a common-record ball gives exact no-record saturation
 at sufficiently weak coupling (C119). The saved Luna-low librarian audit and
 coordinator proof/source review are complete; novelty remains unassessed.
 
-Start **R32**: keep three supplied constraints exact and vary only the fourth.
-First allow apparatus-energy error with all three positions exact; identify
-actual canonical fibres and their tolerance/coupling dependence in the same box.
-Read [R31 handoff](handoffs/R31.md).
+**R32 stage 1/B63 complete:** an exact common-record curve has leading
+direction L^{-1}e_j when only calibration j is uncertain (C120). Nonzero
+position and momentum components give matching risk-product order even though
+the projected curve has zero area. Continue R32 by evaluating these components
+for the actual pulse design, starting with apparatus energy j=4.
+Read [R32 handoff](handoffs/R32.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

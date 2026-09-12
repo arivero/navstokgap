@@ -160,11 +160,18 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C118 | On R30's unchanged fixed preparation box, errors epsilon in supplied C=(q_1,q_2,q_3,H_app) and delta in full final records permit a feasible estimator with receiver error at most 2K(epsilon+delta)/lambda and canonical product at most 4 L_*P_* K squared ((epsilon+delta)/lambda) squared | [R31 §1](../notes/calibration-tolerance-recovery.md); general two-data chart estimate and compact feasible selector; [B62 review](../reviews/calibration-tolerance-B62.md) |
 | C119 | With equal positive calibration tolerances epsilon and exact final records, one compatible set contains tZ for t=min(1,epsilon/(MB lambda R_Z)); the optimal canonical product has order min(1,(epsilon/lambda) squared), and at t=1 equals the no-record value 2E_max sqrt(mu/(a-g squared/d)) exactly | R31 §§2–3; exact compensator, full energy-ball geometry, matched coordinate bounds and zero estimator; B62 review; sufficient saturation threshold |
 
+| C120 | With only supplied constraint j uncertain, R30's exact coupled reference admits a smooth common-record curve T_lambda^{-1}(s e_j), with tangent tending to L^{-1}e_j and abs(s)<=min(s_0,epsilon/lambda); if both canonical tangent components are nonzero, the optimal canonical risk product has order min(1,(epsilon/lambda) squared), although the projected curve has zero planar area | [R32 stage 1](../notes/single-calibration-fibres.md); local uniform inverse and exact endpoint construction; [B63 review](../reviews/single-calibration-B63.md); pulse-specific nonvanishing remains open |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C120: [B63](../references/batches/B63.md) verifies the standard inverse-map
+method in Freire pp. 1–3, with inherited information-radius context from B62.
+One Luna-low worker and coordinator proof/source review; exact model matches
+and novelty unassessed. Canonical positivity is explicitly conditional.
 
 C118–C119: [B62](../references/batches/B62.md) verifies Werschulz's standard
 information-radius interpretation, with one mathematical source and one

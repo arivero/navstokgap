@@ -1,6 +1,6 @@
 # Research programme: action, trajectories and gaps
 
-Version 47, 2026-09-12.
+Version 48, 2026-09-12.
 
 ## Aim
 
@@ -131,8 +131,10 @@ finite calibration tolerance gives receiver error O((epsilon+delta)/lambda)
 and, for exact final records, optimal canonical product of order
 min(1,(epsilon/lambda)^2). One compatible ball fills the receiver domain at
 sufficiently weak coupling, attaining exact no-record risks (C118–C119).
-**R32 is next:** keep three constraints exact and allow only the fourth a
-tolerance; first test apparatus energy with all three calibrated positions exact.
+**R32 stage 1/B63:** a single uncertain constraint leaves an exact receiver
+curve with leading direction L^{-1}e_j. Both canonical components being nonzero
+gives a positive error product on a zero-area curve (C120). Next evaluate the
+actual pulse-specific components, starting with apparatus energy j=4.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in

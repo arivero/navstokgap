@@ -68,7 +68,8 @@ handoff with the remaining dependency.
 | B61 | done | Inherited three-companion audit plus coordinator Freire/Sideris recheck | One Luna low, sequential | R30; exact matches and novelty unassessed |
 | R31 | done | Calibration tolerance gives matched canonical risk order and exact weak-coupling saturation on the same box; C118–C119 | Coordinator + saved Luna-low B62 | [R31 handoff](handoffs/R31.md); all four tolerances positive for lower bound |
 | B62 | done | One-source information-radius audit; coordinator corrected passage anchors and reviewed compensation proof | One Luna low, sequential, inherited completed output | R31; method match, novelty unassessed |
-| R32 | ready | Keep three constraints exact and allow only one tolerance; first test apparatus-energy error with exact positions | Coordinator then bounded librarian | R31/B62; actual canonical fibres, same fixed box |
+| R32 | in progress | Stage 1 proves exact single-tolerance curves and conditional canonical risks (C120); next evaluate the pulse-specific inverse columns | Coordinator + completed Luna-low B63 | [R32 handoff](handoffs/R32.md); same fixed box |
+| B63 | done | Freire inverse-neighbourhood method audit and inherited scalar information radius | One Luna low, sequential | R32 stage 1; canonical nonvanishing still a model obligation |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -171,11 +172,11 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Start R32 from R31/B62: keep q_1,q_2,q_3 exact and allow only apparatus-energy
-tolerance. On the same fixed box and pulse design, identify the exact
-common-record receiver fibre and its canonical projections. Then compare which
-single calibration is uncertain. The max-tolerance upper bound cannot establish
-equivalent lower risks. Keep c away from zero. See [R31 handoff](handoffs/R31.md).
+Continue R32 from its completed stage 1: evaluate d_4=L^{-1}e_4 for the
+R30 pulse family and test both canonical components. Then compare the other
+columns. The exact common-record curve is constructed; the canonical lower
+bound is conditional on this nonvanishing test. Keep the pulse design and box
+fixed, or label a stronger design premise explicitly. See [R32 handoff](handoffs/R32.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record
