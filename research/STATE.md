@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-12. Current milestones: R31/B62 and H10 complete.
+Updated: 2026-09-12. Current milestones: R32/B64 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R31 is complete; R32 is in progress.
+H10 changed no mathematical claim status. R32 is complete; R33 is ready.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -23,7 +23,7 @@ Bibliography addition, 2026-09-12: the user-supplied
 [nota unificada](../references/nota_unificada.md) is preserved in full with a
 [separate mathematical selection](../references/nota_unificada-seleccion-matematica.md).
 See the [incorporation handoff](handoffs/nota-unificada-bibliography.md).
-The supplied source statuses are inherited reports; R32 remains the active task.
+The supplied source statuses are inherited reports; R33 is the next task after R32.
 
 ## Current restart decision
 
@@ -198,11 +198,13 @@ min(1,(epsilon/lambda)^2); a common-record ball gives exact no-record saturation
 at sufficiently weak coupling (C119). The saved Luna-low librarian audit and
 coordinator proof/source review are complete; novelty remains unassessed.
 
-**R32 stage 1/B63 complete:** an exact common-record curve has leading
-direction L^{-1}e_j when only calibration j is uncertain (C120). Nonzero
-position and momentum components give matching risk-product order even though
-the projected curve has zero area. Continue R32 by evaluating these components
-for the actual pulse design, starting with apparatus energy j=4.
+**R32/B63–B64 complete:** the exact single-tolerance curve has leading
+direction L^{-1}e_j (C120). An explicit early-pulse subfamily makes both
+canonical components nonzero for all four columns (C121), giving matching
+risk-product order on a zero-area curve. A normalized finite-width estimate
+preserves the eight entry margins. One sequential Luna-low audit and
+coordinator proof/source review are complete. R33 tests correlated calibration
+directions with zero leading canonical response.
 Read [R32 handoff](handoffs/R32.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)

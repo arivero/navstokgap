@@ -131,10 +131,12 @@ finite calibration tolerance gives receiver error O((epsilon+delta)/lambda)
 and, for exact final records, optimal canonical product of order
 min(1,(epsilon/lambda)^2). One compatible ball fills the receiver domain at
 sufficiently weak coupling, attaining exact no-record risks (C118–C119).
-**R32 stage 1/B63:** a single uncertain constraint leaves an exact receiver
-curve with leading direction L^{-1}e_j. Both canonical components being nonzero
-gives a positive error product on a zero-area curve (C120). Next evaluate the
-actual pulse-specific components, starting with apparatus energy j=4.
+**R32/B63–B64 complete:** a single uncertain constraint leaves an exact
+receiver curve with leading direction L^{-1}e_j (C120). An explicit fixed
+early-pulse subfamily makes both canonical entries nonzero for all four
+columns (C121), giving matched single-tolerance risk order on a zero-area
+curve. R33 tests correlated calibration directions whose leading canonical
+entries vanish, retaining the exact nonlinear map.
 This continues [I005](../ideas/I005-classical-cuts-and-relations.md); A19 supports the main track.
 
 The user's discovery-by-connection strategy is saved in
@@ -158,7 +160,7 @@ explicit interfaces, controlled spatial remainders and apparatus relations.
 [I007](../ideas/I007-static-compatibility.md) proposes K01: specify fixed-time
 measurement arrangements and their overlaps, test classical joint-state
 models, then identify where an action-valued calibration enters. R12's exact
-cost of record aggregation is a benchmark; R32 keeps main-track priority.
+cost of record aggregation is a benchmark; R33 keeps main-track priority.
 H11 strengthens the Chinese facsimile and Arabic translation witnesses.
 
 ## Supporting track: bound action and scale selection

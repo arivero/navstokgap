@@ -14,7 +14,14 @@ questions for R31; E20 supplies a facsimile route for the existing H11 task.
 These are supplied-report leads, with no new source verification or claim
 acceptance. The note's proposed H10/H11 split does not replace the live tasks.
 
-## Classical cut state, receiver memory and readout — R32
+## Classical cut state, receiver memory and readout — R33
+
+**R32 stage 2/B64 capsule:** [DLMF interpolation and confluence](../docs/batches/B64/pulse-column-source-companion.md)
+-> early-time cubic Hermite map -> all four inverse columns move x and P
+for one fixed admissible pulse design -> row normalization and finite-width
+inverse margins decide the transfer. R33 tests a correlated output line
+r=L e_y where the leading canonical entries cancel; use the exact
+compensator before interpreting zero response as recovery.
 
 **R32 stage 1/B63 capsule:** [Freire inverse neighbourhood](../docs/batches/B63/single-calibration-source-companion.md)
 -> pull a coordinate line back through the exact divided calibration map

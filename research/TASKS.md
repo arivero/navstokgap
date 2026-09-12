@@ -68,8 +68,10 @@ handoff with the remaining dependency.
 | B61 | done | Inherited three-companion audit plus coordinator Freire/Sideris recheck | One Luna low, sequential | R30; exact matches and novelty unassessed |
 | R31 | done | Calibration tolerance gives matched canonical risk order and exact weak-coupling saturation on the same box; C118–C119 | Coordinator + saved Luna-low B62 | [R31 handoff](handoffs/R31.md); all four tolerances positive for lower bound |
 | B62 | done | One-source information-radius audit; coordinator corrected passage anchors and reviewed compensation proof | One Luna low, sequential, inherited completed output | R31; method match, novelty unassessed |
-| R32 | in progress | Stage 1 proves exact single-tolerance curves and conditional canonical risks (C120); next evaluate the pulse-specific inverse columns | Coordinator + completed Luna-low B63 | [R32 handoff](handoffs/R32.md); same fixed box |
-| B63 | done | Freire inverse-neighbourhood method audit and inherited scalar information radius | One Luna low, sequential | R32 stage 1; canonical nonvanishing still a model obligation |
+| R32 | done | Exact single-tolerance curves and explicit fixed early-pulse selection with all canonical inverse entries nonzero, C120–C121 | Coordinator + sequential Luna-low B63/B64 | [R32 handoff](handoffs/R32.md); fixed box for the selected design |
+| B63 | done | Freire inverse-neighbourhood method audit and inherited scalar information radius | One Luna low, sequential | R32 stage 1; nonvanishing subfamily now supplied by C121 |
+| B64 | done | Hermite interpolation method audit; coordinator finite-width estimate and proof/source review | One Luna low, sequential | R32/C121 |
+| R33 | ready | Correlated calibration line r=L e_y has zero leading canonical response; test exact/higher-order curve at fixed pulse design | Coordinator then bounded librarian | R32; preserve fixed units, box and nonlinear compensator |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
 | B27 | done | Boyer relativistic Kepler threshold: three queries, four primary PDF pages, metadata and coordinator visual review | One Sol medium | P03 |
 | M07 | done | Kepler threshold and softened-core closure integrated into gap laboratory; C052–C053, regular orbit domain, critical endpoint and parameter limits | Coordinator + sequential Luna-low B28 | [M07 handoff](handoffs/M07.md); M03 remains separately gated |
@@ -172,11 +174,12 @@ at its stated budget with findings and the next question.
 
 ## Next bounded session
 
-Continue R32 from its completed stage 1: evaluate d_4=L^{-1}e_4 for the
-R30 pulse family and test both canonical components. Then compare the other
-columns. The exact common-record curve is constructed; the canonical lower
-bound is conditional on this nonvanishing test. Keep the pulse design and box
-fixed, or label a stronger design premise explicitly. See [R32 handoff](handoffs/R32.md).
+Start R33: retain R32's selected fixed design and replace the coordinate
+calibration line by r=L e_y (rescaled in fixed output units if desired).
+The exact family T_lambda^{-1}(s r) has zero leading canonical tangent.
+Compute the first nonzero nonlinear/coupling response, or prove exact
+canonical constancy; a vanishing leading entry alone is not recovery.
+See [R32 handoff](handoffs/R32.md).
 
 Previous R20 setup: retain eight final pointer records and known incoming
 probe momenta but hide initial clock position and momentum. Test a common-record

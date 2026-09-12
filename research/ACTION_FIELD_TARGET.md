@@ -54,7 +54,9 @@ min(1,(epsilon/lambda)^2) for exact records, and exact no-record saturation at
 weak coupling (C118–C119). R32 isolates one uncertain constraint at a time,
 starting with apparatus energy and three exact positions. Its first stage
 constructs an exact one-dimensional fibre and identifies L^{-1}e_j as the
-canonical nonvanishing test (C120). Positive coordinate risk products and
+canonical nonvanishing test (C120). C121 completes R32 with an explicit early-pulse subfamily making all four
+canonical column tests positive. R33 tests correlated directions with zero
+leading canonical response. Positive coordinate risk products and
 positive compatible-state areas are distinct targets. Earlier positive lower scales
 remain preparation- and receiver-energy-dependent.
 

@@ -160,13 +160,20 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C118 | On R30's unchanged fixed preparation box, errors epsilon in supplied C=(q_1,q_2,q_3,H_app) and delta in full final records permit a feasible estimator with receiver error at most 2K(epsilon+delta)/lambda and canonical product at most 4 L_*P_* K squared ((epsilon+delta)/lambda) squared | [R31 §1](../notes/calibration-tolerance-recovery.md); general two-data chart estimate and compact feasible selector; [B62 review](../reviews/calibration-tolerance-B62.md) |
 | C119 | With equal positive calibration tolerances epsilon and exact final records, one compatible set contains tZ for t=min(1,epsilon/(MB lambda R_Z)); the optimal canonical product has order min(1,(epsilon/lambda) squared), and at t=1 equals the no-record value 2E_max sqrt(mu/(a-g squared/d)) exactly | R31 §§2–3; exact compensator, full energy-ball geometry, matched coordinate bounds and zero estimator; B62 review; sufficient saturation threshold |
 
-| C120 | With only supplied constraint j uncertain, R30's exact coupled reference admits a smooth common-record curve T_lambda^{-1}(s e_j), with tangent tending to L^{-1}e_j and abs(s)<=min(s_0,epsilon/lambda); if both canonical tangent components are nonzero, the optimal canonical risk product has order min(1,(epsilon/lambda) squared), although the projected curve has zero planar area | [R32 stage 1](../notes/single-calibration-fibres.md); local uniform inverse and exact endpoint construction; [B63 review](../reviews/single-calibration-B63.md); pulse-specific nonvanishing remains open |
+| C120 | With only supplied constraint j uncertain, R30's exact coupled reference admits a smooth common-record curve T_lambda^{-1}(s e_j), with tangent tending to L^{-1}e_j and abs(s)<=min(s_0,epsilon/lambda); if both canonical tangent components are nonzero, the optimal canonical risk product has order min(1,(epsilon/lambda) squared), although the projected curve has zero planar area | [R32 stage 1](../notes/single-calibration-fibres.md); local uniform inverse and exact endpoint construction; [B63 review](../reviews/single-calibration-B63.md); C121 supplies an explicit pulse subfamily satisfying all four tests |
+
+| C121 | An explicit R30 pulse subfamily with first centres tau, 2 tau, 3 tau and sufficiently small fixed positive widths has all eight canonical entries of L inverse nonzero; hence C120 gives matched single-tolerance canonical risk-product order for every j | [R32 §4](../notes/single-calibration-fibres.md); scaled ODE, four cubic cardinal polynomials, normalized width estimate and inverse margins; [B64 review](../reviews/pulse-column-B64.md); existence within the design class |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C121: [B64](../references/batches/B64.md) matches standard polynomial
+interpolation and confluence methods in NIST DLMF §3.3. The pulse selection
+and canonical-column conclusion are model-derived; one sequential Luna-low
+audit and coordinator source/proof review, novelty unassessed.
 
 C120: [B63](../references/batches/B63.md) verifies the standard inverse-map
 method in Freire pp. 1–3, with inherited information-radius context from B62.
