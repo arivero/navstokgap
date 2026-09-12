@@ -5,7 +5,7 @@ symbolic verification scripts, by coordinator or workers. Use written proofs
 and source review. Historical check commands are inactive records. Document,
 source, link and integrity tooling remains allowed; no language workaround.
 
-Updated: 2026-09-12. Current milestones: R29/B60 and H10 complete.
+Updated: 2026-09-12. Current milestones: R30/B61 and H10 complete.
 
 **H10 source visit complete:** [static composition in the classics](../notes/static-composition-classics.md)
 connects Indian contact arguments, Chinese solid dissection and statics, and an
@@ -13,7 +13,7 @@ access-limited Avicennian passage to [I007](../ideas/I007-static-compatibility.m
 One sequential Luna-medium worker supplied the Indian reading; coordinator
 corrections and exact coverage are in [H10](handoffs/H10.md). K01 is the
 supporting fixed-time compatibility test; H11 strengthens two source witnesses.
-H10 changed no mathematical claim status. R29 is now complete; R30 is next.
+H10 changed no mathematical claim status. R30 is now complete; R31 is next.
 
 Editorial addition, 2026-09-09: [Zeno's Constant](../docs/fiction/zenos-constant.md)
 is a user-requested alternate-history story. It leaves research priorities and
@@ -178,9 +178,16 @@ at positive coupling with both energies and calibrations. C114–C115 give
 global canonical ambiguity despite those local inverses. One inherited-source
 Luna-low audit and coordinator proof review completed.
 
-Start **R30**: calibrate q_3=0 and test four independent leading constraints
-for uniform global recovery; exact receiver energy may become redundant.
-Read [R29 handoff](handoffs/R29.md).
+**R30/B61 complete:** [three calibrations](../notes/three-calibration-global-recovery.md)
+give uniform global recovery on a bounded convex receiver domain and a
+sufficiently small fixed apparatus box. Exact receiver energy is redundant;
+record refinement closes the canonical product with an O(1/lambda) inverse
+bound (C116–C117). One Luna-low inherited audit and coordinator source/proof
+review completed. Recovery on R29's larger original box remains unproved.
+
+Start **R31**: allow calibration and apparatus-energy errors; test stability
+ratios and an actual canonical ambiguity at fixed tolerance in the same box.
+Read [R30 handoff](handoffs/R30.md).
 
 **R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
 compares full evolution and stationary conditional resets in the fixed A10

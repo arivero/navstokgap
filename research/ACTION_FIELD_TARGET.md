@@ -46,8 +46,11 @@ with a nonzero calibrated probe displacement. R28/B59 constructs a fixed smooth 
 common-record curve varying in both x and P and a positive canonical product
 at weak coupling (C112–C113). **R29/B60 complete:** a second calibration
 gives local inverses at two globally ambiguous branches (C114–C115).
-R30 tests global recovery after adding a third calibrated displacement.
-The current lower scale remains preparation- and receiver-energy-dependent.
+**R30/B61 complete:** a third calibration gives global recovery on a
+sufficiently small fixed apparatus box without exact receiver energy. Final
+record refinement closes its canonical product (C116–C117). R31 tests finite
+calibration and apparatus-energy tolerance. Earlier positive lower scales
+remain preparation- and receiver-energy-dependent.
 
 **R18/B49 complete:** a fixed pulse design retains position-mediated ambiguity
 after incoming momenta are revealed (C092–C093). **R19/B50 complete:** known

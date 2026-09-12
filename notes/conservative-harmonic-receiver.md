@@ -1256,3 +1256,45 @@ This is a preparation-dependent action-risk lower bound, not an area or
 exact minimax value. R30 adds $q_3=0$ and tests a uniform global inverse,
 including its record conditioning. C114–C115:
 [proof and domain](two-calibration-branches.md), [B60 audit](../references/batches/B60.md).
+
+## 35. Three calibrations restore global recovery on a fixed box
+
+Calibrate $q_1=c\ne0$, $q_2=q_3=0$ and supply exact initial apparatus
+energy $H_0$, together with all ten final apparatus coordinates at known $T$.
+On a bounded convex receiver energy ball, a sufficiently small fixed box
+about the calibrated apparatus centre admits a uniform global inverse.
+The exact receiver energy is unnecessary. The box may be smaller than R29's
+original preparation box; its radius stays fixed in the precision limit.
+
+Choose a third positive smooth pulse detecting the kernel of $A_1,B_1,A_2$.
+Analytic observability guarantees such a pulse, so the four rows
+
+$$L=(-K A_1/M_1,-K A_2/M_2,-K A_3/M_3,-Kc B_1)^T$$
+
+are independent. Write $a=S^{-1}Y$ for the inverse free shear of a final
+record, and let $\eta_\lambda(w,a)$ be the uniform apparatus inverse chart.
+For $C=(q_1,q_2,q_3,H_{\rm app})$ the map
+
+$$D_\lambda(w,a)=
+\frac{C(\eta_\lambda(w,a))-C(a)}{\lambda}$$
+
+extends jointly smoothly to zero coupling. Its receiver derivative at the
+nominal record is $L$ throughout the receiver ball. Shrinking the apparatus
+neighbourhood and coupling gives a uniform margin
+$\|L^{-1}(D_wD_\lambda-L)\|\le1/2$.
+Segment integration over the convex receiver domain then proves global
+injectivity for the exact constrained class.
+
+For two admitted records the same estimate gives
+$\|w-w'\|\le K_z\|Y-Y'\|/\lambda$. Minimum-residual fitting of a
+record with error at most $\delta$ therefore yields, in physical units,
+
+$$\epsilon_x\epsilon_P\le
+4L_*P_*K_z^2(\delta/\lambda)^2.$$
+
+This action-unit product closes at fixed positive coupling as record error
+vanishes, with preparation width fixed. Joint limits require
+$\delta/\lambda\to0$ for this bound. C116–C117:
+[proof and domain](three-calibration-global-recovery.md),
+[B61 audit](../references/batches/B61.md). R31 tests errors in the supplied
+calibrations and apparatus energy; the current theorem assumes both exact.

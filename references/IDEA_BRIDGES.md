@@ -4,7 +4,15 @@ Select by proof obligation, then read the linked companion. These cards route
 existing bibliography into model design; the ledger and task board carry the
 live acceptance and priority records. Proposed tests below are research actions.
 
-## Classical cut state, receiver memory and readout — R30
+## Classical cut state, receiver memory and readout — R31
+
+**R30/B61 capsule:** [inverse margins and smooth flow](../docs/batches/B61/three-calibration-source-companion.md)
+support the four-row constrained inverse on a fixed small apparatus box.
+Subtract C(a) before dividing by coupling to control varying records.
+R31 adds uncertainty in supplied C: derive tolerance/coupling stability and
+seek exact canonical ambiguity at fixed tolerance inside that same box.
+The nonzero c and small-box derivative margin are decisive premises.
+
 
 **R29/B60 capsule:** [inherited inverse and continuation methods](../docs/batches/B60/two-calibration-source-companion.md)
 separate local invertibility from two exact global roots. The three divided

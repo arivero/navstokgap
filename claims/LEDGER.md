@@ -154,11 +154,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 | C114 | A fixed smooth pulse design with q_1=c nonzero, q_2=0 and exact energies E,H_0 has two exact common-record branches tending to opposite receiver shell points; the augmented fourteen-coordinate map is locally invertible at each branch for fixed small positive coupling | [R29 §§1–4](../notes/two-calibration-branches.md); rank-three pulse rows, regular shell roots, compensator continuation and block elimination; [B60 review](../reviews/two-calibration-B60.md) |
 | C115 | The branches in C114 differ in both canonical coordinates; every global receiver estimator has an action-unit error-product lower bound tending to abs(z_bar_x z_bar_P)>0 as coupling decreases at fixed preparation and design | R29 §4; common-record endpoint bounds; B60 review; local inverse margins may depend on coupling, no area or exact minimax claim |
 
+| C116 | Three exact initial positions q_1=c nonzero, q_2=q_3=0, exact apparatus energy and ten final records give uniform global receiver/apparatus recovery on a bounded convex receiver domain and sufficiently small fixed box about eta_c, without exact receiver energy | [R30 §§1–3](../notes/three-calibration-global-recovery.md); four-row pulse rank, varying-record chart and uniform segment estimate; [B61 review](../reviews/three-calibration-B61.md) |
+| C117 | Under C116 the receiver inverse is bounded by K_z/lambda times final-record error; minimum-residual fitting gives canonical error product at most 4 L_* P_* K_z squared times (delta/lambda) squared | R30 §4; fixed physical units and positive preparation width; closes at fixed coupling as delta tends to zero; no sharp minimax or larger-box claim |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C116–C117: [B61](../references/batches/B61.md) audits inherited inverse and
+smooth-flow methods with one Luna-low worker; coordinator rechecked two
+primary sources and the written model proof. Exact result matches and novelty
+are unassessed. The reduced fixed preparation box is part of the theorem.
 
 C114–C115: [B60](../references/batches/B60.md) audits inherited B59
 inverse/flow/contraction methods, with zero discovery or retrieval. The pulse
