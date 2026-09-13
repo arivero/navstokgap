@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-12. Current verification uses written derivations and source/proof
+Updated 2026-09-13. Current verification uses written derivations and source/proof
 review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
@@ -172,11 +172,21 @@ IDs or literature assertions; detailed proofs and audit statuses below govern.
 
 | C123 | On R33's fixed linear-cutoff chart, N(-lambda,-w)=N(lambda,w), D V(0)=0 and V is the homogeneous quadratic map (13); for S=min(s_0,epsilon/lambda), conditional canonical product is bounded by a fixed action constant times (lambda S squared + lambda squared S) squared | [R33 stage 2](../notes/correlated-calibration-response.md); terminal variational equations with explicit moving-reference cancellation; [B66 review](../reviews/correlated-variation-B66.md); curvature nonvanishing and full-class minimax risk remain open |
 
+| C124 | The periodic zero-field Ising heat-bath chain on N>=3 sites has exact full gap a[1-tanh(2b)]; bounded nonnegative coupling and a positive per-site refresh-clock floor give a uniform finite-volume bound, whereas growing coupling or total-clock normalization can close it | [Interacting proof](../notes/interacting-ising-gap.md) §§1–4; all-mode Hamming/Lipschitz contraction, matching magnetization mode and normalized susceptibility; [B68 written review](../reviews/ising-gap-B68.md) |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C124: [B68](../references/batches/B68.md) matches Glauber model/magnetization
+passages through an indexed transcription and Bubley–Dyer coupling passages
+in a primary PDF. Glauber formula images remain unverified; no exact source
+transcription is promoted. The self-contained all-mode proof is reviewed and
+accepted independently. Exact prior publication of the combined equality was
+not established in this bounded audit; no novelty claim. One requested
+Sol-medium worker and coordinator source/proof review.
 
 C123: [B66](../references/batches/B66.md) supplies standard variational-method
 support from Teschl after one Luna-low audit returned a secondary route.

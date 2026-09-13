@@ -91,7 +91,8 @@ handoff with the remaining dependency. Priority is the ordered list in
 | B32 | done | Milnor printed pp. 248, 254; one-query primary-source audit and coordinator visual/proof review | One Luna low | A18 |
 | A19 | ready | Replace pointwise speed floor by peak momentum or kinetic excursion, allowing turning-point stops; prove force-limited excursion cost or identify missing premise | Coordinator then one bounded librarian | C060 and A07 |
 | R02 | ready | Audit scalar and matrix finite-propagation candidates in I003; conservation, Fourier convention and noise model explicit; prior-art audit before claim promotion | Coordinator then one small librarian | P03 corrections |
-| G03 | ready | One interacting extension of G02: prove a size-independent gap estimate or identify its missing premise by counterexample; explicit invariant law, clock and calibration | Coordinator then sequential librarian | C045–C046 |
+| G03 | done | C124: periodic Ising heat-bath exact all-N gap; bounded coupling and per-site clock floor suffice, finite range alone fails in joint limits | Coordinator + Sol-medium B68 | [Handoff](handoffs/G03.md); further variants parked for a named dependency |
+| B68 | done | Two-source bounded Ising/coupling audit and written proof review; Glauber formula images unavailable, exact source transcription remains qualified | One Sol medium; coordinator review | C124; [audit](../references/batches/B68.md) |
 | B01 | done | Six primary bibliography leads; identifiers/abstracts reviewed and shared metadata integrated | Luna + coordinator | Programme |
 | H01 | done | NATP00385 normalized, diplomatic and XML archived; focused passage audit and coverage record | Sol + coordinator | Programme |
 | M01 | done | Constant-force no-gap proposition; Jacobi/Hessian distinction; free-kernel test; conditional two-arm distinguishability derivation | Coordinator | Existing note |
@@ -180,8 +181,8 @@ at its stated budget with findings and the next question.
 
 ## Selecting the next session
 
-Use the ordered list in [STATE](STATE.md). The first Q01 milestone and the
-following G03 milestone are bounded decisions; an incomplete parent task does
+Use the ordered list in [STATE](STATE.md). The first Q01 and G03 milestones are complete;
+Q01's next premise decision is selected. Each milestone is bounded; an incomplete parent task does
 not force an immediate continuation. R33's open curvature question remains
 parked in its handoff. Historical next-task narratives are preserved in the
 [dated state history](STATE-history-2026-09-12.md) and previous Git versions.

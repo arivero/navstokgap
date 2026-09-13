@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 52, 2026-09-13. The programme consolidates the accepted results into
+Version 53, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -18,11 +18,12 @@ mechanisms; the Millennium comparison supplies the field-theory target.
 The accepted examples provide a substantial set of obstructions to simple
 classical selection arguments and several conditional positive bounds. The
 physical premise excluding their quiet, contracting or precisely observed
-countermodels remains open. Spectral work gives finite-system criteria and
-independent-product control; an interacting, uniform estimate remains open.
+countermodels remains open. Spectral work gives finite-system criteria, independent-product control and
+C124's interacting Ising gap uniform in finite volume at bounded coupling.
+Physical-operator identification and further uniform limits remain open.
 
-This version changes research priorities and consolidates exposition. It adds
-no mathematical claim or novelty assertion. [The ledger](../claims/LEDGER.md)
+This version integrates G03's interacting finite-volume gap C124 and its
+bounded B68 source audit. No novelty is asserted. [The ledger](../claims/LEDGER.md)
 retains proof and literature status, including the limits of each source audit.
 
 ## Quantum track: identify the excluded classical alternative
@@ -80,13 +81,18 @@ identification can also become poorly conditioned. Independent product
 dynamics control mixed modes and give the minimum constituent gap when each
 constituent clock is retained (C041–C046).
 
-G03 replaces independence by one explicit interaction estimate. Its first
-milestone must specify the generator, invariant law, interaction class, clock
-and intended size limit. It should prove a size-independent bound or give a
-counterexample identifying a missing interaction premise. A calculation on
-two sites alone does not settle the large-system question. The full-frame
-susceptibility sum can grow with dimension; its constants require control.
-See [the maintained proof](../notes/susceptibility-gap.md).
+G03 now supplies an explicit interacting estimate: the periodic zero-field
+Ising heat-bath chain has full gap $a[1-\tanh(2b)]$ for every $N\ge3$.
+Here $a$ is the per-site refresh rate and $b\ge0$ the dimensionless
+nearest-neighbour coupling. Hamming contraction controls all modes and
+magnetization attains the bound. Bounded coupling and a clock floor give a
+uniform finite-volume gap; finite range alone permits joint coupling/size
+closure, and a fixed total clock adds a $1/N$ slowdown.
+The [C124 proof](../notes/interacting-ising-gap.md) replaces tensorization
+without an extensive full-frame susceptibility sum. B68 records a bounded
+model/method audit, including unavailable Glauber formula images. Further
+interaction variants are parked until a named operator or limit dependency
+requires them. See also [the susceptibility proof](../notes/susceptibility-gap.md).
 
 A Yang–Mills transfer additionally requires its physical quantum Hamiltonian,
 gauge-invariant observables, continuum and infinite-volume construction and
@@ -106,7 +112,7 @@ only its own operator statement.
 | Fluctuation and independent composition | C035–C036 give a common coefficient using a positive reference | Preparation equivalence and origin of reference fluctuations |
 | Prepared apparatus and records | C068–C123 give recovery and ambiguity under explicit data restrictions | Irreducible, universal information/preparation constraints |
 | Coherent paths | C039–C040 give continuum and measured-cut comparisons | Necessity of amplitudes, measurement rule and action parameter |
-| Observable response | C041–C046 give gap criteria and hidden-mode countertests | Interaction and limit estimates, physical operator identification |
+| Observable response and interaction | C041–C046 give gap criteria; C124 gives an interacting uniform finite-volume gap | Origin of coupling/clock control, physical operator identification and further limits |
 
 The [consolidated paper](../out/papers/action-scale-obstructions.pdf) supplies
 short arguments and links to the full proofs. The receiver/calibration

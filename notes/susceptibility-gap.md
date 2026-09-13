@@ -270,14 +270,18 @@ Corollary 12.13, use weighted discrete random scan. Our additive continuous
 generator and local-frame consequence are derived above; [B22](../references/batches/B22.md)
 records the precise normalization and source review.
 
-## 8. Next mechanical test and reproduction
+## 8. Interacting control and reproduction
 
-G02 identifies two sufficient routes: uniformly calibrated full coverage, or
-local coverage with independent-factor dynamics controlling mixed modes.
-The next mechanical step specifies a conservative receiver and derives its
-correlation and measurement scales. Interactions require a fresh estimate;
-the independence premise must be replaced by a proved dynamical bound.
-A09 retains preparation independence and coherent-action scale selection.
+G03 now replaces independence in one explicit family. The
+[periodic Ising heat-bath proof](interacting-ising-gap.md) gives the exact
+full relaxation gap $a[1-\tanh(2b)]$ for every $N\ge3$, where $a$ is the
+per-site refresh rate and $b$ the dimensionless nearest-neighbour coupling.
+A common-clock Hamming coupling controls all modes; magnetization attains
+the bound. Bounded coupling and a positive clock floor give a uniform
+finite-volume gap. Finite range alone permits closure when coupling grows
+with size, and fixing total refresh rate instead introduces a factor $1/N$.
+C124 and B68 record the proof and bounded literature status. Q01 is the
+selected next track; further interaction variants require a named dependency.
 
 The written proofs are the mathematical verification route. Earlier scripts
 are historical artifacts under the repository's hard verification rule. The

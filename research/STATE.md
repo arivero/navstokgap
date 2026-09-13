@@ -1,9 +1,11 @@
 # Restart state
 
-Updated: 2026-09-13. **P04 and Q01's first passage milestone complete.**
+Updated: 2026-09-13. **G03 interacting-gap milestone complete (C124/B68).**
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
-operational exclusion premises and remaining mechanical action step.
+operational exclusion premises and remaining mechanical action step. The
+[Ising proof](../notes/interacting-ising-gap.md) supplies an interacting gap
+uniform in finite volume at bounded coupling and fixed per-site clock.
 
 ## Current ordered work
 
@@ -12,19 +14,18 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **G03 — selected next gap-track milestone.** Choose
-   one explicit interacting extension of G02 and test a size-independent gap
-   estimate. State invariant law, clock, observable calibration and interaction
-   range. A proof or a counterexample must decide which interaction premise
-   is needed; two sites alone do not establish uniformity in system size.
-2. **Q01 — next eligible quantum decision.** Use B67's premise map to define
+1. **Q01 — selected next quantum decision.** Use B67's premise map to define
    an exact finite-capacity operational description closed under reversible
    transformations and composition. Test which independent physical premise
    enforces that closure or purification in the mechanical class. Hardy's
    moving-ball example motivates this question; trajectory continuity alone
-   does not settle it. K01 is supporting if its context assumption is decisive.
-   Stop at one explicit model/countermodel and premise decision, not a full
-   reconstruction-proof audit. See [Q01 handoff](handoffs/Q01.md).
+   does not settle it. Stop at one explicit model/countermodel and premise
+   decision, not a full reconstruction-proof audit. See [Q01 handoff](handoffs/Q01.md).
+2. **K01 — supporting alternative if context independence is decisive.**
+   Test whether local measurement descriptions extend to one common
+   system-plus-apparatus state, using I007 and the exact operational class
+   selected in Q01. Select only if this changes Q01's exclusion premise;
+   otherwise reassess the gap track after the Q01 milestone.
 
 After each milestone, replace this list with the next actual choices. An open
 umbrella task does not reserve all subsequent sessions.
@@ -42,13 +43,17 @@ umbrella task does not reserve all subsequent sessions.
   a substantive correction, or explicit user direction.
 - C039–C040: the checkerboard limit supplies quantum consequences under chosen
   amplitudes, measurement rule and K>0. Necessity remains Q01's question.
-- C041–C046: observable coverage and susceptibility control finite relaxation
-  gaps; interactions and uniform limits motivate G03.
+- C041–C046 and C124: observable coverage, independent composition and an
+  explicit interacting chain give relaxation-gap control. G03 is complete:
+  bounded coupling and a clock floor yield a uniform finite-volume bound.
+  General-graph variants are parked for a named operator/limit dependency;
+  a physical Hamiltonian and continuum transfer remain open.
 - A19, A14, R02, M03 and historical H11 remain supporting work. Select them
   when they decide a named main-track premise or the user requests them.
 
-The [ledger](../claims/LEDGER.md) owns acceptance and literature status. No
-new mathematical claim was promoted in P04. The [dated state history](STATE-history-2026-09-12.md)
+The [ledger](../claims/LEDGER.md) owns acceptance and literature status. P04
+promoted no new claim; G03 adds C124 with written proof review and bounded B68
+literature coverage, including the unresolved source-image boundary. The [dated state history](STATE-history-2026-09-12.md)
 and task handoffs preserve the earlier milestones; their old next-task text
 is historical. User-supplied bibliography and source originals remain intact.
 

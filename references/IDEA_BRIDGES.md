@@ -42,6 +42,13 @@ clock, gauge/observable domain if present, and uniform calibration. A finite
 matrix computation does not settle the size limit. The [maintained note](../notes/susceptibility-gap.md)
 has the written proofs and gap/physical-energy boundary.
 
+G03/C124 now implements the interaction test in a periodic Ising heat-bath
+chain: [B68](batches/B68.md) links Glauber's magnetization mode and standard
+coupling to an exact all-mode gap. The retained premise is a neighbour-influence
+sum uniformly below one plus a per-site clock floor. Finite range alone does
+not control joint coupling/size limits. General-graph variants are parked
+until they discharge a named physical-operator or limit dependency.
+
 ## Consolidation before another subcase
 
 [The synthesis](../notes/action-scale-obstructions.md) maps the accepted
