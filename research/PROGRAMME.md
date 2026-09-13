@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 56, 2026-09-13. The programme consolidates the accepted results into
+Version 57, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -53,6 +53,14 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+C127's [Hamiltonian test](../notes/hamiltonian-moment-descent.md) now separates
+microscopic reversibility from operational descent. Two zero-energy spin
+preparations share all retained first/cross moments but an allowed product
+test distinguishes them after the interaction. The next repair decision is
+whether any finite enlarged observable space closes for all preparations,
+or whether this interaction forces an infinite hierarchy. This changes the
+finite operational-state premise rather than refining another calibration law.
 
 A candidate must discharge five gates in [the action target](ACTION_FIELD_TARGET.md):
 classical definition and units; exclusion of zero; convergence in a named

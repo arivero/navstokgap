@@ -8,6 +8,12 @@ are retained context; their words "next" and "current" describe that milestone.
 
 ## Quantum-premise audit — Q01, with K01 support
 
+[B72 Hamiltonian descent](../notes/hamiltonian-moment-descent.md): classical
+spin Poisson dynamics -> exact same-moment preparations separate under
+H=J u_z v_z -> test finite invariant observable closure, not hidden-flow
+reversibility alone. The missing E[u_y v_z^2] gives a hierarchy seed.
+The source's quantization prescription supplies no necessity argument.
+
 [B70 interaction theorem](../notes/reversible-interaction-premise.md):
 de la Torre et al. Theorems 1–2 -> nonlocal connected reversible dynamics
 exclude the minimal ball composite -> test physical descent of hidden

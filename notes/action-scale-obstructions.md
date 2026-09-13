@@ -230,4 +230,9 @@ The stronger quantum operational conclusion uses identical-copy and
 ancilla/measurement/discard closure. Physical reversible descent and action
 normalization remain open. G04 now makes the gap-track operator bridge
 explicit and conditional. [STATE](../research/STATE.md) selects a mechanical
-reversible-descent test for Q01 before extending either construction.
+finite-repair test for Q01. The [exact spin pair](hamiltonian-moment-descent.md)
+(C127/B72) shares first/cross moments and zero energy initially, yet yields
+product-test probabilities $(1-\sin(Jt/S_A))/4$ and $1/4$. Its reversible
+Hamiltonian flow does not descend to the fixed operational quotient. The next
+question is whether any finite enlargement restores exact closure for all
+preparations. Spin magnitudes and their action units remain supplied inputs.

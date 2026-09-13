@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **G04 Hermitian transfer complete (C126/B71).**
+Updated: 2026-09-13. **Q01 Hamiltonian descent test complete (C127/B72).**
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
 operational exclusion premises and remaining mechanical action step. The
@@ -14,20 +14,20 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **Q01 — selected mechanical reversible-descent test.** Specify a two-orientation
-   classical Hamiltonian interaction and test whether C125's retained first and
-   joint moments close under it. Stop at an explicit same-moment preparation
-   pair with different evolved retained moments, or a proved sufficient closure
-   condition. This decides whether microscopic reversible interaction supplies
-   B70's operational reversible gate or needs an additional restriction on
-   preparations/effects. One bounded audit; no full reconstruction campaign.
+1. **Q01 — selected finite-repair decision.** C127's same-moment pair evolves
+   to different terminal probabilities under a reversible spin interaction.
+   Test whether any finite-dimensional enlargement containing the retained
+   effects closes under this Hamiltonian for all admitted preparations. Stop
+   at an invariant finite observable space or an infinite independent family.
+   This decides whether finite enlargement repairs the B70 premise; do not
+   merely calculate one further moment or another interaction example.
 2. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its
    imaginary-time semigroup, or a named infinite-volume/continuum dependency.
    Further parent or coupling variants are parked.
 
-See [G04 handoff](handoffs/G04.md) for the decision. Q01's technical theorem
+See [descent handoff](handoffs/Q01-descent.md) for the decision. Q01's technical theorem
 proof and K01 remain supporting when an acceptance or context-independence
 question requires them. The two tracks now both expose a physical dynamics
 premise: exact reversible operational descent versus sampling-clock transfer.

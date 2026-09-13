@@ -191,11 +191,19 @@ ID or positive action claim is added by this source milestone.
 
 | C126 | For C124, the square-root Gibbs transform is a positive three-site local frustration-free Hermitian operator with unique ground state sqrt(pi), exact gap a[1-tanh(2b)] and energy gap Ka[1-tanh(2b)] for supplied action K>0; physical clock/action identification remains a premise | [G04 derivation](../notes/ising-hermitian-transfer.md); [B71 written review](../reviews/ising-hermitian-B71.md); full finite-volume spectrum inherited from C124 |
 
+| C127 | H=J u_z v_z on two fixed-magnitude classical spin spheres has two zero-energy preparations with identical first/cross moments but product-test probabilities (1-sin(Jt/S_A))/4 and 1/4; its reversible hidden flow therefore fails to induce a single-valued evolution on C125's quotient | [Mechanical proof](../notes/hamiltonian-moment-descent.md); exact preparations/trajectories; [B72 review](../reviews/spin-descent-B72.md); supplied spin magnitudes and fixed effects |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C127: [B72](../references/batches/B72.md) verifies classical-spin precedent
+in Radošević et al., arXiv:2503.16308v2 §§V.1–V.2. The quotient counterexample
+is a derived application, with no novelty claim. One Luna-low worker and
+coordinator proof/source review; publisher access failure, preprint coverage
+and query overrun are recorded.
 
 C126: [B71](../references/batches/B71.md) matches the established detailed-balance
 Hermitian and stochastic-matrix-form constructions of Henley and Castelnovo
