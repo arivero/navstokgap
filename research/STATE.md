@@ -59,7 +59,10 @@ promoted no new claim; G03 adds C124 with written proof review and bounded B68
 literature coverage, including the unresolved source-image boundary. C126
 adds the reviewed finite-volume transfer and B71 parent-mapping audit. The [dated state history](STATE-history-2026-09-12.md)
 and task handoffs preserve the earlier milestones; their old next-task text
-is historical. User-supplied bibliography and source originals remain intact.
+is historical. [B73](handoffs/B73.md) adds the exact Lubetzky–Sly literature
+match for C124, three archived publication routes and a supporting foundational
+assessment. The ordered research choices above are unchanged.
+User-supplied bibliography and source originals remain intact.
 
 ## Constraints and validation
 

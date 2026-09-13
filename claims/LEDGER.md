@@ -218,7 +218,14 @@ Capacity and parity-face checks are derived applications; no novelty claim.
 One Luna-low worker and coordinator proof/source review; date and anchors
 corrected. Measurement restrictions remain explicit model premises.
 
-C124: [B68](../references/batches/B68.md) matches Glauber model/magnetization
+C124: [B73](../references/batches/B73.md), added 2026-09-13, supplies a direct
+statement match in Lubetzky–Sly, arXiv:0909.4320v1 p. 4, with the rate-one
+conditional-refresh convention on p. 5. The exact gap is established literature,
+rederived by the project's accepted proof. The source itself calls it already
+known. B73 supersedes the unmatched-formula status; it preserves C124's proof
+and the following historical coverage.
+
+Historical B68 coverage: [B68](../references/batches/B68.md) matches Glauber model/magnetization
 passages through an indexed transcription and Bubley–Dyer coupling passages
 in a primary PDF. Glauber formula images remain unverified; no exact source
 transcription is promoted. The self-contained all-mode proof is reviewed and

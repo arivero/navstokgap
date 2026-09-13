@@ -10,6 +10,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
 | P04 | done | Consolidated action-scale obstruction paper, short restart state, priority/stop rules and routing review; no new claims | Coordinator | [Handoff](handoffs/P04.md) |
+| B73 | done | Three publication routes archived; Lubetzky–Sly exact gap/clock match, bibliography and foundational assessment; no new mathematical claim | Coordinator follow-up to B68/B71 | [Handoff](handoffs/B73.md) |
 | H10 | done | Indian contact/traversal, Chinese solid dissection and Mohist statics, access-limited Avicennian comparison; reviewed passages and source capsule | Coordinator + one sequential Luna medium | [H10 handoff](handoffs/H10.md) |
 | H11 | ready | Collate Liu Hui juan 5 facsimile pages 18–19; retrieve Ibn Sina Physics III.4 contact/millstone passage; record exact access and wording | One bounded source worker, sequential | H10; two witness targets, no regional sweep |
 | K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); targeted Q01 dependency or explicit user request |

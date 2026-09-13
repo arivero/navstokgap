@@ -7,6 +7,13 @@ independence premise by a quantitative interaction contraction. Bounded $b$
 and a positive per-site clock floor give a size-independent bound; finite
 interaction range alone does not control joint size/coupling limits.
 
+The exact gap is an established result, explicitly recorded by
+[Lubetzky–Sly, preprint p. 4](https://arxiv.org/pdf/0909.4320v1).
+[B73](../references/batches/B73.md) matches their rate-one convention to the
+rate $a$ here. The following self-contained proof retains the model's role
+as an interacting benchmark; its [foundational use](ising-foundational-value.md)
+separates relaxation, global mixing and physical energy normalization.
+
 ## 1. Model, law, clock and access
 
 On $\Omega_N=\{-1,1\}^N$ with cyclic indices and $N\ge3$, let

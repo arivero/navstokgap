@@ -70,6 +70,13 @@ sum uniformly below one plus a per-site clock floor. Finite range alone does
 not control joint coupling/size limits. General-graph variants are parked
 until they discharge a named physical-operator or limit dependency.
 
+[B73](batches/B73.md) matches the exact gap to Lubetzky–Sly p. 4.
+Corollary 3 and the p. 5 clock convention add a source input: uniform gap
+with logarithmically growing global mixing time -> distinguish slow-mode
+decay, global equilibration and physical energy -> consult
+[the foundational assessment](../notes/ising-foundational-value.md) for a
+named generator-identification question.
+
 G04/C126 and [B71](batches/B71.md) now supply the local Hermitian parent:
 Henley Eq. (3.7) and Castelnovo et al. Eqs. (19), (26), (28b) -> square-root
 Gibbs transform with freely chosen rates -> compare an independently specified

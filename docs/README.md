@@ -25,6 +25,11 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [Lubetzky–Sly: Ising cutoff](LubetzkySly_IsingCutoff_0909.4320v1.md):
+  established gap, clock convention and global mixing-time comparison;
+  [B73](../references/batches/B73.md) and
+  [foundational assessment](../notes/ising-foundational-value.md).
+
 - [B60](../references/batches/B60.md): two calibrations, local inverses and global branches;
   [source companion](batches/B60/two-calibration-source-companion.md).
 - [B57](../references/batches/B57.md): exact two-energy receiver ambiguity;

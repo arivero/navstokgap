@@ -75,6 +75,10 @@ publication priority than the three candidates saved here. This records the
 review's finding; the existing ledger and B68 audit retain their original
 coverage statements.
 
+Follow-up: [B73](../references/batches/B73.md) now records this match in the
+bibliography and claim ledger, with a separate
+[foundational assessment](../notes/ising-foundational-value.md).
+
 The workflow lesson is that our audits have been stronger at verifying
 ingredients than at finding prior publication of the finished result.
 Publication preparation needs a separate, result-specific literature pass.
