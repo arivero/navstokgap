@@ -9,8 +9,8 @@ Update task state and the handoff when substantive work ends. Preserve existing
 user changes in the worktree.
 
 On a fresh session, or after context compaction when the source-to-task context
-has been lost, read `skills/navstokgap-bibliography/SKILL.md` and load its
-task-relevant source-idea capsule. Reuse a current capsule already retained in
+has been lost, read the source-recovery section of `skills/principia-action/SKILL.md`
+and load its task-relevant source-idea capsule. Reuse a current capsule already retained in
 the handoff/summary. This applies to source workers within their assigned
 budget; context recovery itself launches no additional worker or web sweep.
 
