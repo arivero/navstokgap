@@ -54,6 +54,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=A uniform relaxation gap with nearest-neighbour interactions",
          "-o", "papers/interacting-ising-gap.tex"])
+    run(["pandoc", "notes/ising-hermitian-transfer.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=The Ising gap and its local Hermitian parent",
+         "-o", "papers/ising-hermitian-transfer.tex"])
     run(["pandoc", "notes/bounded-acceleration-return.md", "--standalone", "--to=latex",
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=A sharp mechanical cost for a finite-duration reversal",
@@ -73,7 +77,8 @@ def main():
                   "classical-action-field", "collision-action-relaxation",
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
                   "composition-universality", "checkerboard-dynamics",
-                  "susceptibility-gap", "interacting-ising-gap", "bounded-acceleration-return",
+                  "susceptibility-gap", "interacting-ising-gap", "ising-hermitian-transfer",
+                  "bounded-acceleration-return",
                   "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)

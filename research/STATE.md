@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **Q01 interaction-premise audit complete (B70).**
+Updated: 2026-09-13. **G04 Hermitian transfer complete (C126/B71).**
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
 operational exclusion premises and remaining mechanical action step. The
@@ -14,23 +14,23 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **G04 — selected physical-operator transfer test.** Construct the finite-volume
-   Hermitian representative of G03's reversible generator by the square-root
-   stationary-density transform. Identify its ground state, locality, spectral
-   normalization and the physical clock/action assumptions needed to call its
-   gap an energy gap. Stop at whether this supplies an independent physical
-   Hamiltonian or a conditional stochastic-parent construction. No continuum
-   or Yang–Mills claim; one bounded source audit of this operator connection.
-2. **Q01 — supporting quantum dependency.** B70 excludes an interacting
-   reversible extension preserving C125's minimal composite. The theorem's
-   technical proof and a physical justification of reversible descent to the
-   operational quotient remain separate. Select either only for a named
-   acceptance or mechanical premise decision. K01 remains supporting if
-   context independence becomes decisive.
+1. **Q01 — selected mechanical reversible-descent test.** Specify a two-orientation
+   classical Hamiltonian interaction and test whether C125's retained first and
+   joint moments close under it. Stop at an explicit same-moment preparation
+   pair with different evolved retained moments, or a proved sufficient closure
+   condition. This decides whether microscopic reversible interaction supplies
+   B70's operational reversible gate or needs an additional restriction on
+   preparations/effects. One bounded audit; no full reconstruction campaign.
+2. **Gap track — supporting physical identification.** G04/C126 supplies the
+   explicit local Hermitian parent and its inherited finite-volume gap. Return
+   only with independently specified physical dynamics to compare against its
+   imaginary-time semigroup, or a named infinite-volume/continuum dependency.
+   Further parent or coupling variants are parked.
 
-See [interaction handoff](handoffs/Q01-interaction.md) for the track comparison.
-After three Q01 milestones, G04 targets the remaining physical-operator bridge;
-G03's sampling interaction does not supply B70's reversible operational gate.
+See [G04 handoff](handoffs/G04.md) for the decision. Q01's technical theorem
+proof and K01 remain supporting when an acceptance or context-independence
+question requires them. The two tracks now both expose a physical dynamics
+premise: exact reversible operational descent versus sampling-clock transfer.
 
 ## Consolidated findings and parked work
 
@@ -46,16 +46,18 @@ G03's sampling interaction does not supply B70's reversible operational gate.
 - C039–C040: the checkerboard limit supplies quantum consequences under chosen
   amplitudes, measurement rule and K>0. Necessity remains Q01's question.
 - C041–C046 and C124: observable coverage, independent composition and an
-  explicit interacting chain give relaxation-gap control. G03 is complete:
+  explicit interacting chain give relaxation-gap control. C126 constructs the local Hermitian parent;
+  its energy normalization retains a supplied action constant. G03 is complete:
   bounded coupling and a clock floor yield a uniform finite-volume bound.
   General-graph variants are parked for a named operator/limit dependency;
-  a physical Hamiltonian and continuum transfer remain open.
+  independent physical identification and continuum transfer remain open.
 - A19, A14, R02, M03 and historical H11 remain supporting work. Select them
   when they decide a named main-track premise or the user requests them.
 
 The [ledger](../claims/LEDGER.md) owns acceptance and literature status. P04
 promoted no new claim; G03 adds C124 with written proof review and bounded B68
-literature coverage, including the unresolved source-image boundary. The [dated state history](STATE-history-2026-09-12.md)
+literature coverage, including the unresolved source-image boundary. C126
+adds the reviewed finite-volume transfer and B71 parent-mapping audit. The [dated state history](STATE-history-2026-09-12.md)
 and task handoffs preserve the earlier milestones; their old next-task text
 is historical. User-supplied bibliography and source originals remain intact.
 

@@ -189,11 +189,20 @@ ID or positive action claim is added by this source milestone.
 
 | C125 | Hidden orientations with affine effects give an exact operational ball of capacity two and reversible pure-state rotations; n-component joint measures and product tests have capacity 2^n and linear dimension 4^n, but pure composites are products and the equal-sign capacity-two face is a segment, so purification and Hardy subspace structure fail | [Q01 countermodel](../notes/classical-orientation-closure.md); stipulated measurement/composition class and written moment/capacity proof; [B69 review](../reviews/orientation-closure-B69.md) |
 
+| C126 | For C124, the square-root Gibbs transform is a positive three-site local frustration-free Hermitian operator with unique ground state sqrt(pi), exact gap a[1-tanh(2b)] and energy gap Ka[1-tanh(2b)] for supplied action K>0; physical clock/action identification remains a premise | [G04 derivation](../notes/ising-hermitian-transfer.md); [B71 written review](../reviews/ising-hermitian-B71.md); full finite-volume spectrum inherited from C124 |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C126: [B71](../references/batches/B71.md) matches the established detailed-balance
+Hermitian and stochastic-matrix-form constructions of Henley and Castelnovo
+et al. The local Ising formula is a written derived specialization with an
+independent coefficient review; the exact gap inherits C124. Two primary
+sources and eight selected pages, corrected to one-based page anchors in
+coordinator review. No novelty claim or independent physical identification.
 
 C125: [B69](../references/batches/B69.md) matches established restricted
 single-system models and minimal tensor products in Janotta–Hinrichsen.

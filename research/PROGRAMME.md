@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 55, 2026-09-13. The programme consolidates the accepted results into
+Version 56, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -22,8 +22,8 @@ countermodels remains open. Spectral work gives finite-system criteria, independ
 C124's interacting Ising gap uniform in finite volume at bounded coupling.
 Physical-operator identification and further uniform limits remain open.
 
-This version integrates G03's interacting finite-volume gap C124 and its
-bounded B68 source audit. No novelty is asserted. [The ledger](../claims/LEDGER.md)
+This version integrates G04's local Hermitian parent C126 and its
+bounded B71 source audit alongside G03's interacting gap C124. No novelty is asserted. [The ledger](../claims/LEDGER.md)
 retains proof and literature status, including the limits of each source audit.
 
 ## Quantum track: identify the excluded classical alternative
@@ -80,9 +80,11 @@ coordinates already meet the local-qubit premise. Identical-copy consistency
 and operational ancilla/measurement/discard closure underlie the stronger
 quantum reconstruction. The technical theorem proof remains unaudited here;
 physical reversible descent and action normalization remain open.
-G03's relaxation interaction is a distinct operator premise. G04 will test
-its finite-volume Hermitian representative, ground state and normalization
-to locate the remaining physical-Hamiltonian identification.
+G04's [Hermitian transfer](../notes/ising-hermitian-transfer.md) (C126/B71)
+gives a positive three-site local parent with square-root Gibbs ground state
+and energy-unit gap $Ka[1-\tanh(2b)]$. Both action constant K and the physical
+clock identification are supplied. This resolves the finite-volume operator
+construction while retaining the independent physical-dynamics premise.
 
 G01/G02 establish the finite reversible-generator estimate
 

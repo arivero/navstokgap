@@ -181,10 +181,21 @@ plateau can miss that vector; C041 and C045 exhibit closing gaps with a fixed
 plateau. Full rank at each parameter is insufficient when calibration becomes
 arbitrarily weak. Independent product dynamics control mixed modes (C046).
 
-G03 asks for an interaction estimate preserving a gap uniformly as system size
-increases. The observable coverage and response constants must also be
-controlled; a finite-dimensional trace bound can deteriorate with size.
-The [susceptibility proof](susceptibility-gap.md) records the exact hypotheses.
+G03 supplies the interacting Ising gap $a[1-\tanh(2b)]$ uniformly in finite
+volume at bounded coupling and fixed per-site refresh rate (C124).
+[G04's transform](ising-hermitian-transfer.md) gives a positive local Hermitian
+operator on the spin Hilbert space (C126):
+
+$$A_N=-D^{1/2}Q_ND^{-1/2},\qquad
+|\Omega\rangle=\sum_\sigma\sqrt{\pi(\sigma)}|\sigma\rangle,\qquad
+\Delta_{K A_N}=Ka[1-\tanh(2b)].$$
+
+Here D is the diagonal Gibbs law and K is a supplied action constant. Each
+term acts on three neighbouring sites and annihilates the ground state.
+Rescaling the refresh clock preserves that state and locality while rescaling
+the gap. The construction therefore retains physical time and action
+identification as premises; the [B71 audit](../references/batches/B71.md)
+matches the established stochastic-parent mapping.
 
 A Yang–Mills application additionally needs the physical Hamiltonian and
 quantum theory, gauge-invariant observables, and continuum and infinite-volume
@@ -202,6 +213,7 @@ classical action observable nor a toy relaxation gap supplies that construction.
 | Preparation and records | C068–C069, C090–C123; section 4 links and ledger | B37, B48–B66 |
 | Coherent versus probabilistic path rules | C039–C040; checkerboard note | B18 |
 | Slow modes, calibrated coverage and product control | C041–C042, C045–C046; susceptibility note | B20, B22 |
+| Interacting gap and local Hermitian parent | C124, C126; Ising and transfer notes | B68, B71 |
 
 Q01's [premise map](quantum-exclusion-premises.md) identifies reversible
 pure-state connectivity and purification as distinct classical-exclusion
@@ -216,5 +228,6 @@ The [B70 theorem map](reversible-interaction-premise.md) now excludes a
 continuous reversible interacting extension preserving that minimal composite.
 The stronger quantum operational conclusion uses identical-copy and
 ancilla/measurement/discard closure. Physical reversible descent and action
-normalization remain open; [STATE](../research/STATE.md) selects G04's
-physical-operator transfer test after this quantum milestone.
+normalization remain open. G04 now makes the gap-track operator bridge
+explicit and conditional. [STATE](../research/STATE.md) selects a mechanical
+reversible-descent test for Q01 before extending either construction.

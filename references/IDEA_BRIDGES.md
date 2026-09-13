@@ -64,6 +64,12 @@ sum uniformly below one plus a per-site clock floor. Finite range alone does
 not control joint coupling/size limits. General-graph variants are parked
 until they discharge a named physical-operator or limit dependency.
 
+G04/C126 and [B71](batches/B71.md) now supply the local Hermitian parent:
+Henley Eq. (3.7) and Castelnovo et al. Eqs. (19), (26), (28b) -> square-root
+Gibbs transform with freely chosen rates -> compare an independently specified
+physical imaginary-time generator -> physical clock and action normalization
+remain the deciding premises. Further parent variants are parked.
+
 ## Consolidation before another subcase
 
 [The synthesis](../notes/action-scale-obstructions.md) maps the accepted
