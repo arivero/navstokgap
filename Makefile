@@ -17,3 +17,4 @@ figures:
 
 publication: papers
 	$(PYTHON) scripts/package_publication.py
+	$(PYTHON) scripts/package_publication.py --paper classical-spins-operational-closure

@@ -48,9 +48,14 @@ def main():
     if len(keys) != len(set(keys)):
         errors.append("Duplicate shared bibliography key")
     for paper_path in (ROOT / "papers").glob("*.tex"):
-        for group in re.findall(r"\\cite(?:\[[^]]*\])?\{([^}]+)\}", paper_path.read_text()):
+        paper_text = paper_path.read_text()
+        local_keys = re.findall(r"\\bibitem(?:\[[^]]*\])?\{([^}]+)\}", paper_text)
+        if len(local_keys) != len(set(local_keys)):
+            errors.append(f"{paper_path.name}: duplicate inline bibliography key")
+        available_keys = set(keys) | set(local_keys)
+        for group in re.findall(r"\\cite(?:\[[^]]*\])?\{([^}]+)\}", paper_text):
             for key in group.split(","):
-                if key.strip() not in keys:
+                if key.strip() not in available_keys:
                     errors.append(f"{paper_path.name}: missing bibliography key: {key}")
     if errors:
         raise SystemExit("\n".join(errors))

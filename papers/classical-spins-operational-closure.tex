@@ -1,0 +1,268 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,tabularx}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Classical spins and the dynamical meaning of an operational state},pdfauthor={Author-review draft}}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\title{Classical spins and the dynamical meaning of an operational state}
+\author{Author-review draft}
+\date{13 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A classical random orientation observed through affine directional responses
+has the operational state space of a qubit. We use two interacting classical
+spins to show why this finite statistical description requires a separate
+dynamical consistency condition. Two preparations with identical retained
+statistics acquire different terminal probabilities under one smooth reversible
+Hamiltonian. The interaction admits no exact finite enlargement of the retained
+expectation coordinates for all probability preparations, even with nonlinear
+coordinate updates. The explicit example distinguishes statistical dimension,
+distinguishability capacity and reversible operational closure, and identifies
+the additional physical input required when applying quantum reconstruction
+principles to classical mechanics.
+\end{abstract}
+
+\section{When a state description predicts its own evolution}
+An operational state groups preparations that give the same probabilities for
+an assigned collection of experiments. A dynamical law on those states must
+preserve this equivalence: initially equivalent preparations must remain
+equivalent after the same evolution. This condition concerns the sufficiency
+of the description, independently of whether the microscopic equations are
+reversible.
+
+Restricted classical models and minimal tensor products provide a standard
+way to separate local statistics from composition \cite{janotta}. Quantum
+reconstruction results make composition and reversible transformations
+substantive hypotheses \cite{hardy,cdp,torre}. We illustrate their physical
+role with a classical spin interaction and an exact observable-closure test.
+Finite invariant observable spaces are familiar from Koopman theory
+\cite{brunton}; the argument here is an explicit application to the retained
+measurement statistics of this model.
+
+The example uses all Borel probability preparations and stipulated affine
+terminal measurements. Its result concerns exact finite expectation-coordinate
+descriptions on a nonzero time interval. Approximate closure and restricted
+preparations pose different questions. The fixed spin magnitudes supply action
+units; the construction leaves the physical selection of a universal action
+constant as a separate task.
+
+\section{A classical orientation with qubit statistics}
+Let the hidden orientation be $u\in S^2\subset\R^3$. A preparation is any
+Borel probability measure $\mu$. An allowed measurement is a finite family
+\begin{equation}
+ e_i(u)=a_i+b_i\cdot u,\qquad a_i\ge |b_i|,\qquad
+ \sum_i a_i=1,\quad\sum_i b_i=0.
+\end{equation}
+These nonnegative responses sum to one. Their probabilities depend exactly
+on $r=\int u\,d\mu$, since directional binary measurements determine its
+three components. Every $|r|\le1$ is a mixture of opposite orientations.
+The state space is therefore the unit ball, with three normalized coordinates
+and four unnormalized linear coordinates.
+
+Using Pauli matrices as a coordinate basis,
+\begin{equation}
+ \rho(r)=\tfrac12(I+r\cdot\sigma),\qquad E_i=a_iI+b_i\cdot\sigma,
+ \qquad \operatorname{tr}(E_i\rho)=a_i+b_i\cdot r.
+\end{equation}
+Thus the allowed local states and effects have the usual qubit representation.
+Rotations $u\mapsto Ru$, $R\in SO(3)$, descend to $r\mapsto Rr$ and
+connect all pure ball states continuously and reversibly.
+
+The perfectly distinguishable capacity is two. If outcomes distinguish $k$
+states $r_i$ perfectly, then $1=a_i+b_i\cdot r_i\le2a_i$ for each success
+outcome. Summing gives $k\le2$; opposite poles attain two. Capacity counts
+perfectly distinguishable alternatives in one measurement, whereas statistical
+dimension counts independent probability coordinates.
+
+\subsection{Composition supplies another choice}
+For $n$ components admit all joint measures on $(S^2)^n$ and product
+measurements, their mixtures and coarse-grainings. The retained state is
+\begin{equation}
+ z=\int (1,u_1)\otimes\cdots\otimes(1,u_n)\,d\mu.
+\end{equation}
+Product effects span these $4^n$ unnormalized coordinates. The state space is
+the convex hull of product ball states, equivalently separable density
+matrices in the Pauli representation. Local rotations and permutations
+preserve this description.
+
+Its capacity is $2^n$: every outcome is bounded by $2^n$ times its value at
+the product of zero ball vectors, including after mixing and coarse-graining.
+Normalization bounds the number of perfectly distinguished states by $2^n$;
+product pole tests attain it. Every extreme composite state is product-pure,
+because the compact product-pure set generates its convex hull. Conversely,
+pure marginals force each orientation almost surely, making such products
+extreme. Consequently every marginal of a pure composite is pure, so a mixed
+local state has no purification in this composite class.
+
+There is also a simple subspace contrast. For two components the equal-sign
+effect along axis $n$ is
+\begin{equation}
+ e_{\rm same}(u,v)=\tfrac12[1+(n\cdot u)(n\cdot v)].
+\end{equation}
+Probability one forces support on $(n,n)$ and $(-n,-n)$. The resulting
+capacity-two face is a segment rather than an elementary ball. This illustrates
+the additional content of Hardy's subspace requirement \cite{hardy} and of
+purification in the CDP reconstruction \cite{cdp}.
+
+\section{A reversible interaction distinguishes equal retained states}
+Give the spins fixed magnitudes $S_A,S_B>0$ with action units and choose
+$J>0$ with energy units. Standard classical-spin Poisson brackets
+\cite{spins} give
+\begin{equation}
+ \{u_i,u_j\}=S_A^{-1}\epsilon_{ijk}u_k,\quad
+ \{v_i,v_j\}=S_B^{-1}\epsilon_{ijk}v_k,\quad\{u_i,v_j\}=0,
+ \qquad H=Ju_zv_z.
+\end{equation}
+Use $\dot f=\{f,H\}$ and $\Omega_A=J/S_A$, $\Omega_B=J/S_B$.
+The equations include
+\begin{equation}\label{eq:flow}
+ \dot u_x=-\Omega_Au_yv_z,\quad\dot u_y=\Omega_Au_xv_z,
+ \quad\dot u_z=0,
+\end{equation}
+with the corresponding equations for $v$ obtained by exchanging the spins.
+Both sphere norms and $H$ are conserved. Smoothness on the compact product
+of spheres gives a complete flow $\Phi_t$ with inverse $\Phi_{-t}$.
+
+Let $e_x,e_y,e_z$ be coordinate unit vectors and prepare
+\begin{align}
+ \mu_A&=\delta_{e_y}(du)\,\tfrac12(\delta_{e_z}+\delta_{-e_z})(dv),\\
+ \mu_B&=\delta_{e_y}(du)\,\tfrac12(\delta_{e_x}+\delta_{-e_x})(dv).
+\end{align}
+Both have $\E u=e_y$, $\E v=0$ and $\E uv^T=0$, so every retained
+product measurement gives identical initial statistics. Both preparations
+also have microscopic energy zero.
+
+Since $u_z=0$, the second spin remains fixed. In $\mu_A$, writing
+$v=s e_z$ with $s=\pm1$,
+\begin{equation}
+ u(t)=(-s\sin\Omega_A t,\cos\Omega_A t,0).
+\end{equation}
+In $\mu_B$ we have $v_z=0$, so both orientations remain fixed. The allowed
+product effect $e(u,v)=(1+u_x)(1+v_z)/4$ therefore gives
+\begin{equation}\label{eq:separation}
+ p_A(t)=\tfrac14(1-\sin\Omega_A t),\qquad p_B(t)=\tfrac14.
+\end{equation}
+For sufficiently small positive time the outputs differ despite identical
+retained inputs. Thus even a single-valued reduced-state update fails for
+this interaction and preparation class. The hidden flow remains reversible,
+and each evolved preparation still defines a valid separable operational state.
+The missing information appears directly in
+\begin{equation}
+ \frac{d}{dt}\E[u_xv_z]=-\Omega_A\E[u_yv_z^2].
+\end{equation}
+
+\section{Exact finite enlargement also fails}
+The pullback $U_tf=f\circ\Phi_t$ acts on bounded Borel observables compared
+pointwise. All atomic preparations are admitted, so this is stronger than
+equality modulo a chosen reference measure.
+
+\begin{proposition}
+No finite-dimensional real space of bounded Borel observables containing
+$1$ and the original terminal effects is invariant under $U_t$ for every
+time in any nonzero interval, including a forward interval beginning at zero.
+\end{proposition}
+\begin{proof}
+The complexified space contains $w=u_x+iu_y$. Equation~\eqref{eq:flow} and
+constancy of $v_z$ give $U_tw=w\exp(i\Omega_A t v_z)$. Suppose finitely
+many distinct times obey $\sum_{j=1}^m c_jU_{t_j}w=0$. Restrict to
+$u=e_x$ and $v=(\sqrt{1-z^2},0,z)$, $-1<z<1$. Then
+\begin{equation}
+ \sum_{j=1}^m c_j\exp(i\Omega_A t_jz)=0.
+\end{equation}
+Differentiating in $z$ at zero through order $m-1$ gives a Vandermonde system
+in the distinct numbers $i\Omega_A t_j$. Its determinant is nonzero since
+$\Omega_A>0$, so every coefficient vanishes. There are arbitrarily many
+independent time translates, contradicting finite dimension. Only explicit
+exponentials were differentiated; added observables need no regularity.
+\end{proof}
+
+\begin{proposition}
+Allowing nonlinear updates of a finite expectation vector does not repair
+exact evolution for all admitted preparations.
+\end{proposition}
+\begin{proof}
+Let $f_0=1,f_1,\ldots,f_d$ be retained real observables. If $\E_\mu g$ is
+determined by their expectations for every probability measure $\mu$, then
+$g$ lies in their real linear span. Otherwise evaluation linear algebra gives
+finitely many points $x_j$ and real weights $a_j$ such that
+\begin{equation}
+ \sum_j a_j f_k(x_j)=0\quad(0\le k\le d),\qquad
+ \sum_j a_jg(x_j)\ne0.
+\end{equation}
+Indeed, if every relation between the evaluation vectors also annihilated
+$g$, evaluation of $g$ would define a linear functional on their span and
+express $g$ as a combination of the $f_k$. The relation for $f_0=1$ gives
+equal positive and negative masses. Normalizing them produces two atomic
+probability measures with identical retained expectations but different
+$g$-expectations. Apply this observation to $g=U_tf_k$: any single-valued
+expectation update forces invariance of the retained span, which the preceding
+proposition excludes.
+\end{proof}
+
+These propositions concern finite statistical dimension with ordinary
+probabilistic mixing. Infinite observable dimension by itself says nothing
+about perfectly distinguishable capacity. Approximation, restrictions on
+preparations and changed dynamics each alter a stated premise. At $J=0$
+the interaction disappears and static finite closure is restored.
+
+\section{What the example contributes to reconstruction}
+De la Torre and colleagues \cite{torre} study locally quantum, locally
+tomographic systems with continuous reversible operational interactions.
+Their theorem constrains composite structure and, with the specified
+identical-copy and operational closure assumptions, selects quantum theory.
+The spin example already has the required local ball representation. Its
+Hamiltonian interaction instead fails to induce a map on that finite
+operational state, and finite enlargement cannot supply one for all the
+admitted preparations. Microscopic reversibility therefore does not discharge
+the theorem's operational reversibility hypothesis.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Premise & Role in this example\\\midrule
+Affine terminal effects & Stipulated restriction yielding the local ball.\\
+All Borel preparations & Makes equality of expectations a pointwise test and permits atomic separation.\\
+Product measurements & Selects the minimal composite and its finite moment coordinates.\\
+Classical spin Hamiltonian & Supplies a complete reversible microscopic evolution.\\
+Exact finite operational closure & Fails under that interaction for the stated preparation class.\\
+Physical action identification & Spin magnitudes are supplied; universality requires additional physical input.\\\bottomrule
+\end{tabularx}
+\end{center}
+
+The dimensionless ball construction fixes probability geometry. Mechanical
+time enters the interaction through $\Omega_A t=Jt/S_A$, where $J$ and
+$S_A$ are independently specified model parameters. Relating a reconstructed
+transformation generator to measured energy and a universal phase per unit
+action is a further physical identification. The useful conclusion is a
+precise location for that requirement, alongside the requirement of a finite
+description stable under the allowed dynamics.
+
+\begin{thebibliography}{9}
+\bibitem{janotta} P. Janotta and H. Hinrichsen, ``Generalized Probability
+Theories: What determines the structure of quantum theory?''
+\href{https://arxiv.org/abs/1402.6562v3}{arXiv:1402.6562v3} (2014),
+Secs. 4 and 5.1.
+\bibitem{hardy} L. Hardy, ``Quantum Theory From Five Reasonable Axioms,''
+\href{https://arxiv.org/abs/quant-ph/0101012v4}{arXiv:quant-ph/0101012v4}
+(2001), Secs. 1, 4 and 7.
+\bibitem{cdp} G. Chiribella, G. M. D'Ariano and P. Perinotti,
+``Informational Derivation of Quantum Theory,'' Phys. Rev. A \textbf{84},
+012311 (2011), \href{https://arxiv.org/abs/1011.6451v3}{arXiv:1011.6451v3}.
+\bibitem{torre} G. de la Torre, Ll. Masanes, A. J. Short and M. P. M\"uller,
+``Deriving quantum theory from its local structure and reversibility,''
+\href{https://arxiv.org/abs/1110.5482v1}{arXiv:1110.5482v1} (2011),
+Theorems 1--2.
+\bibitem{spins} S. Rado\v{s}evi\'c et al., ``Hamiltonian Dynamics of Classical
+Spins,'' \href{https://arxiv.org/abs/2503.16308v2}{arXiv:2503.16308v2}
+(2025), Secs. V.1--V.2.
+\bibitem{brunton} S. L. Brunton, B. W. Brunton, J. L. Proctor and J. N. Kutz,
+``Koopman Invariant Subspaces and Finite Linear Representations of Nonlinear
+Dynamical Systems for Control,'' PLOS ONE \textbf{11}(2), e0150171 (2016),
+\href{https://doi.org/10.1371/journal.pone.0150171}{doi:10.1371/journal.pone.0150171}.
+\end{thebibliography}
+\end{document}

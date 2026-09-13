@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **P05 elastic-gas publication draft and PDF bundle complete.**
+Updated: 2026-09-13. **P06 spin publication draft and PDF bundle complete.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -15,15 +15,16 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **P06/Q01 — spin publication synthesis.** Assemble a standalone
-   operational-state manuscript and map C125–C128 and
-   B70 to the premises of exact finite statistical dimension, composition and
-   reversible closure. Separate stipulated operational axioms from mechanically
-   justified inputs and locate the missing time/energy-to-action identification.
-   Stop at a manuscript, PDF-inclusive bundle and claim-to-source consistency review,
-   reusing B67/B69/B70/B72/B74; select a new physical test only if that map names
-   an input capable of changing the conclusion. Further spin hierarchy and
-   truncation variants are parked.
+1. **P06a — spin publication positioning.** The
+   [manuscript and PDF bundle](../publication-routes/03-classical-spin-closure.md)
+   now consolidate C125–C128/B70. Audit the finished example against restricted
+   classical representations and exact finite observable closure: at most four
+   discovery queries, two primary sources and eight selected pages with one
+   sequential Sol-medium librarian. Stop at matches and a concrete editorial
+   decision: distinctive conceptual contribution or pedagogical framing.
+   Reuse the [P06 consistency map](../reviews/spin-publication-P06.md).
+   Further hierarchy/truncation variants remain parked; the physical
+   effect/preparation restriction and time/energy-to-action step stay open.
 2. **P05 — elastic-gas editorial readiness, supporting.** The
    [draft and PDF bundle](../publication-routes/01-elastic-gas-comparison.md)
    reuse C050–C051. B75 finds close Brownian preparation-dependence precedent,

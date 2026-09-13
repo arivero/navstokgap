@@ -24,6 +24,13 @@ The initial construction is in
 
 ## Journal route and remaining checks
 
+P06 now supplies a standalone [LaTeX manuscript](../papers/classical-spins-operational-closure.tex),
+[compiled PDF](../out/papers/classical-spins-operational-closure.pdf) and
+[PDF-inclusive bundle](../out/publications/classical-spins-operational-closure.zip).
+The [claim-to-source review](../reviews/spin-publication-P06.md) maps the
+consolidated results to their existing audits. Author details, result-specific
+prior-art positioning and editorial review remain before any submission.
+
 This is the best candidate for *Foundations of Physics*, provided we establish
 its contribution beyond familiar moment-closure problems. Restricted classical
 representations and composition issues already have substantial coverage in
@@ -35,8 +42,8 @@ reconstruction theorem. The repository's audits are
 
 The [finite-enlargement proof](../notes/hamiltonian-finite-closure.md) is now
 complete (C128/B74), including nonlinear updates of finite expectation vectors.
-The next publication step is a standalone operational-state synthesis joining
-C125–C128 and a claim-to-source map. Its contribution must be assessed against
+The standalone synthesis joins C125–C128 with a claim-to-source map.
+Its contribution must be assessed against
 restricted classical representations and exact finite Koopman closure; an
 infinite moment hierarchy by itself is not a novelty claim. The B70 technical
 proof remains unaudited, so the draft should use its stated premise boundary

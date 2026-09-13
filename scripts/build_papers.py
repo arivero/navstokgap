@@ -82,7 +82,7 @@ def main():
                   "susceptibility-gap", "interacting-ising-gap", "ising-hermitian-transfer",
                   "bounded-acceleration-return",
                   "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme",
-                  "same-collisions-different-transport"):
+                  "same-collisions-different-transport", "classical-spins-operational-closure"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
@@ -102,7 +102,7 @@ def main():
         if warnings:
             raise SystemExit(f"Layout overflow in {paper}: {warnings}")
         shutil.copy2(build / f"{paper}.pdf", output / f"{paper}.pdf")
-        if paper == "same-collisions-different-transport":
+        if paper in ("same-collisions-different-transport", "classical-spins-operational-closure"):
             source = ROOT / "papers" / f"{paper}.tex"
             pdf = output / f"{paper}.pdf"
             provenance = {p.name: sha256(p.read_bytes()).hexdigest() for p in (source, pdf)}
