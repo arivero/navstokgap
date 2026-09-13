@@ -106,3 +106,12 @@ affiliation and submission declarations have not been invented. Next is a
 reader-focused editorial review and resolution of any exact prior-art lead,
 followed by author completion and explicit submission direction. See
 [P05 handoff](../research/handoffs/P05.md).
+
+## P07 editorial readiness completed
+
+The [author decision sheet](../reviews/publication-readiness-P07.md) compares
+both completed drafts and records their bounded editorial revisions. The gas
+paper remains first for author review. Author details, destination and article
+type remain to be supplied before venue preparation or submission. Current
+PDF/source bundles incorporate the P07 edits; no new mathematical claim or
+literature coverage is asserted.

@@ -44,6 +44,13 @@ that diffuses and a tag that returns to its starting point every period, even
 though their mean collision rates agree. The Poisson endpoint is the known
 two-speed case of the Jepsen gas.\cite{BalakrishnanBenaVanDenBroeck2002}
 
+The contribution is an elementary comparison at matched collision frequency:
+the same elastic mechanics and one-particle kinetic scales support either
+ordinary diffusion or exact periodic cancellation. Sections 3 and 4 derive
+the two trajectories and their variances; Table~\ref{tab:comparison} collects
+what is held fixed and what changes. The required tools are equal-mass elastic
+collisions, exponential waiting times and integration of a velocity covariance.
+
 \section{The common mechanics and the measured quantity}
 All particles have mass $m>0$ and velocity $+u$ or $-u$, with $u>0$.
 They occupy the infinite line at mean number density $\rho>0$.
@@ -74,9 +81,11 @@ turns onto the other free line. Both preparations use this same rule.}
 
 Place a typical particle at the origin at time zero and follow its position
 $X(t)$. This selection is often called a Palm preparation. It fixes a tagged
-origin without changing the macroscopic density. The velocity $V(t)$ and its
-increments will have stationary statistics; the absolute position $X(0)=0$
-is not itself a stationary random variable. Reflection symmetry gives
+origin without changing the macroscopic density. The velocity process $V(t)$
+is stationary: its joint law is unchanged by shifting all observation times.
+The displacement increments $X(t+s)-X(t)$ consequently have laws independent
+of $t$. The position process pinned at $X(0)=0$ is not stationary.
+Reflection symmetry gives
 $\mathbb E[X(t)]=0$. We use the ordinary diffusion coefficient
 \begin{equation}
  D=\lim_{t\to\infty}\frac{\Var X(t)}{2t},
@@ -193,7 +202,7 @@ disjoint binary events. Coincident initial phases have probability zero.
 
 \section{What the comparison teaches}
 Table~\ref{tab:comparison} collects the controlled quantities and the changed
-preparation. Equal values of a mean waiting time and velocity variance do
+preparation. Equal values of the mean complete collision interval and velocity variance do
 not determine the covariance history that enters Eq.~\eqref{eq:poissonvar}.
 In the ordered gas the initial global phases persist. The velocity process
 is stationary but not mixing, and positive and negative displacements cancel

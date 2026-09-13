@@ -38,6 +38,20 @@ quotient exists precisely when equal retained states remain equal after the
 interaction. This tests the sufficiency of the description independently of
 microscopic reversibility.
 
+For two spins the retained data are their mean orientations and their nine
+cross moments: $\E u_i$, $\E v_j$ and $\E[u_i v_j]$. These fifteen numbers
+predict every initial product test in the model. We exhibit two probability
+preparations with the same fifteen numbers but different later measurement
+probabilities, then prove that adding finitely many expectation coordinates
+cannot fix this for all preparations. This is the concrete contribution of
+the worked example.
+
+Section 2 defines the measurement model and its relation to qubit statistics;
+Section 3 gives the separating preparations and their explicit motion.
+Section 4 proves the finite-enlargement obstruction. The counterexample itself
+needs only classical spin evolution and expectations; the final obstruction
+also uses finite-dimensional linear algebra.
+
 Restricted classical models and minimal tensor products provide a standard
 way to separate local statistics from composition \cite{janotta}. The local
 sphere-to-ball reduction is an instance of the classical-extension construction
@@ -164,6 +178,13 @@ The missing information appears directly in
 \end{equation}
 
 \section{Exact finite enlargement also fails}
+The question is whether storing more averages could make the reduced state
+sufficient. For exact prediction, every evolved retained observable must have
+an expectation determined by those stored averages. The first proposition
+exhibits infinitely many independent evolved observables; the second explains
+why nonlinear processing of finitely many averages cannot recover them for
+every preparation.
+
 The pullback $U_tf=f\circ\Phi_t$ acts on bounded Borel observables compared
 pointwise. All atomic preparations are admitted, so this is stronger than
 equality modulo a chosen reference measure.

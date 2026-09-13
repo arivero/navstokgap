@@ -62,3 +62,12 @@ while preparing the [elastic-gas paper](01-elastic-gas-comparison.md) first.
 The [orbit-action bound](02-closed-orbit-action-bound.md) remains the short-note
 alternative. B76 records the result-specific search boundary; any stronger
 priority claim would require broader coverage.
+
+## P07 editorial readiness completed
+
+The [author decision sheet](../reviews/publication-readiness-P07.md) compares
+both completed drafts and records their bounded editorial revisions. The gas
+paper remains first for author review. Author details, destination and article
+type remain to be supplied before venue preparation or submission. Current
+PDF/source bundles incorporate the P07 edits; no new mathematical claim or
+literature coverage is asserted.

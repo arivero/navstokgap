@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 61, 2026-09-13. The programme consolidates the accepted results into
+Version 62, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -191,8 +191,10 @@ The user has selected publication preparation. P05 extracts C050–C051 into
 a standalone teaching draft with a [PDF-inclusive source bundle](../out/publications/same-collisions-different-transport.zip).
 B75 finds a close Brownian random-versus-regular preparation precedent;
 the exact Hamiltonian matched-rate comparison is unmatched only within the
-bounded search. No new theorem or novelty claim is introduced. The spin route
-can now consolidate C125–C128, including the completed finite-repair obstruction.
+bounded search. No new theorem or novelty claim is introduced. The spin draft consolidates C125–C128, including the completed finite-repair
+obstruction. P07 completes accessibility and contribution edits for both drafts;
+the [author decision sheet](../reviews/publication-readiness-P07.md) recommends
+the gas paper first and records the remaining author and destination choices.
 STATE owns ordering; journal submission remains a separate authorized action.
 
 ## Acceptance, cost and consolidation

@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **P06a/B76 spin publication positioning complete.**
+Updated: 2026-09-13. **P07 publication editorial readiness complete.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -15,21 +15,21 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **P07 — publication editorial readiness.** Compare the two completed drafts
-   for accessibility and a precise contribution statement. Start with the
-   elastic-gas draft, then check the spin draft. Produce a short author decision
-   sheet and bounded editorial corrections, reusing B75/B76 and their
-   consistency maps. Stop before submission or a broader source campaign.
-   [B76](../reviews/spin-publication-B76.md) positions the spin manuscript as a
-   conceptual worked example and clarifies transformation-relative equivalence.
-   Further spin hierarchy variants remain parked; physical effect/preparation
-   restrictions and time/energy-to-action identification stay open.
-2. **P05 — elastic-gas editorial readiness, supporting.** The
-   [draft and PDF bundle](../publication-routes/01-elastic-gas-comparison.md)
-   reuse C050–C051. B75 finds close Brownian preparation-dependence precedent,
-   with no exact matched-rate comparison in its bounded coverage. Review
-   accessibility and contribution before submission; the orbit-action note
-   remains the short-paper alternative. Every publication upload includes PDFs.
+1. **Publication author completion — waiting for author input.** P07's
+   [decision sheet](../reviews/publication-readiness-P07.md) recommends the
+   elastic-gas draft first and the spin draft second. Both have revised
+   explanations and PDF-inclusive review bundles. Author names, affiliations,
+   destination/article type and submission direction remain. Further autonomous
+   polishing is parked unless a reader report or concrete venue requirement
+   identifies a change.
+2. **Q01 — supporting theorem acceptance audit, next autonomous research.**
+   Use B70's existing source route to select one bounded technical proof step
+   behind the exclusion of reversible nonlocal dynamics on the minimal ball
+   composite. Record its exact assumptions and imported lemmas; stop at that
+   step, not the full reconstruction or a new model. This addresses the still
+   unaudited theorem used in the spin manuscript's interpretation. Physical
+   effect/preparation restrictions and time/energy-to-action identification
+   remain open. Further spin hierarchy variants stay parked.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its
