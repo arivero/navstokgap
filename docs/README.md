@@ -8,6 +8,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Spin publication source comparison](batches/B76/spin-positioning-source-companion.md):
+  classical extensions and transformation-relative preparation equivalence.
 - [Before the arrow: static composition](../notes/static-composition-classics.md):
   H10's Indian, Chinese and Persianate source visit, with
   [verified passages and access levels](../references/batches/H10.md).

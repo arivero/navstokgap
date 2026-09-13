@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 60, 2026-09-13. The programme consolidates the accepted results into
+Version 61, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -71,8 +71,12 @@ P06 now consolidates these results into a standalone
 [compiled PDF](../out/papers/classical-spins-operational-closure.pdf) and
 [PDF-inclusive bundle](../out/publications/classical-spins-operational-closure.zip).
 The [consistency review](../reviews/spin-publication-P06.md) maps claims to
-existing audits. Result-specific publication positioning is the next decision;
-the synthesis adds no new reconstruction theorem or action-selection premise.
+existing audits. [B76](../reviews/spin-publication-B76.md) supports a worked
+conceptual example: classical extensions and transformation-relative
+preparation equivalence supply established precedents; the explicit spin pair
+and finite-repair proof supply the model-specific presentation. The manuscript
+now distinguishes the initial quotient from the expanded experimental theory.
+Its action-selection premise remains a separate physical question.
 
 A candidate must discharge five gates in [the action target](ACTION_FIELD_TARGET.md):
 classical definition and units; exclusion of zero; convergence in a named

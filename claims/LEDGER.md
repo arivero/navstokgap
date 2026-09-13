@@ -201,6 +201,12 @@ domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
 
+C125–C128 publication positioning: [B76](../references/batches/B76.md)
+adds classical-extension and transformation-relative preparation-equivalence
+precedents. The combined exact spin pair and finite-expectation repair
+obstruction remain unmatched within four queries and two papers/eight pages.
+P06a adopts conceptual worked-example framing; proof acceptance is unchanged.
+
 C050–C051 publication positioning: [B75](../references/batches/B75.md)
 adds result-specific coverage to B25–B26. Preparation-dependent tagged transport
 has close Brownian random-versus-lattice precedent in Leibovich–Barkai (2013)

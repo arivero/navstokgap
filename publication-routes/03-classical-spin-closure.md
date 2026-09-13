@@ -28,8 +28,11 @@ P06 now supplies a standalone [LaTeX manuscript](../papers/classical-spins-opera
 [compiled PDF](../out/papers/classical-spins-operational-closure.pdf) and
 [PDF-inclusive bundle](../out/publications/classical-spins-operational-closure.zip).
 The [claim-to-source review](../reviews/spin-publication-P06.md) maps the
-consolidated results to their existing audits. Author details, result-specific
-prior-art positioning and editorial review remain before any submission.
+consolidated results to their existing audits. [B76](../reviews/spin-publication-B76.md)
+completes bounded result-specific positioning: use a conceptual worked example,
+with the explicit spin pair and finite-repair proof as its distinctive content.
+Classical extensions and transformation-relative preparation equivalence have
+close precedents. Author details and editorial review remain before submission.
 
 This is the best candidate for *Foundations of Physics*, provided we establish
 its contribution beyond familiar moment-closure problems. Restricted classical
@@ -57,5 +60,5 @@ operational-state argument. See the
 The general review recommends keeping this question as the research track
 while preparing the [elastic-gas paper](01-elastic-gas-comparison.md) first.
 The [orbit-action bound](02-closed-orbit-action-bound.md) remains the short-note
-alternative. Publication preparation needs a dedicated, result-specific
-originality audit before submission.
+alternative. B76 records the result-specific search boundary; any stronger
+priority claim would require broader coverage.

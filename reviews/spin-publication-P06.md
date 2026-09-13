@@ -42,8 +42,9 @@ priority claim. Its self-contained propositions reuse accepted proofs; the
 reconstruction theorem is cited as context rather than reproved or presented
 as a consequence of mechanical reversibility.
 
-Before submission, perform one result-specific prior-art and positioning audit
-of the combined example, then author review. The physical question concerns a
+[B76](spin-publication-B76.md) completes the bounded result-specific audit:
+use worked-example framing and transformation-relative equivalence. Author
+and editorial review remain before submission. The physical question concerns a
 justification of the effect/preparation restrictions stable under interaction
 and the separate time/energy-to-action identification. Another truncation
 variant leaves that question unchanged.
