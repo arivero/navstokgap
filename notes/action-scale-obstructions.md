@@ -208,4 +208,13 @@ pure-state connectivity and purification as distinct classical-exclusion
 premises ([B67](../references/batches/B67.md)). Hardy's moving-ball example
 motivates the next quantum question: exact operational closure during
 transformations, with action identification still separate. G03's interacting
-size-uniform gap test is selected next in [STATE](../research/STATE.md).
+size-uniform gap test is now complete (C124). Q01's
+[orientation countermodel](classical-orientation-closure.md) adds C125:
+finite operational capacity and local reversible closure coexist with
+separable composites lacking purification and the required subspace geometry.
+The [B70 theorem map](reversible-interaction-premise.md) now excludes a
+continuous reversible interacting extension preserving that minimal composite.
+The stronger quantum operational conclusion uses identical-copy and
+ancilla/measurement/discard closure. Physical reversible descent and action
+normalization remain open; [STATE](../research/STATE.md) selects G04's
+physical-operator transfer test after this quantum milestone.

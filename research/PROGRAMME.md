@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 53, 2026-09-13. The programme consolidates the accepted results into
+Version 55, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -69,6 +69,20 @@ state-space reconstruction still needs a mechanical dynamical identification
 of its dimensional scale; numerical calibration is a further empirical task.
 
 ## Gap track: interactions and uniform control
+
+Q01's [orientation countermodel](../notes/classical-orientation-closure.md)
+(C125/B69) makes the quantum-track boundary explicit: finite capacity and
+reversible local closure coexist with classical separable composition, failed
+purification and failed subspace equivalence. The [B70 interaction audit](../notes/reversible-interaction-premise.md)
+now excludes a continuous reversible nonlocal extension preserving that minimal
+composite, using de la Torre et al.'s Theorem 1. The local ball and Hermitian
+coordinates already meet the local-qubit premise. Identical-copy consistency
+and operational ancilla/measurement/discard closure underlie the stronger
+quantum reconstruction. The technical theorem proof remains unaudited here;
+physical reversible descent and action normalization remain open.
+G03's relaxation interaction is a distinct operator premise. G04 will test
+its finite-volume Hermitian representative, ground state and normalization
+to locate the remaining physical-Hamiltonian identification.
 
 G01/G02 establish the finite reversible-generator estimate
 

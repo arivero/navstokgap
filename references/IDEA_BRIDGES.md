@@ -8,6 +8,21 @@ are retained context; their words "next" and "current" describe that milestone.
 
 ## Quantum-premise audit — Q01, with K01 support
 
+[B70 interaction theorem](../notes/reversible-interaction-premise.md):
+de la Torre et al. Theorems 1–2 -> nonlocal connected reversible dynamics
+exclude the minimal ball composite -> test physical descent of hidden
+interactions to the operational quotient -> local tomography and reversible
+closure must be justified together. Hermitian coordinates are already present;
+ancilla/measurement/discard closure is needed for the broad quantum operations
+conclusion. No action scale or full technical-proof audit is supplied.
+
+[B69 orientation model](../notes/classical-orientation-closure.md): restricted
+classical effects -> exact local ball and capacity two -> minimal composites
+fail purification and subspace equivalence despite local reversible closure.
+Janotta–Hinrichsen §5.1 supplies the established tensor-product construction.
+B70 now supplies the selected interaction theorem; other multipartite
+references in §7 remain discovery leads.
+
 [B67 premise map](../notes/quantum-exclusion-premises.md): Hardy §7's ball
 between boxes -> intermediate states outside the bit description -> test exact
 finite-capacity operational closure, not ordinary trajectory continuity.

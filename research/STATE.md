@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **G03 interacting-gap milestone complete (C124/B68).**
+Updated: 2026-09-13. **Q01 interaction-premise audit complete (B70).**
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
 operational exclusion premises and remaining mechanical action step. The
@@ -14,21 +14,23 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **Q01 — selected next quantum decision.** Use B67's premise map to define
-   an exact finite-capacity operational description closed under reversible
-   transformations and composition. Test which independent physical premise
-   enforces that closure or purification in the mechanical class. Hardy's
-   moving-ball example motivates this question; trajectory continuity alone
-   does not settle it. Stop at one explicit model/countermodel and premise
-   decision, not a full reconstruction-proof audit. See [Q01 handoff](handoffs/Q01.md).
-2. **K01 — supporting alternative if context independence is decisive.**
-   Test whether local measurement descriptions extend to one common
-   system-plus-apparatus state, using I007 and the exact operational class
-   selected in Q01. Select only if this changes Q01's exclusion premise;
-   otherwise reassess the gap track after the Q01 milestone.
+1. **G04 — selected physical-operator transfer test.** Construct the finite-volume
+   Hermitian representative of G03's reversible generator by the square-root
+   stationary-density transform. Identify its ground state, locality, spectral
+   normalization and the physical clock/action assumptions needed to call its
+   gap an energy gap. Stop at whether this supplies an independent physical
+   Hamiltonian or a conditional stochastic-parent construction. No continuum
+   or Yang–Mills claim; one bounded source audit of this operator connection.
+2. **Q01 — supporting quantum dependency.** B70 excludes an interacting
+   reversible extension preserving C125's minimal composite. The theorem's
+   technical proof and a physical justification of reversible descent to the
+   operational quotient remain separate. Select either only for a named
+   acceptance or mechanical premise decision. K01 remains supporting if
+   context independence becomes decisive.
 
-After each milestone, replace this list with the next actual choices. An open
-umbrella task does not reserve all subsequent sessions.
+See [interaction handoff](handoffs/Q01-interaction.md) for the track comparison.
+After three Q01 milestones, G04 targets the remaining physical-operator bridge;
+G03's sampling interaction does not supply B70's reversible operational gate.
 
 ## Consolidated findings and parked work
 

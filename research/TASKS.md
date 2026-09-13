@@ -143,7 +143,10 @@ handoff with the remaining dependency. Priority is the ordered list in
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Preserved drafts and historical checks; select only for a named main-track dependency |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
-| Q01 | first milestone done | B67 premise map accepted; next eligible decision is physical operational closure/composition, selected only through STATE | Coordinator + completed Luna-low B67 | [Handoff](handoffs/Q01.md); full reconstruction proofs unaudited |
+| Q01 | three milestones done | B67 premise map, C125/B69 closure model and B70 interaction dependency complete; physical reversible descent and technical theorem proof remain supporting | Coordinator + sequential librarians | [Interaction handoff](handoffs/Q01-interaction.md); full reconstructions unaudited |
+| B69 | done | Restricted-classical/minimal-tensor match and orientation capacity/face audit | One Luna low, sequential | C125; no novelty claim |
+| G04 | ready, selected | G03 Hermitian operator transfer: ground state, locality, clock/action normalization and physical identification | Coordinator then bounded librarian | [STATE](STATE.md); stop at operator dependency decision |
+| B70 | done | Reversible interaction theorem and C125 hypothesis map; technical proof not audited | One Luna low, sequential; coordinator corrected mapping | [Review](../reviews/reversible-interaction-B70.md) |
 | B67 | done | Hardy/CDP primary-passage exclusion audit; finite-model scope and moving-ball motivation reviewed | One Luna low, sequential | Q01 synthesis; no new theorem |
 | G01 | done | Susceptibility/gap product, hidden-label family and complete-observable lower gap bound C041–C042; explicit energy units | Coordinator + Luna-low B20 | 20 checks and PDF; M03 retains separate gates |
 | B20 | done | Green–Kubo source and bounded spectral/frame audit; Sokal discovery-only | One Luna low, sequential | C041–C042, coordinator review |
@@ -182,7 +185,7 @@ at its stated budget with findings and the next question.
 ## Selecting the next session
 
 Use the ordered list in [STATE](STATE.md). The first Q01 and G03 milestones are complete;
-Q01's next premise decision is selected. Each milestone is bounded; an incomplete parent task does
+G04's physical-operator transfer decision is selected. Each milestone is bounded; an incomplete parent task does
 not force an immediate continuation. R33's open curvature question remains
 parked in its handoff. Historical next-task narratives are preserved in the
 [dated state history](STATE-history-2026-09-12.md) and previous Git versions.

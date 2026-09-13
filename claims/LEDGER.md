@@ -9,6 +9,19 @@ assumptions and supporting artifact. IDs remain stable through revision.
 accepted action-selection and gap arguments through C123. It adds no claim
 IDs or literature assertions; detailed proofs and audit statuses below govern.
 
+## Q01 interaction dependency (B70)
+
+[The B70 map](../notes/reversible-interaction-premise.md) applies de la Torre
+et al.'s Theorems 1–2 to C125. A continuous reversible nonlocal extension cannot
+preserve its minimal composite; the full quantum operations conclusion includes
+identical-copy and ancilla/measurement/discard closure. Evidence: selected
+primary theorem/setup passages and [written application review](../reviews/reversible-interaction-B70.md).
+Literature status: established source theorem and derived application, no
+novelty asserted. Proof status: hypothesis map and consequence reviewed;
+technical Lie-algebra proof and imported universality not independently audited.
+C125 remains accepted for its original local-operation class; no new theorem
+ID or positive action claim is added by this source milestone.
+
 ## Mechanical and operational results
 
 | ID | Statement | Evidence |
@@ -174,11 +187,19 @@ IDs or literature assertions; detailed proofs and audit statuses below govern.
 
 | C124 | The periodic zero-field Ising heat-bath chain on N>=3 sites has exact full gap a[1-tanh(2b)]; bounded nonnegative coupling and a positive per-site refresh-clock floor give a uniform finite-volume bound, whereas growing coupling or total-clock normalization can close it | [Interacting proof](../notes/interacting-ising-gap.md) §§1–4; all-mode Hamming/Lipschitz contraction, matching magnetization mode and normalized susceptibility; [B68 written review](../reviews/ising-gap-B68.md) |
 
+| C125 | Hidden orientations with affine effects give an exact operational ball of capacity two and reversible pure-state rotations; n-component joint measures and product tests have capacity 2^n and linear dimension 4^n, but pure composites are products and the equal-sign capacity-two face is a segment, so purification and Hardy subspace structure fail | [Q01 countermodel](../notes/classical-orientation-closure.md); stipulated measurement/composition class and written moment/capacity proof; [B69 review](../reviews/orientation-closure-B69.md) |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C125: [B69](../references/batches/B69.md) matches established restricted
+single-system models and minimal tensor products in Janotta–Hinrichsen.
+Capacity and parity-face checks are derived applications; no novelty claim.
+One Luna-low worker and coordinator proof/source review; date and anchors
+corrected. Measurement restrictions remain explicit model premises.
 
 C124: [B68](../references/batches/B68.md) matches Glauber model/magnetization
 passages through an indexed transcription and Bubley–Dyer coupling passages
