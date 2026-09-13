@@ -193,11 +193,19 @@ ID or positive action claim is added by this source milestone.
 
 | C127 | H=J u_z v_z on two fixed-magnitude classical spin spheres has two zero-energy preparations with identical first/cross moments but product-test probabilities (1-sin(Jt/S_A))/4 and 1/4; its reversible hidden flow therefore fails to induce a single-valued evolution on C125's quotient | [Mechanical proof](../notes/hamiltonian-moment-descent.md); exact preparations/trajectories; [B72 review](../reviews/spin-descent-B72.md); supplied spin magnitudes and fixed effects |
 
+| C128 | For C127 with J>0 and all Borel preparations, no finite-dimensional bounded real observable space containing the retained effects is invariant on any nonzero time interval; nonlinear updates of finitely many expectations cannot repair exact descent | [Orbit and atomic-separation proof](../notes/hamiltonian-finite-closure.md); [B74 written review](../reviews/finite-closure-B74.md); exact finite repair only, no capacity or action-selection conclusion |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C128: [B74](../references/batches/B74.md) matches the established finite
+Koopman-invariant-space framework in Brunton et al. (2016), selected publisher
+HTML passages. The spin orbit and expectation-separation lemma are written
+derived consequences, reviewed by one Luna-low worker and the coordinator.
+One source and one query; no exhaustive search or novelty claim.
 
 C127: [B72](../references/batches/B72.md) verifies classical-spin precedent
 in Radošević et al., arXiv:2503.16308v2 §§V.1–V.2. The quotient counterexample

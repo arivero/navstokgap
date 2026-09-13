@@ -8,6 +8,13 @@ are retained context; their words "next" and "current" describe that milestone.
 
 ## Quantum-premise audit — Q01, with K01 support
 
+[B74 finite closure](../notes/hamiltonian-finite-closure.md): Koopman invariant
+observable spaces -> C128's independent time orbit rules out every finite
+repair for C127 with all preparations -> consolidate the physical source of
+finite statistical dimension and reversible composition. Infinite observable
+dimension does not alone determine distinguishability capacity. Further
+hierarchy variants need a named physical restriction before selection.
+
 [B72 Hamiltonian descent](../notes/hamiltonian-moment-descent.md): classical
 spin Poisson dynamics -> exact same-moment preparations separate under
 H=J u_z v_z -> test finite invariant observable closure, not hidden-flow

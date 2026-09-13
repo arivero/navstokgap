@@ -90,3 +90,8 @@ A separate argument must show that such a repair remains finite-capacity and
 locally tomographic before importing B70. Exact Hamiltonian reversibility alone
 does not establish that repair. The fixed S_A,S_B supply action units to this
 example; none of the moment calculations forces a nonzero universal value.
+
+The [finite-repair decision](hamiltonian-finite-closure.md) is now complete:
+C128 rules out finite observable enlargement for this interaction and all
+Borel preparations. The open repair must change a model premise or admit
+infinite observable dimension; STATE owns its strategic follow-through.

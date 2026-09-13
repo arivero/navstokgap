@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 57, 2026-09-13. The programme consolidates the accepted results into
+Version 58, 2026-09-13. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -22,8 +22,9 @@ countermodels remains open. Spectral work gives finite-system criteria, independ
 C124's interacting Ising gap uniform in finite volume at bounded coupling.
 Physical-operator identification and further uniform limits remain open.
 
-This version integrates G04's local Hermitian parent C126 and its
-bounded B71 source audit alongside G03's interacting gap C124. No novelty is asserted. [The ledger](../claims/LEDGER.md)
+This version integrates C128/B74: the exact finite observable repair of
+C127 is impossible for the admitted spin preparations. G04 retains its local
+Hermitian parent C126 alongside G03's interacting gap C124. No novelty is asserted. [The ledger](../claims/LEDGER.md)
 retains proof and literature status, including the limits of each source audit.
 
 ## Quantum track: identify the excluded classical alternative
@@ -57,10 +58,13 @@ preserved under their own tasks and can supply a specific premise or example.
 C127's [Hamiltonian test](../notes/hamiltonian-moment-descent.md) now separates
 microscopic reversibility from operational descent. Two zero-energy spin
 preparations share all retained first/cross moments but an allowed product
-test distinguishes them after the interaction. The next repair decision is
-whether any finite enlarged observable space closes for all preparations,
-or whether this interaction forces an infinite hierarchy. This changes the
-finite operational-state premise rather than refining another calibration law.
+test distinguishes them after the interaction. The [finite-repair proof](../notes/hamiltonian-finite-closure.md) C128/B74
+now rules out every finite observable enlargement on a nonzero time interval
+for all Borel preparations, including nonlinear updates of finite expectation
+vectors. Exact closure requires infinite observable dimension or a changed
+physical premise. This settles the named repair alternative; it selects
+neither quantum structure nor a universal action unit. Further hierarchy
+variants are parked while the missing physical premises are consolidated.
 
 A candidate must discharge five gates in [the action target](ACTION_FIELD_TARGET.md):
 classical definition and units; exclusion of zero; convergence in a named

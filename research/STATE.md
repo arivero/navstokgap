@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **Q01 Hamiltonian descent test complete (C127/B72).**
+Updated: 2026-09-13. **Q01 finite observable repair ruled out (C128/B74).**
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
 operational exclusion premises and remaining mechanical action step. The
@@ -14,23 +14,26 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **Q01 — selected finite-repair decision.** C127's same-moment pair evolves
-   to different terminal probabilities under a reversible spin interaction.
-   Test whether any finite-dimensional enlargement containing the retained
-   effects closes under this Hamiltonian for all admitted preparations. Stop
-   at an invariant finite observable space or an infinite independent family.
-   This decides whether finite enlargement repairs the B70 premise; do not
-   merely calculate one further moment or another interaction example.
+1. **Q01 — consolidate the physical-premise boundary.** Map C125–C128 and
+   B70 to the premises of exact finite statistical dimension, composition and
+   reversible closure. Separate stipulated operational axioms from mechanically
+   justified inputs and locate the missing time/energy-to-action identification.
+   Stop at one claim-to-source/dependency map with a written consistency review,
+   reusing B67/B69/B70/B72/B74; select a new physical test only if that map names
+   an input capable of changing the conclusion. Further spin hierarchy and
+   truncation variants are parked.
 2. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its
    imaginary-time semigroup, or a named infinite-volume/continuum dependency.
    Further parent or coupling variants are parked.
 
-See [descent handoff](handoffs/Q01-descent.md) for the decision. Q01's technical theorem
-proof and K01 remain supporting when an acceptance or context-independence
-question requires them. The two tracks now both expose a physical dynamics
-premise: exact reversible operational descent versus sampling-clock transfer.
+See the [finite-closure handoff](handoffs/Q01-finite-closure.md). C128
+finishes the named repair decision: all-preparation exact closure needs
+infinite observable dimension or changed model premises. This establishes
+neither quantum structure nor distinguishability capacity. Both main tracks
+still expose a physical dynamics premise; Q01's full reconstruction proof
+and K01 remain supporting for a named acceptance/context question.
 
 ## Consolidated findings and parked work
 
@@ -61,8 +64,9 @@ adds the reviewed finite-volume transfer and B71 parent-mapping audit. The [date
 and task handoffs preserve the earlier milestones; their old next-task text
 is historical. [B73](handoffs/B73.md) adds the exact Lubetzky–Sly literature
 match for C124, three archived publication routes and a supporting foundational
-assessment. The ordered research choices above are unchanged.
-User-supplied bibliography and source originals remain intact.
+assessment.
+C128 has a written orbit/atomic-separation proof and bounded B74 Koopman
+framework audit. User-supplied bibliography and source originals remain intact.
 
 ## Constraints and validation
 

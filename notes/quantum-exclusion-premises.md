@@ -84,7 +84,9 @@ principle forces one of them for the admitted mechanical class. K01 is useful
 only if its context/measurement assumptions decide that question. Further
 receiver calibration coefficients do not currently resolve it.
 
-The bounded Q01 passage milestone is complete. Under the current strategy,
-G03's interacting size-uniform gap test is selected next; the deeper Q01
-closure test remains an explicit eligible follow-up, not an automatic proof
-audit of both papers.
+The bounded passage milestone is complete. Subsequent C125–C128 tests now
+locate a concrete failure of the finite operational premise: the reversible
+spin interaction cannot close on any finite enlargement of the retained
+observables for all preparations; see the [finite-closure proof](hamiltonian-finite-closure.md).
+[STATE](../research/STATE.md) selects consolidation of the remaining physical
+premises. Full reconstruction proofs remain separately unaudited.

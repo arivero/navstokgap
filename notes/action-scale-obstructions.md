@@ -229,10 +229,19 @@ continuous reversible interacting extension preserving that minimal composite.
 The stronger quantum operational conclusion uses identical-copy and
 ancilla/measurement/discard closure. Physical reversible descent and action
 normalization remain open. G04 now makes the gap-track operator bridge
-explicit and conditional. [STATE](../research/STATE.md) selects a mechanical
-finite-repair test for Q01. The [exact spin pair](hamiltonian-moment-descent.md)
+explicit and conditional. The [exact spin pair](hamiltonian-moment-descent.md)
 (C127/B72) shares first/cross moments and zero energy initially, yet yields
 product-test probabilities $(1-\sin(Jt/S_A))/4$ and $1/4$. Its reversible
-Hamiltonian flow does not descend to the fixed operational quotient. The next
-question is whether any finite enlargement restores exact closure for all
-preparations. Spin magnitudes and their action units remain supplied inputs.
+Hamiltonian flow does not descend to the fixed operational quotient.
+
+**Finite enlargement cannot repair this exact model.**
+[C128/B74](hamiltonian-finite-closure.md) proves that
+$U_t(u_x+i u_y)=(u_x+i u_y)\exp(iJt v_z/S_A)$ contains arbitrarily many
+independent observables on every nonzero time interval. For all Borel
+preparations, even nonlinear updates of finitely many expectations would
+require an invariant finite observable span. Exact closure therefore requires
+infinite observable dimension or a change of preparations, effects or dynamics.
+This does not determine distinguishability capacity or quantum structure.
+Spin magnitudes and their action units remain supplied inputs.
+[STATE](../research/STATE.md) selects consolidation of the physical premise
+boundary; additional spin hierarchy variants are parked.

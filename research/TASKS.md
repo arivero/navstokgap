@@ -144,7 +144,8 @@ handoff with the remaining dependency. Priority is the ordered list in
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Preserved drafts and historical checks; select only for a named main-track dependency |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
-| Q01 | descent test done | C127/B72 gives exact same-moment Hamiltonian separation; finite-dimensional repair decision selected through STATE | Coordinator + sequential librarians | [Descent handoff](handoffs/Q01-descent.md); full reconstructions unaudited |
+| Q01 | finite repair ruled out | C128/B74 excludes every finite observable repair for C127 and all Borel preparations; physical-premise consolidation selected through STATE | Coordinator + sequential librarians | [Finite-closure handoff](handoffs/Q01-finite-closure.md); full reconstructions unaudited |
+| B74 | done | Finite Koopman-space precedent and written orbit/atomic-separation review, one source and one query | One Luna low, sequential | [Review](../reviews/finite-closure-B74.md); C128 derived, no novelty claim |
 | B72 | done | Classical spin Poisson source and exact pair review; preprint recheck after publisher access failure | One Luna low, sequential | C127; coverage and query accounting recorded |
 | B69 | done | Restricted-classical/minimal-tensor match and orientation capacity/face audit | One Luna low, sequential | C125; no novelty claim |
 | G04 | done | C126: explicit local Hermitian parent, square-root Gibbs ground state and exact inherited gap; physical clock/action remain supplied | Coordinator + sequential Sol-medium B71 | [Handoff](handoffs/G04.md); further parent variants parked |
@@ -188,7 +189,7 @@ at its stated budget with findings and the next question.
 ## Selecting the next session
 
 Use the ordered list in [STATE](STATE.md). The first Q01 and G03 milestones are complete;
-G04's physical-operator transfer is complete; Q01's mechanical reversible-descent test is selected. Each milestone is bounded; an incomplete parent task does
+G04's physical-operator transfer is complete; Q01's finite-repair decision is complete; physical-premise consolidation is selected. Each milestone is bounded; an incomplete parent task does
 not force an immediate continuation. R33's open curvature question remains
 parked in its handoff. Historical next-task narratives are preserved in the
 [dated state history](STATE-history-2026-09-12.md) and previous Git versions.
