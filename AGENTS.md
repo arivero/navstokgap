@@ -108,3 +108,7 @@ The user authorizes commits and pushes to the existing GitHub repository after
 each innovation or relevant status change (2026-09-07). The coordinator owns
 these checkpoints. External submissions, correspondence and paid services
 require separate direction.
+
+Publication uploads must include the compiled PDFs as well as any manuscript
+sources (user rule, 2026-09-13). Check each bundle for the corresponding PDF
+and verify it was built from the included source before upload.

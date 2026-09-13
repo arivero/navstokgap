@@ -1,6 +1,8 @@
 """Build accepted paper PDFs from the repository root, without shell escape."""
 
 from pathlib import Path
+from hashlib import sha256
+import json
 import os
 import re
 import shutil
@@ -79,7 +81,8 @@ def main():
                   "composition-universality", "checkerboard-dynamics",
                   "susceptibility-gap", "interacting-ising-gap", "ising-hermitian-transfer",
                   "bounded-acceleration-return",
-                  "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme"):
+                  "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme",
+                  "same-collisions-different-transport"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
@@ -99,6 +102,11 @@ def main():
         if warnings:
             raise SystemExit(f"Layout overflow in {paper}: {warnings}")
         shutil.copy2(build / f"{paper}.pdf", output / f"{paper}.pdf")
+        if paper == "same-collisions-different-transport":
+            source = ROOT / "papers" / f"{paper}.tex"
+            pdf = output / f"{paper}.pdf"
+            provenance = {p.name: sha256(p.read_bytes()).hexdigest() for p in (source, pdf)}
+            (build / "publication-input.json").write_text(json.dumps(provenance, indent=2) + "\n")
         print(f"Built out/papers/{paper}.pdf")
 
 

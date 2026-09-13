@@ -75,3 +75,12 @@ Use Luna for bounded metadata/search work and Sol for equation collation and
 small calculations. The coordinator handles model selection, assumption tracking
 and result acceptance. Apply the cost and effort rules in
 [agents/PROTOCOL.md](../agents/PROTOCOL.md).
+
+## Publication bundles
+
+`make publication` builds the papers and packages the standalone elastic-gas
+review draft in `out/publications/same-collisions-different-transport.zip`.
+The archive contains the compiled PDF, self-contained LaTeX (including figure
+and references), SHA-256 manifest and build instructions. The packager rejects
+source/PDF bytes that differ from the build record. Publication uploads must
+include the compiled PDFs under the user's 2026-09-13 rule.

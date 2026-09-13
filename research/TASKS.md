@@ -9,6 +9,9 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| P05 | done | Standalone elastic-gas teaching draft, B75 result-specific audit, PDF-inclusive upload bundle; author/editorial review remains | Coordinator + one Sol-medium librarian | [Handoff](handoffs/P05.md); C050–C051/B25–B26 |
+| B75 | done | Random-versus-regular preparation prior art; four queries, two papers, eight pages; no exact full comparison match in coverage | One Sol medium, sequential | [Review](../reviews/elastic-gas-publication-B75.md); no novelty claim |
+| P06 | ready | Standalone spin operational-state manuscript consolidating C125–C128 with a claim-to-source map; no new reconstruction theorem | Coordinator | Q01 consolidation; [route](../publication-routes/03-classical-spin-closure.md) |
 | P04 | done | Consolidated action-scale obstruction paper, short restart state, priority/stop rules and routing review; no new claims | Coordinator | [Handoff](handoffs/P04.md) |
 | B73 | done | Three publication routes archived; Lubetzky–Sly exact gap/clock match, bibliography and foundational assessment; no new mathematical claim | Coordinator follow-up to B68/B71 | [Handoff](handoffs/B73.md) |
 | H10 | done | Indian contact/traversal, Chinese solid dissection and Mohist statics, access-limited Avicennian comparison; reviewed passages and source capsule | Coordinator + one sequential Luna medium | [H10 handoff](handoffs/H10.md) |

@@ -201,6 +201,14 @@ domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
 
+C050–C051 publication positioning: [B75](../references/batches/B75.md)
+adds result-specific coverage to B25–B26. Preparation-dependent tagged transport
+has close Brownian random-versus-lattice precedent in Leibovich–Barkai (2013)
+and broader arbitrary-initial-position context in Cividini–Kundu (2017).
+The full two-speed Hamiltonian matched-rate comparison remains unmatched in
+four queries and eight selected pages. P05 is a teaching synthesis of accepted
+claims, with no new claim ID or novelty assertion.
+
 C128: [B74](../references/batches/B74.md) matches the established finite
 Koopman-invariant-space framework in Brunton et al. (2016), selected publisher
 HTML passages. The spin orbit and expectation-separation lemma are written

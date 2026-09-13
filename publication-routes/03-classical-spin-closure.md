@@ -6,13 +6,15 @@ than a change to the active research queue.
 
 ## The candidate
 
-C125 and C127 fit together into a coherent argument:
+C125, C127 and C128 fit together into a coherent argument:
 
 1. Restricted measurements on classical orientations reproduce the
    single-qubit Bloch ball.
 2. Classical joint preparations supply a separable composite.
 3. A reversible Hamiltonian interaction distinguishes preparations that
    initially represent the same retained operational state.
+4. No finite enlargement of the retained observables repairs exact evolution
+   for all admitted preparations on any nonzero time interval.
 
 The [explicit two-spin example](../notes/hamiltonian-moment-descent.md) makes
 the distinction tangible: reversibility of the underlying mechanics and
@@ -31,9 +33,14 @@ reconstruction theorem. The repository's audits are
 [B69](../references/batches/B69.md), [B70](../references/batches/B70.md) and
 [B72](../references/batches/B72.md).
 
-The queued finite-enlargement test would complete the example's story. Its
-publication value should be assessed through the operational consequence,
-rather than through the mere appearance of an infinite moment hierarchy.
+The [finite-enlargement proof](../notes/hamiltonian-finite-closure.md) is now
+complete (C128/B74), including nonlinear updates of finite expectation vectors.
+The next publication step is a standalone operational-state synthesis joining
+C125–C128 and a claim-to-source map. Its contribution must be assessed against
+restricted classical representations and exact finite Koopman closure; an
+infinite moment hierarchy by itself is not a novelty claim. The B70 technical
+proof remains unaudited, so the draft should use its stated premise boundary
+without presenting a new reconstruction theorem.
 
 *Foundations of Physics* welcomes substantive conceptual work as well as
 research articles, making it a plausible destination for a sharply positioned

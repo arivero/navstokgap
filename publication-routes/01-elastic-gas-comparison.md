@@ -82,3 +82,27 @@ bibliography and claim ledger, with a separate
 The workflow lesson is that our audits have been stronger at verifying
 ingredients than at finding prior publication of the finished result.
 Publication preparation needs a separate, result-specific literature pass.
+
+## P05 publication preparation completed
+
+The standalone [manuscript](../papers/same-collisions-different-transport.tex),
+[compiled PDF](../out/papers/same-collisions-different-transport.pdf) and
+[upload bundle](../out/publications/same-collisions-different-transport.zip)
+now present the matched-rate comparison with a collision diagram, explicit
+proofs, assumptions table and classroom questions. The bundle includes the PDF
+and standalone source, with hashes and compilation instructions.
+
+[B75](../references/batches/B75.md) is the dedicated four-query/two-source
+audit. Leibovich–Barkai gives a close random-versus-lattice Brownian precedent;
+the broad preparation-dependence lesson is established. The full two-speed
+Hamiltonian positive-diffusion versus periodic-cancellation comparison remains
+unmatched in the bounded passages, with no novelty claim. The paper is
+positioned as a focused teaching construction.
+
+The coordinator rechecked AJP's linked editorial policy on 2026-09-13:
+original insight and teaching value still require an editorial judgement.
+This is a review draft, not a submitted or accepted paper. Author identity,
+affiliation and submission declarations have not been invented. Next is a
+reader-focused editorial review and resolution of any exact prior-art lead,
+followed by author completion and explicit submission direction. See
+[P05 handoff](../research/handoffs/P05.md).

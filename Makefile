@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: check papers figures programme
+.PHONY: check papers figures programme publication
 
 check:
 	$(PYTHON) scripts/check_repository.py
@@ -14,3 +14,6 @@ papers:
 
 figures:
 	$(error Disabled: the legacy figure script runs mathematical verification; preserve existing figures and use written proofs)
+
+publication: papers
+	$(PYTHON) scripts/package_publication.py

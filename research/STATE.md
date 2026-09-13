@@ -1,6 +1,7 @@
 # Restart state
 
-Updated: 2026-09-13. **Q01 finite observable repair ruled out (C128/B74).**
+Updated: 2026-09-13. **P05 elastic-gas publication draft and PDF bundle complete.**
+User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
 operational exclusion premises and remaining mechanical action step. The
@@ -14,15 +15,22 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **Q01 — consolidate the physical-premise boundary.** Map C125–C128 and
+1. **P06/Q01 — spin publication synthesis.** Assemble a standalone
+   operational-state manuscript and map C125–C128 and
    B70 to the premises of exact finite statistical dimension, composition and
    reversible closure. Separate stipulated operational axioms from mechanically
    justified inputs and locate the missing time/energy-to-action identification.
-   Stop at one claim-to-source/dependency map with a written consistency review,
+   Stop at a manuscript, PDF-inclusive bundle and claim-to-source consistency review,
    reusing B67/B69/B70/B72/B74; select a new physical test only if that map names
    an input capable of changing the conclusion. Further spin hierarchy and
    truncation variants are parked.
-2. **Gap track — supporting physical identification.** G04/C126 supplies the
+2. **P05 — elastic-gas editorial readiness, supporting.** The
+   [draft and PDF bundle](../publication-routes/01-elastic-gas-comparison.md)
+   reuse C050–C051. B75 finds close Brownian preparation-dependence precedent,
+   with no exact matched-rate comparison in its bounded coverage. Review
+   accessibility and contribution before submission; the orbit-action note
+   remains the short-paper alternative. Every publication upload includes PDFs.
+3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its
    imaginary-time semigroup, or a named infinite-volume/continuum dependency.
