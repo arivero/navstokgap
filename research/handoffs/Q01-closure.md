@@ -47,4 +47,15 @@ are parked. STATE owns the resulting ordered choices.
 
 ## Validation
 
-Repository and PDF checks recorded after integration below.
+The closure session's `make check` passed 1382 local Markdown links, source
+companions, citation keys and hashes. `make papers` built all sixteen PDFs
+with reference/layout gates passing, and `git diff --check` passed. No
+numerical or symbolic verification scripts were run.
+
+Before its checkpoint, a concurrent session integrated this work and B70 in
+d0afd30 and pushed it. The closure session detected the new HEAD and clean
+worktree, preserved the newer STATE, and did not repeat B70. The current
+synthesis final page was visually checked. Fourteen unrelated rebuilt PDFs
+were restored only after extracted-text equality against the live HEAD.
+The selected next task is now G04, as recorded by the newer interaction
+handoff; the previous section's next-task text describes this earlier stage.
