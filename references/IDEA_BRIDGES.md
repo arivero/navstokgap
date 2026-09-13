@@ -1,8 +1,53 @@
 # Source ideas for the next calculation
 
-Select by proof obligation, then read the linked companion. These cards route
-existing bibliography into model design; the ledger and task board carry the
-live acceptance and priority records. Proposed tests below are research actions.
+Select the task in [STATE](../research/STATE.md), then read its capsule here.
+These cards route existing bibliography into the selected premise decision.
+They do not schedule work. [STRATEGY](../research/STRATEGY.md) governs whether
+an additional calculation or source batch is useful. Older suggestions below
+are retained context; their words "next" and "current" describe that milestone.
+
+## Quantum-premise audit — Q01, with K01 support
+
+[B67 premise map](../notes/quantum-exclusion-premises.md): Hardy §7's ball
+between boxes -> intermediate states outside the bit description -> test exact
+finite-capacity operational closure, not ordinary trajectory continuity.
+CDP §§II, III.1.5–III.2 -> pure extension differs from a classical correlated
+ensemble -> specify operational purity and composition before importing
+purification. First passage milestone complete; STATE selects the next task.
+
+[Hardy companion](../docs/batches/B01/Hardy2001.md): stated continuous reversible
+pure-state transformation premise -> inspect the exact ambient operational
+class and the classical alternative -> ask whether the premise has a physical
+basis in our models -> the existing reading covers introductory passages, not
+the full reconstruction proof. Do not equate it with ordinary continuous
+motion of a classical particle without checking all other hypotheses.
+
+[Chiribella–D'Ariano–Perinotti companion](../docs/batches/B01/ChiribellaDArianoPerinotti2011.md):
+abstract-level purification claim within five other axioms -> obtain the exact
+primary premise and its role -> compare the classical countermodel and the
+remaining dynamical action-unit step -> full proof reading remains unaudited.
+[B01](batches/B01.md) supplies routes and coverage. Choose one bounded passage
+question first; a full audit of both papers is not the default first session.
+K01 uses [I007](../ideas/I007-static-compatibility.md) when measurement-context
+compatibility is the premise that needs testing.
+
+## Interacting spectral control — G03
+
+[B20 companion](../docs/batches/B20/susceptibility-source-companion.md) and
+[B22 companion](../docs/batches/B22/observable-access-source-companion.md):
+Green–Kubo response, calibrated frames and independent-product eigenmodes ->
+choose one interacting generator family -> prove a size-independent bound or
+exhibit the failed interaction premise -> retain invariant law, constituent
+clock, gauge/observable domain if present, and uniform calibration. A finite
+matrix computation does not settle the size limit. The [maintained note](../notes/susceptibility-gap.md)
+has the written proofs and gap/physical-energy boundary.
+
+## Consolidation before another subcase
+
+[The synthesis](../notes/action-scale-obstructions.md) maps the accepted
+counterexamples to the premises supplying positive action. Use it to check
+whether the next variant changes a selection decision already exposed by
+those examples. No new source sweep is needed merely to recover this context.
 
 ## User-supplied historical bibliography: mathematical reading selection
 
@@ -14,7 +59,7 @@ questions for R31; E20 supplies a facsimile route for the existing H11 task.
 These are supplied-report leads, with no new source verification or claim
 acceptance. The note's proposed H10/H11 split does not replace the live tasks.
 
-## Classical cut state, receiver memory and readout — R33
+## Retained receiver/readout capsules — R33 parked
 
 **R33 stage 2/B66 capsule:** [variational source](../docs/batches/B66/correlated-variation-source-companion.md)
 -> smooth parameter flow with variable data -> subtract the moving terminal
@@ -189,7 +234,7 @@ body/effect distinction to explicit interface and apparatus variables.
 edition from uncollated Chinese transcription and indexed Avicennian translation.
 Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
-R19 is the next calculation; H11 strengthens two source witnesses.
+That historical milestone proposed R19 and H11; current task selection is in STATE.
 
 **R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
 uses an acceleration rearrangement and the whole position strip to interpolate
@@ -303,7 +348,7 @@ any action normalization must still trace its preparation dependence.
 
 ## Memory, observability and a mechanical receiver — A09/A12
 
-**Current capsule — A18 complete, A19 next:** [B32](batches/B32.md), Milnor
+**Supporting capsule — A18 complete, A19 unselected:** [B32](batches/B32.md), Milnor
 pp. 248 and 254, gives total turning at least $2\pi$. A18 combines it with
 momentum-force control and a speed floor to obtain a sharp action bound.
 Next test force-limited momentum excursions instead of a speed floor, so

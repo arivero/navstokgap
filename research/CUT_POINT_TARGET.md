@@ -1,142 +1,61 @@
-# Cut-point refinement: the central selection test
+# Cut refinement as a consistency test for action selection
 
-The immediate question is which independently stated physical condition forces
-an action-valued remainder to survive as the cut points become dense. The user
-reaffirmed this focus on 2026-09-07. Collision-bath relaxation is a diagnostic
-for this problem, rather than a replacement for it.
+A proposed action-selection mechanism must specify what survives insertion of
+observation cuts and what changes under physical interventions. Newtonian
+refinement remains a central consistency question. The current task is selected
+in [STATE](STATE.md); this note supplies tests and evidence, not another queue.
 
-Use partitions $\pi_N=\{0=t_0^{(N)}<\cdots<t_N^{(N)}=T\}$ with mesh
-$|\pi_N|\to0$ in a fixed mechanical experiment. Keep physical time, cut index
-and fluctuation parameter separate. State whether cuts sample one trajectory,
-define impulsive approximations, or introduce new random degrees of freedom.
+## Specify the limiting experiment
 
-**R03/B33 completed:** [the cut-state test](../notes/classical-cut-state.md)
-separates exact phase-state composition from independent position-conditioned
-resets, whose terminal refinement limit freezes motion. **R04/B34 completed:**
-[the three-body test](../notes/three-body-cut-memory.md) retains tagged momentum
-and derives the receiver memory and two-time recovery map. **R05/B35** closes
-the quiet-preparation test with scalable impulsive probes. **R06/B37** supplies
-[four finite-duration autonomous records](../notes/autonomous-finite-readout.md)
-at fixed mass and observation latency, with exact record access and increasingly
-concentrated preparation. Refining reported samples needs no extra probes.
-**R07/B38 completed:** [delayed bounded-force information](../notes/causal-force-information.md)
-gives sharp prediction errors and a joint reachable canonical area. **R08/B39
-completed:** [exact cut composition](../notes/reachable-cut-composition.md)
-preserves that area at unobserved cuts and calculates its reduction with new
-records. Area closure alone need not recover momentum. **R09/B40 complete:**
-[finite precision](../notes/finite-precision-cut.md) gives an exact terminal
-area and uniform precision/delay closure. **R10/B41 complete:**
-[two records](../notes/two-position-recovery.md) recover both coordinates
-under the stated precision/timing limits. **R11/B42 complete:**
-[indistinguishable pairs](../notes/indistinguishable-phase-bound.md) give sharp
-minimax bounds surviving dense records at fixed tolerance. **R12 is next:**
-composition of that same observable and comparison with A08's variance law. A19
-supports this track.
+Name the retained state at a cut, the preparation, observed records and physical
+interaction. Keep time mesh, spatial precision, observation duration, action
+parameter and volume separate. State which laws and dimensional inputs remain
+fixed. A positive remainder must arise within this same experiment; replacing
+its preparation at every mesh requires a physical justification.
 
-## A03: completed calculation
+## Established countertests
 
-**Renewed priority, 2026-09-09:** [I005](../ideas/I005-classical-cuts-and-relations.md)
-and R03 ask what relational data must survive a cut. Compare composing full
-dynamics before eliminating interface variables with composing the reduced
-segments. Fix the experiment and preparation; identify ordinary classical
-memory before proposing an unavoidable action-valued remainder.
+- C027: constant-force chord action error on arbitrary partitions is
+  $F^2\sum_j\tau_j^3/(24m)$ and closes with the mesh at fixed total duration.
+- C028–C029: inserting nodes into one Gaussian bridge preserves its fluctuation
+  parameter. A regulator-dependent parameter that leaves a finite action defect
+  changes coarse marginals; it is a different family of preparations.
+- C032: finite-speed position convolution with stationary independent increments
+  gives deterministic drift. Retaining internal velocity or memory changes
+  those hypotheses; it does not by itself choose quantum path weights.
+- C033–C034 and C062–C065: velocity-resolved bridges and full-state mechanical
+  cuts compose in their stated classes. Position-only projections can lose
+  memory; an imposed reset changes dynamics.
+- C068–C123: finite apparatus and reconstruction examples make preparation,
+  latency, record and calibration resources explicit. Their synthesis is in
+  [the action-scale paper](../notes/action-scale-obstructions.md).
 
-[The reviewed note](../notes/cut-point-consistency.md) and B12 complete the
-five tests below. Chord errors vanish on arbitrary shrinking meshes. Exact
-Gaussian restriction consistency fixes $\kappa$, whereas the finite-defect
-scaling changes the retained-node distribution. At fixed $\kappa$, each inserted
-node contributes mean kinetic action $\kappa/2$, and $2D_\pi/(N-1)$ estimates
-that parameter in mean square. C027–C029 record the precise hypotheses.
+[Cut consistency](../notes/cut-point-consistency.md),
+[finite-speed cuts](../notes/physical-cut-speed.md),
+[return bridges](../notes/telegraph-return-bridge.md) and
+[classical cut state](../notes/classical-cut-state.md) retain proofs and audits.
+The older double-limit/finite-propagation drafts remain under R02 review;
+they are not accepted quantum-necessity theorems.
 
-After the 2026-09-08 review, A03/A05/A06 are closed as the chosen structural
-tests. The main next task is A08 composition in
-[ACTION_FIELD_TARGET.md](ACTION_FIELD_TARGET.md). Preserve the separate
-Gaussian node estimator, finite-window variance coefficient and long-window
-plateau; transferring the C028 estimator to bounded-speed fixed-duration paths
-does not preserve its positive limit. A07 remains a supporting force test.
+## Connecting a new premise
 
-1. Derive the constant-force chord action error for arbitrary nonuniform
-   partitions; identify the mesh and force controls responsible for its limit.
-2. Compare geometric approximation with the fluctuating-node families of
-   [M05](../papers/regulator-limits.tex). The latter retain action defect
-   $\ell/2$ when $(N-1)\kappa_N\to\ell$, while paths converge uniformly.
-3. Test refinement consistency: inserting cuts into the same experiment must
-   preserve its coarse observables. Determine whether a positive-defect
-   sequence satisfies this or changes the experiment at each refinement.
-4. Define any local action field, its endpoint convention and its observation
-   window. Test additivity and units before identifying a surviving value with
-   a universal action constant.
-5. Test deterministic and reduced-noise families against the proposed physical
-   condition; then commission a bounded prior-art and assumption audit.
+For Q01/K01, identify whether the proposed premise restricts preparations,
+measurement compatibility, state composition or dynamics. Test it against the
+appropriate retained-state model before using a refinement obstruction to
+infer quantum structure. A new receiver coefficient is useful only if its
+possible outcomes change that premise test.
 
-The [constant-force note](../notes/principia-constant-force-action.md), §4,
-supplies the equal-partition vanishing-error baseline. A01 separates duration
-from refinement. A02 supplies a physical-time relaxation mechanism whose
-plateau comes from bath energy and a clock. M06 retains the force-control test;
-a spatial collision clock is a secondary A04 diagnostic.
+For a physical turn, A07/C043–C044 quantify force-limited time and action costs
+at fixed endpoint velocities. A18/C060–C061 treats closed trajectories with a
+speed floor. Their excitation inputs are explicit; A19 remains a supporting
+peak-excursion question.
 
-## A05: completed physical-cut test
+## Historical and proposed geometry
 
-[The physical-cut note](../notes/physical-cut-speed.md) implements equal-mass
-elastic reversal with a momentum receiver. It proves the sharp midpoint bound
-$\kappa_{\rm mid}\le m\Delta(u-|v|)^2$ and that ballistic position-only
-convolution laws are deterministic. C030–C032 and B13 close this chosen test.
-
-Specify whether a cut is a coordinate observation or an executed interaction.
-For one concrete interaction, derive its conditional node law and momentum/
-energy bookkeeping. Compare its coarse marginals across successive insertions,
-and test a hard speed ceiling. The fixed Gaussian law is a reference model;
-its parameter is supplied and its support has no strict speed ceiling. The
-research obligation is a classical mechanism selecting a positive consistent
-fluctuation law, followed by universality of its action parameter.
-
-## A06: completed velocity-resolved return bridge
-
-[The return-bridge note](../notes/telegraph-return-bridge.md) and B14 close
-this test with an explicit count/simplex path law, midpoint atom, right-continuous
-velocity convention and exact cut restriction. The polygon action error vanishes
-at rate bounded by switch count times mesh; its mean has an explicit Bessel bound.
-The endpoint-window protocol at a forced jump is distinct from exact conditioning.
-
-Construct the telegraph bridge on $(X,V)$ at fixed $u<c$ and reversal rate.
-Start with fixed initial velocity and an attainable terminal position/velocity.
-Separate atomic endpoints from the interior density before conditioning.
-Derive the midpoint law, sum over the midpoint velocity, and verify that
-inserting another cut preserves the old joint marginals. Compare with an
-independent midpoint-reset rule. Track the initial/bath premises setting the
-reversal rate and scale, and distinguish the microscopic coefficient from
-A01's long-duration plateau. These steps are complete in C033–C034.
-
-## A07: finite-duration turns under force control
-
-On the line take $X\in W^{2,\infty}([0,T])$ with $X(0)=X(T)=0$,
-$\dot X(0)=u$, $\dot X(T)=-u$, $0<u<c$, $|\dot X|\le u$ and
-$|\ddot X|\le a$, where $a>0$ is a specified classical acceleration ceiling.
-Completed in [the bounded-turn note](../notes/bounded-acceleration-return.md),
-C043–C044 and B21: $T_{\min}=2u/a$, $S_{K,\min}=mu^3/(3a)$ and
-uniform sharp polygon error $ma^2T|\pi|^2/24$. The original task was to
-find the sharp feasible duration and the infimum of
-$(m/2)\int_0^T\dot X^2dt$, with an attaining path when feasible.
-Then study sampled-polygon action convergence and vary $u,a,m$ within the
-physical premises. Distinguish an endpoint-conditioned bound from a universal
-action scale. Repeat the scaling interpretation when the fixed input is force
-$F_{\max}=ma$ rather than acceleration. This joins M06's force-control question
-to the central cut-point test. Commission one bounded librarian audit covering
-the optimal-control inequality and its mechanics interpretation before acceptance.
-
-## The supplied polygon proposal
-
-The user supplied a Claude-attributed proposal on 2026-09-07. Its operational
-area threshold is a comparison axiom, distinct from the main goal of deriving
-positive action under independently classical premises. Audit its passage from
-minimum cell size to an exact action lattice before reusing its quantization
-claims. Preserve the useful distinction between polygon error and swept area.
-
-## Newton: passage and conjecture
-
-Lemma I, Lemmas X–XI and the closing Scholium provide arguments about limiting
-ratios; Proposition I supplies the central-force polygon. The
-[source-grounded note](../notes/principia-constant-force-action.md) separates
-these passages from modern action calculations. Newton's possible suspicion
-of a surviving action scale remains a historical hypothesis for H02/H03's
-dated manuscript and Classical Scholia evidence.
+The [Principia note](../notes/principia-constant-force-action.md) separates
+Newton's geometric limiting arguments from modern action calculations.
+[I002](../ideas/I002-newton-polygon-threshold.md) preserves the supplied polygon
+proposal; [I003](../ideas/I003-cut-paradox-arrow-obstruction.md) preserves the
+cone/arrow heuristic and its reviewed corrections. Historical H02/H03/H11
+seek witnesses under their own budgets. Their dated or suggested next steps
+do not supersede the live priority list.

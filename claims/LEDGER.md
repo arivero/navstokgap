@@ -5,6 +5,10 @@ review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
 
+[The P04 synthesis](../notes/action-scale-obstructions.md) consolidates the
+accepted action-selection and gap arguments through C123. It adds no claim
+IDs or literature assertions; detailed proofs and audit statuses below govern.
+
 ## Mechanical and operational results
 
 | ID | Statement | Evidence |

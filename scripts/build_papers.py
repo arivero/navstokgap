@@ -59,6 +59,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=A conservative receiver and the origin of a correlation scale",
          "-o", "papers/conservative-harmonic-receiver.tex"])
+    run(["pandoc", "notes/action-scale-obstructions.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Classical action scales: obstructions, conditional bounds and quantum premises",
+         "-o", "papers/action-scale-obstructions.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -66,7 +70,7 @@ def main():
                   "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
                   "composition-universality", "checkerboard-dynamics",
                   "susceptibility-gap", "bounded-acceleration-return",
-                  "conservative-harmonic-receiver", "research-programme"):
+                  "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

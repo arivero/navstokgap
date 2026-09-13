@@ -5,10 +5,11 @@ description: Guide navstokgap research on classical mechanisms selecting a posit
 
 # Principia and action-scale research
 
-The central target is a classically defined action-valued quantity
-$\mathsf h_\varepsilon(t)$ converging to a positive universal constant, with its
-quantum role derived from the dynamics. Each research step should discharge an
-obligation, supply a mechanism, or settle a candidate premise by counterexample.
+The target is a physical explanation of quantum structure with a positive
+universal action parameter, alongside robust gap mechanisms. A classically
+defined action field is one proposed route. Choose work through the live STATE
+list and `research/STRATEGY.md`; a receiver calculation or a source card is not
+itself a priority. Each step must change a named premise or mechanism decision.
 
 Locate the repository through AGENTS.md or this skill's resolved location:
 the repository is two directories above the skill directory. On a fresh session
@@ -25,6 +26,9 @@ Track five gates separately: classical definition and units; exclusion of zero;
 convergence in a stated topology; universality across masses and preparations;
 and identification with the quantum phase/action parameter. Record which gate
 the selected task advances and which physical premise supplies that advance.
+Name the decision changed by each likely outcome. If another pulse/calibration
+variant only refines the same conditional result, park it under STRATEGY's
+return criteria. Preserve explicit user scope and necessary proof corrections.
 
 For every limit, name the varying parameter: physical time $t$, mesh
 $\varepsilon$, observation duration $\Delta$, action parameter, volume or
@@ -48,9 +52,13 @@ Choose the smallest relevant route, then read its maintained note:
 - **Gap mechanism:** `notes/susceptibility-gap.md`. Specify the operator,
   domain, invariant law, clock and observable access. Test hidden slow modes
   and the constants needed uniformly across the proposed family.
-- **Quantum role:** `notes/checkerboard-dynamics.md`. Record the source of
-  complex amplitudes, the measurement rule and the dimensional action constant;
-  compare their cut limits with the real stochastic model.
+- **Quantum necessity and compatibility:** the Q01/K01 cards in
+  `references/IDEA_BRIDGES.md` and their B01 companions. State the operational
+  class, excluded classical model and precise premise; keep source coverage
+  explicit. Use `notes/checkerboard-dynamics.md` to track the amplitudes,
+  measurement rule and dimensional constant still supplied by that comparison.
+- **Consolidation:** `notes/action-scale-obstructions.md` maps accepted results
+  to the missing premises. Reuse its proof/audit links before adding a subcase.
 
 Use `claims/LEDGER.md` for acceptance and `research/TASKS.md` for live priority;
 source-inspired drafts retain their own review status. Prefer a mechanical

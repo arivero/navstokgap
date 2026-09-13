@@ -5,8 +5,9 @@ description: Restore source-backed research ideas for navstokgap after a fresh s
 
 # Bibliography as research input
 
-Bring one or two useful constructions from the bibliography into the active
-task, with a concrete test toward the positive-action target. This is a
+Bring one or two useful constructions into the task selected by STATE, with a
+concrete decision about quantum/action premises or a uniform gap estimate.
+Source cards and dated handoffs supply context; they do not select the task. This is a
 context-loading skill; AGENTS.md supplies the restart hook. A skill file alone
 does not schedule execution or detect resets.
 
@@ -15,7 +16,9 @@ above its directory). After selecting the task from the live restart state:
 
 1. Read the relevant card in [the idea bridge index](../../references/IDEA_BRIDGES.md).
    Choose a second card only when it supplies a complementary mechanism or
-   countertest. Prioritize the current proof obligation over broad similarity.
+   countertest. Prioritize the current proof obligation over broad similarity;
+   do not load the latest receiver capsule by default. Apply STRATEGY's
+   stopping rule before expanding a source batch or proposing another subcase.
 2. Read each selected source companion, including its coverage and remaining
    access gaps. Follow the linked model note when doing mathematical work.
    A source title or a remembered formula is a discovery lead until verified.
@@ -48,8 +51,12 @@ literature status separately. The single-worker protocol remains in force.
 
 ## Routing check
 
-- A fresh G02 session should recover the Green–Kubo/observability card and
-  pose a receiver-access test, with B22 still subject to its live review status.
+- A fresh Q01 session should recover the Hardy/CDP source coverage, identify
+  the classical-exclusion premise and preserve the unaudited proof boundary.
+- A fresh G03 session should recover B20/B22, keep the clock normalization and
+  ask for an interaction estimate with constants uniform in system size.
+- An explicit R33 request may recover its retained variational capsule; a
+  generic autonomous request must first follow STATE's live selection.
 - An A09 session should recover the composition or coherent-cut card and name
   the preparation/phase premise still requiring selection.
 - A historical source worker should recover exact passage coverage and a

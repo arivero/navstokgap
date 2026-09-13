@@ -1,15 +1,18 @@
 # Task queue
 
 The coordinator alone updates this board. Statuses: ready, active, review, done,
-waiting (with a concrete dependency). “Done” means the stated acceptance condition
+waiting (with a concrete dependency), parked (preserved with a return criterion). “Done” means the stated acceptance condition
 is met. Source tasks record either their completed coverage or an access-limited
-handoff with the remaining dependency.
+handoff with the remaining dependency. Priority is the ordered list in
+[STATE](STATE.md); this board is not ordered by dispatch priority. Apply
+[STRATEGY](STRATEGY.md) before extending a task. Ready means eligible, not next.
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| P04 | done | Consolidated action-scale obstruction paper, short restart state, priority/stop rules and routing review; no new claims | Coordinator | [Handoff](handoffs/P04.md) |
 | H10 | done | Indian contact/traversal, Chinese solid dissection and Mohist statics, access-limited Avicennian comparison; reviewed passages and source capsule | Coordinator + one sequential Luna medium | [H10 handoff](handoffs/H10.md) |
 | H11 | ready | Collate Liu Hui juan 5 facsimile pages 18–19; retrieve Ibn Sina Physics III.4 contact/millstone passage; record exact access and wording | One bounded source worker, sequential | H10; two witness targets, no regional sweep |
-| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); supporting track, R17 first |
+| K01 | ready | Fixed-time measurement compatibility: explicit classical joint-state test, primary contextuality comparison and dimensional-premise accounting | Coordinator then bounded librarian | [I007](../ideas/I007-static-compatibility.md); targeted Q01 dependency or explicit user request |
 | P00 | done | Restartable programme, buildable LaTeX drafts, source/claim protocols and successful checks | Coordinator | — |
 | R03 | done | Fixed-energy receiver cut maps, nonsemigroup position kernel, reset freezing limit and phase-state restoration; C062–C063 | Coordinator + Luna-low B33 | [R03 handoff](handoffs/R03.md) |
 | B33 | done | Two cached primary pages, zero searches; cut-state source/proof audit and coordinator coverage correction | One Luna low, sequential | R03 |
@@ -71,7 +74,7 @@ handoff with the remaining dependency.
 | R32 | done | Exact single-tolerance curves and explicit fixed early-pulse selection with all canonical inverse entries nonzero, C120–C121 | Coordinator + sequential Luna-low B63/B64 | [R32 handoff](handoffs/R32.md); fixed box for the selected design |
 | B63 | done | Freire inverse-neighbourhood method audit and inherited scalar information radius | One Luna low, sequential | R32 stage 1; nonvanishing subfamily now supplied by C121 |
 | B64 | done | Hermite interpolation method audit; coordinator finite-width estimate and proof/source review | One Luna low, sequential | R32/C121 |
-| R33 | in progress | Stages 1–2 prove suppression, exact zero tangent and quadratic response (C122–C123); next test projected curvature | Coordinator + completed Luna-low B65/B66 | [R33 handoff](handoffs/R33.md); local-fibre versus global risks |
+| R33 | parked | Accepted stages 1–2 retained (C122–C123); projected curvature open, not selected | Coordinator; B65/B66 complete | [Handoff](handoffs/R33.md); return for a named Q01/K01/G03 dependency, correction or explicit user request |
 | B65 | done | Smooth inverse/Taylor method audit; coordinator corrected matrix-inversion page anchor | One Luna low, sequential | R33 stage 1 |
 | B66 | done | Variational-method audit; coordinator supplied primary Teschl passage after secondary worker route | One Luna low, sequential | R33 stage 2/C123; curvature nonvanishing open |
 | P03 | done | Repository-wide synthesis review, I003 corrections with provenance, B27 benchmark and revised priorities; written review and document checks | Coordinator + sequential B27 | A13 |
@@ -88,7 +91,7 @@ handoff with the remaining dependency.
 | B32 | done | Milnor printed pp. 248, 254; one-query primary-source audit and coordinator visual/proof review | One Luna low | A18 |
 | A19 | ready | Replace pointwise speed floor by peak momentum or kinetic excursion, allowing turning-point stops; prove force-limited excursion cost or identify missing premise | Coordinator then one bounded librarian | C060 and A07 |
 | R02 | ready | Audit scalar and matrix finite-propagation candidates in I003; conservation, Fourier convention and noise model explicit; prior-art audit before claim promotion | Coordinator then one small librarian | P03 corrections |
-| G03 | ready | Extend G02 beyond independent products using an explicit interaction estimate and uniform observable calibration | Coordinator then sequential librarian | C045–C046 |
+| G03 | ready | One interacting extension of G02: prove a size-independent gap estimate or identify its missing premise by counterexample; explicit invariant law, clock and calibration | Coordinator then sequential librarian | C045–C046 |
 | B01 | done | Six primary bibliography leads; identifiers/abstracts reviewed and shared metadata integrated | Luna + coordinator | Programme |
 | H01 | done | NATP00385 normalized, diplomatic and XML archived; focused passage audit and coverage record | Sol + coordinator | Programme |
 | M01 | done | Constant-force no-gap proposition; Jacobi/Hessian distinction; free-kernel test; conditional two-arm distinguishability derivation | Coordinator | Existing note |
@@ -97,7 +100,7 @@ handoff with the remaining dependency.
 | H03 | waiting | Read all six scholia in an identified edition; compare relevant manuscript deletions; audit 1687-delay claim chronologically | Historical analyst + reviewer | H02 access |
 | B02 | ready | At most 6 primary sources: central-potential existence, collision regularisation, action-angle/EBK; distinguish exact from semiclassical | Luna | Programme |
 | M02 | ready | Classical IVP assumptions for smooth central forces; explicit radial Kepler collision example and continuation convention | Sol derivation, coordinator review | C002 |
-| M03 | active | Oscillator Hessian versus Hamiltonian spectra; free line versus circle and large-volume gap closure | Coordinator derivation, sequential review | M01 |
+| M03 | parked | Oscillator Hessian versus Hamiltonian spectra; free line versus circle and large-volume gap closure | Coordinator derivation, sequential review | Return for a named G03 operator comparison or explicit user request; B04 audit retained |
 | B04 | done | Per-result literature audit of M03 spectra, action variable, winding and finite-speed sector bounds; coordinator source checks recorded | Luna librarian, coordinator verification | M03 draft |
 | B05 | done | Retrospective per-result literature audit of C001–C008, with exact matches and consequence classifications | Luna librarian, coordinator verification | Current ledger |
 | H04 | done | Cone-section passage verified in Xylander 1570 pp. 823–824; bounded early-modern reception search | Luna librarian, coordinator visual verification | User cone question |
@@ -129,7 +132,7 @@ handoff with the remaining dependency.
 | P02 | done | Independent-session verification for A08/A09/G01: product-chain composition and bath countertest, cubic bridge-midpoint onset with exact sampler, gap/slow-mode test, continuation routes; 28 exact checks, no claim IDs | Fable session, no subagents | P01; [checks note](../notes/composition-crossover-gap-checks.md) |
 | A08 | done | Conditional mass universality and positive-reference theorem, product-state closure and preparation/correlation tests; C035–C036, five checks, PDF | Coordinator + sequential Luna-low B16 | P01/P02; reviewed |
 | B16 | done | Two-search/two-page composition prior-art audit; coordinator verified formula images and corrected titles | One Luna low, sequential | C035–C036 |
-| A09 | active | A09a/A09b complete; preparation independence and physical quantum-role selection remain | Coordinator then one small sequential librarian | B15–B18; C035–C040 |
+| A09 | waiting | A09a/A09b complete; Q01 now owns the next premise-selection decision; preparation independence and physical quantum role remain | Coordinator then one small sequential librarian | B15–B18; C035–C040 |
 | A09a | done | Exact beta midpoint mixture, full crossover limits and common-finite-window mass constraint; C037–C038, 29 checks, seven numerical comparisons, PDF | Coordinator + Luna-medium B17 | C033, P02; reviewed |
 | B17 | done | Two-search prior-art audit; Cinque pp. 3–4 and DLMF 10.32.1, coordinator source/proof review | One Luna medium, sequential | C037–C038 |
 | A09b | done | Primary recurrence, normalized basis map, strong wavepacket and nonrelativistic limits; measured-cut countertest C039–C040 | Coordinator + Luna-medium B18 | 28 exact checks, three mode tests, PDF |
@@ -137,9 +140,10 @@ handoff with the remaining dependency.
 | A07 | done | Sharp reversal duration and kinetic cost, parameter/excess-cost limits and uniform sharp polygon bound C043–C044 | Coordinator + Luna-low B21 | 27 finite checks and PDF |
 | B21 | done | Bounded-control and Lipschitz-variance prior-art audit; corrected envelope sign, elementary specialization | One Luna low, sequential | C043–C044; coordinator proof and source review |
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
-| B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Drafts and 12 checks available; after A08 priority |
+| B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Preserved drafts and historical checks; select only for a named main-track dependency |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
-| Q01 | ready | Compare Hardy and Chiribella–D'Ariano–Perinotti axiom systems; identify classical countermodels and where action units enter | Coordinator | B01 reviewed |
+| Q01 | first milestone done | B67 premise map accepted; next eligible decision is physical operational closure/composition, selected only through STATE | Coordinator + completed Luna-low B67 | [Handoff](handoffs/Q01.md); full reconstruction proofs unaudited |
+| B67 | done | Hardy/CDP primary-passage exclusion audit; finite-model scope and moving-ball motivation reviewed | One Luna low, sequential | Q01 synthesis; no new theorem |
 | G01 | done | Susceptibility/gap product, hidden-label family and complete-observable lower gap bound C041–C042; explicit energy units | Coordinator + Luna-low B20 | 20 checks and PDF; M03 retains separate gates |
 | B20 | done | Green–Kubo source and bounded spectral/frame audit; Sokal discovery-only | One Luna low, sequential | C041–C042, coordinator review |
 | G02 | done | Injective-velocity fixed-plateau closing-gap family and local-frame independent-product bound C045–C046; 14 grouped checks and expanded PDF | Coordinator; saved Luna-low audit | [G02 handoff](handoffs/G02.md) |
@@ -174,47 +178,10 @@ matching role card. Delegate to Sol or Luna sequentially; wait for each worker
 and review its handoff before continuing or dispatching again. End each search
 at its stated budget with findings and the next question.
 
-## Next bounded session
+## Selecting the next session
 
-Continue R33: evaluate beta=-Pi L^{-1}V(e_y) from the explicit quadratic
-pulse integrals in (13). C123 proves D V(0)=0 by signed-coupling symmetry,
-so test curvature using centre-to-endpoint separation and fixed finite-width
-control. Nonzero response or exact constancy remains open. Preserve the
-S/lambda regime and local conditional versus full-class minimax distinction.
-See [R33 handoff](handoffs/R33.md).
-
-Previous R20 setup: retain eight final pointer records and known incoming
-probe momenta but hide initial clock position and momentum. Test a common-record
-family preserving the exact receiver energy shell and fixed box margins.
-See [R19 handoff](handoffs/R19.md).
-Preserve A19 as the supporting mechanical calculation.
-
-Start A19's peak-excitation test, allowing speed to vanish at turning points.
-A18/B32 completed the sharp closed-trajectory action bound C060–C061.
-A17/B31 completed the fixed-potential small-circle and positive floor tests.
-A16/B30 completed the conditional dilation obstruction C056–C057.
-A15/B29 completed the circular bound-system comparison, C054–C055.
-M07/B28 completed the
-Kepler benchmark and softened-core countertest (C052–C053). I004 and P03 carry the rationale.
-R02 owns the repaired finite-propagation draft; A17 tests the fixed-force class.
-The A06/A09a consolidation is complete; the review maps remaining opportunities.
-For the next bounded transport test, A14 replaces ordered streams by independent stationary renewal streams
-at fixed mean gap. Derive the Palm residual law and tagged variance growth;
-test whether mixing supplies a uniform bound as gap variance decreases.
-A13 holds mass, speed, density and mean collision rate fixed while closing
-the response through periodic cancellation.
-A12 derives the Markov clock from Poisson gaps; its plateau depends on preparation.
-A04's equal-mass spatial-clock subcase is covered by A12; general velocity laws
-retain incoming-speed bias. A09 retains the physical scale-selection
-target. A08/B16 and A06/B14 are complete. The user reaffirmed the
-continuum limit of cut points as the central problem. A02/B10 are complete;
-their collision mechanism is a diagnostic of supplied scales. M06 remains a
-supporting force-control calculation, A04 a secondary spatial-clock test.
-B07b retains the tangent-groupoid theorem reading.
-M05/B07a/B08 are complete. M03 retains its draft and completed B04
-audit; its independent mathematical review and build integration remain.
-H02 continues from `references/batches/H02-seeds.md`; H05 uses H04's exact
-cone-passage witnesses.
-Q01 has a literature-grounded starting pair and full-proof reading as its first
-step. F01 controls the decision to introduce formalisation tools. Completed-task
-handoffs are under `research/handoffs/`.
+Use the ordered list in [STATE](STATE.md). The first Q01 milestone and the
+following G03 milestone are bounded decisions; an incomplete parent task does
+not force an immediate continuation. R33's open curvature question remains
+parked in its handoff. Historical next-task narratives are preserved in the
+[dated state history](STATE-history-2026-09-12.md) and previous Git versions.

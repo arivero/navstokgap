@@ -1,5 +1,13 @@
 # Papers
 
+Start with [the consolidated action-scale argument](../notes/action-scale-obstructions.md)
+([PDF](../out/papers/action-scale-obstructions.pdf)). The detailed manuscripts
+below retain the proofs; their local follow-ups do not select the next task.
+
+- [action-scale-obstructions.tex](action-scale-obstructions.tex): generated
+  from the synthesis; premise map, key arguments, receiver/calibration
+  classification and quantum/gap obligations. Reuses accepted source audits.
+
 - `action-gap-foundations.tex`: area–action identity, variation propositions,
   Jacobi operator, free kernel and quantum finite-copy threshold.
 - [time-refinement.tex](time-refinement.tex): exact Gaussian blocking, surviving
@@ -36,8 +44,9 @@
   mass universality, positive reference and preparation tests.
   [PDF](../out/papers/composition-universality.pdf), B16 and five algebra checks.
 - [conservative-harmonic-receiver.tex](conservative-harmonic-receiver.tex):
-  A10 and A11 together, from finite modal response to periodic-chain limits
-  and the speed-support test. [PDF](../out/papers/conservative-harmonic-receiver.pdf).
+  Technical compilation from A10/A11's modal response through R03–R33's
+  receiver/record calculations. The synthesis summarizes its action-selection
+  consequences; the R33 continuation is parked. [PDF](../out/papers/conservative-harmonic-receiver.pdf).
 - `research-programme.tex`: generated from `research/PROGRAMME.md` using
   `programme-template.tex`. Edit the Markdown and run `make programme`.
 - [checkerboard-dynamics.tex](checkerboard-dynamics.tex): coherent wavepacket
@@ -47,7 +56,7 @@
 - [bounded-acceleration-return.tex](bounded-acceleration-return.tex): sharp
   turn cost and polygon error; [PDF](../out/papers/bounded-acceleration-return.pdf).
 
-Run `make papers` from the root to regenerate the programme and build all fourteen
+Run `make papers` from the root to regenerate the programme and build all fifteen
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

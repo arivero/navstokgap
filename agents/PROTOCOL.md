@@ -27,8 +27,10 @@ tasks to Sol or Luna in sequence. The coordinator waits for the worker to finish
 then reviews its handoff before continuing or dispatching another. Run review
 agents sequentially, and pass this limit to every descendant.
 
-Pass the question, input paths, applicable skills, allowed output paths and a
-finite source/page budget. The coordinator owns shared indexes, claim acceptance,
+Pass the main-track decision this work informs, the bounded question, input
+paths, applicable skills, allowed output paths and a finite source/page budget.
+Workers report whether the result changes that decision; adjacent open questions
+are suggestions, not automatically selected successor tasks. The coordinator owns shared indexes, claim acceptance,
 paper integration and commits. Workers return changes to these shared artifacts
 as proposals in their handoffs.
 
@@ -61,7 +63,9 @@ Save `research/handoffs/<task-id>.md` with:
 - Effective model/effort when independently reported.
 - Source routes, identifiers, edition choices and exact reading coverage.
 - Findings with anchors, extraction defects and unresolved dependencies.
-- Checks performed and the next bounded task.
+- Checks performed, the decision changed and remaining dependency.
+- Any proposed continuation labelled selected, supporting or parked; the
+  coordinator reconciles it with STATE under `research/STRATEGY.md`.
 
 Use lawful routes and `references/SOURCE_POLICY.md`. A source stub
 recording an access failure is a valid outcome at the task's stopping point.

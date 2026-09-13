@@ -11,7 +11,9 @@ The coordinator integrates metadata and assigns deeper proof or novelty review.
 
 End each batch with one source-driven model test: a premise to examine, a
 construction to implement or a proof obligation to resolve. Bibliography should
-put useful ideas into the current calculation as well as establish prior art.
+put useful ideas into the assigned premise decision as well as establish prior
+art. State which outcome would change that decision. Related sources outside
+the budget stay leads; they do not launch another batch automatically.
 
 Every mathematical result needs a librarian prior-literature audit. Match each
 assigned claim to a theorem, equation or passage and compare its hypotheses.

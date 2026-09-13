@@ -1,7 +1,10 @@
 # Start here
 
 Read `research/STATE.md`, `research/PROGRAMME.md` and the selected entry in
-`research/TASKS.md`. Then load the notes and sources needed for that task.
+`research/TASKS.md`. STATE is the single current priority list; old handoffs,
+source cards and numbered continuations are context. Apply
+`research/STRATEGY.md`, then load only the notes and sources needed for the
+selected decision. Explicit user task choices take precedence.
 Update task state and the handoff when substantive work ends. Preserve existing
 user changes in the worktree.
 
@@ -10,6 +13,28 @@ has been lost, read `skills/navstokgap-bibliography/SKILL.md` and load its
 task-relevant source-idea capsule. Reuse a current capsule already retained in
 the handoff/summary. This applies to source workers within their assigned
 budget; context recovery itself launches no additional worker or web sweep.
+
+# Research direction and stopping
+
+Advance a named quantum/action-selection obligation or a gap estimate that
+survives the relevant limits. Before calculation, record the decision its
+possible outcomes will change, the bounded deliverable/stop and why existing
+results do not already settle it. Use `research/STRATEGY.md` for the selection
+and consolidation rules.
+
+Do not select another calibration, pulse or coefficient variant solely because
+it follows the latest note. If both outcomes leave the same missing physical
+premise and discharge no named dependency, consolidate and park the extension
+with a return criterion. After two
+consecutive steps in one proof family, compare its next step with the other
+main track. The coordinator chooses autonomously; this introduces no routine
+permission gate. Necessary corrections and explicit user requests retain priority.
+
+End substantive work with its strategic consequence and update STATE's ordered
+choices. Keep STATE short; dated milestone narratives belong in history. An
+unfinished umbrella task does not reserve the next session. A consolidation of
+accepted claims reuses their audits with a claim-to-source map and written
+consistency review; new mathematical results still require the audit below.
 
 # Research and writing
 

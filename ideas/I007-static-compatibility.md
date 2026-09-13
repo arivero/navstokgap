@@ -40,6 +40,9 @@ These are constructions to think with, not proposed axioms attributed to the
 authors.
 
 R12's completed comparison of constituent and whole-body records gives an
-exact information-loss benchmark. R13's finite-horizon test has priority.
-K01 extends the question to fixed-time compatibility; temporal record formation can then
-be compared with the existing R05–R11 apparatus models.
+exact information-loss benchmark. K01 supplies the targeted Q01 compatibility
+test when that premise is selected in STATE. Its outcome should decide whether
+the excluded classical model is excluded by an independently motivated rule;
+temporal record formation can then be compared with the existing apparatus
+counterexamples. An additional context or apparatus variant needs that same
+decision link before becoming a successor task.
