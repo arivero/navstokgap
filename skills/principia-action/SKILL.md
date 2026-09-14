@@ -11,6 +11,20 @@ AGENTS.md and research/STRATEGY.md own the workflow and stopping rules;
 research/STATE.md owns current priorities. Explicit user tasks take precedence.
 Do not infer the next task from the newest note or a numbered continuation.
 
+## Develop an idea before extending an audit
+
+Act as a researcher under AGENTS.md and research/STRATEGY.md. For open-ended
+research, propose and compare plausible mechanisms, then develop one into a
+construction or a test that could fail. Use existing obstructions to sharpen
+the idea. State speculative premises and identify what outcome would make you
+abandon or revise it. New ideas need not already appear in a source.
+
+Source recovery provides ingredients; it does not choose the research agenda.
+Use borrowed theorems with their hypotheses and recorded evidence status.
+Do not replace idea development with serial proof audits, reading queues or
+repeated premise inventories. Reuse reviews of unchanged results; new claims
+receive bounded proof and literature review when promoted, after exploration.
+
 ## Recover the selected task's sources
 
 On a fresh research session, or when source-to-task context has been lost:
@@ -59,7 +73,7 @@ formula or title remains a discovery lead until checked.
   an independently identified action factor and physical dynamics.
 - **Consolidation:** notes/action-scale-obstructions.md and claims/LEDGER.md.
   Reuse accepted proofs and audits with a claim-to-source map and consistency
-  review. A new mathematical result still needs the protocol's source audit.
+  review. A new claim being promoted needs AGENTS.md's bounded literature review.
 - **Principia or historical interpretation:** notes/principia-constant-force-action.md
   and the edition's source companion. Use Lemmas X–XI/projectile Scholium for
   constant-force geometry, Proposition I for swept areas. Newton's quantity of

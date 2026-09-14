@@ -16,16 +16,30 @@ budget; context recovery itself launches no additional worker or web sweep.
 
 # Research direction and stopping
 
+The agent is a researcher: generating new ideas is part of the task. Use
+curiosity to question restrictive assumptions, connect constructions and propose
+physical mechanisms. Compare plausible approaches, choose a promising one and
+work it into a derivation, model, prediction or informative failure. Label
+conjectures and speculative physical premises explicitly. A missing precedent
+or an uncertain outcome does not prevent a bounded investigation; neither is
+evidence of novelty.
+
 Advance a named quantum/action-selection obligation or a gap estimate that
 survives the relevant limits. Before calculation, record the decision its
 possible outcomes will change, the bounded deliverable/stop and why existing
 results do not already settle it. Use `research/STRATEGY.md` for the selection
-and consolidation rules.
+and consolidation rules. For open research, the default deliverable is a
+construction or a decisive test of an idea. Literature, audits and bookkeeping
+support that deliverable; a reading queue or a list of open premises alone
+does not complete it. Do not require a source to have proposed the idea first.
 
 Do not select another calibration, pulse or coefficient variant solely because
 it follows the latest note. If both outcomes leave the same missing physical
 premise and discharge no named dependency, consolidate and park the extension
-with a return criterion. After two
+with a return criterion. A named dependency inside a borrowed theorem is not
+by itself a reason to continue auditing that theorem. Use its stated assumptions
+and retained evidence status; reopen its proof for a concrete suspected error
+affecting a result in use, or explicit user direction. After two
 consecutive steps in one proof family, compare its next step with the other
 main track. The coordinator chooses autonomously; this introduces no routine
 permission gate. Necessary corrections and explicit user requests retain priority.
@@ -34,7 +48,9 @@ End substantive work with its strategic consequence and update STATE's ordered
 choices. Keep STATE short; dated milestone narratives belong in history. An
 unfinished umbrella task does not reserve the next session. A consolidation of
 accepted claims reuses their audits with a claim-to-source map and written
-consistency review; new mathematical results still require the audit below.
+consistency review. Keep these updates short; do not create recurring
+consolidation sessions in place of research. New claims being promoted receive
+the bounded review below.
 
 # Research and writing
 
@@ -94,11 +110,15 @@ selective to conserve the user's usage allowance.
 Promote an idea into the ledger through an explicit derivation and review.
 See `research/TOOLS.md` for reproduction and tool decisions.
 
-For each mathematical result, commission a sequential librarian audit of prior
-literature. Record precise source matches or bounded search coverage; distinguish
-established results, derived consequences and candidate contributions. Maintain
-proof status and literature status separately. Apply this to earlier results
-and to the proposed principles forcing a positive action parameter.
+Before promoting a new project-derived mathematical claim or a precise proposed
+action principle into the accepted ledger, obtain written proof review and one
+bounded sequential librarian comparison with prior literature. Exploratory
+ideas and derivations may proceed before that review. Reuse existing audits
+for unchanged claims and established results; do not automatically audit older
+results or every imported lemma. Record exact matches or bounded coverage and
+keep proof status separate from literature status. An unmatched search result
+is not proof of novelty. Review findings should improve or challenge the
+construction, not automatically generate another audit task.
 
 Use bibliography to develop the toy model: each source batch should supply a
 premise, construction or proof obligation for a named research step. Keep this

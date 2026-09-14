@@ -77,3 +77,10 @@ source audit is claimed by this priority correction.
 
 Validation: `make check` and `git diff --check`; no manuscript changes or PDF
 rebuilds are needed for this scheduling correction.
+
+The user explicitly requested propagation into agent Markdown instructions.
+AGENTS.md, the protocol, both source-worker roles and the principia-action
+skill now prioritize idea generation and concrete tests. The blanket audit
+requirement was narrowed to promotion of new project-derived claims, with
+existing reviews reused and exploration permitted before review. Repository
+and skill validation passed; no research claims or manuscripts changed.

@@ -4,6 +4,22 @@ Each agent receives a concrete question and produces a reviewable artifact.
 The coordinator maintains shared state and integrates the results. Role cards
 describe the intended work; the task board records its current status.
 
+## Discovery and useful delegation
+
+The coordinator owns idea generation and development as well as acceptance.
+A worker may propose an unexpected connection, counterexample or alternative
+premise within its assigned question. Give the concrete construction or test
+it suggests and label speculation; a useful negative result is welcome.
+Do not require prior literature to authorize exploratory reasoning.
+
+Delegate to advance a construction or resolve a consequential uncertainty.
+Source workers should return usable ingredients and possible objections, not
+only a reading queue. Reuse accepted source/proof reviews. Commission bounded
+prior-art comparison when promoting a new result under AGENTS.md; do not make
+routine verification the next research deliverable. An unresolved lemma in a
+borrowed proof does not automatically justify another worker. Stop at the
+assigned budget and let the coordinator return to the research question.
+
 ## Dispatch and cost
 
 **Hard user rule, 2026-09-09: no Python scripts for numerical verification**, including

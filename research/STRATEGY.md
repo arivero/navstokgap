@@ -79,5 +79,6 @@ second queue. Source-idea cards provide inputs, not scheduling instructions.
 
 Existing proofs and audits survive consolidation. A synthesis that only
 restates accepted claims needs a claim-to-source map and written consistency
-review; it need not commission duplicate librarian work. New mathematical
-claims still receive the review and source audit required by AGENTS.md.
+review; it need not commission duplicate librarian work. New claims being
+promoted receive the bounded proof and literature review required by AGENTS.md;
+exploratory ideas need no prior audit.
