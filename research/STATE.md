@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q01 generator restriction accepted (C129/B77).**
+Updated: 2026-09-14. **User correction: stop audit-driven drift.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -22,14 +22,14 @@ select their own task.
    destination/article type and submission direction remain. Further autonomous
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
-2. **Q01 — local-rotation projector audit, next autonomous research.**
-   C129/B77 accepts the boundary derivative and tensor-space restriction in
-   B70, equations (8)–(14). Next check equations (15)–(17): whether averaging
-   isolates a nonzero admissible generator, with normalized Haar measures,
-   invariant subspaces and nonzero-overlap justification explicit. Stop before
-   coefficient elimination. This discharges the next named dependency of the
-   interaction theorem used in the spin interpretation. Physical reversible
-   descent and time/energy-to-action identification remain open.
+2. **Physical selection mechanism — next autonomous research.**
+   Choose and test one concrete physical mechanism for quantum/action selection,
+   stating its dynamics, observable and independently motivated premises before
+   calculation. It must confront an existing classical countermodel or supply
+   the missing physical time/energy identification. A borrowed reconstruction
+   axiom cannot serve as its own physical justification. Deliver a construction
+   or a decisive failed mechanism; do not substitute a theorem-proof audit or
+   another inventory of missing assumptions. Existing accepted results are inputs.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its
@@ -45,6 +45,11 @@ still expose a physical dynamics premise; Q01's full reconstruction proof
 and K01 remain supporting for a named acceptance/context question.
 
 ## Consolidated findings and parked work
+
+- **Q01 theorem-proof sequence parked by user correction.** C129/B77 remains
+  accepted. Equations (15)–(17) and the rest of the borrowed theorem are not
+  scheduled. Return only for a concrete suspected error affecting a result in
+  use, or explicit user direction; unaudited status alone is insufficient.
 
 - C002/C056–C058: continuous variation, admissible contractions and fixed-potential
   small circles close candidate classical action scales in their stated classes.

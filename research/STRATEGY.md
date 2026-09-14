@@ -7,6 +7,23 @@ those conclusions. The current ordered work list lives only in
 [STATE](STATE.md); [TASKS](TASKS.md) records scope, acceptance and status.
 Explicit user requests select their own scope.
 
+## Research before serial verification
+
+User correction, 2026-09-14: too many audits are drifting from the research.
+The coordinator is a researcher and must also generate new ideas. Propose
+candidate mechanisms, compare their physical motivation and decisive tests,
+and develop the strongest candidate far enough to obtain a calculation,
+construction or informative failure. Label conjectures explicitly; uncertainty
+is a reason to investigate, not to retreat into another source audit.
+A chain of named lemmas in a borrowed theorem is not enough to justify a chain
+of autonomous sessions. Use established results with their assumptions and
+recorded evidence status. Make construction, physical-premise testing and
+surviving gap estimates the deliverables. Source review supports that work;
+it does not replace it. Reopen a borrowed proof for a concrete suspected error
+that affects a result in use, or explicit user direction. New mathematical
+results retain the required bounded literature review; do not turn that review
+into an automatic successor research task.
+
 ## Before starting a bounded task
 
 Record a short decision in the handoff, then proceed without asking for routine

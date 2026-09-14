@@ -150,7 +150,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 | A04 | ready | Spatial collision-clock diagnostic with relative-speed incoming bias and density/velocity scaling | Coordinator, then one small librarian | A02/B10; secondary to A03 |
 | B11 | ready | Resume saved polygon/receding-centre audit; original worker failed auth without artifacts, later B12–B15 ran successfully | One Sol medium librarian | Preserved drafts and historical checks; select only for a named main-track dependency |
 | B03 | ready | At most 6 primary sources on quantum speed limits, finite-resource bounds and relativistic propagation; specify time/observable definitions | Luna | Programme |
-| Q01 | generator restriction accepted | C128/B74 rules out finite repair; C129/B77 audits B70 equations (8)–(14); next selected dependency is local-rotation projectors (15)–(17) | Coordinator + sequential librarians | [Generator handoff](handoffs/Q01-generator-audit.md); full reconstruction remains unaudited |
+| Q01 | generator restriction accepted | C128/B74 rules out finite repair; C129/B77 audits B70 equations (8)–(14); projector continuation parked by user correction; next work must test a physical selection mechanism | Coordinator + sequential librarians | [Generator handoff](handoffs/Q01-generator-audit.md); full reconstruction remains unaudited |
 | B77 | done | Boundary derivatives, local slice and tensor intersection audited against one existing primary paper; established result C129 | Saved Sol-low audit, coordinator integration | [Review](../reviews/reversible-generator-B77.md); zero discovery queries |
 | B74 | done | Finite Koopman-space precedent and written orbit/atomic-separation review, one source and one query | One Luna low, sequential | [Review](../reviews/finite-closure-B74.md); C128 derived, no novelty claim |
 | B72 | done | Classical spin Poisson source and exact pair review; preprint recheck after publisher access failure | One Luna low, sequential | C127; coverage and query accounting recorded |
@@ -196,7 +196,7 @@ at its stated budget with findings and the next question.
 ## Selecting the next session
 
 Use the ordered list in [STATE](STATE.md). The first Q01 and G03 milestones are complete;
-G04's physical-operator transfer is complete; Q01's finite-repair decision and initial generator audit are complete; STATE selects the bounded projector dependency. Each milestone is bounded; an incomplete parent task does
+G04's physical-operator transfer is complete; Q01's finite-repair decision and initial generator audit are complete; STATE selects physical-mechanism work; serial borrowed-proof audits are parked. Each milestone is bounded; an incomplete parent task does
 not force an immediate continuation. R33's open curvature question remains
 parked in its handoff. Historical next-task narratives are preserved in the
 [dated state history](STATE-history-2026-09-12.md) and previous Git versions.

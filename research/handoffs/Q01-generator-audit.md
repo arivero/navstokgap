@@ -62,3 +62,18 @@ PDFs were restored only after extracted-text equality with HEAD. The programme
 source and corresponding compiled PDF are included in the checkpoint.
 No numerical or symbolic verification scripts were created or executed.
 Final `git diff --check` and staged whitespace checks passed.
+
+## Superseding user correction: audit drift
+
+2026-09-14. The user identifies too many audits as drift. The projector
+continuation selected above is now parked; its historical selection does not
+reserve the next session. C129 and B77 remain accepted. STATE and STRATEGY now
+require the next research deliverable to construct or test a concrete physical
+selection mechanism, using accepted results as inputs. An unaudited borrowed
+lemma alone is no longer a reason to dispatch work. The user further clarifies
+that generating new ideas is part of the researcher role: propose mechanisms
+and develop a selected candidate, with conjectures labelled explicitly. No new mathematics or
+source audit is claimed by this priority correction.
+
+Validation: `make check` and `git diff --check`; no manuscript changes or PDF
+rebuilds are needed for this scheduling correction.
