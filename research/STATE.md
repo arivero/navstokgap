@@ -37,7 +37,8 @@ select their own task.
    Further single-splitter, thermal and shared-release tuning is parked.
    Q03--Q07 scale/topology/normalization variants remain parked; their
    [prior mechanism summary](handoffs/Q12-prior-state.md) retains the results.
-   Existing uncommitted Q02 radiation work remains separate and untouched.
+   Q02 linear radiation balance is committed, reviewed and parked
+   ([handoff](handoffs/Q02.md)).
 3. **Gap track — next autonomous robustness test.**
    [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
    Hamiltonian by a depth-two circuit: explicit local interactions, entangled
