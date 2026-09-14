@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q06 reciprocal normalization tested.**
+Updated: 2026-09-14. **Q07 global spin-action patching tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -28,10 +28,14 @@ select their own task.
    with a cycle-consistency test, while a common energy/action factor survives.
    Q04--Q06 remain exploratory; no ledger promotion. Further adjustable
    stabilizers and spring-network variants are parked.
-   Next test global spin-action patching on the quantum track: does classical
-   symplectic consistency impose integrality, or does it enter only through
-   a supplied phase exp(iS/K)? Construct the local actions and overlap rule;
-   identify whether any absolute K is selected. Stop at that premise decision.
+   [Q07](../notes/spin-action-patching.md) gives the local actions and overlap
+   rule: phase consistency quantizes 2s/K, while classical dynamics admits any
+   s>0. A coupled irrational-ratio pair separates the premises; local loop
+   actions remain continuous. This is exploratory, not ledger-promoted.
+   Next construct a classical two-path wave/receiver experiment with explicit
+   energy transfer and readout. Test whether its action-to-phase conversion
+   is universal or tied to frequency, amplitude and apparatus. Use no quantum
+   probability rule as an unexplained input; further patching variants are parked.
    Q03 pumped variants remain parked. Existing uncommitted Q02 radiation
    work remains separate and untouched.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the

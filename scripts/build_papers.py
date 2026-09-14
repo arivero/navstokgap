@@ -89,6 +89,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Reciprocal exchange and mechanical normalization",
          "-o", "papers/reciprocal-coupling-normalization.tex"])
+    run(["pandoc", "notes/spin-action-patching.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Global spin actions and the phase premise",
+         "-o", "papers/spin-action-patching.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -100,7 +104,8 @@ def main():
                   "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme",
                   "same-collisions-different-transport", "classical-spins-operational-closure",
                   "energy-depot-action-selection", "topological-sector-action-selection",
-                  "stabilized-topology-action-scale", "reciprocal-coupling-normalization"):
+                  "stabilized-topology-action-scale", "reciprocal-coupling-normalization",
+                  "spin-action-patching"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
