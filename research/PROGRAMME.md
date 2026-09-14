@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 67, 2026-09-14. The programme consolidates the accepted results into
+Version 68, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -56,6 +56,15 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+[Q12's local receiver test](../notes/local-detector-coincidences.md) derives
+an all-gate coincidence-product bound for independent monotone responses to
+fixed fractions of one classical pulse, and a sharp efficiency/balance
+trade-off. Fluctuating routing, shared readiness and outcome-based gate
+selection supply explicit countermodels when the corresponding premises are
+removed. This exploratory result limits a receiver class; its dimensionless
+statistics supply no action scale. Shared-preparation models require a
+separate test involving independently chosen local settings.
 
 [Q10's thermal receiver test](../notes/thermal-receiver-reliability.md)
 combines a dark retention interval with a response deadline. Its activated-rate

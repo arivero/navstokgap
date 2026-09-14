@@ -109,6 +109,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Shared resources and exclusive receiver events",
          "-o", "papers/shared-resource-events.tex"])
+    run(["pandoc", "notes/local-detector-coincidences.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Independent local receivers and coincidence constraints",
+         "-o", "papers/local-detector-coincidences.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -123,7 +127,7 @@ def main():
                   "stabilized-topology-action-scale", "reciprocal-coupling-normalization",
                   "spin-action-patching", "mechanical-interference-action",
                   "passive-threshold-events", "thermal-receiver-reliability",
-                  "shared-resource-events"):
+                  "shared-resource-events", "local-detector-coincidences"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
