@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 62, 2026-09-13. The programme consolidates the accepted results into
+Version 63, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -22,7 +22,9 @@ countermodels remains open. Spectral work gives finite-system criteria, independ
 C124's interacting Ising gap uniform in finite volume at bounded coupling.
 Physical-operator identification and further uniform limits remain open.
 
-This version integrates C128/B74: the exact finite observable repair of
+This version integrates C129/B77: the initial reversible-generator restriction
+is proof-audited, with the later interaction-theorem steps still open.
+C128/B74 establishes that the exact finite observable repair of
 C127 is impossible for the admitted spin preparations. G04 retains its local
 Hermitian parent C126 alongside G03's interacting gap C124. No novelty is asserted. [The ledger](../claims/LEDGER.md)
 retains proof and literature status, including the limits of each source audit.
@@ -102,7 +104,7 @@ now excludes a continuous reversible nonlocal extension preserving that minimal
 composite, using de la Torre et al.'s Theorem 1. The local ball and Hermitian
 coordinates already meet the local-qubit premise. Identical-copy consistency
 and operational ancilla/measurement/discard closure underlie the stronger
-quantum reconstruction. The technical theorem proof remains unaudited here;
+quantum reconstruction. The full theorem proof remains unaudited here;
 physical reversible descent and action normalization remain open.
 G04's [Hermitian transfer](../notes/ising-hermitian-transfer.md) (C126/B71)
 gives a positive three-site local parent with square-root Gibbs ground state

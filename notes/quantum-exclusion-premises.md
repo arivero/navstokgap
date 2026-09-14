@@ -88,5 +88,6 @@ The bounded passage milestone is complete. Subsequent C125–C128 tests now
 locate a concrete failure of the finite operational premise: the reversible
 spin interaction cannot close on any finite enlargement of the retained
 observables for all preparations; see the [finite-closure proof](hamiltonian-finite-closure.md).
-[STATE](../research/STATE.md) selects consolidation of the remaining physical
-premises. Full reconstruction proofs remain separately unaudited.
+[C129/B77](reversible-generator-constraints.md) accepts the initial generator
+restriction; [STATE](../research/STATE.md) selects the next bounded technical
+dependency. Full reconstruction proofs remain separately unaudited.

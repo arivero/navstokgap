@@ -10,6 +10,8 @@ operational description. No action scale follows from this source audit.
 
 Q01 third milestone, 2026-09-13. [B70](../references/batches/B70.md) records
 selected primary passages and the unaudited proof dependencies.
+[C129/B77](reversible-generator-constraints.md) subsequently accepts equations
+(8)–(14) and the tensor-space restriction; the later proof remains unaudited.
 
 ## Assumptions already present in C125
 

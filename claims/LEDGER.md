@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-13. Current verification uses written derivations and source/proof
+Updated 2026-09-14. Current verification uses written derivations and source/proof
 review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
@@ -18,7 +18,8 @@ identical-copy and ancilla/measurement/discard closure. Evidence: selected
 primary theorem/setup passages and [written application review](../reviews/reversible-interaction-B70.md).
 Literature status: established source theorem and derived application, no
 novelty asserted. Proof status: hypothesis map and consequence reviewed;
-technical Lie-algebra proof and imported universality not independently audited.
+C129/B77 subsequently accepts the initial generator restriction; later
+Lie-algebra steps and imported universality remain unaudited.
 C125 remains accepted for its original local-operation class; no new theorem
 ID or positive action claim is added by this source milestone.
 
@@ -195,11 +196,21 @@ ID or positive action claim is added by this source milestone.
 
 | C128 | For C127 with J>0 and all Borel preparations, no finite-dimensional bounded real observable space containing the retained effects is invariant on any nonzero time interval; nonlinear updates of finitely many expectations cannot repair exact descent | [Orbit and atomic-separation proof](../notes/hamiltonian-finite-closure.md); [B74 written review](../reviews/finite-closure-B74.md); exact finite repair only, no capacity or action-selection conclusion |
 
+| C129 | For finite n local Bloch balls with all unit product preparations/effects, two-sided admissibility of exp(tX) forces zero first derivatives at zero probabilities, the boundary second-derivative signs, and X in the tensor power of the seven-dimensional space of scalar diagonal, equal time-space and antisymmetric spatial blocks | [Expanded source proof](../notes/reversible-generator-constraints.md); [B77 review](../reviews/reversible-generator-B77.md); necessary generator constraint only; no physical clock or action identification |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C129: [B77](../references/batches/B77.md) is an exact match to de la Torre
+et al., arXiv:1110.5482v1, equations (8)–(14) and the following tensor-space
+sentence, pp. 3–4. Proof status: written derivative, slice and intersection
+arguments accepted after saved librarian and coordinator source-image review.
+Literature status: established result with expanded exposition, no novelty
+claim; one existing paper, zero discovery queries. Equations (15) onward and
+the full reconstruction remain unaudited.
 
 C125–C128 publication positioning: [B76](../references/batches/B76.md)
 adds classical-extension and transformation-relative preparation-equivalence

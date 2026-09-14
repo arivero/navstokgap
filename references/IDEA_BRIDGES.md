@@ -8,6 +8,13 @@ are retained context; their words "next" and "current" describe that milestone.
 
 ## Quantum-premise audit — Q01, with K01 support
 
+[B77 generator restriction](../notes/reversible-generator-constraints.md):
+de la Torre et al. equations (8)–(14), pp. 3–4 -> reversible probability
+extrema constrain every local matrix slice -> C129 accepts the tensor-space
+filter -> next test local-rotation averaging (15)–(17), preserving Lie-algebra
+membership and a nonzero overlap. Reversible operational descent remains the
+physical input; the source step supplies no action unit.
+
 [B74 finite closure](../notes/hamiltonian-finite-closure.md): Koopman invariant
 observable spaces -> C128's independent time orbit rules out every finite
 repair for C127 with all preparations -> consolidate the physical source of

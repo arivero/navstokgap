@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-13. **P07 publication editorial readiness complete.**
+Updated: 2026-09-14. **Q01 generator restriction accepted (C129/B77).**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -22,21 +22,22 @@ select their own task.
    destination/article type and submission direction remain. Further autonomous
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
-2. **Q01 — supporting theorem acceptance audit, next autonomous research.**
-   Use B70's existing source route to select one bounded technical proof step
-   behind the exclusion of reversible nonlocal dynamics on the minimal ball
-   composite. Record its exact assumptions and imported lemmas; stop at that
-   step, not the full reconstruction or a new model. This addresses the still
-   unaudited theorem used in the spin manuscript's interpretation. Physical
-   effect/preparation restrictions and time/energy-to-action identification
-   remain open. Further spin hierarchy variants stay parked.
+2. **Q01 — local-rotation projector audit, next autonomous research.**
+   C129/B77 accepts the boundary derivative and tensor-space restriction in
+   B70, equations (8)–(14). Next check equations (15)–(17): whether averaging
+   isolates a nonzero admissible generator, with normalized Haar measures,
+   invariant subspaces and nonzero-overlap justification explicit. Stop before
+   coefficient elimination. This discharges the next named dependency of the
+   interaction theorem used in the spin interpretation. Physical reversible
+   descent and time/energy-to-action identification remain open.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its
    imaginary-time semigroup, or a named infinite-volume/continuum dependency.
    Further parent or coupling variants are parked.
 
-See the [finite-closure handoff](handoffs/Q01-finite-closure.md). C128
+See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
+[finite-closure handoff](handoffs/Q01-finite-closure.md). C128
 finishes the named repair decision: all-preparation exact closure needs
 infinite observable dimension or changed model premises. This establishes
 neither quantum structure nor distinguishability capacity. Both main tracks
