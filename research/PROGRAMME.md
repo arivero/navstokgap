@@ -65,7 +65,13 @@ observable forces the floor to zero. The fixed constants of classical
 mechanics, electrodynamics and gravitation admit one mass-independent action,
 $k_e/c=e^2/(4\pi\epsilon_0c)=\alpha\hbar$, and C052's relativistic Kepler
 threshold attains it. The open selection premises are a fixed charge unit and
-the factor $1/\alpha$. This exploratory consolidation promotes no ledger claim.
+the factor $1/\alpha$. The criteria remain exploratory. C130, accepted by
+user direction after the [collapse audit](../reviews/kepler-collapse-Q14.md),
+records that C052's plunge threshold and circular energies at angular action
+$\hbar|\kappa|$ are the Dirac Coulomb thresholds and zero-radial-node levels,
+and that radial action quantization of C052 gives the Sommerfeld formula,
+which is the Dirac spectrum; Planck's constant enters only as the unit of
+angular action at the plunge boundary.
 
 [Q12's local receiver test](../notes/local-detector-coincidences.md) derives
 an all-gate coincidence-product bound for independent monotone responses to

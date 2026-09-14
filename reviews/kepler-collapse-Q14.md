@@ -237,3 +237,6 @@ fixes the ground-state angular action at $\hbar$ rather than at the
 classical unit $\alpha\hbar$. The audit sharpens its form: the classical
 model already contains the collapse structure, and the quantum theory
 contributes the unit of angular action at the boundary.
+
+Promotion: the correspondence was promoted as C130 by user direction on
+2026-09-14, with this review as its proof and literature record.

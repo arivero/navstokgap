@@ -198,11 +198,24 @@ ID or positive action claim is added by this source milestone.
 
 | C129 | For finite n local Bloch balls with all unit product preparations/effects, two-sided admissibility of exp(tX) forces zero first derivatives at zero probabilities, the boundary second-derivative signs, and X in the tensor power of the seven-dimensional space of scalar diagonal, equal time-space and antisymmetric spatial blocks | [Expanded source proof](../notes/reversible-generator-constraints.md); [B77 review](../reviews/reversible-generator-B77.md); necessary generator constraint only; no physical clock or action identification |
 
+| C130 | For C052's Hamiltonian, the plunge threshold $\lvert L\rvert>k/c$ and the circular energies $mc^2\sqrt{1-k^2/(c^2L^2)}$ at $\lvert L\rvert=\hbar\lvert\kappa\rvert$ coincide with the Dirac Coulomb indicial thresholds $Z\alpha<\lvert\kappa\rvert$ and zero-radial-node levels; the radial action $J_r=c^{-1}[Ek/\sqrt{m^2c^4-E^2}-\sqrt{c^2L^2-k^2}]$ with $J_r=n_r\hbar$, $\lvert L\rvert=n_\varphi\hbar$ gives Sommerfeld's formula, equal to the Dirac spectrum under $n_\varphi\leftrightarrow\lvert\kappa\rvert$; the Klein--Gordon threshold is the plunge condition at $\lvert L\rvert=\hbar(l+1/2)$ | [Q14 review](../reviews/kepler-collapse-Q14.md) §§1–4; symbol identity, Frobenius indicial equations and closed-form radial action; $Z\alpha=k/(\hbar c)$, fixed external singular Coulomb centre, no recoil or radiation; the unit of angular action is supplied |
+
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
 domain, boundary conditions, dependencies and gap-closing limits in the proof.
 
 ## Literature status
+
+C130: [the Q14 review](../reviews/kepler-collapse-Q14.md) is an exact match
+with the Sommerfeld–Dirac coincidence: Suslov, arXiv:2401.07485, Eqs. (5)–(6),
+(27)–(28) and (31)–(32), pp. 2–7, at passage level, and Bouaziz,
+arXiv:1311.7405, Eqs. (5)–(7), pp. 3–4, for the scalar threshold; Biedenharn
+1983 and Sommerfeld 1916 at record level; Zeldovich–Popov 1972 at abstract
+level. Proof status: written derivations accepted by coordinator review;
+promoted by user direction on 2026-09-14. Literature status: established
+textbook result, no novelty claim; three discovery queries, two open papers
+read, nothing archived. The Q14 dimensional criteria (Theorems A–B) remain
+exploratory pending their bounded librarian comparison.
 
 C129: [B77](../references/batches/B77.md) is an exact match to de la Torre
 et al., arXiv:1110.5482v1, equations (8)–(14) and the following tensor-space

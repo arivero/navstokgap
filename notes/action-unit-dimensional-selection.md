@@ -198,7 +198,8 @@ what the wave equations' indicial equations test, and records the primary
 sources; it is the Sommerfeld--Dirac coincidence of 1916 and 1928. The only
 quantum input is the unit of angular action at the plunge boundary, so the
 factor $1/\alpha$ of item 5 says that the Dirac ground state reaches that
-boundary at $Z=1/\alpha$.
+boundary at $Z=1/\alpha$. The correspondence is ledger claim C130; Theorems
+A and B remain exploratory.
 
 ## 7. Strategic consequence
 

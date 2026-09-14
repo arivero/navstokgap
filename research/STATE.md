@@ -46,6 +46,11 @@ select their own task.
    electromagnetic unit is k/c, equal to alpha times hbar, already attained by
    C052; the quantum-role residual is the factor 1/alpha. Apply the criteria
    to any new selection candidate first ([handoff](handoffs/Q14.md)).
+   C130 (accepted, user direction): C052's plunge threshold and circular
+   energies at angular action hbar|kappa| are the Dirac Coulomb thresholds
+   and zero-radial-node levels; radial action quantization gives the
+   Sommerfeld/Dirac spectrum. Planck's constant enters only as the unit of
+   angular action at the plunge boundary.
 3. **Gap track — next autonomous robustness test.**
    [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
    Hamiltonian by a depth-two circuit: explicit local interactions, entangled
