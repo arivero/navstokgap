@@ -76,7 +76,12 @@ formula or title remains a discovery lead until checked.
   review. A new claim being promoted needs AGENTS.md's bounded literature review.
 - **Principia or historical interpretation:** notes/principia-constant-force-action.md
   and the edition's source companion. Use Lemmas X–XI/projectile Scholium for
-  constant-force geometry, Proposition I for swept areas. Newton's quantity of
+  constant-force geometry. The user's anchor is Galileo's inertial horizontal
+  line versus falling parabola, with (3F/v) A = Delta t Delta E. Its area is
+  twice the matched-endpoint chord lens. Seek the physical Planck obstruction
+  to indefinite classical refinement; do not substitute Kepler swept sectors.
+  The user's intended innovation is mathematical necessity from independently
+  justified consistency premises, not a resolution bound with hbar supplied. Newton's quantity of
   motion is momentum; an implicit h→0 reading is a modern conjecture. The 1846
   HTML has image equations and modern descriptions; NATP00385's diplomatic/XML
   versions expose revisions. Attribute these layers and retain folio anchors.

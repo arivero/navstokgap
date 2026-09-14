@@ -5,6 +5,23 @@ observation cuts and what changes under physical interventions. Newtonian
 refinement remains a central consistency question. The current task is selected
 in [STATE](STATE.md); this note supplies tests and evidence, not another queue.
 
+## The selected Newton-area target
+
+User clarification, 2026-09-14: begin with Galileo's falling parabola and the
+inertial horizontal line. Their enclosed area is $vF\tau^3/(6m)$, and
+$(3F/v)A=\tau\Delta E$. The matched-endpoint chord lens is half as large;
+keep its endpoint convention explicit. Kepler swept sectors are not the target.
+Seek the physical Planck-scale obstruction to indefinite refinement into
+classically distinguishable alternatives. A deterministic kinetic-energy gain
+is not an energy uncertainty; the obstruction must be derived for specified
+physical states, records and dynamics. [N01](../notes/newton-insertion-action.md)
+supplies a closed phase comparison and a conditional quantum threshold.
+That is a supporting benchmark. The user's intended innovation is a
+mathematical obstruction from independently justified consistency premises,
+without assuming quantum kinematics or a positive action unit. State the
+joint time/position limits and identify precisely what excludes the existing
+classical full-state and deterministic zero-width cut models.
+
 ## Specify the limiting experiment
 
 Name the retained state at a cut, the preparation, observed records and physical

@@ -57,3 +57,18 @@ Newton records an objection concerning ultimate ratios and answers it in the
 closing Scholium. Use the [Principia source note](../notes/principia-constant-force-action.md)
 for the actual wording. Attributing an unresolved action-scale suspicion to
 Newton requires additional dated evidence; H02/H03 retain that task.
+
+## Clarified Galileo anchor and N01 comparison
+
+User clarification, 2026-09-14: begin with the area between the inertial
+horizontal line and Galileo's falling parabola. It obeys
+$(3F/v)A=\tau\Delta E$ and is twice the matched-endpoint chord lens.
+The objective is the physical Planck-scale obstruction to indefinite classical
+refinement. Kepler's swept sectors must not replace this question.
+
+[N01](../notes/newton-insertion-action.md) fixes the coefficients and constructs
+a closed force-controlled comparison beginning with the falling parabola.
+Its quantum phase is exact, and C006 gives a conditional resolution threshold.
+A universal prohibition on shrinking the area remains to be established;
+the user seeks a mathematical necessity argument, not a supplied-hbar
+resolution bound. STATE selects a non-quantum consistency-principle test.

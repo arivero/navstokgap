@@ -1,0 +1,269 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Galileo, Newton refinement and the Planck-scale question},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{galileos-falling-parabola-newtons-refinement-and-the-planck-scale-question}{%
+\section{Galileo's falling parabola, Newton's refinement and the
+Planck-scale
+question}\label{galileos-falling-parabola-newtons-refinement-and-the-planck-scale-question}}
+
+For horizontal inertial speed \(v\) and downward force \(F\), the area
+between the inertial horizontal line and the falling parabola obeys
+
+\[\boxed{\frac{3F}{v}A_{\rm inertial,fall}=\tau\Delta E,
+\qquad \Delta E=\frac{F^2\tau^2}{2m}.}\]
+
+This is the programme's geometric anchor. The physical question is what
+prevents arbitrarily fine Newtonian refinement from retaining
+distinguishable classical alternatives as this action-scaled area
+shrinks. Planck's constant sets quantum phase resolution; a hard
+prohibition on every smaller area or deterministic energy--time product
+requires an additional argument.
+
+N01, 2026-09-14. The geometric coefficients reuse C001/C027 and the
+retained Principia derivation. Sections 3--4 add an exploratory closed
+comparison of inertial and piecewise falling motion, with written review
+and no ledger promotion. No novelty is asserted.
+
+\hypertarget{which-newton-area-is-being-compared}{%
+\subsection{1. Which Newton area is being
+compared}\label{which-newton-area-is-being-compared}}
+
+Take \(m,F,v,\tau>0\) and downward coordinate \(y\). The initial
+horizontal inertial trajectory and the falling trajectory are
+
+\[q_I(t)=(vt,0),\qquad
+q_F(t)=\left(vt,\frac{Ft^2}{2m}\right),\qquad 0\le t\le\tau.\]
+
+Close their geometric region by the vertical segment at \(x=v\tau\). Its
+area and the gained vertical kinetic energy are
+
+\[A_{\rm inertial,fall}=\int_0^{v\tau}\frac{Fx^2}{2mv^2}\,dx
+=\frac{vF\tau^3}{6m},\qquad
+\Delta E=F\Delta y=\frac{F^2\tau^2}{2m}.\]
+
+For gravity put \(F=mg\). Thus the geometrical area is proportional to
+\(\tau\Delta E\), with the indispensable factor \(3F/v\). Its units are
+area; \(\tau\Delta E\) has action units. This is the parabola and
+limiting-area geometry of the projectile Scholium and Lemmas X--XI in
+the retained \href{principia-constant-force-action.md}{Principia note}.
+Kepler's equal-area law and sectors swept about a force centre are a
+separate construction.
+
+Three elementary regions occur in this diagram:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Region & Area \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Inertial horizontal line to falling parabola & \(vF\tau^3/(6m)\) \\
+Matched-endpoint chord to falling parabola & \(vF\tau^3/(12m)\) \\
+Inertial horizontal line to endpoint chord & \(vF\tau^3/(4m)\) \\
+\end{longtable}
+
+The first area is twice the second; the third is their sum. The
+programme's anchor is the first. The second is useful for comparing
+actions with the same endpoints, but must not silently replace it.
+
+For \(\mathcal L=m|\dot q|^2/2+Fy\), the existing C001 calculation gives
+
+\[D_{\rm chord,fall}=S[q_{\rm chord}]-S[q_F]
+=\frac{F^2\tau^3}{24m}
+=\frac{\tau\Delta E}{12}
+=\frac{F}{4v}A_{\rm inertial,fall}.\]
+
+Both paths in this last comparison have the same endpoint positions and
+times, so adding a total time derivative to the Lagrangian cancels from
+their action difference. The inertial horizontal path instead ends at a
+different height. Its action comparison needs endpoint/control phases
+before it is a measurable relative phase. Section 3 supplies an explicit
+reunion rather than hiding that requirement in the area-to-action
+coefficient.
+
+\hypertarget{the-precise-unresolved-planck-step}{%
+\subsection{2. The precise unresolved Planck
+step}\label{the-precise-unresolved-planck-step}}
+
+At fixed \(m,F,v\), these areas and action products scale as \(\tau^3\).
+Inserting arbitrarily small mathematical intervals makes them approach
+zero. The research objective is a \textbf{physical obstruction to
+continuing that refinement as distinguishable classical motion}, or a
+stronger admissibility principle if one can be derived. Repeating the
+classical zero limit does not complete this objective.
+
+The deterministic gain \(\Delta E\) above is not a quantum state's
+energy standard deviation. Total mechanical energy is conserved during
+free fall; the kinetic gain is compensated by potential loss. Therefore
+a statement about energy uncertainty and an observable evolution time
+cannot be applied by simply renaming its two variables \(\Delta E\) and
+\(\tau\).
+
+With the quantum rule \(e^{iS/\hbar}\), small action differences give
+nearby phases. Feynman's
+\href{https://www.feynmanlectures.caltech.edu/II_19.html}{least-action
+discussion} explicitly sums contributions from neighbouring paths,
+including paths with action differences within \(\hbar\). It does not
+impose a smallest allowed path-action difference. This supports the
+breakdown of a uniquely resolved classical alternative, rather than an
+automatic cutoff on the continuum of paths. A theorem forbidding
+physical area shrinkage is a stronger target.
+
+\hypertarget{close-the-inertial-and-falling-paths-with-specified-forces}{%
+\subsection{3. Close the inertial and falling paths with specified
+forces}\label{close-the-inertial-and-falling-paths-with-specified-forces}}
+
+Consider a horizontal reference arm with zero transverse force and a
+signal arm with the following controlled transverse force. Set
+\(a=F/m\):
+
+\[f(t)=\begin{cases}
+ F,&0<t<\tau,\\
+-F,&\tau<t<3\tau,\\
+ F,&3\tau<t<4\tau.
+\end{cases}\]
+
+Both arms start at \(y=0\) with \(\dot y=0\). The signal arm's first
+interval is exactly the falling parabola of Section 1. The remaining
+intervals return it to the reference arm with the same position and
+velocity. This is an ideal branch-controlled force experiment; a gravity
+realization needs compensating forces on the reference and return
+stages. It is not unassisted free fall throughout the whole comparison.
+
+Let \(P(t)=\int_0^t f(s)\,ds\) and \(Y(t)=m^{-1}\int_0^t P(s)\,ds\).
+Then \(P(4\tau)=Y(4\tau)=0\). Explicitly \(P/F\) is \(t\) on the first
+interval, \(2\tau-t\) on the second, and \(t-4\tau\) on the third.
+Consequently
+
+\[\int_0^{4\tau}P(t)^2dt=\frac43F^2\tau^3,\qquad
+\int_0^{4\tau}Y(t)dt=\frac{2F\tau^3}{m}.\]
+
+\(Y\) stays nonnegative and reaches \(F\tau^2/m\) at \(t=2\tau\). At
+common horizontal speed \(v\) the area enclosed between the signal
+trajectory and its inertial baseline is
+
+\[A_{\rm loop}=v\int_0^{4\tau}Y(t)dt
+=\frac{2vF\tau^3}{m}=12A_{\rm inertial,fall}.\]
+
+The transverse signal Lagrangian is \(m\dot Y^2/2+f(t)Y\); the reference
+transverse Lagrangian vanishes. Since \(m\ddot Y=f\) and the endpoint
+boundary term \(mY\dot Y\) vanishes,
+
+\[\Delta S_{\rm loop}
+=-\frac1{2m}\int_0^{4\tau}P(t)^2dt
+=-\frac{2F^2\tau^3}{3m}
+=-\frac{F}{3v}A_{\rm loop}
+=-\frac43\tau\Delta E.\]
+
+The sign and coefficient differ from the off-shell chord comparison,
+because the return forces are part of this experiment. The exact
+relation connects the original falling-parabola area to a closed,
+dynamically specified phase comparison:
+\(|\Delta S_{\rm loop}|=4F A_{\rm inertial,fall}/v\).
+
+\hypertarget{the-same-closed-comparison-in-quantum-mechanics}{%
+\subsection{4. The same closed comparison in quantum
+mechanics}\label{the-same-closed-comparison-in-quantum-mechanics}}
+
+Assume canonical quantum kinematics \([y,p]=i\hbar\), a coherent two-arm
+label, and conditional Hamiltonians
+
+\[H_I=\frac{p^2}{2m},\qquad H_F(t)=\frac{p^2}{2m}-f(t)y.\]
+
+These assumptions supply \(\hbar\) and the phase rule; this is a test of
+the Planck-scale interpretation, not a derivation of quantum mechanics
+from classical geometry. No additional branch-dependent scalar
+potentials or uncontrolled arm-label phases are included in the model.
+Horizontal evolution is common and cancels in the relative propagator.
+
+In the interaction picture of \(H_I\), the evolution generator is
+\(B(t)=if(t)(y+tp/m)/\hbar\). Its commutator is the scalar
+
+\[[B(t),B(s)]=\frac{i f(t)f(s)(t-s)}{m\hbar}.\]
+
+All higher nested commutators vanish. The first integrated term vanishes
+because \(\int f=\int tf=0\). The second gives the exact relative
+unitary
+
+\[U_I(4\tau)^\dagger U_F(4\tau)
+=\exp\left[-\frac{i}{2m\hbar}\int_0^{4\tau}P(t)^2dt\right]I
+=e^{i\Delta S_{\rm loop}/\hbar}I.\]
+
+For the sign, integrate
+\(\int f(t)\int_0^t f(s)(t-s)\,ds\,dt=-\int P(t)^2dt\); \(P(4\tau)=0\)
+eliminates the boundary term. The algebra can first be done on Schwartz
+states; the resulting forced free-particle unitaries extend the identity
+to the motional Hilbert space. Thus the two wavepackets reunite exactly
+for arbitrary common initial motional preparation, not just their
+classical centres. A coherent balanced arm label then carries relative
+phase \(\phi=\Delta S_{\rm loop}/\hbar\).
+
+Use the already reviewed C006 comparison between this phase state and
+the zero-phase state, with equal hypothesis priors. For \(n\)
+independent copies and any joint binary quantum measurement, the success
+probability is
+
+\[p_{\rm opt}=\frac12\left(1+\sqrt{1-\cos^{2n}(\phi/2)}\right).\]
+
+Within the first lobe \(|\phi|\le\pi\), a required success probability
+\(p_*>1/2\) gives the action threshold
+
+\[d_{n,p_*}=2\hbar\arccos\left([4p_*(1-p_*)]^{1/(2n)}\right),\qquad
+\tau\ge\left(\frac{3m d_{n,p_*}}{2F^2}\right)^{1/3}.\]
+
+Equivalently, in this specified comparison the original single falling
+lens must have \(A_{\rm inertial,fall}\ge v d_{n,p_*}/(4F)\) for that
+success rate. At \(n=1,p_*=3/4\), \(d=\pi\hbar/3\). For fixed \(p_*<1\)
+it tends to zero as \(n\to\infty\); perfect discrimination instead
+requires \(d=\pi\hbar\) for every finite \(n\). Phase periodicity
+forbids extending the inequality beyond the first lobe as a monotone
+criterion.
+
+This is a positive, protocol-dependent obstruction to resolving the
+shrinking Galileo area at fixed resources. It is not an absolute
+prohibition on smaller loops: their quantum states remain defined and
+approach the zero-phase state. It also does not assert that this
+interference experiment optimizes every possible measurement of the
+force or trajectory.
+
+\hypertarget{research-consequence-and-next-decision}{%
+\subsection{5. Research consequence and next
+decision}\label{research-consequence-and-next-decision}}
+
+The double-check recovers the intended chain: \textbf{inertial line
+versus falling parabola -\textgreater{} action-scaled area
+-\textgreater{} Planck-sensitive distinguishability}. It identifies an
+actual drift source in STATE's substitution of Kepler swept sectors and
+in README's stale audit queue. These entry points are corrected. The
+arc--chord area remains a secondary matched-endpoint comparison with a
+factor of two; it must not replace the user's inertial--parabola anchor.
+
+The closed-force construction supplies a quantum benchmark. The user's
+intended innovation is stronger: \textbf{a mathematical necessity
+argument} that excludes zero-action refinement without assuming quantum
+mechanics, an uncertainty relation, a positive action unit or a fixed
+measurement budget. The quantum calculation above therefore supports the
+interpretation but does not discharge that objective.
+
+N02 must construct and decisively test one independently justified
+consistency principle for joint time/position refinement of the Galileo
+comparison. State the cut state, composition and limiting variables.
+Derive the zero-action contradiction, or give an exact countermodel
+satisfying the proposed principle. C027--C029 and the full-state
+classical cuts already show why unqualified appeals to refinement
+consistency do not suffice; a new principle must do more than repeat
+those requirements. This returns to I003's originating
+logical-obstruction question with its existing corrections retained. No
+mathematical contradiction follows merely from the fact that nature is
+quantum.
+\end{document}

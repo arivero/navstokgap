@@ -1,10 +1,18 @@
 # Newton's vanishing areas and the proposed action scale
 
-For perpendicular launch under constant force, the chord–curve lens area is
-proportional to a matched-endpoint action difference. We compute the coefficient,
-show how positive action differences approach zero, and relate the result to
-quantum phase resolution. Newton's Lemmas X–XI provide the geometric anchors.
-Calculation recorded 2026-09-05; exposition revised 2026-09-06.
+The research anchor is Galileo's inertial horizontal line compared with the
+falling parabola. Their enclosed area is $v_0F\varepsilon^3/(6m)$, so
+$(3F/v_0)A=\varepsilon\delta E$. The matched-endpoint chord lens is half
+that area and gives the action difference $\varepsilon\delta E/12$.
+Newton's Lemmas X--XI supply the geometric anchors; Kepler's swept sectors
+are a separate quantity. Calculation recorded 2026-09-05; target clarified
+by the user on 2026-09-14.
+
+[The N01 comparison](newton-insertion-action.md) connects this anchor to an
+explicit closed quantum phase experiment. The programme seeks a physical
+obstruction to indefinitely shrinking the difference as a distinguishable
+classical alternative. The deterministic energy gain and a quantum energy
+uncertainty must be kept distinct when assessing that obstruction.
 
 ## 1. What was read
 

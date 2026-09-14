@@ -11,3 +11,10 @@ The quantum discussion relates path amplitudes to action-dependent phases and ob
 ## Source-facing notes
 
 Use as a primary pedagogical reference for phase interference. Equal phases for two actions differing by a multiple of Planck's constant do not assert a discrete spectrum of all actions or a minimum allowed path-action difference. No full chapter transcription is provided. The constant-force calculations in our research note are our own derivations.
+
+N01 rereading, 2026-09-14: the official chapter's quantum discussion after
+Fig. 19--11 was reopened through the web tool. The passage gives the phase
+$e^{iS/\hbar}$ and the contribution of nearby paths with actions within
+$\hbar$. This supports N01's distinction between a Planck-sensitive phase
+comparison and a smallest allowed path-action difference. No new local HTML
+or whole-chapter coverage is claimed.

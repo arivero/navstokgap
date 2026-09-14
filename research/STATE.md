@@ -1,12 +1,9 @@
 # Restart state
 
-Updated: 2026-09-14. **User direction: the priority is point insertion, Newton's areas and a minimum action (item 2).**
-User direction now prioritizes publication development; C128/B74 remains accepted.
-The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
-obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
-operational exclusion premises and remaining mechanical action step. The
-[Ising proof](../notes/interacting-ising-gap.md) supplies an interacting gap
-uniform in finite volume at bounded coupling and fixed per-site clock.
+Updated: 2026-09-14. **User direction: Galileo's inertial horizontal line
+versus the falling parabola, and a mathematical necessity argument excluding
+zero-action refinement. Quantum nature is the fact to explain, not an axiom
+that supplies the desired answer.**
 
 ## Current ordered work
 
@@ -15,43 +12,44 @@ This is the single priority list for autonomous sessions. Apply
 capsule, and carry one bounded decision to completion. Explicit user directions
 select their own task.
 
-1. **Publication author completion — waiting for author input.** P07's
+1. **Newton/Galileo area and minimum action — selected.** The anchor is the
+   area between the inertial horizontal line and the falling parabola. With
+   force F and horizontal speed v, its exact conversion is
+   (3F/v) A = Delta t Delta E, where Delta E is gained vertical kinetic energy.
+   The matched-endpoint chord lens is half that area and is a secondary
+   comparison. **Kepler swept sectors/equal-area law are not this target.**
+   **Target:** derive a mathematical consistency obstruction to zero-action
+   refinement from explicit independently justified premises. Quantum nature
+   motivates the problem; inserting hbar, uncertainty relations or a finite
+   measurement budget does not solve it. Ordinary classical calculus admits
+   vanishing defects, so name the added consistency requirement and show where
+   that classical construction fails. The desired conclusion is necessity of
+   a positive action scale, followed by universality and quantum identification.
+   **N01 supporting result:** [the corrected derivation](../notes/newton-insertion-action.md)
+   fixes the area/action factors and gives a closed controlled-force quantum
+   comparison. Its supplied-hbar resolution bound is a benchmark, not the
+   sought innovation. No mathematical necessity theorem was obtained.
+   **Next ([N02](TASKS.md)):** construct and test one proposed non-quantum
+   consistency principle for the joint time/position refinement of the Galileo
+   comparison. State the cut state, composition and limits, then derive a
+   contradiction at zero action or an explicit countermodel satisfying the
+   proposed principle. C027--C029 and the deterministic full-state cut model
+   are mandatory existing countertests; merely restating them is insufficient.
+   The bounded deliverable is a tested new principle and exact obstruction or
+   failure, not another audit queue or a measurement-resolution calculation.
+   Reuse [I003's originating question](../ideas/I003-cut-paradox-arrow-obstruction.md)
+   with its retained corrections. Swept-sector, orbital turning-event,
+   quantum-readout and unrelated mechanism variants are supporting/parked
+   unless they discharge a named dependency of this necessity argument.
+2. **Publication author completion — waiting for author input.** P07's
    [decision sheet](../reviews/publication-readiness-P07.md) recommends the
-   elastic-gas draft first and the spin draft second. Both have revised
-   explanations and PDF-inclusive review bundles. Author names, affiliations,
+   elastic-gas draft first and the spin draft second. Author details,
    destination/article type and submission direction remain. Further autonomous
-   polishing is parked unless a reader report or concrete venue requirement
-   identifies a change.
-2. **Point insertion, Newton's areas and a minimum action: selected by user
-   direction, 2026-09-14.** The priority is the connection between three
-   things: Democritus-style insertion of a point into a trajectory (the cut
-   refinement of [the cut target](CUT_POINT_TARGET.md), C027--C029 and
-   [the ancient-cuts provenance](../notes/ancient-cuts-provenance.md));
-   Newton's swept areas (Proposition I's polygon of impulses,
-   [I002](../ideas/I002-newton-polygon-threshold.md) and
-   [the area audit](../notes/receding-centre-area-audit.md)); and the
-   existence of a minimum value of h. Autonomous sessions work this
-   connection; other threads are supporting work. Inputs already in hand:
-   one inserted node in the fixed-kappa bridge costs kappa/2 (C029); the
-   chord error closes under refinement (C027); the relativistic Kepler
-   centre has angular-action floor k/c (C052, C130), so its swept-area rate
-   L/(2m) has floor k/(2mc), which for a gravitational centre k = GMm is
-   GM/(2c) for every test mass (direct consequence, not a ledger claim);
-   [Q14](../notes/action-unit-dimensional-selection.md) says which fixed
-   constants a floor can be built from. **Next ([N01](TASKS.md)):** state,
-   in Newton's polygon, what one inserted impulse point must carry (a
-   minimum swept sector, a minimum action or a minimum time step) for a
-   floor to survive refinement, and test that premise against C027--C029
-   and C052 in STRATEGY's decision format. Sommerfeld/Dirac continuations of
-   C130, the radiating Coulomb return named in Q14, further mechanism
-   variants (Q02--Q13) and the gap track are parked unless they discharge a
-   named dependency of this connection.
-3. **Gap track: supporting, not selected.**
+   polishing is parked absent a concrete reader or venue requirement.
+3. **Gap track — supporting.**
    [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
-   Hamiltonian by a depth-two circuit with exact energy gap J uniform in
-   chain length; G06 (nearest-neighbour ZZ perturbation mapping to the
-   transverse-field Ising chain) stays ready as supporting work and returns
-   when item 2 names a gap dependency or the user selects it.
+   Hamiltonian with exact energy gap J uniform in chain length. G06 returns
+   for a named dependency of item 1 or explicit user selection.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128

@@ -8,6 +8,10 @@ below retain the proofs; their local follow-ups do not select the next task.
   from the synthesis; premise map, key arguments, receiver/calibration
   classification and quantum/gap obligations. Reuses accepted source audits.
 
+- [newton-insertion-action.tex](newton-insertion-action.tex): Galileo's
+  inertial--parabola area, exact action factors and a closed controlled-force
+  quantum comparison; exploratory N01, [PDF](../out/papers/newton-insertion-action.pdf).
+
 - `action-gap-foundations.tex`: area–action identity, variation propositions,
   Jacobi operator, free kernel and quantum finite-copy threshold.
 - [time-refinement.tex](time-refinement.tex): exact Gaussian blocking, surviving
@@ -56,7 +60,7 @@ below retain the proofs; their local follow-ups do not select the next task.
 - [bounded-acceleration-return.tex](bounded-acceleration-return.tex): sharp
   turn cost and polygon error; [PDF](../out/papers/bounded-acceleration-return.pdf).
 
-Run `make papers` from the root to regenerate the programme and build all fifteen
+Run `make papers` from the root to regenerate the programme and build the maintained
 PDFs in `out/papers/`. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.

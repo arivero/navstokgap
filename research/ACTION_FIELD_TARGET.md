@@ -7,6 +7,26 @@ route. Its definition, positivity, universality and quantum role each require
 an argument. Use [STATE](STATE.md) for the current task and
 [STRATEGY](STRATEGY.md) for selecting follow-ups.
 
+## Selected geometric anchor
+
+Start from Galileo free fall: the area between inertial horizontal motion and
+the falling parabola satisfies $(3F/v)A=\tau\Delta E$. The programme seeks
+the physical obstruction to shrinking this difference while retaining
+classically distinguishable motion. Kepler swept sectors do not supply that
+observable. [N01](../notes/newton-insertion-action.md) separates the exact
+geometry, the closed quantum comparison and the still-open universal
+obstruction. Using supplied $\hbar$ to predict resolution and deriving why
+such a constant is necessary remain distinct stages.
+
+The user further clarifies that the innovation sought is **mathematical
+necessity**, not a demonstration of quantum measurement resolution. Treat
+quantum nature as the phenomenon to explain. Derive the obstruction from
+explicit independently justified consistency premises; do not supply hbar,
+an uncertainty relation or a fixed experimental budget as the answer.
+Ordinary classical refinement is a consistent mathematical countermodel to
+unqualified claims, so identify the premise that excludes it and prove its
+use. A supplied-hbar model is supporting evidence only.
+
 ## Five obligations
 
 1. **Definition and units.** Specify the observable, state/preparation class,

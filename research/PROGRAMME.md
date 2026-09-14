@@ -1,9 +1,9 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 70, 2026-09-14. The programme consolidates the accepted results into
+Version 71, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
-The user's 2026-09-12 redirection makes quantum-premise selection and interacting
-gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
+The user's clarified 2026-09-14 priority is a mathematical necessity argument
+for the Newton/Galileo area--action obstruction; gap work is supporting. [STATE](STATE.md) owns the current ordered tasks;
 [STRATEGY](STRATEGY.md) governs bounded choices and stopping decisions.
 
 ## Aim and present conclusion
@@ -56,6 +56,27 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+The user's central example is Galileo's falling parabola compared with the
+inertial horizontal line. Its enclosed area $A$ obeys
+$(3F/v)A=\tau\Delta E$, with $\Delta E=F^2\tau^2/(2m)$ the gained
+kinetic energy. The matched-endpoint chord lens is half that area; Kepler's
+swept sectors are a different observable. The objective is a physical
+obstruction to indefinite refinement into distinguishable classical motion,
+connected to a positive universal action scale.
+
+[N01](../notes/newton-insertion-action.md) makes a closed comparison starting
+with the falling parabola: an explicit return-force sequence reunites the
+arms with equal positions and momenta, and its exact quantum relative phase
+is $-2F^2\tau^3/(3m\hbar)$. With C006 it gives a positive resolution
+threshold at fixed copies and accuracy. A hard area cutoff does not follow
+from the deterministic energy gain alone; the quantum construction supplies
+$\hbar$. This is a supporting quantum benchmark. The intended innovation is a
+mathematical necessity argument from independently justified consistency
+premises that exclude zero-action refinement without supplying quantum
+kinematics. N02 tests one such proposed principle with an explicit cut state,
+composition rule and joint time/position limit. The N01 construction remains
+exploratory and supplies no necessity theorem.
 
 [Q14's dimensional criteria](../notes/action-unit-dimensional-selection.md)
 consolidate the selection countertests: a floor shared by all admitted masses

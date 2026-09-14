@@ -535,6 +535,16 @@ condition. B07b's tangent-groupoid theorem remains a separate source task.
 
 ## Newton's limiting geometry and historical conjectures — B11/H02/H05
 
+**Target clarification (user, 2026-09-14):** begin with Galileo's inertial
+horizontal line and falling parabola, whose area satisfies
+$(3F/v)A=\Delta t\,\Delta E$. The matched-endpoint chord lens is half that
+area; Kepler swept sectors are a different observable. Seek the physical
+Planck-scale obstruction to indefinitely resolving the shrinking alternatives.
+[N01](../notes/newton-insertion-action.md) gives a closed quantum comparison
+and a conditional threshold as supporting evidence. The user's desired
+innovation is a mathematical necessity argument without supplied quantum
+kinematics; STATE selects the consistency-principle test.
+
 **Source construction:** Newton's first and last ratios support his limiting
 geometry. Read the [Section I companion](../docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md)
 and the task's exact passage; use the

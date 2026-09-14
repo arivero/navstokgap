@@ -14,6 +14,27 @@ and load its task-relevant source-idea capsule. Reuse a current capsule already 
 the handoff/summary. This applies to source workers within their assigned
 budget; context recovery itself launches no additional worker or web sweep.
 
+# Selected physical question
+
+User clarification, 2026-09-14: "Newton's areas" means the difference between
+inertial/polygonal motion and the actual trajectory, anchored in Galileo's
+horizontal inertial line and falling parabola. Their area satisfies
+(3F/v) A = Delta t Delta E. The matched-endpoint chord lens is half that area.
+Do not substitute Kepler swept sectors/equal-area law. Seek the physical
+Planck-scale obstruction to indefinitely shrinking this difference while
+retaining distinguishable classical motion. A classical zero-limit example
+alone does not complete that objective. Keep deterministic energy gain,
+quantum energy uncertainty, and any supplied action/measurement premise explicit.
+
+The user further clarifies that the innovation sought is **mathematical
+necessity**, not a demonstration of quantum measurement resolution. Treat
+quantum nature as the phenomenon to explain. Derive the obstruction from
+explicit independently justified consistency premises; do not supply hbar,
+an uncertainty relation or a fixed experimental budget as the answer.
+Ordinary classical refinement is a consistent mathematical countermodel to
+unqualified claims, so identify the premise that excludes it and prove its
+use. A supplied-hbar model is supporting evidence only.
+
 # Research direction and stopping
 
 The agent is a researcher: generating new ideas is part of the task. Use

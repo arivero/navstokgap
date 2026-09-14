@@ -27,12 +27,22 @@ no new novelty claim and no Yang–Mills mass-gap result.
 
 ## Current research direction
 
-The user redirected the programme on 2026-09-12 after the calibration sequence
-became too specialized. **Q01** is the next bounded quantum-premise audit, with
-**K01** as a targeted measurement-compatibility test. **G03** is the following
-gap milestone: replace independent-product control by an explicit interacting,
-size-independent estimate. **R33's remaining curvature calculation is parked**;
-its accepted results and open question are preserved.
+The selected target is **Galileo's falling parabola versus inertial horizontal
+motion**: their enclosed area converts to energy times time, and the research
+asks what physical Planck-scale obstruction prevents indefinite refinement
+into distinguishable classical alternatives. This is Newton's limiting-area
+question, not Kepler's swept-area law. The matched-endpoint chord lens has a
+different coefficient and is kept explicit.
+
+[The N01 derivation](notes/newton-insertion-action.md)
+([PDF](out/papers/newton-insertion-action.pdf)) gives the exact conversion and
+a closed quantum comparison with a conditional resolution threshold. The
+universal obstruction remains open. **The intended innovation is a mathematical
+necessity theorem**, not a resolution limit obtained by assuming quantum
+mechanics. The next construction must test an independently justified
+consistency principle against zero-action refinement. Quantum-premise,
+apparatus and gap results
+support this target when they discharge a named dependency.
 
 [STATE](research/STATE.md) is the single current priority list.
 [PROGRAMME](research/PROGRAMME.md) explains the questions;

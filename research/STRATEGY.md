@@ -7,6 +7,28 @@ those conclusions. The current ordered work list lives only in
 [STATE](STATE.md); [TASKS](TASKS.md) records scope, acceptance and status.
 Explicit user requests select their own scope.
 
+## Keep the Newton/Galileo target fixed
+
+User clarification, 2026-09-14: the starting area is between Galileo's falling
+parabola and its inertial horizontal line, with the action conversion
+$(3F/v)A=\Delta t\,\Delta E$. The matched-endpoint chord lens is half as
+large. Do not replace either comparison by Kepler swept sectors or use an
+orbital angular-action floor as a refinement-error floor. Select work that
+identifies the physical Planck-scale obstruction to indefinitely resolving
+these shrinking classical alternatives. Classical zero-limit examples are
+baseline tests, not a substitute for this positive-obstruction objective.
+State when a proposed obstruction is conditional on quantum kinematics,
+preparation, measurement resources or a supplied minimum threshold.
+
+The user further clarifies that the innovation sought is **mathematical
+necessity**, not a demonstration of quantum measurement resolution. Treat
+quantum nature as the phenomenon to explain. Derive the obstruction from
+explicit independently justified consistency premises; do not supply hbar,
+an uncertainty relation or a fixed experimental budget as the answer.
+Ordinary classical refinement is a consistent mathematical countermodel to
+unqualified claims, so identify the premise that excludes it and prove its
+use. A supplied-hbar model is supporting evidence only.
+
 ## Research before serial verification
 
 User correction, 2026-09-14: too many audits are drifting from the research.
