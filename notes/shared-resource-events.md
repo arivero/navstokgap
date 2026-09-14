@@ -1,0 +1,132 @@
+# A shared release produces exclusive fringe-weighted events
+
+An autonomous classical jump receiver can produce exactly one eventual event
+with probabilities equal to normalized interference energies. It does so by
+admitting one shared release and prescribing rates linear in those energies.
+Finite observation time reveals a signal-dependent efficiency; spatially
+separated local releases require a communication or common-control mechanism.
+Neither construction selects a universal action constant.
+
+Status: Q11 exploratory model and written derivation. This is an effective
+stochastic receiver, not a microscopic Hamiltonian derivation. Its discrete
+release states, stored energy and rate law are explicit model inputs.
+
+## 1. Autonomous competition and energy accounting
+
+First load the two classical work records from Q08 into ideal storage:
+
+$$e_++e_-=E>0,\qquad e_\pm=E(1\pm z)/2,\quad -1\le z\le1.$$
+
+The following receiver stage has constant stored inputs. Let R be a ready
+state and $C_+,C_-$ be two absorbing record states. Choose a transduction
+constant $\alpha>0$ of units $(\text{energy}\,\text{time})^{-1}$ and transitions
+
+$$R\xrightarrow{r_+=\alpha e_+}C_+,\qquad
+R\xrightarrow{r_-=\alpha e_-}C_-. \tag{1}$$
+
+This time-homogeneous Markov model is autonomous after preparation. Its
+absorbing architecture stipulates that the first channel consumes the single
+permission to release; no second transition remains. The stored signal energies
+act as kinetic controls and are not automatically the emitted record energy.
+
+For explicit energy bookkeeping, put one releasable amount $\Delta>0$ in a
+central reservoir. Either transition lowers that reservoir by $\Delta$ and
+increases the selected output's energy plus heat by $\Delta$. Signal storage
+is unchanged in this idealization. Resetting the released reservoir requires
+replacement energy $\Delta$, or retrieval from an explicitly included output
+store. The architecture supplies single use; energy conservation alone does
+not imply the state graph (1). Permanent storage, reset efficiency and a
+physical implementation of the rate control remain additional premises.
+
+## 2. Exact probabilities and their limit
+
+Write $\Gamma=r_++r_-=\alpha E$. The survival equation is
+$\dot p_R=-\Gamma p_R$, $p_R(0)=1$. Integrating each exit flux gives
+
+$$p_R(t)=e^{-\Gamma t},\qquad
+p_\pm(t)=\frac{r_\pm}{\Gamma}(1-e^{-\Gamma t}). \tag{2}$$
+
+Double records have probability zero. Conditional on one event by any fixed
+$t>0$, or unconditionally after waiting indefinitely,
+
+$$\Pr(C_\pm\mid\text{event})=\frac{e_\pm}{E}=\frac{1\pm z}{2}. \tag{3}$$
+
+These fringe weights follow from the assumed linear hazards and competition;
+no quantum probability rule was used to obtain them. They also do not establish
+quantum state structure. Replacing the hazards by $\alpha_p e_\pm^p$, with
+the corresponding units and $p>0$, gives weights
+$e_\pm^p/(e_+^p+e_-^p)$. Exclusivity therefore does not select linearity.
+
+If the incident displacement is attenuated by $\eta>0$, then $e_\pm$ scale
+by $\eta^2$ and z is unchanged. Equation (3) persists, but at a fixed deadline
+T the efficiency becomes $1-\exp(-\alpha\eta^2ET)$ and tends to zero.
+Requiring efficiency at least $1-\varepsilon$, $0<\varepsilon<1$, gives
+
+$$E\ge\frac{\log(1/\varepsilon)}{\alpha T}. \tag{4}$$
+
+At fixed carrier frequency $\omega$ in Q08's narrow-band regime, the associated
+wave-action bound is approximately $\log(1/\varepsilon)/(\alpha T\omega)$.
+It retains receiver coupling, deadline, frequency and error tolerance. The
+indefinite-wait and zero-signal limits do not commute. At E=0 there is no event.
+
+## 3. What spatial separation changes
+
+Equation (1) is consistent as a co-located central arbitration model: both
+stored inputs are available before the release. Sending the output to a remote
+record then takes finite travel time. It is not an instantaneous inhibition
+law for distant detectors that already register events independently.
+
+To test that alternative, let the two sites initially have independent Poisson
+trigger clocks with rates $r_+,r_-$. After the first event, an inhibition
+signal reaches the other site after a fixed delay $\delta>0$. Each site can
+fire only once. On an observation interval long enough to include that delay,
+memorylessness gives the exact eventual double-event probability
+
+$$P_2=\frac{r_+}{\Gamma}(1-e^{-r_-\delta})+
+       \frac{r_-}{\Gamma}(1-e^{-r_+\delta}). \tag{5}$$
+
+It is positive whenever both rates and the delay are positive. If their
+separation is d and inhibition speed is at most c, $\delta\ge d/c$ in this
+specified architecture. In the balanced case $r_+=r_-=\Gamma/2$,
+
+$$P_2=1-e^{-\Gamma\delta/2}. \tag{6}$$
+
+Combining a first-event deadline T with $P_2\le\varepsilon_2$ and
+$\Pr(\text{no first event by }T)\le\varepsilon_0$ requires
+
+$$\frac{\log(1/\varepsilon_0)}{T}\le\Gamma
+\le\frac{-2\log(1-\varepsilon_2)}{\delta}. \tag{7}$$
+
+The double-event criterion here counts events during the full inhibition
+window, even when it extends past T. Short-gate censoring would change that
+criterion. Equation (7) is a timing compatibility condition, not an action
+gap or a bound for every classical architecture. A central arbiter, prior
+correlated readiness, or a different propagation law changes a premise.
+
+## 4. Decision
+
+Shared-resource competition successfully turns classical fringe energies into
+exclusive conditional event probabilities in a declared model. The resource
+preparation and linear kinetic response do substantive work. Replacing central
+arbitration by local firing with delayed inhibition adds a calculable
+efficiency/coincidence trade-off. Both mechanisms retain adjustable energy and
+clock scales.
+
+After Q09--Q11, park further detector tuning. The decisive next construction
+is a pair of independently prepared local receivers with no communication
+during the gate: ask whether independent monotone local response to a common
+classical pulse energy permits suppressed coincidences without selection of
+gates. This changes the common-resource premise rather than refining another
+rate constant. Keep source conditioning and detector independence explicit;
+any resulting exclusion must be limited to that stated class.
+
+## Source boundary
+
+D. T. Gillespie, *Exact stochastic simulation of coupled chemical reactions*,
+Journal of Physical Chemistry **81**, 2340--2361 (1977),
+[DOI](https://doi.org/10.1021/j100540a008), is the primary discovery lead for
+the standard competing-hazard construction. Coverage here is one query and
+publisher metadata, not a full-text audit or simulation. Equations (2)--(7)
+are obtained directly by integrating exponential survival probabilities.
+Independent written review and bounded librarian comparison are required
+before accepted-ledger promotion. No numerical or symbolic scripts were used.

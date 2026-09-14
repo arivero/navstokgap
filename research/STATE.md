@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q10 thermal reliability tested.**
+Updated: 2026-09-14. **Q11 shared-resource event competition tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -46,12 +46,15 @@ select their own task.
    barrier coupling give a temperature/timing/error-dependent barrier-change
    floor; input work needs a separate transduction premise. Kinetic gating
    defeats a probability-only inference. Thermal variants are parked.
-   Next construct an autonomous shared-resource receiver to test whether two
-   outputs can compete for one excitation with reliable exclusive events.
-   Track stored energy, locality/communication and output probabilities;
-   stop if exclusivity merely imports a shared preparation or control premise.
-   This changes Q09's independent-receiver premise; the gap track still lacks
-   independently specified physical dynamics.
+   [Q11](../notes/shared-resource-events.md) gives exclusive fringe-weighted
+   events from a shared release and linear hazards. Finite observation time
+   exposes the receiver scale; delayed local inhibition permits coincidences.
+   It remains exploratory, with discrete readiness and stochastic rates supplied.
+   Next test independent local monotone detector responses to a common classical
+   pulse: derive the coincidence constraint without discarding gates, and
+   identify exactly which source/detector independence premise could fail.
+   Further shared-resource and thermal tuning is parked. The gap track still
+   lacks independently specified physical dynamics.
    Q03 pumped variants remain parked. Existing uncommitted Q02 radiation
    work remains separate and untouched.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
