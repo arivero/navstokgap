@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q08 mechanical interference tested.**
+Updated: 2026-09-14. **Q09 passive event formation tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -37,9 +37,13 @@ select their own task.
    while attenuation preserves normalized fringes and sends action to zero.
    Canonical wave action and spacetime Lagrangian action are distinct.
    Q08 remains exploratory; linear interference variants are parked.
-   Next test localized event formation with a passive threshold receiver,
-   including stored energy and reset work. Decide whether exclusive events
-   select a universal scale or inherit receiver preparation and threshold.
+   [Q09](../notes/passive-threshold-events.md) supplies event regions and a
+   mechanical barrier: thresholds trade missed gates for double events;
+   preloading reduces signal cost by storing readiness energy. Reset must
+   account for it. This remains exploratory; threshold tuning is parked.
+   Next impose a stated retention time and false-event probability on a
+   finite-temperature receiver. Test whether reliability closes the preloading
+   route, retaining temperature/lifetime/error dependence in any resulting bound.
    Compare this decision with the gap track before dispatch; another linear
    wave-mode calculation would repeat the existing gapless countertest.
    Q03 pumped variants remain parked. Existing uncommitted Q02 radiation

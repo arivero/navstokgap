@@ -9,6 +9,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| Q09 | done | Exploratory passive threshold: missed/double-event regions, barrier crossing, stored readiness and reset budget | Coordinator; review before ledger promotion | [Handoff](handoffs/Q09.md); Q08 |
 | Q08 | done | Exact two-path pulse energy readout, coherent limit, canonical action and attenuation test; exploratory, no ledger promotion | Coordinator; review before promotion | [Handoff](handoffs/Q08.md); Q07 physical phase premise |
 | Q07 | done | Local spin actions, phase integrality, irrational coupled pair and local-loop contraction; exploratory, no ledger promotion | Coordinator; review before promotion | [Handoff](handoffs/Q07.md); Q06 |
 | Q06 | done | Exploratory reciprocal forces, conserved energy, relative inertia calibration, network cycle test and residual common action scale | Coordinator; review before ledger promotion | [Handoff](handoffs/Q06.md); Q05 normalization dependency |
