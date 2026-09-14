@@ -187,11 +187,18 @@ bound orbits exist exactly for $|L|>k/c$.
    $1/\alpha$ separates it from the quantum unit, and no premise of the model
    supplies that factor.
 
-Remark, unaudited. The corresponding quantum Coulomb problems place their
-collapse thresholds at $Z\alpha=1/2$ for the Klein--Gordon $l=0$ state and
-$Z\alpha=1$ for the Dirac $j=1/2$ state; the classical condition with
-$|L|=\hbar(l+1/2)$ reproduces the first. This standard comparison belongs to
-the bounded source review required before any promotion of this note.
+Remark, audited. The quantum Coulomb problems place their collapse
+thresholds at $Z\alpha=l+1/2$ (Klein--Gordon) and $Z\alpha=|\kappa|=j+1/2$
+(Dirac). Both are the classical condition $|L|>k/c$ with $|L|$ measured as
+$\hbar(l+1/2)$ or $\hbar|\kappa|$, and C052's circular energies at
+$|L|=\hbar|\kappa|$ are exactly the Dirac levels with zero radial quantum
+number. [The Q14 review](../reviews/kepler-collapse-Q14.md) derives this
+from C052's energy identity, whose $1/r^2$ coefficient $c^2\ell^2-k^2$ is
+what the wave equations' indicial equations test, and records the primary
+sources; it is the Sommerfeld--Dirac coincidence of 1916 and 1928. The only
+quantum input is the unit of angular action at the plunge boundary, so the
+factor $1/\alpha$ of item 5 says that the Dirac ground state reaches that
+boundary at $Z=1/\alpha$.
 
 ## 7. Strategic consequence
 
