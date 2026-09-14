@@ -77,6 +77,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Energy feedback and the selection of an action scale",
          "-o", "papers/energy-depot-action-selection.tex"])
+    run(["pandoc", "notes/topological-sector-action-selection.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Topology, contraction and the missing action scale",
+         "-o", "papers/topological-sector-action-selection.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -87,7 +91,7 @@ def main():
                   "bounded-acceleration-return",
                   "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme",
                   "same-collisions-different-transport", "classical-spins-operational-closure",
-                  "energy-depot-action-selection"):
+                  "energy-depot-action-selection", "topological-sector-action-selection"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

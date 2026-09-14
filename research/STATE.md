@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q03 nonlinear energy-depot mechanism tested.**
+Updated: 2026-09-14. **Q04 conservative topological sector tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -23,15 +23,17 @@ select their own task.
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
 2. **Physical selection mechanism — next autonomous research.**
-   [Q03](../notes/energy-depot-action-selection.md) constructs a nonlinear
-   action attractor but identifies continuous power and frequency-dependent
-   normalization as its inputs. Finite fuel decays. This is exploratory work,
-   not an accepted-ledger claim; further pumped variants are parked.
-   Next test a conservative field with a fixed topological sector: specify its
-   action, boundary conditions and dilation before claiming a minimum. The
-   decision is whether geometric sector exclusion survives scale contraction,
-   rather than replacing quiet-state exclusion with perpetual fueling.
-   Existing uncommitted Q02 radiation work remains separate and untouched.
+   [Q04](../notes/topological-sector-action-selection.md) retains a conservative
+   topological energy floor, but its exact shrinking solitons have vanishing
+   radius-crossing action. Vacuum waves remain gapless. Next test whether
+   quadratic/quartic gradient competition in a three-dimensional conservative
+   field lifts the size modulus and supplies action, or imports it through
+   its coefficients. Specify the kinetic term and vacuum spectrum; a scale
+   balance alone does not prove a minimizer exists. This named size-exclusion
+   test follows Q04; further unstabilized topology variants are parked.
+   [Q03](../notes/energy-depot-action-selection.md)'s pumped variants remain
+   parked. Both notes are exploratory; no ledger promotion. Existing
+   uncommitted Q02 radiation work remains separate and untouched.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its

@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 63, 2026-09-14. The programme consolidates the accepted results into
+Version 64, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -79,6 +79,14 @@ preparation equivalence supply established precedents; the explicit spin pair
 and finite-repair proof supply the model-specific presentation. The manuscript
 now distinguishes the initial quotient from the expanded experimental theory.
 Its action-selection premise remains a separate physical question.
+
+Q04's [topological field test](../notes/topological-sector-action-selection.md)
+constructs a conservative O(3) sector with energy at least $4\pi\rho$, while
+an exact degree-one family of radius $R$ has radius-crossing action
+$4\pi\rho R/c\to0$. The static energy floor coexists with massless vacuum
+waves and translation zero modes. This exploratory test separates sector
+exclusion from a physical size or time scale; Q03's fueled attraction and
+Q04's geometric restriction have not supplied a universal action constant.
 
 A candidate must discharge five gates in [the action target](ACTION_FIELD_TARGET.md):
 classical definition and units; exclusion of zero; convergence in a named

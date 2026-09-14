@@ -6,6 +6,17 @@ They do not schedule work. [STRATEGY](../research/STRATEGY.md) governs whether
 an additional calculation or source batch is useful. Older suggestions below
 are retained context; their words "next" and "current" describe that milestone.
 
+## Conservative topological selection — Q04
+
+[Q04 review](../reviews/topological-sector-Q04.md): Ody--Ryder section 2,
+pp. 6--7, (2.21)--(2.26) -> fixed-degree static sigma solitons with arbitrary
+size and fixed energy -> [Q04](../notes/topological-sector-action-selection.md)
+tests the action over a half-energy-radius crossing time -> topology retains
+an energy floor but permits that action to vanish under contraction. The
+Lorentzian kinetic term and physical clock are model inputs. A conservative
+size-stabilizing term must lift this modulus and expose the units of its
+coefficient; source matching covers the static ingredients only.
+
 ## Quantum-premise audit — Q01, with K01 support
 
 [B77 generator restriction](../notes/reversible-generator-constraints.md):

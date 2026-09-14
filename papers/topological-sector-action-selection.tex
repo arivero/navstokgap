@@ -1,0 +1,219 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Topology, contraction and the missing action scale},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{a-topological-energy-floor-survives-shrinking-while-the-action-cost-vanishes}{%
+\section{A topological energy floor survives shrinking while the action
+cost
+vanishes}\label{a-topological-energy-floor-survives-shrinking-while-the-action-cost-vanishes}}
+
+The classical 2+1 dimensional O(3) sigma field has smooth degree-one
+static configurations of every radius, all with energy \(4\pi\rho\).
+Their action magnitude over one radius-crossing time is
+\(4\pi\rho R/c\), which tends to zero as the radius \(R\) shrinks. Thus
+a fixed topological sector can exclude zero energy without selecting a
+positive action floor. The same physical field has arbitrarily
+low-frequency vacuum waves.
+
+Status: Q04 exploratory construction and written test; no
+accepted-ledger promotion or novelty claim. The sector bound and scale
+family are established sigma-model ingredients. The action and gap
+comparisons below are the task's use of them. This continuum classical
+field is a proposed physical model; it is not derived from the
+repository's Newtonian particle mechanics.
+
+\hypertarget{field-action-and-admissible-sector}{%
+\subsection{1. Field, action and admissible
+sector}\label{field-action-and-admissible-sector}}
+
+Take a dimensionless unit vector \(n(t,x)\in S^2\), \(x\in\mathbb R^2\),
+with propagation speed \(c>0\) and stiffness \(\rho>0\) of energy units.
+Specify physical dynamics by the Lorentzian action
+
+\[S[n]=\frac\rho2\int dt\,d^2x\,
+\left(c^{-2}|\partial_tn|^2-|\nabla n|^2\right). \tag{1}\]
+
+Here \(S\) has energy-times-time units, and the canonical momentum
+density is \(\pi=\rho\partial_tn/c^2\). The Hamiltonian is
+
+\[H=\frac\rho2\int_{\mathbb R^2}
+\left(c^{-2}|\partial_tn|^2+|\nabla n|^2\right)d^2x. \tag{2}\]
+
+Require finite energy and smooth extension of each spatial field to the
+one-point compactification, with \(n(\infty)=e_3\). Its degree is
+
+\[Q=\frac1{4\pi}\int n\cdot(\partial_1n\times\partial_2n)\,d^2x
+\in\mathbb Z. \tag{3}\]
+
+Choose the sector \(|Q|=1\). Degree is conserved during smooth
+evolutions preserving the boundary extension. This is a restriction on
+admitted initial data and regular evolution; it does not explain why
+nature excludes \(Q=0\). No lattice spacing, lower radius or time window
+is imposed.
+
+\hypertarget{square-completion-and-an-explicit-shrinking-family}{%
+\subsection{2. Square completion and an explicit shrinking
+family}\label{square-completion-and-an-explicit-shrinking-family}}
+
+Put \(a=\partial_1n\), \(b=\partial_2n\) and \(q=n\cdot(a\times b)\).
+Tangency to the unit sphere gives
+
+\[|a+n\times b|^2=|a|^2+|b|^2-2q,\qquad
+|a-n\times b|^2=|a|^2+|b|^2+2q.\]
+
+Integrating the appropriate square proves
+
+\[H\ge E[n]:=\frac\rho2\int|\nabla n|^2d^2x
+\ge4\pi\rho|Q|. \tag{4}\]
+
+For every \(R>0\) set \(r^2=x_1^2+x_2^2\) and
+
+\[n_R(x)=\frac{(2Rx_1,\,2Rx_2,\,r^2-R^2)}{r^2+R^2}. \tag{5}\]
+
+Its norm is one, its boundary value is \(e_3\), and direct
+differentiation gives
+
+\[|\nabla n_R|^2=\frac{8R^2}{(r^2+R^2)^2},\qquad
+q_R=-\frac{4R^2}{(r^2+R^2)^2}.\]
+
+Using \(d^2x=2\pi r\,dr\) and
+\(\int_0^\infty r(r^2+R^2)^{-2}dr=1/(2R^2)\) yields \(Q=-1\) and
+\(E[n_R]=4\pi\rho\). Spatial reflection gives the opposite degree.
+Equality in (4) makes each field a static energy minimizer in its
+sector, hence a stationary solution of (1). This constructs actual
+solutions, not only variational trial configurations.
+
+The energy inside a disk of radius \(r\) is
+
+\[E_R(r)=4\pi\rho\frac{r^2}{r^2+R^2}. \tag{6}\]
+
+Consequently \(R\) is the half-energy radius, an intrinsic size rather
+than an arbitrary coordinate label. In the contraction \(R\downarrow0\),
+all members remain smooth and in the same sector. The limiting field is
+singular at the origin: away from it \(n_R\to e_3\), while
+\(n_R(0)=-e_3\). Their energy measures converge weakly to
+\(4\pi\rho\delta_0\) and their gradients do not converge strongly to the
+vacuum in \(L^2\). Excluding the singular endpoint does not exclude the
+smooth sequence. This is a family of stationary preparations; no
+dynamical collapse or finite-inertia dilation mode is asserted.
+
+\hypertarget{which-action-is-being-tested}{%
+\subsection{3. Which action is being
+tested?}\label{which-action-is-being-tested}}
+
+Define the candidate size-based action observable on this static family
+by
+
+\[\mathcal A_R:=E[n_R]\,\tau_R,\qquad
+\tau_R:=R/c.\]
+
+For the static solution on a physical time interval of length
+\(\tau_R\), \(S=-E\tau_R\), so this observable equals its action
+magnitude:
+
+\[\mathcal A_R=|S[n_R;0,R/c]|=\frac{4\pi\rho R}{c}
+\longrightarrow0. \tag{7}\]
+
+A crossing time measures propagation over the half-energy radius; it is
+not an oscillation period of this stationary field. Thus (7) tests this
+specified energy-time candidate, not every functional with action units.
+Equivalently, under spacetime dilation
+\(n_\lambda(t,x)=n(t/\lambda,x/\lambda)\) on a time interval scaled by
+\(\lambda\), (1) gives \(S[n_\lambda]=\lambda S[n]\), whereas spatial
+degree is unchanged. The field equation retains this dilation symmetry
+at fixed \(\rho,c\).
+
+For a fixed externally prescribed duration \(T>0\), the same static
+configurations, each held for \(T\), have \(|S|=ET\ge4\pi\rho T\). Its
+units and lower bound include that supplied clock. A canonical motion
+cost \(\int dt\int\pi\cdot\partial_tn\,d^2x\) is exactly zero on every
+member of (5), even though its spatial gradient energy is positive.
+Topology excludes a spatially uniform field, but admits rest in
+configuration space.
+
+The available dimensional parameters \(\rho\) and \(c\) cannot by
+themselves form an action: a length or a time must also enter. A lower
+radius \(R\ge\ell>0\) would give \(\mathcal A_R\ge4\pi\rho\ell/c\)
+within this family. That adds an independently justified physical scale
+and its coefficient; its survival as \(\ell\downarrow0\) would need a
+new mechanism. No physical-time attraction, preparation-independent
+constant or quantum phase rule follows from the stationary family.
+
+\hypertarget{the-sector-energy-floor-is-not-a-frequency-gap}{%
+\subsection{4. The sector energy floor is not a frequency
+gap}\label{the-sector-energy-floor-is-not-a-frequency-gap}}
+
+The physical action (1), rather than an auxiliary sampling generator,
+determines small fluctuations. Near the uniform vacuum write
+\(n=(u_1,u_2,\sqrt{1-|u|^2})\). The quadratic action gives
+
+\[\partial_t^2u=c^2\Delta u,\qquad \omega(k)=c|k|. \tag{8}\]
+
+The squared-frequency operator \(-c^2\Delta\) on
+\(L^2(\mathbb R^2;\mathbb R^2)\) with domain \(H^2\) has spectrum
+\([0,\infty)\). For example normalized smooth packets
+\(u_L(x)=L^{-1}f(x/L)\) have fixed \(L^2\) norm and Rayleigh quotient
+\(c^2L^{-2}\|\nabla f\|_2^2/\|f\|_2^2\to0\). On a periodic box of side
+\(L\), after removing constant rotations, the first frequency is
+\(2\pi c/L\); the thermodynamic limit closes it. These are vacuum
+linearized statements, not a quantized Hamiltonian spectrum.
+
+Even within the degree-one sector there is no isolated static minimizer:
+translations \(n_R(x-a)\) retain the same energy. Their tangent vectors
+\(\partial_i n_R\) are square integrable by (4) and are zero directions
+of the static second variation. Quotienting translations is a further
+restriction; no positive internal fluctuation gap after such a quotient
+is claimed here. In particular (4) compares a chosen sector to the
+vacuum, not all excitations to a unique ground state within one sector.
+
+\hypertarget{decision-and-next-physical-construction}{%
+\subsection{5. Decision and next physical
+construction}\label{decision-and-next-physical-construction}}
+
+Retain topology as a conservative mechanism for a positive \emph{sector
+energy} at fixed stiffness. Park topology alone as an action selector in
+this model: it leaves an arbitrary radius, an admitted static state and
+low-frequency vacuum waves. This advances the zero-exclusion test beyond
+Q03's need for continuous power, while exposing separate size and motion
+requirements.
+
+A concrete next candidate is a unit-vector field in three spatial
+dimensions with both quadratic and quartic spatial-gradient energies.
+Under a size rescaling their contributions behave as \(aR\) and \(b/R\).
+Their competition can fix a radius without external fueling. The next
+decision is whether this stabilization supplies an action or only
+expresses a scale already in \(a,b\) and the kinetic normalization; it
+must also test the vacuum spectrum. Existence of a minimizer cannot be
+inferred from the one-parameter balance alone. This is the selected
+candidate test, not a new theorem or a claim that stabilization
+establishes quantum necessity.
+
+\hypertarget{source-and-review}{%
+\subsection{Source and review}\label{source-and-review}}
+
+M. S. Ody and L. H. Ryder, \emph{Time-Independent Solutions to the
+Two-Dimensional Non-Linear O(3) Sigma Model and Surfaces of Constant
+Mean Curvature},
+\href{https://arxiv.org/abs/hep-th/9402137v1}{arXiv:hep-th/9402137v1}
+(1994), section 2, pp.~4--7, equations (2.1)--(2.26), supplies the
+static degree, energy and arbitrary-scale ingredients. Its unit
+stiffness gives \(E=4\pi|Q|\) for the duality solutions. The Lorentzian
+dynamics, the radius-crossing observable and the physical gap comparison
+are specified here.
+
+The \href{../reviews/topological-sector-Q04.md}{Q04 review} records the
+written proof check and bounded primary-source comparison: one
+Sol-medium worker, two queries, one primary paper and six pages, with
+formula-image checks. The coordinator rechecked the square completion,
+radial integral, dilation and wave normalization, and visually checked
+source pp.~6--7. No numerical or symbolic verification scripts were
+used. Source matches concern the static ingredients; no novelty or
+accepted-ledger promotion is asserted.
+\end{document}
