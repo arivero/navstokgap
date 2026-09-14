@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 66, 2026-09-14. The programme consolidates the accepted results into
+Version 67, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -56,6 +56,14 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+[Q10's thermal receiver test](../notes/thermal-receiver-reliability.md)
+combines a dark retention interval with a response deadline. Its activated-rate
+model yields an exact barrier-change floor proportional to temperature and a
+logarithmic timing/error contrast. A fixed signal-to-work coupling is needed
+to turn that into an incident-energy bound. Kinetic gating exposes that missing
+premise; temperature and apparatus parameters remain. This closes arbitrary
+preloading only within the stated effective model, without ledger promotion.
 
 [Q08's mechanical interference test](../notes/mechanical-interference-action.md)
 constructs an ideal lossless string network with two paths and matched

@@ -101,6 +101,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Passive thresholds, event formation and action scales",
          "-o", "papers/passive-threshold-events.tex"])
+    run(["pandoc", "notes/thermal-receiver-reliability.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Thermal retention and trigger discrimination",
+         "-o", "papers/thermal-receiver-reliability.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -114,7 +118,7 @@ def main():
                   "energy-depot-action-selection", "topological-sector-action-selection",
                   "stabilized-topology-action-scale", "reciprocal-coupling-normalization",
                   "spin-action-patching", "mechanical-interference-action",
-                  "passive-threshold-events"):
+                  "passive-threshold-events", "thermal-receiver-reliability"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
