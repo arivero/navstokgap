@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **User correction: stop audit-driven drift.**
+Updated: 2026-09-14. **Q03 nonlinear energy-depot mechanism tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -23,13 +23,15 @@ select their own task.
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
 2. **Physical selection mechanism — next autonomous research.**
-   Choose and test one concrete physical mechanism for quantum/action selection,
-   stating its dynamics, observable and independently motivated premises before
-   calculation. It must confront an existing classical countermodel or supply
-   the missing physical time/energy identification. A borrowed reconstruction
-   axiom cannot serve as its own physical justification. Deliver a construction
-   or a decisive failed mechanism; do not substitute a theorem-proof audit or
-   another inventory of missing assumptions. Existing accepted results are inputs.
+   [Q03](../notes/energy-depot-action-selection.md) constructs a nonlinear
+   action attractor but identifies continuous power and frequency-dependent
+   normalization as its inputs. Finite fuel decays. This is exploratory work,
+   not an accepted-ledger claim; further pumped variants are parked.
+   Next test a conservative field with a fixed topological sector: specify its
+   action, boundary conditions and dilation before claiming a minimum. The
+   decision is whether geometric sector exclusion survives scale contraction,
+   rather than replacing quiet-state exclusion with perpetual fueling.
+   Existing uncommitted Q02 radiation work remains separate and untouched.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its

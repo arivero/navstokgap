@@ -73,6 +73,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Classical action scales: obstructions, conditional bounds and quantum premises",
          "-o", "papers/action-scale-obstructions.tex"])
+    run(["pandoc", "notes/energy-depot-action-selection.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Energy feedback and the selection of an action scale",
+         "-o", "papers/energy-depot-action-selection.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -82,7 +86,8 @@ def main():
                   "susceptibility-gap", "interacting-ising-gap", "ising-hermitian-transfer",
                   "bounded-acceleration-return",
                   "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme",
-                  "same-collisions-different-transport", "classical-spins-operational-closure"):
+                  "same-collisions-different-transport", "classical-spins-operational-closure",
+                  "energy-depot-action-selection"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

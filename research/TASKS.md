@@ -9,6 +9,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| Q03 | done | Exploratory energy-depot construction: finite-fuel decay and pumped action attractor; no ledger promotion | Coordinator; review needed before promotion | [Handoff](handoffs/Q03.md); ACTION_FIELD_TARGET 2--4 |
 | P05 | done | Standalone elastic-gas teaching draft, B75 result-specific audit, PDF-inclusive upload bundle; author/editorial review remains | Coordinator + one Sol-medium librarian | [Handoff](handoffs/P05.md); C050–C051/B25–B26 |
 | B75 | done | Random-versus-regular preparation prior art; four queries, two papers, eight pages; no exact full comparison match in coverage | One Sol medium, sequential | [Review](../reviews/elastic-gas-publication-B75.md); no novelty claim |
 | P06 | done | Standalone spin manuscript, compiled PDF and provenance-checked bundle; C125–C128/B70 consistency review | Coordinator | [Handoff](handoffs/P06.md); publication positioning remains |
