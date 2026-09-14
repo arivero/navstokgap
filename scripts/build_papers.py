@@ -113,6 +113,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Independent local receivers and coincidence constraints",
          "-o", "papers/local-detector-coincidences.tex"])
+    run(["pandoc", "notes/shared-readiness-chsh.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Shared readiness, independent settings and action units",
+         "-o", "papers/shared-readiness-chsh.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -127,7 +131,8 @@ def main():
                   "stabilized-topology-action-scale", "reciprocal-coupling-normalization",
                   "spin-action-patching", "mechanical-interference-action",
                   "passive-threshold-events", "thermal-receiver-reliability",
-                  "shared-resource-events", "local-detector-coincidences"):
+                  "shared-resource-events", "local-detector-coincidences",
+                  "shared-readiness-chsh"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

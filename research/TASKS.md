@@ -9,6 +9,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| Q13 | done | Established CHSH constraint with arbitrary shared readiness, explicit singlet comparison and dimensional normalization test | Coordinator; no new claim | [Handoff](handoffs/Q13.md); Q12 |
 | Q12 | done | Exploratory all-gate coincidence bound, sharp efficiency trade-off and three premise countermodels | Coordinator; independent review before promotion | [Handoff](handoffs/Q12.md); Q11 |
 | Q11 | done | Exploratory shared-release competition, fringe weights, stored-energy budget and delayed-inhibition trade-off | Coordinator; review before promotion | [Handoff](handoffs/Q11.md); Q09--Q10 |
 | Q10 | done | Exploratory activated receiver: exact retention/response feasibility, barrier-change bound, kinetic-gating countertest and work-coupling premise | Coordinator; review before ledger promotion | [Handoff](handoffs/Q10.md); Q09 |

@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q12 independent local coincidence test completed.**
+Updated: 2026-09-14. **Q13 shared-readiness constraint completed.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -29,20 +29,22 @@ select their own task.
    correlated-readiness and gate-selection countermodels identify its boundary.
    Q08--Q12 establish why fringes and discrete events alone leave source and
    apparatus premises open. These constructions remain exploratory.
-   **Next:** test a two-setting local model allowing arbitrary shared source
-   and readiness variables, independent setting choices and an outcome on
-   every gate. Derive its correlation constraint and compare a specified
-   singlet preparation. This tests the shared-preparation escape; quantum
-   predictions are comparison inputs, not a derived action scale.
+   [Q13](../notes/shared-readiness-chsh.md) applies established CHSH to arbitrary
+   shared readiness: independent settings and conditional locality give the
+   all-gate bound 2; the supplied singlet predicts 2 sqrt(2). The dimensionless
+   witness leaves the absolute action normalization free. No new claim.
+   **Next autonomous construction switches to the gap track below.**
    Further single-splitter, thermal and shared-release tuning is parked.
    Q03--Q07 scale/topology/normalization variants remain parked; their
    [prior mechanism summary](handoffs/Q12-prior-state.md) retains the results.
    Existing uncommitted Q02 radiation work remains separate and untouched.
-3. **Gap track — supporting physical identification.** G04/C126 supplies the
-   explicit local Hermitian parent and its inherited finite-volume gap. Return
-   only with independently specified physical dynamics to compare against its
-   imaginary-time semigroup, or a named infinite-volume/continuum dependency.
-   Further parent or coupling variants are parked.
+3. **Gap track — selected physical Hamiltonian construction.** Specify a local
+   quantum spin Hamiltonian obtained by finite-depth local unitary conjugation
+   of independent spins. Derive its interacting ground state, gap and size
+   dependence with energy units explicit. This tests a direct Hamiltonian
+   mechanism rather than another sampling-clock parent. Quantum structure and
+   the energy-to-time action factor remain supplied inputs. Stop at that
+   construction; continuum and arbitrary-perturbation claims are separate.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128
