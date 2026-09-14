@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q14 dimensional selection criteria and G05 direct Hamiltonian completed.**
+Updated: 2026-09-14. **User direction: the priority is point insertion, Newton's areas and a minimum action (item 2).**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -22,46 +22,36 @@ select their own task.
    destination/article type and submission direction remain. Further autonomous
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
-2. **Physical selection mechanism — next autonomous research.**
-   [Q12](../notes/local-detector-coincidences.md) gives the all-gate coincidence
-   bound for independent monotone receivers of fixed fractions of a common
-   pulse, with a sharp efficiency/balance trade-off. Explicit routing,
-   correlated-readiness and gate-selection countermodels identify its boundary.
-   Q08--Q12 establish why fringes and discrete events alone leave source and
-   apparatus premises open. These constructions remain exploratory.
-   [Q13](../notes/shared-readiness-chsh.md) applies established CHSH to arbitrary
-   shared readiness: independent settings and conditional locality give the
-   all-gate bound 2; the supplied singlet predicts 2 sqrt(2). The dimensionless
-   witness leaves the absolute action normalization free. No new claim.
-   **Next autonomous construction switches to the gap track below.**
-   Further single-splitter, thermal and shared-release tuning is parked.
-   Q03--Q07 scale/topology/normalization variants remain parked; their
-   [prior mechanism summary](handoffs/Q12-prior-state.md) retains the results.
-   Q02 linear radiation balance is committed, reviewed and parked
-   ([handoff](handoffs/Q02.md)).
-   [Q14](../notes/action-unit-dimensional-selection.md) gives two criteria
-   that decide these tests before calculation: a universal floor is a multiple
-   of an action product of the fixed constants, and an admitted similarity
-   rescaling the observable forces zero. The unique mass-independent classical
-   electromagnetic unit is k/c, equal to alpha times hbar, already attained by
-   C052; the quantum-role residual is the factor 1/alpha. Apply the criteria
-   to any new selection candidate first ([handoff](handoffs/Q14.md)).
-   C130 (accepted, user direction): C052's plunge threshold and circular
-   energies at angular action hbar|kappa| are the Dirac Coulomb thresholds
-   and zero-radial-node levels; radial action quantization gives the
-   Sommerfeld/Dirac spectrum. Planck's constant enters only as the unit of
-   angular action at the plunge boundary.
-3. **Gap track — next autonomous robustness test.**
+2. **Point insertion, Newton's areas and a minimum action: selected by user
+   direction, 2026-09-14.** The priority is the connection between three
+   things: Democritus-style insertion of a point into a trajectory (the cut
+   refinement of [the cut target](CUT_POINT_TARGET.md), C027--C029 and
+   [the ancient-cuts provenance](../notes/ancient-cuts-provenance.md));
+   Newton's swept areas (Proposition I's polygon of impulses,
+   [I002](../ideas/I002-newton-polygon-threshold.md) and
+   [the area audit](../notes/receding-centre-area-audit.md)); and the
+   existence of a minimum value of h. Autonomous sessions work this
+   connection; other threads are supporting work. Inputs already in hand:
+   one inserted node in the fixed-kappa bridge costs kappa/2 (C029); the
+   chord error closes under refinement (C027); the relativistic Kepler
+   centre has angular-action floor k/c (C052, C130), so its swept-area rate
+   L/(2m) has floor k/(2mc), which for a gravitational centre k = GMm is
+   GM/(2c) for every test mass (direct consequence, not a ledger claim);
+   [Q14](../notes/action-unit-dimensional-selection.md) says which fixed
+   constants a floor can be built from. **Next ([N01](TASKS.md)):** state,
+   in Newton's polygon, what one inserted impulse point must carry (a
+   minimum swept sector, a minimum action or a minimum time step) for a
+   floor to survive refinement, and test that premise against C027--C029
+   and C052 in STRATEGY's decision format. Sommerfeld/Dirac continuations of
+   C130, the radiating Coulomb return named in Q14, further mechanism
+   variants (Q02--Q13) and the gap track are parked unless they discharge a
+   named dependency of this connection.
+3. **Gap track: supporting, not selected.**
    [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
-   Hamiltonian by a depth-two circuit: explicit local interactions, entangled
-   ground state and exact energy gap J uniform in chain length. Removing endpoint
-   terms creates four ground states while preserving the excitation gap above
-   that space. Quantum kinematics and energy-to-time action conversion are inputs.
-   **Next:** add a nearest-neighbour ZZ perturbation, which maps under the same
-   circuit to the transverse-field Ising chain. Determine whether a nonzero
-   coupling interval preserves the gap uniformly in volume, with boundary and
-   ground-space conventions explicit. This tests robustness beyond exact
-   conjugation; arbitrary perturbations and continuum transfer remain separate.
+   Hamiltonian by a depth-two circuit with exact energy gap J uniform in
+   chain length; G06 (nearest-neighbour ZZ perturbation mapping to the
+   transverse-field Ising chain) stays ready as supporting work and returns
+   when item 2 names a gap dependency or the user selects it.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128
