@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q04 conservative topological sector tested.**
+Updated: 2026-09-14. **Q05 conservative size stabilization tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -23,14 +23,15 @@ select their own task.
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
 2. **Physical selection mechanism — next autonomous research.**
-   [Q04](../notes/topological-sector-action-selection.md) retains a conservative
-   topological energy floor, but its exact shrinking solitons have vanishing
-   radius-crossing action. Vacuum waves remain gapless. Next test whether
-   quadratic/quartic gradient competition in a three-dimensional conservative
-   field lifts the size modulus and supplies action, or imports it through
-   its coefficients. Specify the kinetic term and vacuum spectrum; a scale
-   balance alone does not prove a minimizer exists. This named size-exclusion
-   test follows Q04; further unstabilized topology variants are parked.
+   [Q05](../notes/stabilized-topology-action-scale.md) lifts Q04's scale modulus
+   within an explicit trial family. Its full action carries the supplied
+   coefficient b/c, while common stiffness rescaling preserves the dynamics
+   and rescales actions. Vacuum waves remain gapless. Both topology notes are
+   exploratory; the trial minimum is not a field-existence theorem.
+   Next test reciprocal coupling of sectors with independent mechanical
+   normalizations: can energy exchange determine their ratio, and does an
+   overall action factor remain free? Specify forces and the conserved energy.
+   After two topology steps, further adjustable stabilizers are parked.
    [Q03](../notes/energy-depot-action-selection.md)'s pumped variants remain
    parked. Both notes are exploratory; no ledger promotion. Existing
    uncommitted Q02 radiation work remains separate and untouched.

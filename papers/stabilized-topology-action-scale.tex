@@ -1,0 +1,174 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Size stabilization and action normalization},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{stabilizing-a-topological-radius-exposes-an-action-coefficient}{%
+\section{Stabilizing a topological radius exposes an action
+coefficient}\label{stabilizing-a-topological-radius-exposes-an-action-coefficient}}
+
+A quadratic/quartic field energy has a finite preferred scale within an
+explicit degree-one family. Its energy-times-radius divided by wave
+speed is proportional to the quartic coefficient divided by that speed.
+Scaling both field coefficients leaves the classical dynamics unchanged
+while scaling this action. Size stabilization succeeds; absolute action
+normalization remains an independent input.
+
+Status: Q05 exploratory derivation, not an accepted-ledger claim.
+Independent review and a bounded librarian comparison precede any
+promotion. The scale minimum below is a trial-family result, not a proof
+of a full field minimizer.
+
+\hypertarget{field-sector-and-kinetic-term}{%
+\subsection{1. Field, sector and kinetic
+term}\label{field-sector-and-kinetic-term}}
+
+Let \(n:\mathbb R^3\to S^3\subset\mathbb R^4\) be smooth, approach a
+fixed point at spatial infinity, and have finite energy
+
+\[E[n]=\int\left[a\sum_i|\partial_i n|^2+
+b\sum_{i<j}\left(|\partial_i n|^2|\partial_j n|^2
+-(\partial_i n\cdot\partial_j n)^2\right)\right]d^3x. \tag{1}\]
+
+Here \(a>0\) has units energy/length, \(b>0\) has units energy times
+length, and \(c>0\) has speed units. Compactifying the domain defines
+the integer degree \(N\). This is the massless Skyrme-type
+quadratic/quartic construction written in real sphere coordinates; its
+standard ingredients have prior art.
+
+To specify physical time, choose the conservative Lagrangian
+
+\[L=\int\left[\frac{a}{c^2}|\dot n|^2+
+\frac{b}{c^2}\sum_i\left(|\dot n|^2|\partial_i n|^2
+-(\dot n\cdot\partial_i n)^2\right)\right]d^3x-E[n]. \tag{2}\]
+
+The velocity quadratic form is positive. This is the usual
+Lorentz-invariant quadratic/quartic completion, with coordinate
+\(x^0=ct\); all equations here use physical time \(t\). We require
+smooth solutions where they exist. This specification supplies neither
+global nonlinear well-posedness nor a hard speed theorem for arbitrary
+backgrounds.
+
+For completeness, if \(\lambda_i\ge0\) are the singular values of
+\(dn\), the static density is
+\(a\sum_i\lambda_i^2+b\sum_{i<j}\lambda_i^2\lambda_j^2\). Pairing
+\(a\lambda_i^2\) with \(b\lambda_j^2\lambda_k^2\) and applying the
+arithmetic-geometric mean inequality gives density at least
+\(6\sqrt{ab}\lambda_1\lambda_2\lambda_3\). Since the unit three-sphere
+has volume \(2\pi^2\), integration yields the standard degree estimate
+
+\[E\ge12\pi^2\sqrt{ab}\,|N|. \tag{3}\]
+
+The absolute Jacobian integral bounds the absolute degree even when
+local orientations vary. A positive sector energy is distinct from a
+vacuum excitation gap or an action bound.
+
+\hypertarget{an-explicit-size-test}{%
+\subsection{2. An explicit size test}\label{an-explicit-size-test}}
+
+Write \(y=x/R\), \(r=|y|\), and use the inverse stereographic profile
+
+\[n_R(x)=\frac{(2y_1,2y_2,2y_3,r^2-1)}{1+r^2},\qquad R>0.\]
+
+It has \(|N|=1\), and \(R\) is the sphere's equator radius in the
+domain. All three dimensionless singular values are \(2/(1+r^2)\). Thus
+
+\[A=48\pi\int_0^\infty\frac{r^2\,dr}{(1+r^2)^2}=12\pi^2,
+\qquad
+B=192\pi\int_0^\infty\frac{r^2\,dr}{(1+r^2)^4}=6\pi^2.\]
+
+The integrals follow directly from \(r=\tan u\), \(0<u<\pi/2\). Spatial
+scaling gives
+
+\[E(R)=aAR+\frac{bB}{R},\qquad
+R_* =\sqrt{\frac{bB}{aA}}=\sqrt{\frac{b}{2a}},\qquad
+E(R_*)=12\sqrt2\pi^2\sqrt{ab}. \tag{4}\]
+
+Unlike Q04, shrinking this family sends its energy to infinity.
+Expansion also costs energy. This proves a unique minimum along its
+scale direction, with positive second derivative \(2bB/R^3\). General
+shape perturbations remain outside this one-parameter test. In
+particular, \(n_{R_*}\) is a trial field, not asserted to solve the
+static Euler--Lagrange equation.
+
+\hypertarget{where-the-action-enters}{%
+\subsection{3. Where the action enters}\label{where-the-action-enters}}
+
+Define the same type of diagnostic as Q04: evaluate the magnitude of
+static Lagrangian action over the profile's crossing duration
+\(T_R=R/c\),
+
+\[\mathcal A_R=E(R)R/c=(aAR^2+bB)/c. \tag{5}\]
+
+For off-shell static trial fields this is a functional diagnostic, not
+an on-shell trajectory action. It has infimum \(6\pi^2 b/c\) within this
+family; at its energy-optimal scale it equals
+
+\[\mathcal A_{R_*}=12\pi^2 b/c. \tag{6}\]
+
+The product \(b/c\) already has action units. More generally, setting
+\(x=\ell y\), \(t=\ell s/c\) with \(\ell=\sqrt{b/a}\) writes the full
+action as
+
+\[S=\frac{b}{c}\,\widetilde S[n], \tag{7}\]
+
+where the dimensionless functional has unit quadratic and quartic
+coefficients. This includes the time-derivative terms, not just static
+energy. It identifies exactly which normalization a proposed quantum
+phase would use.
+
+There is also an exact countertest. Replace \((a,b)\) by
+\((\eta a,\eta b)\), \(\eta>0\). The length \(\ell\), field equations,
+degree, and characteristic vacuum speed remain unchanged. Energies and
+actions multiply by \(\eta\). Every positive \(\eta\) defines a
+nondegenerate model, and actions tend to zero as \(\eta\downarrow0\). No
+claim about dynamics at the degenerate endpoint is needed. This varies
+the physical stiffnesses; it does not deny fixed-coefficient sector
+bounds. It shows that field equations and topology alone do not fix
+their common mechanical normalization.
+
+\hypertarget{physical-spectrum-and-next-decision}{%
+\subsection{4. Physical spectrum and next
+decision}\label{physical-spectrum-and-next-decision}}
+
+Near a constant vacuum, write \(n=(\pi,\sqrt{1-|\pi|^2})\). To quadratic
+order,
+
+\[L^{(2)}=a\int[c^{-2}|\dot\pi|^2-|\nabla\pi|^2]d^3x,
+\qquad \Omega(k)=c|k|.\]
+
+The quartic term has no quadratic vacuum contribution. On infinite space
+there are arbitrarily low frequencies. Fixing a nonzero topological
+sector and stabilizing its radius therefore leaves this vacuum spectrum
+gapless. It also supplies no mechanism forcing a trajectory to carry
+nonzero degree.
+
+Retain gradient competition as a conservative size-exclusion mechanism.
+Its action coefficient is explicit, while the vacuum-gap question
+remains separate. After two topology steps, park further adjustable
+stabilizers. The next physical test should couple sectors that initially
+have independent normalizations: determine whether reciprocal energy
+exchange can constrain their ratio and whether one overall action
+normalization survives. This can turn the common-normalization
+obstruction into a concrete composition test, rather than adding another
+term whose coefficient contains the answer.
+
+\hypertarget{source-boundary}{%
+\subsection{Source boundary}\label{source-boundary}}
+
+The discovery lead is \emph{Topological energy bounds in generalized
+Skyrme models}, \href{https://arxiv.org/abs/1311.2939}{arXiv:1311.2939},
+\href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.89.065010}{publisher
+abstract}. Coverage here is the publisher/search abstract only: it
+identifies opposite Derrick scaling and topological bounds as
+established ingredients. Full-text formula matching and independent
+review are pending, not silently imported. The normalization, trial
+integrals, kinetic expansion and action comparison above are written
+calculations. No computational verification scripts were used.
+\end{document}

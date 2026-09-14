@@ -9,6 +9,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| Q05 | done | Exploratory quadratic/quartic size test, explicit degree-one trial, action normalization and massless vacuum spectrum | Coordinator; review before ledger promotion | [Handoff](handoffs/Q05.md); Q04 size dependency |
 | Q04 | done | Exploratory fixed-sector O(3) test: energy floor survives shrinking, crossing-time action vanishes; physical vacuum waves are gapless | Coordinator + one Sol-medium review | [Handoff](handoffs/Q04.md); ACTION_FIELD_TARGET 2, 4 |
 | Q03 | done | Exploratory energy-depot construction: finite-fuel decay and pumped action attractor; no ledger promotion | Coordinator; review needed before promotion | [Handoff](handoffs/Q03.md); ACTION_FIELD_TARGET 2--4 |
 | P05 | done | Standalone elastic-gas teaching draft, B75 result-specific audit, PDF-inclusive upload bundle; author/editorial review remains | Coordinator + one Sol-medium librarian | [Handoff](handoffs/P05.md); C050–C051/B25–B26 |
