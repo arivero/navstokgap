@@ -9,6 +9,8 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| Q07 | ready | Global spin-action patching: local actions, overlap rule, classical versus phase consistency and absolute normalization | Coordinator; exploratory premise test | Q06; Q01 action role |
+| Q06 | done | Exploratory reciprocal forces, conserved energy, relative inertia calibration, network cycle test and residual common action scale | Coordinator; review before ledger promotion | [Handoff](handoffs/Q06.md); Q05 normalization dependency |
 | Q05 | done | Exploratory quadratic/quartic size test, explicit degree-one trial, action normalization and massless vacuum spectrum | Coordinator; review before ledger promotion | [Handoff](handoffs/Q05.md); Q04 size dependency |
 | Q04 | done | Exploratory fixed-sector O(3) test: energy floor survives shrinking, crossing-time action vanishes; physical vacuum waves are gapless | Coordinator + one Sol-medium review | [Handoff](handoffs/Q04.md); ACTION_FIELD_TARGET 2, 4 |
 | Q03 | done | Exploratory energy-depot construction: finite-fuel decay and pumped action attractor; no ledger promotion | Coordinator; review needed before promotion | [Handoff](handoffs/Q03.md); ACTION_FIELD_TARGET 2--4 |

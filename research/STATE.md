@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q05 conservative size stabilization tested.**
+Updated: 2026-09-14. **Q06 reciprocal normalization tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -23,18 +23,17 @@ select their own task.
    polishing is parked unless a reader report or concrete venue requirement
    identifies a change.
 2. **Physical selection mechanism — next autonomous research.**
-   [Q05](../notes/stabilized-topology-action-scale.md) lifts Q04's scale modulus
-   within an explicit trial family. Its full action carries the supplied
-   coefficient b/c, while common stiffness rescaling preserves the dynamics
-   and rescales actions. Vacuum waves remain gapless. Both topology notes are
-   exploratory; the trial minimum is not a field-existence theorem.
-   Next test reciprocal coupling of sectors with independent mechanical
-   normalizations: can energy exchange determine their ratio, and does an
-   overall action factor remain free? Specify forces and the conserved energy.
-   After two topology steps, further adjustable stabilizers are parked.
-   [Q03](../notes/energy-depot-action-selection.md)'s pumped variants remain
-   parked. Both notes are exploratory; no ledger promotion. Existing
-   uncommitted Q02 radiation work remains separate and untouched.
+   [Q06](../notes/reciprocal-coupling-normalization.md) constructs reciprocal
+   energy exchange: fixed acceleration responses determine inertia ratios,
+   with a cycle-consistency test, while a common energy/action factor survives.
+   Q04--Q06 remain exploratory; no ledger promotion. Further adjustable
+   stabilizers and spring-network variants are parked.
+   Next test global spin-action patching on the quantum track: does classical
+   symplectic consistency impose integrality, or does it enter only through
+   a supplied phase exp(iS/K)? Construct the local actions and overlap rule;
+   identify whether any absolute K is selected. Stop at that premise decision.
+   Q03 pumped variants remain parked. Existing uncommitted Q02 radiation
+   work remains separate and untouched.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
    explicit local Hermitian parent and its inherited finite-volume gap. Return
    only with independently specified physical dynamics to compare against its

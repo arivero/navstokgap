@@ -1,0 +1,161 @@
+# Reciprocal exchange fixes relative mechanical scales
+
+Two measured acceleration responses determine an inertia ratio when both
+arise from a shared conservative spring. A connected network determines all
+such ratios if its cycle products are consistent. One common multiplier of
+inertias, spring constants, energies and actions remains free. Reciprocal
+exchange therefore supplies a relative-normalization mechanism, with an
+explicit residual absolute-scale freedom.
+
+Status: Q06 exploratory derivation, not an accepted-ledger claim. The model
+and written consistency review below require independent proof review and a
+bounded literature comparison before promotion. No novelty claim is made.
+
+## 1. Specify the response before choosing masses
+
+Let two coordinates $x,y\in\mathbb R$ have the same length units and share
+physical time $t$. Suppose their measured equations are
+
+$$\ddot x=-\alpha(x-y),\qquad
+\ddot y=\beta(x-y),\qquad \alpha,\beta>0. \tag{1}$$
+
+Both coefficients have units time$^{-2}$. Isolated free motion would leave
+the sectors' positive inertias $m_1,m_2$ independently arbitrary. Now require
+the specific mechanical completion
+
+$$L=\tfrac12m_1\dot x^2+\tfrac12m_2\dot y^2
+-\tfrac12k(x-y)^2,\qquad k>0. \tag{2}$$
+
+Here masses have mass units and $k$ has mass/time$^2$ units. This assumes a
+diagonal constant kinetic energy and one reciprocal position-dependent
+interaction. It is a physical model premise, not a consequence of observing
+arbitrary coupled motion. Its forces are $F_1=-k(x-y)$ and $F_2=k(x-y)$.
+The Euler--Lagrange equations agree with (1) exactly when
+
+$$m_1\alpha=m_2\beta=k,
+\qquad \frac{m_2}{m_1}=\frac\alpha\beta. \tag{3}$$
+
+Thus fixed responses admit precisely the positive family
+$(m_1,m_2,k)=m_1(1,\alpha/\beta,\alpha)$, with the entries interpreted
+in their stated units. Coupling constrains relative normalization; equal
+inertias follow only if the two acceleration responses are equal.
+
+## 2. Energy exchange and the remaining action freedom
+
+Writing $r=x-y$, the conserved energy and total momentum are
+
+$$H=\tfrac12m_1\dot x^2+\tfrac12m_2\dot y^2+\tfrac12kr^2,
+\qquad P=m_1\dot x+m_2\dot y. \tag{4}$$
+
+Indeed $\dot T_1=-kr\dot x$, $\dot T_2=kr\dot y$, and
+$\dot V=kr(\dot x-\dot y)$, so $\dot H=0$; the two forces give
+$\dot P=0$. To display an exchange current, assign half the interaction
+energy to each sector: $E_1=T_1+V/2$, $E_2=T_2+V/2$. Then
+
+$$\dot E_1=-\tfrac{k}{2}r(\dot x+\dot y)=-\dot E_2. \tag{5}$$
+
+The half split is an accounting convention; conservation of $H$ is independent
+of it. Generic initial data give nonzero exchange. Measuring power in an
+independently calibrated energy unit would add information beyond (1).
+
+For every dimensionless $\eta>0$, replace
+$(m_1,m_2,k)$ by $(\eta m_1,\eta m_2,\eta k)$. Equations (1), all
+coordinate histories with the same initial positions and velocities, and
+their periods remain unchanged. $L,H,P,E_i$ and the currents in (5) scale
+by $\eta$. So does the trajectory action $S=\int L\,dt$ on any fixed
+time interval. Independent rescaling of only one sector generally violates
+(3); common rescaling does not.
+
+An on-shell positive action diagnostic makes this freedom visible without
+cancellation in $S$. Set $M=m_1+m_2$, $\mu=m_1m_2/M$ and
+$X=(m_1x+m_2y)/M$. Then
+
+$$L=\tfrac12M\dot X^2+\tfrac12\mu\dot r^2-\tfrac12kr^2,
+\qquad \omega^2=k/\mu=\alpha+\beta. \tag{6}$$
+
+In the stationary centre frame choose $r=A\cos(\omega t)$, $A>0$.
+With $p_r=\mu\dot r$, its closed-orbit action is
+
+$$I=\frac1{2\pi}\oint p_r\,dr
+=\frac12\mu\omega A^2=\frac{E_{\rm rel}}\omega. \tag{7}$$
+
+The integral follows from $p_r\dot r=\mu A^2\omega^2\sin^2(\omega t)$
+over one period. It has action units. Common rescaling sends $I$ to $\eta I$
+at fixed trajectory. Even for fixed masses and spring, the admitted small
+amplitudes $A\downarrow0$ send $I$ to zero. The full Lagrangian action over
+this stationary-centre period is zero because the kinetic and potential
+integrals coincide; (7) must not be identified with that signed integral.
+
+The relative frequency is strictly positive for this fixed two-body model.
+The full system also has a free centre coordinate, so it has a zero-frequency
+mode. This is a finite-dimensional classical frequency statement, with no
+volume or continuum claim and no quantum energy gap.
+
+## 3. A network consistency test
+
+The relative mechanism extends to a finite connected undirected graph of
+scalar coordinates, all measured in the same length and time units. On every
+edge $\{i,j\}$ suppose both directed responses $a_{ij},a_{ji}>0$ are known:
+
+$$\ddot q_i=-\sum_{j\sim i}a_{ij}(q_i-q_j). \tag{8}$$
+
+Seek only the mechanical class
+
+$$L=\tfrac12\sum_i m_i\dot q_i^2
+-\tfrac12\sum_{\{i,j\}}k_{ij}(q_i-q_j)^2,
+\qquad m_i>0,\quad k_{ij}=k_{ji}>0. \tag{9}$$
+
+Comparison of coefficients requires
+$m_i a_{ij}=m_j a_{ji}=k_{ij}$. Hence the necessary cycle condition is
+
+$$\prod_{\ell=0}^{s-1}
+\frac{a_{i_\ell i_{\ell+1}}}{a_{i_{\ell+1}i_\ell}}=1,
+\qquad i_s=i_0. \tag{10}$$
+
+It is sufficient as well: choose any $m_0>0$, transport masses along a
+spanning tree using $m_j/m_i=a_{ij}/a_{ji}$, and apply (10) on each
+remaining edge's fundamental cycle. This makes its transported ratio agree
+with the edge ratio. All masses are positive and define the required springs.
+Any two solutions have the same mass ratio along every edge; connectivity
+makes their quotient one common constant. A disconnected graph instead
+retains one constant per connected component.
+
+For a concrete failed test take a triangle with $a_{12}=2\gamma$ and all
+other directed edge coefficients $\gamma>0$. The cycle $1\to2\to3\to1$
+has product 2. The required ratios would give $m_2=2m_1$, $m_3=m_2$,
+and $m_1=m_3$, a contradiction. Such responses cannot have completion (9).
+This rejects that diagonal-inertia reciprocal-spring model; it does not
+exclude completions with additional variables or a different kinetic form.
+
+## 4. Decision and written consistency review
+
+The positive outcome is a concrete relative calibration mechanism: reciprocal
+exchange joins formerly independent normalizations. Its cycle condition is
+a falsifiable constraint on measured responses. It does not dynamically
+drive masses toward a ratio; it identifies which fixed masses are compatible
+with the assumed energy and observed equations. A calibrated reference mass,
+spring force or energy transfer would fix the common multiplier empirically.
+It would supply the missing normalization as an input.
+
+The coordinator's written checks are (3) by direct variation, (4)--(5) by
+the displayed work balance, (6)--(7) by the centre/relative change of
+coordinates and period integral, and (10) by path consistency. Scaling
+changes mechanical parameters rather than coordinate units: a fixed external
+force or mass standard would distinguish the models. Positive $\eta$ and
+positive amplitudes approach zero action without using a degenerate mass
+endpoint. No numerical or symbolic verification scripts were used.
+
+Q05 left open whether mutual interaction could remove its common action
+coefficient. Within (2) and (9), fixed mutual responses remove relative
+freedoms but retain the common one. Park further spring-network variants
+unless a concrete measured response or proposed interaction violates this
+completion and changes a named physical premise. For the quantum track, the
+next distinct test is global spin-action patching: distinguish classical
+symplectic consistency from consistency of a proposed phase $\exp(iS/K)$,
+and locate which premise, if any, forces integrality or fixes $K$.
+
+Source context is the [Q05 normalization calculation](stabilized-topology-action-scale.md)
+and [conditional composition result](composition-universality.md). Their
+source audits are retained for their own claims. The present elementary
+mechanical construction has no new prior-art comparison yet; this exploratory
+note is not a ledger promotion.

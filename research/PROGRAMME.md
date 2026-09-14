@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 64, 2026-09-14. The programme consolidates the accepted results into
+Version 65, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -56,6 +56,15 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+[Q06's reciprocal coupling test](../notes/reciprocal-coupling-normalization.md)
+constructs conservative exchange with measured acceleration responses.
+Reciprocity determines relative inertias, subject to a network cycle condition;
+one common energy/action multiplier survives. This exploratory construction
+extends Q05's single-field normalization test to interacting sectors without
+promoting a ledger claim. It supplies relative calibration, while absolute
+normalization and the quantum phase role remain separate obligations.
+
 
 C127's [Hamiltonian test](../notes/hamiltonian-moment-descent.md) now separates
 microscopic reversibility from operational descent. Two zero-energy spin
