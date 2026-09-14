@@ -1,0 +1,221 @@
+# A universal action floor needs a fixed action unit and no admitted similarity
+
+A positive action floor shared by all admitted masses and preparations is a
+dimensionless multiple of a product of the model's fixed constants with action
+units. A model whose fixed constants admit no such product has floor zero or
+infinity, and a model whose admitted class is preserved by a one-parameter
+similarity that rescales the observable has floor zero even when such a
+product exists. These two elementary criteria decide the recorded
+action-selection countertests from C002 to Q13 before calculation, and they
+identify the single mass-independent action unit available to classical
+electrodynamics: $k_e/c=e^2/(4\pi\epsilon_0c)$, which equals $\alpha\hbar$
+and is exactly the excluded angular-action infimum of the relativistic Kepler
+threshold C052. The selection question therefore separates into the premise
+fixing a charge unit and the factor $1/\alpha$ between the electromagnetic and
+quantum action units. This is Q14's consolidation; it promotes no ledger claim.
+
+## 1. Setting
+
+A model class is specified by fixed constants $c_1,\dots,c_r$, a set of
+admitted masses, a class of admitted preparations, and dynamics. Each fixed
+constant has a dimension exponent vector $d_i\in\mathbb R^3$ with respect to
+mass, length and time. Charge enters only through Coulomb energies
+$q_iq_j/(4\pi\epsilon_0r)$, so $k=q_iq_j/(4\pi\epsilon_0)$ has dimension
+energy times length, $d_k=(1,3,-2)$, and no separate charge dimension is
+needed. The action dimension vector is $d_A=(1,2,-1)$. An action observable
+$A$ assigns a value in $[0,\infty]$ to each admitted solution with its
+preparation. The attained set $\mathcal A(c)\subset[0,\infty]$ collects its
+values over all admitted masses, preparations and solutions at constants
+$c=(c_1,\dots,c_r)$, and the floor is
+
+$$g(c)=\inf\{A\in\mathcal A(c):A>0\},$$
+
+with $g=\infty$ when no positive value is attained.
+
+Two premises are used. **Dimensional homogeneity:** the admitted class,
+dynamics and observable are defined by dimensionally homogeneous relations.
+Consequently a change of units $\lambda=(\lambda_M,\lambda_L,\lambda_T)
+\in(0,\infty)^3$, written $\lambda^{d}=\lambda_M^{d_M}\lambda_L^{d_L}
+\lambda_T^{d_T}$, carries the model at constants $c$ to the model at constants
+$\lambda^{d_i}c_i$ and multiplies every attained action by $\lambda^{d_A}$:
+
+$$\mathcal A(\lambda^{d_1}c_1,\dots,\lambda^{d_r}c_r)
+ =\lambda^{d_A}\,\mathcal A(c).\tag{1}$$
+
+**Universality:** the floor depends on the fixed constants only. Admitted
+masses and preparation parameters are ranged over inside the infimum, so they
+are absent from the argument list of $g$. This is obligation 4 of the
+[action target](../research/ACTION_FIELD_TARGET.md) written as a hypothesis.
+A fixed bath mass, cutoff, apparatus length or supplied coefficient is a fixed
+constant when the model holds it fixed for all admitted preparations.
+
+## 2. Theorem A: a universal floor is a multiple of an action product
+
+**Theorem A.** Under dimensional homogeneity and universality:
+
+(i) If $d_A$ lies outside the linear span of $d_1,\dots,d_r$, then
+$g(c)\in\{0,\infty\}$ for every $c$.
+
+(ii) If $d_A=\sum_ia_id_i$, then $\Pi(c)=\prod_ic_i^{a_i}$ has action units
+and $g(c)=\Pi(c)\,F(\pi_1,\dots,\pi_s)$, where $\pi_1,\dots,\pi_s$ is a basis
+of the dimensionless products of the constants and $F$ takes values in
+$[0,\infty]$. When the $d_i$ are linearly independent there is no
+dimensionless product and $g=C\,\Pi$ for one number $C\in[0,\infty]$.
+
+*Proof.* Equation (1) and universality give
+$g(\lambda^{d_1}c_1,\dots,\lambda^{d_r}c_r)=\lambda^{d_A}g(c)$ for all
+$\lambda$. Write $\lambda=e^{\ell}$ componentwise with $\ell\in\mathbb R^3$,
+so $\lambda^{d}=e^{\ell\cdot d}$. For (i), the orthogonal complement of
+$\mathrm{span}\{d_i\}$ is not contained in $d_A^\perp$, because in finite
+dimension $V^\perp\subset w^\perp$ is equivalent to $w\in V$. Choose $\ell$
+with $\ell\cdot d_i=0$ for all $i$ and $s=\ell\cdot d_A\neq0$. Then every
+constant is unchanged and $g(c)=e^{ts}g(c)$ for all real $t$, which forces
+$g(c)\in\{0,\infty\}$. For (ii), $\Pi$ has dimension vector
+$\sum_ia_id_i=d_A$, so $g/\Pi$ is invariant under all unit changes; an
+invariant function of the constants is a function of a basis of dimensionless
+products, which is the Buckingham reduction. If the $d_i$ are independent the
+only dimensionless product is the constant $1$. $\square$
+
+The theorem gives the form of a floor and its possible mass dependence, and
+leaves the positivity of $F$ to dynamics. Its content for selection is the
+contrapositive of (i): a model that holds no action-dimensional combination of
+its fixed constants cannot exclude zero universally, whatever its dynamics.
+
+## 3. Theorem B: an admitted similarity forces floor zero
+
+**Theorem B.** Fix the constants. Let $\mathcal S$ be the admitted set of
+solutions with their preparations and let $T_a:\mathcal S\to\mathcal S$,
+$a\in(0,\infty)$, satisfy $A(T_as)=a^{\,\delta}A(s)$ for some $\delta\neq0$.
+If some $s\in\mathcal S$ has $0<A(s)<\infty$, then $g=0$, and the attained
+positive values are also unbounded above. If $A$ takes one common value $g$
+on $\mathcal S$, then $g\in\{0,\infty\}$.
+
+*Proof.* $A(T_as)=a^{\delta}A(s)$ runs through $(0,\infty)$ as $a$ does.
+$\square$
+
+The map $T_a$ must preserve the admitted class at fixed constants. The three
+standard instances are amplitude scaling of a linear dynamics with a
+preparation class closed under multiplication by $a$ (quadratic actions,
+$\delta=2$), velocity scaling of a free or collisional preparation
+($\delta=2$ for a plateau proportional to $u^2$), and the space--time
+contraction $q_a(t)=aq(t/a)$ of [C056](action-scale-dilation.md), which is a
+similarity between different external potentials ($\delta=1$); C057 is
+Theorem B for that map with the class enlarged to be closed under it. A
+dynamics that is linear near an equilibrium supplies $T_a$ asymptotically:
+the small-radius circles of C058 have $\ell_R\sim\sqrt{mk_s}R^2$ because the
+confining potential is harmonic at its minimum, and the harmonic oscillator
+has the exact amplitude similarity.
+
+Theorems A and B are independent necessary conditions. Q02's regulated
+oscillator holds $q$, $m$, $\epsilon_0$ and $c$ fixed, so $q^2/(\epsilon_0c)$
+is an available action product; its linear response with a preparation class
+containing every field amplitude admits $E\mapsto aE$, $x\mapsto ax$,
+$J_*\mapsto a^2J_*$, and Theorem B gives floor zero. Fixing the amplitude $K$
+instead removes the similarity by adding an action-dimensional constant, which
+is what "supplied coefficient" means throughout the ledger.
+
+## 4. The recorded countertests and bounds under the two criteria
+
+| Result | Fixed constants | Action product | Admitted similarity | Criterion |
+| --- | --- | --- | --- | --- |
+| C002 constant-force variations | $m$, $F$, $T$: $(1,0,0)$, $(1,1,-2)$, $(0,0,1)$ | $F^2T^3/m$ | $\eta\mapsto a\eta$, $\Delta S\mapsto a^2\Delta S$ | B |
+| C024 collision plateau | $m$, $M$, $\nu$ | none without a fixed speed | incoming velocities $\mapsto\epsilon u$, $H_*\mapsto\epsilon^2H_*$ | A and B |
+| C036 composition | reference $m_0$, $u_0$, $\lambda_0$ | $m_0u_0^2/\lambda_0$ | none once the reference is fixed | A: $g=C\,\Pi$ |
+| C056--C057 contractions | $m$, $u$, no length | none | $q_a(t)=aq(t/a)$, $\delta=1$ | A and B |
+| C058 fixed force-bounded potential | $m$, $k_s$, $b$, $c$ | $\sqrt{mk_s}\,b^2$ | harmonic core, $\ell_R\sim\sqrt{mk_s}R^2$ | B, asymptotic |
+| C060--C061 speed floor, force ceiling | $P_*$, $v_*$, $F_{\max}$: $(1,1,-1)$, $(0,1,-1)$, $(1,1,-2)$ | $P_*^2v_*/F_{\max}$, unique | none: the speed floor breaks amplitude scaling | A: $g=C\,\Pi$, $C>0$ |
+| C052 relativistic Kepler | $k$, $c$: $(1,3,-2)$, $(0,1,-1)$ | $k/c$, unique, mass-independent | none: $r\mapsto\lambda r$, $p\mapsto p/\lambda$, $m\mapsto m/\lambda$, $t\mapsto\lambda t$ fixes $L$ | A: $g=k/c$, $C=1$ |
+| C053 softened core | $k$, $c$, $a$, $m$ | $k/c$ | none | A: $g=(k/c)F(amc^2/k)$, $F\equiv0$ |
+| Q02 radiation balance | $q$, $m$, $\epsilon_0$, $c$, $w$, $\Lambda$ | $q^2/(\epsilon_0c)$, $mc^2/w$ | field amplitude, $\delta=2$ | B |
+| Q04 topological sector | $\rho$ (energy), $c$: $(1,2,-2)$, $(0,1,-1)$ | none | radius $R$ of the degree-one family | A |
+| Q08 string interference | impedance $Z$, lengths, $c$ | $Z\ell^2$ | pulse amplitude, $\delta=2$ | B |
+| Q13 CHSH witness | probabilities only | none | none needed | A |
+
+Each row uses the constants the cited note holds fixed; a row that lists a
+supplied coefficient among the constants moves to the C036 pattern. The
+remaining Q-series tests end in a free common multiplier (Q05--Q07) or a
+dimensionless statistic (Q09--Q12) and fall under the same two criteria. The
+G-track results are in the same position on the other side: a quantum
+Hamiltonian with couplings in energy units and a lattice spacing has no action
+product without a fixed time or a supplied $\hbar$, which is the recorded
+status of C126 and G05.
+
+## 5. Which classical constants supply a mass-independent action unit
+
+**Proposition.** Let the fixed constants be $k_e=e^2/(4\pi\epsilon_0)$, $c$
+and $G$, with dimension vectors $(1,3,-2)$, $(0,1,-1)$ and $(-1,3,-2)$. The
+unique product with action units is $k_e/c$. Without $k_e$ there is none;
+admitting a mass $m$ adds $Gm^2/c$ and its mass-dependent relatives.
+
+*Proof.* The three vectors are linearly independent, so the exponents
+$(a,b,\gamma)$ with $a(1,3,-2)+b(0,1,-1)+\gamma(-1,3,-2)=(1,2,-1)$ are unique.
+Adding the length and time components gives $a+\gamma=1$; the mass component
+gives $a-\gamma=1$; hence $a=1$, $\gamma=0$, $b=-1$. With $G$ and $c$ alone
+the mass component forces $\gamma=-1$, and then the length and time
+components are inconsistent. With $m$ admitted, $Gm^2/c$ has dimension
+$(-1+2,\,3-1,\,-2+1)=(1,2,-1)$. $\square$
+
+In quantum units $k_e/c=\alpha\hbar$ with
+$\alpha=e^2/(4\pi\epsilon_0\hbar c)\approx1/137$. Thus the fixed constants of
+classical mechanics, electrodynamics and gravitation admit exactly one
+mass-independent action, and it exists because the charge is a fixed unit.
+Charge quantization is the classical premise that supplies an action unit;
+the value it supplies is $\alpha$ times the quantum one. A fixed length
+together with a mass unit and $c$ would supply another, $m_0c\,\ell_0$, at
+the price of a mass unit and a fundamental length, both absent from the
+models in use.
+
+## 6. The relativistic Kepler threshold through the five obligations
+
+C052 already realizes the unique electromagnetic unit. For one body in the
+singular potential $-k/r$ with $k=k_e$ for two elementary charges, regular
+bound orbits exist exactly for $|L|>k/c$.
+
+1. **Definition and units.** The angular action $|L|$ of regular bound orbits;
+   $k/c$ has action units.
+2. **Exclusion of zero.** The excluded infimum $k/c$ follows from the singular
+   core, finite speed and binding (C052); a softened core removes it (C053).
+   The premise excluding zero is the $1/r$ singularity at fixed $k$ and $c$.
+3. **Convergence.** No limit is required: the threshold is exact at fixed
+   constants, and closes only as $c\to\infty$ or $k\downarrow0$.
+4. **Universality.** The threshold is independent of the mass, as the explicit
+   formula and the similarity in Section 4 show, and it bounds every regular
+   bound preparation. It scales with the charge product: for a centre of
+   charge $Ze$ it is $Z\alpha\hbar$. The model excludes recoil, radiation and
+   a dynamical second body.
+5. **Quantum role.** None is derived. The floor is $\alpha\hbar$, so a factor
+   $1/\alpha$ separates it from the quantum unit, and no premise of the model
+   supplies that factor.
+
+Remark, unaudited. The corresponding quantum Coulomb problems place their
+collapse thresholds at $Z\alpha=1/2$ for the Klein--Gordon $l=0$ state and
+$Z\alpha=1$ for the Dirac $j=1/2$ state; the classical condition with
+$|L|=\hbar(l+1/2)$ reproduces the first. This standard comparison belongs to
+the bounded source review required before any promotion of this note.
+
+## 7. Strategic consequence
+
+Before calculating a selection candidate, list its fixed constants and check
+the two criteria. If no action product exists, or an admitted similarity
+rescales the observable, the candidate can supply at most a spectral shape
+(Q02), a conditional bound (C060) or a dimensionless witness (Q13), and the
+calculation may be skipped or bounded accordingly.
+
+The one classical route with a mass-independent positive floor is
+electromagnetic: a fixed charge unit, relativity and a singular Coulomb core
+give $\alpha\hbar$. The open premises of the selection track are therefore
+the origin of a fixed charge unit and the factor $1/\alpha$; both lie outside
+classical dynamics, and the second is the measured fine-structure constant. A
+return to a physical selection mechanism should start from a model whose
+constants are $e$, $\epsilon_0$, $c$ and masses, with a nonlinear coupling
+that breaks amplitude similarity, for example the radiating two-body Coulomb
+problem that [Q02's review](../reviews/radiation-noise-Q02.md) names as its
+remaining dependency; its radiation-reaction length $k_e/(mc^2)$ and action
+unit $k_e/c$ are then both fixed. Linear reservoirs, contraction-closed
+classes and dimensionless statistics remain parked by the criteria above.
+
+Proof status: elementary written proofs above; the dimensional reduction is
+the established Buckingham theorem. Literature status: dimensional analysis
+and mechanical similarity are established methods, and the identification
+$k_e/c=\alpha\hbar$ is standard; no novelty is asserted. A bounded librarian
+comparison and written review are required before any ledger promotion.

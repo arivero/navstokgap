@@ -37,7 +37,10 @@ approval:
 - **Why now:** why existing results do not already settle this decision.
 
 For action selection, name the observable, preparation/model class and limit;
-locate the physical input that could exclude zero. For gap work, name the
+locate the physical input that could exclude zero. Check the
+[dimensional criteria](../notes/action-unit-dimensional-selection.md) first:
+the fixed constants must admit a mass-independent action product, and no
+admitted similarity may rescale the observable. For gap work, name the
 operator, physical or auxiliary clock and constants that must survive size,
 cutoff or coupling limits. A reference to the broad project aim alone does
 not explain the value of another coefficient calculation. A supporting lemma

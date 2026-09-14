@@ -121,6 +121,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Local entangling gates and a uniform energy gap",
          "-o", "papers/finite-depth-spin-gap.tex"])
+    run(["pandoc", "notes/action-unit-dimensional-selection.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=A universal action floor needs a fixed action unit",
+         "-o", "papers/action-unit-dimensional-selection.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -136,7 +140,8 @@ def main():
                   "spin-action-patching", "mechanical-interference-action",
                   "passive-threshold-events", "thermal-receiver-reliability",
                   "shared-resource-events", "local-detector-coincidences",
-                  "shared-readiness-chsh", "finite-depth-spin-gap"):
+                  "shared-readiness-chsh", "finite-depth-spin-gap",
+                  "action-unit-dimensional-selection"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

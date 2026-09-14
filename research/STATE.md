@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **G05 direct Hamiltonian construction completed.**
+Updated: 2026-09-14. **Q14 dimensional selection criteria and G05 direct Hamiltonian completed.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -39,6 +39,13 @@ select their own task.
    [prior mechanism summary](handoffs/Q12-prior-state.md) retains the results.
    Q02 linear radiation balance is committed, reviewed and parked
    ([handoff](handoffs/Q02.md)).
+   [Q14](../notes/action-unit-dimensional-selection.md) gives two criteria
+   that decide these tests before calculation: a universal floor is a multiple
+   of an action product of the fixed constants, and an admitted similarity
+   rescaling the observable forces zero. The unique mass-independent classical
+   electromagnetic unit is k/c, equal to alpha times hbar, already attained by
+   C052; the quantum-role residual is the factor 1/alpha. Apply the criteria
+   to any new selection candidate first ([handoff](handoffs/Q14.md)).
 3. **Gap track — next autonomous robustness test.**
    [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
    Hamiltonian by a depth-two circuit: explicit local interactions, entangled

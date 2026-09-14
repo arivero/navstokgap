@@ -11,6 +11,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 | --- | --- | --- | --- | --- |
 | G05 | done | Established cluster Hamiltonian: local circuit, entangled ground state, exact uniform energy gap and boundary test | Coordinator; no new claim | [Handoff](handoffs/G05.md); G04 |
 | G06 | ready | ZZ-perturbed cluster chain: map to transverse-field Ising and determine volume-uniform gap interval with explicit boundaries | Coordinator; established-model test | G05; STATE selects |
+| Q14 | done | Dimensional and similarity criteria for a universal action floor: fixed action product necessary, admitted similarity forces zero; C052's k/c identified as the unique mass-independent electromagnetic unit, alpha times hbar; exploratory, no ledger promotion | Coordinator (Claude Fable 5.1); written review and bounded librarian before promotion | [Handoff](handoffs/Q14.md); C052--C061, Q02--Q13, ACTION_FIELD_TARGET 2, 4 |
 | Q13 | done | Established CHSH constraint with arbitrary shared readiness, explicit singlet comparison and dimensional normalization test | Coordinator; no new claim | [Handoff](handoffs/Q13.md); Q12 |
 | Q12 | done | Exploratory all-gate coincidence bound, sharp efficiency trade-off and three premise countermodels | Coordinator; independent review before promotion | [Handoff](handoffs/Q12.md); Q11 |
 | Q11 | done | Exploratory shared-release competition, fringe weights, stored-energy budget and delayed-inhibition trade-off | Coordinator; review before promotion | [Handoff](handoffs/Q11.md); Q09--Q10 |

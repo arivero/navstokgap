@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 69, 2026-09-14. The programme consolidates the accepted results into
+Version 70, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -56,6 +56,16 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+[Q14's dimensional criteria](../notes/action-unit-dimensional-selection.md)
+consolidate the selection countertests: a floor shared by all admitted masses
+and preparations is a dimensionless multiple of an action-dimensional product
+of the fixed constants, and an admitted similarity that rescales the
+observable forces the floor to zero. The fixed constants of classical
+mechanics, electrodynamics and gravitation admit one mass-independent action,
+$k_e/c=e^2/(4\pi\epsilon_0c)=\alpha\hbar$, and C052's relativistic Kepler
+threshold attains it. The open selection premises are a fixed charge unit and
+the factor $1/\alpha$. This exploratory consolidation promotes no ledger claim.
 
 [Q12's local receiver test](../notes/local-detector-coincidences.md) derives
 an all-gate coincidence-product bound for independent monotone responses to
