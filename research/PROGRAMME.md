@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 68, 2026-09-14. The programme consolidates the accepted results into
+Version 69, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -155,6 +155,15 @@ gives a positive three-site local parent with square-root Gibbs ground state
 and energy-unit gap $Ka[1-\tanh(2b)]$. Both action constant K and the physical
 clock identification are supplied. This resolves the finite-volume operator
 construction while retaining the independent physical-dynamics premise.
+
+[G05's direct Hamiltonian](../notes/finite-depth-spin-gap.md) works through
+an established cluster chain obtained by a depth-two controlled-Z circuit.
+It has three-site interactions, an entangled ground state and exact energy
+gap J uniform in chain length at fixed lattice spacing and coupling. Endpoint
+terms control ground-state uniqueness. This gives a direct quantum energy
+operator without a sampling-clock identification, with quantum kinematics
+and the action factor for physical time supplied. Robustness under a local
+noncommuting perturbation is a separate test; no new ledger claim is promoted.
 
 G01/G02 establish the finite reversible-generator estimate
 

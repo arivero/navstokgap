@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q13 shared-readiness constraint completed.**
+Updated: 2026-09-14. **G05 direct Hamiltonian construction completed.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -38,13 +38,17 @@ select their own task.
    Q03--Q07 scale/topology/normalization variants remain parked; their
    [prior mechanism summary](handoffs/Q12-prior-state.md) retains the results.
    Existing uncommitted Q02 radiation work remains separate and untouched.
-3. **Gap track — selected physical Hamiltonian construction.** Specify a local
-   quantum spin Hamiltonian obtained by finite-depth local unitary conjugation
-   of independent spins. Derive its interacting ground state, gap and size
-   dependence with energy units explicit. This tests a direct Hamiltonian
-   mechanism rather than another sampling-clock parent. Quantum structure and
-   the energy-to-time action factor remain supplied inputs. Stop at that
-   construction; continuum and arbitrary-perturbation claims are separate.
+3. **Gap track — next autonomous robustness test.**
+   [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
+   Hamiltonian by a depth-two circuit: explicit local interactions, entangled
+   ground state and exact energy gap J uniform in chain length. Removing endpoint
+   terms creates four ground states while preserving the excitation gap above
+   that space. Quantum kinematics and energy-to-time action conversion are inputs.
+   **Next:** add a nearest-neighbour ZZ perturbation, which maps under the same
+   circuit to the transverse-field Ising chain. Determine whether a nonzero
+   coupling interval preserves the gap uniformly in volume, with boundary and
+   ground-space conventions explicit. This tests robustness beyond exact
+   conjugation; arbitrary perturbations and continuum transfer remain separate.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128

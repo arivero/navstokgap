@@ -1,0 +1,150 @@
+# Local entangling gates preserve an energy gap uniformly in chain length
+
+The standard cluster chain gives a local interacting quantum Hamiltonian with
+an entangled unique ground state and excitation gap $J>0$ for every open chain
+of $N\ge2$ spins, when boundary terms are retained. The mechanism is exact
+unitary conjugation of independent spins. It supplies an energy gap directly;
+quantum kinematics and the action factor converting energy into frequency
+are inputs. This is an established construction worked through for G05.
+
+## 1. Specify the Hamiltonian and the local circuit
+
+The Hilbert space is $\mathcal H_N=(\mathbb C^2)^{\otimes N}$, with its full
+finite-dimensional operator domain. Dimensionless Pauli matrices $X_j,Z_j$
+act at site $j$. Fix a lattice spacing $a>0$ and an energy $J>0$, independent
+of $N$. Start with
+
+$$
+H_N^{(0)}=\frac J2\sum_{j=1}^N(I-X_j),\qquad
+U_N=\prod_{j=1}^{N-1}\mathrm{CZ}_{j,j+1},\qquad
+H_N=U_NH_N^{(0)}U_N^\dagger.
+$$
+
+On computational bits, $\mathrm{CZ}|b,c\rangle=(-1)^{bc}|b,c\rangle$.
+All gates commute, are Hermitian and square to identity. Odd bonds form one
+layer of disjoint gates and even bonds a second, so circuit depth is at most
+two for every open chain length. This is a specification of a model
+Hamiltonian; the circuit alone is not a laboratory implementation of it.
+
+Conjugation gives $\mathrm{CZ}_{j,k}X_j\mathrm{CZ}_{j,k}=X_jZ_k$:
+flipping bit $b_j$ changes the gate phase by $(-1)^{b_k}$. Hence
+
+$$
+K_1=X_1Z_2,\quad K_N=Z_{N-1}X_N,\quad
+K_j=Z_{j-1}X_jZ_{j+1}\quad(2\le j\le N-1),
+$$
+
+and
+
+$$
+H_N=\frac J2\sum_j(I-K_j).
+$$
+
+Each term has norm $J$ and support of diameter at most $2a$. The bulk
+contains three-site interactions in the specified physical spin tensor
+factors. Commutation and independence of the $K_j$ follow by conjugating
+the independent $X_j$; in particular, no hidden product relation removes
+single-defect states. Nonlocal entangling conjugation preserves spectrum
+without making the physical-site ground state a product.
+
+## 2. Ground state, entanglement and all excitation energies
+
+For $s_j\in\{+1,-1\}$ let $|s\rangle_X$ be the product $X$ eigenbasis.
+The vectors $U_N|s\rangle_X$ are a complete orthonormal eigenbasis and
+
+$$
+E(s)=\frac J2\sum_j(1-s_j)=J\,\#\{j:s_j=-1\}.
+$$
+
+Thus the unique ground state is $|C_N\rangle=U_N|+\rangle^{\otimes N}$,
+$E_0=0$, the eigenvalue $mJ$ has multiplicity $\binom Nm$, and
+
+$$
+\Delta_N=\min(\operatorname{spec}H_N\setminus\{0\})=J,
+\qquad \inf_{N\ge2}\Delta_N=J.
+$$
+
+The state $Z_j|C_N\rangle$ is a normalized energy-$J$ eigenstate: $Z_j$
+flips precisely the $K_j$ sign. This checks attainment, not just a lower bound.
+
+Entanglement can be seen at any cut between sites $k$ and $k+1$. Factor
+$U_N$ into gates internal to each side and the single crossing CZ gate.
+Internal gates are local unitaries relative to the cut. On the crossing
+pair,
+
+$$
+\mathrm{CZ}|+,+\rangle=
+\frac{|0\rangle|+\rangle+|1\rangle|-\rangle}{\sqrt2}.
+$$
+
+The two Schmidt coefficients are $1/\sqrt2$, with all other spins initially
+factorized. Every such cut therefore has entanglement entropy $\log2$
+(natural logarithm). Interaction and entanglement coexist with a spectrum
+that is exactly as simple as the independent-spin spectrum.
+
+## 3. Boundary and scale tests
+
+Removing the endpoint terms gives, for $N\ge3$,
+
+$$
+H_N^{\rm bulk}=\frac J2\sum_{j=2}^{N-1}(I-K_j)
+=U_N\left[\frac J2\sum_{j=2}^{N-1}(I-X_j)\right]U_N^\dagger.
+$$
+
+The endpoint $X$ labels are now unconstrained. The ground space is
+four-dimensional, but the gap *above that entire space* remains $J$.
+The separation of the two lowest eigenvalues counted with multiplicity
+is zero. Boundary conventions therefore matter for a unique-vacuum claim.
+For $N=2$ this bulk-only operator is zero and has no positive excitation.
+
+For an even periodic chain $N\ge4$, include the closing CZ gate and all $N$
+cyclic stabilizers. The two-layer construction, independent eigenlabels,
+unique ground state and gap $J$ persist. No symmetry constraint is imposed
+on the individual circuit gates here; no conclusion about symmetry-preserving
+phase equivalence is needed.
+
+The volume limit in this note is $N\to\infty$ at fixed $a,J$: a uniform
+finite-volume excitation-gap statement. No continuum limit $a\to0$,
+infinite-volume operator construction or relativistic dispersion is asserted.
+The defects in this exactly commuting model have no hopping term. If instead
+$J=J_N\to0$, the gap closes; replacing $H_N$ by $H_N/N$ also gives $J/N$.
+Locality and entanglement do not choose a positive energy normalization.
+
+## 4. The action parameter and the strategic consequence
+
+To specify physical unitary time evolution, supply an action constant $\kappa>0$:
+
+$$
+i\kappa\,\partial_t|\psi\rangle=H_N|\psi\rangle,
+\qquad \omega_{\rm excitation}=J/\kappa.
+$$
+
+This positive excitation frequency is relative to the ground state; it is
+not a relaxation rate. Unitary evolution does not equilibrate arbitrary states.
+The spectrum was defined in energy units without a Markov sampling clock,
+while its conversion to time still needs $\kappa$ (normally $\hbar$).
+The construction does not select quantum kinematics or a universal action unit.
+
+G05 closes the requested direct-Hamiltonian construction. A consequential
+next test is whether an extensive local perturbation that does not commute
+with the stabilizers preserves a volume-uniform gap. A concrete candidate is
+$-g\sum_j Z_jZ_{j+1}$: CZ conjugation leaves this perturbation unchanged,
+so its competition with the cluster terms reduces exactly to an Ising chain
+in a transverse field. That test addresses robustness beyond the exact
+conjugation family; it is a separate task, not a claim proved here.
+
+## Source and verification scope
+
+Seifnashri and Shao, *Cluster state as a non-invertible symmetry protected
+topological phase*, [arXiv:2404.01369v2](https://arxiv.org/html/2404.01369v2),
+Introduction Eqs. (1)–(3), supplies the periodic cluster Hamiltonian, its unique
+gapped ground state and the controlled-Z entangler. The source normalizes the
+Hamiltonian as $-\sum_jK_j$; ours adds $NJ/2$ times identity and multiplies
+by $J/2$, so its dimensionless single-defect cost 2 becomes energy $J$.
+Reading coverage: that introductory passage only, checked as primary HTML
+on 2026-09-14; later symmetry results were not audited. One discovery query
+and one primary-page read suffice for this established-model reuse.
+
+The written checks above cover conjugation, complete eigenbasis, gap
+attainment, Schmidt coefficients and missing-boundary degeneracy. No new
+ledger claim, novelty claim or computational verification is introduced.

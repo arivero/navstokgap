@@ -117,6 +117,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Shared readiness, independent settings and action units",
          "-o", "papers/shared-readiness-chsh.tex"])
+    run(["pandoc", "notes/finite-depth-spin-gap.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Local entangling gates and a uniform energy gap",
+         "-o", "papers/finite-depth-spin-gap.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -132,7 +136,7 @@ def main():
                   "spin-action-patching", "mechanical-interference-action",
                   "passive-threshold-events", "thermal-receiver-reliability",
                   "shared-resource-events", "local-detector-coincidences",
-                  "shared-readiness-chsh"):
+                  "shared-readiness-chsh", "finite-depth-spin-gap"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
