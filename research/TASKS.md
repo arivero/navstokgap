@@ -9,6 +9,7 @@ handoff with the remaining dependency. Priority is the ordered list in
 
 | ID | Status | Scope / acceptance condition | Suggested role | Depends |
 | --- | --- | --- | --- | --- |
+| Q08 | done | Exact two-path pulse energy readout, coherent limit, canonical action and attenuation test; exploratory, no ledger promotion | Coordinator; review before promotion | [Handoff](handoffs/Q08.md); Q07 physical phase premise |
 | Q07 | done | Local spin actions, phase integrality, irrational coupled pair and local-loop contraction; exploratory, no ledger promotion | Coordinator; review before promotion | [Handoff](handoffs/Q07.md); Q06 |
 | Q06 | done | Exploratory reciprocal forces, conserved energy, relative inertia calibration, network cycle test and residual common action scale | Coordinator; review before ledger promotion | [Handoff](handoffs/Q06.md); Q05 normalization dependency |
 | Q05 | done | Exploratory quadratic/quartic size test, explicit degree-one trial, action normalization and massless vacuum spectrum | Coordinator; review before ledger promotion | [Handoff](handoffs/Q05.md); Q04 size dependency |

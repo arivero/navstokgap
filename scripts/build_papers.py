@@ -93,6 +93,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Global spin actions and the phase premise",
          "-o", "papers/spin-action-patching.tex"])
+    run(["pandoc", "notes/mechanical-interference-action.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Mechanical interference and action calibration",
+         "-o", "papers/mechanical-interference-action.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -105,7 +109,7 @@ def main():
                   "same-collisions-different-transport", "classical-spins-operational-closure",
                   "energy-depot-action-selection", "topological-sector-action-selection",
                   "stabilized-topology-action-scale", "reciprocal-coupling-normalization",
-                  "spin-action-patching"):
+                  "spin-action-patching", "mechanical-interference-action"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

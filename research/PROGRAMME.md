@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 65, 2026-09-14. The programme consolidates the accepted results into
+Version 66, 2026-09-14. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's 2026-09-12 redirection makes quantum-premise selection and interacting
 gap control the main tracks. [STATE](STATE.md) owns the current ordered tasks;
@@ -56,6 +56,16 @@ acceptance remains future work. The historical source-to-model connections are
 preserved under their own tasks and can supply a specific premise or example.
 
 ### Action selection obligations
+
+[Q08's mechanical interference test](../notes/mechanical-interference-action.md)
+constructs an ideal lossless string network with two paths and matched
+work-recording receivers. Exact finite-pulse output energies contain the
+wave autocorrelation; long coherent pulses give cosine fringes. Attenuation
+preserves normalized fringes while energy and canonical action vanish.
+The canonical action-to-phase ratio depends on preparation and impedance;
+the traveling wave's spacetime Lagrangian action is zero. This exploratory
+result tests Q07's physical phase premise without ledger promotion. Localized
+event formation and its energy source remain a distinct receiver question.
 
 [Q06's reciprocal coupling test](../notes/reciprocal-coupling-normalization.md)
 constructs conservative exchange with measured acceleration responses.

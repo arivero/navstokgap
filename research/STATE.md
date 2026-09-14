@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **Q07 global spin-action patching tested.**
+Updated: 2026-09-14. **Q08 mechanical interference tested.**
 User direction now prioritizes publication development; C128/B74 remains accepted.
 The [synthesis](../notes/action-scale-obstructions.md) consolidates the classical
 obstructions; [Q01](../notes/quantum-exclusion-premises.md) identifies the
@@ -32,10 +32,16 @@ select their own task.
    rule: phase consistency quantizes 2s/K, while classical dynamics admits any
    s>0. A coupled irrational-ratio pair separates the premises; local loop
    actions remain continuous. This is exploratory, not ledger-promoted.
-   Next construct a classical two-path wave/receiver experiment with explicit
-   energy transfer and readout. Test whether its action-to-phase conversion
-   is universal or tied to frequency, amplitude and apparatus. Use no quantum
-   probability rule as an unexplained input; further patching variants are parked.
+   [Q08](../notes/mechanical-interference-action.md) now constructs the
+   two-path string network and matched receivers: exact work records interfere,
+   while attenuation preserves normalized fringes and sends action to zero.
+   Canonical wave action and spacetime Lagrangian action are distinct.
+   Q08 remains exploratory; linear interference variants are parked.
+   Next test localized event formation with a passive threshold receiver,
+   including stored energy and reset work. Decide whether exclusive events
+   select a universal scale or inherit receiver preparation and threshold.
+   Compare this decision with the gap track before dispatch; another linear
+   wave-mode calculation would repeat the existing gapless countertest.
    Q03 pumped variants remain parked. Existing uncommitted Q02 radiation
    work remains separate and untouched.
 3. **Gap track — supporting physical identification.** G04/C126 supplies the
