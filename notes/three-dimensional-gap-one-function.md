@@ -92,8 +92,8 @@ two dimensions: $\Delta_{a,L}=(\hbar c/a)\,\delta(g_{\rm lat};N_s,G)>0$ with a
 unique physical ground state. The strong-coupling theorem holds with
 $\nu=2$, $\Lambda_0=\{0,1\}^2$, two links and one plaquette per site:
 $$\beta=\frac{4}{g_{\rm lat}^4C_2}\cdot2N=\frac{16N^2}{g_{\rm lat}^4(N^2-1)},\qquad
-\Delta_{a,L}\ge\gamma_2\,\frac{g_{\rm lat}^2}{2}\,C_2\,\frac{\hbar c}{a}
-\quad\text{for }g_{\rm lat}\ge g_0^{(2)}(N)=\Big(\frac{16N^2}{(N^2-1)\beta_*(2,\{0,1\}^2)}\Big)^{1/4},$$
+\Delta_{a,L}\ge\gamma_2\,\frac{g_{\rm lat}^2}{2}\,C_2\,\frac{\hbar c}{a},$$
+for $g_{\rm lat}\ge g_0^{(2)}(N)=\big(16N^2/[(N^2-1)\beta_*(2,\{0,1\}^2)]\big)^{1/4}$,
 uniformly in $N_s$, by the same hypothesis check.
 
 The continuum limit is $a\to0$ at fixed $g^2$, $L$, that is
@@ -114,6 +114,18 @@ The $d=3$ conjecture on the lattice route is therefore:
 > bounded below by a positive constant for all $g_{\rm lat}>0$ and has a
 > finite limit $C$ as $g_{\rm lat}\to0$.
 
+**The abelian contrast in $d=3$.** For compact $U(1)$ in three dimensions
+Göpfert and Mack (abstract, B78) prove a gap at every coupling, so
+T2$'$ holds for the abelian group here, and their Debye mass
+$m_D^2=(2\beta/a^3)e^{-\beta v(0)/2}$, $\beta=4\pi^2/e^2_{\rm lat}$, makes
+$c(g_{\rm lat})=\delta_\infty/g_{\rm lat}^2$ vanish with an essential
+singularity as $g_{\rm lat}\to0$: the continuum photon is massless. In
+$d=3$ the abelian/non-abelian distinction is therefore the limit of the
+ratio, zero against a positive $C$, with positivity at each coupling
+shared by both. Everything in this note up to here is a collection of
+known facts in one normalization; the only statement of this
+programme's own is the reduction to $f$ and its two ends.
+
 No exponential enters. In $d=4$ the corresponding ratio
 $\delta_\infty(g)/g^2$ is bounded below at strong coupling by the same
 theorem and must vanish like $g^{-2}e^{-1/(2b_0g^2)}$ at weak coupling;
@@ -130,7 +142,7 @@ $g_{\rm lat}^2$.
 | finite-volume gap | $\varepsilon_3f(x)$, $x=g^2\hbar L$ | $(\hbar c/L)\,z(L)$ with $g(L)$ running |
 | small-volume end | $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ | $z=\delta_1^{(3)}g(L)^{2/3}[1+O(g^{2/3})]$ |
 | strong-coupling lattice end | $\delta_\infty/g_{\rm lat}^2\ge\gamma_2C_2/2$ | $\delta_\infty/g^2\ge\gamma_3C_2/2$ |
-| conjecture | $\inf_{g_{\rm lat}}c(g_{\rm lat})>0$, $c\to C$ | $\delta_\infty(g)\,e^{1/(2b_0g^2)}(b_0g^2)^{b_1/(2b_0^2)}\to m/(\hbar c\Lambda_{\rm lat})$ |
+| conjecture | $\inf_{g_{\rm lat}}c(g_{\rm lat})>0$, $c\to C$ | $\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda_{\rm lat})$ |
 | expected constant | $C=N/(2\pi)$ (Karabali--Nair, physics) | none in closed form |
 | existence | finite volume by stochastic quantisation (Chevyrev review, passage-level companion in docs) | finite-volume UV stability only |
 
