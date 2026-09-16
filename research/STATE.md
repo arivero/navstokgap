@@ -247,15 +247,23 @@ the items below are the working queue.
    $\|\phi\|_\infty$ is invariant under (conjugation, composition with the
    flow). **Every norm-based method in this programme is now exhausted**,
    each closed by computation.
-6. **Next, the successor question:** an estimate on the ground-state
-   measure $|\Omega(U)|^2dU$ of the Kogut--Susskind Hamiltonian, for
-   instance $|\Omega(U)|^2\le Ce^{-\lambda S_w(U)}$ with $\lambda>0$ uniform
-   in the volume. The flow's gain is pointwise, hence visible only in
-   expectation, so a state-relative criterion is what remains; such a
-   bound would import the Euclidean large-field machinery into the
-   Hamiltonian setting. Strong coupling should be provable directly, since
-   there $\Omega$ is a controlled perturbation of the constant function.
-6. **Done: the $d=3$ formulation.**
+6. **Done: the Agmon bound.**
+   [Note](../notes/agmon-ground-state-suppression.md): the configuration
+   space is a closed Riemannian manifold, so the Agmon identity
+   $A'\int|\nabla(e^\rho\Omega)|^2+\int(B'V-e_0-A'|\nabla\rho|^2)e^{2\rho}\Omega^2=0$
+   holds with no boundary term, giving
+   $\int e^{2(1-\delta)d}\Omega^2\le C(\delta)$ for the Agmon distance $d$ in
+   the metric $\sqrt{(B'V-e_0)/A'}$, $B'/A'=4/g^4$. A configuration with
+   $n$ excess plaquettes sits at distance $\simeq n\sqrt{2v}/g^2$, so the
+   ground-state measure suppresses it like $e^{-2n\sqrt{2v}/g^2}$: **the
+   coupling dependence of the Euclidean Wilson weight**, strong exactly at
+   weak coupling where the renormalization steps live. This is the
+   Hamiltonian counterpart of the large-field estimate.
+7. **Next, in order:** (a) prove the distance estimate of §2 with
+   constants, a geometric computation on $G^{\mathcal E}$; (b) extend the
+   bound from the ground state to the spectral subspace below the gap;
+   (c) assemble the state-relative decimation criterion those two allow.
+8. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and

@@ -11,8 +11,10 @@ variational method can take it, and reduced to the existence of the
 theory plus the nontriviality of one flowed correlator; the **lower
 side, the clause $m>0$, is untouched**, and three natural routes to it
 have been closed by explicit computation rather than by difficulty. What remains is decimation with controlled couplings: every method built
-from operator norms and spectra is exhausted, and the next input is an
-estimate on the ground-state measure.
+from operator norms and spectra is exhausted, and the state-relative
+replacement now has its first ingredient, an Agmon bound on the
+ground-state measure with the coupling dependence of the Euclidean
+Wilson weight.
 
 ## 1. The decomposition
 

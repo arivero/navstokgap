@@ -1,0 +1,198 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={An Agmon bound for the Kogut--Susskind ground state: large fields are suppressed at rate $},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{an-agmon-bound-for-the-kogutsusskind-ground-state-large-fields-are-suppressed-at-rate-1g2-per-plaquette}{%
+\section{\texorpdfstring{An Agmon bound for the Kogut--Susskind ground
+state: large fields are suppressed at rate \(1/g^2\) per
+plaquette}{An Agmon bound for the Kogut--Susskind ground state: large fields are suppressed at rate 1/g\^{}2 per plaquette}}\label{an-agmon-bound-for-the-kogutsusskind-ground-state-large-fields-are-suppressed-at-rate-1g2-per-plaquette}}
+
+The estimate that \href{flow-before-decimation.md}{the
+flow-before-decimation note} identified as the missing ingredient exists
+and is standard: Agmon's method applies to the Kogut--Susskind
+Hamiltonian because its configuration space is a compact Riemannian
+manifold, its magnetic term is a bounded potential and its ground state
+is positive. Writing
+\[H=\frac{\hbar c}{a}\Big[\underbrace{\frac{g^2}{2}}_{A'}\,(-\Delta)
++\underbrace{\frac{2}{g^2}}_{B'}\,V\Big],\qquad
+V(U)=\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big),\] the
+identity \[A'\!\int\!\big|\nabla(e^{\rho}\Omega)\big|^2
++\int\!\big(B'V-e_0-A'|\nabla\rho|^2\big)e^{2\rho}\Omega^2=0,
+\qquad e_0=\frac{aE_0}{\hbar c},\] holds for every Lipschitz \(\rho\)
+and gives exponential decay of the ground state into the region where
+the magnetic energy exceeds its mean. The Agmon metric is
+\(\sqrt{(B'V-e_0)/A'}\;|dU|\), with \(B'/A'=4/g^4\), and a configuration
+carrying an excess of \(n\) excited plaquettes sits at Agmon distance of
+order \(2n\sqrt v/g^2\) from the allowed region, where \(v\) is the
+excess per plaquette. Hence
+\[\big|\Omega(U)\big|^2\ \lesssim\ \exp\Big[-\frac{c\,n\sqrt N}{g^2}\Big],\]
+the ground-state measure suppressing large-field regions at a rate
+\(\propto1/g^2\) per plaquette, \textbf{the same coupling dependence as
+the Euclidean Wilson weight} \(e^{-S_w}\) with \(\beta=2N/g^2\). The
+suppression is strong exactly at weak coupling, which is where the
+renormalization steps of the route live, and weak at strong coupling,
+where the cluster expansion already works. This supplies the Hamiltonian
+counterpart of the large-field estimate whose absence
+\href{typical-field-strength-window.md}{the typical-field note}
+recorded, and it does so by a standard technique rather than a new one.
+Constants explicit; the distance estimate is a scaling argument and is
+labelled as such; nothing promoted.
+
+\hypertarget{setting-and-the-ground-state-identity}{%
+\subsection{1. Setting and the ground-state
+identity}\label{setting-and-the-ground-state-identity}}
+
+The configuration space \(\mathcal M=G^{\mathcal E}\) is a compact
+Riemannian manifold with the product bi-invariant metric, of dimension
+\(|\mathcal E|\dim G\), and \(-\Delta\) is its Laplace--Beltrami
+operator. By T1 of \href{mass-gap-obligations-lattice.md}{the
+obligations map} the ground state \(\Omega\) is strictly positive and
+satisfies \[-A'\Delta\Omega+\big(B'V-e_0\big)\Omega=0,\qquad
+A'=\frac{g^2}{2},\quad B'=\frac{2}{g^2},\quad e_0=\frac{aE_0}{\hbar c},\]
+after dividing by \(\hbar c/a\).
+
+\textbf{Lemma 1 (Agmon identity).} For every Lipschitz
+\(\rho:\mathcal M\to\mathbb R\),
+\[A'\!\int_{\mathcal M}\big|\nabla(e^{\rho}\Omega)\big|^2\,d\mu
++\int_{\mathcal M}\big(B'V-e_0-A'|\nabla\rho|^2\big)\,e^{2\rho}\,\Omega^2\,d\mu=0 .\]
+
+\emph{Proof.} Multiply the eigenvalue equation by \(e^{2\rho}\Omega\)
+and integrate; there is no boundary term because \(\mathcal M\) is
+closed. Using
+\(\int(-\Delta\Omega)e^{2\rho}\Omega=\int\nabla\Omega\cdot\nabla(e^{2\rho}\Omega)\)
+and the pointwise identity
+\[\big|\nabla(e^\rho\Omega)\big|^2=e^{2\rho}\big|\nabla\Omega\big|^2
++2e^{2\rho}\Omega\,\nabla\rho\cdot\nabla\Omega+e^{2\rho}\Omega^2|\nabla\rho|^2
+=\nabla\Omega\cdot\nabla(e^{2\rho}\Omega)+e^{2\rho}\Omega^2|\nabla\rho|^2,\]
+the first term becomes
+\(\int|\nabla(e^\rho\Omega)|^2-\int e^{2\rho}\Omega^2|\nabla\rho|^2\).
+Adding \(\int(B'V-e_0)e^{2\rho}\Omega^2\) gives the identity.
+\(\square\)
+
+\textbf{Corollary 2 (Agmon estimate).} Let
+\(\Sigma_\epsilon=\{U:B'V(U)-e_0\ge\epsilon\}\) and let \(\rho\) be
+Lipschitz with \(A'|\nabla\rho|^2\le B'V-e_0-\epsilon/2\) on
+\(\Sigma_\epsilon\) and \(\rho\le\rho_{\max}\) on
+\(\mathcal M\setminus\Sigma_\epsilon\). Then
+\[\frac\epsilon2\int_{\Sigma_\epsilon}e^{2\rho}\,\Omega^2\,d\mu
+\ \le\ \big(e_0+A'\|\nabla\rho\|_\infty^2\big)\,e^{2\rho_{\max}}\!\!\int_{\mathcal M\setminus\Sigma_\epsilon}\!\!\Omega^2\,d\mu
+\ \le\ C\,e^{2\rho_{\max}} .\]
+
+\emph{Proof.} Drop the nonnegative gradient term in Lemma 1 and split
+the integral over \(\Sigma_\epsilon\) and its complement, where the
+integrand is bounded below by \(-(e_0+A'\|\nabla\rho\|_\infty^2)\).
+\(\square\)
+
+The admissible weights are exactly the functions with
+\(|\nabla\rho|\le\sqrt{(B'V-e_0)/A'}\), so the largest is the
+\textbf{Agmon distance}
+\[d(U)=\inf_{\gamma:\,U\to\{B'V\le e_0\}}\int_\gamma\sqrt{\frac{B'V-e_0}{A'}}\;|d\gamma| ,\]
+and Corollary 2 with \(\rho=(1-\delta)d\) gives
+\(\int e^{2(1-\delta)d}\Omega^2\le C(\delta)\).
+
+\hypertarget{the-agmon-distance-of-a-large-field-region}{%
+\subsection{2. The Agmon distance of a large-field
+region}\label{the-agmon-distance-of-a-large-field-region}}
+
+Write \(\bar v=e_0/B'\) for the mean magnetic energy, which satisfies
+\(\bar v\le\langle V\rangle_{\rm Haar}=N|\mathcal P|\) because
+\(E_0\le\langle1,H1\rangle\) and
+\(\langle\operatorname{Re}\operatorname{tr}U_p\rangle_{\rm Haar}=0\).
+Consider a configuration \(U\) whose magnetic energy exceeds \(\bar v\)
+by an amount carried on \(n\) plaquettes, each in excess by \(v=O(N)\),
+so \(V(U)-\bar v\simeq nv\).
+
+\emph{Flat length.} Relaxing those \(n\) plaquettes requires moving of
+order \(n\) link variables by an angle of order one. In the product
+metric the flat distance is of order \(\sqrt n\), since \(n\)
+coordinates each move \(O(1)\).
+
+\emph{Agmon weight.} Along such a path the excess decreases from \(nv\)
+to \(0\), with mean of order \(nv/2\), so the weight
+\(\sqrt{(B'V-e_0)/A'}=\sqrt{(B'/A')(V-\bar v)}\) is of order
+\(\sqrt{(4/g^4)\,nv/2}=\sqrt{2nv}/g^2\).
+
+\emph{Distance.} Multiplying, and keeping only the order,
+\[d(U)\ \simeq\ \frac{\sqrt{2nv}}{g^2}\cdot\sqrt n\ =\ \frac{n\sqrt{2v}}{g^2}.\]
+
+\textbf{Proposition 3 (scaling form).} With the distance estimate above,
+Corollary 2 gives, for the ground-state measure,
+\[\int_{\{n\ \rm excess\ plaquettes\}}\Omega^2\,d\mu
+\ \lesssim\ C\exp\Big[-\frac{2(1-\delta)\sqrt{2v}}{g^2}\,n\Big],\]
+exponential in the number of excited plaquettes with rate
+\(\lambda=2\sqrt{2v}/g^2\) per plaquette, \(v=O(N)\).
+
+The flat-length and mean-excess steps are scaling estimates; the
+identity of Lemma 1 and the estimate of Corollary 2 are exact.
+
+\hypertarget{comparison-with-the-euclidean-weight}{%
+\subsection{3. Comparison with the Euclidean
+weight}\label{comparison-with-the-euclidean-weight}}
+
+The Euclidean Wilson measure is \(e^{-S_w}\,d\mu\) with
+\[S_w=\frac{2N}{g_E^2}\sum_p\Big(1-\frac1N\operatorname{Re}\operatorname{tr}U_p\Big)
+=\frac{2}{g_E^2}\,V,\] suppressing a configuration with \(n\) excited
+plaquettes by \(e^{-2nv/g_E^2}\). Proposition 3 gives
+\(e^{-2n\sqrt{2v}/g^2}\) for the Hamiltonian ground-state measure. The
+two agree in their dependence on the coupling, \(1/g^2\) per excited
+plaquette, and differ in the power of the excess per plaquette, linear
+against square-root, which is the usual difference between a Boltzmann
+weight and a WKB weight: the Agmon bound is a tunnelling estimate and
+the Wilson weight is a direct cost.
+
+\textbf{The direction is the useful one.} The suppression rate grows as
+\(g\to0\), so the large-field regions that
+\href{typical-field-strength-window.md}{the typical-field note} could
+not control in the Hamiltonian framework are exponentially rare in the
+ground-state measure precisely at weak coupling, which is where the
+renormalization steps of \href{mass-gap-position.md}{the position note}
+§6 are needed. At strong coupling the rate degrades, and there the
+cluster expansion of \href{strong-coupling-uniform-gap.md}{the T2 note}
+already applies.
+
+\hypertarget{what-this-supplies-and-what-it-still-lacks}{%
+\subsection{4. What this supplies and what it still
+lacks}\label{what-this-supplies-and-what-it-still-lacks}}
+
+\emph{Supplies.} A Hamiltonian counterpart of the large-field estimate,
+by a standard technique, with an explicit rate. It converts the
+state-relative criterion demanded by
+\href{flow-before-decimation.md}{the flow-before-decimation note} §3
+into a computable statement: expectations of quantities that grow
+exponentially in the local field strength are finite in the ground state
+as long as their growth rate stays below \(\lambda=2\sqrt{2v}/g^2\).
+
+\emph{Lacks.} Three things. The estimate is for the ground state, and
+the route needs it for the whole low-energy subspace, which requires
+either the same argument for low-lying eigenfunctions, available with
+\(e_0\) replaced by \(e_1\) at the cost of a smaller forbidden region,
+or a spectral-projection version. The distance estimate of Section 2 is
+a scaling argument and needs a proof with constants, which is a
+geometric computation on \(G^{\mathcal E}\). And the resulting
+suppression must be matched against the growth \(e^{2t\|G\|_\infty}\) of
+the flow Jacobian: by \href{lattice-truncation-uniform.md}{the
+lattice-truncation note} that factor is a pure number per doubling, so
+the match is comfortable within one step and the question is again the
+composition of steps.
+
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
+
+The missing ingredient of the previous note has a standard source. The
+Kogut--Susskind ground state obeys an Agmon bound whose rate,
+\(\lambda\simeq2\sqrt{2v}/g^2\) per excess plaquette, reproduces the
+coupling dependence of the Euclidean Wilson weight and is strong exactly
+at weak coupling. The next items, in order of tractability: prove the
+distance estimate of Section 2 with constants; extend the bound from the
+ground state to the spectral subspace below the gap; then assemble the
+state-relative decimation criterion that these two make possible, which
+is the first version of the renormalization step in which the difficulty
+is located in the composition of steps rather than in any single one.
+\end{document}

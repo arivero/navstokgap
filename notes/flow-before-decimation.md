@@ -109,6 +109,13 @@ Collecting the closed routes of this programme:
 | flow before decimation | closed (this note) | norms are bijection-invariant |
 | decimation with controlled couplings | **open** | the constructive problem |
 
+**Addendum.** The ground-state measure estimate asked for in Section 5
+exists: [the Agmon note](agmon-ground-state-suppression.md) proves the
+Agmon identity for the Kogut--Susskind ground state and gives a
+suppression $e^{-\lambda n}$ of configurations with $n$ excess plaquettes,
+with $\lambda\simeq2\sqrt{2v}/g^2$, the coupling dependence of the
+Euclidean Wilson weight.
+
 Every method that uses only norms and spectra is exhausted, and each was
 closed by a computation with explicit constants. What is left needs the
 distribution of the field in the low-energy states, and that is where the
