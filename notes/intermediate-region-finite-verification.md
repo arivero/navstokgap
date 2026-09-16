@@ -229,11 +229,15 @@ renormalization, finite-volume mixing conditions, and the
 strong-coupling expansion, cover the coupling range if the first two
 overlap.
 
-*Does not change.* No step of the proof is completed here. The
-verification is not performed, the small-field argument is not carried
-out with constants, and the meeting of $g_{\rm RG}^2$ and $g_{\rm DS}^2$
-is a conjecture supported by numerical evidence outside this
-repository.
+*Does not change.* No step of the proof is completed here. The verification is not performed, the small-field argument is not
+carried out with constants, and the meeting of $g_{\rm RG}^2$ and
+$g_{\rm DS}^2$ is a conjecture supported by numerical evidence outside
+this repository. The size estimate given above, boxes of side $10$ to
+$30$, is corrected in [the bands note](confinement-scale-bands.md) to
+side $3$ to $5$ at $\beta_W\simeq5.7$, where the published correlation
+length is below one lattice unit; and the criterion to verify is the
+mixing form on sub-blocks, since the single-link form is emptied by
+Elitzur's theorem.
 
 ## 6. Consequence for STATE
 

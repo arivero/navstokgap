@@ -471,6 +471,18 @@ labour; consult it before opening a new item.
    fixing moves $444$ to about $330$ only. Two unblocking routes: a
    correlation inequality for $SU(3)$ (new mathematics) or the
    computer-assisted block verification (a rules decision).
+   [Bands note](../notes/confinement-scale-bands.md), two corrections:
+   Elitzur makes single-link marginals of interior links Haar, so the
+   single-link block criterion is blind to the interior and the mixing
+   form on sub-blocks (conditional distribution of small Wilson loops)
+   is what a verification computes; and published data (Necco--Sommer
+   $r_0/a$, Morningstar--Peardon $r_0m_{0^{++}}=4.21$) give $\xi/a=0.70$
+   at $\beta_W=5.7$, so the boxes are of side $3$ to $5$, $216$ to $2000$
+   links, three to four orders below the earlier estimate. Three bands:
+   A, $\beta_W<0.0135$, proved; B, up to $5.7$, $\xi/a<1$ with no rigorous
+   method (a factor $50$ in $\beta_W$ beyond any expansion); C, the
+   renormalization group's, ten doublings from $g^2=1/2$, of which three
+   carry $\xi/a$ from $10$ to $1$.
 17. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
