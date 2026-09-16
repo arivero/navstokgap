@@ -105,10 +105,9 @@ one obligation at a time.
    the $a$-dependent Gaussian vacuum (absorbs $W_2$) and the relative form
    of the transfer lemma ($B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta$); compute
    the Berry terms and the $W_3$ Schur error; (H3) needs $U$ with its
-   Casimir term (now explicit on the abelian valley) and the log term
-   renormalizing $g$; for non-commuting backgrounds the Landau-level
-   spectrum of the covariant Laplacian with the Nielsen--Olesen mode is
-   the missing input.
+   Casimir term (now explicit for every constant background at quadratic
+   order, by the symmetry argument of the valley note) and the log term
+   renormalizing $g$; the Landau-level input enters only at cubic order.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
