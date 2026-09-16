@@ -88,14 +88,27 @@ one obligation at a time.
    couplings, (H3) gap of $h_3$ plus the even zero-point potential $U(a)$.
    The smallness parameter is $g^{2/3}$ throughout; (H1) fails exactly at
    the crossover $z\simeq2$.
-3c. **Next: (H2) in relative form.** A sharp momentum cutoff makes the
+3c. **Done: valley potential.** [Note](../notes/torus-valley-potential.md):
+   along the abelian valley the one-loop energy of all modes is exactly
+   $U(a)=\frac{2}{\pi^2L}\Phi(La)$, $\Phi(b)=\sum'_m(1-\cos m\cdot b)/|m|^4$
+   (Poisson summation; divergent part $a$-independent under a periodic
+   cutoff). $U=2|a|+\frac{C_M}{3\pi^2}L|a|^2+\cdots$: the linear term is the
+   $k=0$ charged modes, which are C133's four transverse oscillators, so
+   the field theory reproduces the G07/G08 mechanism term by term; the
+   nonzero-mode correction is $O(g^{4/3}/L)$ with $C_M<0$; $U$ is bounded by
+   $O(1/L)$, periodic, with minima at the centre holonomies (electric-flux
+   sectors). The crossover $z\simeq2$ is where the holonomy delocalizes.
+3d. **Next: (H2) in relative form and the non-abelian valley input.** A sharp momentum cutoff makes the
    second-order $W_2$ term diverge like $\Lambda^2$; a periodic (lattice)
    cutoff gives instead the finite Casimir quadratic term $c_2(La)^2/L$ of
    the one-loop torus potential. Use the Born--Oppenheimer projection onto
    the $a$-dependent Gaussian vacuum (absorbs $W_2$) and the relative form
    of the transfer lemma ($B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta$); compute
    the Berry terms and the $W_3$ Schur error; (H3) needs $U$ with its
-   Casimir term and the log term renormalizing $g$.
+   Casimir term (now explicit on the abelian valley) and the log term
+   renormalizing $g$; for non-commuting backgrounds the Landau-level
+   spectrum of the covariant Laplacian with the Nielsen--Olesen mode is
+   the missing input.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
