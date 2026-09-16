@@ -508,7 +508,22 @@ labour; consult it before opening a new item.
    $a_*\simeq0.1$ fm; the true rate is $ma_*\simeq0.78$ by the data. A
    proof of the mass gap for $SU(3)$ consists of H1 and H2; nothing
    else is missing.
-18. **Aside, recorded at the user's request:**
+18. **Direction (user, 2026-09-17): the reasons to stop are reasons to
+   research.** [Note](../notes/reasons-to-stop-as-research.md). A
+   Griffiths-type inequality transfers control from weaker to stronger
+   coupling only (string tension and zero-mean channels monotone), so it
+   would replace band B's three steps by H2 and leave the weak side
+   untouched; GKS-II for $SU(2)$, $SU(3)$ is open (the single-site
+   character-cone condition holds in every case computed; the plaquette
+   term is not in a product cone). A certified verification at
+   $\beta_W\simeq6$ is beyond every certified method (dimension $10^3$ to
+   $10^4$); certified polymer enumeration reaches $\beta_W\sim1$. So the
+   research is H1, in two parts: H1a sharpness (no explicit constant
+   exists for one small-field step) and H1b the last three doublings.
+   **Next: one Euclidean small-field blocking step for $SU(3)$ with
+   explicit constants**, deliverable $g^2_{\rm pert}$, the weak-side
+   counterpart of $0.0135$.
+19. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
    point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator, which
@@ -521,7 +536,7 @@ labour; consult it before opening a new item.
    bare graph as bulk and a matrix integral thickens it to a surface
    ('t Hooft). At $d=1$ it is the Schwarzian/SYK system, gapless; the holographic gap
    mechanism is a capped-off infrared geometry at large $N$.
-19. **Done: the $d=3$ formulation.**
+20. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and
