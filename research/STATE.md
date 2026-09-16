@@ -353,13 +353,26 @@ the items below are the working queue.
    assembled: cost $\eta^2/(4g^2)$, entropy $\eta^2/(8\pi^2)$, truncation
    error $e^{2\eta}$, net weight
    $\exp[-\frac{\eta^2}{4g^2}(1-Cg^2/2\pi^2)]$, all scale-invariant.
-14. **Next.** What is left is the effective description inside the
-   large-field region, which is a construction rather than an estimate:
-   the expansion around the constrained minimizer with its
-   $\eta^2/(8\pi^2)$ soft directions. The programme has now reached this
-   same constructive step from three directions (blocking, flow
-   truncation, large field), which is the signal that the estimates are
-   done and the construction is the whole remaining content.
+14. **Done: the large-field region needs an operator inequality, and the
+   measure statement is weaker.**
+   [Note](../notes/large-field-operator-inequality.md). Positive facts:
+   truncation inside $Q$ costs only range $K\gtrsim\eta_\infty/(4c)$ (the
+   earlier competition was a fixed-$K$ artifact); IMS localization at
+   radius $2a$ costs $L_B\le C_L(\hbar c/a)g^2/\eta^2$, $C_L=32\pi^2c_0^2/3$,
+   on the transition region; positive rare perturbations are harmless,
+   $\operatorname{gap}(H+W)\ge\operatorname{gap}(H)-\langle\Omega,W\Omega\rangle$.
+   The obstruction is the sign: the chain needs
+   $\chi_Q(H-E_0)\chi_Q\ge c_1(\hbar c/a)(\eta^2/g^2)\chi_Q^2$, and its
+   Hamiltonian proof loses $C_V|\partial N|\,\hbar c/a$ on $P$ (cutting
+   the vacuum costs zero-point energy per shared link), a negative
+   perturbation of the order that binds regardless of the measure of its
+   support. The Euclidean polymer expansion consumes measure statements
+   directly, which is why the constructive programme is Euclidean.
+   Division of labour: Hamiltonian for T1, T2, small volume, upper
+   bounds, final gap extraction; Euclidean for the renormalization steps.
+   Coupling map for $SU(3)$: weak-coupling expansion for $1/g^2\gtrsim10^2$
+   with crude constants, strong coupling for $54/g^4\le\beta_*$, and an
+   intermediate region about twenty doublings wide where the gap forms.
 15. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one

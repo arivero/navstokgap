@@ -122,6 +122,12 @@ the cost accumulates over $(\ell/a)^4$ of them to the scale-invariant
 total above. The large-field condition is a statement about coherence
 across a block, not about any single plaquette.
 
+> **Superseded in part.** The competition below between $e^{-c\eta^2/g^2}$
+> and $e^{2\eta}$ holds at fixed truncation range; letting the range grow
+> like $\eta$ removes it, and the real obstruction in the large-field
+> region is the sign of the error, see
+> [the operator-inequality note](large-field-operator-inequality.md).
+
 ## 4. Where this leaves the route
 
 With Proposition 1 and Section 3, the decimation step of

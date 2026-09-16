@@ -1,0 +1,189 @@
+# The large-field region in the Hamiltonian route needs an operator inequality, and the measure statement is weaker than that
+
+Working out what the gap inequality requires from the large-field region
+replaces "an effective description" by something more precise, and
+corrects one earlier reading. Three positive facts first. **The
+truncation inside the large-field region costs only a longer range.**
+The error of truncating the flow-conjugated Hamiltonian at range $Ka$ is
+$C\exp[2t\|G\|_\infty-cK]$, so on configurations with
+$t\|G\|_\infty\le\eta_\infty/8$ a range $K\ge\eta_\infty/(4c)+\log(C/\delta)/c$
+brings it below $\delta$ there too; the competition recorded in
+[the transfer note](ground-state-measure-transfer.md) §4 between
+$e^{-c\eta^2/g^2}$ and $e^{2\eta}$ was a fixed-$K$ artifact, and in the
+window $\eta\le C_2$ of Section 4 the range is $O(1)$. **Localizing to
+the small-field region is cheap per doubling.** For a smooth partition
+$\chi_P^2+\chi_Q^2=1$ depending on the flowed block density at radius
+$2a$, the IMS localization formula gives
+$H=\chi_PH\chi_P+\chi_QH\chi_Q-L$ with
+$$L\ \le\ C_L\,\frac{\hbar c}{a}\,\frac{g^2}{\eta^2},\qquad C_L=\frac{32\pi^2c_0^2}{3},$$
+supported on the transition region, against the $\hbar c/a$ scale of
+the step. **A positive perturbation that is large only on a rare set is
+harmless**: for $W\ge0$, $\operatorname{gap}(H+W)\ge\operatorname{gap}(H)-\langle\Omega,W\Omega\rangle$,
+and the expectation is the measure of the support times the size. The
+obstruction is the sign. What the chain of lower bounds needs on the
+large-field region is the operator inequality
+$$H-E_0\ \ge\ c\,\frac{\hbar c}{a}\,\frac{\eta^2}{g^2}\ \mathbf 1_Q\ -\ (\text{small})\,\mathbf 1_P ,$$
+a local energy excess, and every route to it from the Hamiltonian alone
+loses a term of order $(\hbar c/a)\times(\text{surface of the block})$
+on the small-field region, because cutting the vacuum costs zero-point
+energy on every shared link. That loss is a *negative* perturbation of
+order $\hbar c/a$ on $P$, and negative perturbations of that size bind:
+a well of depth $D$ on a set of ground-state measure $\varepsilon$
+captures a state once $D$ exceeds the localization cost $L$, whatever
+$\varepsilon$ is. So the Euclidean estimate, which is a measure
+statement, is strictly weaker than what the Hamiltonian chain consumes,
+which is an operator statement. The polymer expansion is the device that
+makes measure statements sufficient, by attaching the factor
+$e^{-c\eta^2/g^2}$ to each large-field polymer as a convergence factor
+rather than asking for an operator bound. That is the reason the
+constructive programme is Euclidean, stated as a computation. Constants
+explicit; nothing promoted.
+
+## 1. What the gap inequality consumes
+
+The route proves $\operatorname{gap}(H)\ge\Delta$ by a chain of operator
+lower bounds: conjugation (exact), truncation ($H\ge(1-\delta)H_{\rm eff}$
+in the relative sense, since the truncated kinetic metric differs from
+the full one by a small multiple of it), decimation of the modes between
+$a$ and $2a$ (Feshbach, [Lemma 1$'$](weak-coupling-feshbach-reduction.md)),
+and induction. The comparison with $\Delta$ is made only at the end, at
+strong coupling, because at any intermediate scale $\Delta=\hbar c\Lambda$
+is smaller than every error the step can afford, all of which are
+measured against $\hbar c/a$. So each step must deliver
+$$H^{(a)}\ \ge\ H^{(2a)}_{\rm eff}\ -\ R,\qquad R\ \text{small against }\hbar c/a\ \text{and irrelevant},$$
+and the question for the large-field region $Q$ is what it contributes to
+$R$.
+
+## 2. Localization: the IMS formula on the configuration manifold
+
+For $H=K(-\Delta)+V$ on a Riemannian manifold and smooth
+$\chi_1^2+\chi_2^2=1$, the IMS formula (Cycon, Froese, Kirsch and
+Simon, *Schrödinger Operators*, Springer 1987, Theorem 3.2; metadata
+level) is the identity
+$$H=\chi_1H\chi_1+\chi_2H\chi_2-K\big(|\nabla\chi_1|^2+|\nabla\chi_2|^2\big).$$
+On $G^{\mathcal E}$ with $K=(\hbar c/a)(g^2/2)$ per link, take
+$\chi_P=\cos\theta(f_B)$, $\chi_Q=\sin\theta(f_B)$ with $\theta$ rising
+from $0$ to $\pi/2$ as the flowed block density
+$f_B=\ell\int_B|B_t|^2d^3x$ rises from $\eta^2$ to $4\eta^2$, at
+$\ell=2a$ and $\sqrt{8t}=\ell$. Then
+$|\nabla\chi_P|^2+|\nabla\chi_Q|^2=\theta'(f_B)^2|\nabla f_B|^2$ with
+$\theta'=\pi/(6\eta^2)$, and
+$$\frac{\partial f_B}{\partial\theta_{\rm link}}=2\ell a\int_BB_t(x)\,K_t(x-y)\,d^3x\ \le\ 4c_0\,\frac{\eta a}{\ell},$$
+since a unit change of a link angle changes the flowed field by
+$aK_t(x-y)$ and $|B_t|\le2c_0\eta/\ell^2$ on the transition region.
+Summing over the $3(2\ell/a)^3$ links of the smearing neighbourhood,
+$|\nabla f_B|^2\le384c_0^2\eta^2\,\ell/a=768c_0^2\eta^2$ at $\ell=2a$, so
+$$L_B\ \le\ \frac{\hbar c}{a}\frac{g^2}2\cdot\frac{\pi^2}{36\eta^4}\cdot768c_0^2\eta^2
+=\frac{32\pi^2c_0^2}{3}\,\frac{\hbar c}{a}\,\frac{g^2}{\eta^2}.$$
+Two remarks. The general-$\ell$ form carries a factor $\ell/a$, so
+localizing at a scale far above the lattice is expensive and the
+localization must be done one doubling at a time, in the variables of
+the current scale. And $L_B$ is a multiplication operator supported on
+the transition region of block $B$, whose ground-state measure is
+$e^{-c\eta^2/g^2}$: it is small against $\hbar c/a$ by $C_Lg^2/\eta^2$
+and rare.
+
+## 3. The sign of a rare perturbation
+
+**Proposition 1.** If $W\ge0$ then
+$\operatorname{gap}(H+W)\ge\operatorname{gap}(H)-\langle\Omega,W\Omega\rangle$.
+
+*Proof.* $E_1(H+W)\ge E_1(H)$ by min-max, and
+$E_0(H+W)\le\langle\Omega,(H+W)\Omega\rangle=E_0+\langle\Omega,W\Omega\rangle$.
+$\square$
+
+So a positive perturbation of size $D$ on a set of ground-state measure
+$\varepsilon$ costs the gap at most $D\varepsilon$, and with
+$\varepsilon=e^{-c\eta^2/g^2}$ and $D=O(\hbar c/a)$ that is negligible.
+
+**Proposition 2.** A negative perturbation $-W$ with $W\ge D\,\mathbf 1_A$
+on a set $A$ of ground-state measure $\varepsilon$ produces a state of
+energy at most $E_0+L_A-D$, where $L_A=K\int|\nabla\chi_A|^2\Omega^2/\|\chi_A\Omega\|^2$
+is the localization cost of a cutoff $\chi_A$ supported in $A$.
+
+*Proof.* The trial state $\chi_A\Omega/\|\chi_A\Omega\|$ has energy
+$E_0+L_A$ in $H$ by the exact identity
+$\langle\chi\Omega,(H-E_0)\chi\Omega\rangle=K\int|\nabla\chi|^2\Omega^2$,
+and $-W$ lowers it by at least $D$. $\square$
+
+The measure $\varepsilon$ does not appear in the conclusion. A negative
+perturbation of order $\hbar c/a$ on a rare set reorganizes the low
+spectrum as soon as $D>L_A$, and $L_A$ is of order
+$(\hbar c/a)C_Lg^2/\eta^2\ll\hbar c/a$. **The sign of the error on the
+large-field region decides everything, and the measure of the region
+decides nothing.**
+
+## 4. The operator inequality the chain needs, and its cost
+
+For the large-field sector to contribute only harmlessly to $R$, the
+step needs
+$$\chi_Q(H-E_0)\chi_Q\ \ge\ c_1\,\frac{\hbar c}{a}\,\frac{\eta^2}{g^2}\,\chi_Q^2 ,$$
+a *local energy excess*: configurations with a large flowed field in a
+block have energy above the vacuum by the field's energy. This is
+physically evident at weak coupling and is the Hamiltonian form of the
+action lower bound of
+[the lower-bound note](large-field-action-lower-bound.md). Its proof
+from the Hamiltonian splits $H=H_N+H'$ with $N$ the neighbourhood of the
+block and uses two facts: $V_N\ge(\hbar c/a)(2/g^2)c_1\eta^2$ on $Q$, by
+three-dimensional flow monotonicity and positivity, exactly as in the
+Euclidean case; and an upper bound on $E_0-E_0(H-V_N)$, the energy the
+neighbourhood's magnetic terms add to the vacuum. The second is where the
+loss occurs. The crude bound uses the ground state of $H-V_N$, which is
+Haar-flat on the interior links and gives
+$\langle V_N\rangle_{\rm Haar}=(\hbar c/a)(2N/g^2)|N|_p$, of the same
+order $1/g^2$ as the excess and useless. The correct order is the
+zero-point energy, $O(1)\cdot(\hbar c/a)|N|_p$, and any trial state that
+achieves it must extend the outside vacuum smoothly into $N$; the cut
+then costs $O(\hbar c/a)$ per shared link, an amount
+$$C_V\,\frac{\hbar c}{a}\,|\partial N|$$
+that is subtracted *everywhere*, including on $P$. The resulting
+inequality is
+$$H-E_0\ \ge\ \Big[\frac{2c_1\eta^2}{g^2}-C_V|N|_p\Big]\frac{\hbar c}{a}\,\mathbf 1_Q
+\ -\ C_V|\partial N|\,\frac{\hbar c}{a}\,\mathbf 1_P ,$$
+and the second term is a negative perturbation of order $\hbar c/a$ on
+the small-field region, of exactly the kind Proposition 2 says cannot be
+tolerated. The window in which the first term is positive,
+$$\eta\ \ge\ C_1g,\qquad C_1^2=\frac{C_V|N|_p}{2c_1}\ \simeq\ 160\ \text{for a }4a\text{ neighbourhood},$$
+together with the small-angle requirement of the perturbative decimation
+on $P$, $\eta/4\le C_2$, is nonempty only for $g\le4C_2/C_1$, that is
+$1/g^2\gtrsim10^2$ with these crude constants. Even inside the window
+the $P$-side loss remains.
+
+## 5. Why the Euclidean framework escapes this
+
+The Euclidean side proves a measure statement,
+$\mathbb P(Q)\le e^{-c\eta^2/g^2}$, and never an operator one. It can
+afford this because the cluster (polymer) expansion consumes measure
+statements directly: a large-field polymer enters the expansion with the
+weight $e^{-c\eta^2/g^2}$ as a convergence factor, and the effective
+action outside the polymers is computed perturbatively. No inequality of
+the form $H-E_0\ge(\cdots)\mathbf 1_Q$ is ever needed, because there is
+no Hamiltonian to bound; the gap is read off at the end from the decay
+of the two-point function, which is again a measure statement.
+
+The Hamiltonian chain of Section 1, by contrast, consumes operator
+inequalities, and Section 3 shows it cannot substitute a measure
+statement for them when the sign is wrong. This is the precise content
+of "the constructive programme is Euclidean": **the large-field region is
+controllable in measure and uncontrollable in norm, and the polymer
+expansion is the device that makes measure control sufficient.**
+
+## 6. Consequence for STATE
+
+The obligation "an effective description inside the large-field region"
+is replaced by the following. The truncation there is cheap (range
+$O(\eta)$), the localization is cheap ($C_Lg^2/\eta^2$ per doubling),
+and positive rare errors are harmless. The chain needs the local
+energy-excess operator inequality, whose Hamiltonian proof loses
+$C_V|\partial N|\,\hbar c/a$ on the small-field region, a negative
+perturbation of the order that binds. So the Hamiltonian route, as a
+chain of operator lower bounds, cannot close through the large-field
+region, and the Euclidean route closes it by consuming measure
+statements in a polymer expansion. The honest division of labour is:
+Hamiltonian for T1, T2, the small-volume theorem, the upper bounds and
+the final gap extraction; Euclidean polymer expansion for the
+renormalization steps. The coupling map is then: weak-coupling
+expansion for $1/g^2\gtrsim C_1^2/(16C_2^2)$, strong-coupling theorem
+for $54/g^4\le\beta_*$, and the intermediate region between them, about
+twenty doublings wide for $SU(3)$, in which the gap forms and no
+expansion applies.
