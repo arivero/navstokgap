@@ -108,6 +108,14 @@ the blocking step needs. It is stated here as a hypothesis.
 
 ## 4. The one-step inequality under that input
 
+> **Superseded.** Sections 4 and 5 are corrected in
+> [the blocking-criterion note](blocking-criterion-monotone.md): the
+> connected estimate is available from Yarotsky's polymer expansion, and
+> the resulting threshold is worse than the direct one by a factor
+> $3M^2/8$, so the induction below does not close. The counting of
+> Section 5 survives as a count of renormalization-group steps.
+
+
 **Proposition (conditional).** Assume the connected estimate of Section
 3 with constant $C$, and take $E_c=\Delta_M$. Then the transfer lemma
 gives

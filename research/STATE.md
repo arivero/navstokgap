@@ -192,11 +192,26 @@ one obligation at a time.
    of order thirty for $SU(2)$ at $g_{\rm UV}^2=1/2$. **The difficulty is a
    finite number of steps in the intermediate regime**, each generating
    couplings outside the Kogut--Susskind family.
-3k. **Next:** the connected estimate at strong coupling. Yarotsky's
-   proof (CMP 261 (2006) 799 §2) is a cluster expansion for the
-   ground-state projection and should already contain an estimate of the
-   required shape; read §2 and extract it, which would make the one-step
-   blocking inequality unconditional for $g\ge g_{\rm thr}$.
+3k. **Done, negative: blocking gains nothing.**
+   [Note](../notes/blocking-criterion-monotone.md): Yarotsky's §2 is a
+   polymer expansion (Lemma 1: $\|T_I\|\le(2\alpha e^{t_0\beta/\alpha})^{|I|}$;
+   Lemma 3: weights damped exponentially in the excited region), so the
+   connected estimate the blocking step wanted **is available**, and his
+   theorem applies directly to a lattice of blocks. The criterion is then
+   $\beta_{\rm block}=24M^2N/(g^2\delta(g;M))$, and $\delta(g;M)$ is flat in
+   $M$ at strong coupling (flux-loop energy $2C_2g^2$) and falls like
+   $1/M$ at small volume, so $\beta_{\rm block}/\beta_{\rm direct}\simeq3M^2/8$:
+   **blocking is strictly worse than no blocking**, at every coupling.
+   This corrects §§4--5 of the previous note. Boundary grows like $M^2$,
+   gap does not grow; the only gain available is a redefinition of the
+   coupling, which is the renormalization step itself.
+3l. **Next, on the other side of the ledger:** (a) the fixed-lattice
+   small-volume theorem (1a) of
+   [the Schur note](../notes/schur-error-ultraviolet.md) §5, provable now
+   with explicit constants, or (b) the stability theorem without
+   frustration-freeness named in
+   [the Lieb--Robinson note](../notes/lieb-robinson-kogut-susskind.md) §5,
+   which is the openness half of $\mathcal G$.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

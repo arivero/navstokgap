@@ -1,0 +1,167 @@
+# The blocking criterion is monotonically worse in the block size: blocking gains nothing without a change of coupling
+
+Reading Yarotsky's proof (Commun. Math. Phys. 261 (2006) 799, §2,
+passage level) settles the input left open by
+[the blocking note](blocking-step-obstruction.md): the proof is a
+polymer expansion, its Lemma 1 bounds the non-classical evolution of an
+excited region $I$ by $(2\alpha e^{t_0\beta/\alpha})^{|I|}$ and its Lemma
+3 gives configuration weights exponentially damped in the size of the
+excited region, so the connected structure that the blocking step needed
+is present, and the criterion applies to a lattice of blocks with the
+block Hamiltonians as the classical part. The conclusion is negative and
+sharp. With blocks of $M^3$ sites the criterion reads
+$$\beta_{\rm block}=\frac{\text{straddling norm per block}}{\text{block gap}}
+=\frac{24M^2N}{g^2\,\delta(g;M)}\ \le\ \beta_*,$$
+and $\delta(g;M)$ degrades or stays flat as $M$ grows: at strong coupling
+the block gap is the single flux-loop energy $2C_2g^2$, independent of
+$M$, so $\beta_{\rm block}\propto M^2$; in the small-volume regime
+$\delta\simeq\delta_1g^{2/3}/M$, so $\beta_{\rm block}\propto M^3$. Against
+the direct criterion $\beta_{\rm direct}=32N/(C_2g^4)$ of
+[the T2 note](strong-coupling-uniform-gap.md) the ratio is
+$\beta_{\rm block}/\beta_{\rm direct}\simeq\tfrac38M^2$, already above one
+at $M=2$. **Real-space blocking with a criterion of this form is strictly
+worse than no blocking at all**, at every coupling, and iterating it
+cannot reach weaker coupling. This corrects Sections 4 and 5 of
+[the blocking note](blocking-step-obstruction.md), which assumed that the
+connected estimate would buy a fixed threshold and an induction: the
+estimate is available, and it buys nothing, because the boundary grows
+like $M^2$ while the gap it is measured against does not grow at all.
+Any gain must come from recognizing the blocked Hamiltonian as a theory
+of the same form with a **larger effective coupling**, which is the
+renormalization step itself. Constants explicit; nothing promoted.
+
+## 1. The connected structure is present in the proof
+
+Yarotsky's Theorem 1 is proved by writing
+$e^{-t_0H_\Lambda}=\sum_{I\subset\Lambda}T_{\Lambda,I}$ with
+$T_{\Lambda,I}=\sum_{J\subset I}(-1)^{|I|-|J|}e^{-t_0(H_{\Lambda,0}+\sum_{x\in J}\phi_x)}$,
+so that $T_{\Lambda,I}$ collects the contributions in which every site of
+$I$ is touched by the perturbation. Two estimates carry the argument
+(§2, passage level).
+
+- **Lemma 1.** $\|T_I\|\le(2\alpha e^{t_0\beta/\alpha})^{|I|}$, proved by
+  analytic continuation of the couplings $\phi_x\to z_x\phi_x$, the
+  Hille--Yosida bound $\|e^{-t_0H_J(z_J)}\|\le e^{t_0|J|\beta/\alpha}$ on
+  the numerical range, and a multidimensional Schwarz lemma using that
+  $T_I(z_I)$ vanishes whenever any $z_x=0$.
+- **Lemma 3.** The weight of a space-time configuration
+  $C=\{(I_k,J_k)\}$ obeys
+  $|w(C)|\le\prod_k(2\alpha e^{t_0\beta/\alpha})^{|I_k|}e^{-t_0(|J_k|-|\Lambda_0|^3|I_k|)}$,
+  the classically excited sites contributing $e^{-t_0}$ each through the
+  local gap.
+
+Both are exponential in the size of the excited region, which is exactly
+the polymer structure that makes the expansion sum over **connected**
+clusters. So the hypothetical estimate of
+[the blocking note](blocking-step-obstruction.md) §3, replacing
+$(\sum_p\|w_p\|)^2$ by $\sum_p\|w_p\|^2$, is not a missing ingredient: it
+is what the expansion produces, and the way to use it is to apply the
+theorem itself to the blocked system rather than to re-derive a Schur
+bound.
+
+## 2. The criterion on a lattice of blocks
+
+Identify the blocks of $M^3$ sites with the sites of a coarse cubic
+lattice, as in [the blocking note](blocking-step-obstruction.md) §1. Take
+as classical part the normalized block Hamiltonians
+$$h_\alpha=\frac{H_\alpha-E_0^\alpha}{\Delta_M},\qquad
+\Delta_M=\frac{\hbar c}{a}\,\delta(g;M),$$
+each with non-degenerate ground state $\Omega_\alpha$ (T1) and unit gap,
+and as perturbation the straddling plaquettes,
+$$\phi_\alpha=\frac1{\Delta_M}\sum_{p\ \rm straddling\ at\ \alpha}w_p,
+\qquad
+\|\phi_\alpha\|\le\frac{6M^2\cdot4N\hbar c/(ag^2)}{\Delta_M}
+=\frac{24M^2N}{g^2\,\delta(g;M)}=:\beta_{\rm block}.$$
+The perturbation is bounded, so $\alpha=0$ in Yarotsky's condition (2)
+and the criterion is $\beta_{\rm block}\le\beta_*(3,\{0,1\}^3)$, with the
+same constants as in [the T2 note](strong-coupling-uniform-gap.md).
+The classical part is a single-block operator, hence a function of its
+own spectral partition of unity, and the partition contains the
+projection onto $\Omega_\alpha$; the interaction range is one coarse
+lattice spacing.
+
+## 3. The criterion degrades with $M$
+
+Two regimes fix the behaviour of $\delta(g;M)$.
+
+*Strong coupling.* The lowest gauge-invariant excitation of a block is a
+single plaquette flux loop, of energy $2C_2(R_{\min})g^2\hbar c/a$
+independent of the block size, as in
+[the obligations map](mass-gap-obligations-lattice.md) §3. So
+$\delta(g;M)\to2C_2g^2$ and
+$$\beta_{\rm block}\simeq\frac{24M^2N}{2C_2g^4}=\frac{12M^2N}{C_2g^4},
+\qquad
+\frac{\beta_{\rm block}}{\beta_{\rm direct}}\simeq\frac{12M^2N/(C_2g^4)}{32N/(C_2g^4)}=\frac{3M^2}{8},$$
+using $\beta_{\rm direct}=32N/(C_2g^4)$ from the link-level check of
+[the T2 note](strong-coupling-uniform-gap.md). At $M=2$ the ratio is
+$3/2$, and it grows quadratically thereafter.
+
+*Small volume.* For $g$ small and a block of side $Ma$ the gap is the
+zero-mode gap of [G07](low-dimensional-mass-gap.md) Proposition 7,
+$\Delta_M=\delta_1g^{2/3}\hbar c/(Ma)$, that is
+$\delta(g;M)=\delta_1g^{2/3}/M$. Then
+$$\beta_{\rm block}\simeq\frac{24M^3N}{\delta_1\,g^{8/3}},$$
+growing like $M^3$ and diverging as $g\to0$.
+
+In both regimes the numerator grows like the block surface, $M^2$, while
+the denominator stays flat or shrinks. The criterion therefore has its
+best value at $M=1$, which is the direct application already used for
+T2.
+
+**Proposition.** For every $M\ge2$ and every $g>0$,
+$\beta_{\rm block}(M)\ge\beta_{\rm block}(1)$ whenever
+$\delta(g;M)\le M^2\delta(g;1)$, which holds in both regimes above and
+follows in general from the upper bounds of
+[the Polyakov note](polyakov-average-gap-bound.md), where the gap of a
+box of side $L$ is at most of order $\hbar c/L$ times a coupling factor.
+Blocking therefore never improves the criterion.
+
+## 4. What this rules out, and what it leaves
+
+The negative result is specific: **a criterion that compares the total
+inter-block coupling with the block gap cannot be improved by blocking**,
+because coupling scales with area and the gap does not scale with volume.
+It rules out the naive induction of
+[the blocking note](blocking-step-obstruction.md) §5, in which one hoped
+that a fixed threshold, once reached, would propagate to all larger
+scales.
+
+What survives is the observation that made the induction attractive: the
+effective coupling of an asymptotically free theory grows toward the
+infrared. To use it, the blocked Hamiltonian must be **recognized as a
+theory of the same type with a new coupling**, so that the criterion is
+re-applied with $g_{n+1}>g_n$ and with the block again playing the role
+of a single site of unit spacing. That identification is the
+renormalization-group step; it requires a change of variables at each
+scale, not a projection. Yarotsky's own Theorem 3 does precisely this in
+its setting: he treats the AKLT model by showing that *on a large length
+scale it is a relatively bounded perturbation of a classical model*,
+which works because the frustration-free structure makes the block
+ground state exactly known. The Kogut--Susskind Hamiltonian at
+intermediate coupling has no such structure, and supplying a substitute
+is the open problem.
+
+## 5. Correction to the previous note
+
+[The blocking note](blocking-step-obstruction.md) §§4--5 concluded that a
+connected estimate would give a one-step inequality valid above a fixed
+threshold $g^4\gtrsim8\sqrt{6C}MN/(\gamma C_2)$ and that the induction
+would then close. Sections 1--3 above show that the connected estimate is
+available and that the resulting threshold is worse than the direct one
+by the factor $3M^2/8$, so the induction does not close by this route.
+The finite-step counting of §5 of that note, $n\simeq(2b_0\log2)^{-1}(g_{\rm UV}^{-2}-g_{\rm thr}^{-2})$,
+retains its meaning as a count of renormalization-group steps, with the
+proviso that each step must redefine the coupling rather than merely
+project.
+
+## 6. Consequence for STATE
+
+The blocking route in its projection form is closed, with the reason
+stated quantitatively: boundary grows like $M^2$, gap does not grow. The
+route survives only in its renormalization form, where each step
+redefines the theory, which is the constructive problem. The nearest
+remaining tractable questions are on the other side of the ledger: the
+stability theorem without frustration-freeness named in
+[the Lieb--Robinson note](lieb-robinson-kogut-susskind.md) §5, and the
+fixed-lattice small-volume theorem (1a) named in
+[the Schur note](schur-error-ultraviolet.md) §5.
