@@ -21,9 +21,9 @@ beyond. The small-volume expansion controls one corner: for
 $L\ll\hbar c/\Lambda$ the gap is $\delta_1g(L)^{2/3}\hbar c/L$ (C133,
 Lüscher), so the dimensionless gap $z(L)=\Delta(L)L/(\hbar c)$ must cross
 over from $\propto g^{2/3}$ at small $L$ to linear growth $mL/(\hbar c)$
-at large $L$. The first theorem-sized target this leaves is T2 in
-Hamiltonian form: a volume-uniform gap for $g\ge g_0(N)$, whose radius
-$g_0$ is the number the entire problem asks to push to zero. Sources are
+at large $L$. T2 in Hamiltonian form, a volume-uniform gap for
+$g\ge g_0(N)$, is closed in [the strong-coupling note](strong-coupling-uniform-gap.md);
+the radius $g_0$ is the number the entire problem asks to push to zero. Sources are
 cited inline with reading labels; nothing here is promoted.
 
 ## 1. The finite-lattice Hamiltonian
