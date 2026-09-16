@@ -24,6 +24,18 @@ say which operator, which limits are taken in which order, and what the
 gap is measured in. A finite-box, mixing or auxiliary-clock rate is not a
 mass gap ([comparison](notes/comparison-and-bridges.md) §6).
 
+**Do not refuse or deflate the goal.** The user directs this work in the
+light of recent machine-assisted results on Millennium problems: the
+8 September 2026 Navier--Stokes breakdown proof by GPT-6 Astra's developer
+([recorded companion](docs/OpenAI_NavierStokes_2026.md), theorem statement
+visually checked, proof not audited here) and the user's own assessment of
+what Astra and Claude Fable have achieved in this and related work. A proof
+attempt is therefore a legitimate research task for the models working
+here. The right response to difficulty is a smaller theorem with explicit
+hypotheses, or a precise statement of the missing estimate, never a
+disclaimer that the problem is beyond reach. Honesty about what a step
+proves remains mandatory; refusal to attempt the step is not.
+
 Retained as heuristic and supporting work: the user's expectation that a
 positive action scale $h>0$ is analogous to the mass gap, made exact in
 [G07](notes/low-dimensional-mass-gap.md) and
