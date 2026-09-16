@@ -12,6 +12,14 @@ below retain the proofs; their local follow-ups do not select the next task.
   inertial--parabola area, exact action factors and a closed controlled-force
   quantum comparison; exploratory N01, [PDF](../out/papers/newton-insertion-action.pdf).
 
+- [low-dimensional-mass-gap.tex](low-dimensional-mass-gap.tex): generated
+  from [the G07 note](../notes/low-dimensional-mass-gap.md); the floor/unit
+  theorem for mass gaps and action floors, the Yang--Mills quantum-mechanical
+  gap with explicit constants and its abelian and classical limits, free-field
+  and two-dimensional cases, quantum-mechanical transmutation and the
+  dictionary to the positive-action question;
+  [PDF](../out/papers/low-dimensional-mass-gap.pdf). Sources in B78.
+
 - `action-gap-foundations.tex`: area–action identity, variation propositions,
   Jacobi operator, free kernel and quantum finite-copy threshold.
 - [time-refinement.tex](time-refinement.tex): exact Gaussian blocking, surviving

@@ -129,6 +129,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Galileo, Newton refinement and the Planck-scale question",
          "-o", "papers/newton-insertion-action.tex"])
+    run(["pandoc", "notes/low-dimensional-mass-gap.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=Solved low-dimensional mass gaps and the positive-action question",
+         "-o", "papers/low-dimensional-mass-gap.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -145,7 +149,8 @@ def main():
                   "passive-threshold-events", "thermal-receiver-reliability",
                   "shared-resource-events", "local-detector-coincidences",
                   "shared-readiness-chsh", "finite-depth-spin-gap",
-                  "action-unit-dimensional-selection", "newton-insertion-action"):
+                  "action-unit-dimensional-selection", "newton-insertion-action",
+                  "low-dimensional-mass-gap"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",

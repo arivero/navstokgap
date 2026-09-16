@@ -1,6 +1,6 @@
 # Restart state
 
-Updated: 2026-09-14. **User direction: Galileo's inertial horizontal line
+Updated: 2026-09-16. **User direction: Galileo's inertial horizontal line
 versus the falling parabola, and a mathematical necessity argument excluding
 zero-action refinement. Quantum nature is the fact to explain, not an axiom
 that supplies the desired answer.**
@@ -48,8 +48,20 @@ select their own task.
    polishing is parked absent a concrete reader or venue requirement.
 3. **Gap track — supporting.**
    [G05](../notes/finite-depth-spin-gap.md) constructs the standard cluster
-   Hamiltonian with exact energy gap J uniform in chain length. G06 returns
-   for a named dependency of item 1 or explicit user selection.
+   Hamiltonian with exact energy gap J uniform in chain length.
+   [G07](../notes/low-dimensional-mass-gap.md) (user direction, 2026-09-16)
+   makes the h > 0 / mass-gap analogy exact: both floors are unit multiples
+   of the fixed constants (Theorem 1), both classical theories have an empty
+   span and a similarity realizing zero, and every solved low-dimensional gap
+   is either a supplied scale (box, lattice, mass term, 2D string tension,
+   C124/C126's K, G05's J) or a generated one (Yang--Mills quantum
+   mechanics, gap $\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$, vanishing when
+   either commutator is removed; transmutation). Gate for further gap work:
+   name whether a proposed gap is supplied or generated. G06 would be
+   supplied; it returns for a named dependency of item 1 or explicit user
+   selection. The analogy governs the structure-to-scale stage of item 1;
+   its one consistency-forced scale (self-adjoint extension, regularization)
+   is the mechanism N02 should look for, tested against C027 and C028--C029.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128

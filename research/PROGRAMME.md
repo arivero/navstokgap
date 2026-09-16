@@ -1,6 +1,6 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
-Version 71, 2026-09-14. The programme consolidates the accepted results into
+Version 72, 2026-09-16. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's clarified 2026-09-14 priority is a mathematical necessity argument
 for the Newton/Galileo area--action obstruction; gap work is supporting. [STATE](STATE.md) owns the current ordered tasks;
@@ -201,6 +201,26 @@ terms control ground-state uniqueness. This gives a direct quantum energy
 operator without a sampling-clock identification, with quantum kinematics
 and the action factor for physical time supplied. Robustness under a local
 noncommuting perturbation is a separate test; no new ledger claim is promoted.
+
+[G07's dictionary note](../notes/low-dimensional-mass-gap.md) answers the
+user's 2026-09-16 question of how h > 0 is analogous to the mass gap. The
+floor/unit theorem of Q14 applies verbatim to both observables: a positive
+finite floor is a dimensionless multiple of a unit formed from the fixed
+constants, and classical Yang--Mills in four dimensions and classical
+mechanics with a mass and a force both lack the unit. The note proves, with
+$\hbar$, $g$ and $m$ explicit, that Yang--Mills quantum mechanics (the
+zero-momentum sector of the torus theory) has a purely discrete spectrum and
+gap $\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ which vanishes when either the
+canonical or the Lie-algebra commutator is removed; that free and abelian
+fields inherit their gapless classical dispersion; that two-dimensional
+Yang--Mills on a circle has a gap $\tfrac12g^2\hbar^2cL\,C_2$ diverging with
+the volume; and that scale-invariant quantum mechanics obtains its scale from
+the self-adjointness requirement. The finite-volume zero-mode gap
+$\delta_1g^{2/3}\hbar c/L$ exhibits Jaffe--Witten's uniformity problem in a
+solved sector. Consequence: C124/C126 and G05 are supplied-scale gaps; a
+generated gap needs two scale-free non-commuting structures; the analogy
+covers the structure-to-scale stage of the necessity question and points
+N02 to a consistency-forced scale. Exploratory; sources in B78; no promotion.
 
 G01/G02 establish the finite reversible-generator estimate
 
