@@ -10,10 +10,9 @@ side of the problem, the clause $m<\infty$, is closed** as far as any
 variational method can take it, and reduced to the existence of the
 theory plus the nontriviality of one flowed correlator; the **lower
 side, the clause $m>0$, is untouched**, and three natural routes to it
-have been closed by explicit computation rather than by difficulty. What
-remains is a controlled truncation at each scale, which is the
-constructive renormalization-group problem, and whose error is now
-explicit.
+have been closed by explicit computation rather than by difficulty. What remains is decimation with controlled couplings: every method built
+from operator norms and spectra is exhausted, and the next input is an
+estimate on the ground-state measure.
 
 ## 1. The decomposition
 
@@ -101,7 +100,9 @@ the continuum limit ([note](gapped-set-critical-coupling.md)).
 
 ## 3. What has been ruled out
 
-Four statements, each by computation.
+Six statements, each by computation; the table in
+[the flow-before-decimation note](flow-before-decimation.md) §4 collects
+them.
 
 **Perturbation around the free theory cannot give $m<\infty$ usefully.**
 The flowed bound is $\approx4.26\,\hbar c/\sqrt{8t}$ in the perturbative

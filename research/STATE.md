@@ -237,12 +237,24 @@ the items below are the working queue.
    statement about the **composition** of many steps at fixed physical
    scale, not about one step. Conjugation is exact, truncation cheap, and
    neither coarsens the theory: **the obstruction is decimation**.
-5. **Next:** whether flowing before decimating improves the projection
-   estimate. After conjugation the field entering a block boundary is the
-   flowed one, so the $3M^2/8$ of
-   [the blocking criterion](../notes/blocking-criterion-monotone.md) is
-   computed with the wrong field; redo it with the flowed magnetic term
-   $V\circ\Phi_t$, whose norm the flow's action monotonicity bounds.
+5. **Done, negative: flowing before decimating changes nothing.**
+   [Note](../notes/flow-before-decimation.md): $\Phi_t$ is a bijection of
+   the configuration space, so $\|V\circ\Phi_t\|_\infty=\|V\|_\infty$ even
+   though $V\circ\Phi_t\le V$ pointwise; and conjugation is unitary, so the
+   block gap is unchanged. Hence $\beta_{\rm block}$ is exactly as before
+   and blocking still loses by $3M^2/8$. More generally any criterion
+   depending on $H_0$ through its spectrum and on $\phi$ through
+   $\|\phi\|_\infty$ is invariant under (conjugation, composition with the
+   flow). **Every norm-based method in this programme is now exhausted**,
+   each closed by computation.
+6. **Next, the successor question:** an estimate on the ground-state
+   measure $|\Omega(U)|^2dU$ of the Kogut--Susskind Hamiltonian, for
+   instance $|\Omega(U)|^2\le Ce^{-\lambda S_w(U)}$ with $\lambda>0$ uniform
+   in the volume. The flow's gain is pointwise, hence visible only in
+   expectation, so a state-relative criterion is what remains; such a
+   bound would import the Euclidean large-field machinery into the
+   Hamiltonian setting. Strong coupling should be provable directly, since
+   there $\Omega$ is a controlled perturbation of the constant function.
 6. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
