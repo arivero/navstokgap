@@ -1,0 +1,224 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A monotone hierarchy of upper bounds from one flowed correlator, and why no bound of this },pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{a-monotone-hierarchy-of-upper-bounds-from-one-flowed-correlator-and-why-no-bound-of-this-kind-can-give-m0}{%
+\section{\texorpdfstring{A monotone hierarchy of upper bounds from one
+flowed correlator, and why no bound of this kind can give
+\(m>0\)}{A monotone hierarchy of upper bounds from one flowed correlator, and why no bound of this kind can give m\textgreater0}}\label{a-monotone-hierarchy-of-upper-bounds-from-one-flowed-correlator-and-why-no-bound-of-this-kind-can-give-m0}}
+
+Let \(\varphi_t\) be any flowed gauge-invariant local scalar with
+\(\langle\varphi_t\rangle=0\) and let
+\[C_0(\tau)=\int d^3z\;\big\langle\varphi_t(z,\tau)\,\varphi_t(0,0)\big\rangle^{\rm c}
+=\int_{[m,\infty)}d\rho(E)\;e^{-E\tau/\hbar},\qquad \rho\ge0,\] be its
+zero-spatial-momentum Euclidean correlator, with \(\rho\) the
+Källén--Lehmann measure supplied by Osterwalder--Schrader
+reconstruction. Writing \(M_k=\int E^k\,d\rho(E)\), every consecutive
+ratio is an upper bound for the mass gap and the bounds improve
+monotonically as the index decreases:
+\[m\ \le\ \cdots\ \le\ \frac{M_{-1}}{M_{-2}}\ \le\ \frac{M_0}{M_{-1}}\ \le\ \frac{M_1}{M_0},
+\qquad\text{with}\qquad \frac{M_1}{M_0}\ \text{the }f\text{-sum bound of}\]
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note},
+which is therefore the weakest member of the family. The first member
+below it is
+\[\boxed{\;m\ \le\ \frac{M_0}{M_{-1}}\ =\ \frac{\hbar\,C_0(0)}{\displaystyle\int_0^\infty C_0(\tau)\,d\tau}\;}\]
+and it needs strictly less than the \(f\)-sum bound: no gradient term,
+no equal-time Hamiltonian smearing, hence no hypothesis (F1). Both
+quantities are integrals of the four-dimensional flowed correlator that
+Lüscher's renormalization statement covers, so the only inputs are the
+existence of the theory with the Osterwalder--Schrader axioms and
+\(C_0\not\equiv0\). In free Maxwell theory the first three members take
+the values \(1.504\), \(1.329\), \(1.128\) in units of
+\(\hbar c/\sqrt t\), decreasing as the hierarchy requires. The negative
+moments diverge when the spectral measure reaches down to \(E=0\), so
+their finiteness is necessary for a gap; it is not sufficient, since
+\(d\rho=e^{-\hbar c\kappa/E}dE\) has every negative moment finite with
+\(\inf\operatorname{supp}\rho=0\). Consequently \textbf{no member of
+this hierarchy, and no upper bound of this type, can establish \(m>0\)}:
+the entire upper side of the problem settles the finiteness clause and
+is silent on the clause that matters. Constants explicit; nothing
+promoted.
+
+\hypertarget{moments-of-the-flowed-correlator}{%
+\subsection{1. Moments of the flowed
+correlator}\label{moments-of-the-flowed-correlator}}
+
+Assume the continuum theory exists with the Osterwalder--Schrader
+axioms, a unique vacuum and a self-adjoint \(H\ge0\) with \(H\Omega=0\);
+let \(\varphi_t\) be a gauge-invariant local scalar in the field at flow
+time \(t>0\), with \(\langle\varphi_t\rangle_0=0\). Reconstruction
+gives, for the zero-spatial-momentum correlator at Euclidean separation
+\(\tau>0\),
+\[C_0(\tau)=\int d^3z\,\big\langle\varphi_t(z,\tau)\varphi_t(0,0)\big\rangle^{\rm c}_0
+=\big\langle\Omega,\Phi^\dagger e^{-\tau H/\hbar}\Phi\,\Omega\big\rangle
+=\int_{[m,\infty)}e^{-E\tau/\hbar}\,d\rho(E),\] where \(\Phi\) is the
+zero-momentum smeared operator of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note} §2
+and \(d\rho\) is the spectral measure of \(H\) in the state
+\(\Phi\Omega\), divided by the volume so that \(\rho\) is intensive. The
+vacuum contribution is removed by the connected part, so
+\(\operatorname{supp}\rho\subset[m,\infty)\) where
+\(m=\inf\big(\operatorname{spec}H\setminus\{0\}\big)\). Set
+\[M_k=\int_{[m,\infty)}E^k\,d\rho(E)\in[0,\infty],\qquad k\in\mathbb Z .\]
+Two of them have elementary readings: \[M_0=C_0(0^+),\qquad
+M_{-1}=\frac1\hbar\int_0^\infty C_0(\tau)\,d\tau,\qquad
+M_{1}=-\hbar\,\frac{dC_0}{d\tau}\Big|_{\tau=0^+},\] the equal-time
+zero-momentum variance, the time-integrated correlator, and the
+\(f\)-sum rule.
+
+\hypertarget{the-hierarchy}{%
+\subsection{2. The hierarchy}\label{the-hierarchy}}
+
+\textbf{Proposition 1.} If \(M_k\) and \(M_{k+1}\) are finite and
+\(M_k>0\), then \[m\ \le\ \frac{M_{k+1}}{M_k}.\] If in addition
+\(M_{k-1}<\infty\) and \(M_{k-1}>0\), then
+\[\frac{M_k}{M_{k-1}}\ \le\ \frac{M_{k+1}}{M_k}.\]
+
+\emph{Proof.} On \(\operatorname{supp}\rho\) one has \(E\ge m\), so
+\(M_{k+1}=\int E\cdot E^k\,d\rho\ge m\int E^k\,d\rho=mM_k\), which is
+the first claim. For the second, Cauchy--Schwarz in \(L^2(d\rho)\)
+applied to \(E^{(k-1)/2}\) and \(E^{(k+1)/2}\) gives
+\(M_k^2=\big(\int E^{(k-1)/2}E^{(k+1)/2}d\rho\big)^2\le M_{k-1}M_{k+1}\),
+that is, \((M_k)\) is log-convex; dividing by \(M_{k-1}M_k\) gives the
+claim. \(\square\)
+
+The chain therefore runs downward from the \(f\)-sum bound:
+\[m\ \le\ \cdots\ \le\ \frac{M_{-1}}{M_{-2}}\ \le\ \frac{M_{0}}{M_{-1}}\ \le\ \frac{M_{1}}{M_{0}} .\]
+Each step uses one more inverse power of the energy and so weights the
+low-lying states more heavily; in the limit of small index the ratio
+converges to \(\inf\operatorname{supp}\rho\) whenever the moments stay
+finite, by dominated convergence applied to \(\rho\) restricted to
+\([m,m+\epsilon]\) against its complement.
+
+\hypertarget{the-first-improvement-and-what-it-costs}{%
+\subsection{3. The first improvement, and what it
+costs}\label{the-first-improvement-and-what-it-costs}}
+
+\textbf{Corollary 2.} If \(0<M_{-1}\) and \(M_0<\infty\), then
+\[m\ \le\ \frac{M_0}{M_{-1}}=\frac{\hbar\,C_0(0^+)}{\int_0^\infty C_0(\tau)\,d\tau}\ <\ \infty .\]
+
+Compare the inputs.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+bound
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+needs
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+supplied by
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(M_1/M_0\) & \(\int\langle|\delta O/\delta A|^2\rangle<\infty\),
+equal-time spatial smearing & hypothesis (F1) of the finiteness note \\
+\(M_0/M_{-1}\) & \(C_0(0^+)<\infty\) and \(\int_0^\infty C_0>0\) &
+four-dimensional flow: Lüscher's statement \\
+\end{longtable}
+
+The \(f\)-sum bound required the Hamiltonian counterpart of the flow's
+renormalization, because \(M_1\) involves the functional derivative of
+the operator with respect to the equal-time field. The ratio
+\(M_0/M_{-1}\) involves only the flowed correlator itself, and Lüscher
+states that the gauge field at flow time \(t>0\) is a smooth
+renormalized field, so that expectation values of local gauge-invariant
+expressions in it are well-defined physical quantities
+(arXiv:1006.4518v3, abstract and §2; passage level via the
+\href{../docs/Luscher_WilsonFlow_1006.4518v3.md}{local companion}).
+Hypothesis (F1) is therefore not needed for Corollary 2, and the
+remaining inputs are the existence of the theory with the axioms, which
+is T4 of \href{mass-gap-obligations-lattice.md}{the obligations map},
+and \(C_0\not\equiv0\).
+
+\textbf{Proposition 3 (the finiteness half, restated).} Assume T4 and
+that some flowed local gauge-invariant scalar has \(C_0\not\equiv0\)
+with \(C_0(0^+)<\infty\). Then \(m<\infty\).
+
+\emph{Proof.} \(C_0\not\equiv0\) and \(\rho\ge0\) give \(M_{-1}>0\);
+Corollary 2 applies. \(\square\)
+
+The clause \(m<\infty\) of the Jaffe--Witten statement is thus
+equivalent, given the construction, to the nontriviality of a single
+flowed correlator, which is the sharpest form this programme has
+reached.
+
+\hypertarget{free-field-check-of-the-monotonicity}{%
+\subsection{4. Free-field check of the
+monotonicity}\label{free-field-check-of-the-monotonicity}}
+
+For free Maxwell theory with \(\varphi_t\) the flowed magnetic energy
+density, \href{flowed-bound-free-field.md}{the free-field note} gives
+the spectral weight \(d\rho\propto k^4e^{-4tk^2}dk\) at energy
+\(E=2\hbar ck\). With \(\int_0^\infty k^ne^{-4tk^2}dk\) evaluated by
+\(\int_0^\infty k^{2j}e^{-\alpha k^2}dk=\frac{(2j-1)!!}{2(2\alpha)^j}\sqrt{\pi/\alpha}\)
+and \(\int_0^\infty k^{2j+1}e^{-\alpha k^2}dk=\frac{j!}{2\alpha^{j+1}}\)
+at \(\alpha=4t\):
+\[\frac{M_1}{M_0}=2\hbar c\,\frac{\int k^5e^{-4tk^2}}{\int k^4e^{-4tk^2}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}\approx1.504\,\frac{\hbar c}{\sqrt t},\]
+\[\frac{M_0}{M_{-1}}=2\hbar c\,\frac{\int k^4e^{-4tk^2}}{\int k^3e^{-4tk^2}}
+=\frac{3\sqrt\pi}{4}\,\frac{\hbar c}{\sqrt t}\approx1.329\,\frac{\hbar c}{\sqrt t},\]
+\[\frac{M_{-1}}{M_{-2}}=2\hbar c\,\frac{\int k^3e^{-4tk^2}}{\int k^2e^{-4tk^2}}
+=\frac{2}{\sqrt\pi}\,\frac{\hbar c}{\sqrt t}\approx1.128\,\frac{\hbar c}{\sqrt t},\]
+using \(\int k^5=1/(64t^3)\), \(\int k^4=3\sqrt\pi/(256\,t^{5/2})\),
+\(\int k^3=1/(32t^2)\), \(\int k^2=\sqrt\pi/(32\,t^{3/2})\). The three
+numbers decrease, as Proposition 1 requires, and the first reproduces
+the free-field note. In this theory \(M_k\) is finite for \(k\ge-4\) and
+diverges for \(k\le-5\), since \(d\rho\propto E^4dE\) near \(E=0\): the
+hierarchy terminates, and its terminating member does not reach \(m=0\).
+Termination at a finite index is the spectral signature of weight
+accumulating at zero energy.
+
+\hypertarget{why-the-upper-side-cannot-give-m0}{%
+\subsection{\texorpdfstring{5. Why the upper side cannot give
+\(m>0\)}{5. Why the upper side cannot give m\textgreater0}}\label{why-the-upper-side-cannot-give-m0}}
+
+Every bound above is of the form \(m\le(\text{ratio of moments})\), and
+each is finite whenever the corresponding moments are. Finiteness of all
+negative moments is necessary for \(m>0\) but not sufficient: take
+\[d\rho(E)=e^{-\hbar c\kappa/E}\,dE\ \ \text{near}\ E=0,\qquad\kappa>0,\]
+whose support reaches \(E=0\), so \(m=0\), while
+\(M_{-k}=\int E^{-k}e^{-\hbar c\kappa/E}dE=(\hbar c\kappa)^{1-k}\Gamma(k-1)\)
+after \(u=\hbar c\kappa/E\), finite for every \(k\ge2\). A theory with
+this spectral density would satisfy every bound in the hierarchy with a
+positive right-hand side and still be gapless. No amount of information
+about the moments of one correlator distinguishes it from a gapped
+theory.
+
+This is not a defect of the flow or of the trial operator. The
+variational principle produces upper bounds, and \(m>0\) is a lower
+bound; the two require different mathematics, and the entire content of
+Sections 1--4, like that of \href{lattice-gap-upper-bounds.md}{the
+upper-bound note} and \href{polyakov-average-gap-bound.md}{the Polyakov
+note}, belongs to the finiteness clause. The clause \(m>0\) needs an
+argument of the kind attempted on the lower side: an operator inequality
+\(H\ge m\,(1-|\Omega\rangle\langle\Omega|)\), which is what the
+strong-coupling theorem of \href{strong-coupling-uniform-gap.md}{the T2
+note} achieves at fixed cutoff and what
+\href{schur-error-ultraviolet.md}{the Schur note} shows is obstructed by
+ultraviolet dressing in the continuum.
+
+\hypertarget{consequence-for-state}{%
+\subsection{6. Consequence for STATE}\label{consequence-for-state}}
+
+The upper side is closed as far as it can go: a monotone hierarchy whose
+best members need only T4 and the nontriviality of one flowed
+correlator, with the \(f\)-sum bound identified as its weakest member
+and hypothesis (F1) eliminated. The finiteness clause is therefore
+reduced to the construction plus one nonvanishing correlator, and no
+further work on upper bounds changes the standing of the problem.
+Everything remaining is the lower bound: T2\('\) at fixed cutoff and its
+uniformity, which is where the next steps belong.
+\end{document}

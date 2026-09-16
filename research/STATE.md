@@ -136,13 +136,29 @@ one obligation at a time.
    same number by a disjoint route. Consequence: weak coupling proves
    nothing, since the bound only reaches $m$ at $\sqrt{8t_*}\simeq4.26\hbar c/m$,
    where the coefficient is nonperturbative.
-3g. **Next:** a lower bound $\chi_{\varphi_t}\ge c\,t^{-5/2}$ at
-   $\sqrt{8t}$ of order the correlation length, uniform in the lattice
-   spacing. This is a positivity statement about one flowed correlator,
-   not a spectral one; with (F1) it closes $m<\infty$. Candidate tools:
-   reflection positivity in the time direction for the equal-time
-   susceptibility, or a variational lower bound on the fluctuation of a
-   smeared plaquette sum at strong coupling continued in $g$.
+3g. **Done: the upper side is closed.**
+   [Moment hierarchy](../notes/moment-hierarchy-upper-bounds.md): with
+   $M_k=\int E^kd\rho$ the moments of the spectral measure of one flowed
+   zero-momentum correlator, $m\le M_{k+1}/M_k$ for every $k$, and the
+   ratios decrease as $k$ decreases (log-convexity). The $f$-sum bound
+   $M_1/M_0$ of the previous notes is the **weakest** member; the next
+   one, $m\le\hbar C_0(0)/\int_0^\infty C_0(\tau)d\tau$, needs no gradient
+   term and no equal-time smearing, hence **eliminates hypothesis (F1)**
+   in favour of Lüscher's own four-dimensional statement. Free-field
+   check: $1.504$, $1.329$, $1.128$ in units $\hbar c/\sqrt t$, decreasing.
+   Finiteness clause reduced to T4 plus $C_0\not\equiv0$. Also proved
+   that **no bound of this type can give $m>0$**: $d\rho=e^{-\hbar c\kappa/E}dE$
+   has all negative moments finite with $m=0$.
+3h. **Next: the lower side only.** Upper bounds are exhausted; what
+   remains is T2$'$ (no Coulomb phase at fixed cutoff) and its
+   uniformity. The available tool is the operator inequality
+   $H\ge m(1-|\Omega\rangle\langle\Omega|)$, proved at strong coupling in
+   [the T2 note](../notes/strong-coupling-uniform-gap.md) and obstructed in
+   the continuum by the dressing of
+   [the Schur note](../notes/schur-error-ultraviolet.md). Candidate next
+   step: the one-step blocking inequality of the foreseen route, i.e.
+   whether a gap on side $L$ transfers to side $2L$ with an error
+   controlled by $g(L)$, at fixed cutoff.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
