@@ -278,4 +278,3 @@ the fluctuation is not small compared with the nonlinearity, with no
 expansion in any parameter. That is the mass-gap problem for $SU(3)$,
 stated as precisely as this programme can state it, and it is new
 mathematics.
-
