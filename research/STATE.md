@@ -187,13 +187,23 @@ the items below are the working queue.
    This corrects §§4--5 of the previous note. Boundary grows like $M^2$,
    gap does not grow; the only gain available is a redefinition of the
    coupling, which is the renormalization step itself.
-3l. **Next, on the other side of the ledger:** (a) the fixed-lattice
-   small-volume theorem (1a) of
-   [the Schur note](../notes/schur-error-ultraviolet.md) §5, provable now
-   with explicit constants, or (b) the stability theorem without
-   frustration-freeness named in
-   [the Lieb--Robinson note](../notes/lieb-robinson-kogut-susskind.md) §5,
-   which is the openness half of $\mathcal G$.
+3l. **Done: the flow cannot serve as the change of variables.**
+   [Note](../notes/flow-conjugation-truncation.md): the Wilson flow is a
+   diffeomorphism of $G^{\mathcal E}$, hence unitarily implemented by
+   $(W_t\psi)(U)=\rho_t(U)^{1/2}\psi(\Phi_t(U))$, so conjugation preserves
+   the spectrum. It sends the magnetic term to the flowed action
+   (monotonically decreased) and the electric term to the
+   Laplace--Beltrami operator of the pulled-back metric, of range
+   $\sqrt{8t}$. Free case: exact cancellation, $e^{-2tk^2}$ against
+   $e^{+2tk^2}$, frequencies $ck$ unchanged. A locality-based criterion
+   would improve by $e^{-4tk^2}$, which only shows that such criteria are
+   **not conjugation-invariant**: the gain is charged in full to the
+   truncation restoring locality. Three routes to $m>0$ that avoid the
+   constructive step are now closed by computation.
+3m. **Next:** the decay of the flow Jacobian $D\Phi_t$ on the lattice,
+   which governs the truncation error. The free case fixes it exactly
+   (Gaussian in $|x|/\sqrt{8t}$); the interacting case is the bounded
+   question, and it is the quantity a renormalization step must control.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

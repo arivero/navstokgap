@@ -119,6 +119,16 @@ flat at strong coupling and falls like $1/M$ at small volume. Blocking is
 strictly worse than no blocking at every coupling
 ([note](blocking-criterion-monotone.md)).
 
+**Conjugation by the flow cannot help.** The gradient flow is a
+diffeomorphism of the compact configuration space, so it is implemented
+by a unitary and conjugation preserves the spectrum; the magnetic term
+becomes the flowed action and the electric term becomes nonlocal with
+range $\sqrt{8t}$, and in the free case the two effects cancel mode by
+mode ($e^{-2tk^2}$ against $e^{+2tk^2}$). A locality-based criterion
+appears to improve by $e^{-4tk^2}$ only because it drops the locality
+hypothesis, so the gain belongs to the truncation that restores it
+([note](flow-conjugation-truncation.md)).
+
 **No upper bound can give $m>0$.** Finiteness of all negative moments is
 necessary for a gap and insufficient: $d\rho=e^{-\hbar c\kappa/E}dE$ has
 every negative moment finite with $\inf\operatorname{supp}\rho=0$
