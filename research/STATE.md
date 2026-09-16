@@ -410,6 +410,16 @@ labour; consult it before opening a new item.
    gives $\frac43g^2$ and $\gamma\to4$ (adjacent-growth class; general
    shapes by the quoted tree-graph bound at a bounded factor). Both
    regularizations now have $g_0^2\sim10^2$.
+   [The target box](../notes/strong-coupling-target-box.md): the
+   expansion survives gauge-invariant $q$-link corrections of local norm
+   $\eta$ and a deformation $\eta_E$ of the electric term, with
+   tolerance $\eta_*\simeq g^2(1-\eta_E)/(6e\,2^q)$: at $g^2=100$,
+   $\eta\le0.29$ for plaquette-like terms and $\eta\le0.0066$ for
+   two-plaquette terms. The mass-gap problem is now the statement that a
+   renormalization scheme that is an exact low-energy reduction keeps
+   the effective Hamiltonian in this class and reaches $g^2\sim10^2$;
+   the intermediate region is where that is open, and the finish line
+   is a box with numbers.
 16. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one

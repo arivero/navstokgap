@@ -1,0 +1,111 @@
+# The target box: the strong-coupling gap survives local perturbations, so the renormalization group has an explicit finish line
+
+The continuous-time expansion of
+[the Kogut--Susskind note](kogut-susskind-strong-coupling-explicit.md)
+tolerates a bounded, gauge-invariant, few-link perturbation of the
+Hamiltonian and a mild deformation of the electric term. That turns the
+strong-coupling result into a **target**: any renormalization scheme
+that steers the effective Hamiltonian into the class
+$$\mathcal C(g,\eta,\eta_E,q)=\Big\{H_E'-\tfrac1{g^2}\textstyle\sum_pw_p-\sum_jd_j\ :\
+E'(\sigma)\ge(1-\eta_E)\,\varepsilon|S(\sigma)|,\ \ d_j\ \text{gauge invariant on}\le q\ \text{links},\ \ \textstyle\sum_{j\ni\ell}\|d_j\|\le\eta\,\tfrac{\hbar c}{a}\Big\}$$
+at some scale $a$ with $g^2$ and $\eta$ in the region below has a gap of
+at least $4\lambda=\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a$ there, and
+the gap of the original Hamiltonian follows if the scheme is an exact
+low-energy reduction. The tolerance for $SU(3)$, at $\theta=1/2$,
+$\eta_E=0.1$:
+
+| $g^2$ | $q=4$ (plaquette-like terms) | $q=8$ (two-plaquette terms) |
+| --- | --- | --- |
+| $100$ | $\eta\le0.29$ | $\eta\le0.0066$ |
+| $200$ | $\eta\le0.62$ | $\eta\le0.036$ |
+| $400$ | $\eta\le1.3$ | $\eta\le0.082$ |
+
+in units $\hbar c/a$, growing linearly in $g^2$ as $\eta_*\simeq g^2/(2e\,2^q)\cdot\frac{1-\eta_E}{3}$.
+The mass-gap problem for $SU(3)$ is therefore the statement that the
+flow from a weak bare coupling enters this box. The intermediate region
+is where that has to be shown, and the box says exactly what "enters"
+means: $g^2$ of order $10^2$ with few-link corrections of local norm
+below a few per cent of $\hbar c/a$. Constants explicit; the
+adjacent-growth count and the quoted tree-graph step are as in the
+Kogut--Susskind note; nothing promoted.
+
+## 1. The perturbed expansion
+
+Take $H=H_E'-W-D$ with $W=\frac1{g^2}\sum_pw_p$ as before and
+$D=\sum_jd_j$, each $d_j$ bounded, gauge invariant, acting on at most $q$
+links, with the local norm $\sum_{j\ni\ell}\|d_j\|\le\eta$ for every link
+$\ell$; units $\hbar c/a=1$. Suppose $H_E'$ is diagonal in the character
+basis with $E'(\sigma)\ge\varepsilon'|S(\sigma)|$, $\varepsilon'=(1-\eta_E)\varepsilon$.
+
+The Duhamel expansion now has insertions of two kinds. Gauge invariance
+of every $d_j$ keeps all intermediate configurations gauge invariant, so
+Gauss's law still forces $|S_k|\ge4$. The factorization over disjoint
+supports holds because each $d_j$ acts on finitely many links. A
+$d$-insertion at step $k$ that touches the current excited set
+$S_{k-1}$ contributes, summed with weights over the terms touching a
+given link and over the at most $2^q$ choices of $S_k$, at most
+$|S_{k-1}|\,\eta\,2^q$; the energy denominator $1/((\varepsilon'-\lambda)|S_{k-1}|)$
+cancels the $|S_{k-1}|$ as before. The per-step factor of the
+adjacent-growth count becomes
+$$u'=\frac{128Ne/g^2+e\,\eta\,2^q}{\varepsilon'-\lambda},$$
+and the first-step factor $F=8Ne/g^2+e\eta$. The criterion of the
+Kogut--Susskind note, Section 2, holds when
+$$u'\le\tfrac12\qquad\text{and}\qquad4F\,u'\le\lambda ,$$
+and then the gap is at least $4\lambda$ on the cyclic subspace of local
+observables.
+
+**Proposition.** For $\lambda=(1-\theta)\varepsilon'$ and
+$u'\le\frac12$, $4Fu'\le\lambda$, every $H\in\mathcal C(g,\eta,\eta_E,q)$
+has a unique ground state and a gap of at least
+$\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a$, uniformly in the volume.
+
+## 2. The numbers
+
+For $SU(3)$, $\varepsilon=2g^2/3$. With $\theta=\frac12$ and
+$\eta_E=0.1$, $\varepsilon'-\lambda=0.3g^2$, so $u'\le\frac12$ reads
+$$e\,\eta\,2^q\ \le\ 0.15\,g^2-\frac{384e}{g^2},$$
+which is the table above, and $4Fu'\le\lambda=0.3g^2$ is far from
+binding at these values ($4Fu'\le2(0.65+2.7\eta)$ at $g^2=100$). The
+tolerance is linear in $g^2$ and exponentially small in the locality
+$q$ of the corrections: **the box is wide for plaquette-like corrections
+and narrow for longer-range ones**, which is the quantitative form of
+"irrelevant operators must stay small".
+
+## 3. What the box asks of the intermediate region
+
+A renormalization step at scale $a$ produces an effective Hamiltonian at
+$2a$. Suppose a scheme exists such that
+
+1. each step is an exact low-energy reduction: the spectrum of $H(a)$
+   below some $E_c(a)$ coincides with that of $H_{\rm eff}(2a)$;
+2. the effective Hamiltonian stays in the class
+   $\mathcal C(g(a),\eta(a),\eta_E(a),q)$ with $q$ fixed;
+3. the coupling runs, $g(2a)>g(a)$, and reaches $g^2\ge10^2$ after
+   finitely many steps with $\eta,\eta_E$ inside the table.
+
+Then the gap of $H(a_{\rm UV})$ equals the gap of the effective
+Hamiltonian at the final scale, which the Proposition bounds below by
+$\frac83g_s^2(1-\eta_E)(1-\theta)\,\hbar c/a_s$, a positive number in
+physical units, uniformly in the volume, and T2$'$ holds along the
+trajectory. Items 1--3 in the weak region are the content of the
+constructive programme (the Euclidean form of item 2 is Balaban's
+small-field effective action); in the intermediate region they are the
+open problem. The box makes the finish line explicit: the flow has to
+arrive at $g^2\sim10^2$ with corrections of local norm a few per cent of
+$\hbar c/a$ if they extend over two plaquettes, or of order one if they
+are single-plaquette terms.
+
+The one-loop distance from $g^2=1/2$ to $g^2=100$ is
+$(2-0.01)/0.0966\simeq21$ doublings; the running is perturbative only
+at the start of that stretch, and how the corrections behave over the
+rest of it is precisely the question.
+
+## 4. Consequence for STATE
+
+The strong-coupling side is now a forgiving explicit region rather than
+a point at infinity, and the mass-gap problem for $SU(3)$ is the
+statement that a renormalization scheme satisfying items 1--3 exists
+through the intermediate region. Every quantity in the target is a
+number: $g^2\sim10^2$, corrections of locality $q$ with local norm below
+$\eta_*(g,q)$ from Section 2, and the resulting gap
+$\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a$.
