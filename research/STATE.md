@@ -482,7 +482,16 @@ labour; consult it before opening a new item.
    A, $\beta_W<0.0135$, proved; B, up to $5.7$, $\xi/a<1$ with no rigorous
    method (a factor $50$ in $\beta_W$ beyond any expansion); C, the
    renormalization group's, ten doublings from $g^2=1/2$, of which three
-   carry $\xi/a$ from $10$ to $1$.
+   carry $\xi/a$ from $10$ to $1$. The meeting point located (§2b): band
+   B is crossed by two blocking steps ($u\to u^4$ per doubling, Kadanoff
+   1976, heuristic; block-spin images Gibbsian under strong mixing, van
+   Enter--Fernández--Sokal 1993), so the verification is needed at one
+   coupling, $\beta_W\simeq6$, $g^2\simeq1$, $\xi/a\simeq1$, boxes of
+   side $3$ to $5$; $g_{\rm DS}^2\simeq1$ conditional on that box and the
+   requirement on the other side is $g_{\rm RG}^2\ge1$. **In one
+   sentence: the mass gap for $SU(3)$ is the control of about five
+   consecutive blocking steps at order-one coupling, uniformly in
+   volume**, three from the weak side and two from the strong.
 17. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
