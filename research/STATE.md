@@ -360,7 +360,17 @@ the items below are the working queue.
    same constructive step from three directions (blocking, flow
    truncation, large field), which is the signal that the estimates are
    done and the construction is the whole remaining content.
-11. **Done: the $d=3$ formulation.**
+15. **Aside, recorded at the user's request:**
+   [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
+   At $d=0$ the bulk is a one-manifold classified by its endpoints: one
+   point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator with
+   the gap as the decay of the connected part in the bulk length, none
+   gives $\operatorname{Tr}e^{-\beta H/\hbar}$, $k>2$ give Feynman graphs
+   (Schwinger parameters as einbein moduli); a 0d scalar integral has a
+   bare graph as bulk and a matrix integral thickens it to a surface
+   ('t Hooft). At $d=1$ it is the Schwarzian/SYK system, gapless; the holographic gap
+   mechanism is a capped-off infrared geometry at large $N$.
+16. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and
