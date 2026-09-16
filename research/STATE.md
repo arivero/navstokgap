@@ -430,7 +430,24 @@ labour; consult it before opening a new item.
    is a fixed point at every weak coupling, Guth; Fröhlich--Spencer) and
    $b_0=11/(16\pi^2)$ for $SU(3)$. The mass gap is the statement that the
    running does not stop before the box.
-16. **Aside, recorded at the user's request:**
+16. **Done: the intermediate region as a finite verification.**
+   [Note](../notes/intermediate-region-finite-verification.md). The
+   Wilson measure is a lattice spin system with compact spins, product
+   a priori measure and finite-range interaction, so the
+   Dobrushin--Shlosman complete-analyticity conditions (JSP 46 (1987)
+   983) and the Martinelli--Olivieri strong-mixing conditions (CMP 161
+   (1994) 447, 487) apply; Elitzur is no obstruction. Any of them at a
+   coupling $\beta_W$ gives uniform exponential decay, hence via link
+   reflection positivity a gap of $H_W$ uniformly in volume. They are
+   finite computations on boxes of a few $\xi/a$, open in the
+   interaction norm, so intervals are covered by finitely many checks;
+   feasible in principle exactly in the intermediate region. The box
+   becomes the verified interval with its openness radius as tolerance.
+   **The proof closes when $g_{\rm RG}^2\ge g_{\rm DS}^2$**: the reach of
+   the small-field renormalization meets the reach of the verification.
+   Neither number is known; the verification is numerics outside this
+   repository's rules.
+17. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
    point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator, which
@@ -443,7 +460,7 @@ labour; consult it before opening a new item.
    bare graph as bulk and a matrix integral thickens it to a surface
    ('t Hooft). At $d=1$ it is the Schwarzian/SYK system, gapless; the holographic gap
    mechanism is a capped-off infrared geometry at large $N$.
-17. **Done: the $d=3$ formulation.**
+18. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and
