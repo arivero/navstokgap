@@ -98,16 +98,22 @@ one obligation at a time.
    nonzero-mode correction is $O(g^{4/3}/L)$ with $C_M<0$; $U$ is bounded by
    $O(1/L)$, periodic, with minima at the centre holonomies (electric-flux
    sectors). The crossover $z\simeq2$ is where the holonomy delocalizes.
-3d. **Next: (H2) in relative form and the non-abelian valley input.** A sharp momentum cutoff makes the
-   second-order $W_2$ term diverge like $\Lambda^2$; a periodic (lattice)
-   cutoff gives instead the finite Casimir quadratic term $c_2(La)^2/L$ of
-   the one-loop torus potential. Use the Born--Oppenheimer projection onto
-   the $a$-dependent Gaussian vacuum (absorbs $W_2$) and the relative form
-   of the transfer lemma ($B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta$); compute
-   the Berry terms and the $W_3$ Schur error; (H3) needs $U$ with its
-   Casimir term (now explicit for every constant background at quadratic
-   order, by the symmetry argument of the valley note) and the log term
-   renormalizing $g$; the Landau-level input enters only at cubic order.
+3d. **Done: (H2) is an ultraviolet problem.**
+   [Note](../notes/schur-error-ultraviolet.md): with the fibered vacuum
+   the Berry term has Schur error $\simeq\frac{g^{8/3}}{96\pi^2}\log(\Lambda L)\langle|\partial_\xi\psi|^2\rangle\hbar c/L$,
+   relative order $g^2\log(\Lambda L)$ (one-loop running); the cubic
+   coupling gives a constant two-loop vacuum shift $\sim g^2(\Lambda L)^4\hbar c/L$
+   (harmless by the refined lemma with constant shifts) and an energy
+   slope $\theta\sim g^2(\Lambda L)^2$ that must be $<1$. So the bare-fiber
+   reduction proves the small-volume gap only for $g\ll1/N_s$ (fixed
+   lattice, $g\to0$); the renormalized regime $g^2\log N_s\ll1$ needs a
+   dressed nonzero-mode vacuum with cutoff-uniform bounds, a T4-type
+   renormalization theorem. The corner S splits into (1a) fixed-lattice
+   theorem, provable now, and (1b) renormalized theorem.
+3e. **Next:** either write (1a) with explicit constants (bookkeeping of
+   the Schur note), or turn to the upper-side target T$_{\rm fin}$
+   (Feynman--Bijl for Wilson-flowed observables), whose flow-Jacobian
+   bound is the other place where cutoff uniformity must be proved.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
