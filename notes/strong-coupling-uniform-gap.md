@@ -130,10 +130,12 @@ in place of $2N$; the threshold is $g_0^4=24\dim/(C_2\beta_*)$.
   abelian gap closes (Guth; Fröhlich--Spencer) and the non-abelian one is
   conjectured to persist.
 - *Explicitness.* $\beta_*$ and $\gamma$ exist by the theorem and are not
-  given as numbers in its statement. Extracting them from the proof
-  (Section 2 of the paper, a cluster expansion for the ground-state
-  projection) would give a numerical $g_0(N)$; the descent problem does
-  not depend on that number, only on the structure of the expansion.
+  given as numbers in its statement. Extracted from the proof
+  ([threshold note](strong-coupling-threshold-explicit.md)), the
+  time-discretized expansion gives $\beta_*\simeq e^{-465}$ and
+  $g_0^2\simeq10^{101}$ for $SU(3)$; a direct Kirkwood--Thomas type
+  expansion is expected to give $g_0^2\sim40$--$70$. The descent problem
+  does not depend on that number, only on the structure of the expansion.
 - *Relation to the small-volume end.* Yarotsky's expansion is in the
   electric basis, where the ground state at $g=\infty$ is the constant
   function. At weak coupling the ground state concentrates near

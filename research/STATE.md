@@ -372,8 +372,22 @@ the items below are the working queue.
    bounds, final gap extraction; Euclidean for the renormalization steps.
    Coupling map for $SU(3)$: weak-coupling expansion for $1/g^2\gtrsim10^2$
    with crude constants, strong coupling for $54/g^4\le\beta_*$, and an
-   intermediate region about twenty doublings wide where the gap forms.
-15. **Aside, recorded at the user's request:**
+   intermediate region where the gap forms, $10^3$ doublings wide with
+   these constants and $20$ if the weak side reaches $g^2\sim1/2$.
+15. **Done: the strong-coupling threshold made explicit.**
+   [Note](../notes/strong-coupling-threshold-explicit.md). Following
+   Yarotsky's proof with numbers (bounded perturbation, optimal
+   $\alpha=t_0\beta_0$, activity $2et_0\beta_0e^{64t_0}$ per perturbed site,
+   Kotecký--Preiss with entropy $c\simeq220$, $t_0\ge7.1$) gives
+   $\beta_*\simeq e^{-465}$ and $g_0^2\simeq10^{101}$ for $SU(3)$: the region
+   T2 covers is empty in practice. A direct expansion (Kirkwood--Thomas,
+   Datta--Kennedy, or Osterwalder--Seiler) has radius
+   $\beta\lesssim1/(12e)$, i.e. $g_0^2\sim40$--$70$. The intermediate
+   region's width is set by the weak side. **Next on the strong side:**
+   write the Kirkwood--Thomas expansion for the Kogut--Susskind
+   Hamiltonian with explicit constants, replacing the existential
+   $\beta_*$ by a number.
+16. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
    point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator, which
@@ -386,7 +400,7 @@ the items below are the working queue.
    bare graph as bulk and a matrix integral thickens it to a surface
    ('t Hooft). At $d=1$ it is the Schwarzian/SYK system, gapless; the holographic gap
    mechanism is a capped-off infrared geometry at large $N$.
-16. **Done: the $d=3$ formulation.**
+17. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and
