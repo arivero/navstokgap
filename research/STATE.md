@@ -461,9 +461,11 @@ labour; consult it before opening a new item.
    (Dobrushin--Shlosman) criterion is the finite verification, stated as
    a specification: $\sum_{x\in V}\sum_{y\notin V}\rho_V(x,y)<|V|$.
    [What would unblock](../notes/what-would-unblock.md), the review's
-   negative results: correlation inequalities break for $SU(N)$ (signed
+   negative results: Griffiths-type inequalities break for $SU(N)$ (signed
    recoupling in the dual gas, no $O(N)$ form, non-ferromagnetic
-   interaction); chessboard gives large deviations, not mixing; infrared
+   interaction), and the centre-based ones that exist (Mack--Petkova,
+   Tomboulis--Yaffe) concern the string tension, whose comparison
+   theory deconfines at weak coupling; chessboard gives large deviations, not mixing; infrared
    bounds need Gaussian domination, absent on a non-abelian manifold;
    Knabe needs frustration-freeness; exact dualities are abelian; gauge
    fixing moves $444$ to about $330$ only. Two unblocking routes: a
