@@ -1,7 +1,8 @@
 # Toward the Yang--Mills mass gap
 
-The goal of this project, set on 2026-09-16, is a proof of the Yang--Mills
-existence and mass-gap conjecture in the Jaffe--Witten formulation. Work
+The goal of this project, set on 2026-09-16, is a proof of the existence
+of a mass gap for $SU(3)$ Yang--Mills theory in four dimensions, in the
+Jaffe--Witten formulation. Work
 proceeds by theorems with explicit volume, cutoff and coupling dependence,
 by lower-dimensional solved cases, and by the analogy with a positive
 universal action scale, which the earlier phase of the project developed

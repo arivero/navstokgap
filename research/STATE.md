@@ -5,10 +5,16 @@ governs. Older files in this directory are context.
 
 ## Goal
 
-Prove the Yang--Mills existence and mass-gap conjecture (Jaffe--Witten;
-[digest](../notes/millennium-problem-definitions.md)). Progress is measured
-in theorems with explicit $L$, $a$, $g$ dependence and in the removal of
-one obligation at a time.
+Prove the existence of a mass gap for **$SU(3)$ in four dimensions**
+(user direction, 2026-09-16; Jaffe--Witten statement in the
+[digest](../notes/millennium-problem-definitions.md), narrowed from all
+compact simple groups to the physical case). Progress is measured in
+theorems with explicit $L$, $a$, $g$ dependence and in the removal of one
+obligation at a time. [The SU(3) constants](../notes/su3-constants.md)
+fix every number: $C_2=4/3$, $\dim G=8$, centre $\mathbb Z_3$,
+$b_0=11/(16\pi^2)$, $\beta=54/g^4$, $v\le261c/g^2$, $\Delta V=\frac{16}3(3|\mathcal P|-V)$,
+$|\nabla V|^2\le48V$, and about $21$ renormalization doublings from
+$g_{\rm UV}^2=1/2$.
 
 ## What is in hand
 
@@ -284,13 +290,24 @@ the items below are the working queue.
    $-A'\Delta\Omega+(B'V-e_0)\Omega=0$ compares total potential with total
    energy, and $e_0$ is extensive; the Euclidean weight factorizes over
    plaquettes and separates configurations locally by construction.
-9. **The line is complete.** What remains is the transfer-matrix
-   identification of $\Omega^2$ with a Euclidean measure on a time slice,
-   which leaves the Hamiltonian framework by design and is the route the
-   constructive programme takes. Before opening it, consolidate: the
-   position note should record that both the norm-based line and the
-   state-based line are now closed, and what each produced.
-10. **Done: the $d=3$ formulation.**
+9. **Done: consolidation and specialization.**
+   [The position note](../notes/mass-gap-position.md) is rewritten as one
+   argument: seven closed routes in two families, with the reason the
+   ground-state family fails stated once (the eigenvalue equation carries
+   the extensive $e_0$; the Euclidean weight factorizes).
+   [The SU(3) note](../notes/su3-constants.md) evaluates every constant
+   for the narrowed goal and records the two features $SU(2)$ lacks, a
+   complex defining representation and a $\mathbb Z_3$ centre.
+10. **Next.** The Hamiltonian line is complete; the surviving route needs
+   the local large-field estimate, which points at the transfer-matrix
+   identification of $\Omega^2$ with a Euclidean measure on a time slice.
+   Two concrete entry points: (a) write that identification for the
+   Kogut--Susskind Hamiltonian with constants, which is a known
+   construction and would let the Euclidean large-field estimates be
+   quoted directly; (b) the openness half of $\mathcal G$, i.e. gap
+   stability without frustration-freeness, which is the one technical
+   question the programme left unresolved on its own ground.
+11. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and

@@ -8,12 +8,17 @@ wins. Explicit user instructions take precedence over everything here.
 
 # The goal
 
-User direction, 2026-09-16: from now on the goal is a proof of the
-Yang--Mills existence and mass-gap conjecture as stated by Jaffe and Witten
-([digest](notes/millennium-problem-definitions.md)): for every compact
-simple gauge group, a nontrivial quantum Yang--Mills theory on $\mathbb R^4$
-satisfying the Wightman or Osterwalder--Schrader axioms, whose Hamiltonian
-has spectrum $\{0\}\cup[m,\infty)$ with $0<m<\infty$.
+User direction, 2026-09-16: the goal is a proof of the Yang--Mills
+existence and mass-gap conjecture
+([digest](notes/millennium-problem-definitions.md)), **narrowed by the
+user to the gauge group $SU(3)$ in four dimensions**: a nontrivial
+quantum $SU(3)$ Yang--Mills theory on $\mathbb R^4$ satisfying the
+Wightman or Osterwalder--Schrader axioms, whose Hamiltonian has spectrum
+$\{0\}\cup[m,\infty)$ with $0<m<\infty$. Jaffe and Witten ask it for every
+compact simple group; $SU(3)$ alone is a complete solution of the
+physical case and fixes every constant numerically. Keep statements
+group-general when that costs nothing, and specialize when a number is
+wanted.
 
 Work toward it in steps that are theorems: finite-volume and lattice
 statements with explicit dependence on the box size $L$, lattice spacing
