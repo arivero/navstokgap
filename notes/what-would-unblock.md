@@ -11,7 +11,11 @@ exactly two things would unblock it, and neither is available here:
 
 1. **A correlation inequality for $SU(3)$ lattice gauge theory** of
    Griffiths--Ginibre type, giving monotonicity in the coupling of the
-   quantities that control mixing. This is what makes the Ising model's
+   quantities that control mixing. Researched further in
+   [the research note](reasons-to-stop-as-research.md): it would
+   transfer control from weaker to stronger coupling only, replacing the
+   strong-side steps and leaving the weak side untouched, so it is a
+   simplification rather than an unblocking. This is what makes the Ising model's
    intermediate regime accessible and what the abelian gauge theories
    have; for $SU(N)$ none of this type is known, Section 1 says where the
    standard constructions break, and the centre-based comparison

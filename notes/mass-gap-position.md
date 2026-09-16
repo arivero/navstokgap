@@ -202,6 +202,22 @@ $m\ge\hbar c\min(\gamma_*,\gamma')/a_*$, where $a_*\simeq0.1$ fm is the
 physical spacing at the verified coupling. Progress is progress on H1
 or H2.
 
+**The two reasons to stop, researched.** A Griffiths-type inequality
+would transfer control from weaker to stronger coupling only and would
+replace the strong-side steps, never the weak side
+([research note](reasons-to-stop-as-research.md)); a certified
+verification at $\beta_W\simeq6$ is beyond every certified method. On the
+weak side, one explicit small-field step
+([part 1](small-field-step-gaussian.md), [part 1b](small-field-step-decay-and-threshold.md))
+has block Poincaré constant $\frac49$, fluctuation size $\frac32g$ per
+link, a proved propagator decay rate of $10^{-3}$ per lattice unit against
+an order-one truth, and a remainder threshold scaling as $\kappa^4$ that
+lies at $g^2\sim10^{-12}$ even for an ideal rate: **twelve orders of
+magnitude below the physical onset of the running at $g^2\simeq1$**,
+where the strong side's deficit is a factor $400$. Constant-chasing
+cannot close the weak side; H1 is a methods problem at order-one
+coupling.
+
 **Division of labour.** Hamiltonian methods for T1, T2, the small-volume
 theorem, the upper bounds, the exact identities and the final gap
 extraction; the Euclidean polymer expansion for the renormalization
