@@ -135,7 +135,8 @@ in place of $2N$; the threshold is $g_0^4=24\dim/(C_2\beta_*)$.
   time-discretized expansion gives $\beta_*\simeq e^{-465}$ and
   $g_0^2\simeq10^{101}$ for $SU(3)$; the continuous-time expansion of
   [the Kogut--Susskind note](kogut-susskind-strong-coupling-explicit.md)
-  gives $g_0^2\simeq80$ with $\gamma\to4$. The descent problem
+  gives $g_0^2=388$ rigorously ($79$ in the adjacent-growth class) with
+  $\gamma\to4$. The descent problem
   does not depend on that number, only on the structure of the expansion.
 - *Relation to the small-volume end.* Yarotsky's expansion is in the
   electric basis, where the ground state at $g=\infty$ is the constant

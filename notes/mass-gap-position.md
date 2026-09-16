@@ -181,7 +181,7 @@ as a computation.
 | region | statement | source |
 | --- | --- | --- |
 | strong, $g^2\ge176$ | $\Delta_W\ge(\hbar c/a)\,4\log(g^2/176)$, uniform in volume, Wilson transfer matrix | [explicit note](wilson-strong-coupling-explicit.md) |
-| strong, $g^2\gtrsim80$ | $\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a$, approaching $\frac83g^2$, Kogut--Susskind | [continuous-time note](kogut-susskind-strong-coupling-explicit.md) |
+| strong, $g^2\ge388$ ($79$ in the adjacent-growth class) | $\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a$, approaching $\frac83g^2$, Kogut--Susskind | [continuous-time note](kogut-susskind-strong-coupling-explicit.md) |
 | weak, $1/g^2\gtrsim10^2$ | small-field expansion applies, crude window $C_1g\le\eta\le C_2$ | [operator-inequality note](large-field-operator-inequality.md) §4 |
 | intermediate, $10^{-2}\lesssim g^2\lesssim2\times10^2$ | no expansion applies; the gap forms here | |
 

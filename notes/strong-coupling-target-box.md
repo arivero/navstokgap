@@ -22,7 +22,10 @@ $\eta_E=0.1$:
 | $200$ | $\eta\le0.62$ | $\eta\le0.036$ |
 | $400$ | $\eta\le1.3$ | $\eta\le0.082$ |
 
-in units $\hbar c/a$, growing linearly in $g^2$ as $\eta_*\simeq g^2/(2e\,2^q)\cdot\frac{1-\eta_E}{3}$.
+in units $\hbar c/a$ for the adjacent-growth count; the rigorous general
+count multiplies the per-step factor by $24$, so the same table holds at
+$24$ times the coupling, $g^2=2400,4800,9600$, or at the listed couplings
+with tolerances divided by $24$. The tolerance grows linearly in $g^2$ as $\eta_*\simeq g^2/(2e\,2^q)\cdot\frac{1-\eta_E}{3}$.
 The mass-gap problem for $SU(3)$ is therefore the statement that the
 flow from a weak bare coupling enters this box. The intermediate region
 is where that has to be shown, and the box says exactly what "enters"

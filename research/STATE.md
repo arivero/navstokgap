@@ -407,8 +407,10 @@ labour; consult it before opening a new item.
    next insertion cancels against the denominator $1/((\varepsilon-\lambda)|S_{k-1}|)$.
    Result: $\Delta_{\rm KS}\ge\frac83g^2(1-\theta)\,\hbar c/a$ for
    $g^4\ge\max(3132/\theta,\,783/\sqrt{\theta(1-\theta)})$, so $g^2\ge79$
-   gives $\frac43g^2$ and $\gamma\to4$ (adjacent-growth class; general
-   shapes by the quoted tree-graph bound at a bounded factor). Both
+   gives $\frac43g^2$ and $\gamma\to4$ in the adjacent-growth class; the
+   general shapes are counted by a spanning tree of consecutive
+   touchings at a factor $24$ per insertion, giving the rigorous
+   threshold $g^2\ge388$ for the same gap. Both
    regularizations now have $g_0^2\sim10^2$.
    [The target box](../notes/strong-coupling-target-box.md): the
    expansion survives gauge-invariant $q$-link corrections of local norm

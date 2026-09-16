@@ -1,4 +1,4 @@
-# Continuous-time expansion for Kogut--Susskind: $SU(3)$ gapped for $g^2\ge80$, gap approaching $(8/3)g^2\,\hbar c/a$
+# Continuous-time expansion for Kogut--Susskind: $SU(3)$ gapped for $g^2\ge388$, gap approaching $(8/3)g^2\,\hbar c/a$
 
 Yarotsky's theorem gives the Kogut--Susskind gap for $SU(3)$ only beyond
 $g^2\sim10^{101}$, because its time discretization pays $e^{64t_0}$ per
@@ -24,12 +24,11 @@ for the class of polymers in which each insertion touches the current
 excited set; so $\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a$ for $g^2\ge79$,
 $\Delta_{\rm KS}\ge2.4\,g^2\,\hbar c/a$ for $g^2\ge177$, and the bound
 approaches the flux-loop energy as $g\to\infty$, which fixes the
-constant $\gamma$ of the T2 theorem at $4$. The general polymers, in
-which a later insertion may start a separate piece that is bridged
-afterwards, are counted by the standard tree-graph bound, quoted, at
-the cost of a bounded factor per insertion, which moves the thresholds
-by a factor of order $e^2$ in $g^4$. Constants explicit; the tree-graph
-step is quoted and labelled; nothing promoted.
+constant $\gamma$ of the T2 theorem at $4$. The general polymers, in which a later insertion may start a separate
+piece that is bridged afterwards, are counted explicitly by a spanning
+tree of consecutive touchings, at a factor $24$ per insertion, which
+makes the rigorous threshold $g^2\ge388$ for the same $\frac43g^2$ gap.
+Constants explicit; nothing promoted.
 
 ## 1. The expansion
 
@@ -128,15 +127,35 @@ the size $|S_{k-1}|$ cancelling between the entropy and the energy
 denominator, which is the mechanism that keeps the count geometric. So
 $$Q_\lambda^{\rm adj}\ \le\ 4\,\frac{2Ne}{g^2}\sum_{m\ge1}m\,u^m=\frac{8Ne}{g^2}\,\frac{u}{(1-u)^2}.$$
 
-**General shapes.** A later insertion may start a piece disjoint from
-the current support that is bridged by subsequent insertions. Such
-shapes are organized by a spanning tree of the overlap graph of their
-insertions, and the tree-graph bound (Poghosyan--Ueltschi, loc. cit.,
-and the references there) bounds their weighted number by the
-adjacent-growth sum with $u$ replaced by $c_{\rm tg}u$ for a pure
-constant $c_{\rm tg}$ of order $e^2$. This step is quoted, and the
-thresholds below are stated for the adjacent-growth class, with the
-general class obtained by $g^4\to c_{\rm tg}g^4$.
+**General shapes, counted by a tree.** A later insertion may start a
+piece disjoint from the current support that is bridged afterwards. To
+count all connected shapes, build the graph $G'$ on the insertions in
+which, for every link $\ell$ and every maximal interval during which
+$\ell$ is excited, consecutive insertions touching $\ell$ are joined by
+an edge. Connectedness of the support is connectedness of $G'$, and the
+edges attached to a given link tile its excitation intervals without
+overlap, so for any spanning tree $T\subseteq G'$
+$$\sum_{e\in T}|\Delta\tau_e|\ \le\ |\operatorname{supp}\gamma|,\qquad\text{hence}\qquad
+e^{-(\varepsilon-\lambda)|\operatorname{supp}\gamma|}\le\prod_{e\in T}e^{-(\varepsilon-\lambda)|\Delta\tau_e|}.$$
+Each insertion has at most eight slots for $G'$-edges, the previous and
+next toucher of each of its four links, so $T$ is a rooted tree with
+children in labelled slots: at most $4^n$ plane shapes times $8^{n-1}$
+slot assignments. Given the parent and the slot, the child plaquette
+contains the slot's link and differs from the parent, at most $3$
+choices; the excited set after it, at most $16$; the insertion factor
+$2Ne/g^2$; and the edge time integral $\int_0^\infty e^{-(\varepsilon-\lambda)\Delta\tau}d\Delta\tau=1/(\varepsilon-\lambda)$,
+the time direction being fixed by the slot. The per-vertex factor is
+$$u_{\rm gen}=32\cdot3\cdot16\cdot\frac{2Ne}{g^2}\cdot\frac1{\varepsilon-\lambda}
+=\frac{3072Ne}{g^2(\varepsilon-\lambda)}=24\,u ,$$
+and the sum over all connected shapes through a fixed link is bounded
+by the adjacent-growth sum with $u$ replaced by $24u$; the overlap
+factor of Section 2 loses its $1/4$ because only one link's decay is
+used per edge, so the second condition reads $Q\le\varepsilon-\lambda$.
+The loss against adjacent growth is the factor $24$, coming from the
+tree entropy $32$, the $3$ plaquettes per slot and the single-link
+decay in place of $1/(4(\varepsilon-\lambda))$. Both counts are given
+below; the general one is rigorous as written, the adjacent one is what
+a careful count of the same shapes should approach.
 
 ## 4. Numbers for $SU(3)$
 
@@ -154,6 +173,16 @@ the second condition of Section 2 being weaker. Hence:
 | $1/4$ | $112$ | $2g^2$ |
 | $1/10$ | $177$ | $2.4\,g^2$ |
 | $\theta\to0$ | $g^2\gtrsim\sqrt{3132/\theta}$ | $\to\frac83g^2$ |
+
+With the general count, $u_{\rm gen}=37584/(\theta g^4)$, the
+conditions $u_{\rm gen}\le\frac12$ and $4Fu_{\rm gen}\le\lambda$ give
+$g^4\ge75168/\theta$ and $g^8\ge1.47\times10^7/(\theta(1-\theta))$:
+
+| $\theta$ | rigorous threshold $g^2$ | gap $\ge\frac83g^2(1-\theta)$ |
+| --- | --- | --- |
+| $1/2$ | $388$ | $\frac43g^2$ |
+| $1/4$ | $548$ | $2g^2$ |
+| $1/10$ | $867$ | $2.4\,g^2$ |
 
 The gap here is read off as in
 [the Wilson note](wilson-strong-coupling-explicit.md) §3: running the
@@ -188,8 +217,8 @@ model and the same conclusion.
 ## 6. Consequence for STATE
 
 The T2 theorem for the Kogut--Susskind Hamiltonian now has an explicit
-threshold, $g^2\gtrsim80$ for $SU(3)$ in the adjacent-growth class and a
-bounded factor worse in general, and an explicit gap approaching the
+threshold, $g^2\ge388$ for $SU(3)$ rigorously and $g^2\ge79$ in the
+adjacent-growth class, and an explicit gap approaching the
 flux-loop energy $(8/3)g^2\,\hbar c/a$. Together with the Wilson
 transfer-matrix result, the strong-coupling boundary of the intermediate
 region is of order $g^2\sim10^2$ for both standard regularizations. The
