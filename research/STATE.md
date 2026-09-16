@@ -69,6 +69,15 @@ one obligation at a time.
    electric cost blocks that channel. New upper-side target
    T$_{\rm fin}$: the same inequality for Wilson-flowed observables with
    an $a$-uniform flow-Jacobian bound (the finiteness half $m<\infty$).
+3a. **Done: Polyakov-average bound.**
+   [Note](../notes/polyakov-average-gap-bound.md): exact
+   $\Delta\le\hbar cg^2N/(4L\operatorname{Var}\bar P_i)$ with $\bar P_i$ the
+   transverse-averaged spatial Polyakov loop; at weak coupling in a small
+   box the zero-mode expectation values make it $(\hbar c/L)g^{2/3}$ times
+   $2\langle|\xi_i|^2\rangle/\operatorname{Var}(|\xi_i|^2)$ (upper side of
+   the corner S); in infinite volume a gap $m$ forces the Polyakov-loop
+   transverse susceptibility below $\hbar cg^2NL/(2mc^2)$ (necessary
+   condition for T3); empty at strong coupling.
 3b. **Next: the weak-coupling end on the lattice.** Variational upper
    bound (and lower bound if reachable) on the Kogut--Susskind gap at
    small $g$ on a lattice with side small against $\hbar c/\Lambda$, using

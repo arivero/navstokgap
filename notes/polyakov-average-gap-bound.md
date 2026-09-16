@@ -1,0 +1,141 @@
+# The gap is bounded by the variance of the averaged spatial Polyakov loop, with the small-volume scaling built in
+
+For the Kogut--Susskind Hamiltonian on the periodic lattice of side
+$L=N_sa$, the Feynman--Bijl inequality with the transverse average of the
+spatial Polyakov loop in direction $i$,
+$$\bar P_i=\frac1{N_s^2}\sum_{\text{lines }\parallel i}\operatorname{Re}\operatorname{tr}\big(U_{\ell_1}\cdots U_{\ell_{N_s}}\big),$$
+gives the exact bound
+$$\Delta^{\rm phys}_{a,L}\ \le\ \frac{\hbar cg^2}{2a}\,\frac{\langle\sum_\ell|\nabla_\ell\bar P_i|^2\rangle_0}{\operatorname{Var}_0\bar P_i}
+\ \le\ \frac{\hbar c\,g^2N}{4L\,\operatorname{Var}_0\bar P_i},$$
+for every coupling and lattice size. Three consequences. In a small box
+at weak coupling, where the ground state is the constant-mode state of
+C133 at leading order, numerator and denominator are both computable
+there and the bound is $(\hbar c/L)\,g^{2/3}$ times a pure number, the
+scaling of the exact zero-mode gap, so the upper side of the
+small-volume corner S of [the obligations map](mass-gap-obligations-lattice.md)
+follows from an exact inequality plus the zero-mode expectation values.
+In the infinite-volume limit, a mass gap $m$ forces the averaged spatial
+Polyakov loop to self-average at least like $1/L$:
+$\operatorname{Var}_0\bar P_i\le\hbar cg^2N/(4mc^2L)$, equivalently a bound on
+the transverse Polyakov-loop susceptibility,
+$\sum_{y}a^2\langle\operatorname{Re}P(x)\operatorname{Re}P(x+y)\rangle_c\le\hbar cg^2NL/(4mc^2)$,
+which is a necessary condition for T3 expressed through one
+gauge-invariant correlation. At strong coupling the averaged loop has
+variance $1/(2N_s^2)$ and the bound is empty, so the plaquette bound of
+[the upper-bound note](lattice-gap-upper-bounds.md) and the present one
+cover complementary ends of the coupling axis. Nothing here is promoted.
+
+## 1. The operator and the exact bound
+
+Fix a direction $i$. The lattice decomposes into $N_s^2$ lines parallel
+to $i$, each of $N_s$ links closing around the torus. For a line
+$\lambda$ let $P_\lambda=\operatorname{Re}\operatorname{tr}\prod_{\ell\in\lambda}U_\ell$,
+the ordered product along the line; it is gauge invariant (a closed
+loop), and $\bar P_i=N_s^{-2}\sum_\lambda P_\lambda$. Let
+$O=\bar P_i-\langle\bar P_i\rangle_0$.
+
+**Theorem 1.** For every $g>0$, $N_s\ge2$ and compact $G$ with the
+normalization of [the obligations map](mass-gap-obligations-lattice.md),
+$$\Delta^{\rm phys}_{a,L}\ \le\ \frac{\hbar cg^2}{2a}\,
+\frac{\big\langle\sum_\ell|\nabla_\ell\bar P_i|^2\big\rangle_0}{\operatorname{Var}_0\bar P_i}
+\ \le\ \frac{\hbar c\,g^2N}{4L\,\operatorname{Var}_0\bar P_i}.$$
+
+*Proof.* $O$ is a real gauge-invariant function of the links with zero
+mean, so Proposition 1 of [the upper-bound note](lattice-gap-upper-bounds.md)
+applies and gives the first inequality. Each link in direction $i$
+belongs to exactly one line and links in other directions do not enter
+$\bar P_i$, so $\nabla_\ell\bar P_i=N_s^{-2}\nabla_\ell P_{\lambda(\ell)}$.
+For a link of $\lambda$, $X_a\operatorname{tr}\prod U=\operatorname{tr}(T^aM)$
+up to a phase with $M$ a cyclic rearrangement of the product, and the
+completeness relation gives $\sum_a|\operatorname{tr}(T^aM)|^2=\tfrac12(N-|\operatorname{tr}M|^2/N)\le N/2$;
+the real part has smaller gradient. Hence
+$\sum_\ell|\nabla_\ell\bar P_i|^2\le N_s^{-4}\cdot N_s^2\cdot N_s\cdot N/2=N/(2N_s)$,
+and $\frac{\hbar cg^2}{2a}\cdot\frac{N}{2N_s}=\frac{\hbar cg^2N}{4L}$. $\square$
+
+## 2. Weak coupling in a small box
+
+At weak coupling the links are near the identity and the gauge-invariant
+content of a Polyakov line is the holonomy of the constant mode:
+$\prod_{\ell\in\lambda}U_\ell\approx\exp(iLa_i)$ with $a_i=a_i^bT^b$ the
+constant mode of [G07](low-dimensional-mass-gap.md) Proposition 7, whose
+ground-state width is $|a_i|\sim g^{2/3}/L$ in natural units. Since
+$\operatorname{tr}T^b=0$,
+$$P_\lambda\approx\operatorname{Re}\operatorname{tr}e^{iLa_i}=N-\tfrac14L^2|\vec a_i|^2+O(L^4|a|^4),\qquad
+\nabla_\ell P_\lambda\approx\operatorname{Im}\operatorname{tr}(T^aLa_i)=\tfrac12La_i^a ,$$
+so the variance of $\bar P_i$ is second order and the gradient first
+order in the constant mode:
+$$\operatorname{Var}_0\bar P_i\approx\tfrac1{16}L^4\operatorname{Var}(|\vec a_i|^2),\qquad
+\Big\langle\sum_\ell|\nabla_\ell\bar P_i|^2\Big\rangle_0\approx N_s^{-4}\cdot N_s^3\cdot\tfrac14L^2\langle|\vec a_i|^2\rangle
+=\frac{L^2\langle|\vec a_i|^2\rangle}{4N_s}.$$
+In the dimensionless variables of C133, $La_i=g^{2/3}\xi_i$ with $\xi_i$
+distributed by the unit ground state $\psi_0^{(3)}$ of
+$\tfrac12(-\Delta_{\mathbb R^9}+\sum_{i<j}|\vec\xi_i\times\vec\xi_j|^2)$:
+$$\frac{\hbar cg^2}{2a}\cdot\frac{g^{4/3}\langle|\vec\xi_i|^2\rangle/(4N_s)}{g^{8/3}\operatorname{Var}(|\vec\xi_i|^2)/16}
+=\frac{\hbar c}{L}\,g^{2/3}\cdot\frac{2\langle|\vec\xi_i|^2\rangle}{\operatorname{Var}(|\vec\xi_i|^2)} .$$
+The bound is therefore $(\hbar c/L)g^{2/3}$ times the pure number
+$2\langle|\vec\xi_i|^2\rangle/\operatorname{Var}(|\vec\xi_i|^2)$, finite because
+the unit ground state decays faster than any power along the valleys
+(the confining bound of C133 gives exponential decay of $\psi_0$ in
+$\sum_i|\vec\xi_i|$). Consistency with the exact zero-mode gap
+$\delta_1^{(3)}g^{2/3}\hbar c/L$ requires this number to be at least
+$\delta_1^{(3)}$, which is the Feynman--Bijl inequality applied inside the
+zero-mode model with the trial operator $|\vec\xi_i|^2$; the model
+version of Theorem 1 is exact and says exactly that.
+
+What is proved and what is not: Theorem 1 is exact. The two
+approximations, replacing the ground-state expectations by their
+constant-mode values, are the leading order of the small-volume
+expansion (Lüscher; abstract, B78) and are not proved here. The
+statement that follows from them is that the exact lattice inequality
+carries the $g^{2/3}$ scaling of the small-volume corner on its upper
+side; a lower bound with that scaling remains the open weak-coupling
+target of STATE.
+
+## 3. Infinite volume: a necessary condition for the mass gap
+
+Suppose the lattice theory at fixed $a$ and $g$ has infinite-volume gap
+$\Delta_a=\liminf_{N_s\to\infty}\Delta_{a,L}>0$ (T2$'$), and write
+$mc^2=\Delta_a$. Theorem 1 gives, for every $L$,
+$$\operatorname{Var}_0\bar P_i\ \le\ \frac{\hbar cg^2N}{4L\,\Delta_{a,L}} .$$
+By translation invariance in the transverse plane,
+$\operatorname{Var}_0\bar P_i=N_s^{-2}\sum_{y}C_i(y)$ with
+$C_i(y)=\langle\operatorname{Re}P_\lambda(x)\operatorname{Re}P_\lambda(x+y)\rangle_c$ the
+connected two-point function of the spatial Polyakov loop at transverse
+separation $y$. Hence
+
+**Corollary 2.** If the infinite-volume gap is $mc^2>0$, then along any
+sequence of boxes on which $\Delta_{a,L}\ge mc^2/2$,
+$$\sum_{y\in\text{transverse plane}}a^2\,C_i(y)\ \le\ \frac{\hbar cg^2N}{2mc^2}\,L ,$$
+and the averaged spatial Polyakov loop self-averages at least like $1/L$.
+
+Reading: in a confining phase the spatial Polyakov loop of length $L$
+has connected correlations decaying on a transverse scale $\xi$, and the
+left side is of order $\xi^2\langle P^2\rangle_c$, so the corollary is
+satisfied with room; in a phase where the loop orders or its
+correlations do not decay, the left side grows like $L^2$ and the
+corollary forbids a gap. It is a necessary condition only, but it is one
+written entirely in terms of a single gauge-invariant correlation and
+the coupling, with no reference to the spectrum.
+
+## 4. Strong coupling: the bound is empty
+
+At $g=\infty$ the links are independent Haar variables, distinct lines
+are independent, and $\langle|\operatorname{tr}U_1\cdots U_{N_s}|^2\rangle=1$
+for a product of independent Haar elements of $SU(N)$ (the product is
+again Haar distributed), so $\operatorname{Var}P_\lambda=\tfrac12$ for
+$N\ge3$ and $\operatorname{Var}\bar P_i=1/(2N_s^2)$. Theorem 1 then reads
+$\Delta\le\hbar cg^2NN_s^2/(2L)$, which grows with the lattice and says
+nothing. The averaged loop is the wrong trial operator in the disordered
+phase, as the plaquette is in the ordered one; the two bounds are
+complementary, and neither is uniform in $a$ along the scaling curve.
+
+## 5. Consequence for STATE
+
+The upper side of the small-volume corner is now an exact lattice
+inequality plus two zero-mode expectation values, and a mass gap has a
+necessary condition in the Polyakov-loop susceptibility (Corollary 2).
+The lower side, a bound $\Delta_{a,L}\ge c\,g^{2/3}\hbar c/L$ at weak
+coupling in a small box, remains the open weak-coupling target; its
+natural form, suggested by the shape of Theorem 1, is an operator
+inequality in which the constant-mode zero-point energy of C133 survives
+the coupling to the nonzero modes.
