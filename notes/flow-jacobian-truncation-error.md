@@ -28,6 +28,13 @@ $\int|G|^2$ and leaves $\|G\|_\infty$ open, so the missing estimate is a
 pointwise bound on the flowed field strength. Constants explicit;
 nothing promoted.
 
+> **Corrected in part.** The statements below are continuum statements
+> at fixed physical scale. Within one lattice renormalization step the
+> compactness of the gauge group bounds $a^2\|G\|_\infty$ by $\pi$ and the
+> flow time of a doubling is $a^2/2$, so the exponential factor is a pure
+> number and the truncation error is uniformly small; see
+> [the lattice-truncation note](lattice-truncation-uniform.md).
+
 ## 1. The linearized flow
 
 Take the continuum flow in the gauge-modified form

@@ -210,12 +210,13 @@ statements, two proved, the finiteness clause reduced to a single
 correlator, two routes closed with explicit numbers, and three places
 where the non-abelian structure is isolated in a form that a proof could
 use. The remaining step is the one that has been open since the problem was
-posed. [The typical-field note](typical-field-strength-window.md) locates
-it precisely: on typical configurations the flow truncation is controlled
-at every coupling by lengthening the range as $\sqrt g$, and the whole
-obstruction is the supremum of the field strength over the volume, whose
-control is probabilistic and therefore Euclidean. The Hamiltonian route
-of this programme reaches its natural limit there.
+posed. [The lattice-truncation note](lattice-truncation-uniform.md) locates it:
+conjugation by the flow is exact, truncation costs $Ce^{-cK}$ per lattice
+doubling with pure constants, because the lattice flow carries no
+coupling and the group's compactness bounds $a^2\|G\|_\infty$ by $\pi$, and
+neither operation coarsens the theory. What remains is decimation, where
+projection loses by $3M^2/8$ and any map leaves the Kogut--Susskind
+family.
 [The Jacobian note](flow-jacobian-truncation-error.md) states the error: Gaussian in the truncation range over the flow radius, times
 $e^{2t\|G\|_\infty}$, so the step is controlled exactly where the flowed
 field strength satisfies $\|G\|_\infty\lesssim\ell^{-2}$. The missing

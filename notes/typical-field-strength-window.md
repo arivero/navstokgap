@@ -27,6 +27,13 @@ controls it.** Free-theory values are exact; their use for the
 interacting theory at scale $\ell$ is the standard perturbative estimate
 and is labelled as such. Constants explicit; nothing promoted.
 
+> **Corrected in part.** The statements below are continuum statements
+> at fixed physical scale. Within one lattice renormalization step the
+> compactness of the gauge group bounds $a^2\|G\|_\infty$ by $\pi$ and the
+> flow time of a doubling is $a^2/2$, so the exponential factor is a pure
+> number and the truncation error is uniformly small; see
+> [the lattice-truncation note](lattice-truncation-uniform.md).
+
 ## 1. The flowed field strength in the free theory
 
 From [the free-field note](flowed-bound-free-field.md) §3, the flowed

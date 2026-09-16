@@ -227,16 +227,23 @@ the items below are the working queue.
    configurations.
    **The Hamiltonian route of this programme terminates here**, in a
    well-defined way.
-4. **Two ways forward, both substantial.** (a) Ask whether the
-   Lieb--Robinson localization of
-   [the LR note](../notes/lieb-robinson-kogut-susskind.md) can replace the
-   large-field probability estimate, so that a bad region affects only
-   nearby terms; this is native to the present programme. (b) Carry the
-   flow-truncation formulation to the Euclidean side and ask whether it
-   simplifies the existing constructive treatment. Before either, a
-   consolidation checkpoint is due: the position note should record the
-   termination.
-5. **Done: the $d=3$ formulation.**
+4. **Done, correcting the previous two: truncation is free on the lattice.**
+   [Note](../notes/lattice-truncation-uniform.md): the lattice flow is
+   coupling-independent ($g^2$ cancels $1/g^2$ in Lüscher's (1.4)), a
+   doubling is dimensionless flow time $t/a^2=1/2$, and compactness gives
+   $a^2\|G\|_\infty\le\pi$, so $2t\|G\|_\infty\le c_A\pi$: a pure number.
+   Truncating at range $Ka$ costs $Ce^{-cK}$ uniformly in coupling,
+   spacing, volume; $K=3$ suffices. The large-field difficulty is a
+   statement about the **composition** of many steps at fixed physical
+   scale, not about one step. Conjugation is exact, truncation cheap, and
+   neither coarsens the theory: **the obstruction is decimation**.
+5. **Next:** whether flowing before decimating improves the projection
+   estimate. After conjugation the field entering a block boundary is the
+   flowed one, so the $3M^2/8$ of
+   [the blocking criterion](../notes/blocking-criterion-monotone.md) is
+   computed with the wrong field; redo it with the flowed magnetic term
+   $V\circ\Phi_t$, whose norm the flow's action monotonicity bounds.
+6. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and

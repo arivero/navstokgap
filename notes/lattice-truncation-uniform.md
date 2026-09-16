@@ -1,0 +1,145 @@
+# On the lattice one flow step has a uniformly bounded truncation error: the obstruction is decimation
+
+The lattice flow is independent of the coupling, because the $g^2$ in
+Lüscher's equation (1.4) cancels the $1/g^2$ of the Wilson action, and
+one doubling step runs it for a dimensionless time $t/a^2=1/2$. Its
+linearization has coefficients that are derivatives of a fixed smooth
+function on the compact manifold $G^{\mathcal E}$, hence bounded by pure
+numbers, and the plaquette angles are bounded by the compactness of the
+group. So the Jacobian bound of
+[the Jacobian note](flow-jacobian-truncation-error.md),
+$$\big|D\Phi_t(x,y)\big|\le e^{2t\|G\|_\infty}K^{\rm free}_t(x-y),
+\qquad 2t\|G\|_\infty\le2\cdot\frac{a^2}{2}\cdot\frac{\pi}{a^2}=\pi,$$
+gives a **pure number** for a doubling step, uniformly in the coupling,
+the scale, the volume and the gauge group up to its Casimir. Truncating
+the conjugated Hamiltonian at a range of $K$ lattice spacings therefore
+costs $Ce^{-cK}$ with $C,c$ pure numbers, and $K$ of order three
+suffices. This corrects
+[the typical-field note](typical-field-strength-window.md) and
+[the Jacobian note](flow-jacobian-truncation-error.md), which located the
+difficulty in the supremum of the field strength: that supremum is
+unbounded only in the continuum at fixed physical scale, which is where
+the Euclidean constructive programme meets it, and it is bounded within
+one lattice renormalization step. What remains once truncation is free is
+the step that actually coarsens the theory: **decimation**, the removal
+of degrees of freedom, which
+[the blocking-criterion note](blocking-criterion-monotone.md) shows loses
+when performed by projection, together with the proliferation of
+couplings that any decimation produces. Constants explicit; nothing
+promoted.
+
+## 1. The lattice flow carries no coupling
+
+With the Wilson action $S_w(U)=\frac1{g^2}\sum_p\operatorname{Re}\operatorname{tr}\{1-U_p\}$
+and the flow
+$$\dot V_s(x,\mu)=-g^2\big\{\partial_{x,\mu}S_w(V_s)\big\}V_s(x,\mu)$$
+(Lüscher, arXiv:1006.4518v3, equations (1.3)--(1.4); passage level via
+the [local companion](../docs/Luscher_WilsonFlow_1006.4518v3.md)), the
+factor $g^2$ cancels the $1/g^2$ in $S_w$, so
+$$\dot V_s(x,\mu)=-\big\{\partial_{x,\mu}\textstyle\sum_p\operatorname{Re}\operatorname{tr}(1-V_{s,p})\big\}V_s(x,\mu)$$
+depends on no coupling. The right-hand side is a fixed smooth vector
+field on the compact manifold $G^{\mathcal E}$, and the same holds for
+its derivatives.
+
+**Consequence.** The flow map $\Phi_t$, its Jacobian $D\Phi_t$ and every
+bound on them are functions of the dimensionless flow time $t/a^2$ and of
+the gauge group alone.
+
+## 2. One doubling step is a flow time of one half
+
+Taking the smearing radius $\sqrt{8t}$ equal to the new lattice spacing
+$2a$ gives $t=a^2/2$, that is $t/a^2=1/2$. Two bounds then apply.
+
+*Curvature.* The plaquette variable lies in the compact group, so the
+plaquette angle satisfies $|a^2G|\le\pi$ in the fundamental
+normalization and $\|G\|_\infty\le\pi/a^2$; the adjoint action in the
+linearized flow of
+[the Jacobian note](flow-jacobian-truncation-error.md) Proposition 1
+multiplies this by a Casimir factor $c_A$ of order one. Hence
+$$2t\|G\|_\infty\ \le\ 2\cdot\frac{a^2}{2}\cdot\frac{c_A\pi}{a^2}=c_A\pi,$$
+a pure number.
+
+*Coefficients.* The linearization of the lattice flow is a discrete
+parabolic equation whose coefficients are second derivatives of a fixed
+smooth function on a compact manifold, so they are bounded by pure
+numbers; run for dimensionless time $1/2$, its kernel obeys
+$$\big|D\Phi_t(x,y)\big|\ \le\ C_1\,e^{-c_1|x-y|/a},$$
+the standard exponential bound for a discrete parabolic equation with
+bounded coefficients over a time of order the diffusive one, with
+$C_1,c_1$ depending only on $G$ and on the lattice geometry.
+
+## 3. The truncation error
+
+**Proposition.** Truncating the conjugated Hamiltonian of
+[the flow-conjugation note](flow-conjugation-truncation.md) to range $Ka$
+costs a relative error
+$$\varepsilon(K)\ \le\ C\,e^{-cK},$$
+with $C,c$ pure numbers depending only on the gauge group and the lattice
+geometry, uniformly in the coupling $g$, the lattice spacing $a$, the
+volume and the flow time of one doubling. In particular $K=3$ gives an
+error of order $e^{-3c}$, and the effective Hamiltonian after one step
+has range one and a half new lattice spacings.
+
+*Proof.* Section 2 bounds the Jacobian kernel by $C_1e^{-c_1|x-y|/a}$
+uniformly; the discarded part of the conjugated kinetic operator is the
+sum of its matrix elements at separation beyond $Ka$, which is bounded by
+the geometric tail of that estimate. The magnetic term after conjugation
+is $V\circ\Phi_t$, a function of the flowed links, whose dependence on a
+link beyond range $Ka$ is bounded by the same kernel. $\square$
+
+## 4. Correction to the two previous notes
+
+[The Jacobian note](flow-jacobian-truncation-error.md) derived the
+condition $t\|G\|_\infty\lesssim1$ and read it as a small-field
+condition, and [the typical-field note](typical-field-strength-window.md)
+concluded that the obstruction is the supremum of the field strength over
+the volume, hence probabilistic and Euclidean. Both statements hold in
+the continuum at fixed physical scale, where $\|G\|_\infty$ is unbounded
+and the Gaussian tail is the right tool. Within one lattice step they do
+not apply: the compactness of the gauge group bounds $a^2\|G\|_\infty$ by
+$\pi$, and the flow time of a doubling is $a^2/2$, so the product is a
+pure number and no configuration is large-field **relative to the
+current spacing**.
+
+The large-field problem of the constructive programme is therefore a
+statement about many steps rather than one: a configuration that is
+harmless at its own scale can be large relative to a much finer spacing,
+and it is the accumulation over the $n\simeq(2b_0\log2)^{-1}g_{\rm UV}^{-2}$
+steps that produces it. The corrected reading is that the difficulty
+lives in the composition of the steps and in what each step does to the
+form of the Hamiltonian, and the tail estimate belongs to the former.
+
+## 5. What is left once truncation is free
+
+Conjugation is exact and truncation is cheap, and neither reduces the
+number of degrees of freedom: after both, the theory still lives on
+$L^2(G^{\mathcal E})$ with the original lattice. A renormalization step
+must also **decimate**, replacing the fine links by coarse ones. The
+notes already contain what happens then:
+
+- decimation by projection onto block low-energy subspaces loses, because
+  the boundary grows like $M^2$ while the block gap does not
+  ([blocking criterion](blocking-criterion-monotone.md));
+- decimation by any map at all produces an effective Hamiltonian outside
+  the Kogut--Susskind family, and carrying a controlled family through
+  the steps is the constructive problem
+  ([blocking note](blocking-step-obstruction.md) §5).
+
+So the sequence is: conjugate, which is free; truncate, which is cheap;
+decimate, which is the problem. The gain the flow provides is that after
+conjugation the magnetic term is the flowed action, smaller by the
+smoothing, so the decimation acts on a smoother field, and the question
+is whether that makes the projection estimate better than the
+$3M^2/8$ of the unflowed case. That is a well-posed question and it is
+the next one.
+
+## 6. Consequence for STATE
+
+The truncation error is settled: uniformly bounded per lattice doubling
+by compactness of the gauge group and the coupling-independence of the
+flow, with a range of about three lattice spacings. The obstruction is
+decimation, and the remaining question native to this programme is
+whether flowing before decimating improves the projection estimate,
+since after conjugation the field entering the block boundary is the
+flowed one. The previous two notes stand as statements about the
+continuum at fixed physical scale, and carry the correction.
