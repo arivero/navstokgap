@@ -10,8 +10,9 @@ the propagator, none gives the partition function, and more than two
 give the Feynman graphs of the target-space theory. The duality at two
 points is the exact identity
 $$|\Omega(x)|^2\,dx\ =\ \text{the }\tau=0\text{ marginal of the one-dimensional Euclidean path integral},$$
-the Feynman--Kac form of the ground state, and the gap is the decay of
-the connected part in the bulk length. That is, in one dimension lower,
+the Feynman--Kac form of the ground state; the segment read as a state
+on its two endpoints is the thermofield double at $\beta=2T$, and the gap
+is the rate at which the two ends disentangle as the bulk lengthens. That is, in one dimension lower,
 the identity used in
 [the transfer note](ground-state-measure-transfer.md) for Yang--Mills,
 where $|\Omega(U)|^2d\mu$ is the time-slice marginal of the
@@ -108,6 +109,44 @@ $-\frac{\hbar^2}{2m}\Omega''+(W-E_0)\Omega=0$ compares the potential
 with the total energy. The Agmon estimate of
 [the Agmon note](agmon-ground-state-suppression.md) is the boundary-side
 statement; the Feynman--Kac marginal is the bulk-side one.
+
+**Cutting the segment.** Inserting a time point $\tau\in(0,T)$ and
+integrating over the position there,
+$$K_T(x,y)=\int dz\ K_{T-\tau}(x,z)\,K_\tau(z,y),$$
+is the semigroup property $e^{-TH/\hbar}=e^{-(T-\tau)H/\hbar}e^{-\tau H/\hbar}$
+with the resolution of the identity $\int dz\,|z\rangle\langle z|$ at the
+cut. The amplitude is unchanged, so a cut decomposes the wormhole into
+two shorter ones glued along the cut, and inserts nothing. Iterating the
+cuts at spacing $a_t$ is the transfer-matrix form
+$e^{-TH/\hbar}=\mathcal T^{T/a_t}$, and the cut at $\tau=0$ of a slab
+$[-T,T]$ is exactly how [the transfer note](ground-state-measure-transfer.md)
+exhibits $|\Omega|^2$ as a marginal.
+
+What the segment is, read as a state rather than as an amplitude, is
+sharper. Regard $K_T(x,y)$ as the wave function of a state on the two
+boundary points, an element of $\mathcal H\otimes\mathcal H$. Its
+Schmidt decomposition is the spectral one,
+$$K_T=\sum_ne^{-TE_n/\hbar}\ \psi_n\otimes\overline{\psi_n},$$
+which is the thermofield double at inverse temperature $\beta=2T$. The
+two ends are entangled with Schmidt weights $p_n\propto e^{-2TE_n/\hbar}$,
+so the entanglement entropy between them equals the thermal entropy at
+$\beta=2T$ and decays, for large $T$, as
+$$S_{\rm ent}(T)\ \simeq\ d_1\Big(\frac{2T\Delta}{\hbar}+\log\frac1{d_1}\Big)e^{-2T\Delta/\hbar},$$
+with $d_1$ the degeneracy of the first excited level. **The gap is the
+rate at which the two ends of the segment disentangle as the bulk
+lengthens.** Factorization of the wormhole at large $T$ and
+disentanglement of the thermofield double are the same statement. For
+the Yang--Mills slab of
+[the transfer note](ground-state-measure-transfer.md), the wave
+functional $\Psi(U_{-T},U_T)=\langle U_T|e^{-2TH/\hbar}|U_{-T}\rangle$ of
+the two boundary slices is the thermofield double of the lattice
+Hamiltonian at $\beta=2T$, and the gap is the disentanglement rate of the
+two slices.
+
+The ensemble wormholes of Section 3, a cylinder joining two circles,
+have no one-dimensional counterpart: a connected one-manifold with two
+boundary components is a segment, whose components are points. Their
+one-dimensional shadow is the segment, which needs no ensemble.
 
 **No points: the spectrum.** The circle has empty boundary and computes
 $\operatorname{Tr}e^{-\beta H/\hbar}=\sum_ne^{-\beta E_n/\hbar}$, which

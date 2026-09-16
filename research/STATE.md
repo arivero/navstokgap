@@ -363,8 +363,11 @@ the items below are the working queue.
 15. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
-   point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator with
-   the gap as the decay of the connected part in the bulk length, none
+   point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator, which
+   read as a state on its endpoints is the thermofield double at
+   $\beta=2T$, with the gap as the disentanglement rate of the two ends
+   (a cut at an intermediate time is the semigroup property and inserts
+   nothing), none
    gives $\operatorname{Tr}e^{-\beta H/\hbar}$, $k>2$ give Feynman graphs
    (Schwinger parameters as einbein moduli); a 0d scalar integral has a
    bare graph as bulk and a matrix integral thickens it to a surface
