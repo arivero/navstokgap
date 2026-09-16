@@ -88,10 +88,10 @@ $$A'\!\int W\big|\nabla\Omega\big|^2d\mu
 
 *Proof.* Multiply $-A'\Delta\Omega+(B'V-e_0)\Omega=0$ by $W\Omega$ and
 integrate. Since
-$$\int W\Omega\,\Delta\Omega=-\int W|\nabla\Omega|^2-\int\Omega\,\nabla W\!\cdot\!\nabla\Omega
-=-\int W|\nabla\Omega|^2+\tfrac12\int(\Delta W)\Omega^2
-=-\int W|\nabla\Omega|^2-2C_2\langle W\rangle$$
-by Proposition 1, the equation becomes
+$$\int W\Omega\,\Delta\Omega=-\int W|\nabla\Omega|^2-\int\Omega\,\nabla W\!\cdot\!\nabla\Omega,$$
+$$\int\Omega\,\nabla W\!\cdot\!\nabla\Omega=-\tfrac12\int(\Delta W)\Omega^2=2C_2\langle W\rangle,$$
+by Proposition 1, so $\int W\Omega\Delta\Omega=-\int W|\nabla\Omega|^2-2C_2\langle W\rangle$
+and the equation becomes
 $A'\int W|\nabla\Omega|^2+2A'C_2\langle W\rangle+B'\langle VW\rangle-e_0\langle W\rangle=0$.
 Now $e_0=A'K+B'\langle V\rangle=A'K+B'(\langle W\rangle+N|\mathcal P|)$
 and $\langle VW\rangle=\langle W^2\rangle+N|\mathcal P|\langle W\rangle$,
