@@ -1,155 +1,90 @@
 # Start here
 
-Read `research/STATE.md`, `research/PROGRAMME.md` and the selected entry in
-`research/TASKS.md`. STATE is the single current priority list; old handoffs,
-source cards and numbered continuations are context. Apply
-`research/STRATEGY.md`, then load only the notes and sources needed for the
-selected decision. Explicit user task choices take precedence.
-Update task state and the handoff when substantive work ends. Preserve existing
-user changes in the worktree.
+Read `research/STATE.md` (one page: what is being worked on and why) and
+the note it points to. Nothing else is required reading. Older governance
+files (PROGRAMME, STRATEGY, TASKS, PROTOCOL, the skill, old handoffs) are
+context, and where they demand more bookkeeping than this file, this file
+wins. Explicit user instructions take precedence over everything here.
 
-On a fresh session, or after context compaction when the source-to-task context
-has been lost, read the source-recovery section of `skills/principia-action/SKILL.md`
-and load its task-relevant source-idea capsule. Reuse a current capsule already retained in
-the handoff/summary. This applies to source workers within their assigned
-budget; context recovery itself launches no additional worker or web sweep.
+# The physical question
 
-# Selected physical question
-
-User clarification, 2026-09-14: "Newton's areas" means the difference between
-inertial/polygonal motion and the actual trajectory, anchored in Galileo's
-horizontal inertial line and falling parabola. Their area satisfies
-(3F/v) A = Delta t Delta E. The matched-endpoint chord lens is half that area.
-Do not substitute Kepler swept sectors/equal-area law. Seek the physical
+User clarification, 2026-09-14: "Newton's areas" means the difference
+between inertial/polygonal motion and the actual trajectory, anchored in
+Galileo's horizontal inertial line and falling parabola. Their area
+satisfies (3F/v) A = Delta t Delta E; the matched-endpoint chord lens is
+half that area. Do not substitute Kepler swept sectors. Seek the physical
 Planck-scale obstruction to indefinitely shrinking this difference while
-retaining distinguishable classical motion. A classical zero-limit example
-alone does not complete that objective. Keep deterministic energy gain,
-quantum energy uncertainty, and any supplied action/measurement premise explicit.
+retaining distinguishable classical motion.
 
-The user further clarifies that the innovation sought is **mathematical
-necessity**, not a demonstration of quantum measurement resolution. Treat
-quantum nature as the phenomenon to explain. Derive the obstruction from
-explicit independently justified consistency premises; do not supply hbar,
-an uncertainty relation or a fixed experimental budget as the answer.
-Ordinary classical refinement is a consistent mathematical countermodel to
-unqualified claims, so identify the premise that excludes it and prove its
-use. A supplied-hbar model is supporting evidence only.
+The innovation sought is **mathematical necessity**: derive the obstruction
+from explicit, independently justified consistency premises. Quantum nature
+is the phenomenon to explain, so hbar, an uncertainty relation or a fixed
+experimental budget may not be supplied as the answer; a supplied-hbar model
+is supporting evidence only. Ordinary classical refinement is a consistent
+countermodel to unqualified claims: name the premise that excludes it and
+prove its use. The user expects the result h > 0 to be analogous to the
+Yang--Mills mass gap; low-dimensional solved cases and the reasons
+commutative fields have no gap are legitimate work on that analogy.
 
-# Research direction and stopping
+# How to work
 
-The agent is a researcher: generating new ideas is part of the task. Use
-curiosity to question restrictive assumptions, connect constructions and propose
-physical mechanisms. Compare plausible approaches, choose a promising one and
-work it into a derivation, model, prediction or informative failure. Label
-conjectures and speculative physical premises explicitly. A missing precedent
-or an uncertain outcome does not prevent a bounded investigation; neither is
-evidence of novelty.
+Be a researcher. Propose mechanisms, compare them, develop the strongest into
+a derivation, construction, decisive test or informative failure. Label
+conjectures. Use established theorems with their hypotheses; do not audit
+borrowed proofs unless a concrete error is suspected in a result in use.
+Literature is for ingredients and honest prior-art labels, never a
+deliverable by itself. A session may end with "nothing worth recording"
+and no artifact.
 
-Advance a named quantum/action-selection obligation or a gap estimate that
-survives the relevant limits. Before calculation, record the decision its
-possible outcomes will change, the bounded deliverable/stop and why existing
-results do not already settle it. Use `research/STRATEGY.md` for the selection
-and consolidation rules. For open research, the default deliverable is a
-construction or a decisive test of an idea. Literature, audits and bookkeeping
-support that deliverable; a reading queue or a list of open premises alone
-does not complete it. Do not require a source to have proposed the idea first.
+Write results into `notes/<slug>.md`: lead with the result, state each
+assumption where it is used, keep constants explicit, keep negations that
+change a theorem's meaning, cite sources inline with a reading label
+(metadata, abstract, passage, full-read). The note's last section states
+the consequence for STATE. That section is the only required bookkeeping
+besides the STATE edit.
 
-Do not select another calibration, pulse or coefficient variant solely because
-it follows the latest note. If both outcomes leave the same missing physical
-premise and discharge no named dependency, consolidate and park the extension
-with a return criterion. A named dependency inside a borrowed theorem is not
-by itself a reason to continue auditing that theorem. Use its stated assumptions
-and retained evidence status; reopen its proof for a concrete suspected error
-affecting a result in use, or explicit user direction. After two
-consecutive steps in one proof family, compare its next step with the other
-main track. The coordinator chooses autonomously; this introduces no routine
-permission gate. Necessary corrections and explicit user requests retain priority.
+Do not create handoffs for completed work, task rows, decision blocks,
+programme versions, source batches, claim rows, validation narratives or
+review files. Git history is the record. If work is interrupted, leave one
+paragraph at the top of the note saying where it stopped.
 
-End substantive work with its strategic consequence and update STATE's ordered
-choices. Keep STATE short; dated milestone narratives belong in history. An
-unfinished umbrella task does not reserve the next session. A consolidation of
-accepted claims reuses their audits with a claim-to-source map and written
-consistency review. Keep these updates short; do not create recurring
-consolidation sessions in place of research. New claims being promoted receive
-the bounded review below.
+`claims/LEDGER.md` is retained for the claims already in it. Add a row only
+for a result another note will cite by ID, with the proof location and an
+honest literature label in the same row; no review or librarian ritual is
+required. Use `references/library.bib` for anything you cite by key.
 
-# Research and writing
+# Cost rules
 
-The project studies Newtonian trajectories, action scales and mechanisms for
-gaps. The Millennium comparison supplies the companion PDE/field-theory context.
+**No Python or other scripts for numerical or symbolic verification** (user
+rule, 2026-09-09). Written derivations are the check. Document tooling
+(pandoc, LaTeX, pdftotext, link checks, shell queries to citation APIs) is
+allowed.
 
-Lead each document and section with its result, definition, question or next
-action. State assumptions where they enter the argument. Keep evidence status
-in the claim ledger and source coverage in the source companion. Consolidate
-general scope qualifications into one short passage per document where needed.
-Replace repeated disclaimers and defensive contrasts with precise statements of
-what the calculation establishes. Preserve mathematical negations, counterexamples
-and qualifications that change a theorem's meaning.
+**No full paper rebuild.** Build only the note you changed:
+`make paper NOTE=<slug>`. Never run `make papers` as a routine gate, never
+inspect PDF pages as images, and never restore rebuilt PDFs by comparison.
+`make check` (link and checksum integrity) is cheap and may be run.
 
-For mechanics, Principia or action-scale work, read
-`skills/principia-action/SKILL.md` and its routed note. This also applies
-to subagents on those subjects.
+No multi-agent workflows or parallel subagents; they inherit the main model
+and only multiply usage. At most one bounded Sol/Luna source worker at a
+time, sequential, with an explicit supported effort and never `ultra`.
+Delegate rarely.
 
-Specify the object, domain, units, normalization and limits of each gap. In a
-reconstruction, track every physical premise to its use, including the source of
-any action parameter. Distinguish Newton's wording, modern derivations and model
-hypotheses through attribution and evidence labels.
-
-# Agent work and cost
-
-**Hard rule (2026-09-09): do not create or run Python scripts to verify numerics.** This includes routine
-numerical experiments and symbolic/algebraic spot-check scripts used as theorem
-verification. Use written derivations and source/proof review instead. Existing
-scripts and outputs remain historical artifacts, not a required acceptance gate.
-Python for document builds, source extraction, links, metadata or file integrity
-is allowed. Do not substitute another scripting language merely to evade this
-cost rule. Any new computational-verification workflow needs user direction.
-
-The user authorizes bounded source tasks for smaller agents. Read
-`agents/PROTOCOL.md` before delegation. The coordinator owns shared task
-state, bibliography, claim acceptance, manuscript integration and commits. Workers
-write their assigned paths and return reviewable handoffs.
-
-Never select `ultra` for any controlled run, including descendants. Set a
-supported effort explicitly at dispatch. Use fresh or limited context when a
-full-history fork prevents an override. Announce the model and effort and record
-both in the handoff.
-
-Delegate smaller tasks to Sol or Luna sequentially. Run at most one active
-subagent, including descendants; the coordinator waits for its completion, then
-reviews the handoff before continuing or launching the next task. Keep delegation
-selective to conserve the user's usage allowance.
+Keep STATE short. Do not restate a result in more than one place.
 
 # Repository map
 
-- `docs/`: source originals and companions, with edition/page/folio anchors.
-- `references/`: bibliographic metadata and search batches.
-- `notes/`, `claims/`, `ideas/`: derivations, evidence status and proposals.
-- `papers/`, `out/papers/`: human-readable LaTeX and PDFs.
-- `scripts/`, `out/`, `formal/`, `reviews/`: checks, outputs, formalisation and review.
+- `notes/`: derivations and results (the research output).
+- `research/STATE.md`: the one live priority page.
+- `claims/LEDGER.md`: cited-by-ID results, frozen format.
+- `docs/`, `references/`: sources, companions, bibliography.
+- `papers/`, `out/papers/`: LaTeX and PDFs generated from notes.
+- `scripts/`, `reviews/`, `research/handoffs/`, `ideas/`: tooling and history.
 
-Promote an idea into the ledger through an explicit derivation and review.
-See `research/TOOLS.md` for reproduction and tool decisions.
-
-Before promoting a new project-derived mathematical claim or a precise proposed
-action principle into the accepted ledger, obtain written proof review and one
-bounded sequential librarian comparison with prior literature. Exploratory
-ideas and derivations may proceed before that review. Reuse existing audits
-for unchanged claims and established results; do not automatically audit older
-results or every imported lemma. Record exact matches or bounded coverage and
-keep proof status separate from literature status. An unmatched search result
-is not proof of novelty. Review findings should improve or challenge the
-construction, not automatically generate another audit task.
-
-Use bibliography to develop the toy model: each source batch should supply a
-premise, construction or proof obligation for a named research step. Keep this
-idea-generating role alongside the prior-art audit.
-
-The user authorizes commits and pushes to the existing GitHub repository after
-each innovation or relevant status change (2026-09-07). The coordinator owns
-these checkpoints. External submissions, correspondence and paid services
-require separate direction.
-
-Publication uploads must include the compiled PDFs as well as any manuscript
-sources (user rule, 2026-09-13). Check each bundle for the corresponding PDF
-and verify it was built from the included source before upload.
+Commits and pushes to the existing GitHub repository are authorized after
+each result or status change; end commit messages with the model's
+co-author trailer. Preserve other sessions' uncommitted changes. External
+submissions, correspondence and paid services require separate direction.
+Publication uploads must include the compiled PDF built from the included
+source (user rule, 2026-09-13). Verify redistribution rights before
+publishing archived editorial material.
