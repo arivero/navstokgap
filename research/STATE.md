@@ -326,12 +326,24 @@ the items below are the working queue.
    negative Hessian direction. So **the flow smooths small fields and
    amplifies large ones**, the crossover of item 10 is real, and the
    large-field region must be excluded rather than flowed.
-12. **Next, the last question this line suggests:** what replaces the
-   flow inside the large-field region. The constructive answer is an
-   expansion around the local minimum of the action there; the question
-   native to this programme is whether the Nielsen--Olesen instability
-   makes that expansion divergent or merely slow, which is a statement
-   about the Hessian spectrum at the constrained minimum.
+12. **Done: the large-field entropy is beaten.**
+   [Note](../notes/large-field-entropy-count.md). Not divergent: the
+   configuration space is compact, so $S_E$ attains a minimum on the
+   closed constraint set with nonnegative Hessian on the tangent cone.
+   The count of unstable directions in a constant background
+   $gB=\eta/\ell^2$ on a block of side $\ell$ is
+   (Landau degeneracy $gB\ell^2/2\pi$) $\times$ ($k_3^2+k_4^2<gB$, giving
+   $gB\ell^2/4\pi$) $=\eta^2/(8\pi^2)$, **independent of $\ell$ and $a$**,
+   against the action cost $\eta^2/(4g^2)$: ratio $2\pi^2/g^2$, uniform in
+   $\eta$ and the scale. So the large-field sum converges for
+   $g^2\lesssim20$ and the answer is "slow, not divergent", with the
+   slowness quantified as a fraction $g^2/(2\pi^2)$ of the exponent.
+13. **Next, and it would close this corner:** a lower bound on $S_E$ over
+   the constraint set improving on the constant-field value
+   $\eta^2/(4g^2)$ by a factor bounded away from zero, uniformly in the
+   scale. The Nielsen--Olesen instability says the minimizer is
+   inhomogeneous, so the bound must come from the constraint plus the
+   Bianchi identity rather than from a trial configuration.
 11. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
