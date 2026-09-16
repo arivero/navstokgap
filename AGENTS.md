@@ -6,25 +6,32 @@ files (PROGRAMME, STRATEGY, TASKS, PROTOCOL, the skill, old handoffs) are
 context, and where they demand more bookkeeping than this file, this file
 wins. Explicit user instructions take precedence over everything here.
 
-# The physical question
+# The goal
 
-User clarification, 2026-09-14: "Newton's areas" means the difference
-between inertial/polygonal motion and the actual trajectory, anchored in
-Galileo's horizontal inertial line and falling parabola. Their area
-satisfies (3F/v) A = Delta t Delta E; the matched-endpoint chord lens is
-half that area. Do not substitute Kepler swept sectors. Seek the physical
-Planck-scale obstruction to indefinitely shrinking this difference while
-retaining distinguishable classical motion.
+User direction, 2026-09-16: from now on the goal is a proof of the
+Yang--Mills existence and mass-gap conjecture as stated by Jaffe and Witten
+([digest](notes/millennium-problem-definitions.md)): for every compact
+simple gauge group, a nontrivial quantum Yang--Mills theory on $\mathbb R^4$
+satisfying the Wightman or Osterwalder--Schrader axioms, whose Hamiltonian
+has spectrum $\{0\}\cup[m,\infty)$ with $0<m<\infty$.
 
-The innovation sought is **mathematical necessity**: derive the obstruction
-from explicit, independently justified consistency premises. Quantum nature
-is the phenomenon to explain, so hbar, an uncertainty relation or a fixed
-experimental budget may not be supplied as the answer; a supplied-hbar model
-is supporting evidence only. Ordinary classical refinement is a consistent
-countermodel to unqualified claims: name the premise that excludes it and
-prove its use. The user expects the result h > 0 to be analogous to the
-Yang--Mills mass gap; low-dimensional solved cases and the reasons
-commutative fields have no gap are legitimate work on that analogy.
+Work toward it in steps that are theorems: finite-volume and lattice
+statements with explicit dependence on the box size $L$, lattice spacing
+$a$ and coupling $g$; lower-dimensional cases ($d=2$ solved, $d=3$ open
+and superrenormalizable); and the uniformity of a gap in $L$ and in $a$,
+which Jaffe and Witten name as the missing idea. Every gap statement must
+say which operator, which limits are taken in which order, and what the
+gap is measured in. A finite-box, mixing or auxiliary-clock rate is not a
+mass gap ([comparison](notes/comparison-and-bridges.md) §6).
+
+Retained as heuristic and supporting work: the user's expectation that a
+positive action scale $h>0$ is analogous to the mass gap, made exact in
+[G07](notes/low-dimensional-mass-gap.md) and
+[G08](notes/action-floor-yang-mills-gap.md) (a floor is a unit multiple of
+the fixed constants; a generated gap needs two non-commuting scale-free
+structures; a floor on transverse phase-space area produces the
+matrix-model gap), and the Galileo area/necessity question, which now
+serves the main goal rather than replacing it.
 
 # How to work
 

@@ -1,10 +1,11 @@
-# Newtonian trajectories, quantum premises and gap mechanisms
+# Toward the Yang--Mills mass gap
 
-This project asks which physical premises could force quantum structure with a
-positive universal action parameter, and which dynamical estimates could produce
-a gap that survives continuum and large-system limits. Newtonian trajectories
-and cut refinement supply mechanical tests; the Yang–Mills comparison supplies
-the companion field-theory question.
+The goal of this project, set on 2026-09-16, is a proof of the Yang--Mills
+existence and mass-gap conjecture in the Jaffe--Witten formulation. Work
+proceeds by theorems with explicit volume, cutoff and coupling dependence,
+by lower-dimensional solved cases, and by the analogy with a positive
+universal action scale, which the earlier phase of the project developed
+through Newtonian trajectories and cut refinement.
 
 ## Read the consolidated result
 
@@ -27,25 +28,15 @@ no new novelty claim and no Yang–Mills mass-gap result.
 
 ## Current research direction
 
-The selected target is **Galileo's falling parabola versus inertial horizontal
-motion**: their enclosed area converts to energy times time, and the research
-asks what physical Planck-scale obstruction prevents indefinite refinement
-into distinguishable classical alternatives. This is Newton's limiting-area
-question, not Kepler's swept-area law. The matched-endpoint chord lens has a
-different coefficient and is kept explicit.
-
-[The N01 derivation](notes/newton-insertion-action.md)
-([PDF](out/papers/newton-insertion-action.pdf)) gives the exact conversion and
-a closed quantum comparison with a conditional resolution threshold. The
-universal obstruction remains open. **The intended innovation is a mathematical
-necessity theorem**, not a resolution limit obtained by assuming quantum
-mechanics. The next construction must test an independently justified
-consistency principle against zero-action refinement. Quantum-premise,
-apparatus and gap results
-support this target when they discharge a named dependency.
-
-[STATE](research/STATE.md) is the one live priority page; PROGRAMME,
-TASKS and STRATEGY are historical context.
+[STATE](research/STATE.md) holds the goal, what is in hand and the next
+notes. The solved comparison case is Yang--Mills quantum mechanics: the
+zero-momentum sector of the torus theory has a gap
+$\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ produced by the uncancelled transverse
+zero-point energy along the abelian valleys
+([G07](notes/low-dimensional-mass-gap.md),
+[G08](notes/action-floor-yang-mills-gap.md), claims C131--C133). The open
+problem is the uniformity of a gap in volume and cutoff, which the
+strong-coupling and small-volume ends each fail in their own limit.
 
 ## Supporting proofs and sources
 

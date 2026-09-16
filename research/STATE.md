@@ -1,43 +1,70 @@
 # State
 
 Updated 2026-09-16. Read this page and the note it points to; AGENTS.md
-governs. Older files in this directory (PROGRAMME, STRATEGY, TASKS,
-handoffs, history) are context.
+governs. Older files in this directory are context.
 
-## Live work
+## Goal
 
-1. **Necessity of a positive action scale (the main target).** Derive a
-   mathematical obstruction to zero-action refinement of Galileo's
-   inertial-line/parabola comparison, $(3F/v)A=\tau\Delta E$, from
-   consistency premises that do not supply $\hbar$. Classical refinement is
-   a consistent countermodel (C002, C027--C029, C056--C058), so the premise
-   that excludes it must be named and its use proved.
-   [N01](../notes/newton-insertion-action.md) fixes the geometry and gives
-   a supplied-$\hbar$ benchmark. Open: N02, one proposed non-quantum
-   consistency principle for joint time/position refinement, tested to a
-   contradiction at zero action or an explicit countermodel.
-   Lead from the gap analogy: the floor's phase-space form is a lower bound
-   on the area of a closed transverse orbit, and constant-force motion has
-   no such orbit ([G08](../notes/action-floor-yang-mills-gap.md) §4); a
-   scale is forced in the mass-gap story only where defining the dynamics
-   requires one ([G07](../notes/low-dimensional-mass-gap.md) §§6--7).
+Prove the Yang--Mills existence and mass-gap conjecture (Jaffe--Witten;
+[digest](../notes/millennium-problem-definitions.md)). Progress is measured
+in theorems with explicit $L$, $a$, $g$ dependence and in the removal of
+one obligation at a time.
 
-2. **The h > 0 / mass-gap analogy (user direction, 2026-09-16).**
-   [G07](../notes/low-dimensional-mass-gap.md): both floors are unit
-   multiples of the fixed constants (C131); solved low-dimensional gaps are
-   supplied scales or generated ones; Yang--Mills quantum mechanics has gap
-   $\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$, gapless when either commutator is
-   removed (C133); free and abelian fields inherit their gapless classical
-   dispersion. [G08](../notes/action-floor-yang-mills-gap.md): a transverse
-   phase-space area floor produces that gap, the commutative model is inert
-   under the floor, and a gap returns an action unit except in $d=4$ (C132).
-   Open directions worth a note: the anomaly reading of the similarity
-   (does any consistent composition of cut alternatives force a scale?);
-   the 3D and 4D difference as a statement about which constants the
-   classical theory carries.
+## What is in hand
 
-3. **Publication drafts** (elastic gas, spin closure) wait for author
-   input on venue and authorship; no autonomous polishing.
+- **Two ends of the problem are known, and the middle is the problem.**
+  At strong coupling the lattice theory has a gap uniform in the volume
+  (Osterwalder--Seiler cluster expansion, in units of $1/a$). At small
+  volume the zero-mode sector has a gap $\delta_1g^{2/3}\hbar c/L$ proven
+  positive for every $L$ ([G07](../notes/low-dimensional-mass-gap.md)
+  §3.3, from C133) and Lüscher's expansion carries it to one loop. Neither
+  end survives its own limit: the strong-coupling gap is tied to $a$, the
+  small-volume gap decays as $1/L$. The mass gap is the statement that the
+  crossover, near $z=M(0^+)L\simeq2$ in Lüscher--Münster's variable, hands
+  over to a limit $m>0$ in units set by the running coupling.
+- **Dimensional shape** ([C131--C132](../claims/LEDGER.md)): classical
+  $d=4$ Yang--Mills carries no constant, so any finite gap is
+  $m=a^{-1}F(g^2(a)\hbar)$ with $F\to0$ along the continuum curve; in
+  $d=3$ the coupling itself is the mass unit. The gap-to-unit equivalence
+  holds in $d=2,3$ and fails in $d=4$.
+- **Mechanism in the solved sector**: the gap of the constant modes is the
+  uncancelled transverse zero-point energy along the abelian valleys
+  ([G08](../notes/action-floor-yang-mills-gap.md)); supersymmetric
+  cancellation removes it (de Wit--Lüscher--Nicolai).
+- **Rigorous constructions available for import**: $d=2$ (Driver,
+  Gross--King--Sengupta, Lévy; Witten's exact solution); $d=3$ finite
+  volume by stochastic quantisation ([Chevyrev review](../docs/Chevyrev_StochasticYM_2202.13359v2.md));
+  $d=4$ finite-volume ultraviolet stability (Balaban; Magnen--Rivasseau--
+  Sénéor), no gap. Reading levels for all of these are in B78.
+
+## Next steps (each a note)
+
+1. **Obligations map for the Hamiltonian lattice route.** Write the exact
+   chain from the Kogut--Susskind Hamiltonian on a finite lattice to the
+   Jaffe--Witten statement: (i) unique ground state and gap at every finite
+   lattice, proved in writing (positivity-improving semigroup in the group
+   basis); (ii) the strong-coupling gap uniform in $L$, cited with its
+   hypotheses; (iii) the continuum target as
+   $\liminf_{a\to0}\,(a\,\Delta_{a,L})/(a\Lambda(g(a)))>0$ uniformly in
+   $L$, with the order of limits stated; (iv) which of (i)--(iii) the
+   small-volume expansion controls. Deliverable: a note that turns "prove
+   the mass gap" into a finite list of named theorems, each with its
+   current status.
+2. **The $d=3$ case as the first target.** The coupling is the mass unit,
+   so no transmutation is needed; formulate the gap conjecture
+   $m=C\,g^2\hbar^2/c$ with $C>0$ and identify which finite-volume
+   estimate from the $d=3$ stochastic construction would give it.
+3. **The crossover in the zero-mode model.** Determine whether the
+   next-to-leading terms of Lüscher's expansion (the coupling of the
+   constant modes to the first nonzero momentum modes) raise or lower the
+   $1/L$ gap, and whether a variational bound on the full torus Hamiltonian
+   can be written with the zero-mode ground state as trial state.
+
+## Supporting
+
+The Galileo area/necessity question (N01, N02) and the $h>0$ analogy
+(G07, G08, C131--C133) serve the goal as heuristics. Publication drafts
+wait for author input.
 
 ## Constraints
 
