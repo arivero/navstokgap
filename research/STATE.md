@@ -39,26 +39,28 @@ one obligation at a time.
 
 ## Next steps (each a note)
 
-1. **Obligations map for the Hamiltonian lattice route.** Write the exact
-   chain from the Kogut--Susskind Hamiltonian on a finite lattice to the
-   Jaffe--Witten statement: (i) unique ground state and gap at every finite
-   lattice, proved in writing (positivity-improving semigroup in the group
-   basis); (ii) the strong-coupling gap uniform in $L$, cited with its
-   hypotheses; (iii) the continuum target as
-   $\liminf_{a\to0}\,(a\,\Delta_{a,L})/(a\Lambda(g(a)))>0$ uniformly in
-   $L$, with the order of limits stated; (iv) which of (i)--(iii) the
-   small-volume expansion controls. Deliverable: a note that turns "prove
-   the mass gap" into a finite list of named theorems, each with its
-   current status.
-2. **The $d=3$ case as the first target.** The coupling is the mass unit,
-   so no transmutation is needed; formulate the gap conjecture
-   $m=C\,g^2\hbar^2/c$ with $C>0$ and identify which finite-volume
-   estimate from the $d=3$ stochastic construction would give it.
-3. **The crossover in the zero-mode model.** Determine whether the
-   next-to-leading terms of Lüscher's expansion (the coupling of the
-   constant modes to the first nonzero momentum modes) raise or lower the
-   $1/L$ gap, and whether a variational bound on the full torus Hamiltonian
-   can be written with the zero-mode ground state as trial state.
+1. **Done: obligations map.**
+   [The lattice-route note](../notes/mass-gap-obligations-lattice.md)
+   turns the conjecture into six named statements: T1 (finite-lattice gap,
+   proved), T2 (strong-coupling gap uniform in volume; Euclidean form
+   established, Hamiltonian form open), T2$'$ (no Coulomb phase at any
+   coupling; false for $U(1)$), T3 (the scaling limit
+   $\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda)$), T4
+   (existence with the axioms) and S (the small-volume corner
+   $z(L)=\delta_1g^{2/3}[1+O(g^{2/3})]$). The conjecture is T2$'$ with T3,
+   given T4.
+2. **Next: T2 in Hamiltonian form.** Prove
+   $\Delta^{\rm phys}_{a,L}\ge c(N)g^2\hbar c/a$ for $g\ge g_0(N)$ uniformly
+   in the lattice size, for the Kogut--Susskind Hamiltonian, handling the
+   unbounded electric term (truncation of link representations with
+   control, or relative boundedness of the magnetic term). Output: a value
+   of $g_0(N)$ and the argument that later work must push toward zero.
+3. **The $d=3$ case.** The coupling is the mass unit; formulate
+   $m=C\,g^2\hbar^2/c$ and identify the finite-volume estimate of the
+   stochastic construction that would give $C>0$.
+4. **The crossover in the zero-mode model.** Sign of the next-to-leading
+   terms of Lüscher's expansion for the gap; a variational bound on the
+   torus Hamiltonian with the zero-mode ground state as trial state.
 
 ## Supporting
 

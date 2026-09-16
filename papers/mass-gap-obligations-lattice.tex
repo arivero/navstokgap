@@ -1,0 +1,349 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The mass gap as a finite list of theorems: the Hamiltonian lattice route},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-mass-gap-as-a-finite-list-of-theorems-the-hamiltonian-lattice-route}{%
+\section{The mass gap as a finite list of theorems: the Hamiltonian
+lattice
+route}\label{the-mass-gap-as-a-finite-list-of-theorems-the-hamiltonian-lattice-route}}
+
+On the Hamiltonian lattice route the Jaffe--Witten conjecture decomposes
+into four named statements, and their present status is: (T1) every
+finite periodic lattice has a positive gap \(\Delta_{a,L}\) above a
+unique gauge-invariant ground state, proved below with all constants
+explicit; (T2) at strong coupling the gap stays bounded below uniformly
+in the volume, established in the Euclidean form by the
+Osterwalder--Seiler cluster expansion and cited here with its
+hypotheses, while the naive Kato bound fails because the magnetic term
+is extensive; (T2\('\)) the gap of the infinite lattice stays positive
+for every coupling, which is the statement that four-dimensional
+non-abelian lattice gauge theory has no Coulomb phase, open, and false
+for the abelian group by Guth and Fröhlich--Spencer; (T3) along the
+asymptotic-freedom curve \(g(a)\) the infinite-volume gap \(\Delta_a\)
+satisfies \(\Delta_a/(\hbar c\Lambda(g(a)))\to m/\Lambda\in(0,\infty)\),
+open, and this single limit is the Millennium content once the theory
+exists; (T4) the continuum, infinite-volume theory with the
+Osterwalder--Schrader axioms, known in finite volume with an ultraviolet
+cutoff removed (Balaban; Magnen--Rivasseau--Sénéor) and open beyond. The
+small-volume expansion controls one corner: for \(L\ll\hbar c/\Lambda\)
+the gap is \(\delta_1g(L)^{2/3}\hbar c/L\) (C133, Lüscher), so the
+dimensionless gap \(z(L)=\Delta(L)L/(\hbar c)\) must cross over from
+\(\propto g^{2/3}\) at small \(L\) to linear growth \(mL/(\hbar c)\) at
+large \(L\). The first theorem-sized target this leaves is T2 in
+Hamiltonian form: a volume-uniform gap for \(g\ge g_0(N)\), whose radius
+\(g_0\) is the number the entire problem asks to push to zero. Sources
+are cited inline with reading labels; nothing here is promoted.
+
+\hypertarget{the-finite-lattice-hamiltonian}{%
+\subsection{1. The finite-lattice
+Hamiltonian}\label{the-finite-lattice-hamiltonian}}
+
+Let \(G\) be a compact connected simple Lie group with Lie algebra basis
+\(T^a\) normalized by \(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\) in
+a fixed faithful representation (for \(SU(N)\) the fundamental). Let
+\(\Lambda=(a\mathbb Z/Na\mathbb Z)^3\) be the periodic spatial lattice
+with spacing \(a\), side \(L=Na\), link set \(\mathcal E\) and plaquette
+set \(\mathcal P\); \(|\mathcal E|=3N^3\), \(|\mathcal P|=3N^3\). The
+Hilbert space is
+\(\mathcal H=L^2(G^{\mathcal E},\mathrm{Haar}^{\otimes\mathcal E})\). On
+the copy of \(G\) attached to a link \(\ell\), the electric field
+components \(E^a_\ell\) are \(-i\) times the left-invariant vector
+fields, and \(\sum_a(E^a_\ell)^2=-\Delta_\ell\) is the Laplace--Beltrami
+operator of the bi-invariant metric, whose eigenvalues on the
+Peter--Weyl blocks are the quadratic Casimirs \(C_2(R)\) with
+multiplicity \((\dim R)^2\). The Kogut--Susskind Hamiltonian (Phys.
+Rev.~D 11 (1975) 395, metadata) in the convention used here is
+\[H=\frac{\hbar c}{a}\Big[\frac{g^2}{2}\sum_{\ell\in\mathcal E}(-\Delta_\ell)
++\frac{2}{g^2}\sum_{p\in\mathcal P}\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big]
+=\frac{\hbar c}{a}\,\big[g^2K+g^{-2}V\big],\] with \(g\) dimensionless,
+\(U_p\) the ordered product of the four link variables around \(p\), and
+\(K\), \(V\) the dimensionless electric and magnetic operators. Other
+conventions rescale \(g^2\) by a fixed number. The dimensionless
+spectrum of \(aH/(\hbar c)\) depends on \(g\), \(N\) and \(G\) only:
+\[\Delta_{a,L}=\frac{\hbar c}{a}\,\delta(g;N,G).\]
+
+Gauge transformations \(\gamma:\Lambda\to G\) act by
+\((\mathcal V_\gamma\psi)(U)=\psi(\gamma_xU_\ell\gamma_y^{-1})\) for
+\(\ell=(x,y)\); they are unitary, commute with \(H\) (the Laplacian is
+bi-invariant and \(\operatorname{tr}U_p\) is conjugation invariant) and
+preserve positivity of functions. The physical space
+\(\mathcal H_{\rm phys}\) is the joint fixed space (Gauss's law).
+
+\hypertarget{t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state}{%
+\subsection{2. T1: every finite lattice has a gap above a unique
+physical ground
+state}\label{t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state}}
+
+\textbf{Theorem 1.} For every \(a>0\), \(N\ge2\), \(g>0\) and \(G\) as
+above:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(H\) is self-adjoint, bounded below, and has compact resolvent; its
+  spectrum is a sequence \(E_0<E_1<\cdots\to\infty\) of eigenvalues of
+  finite multiplicity.
+\item
+  \(E_0\) is simple with a strictly positive eigenfunction \(\psi_0\),
+  so \(\Delta_{a,L}=E_1-E_0>0\).
+\item
+  \(\psi_0\in\mathcal H_{\rm phys}\), \(\mathcal H_{\rm phys}\) reduces
+  \(H\), and the physical gap satisfies
+  \(\Delta^{\rm phys}_{a,L}\ge\Delta_{a,L}>0\).
+\end{enumerate}
+
+\emph{Proof.} (1) \(-\Delta_\ell\) is essentially self-adjoint on
+\(C^\infty(G)\), nonnegative, with compact resolvent, since \(G\) is a
+compact manifold and Peter--Weyl gives the eigenvalues \(C_2(R)\) with
+finite multiplicities and \(C_2(R)\to\infty\) along any enumeration of
+irreducible representations. \(K=\sum_\ell(-\Delta_\ell)\) acts on the
+finite tensor product with eigenvalues \(\sum_\ell C_2(R_\ell)\); for
+each bound \(E\) only finitely many assignments \(\ell\mapsto R_\ell\)
+have \(\sum_\ell C_2(R_\ell)\le E\), so \(K\) has compact resolvent.
+\(V\) is multiplication by a continuous function with
+\(0\le V\le2N|\mathcal P|\), hence bounded, and a bounded perturbation
+of an operator with compact resolvent has compact resolvent by the
+resolvent identity
+\((H-z)^{-1}=(H_0-z)^{-1}[1+(g^{-2}V)(H_0-z)^{-1}]^{-1}\) for \(z\) far
+in the negative axis. Discreteness with finite multiplicities and
+\(E_n\to\infty\) follow, and \(E_0\) is an eigenvalue.
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{1}
+\item
+  The heat kernel of \(-\Delta\) on a compact connected Riemannian
+  manifold is strictly positive for \(t>0\) (standard, from the strong
+  maximum principle or the Peter--Weyl expansion; metadata level), so
+  the kernel of \(e^{-tK}\) on \(G^{\mathcal E}\), a product of strictly
+  positive kernels, is strictly positive. With Brownian motion \(X_t\)
+  on \(G^{\mathcal E}\) generated by \(K\) (time rescaled by
+  \(g^2\hbar c/a\)), the Feynman--Kac formula gives
+  \[(e^{-tH}\psi)(U)=\mathbb E^U\Big[\exp\Big(-\frac{\hbar c}{ag^2}\int_0^tV(X_s)\,ds\Big)\psi(X_t)\Big],\]
+  valid because \(V\) is bounded and continuous. For \(\psi\ge0\),
+  \(\psi\ne0\), the weight is at least
+  \(e^{-t\hbar c\cdot2N|\mathcal P|/(ag^2)}>0\) and the law of \(X_t\)
+  has a strictly positive density, so \((e^{-tH}\psi)(U)>0\) for every
+  \(U\): \(e^{-tH}\) is positivity improving. Reed--Simon IV, Theorem
+  XIII.44 (metadata; number corroborated as in B78) then gives that
+  \(E_0\) is simple with \(\psi_0>0\) almost everywhere, and \(E_1>E_0\)
+  because \(E_1\) is the next eigenvalue of a discrete spectrum.
+\item
+  \(\mathcal V_\gamma\psi_0\) is a normalized eigenfunction for \(E_0\),
+  hence \(\mathcal V_\gamma\psi_0=c(\gamma)\psi_0\) with \(|c|=1\); both
+  functions are positive, so \(c(\gamma)=1\) and
+  \(\psi_0\in\mathcal H_{\rm phys}\). The projection
+  \(P=\int\prod_x d\gamma_x\,\mathcal V_\gamma\) onto
+  \(\mathcal H_{\rm phys}\) commutes with \((H-z)^{-1}\), so
+  \(\mathcal H_{\rm phys}\) reduces \(H\) and the restricted operator
+  has compact resolvent, ground state \(\psi_0\), and next eigenvalue at
+  least \(E_1\). \(\square\)
+\end{enumerate}
+
+Theorem 1 defines the object whose limits the conjecture is about. It
+proves nothing about those limits: \(\Delta_{a,L}\) is \(\hbar c/a\)
+times a number that may tend to zero as \(N\to\infty\) or as \(g\to0\).
+
+\hypertarget{t2-strong-coupling-and-why-volume-uniformity-is-the-whole-difficulty}{%
+\subsection{3. T2: strong coupling, and why volume uniformity is the
+whole
+difficulty}\label{t2-strong-coupling-and-why-volume-uniformity-is-the-whole-difficulty}}
+
+At \(g\to\infty\) the operator \(g^2K\) dominates. Its ground state is
+the constant function, with eigenvalue \(0\), and its excitations are
+link representations. Gauge invariance excludes a single excited link:
+the lowest physical excitation of \(K\) is a closed flux loop, at
+minimum the four links of one plaquette in the lowest nontrivial
+representation, with electric energy
+\(4\cdot\tfrac12C_2(R_{\min})\,g^2\hbar c/a=2C_2(R_{\min})g^2\hbar c/a\);
+for \(SU(N)\), \(C_2(\text{fund})=(N^2-1)/(2N)\). So the unperturbed
+physical gap is
+\[\gamma_{\rm phys}(g)=2C_2(R_{\min})\,g^2\,\frac{\hbar c}{a},\] uniform
+in \(N\) because a single plaquette loop costs the same on every
+lattice.
+
+\textbf{The naive bound fails.} The magnetic term satisfies
+\(0\le g^{-2}V\le2N|\mathcal P|g^{-2}\) in operator norm, so Kato's
+perturbation bound gives
+\(\Delta^{\rm phys}\ge\gamma_{\rm phys}-2\|g^{-2}V\|\hbar c/a =(2C_2g^2-4N|\mathcal P|g^{-2})\hbar c/a\),
+positive only when \(g^4>2N|\mathcal P|/C_2\). The bound is extensive in
+the volume and useless as \(N\to\infty\). Volume uniformity therefore
+requires using that \(V\) is a sum of \(|\mathcal P|\) terms each of
+norm at most \(2N g^{-2}\) and each acting on four links: locality, not
+smallness of the norm.
+
+\textbf{What is established.} Osterwalder and Seiler (Ann. Phys. 110
+(1978) 440; abstract, B78) prove for the Euclidean lattice theory with
+any compact gauge group, at sufficiently strong coupling, reflection
+positivity, the existence of the infinite-volume limit and Wilson's
+confinement bound by a cluster expansion; exponential clustering of
+gauge-invariant correlations uniform in the volume, that is a mass gap
+of the transfer matrix in units of \(1/a\), is the standard consequence
+of the same expansion (not read at section level). Hamiltonian versions
+rest on gap-stability theorems for local perturbations of commuting,
+frustration-free Hamiltonians (Yarotsky, Commun. Math. Phys. 261 (2005)
+799; Bravyi--Hastings--Michalakis, J. Math. Phys. 51 (2010) 093512; both
+metadata): \(g^2K\) is a sum of commuting link terms with a product
+ground state and a uniform local gap, and \(g^{-2}V\) is a sum of
+bounded local terms. Their hypotheses assume finite-dimensional local
+spaces or bounded local terms, and \(-\Delta_\ell\) is unbounded on the
+infinite-dimensional \(L^2(G)\), so a Hamiltonian proof of T2 must
+either truncate each link to the representations with
+\(C_2(R)\le C_{\max}\) and control the truncation, or use the relative
+boundedness of \(V\) with respect to \(K\). This is the first bounded
+theorem in the list:
+
+\begin{quote}
+\textbf{T2 (Hamiltonian form, target).} There exist \(g_0(N)<\infty\)
+and \(c(N)>0\) such that for all \(g\ge g_0\) and all lattice sizes
+\(N\ge2\), \(\Delta^{\rm phys}_{a,L}\ge c(N)\,g^2\,\hbar c/a\).
+\end{quote}
+
+\hypertarget{t2-no-coulomb-phase-at-fixed-cutoff}{%
+\subsection{\texorpdfstring{4. T2\('\): no Coulomb phase at fixed
+cutoff}{4. T2\textquotesingle: no Coulomb phase at fixed cutoff}}\label{t2-no-coulomb-phase-at-fixed-cutoff}}
+
+Fix \(a\) and \(g\) and let \(N\to\infty\). Define
+\(\delta_\infty(g)=\liminf_{N\to\infty}\delta(g;N,G)\). T2 says
+\(\delta_\infty(g)\ge c\,g^2>0\) for \(g\ge g_0\). The lattice form of
+the conjecture at fixed cutoff is
+
+\begin{quote}
+\textbf{T2\('\).} \(\delta_\infty(g)>0\) for every \(g>0\).
+\end{quote}
+
+For \(G=U(1)\) this is false: Guth (Phys. Rev.~D 21 (1980) 2291) and
+Fröhlich--Spencer (Commun. Math. Phys. 83 (1982) 411) prove a massless
+Coulomb phase at weak coupling (abstract, B78), so
+\(\delta_\infty(g)=0\) below a critical coupling. T2\('\) for a
+non-abelian \(G\) is the statement that the transition the abelian
+theory undergoes does not occur, that is confinement at all couplings,
+which lattice computations support and no proof reaches. The heuristic
+of \href{low-dimensional-mass-gap.md}{G07} §3 locates the difference:
+the abelian theory is all valley, while the non-abelian potential has
+flat directions of measure zero along which a transverse zero-point
+energy grows. T2\('\) is where that mechanism would have to be turned
+into an estimate at weak coupling.
+
+\hypertarget{t3-the-scaling-limit-as-one-asymptotic-statement}{%
+\subsection{5. T3: the scaling limit, as one asymptotic
+statement}\label{t3-the-scaling-limit-as-one-asymptotic-statement}}
+
+Along the continuum curve the bare coupling runs with the cutoff. With
+\(b_0=11N/(48\pi^2)\) and \(b_1=34N^2/(3(16\pi^2)^2)\) for \(SU(N)\)
+(the two-loop coefficients in the convention
+\(\beta(g)=-b_0g^3-b_1g^5+\cdots\); Gross--Wilczek, Politzer, abstract,
+B78), the lattice \(\Lambda\) parameter is defined by
+\[a\Lambda_{\rm lat}(g)=(b_0g^2)^{-b_1/(2b_0^2)}\,e^{-1/(2b_0g^2)}\,[1+O(g^2)],\]
+a dimensionless function that vanishes faster than any power of \(g\).
+
+\begin{quote}
+\textbf{T3.} The limit
+\(\displaystyle\frac{m}{\hbar c\,\Lambda_{\rm lat}} =\lim_{g\to0}\frac{\delta_\infty(g)}{a\Lambda_{\rm lat}(g)}\)
+exists and lies in \((0,\infty)\).
+\end{quote}
+
+This is the Jaffe--Witten mass gap \(m\) expressed on the lattice route:
+the dimensionless infinite-volume gap must vanish as \(g\to0\) exactly
+like \(e^{-1/(2b_0g^2)}\) times the prescribed power, with a positive
+finite prefactor. Any weaker vanishing gives \(m=\infty\) in the
+continuum (the theory is gapped only at the cutoff scale, as the compact
+abelian theory in three dimensions is, G07 §4); any faster vanishing, or
+\(\delta_\infty=0\) at some \(g\), gives \(m=0\). T3 presupposes
+T2\('\). The order of limits is \(N\to\infty\) at fixed \(g\) first,
+then \(g\to0\) with \(a=\Lambda_{\rm lat}^{-1}\,a\Lambda_{\rm lat}(g)\);
+Jaffe and Witten note (p.~6, passage) that a gap uniform in the volume
+would also serve to construct the infinite-volume limit, which is the
+reverse order.
+
+\textbf{The small-volume corner.} For \(L\ll\hbar c/\Lambda\) the
+constant-mode sector of the continuum torus theory has gap
+\(\delta_1g(L)^{2/3}\hbar c/L\) (C133, G07 Proposition 7), and Lüscher's
+expansion (Nucl. Phys. B219 (1983) 233, abstract) supplies the
+corrections in powers of \(g^{2/3}\) with \(g\) the renormalized
+coupling at scale \(L\). In the variable \(z(L)=\Delta(L)L/(\hbar c)\)
+the two ends read
+\[z(L)=\delta_1\,g(L)^{2/3}\,[1+O(g^{2/3})]\ \ (L\to0),\qquad
+z(L)\sim\frac{mL}{\hbar c}\ \ (L\to\infty),\] and Lüscher--Münster
+(Nucl. Phys. B232 (1984) 445, abstract) place the crossover near
+\(z\simeq2\). The conjecture, in this variable, is that \(z(L)\) is a
+function that starts at zero and grows without bound, with \(m\) the
+slope of its linear asymptote. The corner is the only place where the
+gap of the continuum theory is presently computable, and it is
+controlled by the mechanism of
+\href{action-floor-yang-mills-gap.md}{G08}.
+
+\hypertarget{t4-existence}{%
+\subsection{6. T4: existence}\label{t4-existence}}
+
+The lattice route needs the continuum limit of the Euclidean lattice
+theory with Osterwalder--Schrader reconstruction. Known: ultraviolet
+stability of four-dimensional lattice Yang--Mills in a finite volume
+with the cutoff removed (Balaban, Commun. Math. Phys. 122 (1989) 355 and
+the series it belongs to; Magnen--Rivasseau--Sénéor, Commun. Math. Phys.
+155 (1993) 325, with an infrared cutoff; both metadata). Open: the
+infinite-volume limit, the axioms in infinite volume, and any spectral
+information. Jaffe and Witten (p.~7, passage) write that a construction
+on a compact space alone would be a major step and that no present ideas
+give a gap uniform in the volume.
+
+\hypertarget{the-list}{%
+\subsection{7. The list}\label{the-list}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Statement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+T1 & finite lattice: unique physical ground state, gap
+\(\Delta_{a,L}=(\hbar c/a)\delta(g;N,G)>0\) & proved (Theorem 1) \\
+T2 & \(\delta(g;N,G)\ge c(N)g^2\) for \(g\ge g_0(N)\), uniformly in
+\(N\) & Euclidean form established (Osterwalder--Seiler); Hamiltonian
+form is the next target \\
+T2\('\) & \(\delta_\infty(g)>0\) for all \(g>0\) (no Coulomb phase) &
+open; false for \(U(1)\) \\
+T3 &
+\(\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\in(0,\infty)\)
+& open; the Millennium content given T4 \\
+T4 & continuum infinite-volume theory with the axioms & finite-volume UV
+stability known; rest open \\
+S & small-volume corner \(z(L)=\delta_1g(L)^{2/3}[1+O(g^{2/3})]\) & C133
+plus Lüscher's expansion \\
+\end{longtable}
+
+Three of the six rows are theorems or established results; the
+conjecture is T2\('\) together with T3, given T4. The list replaces
+``prove the mass gap'' by ``prove T2 in Hamiltonian form, then push
+\(g_0\) down''.
+
+\hypertarget{consequence-for-state}{%
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
+
+The next note is T2 in Hamiltonian form: a volume-uniform gap at strong
+coupling for the Kogut--Susskind Hamiltonian, by a cluster expansion or
+a relatively bounded perturbation argument that handles the unbounded
+electric term. Its output is a number \(g_0(N)\); every later step is an
+improvement of that number toward zero along the scaling curve. The
+\(d=3\) target of STATE keeps its place as the case where T3 has no
+transmutation to perform.
+\end{document}
