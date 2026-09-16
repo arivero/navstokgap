@@ -28,15 +28,16 @@ no new novelty claim and no Yang–Mills mass-gap result.
 
 ## Current research direction
 
-[STATE](research/STATE.md) holds the goal, what is in hand and the next
-notes. The solved comparison case is Yang--Mills quantum mechanics: the
-zero-momentum sector of the torus theory has a gap
-$\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ produced by the uncancelled transverse
-zero-point energy along the abelian valleys
-([G07](notes/low-dimensional-mass-gap.md),
-[G08](notes/action-floor-yang-mills-gap.md), claims C131--C133). The open
-problem is the uniformity of a gap in volume and cutoff, which the
-strong-coupling and small-volume ends each fail in their own limit.
+[The position note](notes/mass-gap-position.md)
+([PDF](out/papers/mass-gap-position.pdf)) is the synthesis: what is
+proved, what is imported, what has been ruled out, and what remains.
+[STATE](research/STATE.md) holds the working queue. In short, the
+conjecture decomposes into six named statements, of which the
+finite-lattice gap and the volume-uniform strong-coupling gap are proved
+here; the clause $m<\infty$ is reduced to the existence of the theory
+plus the nontriviality of one flowed correlator; and the clause $m>0$
+remains, with real-space blocking and expansion around the free theory
+both closed off by explicit computation.
 
 ## Supporting proofs and sources
 

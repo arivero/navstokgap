@@ -12,30 +12,12 @@ one obligation at a time.
 
 ## What is in hand
 
-- **Two ends of the problem are known, and the middle is the problem.**
-  At strong coupling the lattice theory has a gap uniform in the volume
-  (Osterwalder--Seiler cluster expansion, in units of $1/a$). At small
-  volume the zero-mode sector has a gap $\delta_1g^{2/3}\hbar c/L$ proven
-  positive for every $L$ ([G07](../notes/low-dimensional-mass-gap.md)
-  §3.3, from C133) and Lüscher's expansion carries it to one loop. Neither
-  end survives its own limit: the strong-coupling gap is tied to $a$, the
-  small-volume gap decays as $1/L$. The mass gap is the statement that the
-  crossover, near $z=M(0^+)L\simeq2$ in Lüscher--Münster's variable, hands
-  over to a limit $m>0$ in units set by the running coupling.
-- **Dimensional shape** ([C131--C132](../claims/LEDGER.md)): classical
-  $d=4$ Yang--Mills carries no constant, so any finite gap is
-  $m=a^{-1}F(g^2(a)\hbar)$ with $F\to0$ along the continuum curve; in
-  $d=3$ the coupling itself is the mass unit. The gap-to-unit equivalence
-  holds in $d=2,3$ and fails in $d=4$.
-- **Mechanism in the solved sector**: the gap of the constant modes is the
-  uncancelled transverse zero-point energy along the abelian valleys
-  ([G08](../notes/action-floor-yang-mills-gap.md)); supersymmetric
-  cancellation removes it (de Wit--Lüscher--Nicolai).
-- **Rigorous constructions available for import**: $d=2$ (Driver,
-  Gross--King--Sengupta, Lévy; Witten's exact solution); $d=3$ finite
-  volume by stochastic quantisation ([Chevyrev review](../docs/Chevyrev_StochasticYM_2202.13359v2.md));
-  $d=4$ finite-volume ultraviolet stability (Balaban; Magnen--Rivasseau--
-  Sénéor), no gap. Reading levels for all of these are in B78.
+[The position note](../notes/mass-gap-position.md) is the synthesis: six
+named statements, T1 and T2 proved here, the finiteness clause reduced
+to T4 plus one nonvanishing flowed correlator, two routes closed by
+computation (real-space blocking; expansion around the free theory), and
+three places where the non-abelian structure is isolated. Read it first;
+the items below are the working queue.
 
 ## Next steps (each a note)
 

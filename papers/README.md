@@ -20,6 +20,12 @@ below retain the proofs; their local follow-ups do not select the next task.
   dictionary to the positive-action question;
   [PDF](../out/papers/low-dimensional-mass-gap.pdf). Sources in B78.
 
+- [mass-gap-position.tex](mass-gap-position.tex): generated from
+  [the position note](../notes/mass-gap-position.md); the synthesis of
+  the mass-gap route, with the six named statements, the proved results
+  and their constants, the closed-off routes and the remaining
+  obligations; [PDF](../out/papers/mass-gap-position.pdf).
+
 - [action-floor-yang-mills-gap.tex](action-floor-yang-mills-gap.tex):
   generated from [the G08 note](../notes/action-floor-yang-mills-gap.md);
   a transverse phase-space area floor confines the Yang--Mills
