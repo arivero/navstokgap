@@ -239,3 +239,43 @@ the exact identities and sum rule of Section 2, and explicit thresholds
 on both sides of the intermediate region. Several of the closures are
 corrections of claims made earlier in the same series, and each is
 recorded with the computation that forced it.
+
+## 7. Where the map ends
+
+The mass gap for $SU(3)$ in four dimensions is not proved here. Both
+sides of the confinement scale carry explicit constants, the two
+standing reasons for stopping have been researched rather than left as
+reasons, and what remains can be stated in one sentence.
+
+*The two reasons, researched.* A Griffiths-type correlation inequality
+would give monotonicity of the string tension and of decay rates in
+channels with vanishing mean, and it transfers control from weaker to
+stronger coupling only; on this map it replaces the three strong-side
+blocking steps and leaves the weak side untouched, so it is a
+simplification and not an unblocking. Even the vacuum-sector gap's
+monotonicity would not follow, the truncated plaquette correlator
+having two terms that both increase. A certified verification of the
+mixing condition at $\beta_W\simeq6$ is a supremum over boundary
+conditions of an integral in thousands of dimensions, while certified
+polymer enumeration converges only where the expansion does, at
+$\beta_W$ of order one; so it cannot be supplied where it is needed, by
+any method known to this author.
+
+*The asymmetry of the two sides.* The strong side is proved to
+$\beta_W=0.0135$ against a physical crossover at $5.7$, a factor of
+$400$. The weak side, computed explicitly for one blocking step, has its
+threshold controlled by the fourth power of the fluctuation
+propagator's decay rate, which no source states explicitly and which
+two explicit arguments put at $10^{-3}$ per lattice unit against an
+order-one truth; the threshold lands at $g^2\sim10^{-12}$ even with an
+ideal rate, twelve orders of magnitude below the physical onset of the
+running at $g^2\simeq1$. Sharpening constants within the present method
+closes neither side, and the weak side by a margin that no sharpening
+addresses.
+
+*What is open.* Control of the renormalization steps at couplings where
+the fluctuation is not small compared with the nonlinearity, with no
+expansion in any parameter. That is the mass-gap problem for $SU(3)$,
+stated as precisely as this programme can state it, and it is new
+mathematics.
+
