@@ -124,11 +124,25 @@ one obligation at a time.
    renormalization. Perturbative scaling $m\le Cg^2\hbar c/\sqrt{8t}$,
    which must fail at $\sqrt{8t_*}\simeq Cg^2\hbar c/m$: the bound
    contains its own consistency condition. $m>0$ untouched.
-3f. **Next:** compute $k_1,k_2$ in free Maxwell theory to make the
-   $1/\sqrt{8t}$ scaling quantitative and check the free limit; then
-   state the Hamiltonian flow-renormalization question as its own
-   target, since (F1) and the dressed-vacuum problem of the Schur note
-   are both instances of it.
+3f. **Done: free-field value of the flowed bound.**
+   [Note](../notes/flowed-bound-free-field.md): for the flowed magnetic
+   energy density in the free theory,
+   $\chi=3g^4/(2048\pi^{3/2}t^{5/2})$ and
+   $\langle|D|^2\rangle=g^2/(128\pi^2t^3)$, so the ratio is
+   $16/(3g^2\sqrt{\pi t})$ and the bound is
+   $m\le\frac{8}{3\sqrt\pi}\hbar c/\sqrt t\approx4.26\,\hbar c/\sqrt{8t}$:
+   **the coupling cancels** (correcting the $g^2$ of the previous note).
+   Checked independently by the two-photon $f$-sum rule, which gives the
+   same number by a disjoint route. Consequence: weak coupling proves
+   nothing, since the bound only reaches $m$ at $\sqrt{8t_*}\simeq4.26\hbar c/m$,
+   where the coefficient is nonperturbative.
+3g. **Next:** a lower bound $\chi_{\varphi_t}\ge c\,t^{-5/2}$ at
+   $\sqrt{8t}$ of order the correlation length, uniform in the lattice
+   spacing. This is a positivity statement about one flowed correlator,
+   not a spectral one; with (F1) it closes $m<\infty$. Candidate tools:
+   reflection positivity in the time direction for the equal-time
+   susceptibility, or a variational lower bound on the fluctuation of a
+   smeared plaquette sum at strong coupling continued in $g$.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

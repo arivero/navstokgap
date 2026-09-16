@@ -1,0 +1,210 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The flowed bound in free field theory: the coupling cancels, and the bound is informative },pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-flowed-bound-in-free-field-theory-the-coupling-cancels-and-the-bound-is-informative-only-at-the-confinement-scale}{%
+\section{The flowed bound in free field theory: the coupling cancels,
+and the bound is informative only at the confinement
+scale}\label{the-flowed-bound-in-free-field-theory-the-coupling-cancels-and-the-bound-is-informative-only-at-the-confinement-scale}}
+
+The two ground-state quantities of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note} are
+computed in closed form for the free (abelian) theory with the flowed
+magnetic energy density
+\(\varphi_t=\tfrac12(b_t\!\cdot\!b_t-\langle\cdot\rangle)\):
+\[\chi_{\varphi_t}=\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}},\qquad
+\big\langle|D_{\varphi_t}|^2\big\rangle=\frac{g^2}{128\,\pi^2\,t^3},\qquad
+\frac{\langle|D|^2\rangle}{\chi}=\frac{16}{3\,g^2\sqrt{\pi t}},\] so
+that the bound \(m\le\frac{g^2\hbar c}{2}\langle|D|^2\rangle/\chi\)
+becomes
+\[\boxed{\;m\ \le\ \frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}\;=\;\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt{8t}}\;\approx\;4.26\,\frac{\hbar c}{\sqrt{8t}}\;}\]
+with the coupling cancelling between numerator and denominator. This
+corrects Section 5 of the finiteness note, which carried a factor
+\(g^2\) from dimensional analysis alone: \(\chi\propto g^4\) and
+\(\langle|D|^2\rangle\propto g^2\), so the ratio supplies \(g^{-2}\).
+The result is confirmed independently by the spectral form of the same
+bound: the smeared operator creates two photons of momenta \(\pm k\)
+with weight \(\propto k^4e^{-4tk^2}dk\), and the weighted mean of their
+energy \(2\hbar ck\) is exactly \(8\hbar c/(3\sqrt{\pi t})\). Two
+consequences. The free bound tends to zero as the smearing grows, as it
+must for \(m=0\), so the inequality is not vacuous. And in the
+interacting theory the weak-coupling regime is
+\(\sqrt{8t}\ll\hbar c/(\text{confinement scale})\), where the bound
+reads \(m\lesssim4.26\,\hbar c/\sqrt{8t}\) and is far weaker than the
+expected gap: the bound becomes informative exactly at
+\(\sqrt{8t}\sim\hbar c/m\), where its coefficient is no longer
+perturbative. No perturbative computation can make the finiteness half
+useful; what is needed is the value of one susceptibility at the
+confinement scale. Constants explicit; nothing promoted.
+
+\hypertarget{the-free-ground-state-with-explicit-constants}{%
+\subsection{1. The free ground state with explicit
+constants}\label{the-free-ground-state-with-explicit-constants}}
+
+Take the abelian case of the Hamiltonian of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note} §1,
+\[H=\int d^3x\;\Big[\frac{g^2c}{2\hbar}\,\Pi_i\Pi_i+\frac{\hbar c}{2g^2}\,b_ib_i\Big],
+\qquad b_i=\varepsilon_{ijk}\partial_jA_k,
+\qquad[A_i(x),\Pi_j(y)]=i\hbar\delta_{ij}\delta^3(x-y),\] in Coulomb
+gauge \(\partial_iA_i=0\), two transverse polarizations. In Fourier
+modes each transverse mode is an oscillator of mass \(M=\hbar/(g^2c)\)
+and frequency \(\omega_k=ck\), since
+\(\tfrac12M\omega_k^2=\hbar ck^2/(2g^2)\) matches the magnetic term. Its
+ground-state width gives
+\[\big\langle\hat A_i(k)\hat A_j(k')\big\rangle_0=(2\pi)^3\delta^3(k+k')\,P^{\rm T}_{ij}(k)\,\frac{\hbar}{2M\omega_k}
+=(2\pi)^3\delta^3(k+k')\,P^{\rm T}_{ij}(k)\,\frac{g^2}{2k},\] with
+\(P^{\rm T}_{ij}=\delta_{ij}-\hat k_i\hat k_j\). Dimensions:
+\([\hat A]=L^2\), \([(2\pi)^3\delta^3]=L^3\), and \(g^2/2k\) is a
+length.
+
+\hypertarget{the-flow-is-the-heat-equation-here}{%
+\subsection{2. The flow is the heat equation
+here}\label{the-flow-is-the-heat-equation-here}}
+
+For an abelian field the flow equation of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note} §4
+reduces to \(\partial_sB_i=\Delta B_i-\partial_i(\partial_jB_j)\), and a
+transverse initial field stays transverse, so
+\[\hat B_i(t,k)=e^{-tk^2}\hat A_i(k),\qquad
+\hat b_i(t,k)=i\varepsilon_{ijl}k_j\,e^{-tk^2}\hat A_l(k).\] The flow
+time has dimension of length squared; the conventional smearing radius
+is \(\sqrt{8t}\). Set
+\(\varphi_t=\tfrac12\big(b_t\!\cdot\!b_t-\langle b_t\!\cdot\!b_t\rangle_0\big)\),
+of dimension \(L^{-4}\).
+
+\hypertarget{the-susceptibility}{%
+\subsection{3. The susceptibility}\label{the-susceptibility}}
+
+Write \(G_{ij}(z)=\langle b_{t,i}(z)b_{t,j}(0)\rangle_0\). Using
+\(\varepsilon_{iab}\varepsilon_{jcd}k_ak_cP^{\rm T}_{bd}(k)=k^2P^{\rm T}_{ij}(k)\)
+(the longitudinal part of \(P^{\rm T}\) drops because
+\(\varepsilon_{iab}k_a\hat k_b=0\)),
+\[\tilde G_{ij}(k)=k^2P^{\rm T}_{ij}(k)\,\frac{g^2}{2k}\,e^{-2tk^2}
+=\frac{g^2k}{2}\,e^{-2tk^2}\,P^{\rm T}_{ij}(k).\] For a Gaussian field
+Wick's theorem gives
+\(\langle\varphi_t(z)\varphi_t(0)\rangle^{\rm c}_0=\tfrac12\sum_{ij}G_{ij}(z)^2\)
+(two pairings), so by Parseval, with
+\(\sum_{ij}[P^{\rm T}_{ij}]^2=\operatorname{tr}P^{\rm T}=2\),
+\[\chi_{\varphi_t}=\int d^3z\,\langle\varphi_t\varphi_t\rangle^{\rm c}
+=\frac12\int\frac{d^3k}{(2\pi)^3}\,\frac{g^4k^2}{2}\,e^{-4tk^2}
+=\frac{g^4}{4}\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^4e^{-4tk^2}.\]
+With \(\int_0^\infty k^4e^{-\alpha k^2}dk=3\sqrt\pi/(8\alpha^{5/2})\)
+and \(\alpha=4t\), so \((4t)^{5/2}=32t^{5/2}\),
+\[\chi_{\varphi_t}=\frac{g^4}{4}\cdot\frac1{2\pi^2}\cdot\frac{3\sqrt\pi}{256\,t^{5/2}}
+=\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}} .\] Dimension:
+\([\chi]=[\varphi]^2L^3=L^{-5}\) and \(t^{5/2}\sim L^5\), as required.
+
+\hypertarget{the-gradient-term}{%
+\subsection{4. The gradient term}\label{the-gradient-term}}
+
+By Parseval
+\(O=\int d^3y\,\varphi_t=\tfrac12\int\frac{d^3k}{(2\pi)^3}k^2e^{-2tk^2}|\hat A(k)|^2+\text{const}\),
+so
+\[D_i(x)=\frac{\delta O}{\delta A_i(x)}=\big(-\Delta\,e^{2t\Delta}A\big)_i(x)
+=\big(\nabla\times b_{2t}\big)_i(x),\qquad
+\hat D_i(k)=k^2e^{-2tk^2}\hat A_i(k),\] the curl of the magnetic field
+at twice the flow time. Hence
+\[\big\langle|D|^2\big\rangle_0=\int\frac{d^3k}{(2\pi)^3}k^4e^{-4tk^2}\cdot2\cdot\frac{g^2}{2k}
+=g^2\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^5e^{-4tk^2}
+=\frac{g^2}{2\pi^2}\cdot\frac1{64\,t^3}=\frac{g^2}{128\,\pi^2\,t^3},\]
+using \(\int_0^\infty k^5e^{-\alpha k^2}dk=1/\alpha^3\). Dimension:
+\([\varphi]^2L^2=L^{-6}\) and \(t^3\sim L^6\), as required.
+
+\hypertarget{the-bound-and-the-cancellation-of-the-coupling}{%
+\subsection{5. The bound, and the cancellation of the
+coupling}\label{the-bound-and-the-cancellation-of-the-coupling}}
+
+\[\frac{\langle|D|^2\rangle}{\chi}
+=\frac{g^2}{128\pi^2t^3}\cdot\frac{2048\,\pi^{3/2}t^{5/2}}{3g^4}
+=\frac{16}{3\,g^2\sqrt{\pi t}},\]
+\[m\ \le\ \frac{g^2\hbar c}{2}\cdot\frac{16}{3g^2\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}
+=\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt{8t}}\approx4.26\,\frac{\hbar c}{\sqrt{8t}} .\]
+
+\textbf{Correction.} Section 5 of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note}
+inferred \(m\le Cg^2\hbar c/\sqrt{8t}\) from dimensional analysis,
+assigning the pure numbers \(k_1,k_2\) no coupling dependence. The
+computation shows \(\chi\propto g^4\) while
+\(\langle|D|^2\rangle\propto g^2\), so the ratio carries \(g^{-2}\) and
+the bound is of order \(g^0\). The corrected statement is that the
+perturbative bound is \(4.26\,\hbar c/\sqrt{8t}\,[1+O(g^2)]\), with the
+coupling entering only through the corrections. The \(t\)-dependence
+\(1/\sqrt{8t}\) of the earlier note stands.
+
+\hypertarget{independent-check-the-two-photon-sum-rule}{%
+\subsection{6. Independent check: the two-photon sum
+rule}\label{independent-check-the-two-photon-sum-rule}}
+
+By the spectral reading of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note} §3,
+the bound equals the mean excitation energy weighted by the spectral
+weight of \(O\). In the free theory \(O\) is quadratic in \(\hat A\) and
+creates two photons of momenta \(k\) and \(-k\), of total energy
+\(2\hbar ck\), with weight proportional to
+\(\big[k^2e^{-2tk^2}\big]^2\big[g^2/2k\big]^2\,k^2\,dk\propto k^4e^{-4tk^2}dk\)
+after the phase-space factor. Therefore
+\[\frac{\int_0^\infty 2\hbar ck\cdot k^4e^{-4tk^2}dk}{\int_0^\infty k^4e^{-4tk^2}dk}
+=2\hbar c\,\frac{1/(64t^3)}{3\sqrt\pi/(256\,t^{5/2})}
+=2\hbar c\cdot\frac{4}{3\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t},\] the same number. The
+agreement checks Proposition 1, the intensive form of Corollary 2 and
+the Gaussian computation against each other, since the two routes share
+no step beyond the definition of \(\varphi_t\).
+
+\hypertarget{what-this-says-about-the-interacting-theory}{%
+\subsection{7. What this says about the interacting
+theory}\label{what-this-says-about-the-interacting-theory}}
+
+\emph{The free limit is correct.} For \(m=0\) the bound must be able to
+vanish, and it does, like \(1/\sqrt{8t}\): the inequality is not
+vacuous, and the flow time is the only resolution scale in the free
+theory.
+
+\emph{Weak coupling proves nothing.} In the interacting theory the
+perturbative regime at flow time \(t\) is
+\(\sqrt{8t}\ll\hbar c/(\hbar c\Lambda)\), where the flowed correlators
+are the free ones up to \(O(g^2(\sqrt t))\). There the bound reads
+\(m\lesssim4.26\,\hbar c/\sqrt{8t}\), which is weaker than
+\(\hbar c\Lambda\) by the ratio \(1/(\sqrt{8t}\Lambda)\gg1\): no
+constraint on the gap. The bound reaches the expected value of \(m\)
+only at \[\sqrt{8t_*}\ \simeq\ 4.26\,\frac{\hbar c}{m},\] the
+correlation length, and there the coefficient is a nonperturbative
+number, since the leading behaviour of \(\chi_{\varphi_t}\) at
+\(\sqrt{8t}\sim\hbar c/m\) is not given by the Gaussian formula of
+Section 3. This sharpens the statement of
+\href{finiteness-half-flowed-susceptibility.md}{the finiteness note} §5:
+the breakdown of the \(1/\sqrt{8t}\) scaling is not a defect of the
+estimate but the content of the problem. \textbf{Proving \(m<\infty\)
+requires the value of one susceptibility at the confinement scale, and
+no expansion around the free theory supplies it.}
+
+\emph{Which susceptibility.} At \(\sqrt{8t}\sim\hbar c/m\),
+\(\chi_{\varphi_t}\) is the zero-momentum fluctuation of the energy
+density smeared over a correlation length, which in a gapped theory is
+finite and positive, and in a theory with no finite-energy excitations
+would have to vanish. It is therefore the natural target for a
+nonperturbative lower bound, and a lattice statement of the form
+\(\chi_{\varphi_t}\ge c\,t^{-5/2}\) uniform in the cutoff would close
+the finiteness half.
+
+\hypertarget{consequence-for-state}{%
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
+
+The finiteness half is now quantitative: an exact inequality, a closed
+free-field value with an independent check, and an explicit statement of
+where it becomes informative. The next step it names is a lower bound on
+\(\chi_{\varphi_t}\) at \(\sqrt{8t}\) of order the correlation length,
+uniform in the lattice spacing, which is a positivity statement about
+one flowed correlator rather than a spectral statement. Together with
+hypothesis (F1) it would give \(m<\infty\); the clause \(m>0\) remains
+untouched by this whole line, and its obstruction is the one recorded in
+\href{schur-error-ultraviolet.md}{the Schur note}.
+\end{document}
