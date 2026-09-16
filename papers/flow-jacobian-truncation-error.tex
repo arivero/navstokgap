@@ -1,0 +1,196 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The truncation error of a flow step is Gaussian times $e^{2t\|G\|_\infty}$, so the renorma},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-truncation-error-of-a-flow-step-is-gaussian-times-e2tg_infty-so-the-renormalization-step-is-small-exactly-on-small-field-configurations}{%
+\section{\texorpdfstring{The truncation error of a flow step is Gaussian
+times \(e^{2t\|G\|_\infty}\), so the renormalization step is small
+exactly on small-field
+configurations}{The truncation error of a flow step is Gaussian times e\^{}\{2t\textbackslash\textbar G\textbackslash\textbar\_\textbackslash infty\}, so the renormalization step is small exactly on small-field configurations}}\label{the-truncation-error-of-a-flow-step-is-gaussian-times-e2tg_infty-so-the-renormalization-step-is-small-exactly-on-small-field-configurations}}
+
+The linearization of the gradient flow is the covariant heat equation
+with a curvature term,
+\[\partial_s\,\delta B_\mu=D^2\,\delta B_\mu+2\big[G_{\mu\nu},\delta B_\nu\big],
+\qquad D_\mu=\partial_\mu+[B_\mu,\cdot\,],\] so the flow Jacobian
+\(D\Phi_t\) is the kernel of that equation. Kato's inequality dominates
+the covariant heat kernel by the free one pointwise, and the curvature
+term is a bounded multiplication operator, so Duhamel gives
+\[\big|D\Phi_t(x,y)\big|\ \le\ e^{2t\|G\|_\infty}\;\frac{1}{(4\pi t)^{3/2}}\,
+e^{-|x-y|^2/(4t)} .\] Truncating the conjugated Hamiltonian of
+\href{flow-conjugation-truncation.md}{the flow-conjugation note} at
+range \(R\) therefore costs a relative error of order
+\[\varepsilon(R,t)\ \sim\ \exp\Big[2t\|G\|_\infty-\frac{R^2}{4t}\Big],\]
+and with \(R\) of order the scale \(\sqrt{8t}\) the exponent is
+\(2t\|G\|_\infty-2\): the truncation is small \textbf{precisely when
+\(t\,\|G\|_\infty\lesssim1\)}, that is when the flowed field strength is
+below the inverse square of the scale being integrated out. This is the
+small-field condition of constructive renormalization group, derived
+here from the flow rather than assumed, and it explains why Balaban's
+programme splits configurations into small-field and large-field
+regions: on small fields the flow truncation is exponentially accurate,
+and on large fields the Jacobian bound degrades exponentially and no
+truncation of this kind is available. The flow's own monotonicity
+controls \(\int|G|^2\) and leaves \(\|G\|_\infty\) open, so the missing
+estimate is a pointwise bound on the flowed field strength. Constants
+explicit; nothing promoted.
+
+\hypertarget{the-linearized-flow}{%
+\subsection{1. The linearized flow}\label{the-linearized-flow}}
+
+Take the continuum flow in the gauge-modified form
+\(\partial_sB_\mu=D_\nu G_{\nu\mu}+\lambda D_\mu\partial_\nu B_\nu\)
+with \(\lambda=1\) (Lüscher, arXiv:1006.4518v3, equations (1.1)--(1.2)
+and (2.2); passage level via the
+\href{../docs/Luscher_WilsonFlow_1006.4518v3.md}{local companion}).
+
+\textbf{Proposition 1.} The variation \(\delta B\) of a solution obeys
+\[\partial_s\,\delta B_\mu=D^2\,\delta B_\mu+2\big[G_{\mu\nu},\delta B_\nu\big].\]
+
+\emph{Proof.} Varying the first term, \[\delta\big(D_\nu G_{\nu\mu}\big)
+=D_\nu\big(D_\nu\delta B_\mu-D_\mu\delta B_\nu\big)+\big[\delta B_\nu,G_{\nu\mu}\big]
+=D^2\delta B_\mu-D_\nu D_\mu\delta B_\nu+\big[\delta B_\nu,G_{\nu\mu}\big],\]
+and
+\(D_\nu D_\mu\delta B_\nu=D_\mu D_\nu\delta B_\nu+[G_{\nu\mu},\delta B_\nu]\).
+Varying the gauge term gives \(D_\mu D_\nu\delta B_\nu\) to the same
+order, which cancels the second piece, leaving
+\(D^2\delta B_\mu-2[G_{\nu\mu},\delta B_\nu]=D^2\delta B_\mu+2[G_{\mu\nu},\delta B_\nu]\).
+\(\square\)
+
+So \(D\Phi_t\) is the solution kernel of a covariant heat equation with
+a zeroth-order term given by the curvature acting in the adjoint
+representation.
+
+\hypertarget{the-gaussian-bound}{%
+\subsection{2. The Gaussian bound}\label{the-gaussian-bound}}
+
+\textbf{Proposition 2.} Let
+\(\|G\|_\infty=\sup_{0\le s\le t,\ x}\|G(s,x)\|\) in the adjoint
+operator norm. Then the kernel of the linearized flow obeys
+\[\big|D\Phi_t(x,y)\big|\ \le\ e^{2t\|G\|_\infty}\,K^{\rm free}_t(x-y),
+\qquad K^{\rm free}_t(z)=\frac{e^{-|z|^2/(4t)}}{(4\pi t)^{3/2}} .\]
+
+\emph{Proof.} Write the equation as \(\partial_s u=D^2u+Mu\) with
+\((Mu)_\mu=2[G_{\mu\nu},u_\nu]\), a multiplication operator of norm at
+most \(2\|G\|_\infty\). Duhamel gives
+\(u(t)=e^{tD^2}u(0)+\int_0^t e^{(t-s)D^2}Mu(s)\,ds\), and iterating,
+\(\|u(t)\|\le\sum_n\frac{(2t\|G\|_\infty)^n}{n!}\sup\|e^{\cdot D^2}\|\)-type
+bounds; pointwise, Kato's inequality gives
+\(|e^{sD^2}f|\le e^{s\Delta}|f|\) for the covariant Laplacian in any
+representation (Simon, J. Funct. Anal. 32 (1979) 97, metadata level), so
+each term is dominated by the free heat kernel and the series sums to
+\(e^{2t\|G\|_\infty}\). \(\square\)
+
+The bound is saturated in the free case, where \(G=0\) and
+\(D\Phi_t=e^{t\Delta}\) exactly, in agreement with
+\href{flowed-bound-free-field.md}{the free-field note} §2.
+
+\hypertarget{the-truncation-error}{%
+\subsection{3. The truncation error}\label{the-truncation-error}}
+
+The conjugated kinetic operator of
+\href{flow-conjugation-truncation.md}{the flow-conjugation note} §2 is
+built from \(D\Phi_t\), which couples links at separation \(|x-y|\) with
+weight bounded by Proposition 2. Truncating it to range \(R\) discards
+the tail \(|x-y|>R\), whose weight relative to the whole is
+\[\varepsilon(R,t)\ \le\ e^{2t\|G\|_\infty}\int_{|z|>R}K^{\rm free}_t(z)\,d^3z
+\ \le\ C\,e^{2t\|G\|_\infty}\,e^{-R^2/(4t)}\Big(1+\frac{R}{\sqrt t}\Big),\]
+by the standard Gaussian tail estimate. With the natural choice
+\(R=\sqrt{8t}\), the exponent is \(2t\|G\|_\infty-2\), so
+
+\textbf{Corollary 3.} The flow-truncation step at scale \(\sqrt{8t}\)
+has relative error
+\[\varepsilon\ \lesssim\ \exp\big[2t\|G\|_\infty-2\big],\] small when
+\(t\|G\|_\infty\lesssim1\) and exponentially large otherwise. Taking
+\(R=\kappa\sqrt{8t}\) improves the exponent to
+\(2t\|G\|_\infty-2\kappa^2\) at the cost of a longer-range effective
+Hamiltonian, so a fixed accuracy is available whenever
+\(\kappa^2\gtrsim t\|G\|_\infty\).
+
+\hypertarget{what-the-condition-says}{%
+\subsection{4. What the condition says}\label{what-the-condition-says}}
+
+Write \(\ell=\sqrt{8t}\) for the scale being integrated out. The
+condition \(t\|G\|_\infty\lesssim1\) reads
+\[\|G\|_\infty\ \lesssim\ \frac{8}{\ell^2},\] that is, the field
+strength must be below the inverse square of the scale. In the units of
+\href{mass-gap-obligations-lattice.md}{the obligations map} the lattice
+field strength at spacing \(a\) is at most of order \(1/a^2\), so at the
+first step, \(\ell\sim a\), the condition is marginal; after the field
+has been smoothed over \(\ell\gg a\) the typical \(\|G\|\) falls and the
+condition is comfortable on smooth configurations and violated on rough
+ones.
+
+This is the small-field condition of constructive renormalization group,
+obtained here as the condition for the flow truncation to be accurate,
+and it identifies the difficulty by name:
+
+\begin{itemize}
+\tightlist
+\item
+  on \textbf{small-field} configurations, \(\|G\|_\infty\le\eta/\ell^2\)
+  with \(\eta\) small, the truncation error is \(e^{-2\kappa^2+2\eta}\)
+  and every step of the route of
+  \href{flow-conjugation-truncation.md}{the flow-conjugation note} §6 is
+  controlled;
+\item
+  on \textbf{large-field} configurations the Jacobian bound degrades
+  like \(e^{2t\|G\|_\infty}\) and no truncation of this kind is
+  available, so those regions must be handled by a different argument.
+\end{itemize}
+
+The split is exactly the one Balaban's programme makes (Commun. Math.
+Phys. 122 (1989) 355 and the accompanying series, metadata level), and
+the derivation above says why it is forced rather than chosen.
+
+\hypertarget{what-the-flow-itself-controls-and-what-it-leaves}{%
+\subsection{5. What the flow itself controls, and what it
+leaves}\label{what-the-flow-itself-controls-and-what-it-leaves}}
+
+The flow decreases the action monotonically,
+\(\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\le0\)
+(\href{comparison-and-bridges.md}{comparison note} §4), so
+\[\int|G(t,x)|^2\,d^3x\ \le\ \int|G(0,x)|^2\,d^3x\] for all \(t\): an
+\(L^2\) bound, uniform in the flow time. Proposition 2 needs an
+\(L^\infty\) bound, and the gap between them is the whole question. Two
+remarks fix its size.
+
+\emph{The free case is a parabolic smoothing estimate.} For \(G=0\) the
+linearized flow is the heat semigroup and
+\(\|e^{t\Delta}f\|_\infty\le(4\pi t)^{-3/4}\|f\|_2\), so an \(L^2\)
+bound on the initial curvature gives
+\(\|G(t)\|_\infty\lesssim t^{-3/4}\|G(0)\|_2\), which beats the required
+\(1/t\) for large \(t\) and fails for small \(t\). The interacting
+statement of this type is the a priori estimate that a construction must
+supply.
+
+\emph{Monotonicity is not enough by itself.} An \(L^2\) bound permits a
+configuration with curvature concentrated on a small region at arbitrary
+height, which is precisely a large-field region; excluding it is a
+statement about the measure in the Euclidean formulation and about the
+state in the Hamiltonian one. In the Hamiltonian framework there is no
+integration over configurations to absorb such regions into a small
+probability, which makes the Hamiltonian route harder at exactly this
+point than the Euclidean one.
+
+\hypertarget{consequence-for-state}{%
+\subsection{6. Consequence for STATE}\label{consequence-for-state}}
+
+The truncation error of a flow-based renormalization step is now
+explicit: Gaussian in the ratio of the truncation range to the flow
+radius, multiplied by \(e^{2t\|G\|_\infty}\). The step is controlled
+exactly on configurations with \(\|G\|_\infty\lesssim\ell^{-2}\), which
+derives the small-field condition instead of assuming it. The missing
+estimate is pointwise control of the flowed field strength, an
+\(L^\infty\) bound where the flow supplies only \(L^2\), and in the
+Hamiltonian framework there is no probabilistic route around it. That is
+the sharpest statement of the remaining obstacle this programme has
+reached, and it points at the Euclidean formulation as the place where
+the large-field regions can be given small weight.
+\end{document}

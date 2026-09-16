@@ -23,10 +23,11 @@ statements, of which two are proved and one is imported; the
 \textbf{upper side of the problem, the clause \(m<\infty\), is closed}
 as far as any variational method can take it, and reduced to the
 existence of the theory plus the nontriviality of one flowed correlator;
-the \textbf{lower side, the clause \(m>0\), is untouched}, and two
+the \textbf{lower side, the clause \(m>0\), is untouched}, and three
 natural routes to it have been closed by explicit computation rather
-than by difficulty. What remains is a change of variables at each scale,
-which is the constructive renormalization-group problem.
+than by difficulty. What remains is a controlled truncation at each
+scale, which is the constructive renormalization-group problem, and
+whose error is now explicit.
 
 \hypertarget{the-decomposition}{%
 \subsection{1. The decomposition}\label{the-decomposition}}
@@ -141,7 +142,7 @@ branch, to the uniqueness of the continuum limit
 \hypertarget{what-has-been-ruled-out}{%
 \subsection{3. What has been ruled out}\label{what-has-been-ruled-out}}
 
-Two routes were closed by computation.
+Four statements, each by computation.
 
 \textbf{Perturbation around the free theory cannot give \(m<\infty\)
 usefully.} The flowed bound is \(\approx4.26\,\hbar c/\sqrt{8t}\) in the
@@ -284,5 +285,11 @@ statements, two proved, the finiteness clause reduced to a single
 correlator, two routes closed with explicit numbers, and three places
 where the non-abelian structure is isolated in a form that a proof could
 use. The remaining step is the one that has been open since the problem
-was posed.
+was posed, and \href{flow-jacobian-truncation-error.md}{the Jacobian
+note} states its error: Gaussian in the truncation range over the flow
+radius, times \(e^{2t\|G\|_\infty}\), so the step is controlled exactly
+where the flowed field strength satisfies
+\(\|G\|_\infty\lesssim\ell^{-2}\). The missing ingredient is a pointwise
+bound on that field strength, where the flow supplies only an \(L^2\)
+bound.
 \end{document}

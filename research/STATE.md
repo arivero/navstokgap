@@ -200,10 +200,23 @@ the items below are the working queue.
    **not conjugation-invariant**: the gain is charged in full to the
    truncation restoring locality. Three routes to $m>0$ that avoid the
    constructive step are now closed by computation.
-3m. **Next:** the decay of the flow Jacobian $D\Phi_t$ on the lattice,
-   which governs the truncation error. The free case fixes it exactly
-   (Gaussian in $|x|/\sqrt{8t}$); the interacting case is the bounded
-   question, and it is the quantity a renormalization step must control.
+3m. **Done: the truncation error of a flow step.**
+   [Note](../notes/flow-jacobian-truncation-error.md): the linearized
+   flow is $\partial_s\delta B_\mu=D^2\delta B_\mu+2[G_{\mu\nu},\delta B_\nu]$,
+   so by Kato's inequality and Duhamel the Jacobian obeys
+   $|D\Phi_t(x,y)|\le e^{2t\|G\|_\infty}K^{\rm free}_t(x-y)$. Truncating at
+   range $R=\kappa\sqrt{8t}$ costs $\exp[2t\|G\|_\infty-2\kappa^2]$, so the
+   step is accurate **exactly when $\|G\|_\infty\lesssim\ell^{-2}$**: the
+   small-field condition of constructive RG, derived rather than assumed,
+   and the reason Balaban's programme splits small- from large-field
+   regions. The flow's monotonicity gives $\|G\|_{L^2}$ only; the missing
+   estimate is the $L^\infty$ bound, and the Hamiltonian framework has no
+   probabilistic route around it.
+3n. **Next:** the Hamiltonian framework has no measure in which
+   large-field regions carry small weight, so the natural move is to ask
+   what the same argument looks like on the Euclidean side, where they
+   do. Bounded question: state the flow-truncation step for the Euclidean
+   transfer matrix and identify which of T2$'$/T3 it would address.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

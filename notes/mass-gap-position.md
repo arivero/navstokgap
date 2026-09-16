@@ -9,10 +9,11 @@ statements, of which two are proved and one is imported; the **upper
 side of the problem, the clause $m<\infty$, is closed** as far as any
 variational method can take it, and reduced to the existence of the
 theory plus the nontriviality of one flowed correlator; the **lower
-side, the clause $m>0$, is untouched**, and two natural routes to it
+side, the clause $m>0$, is untouched**, and three natural routes to it
 have been closed by explicit computation rather than by difficulty. What
-remains is a change of variables at each scale, which is the
-constructive renormalization-group problem.
+remains is a controlled truncation at each scale, which is the
+constructive renormalization-group problem, and whose error is now
+explicit.
 
 ## 1. The decomposition
 
@@ -100,7 +101,7 @@ the continuum limit ([note](gapped-set-critical-coupling.md)).
 
 ## 3. What has been ruled out
 
-Two routes were closed by computation.
+Four statements, each by computation.
 
 **Perturbation around the free theory cannot give $m<\infty$ usefully.**
 The flowed bound is $\approx4.26\,\hbar c/\sqrt{8t}$ in the perturbative
@@ -208,5 +209,10 @@ What this programme has added is a map with constants: six named
 statements, two proved, the finiteness clause reduced to a single
 correlator, two routes closed with explicit numbers, and three places
 where the non-abelian structure is isolated in a form that a proof could
-use. The remaining step is the one that has been open since the problem
-was posed.
+use. The remaining step is the one that has been open since the problem was
+posed, and [the Jacobian note](flow-jacobian-truncation-error.md) states
+its error: Gaussian in the truncation range over the flow radius, times
+$e^{2t\|G\|_\infty}$, so the step is controlled exactly where the flowed
+field strength satisfies $\|G\|_\infty\lesssim\ell^{-2}$. The missing
+ingredient is a pointwise bound on that field strength, where the flow
+supplies only an $L^2$ bound.
