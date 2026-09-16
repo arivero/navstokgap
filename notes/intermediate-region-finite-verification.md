@@ -150,6 +150,22 @@ verification itself, a rigorous bound on integrals over $SU(3)^{3R^4}$
 with all boundary conditions, is beyond present computational practice
 by a wide margin, and this repository performs no numerics.
 
+**T3 in this framework.** Suppose the renormalization steps are exact
+low-energy reductions and the trajectory from bare coupling $g$ enters
+the verified interval after $n(g)$ doublings at an effective interaction
+$\Phi_s(g)$. The gap in lattice units is then
+$\delta(g)=2^{-n(g)}\,\delta_{\rm eff}(\Phi_s(g))$, with $\delta_{\rm eff}$
+the gap of the verified theory at its own scale, and the ratio
+$\delta(g)/(a\Lambda_{\rm lat}(g))$ of T3 depends on $g$ only through the
+point $\Phi_s(g)$ at which the trajectory enters the interval. Its
+convergence as $g\to0$ is therefore the statement that the trajectories
+from different bare couplings converge to one curve as they reach the
+interval, that is, that the irrelevant directions contract along the
+flow; the strong-coupling threshold plays no role in it. The clause T3
+is in this way absorbed into the same hypothesis on the renormalization
+map as T2$'$, and the finite verification supplies the gap
+$\delta_{\rm eff}$ with an explicit value at each point of the interval.
+
 ## 5. What this changes and what it does not
 
 *Changes.* The intermediate region is a finite verification problem
