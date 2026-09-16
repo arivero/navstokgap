@@ -1,4 +1,4 @@
-# A continuous-time expansion for the Kogut--Susskind Hamiltonian: $SU(3)$ gapped for $g^2\gtrsim80$, with the gap approaching the flux-loop energy $(8/3)g^2\,\hbar c/a$
+# Continuous-time expansion for Kogut--Susskind: $SU(3)$ gapped for $g^2\ge80$, gap approaching $(8/3)g^2\,\hbar c/a$
 
 Yarotsky's theorem gives the Kogut--Susskind gap for $SU(3)$ only beyond
 $g^2\sim10^{101}$, because its time discretization pays $e^{64t_0}$ per
