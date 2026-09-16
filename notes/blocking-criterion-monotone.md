@@ -89,9 +89,9 @@ single plaquette flux loop, of energy $2C_2(R_{\min})g^2\hbar c/a$
 independent of the block size, as in
 [the obligations map](mass-gap-obligations-lattice.md) §3. So
 $\delta(g;M)\to2C_2g^2$ and
-$$\beta_{\rm block}\simeq\frac{24M^2N}{2C_2g^4}=\frac{12M^2N}{C_2g^4},
-\qquad
-\frac{\beta_{\rm block}}{\beta_{\rm direct}}\simeq\frac{12M^2N/(C_2g^4)}{32N/(C_2g^4)}=\frac{3M^2}{8},$$
+$$\beta_{\rm block}\simeq\frac{24M^2N}{2C_2g^4}=\frac{12M^2N}{C_2g^4},$$
+$$\frac{\beta_{\rm block}}{\beta_{\rm direct}}
+\simeq\frac{12M^2N/(C_2g^4)}{32N/(C_2g^4)}=\frac{3M^2}{8},$$
 using $\beta_{\rm direct}=32N/(C_2g^4)$ from the link-level check of
 [the T2 note](strong-coupling-uniform-gap.md). At $M=2$ the ratio is
 $3/2$, and it grows quadratically thereafter.

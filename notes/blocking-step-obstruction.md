@@ -18,14 +18,17 @@ all levels equally and costs nothing, and the boundary energy is exactly
 of that kind. What the induction needs is the **variation** of the Schur
 term over the low-energy subspace, for which a connected estimate
 replaces $\|B\|^2=\big(\sum_p\|w_p\|\big)^2$ by $\sum_p\|w_p\|^2$ and so
-replaces $M^4$ by $M^2$. Under that replacement one blocking step closes
-when
+replaces $M^4$ by $M^2$. Under that replacement one blocking step closes when
 $$\frac{\|w\|}{\Delta_M}\ \lesssim\ \frac1{M\sqrt6}\qquad\text{i.e.}\qquad
-g^4\ \gtrsim\ \frac{8\sqrt6\,MN}{\gamma\,C_2(R_{\min})},$$
-a fixed threshold at fixed block factor. Since the effective coupling
-grows toward the infrared, the threshold, once reached, is satisfied at
-every later step, so the induction closes from that scale onward. The
-number of doublings needed to reach it from the cutoff is
+g^4\ \gtrsim\ \frac{8\sqrt6\,MN}{\gamma\,C_2(R_{\min})}.$$
+**Correction, recorded after this note was written:** the connected
+estimate is supplied by Yarotsky's polymer expansion, and the resulting
+criterion is worse than the direct one by a factor $3M^2/8$, so the
+induction sketched in Sections 4--5 does not close;
+[the blocking-criterion note](blocking-criterion-monotone.md) carries the
+corrected statement. What survives is the counting: the number of
+renormalization-group doublings needed to reach a strong-coupling
+threshold from the cutoff is
 $$n\ \simeq\ \frac{1}{2b_0\log2}\Big(\frac1{g_{\rm UV}^2}-\frac1{g_{\rm thr}^2}\Big),
 \qquad b_0=\frac{11N}{48\pi^2},$$
 finite and of the order of tens for realistic couplings. The whole
