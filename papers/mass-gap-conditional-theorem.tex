@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The map as one conditional theorem: two hypotheses, both finite in kind, and an explicit l},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-map-as-one-conditional-theorem-two-hypotheses-both-finite-in-kind-and-an-explicit-lower-bound-mgehbar-cgammaa_}{%
+\section{\texorpdfstring{The map as one conditional theorem: two
+hypotheses, both finite in kind, and an explicit lower bound
+\(m\ge\hbar c\,\gamma'/a_*\)}{The map as one conditional theorem: two hypotheses, both finite in kind, and an explicit lower bound m\textbackslash ge\textbackslash hbar c\textbackslash,\textbackslash gamma\textquotesingle/a\_*}}\label{the-map-as-one-conditional-theorem-two-hypotheses-both-finite-in-kind-and-an-explicit-lower-bound-mgehbar-cgammaa_}}
+
+Everything this programme has established about the \(SU(3)\) mass gap
+can be stated as a single conditional theorem. Its two hypotheses are
+the two things not proved here: control of the blocking steps from the
+weak side down to the coupling where the correlation length is one
+lattice unit, and a certified mixing statement at that one coupling on
+one finite box. Its conclusion is the Jaffe--Witten gap along the
+trajectory with an explicit lower bound,
+\[m\ \ge\ \frac{\hbar c\,\gamma'}{a_*},\] where \(a_*\) is the physical
+lattice spacing at which the trajectory reaches the verified coupling,
+about \(0.1\) to \(0.17\) fm by the published scale, and \(\gamma'\) is
+the certified decay rate per lattice unit there. Any positive
+\(\gamma'\) gives a positive gap, and the data say the true rate is
+about \(0.8\). Constants explicit; nothing promoted.
+
+\hypertarget{setting}{%
+\subsection{1. Setting}\label{setting}}
+
+Wilson measure \(\mu_{\beta_0}\) on the links of \((a_0\mathbb Z)^4\) at
+bare coupling \(\beta_0=6/g_0^2\), in a periodic box of any size. A
+block-spin map \(\mathcal B\) of block size \(2\): a gauge-covariant
+assignment of a coarse link variable to each block, measurable in the
+fine links, such that coarse Wilson loops are functions of fine Wilson
+loops. The renormalized measures \(\mu^{(k)}=\mathcal B^k\mu_{\beta_0}\)
+live on the links of \((2^ka_0\mathbb Z)^4\) and, by construction,
+reproduce exactly the correlations of coarse observables. Write
+\(\Phi^{(k)}\) for the renormalized interaction when it exists, and
+\(\|\Phi\|_\kappa=\sup_\ell\sum_{X\ni\ell}e^{\kappa\operatorname{diam}X}\|\Phi_X\|_\infty\)
+for the interaction norm with range weight \(\kappa>0\).
+
+\hypertarget{the-hypotheses}{%
+\subsection{2. The hypotheses}\label{the-hypotheses}}
+
+\textbf{H1 (the weak side).} There is \(K=K(a_0)\) with
+\(2^Ka_0\to a_*\) as \(a_0\to0\), a rate \(\gamma_*>0\) and constants
+\(C_k\) such that for each \(k<K\) and all local observables \(F,G\) of
+the \(k\)-th lattice with supports at distance \(d\) in its units,
+\[\Big|\langle F;G\rangle_{\mu^{(k)}}-\langle\bar F;\bar G\rangle_{\mu^{(k+1)}}\Big|
+\ \le\ C_k\,\|F\|_\infty\|G\|_\infty\,e^{-\gamma_*d},\] where \(\bar F\)
+is the conditional expectation of \(F\) given the coarse links; and
+\(\Phi^{(K)}\) exists, is finite in \(\|\cdot\|_\kappa\), and satisfies
+\(\|\Phi^{(K)}-\Phi_0\|_\kappa\le r\) for a reference interaction
+\(\Phi_0\) and radius \(r\) fixed in H2.
+
+In words: at every step before the last, the fluctuations integrated out
+cluster exponentially at the scale of the step, and the trajectory
+arrives within a fixed distance of a reference interaction. For the
+steps at which the effective coupling is small this is the content of
+the constructive programme, perturbative in kind and unavailable with
+constants; for the last three, in which \(\xi/a\) passes from about
+\(10\) to about \(1\), it is the open problem
+(\href{confinement-scale-bands.md}{bands note} §2b).
+
+\textbf{H2 (one box).} The reference interaction \(\Phi_0\) satisfies
+the strong-mixing condition on a box \(V\) of side \(R\): for every
+\(W\subseteq V\), every boundary link \(y\) and boundary conditions
+\(\omega,\omega'\) differing at \(y\),
+\[\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega'}\big|_W\big\|_{\rm TV}\ \le\ C\,|W|\,e^{-\gamma\,d(W,y)},\]
+with a margin such that every \(\Phi\) with
+\(\|\Phi-\Phi_0\|_\kappa\le r\) satisfies the same condition with some
+\(C',\gamma'>0\). The natural \(\Phi_0\) is the Wilson interaction at
+\(\beta_W\simeq6\), where the published correlation length is about one
+lattice unit, and \(R\) is \(3\) to \(5\); the condition is to be read
+on the gauge-invariant content of \(W\), the small Wilson loops, since
+single-link marginals of interior links are Haar
+(\href{confinement-scale-bands.md}{bands note}).
+
+\hypertarget{the-theorem}{%
+\subsection{3. The theorem}\label{the-theorem}}
+
+\textbf{Theorem (conditional).} Assume H1 and H2. Then for every bare
+coupling on the trajectory and every periodic volume:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\mu^{(K)}\) has a unique Gibbs state and truncated correlations of
+  all local observables decaying at rate at least \(\gamma'\) per unit
+  of \(2^Ka_0\) (Dobrushin--Shlosman; Martinelli--Olivieri);
+\item
+  \(\mu_{\beta_0}\) has truncated correlations of all local fine
+  observables decaying at rate at least
+  \(\min\big(\gamma_*,\,\gamma'\big)/2^K\) per unit of \(a_0\);
+\item
+  the Wilson transfer matrix at spacing \(a_0\) has a spectral gap
+  \[\Delta(a_0)\ \ge\ \frac{\hbar c}{a_0}\cdot\frac{\min(\gamma_*,\gamma')}{2^{K(a_0)}}\]
+  on the cyclic subspace of local observables, uniformly in the volume;
+\item
+  in the continuum limit along the trajectory,
+  \[m\ \ge\ \frac{\hbar c\,\min(\gamma_*,\gamma')}{a_*}\ >\ 0 .\]
+\end{enumerate}
+
+\emph{Proof.} (1) is the mixing-to-decay theorem applied to
+\(\Phi^{(K)}\), which lies in the verified neighbourhood by H1 and H2.
+For (2), write a fine observable as its coarse part plus fluctuation
+parts step by step, \(F=\bar F^{(K)}+\sum_{k<K}(F^{(k)}-\bar F^{(k)})\);
+the coarse-part correlations decay by (1) at rate \(\gamma'\) per coarse
+unit, that is \(\gamma'/2^K\) per fine unit, and the fluctuation-part
+correlations at step \(k\) decay by H1 at rate \(\gamma_*\) per unit of
+\(2^ka_0\), that is \(\gamma_*/2^k\ge\gamma_*/2^K\) per fine unit; the
+cross terms are bounded by the same rates. (3) is link reflection
+positivity together with the spectral argument of
+\href{wilson-strong-coupling-explicit.md}{the Wilson note} §3: decay at
+rate \(\mu\) per fine unit for all local observables forces the spectral
+measure of every local vector orthogonal to the vacuum to vanish above
+\(e^{-\mu}\). (4) follows from (3) as \(a_0\to0\) with
+\(2^{K(a_0)}a_0\to a_*\). \(\square\)
+
+The Jaffe--Witten clause \(0<m<\infty\) is then (4) together with the
+upper side of \href{moment-hierarchy-upper-bounds.md}{the
+moment-hierarchy note}; T3, the ratio \(m/(\hbar c\Lambda)\), is the
+statement that \(a_*\Lambda\) has a limit, which is the convergence of
+the trajectory to one curve as in
+\href{intermediate-region-finite-verification.md}{the
+finite-verification note}.
+
+\hypertarget{what-the-theorem-makes-visible}{%
+\subsection{4. What the theorem makes
+visible}\label{what-the-theorem-makes-visible}}
+
+\emph{The bound is a ratio of a certified rate to a physical length.}
+With \(a_*\simeq0.093\) fm at \(\beta_W=6\) and the measured glueball
+mass \(1.66\,\hbar c\,{\rm fm}^{-1}\), the true rate is
+\(m a_*\simeq0.78\); a certified \(\gamma'\) of any size gives a
+theorem, and one of order \(0.1\) would already be a physically
+meaningful bound.
+
+\emph{Both hypotheses are finite in kind.} H2 is one box at one
+coupling. H1 is a sequence of steps, uniform in the perturbative regime,
+whose non-perturbative part is three steps. Neither is available today:
+H2 needs a certified computation, and H1's last three steps are the
+confinement-scale problem.
+
+\emph{Nothing else is missing.} T1, T2, the strong-coupling side below
+the verified coupling, the transfer from decay to gap, the upper side of
+the gap, and the reduction of T3 are all in place with explicit
+constants. The theorem is the repository's formal endpoint: a proof of
+the mass gap for \(SU(3)\) consists of H1 and H2.
+
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
+
+The map is a theorem with two hypotheses and an explicit conclusion
+\(m\ge\hbar c\min(\gamma_*,\gamma')/a_*\). Progress from here is
+progress on H1 or H2, and nothing else.
+\end{document}

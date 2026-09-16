@@ -113,18 +113,19 @@ expansion in principle; the first seven are the regime of the
 constructive programme, unavailable with constants but perturbative in
 kind.
 
-*Band B, crossed by two steps.* At strong coupling a doubling tiles a
-coarse plaquette with four fine ones, and the Migdal--Kadanoff
-recursion (Kadanoff, Ann. Phys. 100 (1976) 359; metadata level, a
-heuristic in four dimensions) sends the fundamental activity
-$u=c_f/c_0$ to about $u^4$: from $u\simeq0.28$ at $\beta_W=5.7$ to
-$u\simeq0.006$, that is $\beta_W\simeq0.1$, in one step, and to
-$\beta_W\sim10^{-8}$, deep inside band A, in the next. Rigorously, a
+*Band B, crossed by three steps.* The coarse plaquette at scale $2^ka$
+is a $2^k\times2^k$ Wilson loop of the fine lattice, whose expectation
+by the area law with $\sigma a^2\simeq0.16$ at $\beta_W=5.7$ is about
+$e^{-0.16\cdot4^k}$: $0.53$, $0.077$, $3.6\times10^{-5}$ for $k=1,2,3$. Band
+A needs an activity below about $2\times10^{-3}$, so three doublings
+cross band B. The Migdal--Kadanoff recursion (Kadanoff, Ann. Phys. 100
+(1976) 359; metadata level, a heuristic in four dimensions), which
+sends the activity to its fourth power per doubling, gives two and
+overestimates the decrease; the area-law count is the one to use. Rigorously, a
 block-spin step is well defined and its image is Gibbsian with a
 summable interaction in the strong-mixing regime (van Enter, Fernández
-and Sokal, J. Stat. Phys. 72 (1993) 879; metadata level), so once
-mixing is known at the top of band B the two steps that cross it are
-standard, and band A is proved by hand.
+and Sokal, J. Stat. Phys. 72 (1993) 879; metadata level), so once mixing is known at the top of band B the three steps that
+cross it are standard, and band A is proved by hand.
 
 *The meeting point.* The verification is therefore needed at **one
 coupling**, $\beta_W\simeq5.7$ to $6$, that is $g^2\simeq1$, where
@@ -137,11 +138,12 @@ renormalization must be carried three doublings past the point where
 $\xi/a\simeq10$.
 
 **The whole problem in one sentence.** The mass gap for $SU(3)$ is the
-control of about five consecutive blocking steps of the lattice theory
+control of about six consecutive blocking steps of the lattice theory
 at order-one coupling, uniformly in the volume: three from the weak
-side, where $\xi/a$ falls from $10$ to $1$, and two from the strong
+side, where $\xi/a$ falls from $10$ to $1$, and three from the strong
 side, which are standard once mixing is certified at the coupling in
-between. Everything else on the map is either perturbative in kind or
+between. [The conditional theorem](mass-gap-conditional-theorem.md)
+states this as two hypotheses and an explicit conclusion. Everything else on the map is either perturbative in kind or
 proved with explicit constants.
 
 ## 3. What this changes

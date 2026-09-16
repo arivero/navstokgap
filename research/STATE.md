@@ -488,11 +488,27 @@ labour; consult it before opening a new item.
    Enter--Fernández--Sokal 1993), so the verification is needed at one
    coupling, $\beta_W\simeq6$, $g^2\simeq1$, $\xi/a\simeq1$, boxes of
    side $3$ to $5$; $g_{\rm DS}^2\simeq1$ conditional on that box and the
-   requirement on the other side is $g_{\rm RG}^2\ge1$. **In one
-   sentence: the mass gap for $SU(3)$ is the control of about five
+   requirement on the other side is $g_{\rm RG}^2\ge1$. Corrected: the
+   area law with $\sigma a^2\simeq0.16$ gives coarse activities $0.53$,
+   $0.077$, $3.6\times10^{-5}$ at $k=1,2,3$, so band B takes **three**
+   steps (Migdal--Kadanoff's $u\to u^4$ overestimates). **In one
+   sentence: the mass gap for $SU(3)$ is the control of about six
    consecutive blocking steps at order-one coupling, uniformly in
-   volume**, three from the weak side and two from the strong.
-17. **Aside, recorded at the user's request:**
+   volume**, three from the weak side and three from the strong.
+17. **Done: the map as one conditional theorem.**
+   [Note](../notes/mass-gap-conditional-theorem.md). H1: at every
+   blocking step before the last, the integrated fluctuations cluster
+   exponentially at the step's scale (rate $\gamma_*$), and the
+   trajectory arrives within radius $r$ of a reference interaction
+   $\Phi_0$; H2: $\Phi_0$ (Wilson at $\beta_W\simeq6$) is strongly mixing
+   on one box of side $3$ to $5$ with margin covering radius $r$.
+   Conclusion: decay at rate $\min(\gamma_*,\gamma')/2^K$ per fine unit,
+   transfer-matrix gap by reflection positivity uniformly in volume,
+   and $m\ge\hbar c\min(\gamma_*,\gamma')/a_*$ in the continuum, with
+   $a_*\simeq0.1$ fm; the true rate is $ma_*\simeq0.78$ by the data. A
+   proof of the mass gap for $SU(3)$ consists of H1 and H2; nothing
+   else is missing.
+18. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
    point gives $\Omega(x)$ (Hartle--Hawking), two give the propagator, which
@@ -505,7 +521,7 @@ labour; consult it before opening a new item.
    bare graph as bulk and a matrix integral thickens it to a surface
    ('t Hooft). At $d=1$ it is the Schwarzian/SYK system, gapless; the holographic gap
    mechanism is a capped-off infrared geometry at large $N$.
-18. **Done: the $d=3$ formulation.**
+19. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and
