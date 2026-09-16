@@ -1,0 +1,276 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The finiteness half of the mass gap is the nonvanishing of one smeared susceptibility},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-finiteness-half-of-the-mass-gap-is-the-nonvanishing-of-one-smeared-susceptibility}{%
+\section{The finiteness half of the mass gap is the nonvanishing of one
+smeared
+susceptibility}\label{the-finiteness-half-of-the-mass-gap-is-the-nonvanishing-of-one-smeared-susceptibility}}
+
+The requirement \(m<\infty\) of the Jaffe--Witten statement reduces to
+an exact inequality between two ground-state quantities. For any
+gauge-invariant local scalar \(\varphi\) built from the spatially
+smeared field, with \(\langle\varphi\rangle=0\),
+\[m\ \le\ \frac{g^2\hbar c}{2}\;\frac{\big\langle\,|D_\varphi|^2\,\big\rangle_0}{\chi_\varphi},
+\qquad
+D_\varphi=\int d^3y\;\frac{\delta\varphi(y)}{\delta A^a_i(0)},\qquad
+\chi_\varphi=\int d^3z\;\big\langle\varphi(z)\varphi(0)\big\rangle_0^{\rm c},\]
+in the continuum theory with a unique vacuum, whenever the finite-volume
+gaps and correlators converge. Both sides are intensive: the volume
+cancels between the numerator and the denominator, which is what makes
+the zero-momentum operator the right trial excitation and the plaquette
+of \href{lattice-gap-upper-bounds.md}{the upper-bound note} the wrong
+one. The inequality is the energy-weighted sum rule, \(m\) bounded by
+the mean excitation energy carried by \(\varphi\), so its content is:
+\textbf{if some local gauge-invariant observable has nonvanishing
+zero-momentum fluctuations in the vacuum, the theory has an excitation
+of finite energy.} Conversely \(m=\infty\) forces every such
+susceptibility to vanish, that is, the vacuum is an eigenstate of every
+smeared gauge-invariant operator. The ultraviolet problem that defeated
+the plaquette is solved by smearing, and the natural smearing is the
+gradient flow, whose observables are renormalized; what is assumed, and
+stated as hypothesis (F1), is that the equal-time flowed correlators
+have continuum limits, which is not Lüscher's four-dimensional theorem
+but its Hamiltonian counterpart. Dimensional analysis gives the
+perturbative behaviour
+\(\langle|D|^2\rangle/\chi\simeq c_\varphi/\sqrt{8t}\) at flow time
+\(t\), so the bound reads \(m\le C g^2\hbar c/\sqrt{8t}\) while
+perturbation theory applies; since the bound cannot fall below \(m\),
+the flow time at which that scaling must break down is the correlation
+length \(\hbar c/m\). In free Maxwell theory the scaling persists for
+all \(t\) and the bound correctly tends to \(m=0\). The inequality
+itself is the textbook single-mode (Feynman--Bijl) bound; what is
+specific here is the zero-momentum intensive form, the flow as the
+smearing that makes it cutoff-independent, and the identification with
+the finiteness half of the Millennium statement. Constants explicit;
+nothing promoted.
+
+\hypertarget{the-continuum-bound}{%
+\subsection{1. The continuum bound}\label{the-continuum-bound}}
+
+Take the temporal-gauge Hamiltonian in the convention of
+\href{low-dimensional-mass-gap.md}{G07} Proposition 7, with \(g\)
+dimensionless and \([A]=L^{-1}\):
+\[H=\int d^3x\;\Big[\frac{g^2c}{2\hbar}\,\Pi^a_i\Pi^a_i
++\frac{\hbar c}{4g^2}\,F^a_{ij}F^a_{ij}\Big],
+\qquad\big[A^a_i(x),\Pi^b_j(y)\big]=i\hbar\,\delta^{ab}\delta_{ij}\delta^3(x-y),\]
+obtained from
+\(S=-\frac{\hbar}{4g^2}\int F^a_{\mu\nu}F^{a\mu\nu}d^3x\,c\,dt\) with
+\(\Pi^a_i=(\hbar/g^2c)\dot A^a_i\).
+
+\textbf{Proposition 1.} Let \(O\) be a real functional of the spatial
+field \(A\) alone, gauge invariant, with \(\langle O\rangle_0=0\) and
+\(O\Omega\in D(H)\). Then \[E_1-E_0\ \le\ \frac{g^2\hbar c}{2}\;
+\frac{\displaystyle\int d^3x\;\Big\langle\Big|\frac{\delta O}{\delta A^a_i(x)}\Big|^2\Big\rangle_0}
+{\big\langle O^2\big\rangle_0}.\]
+
+\emph{Proof.} \(O\Omega\perp\Omega\), so by min-max
+\(E_1-E_0\le\langle O\Omega,(H-E_0)O\Omega\rangle/\|O\Omega\|^2\), and
+\(2\langle\Omega,O(H-E_0)O\Omega\rangle=\langle\Omega,[O,[H,O]]\Omega\rangle\)
+since \([O,[H,O]]=2OHO-O^2H-HO^2\). The magnetic term commutes with
+\(O\). For the electric term,
+\([\Pi^a_i(x),O]=-i\hbar\,\delta O/\delta A^a_i(x)\) and
+\[\big[O,[\Pi^a_i\Pi^a_i,O]\big]=-2\big[\Pi^a_i,O\big]^2
+=2\hbar^2\Big|\frac{\delta O}{\delta A^a_i}\Big|^2,\] so
+\([O,[H,O]]=\frac{g^2c}{2\hbar}\cdot2\hbar^2\int d^3x|\delta O/\delta A|^2 =g^2\hbar c\int d^3x|\delta O/\delta A|^2\).
+Divide by \(2\langle O^2\rangle\). \(\square\)
+
+Only the electric term contributes: the bound measures how much the
+trial observable is disturbed by the conjugate field, which is the same
+quantity that Section 2 of \href{action-floor-yang-mills-gap.md}{the
+action-floor note} identifies as the carrier of \(\hbar\).
+
+\hypertarget{zero-momentum-makes-the-bound-intensive}{%
+\subsection{2. Zero momentum makes the bound
+intensive}\label{zero-momentum-makes-the-bound-intensive}}
+
+Let \(\varphi(x)\) be a gauge-invariant local scalar with
+\(\langle\varphi\rangle_0=0\) and take \(O=\int_Vd^3y\,\varphi(y)\) in a
+periodic box of volume \(V\). Write
+\[D^a_i(x)=\frac{\delta O}{\delta A^a_i(x)}=\int_Vd^3y\;\frac{\delta\varphi(y)}{\delta A^a_i(x)} .\]
+By translation invariance of the ground state,
+\(\langle|D(x)|^2\rangle_0\) does not depend on \(x\), so the numerator
+of Proposition 1 is \(V\langle|D|^2\rangle_0\), while
+\(\langle O^2\rangle_0=\int_V\int_V\langle\varphi(y)\varphi(y')\rangle^{\rm c}_0=V\chi_\varphi\)
+with
+\(\chi_\varphi=\int d^3z\,\langle\varphi(z)\varphi(0)\rangle^{\rm c}_0\).
+The volume cancels:
+
+\textbf{Corollary 2.} For every such \(\varphi\) and every \(V\),
+\[\Delta_V\ \le\ \frac{g^2\hbar c}{2}\;\frac{\langle|D_\varphi|^2\rangle_0}{\chi_\varphi}\,,\]
+and if \(\Delta_V\to m\) and both ground-state quantities converge, the
+same bound holds for \(m\).
+
+Dimensions: \(\delta/\delta A(x)\) carries \(L^{-3}/[A]=L^{-2}\), so
+\([\langle|D|^2\rangle]=[\varphi]^2L^2\) and \([\chi]=[\varphi]^2L^3\);
+the ratio is an inverse length and \(g^2\hbar c\) times it is an energy.
+The plaquette of \href{lattice-gap-upper-bounds.md}{the upper-bound
+note} fails precisely because it is a single cell rather than a
+zero-momentum sum: its variance is an ultraviolet quantity that vanishes
+in the continuum limit while its gradient does not.
+
+\hypertarget{spectral-reading-and-two-checks}{%
+\subsection{3. Spectral reading and two
+checks}\label{spectral-reading-and-two-checks}}
+
+Inserting a complete set of eigenstates,
+\[\langle\Omega,[O,[H,O]]\Omega\rangle=2\sum_n(E_n-E_0)\,\big|\langle n|O|\Omega\rangle\big|^2,
+\qquad\langle O^2\rangle_0=\sum_n\big|\langle n|O|\Omega\rangle\big|^2,\]
+so Proposition 1 states that \(m\) is at most the mean excitation energy
+weighted by the spectral weight of \(O\): the \(f\)-sum rule. Two
+consequences.
+
+\emph{Conserved observables.} If \([H,O]=0\) the numerator vanishes and
+the bound reads \(\Delta\le0\). With a unique ground state this is
+consistent only if \(\langle O^2\rangle_0=0\): a conserved
+gauge-invariant observable cannot fluctuate in a nondegenerate vacuum,
+since \(O\Omega\) would be a second state of energy \(E_0\). The bound
+therefore detects vacuum degeneracy, and is vacuous exactly in that
+case.
+
+\emph{Free Maxwell.} Here \(m=0\) and the bound is a positive number for
+every flow time; Section 5 shows it tends to zero as the smearing grows,
+which is the correct behaviour for a gapless theory and a check that the
+bound is not empty.
+
+\hypertarget{what-must-be-smeared-and-the-hypothesis}{%
+\subsection{4. What must be smeared, and the
+hypothesis}\label{what-must-be-smeared-and-the-hypothesis}}
+
+A local operator at a point has divergent gradient in the continuum, so
+\(\varphi\) must be built from a smeared field. The gauge-covariant
+smearing is the gradient flow: on the spatial field at fixed time,
+\[\partial_s B_i=D_jG_{ji},\qquad B_i|_{s=0}=A_i,\qquad
+G_{ij}=\partial_iB_j-\partial_jB_i+[B_i,B_j],\] the three-dimensional,
+equal-time counterpart of Lüscher's flow (arXiv:1006.4518v3, equations
+(1.1)--(1.2), passage level via the
+\href{../docs/Luscher_WilsonFlow_1006.4518v3.md}{local companion}), with
+smearing radius \(\sqrt{8t}\) at flow time \(t\) and the lattice form
+given by his equation (1.4). Take
+\(\varphi=\varphi_t=\tfrac14G^a_{ij}G^a_{ij}\big|_{s=t}-\langle\cdot\rangle_0\).
+
+Lüscher's renormalization statement is for the four-dimensional flow in
+the Euclidean functional integral: expectation values of local
+gauge-invariant expressions in the flowed field are finite without
+further renormalization. The object needed here is the equal-time
+Hamiltonian correlator of the spatially flowed field, which his theorem
+does not cover. State it as a hypothesis:
+
+\begin{quote}
+\textbf{(F1)} For fixed flow time \(t>0\), the equal-time ground-state
+quantities \(\chi_{\varphi_t}\) and
+\(\langle|D_{\varphi_t}|^2\rangle_0\) of the lattice theory converge, as
+\(a\to0\) along the scaling curve, to finite limits, with
+\(\chi_{\varphi_t}>0\).
+\end{quote}
+
+On any fixed lattice both quantities are finite and positive and
+Corollary 2 holds unconditionally, so (F1) is entirely a statement about
+the continuum limit. Its first half is the flow's renormalization
+property in the Hamiltonian framework; its second half, \(\chi>0\), is
+nontriviality: the vacuum is not an eigenstate of the flowed energy
+density.
+
+\textbf{Proposition 3 (the finiteness half).} Assume the continuum
+theory exists with a unique vacuum and translation invariance, that the
+finite-volume gaps converge to \(m\), and (F1) for one flow time \(t\).
+Then
+\[m\ \le\ \frac{g^2\hbar c}{2}\,\frac{\langle|D_{\varphi_t}|^2\rangle_0}{\chi_{\varphi_t}}\ <\ \infty .\]
+
+This is the \(m<\infty\) clause of the Jaffe--Witten statement, reduced
+to the positivity of one susceptibility. The remaining clause, \(m>0\),
+is untouched: nothing above excludes \(m=0\).
+
+\hypertarget{the-flow-time-and-where-the-perturbative-scaling-must-fail}{%
+\subsection{5. The flow time, and where the perturbative scaling must
+fail}\label{the-flow-time-and-where-the-perturbative-scaling-must-fail}}
+
+At flow time \(t\) the only length in the smeared operator is
+\(\sqrt{8t}\). In a regime where the flowed correlators are governed by
+that length alone, \([\varphi_t]=L^{-4}\) gives
+\(\chi\simeq k_1t^{-5/2}\) and \(\langle|D|^2\rangle\simeq k_2t^{-3}\),
+hence
+\[\frac{\langle|D_{\varphi_t}|^2\rangle}{\chi_{\varphi_t}}\simeq\frac{k_2}{k_1}\,\frac1{\sqrt{8t}},
+\qquad m\ \le\ C\,g^2\,\frac{\hbar c}{\sqrt{8t}} .\] The pure numbers
+\(k_1,k_2\) are not computed here. Two readings.
+
+\emph{Free theory.} In free Maxwell theory the scaling holds for every
+\(t\) because there is no other length, and the bound tends to \(0=m\):
+correct, and the flow time is the only resolution scale.
+
+\emph{Interacting theory.} A positive \(m\) cannot be beaten by any
+\(t\), so the perturbative scaling must fail once
+\(C g^2(t)\hbar c/\sqrt{8t}\) reaches \(m\), that is at
+\[\sqrt{8t_*}\ \simeq\ C g^2\,\frac{\hbar c}{m},\] the correlation
+length up to the coupling. The bound therefore contains its own
+consistency condition: the flow smooths the field only down to the
+confinement scale, beyond which the flowed correlators are no longer
+controlled by \(\sqrt{8t}\). This is the Hamiltonian counterpart of the
+crossover recorded in \href{torus-valley-potential.md}{the valley note},
+where the small-volume description fails when the zero-mode energy
+reaches \(\hbar c/L\).
+
+\emph{Approach to \(m\).} As \(t\) grows the smeared operator couples
+preferentially to states of spatial extent \(\gtrsim\sqrt{8t}\), so the
+spectral weights of Section 3 concentrate on the lowest states and the
+bound is expected to decrease toward \(m\). Monotonicity is not proved
+here; it would make the family of bounds a convergent sequence rather
+than a single estimate.
+
+\hypertarget{status}{%
+\subsection{6. Status}\label{status}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+claim
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Proposition 1, the bound with explicit constants & proved \\
+Corollary 2, intensive zero-momentum form & proved \\
+\(f\)-sum rule reading, conserved-observable check & proved \\
+finiteness of the lattice bound at fixed \(a\) & proved \\
+(F1), continuum limit of the flowed equal-time correlators & hypothesis;
+the flow's renormalization in the Hamiltonian framework \\
+\(\chi>0\) & hypothesis; nontriviality \\
+\(\langle|D|^2\rangle/\chi\simeq c/\sqrt{8t}\) & dimensional,
+coefficients not computed \\
+\(m>0\) & untouched \\
+\end{longtable}
+
+The single-mode bound and the use of smeared operators as glueball
+interpolators are standard; the statement being recorded is the
+reduction of the Millennium finiteness clause to the positivity of one
+flowed susceptibility, with the constants and hypotheses written out.
+
+\hypertarget{consequence-for-state}{%
+\subsection{7. Consequence for STATE}\label{consequence-for-state}}
+
+The upper side of the problem is now in the same shape as the lower
+side: an exact inequality at fixed cutoff, plus one renormalization
+hypothesis for the continuum. The two hypotheses are different in kind.
+(F1) concerns flowed observables, which are expected to be renormalized
+by Lüscher's four-dimensional result and whose Hamiltonian counterpart
+is a bounded, self-contained question; the dressed-vacuum problem of
+\href{schur-error-ultraviolet.md}{the Schur note} concerns the state
+itself. The next steps this suggests, in order: compute \(k_1,k_2\) in
+free Maxwell theory to make Section 5 quantitative and check the free
+limit; then state the Hamiltonian flow-renormalization question as its
+own target, since both the upper-side (F1) and the lower-side dressing
+are instances of it.
+\end{document}

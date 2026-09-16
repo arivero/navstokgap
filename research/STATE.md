@@ -110,10 +110,25 @@ one obligation at a time.
    dressed nonzero-mode vacuum with cutoff-uniform bounds, a T4-type
    renormalization theorem. The corner S splits into (1a) fixed-lattice
    theorem, provable now, and (1b) renormalized theorem.
-3e. **Next:** either write (1a) with explicit constants (bookkeeping of
-   the Schur note), or turn to the upper-side target T$_{\rm fin}$
-   (Feynman--Bijl for Wilson-flowed observables), whose flow-Jacobian
-   bound is the other place where cutoff uniformity must be proved.
+3e. **Done: the finiteness half.**
+   [Note](../notes/finiteness-half-flowed-susceptibility.md): the
+   continuum Feynman--Bijl bound with explicit constants,
+   $\Delta\le\frac{g^2\hbar c}{2}\int\langle|\delta O/\delta A|^2\rangle/\langle O^2\rangle$
+   (only the electric term contributes); at zero momentum it becomes
+   intensive, $m\le\frac{g^2\hbar c}{2}\langle|D_\varphi|^2\rangle/\chi_\varphi$,
+   which is the $f$-sum rule. Hence $m<\infty$ reduces to
+   $\chi_\varphi>0$ for one smeared gauge-invariant observable: if the
+   vacuum is not an eigenstate of the flowed energy density, a
+   finite-energy excitation exists. Unconditional at fixed lattice;
+   the continuum needs (F1), the Hamiltonian counterpart of the flow's
+   renormalization. Perturbative scaling $m\le Cg^2\hbar c/\sqrt{8t}$,
+   which must fail at $\sqrt{8t_*}\simeq Cg^2\hbar c/m$: the bound
+   contains its own consistency condition. $m>0$ untouched.
+3f. **Next:** compute $k_1,k_2$ in free Maxwell theory to make the
+   $1/\sqrt{8t}$ scaling quantitative and check the free limit; then
+   state the Hamiltonian flow-renormalization question as its own
+   target, since (F1) and the dressed-vacuum problem of the Schur note
+   are both instances of it.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
