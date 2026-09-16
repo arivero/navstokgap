@@ -62,9 +62,16 @@ one obligation at a time.
    the constant-mode ground state of C133 as trial state; connect
    $\Delta_{a,L}$ with the continuum corner $\delta_1g^{2/3}\hbar c/L$ and
    locate the regime where neither expansion applies.
-4. **The $d=3$ case.** The coupling is the mass unit; formulate
-   $m=C\,g^2\hbar^2/c$ and identify the finite-volume estimate of the
-   stochastic construction that would give $C>0$.
+4. **Done: the $d=3$ formulation.**
+   [One function of one variable](../notes/three-dimensional-gap-one-function.md):
+   $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
+   $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and
+   the conjecture $f\to C\in(0,\infty)$; on the lattice the ratio
+   $\delta_\infty/g_{\rm lat}^2$ is bounded below at strong coupling by the
+   $\nu=2$ Yarotsky bound and the conjecture is its positivity for all
+   $g_{\rm lat}$, linear at both ends, no transmutation. Next in $d=3$: a
+   lower bound $f(x)\ge f_->0$ on an interval beyond the small-volume
+   expansion.
 5. **The crossover in the zero-mode model.** Sign of the next-to-leading
    terms of Lüscher's expansion for the gap; a variational bound on the
    torus Hamiltonian with the zero-mode ground state as trial state.

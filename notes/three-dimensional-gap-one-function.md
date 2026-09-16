@@ -1,0 +1,158 @@
+# In three dimensions the mass gap is the positivity of one function at infinity
+
+For pure Yang--Mills in $d=3$ (two space dimensions) the coupling
+$g^2$ is itself a mass, so the finite-volume gap of the continuum theory
+on a periodic square torus of side $L$ has the exact form
+$$\Delta(L)=g^2\hbar^2c\,f(x),\qquad x=g^2\hbar L\ \text{(dimensionless)},$$
+by dimensional analysis alone, and the Jaffe--Witten conjecture for
+$d=3$ is the single statement
+$$\lim_{x\to\infty}f(x)=C\in(0,\infty),\qquad m=C\,g^2\hbar^2/c .$$
+The small-$x$ end of $f$ is known from the constant-mode sector: with two
+spatial components the zero-mode Hamiltonian is C133 with $D=2$,
+$m_{\rm eff}=L^2/(g^2c)$ and $g_B^2=L^2c/g^2$, giving
+$\Delta_0(L)=\delta_1^{(2)}\,g^2\hbar^2c\,x^{-2/3}$, that is
+$f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ as $x\to0$. On the lattice, the
+strong-coupling theorem of [the previous note](strong-coupling-uniform-gap.md)
+with $\nu=2$ gives a gap $\ge\gamma_2(g_{\rm lat}^2/2)C_2\hbar c/a$ uniform in
+the lattice size, and the continuum limit is the statement that
+$\delta_\infty(g_{\rm lat})/g_{\rm lat}^2$ stays bounded below as
+$g_{\rm lat}^2=g^2\hbar a\to0$: the gap-to-coupling ratio is bounded below
+at both ends of the coupling axis, and the conjecture is its positivity
+in between. Contrast $d=4$, where the ratio must pass from a power law
+$\propto g^2$ at strong coupling to the essential singularity
+$e^{-1/(2b_0g^2)}$ at weak coupling. The three-dimensional problem is
+therefore the natural first target: it has no transmutation, a single
+scaling variable, and both ends of $f$ in hand. The expected value
+$C=N/(2\pi)$ (Karabali--Nair, physics argument; metadata, B78) is a
+prediction to be proved, not an input. Nothing here is promoted.
+
+## 1. Units and the one-variable form
+
+With $S=\frac1{4g^2}\int F^a_{\mu\nu}F^{a\mu\nu}\,d^3x$ and the
+quantization $e^{iS/\hbar}$, the dimensional census of
+[G07](low-dimensional-mass-gap.md) §4 gives $[1/g^2]=$ action$\cdot$length in $d=3$, so $g^2\hbar=1/\ell_g$ is an
+inverse length, $\mu:=g^2\hbar^2/c=\hbar/(c\ell_g)$ is a mass, and
+$\varepsilon_3:=\mu c^2=g^2\hbar^2c$ is the unique energy formed from
+$(\hbar,c,g)$. The continuum theory on the periodic torus
+$T^2_L\times\mathbb R$ has the fixed constants $\hbar$, $c$, $g$ and the
+box size $L$, and a gap $\Delta(L)$, when the finite-volume theory
+exists, depends on them only. By the floor/unit theorem C131 applied to
+the observable "energy", $\Delta(L)$ is $\varepsilon_3$ times a function
+of the single dimensionless combination $x=L/\ell_g=g^2\hbar L$, because
+$(\hbar,c,g)$ span exactly one energy and $L$ adds exactly one
+dimensionless ratio. Setting $f(x)=\Delta(L)/\varepsilon_3$:
+$$\Delta(L)=\varepsilon_3\,f(x),\qquad\varepsilon_3=g^2\hbar^2c,\qquad x=g^2\hbar L .$$
+The infinite-volume gap, if it exists, is $m c^2=\varepsilon_3\lim_{x\to\infty}f(x)$,
+and Jaffe--Witten's $0<m<\infty$ is $0<\lim f<\infty$. Vacuum-energy
+renormalization, the only ultraviolet divergence of the superrenormalizable
+theory relevant here, shifts $E_0$ and $E_1$ equally and leaves $f$
+untouched.
+
+## 2. The small-$x$ end from the constant modes
+
+Temporal gauge on $T^2_L$ leaves two constant spatial components
+$a_1,a_2$ in the Lie algebra. With $S=\frac1{4g^2}\int F^a_{\mu\nu}F^{a\mu\nu}d^2x\,c\,dt$,
+$F_{0i}=c^{-1}\dot a_i$ and $F_{12}=\vec a_1\times\vec a_2$, the constant-mode
+Lagrangian is $\frac{L^2}{2g^2c}|\dot{\vec a}|^2-\frac{L^2c}{2g^2}|\vec a_1\times\vec a_2|^2$
+and
+$$H_0=\frac{g^2c}{2L^2}\sum_{i=1}^2|\vec p_i|^2+\frac{L^2c}{2g^2}\,|\vec a_1\times\vec a_2|^2,
+\qquad[a_i^a,p_j^b]=i\hbar\delta_{ij}\delta^{ab},$$
+which is C133 with $D=2$, $m_{\rm eff}=L^2/(g^2c)$ and
+$g_B^2=L^2c/g^2$; $\hbar$ enters only through $g^2$ and the commutator.
+Its energy unit is
+$$\varepsilon=\hbar^{4/3}g_B^{2/3}m_{\rm eff}^{-2/3}
+=\hbar^{4/3}\Big(\frac{L^2c}{g^2}\Big)^{1/3}\Big(\frac{L^2}{g^2c}\Big)^{-2/3}
+=\hbar^{4/3}c\,g^{2/3}L^{-2/3}
+=\frac{\hbar c}{L}\Big(\frac{L}{\ell_g}\Big)^{1/3}
+=\varepsilon_3\,x^{-2/3},$$
+using $g^{2/3}\hbar^{1/3}=\ell_g^{-1/3}$ and $\hbar c/L=\varepsilon_3/x$. So
+the constant-mode gap is $\Delta_0(L)=\delta_1^{(2)}\varepsilon_3x^{-2/3}$
+with $\delta_1^{(2)}>0$ the pure number of C133 for $D=2$, and
+$$f(x)=\delta_1^{(2)}\,x^{-2/3}\,[1+o(1)],\qquad x\to0,$$
+where $o(1)$ stands for the coupling to the nonzero momentum modes,
+controlled perturbatively by the small-volume expansion in the same way
+as in $d=4$ (Lüscher's method; the $d=3$ expansion parameter is $x^{1/3}$
+rather than $g^{2/3}$, since $x$ is the only parameter). The claim
+$f\to\infty$ as $x\to0$ is the statement that the small box is gapped
+with a gap growing like $L^{-2/3}$, slower than the $1/L$ of a free
+particle in a box: the zero-point mechanism of
+[G08](action-floor-yang-mills-gap.md) gives a softer confinement than a
+hard wall.
+
+## 3. The lattice route in $d=3$ and the strong-coupling end
+
+On the periodic square lattice $(a\mathbb Z/N_sa\mathbb Z)^2$ the
+Kogut--Susskind Hamiltonian is
+$$H=\frac{\hbar c}{a}\Big[\frac{g_{\rm lat}^2}{2}\sum_\ell(-\Delta_\ell)
++\frac{2}{g_{\rm lat}^2}\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\Big],
+\qquad g_{\rm lat}^2=g^2\hbar a=\frac a{\ell_g},$$
+with $g_{\rm lat}$ dimensionless. Theorem 1 of
+[the obligations map](mass-gap-obligations-lattice.md) holds verbatim in
+two dimensions: $\Delta_{a,L}=(\hbar c/a)\,\delta(g_{\rm lat};N_s,G)>0$ with a
+unique physical ground state. The strong-coupling theorem holds with
+$\nu=2$, $\Lambda_0=\{0,1\}^2$, two links and one plaquette per site:
+$$\beta=\frac{4}{g_{\rm lat}^4C_2}\cdot2N=\frac{16N^2}{g_{\rm lat}^4(N^2-1)},\qquad
+\Delta_{a,L}\ge\gamma_2\,\frac{g_{\rm lat}^2}{2}\,C_2\,\frac{\hbar c}{a}
+\quad\text{for }g_{\rm lat}\ge g_0^{(2)}(N)=\Big(\frac{16N^2}{(N^2-1)\beta_*(2,\{0,1\}^2)}\Big)^{1/4},$$
+uniformly in $N_s$, by the same hypothesis check.
+
+The continuum limit is $a\to0$ at fixed $g^2$, $L$, that is
+$g_{\rm lat}^2\to0$ with $N_s=L/a$ and $x=g^2\hbar L=g_{\rm lat}^2N_s$
+fixed. The lattice gap in units of $\varepsilon_3$ is
+$$\frac{\Delta_{a,L}}{\varepsilon_3}=\frac{\hbar c}{a\,g^2\hbar^2c}\,\delta
+=\frac{\delta(g_{\rm lat};N_s,G)}{g_{\rm lat}^2},$$
+so the continuum finite-volume gap exists iff
+$\delta(g_{\rm lat};x/g_{\rm lat}^2,G)/g_{\rm lat}^2\to f(x)$ as $g_{\rm lat}\to0$,
+and the infinite-volume mass is
+$$\frac{mc^2}{\varepsilon_3}=\lim_{g_{\rm lat}\to0}\ \frac{\delta_\infty(g_{\rm lat})}{g_{\rm lat}^2},
+\qquad\delta_\infty(g_{\rm lat})=\liminf_{N_s\to\infty}\delta(g_{\rm lat};N_s,G).$$
+At strong coupling the same ratio is bounded below by $\gamma_2C_2/2$.
+The $d=3$ conjecture on the lattice route is therefore:
+
+> **T3$_{(3)}$.** The function $c(g_{\rm lat})=\delta_\infty(g_{\rm lat})/g_{\rm lat}^2$,
+> which satisfies $c\ge\gamma_2C_2/2$ for $g_{\rm lat}\ge g_0^{(2)}$, stays
+> bounded below by a positive constant for all $g_{\rm lat}>0$ and has a
+> finite limit $C$ as $g_{\rm lat}\to0$.
+
+No exponential enters. In $d=4$ the corresponding ratio
+$\delta_\infty(g)/g^2$ is bounded below at strong coupling by the same
+theorem and must vanish like $g^{-2}e^{-1/(2b_0g^2)}$ at weak coupling;
+the two ends of the $d=4$ problem have different functional forms and the
+lattice gap must interpolate between them, which is what makes T3 in
+$d=4$ a transmutation statement. In $d=3$ both ends are linear in
+$g_{\rm lat}^2$.
+
+## 4. What is in hand and what is not
+
+| | $d=3$ | $d=4$ |
+| --- | --- | --- |
+| scale of the gap | $\varepsilon_3=g^2\hbar^2c$, classical constant | $\hbar c\Lambda$, generated by transmutation |
+| finite-volume gap | $\varepsilon_3f(x)$, $x=g^2\hbar L$ | $(\hbar c/L)\,z(L)$ with $g(L)$ running |
+| small-volume end | $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ | $z=\delta_1^{(3)}g(L)^{2/3}[1+O(g^{2/3})]$ |
+| strong-coupling lattice end | $\delta_\infty/g_{\rm lat}^2\ge\gamma_2C_2/2$ | $\delta_\infty/g^2\ge\gamma_3C_2/2$ |
+| conjecture | $\inf_{g_{\rm lat}}c(g_{\rm lat})>0$, $c\to C$ | $\delta_\infty(g)\,e^{1/(2b_0g^2)}(b_0g^2)^{b_1/(2b_0^2)}\to m/(\hbar c\Lambda_{\rm lat})$ |
+| expected constant | $C=N/(2\pi)$ (Karabali--Nair, physics) | none in closed form |
+| existence | finite volume by stochastic quantisation (Chevyrev review, passage-level companion in docs) | finite-volume UV stability only |
+
+Open in $d=3$: (i) the infinite-volume limit of the finite-volume
+construction; (ii) any lower bound on $f$ away from the two ends; (iii)
+the identification of $f$'s small-$x$ correction with the stochastic
+construction's estimates. Item (ii) is the conjecture itself, and the
+one-variable form means that a single inequality
+$f(x)\ge f_->0$ for $x\ge x_0$, proved for the continuum finite-volume
+theory, together with the existence of $\lim f$, would settle the
+$d=3$ mass gap.
+
+## 5. Consequence for STATE
+
+The $d=3$ target is now a statement about one function of one variable
+with both ends known: $f(x)\sim\delta_1^{(2)}x^{-2/3}$ at $x\to0$ and
+$f\to C$ conjectured at $x\to\infty$, with the lattice ratio
+$\delta_\infty/g_{\rm lat}^2$ bounded below at strong coupling. It replaces
+the $d=3$ line of STATE. The next theorem-sized step in $d=3$ is a lower
+bound $f(x)\ge f_->0$ on an interval $x\in[x_0,x_1]$ beyond the
+small-volume expansion, for which the candidate tool is a variational or
+operator-inequality argument on the torus Hamiltonian that keeps the
+zero-point mechanism of the constant modes while controlling the nonzero
+modes by their Gaussian part, which is what the weak-coupling lattice
+bound of STATE step 3 is meant to prepare.
