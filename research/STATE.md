@@ -176,12 +176,27 @@ one obligation at a time.
    openness of $\mathcal G$ now rests on one missing ingredient, a gap
    stability theorem that does not assume frustration-freeness (the
    Kogut--Susskind Hamiltonian is frustration-free only at $g=\infty$).
-3j. **Next:** either (a) survey what stability without
-   frustration-freeness would require and whether a gauge-specific
-   substitute exists, or (b) return to the lower side proper and attempt
-   the one-step blocking inequality at fixed cutoff, whose obstruction
-   (inter-block coupling of order surface area over gap) has not yet
-   been written out.
+3j. **Done: the one-step blocking inequality.**
+   [Note](../notes/blocking-step-obstruction.md): with blocks of $M^3$
+   sites, $6M^2$ straddling plaquettes per block of norm
+   $4N\hbar c/(ag^2)$, the naive Schur estimate $\|B\|^2/\Delta_M$ exceeds
+   the gap by $M^4N^2/(g^4\delta^2)$. Lemma 1$'$ identifies the waste: that
+   estimate measures the **boundary energy**, which is a constant shift
+   and costs nothing; what enters the gap is the **variation** of the
+   Schur term. A connected estimate replacing $(\sum_p\|w_p\|)^2$ by
+   $\sum_p\|w_p\|^2$ turns $M^4$ into $M^2$ and closes one step when
+   $g^4\gtrsim8\sqrt{6C}MN/(\gamma C_2)$, a fixed threshold. Since the
+   coupling grows toward the infrared, the induction closes above that
+   threshold, and reaching it from the cutoff takes
+   $n\simeq(1/(2b_0\log2))(g_{\rm UV}^{-2}-g_{\rm thr}^{-2})$ doublings,
+   of order thirty for $SU(2)$ at $g_{\rm UV}^2=1/2$. **The difficulty is a
+   finite number of steps in the intermediate regime**, each generating
+   couplings outside the Kogut--Susskind family.
+3k. **Next:** the connected estimate at strong coupling. Yarotsky's
+   proof (CMP 261 (2006) 799 §2) is a cluster expansion for the
+   ground-state projection and should already contain an estimate of the
+   required shape; read §2 and extract it, which would make the one-step
+   blocking inequality unconditional for $g\ge g_{\rm thr}$.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
