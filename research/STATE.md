@@ -212,12 +212,31 @@ the items below are the working queue.
    regions. The flow's monotonicity gives $\|G\|_{L^2}$ only; the missing
    estimate is the $L^\infty$ bound, and the Hamiltonian framework has no
    probabilistic route around it.
-3n. **Next:** the Hamiltonian framework has no measure in which
-   large-field regions carry small weight, so the natural move is to ask
-   what the same argument looks like on the Euclidean side, where they
-   do. Bounded question: state the flow-truncation step for the Euclidean
-   transfer matrix and identify which of T2$'$/T3 it would address.
-4. **Done: the $d=3$ formulation.**
+3n. **Done: the obstruction is the large-field tail.**
+   [Note](../notes/typical-field-strength-window.md): the free flowed
+   field has $\langle|b_t|^2\rangle=g^2/(16\pi^2t^2)$, so
+   $t\langle|b_t|^2\rangle^{1/2}=g/(4\pi)$, independent of $t$ and $a$.
+   The truncation error $\exp[2t\|G\|_\infty-2\kappa^2]$ is then below
+   $e^{-1}$ on typical configurations at **any** coupling, with range
+   factor $\kappa\ge\sqrt{g/4\pi+1/2}$: the small-field condition is a
+   statement about the supremum, not about the typical size. The tail
+   obeys $\mathbb P(\|b_t\|_\infty>\eta/t)\lesssim V(8t)^{-3/2}e^{-8\pi^2\eta^2/g^2}$,
+   which the Euclidean measure absorbs (Balaban's large-field split, here
+   derived rather than assumed) and for which the Hamiltonian framework
+   has no counterpart, since it has a state and no integration over
+   configurations.
+   **The Hamiltonian route of this programme terminates here**, in a
+   well-defined way.
+4. **Two ways forward, both substantial.** (a) Ask whether the
+   Lieb--Robinson localization of
+   [the LR note](../notes/lieb-robinson-kogut-susskind.md) can replace the
+   large-field probability estimate, so that a bad region affects only
+   nearby terms; this is native to the present programme. (b) Carry the
+   flow-truncation formulation to the Euclidean side and ask whether it
+   simplifies the existing constructive treatment. Before either, a
+   consolidation checkpoint is due: the position note should record the
+   termination.
+5. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and

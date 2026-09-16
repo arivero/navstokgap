@@ -1,0 +1,138 @@
+# On typical configurations the flow truncation is controlled at any coupling; the whole obstruction is the large-field tail
+
+The condition $t\|G\|_\infty\lesssim1$ of
+[the Jacobian note](flow-jacobian-truncation-error.md) can be evaluated
+rather than assumed. In the free theory the flowed magnetic field has
+$$\big\langle|b_t|^2\big\rangle=\frac{g^2}{16\pi^2t^2},
+\qquad\text{so}\qquad t\,\big\langle|b_t|^2\big\rangle^{1/2}=\frac{g}{4\pi},$$
+a pure number depending on the coupling alone and on no scale. Since the
+truncation error at range $R=\kappa\sqrt{8t}$ is
+$\exp[2t\|G\|_\infty-2\kappa^2]$, a **typical** configuration is handled
+at any coupling by choosing
+$$\kappa\ \gtrsim\ \sqrt{g/(4\pi)},$$
+that is, a truncation range longer than the flow radius by the square
+root of the coupling. The obstruction is therefore not the typical field
+strength but the **tail**: $\|G\|_\infty$ is governed by the largest
+fluctuation anywhere in the volume, and for a Gaussian field it exceeds
+$\eta/t$ with probability of order $e^{-c\eta^2/g^2}$ per correlation
+volume, small at weak coupling and only polynomially controlled by the
+volume. In the Euclidean framework that probability is a statement about
+the measure and can be absorbed, which is precisely the large-field
+estimate of a constructive renormalization group. In the Hamiltonian
+framework there is no measure to integrate over, only a state, and the
+same regions must be excluded by an operator statement. This locates the
+remaining difficulty in one place: **the large-field tail, and the
+absence of a Hamiltonian substitute for the probabilistic estimate that
+controls it.** Free-theory values are exact; their use for the
+interacting theory at scale $\ell$ is the standard perturbative estimate
+and is labelled as such. Constants explicit; nothing promoted.
+
+## 1. The flowed field strength in the free theory
+
+From [the free-field note](flowed-bound-free-field.md) §3, the flowed
+magnetic two-point function at coincident points is
+$$\big\langle b_{t,i}(0)b_{t,i}(0)\big\rangle
+=\int\!\frac{d^3k}{(2\pi)^3}\sum_i\tilde G_{ii}(k)
+=\int\!\frac{d^3k}{(2\pi)^3}\,\frac{g^2k}{2}\,e^{-2tk^2}\cdot2
+=\frac{g^2}{2\pi^2}\int_0^\infty\!k^3e^{-2tk^2}dk,$$
+and $\int_0^\infty k^3e^{-\alpha k^2}dk=1/(2\alpha^2)$ with $\alpha=2t$
+gives
+$$\big\langle|b_t|^2\big\rangle=\frac{g^2}{2\pi^2}\cdot\frac1{8t^2}=\frac{g^2}{16\pi^2t^2},
+\qquad \big\langle|b_t|^2\big\rangle^{1/2}=\frac{g}{4\pi\,t}.$$
+The flow time is the only scale, so the dimensionless combination is
+$$t\,\big\langle|b_t|^2\big\rangle^{1/2}=\frac{g}{4\pi},$$
+independent of $t$ and of the lattice spacing. In the interacting theory
+at scale $\ell=\sqrt{8t}$ the same estimate with the running coupling
+$g(\ell)$ is the leading perturbative statement.
+
+## 2. Typical configurations need only a longer range
+
+Corollary 3 of [the Jacobian note](flow-jacobian-truncation-error.md)
+gives truncation error $\exp[2t\|G\|_\infty-2\kappa^2]$ at range
+$R=\kappa\sqrt{8t}$. Replacing $\|G\|_\infty$ by the typical value of
+Section 1,
+$$\varepsilon_{\rm typ}\ \sim\ \exp\Big[\frac{g}{2\pi}-2\kappa^2\Big],$$
+so $\varepsilon_{\rm typ}\le e^{-1}$ as soon as
+$$\kappa^2\ \ge\ \frac{g}{4\pi}+\frac12,
+\qquad\text{i.e.}\qquad R\ \ge\ \sqrt{8t}\,\sqrt{\tfrac{g}{4\pi}+\tfrac12}.$$
+At $g=1$ this is $R\approx0.8\sqrt{8t}$; at $g=4\pi$ it is
+$R\approx1.2\sqrt{8t}$; the range grows only as $\sqrt g$. **On typical
+configurations the flow truncation is therefore controlled at every
+coupling**, at the price of an effective Hamiltonian whose range exceeds
+the scale by a factor $\sqrt{g/4\pi+1/2}$.
+
+This removes the reading of the small-field condition as a weak-coupling
+restriction. The condition $t\|G\|_\infty\lesssim1$ is restrictive
+because of the supremum, not because of the typical size.
+
+## 3. The tail is the obstruction
+
+$\|G\|_\infty$ is the largest value of the field strength anywhere in the
+volume. For a Gaussian field of variance $\sigma^2=g^2/(16\pi^2t^2)$ the
+probability that $|b_t|$ exceeds $\eta/t$ at a given point is
+$$\mathbb P\Big(|b_t|>\frac\eta t\Big)\ \sim\ \exp\Big[-\frac{\eta^2}{2\sigma^2t^2}\Big]
+=\exp\Big[-\frac{8\pi^2\eta^2}{g^2}\Big],$$
+and the number of independent points at resolution $\sqrt{8t}$ in a
+volume $V$ is $V/(8t)^{3/2}$, so
+$$\mathbb P\Big(\|b_t\|_\infty>\frac\eta t\Big)\ \lesssim\ \frac{V}{(8t)^{3/2}}\,
+\exp\Big[-\frac{8\pi^2\eta^2}{g^2}\Big].$$
+Two readings.
+
+*Euclidean.* This is a statement about the Wilson measure, and the
+exponential beats the volume factor as long as
+$\eta^2\gtrsim(g^2/8\pi^2)\log(V/(8t)^{3/2})$. Regions where it fails
+are the large-field regions, they occupy a fraction of the volume that
+is exponentially small in $1/g^2$, and a construction handles them by a
+separate argument whose cost is paid against that small probability.
+This is the structure of Balaban's programme
+(Commun. Math. Phys. 122 (1989) 355 and the accompanying series;
+metadata level) and the derivation above says why the split is forced:
+the truncation error is exponential in the local field strength, so the
+configurations must be sorted by it.
+
+*Hamiltonian.* Here the object is a state, and $\|G\|_\infty$ enters an
+operator bound. There is no integration over configurations in which a
+rare region can be given small weight; the exponential factor
+$e^{2t\|G\|_\infty}$ multiplies an operator norm and must be controlled
+uniformly, or the argument must be localized so that a bad region
+affects only nearby terms. Localization of that kind is what the
+Lieb--Robinson bound of
+[the LR note](lieb-robinson-kogut-susskind.md) supplies in principle,
+and turning it into a substitute for the probabilistic estimate is the
+question this note isolates.
+
+## 4. Consequences for the route
+
+**The window between the two methods is bounded and explicit.** The
+cluster criterion of [the T2 note](strong-coupling-uniform-gap.md) holds
+for $g\ge g_0=(48N^2/[(N^2-1)\beta_*])^{1/4}$; the flow truncation on
+typical configurations holds at every coupling with range factor
+$\sqrt{g/4\pi+1/2}$, and the tail estimate degrades as $e^{-8\pi^2\eta^2/g^2}$.
+So the two do not fail in complementary regimes of the coupling, as an
+earlier reading suggested: the flow step is limited by the **tail at any
+coupling**, and the cluster step by the coupling itself. A proof must
+therefore control the large-field tail at every scale where the cluster
+criterion has not yet taken over, which by
+[the blocking note](blocking-step-obstruction.md) §5 is a number of
+steps logarithmic in the scale ratio, of order thirty for $SU(2)$ from a
+bare coupling $g_{\rm UV}^2=1/2$.
+
+**The Euclidean framework is the right one for those steps.** The
+suppression that makes the large-field regions harmless is a property of
+the measure, and it has no Hamiltonian counterpart. This is a reason,
+derived rather than conventional, why the constructive programme is
+carried out in the Euclidean formulation, and why the Hamiltonian route
+of this programme has reached its natural limit at exactly this point.
+
+## 5. Consequence for STATE
+
+The small-field condition is not a weak-coupling restriction: typical
+configurations are handled at any coupling by lengthening the truncation
+range as $\sqrt g$. The obstruction is the supremum over the volume, and
+its control is probabilistic, hence Euclidean. The Hamiltonian route
+therefore terminates here in a well-defined way, and the two questions it
+leaves are: whether a Lieb--Robinson localization can replace the
+large-field probability estimate, and, on the Euclidean side, whether the
+flow-truncation formulation of the step simplifies the existing
+constructive treatment. Either is a substantial project; the first is the
+one native to this programme.

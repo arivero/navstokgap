@@ -210,8 +210,13 @@ statements, two proved, the finiteness clause reduced to a single
 correlator, two routes closed with explicit numbers, and three places
 where the non-abelian structure is isolated in a form that a proof could
 use. The remaining step is the one that has been open since the problem was
-posed, and [the Jacobian note](flow-jacobian-truncation-error.md) states
-its error: Gaussian in the truncation range over the flow radius, times
+posed. [The typical-field note](typical-field-strength-window.md) locates
+it precisely: on typical configurations the flow truncation is controlled
+at every coupling by lengthening the range as $\sqrt g$, and the whole
+obstruction is the supremum of the field strength over the volume, whose
+control is probabilistic and therefore Euclidean. The Hamiltonian route
+of this programme reaches its natural limit there.
+[The Jacobian note](flow-jacobian-truncation-error.md) states the error: Gaussian in the truncation range over the flow radius, times
 $e^{2t\|G\|_\infty}$, so the step is controlled exactly where the flowed
 field strength satisfies $\|G\|_\infty\lesssim\ell^{-2}$. The missing
 ingredient is a pointwise bound on that field strength, where the flow
