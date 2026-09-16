@@ -33,8 +33,8 @@ renormalization step itself. Constants explicit; nothing promoted.
 ## 1. The connected structure is present in the proof
 
 Yarotsky's Theorem 1 is proved by writing
-$e^{-t_0H_\Lambda}=\sum_{I\subset\Lambda}T_{\Lambda,I}$ with
-$T_{\Lambda,I}=\sum_{J\subset I}(-1)^{|I|-|J|}e^{-t_0(H_{\Lambda,0}+\sum_{x\in J}\phi_x)}$,
+$$e^{-t_0H_\Lambda}=\sum_{I\subset\Lambda}T_{\Lambda,I},\qquad
+T_{\Lambda,I}=\sum_{J\subset I}(-1)^{|I|-|J|}\,e^{-t_0(H_{\Lambda,0}+\sum_{x\in J}\phi_x)},$$
 so that $T_{\Lambda,I}$ collects the contributions in which every site of
 $I$ is touched by the perturbation. Two estimates carry the argument
 (§2, passage level).
@@ -54,10 +54,9 @@ Both are exponential in the size of the excited region, which is exactly
 the polymer structure that makes the expansion sum over **connected**
 clusters. So the hypothetical estimate of
 [the blocking note](blocking-step-obstruction.md) §3, replacing
-$(\sum_p\|w_p\|)^2$ by $\sum_p\|w_p\|^2$, is not a missing ingredient: it
-is what the expansion produces, and the way to use it is to apply the
-theorem itself to the blocked system rather than to re-derive a Schur
-bound.
+$(\sum_p\|w_p\|)^2$ by $\sum_p\|w_p\|^2$, is precisely what the expansion
+produces, and the way to use it is to apply the theorem itself to the
+blocked system in place of a re-derived Schur bound.
 
 ## 2. The criterion on a lattice of blocks
 
