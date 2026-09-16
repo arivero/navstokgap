@@ -338,12 +338,28 @@ the items below are the working queue.
    $\eta$ and the scale. So the large-field sum converges for
    $g^2\lesssim20$ and the answer is "slow, not divergent", with the
    slowness quantified as a fraction $g^2/(2\pi^2)$ of the exponent.
-13. **Next, and it would close this corner:** a lower bound on $S_E$ over
-   the constraint set improving on the constant-field value
-   $\eta^2/(4g^2)$ by a factor bounded away from zero, uniformly in the
-   scale. The Nielsen--Olesen instability says the minimizer is
-   inhomogeneous, so the bound must come from the constraint plus the
-   Bianchi identity rather than from a trial configuration.
+13. **Done: the large-field corner is closed as an estimate problem.**
+   [Note](../notes/large-field-action-lower-bound.md). Writing the
+   constraint in the variable the action measures,
+   $K_\eta=\{\ell^{-4}\int_{\rm block}|G_t|^2\ge\eta^2/\ell^4\}$ with
+   $\sqrt{8t}=\ell$, the bound is two steps: the flow decreases $S_E$, and
+   the flowed action exceeds its restriction to the block. So
+   $\inf_{K_\eta}S_E/\hbar\ge\eta^2/(4g^2)$, **uniform in $\ell$, $a$, the
+   volume and the group**, and **sharp** (a field of magnitude
+   $\eta/\ell^2$ on the block attains it). The Nielsen--Olesen instability
+   does not obstruct it: every descent direction lowers the flowed block
+   average and so leaves $K_\eta$; the constant field is a saddle of the
+   unconstrained action and a minimizer of the constrained one. Corner
+   assembled: cost $\eta^2/(4g^2)$, entropy $\eta^2/(8\pi^2)$, truncation
+   error $e^{2\eta}$, net weight
+   $\exp[-\frac{\eta^2}{4g^2}(1-Cg^2/2\pi^2)]$, all scale-invariant.
+14. **Next.** What is left is the effective description inside the
+   large-field region, which is a construction rather than an estimate:
+   the expansion around the constrained minimizer with its
+   $\eta^2/(8\pi^2)$ soft directions. The programme has now reached this
+   same constructive step from three directions (blocking, flow
+   truncation, large field), which is the signal that the estimates are
+   done and the construction is the whole remaining content.
 11. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

@@ -146,7 +146,7 @@ one of them.
 | T3 | the conjecture, given T2$'$ |
 | T4 | construction |
 | local large-field control | available via the transfer-matrix identification: $|\Omega|^2$ is the Euclidean time-slice marginal |
-| the large-field region itself | the growth $e^{2t\|G\|_\infty}$ is **sharp**, saturated by the Nielsen--Olesen mode, so the region is excluded; its entropy is beaten by its action cost by $2\pi^2/g^2$, and what remains is the constrained minimizer |
+| the large-field region itself | closed as an estimate problem: cost $\eta^2/(4g^2)$ sharp, entropy $\eta^2/(8\pi^2)$, truncation error $e^{2\eta}$ sharp, all scale-invariant; what remains is the effective description inside it |
 
 The pattern across every note is uniform: **statements uniform in the
 cutoff are renormalization statements, and statements local in space
