@@ -56,7 +56,20 @@ one obligation at a time.
    lattice size for $g\ge g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}$, with
    infinite-volume ground state and exponential clustering. Blind to the
    abelian/non-abelian distinction, which is T2$'$.
-3. **Next: the weak-coupling end on the lattice.** Variational upper
+3. **Done: upper bounds on the lattice gap ($d=4$).**
+   [Feynman--Bijl note](../notes/lattice-gap-upper-bounds.md): for any
+   gauge-invariant $f(U)$, $\Delta\le\frac{\hbar cg^2}{2a}\sum_\ell\langle|\nabla_\ell f|^2\rangle/\operatorname{Var}f$;
+   plaquette bound $\hbar cg^2N/(a\operatorname{Var}\operatorname{Re}\operatorname{tr}U_p)$;
+   strong-coupling gap of order $g^2\hbar c/a$ on both sides; for $U(1)$
+   the electric trial operator is gauge invariant and
+   $\Delta\le2\hbar c\hat S(k)/(ag^2\langle\cos\theta_p\rangle)$ (Coulomb
+   phase gapless through the sine structure factor); for non-abelian $G$
+   no c-number-coefficient operator linear in $E$ is gauge invariant
+   (proved), so the photon-type excitation must carry a string whose
+   electric cost blocks that channel. New upper-side target
+   T$_{\rm fin}$: the same inequality for Wilson-flowed observables with
+   an $a$-uniform flow-Jacobian bound (the finiteness half $m<\infty$).
+3b. **Next: the weak-coupling end on the lattice.** Variational upper
    bound (and lower bound if reachable) on the Kogut--Susskind gap at
    small $g$ on a lattice with side small against $\hbar c/\Lambda$, using
    the constant-mode ground state of C133 as trial state; connect
