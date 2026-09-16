@@ -49,16 +49,23 @@ one obligation at a time.
    (existence with the axioms) and S (the small-volume corner
    $z(L)=\delta_1g^{2/3}[1+O(g^{2/3})]$). The conjecture is T2$'$ with T3,
    given T4.
-2. **Next: T2 in Hamiltonian form.** Prove
-   $\Delta^{\rm phys}_{a,L}\ge c(N)g^2\hbar c/a$ for $g\ge g_0(N)$ uniformly
-   in the lattice size, for the Kogut--Susskind Hamiltonian, handling the
-   unbounded electric term (truncation of link representations with
-   control, or relative boundedness of the magnetic term). Output: a value
-   of $g_0(N)$ and the argument that later work must push toward zero.
-3. **The $d=3$ case.** The coupling is the mass unit; formulate
+2. **Done: T2 in Hamiltonian form.**
+   [The strong-coupling note](../notes/strong-coupling-uniform-gap.md)
+   checks Yarotsky's gap-stability hypotheses for the Kogut--Susskind
+   Hamiltonian: $\Delta_{a,L}\ge\gamma(g^2/2)C_2\hbar c/a$ uniformly in the
+   lattice size for $g\ge g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}$, with
+   infinite-volume ground state and exponential clustering. Blind to the
+   abelian/non-abelian distinction, which is T2$'$.
+3. **Next: the weak-coupling end on the lattice.** Variational upper
+   bound (and lower bound if reachable) on the Kogut--Susskind gap at
+   small $g$ on a lattice with side small against $\hbar c/\Lambda$, using
+   the constant-mode ground state of C133 as trial state; connect
+   $\Delta_{a,L}$ with the continuum corner $\delta_1g^{2/3}\hbar c/L$ and
+   locate the regime where neither expansion applies.
+4. **The $d=3$ case.** The coupling is the mass unit; formulate
    $m=C\,g^2\hbar^2/c$ and identify the finite-volume estimate of the
    stochastic construction that would give $C>0$.
-4. **The crossover in the zero-mode model.** Sign of the next-to-leading
+5. **The crossover in the zero-mode model.** Sign of the next-to-leading
    terms of Lüscher's expansion for the gap; a variational bound on the
    torus Hamiltonian with the zero-mode ground state as trial state.
 

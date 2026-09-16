@@ -239,7 +239,7 @@ give a gap uniform in the volume.
 | Statement | Content | Status |
 | --- | --- | --- |
 | T1 | finite lattice: unique physical ground state, gap $\Delta_{a,L}=(\hbar c/a)\delta(g;N,G)>0$ | proved (Theorem 1) |
-| T2 | $\delta(g;N,G)\ge c(N)g^2$ for $g\ge g_0(N)$, uniformly in $N$ | Euclidean form established (Osterwalder--Seiler); Hamiltonian form is the next target |
+| T2 | $\delta(g;N,G)\ge c(N)g^2$ for $g\ge g_0(N)$, uniformly in $N$ | established: Euclidean form (Osterwalder--Seiler); Hamiltonian form as a corollary of Yarotsky's theorem in [the strong-coupling note](strong-coupling-uniform-gap.md) |
 | T2$'$ | $\delta_\infty(g)>0$ for all $g>0$ (no Coulomb phase) | open; false for $U(1)$ |
 | T3 | $\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\in(0,\infty)$ | open; the Millennium content given T4 |
 | T4 | continuum infinite-volume theory with the axioms | finite-volume UV stability known; rest open |
@@ -251,10 +251,10 @@ the mass gap" by "prove T2 in Hamiltonian form, then push $g_0$ down".
 
 ## 8. Consequence for STATE
 
-The next note is T2 in Hamiltonian form: a volume-uniform gap at strong
-coupling for the Kogut--Susskind Hamiltonian, by a cluster expansion or a
-relatively bounded perturbation argument that handles the unbounded
-electric term. Its output is a number $g_0(N)$; every later step is an
-improvement of that number toward zero along the scaling curve. The
+T2 in Hamiltonian form is now closed in
+[the strong-coupling note](strong-coupling-uniform-gap.md) as a corollary
+of Yarotsky's gap-stability theorem, with threshold
+$g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}$; every later step is an
+improvement of that threshold toward zero along the scaling curve. The
 $d=3$ target of STATE keeps its place as the case where T3 has no
 transmutation to perform.
