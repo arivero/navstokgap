@@ -173,6 +173,10 @@ equation, for the same extensivity reason as the Agmon bound. What the
 attempt produced instead is worth keeping: the exact relations
 $\Delta V=4C_2(N|\mathcal P|-V)$ and $|\nabla V|^2\le16V$, and the exact
 ground-state sum rule of Proposition 3, which constrains the magnetic
-variance in terms of kinetic quantities. The line of attack that remains
-is the transfer-matrix identification of the ground-state measure with a
-Euclidean measure, which leaves the Hamiltonian framework by design.
+variance in terms of kinetic quantities. The line of attack that remains is the transfer-matrix identification of
+the ground-state measure with a Euclidean measure, carried out in
+[the transfer note](ground-state-measure-transfer.md): $|\Omega|^2d\mu$ is
+the time-slice marginal of the four-dimensional Wilson measure, so every
+local Euclidean estimate transfers, and the local large-field bound
+becomes available in its standard scale-invariant form
+$e^{-c\eta^2/g^2}$.

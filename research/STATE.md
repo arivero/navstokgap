@@ -298,15 +298,29 @@ the items below are the working queue.
    [The SU(3) note](../notes/su3-constants.md) evaluates every constant
    for the narrowed goal and records the two features $SU(2)$ lacks, a
    complex defining representation and a $\mathbb Z_3$ centre.
-10. **Next.** The Hamiltonian line is complete; the surviving route needs
-   the local large-field estimate, which points at the transfer-matrix
-   identification of $\Omega^2$ with a Euclidean measure on a time slice.
-   Two concrete entry points: (a) write that identification for the
-   Kogut--Susskind Hamiltonian with constants, which is a known
-   construction and would let the Euclidean large-field estimates be
-   quoted directly; (b) the openness half of $\mathcal G$, i.e. gap
-   stability without frustration-freeness, which is the one technical
-   question the programme left unresolved on its own ground.
+10. **Done: the ground-state measure is the Euclidean time-slice marginal.**
+   [Note](../notes/ground-state-measure-transfer.md): for the
+   Kogut--Susskind Hamiltonian as the $a_t\to0$ limit of the anisotropic
+   Wilson transfer matrix (Lüscher 1977; Creutz 1977, metadata),
+   $|\Omega|^2d\mu$ is the time-slice marginal of $e^{-S_E/\hbar}$, so every
+   **local** Euclidean estimate transfers to the ground state. The
+   obstruction of items 7--8 was a feature of the representation: the
+   eigenvalue equation carries the extensive $E_0$ and compares totals,
+   the Euclidean weight factorizes over plaquettes and compares locally.
+   The large-field estimate then has its standard scale-invariant form:
+   coherent field $\eta/\ell^2$ over a block of side $\ell$ costs
+   $S_E/\hbar\simeq\eta^2/(4g^2)$, **independent of $\ell$ and $a$**, so the
+   suppression is $e^{-c\eta^2/g(\ell)^2}$, matching the independent
+   free-field Gaussian tail $e^{-8\pi^2\eta^2/g^2}$.
+11. **Next, the first question genuinely about the large-field region.**
+   The decimation step now has: good region with accurate truncation, bad
+   region of measure $e^{-c\eta_*^2/g^2}$, crossover $\eta_*=2g^2/c$ from
+   the competition between the gain $e^{-c\eta^2/g^2}$ and the loss
+   $e^{2\eta}$ of the flow Jacobian. At small $g$ the crossover is small
+   and the measure bound weak. Ask whether the flow-truncation error
+   inside the large-field region can be bounded by something weaker than
+   $e^{2t\|G\|_\infty}$, using that the flow contracts the action
+   monotonically there too.
 11. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

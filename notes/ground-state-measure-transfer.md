@@ -1,0 +1,167 @@
+# The ground-state measure is the time-slice marginal of the Euclidean measure, and that imports the local large-field estimate
+
+The obstruction recorded in
+[the identities note](magnetic-energy-identities.md) is removed by an
+identification rather than by an estimate. For the Kogut--Susskind
+Hamiltonian obtained as the $a_t\to0$ limit of the anisotropic Wilson
+transfer matrix,
+$$\big|\Omega(U)\big|^2\,d\mu(U)\ =\ \lim_{T\to\infty}\
+\text{marginal at time }0\text{ of }\ \frac{e^{-S_E[\mathcal U]/\hbar}\,\prod d\mu}{Z_T},$$
+so the ground-state measure of the Hamiltonian theory is the
+distribution of one time slice under the four-dimensional Euclidean
+Wilson measure. Every estimate proved for that measure therefore holds
+for $|\Omega|^2$ verbatim, including the local ones that the eigenvalue
+equation cannot reach, because the Euclidean weight
+$e^{-S_E/\hbar}=\prod_Pe^{-\beta_P/\hbar}$ factorizes over four-dimensional
+plaquettes while the eigenvalue equation carries the extensive $E_0$.
+The estimate the route needs is then available in its standard form:
+a configuration whose field strength averaged over a block of side
+$\ell$ reaches $\eta/\ell^2$ costs Euclidean action
+$$\frac{S_E}{\hbar}\ \simeq\ \frac{1}{4g^2}\!\int_{\text{block}}\!\big|F\big|^2\,d^4x
+\ \simeq\ \frac{\eta^2}{4g^2},$$
+**independent of $\ell$ and of the lattice spacing**, so the suppression
+is $e^{-c\eta^2/g(\ell)^2}$ at every scale, with the running coupling.
+This matches, with the same exponent structure, the free-field Gaussian
+tail $\exp[-8\pi^2\eta^2/g^2]$ computed in
+[the typical-field note](typical-field-strength-window.md) §3, which is
+a check on both. With the identification, the decimation step of the
+route controls its truncation error off a set of measure
+$e^{-c\eta^2/g^2}$, and what remains is the treatment of that set: the
+large-field problem in its usual form, now reached honestly rather than
+assumed. Constants explicit; the identification is standard and cited;
+nothing promoted.
+
+## 1. The transfer matrix and the limit
+
+On an anisotropic lattice with spatial spacing $a$ and temporal spacing
+$a_t$, the Wilson action separates into temporal and spatial plaquettes,
+$$\frac{S_E}{\hbar}=\frac{1}{g^2}\Big[\frac{a}{a_t}\sum_{P\ \rm temporal}
+\big(N-\operatorname{Re}\operatorname{tr}U_P\big)
++\frac{a_t}{a}\sum_{P\ \rm spatial}
+\big(N-\operatorname{Re}\operatorname{tr}U_P\big)\Big]\cdot\frac{2}{1},$$
+in the normalization of
+[the obligations map](mass-gap-obligations-lattice.md) with $g$
+dimensionless. The transfer matrix $\mathcal T$ of this action is
+self-adjoint and strictly positive (Lüscher, Commun. Math. Phys. 54
+(1977) 283; Creutz, Phys. Rev. D 15 (1977) 1128; both metadata level),
+and as $a_t\to0$
+$$\mathcal T=\exp\Big[-\frac{a_t}{\hbar}\,H_{\rm KS}\Big]\big(1+O(a_t)\big),
+\qquad
+H_{\rm KS}=\frac{\hbar c}{a}\Big[\frac{g^2}2\sum_\ell(-\Delta_\ell)
++\frac2{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big],$$
+the temporal plaquettes producing the electric term through the
+character expansion and the spatial ones passing directly to the
+magnetic term.
+
+**Proposition 1.** Let $\Omega$ be the Perron vector of $\mathcal T$,
+which by T1 of [the obligations map](mass-gap-obligations-lattice.md) is
+the positive ground state of $H_{\rm KS}$ in the limit. Then for any
+bounded $F$ of a single time slice,
+$$\big\langle\Omega,F\,\Omega\big\rangle
+=\lim_{T\to\infty}\frac{\big\langle\chi,\mathcal T^{T}F\,\mathcal T^{T}\chi\big\rangle}
+{\big\langle\chi,\mathcal T^{2T}\chi\big\rangle}
+=\lim_{T\to\infty}\big\langle F\big\rangle_{S_E,\,[-T,T]},$$
+for any $\chi$ with $\langle\chi,\Omega\rangle\neq0$; that is,
+$|\Omega|^2d\mu$ is the time-slice marginal of the Euclidean measure.
+
+*Proof.* Spectral decomposition of $\mathcal T$ with the gap of T1
+gives the first equality; the middle expression is by construction the
+Euclidean expectation of $F$ inserted at time $0$ in a slab of height
+$2T$ with boundary state $\chi$, which is the second. $\square$
+
+Nothing here is new; the point is what it licenses.
+
+## 2. What transfers
+
+Any statement of the form "the Euclidean measure assigns probability at
+most $p$ to the set of configurations whose restriction to a time slice
+has property $\mathcal A$" is, by Proposition 1, a statement about
+$|\Omega|^2$. In particular the local statements do, and the reason the
+Hamiltonian formulation could not produce them itself is now visible as
+a feature of the representation rather than of the physics: the
+eigenvalue equation
+$-A'\Delta\Omega+(B'V-e_0)\Omega=0$ carries the extensive $e_0$ and
+compares totals, while $e^{-S_E/\hbar}$ is a product over plaquettes and
+compares locally. Both describe the same measure.
+
+This closes the gap left open in
+[the identities note](magnetic-energy-identities.md) §5 and in
+[the typical-field note](typical-field-strength-window.md) §3, in the
+only way those notes left available.
+
+## 3. The large-field estimate at a block scale
+
+**The action cost is scale-invariant.** Let a configuration have field
+strength of magnitude $\eta/\ell^2$ coherently over a four-dimensional
+block of side $\ell$. Its Euclidean action is
+$$\frac{S_E}{\hbar}=\frac1{4g^2}\int\big|F^a_{\mu\nu}\big|^2d^4x
+\ \simeq\ \frac{1}{4g^2}\Big(\frac{\eta}{\ell^2}\Big)^2\ell^4=\frac{\eta^2}{4g^2},$$
+independent of $\ell$ and of $a$. This is the reason large-field
+estimates take the same form at every scale, with only the coupling
+running: the suppression is
+$$\mathbb P\Big(\big|F\big|_{\rm block}\ \ge\ \frac{\eta}{\ell^2}\Big)
+\ \lesssim\ \exp\Big[-\frac{c\,\eta^2}{g(\ell)^2}\Big],$$
+with $c$ a pure number and $g(\ell)$ the coupling at the block scale.
+
+**Consistency check.** The free-field computation of
+[the typical-field note](typical-field-strength-window.md) §3 gave, for
+the flowed magnetic field at radius $\sqrt{8t}=\ell$,
+$$\mathbb P\Big(|b_t|>\frac{\eta}{t}\Big)\simeq\exp\Big[-\frac{8\pi^2\eta^2}{g^2}\Big],$$
+the same $\eta^2/g^2$ in the exponent, obtained by an independent route
+from the Gaussian ground state. The two agree in structure and fix
+$c=8\pi^2$ in the free limit.
+
+**Why the lattice-scale version is empty.** At $\ell=a$ the plaquette
+angles are of order one, the action per plaquette is bounded by
+$4N/g^2$, and the Chebyshev bound
+$\mathbb P(S_R\ge s)\le\exp[-s+4N|R|/g^2]$ is vacuous, as noted in
+[the typical-field note](typical-field-strength-window.md). The estimate
+has content only for the block-averaged field at $\ell\gg a$, where the
+individual plaquette angles are small, of order $a^2\eta/\ell^2$, and
+the cost accumulates over $(\ell/a)^4$ of them to the scale-invariant
+total above. The large-field condition is a statement about coherence
+across a block, not about any single plaquette.
+
+## 4. Where this leaves the route
+
+With Proposition 1 and Section 3, the decimation step of
+[the position note](mass-gap-position.md) §6 has its error controlled
+outside a set of ground-state measure $e^{-c\eta^2/g(\ell)^2}$, which at
+weak coupling is small, and inside that set the flow-truncation bound of
+[the Jacobian note](flow-jacobian-truncation-error.md) degrades like
+$e^{2t\|G\|_\infty}$. The two exponents compete:
+$$\text{gain }e^{-c\eta^2/g^2}\qquad\text{against}\qquad\text{loss }e^{2\eta},$$
+since $t\|G\|_\infty\simeq\eta$ when the field reaches $\eta/\ell^2$ at
+the flow radius. The gain wins for
+$$\eta\ \gtrsim\ \frac{2g^2}{c},$$
+so the large-field region can be defined as
+$\{\,|F|_{\rm block}\ge\eta_*/\ell^2\,\}$ with $\eta_*=2g^2/c$, on which
+the measure is at most $e^{-4g^2/c}$ and outside which the truncation is
+accurate. **At weak coupling $\eta_*\to0$, so the good region is almost
+everything**; the residual set carries measure $e^{-4g^2/c}$, which
+tends to one as $g\to0$, and there the estimate fails to be useful.
+
+That last sentence is the honest statement of where the difficulty now
+sits: the competition is between an exponential gain in $\eta^2/g^2$ and
+an exponential loss in $\eta$, and at small $g$ the crossover $\eta_*$
+is small, so the excluded set is defined by a weak condition and its
+measure bound $e^{-4g^2/c}$ is close to one. Improving it requires a
+sharper treatment of the truncation inside the large-field region, which
+is the large-field expansion of the constructive programme, or a
+truncation whose error grows more slowly than $e^{2t\|G\|_\infty}$.
+
+## 5. Consequence for STATE
+
+The identification of $|\Omega|^2$ with the Euclidean time-slice
+marginal is recorded, with the transfer-matrix references, and it
+imports the local estimates that the Hamiltonian eigenvalue equation
+could not produce. The large-field estimate itself has the
+scale-invariant form $e^{-c\eta^2/g^2}$, confirmed against the
+independent free-field computation. The route's decimation step now has
+a quantitative structure: good region with accurate truncation, bad
+region of measure $e^{-c\eta_*^2/g^2}$, and a crossover $\eta_*$ fixed by
+the competition between the two exponentials. The next question is the
+first one that is genuinely about the large-field region rather than
+around it: can the flow-truncation error inside it be bounded by
+something weaker than $e^{2t\|G\|_\infty}$, for instance by using that
+the flow contracts the action monotonically even there?
