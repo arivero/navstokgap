@@ -443,9 +443,14 @@ labour; consult it before opening a new item.
    interaction norm, so intervals are covered by finitely many checks;
    feasible in principle exactly in the intermediate region. The box
    becomes the verified interval with its openness radius as tolerance.
-   **The proof closes when $g_{\rm RG}^2\ge g_{\rm DS}^2$**: the reach of
-   the small-field renormalization meets the reach of the verification.
-   Neither number is known; the verification is numerics outside this
+   **A sufficient route: the trajectory of effective interactions from
+   $g\to0$ enters the open set $\mathcal{CA}$ of completely analytical
+   interactions**, which contains Wilson at $g^2>444$; its two-number
+   form is $g_{\rm RG}^2\ge g_{\rm DS}^2$ (note §4b: sufficient not
+   necessary; target is a set in interaction space; only the trajectory
+   matters; oscillation bounds cannot improve on the single-link
+   threshold, blocks help only through internal screening). Neither
+   number is known; the verification is numerics outside this
    repository's rules.
    [Dobrushin note](../notes/dobrushin-uniqueness-wilson.md): the
    single-link Dobrushin condition for the Wilson action is checkable by

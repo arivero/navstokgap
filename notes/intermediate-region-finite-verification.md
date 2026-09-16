@@ -135,9 +135,9 @@ interaction at that coupling. Then:
 - for $g^2\le g_{\rm RG}^2$ the effective theory at some coarser scale
   lies in the verified region and inherits its gap, provided the
   renormalization steps are exact low-energy reductions;
-- **the mass gap holds on the whole lattice coupling range if
-  $g_{\rm RG}^2\ge g_{\rm DS}^2$**, and T3 then concerns only the
-  continuum limit along the trajectory.
+- **the mass gap holds along the trajectory if
+  $g_{\rm RG}^2\ge g_{\rm DS}^2$** in the refined sense of Section 4b,
+  and T3 then concerns only the continuum limit along the trajectory.
 
 Today $g_{\rm DS}^2$ is not below the strong-coupling threshold, no
 verification having been attempted, and $g_{\rm RG}^2$ is not known to
@@ -165,6 +165,59 @@ flow; the strong-coupling threshold plays no role in it. The clause T3
 is in this way absorbed into the same hypothesis on the renormalization
 map as T2$'$, and the finite verification supplies the gap
 $\delta_{\rm eff}$ with an explicit value at each point of the interval.
+
+## 4b. Three refinements of the two-number statement
+
+Reviewing the statement "the proof closes when $g_{\rm RG}^2\ge g_{\rm DS}^2$"
+at full effort gives three corrections, recorded here because each
+changes what an unblocking would have to look like.
+
+*Sufficient, not necessary.* The meeting of the two reaches is one
+route, the natural one for any strategy built from expansions at the
+two ends and a finite check between them. Necessity is not a theorem:
+a proof of T2$'$ by a different mechanism would bypass the verification
+altogether. What is true is that every rigorous route known today has
+this shape, because the confinement scale is a region with no small
+parameter, and the finite verification is the only general tool that
+handles such a region.
+
+*The target is a set in interaction space.* The renormalization map
+does not return the Wilson interaction at a larger coupling; it returns
+an effective interaction with many terms, exponentially decaying in
+range. The completely analytical interactions form an open set $\mathcal{CA}$
+in the space of summable interactions, which contains the Wilson
+interactions at $g^2>444$ by the Dobrushin condition, and the correct
+statement is: **the trajectory of effective interactions from $g\to0$
+must enter $\mathcal{CA}$.** The two-number version is the special case
+in which the trajectory passes close to a Wilson interaction, and
+"the coupling reaches $g_{\rm DS}^2$" is neither necessary nor
+sufficient by itself; the rest of the effective interaction has to lie
+within the openness radius as well. The entry, if it happens, is at the
+scale where the effective coupling is of order one, and beyond that
+scale the block variables decorrelate and the trajectory approaches the
+trivial fixed point, deep inside $\mathcal{CA}$.
+
+*The trajectory statement is weaker than the whole-range statement.*
+"The lattice theory is gapped for every $g$" is a statement about the
+Wilson action on its full coupling range, believed true for $SU(3)$ and
+false for other actions and groups with bulk transitions. The
+Jaffe--Witten problem needs only the trajectory from $g\to0$, that is,
+the scaling region, and the finite verification is needed only along
+it. Nothing about couplings the trajectory never visits enters the
+proof.
+
+*What a hand computation cannot do.* Bounding the block influence
+$\rho_V(x,y)$ by the oscillation of the joint log-density, as in Lemma 1
+of [the Dobrushin note](dobrushin-uniqueness-wilson.md), gives
+$e^{4\beta_W}-1$ for every $x\in V$ and every boundary link $y$, so the
+block sum is at most $|V|\,|\partial V|\,(e^{4\beta_W}-1)$ and the block
+criterion reads $|\partial V|(e^{4\beta_W}-1)<1$, which is worse than
+the single-link condition for every $V$. Blocks help only through the
+decay of $\rho_V(x,y)$ in the distance from $x$ to $y$ inside $V$, that
+is, through screening by the integrated links, and that decay is
+exactly what the verification computes and what no oscillation bound
+captures. The single-link threshold $g^2>444$ is therefore the end of
+what hand bounds of this type give.
 
 ## 5. What this changes and what it does not
 
