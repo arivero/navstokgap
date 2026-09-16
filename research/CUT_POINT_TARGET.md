@@ -1,5 +1,7 @@
 # Cut refinement as a consistency test for action selection
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
 A proposed action-selection mechanism must specify what survives insertion of
 observation cuts and what changes under physical interventions. Newtonian
 refinement remains a central consistency question. The current task is selected

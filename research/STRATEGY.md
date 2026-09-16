@@ -1,5 +1,7 @@
 # Choose work by the conclusion it can change
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
 Autonomous research should advance the necessity of quantum structure with a
 positive universal action parameter, or a gap estimate that survives the
 relevant limits. A solvable continuation is useful when it changes one of

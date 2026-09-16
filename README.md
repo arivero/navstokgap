@@ -44,12 +44,8 @@ consistency principle against zero-action refinement. Quantum-premise,
 apparatus and gap results
 support this target when they discharge a named dependency.
 
-[STATE](research/STATE.md) is the single current priority list.
-[PROGRAMME](research/PROGRAMME.md) explains the questions;
-[TASKS](research/TASKS.md) records scope and acceptance.
-[STRATEGY](research/STRATEGY.md) requires follow-ups to state which main
-conclusion they could change. The latest technical handoff does not by itself
-choose the next research task.
+[STATE](research/STATE.md) is the one live priority page; PROGRAMME,
+TASKS and STRATEGY are historical context.
 
 ## Supporting proofs and sources
 
@@ -75,17 +71,11 @@ preserve earlier milestones; their old next-task wording is historical.
 
 ## Work and reproduce
 
-Start with [AGENTS.md](AGENTS.md), STATE, PROGRAMME and the selected task.
-Preserve user changes. Use written proofs and source review; the repository
-prohibits numerical/symbolic verification scripts. Python remains allowed for
-document builds, extraction and integrity tooling.
-
-Run `make check` and `make papers`. Pandoc and LaTeX build the tracked papers;
-checks cover local links, source companions, citation keys, checksums and PDF
-reference/layout issues. See [TOOLS](research/TOOLS.md). Mathematical acceptance
-rests on proofs and reviews, separately from document checks.
-
-[The agent protocol](agents/PROTOCOL.md) permits one bounded Sol/Luna worker
-at a time, followed by coordinator review; ultra effort is prohibited.
-Commits and pushes have standing authorization. External publication and
-correspondence require separate direction.
+Start with [AGENTS.md](AGENTS.md) and [STATE](research/STATE.md); that is
+the whole required reading. Results are notes in `notes/`, built one at a
+time with `make paper NOTE=<slug>`; `make check` verifies links, source
+companions, citation keys and checksums. Written proofs are the
+mathematical check; the repository prohibits numerical or symbolic
+verification scripts. PROGRAMME, STRATEGY, TASKS and the agent protocol
+are historical context. Commits and pushes have standing authorization;
+external publication and correspondence require separate direction.

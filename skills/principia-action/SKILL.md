@@ -3,6 +3,9 @@ name: principia-action
 description: Advance navstokgap research on quantum necessity, positive action scales, Newtonian mechanics and robust gaps. Recover task-relevant bibliography after a context reset, select proof obligations and route to maintained derivations or source audits. Use for this repository's research, not unrelated editing or general physics questions.
 ---
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
+
 # Research decisions and source context
 
 Resolve the repository through AGENTS.md or this file's real path (the repository

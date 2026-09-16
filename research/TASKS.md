@@ -1,5 +1,7 @@
 # Task queue
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
 The coordinator alone updates this board. Statuses: ready, active, review, done,
 waiting (with a concrete dependency), parked (preserved with a return criterion). “Done” means the stated acceptance condition
 is met. Source tasks record either their completed coverage or an access-limited

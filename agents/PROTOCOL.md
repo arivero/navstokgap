@@ -1,5 +1,7 @@
 # Bounded agent work and handoff
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
 Each agent receives a concrete question and produces a reviewable artifact.
 The coordinator maintains shared state and integrates the results. Role cards
 describe the intended work; the task board records its current status.

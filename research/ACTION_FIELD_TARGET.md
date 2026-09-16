@@ -1,5 +1,7 @@
 # Positive action: definition, selection and quantum role
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
 The target is an independently motivated physical principle that forces quantum
 structure with a positive universal action parameter. A classically defined
 field $\mathsf h_\varepsilon(t)$ approaching that parameter is one proposed

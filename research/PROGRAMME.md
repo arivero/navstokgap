@@ -1,5 +1,7 @@
 # Research programme: quantum necessity and robust gap mechanisms
 
+> **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
+
 Version 72, 2026-09-16. The programme consolidates the accepted results into
 [Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
 The user's clarified 2026-09-14 priority is a mathematical necessity argument
