@@ -183,7 +183,7 @@ as a computation.
 | strong, $g^2\ge1056$ ($176$ with the fundamental alone) | $\Delta_W\ge(\hbar c/a)\,4\log(g^2/1056)$, uniform in volume, Wilson transfer matrix | [explicit note](wilson-strong-coupling-explicit.md) |
 | strong, $g^2\ge388$ ($79$ in the adjacent-growth class) | $\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a$, approaching $\frac83g^2$, Kogut--Susskind | [continuous-time note](kogut-susskind-strong-coupling-explicit.md) |
 | weak, $1/g^2\gtrsim10^2$ | small-field expansion applies, crude window $C_1g\le\eta\le C_2$ | [operator-inequality note](large-field-operator-inequality.md) §4 |
-| intermediate, $10^{-2}\lesssim g^2\lesssim2\times10^2$ | no expansion applies; the gap forms here | |
+| intermediate, $10^{-2}\lesssim g^2\lesssim4\times10^2$ | no expansion applies; a finite-volume mixing condition (Dobrushin--Shlosman) would give the gap coupling by coupling | [finite-verification note](intermediate-region-finite-verification.md) |
 
 The strong boundary is explicit and the weak one is crude; the width of
 the intermediate region in one-loop doublings is set almost entirely by
@@ -196,8 +196,12 @@ $g_0^2\sim10^{101}$ and plays no role in the map.
 **Division of labour.** Hamiltonian methods for T1, T2, the small-volume
 theorem, the upper bounds, the exact identities and the final gap
 extraction; the Euclidean polymer expansion for the renormalization
-steps; and the intermediate region, which is the mass-gap problem
-proper, untouched by either.
+steps; and, for the intermediate region, the finite-volume mixing
+conditions, which reduce the gap at a given coupling to a finite
+verification and turn the problem into the meeting of two numbers, the
+reach $g_{\rm RG}^2$ of the small-field renormalization and the reach
+$g_{\rm DS}^2$ of the verification
+([finite-verification note](intermediate-region-finite-verification.md)).
 
 What this programme has added is a map with constants: six named
 statements, two proved, the finiteness clause reduced to a single
