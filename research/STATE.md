@@ -422,6 +422,12 @@ labour; consult it before opening a new item.
    the effective Hamiltonian in this class and reaches $g^2\sim10^2$;
    the intermediate region is where that is open, and the finish line
    is a box with numbers.
+   [Why the abelian theory misses the box](../notes/abelian-misses-the-box.md):
+   the expansion is group-blind, so compact $U(1)$ is gapped in the box
+   too; the difference is the flow, $b_0=0$ for pure $U(1)$ (free photon
+   is a fixed point at every weak coupling, Guth; Fröhlich--Spencer) and
+   $b_0=11/(16\pi^2)$ for $SU(3)$. The mass gap is the statement that the
+   running does not stop before the box.
 16. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one

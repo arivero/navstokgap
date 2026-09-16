@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Why the abelian theory has no gap, in the language of the target box: its coupling does no},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{why-the-abelian-theory-has-no-gap-in-the-language-of-the-target-box-its-coupling-does-not-run}{%
+\section{Why the abelian theory has no gap, in the language of the
+target box: its coupling does not
+run}\label{why-the-abelian-theory-has-no-gap-in-the-language-of-the-target-box-its-coupling-does-not-run}}
+
+The founding question of this series, why the commutative theory is
+gapless while the non-abelian one is expected to be gapped, has a
+precise form once the strong-coupling gap is a box rather than a point
+at infinity. The continuous-time expansion of
+\href{kogut-susskind-strong-coupling-explicit.md}{the Kogut--Susskind
+note} is group-blind: it uses only that the electric term is diagonal
+with a least nonzero Casimir, that the plaquette term is bounded and
+acts on four links, and Gauss's law. For compact \(U(1)\) it gives a gap
+\(\Delta\ge4\lambda\) with \(\varepsilon=g^2/2\), for \(g^2\) above a
+threshold of the same size as for \(SU(3)\), uniformly in the volume. So
+\textbf{both theories are gapped inside the box.} What differs is
+whether the flow from weak coupling reaches it. For \(SU(3)\) the
+coupling runs,
+\[\frac{d\,g^2}{d\log(a)}=2b_0g^4+O(g^6),\qquad b_0=\frac{11}{16\pi^2}>0,\]
+and the conjecture is that it keeps running until it enters the box. For
+\(U(1)\) the pure gauge theory has \(b_0=0\): the coupling does not run,
+the weak-coupling theory is the free photon at every scale, and it never
+reaches the box; the massless Coulomb phase of Guth (Phys. Rev.~D 21
+(1980) 2291) and Fröhlich--Spencer (Commun. Math. Phys. 83 (1982) 411;
+both metadata level) is the rigorous form of this statement, and the
+gapped set of the lattice \(U(1)\) theory is \((g_c,\infty)\) with
+\(g_c>0\). In the language of \href{gapped-set-critical-coupling.md}{the
+critical-coupling note}, T2\('\) for \(SU(3)\) is the statement that the
+renormalization flow has no fixed point between the ultraviolet and the
+box, and for \(U(1)\) the whole weak-coupling region is a line of fixed
+points. Constants explicit; nothing promoted.
+
+\hypertarget{the-strong-coupling-box-does-not-see-the-group}{%
+\subsection{1. The strong-coupling box does not see the
+group}\label{the-strong-coupling-box-does-not-see-the-group}}
+
+Run the expansion of the Kogut--Susskind note for compact \(U(1)\) with
+the Wilson term \((2/g^2)\sum_p(1-\cos\theta_p)\). The electric term is
+\((g^2/2)\sum_\ell n_\ell^2\), diagonal in the charge basis, with least
+nonzero eigenvalue \(\varepsilon=g^2/2\) per link. The plaquette
+operator \(w_p=e^{i\theta_p}+e^{-i\theta_p}\) has norm \(2\) and shifts
+the charge on the four links of \(p\) by \(\pm1\). Gauss's law,
+\(\sum_{\ell\ni x}\pm n_\ell=0\) at every site, makes every excited set
+a union of closed charged loops, so \(|S_k|\ge4\). The per-step factor
+of the adjacent-growth count is \(u=128e/(g^2(\varepsilon-\lambda))\)
+with \(N\to1\), and the rest is verbatim. The abelian theory is
+therefore gapped, uniformly in the volume, for \(g^2\) above an explicit
+threshold of the same order as for \(SU(3)\), with a gap approaching the
+flux-loop energy \(4\cdot\frac{g^2}2=2g^2\) in units \(\hbar c/a\). This
+is the confining phase of compact \(U(1)\), and it is the same mechanism
+as for \(SU(3)\): electric flux costs energy per link, and Gauss's law
+forces flux to close.
+
+\hypertarget{what-differs-is-the-flow}{%
+\subsection{2. What differs is the
+flow}\label{what-differs-is-the-flow}}
+
+Let \(g(a)\) be the effective coupling of the lattice theory at spacing
+\(a\), defined by any renormalization scheme that is an exact low-energy
+reduction. The target box of \href{strong-coupling-target-box.md}{the
+target-box note} is the region \(g^2\gtrsim4\times10^2\) with few-link
+corrections of controlled local norm, and the Hamiltonian at any scale
+that lies in it has a gap.
+
+\emph{\(SU(3)\).} Asymptotic freedom gives, at weak coupling,
+\(g^2(2a)=g^2(a)+2b_0\log2\,g^4(a)+O(g^6)\) with \(2b_0\log2=0.0966\),
+so the coupling grows as the scale coarsens. The mass-gap conjecture is
+the statement that this growth continues, with corrections staying in
+the class \(\mathcal C\), until \(g^2\) enters the box; equivalently,
+that the flow has no fixed point at intermediate coupling. The
+intermediate region of \href{mass-gap-position.md}{the position note} §6
+is the stretch of the flow in which neither the perturbative form of the
+running nor the box applies.
+
+\emph{\(U(1)\).} The pure abelian theory has no self-interaction of the
+gauge field, so \(b_0=0\) and, at weak coupling, \(g(2a)=g(a)\) to all
+orders: the free photon is a fixed point of the flow at every value of
+the coupling. The weak-coupling theory therefore never moves toward the
+box. Guth and Fröhlich--Spencer prove that for \(g\) small the lattice
+theory is in a massless phase with power-law decay of the Wilson loop
+and a massless photon, and the strong-coupling expansion proves a gap
+for \(g\) large; the gapped set is \((g_c,\infty)\) with
+\(0<g_c<\infty\), and the transition at \(g_c\) is the zero-temperature
+phase transition that T2\('\) forbids for \(SU(3)\).
+
+\hypertarget{the-three-earlier-isolations-of-the-non-abelian-structure-in-this-language}{%
+\subsection{3. The three earlier isolations of the non-abelian
+structure, in this
+language}\label{the-three-earlier-isolations-of-the-non-abelian-structure-in-this-language}}
+
+\href{mass-gap-position.md}{The position note} §4 lists three places
+where the non-abelian structure enters: the commutator potential of the
+zero-momentum sector, the absence of a gauge-invariant operator linear
+in the electric field, and the one-loop valley potential. All three are
+statements about the first coefficient of the running: the commutator is
+what makes \(b_0\ne0\), the valley potential is its finite-volume image,
+and the absence of a linear gauge-invariant operator is why the photon
+channel through which the abelian gap closes does not exist. In the box
+language they are the reasons the \(SU(3)\) flow leaves the ultraviolet
+at all; the open problem is whether it arrives.
+
+\hypertarget{what-this-settles-and-what-it-leaves}{%
+\subsection{4. What this settles and what it
+leaves}\label{what-this-settles-and-what-it-leaves}}
+
+\emph{Settled.} The gap is a property of the box, and the box is
+group-blind: confinement at strong coupling is the same for \(U(1)\) and
+\(SU(3)\). The difference between the theories is the flow into the box,
+and for \(U(1)\) the flow is absent. ``Commutative fields have no gap''
+means: their coupling does not run, so the weak-coupling theory is a
+fixed point outside the box.
+
+\emph{Left.} For \(SU(3)\) the flow leaves the ultraviolet with
+\(b_0>0\) and the box is at \(g^2\sim4\times10^2\). Whether the flow
+arrives is the intermediate-region problem, and every quantity in it is
+now explicit: the starting slope \(2b_0\log2=0.0966\) per doubling, the
+class \(\mathcal C\) that has to be preserved, and the box's edge and
+tolerance.
+
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
+
+The founding question has its answer at the level of the current map:
+the strong-coupling gap is group-blind, the flow is what distinguishes
+the groups, and the abelian theory's coupling does not run. The
+non-abelian mass gap is the statement that the running, which begins
+with \(b_0=11/(16\pi^2)\) for \(SU(3)\), does not stop before the box.
+\end{document}
