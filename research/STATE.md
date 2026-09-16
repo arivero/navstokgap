@@ -447,6 +447,14 @@ labour; consult it before opening a new item.
    the small-field renormalization meets the reach of the verification.
    Neither number is known; the verification is numerics outside this
    repository's rules.
+   [Dobrushin note](../notes/dobrushin-uniqueness-wilson.md): the
+   single-link Dobrushin condition for the Wilson action is checkable by
+   hand, one staple changes, $\rho\le e^{4\beta_W}-1$, $18$ neighbours, so
+   $\alpha\le18(e^{4\beta_W}-1)<1$ for $g^2>148N=444$; Künsch's decay plus
+   reflection positivity give $\Delta_W\ge(\hbar c/a)\log(g^2/432)$,
+   the best rigorous Wilson threshold. The block
+   (Dobrushin--Shlosman) criterion is the finite verification, stated as
+   a specification: $\sum_{x\in V}\sum_{y\notin V}\rho_V(x,y)<|V|$.
 17. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one

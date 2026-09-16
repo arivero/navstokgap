@@ -180,7 +180,7 @@ as a computation.
 
 | region | statement | source |
 | --- | --- | --- |
-| strong, $g^2\ge1056$ ($176$ with the fundamental alone) | $\Delta_W\ge(\hbar c/a)\,4\log(g^2/1056)$, uniform in volume, Wilson transfer matrix | [explicit note](wilson-strong-coupling-explicit.md) |
+| strong, $g^2>444$ (Dobrushin) or $g^2\ge1056$ (polymer) | $\Delta_W\ge(\hbar c/a)\log(g^2/432)$, resp. $4\log(g^2/1056)$, uniform in volume, Wilson transfer matrix | [Dobrushin note](dobrushin-uniqueness-wilson.md), [polymer note](wilson-strong-coupling-explicit.md) |
 | strong, $g^2\ge388$ ($79$ in the adjacent-growth class) | $\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a$, approaching $\frac83g^2$, Kogut--Susskind | [continuous-time note](kogut-susskind-strong-coupling-explicit.md) |
 | weak, $1/g^2\gtrsim10^2$ | small-field expansion applies, crude window $C_1g\le\eta\le C_2$ | [operator-inequality note](large-field-operator-inequality.md) §4 |
 | intermediate, $10^{-2}\lesssim g^2\lesssim4\times10^2$ | no expansion applies; a finite-volume mixing condition (Dobrushin--Shlosman) would give the gap coupling by coupling | [finite-verification note](intermediate-region-finite-verification.md) |

@@ -1,0 +1,152 @@
+# Dobrushin's uniqueness condition for the Wilson action: a two-line strong-coupling gap at $g^2>444$, and the block criterion that is the finite verification
+
+The finite-volume criteria of
+[the finite-verification note](intermediate-region-finite-verification.md)
+have a single-site ancestor, Dobrushin's uniqueness condition (Theory
+Probab. Appl. 13 (1968) 197), and for the Wilson action it can be
+checked by hand. The conditional distribution of one link given all the
+others is
+$$d\mu_\ell(U\,|\,\omega)\ \propto\ \exp\Big[\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}\big(U\,M_\ell(\omega)\big)\Big]d\mu(U),
+\qquad M_\ell=\sum_{p\ni\ell}S_p ,$$
+the sum of the six staples of $\ell$ in four dimensions. Changing one
+neighbouring link changes one staple, and the resulting total-variation
+distance between the two conditional distributions is at most
+$e^{4\beta_W}-1$, independently of $N$. Each link has $18$ neighbours
+that share a plaquette with it, so Dobrushin's coefficient is
+$$\alpha=\sup_\ell\sum_{\ell'}\rho_{\ell\ell'}\ \le\ 18\big(e^{4\beta_W}-1\big),$$
+and the condition $\alpha<1$ holds for $\beta_W<\tfrac14\log\tfrac{19}{18}=0.01352$,
+that is
+$$g^2\ >\ 148\,N\ =\ 444\quad(SU(3)).$$
+Dobrushin's theorem gives a unique Gibbs state, Künsch's theorem
+(Commun. Math. Phys. 84 (1982) 207) gives exponential decay of all
+truncated correlations at rate $\log(1/\alpha)$ per lattice unit, and
+link reflection positivity turns the rate into a gap:
+$$\Delta_W\ \ge\ \frac{\hbar c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\ \simeq\ \frac{\hbar c}{a}\log\frac{g^2}{432}\qquad(g^2>444),$$
+uniformly in the volume. This is a better threshold than the polymer
+expansion's $1056$ and a smaller rate than its $4\log(g^2/1056)$. The
+block version of the same condition, the Dobrushin--Shlosman
+constructive criterion (in *Statistical Physics and Dynamical Systems*,
+Birkhäuser 1985, 347), replaces the single link by a box $V$ of links
+and is expected to hold deeper into the intermediate region as $V$
+grows; it is the quantity a finite verification would compute, and
+Section 4 states it as a specification. All references at metadata
+level; constants explicit; nothing promoted.
+
+## 1. The one-link conditional distribution
+
+Fix all links except $\ell$. The plaquettes containing $\ell$ are six in
+four dimensions, and each contributes $\operatorname{Re}\operatorname{tr}(U_\ell S_p)$
+with $S_p\in SU(N)$ the product of the other three links of $p$ in the
+appropriate order. Hence the conditional density is
+$e^{f_\omega(U)}$ with $f_\omega(U)=(\beta_W/N)\operatorname{Re}\operatorname{tr}(UM_\ell)$,
+$M_\ell=\sum_{p\ni\ell}S_p$, normalized by
+$Z(\omega)=\int e^{f_\omega}d\mu$. Gauge invariance of the interaction
+is visible in the fact that a gauge transformation at an endpoint of
+$\ell$ rotates $M_\ell$ and the Haar measure absorbs it; nothing more
+is needed.
+
+## 2. The Dobrushin coefficient
+
+**Lemma 1.** For probability densities $p\propto e^f$, $q\propto e^{f'}$
+with respect to the same measure, $\|p-q\|_{\rm TV}\le e^{\operatorname{osc}(f-f')}-1$.
+
+*Proof.* $p/q=e^{f-f'}Z_{f'}/Z_f\le e^{\sup(f-f')}e^{\sup(f'-f)}=e^{\operatorname{osc}(f-f')}$,
+so $p-q\le(e^{\operatorname{osc}}-1)q$ and
+$\|p-q\|_{\rm TV}=\int(p-q)_+\le e^{\operatorname{osc}}-1$. $\square$
+
+**Lemma 2.** If $\omega,\omega'$ differ only at a link $\ell'$ sharing a
+plaquette with $\ell$, then
+$\operatorname{osc}_U(f_\omega-f_{\omega'})\le4\beta_W$.
+
+*Proof.* One staple changes, $M_\ell-M_\ell'=S_p-S_p'$ with
+$S_p,S_p'\in SU(N)$, so
+$|f_\omega(U)-f_{\omega'}(U)|=(\beta_W/N)|\operatorname{Re}\operatorname{tr}(U(S_p-S_p'))|\le(\beta_W/N)\|S_p-S_p'\|_1\le(\beta_W/N)\cdot2N$,
+the trace norm of a difference of two unitaries being at most $2N$;
+the oscillation is at most twice the supremum. $\square$
+
+If $\ell'$ shares no plaquette with $\ell$, the conditional distribution
+at $\ell$ does not depend on it. Each link lies in six plaquettes with
+three further links each, and the six plaquettes share no link besides
+$\ell$, so there are exactly $18$ links $\ell'$ with
+$\rho_{\ell\ell'}\ne0$. Hence
+$$\alpha=\sup_\ell\sum_{\ell'}\rho_{\ell\ell'}\le18\big(e^{4\beta_W}-1\big),$$
+and $\alpha<1$ for $\beta_W<0.01352$, i.e. $g^2>2N/0.01352=148N$.
+
+## 3. From the condition to the gap
+
+Dobrushin's theorem: $\alpha<1$ implies a unique Gibbs state on
+$\mathbb Z^4$ and on every torus. Künsch's theorem: under $\alpha<1$,
+for local observables $F,G$,
+$$|\langle F;G\rangle|\ \le\ \sum_{\ell\in\operatorname{supp}F,\ \ell'\in\operatorname{supp}G}\delta_\ell F\,\big[(1-\rho)^{-1}\big]_{\ell\ell'}\,\delta_{\ell'}G ,$$
+with $\delta_\ell F$ the oscillation of $F$ in the link $\ell$, and
+since $\rho^n_{\ell\ell'}$ vanishes unless the link distance is at most
+$n$ lattice units, $[(1-\rho)^{-1}]_{\ell\ell'}\le\alpha^{d(\ell,\ell')}/(1-\alpha)$.
+Truncated correlations at time separation $T$ therefore decay at least
+like $\alpha^{T/a}$, rate $m=\log(1/\alpha)/a$. The Wilson transfer
+matrix is positive by link reflection positivity, and for a local $A$
+orthogonal to the vacuum $\langle A,\mathcal T^nA\rangle\le C_A\alpha^n$
+forces its spectral measure to vanish above $\alpha$, so on the cyclic
+subspace of local observables
+$$\Delta_W=-\frac{\hbar c}{a}\log\|\mathcal T|_{\Omega^\perp}\|\ \ge\ \frac{\hbar c}{a}\log\frac1\alpha
+\ \ge\ \frac{\hbar c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\qquad(SU(3)).$$
+
+| route | rigorous threshold ($SU(3)$) | gap bound |
+| --- | --- | --- |
+| polymer expansion, all representations | $g^2\ge1056$ | $(\hbar c/a)\,4\log(g^2/1056)$ |
+| Dobrushin single-site condition | $g^2>444$ | $(\hbar c/a)\,\log(g^2/432)$ |
+
+The two are complementary: the Dobrushin route enters earlier, the
+polymer route's rate is larger once both apply. For $U(1)$ the same
+computation gives $g^2>148$ with $N=1$.
+
+## 4. The block criterion, as a specification
+
+The Dobrushin--Shlosman constructive criterion replaces the single link
+by a finite box $V$ of links. Writing $\mu_V(\cdot|\omega)$ for the Gibbs
+measure in $V$ with boundary condition $\omega$ and, for $x\in V$ and
+$y\notin V$,
+$$\rho_V(x,y)=\sup_{\omega,\omega'\ \text{differ only at }y}\big\|\mu_V(\cdot|\omega)|_x-\mu_V(\cdot|\omega')|_x\big\|_{\rm TV},$$
+the criterion is that for some finite $V$
+$$\sum_{x\in V}\sum_{y\notin V}\rho_V(x,y)\ <\ |V| ,$$
+up to the normalization convention of the original, and it implies the
+same conclusions as the single-site condition, which is the case
+$V=\{\ell\}$. Its content is that the total influence of the boundary
+on the box, summed over the box, is less than the size of the box; in a
+mixing phase this holds once the side of $V$ exceeds a few correlation
+lengths, which is why it can hold at couplings where the single-site
+condition fails. Dobrushin and Shlosman's complete analyticity
+(*Statistical Physics and Dynamical Systems*, Birkhäuser 1985, 371;
+J. Stat. Phys. 46 (1987) 983) is the statement that some such $V$
+exists, together with its equivalent forms.
+
+**What a verification computes.** For a box $V$ of side $R$ (about
+$3R^4$ links) and a coupling $\beta_W$: for each boundary link $y$ and
+each interior link $x$, a rigorous upper bound on $\rho_V(x,y)$, which is
+a total-variation distance between two marginals of Gibbs measures on
+$SU(3)^{|V|}$; then the double sum against $|V|$. Lemma 1 bounds each
+$\rho_V(x,y)$ by $e^{\operatorname{osc}}-1$ of the log-density difference
+of the two marginals, but for $|V|>1$ that oscillation involves the
+integral over the other links of $V$ and is what has to be bounded
+rigorously. The openness radius in the interaction norm
+$\sup_\ell\sum_{p\ni\ell}\|\Phi_p\|_\infty$ follows from the margin
+$|V|-\sum\rho_V$ by the same lemma.
+
+**Where it would have to hold.** The numerical evidence places the
+$SU(3)$ crossover at $\beta_W\simeq5$--$6.5$ with $\xi/a$ of order $1$
+to $10$; a verification at those couplings would need $R$ of order
+$10$--$30$, that is $10^4$--$10^6$ links, and rigorous bounds on the
+corresponding integrals. That is far beyond present practice, and this
+repository performs no numerics. The specification is nonetheless
+complete: the quantity, the boxes, the inequality, and the two lemmas
+that convert its margin into a gap and into an openness radius.
+
+## 5. Consequence for STATE
+
+The strong-coupling side now has a third, elementary proof with the
+best rigorous threshold for the Wilson transfer matrix, $g^2>444$ for
+$SU(3)$, and the finite verification of the intermediate region has a
+precise statement: the Dobrushin--Shlosman block criterion for the
+Wilson interaction, whose single-link case is proved here. The two
+numbers of the finite-verification note are unchanged, and the second
+of them, $g_{\rm DS}^2$, is exactly the smallest coupling at which the
+block criterion has been verified for some $V$.
