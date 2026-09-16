@@ -78,12 +78,19 @@ one obligation at a time.
    the corner S); in infinite volume a gap $m$ forces the Polyakov-loop
    transverse susceptibility below $\hbar cg^2NL/(2mc^2)$ (necessary
    condition for T3); empty at strong coupling.
-3b. **Next: the weak-coupling end on the lattice.** Variational upper
-   bound (and lower bound if reachable) on the Kogut--Susskind gap at
-   small $g$ on a lattice with side small against $\hbar c/\Lambda$, using
-   the constant-mode ground state of C133 as trial state; connect
-   $\Delta_{a,L}$ with the continuum corner $\delta_1g^{2/3}\hbar c/L$ and
-   locate the regime where neither expansion applies.
+3b. **Done: Feshbach reduction of the weak-coupling lower bound.**
+   [Note](../notes/weak-coupling-feshbach-reduction.md): a proved
+   Schur-complement gap-transfer lemma ($\operatorname{gap}(H)\ge\operatorname{gap}(PHP)-\eta$
+   when $\bar PH\bar P\ge\mu>a_1$) applied with $P$ = nonzero-mode vacuum
+   reduces $\Delta\ge\delta_1^{(3)}g^{2/3}(1-Cg^{2/3})\hbar c/L$ on the cutoff
+   torus to (H1) one-quantum cost $\ge(2\pi/L)(1-Cg^{2/3})$ for excited
+   nonzero modes, (H2) Schur error $\eta\le Cg^{4/3}/L$ of the $W_2$, $W_3$
+   couplings, (H3) gap of $h_3$ plus the even zero-point potential $U(a)$.
+   The smallness parameter is $g^{2/3}$ throughout; (H1) fails exactly at
+   the crossover $z\simeq2$.
+3c. **Next: (H2).** The Schur error of $W_2$ and $W_3$ against the free
+   nonzero-mode gap: a Gaussian computation with the C133 ground state as
+   weight. Then (H1), (H3) as relatively bounded perturbations.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
