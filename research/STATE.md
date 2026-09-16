@@ -460,6 +460,15 @@ labour; consult it before opening a new item.
    the best rigorous Wilson threshold. The block
    (Dobrushin--Shlosman) criterion is the finite verification, stated as
    a specification: $\sum_{x\in V}\sum_{y\notin V}\rho_V(x,y)<|V|$.
+   [What would unblock](../notes/what-would-unblock.md), the review's
+   negative results: correlation inequalities break for $SU(N)$ (signed
+   recoupling in the dual gas, no $O(N)$ form, non-ferromagnetic
+   interaction); chessboard gives large deviations, not mixing; infrared
+   bounds need Gaussian domination, absent on a non-abelian manifold;
+   Knabe needs frustration-freeness; exact dualities are abelian; gauge
+   fixing moves $444$ to about $330$ only. Two unblocking routes: a
+   correlation inequality for $SU(3)$ (new mathematics) or the
+   computer-assisted block verification (a rules decision).
 17. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
