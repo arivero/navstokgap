@@ -102,6 +102,15 @@ computation gives $g^2>148$ with $N=1$.
 
 ## 4. The block criterion, as a specification
 
+> **Corrected.** The single-link form below is emptied by Elitzur's
+> theorem: the marginal of any link with an interior endpoint is Haar
+> for every boundary condition, so $\rho_V(x,y)=0$ there and the sum
+> sees only the boundary layer. The form to verify is the mixing
+> condition on sub-blocks, organized around the conditional
+> distribution of small Wilson loops, and the boxes needed are of side
+> $3$ to $5$ at $\beta_W\simeq5.7$; see
+> [the bands note](confinement-scale-bands.md).
+
 The Dobrushin--Shlosman constructive criterion replaces the single link
 by a finite box $V$ of links. Writing $\mu_V(\cdot|\omega)$ for the Gibbs
 measure in $V$ with boundary condition $\omega$ and, for $x\in V$ and
