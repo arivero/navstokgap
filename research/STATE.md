@@ -383,10 +383,18 @@ the items below are the working queue.
    T2 covers is empty in practice. A direct expansion (Kirkwood--Thomas,
    Datta--Kennedy, or Osterwalder--Seiler) has radius
    $\beta\lesssim1/(12e)$, i.e. $g_0^2\sim40$--$70$. The intermediate
-   region's width is set by the weak side. **Next on the strong side:**
-   write the Kirkwood--Thomas expansion for the Kogut--Susskind
-   Hamiltonian with explicit constants, replacing the existential
-   $\beta_*$ by a number.
+   region's width is set by the weak side. **Done for the Wilson transfer matrix:**
+   [note](../notes/wilson-strong-coupling-explicit.md). The character
+   expansion is a polymer gas of closed plaquette surfaces (smallest: a
+   cube, six plaquettes), activity per plaquette $\rho=d_fc_f/c_0=1/g^2$
+   for $SU(3)$ to leading order; Kotecký--Preiss with plaquette adjacency
+   $20$ and $n\ge6$ converges for $20e^2\rho\le0.84$; a tube has four
+   plaquettes per unit length, so correlations decay at rate
+   $4\log(1/(176\rho))$; link reflection positivity transfers this to
+   $H_W=-(\hbar c/a)\log\mathcal T$. Result: $SU(3)$ gapped uniformly in
+   volume for $g^2\ge176$ with
+   $\Delta_W\ge(\hbar c/a)\,4\log(g^2/176)$; fully crude version $6340$.
+   The Kogut--Susskind threshold still needs a Hamiltonian expansion.
 16. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
