@@ -20,6 +20,14 @@ below retain the proofs; their local follow-ups do not select the next task.
   dictionary to the positive-action question;
   [PDF](../out/papers/low-dimensional-mass-gap.pdf). Sources in B78.
 
+- [action-floor-yang-mills-gap.tex](action-floor-yang-mills-gap.tex):
+  generated from [the G08 note](../notes/action-floor-yang-mills-gap.md);
+  a transverse phase-space area floor confines the Yang--Mills
+  quantum-mechanical valley motion and yields the gap, the commutative model
+  is inert under the floor, and a gap returns an action unit except in the
+  action-critical dimension; [PDF](../out/papers/action-floor-yang-mills-gap.pdf).
+  Sources in B79.
+
 - `action-gap-foundations.tex`: area–action identity, variation propositions,
   Jacobi operator, free kernel and quantum finite-copy threshold.
 - [time-refinement.tex](time-refinement.tex): exact Gaussian blocking, surviving

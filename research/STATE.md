@@ -62,6 +62,12 @@ select their own task.
    selection. The analogy governs the structure-to-scale stage of item 1;
    its one consistency-forced scale (self-adjoint extension, regularization)
    is the mechanism N02 should look for, tested against C027 and C028--C029.
+   [G08](../notes/action-floor-yang-mills-gap.md) closes the loop inside
+   that model: a floor on transverse phase-space area produces the gap, the
+   commutative model is inert under the floor, and a gap returns an action
+   unit whenever the classical coupling is dimensionful (mechanics, $d=2,3$),
+   failing at $d=4$. The phase-space form of the floor, a lower bound on the
+   area of a closed transverse orbit, is the statement N02 should aim at.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128

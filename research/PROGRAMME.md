@@ -222,6 +222,19 @@ generated gap needs two scale-free non-commuting structures; the analogy
 covers the structure-to-scale stage of the necessity question and points
 N02 to a consistency-forced scale. Exploratory; sources in B78; no promotion.
 
+[G08](../notes/action-floor-yang-mills-gap.md) turns the analogy into an
+implication inside that model. Classical mechanics plus the postulate that
+no transverse oscillation has phase-space area below $h/2$ confines the
+valley motion to $|x|\le2\sqrt m\,E/(\hbar g)$, gives the finite
+phase-space volume with Simon's $E^{3/2}\ln E$ growth and reproduces the
+exact energy unit by Bohr--Sommerfeld quantization; the operator inequality
+of G07 is this floor enforced by the uncertainty inequality. The abelian
+model has no transverse oscillation and stays gapless with $h>0$ assumed.
+Conversely any positive gap in the $(m,g)$ model supplies the action unit
+$\Delta^{3/4}m^{1/2}g^{-1/2}$; the same equivalence holds for Yang--Mills
+in $d=2,3$ and fails at $d=4$, where a mass gap with $c$ admits no action
+unit. Exploratory; sources in B79; no promotion.
+
 G01/G02 establish the finite reversible-generator estimate
 
 $$\gamma\ge\frac{\alpha}{S},\qquad

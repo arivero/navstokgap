@@ -133,6 +133,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Solved low-dimensional mass gaps and the positive-action question",
          "-o", "papers/low-dimensional-mass-gap.tex"])
+    run(["pandoc", "notes/action-floor-yang-mills-gap.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=An action floor produces the Yang--Mills quantum-mechanical gap",
+         "-o", "papers/action-floor-yang-mills-gap.tex"])
     output = ROOT / "out" / "papers"
     output.mkdir(parents=True, exist_ok=True)
     for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
@@ -150,7 +154,7 @@ def main():
                   "shared-resource-events", "local-detector-coincidences",
                   "shared-readiness-chsh", "finite-depth-spin-gap",
                   "action-unit-dimensional-selection", "newton-insertion-action",
-                  "low-dimensional-mass-gap"):
+                  "low-dimensional-mass-gap", "action-floor-yang-mills-gap"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
