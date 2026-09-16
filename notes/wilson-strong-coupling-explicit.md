@@ -19,9 +19,9 @@ $\mathcal T=e^{-aH_W/\hbar c}$, self-adjoint and positive by link
 reflection positivity, the decay rate is a lower bound on the gap of
 $H_W$ on the cyclic subspace of local observables, so for $SU(3)$
 $$\Delta_W\ \ge\ \frac{\hbar c}{a}\,4\log\frac{g^2}{176}\qquad(g^2\ge176),$$
-uniformly in the volume. The fully crude version, which bounds the sum
-over all representations by $2N\beta_W=36/g^2$ instead of using the
-fundamental alone, gives the same form with $6340$ in place of $176$.
+uniformly in the volume. The fully rigorous version, which sums all representations and both
+orientations with the bound $e^{\beta_W}-1\simeq6/g^2$, gives the same
+form with $1056$ in place of $176$.
 The entropy constant $20e$ for plaquette animals is the only place with
 room, and a careful count would lower $176$ to about $10^2$. The gap of
 $H_W$ grows like $\log g^2$ where that of $H_{\rm KS}$ grows like $g^2$,
@@ -50,15 +50,25 @@ the textbook strong-coupling parameter. The polymers of the gas are the
 connected closed surfaces, two polymers being incompatible when they
 share a link, and $Z=c_0^{|\mathcal P|}\sum_{\text{compatible}}\prod w(\gamma)$.
 
-**All representations.** The level of $r$ is the least $n(r)$ with
-$r\subset(f\oplus\bar f)^{\otimes n}$, and
-$|\operatorname{Re}\operatorname{tr}U|\le N$, $|\chi_r|\le d_r$ give
-$d_r|c_r|/c_0\le d_r\beta_W^{n(r)}e^{2\beta_W}/n(r)!$, while
-$\sum_{n(r)=n}d_r\le(2N)^n$. Hence
-$$\sum_{r\ne0}d_r\frac{|c_r|}{c_0}\ \le\ e^{2\beta_W}\big(e^{2N\beta_W}-1\big)\ \simeq\ 2N\beta_W=\frac{4N^2}{g^2}=\frac{36}{g^2}\quad(SU(3)),$$
-a bound $36$ times worse than the leading activity. Everything below is
-stated for a per-plaquette activity $\rho$; the two readings differ only
-in what $\rho$ is.
+**All representations, rigorously.** Expand
+$e^{x\operatorname{Re}\operatorname{tr}U}=\sum_kx^k(\operatorname{Re}\operatorname{tr}U)^k/k!$
+with $x=\beta_W/N$, and
+$(\operatorname{Re}\operatorname{tr}U)^k=2^{-k}\sum_j\binom kj(\operatorname{tr}U)^j(\operatorname{tr}U^\dagger)^{k-j}$.
+The integral $\int(\operatorname{tr}U)^j(\operatorname{tr}U^\dagger)^{k-j}\overline{\chi_r}\,dU$
+is the multiplicity $m_r(j,k-j)$ of $r$ in $f^{\otimes j}\otimes\bar f^{\otimes(k-j)}$,
+so $d_rc_r=\sum_k\frac{x^k}{k!}2^{-k}\sum_j\binom kjm_r(j,k-j)\ge0$, and
+$\sum_rm_r(j,k-j)\le\dim\big(f^{\otimes j}\otimes\bar f^{\otimes(k-j)}\big)=N^k$.
+Hence
+$$\sum_{r\ne0}d_rc_r\ \le\ \sum_{k\ge1}\frac{x^k}{k!}2^{-k}\cdot2^kN^k=e^{Nx}-1=e^{\beta_W}-1 ,$$
+and Jensen's inequality with $\int\operatorname{Re}\operatorname{tr}U\,dU=0$ gives
+$c_0=\int e^{x\operatorname{Re}\operatorname{tr}U}dU\ge1$. Therefore
+$$\sum_{r\ne0}d_r\frac{c_r}{c_0}\ \le\ e^{\beta_W}-1=e^{2N/g^2}-1\ \simeq\ \frac{2N}{g^2}=\frac{6}{g^2}\quad(SU(3)),$$
+which is the leading activity $1/g^2$ of the fundamental, its conjugate,
+and the higher representations together, with no spurious factor. The
+sum over representations also covers the branch lines where three
+fundamentals meet at a link, allowed for $SU(3)$ since
+$f^{\otimes3}\ni1$. Everything below is stated for a per-plaquette
+activity $\rho$; the two readings differ only in what $\rho$ is.
 
 ## 2. Convergence: the Kotecký--Preiss criterion with numbers
 
@@ -110,12 +120,15 @@ $$\Delta_W\ \ge\ \hbar c\,m\ \ge\ \frac{\hbar c}{a}\,4\log\frac{1}{176\rho}.$$
 | reading of $\rho$ | threshold $\rho\le5.7\times10^{-3}$ | gap |
 | --- | --- | --- |
 | leading, $\rho=1/g^2$ | $g^2\ge176$ | $\Delta_W\ge(\hbar c/a)\,4\log(g^2/176)$ |
-| all representations, $\rho=36/g^2$ | $g^2\ge6340$ | $\Delta_W\ge(\hbar c/a)\,4\log(g^2/6340)$ |
+| all representations, $\rho=e^{6/g^2}-1$ | $g^2\ge1056$ | $\Delta_W\ge(\hbar c/a)\,4\log(g^2/1056)$ |
 
-The first line uses the leading term of $c_f/c_0$ and drops the higher
-representations, which contribute at relative order $\beta_W$; making it
-rigorous costs a factor $(1+O(1/g^2))$ in $\rho$, not the factor $36$.
-The second line is rigorous as written.
+The first line uses the fundamental alone; the second sums every
+representation and both orientations and is rigorous as written. The
+factor $6$ between them is the two orientations, each with activity
+$1/g^2$, and the higher representations, so the rigorous line is close
+to the truth for a surface that may carry either orientation on each
+plaquette; a surface with a fixed global orientation would be counted
+by the first line.
 
 ## 4. Relation to the Kogut--Susskind statement
 
@@ -138,7 +151,7 @@ why Yarotsky's time discretization pays what it pays.
 The strong-coupling boundary of the intermediate region is now a
 number: for the Wilson transfer matrix and $SU(3)$, the theory is gapped
 uniformly in the volume for $g^2\ge176$ (leading activity) or
-$g^2\ge6340$ (fully crude), with the gap explicit. The only constant
+$g^2\ge1056$ (all representations, rigorous), with the gap explicit. The only constant
 with room is the plaquette-animal entropy $20e$. On the weak side the
 boundary is $1/g^2\gtrsim10^2$ with the crude window of
 [the operator-inequality note](large-field-operator-inequality.md), and

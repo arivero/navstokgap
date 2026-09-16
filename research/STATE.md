@@ -397,8 +397,10 @@ labour; consult it before opening a new item.
    plaquettes per unit length, so correlations decay at rate
    $4\log(1/(176\rho))$; link reflection positivity transfers this to
    $H_W=-(\hbar c/a)\log\mathcal T$. Result: $SU(3)$ gapped uniformly in
-   volume for $g^2\ge176$ with
-   $\Delta_W\ge(\hbar c/a)\,4\log(g^2/176)$; fully crude version $6340$.
+   volume for $g^2\ge176$ with the fundamental alone, and rigorously for
+   all representations for $g^2\ge1056$ with
+   $\Delta_W\ge(\hbar c/a)\,4\log(g^2/1056)$, via $c_0\ge1$ (Jensen) and
+   $\sum_{r\ne0}d_rc_r\le e^{\beta_W}-1$ (dimension count of tensor powers).
    **Done for Kogut--Susskind too:**
    [continuous-time note](../notes/kogut-susskind-strong-coupling-explicit.md).
    Duhamel expansion in the plaquette term with exact electric decay
