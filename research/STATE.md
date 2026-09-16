@@ -68,6 +68,9 @@ select their own task.
    unit whenever the classical coupling is dimensionful (mechanics, $d=2,3$),
    failing at $d=4$. The phase-space form of the floor, a lower bound on the
    area of a closed transverse orbit, is the statement N02 should aim at.
+   C131--C133 (floor/unit theorem, gap/unit equivalence, explicit-constant
+   matrix-model gap) are promoted after written review; they establish no
+   action floor and no field-theory gap.
 
 See the [generator-audit handoff](handoffs/Q01-generator-audit.md) and
 [finite-closure handoff](handoffs/Q01-finite-closure.md). C128

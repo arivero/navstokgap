@@ -1,6 +1,6 @@
 # Results and claim ledger
 
-Updated 2026-09-14. Current verification uses written derivations and source/proof
+Updated 2026-09-16. Current verification uses written derivations and source/proof
 review. Script checks in earlier entries are historical under AGENTS.md's hard
 rule. Each entry names its
 assumptions and supporting artifact. IDs remain stable through revision.
@@ -199,6 +199,9 @@ ID or positive action claim is added by this source milestone.
 | C129 | For finite n local Bloch balls with all unit product preparations/effects, two-sided admissibility of exp(tX) forces zero first derivatives at zero probabilities, the boundary second-derivative signs, and X in the tensor power of the seven-dimensional space of scalar diagonal, equal time-space and antisymmetric spatial blocks | [Expanded source proof](../notes/reversible-generator-constraints.md); [B77 review](../reviews/reversible-generator-B77.md); necessary generator constraint only; no physical clock or action identification |
 
 | C130 | For C052's Hamiltonian, the plunge threshold $\lvert L\rvert>k/c$ and the circular energies $mc^2\sqrt{1-k^2/(c^2L^2)}$ at $\lvert L\rvert=\hbar\lvert\kappa\rvert$ coincide with the Dirac Coulomb indicial thresholds $Z\alpha<\lvert\kappa\rvert$ and zero-radial-node levels; the radial action $J_r=c^{-1}[Ek/\sqrt{m^2c^4-E^2}-\sqrt{c^2L^2-k^2}]$ with $J_r=n_r\hbar$, $\lvert L\rvert=n_\varphi\hbar$ gives Sommerfeld's formula, equal to the Dirac spectrum under $n_\varphi\leftrightarrow\lvert\kappa\rvert$; the Klein--Gordon threshold is the plunge condition at $\lvert L\rvert=\hbar(l+1/2)$ | [Q14 review](../reviews/kepler-collapse-Q14.md) §§1–4; symbol identity, Frobenius indicial equations and closed-form radial action; $Z\alpha=k/(\hbar c)$, fixed external singular Coulomb centre, no recoil or radiation; the unit of angular action is supplied |
+| C131 | Under dimensional homogeneity and universality, the floor $\gamma(c)=\inf(\mathcal X(c)\cap(0,\infty))$ of an observable of dimension $d_X$ over a theory with fixed constants of dimensions $d_1,\dots,d_r$ is $\Pi(c)F(\pi_1,\dots,\pi_s)$ when $d_X\in\operatorname{span}\{d_i\}$ and lies in $\{0,\infty\}$ otherwise; an admitted one-parameter similarity multiplying $X$ by every $s>0$ forces $\gamma=0$ | [G07 note](../notes/low-dimensional-mass-gap.md) §1, Theorem 1 and Corollary 2; [written review](../reviews/mass-gap-dictionary-G07.md) §1; unit-change argument; universality is a stated modelling hypothesis |
+| C132 | In the classical model with constants $m$, $g$ ($V=\tfrac12g^2x^2y^2$ or the SU(2) commutator potential), any positive finite gap $\Delta$ of any dimensionally homogeneous enlargement supplies the action unit $\Delta^{3/4}m^{1/2}g^{-1/2}$, and an action unit $A$ supplies the energy unit $A^{4/3}g^{2/3}m^{-2/3}$; for pure Yang--Mills with classical coupling $1/g^2$ of dimension action$\cdot$length$^{4-d}$ and speed $c$, a gap yields an action unit in $d=2$ ($(1/g^2)^{1/3}c^{-2/3}\Delta^{2/3}$) and $d=3$ ($(1/g^2)^{1/2}c^{-1/2}\Delta^{1/2}$) and none in $d=4$ | [G08 note](../notes/action-floor-yang-mills-gap.md) §3, Propositions 4--5; [written review](../reviews/mass-gap-dictionary-G07.md) §2; linear systems over mass, length, time |
+| C133 | $H=-\frac{\hbar^2}{2m}\Delta+\frac{g^2}{2}x^2y^2$ on $L^2(\mathbb R^2)$ and the SU(2) $D$-matrix model $H=-\frac{\hbar^2}{2m}\Delta_{\mathbb R^{3D}}+\frac{g^2}{2}\sum_{i<j}|\vec x_i\times\vec x_j|^2$, $D\ge2$, satisfy $H\ge\tfrac12[-\frac{\hbar^2}{2m}\Delta+W]$ with $W=\frac{\hbar g}{2\sqrt m}(|x|+|y|)$, respectively $W=\frac{\hbar g}{\sqrt m}\sum_i|\vec x_i|$; hence compact resolvent, simple positive ground state, gap $\Delta=\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ with $0<\delta_1<\infty$ a pure number, and the $SO(3)$-invariant sector inherits a gap $\ge\Delta$; the gap vanishes as $\hbar\to0$ and as $g\to0$, the $g=0$ and $D=1$ operators have spectrum $[0,\infty)$, and the classical energy range is $[0,\infty)$ | [G07 note](../notes/low-dimensional-mass-gap.md) §3, Theorems 5--6; [written review](../reviews/mass-gap-dictionary-G07.md) §3; zero-point oscillator bound, Fubini slicing, form-ball compactness, Feynman--Kac simplicity (Reed--Simon IV XIII.44 cited), dilation; the classical floor reading is [G08](../notes/action-floor-yang-mills-gap.md) Theorem 2 |
 
 These are checked derivations. C006 is conditional on its stated quantum
 measurement premises. For a new result, provide quantifiers, units, path/operator
@@ -216,6 +219,14 @@ promoted by user direction on 2026-09-14. Literature status: established
 textbook result, no novelty claim; three discovery queries, two open papers
 read, nothing archived. The Q14 dimensional criteria (Theorems A–B) remain
 exploratory pending their bounded librarian comparison.
+
+C131--C133: [B78](../references/batches/B78.md) and [B79](../references/batches/B79.md).
+C131 is Buckingham's $\Pi$ theorem (Phys. Rev. 4 (1914) 345, metadata)
+applied to a floor; C132 is dimensional analysis; C133 is Simon 1983
+(passage level: first proof, display (5), and Corollary 4 for the
+Lie-algebra model) with the project's explicit constants and SU(2)
+bookkeeping. Exact matches, no novelty; established results with
+project-specific exposition and limits.
 
 C129: [B77](../references/batches/B77.md) is an exact match to de la Torre
 et al., arXiv:1110.5482v1, equations (8)–(14) and the following tensor-space
@@ -545,6 +556,9 @@ consequences are identified separately.
 | C048–C049 | Harmonic-chain spectral ingredients established; normalized limit and fixed-phase speed-support consequences derived | [B24](../references/batches/B24.md); three-page bounded audit, coordinator proof/source review; no novelty claim |
 | C050 | Established dichotomic Jepsen-gas covariance and Markov interpretation; explicit gap proof and action/scaling consequences | [B25](../references/batches/B25.md); source pp. 7–8, 17–19 and coordinator proof review |
 | C051 | Explicit ordered-preparation consequence; exact ensemble unmatched in two-query search, novelty unassessed | [B26](../references/batches/B26.md); two HTML documents, coordinator proof review |
+| C131 | Buckingham $\Pi$ theorem applied to a universal floor; universality hypothesis project-specific | [B78](../references/batches/B78.md) |
+| C132 | Elementary dimensional analysis over mass, length, time | [B79](../references/batches/B79.md) |
+| C133 | Established Simon 1983 theorem (first proof and Corollary 4) with explicit constants; exact match, no novelty | [B78](../references/batches/B78.md) |
 
 M03's unaccepted spectral draft has its own completed [B04](../references/batches/B04.md)
 literature audit. Its mathematical review and checks remain pending.
@@ -570,6 +584,13 @@ literature audit. Its mathematical review and checks remain pending.
 | X002 | A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS regularity | Rejected: transfer requires the target operators, spaces and continuum/infinite-volume/regularity estimates |
 
 ## Review record
+
+[The G07/G08 review](../reviews/mass-gap-dictionary-G07.md) supports
+C131--C133: coordinator written re-derivation of the unit-change argument,
+the three linear systems, the completed-square oscillator bound, the
+slicing, compactness and dilation steps, and the SU(2) convex-combination
+bookkeeping. Ground-state simplicity is cited. Propositions 7 and 11--13
+of G07 and the semiclassical remarks of G08 stay exploratory.
 
 [B23](../reviews/harmonic-receiver-B23.md) supports C047 through one Luna-low
 audit and coordinator source/proof review. Eight identities, three network
