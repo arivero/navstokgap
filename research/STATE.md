@@ -312,15 +312,26 @@ the items below are the working queue.
    $S_E/\hbar\simeq\eta^2/(4g^2)$, **independent of $\ell$ and $a$**, so the
    suppression is $e^{-c\eta^2/g(\ell)^2}$, matching the independent
    free-field Gaussian tail $e^{-8\pi^2\eta^2/g^2}$.
-11. **Next, the first question genuinely about the large-field region.**
-   The decimation step now has: good region with accurate truncation, bad
-   region of measure $e^{-c\eta_*^2/g^2}$, crossover $\eta_*=2g^2/c$ from
-   the competition between the gain $e^{-c\eta^2/g^2}$ and the loss
-   $e^{2\eta}$ of the flow Jacobian. At small $g$ the crossover is small
-   and the measure bound weak. Ask whether the flow-truncation error
-   inside the large-field region can be bounded by something weaker than
-   $e^{2t\|G\|_\infty}$, using that the flow contracts the action
-   monotonically there too.
+11. **Done, answered no: the growth factor is sharp.**
+   [Note](../notes/flow-instability-large-field.md): the curvature
+   operator $(Mu)_\mu=2[G_{\mu\nu},u_\nu]$ is **symmetric** (the
+   antisymmetry of $\operatorname{ad}$ and that of $G_{\mu\nu}$ cancel on
+   transposing), so it attains $+2\|G\|_\infty$, and in a constant
+   chromomagnetic background the eigenvector is the charged gluon in the
+   lowest Landau level with aligned spin, $\omega^2=k_\parallel^2-gB$: the
+   **Nielsen--Olesen mode** (Nucl. Phys. B144 (1978) 376, metadata). Under
+   the gradient flow it grows at exactly $2\|G\|$, saturating the Duhamel
+   bound. Consistent with monotonicity because a constant chromomagnetic
+   field is a saddle of the action, stationary under the flow with a
+   negative Hessian direction. So **the flow smooths small fields and
+   amplifies large ones**, the crossover of item 10 is real, and the
+   large-field region must be excluded rather than flowed.
+12. **Next, the last question this line suggests:** what replaces the
+   flow inside the large-field region. The constructive answer is an
+   expansion around the local minimum of the action there; the question
+   native to this programme is whether the Nielsen--Olesen instability
+   makes that expansion divergent or merely slow, which is a statement
+   about the Hessian spectrum at the constrained minimum.
 11. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

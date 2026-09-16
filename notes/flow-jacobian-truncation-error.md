@@ -28,6 +28,12 @@ $\int|G|^2$ and leaves $\|G\|_\infty$ open, so the missing estimate is a
 pointwise bound on the flowed field strength. Constants explicit;
 nothing promoted.
 
+> **Sharpness.** The factor $e^{2t\|G\|_\infty}$ below cannot be improved:
+> the curvature operator is symmetric, its largest eigenvalue is attained
+> by the Nielsen--Olesen mode, and that mode grows under the flow at
+> exactly the rate $2\|G\|$; see
+> [the instability note](flow-instability-large-field.md).
+
 > **Corrected in part.** The statements below are continuum statements
 > at fixed physical scale. Within one lattice renormalization step the
 > compactness of the gauge group bounds $a^2\|G\|_\infty$ by $\pi$ and the

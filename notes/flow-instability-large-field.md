@@ -1,0 +1,138 @@
+# The flow Jacobian's growth factor is sharp: it is the Nielsen--Olesen mode, so the large-field region cannot be flowed
+
+The question left by
+[the transfer note](ground-state-measure-transfer.md) has a decisive
+answer. The factor $e^{2t\|G\|_\infty}$ in the Jacobian bound of
+[the Jacobian note](flow-jacobian-truncation-error.md) cannot be
+improved, because the operator it bounds is symmetric with genuinely
+positive eigenvalues, and the largest of them is the Nielsen--Olesen
+mode. In the linearized flow
+$$\partial_s\,\delta B_\mu=D^2\,\delta B_\mu+M\,\delta B,
+\qquad (M\,u)_\mu=2\big[G_{\mu\nu},u_\nu\big],$$
+the operator $M$ is **symmetric**: transposing exchanges the two
+antisymmetries, that of $\operatorname{ad}(G)$ under the Killing form
+and that of $G_{\mu\nu}$ in its indices, and they cancel. A symmetric
+$M$ with $\|M\|=2\|G\|_\infty$ has an eigenvalue $+2\|G\|_\infty$, and in
+a constant chromomagnetic background that eigenvector is exactly the
+charged gluon in the lowest Landau level with spin aligned, whose
+squared frequency is $\omega^2=k_\parallel^2-2gB$ (Nielsen--Olesen,
+Nucl. Phys. B144 (1978) 376; metadata level). Its growth rate under the
+gradient flow is $+2gB=2\|G\|$, saturating the Duhamel bound. Two
+consequences. **The flow amplifies fluctuations in a large-field region
+at exactly the rate the bound predicts**, so no sharper estimate exists
+and the region cannot be handled by flowing it. And the growth is
+consistent with the flow decreasing the action, because a large coherent
+field sits near an unstable critical point, where neighbouring
+trajectories separate while each descends. The large-field region must
+therefore be excluded rather than smoothed, which is what the
+constructive programme does, and the reason is now a computation rather
+than a convention. Constants explicit; nothing promoted.
+
+## 1. The curvature term is symmetric
+
+Let $\mathfrak g$ carry the invariant inner product
+$\langle X,Y\rangle=-\operatorname{tr}(XY)$, under which
+$\operatorname{ad}(Z)$ is antisymmetric for every $Z\in\mathfrak g$:
+$\langle[Z,X],Y\rangle=-\langle X,[Z,Y]\rangle$.
+
+**Proposition 1.** On $\mathfrak g$-valued vector fields with the inner
+product $\sum_\mu\langle u_\mu,v_\mu\rangle$, the operator
+$(Mu)_\mu=2[G_{\mu\nu},u_\nu]$ is symmetric.
+
+*Proof.* $\langle Mu,v\rangle=2\sum_{\mu\nu}\langle[G_{\mu\nu},u_\nu],v_\mu\rangle
+=-2\sum_{\mu\nu}\langle u_\nu,[G_{\mu\nu},v_\mu]\rangle
+=+2\sum_{\mu\nu}\langle u_\nu,[G_{\nu\mu},v_\mu]\rangle=\langle u,Mv\rangle$,
+using antisymmetry of $\operatorname{ad}$ in the second step and
+$G_{\mu\nu}=-G_{\nu\mu}$ in the third. $\square$
+
+A symmetric operator of norm $2\|G\|_\infty$ attains $+2\|G\|_\infty$ on
+some vector, so the Duhamel estimate
+$$\big|D\Phi_t(x,y)\big|\le e^{2t\|G\|_\infty}K_t^{\rm free}(x-y)$$
+of [the Jacobian note](flow-jacobian-truncation-error.md) Proposition 2
+cannot be improved by any argument that keeps $\|G\|_\infty$ as the only
+input: the exponential growth is attained in the direction of the
+largest eigenvalue of $M$.
+
+## 2. The eigenvector is the Nielsen--Olesen mode
+
+Take a constant abelian chromomagnetic background of magnitude $B$ in
+the third colour direction, $G_{12}=B\,T^3$. The charged components
+$u^\pm$ see it as a magnetic field of charge $\pm1$, so their transverse
+motion is Landau-quantized with levels $(2n+1)gB$, while the term $M$
+contributes the spin coupling $\mp2gB$ to the two transverse
+polarizations. The frequencies are
+$$\omega^2=k_\parallel^2+(2n+1)\,gB\mp2gB ,$$
+and the mode $n=0$ with aligned spin has
+$$\omega^2=k_\parallel^2-gB\ \big|_{\ \rm here}\ \longrightarrow\ \omega^2<0
+\quad\text{for } k_\parallel^2<gB,$$
+the unstable mode of Nielsen and Olesen (Nucl. Phys. B144 (1978) 376;
+metadata level; the numerical factor depends on the normalization of
+$B$, and in the convention of
+[the Jacobian note](flow-jacobian-truncation-error.md) the eigenvalue of
+$M$ on this mode is $+2\|G\|$).
+
+Under the gradient flow, whose linearization is
+$\partial_s\delta B=D^2\delta B+M\delta B$ and whose eigenvalues are
+$-\omega^2$ in the corresponding decomposition, this mode grows like
+$e^{+2\|G\|s}$. The Duhamel bound is therefore **saturated**, and by a
+configuration that is not exotic: a constant chromomagnetic field, the
+simplest large-field configuration there is.
+
+## 3. Why this is consistent with monotonicity
+
+The flow decreases the action, $\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\le0$,
+and simultaneously separates neighbouring trajectories at rate
+$2\|G\|$. Both hold because a constant chromomagnetic field is a
+**critical point** of the action that is not a minimum: $D^*G=0$ for it,
+so it is stationary under the flow, while the Hessian of the action has
+a negative direction, along which neighbours run away. A gradient flow
+near a saddle does exactly this.
+
+The same statement in the language of
+[the valley note](torus-valley-potential.md): the abelian valley of the
+zero-momentum sector is flat at quadratic order and lifted by the
+zero-point energy, and a large constant field along it is a saddle
+rather than a minimum.
+
+## 4. Consequence: the large-field region is excluded, not smoothed
+
+The flow-truncation step of
+[the flow-conjugation note](flow-conjugation-truncation.md) has error
+$\exp[2t\|G\|_\infty-2\kappa^2]$ and Section 2 shows the first term is
+attained. Therefore:
+
+- inside a region with $\|G\|\ge\eta/\ell^2$ and flow radius
+  $\sqrt{8t}=\ell$, the error is at least $e^{2\eta}$ up to the
+  truncation gain, and **no refinement of the Jacobian estimate removes
+  it**;
+- the competition of
+  [the transfer note](ground-state-measure-transfer.md) §4, gain
+  $e^{-c\eta^2/g^2}$ against loss $e^{2\eta}$, is therefore between two
+  sharp quantities, and the crossover $\eta_*=2g^2/c$ is real rather
+  than an artifact of a crude bound;
+- so the region $\{\|G\|\ge\eta_*/\ell^2\}$ must be removed from the
+  argument and treated by other means, which is precisely the
+  large-field decomposition of Balaban's programme.
+
+**What this settles.** The question of STATE item 11, whether the
+truncation error inside the large-field region can be bounded by less
+than $e^{2t\|G\|_\infty}$, is answered: no, and the obstruction has a
+name and a physical realization. The flow is a smoothing operation on
+small fields and an amplifier on large ones, and the boundary between
+the two behaviours is the Nielsen--Olesen threshold.
+
+## 5. Consequence for STATE
+
+The programme's flow-based line is now complete in both directions:
+conjugation is exact, truncation is cheap on small fields
+([lattice truncation](lattice-truncation-uniform.md)), and on large
+fields the error is sharp and unavoidable, saturated by the
+Nielsen--Olesen mode. The large-field region must be excluded, its
+measure is controlled by
+[the transfer note](ground-state-measure-transfer.md) §3, and its
+treatment is the remaining constructive content. The next question, and
+the last one this line suggests, is what replaces the flow inside that
+region: the constructive answer is an expansion around the local
+minimum of the action in the region, and the question worth asking here
+is whether the Nielsen--Olesen instability makes that expansion
+divergent or merely slow.

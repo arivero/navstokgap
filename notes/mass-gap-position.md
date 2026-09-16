@@ -146,7 +146,7 @@ one of them.
 | T3 | the conjecture, given T2$'$ |
 | T4 | construction |
 | local large-field control | available via the transfer-matrix identification: $|\Omega|^2$ is the Euclidean time-slice marginal |
-| the large-field region itself | open: the truncation error there grows like $e^{2t\|G\|_\infty}$ |
+| the large-field region itself | the growth $e^{2t\|G\|_\infty}$ is **sharp**, saturated by the Nielsen--Olesen mode, so the region must be excluded and treated separately |
 
 The pattern across every note is uniform: **statements uniform in the
 cutoff are renormalization statements, and statements local in space
