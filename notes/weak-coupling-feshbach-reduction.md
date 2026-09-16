@@ -23,9 +23,7 @@ scaling analysis of the cubic and quartic couplings shows why each
 inequality is expected with the stated powers, and identifies the
 smallness parameter as $g^{2/3}$, Lüscher's expansion parameter. The
 lemma is proved; the three inequalities are the open content of the
-lower side of the small-volume corner. Units: $\hbar=c=1$ in this note,
-energies in units of $\hbar c/L$ and $g$ dimensionless, as in
-[G07](low-dimensional-mass-gap.md) Proposition 7. Nothing here is promoted.
+lower side of the small-volume corner. Constants are kept explicit with the conventions of [G07](low-dimensional-mass-gap.md) Proposition 7: $g$ dimensionless, fields of dimension inverse length, every energy a multiple of $\hbar c/L$. Nothing here is promoted.
 
 ## 1. The gap-transfer lemma
 
@@ -75,18 +73,12 @@ cutoff $|k|\le\Lambda$ and the convention of G07 Proposition 7
 the constant mode and the nonzero modes $\tilde A_i(x)=L^{-3}\sum_{0<|k|\le\Lambda}\hat A_i(k)e^{ik\cdot x}$,
 with conjugate momenta $p_i$ and $\tilde\Pi_i$. Then
 $$H=H_0+H_\perp+W,$$
-$$H_0=\frac{g^2}{2L^3}\sum_i|\vec p_i|^2+\frac{L^3}{2g^2}\sum_{i<j}|\vec a_i\times\vec a_j|^2,\qquad
-H_\perp=\sum_{0<|k|\le\Lambda}\Big[\frac{g^2}{2}|\hat\Pi(k)|^2+\frac1{2g^2}|k\times\hat A(k)|^2\Big]$$
-(in the normalization where the free part has frequencies $|k|$), and
-$W$ collects every term of $\frac1{2g^2}\int|F_{ij}|^2$ that is neither
+$$H_0=\frac{g^2c}{2\hbar L^3}\sum_i|\vec p_i|^2+\frac{\hbar cL^3}{2g^2}\sum_{i<j}|\vec a_i\times\vec a_j|^2,\qquad H_\perp=\sum_{0<|k|\le\Lambda}\Big[\frac{g^2c}{2\hbar}|\hat\Pi(k)|^2+\frac{\hbar c}{2g^2}|k\times\hat A(k)|^2\Big]$$ (with $[a^a_i,p^b_j]=i\hbar\delta_{ij}\delta^{ab}$ and the corresponding normalization of $\hat\Pi$, so that the free part has energies $\hbar c|k|$), and $W$ collects every term of $\frac{\hbar c}{2g^2}\int|F_{ij}|^2$ that is neither
 purely constant-mode nor quadratic in $\tilde A$ at $a=0$:
 $$W=W_2+W_3+W_4,\quad
-W_2=\frac1{g^2}\int\big(\partial_i\tilde A_j-\partial_j\tilde A_i\big)\cdot\big([a_i,\tilde A_j]-[a_j,\tilde A_i]\big)+\frac1{2g^2}\int\big|[a_i,\tilde A_j]-[a_j,\tilde A_i]\big|^2,$$
-$$W_3=\frac1{g^2}\int\bar F_{ij}\cdot[\tilde A_i,\tilde A_j],\qquad
+W_2=\frac{\hbar c}{g^2}\int\big(\partial_i\tilde A_j-\partial_j\tilde A_i\big)\cdot\big([a_i,\tilde A_j]-[a_j,\tilde A_i]\big)+\frac{\hbar c}{2g^2}\int\big|[a_i,\tilde A_j]-[a_j,\tilde A_i]\big|^2,$$ $$W_3=\frac{\hbar c}{g^2}\int\bar F_{ij}\cdot[\tilde A_i,\tilde A_j],\qquad
 \bar F_{ij}=\partial_i\tilde A_j-\partial_j\tilde A_i+[a_i,\tilde A_j]-[a_j,\tilde A_i]+[a_i,a_j],$$
-$$W_4=\frac1{2g^2}\int\big|[\tilde A_i,\tilde A_j]\big|^2 ,$$
-where the purely constant part $\frac{L^3}{2g^2}|[a_i,a_j]|^2$ of
-$\frac1{2g^2}\int|F|^2$ is in $H_0$ and $W_4$ is quartic in the nonzero modes.
+$$W_4=\frac{\hbar c}{2g^2}\int\big|[\tilde A_i,\tilde A_j]\big|^2 ,$$ where the purely constant part $\frac{\hbar cL^3}{2g^2}|[a_i,a_j]|^2$ of $\frac{\hbar c}{2g^2}\int|F|^2$ is in $H_0$ and $W_4$ is quartic in the nonzero modes.
 The
 Gauss constraint is imposed on states; the constant gauge
 transformations act on $a_i$ by the adjoint action and on the nonzero
@@ -94,8 +86,7 @@ modes covariantly, and the nonconstant ones are fixed by keeping the
 transverse nonzero modes, the standard small-volume gauge choice.
 
 Let $\Omega_\perp$ be the ground state of $H_\perp$, the Gaussian vacuum
-of the free transverse modes, with energy $E_\perp=\sum_k|k|$ (a constant
-that cancels from gaps) and first excitation energy $\mu_\perp=2\pi/L$.
+of the free transverse modes, with energy $E_\perp=\hbar c\sum_k|k|$ (a constant that cancels from gaps) and first excitation energy $\mu_\perp=2\pi\hbar c/L$.
 Set
 $$P=1_{\text{const}}\otimes|\Omega_\perp\rangle\langle\Omega_\perp| .$$
 $P$ commutes with the constant gauge transformations because
@@ -113,12 +104,11 @@ constant background.
 ## 3. The three inequalities and their expected sizes
 
 Rescale $\vec a_i=g^{2/3}L^{-1}\vec\xi_i$ and $\hat A(k)=g\,\hat A'(k)$ so that
-$H_0=g^{2/3}L^{-1}h_3(\xi)$ with $h_3$ the unit operator of C133 and
-$H_\perp$ is $g$-independent in the primed variables. Then, counting
+$H_0=g^{2/3}(\hbar c/L)\,h_3(\xi)$ with $h_3$ the unit operator of C133 and $H_\perp$ is $g$-independent in the primed variables. Then, counting
 powers of $g$ at fixed $L$ and at typical values $|\xi|=O(1)$,
 $|\hat A'|=O(1)$:
 
-| term | order in units of $1/L$ | role |
+| term | order in units of $\hbar c/L$ | role |
 | --- | --- | --- |
 | $H_0$ | $g^{2/3}$ | the gap to be transferred |
 | $H_\perp$ excitations | $\ge2\pi$ | the energy $\mu$ of leaving $\operatorname{ran}P$ |
@@ -130,26 +120,15 @@ $|\hat A'|=O(1)$:
 
 With these sizes the three inequalities that Lemma 1 needs are:
 
-> **(H1)** $D=\bar PH\bar P\ \ge\ E_\perp+\frac{2\pi}{L}(1-C_1g^{2/3})$ on
-> $\operatorname{ran}\bar P$: any state with an excited nonzero mode costs
-> at least one quantum $2\pi/L$ up to the shift produced by $W$ in a
+> **(H1)** $D=\bar PH\bar P\ \ge\ E_\perp+\frac{2\pi\hbar c}{L}(1-C_1g^{2/3})$ on > $\operatorname{ran}\bar P$: any state with an excited nonzero mode costs > at least one quantum $2\pi\hbar c/L$ up to the shift produced by $W$ in a
 > background $|a|\sim g^{2/3}/L$.
 
-> **(H2)** $\eta=\sup_{E\le a_1}\|(D-E)^{-1/2}\bar PWP\|^2\ \le\ C_2\,g^{4/3}/L$.
-> The leading contribution is the $W_2$ term linear in $a$ (order
-> $g^{2/3}/L$, creating one or two nonzero quanta) squared and divided
-> by $2\pi/L$; the $W_3$ term of order $g/L$ contributes $g^2/L$.
+> **(H2)** $\eta=\sup_{E\le a_1}\|(D-E)^{-1/2}\bar PWP\|^2\ \le\ C_2\,g^{4/3}\hbar c/L$. > The leading contribution is the $W_2$ term linear in $a$ (order > $g^{2/3}\hbar c/L$, creating one or two nonzero quanta) squared and > divided by $2\pi\hbar c/L$; the $W_3$ term of order $g\hbar c/L$ > contributes $g^2\hbar c/L$.
 
-> **(H3)** $\operatorname{gap}(A)=\operatorname{gap}\big(H_0+U(a)\big)\ \ge\ \delta_1^{(3)}g^{2/3}(1-C_3g^{2/3})/L$.
-> $U(a)$ is even in $a$ (charge conjugation), its linear term vanishes,
-> and its quadratic term is of order $g^{4/3}/L$, a relatively bounded
+> **(H3)** $\operatorname{gap}(A)=\operatorname{gap}\big(H_0+U(a)\big)\ \ge\ \delta_1^{(3)}g^{2/3}(1-C_3g^{2/3})\,\hbar c/L$. > $U(a)$ is even in $a$ (charge conjugation), its linear term vanishes, > and its quadratic term is of order $g^{4/3}\hbar c/L$, a relatively bounded
 > perturbation of $h_3$ in the rescaled variables.
 
-Given (H1)--(H3), Lemma 1 with $\mu=E_\perp+\frac{2\pi}{L}(1-C_1g^{2/3})$
-and $a_1-\eta<\mu$ (true for small $g$ since $a_1-a_0=O(g^{2/3}/L)$ and
-$a_0-E_\perp=O(g^{2/3}/L)$) yields
-$$\Delta\ \ge\ \delta_1^{(3)}\,g^{2/3}\,\frac{\hbar c}{L}\,\big(1-Cg^{2/3}\big),$$
-restoring $\hbar c$. This is the lower side of the small-volume corner S,
+Given (H1)--(H3), Lemma 1 with $\mu=E_\perp+\frac{2\pi\hbar c}{L}(1-C_1g^{2/3})$ and $a_1-\eta<\mu$ (true for small $g$ since $a_1-a_0=O(g^{2/3}\hbar c/L)$ and $a_0-E_\perp=O(g^{2/3}\hbar c/L)$) yields $$\Delta\ \ge\ \delta_1^{(3)}\,g^{2/3}\,\frac{\hbar c}{L}\,\big(1-Cg^{2/3}\big).$$ This is the lower side of the small-volume corner S,
 matching the upper side obtained in
 [the Polyakov-average note](polyakov-average-gap-bound.md) up to pure
 numbers, and it is the leading term of Lüscher's expansion (abstract,
@@ -164,8 +143,7 @@ nonzero quanta $(k,-k)$ from $\Omega_\perp$ with amplitude of order
 $g^{2/3}|\xi|/L$ for every $k$, so
 $\|\bar PW_2P\psi\|^2\sim(g^{4/3}/L^2)(\Lambda L)^3|\xi|^2$ and, after
 dividing by the pair energy $2|k|$,
-$$\eta\ \sim\ \frac{g^{4/3}}{L^2}\sum_{0<|k|\le\Lambda}\frac{|\xi|^2}{2|k|}
-\ \sim\ \frac{g^{4/3}}{L}\,(\Lambda L)^2\,|\xi|^2 ,$$
+$$\eta\ \sim\ \frac{g^{4/3}\hbar c}{L^2}\sum_{0<|k|\le\Lambda}\frac{|\xi|^2}{2|k|} \ \sim\ \frac{g^{4/3}\hbar c}{L}\,(\Lambda L)^2\,|\xi|^2 ,$$
 quadratically divergent in the cutoff. This is the second-order energy
 shift $-c\,|a|^2\Lambda^2L^3$ of the constant mode. A quadratic term in
 $a$ is allowed by the constant gauge transformations, which act by
@@ -173,8 +151,7 @@ conjugation and leave $\operatorname{tr}a_i^2$ invariant, and the exact
 one-loop potential of the constant modes on the torus does contain one:
 the sum $\tfrac12\sum_k[\omega_k(a)-\omega_k(0)]$ is a periodic function
 of the holonomy angles $La_i$ (shift of the summation variable), so its
-small-$a$ expansion is $c_2(La)^2/L+O((La)^4/L)$ with a finite pure
-number $c_2$, the Casimir-type Weiss potential, of order $g^{4/3}/L$ in
+small-$a$ expansion is $\hbar c\,[c_2(La)^2/L+O((La)^4/L)]$ with a finite pure number $c_2$, the Casimir-type Weiss potential, of order $g^{4/3}\hbar c/L$ in
 the rescaled variables and cutoff independent. The quadratic
 $\Lambda^2$ divergence above is an artefact of the sharp momentum
 cutoff, which breaks the periodicity in $La$; a periodic (lattice)
@@ -216,8 +193,7 @@ $W_4$ and the non-adiabatic terms. $W_3$ creates three quanta with
 amplitude of order $g/L$ per mode triple, and its second-order
 contribution is the $a$-dependent part of a two-loop vacuum energy, whose
 divergent part is $a$-independent and cancels from the gap; the finite
-$a$-dependent part is of order $g^2/L$. (H2) is therefore expected in the
-form $\eta\le C_2g^{4/3}(1+g^{2/3}\log\Lambda L)/L$, with a gauge-invariant
+$a$-dependent part is of order $g^2\hbar c/L$. (H2) is therefore expected in the form $\eta\le C_2g^{4/3}(1+g^{2/3}\log\Lambda L)\,\hbar c/L$, with a gauge-invariant
 cutoff, and the constants $C_i$ grow with $\log(L/a)$ on a lattice: the
 reduction holds at fixed cutoff, and the cutoff dependence is exactly the
 running of the coupling.
@@ -244,8 +220,7 @@ is the reason the small-volume expansion is a series in $g^{2/3}$. The
 mechanism transferred is the zero-point confinement of C133: $A$ is that
 operator plus a small even potential, and the nonzero modes enter only
 through the price $\eta$ of leaving their vacuum. The reduction also
-shows where the small-volume regime ends: (H1) fails when
-$C_1g(L)^{2/3}$ reaches order one, that is when $\Delta_0(L)\sim2\pi/L$,
+shows where the small-volume regime ends: (H1) fails when $C_1g(L)^{2/3}$ reaches order one, that is when $\Delta_0(L)\sim2\pi\hbar c/L$,
 which is the crossover $z\simeq2$ of Lüscher--Münster in the variable
 $z=\Delta L$. Beyond it, leaving the nonzero-mode vacuum is no longer
 expensive compared with the constant-mode gap, no projection of the form
