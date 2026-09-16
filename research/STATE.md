@@ -399,7 +399,17 @@ labour; consult it before opening a new item.
    $H_W=-(\hbar c/a)\log\mathcal T$. Result: $SU(3)$ gapped uniformly in
    volume for $g^2\ge176$ with
    $\Delta_W\ge(\hbar c/a)\,4\log(g^2/176)$; fully crude version $6340$.
-   The Kogut--Susskind threshold still needs a Hamiltonian expansion.
+   **Done for Kogut--Susskind too:**
+   [continuous-time note](../notes/kogut-susskind-strong-coupling-explicit.md).
+   Duhamel expansion in the plaquette term with exact electric decay
+   between insertions; Gauss's law gives $|S_k|\ge4$; Kotecký--Preiss
+   with $a=n+\lambda|\operatorname{supp}|$; the entropy $64|S_{k-1}|$ of the
+   next insertion cancels against the denominator $1/((\varepsilon-\lambda)|S_{k-1}|)$.
+   Result: $\Delta_{\rm KS}\ge\frac83g^2(1-\theta)\,\hbar c/a$ for
+   $g^4\ge\max(3132/\theta,\,783/\sqrt{\theta(1-\theta)})$, so $g^2\ge79$
+   gives $\frac43g^2$ and $\gamma\to4$ (adjacent-growth class; general
+   shapes by the quoted tree-graph bound at a bounded factor). Both
+   regularizations now have $g_0^2\sim10^2$.
 16. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one

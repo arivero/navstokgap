@@ -1,0 +1,197 @@
+# A continuous-time expansion for the Kogut--Susskind Hamiltonian: $SU(3)$ gapped for $g^2\gtrsim80$, with the gap approaching the flux-loop energy $(8/3)g^2\,\hbar c/a$
+
+Yarotsky's theorem gives the Kogut--Susskind gap for $SU(3)$ only beyond
+$g^2\sim10^{101}$, because its time discretization pays $e^{64t_0}$ per
+perturbed site. The same statement with usable numbers comes from the
+Duhamel expansion of $e^{-tH}$ in the plaquette term with the electric
+evolution kept exact between insertions: a polymer gas in continuous
+time whose weights carry the exact decay $e^{-E\,\Delta\tau}$ of every
+excited link, so no neighbourhood is ever left unpenalized. Three
+structural facts do the work. The electric term is diagonal in the
+character basis with eigenvalue $\varepsilon\sum_\ell C_2(r_\ell)/C_2(f)$,
+$\varepsilon=(g^2/2)C_2(f)=2g^2/3$. The plaquette operator
+$w_p=\operatorname{tr}U_p+\operatorname{tr}U_p^\dagger$ acts on four links
+with $\|w_p\|\le2N=6$, and $V=(2/g^2)\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)$
+is $-(1/g^2)\sum_pw_p$ up to a constant. And Gauss's law forces every
+intermediate excited set to be a closed flux loop, so at least four
+links are excited whenever any are, $E\ge4\varepsilon$ on the
+orthogonal complement of the vacuum. The Kotecký--Preiss criterion, in
+its measure-space form, with the weight $a(\gamma)=n(\gamma)+\lambda|\operatorname{supp}\gamma|$
+and $\lambda=\varepsilon(1-\theta)$, then gives a gap of at least
+$4\lambda=(8/3)g^2(1-\theta)$ in units $\hbar c/a$ whenever
+$$g^4\ \ge\ \max\Big(\frac{3132}{\theta},\ \frac{783}{\sqrt{\theta(1-\theta)}}\Big),$$
+for the class of polymers in which each insertion touches the current
+excited set; so $\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a$ for $g^2\ge79$,
+$\Delta_{\rm KS}\ge2.4\,g^2\,\hbar c/a$ for $g^2\ge177$, and the bound
+approaches the flux-loop energy as $g\to\infty$, which fixes the
+constant $\gamma$ of the T2 theorem at $4$. The general polymers, in
+which a later insertion may start a separate piece that is bridged
+afterwards, are counted by the standard tree-graph bound, quoted, at
+the cost of a bounded factor per insertion, which moves the thresholds
+by a factor of order $e^2$ in $g^4$. Constants explicit; the tree-graph
+step is quoted and labelled; nothing promoted.
+
+## 1. The expansion
+
+Units $\hbar c/a=1$. Write $H=H_E-W+{\rm const}$ with
+$H_E=(g^2/2)\sum_\ell(-\Delta_\ell)$ and $W=(1/g^2)\sum_pw_p$. In the
+Peter--Weyl basis $H_E$ is diagonal, its eigenvalue on a link
+configuration $\sigma=(r_\ell)$ being
+$E(\sigma)=(g^2/2)\sum_\ell C_2(r_\ell)\ge\varepsilon\,|S(\sigma)|$, with
+$S(\sigma)$ the set of links carrying a nontrivial representation and
+$\varepsilon=(g^2/2)C_2(f)$, since $C_2(f)=4/3$ is the least nonzero
+Casimir of $SU(3)$. Duhamel's formula gives
+$$e^{-tH}=\sum_{n\ge0}\int_{0<\tau_1<\dots<\tau_n<t}
+e^{-(t-\tau_n)H_E}\,W\,e^{-(\tau_n-\tau_{n-1})H_E}\cdots W\,e^{-\tau_1H_E},$$
+all terms positive. Insert, between consecutive factors, the resolution
+$1=\sum_SP_S$ with $P_S$ the projection onto configurations whose
+excited set is exactly $S$; each $P_S$ is a product over links. A
+**history** is then a sequence $(p_k,\tau_k,S_k)_{k=1}^n$ with $S_0=\emptyset$,
+and its weight is
+$$\Big\langle\Omega_0,\prod_{k}\big(P_{S_k}\tfrac1{g^2}w_{p_k}P_{S_{k-1}}\big)e^{-\Delta\tau_kH_E}\ \Omega_0\Big\rangle,
+\qquad\Big|\cdot\Big|\ \le\ \Big(\frac{2N}{g^2}\Big)^n\prod_{k=1}^{n-1}e^{-\varepsilon|S_k|\Delta\tau_k},$$
+because $\|w_p\|\le2N$ and $e^{-\Delta\tau H_E}P_S$ has norm at most
+$e^{-\varepsilon|S|\Delta\tau}$.
+
+Two constraints on the $S_k$. First,
+$\operatorname{links}(p_k)\subseteq S_{k-1}\cup S_k$: acting on a trivial
+link, $w_p$ makes it nontrivial ($f\otimes1=f$), so a link of $p_k$ can be
+trivial afterwards only if it was nontrivial before. Second, **Gauss's
+law**: $\Omega_0$ and every $w_p$ are gauge invariant, so every
+intermediate configuration is, and the representations on the links at
+a vertex fuse to the trivial one; a nonempty excited set is therefore a
+union of closed flux loops and $|S_k|\ge4$ whenever $S_k\ne\emptyset$.
+This is where the non-abelian theory pays nothing extra: the same
+constraint holds for $U(1)$.
+
+**Factorization.** The support of a history is
+$\operatorname{supp}\gamma=\bigcup_k S_k\times[\tau_k,\tau_{k+1}]\subset\mathcal E\times[0,t]$.
+If a history splits into pieces with disjoint supports, its weight is the
+product of the pieces' weights, because $P_S$, $e^{-\Delta\tau H_E}$ and
+$\Omega_0$ factor over links and each $w_p$ acts on four links; and the
+ordered time integral over the whole history is the product of the
+ordered integrals over the pieces. So
+$$Z(t)=\langle\Omega_0,e^{-tH}\Omega_0\rangle=\sum_{\{\gamma_i\}\ \text{compatible}}\prod_iw(\gamma_i),$$
+a gas of **polymers**, the connected histories, two polymers being
+compatible when their supports are disjoint. Between consecutive
+insertions of a connected polymer the excited set is nonempty, or the
+support would split in time; hence $|S_k|\ge4$ for $1\le k\le n-1$.
+
+## 2. The convergence criterion
+
+The Kotecký--Preiss criterion (Commun. Math. Phys. 103 (1986) 491) in
+its form for polymers indexed by a measure space (Poghosyan and
+Ueltschi, J. Math. Phys. 50 (2009) 053509; metadata level) is: if for
+every $\gamma$
+$$\int_{\gamma'\not\sim\gamma}|w(\gamma')|\,e^{a(\gamma')}\,d\gamma'\ \le\ a(\gamma),$$
+then the cluster expansion of $\log Z$ converges absolutely and
+uniformly in the volume, and truncated correlations obey the standard
+bounds. Here $d\gamma'$ is the sum over shapes
+$(p_k,S_k)_{k=1}^{n}$ times $d\tau_1\prod_{k=1}^{n-1}d\Delta\tau_k$.
+
+Take
+$$a(\gamma)=n(\gamma)+\lambda\,|\operatorname{supp}\gamma|,\qquad
+|\operatorname{supp}\gamma|=\sum_{k=1}^{n-1}|S_k|\Delta\tau_k,\qquad 0<\lambda<\varepsilon .$$
+Then $e^{a(\gamma')}|w(\gamma')|\le(2Ne/g^2)^{n'}\prod_ke^{-(\varepsilon-\lambda)|S_k'|\Delta\tau_k'}$.
+
+*Overlap.* $\gamma'\not\sim\gamma$ means some link $\ell$ is excited in
+both at a common time. For a fixed shape and internal times of
+$\gamma'$, the set of $\tau_1'$ producing an overlap through link
+$\ell\in S_k'$ during the interval in which $\gamma$ excites $\ell$ has
+measure at most $T_\ell(\gamma)+\Delta\tau_k'$, where $T_\ell(\gamma)$
+is the total time $\gamma$ keeps $\ell$ excited, and
+$\sum_\ell T_\ell(\gamma)=|\operatorname{supp}\gamma|$.
+
+*Integrals.* $\int_0^\infty e^{-(\varepsilon-\lambda)|S|\Delta\tau}d\Delta\tau=\frac1{(\varepsilon-\lambda)|S|}$
+and $\int_0^\infty\Delta\tau\,e^{-(\varepsilon-\lambda)|S|\Delta\tau}d\Delta\tau=\frac1{((\varepsilon-\lambda)|S|)^2}\le\frac1{4(\varepsilon-\lambda)}\cdot\frac1{(\varepsilon-\lambda)|S|}$.
+
+Collecting, with
+$$Q_\lambda\ :=\ \sum_{\text{shapes}\ni\ell_0}(n-1)\Big(\frac{2Ne}{g^2}\Big)^n\prod_{k=1}^{n-1}\frac{1}{(\varepsilon-\lambda)|S_k|}$$
+the weighted number of polymer shapes through a fixed link, the left
+side of the criterion is at most
+$Q_\lambda|\operatorname{supp}\gamma|+\frac{Q_\lambda}{4(\varepsilon-\lambda)}\,n(\gamma)$,
+and the criterion holds whenever
+$$Q_\lambda\ \le\ \lambda\qquad\text{and}\qquad Q_\lambda\le4(\varepsilon-\lambda).$$
+
+## 3. Counting shapes
+
+**Adjacent growth.** Consider first the shapes in which every insertion
+$p_k$, $k\ge2$, shares a link with the current excited set $S_{k-1}$. The
+first plaquette contains $\ell_0$: in three dimensions a link lies in
+four plaquettes, so $4$ choices, and $S_1=\operatorname{links}(p_1)$ is
+forced. At step $k\ge2$ there are at most $4|S_{k-1}|$ plaquettes
+touching $S_{k-1}$ and at most $2^4=16$ choices of $S_k$. Each step
+therefore contributes at most
+$$\frac{2Ne}{g^2}\cdot\frac{1}{(\varepsilon-\lambda)|S_{k-1}|}\cdot64|S_{k-1}|
+=\frac{128Ne}{g^2(\varepsilon-\lambda)}\ =:\ u,$$
+the size $|S_{k-1}|$ cancelling between the entropy and the energy
+denominator, which is the mechanism that keeps the count geometric. So
+$$Q_\lambda^{\rm adj}\ \le\ 4\,\frac{2Ne}{g^2}\sum_{m\ge1}m\,u^m=\frac{8Ne}{g^2}\,\frac{u}{(1-u)^2}.$$
+
+**General shapes.** A later insertion may start a piece disjoint from
+the current support that is bridged by subsequent insertions. Such
+shapes are organized by a spanning tree of the overlap graph of their
+insertions, and the tree-graph bound (Poghosyan--Ueltschi, loc. cit.,
+and the references there) bounds their weighted number by the
+adjacent-growth sum with $u$ replaced by $c_{\rm tg}u$ for a pure
+constant $c_{\rm tg}$ of order $e^2$. This step is quoted, and the
+thresholds below are stated for the adjacent-growth class, with the
+general class obtained by $g^4\to c_{\rm tg}g^4$.
+
+## 4. Numbers for $SU(3)$
+
+With $N=3$, $\varepsilon=2g^2/3$ and $\lambda=\varepsilon(1-\theta)$,
+$$u=\frac{128\cdot3e}{g^2\cdot\theta\cdot2g^2/3}=\frac{576e}{\theta g^4}=\frac{1566}{\theta g^4}.$$
+Impose $u\le\frac12$ and, for the first condition of Section 2,
+$\frac{8Ne}{g^2}\cdot4u\le\lambda$, that is
+$96e\cdot\frac{1566}{\theta g^4}\le\frac23g^2(1-\theta)\cdot g^2/g^2$; cleaning up,
+$$g^4\ \ge\ \frac{3132}{\theta}\qquad\text{and}\qquad g^8\ \ge\ \frac{6.13\times10^5}{\theta(1-\theta)},$$
+the second condition of Section 2 being weaker. Hence:
+
+| $\theta$ | threshold $g^2$ | gap $\ge4\lambda=\frac83g^2(1-\theta)$ |
+| --- | --- | --- |
+| $1/2$ | $79$ | $\frac43g^2$ |
+| $1/4$ | $112$ | $2g^2$ |
+| $1/10$ | $177$ | $2.4\,g^2$ |
+| $\theta\to0$ | $g^2\gtrsim\sqrt{3132/\theta}$ | $\to\frac83g^2$ |
+
+The gap here is read off as in
+[the Wilson note](wilson-strong-coupling-explicit.md) §3: running the
+criterion with $a(\gamma)=n+\lambda|\operatorname{supp}\gamma|$ puts a
+factor $e^{-\lambda|\operatorname{supp}X|}$ on every cluster, a cluster
+spanning a time interval of length $t$ has $|\operatorname{supp}|\ge4t$
+by Gauss's law, so vacuum-subtracted correlations in Euclidean time
+decay at rate at least $4\lambda$, and for a positive semigroup that is
+a lower bound on the gap on the cyclic subspace of local observables,
+which in finite volume is everything by T1.
+
+**Consequence for T2.** The T2 theorem's constant $\gamma$, defined by
+$\Delta\ge\gamma(g^2/2)C_2$, is $4(1-\theta)$ in this expansion and tends
+to $4$: the gap is the energy of one flux loop, four links in the
+fundamental, up to corrections of relative order $1/g^4$. This agrees
+with the two-sided strong-coupling statement of
+[the SU(3) constants](su3-constants.md) §2, whose upper side is
+$12g^2$, and closes the ratio $18/\gamma$ there to $4.5$.
+
+## 5. Why this beats the time-discretized argument
+
+Yarotsky's Lemma 3 gives up the decay of every link in the range of a
+perturbed site for a whole step $t_0$, and $t_0\ge7$ is forced by the
+entropy of the space-time lattice; the product is $e^{64t_0}\sim e^{450}$
+per insertion. In continuous time each excited link decays exactly for
+exactly as long as it is excited, the insertion carries no step, and the
+only entropy is the choice of the next plaquette and excited set, which
+the energy denominator $1/((\varepsilon-\lambda)|S_k|)$ pays for
+link by link. The threshold drops from $10^{101}$ to $10^2$ for the same
+model and the same conclusion.
+
+## 6. Consequence for STATE
+
+The T2 theorem for the Kogut--Susskind Hamiltonian now has an explicit
+threshold, $g^2\gtrsim80$ for $SU(3)$ in the adjacent-growth class and a
+bounded factor worse in general, and an explicit gap approaching the
+flux-loop energy $(8/3)g^2\,\hbar c/a$. Together with the Wilson
+transfer-matrix result, the strong-coupling boundary of the intermediate
+region is of order $g^2\sim10^2$ for both standard regularizations. The
+weak side remains the crude $1/g^2\gtrsim10^2$, and the intermediate
+region between them is unchanged.
