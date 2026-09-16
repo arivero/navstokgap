@@ -520,9 +520,24 @@ labour; consult it before opening a new item.
    $10^4$); certified polymer enumeration reaches $\beta_W\sim1$. So the
    research is H1, in two parts: H1a sharpness (no explicit constant
    exists for one small-field step) and H1b the last three doublings.
-   **Next: one Euclidean small-field blocking step for $SU(3)$ with
-   explicit constants**, deliverable $g^2_{\rm pert}$, the weak-side
+   **Line opened: one Euclidean small-field blocking step for $SU(3)$
+   with explicit constants**, deliverable $g^2_{\rm pert}$, the weak-side
    counterpart of $0.0135$.
+   [Part 1, Gaussian level](../notes/small-field-step-gaussian.md):
+   intertwining averaging $Wd=\bar dW_0$ (sixteen two-link paths per
+   coarse link); Feynman gauge makes the step $32$ copies of one scalar
+   conditional-Gaussian problem (massless field given tube averages);
+   exact decomposition with $C_{\rm fl}=g^2(P(-\Delta)P)^{-1}|_K$ and
+   $\bar S_2=\frac1{2g^2}\langle\bar f,(WGW^T)^{-1}\bar f\rangle$; block
+   Poincaré $\langle f,-\Delta f\rangle\ge\frac49\|f\|^2$ on tube-mean-zero
+   $f$ (tube $2^3\times3$ box, $\lambda_2=1$, weighted-mean correction
+   $\frac18$, bond multiplicity $2$), so $\|C_{\rm fl}\|\le\frac94g^2$ and
+   rms link fluctuation $\le\frac32g$; sharp constant in $[\frac49,4]$;
+   coarse form is Wilson at the same $g^2$ (4D scale invariance).
+   **Sharpness begins at the propagator**: generic Combes--Thomas gives
+   decay rate $7\times10^{-4}$ per lattice unit against a true rate of
+   order one. Next: block random-walk expansion for the rate, then part
+   2 (remainder polymer gas, $g^2_{\rm pert}$).
 19. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one

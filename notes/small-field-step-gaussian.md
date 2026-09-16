@@ -1,0 +1,192 @@
+# One small-field blocking step for $SU(3)$, part 1: the Gaussian fluctuation integral with block averaging, with explicit constants
+
+This opens the line set in
+[the research-directions note](reasons-to-stop-as-research.md): one
+Euclidean blocking step of the small-field renormalization for $SU(3)$
+with every constant written down. Part 1 is the Gaussian level, where
+the Wilson action is expanded to second order and the fluctuation
+integral is exact. Four things are established. **(i)** A block
+averaging $W$ of link variables that intertwines gauge transformations,
+$Wd=\bar dW_0$, so that the coarse field is a gauge field. **(ii)** In
+Feynman gauge the quadratic Wilson form separates into $4\times8=32$
+identical scalar problems, one per direction and colour, and the
+fluctuation integral is the conditional law of a massless free field
+given its tube averages. **(iii)** A block Poincaré inequality with an
+explicit constant,
+$$\langle f,-\Delta f\rangle\ \ge\ \frac49\,\|f\|^2\qquad\text{on tube-mean-zero }f,$$
+so the fluctuation covariance is at most $\tfrac94g^2$ and the root-mean-square
+fluctuation of one link angle is at most $\tfrac32g$; the alternating
+modes show the true constant lies in $[\tfrac49,4]$. **(iv)** The coarse
+quadratic form is the Wilson form at the same $g^2$ for slowly varying
+fields, the classical scale invariance of four dimensions, and its
+correction and the fluctuation propagator decay exponentially. For the
+decay rate the generic Combes--Thomas argument gives about
+$7\times10^{-4}$ per lattice unit against a true rate of order one:
+**the weak side's sharpness problem begins at the Gaussian propagator**,
+and the block random-walk expansion is the defined next piece. Units:
+$\hbar$ and $c$ enter only through $S_E/\hbar$, and all lattice
+quantities are dimensionless with $a=1$ where not shown. Constants
+explicit; nothing promoted.
+
+## 1. Conventions
+
+Fine lattice $\mathbb Z^4$, spacing $a$; link angles
+$\theta_\ell\in\mathfrak{su}(3)$, $U_\ell=e^{i\theta_\ell}$, so
+$\theta=aA$ with $A$ the gauge potential and $g$ dimensionless. With
+$\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}$,
+$$\frac{S_W}{\hbar}=\frac2{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)
+=\frac1{2g^2}\sum_p\sum_{a=1}^8\big((d\theta)^a_p\big)^2+O(\theta^3),$$
+where $(d\theta)_p=\theta_{x,\mu}+\theta_{x+\hat\mu,\nu}-\theta_{x+\hat\nu,\mu}-\theta_{x,\nu}$
+is the lattice exterior derivative. The quadratic part is eight copies
+of the lattice Maxwell form $S_2(\theta)=\frac1{2g^2}\|d\theta\|^2$, and
+the fluctuation amplitude is of order $g$: a field strength $\eta$ per
+plaquette costs $\eta^2/(2g^2)$, in agreement with the large-field
+bound $e^{-\eta^2/(4g^2)}$ of
+[the lower-bound note](large-field-action-lower-bound.md) in its
+continuum normalization. The cubic and quartic terms, the Haar measure
+correction $dU=(1+O(\theta^2))d\theta$ and the non-abelian part of the
+averaging are the remainder, treated in part 2.
+
+## 2. The averaging and its intertwining property
+
+Blocks $B$ of side $2$; coarse links $(B,\mu)$ from $B$ to
+$B'=B+2\hat\mu$. Define, for each colour component,
+$$(W\theta)_{B,\mu}=\frac1{16}\sum_{x\in B}\big(\theta_{x,\mu}+\theta_{x+\hat\mu,\mu}\big),$$
+the average over the sixteen sites of $B$ of the two-link path from
+$x$ to $x+2\hat\mu$; and for site functions the block mean
+$(W_0\lambda)_B=\frac1{16}\sum_{x\in B}\lambda_x$.
+
+**Lemma 1 (intertwining).** $W\,d=\bar d\,W_0$, where $\bar d$ is the
+coarse exterior derivative.
+
+*Proof.* $(Wd\lambda)_{B,\mu}=\frac1{16}\sum_{x\in B}\big[(\lambda_{x+\hat\mu}-\lambda_x)+(\lambda_{x+2\hat\mu}-\lambda_{x+\hat\mu})\big]
+=\frac1{16}\sum_{x\in B}(\lambda_{x+2\hat\mu}-\lambda_x)=(W_0\lambda)_{B'}-(W_0\lambda)_B.$ $\square$
+
+So a fine gauge transformation $\lambda$ moves the coarse field by the
+coarse gauge transformation $W_0\lambda$, and coarse Wilson loops are
+functions of fine gauge-invariant data. This is the property that
+makes the gauge fixing of Section 3 harmless for the coarse theory.
+
+The tube of $(B,\mu)$ is the set of fine links entering the average:
+$T_{B,\mu}=\{(y,\mu):y\in B\cup(B+\hat\mu)\}$, three $\mu$-layers of
+eight links with weights $w=(1,2,1)$, the middle layer counted from
+both $x=y$ and $x=y-\hat\mu$. Each fine link lies in one or two tubes.
+
+## 3. Feynman gauge: thirty-two scalar problems
+
+Add the gauge-fixing term $\frac1{2g^2}\|d^*\theta\|^2$. Then
+$S_2+S_{\rm gf}=\frac1{2g^2}\sum_\mu\sum_a\langle\theta^a_\mu,-\Delta\theta^a_\mu\rangle$,
+because $d^*d+dd^*$ is the scalar Laplacian on each component of a
+lattice one-form. The averaging $W$ acts on each component separately,
+so the Gaussian step is $32$ copies of one scalar problem: a massless
+free field $f$ on $\mathbb Z^4$ with covariance $g^2(-\Delta)^{-1}$,
+conditioned on its tube averages $\bar f_B=\frac1{16}\sum_{y\in T_B}w_yf_y$
+for every block $B$, with the tubes elongated along the direction
+$\mu$ of the component. The four directions are equivalent by lattice
+symmetry.
+
+For gauge-invariant observables the Feynman and Landau measures agree;
+for the coarse field they differ by a fine pure gauge $d\lambda$, which by
+Lemma 1 moves the coarse field by the coarse pure gauge $\bar dW_0\lambda$,
+so the law of every coarse gauge-invariant observable is the same in
+both. That is what the intertwining buys.
+
+**Decomposition.** Let $H\bar f$ be the minimizer of $\langle f,-\Delta f\rangle$
+subject to $Wf=\bar f$, and $\xi=f-H\bar f$, so $W\xi=0$. Then, exactly,
+$$\langle f,-\Delta f\rangle=\langle H\bar f,-\Delta H\bar f\rangle+\langle\xi,-\Delta\xi\rangle,
+\qquad H=GW^T(WGW^T)^{-1},\quad G=(-\Delta)^{-1},$$
+the cross term vanishing by the variational characterization. The
+fluctuation $\xi$ is Gaussian on $K=\{W\xi=0\}$ with covariance
+$$C_{\rm fl}=g^2\big[G-GW^T(WGW^T)^{-1}WG\big]
+=g^2\big(P(-\Delta)P\big)^{-1}\Big|_K ,$$
+the conditional covariance of the free field given its tube averages,
+$P$ the orthogonal projection onto $K$; and the coarse quadratic form is
+$$\bar S_2(\bar f)=\frac1{2g^2}\big\langle\bar f,(WGW^T)^{-1}\bar f\big\rangle
+=\min\Big\{\frac1{2g^2}\langle f,-\Delta f\rangle:\ Wf=\bar f\Big\}.$$
+
+## 4. The block Poincaré inequality
+
+**Proposition 1.** If $\sum_{y\in T_B}w_yf_y=0$ for every block $B$, then
+$$\|\partial f\|^2=\langle f,-\Delta f\rangle\ \ge\ \frac49\,\|f\|^2 .$$
+
+*Proof.* One tube $T$ is a $2\times2\times2\times3$ box of $24$ sites
+whose graph Laplacian has smallest nonzero eigenvalue
+$\lambda_2=\min(\lambda_2(P_2),\lambda_2(P_3))=\min(2,1)=1$, so for the
+plain mean $m$ of $f$ on $T$, $\sum_T(f-m)^2\le\sum_{\text{bonds}\subset T}(\partial f)^2$.
+The weighted constraint gives $m=-\frac1{32}\sum_T(w_y-\bar w)(f_y-m)$
+with $\bar w=\tfrac43$, and $\sum_T(w_y-\bar w)^2=8(\tfrac19+\tfrac49+\tfrac19)=\tfrac{16}3$,
+so $|m|\le\frac{4/\sqrt3}{32}\|f-m\|_T$ and
+$24m^2\le\tfrac18\|f-m\|_T^2$. Hence
+$\sum_Tf^2=\|f-m\|_T^2+24m^2\le\tfrac98\sum_{\text{bonds}\subset T}(\partial f)^2$.
+Summing over all tubes of the direction $\mu$: every site lies in at
+least one tube, and every bond lies in at most two, so
+$\|f\|^2\le\tfrac98\cdot2\,\|\partial f\|^2$. $\square$
+
+**Consequences.** On $K$ the precision $P(-\Delta)P/g^2\ge\frac4{9g^2}$, so
+$$\|C_{\rm fl}\|\le\frac94\,g^2,\qquad
+\big\langle\xi_\ell^2\big\rangle^{1/2}=C_{\rm fl}(\ell,\ell)^{1/2}\le\frac32\,g$$
+for every fine link and colour. The modes alternating in sign between
+consecutive $\mu$-layers, or between consecutive sites in a transverse
+direction, satisfy the constraint and have $\langle f,-\Delta f\rangle=4\|f\|^2$,
+so the sharp constant lies in $[\tfrac49,4]$; the value $\tfrac49$ is what
+the tube-by-tube argument gives and is enough for part 2, whose
+smallness condition is on $\tfrac32g$.
+
+## 5. The coarse form, and the decay problem
+
+*Scale invariance.* For a slowly varying coarse field, $H\bar f$ is the
+slowly varying fine field with the same values, and $\bar S_2$ is the
+fine Maxwell form evaluated on it. In the coarse angle
+$\theta_c=2\bar f$, the natural variable of a link of length $2a$, the
+result is the coarse Wilson quadratic form $\frac1{2g^2}\|\bar d\theta_c\|^2$
+with the same $g^2$, up to corrections of relative order $\bar k^2a^2$:
+the Maxwell action is scale invariant in four dimensions, and the
+Gaussian step does not run the coupling. The running appears in part 2,
+from the dependence of the fluctuation determinant on the background
+through the cubic and quartic vertices.
+
+*Decay.* Both $C_{\rm fl}$ and the correction to the coarse form decay
+exponentially, because the conditioning removes the long-wavelength
+modes; the massless pole of $G$ cancels exactly in
+$G-GW^T(WGW^T)^{-1}WG$ at $\bar k\to0$. An explicit rate is the first
+place where the weak side loses sharpness. The generic Combes--Thomas
+argument on $\tilde A=P(-\Delta)P+\tfrac49(1-P)\ge\tfrac49$, conjugated by
+$e^{\kappa x\cdot e}$, needs the conjugation error below $\tfrac29$; the
+Laplacian contributes $2\sinh\kappa$, and the projection, through
+$(WW^T)^{-1}=\big(48+8(S+S^{-1})\big)^{-1}$ along $\mu$, contributes
+$\|P_\kappa-P\|\le10\kappa+O(\kappa^2)$ multiplied by $2\|{-\Delta}\|\simeq33$,
+so
+$$\kappa\ \le\ \frac{2/9}{2+330}\ \simeq\ 7\times10^{-4}\ \text{per lattice unit},
+\qquad |C_{\rm fl}(x,y)|\le\frac92\,g^2\,e^{-\kappa|x-y|_\infty}.$$
+The true rate is of order one per block, as the exact cancellation of
+the pole and the alternating-mode energies indicate; the factor of a
+thousand is the generic argument's price for the nonlocality of $P$ and
+the size of $\|{-\Delta}\|$. Balaban's propagator paper (Commun. Math.
+Phys. 95 (1984) 17; metadata level) obtains the order-one rate by a
+random-walk expansion adapted to the block structure; carrying that
+expansion with explicit constants is the next piece, and every
+downstream constant, the locality of the effective interaction and the
+polymer activities of part 2, inherits its rate.
+
+## 6. What part 2 needs from here
+
+The remainder $S_W-S_2$ on the small-field region, the Haar correction
+and the non-abelian averaging are functions of $H\bar\theta+\xi$ with
+$\xi$ Gaussian of size $\tfrac32g$ per link; their expansion is a
+polymer gas whose activities carry powers of $g$ and whose locality
+carries the decay rate of $C_{\rm fl}$. The large-field region
+$|\theta_\ell|\gtrsim1$ has probability at most $e^{-c/g^2}$ per link with
+$c$ of order $\tfrac29$ from the covariance bound, consistent with
+[the lower-bound note](large-field-action-lower-bound.md). The
+deliverable of part 2 is the Kotecký--Preiss threshold $g_{\rm pert}^2$
+for this gas.
+
+## 7. Consequence for STATE
+
+Part 1 of the explicit small-field step is in place: an intertwining
+averaging, the reduction to one scalar conditional-Gaussian problem in
+Feynman gauge, the block Poincaré constant $\tfrac49$ with fluctuation
+size $\tfrac32g$ per link, scale invariance of the coarse form, and the
+decay problem located with its generic rate $7\times10^{-4}$ against a
+true rate of order one. Next: the block random-walk expansion for the
+decay rate, then part 2.
