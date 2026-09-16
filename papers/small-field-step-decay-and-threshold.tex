@@ -1,0 +1,242 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={One small-field blocking step, part 1b: the decay rate and the shape of the threshold, and},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{one-small-field-blocking-step-part-1b-the-decay-rate-and-the-shape-of-the-threshold-and-why-the-weak-sides-deficit-is-ten-orders-of-magnitude}{%
+\section{One small-field blocking step, part 1b: the decay rate and the
+shape of the threshold, and why the weak side's deficit is ten orders of
+magnitude}\label{one-small-field-blocking-step-part-1b-the-decay-rate-and-the-shape-of-the-threshold-and-why-the-weak-sides-deficit-is-ten-orders-of-magnitude}}
+
+Part 1 (\href{small-field-step-gaussian.md}{Gaussian level}) left one
+constant unresolved, the exponential decay rate \(\kappa\) of the
+fluctuation propagator, and part 2 was to produce the Kotecký--Preiss
+threshold \(g_{\rm pert}^2\) of the remainder gas. This note settles
+what can be settled about both without new mathematics, and the result
+reshapes the weak-side programme. \textbf{The literature carries no
+explicit rate.} Dimock's exposition of Balaban's construction
+(Rev.~Math. Phys. 25 (2013) 1330010, §2.4; read from the arXiv text)
+proves the decay by a parametrix built from Neumann inverses on cubes of
+side \(M\) and a random-walk expansion that converges ``for \(M\)
+sufficiently large'', with constants ``depending on \(L\) but no other
+parameters''; the local estimate (80) there has a rate \(\gamma_0\)
+stated only as \(O(L^{-2})\). \textbf{Explicit routes give
+\(\kappa\sim10^{-3}\).} The generic Combes--Thomas argument gives
+\(7\times10^{-4}\) for the hard constraint (part 1); the soft-constraint
+operator \(-\Delta+aQ^TQ\) is local, has gap \(\tfrac29\) for
+\(a\ge130\), and gives \(1.7\times10^{-3}\); the analytic-structure
+route through the folded symbol is set up in Section 2 and reduces to a
+zero-free strip for one explicit function, which is the defined
+computation for an order-one rate. \textbf{The threshold scales as
+\(\kappa^4\).} With the tree-graph organization of the remainder gas,
+\[g_{\rm pert}\ \simeq\ \frac{1}{e\,C_3\,c_{\rm adj}\,\|C_{\rm fl}\|_{1,\kappa}/g^2}
+\ \simeq\ \frac{\kappa^4}{2\times10^{4}\,C_3},\] with \(C_3\) the
+cubic-vertex constant, of order \(10\) to \(30\), so that even at the
+expected order-one rate \(\kappa\simeq\tfrac12\) the threshold is
+\(g_{\rm pert}^2\sim10^{-12}\), and at the proven rate it is
+\(10^{-35}\). Against the physical onset of the perturbative running at
+\(g^2\simeq1\), \textbf{the weak side's explicit deficit is twelve
+orders of magnitude in \(g^2\) with an ideal propagator and more than
+thirty with the proven one, where the strong side's is a factor \(400\)
+in \(\beta_W\).} The sub-target H1a of
+\href{reasons-to-stop-as-research.md}{the research-directions note} is
+therefore closed as a constant-chasing problem: no sharpening of the
+present method reaches \(g^2\sim1\), and H1 is a methods problem. The
+estimate of the threshold is a scaling estimate with explicit but crude
+constants, labelled as such; the decay-rate statements are proved.
+Constants explicit; nothing promoted.
+
+\hypertarget{what-the-literature-does-and-the-soft-constraint}{%
+\subsection{1. What the literature does, and the soft
+constraint}\label{what-the-literature-does-and-the-soft-constraint}}
+
+Dimock's Green's function is
+\(G_k=(-\Delta+\bar\mu_k+a_kQ_k^TQ_k)^{-1}\): the block averaging enters
+as a \textbf{soft} Gaussian constraint \(aQ^TQ\) rather than the hard
+conditioning of part 1, and the operator is then local. The decay is
+proved by covering the lattice with cubes of side \(M\), inverting with
+Neumann conditions on each, gluing with a partition of unity, and
+expanding the error in a random walk whose steps carry a factor
+\(O(M^{-1})\); the walk converges for \(M\) large and the rate is half
+the local rate. No numerical value is attached to \(M\), \(C\) or
+\(\gamma_0\) anywhere in the construction, and Balaban's original
+(Commun. Math. Phys. 95 (1984) 17) is of the same kind.
+
+The soft constraint can be made explicit here. With \(Q\) the averaging
+of part 1 (normalized by \(\tfrac1{16}\)),
+\(QQ^T=\big(48+8(S+S^{-1})\big)/256\) along \(\mu\) has spectrum in
+\([\tfrac18,\tfrac14]\), so \(\|Qf\|^2\ge\tfrac18\|f_\perp\|^2\) for the
+component \(f_\perp\) of \(f\) orthogonal to \(K=\ker Q\). Writing
+\(f=f_K+f_\perp\) and using
+\(\|\partial f\|^2\ge\tfrac12\|\partial f_K\|^2-\|\partial f_\perp\|^2\)
+with \(\|\partial f_K\|^2\ge\tfrac49\|f_K\|^2\) (part 1, Proposition 1)
+and \(\|\partial f_\perp\|^2\le16\|f_\perp\|^2\),
+\[\big\langle f,(-\Delta+aQ^TQ)f\big\rangle\ \ge\ \frac29\|f_K\|^2+\Big(\frac a8-16\Big)\|f_\perp\|^2
+\ \ge\ \frac29\,\|f\|^2\qquad(a\ge130).\] The operator has range \(2\)
+along \(\mu\) and \(1\) transversally, with \(\|Q^TQ\|\le\tfrac14\).
+Conjugating by \(e^{\kappa x\cdot e}\) changes \(-\Delta\) by at most
+\(2\sinh\kappa\) and \(aQ^TQ\) by at most \(\tfrac a4(e^{2\kappa}-1)\),
+so the conjugated operator stays invertible with norm \(\le9\) when
+\(2\sinh\kappa+\tfrac{130}4(e^{2\kappa}-1)\le\tfrac19\), that is
+\[\kappa\ \le\ 1.7\times10^{-3},\qquad
+\big|(-\Delta+aQ^TQ)^{-1}(x,y)\big|\le9\,e^{-\kappa|x-y|_\infty}.\] This
+is a proved rate for the soft-constraint scheme, better than the
+hard-constraint figure by a factor of two and of the same order: the
+loss is intrinsic to any argument whose only inputs are the gap and the
+hopping norm, since their ratio is about \(10^{-2}\).
+
+\hypertarget{the-analytic-structure-route-set-up}{%
+\subsection{2. The analytic-structure route, set
+up}\label{the-analytic-structure-route-set-up}}
+
+For the hard constraint, the fluctuation covariance is diagonal in the
+coarse momentum \(\bar k\in[-\tfrac\pi2,\tfrac\pi2]^4\) and couples the
+sixteen folded fine momenta \(k=\bar k+\pi n\), \(n\in\{0,1\}^4\). The
+tube weight has the product form
+\[|\hat w(k)|^2=\prod_{\nu\ne\mu}\cos^2\tfrac{k_\nu}2\ \cdot\ \cos^4\tfrac{k_\mu}2,
+\qquad\hat k^2=\sum_\nu4\sin^2\tfrac{k_\nu}2,\] and folding exchanges
+\(\cos^2\leftrightarrow\sin^2\) in the flipped components. With
+\(s(\bar k)=\sum_n|\hat w(\bar k+\pi n)|^2/\hat k^2(\bar k+\pi n)\), the
+diagonal entry of the fluctuation covariance at the unfolded momentum is
+\[C_{\rm fl}(\bar k,\bar k)\ \propto\ \frac{\sum_{n\ne0}|\hat w(\bar k+\pi n)|^2/\hat k^2(\bar k+\pi n)}
+{|\hat w(\bar k)|^2+\hat k^2(\bar k)\sum_{n\ne0}|\hat w(\bar k+\pi n)|^2/\hat k^2(\bar k+\pi n)},\]
+in which the massless pole \(1/\hat k^2(\bar k)\) has cancelled
+identically. Three facts fix where singularities can be. (a) For
+\(\bar k\to\bar k+i\kappa e\) with \(\cosh\kappa<2\), every flipped
+denominator satisfies
+\(\operatorname{Re}\hat k^2(\bar k+\pi n)\ge2-2(\cosh\kappa-1)>0\), so
+only the unfolded term can have a pole, and it has cancelled. (b)
+\(|\hat w(\bar k)|^2\ge\tfrac1{32}\) throughout the strip, since each
+factor has modulus at least \(\tfrac12\) there. (c) The remaining
+singularities are the zeros of the denominator
+\(D(\bar k)=|\hat w(\bar k)|^2+\hat k^2(\bar k)R(\bar k)\), with \(R\)
+the flipped sum, analytic and bounded in the strip. \textbf{The decay
+rate of the hard-constraint fluctuation propagator is the width of the
+largest strip \(|\operatorname{Im}\bar k|<\kappa_*\) in which \(D\) has
+no zero}, and \(\kappa_*\) is expected to be of order one. Establishing
+it is a bounded computation with four real variables and one explicit
+function, and it is the defined task for an order-one rate; no part of
+it is done here.
+
+\hypertarget{the-shape-of-the-threshold}{%
+\subsection{3. The shape of the
+threshold}\label{the-shape-of-the-threshold}}
+
+Part 2 organizes the remainder \(S_W-S_2\), the Haar correction and the
+non-abelian averaging as a gas of polymers on plaquettes, integrated
+against the fluctuation Gaussian. Its structure is fixed by three
+ingredients, whatever the details.
+
+\emph{Vertices.} The cubic term of
+\(N-\operatorname{Re}\operatorname{tr}U_p\) is
+\(\operatorname{tr}\big(d\theta\,[\theta,\theta]\big)\)-type; with
+fluctuations of root-mean-square size \(\tfrac32g\) per link (part 1),
+\(d\xi\) is of size up to \(6g\) and the cubic vertex per plaquette is
+of size
+\(\tfrac2{g^2}\cdot6g\cdot\tfrac94g^2\cdot c_{\rm col}\simeq27c_{\rm col}\,g\),
+so \(C_3g\) with \(C_3\) of order \(10\) to \(30\); quartic and Haar
+terms are \(O(g^2)\) and subleading.
+
+\emph{Covariance sums.} Factorizing the Gaussian integral of a product
+over a set of plaquettes into connected polymers by the Brydges--Kennedy
+interpolation puts one fluctuation covariance on each edge of a spanning
+tree, so every polymer of \(n\) plaquettes carries a factor
+\(\big(\|C_{\rm fl}\|_{1,\kappa}/g^2\big)^{n-1}\) with
+\[\frac{\|C_{\rm fl}\|_{1,\kappa}}{g^2}=\sup_x\sum_y\frac{|C_{\rm fl}(x,y)|}{g^2}
+\le\frac92\Big(\coth\frac\kappa2\Big)^4\ \simeq\ \frac{72}{\kappa^4}\qquad(\kappa\ll1),\]
+using \(|C_{\rm fl}(x,y)|\le\tfrac92g^2e^{-\kappa|x-y|_\infty}\).
+
+\emph{Entropy.} Plaquette adjacency \(20\) in four dimensions, so
+connected sets of \(n\) plaquettes through a given one number at most
+\((20e)^{n-1}\) (\href{wilson-strong-coupling-explicit.md}{Wilson note}
+§2).
+
+The Kotecký--Preiss condition then holds when the per-plaquette activity
+times \(e\), the adjacency entropy and the covariance sum is below one,
+\[e\cdot C_3g\cdot20e\cdot\frac{72}{\kappa^4}\ \le\ 1
+\qquad\Longleftrightarrow\qquad
+g\ \le\ g_{\rm pert}\simeq\frac{\kappa^4}{1.1\times10^4\,C_3},\] which
+is the form quoted in the abstract.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\(\kappa\) (per lattice unit)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+origin
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(g_{\rm pert}\) (\(C_3=20\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(g_{\rm pert}^2\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(7\times10^{-4}\) & proved, hard constraint & \(10^{-18}\) &
+\(10^{-36}\) \\
+\(1.7\times10^{-3}\) & proved, soft constraint & \(4\times10^{-17}\) &
+\(10^{-33}\) \\
+\(0.5\) & expected order-one rate & \(3\times10^{-7}\) & \(10^{-13}\) \\
+\(1\) & optimistic & \(5\times10^{-6}\) & \(2\times10^{-11}\) \\
+\end{longtable}
+
+This is a scaling estimate: the constants \(C_3\), the adjacency, and
+the tree-graph organization are the standard ones and the form is
+robust, but no polymer expansion has been carried out here, and a full
+treatment adds factors of order one to ten in either direction. It does
+not change the conclusion, because the conclusion is about orders of
+magnitude.
+
+\hypertarget{the-conclusion-for-the-weak-side}{%
+\subsection{4. The conclusion for the weak
+side}\label{the-conclusion-for-the-weak-side}}
+
+The physical onset of the perturbative running is at \(g^2\simeq1\),
+\(\beta_W\simeq6\), where asymptotic scaling is observed. The explicit
+small-field step, done with the sharpest propagator rate one can hope
+for and the standard organization, covers \(g^2\lesssim10^{-12}\); with
+the proven rate, \(10^{-35}\). Every step between \(g^2_{\rm pert}\) and
+\(g^2\simeq1\) is, in the rigorous sense, a step without a small
+parameter, and their number is irrelevant since none is controlled. The
+strong side's corresponding deficit, from the proved \(\beta_W=0.0135\)
+to the physical \(5.7\), is a factor \(400\), and its methods are
+polymer expansions of the same family. The difference is that the
+strong-side gas has activities \(\beta_W/6\) per plaquette and a local
+structure, while the weak-side gas has activities \(C_3g\) dressed by
+covariance sums that scale like \(\kappa^{-4}\) and vertex constants of
+order ten.
+
+So H1a, the sharpness sub-target, is closed: sharpening constants within
+the present method cannot bring \(g_{\rm pert}^2\) within twelve orders
+of magnitude of the physical onset, and the meeting of the two reaches
+through constant-chasing is not a viable route. H1 is a methods problem,
+which is the content of the constructive programme extended through the
+confinement scale: control of the renormalization steps at couplings
+where the fluctuation is not small compared with the nonlinearity, with
+no expansion in any parameter. That is the open problem, stated as
+precisely as this programme can state it.
+
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
+
+The decay rate is proved at \(10^{-3}\) per lattice unit by two routes
+and its order-one value is reduced to a zero-free strip for the explicit
+function \(D\) of Section 2. The threshold of the remainder gas scales
+as \(\kappa^4\) and lies at \(g^2\sim10^{-12}\) even for an ideal rate,
+twelve orders below the physical onset of the running. The weak-side
+sharpness sub-target is closed as not viable; the open problem is a
+methods problem at order-one coupling, and the map of this programme
+ends there.
+\end{document}

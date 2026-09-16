@@ -536,8 +536,23 @@ labour; consult it before opening a new item.
    coarse form is Wilson at the same $g^2$ (4D scale invariance).
    **Sharpness begins at the propagator**: generic Combes--Thomas gives
    decay rate $7\times10^{-4}$ per lattice unit against a true rate of
-   order one. Next: block random-walk expansion for the rate, then part
-   2 (remainder polymer gas, $g^2_{\rm pert}$).
+   order one.
+   [Part 1b](../notes/small-field-step-decay-and-threshold.md): the
+   literature (Dimock §2.4, read from arXiv text; Balaban 1984) proves
+   the decay with no explicit constant ("$M$ sufficiently large"); the
+   soft-constraint operator $-\Delta+aQ^TQ$ is local with gap $\frac29$
+   for $a\ge130$ and Combes--Thomas rate $1.7\times10^{-3}$ (proved); the
+   order-one rate is reduced to a zero-free strip of the explicit
+   folded-symbol denominator $D=|\hat w|^2+\hat k^2R$ (set up, not done).
+   Threshold shape: tree-graph covariance sums $\simeq72/\kappa^4$,
+   adjacency $20e$, cubic vertex $C_3g$ with $C_3\sim20$, so
+   $g_{\rm pert}\simeq\kappa^4/(1.1\times10^4C_3)$: $g^2_{\rm pert}\sim10^{-12}$
+   at an ideal $\kappa=\frac12$, $10^{-35}$ at the proved rate (scaling
+   estimate, labelled). **The weak side's explicit deficit is twelve
+   orders of magnitude in $g^2$ against the physical onset $g^2\simeq1$,
+   where the strong side's is a factor $400$.** H1a closed as not viable
+   by constant-chasing; H1 is a methods problem at order-one coupling,
+   and the map ends there.
 19. **Aside, recorded at the user's request:**
    [holography in the lowest dimensions](../notes/holography-lowest-dimensions.md).
    At $d=0$ the bulk is a one-manifold classified by its endpoints: one
