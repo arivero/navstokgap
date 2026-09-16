@@ -88,13 +88,14 @@ one obligation at a time.
    couplings, (H3) gap of $h_3$ plus the even zero-point potential $U(a)$.
    The smallness parameter is $g^{2/3}$ throughout; (H1) fails exactly at
    the crossover $z\simeq2$.
-3c. **Next: fibered (H2).** With the constant-mode-independent vacuum
-   as projection, (H2) fails by a quadratic cutoff divergence (a
-   gauge-variant constant-mode mass term); the projection must be the
-   Born--Oppenheimer one onto the $a$-dependent Gaussian vacuum, absorbing
-   $W_2$, with a gauge-invariant cutoff. Then compute the non-adiabatic
-   (Berry) terms and the $W_3$ Schur error on a lattice cutoff; (H3) needs
-   the finite one-loop torus potential with the log term renormalizing $g$.
+3c. **Next: (H2) in relative form.** A sharp momentum cutoff makes the
+   second-order $W_2$ term diverge like $\Lambda^2$; a periodic (lattice)
+   cutoff gives instead the finite Casimir quadratic term $c_2(La)^2/L$ of
+   the one-loop torus potential. Use the Born--Oppenheimer projection onto
+   the $a$-dependent Gaussian vacuum (absorbs $W_2$) and the relative form
+   of the transfer lemma ($B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta$); compute
+   the Berry terms and the $W_3$ Schur error; (H3) needs $U$ with its
+   Casimir term and the log term renormalizing $g$.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

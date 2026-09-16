@@ -167,11 +167,20 @@ dividing by the pair energy $2|k|$,
 $$\eta\ \sim\ \frac{g^{4/3}}{L^2}\sum_{0<|k|\le\Lambda}\frac{|\xi|^2}{2|k|}
 \ \sim\ \frac{g^{4/3}}{L}\,(\Lambda L)^2\,|\xi|^2 ,$$
 quadratically divergent in the cutoff. This is the second-order energy
-shift $-c\,|a|^2\Lambda^2L^3$ of the constant mode: a gauge-variant mass
-term, which a sharp momentum cutoff produces and a gauge-invariant
-regularization (the lattice, or any cutoff compatible with Gauss's law)
-cancels, since no gauge-invariant function of constant modes is
-quadratic in $a$. Two changes repair the reduction.
+shift $-c\,|a|^2\Lambda^2L^3$ of the constant mode. A quadratic term in
+$a$ is allowed by the constant gauge transformations, which act by
+conjugation and leave $\operatorname{tr}a_i^2$ invariant, and the exact
+one-loop potential of the constant modes on the torus does contain one:
+the sum $\tfrac12\sum_k[\omega_k(a)-\omega_k(0)]$ is a periodic function
+of the holonomy angles $La_i$ (shift of the summation variable), so its
+small-$a$ expansion is $c_2(La)^2/L+O((La)^4/L)$ with a finite pure
+number $c_2$, the Casimir-type Weiss potential, of order $g^{4/3}/L$ in
+the rescaled variables and cutoff independent. The quadratic
+$\Lambda^2$ divergence above is an artefact of the sharp momentum
+cutoff, which breaks the periodicity in $La$; a periodic (lattice)
+cutoff, or any regularization compatible with the large gauge
+transformations, gives the finite coefficient. Two changes make the
+reduction usable.
 
 *Fibered projection.* $H_\perp+W_2$ is quadratic in $\tilde A$ at fixed
 $a$, so it has, for $|a|$ small against $2\pi/L$, a Gaussian ground state
@@ -187,12 +196,17 @@ compression is
 $$A=PHP=H_0+U(a)+\text{(non-adiabatic terms)},\qquad
 U(a)=\tfrac12\sum_k\big[\omega_k(a)-\omega_k(0)\big]+\text{const},$$
 and $U(a)$ is the one-loop effective potential of the constant modes on
-the torus: even in $a$, with no quadratic term for a gauge-invariant
-cutoff, and with a quartic term $\propto|[a,a]|^2\log(\Lambda L)$ that
-renormalizes $1/g^2$. In rescaled variables the finite part of $U$ is
-$O(g^{4/3}/L)$ and the logarithm is $O(g^{4/3}\cdot g^{2}\log\Lambda L\,/L)$
-relative to $H_0$'s $g^{2/3}/L$: (H3) holds with $g$ understood as the
-renormalized coupling at the scale $L$, which is Lüscher's statement.
+the torus: even in $a$, with the finite quadratic Casimir term
+$c_2(La)^2/L$, a finite quartic term, and a quartic term
+$\propto|[a,a]|^2\log(\Lambda L)$ that renormalizes $1/g^2$. In rescaled
+variables the finite part of $U$ is $O(g^{4/3}/L)$ and the logarithm is
+$O(g^{4/3}\cdot g^{2}\log\Lambda L\,/L)$ relative to $H_0$'s $g^{2/3}/L$:
+(H3) holds with $g$ understood as the renormalized coupling at the scale
+$L$, which is Lüscher's statement. With a periodic cutoff the
+$a$-independent projection of Section 2 also works at the level of
+sizes, since its second-order Schur term is the same finite Casimir
+sum; the fibered projection is cleaner because it removes $W_2$ from the
+error altogether.
 The non-adiabatic terms come from $p_i$ acting on $\Omega_\perp(a)$
 (the Berry connection of the fibered vacuum) and are of relative order
 $g^{4/3}$.
@@ -208,9 +222,20 @@ cutoff, and the constants $C_i$ grow with $\log(L/a)$ on a lattice: the
 reduction holds at fixed cutoff, and the cutoff dependence is exactly the
 running of the coupling.
 
-The corrected list is: (H1) as before for $H_\perp(a)$; (H2) for the
-fibered Schur error; (H3) for $h_3+U$ with $U$ the finite one-loop torus
-potential. Lemma 1 is unchanged.
+*Relative form of the lemma.* The constant-mode coordinate $\xi$ is
+unbounded and the pair amplitudes grow with $|\xi|$, so $\eta$ cannot be
+a uniform operator bound; the usable hypothesis is relative to $A$:
+$B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta$ with $0\le\epsilon<1$. Then
+$F(E)\ge(1-\epsilon)(A-a_0)+a_0-E-\eta$, the count of negative
+eigenvalues of $F(E)$ is at most $\#\{k:a_0+(1-\epsilon)(a_k-a_0)-\eta<E\}$,
+and the same argument gives $E_0\ge a_0-\eta$, $E_1\ge a_0+(1-\epsilon)(a_1-a_0)-\eta$,
+hence $\operatorname{gap}(H)\ge(1-\epsilon)(a_1-a_0)-\eta$. The confining
+potential of $h_3$ controls $\langle|\xi|^2\rangle$ in terms of
+$A-a_0$, which is what makes $\epsilon$ small, of order $g^{2/3}$.
+
+The corrected list is: (H1) as before for $H_\perp(a)$; (H2) in the
+relative form for the fibered Schur error; (H3) for $h_3+U$ with $U$ the
+finite one-loop torus potential including its Casimir quadratic term.
 
 ## 4. What the reduction shows
 
