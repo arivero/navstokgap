@@ -259,11 +259,26 @@ the items below are the working queue.
    coupling dependence of the Euclidean Wilson weight**, strong exactly at
    weak coupling where the renormalization steps live. This is the
    Hamiltonian counterpart of the large-field estimate.
-7. **Next, in order:** (a) prove the distance estimate of §2 with
-   constants, a geometric computation on $G^{\mathcal E}$; (b) extend the
-   bound from the ground state to the spectral subspace below the gap;
-   (c) assemble the state-relative decimation criterion those two allow.
-8. **Done: the $d=3$ formulation.**
+7. **Done, correcting item 6: the Agmon bound is global.**
+   [Note](../notes/agmon-global-not-local.md): carrying out the distance
+   estimate with constants gives
+   $d\ge\frac{4}{3g^2}f_0^{3/2}/\|\nabla V\|_\infty$ with
+   $\|\nabla V\|_\infty\le2\sqrt{2N|\mathcal E|}$, **extensive**. So the bound
+   controls the global excess, $\int_{\{V-\bar v\ge w|\mathcal P|\}}\Omega^2\le
+   C\exp[-\frac{2\sqrt2}{3}\frac{w^{3/2}}{g^2\sqrt N}|\mathcal P|]$, and gives
+   nothing for a fixed local region in a large volume. Structural reason:
+   Agmon's forbidden region is defined by the total potential exceeding
+   the total energy, and a local excess never makes an extensive total
+   exceed its mean. The Euclidean weight factorizes over plaquettes and
+   therefore gives the local statement for free.
+8. **Next, the sharpest open question in this line:** prove
+   $\Omega^2\le Ce^{-\lambda V}$ with $\lambda>0$ uniform in the volume, a
+   pointwise Gibbs domination of the Kogut--Susskind ground state. It is a
+   single inequality, it implies the local large-field estimate by
+   factorization, it holds trivially at $g=\infty$ with $\lambda=0$, and the
+   strong-coupling case should follow by perturbation around
+   $\Omega\equiv1$. Start there.
+9. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and

@@ -32,6 +32,15 @@ it does so by a standard technique rather than a new one. Constants
 explicit; the distance estimate is a scaling argument and is labelled as
 such; nothing promoted.
 
+> **Corrected.** The distance estimate of Section 2 is carried out with
+> constants in [the global/local note](agmon-global-not-local.md), and it
+> controls the **global** excess of magnetic energy, not a local region:
+> the gradient norm $\|\nabla V\|_\infty\le2\sqrt{2N|\mathcal E|}$ is
+> extensive, so a fixed local excess in a large volume gives a bound that
+> degrades like $|\mathcal P|^{-1/2}$. Read "$n$ excess plaquettes" below as
+> a global excess. The identity of Lemma 1 and the estimate of Corollary 2
+> are unaffected.
+
 ## 1. Setting and the ground-state identity
 
 The configuration space $\mathcal M=G^{\mathcal E}$ is a compact
