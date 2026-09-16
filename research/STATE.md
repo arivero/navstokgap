@@ -88,9 +88,13 @@ one obligation at a time.
    couplings, (H3) gap of $h_3$ plus the even zero-point potential $U(a)$.
    The smallness parameter is $g^{2/3}$ throughout; (H1) fails exactly at
    the crossover $z\simeq2$.
-3c. **Next: (H2).** The Schur error of $W_2$ and $W_3$ against the free
-   nonzero-mode gap: a Gaussian computation with the C133 ground state as
-   weight. Then (H1), (H3) as relatively bounded perturbations.
+3c. **Next: fibered (H2).** With the constant-mode-independent vacuum
+   as projection, (H2) fails by a quadratic cutoff divergence (a
+   gauge-variant constant-mode mass term); the projection must be the
+   Born--Oppenheimer one onto the $a$-dependent Gaussian vacuum, absorbing
+   $W_2$, with a gauge-invariant cutoff. Then compute the non-adiabatic
+   (Berry) terms and the $W_3$ Schur error on a lattice cutoff; (H3) needs
+   the finite one-loop torus potential with the log term renormalizing $g$.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

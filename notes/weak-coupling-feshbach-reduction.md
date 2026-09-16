@@ -13,7 +13,9 @@ projection onto the ground state of the nonzero momentum modes, the three
 inequalities are: (H1) exciting any nonzero mode costs at least
 $(2\pi\hbar c/L)(1-Cg^{2/3})$ in the presence of the constant modes and
 the couplings; (H2) the coupling between the constant-mode sector and the
-excited nonzero-mode sector has Schur error $\eta\le Cg^{4/3}\hbar c/L$;
+excited nonzero-mode sector has Schur error $\eta\le Cg^{4/3}\hbar c/L$,
+which requires the projection to follow the constant mode (Section 3a)
+and a gauge-invariant cutoff;
 (H3) the effective constant-mode Hamiltonian $PHP$, which is C133's
 operator plus the nonzero-mode zero-point energy as a function of the
 constant modes, has gap $\ge\delta_1^{(3)}g^{2/3}(1-Cg^{2/3})\hbar c/L$. The
@@ -80,10 +82,12 @@ $W$ collects every term of $\frac1{2g^2}\int|F_{ij}|^2$ that is neither
 purely constant-mode nor quadratic in $\tilde A$ at $a=0$:
 $$W=W_2+W_3+W_4,\quad
 W_2=\frac1{g^2}\int\big(\partial_i\tilde A_j-\partial_j\tilde A_i\big)\cdot\big([a_i,\tilde A_j]-[a_j,\tilde A_i]\big)+\frac1{2g^2}\int\big|[a_i,\tilde A_j]-[a_j,\tilde A_i]\big|^2,$$
-$$W_3=\frac1{g^2}\int\big(\partial_i\tilde A_j-\partial_j\tilde A_i+[a_i,\tilde A_j]-[a_j,\tilde A_i]+[a_i,a_j]\big)\cdot[\tilde A_i,\tilde A_j],\qquad
-W_4=\frac1{2g^2}\int\big|[\tilde A_i,\tilde A_j]\big|^2-\text{(its zero-mode part already in }H_0).$$
-(The constant-mode part of $\int|[\tilde A,\tilde A]|^2$ is not separated
-further; it belongs to $W_4$ and is quartic in the nonzero modes.) The
+$$W_3=\frac1{g^2}\int\bar F_{ij}\cdot[\tilde A_i,\tilde A_j],\qquad
+\bar F_{ij}=\partial_i\tilde A_j-\partial_j\tilde A_i+[a_i,\tilde A_j]-[a_j,\tilde A_i]+[a_i,a_j],$$
+$$W_4=\frac1{2g^2}\int\big|[\tilde A_i,\tilde A_j]\big|^2 ,$$
+where the purely constant part $\frac{L^3}{2g^2}|[a_i,a_j]|^2$ of
+$\frac1{2g^2}\int|F|^2$ is in $H_0$ and $W_4$ is quartic in the nonzero modes.
+The
 Gauss constraint is imposed on states; the constant gauge
 transformations act on $a_i$ by the adjoint action and on the nonzero
 modes covariantly, and the nonconstant ones are fixed by keeping the
@@ -151,6 +155,63 @@ matching the upper side obtained in
 numbers, and it is the leading term of Lüscher's expansion (abstract,
 B78) as a two-sided bound.
 
+## 3a. Correction: the projection must follow the constant mode, and the cutoff must be gauge invariant
+
+The counting in the table is right for the sizes of the operators but
+(H2) fails for the projection $P$ of Section 2 when the cutoff is a sharp
+momentum cutoff. The term of $W_2$ linear in $a$ creates pairs of
+nonzero quanta $(k,-k)$ from $\Omega_\perp$ with amplitude of order
+$g^{2/3}|\xi|/L$ for every $k$, so
+$\|\bar PW_2P\psi\|^2\sim(g^{4/3}/L^2)(\Lambda L)^3|\xi|^2$ and, after
+dividing by the pair energy $2|k|$,
+$$\eta\ \sim\ \frac{g^{4/3}}{L^2}\sum_{0<|k|\le\Lambda}\frac{|\xi|^2}{2|k|}
+\ \sim\ \frac{g^{4/3}}{L}\,(\Lambda L)^2\,|\xi|^2 ,$$
+quadratically divergent in the cutoff. This is the second-order energy
+shift $-c\,|a|^2\Lambda^2L^3$ of the constant mode: a gauge-variant mass
+term, which a sharp momentum cutoff produces and a gauge-invariant
+regularization (the lattice, or any cutoff compatible with Gauss's law)
+cancels, since no gauge-invariant function of constant modes is
+quadratic in $a$. Two changes repair the reduction.
+
+*Fibered projection.* $H_\perp+W_2$ is quadratic in $\tilde A$ at fixed
+$a$, so it has, for $|a|$ small against $2\pi/L$, a Gaussian ground state
+$\Omega_\perp(a)$ with frequencies $\omega_k(a)$, the spectrum of the
+covariant transverse curl in the constant background (for
+non-commuting $a_i$ the background carries a constant field strength and
+the lowest shifted frequency is the Nielsen--Olesen mode,
+$\omega^2=(2\pi/L)^2-c\,|[a,a]|$, still positive when
+$g^{4/3}\ll(2\pi)^2$). Take
+$$P=\int^\oplus da\;|\Omega_\perp(a)\rangle\langle\Omega_\perp(a)| ,$$
+the Born--Oppenheimer projection. Then $W_2$ is absorbed exactly, the
+compression is
+$$A=PHP=H_0+U(a)+\text{(non-adiabatic terms)},\qquad
+U(a)=\tfrac12\sum_k\big[\omega_k(a)-\omega_k(0)\big]+\text{const},$$
+and $U(a)$ is the one-loop effective potential of the constant modes on
+the torus: even in $a$, with no quadratic term for a gauge-invariant
+cutoff, and with a quartic term $\propto|[a,a]|^2\log(\Lambda L)$ that
+renormalizes $1/g^2$. In rescaled variables the finite part of $U$ is
+$O(g^{4/3}/L)$ and the logarithm is $O(g^{4/3}\cdot g^{2}\log\Lambda L\,/L)$
+relative to $H_0$'s $g^{2/3}/L$: (H3) holds with $g$ understood as the
+renormalized coupling at the scale $L$, which is Lüscher's statement.
+The non-adiabatic terms come from $p_i$ acting on $\Omega_\perp(a)$
+(the Berry connection of the fibered vacuum) and are of relative order
+$g^{4/3}$.
+
+*Schur error.* With the fibered $P$, $\bar PWP$ contains only $W_3$,
+$W_4$ and the non-adiabatic terms. $W_3$ creates three quanta with
+amplitude of order $g/L$ per mode triple, and its second-order
+contribution is the $a$-dependent part of a two-loop vacuum energy, whose
+divergent part is $a$-independent and cancels from the gap; the finite
+$a$-dependent part is of order $g^2/L$. (H2) is therefore expected in the
+form $\eta\le C_2g^{4/3}(1+g^{2/3}\log\Lambda L)/L$, with a gauge-invariant
+cutoff, and the constants $C_i$ grow with $\log(L/a)$ on a lattice: the
+reduction holds at fixed cutoff, and the cutoff dependence is exactly the
+running of the coupling.
+
+The corrected list is: (H1) as before for $H_\perp(a)$; (H2) for the
+fibered Schur error; (H3) for $h_3+U$ with $U$ the finite one-loop torus
+potential. Lemma 1 is unchanged.
+
 ## 4. What the reduction shows
 
 The smallness parameter is $g^{2/3}$ in every entry of the table, which
@@ -170,9 +231,10 @@ statement of T2$'$'s difficulty in this language.
 
 The weak-coupling lower bound is now three inequalities on explicit
 polynomial operators, with a proved transfer lemma. The next step on
-the lower side is (H2), the Schur error of $W_2$ and $W_3$ against the
-free nonzero-mode gap, which is a Gaussian computation with the C133
-ground state as weight; (H1) and (H3) are relatively bounded
-perturbation statements. Their proof would close the small-volume corner
+the lower side is the fibered (H2): the non-adiabatic terms and the
+$W_3$ Schur error against the nonzero-mode gap, on a lattice cutoff, with
+the C133 ground state as weight; (H1) and (H3) are relatively bounded
+perturbation statements, (H3) requiring the finite one-loop torus
+potential. Their proof would close the small-volume corner
 S from both sides and make the crossover statement the whole remaining
 content of T2$'$ at fixed cutoff.
