@@ -271,14 +271,26 @@ the items below are the working queue.
    the total energy, and a local excess never makes an extensive total
    exceed its mean. The Euclidean weight factorizes over plaquettes and
    therefore gives the local statement for free.
-8. **Next, the sharpest open question in this line:** prove
-   $\Omega^2\le Ce^{-\lambda V}$ with $\lambda>0$ uniform in the volume, a
-   pointwise Gibbs domination of the Kogut--Susskind ground state. It is a
-   single inequality, it implies the local large-field estimate by
-   factorization, it holds trivially at $g=\infty$ with $\lambda=0$, and the
-   strong-coupling case should follow by perturbation around
-   $\Omega\equiv1$. Start there.
-9. **Done: the $d=3$ formulation.**
+8. **Done, negative: pointwise Gibbs domination fails too.**
+   [Note](../notes/magnetic-energy-identities.md). Two exact identities
+   fall out: $\Delta V=4C_2(N|\mathcal P|-V)$, since $V$ shifted by its Haar
+   mean is a Laplacian eigenfunction, and $|\nabla V|^2\le16V$ for $SU(2)$.
+   They give an exact ground-state sum rule (Proposition 3) tying
+   $\operatorname{Var}_\Omega(V)$ to kinetic quantities. And they make the
+   comparison attempt explicit: $\varphi=e^{-\lambda V/2}$ satisfies
+   $L\varphi\ge0$ only above $V_*\simeq N|\mathcal P|$, so the maximum
+   principle again bounds $\Omega$ only by its **global** excess.
+   **Structural reason, stated once:** every inequality derived from
+   $-A'\Delta\Omega+(B'V-e_0)\Omega=0$ compares total potential with total
+   energy, and $e_0$ is extensive; the Euclidean weight factorizes over
+   plaquettes and separates configurations locally by construction.
+9. **The line is complete.** What remains is the transfer-matrix
+   identification of $\Omega^2$ with a Euclidean measure on a time slice,
+   which leaves the Hamiltonian framework by design and is the route the
+   constructive programme takes. Before opening it, consolidate: the
+   position note should record that both the norm-based line and the
+   state-based line are now closed, and what each produced.
+10. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with
    $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ at $x\to0$ from C133 ($D=2$) and

@@ -133,6 +133,9 @@ The Agmon route yields the global large-deviation bound and stops there.
 The local estimate, which is what the decimation step requires, needs a
 pointwise domination of the ground state by a Gibbs weight,
 $\Omega^2\le Ce^{-\lambda V}$ with $\lambda>0$ uniform in the volume.
-That is now the single sharpest open question in this line, it is
-elementary to state, and the strong-coupling case should be provable by
-perturbation theory around $\Omega\equiv1$.
+**Answered in the negative** by
+[the identities note](magnetic-energy-identities.md) Proposition 4: the
+comparison function $e^{-\lambda V/2}$ gives a bound only above the
+extensive threshold $V_*\simeq N|\mathcal P|$, for the same reason as the
+Agmon estimate, because $e_0$ enters every inequality derived from the
+eigenvalue equation and is extensive.
