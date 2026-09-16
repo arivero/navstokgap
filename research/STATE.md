@@ -27,6 +27,11 @@ the items below are the working queue.
 
 ## Next steps (each a note)
 
+The position note carries the current coupling map (strong side explicit
+at $g^2\ge176$ for the Wilson transfer matrix, weak side crude at
+$1/g^2\gtrsim10^2$, intermediate region between) and the division of
+labour; consult it before opening a new item.
+
 1. **Done: obligations map.**
    [The lattice-route note](../notes/mass-gap-obligations-lattice.md)
    turns the conjecture into six named statements: T1 (finite-lattice gap,
