@@ -149,16 +149,26 @@ one obligation at a time.
    Finiteness clause reduced to T4 plus $C_0\not\equiv0$. Also proved
    that **no bound of this type can give $m>0$**: $d\rho=e^{-\hbar c\kappa/E}dE$
    has all negative moments finite with $m=0$.
-3h. **Next: the lower side only.** Upper bounds are exhausted; what
-   remains is T2$'$ (no Coulomb phase at fixed cutoff) and its
-   uniformity. The available tool is the operator inequality
-   $H\ge m(1-|\Omega\rangle\langle\Omega|)$, proved at strong coupling in
-   [the T2 note](../notes/strong-coupling-uniform-gap.md) and obstructed in
-   the continuum by the dressing of
-   [the Schur note](../notes/schur-error-ultraviolet.md). Candidate next
-   step: the one-step blocking inequality of the foreseen route, i.e.
-   whether a gap on side $L$ transfers to side $2L$ with an error
-   controlled by $g(L)$, at fixed cutoff.
+3h. **Done: T2$'$ restated as absence of a phase transition.**
+   [Note](../notes/gapped-set-critical-coupling.md): with
+   $c(g)=\liminf_{N_s}\delta(g;N_s)$ and $\mathcal G=\{g:c(g)>0\}$, T1 gives
+   $\delta>0$ at every finite volume (the gap is continuous in $g$ there,
+   by analytic perturbation theory), T2 gives $[g_0,\infty)\subset\mathcal G$,
+   and T2$'$ is $\mathcal G=(0,\infty)$. A vanishing $c$ requires either
+   infinite-volume vacuum degeneracy or a diverging correlation length,
+   so **T2$'$ = no zero-temperature bulk phase transition**, and on the
+   second-order branch = the asymptotically free limit is the only
+   continuum limit. $\mathcal G$ is everything iff it is open and closed;
+   openness is a volume-uniform stability question (technical: needs a
+   Lieb--Robinson bound for unbounded electric terms), **closedness is the
+   conjecture**, and for $U(1)$ the gapped set is open and fails
+   closedness at $g_c$.
+3i. **Next:** the openness half, i.e. volume-uniform stability of the
+   gap under a change of coupling. Sub-question to settle first: a
+   Lieb--Robinson bound for the Kogut--Susskind Hamiltonian, whose
+   electric term is unbounded; the truncation of link representations
+   with controlled error is the candidate route, and it is the same
+   truncation the Schur note needs.
 4. **Done: the $d=3$ formulation.**
    [One function of one variable](../notes/three-dimensional-gap-one-function.md):
    $\Delta(L)=g^2\hbar^2c\,f(x)$, $x=g^2\hbar L$, with

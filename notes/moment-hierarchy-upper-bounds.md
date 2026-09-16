@@ -152,9 +152,8 @@ positive right-hand side and still be gapless. No amount of information
 about the moments of one correlator distinguishes it from a gapped
 theory.
 
-This is not a defect of the flow or of the trial operator. The
-variational principle produces upper bounds, and $m>0$ is a lower
-bound; the two require different mathematics, and the entire content of
+The variational principle produces upper bounds, and $m>0$ is a lower
+bound; the two require different mathematics. The entire content of
 Sections 1--4, like that of
 [the upper-bound note](lattice-gap-upper-bounds.md) and
 [the Polyakov note](polyakov-average-gap-bound.md), belongs to the

@@ -1,0 +1,231 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={T2$'$ is the absence of a zero-temperature phase transition, and the missing input is clos},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{t2-is-the-absence-of-a-zero-temperature-phase-transition-and-the-missing-input-is-closedness-of-the-gapped-set}{%
+\section{\texorpdfstring{T2\('\) is the absence of a zero-temperature
+phase transition, and the missing input is closedness of the gapped
+set}{T2\textquotesingle{} is the absence of a zero-temperature phase transition, and the missing input is closedness of the gapped set}}\label{t2-is-the-absence-of-a-zero-temperature-phase-transition-and-the-missing-input-is-closedness-of-the-gapped-set}}
+
+Define, for the Kogut--Susskind Hamiltonian of
+\href{mass-gap-obligations-lattice.md}{the obligations map} with gauge
+group \(G\) and \(N_s\) sites per side,
+\[c(g)=\liminf_{N_s\to\infty}\,\delta(g;N_s,G),\qquad
+\mathcal G=\{g>0:\ c(g)>0\},\] where
+\(\Delta_{a,L}=(\hbar c/a)\,\delta\). Then T1 gives \(\delta>0\) at
+every finite \(N_s\) and every \(g\), so a vanishing \(c\) is purely an
+infinite-volume phenomenon; T2 gives
+\([g_0(G),\infty)\subset\mathcal G\); and T2\('\) is exactly
+\(\mathcal G=(0,\infty)\). Three statements are proved below. The gap is
+a continuous function of \(g\) at fixed lattice, by analytic
+perturbation theory for a simple isolated eigenvalue, so no closure
+occurs at finite volume. If \(g_*=\inf\mathcal G>0\) then \(c\) vanishes
+at or just below \(g_*\), and vanishing of \(c\) admits exactly two
+mechanisms: infinite-volume vacuum degeneracy, the tunnelling splitting
+going to zero, or a diverging correlation length. Both are bulk phase
+transitions at zero temperature, first order and second order
+respectively, and in the second case the theory acquires a continuum
+limit at the finite bare coupling \(g_*\), distinct from the
+asymptotically free one at \(g=0\). Hence
+\[\textbf{T2}'\iff\textbf{4d lattice Yang--Mills has no bulk phase transition at any finite coupling},\]
+and, on the second-order branch, T2\('\) asserts that the asymptotically
+free limit is the only continuum limit. For compact \(U(1)\) this fails
+and the failure is visible in the same terms: \(\mathcal G\) is a
+half-line whose infimum is a second-order point, and the continuum limit
+there is free Maxwell theory (Guth; Fröhlich--Spencer, abstract level,
+B78). Since T2 already gives openness of \(\mathcal G\) near infinity,
+the missing property is \textbf{closedness}: \(\mathcal G\) is open and
+closed in \((0,\infty)\) if and only if it is everything. That is the
+shape of the remaining problem, and the abelian counterexample locates
+it exactly: the abelian gapped set is open, and closedness is where it
+fails. Constants explicit; nothing promoted.
+
+\hypertarget{the-gap-at-fixed-lattice-is-continuous-in-the-coupling}{%
+\subsection{1. The gap at fixed lattice is continuous in the
+coupling}\label{the-gap-at-fixed-lattice-is-continuous-in-the-coupling}}
+
+\textbf{Proposition 1.} For fixed \(a\), \(N_s\) and \(G\), the map
+\(g\mapsto\delta(g;N_s,G)\) is continuous on \((0,\infty)\),
+real-analytic off a discrete set, and strictly positive.
+
+\emph{Proof.} Write
+\(H(g)=\frac{\hbar c}{a}\big[\frac{g^2}{2}K+\frac{2}{g^2}V\big]\) with
+\(K=\sum_\ell(-\Delta_\ell)\ge0\) unbounded with compact resolvent and
+\(0\le V\le2N|\mathcal P|\) bounded, as in
+\href{mass-gap-obligations-lattice.md}{the obligations map} §1. For
+every \(g\) in a complex neighbourhood of \((0,\infty)\) the operators
+\(H(g)\) share the domain \(D(K)\) and depend on \(g\) holomorphically
+in the coefficients, so \(\{H(g)\}\) is an analytic family of type (A).
+By T1 the lowest eigenvalue \(E_0(g)\) is simple and isolated, hence
+analytic; \(E_1(g)\) is analytic except where it meets \(E_2(g)\), and
+in all cases both are continuous by the min-max characterization, since
+\(\mu_n(g)=\inf_{\dim S=n}\sup_{\psi\in S}\langle\psi,H(g)\psi\rangle/\|\psi\|^2\)
+is a supremum of functions affine in \((g^2,g^{-2})\) and therefore
+continuous. Positivity is T1. \(\square\)
+
+So \(\delta(g;N_s)>0\) for all finite \(N_s\): the closure of the gap,
+if it occurs, happens only in the limit \(N_s\to\infty\), and \(c\) need
+not be continuous.
+
+\hypertarget{two-mechanisms-for-cg0}{%
+\subsection{\texorpdfstring{2. Two mechanisms for
+\(c(g)=0\)}{2. Two mechanisms for c(g)=0}}\label{two-mechanisms-for-cg0}}
+
+Suppose \(c(g)=0\) for some \(g\), that is, \(\delta(g;N_s)\to0\) along
+a subsequence of volumes. Let \(\xi(g)\) denote the Euclidean
+correlation length of the theory at coupling \(g\), defined as the
+inverse decay rate of the connected correlator of some local
+gauge-invariant observable in the infinite-volume limit.
+
+\textbf{Proposition 2.} If \(c(g)=0\) then at least one of the following
+holds.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \emph{Degeneracy.} The infinite-volume theory has more than one ground
+  state: the two lowest finite-volume levels merge with a splitting
+  \(\delta(g;N_s)\to0\) while \(\xi(g)\) stays finite.
+\item
+  \emph{Diverging length.} \(\xi(g)=\infty\), that is, some connected
+  correlator decays slower than any exponential.
+\end{enumerate}
+
+\emph{Proof.} By reconstruction from the transfer matrix at fixed
+volume, the connected correlator in the time direction decays with rate
+\(\Delta_{a,L}/(\hbar c)\) in the vacuum sector, so if the
+infinite-volume correlation length is finite, say \(\xi<\infty\), then
+the infinite-volume theory has a spectral gap \(\hbar c/\xi\) above each
+of its ground states. Then \(c(g)=0\) can only come from a splitting
+between distinct ground states, which is case 1; otherwise
+\(\xi=\infty\), which is case 2. \(\square\)
+
+Both are bulk phase transitions at zero temperature. Case 1 is first
+order, with two coexisting vacua and a tunnelling splitting that is
+exponentially small in the volume; case 2 is second order, with a
+divergent correlation length. The dichotomy is the standard one, and
+what matters here is that neither is excluded by anything proved so far.
+
+\textbf{Corollary 3.} \(\mathcal G=(0,\infty)\) if and only if the
+theory has no bulk phase transition at any finite coupling. In
+particular T2\('\) fails if and only if such a transition exists.
+
+\hypertarget{what-a-second-order-point-would-mean}{%
+\subsection{3. What a second-order point would
+mean}\label{what-a-second-order-point-would-mean}}
+
+At a second-order point \(g_*\) the correlation length diverges in
+lattice units, \(\xi(g)/a\to\infty\) as \(g\to g_*\), so physical masses
+measured in units of \(1/a\) go to zero and the theory admits a
+continuum limit taken at \(g\to g_*\) with \(a\to0\) at fixed physical
+mass. This is a continuum limit taken at the finite bare coupling
+\(g_*\), while the asymptotically free limit is taken at \(g\to0\) with
+\(a\Lambda_{\rm lat}(g)\to0\) governed by the two-loop formula of
+\href{mass-gap-obligations-lattice.md}{the obligations map} §5: two
+distinct limits of the same lattice theory. Hence, on the second-order
+branch,
+
+\begin{quote}
+\textbf{T2\('\) (second-order branch) \(\iff\)} the asymptotically free
+limit at \(g=0\) is the only continuum limit of four-dimensional lattice
+Yang--Mills.
+\end{quote}
+
+This is the statement that the lattice theory has a single universality
+class, believed on the strength of lattice computations and unproven.
+
+\hypertarget{the-abelian-case-seen-in-the-same-terms}{%
+\subsection{4. The abelian case seen in the same
+terms}\label{the-abelian-case-seen-in-the-same-terms}}
+
+For compact \(U(1)\) in four dimensions the gapped set is a half-line: a
+gap at strong coupling (Osterwalder--Seiler, and the \(\nu=3\) case of
+\href{strong-coupling-uniform-gap.md}{the T2 note}, which applies
+verbatim with \(C_2(R_{\min})=1\) and \(\dim=1\)), and a massless
+Coulomb phase at weak coupling (Guth, Phys. Rev.~D 21 (1980) 2291;
+Fröhlich--Spencer, Commun. Math. Phys. 83 (1982) 411; abstract level,
+B78). So \(\mathcal G_{U(1)}=(g_c,\infty)\) for some \(g_c>0\), which is
+open and not closed in \((0,\infty)\), and the mechanism at \(g_c\) is
+case 2 of Proposition 2: the photon mass of the confined phase vanishes
+continuously, and the continuum limit at \(g_c\) is free Maxwell theory.
+
+The abelian theory therefore satisfies every general structural
+statement above and still fails T2\('\). Any proof of T2\('\) must use
+an input that distinguishes the groups. The three places in this
+programme where that distinction has been made precise are: the
+commutator potential of \href{low-dimensional-mass-gap.md}{G07} §3,
+which is identically zero for an abelian group; the absence of a
+gauge-invariant operator linear in the electric field, proved in
+\href{lattice-gap-upper-bounds.md}{the upper-bound note} Proposition 6,
+which blocks the abelian gap-closing channel; and the one-loop valley
+potential of \href{torus-valley-potential.md}{the valley note} §3b,
+which vanishes identically in the abelian theory so that the holonomy is
+free. All three say the same thing in different variables: the abelian
+theory has flat directions that nothing lifts.
+
+\hypertarget{openness-closedness-and-where-each-stands}{%
+\subsection{5. Openness, closedness, and where each
+stands}\label{openness-closedness-and-where-each-stands}}
+
+\(\mathcal G\) is everything if and only if it is nonempty, open and
+closed in the connected set \((0,\infty)\).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+property
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+what it would take
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\mathcal G\neq\varnothing\) & proved:
+\([g_0,\infty)\subset\mathcal G\) &
+\href{strong-coupling-uniform-gap.md}{the T2 note} \\
+\(\mathcal G\) open & open in general; true near \(\infty\) & a
+volume-uniform stability theorem: a gap at \(g\) survives a small change
+of \(g\) with constants independent of the volume \\
+\(\mathcal G\) closed & \textbf{the missing input}; false for \(U(1)\) &
+exclusion of both mechanisms of Proposition 2 at every finite
+coupling \\
+\end{longtable}
+
+Openness is the kind of statement that stability theory supplies for
+gapped local Hamiltonians when a Lieb--Robinson bound is available; for
+the Kogut--Susskind Hamiltonian the electric term is unbounded, so the
+standard bounds require an extension, which makes openness a bounded
+technical question. Closedness is the conjecture itself. Recording the
+split is useful because it separates a technical obstacle from the
+mathematical content, and because it shows that a proof cannot proceed
+by continuity alone: the abelian theory has an open gapped set too.
+
+\hypertarget{consequence-for-state}{%
+\subsection{6. Consequence for STATE}\label{consequence-for-state}}
+
+The lower side now has a precise formulation: T2\('\) is closedness of
+\(\mathcal G\), equivalently the absence of a zero-temperature bulk
+phase transition, equivalently, on its second-order branch, the
+uniqueness of the continuum limit. The two sub-targets this names are a
+volume-uniform stability theorem, which needs a Lieb--Robinson bound for
+a Hamiltonian with unbounded electric terms, and the exclusion of vacuum
+degeneracy and of a diverging correlation length. The first is technical
+and bounded; the second is the conjecture. Between them, the stability
+question is the only one of the two that present methods can be expected
+to settle, and it is the natural next step on this side.
+\end{document}

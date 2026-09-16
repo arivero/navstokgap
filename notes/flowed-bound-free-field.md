@@ -18,7 +18,7 @@ bound: the smeared operator creates two photons of momenta $\pm k$ with
 weight $\propto k^4e^{-4tk^2}dk$, and the weighted mean of their energy
 $2\hbar ck$ is exactly $8\hbar c/(3\sqrt{\pi t})$. Two consequences. The
 free bound tends to zero as the smearing grows, as it must for $m=0$,
-so the inequality is not vacuous. And in the interacting theory the
+so the inequality retains content. And in the interacting theory the
 weak-coupling regime is $\sqrt{8t}\ll\hbar c/(\text{confinement scale})$,
 where the bound reads $m\lesssim4.26\,\hbar c/\sqrt{8t}$ and is far
 weaker than the expected gap: the bound becomes informative exactly at
@@ -149,8 +149,8 @@ number, since the leading behaviour of $\chi_{\varphi_t}$ at
 $\sqrt{8t}\sim\hbar c/m$ is not given by the Gaussian formula of Section
 3. This sharpens the statement of
 [the finiteness note](finiteness-half-flowed-susceptibility.md) §5: the
-breakdown of the $1/\sqrt{8t}$ scaling is not a defect of the estimate
-but the content of the problem. **Proving $m<\infty$ requires the value
+breakdown of the $1/\sqrt{8t}$ scaling carries the content of the
+problem. **Proving $m<\infty$ requires the value
 of one susceptibility at the confinement scale, and no expansion around
 the free theory supplies it.**
 

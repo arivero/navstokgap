@@ -155,9 +155,10 @@ $a$-dependence perturbatively; constructing that dressed vacuum with
 cutoff-uniform control is a renormalization theorem, the finite-volume
 ultraviolet problem that Balaban's work addresses on the Euclidean side.
 
-**Consequence.** The small-volume corner S is not a finite-dimensional
-problem. Its lower side splits into a fixed-lattice theorem, provable by
-the present tools, and a renormalized theorem that is part of T4. This
+**Consequence.** The small-volume corner S carries the ultraviolet
+problem with it. Its lower side splits into a fixed-lattice theorem,
+provable by the present tools, and a renormalized theorem that is part
+of T4. This
 is consistent with the structure found in [the obligations map](mass-gap-obligations-lattice.md):
 every statement uniform in the cutoff is a renormalization statement,
 and the zero-mode mechanism supplies the physics but not the
