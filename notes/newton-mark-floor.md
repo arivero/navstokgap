@@ -25,7 +25,11 @@ Newton-age mechanics or optics derives it. Newton measured
 $\Lambda=1/89000$ inch; he could not measure $p$; and his corpuscle sizes
 make $\Lambda p$ colour dependent. On the modern identification
 $\Lambda p=h/2$ the floor is $4h$. This is N02's principle, obstruction
-and countermodel. Exploratory; no ledger promotion.
+and countermodel. The [derivation note](planck-gap-derivation.md)
+removes the protocol dependence: for every finite protocol of marks with
+$\delta\Delta\ge\kappa$ the comparison needs $F^2\tau^3>9m\kappa$, two marks
+suffice above $36m\kappa$, and quantum instruments have $\kappa\ge2\hbar$.
+Exploratory; no ledger promotion.
 
 ## 1. What Newton's limit commits to
 
