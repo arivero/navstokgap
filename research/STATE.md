@@ -86,29 +86,33 @@ its transverse momentum spread. The earlier $\kappa\ge2\hbar$ was right
 in kind, too large by four, and invalidly proved; the worst-case
 formulation is what was empty, and standard deviations repair it.
 
-## Next steps toward the paper
+## The paper
 
-The [mark-cost note](../notes/mark-cost-and-statistical-floor.md) §6
-gives the single-paper structure: the comparison and its limit, the two
-theorems, the two factors in the *Opticks*, the junction (M3 is
-Robertson for the corpuscle), and what the theorem does not give.
+[The draft](../notes/planck-gap-paper.md) is the synthesis the goal asked
+for, in one document whose historical and technical halves carry each
+other. Sections: the comparison and Newton's limit, which has no floor;
+Theorem 2, the floor $\tau\Delta E\ge9z_{1-\epsilon}^2\kappa$ for every
+protocol of marks, with the insertion corollary; Theorem 4, the mark cost
+$\kappa\ge\hbar/2$ from the conjugacy of a probe's error and recoil; the
+two factors of $\kappa$ in the *Opticks*, one measured; the junction,
+that M3 is Robertson's inequality for Newton's corpuscle, whose negation
+Prop. XII asserts; and what the theorem does not give, namely
+preparations of unbounded extent, the standard-quantum-limit prior art
+and instruments outside the momentum-transfer class.
 
-1. **Done: the Opticks companion.**
-   [`docs/classics/Newton_Opticks_1730_fits_and_queries.md`](../docs/classics/Newton_Opticks_1730_fits_and_queries.md)
-   holds Prop. XII, the Definition of the interval, Prop. XVIII, Obs. 13
-   and Queries 1 and 29 verbatim from the 1730 fourth edition, with line
-   anchors and checksums. Remaining on sources: cite the 1730 printing
-   itself rather than the transcription, and Cohen--Whitman for the
-   *Principia* in place of the Wikisource Motte text.
-2. **Historiography.** Shapiro 1993 on the theory of fits, Guicciardini
-   1999 on the limit arguments, Sabra 1981 on the optics, read rather
-   than cited. These carry the history half of the paper.
-3. **Theorem A beyond momentum transfer.** Ozawa's instruments have
-   $[\hat N,\hat D]\ne-i\hbar$; state which marks are covered and what a
-   general class would need.
-4. **General force law.** Theorem B's proof pairs $\int_0^\tau P''T$
-   against the Dirichlet energy of $T$, so the statement for general $P$
-   with $P(0)=P'(0)=0$ bounds a norm of $P''$ from below.
+## Remaining before submission
+
+1. **Historiography, read rather than cited.** Shapiro 1993 on the theory
+   of fits, where the central historical claim must be tested; Sabra 1981
+   on the optical context; Guicciardini 1999 on the limit arguments.
+2. **Editions.** Cite the 1730 *Opticks* printing rather than the
+   transcription, and Cohen--Whitman for the *Principia* in place of the
+   Motte text.
+3. **Theorem 4 beyond momentum transfer**, where Ozawa's instruments have
+   $[\hat N,\hat D]\ne-i\hbar$.
+4. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$
+   against the Dirichlet energy of $T$, so the general statement bounds a
+   norm of $P''$ from below.
 5. **Constants.** Close the gap between the worst-case form ($9$ to
    $36$), the statistical form ($9z^2$) and the single-shot aperture
    form ($\arccos$ versus $1-2\epsilon$).

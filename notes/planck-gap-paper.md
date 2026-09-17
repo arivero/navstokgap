@@ -1,0 +1,377 @@
+# The cost of a mark: Newton's vanishing sagitta and a floor of order $\hbar$
+
+**Abstract.** Newton reads a force off a trajectory by letting the
+sagitta and the area between the inertial tangent and the curve go to
+zero, keeping their ratio to the time. We show that the same comparison,
+once it must be *recorded*, has a floor. For every protocol of marks, of
+any number and at any times, whose resolution and recoil obey
+$\delta_j\Delta_j\ge\kappa$, deciding between free and forced motion over
+a duration $\tau$ at error probability $\epsilon$ requires
+
+$$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,$$
+
+and for a mark realized by coupling the body's position to a probe, the
+error operator and the impulse delivered are canonically conjugate, so
+$\kappa\ge\hbar/2$ exactly. The floor is about $12\hbar$ at five per cent
+error, and insertion of marks finer than
+$\tau_*=(9z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ records free motion only.
+The historical claim is that Newton's *Opticks* contains both factors of
+$\kappa$, one of them measured as the $1/89000$th part of an inch, and
+that the single proposition joining them to a floor is an indeterminacy
+about the fits which Newton formulated the negation of. The distance
+between his system and a positive $h$ is therefore one nameable
+proposition, and that proposition is Robertson's inequality for his
+corpuscle.
+
+Draft, 2026-09-17. Synthesis of the
+[mark-floor](newton-mark-floor.md),
+[derivation](planck-gap-derivation.md),
+[probabilistic](planck-gap-probabilistic.md) and
+[mark-cost](mark-cost-and-statistical-floor.md) notes, which hold the
+proofs in full. Two obligations remain before submission and are stated
+in §8. Exploratory; no ledger promotion.
+
+## 1. The question
+
+Galileo's comparison is an inertial horizontal line against a falling
+parabola. With mass $m$, transverse force $F$, horizontal speed $v$ and
+duration $\tau$, the two paths are $q_{\mathrm I}(t)=(vt,0)$ and
+$q_{\mathrm F}(t)=(vt,Ft^2/2m)$, and the region between them has
+
+$$A=\frac{vF\tau^3}{6m},\qquad s(\tau)=\frac{F\tau^2}{2m},\qquad
+\Delta E=\frac{F^2\tau^2}{2m},\qquad \frac{3F}{v}A=\tau\Delta E. \tag{1}$$
+
+The sagitta $s$, the area $A$ and the product $\tau\Delta E$ all scale as
+powers of $\tau$ and vanish together. Newton's Lemma X makes the first
+displacement quadratic in the time; Lemma XI, Corollaries 4 and 5, make
+the curved segment one third of the tangent triangle with both cubic in
+the time; Proposition VI reads the force off the limit $2ms/\tau^2$; and
+Proposition I builds an orbit as a polygon struck by impulses at its
+vertices, the number of vertices "augmented in infinitum". The construction
+is designed so that the quantities in (1) disappear and their ratios
+survive.
+
+Our question is what stops that refinement when the trajectory has to be
+recorded rather than contemplated, and whether the stopping point can be
+reached from materials Newton possessed.
+
+The answer has three parts. The geometry alone supplies no floor (§2).
+Recording supplies one, which is set by a single number $\kappa$ with
+the dimensions of action, and every protocol of marks faces the same
+bound in the same combination $F^2\tau^3/m$ (§3). Quantum kinematics
+fixes $\kappa\ge\hbar/2$ by an exact and elementary argument (§4).
+Newton's optics supplies both factors of $\kappa$ and denies the
+inequality between them (§§5--6).
+
+## 2. The geometry has no floor
+
+**Proposition 1.** For every partition $0=t_0<\dots<t_n=\tau$ with steps
+$\tau_j$ and mesh $|\pi|$, the vertex impulse $F\tau_j$, the step sagitta
+$F\tau_j^2/2m$ and the step area $vF\tau_j^3/6m$ tend to zero with the
+mesh; the areas sum to at most $vF\tau|\pi|^2/6m$; and
+$2m\,s(\tau_j)/\tau_j^2=F$ exactly at every step.
+
+The proof is immediate from (1). Berkeley's objection, that evanescent
+increments are "neither finite Quantities nor Quantities infinitely
+small, nor yet nothing", is answered inside the geometry by the limit
+ratio, which is what Newton's closing Scholium to Book I Section I
+provides. A floor must therefore come from the act of marking the curve,
+and the reading of "inserting a point" used here is physical: a point of
+the trajectory is inserted by making a mark on the body at a time.
+
+## 3. Marks, and the floor they impose
+
+**Definitions.** A **mark** at time $t_j$ leaves a datum about the
+transverse coordinate. Its **resolution** $\delta_j$ is the spread of the
+resulting position estimate's error; its **recoil** $\Delta_j$ is the
+spread of the transverse impulse it delivers to the body. A protocol is a
+finite set of marks; it **decides** the comparison at error probability
+$\epsilon$ when some test on the full record does so with equal priors.
+A model satisfies the **mark trade-off** with constant $\kappa$ when
+every available mark has $\delta\Delta\ge\kappa$.
+
+**The statistical model.** Mark $j$ returns $R_j=y(t_j)+\xi_j$ with
+$\xi_j$ centred Gaussian of standard deviation $\delta_j$, and delivers
+an impulse $\iota_j$, centred Gaussian of standard deviation $\Delta_j$,
+independently, so that
+
+$$y(t)=y_0+v_0t+\theta P(t)+\frac1m\sum_j\iota_j(t-t_j)_+,\qquad
+P(t)=\frac{Ft^2}{2m},$$
+
+with $\theta=0$ under the inertial hypothesis and $\theta=1$ under the
+falling one, and $y_0,v_0$ unknown. Tests are invariant under the two
+unknowns, so the statistic is $u^{\mathsf T}R$ with $\sum_iu_i=0$ and
+$\sum_iu_it_i=0$, and the optimal invariant test has error probability
+$\Phi(-d/2)$ with $d^2=\sup(u^{\mathsf T}P)^2/(u^{\mathsf T}\Sigma u)$
+over such $u$.
+
+**Theorem 2.** For every protocol satisfying the mark trade-off with
+constant $\kappa$,
+
+$$d^2\ \le\ \frac{2F^2\tau^3}{9\,m\kappa},$$
+
+independently of the number of marks and of their times. Hence deciding
+at error probability $\epsilon$ requires
+
+$$F^2\tau^3\ \ge\ 18\,z_{1-\epsilon}^2\,m\kappa,\qquad
+\tau\Delta E\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,\qquad
+A\ \ge\ \frac{6\,z_{1-\epsilon}^2\,v\kappa}{F},$$
+
+with $z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)$.
+
+*Proof.* The noise enters $R$ in two ways: $\xi_j$ affects $R_j$ alone,
+and $\iota_j$ affects $R_i$ for $i>j$ with coefficient $(t_i-t_j)/m$.
+Hence
+
+$$u^{\mathsf T}\Sigma u=\sum_j\delta_j^2u_j^2
++\sum_j\frac{\Delta_j^2}{m^2}S_j^2,\qquad S_j=\sum_{i>j}u_i(t_i-t_j),$$
+
+and the arithmetic--geometric mean inequality applied termwise gives
+$u^{\mathsf T}\Sigma u\ge\frac{2\kappa}{m}\sum_j|u_j||S_j|$.
+
+Introduce $N(w)=\sum_{i:t_i>w}u_i$ and $T(w)=\int_w^\tau N$. Since
+$\sum_iu_i=0$, $N$ vanishes for $w<0$ and for $w\ge t_k$; $T$ is
+continuous, piecewise linear, constant on $(-\infty,0]$, zero on
+$[\tau,\infty)$, with $T'=-N$ jumping by $u_j$ at $t_j$ and
+$T(t_j)=S_j$. Two identities follow. Fubini and one integration by
+parts, using $P'(0)=0$ and $T(\tau)=0$, give
+
+$$u^{\mathsf T}P=\int_0^\tau P'N=-\int_0^\tau P'T'=\int_0^\tau P''T
+=\frac Fm\int_0^\tau T;$$
+
+and since $T'$ has bounded variation with jumps $u_j$ and no other
+variation, while $TT'$ vanishes at both ends,
+
+$$\sum_ju_jT(t_j)=\int_{\mathbb R}T\,dT'=-\int_{\mathbb R}T'^2=-E,
+\qquad E=\int_0^\tau T'^2 .$$
+
+Therefore $\sum_j|u_j||S_j|\ge E$ and $u^{\mathsf T}\Sigma u\ge2\kappa E/m$.
+Cauchy--Schwarz with $T(\tau)=0$ gives
+$|T(w)|\le\sqrt{\tau-w}\sqrt E$, hence
+$\int_0^\tau T\le\frac23\tau^{3/2}\sqrt E$, and
+
+$$\frac{(u^{\mathsf T}P)^2}{u^{\mathsf T}\Sigma u}
+\le\frac{(F/m)^2\frac49\tau^3E}{2\kappa E/m}=\frac{2F^2\tau^3}{9m\kappa}.$$
+
+Finally $\Phi(-d/2)\le\epsilon$ requires $d\ge2z_{1-\epsilon}$. $\square$
+
+Three features of the proof carry the paper's claim to universality. The
+certificate $u$ ranges over all invariant tests, so no monitoring scheme
+is privileged. The function $T$ encodes the whole protocol in one
+object, and the bound depends on it only through the Dirichlet energy
+$E$, which cancels. And the exponent $3$ on $\tau$ comes from a single
+Cauchy--Schwarz inequality against $\sqrt{\tau-w}$, which is where the
+combination in (1) originates.
+
+**Corollary 3 (insertion).** Marks inside a window of duration $\tau'$,
+used by themselves, record the force only if
+$F^2\tau'^3\ge18z_{1-\epsilon}^2m\kappa$. So insertion stops at
+
+$$\tau_*=\left(\frac{18\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3},$$
+
+and finer marks are consistent with free motion at the stated
+confidence. Newton's polygon may be refined past $\tau/\tau_*$ vertices,
+and its impulses remain in the geometry, though no record exhibits them.
+
+**A worst-case counterpart.** If the marks instead confine position and
+impulse to intervals with certainty, the same three steps run with a
+separating hyperplane in place of the optimal test direction and give
+$F^2\tau^3>9m\kappa$ for every protocol, with two marks sufficing above
+$36m\kappa$. That version has no quantum instance, since certain
+position confinement forces full-support momentum by Paley--Wiener; it
+is recorded here because it shows that the argument depends on the
+quadratic structure rather than on any probabilistic assumption.
+
+## 4. The cost of a mark is the probe's uncertainty product
+
+**Theorem 4.** Let a mark be realized by the impulsive coupling of the
+body's position to a probe,
+$U=\exp(-\tfrac{i}{\hbar}\lambda\hat y\hat P_A)$ with
+$[\hat Q_A,\hat P_A]=i\hbar$, the pointer $\hat Q_A$ being read
+afterwards. Then
+
+$$U^\dagger\hat Q_AU=\hat Q_A+\lambda\hat y,\qquad
+U^\dagger\hat pU=\hat p-\lambda\hat P_A,$$
+
+so the error operator $\hat N=\hat Q_A/\lambda$ and the delivered impulse
+$\hat D=-\lambda\hat P_A$ satisfy $[\hat N,\hat D]=-i\hbar$ and
+
+$$\kappa=\delta\Delta=\Delta\hat N\cdot\Delta\hat D
+=\Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \frac\hbar2$$
+
+for every probe state, pure or mixed.
+
+*Proof.* With $A=\tfrac{i}{\hbar}\lambda\hat y\hat P_A$ the commutators
+$[A,\hat Q_A]=\lambda\hat y$ and $[A,\hat p]=-\lambda\hat P_A$ are
+central, so the Baker--Campbell--Hausdorff series terminates and gives the
+two displayed relations, while $\hat y$ and $\hat P_A$ are unchanged.
+Estimating the body's position by $\hat Q_A/\lambda$ leaves the error
+$\hat N=\hat Q_A/\lambda$, and $[\hat N,\hat D]=-[\hat Q_A,\hat P_A]=-i\hbar$.
+Robertson's inequality closes it. $\square$
+
+The coupling strength cancels, so the cost is a property of the mark
+rather than of how hard it is made. The record and the recoil are
+themselves incompatible, since $[\hat Q_A+\lambda\hat y,-\lambda\hat P_A]=-i\hbar\lambda$,
+which is why no reading of the pointer determines the impulse. A
+deterministic probe, whose later position records fix its momentum, has
+$\kappa=0$ and no floor; this is the exact point at which classical
+record models differ.
+
+For Gaussian probe states and the linear dynamics of the comparison, the
+Wigner function is a probability density evolving classically, so the
+statistical model of §3 reproduces the quantum experiment exactly. With
+Theorem 4,
+
+$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar,\qquad
+\tau_*=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3}, \tag{2}$$
+
+about $12\hbar$ at $\epsilon=0.05$ and $4.5\hbar$ at $\epsilon=0.32$.
+
+## 5. Both factors are in the *Opticks*
+
+Newton's optics supplies the two spreads whose product is $\kappa$, in
+the form of two least quantities of the probe.
+
+**A least length, measured.** Book II Part III defines the interval of
+the fits as "the space it passes between every return and the next
+return" of the ray's disposition to be reflected, and Proposition XVIII
+gives it: for the confine of yellow and orange passing perpendicularly
+into air, "the Intervals of their Fits of easy Reflexion are the
+$1/89000$th part of an Inch", that is about $0.285\,\mu\mathrm{m}$. A
+datum obtained through the fits repeats with that period, so it locates
+the corpuscle no better; Newton's rings are a gauge of exactly this kind.
+This is $\Delta\hat Q_A$.
+
+**A least impulse, posited.** Query 29 asks whether the rays of light are
+"very small Bodies emitted from shining Substances", which gives each a
+transverse momentum scale. Newton has no way to measure it. This is
+$\Delta\hat P_A$.
+
+**Colour dependence, measured.** Observation 13 of Book II Part I reports
+the ratio of the red to the violet interval as "greater than as 3 to 2,
+and less than as 13 to 8", and "By the most of my Observations it was as
+14 to 9". Query 29 makes the violet corpuscles the least and the red the
+biggest. The product $\Delta\hat Q_A\Delta\hat P_A$ is therefore colour
+dependent on Newton-age evidence, and its universality across the
+spectrum is what Planck's constant later supplies.
+
+**Inflexion.** Query 1 asks whether bodies "act upon Light at a distance,
+and by their action bend its Rays", most strongly at the least distance,
+which is the effect that limits a mark's resolution when the beam is
+narrowed to improve it.
+
+All five passages are held verbatim with line anchors in the
+[source companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md),
+from the fourth edition of 1730.
+
+## 6. The junction, and the proposition Newton denied
+
+Theorem 4 says what the missing premise is. In the mark-floor note it was
+stated as M3, that a mark fixing the position within $\delta$ leaves the
+delivered impulse undetermined within $\kappa/\delta$. Theorem 4
+identifies $\kappa$ as the probe's own uncertainty product, so
+
+$$\text{M3 for Newton's corpuscle}\quad\Longleftrightarrow\quad
+\Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \text{a positive constant},$$
+
+which is Robertson's inequality stated in Newton's two quantities. With
+M3, §§3--4 give the floor and the insertion mesh from Newton's own
+materials, with $\kappa=\Lambda p$ in place of $\hbar/2$; the
+identification $\Lambda=\lambda/2$, $p=h/\lambda$ makes $\Lambda p=h/2$,
+which differs from $\hbar/2$ by $\pi$.
+
+Newton denied M3, and the denial is explicit rather than inferred.
+Proposition XII of Book II Part III states that every ray is "put into a
+certain transient Constitution or State, which in the progress of the Ray
+returns at equal Intervals, and disposes the Ray at every return to be
+easily transmitted". The disposition is a determinate periodic property
+carried by the ray, so its fate at a surface is fixed by its phase, and
+what a prior record fails to supply is knowledge rather than
+determination. On that reading a probe's position and momentum are both
+definite, later records can recover the impulse it delivered, $\kappa=0$,
+and the comparison has no floor. The countermodel is explicit: let the
+corpuscle travel freely after the mark to a screen at distance $D$, and
+two position records fix its transverse momentum to within
+$p(\delta+\delta_s)/D$, which vanishes as $D$ grows.
+
+The historical claim is therefore narrow and checkable. Newton's optics
+contains both factors of the product that bounds the recorded
+comparison; his mathematics contains the comparison and takes it to zero;
+and the one proposition that would join them is an indeterminacy about
+the fits whose negation he asserted in print. The gap between the
+*Principia*'s vanishing sagitta and the *Opticks*' finite interval of
+fits follows from that single commitment, and the separation of the two
+books is incidental to it. No counterfactual about what Newton might have
+discovered is needed, and none is offered.
+
+## 7. What the theorem does not give
+
+**Preparations of unbounded extent.** Theorem 2 concerns protocols that
+mark the trajectory. A protocol that prepares once, waits and measures
+once faces a different bound. In that case the two hypotheses differ by
+the phase-space displacement $(-F t^2/2m,\ Ft)$, whose components have
+product exactly $\tau\Delta E$, and Mandelstam--Tamm with Helstrom gives
+
+$$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon,
+\qquad\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar^2}{4A},$$
+
+for an apparatus whose position and momentum spreads are bounded by $L$
+and $P$ with $A=LP\ge\hbar/2$; and this holds for every finite adaptive
+protocol of instruments, because the displacement is a phase-space path
+whose total variation does not grow when it is subdivided. The bound is
+tight: two narrow packets separated by $\pi\hbar/(F\tau)$ decide the
+comparison with error probability of order $\tau\Delta E/\hbar$, for
+arbitrarily small $\tau\Delta E$, at the price of an apparatus whose
+extent diverges. So the floor of order $\hbar$ requires either that the
+trajectory be marked or that the laboratory be bounded, and a
+non-Gaussian preparation of unbounded extent evades it.
+
+**Prior art.** The combination $F^2\tau^3\gtrsim m\hbar$ is the standard
+quantum limit for detecting a force on a free mass (Braginsky and
+Khalili, *Quantum Measurement*, 1992), and its status has been disputed
+since Yuen's objection: Caves defended it (PRL **54**, 2465, 1985) and
+Ozawa exhibited a measurement breaking it for free-mass position (PRL
+**60**, 385, 1988). The contribution here is universality over protocols
+with an explicit constant, the exact mark cost of Theorem 4, and the
+identification of the premise. The inequality itself is not new.
+
+**Instruments outside the momentum-transfer class.** Theorem 4 holds
+where $[\hat N,\hat D]=-i\hbar$. Ozawa's counterexamples to the naive
+Heisenberg product concern instruments where that commutator differs,
+and a general class would need the proved calibration relation of Busch,
+Lahti and Werner (PRL **111**, 160405, 2013) or an argument of another
+kind. No error--disturbance relation is used above.
+
+## 8. Obligations before submission
+
+Two, both on the history side, and both stated so that a reader can see
+what the present draft rests on.
+
+1. **Historiography, to be read rather than cited.** Shapiro's *Fits,
+   Passions, and Paroxysms* (1993) on the theory of fits and how
+   determinate Newton meant it, which is where §6's central claim must
+   be tested; Sabra's *Theories of Light from Descartes to Newton*
+   (1981) for the optical context of Query 29; Guicciardini's *Reading
+   the Principia* (1999) for what the limit arguments of §2 were for.
+2. **Editions.** The *Opticks* passages come from a transcription of the
+   1730 fourth edition and should be cited from that printing; the
+   *Principia* passages should be cited from Cohen and Whitman in place
+   of the Motte text used here.
+
+Three mathematical items remain open and are not obligations of the
+paper: extending Theorem 4 beyond the momentum-transfer class; the
+general force law, for which the proof of Theorem 2 already pairs
+$\int_0^\tau P''T$ against the Dirichlet energy and so bounds a norm of
+$P''$; and closing the constants between the worst-case form, the
+statistical form of Theorem 2 and the single-shot form of §7.
+
+## 9. Consequence for STATE
+
+This is the synthesis the goal asked for: the Planck gap established
+with Newton-age arguments and their modern equivalents, in one document
+whose historical and technical halves are load-bearing for each other.
+The foundations content is Theorems 2 and 4 with §7's honest
+positioning; the history content is §5 and §6, resting on the source
+companion; the junction is the identification of M3 with Robertson's
+inequality for the corpuscle. STATE's queue reduces to §8's two
+obligations and the three open mathematical items.

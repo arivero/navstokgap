@@ -145,6 +145,10 @@ def main():
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=The mark cost and the statistical floor",
          "-o", "papers/mark-cost-and-statistical-floor.tex"])
+    run(["pandoc", "notes/planck-gap-paper.md", "--standalone", "--to=latex",
+         "--top-level-division=section", "--template=papers/research-note-template.tex",
+         "-V", "note-title=The cost of a mark: Newton's vanishing sagitta and a floor of order hbar",
+         "-o", "papers/planck-gap-paper.tex"])
     run(["pandoc", "notes/low-dimensional-mass-gap.md", "--standalone", "--to=latex",
          "--top-level-division=section", "--template=papers/research-note-template.tex",
          "-V", "note-title=Solved low-dimensional mass gaps and the positive-action question",
@@ -173,6 +177,7 @@ def main():
                   "newton-mark-floor", "planck-gap-derivation",
                   "planck-gap-probabilistic",
                   "mark-cost-and-statistical-floor",
+                  "planck-gap-paper",
                   "low-dimensional-mass-gap", "action-floor-yang-mills-gap"):
         build = ROOT / ".build" / paper
         build.mkdir(parents=True, exist_ok=True)
