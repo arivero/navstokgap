@@ -23,12 +23,12 @@ heuristic value $\kappa=\Lambda p=h/2$ of the
 non-vacuous instance of this framework:** no mark has both a finite
 worst-case resolution and a finite worst-case recoil width, by
 Paley--Wiener, so $\kappa=\infty$ and the theorem holds emptily
-(Proposition 6). The result is therefore a theorem about classical
-bounded-error record models, sharpening the C068--C123 closures into a
-characterization, and the bridge to $\hbar$ requires the probabilistic
-reformulation of Section 6, where the inequality becomes the standard
-quantum limit for free-mass force detection and must be argued against
-the Yuen--Caves--Ozawa dispute over that limit.
+(Proposition 6). What stands is the classical half of the
+programme's question, and the quantum half is carried out in the
+[probabilistic note](planck-gap-probabilistic.md), which proves
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$ for every protocol of
+quantum instruments, $A$ being the apparatus aperture, with floor
+$\hbar/2$ at the smallest aperture the uncertainty relation allows.
 The proof is a separation argument for the adversary's feasibility set,
 an AM--GM step that turns $\delta\Delta\ge\kappa$ into a square root, and
 one integration by parts that converts the certificate into a Dirichlet
@@ -271,15 +271,32 @@ exclude nothing: every position outcome leaves momentum tails, and every
 finite sequence of finite-precision quantum measurements leaves the two
 hypotheses compatible with the data at some probability. So Theorem 1,
 Theorem 2 and Corollaries 3--4 are theorems about **classical
-bounded-error record models** — the family of C068--C123, whose closures
-they sharpen into a characterization, with Proposition 5 supplying the
-mechanism. The claim in an earlier version of this note that the quantum
-comparison needs $\tau\Delta E>9\hbar$ is withdrawn: it read
-$\kappa\ge2\hbar$ off an error--disturbance relation whose quantities
-are not the worst-case widths used here, and the correct worst-case value
-is $\infty$.
+bounded-error record models**, with Proposition 5 supplying the mechanism
+that sets $\kappa=0$ there. The quantum statement of the same combination
+is Corollary 3 of the [probabilistic note](planck-gap-probabilistic.md),
+proved by a different route. **Exactly what was wrong with the first version of this section.** Its
+Proposition 6 asserted $\kappa\ge2\hbar$ for quantum marks and drew the
+floor $\tau\Delta E>9\hbar$. Both statements are true, and both are
+empty: $\kappa=\infty$ satisfies $\kappa\ge2\hbar$, and Theorem 1's
+hypothesis is then unsatisfiable, so its conclusion holds vacuously. The
+defect was the proof and the reading rather than the statements. The
+proof bounded the Busch--Lahti--Werner calibration disturbance by half a
+worst-case momentum width; that disturbance is a Wasserstein-2 distance,
+which needs a finite second moment, and the post-mark momentum
+distribution after a sharp position confinement has tails too heavy for
+one. So the argument read a finite bound off a quantity that is infinite,
+and the reading presented an empty inequality as a substantive quantum
+floor. The repair is the theorem of the
+[probabilistic note](planck-gap-probabilistic.md), which reaches a
+genuine quantum floor of the same combination by abandoning worst-case
+widths.
 
-**What the probabilistic version must be, and against what.** Replace the
+**What the probabilistic version is.** It is carried out in the
+[companion note](planck-gap-probabilistic.md), which reaches the floor
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$ without any
+error--disturbance relation, using Mandelstam--Tamm and the uncertainty
+relation alone. The rest of this section records the requirement it had
+to meet. Replace the
 decision criterion by a hypothesis test: two prepared ensembles, a fixed
 error probability $\epsilon$, and a criterion that the data distinguish
 $\mathrm I$ from $\mathrm F$ at level $\epsilon$. Replace $\delta$ and
@@ -344,22 +361,20 @@ territory of the standard quantum limit for free-mass measurement
 (Yuen; Caves 1985; Ozawa 1988) and of error--disturbance relations
 (Ozawa; Busch--Lahti--Werner 2013).
 
-Open, in the order that matters for a publishable result:
+Open, in the order that matters:
 
-1. **The probabilistic theorem.** Restate Theorem 1 with a hypothesis
-   test at fixed error probability and instrument-theoretic error and
-   disturbance. Decide whether protocol-universality survives
-   outcome-correlated disturbances of Ozawa's kind. This is the step that
-   would turn the note into a foundations paper.
+1. **Done: the probabilistic theorem.** The
+   [probabilistic note](planck-gap-probabilistic.md) proves it for every
+   finite adaptive protocol and decides the universality question:
+   universality over instruments holds, universality over preparations
+   fails, and the resource that prices the failure is the apparatus
+   aperture.
 2. **The sharp constant.** The interval $[9,36]$ in $F^2\tau_*^3/(m\kappa)$
    is not closed; find the optimal protocol and the matching certificate.
 3. **General force law.** Extend from $P=Ft^2/2m$ to general $P$ with
    $P(0)=P'(0)=0$; the proof already pairs $\int_0^\tau P''T$ against the
    Dirichlet energy of $T$, so the natural statement bounds a norm of
    $P''$ from below.
-4. **Why $\kappa>0$ without quantum kinematics.** Proposition 5 now names
+4. **Why $\kappa>0$ without quantum kinematics.** Proposition 5 names
    exactly what must fail: far-field position records fixing a probe's
    momentum.
-5. **Prior art.** Position the inequality explicitly as a probability-free,
-   protocol-universal relative of the standard quantum limit rather than
-   as a new bound.

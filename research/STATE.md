@@ -23,9 +23,9 @@ optics: least corpuscle impulse $p$ (Query 29), least mark length equal to
 the interval of fits $\Lambda=1/89000$ inch (Book II Part III Prop. XVIII),
 and the mark trade-off $\delta\,\Delta\ge\Lambda p$ between a mark's
 resolution and the indeterminacy of the impulse it delivers (M3). Then
-$	au\Delta E=F^2	au^3/2m>8\Lambda p$, the inertial--fall area exceeds
+$\tau\Delta E=F^2\tau^3/2m>8\Lambda p$, the inertial--fall area exceeds
 $8v\Lambda p/3F$, and Democritus insertion of marks stops at the mesh
-$	au_*=(16m\Lambda p/F^2)^{1/3}$; on the modern identification
+$\tau_*=(16m\Lambda p/F^2)^{1/3}$; on the modern identification
 $\Lambda p=h/2$ the floor is $4h$. Keeping Newton's determinate fits and
 dropping M3 is an exact countermodel with floor zero (the far-screen
 recovery of the recoil), so M3 is the single premise carrying $h>0$: an
@@ -41,24 +41,38 @@ parts to a Dirichlet energy); two marks decide above $36m\kappa$; so the
 threshold obeys $9m\kappa\le F^2\tau_*^3\le36m\kappa$ and the gap is
 positive iff $\kappa>0$. The same bound governs a window of inserted
 marks used by itself, and deterministic probes with far-field position
-records have $\kappa=0$. **Correction, 2026-09-17:** the note's first
+records have $\kappa=0$. **Precision, 2026-09-17:** the note's first
 version also claimed $\kappa\ge2\hbar$ for quantum instruments and hence
-$\tau\Delta E>9\hbar$. That is withdrawn. Worst-case widths have no
-non-vacuous quantum instance (Paley--Wiener: certain position confinement
-forces full-support momentum), so $\kappa=\infty$ there and the theorem
-holds emptily. What stands is a characterization of the floor of
-classical bounded-error record models, sharpening C068--C123; the bridge
-to $\hbar$ needs a probabilistic restatement that lands in the disputed
-standard-quantum-limit literature (Yuen; Caves 1985; Ozawa 1988).
+$\tau\Delta E>9\hbar$. Those statements are true but empty, since
+worst-case widths have no non-vacuous quantum instance: certain position
+confinement forces full-support momentum by Paley--Wiener, so
+$\kappa=\infty$ and the theorem holds vacuously. The defect was a proof
+that read a finite bound off an infinite Wasserstein disturbance, and a
+reading that presented an empty inequality as a quantum floor.
+
+**The quantum floor, proved.** [The probabilistic
+note](../notes/planck-gap-probabilistic.md) supplies it. Let the
+apparatus aperture bound the position spread by $L$ and the momentum
+spread by $P$, and set $A=LP\ge\hbar/2$. Then for every finite adaptive
+protocol of quantum instruments and every final measurement, deciding
+between the hypotheses at error probability $\epsilon$ requires
+$F\tau L/\hbar+F\tau^2P/(2m\hbar)\ge1-2\epsilon$, hence
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$, which is
+$(1-2\epsilon)^2\hbar/2$ at the smallest aperture the uncertainty
+relation allows. Universality over instruments holds, because the signal
+is a phase-space path whose total variation does not grow when it is
+subdivided; universality over preparations fails, and a two-packet family
+separated by $\pi\hbar/(F\tau)$ saturates the bound. Mandelstam--Tamm and
+the uncertainty relation are the only inputs; no error--disturbance
+relation is used.
 
 ## Next steps for the Planck gap (each a note)
 
-1. **The probabilistic theorem.** Restate Theorem 1 of the derivation
-   note with a hypothesis test at fixed error probability and
-   instrument-theoretic error and disturbance, and decide whether its
-   protocol-universality survives Ozawa's outcome-correlated
-   disturbances. This is the step that decides whether the Planck gap
-   becomes a quantum-foundations result or stays a classical one.
+1. **Done: the probabilistic theorem**, above. Remaining inside it:
+   mixed conditional states, since the proof assumes rank-one Kraus
+   operators; and the constant, where the single-shot bound gives
+   $\arccos(2\sqrt{\epsilon(1-\epsilon)})$ and the telescoping bound
+   gives $1-2\epsilon$ for the same quantity.
 2. **Why is $\kappa>0$?** Proposition 5 of the derivation note states
    exactly what a positive $\kappa$ forbids: far-field position records
    of a probe fixing its momentum. Seek a consistency derivation of that

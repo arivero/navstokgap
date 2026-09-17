@@ -1,0 +1,348 @@
+# The probabilistic Planck gap: $\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$, and why it is resource-relative
+
+The worst-case theorem of the [derivation note](planck-gap-derivation.md)
+has no quantum instance. Its probabilistic replacement does, and it
+decides the universality question that the worst-case version left open.
+Let the apparatus confine the particle's position spread to $L$ and its
+momentum spread to $P$, and set $A=LP$, the phase-space area available to
+a preparation; the uncertainty relation forces $A\ge\hbar/2$. Then for
+**every** protocol of quantum instruments, of any number, at any times,
+with any intermediate outcomes and any final measurement, distinguishing
+the falling from the inertial hypothesis with error probability at most
+$\epsilon$ requires
+
+$$\boxed{\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge1-2\epsilon,
+\qquad\text{hence}\qquad
+\tau\Delta E=\frac{F^2\tau^3}{2m}\ge\frac{(1-2\epsilon)^2\hbar^2}{4A},}$$
+
+the second form after optimizing the apparatus shape at fixed $A$
+(Theorem 2, Corollary 3). At the minimal area $A=\hbar/2$ this is
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar/2$, the same combination
+$F^2\tau^3/m$ that Newton's geometry sends to zero and that the classical
+theorem bounds by the marks' phase-space cost. A single-shot protocol
+obeys the sharper condition with $1-2\epsilon$ replaced by
+$\arccos(2\sqrt{\epsilon(1-\epsilon)})$, which is $\pi/2$ at
+$\epsilon=0$ (Theorem 1).
+
+**The universality question is decided, and the answer is negative
+without the resource bound.** For every $\tau\Delta E>0$ there is a
+preparation and a measurement distinguishing the hypotheses with error
+probability $O(\tau\Delta E/\hbar)$, built from two narrow packets
+separated by $d=\pi\hbar/(F\tau)$ (Proposition 4). The separation grows
+without bound as the force shrinks, saturating Theorem 2, so the theorem
+is tight in $L$ and the failure of universality is exactly the failure of
+confinement. Protocol-universality over instruments survives in full;
+universality over preparations fails. Ozawa's measurements breaking the
+standard quantum limit for free-mass position belong to the same
+phenomenon and are covered by the resource-relative statement.
+
+Methods are standard: Mandelstam--Tamm for the single-shot bound, a
+telescoping hybrid argument for the many-instrument case. The
+contribution is the protocol-universal statement in the Galileo geometry
+with explicit constants, and a counterexample that matches it.
+Exploratory; no ledger promotion.
+
+## 1. The two hypotheses differ by a phase-space displacement
+
+Transverse coordinate $\hat y$, momentum $\hat p$, mass $m>0$, on
+$[0,\tau]$. Hypothesis $\mathrm I$ evolves with $H_{\mathrm I}=\hat p^2/2m$;
+hypothesis $\mathrm F$ with $H_{\mathrm F}=\hat p^2/2m-F\hat y$. Write
+
+$$D(a,b)=\exp\!\left[\frac{i}{\hbar}\left(b\hat y-a\hat p\right)\right],
+\qquad D^\dagger\hat yD=\hat y+a,\qquad D^\dagger\hat pD=\hat p+b .$$
+
+**Lemma 1.** $W(t)=U_{\mathrm I}(t)^\dagger U_{\mathrm F}(t)
+=e^{i\varphi(t)}D\!\left(\alpha(t),\beta(t)\right)$ with
+
+$$\alpha(t)=-\frac{Ft^2}{2m},\qquad \beta(t)=Ft,$$
+
+and a real phase $\varphi$.
+
+*Proof.* Under $H_{\mathrm F}$ the Heisenberg operators are
+$\hat y(t)=\hat y+\hat pt/m+Ft^2/2m$ and $\hat p(t)=\hat p+Ft$, so
+$U_{\mathrm F}(t)=e^{i\varphi}D(Ft^2/2m,Ft)\,U_{\mathrm I}(t)$ for some
+phase. Free evolution conjugates a displacement to a displacement,
+$U_{\mathrm I}(t)^\dagger D(a,b)U_{\mathrm I}(t)=D(a-bt/m,b)$, and
+$Ft^2/2m-Ft\cdot t/m=-Ft^2/2m$. $\square$
+
+The product of the two components is the programme's combination:
+
+$$|\alpha(\tau)\beta(\tau)|=\frac{F\tau^2}{2m}\cdot F\tau
+=\frac{F^2\tau^3}{2m}=\tau\Delta E=\frac{3F}{v}A_{\rm inertial,fall},$$
+
+with $\Delta E=F^2\tau^2/2m$ and the area of
+[N01](newton-insertion-action.md). The displacement's position component
+is the sagitta of Lemma X and its momentum component is the accumulated
+impulse of Proposition I.
+
+**Resource bound.** The apparatus is said to have **aperture** $(L,P)$
+when every state occurring in the experiment satisfies
+$\Delta_\psi\hat y\le L$ and $\Delta_\psi\hat p\le P$, where
+$\Delta_\psi X=\|(X-\langle X\rangle_\psi)\psi\|$. Confinement to a region
+of diameter $2L$ and to momenta of modulus at most $P$ gives this for
+every state at once. Set $A=LP$; since
+$\Delta\hat y\,\Delta\hat p\ge\hbar/2$ for any state that occurs,
+$A\ge\hbar/2$.
+
+## 2. Single shot
+
+**Theorem 1.** Let the preparation be a pure state $\psi$ with
+$\Delta_\psi\hat y\le L$ and $\Delta_\psi\hat p\le P$, let the two
+hypotheses run undisturbed on $[0,\tau]$, and let any measurement on the
+final state decide between them with equal priors and error probability
+at most $\epsilon<1/2$. Then
+
+$$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\
+\theta(\epsilon):=\arccos\!\left(2\sqrt{\epsilon(1-\epsilon)}\right),
+\qquad\theta(0)=\frac\pi2 .$$
+
+*Proof.* The two final states are $U_{\mathrm I}\psi$ and
+$U_{\mathrm F}\psi=e^{i\varphi}U_{\mathrm I}D(\alpha,\beta)\psi$ by
+Lemma 1 with $\alpha=\alpha(\tau)$, $\beta=\beta(\tau)$; a common unitary
+and a global phase change no error probability, so the task is to
+distinguish $\psi$ from $D(\alpha,\beta)\psi$. Helstrom's bound for two
+pure states with equal priors gives
+$\epsilon\ge\frac12\bigl(1-\sqrt{1-|\langle\psi|D|\psi\rangle|^2}\bigr)$,
+so $|\langle\psi|D|\psi\rangle|\le2\sqrt{\epsilon(1-\epsilon)}$.
+Write $D=e^{-iG}$ with $G=-(\beta\hat y-\alpha\hat p)/\hbar$. The
+Mandelstam--Tamm bound in its geometric form states that the Fubini--Study
+angle between $\psi$ and $e^{-isG}\psi$ grows at rate at most
+$\Delta_\psi G$, so $|\langle\psi|e^{-iG}|\psi\rangle|\ge\cos(\Delta_\psi G)$
+whenever $\Delta_\psi G\le\pi/2$. Hence either $\Delta_\psi G>\pi/2\ge\theta(\epsilon)$,
+or $\cos(\Delta_\psi G)\le2\sqrt{\epsilon(1-\epsilon)}$ and again
+$\Delta_\psi G\ge\theta(\epsilon)$. Finally $\Delta_\psi$ is a seminorm on
+observables, being the norm of the centred operator applied to $\psi$, so
+
+$$\Delta_\psi G\le\frac{|\beta|\Delta_\psi\hat y+|\alpha|\Delta_\psi\hat p}{\hbar}
+\le\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}. \qquad\square$$
+
+The bound uses no measurement model: it holds for every final
+measurement, optimal or not, and it is a statement about the two states
+alone.
+
+## 3. Every protocol of instruments
+
+**Theorem 2.** Let instruments $M_1,\dots,M_k$ act at times
+$0<t_1<\dots<t_k\le\tau$, each with rank-one Kraus operators, identical
+under the two hypotheses, with arbitrary dependence of later instruments
+on earlier outcomes, followed by any final measurement. Let the apparatus
+have aperture $(L,P)$, in the sense that every conditional state arising
+in the protocol satisfies the two spread bounds. If the full record
+decides between the hypotheses with equal priors and error probability at
+most $\epsilon$, then
+
+$$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon .$$
+
+*Proof.* Pass to the interaction picture of $U_{\mathrm I}$, absorbing
+the free evolution into the instruments, so that under $\mathrm I$ the
+state is unchanged between instruments and under $\mathrm F$ it is acted
+on, between $t_{r-1}$ and $t_r$, by
+$V_r=W(t_r)W(t_{r-1})^\dagger=e^{i\varphi_r}D(\Delta\alpha_r,\Delta\beta_r)$
+with $\Delta\alpha_r=\alpha(t_r)-\alpha(t_{r-1})$ and
+$\Delta\beta_r=\beta(t_r)-\beta(t_{r-1})$, using Lemma 1 and the
+composition of displacements up to phase; set $t_0=0$ and let
+$r=1,\dots,k+1$ with $t_{k+1}=\tau$.
+
+Let $P_{\mathrm I}$ and $P_{\mathrm F}$ be the distributions of the full
+record. Define hybrid processes $H_0,\dots,H_{k+1}$, where $H_s$ applies
+$V_r$ for $r\le s$ and the identity for $r>s$; then
+$H_0=\mathrm I$ and $H_{k+1}=\mathrm F$. Consecutive hybrids differ by
+one insertion of $V_s$ into an otherwise identical sequence, so by the
+triangle inequality for total variation and the data-processing
+inequality for the common remainder of the protocol,
+
+$$\mathrm{TV}(P_{\mathrm I},P_{\mathrm F})\le\sum_{s}
+\mathrm{TV}(P_{H_{s-1}},P_{H_s})\le\sum_s\ \sup_{\sigma}\ \tfrac12\bigl\|\sigma-V_s\sigma V_s^\dagger\bigr\|_1,$$
+
+the supremum over the conditional states $\sigma$ reachable at step $s$.
+Each such $\sigma$ is pure, the Kraus operators having rank one, so
+$\tfrac12\|\sigma-V_s\sigma V_s^\dagger\|_1
+=\sqrt{1-|\langle\sigma|V_s|\sigma\rangle|^2}\le\sin(\Delta_\sigma G_s)\le\Delta_\sigma G_s$
+when $\Delta_\sigma G_s\le\pi/2$, by Mandelstam--Tamm as in Theorem 1, and
+the left side is at most $1\le\Delta_\sigma G_s\cdot(2/\pi)^{-1}$ otherwise;
+in both cases it is at most $\Delta_\sigma G_s$. Therefore
+
+$$\mathrm{TV}(P_{\mathrm I},P_{\mathrm F})\le\sum_s
+\frac{|\Delta\beta_s|L+|\Delta\alpha_s|P}{\hbar}
+=\frac{L\sum_s|\Delta\beta_s|+P\sum_s|\Delta\alpha_s|}{\hbar}.$$
+
+Both $\alpha(t)=-Ft^2/2m$ and $\beta(t)=Ft$ are monotone on $[0,\tau]$, so
+the increments telescope in absolute value:
+$\sum_s|\Delta\beta_s|=F\tau$ and $\sum_s|\Delta\alpha_s|=F\tau^2/2m$,
+**independently of the number of instruments and of their times**.
+An equal-prior test with error probability at most $\epsilon$ has
+$\mathrm{TV}(P_{\mathrm I},P_{\mathrm F})\ge1-2\epsilon$. $\square$
+
+The monotonicity of $\alpha$ and $\beta$ is the whole of
+protocol-universality. Inserting marks subdivides the displacement
+without enlarging its total variation, so a protocol with a thousand
+instruments faces the same budget as one with none. This is the
+probabilistic counterpart of Corollary 4 of the derivation note, and it
+is the point at which the present framework answers Ozawa: an instrument
+whose disturbance is correlated with its outcome changes the conditional
+states $\sigma$, and therefore matters only through the apertures $L$ and
+$P$ that those states respect.
+
+**Corollary 3 (the floor).** Under Theorem 2, with $A=LP$ fixed and the
+aperture shape free,
+
+$$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ \frac{(1-2\epsilon)^2\hbar^2}{4A},
+\qquad\text{and at }A=\frac\hbar2:\quad
+\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar}{2}.$$
+
+*Proof.* Theorem 2 gives $F\ge2m\hbar(1-2\epsilon)/[\tau(2mL+\tau P)]$,
+so $\tau\Delta E\ge2m\hbar^2(1-2\epsilon)^2\tau/(2mL+\tau P)^2$. At fixed
+$A=LP$ the denominator $2mL+\tau A/L$ is minimized at $L=\sqrt{\tau A/2m}$
+with value $2\sqrt{2m\tau A}$, whose square is $8m\tau A$. $\square$
+
+A larger aperture lowers the floor, and the floor is positive exactly
+when the aperture is bounded. The maximum of the floor over apertures is
+attained at the smallest one the uncertainty relation allows, and equals
+$\hbar/2$ as $\epsilon\to0$.
+
+## 4. The counterexample: universality fails without the aperture
+
+**Proposition 4.** Fix $m,F,\tau>0$ and put $\eta=\tau\Delta E/\hbar$.
+For every $\eta<1$ there are a pure preparation and a final measurement
+distinguishing the hypotheses with error probability at most $C\eta$ for
+an absolute constant $C$. The preparation has position spread of order
+$\hbar/(F\tau)$, which diverges as $\eta\to0$ at fixed $\tau$ and $m$.
+
+*Proof.* Write $\alpha=F\tau^2/2m$ and $\beta=F\tau$, so
+$\alpha\beta=\tau\Delta E=\eta\hbar$. Let $\chi$ be a fixed real
+normalized profile supported in $[-1/2,1/2]$ with $\|\chi'\|_2<\infty$,
+and set
+
+$$\psi=\frac{1}{\sqrt2}\left(\chi_++\chi_-\right),\qquad
+\chi_\pm(y)=w^{-1/2}\chi\!\left(\frac{y\mp d/2}{w}\right),\qquad
+d=\frac{\pi\hbar}{\beta},\qquad w=\sqrt{\frac{\alpha\hbar}{\beta}} .$$
+
+Then $w/d=\sqrt{\alpha\beta/\hbar}/\pi=\sqrt\eta/\pi$ and
+$\alpha/w=\sqrt{\alpha\beta/\hbar}=\sqrt\eta$, so for $\eta<1$ the two
+packets are disjoint and the displacement is small compared with the
+packet width. Up to a global phase,
+$(D(\alpha,\beta)\psi)(y)=e^{i\beta(y-\alpha/2)/\hbar}\psi(y-\alpha)$.
+Since the supports of $\chi_+$ and $\chi_-$ are separated by
+$d-w>d/2$ while the shift is $\alpha<w$, the cross terms vanish and
+
+$$\langle\psi|D|\psi\rangle=\frac12\sum_{\pm}e^{\pm i\beta d/(2\hbar)}
+\int \overline{\chi_\pm(y)}\,e^{i\beta(y\mp d/2)/\hbar}\chi_\pm(y-\alpha)\,dy .$$
+
+With $d=\pi\hbar/\beta$ the two prefactors are $e^{\pm i\pi/2}$ and
+cancel the leading terms, leaving the two residuals. Each residual
+integral differs from $1$ by at most $\|\chi(\cdot)-\chi(\cdot-\alpha/w)\|_2
++\beta w/\hbar\le(\alpha/w)\|\chi'\|_2+\beta w/\hbar$, so
+
+$$|\langle\psi|D|\psi\rangle|\le\frac{\alpha}{w}\|\chi'\|_2+\frac{\beta w}{\hbar}
+=\sqrt\eta\left(\|\chi'\|_2+1\right).$$
+
+Helstrom's optimal test then has error probability
+$\frac12(1-\sqrt{1-|\langle\psi|D|\psi\rangle|^2})\le\frac14|\langle\psi|D|\psi\rangle|^2
+\le C\eta$ with $C=(\|\chi'\|_2+1)^2/4$. The position spread of $\psi$ is
+$d/2+O(w)=\pi\hbar/(2F\tau)+O(w)$. $\square$
+
+The counterexample saturates Theorem 2. Its aperture has
+$L\simeq\pi\hbar/(2F\tau)$, for which the first term of the theorem's
+left side is about $\pi/2$, so the necessary condition is met with no
+room to spare. The momentum spread is of order $\hbar/w=\sqrt{2m\hbar/\tau}$,
+which stays bounded as $\eta\to0$; the diverging resource is the
+separation, not the energy. So the obstruction to reading Newton's
+shrinking sagitta is a bound on **how large the apparatus may be**, and
+a laboratory of unbounded extent has no Planck gap in this comparison.
+
+## 5. Position against the standard quantum limit
+
+The combination $F^2\tau^3\gtrsim m\hbar$ is the standard quantum limit
+for detecting a force on a free mass
+([Braginsky and Khalili, *Quantum Measurement*, 1992](https://doi.org/10.1017/CBO9780511622748),
+metadata). Its status has been disputed since Yuen's objection:
+[Caves defended it](https://doi.org/10.1103/PhysRevLett.54.2465)
+(PRL **54**, 2465, 1985, abstract) and
+[Ozawa exhibited a measurement breaking it for free-mass position](https://doi.org/10.1103/PhysRevLett.60.385)
+(PRL **60**, 385, 1988, abstract). The present statement is not a new
+bound of that kind and does not adjudicate that dispute on its own
+terms. Three differences fix its place.
+
+- **Universality over protocols is proved, not assumed.** The usual
+  derivations fix a monitoring scheme and balance its imprecision against
+  its back-action. Theorem 2 quantifies over all finite sequences of
+  instruments with arbitrary adaptivity, and the reason it can is
+  structural: the signal enters as a phase-space path of bounded total
+  variation, and subdividing a path does not lengthen it.
+- **The resource is named and the bound is tight in it.** Ozawa's
+  construction and Proposition 4 both buy distinguishability with
+  preparations of large phase-space extent. Corollary 3 prices that
+  exchange as $\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$, and
+  Proposition 4 shows the price is right, so the standard quantum limit
+  appears here as the special case $A=\hbar/2$ rather than as a law.
+- **The criterion is hypothesis testing, not estimation.** The quantity
+  bounded is the error probability of deciding between two known
+  histories, which is the question Newton's geometry asks, and not the
+  variance of an estimate of $F$.
+
+Relative to the error--disturbance literature, the argument uses no such
+relation. It uses only Mandelstam--Tamm and the uncertainty relation
+through $A\ge\hbar/2$, which is why the contested calibration questions
+of Ozawa and of
+[Busch, Lahti and Werner](https://doi.org/10.1103/PhysRevLett.111.160405)
+(PRL **111**, 160405, 2013, abstract) do not enter.
+
+## 6. What this settles for the programme
+
+Against the classical theorem of the
+[derivation note](planck-gap-derivation.md) the parallel is exact in
+form and opposite in direction. Classically the floor of the recorded
+comparison is $\tau\Delta E\ge\frac92\kappa$, with $\kappa=\delta\Delta$
+the phase-space cost of a single mark, so **coarser marks raise the
+floor**. Quantum mechanically the floor is
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$, with $A$ the phase-space
+aperture of the apparatus, so **a larger laboratory lowers it**. The two
+meet where the aperture is as small as the uncertainty relation permits:
+there $A=\hbar/2$ and the floor is $\hbar/2$, which is the order of the
+value $\kappa=\Lambda p=h/2$ that Newton's interval of fits and corpuscle
+impulse supply in the [mark-floor note](newton-mark-floor.md).
+
+The Newton-age reading is therefore sharper than before. Newton's limit
+in Lemmas X and XI takes the sagitta and the swept area to zero, and
+nothing in the geometry stops it. What stops the *recorded* comparison is
+the phase-space area of the apparatus, and the two Newtonian quantities
+that enter are precisely the two components of the displacement: the
+sagitta $F\tau^2/2m$ against the momentum spread, and the impulse $F\tau$
+of Proposition I against the position spread. Newton had both quantities
+and had no reason to pair them with spreads of anything.
+
+## 7. Consequence for STATE
+
+The goal of proving the probabilistic form is discharged. Theorem 1
+gives the single-shot bound with the sharp constant
+$\arccos(2\sqrt{\epsilon(1-\epsilon)})$, Theorem 2 extends it to every
+finite adaptive protocol of rank-one instruments with the constant
+$1-2\epsilon$, Corollary 3 converts it to the floor
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$, and Proposition 4 decides
+the universality question: universality over instruments holds, and
+universality over preparations fails, with an explicit family that
+saturates the theorem. Positioning against the standard quantum limit is
+in Section 5, and no error--disturbance relation is used.
+
+Open, in order:
+
+1. **Mixed conditional states.** Theorem 2 assumes rank-one Kraus
+   operators so that every conditional state is pure. The extension needs
+   a bound on $\|\sigma-V\sigma V^\dagger\|_1$ for mixed $\sigma$ in terms
+   of a spread, where the natural route is a purification with the
+   aperture imposed on the purified state.
+2. **The sharp constant.** Theorem 1 gives $\theta(\epsilon)$ and
+   Theorem 2 gives $1-2\epsilon$ for the same quantity; the gap between
+   them is an artifact of the telescoping step, and closing it would also
+   close the interval $[9,36]$ left by the classical theorem.
+3. **The general force law.** Both theorems use only that the
+   phase-space path $t\mapsto(\alpha(t),\beta(t))$ has total variation
+   $F\tau^2/2m$ and $F\tau$ in its two components. For a general force
+   the statement is that the two total variations, weighted by $P$ and
+   $L$, must exceed $\hbar(1-2\epsilon)$; the constant-force case is then
+   one evaluation.
+4. **Publication.** With Section 5 in place the foundations paper has its
+   positioning; what remains before submission is item 1, item 2 and a
+   literature pass on resource-bounded quantum metrology, where a bound
+   of the shape of Corollary 3 may already exist for estimation rather
+   than testing.
