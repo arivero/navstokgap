@@ -93,10 +93,13 @@ gives the single-paper structure: the comparison and its limit, the two
 theorems, the two factors in the *Opticks*, the junction (M3 is
 Robertson for the corpuscle), and what the theorem does not give.
 
-1. **Sources.** Replace the Project Gutenberg *Opticks* and the
-   Wikisource *Principia* with a proper companion in `docs/classics/`
-   for Book II Part III Props. XII--XVIII, Book II Part I Obs. 13 and
-   Queries 1 and 29, and cite Cohen--Whitman for the *Principia*.
+1. **Done: the Opticks companion.**
+   [`docs/classics/Newton_Opticks_1730_fits_and_queries.md`](../docs/classics/Newton_Opticks_1730_fits_and_queries.md)
+   holds Prop. XII, the Definition of the interval, Prop. XVIII, Obs. 13
+   and Queries 1 and 29 verbatim from the 1730 fourth edition, with line
+   anchors and checksums. Remaining on sources: cite the 1730 printing
+   itself rather than the transcription, and Cohen--Whitman for the
+   *Principia* in place of the Wikisource Motte text.
 2. **Historiography.** Shapiro 1993 on the theory of fits, Guicciardini
    1999 on the limit arguments, Sabra 1981 on the optics, read rather
    than cited. These carry the history half of the paper.

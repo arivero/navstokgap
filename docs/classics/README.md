@@ -27,6 +27,7 @@ supplies to the project. Retrieval date for all batches: 2026-09-08
 | [Jacobi, Vorlesungen über Dynamik, lectures 6–7](Jacobi_VorlesungenDynamik_Lect6-7_1866_OCR.md) | 1842–43; 1866 | OCR excerpt | Fixed-energy principle and the stationarity remark |
 | [Mach, Science of Mechanics, least action](Mach_ScienceOfMechanics_LeastAction_1893_OCR.md) | 1883; 1893 | OCR excerpt | Pre-1901 historical synthesis of the principle |
 | [Newton, Rules of Reasoning](Newton_Principia_RulesOfReasoning_Motte1846_wikisource.md) | 1687/1713; 1846 | HTML, transcription | Rule III as the template for a universality premise |
+| [Newton, Opticks: fits and queries](Newton_Opticks_1730_fits_and_queries.md) | 1730 | Verbatim excerpt | Interval of the fits as a measured least length, corpuscular impulse, and the determinism that denies M3; Planck-gap work |
 | [Newton, General Scholium](Newton_Principia_GeneralScholium_Motte1846_wikisource.md) | 1713; 1846 | HTML, transcription | Phenomena, hypotheses and the vortex argument; H02 context |
 | [Lagrange, Mécanique analytique II.I](Lagrange_MecaniqueAnalytique_P2S1_Oeuvres_wikisource.md) | 1788/1811; Œuvres XI | HTML, transcription | Survey of the principles of dynamics; least action as a theorem |
 | [Lagrange, Mécanique analytique II.III](Lagrange_MecaniqueAnalytique_P2S3_Oeuvres_wikisource.md) | 1788/1811; Œuvres XI | HTML, transcription | Least-action property derived from the general formula, §VI |

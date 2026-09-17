@@ -104,6 +104,10 @@ mark $j+1$ as terminal, satisfies (1) with $\tau$ replaced by $\tau_n=\tau/n$.
 
 ## 3. Three premises from Newton's optics
 
+All four Opticks passages below are stored with their line anchors in the
+[source companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md),
+which prints them verbatim from the 1730 fourth edition.
+
 - **(M1) Least impulse.** Light consists of corpuscles ("Are not the Rays
   of Light very small Bodies emitted from shining Substances?", Opticks
   Query 29, passage). Corpuscles of one colour are alike; each carries an
@@ -312,6 +316,7 @@ a non-commuting record structure must enter (G07's "two scale-free
 non-commuting structures"); (b) state Theorem 1 for a general force law
 and for the C070--C071 lens, where the same $F^2\tau^3/m$ combination
 already appears, so that the floor is a phase-space statement rather
-than a parabola statement; (c) an Opticks source companion in
-`docs/classics/` for Props. XII--XVIII, Obs. 13 and Queries 1 and 29,
-which this note cites from the 1730 text without one.
+than a parabola statement; (c) done: the
+[Opticks companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md)
+now holds Props. XII and XVIII, the Definition of the interval, Obs. 13
+and Queries 1 and 29 verbatim with line anchors.
