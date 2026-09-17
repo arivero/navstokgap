@@ -17,11 +17,18 @@ when $\kappa>0$ (Corollary 3). The same bound governs Democritus insertion:
 the marks inside a window of duration $\tau'$, used by themselves, record
 the force only if $F^2\tau'^3>9m\kappa$ (Corollary 4). Any record model in
 which a probe's later position records fix its momentum to arbitrary
-accuracy has $\kappa=0$ (Proposition 5); quantum kinematics has
-$\kappa\ge2\hbar=h/\pi$ by the Busch--Lahti--Werner error--disturbance
-theorem (Proposition 6), so the quantum Galileo comparison needs
-$\tau\Delta E>9\hbar$; Newton's optics gives the heuristic value
-$\kappa=\Lambda p=h/2$ of the [mark-floor note](newton-mark-floor.md).
+accuracy has $\kappa=0$ (Proposition 5), and Newton's optics gives the
+heuristic value $\kappa=\Lambda p=h/2$ of the
+[mark-floor note](newton-mark-floor.md). **Quantum kinematics has no
+non-vacuous instance of this framework:** no mark has both a finite
+worst-case resolution and a finite worst-case recoil width, by
+Paley--Wiener, so $\kappa=\infty$ and the theorem holds emptily
+(Proposition 6). The result is therefore a theorem about classical
+bounded-error record models, sharpening the C068--C123 closures into a
+characterization, and the bridge to $\hbar$ requires the probabilistic
+reformulation of Section 6, where the inequality becomes the standard
+quantum limit for free-mass force detection and must be argued against
+the Yuen--Caves--Ozawa dispute over that limit.
 The proof is a separation argument for the adversary's feasibility set,
 an AM--GM step that turns $\delta\Delta\ge\kappa$ into a square root, and
 one integration by parts that converts the certificate into a Dirichlet
@@ -239,86 +246,120 @@ zero. A positive $\kappa$ therefore requires that the probe's later
 position records **do not** fix its momentum, which is an indeterminacy of
 the probe's own kinematics.
 
-**Proposition 6 (quantum marks have $\kappa\ge2\hbar$).** Model a mark as
-an instrument on the body's Hilbert space $L^2(\mathbb R)$ with a real
-output, and define its resolution and recoil width in the worst-case
-sense: for every input state whose position distribution is supported in
-an interval of length $\ell$ centred at $x$, the output is supported in an
-interval of length $\ell+\delta$ centred at $x$; and for every input state
-whose momentum distribution is supported in an interval of length $\ell$,
-the post-mark momentum distribution, shifted by the mark's nominal impulse,
-is supported in an interval of length $\ell+\Delta$. Then $\delta\Delta\ge2\hbar$.
+**Proposition 6 (the worst-case framework has no quantum instance).**
+In quantum kinematics no mark has both a finite worst-case resolution and
+a finite worst-case recoil width. Hence $\kappa=\infty$, Theorem 1 holds
+emptily, and no protocol of marks decides the comparison with worst-case
+certainty.
 
-*Proof.* The calibration error of the output as an approximate position
-measurement, in the sense of Busch, Lahti and Werner (the supremum over
-sharply localized inputs of the Wasserstein-2 distance between output and
-input position distributions, [PRL 111, 160405 (2013)](https://doi.org/10.1103/PhysRevLett.111.160405)
-and [J. Math. Phys. 55, 042111 (2014)](https://doi.org/10.1063/1.4871444),
-abstract and theorem statements), is at most $\delta/2$: a distribution
-supported within $\delta/2+\ell/2$ of the input's support has Wasserstein
-distance at most that from it, and $\ell\to0$. Likewise the calibration
-disturbance of momentum is at most $\Delta/2$, since a momentum measurement
-after the mark, corrected by the nominal impulse, is an approximate
-momentum measurement whose output lies within $\Delta/2+\ell/2$ of the
-input momentum support. Busch--Lahti--Werner prove that the product of the
-position error and the momentum disturbance of any instrument is at least
-$\hbar/2$. Hence $(\delta/2)(\Delta/2)\ge\hbar/2$. $\square$
+*Proof.* Suppose a mark's datum confines the position to an interval $I$
+of length $\delta<\infty$ with certainty, so that every conditional
+post-mark state $\psi$ has $\operatorname{supp}\psi\subseteq I$. By the
+Paley--Wiener theorem $\hat\psi$ extends to an entire function of
+exponential type; a nonzero entire function cannot vanish on a set with
+nonempty interior, so the momentum distribution $|\hat\psi|^2$ has full
+support. The impulse the mark delivered is the difference between the
+post-mark and pre-mark momenta, so no bounded interval fixed by the
+records contains it with certainty, and $\Delta=\infty$. Symmetrically,
+a mark with $\Delta<\infty$ confines momentum to a bounded set with
+certainty and so has $\delta=\infty$. $\square$
 
-With Corollary 3 this gives the quantum Galileo comparison the rigorous
-floor
+This is the decisive limitation of the present theorem, and it is
+structural rather than technical. Worst-case interval widths express a
+record model in which a datum *excludes* values outright. Quantum data
+exclude nothing: every position outcome leaves momentum tails, and every
+finite sequence of finite-precision quantum measurements leaves the two
+hypotheses compatible with the data at some probability. So Theorem 1,
+Theorem 2 and Corollaries 3--4 are theorems about **classical
+bounded-error record models** — the family of C068--C123, whose closures
+they sharpen into a characterization, with Proposition 5 supplying the
+mechanism. The claim in an earlier version of this note that the quantum
+comparison needs $\tau\Delta E>9\hbar$ is withdrawn: it read
+$\kappa\ge2\hbar$ off an error--disturbance relation whose quantities
+are not the worst-case widths used here, and the correct worst-case value
+is $\infty$.
 
-$$\tau_*\Delta E(\tau_*)\ge\frac92\cdot2\hbar=9\hbar\approx1.43\,h,$$
-
-while the N01 closed-loop benchmark, an interferometric protocol outside
-the class of marks considered here, needs $\tfrac43\tau\Delta E\ge\pi\hbar$
-for perfect discrimination, $\tau\Delta E\ge3h/8$. The two numbers bracket
-the same combination; the present one is a theorem for all mark
-protocols under the stated worst-case definitions, the other an exact
-optimum for one protocol and a probabilistic criterion.
+**What the probabilistic version must be, and against what.** Replace the
+decision criterion by a hypothesis test: two prepared ensembles, a fixed
+error probability $\epsilon$, and a criterion that the data distinguish
+$\mathrm I$ from $\mathrm F$ at level $\epsilon$. Replace $\delta$ and
+$\Delta$ by the error and disturbance of an instrument in a stated
+metric. The expected shape of the conclusion, $F^2\tau^3\gtrsim m\hbar$,
+is the standard quantum limit for detecting a force on a free mass
+([Braginsky and Khalili, *Quantum Measurement*, 1992](https://doi.org/10.1017/CBO9780511622748),
+metadata). That limit is contested in exactly the regime this note needs:
+Yuen argued it can be beaten, [Caves defended it](https://doi.org/10.1103/PhysRevLett.54.2465)
+(PRL **54**, 2465, 1985, abstract), and [Ozawa exhibited a measurement
+breaking the standard quantum limit for free-mass position](https://doi.org/10.1103/PhysRevLett.60.385)
+(PRL **60**, 385, 1988, abstract) using an instrument whose disturbance is
+correlated with its outcome rather than independent of it. The same
+distinction reappears in the error--disturbance literature, where Ozawa's
+counterexamples to the naive Heisenberg product coexist with the proved
+calibration-based relation of
+[Busch, Lahti and Werner](https://doi.org/10.1103/PhysRevLett.111.160405)
+(PRL **111**, 160405, 2013, abstract; [J. Math. Phys. **55**, 042111, 2014](https://doi.org/10.1063/1.4871444),
+abstract). A probabilistic version of Theorem 1 is therefore not a
+corollary of any single error--disturbance inequality. It has to say which
+instruments are admitted, and its interest lies precisely in whether the
+protocol-universality proved here (over all finite numbers of marks at all
+times) survives when Ozawa's outcome-correlated disturbances are admitted.
 
 **The Newton-age value.** The corpuscular premises M1--M3 of the
 mark-floor note give $\kappa=\Lambda p$, with $\Lambda=1/89000$ inch
 measured by Newton and $p$ unmeasured in his age; on the identification
-$p=h/\lambda$, $\Lambda=\lambda/2$ this is $\kappa=h/2$, within a factor
-$\pi/2$ of the proved quantum value $h/\pi$. Newton-age materials give
-Corollary 3 in full, once M3 is granted; Proposition 5 shows that
-Newton's own determinate fits deny M3 and give $\kappa=0$; Proposition 6
-shows that quantum kinematics grants it with an explicit constant. The
-logical structure of the Planck gap is therefore:
+$p=h/\lambda$, $\Lambda=\lambda/2$ this is $\kappa=h/2$. Newton-age
+materials give Corollary 3 in full once M3 is granted, and Proposition 5
+shows that Newton's own determinate fits deny M3 and give $\kappa=0$. The
+corpuscular model is a classical bounded-error record model, which is why
+it fits this framework and why its value of $\kappa$ is a heuristic
+analogy rather than a quantum result. The logical structure established
+here is therefore:
 
-$$\text{Planck gap of the recorded Galileo comparison}\;>0
-\quad\Longleftrightarrow\quad\kappa>0
-\quad\Longleftarrow\quad\text{indeterminate probe kinematics},$$
+$$\text{floor of the classically recorded comparison}\;>0
+\quad\Longleftrightarrow\quad\kappa>0,\qquad
+\text{deterministic probes}\;\Longrightarrow\;\kappa=0,$$
 
-with the first equivalence proved here for all finite mark protocols and
-explicit constants, and the second implication supplied by the quantum
-error--disturbance theorem. No step assumes a path-integral phase rule,
-a fixed measurement budget, or a supplied action unit other than $\kappa$
-itself; and $\kappa$ is not supplied but characterized: it is zero for
-every deterministic probe with far-field position records and at least
-$2\hbar$ for every quantum instrument.
+proved here for all finite mark protocols with explicit constants. No
+step assumes a path-integral phase rule, a fixed measurement budget, or a
+supplied action unit other than $\kappa$ itself, and $\kappa$ is
+characterized rather than supplied on the classical side. The quantum
+side is open: Proposition 6 shows this framework cannot reach it, and
+names the reformulation that could.
 
 ## 6. Consequence for STATE
 
-The Planck gap is now a theorem with a converse: Theorem 1 and Theorem 2
-sandwich the threshold of the recorded Galileo comparison between
-$9m\kappa$ and $36m\kappa$ in $F^2\tau^3$ for every finite protocol of
-marks, Corollary 4 does the same for Democritus insertion, Proposition 5
-shows $\kappa=0$ for every deterministic probe with far-field records, and
-Proposition 6 gives $\kappa\ge2\hbar$ in quantum kinematics from an
-established measurement-uncertainty theorem. The premise that carries
-$h>0$ is thereby reduced from the corpuscular M3 to the single number
-$\kappa$, and the question "why is $h>0$" is the question "why is
-$\kappa>0$", answered negatively for deterministic probes and positively
-for quantum ones.
+What is proved: Theorems 1--2 sandwich the threshold of the recorded
+Galileo comparison between $9m\kappa$ and $36m\kappa$ in $F^2\tau^3$ for
+every finite protocol of marks with $\delta\Delta\ge\kappa$; Corollary 4
+does the same for a window of inserted marks used by itself; Proposition 5
+gives $\kappa=0$ for every deterministic probe with far-field position
+records. Together these characterize the floor of a classical
+bounded-error record model by one number and identify what kills it.
 
-Open: (a) a consistency derivation of $\kappa>0$ that does not start from
-quantum kinematics, for which Proposition 5 now states exactly what must
-fail, namely far-field position records fixing a probe's momentum;
-(b) extension of Theorem 1 from the constant force to a general $P(t)$
-with $P(0)=P'(0)=0$, where the proof gives
-$\int_0^\tau P''T\le\|P''\|_{L^2}\,\|T\|_{L^2}$ and hence
-$\|P''\|_{L^2(0,\tau)}\,\tau>\ldots$; the constant-force case is the
-worst case for a given $\|P''\|_\infty$ and should be written out;
-(c) the probabilistic version, replacing worst-case widths by
-distributions, where the N01 phase threshold and C006 belong.
+What is not proved, and was wrongly claimed in the first version of this
+note: any quantum value of $\kappa$. Proposition 6 shows the worst-case
+framework has no non-vacuous quantum instance, so the route to $\hbar$
+runs through a probabilistic reformulation, which lands in the disputed
+territory of the standard quantum limit for free-mass measurement
+(Yuen; Caves 1985; Ozawa 1988) and of error--disturbance relations
+(Ozawa; Busch--Lahti--Werner 2013).
+
+Open, in the order that matters for a publishable result:
+
+1. **The probabilistic theorem.** Restate Theorem 1 with a hypothesis
+   test at fixed error probability and instrument-theoretic error and
+   disturbance. Decide whether protocol-universality survives
+   outcome-correlated disturbances of Ozawa's kind. This is the step that
+   would turn the note into a foundations paper.
+2. **The sharp constant.** The interval $[9,36]$ in $F^2\tau_*^3/(m\kappa)$
+   is not closed; find the optimal protocol and the matching certificate.
+3. **General force law.** Extend from $P=Ft^2/2m$ to general $P$ with
+   $P(0)=P'(0)=0$; the proof already pairs $\int_0^\tau P''T$ against the
+   Dirichlet energy of $T$, so the natural statement bounds a norm of
+   $P''$ from below.
+4. **Why $\kappa>0$ without quantum kinematics.** Proposition 5 now names
+   exactly what must fail: far-field position records fixing a probe's
+   momentum.
+5. **Prior art.** Position the inequality explicitly as a probability-free,
+   protocol-universal relative of the standard quantum limit rather than
+   as a new bound.

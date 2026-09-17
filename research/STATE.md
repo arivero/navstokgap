@@ -40,26 +40,37 @@ $F^2\tau^3>9m\kappa$ (separation certificate, AM--GM, one integration by
 parts to a Dirichlet energy); two marks decide above $36m\kappa$; so the
 threshold obeys $9m\kappa\le F^2\tau_*^3\le36m\kappa$ and the gap is
 positive iff $\kappa>0$. The same bound governs a window of inserted
-marks used by itself. Deterministic probes with far-field position
-records have $\kappa=0$; quantum instruments have $\kappa\ge2\hbar$ by
-Busch--Lahti--Werner, so the quantum comparison needs
-$\tau\Delta E>9\hbar$. The premise carrying $h>0$ is reduced to the one
-number $\kappa$.
+marks used by itself, and deterministic probes with far-field position
+records have $\kappa=0$. **Correction, 2026-09-17:** the note's first
+version also claimed $\kappa\ge2\hbar$ for quantum instruments and hence
+$\tau\Delta E>9\hbar$. That is withdrawn. Worst-case widths have no
+non-vacuous quantum instance (Paley--Wiener: certain position confinement
+forces full-support momentum), so $\kappa=\infty$ there and the theorem
+holds emptily. What stands is a characterization of the floor of
+classical bounded-error record models, sharpening C068--C123; the bridge
+to $\hbar$ needs a probabilistic restatement that lands in the disputed
+standard-quantum-limit literature (Yuen; Caves 1985; Ozawa 1988).
 
 ## Next steps for the Planck gap (each a note)
 
-1. **Why is $\kappa>0$?** Proposition 5 of the derivation note states
+1. **The probabilistic theorem.** Restate Theorem 1 of the derivation
+   note with a hypothesis test at fixed error probability and
+   instrument-theoretic error and disturbance, and decide whether its
+   protocol-universality survives Ozawa's outcome-correlated
+   disturbances. This is the step that decides whether the Planck gap
+   becomes a quantum-foundations result or stays a classical one.
+2. **Why is $\kappa>0$?** Proposition 5 of the derivation note states
    exactly what a positive $\kappa$ forbids: far-field position records
    of a probe fixing its momentum. Seek a consistency derivation of that
    prohibition that does not start from quantum kinematics; this is where
    a non-commuting record structure (G07) must enter, or where the
    argument stops.
-2. **General force law and phase-space form.** Extend Theorem 1 of the
+3. **General force law and phase-space form.** Extend Theorem 1 of the
    derivation note from $P=Ft^2/2m$ to general $P$ with $P(0)=P'(0)=0$
    (the proof gives $\int P''T$ against the Dirichlet energy) and state
    it for the C070--C071 force lens, whose canonical area $2F^2\ell^3/3m$
    is the same combination.
-3. **Opticks companion.** A `docs/classics/` companion for Book II Part
+4. **Opticks companion.** A `docs/classics/` companion for Book II Part
    III Props. XII--XVIII, Book II Part I Obs. 13 and Queries 1 and 29
    (pre-1901 source; cited from the 1730 text without one).
 
