@@ -5,13 +5,13 @@ governs. Older files in this directory are context.
 
 ## Goal
 
-User direction, 2026-09-17: the $SU(3)$ mass-gap attack is stuck at the
-map in the position note, and the active goal returns to the **Planck
-gap**: a logical argument, from Newton-age materials, that $h>0$ in the
-Galileo comparison, where Newton explicitly took the inertial--parabola
-area to zero (Lemmas X--XI) to mark the difference between free and
-forced motion. The mass-gap sections below are retained as context and
-are no longer the queue.
+User direction, 2026-09-17: **establish the Planck gap with Newton-age
+arguments and their modern equivalents**, and produce one paper valid
+both for foundations of physics and for history and philosophy of
+science. The comparison is Galileo's inertial horizontal line against
+the falling parabola, whose area Newton takes to zero in Lemmas X and XI
+to read off the force. The $SU(3)$ mass-gap material below is paused
+context.
 
 ## What is in hand for the Planck gap
 
@@ -66,27 +66,49 @@ separated by $\pi\hbar/(F\tau)$ saturates the bound. Mandelstam--Tamm and
 the uncertainty relation are the only inputs; no error--disturbance
 relation is used.
 
-## Next steps for the Planck gap (each a note)
+[The mark-cost note](../notes/mark-cost-and-statistical-floor.md)
+reinstates the quantum value with a correct proof and settles what was
+wrong with the derivation note, which is almost nothing. **Theorem A:**
+for a mark realized by the impulsive coupling $\lambda\hat y\hat P_A$ of
+the body's position to a probe, the error operator $\hat N=\hat Q_A/\lambda$
+and the delivered impulse $\hat D=-\lambda\hat P_A$ satisfy
+$[\hat N,\hat D]=-i\hbar$, so Robertson gives $\kappa=\delta\Delta\ge\hbar/2$
+for every probe state, with $\lambda$ cancelling; the mark's cost is the
+probe's own uncertainty product. **Theorem B:** in the Gaussian
+statistical model the derivation note's proof runs unchanged, with the
+separating hyperplane replaced by the optimal test direction, giving
+$d^2\le2F^2\tau^3/(9m\kappa)$ for every protocol, hence
+$\tau\Delta E\ge9z_{1-\epsilon}^2\kappa\ge\frac92z_{1-\epsilon}^2\hbar$,
+about $12\hbar$ at five per cent error, and the insertion mesh
+$\tau_*=(9z^2m\hbar/F^2)^{1/3}$. Newton's M3 is Robertson's inequality
+for his corpuscle, with $\Lambda$ its transverse position spread and $p$
+its transverse momentum spread. The earlier $\kappa\ge2\hbar$ was right
+in kind, too large by four, and invalidly proved; the worst-case
+formulation is what was empty, and standard deviations repair it.
 
-1. **Done: the probabilistic theorem**, above. Remaining inside it:
-   mixed conditional states, since the proof assumes rank-one Kraus
-   operators; and the constant, where the single-shot bound gives
-   $\arccos(2\sqrt{\epsilon(1-\epsilon)})$ and the telescoping bound
-   gives $1-2\epsilon$ for the same quantity.
-2. **Why is $\kappa>0$?** Proposition 5 of the derivation note states
-   exactly what a positive $\kappa$ forbids: far-field position records
-   of a probe fixing its momentum. Seek a consistency derivation of that
-   prohibition that does not start from quantum kinematics; this is where
-   a non-commuting record structure (G07) must enter, or where the
-   argument stops.
-3. **General force law and phase-space form.** Extend Theorem 1 of the
-   derivation note from $P=Ft^2/2m$ to general $P$ with $P(0)=P'(0)=0$
-   (the proof gives $\int P''T$ against the Dirichlet energy) and state
-   it for the C070--C071 force lens, whose canonical area $2F^2\ell^3/3m$
-   is the same combination.
-4. **Opticks companion.** A `docs/classics/` companion for Book II Part
-   III Props. XII--XVIII, Book II Part I Obs. 13 and Queries 1 and 29
-   (pre-1901 source; cited from the 1730 text without one).
+## Next steps toward the paper
+
+The [mark-cost note](../notes/mark-cost-and-statistical-floor.md) §6
+gives the single-paper structure: the comparison and its limit, the two
+theorems, the two factors in the *Opticks*, the junction (M3 is
+Robertson for the corpuscle), and what the theorem does not give.
+
+1. **Sources.** Replace the Project Gutenberg *Opticks* and the
+   Wikisource *Principia* with a proper companion in `docs/classics/`
+   for Book II Part III Props. XII--XVIII, Book II Part I Obs. 13 and
+   Queries 1 and 29, and cite Cohen--Whitman for the *Principia*.
+2. **Historiography.** Shapiro 1993 on the theory of fits, Guicciardini
+   1999 on the limit arguments, Sabra 1981 on the optics, read rather
+   than cited. These carry the history half of the paper.
+3. **Theorem A beyond momentum transfer.** Ozawa's instruments have
+   $[\hat N,\hat D]\ne-i\hbar$; state which marks are covered and what a
+   general class would need.
+4. **General force law.** Theorem B's proof pairs $\int_0^\tau P''T$
+   against the Dirichlet energy of $T$, so the statement for general $P$
+   with $P(0)=P'(0)=0$ bounds a norm of $P''$ from below.
+5. **Constants.** Close the gap between the worst-case form ($9$ to
+   $36$), the statistical form ($9z^2$) and the single-shot aperture
+   form ($\arccos$ versus $1-2\epsilon$).
 
 ## Paused goal: $SU(3)$ mass gap (2026-09-16 to 2026-09-17)
 
