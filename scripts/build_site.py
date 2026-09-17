@@ -277,16 +277,54 @@ def note_title(path):
     return path.stem
 
 
+SUP = str.maketrans("0123456789+-n", "\u2070\u00b9\u00b2\u00b3\u2074"
+                    "\u2075\u2076\u2077\u2078\u2079\u207a\u207b\u207f")
+SUB = str.maketrans("0123456789aeijnx", "\u2080\u2081\u2082\u2083\u2084"
+                    "\u2085\u2086\u2087\u2088\u2089\u2090\u2091\u1d62"
+                    "\u2c7c\u2099\u2093")
+GREEK = {"hbar": "\u210f", "tau": "\u03c4", "Delta": "\u0394",
+         "delta": "\u03b4", "kappa": "\u03ba", "epsilon": "\u03b5",
+         "alpha": "\u03b1", "beta": "\u03b2", "gamma": "\u03b3",
+         "lambda": "\u03bb", "mu": "\u03bc", "nu": "\u03bd", "pi": "\u03c0",
+         "sigma": "\u03c3", "chi": "\u03c7", "phi": "\u03c6",
+         "varphi": "\u03c6", "theta": "\u03b8", "Lambda": "\u039b",
+         "Phi": "\u03a6", "Sigma": "\u03a3", "Omega": "\u03a9",
+         "ell": "\u2113", "infty": "\u221e", "propto": "\u221d",
+         "ge": " \u2265 ", "le": " \u2264 ", "neq": " \u2260 ",
+         "to": " \u2192 ", "times": "\u00d7", "cdot": "\u00b7",
+         "gtrsim": " \u2273 ", "in": " \u2208 ", "sim": "~", "pm": "\u00b1",
+         "nabla": "\u2207", "partial": "\u2202", "sqrt": "\u221a",
+         "mathbb": "", "mathcal": "", "operatorname": "", "text": "",
+         "frac": "", "left": "", "right": "", "quad": " ", "qquad": " ",
+         ",": " ", ";": " ", "!": "", "\\": " "}
+
+
+FUNCS = {"log", "ln", "exp", "sin", "cos", "tan", "max", "min", "inf",
+         "sup", "dim", "det", "tr", "lim", "arccos", "arcsin", "arctan",
+         "deg", "Var", "Re", "Im"}
+
+
+def _script(m, table):
+    body = m.group(1) or m.group(2)
+    try:
+        return body.translate(table) if all(
+            ord(c) in table for c in body) else body
+    except Exception:
+        return body
+
+
 def strip_math(s):
-    """Plain-text form of a title, for list entries and <title>."""
+    """Readable plain-text form of a title, for list entries and <title>."""
     s = re.sub(r"\$([^$]*)\$", lambda m: m.group(1), s)
-    s = s.replace("\\hbar", "ħ").replace("\\tau", "τ").replace("\\Delta", "Δ")
-    s = s.replace("\\kappa", "κ").replace("\\epsilon", "ε").replace("\\alpha", "α")
-    s = s.replace("\\ge", "≥").replace("\\le", "≤").replace("\\propto", "∝")
-    s = s.replace("\\infty", "∞").replace("\\to", "→").replace("\\,", " ")
-    s = s.replace("--", "–").replace("\\|", "‖").replace("\\in", "∈")
-    s = re.sub(r"\\[a-zA-Z]+", "", s)
-    s = re.sub(r"[{}^_]", "", s)
+    s = re.sub(r"\\([a-zA-Z]+|[,;!\\])",
+               lambda m: GREEK.get(m.group(1),
+                                   m.group(1) if m.group(1) in FUNCS else " "), s)
+    s = re.sub(r"\^\{([^}]*)\}|\^(.)", lambda m: _script(m, SUP), s)
+    s = re.sub(r"_\{([^}]*)\}|_(.)", lambda m: _script(m, SUB), s)
+    s = s.replace("--", "\u2013").replace(">", " > ").replace("<", " < ")
+    s = re.sub(r"[{}$^_]", "", s)
+    s = s.replace("\u0394 E", "\u0394E")
+    s = re.sub(r"\s+([,.;:)])", r"\1", s)
     return re.sub(r"\s+", " ", s).strip()
 
 
