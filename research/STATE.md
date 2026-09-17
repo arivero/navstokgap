@@ -96,7 +96,15 @@ protocol of marks, with the insertion corollary; Theorem 4, the mark cost
 $\kappa\ge\hbar/2$ from the conjugacy of a probe's error and recoil; the
 two factors of $\kappa$ in the *Opticks*, one measured; the junction,
 that M3 is Robertson's inequality for Newton's corpuscle, whose negation
-Prop. XII asserts; and what the theorem does not give, namely
+Prop. XII asserts; **Newton and the classics**, on his Classical Scholia
+of the 1690s and Gregory's 1702 preface as their printed witness, the six
+ancient positions on the cut that the scholia pass over, and Theorem 5,
+which makes the arrow the first rung of a ladder whose second rung is the
+Galileo comparison ($mv^2\tau\ge8z^2\kappa$ for rest against uniform
+motion, $F^2\tau^3/m\ge18z^2\kappa$ for uniform motion against a force,
+no floor at all for a static taper, and the invariant
+$m(P^{(n)})^2\tau^{2n-1}\gtrsim\kappa$); and what the theorem does not
+give, namely
 preparations of unbounded extent, the standard-quantum-limit prior art
 and instruments outside the momentum-transfer class.
 
@@ -104,7 +112,14 @@ and instruments outside the momentum-transfer class.
 
 1. **Historiography, read rather than cited.** Shapiro 1993 on the theory
    of fits, where the central historical claim must be tested; Sabra 1981
-   on the optical context; Guicciardini 1999 on the limit arguments.
+   on the optical context; Guicciardini 1999 on the limit arguments;
+   Casini 1984 and Mosley 2024 on the Classical Scholia, both verified at
+   metadata level only. The scholia manuscripts remain inaccessible here,
+   so §7's account rests on Gregory's printed preface. Two corrections of
+   the ancient reading are recorded in §7: the cone has no action floor,
+   which withdraws the earlier heuristic that it is the arrow rotated
+   into Euclidean time, and the mesh is no atom of time, since it moves
+   with the force and the mass.
 2. **Editions.** Cite the 1730 *Opticks* printing rather than the
    transcription, and Cohen--Whitman for the *Principia* in place of the
    Motte text.

@@ -29,7 +29,7 @@ Draft, 2026-09-17. Synthesis of the
 [probabilistic](planck-gap-probabilistic.md) and
 [mark-cost](mark-cost-and-statistical-floor.md) notes, which hold the
 proofs in full. Two obligations remain before submission and are stated
-in §8. Exploratory; no ledger promotion.
+in §9. Exploratory; no ledger promotion.
 
 ## 1. The question
 
@@ -55,13 +55,17 @@ Our question is what stops that refinement when the trajectory has to be
 recorded rather than contemplated, and whether the stopping point can be
 reached from materials Newton possessed.
 
-The answer has three parts. The geometry alone supplies no floor (§2).
+The answer has four parts. The geometry alone supplies no floor (§2).
 Recording supplies one, which is set by a single number $\kappa$ with
 the dimensions of action, and every protocol of marks faces the same
 bound in the same combination $F^2\tau^3/m$ (§3). Quantum kinematics
 fixes $\kappa\ge\hbar/2$ by an exact and elementary argument (§4).
 Newton's optics supplies both factors of $\kappa$ and denies the
-inequality between them (§§5--6).
+inequality between them (§§5--6). Newton also attempted a preface founded
+on the ancients, and the ancient arguments that bear on his own method
+are the ones he passed over; stated as premises about records they
+generate a hierarchy whose first rung is Zeno's arrow and whose second is
+the comparison above (§7).
 
 ## 2. The geometry has no floor
 
@@ -304,7 +308,150 @@ fits follows from that single commitment, and the separation of the two
 books is incidental to it. No counterfactual about what Newton might have
 discovered is needed, and none is offered.
 
-## 7. What the theorem does not give
+## 7. Newton and the classics
+
+### What Newton attempted
+
+In the early 1690s Newton drafted a set of Classical Scholia to
+Propositions IV to IX of Book III, arguing that the oldest philosophers
+had known universal gravitation and its inverse-square law, so that the
+*Principia* recovered a lost wisdom rather than announcing a novelty. He
+never printed them. He did pass material to David Gregory, whose
+*Astronomiae physicae et geometricae elementa* of 1702 opens with the
+programmatic sentence that lest the physics delivered here seem something
+new and unheard of in astronomy, *eandem vetustissimis Philosophis notam
+... ostendam*, I shall show it was known to the most ancient
+philosophers, naming Anaxagoras, Archelaus, Euripides and Pythagoras.
+That preface is the printed witness closest to the unpublished scholia,
+and the [source companion](../docs/classics/Gregory_AstronomiaeElementa_Praefatio_1702_OCR.md)
+holds its programmatic paragraph. The scholarship is Casini, "Newton: The
+Classical Scholia", *History of Science* **22** (1984), 1--46, and
+Mosley, "The Origins and Sources of Newton's Classical Scholia",
+*Erudition and the Republic of Letters* **9** (2024), 171--217, both
+verified at metadata level here and both still to be read.
+
+So Newton did attempt a preface founded on the classics, and the attempt
+was doxographic. He sought ancient authority for a law he had already
+proved, and the authority he sought was for the *conclusions* of Book III.
+
+### The ancient arguments he passed over
+
+The ancient material that bears on the *method* of Book I is the debate
+over division and the cut, and it is absent from the scholia. Six
+positions, each held here in a primary witness:
+
+- **Democritus's cone** (Plutarch, *De communibus notitiis* 39). Cut a
+  cone by a plane parallel to the base: are the surfaces of the two
+  adjacent sections equal or unequal? If equal, the cone is a cylinder;
+  if unequal, it is stepped. Chrysippus answers that the surfaces are
+  neither equal nor unequal while the bodies are unequal, and Plutarch
+  calls that a licence to write whatever comes to mind.
+- **Zeno's arrow** (Aristotle, *Physics* VI.9). At every now the flying
+  arrow occupies a space equal to itself and so is at rest, and what is
+  at rest at every now does not move. Aristotle's diagnosis is that the
+  argument assumes time to be composed of nows.
+- **The Mohist endpoint** (*Mozi*, Canons and Explanations). Halving
+  terminates at an endpoint that cannot itself be halved.
+- **Liu Hui's cutting** (commentary on the *Nine Chapters*, 263 CE). The
+  finer the cutting the smaller the loss; cut and cut again until it
+  cannot be cut, and the polygon coincides with the circle with nothing
+  lost.
+- **Hui Shi's stick** (*Zhuangzi* 33). A stick one foot long, halved
+  every day, is not exhausted in ten thousand generations.
+- **The leap and the time-atom** (al-Shahrastani on al-Nazzam; Maimonides,
+  *Guide* I.73). The interval is divisible, yet it is crossed by leaps;
+  and for the kalam, time is composed of atoms.
+
+Lemmas X and XI perform exactly the operation these positions dispute.
+The scholia cite the ancients for what Book III concludes and leave them
+silent on how Book I proceeds.
+
+### The hierarchy the ancient premises generate
+
+Read as premises about records rather than about geometry, the cone and
+the arrow are the first members of a sequence whose next member is
+Newton's comparison. The apparatus of §3 covers all of them; what changes
+is the order of the signal against the nuisance it must beat.
+
+**Theorem 5.** In the model of §3, with every mark obeying
+$\delta_j\Delta_j\ge\kappa$:
+
+(i) *The arrow.* Distinguishing rest from uniform motion at speed $v$,
+with the initial position unknown, requires
+
+$$m\,v^2\tau\ \ge\ 8\,z_{1-\epsilon}^2\,\kappa,
+\qquad\text{that is}\qquad \tau\,E_{\rm kin}\ \ge\ 4\,z_{1-\epsilon}^2\,\kappa .$$
+
+(ii) *Newton.* Distinguishing uniform motion from constant force, with
+the initial position and velocity unknown, requires
+$F^2\tau^3/m\ge18z_{1-\epsilon}^2\kappa$, which is Theorem 2.
+
+(iii) *The cone.* Measuring a static taper requires nothing. With no
+recoil to propagate, the deflection grows without bound as marks
+accumulate, so a static solid has no floor.
+
+*Proof.* For (i) the nuisance is the constant, so $u$ ranges over vectors
+with $\sum_iu_i=0$ alone. With $P(t)=vt$ the identity of §3 reads
+$u^{\mathsf T}P=v\sum_iu_it_i=v\,T(0)$, and $T(\tau)=0$ with
+Cauchy--Schwarz gives $|T(0)|=|\int_0^\tau T'|\le\sqrt\tau\sqrt E$. The
+noise bound $u^{\mathsf T}\Sigma u\ge2\kappa E/m$ needs only
+$\sum_iu_i=0$ and so is unchanged. Hence
+$d^2\le v^2\tau E\,m/(2\kappa E)=m v^2\tau/(2\kappa)$, and
+$d\ge2z_{1-\epsilon}$ gives the claim. For (ii) the nuisance is the
+linear space, $u^{\mathsf T}P=\frac Fm\int_0^\tau T$, and the proof of
+Theorem 2 applies. For (iii) the marks leave the object unchanged, so
+$\Sigma=\operatorname{diag}(\delta_j^2)$; with $N$ marks of resolution
+$\delta$ at each of two heights separated by $\Delta h$, the taper
+$\vartheta$ gives $d^2=N\vartheta^2\Delta h^2/(2\delta^2)$, unbounded in
+$N$. $\square$
+
+The two dynamical cases share one invariant. If the signal is the $n$-th
+order departure $P$ with $P(0)=\dots=P^{(n-1)}(0)=0$, the quantity the
+theorem bounds below is
+
+$$m\,\bigl(P^{(n)}\bigr)^2\,\tau^{2n-1}\ \gtrsim\ \kappa ,$$
+
+which has the dimensions of action for every $n$: at $n=1$ it is
+$mv^2\tau$, twice the kinetic energy times the duration, and at $n=2$ it
+is $F^2\tau^3/m$, twice $\tau\Delta E$. Newton's comparison is the second
+rung of a ladder whose first rung is Zeno's.
+
+### What each ancient premise buys
+
+- **Zeno.** His conclusion holds of records: below
+  $\tau_{\rm arrow}=8z^2\kappa/(mv^2)$ every mark is consistent with
+  rest. Aristotle's diagnosis explains why, since a now carries no
+  record and every datum is a window.
+- **Democritus and Chrysippus.** The dilemma about adjacent sections
+  dissolves with resolution alone, and case (iii) shows it needs no
+  action floor. Adjacent recorded sections are equal, and the inequality
+  of the bodies is recovered cumulatively, which is Chrysippus's answer
+  given a definite sense. This corrects a heuristic recorded earlier in
+  this programme, that the cone is the arrow rotated into Euclidean
+  time: the static problem lacks back-action, and back-action is the
+  entire source of the floor.
+- **The Mohists and Liu Hui.** They are right about records. Cutting
+  stops, and the endpoint is the mesh
+  $\tau_*=(18z^2m\kappa/F^2)^{1/3}$, which is Corollary 3.
+- **Hui Shi.** He is right about geometry, which is Proposition 1: the
+  halving never ends, and nothing in the figure resists it.
+- **Al-Nazzam.** The recorded trajectory below the mesh is his leap. The
+  interval stays divisible, and the crossing is exhibited only in
+  finitely many steps.
+- **The kalam time-atom.** Denied. The mesh depends on $F$, on $m$ and on
+  the confidence demanded, so it is a dynamical resolution rather than a
+  universal atom of time. A floor on action coexists with a continuum of
+  instants, and Theorem 5 shows the mesh moving as the force changes.
+
+The section's claim about Newton is therefore double. He looked to the
+ancients for authority and found the wrong ancients, taking the
+doxography of gravitation while passing over the dispute about division
+that his own Lemmas turn on. And the premise that would have converted
+that dispute into a theorem, an indeterminacy in the least parts of
+light, is one the atomists supply in the form of a least part and one he
+denied in the single place where he had a measurement.
+
+## 8. What the theorem does not give
 
 **Preparations of unbounded extent.** Theorem 2 concerns protocols that
 mark the trajectory. A protocol that prepares once, waits and measures
@@ -342,7 +489,7 @@ and a general class would need the proved calibration relation of Busch,
 Lahti and Werner (PRL **111**, 160405, 2013) or an argument of another
 kind. No error--disturbance relation is used above.
 
-## 8. Obligations before submission
+## 9. Obligations before submission
 
 Two, both on the history side, and both stated so that a reader can see
 what the present draft rests on.
@@ -365,13 +512,13 @@ $\int_0^\tau P''T$ against the Dirichlet energy and so bounds a norm of
 $P''$; and closing the constants between the worst-case form, the
 statistical form of Theorem 2 and the single-shot form of §7.
 
-## 9. Consequence for STATE
+## 10. Consequence for STATE
 
 This is the synthesis the goal asked for: the Planck gap established
 with Newton-age arguments and their modern equivalents, in one document
 whose historical and technical halves are load-bearing for each other.
 The foundations content is Theorems 2 and 4 with §7's honest
-positioning; the history content is §5 and §6, resting on the source
-companion; the junction is the identification of M3 with Robertson's
-inequality for the corpuscle. STATE's queue reduces to §8's two
+positioning; the history content is §§5--7, resting on the source
+companions; the junction is the identification of M3 with Robertson's
+inequality for the corpuscle. STATE's queue reduces to §9's
 obligations and the three open mathematical items.
