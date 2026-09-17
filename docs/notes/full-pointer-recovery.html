@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Full pointer records recover receiver and unknown probe positions</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Full pointer records recover receiver and unknown probe positions</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/full-pointer-recovery.md">Markdown source</a></p><p>Eight final pointer coordinates determine both the receiver initial
+state and four unknown incoming probe positions, uniformly on a fixed
+preparation box, for R06’s apparatus at sufficiently small fixed
+positive coupling. Initial clock position and momentum and incoming
+probe momenta are supplied exactly. The preparation box need not
+contract. Improving final record precision then closes the canonical
+reconstruction-error product.</p>
+<p>R19, 2026-09-11. The result concerns delayed deterministic
+reconstruction with known Hamiltonian and simultaneous classical access
+to final positions and momenta at the specified time T. The
+record-access premise is supplied, not implemented by a further
+measuring apparatus. Proof and literature status are recorded separately
+in the ledger and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B50.md">B50</a>.</p>
+<h2 id="fixed-domain-and-observed-quantities">1. Fixed domain and
+observed quantities</h2>
+<p>Use <a href="autonomous-finite-readout.html">R06</a>’s Hamiltonian,
+fixed masses, cutoffs, pulses, positive E,T and invertible signal
+matrix. Work in its fixed component units with sup norms; z=(x,P,y,Q) is
+the canonical receiver state. Take a compact convex receiver
+neighbourhood Z containing the energy ball and lying inside the chosen
+cutoff margins. Restrict physical initial receiver states to S={H_s=E}.
+Let q be the four unknown initial probe positions in a fixed box
+Q_b=[-b,b]^4 with b&gt;0 sufficiently small, independent of lambda.</p>
+<p>The revealed data are c=(s(0),p_s(0)) in a sufficiently small fixed
+compact box about (s_0,M_c v), and u=(pi_j(0)) in a fixed small box. At
+zero coupling write s_c(t)=s(0)+p_s(0)t/M_c and q_j^0(t)=q_j+t u_j/M_j.
+Choose these boxes so that all free paths have strict cutoff and
+pulse-endpoint margins. These margins persist for sufficiently small
+coupling. Define</p>
+<p><span class="math display">\[A_{c,j\cdot}=K\int_0^T
+f_j(s_c(t))e_x\Phi_t\,dt.\]</span></p>
+<p>Continuity and invertibility at the nominal clock give a uniform
+alpha&gt;0 with ||A_c v||&gt;=alpha||v|| throughout the chosen clock
+box. All matrix formulas below are conjugated by the fixed component
+units. In physical units A_c z is momentum. Known free pointer drift is
+d_j(u)=T u_j/M_j.</p>
+<p>Observe pi(T) and q(T) at the same known T, and set</p>
+<p><span
+class="math display">\[F_{\lambda,c,u}(z,q)=\left(\frac{\pi(T)-u}{\lambda},\
+q(T)-d(u)\right).\]</span></p>
+<p>Only z and q are unknown. Comparisons always hold the revealed c,u
+fixed; constants are uniform over their boxes. Positions are
+time-stamped records, whereas the post-pulse momenta are persistent
+records.</p>
+<h2 id="uniform-derivative-estimate-including-clock-reaction">2. Uniform
+derivative estimate including clock reaction</h2>
+<p>On Z times Q_b, uniformly also in c,u, the exact smooth finite-time
+flow gives</p>
+<p><span
+class="math display">\[F_{\lambda,c,u}(z,q)=L_c(z,q)+R_{\lambda,c,u}(z,q),\qquad
+L_c(z,q)=(-A_c z,q),\qquad ||R_{\lambda,c,u}||_{C^1}\le C\lambda.
+\tag{1}\]</span></p>
+<p>Here is the order argument. At lambda=0 the receiver is Phi_t z, the
+clock is s_c(t), and the probes follow q^0(t),u. Their coordinates and
+all initial data derivatives are bounded on the compact domain. The
+interaction forces are lambda times bounded smooth functions. Variation
+of constants and the variational equations therefore bound the
+differences between the coupled and free trajectories by O(lambda) in
+C^1 with respect to (z,q), uniformly on [0,T]. Clock reaction is
+included at this order, since its force is -lambda K sum f’_j(s)x q_j.
+No shrinking preparation is used.</p>
+<p>In the linear cutoff regions the exact integrated equations are</p>
+<p><span class="math display">\[\pi_j(T)-u_j=-\lambda K\int_0^T
+f_j(s(t))x(t)\,dt,\]</span> <span
+class="math display">\[q_j(T)-q_j-d_j(u)=-\frac{\lambda K}{M_j}
+\int_0^T(T-t)f_j(s(t))x(t)\,dt.\]</span></p>
+<p>Substitution of the free receiver and clock gives the first block
+-A_c z+O(lambda) after division by lambda, and the second block
+q+O(lambda), both in C^1. Smoothness, compactness and strict margins
+justify the uniform variational estimates on the convex neighbourhood,
+not just on the shell. The first unscaled remainder is O(lambda
+squared); R16’s nominal order-three remainder is neither needed nor
+asserted for this fixed box.</p>
+<h2 id="a-global-inverse-estimate-on-the-preparation-domain">3. A global
+inverse estimate on the preparation domain</h2>
+<p>Put beta=min(alpha,1)&gt;0. Integrate D R along the segment joining
+any v=(z,q), w=(z’,q’) in Z times Q_b. Equation (1) gives</p>
+<p><span class="math display">\[||F(v)-F(w)||\ge(\beta-C\lambda)||v-w||
+\ge\tfrac12\beta||v-w|| \tag{2}\]</span></p>
+<p>for 0&lt;lambda&lt;=lambda_0 with C lambda_0&lt;=beta/2. This is a
+uniform global lower Lipschitz estimate on the stated domain. In
+particular the exact eight records uniquely determine z and q on S times
+Q_b. A rank test at isolated points would not supply the segment bound.
+The scale 1/lambda in F is an information normalization; it amplifies
+momentum readout error.</p>
+<p>This removes R18’s exact position-compensation fibre upon addition of
+the final positions and known clock data. R18’s special invertible
+position-response matrix is unnecessary: every fixed R06 signal design
+with invertible A and these margins admits this small-coupling
+argument.</p>
+<h2 id="record-error-action-units-and-fixed-box-limit">4. Record error,
+action units and fixed-box limit</h2>
+<p>Let final position and momentum record errors have dimensionless sup
+bounds rho_q and rho_pi. After the known subtraction and scaling, their
+joint bound is delta=max(rho_pi/lambda,rho_q). Choose a minimum-residual
+fit to F on the compact set S times Q_b. The true state has residual at
+most delta, so the fitted and true exact records differ by at most 2
+delta. Equation (2) yields</p>
+<p><span class="math display">\[||\widehat z-z||\le ||(\widehat
+z,\widehat q)-(z,q)||
+\le4\delta/\beta.\]</span></p>
+<p>For fixed canonical units L_<em>,P_</em>, define worst
+initial-coordinate errors epsilon_x=sup|xhat-x| and
+epsilon_P=sup|Phat-P| over the admitted states, revealed data and
+bounded record errors. Then</p>
+<p><span class="math display">\[0\le\mathcal H_{\rm
+rec}=\epsilon_x\epsilon_P
+\le\frac{16L_*P_*}{\beta^2}
+       \max(\rho_\pi/\lambda,\rho_q)^2. \tag{3}\]</span></p>
+<p>The product has action units ML^2/T, with no 2 pi normalization. At
+fixed 0&lt;lambda&lt;=lambda_0, all apparatus masses, pulse geometry,
+observation time and the positive preparation widths stay fixed as
+rho_pi,rho_q tend to zero; the product tends uniformly to zero. With
+exact records both risks are zero. R06’s disturbance remains bounded on
+this class, so epsilon_x times the canonical momentum disturbance also
+tends to zero in this fixed-coupling record limit. Receiver disturbance
+itself need not vanish.</p>
+<p>Equation (3) also supplies convergence for joint limits with
+rho_pi/lambda tending to zero and rho_q tending to zero. It is a
+sufficient upper bound, not a sharp minimax formula for positive record
+errors. A positive preparation volume alone cannot supply a positive
+reconstruction floor under this enlarged record access. Exact initial
+clock/momentum access and arbitrarily precise final joint access remain
+explicit resources.</p>
+<h2 id="source-connection-and-next-test">5. Source connection and next
+test</h2>
+<p>The B49 Hermann–Krener capsule distinguishes local observability from
+global recovery. Borrow its observation-map viewpoint; the decisive
+extra input here is C^1 closeness to one invertible linear map on a
+convex domain. B47’s smooth-flow precedent supplies the
+variational-equation route. The matrix and uniform domain estimate above
+are model derivations.</p>
+<p>R20 should retain the eight exact final pointer records and known
+incoming probe momenta, but stop revealing initial clock position and
+momentum. Test whether unknown clock data can be compensated by receiver
+and probe-position changes while staying on the exact receiver energy
+shell and inside fixed preparation margins. An explicit common-record
+family or a uniform recovery bound should decide the question; dimension
+counting alone is insufficient.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

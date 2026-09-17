@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Final clock momentum restores global receiver recovery</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Final clock momentum restores global receiver recovery</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/final-clock-momentum-recovery.md">Markdown source</a></p><p>Yes: adding the clock’s final momentum to the eight final pointer
+coordinates restores uniform global recovery on the full receiver energy
+shell for sufficiently small fixed positive coupling. It determines the
+unknown initial clock speed, receiver state and incoming probe positions
+together. The proof also works on a bounded receiver energy ball: exact
+initial energy is no longer needed as reconstruction data.</p>
+<p>R23, 2026-09-11. Retain R19’s fixed apparatus, revealed initial clock
+position s_0, known zero incoming probe momenta and known observation
+time T. Unknown receiver state z lies in a compact convex neighbourhood
+Z of the energy ball; incoming positions q occupy a fixed positive box,
+and speed v a fixed small positive interval V about v_0. Choose these
+domains with common strict pulse and cutoff margins and uniformly
+invertible free signal matrices A_v. All apparatus masses, pulse
+geometry and preparation widths remain fixed. The added datum is p_s(T),
+persistent after all pulses. Literature coverage is in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B54.md">B54</a>.</p>
+<h2 id="include-the-clock-reaction-in-the-record-map">1. Include the
+clock reaction in the record map</h2>
+<p>Use fixed component units, including speed unit V_* and clock
+momentum unit M_c V_*. The physical expression for the nine scaled
+records is</p>
+<p><span class="math display">\[\mathcal F_\lambda(z,q,v)=
+\left(\frac{\pi(T)}{\lambda},q(T),\frac{p_s(T)}{M_c}\right).\]</span></p>
+<p>All norm statements below are in the corresponding dimensionless
+coordinates. R19’s finite-time variational estimates, extended to v,
+give</p>
+<p><span class="math display">\[\mathcal F_\lambda=L+R_\lambda,\qquad
+L(z,q,v)=(-A_vz,q,v),\qquad
+\|R_\lambda\|_{C^1}\le C\lambda. \tag{1}\]</span></p>
+<p>For the new block, the exact equation in the linear cutoff region
+is</p>
+<p><span class="math display">\[p_s(T)=M_cv-\lambda K\sum_j\int_0^T
+f&#39;_j(s(t))x(t)q_j(t)\,dt. \tag{2}\]</span></p>
+<p>The integrand and its initial-data derivatives are uniformly bounded
+on the common compact finite-time domain. Thus the correction and its
+derivatives are O(lambda); no unaffected-clock approximation is made.
+The same argument gives the first two blocks as in R19. Smoothness
+supplies a uniform C1 remainder on the entire convex domain, not just on
+the shell. After the clock leaves every pulse, its momentum is constant
+and can be stored as a record. Final probe positions still refer to the
+specified time T.</p>
+<h2 id="a-global-inverse-bound-for-the-nonlinear-leading-map">2. A
+global inverse bound for the nonlinear leading map</h2>
+<p>Choose alpha&gt;0 with ||A_v h||&gt;=alpha||h|| throughout V, and
+let</p>
+<p><span class="math display">\[D=\sup_{v\in V,z\in Z}\|(\partial_v
+A_v)z\|&lt;\infty.\]</span></p>
+<p>For w=(z,q,v), w’=(z’,q’,v’) set d=||L(w)-L(w’)|| in the product sup
+norm. The last two blocks give ||q-q’||&lt;=d and |v-v’|&lt;=d. The
+first gives</p>
+<p><span class="math display">\[\alpha\|z-z&#39;\|
+\le\|A_vz-A_{v&#39;}z&#39;\|+\|(A_{v&#39;}-A_v)z&#39;\|
+\le(1+D)d.\]</span></p>
+<p>Here the speed segment stays in V and z’ stays in Z. Consequently</p>
+<p><span
+class="math display">\[\|L(w)-L(w&#39;)\|\ge\beta\|w-w&#39;\|,\qquad
+\beta=\min\left(1,\frac{\alpha}{1+D}\right)&gt;0. \tag{3}\]</span></p>
+<p>This directly handles the v-dependent signal matrix; L need not be
+linear. Integrating the derivative of R along the segment in the convex
+preparation domain yields</p>
+<p><span class="math display">\[\|\mathcal F_\lambda(w)-\mathcal
+F_\lambda(w&#39;)\|
+\ge(\beta-C\lambda)\|w-w&#39;\|
+\ge\frac\beta2\|w-w&#39;\| \tag{4}\]</span></p>
+<p>for all 0&lt;lambda&lt;=lambda_0 after choosing C
+lambda_0&lt;=beta/2. Hence the nine exact records uniquely determine all
+nine unknowns globally on this domain. In particular they exclude R22’s
+distinct-speed equal-record pairs. The proof uses the whole bounded
+receiver domain; neither a known local receiver patch nor the equation
+H_s=E supplies the missing rank.</p>
+<p>The physical role is simple: the last record constrains speed; with
+speed constrained, the first four signals constrain receiver state, and
+final positions constrain incoming pointer positions. Equation (2) is
+calibrated jointly rather than substituting p_s(T)/M_c as an exact
+initial speed.</p>
+<h2 id="finite-precision-and-action-products">3. Finite precision and
+action products</h2>
+<p>Suppose final pointer momentum, position and clock-momentum errors
+have dimensionless sup bounds rho_pi,rho_q,rho_c in the declared units.
+Then</p>
+<p><span
+class="math display">\[\delta=\max(\rho_\pi/\lambda,\rho_q,\rho_c).\]</span></p>
+<p>Choose a minimum-residual fit on the compact admitted domain (either
+the energy shell times apparatus boxes or a closed energy ball times
+those boxes). The true state is a competitor, so the fitted and true
+exact record vectors differ by at most 2 delta. Equation (4) gives</p>
+<p><span class="math display">\[\|\widehat w-w\|\le4\delta/\beta,\qquad
+\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\beta^2}\delta^2.
+\tag{5}\]</span></p>
+<p>Here L_<em>,P_</em> are fixed receiver canonical units and
+epsilon_x,epsilon_P are worst initial-coordinate errors. The product has
+action units without a 2 pi factor. Initial clock momentum error is at
+most 4 M_c V_* delta/beta. At fixed positive coupling all errors close
+uniformly as the three record precisions improve, with positive
+preparation widths unchanged. A joint coupling/precision limit also
+closes if rho_pi/lambda, rho_q and rho_c tend to zero. The bounded
+receiver disturbance need not vanish.</p>
+<p>This settles which resource caused the preceding global ambiguity: an
+unobserved clock speed. Arbitrarily precise joint access to the nine
+final records and exact model calibration are still supplied resources.
+The added momentum is a mechanical stored variable; implementing its
+readout with another apparatus is a separate measurement-composition
+question.</p>
+<h2 id="next-test">4. Next test</h2>
+<p>R24 should hide initial clock position as well, add its final
+position at T, and test the full ten-coordinate apparatus record. Its
+leading clock map is (s,v)-&gt;(s+vT,v), suggesting a global inverse on
+fixed small clock boxes. Then consolidate the clock results by comparing
+which preparation data are supplied and which persistent or time-stamped
+records replace them.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

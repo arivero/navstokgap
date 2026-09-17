@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nonlinear feedback selects an action only while its energy source supplies power</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Nonlinear feedback selects an action only while its energy source
+supplies power</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/energy-depot-action-selection.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/energy-depot-action-selection.pdf">PDF</a></p><p>An oscillator with a finite energy depot relaxes to zero action in
+the model below. Replenishing the depot above a threshold produces a
+positive attracting action, independent of the initial seed but
+dependent on the supplied power and oscillator frequency. The exact
+construction separates attraction from universality and gives a concrete
+test of a self-excitation mechanism.</p>
+<p>Status: exploratory written derivation, Q03; independent
+proof/literature review is required before accepted-ledger promotion.
+This is an autonomous dissipative effective model, not a derivation from
+a closed Hamiltonian field.</p>
+<h2 id="construction-and-physical-choice">1. Construction and physical
+choice</h2>
+<p>Let an oscillator have angular frequency <span
+class="math inline">\(\omega&gt;0\)</span>, action <span
+class="math inline">\(J\ge0\)</span> and angle <span
+class="math inline">\(\theta\)</span>. Its measured mechanical energy is
+<span class="math inline">\(H=\omega J\)</span>. Let <span
+class="math inline">\(e\ge0\)</span> be stored depot energy. Choose loss
+rates <span class="math inline">\(\gamma,\kappa&gt;0\)</span>,
+conversion coefficient <span class="math inline">\(g&gt;0\)</span> with
+units <span
+class="math inline">\((\text{energy}\,\text{time})^{-1}\)</span>, and
+supplied power <span class="math inline">\(P\ge0\)</span>. Define</p>
+<p><span class="math display">\[\dot\theta=\omega,\qquad
+\dot J=2(ge-\gamma)J,\qquad
+\dot e=P-\kappa e-2g e\omega J. \tag{1}\]</span></p>
+<p>The nonlinear transfer <span class="math inline">\(2ge\omega
+J\)</span> enters oscillator energy and leaves the depot with equal
+magnitude. The premise is stimulated gain proportional to existing
+oscillation energy: a charged or active reservoir amplifies a seed,
+while conversion depletes its stored energy. This is a deliberately
+simple feedback law to test, rather than a universal mechanical law.</p>
+<p>A real-quadrature realization removes the angle singularity at rest.
+With coordinates <span class="math inline">\(Q,R\)</span> of units
+square root of action and <span
+class="math inline">\(J=(Q^2+R^2)/2\)</span>, put</p>
+<p><span class="math display">\[\dot Q=(ge-\gamma)Q-\omega R,\qquad
+\dot R=\omega Q+(ge-\gamma)R.\]</span></p>
+<p>These equations induce (1), including the invariant state <span
+class="math inline">\(Q=R=0\)</span>. For a harmonic mechanical readout
+take <span class="math inline">\(x=Q/\sqrt{m\omega}\)</span> and <span
+class="math inline">\(p=\sqrt{m\omega}R\)</span>; then <span
+class="math inline">\(p^2/(2m)+m\omega^2x^2/2=\omega J\)</span>. Gain
+acts on both quadratures, so this realization is an effective amplitude
+model rather than Newton’s unmodified relation <span
+class="math inline">\(\dot x=p/m\)</span>.</p>
+<p>The physical idea has precedent: Schweitzer, Ebeling and Tilch
+describe particles that store environmental energy and convert it into
+motion, with limit cycles above an uptake threshold. Their model
+motivates the comparison; equation (1) is the explicit model tested
+here.</p>
+<h2 id="finite-fuel-an-exact-energy-inequality">2. Finite fuel: an exact
+energy inequality</h2>
+<p>The positive quadrant is invariant. For <span
+class="math inline">\(E=\omega J+e\)</span>, cancellation of the
+internal transfer gives</p>
+<p><span class="math display">\[\dot E=P-2\gamma\omega J-\kappa e.
+\tag{2}\]</span></p>
+<p>Put <span class="math inline">\(a=\min(2\gamma,\kappa)&gt;0\)</span>.
+At <span class="math inline">\(P=0\)</span>,</p>
+<p><span class="math display">\[0\le E(t)\le E(0)e^{-at},\qquad
+0\le J(t)\le E(0)e^{-at}/\omega. \tag{3}\]</span></p>
+<p>Thus even an initially amplifying depot, with <span
+class="math inline">\(ge(0)&gt;\gamma\)</span>, eventually exhausts its
+energy and sends <span class="math inline">\(J(t)\)</span> to zero. For
+arbitrary fixed <span class="math inline">\(P\)</span>, the bound <span
+class="math inline">\(\dot E\le P-aE\)</span> also gives global bounded
+solutions. The conclusion depends explicitly on positive losses.
+Lossless closed dynamics is a different candidate, whose conserved
+energy can retain preparation dependence.</p>
+<h2 id="replenishment-an-explicit-positive-attractor">3. Replenishment:
+an explicit positive attractor</h2>
+<p>The quiet equilibrium is <span
+class="math inline">\((J,e)=(0,P/\kappa)\)</span>. The linear action
+growth rate there is <span
+class="math inline">\(2(gP/\kappa-\gamma)\)</span>. Define</p>
+<p><span class="math display">\[P_c=\frac{\kappa\gamma}{g}.\]</span></p>
+<p>For <span class="math inline">\(P&gt;P_c\)</span> a positive
+equilibrium exists:</p>
+<p><span class="math display">\[e_* = \frac{\gamma}{g},\qquad
+J_* = \frac{P-P_c}{2\gamma\omega}. \tag{4}\]</span></p>
+<p>It attracts every initial state with <span
+class="math inline">\(J(0)&gt;0\)</span> and <span
+class="math inline">\(e(0)&gt;0\)</span>. To prove this, use the
+nonnegative function</p>
+<p><span
+class="math display">\[V=\omega\left[J-J_*-J_*\log(J/J_*)\right]
++e-e_*-e_*\log(e/e_*).\]</span></p>
+<p>Writing <span class="math inline">\(\delta J=J-J_*\)</span> and <span
+class="math inline">\(\delta e=e-e_*\)</span>, the first term
+contributes <span class="math inline">\(2g\omega\delta J\delta
+e\)</span>. The depot equation is</p>
+<p><span class="math display">\[\dot e=-(\kappa+2g\omega J_*)\delta
+e-2g\omega e\delta J.\]</span></p>
+<p>Multiplication by <span class="math inline">\(1-e_*/e\)</span>
+cancels the cross term exactly, giving</p>
+<p><span class="math display">\[\dot V=-(\kappa+2g\omega
+J_*)\frac{(e-e_*)^2}{e}\le0. \tag{5}\]</span></p>
+<p>Sublevel sets of <span class="math inline">\(V\)</span> are compact
+within the positive quadrant. On <span class="math inline">\(\dot
+V=0\)</span> we have <span class="math inline">\(e=e_*\)</span>;
+remaining there requires <span class="math inline">\(J=J_*\)</span>. The
+invariant-set argument therefore proves convergence to (4). An initially
+empty depot becomes positive immediately when <span
+class="math inline">\(P&gt;0\)</span>. An exactly zero oscillator seed
+stays zero even above threshold; the attracting positive branch has the
+basin <span class="math inline">\(J(0)&gt;0\)</span>.</p>
+<p>The result supplies an actual physical-time action attractor in a
+classical effective model. It also identifies precisely what powers
+it.</p>
+<h2 id="selection-tests-and-consequence">4. Selection tests and
+consequence</h2>
+<p>At the same <span class="math inline">\(g,\gamma,\kappa,P\)</span>,
+probes of different frequency acquire the same energy <span
+class="math inline">\(\omega J_*=(P-P_c)/(2\gamma)\)</span>, rather than
+the same action. Demanding a common action <span
+class="math inline">\(K&gt;0\)</span> instead requires the power
+prescription</p>
+<p><span class="math display">\[P(\omega)=P_c+2\gamma\omega K.
+\tag{6}\]</span></p>
+<p>This prescription inserts the desired scale in the source. It is the
+physical step a further theory must explain, rather than a consequence
+of attraction. Moreover <span
+class="math inline">\(J_*\downarrow0\)</span> continuously as <span
+class="math inline">\(P\downarrow P_c\)</span>: instability of the quiet
+state above threshold supplies no positive lower action bound across the
+admitted source parameters. Exact rest remains a trajectory
+throughout.</p>
+<p>The promising ingredient is feedback that erases initial amplitude;
+the failed ingredient is identifying its source-dependent attractor with
+a universal constant. Together with Q02’s proposed frequency-selective
+radiation response, this suggests a sharper question: can a
+self-consistent reservoir dynamically set a common spectral amplitude,
+with its energy budget included? Merely connecting this depot to a
+linear radiation bath would still supply <span
+class="math inline">\(P\)</span>.</p>
+<p>Park further pumped-oscillator variants. A different route worth
+testing is a conservative field sector with a fixed topological
+constraint: its quiet-state exclusion would be a geometric restriction
+rather than continuous fueling. The decisive test is whether its minimum
+action survives dilation, not merely whether a nontrivial stationary
+configuration exists. This is a proposed next test, not evidence that
+topology already fixes an action constant.</p>
+<h2 id="source-and-review-boundary">Source and review boundary</h2>
+<p>F. Schweitzer, W. Ebeling and B. Tilch, <em>Complex Motion of
+Brownian Particles with Energy Depots</em>, Physical Review Letters
+<strong>80</strong>, 5044 (1998), <a
+href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.80.5044">publisher
+record and abstract</a>. Coverage: one discovery query and the publisher
+abstract; no full-text equation match or novelty assessment. Its
+energy-uptake/limit-cycle mechanism prompted the finite-fuel versus
+replenished comparison. Equations (1)–(6) are the present exploratory
+calculation, with energy accounting and a written Lyapunov check; no
+numerical or symbolic scripts were used.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

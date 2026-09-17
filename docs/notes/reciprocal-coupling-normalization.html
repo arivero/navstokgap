@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reciprocal exchange fixes relative mechanical scales</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Reciprocal exchange fixes relative mechanical scales</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/reciprocal-coupling-normalization.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/reciprocal-coupling-normalization.pdf">PDF</a></p><p>Two measured acceleration responses determine an inertia ratio when
+both arise from a shared conservative spring. A connected network
+determines all such ratios if its cycle products are consistent. One
+common multiplier of inertias, spring constants, energies and actions
+remains free. Reciprocal exchange therefore supplies a
+relative-normalization mechanism, with an explicit residual
+absolute-scale freedom.</p>
+<p>Status: Q06 exploratory derivation, not an accepted-ledger claim. The
+model and written consistency review below require independent proof
+review and a bounded literature comparison before promotion. No novelty
+claim is made.</p>
+<h2 id="specify-the-response-before-choosing-masses">1. Specify the
+response before choosing masses</h2>
+<p>Let two coordinates <span class="math inline">\(x,y\in\mathbb
+R\)</span> have the same length units and share physical time <span
+class="math inline">\(t\)</span>. Suppose their measured equations
+are</p>
+<p><span class="math display">\[\ddot x=-\alpha(x-y),\qquad
+\ddot y=\beta(x-y),\qquad \alpha,\beta&gt;0. \tag{1}\]</span></p>
+<p>Both coefficients have units time<span
+class="math inline">\(^{-2}\)</span>. Isolated free motion would leave
+the sectors’ positive inertias <span
+class="math inline">\(m_1,m_2\)</span> independently arbitrary. Now
+require the specific mechanical completion</p>
+<p><span class="math display">\[L=\tfrac12m_1\dot x^2+\tfrac12m_2\dot
+y^2
+-\tfrac12k(x-y)^2,\qquad k&gt;0. \tag{2}\]</span></p>
+<p>Here masses have mass units and <span
+class="math inline">\(k\)</span> has mass/time<span
+class="math inline">\(^2\)</span> units. This assumes a diagonal
+constant kinetic energy and one reciprocal position-dependent
+interaction. It is a physical model premise, not a consequence of
+observing arbitrary coupled motion. Its forces are <span
+class="math inline">\(F_1=-k(x-y)\)</span> and <span
+class="math inline">\(F_2=k(x-y)\)</span>. The Euler–Lagrange equations
+agree with (1) exactly when</p>
+<p><span class="math display">\[m_1\alpha=m_2\beta=k,
+\qquad \frac{m_2}{m_1}=\frac\alpha\beta. \tag{3}\]</span></p>
+<p>Thus fixed responses admit precisely the positive family <span
+class="math inline">\((m_1,m_2,k)=m_1(1,\alpha/\beta,\alpha)\)</span>,
+with the entries interpreted in their stated units. Coupling constrains
+relative normalization; equal inertias follow only if the two
+acceleration responses are equal.</p>
+<h2 id="energy-exchange-and-the-remaining-action-freedom">2. Energy
+exchange and the remaining action freedom</h2>
+<p>Writing <span class="math inline">\(r=x-y\)</span>, the conserved
+energy and total momentum are</p>
+<p><span class="math display">\[H=\tfrac12m_1\dot x^2+\tfrac12m_2\dot
+y^2+\tfrac12kr^2,
+\qquad P=m_1\dot x+m_2\dot y. \tag{4}\]</span></p>
+<p>Indeed <span class="math inline">\(\dot T_1=-kr\dot x\)</span>, <span
+class="math inline">\(\dot T_2=kr\dot y\)</span>, and <span
+class="math inline">\(\dot V=kr(\dot x-\dot y)\)</span>, so <span
+class="math inline">\(\dot H=0\)</span>; the two forces give <span
+class="math inline">\(\dot P=0\)</span>. To display an exchange current,
+assign half the interaction energy to each sector: <span
+class="math inline">\(E_1=T_1+V/2\)</span>, <span
+class="math inline">\(E_2=T_2+V/2\)</span>. Then</p>
+<p><span class="math display">\[\dot E_1=-\tfrac{k}{2}r(\dot x+\dot
+y)=-\dot E_2. \tag{5}\]</span></p>
+<p>The half split is an accounting convention; conservation of <span
+class="math inline">\(H\)</span> is independent of it. Generic initial
+data give nonzero exchange. Measuring power in an independently
+calibrated energy unit would add information beyond (1).</p>
+<p>For every dimensionless <span
+class="math inline">\(\eta&gt;0\)</span>, replace <span
+class="math inline">\((m_1,m_2,k)\)</span> by <span
+class="math inline">\((\eta m_1,\eta m_2,\eta k)\)</span>. Equations
+(1), all coordinate histories with the same initial positions and
+velocities, and their periods remain unchanged. <span
+class="math inline">\(L,H,P,E_i\)</span> and the currents in (5) scale
+by <span class="math inline">\(\eta\)</span>. So does the trajectory
+action <span class="math inline">\(S=\int L\,dt\)</span> on any fixed
+time interval. Independent rescaling of only one sector generally
+violates (3); common rescaling does not.</p>
+<p>An on-shell positive action diagnostic makes this freedom visible
+without cancellation in <span class="math inline">\(S\)</span>. Set
+<span class="math inline">\(M=m_1+m_2\)</span>, <span
+class="math inline">\(\mu=m_1m_2/M\)</span> and <span
+class="math inline">\(X=(m_1x+m_2y)/M\)</span>. Then</p>
+<p><span class="math display">\[L=\tfrac12M\dot X^2+\tfrac12\mu\dot
+r^2-\tfrac12kr^2,
+\qquad \omega^2=k/\mu=\alpha+\beta. \tag{6}\]</span></p>
+<p>In the stationary centre frame choose <span
+class="math inline">\(r=A\cos(\omega t)\)</span>, <span
+class="math inline">\(A&gt;0\)</span>. With <span
+class="math inline">\(p_r=\mu\dot r\)</span>, its closed-orbit action
+is</p>
+<p><span class="math display">\[I=\frac1{2\pi}\oint p_r\,dr
+=\frac12\mu\omega A^2=\frac{E_{\rm rel}}\omega. \tag{7}\]</span></p>
+<p>The integral follows from <span class="math inline">\(p_r\dot r=\mu
+A^2\omega^2\sin^2(\omega t)\)</span> over one period. It has action
+units. Common rescaling sends <span class="math inline">\(I\)</span> to
+<span class="math inline">\(\eta I\)</span> at fixed trajectory. Even
+for fixed masses and spring, the admitted small amplitudes <span
+class="math inline">\(A\downarrow0\)</span> send <span
+class="math inline">\(I\)</span> to zero. The full Lagrangian action
+over this stationary-centre period is zero because the kinetic and
+potential integrals coincide; (7) must not be identified with that
+signed integral.</p>
+<p>The relative frequency is strictly positive for this fixed two-body
+model. The full system also has a free centre coordinate, so it has a
+zero-frequency mode. This is a finite-dimensional classical frequency
+statement, with no volume or continuum claim and no quantum energy
+gap.</p>
+<h2 id="a-network-consistency-test">3. A network consistency test</h2>
+<p>The relative mechanism extends to a finite connected undirected graph
+of scalar coordinates, all measured in the same length and time units.
+On every edge <span class="math inline">\(\{i,j\}\)</span> suppose both
+directed responses <span
+class="math inline">\(a_{ij},a_{ji}&gt;0\)</span> are known:</p>
+<p><span class="math display">\[\ddot q_i=-\sum_{j\sim
+i}a_{ij}(q_i-q_j). \tag{8}\]</span></p>
+<p>Seek only the mechanical class</p>
+<p><span class="math display">\[L=\tfrac12\sum_i m_i\dot q_i^2
+-\tfrac12\sum_{\{i,j\}}k_{ij}(q_i-q_j)^2,
+\qquad m_i&gt;0,\quad k_{ij}=k_{ji}&gt;0. \tag{9}\]</span></p>
+<p>Comparison of coefficients requires <span class="math inline">\(m_i
+a_{ij}=m_j a_{ji}=k_{ij}\)</span>. Hence the necessary cycle condition
+is</p>
+<p><span class="math display">\[\prod_{\ell=0}^{s-1}
+\frac{a_{i_\ell i_{\ell+1}}}{a_{i_{\ell+1}i_\ell}}=1,
+\qquad i_s=i_0. \tag{10}\]</span></p>
+<p>It is sufficient as well: choose any <span
+class="math inline">\(m_0&gt;0\)</span>, transport masses along a
+spanning tree using <span
+class="math inline">\(m_j/m_i=a_{ij}/a_{ji}\)</span>, and apply (10) on
+each remaining edge’s fundamental cycle. This makes its transported
+ratio agree with the edge ratio. All masses are positive and define the
+required springs. Any two solutions have the same mass ratio along every
+edge; connectivity makes their quotient one common constant. A
+disconnected graph instead retains one constant per connected
+component.</p>
+<p>For a concrete failed test take a triangle with <span
+class="math inline">\(a_{12}=2\gamma\)</span> and all other directed
+edge coefficients <span class="math inline">\(\gamma&gt;0\)</span>. The
+cycle <span class="math inline">\(1\to2\to3\to1\)</span> has product 2.
+The required ratios would give <span
+class="math inline">\(m_2=2m_1\)</span>, <span
+class="math inline">\(m_3=m_2\)</span>, and <span
+class="math inline">\(m_1=m_3\)</span>, a contradiction. Such responses
+cannot have completion (9). This rejects that diagonal-inertia
+reciprocal-spring model; it does not exclude completions with additional
+variables or a different kinetic form.</p>
+<h2 id="decision-and-written-consistency-review">4. Decision and written
+consistency review</h2>
+<p>The positive outcome is a concrete relative calibration mechanism:
+reciprocal exchange joins formerly independent normalizations. Its cycle
+condition is a falsifiable constraint on measured responses. It does not
+dynamically drive masses toward a ratio; it identifies which fixed
+masses are compatible with the assumed energy and observed equations. A
+calibrated reference mass, spring force or energy transfer would fix the
+common multiplier empirically. It would supply the missing normalization
+as an input.</p>
+<p>The coordinator’s written checks are (3) by direct variation, (4)–(5)
+by the displayed work balance, (6)–(7) by the centre/relative change of
+coordinates and period integral, and (10) by path consistency. Scaling
+changes mechanical parameters rather than coordinate units: a fixed
+external force or mass standard would distinguish the models. Positive
+<span class="math inline">\(\eta\)</span> and positive amplitudes
+approach zero action without using a degenerate mass endpoint. No
+numerical or symbolic verification scripts were used.</p>
+<p>Q05 left open whether mutual interaction could remove its common
+action coefficient. Within (2) and (9), fixed mutual responses remove
+relative freedoms but retain the common one. Park further spring-network
+variants unless a concrete measured response or proposed interaction
+violates this completion and changes a named physical premise. For the
+quantum track, the next distinct test is global spin-action patching:
+distinguish classical symplectic consistency from consistency of a
+proposed phase <span class="math inline">\(\exp(iS/K)\)</span>, and
+locate which premise, if any, forces integrality or fixes <span
+class="math inline">\(K\)</span>.</p>
+<p>Source context is the <a
+href="stabilized-topology-action-scale.html">Q05 normalization
+calculation</a> and <a href="composition-universality.html">conditional
+composition result</a>. Their source audits are retained for their own
+claims. The present elementary mechanical construction has no new
+prior-art comparison yet; this exploratory note is not a ledger
+promotion.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flowing before decimating leaves every norm-based criterion unchanged: what is needed is a statement about the state</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Flowing before decimating leaves every norm-based criterion
+unchanged: what is needed is a statement about the state</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-before-decimation.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-before-decimation.pdf">PDF</a></p><p>Conjugating by the flow before blocking does not improve the
+criterion of <a href="blocking-criterion-monotone.html">the
+blocking-criterion note</a>, and the reason is one line: <span
+class="math inline">\(\Phi_t\)</span> is a bijection of the
+configuration space, so <span
+class="math display">\[\big\|V\circ\Phi_t\big\|_\infty=\sup_U
+V\big(\Phi_t(U)\big)
+=\sup_{U&#39;}V(U&#39;)=\big\|V\big\|_\infty,\]</span> even though <span
+class="math inline">\(V(\Phi_t(U))\le V(U)\)</span> holds pointwise by
+the monotonicity of the flow. The straddling-plaquette norm that enters
+<span class="math inline">\(\beta_{\rm block}\)</span> is therefore
+unchanged, the block gap is unchanged because conjugation is unitary,
+and the factor <span class="math inline">\(3M^2/8\)</span> by which
+blocking loses is unchanged. The same argument disposes of every
+criterion built from operator norms: <strong>no reordering of
+conjugation and decimation can help, because the quantities such a
+criterion uses are conjugation-invariant or
+bijection-invariant.</strong> The flow’s gain is pointwise and therefore
+visible only in expectation, that is, only against a state whose weight
+sits where the flowed action is small. With that, the last inexpensive
+idea in this programme is closed, and the residual statement is sharp:
+the remaining input is control of the ground-state measure, which is the
+constructive problem in its Euclidean form. Constants explicit; nothing
+promoted.</p>
+<h2 id="the-three-invariances">1. The three invariances</h2>
+<p>Let <span class="math inline">\(\Phi_t\)</span> be the lattice flow
+map and <span class="math inline">\(W_t\)</span> its unitary
+implementation, as in <a href="flow-conjugation-truncation.html">the
+flow-conjugation note</a> Proposition 1.</p>
+<p><strong>(i) Spectra are conjugation-invariant.</strong> Every
+eigenvalue of <span class="math inline">\(H\)</span>, every gap, and in
+particular the block gap <span class="math inline">\(\Delta_M\)</span>
+of a block Hamiltonian, is unchanged by <span
+class="math inline">\(H\mapsto W_tHW_t^*\)</span>.</p>
+<p><strong>(ii) Sup norms of multiplication operators are
+bijection-invariant.</strong> For <span class="math inline">\(f\in
+C(\mathcal M)\)</span> and a bijection <span
+class="math inline">\(\Phi\)</span> of <span
+class="math inline">\(\mathcal M\)</span>, <span
+class="math inline">\(\|f\circ\Phi\|_\infty=\|f\|_\infty\)</span>.
+Applied to the magnetic term, <span
+class="math display">\[\big\|V\circ\Phi_t\big\|_\infty=\big\|V\big\|_\infty
+=\frac{4N\hbar c}{ag^2}\cdot\#\{\text{plaquettes}\},\]</span> and to the
+straddling part, <span class="math inline">\(\|\sum_{p\ \rm
+str}w_p\circ\Phi_t\|_\infty\)</span> is bounded by the same <span
+class="math inline">\(6M^2\cdot4N\hbar c/(ag^2)\)</span> per block as
+before. The pointwise inequality <span
+class="math inline">\(V\circ\Phi_t\le V\)</span>, which the monotonicity
+of the flow supplies, is compatible with equality of the suprema because
+<span class="math inline">\(\Phi_t\)</span> maps the configuration space
+onto itself.</p>
+<p><strong>(iii) Hence the criterion is unchanged.</strong> The blocking
+criterion <span class="math display">\[\beta_{\rm
+block}=\frac{\big\|\sum_{p\ \rm str}w_p\big\|_\infty}{\Delta_M}
+=\frac{24M^2N}{g^2\,\delta(g;M)}\]</span> has a numerator fixed by (ii)
+and a denominator fixed by (i), so conjugating before blocking leaves it
+exactly as computed in <a href="blocking-criterion-monotone.html">the
+blocking-criterion note</a>, and blocking still loses by <span
+class="math inline">\(3M^2/8\)</span>.</p>
+<h2 id="why-no-reordering-helps">2. Why no reordering helps</h2>
+<p>Any criterion of the form (perturbation norm)/(unperturbed gap) is
+built from two quantities of which the first is invariant under
+bijections of the configuration space and the second under unitary
+conjugation. The flow supplies exactly a bijection and a unitary.
+So:</p>
+<p><strong>Proposition.</strong> Let <span
+class="math inline">\(\mathcal C(H_0,\phi)\)</span> be any criterion
+depending on <span class="math inline">\(H_0\)</span> only through its
+spectrum and on <span class="math inline">\(\phi\)</span> only through
+<span class="math inline">\(\|\phi\|_\infty\)</span>. Then <span
+class="math inline">\(\mathcal C\)</span> takes the same value for <span
+class="math inline">\((H_0,\phi)\)</span> and for <span
+class="math inline">\((W_tH_0W_t^*,\,\phi\circ\Phi_t)\)</span>, for
+every flow time <span class="math inline">\(t\)</span>.</p>
+<p>This covers the Yarotsky criterion used in <a
+href="strong-coupling-uniform-gap.html">the T2 note</a>, its blocked
+version, and the Schur-complement criteria of <a
+href="weak-coupling-feshbach-reduction.html">the Feshbach note</a>, all
+of which reduce to comparisons of norms with gaps.</p>
+<h2 id="where-the-flows-gain-actually-lives">3. Where the flow’s gain
+actually lives</h2>
+<p>The flow does reduce the action: <span
+class="math inline">\(V(\Phi_t(U))\le V(U)\)</span> for every <span
+class="math inline">\(U\)</span>, with strict inequality away from
+critical points, and <span
+class="math inline">\(\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\)</span>. That
+gain appears in expectations, <span
+class="math display">\[\big\langle\psi,\;(V\circ\Phi_t)\,\psi\big\rangle\
+\le\ \big\langle\psi,\;V\psi\big\rangle
+\qquad\text{for every state }\psi,\]</span> and is large when the weight
+of <span class="math inline">\(\psi\)</span> sits where the flow moves
+the configuration far, that is, on rough configurations. So the flow
+converts a rough state into a smooth one at the level of expectations
+while leaving every worst-case bound alone.</p>
+<p>A criterion that could see the gain must therefore be
+<strong>relative to the state</strong>, of the form <span
+class="math display">\[\big\langle\psi,\phi\,\psi\big\rangle\ \le\
+\epsilon\,\big\langle\psi,(H-E_0)\psi\big\rangle+\eta\|\psi\|^2
+\qquad\text{on the low-energy subspace},\]</span> which is the relative
+form already isolated in <a href="schur-error-ultraviolet.html">the
+Schur note</a> Lemma 1<span class="math inline">\(&#39;\)</span> and in
+the relative hypothesis of <a
+href="weak-coupling-feshbach-reduction.html">the Feshbach note</a> §3a.
+The quantity it needs is the distribution of the field strength in the
+low-energy states, that is, the ground-state measure <span
+class="math inline">\(|\Omega(U)|^2\,dU\)</span>, which is a probability
+measure on the configuration space and is exactly the object the
+Euclidean formulation supplies explicitly as <span
+class="math inline">\(e^{-S}dU\)</span> and the Hamiltonian formulation
+leaves implicit.</p>
+<h2 id="the-residual-statement">4. The residual statement</h2>
+<p>Collecting the closed routes of this programme:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>method</th>
+<th>status</th>
+<th>reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>variational upper bounds</td>
+<td>closed for <span class="math inline">\(m&gt;0\)</span></td>
+<td>a spectral measure with all negative moments finite can have <span
+class="math inline">\(m=0\)</span></td>
+</tr>
+<tr class="even">
+<td>expansion around the free theory</td>
+<td>closed</td>
+<td>bound reaches <span class="math inline">\(m\)</span> only at the
+confinement scale</td>
+</tr>
+<tr class="odd">
+<td>blocking by projection</td>
+<td>closed</td>
+<td>boundary grows like <span class="math inline">\(M^2\)</span>, block
+gap does not</td>
+</tr>
+<tr class="even">
+<td>conjugation by the flow</td>
+<td>closed</td>
+<td>spectrum-invariant; the gain is the truncation, which is cheap</td>
+</tr>
+<tr class="odd">
+<td>flow before decimation</td>
+<td>closed (this note)</td>
+<td>norms are bijection-invariant</td>
+</tr>
+<tr class="even">
+<td>decimation with controlled couplings</td>
+<td><strong>open</strong></td>
+<td>the constructive problem</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Addendum.</strong> The ground-state measure estimate asked
+for in Section 5 exists: <a
+href="agmon-ground-state-suppression.html">the Agmon note</a> proves the
+Agmon identity for the Kogut–Susskind ground state and gives a
+suppression <span class="math inline">\(e^{-\lambda n}\)</span> of
+configurations with <span class="math inline">\(n\)</span> excess
+plaquettes, with <span
+class="math inline">\(\lambda\simeq2\sqrt{2v}/g^2\)</span>, the coupling
+dependence of the Euclidean Wilson weight.</p>
+<p>Every method that uses only norms and spectra is exhausted, and each
+was closed by a computation with explicit constants. What is left needs
+the distribution of the field in the low-energy states, and that is
+where the Euclidean construction has its tools and the Hamiltonian
+formulation has none of its own.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The question raised at the end of <a
+href="lattice-truncation-uniform.html">the lattice-truncation note</a>
+is answered in the negative, with the invariance that makes it so. The
+programme’s norm-based line is complete. The next thing that would
+advance it is an estimate on the ground-state measure of the
+Kogut–Susskind Hamiltonian at intermediate coupling, for instance a
+bound of the form <span class="math inline">\(|\Omega(U)|^2\le
+C\,e^{-\lambda S_w(U)}\)</span> with <span
+class="math inline">\(\lambda&gt;0\)</span> uniform in the volume, which
+would import the Euclidean large-field machinery into the Hamiltonian
+setting. That is a well-posed question and it is the natural successor
+to everything above.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

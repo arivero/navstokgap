@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The two reasons to stop, as research problems: what a correlation inequality would buy, what a certified verification cannot, and where the research is</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The two reasons to stop, as research problems: what a correlation
+inequality would buy, what a certified verification cannot, and where
+the research is</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/reasons-to-stop-as-research.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/reasons-to-stop-as-research.pdf">PDF</a></p><p>The user’s direction of 2026-09-17: the reasons recorded for stopping
+are reasons to research. Taking each seriously changes the map, and one
+earlier statement is corrected: a correlation inequality was called an
+unblocking, and it is less than that.</p>
+<p><strong>What a Griffiths-type inequality would buy.</strong> Such an
+inequality gives <span class="math inline">\(d\langle
+W(C)\rangle/d\beta_W\ge0\)</span> for Wilson loops. Consequences: the
+string tension is nonincreasing in <span
+class="math inline">\(\beta_W\)</span>, and the decay rate of any
+correlator of loop observables with vanishing mean is nonincreasing in
+<span class="math inline">\(\beta_W\)</span>. Control therefore
+transfers <strong>from weaker coupling to stronger coupling
+only</strong>: knowing a positive mass at <span
+class="math inline">\(\beta_W&#39;\)</span> gives it at every <span
+class="math inline">\(\beta_W\le\beta_W&#39;\)</span>. On the map of <a
+href="confinement-scale-bands.html">the bands note</a> this replaces the
+three strong-side blocking steps of band B by the single mixing
+statement H2, and it touches nothing on the weak side, where the problem
+is. The vacuum-sector gap itself, the <span
+class="math inline">\(0^{++}\)</span> channel, is the decay of a
+truncated correlator whose two terms both increase with <span
+class="math inline">\(\beta_W\)</span>, so even its monotonicity does
+not follow. A correlation inequality is a simplification of H1’s target,
+and no substitute for H1.</p>
+<p><strong>Where the standard proofs of such inequalities
+break.</strong> Ginibre’s method needs the interaction to lie in a cone
+of products of single-site functions satisfying the duplicate-variables
+condition. For the character cone of <span
+class="math inline">\(SU(2)\)</span> the single-site condition reduces
+to <span
+class="math display">\[\int\!\!\int\prod_{i=1}^n\big(\chi_i(x)-\chi_i(y)\big)\,dx\,dy
+=\sum_{S\subseteq\{1..n\}}(-1)^{|S^c|}\,N_S\,N_{S^c},\qquad
+N_S=\dim\operatorname{Hom}\Big(1,\bigotimes_{i\in S}V_i\Big),\]</span>
+which vanishes for odd <span class="math inline">\(n\)</span>, equals
+<span
+class="math inline">\(2N_{1234}+2(\delta_{12}\delta_{34}+\delta_{13}\delta_{24}+\delta_{14}\delta_{23})\ge0\)</span>
+for <span class="math inline">\(n=4\)</span>, and is positive in every
+case computed at <span class="math inline">\(n=6\)</span> (six spin
+<span class="math inline">\(\tfrac12\)</span>: <span
+class="math inline">\(70\)</span>; six spin <span
+class="math inline">\(1\)</span>: <span
+class="math inline">\(100\)</span>; four spin <span
+class="math inline">\(\tfrac12\)</span> and two spin <span
+class="math inline">\(1\)</span>: <span
+class="math inline">\(28\)</span>; six spin <span
+class="math inline">\(2\)</span>: <span
+class="math inline">\(260\)</span>). The single-site condition is
+therefore no obstruction as far as checked. The obstruction is that the
+plaquette term <span
+class="math inline">\(\operatorname{Re}\operatorname{tr}(U_1U_2U_3U_4)\)</span>
+is not a nonnegative combination of products of single-link functions:
+the abelian proof writes <span
+class="math inline">\(\cos(\theta_1+\dots)\)</span> through sums and
+differences of angles, which uses the commutativity of the group, and no
+analogue exists for a matrix product. To this author’s knowledge the
+second Griffiths inequality is open for <span
+class="math inline">\(SU(2)\)</span> and <span
+class="math inline">\(SU(3)\)</span> lattice gauge theory, with neither
+proof nor counterexample; the centre-based inequalities that do exist
+are listed in <a href="what-would-unblock.html">the what-would-unblock
+note</a> §1.</p>
+<p><strong>What a certified verification cannot do.</strong> H2 at <span
+class="math inline">\(\beta_W\simeq6\)</span> on a box of <span
+class="math inline">\(216\)</span> to <span
+class="math inline">\(2000\)</span> links asks for a certified bound on
+a supremum over boundary conditions of a total-variation distance
+between marginals of Gibbs measures on <span
+class="math inline">\(SU(3)^{|V|}\)</span>, an integral over <span
+class="math inline">\(1700\)</span> to <span
+class="math inline">\(16000\)</span> real dimensions. Certified
+quadrature in that dimension does not exist; transfer-matrix truncations
+in the character basis have state spaces exponential in the slice; Monte
+Carlo is not certified. The certified methods that exist are polymer
+expansions with computer-enumerated small polymers and analytic tails,
+and they converge only where the expansion does, which for the Wilson
+measure means <span class="math inline">\(\beta_W\)</span> of order
+<span class="math inline">\(0.1\)</span> to <span
+class="math inline">\(1\)</span>, never <span
+class="math inline">\(6\)</span>. So H2 cannot be supplied at the
+coupling where it is needed, by any method known to the author, and the
+rigorous reach of the strong side ends at <span
+class="math inline">\(\beta_W\sim1\)</span> at best, a factor of six
+below the crossover. The corresponding decision about the repository’s
+rules is therefore moot.</p>
+<p><strong>Where the research is.</strong> Both reasons point to the
+same place. The mass gap for <span class="math inline">\(SU(3)\)</span>
+is H1: control of the blocking steps from the weak side down to the
+coupling where the strong side takes over, and the strong side’s reach
+is <span class="math inline">\(\beta_W\sim1\)</span> in principle and
+<span class="math inline">\(0.0135\)</span> as proved. H1 splits into
+two sub-targets.</p>
+<ul>
+<li><em>H1a, sharpness.</em> Rigorous small-field renormalization exists
+(Balaban, Commun. Math. Phys. 95 (1984) 17; 109 (1987) 249; 119 (1988)
+243; 122 (1989) 175; Magnen, Rivasseau and Sénéor, Commun. Math. Phys.
+155 (1993) 325; Dimock’s exposition, Rev. Math. Phys. 25 (2013) 1330010;
+all metadata level) and holds for <span
+class="math inline">\(g^2\)</span> below an unspecified constant. The
+weak-side analogue of band B is the stretch between the coupling that a
+rigorous small-field step can handle with explicit constants and <span
+class="math inline">\(g^2\simeq1\)</span>, and its width is unknown
+because no explicit constant has ever been written down for one
+step.</li>
+<li><em>H1b, the physics.</em> The last steps, in which <span
+class="math inline">\(\xi/a\)</span> passes from about <span
+class="math inline">\(10\)</span> to about <span
+class="math inline">\(1\)</span>; three doublings at one loop.</li>
+</ul>
+<p><strong>The programme that follows.</strong> Write one blocking step
+of the Euclidean small-field renormalization for <span
+class="math inline">\(SU(3)\)</span> with explicit constants, in the
+form: block-averaged link variables; the fluctuation integral at
+quadratic order, which is Gaussian with a constraint and whose
+propagator decays on the scale of the block; the remainder as a polymer
+gas with an explicit Kotecký–Preiss threshold <span
+class="math inline">\(g_{\rm pert}^2\)</span>; and the bound on the
+distance of the effective interaction from the Wilson form. The pieces
+already in hand with constants are the large-field measure bound <span
+class="math inline">\(e^{-\eta^2/(4g^2)}\)</span> of <a
+href="large-field-action-lower-bound.html">the lower-bound note</a>, the
+sharpness of the flow’s growth (<a
+href="flow-instability-large-field.html">instability note</a>), and the
+lattice truncation (<a
+href="lattice-truncation-uniform.html">lattice-truncation note</a>). The
+deliverable of the first step is the number <span
+class="math inline">\(g_{\rm pert}^2\)</span>, the weak-side counterpart
+of the strong side’s <span class="math inline">\(0.0135\)</span>; the
+number of doublings between <span class="math inline">\(g_{\rm
+pert}^2\)</span> and <span class="math inline">\(g^2\simeq1\)</span> is
+then the honest width of the problem, in place of the crude “<span
+class="math inline">\(1/g^2\gtrsim10^2\)</span>” now on the map.
+Constants explicit; nothing promoted.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

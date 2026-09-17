@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What a classical cut must retain</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>What a classical cut must retain</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/classical-cut-state.md">Markdown source</a></p><p>A position-only cut loses the direction of motion of a fixed-energy
+spring receiver. Exact segment laws then fail the composition law;
+independently refreshing the missing direction at every cut converges to
+a frozen position. Retaining canonical momentum restores exact
+composition on every partition. The required datum has momentum units,
+and the available orbital action remains set by the prepared energy.</p>
+<h2 id="fixed-experiment-and-exact-maps">1. Fixed experiment and exact
+maps</h2>
+<p>Use A10’s two-body receiver with masses <span
+class="math inline">\(m,M&gt;0\)</span>, stiffness <span
+class="math inline">\(k&gt;0\)</span>, zero centre position and total
+momentum. Put <span class="math inline">\(q=x-X\)</span>, <span
+class="math inline">\(\mu=mM/(m+M)\)</span> and <span
+class="math inline">\(p=\mu\dot q\)</span>. The full internal phase
+state is <span class="math inline">\(z=(q,p)\)</span> and</p>
+<p><span class="math display">\[H=\frac{p^2}{2\mu}+\frac{kq^2}{2},\qquad
+\omega=\sqrt{k/\mu},\qquad
+\Phi_t=\begin{pmatrix}
+\cos\omega t&amp;\sin\omega t/(\mu\omega)\\
+-\mu\omega\sin\omega t&amp;\cos\omega t
+\end{pmatrix}.
+\]</span></p>
+<p>Fix <span class="math inline">\(E&gt;0\)</span>, <span
+class="math inline">\(A=\sqrt{2E/k}\)</span> and uniform phase on the
+ellipse <span class="math inline">\(H=E\)</span>: <span
+class="math inline">\(q=A\cos\phi\)</span>, <span
+class="math inline">\(p=-\mu\omega A\sin\phi\)</span>. This invariant
+preparation, the Hamiltonian and the observable <span
+class="math inline">\(q\)</span> stay fixed throughout refinement. The
+tagged position is <span class="math inline">\(x=Mq/(m+M)\)</span>, so
+all position conclusions transfer by this fixed factor. The maximum
+relative speed is <span class="math inline">\(A\omega\)</span>; choosing
+<span class="math inline">\(E\)</span> small enough enforces any
+prescribed positive particle-speed ceiling.</p>
+<p>Write <span class="math inline">\(P(q,p)=q\)</span>, and let <span
+class="math inline">\(L(q)\)</span> be the conditional phase-state law
+given position. For <span class="math inline">\(|q|&lt;A\)</span>, it
+gives equal weights to <span
+class="math inline">\(p=\pm\mu\omega\sqrt{A^2-q^2}\)</span>; at <span
+class="math inline">\(q=\pm A\)</span> it is the point mass at <span
+class="math inline">\(p=0\)</span>. This specifies a version even at the
+zero-probability endpoints. The stationary position density is <span
+class="math inline">\([\pi\sqrt{A^2-q^2}]^{-1}\)</span> on <span
+class="math inline">\((-A,A)\)</span>. On probability laws define <span
+class="math inline">\(U_t=(\Phi_t)_\#\)</span>, <span
+class="math inline">\(P_\#\nu\)</span> by projection, and <span
+class="math inline">\(L\rho=\int L(q)\rho(dq)\)</span>. The exact
+one-segment stationary conditional kernel is <span
+class="math inline">\(K_t=P_\#U_tL\)</span>; it is not a Markov
+transition semigroup for the position process. The following diagram
+names both procedures:</p>
+<p><span class="math display">\[
+\begin{array}{ccccc}
+L\delta_q&amp;\xrightarrow{U_s}&amp;U_sL\delta_q
+&amp;\xrightarrow{U_t}&amp;U_{t+s}L\delta_q\\
+&amp;&amp;\downarrow P_\#&amp;&amp;\downarrow P_\#\\
+&amp;&amp;K_s\delta_q&amp;\xrightarrow{K_t}&amp;K_tK_s\delta_q.
+\end{array}
+\]</span></p>
+<p>The upper route gives <span
+class="math inline">\(K_{t+s}\delta_q\)</span> after final projection.
+The lower route inserts the operation <span
+class="math inline">\(LP_\#\)</span> at the interface. This operation
+replaces the history-conditioned momentum law by its stationary
+conditional law. It is an additional reset, whereas an observational cut
+simply records <span class="math inline">\(q\)</span>. Marginalizing the
+true joint path law retains all its correlations and is
+restriction-consistent on every finite partition.</p>
+<h2 id="composition-defect-and-its-missing-information">2. Composition
+defect and its missing information</h2>
+<p>For a starting position <span class="math inline">\(q\)</span>, the
+exact kernel is the equally weighted pair</p>
+<p><span class="math display">\[q&#39;=q\cos\omega t\
+\pm\sqrt{A^2-q^2}\sin\omega t.\]</span></p>
+<p>In particular <span class="math inline">\(\mathbb E[q_t\mid
+q_0=q]=q\cos\omega t\)</span>. Independently composing these kernels
+gives mean <span class="math inline">\(q\cos\omega s\cos\omega
+t\)</span>, while the full route gives <span
+class="math inline">\(q\cos\omega(s+t)\)</span>. Their difference (full
+minus reset) is <span class="math inline">\(-q\sin\omega s\sin\omega
+t\)</span>, which is generically nonzero. For example, at <span
+class="math inline">\(q=A/2\)</span> and <span
+class="math inline">\(s=t=\pi/(2\omega)\)</span> the full mean is <span
+class="math inline">\(-A/2\)</span> and the reset mean is zero. Thus
+these stationary two-time conditional kernels do not form a
+semigroup.</p>
+<p>The general block identity explains the missing term. Writing <span
+class="math inline">\(\Phi_t=\left(\begin{smallmatrix}a_t&amp;b_t\\c_t&amp;d_t\end{smallmatrix}\right)\)</span>,
+its retained-to-retained block obeys <span
+class="math inline">\(a_{t+s}=a_ta_s+b_tc_s\)</span>. Here <span
+class="math inline">\(b_tc_s=-\sin\omega t\sin\omega s\)</span>:
+propagation into momentum and back is lost by multiplying only the
+position blocks. The interface equation is <span
+class="math inline">\(q_{s+t}=a_tq_s+b_tp_s\)</span>. Momentum <span
+class="math inline">\(p_s\)</span> has units <span
+class="math inline">\(ML/T\)</span> and <span
+class="math inline">\(b_t\)</span> has units <span
+class="math inline">\(T/M\)</span>; their product supplies a length. No
+action parameter is needed to close this equation.</p>
+<p>On the fixed ellipse, position together with the sign of momentum
+suffices away from the turning points, where momentum is zero. Uniformly
+in time the phase state <span class="math inline">\((q,p)\)</span> gives
+the unambiguous completion. An equivalent history completion is two
+successive positions: if <span
+class="math inline">\(\sin\omega\delta\ne0\)</span>, then</p>
+<p><span
+class="math display">\[p_s=\mu\omega\frac{q_s\cos\omega\delta-q_{s-\delta}}
+{\sin\omega\delta}.\]</span></p>
+<p>It becomes singular at half-period sampling, and its sensitivity to
+observation error grows as <span
+class="math inline">\(\delta\downarrow0\)</span>. Exact mathematical
+recoverability therefore does not by itself establish a finite-precision
+physical readout.</p>
+<h2 id="refining-independent-resets-changes-the-motion">3. Refining
+independent resets changes the motion</h2>
+<p>Let <span class="math inline">\(T&gt;0\)</span> be fixed, <span
+class="math inline">\(\delta=T/N\)</span> and let <span
+class="math inline">\(Q_N\)</span> be the terminal position from <span
+class="math inline">\(N\)</span> independently composed <span
+class="math inline">\(K_\delta\)</span> kernels, starting at <span
+class="math inline">\(q\)</span>. Set <span
+class="math inline">\(c=\cos\omega\delta\)</span>. Conditional first and
+second moments give</p>
+<p><span class="math display">\[\mathbb E Q_N=q c^N,\qquad
+\mathbb E Q_N^2=\frac{A^2}{2}
++\left(q^2-\frac{A^2}{2}\right)[\cos(2\omega\delta)]^N.\]</span></p>
+<p>For the second formula, one step sends <span
+class="math inline">\(q^2\)</span> to <span
+class="math inline">\(q^2\cos(2\omega\delta)+A^2\sin^2\omega\delta\)</span>;
+subtract <span class="math inline">\(A^2/2\)</span> and iterate. Since
+<span class="math inline">\(N\delta^2=T^2/N\to0\)</span>, both cosine
+powers tend to one. Consequently <span class="math inline">\(\mathbb
+E[(Q_N-q)^2]\to0\)</span>. This is conditional terminal <span
+class="math inline">\(L^2\)</span> convergence to a frozen position, at
+fixed <span class="math inline">\(q,E,k,m,M,T\)</span>. The full
+observational route remains <span class="math inline">\(K_T\)</span>,
+independent of <span class="math inline">\(N\)</span>, and is
+nondegenerate for <span class="math inline">\(|q|&lt;A\)</span> and
+<span class="math inline">\(\sin\omega T\ne0\)</span>.</p>
+<p>A directly measurable distinction survives averaging over the same
+stationary preparation: the reset two-time correlation is <span
+class="math inline">\((A^2/2)[\cos(\omega T/N)]^N\to A^2/2\)</span>,
+while the true correlation is <span
+class="math inline">\((A^2/2)\cos\omega T\)</span>. Each reset kernel
+preserves the stationary one-time position law, so equal one-time
+marginals conceal the change of experiment. This limit concerns terminal
+and two-time observables; no path-topology limit is asserted here.</p>
+<h2 id="action-bookkeeping-and-the-selection-obligation">4. Action
+bookkeeping and the selection obligation</h2>
+<p>The canonical orbital action with <span
+class="math inline">\(1/(2\pi)\)</span> normalization is</p>
+<p><span class="math display">\[J=\frac1{2\pi}\oint p\,dq=\frac
+E\omega.\]</span></p>
+<p>Indeed <span class="math inline">\(p\,dq=\mu\omega
+A^2\sin^2\phi\,d\phi\)</span> for increasing dynamical phase, whose
+integral is <span class="math inline">\(2\pi E/\omega\)</span>. Also
+uniform phase gives <span class="math inline">\(\langle
+q^2\rangle=E/k\)</span>, <span class="math inline">\(\langle
+p^2\rangle=\mu E\)</span> and <span class="math inline">\(\langle
+qp\rangle=0\)</span>, so <span
+class="math inline">\(\sqrt{\det\operatorname{Cov}(q,p)}=E/\omega\)</span>.
+Both have units <span class="math inline">\(ML^2/T\)</span>. This
+normalization differs from A15’s twice-area estimator and is stated
+explicitly.</p>
+<p>Within the single fixed preparation <span
+class="math inline">\(J\)</span> is conserved. Across preparations <span
+class="math inline">\(E\downarrow0\)</span> at fixed Hamiltonian, <span
+class="math inline">\(J\downarrow0\)</span> and all the phase-state
+composition identities still hold; <span
+class="math inline">\(E=0\)</span> supplies the equilibrium endpoint.
+Thus exact classical cut composition in this experiment forces no
+positive preparation-independent lower action. The present calculation
+settles a candidate cut-state requirement and the classical-definition
+gate, while the selection of a positive universal quantum-role parameter
+remains open.</p>
+<h2 id="source-construction-and-next-experiment">5. Source construction
+and next experiment</h2>
+<p>I005’s classical readings motivate retaining transition information
+across cuts; its historical attributions remain in that idea entry. A10
+and B23 supply the explicit spring receiver. Ford–Kac–Mazur p. 505,
+(2)–(5), supplies the established harmonic propagator, and Zwanzig
+p. 219, (21)–(24), supplies the complementary elimination-to-memory
+construction. The present fixed-energy conditional kernels and reset
+limit are elementary consequences derived above. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B33.md">B33</a>
+records bounded literature coverage and <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/classical-cut-state-B33.md">the
+review</a> records proof acceptance.</p>
+<p>Next, retain tagged position <strong>and momentum</strong> while
+eliminating an independent receiver mode in a three-body spring system.
+Determine the receiver memory needed across a cut and whether finite
+observable history restores composition. This distinguishes loss caused
+solely by omitting the observed body’s velocity from memory induced by a
+physical receiver. Keep Hamiltonian and preparation fixed; trace any
+proposed action-valued observable to those inputs.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

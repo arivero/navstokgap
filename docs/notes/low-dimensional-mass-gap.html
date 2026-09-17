@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A gap is a scale the classical theory lacks: solved low-dimensional mass gaps and the positive-action question</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A gap is a scale the classical theory lacks: solved low-dimensional
+mass gaps and the positive-action question</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/low-dimensional-mass-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/low-dimensional-mass-gap.pdf">PDF</a></p><p>The Yang–Mills mass gap and this programme’s positive action floor
+are the same kind of statement: the infimum of an observable over
+nontrivial states is a positive finite multiple of a unit formed from
+the theory’s fixed constants, and it is zero or infinite whenever those
+constants admit no such unit. Classical Yang–Mills in four dimensions
+carries no constant at all in its field equations, and classical
+mechanics with a mass and a force carries no action unit, so both
+classical floors are zero; the classical scale covariance that realizes
+zero is the same similarity in both cases. Every low-dimensional mass
+gap that can be solved in writing then falls into two classes. A
+<em>supplied</em> gap is proportional to a constant written into the
+definition: the box gap <span class="math inline">\(2\pi\hbar
+c/L\)</span> of a free field, the strong-coupling lattice gap in units
+of <span class="math inline">\(1/a\)</span>, a mass term, the string
+tension <span class="math inline">\(g^2L\)</span> of two-dimensional
+Yang–Mills on a circle, and the repository’s own Ising and cluster gaps
+<span class="math inline">\(Ka[1-\tanh 2b]\)</span> and <span
+class="math inline">\(J\)</span>. A <em>generated</em> gap arises from
+the interplay of two structures that are each scale-free: in Yang–Mills
+quantum mechanics the commutator potential and the canonical commutator
+produce <span
+class="math inline">\(\Delta=\delta_1\,\hbar^{4/3}g^{2/3}m^{-2/3}\)</span>,
+which vanishes if either <span class="math inline">\(\hbar\)</span> or
+<span class="math inline">\(g\)</span> is removed, and this is the exact
+form of “commutative fields have no gap” in zero space dimensions; in
+scale-invariant quantum mechanics a scale is forced by the consistency
+requirement of defining the dynamics at all. The dictionary in Section 7
+records what this decides for the necessity theorem sought in STATE item
+1: the mass-gap problem takes the non-commutative structure as given and
+asks for the scale, so the analogy governs the second stage of the
+positive-action question and identifies the consistency-forced scale as
+the only mechanism in the mass-gap story that does not assume the
+structure it explains. This is G07, an exploratory consolidation with
+written proofs; it promotes no ledger claim.</p>
+<h2 id="two-floors-and-one-dimensional-theorem">1. Two floors and one
+dimensional theorem</h2>
+<p><strong>The mass gap.</strong> Jaffe and Witten require a
+self-adjoint <span class="math inline">\(H\ge0\)</span> with <span
+class="math inline">\(H\Omega=0\)</span>, <span
+class="math inline">\(\operatorname{spec}(H)\cap(0,\Delta)=\varnothing\)</span>
+for some <span class="math inline">\(\Delta&gt;0\)</span>, and a finite
+supremum <span class="math inline">\(m\)</span> of such <span
+class="math inline">\(\Delta\)</span> (<a
+href="millennium-problem-definitions.html">definitions</a>). For a
+purely discrete spectrum <span
+class="math inline">\(E_0&lt;E_1&lt;\cdots\)</span> the supremum is
+attained and equals <span class="math inline">\(E_1-E_0\)</span>.</p>
+<p><strong>The action floor.</strong> <a
+href="action-unit-dimensional-selection.html">Q14</a> defines, for a
+model with fixed constants <span class="math inline">\(c\)</span>, the
+attained set <span class="math inline">\(\mathcal A(c)\)</span> of an
+action observable over admitted masses, preparations and solutions, and
+the floor <span class="math inline">\(g(c)=\inf\{A\in\mathcal
+A(c):A&gt;0\}\)</span>. The programme’s target is <span
+class="math inline">\(g(c)&gt;0\)</span> for the Galileo comparison,
+whose observable is <span class="math inline">\(\tau\Delta
+E=(3F/v)A_{\rm inertial,fall}=F^2\tau^3/(2m)\)</span> (<a
+href="newton-insertion-action.html">N01</a> §1).</p>
+<p><strong>Theorem 1 (floors are unit multiples).</strong> Let a theory
+be specified by fixed constants <span
+class="math inline">\(c_1,\dots,c_r\)</span> with dimension vectors
+<span class="math inline">\(d_i\in\mathbb R^3\)</span> over mass, length
+and time, and let <span class="math inline">\(X\)</span> be an
+observable with dimension vector <span
+class="math inline">\(d_X\)</span> whose attained set <span
+class="math inline">\(\mathcal X(c)\subset[0,\infty]\)</span> is defined
+by dimensionally homogeneous relations and whose floor <span
+class="math inline">\(\gamma(c)=\inf(\mathcal
+X(c)\cap(0,\infty))\)</span> depends on the fixed constants only. Then
+<span class="math inline">\(\gamma(c)\in\{0,\infty\}\)</span> for every
+<span class="math inline">\(c\)</span> when <span
+class="math inline">\(d_X\)</span> lies outside the span of <span
+class="math inline">\(d_1,\dots,d_r\)</span>, and <span
+class="math inline">\(\gamma(c)=\Pi(c)F(\pi_1,\dots,\pi_s)\)</span> with
+<span class="math inline">\(\Pi\)</span> a monomial of dimension <span
+class="math inline">\(d_X\)</span> and <span
+class="math inline">\(\pi_j\)</span> the independent dimensionless
+combinations otherwise.</p>
+<p><em>Proof.</em> This is Q14’s Theorem A with <span
+class="math inline">\(d_A\)</span> replaced by <span
+class="math inline">\(d_X\)</span>, and the proof is the same three
+lines. A change of units <span
+class="math inline">\(\lambda\in(0,\infty)^3\)</span> carries the model
+at <span class="math inline">\(c\)</span> to the model at <span
+class="math inline">\(\lambda^{d_i}c_i\)</span> and multiplies every
+attained value by <span class="math inline">\(\lambda^{d_X}\)</span>, so
+<span
+class="math inline">\(\gamma(\lambda^{d_1}c_1,\dots)=\lambda^{d_X}\gamma(c)\)</span>.
+If <span class="math inline">\(d_X\)</span> is outside the span, choose
+<span class="math inline">\(\lambda\)</span> with <span
+class="math inline">\(\lambda^{d_i}=1\)</span> for all <span
+class="math inline">\(i\)</span> and <span
+class="math inline">\(\lambda^{d_X}\neq1\)</span>: then <span
+class="math inline">\(\gamma(c)=\lambda^{d_X}\gamma(c)\)</span>, which
+forces <span class="math inline">\(\gamma(c)\in\{0,\infty\}\)</span>. If
+<span class="math inline">\(d_X=\sum a_id_i\)</span>, then <span
+class="math inline">\(\gamma/\Pi\)</span> is invariant under all unit
+changes and is therefore a function of the dimensionless combinations.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Corollary 2 (similarity forces zero).</strong> If the
+admitted class at fixed constants is preserved by a one-parameter family
+of transformations that multiplies <span
+class="math inline">\(X\)</span> by every <span
+class="math inline">\(s&gt;0\)</span>, then <span
+class="math inline">\(\gamma=0\)</span> whenever some positive value is
+attained. This is Q14’s Theorem B for the observable <span
+class="math inline">\(X\)</span>.</p>
+<p>The two instances that motivate this note:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Mass gap of pure Yang–Mills</th>
+<th>Action floor of the Galileo comparison</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Classical fixed constants</td>
+<td>none in <span class="math inline">\(D_A^*F_A=0\)</span>; <span
+class="math inline">\(c\)</span> alone</td>
+<td><span class="math inline">\(m\)</span>, <span
+class="math inline">\(F\)</span> (or <span
+class="math inline">\(m\)</span>, <span
+class="math inline">\(g\)</span>)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(d_X\)</span> in their span?</td>
+<td>no: <span class="math inline">\(c\)</span> gives no mass</td>
+<td>no: <span
+class="math inline">\((1,2,-1)\notin\operatorname{span}\{(1,0,0),(1,1,-2)\}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Classical similarity realizing zero</td>
+<td><span class="math inline">\(A_s(x)=sA(sx)\)</span>: static energy
+<span class="math inline">\(\mapsto sE\)</span> in three space
+dimensions</td>
+<td><span class="math inline">\(x\mapsto sx\)</span>, <span
+class="math inline">\(t\mapsto s^{1/2}t\)</span>: <span
+class="math inline">\(\tau\Delta E\mapsto s^{3/2}\tau\Delta
+E\)</span></td>
+</tr>
+<tr class="even">
+<td>Classical floor</td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(0\)</span> (C002, C027, C056–C058)</td>
+</tr>
+<tr class="odd">
+<td>Quantum fixed constants</td>
+<td><span class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, dimensionless <span
+class="math inline">\(g^2\hbar\)</span>: still no mass unit in <span
+class="math inline">\(d=4\)</span></td>
+<td><span class="math inline">\(\hbar\)</span>: action unit present</td>
+</tr>
+<tr class="even">
+<td>Where the scale must come from</td>
+<td>the regularization scale, by transmutation (Section 4)</td>
+<td>the constant <span class="math inline">\(\hbar\)</span> itself,
+whose necessity is the open question</td>
+</tr>
+</tbody>
+</table>
+<p>The classical Yang–Mills row is checked in Section 4; the Galileo row
+is checked in Section 7. The table already states the analogy at the
+level of Theorem 1: both classical theories have an empty span, both
+quantum theories must obtain the missing unit from somewhere, and the
+two “somewheres” differ.</p>
+<h2 id="the-exact-hbar-scaling-of-spectra-for-homogeneous-potentials">2.
+The exact <span class="math inline">\(\hbar\)</span>-scaling of spectra
+for homogeneous potentials</h2>
+<p><strong>Theorem 3.</strong> Let <span
+class="math inline">\(V\ge0\)</span> be continuous on <span
+class="math inline">\(\mathbb R^n\)</span> and positively homogeneous of
+degree <span class="math inline">\(k&gt;-2\)</span>, <span
+class="math inline">\(V(sx)=s^kV(x)\)</span>, and let <span
+class="math inline">\(H=-\frac{\hbar^2}{2m}\Delta+\lambda V\)</span> be
+the Friedrichs operator of its form on <span
+class="math inline">\(C_0^\infty\)</span>. With the unitary dilation
+<span
+class="math inline">\((U_\ell\psi)(x)=\ell^{-n/2}\psi(x/\ell)\)</span>
+and <span
+class="math display">\[\ell^{k+2}=\frac{\hbar^2}{m\lambda},\qquad
+\varepsilon=\frac{\hbar^2}{m\ell^2}
+=\hbar^{\frac{2k}{k+2}}\,\lambda^{\frac{2}{k+2}}\,m^{-\frac{k}{k+2}},\]</span>
+one has <span
+class="math inline">\(U_\ell^{-1}HU_\ell=\varepsilon\,(-\tfrac12\Delta+V)\)</span>.
+Every spectral datum of <span class="math inline">\(H\)</span>, in
+particular any gap, is <span class="math inline">\(\varepsilon\)</span>
+times the corresponding pure number of <span
+class="math inline">\(-\tfrac12\Delta+V\)</span>.</p>
+<p><em>Proof.</em> <span
+class="math inline">\(\Delta(U_\ell\psi)=\ell^{-2}U_\ell(\Delta\psi)\)</span>
+and <span
+class="math inline">\(V\,U_\ell\psi=\ell^{k}U_\ell(V\psi)\)</span> on
+<span class="math inline">\(C_0^\infty\)</span>, which <span
+class="math inline">\(U_\ell\)</span> preserves; so <span
+class="math inline">\(U_\ell^{-1}HU_\ell=\frac{\hbar^2}{m\ell^2}(-\tfrac12\Delta)
++\lambda\ell^kV\)</span>, and the choice of <span
+class="math inline">\(\ell\)</span> equates the two coefficients. The
+identity passes to the Friedrichs extensions because <span
+class="math inline">\(U_\ell\)</span> maps the form on the core to the
+transformed form. Unitary equivalence preserves spectra and
+multiplicities. <span class="math inline">\(\square\)</span></p>
+<p><strong>Proposition 4 (classical similarity).</strong> For the
+classical Hamiltonian <span class="math inline">\(|p|^2/2m+\lambda
+V(x)\)</span> with <span class="math inline">\(V\)</span> homogeneous of
+degree <span class="math inline">\(k\)</span>, the map <span
+class="math inline">\(x\mapsto sx\)</span>, <span
+class="math inline">\(t\mapsto s^{1-k/2}t\)</span> carries solutions to
+solutions, multiplies energies by <span
+class="math inline">\(s^k\)</span> and the action along a trajectory by
+<span class="math inline">\(s^{1+k/2}\)</span> (Landau–Lifshitz,
+<em>Mechanics</em> §10; verified against the equation of motion: <span
+class="math inline">\(m\ddot x\)</span> scales as <span
+class="math inline">\(s/s^{2-k}=s^{k-1}\)</span> and <span
+class="math inline">\(\lambda\nabla V\)</span> as <span
+class="math inline">\(s^{k-1}\)</span>). Hence for <span
+class="math inline">\(k&gt;0\)</span> the range of the classical
+Hamiltonian is <span class="math inline">\([0,\infty)\)</span>: the
+classical energy floor is zero, and the classical action floor is zero
+by Corollary 2.</p>
+<p>Three readings of Theorem 3 organize the rest of the note.</p>
+<ul>
+<li>For <span class="math inline">\(k&gt;0\)</span> the exponent <span
+class="math inline">\(2k/(k+2)\)</span> is positive: the gap of <span
+class="math inline">\(H\)</span> is <span
+class="math inline">\(\varepsilon\,\delta\)</span> with <span
+class="math inline">\(\delta\)</span> a pure number and vanishes as
+<span class="math inline">\(\hbar\to0\)</span> and as <span
+class="math inline">\(\lambda\to0\)</span>. A gap of a growing potential
+is a quantum effect and an interaction effect at once; at <span
+class="math inline">\(\lambda=0\)</span> the operator is <span
+class="math inline">\(-\hbar^2\Delta/2m\)</span> with spectrum <span
+class="math inline">\([0,\infty)\)</span>.</li>
+<li>The degree <span class="math inline">\(k=-2\)</span> is
+action-critical: the classical action is scale-invariant, <span
+class="math inline">\(m\lambda\)</span> has the dimension of action
+squared, the exponent of <span
+class="math inline">\(\varepsilon\)</span> has a pole, and the quantum
+problem depends on the single dimensionless number <span
+class="math inline">\(2m\lambda/\hbar^2\)</span> with no energy unit at
+all. This is the mechanical counterpart of the Yang–Mills scaling <span
+class="math inline">\(S(A_s)=s^{4-d}S(A)\)</span>, which is critical at
+<span class="math inline">\(d=4\)</span> (<a
+href="comparison-and-bridges.html">comparison</a> §3). Section 6 treats
+it.</li>
+<li>Special cases of <span class="math inline">\(\varepsilon\)</span>:
+<span class="math inline">\(k=2\)</span> gives <span
+class="math inline">\(\hbar\sqrt{\lambda/m}\)</span>, the oscillator
+quantum up to a pure number; <span class="math inline">\(k=4\)</span>
+gives <span
+class="math inline">\(\hbar^{4/3}\lambda^{1/3}m^{-2/3}\)</span>; <span
+class="math inline">\(k\to\infty\)</span> gives <span
+class="math inline">\(\hbar^2/(m\ell^2)\)</span> with <span
+class="math inline">\(\ell\)</span> the box length, the
+particle-in-a-box unit; <span class="math inline">\(k=-1\)</span> gives
+<span class="math inline">\(m\lambda^2/\hbar^2\)</span>, the Rydberg
+unit, whose <em>inverse</em> dependence on <span
+class="math inline">\(\hbar\)</span> means that the hydrogen level
+spacing diverges as <span class="math inline">\(\hbar\to0\)</span> while
+the levels themselves crowd to zero from below. In each case the gap is
+the unique energy monomial in <span
+class="math inline">\((\hbar,m,\lambda)\)</span>, as Theorem 1
+requires.</li>
+</ul>
+<h2
+id="yangmills-quantum-mechanics-a-solved-gap-that-needs-two-commutators">3.
+Yang–Mills quantum mechanics: a solved gap that needs two
+commutators</h2>
+<p>The zero-momentum sector of Yang–Mills theory on a torus is a
+finite-dimensional quantum-mechanical system whose potential is the
+squared commutator of the constant gauge potentials. Its spectrum is
+purely discrete for every positive <span
+class="math inline">\(\hbar\)</span> and coupling, although the
+classical energy range is <span
+class="math inline">\([0,\infty)\)</span> (Simon 1983; Lüscher 1983).
+The proof below is Simon’s first argument with every constant explicit,
+extended to the SU(2) model with <span class="math inline">\(D\)</span>
+matrices and to its gauge-invariant sector.</p>
+<h3 id="the-scalar-model">3.1 The scalar model</h3>
+<p><strong>Theorem 5.</strong> Let <span
+class="math inline">\(H=-\frac{\hbar^2}{2m}\Delta+\frac{g^2}{2}x^2y^2\)</span>
+on <span class="math inline">\(L^2(\mathbb R^2)\)</span>, defined as the
+Friedrichs operator of its form on <span
+class="math inline">\(C_0^\infty(\mathbb R^2)\)</span>.</p>
+<ol type="1">
+<li>As quadratic forms, <span class="math display">\[H\ \ge\
+\tfrac12K,\qquad
+K=-\frac{\hbar^2}{2m}\Delta+\frac{\hbar g}{2\sqrt
+m}\,(|x|+|y|).\]</span></li>
+<li><span class="math inline">\(H\)</span> has compact resolvent: its
+spectrum is a sequence <span
+class="math inline">\(E_0&lt;E_1&lt;E_2&lt;\cdots\)</span> of
+eigenvalues of finite multiplicity tending to infinity.</li>
+<li><span class="math inline">\(E_0\)</span> is simple with a strictly
+positive eigenfunction, so <span
+class="math inline">\(\Delta=E_1-E_0&gt;0\)</span>, and <span
+class="math inline">\(H-E_0\)</span> satisfies the Jaffe–Witten
+conditions with <span
+class="math inline">\(0&lt;m=\Delta&lt;\infty\)</span>.</li>
+<li><span class="math inline">\(E_n(\hbar,m,g)=\varepsilon\,e_n\)</span>
+with <span class="math inline">\(e_n\)</span> the eigenvalues of <span
+class="math inline">\(\tfrac12(-\Delta+x^2y^2)\)</span> and <span
+class="math display">\[\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3},\qquad
+\Delta=\delta_1\,\hbar^{4/3}g^{2/3}m^{-2/3},\quad\delta_1=e_1-e_0&gt;0.\]</span>
+Hence <span class="math inline">\(\Delta\to0\)</span> as <span
+class="math inline">\(\hbar\to0\)</span> and as <span
+class="math inline">\(g\to0\)</span>. At <span
+class="math inline">\(g=0\)</span> the spectrum is <span
+class="math inline">\([0,\infty)\)</span> with no eigenvalue. The
+classical Hamiltonian <span
+class="math inline">\(|p|^2/2m+g^2x^2y^2/2\)</span> has range <span
+class="math inline">\([0,\infty)\)</span>, and the motions <span
+class="math inline">\(y=p_y=0\)</span>, <span
+class="math inline">\(x(t)=x_0+p_xt/m\)</span> escape to infinity along
+the valley with arbitrarily small energy.</li>
+</ol>
+<p><em>Proof.</em> <strong>Oscillator bound.</strong> For <span
+class="math inline">\(\phi\in C_0^\infty(\mathbb R)\)</span> and <span
+class="math inline">\(\mu,\nu&gt;0\)</span>, with <span
+class="math inline">\(\alpha=\sqrt{\nu/\mu}\)</span>, integration by
+parts gives <span class="math inline">\(\int|\phi&#39;+\alpha
+y\phi|^2dy=\int|\phi&#39;|^2+\alpha^2\int y^2|\phi|^2
+-\alpha\int|\phi|^2\)</span>, so <span
+class="math display">\[\int\big(\mu|\phi&#39;|^2+\nu y^2|\phi|^2\big)dy\
+\ge\ \sqrt{\mu\nu}\int|\phi|^2dy .\]</span> With <span
+class="math inline">\(\mu=\hbar^2/2m\)</span> and <span
+class="math inline">\(\nu=\tfrac12m\omega^2\)</span> this is the
+zero-point energy <span class="math inline">\(\hbar\omega/2\)</span> of
+the oscillator <span
+class="math inline">\(-\frac{\hbar^2}{2m}\partial_y^2
++\frac12m\omega^2y^2\)</span>.</p>
+<p><strong>Slicing.</strong> Fix <span class="math inline">\(x\)</span>
+and apply the bound to <span
+class="math inline">\(\phi=\psi(x,\cdot)\)</span> with <span
+class="math inline">\(\nu=g^2x^2/2\)</span>, that is <span
+class="math inline">\(m\omega_x^2=g^2x^2\)</span>, <span
+class="math inline">\(\omega_x=g|x|/\sqrt m\)</span>, <span
+class="math inline">\(\sqrt{\mu\nu}=\hbar g|x|/(2\sqrt m)\)</span>.
+Integrating in <span class="math inline">\(x\)</span> (Fubini): <span
+class="math display">\[\int\Big[\frac{\hbar^2}{2m}|\partial_y\psi|^2+\frac{g^2}{2}x^2y^2|\psi|^2\Big]
+\ \ge\ \int\frac{\hbar g|x|}{2\sqrt m}|\psi|^2,\]</span> and
+symmetrically with <span class="math inline">\(x\leftrightarrow
+y\)</span>. Writing <span
+class="math inline">\(2q_H(\psi)=\int\frac{\hbar^2}{2m}|\nabla\psi|^2+\{\text{the
+$y$-slice}\} +\{\text{the $x$-slice}\}\)</span> and using the two slice
+bounds gives <span class="math inline">\(2q_H\ge q_K\)</span> on <span
+class="math inline">\(C_0^\infty\)</span>, which is Simon’s display (5)
+with the constants restored. The inequality extends to the form domain
+of <span class="math inline">\(H\)</span> by density and shows <span
+class="math inline">\(Q(H)\subset Q(K)\)</span>; the min-max values then
+satisfy <span
+class="math inline">\(\mu_n(H)\ge\tfrac12\mu_n(K)\)</span>.</p>
+<p><strong>Compact resolvent.</strong> Let <span
+class="math inline">\(W\ge\gamma|x|\)</span> be continuous with <span
+class="math inline">\(\gamma&gt;0\)</span> and <span
+class="math inline">\(K=-\frac{\hbar^2}{2m}\Delta+W\)</span>. On the
+unit form-ball <span
+class="math inline">\(\{q_K(\psi)+\|\psi\|^2\le1\}\)</span> the mass
+outside the ball of radius <span class="math inline">\(R\)</span> is at
+most <span class="math inline">\((\gamma R)^{-1}\)</span> and the <span
+class="math inline">\(H^1\)</span> norm on the ball is bounded, so the
+Rellich–Kondrachov theorem gives total boundedness in <span
+class="math inline">\(L^2\)</span>; thus <span
+class="math inline">\((K+1)^{-1/2}\)</span> and <span
+class="math inline">\((K+1)^{-1}\)</span> are compact (this is the case
+needed of Reed–Simon IV, Theorem XIII.67). Here <span
+class="math inline">\(W=\frac{\hbar g}{2\sqrt m}(|x|+|y|) \ge\frac{\hbar
+g}{2\sqrt m}\sqrt{x^2+y^2}\)</span>. Since <span
+class="math inline">\(\mu_n(H)\ge\tfrac12\mu_n(K) \to\infty\)</span>,
+<span class="math inline">\(H\)</span> has compact resolvent as well
+(Reed–Simon IV, Theorem XIII.16).</p>
+<p><strong>Simplicity.</strong> The Feynman–Kac formula <span
+class="math inline">\((e^{-tH/\hbar}\psi)(x)=\mathbb
+E^x[\exp(-\hbar^{-1}\int_0^tV(b_s)ds)\psi(b_t)]\)</span> with <span
+class="math inline">\(V\)</span> continuous and finite along paths shows
+that <span class="math inline">\(e^{-tH/\hbar}\)</span> is positivity
+improving for every <span class="math inline">\(t&gt;0\)</span>, and
+Reed–Simon IV Theorem XIII.44 then gives a simple ground state with
+strictly positive eigenfunction.</p>
+<p><strong>Scaling.</strong> Theorem 3 with <span
+class="math inline">\(n=2\)</span>, <span
+class="math inline">\(k=4\)</span>, <span
+class="math inline">\(\lambda=g^2/2\)</span>: <span
+class="math inline">\(\varepsilon=\hbar^{4/3}(g^2/2)^{1/3}m^{-2/3}\)</span>,
+and absorbing the pure number <span
+class="math inline">\(2^{-1/3}\)</span> into <span
+class="math inline">\(e_n\)</span> gives the displayed unit. At <span
+class="math inline">\(g=0\)</span> the Fourier transform diagonalizes
+<span class="math inline">\(-\hbar^2\Delta/2m\)</span> as multiplication
+by <span class="math inline">\(\hbar^2|p|^2/2m\)</span>. The classical
+statements are direct: on the invariant set <span
+class="math inline">\(\{y=p_y=0\}\)</span> Hamilton’s equations reduce
+to free motion in <span class="math inline">\(x\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Mechanism.</strong> The valleys <span
+class="math inline">\(\{xy=0\}\)</span> are unbounded and the classical
+phase-space volume below any positive energy is infinite, so a classical
+particle escapes at arbitrarily low energy. The transverse zero-point
+energy <span class="math inline">\(\hbar\omega_x/2=\hbar g|x|/(2\sqrt
+m)\)</span> grows linearly along a valley and confines the quantum
+particle. That confining term is the product of the two
+non-commutativities: <span class="math inline">\(\hbar\)</span> from
+<span class="math inline">\([x,p]=i\hbar\)</span> and <span
+class="math inline">\(g\)</span> from the quartic coupling, which is the
+squared commutator of the gauge potentials in Section 3.2. Removing
+either factor removes the gap, with the exponents <span
+class="math inline">\(4/3\)</span> and <span
+class="math inline">\(2/3\)</span> of Theorem 5(4).</p>
+<h3 id="the-su2-matrix-model-and-its-abelian-valleys">3.2 The SU(2)
+matrix model and its abelian valleys</h3>
+<p>Let <span class="math inline">\(T^a=\sigma^a/2\)</span>, so <span
+class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>
+and <span class="math inline">\([T^a,T^b]=i\epsilon^{abc}T^c\)</span>;
+let <span class="math inline">\(X_i=x_i^aT^a\)</span> with <span
+class="math inline">\(\vec x_i\in\mathbb R^3\)</span>, <span
+class="math inline">\(i=1,\dots,D\)</span>. Then <span
+class="math inline">\([X_i,X_j]=i(\vec x_i\times\vec x_j)^cT^c\)</span>
+and <span
+class="math inline">\(-\operatorname{tr}[X_i,X_j]^2=\tfrac12|\vec
+x_i\times\vec x_j|^2\)</span>. The Yang–Mills quantum-mechanical
+Hamiltonian is <span
+class="math display">\[H=-\frac{\hbar^2}{2m}\Delta_{\mathbb R^{3D}}
++\frac{g^2}{2}\sum_{i&lt;j}|\vec x_i\times\vec x_j|^2
+=-\frac{\hbar^2}{2m}\Delta_{\mathbb
+R^{3D}}-g^2\sum_{i&lt;j}\operatorname{tr}[X_i,X_j]^2 ;\]</span> other
+trace or sum conventions multiply <span
+class="math inline">\(g^2\)</span> by a fixed number and every energy by
+its cube root.</p>
+<p><strong>Theorem 6.</strong> For <span
+class="math inline">\(D\ge2\)</span>:</p>
+<ol type="1">
+<li>For every ordered pair <span class="math inline">\(i\neq j\)</span>,
+as forms, <span class="math inline">\(-\frac{\hbar^2}{2m}\Delta_{\vec
+x_j}+\frac{g^2}{2}|\vec x_i\times\vec x_j|^2 \ \ge\ \frac{\hbar g}{\sqrt
+m}|\vec x_i|\)</span>.</li>
+<li>As forms on <span class="math inline">\(L^2(\mathbb
+R^{3D})\)</span>, <span class="math display">\[H\ \ge\
+\tfrac12\Big[-\frac{\hbar^2}{2m}\Delta_{\mathbb R^{3D}}
++\frac{\hbar g}{\sqrt m}\sum_{i=1}^D|\vec x_i|\Big].\]</span></li>
+<li><span class="math inline">\(H\)</span> has compact resolvent and a
+simple strictly positive ground state; its gap is <span
+class="math inline">\(\Delta=\delta_1^{(D)}\,\hbar^{4/3}g^{2/3}m^{-2/3}&gt;0\)</span>,
+with the same <span class="math inline">\(\hbar\to0\)</span> and <span
+class="math inline">\(g\to0\)</span> conclusions as Theorem 5.</li>
+<li>The <span class="math inline">\(SO(3)\)</span> action <span
+class="math inline">\((U(R)\psi)(\vec x_1,\dots)=\psi(R^{-1}\vec
+x_1,\dots)\)</span> commutes with <span
+class="math inline">\(H\)</span>; the invariant subspace, which Gauss’s
+law selects in the constant-mode truncation of the gauge theory, reduces
+<span class="math inline">\(H\)</span>, contains the ground state, and
+has gap <span class="math inline">\(\Delta_{\rm
+inv}\ge\Delta&gt;0\)</span>.</li>
+<li>The potential vanishes exactly on the commuting configurations <span
+class="math inline">\(\{\vec x_i=\lambda_i\hat n\}\)</span>, where all
+<span class="math inline">\(X_i\)</span> lie in one Cartan subalgebra.
+For <span class="math inline">\(D=1\)</span> there is no pair, <span
+class="math inline">\(V\equiv0\)</span>, and <span
+class="math inline">\(H=-\hbar^2\Delta_{\mathbb R^3}/2m\)</span> has
+spectrum <span class="math inline">\([0,\infty)\)</span>.</li>
+</ol>
+<p><em>Proof.</em> (1) For fixed <span class="math inline">\(\vec
+x_i\neq0\)</span> choose an orthonormal frame of <span
+class="math inline">\(\mathbb R^3_{\vec x_j}\)</span> with third axis
+along <span class="math inline">\(\vec x_i\)</span>. Then <span
+class="math inline">\(|\vec x_i\times\vec x_j|^2=|\vec
+x_i|^2(u_1^2+u_2^2)\)</span>; drop the kinetic term in <span
+class="math inline">\(u_3\)</span> and apply the oscillator bound in
+<span class="math inline">\(u_1\)</span> and in <span
+class="math inline">\(u_2\)</span> with <span
+class="math inline">\(\nu=g^2|\vec x_i|^2/2\)</span>, each giving <span
+class="math inline">\(\hbar g|\vec x_i|/(2\sqrt m)\)</span>; the
+complement <span class="math inline">\(\vec x_i=0\)</span> is a null
+set. Integrate over the remaining variables. (2) Sum the pair
+inequalities over all <span class="math inline">\(D(D-1)\)</span>
+ordered pairs with weight <span
+class="math inline">\(w=1/(2(D-1))\)</span>: each kinetic term <span
+class="math inline">\(T_j\)</span> appears with total weight <span
+class="math inline">\(w(D-1)=\tfrac12\)</span> and each unordered pair
+potential with weight <span
+class="math inline">\(2w=1/(D-1)\le1\)</span>. Then <span
+class="math inline">\(H=\sum_{i\ne
+j}w(T_j+V_{ij})+\tfrac12\sum_jT_j+(1-\tfrac1{D-1})\sum_{i&lt;j}V_{ij}\)</span>,
+where both remainders are nonnegative forms; dropping the potential
+remainder and using (1) gives (2). (3) The bracket in (2) has <span
+class="math inline">\(W=\frac{\hbar g}{\sqrt m}\sum_i|\vec
+x_i|\ge\frac{\hbar g}{\sqrt m}|x|_{\mathbb R^{3D}}\)</span>, so the
+compact-resolvent, simplicity and scaling steps of Theorem 5 apply
+verbatim with <span class="math inline">\(n=3D\)</span>, <span
+class="math inline">\(k=4\)</span>. (4) <span
+class="math inline">\(U(R)\)</span> is unitary, preserves <span
+class="math inline">\(C_0^\infty\)</span>, commutes with each <span
+class="math inline">\(\Delta_{\vec x_i}\)</span> and preserves <span
+class="math inline">\(|\vec x_i\times\vec x_j|\)</span>; the Haar
+average <span class="math inline">\(\int U(R)\,dR\)</span> is the
+orthogonal projection onto the invariant subspace and commutes with
+<span class="math inline">\((H+1)^{-1}\)</span>, so the restriction is
+self-adjoint with compact resolvent. The strictly positive simple ground
+state <span class="math inline">\(\psi_0\)</span> satisfies <span
+class="math inline">\(U(R)\psi_0=c(R)\psi_0\)</span> with <span
+class="math inline">\(c(R)&gt;0\)</span> and <span
+class="math inline">\(|c(R)|=1\)</span>, hence is invariant, so <span
+class="math inline">\(E_0^{\rm inv}=E_0\)</span> and <span
+class="math inline">\(E_1^{\rm inv}\ge E_1\)</span>. (5) <span
+class="math inline">\(\vec x_i\times\vec x_j=0\)</span> for all pairs
+iff all nonzero vectors are parallel. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>The abelian and the two-dimensional cases.</strong> Along the
+commuting configurations the matrices commute and the potential is flat;
+writing <span class="math inline">\(\vec x_i=\lambda_i\hat
+n+\vec\xi_i\)</span> with <span class="math inline">\(\vec\xi_i\perp\hat
+n\)</span>, the transverse curvature of the potential grows
+quadratically in <span class="math inline">\(|\lambda|\)</span>, which
+is what (1) exploits. An abelian gauge group has <em>only</em> commuting
+configurations: its matrix model has <span
+class="math inline">\(V\equiv0\)</span> and the free spectrum <span
+class="math inline">\([0,\infty)\)</span>. This is the exact
+zero-dimensional form of the statement that commutative fields have no
+gap, and Section 4 gives the free-field form. The temporal-gauge
+constant modes of a gauge theory in <span
+class="math inline">\(d\)</span> spacetime dimensions are <span
+class="math inline">\(D=d-1\)</span> spatial components, so the
+zero-point mechanism needs <span class="math inline">\(d\ge3\)</span>;
+for <span class="math inline">\(d=2\)</span> the single matrix has no
+partner, in agreement with Section 5, where two-dimensional Yang–Mills
+has no local excitations at all and its discrete flux spectrum comes
+from the compact holonomy, a different mechanism.</p>
+<h3 id="the-finite-volume-origin-and-the-uniformity-problem">3.3 The
+finite-volume origin and the uniformity problem</h3>
+<p><strong>Proposition 7.</strong> For SU(2) Yang–Mills on a spatial
+torus of side <span class="math inline">\(L\)</span> with action <span
+class="math inline">\(S=-\frac{\hbar}{4g^2}\int
+F^a_{\mu\nu}F^{a\mu\nu}\,d^3x\,c\,dt\)</span> (<span
+class="math inline">\(g\)</span> dimensionless, <span
+class="math inline">\([A]=\)</span> length<span
+class="math inline">\(^{-1}\)</span>), temporal gauge and the
+constant-mode ansatz <span
+class="math inline">\(A^a_i(x,t)=a^a_i(t)\)</span>, the Hamiltonian is
+<span class="math display">\[H_0=\frac{g^2c}{2\hbar
+L^3}\sum_{i=1}^3|\vec p_i|^2
++\frac{\hbar cL^3}{2g^2}\sum_{i&lt;j}|\vec a_i\times\vec a_j|^2,\qquad
+[a^a_i,p^b_j]=i\hbar\delta_{ij}\delta^{ab},\]</span> which is Theorem 6
+with <span class="math inline">\(D=3\)</span>, <span
+class="math inline">\(m=\hbar L^3/(g^2c)\)</span> and <span
+class="math inline">\(g_B^2=\hbar cL^3/g^2\)</span>. Its energy unit is
+<span
+class="math display">\[\varepsilon=\hbar^{4/3}g_B^{2/3}m^{-2/3}=\frac{g^{2/3}\,\hbar
+c}{L},\]</span> so the zero-mode gap <span
+class="math inline">\(\Delta_0(L)=\delta_1^{(3)}g^{2/3}\hbar
+c/L\)</span> is positive for every <span
+class="math inline">\(L\)</span> and decays as <span
+class="math inline">\(1/L\)</span> at fixed coupling.</p>
+<p><em>Proof.</em> With <span class="math inline">\(F^a_{0i}=c^{-1}\dot
+a^a_i\)</span> and <span class="math inline">\(F^a_{ij}=(\vec
+a_i\times\vec a_j)^a\)</span> the Lagrangian is <span
+class="math inline">\(\frac{\hbar L^3}{2g^2c}\sum|\dot{\vec a}_i|^2
+-\frac{\hbar cL^3}{4g^2}\sum_{i,j}|\vec a_i\times\vec a_j|^2\)</span>;
+the Legendre transform and <span
+class="math inline">\(\tfrac14\sum_{i,j}=\tfrac12\sum_{i&lt;j}\)</span>
+give <span class="math inline">\(H_0\)</span>, and the exponent
+bookkeeping is <span
+class="math inline">\(\hbar^{4/3+1/3-2/3}c^{1/3+2/3}L^{1-2}g^{-2/3+4/3}\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p>Lüscher’s small-volume expansion (Nucl. Phys. B219 (1983) 233;
+abstract) states that the torus spectrum is discrete and expands in
+powers of <span class="math inline">\(g^{2/3}\)</span> with <span
+class="math inline">\(g\)</span> the renormalized coupling; Proposition
+7 is its leading term, and Lüscher–Münster (Nucl. Phys. B232 (1984) 445;
+abstract) carry it to one loop for SU(2) and locate the crossover to
+large-volume behaviour near <span
+class="math inline">\(z=M(0^+)L\simeq2\)</span>. Jaffe and Witten write
+(p. 7 of the local PDF) that “no present ideas point the direction to
+establish the existence of a mass gap that is uniform in the volume”.
+Proposition 7 shows the difficulty in the solved sector: <span
+class="math inline">\(\Delta_0(L)&gt;0\)</span> for every <span
+class="math inline">\(L\)</span> with <span
+class="math inline">\(\inf_L\Delta_0(L)=0\)</span>. Uniformity would
+need <span class="math inline">\(g(L)^{2/3}/L\)</span> bounded below,
+outside the weak-coupling regime where the truncation is justified; the
+compensation must come from the crossover regime, where the expansion no
+longer applies. In the language of Theorem 1, <span
+class="math inline">\(L\)</span> is a fixed apparatus length that enters
+the monomial and makes the finite-volume floor non-universal, and the
+uniformity requirement is exactly the demand that the floor be
+independent of it.</p>
+<p>The supersymmetric contrast identifies the mechanism once more: de
+Wit, Lüscher and Nicolai (Nucl. Phys. B320 (1989) 135; abstract) prove
+that the supersymmetric matrix-model Hamiltonians have continuous
+spectrum starting at zero, through low-energy states along the same
+abelian valleys. The fermionic zero-point energy cancels the bosonic
+<span class="math inline">\(\hbar\omega/2\)</span> per transverse mode,
+so the confining term of Theorem 5 vanishes. The gap of Theorems 5–6 is
+exactly the uncancelled transverse zero-point energy.</p>
+<h2
+id="free-and-abelian-fields-have-no-gap-compact-abelian-gaps-are-supplied-scales">4.
+Free and abelian fields have no gap; compact abelian gaps are supplied
+scales</h2>
+<p><strong>Proposition 8 (free fields inherit the classical
+dispersion).</strong> Let <span class="math inline">\(H\)</span> be the
+second quantization on Fock space of a one-particle operator <span
+class="math inline">\(\hbar\Omega\)</span> with <span
+class="math inline">\(\Omega\ge0\)</span> the classical frequency
+operator. Then <span
+class="math inline">\(\operatorname{spec}(H)\setminus\{0\}\)</span> has
+infimum <span
+class="math inline">\(\hbar\inf(\operatorname{spec}\Omega\setminus\{0\})\)</span>.
+In particular a free quantum field has a gap if and only if its
+classical dispersion relation has one.</p>
+<p><em>Proof.</em> On the <span
+class="math inline">\(n\)</span>-particle sector <span
+class="math inline">\(H\)</span> acts as <span
+class="math inline">\(\hbar\sum_{j\le n}\Omega_j\)</span>; its spectrum
+is the closure of <span class="math inline">\(n\)</span>-fold sums of
+spectral values of <span class="math inline">\(\hbar\Omega\)</span>, and
+the one-particle sector attains the infimum. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Corollary 9 (Maxwell).</strong> In a periodic box of side
+<span class="math inline">\(L\)</span>, Coulomb gauge and two transverse
+polarizations give <span
+class="math inline">\(H=\sum_{k\ne0,\sigma}\hbar c|k|\,
+n_{k\sigma}\)</span> after normal ordering, <span
+class="math inline">\(k\in(2\pi/L)\mathbb Z^3\)</span>: the gap is <span
+class="math inline">\(2\pi\hbar c/L\)</span> and tends to zero as <span
+class="math inline">\(L\to\infty\)</span>, where the spectrum is <span
+class="math inline">\([0,\infty)\)</span>. A scale-covariant classical
+dispersion <span class="math inline">\(\omega(sk)=s\omega(k)\)</span>
+has infimum zero in infinite volume; a mass term gives <span
+class="math inline">\(\omega=\sqrt{c^2k^2+\mu^2c^4/\hbar^2}\)</span> and
+the supplied gap <span class="math inline">\(\mu c^2\)</span>, and gauge
+invariance excludes the Maxwell mass term <span
+class="math inline">\(A_\mu A^\mu\)</span>. The constant modes are free
+(<span class="math inline">\(k=0\)</span>, spectrum <span
+class="math inline">\([0,\infty)\)</span> already at finite <span
+class="math inline">\(L\)</span>) in the non-compact theory; in compact
+<span class="math inline">\(U(1)\)</span> they live on a torus and
+contribute energies proportional to <span class="math inline">\(\hbar
+c/L\)</span> as well. Free quantization therefore generates no scale:
+every abelian finite-volume gap is <span class="math inline">\(\hbar
+c/L\)</span> times a number.</p>
+<p><strong>Proposition 10 (dimensional census of pure
+Yang–Mills).</strong> With <span
+class="math inline">\(D=\partial+A\)</span>, <span
+class="math inline">\([A]=L^{-1}\)</span>, <span
+class="math inline">\([F]=L^{-2}\)</span> and <span
+class="math inline">\(S=\frac1{g^2}\int\operatorname{tr}F^2\,d^dx\)</span>
+of action dimension, <span
+class="math inline">\([g^2]=(\text{action})^{-1}L^{d-4}\)</span>, so
+<span class="math inline">\(g^2\hbar\)</span> has dimension <span
+class="math inline">\(L^{d-4}\)</span>. The classical field equations
+<span class="math inline">\(D_A^*F_A=0\)</span> contain no constant, and
+the static energy of <span class="math inline">\(A_s(x)=sA(sx)\)</span>
+in three space dimensions is <span class="math inline">\(sE(A)\)</span>,
+so the classical energy floor is zero. The quantum fixed constants are
+<span class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span> and <span
+class="math inline">\(g\)</span>:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(d\)</span></th>
+<th><span class="math inline">\(g^2\hbar\)</span></th>
+<th>Mass unit from <span class="math inline">\((\hbar,c,g)\)</span></th>
+<th>Solved or expected gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td><span class="math inline">\(L^{-2}\)</span></td>
+<td>none; <span class="math inline">\(g^2\hbar^2c\)</span> is a string
+tension (energy/length)</td>
+<td><span class="math inline">\(E_R=\tfrac12g^2\hbar^2cLC_2(R)\)</span>
+on a circle, diverging with <span class="math inline">\(L\)</span>
+(Section 5)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><span class="math inline">\(L^{-1}\)</span></td>
+<td><span class="math inline">\(g^2\hbar^2/c\)</span></td>
+<td>expected <span class="math inline">\(m\propto g^2\hbar^2/c\)</span>
+(Karabali–Nair, physics argument; lattice)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>dimensionless</td>
+<td>none</td>
+<td><span class="math inline">\(m=a^{-1}F(g^2\hbar)\)</span> with <span
+class="math inline">\(F\to0\)</span> along <span
+class="math inline">\(g(a)\)</span>: transmutation</td>
+</tr>
+</tbody>
+</table>
+<p>By Theorem 1, a <span class="math inline">\(d=4\)</span> gap positive
+and finite must be a multiple of a mass unit, and none exists among
+<span class="math inline">\((\hbar,c,g)\)</span>: the definition of the
+quantum theory has to introduce a scale (cutoff <span
+class="math inline">\(a\)</span> or renormalization point), and the
+continuum limit at fixed <span class="math inline">\(m\)</span> requires
+<span class="math inline">\(F(g^2(a)\hbar)\to0\)</span> along a curve,
+which is dimensional transmutation stated as a dimensional necessity;
+the one-loop form <span class="math inline">\(m\propto
+a^{-1}\exp[-1/(2b_0g^2)]\)</span> is the standard asymptotic-freedom
+expression (Gross–Wilczek, Politzer 1973). In <span
+class="math inline">\(d=3\)</span> the coupling itself carries the unit,
+and in <span class="math inline">\(d=2\)</span> it carries a tension but
+no mass.</p>
+<p><strong>Compact abelian theories.</strong> Compactness of the gauge
+group supplies topological excitations and, with them, gaps that are
+again supplied scales. Osterwalder and Seiler (Ann. Phys. 110 (1978)
+440) prove reflection positivity, the strong-coupling infinite-volume
+limit and Wilson’s confinement bound for every compact group on the
+lattice; the strong-coupling mass gap follows from their cluster
+expansion, in units of <span class="math inline">\(1/a\)</span>.
+Polyakov (Nucl. Phys. B120 (1977) 429) derives the photon mass of
+three-dimensional compact <span class="math inline">\(U(1)\)</span> from
+monopoles, and Göpfert and Mack (Commun. Math. Phys. 82 (1982) 545)
+prove the mass gap and confinement of the three-dimensional Villain
+model for all couplings, with Debye mass <span
+class="math inline">\(m_D^2=(2\beta/a^3)e^{-\beta v(0)/2}\)</span>,
+<span class="math inline">\(\beta=4\pi^2/e^2\)</span> in lattice units:
+a function of <span class="math inline">\(e^2a\)</span> with an
+essential singularity that vanishes as <span
+class="math inline">\(a\to0\)</span> at fixed <span
+class="math inline">\(e^2\)</span>. Guth (Phys. Rev. D 21 (1980) 2291)
+and Fröhlich and Spencer (Commun. Math. Phys. 83 (1982) 411) prove that
+four-dimensional compact <span class="math inline">\(U(1)\)</span> has a
+massless Coulomb phase at weak coupling. The reading levels of these
+citations are recorded in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B78.md">B78</a>.
+The dimensional reading is uniform: each gapped abelian case has its gap
+set by an explicit scale in its definition, and the gap disappears when
+that scale is removed at fixed coupling; the non-abelian cases in <span
+class="math inline">\(d=3,4\)</span> differ because the coupling carries
+the unit or generates it by transmutation.</p>
+<h2 id="two-dimensions-an-exactly-solvable-gap-that-is-too-large">5. Two
+dimensions: an exactly solvable gap that is too large</h2>
+<p><strong>Proposition 11.</strong> Pure Yang–Mills on a spatial circle
+of circumference <span class="math inline">\(L\)</span>, in temporal
+gauge with Gauss’s law imposed, has as its only gauge-invariant degree
+of freedom the holonomy <span class="math inline">\(U\in G\)</span> up
+to conjugation. The physical Hilbert space is <span
+class="math inline">\(L^2(G)^G\)</span>, the class functions, and with
+<span
+class="math inline">\(S=\frac1{2g^2}\int\operatorname{tr}F^2\)</span>
+the Hamiltonian is <span
+class="math inline">\(H=\frac{g^2\hbar^2cL}{2}\,C\)</span>, where <span
+class="math inline">\(C\)</span> is the quadratic Casimir acting on
+class functions. By Peter–Weyl the eigenfunctions are the characters
+<span class="math inline">\(\chi_R\)</span> and <span
+class="math display">\[E_R=\frac{g^2\hbar^2cL}{2}\,C_2(R),\qquad
+E_{\rm trivial}=0,\qquad
+\text{gap}=\frac{g^2\hbar^2cL}{2}\,C_2(R_{\min})&gt;0 ;\]</span> for
+<span class="math inline">\(SU(N)\)</span> with <span
+class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>,
+<span class="math inline">\(C_2(\text{fund})=(N^2-1)/(2N)\)</span>, and
+for <span class="math inline">\(U(1)\)</span>, <span
+class="math inline">\(E_n=\frac{e^2\hbar^2cL}{2}n^2\)</span> with <span
+class="math inline">\(n\in\mathbb Z\)</span> from compactness.</p>
+<p><em>Proof.</em> Gauss’s law <span
+class="math inline">\(D_xE=0\)</span> makes the electric field
+covariantly constant along the circle, so on class functions of the
+holonomy <span class="math inline">\(E\)</span> acts as the
+left-invariant derivative and <span
+class="math inline">\(\int_0^L\operatorname{tr}E^2\,dx\)</span> as <span
+class="math inline">\(L\)</span> times the Laplacian on the group; <span
+class="math inline">\(H=\frac{g^2}{2}\int\operatorname{tr}E^2\)</span>
+follows from <span class="math inline">\(E=\dot A/g^2\)</span>, and
+restoring <span class="math inline">\(\hbar,c\)</span> uses <span
+class="math inline">\([g^2\hbar]=L^{-2}\)</span> from Proposition 10.
+Characters diagonalize the Laplacian on class functions with eigenvalue
+the Casimir. <span class="math inline">\(\square\)</span></p>
+<p>The states are electric flux lines wrapping the circle, <span
+class="math inline">\(E_R/L\)</span> is a string tension, and there are
+no propagating excitations: the theory has no local degrees of freedom.
+The gap grows linearly with <span class="math inline">\(L\)</span> and
+diverges as <span class="math inline">\(L\to\infty\)</span>, so the
+Jaffe–Witten finiteness requirement <span
+class="math inline">\(m&lt;\infty\)</span> fails in infinite volume,
+where the finite-energy Hilbert space is the vacuum alone. Abelian and
+non-abelian groups behave identically here; the commutator plays no role
+in <span class="math inline">\(d=2\)</span> because there are no
+transverse spatial directions, in agreement with <span
+class="math inline">\(D=1\)</span> in Theorem 6. Exact solvability on
+the Euclidean side is Migdal’s and Witten’s (Commun. Math. Phys. 141
+(1991) 153); rigorous constructions of the two-dimensional Yang–Mills
+measure are Driver’s, Gross–King–Sengupta’s and Lévy’s (B78).</p>
+<h2
+id="transmutation-without-a-gap-the-action-critical-case-in-mechanics">6.
+Transmutation without a gap: the action-critical case in mechanics</h2>
+<p><strong>Proposition 12 (two-dimensional delta potential).</strong>
+For <span
+class="math inline">\(H=-\frac{\hbar^2}{2m}\Delta-\lambda\delta^2(\vec
+r)\)</span> on <span class="math inline">\(\mathbb R^2\)</span>, <span
+class="math inline">\(m\lambda/\hbar^2\)</span> is dimensionless and the
+classical problem has no energy scale. With a momentum cutoff <span
+class="math inline">\(\hbar\Lambda\)</span> the bound-state condition is
+<span
+class="math display">\[1=\frac{m\lambda}{2\pi\hbar^2}\ln\Big(1+\frac{\hbar^2\Lambda^2}{2m|E_B|}\Big),
+\qquad
+|E_B|=\frac{\hbar^2\Lambda^2}{2m}\Big(e^{2\pi\hbar^2/(m\lambda)}-1\Big)^{-1}.\]</span>
+Removing the cutoff with <span
+class="math inline">\(\lambda(\Lambda)\)</span> chosen to keep <span
+class="math inline">\(E_B\)</span> fixed defines the theory by the scale
+<span class="math inline">\(E_B\)</span> alone. The spectrum is <span
+class="math inline">\(\{E_B\}\cup[0,\infty)\)</span>.</p>
+<p><em>Proof.</em> In momentum space <span
+class="math inline">\(\tilde\psi(p)=\lambda\psi(0)/(p^2/2m+|E_B|)\)</span>,
+and <span
+class="math inline">\(\psi(0)=\int_{|p|&lt;\hbar\Lambda}\tilde\psi\,d^2p/(2\pi\hbar)^2\)</span>
+gives <span
+class="math inline">\(1=\frac{\lambda}{(2\pi\hbar)^2}\cdot2\pi\int_0^{\hbar\Lambda}
+\frac{p\,dp}{p^2/2m+|E_B|}=\frac{m\lambda}{2\pi\hbar^2}\ln(1+\hbar^2\Lambda^2/2m|E_B|)\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p>The scale generated by quantization sits below the continuum
+threshold: the excitation spectrum above the ground state is <span
+class="math inline">\([|E_B|,\infty)\)</span>, so the one-particle
+problem does have an isolated ground state with spectral gap <span
+class="math inline">\(|E_B|\)</span>, but the “continuum” is the free
+particle escaping an unbounded configuration space and every excitation
+energy above <span class="math inline">\(|E_B|\)</span> occurs. A
+field-theoretic mass gap requires in addition that the vacuum be the
+ground state and that all excitations be massive; transmutation supplies
+the scale and confinement supplies the gap.</p>
+<p><strong>Proposition 13 (inverse-square potential).</strong> For <span
+class="math inline">\(\ell=0\)</span> the radial equation of <span
+class="math inline">\(-\frac{\hbar^2}{2m}\Delta-\lambda/r^2\)</span> on
+<span class="math inline">\(\mathbb R^3\)</span> is <span
+class="math inline">\(-\frac{\hbar^2}{2m}u&#39;&#39;-\frac{\lambda}{r^2}u=Eu\)</span>.
+For <span class="math inline">\(2m\lambda/\hbar^2&lt;1/4\)</span>
+Hardy’s inequality gives <span class="math inline">\(H\ge0\)</span>,
+spectrum <span class="math inline">\([0,\infty)\)</span> and no bound
+state. For <span class="math inline">\(2m\lambda/\hbar^2&gt;1/4\)</span>
+the operator is not essentially self-adjoint on <span
+class="math inline">\(C_0^\infty(\mathbb R^3\setminus0)\)</span>; each
+self-adjoint extension introduces a length <span
+class="math inline">\(r_0\)</span> and the bound states form the
+geometric tower <span class="math inline">\(E_n=E_0e^{-2\pi
+n/\nu}\)</span>, <span
+class="math inline">\(\nu=\sqrt{2m\lambda/\hbar^2-1/4}\)</span>,
+accumulating at zero. Classically the fall to the centre occurs for
+angular momentum below <span
+class="math inline">\(\sqrt{2m\lambda}\)</span>, an action unit: <span
+class="math inline">\(m\lambda\)</span> has the dimension of action
+squared.</p>
+<p>This is the <span class="math inline">\(k=-2\)</span> case of Theorem
+3. The classical theory owns an action unit but no energy unit; the
+quantum theory depends on <span
+class="math inline">\(2m\lambda/\hbar^2\)</span> alone, and the
+definition of its dynamics forces a scale. C052’s relativistic Kepler
+plunge at <span class="math inline">\(|L|&lt;k/c\)</span> is a
+competition of the same <span class="math inline">\(1/r^2\)</span> type,
+so the classical action unit <span class="math inline">\(k/c\)</span> of
+Q14 is the mechanical action-critical case, and C130 records its quantum
+version in the Dirac thresholds. The lesson for necessity arguments is
+the hypothesis under which “a scale is forced” is a theorem: the
+operator is symmetric, fails to be essentially self-adjoint, and every
+self-adjoint extension carries a scale. A consistency requirement,
+well-defined dynamics, forces the scale. Sources for Section 6: Thorn,
+Camblong et al., Case, Essin and Griffiths (B78).</p>
+<h2
+id="the-dictionary-and-what-it-decides-for-the-positive-action-question">7.
+The dictionary and what it decides for the positive-action question</h2>
+<h3 id="correspondences-and-non-correspondences">7.1 Correspondences and
+non-correspondences</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Mass gap</th>
+<th>Positive action floor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Object</td>
+<td>physical Hamiltonian <span class="math inline">\(H\ge0\)</span></td>
+<td>action-defect observable on alternatives</td>
+</tr>
+<tr class="even">
+<td>Trivial state</td>
+<td>vacuum <span class="math inline">\(\Omega\)</span>, <span
+class="math inline">\(H\Omega=0\)</span></td>
+<td>inertial motion, zero defect</td>
+</tr>
+<tr class="odd">
+<td>Statement</td>
+<td><span
+class="math inline">\(\operatorname{spec}H\cap(0,m)=\varnothing\)</span>,
+<span class="math inline">\(0&lt;m&lt;\infty\)</span></td>
+<td><span class="math inline">\(\mathcal
+A(c)\cap(0,h)=\varnothing\)</span>, <span
+class="math inline">\(0&lt;h&lt;\infty\)</span></td>
+</tr>
+<tr class="even">
+<td>Theorem 1 form</td>
+<td><span class="math inline">\(m=\)</span> (number) <span
+class="math inline">\(\times\)</span> mass unit of the fixed
+constants</td>
+<td><span class="math inline">\(h=\)</span> (number) <span
+class="math inline">\(\times\)</span> action unit of the fixed
+constants</td>
+</tr>
+<tr class="odd">
+<td>Classical span</td>
+<td>empty in <span class="math inline">\(d=4\)</span></td>
+<td>empty for <span class="math inline">\((m,F)\)</span>, <span
+class="math inline">\((m,g)\)</span>, <span
+class="math inline">\((G,c)\)</span></td>
+</tr>
+<tr class="even">
+<td>Classical similarity</td>
+<td><span class="math inline">\(A_s(x)=sA(sx)\)</span></td>
+<td>mechanical similarity of Proposition 4</td>
+</tr>
+<tr class="odd">
+<td>Classical countermodel</td>
+<td>continuous classical energy range</td>
+<td>C002, C027, C056–C058</td>
+</tr>
+<tr class="even">
+<td>Free/commutative version</td>
+<td>Proposition 8: no scale generated</td>
+<td>ordinary calculus refinement: no scale generated</td>
+</tr>
+<tr class="odd">
+<td>Generated gap</td>
+<td>Theorems 5–6: two commutators, <span
+class="math inline">\(\hbar^{4/3}g^{2/3}\)</span></td>
+<td>none yet; C035–C036 need a supplied reference</td>
+</tr>
+<tr class="even">
+<td>Supplied gap</td>
+<td>box, lattice, mass term, <span class="math inline">\(d=2\)</span>
+tension</td>
+<td>C124/C126 (<span class="math inline">\(K\)</span>), G05 (<span
+class="math inline">\(J\)</span>), C060–C061 (speed floor)</td>
+</tr>
+<tr class="odd">
+<td>Consistency-forced scale</td>
+<td>regularization; Proposition 13</td>
+<td>the target of N02</td>
+</tr>
+<tr class="even">
+<td>Assumed structure</td>
+<td>gauge group, <span class="math inline">\(\hbar\)</span>, quantum
+axioms</td>
+<td>to be derived</td>
+</tr>
+</tbody>
+</table>
+<p>The last row is the non-correspondence that governs the rest. The
+mass-gap problem states its non-commutative structure in the hypotheses
+and asks for the scale. The necessity problem of STATE item 1 asks for
+the structure from consistency premises, with quantum nature as the
+phenomenon to be explained. The analogy is therefore exact for the
+second stage, from structure to scale, where it says three things with
+proofs behind them: a positive floor is a unit multiple and needs a unit
+(Theorem 1); the free or commutative theory generates none (Propositions
+8, Theorem 6(5)); and a generated scale needs two scale-free ingredients
+that fail to commute, with the gap vanishing when either is removed
+(Theorem 5). For the first stage, from consistency to structure, the
+mass-gap story contains one mechanism that does not presuppose the
+structure it explains: the scale forced by the requirement that the
+dynamics be defined at all, which is the self-adjoint-extension scale of
+Proposition 13 in quantum mechanics and the regularization scale of
+Proposition 10 in field theory.</p>
+<h3 id="the-commutative-no-floor-theorem-for-the-galileo-comparison">7.2
+The commutative no-floor theorem for the Galileo comparison</h3>
+<p><strong>Proposition 14.</strong> Let the admitted class be the
+constant-force motions <span
+class="math inline">\(q(t)=(vt,Ft^2/2m)\)</span> with fixed constants
+<span class="math inline">\(m,F\)</span>, all <span
+class="math inline">\(v&gt;0\)</span>, <span
+class="math inline">\(\tau&gt;0\)</span> admitted, and let <span
+class="math inline">\(X=\tau\Delta E=F^2\tau^3/(2m)\)</span> or the area
+<span class="math inline">\(A=vF\tau^3/(6m)\)</span>. The similarity
+<span class="math inline">\(x\mapsto sx\)</span>, <span
+class="math inline">\(t\mapsto s^{1/2}t\)</span>, <span
+class="math inline">\(v\mapsto s^{1/2}v\)</span> preserves the class and
+multiplies <span class="math inline">\(X\)</span> by <span
+class="math inline">\(s^{3/2}\)</span> and <span
+class="math inline">\(A\)</span> by <span
+class="math inline">\(s^2\)</span>; hence both floors are zero. The
+dimension vectors <span class="math inline">\(d_m=(1,0,0)\)</span>,
+<span class="math inline">\(d_F=(1,1,-2)\)</span> do not span <span
+class="math inline">\((1,2,-1)\)</span>, so Theorem 1 gives the same
+conclusion without exhibiting the similarity.</p>
+<p><em>Proof.</em> <span class="math inline">\(V=Fy\)</span> is
+homogeneous of degree one, so Proposition 4 with <span
+class="math inline">\(k=1\)</span> gives <span
+class="math inline">\(t\mapsto s^{1/2}t\)</span> and action scaling
+<span class="math inline">\(s^{3/2}\)</span>; the area is a length
+squared. The span statement: <span
+class="math inline">\(a(1,0,0)+b(1,1,-2)=(1,2,-1)\)</span> forces <span
+class="math inline">\(b=2\)</span> from the length component and then
+<span class="math inline">\(-4\neq-1\)</span> in time. <span
+class="math inline">\(\square\)</span></p>
+<p>Which additions break the similarity? A fixed constant with action
+dimension, that is <span class="math inline">\(\hbar\)</span>, which is
+circular for the necessity argument. A fixed constant whose dimension
+vector, with <span class="math inline">\(d_m\)</span> and <span
+class="math inline">\(d_F\)</span>, spans action: a fixed length <span
+class="math inline">\(\ell_0\)</span> gives <span
+class="math inline">\(\sqrt{mF\ell_0^3}\)</span>; a fixed speed <span
+class="math inline">\(c\)</span> gives <span
+class="math inline">\(m^2c^3/F\)</span>; a fixed charge gives <span
+class="math inline">\(k_e/c\)</span> (Q14). Each of these is a supplied
+unit, and the first two are mass-dependent, so they fail universality
+(obligation 4 of the <a
+href="https://github.com/arivero/navstokgap/blob/main/research/ACTION_FIELD_TARGET.md">action
+target</a>) unless a further premise ties them to <span
+class="math inline">\(m\)</span>. Or a structure that is itself
+scale-free but breaks the similarity when combined with the class: this
+is what the two commutators do in Theorem 5 and what the definition
+problem does in Proposition 13.</p>
+<h3 id="what-the-analogy-transports-to-n02-labelled">7.3 What the
+analogy transports to N02, labelled</h3>
+<p>The following is a conjecture shaped by Sections 3 and 6; it is
+stated so that N02 can test it, and nothing below is claimed as
+proved.</p>
+<p><strong>Conjecture (similarity anomaly).</strong> Let alternatives
+compose under concatenation with an action-defect observable that is
+additive and let the composition rule be required to be consistent in a
+sense to be specified (associative, positive, and defined for all
+admitted pairs). If the composition rule is defined without a scale,
+then it is similarity-covariant and the floor is zero (Corollary 2). A
+positive finite floor therefore requires that the consistent definition
+of the composition itself carry a scale, that is, an anomaly of the
+classical similarity: the similarity acts on the alternatives but fails
+to act on the composed theory. Proposition 13 is the quantum-mechanical
+instance, where the composition is the self-adjoint dynamics;
+Proposition 10 is the field-theoretic instance, where it is the
+renormalized product of local operators.</p>
+<p>What N02 would have to show is that the joint time/position
+refinement of the Galileo comparison poses a definition problem of this
+type: a composition of cut alternatives that is consistent only after a
+scale is chosen. The existing countertests are the check: C027 composes
+constant-force chords consistently at every mesh with no scale, and
+C028–C029 compose Gaussian bridges consistently with a fixed but
+supplied <span class="math inline">\(\kappa\)</span>. A proposed
+principle that does not make one of these compositions ill-defined at
+zero scale changes nothing, exactly as a classical Yang–Mills argument
+that leaves <span class="math inline">\(D_A^*F_A=0\)</span>
+scale-covariant proves no gap.</p>
+<p>What the analogy cannot deliver is the first stage itself. No theorem
+in Sections 2–6 derives a commutator from a consistency premise; each
+takes <span class="math inline">\([x,p]=i\hbar\)</span> or the gauge
+group as given. The claim “h &gt; 0 is analogous to the mass gap” is
+exact and useful for the second stage and is a research heuristic,
+recorded here as such, for the first.</p>
+<h2 id="strategic-consequence">8. Strategic consequence</h2>
+<p>Gap-track work now has a written gate: name whether a proposed gap is
+supplied or generated, and for a generated gap name the two scale-free
+structures whose product produces the unit. C124/C126 and G05 are
+supplied gaps; G06’s perturbed cluster chain would be as well, since
+<span class="math inline">\(J\)</span> remains an input. The Yang–Mills
+quantum-mechanical gap is the first entry in the programme whose scale
+is generated, and its exponents <span class="math inline">\(4/3\)</span>
+and <span class="math inline">\(2/3\)</span> are forced by Theorem 1
+once positivity is proved; its finite-volume version exhibits the
+uniformity problem exactly. For STATE item 1 the consequence is a
+sharpened target for N02: a consistency principle that makes the
+zero-scale composition of cut alternatives ill-defined, tested against
+C027 and C028–C029. The dimensional table of Section 7.2 lists the units
+that a supplied-constant route would have to justify, of which only
+<span class="math inline">\(k_e/c\)</span> is mass-independent. No
+ledger claim is promoted; Theorems 5–6 and Propositions 7, 11–13 are
+written proofs of established results with explicit constants, and their
+sources are recorded with reading levels in B78.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

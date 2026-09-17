@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calibration tolerance sets the recovery crossover</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Calibration tolerance sets the recovery crossover</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/calibration-tolerance-recovery.md">Markdown source</a></p><p>On R30’s same fixed apparatus box, receiver reconstruction errors are
+bounded by a constant times (final-record error + calibration
+error)/coupling. With exact final records this rate has a matching
+canonical lower bound, up to fixed constants. At any fixed positive
+calibration tolerance, sufficiently weak coupling makes one complete
+record compatible with the entire bounded receiver domain. The
+coordinate minimax risks then equal their no-record values.</p>
+<p>R31, 2026-09-12. Retain <a
+href="three-calibration-global-recovery.html">R30</a>’s fixed nonzero c,
+pulses, small positive apparatus box about eta_c and receiver ball
+Z={H_s&lt;=E_max}, E_max&gt;0. All norms are its fixed component norms;
+calibration outputs C=(q_1,q_2,q_3,H_app) use fixed length and energy
+units. Instead of imposing C=C_* exactly, supply a reported vector C_obs
+with ||C(eta)-C_obs||&lt;=epsilon. Final record error is bounded by
+delta. These are deterministic support bounds, not stochastic variance
+assumptions. The physical unknowns range over the original box times Z,
+and initial pulse couplings vanish. Source coverage is in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B62.md">B62</a>.</p>
+<h2 id="a-two-data-inverse-estimate">1. A two-data inverse estimate</h2>
+<p>Use R30’s inverse apparatus chart eta_lambda(w,a), a=S^{-1}Y, and
+D_lambda=[C(eta_lambda(w,a))-C(a)]/lambda. Its uniform receiver inverse
+margin holds independently of whether the supplied constraints are
+exact. For two initial preparations write C_1=C(eta), C_2=C(eta’), with
+records Y,Y’. Insert their actual constraints into the R30 comparison to
+obtain</p>
+<p><span class="math display">\[\|w-w&#39;\|\le 2\|L^{-1}\|
+\left[\frac{\|C_1-C_2\|}{\lambda}
++(M_C/\lambda+M_D)\|S^{-1}\|\|Y-Y&#39;\|\right]
+\le\frac K\lambda(\|C_1-C_2\|+\|Y-Y&#39;\|). \tag{1}\]</span></p>
+<p>K is fixed over the bounded preparation and small coupling interval.
+Thus calibration precision and final-record precision are separate data
+resources, both amplified by the same sufficient inverse estimate.</p>
+<p>Choose any preparation in the compact box times Z consistent with
+both reported error bounds. It exists because the true preparation is
+consistent; a deterministic choice can be made by sequential coordinate
+minimization on this compact feasible set. Comparing it with the true
+preparation gives</p>
+<p><span class="math display">\[\|\widehat
+w-w\|\le\frac{2K}{\lambda}(\epsilon+\delta),\qquad
+\epsilon_x\epsilon_P\le4L_*P_*K^2
+                    ((\epsilon+\delta)/\lambda)^2. \tag{2}\]</span></p>
+<p>At fixed positive coupling both precisions tending to zero suffice. A
+joint weak-coupling limit is controlled when (epsilon+delta)/lambda
+tends to zero. The bound also applies componentwise with epsilon the
+largest of four calibration tolerances. The lower construction below
+permits the same positive epsilon in each component; setting some
+tolerances exactly zero is a different preparation restriction.</p>
+<h2 id="an-exact-common-record-ball-within-the-tolerance">2. An exact
+common-record ball within the tolerance</h2>
+<p>Take nominal receiver w=0 and nominal apparatus eta_c, and let
+Y_lambda=G_lambda(0,eta_c), C_obs=C(eta_c)=C_*. R25’s preconditioned
+contraction on R30’s enlarged chart gives a smooth compensator for every
+w in Z, with</p>
+<p><span
+class="math display">\[G_\lambda(w,\eta_\lambda(w))=Y_\lambda,\qquad
+\|\eta_\lambda(w)-\eta_c\|\le B\lambda\|w\|. \tag{3}\]</span></p>
+<p>For completeness, differentiate the chart identity at fixed a:</p>
+<p><span class="math display">\[D_w\eta_\lambda=-(D_\eta
+F_\lambda)^{-1}D_wF_\lambda.\]</span></p>
+<p>The inverse norm is at most 2 and ||D_wF_lambda||&lt;=L lambda on the
+enlarged chart. At a=S^{-1}Y_lambda the chart takes w=0 to eta_c.
+Integrating along the segment from 0 to w proves (3) with B=2L; this
+argument does not require the nominal apparatus displacement to
+vanish.</p>
+<p>Let R_Z=max_Z||w||&gt;0 and M bound ||DC|| on the apparatus chart,
+increasing M if necessary so M&gt;0. Reduce the fixed coupling ceiling
+until B lambda_* R_Z &lt;= rho/2, with rho the unchanged R30 preparation
+half-width. The full compensator then stays inside that box with half
+its margin. Reduce the ceiling also to keep the actual first
+displacement bounded away from zero, for example within half the fixed
+nominal |c| in its units.</p>
+<p>For</p>
+<p><span class="math display">\[t=\min\{1,\epsilon/(MB\lambda R_Z)\},
+\tag{4}\]</span></p>
+<p>every w in tZ satisfies</p>
+<p><span class="math display">\[\|C(\eta_\lambda(w))-C_*\|\le
+MB\lambda\|w\|\le\epsilon.\]</span></p>
+<p>These are exact full final records, with the same reported
+calibrations and apparatus energy. The receiver domain is a ball, so its
+dilation tZ remains admissible; no exact receiver energy was supplied in
+R30. Complete nonlinear reaction and free apparatus drift are included
+in (3). The compensating correlations select points from the admitted
+product domain; no prior correlation restriction or probability
+distribution is imposed.</p>
+<h2 id="canonical-minimax-bounds-and-exact-saturation">3. Canonical
+minimax bounds and exact saturation</h2>
+<p>For an estimator of (x,P) from (Y_obs,C_obs), define epsilon_x and
+epsilon_P as its separate worst-case absolute errors over all initial
+states in the fixed product domain and all reported data satisfying the
+error bounds. R_x and R_P are the respective infima over estimators. The
+optimal product below is the infimum of epsilon_x epsilon_P over joint
+canonical estimators; the same constructions attain both asserted
+coordinate upper bounds.</p>
+<p>Completing the receiver energy square, put k_x=a-g^2/d&gt;0 and</p>
+<p><span class="math display">\[X_E=\sqrt{2E_{\max}/k_x},\qquad
+P_E=\sqrt{2\mu E_{\max}}.\]</span></p>
+<p>The canonical projection of Z is k_x x<sup>2+P</sup>2/mu&lt;=2E_max.
+Its dilated copy tZ in the common record has coordinate extrema +/-tX_E
+and +/-tP_E. Consequently every global estimator has</p>
+<p><span class="math display">\[\epsilon_x\ge tX_E,\quad\epsilon_P\ge
+tP_E,\quad
+\epsilon_x\epsilon_P\ge t^2X_EP_E. \tag{5}\]</span></p>
+<p>For exact final records, (2), together with the constant-zero
+estimator and coordinatewise selection of the better guaranteed
+estimate, bounds the optimal coordinate risks above by min(X_E,2L_<em>K
+epsilon/lambda) and min(P_E,2P_</em>K epsilon/lambda). Thus on this
+fixed class the optimal canonical risk product has order</p>
+<p><span class="math display">\[\min\{1,(\epsilon/\lambda)^2\},
+\tag{6}\]</span></p>
+<p>up to positive constants with action units that depend on the fixed
+apparatus and energy bound. This comparison concerns epsilon&gt;0 and
+0&lt;lambda&lt;=lambda_*; at epsilon=0 and exact final records R30 gives
+zero risk.</p>
+<p>If epsilon&gt;=MB lambda R_Z, then t=1 and the constant-zero
+estimator attains both lower bounds exactly. The minimax coordinate
+risks and optimal product are</p>
+<p><span class="math display">\[R_x=X_E,\qquad R_P=P_E,\qquad
+\inf_{(\widehat x,\widehat P)}\epsilon_x\epsilon_P
+=X_EP_E=2E_{\max}\sqrt{\mu/k_x}. \tag{7}\]</span></p>
+<p>The canonical projection of this one compatible receiver set is then
+the full ellipse, of area pi X_E P_E. Both area and product have action
+units; their different factors reflect different observables. The
+displayed threshold is sufficient for saturation, not a claimed sharp
+transition constant.</p>
+<h2 id="meaning-and-next-test">4. Meaning and next test</h2>
+<p>Finite calibration tolerance restores a genuine identical-record
+ambiguity, not merely an ill-conditioned reconstruction formula. Weak
+coupling hides the receiver once its signal lies within the allowed
+initial calibration variation. The limiting risk is set by E_max and
+mechanical parameters; it is not a universal positive action scale. At
+fixed coupling improved supplied precision still closes the product.</p>
+<p>R32 should test whether four calibration tolerances are equivalent
+resources: keep q_1,q_2,q_3 exact and allow only apparatus-energy
+tolerance, then exchange which single constraint is uncertain. Identify
+actual canonical fibres, since the max-tolerance upper bound alone
+cannot decide their geometry.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

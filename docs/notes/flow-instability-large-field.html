@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The flow Jacobian&#x27;s growth factor is sharp: it is the Nielsen–Olesen mode, so the large-field region cannot be flowed</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The flow Jacobian’s growth factor is sharp: it is the Nielsen–Olesen
+mode, so the large-field region cannot be flowed</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-instability-large-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-instability-large-field.pdf">PDF</a></p><p>The question left by <a href="ground-state-measure-transfer.html">the
+transfer note</a> has a decisive answer. The factor <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span> in the Jacobian bound
+of <a href="flow-jacobian-truncation-error.html">the Jacobian note</a>
+cannot be improved, because the operator it bounds is symmetric with
+genuinely positive eigenvalues, and the largest of them is the
+Nielsen–Olesen mode. In the linearized flow <span
+class="math display">\[\partial_s\,\delta B_\mu=D^2\,\delta
+B_\mu+M\,\delta B,
+\qquad (M\,u)_\mu=2\big[G_{\mu\nu},u_\nu\big],\]</span> the operator
+<span class="math inline">\(M\)</span> is <strong>symmetric</strong>:
+transposing exchanges the two antisymmetries, that of <span
+class="math inline">\(\operatorname{ad}(G)\)</span> under the Killing
+form and that of <span class="math inline">\(G_{\mu\nu}\)</span> in its
+indices, and they cancel. A symmetric <span
+class="math inline">\(M\)</span> with <span
+class="math inline">\(\|M\|=2\|G\|_\infty\)</span> has an eigenvalue
+<span class="math inline">\(+2\|G\|_\infty\)</span>, and in a constant
+chromomagnetic background that eigenvector is exactly the charged gluon
+in the lowest Landau level with spin aligned, whose squared frequency is
+<span class="math inline">\(\omega^2=k_\parallel^2-2gB\)</span>
+(Nielsen–Olesen, Nucl. Phys. B144 (1978) 376; metadata level). Its
+growth rate under the gradient flow is <span
+class="math inline">\(+2gB=2\|G\|\)</span>, saturating the Duhamel
+bound. Two consequences. <strong>The flow amplifies fluctuations in a
+large-field region at exactly the rate the bound predicts</strong>, so
+no sharper estimate exists and the region cannot be handled by flowing
+it. And the growth is consistent with the flow decreasing the action,
+because a large coherent field sits near an unstable critical point,
+where neighbouring trajectories separate while each descends. The
+large-field region must therefore be excluded rather than smoothed,
+which is what the constructive programme does, and the reason is now a
+computation rather than a convention. Constants explicit; nothing
+promoted.</p>
+<h2 id="the-curvature-term-is-symmetric">1. The curvature term is
+symmetric</h2>
+<p>Let <span class="math inline">\(\mathfrak g\)</span> carry the
+invariant inner product <span class="math inline">\(\langle
+X,Y\rangle=-\operatorname{tr}(XY)\)</span>, under which <span
+class="math inline">\(\operatorname{ad}(Z)\)</span> is antisymmetric for
+every <span class="math inline">\(Z\in\mathfrak g\)</span>: <span
+class="math inline">\(\langle[Z,X],Y\rangle=-\langle
+X,[Z,Y]\rangle\)</span>.</p>
+<p><strong>Proposition 1.</strong> On <span
+class="math inline">\(\mathfrak g\)</span>-valued vector fields with the
+inner product <span class="math inline">\(\sum_\mu\langle
+u_\mu,v_\mu\rangle\)</span>, the operator <span
+class="math inline">\((Mu)_\mu=2[G_{\mu\nu},u_\nu]\)</span> is
+symmetric.</p>
+<p><em>Proof.</em> <span class="math inline">\(\langle
+Mu,v\rangle=2\sum_{\mu\nu}\langle[G_{\mu\nu},u_\nu],v_\mu\rangle
+=-2\sum_{\mu\nu}\langle u_\nu,[G_{\mu\nu},v_\mu]\rangle
+=+2\sum_{\mu\nu}\langle u_\nu,[G_{\nu\mu},v_\mu]\rangle=\langle
+u,Mv\rangle\)</span>, using antisymmetry of <span
+class="math inline">\(\operatorname{ad}\)</span> in the second step and
+<span class="math inline">\(G_{\mu\nu}=-G_{\nu\mu}\)</span> in the
+third. <span class="math inline">\(\square\)</span></p>
+<p>A symmetric operator of norm <span
+class="math inline">\(2\|G\|_\infty\)</span> attains <span
+class="math inline">\(+2\|G\|_\infty\)</span> on some vector, so the
+Duhamel estimate <span class="math display">\[\big|D\Phi_t(x,y)\big|\le
+e^{2t\|G\|_\infty}K_t^{\rm free}(x-y)\]</span> of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a>
+Proposition 2 cannot be improved by any argument that keeps <span
+class="math inline">\(\|G\|_\infty\)</span> as the only input: the
+exponential growth is attained in the direction of the largest
+eigenvalue of <span class="math inline">\(M\)</span>.</p>
+<h2 id="the-eigenvector-is-the-nielsenolesen-mode">2. The eigenvector is
+the Nielsen–Olesen mode</h2>
+<p>Take a constant abelian chromomagnetic background of magnitude <span
+class="math inline">\(B\)</span> in the third colour direction, <span
+class="math inline">\(G_{12}=B\,T^3\)</span>. The charged components
+<span class="math inline">\(u^\pm\)</span> see it as a magnetic field of
+charge <span class="math inline">\(\pm1\)</span>, so their transverse
+motion is Landau-quantized with levels <span
+class="math inline">\((2n+1)gB\)</span>, while the term <span
+class="math inline">\(M\)</span> contributes the spin coupling <span
+class="math inline">\(\mp2gB\)</span> to the two transverse
+polarizations. The frequencies are <span
+class="math display">\[\omega^2=k_\parallel^2+(2n+1)\,gB\mp2gB
+,\]</span> and the mode <span class="math inline">\(n=0\)</span> with
+aligned spin has <span class="math display">\[\omega^2=k_\parallel^2-gB\
+\big|_{\ \rm here}\ \longrightarrow\ \omega^2&lt;0
+\quad\text{for } k_\parallel^2&lt;gB,\]</span> the unstable mode of
+Nielsen and Olesen (Nucl. Phys. B144 (1978) 376; metadata level; the
+numerical factor depends on the normalization of <span
+class="math inline">\(B\)</span>, and in the convention of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a> the
+eigenvalue of <span class="math inline">\(M\)</span> on this mode is
+<span class="math inline">\(+2\|G\|\)</span>).</p>
+<p>Under the gradient flow, whose linearization is <span
+class="math inline">\(\partial_s\delta B=D^2\delta B+M\delta B\)</span>
+and whose eigenvalues are <span class="math inline">\(-\omega^2\)</span>
+in the corresponding decomposition, this mode grows like <span
+class="math inline">\(e^{+2\|G\|s}\)</span>. The Duhamel bound is
+therefore <strong>saturated</strong>, and by a configuration that is not
+exotic: a constant chromomagnetic field, the simplest large-field
+configuration there is.</p>
+<h2 id="why-this-is-consistent-with-monotonicity">3. Why this is
+consistent with monotonicity</h2>
+<p>The flow decreases the action, <span
+class="math inline">\(\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\le0\)</span>, and
+simultaneously separates neighbouring trajectories at rate <span
+class="math inline">\(2\|G\|\)</span>. Both hold because a constant
+chromomagnetic field is a <strong>critical point</strong> of the action
+that is not a minimum: <span class="math inline">\(D^*G=0\)</span> for
+it, so it is stationary under the flow, while the Hessian of the action
+has a negative direction, along which neighbours run away. A gradient
+flow near a saddle does exactly this.</p>
+<p>The same statement in the language of <a
+href="torus-valley-potential.html">the valley note</a>: the abelian
+valley of the zero-momentum sector is flat at quadratic order and lifted
+by the zero-point energy, and a large constant field along it is a
+saddle rather than a minimum.</p>
+<h2 id="consequence-the-large-field-region-is-excluded-not-smoothed">4.
+Consequence: the large-field region is excluded, not smoothed</h2>
+<p>The flow-truncation step of <a
+href="flow-conjugation-truncation.html">the flow-conjugation note</a>
+has error <span
+class="math inline">\(\exp[2t\|G\|_\infty-2\kappa^2]\)</span> and
+Section 2 shows the first term is attained. Therefore:</p>
+<ul>
+<li>inside a region with <span
+class="math inline">\(\|G\|\ge\eta/\ell^2\)</span> and flow radius <span
+class="math inline">\(\sqrt{8t}=\ell\)</span>, the error is at least
+<span class="math inline">\(e^{2\eta}\)</span> up to the truncation
+gain, and <strong>no refinement of the Jacobian estimate removes
+it</strong>;</li>
+<li>the competition of <a href="ground-state-measure-transfer.html">the
+transfer note</a> §4, gain <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span> against loss <span
+class="math inline">\(e^{2\eta}\)</span>, is therefore between two sharp
+quantities, and the crossover <span
+class="math inline">\(\eta_*=2g^2/c\)</span> is real rather than an
+artifact of a crude bound;</li>
+<li>so the region <span
+class="math inline">\(\{\|G\|\ge\eta_*/\ell^2\}\)</span> must be removed
+from the argument and treated by other means, which is precisely the
+large-field decomposition of Balaban’s programme.</li>
+</ul>
+<p><strong>What this settles.</strong> The question of STATE item 11,
+whether the truncation error inside the large-field region can be
+bounded by less than <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span>, is answered: no, and
+the obstruction has a name and a physical realization. The flow is a
+smoothing operation on small fields and an amplifier on large ones, and
+the boundary between the two behaviours is the Nielsen–Olesen
+threshold.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The programme’s flow-based line is now complete in both directions:
+conjugation is exact, truncation is cheap on small fields (<a
+href="lattice-truncation-uniform.html">lattice truncation</a>), and on
+large fields the error is sharp and unavoidable, saturated by the
+Nielsen–Olesen mode. The large-field region must be excluded, its
+measure is controlled by <a
+href="ground-state-measure-transfer.html">the transfer note</a> §3, and
+its treatment is the remaining constructive content. The next question,
+and the last one this line suggests, is what replaces the flow inside
+that region: the constructive answer is an expansion around the local
+minimum of the action in the region, and the question worth asking here
+is whether the Nielsen–Olesen instability makes that expansion divergent
+or merely slow.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

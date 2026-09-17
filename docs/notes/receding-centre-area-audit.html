@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The surviving area is the matched-endpoint arc–chord defect</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The surviving area is the matched-endpoint arc–chord defect</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/receding-centre-area-audit.md">Markdown source</a></p><p>Draft coordinator derivation for B11 review, 2026-09-07. The supplied
+Sol commentary correctly computes a factor of two for a fixed parabola.
+A genuine central-force family distinguishes two comparisons: arc versus
+its inertial tangent, and arc versus its matched-endpoint chord. The
+latter supplies the stable connection to the existing action
+calculation.</p>
+<h2 id="exact-signed-area-identity">1. Exact signed-area identity</h2>
+<p>Put <span class="math inline">\(C_R=(0,R)\)</span> and orient
+increasing <span class="math inline">\(x\)</span> to the right and <span
+class="math inline">\(y\)</span> toward the centre. For a path starting
+at the origin, define its signed sectorial area</p>
+<p><span
+class="math display">\[A_R[\gamma]=\frac12\int_\gamma[x\,dy-(y-R)\,dx]
+=\frac R2\Delta x+\frac12\int_\gamma(x\,dy-y\,dx).\]</span></p>
+<p>For two paths with the same endpoints, the term proportional to <span
+class="math inline">\(R\)</span> cancels exactly. Their area difference
+is the signed area of the closed loop formed by the first path and the
+reversed second. This cancellation holds for every centre, before taking
+any limit.</p>
+<p>For the perpendicular constant-force parabola <span
+class="math inline">\(x=vt\)</span>, <span
+class="math inline">\(y=Ft^2/(2m)\)</span>, <span
+class="math inline">\(0\le t\le\tau\)</span>, <span
+class="math inline">\(F,v,m,\tau&gt;0\)</span>, the finite part is</p>
+<p><span class="math display">\[A_{\rm
+lens}=\frac{Fv\tau^3}{12m}.\]</span></p>
+<p>Its straight chord from the origin has <span
+class="math inline">\(\int(x\,dy-y\,dx)=0\)</span>, so this is the exact
+arc-minus-chord area. The inertial tangent <span
+class="math inline">\((vt,0)\)</span> happens also to give that
+subtraction for the fixed parabola, since both have the same horizontal
+endpoint. Their vertical endpoints differ.</p>
+<p>The positive ordinary areas satisfy</p>
+<p><span class="math display">\[A_{\rm
+tangent,arc}=\frac{Fv\tau^3}{6m}=2A_{\rm lens},\qquad
+A_{\rm tangent,chord}=\frac{Fv\tau^3}{4m}=3A_{\rm lens},\]</span></p>
+<p>and hence <span class="math inline">\(A_{\rm tangent,arc}=A_{\rm
+tangent,chord}-A_{\rm lens}\)</span>. The plus sign in the supplied
+geometrical explanation reverses this ordering.</p>
+<h2 id="a-genuine-receding-central-force">2. A genuine receding central
+force</h2>
+<p>Use the explicit classical family</p>
+<p><span class="math display">\[m\ddot q_R=\frac FR(C_R-q_R),\quad
+q_R(0)=(0,0),\quad\dot q_R(0)=(v,0),\qquad
+\omega_R^2=\frac{F}{mR}.\]</span></p>
+<p>The force is central for every finite <span
+class="math inline">\(R\)</span> and tends to the uniform field on
+bounded spatial sets. The exact solution is</p>
+<p><span class="math display">\[x_R(t)=\frac
+v{\omega_R}\sin(\omega_Rt),\qquad
+y_R(t)=R[1-\cos(\omega_Rt)].\]</span></p>
+<p>On every fixed compact time interval it tends to the parabola,
+while</p>
+<p><span
+class="math display">\[x_R(\tau)=v\tau-\frac{Fv\tau^3}{6mR}+O(R^{-2}).\]</span></p>
+<p>Angular momentum about <span class="math inline">\(C_R\)</span> is
+<span class="math inline">\(mRv\)</span>, so the actual arc and the
+inertial tangent each have signed sectorial area <span
+class="math inline">\(Rv\tau/2\)</span>. Their difference is exactly
+zero for every <span class="math inline">\(R\)</span>. In the
+finite-part decomposition the missing term is</p>
+<p><span class="math display">\[\frac
+R2[x_R(\tau)-v\tau]\longrightarrow-\frac{Fv\tau^3}{12m},\]</span></p>
+<p>which cancels the parabola’s finite part. Substituting the limiting
+parabola before subtracting the divergent reference therefore changes
+this comparison.</p>
+<p>Let <span class="math inline">\(\operatorname{ch}_R\)</span> instead
+join the actual arc endpoints. Then</p>
+<p><span class="math display">\[A_R[q_R]-A_R[\operatorname{ch}_R]
+=\frac{Rv}{2}\left[\tau-\frac{\sin(\omega_R\tau)}{\omega_R}\right]
+\longrightarrow\frac{Fv\tau^3}{12m}.\]</span></p>
+<p>Thus a genuine receding-centre construction recovers the lens when
+the chord shares the arc endpoints. This is a precise reusable version
+of the supplied geometrical idea. It does not require an identification
+of the arc and tangent sector differences in a varying central-force
+family.</p>
+<h2 id="action-normalization">3. Action normalization</h2>
+<p>For the constant-force Lagrangian <span
+class="math inline">\(L=m|\dot q|^2/2+Fy\)</span>, the existing
+matched-endpoint calculation gives</p>
+<p><span class="math display">\[S[q_{\rm chord}]-S[q_{\rm cl}]
+=\frac F{2v}A_{\rm lens}
+=\frac{F^2\tau^3}{24m}
+=\frac{\tau\Delta E_\perp}{12},\qquad
+\Delta E_\perp=\frac{F^2\tau^2}{2m}.\]</span></p>
+<p>The supplied identity <span class="math inline">\(6(F/v)A_{\rm
+lens}=\tau\Delta E_\perp\)</span> is also correct. It uses twice the
+matched-endpoint action difference before the factor six. Numerical
+normalization should be fixed rather than absorbed into an undefined
+threshold. <span class="math inline">\(\Delta E_\perp\)</span> is
+deterministic transverse work, distinct from a quantum energy
+uncertainty. Comparing the actual path to its inertial tangent changes
+the terminal point and loses endpoint-gauge invariance.</p>
+<h2 id="threshold-versus-exact-quantization">4. Threshold versus exact
+quantization</h2>
+<p>With <span class="math inline">\(h=2\pi\hbar\)</span> and equal
+angular steps <span class="math inline">\(\Delta\phi=2\pi/N\)</span>,
+the inequality <span class="math inline">\(J\Delta\phi\ge h\)</span>
+gives <span class="math inline">\(J\ge N\hbar\)</span>. For any positive
+integer <span class="math inline">\(N\)</span>, <span
+class="math inline">\(J=(N+1/2)\hbar\)</span> satisfies every one of
+these <span class="math inline">\(N\)</span> cell bounds and closes the
+angle at <span class="math inline">\(2\pi\)</span>, while lying off the
+asserted action lattice. An exact tiling assumption is therefore an
+extra premise in the supplied Claude argument. A threshold on
+comparison-path defects also requires an explicit map before being
+applied to orbital action-angle cells.</p>
+<p>For the supplied Kepler spectrum write <span
+class="math inline">\(E_N=-A/N^2\)</span>, <span
+class="math inline">\(A&gt;0\)</span>. If <span
+class="math inline">\(\omega_N=\hbar^{-1}dE_N/dN\)</span> and <span
+class="math inline">\(T_N=2\pi/\omega_N\)</span>, then</p>
+<p><span class="math display">\[\frac{(E_{N+1}-E_N)T_N}{h}
+=\frac{N(2N+1)}{2(N+1)^2}\longrightarrow1.\]</span></p>
+<p>The finite difference approaches the frequency rule; the derivative
+relation is exact. These algebraic checks assess the supplied
+conditional model and leave its physical selection premise explicit.</p>
+<h2 id="research-use">5. Research use</h2>
+<p>Use the arc–chord construction in A03’s nonuniform cut-point test.
+State the refinement law, conserved endpoint data, action normalization
+and physical condition proposed to exclude a vanishing remainder. Keep a
+supplied minimum cell axiom as a separate comparison branch. Historical
+attribution follows the Newton passage audit, not the modern
+calculation.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

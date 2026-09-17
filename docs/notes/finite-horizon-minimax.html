@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exact finite-horizon phase recovery</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Exact finite-horizon phase recovery</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/finite-horizon-minimax.md">Markdown source</a></p><p>Known initial position and momentum give three momentum-risk regimes
+under a complete noisy position history: free acceleration, a two-arc
+transient, and record-limited saturation. Position risk saturates
+earlier. Composition can therefore lose position information as well as
+momentum information during the transient.</p>
+<p>R13, 2026-09-11. Let m,F,epsilon be positive, T &gt;= 0, with known
+initial state, arbitrary measurable forces |f| &lt;= F, and records
+y(t)=q(t)+e(t) for every t in [0,T], |e(t)| &lt;= epsilon. There is no
+speed ceiling, stochastic law or measurement disturbance. Subtract the
+known inertial trajectory. The separate scalar minimax absolute errors
+are Q for position and P for canonical momentum. H=QP has action units,
+with no 2 pi normalization. Proof and literature status are recorded in
+C082–C083 and B44.</p>
+<h2 id="the-exact-radii">1. The exact radii</h2>
+<p>Put a=F/m, tau=sqrt(epsilon/a), and s=T/tau. Then</p>
+<p><span class="math display">\[Q(T)=\varepsilon\min\{s^2/2,1\},\qquad
+P(T)=\sqrt{mF\varepsilon}\,V(s),\]</span></p>
+<p><span class="math display">\[\boxed{V(s)=\begin{cases}
+s,&amp;0\le s\le\sqrt2,\\
+\sqrt{2s^2+4}-s,&amp;\sqrt2\le s\le4,\\
+2,&amp;s\ge4.
+\end{cases}}\]</span></p>
+<p>Both coordinate extrema are attained by the same central-fibre
+motion. Consequently a blind interval b &gt;= 0 after the last record
+has exact risks</p>
+<p><span class="math display">\[P_b=P(T)+Fb,\qquad
+Q_b=Q(T)+bP(T)/m+Fb^2/(2m).\]</span></p>
+<p>Here T is the observed horizon and T+b the prediction time. These
+products are products of global coordinate risks, not lower bounds on
+both errors for every individual motion.</p>
+<h2 id="written-proof-through-bounded-curvature-paths">2. Written proof
+through bounded-curvature paths</h2>
+<p>R11’s symmetric-fibre argument reduces each scalar minimax risk to
+the largest endpoint deviation of a path hidden by the zero record.
+Scale time by tau and position by epsilon. The admissible paths satisfy
+x(0)=x’(0)=0, |x’‘|&lt;=1 almost everywhere, and |x(t)|&lt;=1 on [0,s].
+Let v=x’(s)&gt;=0; symmetry covers the other sign.</p>
+<p>First v&lt;=s. For fixed v the acceleration u obeys integral u=v.
+Write u=2w-1 with 0&lt;=w&lt;=1 and integral w=(s+v)/2. The endpoint
+position is integral (s-t)u(t)dt. Its minimum places w=1 on the final
+interval of length (s+v)/2, since the weight s-t is decreasing. For a
+direct proof, let w_* be that final-interval indicator and c its left
+endpoint. Since integral (w-w_*)=0 and <span
+class="math inline">\(((s-t)-(s-c))(w-w_*)\ge0\)</span> pointwise,
+integrating proves the minimum. Hence</p>
+<p><span class="math display">\[x(s)\ge\frac{v^2+2sv-s^2}{4},\qquad
+v\le\sqrt{2s^2+4}-s.\]</span></p>
+<p>Finally, for t in [s-v,s], x’(t)&gt;=v-(s-t). This interval exists
+because v&lt;=s, and integration gives</p>
+<p><span class="math display">\[2\ge x(s)-x(s-v)\ge v^2/2,\qquad
+v\le2.\]</span></p>
+<p>These three upper bounds have lower envelope V(s): the first and
+second meet at sqrt(2), the second and third at 4; the middle expression
+increases from sqrt(2) to 2 on that interval. The endpoint position
+separately obeys x(s)&lt;=min(s^2/2,1).</p>
+<p>For s&lt;=sqrt(2), take u=+1 throughout. For sqrt(2)&lt;=s&lt;=4, set
+h=(s-V(s))/2=s-sqrt(s^2/2+1). Take u=-1 for h time and then u=+1 until
+s. The endpoint has x(s)=1 and x’(s)=V(s). Its minimum occurs at time 2h
+and equals -h^2. Since 0&lt;=h&lt;=1 and 2h&lt;=s, the entire path stays
+in [-1,1]. For s&gt;=4, wait at zero for s-4, apply u=-1 for one unit,
+then u=+1 for three units. This reaches -1 with zero velocity after the
+first two active units, then ends at +1 with velocity 2. Thus every
+upper bound is attained, including both regime junctions and s=0.</p>
+<p>Opposite paths admit the same inertial record and share the exact
+initial state. Compatible-interval midpoint estimators give matching
+upper minimax bounds by R11. Because one extremizer maximizes position
+and momentum with the same sign, appending force +F for the blind
+interval attains both displayed prediction bounds. The triangle
+inequality and the force bound give the matching upper bounds on the
+central fibre.</p>
+<h2 id="composition-at-every-horizon">3. Composition at every
+horizon</h2>
+<p>Let constituent i have (m_i,F_i,epsilon_i) and the same observed T.
+Allow the Cartesian product of force/error classes, as in R12. Set M=sum
+m_i, F_Sigma=sum F_i, E=sum m_i epsilon_i/M. With every constituent
+record retained the exact centre and total-momentum radii are</p>
+<p><span class="math display">\[Q_A=\frac{\sum_i m_iQ_i(T)}M,\qquad
+P_A=\sum_iP_i(T).\]</span></p>
+<p>With only the centre record retained, R12’s proportional force/error
+lift works at every T. Thus Q_B,P_B are exactly section 1’s single-body
+formulas with (m,F,epsilon)=(M,F_Sigma,E). Information inclusion gives
+Q_B&gt;=Q_A and P_B&gt;=P_A without any common-regime assumption.</p>
+<p>There is a precise transient position-loss criterion. Put
+A_i=F_iT^2/2 and B_i=m_i epsilon_i. Then</p>
+<p><span class="math display">\[M Q_A=\sum_i\min(A_i,B_i),\qquad
+M Q_B=\min(\sum_iA_i,\sum_iB_i).\]</span></p>
+<p>The difference is strictly positive exactly when at least one A_i<B_i
+and at least one A_j>B_j. To see this, if sum A_i&lt;=sum B_i the
+difference is sum (A_i-B_i)<em>+; in the other case it is sum
+(B_i-A_i)</em>+. The weak-side total inequality forces the opposite
+strict sign whenever the sum is positive. Equality cases with A_i=B_i
+cause no ambiguity.</p>
+<p>For a concrete mixed-regime example, choose equal masses m and
+precision epsilon, F_1=F and F_2=16F, at T=sqrt(m epsilon/F). Then
+s_1=1, s_2=4, while the aggregate s_B=sqrt(17/2). The exact radii
+are</p>
+<p><span class="math display">\[Q_A=\tfrac34\varepsilon,\qquad
+Q_B=\varepsilon,\]</span> <span
+class="math display">\[P_A=9\sqrt{mF\varepsilon},\qquad
+P_B=(\sqrt{714}-17)\sqrt{mF\varepsilon}&gt;P_A.\]</span></p>
+<p>Indeed sqrt(714)&gt;26 since 714&gt;676. The products are
+respectively (27/4)sqrt(mF) epsilon^(3/2) and (sqrt(714)-17)sqrt(mF)
+epsilon^(3/2). The second exceeds the first. For identical copies
+H_A=H_B=n H_1(T) at every horizon.</p>
+<h2 id="limits-and-next-physical-premise">4. Limits and next physical
+premise</h2>
+<p>At fixed positive m,F,epsilon and T down to zero,
+H=F<sup>2T</sup>3/(2m). At fixed T&gt;0 and epsilon down to zero, H=2
+sqrt(mF) epsilon^(3/2) once T&gt;=4 sqrt(m epsilon/F). The gap closes in
+either limit. The precision and force parameters set the scale; the
+finite preparation time sets when it is reached. R11’s sufficient time 4
+tau is the exact earliest momentum saturation time for this
+known-initial-state experiment.</p>
+<p>The source capsule is Seeber–Haimovich’s prepared bounded-curvature
+pair (B42) plus R12’s product-fibre and aggregate-image proofs. The
+finite-horizon rearrangement supplies the missing transient. The next
+bounded task R14 should restrict the record errors by one explicit
+shared apparatus constraint, for example sum_i (e_i/epsilon_i)^2&lt;=1
+pointwise, and derive the changed central fibre and aggregate image for
+two identical constituents. This tests which composition conclusion
+depended on freely aligned full-width errors.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Continuous-time expansion for Kogut–Susskind: SU(3) gapped for g2≥388, gap approaching (8/3)g2 ħ c/a</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Continuous-time expansion for Kogut–Susskind: <span
+class="math inline">\(SU(3)\)</span> gapped for <span
+class="math inline">\(g^2\ge388\)</span>, gap approaching <span
+class="math inline">\((8/3)g^2\,\hbar c/a\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/kogut-susskind-strong-coupling-explicit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/kogut-susskind-strong-coupling-explicit.pdf">PDF</a></p><p>Yarotsky’s theorem gives the Kogut–Susskind gap for <span
+class="math inline">\(SU(3)\)</span> only beyond <span
+class="math inline">\(g^2\sim10^{101}\)</span>, because its time
+discretization pays <span class="math inline">\(e^{64t_0}\)</span> per
+perturbed site. The same statement with usable numbers comes from the
+Duhamel expansion of <span class="math inline">\(e^{-tH}\)</span> in the
+plaquette term with the electric evolution kept exact between
+insertions: a polymer gas in continuous time whose weights carry the
+exact decay <span class="math inline">\(e^{-E\,\Delta\tau}\)</span> of
+every excited link, so no neighbourhood is ever left unpenalized. Three
+structural facts do the work. The electric term is diagonal in the
+character basis with eigenvalue <span
+class="math inline">\(\varepsilon\sum_\ell C_2(r_\ell)/C_2(f)\)</span>,
+<span class="math inline">\(\varepsilon=(g^2/2)C_2(f)=2g^2/3\)</span>.
+The plaquette operator <span
+class="math inline">\(w_p=\operatorname{tr}U_p+\operatorname{tr}U_p^\dagger\)</span>
+acts on four links with <span
+class="math inline">\(\|w_p\|\le2N=6\)</span>, and <span
+class="math inline">\(V=(2/g^2)\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\)</span>
+is <span class="math inline">\(-(1/g^2)\sum_pw_p\)</span> up to a
+constant. And Gauss’s law forces every intermediate excited set to be a
+closed flux loop, so at least four links are excited whenever any are,
+<span class="math inline">\(E\ge4\varepsilon\)</span> on the orthogonal
+complement of the vacuum. The Kotecký–Preiss criterion, in its
+measure-space form, with the weight <span
+class="math inline">\(a(\gamma)=n(\gamma)+\lambda|\operatorname{supp}\gamma|\)</span>
+and <span class="math inline">\(\lambda=\varepsilon(1-\theta)\)</span>,
+then gives a gap of at least <span
+class="math inline">\(4\lambda=(8/3)g^2(1-\theta)\)</span> in units
+<span class="math inline">\(\hbar c/a\)</span> whenever <span
+class="math display">\[g^4\ \ge\ \max\Big(\frac{3132}{\theta},\
+\frac{783}{\sqrt{\theta(1-\theta)}}\Big),\]</span> for the class of
+polymers in which each insertion touches the current excited set; so
+<span class="math inline">\(\Delta_{\rm KS}\ge\frac43g^2\,\hbar
+c/a\)</span> for <span class="math inline">\(g^2\ge79\)</span>, <span
+class="math inline">\(\Delta_{\rm KS}\ge2.4\,g^2\,\hbar c/a\)</span> for
+<span class="math inline">\(g^2\ge177\)</span>, and the bound approaches
+the flux-loop energy as <span class="math inline">\(g\to\infty\)</span>,
+which fixes the constant <span class="math inline">\(\gamma\)</span> of
+the T2 theorem at <span class="math inline">\(4\)</span>. The general
+polymers, in which a later insertion may start a separate piece that is
+bridged afterwards, are counted explicitly by a spanning tree of
+consecutive touchings, at a factor <span
+class="math inline">\(24\)</span> per insertion, which makes the
+rigorous threshold <span class="math inline">\(g^2\ge388\)</span> for
+the same <span class="math inline">\(\frac43g^2\)</span> gap. Constants
+explicit; nothing promoted.</p>
+<h2 id="the-expansion">1. The expansion</h2>
+<p>Units <span class="math inline">\(\hbar c/a=1\)</span>. Write <span
+class="math inline">\(H=H_E-W+{\rm const}\)</span> with <span
+class="math inline">\(H_E=(g^2/2)\sum_\ell(-\Delta_\ell)\)</span> and
+<span class="math inline">\(W=(1/g^2)\sum_pw_p\)</span>. In the
+Peter–Weyl basis <span class="math inline">\(H_E\)</span> is diagonal,
+its eigenvalue on a link configuration <span
+class="math inline">\(\sigma=(r_\ell)\)</span> being <span
+class="math inline">\(E(\sigma)=(g^2/2)\sum_\ell
+C_2(r_\ell)\ge\varepsilon\,|S(\sigma)|\)</span>, with <span
+class="math inline">\(S(\sigma)\)</span> the set of links carrying a
+nontrivial representation and <span
+class="math inline">\(\varepsilon=(g^2/2)C_2(f)\)</span>, since <span
+class="math inline">\(C_2(f)=4/3\)</span> is the least nonzero Casimir
+of <span class="math inline">\(SU(3)\)</span>. Duhamel’s formula gives
+<span
+class="math display">\[e^{-tH}=\sum_{n\ge0}\int_{0&lt;\tau_1&lt;\dots&lt;\tau_n&lt;t}
+e^{-(t-\tau_n)H_E}\,W\,e^{-(\tau_n-\tau_{n-1})H_E}\cdots
+W\,e^{-\tau_1H_E},\]</span> all terms positive. Insert, between
+consecutive factors, the resolution <span
+class="math inline">\(1=\sum_SP_S\)</span> with <span
+class="math inline">\(P_S\)</span> the projection onto configurations
+whose excited set is exactly <span class="math inline">\(S\)</span>;
+each <span class="math inline">\(P_S\)</span> is a product over links. A
+<strong>history</strong> is then a sequence <span
+class="math inline">\((p_k,\tau_k,S_k)_{k=1}^n\)</span> with <span
+class="math inline">\(S_0=\emptyset\)</span>, and its weight is <span
+class="math display">\[\Big\langle\Omega_0,\prod_{k}\big(P_{S_k}\tfrac1{g^2}w_{p_k}P_{S_{k-1}}\big)e^{-\Delta\tau_kH_E}\
+\Omega_0\Big\rangle,
+\qquad\Big|\cdot\Big|\ \le\
+\Big(\frac{2N}{g^2}\Big)^n\prod_{k=1}^{n-1}e^{-\varepsilon|S_k|\Delta\tau_k},\]</span>
+because <span class="math inline">\(\|w_p\|\le2N\)</span> and <span
+class="math inline">\(e^{-\Delta\tau H_E}P_S\)</span> has norm at most
+<span class="math inline">\(e^{-\varepsilon|S|\Delta\tau}\)</span>.</p>
+<p>Two constraints on the <span class="math inline">\(S_k\)</span>.
+First, <span class="math inline">\(\operatorname{links}(p_k)\subseteq
+S_{k-1}\cup S_k\)</span>: acting on a trivial link, <span
+class="math inline">\(w_p\)</span> makes it nontrivial (<span
+class="math inline">\(f\otimes1=f\)</span>), so a link of <span
+class="math inline">\(p_k\)</span> can be trivial afterwards only if it
+was nontrivial before. Second, <strong>Gauss’s law</strong>: <span
+class="math inline">\(\Omega_0\)</span> and every <span
+class="math inline">\(w_p\)</span> are gauge invariant, so every
+intermediate configuration is, and the representations on the links at a
+vertex fuse to the trivial one; a nonempty excited set is therefore a
+union of closed flux loops and <span
+class="math inline">\(|S_k|\ge4\)</span> whenever <span
+class="math inline">\(S_k\ne\emptyset\)</span>. This is where the
+non-abelian theory pays nothing extra: the same constraint holds for
+<span class="math inline">\(U(1)\)</span>.</p>
+<p><strong>Factorization.</strong> The support of a history is <span
+class="math inline">\(\operatorname{supp}\gamma=\bigcup_k
+S_k\times[\tau_k,\tau_{k+1}]\subset\mathcal E\times[0,t]\)</span>. If a
+history splits into pieces with disjoint supports, its weight is the
+product of the pieces’ weights, because <span
+class="math inline">\(P_S\)</span>, <span
+class="math inline">\(e^{-\Delta\tau H_E}\)</span> and <span
+class="math inline">\(\Omega_0\)</span> factor over links and each <span
+class="math inline">\(w_p\)</span> acts on four links; and the ordered
+time integral over the whole history is the product of the ordered
+integrals over the pieces. So <span
+class="math display">\[Z(t)=\langle\Omega_0,e^{-tH}\Omega_0\rangle=\sum_{\{\gamma_i\}\
+\text{compatible}}\prod_iw(\gamma_i),\]</span> a gas of
+<strong>polymers</strong>, the connected histories, two polymers being
+compatible when their supports are disjoint. Between consecutive
+insertions of a connected polymer the excited set is nonempty, or the
+support would split in time; hence <span
+class="math inline">\(|S_k|\ge4\)</span> for <span
+class="math inline">\(1\le k\le n-1\)</span>.</p>
+<h2 id="the-convergence-criterion">2. The convergence criterion</h2>
+<p>The Kotecký–Preiss criterion (Commun. Math. Phys. 103 (1986) 491) in
+its form for polymers indexed by a measure space (Poghosyan and
+Ueltschi, J. Math. Phys. 50 (2009) 053509; metadata level) is: if for
+every <span class="math inline">\(\gamma\)</span> <span
+class="math display">\[\int_{\gamma&#39;\not\sim\gamma}|w(\gamma&#39;)|\,e^{a(\gamma&#39;)}\,d\gamma&#39;\
+\le\ a(\gamma),\]</span> then the cluster expansion of <span
+class="math inline">\(\log Z\)</span> converges absolutely and uniformly
+in the volume, and truncated correlations obey the standard bounds. Here
+<span class="math inline">\(d\gamma&#39;\)</span> is the sum over shapes
+<span class="math inline">\((p_k,S_k)_{k=1}^{n}\)</span> times <span
+class="math inline">\(d\tau_1\prod_{k=1}^{n-1}d\Delta\tau_k\)</span>.</p>
+<p>Take <span
+class="math display">\[a(\gamma)=n(\gamma)+\lambda\,|\operatorname{supp}\gamma|,\qquad
+|\operatorname{supp}\gamma|=\sum_{k=1}^{n-1}|S_k|\Delta\tau_k,\qquad
+0&lt;\lambda&lt;\varepsilon .\]</span> Then <span
+class="math inline">\(e^{a(\gamma&#39;)}|w(\gamma&#39;)|\le(2Ne/g^2)^{n&#39;}\prod_ke^{-(\varepsilon-\lambda)|S_k&#39;|\Delta\tau_k&#39;}\)</span>.</p>
+<p><em>Overlap.</em> <span
+class="math inline">\(\gamma&#39;\not\sim\gamma\)</span> means some link
+<span class="math inline">\(\ell\)</span> is excited in both at a common
+time. For a fixed shape and internal times of <span
+class="math inline">\(\gamma&#39;\)</span>, the set of <span
+class="math inline">\(\tau_1&#39;\)</span> producing an overlap through
+link <span class="math inline">\(\ell\in S_k&#39;\)</span> during the
+interval in which <span class="math inline">\(\gamma\)</span> excites
+<span class="math inline">\(\ell\)</span> has measure at most <span
+class="math inline">\(T_\ell(\gamma)+\Delta\tau_k&#39;\)</span>, where
+<span class="math inline">\(T_\ell(\gamma)\)</span> is the total time
+<span class="math inline">\(\gamma\)</span> keeps <span
+class="math inline">\(\ell\)</span> excited, and <span
+class="math inline">\(\sum_\ell
+T_\ell(\gamma)=|\operatorname{supp}\gamma|\)</span>.</p>
+<p><em>Integrals.</em> <span class="math inline">\(\int_0^\infty
+e^{-(\varepsilon-\lambda)|S|\Delta\tau}d\Delta\tau=\frac1{(\varepsilon-\lambda)|S|}\)</span>
+and <span
+class="math inline">\(\int_0^\infty\Delta\tau\,e^{-(\varepsilon-\lambda)|S|\Delta\tau}d\Delta\tau=\frac1{((\varepsilon-\lambda)|S|)^2}\le\frac1{4(\varepsilon-\lambda)}\cdot\frac1{(\varepsilon-\lambda)|S|}\)</span>.</p>
+<p>Collecting, with <span class="math display">\[Q_\lambda\ :=\
+\sum_{\text{shapes}\ni\ell_0}(n-1)\Big(\frac{2Ne}{g^2}\Big)^n\prod_{k=1}^{n-1}\frac{1}{(\varepsilon-\lambda)|S_k|}\]</span>
+the weighted number of polymer shapes through a fixed link, the left
+side of the criterion is at most <span
+class="math inline">\(Q_\lambda|\operatorname{supp}\gamma|+\frac{Q_\lambda}{4(\varepsilon-\lambda)}\,n(\gamma)\)</span>,
+and the criterion holds whenever <span class="math display">\[Q_\lambda\
+\le\ \lambda\qquad\text{and}\qquad
+Q_\lambda\le4(\varepsilon-\lambda).\]</span></p>
+<h2 id="counting-shapes">3. Counting shapes</h2>
+<p><strong>Adjacent growth.</strong> Consider first the shapes in which
+every insertion <span class="math inline">\(p_k\)</span>, <span
+class="math inline">\(k\ge2\)</span>, shares a link with the current
+excited set <span class="math inline">\(S_{k-1}\)</span>. The first
+plaquette contains <span class="math inline">\(\ell_0\)</span>: in three
+dimensions a link lies in four plaquettes, so <span
+class="math inline">\(4\)</span> choices, and <span
+class="math inline">\(S_1=\operatorname{links}(p_1)\)</span> is forced.
+At step <span class="math inline">\(k\ge2\)</span> there are at most
+<span class="math inline">\(4|S_{k-1}|\)</span> plaquettes touching
+<span class="math inline">\(S_{k-1}\)</span> and at most <span
+class="math inline">\(2^4=16\)</span> choices of <span
+class="math inline">\(S_k\)</span>. Each step therefore contributes at
+most <span
+class="math display">\[\frac{2Ne}{g^2}\cdot\frac{1}{(\varepsilon-\lambda)|S_{k-1}|}\cdot64|S_{k-1}|
+=\frac{128Ne}{g^2(\varepsilon-\lambda)}\ =:\ u,\]</span> the size <span
+class="math inline">\(|S_{k-1}|\)</span> cancelling between the entropy
+and the energy denominator, which is the mechanism that keeps the count
+geometric. So <span class="math display">\[Q_\lambda^{\rm adj}\ \le\
+4\,\frac{2Ne}{g^2}\sum_{m\ge1}m\,u^m=\frac{8Ne}{g^2}\,\frac{u}{(1-u)^2}.\]</span></p>
+<p><strong>General shapes, counted by a tree.</strong> A later insertion
+may start a piece disjoint from the current support that is bridged
+afterwards. To count all connected shapes, build the graph <span
+class="math inline">\(G&#39;\)</span> on the insertions in which, for
+every link <span class="math inline">\(\ell\)</span> and every maximal
+interval during which <span class="math inline">\(\ell\)</span> is
+excited, consecutive insertions touching <span
+class="math inline">\(\ell\)</span> are joined by an edge. Connectedness
+of the support is connectedness of <span
+class="math inline">\(G&#39;\)</span>, and the edges attached to a given
+link tile its excitation intervals without overlap, so for any spanning
+tree <span class="math inline">\(T\subseteq G&#39;\)</span> <span
+class="math display">\[\sum_{e\in T}|\Delta\tau_e|\ \le\
+|\operatorname{supp}\gamma|,\qquad\text{hence}\qquad
+e^{-(\varepsilon-\lambda)|\operatorname{supp}\gamma|}\le\prod_{e\in
+T}e^{-(\varepsilon-\lambda)|\Delta\tau_e|}.\]</span> Each insertion has
+at most eight slots for <span
+class="math inline">\(G&#39;\)</span>-edges, the previous and next
+toucher of each of its four links, so <span
+class="math inline">\(T\)</span> is a rooted tree with children in
+labelled slots: at most <span class="math inline">\(4^n\)</span> plane
+shapes times <span class="math inline">\(8^{n-1}\)</span> slot
+assignments. Given the parent and the slot, the child plaquette contains
+the slot’s link and differs from the parent, at most <span
+class="math inline">\(3\)</span> choices; the excited set after it, at
+most <span class="math inline">\(16\)</span>; the insertion factor <span
+class="math inline">\(2Ne/g^2\)</span>; and the edge time integral <span
+class="math inline">\(\int_0^\infty
+e^{-(\varepsilon-\lambda)\Delta\tau}d\Delta\tau=1/(\varepsilon-\lambda)\)</span>,
+the time direction being fixed by the slot. The per-vertex factor is
+<span class="math display">\[u_{\rm
+gen}=32\cdot3\cdot16\cdot\frac{2Ne}{g^2}\cdot\frac1{\varepsilon-\lambda}
+=\frac{3072Ne}{g^2(\varepsilon-\lambda)}=24\,u ,\]</span> and the sum
+over all connected shapes through a fixed link is bounded by the
+adjacent-growth sum with <span class="math inline">\(u\)</span> replaced
+by <span class="math inline">\(24u\)</span>; the overlap factor of
+Section 2 loses its <span class="math inline">\(1/4\)</span> because
+only one link’s decay is used per edge, so the second condition reads
+<span class="math inline">\(Q\le\varepsilon-\lambda\)</span>. The loss
+against adjacent growth is the factor <span
+class="math inline">\(24\)</span>, coming from the tree entropy <span
+class="math inline">\(32\)</span>, the <span
+class="math inline">\(3\)</span> plaquettes per slot and the single-link
+decay in place of <span
+class="math inline">\(1/(4(\varepsilon-\lambda))\)</span>. Both counts
+are given below; the general one is rigorous as written, the adjacent
+one is what a careful count of the same shapes should approach.</p>
+<h2 id="numbers-for-su3">4. Numbers for <span
+class="math inline">\(SU(3)\)</span></h2>
+<p>With <span class="math inline">\(N=3\)</span>, <span
+class="math inline">\(\varepsilon=2g^2/3\)</span> and <span
+class="math inline">\(\lambda=\varepsilon(1-\theta)\)</span>, <span
+class="math display">\[u=\frac{128\cdot3e}{g^2\cdot\theta\cdot2g^2/3}=\frac{576e}{\theta
+g^4}=\frac{1566}{\theta g^4}.\]</span> Impose <span
+class="math inline">\(u\le\frac12\)</span> and, for the first condition
+of Section 2, <span
+class="math inline">\(\frac{8Ne}{g^2}\cdot4u\le\lambda\)</span>, that is
+<span class="math inline">\(96e\cdot\frac{1566}{\theta
+g^4}\le\frac23g^2(1-\theta)\cdot g^2/g^2\)</span>; cleaning up, <span
+class="math display">\[g^4\ \ge\
+\frac{3132}{\theta}\qquad\text{and}\qquad g^8\ \ge\
+\frac{6.13\times10^5}{\theta(1-\theta)},\]</span> the second condition
+of Section 2 being weaker. Hence:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\theta\)</span></th>
+<th>threshold <span class="math inline">\(g^2\)</span></th>
+<th>gap <span
+class="math inline">\(\ge4\lambda=\frac83g^2(1-\theta)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1/2\)</span></td>
+<td><span class="math inline">\(79\)</span></td>
+<td><span class="math inline">\(\frac43g^2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1/4\)</span></td>
+<td><span class="math inline">\(112\)</span></td>
+<td><span class="math inline">\(2g^2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1/10\)</span></td>
+<td><span class="math inline">\(177\)</span></td>
+<td><span class="math inline">\(2.4\,g^2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\theta\to0\)</span></td>
+<td><span
+class="math inline">\(g^2\gtrsim\sqrt{3132/\theta}\)</span></td>
+<td><span class="math inline">\(\to\frac83g^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>With the general count, <span class="math inline">\(u_{\rm
+gen}=37584/(\theta g^4)\)</span>, the conditions <span
+class="math inline">\(u_{\rm gen}\le\frac12\)</span> and <span
+class="math inline">\(4Fu_{\rm gen}\le\lambda\)</span> give <span
+class="math inline">\(g^4\ge75168/\theta\)</span> and <span
+class="math inline">\(g^8\ge1.47\times10^7/(\theta(1-\theta))\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\theta\)</span></th>
+<th>rigorous threshold <span class="math inline">\(g^2\)</span></th>
+<th>gap <span
+class="math inline">\(\ge\frac83g^2(1-\theta)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1/2\)</span></td>
+<td><span class="math inline">\(388\)</span></td>
+<td><span class="math inline">\(\frac43g^2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1/4\)</span></td>
+<td><span class="math inline">\(548\)</span></td>
+<td><span class="math inline">\(2g^2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1/10\)</span></td>
+<td><span class="math inline">\(867\)</span></td>
+<td><span class="math inline">\(2.4\,g^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The gap here is read off as in <a
+href="wilson-strong-coupling-explicit.html">the Wilson note</a> §3:
+running the criterion with <span
+class="math inline">\(a(\gamma)=n+\lambda|\operatorname{supp}\gamma|\)</span>
+puts a factor <span
+class="math inline">\(e^{-\lambda|\operatorname{supp}X|}\)</span> on
+every cluster, a cluster spanning a time interval of length <span
+class="math inline">\(t\)</span> has <span
+class="math inline">\(|\operatorname{supp}|\ge4t\)</span> by Gauss’s
+law, so vacuum-subtracted correlations in Euclidean time decay at rate
+at least <span class="math inline">\(4\lambda\)</span>, and for a
+positive semigroup that is a lower bound on the gap on the cyclic
+subspace of local observables, which in finite volume is everything by
+T1.</p>
+<p><strong>Consequence for T2.</strong> The T2 theorem’s constant <span
+class="math inline">\(\gamma\)</span>, defined by <span
+class="math inline">\(\Delta\ge\gamma(g^2/2)C_2\)</span>, is <span
+class="math inline">\(4(1-\theta)\)</span> in this expansion and tends
+to <span class="math inline">\(4\)</span>: the gap is the energy of one
+flux loop, four links in the fundamental, up to corrections of relative
+order <span class="math inline">\(1/g^4\)</span>. This agrees with the
+two-sided strong-coupling statement of <a href="su3-constants.html">the
+SU(3) constants</a> §2, whose upper side is <span
+class="math inline">\(12g^2\)</span>, and closes the ratio <span
+class="math inline">\(18/\gamma\)</span> there to <span
+class="math inline">\(4.5\)</span>.</p>
+<h2 id="why-this-beats-the-time-discretized-argument">5. Why this beats
+the time-discretized argument</h2>
+<p>Yarotsky’s Lemma 3 gives up the decay of every link in the range of a
+perturbed site for a whole step <span
+class="math inline">\(t_0\)</span>, and <span
+class="math inline">\(t_0\ge7\)</span> is forced by the entropy of the
+space-time lattice; the product is <span
+class="math inline">\(e^{64t_0}\sim e^{450}\)</span> per insertion. In
+continuous time each excited link decays exactly for exactly as long as
+it is excited, the insertion carries no step, and the only entropy is
+the choice of the next plaquette and excited set, which the energy
+denominator <span
+class="math inline">\(1/((\varepsilon-\lambda)|S_k|)\)</span> pays for
+link by link. The threshold drops from <span
+class="math inline">\(10^{101}\)</span> to <span
+class="math inline">\(10^2\)</span> for the same model and the same
+conclusion.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The T2 theorem for the Kogut–Susskind Hamiltonian now has an explicit
+threshold, <span class="math inline">\(g^2\ge388\)</span> for <span
+class="math inline">\(SU(3)\)</span> rigorously and <span
+class="math inline">\(g^2\ge79\)</span> in the adjacent-growth class,
+and an explicit gap approaching the flux-loop energy <span
+class="math inline">\((8/3)g^2\,\hbar c/a\)</span>. Together with the
+Wilson transfer-matrix result, the strong-coupling boundary of the
+intermediate region is of order <span
+class="math inline">\(g^2\sim10^2\)</span> for both standard
+regularizations. The weak side remains the crude <span
+class="math inline">\(1/g^2\gtrsim10^2\)</span>, and the intermediate
+region between them is unchanged.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

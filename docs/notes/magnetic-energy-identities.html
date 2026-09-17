@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two exact identities for the magnetic energy, a ground-state sum rule, and why pointwise Gibbs domination fails as Agmon does</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Two exact identities for the magnetic energy, a ground-state sum
+rule, and why pointwise Gibbs domination fails as Agmon does</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/magnetic-energy-identities.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/magnetic-energy-identities.pdf">PDF</a></p><p>The magnetic energy of the Kogut–Susskind Hamiltonian satisfies two
+exact relations on the configuration space <span
+class="math inline">\(G^{\mathcal E}\)</span>: <span
+class="math display">\[\Delta V=4C_2\big(N|\mathcal P|-V\big),
+\qquad
+\big|\nabla V\big|^2\ \le\ 16\,V\quad(SU(2)),\]</span> the first because
+<span class="math inline">\(V-N|\mathcal P|\)</span> is an eigenfunction
+of the Laplace–Beltrami operator with eigenvalue <span
+class="math inline">\(-4C_2\)</span>, the second from the completeness
+relation together with <span
+class="math inline">\(\sin^2\theta=(1-\cos\theta)(1+\cos\theta)\)</span>.
+They give an exact sum rule for the ground state, <span
+class="math display">\[A&#39;\!\int\!\big(V-N|\mathcal
+P|\big)\big|\nabla\Omega\big|^2d\mu
++A&#39;\big(2C_2-K\big)\big\langle V-N|\mathcal P|\big\rangle
++B&#39;\operatorname{Var}_\Omega(V)=0,
+\qquad K=\!\int\!|\nabla\Omega|^2,\]</span> and they make the
+comparison-principle attempt at a pointwise bound explicit: with <span
+class="math inline">\(\varphi=e^{-\lambda V/2}\)</span> the operator
+<span class="math inline">\(L=-A&#39;\Delta+(B&#39;V-e_0)\)</span>
+satisfies <span class="math inline">\(L\varphi\ge0\)</span> precisely
+above a threshold <span class="math inline">\(V_*\simeq N|\mathcal
+P|\)</span>, so the maximum principle bounds <span
+class="math inline">\(\Omega\)</span> only above the extensive Haar
+mean. <strong>The pointwise Gibbs domination therefore fails for the
+same reason as the Agmon bound</strong>: the ground-state energy <span
+class="math inline">\(e_0\)</span> is extensive and enters every
+comparison, so a local excess is never in the region where the
+comparison bites. The obstruction is that the Hamiltonian ground state
+is characterized by a global variational principle while the Euclidean
+weight <span class="math inline">\(e^{-S_w}\)</span> is local by
+construction, and no manipulation of the eigenvalue equation alone
+repairs that. Constants explicit; the two identities and the sum rule
+are exact; nothing promoted.</p>
+<h2 id="the-laplacian-of-the-magnetic-energy">1. The Laplacian of the
+magnetic energy</h2>
+<p><strong>Proposition 1.</strong> On <span
+class="math inline">\(\mathcal M=G^{\mathcal E}\)</span> with the
+product bi-invariant metric, <span class="math display">\[\Delta
+V=4C_2(R_{\rm f})\big(N|\mathcal P|-V\big),\]</span> where <span
+class="math inline">\(C_2(R_{\rm f})\)</span> is the quadratic Casimir
+of the defining representation. Equivalently <span
+class="math inline">\(W=V-N|\mathcal P|\)</span> satisfies <span
+class="math inline">\(\Delta W=-4C_2W\)</span>: the magnetic energy,
+shifted by its Haar mean, is an eigenfunction of the Laplacian.</p>
+<p><em>Proof.</em> Fix a plaquette <span
+class="math inline">\(p\)</span> and one of its four links <span
+class="math inline">\(\ell\)</span>. Writing <span
+class="math inline">\(\operatorname{tr}U_p=\sum_{ab}(U_\ell)_{ab}M_{ba}\)</span>
+with <span class="math inline">\(M\)</span> the ordered product of the
+other three links, each matrix element of <span
+class="math inline">\(U_\ell\)</span> in the defining representation is
+an eigenfunction of <span class="math inline">\(\Delta_\ell\)</span>
+with eigenvalue <span class="math inline">\(-C_2(R_{\rm f})\)</span>, by
+Peter–Weyl. Hence <span
+class="math inline">\(\Delta_\ell\operatorname{tr}U_p=-C_2\operatorname{tr}U_p\)</span>,
+and summing over the four links of <span
+class="math inline">\(p\)</span>, <span
+class="math inline">\(\Delta\operatorname{Re}\operatorname{tr}U_p=-4C_2\operatorname{Re}\operatorname{tr}U_p\)</span>.
+Summing over plaquettes, <span class="math inline">\(\Delta
+V=\Delta\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)
+=4C_2\sum_p\operatorname{Re}\operatorname{tr}U_p=4C_2(N|\mathcal
+P|-V)\)</span>. <span class="math inline">\(\square\)</span></p>
+<h2 id="the-gradient-of-the-magnetic-energy">2. The gradient of the
+magnetic energy</h2>
+<p><strong>Proposition 2.</strong> For <span
+class="math inline">\(SU(2)\)</span>, <span
+class="math inline">\(|\nabla V|^2\le16\,V\)</span> pointwise on <span
+class="math inline">\(\mathcal M\)</span>. For general <span
+class="math inline">\(SU(N)\)</span>, <span
+class="math inline">\(|\nabla V|^2\le16\,N\,V\)</span>.</p>
+<p><em>Proof.</em> For one link of one plaquette, the completeness
+relation of <a href="lattice-gap-upper-bounds.html">the upper-bound
+note</a> Corollary 2 gives <span
+class="math display">\[\sum_a\big|X^\ell_a\operatorname{tr}U_p\big|^2
+=\tfrac12\Big[\operatorname{tr}(MM^\dagger)-\tfrac1N\big|\operatorname{tr}M\big|^2\Big]
+=\tfrac12\Big[N-\tfrac1N\big|\operatorname{tr}U_p\big|^2\Big].\]</span>
+For <span class="math inline">\(SU(2)\)</span>, writing <span
+class="math inline">\(\operatorname{tr}U_p=2\cos\theta\)</span>, this is
+<span
+class="math inline">\(1-\cos^2\theta=\sin^2\theta=(1-\cos\theta)(1+\cos\theta)\)</span>,
+while <span class="math inline">\(V_p=2-2\cos\theta\)</span>, so <span
+class="math display">\[\big|\nabla_\ell\operatorname{Re}\operatorname{tr}U_p\big|^2
+\le\sin^2\theta=\frac{V_p}2\Big(2-\frac{V_p}2\Big)\le V_p .\]</span>
+Each link lies in four plaquettes, so by Cauchy–Schwarz <span
+class="math inline">\(|\nabla_\ell V|^2\le4\sum_{p\ni\ell}V_p\)</span>,
+and summing over links, with four links per plaquette, <span
+class="math inline">\(|\nabla
+V|^2\le4\sum_\ell\sum_{p\ni\ell}V_p=16\sum_pV_p=16V\)</span>. The
+general case replaces the bound <span
+class="math inline">\(\sin^2\theta\le V_p\)</span> by <span
+class="math inline">\(\tfrac12[N-|\operatorname{tr}U_p|^2/N]\le
+NV_p\)</span>, which follows from <span
+class="math inline">\(|\operatorname{tr}U_p|\ge N-V_p\)</span> when
+<span class="math inline">\(V_p\le N\)</span> and from the trivial bound
+otherwise. <span class="math inline">\(\square\)</span></p>
+<p>Both identities vanish at <span class="math inline">\(U_p=1\)</span>:
+a configuration with no magnetic energy has no magnetic gradient, as it
+must.</p>
+<h2 id="an-exact-ground-state-sum-rule">3. An exact ground-state sum
+rule</h2>
+<p><strong>Proposition 3.</strong> With <span
+class="math inline">\(W=V-N|\mathcal P|\)</span>, <span
+class="math inline">\(K=\int|\nabla\Omega|^2d\mu\)</span>, <span
+class="math inline">\(\langle\cdot\rangle=\langle\Omega,\cdot\,\Omega\rangle\)</span>
+and <span class="math inline">\(\operatorname{Var}_\Omega(V)=\langle
+V^2\rangle-\langle V\rangle^2\)</span>, <span
+class="math display">\[A&#39;\!\int W\big|\nabla\Omega\big|^2d\mu
++A&#39;\big(2C_2-K\big)\langle W\rangle
++B&#39;\operatorname{Var}_\Omega(V)=0 .\]</span></p>
+<p><em>Proof.</em> Multiply <span
+class="math inline">\(-A&#39;\Delta\Omega+(B&#39;V-e_0)\Omega=0\)</span>
+by <span class="math inline">\(W\Omega\)</span> and integrate. Since
+<span class="math display">\[\int W\Omega\,\Delta\Omega=-\int
+W|\nabla\Omega|^2-\int\Omega\,\nabla W\!\cdot\!\nabla\Omega,\]</span>
+<span class="math display">\[\int\Omega\,\nabla
+W\!\cdot\!\nabla\Omega=-\tfrac12\int(\Delta W)\Omega^2=2C_2\langle
+W\rangle,\]</span> by Proposition 1, so <span class="math inline">\(\int
+W\Omega\Delta\Omega=-\int W|\nabla\Omega|^2-2C_2\langle
+W\rangle\)</span> and the equation becomes <span
+class="math inline">\(A&#39;\int W|\nabla\Omega|^2+2A&#39;C_2\langle
+W\rangle+B&#39;\langle VW\rangle-e_0\langle W\rangle=0\)</span>. Now
+<span class="math inline">\(e_0=A&#39;K+B&#39;\langle
+V\rangle=A&#39;K+B&#39;(\langle W\rangle+N|\mathcal P|)\)</span> and
+<span class="math inline">\(\langle VW\rangle=\langle
+W^2\rangle+N|\mathcal P|\langle W\rangle\)</span>, so the last two terms
+combine into <span class="math inline">\(-A&#39;K\langle
+W\rangle-B&#39;\langle W\rangle^2+B&#39;\langle W^2\rangle\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p>The sum rule ties the magnetic variance of the ground state to its
+kinetic energy and to the correlation between magnetic energy and
+kinetic density. At <span class="math inline">\(g\to\infty\)</span>
+every term vanishes with <span class="math inline">\(B&#39;\)</span>,
+and at finite coupling it is one exact constraint on the ground-state
+measure.</p>
+<h2 id="pointwise-gibbs-domination-and-where-it-stops">4. Pointwise
+Gibbs domination and where it stops</h2>
+<p>Try <span class="math inline">\(\varphi=e^{-\lambda V/2}\)</span>,
+<span class="math inline">\(\lambda&gt;0\)</span>, as a comparison
+function for <span
+class="math inline">\(L=-A&#39;\Delta+(B&#39;V-e_0)\)</span>. Using
+<span
+class="math inline">\(\Delta\varphi=\varphi[\tfrac{\lambda^2}4|\nabla
+V|^2-\tfrac\lambda2\Delta V]\)</span> and Propositions 1–2, <span
+class="math display">\[\frac{L\varphi}{\varphi}
+=B&#39;V-e_0-A&#39;\frac{\lambda^2}4|\nabla
+V|^2+A&#39;\frac\lambda2\Delta V
+\ \ge\ \Big[B&#39;-4A&#39;\lambda^2-2A&#39;\lambda C_2\Big]V
++\Big[2A&#39;\lambda C_2N|\mathcal P|-e_0\Big],\]</span> for <span
+class="math inline">\(SU(2)\)</span>, using <span
+class="math inline">\(|\nabla V|^2\le16V\)</span> and Proposition 1.</p>
+<p><strong>Proposition 4.</strong> If <span
+class="math inline">\(\lambda\)</span> satisfies <span
+class="math inline">\(B&#39;&gt;4A&#39;\lambda^2+2A&#39;\lambda
+C_2\)</span>, then <span class="math inline">\(L\varphi\ge0\)</span> on
+<span class="math inline">\(\{V\ge V_*\}\)</span> with <span
+class="math display">\[V_*=\frac{\big(e_0-2A&#39;\lambda C_2N|\mathcal
+P|\big)_+}{B&#39;-4A&#39;\lambda^2-2A&#39;\lambda C_2},\]</span> and the
+maximum principle gives <span class="math display">\[\Omega(U)\ \le\
+\Big(\max_{\{V&lt;V_*\}}\frac{\Omega}{\varphi}\Big)\,e^{-\lambda V(U)/2}
+\qquad\text{for all }U .\]</span></p>
+<p><em>Proof.</em> Set <span
+class="math inline">\(u=\Omega/\varphi\)</span>. From <span
+class="math inline">\(L\Omega=0\)</span>, <span
+class="math inline">\(0=-A&#39;\varphi\Delta u-2A&#39;\nabla
+u\!\cdot\!\nabla\varphi+u\,L\varphi\)</span>. At an interior maximum of
+<span class="math inline">\(u\)</span> one has <span
+class="math inline">\(\nabla u=0\)</span> and <span
+class="math inline">\(\Delta u\le0\)</span>, so the first two terms are
+<span class="math inline">\(\ge0\)</span> and <span
+class="math inline">\(u\,L\varphi\le0\)</span>; since <span
+class="math inline">\(u&gt;0\)</span>, the maximum lies in <span
+class="math inline">\(\{L\varphi\le0\}\subset\{V&lt;V_*\}\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Where it stops.</strong> With <span
+class="math inline">\(e_0\le B&#39;N|\mathcal P|\)</span>, the threshold
+obeys <span class="math display">\[V_*\ \le\ N|\mathcal
+P|\;\frac{B&#39;-2A&#39;\lambda
+C_2}{B&#39;-4A&#39;\lambda^2-2A&#39;\lambda C_2}
+\ \xrightarrow[\lambda\to0]{}\ N|\mathcal P| ,\]</span> so the
+comparison function controls <span class="math inline">\(\Omega\)</span>
+only relative to its values on the set where <span
+class="math inline">\(V\)</span> is below the <strong>extensive</strong>
+Haar mean. The bound that results, <span class="math inline">\(\Omega\le
+C\,e^{-\lambda(V-V_*)/2}\)</span> with <span
+class="math inline">\(C\)</span> determined on <span
+class="math inline">\(\{V&lt;V_*\}\)</span>, is again a statement about
+the global excess. A local excess of <span
+class="math inline">\(n\)</span> plaquettes leaves <span
+class="math inline">\(V\)</span> far below <span
+class="math inline">\(V_*\simeq N|\mathcal P|\)</span>, so the bound
+says nothing about it, exactly as in <a
+href="agmon-global-not-local.html">the global/local note</a>.</p>
+<h2 id="the-structural-reason-stated-once">5. The structural reason,
+stated once</h2>
+<p>Both attempts, Agmon and comparison, use the eigenvalue equation
+<span
+class="math inline">\(-A&#39;\Delta\Omega+(B&#39;V-e_0)\Omega=0\)</span>,
+in which <span class="math inline">\(e_0\)</span> is the
+<strong>total</strong> ground-state energy and is extensive. Any
+inequality derived from it compares the total potential with the total
+energy, so it distinguishes configurations only by their global excess.
+The Euclidean weight <span
+class="math inline">\(e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}\)</span>
+factorizes over plaquettes and therefore separates configurations
+locally by construction, with no reference to a total energy.</p>
+<p>This is the precise content of the observation in <a
+href="typical-field-strength-window.html">the typical-field note</a>:
+the Hamiltonian formulation has a state and a global eigenvalue equation
+where the Euclidean formulation has a local weight. The three notes
+since then have tried the two standard ways of extracting a local
+statement from a global equation, and both stop at the same place. A
+local statement would need an input of a different kind, for instance a
+proof that the ground state is a Gibbs state for a local potential, or
+the transfer-matrix identification of <span
+class="math inline">\(\Omega^2\)</span> with a Euclidean measure on a
+time slice, which is the route the constructive programme takes.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The question named in <a href="agmon-global-not-local.html">the
+global/local note</a> §5 is answered in the negative by Proposition 4:
+pointwise Gibbs domination of the Kogut–Susskind ground state does not
+follow from the eigenvalue equation, for the same extensivity reason as
+the Agmon bound. What the attempt produced instead is worth keeping: the
+exact relations <span class="math inline">\(\Delta V=4C_2(N|\mathcal
+P|-V)\)</span> and <span class="math inline">\(|\nabla
+V|^2\le16V\)</span>, and the exact ground-state sum rule of Proposition
+3, which constrains the magnetic variance in terms of kinetic
+quantities. The line of attack that remains is the transfer-matrix
+identification of the ground-state measure with a Euclidean measure,
+carried out in <a href="ground-state-measure-transfer.html">the transfer
+note</a>: <span class="math inline">\(|\Omega|^2d\mu\)</span> is the
+time-slice marginal of the four-dimensional Wilson measure, so every
+local Euclidean estimate transfers, and the local large-field bound
+becomes available in its standard scale-invariant form <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

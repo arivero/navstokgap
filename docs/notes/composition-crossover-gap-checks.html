@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Composition, crossover and gap product: verified calculations for A08, A09 and G01</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Composition, crossover and gap product: verified calculations for
+A08, A09 and G01</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/composition-crossover-gap-checks.md">Markdown source</a></p><p>Independent Claude Fable 5.1 session, 2026-09-08, after the <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/six-directions-2026-09-08.md">six-direction
+review</a>. Every displayed identity is checked exactly in <a
+href="https://github.com/arivero/navstokgap/blob/main/scripts/six_direction_checks.py"><code>scripts/six_direction_checks.py</code></a>;
+the bridge table comes from an <a
+href="https://github.com/arivero/navstokgap/blob/main/scripts/telegraph_bridge_midpoint_sampler.py">exact
+sampler</a> of the C033 construction. These are working derivations for
+the A08, A09 and G01 tasks. They carry no claim IDs until their
+per-result audits.</p>
+<h2 id="composition-inside-the-a01-class-a08">1. Composition inside the
+A01 class (A08)</h2>
+<p><strong>Result.</strong> Let two independent finite irreducible
+reversible velocity chains carry masses <span
+class="math inline">\(m_1,m_2\)</span> and plateaus <span
+class="math inline">\(H_1,H_2\)</span> in the sense of C019. The
+centre-of-mass velocity is again a finite irreducible reversible chain,
+so C019 applies to it, and with <span
+class="math inline">\(M=m_1+m_2\)</span></p>
+<p><span class="math display">\[H_{\rm
+cm}=\frac{m_1H_1+m_2H_2}{M},\qquad
+H_{\rm rel}=\frac{m_2H_1+m_1H_2}{M},\qquad
+H_{\rm cm}+H_{\rm rel}=H_1+H_2.\]</span></p>
+<p><strong>Proof.</strong> The pair <span
+class="math inline">\((J^1,J^2)\)</span> has generator <span
+class="math inline">\(Q=Q_1\otimes I+I\otimes Q_2\)</span> and invariant
+law <span class="math inline">\(\pi_1\otimes\pi_2\)</span>. Detailed
+balance holds factorwise and irreducibility of the product follows from
+that of the factors. The centre velocity is <span
+class="math inline">\(v_{\rm cm}=(m_1/M)\,v\otimes1+(m_2/M)\,1\otimes
+w\)</span>, with mean zero. Since <span
+class="math inline">\(Q_2\mathbf1=0\)</span>, <span
+class="math inline">\((-Q)^{-1}(v\otimes1)=((-Q_1)^{-1}v)\otimes1\)</span>
+on the mean-zero subspace, and the cross term <span
+class="math inline">\(\langle
+v\otimes1,\,1\otimes(-Q_2)^{-1}w\rangle\)</span> vanishes because <span
+class="math inline">\(\langle v,\mathbf1\rangle_{\pi_1}=0\)</span>.
+Hence <span class="math inline">\(2M\langle v_{\rm cm},(-Q)^{-1}v_{\rm
+cm}\rangle =(m_1/M)\,2m_1\langle v,(-Q_1)^{-1}v\rangle
++(m_2/M)\,2m_2\langle w,(-Q_2)^{-1}w\rangle\)</span>. The relative
+coordinate uses the reduced mass and <span
+class="math inline">\(v\otimes1-1\otimes w\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The composite law changes while the coefficient closes. Two <span
+class="math inline">\(\pm u\)</span> particles give a four-state centre
+chain with velocities <span class="math inline">\(\pm u\)</span> and
+<span class="math inline">\(\pm u(m_1-m_2)/M\)</span>, as the review
+anticipated.</p>
+<p><strong>Gaussian class and many bodies.</strong> With <span
+class="math inline">\(\operatorname{Var}\Delta
+X_i=\kappa_i\Delta/m_i\)</span>, a collective coordinate <span
+class="math inline">\(y=\sum_ic_iX_i\)</span> with kinetic mass <span
+class="math inline">\(\mu_y=(\sum_ic_i^2/m_i)^{-1}\)</span> has</p>
+<p><span
+class="math display">\[\kappa_y=\frac{\sum_i(c_i^2/m_i)\,\kappa_i}{\sum_ic_i^2/m_i},\]</span></p>
+<p>a convex combination of the constituent coefficients. Over a
+mass-orthogonal basis the coefficients add to <span
+class="math inline">\(\sum_i\kappa_i\)</span>; the three-body Jacobi
+basis is checked explicitly. The review’s cross covariance <span
+class="math inline">\(\operatorname{Cov}(\Delta R,\Delta
+r)=\Delta(\kappa_1-\kappa_2)/M\)</span> is confirmed, so independence of
+centre and relative motion is equivalent to <span
+class="math inline">\(\kappa_1=\kappa_2\)</span> in this class.</p>
+<p><strong>Additive-function step.</strong> If <span
+class="math inline">\(\kappa(m)\ge0\)</span> depends only on mass and
+<span class="math inline">\(\kappa(m_1+m_2)\)</span> equals the
+composite value, then <span
+class="math inline">\(f(m)=m\kappa(m)\)</span> is additive and
+nonnegative, hence monotone, hence <span
+class="math inline">\(f(m)=Km\)</span> on the positive reals. Two splits
+of one mass already give <span
+class="math inline">\(\kappa(2)=\kappa(1)\)</span>. The value <span
+class="math inline">\(K=0\)</span> remains admissible.</p>
+<p><strong>Countertest.</strong> The A02 bath coefficient <span
+class="math inline">\(H(m)=(m+M_b)s^2/\nu\)</span> violates the
+composition premise by an exact amount:</p>
+<p><span
+class="math display">\[H(m_a+m_b)-\frac{m_aH(m_a)+m_bH(m_b)}{m_a+m_b}
+=\frac{2m_am_bs^2}{\nu(m_a+m_b)}&gt;0.\]</span></p>
+<p>A rigid composite immersed as one tracer fluctuates more than the
+centre of mass of two separately immersed tracers. This is the precise
+sense in which a reservoir coefficient depends on the preparation, which
+is the review’s separate preparation obligation.</p>
+<h2 id="crossover-and-the-conditioned-midpoint-a09">2. Crossover and the
+conditioned midpoint (A09)</h2>
+<p>Coordinator update, A09a/B17: <a href="bridge-crossover.html">the
+exact crossover proof</a> now gives the full beta mixture and plateau
+limit. It corrects the earlier unscaled-mean interpretation below; the
+sampler remains numerical evidence.</p>
+<p><strong>Necessary window.</strong> C018 and C031 give, for any
+coefficient <span class="math inline">\(K\)</span> realized at window
+<span class="math inline">\(\Delta\)</span> under speed bound <span
+class="math inline">\(u\)</span>, the condition <span
+class="math inline">\(\Delta\ge\Delta_*:=K/(mu^2)\)</span>. For the
+stationary telegraph observable of C020 the bound reads <span
+class="math inline">\(\mathsf h(\Delta)\le H_*\Delta/\Delta_*\)</span>
+with <span class="math inline">\(\Delta_*=1/\lambda\)</span>, and <span
+class="math inline">\(\mathsf h\)</span> saturates it at leading order:
+<span class="math inline">\(x-f(x)=2x^2/3+O(x^3)\)</span> for <span
+class="math inline">\(f(x)=1-(1-e^{-2x})/(2x)\)</span>.</p>
+<p><strong>Conditioned midpoint of the C033 bridge.</strong> With the
+count weights and simplex durations of the <a
+href="telegraph-return-bridge.html">return-bridge note</a>, the <span
+class="math inline">\(k=1\)</span> component has <span
+class="math inline">\(\mathbb E[Y]=uT/6\)</span> and <span
+class="math inline">\(\mathbb E[(Y-uT/2)^2]=u^2T^2/6\)</span>. Expanding
+the mixture in <span class="math inline">\(z=\lambda T\)</span>,</p>
+<p><span class="math display">\[\kappa_{\rm
+mid}:=\frac{4m\operatorname{Var}(Y)}{T}=H_*\frac{z^3}{6}+O(z^5),
+\qquad \frac{2m\,\mathbb E[Y^2]}{T}\to\frac{mu^2T}{2}\
+(z\to0).\]</span></p>
+<p>The exact sampler confirms the cubic onset and the plateau, with
+<span class="math inline">\(m=u=1\)</span>:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(z=\lambda T\)</span></th>
+<th><span class="math inline">\(\kappa_{\rm mid}/H_*\)</span></th>
+<th><span class="math inline">\(z^3/6\)</span></th>
+<th><span class="math inline">\(2m\mathbb E[Y^2]/T\)</span></th>
+<th>atom mass</th>
+<th><span class="math inline">\(1/I_0(z)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.25</td>
+<td>0.0025</td>
+<td>0.0026</td>
+<td>0.124</td>
+<td>0.985</td>
+<td>0.985</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>0.019</td>
+<td>0.021</td>
+<td>0.240</td>
+<td>0.940</td>
+<td>0.940</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0.122</td>
+<td>0.167</td>
+<td>0.429</td>
+<td>0.790</td>
+<td>0.790</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0.476</td>
+<td>1.33</td>
+<td>0.608</td>
+<td>0.437</td>
+<td>0.439</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>0.848</td>
+<td>—</td>
+<td>0.608</td>
+<td>0.088</td>
+<td>0.089</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>0.940</td>
+<td>—</td>
+<td>0.545</td>
+<td>0.002</td>
+<td>0.002</td>
+</tr>
+<tr class="odd">
+<td>32</td>
+<td>0.985</td>
+<td>—</td>
+<td>0.508</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<p>The variance coefficient converges to <span
+class="math inline">\(H_*\)</span>; the second-moment version converges
+to <span class="math inline">\(H_*/2\)</span>. The unscaled mean tends
+to <span class="math inline">\(u/(2\lambda)\)</span>, while its
+contribution to the action divided by <span
+class="math inline">\(T\)</span> vanishes. Monotonicity is not
+established here; the second-moment table already shows an overshoot. An
+earlier Monte Carlo with position-only conditioning, which admits both
+terminal velocities, showed a quadratic onset. The small-window exponent
+therefore depends on the conditioning protocol; <span
+class="math inline">\(\Delta_*\)</span> and the plateau are the same in
+both.</p>
+<p><strong>Scales.</strong> At <span
+class="math inline">\(K=\hbar\)</span> and <span
+class="math inline">\(u=c\)</span>, <span
+class="math inline">\(\Delta_*=\hbar/(mc^2)\)</span> and <span
+class="math inline">\(u\Delta_*=\hbar/(mc)\)</span>, the reduced Compton
+time and length; the substitution adds the identification <span
+class="math inline">\(K=\hbar\)</span>, as the review notes. For A07, an
+acceleration ceiling <span class="math inline">\(a\)</span> and the
+crossover are related by <span
+class="math inline">\(a=u\lambda=u/\Delta_*\)</span>; at <span
+class="math inline">\(u=c\)</span> and <span
+class="math inline">\(\lambda=mc^2/\hbar\)</span> this is <span
+class="math inline">\(mc^3/\hbar\)</span>, the scale of Caianiello’s
+maximal-acceleration proposal. That attribution is a lead to verify.</p>
+<h2 id="gap-product-and-slow-modes-g01">3. Gap product and slow modes
+(G01)</h2>
+<p>From C019’s spectral form, <span
+class="math inline">\(H_*\gamma_{\min}\le2m\sigma_v^2\le
+H_*\gamma_{\max}\)</span>, with equality <span
+class="math inline">\(H_*\gamma=2mu^2\)</span> for two states; both are
+checked on fixed reversible three-state chains. The review’s slow-mode
+countertest is confirmed exactly: appending an independent two-state
+label with rate <span class="math inline">\(\epsilon\)</span>, with
+velocity depending only on the telegraph sign, gives <span
+class="math inline">\(-Q\)</span> eigenvalues <span
+class="math inline">\(\{0,2\epsilon,2\lambda,2\lambda+2\epsilon\}\)</span>
+and leaves <span class="math inline">\(H_*=mu^2/\lambda\)</span>
+unchanged. The susceptibility bounds the gap from above only. With a
+supplied action unit <span class="math inline">\(K\)</span>, the
+two-state gap in energy units is <span
+class="math inline">\(2K\lambda\)</span>; at <span
+class="math inline">\(u=c\)</span>, <span
+class="math inline">\(K=\hbar\)</span> and <span
+class="math inline">\(\lambda=mc^2/\hbar\)</span> it equals <span
+class="math inline">\(2mc^2\)</span>, the separation of the free Dirac
+branches at zero momentum. In Monte Carlo language the bound is <span
+class="math inline">\(\tau_{\rm int}\le\tau_{\rm exp}\)</span>, with
+<span class="math inline">\(H_*=2m\sigma_v^2\tau_{\rm int}\)</span> and
+<span class="math inline">\(\gamma_{\min}=1/\tau_{\rm exp}\)</span>.</p>
+<h2 id="continuation-check-b15-obligation">4. Continuation check (B15
+obligation)</h2>
+<p>Both routes agree symbolically. Substituting <span
+class="math inline">\(u=e^{-i\omega t}\psi\)</span> into <span
+class="math inline">\(p_{tt}+2i\omega p_t=c^2p_{xx}\)</span> gives <span
+class="math inline">\(\psi_{tt}-c^2\psi_{xx}+\omega^2\psi=0\)</span>.
+Substituting <span class="math inline">\(p=e^{-\lambda t}\phi\)</span>
+into the real telegraph equation gives <span
+class="math inline">\(\phi_{tt}-c^2\phi_{xx}-\lambda^2\phi=0\)</span>,
+and <span class="math inline">\(\lambda=i\omega\)</span> recovers the
+same Klein–Gordon form. The continued object is an amplitude; the Dirac
+two-component construction remains the next obligation recorded in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B15.md">B15</a>.</p>
+<h2 id="source-leads-at-metadata-level">5. Source leads at metadata
+level</h2>
+<ul>
+<li>Kac, <em>A stochastic model related to the telegrapher’s
+equation</em>, Rocky Mountain J. Math. 4, 497–509 (1974), DOI
+10.1216/RMJ-1974-4-3-497, open access at Project Euclid and a reprint of
+1956 Magnolia Petroleum lectures. This route removes the access block
+recorded in B09.</li>
+<li>Sokal, <em>Monte Carlo Methods in Statistical Mechanics: Foundations
+and New Algorithms</em>, in <em>Functional Integration</em> (Springer,
+1997), DOI 10.1007/978-1-4899-0319-8_6, for the
+integrated-versus-exponential autocorrelation inequality.</li>
+</ul>
+<p>Both await passage-level reading in the A09 and G01 audits.</p>
+<h2 id="status-and-reproduction">6. Status and reproduction</h2>
+<p><code>python3 scripts/six_direction_checks.py</code> writes
+<code>out/six-direction-checks.json</code> and runs inside
+<code>make check</code>. The sampler is optional and prints the table
+above from a fixed seed. <a
+href="https://github.com/arivero/navstokgap/blob/main/formal/Crossover.lean"><code>formal/Crossover.lean</code></a>
+drafts the crossover lemma for F01 and is uncompiled. The <a
+href="https://github.com/arivero/navstokgap/blob/main/research/handoffs/P02-six-direction-checks.md">P02
+handoff</a> records the session and its limits.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

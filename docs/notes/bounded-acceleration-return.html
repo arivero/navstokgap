@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A sharp mechanical cost for a finite-duration reversal</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A sharp mechanical cost for a finite-duration reversal</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/bounded-acceleration-return.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/bounded-acceleration-return.pdf">PDF</a></p><p>A return with prescribed endpoint velocities <span
+class="math inline">\(+u\)</span> and <span
+class="math inline">\(-u\)</span> and acceleration ceiling <span
+class="math inline">\(a\)</span> requires duration at least <span
+class="math inline">\(2u/a\)</span>. Its minimum kinetic action is <span
+class="math inline">\(mu^3/(3a)\)</span>, independent of any additional
+waiting time. Meanwhile its sampled polygon action converges with a
+sharp quadratic mesh bound. The endpoint reversal cost and the
+refinement error therefore have different limits.</p>
+<h2 id="model-and-sharp-minimum-c043">1. Model and sharp minimum
+(C043)</h2>
+<p>Fix <span class="math inline">\(m,a,T&gt;0\)</span> and <span
+class="math inline">\(0&lt;u&lt;c\)</span> in a specified inertial
+frame. The admissible paths are <span class="math inline">\(X\in
+W^{2,\infty}(0,T)\)</span>, with continuous velocity representative
+<span class="math inline">\(v=\dot X\)</span>,</p>
+<p><span class="math display">\[
+X(0)=X(T)=0,\quad v(0)=u,\quad v(T)=-u,\quad
+|v|\le u,\quad |\dot v|\le a\quad\hbox{almost everywhere}.
+\]</span></p>
+<p>The functional is the kinetic cost <span
+class="math inline">\(S_K[X]=(m/2)\int_0^T v^2dt\)</span>, in action
+units. The acceleration is an admissible external control, with force
+<span class="math inline">\(m\dot v\)</span>. This is a bounded-control
+mechanics problem; a prescribed autonomous potential, its potential
+contribution to Hamilton’s action and a dynamical momentum receiver
+would specify additional physical data.</p>
+<p><strong>Proposition.</strong> The class is nonempty exactly when
+<span class="math inline">\(T\ge2u/a\)</span>. For such <span
+class="math inline">\(T\)</span>, the unique minimizing velocity is,
+with <span class="math inline">\(\tau=u/a\)</span>,</p>
+<p><span class="math display">\[
+v_*(t)=\begin{cases}
+u-at,&amp;0\le t\le\tau,\\
+0,&amp;\tau\le t\le T-\tau,\\
+-a(t-T+\tau),&amp;T-\tau\le t\le T.
+\end{cases}
+\qquad S_{K,\min}=\frac{mu^3}{3a}.
+\]</span></p>
+<p><strong>Proof.</strong> Lipschitz continuity gives <span
+class="math inline">\(2u=|v(T)-v(0)|\le aT\)</span>. For a feasible
+duration the intervals <span class="math inline">\([0,\tau]\)</span> and
+<span class="math inline">\([T-\tau,T]\)</span> have disjoint interiors.
+On the first, <span class="math inline">\(v(t)\ge u-at\ge0\)</span>; on
+the last, <span class="math inline">\(v(t)\le-u+a(T-t)\le0\)</span>.
+Hence</p>
+<p><span class="math display">\[
+\int_0^T v^2dt\ge
+\int_0^\tau(u-at)^2dt+
+\int_{T-\tau}^T[u-a(T-t)]^2dt=\frac{2u^3}{3a}.
+\]</span></p>
+<p>The displayed <span class="math inline">\(v_*\)</span> has zero total
+integral and therefore returns to the starting position. It obeys both
+ceilings and attains equality. Equality forces each endpoint ramp and
+zero velocity in the middle almost everywhere; continuity gives
+uniqueness. Integration with <span class="math inline">\(X(0)=0\)</span>
+fixes the path. The maximum excursion is <span
+class="math inline">\(u^2/(2a)\)</span>, reached at the waiting
+segment.</p>
+<p>At <span class="math inline">\(T=2u/a\)</span> the velocity is <span
+class="math inline">\(u-at\)</span> throughout. Indeed equality in the
+total velocity-change bound forces <span class="math inline">\(\dot
+v=-a\)</span> almost everywhere, so the whole admissible class is then a
+singleton. At longer durations the admissible class includes variations
+even though the minimizing path remains unique.</p>
+<h2 id="which-premises-hold-the-cost-above-zero">2. Which premises hold
+the cost above zero?</h2>
+<p>The bound depends on prescribed nonzero endpoint speed and a finite
+acceleration ceiling. At fixed force ceiling <span
+class="math inline">\(F_{\max}=ma\)</span> it becomes</p>
+<p><span class="math display">\[
+S_{K,\min}=\frac{m^2u^3}{3F_{\max}}.
+\]</span></p>
+<p>For fixed <span class="math inline">\(m,a,T\)</span>, choosing
+successively smaller positive <span class="math inline">\(u\)</span>
+eventually preserves feasibility and gives <span
+class="math inline">\(S_{K,\min}\to0\)</span>. An upper speed ceiling
+allows this family. Likewise, increasing the permitted acceleration at
+fixed <span class="math inline">\(m,u,T\)</span> drives the minimum to
+zero. Uniform positivity over a preparation class requires corresponding
+lower bounds on mass and endpoint speed and an upper bound on
+acceleration, or another premise controlling their combination.</p>
+<p>For <span class="math inline">\(T&gt;2u/a\)</span>, choose a nonzero
+smooth function <span class="math inline">\(\phi\)</span> supported
+strictly inside the waiting interval, with <span
+class="math inline">\(\int\phi=0\)</span>. Such functions are obtained
+by differentiating a nonconstant smooth compactly supported bump. For
+small <span class="math inline">\(b\ne0\)</span>, <span
+class="math inline">\(v_b=v_*+b\phi\)</span> satisfies the same
+speed/acceleration bounds and all endpoint conditions. Since the
+supports of <span class="math inline">\(\phi\)</span> and the nonzero
+part of <span class="math inline">\(v_*\)</span> are disjoint,</p>
+<p><span class="math display">\[
+S_K[v_b]-S_K[v_*]=\frac{mb^2}{2}\int\phi^2dt\longrightarrow0.
+\]</span></p>
+<p>Thus the positive minimum total cost coexists with positive excess
+costs accumulating at zero. Its source is the endpoint-conditioned
+motion, rather than a discrete spacing of admissible action values. The
+cost is frame-specific: the endpoint velocities and return condition
+already select that frame.</p>
+<h2 id="the-sampled-polygon-error-c044">3. The sampled polygon error
+(C044)</h2>
+<p>For any partition <span
+class="math inline">\(\pi:0=t_0&lt;\cdots&lt;t_N=T\)</span>, write <span
+class="math inline">\(d_i=t_{i+1}-t_i\)</span>, <span
+class="math inline">\(|\pi|=\max_i d_i\)</span>, and define the chord
+kinetic action</p>
+<p><span class="math display">\[
+S_\pi=\frac m2\sum_i\frac{[X(t_{i+1})-X(t_i)]^2}{d_i}.
+\]</span></p>
+<p>For every admissible path, and more generally every velocity with
+Lipschitz constant at most <span class="math inline">\(a\)</span>,</p>
+<p><span class="math display">\[
+0\le S_K-S_\pi\le\frac{ma^2}{24}\sum_i d_i^3
+\le\frac{ma^2T}{24}|\pi|^2.
+\]</span></p>
+<p><strong>Proof.</strong> The chord velocity on each cell is its
+average <span class="math inline">\(\bar v_i\)</span>. Square completion
+and the pair-variance identity give</p>
+<p><span class="math display">\[
+S_K-S_\pi=\frac m2\sum_i\int_{t_i}^{t_{i+1}}(v-\bar v_i)^2dt,
+\]</span></p>
+<p><span class="math display">\[
+\int_I(v-\bar v_I)^2dt
+=\frac1{2d}\int_I\int_I[v(s)-v(t)]^2ds\,dt
+\le\frac{a^2}{2d}\int_0^d\int_0^d(s-t)^2ds\,dt
+=\frac{a^2d^3}{12}.
+\]</span></p>
+<p>Summing proves the claim. The constant <span
+class="math inline">\(1/24\)</span> is sharp: the feasible
+minimum-duration return has affine velocity with slope <span
+class="math inline">\(-a\)</span> on every cell, and attains the first
+upper bound for every partition. Equal-width cells also attain the mesh
+bound. In the longer-duration minimizer, cells contained inside a ramp
+saturate the local bound and cells inside the waiting interval have zero
+error.</p>
+<p>At fixed <span class="math inline">\(m,a,T\)</span> this convergence
+is uniform over the admissible class. For families with increasing
+acceleration bound <span class="math inline">\(a_N\)</span>, the
+estimate still forces the defect to vanish if <span
+class="math inline">\(a_N|\pi_N|\to0\)</span> (fixed <span
+class="math inline">\(m,T\)</span>). Maintaining a positive defect along
+shrinking meshes therefore requires loss of this uniform acceleration
+control. This is a necessary condition, not a construction of a positive
+remainder.</p>
+<h2 id="source-comparison-and-next-mechanical-step">4. Source comparison
+and next mechanical step</h2>
+<p><a
+href="https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html">Liberzon’s
+double-integrator example</a> provides the bounded-acceleration control
+framework and a minimum-time problem with running cost one. Here the
+endpoint data and running cost <span
+class="math inline">\(mv^2/2\)</span> are different; the
+endpoint-envelope proof above establishes the exact result. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B21.md">B21</a>
+records the bounded prior-art search.</p>
+<p>The next mechanical question is to realize finite-duration turns with
+a specified conservative receiver or interaction, then derive its
+correlation law. A07’s external-control class provides a benchmark for
+such a realization. In the companion G02 task, the receiver’s internal
+degrees of freedom also test which modes the available observables
+detect.</p>
+<p>The written proofs establish the general minima and uniform
+convergence. Earlier integral and partition scripts remain historical
+artifacts, outside the active verification workflow.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A shared action coefficient from classical composition</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A shared action coefficient from classical composition</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/composition-universality.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/composition-universality.pdf">PDF</a></p><p>A nonnegative mass-dependent fluctuation coefficient becomes mass
+independent when independent composition preserves its value as a
+whole-body observable. A single finite-rate, nonzero-speed reference
+constituent then makes the shared coefficient strictly positive. This
+conditional result separates the composition premise from the physical
+clock that sets the value.</p>
+<h2 id="observable-and-independent-composition">1. Observable and
+independent composition</h2>
+<p>All masses are positive, positions are on the line, and coefficients
+have action units. For centered independent displacement variables over
+a common window <span class="math inline">\(\Delta&gt;0\)</span>, define
+<span class="math inline">\(\operatorname{Var}(\Delta
+X_i)=\kappa_i\Delta/m_i\)</span>. Let <span
+class="math inline">\(M=m_1+m_2\)</span>, <span
+class="math inline">\(\mu=m_1m_2/M\)</span>, <span
+class="math inline">\(R=(m_1X_1+m_2X_2)/M\)</span> and <span
+class="math inline">\(r=X_1-X_2\)</span>. Variance addition gives</p>
+<p><span class="math display">\[\kappa_{\rm cm}:=\frac
+M\Delta\operatorname{Var}(\Delta R)
+=\frac{m_1\kappa_1+m_2\kappa_2}{M},\qquad
+\kappa_{\rm rel}:=\frac\mu\Delta\operatorname{Var}(\Delta r)
+=\frac{m_2\kappa_1+m_1\kappa_2}{M}.\]</span></p>
+<p>Thus <span class="math inline">\(\kappa_{\rm cm}+\kappa_{\rm
+rel}=\kappa_1+\kappa_2\)</span> and <span
+class="math inline">\(\operatorname{Cov}(\Delta R,\Delta
+r)=\Delta(\kappa_1-\kappa_2)/M\)</span>. For independent Gaussian
+bridges replace <span class="math inline">\(\Delta\)</span> by their
+common covariance kernel; the same coefficient transformation holds. In
+that Gaussian setting, centre/relative process independence is
+equivalent to <span
+class="math inline">\(\kappa_1=\kappa_2\)</span>.</p>
+<p>For independent stationary finite irreducible reversible chains <span
+class="math inline">\(J^i\)</span>, take centered velocities <span
+class="math inline">\(v_i(J^i)\)</span> and <span
+class="math inline">\(X_i(t)=\int_0^t v_i(J^i_s)ds\)</span>. C019
+defines <span class="math inline">\(H_i=2m_i\int_0^\infty
+C_i(s)ds\)</span>. Independence gives <span class="math inline">\(C_{\rm
+cm}=(m_1^2C_1+m_2^2C_2)/M^2\)</span>, so the same formulas hold with
+<span class="math inline">\(H\)</span> in place of <span
+class="math inline">\(\kappa\)</span> in the long-window limit. The
+product state has generator <span class="math inline">\(Q_1\otimes
+I+I\otimes Q_2\)</span> and invariant law <span
+class="math inline">\(\pi_1\otimes\pi_2\)</span>; detailed balance and
+irreducibility hold factorwise. Retain this state even if distinct state
+pairs share one velocity value: the projected velocity alone need not be
+Markov. If each constituent speed is at most <span
+class="math inline">\(u&lt;c\)</span>, the centre speed has the same
+bound. Relative velocity may reach <span
+class="math inline">\(2u\)</span>; it is a coordinate difference, not a
+separate particle speed premise.</p>
+<h2 id="mass-universality-theorem">2. Mass-universality theorem</h2>
+<p><strong>Assumptions.</strong> Fix a preparation class. Every mass
+<span class="math inline">\(m\in(0,\infty)\)</span> has a finite
+coefficient <span class="math inline">\(\kappa(m)\ge0\)</span> depending
+only on its mass within this class. Independent constituents can be
+composed, and the coefficient assigned to their whole, of mass <span
+class="math inline">\(M\)</span>, equals the centre coefficient
+calculated above. Choose either the common-window coefficient, a
+Gaussian coefficient, or the Green–Kubo plateau throughout; the theorem
+does not exchange these observables.</p>
+<p><strong>Conclusion.</strong> There is a constant <span
+class="math inline">\(K\ge0\)</span> such that <span
+class="math inline">\(\kappa(m)=K\)</span> for every <span
+class="math inline">\(m&gt;0\)</span>.</p>
+<p><strong>Proof.</strong> Set <span
+class="math inline">\(f(m)=m\kappa(m)\)</span>. Composition says <span
+class="math inline">\(f(a+b)=f(a)+f(b)\)</span> on positive reals. For
+<span class="math inline">\(b&gt;a\)</span>, nonnegativity gives <span
+class="math inline">\(f(b)-f(a)=f(b-a)\ge0\)</span>. Fix a mass unit
+<span class="math inline">\(m_0&gt;0\)</span>. Additivity yields <span
+class="math inline">\(f(qm_0)=qf(m_0)\)</span> for every positive
+rational <span class="math inline">\(q\)</span>. For any <span
+class="math inline">\(m&gt;0\)</span>, choose rationals <span
+class="math inline">\(q_n\uparrow m/m_0\)</span> and <span
+class="math inline">\(r_n\downarrow m/m_0\)</span>. Monotonicity
+sandwiches <span class="math inline">\(f(m)\)</span> between <span
+class="math inline">\(q_nf(m_0)\)</span> and <span
+class="math inline">\(r_nf(m_0)\)</span>. Hence <span
+class="math inline">\(f(m)=mf(m_0)/m_0\)</span>, and <span
+class="math inline">\(K=f(m_0)/m_0\)</span>. This also covers <span
+class="math inline">\(K=0\)</span>.</p>
+<p>The premise equating independently composed and whole-body
+preparations does the physical work. All-positive-mass admissibility
+makes the rational argument available; a restricted species list needs a
+separately stated domain theorem.</p>
+<h2 id="positive-reference-theorem">3. Positive reference theorem</h2>
+<p>Apply the preceding theorem to Green–Kubo plateaus. Suppose the class
+contains one reference constituent of mass <span
+class="math inline">\(m_0\)</span>, stationary symmetric velocities
+<span class="math inline">\(\pm u_0\)</span>, with <span
+class="math inline">\(0&lt;u_0&lt;c\)</span> and reversal rate <span
+class="math inline">\(0&lt;\lambda_0&lt;\infty\)</span>. C020 gives</p>
+<p><span
+class="math display">\[\boxed{K=H(m_0)=\frac{m_0u_0^2}{\lambda_0}&gt;0,
+\qquad H(m)=K\quad(m&gt;0).}\]</span></p>
+<p>This excludes an attained zero in that preparation class using
+classical probability, nonzero motion, a finite positive clock and the
+composition premise. The value comes from the reference constituent.
+Other two-state members consequently obey <span
+class="math inline">\(\lambda_m=mu_m^2/K\)</span>.</p>
+<p>For any chosen <span class="math inline">\(K&gt;0\)</span> and common
+<span class="math inline">\(0&lt;u&lt;c\)</span>, take independent
+two-state members with <span
+class="math inline">\(\lambda_m=mu^2/K\)</span> and include all their
+finite products. Every product has the same plateau when normalized by
+its total mass. This realizes coefficient closure even though its centre
+velocity generally has more than two values. It is a consistency example
+for the assumptions, not a derivation of the assigned rate law. Across
+such examples <span class="math inline">\(K\)</span> can approach zero
+while each individual rate remains finite. A class-wide numerical lower
+bound needs uniform controls, for example <span
+class="math inline">\(u_0\ge u_{\min}&gt;0\)</span> and <span
+class="math inline">\(\lambda_0\le\Lambda&lt;\infty\)</span> at fixed
+<span class="math inline">\(m_0\)</span>.</p>
+<h2 id="preparation-and-correlation-tests">4. Preparation and
+correlation tests</h2>
+<p>An environmental label <span class="math inline">\(\theta\)</span>
+allows <span class="math inline">\(\kappa(m,\theta)=K(\theta)\)</span>
+under the same composition proof at each fixed <span
+class="math inline">\(\theta\)</span>. Universality across such classes
+requires a preparation-equivalence premise. If cross covariance is <span
+class="math inline">\(C_{12}=\operatorname{Cov}(\Delta X_1,\Delta
+X_2)\)</span>, the centre coefficient has an additional <span
+class="math inline">\(2m_1m_2 C_{12}/(M\Delta)\)</span>; independence
+fixes it to zero. Bound bodies and common reservoirs must be tested with
+their actual correlations.</p>
+<p>In A02, separately prepared tracers in otherwise identical refreshed
+baths have plateau <span
+class="math inline">\(H(m)=(m+M_b)s^2/\nu\)</span>. Treating their total
+mass as one tracer changes the coefficient by</p>
+<p><span
+class="math display">\[H(m_a+m_b)-\frac{m_aH(m_a)+m_bH(m_b)}{m_a+m_b}
+=\frac{2m_am_bs^2}{\nu(m_a+m_b)}.\]</span></p>
+<p>The positive discrepancy for <span
+class="math inline">\(s&gt;0\)</span> identifies failure of the
+preparation equivalence premise, while preserving the earlier bath
+calculation. The comparison is between these specified experiments;
+dynamics of an actual bound composite require their own mechanical
+model.</p>
+<h2 id="scope-source-chain-and-next-test">5. Scope, source chain and
+next test</h2>
+<p>The theorem establishes a conditional universal positive
+<strong>long-window coefficient</strong>, with action units and a
+specified preparation class. Its role as a quantum phase constant and
+its physical-time attraction are subsequent obligations. At bounded
+speed the microscopic variance coefficient still tends to zero by C018.
+The next A09 calculation connects these separate windows to the real
+telegraph and complex checkerboard propagators.</p>
+<p>This note develops the user’s composition suggestion and the
+independent P02 product-chain calculation. C019–C020 supply the reviewed
+correlation input; <a href="https://arxiv.org/abs/1002.4103v1">Pavliotis
+(2010)</a> gives its Poisson-equation source, and <a
+href="https://arxiv.org/abs/1802.09679v1">Pitman–Yor (2018)</a> the
+Gaussian covariance background. Per-result prior-art status belongs to
+B16. The five dedicated algebra checks cover the two coefficients, their
+sum, their cross covariance and the bath discrepancy. Existing P02
+checks also test a nine-state product generator. The written proofs
+supply the general additive-function and positive-reference
+conclusions.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

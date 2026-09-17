@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An unknown clock hides an exact fixed-energy receiver phase</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>An unknown clock hides an exact fixed-energy receiver phase</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/hidden-clock-ambiguity.md">Markdown source</a></p><p>For an admissible fixed pulse design, eight exact final pointer
+coordinates and known incoming probe momenta leave a smooth family of
+receiver states on one exact energy shell when the initial clock data
+are hidden. Both initial canonical coordinates vary along this family.
+Consequently their worst-case reconstruction-error product is positive
+at fixed clock preparation width.</p>
+<p>R20, 2026-09-11. Use <a href="full-pointer-recovery.html">R19</a>’s
+apparatus and common compact cutoff margins, with incoming probe momenta
+fixed and revealed at zero. The observation time T and Hamiltonian are
+known. Initial probe positions and clock position/momentum range
+independently over small positive boxes; the receiver ranges over
+H_s=E&gt;0. The family constructed below lies inside this Cartesian
+support. This is a design-existence result and a preparation-dependent
+reconstruction bound. Literature status is in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B51.md">B51</a>.</p>
+<h2 id="reduce-identical-records-to-one-energy-equation">1. Reduce
+identical records to one energy equation</h2>
+<p>Write the clock data as c=(s,v), with p_s=M_c v and v&gt;0. Let M
+generate the free receiver flow Phi_t, H_s(z)=z^T Gz/2 with G positive
+definite, and</p>
+<p><span class="math display">\[A_{s,v}=K\int_0^T
+f_j(s+vt)e_x\Phi_t\,dt\quad\hbox{(row j)}.\]</span></p>
+<p>R19’s scaled eight-record map extends smoothly to lambda=0:</p>
+<p><span
+class="math display">\[F_{\lambda,c}(z,q)=(-A_cz,q)+O_{C^1}(\lambda).
+\tag{1}\]</span></p>
+<p>The extension and estimate hold also for clock derivatives: divide
+the integrated momentum equation by lambda before taking the limit, then
+use smooth finite-time flow dependence on all initial data. All pulses
+remain interior for clocks in the chosen box. Fix nominal c_0=(s_0,v_0),
+an interior probe position q_<em>=0, and a shell point z_</em> to be
+selected below. Set Y_lambda=F_{lambda,c_0}(z_*,0).</p>
+<p>Since the derivative in (z,q) at lambda=0 is diag(-A_c,I), the
+parameter implicit-function theorem gives a smooth local solution</p>
+<p><span
+class="math display">\[F_{\lambda,c}(z_\lambda(c),q_\lambda(c))=Y_\lambda,\]</span>
+<span class="math display">\[z_0(c)=A_c^{-1}A_{c_0}z_*,\qquad q_0(c)=0.
+\tag{2}\]</span></p>
+<p>Neighbourhoods can be chosen uniformly for sufficiently small lambda,
+including zero. This follows by a contraction with the fixed invertible
+derivative on a small product neighbourhood. At positive fixed lambda
+these are identical unscaled final records as well. The remaining
+physical constraint is the scalar equation</p>
+<p><span class="math display">\[e_\lambda(c):=H_s(z_\lambda(c))-E=0.
+\tag{3}\]</span></p>
+<p>Thus clock dimension counting is replaced by a specific shell
+equation.</p>
+<h2 id="clock-offset-changes-receiver-phase-at-zero-coupling">2. Clock
+offset changes receiver phase at zero coupling</h2>
+<p>Interior pulse support permits integration by parts, giving the exact
+identity</p>
+<p><span class="math display">\[\partial_s
+A_{s,v}=-A_{s,v}M/v.\]</span></p>
+<p>Equation (2) therefore gives at c_0</p>
+<p><span class="math display">\[\partial_s z_0=Mz_*/v_0,\qquad
+\partial_s e_0=0. \tag{4}\]</span></p>
+<p>The last equality uses G M+M^T G=0: free receiver motion preserves
+its quadratic energy. A change of clock offset is, to leading order, a
+change of receiver phase. A transverse clock-speed derivative will keep
+this phase freedom on the exact interacting energy shell.</p>
+<h2 id="a-fixed-pulse-design-with-transverse-speed-response">3. A fixed
+pulse design with transverse speed response</h2>
+<p>Choose four distinct positive dimensionless numbers a_j and a
+nonnegative smooth bump phi of positive integral, supported in (-1,1).
+Fix eta&gt;0 small enough that the intervals a_j+eta(-1,1) are positive
+and disjoint. For a positive design time epsilon set</p>
+<p><span class="math display">\[f_j(s)=\phi\left(\frac{s-s_0-v_0\epsilon
+a_j}
+                                  {v_0\epsilon\eta}\right).\]</span></p>
+<p>For small epsilon all pulses finish before T. With r=v_0/v and t=r
+epsilon u,</p>
+<p><span class="math display">\[A_{s_0,v,j}=K
+r\epsilon\int\phi((u-a_j)/\eta)
+                         e_x\exp(Mr\epsilon u)\,du.\]</span></p>
+<p>The first four Taylor rows e_x M^n, n=0,1,2,3, are independent by
+R06. The moment matrix W_{jn}=integral phi((u-a_j)/eta)u^n/n! du is
+invertible for small fixed eta: its row-normalized limit is the
+Vandermonde matrix a_j^n/n!. Expanding the determinant by
+multilinearity, the first nonzero power uses distinct n=0,1,2,3. Hence,
+uniformly with one v derivative near v_0,</p>
+<p><span class="math display">\[\det
+A_{s_0,v}=D(r\epsilon)^{10}(1+O(\epsilon)),\qquad D\ne0.
+\tag{5}\]</span></p>
+<p>The exponent is four integration factors plus 0+1+2+3. Analyticity of
+the matrix exponential gives the differentiated remainder after
+factoring the first nonzero coefficient. Fix epsilon sufficiently small
+once and for all. Then A is invertible and, putting B=-A^{-1}partial_v A
+at c_0,</p>
+<p><span class="math display">\[\operatorname{tr}B=-\partial_v\log|\det
+A|
+                     =10/v_0+O(\epsilon)&gt;0. \tag{6}\]</span></p>
+<p>This design limit is used only to prove existence. Pulse widths,
+masses and all derivative bounds subsequently stay fixed; reducing
+lambda_0 meets the apparatus force ceilings and cutoff margins.</p>
+<p>Let S_B=(GB+B^T G)/2. Its G-normalized trace is tr(B)&gt;0, so it has
+a positive quadratic direction. Choose z_* on H_s=E with z_<em>^T S_B
+z_</em>&gt;0. This is an open subset of the shell. Within it choose also
+P_<em>^{state} nonzero and -a x_</em>+g y_* nonzero: the excluded
+hyperplanes have empty relative interior. These conditions imply</p>
+<p><span class="math display">\[\partial_v e_0=z_*^T GBz_*&gt;0,\quad
+(Mz_*)_x=P_*^{state}/\mu\ne0,\quad
+(Mz_*)_P=-a x_*+g y_*\ne0. \tag{7}\]</span></p>
+<p>The symbol P_<em>^{state} here is the chosen state’s momentum,
+distinct from the fixed momentum unit P_</em> used in risk bounds.</p>
+<h2 id="exact-interacting-shell-family-and-preparation-margins">4. Exact
+interacting shell family and preparation margins</h2>
+<p>By (7) and smooth dependence, partial_v e_lambda remains positive
+near (s_0,v_0) for all sufficiently small lambda. Since e_lambda(c_0)=0,
+solve (3) as v=v_lambda(s), with v_lambda(s_0)=v_0. Equations (4) and
+(7) give</p>
+<p><span class="math display">\[v&#39;_\lambda(s_0)=O(\lambda),\qquad
+\frac{d}{ds}z_\lambda(s,v_\lambda(s))\bigg|_{s_0}
+       =Mz_*/v_0+O(\lambda). \tag{8}\]</span></p>
+<p>Both canonical components therefore have nonzero derivatives. Choose
+a fixed small offset interval |s-s_0|&lt;=sigma within the
+implicit-function domains. Continuity, first in s and then in lambda,
+gives physical constants k_x,k_P&gt;0 such that along the whole interval
+the two derivatives retain their signs and have magnitudes at least
+k_x,k_P. The constants have units respectively one and momentum/length,
+since s is a length coordinate.</p>
+<p>At lambda=0 equation (4) holds along the family at fixed v_0, so that
+v_0(s)=v_0 and q_0(c)=0. Uniform smoothness gives
+v_lambda(s)-v_0=O(lambda |s-s_0|) and q_lambda(s,v_lambda(s))=O(lambda
+|s-s_0|). Choose sigma smaller than half the physical clock-position
+half-width. For fixed positive clock-momentum and probe-position
+half-widths, reduce lambda_0 if necessary to leave at least half their
+margins. Receiver energy is exactly E throughout. Known incoming probe
+momenta and all eight final records agree exactly. The apparatus upper
+resource bounds persist on the inherited compact domain.</p>
+<h2 id="a-phase-uncertainty-gives-a-canonical-risk-product">5. A phase
+uncertainty gives a canonical risk product</h2>
+<p>The endpoints s_0-sigma and s_0+sigma have canonical separations at
+least 2 k_x sigma and 2 k_P sigma and one common record. Every
+deterministic estimator consequently has worst-case initial-coordinate
+errors</p>
+<p><span class="math display">\[\epsilon_x\ge k_x\sigma,\qquad
+\epsilon_P\ge k_P\sigma,\qquad
+\mathcal H_{\rm rec}\ge k_x k_P\sigma^2&gt;0. \tag{9}\]</span></p>
+<p>The product has action units. This curve need not enclose positive
+canonical area; positive coordinate-risk products and positive
+phase-space area are different assertions. Equation (9) survives
+sufficiently small positive coupling with one fixed sufficiently small
+sigma and fixed preparation widths. It closes as the admitted
+clock-offset interval contracts. The known-clock result R19 recovers
+zero exact-record risk by removing precisely this preparation
+freedom.</p>
+<p>Next R21: reveal only the initial clock position, leaving its
+momentum unknown. The transverse derivative (7) suggests local recovery
+after imposing the receiver energy shell. Test uniform local uniqueness
+and record stability, and separate them from recovery on the entire
+shell.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

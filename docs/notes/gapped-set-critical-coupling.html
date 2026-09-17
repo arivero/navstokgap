@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T2&#x27; is the absence of a zero-temperature phase transition, and the missing input is closedness of the gapped set</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>T2<span class="math inline">\(&#39;\)</span> is the absence of a
+zero-temperature phase transition, and the missing input is closedness
+of the gapped set</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/gapped-set-critical-coupling.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/gapped-set-critical-coupling.pdf">PDF</a></p><p>Define, for the Kogut–Susskind Hamiltonian of <a
+href="mass-gap-obligations-lattice.html">the obligations map</a> with
+gauge group <span class="math inline">\(G\)</span> and <span
+class="math inline">\(N_s\)</span> sites per side, <span
+class="math display">\[c(g)=\liminf_{N_s\to\infty}\,\delta(g;N_s,G),\qquad
+\mathcal G=\{g&gt;0:\ c(g)&gt;0\},\]</span> where <span
+class="math inline">\(\Delta_{a,L}=(\hbar c/a)\,\delta\)</span>. Then T1
+gives <span class="math inline">\(\delta&gt;0\)</span> at every finite
+<span class="math inline">\(N_s\)</span> and every <span
+class="math inline">\(g\)</span>, so a vanishing <span
+class="math inline">\(c\)</span> is purely an infinite-volume
+phenomenon; T2 gives <span
+class="math inline">\([g_0(G),\infty)\subset\mathcal G\)</span>; and
+T2<span class="math inline">\(&#39;\)</span> is exactly <span
+class="math inline">\(\mathcal G=(0,\infty)\)</span>. Three statements
+are proved below. The gap is a continuous function of <span
+class="math inline">\(g\)</span> at fixed lattice, by analytic
+perturbation theory for a simple isolated eigenvalue, so no closure
+occurs at finite volume. If <span class="math inline">\(g_*=\inf\mathcal
+G&gt;0\)</span> then <span class="math inline">\(c\)</span> vanishes at
+or just below <span class="math inline">\(g_*\)</span>, and vanishing of
+<span class="math inline">\(c\)</span> admits exactly two mechanisms:
+infinite-volume vacuum degeneracy, the tunnelling splitting going to
+zero, or a diverging correlation length. Both are bulk phase transitions
+at zero temperature, first order and second order respectively, and in
+the second case the theory acquires a continuum limit at the finite bare
+coupling <span class="math inline">\(g_*\)</span>, distinct from the
+asymptotically free one at <span class="math inline">\(g=0\)</span>.
+Hence <span class="math display">\[\textbf{T2}&#39;\iff\textbf{4d
+lattice Yang--Mills has no bulk phase transition at any finite
+coupling},\]</span> and, on the second-order branch, T2<span
+class="math inline">\(&#39;\)</span> asserts that the asymptotically
+free limit is the only continuum limit. For compact <span
+class="math inline">\(U(1)\)</span> this fails and the failure is
+visible in the same terms: <span class="math inline">\(\mathcal
+G\)</span> is a half-line whose infimum is a second-order point, and the
+continuum limit there is free Maxwell theory (Guth; Fröhlich–Spencer,
+abstract level, B78). Since T2 already gives openness of <span
+class="math inline">\(\mathcal G\)</span> near infinity, the missing
+property is <strong>closedness</strong>: <span
+class="math inline">\(\mathcal G\)</span> is open and closed in <span
+class="math inline">\((0,\infty)\)</span> if and only if it is
+everything. That is the shape of the remaining problem, and the abelian
+counterexample locates it exactly: the abelian gapped set is open, and
+closedness is where it fails. Constants explicit; nothing promoted.</p>
+<h2 id="the-gap-at-fixed-lattice-is-continuous-in-the-coupling">1. The
+gap at fixed lattice is continuous in the coupling</h2>
+<p><strong>Proposition 1.</strong> For fixed <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(N_s\)</span> and <span
+class="math inline">\(G\)</span>, the map <span
+class="math inline">\(g\mapsto\delta(g;N_s,G)\)</span> is continuous on
+<span class="math inline">\((0,\infty)\)</span>, real-analytic off a
+discrete set, and strictly positive.</p>
+<p><em>Proof.</em> Write <span class="math inline">\(H(g)=\frac{\hbar
+c}{a}\big[\frac{g^2}{2}K+\frac{2}{g^2}V\big]\)</span> with <span
+class="math inline">\(K=\sum_\ell(-\Delta_\ell)\ge0\)</span> unbounded
+with compact resolvent and <span class="math inline">\(0\le
+V\le2N|\mathcal P|\)</span> bounded, as in <a
+href="mass-gap-obligations-lattice.html">the obligations map</a> §1. For
+every <span class="math inline">\(g\)</span> in a complex neighbourhood
+of <span class="math inline">\((0,\infty)\)</span> the operators <span
+class="math inline">\(H(g)\)</span> share the domain <span
+class="math inline">\(D(K)\)</span> and depend on <span
+class="math inline">\(g\)</span> holomorphically in the coefficients, so
+<span class="math inline">\(\{H(g)\}\)</span> is an analytic family of
+type (A). By T1 the lowest eigenvalue <span
+class="math inline">\(E_0(g)\)</span> is simple and isolated, hence
+analytic; <span class="math inline">\(E_1(g)\)</span> is analytic except
+where it meets <span class="math inline">\(E_2(g)\)</span>, and in all
+cases both are continuous by the min-max characterization, since <span
+class="math inline">\(\mu_n(g)=\inf_{\dim S=n}\sup_{\psi\in
+S}\langle\psi,H(g)\psi\rangle/\|\psi\|^2\)</span> is a supremum of
+functions affine in <span class="math inline">\((g^2,g^{-2})\)</span>
+and therefore continuous. Positivity is T1. <span
+class="math inline">\(\square\)</span></p>
+<p>So <span class="math inline">\(\delta(g;N_s)&gt;0\)</span> for all
+finite <span class="math inline">\(N_s\)</span>: the closure of the gap,
+if it occurs, happens only in the limit <span
+class="math inline">\(N_s\to\infty\)</span>, and <span
+class="math inline">\(c\)</span> need not be continuous.</p>
+<h2 id="two-mechanisms-for-cg0">2. Two mechanisms for <span
+class="math inline">\(c(g)=0\)</span></h2>
+<p>Suppose <span class="math inline">\(c(g)=0\)</span> for some <span
+class="math inline">\(g\)</span>, that is, <span
+class="math inline">\(\delta(g;N_s)\to0\)</span> along a subsequence of
+volumes. Let <span class="math inline">\(\xi(g)\)</span> denote the
+Euclidean correlation length of the theory at coupling <span
+class="math inline">\(g\)</span>, defined as the inverse decay rate of
+the connected correlator of some local gauge-invariant observable in the
+infinite-volume limit.</p>
+<p><strong>Proposition 2.</strong> If <span
+class="math inline">\(c(g)=0\)</span> then at least one of the following
+holds.</p>
+<ol type="1">
+<li><em>Degeneracy.</em> The infinite-volume theory has more than one
+ground state: the two lowest finite-volume levels merge with a splitting
+<span class="math inline">\(\delta(g;N_s)\to0\)</span> while <span
+class="math inline">\(\xi(g)\)</span> stays finite.</li>
+<li><em>Diverging length.</em> <span
+class="math inline">\(\xi(g)=\infty\)</span>, that is, some connected
+correlator decays slower than any exponential.</li>
+</ol>
+<p><em>Proof.</em> By reconstruction from the transfer matrix at fixed
+volume, the connected correlator in the time direction decays with rate
+<span class="math inline">\(\Delta_{a,L}/(\hbar c)\)</span> in the
+vacuum sector, so if the infinite-volume correlation length is finite,
+say <span class="math inline">\(\xi&lt;\infty\)</span>, then the
+infinite-volume theory has a spectral gap <span
+class="math inline">\(\hbar c/\xi\)</span> above each of its ground
+states. Then <span class="math inline">\(c(g)=0\)</span> can only come
+from a splitting between distinct ground states, which is case 1;
+otherwise <span class="math inline">\(\xi=\infty\)</span>, which is case
+2. <span class="math inline">\(\square\)</span></p>
+<p>Both are bulk phase transitions at zero temperature. Case 1 is first
+order, with two coexisting vacua and a tunnelling splitting that is
+exponentially small in the volume; case 2 is second order, with a
+divergent correlation length. The dichotomy is the standard one, and
+what matters here is that neither is excluded by anything proved so
+far.</p>
+<p><strong>Corollary 3.</strong> <span class="math inline">\(\mathcal
+G=(0,\infty)\)</span> if and only if the theory has no bulk phase
+transition at any finite coupling. In particular T2<span
+class="math inline">\(&#39;\)</span> fails if and only if such a
+transition exists.</p>
+<h2 id="what-a-second-order-point-would-mean">3. What a second-order
+point would mean</h2>
+<p>At a second-order point <span class="math inline">\(g_*\)</span> the
+correlation length diverges in lattice units, <span
+class="math inline">\(\xi(g)/a\to\infty\)</span> as <span
+class="math inline">\(g\to g_*\)</span>, so physical masses measured in
+units of <span class="math inline">\(1/a\)</span> go to zero and the
+theory admits a continuum limit taken at <span
+class="math inline">\(g\to g_*\)</span> with <span
+class="math inline">\(a\to0\)</span> at fixed physical mass. This is a
+continuum limit taken at the finite bare coupling <span
+class="math inline">\(g_*\)</span>, while the asymptotically free limit
+is taken at <span class="math inline">\(g\to0\)</span> with <span
+class="math inline">\(a\Lambda_{\rm lat}(g)\to0\)</span> governed by the
+two-loop formula of <a href="mass-gap-obligations-lattice.html">the
+obligations map</a> §5: two distinct limits of the same lattice theory.
+Hence, on the second-order branch,</p>
+<blockquote>
+<p><strong>T2<span class="math inline">\(&#39;\)</span> (second-order
+branch) <span class="math inline">\(\iff\)</span></strong> the
+asymptotically free limit at <span class="math inline">\(g=0\)</span> is
+the only continuum limit of four-dimensional lattice Yang–Mills.</p>
+</blockquote>
+<p>This is the statement that the lattice theory has a single
+universality class, believed on the strength of lattice computations and
+unproven.</p>
+<h2 id="the-abelian-case-seen-in-the-same-terms">4. The abelian case
+seen in the same terms</h2>
+<p>For compact <span class="math inline">\(U(1)\)</span> in four
+dimensions the gapped set is a half-line: a gap at strong coupling
+(Osterwalder–Seiler, and the <span class="math inline">\(\nu=3\)</span>
+case of <a href="strong-coupling-uniform-gap.html">the T2 note</a>,
+which applies verbatim with <span
+class="math inline">\(C_2(R_{\min})=1\)</span> and <span
+class="math inline">\(\dim=1\)</span>), and a massless Coulomb phase at
+weak coupling (Guth, Phys. Rev. D 21 (1980) 2291; Fröhlich–Spencer,
+Commun. Math. Phys. 83 (1982) 411; abstract level, B78). So <span
+class="math inline">\(\mathcal G_{U(1)}=(g_c,\infty)\)</span> for some
+<span class="math inline">\(g_c&gt;0\)</span>, which is open and not
+closed in <span class="math inline">\((0,\infty)\)</span>, and the
+mechanism at <span class="math inline">\(g_c\)</span> is case 2 of
+Proposition 2: the photon mass of the confined phase vanishes
+continuously, and the continuum limit at <span
+class="math inline">\(g_c\)</span> is free Maxwell theory.</p>
+<p>The abelian theory therefore satisfies every general structural
+statement above and still fails T2<span
+class="math inline">\(&#39;\)</span>. Any proof of T2<span
+class="math inline">\(&#39;\)</span> must use an input that
+distinguishes the groups. The three places in this programme where that
+distinction has been made precise are: the commutator potential of <a
+href="low-dimensional-mass-gap.html">G07</a> §3, which is identically
+zero for an abelian group; the absence of a gauge-invariant operator
+linear in the electric field, proved in <a
+href="lattice-gap-upper-bounds.html">the upper-bound note</a>
+Proposition 6, which blocks the abelian gap-closing channel; and the
+one-loop valley potential of <a href="torus-valley-potential.html">the
+valley note</a> §3b, which vanishes identically in the abelian theory so
+that the holonomy is free. All three say the same thing in different
+variables: the abelian theory has flat directions that nothing
+lifts.</p>
+<h2 id="openness-closedness-and-where-each-stands">5. Openness,
+closedness, and where each stands</h2>
+<p><span class="math inline">\(\mathcal G\)</span> is everything if and
+only if it is nonempty, open and closed in the connected set <span
+class="math inline">\((0,\infty)\)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>property</th>
+<th>status</th>
+<th>what it would take</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal G\neq\varnothing\)</span></td>
+<td>proved: <span class="math inline">\([g_0,\infty)\subset\mathcal
+G\)</span></td>
+<td><a href="strong-coupling-uniform-gap.html">the T2 note</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathcal G\)</span> open</td>
+<td>open in general; true near <span
+class="math inline">\(\infty\)</span></td>
+<td>a volume-uniform stability theorem: a gap at <span
+class="math inline">\(g\)</span> survives a small change of <span
+class="math inline">\(g\)</span> with constants independent of the
+volume</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal G\)</span> closed</td>
+<td><strong>the missing input</strong>; false for <span
+class="math inline">\(U(1)\)</span></td>
+<td>exclusion of both mechanisms of Proposition 2 at every finite
+coupling</td>
+</tr>
+</tbody>
+</table>
+<p>Openness is the kind of statement that stability theory supplies for
+gapped local Hamiltonians when a Lieb–Robinson bound is available; for
+the Kogut–Susskind Hamiltonian the electric term is unbounded, so the
+standard bounds require an extension, which makes openness a bounded
+technical question. Closedness is the conjecture itself. Recording the
+split is useful because it separates a technical obstacle from the
+mathematical content, and because it shows that a proof cannot proceed
+by continuity alone: the abelian theory has an open gapped set too.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The lower side now has a precise formulation: T2<span
+class="math inline">\(&#39;\)</span> is closedness of <span
+class="math inline">\(\mathcal G\)</span>, equivalently the absence of a
+zero-temperature bulk phase transition, equivalently, on its
+second-order branch, the uniqueness of the continuum limit. The two
+sub-targets this names are a volume-uniform stability theorem, which
+needs a Lieb–Robinson bound for a Hamiltonian with unbounded electric
+terms, and the exclusion of vacuum degeneracy and of a diverging
+correlation length. The first is technical and bounded; the second is
+the conjecture. Between them, the stability question is the only one of
+the two that present methods can be expected to settle, and it is the
+natural next step on this side.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

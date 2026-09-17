@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classical action scales: obstructions, conditional bounds and quantum premises</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Classical action scales: obstructions, conditional bounds and quantum
+premises</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/action-scale-obstructions.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-scale-obstructions.pdf">PDF</a></p><p>Classical mechanics in the tested classes permits action-valued
+observables arbitrarily close to zero. Positive bounds appear when the
+class supplies an excitation floor, a fluctuating reference preparation,
+or restricted measurement information. None of the accepted calculations
+identifies such a bound with a universal quantum phase parameter. The
+useful outcome is a map of the premises that a selection principle must
+add and the counterexamples it must exclude.</p>
+<p>This paper consolidates accepted repository results through C123. Its
+claims retain the domains of their original proofs; it states no
+combined theorem covering every classical model. Proof and literature
+status remain in the <a
+href="https://github.com/arivero/navstokgap/blob/main/claims/LEDGER.md">claim
+ledger</a>. The final section gives an evidence map for the inherited
+audits. The detailed receiver/calibration sequence is a technical
+resource for the questions summarized here.</p>
+<h2 id="select-the-observable-before-asking-whether-it-has-a-floor">1.
+Select the observable before asking whether it has a floor</h2>
+<p>An action difference, orbital action, fluctuation coefficient and
+reconstruction error product can all have action units while answering
+different questions. We use physical units throughout, with Planck’s
+constants related by <span class="math inline">\(h=2\pi\hbar\)</span>; a
+model parameter K is not identified with either by notation.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Definition and domain</th>
+<th>What positivity would mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Action excess</td>
+<td><span class="math inline">\(\Delta S=S[q+\eta]-S[q]\)</span>, on a
+stated fixed-endpoint path class</td>
+<td>Separation in action values on that class</td>
+</tr>
+<tr class="even">
+<td>Orbit action</td>
+<td><span class="math inline">\(J=(2\pi)^{-1}\oint p\cdot dq\)</span>,
+on closed trajectories</td>
+<td>Minimum integrated mechanical excursion</td>
+</tr>
+<tr class="odd">
+<td>Displacement response</td>
+<td><span
+class="math inline">\(h_\Delta=m\operatorname{Var}[X(t+\Delta)-X(t)]/\Delta\)</span></td>
+<td>Prepared fluctuations at observation window <span
+class="math inline">\(\Delta\)</span></td>
+</tr>
+<tr class="even">
+<td>Canonical reconstruction product</td>
+<td><span class="math inline">\(R_xR_P\)</span>, optimal worst-case
+scalar errors for stated data and preparations</td>
+<td>Limits of that information protocol</td>
+</tr>
+<tr class="odd">
+<td>Spectral gap</td>
+<td>Lowest positive spectrum of a specified operator</td>
+<td>Separation from its ground sector; energy or inverse-time units
+depend on the operator</td>
+</tr>
+</tbody>
+</table>
+<p>For a stationary confined coordinate of finite variance, the
+displacement response tends to zero as the observation window grows,
+even when its orbit action is positive. C047 and C054–C055 make this
+observable mismatch concrete. For reconstruction, positive coordinate
+errors can occur on a smooth compatible curve of zero projected planar
+area (C120). An error product is therefore not a phase-space cell area
+without an additional argument.</p>
+<h2 id="three-routes-to-arbitrarily-small-classical-action">2. Three
+routes to arbitrarily small classical action</h2>
+<p><strong>Continuous variation closes action excess.</strong> With mass
+<span class="math inline">\(m&gt;0\)</span>, duration <span
+class="math inline">\(T&gt;0\)</span>, constant force and fixed
+endpoints, the variation <span class="math inline">\(\eta(t)=a
+t(T-t)\)</span> gives</p>
+<p><span class="math display">\[\Delta
+S=\frac{ma^2T^3}{6}\longrightarrow0\quad(a\longrightarrow0).\]</span></p>
+<p>The varied paths are comparison paths, not generally solutions of the
+same boundary-value dynamics. This is C002’s precise admissibility
+boundary. A positive Dirichlet Hessian controls cost relative to the
+variation norm; the variation amplitude can still shrink. The <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/action-gap-foundations.tex">foundations
+paper</a> contains the calculation and its source audit.</p>
+<p><strong>Admitted contractions close several action observables
+together.</strong> For Newtonian or relativistic kinetic energy <span
+class="math inline">\(T(p)\)</span> and external potential <span
+class="math inline">\(V(q)\)</span>, set</p>
+<p><span class="math display">\[V_a(Q)=V(Q/a),\qquad q_a(t)=a
+q(t/a),\qquad p_a(t)=p(t/a),\quad a&gt;0.\]</span></p>
+<p>Hamilton’s equations are preserved between the two models. Mass,
+speeds and energy values stay fixed; forces scale by <span
+class="math inline">\(a^{-1}\)</span>. Canonical orbit action and
+Hamilton action scale by <span class="math inline">\(a\)</span>.
+Corresponding prepared covariance actions and corresponding
+observation-window responses obey the same degree-one scaling. Thus any
+admissible class closed under arbitrarily small such contractions has
+zero positive-action infimum (C056–C057). A fixed potential or uniform
+force ceiling can exclude this particular transformation. See <a
+href="action-scale-dilation.html">the dilation proof</a> for the full
+domain and limit order.</p>
+<p><strong>Even a fixed force-bounded potential can admit small
+actions.</strong> C058 fixes one smooth relativistic confining
+potential</p>
+<p><span class="math display">\[V(r)=k_s
+b^2\left(\sqrt{1+r^2/b^2}-1\right),\qquad k_s,b,m,c&gt;0.\]</span></p>
+<p>Here <span class="math inline">\(k_s\)</span> is stiffness; the force
+is globally bounded by <span class="math inline">\(k_s b\)</span>. The
+stable circular orbits have <span
+class="math inline">\(J_R\sim\sqrt{mk_s}R^2\to0\)</span> as <span
+class="math inline">\(R\to0\)</span>; their speeds also tend to zero.
+This family keeps the potential fixed, so excluding the contraction map
+alone does not supply a floor. <a
+href="fixed-force-small-circles.html">The fixed-force proof</a> isolates
+the missing excitation premise.</p>
+<p>These are complementary countertests with different admissibility
+assumptions. A proposed principle should state which family it excludes
+and which independent physical condition excludes it.</p>
+<h2 id="positive-classical-bounds-reveal-their-physical-input">3.
+Positive classical bounds reveal their physical input</h2>
+<p><strong>Persistent excitation plus limited force gives a sharp
+orbit-action bound.</strong> For a regular closed <span
+class="math inline">\(C^2\)</span> trajectory in dimension at least two,
+canonical momentum <span class="math inline">\(p=m\dot q\)</span>, speed
+at least <span class="math inline">\(v_*&gt;0\)</span> and force at most
+<span class="math inline">\(F_{\max}&gt;0\)</span>, C060 gives</p>
+<p><span
+class="math display">\[J\ge\frac{m^2v_*^3}{F_{\max}}.\]</span></p>
+<p>Total turning is at least <span class="math inline">\(2\pi\)</span>;
+the force ceiling limits the rate of momentum turning, and the speed
+floor converts that duration into action. A circle realizes equality
+within the admissible smooth-potential class. For relativistic momentum
+the bound is multiplied by <span
+class="math inline">\((1-v_*^2/c^2)^{-1}\)</span>, with <span
+class="math inline">\(v_*&lt;c\)</span>. The excitation floor supplies
+positivity; the scale depends on mass, excitation and force. The <a
+href="closed-orbit-force-action.html">closed-orbit proof</a> retains the
+momentum, frame and regularity assumptions. A19’s peak-excursion variant
+is a supporting question, not yet an accepted result.</p>
+<p><strong>Composition propagates a supplied positive fluctuation
+scale.</strong> For independent constituents and a mass-only coefficient
+within one preparation class, centre-of-mass composition gives</p>
+<p><span
+class="math display">\[\kappa(m_1+m_2)=\frac{m_1\kappa(m_1)+m_2\kappa(m_2)}{m_1+m_2}.\]</span></p>
+<p>Nonnegativity and additive composition for every positive mass force
+<span class="math inline">\(\kappa(m)=K\ge0\)</span>. A reference
+two-state velocity process with mass <span
+class="math inline">\(m_0\)</span>, speed <span
+class="math inline">\(u_0&gt;0\)</span> and finite positive reversal
+rate <span class="math inline">\(\lambda_0\)</span> then gives <span
+class="math inline">\(K=m_0u_0^2/\lambda_0&gt;0\)</span> (C035–C036).
+The reference preparation supplies positivity. Different preparation
+classes can have different K; matching a whole-body preparation to
+independently composed constituents is an explicit premise. <a
+href="composition-universality.html">The composition proof</a> also
+gives countertests of that premise.</p>
+<p>The singular relativistic Kepler threshold <span
+class="math inline">\(|L|&gt;k/c\)</span> is another useful positive
+classical benchmark, inherited from established literature. Its value
+depends on the supplied coupling and its regular collision-free domain.
+Softening the core admits circles of arbitrarily small angular action
+(C052–C053). It does not supply an action lattice or a universal
+constant. See the <a href="relativistic-kepler-threshold.html">Kepler
+comparison</a>.</p>
+<h2 id="what-the-calibration-sequence-settles">4. What the calibration
+sequence settles</h2>
+<p>Preparation and record access decide the reconstruction obstruction
+in the finite mechanical receiver. R05–R33 make those resources
+explicit; their principal contribution is the following
+classification.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Information/preparation regime</th>
+<th>Accepted conclusion</th>
+<th>Selection premise still needed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scalable incoming preparation and exact delayed records</td>
+<td>A fixed finite-mass, finite-duration apparatus allows vanishing
+reconstruction error and disturbance, C068–C069</td>
+<td>Physical restriction preventing that preparation/record limit</td>
+</tr>
+<tr class="even">
+<td>Fixed preparation uncertainty with incomplete supplied data</td>
+<td>Exact common-record families give positive reconstruction risks in
+specified classes, C090–C093 and C106–C115</td>
+<td>Reason those uncertainties are unavoidable and universal</td>
+</tr>
+<tr class="odd">
+<td>Sufficient exact calibration and full records on the stated fixed
+box</td>
+<td>Uniform receiver recovery, with error bounded by record error
+divided by coupling, C116–C118</td>
+<td>An independent restriction on final-record or calibration
+precision</td>
+</tr>
+<tr class="even">
+<td>Four finite calibration tolerances with exact records</td>
+<td>Canonical product has matched order <span
+class="math inline">\(\min\{1,(\epsilon/\lambda)^2\}\)</span> in fixed
+component units, C119</td>
+<td>Origin and composition law of tolerance epsilon</td>
+</tr>
+<tr class="odd">
+<td>One uncertain or correlated calibration direction</td>
+<td>The direction determines canonical response; a zero-area curve can
+have positive coordinate risks, C120–C123</td>
+<td>A physical reason for the admitted uncertainty geometry</td>
+</tr>
+</tbody>
+</table>
+<p>The recovery row uses R30’s sufficiently small fixed apparatus box
+and bounded convex receiver domain. It does not cover R29’s larger
+preparation box. The R33 estimates concern a selected local
+common-record fibre; their upper bounds are not global minimax bounds.
+All error products convert to action through the fixed physical position
+and momentum units.</p>
+<p>C123 adds an exact symmetry cancellation and explicit quadratic
+response. Its remaining curvature coefficient may refine a local error
+law, but no current argument makes that coefficient decide quantum
+necessity or universality. The research decision is to park that
+continuation and retain its derivation for a named future dependency.
+The <a
+href="https://github.com/arivero/navstokgap/blob/main/research/handoffs/R33.md">R33
+handoff</a> preserves the open calculation.</p>
+<p>The general lesson is conditional: these apparatus examples defeat a
+derivation that relies only on the resource bounds they satisfy.
+Positive classical reconstruction risk and the quantum commutation
+relation remain distinct claims. <a
+href="autonomous-finite-readout.html">The apparatus construction</a> and
+<a href="calibration-tolerance-recovery.html">calibration-tolerance
+proof</a> supply the underlying dynamics and estimates.</p>
+<h2
+id="quantum-necessity-and-mass-gap-require-different-next-arguments">5.
+Quantum necessity and mass gap require different next arguments</h2>
+<p><strong>Quantum necessity requires a premise that excludes the
+classical alternatives.</strong> The checkerboard comparison starts with
+complex amplitudes, Born probabilities and a supplied <span
+class="math inline">\(K&gt;0\)</span>, then derives its Dirac continuum
+limit. It establishes what those premises produce; it does not select
+them mechanically. Q01 now asks which reconstruction premise excludes a
+classical state space, while K01 tests how fixed-time measurement
+compatibility behaves when apparatus variables are included. The later
+dynamical step must still locate action units, positivity and
+universality. <a href="checkerboard-dynamics.html">The coherent-path
+comparison</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B01.md">B01
+source coverage</a> define the starting point; the reconstruction proofs
+have not yet received a full repository audit.</p>
+<p><strong>The spectral route requires control of all slow
+modes.</strong> For a finite irreducible reversible generator, put <span
+class="math inline">\(A=-Q\)</span> on its centered Hilbert space and
+<span class="math inline">\(\chi(f)=\langle f,A^{-1}f\rangle\)</span>.
+If an observable collection satisfies</p>
+<p><span class="math display">\[\sum_a|\langle
+f_a,g\rangle|^2\ge\alpha\|g\|^2,\qquad
+S=\sum_a\chi(f_a)&lt;\infty,\qquad\alpha&gt;0,\]</span></p>
+<p>then its relaxation gap obeys <span
+class="math inline">\(\gamma\ge\alpha/S\)</span> (C042). For
+velocity-unit observables, alpha has speed-squared units, S has
+length-squared/time units, and gamma has inverse-time units. The proof
+applies the coverage inequality to a slowest eigenvector. A single
+positive action plateau can miss that vector; C041 and C045 exhibit
+closing gaps with a fixed plateau. Full rank at each parameter is
+insufficient when calibration becomes arbitrarily weak. Independent
+product dynamics control mixed modes (C046).</p>
+<p>G03 supplies the interacting Ising gap <span
+class="math inline">\(a[1-\tanh(2b)]\)</span> uniformly in finite volume
+at bounded coupling and fixed per-site refresh rate (C124). <a
+href="ising-hermitian-transfer.html">G04’s transform</a> gives a
+positive local Hermitian operator on the spin Hilbert space (C126):</p>
+<p><span class="math display">\[A_N=-D^{1/2}Q_ND^{-1/2},\qquad
+|\Omega\rangle=\sum_\sigma\sqrt{\pi(\sigma)}|\sigma\rangle,\qquad
+\Delta_{K A_N}=Ka[1-\tanh(2b)].\]</span></p>
+<p>Here D is the diagonal Gibbs law and K is a supplied action constant.
+Each term acts on three neighbouring sites and annihilates the ground
+state. Rescaling the refresh clock preserves that state and locality
+while rescaling the gap. The construction therefore retains physical
+time and action identification as premises; the <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B71.md">B71
+audit</a> matches the established stochastic-parent mapping.</p>
+<p>A Yang–Mills application additionally needs the physical Hamiltonian
+and quantum theory, gauge-invariant observables, and continuum and
+infinite-volume control. An auxiliary sampling clock can change a
+relaxation gap without changing the invariant law. The <a
+href="comparison-and-bridges.html">field-theory comparison</a> keeps
+these operator and time identifications explicit. Neither a positive
+classical action observable nor a toy relaxation gap supplies that
+construction.</p>
+<h2 id="evidence-map-and-next-decisions">6. Evidence map and next
+decisions</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Consolidated argument</th>
+<th>Claims and written proof</th>
+<th>Inherited source/proof audits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vanishing variation and mechanical contraction</td>
+<td>C002, C056–C058; section 2 links</td>
+<td>B05, B30, B31</td>
+</tr>
+<tr class="even">
+<td>Conditional excitation, composition and Kepler bounds</td>
+<td>C035–C036, C052–C053, C060–C061; section 3 links</td>
+<td>B16, B27–B28, B32</td>
+</tr>
+<tr class="odd">
+<td>Preparation and records</td>
+<td>C068–C069, C090–C123; section 4 links and ledger</td>
+<td>B37, B48–B66</td>
+</tr>
+<tr class="even">
+<td>Coherent versus probabilistic path rules</td>
+<td>C039–C040; checkerboard note</td>
+<td>B18</td>
+</tr>
+<tr class="odd">
+<td>Slow modes, calibrated coverage and product control</td>
+<td>C041–C042, C045–C046; susceptibility note</td>
+<td>B20, B22</td>
+</tr>
+<tr class="even">
+<td>Interacting gap and local Hermitian parent</td>
+<td>C124, C126; Ising and transfer notes</td>
+<td>B68, B71</td>
+</tr>
+</tbody>
+</table>
+<p>Q01’s <a href="quantum-exclusion-premises.html">premise map</a>
+identifies reversible pure-state connectivity and purification as
+distinct classical-exclusion premises (<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B67.md">B67</a>).
+Hardy’s moving-ball example motivates the next quantum question: exact
+operational closure during transformations, with action identification
+still separate. G03’s interacting size-uniform gap test is now complete
+(C124). Q01’s <a href="classical-orientation-closure.html">orientation
+countermodel</a> adds C125: finite operational capacity and local
+reversible closure coexist with separable composites lacking
+purification and the required subspace geometry. The <a
+href="reversible-interaction-premise.html">B70 theorem map</a> now
+excludes a continuous reversible interacting extension preserving that
+minimal composite. The stronger quantum operational conclusion uses
+identical-copy and ancilla/measurement/discard closure. Physical
+reversible descent and action normalization remain open. G04 now makes
+the gap-track operator bridge explicit and conditional. The <a
+href="hamiltonian-moment-descent.html">exact spin pair</a> (C127/B72)
+shares first/cross moments and zero energy initially, yet yields
+product-test probabilities <span
+class="math inline">\((1-\sin(Jt/S_A))/4\)</span> and <span
+class="math inline">\(1/4\)</span>. Its reversible Hamiltonian flow does
+not descend to the fixed operational quotient.</p>
+<p><strong>Finite enlargement cannot repair this exact model.</strong>
+<a href="hamiltonian-finite-closure.html">C128/B74</a> proves that <span
+class="math inline">\(U_t(u_x+i u_y)=(u_x+i u_y)\exp(iJt
+v_z/S_A)\)</span> contains arbitrarily many independent observables on
+every nonzero time interval. For all Borel preparations, even nonlinear
+updates of finitely many expectations would require an invariant finite
+observable span. Exact closure therefore requires infinite observable
+dimension or a change of preparations, effects or dynamics. This does
+not determine distinguishability capacity or quantum structure. Spin
+magnitudes and their action units remain supplied inputs. <a
+href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>
+selects consolidation of the physical premise boundary; additional spin
+hierarchy variants are parked.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

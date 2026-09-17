@@ -1,5 +1,9 @@
 # Toward the Yang--Mills mass gap
 
+**Website:** <https://arivero.github.io/navstokgap/> lists every result by
+track, with the Markdown source and the typeset PDF for each. Rebuild it with
+`make site`.
+
 The goal of this project, set on 2026-09-16, is a proof of the existence
 of a mass gap for $SU(3)$ Yang--Mills theory in four dimensions, in the
 Jaffe--Witten formulation. Work

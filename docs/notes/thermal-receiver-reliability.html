@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thermal reliability selects a detector cost, not a universal action</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Thermal reliability selects a detector cost, not a universal
+action</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/thermal-receiver-reliability.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/thermal-receiver-reliability.pdf">PDF</a></p><p>A receiver with a fixed activated-rate prefactor cannot be made
+arbitrarily ready while remaining quiet for a prescribed duration and
+responding quickly to a signal. In the model below, those two
+requirements impose an exact lower bound on signal-induced barrier
+reduction. Interpreting that reduction as incident energy needs an
+additional coupling premise. The bound retains bath temperature, timing
+and error tolerances; it does not select a quantum action.</p>
+<p>This is Q10’s exploratory effective-model test, with a written
+consistency review and no accepted-ledger promotion. The exponential
+escape law and its signal coupling are physical hypotheses. They are not
+a derivation of escape from Q09’s conservative double well or a
+microscopic model of photon detection.</p>
+<h2 id="a-receiver-with-a-specified-retention-requirement">1. A receiver
+with a specified retention requirement</h2>
+<p>Let <span class="math inline">\(T&gt;0\)</span> be bath temperature,
+<span class="math inline">\(k_B\)</span> Boltzmann’s constant, and <span
+class="math inline">\(\nu&gt;0\)</span> an attempt frequency in inverse
+seconds. A prepared metastable receiver has residual activation barrier
+<span class="math inline">\(b\ge0\)</span>, measured in energy units.
+Its first recorded escape is an absorbing event. The stipulated dark
+rate is</p>
+<p><span class="math display">\[r_0=\nu e^{-b/(k_BT)}.
+\tag{1}\]</span></p>
+<p>Thus the survival probability S solves <span
+class="math inline">\(dS/dt=-r_0S\)</span>, <span
+class="math inline">\(S(0)=1\)</span>, giving <span
+class="math inline">\(S(t)=\exp(-r_0t)\)</span>. Absorption describes a
+monitored first event; maintaining a permanent physical record and
+resetting it remain separate apparatus tasks. Retention here means
+absence of a false first event while armed.</p>
+<p>During a signal gate of duration <span
+class="math inline">\(t_g&gt;0\)</span> the barrier is reduced by an
+amount <span class="math inline">\(u\ge0\)</span>, held constant
+throughout the gate. Use the explicitly capped model</p>
+<p><span class="math display">\[r_1=\nu e^{-\max(b-u,0)/(k_BT)}.
+\tag{2}\]</span></p>
+<p>Here <span class="math inline">\(u\)</span> denotes an energy change,
+whereas <span class="math inline">\(\nu\)</span> denotes a rate. The cap
+prevents an unphysical extrapolation to rates above the stipulated
+attempt frequency. It is a model definition, not a Kramers formula near
+a vanishing barrier. The same <span class="math inline">\(\nu\)</span>
+in (1) and (2), an unchanged bath and exponential holding times are
+essential premises. Sustaining u may require work from a control source;
+no equality between u and input pulse energy has yet been assumed.</p>
+<p>Require false-event probability at most <span
+class="math inline">\(\epsilon\)</span> over a dark interval <span
+class="math inline">\(\tau&gt;0\)</span>, and miss probability at most
+<span class="math inline">\(\eta\)</span> in a subsequent signal gate,
+conditional on surviving to that gate. For <span
+class="math inline">\(0&lt;\epsilon,\eta&lt;1\)</span>, define</p>
+<p><span class="math display">\[a=-\log(1-\epsilon)&gt;0,\qquad
+c=\log(1/\eta)&gt;0. \tag{3}\]</span></p>
+<p>The two requirements are exactly</p>
+<p><span class="math display">\[r_0\tau\le a,\qquad r_1t_g\ge c.
+\tag{4}\]</span></p>
+<p>Conditional efficiency matters: the probability of both surviving the
+dark interval and firing in the gate is <span
+class="math inline">\(\exp(-r_0\tau)[1-\exp(-r_1t_g)]\)</span>. The
+separate bounds ensure it is at least <span
+class="math inline">\((1-\epsilon)(1-\eta)\)</span>.</p>
+<h2 id="exact-feasibility-and-the-optimal-residual-barrier">2. Exact
+feasibility and the optimal residual barrier</h2>
+<p>Timely detection is impossible in this model if <span
+class="math inline">\(\nu t_g&lt;c\)</span>, even with zero remaining
+barrier. If <span class="math inline">\(\nu t_g\ge c\)</span>,
+define</p>
+<p><span
+class="math display">\[B=\max\!\left(0,k_BT\log\frac{\nu\tau}{a}\right),\qquad
+D=k_BT\log\frac{\nu t_g}{c}\ge0. \tag{5}\]</span></p>
+<p>The feasible designs are precisely</p>
+<p><span class="math display">\[b\ge B,\qquad u\ge\max(0,b-D).
+\tag{6}\]</span></p>
+<p>Indeed, taking logarithms of (4) first gives <span
+class="math inline">\(b\ge k_BT\log(\nu\tau/a)\)</span>. The signal
+inequality gives <span class="math inline">\(\max(b-u,0)\le D\)</span>.
+Since <span class="math inline">\(D\ge0\)</span>, this is equivalent to
+<span class="math inline">\(b-u\le D\)</span>, proving (6). Every point
+in (6) satisfies both original probability bounds, including the
+equality cases. Minimizing over <span
+class="math inline">\(b\ge0\)</span> therefore yields</p>
+<p><span class="math display">\[u_{\min}=\max(0,B-D)
+=k_BT\left[\log\frac{c\tau}{a t_g}\right]_+,
+\qquad \nu t_g\ge c, \tag{7}\]</span></p>
+<p>where <span class="math inline">\([x]_+=\max(x,0)\)</span>. For the
+last equality, if <span class="math inline">\(\nu\tau\le a\)</span> then
+<span class="math inline">\(B=0\)</span>; feasibility also gives <span
+class="math inline">\(c\tau/(at_g)\le\nu\tau/a\le1\)</span>. If <span
+class="math inline">\(\nu\tau&gt;a\)</span>, subtract the two logarithms
+in (5). This checks both branches without extending a negative
+barrier.</p>
+<p>In the discriminating regime <span
+class="math inline">\(c\tau&gt;at_g\)</span>, choose <span
+class="math inline">\(b=B\)</span> and <span
+class="math inline">\(u=B-D\)</span>. Both probability constraints then
+saturate. If <span class="math inline">\(c\tau\le at_g\)</span>, a
+design with <span class="math inline">\(u=0\)</span> can already satisfy
+them: the timing/error specification is too weak to require signal
+discrimination. A nonzero temperature alone is insufficient.</p>
+<h2 id="what-becomes-of-preloading-and-a-slow-receiver">3. What becomes
+of preloading and a slow receiver?</h2>
+<p>At fixed <span class="math inline">\(T,\nu,\tau,\epsilon\)</span>
+with <span class="math inline">\(\nu\tau&gt;a\)</span>, preloading
+cannot reduce b below B while satisfying dark retention. This closes the
+zero-residual-barrier route within the specified metastable class. A
+receiver with bare barrier <span class="math inline">\(\Delta\)</span>
+and a sustainable preload <span class="math inline">\(e_0\)</span>,
+modeled by <span class="math inline">\(b=\Delta-e_0\)</span>, must
+satisfy</p>
+<p><span class="math display">\[0\le e_0\le\Delta-B.
+\tag{8}\]</span></p>
+<p>If <span class="math inline">\(\Delta&lt;B\)</span> the design cannot
+meet retention. A particle initially at rest near Q09’s unstable saddle
+is not automatically such a sustainable metastable preload: it moves
+even without noise. Equation (8) applies only if an actual
+preparation/control mechanism realizes (1) for the full dark
+interval.</p>
+<p>Reducing <span class="math inline">\(\nu\)</span> alone improves dark
+survival but slows detection. The gate floor <span
+class="math inline">\(\nu\ge c/t_g\)</span> prevents using <span
+class="math inline">\(\nu\to0\)</span> at fixed gate and miss tolerance.
+In the positive-bound regime the same prefactor cancels from (7),
+exposing the required contrast <span class="math inline">\(r_1/r_0\ge
+c\tau/(at_g)\)</span>. Retention alone would not give this protection:
+it is the combined dark and signal requirement that does so.</p>
+<p>If the signal can instead change the prefactor, a rate-only
+alternative is</p>
+<p><span class="math display">\[r_0=\nu_0 e^{-b/(k_BT)},\qquad
+r_1=\nu_1 e^{-b/(k_BT)}. \tag{9}\]</span></p>
+<p>For any fixed <span class="math inline">\(b\ge0\)</span> choose <span
+class="math inline">\(\nu_0=(a/\tau)\exp(b/(k_BT))\)</span> and <span
+class="math inline">\(\nu_1=(c/t_g)\exp(b/(k_BT))\)</span>. Both
+specifications hold with <span class="math inline">\(u=0\)</span>. This
+is an exact counterexample to an inference from probabilities alone to
+barrier reduction, not a construction of a zero-work autonomous
+detector. Changing mobility, coupling or access to a reaction channel
+has its own physical control cost, which (9) does not specify.</p>
+<h2 id="energy-action-and-the-limits-of-the-bound">4. Energy, action and
+the limits of the bound</h2>
+<p>To infer incident work W, add the explicit transduction premise</p>
+<p><span class="math display">\[u\le\chi W,\qquad 0&lt;\chi&lt;\infty,
+\tag{10}\]</span></p>
+<p>with fixed dimensionless <span class="math inline">\(\chi\)</span>
+and with all sources contributing to barrier control included in W. Then
+(7) implies</p>
+<p><span class="math display">\[W\ge\frac{k_BT}{\chi}
+\left[\log\frac{c\tau}{a t_g}\right]_+. \tag{11}\]</span></p>
+<p>A stored-energy amplifier need not obey (10) for signal work alone.
+Nor is a barrier-height change automatically dissipated heat or reset
+work: it concerns the energy landscape along an escape path, not the
+work along the actual control trajectory. Q09’s cycle accounting remains
+necessary.</p>
+<p>For Q08’s narrow-band wave input of angular frequency <span
+class="math inline">\(\omega\)</span>, canonical wave action is
+approximately <span class="math inline">\(W/\omega\)</span>. Under (10)
+its corresponding lower bound is the right side of (11) divided by
+omega. A finite-pulse wave-action definition must retain Q08’s bandwidth
+qualification. Alternatively <span class="math inline">\(Wt_g\)</span>
+has action units but describes a different quantity. Neither choice
+removes T, error rates, timing, transduction or frequency from the
+result.</p>
+<p>Within the stipulated rate-model class, <span
+class="math inline">\(T\to0\)</span> at fixed <span
+class="math inline">\(\nu\)</span> and fixed specifications sends the
+optimal b, u and W bound to zero while preserving all rate ratios. No
+microscopic low-temperature extrapolation is claimed. Allowing larger
+<span class="math inline">\(\chi\)</span> also removes a bound on signal
+work; allowing <span class="math inline">\(t_g\ge c\tau/a\)</span>
+removes the positive discrimination requirement. These are explicit
+class limits, not quantum predictions.</p>
+<h2 id="strategic-consequence-and-evidence-map">5. Strategic consequence
+and evidence map</h2>
+<p>Thermal reliability supplies a conditional cost for a ready detector
+once a response deadline and a fixed signal coupling are included. It
+does not by itself identify a universal action or yield exclusive
+two-receiver events. Park further Arrhenius/threshold variants. The next
+useful construction is an autonomous shared-resource receiver: can a
+finite mechanical latch make two classical outputs compete for one
+stored excitation while retaining reliable response? Specify its
+resource, locality and output probabilities. That tests Q09’s
+exclusivity obstruction directly and can fail by requiring communication
+or a prepared shared resource; it must not assume a Born rule.</p>
+<p>Source context is limited. The existing <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B23/harmonic-receiver-source-companion.md">B23
+companion</a>, Zwanzig p. 219 (21)–(24), supplies a bath-memory
+construction, not (1). One discovery search located Hänggi, Talkner and
+Borkovec, <em>Reaction-rate theory: fifty years after Kramers</em>,
+Rev. Mod. Phys. 62, 251–341 (1990), <a
+href="https://doi.org/10.1103/RevModPhys.62.251">DOI</a>. Its
+bibliographic metadata/abstract identify activated escape as established
+context. The PDF was opened but no rate formula is imported from it;
+this is not a passage or prior-art audit. Equations (1), (2) and (10)
+are declared premises; (3)–(8) and (11) are written consequences; (9)
+tests an omitted coupling premise. Independent proof and bounded
+literature review remain required before ledger promotion. No
+computational verification was used.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

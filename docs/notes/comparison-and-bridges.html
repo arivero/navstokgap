@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Navier–Stokes and Yang–Mills: comparison and bridges</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Navier–Stokes and Yang–Mills: comparison and bridges</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/comparison-and-bridges.md">Markdown source</a></p><p>The two problems share questions about nonlinear fields, scaling,
+constraints and uniform estimates. This comparison derives their scaling
+and dissipation identities, distinguishes regularity from relaxation and
+spectral separation, and specifies what each proposed bridge must
+transport.</p>
+<p>First substantive milestone, 2026-09-05; exposition revised
+2026-09-06.</p>
+<p>The <a href="millennium-problem-definitions.html">definitions</a>
+preserve the official targets; the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/README.md">source
+catalogue</a> provides PDFs and reading scope. Below, “derived” means an
+elementary calculation under the stated hypotheses, “cited” means a
+result imported from a named source, and “proposed” means a comparison
+whose transfer obligations remain to be specified. Source companions
+record the versions and passages used.</p>
+<h2 id="exact-targets-and-unlike-meanings-of-existence">1. Exact targets
+and unlike meanings of existence</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Navier–Stokes</th>
+<th>Yang–Mills</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Setting</td>
+<td>Three spatial dimensions, forward time; whole space or spatially
+periodic</td>
+<td>Four-dimensional quantum spacetime</td>
+</tr>
+<tr class="even">
+<td>Quantifier</td>
+<td>Any admissible initial velocity for A/B; an admissible
+counterexample for C/D</td>
+<td>Every compact simple gauge group</td>
+</tr>
+<tr class="odd">
+<td>External force</td>
+<td>Zero for A/B; admissible smooth forcing permitted for C/D</td>
+<td>Pure gauge-theory target</td>
+</tr>
+<tr class="even">
+<td>Required object</td>
+<td>Global smooth velocity and pressure, with the specified
+admissibility</td>
+<td>Nontrivial quantum theory with the required axiomatic
+properties</td>
+</tr>
+<tr class="odd">
+<td>Required extra control</td>
+<td>Whole-space energy uniformly bounded in time</td>
+<td>Positive, finite lower edge of nonvacuum energy</td>
+</tr>
+<tr class="even">
+<td>Accepted alternative</td>
+<td>Prove one of A–D</td>
+<td>Construct the theory and prove its mass gap</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Fefferman_NavierStokes.pdf">F,
+pp. 1–2</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/JaffeWitten_YangMills.pdf">JW,
+§§3–5</a>. Fefferman’s existence alternatives A/B specify zero forcing;
+breakdown alternatives C/D permit admissible forcing. These quantifiers
+and forcing hypotheses determine the exact target.</p>
+<p>The required evidence concerns smooth deterministic evolution for the
+fluid and quantum correlations, reconstruction and spectrum for the
+gauge theory. Each bridge must identify which object it transports and
+how it supplies the target’s remaining structure.</p>
+<h2 id="equations-and-the-several-time-variables">2. Equations and the
+several time variables</h2>
+<p>Let <span class="math inline">\(x\)</span> denote fluid position and
+<span class="math inline">\(t\)</span> fluid time. For a smooth unforced
+fluid, pressure elimination on whole space with suitable decay, or the
+standard periodic pressure convention, gives</p>
+<p><span class="math display">\[
+\partial_tu=\nu\Delta u-\mathbb P((u\cdot\nabla)u),
+\qquad \nabla\cdot u=0,
+\]</span></p>
+<p>where <span class="math inline">\(\mathbb P\)</span> is the
+orthogonal projection onto divergence-free fields. This
+pressure-eliminated representation supports the calculations below.</p>
+<p>For gauge fields use <span class="math inline">\(y\in\mathbb
+R^d\)</span>, a Lie-algebra-valued connection <span
+class="math inline">\(A\)</span>, an invariant positive inner product,
+curvature</p>
+<p><span class="math display">\[
+F_{ij}=\partial_iA_j-\partial_jA_i+[A_i,A_j],
+\qquad D_i=\partial_i+[A_i,\,\cdot\,].
+\]</span></p>
+<p>The Euclidean Yang–Mills action in our normalisation is</p>
+<p><span class="math display">\[
+S(A)=\frac12\int|F_A|^2\,d^dy.
+\]</span></p>
+<p>Coupling factors can be restored; this convention fixes the gradient
+identities below. Gauge heat flow has the form</p>
+<p><span class="math display">\[
+\partial_sA=-D_A^*F_A.
+\]</span></p>
+<p>It is degenerate along gauge directions. A gauge term yields a
+parabolic representative. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Luscher_WilsonFlow_1006.4518v3.pdf">L,
+equations (1.1)–(1.2), (2.2)–(2.4)</a> provides the concrete flow and
+gauge modification. The parameter <span class="math inline">\(s\)</span>
+is auxiliary.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Meaning</th>
+<th>Generator or operation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(t\)</span></td>
+<td>Fluid evolution time</td>
+<td>Nonlinear Navier–Stokes evolution</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tau\)</span></td>
+<td>Quantum real time</td>
+<td>Unitary evolution <span class="math inline">\(e^{-i\tau
+H}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(r\)</span></td>
+<td>Euclidean physical-time separation</td>
+<td>Semigroup <span class="math inline">\(e^{-rH}\)</span>, when
+reconstruction applies</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(s\)</span></td>
+<td>Gauge heat-flow or Langevin time</td>
+<td>Auxiliary deterministic or stochastic evolution</td>
+</tr>
+</tbody>
+</table>
+<p>In a stochastic construction in <span
+class="math inline">\(d=4\)</span>, the noise lives over <span
+class="math inline">\((s,y)\)</span>: an auxiliary time and four
+Euclidean coordinates. The fluid has three spatial coordinates and its
+physical evolution time.</p>
+<h2 id="scaling-a-precise-common-language-unequal-criticalities">3.
+Scaling: a precise common language, unequal criticalities</h2>
+<p>The following calculations are derived for smooth fields on whole
+space. For periodic fields the rescaling changes the box size along with
+the field.</p>
+<p>For fixed viscosity the unforced fluid scaling is</p>
+<p><span class="math display">\[
+u_\lambda(x,t)=\lambda u(\lambda x,\lambda^2t),
+\qquad p_\lambda(x,t)=\lambda^2p(\lambda x,\lambda^2t).
+\]</span></p>
+<p>Each term of the velocity equation gains <span
+class="math inline">\(\lambda^3\)</span>. Changing variables in a
+spatial integral gives, in spatial dimension <span
+class="math inline">\(d\)</span>,</p>
+<p><span class="math display">\[
+\|u_\lambda(t)\|_{L^q}=\lambda^{1-d/q}
+\|u(\lambda^2t)\|_{L^q},\qquad
+E(u_\lambda(t))=\lambda^{2-d}E(u(\lambda^2t)),
+\quad E(u)=\tfrac12\|u\|_2^2.
+\]</span></p>
+<p>In <span class="math inline">\(d=3\)</span>, the <span
+class="math inline">\(L^3\)</span> norm is invariant, whereas energy
+scales as <span class="math inline">\(\lambda^{-1}\)</span>.
+Concentrating a profile can therefore increase pointwise size while
+decreasing its energy. This is the energy-supercritical scaling that a
+regularity estimate must address. For a fixed smooth profile also <span
+class="math inline">\(\|\nabla u_\lambda\|_2^2=\lambda\|\nabla
+u\|_2^2\)</span> in three dimensions.</p>
+<p>For a connection put <span class="math inline">\(A_\lambda(y)=\lambda
+A(\lambda y)\)</span>. Both the derivative and commutator contributions
+give</p>
+<p><span class="math display">\[
+F_{A_\lambda}(y)=\lambda^2F_A(\lambda y),\qquad
+S(A_\lambda)=\lambda^{4-d}S(A).
+\]</span></p>
+<p>Thus the classical Euclidean action is scale-invariant in <span
+class="math inline">\(d=4\)</span>: action-critical in four Euclidean
+dimensions, alongside the fluid’s energy-supercritical scaling in three
+spatial dimensions. The effect of quantisation on scaling is a further
+question.</p>
+<p>Proposed use: identify the norms or observables controlled at each
+scale, then derive estimates connecting the relevant solution spaces,
+measures or spectra.</p>
+<h2
+id="dissipation-and-curvature-useful-structure-with-different-roles">4.
+Dissipation and curvature: useful structure with different roles</h2>
+<p>For smooth unforced fluid solutions with vanishing boundary terms,
+integration by parts gives</p>
+<p><span class="math display">\[
+\frac{dE}{dt}=-\nu\|\nabla u\|_2^2,
+\qquad
+\langle u,(u\cdot\nabla)u\rangle=0.
+\]</span></p>
+<p>The cancellation follows by integrating <span
+class="math inline">\(u\cdot\nabla(|u|^2/2)\)</span> and using <span
+class="math inline">\(\nabla\cdot u=0\)</span>. The pressure term
+vanishes under the same hypotheses. For smooth gauge heat flow the first
+variation is</p>
+<p><span class="math display">\[
+\delta S(A)[a]=\langle D_A^*F_A,a\rangle,
+\qquad \frac{dS}{ds}=-\|D_A^*F_A\|_2^2.
+\]</span></p>
+<p>Both identities hold under the stated regularity and boundary
+assumptions. Here <span class="math inline">\(E\)</span> is quadratic in
+velocity; <span class="math inline">\(S\)</span> is quadratic in
+curvature, which contains derivatives and commutators. Navier–Stokes
+combines viscous diffusion and energy-conserving advection. For
+comparison, ordinary <span class="math inline">\(L^2\)</span> gradient
+descent of kinetic energy would give <span
+class="math inline">\(\partial_tu=-u\)</span>.</p>
+<p>The model distinction is essential. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Tao_AveragedNS_1402.0290v3.pdf">T,
+Theorem 1.5 and p. 10</a> supplies a cited example with averaged
+nonlinearity, energy cancellation and finite-time blowup. A regularity
+argument must therefore exploit structure beyond the properties shared
+with that averaged equation.</p>
+<p>There is also a geometric analogy. With <span
+class="math inline">\(u^\flat\)</span> the velocity one-form, <span
+class="math inline">\(\omega=*du^\flat\)</span> is vorticity in three
+Euclidean dimensions, while gauge curvature is <span
+class="math inline">\(F=dA+A\wedge A\)</span>. The unforced vorticity
+equation, obtained by taking the curl, is</p>
+<p><span class="math display">\[
+\partial_t\omega+(u\cdot\nabla)\omega
+=(\omega\cdot\nabla)u+\nu\Delta\omega.
+\]</span></p>
+<p>The stretching term makes nonlinear derivative amplification
+explicit. Curvature likewise exposes derivatives and self-interaction,
+with the additional nonabelian term <span class="math inline">\(A\wedge
+A\)</span>. A map between the two descriptions must account for that
+term and respect the resulting dynamics.</p>
+<p>Projection restricts the fluid to a physical incompressibility
+constraint; a gauge transformation changes the representative of a gauge
+orbit. This gives two analytic tasks to compare: constrained evolution
+and evolution modulo redundancy.</p>
+<h2 id="stochastic-quantisation-a-concrete-but-conditional-bridge">5.
+Stochastic quantisation: a concrete but conditional bridge</h2>
+<p>The schematic auxiliary equation is</p>
+<p><span class="math display">\[
+\partial_sA=-D_A^*F_A+\text{gauge term}+\text{noise}
++\text{renormalisation terms}.
+\]</span></p>
+<p>This schematic display identifies the terms a precise SPDE
+construction must define. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Chevyrev_StochasticYM_2202.13359v2.pdf">C,
+§1.2, Theorem 1.6, Remark 1.9 and §4</a> describes rigorous
+finite-volume dynamics in dimensions two and three. The solution
+framework allows a cemetery state for possible explosion. Invariant
+measures and infinite volume appear as further questions in that 2022
+review.</p>
+<p>The proposed connection is through methods for singular parabolic
+equations. A route from auxiliary dynamics to the Millennium target
+would still have to supply:</p>
+<ol type="1">
+<li>A well-defined process and an appropriate invariant law.</li>
+<li>Identification of that law with the intended gauge theory.</li>
+<li>The required continuum and infinite-volume control, with correct
+observables.</li>
+<li>Quantum reconstruction with the required axioms.</li>
+<li>A gap for the reconstructed physical Hamiltonian.</li>
+</ol>
+<p>In this chain, stationarity, reflection positivity and the physical
+spectral bound each have their own proof obligation.</p>
+<h2 id="three-different-gaps">6. Three different gaps</h2>
+<h3 id="a-finite-box-fluid-decay-rate">6.1 A finite-box fluid decay
+rate</h3>
+<p>Derived diagnostic: take the standard unforced periodic fluid on a
+box of side <span class="math inline">\(L\)</span>, with periodic
+pressure and zero mean velocity. Fourier modes have wavevectors <span
+class="math inline">\(k=2\pi n/L\)</span>. Therefore</p>
+<p><span class="math display">\[
+\|\nabla u\|_2^2\geq(2\pi/L)^2\|u\|_2^2,
+\qquad
+E(t)\leq E(0)e^{-2\nu(2\pi/L)^2t}
+\]</span></p>
+<p>for as long as the solution is smooth. The Stokes decay-rate gap is
+<span class="math inline">\(\gamma_L=\nu(2\pi/L)^2\)</span>. It vanishes
+when <span class="math inline">\(L\to\infty\)</span>; constants are zero
+modes unless the mean is removed. Whole-space heat flow supplies a
+useful comparison: globally smooth evolution with nonzero decay rates
+accumulating at zero. The displayed fluid estimate controls
+low-frequency decay; regularity also requires control of high-frequency
+concentration.</p>
+<h3 id="an-auxiliary-mixing-gap">6.2 An auxiliary mixing gap</h3>
+<p>Derived distinction: suppose an auxiliary Markov generator <span
+class="math inline">\(\mathcal L\)</span> has invariant law <span
+class="math inline">\(\mu\)</span> and an <span
+class="math inline">\(L^2(\mu)\)</span> relaxation bound. Replacing it
+by <span class="math inline">\(c\mathcal L\)</span>, for any <span
+class="math inline">\(c&gt;0\)</span>, keeps <span
+class="math inline">\(\mu\)</span> invariant because <span
+class="math inline">\(\int c\mathcal Lf\,d\mu=0\)</span>, while
+multiplying its relaxation rate by <span
+class="math inline">\(c\)</span>. Equivalently its semigroup is <span
+class="math inline">\(P_{cs}\)</span>.</p>
+<p>The sampling clock can therefore rescale a mixing gap while
+preserving equilibrium correlations. Extracting a physical mass requires
+a physical-time operator identification. A reversible diffusion
+conjugate to a Schrödinger-type operator still requires that
+identification with the field-theory Hamiltonian.</p>
+<h3 id="the-quantum-gap-and-physical-correlations">6.3 The quantum gap
+and physical correlations</h3>
+<p>Derived spectral consequence: assume a self-adjoint physical <span
+class="math inline">\(H\geq0\)</span>, a unique vacuum <span
+class="math inline">\(\Omega\)</span>, and a gap <span
+class="math inline">\(m&gt;0\)</span>. Let <span
+class="math inline">\(\psi\)</span> be a well-defined state orthogonal
+to <span class="math inline">\(\Omega\)</span>, for example one created
+by a suitably smeared centred observable. The spectral theorem gives</p>
+<p><span class="math display">\[
+\langle\psi,e^{-rH}\psi\rangle
+=\int_{[m,\infty)}e^{-rE}\,d\rho_\psi(E)
+\leq e^{-mr}\|\psi\|^2,\quad r\geq0.
+\]</span></p>
+<p>This is decay in Euclidean physical-time separation <span
+class="math inline">\(r\)</span>, as distinct from auxiliary relaxation
+time <span class="math inline">\(s\)</span>. An observable constrains
+the energies to which it couples. Proving a full spectral gap requires a
+decay bound for a class of observables that detects all states under
+consideration.</p>
+<p>In units <span class="math inline">\(\hbar=c=1\)</span>, mass has
+inverse-length units. A fluid decay rate has inverse-time units, with
+<span class="math inline">\(\nu\)</span> carrying length-squared/time.
+Equating their numerical values requires a physically justified
+conversion.</p>
+<h2 id="bridge-assessment">7. Bridge assessment</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bridge</th>
+<th>Status here</th>
+<th>Legitimate use</th>
+<th>Missing ingredient for a transfer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scaling and control across scales</td>
+<td>Derived comparison</td>
+<td>Identify what a bound actually controls</td>
+<td>Estimates with correct exponents and uniform constants</td>
+</tr>
+<tr class="even">
+<td>Energy/action monotonicity</td>
+<td>Derived identities for smooth fields</td>
+<td>Separate conservative transport from dissipation</td>
+<td>Coercivity in the needed topology and continuation/limit
+arguments</td>
+</tr>
+<tr class="odd">
+<td>Vorticity/curvature</td>
+<td>Geometric analogy with explicit formulae</td>
+<td>Expose derivatives and self-interactions</td>
+<td>A map respecting fields, dynamics and observables</td>
+</tr>
+<tr class="even">
+<td>Constraint/gauge handling</td>
+<td>Analytic analogy</td>
+<td>Track admissible variables and representatives</td>
+<td>Proof that the constraints or quotients correspond</td>
+</tr>
+<tr class="odd">
+<td>Gauge heat flow</td>
+<td>Cited auxiliary construction</td>
+<td>Compare parabolic smoothing mechanisms</td>
+<td>Quantum measure construction and physical spectral information</td>
+</tr>
+<tr class="even">
+<td>Stochastic quantisation</td>
+<td>Cited lower-dimensional results; conditional route</td>
+<td>Relate auxiliary dynamics to candidate field laws</td>
+<td>Invariant law, reconstruction and all required limits</td>
+</tr>
+<tr class="odd">
+<td>Spectral gap/correlation decay</td>
+<td>Derived implication for physical <span
+class="math inline">\(H\)</span></td>
+<td>Interpret suitable Euclidean correlations</td>
+<td>Reconstruction and control of a spectrally sufficient class</td>
+</tr>
+<tr class="even">
+<td>Finite-box or mixing gap as mass gap</td>
+<td>Additional structure required</td>
+<td>Identify the operator governing a measured rate</td>
+<td>Physical operator identification and survival of limits</td>
+</tr>
+</tbody>
+</table>
+<p>For any regularised spectral calculation use a cutoff label <span
+class="math inline">\(a\)</span> and box size <span
+class="math inline">\(L\)</span>. The statement <span
+class="math inline">\(m_{a,L}&gt;0\)</span> at each fixed pair is weaker
+than a positive bound in physical units along a justified continuum and
+infinite-volume construction. For example, a dimensionless lattice gap
+may scale as <span class="math inline">\(a m\)</span> and tend to zero
+while a physical <span class="math inline">\(m\)</span> stays positive.
+Conversely a box-induced gap can disappear. The construction must
+specify the order of limits and justify any interchange.</p>
+<h2 id="applying-the-comparison">8. Applying the comparison</h2>
+<p>For each toy model, specify its variables and symmetries, its
+trajectory or state space, its clock and generator, its scale
+transformation and its limiting procedures. Then state the desired
+estimate and identify which structures it shares with the companion
+field problem.</p>
+<p>The present <a
+href="https://github.com/arivero/navstokgap/blob/main/research/PROGRAMME.md">mechanics
+programme</a> starts with action variations and operational resolution,
+then moves to operator spectra. This comparison supplies the transfer
+questions for that sequence. Its proposed bridges remain conditional on
+the listed constructions and estimates; the Millennium targets remain
+the full problems in the official definitions.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

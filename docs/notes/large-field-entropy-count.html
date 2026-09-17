@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The large-field region costs more action than it has unstable directions, by the factor 22/g2</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The large-field region costs more action than it has unstable
+directions, by the factor <span
+class="math inline">\(2\pi^2/g^2\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/large-field-entropy-count.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/large-field-entropy-count.pdf">PDF</a></p><p>The question left by <a href="flow-instability-large-field.html">the
+instability note</a> has a quantitative answer, and it is favourable.
+The expansion inside a large-field region is <strong>not
+divergent</strong>: the configuration space is compact, so the action
+attains a minimum on the closed constraint set, and at that minimizer
+the Hessian is nonnegative on the tangent cone, so the Gaussian order is
+well defined. What the Nielsen–Olesen instability says is that the
+obvious candidate for the minimizer, a constant chromomagnetic field, is
+a saddle rather than a minimum. The quantitative question is then
+whether the unstable directions are too numerous for the Boltzmann
+suppression to beat, and they are not. In a constant background of
+magnitude <span class="math inline">\(gB=\eta/\ell^2\)</span> on a
+four-dimensional block of side <span
+class="math inline">\(\ell\)</span>, the count is <span
+class="math display">\[\#\{\text{unstable modes}\}
+=\underbrace{\frac{gB\,\ell^2}{2\pi}}_{\text{Landau degeneracy}}\times
+\underbrace{\frac{gB\,\ell^2}{4\pi}}_{k_3^2+k_4^2&lt;gB}
+=\frac{(gB)^2\ell^4}{8\pi^2}=\frac{\eta^2}{8\pi^2},\]</span>
+<strong>independent of <span class="math inline">\(\ell\)</span> and of
+the lattice spacing</strong>, exactly like the action cost <span
+class="math inline">\(S_E/\hbar\simeq\eta^2/(4g^2)\)</span> of <a
+href="ground-state-measure-transfer.html">the transfer note</a> §3.
+Their ratio is <span class="math display">\[\frac{\text{action
+cost}}{\text{unstable-mode count}}
+=\frac{\eta^2/(4g^2)}{\eta^2/(8\pi^2)}=\frac{2\pi^2}{g^2},\]</span>
+uniform in <span class="math inline">\(\eta\)</span>, in <span
+class="math inline">\(\ell\)</span> and in the cutoff, and large at weak
+coupling. So the suppression of a large-field region beats its entropy
+by a factor <span class="math inline">\(2\pi^2/g^2\)</span> per unstable
+direction, and the sum over large-field regions converges for <span
+class="math inline">\(g^2&lt;2\pi^2\simeq19.7\)</span>. The difficulty
+in the large-field region is therefore <strong>not entropic</strong>: it
+is the identification of the constrained minimizer, which the
+instability says is inhomogeneous. Constants explicit; the mode count is
+the standard one for a constant background and is a model estimate for
+the general case, labelled as such; nothing promoted.</p>
+<h2 id="the-expansion-is-not-divergent">1. The expansion is not
+divergent</h2>
+<p><strong>Proposition 1.</strong> Let <span
+class="math inline">\(K\subset G^{\mathcal E}\)</span> be closed and
+nonempty, for instance the set where a block-averaged field strength
+exceeds a threshold. Then <span class="math inline">\(S_E\)</span>
+attains its minimum on <span class="math inline">\(K\)</span>, and at
+any minimizer <span class="math inline">\(U_*\)</span> the second
+variation of <span class="math inline">\(S_E\)</span> is nonnegative on
+the tangent cone of <span class="math inline">\(K\)</span> at <span
+class="math inline">\(U_*\)</span>.</p>
+<p><em>Proof.</em> <span class="math inline">\(G^{\mathcal E}\)</span>
+is compact and <span class="math inline">\(S_E\)</span> continuous, so
+the minimum is attained; the second-order necessary condition for a
+constrained minimum gives nonnegativity of the Hessian on the tangent
+cone. <span class="math inline">\(\square\)</span></p>
+<p>So the Gaussian integral around the constrained minimum is well
+defined and the expansion is not divergent at that order. The content of
+the Nielsen–Olesen instability is different: the constant chromomagnetic
+field satisfies <span class="math inline">\(D^*G=0\)</span>, hence is
+stationary for the unconstrained action, and has a negative Hessian
+direction, so it is <strong>not</strong> the minimizer of <span
+class="math inline">\(S_E\)</span> on <span
+class="math inline">\(K\)</span>. The true minimizer is inhomogeneous,
+and identifying it is the work.</p>
+<h2 id="counting-the-unstable-directions">2. Counting the unstable
+directions</h2>
+<p>Take a constant chromomagnetic background of magnitude <span
+class="math inline">\(B\)</span> in the <span
+class="math inline">\((1,2)\)</span> plane and colour direction <span
+class="math inline">\(T^3\)</span>, on a four-dimensional block of side
+<span class="math inline">\(\ell\)</span>. The charged gluon modes have
+frequencies <span
+class="math display">\[\omega^2=k_3^2+k_4^2+(2n+1)\,gB\mp2gB,\]</span>
+Landau levels in the <span class="math inline">\((1,2)\)</span> plane
+and free motion in <span class="math inline">\((3,4)\)</span>, with the
+spin term supplied by the curvature operator of <a
+href="flow-instability-large-field.html">the instability note</a> §1.
+The unstable modes are <span class="math inline">\(n=0\)</span> with
+aligned spin and <span
+class="math inline">\(k_3^2+k_4^2&lt;gB\)</span>.</p>
+<p><em>Landau degeneracy.</em> The number of states per unit area in a
+level is <span class="math inline">\(gB/(2\pi)\)</span>, so over the
+block face of area <span class="math inline">\(\ell^2\)</span> it is
+<span class="math inline">\(gB\ell^2/(2\pi)\)</span>.</p>
+<p><em>Longitudinal count.</em> The admissible <span
+class="math inline">\((k_3,k_4)\)</span> fill a disc of radius <span
+class="math inline">\(\sqrt{gB}\)</span>, and the density of modes in a
+box of side <span class="math inline">\(\ell\)</span> is <span
+class="math inline">\((\ell/2\pi)^2\)</span>, giving <span
+class="math inline">\(\pi
+gB\,\ell^2/(4\pi^2)=gB\ell^2/(4\pi)\)</span>.</p>
+<p><em>Total.</em> Multiplying, and using <span
+class="math inline">\(gB=\eta/\ell^2\)</span>, <span
+class="math display">\[\mathcal
+N(\eta)=\frac{(gB)^2\ell^4}{8\pi^2}=\frac{\eta^2}{8\pi^2}.\]</span> The
+count depends on <span class="math inline">\(\eta\)</span> alone: a
+large-field region of given strength carries the same number of unstable
+directions at every scale, matching the scale-invariance of its action
+cost.</p>
+<h2 id="cost-against-count">3. Cost against count</h2>
+<p>From <a href="ground-state-measure-transfer.html">the transfer
+note</a> §3, the same region costs <span
+class="math display">\[\frac{S_E}{\hbar}\simeq\frac{1}{4g^2}\Big(\frac\eta{\ell^2}\Big)^2\ell^4=\frac{\eta^2}{4g^2},\]</span>
+so</p>
+<p><strong>Proposition 2.</strong> For a large-field region of strength
+<span class="math inline">\(\eta\)</span> at any scale, <span
+class="math display">\[\frac{S_E/\hbar}{\mathcal
+N(\eta)}=\frac{2\pi^2}{g^2},\]</span> independent of <span
+class="math inline">\(\eta\)</span>, of the block size and of the
+lattice spacing.</p>
+<p>The interpretation is the usual competition between energy and
+entropy. Each unstable direction can be thought of as contributing at
+most a bounded factor to the sum over configurations in the region, so
+the region’s weight is at most <span
+class="math display">\[e^{-\eta^2/(4g^2)}\,e^{C\mathcal N(\eta)}
+=\exp\Big[-\frac{\eta^2}{4g^2}\Big(1-\frac{Cg^2}{2\pi^2}\Big)\Big],\]</span>
+negative in the exponent whenever <span
+class="math inline">\(g^2&lt;2\pi^2/C\)</span>. With <span
+class="math inline">\(C\)</span> of order one this is <span
+class="math inline">\(g^2\lesssim20\)</span>, which covers the whole
+weak-coupling regime in which the renormalization steps of <a
+href="mass-gap-position.html">the position note</a> §6 are taken.</p>
+<h2 id="what-this-settles-and-what-it-leaves">4. What this settles and
+what it leaves</h2>
+<p><em>Settles.</em> The large-field region is not excluded by an
+entropy problem. The number of dangerous directions grows only as fast
+as the action cost, and the ratio is a fixed number times <span
+class="math inline">\(1/g^2\)</span>. In particular the sum over
+large-field regions, with the measure bound <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span> of <a
+href="ground-state-measure-transfer.html">the transfer note</a>,
+converges at weak coupling even after allowing a bounded factor per
+unstable mode. The answer to the question of <a
+href="flow-instability-large-field.html">the instability note</a> §5 is
+therefore “merely slow”, and the slowness is quantified: a factor <span
+class="math inline">\(g^2/(2\pi^2)\)</span> of the exponent is spent on
+the unstable directions.</p>
+<p><em>Leaves.</em> The identification of the constrained minimizer. The
+instability says the constant field is not it, and the physical
+expectation is an inhomogeneous configuration, the flux-tube or
+“spaghetti” arrangement into which a constant chromomagnetic field
+decays. Expanding around it requires knowing it, or at least a lower
+bound on <span class="math inline">\(S_E\)</span> over the constraint
+set better than the constant-field value, and that is the remaining
+constructive content in this corner.</p>
+<p><em>A check available in principle.</em> Proposition 2 predicts that
+the weight of a large-field region is <span
+class="math inline">\(\exp[-\eta^2(1-O(g^2))/(4g^2)]\)</span> with the
+correction linear in <span class="math inline">\(g^2\)</span> and
+independent of the scale. That is a statement about the Euclidean
+measure that a lattice computation could test, though this repository
+performs none.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The entropy question is answered with an explicit ratio <span
+class="math inline">\(2\pi^2/g^2\)</span>, uniform in the strength of
+the region and in the scale, so the large-field sum converges at weak
+coupling and the expansion is slow rather than divergent. What remains
+in this corner is the constrained minimizer, which the Nielsen–Olesen
+instability shows is inhomogeneous. The next question, and the one that
+would close the corner, is a lower bound on the Euclidean action over
+the constraint set that improves on the constant-field value <span
+class="math inline">\(\eta^2/(4g^2)\)</span> by a factor bounded away
+from zero, uniformly in the scale.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

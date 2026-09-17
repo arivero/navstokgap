@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The strong-coupling threshold made explicit: Yarotsky&#x27;s proof gives g0210100, and only a direct expansion can give g02102</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The strong-coupling threshold made explicit: Yarotsky’s proof gives
+<span class="math inline">\(g_0^2\sim10^{100}\)</span>, and only a
+direct expansion can give <span
+class="math inline">\(g_0^2\sim10^2\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/strong-coupling-threshold-explicit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-threshold-explicit.pdf">PDF</a></p><p>The T2 theorem of this programme (<a
+href="strong-coupling-uniform-gap.html">T2 note</a>) has an existential
+threshold <span
+class="math inline">\(\beta\le\beta_*(3,\{0,1\}^3)\)</span>, with <span
+class="math inline">\(\beta=54/g^4\)</span> for <span
+class="math inline">\(SU(3)\)</span>. Following the proof of Yarotsky’s
+Theorem 1 with numbers, the threshold it supplies is <span
+class="math display">\[\beta_*\ \simeq\ e^{-465},\qquad
+g_0^2=\sqrt{54/\beta_*}\ \simeq\ 10^{101},\]</span> because the
+time-discretized cluster expansion pays a factor <span
+class="math inline">\(e^{t_0|\Lambda_0|^2}=e^{64t_0}\)</span> per
+excited site (Lemma 3 of the paper), and the classical decay <span
+class="math inline">\(e^{-t_0}\)</span> per unexcited site-time must
+beat a polymer entropy of order <span class="math inline">\(220\)</span>
+per site, forcing <span class="math inline">\(t_0\ge7\)</span>. The
+strong-coupling region that the theorem covers, made explicit, is
+therefore empty for every practical purpose, and <strong>the
+strong-coupling boundary of the intermediate region must be obtained
+from a direct expansion</strong>, of the Kirkwood–Thomas or
+Datta–Kennedy type for the Hamiltonian or of the Osterwalder–Seiler
+character type for the Euclidean measure, whose explicit radii are of
+order <span class="math inline">\(\beta\lesssim10^{-2}\)</span>, that is
+<span class="math inline">\(g_0^2\sim10^2\)</span> for <span
+class="math inline">\(SU(3)\)</span>. The width of the intermediate
+region in one-loop doublings is then set by the constants on both sides:
+about <span class="math inline">\(10^3\)</span> with the crude constants
+now in hand (<span class="math inline">\(1/g^2\gtrsim10^2\)</span> on
+the weak side, <span class="math inline">\(g^2\gtrsim10^2\)</span> on
+the strong side), and about <span class="math inline">\(20\)</span> if
+both sides are pushed to <span class="math inline">\(g^2\sim1/2\)</span>
+and <span class="math inline">\(g^2\sim70\)</span>. Constants explicit;
+nothing promoted.</p>
+<h2 id="the-chain-of-conditions-in-the-proof">1. The chain of conditions
+in the proof</h2>
+<p>Yarotsky’s expansion (Commun. Math. Phys. 261 (2006) 799, Section 2;
+passage level, from the copy on file) writes <span
+class="math inline">\(e^{-t_0H}=\sum_IT_{\Lambda,I}\)</span>, isolates
+the regions <span class="math inline">\(I\)</span> where the
+perturbation acts and the regions <span class="math inline">\(J\)</span>
+where classical excitations propagate, and bounds a configuration <span
+class="math inline">\(C=\{(I_k,J_k)\}_{k=1}^N\)</span> by <span
+class="math display">\[|w(C)|\le\prod_{k=1}^N\big(2\alpha
+e^{t_0\beta/\alpha}\big)^{|I_k|}\,e^{-t_0(|J_k|-|\Lambda_0|^2|I_k|)}\]</span>
+(Lemma 1 for the first factor, via a many-variable Schwarz lemma; Lemma
+3 for the second, where the paper’s displayed <span
+class="math inline">\(|\Lambda_0|^3\)</span> is weakened from the <span
+class="math inline">\(|\Lambda_0|^2\)</span> its proof establishes). The
+expansion is then a polymer gas on the space-time lattice <span
+class="math inline">\(\{1,\dots,N\}\times\Lambda\)</span>, and Theorem 1
+follows from “choose <span class="math inline">\(t_0\)</span> large and
+then <span class="math inline">\(\alpha,\beta\)</span> small so that
+<span
+class="math inline">\(w(\chi)\le\epsilon^{|\operatorname{supp}\chi|}\)</span>”
+together with a bound <span class="math inline">\(c^n\)</span> on the
+number of polymers of support <span class="math inline">\(n\)</span>
+through a point.</p>
+<p>For a <strong>bounded</strong> perturbation, <span
+class="math inline">\(|\phi_x(v,v)|\le\beta_0\|v\|^2\)</span>, condition
+(2) holds with every <span class="math inline">\(\alpha&gt;0\)</span>,
+so <span class="math inline">\(\alpha\)</span> is free and the activity
+per site of <span class="math inline">\(I\)</span> is <span
+class="math display">\[\min_{\alpha&gt;0}2\alpha
+e^{t_0\beta_0/\alpha}=2e\,t_0\beta_0\qquad(\alpha=t_0\beta_0),\]</span>
+so the choice <span class="math inline">\(\alpha=0\)</span> made in the
+T2 note is legitimate for the hypothesis of the theorem and is replaced
+by <span class="math inline">\(\alpha=t_0\beta_0\)</span> inside the
+proof.</p>
+<h2 id="the-numbers">2. The numbers</h2>
+<p><em>Entropy.</em> Two sites of <span class="math inline">\(\mathbb
+Z^3\)</span> have overlapping ranges <span
+class="math inline">\(\Lambda_0+x\)</span>, <span
+class="math inline">\(\Lambda_0+y\)</span> exactly when <span
+class="math inline">\(y-x\in\{-1,0,1\}^3\)</span>, so the connectivity
+graph of the polymer gas has degree <span
+class="math inline">\(d\le3\cdot27-1=80\)</span> (space and the two time
+neighbours), and the number of connected supports of size <span
+class="math inline">\(n\)</span> through a point is at most <span
+class="math inline">\((ed)^n\)</span>, giving <span
+class="math inline">\(c\le e\cdot80\simeq220\)</span>.</p>
+<p><em>Convergence.</em> The Kotecký–Preiss criterion (Commun. Math.
+Phys. 103 (1986) 491; metadata level) with <span
+class="math inline">\(a(\chi)=|\operatorname{supp}\chi|\)</span> is
+implied by <span
+class="math inline">\(\sum_{n\ge1}(ce\rho)^n\le1\)</span>, where <span
+class="math inline">\(\rho\)</span> is the largest per-site activity, so
+it suffices that <span class="math display">\[\rho\ \le\ \frac1{2ec}\
+\simeq\ 8\times10^{-4}.\]</span></p>
+<p><em>The classical sites.</em> <span
+class="math inline">\(\rho_J=e^{-t_0}\le8\times10^{-4}\)</span> forces
+<span class="math inline">\(t_0\ge7.1\)</span>.</p>
+<p><em>The perturbed sites.</em> Each site of <span
+class="math inline">\(I\)</span> carries <span
+class="math inline">\(2e\,t_0\beta_0\cdot
+e^{|\Lambda_0|^2t_0}=2e\,t_0\beta_0\,e^{64t_0}\)</span>, and with <span
+class="math inline">\(t_0=7.1\)</span>, <span
+class="math display">\[\beta_0\ \le\
+\frac{8\times10^{-4}}{2e\cdot7.1}\,e^{-454}\ \simeq\
+e^{-465}.\]</span></p>
+<p><em>The threshold.</em> <span class="math inline">\(\beta_*\simeq
+e^{-465}\)</span>, so for <span class="math inline">\(SU(3)\)</span>
+<span
+class="math display">\[g_0^4=\frac{54}{\beta_*}\simeq54\,e^{465},\qquad
+g_0^2\simeq7.3\times e^{232}\simeq10^{101}.\]</span></p>
+<p>Refinements inside the same proof, such as replacing the bound <span
+class="math inline">\(|J\cap(\Lambda\setminus\tilde
+I)|\ge|J|-|\Lambda_0|^2|I|\)</span> by an exact count of the sites
+shadowed by <span class="math inline">\(I\)</span>, reduce <span
+class="math inline">\(64\)</span> to something of order <span
+class="math inline">\(10\)</span> and <span
+class="math inline">\(g_0^2\)</span> to something of order <span
+class="math inline">\(e^{40}\)</span>. The structure of the argument, a
+time-discretized expansion in which every perturbed site suppresses the
+classical decay over its whole range for a time <span
+class="math inline">\(t_0\)</span> that must itself be large, cannot
+bring the threshold near <span
+class="math inline">\(g^2\sim10^2\)</span>.</p>
+<h2 id="what-a-direct-expansion-gives">3. What a direct expansion
+gives</h2>
+<p>Three families of explicit strong-coupling results exist, and each
+has a radius of the form <span
+class="math inline">\(\beta\lesssim1/(C\cdot\text{coordination})\)</span>
+with <span class="math inline">\(C\)</span> of order one:</p>
+<ul>
+<li><em>Kirkwood–Thomas</em> (Commun. Math. Phys. 88 (1983) 569;
+metadata level): a Hamiltonian expansion for the ground state of a
+classical gapped operator plus a bounded perturbation, written directly
+in the operator, with no time discretization. For the Kogut–Susskind
+Hamiltonian the classical part is the electric term with local gap <span
+class="math inline">\(\varepsilon_0=(g^2/2)C_2\,\hbar c/a\)</span> and
+the perturbation is the plaquette sum, each plaquette touching four
+links and each link lying in twelve plaquettes.</li>
+<li><em>Datta–Kennedy</em> (J. Stat. Phys. 108 (2002) 373; metadata
+level): the same structure with explicit control of the
+one-quasiparticle band, which is the object the gap lower bound
+needs.</li>
+<li><em>Osterwalder–Seiler</em> (Ann. Phys. 110 (1978) 440; metadata
+level): the Euclidean character expansion of the Wilson measure,
+convergent for small <span
+class="math inline">\(\beta_W=2N/g^2\)</span>, with the mass gap and
+clustering as consequences.</li>
+</ul>
+<p>In each case the sufficient condition has the form <span
+class="math display">\[\frac{\|\text{plaquette term}\|}{\text{local
+gap}}\times(\text{coordination})\times C\ \le\ 1,\]</span> and with
+<span
+class="math inline">\(\|\phi\|/\varepsilon_0=24N/(g^4C_2)=54/g^4\)</span>,
+coordination <span class="math inline">\(12\)</span> and <span
+class="math inline">\(C\simeq e\)</span> this reads <span
+class="math inline">\(g^4\gtrsim54\cdot12\cdot
+e\simeq1.8\times10^3\)</span>, that is <span
+class="math display">\[g_0^2\ \sim\ 40\text{--}70\quad(SU(3)),\]</span>
+in line with the rough figure used earlier. A written derivation of the
+Kirkwood–Thomas expansion for the Kogut–Susskind Hamiltonian with these
+constants would replace the existential <span
+class="math inline">\(\beta_*\)</span> of T2 by a number of this size;
+that derivation is the natural next step on the strong-coupling
+side.</p>
+<h2 id="the-width-of-the-intermediate-region">4. The width of the
+intermediate region</h2>
+<p>With <span class="math inline">\(2b_0\log2=0.0966\)</span> for <span
+class="math inline">\(SU(3)\)</span>, the one-loop count of doublings
+between the two boundaries is <span
+class="math inline">\(n=\big(1/g_{\rm weak}^2-1/g_{\rm
+strong}^2\big)/0.0966\)</span>:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>weak boundary</th>
+<th>strong boundary</th>
+<th><span class="math inline">\(n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1/g^2=10^2\)</span> (crude window)</td>
+<td><span class="math inline">\(g^2=10^{101}\)</span> (Yarotsky
+explicit)</td>
+<td><span class="math inline">\(\simeq10^3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1/g^2=10^2\)</span></td>
+<td><span class="math inline">\(g^2=70\)</span> (direct expansion)</td>
+<td><span class="math inline">\(\simeq10^3\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(g^2=1/2\)</span></td>
+<td><span class="math inline">\(g^2=70\)</span></td>
+<td><span class="math inline">\(\simeq21\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The strong-side improvement from <span
+class="math inline">\(10^{101}\)</span> to <span
+class="math inline">\(70\)</span> changes <span
+class="math inline">\(n\)</span> by less than one doubling, since <span
+class="math inline">\(1/g^2\)</span> is tiny at both; the width is set
+almost entirely by the weak side, that is by how far the small-field
+expansion can be pushed. The figure “about twenty doublings” quoted in
+<a href="large-field-operator-inequality.html">the operator-inequality
+note</a> §6 presupposes a weak side reaching <span
+class="math inline">\(g^2\sim1/2\)</span>; with the crude constants of
+that note the region is fifty times wider.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The T2 theorem stands, and its threshold, made explicit from the
+proof that supplies it, is <span
+class="math inline">\(g_0^2\sim10^{101}\)</span> for <span
+class="math inline">\(SU(3)\)</span>, which covers nothing of physical
+interest. The strong-coupling boundary of the intermediate region has to
+be established by a direct expansion with explicit constants, expected
+to give <span class="math inline">\(g_0^2\sim40\)</span>–<span
+class="math inline">\(70\)</span>; that derivation is concrete,
+classical in method, and is the next step on the strong side. The width
+of the intermediate region is controlled by the weak side, and the
+relevant constant there is how far the small-field expansion reaches in
+<span class="math inline">\(1/g^2\)</span>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

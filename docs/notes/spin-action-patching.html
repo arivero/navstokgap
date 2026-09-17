@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global spin phases quantize a ratio, not an absolute action scale</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Global spin phases quantize a ratio, not an absolute action scale</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/spin-action-patching.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/spin-action-patching.pdf">PDF</a></p><p>A classical spin sphere has globally consistent Hamiltonian dynamics
+for any positive symplectic area. Requiring a well-defined phase with a
+supplied action constant K imposes the integer condition 2s/K in Z. It
+restricts the allowed sphere area relative to K, while leaving the
+common normalization free and allowing arbitrarily small local loop
+actions.</p>
+<p>This is Q07’s exploratory premise test, with explicit patch
+calculations. It uses established prequantization geometry; it claims
+neither novelty nor an accepted project result. Its purpose is to locate
+the physical premise behind a tempting global-consistency route to
+action selection.</p>
+<h2 id="a-classical-action-defined-in-patches">1. A classical action
+defined in patches</h2>
+<p>Let the spin direction n lie on the unit sphere with polar
+coordinates <span class="math inline">\((\theta,\phi)\)</span>. Supply
+<span class="math inline">\(s&gt;0\)</span> with action units and
+define</p>
+<p><span class="math display">\[\omega_s=s\sin\theta\,d\theta\wedge
+d\phi,
+\qquad \int_{S^2}\omega_s=4\pi s. \tag{1}\]</span></p>
+<p>For any smooth real Hamiltonian H, define the vector field by <span
+class="math inline">\(\iota_{X_H}\omega_s=-dH\)</span>. Nondegeneracy
+gives a unique smooth vector field; compactness gives its complete flow.
+Thus s may be any positive real value. There is no globally defined
+one-form with derivative <span class="math inline">\(\omega_s\)</span>,
+since the integral of an exact two-form on the closed sphere would
+vanish.</p>
+<p>Instead use regular north and south potentials</p>
+<p><span class="math display">\[\alpha_N=s(1-\cos\theta)d\phi,\qquad
+\alpha_S=-s(1+\cos\theta)d\phi. \tag{2}\]</span></p>
+<p>Each has derivative <span class="math inline">\(\omega_s\)</span>. On
+a simply connected part of the overlap,</p>
+<p><span class="math display">\[\alpha_N-\alpha_S=2s\,d\phi=d(2s\phi).
+\tag{3}\]</span></p>
+<p>The local actions <span class="math inline">\(S_U=\int[\alpha_U(\dot
+n)-H(n)]dt\)</span> differ by an endpoint term. Their fixed-endpoint
+variations agree, yielding the same global Hamiltonian equation. The
+azimuth is not single-valued on the entire overlap; going around it
+changes <span class="math inline">\(2s\phi\)</span> by <span
+class="math inline">\(4\pi s\)</span>. This constant ambiguity does not
+change the equations. Classical variational consistency requires the
+local derivatives to agree, not a globally single-valued real action
+value.</p>
+<p>As a concrete clock, take <span class="math inline">\(H=-\Omega
+s\cos\theta\)</span>, where <span class="math inline">\(\Omega\)</span>
+has inverse time units. The equation gives <span
+class="math inline">\(\dot\phi=\Omega\)</span>, <span
+class="math inline">\(\dot\theta=0\)</span>. Multiplying s and H by the
+same positive factor leaves this physical-time motion intact.</p>
+<h2 id="the-added-phase-requirement">2. The added phase requirement</h2>
+<p>Now supply <span class="math inline">\(K&gt;0\)</span> with action
+units and ask for phase transport compatible with the local factors
+<span class="math inline">\(\exp(iS_U/K)\)</span>. On the overlap the
+transition phase, up to convention for its inverse, is</p>
+<p><span
+class="math display">\[g_{NS}(\phi)=\exp(i2s\phi/K).\]</span></p>
+<p>This must be single-valued when <span
+class="math inline">\(\phi\)</span> advances by <span
+class="math inline">\(2\pi\)</span>. Hence</p>
+<p><span class="math display">\[\exp(i4\pi s/K)=1
+\quad\Longleftrightarrow\quad \frac{2s}{K}\in\mathbb Z.
+\tag{4}\]</span></p>
+<p>The same condition follows by spanning a closed loop with a surface:
+two spanning surfaces differ by an integer number of spheres, so their
+geometric actions differ by <span class="math inline">\(4\pi s\)</span>
+times an integer. Equation (4) makes the exponent independent of this
+choice. For open paths the transport is a map between endpoint phase
+fibres, rather than a gauge-independent scalar.</p>
+<p>The extra premise is a U(1) phase with curvature proportional to
+<span class="math inline">\(\omega_s/K\)</span>. Equation (4) is its
+compatibility condition. The classical symplectic form alone supplies no
+such phase, no interference rule and no K. Prequantization also leaves
+further state-space and measurement choices open.</p>
+<h2 id="three-decisive-countertests">3. Three decisive countertests</h2>
+<p><strong>Common rescaling.</strong> If (s,H,K) satisfies the classical
+and phase conditions, so does <span class="math inline">\((\eta s,\eta
+H,\eta K)\)</span> for every <span
+class="math inline">\(\eta&gt;0\)</span>. Both the Hamiltonian flow and
+the dimensionless phase remain unchanged. Thus even phase consistency
+fixes a ratio rather than an absolute dimensional constant.</p>
+<p><strong>Local contraction.</strong> With H=0, the geometric action
+around a latitude bounding a north-pole cap is</p>
+<p><span class="math display">\[A(\theta_0)=2\pi
+s(1-\cos\theta_0)\longrightarrow0
+\quad(\theta_0\downarrow0). \tag{5}\]</span></p>
+<p>These are trial loops, not nonconstant solutions for H=0. They test
+local action resolution: quantization of the total sphere flux allows
+arbitrarily small nonzero cap actions. It does not impose a minimum
+polygonal cell or invalidate ordinary time subdivision. At fixed K and
+s&gt;0, (4) instead restricts the allowed total sphere area, giving
+<span class="math inline">\(s\ge K/2\)</span> in that family.</p>
+<p><strong>Two coupled spheres.</strong> Take the product with form
+<span class="math inline">\(\omega_{s_1}\oplus\omega_{s_2}\)</span> and
+any smooth interaction, for example <span class="math inline">\(H=J
+n_1\cdot n_2\)</span> with J in energy units. It defines complete
+classical dynamics for arbitrary <span
+class="math inline">\(s_1,s_2&gt;0\)</span>, including <span
+class="math inline">\(s_2/s_1=\sqrt2\)</span>. A common prequantization
+phase constant would require</p>
+<p><span class="math display">\[2s_1/K=m_1,\qquad 2s_2/K=m_2,
+\qquad m_1,m_2\in\mathbb Z_{&gt;0}. \tag{6}\]</span></p>
+<p>Restriction to each sphere with the other held fixed proves these
+necessary conditions; product transition functions make them sufficient
+for this prequantization construction. Thus <span
+class="math inline">\(s_2/s_1=m_2/m_1\)</span> must be rational.
+Classical coupling admits the irrational example, while a single-K phase
+bundle excludes it. The exclusion comes from the added phase structure,
+not from a failure of reciprocal Hamiltonian mechanics. Even a permitted
+rational ratio leaves infinitely many choices obtained by K replaced by
+K/n.</p>
+<h2 id="consequence-for-the-programme">4. Consequence for the
+programme</h2>
+<p>Topology can turn a common phase premise into an arithmetic selection
+rule. That is a stronger compatibility requirement than Q06’s reciprocal
+forces, and the irrational pair makes the difference explicit. It still
+leaves the absolute scale free and local actions continuous.</p>
+<p>Park further patching examples. The next useful construction should
+test a physical interference record: can two classical wave paths
+coupled to a mechanical receiver establish a universal action-to-phase
+conversion, rather than a frequency-, amplitude- or apparatus-dependent
+calibration? Specify energy transfer and the measured record before
+using any quantum probability rule. This changes the question from
+another global bundle condition to the physical origin of the phase
+premise that (4) requires.</p>
+<h2 id="source-boundary">Source boundary</h2>
+<p>F. Bonechi, A. S. Cattaneo and M. Zabzine, <em>Geometric quantization
+and non-perturbative Poisson sigma model</em>, Advances in Theoretical
+and Mathematical Physics <strong>10</strong>, 683–712 (2006), <a
+href="https://arxiv.org/abs/math/0507223v3">arXiv:math/0507223v3</a>,
+explicitly attributes its integrality condition to requirements on a
+path integral. Coverage here: one discovery query and its arXiv
+abstract; no full-proof or exact sphere-formula audit. The local
+potentials, variational patching and tests (4)–(6) are written out
+above. Independent review and a bounded librarian comparison are
+required before any ledger promotion. No numerical or symbolic
+verification scripts were used.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The ground-state measure is the time-slice marginal of the Euclidean measure, and that imports the local large-field estimate</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The ground-state measure is the time-slice marginal of the Euclidean
+measure, and that imports the local large-field estimate</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/ground-state-measure-transfer.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/ground-state-measure-transfer.pdf">PDF</a></p><p>The obstruction recorded in <a
+href="magnetic-energy-identities.html">the identities note</a> is
+removed by an identification rather than by an estimate. For the
+Kogut–Susskind Hamiltonian obtained as the <span
+class="math inline">\(a_t\to0\)</span> limit of the anisotropic Wilson
+transfer matrix, <span
+class="math display">\[\big|\Omega(U)\big|^2\,d\mu(U)\ =\
+\lim_{T\to\infty}\
+\text{marginal at time }0\text{ of }\ \frac{e^{-S_E[\mathcal
+U]/\hbar}\,\prod d\mu}{Z_T},\]</span> so the ground-state measure of the
+Hamiltonian theory is the distribution of one time slice under the
+four-dimensional Euclidean Wilson measure. Every estimate proved for
+that measure therefore holds for <span
+class="math inline">\(|\Omega|^2\)</span> verbatim, including the local
+ones that the eigenvalue equation cannot reach, because the Euclidean
+weight <span
+class="math inline">\(e^{-S_E/\hbar}=\prod_Pe^{-\beta_P/\hbar}\)</span>
+factorizes over four-dimensional plaquettes while the eigenvalue
+equation carries the extensive <span class="math inline">\(E_0\)</span>.
+The estimate the route needs is then available in its standard form: a
+configuration whose field strength averaged over a block of side <span
+class="math inline">\(\ell\)</span> reaches <span
+class="math inline">\(\eta/\ell^2\)</span> costs Euclidean action <span
+class="math display">\[\frac{S_E}{\hbar}\ \simeq\
+\frac{1}{4g^2}\!\int_{\text{block}}\!\big|F\big|^2\,d^4x
+\ \simeq\ \frac{\eta^2}{4g^2},\]</span> <strong>independent of <span
+class="math inline">\(\ell\)</span> and of the lattice spacing</strong>,
+so the suppression is <span
+class="math inline">\(e^{-c\eta^2/g(\ell)^2}\)</span> at every scale,
+with the running coupling. This matches, with the same exponent
+structure, the free-field Gaussian tail <span
+class="math inline">\(\exp[-8\pi^2\eta^2/g^2]\)</span> computed in <a
+href="typical-field-strength-window.html">the typical-field note</a> §3,
+which is a check on both. With the identification, the decimation step
+of the route controls its truncation error off a set of measure <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span>, and what remains is the
+treatment of that set: the large-field problem in its usual form, now
+reached honestly rather than assumed. Constants explicit; the
+identification is standard and cited; nothing promoted.</p>
+<h2 id="the-transfer-matrix-and-the-limit">1. The transfer matrix and
+the limit</h2>
+<p>On an anisotropic lattice with spatial spacing <span
+class="math inline">\(a\)</span> and temporal spacing <span
+class="math inline">\(a_t\)</span>, the Wilson action separates into
+temporal and spatial plaquettes, <span
+class="math display">\[\frac{S_E}{\hbar}=\frac{1}{g^2}\Big[\frac{a}{a_t}\sum_{P\
+\rm temporal}
+\big(N-\operatorname{Re}\operatorname{tr}U_P\big)
++\frac{a_t}{a}\sum_{P\ \rm spatial}
+\big(N-\operatorname{Re}\operatorname{tr}U_P\big)\Big]\cdot\frac{2}{1},\]</span>
+in the normalization of <a href="mass-gap-obligations-lattice.html">the
+obligations map</a> with <span class="math inline">\(g\)</span>
+dimensionless. The transfer matrix <span class="math inline">\(\mathcal
+T\)</span> of this action is self-adjoint and strictly positive
+(Lüscher, Commun. Math. Phys. 54 (1977) 283; Creutz, Phys. Rev. D 15
+(1977) 1128; both metadata level), and as <span
+class="math inline">\(a_t\to0\)</span> <span
+class="math display">\[\mathcal T=\exp\Big[-\frac{a_t}{\hbar}\,H_{\rm
+KS}\Big]\big(1+O(a_t)\big),
+\qquad
+H_{\rm KS}=\frac{\hbar c}{a}\Big[\frac{g^2}2\sum_\ell(-\Delta_\ell)
++\frac2{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big],\]</span>
+the temporal plaquettes producing the electric term through the
+character expansion and the spatial ones passing directly to the
+magnetic term.</p>
+<p><strong>Proposition 1.</strong> Let <span
+class="math inline">\(\Omega\)</span> be the Perron vector of <span
+class="math inline">\(\mathcal T\)</span>, which by T1 of <a
+href="mass-gap-obligations-lattice.html">the obligations map</a> is the
+positive ground state of <span class="math inline">\(H_{\rm KS}\)</span>
+in the limit. Then for any bounded <span
+class="math inline">\(F\)</span> of a single time slice, <span
+class="math display">\[\big\langle\Omega,F\,\Omega\big\rangle
+=\lim_{T\to\infty}\frac{\big\langle\chi,\mathcal T^{T}F\,\mathcal
+T^{T}\chi\big\rangle}
+{\big\langle\chi,\mathcal T^{2T}\chi\big\rangle}
+=\lim_{T\to\infty}\big\langle F\big\rangle_{S_E,\,[-T,T]},\]</span> for
+any <span class="math inline">\(\chi\)</span> with <span
+class="math inline">\(\langle\chi,\Omega\rangle\neq0\)</span>; that is,
+<span class="math inline">\(|\Omega|^2d\mu\)</span> is the time-slice
+marginal of the Euclidean measure.</p>
+<p><em>Proof.</em> Spectral decomposition of <span
+class="math inline">\(\mathcal T\)</span> with the gap of T1 gives the
+first equality; the middle expression is by construction the Euclidean
+expectation of <span class="math inline">\(F\)</span> inserted at time
+<span class="math inline">\(0\)</span> in a slab of height <span
+class="math inline">\(2T\)</span> with boundary state <span
+class="math inline">\(\chi\)</span>, which is the second. <span
+class="math inline">\(\square\)</span></p>
+<p>Nothing here is new; the point is what it licenses.</p>
+<h2 id="what-transfers">2. What transfers</h2>
+<p>Any statement of the form “the Euclidean measure assigns probability
+at most <span class="math inline">\(p\)</span> to the set of
+configurations whose restriction to a time slice has property <span
+class="math inline">\(\mathcal A\)</span>” is, by Proposition 1, a
+statement about <span class="math inline">\(|\Omega|^2\)</span>. In
+particular the local statements do, and the reason the Hamiltonian
+formulation could not produce them itself is now visible as a feature of
+the representation rather than of the physics: the eigenvalue equation
+<span
+class="math inline">\(-A&#39;\Delta\Omega+(B&#39;V-e_0)\Omega=0\)</span>
+carries the extensive <span class="math inline">\(e_0\)</span> and
+compares totals, while <span
+class="math inline">\(e^{-S_E/\hbar}\)</span> is a product over
+plaquettes and compares locally. Both describe the same measure.</p>
+<p>This closes the gap left open in <a
+href="magnetic-energy-identities.html">the identities note</a> §5 and in
+<a href="typical-field-strength-window.html">the typical-field note</a>
+§3, in the only way those notes left available.</p>
+<h2 id="the-large-field-estimate-at-a-block-scale">3. The large-field
+estimate at a block scale</h2>
+<p><strong>The action cost is scale-invariant.</strong> Let a
+configuration have field strength of magnitude <span
+class="math inline">\(\eta/\ell^2\)</span> coherently over a
+four-dimensional block of side <span
+class="math inline">\(\ell\)</span>. Its Euclidean action is <span
+class="math display">\[\frac{S_E}{\hbar}=\frac1{4g^2}\int\big|F^a_{\mu\nu}\big|^2d^4x
+\ \simeq\
+\frac{1}{4g^2}\Big(\frac{\eta}{\ell^2}\Big)^2\ell^4=\frac{\eta^2}{4g^2},\]</span>
+independent of <span class="math inline">\(\ell\)</span> and of <span
+class="math inline">\(a\)</span>. This is the reason large-field
+estimates take the same form at every scale, with only the coupling
+running: the suppression is <span class="math display">\[\mathbb
+P\Big(\big|F\big|_{\rm block}\ \ge\ \frac{\eta}{\ell^2}\Big)
+\ \lesssim\ \exp\Big[-\frac{c\,\eta^2}{g(\ell)^2}\Big],\]</span> with
+<span class="math inline">\(c\)</span> a pure number and <span
+class="math inline">\(g(\ell)\)</span> the coupling at the block
+scale.</p>
+<p><strong>Consistency check.</strong> The free-field computation of <a
+href="typical-field-strength-window.html">the typical-field note</a> §3
+gave, for the flowed magnetic field at radius <span
+class="math inline">\(\sqrt{8t}=\ell\)</span>, <span
+class="math display">\[\mathbb
+P\Big(|b_t|&gt;\frac{\eta}{t}\Big)\simeq\exp\Big[-\frac{8\pi^2\eta^2}{g^2}\Big],\]</span>
+the same <span class="math inline">\(\eta^2/g^2\)</span> in the
+exponent, obtained by an independent route from the Gaussian ground
+state. The two agree in structure and fix <span
+class="math inline">\(c=8\pi^2\)</span> in the free limit.</p>
+<p><strong>Why the lattice-scale version is empty.</strong> At <span
+class="math inline">\(\ell=a\)</span> the plaquette angles are of order
+one, the action per plaquette is bounded by <span
+class="math inline">\(4N/g^2\)</span>, and the Chebyshev bound <span
+class="math inline">\(\mathbb P(S_R\ge s)\le\exp[-s+4N|R|/g^2]\)</span>
+is vacuous, as noted in <a href="typical-field-strength-window.html">the
+typical-field note</a>. The estimate has content only for the
+block-averaged field at <span class="math inline">\(\ell\gg a\)</span>,
+where the individual plaquette angles are small, of order <span
+class="math inline">\(a^2\eta/\ell^2\)</span>, and the cost accumulates
+over <span class="math inline">\((\ell/a)^4\)</span> of them to the
+scale-invariant total above. The large-field condition is a statement
+about coherence across a block, not about any single plaquette.</p>
+<blockquote>
+<p><strong>Superseded in part.</strong> The competition below between
+<span class="math inline">\(e^{-c\eta^2/g^2}\)</span> and <span
+class="math inline">\(e^{2\eta}\)</span> holds at fixed truncation
+range; letting the range grow like <span
+class="math inline">\(\eta\)</span> removes it, and the real obstruction
+in the large-field region is the sign of the error, see <a
+href="large-field-operator-inequality.html">the operator-inequality
+note</a>.</p>
+</blockquote>
+<h2 id="where-this-leaves-the-route">4. Where this leaves the route</h2>
+<p>With Proposition 1 and Section 3, the decimation step of <a
+href="mass-gap-position.html">the position note</a> §6 has its error
+controlled outside a set of ground-state measure <span
+class="math inline">\(e^{-c\eta^2/g(\ell)^2}\)</span>, which at weak
+coupling is small, and inside that set the flow-truncation bound of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a>
+degrades like <span class="math inline">\(e^{2t\|G\|_\infty}\)</span>.
+The two exponents compete: <span class="math display">\[\text{gain
+}e^{-c\eta^2/g^2}\qquad\text{against}\qquad\text{loss
+}e^{2\eta},\]</span> since <span
+class="math inline">\(t\|G\|_\infty\simeq\eta\)</span> when the field
+reaches <span class="math inline">\(\eta/\ell^2\)</span> at the flow
+radius. The gain wins for <span class="math display">\[\eta\ \gtrsim\
+\frac{2g^2}{c},\]</span> so the large-field region can be defined as
+<span class="math inline">\(\{\,|F|_{\rm
+block}\ge\eta_*/\ell^2\,\}\)</span> with <span
+class="math inline">\(\eta_*=2g^2/c\)</span>, on which the measure is at
+most <span class="math inline">\(e^{-4g^2/c}\)</span> and outside which
+the truncation is accurate. <strong>At weak coupling <span
+class="math inline">\(\eta_*\to0\)</span>, so the good region is almost
+everything</strong>; the residual set carries measure <span
+class="math inline">\(e^{-4g^2/c}\)</span>, which tends to one as <span
+class="math inline">\(g\to0\)</span>, and there the estimate fails to be
+useful.</p>
+<p>That last sentence is the honest statement of where the difficulty
+now sits: the competition is between an exponential gain in <span
+class="math inline">\(\eta^2/g^2\)</span> and an exponential loss in
+<span class="math inline">\(\eta\)</span>, and at small <span
+class="math inline">\(g\)</span> the crossover <span
+class="math inline">\(\eta_*\)</span> is small, so the excluded set is
+defined by a weak condition and its measure bound <span
+class="math inline">\(e^{-4g^2/c}\)</span> is close to one. Improving it
+requires a sharper treatment of the truncation inside the large-field
+region, which is the large-field expansion of the constructive
+programme, or a truncation whose error grows more slowly than <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span>.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The identification of <span class="math inline">\(|\Omega|^2\)</span>
+with the Euclidean time-slice marginal is recorded, with the
+transfer-matrix references, and it imports the local estimates that the
+Hamiltonian eigenvalue equation could not produce. The large-field
+estimate itself has the scale-invariant form <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span>, confirmed against the
+independent free-field computation. The route’s decimation step now has
+a quantitative structure: good region with accurate truncation, bad
+region of measure <span
+class="math inline">\(e^{-c\eta_*^2/g^2}\)</span>, and a crossover <span
+class="math inline">\(\eta_*\)</span> fixed by the competition between
+the two exponentials. The next question is the first one that is
+genuinely about the large-field region rather than around it: can the
+flow-truncation error inside it be bounded by something weaker than
+<span class="math inline">\(e^{2t\|G\|_\infty}\)</span>, for instance by
+using that the flow contracts the action monotonically even there?</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A universal action floor needs a fixed action unit and no admitted similarity</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A universal action floor needs a fixed action unit and no admitted
+similarity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/action-unit-dimensional-selection.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-unit-dimensional-selection.pdf">PDF</a></p><p>A positive action floor shared by all admitted masses and
+preparations is a dimensionless multiple of a product of the model’s
+fixed constants with action units. A model whose fixed constants admit
+no such product has floor zero or infinity, and a model whose admitted
+class is preserved by a one-parameter similarity that rescales the
+observable has floor zero even when such a product exists. These two
+elementary criteria decide the recorded action-selection countertests
+from C002 to Q13 before calculation, and they identify the single
+mass-independent action unit available to classical electrodynamics:
+<span class="math inline">\(k_e/c=e^2/(4\pi\epsilon_0c)\)</span>, which
+equals <span class="math inline">\(\alpha\hbar\)</span> and is exactly
+the excluded angular-action infimum of the relativistic Kepler threshold
+C052. The selection question therefore separates into the premise fixing
+a charge unit and the factor <span
+class="math inline">\(1/\alpha\)</span> between the electromagnetic and
+quantum action units. This is Q14’s consolidation; it promotes no ledger
+claim.</p>
+<h2 id="setting">1. Setting</h2>
+<p>A model class is specified by fixed constants <span
+class="math inline">\(c_1,\dots,c_r\)</span>, a set of admitted masses,
+a class of admitted preparations, and dynamics. Each fixed constant has
+a dimension exponent vector <span class="math inline">\(d_i\in\mathbb
+R^3\)</span> with respect to mass, length and time. Charge enters only
+through Coulomb energies <span
+class="math inline">\(q_iq_j/(4\pi\epsilon_0r)\)</span>, so <span
+class="math inline">\(k=q_iq_j/(4\pi\epsilon_0)\)</span> has dimension
+energy times length, <span class="math inline">\(d_k=(1,3,-2)\)</span>,
+and no separate charge dimension is needed. The action dimension vector
+is <span class="math inline">\(d_A=(1,2,-1)\)</span>. An action
+observable <span class="math inline">\(A\)</span> assigns a value in
+<span class="math inline">\([0,\infty]\)</span> to each admitted
+solution with its preparation. The attained set <span
+class="math inline">\(\mathcal A(c)\subset[0,\infty]\)</span> collects
+its values over all admitted masses, preparations and solutions at
+constants <span class="math inline">\(c=(c_1,\dots,c_r)\)</span>, and
+the floor is</p>
+<p><span class="math display">\[g(c)=\inf\{A\in\mathcal
+A(c):A&gt;0\},\]</span></p>
+<p>with <span class="math inline">\(g=\infty\)</span> when no positive
+value is attained.</p>
+<p>Two premises are used. <strong>Dimensional homogeneity:</strong> the
+admitted class, dynamics and observable are defined by dimensionally
+homogeneous relations. Consequently a change of units <span
+class="math inline">\(\lambda=(\lambda_M,\lambda_L,\lambda_T)
+\in(0,\infty)^3\)</span>, written <span
+class="math inline">\(\lambda^{d}=\lambda_M^{d_M}\lambda_L^{d_L}
+\lambda_T^{d_T}\)</span>, carries the model at constants <span
+class="math inline">\(c\)</span> to the model at constants <span
+class="math inline">\(\lambda^{d_i}c_i\)</span> and multiplies every
+attained action by <span
+class="math inline">\(\lambda^{d_A}\)</span>:</p>
+<p><span class="math display">\[\mathcal
+A(\lambda^{d_1}c_1,\dots,\lambda^{d_r}c_r)
+=\lambda^{d_A}\,\mathcal A(c).\tag{1}\]</span></p>
+<p><strong>Universality:</strong> the floor depends on the fixed
+constants only. Admitted masses and preparation parameters are ranged
+over inside the infimum, so they are absent from the argument list of
+<span class="math inline">\(g\)</span>. This is obligation 4 of the <a
+href="https://github.com/arivero/navstokgap/blob/main/research/ACTION_FIELD_TARGET.md">action
+target</a> written as a hypothesis. A fixed bath mass, cutoff, apparatus
+length or supplied coefficient is a fixed constant when the model holds
+it fixed for all admitted preparations.</p>
+<h2
+id="theorem-a-a-universal-floor-is-a-multiple-of-an-action-product">2.
+Theorem A: a universal floor is a multiple of an action product</h2>
+<p><strong>Theorem A.</strong> Under dimensional homogeneity and
+universality:</p>
+<ol type="i">
+<li><p>If <span class="math inline">\(d_A\)</span> lies outside the
+linear span of <span class="math inline">\(d_1,\dots,d_r\)</span>, then
+<span class="math inline">\(g(c)\in\{0,\infty\}\)</span> for every <span
+class="math inline">\(c\)</span>.</p></li>
+<li><p>If <span class="math inline">\(d_A=\sum_ia_id_i\)</span>, then
+<span class="math inline">\(\Pi(c)=\prod_ic_i^{a_i}\)</span> has action
+units and <span
+class="math inline">\(g(c)=\Pi(c)\,F(\pi_1,\dots,\pi_s)\)</span>, where
+<span class="math inline">\(\pi_1,\dots,\pi_s\)</span> is a basis of the
+dimensionless products of the constants and <span
+class="math inline">\(F\)</span> takes values in <span
+class="math inline">\([0,\infty]\)</span>. When the <span
+class="math inline">\(d_i\)</span> are linearly independent there is no
+dimensionless product and <span class="math inline">\(g=C\,\Pi\)</span>
+for one number <span
+class="math inline">\(C\in[0,\infty]\)</span>.</p></li>
+</ol>
+<p><em>Proof.</em> Equation (1) and universality give <span
+class="math inline">\(g(\lambda^{d_1}c_1,\dots,\lambda^{d_r}c_r)=\lambda^{d_A}g(c)\)</span>
+for all <span class="math inline">\(\lambda\)</span>. Write <span
+class="math inline">\(\lambda=e^{\ell}\)</span> componentwise with <span
+class="math inline">\(\ell\in\mathbb R^3\)</span>, so <span
+class="math inline">\(\lambda^{d}=e^{\ell\cdot d}\)</span>. For (i), the
+orthogonal complement of <span
+class="math inline">\(\mathrm{span}\{d_i\}\)</span> is not contained in
+<span class="math inline">\(d_A^\perp\)</span>, because in finite
+dimension <span class="math inline">\(V^\perp\subset w^\perp\)</span> is
+equivalent to <span class="math inline">\(w\in V\)</span>. Choose <span
+class="math inline">\(\ell\)</span> with <span
+class="math inline">\(\ell\cdot d_i=0\)</span> for all <span
+class="math inline">\(i\)</span> and <span
+class="math inline">\(s=\ell\cdot d_A\neq0\)</span>. Then every constant
+is unchanged and <span class="math inline">\(g(c)=e^{ts}g(c)\)</span>
+for all real <span class="math inline">\(t\)</span>, which forces <span
+class="math inline">\(g(c)\in\{0,\infty\}\)</span>. For (ii), <span
+class="math inline">\(\Pi\)</span> has dimension vector <span
+class="math inline">\(\sum_ia_id_i=d_A\)</span>, so <span
+class="math inline">\(g/\Pi\)</span> is invariant under all unit
+changes; an invariant function of the constants is a function of a basis
+of dimensionless products, which is the Buckingham reduction. If the
+<span class="math inline">\(d_i\)</span> are independent the only
+dimensionless product is the constant <span
+class="math inline">\(1\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The theorem gives the form of a floor and its possible mass
+dependence, and leaves the positivity of <span
+class="math inline">\(F\)</span> to dynamics. Its content for selection
+is the contrapositive of (i): a model that holds no action-dimensional
+combination of its fixed constants cannot exclude zero universally,
+whatever its dynamics.</p>
+<h2 id="theorem-b-an-admitted-similarity-forces-floor-zero">3. Theorem
+B: an admitted similarity forces floor zero</h2>
+<p><strong>Theorem B.</strong> Fix the constants. Let <span
+class="math inline">\(\mathcal S\)</span> be the admitted set of
+solutions with their preparations and let <span
+class="math inline">\(T_a:\mathcal S\to\mathcal S\)</span>, <span
+class="math inline">\(a\in(0,\infty)\)</span>, satisfy <span
+class="math inline">\(A(T_as)=a^{\,\delta}A(s)\)</span> for some <span
+class="math inline">\(\delta\neq0\)</span>. If some <span
+class="math inline">\(s\in\mathcal S\)</span> has <span
+class="math inline">\(0&lt;A(s)&lt;\infty\)</span>, then <span
+class="math inline">\(g=0\)</span>, and the attained positive values are
+also unbounded above. If <span class="math inline">\(A\)</span> takes
+one common value <span class="math inline">\(g\)</span> on <span
+class="math inline">\(\mathcal S\)</span>, then <span
+class="math inline">\(g\in\{0,\infty\}\)</span>.</p>
+<p><em>Proof.</em> <span
+class="math inline">\(A(T_as)=a^{\delta}A(s)\)</span> runs through <span
+class="math inline">\((0,\infty)\)</span> as <span
+class="math inline">\(a\)</span> does. <span
+class="math inline">\(\square\)</span></p>
+<p>The map <span class="math inline">\(T_a\)</span> must preserve the
+admitted class at fixed constants. The three standard instances are
+amplitude scaling of a linear dynamics with a preparation class closed
+under multiplication by <span class="math inline">\(a\)</span>
+(quadratic actions, <span class="math inline">\(\delta=2\)</span>),
+velocity scaling of a free or collisional preparation (<span
+class="math inline">\(\delta=2\)</span> for a plateau proportional to
+<span class="math inline">\(u^2\)</span>), and the space–time
+contraction <span class="math inline">\(q_a(t)=aq(t/a)\)</span> of <a
+href="action-scale-dilation.html">C056</a>, which is a similarity
+between different external potentials (<span
+class="math inline">\(\delta=1\)</span>); C057 is Theorem B for that map
+with the class enlarged to be closed under it. A dynamics that is linear
+near an equilibrium supplies <span class="math inline">\(T_a\)</span>
+asymptotically: the small-radius circles of C058 have <span
+class="math inline">\(\ell_R\sim\sqrt{mk_s}R^2\)</span> because the
+confining potential is harmonic at its minimum, and the harmonic
+oscillator has the exact amplitude similarity.</p>
+<p>Theorems A and B are independent necessary conditions. Q02’s
+regulated oscillator holds <span class="math inline">\(q\)</span>, <span
+class="math inline">\(m\)</span>, <span
+class="math inline">\(\epsilon_0\)</span> and <span
+class="math inline">\(c\)</span> fixed, so <span
+class="math inline">\(q^2/(\epsilon_0c)\)</span> is an available action
+product; its linear response with a preparation class containing every
+field amplitude admits <span class="math inline">\(E\mapsto aE\)</span>,
+<span class="math inline">\(x\mapsto ax\)</span>, <span
+class="math inline">\(J_*\mapsto a^2J_*\)</span>, and Theorem B gives
+floor zero. Fixing the amplitude <span class="math inline">\(K\)</span>
+instead removes the similarity by adding an action-dimensional constant,
+which is what “supplied coefficient” means throughout the ledger.</p>
+<h2 id="the-recorded-countertests-and-bounds-under-the-two-criteria">4.
+The recorded countertests and bounds under the two criteria</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Result</th>
+<th>Fixed constants</th>
+<th>Action product</th>
+<th>Admitted similarity</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C002 constant-force variations</td>
+<td><span class="math inline">\(m\)</span>, <span
+class="math inline">\(F\)</span>, <span
+class="math inline">\(T\)</span>: <span
+class="math inline">\((1,0,0)\)</span>, <span
+class="math inline">\((1,1,-2)\)</span>, <span
+class="math inline">\((0,0,1)\)</span></td>
+<td><span class="math inline">\(F^2T^3/m\)</span></td>
+<td><span class="math inline">\(\eta\mapsto a\eta\)</span>, <span
+class="math inline">\(\Delta S\mapsto a^2\Delta S\)</span></td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>C024 collision plateau</td>
+<td><span class="math inline">\(m\)</span>, <span
+class="math inline">\(M\)</span>, <span
+class="math inline">\(\nu\)</span></td>
+<td>none without a fixed speed</td>
+<td>incoming velocities <span class="math inline">\(\mapsto\epsilon
+u\)</span>, <span
+class="math inline">\(H_*\mapsto\epsilon^2H_*\)</span></td>
+<td>A and B</td>
+</tr>
+<tr class="odd">
+<td>C036 composition</td>
+<td>reference <span class="math inline">\(m_0\)</span>, <span
+class="math inline">\(u_0\)</span>, <span
+class="math inline">\(\lambda_0\)</span></td>
+<td><span class="math inline">\(m_0u_0^2/\lambda_0\)</span></td>
+<td>none once the reference is fixed</td>
+<td>A: <span class="math inline">\(g=C\,\Pi\)</span></td>
+</tr>
+<tr class="even">
+<td>C056–C057 contractions</td>
+<td><span class="math inline">\(m\)</span>, <span
+class="math inline">\(u\)</span>, no length</td>
+<td>none</td>
+<td><span class="math inline">\(q_a(t)=aq(t/a)\)</span>, <span
+class="math inline">\(\delta=1\)</span></td>
+<td>A and B</td>
+</tr>
+<tr class="odd">
+<td>C058 fixed force-bounded potential</td>
+<td><span class="math inline">\(m\)</span>, <span
+class="math inline">\(k_s\)</span>, <span
+class="math inline">\(b\)</span>, <span
+class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(\sqrt{mk_s}\,b^2\)</span></td>
+<td>harmonic core, <span
+class="math inline">\(\ell_R\sim\sqrt{mk_s}R^2\)</span></td>
+<td>B, asymptotic</td>
+</tr>
+<tr class="even">
+<td>C060–C061 speed floor, force ceiling</td>
+<td><span class="math inline">\(P_*\)</span>, <span
+class="math inline">\(v_*\)</span>, <span
+class="math inline">\(F_{\max}\)</span>: <span
+class="math inline">\((1,1,-1)\)</span>, <span
+class="math inline">\((0,1,-1)\)</span>, <span
+class="math inline">\((1,1,-2)\)</span></td>
+<td><span class="math inline">\(P_*^2v_*/F_{\max}\)</span>, unique</td>
+<td>none: the speed floor breaks amplitude scaling</td>
+<td>A: <span class="math inline">\(g=C\,\Pi\)</span>, <span
+class="math inline">\(C&gt;0\)</span></td>
+</tr>
+<tr class="odd">
+<td>C052 relativistic Kepler</td>
+<td><span class="math inline">\(k\)</span>, <span
+class="math inline">\(c\)</span>: <span
+class="math inline">\((1,3,-2)\)</span>, <span
+class="math inline">\((0,1,-1)\)</span></td>
+<td><span class="math inline">\(k/c\)</span>, unique,
+mass-independent</td>
+<td>none: <span class="math inline">\(r\mapsto\lambda r\)</span>, <span
+class="math inline">\(p\mapsto p/\lambda\)</span>, <span
+class="math inline">\(m\mapsto m/\lambda\)</span>, <span
+class="math inline">\(t\mapsto\lambda t\)</span> fixes <span
+class="math inline">\(L\)</span></td>
+<td>A: <span class="math inline">\(g=k/c\)</span>, <span
+class="math inline">\(C=1\)</span></td>
+</tr>
+<tr class="even">
+<td>C053 softened core</td>
+<td><span class="math inline">\(k\)</span>, <span
+class="math inline">\(c\)</span>, <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(k/c\)</span></td>
+<td>none</td>
+<td>A: <span class="math inline">\(g=(k/c)F(amc^2/k)\)</span>, <span
+class="math inline">\(F\equiv0\)</span></td>
+</tr>
+<tr class="odd">
+<td>Q02 radiation balance</td>
+<td><span class="math inline">\(q\)</span>, <span
+class="math inline">\(m\)</span>, <span
+class="math inline">\(\epsilon_0\)</span>, <span
+class="math inline">\(c\)</span>, <span
+class="math inline">\(w\)</span>, <span
+class="math inline">\(\Lambda\)</span></td>
+<td><span class="math inline">\(q^2/(\epsilon_0c)\)</span>, <span
+class="math inline">\(mc^2/w\)</span></td>
+<td>field amplitude, <span class="math inline">\(\delta=2\)</span></td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>Q04 topological sector</td>
+<td><span class="math inline">\(\rho\)</span> (energy), <span
+class="math inline">\(c\)</span>: <span
+class="math inline">\((1,2,-2)\)</span>, <span
+class="math inline">\((0,1,-1)\)</span></td>
+<td>none</td>
+<td>radius <span class="math inline">\(R\)</span> of the degree-one
+family</td>
+<td>A</td>
+</tr>
+<tr class="odd">
+<td>Q08 string interference</td>
+<td>impedance <span class="math inline">\(Z\)</span>, lengths, <span
+class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(Z\ell^2\)</span></td>
+<td>pulse amplitude, <span class="math inline">\(\delta=2\)</span></td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>Q13 CHSH witness</td>
+<td>probabilities only</td>
+<td>none</td>
+<td>none needed</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<p>Each row uses the constants the cited note holds fixed; a row that
+lists a supplied coefficient among the constants moves to the C036
+pattern. The remaining Q-series tests end in a free common multiplier
+(Q05–Q07) or a dimensionless statistic (Q09–Q12) and fall under the same
+two criteria. The G-track results are in the same position on the other
+side: a quantum Hamiltonian with couplings in energy units and a lattice
+spacing has no action product without a fixed time or a supplied <span
+class="math inline">\(\hbar\)</span>, which is the recorded status of
+C126 and G05.</p>
+<h2
+id="which-classical-constants-supply-a-mass-independent-action-unit">5.
+Which classical constants supply a mass-independent action unit</h2>
+<p><strong>Proposition.</strong> Let the fixed constants be <span
+class="math inline">\(k_e=e^2/(4\pi\epsilon_0)\)</span>, <span
+class="math inline">\(c\)</span> and <span
+class="math inline">\(G\)</span>, with dimension vectors <span
+class="math inline">\((1,3,-2)\)</span>, <span
+class="math inline">\((0,1,-1)\)</span> and <span
+class="math inline">\((-1,3,-2)\)</span>. The unique product with action
+units is <span class="math inline">\(k_e/c\)</span>. Without <span
+class="math inline">\(k_e\)</span> there is none; admitting a mass <span
+class="math inline">\(m\)</span> adds <span
+class="math inline">\(Gm^2/c\)</span> and its mass-dependent
+relatives.</p>
+<p><em>Proof.</em> The three vectors are linearly independent, so the
+exponents <span class="math inline">\((a,b,\gamma)\)</span> with <span
+class="math inline">\(a(1,3,-2)+b(0,1,-1)+\gamma(-1,3,-2)=(1,2,-1)\)</span>
+are unique. Adding the length and time components gives <span
+class="math inline">\(a+\gamma=1\)</span>; the mass component gives
+<span class="math inline">\(a-\gamma=1\)</span>; hence <span
+class="math inline">\(a=1\)</span>, <span
+class="math inline">\(\gamma=0\)</span>, <span
+class="math inline">\(b=-1\)</span>. With <span
+class="math inline">\(G\)</span> and <span
+class="math inline">\(c\)</span> alone the mass component forces <span
+class="math inline">\(\gamma=-1\)</span>, and then the length and time
+components are inconsistent. With <span class="math inline">\(m\)</span>
+admitted, <span class="math inline">\(Gm^2/c\)</span> has dimension
+<span class="math inline">\((-1+2,\,3-1,\,-2+1)=(1,2,-1)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>In quantum units <span
+class="math inline">\(k_e/c=\alpha\hbar\)</span> with <span
+class="math inline">\(\alpha=e^2/(4\pi\epsilon_0\hbar
+c)\approx1/137\)</span>. Thus the fixed constants of classical
+mechanics, electrodynamics and gravitation admit exactly one
+mass-independent action, and it exists because the charge is a fixed
+unit. Charge quantization is the classical premise that supplies an
+action unit; the value it supplies is <span
+class="math inline">\(\alpha\)</span> times the quantum one. A fixed
+length together with a mass unit and <span
+class="math inline">\(c\)</span> would supply another, <span
+class="math inline">\(m_0c\,\ell_0\)</span>, at the price of a mass unit
+and a fundamental length, both absent from the models in use.</p>
+<h2
+id="the-relativistic-kepler-threshold-through-the-five-obligations">6.
+The relativistic Kepler threshold through the five obligations</h2>
+<p>C052 already realizes the unique electromagnetic unit. For one body
+in the singular potential <span class="math inline">\(-k/r\)</span> with
+<span class="math inline">\(k=k_e\)</span> for two elementary charges,
+regular bound orbits exist exactly for <span
+class="math inline">\(|L|&gt;k/c\)</span>.</p>
+<ol type="1">
+<li><strong>Definition and units.</strong> The angular action <span
+class="math inline">\(|L|\)</span> of regular bound orbits; <span
+class="math inline">\(k/c\)</span> has action units.</li>
+<li><strong>Exclusion of zero.</strong> The excluded infimum <span
+class="math inline">\(k/c\)</span> follows from the singular core,
+finite speed and binding (C052); a softened core removes it (C053). The
+premise excluding zero is the <span class="math inline">\(1/r\)</span>
+singularity at fixed <span class="math inline">\(k\)</span> and <span
+class="math inline">\(c\)</span>.</li>
+<li><strong>Convergence.</strong> No limit is required: the threshold is
+exact at fixed constants, and closes only as <span
+class="math inline">\(c\to\infty\)</span> or <span
+class="math inline">\(k\downarrow0\)</span>.</li>
+<li><strong>Universality.</strong> The threshold is independent of the
+mass, as the explicit formula and the similarity in Section 4 show, and
+it bounds every regular bound preparation. It scales with the charge
+product: for a centre of charge <span class="math inline">\(Ze\)</span>
+it is <span class="math inline">\(Z\alpha\hbar\)</span>. The model
+excludes recoil, radiation and a dynamical second body.</li>
+<li><strong>Quantum role.</strong> None is derived. The floor is <span
+class="math inline">\(\alpha\hbar\)</span>, so a factor <span
+class="math inline">\(1/\alpha\)</span> separates it from the quantum
+unit, and no premise of the model supplies that factor.</li>
+</ol>
+<p>Remark, audited. The quantum Coulomb problems place their collapse
+thresholds at <span class="math inline">\(Z\alpha=l+1/2\)</span>
+(Klein–Gordon) and <span
+class="math inline">\(Z\alpha=|\kappa|=j+1/2\)</span> (Dirac). Both are
+the classical condition <span class="math inline">\(|L|&gt;k/c\)</span>
+with <span class="math inline">\(|L|\)</span> measured as <span
+class="math inline">\(\hbar(l+1/2)\)</span> or <span
+class="math inline">\(\hbar|\kappa|\)</span>, and C052’s circular
+energies at <span class="math inline">\(|L|=\hbar|\kappa|\)</span> are
+exactly the Dirac levels with zero radial quantum number. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/kepler-collapse-Q14.md">The
+Q14 review</a> derives this from C052’s energy identity, whose <span
+class="math inline">\(1/r^2\)</span> coefficient <span
+class="math inline">\(c^2\ell^2-k^2\)</span> is what the wave equations’
+indicial equations test, and records the primary sources; it is the
+Sommerfeld–Dirac coincidence of 1916 and 1928. The only quantum input is
+the unit of angular action at the plunge boundary, so the factor <span
+class="math inline">\(1/\alpha\)</span> of item 5 says that the Dirac
+ground state reaches that boundary at <span
+class="math inline">\(Z=1/\alpha\)</span>. The correspondence is ledger
+claim C130; Theorems A and B remain exploratory.</p>
+<h2 id="strategic-consequence">7. Strategic consequence</h2>
+<p>Before calculating a selection candidate, list its fixed constants
+and check the two criteria. If no action product exists, or an admitted
+similarity rescales the observable, the candidate can supply at most a
+spectral shape (Q02), a conditional bound (C060) or a dimensionless
+witness (Q13), and the calculation may be skipped or bounded
+accordingly.</p>
+<p>The one classical route with a mass-independent positive floor is
+electromagnetic: a fixed charge unit, relativity and a singular Coulomb
+core give <span class="math inline">\(\alpha\hbar\)</span>. The open
+premises of the selection track are therefore the origin of a fixed
+charge unit and the factor <span
+class="math inline">\(1/\alpha\)</span>; both lie outside classical
+dynamics, and the second is the measured fine-structure constant. A
+return to a physical selection mechanism should start from a model whose
+constants are <span class="math inline">\(e\)</span>, <span
+class="math inline">\(\epsilon_0\)</span>, <span
+class="math inline">\(c\)</span> and masses, with a nonlinear coupling
+that breaks amplitude similarity, for example the radiating two-body
+Coulomb problem that <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/radiation-noise-Q02.md">Q02’s
+review</a> names as its remaining dependency; its radiation-reaction
+length <span class="math inline">\(k_e/(mc^2)\)</span> and action unit
+<span class="math inline">\(k_e/c\)</span> are then both fixed. Linear
+reservoirs, contraction-closed classes and dimensionless statistics
+remain parked by the criteria above.</p>
+<p>Proof status: elementary written proofs above; the dimensional
+reduction is the established Buckingham theorem. Literature status:
+dimensional analysis and mechanical similarity are established methods,
+and the identification <span
+class="math inline">\(k_e/c=\alpha\hbar\)</span> is standard; no novelty
+is asserted. A bounded librarian comparison and written review are
+required before any ledger promotion.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton&#x27;s vanishing areas and the proposed action scale</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Newton’s vanishing areas and the proposed action scale</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/principia-constant-force-action.md">Markdown source</a></p><p>The research anchor is Galileo’s inertial horizontal line compared
+with the falling parabola. Their enclosed area is <span
+class="math inline">\(v_0F\varepsilon^3/(6m)\)</span>, so <span
+class="math inline">\((3F/v_0)A=\varepsilon\delta E\)</span>. The
+matched-endpoint chord lens is half that area and gives the action
+difference <span class="math inline">\(\varepsilon\delta E/12\)</span>.
+Newton’s Lemmas X–XI supply the geometric anchors; Kepler’s swept
+sectors are a separate quantity. Calculation recorded 2026-09-05; target
+clarified by the user on 2026-09-14.</p>
+<p><a href="newton-insertion-action.html">The N01 comparison</a>
+connects this anchor to an explicit closed quantum phase experiment. The
+programme seeks a physical obstruction to indefinitely shrinking the
+difference as a distinguishable classical alternative. The deterministic
+energy gain and a quantum energy uncertainty must be kept distinct when
+assessing that obstruction.</p>
+<h2 id="what-was-read">1. What was read</h2>
+<p>We downloaded <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Newton_Principia_Motte1846.md">the
+Motte/Chittenden 1846 text</a> and read Definitions I–VIII and Scholium,
+the Laws with corollaries and Scholium, Book I Section I, and Section II
+Propositions I–II. A <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md">Motte
+1729 excerpt edited by Wilkins</a> supplies readable formulae for
+Section I. The reading coverage is these later English witnesses and the
+passages listed below.</p>
+<p>The closest passages are quite specific:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Passage (1846 printed page)</th>
+<th>Content relevant here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Definitions II, IV, VII–VIII (73–77)</td>
+<td>Momentum and impressed force; accelerative versus motive force</td>
+</tr>
+<tr class="even">
+<td>Definition Scholium (77–82)</td>
+<td>Distinguishes mathematical time and space from sensible
+measures</td>
+</tr>
+<tr class="odd">
+<td>Laws, Corollaries V–VI (89)</td>
+<td>Common uniform translation and equal parallel accelerations preserve
+relative motions</td>
+</tr>
+<tr class="even">
+<td>Laws, Scholium (89–90)</td>
+<td>Explicit projectile parallelogram and parabolic path; attributes the
+result to Galileo</td>
+</tr>
+<tr class="odd">
+<td>Lemmas I–III (95–96)</td>
+<td>Limits and convergence of inscribed/circumscribed figures</td>
+</tr>
+<tr class="even">
+<td>Lemma X (99–100)</td>
+<td>Initial force-generated displacement is quadratic in time</td>
+</tr>
+<tr class="odd">
+<td>Lemma XI, Corollaries 4–5 (101)</td>
+<td>Tangent triangles and curved segments scale cubically; segment is
+one third of the triangle</td>
+</tr>
+<tr class="even">
+<td>Section I closing Scholium (102–103)</td>
+<td>Defines vanishing magnitudes through limiting ratios</td>
+</tr>
+<tr class="odd">
+<td>Proposition I (103–105)</td>
+<td>Equal swept areas for a polygon under central impulses, then a curve
+limit</td>
+</tr>
+<tr class="even">
+<td>Proposition II (105–106)</td>
+<td>Converse relating area law to direction of resultant force</td>
+</tr>
+</tbody>
+</table>
+<p>Newton writes in the closing Scholium that he means “evanescent
+divisible quantities” and defines the construction through limiting
+ratios. His example of an “ultimate velocity” means the limiting
+velocity at an event. These passages give the historical vocabulary for
+the continuity argument.</p>
+<p>The source HTML contains modern editorial image descriptions. Some
+equations are images; the Wilkins PDF was used where HTML extraction
+omitted them. Selected historical figures were visually inspected: <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/images/i_090a.jpg">projectile</a>,
+<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/images/i_104.jpg">central
+polygon</a>.</p>
+<h2 id="constant-force-geometry">2. Constant-force geometry</h2>
+<p>Take a particle of mass <span class="math inline">\(m&gt;0\)</span>,
+a constant force <span class="math inline">\(F&gt;0\)</span> in the
+positive <span class="math inline">\(y\)</span> direction, <span
+class="math inline">\(V(y)=-Fy\)</span>, and initial data</p>
+<p><span class="math display">\[
+x(0)=y(0)=0,\qquad \dot x(0)=v_0&gt;0,\qquad \dot y(0)=0.
+\]</span></p>
+<p>For an interval <span class="math inline">\(\varepsilon&gt;0\)</span>
+the exact classical solution is</p>
+<p><span class="math display">\[
+x(t)=v_0t,\qquad y(t)=\frac{F}{2m}t^2.
+\]</span></p>
+<p>The particle deflects along the force and loses potential energy.
+Reversing the vertical convention reverses the signs while preserving
+magnitudes. Define the energy transfer by</p>
+<p><span class="math display">\[
+\delta E:=K(\varepsilon)-K(0)
+=-\bigl[V(\varepsilon)-V(0)\bigr]
+=F\Delta y=\frac{F^2\varepsilon^2}{2m}.
+\]</span></p>
+<p>Total mechanical energy is constant. Here <span
+class="math inline">\(\delta E\)</span> denotes deterministic work;
+quantum energy spread will be written <span
+class="math inline">\(\sigma_H\)</span> below. The proportionality
+constant in <span class="math inline">\(\Delta y=K_{\rm conv}\delta
+E\)</span> is <span class="math inline">\(K_{\rm conv}=1/F\)</span>,
+which has dimensions of inverse force.</p>
+<p>Let <span class="math inline">\(A=(0,0)\)</span>, <span
+class="math inline">\(B=(v_0\varepsilon,0)\)</span> be the inertial
+endpoint and <span
+class="math inline">\(D=(v_0\varepsilon,F\varepsilon^2/(2m))\)</span>
+the actual endpoint. The triangle <span
+class="math inline">\(ABD\)</span> has</p>
+<p><span class="math display">\[
+\mathcal A_\triangle=\frac12\Delta x\Delta y
+=\frac{v_0F}{4m}\varepsilon^3
+=\frac{v_0}{2F}\,\varepsilon\delta E.
+\]</span></p>
+<p>This confirms the proposed proportionality, with an explicit factor
+and energy definition. Multiplying this configuration-space area by
+<span class="math inline">\(F/v_0\)</span> gives action units. Section 3
+obtains the action coefficient by direct integration.</p>
+<p>For <span class="math inline">\(y(x)=Fx^2/(2mv_0^2)\)</span> the
+other two areas are</p>
+<p><span class="math display">\[
+\mathcal A_{\rm tangent,curve}=\int_0^{v_0\varepsilon}y(x)\,dx
+=\frac23\mathcal A_\triangle,\qquad
+\mathcal A_{\rm chord,curve}=\frac13\mathcal A_\triangle
+=\frac{v_0F\varepsilon^3}{12m}.
+\]</span></p>
+<p>These are the ratios in Lemma XI, Corollary 5, exact for this
+parabola. The tangent triangle is cubic in <span
+class="math inline">\(\varepsilon\)</span> because the initial vertical
+velocity is zero. About a later point, deflection from the local tangent
+is again quadratic, while absolute vertical displacement also includes
+the existing vertical velocity.</p>
+<figure>
+<img
+src="https://github.com/arivero/navstokgap/blob/main/out/constant-force-areas.svg"
+alt="Areas for the constant-force launch" />
+<figcaption aria-hidden="true">Areas for the constant-force
+launch</figcaption>
+</figure>
+<h2 id="matched-endpoint-action-difference">3. Matched-endpoint action
+difference</h2>
+<p>The same-endpoint straight chord is an admissible off-shell
+comparison path. On <span class="math inline">\(0\leq
+t\leq\varepsilon\)</span>, set</p>
+<p><span class="math display">\[
+y_{\rm cl}(t)=\frac{F}{2m}t^2,\qquad
+y_{\rm ch}(t)=\frac{F\varepsilon}{2m}t,\qquad x(t)=v_0t.
+\]</span></p>
+<p>Compare both with the same Lagrangian</p>
+<p><span class="math display">\[
+S[x,y]=\int_0^\varepsilon
+\left[\frac m2(\dot x^2+\dot y^2)+Fy\right]dt.
+\]</span></p>
+<p>For <span class="math inline">\(y=y_{\rm cl}+\eta\)</span>, with
+<span class="math inline">\(\eta(0)=\eta(\varepsilon)=0\)</span>,
+integration by parts cancels the linear variation because <span
+class="math inline">\(m\ddot y_{\rm cl}=F\)</span>. Consequently</p>
+<p><span class="math display">\[
+S[y_{\rm cl}+\eta]-S[y_{\rm cl}]
+=\frac m2\int_0^\varepsilon\dot\eta^2\,dt.
+\]</span></p>
+<p>Here <span class="math inline">\(\eta=F
+t(\varepsilon-t)/(2m)\)</span> for the chord. Therefore</p>
+<p><span class="math display">\[
+\boxed{\Delta S_{\rm ch,cl}
+=\frac{F^2\varepsilon^3}{24m}
+=\frac{F}{2v_0}\mathcal A_{\rm chord,curve}
+=\frac{\varepsilon\delta E}{12}.}
+\]</span></p>
+<p>The action integral fixes the coefficient relating the lens to the
+action difference. Adding the same point-function term <span
+class="math inline">\(dG(q,t)/dt\)</span> to the Lagrangian preserves
+the difference because endpoints and times agree.</p>
+<p>The neighbouring paths form a continuous family. Choosing <span
+class="math inline">\(\eta=\alpha t(\varepsilon-t)\)</span> gives</p>
+<p><span class="math display">\[
+\Delta S(\alpha)=\frac{m\alpha^2\varepsilon^3}{6}\longrightarrow0
+\quad\text{as }\alpha\to0.
+\]</span></p>
+<p>Positive action differences in this family therefore have infimum
+zero. A physical distinguishability relation or a restriction of allowed
+states changes the admissible comparison; defining that change is the
+next modelling question.</p>
+<h2 id="polygonal-approximation-and-its-error">4. Polygonal
+approximation and its error</h2>
+<p>Proposition I proves equality of finite swept triangles already at
+the polygonal stage, using central impulses. Its swept triangles sum to
+the swept area over a fixed time. By contrast, chord–curve lenses
+measure the error of the polygonal approximation; their total has a
+different limit.</p>
+<p>For the constant-force parabola, dividing a fixed duration <span
+class="math inline">\(T\)</span> into <span
+class="math inline">\(N\)</span> equal intervals gives <span
+class="math inline">\(N\)</span> chord lenses, each of area <span
+class="math inline">\(v_0F(T/N)^3/(12m)\)</span>. Their sum is</p>
+<p><span class="math display">\[
+\mathcal A_{\rm error,total}=\frac{v_0FT^3}{12mN^2}\to0.
+\]</span></p>
+<p>This gives the exact <span class="math inline">\(N^{-2}\)</span>
+convergence of the polygonal error. The constant parallel force belongs
+to the projectile Scholium and Lemmas X–XI; Proposition I assumes a
+force directed towards a fixed centre.</p>
+<p>For constant force the displayed solution exists globally. Singular
+central forces require collision and continuation analysis. The
+approximation above takes a mesh limit; a semiclassical calculation
+instead varies the parameter <span
+class="math inline">\(\hbar\)</span>.</p>
+<h2 id="phase-resolution-uncertainty-and-reference-frames">5. Phase
+resolution, uncertainty and reference frames</h2>
+<p>The <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Feynman_LeastAction_II19.md">Feynman
+chapter</a> supplies the quantum interpretation through phases <span
+class="math inline">\(e^{iS/\hbar}\)</span>. Equal phase occurs when an
+action <strong>difference</strong> is <span
+class="math inline">\(nh\)</span>, since <span
+class="math inline">\(h=2\pi\hbar\)</span>. This is periodicity of the
+relative phase. Classical stationarity concerns neighbourhoods of paths
+and their phase cancellation.</p>
+<p>For our specific chord comparison,</p>
+<p><span class="math display">\[
+\Delta\varphi=\frac{\Delta S_{\rm ch,cl}}{\hbar}
+=\frac{F^2\varepsilon^3}{24m\hbar}.
+\]</span></p>
+<p>At fixed <span class="math inline">\(\hbar&gt;0\)</span>, <span
+class="math inline">\(\varepsilon\to0\)</span> makes these two phases
+closer. Requiring order-one relative phase would define a comparison
+scale</p>
+<p><span class="math display">\[
+\varepsilon_{\rm phase}\sim\left(\frac{24m\hbar}{F^2}\right)^{1/3}.
+\]</span></p>
+<p>This comparison scale marks an order-one phase difference for the
+selected pair of paths. The phase rule introduces a specified <span
+class="math inline">\(\hbar\)</span> as quantum input. The <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/action-gap-foundations.tex">technical
+paper</a> turns relative phase into an exact resolution threshold for a
+fixed measurement protocol and copy count.</p>
+<p>For a time-independent observable <span
+class="math inline">\(B\)</span>, the quantum commutator variance
+inequality and Heisenberg evolution imply</p>
+<p><span class="math display">\[
+\sigma_H\sigma_B\geq\tfrac12|\langle[H,B]\rangle|,
+\qquad
+\tau_B:=\frac{\sigma_B}{|d\langle B\rangle/dt|},
+\qquad \sigma_H\tau_B\geq\frac\hbar2,
+\]</span></p>
+<p>when domains and variances are appropriate and the denominator is
+nonzero. Here <span class="math inline">\(\sigma_H\)</span> is a state
+energy spread and <span class="math inline">\(\tau_B\)</span> an
+observable-change timescale. The earlier <span
+class="math inline">\(\delta E\)</span> and <span
+class="math inline">\(\varepsilon\)</span> describe deterministic work
+and a chosen trajectory interval. A wavepacket uncertainty area concerns
+the distribution of conjugate observables.</p>
+<p>The spatial area also changes under a horizontal Galilean boost. In
+the frame moving at <span class="math inline">\(v_0\)</span>, horizontal
+launch velocity and the plotted spatial area vanish. The action
+difference above stays finite and unchanged: both paths share the same
+horizontal motion, whose action contribution cancels. Thus the area
+conversion uses a frame with <span
+class="math inline">\(v_0\neq0\)</span>, while the matched-endpoint
+action difference survives the boost.</p>
+<p>For <span class="math inline">\(v_0&lt;c\)</span>, the constant-force
+solution stays below <span class="math inline">\(c\)</span> whenever
+<span
+class="math inline">\(0&lt;\varepsilon&lt;(m/F)\sqrt{c^2-v_0^2}\)</span>.
+Arbitrarily small intervals remain possible. This checks the speed of a
+finite Newtonian segment. Section 6 of the technical paper supplies a
+corresponding small-variation calculation for the free relativistic
+Lagrangian.</p>
+<p>These results lead to an operational question: how does the action
+difference determine distinguishability under specified preparations and
+measurements? The complementary spectral question studies the effects of
+state space, boundary conditions and periodicity.</p>
+<h2 id="historical-interpretation-and-reproduction">6. Historical
+interpretation and reproduction</h2>
+<p>The modern interpretation starts from Newton’s use of arbitrarily
+fine geometric limits. The proposed implicit <span
+class="math inline">\(h\to0\)</span> reading is recorded as a historical
+conjecture. Its chronology, relationship to the Classical Scholia and
+place in the existing literature are tasks H02/H03.</p>
+<p>The written derivation connects the geometric construction to the
+action integral. The saved diagram and <a
+href="https://github.com/arivero/navstokgap/blob/main/out/constant-force-checks.json">earlier
+check output</a> remain historical artifacts. Their legacy generator is
+inactive because it also executes symbolic verification.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

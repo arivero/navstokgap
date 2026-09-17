@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A finite-speed return bridge: cuts and midpoint crossover</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A finite-speed return bridge: cuts and midpoint crossover</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/telegraph-return-bridge.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/telegraph-return-bridge.pdf">PDF</a></p><p>A velocity-resolved telegraph bridge gives one consistent random
+trajectory at every cut resolution. Its midpoint has a discrete
+probability mass, while the action error of sampled polygons vanishes at
+a controlled rate. The construction isolates velocity memory from the
+introduction of fresh noise at each cut.</p>
+<h2 id="model-and-endpoint-convention">1. Model and endpoint
+convention</h2>
+<p>Fix mass <span class="math inline">\(m&gt;0\)</span>, speed <span
+class="math inline">\(0&lt;u&lt;c\)</span>, reversal rate <span
+class="math inline">\(\lambda&gt;0\)</span> and duration <span
+class="math inline">\(T&gt;0\)</span>. In an inertial frame set <span
+class="math inline">\(X_0=0\)</span>, <span
+class="math inline">\(V_0=u\)</span> and</p>
+<p><span class="math display">\[V_t=u(-1)^{N_t},\qquad X_t=\int_0^t
+V_s\,ds,\]</span></p>
+<p>where <span class="math inline">\(N\)</span> is a homogeneous Poisson
+process of rate <span class="math inline">\(\lambda\)</span>. Velocity
+is right-continuous. The rate is a supplied classical stochastic clock.
+This reduced model describes impulsive reversals; momentum receivers
+require the extra interaction bookkeeping of the physical-cut model
+(C030).</p>
+<p>We construct the bridge to <span
+class="math inline">\((X_T,V_T)=(0,-u)\)</span> by disintegrating
+switch-time densities at the interior position <span
+class="math inline">\(X_T=0\)</span>. The explicit simplex construction
+below fixes the version of this zero-probability conditioning. Before
+conditioning, the zero-switch event has probability <span
+class="math inline">\(e^{-\lambda T}\)</span> and lies at <span
+class="math inline">\((uT,+u)\)</span>; the chosen terminal velocity
+selects odd positive switch counts.</p>
+<p>The free kinetic functional is <span
+class="math inline">\(S[X]=(m/2)\int_0^T V_t^2dt\)</span>, in action
+units. We compare it with the sampled polygon and with the zero-position
+chord. The chord matches position endpoints; its velocity endpoints
+differ from the bridge. All comparisons below name this positional
+endpoint convention.</p>
+<h2 id="exact-conditional-path-law">2. Exact conditional path law</h2>
+<p>Write <span class="math inline">\(N_T=2K+1\)</span> and <span
+class="math inline">\(z=\lambda T\)</span>. The bridge count law is</p>
+<p><span class="math display">\[\boxed{\Pr(K=k\mid\text{bridge})=
+w_k=\frac{(z/2)^{2k}}{(k!)^2 I_0(z)},\qquad k=0,1,\ldots,}\]</span></p>
+<p>where <span
+class="math inline">\(I_0(z)=\sum_{k\ge0}(z/2)^{2k}/(k!)^2\)</span>.
+Given <span class="math inline">\(K=k\)</span>, independently choose
+uniform simplex vectors <span
+class="math inline">\((P_0,\ldots,P_k)\)</span> and <span
+class="math inline">\((M_0,\ldots,M_k)\)</span>, each summing to <span
+class="math inline">\(T/2\)</span>. Follow velocities <span
+class="math inline">\(+u,-u,+u,-u,\ldots\)</span> for durations <span
+class="math inline">\(P_0,M_0,P_1,M_1,\ldots,P_k,M_k\)</span>. For <span
+class="math inline">\(k=0\)</span> each simplex is a singleton. This
+specifies the entire conditioned path, including all later
+observations.</p>
+<p><strong>Derivation.</strong> Given <span
+class="math inline">\(N_T=2k+1\)</span>, the ordered switch times are
+uniform in <span
+class="math inline">\(0&lt;s_1&lt;\cdots&lt;s_{2k+1}&lt;T\)</span>.
+Their <span class="math inline">\(2k+2\)</span> spacings are uniform on
+the simplex of total length <span class="math inline">\(T\)</span>. The
+total positive duration <span class="math inline">\(A\)</span> has
+density</p>
+<p><span class="math display">\[f_k(a)=\frac{(2k+1)!}{(k!)^2 T^{2k+1}}
+              a^k(T-a)^k,\qquad 0&lt;a&lt;T.\]</span></p>
+<p>Since <span class="math inline">\(X_T=u(2A-T)\)</span>, the position
+Jacobian is <span class="math inline">\(da/dx=1/(2u)\)</span>.
+Multiplication by the Poisson count weight gives the joint density</p>
+<p><span class="math display">\[\left.\frac{\Pr(X_T\in
+dx,N_T=2k+1)}{dx}\right|_{x=0}
+=\frac{e^{-\lambda T}\lambda^{2k+1}}{2u(k!)^2}(T/2)^{2k}.\]</span></p>
+<p>Its sum is <span class="math inline">\(e^{-\lambda T}\lambda
+I_0(z)/(2u)&gt;0\)</span>. Division gives <span
+class="math inline">\(w_k\)</span>. Conditioning the uniform spacings on
+<span class="math inline">\(A=T/2\)</span> leaves the two independent
+simplexes stated above. The occupation-time backbone is the equal-rate
+specialization of Cinque’s Theorem 2.1, (2.6), printed p. 4; <a
+href="https://arxiv.org/abs/2202.01904v1">the source</a> also gives the
+alternating switch representation (2.4), p. 3.</p>
+<h2 id="midpoint-law-including-the-atom">3. Midpoint law, including the
+atom</h2>
+<p>The exact midpoint law is an explicit pushforward of the preceding
+mixture. Let <span
+class="math inline">\(d=(P_0,M_0,\ldots,P_k,M_k)\)</span>, <span
+class="math inline">\(s_0=0\)</span> and <span
+class="math inline">\(s_j=\sum_{i&lt;j}d_i\)</span>. Then</p>
+<p><span class="math display">\[Y=X_{T/2}=u\sum_{j=0}^{2k+1}(-1)^j
+        \min\{d_j,\max(0,T/2-s_j)\}.\]</span></p>
+<p>For any bounded measurable <span class="math inline">\(g\)</span>,
+its expectation is <span class="math inline">\(\sum_k w_k\mathbb
+E_k[g(Y)]\)</span>, where <span class="math inline">\(\mathbb
+E_k\)</span> is integration over the two normalized simplexes. This
+formula sums over midpoint velocities. The joint law retains <span
+class="math inline">\(V_{T/2}=u(-1)^j\)</span> on <span
+class="math inline">\(s_j\le T/2&lt;s_{j+1}\)</span>.</p>
+<p>In particular,</p>
+<p><span class="math display">\[\boxed{\Pr(Y=uT/2)=\frac1{I_0(\lambda
+T)}.}\]</span></p>
+<p>For <span class="math inline">\(K=0\)</span> the unique switch occurs
+at <span class="math inline">\(T/2\)</span>, and <span
+class="math inline">\(Y=uT/2\)</span> with right-continuous velocity
+<span class="math inline">\(-u\)</span>. For <span
+class="math inline">\(k\ge1\)</span>, all simplex coordinates are
+strictly positive almost surely. Attaining <span
+class="math inline">\(Y=uT/2\)</span> would use all positive duration
+before the midpoint, leaving extra positive intervals with zero length.
+Attaining <span class="math inline">\(Y=-uT/2\)</span> would require
+zero initial positive duration. Both are simplex boundary events. The
+midpoint lies in an interval with index <span class="math inline">\(1\le
+j\le2k\)</span>. For odd <span class="math inline">\(j\)</span> its
+position is <span class="math inline">\(u(2\sum_{i&lt;j,\ i\text{
+even}}d_i-T/2)\)</span>; for even <span class="math inline">\(j\)</span>
+it is <span class="math inline">\(u(T/2-2\sum_{i&lt;j,\ i\text{
+odd}}d_i)\)</span>. Each sum is a nonempty proper prefix of its simplex
+vector, so on each such region <span class="math inline">\(Y\)</span> is
+a nonconstant affine function of the free simplex coordinates. Thus the
+<span class="math inline">\(k\ge1\)</span> contribution is absolutely
+continuous on <span class="math inline">\((-uT/2,uT/2)\)</span>.</p>
+<p><strong>The velocity convention matters at the atom.</strong> On the
+one-switch component, conditioning instead on <span
+class="math inline">\(|X_T|&lt;\epsilon\)</span> makes the switch time
+uniform in a symmetric interval around <span
+class="math inline">\(T/2\)</span>. Half of these paths still have
+velocity <span class="math inline">\(+u\)</span> at the midpoint and
+half have <span class="math inline">\(-u\)</span>. As <span
+class="math inline">\(\epsilon\downarrow0\)</span>, their position paths
+converge uniformly to the one-switch return path, but their midpoint
+velocity laws retain that equal mixture. Evaluation of velocity at a
+jump is discontinuous. Our exact bridge uses the right-continuous path
+version above; an endpoint-window measurement is a separate specified
+protocol.</p>
+<h2 id="cuts-sample-one-preparation">4. Cuts sample one preparation</h2>
+<p>Every finite set of cuts is evaluated on this same count/simplex
+probability space. If <span class="math inline">\(\rho\)</span> refines
+<span class="math inline">\(\pi\)</span>, deleting the extra coordinates
+of <span class="math inline">\((X_t,V_t)_{t\in\rho}\)</span> returns
+<span class="math inline">\((X_t,V_t)_{t\in\pi}\)</span> pointwise.
+Hence their joint laws satisfy exact restriction consistency. This
+argument handles atoms without multiplying singular transition
+densities.</p>
+<p>An independent midpoint-reset rule fails a direct test. Conditional
+on <span class="math inline">\(Y=uT/2\)</span>, speed at most <span
+class="math inline">\(u\)</span> forces velocity <span
+class="math inline">\(+u\)</span> almost everywhere on the first half
+and <span class="math inline">\(-u\)</span> almost everywhere on the
+second half. In particular <span
+class="math inline">\(X_{T/4}=X_{3T/4}=uT/4\)</span> deterministically.
+Giving either quarter point fresh nonzero variance changes the old
+preparation or violates its speed support. Velocity and the endpoint
+conditioning carry the required memory.</p>
+<h2 id="exact-action-limit-under-arbitrary-cuts">5. Exact action limit
+under arbitrary cuts</h2>
+<p>For any partition <span class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,T]\)</span>, let <span
+class="math inline">\(X^\pi\)</span> be the sampled linear interpolant,
+<span class="math inline">\(|\pi|\)</span> its largest interval, and
+<span class="math inline">\(S_\pi=S[X^\pi]\)</span>. Then</p>
+<p><span class="math display">\[S[X]=\frac{mu^2T}{2},\qquad
+0\le S[X]-S_\pi\le\frac{mu^2}{2}N_T|\pi|.\]</span></p>
+<p>Indeed the polygon velocity on interval <span
+class="math inline">\(I\)</span> is the average <span
+class="math inline">\(\bar V_I\)</span>, and</p>
+<p><span class="math display">\[S[X]-S_\pi=\frac m2\sum_{I\in\pi}
+                  \int_I(V_t-\bar V_I)^2dt.\]</span></p>
+<p>An interval without an interior switch contributes zero. Every other
+interval contributes at most <span
+class="math inline">\(mu^2|I|/2\)</span>; their total length is at most
+<span class="math inline">\(N_T|\pi|\)</span>. The count is finite
+almost surely. Differentiating the convergent positive series for <span
+class="math inline">\(I_0\)</span>, with <span
+class="math inline">\(I_1=I_0&#39;\)</span>, also gives</p>
+<p><span class="math display">\[\mathbb E[N_T\mid\text{bridge}]
+       =1+z\frac{I_1(z)}{I_0(z)}.\]</span></p>
+<p>Consequently <span class="math inline">\(S_\pi\to mu^2T/2\)</span>
+almost surely and in <span class="math inline">\(L^1\)</span> on any
+deterministic shrinking meshes, with the displayed expected error bound.
+Also <span class="math inline">\(\|X^\pi-X\|_\infty\le2u|\pi|\)</span>.
+Along nested partitions <span class="math inline">\(S_\pi\)</span>
+increases, by square completion at each inserted node.</p>
+<p>The surviving action relative to the zero-position chord is the
+kinetic cost of the fixed returning path. The polygon approximation
+error tends to zero. Its value <span
+class="math inline">\(mu^2T/2\)</span> tends to zero with duration or
+speed. These are separate limits from A01’s long-observation stationary
+coefficient <span class="math inline">\(H_*=mu^2/\lambda\)</span>. For
+the bridge midpoint observable, C031 gives <span
+class="math inline">\(0\le\kappa_{\rm mid}=4m\operatorname{Var}(Y)/T\le
+mu^2T\)</span>. Its mean is generally biased, so midpoint action uses
+<span class="math inline">\(2m\mathbb E[Y^2]/T\)</span>, rather than
+variance alone.</p>
+<h2 id="midpoint-crossover-observables">6. Midpoint crossover:
+observables</h2>
+<p>Keep the bridge preparation, count weights and velocity convention of
+§§1–3. Put <span class="math inline">\(Q=2Y/(uT)\)</span> and define
+<span class="math inline">\(\kappa_{\rm
+mid}=4m\operatorname{Var}(Y)/T\)</span>, <span
+class="math inline">\(A_2=2m\mathbb E[Y^2]/T\)</span>, and the
+stationary reference plateau <span
+class="math inline">\(H_*=mu^2/\lambda\)</span>. Cut refinement fixes
+the preparation; the window limit below varies <span
+class="math inline">\(T\)</span> at fixed <span
+class="math inline">\(m,u,\lambda\)</span>.</p>
+<p>The exact crossover is</p>
+<p><span class="math display">\[\kappa_{\rm
+mid}/H_*=g(z)=zR(z)[1-R(z)],\qquad
+R(z)=\frac{\int_0^z I_0(s)\,ds}{zI_0(z)},\quad z=\lambda T.\]</span></p>
+<p>It has cubic onset <span
+class="math inline">\(g(z)=z^3/6+O(z^5)\)</span> and tends to one for
+large <span class="math inline">\(z\)</span>. The next sections derive
+the count-conditioned law, moments and mass-window constraint, using the
+same path construction throughout.</p>
+<h2 id="a-beta-law-at-fixed-switch-count">7. A beta law at fixed switch
+count</h2>
+<p>For <span class="math inline">\(k=0\)</span>, <span
+class="math inline">\(Q=1\)</span> deterministically. For every integer
+<span class="math inline">\(k\ge1\)</span>,</p>
+<p><span class="math display">\[\boxed{\frac{Q+1}{2}\,\bigg|\,K=k\
+\sim\operatorname{Beta}(k+1,k).}\]</span></p>
+<p>Equivalently its density on <span
+class="math inline">\(-1&lt;q&lt;1\)</span> is</p>
+<p><span
+class="math display">\[f_k(q)=\frac{(2k-1)!}{2^{2k-1}[(k-1)!]^2}
+                  (1+q)(1-q^2)^{k-1}.\]</span></p>
+<p><strong>Proof.</strong> For a telegraph segment of duration <span
+class="math inline">\(t\)</span>, displacement <span
+class="math inline">\(x\)</span> and initial velocity <span
+class="math inline">\(+u\)</span>, let <span
+class="math inline">\(a=(t+x/u)/2\)</span>, <span
+class="math inline">\(b=(t-x/u)/2\)</span>. Uniform Poisson spacings,
+grouped into positive and negative durations, give joint position/count
+densities in the interior <span
+class="math inline">\(|x|&lt;ut\)</span>:</p>
+<p><span class="math display">\[d_{2j+1}(x,t)=\frac{e^{-\lambda
+t}\lambda^{2j+1}}{2u(j!)^2}a^jb^j
+\quad(j\ge0),\]</span> <span
+class="math display">\[d_{2j}(x,t)=\frac{e^{-\lambda
+t}\lambda^{2j}}{2u\,j!(j-1)!}a^jb^{j-1}
+\quad(j\ge1).\]</span></p>
+<p>The zero-count law is an atom at <span
+class="math inline">\(ut\)</span>, handled separately. For initial
+velocity <span class="math inline">\(-u\)</span>, reverse the
+displacement sign. These formulas follow from Dirichlet spacings with
+respectively <span class="math inline">\((j+1,j+1)\)</span> and <span
+class="math inline">\((j+1,j)\)</span> groups; the position Jacobian is
+<span class="math inline">\(1/(2u)\)</span>.</p>
+<p>Split the return path at <span class="math inline">\(t=T/2\)</span>
+and take an interior midpoint <span class="math inline">\(y\)</span>.
+The two possible midpoint velocity sectors have even/odd and odd/even
+counts. With <span class="math inline">\(a=T(1+q)/4\)</span>, <span
+class="math inline">\(b=T(1-q)/4\)</span>, each sector contributes <span
+class="math inline">\(a^kb^{k-1}\)</span> times a factorial sum. Their
+combined joint density in midpoint <span
+class="math inline">\(y\)</span> and terminal position zero is</p>
+<p><span class="math display">\[\frac{e^{-\lambda
+T}\lambda^{2k+1}}{2u^2}a^kb^{k-1}S_k,
+\qquad S_k=\sum_{j=1}^k\frac1{j!(j-1)![(k-j)!]^2}
+             =\frac{k(2k)!}{2(k!)^4}.\]</span></p>
+<p>For the last equality write each term as <span
+class="math inline">\(j\binom{k}{j}^2/(k!)^2\)</span>, use symmetry
+<span class="math inline">\(j\leftrightarrow k-j\)</span> and
+Vandermonde’s identity <span
+class="math inline">\(\sum_j\binom{k}{j}^2=\binom{2k}{k}\)</span>.
+Divide by C033’s terminal position/count density <span
+class="math inline">\(e^{-\lambda
+T}\lambda^{2k+1}(T/2)^{2k}/[2u(k!)^2]\)</span> and multiply by <span
+class="math inline">\(dy/dq=uT/2\)</span>. This yields <span
+class="math inline">\(f_k\)</span>. It integrates to one, so at <span
+class="math inline">\(k\ge1\)</span> the interior formula exhausts the
+conditional mass. At <span class="math inline">\(k=0\)</span> retain the
+deterministic midpoint atom; its mixture mass is <span
+class="math inline">\(1/I_0(z)\)</span>.</p>
+<h2 id="exact-moments-and-limits">8. Exact moments and limits</h2>
+<p>Beta integration gives, also including the <span
+class="math inline">\(k=0\)</span> atom,</p>
+<p><span class="math display">\[\mathbb E[Q\mid K=k]=\mathbb E[Q^2\mid
+K=k]=\frac1{2k+1}.\]</span></p>
+<p>Summing the absolutely convergent series and integrating <span
+class="math inline">\(I_0\)</span> term by term therefore gives <span
+class="math inline">\(\mathbb E Q=\mathbb E Q^2=R(z)\)</span>.
+Consequently</p>
+<p><span class="math display">\[\mathbb E Y=\frac{uT}{2}R(z),\qquad
+\operatorname{Var}(Y)=\frac{u^2T^2}{4}R(z)[1-R(z)],\]</span> <span
+class="math display">\[\kappa_{\rm mid}=H_*g(z),\qquad
+A_2=\frac{H_*}{2}zR(z).\]</span></p>
+<p>For <span class="math inline">\(z&gt;0\)</span>, <span
+class="math inline">\(0&lt;R(z)&lt;1\)</span>, hence <span
+class="math inline">\(g(z)&gt;0\)</span>. The exact identity also
+improves the generic midpoint bound to <span
+class="math inline">\(g(z)\le z/4\)</span>. The Taylor series gives
+<span class="math inline">\(R(z)=1-z^2/6+O(z^4)\)</span> and thus the
+cubic onset in the opening result.</p>
+<p>For the large-window limit use the integral representation <span
+class="math inline">\(I_0(z)=\pi^{-1}\int_0^\pi
+e^{z\cos\theta}d\theta\)</span>, <a
+href="https://dlmf.nist.gov/10.32.E1">DLMF 10.32.1</a>. The normalized
+exponential weight concentrates at <span
+class="math inline">\(\theta=0\)</span>: for any <span
+class="math inline">\(0&lt;\delta&lt;\pi\)</span>, the weight of <span
+class="math inline">\([\delta,\pi]\)</span> is at most <span
+class="math inline">\((2\pi/\delta)e^{-z(\cos(\delta/2)-\cos\delta)}\)</span>.
+Differentiation under the integral then gives <span
+class="math inline">\(I_0&#39;(z)/I_0(z)\to1\)</span>. Both <span
+class="math inline">\(I_0(z)\)</span> and <span
+class="math inline">\(\int_0^zI_0(s)ds\)</span> diverge, so l’Hopital’s
+rule yields</p>
+<p><span
+class="math display">\[zR(z)=\frac{\int_0^zI_0(s)ds}{I_0(z)}\longrightarrow1,
+\qquad R(z)\longrightarrow0,\qquad g(z)\longrightarrow1.\]</span></p>
+<p>At fixed <span class="math inline">\(m,u,\lambda\)</span>, this
+proves</p>
+<p><span class="math display">\[\kappa_{\rm mid}(T)\to H_*,\qquad
+A_2(T)\to H_*/2,
+\qquad \mathbb E Y\to\frac{u}{2\lambda}\quad(T\to\infty).\]</span></p>
+<p>The normalized mean <span class="math inline">\(\mathbb E Q\)</span>
+vanishes; the unscaled midpoint mean retains a boundary bias. P02’s
+sampler anticipated the plateau and cubic onset. This proof supplies the
+full curve and corrects its provisional statement that the unscaled
+midpoint mean tends to zero. Monotonicity of <span
+class="math inline">\(g\)</span> is a separate question; the endpoint
+limits do not assume it.</p>
+<h2 id="crossover-windows-and-mass-universality">9. Crossover windows
+and mass universality</h2>
+<p>For either C018’s increment coefficient or C031’s return-midpoint
+coefficient, a prescribed value <span
+class="math inline">\(K_*&gt;0\)</span> under a speed ceiling <span
+class="math inline">\(u\)</span> can be realized only if</p>
+<p><span class="math display">\[T\ge T_*:=\frac{K_*}{mu^2}.\]</span></p>
+<p>This follows by dividing <span class="math inline">\(K_*\le
+mu^2T\)</span> by the positive factor <span
+class="math inline">\(mu^2\)</span>. For the present bridge the sharper
+<span class="math inline">\(g\le z/4\)</span> gives <span
+class="math inline">\(\kappa_{\rm mid}\le mu^2T/4\)</span>. These are
+necessary bounds on the observable, not sufficient conditions for any
+prescribed distribution.</p>
+<p>A consequence for C035 is immediate. Suppose masses extend
+arbitrarily close to zero, the speed ceiling <span
+class="math inline">\(u\)</span> and finite window <span
+class="math inline">\(T\)</span> are common, and the increment or
+midpoint coefficient is the same <span
+class="math inline">\(K_*\ge0\)</span> for every mass. Then <span
+class="math inline">\(K_*\le mu^2T\)</span> for all those masses forces
+<span class="math inline">\(K_*=0\)</span>. A positive mass-universal
+plateau is compatible with finite speed through mass-dependent crossover
+windows, rather than a common finite window valid for arbitrarily small
+masses.</p>
+<p>For a telegraph family with shared plateau <span
+class="math inline">\(H_*\)</span> and common speed <span
+class="math inline">\(u\)</span>, <span
+class="math inline">\(\lambda_m=mu^2/H_*\)</span> and <span
+class="math inline">\(T_{*,m}=1/\lambda_m\)</span> when <span
+class="math inline">\(K_*=H_*\)</span>. The exact midpoint curve is
+<span class="math inline">\(H_*g(mu^2T/H_*)\)</span>. Its dependence on
+<span class="math inline">\(mT\)</span> exhibits the nonuniformity of
+the large-window limit across small masses. The stationary increment
+instead uses <span
+class="math inline">\(H_*[1-(1-e^{-2\lambda_mT})/(2\lambda_mT)]\)</span>.</p>
+<p>At the additional formal identifications <span
+class="math inline">\(H_*=\hbar\)</span> and <span
+class="math inline">\(u=c\)</span>, the scales are <span
+class="math inline">\(T_{*,m}=\hbar/(mc^2)\)</span> and <span
+class="math inline">\(uT_{*,m}=\hbar/(mc)\)</span>, the reduced Compton
+time and length. The bounded-speed inequalities extend to <span
+class="math inline">\(u=c\)</span>; the identification with a quantum
+phase scale belongs to the next dynamics test. This calculation concerns
+classical probability and specified windows.</p>
+<h2 id="consequence-and-evidence-record">10. Consequence and evidence
+record</h2>
+<p>The exact path law, consistent cuts, vanishing polygon error and
+positive long-window midpoint plateau concern different observables and
+limits of one preparation. Their combination supplies a concrete
+classical family for testing a proposed action-selection principle. The
+plateau value remains set by speed, mass and the supplied reversal
+rate.</p>
+<p>C033–C034 retain the B14 path-law/cut audit. C037–C038 retain B17’s
+midpoint and window audit; all proofs are preserved here. Cinque
+supplies the occupation law backbone, and the midpoint/action
+consequences are derived with the stated conditioning convention.
+Bounded-acceleration turns are developed in the <a
+href="bounded-acceleration-return.html">mechanical return note</a>;
+coherent composition has the separate premises of the <a
+href="checkerboard-dynamics.html">checkerboard note</a>.</p>
+<p>This consolidated manuscript joins A06 and A09a. Historical check
+outputs remain in the repository; current verification uses written
+proofs and source review under the hard no-Python-numerical-verification
+rule.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

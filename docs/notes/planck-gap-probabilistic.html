@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The probabilistic Planck gap: τΔ E≥(1-2ε)2ħ2/(4A), and why it is resource-relative</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The probabilistic Planck gap: <span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, and why it is
+resource-relative</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/planck-gap-probabilistic.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-probabilistic.pdf">PDF</a></p><p>The worst-case theorem of the <a
+href="planck-gap-derivation.html">derivation note</a> has no quantum
+instance. Its probabilistic replacement does, and it decides the
+universality question that the worst-case version left open. Let the
+apparatus confine the particle’s position spread to <span
+class="math inline">\(L\)</span> and its momentum spread to <span
+class="math inline">\(P\)</span>, and set <span
+class="math inline">\(A=LP\)</span>, the phase-space area available to a
+preparation; the uncertainty relation forces <span
+class="math inline">\(A\ge\hbar/2\)</span>. Then for
+<strong>every</strong> protocol of quantum instruments, of any number,
+at any times, with any intermediate outcomes and any final measurement,
+distinguishing the falling from the inertial hypothesis with error
+probability at most <span class="math inline">\(\epsilon\)</span>
+requires</p>
+<p><span class="math display">\[\boxed{\frac{F\tau
+L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge1-2\epsilon,
+\qquad\text{hence}\qquad
+\tau\Delta
+E=\frac{F^2\tau^3}{2m}\ge\frac{(1-2\epsilon)^2\hbar^2}{4A},}\]</span></p>
+<p>the second form after optimizing the apparatus shape at fixed <span
+class="math inline">\(A\)</span> (Theorem 2, Corollary 3). At the
+minimal area <span class="math inline">\(A=\hbar/2\)</span> this is
+<span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar/2\)</span>, the same combination <span
+class="math inline">\(F^2\tau^3/m\)</span> that Newton’s geometry sends
+to zero and that the classical theorem bounds by the marks’ phase-space
+cost. A single-shot protocol obeys the sharper condition with <span
+class="math inline">\(1-2\epsilon\)</span> replaced by <span
+class="math inline">\(\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span>,
+which is <span class="math inline">\(\pi/2\)</span> at <span
+class="math inline">\(\epsilon=0\)</span> (Theorem 1).</p>
+<p><strong>The universality question is decided, and the answer is
+negative without the resource bound.</strong> For every <span
+class="math inline">\(\tau\Delta E&gt;0\)</span> there is a preparation
+and a measurement distinguishing the hypotheses with error probability
+<span class="math inline">\(O(\tau\Delta E/\hbar)\)</span>, built from
+two narrow packets separated by <span
+class="math inline">\(d=\pi\hbar/(F\tau)\)</span> (Proposition 4). The
+separation grows without bound as the force shrinks, saturating Theorem
+2, so the theorem is tight in <span class="math inline">\(L\)</span> and
+the failure of universality is exactly the failure of confinement.
+Protocol-universality over instruments survives in full; universality
+over preparations fails. Ozawa’s measurements breaking the standard
+quantum limit for free-mass position belong to the same phenomenon and
+are covered by the resource-relative statement.</p>
+<p>Methods are standard: Mandelstam–Tamm for the single-shot bound, a
+telescoping hybrid argument for the many-instrument case. The
+contribution is the protocol-universal statement in the Galileo geometry
+with explicit constants, and a counterexample that matches it.
+Exploratory; no ledger promotion.</p>
+<h2 id="the-two-hypotheses-differ-by-a-phase-space-displacement">1. The
+two hypotheses differ by a phase-space displacement</h2>
+<p>Transverse coordinate <span class="math inline">\(\hat y\)</span>,
+momentum <span class="math inline">\(\hat p\)</span>, mass <span
+class="math inline">\(m&gt;0\)</span>, on <span
+class="math inline">\([0,\tau]\)</span>. Hypothesis <span
+class="math inline">\(\mathrm I\)</span> evolves with <span
+class="math inline">\(H_{\mathrm I}=\hat p^2/2m\)</span>; hypothesis
+<span class="math inline">\(\mathrm F\)</span> with <span
+class="math inline">\(H_{\mathrm F}=\hat p^2/2m-F\hat y\)</span>.
+Write</p>
+<p><span
+class="math display">\[D(a,b)=\exp\!\left[\frac{i}{\hbar}\left(b\hat
+y-a\hat p\right)\right],
+\qquad D^\dagger\hat yD=\hat y+a,\qquad D^\dagger\hat pD=\hat p+b
+.\]</span></p>
+<p><strong>Lemma 1.</strong> <span class="math inline">\(W(t)=U_{\mathrm
+I}(t)^\dagger U_{\mathrm F}(t)
+=e^{i\varphi(t)}D\!\left(\alpha(t),\beta(t)\right)\)</span> with</p>
+<p><span class="math display">\[\alpha(t)=-\frac{Ft^2}{2m},\qquad
+\beta(t)=Ft,\]</span></p>
+<p>and a real phase <span class="math inline">\(\varphi\)</span>.</p>
+<p><em>Proof.</em> Under <span class="math inline">\(H_{\mathrm
+F}\)</span> the Heisenberg operators are <span
+class="math inline">\(\hat y(t)=\hat y+\hat pt/m+Ft^2/2m\)</span> and
+<span class="math inline">\(\hat p(t)=\hat p+Ft\)</span>, so <span
+class="math inline">\(U_{\mathrm
+F}(t)=e^{i\varphi}D(Ft^2/2m,Ft)\,U_{\mathrm I}(t)\)</span> for some
+phase. Free evolution conjugates a displacement to a displacement, <span
+class="math inline">\(U_{\mathrm I}(t)^\dagger D(a,b)U_{\mathrm
+I}(t)=D(a-bt/m,b)\)</span>, and <span
+class="math inline">\(Ft^2/2m-Ft\cdot t/m=-Ft^2/2m\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The product of the two components is the programme’s combination:</p>
+<p><span
+class="math display">\[|\alpha(\tau)\beta(\tau)|=\frac{F\tau^2}{2m}\cdot
+F\tau
+=\frac{F^2\tau^3}{2m}=\tau\Delta E=\frac{3F}{v}A_{\rm
+inertial,fall},\]</span></p>
+<p>with <span class="math inline">\(\Delta E=F^2\tau^2/2m\)</span> and
+the area of <a href="newton-insertion-action.html">N01</a>. The
+displacement’s position component is the sagitta of Lemma X and its
+momentum component is the accumulated impulse of Proposition I.</p>
+<p><strong>Resource bound.</strong> The apparatus is said to have
+<strong>aperture</strong> <span class="math inline">\((L,P)\)</span>
+when every state occurring in the experiment satisfies <span
+class="math inline">\(\Delta_\psi\hat y\le L\)</span> and <span
+class="math inline">\(\Delta_\psi\hat p\le P\)</span>, where <span
+class="math inline">\(\Delta_\psi X=\|(X-\langle
+X\rangle_\psi)\psi\|\)</span>. Confinement to a region of diameter <span
+class="math inline">\(2L\)</span> and to momenta of modulus at most
+<span class="math inline">\(P\)</span> gives this for every state at
+once. Set <span class="math inline">\(A=LP\)</span>; since <span
+class="math inline">\(\Delta\hat y\,\Delta\hat p\ge\hbar/2\)</span> for
+any state that occurs, <span
+class="math inline">\(A\ge\hbar/2\)</span>.</p>
+<h2 id="single-shot">2. Single shot</h2>
+<p><strong>Theorem 1.</strong> Let the preparation be a pure state <span
+class="math inline">\(\psi\)</span> with <span
+class="math inline">\(\Delta_\psi\hat y\le L\)</span> and <span
+class="math inline">\(\Delta_\psi\hat p\le P\)</span>, let the two
+hypotheses run undisturbed on <span
+class="math inline">\([0,\tau]\)</span>, and let any measurement on the
+final state decide between them with equal priors and error probability
+at most <span class="math inline">\(\epsilon&lt;1/2\)</span>. Then</p>
+<p><span class="math display">\[\frac{F\tau
+L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\
+\theta(\epsilon):=\arccos\!\left(2\sqrt{\epsilon(1-\epsilon)}\right),
+\qquad\theta(0)=\frac\pi2 .\]</span></p>
+<p><em>Proof.</em> The two final states are <span
+class="math inline">\(U_{\mathrm I}\psi\)</span> and <span
+class="math inline">\(U_{\mathrm F}\psi=e^{i\varphi}U_{\mathrm
+I}D(\alpha,\beta)\psi\)</span> by Lemma 1 with <span
+class="math inline">\(\alpha=\alpha(\tau)\)</span>, <span
+class="math inline">\(\beta=\beta(\tau)\)</span>; a common unitary and a
+global phase change no error probability, so the task is to distinguish
+<span class="math inline">\(\psi\)</span> from <span
+class="math inline">\(D(\alpha,\beta)\psi\)</span>. Helstrom’s bound for
+two pure states with equal priors gives <span
+class="math inline">\(\epsilon\ge\frac12\bigl(1-\sqrt{1-|\langle\psi|D|\psi\rangle|^2}\bigr)\)</span>,
+so <span
+class="math inline">\(|\langle\psi|D|\psi\rangle|\le2\sqrt{\epsilon(1-\epsilon)}\)</span>.
+Write <span class="math inline">\(D=e^{-iG}\)</span> with <span
+class="math inline">\(G=-(\beta\hat y-\alpha\hat p)/\hbar\)</span>. The
+Mandelstam–Tamm bound in its geometric form states that the Fubini–Study
+angle between <span class="math inline">\(\psi\)</span> and <span
+class="math inline">\(e^{-isG}\psi\)</span> grows at rate at most <span
+class="math inline">\(\Delta_\psi G\)</span>, so <span
+class="math inline">\(|\langle\psi|e^{-iG}|\psi\rangle|\ge\cos(\Delta_\psi
+G)\)</span> whenever <span class="math inline">\(\Delta_\psi
+G\le\pi/2\)</span>. Hence either <span class="math inline">\(\Delta_\psi
+G&gt;\pi/2\ge\theta(\epsilon)\)</span>, or <span
+class="math inline">\(\cos(\Delta_\psi
+G)\le2\sqrt{\epsilon(1-\epsilon)}\)</span> and again <span
+class="math inline">\(\Delta_\psi G\ge\theta(\epsilon)\)</span>. Finally
+<span class="math inline">\(\Delta_\psi\)</span> is a seminorm on
+observables, being the norm of the centred operator applied to <span
+class="math inline">\(\psi\)</span>, so</p>
+<p><span class="math display">\[\Delta_\psi
+G\le\frac{|\beta|\Delta_\psi\hat y+|\alpha|\Delta_\psi\hat p}{\hbar}
+\le\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}.
+\qquad\square\]</span></p>
+<p>The bound uses no measurement model: it holds for every final
+measurement, optimal or not, and it is a statement about the two states
+alone.</p>
+<h2 id="every-protocol-of-instruments">3. Every protocol of
+instruments</h2>
+<p><strong>Theorem 2.</strong> Let instruments <span
+class="math inline">\(M_1,\dots,M_k\)</span> act at times <span
+class="math inline">\(0&lt;t_1&lt;\dots&lt;t_k\le\tau\)</span>, each
+with rank-one Kraus operators, identical under the two hypotheses, with
+arbitrary dependence of later instruments on earlier outcomes, followed
+by any final measurement. Let the apparatus have aperture <span
+class="math inline">\((L,P)\)</span>, in the sense that every
+conditional state arising in the protocol satisfies the two spread
+bounds. If the full record decides between the hypotheses with equal
+priors and error probability at most <span
+class="math inline">\(\epsilon\)</span>, then</p>
+<p><span class="math display">\[\frac{F\tau
+L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon .\]</span></p>
+<p><em>Proof.</em> Pass to the interaction picture of <span
+class="math inline">\(U_{\mathrm I}\)</span>, absorbing the free
+evolution into the instruments, so that under <span
+class="math inline">\(\mathrm I\)</span> the state is unchanged between
+instruments and under <span class="math inline">\(\mathrm F\)</span> it
+is acted on, between <span class="math inline">\(t_{r-1}\)</span> and
+<span class="math inline">\(t_r\)</span>, by <span
+class="math inline">\(V_r=W(t_r)W(t_{r-1})^\dagger=e^{i\varphi_r}D(\Delta\alpha_r,\Delta\beta_r)\)</span>
+with <span
+class="math inline">\(\Delta\alpha_r=\alpha(t_r)-\alpha(t_{r-1})\)</span>
+and <span
+class="math inline">\(\Delta\beta_r=\beta(t_r)-\beta(t_{r-1})\)</span>,
+using Lemma 1 and the composition of displacements up to phase; set
+<span class="math inline">\(t_0=0\)</span> and let <span
+class="math inline">\(r=1,\dots,k+1\)</span> with <span
+class="math inline">\(t_{k+1}=\tau\)</span>.</p>
+<p>Let <span class="math inline">\(P_{\mathrm I}\)</span> and <span
+class="math inline">\(P_{\mathrm F}\)</span> be the distributions of the
+full record. Define hybrid processes <span
+class="math inline">\(H_0,\dots,H_{k+1}\)</span>, where <span
+class="math inline">\(H_s\)</span> applies <span
+class="math inline">\(V_r\)</span> for <span class="math inline">\(r\le
+s\)</span> and the identity for <span
+class="math inline">\(r&gt;s\)</span>; then <span
+class="math inline">\(H_0=\mathrm I\)</span> and <span
+class="math inline">\(H_{k+1}=\mathrm F\)</span>. Consecutive hybrids
+differ by one insertion of <span class="math inline">\(V_s\)</span> into
+an otherwise identical sequence, so by the triangle inequality for total
+variation and the data-processing inequality for the common remainder of
+the protocol,</p>
+<p><span class="math display">\[\mathrm{TV}(P_{\mathrm I},P_{\mathrm
+F})\le\sum_{s}
+\mathrm{TV}(P_{H_{s-1}},P_{H_s})\le\sum_s\ \sup_{\sigma}\
+\tfrac12\bigl\|\sigma-V_s\sigma V_s^\dagger\bigr\|_1,\]</span></p>
+<p>the supremum over the conditional states <span
+class="math inline">\(\sigma\)</span> reachable at step <span
+class="math inline">\(s\)</span>. Each such <span
+class="math inline">\(\sigma\)</span> is pure, the Kraus operators
+having rank one, so <span
+class="math inline">\(\tfrac12\|\sigma-V_s\sigma V_s^\dagger\|_1
+=\sqrt{1-|\langle\sigma|V_s|\sigma\rangle|^2}\le\sin(\Delta_\sigma
+G_s)\le\Delta_\sigma G_s\)</span> when <span
+class="math inline">\(\Delta_\sigma G_s\le\pi/2\)</span>, by
+Mandelstam–Tamm as in Theorem 1, and the left side is at most <span
+class="math inline">\(1\le\Delta_\sigma G_s\cdot(2/\pi)^{-1}\)</span>
+otherwise; in both cases it is at most <span
+class="math inline">\(\Delta_\sigma G_s\)</span>. Therefore</p>
+<p><span class="math display">\[\mathrm{TV}(P_{\mathrm I},P_{\mathrm
+F})\le\sum_s
+\frac{|\Delta\beta_s|L+|\Delta\alpha_s|P}{\hbar}
+=\frac{L\sum_s|\Delta\beta_s|+P\sum_s|\Delta\alpha_s|}{\hbar}.\]</span></p>
+<p>Both <span class="math inline">\(\alpha(t)=-Ft^2/2m\)</span> and
+<span class="math inline">\(\beta(t)=Ft\)</span> are monotone on <span
+class="math inline">\([0,\tau]\)</span>, so the increments telescope in
+absolute value: <span
+class="math inline">\(\sum_s|\Delta\beta_s|=F\tau\)</span> and <span
+class="math inline">\(\sum_s|\Delta\alpha_s|=F\tau^2/2m\)</span>,
+<strong>independently of the number of instruments and of their
+times</strong>. An equal-prior test with error probability at most <span
+class="math inline">\(\epsilon\)</span> has <span
+class="math inline">\(\mathrm{TV}(P_{\mathrm I},P_{\mathrm
+F})\ge1-2\epsilon\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The monotonicity of <span class="math inline">\(\alpha\)</span> and
+<span class="math inline">\(\beta\)</span> is the whole of
+protocol-universality. Inserting marks subdivides the displacement
+without enlarging its total variation, so a protocol with a thousand
+instruments faces the same budget as one with none. This is the
+probabilistic counterpart of Corollary 4 of the derivation note, and it
+is the point at which the present framework answers Ozawa: an instrument
+whose disturbance is correlated with its outcome changes the conditional
+states <span class="math inline">\(\sigma\)</span>, and therefore
+matters only through the apertures <span
+class="math inline">\(L\)</span> and <span
+class="math inline">\(P\)</span> that those states respect.</p>
+<p><strong>Corollary 3 (the floor).</strong> Under Theorem 2, with <span
+class="math inline">\(A=LP\)</span> fixed and the aperture shape
+free,</p>
+<p><span class="math display">\[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\
+\frac{(1-2\epsilon)^2\hbar^2}{4A},
+\qquad\text{and at }A=\frac\hbar2:\quad
+\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar}{2}.\]</span></p>
+<p><em>Proof.</em> Theorem 2 gives <span
+class="math inline">\(F\ge2m\hbar(1-2\epsilon)/[\tau(2mL+\tau
+P)]\)</span>, so <span class="math inline">\(\tau\Delta
+E\ge2m\hbar^2(1-2\epsilon)^2\tau/(2mL+\tau P)^2\)</span>. At fixed <span
+class="math inline">\(A=LP\)</span> the denominator <span
+class="math inline">\(2mL+\tau A/L\)</span> is minimized at <span
+class="math inline">\(L=\sqrt{\tau A/2m}\)</span> with value <span
+class="math inline">\(2\sqrt{2m\tau A}\)</span>, whose square is <span
+class="math inline">\(8m\tau A\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>A larger aperture lowers the floor, and the floor is positive exactly
+when the aperture is bounded. The maximum of the floor over apertures is
+attained at the smallest one the uncertainty relation allows, and equals
+<span class="math inline">\(\hbar/2\)</span> as <span
+class="math inline">\(\epsilon\to0\)</span>.</p>
+<h2 id="the-counterexample-universality-fails-without-the-aperture">4.
+The counterexample: universality fails without the aperture</h2>
+<p><strong>Proposition 4.</strong> Fix <span
+class="math inline">\(m,F,\tau&gt;0\)</span> and put <span
+class="math inline">\(\eta=\tau\Delta E/\hbar\)</span>. For every <span
+class="math inline">\(\eta&lt;1\)</span> there are a pure preparation
+and a final measurement distinguishing the hypotheses with error
+probability at most <span class="math inline">\(C\eta\)</span> for an
+absolute constant <span class="math inline">\(C\)</span>. The
+preparation has position spread of order <span
+class="math inline">\(\hbar/(F\tau)\)</span>, which diverges as <span
+class="math inline">\(\eta\to0\)</span> at fixed <span
+class="math inline">\(\tau\)</span> and <span
+class="math inline">\(m\)</span>.</p>
+<p><em>Proof.</em> Write <span
+class="math inline">\(\alpha=F\tau^2/2m\)</span> and <span
+class="math inline">\(\beta=F\tau\)</span>, so <span
+class="math inline">\(\alpha\beta=\tau\Delta E=\eta\hbar\)</span>. Let
+<span class="math inline">\(\chi\)</span> be a fixed real normalized
+profile supported in <span class="math inline">\([-1/2,1/2]\)</span>
+with <span class="math inline">\(\|\chi&#39;\|_2&lt;\infty\)</span>, and
+set</p>
+<p><span
+class="math display">\[\psi=\frac{1}{\sqrt2}\left(\chi_++\chi_-\right),\qquad
+\chi_\pm(y)=w^{-1/2}\chi\!\left(\frac{y\mp d/2}{w}\right),\qquad
+d=\frac{\pi\hbar}{\beta},\qquad w=\sqrt{\frac{\alpha\hbar}{\beta}}
+.\]</span></p>
+<p>Then <span
+class="math inline">\(w/d=\sqrt{\alpha\beta/\hbar}/\pi=\sqrt\eta/\pi\)</span>
+and <span
+class="math inline">\(\alpha/w=\sqrt{\alpha\beta/\hbar}=\sqrt\eta\)</span>,
+so for <span class="math inline">\(\eta&lt;1\)</span> the two packets
+are disjoint and the displacement is small compared with the packet
+width. Up to a global phase, <span
+class="math inline">\((D(\alpha,\beta)\psi)(y)=e^{i\beta(y-\alpha/2)/\hbar}\psi(y-\alpha)\)</span>.
+Since the supports of <span class="math inline">\(\chi_+\)</span> and
+<span class="math inline">\(\chi_-\)</span> are separated by <span
+class="math inline">\(d-w&gt;d/2\)</span> while the shift is <span
+class="math inline">\(\alpha&lt;w\)</span>, the cross terms vanish
+and</p>
+<p><span
+class="math display">\[\langle\psi|D|\psi\rangle=\frac12\sum_{\pm}e^{\pm
+i\beta d/(2\hbar)}
+\int \overline{\chi_\pm(y)}\,e^{i\beta(y\mp
+d/2)/\hbar}\chi_\pm(y-\alpha)\,dy .\]</span></p>
+<p>With <span class="math inline">\(d=\pi\hbar/\beta\)</span> the two
+prefactors are <span class="math inline">\(e^{\pm i\pi/2}\)</span> and
+cancel the leading terms, leaving the two residuals. Each residual
+integral differs from <span class="math inline">\(1\)</span> by at most
+<span class="math inline">\(\|\chi(\cdot)-\chi(\cdot-\alpha/w)\|_2
++\beta w/\hbar\le(\alpha/w)\|\chi&#39;\|_2+\beta w/\hbar\)</span>,
+so</p>
+<p><span
+class="math display">\[|\langle\psi|D|\psi\rangle|\le\frac{\alpha}{w}\|\chi&#39;\|_2+\frac{\beta
+w}{\hbar}
+=\sqrt\eta\left(\|\chi&#39;\|_2+1\right).\]</span></p>
+<p>Helstrom’s optimal test then has error probability <span
+class="math inline">\(\frac12(1-\sqrt{1-|\langle\psi|D|\psi\rangle|^2})\le\frac14|\langle\psi|D|\psi\rangle|^2
+\le C\eta\)</span> with <span
+class="math inline">\(C=(\|\chi&#39;\|_2+1)^2/4\)</span>. The position
+spread of <span class="math inline">\(\psi\)</span> is <span
+class="math inline">\(d/2+O(w)=\pi\hbar/(2F\tau)+O(w)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The counterexample saturates Theorem 2. Its aperture has <span
+class="math inline">\(L\simeq\pi\hbar/(2F\tau)\)</span>, for which the
+first term of the theorem’s left side is about <span
+class="math inline">\(\pi/2\)</span>, so the necessary condition is met
+with no room to spare. The momentum spread is of order <span
+class="math inline">\(\hbar/w=\sqrt{2m\hbar/\tau}\)</span>, which stays
+bounded as <span class="math inline">\(\eta\to0\)</span>; the diverging
+resource is the separation, not the energy. So the obstruction to
+reading Newton’s shrinking sagitta is a bound on <strong>how large the
+apparatus may be</strong>, and a laboratory of unbounded extent has no
+Planck gap in this comparison.</p>
+<h2 id="position-against-the-standard-quantum-limit">5. Position against
+the standard quantum limit</h2>
+<p>The combination <span class="math inline">\(F^2\tau^3\gtrsim
+m\hbar\)</span> is the standard quantum limit for detecting a force on a
+free mass (<a href="https://doi.org/10.1017/CBO9780511622748">Braginsky
+and Khalili, <em>Quantum Measurement</em>, 1992</a>, metadata). Its
+status has been disputed since Yuen’s objection: <a
+href="https://doi.org/10.1103/PhysRevLett.54.2465">Caves defended it</a>
+(PRL <strong>54</strong>, 2465, 1985, abstract) and <a
+href="https://doi.org/10.1103/PhysRevLett.60.385">Ozawa exhibited a
+measurement breaking it for free-mass position</a> (PRL
+<strong>60</strong>, 385, 1988, abstract). The present statement is not
+a new bound of that kind and does not adjudicate that dispute on its own
+terms. Three differences fix its place.</p>
+<ul>
+<li><strong>Universality over protocols is proved, not assumed.</strong>
+The usual derivations fix a monitoring scheme and balance its
+imprecision against its back-action. Theorem 2 quantifies over all
+finite sequences of instruments with arbitrary adaptivity, and the
+reason it can is structural: the signal enters as a phase-space path of
+bounded total variation, and subdividing a path does not lengthen
+it.</li>
+<li><strong>The resource is named and the bound is tight in it.</strong>
+Ozawa’s construction and Proposition 4 both buy distinguishability with
+preparations of large phase-space extent. Corollary 3 prices that
+exchange as <span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, and Proposition 4 shows the
+price is right, so the standard quantum limit appears here as the
+special case <span class="math inline">\(A=\hbar/2\)</span> rather than
+as a law.</li>
+<li><strong>The criterion is hypothesis testing, not
+estimation.</strong> The quantity bounded is the error probability of
+deciding between two known histories, which is the question Newton’s
+geometry asks, and not the variance of an estimate of <span
+class="math inline">\(F\)</span>.</li>
+</ul>
+<p>Relative to the error–disturbance literature, the argument uses no
+such relation. It uses only Mandelstam–Tamm and the uncertainty relation
+through <span class="math inline">\(A\ge\hbar/2\)</span>, which is why
+the contested calibration questions of Ozawa and of <a
+href="https://doi.org/10.1103/PhysRevLett.111.160405">Busch, Lahti and
+Werner</a> (PRL <strong>111</strong>, 160405, 2013, abstract) do not
+enter.</p>
+<h2 id="what-this-settles-for-the-programme">6. What this settles for
+the programme</h2>
+<p>Against the classical theorem of the <a
+href="planck-gap-derivation.html">derivation note</a> the parallel is
+exact in form and opposite in direction. Classically the floor of the
+recorded comparison is <span class="math inline">\(\tau\Delta
+E\ge\frac92\kappa\)</span>, with <span
+class="math inline">\(\kappa=\delta\Delta\)</span> the phase-space cost
+of a single mark, so <strong>coarser marks raise the floor</strong>.
+Quantum mechanically the floor is <span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, with <span
+class="math inline">\(A\)</span> the phase-space aperture of the
+apparatus, so <strong>a larger laboratory lowers it</strong>. The two
+meet where the aperture is as small as the uncertainty relation permits:
+there <span class="math inline">\(A=\hbar/2\)</span> and the floor is
+<span class="math inline">\(\hbar/2\)</span>, which is the order of the
+value <span class="math inline">\(\kappa=\Lambda p=h/2\)</span> that
+Newton’s interval of fits and corpuscle impulse supply in the <a
+href="newton-mark-floor.html">mark-floor note</a>.</p>
+<p>The Newton-age reading is therefore sharper than before. Newton’s
+limit in Lemmas X and XI takes the sagitta and the swept area to zero,
+and nothing in the geometry stops it. What stops the <em>recorded</em>
+comparison is the phase-space area of the apparatus, and the two
+Newtonian quantities that enter are precisely the two components of the
+displacement: the sagitta <span
+class="math inline">\(F\tau^2/2m\)</span> against the momentum spread,
+and the impulse <span class="math inline">\(F\tau\)</span> of
+Proposition I against the position spread. Newton had both quantities
+and had no reason to pair them with spreads of anything.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The goal of proving the probabilistic form is discharged. Theorem 1
+gives the single-shot bound with the sharp constant <span
+class="math inline">\(\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span>,
+Theorem 2 extends it to every finite adaptive protocol of rank-one
+instruments with the constant <span
+class="math inline">\(1-2\epsilon\)</span>, Corollary 3 converts it to
+the floor <span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, and Proposition 4 decides the
+universality question: universality over instruments holds, and
+universality over preparations fails, with an explicit family that
+saturates the theorem. Positioning against the standard quantum limit is
+in Section 5, and no error–disturbance relation is used.</p>
+<p>Open, in order:</p>
+<ol type="1">
+<li><strong>Mixed conditional states.</strong> Theorem 2 assumes
+rank-one Kraus operators so that every conditional state is pure. The
+extension needs a bound on <span class="math inline">\(\|\sigma-V\sigma
+V^\dagger\|_1\)</span> for mixed <span
+class="math inline">\(\sigma\)</span> in terms of a spread, where the
+natural route is a purification with the aperture imposed on the
+purified state.</li>
+<li><strong>The sharp constant.</strong> Theorem 1 gives <span
+class="math inline">\(\theta(\epsilon)\)</span> and Theorem 2 gives
+<span class="math inline">\(1-2\epsilon\)</span> for the same quantity;
+the gap between them is an artifact of the telescoping step, and closing
+it would also close the interval <span
+class="math inline">\([9,36]\)</span> left by the classical
+theorem.</li>
+<li><strong>The general force law.</strong> Both theorems use only that
+the phase-space path <span
+class="math inline">\(t\mapsto(\alpha(t),\beta(t))\)</span> has total
+variation <span class="math inline">\(F\tau^2/2m\)</span> and <span
+class="math inline">\(F\tau\)</span> in its two components. For a
+general force the statement is that the two total variations, weighted
+by <span class="math inline">\(P\)</span> and <span
+class="math inline">\(L\)</span>, must exceed <span
+class="math inline">\(\hbar(1-2\epsilon)\)</span>; the constant-force
+case is then one evaluation.</li>
+<li><strong>Publication.</strong> With Section 5 in place the
+foundations paper has its positioning; what remains before submission is
+item 1, item 2 and a literature pass on resource-bounded quantum
+metrology, where a bound of the shape of Corollary 3 may already exist
+for estimation rather than testing.</li>
+</ol>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

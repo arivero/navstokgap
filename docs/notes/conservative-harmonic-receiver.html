@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A conservative receiver and the origin of a correlation scale</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A conservative receiver and the origin of a correlation scale</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/conservative-harmonic-receiver.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/conservative-harmonic-receiver.pdf">PDF</a></p><p>A finite harmonic receiver has a vanishing long-window action
+observable at fixed centre velocity. An increasing periodic chain
+instead has plateau <span
+class="math inline">\(\Theta\sqrt{m/k}\)</span> when its size tends to
+infinity first, with mode energy <span
+class="math inline">\(\Theta\)</span> and spring stiffness <span
+class="math inline">\(k\)</span>. A common hard particle-speed ceiling
+on the stated phase preparation forces this plateau to close. The
+comparison locates the positive scale in the low-frequency weights and
+energy preparation.</p>
+<h2 id="hamiltonian-and-invariant-preparation">1. Hamiltonian and
+invariant preparation</h2>
+<p>Let <span class="math inline">\(x,p\in\mathbb R^n\)</span>, <span
+class="math inline">\(n\ge2\)</span>, <span
+class="math inline">\(M=\operatorname{diag}(m_1,\ldots,m_n)\)</span>
+with <span class="math inline">\(m_i&gt;0\)</span>, and let <span
+class="math inline">\(K\)</span> be a connected spring-network
+Laplacian. Thus <span class="math inline">\(K=K^T\ge0\)</span> and <span
+class="math inline">\(\ker K=\operatorname{span}\{\mathbf1\}\)</span>.
+The Hamiltonian and equations are</p>
+<p><span class="math display">\[
+\mathcal H=\tfrac12p^TM^{-1}p+\tfrac12x^TKx,\qquad
+\dot x=M^{-1}p,\quad\dot p=-Kx.
+\]</span></p>
+<p>Energy and total momentum are conserved. These linear equations give
+global smooth trajectories. Write <span
+class="math inline">\(D=M^{-1/2}KM^{-1/2}\)</span> and choose an
+orthonormal eigenbasis <span
+class="math inline">\(e_0,e_1,\ldots,e_{n-1}\)</span>, with <span
+class="math inline">\(e_0=M^{1/2}\mathbf1/\sqrt{M_{\rm tot}}\)</span>
+and positive eigenvalues <span class="math inline">\(\omega_j^2\)</span>
+for <span class="math inline">\(j\ge1\)</span>. Define canonical
+coordinates <span class="math inline">\(q_j=e_j^TM^{1/2}x\)</span>,
+<span class="math inline">\(P_j=e_j^TM^{-1/2}p\)</span>.</p>
+<p>Fix centre velocity <span class="math inline">\(V_0=0\)</span> and
+centre position. Assign internal mode energies <span
+class="math inline">\(E_j\ge0\)</span>, and independent phases <span
+class="math inline">\(\phi_j\)</span> uniform on <span
+class="math inline">\([0,2\pi)\)</span>. Then</p>
+<p><span class="math display">\[
+q_j(t)=\frac{\sqrt{2E_j}}{\omega_j}\cos(\omega_jt+\phi_j),\qquad
+P_j(t)=-\sqrt{2E_j}\sin(\omega_jt+\phi_j).
+\]</span></p>
+<p>This is an invariant probability ensemble on the internal phase tori,
+even when frequencies are commensurate. It is a preparation, not a
+mixing premise. The total energy is <span
+class="math inline">\(E=\sum_jE_j\)</span>, so <span
+class="math inline">\(|\dot x_i|\le\sqrt{2E/m_i}\)</span> for every
+trajectory. Choosing <span class="math inline">\(E&lt;\tfrac12(\min_i
+m_i)c^2\)</span> puts all particles below <span
+class="math inline">\(c\)</span> in this frame. These are Newtonian
+springs with a speed-bounded preparation; propagation of signals and
+Lorentz covariance are separate model requirements.</p>
+<h2 id="exact-action-observable-and-its-limits-c047">2. Exact action
+observable and its limits (C047)</h2>
+<p>For tagged particle <span class="math inline">\(i\)</span>, let <span
+class="math inline">\(b_{ij}=e_{ji}/\sqrt{m_i}\)</span>, where <span
+class="math inline">\(e_{ji}\)</span> denotes component <span
+class="math inline">\(i\)</span> of vector <span
+class="math inline">\(e_j\)</span>. Then <span
+class="math inline">\(v_i(t)=\sum_{j\ge1}b_{ij}P_j(t)\)</span> has zero
+mean and covariance</p>
+<p><span class="math display">\[
+C_i(t)=\sum_{j\ge1}w_{ij}\cos(\omega_jt),\qquad
+w_{ij}=b_{ij}^2E_j\ge0.
+\]</span></p>
+<p>Phase averaging gives this identity: distinct modes have zero cross
+covariance, and one phase has <span class="math inline">\(\mathbb
+E[P_j(t)P_j(0)]=E_j\cos(\omega_jt)\)</span>. Integrating the covariance
+over the displacement square yields, for <span
+class="math inline">\(\Delta&gt;0\)</span>,</p>
+<p><span class="math display">\[
+\mathsf h_i(\Delta)=\frac{m_i}{\Delta}
+\operatorname{Var}[x_i(t+\Delta)-x_i(t)]
+=\frac{2m_i}{\Delta}\sum_{j\ge1}
+\frac{w_{ij}}{\omega_j^2}[1-\cos(\omega_j\Delta)].
+\]</span></p>
+<p>The observable has action units and is independent of preparation
+time <span class="math inline">\(t\)</span>. Set <span
+class="math inline">\(B_i=\sum_jw_{ij}/\omega_j^2\)</span>, with units
+of length squared. Then</p>
+<p><span class="math display">\[
+0\le\mathsf h_i(\Delta)\le\frac{4m_iB_i}{\Delta}\longrightarrow0
+\quad(\Delta\to\infty).
+\]</span></p>
+<p>At short windows, <span class="math inline">\(\mathsf
+h_i(\Delta)=m_iC_i(0)\Delta+O(\Delta^3)\)</span>. The finite cosine
+correlation has persistent memory; its ordinary improper Green–Kubo
+integral need not exist. The finite-window formula above supplies the
+relevant limit directly, without replacing the Hamiltonian dynamics by a
+reversible dissipative generator.</p>
+<h2 id="centre-motion-and-the-two-body-receiver-c047">3. Centre motion
+and the two-body receiver (C047)</h2>
+<p>An independent random constant centre velocity with variance <span
+class="math inline">\(\sigma_0^2\)</span> adds <span
+class="math inline">\(m_i\sigma_0^2\Delta\)</span> to <span
+class="math inline">\(\mathsf h_i\)</span>. This follows from <span
+class="math inline">\(x_i(t+\Delta)-x_i(t)=V_0\Delta+\)</span> internal
+displacement. The velocity ensemble is stationary; for nonzero centre
+motion the absolute-position ensemble need not be. A deterministic
+centre velocity contributes zero to the variance and can be removed by a
+change of frame.</p>
+<p>For two particles of masses <span
+class="math inline">\(m,M_r\)</span> coupled by a spring <span
+class="math inline">\(k&gt;0\)</span>, put <span
+class="math inline">\(\mu=mM_r/(m+M_r)\)</span> and <span
+class="math inline">\(\omega^2=k/\mu\)</span>. At zero total momentum,
+<span class="math inline">\(x_1=R+[M_r/(m+M_r)]r\)</span>, and assign
+relative energy <span class="math inline">\(E\)</span> with uniform
+phase. The tagged response is</p>
+<p><span class="math display">\[
+\mathsf h_1(\Delta)=
+\frac{2mE}{k\Delta}\left(\frac{M_r}{m+M_r}\right)^2
+[1-\cos(\omega\Delta)].
+\]</span></p>
+<p>The spring is a genuine momentum receiver: <span
+class="math inline">\(m\ddot x_1=-kr\)</span> and <span
+class="math inline">\(M_r\ddot x_2=kr\)</span>. Its reversible exchange
+produces the oscillatory response rather than the exponential memory law
+supplied by A02’s refreshed bath. Scaling every <span
+class="math inline">\(E_j\)</span> by <span
+class="math inline">\(a^2\)</span>, <span
+class="math inline">\(0&lt;a\le1\)</span>, scales the entire response by
+<span class="math inline">\(a^2\)</span> while preserving the equations,
+conservation laws and speed margin.</p>
+<h2 id="what-the-large-receiver-test-must-change-c047">4. What the
+large-receiver test must change (C047)</h2>
+<p>For a sequence of receivers and windows <span
+class="math inline">\(\Delta_N\to\infty\)</span>, the bound <span
+class="math inline">\(\mathsf
+h_{i,N}(\Delta_N)\le4m_{i,N}B_{i,N}/\Delta_N\)</span> shows that a
+positive limiting response requires this upper bound to stay positive.
+In particular, uniform control of <span
+class="math inline">\(m_{i,N}B_{i,N}\)</span> forces a zero limit. Soft
+modes can enlarge <span class="math inline">\(B_{i,N}\)</span>, but
+their weights depend on the measured coordinate and the preparation.
+This is the next selection test.</p>
+<p>The finite model yields no physical-time attraction from the
+invariant preparation: the observable already has no <span
+class="math inline">\(t\)</span> dependence. Next specify an increasing
+spring network, its energy allocation and tagged spectral measure, then
+compare taking receiver size and observation duration to infinity in
+opposite orders. Derive any surviving constant from these mechanical
+inputs. Mesh refinement of the same smooth trajectories is a third,
+distinct limit.</p>
+<h2 id="an-increasing-periodic-chain-c048">5. An increasing periodic
+chain (C048)</h2>
+<p>Take odd <span class="math inline">\(N\ge3\)</span> equal masses
+<span class="math inline">\(m\)</span> on a ring, with spring energy
+<span
+class="math inline">\(\frac{k}{2}\sum_{i=0}^{N-1}(x_{i+1}-x_i)^2\)</span>
+(indices modulo <span class="math inline">\(N\)</span>). Fix the centre
+position and momentum. Give every real internal normal mode energy <span
+class="math inline">\(\Theta&gt;0\)</span> and independent uniform
+phase. Here <span class="math inline">\(\Theta\)</span> is a preparation
+energy, and total energy is <span
+class="math inline">\((N-1)\Theta\)</span>. The mode frequencies and
+tagged covariance are</p>
+<p><span class="math display">\[
+\omega_j=\Omega\sin(\pi j/N),\quad \Omega=2\sqrt{k/m},\qquad
+C_N(t)=\frac{\Theta}{mN}\sum_{j=1}^{N-1}\cos(\omega_jt).
+\]</span></p>
+<p>The real sine/cosine eigenvectors have equal mode energies, so their
+paired squared components sum to <span
+class="math inline">\(2/N\)</span> at each site. Applying §2 gives</p>
+<p><span class="math display">\[
+h_N(\Delta)=\frac{2\Theta}{N\Delta}\sum_{j=1}^{N-1}
+\frac{1-\cos(\omega_j\Delta)}{\omega_j^2}.
+\]</span></p>
+<p>For each fixed <span class="math inline">\(\Delta\)</span>, this
+Riemann sum converges to</p>
+<p><span class="math display">\[
+h_\infty(\Delta)=\frac{2m}{\Delta}\int_0^\Omega
+\frac{1-\cos(\omega\Delta)}{\omega^2}\rho(\omega)\,d\omega,
+\quad \rho(\omega)=\frac{2\Theta}{\pi m\sqrt{\Omega^2-\omega^2}}.
+\]</span></p>
+<p>This is a statement about limits of tagged covariances and increment
+variances; it does not require a stationary absolute-position law for
+the infinite chain. The density is integrable at its upper edge and
+continuous at zero. Splitting at any fixed <span
+class="math inline">\(0&lt;a&lt;\Omega\)</span>, the contribution from
+<span class="math inline">\([a,\Omega]\)</span> is <span
+class="math inline">\(O(1/\Delta)\)</span>. In the lower interval
+substitute <span class="math inline">\(y=\omega\Delta\)</span>.
+Dominated convergence, using <span class="math inline">\((1-\cos
+y)/y^2\in L^1(0,\infty)\)</span> and bounded <span
+class="math inline">\(\rho\)</span> on <span
+class="math inline">\([0,a]\)</span>, gives</p>
+<p><span class="math display">\[
+\lim_{\Delta\to\infty}h_\infty(\Delta)
+=\pi m\rho(0)=\frac{2\Theta}{\Omega}=\Theta\sqrt{m/k}.
+\]</span></p>
+<p>The integral <span class="math inline">\(\int_0^\infty(1-\cos
+y)y^{-2}dy=\pi/2\)</span> follows by integration by parts and the
+Dirichlet sine integral. Thus</p>
+<p><span class="math display">\[
+\lim_{\Delta\to\infty}\lim_{N\to\infty}h_N(\Delta)=2\Theta/\Omega,
+\qquad
+\lim_{N\to\infty}\lim_{\Delta\to\infty}h_N(\Delta)=0.
+\]</span></p>
+<p>A joint regime is also explicit. Write <span
+class="math inline">\(f(z)=2(1-\cos
+z)/z^2=2\int_0^1(1-r)\cos(zr)\,dr\)</span> with <span
+class="math inline">\(f(0)=1\)</span>. Then <span
+class="math inline">\(|f&#39;|\le1/3\)</span>. The integrand <span
+class="math inline">\(\Theta\Delta f(\Omega\Delta\sin\pi x)\)</span> is
+Lipschitz with constant at most <span
+class="math inline">\(\pi\Theta\Omega\Delta^2/3\)</span>. A left Riemann
+sum error is at most that constant divided by <span
+class="math inline">\(2N\)</span>; removing its zero mode contributes
+<span class="math inline">\(\Theta\Delta/N\)</span>. Therefore</p>
+<p><span class="math display">\[
+|h_N(\Delta)-h_\infty(\Delta)|
+\le\frac{\pi\Theta\Omega\Delta^2}{6N}+\frac{\Theta\Delta}{N}.
+\]</span></p>
+<p>At fixed <span class="math inline">\(m,k,\Theta\)</span>, <span
+class="math inline">\(\Omega\Delta_N\to\infty\)</span> and <span
+class="math inline">\((\Omega\Delta_N)^2/N\to0\)</span> give the
+positive joint limit <span
+class="math inline">\(2\Theta/\Omega\)</span>. The action scale is
+selected by the input energy and spring timescale.</p>
+<h2 id="energy-and-a-common-speed-ceiling-c049">6. Energy and a common
+speed ceiling (C049)</h2>
+<p>The positive-plateau preparation has extensive total energy. Its
+phase support also contains increasingly large tagged velocities. At
+site zero use the standard real Fourier basis. Only the <span
+class="math inline">\((N-1)/2\)</span> cosine modes contribute; each has
+maximal velocity contribution <span
+class="math inline">\(2\sqrt{\Theta/(mN)}\)</span>. Phases can align, so
+the exact support maximum is</p>
+<p><span class="math display">\[
+\sup_{\phi}|v_0|=(N-1)\sqrt{\Theta/(mN)}.
+\]</span></p>
+<p>Every neighbourhood of the maximizing phases has positive preparation
+measure. A common ceiling <span class="math inline">\(|v_i|\le
+c\)</span> for all supported trajectories thus requires <span
+class="math inline">\(\Theta_N\le mc^2N/(N-1)^2=O(1/N)\)</span>. This is
+a necessary condition from one site; no sufficiency for all sites is
+inferred from that maximum.</p>
+<p>Both bounded total energy and this necessary speed condition close
+the response uniformly in the window. Indeed, <span
+class="math inline">\(1-\cos z\le z^2/2\)</span> gives <span
+class="math inline">\(h_N(\Delta)\le\Theta_N\Delta\)</span>. The
+identity <span class="math inline">\(\sum_{j=1}^{N-1}\csc^2(\pi
+j/N)=(N^2-1)/3\)</span> gives</p>
+<p><span class="math display">\[
+h_N(\Delta)\le
+\frac{4\Theta_N(N^2-1)}{3N\Omega^2\Delta},\qquad
+\sup_{\Delta&gt;0}h_N(\Delta)
+\le\frac{2\Theta_N}{\Omega}\sqrt{\frac{N^2-1}{3N}}.
+\]</span></p>
+<p>The trigonometric identity follows by differentiating <span
+class="math inline">\(\sum_{j=0}^{N-1}\cot(x+\pi j/N)=N\cot(Nx)\)</span>
+and subtracting the <span class="math inline">\(j=0\)</span> singularity
+as <span class="math inline">\(x\to0\)</span>. The last inequality uses
+<span class="math inline">\(\min(A\Delta,B/\Delta)\le\sqrt{AB}\)</span>.
+For <span class="math inline">\(\Theta_N=O(1/N)\)</span> the uniform
+bound tends to zero. Thus this explicit positive reservoir plateau uses
+a different preparation class from a family with a common strict
+particle-speed ceiling. Its dependence on <span
+class="math inline">\(\Theta\)</span> also leaves
+preparation-independent action selection open.</p>
+<h2 id="source-input-and-reproduction">7. Source input and
+reproduction</h2>
+<p>Ford–Kac–Mazur, printed p. 505, (2)–(5), supplies the matrix harmonic
+propagator. Their canonical preparation excludes zero eigenvalues at
+that stage; ours fixes the centre and uses compact fixed-energy phase
+tori. Zwanzig, p. 219, (21)–(24), supplies a complementary
+reduced-description route: eliminate harmonic bath coordinates to obtain
+a cosine memory kernel. That friction kernel differs from the tagged
+velocity covariance calculated here. Its continuum replacement must be
+propagated through the tracer equation before identifying a displacement
+coefficient.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B23.md">B23</a>
+records the established ingredients, derived finite-network consequence
+and bounded reading coverage. Historical modal, two-body and three-body
+checks accompany C047’s proof. C047 has coordinator proof review and a
+sequential Luna-low prior-art audit. Its limits concern the stated
+observable and preparation class.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B24.md">B24</a>
+audits §§5–6 against Ford–Kac–Mazur’s cyclic Fourier construction and
+its finite-sum/infinite-chain distinction, printed p. 506, (12)–(24).
+The tagged density, plateau and speed-support bounds are derived here
+with fixed-energy phases. Six exact identities, four finite ring
+spectrum/cosecant comparisons and four Riemann-bound tests were recorded
+before the hard no-Python-verification rule; the handoff records that
+history. The new uncommitted verification script and output were
+withdrawn under the rule. Current mathematical verification uses the
+written proofs and source review. The next mechanism must retain bounded
+velocities while supplying low-frequency response; its preparation
+dependence remains a separate selection test.</p>
+<h2 id="what-information-survives-a-cut">8. What information survives a
+cut?</h2>
+<p>The fixed-energy two-body receiver gives an exact cut-state
+countertest: position-only stationary conditional kernels fail
+composition, while retaining momentum restores it. Independently
+refreshing direction at every inserted cut preserves one-time position
+marginals but freezes terminal position as the mesh shrinks. These are
+C062–C063; the full maps and proof are in <a
+href="classical-cut-state.html">the cut-state note</a>, with the <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B33.md">B33
+audit</a>.</p>
+<p>With <span class="math inline">\(q=x-X\)</span>, <span
+class="math inline">\(\mu=mM/(m+M)\)</span>, <span
+class="math inline">\(\omega=\sqrt{k/\mu}\)</span> and <span
+class="math inline">\(A=\sqrt{2E/k}\)</span>, uniform phase on the
+energy ellipse gives the conditional one-segment positions</p>
+<p><span class="math display">\[q&#39;=q\cos\omega t\
+\pm\sqrt{A^2-q^2}\sin\omega t\]</span></p>
+<p>with equal weights. Thus the full mean after <span
+class="math inline">\(s+t\)</span> is <span
+class="math inline">\(q\cos\omega(s+t)\)</span>, whereas independent
+conditional composition gives <span class="math inline">\(q\cos\omega
+s\cos\omega t\)</span>. The missing interface variable is <span
+class="math inline">\(p_s=\mu\dot q_s\)</span> in <span
+class="math inline">\(q_{s+t}=q_s\cos\omega t+p_s\sin\omega
+t/(\mu\omega)\)</span>. It has momentum units. Keeping this full
+internal state composes exactly; marginalizing the true joint path law
+also preserves all cut restrictions.</p>
+<p>For <span class="math inline">\(N\)</span> independent resets at
+intervals <span class="math inline">\(T/N\)</span>, direct iteration
+gives</p>
+<p><span class="math display">\[\mathbb E Q_N=q[\cos(\omega
+T/N)]^N,\]</span> <span class="math display">\[\mathbb E
+Q_N^2=\frac{A^2}{2}
++\left(q^2-\frac{A^2}{2}\right)[\cos(2\omega T/N)]^N.\]</span></p>
+<p>The first limit is <span class="math inline">\(q\)</span> and the
+second is <span class="math inline">\(q^2\)</span>, proving terminal
+conditional <span class="math inline">\(L^2\)</span> convergence to the
+starting position. Under the original stationary preparation the reset
+two-time correlation tends to <span
+class="math inline">\(A^2/2\)</span>, while the true value is <span
+class="math inline">\((A^2/2)\cos\omega T\)</span>. A cut that only
+observes the motion performs no reset and leaves the true correlation
+unchanged.</p>
+<p>The normalized orbital action is <span
+class="math inline">\(J=(2\pi)^{-1}\oint p\,dq=E/\omega\)</span>:
+integrating <span class="math inline">\(\mu\omega A^2\sin^2\phi\)</span>
+over a cycle proves the formula. Uniform-phase covariance also has
+square-root determinant <span class="math inline">\(E/\omega\)</span>.
+Cooling <span class="math inline">\(E\downarrow0\)</span> at fixed
+Hamiltonian closes both, with exact phase-state composition intact. R04
+extends this test to a third body, as follows.</p>
+<h2 id="a-third-body-exact-memory-and-recoverable-history">9. A third
+body: exact memory and recoverable history</h2>
+<p>Retaining tagged momentum leaves receiver memory in the equal-mass
+open three-body chain. At zero centre position and momentum, let <span
+class="math inline">\(x=x_1\)</span>, <span
+class="math inline">\(y=x_2-x_3\)</span>, <span
+class="math inline">\(\mu=3m/2\)</span>, <span
+class="math inline">\(\nu=m/2\)</span>, <span
+class="math inline">\(P=\mu\dot x\)</span> and <span
+class="math inline">\(Q=\nu\dot y\)</span>. Physical tagged momentum is
+<span class="math inline">\(p_1=2P/3\)</span>. The internal Hamiltonian
+is</p>
+<p><span class="math display">\[H=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
++\frac{9k}{8}x^2-\frac{3k}{4}xy+\frac{5k}{8}y^2.\]</span></p>
+<p>For fixed microcanonical energy <span
+class="math inline">\(E&gt;0\)</span>, eliminate <span
+class="math inline">\(y,Q\)</span> exactly. With <span
+class="math inline">\(g=3k/4\)</span>, <span
+class="math inline">\(d=5k/4\)</span> and <span
+class="math inline">\(\Omega^2=5k/(2m)\)</span>,</p>
+<p><span class="math display">\[\mu\ddot x+\frac{9k}{5}x
++\int_0^t\frac{9k}{20}\cos\Omega(t-s)\dot x(s)\,ds=F_0(t),\]</span></p>
+<p><span class="math display">\[F_0(t)=g\left(y_0-\frac gd
+x_0\right)\cos\Omega t
++\frac{gQ_0}{\nu\Omega}\sin\Omega t.\]</span></p>
+<p>These inherited quadratures carry the receiver information across a
+cut. The kernel has stiffness units; its convolution is a force. The
+full proof in <a href="three-body-cut-memory.html">R04</a> also recovers
+the hidden pair from tagged phase at two sufficiently close times. The
+relevant block determinant is <span
+class="math inline">\(g^2\delta^4/(12\mu\nu)+O(\delta^6)\)</span>;
+inverse entries grow up to <span
+class="math inline">\(\delta^{-3}\)</span>. Exact recovery and
+finite-precision physical readout therefore pose different
+requirements.</p>
+<p>The internal frequencies are <span
+class="math inline">\(\sqrt{k/m}\)</span> and <span
+class="math inline">\(\sqrt{3k/m}\)</span>, and modal actions are <span
+class="math inline">\(E_j/\omega_j\)</span>. Cooling scales the actions
+to zero while keeping the memory kernel fixed. C064–C065 and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B34.md">B34</a>
+record this derived specialization of harmonic-bath elimination and
+observability. R05 supplies the following readout test.</p>
+<h2 id="readout-precision-and-a-scalable-classical-instrument">10.
+Readout precision and a scalable classical instrument</h2>
+<p>Two sequential classical probes read the tagged pair with vanishing
+error and back-reaction under increasingly concentrated preparations.
+With canonical probe pairs <span class="math inline">\((q,\pi)\)</span>,
+<span class="math inline">\((r,\rho)\)</span> and integrated interaction
+Hamiltonians <span class="math inline">\(G_x=\alpha x\pi\)</span>, <span
+class="math inline">\(G_P=\beta P\rho\)</span>, the pre-cut estimates
+and kicks are</p>
+<p><span class="math display">\[\widehat x=x+q/\alpha,\qquad
+\widehat P=P+r/\beta-\alpha\pi,\]</span> <span
+class="math display">\[d_x=\beta\rho,\qquad d_P=-\alpha\pi.\]</span></p>
+<p>Here <span class="math inline">\(\alpha\)</span> is dimensionless and
+<span class="math inline">\(\beta\)</span> has units <span
+class="math inline">\(T/M\)</span>. For incoming rectangular support
+half-widths <span class="math inline">\((s_q,t_q,s_r,t_r)\)</span>, the
+intrinsic support accuracy-disturbance products are <span
+class="math inline">\(s_qt_q\)</span> and <span
+class="math inline">\(s_rt_r\)</span>, in action units. Both can
+approach zero across ordinary positive-volume classical
+preparations.</p>
+<p>At fixed horizon <span class="math inline">\(T\)</span>, put <span
+class="math inline">\(\eta=(T/N)/t_*\)</span> with fixed time unit <span
+class="math inline">\(t_*\)</span>. Widths <span
+class="math inline">\(O(\eta^4)\)</span> yield hidden-state recovery
+error <span class="math inline">\(O(\eta)\)</span> after the cubic
+inverse amplification, including the intervening kick. The accumulated
+state disturbance is <span class="math inline">\(O(\eta^3)\)</span>
+uniformly over the horizon. The original receiver preparation stays
+fixed, while fresh probe count and total fixed-mass probe mass grow as
+<span class="math inline">\(O(\eta^{-1})\)</span>.</p>
+<p>C066–C067, the <a href="classical-readout-refinement.html">full
+readout proof</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B35.md">B35</a>
+specify this externally switched impulsive instrument. Its ideal
+position records and shrinking probe widths leave preparation and
+recording resources open. R06 supplies the finite-duration construction
+below; readout conditioning and canonical reaction alone have not
+excluded zero action.</p>
+<h2 id="finite-duration-readout-with-an-autonomous-clock">11.
+Finite-duration readout with an autonomous clock</h2>
+<p>One mechanical clock and four free probes suffice for delayed
+reconstruction of the three-body receiver at fixed total apparatus mass.
+Let <span class="math inline">\((s,p_s)\)</span> be the clock pair,
+<span class="math inline">\((q_j,\pi_j)\)</span> the probe pairs, and
+all five masses be positive and fixed. With fixed stiffness <span
+class="math inline">\(K\)</span> and dimensionless <span
+class="math inline">\(0&lt;\lambda\le\lambda_0\)</span>, the autonomous
+Hamiltonian is</p>
+<p><span class="math display">\[H_\lambda=H+\frac{p_s^2}{2M_c}
++\sum_{j=1}^4\frac{\pi_j^2}{2M_j}
++\lambda K\sum_{j=1}^4f_j(s)X(x)R(q_j).\]</span></p>
+<p>The functions <span class="math inline">\(X,R\)</span> are bounded
+smooth coordinate cutoffs, equal to their arguments on the admitted
+trajectories. Fixed smooth bumps <span
+class="math inline">\(f_j\)</span> switch the couplings as a prepared
+clock moves through them. Pulse widths and observation time <span
+class="math inline">\(T&gt;0\)</span> stay fixed. The interaction forces
+are globally bounded; harmonic forces are uniformly bounded on the fixed
+receiver energy preparation and bounded apparatus energy class. All
+kinetic terms are positive.</p>
+<p>The reference output <span class="math inline">\(x^0(t)\)</span>
+determines <span class="math inline">\(z_0=(x_0,P_0,y_0,Q_0)\)</span>:
+its first four derivative rows have triangular diagonal <span
+class="math inline">\(1,1/\mu,g/\mu,g/(\mu\nu)\)</span>. Analyticity
+supplies four independent time evaluation rows. Choosing sufficiently
+narrow but fixed positive-width bumps preserves independence of the
+integrated matrix</p>
+<p><span class="math display">\[\mathcal A_{j\cdot}=K\int_0^T
+f_j(s_0+vt)e_x\Phi_t\,dt.\]</span></p>
+<p>For incoming apparatus support widths <span
+class="math inline">\(b\)</span> in fixed component units, Hamilton’s
+equations and finite-horizon integration give</p>
+<p><span
+class="math display">\[\boldsymbol\pi(T)=\boldsymbol\pi(0)-\lambda\mathcal
+A z_0
++O(\lambda b+\lambda^3),\qquad
+\sup_t\|z(t)-\Phi_tz_0\|=O(\lambda b+\lambda^2).\]</span></p>
+<p>These estimates include clock reaction. The clock leaves the pulse
+supports with positive momentum, after which the four probe momenta are
+conserved. Exact access to them gives the calibrated estimate <span
+class="math inline">\(\widehat z_0=-\mathcal
+A^{-1}\boldsymbol\pi(T)/\lambda\)</span>, with error <span
+class="math inline">\(O(b/\lambda+b+\lambda^2)\)</span>. Choosing <span
+class="math inline">\(b=\lambda^3\)</span> makes reconstruction and
+disturbance both <span class="math inline">\(O(\lambda^2)\)</span> at
+fixed nonzero clock mean energy. Initial canonical position error times
+maximum canonical momentum disturbance is then <span
+class="math inline">\(O(L_*P_*\lambda^4)\)</span>, in action units for
+fixed units <span class="math inline">\(L_*,P_*\)</span>.</p>
+<p>C068–C069 and <a href="autonomous-finite-readout.html">the full
+autonomous proof</a> specify the compact preparation domain, cutoff
+continuation and uniform estimates; <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B37.md">B37</a>
+audits the pointer and observability precedents. The result uses
+increasingly precise preparation, exact final records and known
+dynamics. All reported cuts may be refined from the same four records
+after fixed latency <span class="math inline">\(T\)</span>. R07 supplies
+the following separate new-information test. The upper mass, duration
+and force resources alone leave the autonomous readout’s action product
+with zero infimum.</p>
+<h2 id="a-delayed-observer-with-an-unresolved-force">12. A delayed
+observer with an unresolved force</h2>
+<p>A single-particle information task yields a sharp prediction lower
+bound. Keep exact records through time zero, including <span
+class="math inline">\((q_0,p_0)\)</span>, but allow no new record before
+the prediction time <span class="math inline">\(\ell&gt;0\)</span>. Let
+the unknown external force be any measurable <span
+class="math inline">\(f\)</span> with <span class="math inline">\(|f|\le
+F\)</span>. This explicitly differs from the reconstructed known
+dynamics above. For mass <span
+class="math inline">\(m&gt;0\)</span>,</p>
+<p><span class="math display">\[v:=p(\ell)-p_0=\int_0^\ell f(s)ds,\qquad
+u:=q(\ell)-q_0-p_0\ell/m=\frac1m\int_0^\ell(\ell-s)f(s)ds.\]</span></p>
+<p>The forces <span class="math inline">\(+F\)</span> and <span
+class="math inline">\(-F\)</span> have identical accessible records.
+Their endpoint separations imply worst-case prediction errors of at
+least <span class="math inline">\(F\ell^2/(2m)\)</span> and <span
+class="math inline">\(F\ell\)</span>. Inertial prediction attains both,
+so the product of coordinate minimax errors is exactly <span
+class="math inline">\(F^2\ell^3/(2m)\)</span>, in action units.</p>
+<p>The joint region carries more information than these two error bars.
+Writing <span class="math inline">\(d=v/(F\ell)\)</span> and <span
+class="math inline">\(z=mu/(F\ell^2)\)</span>, it is exactly</p>
+<p><span class="math display">\[-1\le d\le1,\qquad
+|z-d/2|\le(1-d^2)/4.\]</span></p>
+<p>At fixed impulse, maximal early positive force and maximal late
+negative force give the upper boundary; reversing their order gives the
+lower one. Convex combinations fill the region. Integrating its width
+gives canonical area <span
+class="math inline">\(2F^2\ell^3/(3m)\)</span>, without a <span
+class="math inline">\(2\pi\)</span> normalization. This area describes
+admissible alternatives, not a lower action for each individual
+motion.</p>
+<p>C070–C071: <a href="causal-force-information.html">proof</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B38.md">source
+audit</a>. The area closes with force budget or delay. R08 supplies the
+cut-composition result below.</p>
+<h2 id="exact-cuts-and-observed-position-information">13. Exact cuts and
+observed-position information</h2>
+<p>At fixed total horizon <span class="math inline">\(T=a+b\)</span>, an
+unobserved cut preserves the bounded-force reachable set exactly. Write
+<span class="math inline">\(S_b(q,p)=(q+bp/m,p)\)</span> and let <span
+class="math inline">\(K_t\)</span> be the increment lens above with
+duration <span class="math inline">\(t\)</span>. Splitting and
+concatenating admissible force inputs proves</p>
+<p><span class="math display">\[K_T=S_bK_a+K_b.\]</span></p>
+<p>The sum is Minkowski addition; every finite unobserved refinement
+therefore leaves the old endpoint region and its canonical area
+unchanged. Replacing <span class="math inline">\(K_a\)</span> by its
+marginal rectangle admits incompatible position–momentum pairs and
+strictly enlarges the propagated set.</p>
+<p>An exact, non-disturbing phase-state record at the cut leaves a
+translate of <span class="math inline">\(K_b\)</span>, with area <span
+class="math inline">\(2F^2b^3/(3m)\)</span>. An exact position record
+instead leaves a momentum interval of width</p>
+<p><span
+class="math display">\[D=Fa\,[\sqrt{2-4\zeta}+\sqrt{2+4\zeta}-2],\qquad
+\zeta=\frac{m(q_a-q_0-p_0a/m)}{Fa^2}\in[-1/2,1/2].\]</span></p>
+<p>Its terminal area is <span
+class="math inline">\(2F^2b^3/(3m)+Fb^2D/m\)</span>. To obtain the added
+area, shear the momentum segment vertically: each convex section
+lengthens by <span class="math inline">\(D\)</span> over a transverse
+width <span class="math inline">\(Fb^2/m\)</span>. As <span
+class="math inline">\(b\to0\)</span>, this area vanishes uniformly, but
+the central-record momentum width tends to <span
+class="math inline">\(2(\sqrt2-1)FT\)</span>. Area closure alone
+therefore does not establish momentum recovery.</p>
+<p>C072–C073: <a href="reachable-cut-composition.html">proof and
+assumptions</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B39.md">B39
+audit</a>. The finite-precision extension follows.</p>
+<h2 id="finite-precision-and-residual-delay">14. Finite precision and
+residual delay</h2>
+<p>A record <span class="math inline">\(|q-y|\le\varepsilon\)</span>
+clips the cut lens to a convex set <span
+class="math inline">\(C\)</span> with position interval <span
+class="math inline">\([l,r]\)</span>. Let its increasing momentum-fibre
+endpoints be <span class="math inline">\(L(q),U(q)\)</span>, its area
+<span class="math inline">\(A_C\)</span>, its width <span
+class="math inline">\(w=r-l\)</span>, and <span
+class="math inline">\(D_*=U(r)-L(l)\)</span>. The exact terminal set is
+<span class="math inline">\(S_bC+K_b\)</span>, with area</p>
+<p><span
+class="math display">\[|S_bC+K_b|=A_C+\frac{2F^2b^3}{3m}+2Fbw+\frac{Fb^2}{m}D_*.\]</span></p>
+<p>After the inverse shear, each future-force segment adds a transverse
+width <span class="math inline">\(w+sD_*/m\)</span>; integrating its
+extrusion gives the two mixed terms. Exact position and unobserved
+full-lens records recover the preceding formulas. Since <span
+class="math inline">\(w\le2\varepsilon\)</span>, <span
+class="math inline">\(D_*\le2Fa\)</span> and <span
+class="math inline">\(A_C\le2Fa w\)</span>,</p>
+<p><span
+class="math display">\[|S_bC+K_b|\le4FT\varepsilon+\frac{2F^2ab^2}{m}
++\frac{2F^2b^3}{3m}\longrightarrow0\]</span></p>
+<p>for every joint precision/delay limit at fixed <span
+class="math inline">\(F,m,T=a+b\)</span>. Central records still leave
+finite momentum uncertainty. R10 therefore tests two position records,
+separating recovery of both coordinates from area closure. C074–C075: <a
+href="finite-precision-cut.html">complete formula and proof</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B40.md">B40
+audit</a>.</p>
+<h2 id="two-records-and-recovery-of-momentum">15. Two records and
+recovery of momentum</h2>
+<p>Positions recorded at <span
+class="math inline">\(t_1=T-b-\delta\)</span> and <span
+class="math inline">\(t_2=T-b\)</span>, with errors bounded by <span
+class="math inline">\(\varepsilon_1,\varepsilon_2\)</span>, give the
+momentum estimate <span class="math inline">\(\widehat
+p=m(y_2-y_1)/\delta\)</span>. Define</p>
+<p><span
+class="math display">\[B=\frac{m(\varepsilon_1+\varepsilon_2)}\delta+\frac{F\delta}2.
+\qquad R_p=B+Fb,\qquad
+R_q=\varepsilon_2+\frac{bB}{m}+\frac{Fb^2}{2m}.\]</span></p>
+<p>These errors of <span class="math inline">\(\widehat p\)</span> and
+<span class="math inline">\(\widehat q_T=y_2+b\widehat p/m\)</span> are
+simultaneously attained by constant force and adverse record errors. The
+compatible-set area is at most <span
+class="math inline">\(4R_qR_p\)</span>. If <span
+class="math inline">\(\delta,b\to0\)</span> and <span
+class="math inline">\((\varepsilon_1+\varepsilon_2)/\delta\to0\)</span>,
+both coordinates are recovered.</p>
+<p>For equal errors, the established finite-difference optimum is <span
+class="math inline">\(\delta_*=2\sqrt{m\varepsilon/F}\)</span>. Choosing
+positive delay <span class="math inline">\(b=\delta_*\)</span> gives
+<span class="math inline">\(R_p=4\sqrt{mF\varepsilon}\)</span>, <span
+class="math inline">\(R_q=7\varepsilon\)</span>, and an action-error
+product <span
+class="math inline">\(28\sqrt{mF}\varepsilon^{3/2}\to0\)</span>. R11
+tests minimax lower bounds. C076–C077: <a
+href="two-position-recovery.html">proof</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B41.md">exact
+prior-art match</a>.</p>
+<h2 id="a-gap-that-survives-dense-noisy-records">16. A gap that survives
+dense noisy records</h2>
+<p>At fixed position tolerance <span
+class="math inline">\(\varepsilon&gt;0\)</span>, even the entire noisy
+position history leaves a sharp momentum uncertainty. Put <span
+class="math inline">\(d=2\sqrt{m\varepsilon/F}\)</span>, <span
+class="math inline">\(t_2=T-b\)</span>, <span
+class="math inline">\(t_1=t_2-d\)</span>, and assume <span
+class="math inline">\(t_2\ge2d\)</span>. Starting from zero displacement
+and velocity, forces <span class="math inline">\(-F,+F\)</span> for
+successive times <span class="math inline">\(d/2\)</span> prepare
+displacement <span class="math inline">\(-\varepsilon\)</span> with zero
+velocity at <span class="math inline">\(t_1\)</span>. Force <span
+class="math inline">\(+F\)</span> for the next <span
+class="math inline">\(d\)</span> reaches <span
+class="math inline">\(+\varepsilon\)</span> and momentum <span
+class="math inline">\(Fd\)</span>. The entire observed displacement
+stays in <span
+class="math inline">\([-\varepsilon,\varepsilon]\)</span>.</p>
+<p>This trajectory and its opposite have the same initial state and
+admit the same inertial position record, with opposite allowed record
+errors. Continuing their forces through the blind interval yields
+terminal half-separations</p>
+<p><span class="math display">\[P_*=Fd+Fb,\qquad
+Q_*=\varepsilon+\frac{Fdb}{m}+\frac{Fb^2}{2m}.\]</span></p>
+<p>Every estimator has worst-case coordinate errors at least <span
+class="math inline">\(P_*,Q_*\)</span>. The preceding two-record
+estimator attains both; these are therefore exact coordinate minimax
+risks for two records and for the complete noisy history. At zero blind
+delay their product is <span
+class="math inline">\(2\sqrt{mF}\varepsilon^{3/2}&gt;0\)</span>.
+Densifying records preserves this bound; improving their tolerance
+closes it.</p>
+<p>The construction is established in Seeber–Haimovich Proposition 3.1.
+R11 connects it to reachable fibres and delayed phase prediction. The
+general principle is that, for symmetric convex inputs and bounded
+linear record errors, the central compatible fibre maximizes scalar
+output uncertainty: any compatible pair has an admissible
+half-difference, and the symmetric central pair realizes its
+diameter.</p>
+<p>C078–C079: <a href="indistinguishable-phase-bound.html">proof and
+precise information classes</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B42.md">B42
+audit</a>. The following composition test settles the proposed transfer
+to mass universality.</p>
+<h2 id="worst-case-composition-and-the-cost-of-aggregate-records">17.
+Worst-case composition and the cost of aggregate records</h2>
+<p>Product bounded-force/error classes add scalar minimax radii
+linearly. For positive masses with known initial states, complete
+position records of errors <span
+class="math inline">\(\varepsilon_i&gt;0\)</span>, forces <span
+class="math inline">\(|f_i|\le F_i\)</span> and common terminal time
+<span
+class="math inline">\(T\ge\max_i4\sqrt{m_i\varepsilon_i/F_i}\)</span>,
+put <span class="math inline">\(M=\sum_i m_i\)</span>, <span
+class="math inline">\(E=\sum_i m_i\varepsilon_i/M\)</span> and <span
+class="math inline">\(F_\Sigma=\sum_iF_i\)</span>. With all constituent
+records retained, the exact centre position and total momentum risks
+are</p>
+<p><span class="math display">\[Q_A=E,\qquad
+P_A=2\sum_i\sqrt{m_iF_i\varepsilon_i}.\]</span></p>
+<p>The central compatible fibre is a Cartesian product. Its support in a
+scalar sum direction is the sum of the supports, attained by aligned
+symmetric extremizers; R11’s midpoint argument converts that radius into
+exact minimax risk. For n identical constituents the product is
+therefore <span class="math inline">\(H_A=nH_1\)</span>. It does not
+obey A08’s invariant variance-coefficient law.</p>
+<p>Keeping only the weighted sum of the records gives exactly the
+single-body force/error class <span
+class="math inline">\((M,F_\Sigma,E)\)</span>. To lift any aggregate
+force f and error e back to the original constituents, choose <span
+class="math inline">\(f_i=F_i f/F_\Sigma\)</span> and <span
+class="math inline">\(e_i=\varepsilon_i e/E\)</span>, preserving each
+initial state. Thus its exact risks are</p>
+<p><span class="math display">\[Q_B=E,\qquad P_B=2\sqrt{M F_\Sigma E}\ge
+P_A.\]</span></p>
+<p>Equality holds precisely when <span
+class="math inline">\(F_i/(m_i\varepsilon_i)\)</span> is common to all
+constituents. Otherwise losing the individual records strictly increases
+the momentum risk in the same mechanical model.</p>
+<p>If mass-only nonnegative coordinate radii are closed under product
+composition for every positive mass, additivity forces <span
+class="math inline">\(Q(m)=q_*\)</span>, <span
+class="math inline">\(P(m)=p_*m\)</span>. Their action product is
+extensive; a mass-independent product must be zero. Fixed acceleration
+bound <span class="math inline">\(F(m)=am\)</span> and common precision
+realize the positive extensive case, whose value still comes from a and
+the record band. R13 next examines the finite-horizon regime before the
+hidden pair can be prepared.</p>
+<p>C080–C081: <a href="minimax-composition.html">complete proof and
+information classes</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B43.md">B43
+audit</a>. These products multiply coordinate minimax risks and are not
+simultaneous error lower bounds on each motion.</p>
+<h2 id="exact-recovery-before-the-preparation-time">18. Exact recovery
+before the preparation time</h2>
+<p>The complete noisy history has exact finite-horizon phase risks even
+before R11’s hidden pair can be fully prepared. Keep known initial data,
+arbitrary measurable forces bounded by F, position errors bounded by
+epsilon, and no speed ceiling. With <span
+class="math inline">\(\tau=\sqrt{m\varepsilon/F}\)</span> and <span
+class="math inline">\(s=T/\tau\)</span>,</p>
+<p><span class="math display">\[Q(T)=\varepsilon\min\{s^2/2,1\},\qquad
+P(T)=\sqrt{mF\varepsilon}\,V(s),\]</span></p>
+<p><span class="math display">\[V(s)=\begin{cases}
+s,&amp;0\le s\le\sqrt2,\\
+\sqrt{2s^2+4}-s,&amp;\sqrt2\le s\le4,\\
+2,&amp;s\ge4.
+\end{cases}\]</span></p>
+<p>In scaled coordinates, the hidden path obeys <span
+class="math inline">\(x(0)=x&#39;(0)=0\)</span>, <span
+class="math inline">\(|x&#39;&#39;|\le1\)</span>, <span
+class="math inline">\(|x|\le1\)</span>. Its terminal velocity v is
+bounded by s. Putting negative acceleration first minimizes terminal
+position at fixed v, giving <span
+class="math inline">\(x(s)\ge(v^2+2sv-s^2)/4\)</span> and the middle
+upper bound. Integrating <span class="math inline">\(x&#39;(t)\ge
+v-(s-t)\)</span> over the final v time units gives <span
+class="math inline">\(v^2/2\le2\)</span>. The lower envelope of these
+three bounds is V. Constant positive acceleration attains the first
+branch. Negative acceleration for <span
+class="math inline">\(h=s-\sqrt{s^2/2+1}\)</span> followed by positive
+acceleration attains the middle; its minimum position is <span
+class="math inline">\(-h^2\ge-1\)</span> and endpoint position is 1. The
+prepared R11 pair attains the final branch. Each momentum extremizer
+also maximizes endpoint position, so a blind interval b has exact
+risks</p>
+<p><span class="math display">\[P_b=P(T)+Fb,\qquad
+Q_b=Q(T)+bP(T)/m+Fb^2/(2m).\]</span></p>
+<p>Product constituent records still give <span
+class="math inline">\(Q_A=\sum_i m_iQ_i/M\)</span> and <span
+class="math inline">\(P_A=\sum_iP_i\)</span>. Retaining only their
+centre record gives the single-body formula with <span
+class="math inline">\((M,F_\Sigma,E)\)</span> at every horizon. Position
+information is strictly lost exactly when some <span
+class="math inline">\(F_iT^2/2&lt;m_i\varepsilon_i\)</span> and another
+<span class="math inline">\(F_jT^2/2&gt;m_j\varepsilon_j\)</span>. Thus
+the transient can lose both phase coordinates. For equal m and epsilon,
+forces F and 16F at <span
+class="math inline">\(T=\sqrt{m\varepsilon/F}\)</span> give</p>
+<p><span class="math display">\[Q_A=3\varepsilon/4,\quad
+Q_B=\varepsilon,\quad
+P_A=9\sqrt{mF\varepsilon},\quad
+P_B=(\sqrt{714}-17)\sqrt{mF\varepsilon}&gt;P_A.\]</span></p>
+<p>Identical copies retain <span
+class="math inline">\(H_A=H_B=nH_1(T)\)</span>. At fixed precision the
+early product is <span class="math inline">\(F^2T^3/(2m)\)</span>; at
+fixed positive T it closes as precision improves. R14 tests a shared
+apparatus error budget that prevents freely aligned full-width errors.
+C082–C083: <a href="finite-horizon-minimax.html">complete written
+proof</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B44.md">B44
+bounded audit</a>.</p>
+<h2 id="shared-error-geometry-controls-composition">19. Shared error
+geometry controls composition</h2>
+<p>For n identical constituents with known initial phases, force ceiling
+F and complete position records, impose one pointwise apparatus budget
+<span class="math inline">\(\|e(t)\|_r\le\varepsilon\)</span>, <span
+class="math inline">\(1\le r\le\infty\)</span>. Set <span
+class="math inline">\(E_n=\varepsilon n^{-1/r}\)</span>, with <span
+class="math inline">\(1/\infty=0\)</span>. Averaging has error at most
+E_n by the norm inequality, and force at most nF at mass nm. Equal
+errors and forces lift every such scalar experiment. Equal displacement
+paths also lift its entire central compatible fibre. Thus retaining all
+records or only their average gives identical scalar centre minimax
+risks:</p>
+<p><span class="math display">\[Q_n=E_n\min(s_n^2/2,1),\qquad
+P_n=n\sqrt{mFE_n}\,V(s_n),\qquad
+s_n=T\sqrt{F/(mE_n)},\]</span></p>
+<p>where V is section 18’s function. For <span
+class="math inline">\(s_n\ge4\)</span>,</p>
+<p><span class="math display">\[\boxed{H_n^{\rm
+sat}=n^{1-3/(2r)}H_1^{\rm sat},\qquad
+H_1^{\rm sat}=2\sqrt{mF}\,\varepsilon^{3/2}.}\]</span></p>
+<p>A quadratic budget gives <span
+class="math inline">\(n^{1/4}\)</span>; <span
+class="math inline">\(r=3/2\)</span> gives copy-count invariance. R15
+tests independent block budgets against this shared preparation.
+C084–C085: <a href="shared-record-budget.html">proof and scope</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B45.md">B45
+audit</a>.</p>
+<h2 id="independent-block-apparatuses-restore-extensive-scaling">20.
+Independent block apparatuses restore extensive scaling</h2>
+<p>For k independently budgeted blocks of a identical constituents, with
+the same pointwise <span class="math inline">\(\ell^r\)</span> error
+allowance epsilon per block, put <span
+class="math inline">\(E=\varepsilon a^{-1/r}\)</span> and <span
+class="math inline">\(N=ka\)</span>. Product compatible fibres add their
+scalar target radii. Thus for all constituent records, all block-average
+records, or only the centre record, the risks equal the one-body risks
+at mass Nm, force bound NF and precision E. At <span
+class="math inline">\(T\ge4\sqrt{mE/F}\)</span>,</p>
+<p><span class="math display">\[H_{\rm blocks}=k a^{1-3/(2r)}H_1,\qquad
+H_{\rm global}=(ka)^{1-3/(2r)}H_1.\]</span></p>
+<p>Here the second apparatus has only one global allowance epsilon. At
+<span class="math inline">\(r=3/2\)</span> the products are <span
+class="math inline">\(kH_1\)</span> and <span
+class="math inline">\(H_1\)</span> respectively. Matching global-budget
+centre risks with separate blocks requires reducing each allowance to
+<span class="math inline">\(\varepsilon k^{-1/r}\)</span>. For finite r
+and <span class="math inline">\(k&gt;1\)</span> this still gives
+different error sets: a Cartesian product of block balls is strictly
+contained in the matching global ball. Equal centre risks do not
+establish equal preparations.</p>
+<p>For unequal effective block precisions <span
+class="math inline">\(E_j\)</span>, retained block records instead
+give</p>
+<p><span class="math display">\[Q=\sum_j(n_j/N)q(T,E_j),\qquad P=\sum_j
+n_jp(T,E_j),\]</span></p>
+<p>using section 18’s one-constituent functions. Keeping only the centre
+record gives the risks at precision <span class="math inline">\(\bar
+E=\sum_j(n_j/N)E_j\)</span>. In saturation, strict concavity of the
+square root makes momentum risk larger unless all <span
+class="math inline">\(E_j\)</span> agree. R16 tests contraction of
+finite mechanical record errors at fixed apparatus parameters.
+C086–C087: <a href="block-apparatus-composition.html">proof</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B46.md">B46
+audit</a>.</p>
+<h2 id="exact-calibration-at-fixed-nonzero-coupling">21. Exact
+calibration at fixed nonzero coupling</h2>
+<p>Keep section 11’s apparatus and one sufficiently small positive
+coupling <span class="math inline">\(\lambda\)</span> fixed. Its nominal
+four-momentum map has the uniform expansion</p>
+<p><span class="math display">\[F_\lambda(z)=-\lambda\mathcal A
+z+\mathcal R_\lambda(z),
+\qquad\|\mathcal R_\lambda\|_{C^1}\le C\lambda^3.\]</span></p>
+<p>Differentiating the smooth flow preserves the probe <span
+class="math inline">\(O(\lambda)\)</span> and receiver/clock reaction
+<span class="math inline">\(O(\lambda^2)\)</span> bounds. The integrated
+record remainder is therefore cubic in coupling also in first
+derivative. On a convex neighbourhood of the energy shell, the matrix
+margin alpha&gt;0 gives</p>
+<p><span class="math display">\[\|F_\lambda(z)-F_\lambda(w)\|\ge
+\tfrac12\lambda\alpha\|z-w\|.\]</span></p>
+<p>Let incoming apparatus uncertainty have width b, and the four
+final-record errors have width rho, in fixed component units. The exact
+nonlinear minimum-residual calibration on the compact receiver shell
+then satisfies</p>
+<p><span class="math display">\[\|\widehat
+z-z\|\le\frac4{\lambda\alpha}(C_\lambda b+\rho).\]</span></p>
+<p>Thus reconstruction error vanishes as b and rho shrink with coupling,
+masses and duration fixed. Momentum disturbance remains bounded by <span
+class="math inline">\(CP_*(\lambda b+\lambda^2)\)</span>, so its product
+with position-reconstruction error also vanishes. Exact calibration and
+improving record access are supplied resources. R17 holds incoming width
+positive to test whether unknown probe momenta can hide distinct
+receiver states. C088–C089: <a
+href="fixed-coupling-calibration.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B47.md">B47
+audit</a>.</p>
+<h2 id="positive-preparation-width-leaves-exact-record-ambiguity">22.
+Positive preparation width leaves exact record ambiguity</h2>
+<p>Keep the four final momentum records as the only data, with a fixed
+positive incoming apparatus box of half-width <span
+class="math inline">\(b\)</span> and sufficiently small coupling <span
+class="math inline">\(\lambda&gt;0\)</span>. In fixed component units
+the derivative of final records with respect to incoming probe momenta
+<span class="math inline">\(u\)</span> is uniformly within <span
+class="math inline">\(1/2\)</span> of <span
+class="math inline">\(I\)</span>. The nominal receiver derivative is
+bounded by <span class="math inline">\(L\lambda\)</span>. Thus the
+map</p>
+<p><span
+class="math display">\[T_w(u)=u-G_\lambda(w,u)+F_\lambda(z_*)\]</span></p>
+<p>contracts the ball <span class="math inline">\(\|u\|\le b/2\)</span>
+into itself whenever <span class="math inline">\(\|w-z_*\|\le
+b/(4L\lambda)\)</span>. Its fixed point supplies exact nonlinear record
+compensation, with an interior preparation margin.</p>
+<p>At the shell point <span
+class="math inline">\(z_*=(0,0,\sqrt{2E/d},0)\)</span>, completing the
+square gives the local chart</p>
+<p><span class="math display">\[y=\frac gd
+x+\sqrt{\frac{2E-(a-g^2/d)x^2-P^2/\mu}{d}},\qquad Q=0.\]</span></p>
+<p>Let <span class="math inline">\(r_0\)</span> be a fixed dimensionless
+chart-square radius and <span class="math inline">\(C_0\)</span> its
+Lipschitz bound in fixed length/momentum units <span
+class="math inline">\(L_*,P_*\)</span>. With</p>
+<p><span
+class="math display">\[r=\min(r_0,b/(4LC_0\lambda)),\]</span></p>
+<p>the entire square <span class="math inline">\(|x|\le L_*r\)</span>,
+<span class="math inline">\(|P|\le P_*r\)</span> has one common exact
+record. Every initial-state estimator therefore has worst-case
+errors</p>
+<p><span class="math display">\[\epsilon_x\ge L_*r,\qquad\epsilon_P\ge
+P_*r,\qquad
+\mathcal H_{\rm rec}\ge L_*P_*r^2&gt;0.\]</span></p>
+<p>The compatible fibre’s canonical <span
+class="math inline">\((x,P)\)</span> projection has area at least <span
+class="math inline">\(4L_*P_*r^2\)</span>. This reconstruction bound
+depends on the positive product preparation support and four-record
+access; its small-b rate matches section 21’s upper bound. R18 reveals
+incoming momenta and tests whether unknown probe positions still hide
+receiver changes. C090–C091: <a
+href="fixed-preparation-ambiguity.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B48.md">B48
+audit</a>.</p>
+<h2 id="position-uncertainty-survives-incoming-momentum-calibration">23.
+Position uncertainty survives incoming momentum calibration</h2>
+<p>Revealing the four incoming probe momenta still leaves a
+common-record shell patch for one fixed admissible pulse design. On the
+zero-incoming-momentum, nominal-clock slice, the derivative with respect
+to initial probe positions is</p>
+<p><span class="math display">\[D_qG_\lambda=\lambda^2
+B(z)+O(\lambda^3).\]</span></p>
+<p>Both receiver and clock reaction contribute to <span
+class="math inline">\(B\)</span>. Ordered disjoint pulses make it lower
+triangular. For pulses <span
+class="math inline">\(f_j(s_0+vt)=\phi((t-t_j)/\delta)\)</span> with
+<span class="math inline">\(x_j=x^0(t_j)\ne0\)</span>, its diagonal
+obeys</p>
+<p><span
+class="math display">\[B_{jj}=-\frac{K^2x_j^2\delta}{M_cv^2}\int\phi^2+O(\delta^2).\]</span></p>
+<p>Choose independent signal times avoiding the isolated zeros of <span
+class="math inline">\(x^0\)</span> and then a sufficiently small
+positive duration <span class="math inline">\(\delta\)</span>, held
+fixed thereafter. Every diagonal is nonzero. The clock contribution, of
+order <span class="math inline">\(\delta\)</span>, dominates the
+receiver’s order-<span class="math inline">\(\delta^3\)</span> term.</p>
+<p>In fixed component units, multiplication by <span
+class="math inline">\((\lambda^2 B(z_*))^{-1}\)</span> gives a
+contraction on the position ball <span
+class="math inline">\(b/2\)</span> whenever <span
+class="math inline">\(\|w-z_*\|\le\lambda b/(4C)\)</span>. Its fixed
+point preserves all eight initial and final momentum records exactly.
+Using section 22’s shell chart gives</p>
+<p><span class="math display">\[r=\min\left(r_0,\frac{\lambda
+b}{4CC_0}\right),\qquad
+\epsilon_x\epsilon_P\ge L_*P_*r^2,\qquad
+\operatorname{area}_{x,P}\ge4L_*P_*r^2.\]</span></p>
+<p>These bounds quantify the unknown position support; at fixed width
+their displayed lower bound closes with coupling. R19 adds final pointer
+positions and known initial clock position and momentum to test uniform
+joint recovery. C092–C093: <a
+href="position-preparation-ambiguity.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B49.md">B49
+audit</a>.</p>
+<h2 id="full-pointer-records-remove-the-fixed-position-ambiguity">24.
+Full pointer records remove the fixed-position ambiguity</h2>
+<p>With initial clock data <span class="math inline">\(c\)</span> and
+probe momenta <span class="math inline">\(u\)</span> revealed, all eight
+final pointer coordinates determine both receiver state <span
+class="math inline">\(z\)</span> and unknown incoming positions <span
+class="math inline">\(q\)</span>. The initial positions occupy a fixed
+positive box. Clock data may range over a fixed sufficiently small
+known-data box, on which the free signal matrices <span
+class="math inline">\(A_c\)</span> have a uniform inverse margin <span
+class="math inline">\(\alpha&gt;0\)</span>. Free drift is <span
+class="math inline">\(d_j(u)=T u_j/M_j\)</span>.</p>
+<p>In fixed component units the scaled exact record map satisfies</p>
+<p><span
+class="math display">\[F(z,q)=\left(\frac{\pi(T)-u}{\lambda},q(T)-d(u)\right)
+=(-A_c z,q)+R(z,q),\qquad ||R||_{C^1}\le C\lambda.\]</span></p>
+<p>The receiver and clock reactions are uniformly order <span
+class="math inline">\(\lambda\)</span> on this fixed preparation domain.
+Integrating the pointer equations and their variations gives the
+displayed estimate on a convex neighbourhood of the energy ball times
+the position box. For <span
+class="math inline">\(\beta=\min(\alpha,1)\)</span> and <span
+class="math inline">\(C\lambda\le\beta/2\)</span>, segment integration
+yields the global bound</p>
+<p><span
+class="math display">\[||F(v)-F(w)||\ge\tfrac12\beta||v-w||.\]</span></p>
+<p>Thus exact joint records remove section 23’s ambiguity. If final
+momentum and position errors are at most <span
+class="math inline">\(\rho_\pi\)</span> and <span
+class="math inline">\(\rho_q\)</span> in fixed units, a minimum-residual
+fit on the shell times the box gives</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\beta^2}
+\max(\rho_\pi/\lambda,\rho_q)^2\longrightarrow0\]</span></p>
+<p>as both record errors vanish at fixed positive coupling. Preparation
+widths, masses and observation time stay fixed. Exact incoming
+clock/momentum data and improving simultaneous final position/momentum
+access are supplied resources. This is delayed reconstruction;
+disturbance need only stay bounded. R20 hides the initial clock data and
+tests an exact common-record shell family. C094–C095: <a
+href="full-pointer-recovery.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B50.md">B50
+audit</a>.</p>
+<h2 id="a-hidden-clock-leaves-an-exact-receiver-phase-interval">25. A
+hidden clock leaves an exact receiver phase interval</h2>
+<p>With clock offset and speed hidden, eight exact final pointer records
+admit an energy-preserving receiver phase family for a fixed admissible
+pulse design. Incoming probe momenta remain known at zero. Write clock
+data as <span class="math inline">\(c=(s,v)\)</span>, receiver flow as
+<span class="math inline">\(\exp(Mt)\)</span>, and <span
+class="math inline">\(H_s(z)=z^TGz/2\)</span>. Section 24’s scaled map
+extends smoothly to zero coupling. The implicit-function theorem
+solves</p>
+<p><span
+class="math display">\[F_{\lambda,c}(z_\lambda(c),q_\lambda(c))=Y_\lambda,\qquad
+z_0(c)=A_c^{-1}A_{c_0}z_*.\]</span></p>
+<p>Interior supports give <span class="math inline">\(\partial_s
+A=-AM/v\)</span>. Consequently the offset derivative is <span
+class="math inline">\(Mz_*/v_0\)</span> and preserves receiver energy at
+zero coupling. For four pulses at times of order a small design duration
+<span class="math inline">\(\varepsilon\)</span>, the independent
+observation rows <span class="math inline">\(e_xM^n\)</span>, <span
+class="math inline">\(n=0,1,2,3\)</span>, give</p>
+<p><span class="math display">\[\det
+A_{s_0,v}=D(r\varepsilon)^{10}(1+O(\varepsilon)),
+\quad r=v_0/v,\quad D\ne0,\]</span> <span
+class="math display">\[\operatorname{tr}(-A^{-1}\partial_v
+A)=10/v_0+O(\varepsilon)&gt;0.\]</span></p>
+<p>The exponent counts four integration factors and derivative orders
+<span class="math inline">\(0+1+2+3\)</span>. Fix this design. Positive
+trace supplies a shell point with <span class="math inline">\(\partial_v
+H_s(z_0(c))&gt;0\)</span> and both canonical phase derivatives nonzero.
+A second implicit equation therefore solves <span
+class="math inline">\(H_s(z_\lambda(c))=E\)</span> for <span
+class="math inline">\(v=v_\lambda(s)\)</span>, with</p>
+<p><span class="math display">\[v&#39;_\lambda(s_0)=O(\lambda),\qquad
+z&#39;_\lambda(s_0)=Mz_*/v_0+O(\lambda).\]</span></p>
+<p>On a small fixed clock-offset interval of half-width <span
+class="math inline">\(\sigma\)</span>, both canonical derivatives retain
+magnitudes at least <span class="math inline">\(k_x,k_P&gt;0\)</span>.
+Clock-speed and incoming position adjustments are <span
+class="math inline">\(O(\lambda\sigma)\)</span>, preserving preparation
+margins. Common-record endpoints then imply</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\ge
+k_xk_P\sigma^2&gt;0.\]</span></p>
+<p>This action-valued product is a clock-preparation cost. The family is
+a curve, so the result asserts coordinate risks rather than positive
+canonical area. R21 reveals offset alone and tests local recovery
+through energy transversality. C096–C097: <a
+href="hidden-clock-ambiguity.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B51.md">B51
+audit</a>.</p>
+<h2
+id="clock-position-and-exact-energy-permit-stable-local-recovery">26.
+Clock position and exact energy permit stable local recovery</h2>
+<p>Revealing initial clock position alone removes section 25’s phase
+ambiguity on a fixed local receiver preparation patch. Initial clock
+speed remains unknown, incoming probe momenta are known at zero, and the
+initial receiver energy is supplied exactly. Use the same fixed
+transverse pulse design and shell point <span
+class="math inline">\(z_*\)</span> as in section 25. In fixed component
+units, append energy to the eight scaled records:</p>
+<p><span class="math display">\[\mathcal G_\lambda(z,q,v)
+=\big(F_\lambda(z,q,v),H_s(z)/E_*\big),\qquad
+F_0(z,q,v)=(-A_{s_0,v}z,q).\]</span></p>
+<p>The derivative kernel at zero coupling obeys</p>
+<p><span class="math display">\[dq=0,\qquad dz=Bz_*\,dv,\qquad
+B=-A_0^{-1}(\partial_v A)_0,\qquad
+(z_*^T GBz_*)\,dv=0.\]</span></p>
+<p>The positive transverse factor established in section 25 makes the
+reference derivative <span class="math inline">\(J\)</span> invertible.
+Put <span class="math inline">\(\gamma=1/\|J^{-1}\|\)</span>. Continuity
+and uniform <span class="math inline">\(C^1\)</span> convergence give
+one fixed convex neighbourhood <span class="math inline">\(U\)</span>
+and <span class="math inline">\(\lambda_0&gt;0\)</span> with</p>
+<p><span class="math display">\[\sup_U||D\mathcal
+G_\lambda-J||\le\gamma/2,\qquad
+||\mathcal G_\lambda(w)-\mathcal G_\lambda(w&#39;)||
+\ge\tfrac12\gamma||w-w&#39;||.\]</span></p>
+<p>The second inequality follows by integrating along the segment inside
+<span class="math inline">\(U\)</span>. Choose a compact shell patch
+times independent positive probe-position and clock-speed boxes
+contained in <span class="math inline">\(U\)</span>. On this physical
+set the energy outputs agree, so the eight records alone determine all
+unknowns. For final momentum and position error bounds <span
+class="math inline">\(\rho_\pi,\rho_q\)</span>, a minimum-residual fit
+gives</p>
+<p><span class="math display">\[||\widehat w-w||\le\frac4\gamma
+\max(\rho_\pi/\lambda,\rho_q),\qquad
+\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\gamma^2}
+\max(\rho_\pi/\lambda,\rho_q)^2.\]</span></p>
+<p>The canonical product has action units and closes with record error
+at fixed positive coupling and fixed local preparation. Initial clock
+momentum is recovered as well. The zero-coupling extension is a proof
+device; physical recovery requires a nonzero signal. Exact energy and
+knowledge of the local patch are supplied information. R22 tests
+distinct-speed common records across the entire shell. C098–C099: <a
+href="clock-position-local-recovery.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B52.md">B52
+audit</a>.</p>
+<h2 id="full-shell-recovery-fails-at-two-distinct-clock-speeds">27.
+Full-shell recovery fails at two distinct clock speeds</h2>
+<p>The local preparation patch in section 26 carries genuine
+information. With the full receiver energy shell admitted, a fixed
+early-pulse design gives distinct-speed preparations with identical
+eight final pointer records. Clock offset and receiver energy remain
+known.</p>
+<p>Let <span class="math inline">\(O\)</span> have rows <span
+class="math inline">\(e_xM^n\)</span>, <span
+class="math inline">\(n=0,1,2,3\)</span>. Factoring the pulse moment
+matrix before inversion gives, for a small fixed design duration <span
+class="math inline">\(\varepsilon\)</span>,</p>
+<p><span class="math display">\[B_\varepsilon=-A_{v_0}^{-1}\partial_v
+A_{v_0}
+=\frac1{v_0}O^{-1}\operatorname{diag}(1,2,3,4)O+O(\varepsilon).\]</span></p>
+<p>For <span class="math inline">\(Q=0\)</span>, its limiting energy
+response is</p>
+<p><span class="math display">\[v_0
+z^TGB^{(0)}z=g(x-y)(9x-5y)+\frac{2P^2}{\mu}.\]</span></p>
+<p>Take <span class="math inline">\(x=L&gt;0\)</span>, <span
+class="math inline">\(P=p&gt;0\)</span> sufficiently small and vary
+<span class="math inline">\(y\)</span> from zero to <span
+class="math inline">\(7L/5\)</span>, normalizing the entire path onto
+<span class="math inline">\(H_s=E\)</span>. The endpoint energy
+responses have opposite signs and both canonical coordinates stay
+positive. Choose the design first and then a small fixed speed
+separation <span class="math inline">\(d_v&gt;0\)</span>. Equality of
+scaled zero-coupling records at <span class="math inline">\(v_0\)</span>
+and <span class="math inline">\(v_1=v_0+d_v\)</span> gives</p>
+<p><span class="math display">\[z&#39;=A_{v_1}^{-1}A_{v_0}z=z+d_v
+B_\varepsilon z+O(d_v^2).\]</span></p>
+<p>The energy mismatch changes sign along the path, while both
+coordinate separations are bounded below by positive multiples of <span
+class="math inline">\(d_v\)</span>. Intermediate value supplies an
+actual equal-energy pair.</p>
+<p>At positive coupling solve the exact eight-record equation at the
+second speed for receiver state and incoming positions. Its invertible
+leading derivative gives uniform <span
+class="math inline">\(O(\lambda)\)</span> continuation along the compact
+path. For sufficiently small coupling the endpoint signs, preparation
+margins and canonical separations persist. Another intermediate-value
+argument gives exact equal-energy, equal-record states, and
+consequently</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\ge\frac{c_xc_Pd_v^2}{16}&gt;0.\]</span></p>
+<p>This action-valued risk depends on the allowed speed interval and
+full-shell preparation. R23 adds the persistent final clock momentum to
+test global recovery from physical clock information. C100–C101: <a
+href="global-clock-speed-ambiguity.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B53.md">B53
+audit</a>.</p>
+<h2 id="a-final-clock-momentum-record-restores-global-recovery">28. A
+final clock-momentum record restores global recovery</h2>
+<p>Add the persistent final clock momentum to the eight pointer records,
+with initial clock position still known. The nine records determine
+receiver state, incoming probe positions and initial clock speed on a
+whole bounded domain. Exact receiver energy and the local-patch prior
+are unnecessary.</p>
+<p>In fixed component units, including clock momentum unit <span
+class="math inline">\(M_cV_*\)</span>, the map is</p>
+<p><span class="math display">\[\mathcal F_\lambda(z,q,v)=
+\left(\pi(T)/\lambda,q(T),p_s(T)/M_c\right)
+=L(z,q,v)+R_\lambda,\qquad L=(-A_vz,q,v),\quad
+\|R_\lambda\|_{C^1}\le C\lambda.\]</span></p>
+<p>The last block includes the exact reaction</p>
+<p><span class="math display">\[p_s(T)=M_cv-\lambda K\sum_j\int_0^T
+f&#39;_j(s(t))x(t)q_j(t)\,dt.\]</span></p>
+<p>Let <span class="math inline">\(\alpha\)</span> be a uniform lower
+bound for <span class="math inline">\(A_v\)</span>, and <span
+class="math inline">\(D=\sup\|(\partial_v A_v)z\|\)</span> on the fixed
+convex preparation domain. The speed and position blocks bound their
+input differences directly; the receiver block then yields</p>
+<p><span
+class="math display">\[\|L(w)-L(w&#39;)\|\ge\beta\|w-w&#39;\|,\qquad
+\beta=\min(1,\alpha/(1+D)).\]</span></p>
+<p>Subtracting the remainder’s Lipschitz bound gives an exact inverse
+margin <span class="math inline">\(\beta/2\)</span> whenever <span
+class="math inline">\(C\lambda\le\beta/2\)</span>. This is a global
+estimate for a nonlinear leading map, rather than a pointwise rank
+argument. For final record errors <span
+class="math inline">\(\rho_\pi,\rho_q,\rho_c\)</span>, a compact
+minimum-residual fit gives</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\le\frac{16L_*P_*}{\beta^2}
+\max(\rho_\pi/\lambda,\rho_q,\rho_c)^2.\]</span></p>
+<p>The action-valued error product closes with record precision at fixed
+coupling and positive preparation widths. Clock back-reaction is jointly
+calibrated; the final momentum is not substituted as an exact initial
+momentum. Joint record access remains supplied. R24 adds final clock
+position and hides initial offset. C102–C103: <a
+href="final-clock-momentum-recovery.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B54.md">B54
+audit</a>.</p>
+<h2 id="full-clock-records-replace-its-initial-preparation-data">29.
+Full clock records replace its initial preparation data</h2>
+<p>Add final clock position at the known time <span
+class="math inline">\(T\)</span>, and make its initial offset unknown.
+With the initial probe momenta still known at zero, all ten final
+apparatus coordinates recover receiver state, incoming probe positions
+and both initial clock coordinates on a bounded domain.</p>
+<p>Use clock units <span class="math inline">\(S_*,V_*\)</span> and
+<span class="math inline">\(\theta=TV_*/S_*\)</span>. The leading
+dimensionless map and exact remainder are</p>
+<p><span class="math display">\[L(z,q,s,v)=(-A_{s,v}z,q,s+\theta
+v,v),\qquad
+\mathcal F_\lambda=L+R_\lambda,\quad\|R_\lambda\|_{C^1}\le
+C\lambda.\]</span></p>
+<p>The extra reaction term in physical clock position is exactly</p>
+<p><span class="math display">\[s(T)-s-vT=-\frac{\lambda K}{M_c}\sum_j
+\int_0^T(T-t)f&#39;_j(s(t))x(t)q_j(t)\,dt.\]</span></p>
+<p>Let <span class="math inline">\(d\)</span> be the leading output
+difference. Inverting the clock shear gives <span
+class="math inline">\(|\Delta v|\le d\)</span> and <span
+class="math inline">\(|\Delta s|\le(1+\theta)d\)</span>. With uniform
+signal inverse margin <span class="math inline">\(\alpha\)</span> and
+bounds <span class="math inline">\(D_s,D_v\)</span> for its parameter
+derivatives applied to receiver states, the receiver difference
+obeys</p>
+<p><span class="math display">\[\alpha\|\Delta
+z\|\le[1+D_s(1+\theta)+D_v]d.\]</span></p>
+<p>These bounds give a global leading inverse margin</p>
+<p><span class="math display">\[\beta=\min\{(1+\theta)^{-1},
+\alpha/[1+D_s(1+\theta)+D_v]\}&gt;0.\]</span></p>
+<p>The remainder reduces it by at most <span
+class="math inline">\(C\lambda\)</span>, giving margin <span
+class="math inline">\(\beta/2\)</span> at small positive coupling. For
+final pointer and clock errors set <span
+class="math inline">\(\delta=\max(\rho_\pi/\lambda,\rho_q,\rho_s,\rho_c)\)</span>;
+compact fitting yields <span
+class="math inline">\(\epsilon_x\epsilon_P\le16L_*P_*\delta^2/\beta^2\)</span>.</p>
+<p>Sections 24–29 isolate the information trade: final clock phase
+replaces initial clock calibration, while exact incoming probe momenta
+remain shared preparation data. The <a
+href="full-clock-phase-recovery.html">comparison table</a> collects all
+six cases. R25 makes the entire incoming apparatus state unknown and
+tests compensation even with full final records. C104–C105: <a
+href="full-clock-phase-recovery.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B55.md">B55
+audit</a>.</p>
+<h2 id="unknown-full-apparatus-preparation-hides-the-receiver-shell">30.
+Unknown full apparatus preparation hides the receiver shell</h2>
+<p>With all incoming apparatus coordinates unknown in a fixed positive
+box, all ten exact final coordinates admit receiver-shell ambiguity. At
+sufficiently weak coupling, the worst-case coordinate risks equal their
+no-record values.</p>
+<p>Let <span class="math inline">\(\eta\)</span> denote the ten initial
+apparatus coordinates in fixed component units, centred at <span
+class="math inline">\(\eta_*\)</span>. The unscaled final-record map
+<span class="math inline">\(G_\lambda\)</span> has free limit <span
+class="math inline">\(S\eta\)</span>, where <span
+class="math inline">\(S\)</span> sends each apparatus pair <span
+class="math inline">\((q,p)\)</span> of mass <span
+class="math inline">\(M\)</span> to <span
+class="math inline">\((q+Tp/M,p)\)</span>. Thus <span
+class="math inline">\(F_\lambda=S^{-1}G_\lambda\)</span> satisfies
+uniformly on the convex receiver energy ball and a small fixed apparatus
+box</p>
+<p><span class="math display">\[\|D_\eta F_\lambda-I\|\le1/2,\qquad
+\|D_zF_\lambda\|\le L\lambda.\]</span></p>
+<p>For a nominal shell point <span class="math inline">\(z_*\)</span>,
+the map <span
+class="math inline">\(\eta\mapsto\eta-F_\lambda(w,\eta)+F_\lambda(z_*,\eta_*)\)</span>
+contracts the radius-<span class="math inline">\(b/2\)</span>
+preparation ball whenever <span class="math inline">\(\|w-z_*\|\le
+b/(4L\lambda)\)</span>. Its fixed point gives</p>
+<p><span
+class="math display">\[G_\lambda(w,\eta(w))=G_\lambda(z_*,\eta_*),\qquad
+\|\eta(w)-\eta_*\|\le2L\lambda\|w-z_*\|\le b/2.\]</span></p>
+<p>At fixed <span class="math inline">\(b&gt;0\)</span>, take <span
+class="math inline">\(\lambda\le\min(\lambda_0,b/(4LD))\)</span>, where
+<span class="math inline">\(D=\max_{H_s(w)=E}\|w-z_*\|\)</span>. One
+full record then hides the whole shell. Writing <span
+class="math inline">\(k_x=a-g^2/d&gt;0\)</span>, its canonical
+projection is the ellipse <span
+class="math inline">\(k_xx^2+P^2/\mu\le2E\)</span>. Common-record
+endpoints force both semiaxis errors; the constant estimator <span
+class="math inline">\((0,0)\)</span> attains them over the entire
+admitted class:</p>
+<p><span class="math display">\[R_x=\sqrt{2E/k_x},\qquad R_P=\sqrt{2\mu
+E},\qquad
+\inf_{(\widehat x,\widehat P)}\epsilon_x\epsilon_P
+=2E\sqrt{\mu/k_x}.\]</span></p>
+<p>The projected compatible area is <span
+class="math inline">\(\pi\)</span> times this action-valued product. The
+fixed-width weak-coupling condition supplies the admissibility margin;
+receiver energy and stiffness supply the saturated value. Exact initial
+apparatus energy is not supplied. R26 imposes that extra scalar
+constraint on <span class="math inline">\(\eta(w)\)</span>. C106–C107:
+<a href="full-apparatus-preparation-ambiguity.html">proof and
+limits</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B56.md">B56
+audit</a>.</p>
+<h2 id="exact-initial-energies-leave-an-antipodal-ambiguity">31. Exact
+initial energies leave an antipodal ambiguity</h2>
+<p>Supply the initial apparatus energy <span
+class="math inline">\(H_0=M_cv_0^2/2\)</span> as well as receiver energy
+<span class="math inline">\(E\)</span>. An exact common-record receiver
+pair still exists. Choose a receiver shell point <span
+class="math inline">\(z_*\)</span> and prescribe terminal zero probe
+phase, clock position <span class="math inline">\(s_0+v_0T\)</span>,
+and</p>
+<p><span class="math display">\[z(T)=r\Phi_Tz_*,\qquad
+p_s(T)=\sqrt{2M_c[H_0+E(1-r^2)]}.\]</span></p>
+<p>Terminal total energy is exactly <span
+class="math inline">\(E+H_0\)</span>. Backward Hamiltonian flow gives
+initial receiver state <span
+class="math inline">\(Z_\lambda(r)\)</span>; at zero coupling its energy
+is <span class="math inline">\(r^2E\)</span>. The derivative <span
+class="math inline">\(2E\)</span> at <span
+class="math inline">\(r=1\)</span> supplies an implicit adjustment with
+<span class="math inline">\(H_s(Z_\lambda(r_\lambda))=E\)</span>.
+Endpoint pulses vanish, so conservation gives initial apparatus energy
+<span class="math inline">\(H_0\)</span> exactly. Terminal zero probes
+imply</p>
+<p><span class="math display">\[r_\lambda=1+O(\lambda^2),\qquad
+Z_\lambda=z_*+O(\lambda^2),\]</span></p>
+<p>while the full incoming apparatus displacement is <span
+class="math inline">\(O(\lambda)\)</span> and fits inside half the fixed
+preparation box for sufficiently small coupling.</p>
+<p>The simultaneous sign involution <span
+class="math inline">\((z,q,\pi,s,p_s)\mapsto(-z,-q,-\pi,s,p_s)\)</span>
+preserves the equations in the linear cutoff regions. It leaves the
+clock and both quadratic energies unchanged. Because terminal probes
+vanish, both preparations have identical complete final apparatus
+records and exactly opposite initial receiver states.</p>
+<p>Put <span class="math inline">\(k_x=a-g^2/d\)</span> and choose <span
+class="math inline">\(z_*=(\sqrt{E/k_x},\sqrt{\mu
+E},(g/d)\sqrt{E/k_x},0)\)</span>. Common-record endpoints then give</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\ge
+|(Z_\lambda)_x(Z_\lambda)_P|
+\longrightarrow E\sqrt{\mu/k_x}&gt;0.\]</span></p>
+<p>The limit concerns the displayed lower bound, with action units. It
+is energy-dependent and supplies neither exact minimax saturation nor
+positive area. R27 tests a known nonzero initial probe displacement;
+breaking this involution must be distinguished from proving global
+recovery. C108–C109: <a
+href="energy-constrained-apparatus-ambiguity.html">proof and domain</a>,
+<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B57.md">B57
+audit</a>.</p>
+<h2 id="one-calibrated-displacement-leaves-full-receiver-ambiguity">32.
+One calibrated displacement leaves full receiver ambiguity</h2>
+<p>Fix a known nonzero incoming probe displacement <span
+class="math inline">\(q_1=c\)</span>, with <span
+class="math inline">\(|c|/L_1&lt;b/4\)</span>, while retaining exact
+initial energies <span class="math inline">\(E,H_0\)</span> and all ten
+final apparatus coordinates. Full receiver recovery still fails for
+sufficiently small positive coupling. The new proof uses a preparation
+chart rather than the sign involution, which would send <span
+class="math inline">\(c\)</span> to <span
+class="math inline">\(-c\)</span>.</p>
+<p>Before the pulses, solve the apparatus energy for positive clock
+momentum,</p>
+<p><span
+class="math display">\[p_s=\sqrt{2M_c\left(H_0-\sum_{j=1}^4\frac{\pi_j^2}{2M_j}\right)}.\]</span></p>
+<p>Eight independent apparatus coordinates remain: <span
+class="math inline">\(q_2,q_3,q_4\)</span>, the four probe momenta and
+<span class="math inline">\(s\)</span>. On the receiver shell use <span
+class="math inline">\(x,P,Q\)</span> near zero and solve</p>
+<p><span class="math display">\[y=\frac gd x+
+\sqrt{\frac{2E-k_xx^2-P^2/\mu-Q^2/\nu}{d}},\qquad
+k_x=a-g^2/d&gt;0.\]</span></p>
+<p>In fixed component units this gives an injective eleven-coordinate
+chart <span class="math inline">\(\Psi\)</span> containing a closed
+parameter ball of radius <span class="math inline">\(r&gt;0\)</span>,
+independent of coupling, with strict radicands and half-box preparation
+margins. Its boundary is <span class="math inline">\(S^{10}\)</span>.
+The continuous map taking each chart point to its ten final apparatus
+coordinates has an equal-image antipodal pair by Borsuk–Ulam. Both
+preparations have exactly the supplied energies and calibration.</p>
+<p>For the inverse-shear record <span
+class="math inline">\(F_\lambda\)</span>, the uniform ambient bounds
+give</p>
+<p><span class="math display">\[\|D_\eta F_\lambda-I\|\le\tfrac12,\qquad
+\|D_zF_\lambda\|\le L\lambda.\]</span></p>
+<p>Hence equal records imply <span
+class="math inline">\(\|\eta_+-\eta_-\|_2\le2L\lambda\|z_+-z_-\|_2\)</span>.
+The eleven chart coordinates are a projection of the full initial state;
+the antipodal parameter distance is <span
+class="math inline">\(2r\)</span>. Therefore the full receiver-state
+minimax risk in these fixed Euclidean component units obeys</p>
+<p><span class="math display">\[R_z\ge\frac12\|z_+-z_-\|_2
+\ge\frac{r}{\sqrt{1+4L^2\lambda^2}}&gt;0.\]</span></p>
+<p>This is a dimensionless full-state error bound. The difference may
+lie in internal coordinates; R28 tests separation in both <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(P\)</span> and a possible canonical error product.
+C110–C111: <a href="calibrated-displacement-ambiguity.html">proof and
+margins</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B58.md">B58
+theorem audit</a>.</p>
+<h2 id="calibrated-records-still-hide-both-canonical-coordinates">33.
+Calibrated records still hide both canonical coordinates</h2>
+<p>A fixed smooth pulse design preserves a positive canonical risk
+product under R27’s nonzero calibration <span
+class="math inline">\(q_1=c\)</span>, both exact initial energies and
+all ten final apparatus coordinates. Let <span
+class="math inline">\(\eta_c\)</span> have only <span
+class="math inline">\(q_1=c\)</span> nonzero among probe coordinates.
+The exact record compensator about a receiver shell point <span
+class="math inline">\(\bar z\)</span> satisfies</p>
+<p><span
+class="math display">\[G_\lambda(w,\eta_\lambda(w))=G_\lambda(\bar
+z,\eta_c),\qquad
+\|\eta_\lambda(w)-\eta_c\|\le2L\lambda\|w-\bar z\|.\]</span></p>
+<p>Put <span class="math inline">\(h(t)=f_1(s_0+v_0t)\)</span>. Dividing
+the calibration and initial apparatus-energy residuals by <span
+class="math inline">\(\lambda\)</span> gives smooth zero-coupling limits
+<span class="math inline">\(-(K/M_1)A(w-\bar z)\)</span> and <span
+class="math inline">\(-Kc B(w-\bar z)\)</span>, where</p>
+<p><span class="math display">\[A(w)=\int_0^T th(t)x_w(t)\,dt,\qquad
+B(w)=\int_0^T h(t)\dot x_w(t)\,dt.\]</span></p>
+<p>A first pulse near a small fixed <span
+class="math inline">\(\tau\)</span> makes the normalized rows
+approximate <span class="math inline">\(x(\tau)\)</span> and <span
+class="math inline">\(P(\tau)/\mu\)</span>. Their kernel contains a
+direction close to <span
+class="math inline">\(\Phi_{-\tau}(0,0,Y,0)\)</span>, whose initial
+canonical components are <span
+class="math inline">\(gY\tau^2/(2\mu)+O(\tau^4)\)</span> and <span
+class="math inline">\(-gY\tau+O(\tau^3)\)</span>. Both are nonzero. A
+positive fixed pulse width preserves this property; three further
+disjoint pulses retain R06’s four-record signal rank.</p>
+<p>In the two-dimensional kernel plane choose <span
+class="math inline">\(\bar z\)</span> on <span
+class="math inline">\(H_s=E\)</span> orthogonal to that direction <span
+class="math inline">\(v\)</span> in the energy inner product. Then <span
+class="math inline">\(dH_s,A,B\)</span> are independent. The
+implicit-function theorem applied to the divided residuals, receiver
+energy and a curve parameter gives exact common-record states <span
+class="math inline">\(w_\lambda(t)\)</span>. A fixed rectangle <span
+class="math inline">\(|t|\le\delta\)</span>, <span
+class="math inline">\(0&lt;\lambda\le\lambda_1\)</span> retains
+preparation margins and canonical derivatives of magnitude at least
+<span class="math inline">\(|v_x|/2\)</span> and <span
+class="math inline">\(|v_P|/2\)</span>. Its endpoints imply</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\ge\frac{\delta^2|v_xv_P|}{4}&gt;0.\]</span></p>
+<p>The action-valued bound is uniform on this coupling interval and
+depends on preparation, energy and pulse design. C112–C113: <a
+href="calibrated-canonical-ambiguity.html">proof and limits</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B59.md">B59
+audit</a>. R29 adds a second calibrated displacement and tests local
+versus global recovery.</p>
+<h2
+id="a-second-calibration-leaves-two-locally-recoverable-branches">34. A
+second calibration leaves two locally recoverable branches</h2>
+<p>Add <span class="math inline">\(q_2=0\)</span> while retaining <span
+class="math inline">\(q_1=c\ne0\)</span>, both exact initial energies
+and the ten final apparatus records. The new divided compensator
+residual has limit <span class="math inline">\(-(K/M_2)A_2(w-z_{\rm
+bar})\)</span>, where <span class="math inline">\(A_2=\int t f_2
+x_w\)</span>. The three linear rows are now <span
+class="math inline">\(A_1,B_1,A_2\)</span>.</p>
+<p>Choose narrow positive pulses near <span
+class="math inline">\(\tau\)</span> and <span
+class="math inline">\(2\tau\)</span>. Their limiting rows are <span
+class="math inline">\(x(\tau),\dot x(\tau),x(2\tau)\)</span>. On their
+kernel the state at <span class="math inline">\(\tau\)</span> has form
+<span class="math inline">\((0,0,Y,Q)\)</span>, with <span
+class="math inline">\(Y=-Q\tau/(3\nu)+O(\tau^3)\)</span>, and its
+initial canonical components obey</p>
+<p><span
+class="math display">\[v_x=-\frac{gQ}{3\mu\nu}\tau^3+O(\tau^5),\qquad
+v_P=\frac{5gQ}{6\nu}\tau^2+O(\tau^4).\]</span></p>
+<p>Fix sufficiently small times and positive widths, preserving rank
+three and these nonzero components. The resulting kernel line meets the
+receiver energy shell at <span class="math inline">\(\pm z_{\rm
+bar}\)</span>. At both points the derivative rows <span
+class="math inline">\(dH_s,A_1,B_1,A_2\)</span> are independent. The
+exact scaled residual equations therefore have two continued roots</p>
+<p><span class="math display">\[w_+(\lambda)=z_{\rm bar},\qquad
+w_-(\lambda)=-z_{\rm bar}+O(\lambda).\]</span></p>
+<p>The compensating apparatus preparations preserve both calibrations,
+both energies, one exact complete record and the positive box margins.
+At each fixed positive coupling, eliminating the apparatus-record
+derivative proves a local inverse of the augmented map around each root.
+It does not choose between them globally. Common-record endpoint
+inequalities give</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\ge
+\tfrac14|(w_+-w_-)_x(w_+-w_-)_P|
+\longrightarrow |(z_{\rm bar})_x(z_{\rm bar})_P|&gt;0.\]</span></p>
+<p>This is a preparation-dependent action-risk lower bound, not an area
+or exact minimax value. R30 adds <span
+class="math inline">\(q_3=0\)</span> and tests a uniform global inverse,
+including its record conditioning. C114–C115: <a
+href="two-calibration-branches.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B60.md">B60
+audit</a>.</p>
+<h2 id="three-calibrations-restore-global-recovery-on-a-fixed-box">35.
+Three calibrations restore global recovery on a fixed box</h2>
+<p>Calibrate <span class="math inline">\(q_1=c\ne0\)</span>, <span
+class="math inline">\(q_2=q_3=0\)</span> and supply exact initial
+apparatus energy <span class="math inline">\(H_0\)</span>, together with
+all ten final apparatus coordinates at known <span
+class="math inline">\(T\)</span>. On a bounded convex receiver energy
+ball, a sufficiently small fixed box about the calibrated apparatus
+centre admits a uniform global inverse. The exact receiver energy is
+unnecessary. The box may be smaller than R29’s original preparation box;
+its radius stays fixed in the precision limit.</p>
+<p>Choose a third positive smooth pulse detecting the kernel of <span
+class="math inline">\(A_1,B_1,A_2\)</span>. Analytic observability
+guarantees such a pulse, so the four rows</p>
+<p><span class="math display">\[L=(-K A_1/M_1,-K A_2/M_2,-K A_3/M_3,-Kc
+B_1)^T\]</span></p>
+<p>are independent. Write <span class="math inline">\(a=S^{-1}Y\)</span>
+for the inverse free shear of a final record, and let <span
+class="math inline">\(\eta_\lambda(w,a)\)</span> be the uniform
+apparatus inverse chart. For <span
+class="math inline">\(C=(q_1,q_2,q_3,H_{\rm app})\)</span> the map</p>
+<p><span class="math display">\[D_\lambda(w,a)=
+\frac{C(\eta_\lambda(w,a))-C(a)}{\lambda}\]</span></p>
+<p>extends jointly smoothly to zero coupling. Its receiver derivative at
+the nominal record is <span class="math inline">\(L\)</span> throughout
+the receiver ball. Shrinking the apparatus neighbourhood and coupling
+gives a uniform margin <span
+class="math inline">\(\|L^{-1}(D_wD_\lambda-L)\|\le1/2\)</span>. Segment
+integration over the convex receiver domain then proves global
+injectivity for the exact constrained class.</p>
+<p>For two admitted records the same estimate gives <span
+class="math inline">\(\|w-w&#39;\|\le K_z\|Y-Y&#39;\|/\lambda\)</span>.
+Minimum-residual fitting of a record with error at most <span
+class="math inline">\(\delta\)</span> therefore yields, in physical
+units,</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\le
+4L_*P_*K_z^2(\delta/\lambda)^2.\]</span></p>
+<p>This action-unit product closes at fixed positive coupling as record
+error vanishes, with preparation width fixed. Joint limits require <span
+class="math inline">\(\delta/\lambda\to0\)</span> for this bound.
+C116–C117: <a href="three-calibration-global-recovery.html">proof and
+domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B61.md">B61
+audit</a>. R31 tests errors in the supplied calibrations and apparatus
+energy; the current theorem assumes both exact.</p>
+<h2 id="calibration-tolerance-sets-the-recovery-crossover">36.
+Calibration tolerance sets the recovery crossover</h2>
+<p>On section 35’s unchanged apparatus box and receiver ball <span
+class="math inline">\(Z=\{H_s\le E_{\max}\}\)</span>, allow
+deterministic errors <span class="math inline">\(\epsilon\)</span> in
+the four supplied quantities <span
+class="math inline">\(C=(q_1,q_2,q_3,H_{\rm app})\)</span> and <span
+class="math inline">\(\delta\)</span> in all ten final records. All
+component units, nonzero nominal displacement, pulse widths and masses
+remain fixed. Comparing the actual <span
+class="math inline">\(C\)</span> values in the divided inverse chart
+gives</p>
+<p><span class="math display">\[\|w-w&#39;\|\le\frac K\lambda
+(\|C-C&#39;\|+\|Y-Y&#39;\|).\]</span></p>
+<p>A compact feasible-set estimator therefore has</p>
+<p><span class="math display">\[\|\widehat
+w-w\|\le\frac{2K}{\lambda}(\epsilon+\delta),\qquad
+\epsilon_x\epsilon_P\le4L_*P_*K^2
+\left(\frac{\epsilon+\delta}{\lambda}\right)^2.\]</span></p>
+<p>An exact common-record construction supplies a matching lower rate
+for <span class="math inline">\(\delta=0\)</span>. Take <span
+class="math inline">\(Y_\lambda=G_\lambda(0,\eta_c)\)</span> and
+reported calibration <span class="math inline">\(C_*=C(\eta_c)\)</span>.
+The apparatus inverse chart obeys</p>
+<p><span
+class="math display">\[G_\lambda(w,\eta_\lambda(w))=Y_\lambda,\qquad
+\|\eta_\lambda(w)-\eta_c\|\le B\lambda\|w\|.\]</span></p>
+<p>A fixed coupling ceiling keeps this compensator inside half the
+preparation box for every <span class="math inline">\(w\in Z\)</span>.
+Let <span class="math inline">\(M&gt;0\)</span> bound <span
+class="math inline">\(\|DC\|\)</span> and <span
+class="math inline">\(R_Z=\max_Z\|w\|\)</span>. Then the same reported
+data admit every receiver state in <span
+class="math inline">\(tZ\)</span>, where</p>
+<p><span class="math display">\[t=\min\{1,\epsilon/(MB\lambda
+R_Z)\}.\]</span></p>
+<p>Writing <span class="math inline">\(k_x=a-g^2/d&gt;0\)</span>, the
+canonical extrema of <span class="math inline">\(Z\)</span> are <span
+class="math inline">\(X_E=\sqrt{2E_{\max}/k_x}\)</span> and <span
+class="math inline">\(P_E=\sqrt{2\mu E_{\max}}\)</span>. Common-record
+endpoints force every estimator to satisfy <span
+class="math inline">\(\epsilon_x\ge tX_E\)</span> and <span
+class="math inline">\(\epsilon_P\ge tP_E\)</span>. Together with
+feasible estimates and coordinatewise zero estimates, this proves that
+the optimal canonical product has order <span
+class="math inline">\(\min\{1,(\epsilon/\lambda)^2\}\)</span>, up to
+fixed positive action-unit constants. When <span
+class="math inline">\(\epsilon\ge MB\lambda R_Z\)</span>, the zero
+estimator attains the lower bounds:</p>
+<p><span class="math display">\[R_x=X_E,\qquad R_P=P_E,\qquad
+\inf\epsilon_x\epsilon_P=2E_{\max}\sqrt{\mu/k_x}.\]</span></p>
+<p>This is a sufficient saturation threshold. The projected compatible
+area is <span class="math inline">\(\pi X_EP_E\)</span>; the risk
+product has no <span class="math inline">\(2\pi\)</span> normalization.
+All four supplied constraints have positive tolerance in the lower
+construction. R32 retains three exact constraints and tests the
+canonical fibre left by one uncertain quantity. The scale here depends
+on receiver energy and mechanical parameters; at fixed coupling
+calibration refinement closes it. C118–C119: <a
+href="calibration-tolerance-recovery.html">proof and domain</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B62.md">B62
+information-radius audit</a>.</p>
+<h2 id="one-uncertain-calibration-a-curve-instead-of-a-ball">37. One
+uncertain calibration: a curve instead of a ball</h2>
+<p>Keeping three supplied constraints exact leaves a common-record curve
+when the fourth has positive tolerance. For the exact coupled reference
+through receiver zero and nominal apparatus, let</p>
+<p><span class="math display">\[T_\lambda(w)=
+\frac{C(\eta_\lambda(w,a_\lambda))-C_*}{\lambda}.\]</span></p>
+<p>Its smooth extension satisfies <span
+class="math inline">\(T_\lambda(0)=0\)</span> and <span
+class="math inline">\(T_0(w)=Lw\)</span>. The uniform local inverse
+supplies fixed <span class="math inline">\(s_0&gt;0\)</span> and an
+exact family</p>
+<p><span class="math display">\[w_{\lambda,j}(s)=T_\lambda^{-1}(s
+e_j),\qquad
+|s|\le\min\{s_0,\epsilon/\lambda\}.\]</span></p>
+<p>All ten final apparatus coordinates agree; only supplied constraint
+<span class="math inline">\(j\)</span> changes, by <span
+class="math inline">\(\lambda s\)</span>. The leading receiver direction
+is <span class="math inline">\(d_j=L^{-1}e_j\)</span>. For
+apparatus-energy uncertainty, <span class="math inline">\(j=4\)</span>,
+the three position-response rows annihilate this vector. Its two
+canonical entries decide the endpoint test. If both are nonzero,
+shrinking the common local interval gives</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\ge
+\frac{L_*P_*}{4}|(d_j)_x(d_j)_P|
+\min\{s_0,\epsilon/\lambda\}^2.\]</span></p>
+<p>Together with section 36’s upper bound, this gives matching product
+order conditional on the two-entry test. The smooth projected curve has
+zero planar area even when both coordinate diameters are positive. A
+positive estimation product therefore need not be the area of the
+compatible states. Section 38 supplies a pulse selection satisfying all
+four nonvanishing tests. C120: <a
+href="single-calibration-fibres.html">full derivation</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B63.md">B63
+audit</a>.</p>
+<h2 id="early-pulses-give-four-canonical-ambiguity-directions">38. Early
+pulses give four canonical ambiguity directions</h2>
+<p>Choose the first three pulse centres at <span
+class="math inline">\(\tau,2\tau,3\tau\)</span> for a sufficiently small
+fixed <span class="math inline">\(\tau&gt;0\)</span>, then fix
+sufficiently narrow positive smooth widths. This explicit subfamily of
+section 35 makes both canonical entries of every <span
+class="math inline">\(L^{-1}e_j\)</span> nonzero. Section 37 therefore
+gives matching risk-product order <span
+class="math inline">\(\min\{1,(\epsilon/\lambda)^2\}\)</span> for any
+one uncertain supplied constraint, including apparatus energy, with the
+other three exact.</p>
+<p>For free output <span class="math inline">\(x\)</span>, put <span
+class="math inline">\(X(u)=x(\tau u)\)</span>. The receiver equations
+give <span
+class="math inline">\(X^{(4)}+\alpha\tau^2X&#39;&#39;+\beta\tau^4X=0\)</span>,
+where <span class="math inline">\(\alpha=a/\mu+d/\nu\)</span> and <span
+class="math inline">\(\beta=(ad-g^2)/(\mu\nu)\)</span>. In scaled
+initial-jet coordinates, the map <span
+class="math inline">\((x(\tau),x(2\tau),x(3\tau),\tau\dot
+x(\tau))\)</span> is an <span class="math inline">\(O(\tau^2)\)</span>
+perturbation of cubic Hermite interpolation at <span
+class="math inline">\(1,2,3\)</span> and derivative at <span
+class="math inline">\(1\)</span>. Its cardinal polynomials have initial
+value/derivative pairs</p>
+<p><span
+class="math display">\[(-3/2,23/4),\quad(3,-7),\quad(-1/2,5/4),\quad(-3,11/2).\]</span></p>
+<p>All are nonzero. Momentum is <span
+class="math inline">\(\mu/\tau\)</span> times the second entry. After
+dividing pulse rows by their nonzero integral/time factors, supports of
+half-width at most <span class="math inline">\(h\)</span> perturb this
+matrix by at most <span class="math inline">\(C_\tau h\)</span>. The
+inverse identity bounds the inverse perturbation by <span
+class="math inline">\(2\|\mathcal H_\tau^{-1}\|^2C_\tau h\)</span> when
+<span class="math inline">\(\|\mathcal H_\tau^{-1}\|C_\tau
+h&lt;1/2\)</span>. Choose <span class="math inline">\(h\)</span> to
+preserve the eight entry margins and both required signal determinants.
+Analytic observability selects the fourth disjoint pulse completing the
+ordinary signal matrix. All widths and the resulting small apparatus box
+stay fixed thereafter.</p>
+<p>For an arbitrary R30 design the criterion is nonvanishing of <span
+class="math inline">\(\operatorname{cof}_{j,1}(L)\)</span> and <span
+class="math inline">\(\operatorname{cof}_{j,2}(L)\)</span>. The selected
+family proves simultaneous feasibility; the action-unit constants remain
+design- and preparation-dependent. C121: <a
+href="single-calibration-fibres.html">full polynomial and pulse
+proof</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B64.md">B64
+audit</a>.</p>
+<h2 id="correlated-errors-suppress-the-canonical-fibre">39. Correlated
+errors suppress the canonical fibre</h2>
+<p>For the correlated report <span class="math inline">\(C-C_*=\alpha L
+e_y\)</span>, <span class="math inline">\(|\alpha|\le\epsilon\)</span>,
+the exact reference-record curve has a hidden-coordinate limit:</p>
+<p><span class="math display">\[w_\lambda(s)=T_\lambda^{-1}(s L
+e_y),\qquad
+w_0(s)=s e_y,\qquad |s|\le s_\epsilon=
+\min(s_0,\epsilon/\lambda).\]</span></p>
+<p>Here the pulses, box, scalar error normalization and local interval
+are fixed. Smooth mixed derivatives and <span
+class="math inline">\(w_\lambda(0)=0\)</span> give <span
+class="math inline">\(\|w_\lambda(s)-s e_y\|\le K_1\lambda|s|\)</span>.
+The optimal scalar errors conditional on this compact common-record
+segment consequently satisfy</p>
+<p><span class="math display">\[R_x^{\rm loc}R_P^{\rm loc}\le
+L_*P_*K_1^2\min(\lambda s_0,\epsilon)^2.\]</span></p>
+<p>Hidden-state ambiguity persists at fixed positive tolerance, while
+these canonical ranges close with coupling. This conditional estimate
+concerns one local fibre, rather than a global estimator across all
+final records.</p>
+<p>To identify the first surviving term, retain the moving coupled
+reference in <span
+class="math inline">\(N(\lambda,w)=C(\eta_\lambda(w,a_\lambda))-C_*\)</span>
+and put <span
+class="math inline">\(V(w)=\tfrac12\partial_\lambda^2N(0,w)\)</span>.
+The inverse expansion is</p>
+<p><span class="math display">\[w_\lambda(s)=s e_y-\lambda L^{-1}V(s
+e_y)
++O(\lambda^2|s|).\]</span></p>
+<p>The mechanical tangent coefficient vanishes exactly. On the fixed
+linear-cutoff chart, receiver reversal with coupling reversal preserves
+every apparatus record. The coupled reference is even in coupling, so
+the unique compensator gives <span
+class="math inline">\(N(-\lambda,-w)=N(\lambda,w)\)</span> and <span
+class="math inline">\(D V(0)=0\)</span>. Backward terminal variational
+equations, after subtracting the moving coupled reference, give a
+homogeneous quadratic map V; explicit finite-width pulse integrals
+appear in the linked derivation, equations (10)–(13).</p>
+<p>Put <span class="math inline">\(\beta=-\Pi_{x,P}L^{-1}V(e_y)\)</span>
+and <span class="math inline">\(S=\min(s_0,\epsilon/\lambda)\)</span>.
+Then</p>
+<p><span class="math display">\[\Pi_{x,P}w_\lambda(s)=\lambda
+s^2\beta+O(\lambda^2|s|),\qquad
+R_x^{\rm loc}R_P^{\rm loc}\le
+L_*P_*K_2^2(\lambda S^2+\lambda^2 S)^2.\]</span></p>
+<p>Both beta components remain to be tested for the selected pulses. If
+both are nonzero and S/lambda is sufficiently large, centre-to-endpoint
+comparison gives a lower bound <span
+class="math inline">\(L_*P_*|\beta_x\beta_P|\lambda^2 S^4/16\)</span>.
+Opposite endpoints cancel the displayed curvature term. These are
+conditional local-fibre statements. C122–C123: <a
+href="correlated-calibration-response.html">derivation and units</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B65.md">B65
+audit</a>, <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B66.md">B66
+audit</a>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The mass gap: current position of this programme</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The mass gap: current position of this programme</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-position.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-position.pdf">PDF</a></p><p>This is the synthesis of the notes written since the goal was set to
+a proof of the Yang–Mills existence and mass-gap conjecture. It states
+what has been proved here, what has been imported, what has been ruled
+out, and what remains, with constants explicit and each claim
+labelled.</p>
+<p>The short version: the conjecture decomposes into six named
+statements, of which two are proved here and one is imported. The clause
+<span class="math inline">\(m&lt;\infty\)</span> is closed as far as
+variational methods reach, and reduced to the existence of the theory
+plus the nontriviality of one flowed correlator. The clause <span
+class="math inline">\(m&gt;0\)</span> is untouched, and <strong>seven
+routes to it have been closed by explicit computation</strong>, in two
+families: those built from operator norms and spectra, and those built
+from the ground state of the Hamiltonian. Both families fail for reasons
+now stated exactly, and the second failure identifies what the Euclidean
+formulation supplies that the Hamiltonian one does not.</p>
+<h2 id="the-decomposition">1. The decomposition</h2>
+<p><a href="mass-gap-obligations-lattice.html">The obligations map</a>
+turns “prove the mass gap” into six statements about the Kogut–Susskind
+Hamiltonian <span class="math display">\[H=\frac{\hbar
+c}{a}\Big[\frac{g^2}{2}\sum_{\ell}(-\Delta_\ell)
++\frac2{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big],
+\qquad \Delta_{a,L}=\frac{\hbar c}{a}\,\delta(g;N_s,G).\]</span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>statement</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1</td>
+<td>finite lattice: unique physical ground state, <span
+class="math inline">\(\delta&gt;0\)</span></td>
+<td><strong>proved here</strong></td>
+</tr>
+<tr class="even">
+<td>T2</td>
+<td><span class="math inline">\(\delta\ge\gamma(g^2/2)C_2\)</span> for
+<span class="math inline">\(g\ge g_0\)</span>, uniform in volume</td>
+<td><strong>proved here</strong> from an imported theorem; explicit for
+the Wilson transfer matrix, <span
+class="math inline">\(g^2\ge176\)</span></td>
+</tr>
+<tr class="odd">
+<td>T2<span class="math inline">\(&#39;\)</span></td>
+<td><span class="math inline">\(\liminf_{N_s}\delta&gt;0\)</span> for
+every <span class="math inline">\(g&gt;0\)</span></td>
+<td>open; false for <span class="math inline">\(U(1)\)</span></td>
+</tr>
+<tr class="even">
+<td>T3</td>
+<td><span class="math inline">\(\delta_\infty(g)/(a\Lambda_{\rm
+lat}(g))\to m/(\hbar c\Lambda)\in(0,\infty)\)</span></td>
+<td>open</td>
+</tr>
+<tr class="odd">
+<td>T4</td>
+<td>continuum infinite-volume theory with the axioms</td>
+<td>finite-volume ultraviolet stability known</td>
+</tr>
+<tr class="even">
+<td>S</td>
+<td>small volume: <span
+class="math inline">\(\Delta=\delta_1g^{2/3}\hbar
+c/L\,[1+O(g^{2/3})]\)</span></td>
+<td>upper side proved, lower side fixed-lattice only</td>
+</tr>
+</tbody>
+</table>
+<p>The conjecture is T2<span class="math inline">\(&#39;\)</span>
+together with T3, given T4, and <a
+href="gapped-set-critical-coupling.html">the critical-coupling note</a>
+shows that T2<span class="math inline">\(&#39;\)</span> is exactly the
+absence of a zero-temperature bulk phase transition, hence on its
+second-order branch the uniqueness of the continuum limit.</p>
+<h2 id="what-is-proved-here">2. What is proved here</h2>
+<p><strong>T1</strong> (<a
+href="mass-gap-obligations-lattice.html">obligations map</a> §2):
+compact resolvent, a simple strictly positive ground state, a positive
+gap inherited by the physical sector, for every <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(N_s\)</span>, <span
+class="math inline">\(g\)</span> and compact connected <span
+class="math inline">\(G\)</span>.</p>
+<p><strong>T2 in Hamiltonian form</strong> (<a
+href="strong-coupling-uniform-gap.html">T2 note</a>): the electric term
+is classical in the Peter–Weyl partition and the magnetic term is a
+bounded range-<span class="math inline">\(\{0,1\}^3\)</span>
+perturbation with <span
+class="math inline">\(\beta=48N^2/[g^4(N^2-1)]\)</span>, so Yarotsky’s
+theorem gives <span
+class="math inline">\(\Delta_{a,L}\ge\gamma(g^2/2)C_2\hbar c/a\)</span>
+for <span class="math inline">\(g\ge g_0\)</span>, uniformly in the
+lattice size, with exponential clustering.</p>
+<p><strong>A Lieb–Robinson bound</strong> (<a
+href="lieb-robinson-kogut-susskind.html">note</a>): velocity <span
+class="math inline">\(v\le32eNc/g^2\)</span>, uniform in volume, because
+the unbounded part of <span class="math inline">\(H\)</span> is a sum of
+commuting single-link Laplacians; hence a strong-coupling correlation
+length <span class="math inline">\(\xi\le C&#39;aN/(\gamma
+C_2g^4)\)</span>.</p>
+<p><strong>Upper bounds</strong> (<a
+href="lattice-gap-upper-bounds.html">note</a>, <a
+href="polyakov-average-gap-bound.html">Polyakov note</a>): the
+Feynman–Bijl inequality with explicit constants; the strong-coupling gap
+pinned to order <span class="math inline">\(g^2\hbar c/a\)</span> on
+both sides; the abelian gap bounded by the plaquette-sine structure
+factor; the proof that <strong>no operator linear in the electric field
+with c-number coefficients is gauge invariant for a non-abelian
+group</strong>; and a necessary condition on the Polyakov-loop
+susceptibility.</p>
+<p><strong>The finiteness clause reduced</strong> (<a
+href="moment-hierarchy-upper-bounds.html">moment hierarchy</a>): <span
+class="math inline">\(m\le M_{k+1}/M_k\)</span> for every <span
+class="math inline">\(k\)</span>, with the ratios decreasing, so the
+<span class="math inline">\(f\)</span>-sum rule is the weakest member
+and the next one, <span class="math inline">\(m\le\hbar
+C_0(0)/\int_0^\infty C_0\)</span>, needs only T4 and <span
+class="math inline">\(C_0\not\equiv0\)</span>. The free-field value of
+the weakest member is <span class="math inline">\(4.26\,\hbar
+c/\sqrt{8t}\)</span>, computed in closed form and confirmed by an
+independent sum rule (<a href="flowed-bound-free-field.html">free-field
+note</a>).</p>
+<p><strong>Exact structural identities</strong> (<a
+href="magnetic-energy-identities.html">note</a>): <span
+class="math inline">\(\Delta V=4C_2(N|\mathcal P|-V)\)</span>, so the
+magnetic energy shifted by its Haar mean is a Laplacian eigenfunction;
+<span class="math inline">\(|\nabla V|^2\le16V\)</span> for <span
+class="math inline">\(SU(2)\)</span>; and an exact ground-state sum rule
+tying <span class="math inline">\(\operatorname{Var}_\Omega(V)\)</span>
+to kinetic quantities.</p>
+<p><strong>Flow facts</strong> (<a
+href="flow-conjugation-truncation.html">conjugation</a>, <a
+href="lattice-truncation-uniform.html">lattice truncation</a>): the
+Wilson flow is a diffeomorphism of <span
+class="math inline">\(G^{\mathcal E}\)</span>, unitarily implemented, so
+conjugation preserves the spectrum; the lattice flow carries no coupling
+and a doubling is dimensionless flow time <span
+class="math inline">\(1/2\)</span>, so truncating the conjugated
+Hamiltonian at range <span class="math inline">\(Ka\)</span> costs <span
+class="math inline">\(Ce^{-cK}\)</span> with pure constants.</p>
+<h2 id="seven-closed-routes">3. Seven closed routes</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>route</th>
+<th>why it closes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>variational upper bounds, for <span
+class="math inline">\(m&gt;0\)</span></td>
+<td>a spectral measure with all negative moments finite can have <span
+class="math inline">\(m=0\)</span></td>
+</tr>
+<tr class="even">
+<td>expansion around the free theory</td>
+<td>the bound reaches <span class="math inline">\(m\)</span> only at the
+confinement scale, where its coefficient is nonperturbative</td>
+</tr>
+<tr class="odd">
+<td>blocking by projection</td>
+<td>the boundary grows like <span class="math inline">\(M^2\)</span>
+while the block gap does not; the criterion worsens by <span
+class="math inline">\(3M^2/8\)</span></td>
+</tr>
+<tr class="even">
+<td>conjugation by the flow</td>
+<td>the spectrum is invariant, so the gain is the truncation, which is
+cheap</td>
+</tr>
+<tr class="odd">
+<td>flow before decimation</td>
+<td>sup norms are bijection-invariant and spectra
+conjugation-invariant</td>
+</tr>
+<tr class="even">
+<td>Agmon estimate on the ground state</td>
+<td><span class="math inline">\(\|\nabla V\|_\infty\)</span> is
+extensive, so it bounds the global excess only</td>
+</tr>
+<tr class="odd">
+<td>pointwise Gibbs domination</td>
+<td>the comparison function bites only above the extensive threshold
+<span class="math inline">\(V_*\simeq N|\mathcal P|\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The first five exhaust the methods built from operator norms and
+spectra; the last two exhaust the standard ways of extracting a local
+statement from the ground-state eigenvalue equation. Each closure is a
+computation with explicit constants.</p>
+<p><strong>The reason the last two fail, stated once.</strong> Every
+inequality derived from <span
+class="math inline">\(-A&#39;\Delta\Omega+(B&#39;V-e_0)\Omega=0\)</span>
+compares the total potential with the total energy, and <span
+class="math inline">\(e_0\)</span> is extensive, so it separates
+configurations only by their global excess. The Euclidean weight <span
+class="math inline">\(e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}\)</span>
+factorizes over plaquettes and separates them locally by construction.
+That is the structural advantage of the Euclidean formulation, derived
+here rather than assumed.</p>
+<h2 id="where-the-non-abelian-structure-has-been-isolated">4. Where the
+non-abelian structure has been isolated</h2>
+<p>Three statements distinguish the groups, and any proof of T2<span
+class="math inline">\(&#39;\)</span> must use one of them.</p>
+<ol type="1">
+<li><em>The commutator potential</em> of the zero-momentum sector is
+identically zero for an abelian group; where present, the transverse
+zero-point energy confines the valley and produces the gap <span
+class="math inline">\(\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}\)</span> (<a
+href="low-dimensional-mass-gap.html">G07</a>, claim C133).</li>
+<li><em>Gauge invariance blocks the photon channel</em>: no
+c-number-coefficient operator linear in <span
+class="math inline">\(E\)</span> commutes with Gauss’s law for a
+non-abelian group, so the excitation through which the abelian gap
+closes must carry a Wilson line (<a
+href="lattice-gap-upper-bounds.html">upper-bound note</a> Proposition
+6).</li>
+<li><em>The one-loop valley potential</em> <span
+class="math inline">\(U(a)=\frac{2\hbar c}{\pi^2L}\Phi(La)\)</span>
+vanishes identically in the abelian theory, so the holonomy is free (<a
+href="torus-valley-potential.html">valley note</a> §3b).</li>
+</ol>
+<h2 id="what-remains">5. What remains</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>obligation</th>
+<th>kind</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T2<span class="math inline">\(&#39;\)</span>: closedness of the
+gapped set</td>
+<td>the conjecture</td>
+</tr>
+<tr class="even">
+<td>openness of the gapped set</td>
+<td>technical: gap stability without frustration-freeness</td>
+</tr>
+<tr class="odd">
+<td>T3</td>
+<td>the conjecture, given T2<span
+class="math inline">\(&#39;\)</span></td>
+</tr>
+<tr class="even">
+<td>T4</td>
+<td>construction</td>
+</tr>
+<tr class="odd">
+<td>local large-field control</td>
+<td>available via the transfer-matrix identification: <span
+class="math inline">\(|\Omega|^2\)</span> is the Euclidean time-slice
+marginal</td>
+</tr>
+<tr class="even">
+<td>the large-field region itself</td>
+<td>closed in measure (cost <span
+class="math inline">\(\eta^2/(4g^2)\)</span> sharp, entropy <span
+class="math inline">\(\eta^2/(8\pi^2)\)</span>); the Hamiltonian chain
+needs an operator inequality there, whose proof loses <span
+class="math inline">\(C_V|\partial N|\hbar c/a\)</span> on the
+small-field side, a negative perturbation that binds; the polymer
+expansion consumes measure statements instead</td>
+</tr>
+</tbody>
+</table>
+<p>The pattern across every note is uniform: <strong>statements uniform
+in the cutoff are renormalization statements, and statements local in
+space need a local weight.</strong> The strong-coupling theorem is
+uniform in the volume at fixed cutoff; the small-volume theorem is
+fixed-lattice; the flowed bounds are finite at fixed lattice and need
+the flow’s renormalization in the continuum; the ground-state estimates
+are global because the eigenvalue equation is.</p>
+<h2 id="assessment">6. Assessment</h2>
+<p>The route that survives is the constructive one: conjugate by the
+flow, which is exact; truncate, which is cheap, inside the large-field
+region too once the range grows like <span
+class="math inline">\(\eta\)</span>; decimate, which is the problem; and
+iterate about twenty-one times for <span
+class="math inline">\(SU(3)\)</span> from <span
+class="math inline">\(g_{\rm UV}^2=1/2\)</span> (<a
+href="su3-constants.html">SU(3) constants</a> §3). The identification of
+<span class="math inline">\(\Omega^2\)</span> with the Euclidean
+time-slice marginal (<a
+href="ground-state-measure-transfer.html">transfer note</a>) imports
+every local Euclidean estimate, and the large-field region is then
+closed in measure: cost <span
+class="math inline">\(\eta^2/(4g^2)\)</span>, sharp; entropy <span
+class="math inline">\(\eta^2/(8\pi^2)\)</span>; the flow’s growth there
+is the Nielsen–Olesen mode and cannot be improved. What the Hamiltonian
+chain of lower bounds consumes from that region is an operator
+inequality, whose proof loses a negative term of order <span
+class="math inline">\(\hbar c/a\)</span> on the small-field side, of
+exactly the kind that binds (<a
+href="large-field-operator-inequality.html">operator-inequality
+note</a>). The Euclidean polymer expansion consumes the measure
+statements directly, which is the reason the constructive programme is
+Euclidean, now stated as a computation.</p>
+<p><strong>The coupling map for <span
+class="math inline">\(SU(3)\)</span>.</strong> Three regions, with
+numbers:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>region</th>
+<th>statement</th>
+<th>source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>strong, <span class="math inline">\(g^2&gt;444\)</span> (Dobrushin)
+or <span class="math inline">\(g^2\ge1056\)</span> (polymer)</td>
+<td><span class="math inline">\(\Delta_W\ge(\hbar
+c/a)\log(g^2/432)\)</span>, resp. <span
+class="math inline">\(4\log(g^2/1056)\)</span>, uniform in volume,
+Wilson transfer matrix</td>
+<td><a href="dobrushin-uniqueness-wilson.html">Dobrushin note</a>, <a
+href="wilson-strong-coupling-explicit.html">polymer note</a></td>
+</tr>
+<tr class="even">
+<td>strong, <span class="math inline">\(g^2\ge388\)</span> (<span
+class="math inline">\(79\)</span> in the adjacent-growth class)</td>
+<td><span class="math inline">\(\Delta_{\rm KS}\ge\frac43g^2\,\hbar
+c/a\)</span>, approaching <span
+class="math inline">\(\frac83g^2\)</span>, Kogut–Susskind</td>
+<td><a
+href="kogut-susskind-strong-coupling-explicit.html">continuous-time
+note</a></td>
+</tr>
+<tr class="odd">
+<td>weak, <span class="math inline">\(1/g^2\gtrsim10^2\)</span></td>
+<td>small-field expansion applies, crude window <span
+class="math inline">\(C_1g\le\eta\le C_2\)</span></td>
+<td><a href="large-field-operator-inequality.html">operator-inequality
+note</a> §4</td>
+</tr>
+<tr class="even">
+<td>intermediate, <span class="math inline">\(10^{-2}\lesssim
+g^2\lesssim4\times10^2\)</span></td>
+<td>no expansion applies; a finite-volume mixing condition
+(Dobrushin–Shlosman) would give the gap coupling by coupling</td>
+<td><a
+href="intermediate-region-finite-verification.html">finite-verification
+note</a></td>
+</tr>
+</tbody>
+</table>
+<p>The strong boundary is explicit and the weak one is crude; the width
+of the intermediate region in one-loop doublings is set almost entirely
+by the weak side, about <span class="math inline">\(10^3\)</span> with
+the present window and about <span class="math inline">\(20\)</span> if
+the small-field expansion reaches <span
+class="math inline">\(g^2\sim1/2\)</span> (<a
+href="strong-coupling-threshold-explicit.html">threshold note</a> §4).
+The Kogut–Susskind threshold from Yarotsky’s theorem, made explicit, is
+<span class="math inline">\(g_0^2\sim10^{101}\)</span> and plays no role
+in the map.</p>
+<p><strong>The map as a theorem.</strong> <a
+href="mass-gap-conditional-theorem.html">The conditional theorem</a>
+states the whole map as two hypotheses, control of the blocking steps
+from the weak side to the coupling where <span
+class="math inline">\(\xi\simeq a\)</span> (H1) and certified mixing at
+that one coupling on one box (H2), with the conclusion <span
+class="math inline">\(m\ge\hbar
+c\min(\gamma_*,\gamma&#39;)/a_*\)</span>, where <span
+class="math inline">\(a_*\simeq0.1\)</span> fm is the physical spacing
+at the verified coupling. Progress is progress on H1 or H2.</p>
+<p><strong>The two reasons to stop, researched.</strong> A
+Griffiths-type inequality would transfer control from weaker to stronger
+coupling only and would replace the strong-side steps, never the weak
+side (<a href="reasons-to-stop-as-research.html">research note</a>); a
+certified verification at <span
+class="math inline">\(\beta_W\simeq6\)</span> is beyond every certified
+method. On the weak side, one explicit small-field step (<a
+href="small-field-step-gaussian.html">part 1</a>, <a
+href="small-field-step-decay-and-threshold.html">part 1b</a>) has block
+Poincaré constant <span class="math inline">\(\frac49\)</span>,
+fluctuation size <span class="math inline">\(\frac32g\)</span> per link,
+a proved propagator decay rate of <span
+class="math inline">\(10^{-3}\)</span> per lattice unit against an
+order-one truth, and a remainder threshold scaling as <span
+class="math inline">\(\kappa^4\)</span> that lies at <span
+class="math inline">\(g^2\sim10^{-12}\)</span> even for an ideal rate:
+<strong>twelve orders of magnitude below the physical onset of the
+running at <span class="math inline">\(g^2\simeq1\)</span></strong>,
+where the strong side’s deficit is a factor <span
+class="math inline">\(400\)</span>. Constant-chasing cannot close the
+weak side; H1 is a methods problem at order-one coupling.</p>
+<p><strong>Division of labour.</strong> Hamiltonian methods for T1, T2,
+the small-volume theorem, the upper bounds, the exact identities and the
+final gap extraction; the Euclidean polymer expansion for the
+renormalization steps; and, for the intermediate region, the
+finite-volume mixing conditions, which reduce the gap at a given
+coupling to a finite verification and turn the problem into the entry of
+the trajectory of effective interactions into the open set of completely
+analytical interactions, a sufficient route whose two-number form is the
+meeting of the reach <span class="math inline">\(g_{\rm RG}^2\)</span>
+of the small-field renormalization with the reach <span
+class="math inline">\(g_{\rm DS}^2\)</span> of the verification (<a
+href="intermediate-region-finite-verification.html">finite-verification
+note</a>).</p>
+<p>What this programme has added is a map with constants: six named
+statements, two proved, the finiteness clause reduced to a single
+correlator, seven routes closed with explicit numbers, the large-field
+region closed in measure and its obstruction in norm identified, three
+places where the non-abelian structure is isolated in a usable form, the
+exact identities and sum rule of Section 2, and explicit thresholds on
+both sides of the intermediate region. Several of the closures are
+corrections of claims made earlier in the same series, and each is
+recorded with the computation that forced it.</p>
+<h2 id="where-the-map-ends">7. Where the map ends</h2>
+<p>The mass gap for <span class="math inline">\(SU(3)\)</span> in four
+dimensions is not proved here. Both sides of the confinement scale carry
+explicit constants, the two standing reasons for stopping have been
+researched rather than left as reasons, and what remains can be stated
+in one sentence.</p>
+<p><em>The two reasons, researched.</em> A Griffiths-type correlation
+inequality would give monotonicity of the string tension and of decay
+rates in channels with vanishing mean, and it transfers control from
+weaker to stronger coupling only; on this map it replaces the three
+strong-side blocking steps and leaves the weak side untouched, so it is
+a simplification and not an unblocking. Even the vacuum-sector gap’s
+monotonicity would not follow, the truncated plaquette correlator having
+two terms that both increase. A certified verification of the mixing
+condition at <span class="math inline">\(\beta_W\simeq6\)</span> is a
+supremum over boundary conditions of an integral in thousands of
+dimensions, while certified polymer enumeration converges only where the
+expansion does, at <span class="math inline">\(\beta_W\)</span> of order
+one; so it cannot be supplied where it is needed, by any method known to
+this author.</p>
+<p><em>The asymmetry of the two sides.</em> The strong side is proved to
+<span class="math inline">\(\beta_W=0.0135\)</span> against a physical
+crossover at <span class="math inline">\(5.7\)</span>, a factor of <span
+class="math inline">\(400\)</span>. The weak side, computed explicitly
+for one blocking step, has its threshold controlled by the fourth power
+of the fluctuation propagator’s decay rate, which no source states
+explicitly and which two explicit arguments put at <span
+class="math inline">\(10^{-3}\)</span> per lattice unit against an
+order-one truth; the threshold lands at <span
+class="math inline">\(g^2\sim10^{-12}\)</span> even with an ideal rate,
+twelve orders of magnitude below the physical onset of the running at
+<span class="math inline">\(g^2\simeq1\)</span>. Sharpening constants
+within the present method closes neither side, and the weak side by a
+margin that no sharpening addresses.</p>
+<p><em>What is open.</em> Control of the renormalization steps at
+couplings where the fluctuation is not small compared with the
+nonlinearity, with no expansion in any parameter. That is the mass-gap
+problem for <span class="math inline">\(SU(3)\)</span>, stated as
+precisely as this programme can state it, and it is new mathematics.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

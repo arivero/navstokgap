@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The mass gap as a finite list of theorems: the Hamiltonian lattice route</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The mass gap as a finite list of theorems: the Hamiltonian lattice
+route</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-obligations-lattice.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-obligations-lattice.pdf">PDF</a></p><p>On the Hamiltonian lattice route the Jaffe–Witten conjecture
+decomposes into four named statements, and their present status is: (T1)
+every finite periodic lattice has a positive gap <span
+class="math inline">\(\Delta_{a,L}\)</span> above a unique
+gauge-invariant ground state, proved below with all constants explicit;
+(T2) at strong coupling the gap stays bounded below uniformly in the
+volume, established in the Euclidean form by the Osterwalder–Seiler
+cluster expansion and cited here with its hypotheses, while the naive
+Kato bound fails because the magnetic term is extensive; (T2<span
+class="math inline">\(&#39;\)</span>) the gap of the infinite lattice
+stays positive for every coupling, which is the statement that
+four-dimensional non-abelian lattice gauge theory has no Coulomb phase,
+open, and false for the abelian group by Guth and Fröhlich–Spencer; (T3)
+along the asymptotic-freedom curve <span
+class="math inline">\(g(a)\)</span> the infinite-volume gap <span
+class="math inline">\(\Delta_a\)</span> satisfies <span
+class="math inline">\(\Delta_a/(\hbar c\Lambda(g(a)))\to
+m/\Lambda\in(0,\infty)\)</span>, open, and this single limit is the
+Millennium content once the theory exists; (T4) the continuum,
+infinite-volume theory with the Osterwalder–Schrader axioms, known in
+finite volume with an ultraviolet cutoff removed (Balaban;
+Magnen–Rivasseau–Sénéor) and open beyond. The small-volume expansion
+controls one corner: for <span class="math inline">\(L\ll\hbar
+c/\Lambda\)</span> the gap is <span
+class="math inline">\(\delta_1g(L)^{2/3}\hbar c/L\)</span> (C133,
+Lüscher), so the dimensionless gap <span
+class="math inline">\(z(L)=\Delta(L)L/(\hbar c)\)</span> must cross over
+from <span class="math inline">\(\propto g^{2/3}\)</span> at small <span
+class="math inline">\(L\)</span> to linear growth <span
+class="math inline">\(mL/(\hbar c)\)</span> at large <span
+class="math inline">\(L\)</span>. T2 in Hamiltonian form, a
+volume-uniform gap for <span class="math inline">\(g\ge g_0(N)\)</span>,
+is closed in <a href="strong-coupling-uniform-gap.html">the
+strong-coupling note</a>; the radius <span
+class="math inline">\(g_0\)</span> is the number the entire problem asks
+to push to zero. Sources are cited inline with reading labels; nothing
+here is promoted.</p>
+<h2 id="the-finite-lattice-hamiltonian">1. The finite-lattice
+Hamiltonian</h2>
+<p>Let <span class="math inline">\(G\)</span> be a compact connected
+simple Lie group with Lie algebra basis <span
+class="math inline">\(T^a\)</span> normalized by <span
+class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>
+in a fixed faithful representation (for <span
+class="math inline">\(SU(N)\)</span> the fundamental). Let <span
+class="math inline">\(\Lambda=(a\mathbb Z/Na\mathbb Z)^3\)</span> be the
+periodic spatial lattice with spacing <span
+class="math inline">\(a\)</span>, side <span
+class="math inline">\(L=Na\)</span>, link set <span
+class="math inline">\(\mathcal E\)</span> and plaquette set <span
+class="math inline">\(\mathcal P\)</span>; <span
+class="math inline">\(|\mathcal E|=3N^3\)</span>, <span
+class="math inline">\(|\mathcal P|=3N^3\)</span>. The Hilbert space is
+<span class="math inline">\(\mathcal H=L^2(G^{\mathcal
+E},\mathrm{Haar}^{\otimes\mathcal E})\)</span>. On the copy of <span
+class="math inline">\(G\)</span> attached to a link <span
+class="math inline">\(\ell\)</span>, the electric field components <span
+class="math inline">\(E^a_\ell\)</span> are <span
+class="math inline">\(-i\)</span> times the left-invariant vector
+fields, and <span
+class="math inline">\(\sum_a(E^a_\ell)^2=-\Delta_\ell\)</span> is the
+Laplace–Beltrami operator of the bi-invariant metric, whose eigenvalues
+on the Peter–Weyl blocks are the quadratic Casimirs <span
+class="math inline">\(C_2(R)\)</span> with multiplicity <span
+class="math inline">\((\dim R)^2\)</span>. The Kogut–Susskind
+Hamiltonian (Phys. Rev. D 11 (1975) 395, metadata) in the convention
+used here is <span class="math display">\[H=\frac{\hbar
+c}{a}\Big[\frac{g^2}{2}\sum_{\ell\in\mathcal E}(-\Delta_\ell)
++\frac{2}{g^2}\sum_{p\in\mathcal
+P}\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big]
+=\frac{\hbar c}{a}\,\big[g^2K+g^{-2}V\big],\]</span> with <span
+class="math inline">\(g\)</span> dimensionless, <span
+class="math inline">\(U_p\)</span> the ordered product of the four link
+variables around <span class="math inline">\(p\)</span>, and <span
+class="math inline">\(K\)</span>, <span class="math inline">\(V\)</span>
+the dimensionless electric and magnetic operators. Other conventions
+rescale <span class="math inline">\(g^2\)</span> by a fixed number. The
+dimensionless spectrum of <span class="math inline">\(aH/(\hbar
+c)\)</span> depends on <span class="math inline">\(g\)</span>, <span
+class="math inline">\(N\)</span> and <span
+class="math inline">\(G\)</span> only: <span
+class="math display">\[\Delta_{a,L}=\frac{\hbar
+c}{a}\,\delta(g;N,G).\]</span></p>
+<p>Gauge transformations <span class="math inline">\(\gamma:\Lambda\to
+G\)</span> act by <span class="math inline">\((\mathcal
+V_\gamma\psi)(U)=\psi(\gamma_xU_\ell\gamma_y^{-1})\)</span> for <span
+class="math inline">\(\ell=(x,y)\)</span>; they are unitary, commute
+with <span class="math inline">\(H\)</span> (the Laplacian is
+bi-invariant and <span
+class="math inline">\(\operatorname{tr}U_p\)</span> is conjugation
+invariant) and preserve positivity of functions. The physical space
+<span class="math inline">\(\mathcal H_{\rm phys}\)</span> is the joint
+fixed space (Gauss’s law).</p>
+<h2
+id="t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state">2.
+T1: every finite lattice has a gap above a unique physical ground
+state</h2>
+<p><strong>Theorem 1.</strong> For every <span
+class="math inline">\(a&gt;0\)</span>, <span
+class="math inline">\(N\ge2\)</span>, <span
+class="math inline">\(g&gt;0\)</span> and <span
+class="math inline">\(G\)</span> as above:</p>
+<ol type="1">
+<li><span class="math inline">\(H\)</span> is self-adjoint, bounded
+below, and has compact resolvent; its spectrum is a sequence <span
+class="math inline">\(E_0&lt;E_1&lt;\cdots\to\infty\)</span> of
+eigenvalues of finite multiplicity.</li>
+<li><span class="math inline">\(E_0\)</span> is simple with a strictly
+positive eigenfunction <span class="math inline">\(\psi_0\)</span>, so
+<span class="math inline">\(\Delta_{a,L}=E_1-E_0&gt;0\)</span>.</li>
+<li><span class="math inline">\(\psi_0\in\mathcal H_{\rm phys}\)</span>,
+<span class="math inline">\(\mathcal H_{\rm phys}\)</span> reduces <span
+class="math inline">\(H\)</span>, and the physical gap satisfies <span
+class="math inline">\(\Delta^{\rm
+phys}_{a,L}\ge\Delta_{a,L}&gt;0\)</span>.</li>
+</ol>
+<p><em>Proof.</em> (1) <span class="math inline">\(-\Delta_\ell\)</span>
+is essentially self-adjoint on <span
+class="math inline">\(C^\infty(G)\)</span>, nonnegative, with compact
+resolvent, since <span class="math inline">\(G\)</span> is a compact
+manifold and Peter–Weyl gives the eigenvalues <span
+class="math inline">\(C_2(R)\)</span> with finite multiplicities and
+<span class="math inline">\(C_2(R)\to\infty\)</span> along any
+enumeration of irreducible representations. <span
+class="math inline">\(K=\sum_\ell(-\Delta_\ell)\)</span> acts on the
+finite tensor product with eigenvalues <span
+class="math inline">\(\sum_\ell C_2(R_\ell)\)</span>; for each bound
+<span class="math inline">\(E\)</span> only finitely many assignments
+<span class="math inline">\(\ell\mapsto R_\ell\)</span> have <span
+class="math inline">\(\sum_\ell C_2(R_\ell)\le E\)</span>, so <span
+class="math inline">\(K\)</span> has compact resolvent. <span
+class="math inline">\(V\)</span> is multiplication by a continuous
+function with <span class="math inline">\(0\le V\le2N|\mathcal
+P|\)</span>, hence bounded, and a bounded perturbation of an operator
+with compact resolvent has compact resolvent by the resolvent identity
+<span
+class="math inline">\((H-z)^{-1}=(H_0-z)^{-1}[1+(g^{-2}V)(H_0-z)^{-1}]^{-1}\)</span>
+for <span class="math inline">\(z\)</span> far in the negative axis.
+Discreteness with finite multiplicities and <span
+class="math inline">\(E_n\to\infty\)</span> follow, and <span
+class="math inline">\(E_0\)</span> is an eigenvalue.</p>
+<ol start="2" type="1">
+<li><p>The heat kernel of <span class="math inline">\(-\Delta\)</span>
+on a compact connected Riemannian manifold is strictly positive for
+<span class="math inline">\(t&gt;0\)</span> (standard, from the strong
+maximum principle or the Peter–Weyl expansion; metadata level), so the
+kernel of <span class="math inline">\(e^{-tK}\)</span> on <span
+class="math inline">\(G^{\mathcal E}\)</span>, a product of strictly
+positive kernels, is strictly positive. With Brownian motion <span
+class="math inline">\(X_t\)</span> on <span
+class="math inline">\(G^{\mathcal E}\)</span> generated by <span
+class="math inline">\(K\)</span> (time rescaled by <span
+class="math inline">\(g^2\hbar c/a\)</span>), the Feynman–Kac formula
+gives <span class="math display">\[(e^{-tH}\psi)(U)=\mathbb
+E^U\Big[\exp\Big(-\frac{\hbar
+c}{ag^2}\int_0^tV(X_s)\,ds\Big)\psi(X_t)\Big],\]</span> valid because
+<span class="math inline">\(V\)</span> is bounded and continuous. For
+<span class="math inline">\(\psi\ge0\)</span>, <span
+class="math inline">\(\psi\ne0\)</span>, the weight is at least <span
+class="math inline">\(e^{-t\hbar c\cdot2N|\mathcal
+P|/(ag^2)}&gt;0\)</span> and the law of <span
+class="math inline">\(X_t\)</span> has a strictly positive density, so
+<span class="math inline">\((e^{-tH}\psi)(U)&gt;0\)</span> for every
+<span class="math inline">\(U\)</span>: <span
+class="math inline">\(e^{-tH}\)</span> is positivity improving.
+Reed–Simon IV, Theorem XIII.44 (metadata; number corroborated as in B78)
+then gives that <span class="math inline">\(E_0\)</span> is simple with
+<span class="math inline">\(\psi_0&gt;0\)</span> almost everywhere, and
+<span class="math inline">\(E_1&gt;E_0\)</span> because <span
+class="math inline">\(E_1\)</span> is the next eigenvalue of a discrete
+spectrum.</p></li>
+<li><p><span class="math inline">\(\mathcal V_\gamma\psi_0\)</span> is a
+normalized eigenfunction for <span class="math inline">\(E_0\)</span>,
+hence <span class="math inline">\(\mathcal
+V_\gamma\psi_0=c(\gamma)\psi_0\)</span> with <span
+class="math inline">\(|c|=1\)</span>; both functions are positive, so
+<span class="math inline">\(c(\gamma)=1\)</span> and <span
+class="math inline">\(\psi_0\in\mathcal H_{\rm phys}\)</span>. The
+projection <span class="math inline">\(P=\int\prod_x d\gamma_x\,\mathcal
+V_\gamma\)</span> onto <span class="math inline">\(\mathcal H_{\rm
+phys}\)</span> commutes with <span
+class="math inline">\((H-z)^{-1}\)</span>, so <span
+class="math inline">\(\mathcal H_{\rm phys}\)</span> reduces <span
+class="math inline">\(H\)</span> and the restricted operator has compact
+resolvent, ground state <span class="math inline">\(\psi_0\)</span>, and
+next eigenvalue at least <span class="math inline">\(E_1\)</span>. <span
+class="math inline">\(\square\)</span></p></li>
+</ol>
+<p>Theorem 1 defines the object whose limits the conjecture is about. It
+proves nothing about those limits: <span
+class="math inline">\(\Delta_{a,L}\)</span> is <span
+class="math inline">\(\hbar c/a\)</span> times a number that may tend to
+zero as <span class="math inline">\(N\to\infty\)</span> or as <span
+class="math inline">\(g\to0\)</span>.</p>
+<h2
+id="t2-strong-coupling-and-why-volume-uniformity-is-the-whole-difficulty">3.
+T2: strong coupling, and why volume uniformity is the whole
+difficulty</h2>
+<p>At <span class="math inline">\(g\to\infty\)</span> the operator <span
+class="math inline">\(g^2K\)</span> dominates. Its ground state is the
+constant function, with eigenvalue <span
+class="math inline">\(0\)</span>, and its excitations are link
+representations. Gauge invariance excludes a single excited link: the
+lowest physical excitation of <span class="math inline">\(K\)</span> is
+a closed flux loop, at minimum the four links of one plaquette in the
+lowest nontrivial representation, with electric energy <span
+class="math inline">\(4\cdot\tfrac12C_2(R_{\min})\,g^2\hbar
+c/a=2C_2(R_{\min})g^2\hbar c/a\)</span>; for <span
+class="math inline">\(SU(N)\)</span>, <span
+class="math inline">\(C_2(\text{fund})=(N^2-1)/(2N)\)</span>. So the
+unperturbed physical gap is <span class="math display">\[\gamma_{\rm
+phys}(g)=2C_2(R_{\min})\,g^2\,\frac{\hbar c}{a},\]</span> uniform in
+<span class="math inline">\(N\)</span> because a single plaquette loop
+costs the same on every lattice.</p>
+<p><strong>The naive bound fails.</strong> The magnetic term satisfies
+<span class="math inline">\(0\le g^{-2}V\le2N|\mathcal P|g^{-2}\)</span>
+in operator norm, so Kato’s perturbation bound gives <span
+class="math inline">\(\Delta^{\rm phys}\ge\gamma_{\rm
+phys}-2\|g^{-2}V\|\hbar c/a =(2C_2g^2-4N|\mathcal P|g^{-2})\hbar
+c/a\)</span>, positive only when <span
+class="math inline">\(g^4&gt;2N|\mathcal P|/C_2\)</span>. The bound is
+extensive in the volume and useless as <span
+class="math inline">\(N\to\infty\)</span>. Volume uniformity therefore
+requires using that <span class="math inline">\(V\)</span> is a sum of
+<span class="math inline">\(|\mathcal P|\)</span> terms each of norm at
+most <span class="math inline">\(2N g^{-2}\)</span> and each acting on
+four links: locality, not smallness of the norm.</p>
+<p><strong>What is established.</strong> Osterwalder and Seiler (Ann.
+Phys. 110 (1978) 440; abstract, B78) prove for the Euclidean lattice
+theory with any compact gauge group, at sufficiently strong coupling,
+reflection positivity, the existence of the infinite-volume limit and
+Wilson’s confinement bound by a cluster expansion; exponential
+clustering of gauge-invariant correlations uniform in the volume, that
+is a mass gap of the transfer matrix in units of <span
+class="math inline">\(1/a\)</span>, is the standard consequence of the
+same expansion (not read at section level). Hamiltonian versions rest on
+gap-stability theorems for local perturbations of commuting,
+frustration-free Hamiltonians (Yarotsky, Commun. Math. Phys. 261 (2005)
+799; Bravyi–Hastings–Michalakis, J. Math. Phys. 51 (2010) 093512; both
+metadata): <span class="math inline">\(g^2K\)</span> is a sum of
+commuting link terms with a product ground state and a uniform local
+gap, and <span class="math inline">\(g^{-2}V\)</span> is a sum of
+bounded local terms. Their hypotheses assume finite-dimensional local
+spaces or bounded local terms, and <span
+class="math inline">\(-\Delta_\ell\)</span> is unbounded on the
+infinite-dimensional <span class="math inline">\(L^2(G)\)</span>, so a
+Hamiltonian proof of T2 must either truncate each link to the
+representations with <span class="math inline">\(C_2(R)\le
+C_{\max}\)</span> and control the truncation, or use the relative
+boundedness of <span class="math inline">\(V\)</span> with respect to
+<span class="math inline">\(K\)</span>. This is the first bounded
+theorem in the list:</p>
+<blockquote>
+<p><strong>T2 (Hamiltonian form, target).</strong> There exist <span
+class="math inline">\(g_0(N)&lt;\infty\)</span> and <span
+class="math inline">\(c(N)&gt;0\)</span> such that for all <span
+class="math inline">\(g\ge g_0\)</span> and all lattice sizes <span
+class="math inline">\(N\ge2\)</span>, <span
+class="math inline">\(\Delta^{\rm phys}_{a,L}\ge c(N)\,g^2\,\hbar
+c/a\)</span>.</p>
+</blockquote>
+<h2 id="t2-no-coulomb-phase-at-fixed-cutoff">4. T2<span
+class="math inline">\(&#39;\)</span>: no Coulomb phase at fixed
+cutoff</h2>
+<p>Fix <span class="math inline">\(a\)</span> and <span
+class="math inline">\(g\)</span> and let <span
+class="math inline">\(N\to\infty\)</span>. Define <span
+class="math inline">\(\delta_\infty(g)=\liminf_{N\to\infty}\delta(g;N,G)\)</span>.
+T2 says <span class="math inline">\(\delta_\infty(g)\ge
+c\,g^2&gt;0\)</span> for <span class="math inline">\(g\ge g_0\)</span>.
+The lattice form of the conjecture at fixed cutoff is</p>
+<blockquote>
+<p><strong>T2<span class="math inline">\(&#39;\)</span>.</strong> <span
+class="math inline">\(\delta_\infty(g)&gt;0\)</span> for every <span
+class="math inline">\(g&gt;0\)</span>.</p>
+</blockquote>
+<p>For <span class="math inline">\(G=U(1)\)</span> this is false: Guth
+(Phys. Rev. D 21 (1980) 2291) and Fröhlich–Spencer (Commun. Math. Phys.
+83 (1982) 411) prove a massless Coulomb phase at weak coupling
+(abstract, B78), so <span
+class="math inline">\(\delta_\infty(g)=0\)</span> below a critical
+coupling. T2<span class="math inline">\(&#39;\)</span> for a non-abelian
+<span class="math inline">\(G\)</span> is the statement that the
+transition the abelian theory undergoes does not occur, that is
+confinement at all couplings, which lattice computations support and no
+proof reaches. The heuristic of <a
+href="low-dimensional-mass-gap.html">G07</a> §3 locates the difference:
+the abelian theory is all valley, while the non-abelian potential has
+flat directions of measure zero along which a transverse zero-point
+energy grows. T2<span class="math inline">\(&#39;\)</span> is where that
+mechanism would have to be turned into an estimate at weak coupling.</p>
+<h2 id="t3-the-scaling-limit-as-one-asymptotic-statement">5. T3: the
+scaling limit, as one asymptotic statement</h2>
+<p>Along the continuum curve the bare coupling runs with the cutoff.
+With <span class="math inline">\(b_0=11N/(48\pi^2)\)</span> and <span
+class="math inline">\(b_1=34N^2/(3(16\pi^2)^2)\)</span> for <span
+class="math inline">\(SU(N)\)</span> (the two-loop coefficients in the
+convention <span
+class="math inline">\(\beta(g)=-b_0g^3-b_1g^5+\cdots\)</span>;
+Gross–Wilczek, Politzer, abstract, B78), the lattice <span
+class="math inline">\(\Lambda\)</span> parameter is defined by <span
+class="math display">\[a\Lambda_{\rm
+lat}(g)=(b_0g^2)^{-b_1/(2b_0^2)}\,e^{-1/(2b_0g^2)}\,[1+O(g^2)],\]</span>
+a dimensionless function that vanishes faster than any power of <span
+class="math inline">\(g\)</span>.</p>
+<blockquote>
+<p><strong>T3.</strong> The limit <span
+class="math inline">\(\displaystyle\frac{m}{\hbar c\,\Lambda_{\rm lat}}
+=\lim_{g\to0}\frac{\delta_\infty(g)}{a\Lambda_{\rm lat}(g)}\)</span>
+exists and lies in <span class="math inline">\((0,\infty)\)</span>.</p>
+</blockquote>
+<p>This is the Jaffe–Witten mass gap <span
+class="math inline">\(m\)</span> expressed on the lattice route: the
+dimensionless infinite-volume gap must vanish as <span
+class="math inline">\(g\to0\)</span> exactly like <span
+class="math inline">\(e^{-1/(2b_0g^2)}\)</span> times the prescribed
+power, with a positive finite prefactor. Any weaker vanishing gives
+<span class="math inline">\(m=\infty\)</span> in the continuum (the
+theory is gapped only at the cutoff scale, as the compact abelian theory
+in three dimensions is, G07 §4); any faster vanishing, or <span
+class="math inline">\(\delta_\infty=0\)</span> at some <span
+class="math inline">\(g\)</span>, gives <span
+class="math inline">\(m=0\)</span>. T3 presupposes T2<span
+class="math inline">\(&#39;\)</span>. The order of limits is <span
+class="math inline">\(N\to\infty\)</span> at fixed <span
+class="math inline">\(g\)</span> first, then <span
+class="math inline">\(g\to0\)</span> with <span
+class="math inline">\(a=\Lambda_{\rm lat}^{-1}\,a\Lambda_{\rm
+lat}(g)\)</span>; Jaffe and Witten note (p. 6, passage) that a gap
+uniform in the volume would also serve to construct the infinite-volume
+limit, which is the reverse order.</p>
+<p><strong>The small-volume corner.</strong> For <span
+class="math inline">\(L\ll\hbar c/\Lambda\)</span> the constant-mode
+sector of the continuum torus theory has gap <span
+class="math inline">\(\delta_1g(L)^{2/3}\hbar c/L\)</span> (C133, G07
+Proposition 7), and Lüscher’s expansion (Nucl. Phys. B219 (1983) 233,
+abstract) supplies the corrections in powers of <span
+class="math inline">\(g^{2/3}\)</span> with <span
+class="math inline">\(g\)</span> the renormalized coupling at scale
+<span class="math inline">\(L\)</span>. In the variable <span
+class="math inline">\(z(L)=\Delta(L)L/(\hbar c)\)</span> the two ends
+read <span
+class="math display">\[z(L)=\delta_1\,g(L)^{2/3}\,[1+O(g^{2/3})]\ \
+(L\to0),\qquad
+z(L)\sim\frac{mL}{\hbar c}\ \ (L\to\infty),\]</span> and Lüscher–Münster
+(Nucl. Phys. B232 (1984) 445, abstract) place the crossover near <span
+class="math inline">\(z\simeq2\)</span>. The conjecture, in this
+variable, is that <span class="math inline">\(z(L)\)</span> is a
+function that starts at zero and grows without bound, with <span
+class="math inline">\(m\)</span> the slope of its linear asymptote. The
+corner is the only place where the gap of the continuum theory is
+presently computable, and it is controlled by the mechanism of <a
+href="action-floor-yang-mills-gap.html">G08</a>.</p>
+<h2 id="t4-existence">6. T4: existence</h2>
+<p>The lattice route needs the continuum limit of the Euclidean lattice
+theory with Osterwalder–Schrader reconstruction. Known: ultraviolet
+stability of four-dimensional lattice Yang–Mills in a finite volume with
+the cutoff removed (Balaban, Commun. Math. Phys. 122 (1989) 355 and the
+series it belongs to; Magnen–Rivasseau–Sénéor, Commun. Math. Phys. 155
+(1993) 325, with an infrared cutoff; both metadata). Open: the
+infinite-volume limit, the axioms in infinite volume, and any spectral
+information. Jaffe and Witten (p. 7, passage) write that a construction
+on a compact space alone would be a major step and that no present ideas
+give a gap uniform in the volume.</p>
+<h2 id="the-list">7. The list</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Statement</th>
+<th>Content</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1</td>
+<td>finite lattice: unique physical ground state, gap <span
+class="math inline">\(\Delta_{a,L}=(\hbar
+c/a)\delta(g;N,G)&gt;0\)</span></td>
+<td>proved (Theorem 1)</td>
+</tr>
+<tr class="even">
+<td>T2</td>
+<td><span class="math inline">\(\delta(g;N,G)\ge c(N)g^2\)</span> for
+<span class="math inline">\(g\ge g_0(N)\)</span>, uniformly in <span
+class="math inline">\(N\)</span></td>
+<td>established: Euclidean form (Osterwalder–Seiler); Hamiltonian form
+as a corollary of Yarotsky’s theorem in <a
+href="strong-coupling-uniform-gap.html">the strong-coupling
+note</a></td>
+</tr>
+<tr class="odd">
+<td>T2<span class="math inline">\(&#39;\)</span></td>
+<td><span class="math inline">\(\delta_\infty(g)&gt;0\)</span> for all
+<span class="math inline">\(g&gt;0\)</span> (no Coulomb phase)</td>
+<td>open; false for <span class="math inline">\(U(1)\)</span></td>
+</tr>
+<tr class="even">
+<td>T3</td>
+<td><span class="math inline">\(\delta_\infty(g)/(a\Lambda_{\rm
+lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\in(0,\infty)\)</span></td>
+<td>open; the Millennium content given T4</td>
+</tr>
+<tr class="odd">
+<td>T4</td>
+<td>continuum infinite-volume theory with the axioms</td>
+<td>finite-volume UV stability known; rest open</td>
+</tr>
+<tr class="even">
+<td>S</td>
+<td>small-volume corner <span
+class="math inline">\(z(L)=\delta_1g(L)^{2/3}[1+O(g^{2/3})]\)</span></td>
+<td>C133 plus Lüscher’s expansion</td>
+</tr>
+</tbody>
+</table>
+<p>Three of the six rows are theorems or established results; the
+conjecture is T2<span class="math inline">\(&#39;\)</span> together with
+T3, given T4. The list replaces “prove the mass gap” by “prove T2 in
+Hamiltonian form, then push <span class="math inline">\(g_0\)</span>
+down”.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>T2 in Hamiltonian form is now closed in <a
+href="strong-coupling-uniform-gap.html">the strong-coupling note</a> as
+a corollary of Yarotsky’s gap-stability theorem, with threshold <span
+class="math inline">\(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\)</span>;
+every later step is an improvement of that threshold toward zero along
+the scaling curve. The <span class="math inline">\(d=3\)</span> target
+of STATE keeps its place as the case where T3 has no transmutation to
+perform.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

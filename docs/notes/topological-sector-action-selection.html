@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A topological energy floor survives shrinking while the action cost vanishes</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A topological energy floor survives shrinking while the action cost
+vanishes</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/topological-sector-action-selection.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/topological-sector-action-selection.pdf">PDF</a></p><p>The classical 2+1 dimensional O(3) sigma field has smooth degree-one
+static configurations of every radius, all with energy <span
+class="math inline">\(4\pi\rho\)</span>. Their action magnitude over one
+radius-crossing time is <span class="math inline">\(4\pi\rho
+R/c\)</span>, which tends to zero as the radius <span
+class="math inline">\(R\)</span> shrinks. Thus a fixed topological
+sector can exclude zero energy without selecting a positive action
+floor. The same physical field has arbitrarily low-frequency vacuum
+waves.</p>
+<p>Status: Q04 exploratory construction and written test; no
+accepted-ledger promotion or novelty claim. The sector bound and scale
+family are established sigma-model ingredients. The action and gap
+comparisons below are the task’s use of them. This continuum classical
+field is a proposed physical model; it is not derived from the
+repository’s Newtonian particle mechanics.</p>
+<h2 id="field-action-and-admissible-sector">1. Field, action and
+admissible sector</h2>
+<p>Take a dimensionless unit vector <span
+class="math inline">\(n(t,x)\in S^2\)</span>, <span
+class="math inline">\(x\in\mathbb R^2\)</span>, with propagation speed
+<span class="math inline">\(c&gt;0\)</span> and stiffness <span
+class="math inline">\(\rho&gt;0\)</span> of energy units. Specify
+physical dynamics by the Lorentzian action</p>
+<p><span class="math display">\[S[n]=\frac\rho2\int dt\,d^2x\,
+\left(c^{-2}|\partial_tn|^2-|\nabla n|^2\right). \tag{1}\]</span></p>
+<p>Here <span class="math inline">\(S\)</span> has energy-times-time
+units, and the canonical momentum density is <span
+class="math inline">\(\pi=\rho\partial_tn/c^2\)</span>. The Hamiltonian
+is</p>
+<p><span class="math display">\[H=\frac\rho2\int_{\mathbb R^2}
+\left(c^{-2}|\partial_tn|^2+|\nabla n|^2\right)d^2x.
+\tag{2}\]</span></p>
+<p>Require finite energy and smooth extension of each spatial field to
+the one-point compactification, with <span
+class="math inline">\(n(\infty)=e_3\)</span>. Its degree is</p>
+<p><span class="math display">\[Q=\frac1{4\pi}\int
+n\cdot(\partial_1n\times\partial_2n)\,d^2x
+\in\mathbb Z. \tag{3}\]</span></p>
+<p>Choose the sector <span class="math inline">\(|Q|=1\)</span>. Degree
+is conserved during smooth evolutions preserving the boundary extension.
+This is a restriction on admitted initial data and regular evolution; it
+does not explain why nature excludes <span
+class="math inline">\(Q=0\)</span>. No lattice spacing, lower radius or
+time window is imposed.</p>
+<h2 id="square-completion-and-an-explicit-shrinking-family">2. Square
+completion and an explicit shrinking family</h2>
+<p>Put <span class="math inline">\(a=\partial_1n\)</span>, <span
+class="math inline">\(b=\partial_2n\)</span> and <span
+class="math inline">\(q=n\cdot(a\times b)\)</span>. Tangency to the unit
+sphere gives</p>
+<p><span class="math display">\[|a+n\times b|^2=|a|^2+|b|^2-2q,\qquad
+|a-n\times b|^2=|a|^2+|b|^2+2q.\]</span></p>
+<p>Integrating the appropriate square proves</p>
+<p><span class="math display">\[H\ge E[n]:=\frac\rho2\int|\nabla
+n|^2d^2x
+\ge4\pi\rho|Q|. \tag{4}\]</span></p>
+<p>For every <span class="math inline">\(R&gt;0\)</span> set <span
+class="math inline">\(r^2=x_1^2+x_2^2\)</span> and</p>
+<p><span
+class="math display">\[n_R(x)=\frac{(2Rx_1,\,2Rx_2,\,r^2-R^2)}{r^2+R^2}.
+\tag{5}\]</span></p>
+<p>Its norm is one, its boundary value is <span
+class="math inline">\(e_3\)</span>, and direct differentiation gives</p>
+<p><span class="math display">\[|\nabla
+n_R|^2=\frac{8R^2}{(r^2+R^2)^2},\qquad
+q_R=-\frac{4R^2}{(r^2+R^2)^2}.\]</span></p>
+<p>Using <span class="math inline">\(d^2x=2\pi r\,dr\)</span> and <span
+class="math inline">\(\int_0^\infty r(r^2+R^2)^{-2}dr=1/(2R^2)\)</span>
+yields <span class="math inline">\(Q=-1\)</span> and <span
+class="math inline">\(E[n_R]=4\pi\rho\)</span>. Spatial reflection gives
+the opposite degree. Equality in (4) makes each field a static energy
+minimizer in its sector, hence a stationary solution of (1). This
+constructs actual solutions, not only variational trial
+configurations.</p>
+<p>The energy inside a disk of radius <span
+class="math inline">\(r\)</span> is</p>
+<p><span class="math display">\[E_R(r)=4\pi\rho\frac{r^2}{r^2+R^2}.
+\tag{6}\]</span></p>
+<p>Consequently <span class="math inline">\(R\)</span> is the
+half-energy radius, an intrinsic size rather than an arbitrary
+coordinate label. In the contraction <span
+class="math inline">\(R\downarrow0\)</span>, all members remain smooth
+and in the same sector. The limiting field is singular at the origin:
+away from it <span class="math inline">\(n_R\to e_3\)</span>, while
+<span class="math inline">\(n_R(0)=-e_3\)</span>. Their energy measures
+converge weakly to <span class="math inline">\(4\pi\rho\delta_0\)</span>
+and their gradients do not converge strongly to the vacuum in <span
+class="math inline">\(L^2\)</span>. Excluding the singular endpoint does
+not exclude the smooth sequence. This is a family of stationary
+preparations; no dynamical collapse or finite-inertia dilation mode is
+asserted.</p>
+<h2 id="which-action-is-being-tested">3. Which action is being
+tested?</h2>
+<p>Define the candidate size-based action observable on this static
+family by</p>
+<p><span class="math display">\[\mathcal A_R:=E[n_R]\,\tau_R,\qquad
+\tau_R:=R/c.\]</span></p>
+<p>For the static solution on a physical time interval of length <span
+class="math inline">\(\tau_R\)</span>, <span
+class="math inline">\(S=-E\tau_R\)</span>, so this observable equals its
+action magnitude:</p>
+<p><span class="math display">\[\mathcal
+A_R=|S[n_R;0,R/c]|=\frac{4\pi\rho R}{c}
+\longrightarrow0. \tag{7}\]</span></p>
+<p>A crossing time measures propagation over the half-energy radius; it
+is not an oscillation period of this stationary field. Thus (7) tests
+this specified energy-time candidate, not every functional with action
+units. Equivalently, under spacetime dilation <span
+class="math inline">\(n_\lambda(t,x)=n(t/\lambda,x/\lambda)\)</span> on
+a time interval scaled by <span class="math inline">\(\lambda\)</span>,
+(1) gives <span class="math inline">\(S[n_\lambda]=\lambda
+S[n]\)</span>, whereas spatial degree is unchanged. The field equation
+retains this dilation symmetry at fixed <span
+class="math inline">\(\rho,c\)</span>.</p>
+<p>For a fixed externally prescribed duration <span
+class="math inline">\(T&gt;0\)</span>, the same static configurations,
+each held for <span class="math inline">\(T\)</span>, have <span
+class="math inline">\(|S|=ET\ge4\pi\rho T\)</span>. Its units and lower
+bound include that supplied clock. A canonical motion cost <span
+class="math inline">\(\int dt\int\pi\cdot\partial_tn\,d^2x\)</span> is
+exactly zero on every member of (5), even though its spatial gradient
+energy is positive. Topology excludes a spatially uniform field, but
+admits rest in configuration space.</p>
+<p>The available dimensional parameters <span
+class="math inline">\(\rho\)</span> and <span
+class="math inline">\(c\)</span> cannot by themselves form an action: a
+length or a time must also enter. A lower radius <span
+class="math inline">\(R\ge\ell&gt;0\)</span> would give <span
+class="math inline">\(\mathcal A_R\ge4\pi\rho\ell/c\)</span> within this
+family. That adds an independently justified physical scale and its
+coefficient; its survival as <span
+class="math inline">\(\ell\downarrow0\)</span> would need a new
+mechanism. No physical-time attraction, preparation-independent constant
+or quantum phase rule follows from the stationary family.</p>
+<h2 id="the-sector-energy-floor-is-not-a-frequency-gap">4. The sector
+energy floor is not a frequency gap</h2>
+<p>The physical action (1), rather than an auxiliary sampling generator,
+determines small fluctuations. Near the uniform vacuum write <span
+class="math inline">\(n=(u_1,u_2,\sqrt{1-|u|^2})\)</span>. The quadratic
+action gives</p>
+<p><span class="math display">\[\partial_t^2u=c^2\Delta u,\qquad
+\omega(k)=c|k|. \tag{8}\]</span></p>
+<p>The squared-frequency operator <span
+class="math inline">\(-c^2\Delta\)</span> on <span
+class="math inline">\(L^2(\mathbb R^2;\mathbb R^2)\)</span> with domain
+<span class="math inline">\(H^2\)</span> has spectrum <span
+class="math inline">\([0,\infty)\)</span>. For example normalized smooth
+packets <span class="math inline">\(u_L(x)=L^{-1}f(x/L)\)</span> have
+fixed <span class="math inline">\(L^2\)</span> norm and Rayleigh
+quotient <span class="math inline">\(c^2L^{-2}\|\nabla
+f\|_2^2/\|f\|_2^2\to0\)</span>. On a periodic box of side <span
+class="math inline">\(L\)</span>, after removing constant rotations, the
+first frequency is <span class="math inline">\(2\pi c/L\)</span>; the
+thermodynamic limit closes it. These are vacuum linearized statements,
+not a quantized Hamiltonian spectrum.</p>
+<p>Even within the degree-one sector there is no isolated static
+minimizer: translations <span class="math inline">\(n_R(x-a)\)</span>
+retain the same energy. Their tangent vectors <span
+class="math inline">\(\partial_i n_R\)</span> are square integrable by
+(4) and are zero directions of the static second variation. Quotienting
+translations is a further restriction; no positive internal fluctuation
+gap after such a quotient is claimed here. In particular (4) compares a
+chosen sector to the vacuum, not all excitations to a unique ground
+state within one sector.</p>
+<h2 id="decision-and-next-physical-construction">5. Decision and next
+physical construction</h2>
+<p>Retain topology as a conservative mechanism for a positive <em>sector
+energy</em> at fixed stiffness. Park topology alone as an action
+selector in this model: it leaves an arbitrary radius, an admitted
+static state and low-frequency vacuum waves. This advances the
+zero-exclusion test beyond Q03’s need for continuous power, while
+exposing separate size and motion requirements.</p>
+<p>A concrete next candidate is a unit-vector field in three spatial
+dimensions with both quadratic and quartic spatial-gradient energies.
+Under a size rescaling their contributions behave as <span
+class="math inline">\(aR\)</span> and <span
+class="math inline">\(b/R\)</span>. Their competition can fix a radius
+without external fueling. The next decision is whether this
+stabilization supplies an action or only expresses a scale already in
+<span class="math inline">\(a,b\)</span> and the kinetic normalization;
+it must also test the vacuum spectrum. Existence of a minimizer cannot
+be inferred from the one-parameter balance alone. This is the selected
+candidate test, not a new theorem or a claim that stabilization
+establishes quantum necessity.</p>
+<h2 id="source-and-review">Source and review</h2>
+<p>M. S. Ody and L. H. Ryder, <em>Time-Independent Solutions to the
+Two-Dimensional Non-Linear O(3) Sigma Model and Surfaces of Constant
+Mean Curvature</em>, <a
+href="https://arxiv.org/abs/hep-th/9402137v1">arXiv:hep-th/9402137v1</a>
+(1994), section 2, pp. 4–7, equations (2.1)–(2.26), supplies the static
+degree, energy and arbitrary-scale ingredients. Its unit stiffness gives
+<span class="math inline">\(E=4\pi|Q|\)</span> for the duality
+solutions. The Lorentzian dynamics, the radius-crossing observable and
+the physical gap comparison are specified here.</p>
+<p>The <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/topological-sector-Q04.md">Q04
+review</a> records the written proof check and bounded primary-source
+comparison: one Sol-medium worker, two queries, one primary paper and
+six pages, with formula-image checks. The coordinator rechecked the
+square completion, radial integral, dilation and wave normalization, and
+visually checked source pp. 6–7. No numerical or symbolic verification
+scripts were used. Source matches concern the static ingredients; no
+novelty or accepted-ledger promotion is asserted.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

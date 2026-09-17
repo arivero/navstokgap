@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two position records recover the phase state</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Two position records recover the phase state</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/two-position-recovery.md">Markdown source</a></p><p>Two bounded-error position records give a causal momentum estimate
+with exact worst-case error for this estimator. Improving precision with
+a suitable sample separation recovers both coordinates, strengthening
+R09’s area-only closure.</p>
+<p>R10, 2026-09-10. C076–C077 accepted by <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/two-record-B41.md">written
+review</a>. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B41.md">B41</a>
+identifies the finite-difference bound and optimum as established
+results: Seeber–Haimovich, Lemma 4.3 and Theorem 4.1, with <span
+class="math inline">\(N=\varepsilon\)</span>, <span
+class="math inline">\(L=F/m\)</span>. The model retains fixed <span
+class="math inline">\(m,F,T&gt;0\)</span>, known initial <span
+class="math inline">\((q_0,p_0)\)</span>, and all measurable forces
+<span class="math inline">\(|f|\le F\)</span>. Records are
+non-disturbing and available by prediction time <span
+class="math inline">\(T\)</span>; their timing and precision are
+protocol inputs. The estimates concern deterministic errors, with no
+probability law.</p>
+<h2 id="exact-compatible-state-propagation">1. Exact compatible-state
+propagation</h2>
+<p>Let <span class="math inline">\(t_2=T-b\)</span>, <span
+class="math inline">\(t_1=t_2-\delta\ge0\)</span>, with <span
+class="math inline">\(\delta&gt;0\)</span> and <span
+class="math inline">\(b\ge0\)</span>. The two records are <span
+class="math inline">\(y_i=q(t_i)+e_i\)</span>, <span
+class="math inline">\(|e_i|\le\varepsilon_i\)</span>. Let <span
+class="math inline">\(H_i=\{(q,p):|q-y_i|\le\varepsilon_i\}\)</span>.
+With the shear <span class="math inline">\(S_t\)</span> and force lens
+<span class="math inline">\(K_t\)</span> of <a
+href="reachable-cut-composition.html">R08</a>, the exact sets are</p>
+<p><span class="math display">\[C_1=(S_{t_1}\{(q_0,p_0)\}+K_{t_1})\cap
+H_1,\qquad
+C_2=(S_\delta C_1+K_\delta)\cap H_2,\qquad
+E_T=S_bC_2+K_b.\]</span></p>
+<p>An empty set rejects inconsistent records. Each intersection retains
+all and only record-compatible states; unrestricted concatenation of
+bounded segment forces proves each propagation equality. This preserves
+position–momentum correlations and uses only two records, however small
+their separation.</p>
+<h2 id="a-causal-estimator-and-its-exact-worst-case-errors">2. A causal
+estimator and its exact worst-case errors</h2>
+<p>Define</p>
+<p><span class="math display">\[\widehat
+p=\frac{m(y_2-y_1)}\delta,\qquad
+\widehat q_T=y_2+\frac b m\widehat p,\qquad
+B=\frac{m(\varepsilon_1+\varepsilon_2)}\delta+\frac{F\delta}2.\]</span></p>
+<p>Integration of momentum backwards from <span
+class="math inline">\(t_2\)</span> gives</p>
+<p><span class="math display">\[p(t_2)-\frac{m[q(t_2)-q(t_1)]}\delta
+=\frac1\delta\int_{t_1}^{t_2}(s-t_1)f(s)ds.\]</span></p>
+<p>The weight integrates to <span
+class="math inline">\(\delta^2/2\)</span>. Consequently every compatible
+motion satisfies</p>
+<p><span class="math display">\[|p(T)-\widehat p|\le R_p:=B+Fb,\qquad
+|q(T)-\widehat q_T|\le R_q:=\varepsilon_2+\frac b m
+B+\frac{Fb^2}{2m}.\]</span></p>
+<p>The second bound uses <span
+class="math inline">\(q(T)=q(t_2)+bp(t_2)/m+
+m^{-1}\int_{t_2}^T(T-s)f(s)ds\)</span>. Both errors are simultaneously
+attained by <span class="math inline">\(f=F\)</span> on the two final
+intervals, <span class="math inline">\(e_1=+\varepsilon_1\)</span> and
+<span class="math inline">\(e_2=-\varepsilon_2\)</span>. Any allowed
+earlier input joins this example to the fixed initial state. Thus these
+are the exact worst-case errors of the stated estimator over all allowed
+records and motions. They are upper bounds for the best possible
+estimator; extra initial-state information may improve them.</p>
+<p>Every conditional terminal set lies in the rectangle of half-widths
+<span class="math inline">\(R_q,R_p\)</span> about <span
+class="math inline">\((\widehat q_T,\widehat p)\)</span>. It has
+coordinate diameters at most <span
+class="math inline">\(2R_q,2R_p\)</span>, canonical area at most <span
+class="math inline">\(4R_qR_p\)</span>, and an error product <span
+class="math inline">\(R_qR_p\)</span> in action units. The area bound is
+an outer approximation, not an exact area.</p>
+<h2 id="precision-separation-and-delay">3. Precision, separation and
+delay</h2>
+<p>At fixed <span class="math inline">\(m,F,T\)</span>, the sufficient
+conditions</p>
+<p><span class="math display">\[\delta\to0,\qquad
+\frac{\varepsilon_1+\varepsilon_2}{\delta}\to0,\qquad b\to0\]</span></p>
+<p>give <span class="math inline">\(R_p,R_q\to0\)</span>, uniformly over
+the force class and errors. The records approach the terminal time while
+their accuracy improves faster than their separation. Unlike one
+position strip, the joint set now shrinks in both coordinates. No
+proliferation of probes is assumed in this information model.</p>
+<p>For equal errors <span
+class="math inline">\(\varepsilon&gt;0\)</span>, minimizing <span
+class="math inline">\(B\)</span> over available separations gives</p>
+<p><span
+class="math display">\[\delta_*=2\sqrt{\frac{m\varepsilon}{F}},\qquad
+B_*=2\sqrt{mF\varepsilon},\]</span></p>
+<p>provided <span class="math inline">\(\delta_*\le T-b\)</span>. This
+follows from equality of the two positive terms in <span
+class="math inline">\(2m\varepsilon/\delta+F\delta/2\)</span>. If that
+separation is unavailable, the minimization must use the allowed timing
+range. At <span class="math inline">\(b=0\)</span> the corresponding
+error product is</p>
+<p><span
+class="math display">\[R_qR_p=2\sqrt{mF}\,\varepsilon^{3/2}\longrightarrow0.\]</span></p>
+<p>For a genuinely delayed sequence, taking <span
+class="math inline">\(b=\delta_*\)</span> gives <span
+class="math inline">\(R_p=4\sqrt{mF\varepsilon}\)</span>, <span
+class="math inline">\(R_q=7\varepsilon\)</span>, and product <span
+class="math inline">\(28\sqrt{mF}\varepsilon^{3/2}\)</span>; <span
+class="math inline">\(t_1=T-2\delta_*\ge0\)</span> for sufficiently
+small <span class="math inline">\(\varepsilon\)</span>. This supplies
+positive delay at every finite stage. All constants above follow by
+substitution into the written bounds.</p>
+<h2 id="premise-exposed-by-the-calculation">4. Premise exposed by the
+calculation</h2>
+<p>The force ceiling controls the bias from unresolved acceleration.
+Record precision controls the amplified position errors. Their optimized
+balance is a preparation/protocol scale, with mass and force dependence,
+closing as precision improves. To derive a fundamental positive action
+constant, the next test must supply a physically justified restriction
+on attainable precision and timing and then establish a lower bound for
+every estimator.</p>
+<p>R11 should first settle the lower-bound half inside this model:
+construct two bounded-force trajectories with identical allowed records
+and shared initial state. Compare their terminal momentum separation
+with R10’s upper bound. The resulting minimax benchmark will distinguish
+an unavoidable information loss at fixed precision from merely a chosen
+estimator’s error.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

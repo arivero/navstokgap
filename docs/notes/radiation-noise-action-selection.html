@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radiation balance selects a spectral shape, but leaves its action amplitude free</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Radiation balance selects a spectral shape, but leaves its action
+amplitude free</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/radiation-noise-action-selection.md">Markdown source</a></p><p>A charged harmonic probe driven by a common cubic electric-noise
+spectrum has mean energy approaching K times its frequency in a
+narrow-resonance limit. Radiation damping cancels the probe’s charge and
+mass in that limit. The coefficient K remains the chosen field
+amplitude: damping also admits the quiet field, and the effective model
+has no finite-energy cutoff-free limit at fixed damping. This is Q02’s
+conditional mechanism test, not a derivation of quantum structure.
+Written review is recorded separately in <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/radiation-noise-Q02.md">the
+Q02 review</a>.</p>
+<h2 id="physical-premises-and-observable">1. Physical premises and
+observable</h2>
+<p>Consider a one-dimensional dipole coordinate x with mass m&gt;0,
+nonzero charge q, and natural angular frequency w&gt;0, in SI units. Use
+the stable effective law</p>
+<p><span class="math display">\[m\ddot x+m\gamma\dot
+x+mw^2x=qE(t),\qquad
+\gamma=\frac{q^2w^2}{6\pi\epsilon_0mc^3}&gt;0.\]</span></p>
+<p>The damping rate follows cycle-averaged dipole radiation: the Larmor
+power q² times mean acceleration squared divided by 6π epsilon_0 c³
+equals m gamma times mean velocity squared on a harmonic orbit. It is an
+on-resonance, weak-damping approximation, with gamma/w much smaller than
+one; it is not a point-charge radiation-reaction equation valid at
+arbitrarily high frequency. For each finite cutoff below, the stable
+equation defines the tested model.</p>
+<p>Supply a centered stationary Gaussian field, independent of probe
+initial data, with two-sided angular-frequency spectral density defined
+by</p>
+<p><span class="math display">\[\langle E(t)E(0)\rangle=\int_{\mathbb
+R}\frac{d\omega}{2\pi}
+S_E(\omega)e^{-i\omega t},\qquad
+S_E(\omega)=\frac{K}{3\pi\epsilon_0c^3}|\omega|^3
+\mathbf1_{|\omega|\le\Lambda},\quad \Lambda&gt;w,\quad
+K\ge0.\]</span></p>
+<p>K has action units. The cubic shape is a candidate radiation
+preparation; stationarity and the oscillator equation do not select it.
+The common field uses the same K and cutoff for all probes. A finite
+laboratory cutoff specifies a frame; no exact Lorentz invariance is
+asserted for this regulated model. The external harmonic potential,
+Gaussian reservoir and dipole approximation are supplied physical
+premises. Gaussian tails do not impose a hard speed bound.</p>
+<p>Measure the ensemble mechanical action</p>
+<p><span class="math display">\[J(t)=\frac{m}{2w}\langle\dot
+x(t)^2+w^2x(t)^2\rangle.\]</span></p>
+<p>This is mean oscillator energy divided by angular frequency, not the
+earlier long-window displacement observable. For a deterministic
+undamped orbit it is (1/2π) times the closed phase-space integral of p
+dx. No phase or commutator postulate enters its definition.</p>
+<h2 id="exact-stationary-response-of-the-effective-model">2. Exact
+stationary response of the effective model</h2>
+<p>At fixed positive gamma and finite Lambda, homogeneous solutions
+decay. The stationary forced solution has finite position and velocity
+variance; finite-second-moment initial transients vanish. Thus J(t)
+tends to J_* as physical time tends to infinity. In the underdamped
+regime the homogeneous amplitude decays as exp(-gamma t/2); the
+reservoir determines the limiting covariance, rather than that
+covariance being fixed by the damping alone. Fourier response gives the
+exact model identity</p>
+<p><span class="math display">\[J_*
+=\frac{q^2}{2mw}\int_{-\Lambda}^{\Lambda}\frac{d\omega}{2\pi}
+\frac{(\omega^2+w^2)S_E(\omega)}
+{(w^2-\omega^2)^2+\gamma^2\omega^2}.
+\tag{1}\]</span></p>
+<p>For the supplied spectrum this becomes</p>
+<p><span class="math display">\[\frac{J_*}{K}=\frac{\gamma}{\pi w^3}
+\int_0^\Lambda
+\frac{\omega^3(\omega^2+w^2)}
+{(w^2-\omega^2)^2+\gamma^2\omega^2}\,d\omega
+\quad(K&gt;0).\tag{2}\]</span></p>
+<p>The prefactor uses q²/(3π epsilon_0 c³)=2m gamma/w². All quantities
+in (2) are dimensionless after integration: gamma/w³ has units of time
+squared.</p>
+<h2 id="the-cancellation-and-its-order-of-limits">3. The cancellation
+and its order of limits</h2>
+<p>Take gamma/w to zero with w, K and finite Lambda&gt;w fixed, after
+reaching the stationary state. This can be implemented by reducing q²/m
+while retaining the same imposed field. In a neighborhood of omega=w,
+put u=omega-w. The numerator in (2) approaches 2w⁵ and its denominator
+is w²(4u²+gamma²) to leading order. Since</p>
+<p><span
+class="math display">\[\int_{-\infty}^{\infty}\frac{du}{4u^2+\gamma^2}
+=\frac{\pi}{2\gamma},\]</span></p>
+<p>the resonant contribution to the integral is πw³/gamma. Outside any
+fixed neighborhood of w the integral stays bounded as gamma tends to
+zero; its prefactor tends to zero. Taking that neighborhood smaller
+after the damping limit proves</p>
+<p><span
+class="math display">\[\lim_{\gamma\downarrow0}J_*=K.\tag{3}\]</span></p>
+<p>More generally, for a fixed even field spectrum continuous at w and
+integrable on a finite cutoff, the same argument gives</p>
+<p><span
+class="math display">\[J_*\longrightarrow\frac{3\pi\epsilon_0c^3S_E(w)}{w^3}.\]</span></p>
+<p>Consequently requiring the same limiting J_* over a band of
+oscillator frequencies requires S_E(w) proportional to w³ on that band.
+This explains what the radiation clock contributes beyond mass-only
+composition: it selects a spectral <em>shape conditional on equal
+actions</em>, and cancels q and m. It does not dynamically enforce equal
+actions or set the common amplitude. The convergence is pointwise in
+probe parameters, with resonance strictly inside the cutoff; no
+uniformity over all frequencies or arbitrarily small masses is claimed.
+Dipole and nonrelativistic validity also require appropriate probe
+amplitudes, for example Kw/(mc²) much smaller than one in the resonance
+limit.</p>
+<p>Taking q to zero at finite observation time instead removes forcing
+and damping, retaining the initial oscillator energy. Relaxation time
+diverges as gamma tends to zero. The stationary-first limit is
+essential.</p>
+<h2 id="quiet-preparation-and-ultraviolet-countertests">4. Quiet
+preparation and ultraviolet countertests</h2>
+<p>For any fixed cutoff and probe parameters, replacing E by aE replaces
+K and J_* by a²K and a²J_*. The deterministic damping and natural
+frequency do not change. At K=0 the damped oscillator approaches rest;
+arbitrarily small positive K gives arbitrarily small positive stationary
+action. A nonzero reservoir spectrum supplies positivity, but no lower
+bound independent of preparation. Even a symmetry condition on field
+covariances that preserves multiplication by a positive constant cannot
+fix that constant.</p>
+<p>Cutoff removal gives a separate obstruction in this effective model.
+At large omega the integrand in (2) is asymptotic to omega. At fixed
+gamma&gt;0,</p>
+<p><span
+class="math display">\[\frac{J_*}{K}\sim\frac{\gamma\Lambda^2}{2\pi w^3}
+\quad(\Lambda\longrightarrow\infty).\tag{4}\]</span></p>
+<p>Thus stationary energy diverges for K&gt;0. Position variance
+separately has a logarithmic ultraviolet divergence; velocity variance
+supplies the quadratic energy divergence. Taking weak damping first at
+every finite cutoff gives (3), whereas removing the cutoff first
+diverges. A joint limit needs control of the ultraviolet tail as well as
+the narrow resonance; (3) supplies none. Equation (4) diagnoses failure
+of extending the viscous approximation and the cubic preparation
+together. It is not a no-go theorem for an extended-charge, causal
+field-plus-particle model with frequency-dependent response.</p>
+<h2 id="strategic-decision">5. Strategic decision</h2>
+<p>Radiative response is a useful physical explanation for a conditional
+mass/charge cancellation and an energy-frequency relation. This linear,
+externally maintained reservoir fails to select a positive universal
+action: its amplitude is freely rescalable, its quiet solution is
+admitted, and its cutoff-free extension fails. Gaussian classical states
+persist; the calculation supplies no quantum measurement or phase
+structure and no physical energy gap.</p>
+<p>Park linear radiation-balance variants. A return requires an explicit
+dynamical reservoir/backreaction law that breaks amplitude rescaling and
+excludes the quiet state, with a controlled ultraviolet response. The
+next mechanism test should ask whether autonomous nonlinear energy
+transfer can supply that missing selection, using its zero-field
+solution and stability as the first countertest. No prescribed nonzero
+noise amplitude may stand in for that test.</p>
+<p>Source recovery used <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B23/harmonic-receiver-source-companion.md">B23</a>,
+Zwanzig’s equations (16)–(17), (23), (25)–(30): forcing, friction and
+reservoir preparation must be accounted for separately. These supply the
+reduction perspective, not the radiation spectrum. The <a
+href="composition-universality.html">composition note</a> §4 supplies
+the preparation-label comparison. Radiation-specific source coverage and
+written proof status are in the review; this note is a completed
+exploratory test and has no new accepted claim ID.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

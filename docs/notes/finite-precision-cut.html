@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finite position precision and the reachable action area</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Finite position precision and the reachable action area</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/finite-precision-cut.md">Markdown source</a></p><p>A bounded-error position record gives an exact terminal canonical
+area with separate precision and residual-delay terms. At fixed force
+ceiling, mass and total horizon, that area closes uniformly as both
+errors vanish.</p>
+<p>R09, 2026-09-10. C074–C075 accepted by <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/finite-precision-B40.md">written
+review</a>; <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B40.md">B40</a>
+records the bounded prior-art audit. The model and lens come from <a
+href="reachable-cut-composition.html">R08</a>. Areas use <span
+class="math inline">\(dq\,dp\)</span>, with action units <span
+class="math inline">\(ML^2/T\)</span> and no <span
+class="math inline">\(2\pi\)</span> factor. Records are non-disturbing
+information; their achievable precision and latency are supplied
+protocol parameters.</p>
+<h2 id="compatible-set">1. Compatible set</h2>
+<p>Fix <span class="math inline">\(m,F,T&gt;0\)</span>, exact initial
+state <span class="math inline">\((q_0,p_0)\)</span>, and every
+measurable force <span class="math inline">\(|f|\le F\)</span>. Observe
+at <span class="math inline">\(a\in(0,T)\)</span>, with residual delay
+<span class="math inline">\(b=T-a\)</span>. Subtract the known inertial
+motion. A reported position increment <span
+class="math inline">\(y\)</span> means the true increment lies in <span
+class="math inline">\([y-\varepsilon,y+\varepsilon]\)</span>, where
+<span class="math inline">\(\varepsilon\ge0\)</span> is a deterministic
+error bound. No probability law is used.</p>
+<p>Put <span class="math inline">\(Q=Fa^2/(2m)\)</span> and clip the
+record to the reachable position range:</p>
+<p><span class="math display">\[l=\max(-Q,y-\varepsilon),\qquad
+r=\min(Q,y+\varepsilon).\]</span></p>
+<p>Assume <span class="math inline">\(l\le r\)</span>; otherwise the
+record is inconsistent. Define the momentum fibre endpoints for <span
+class="math inline">\(q\in[-Q,Q]\)</span>:</p>
+<p><span
+class="math display">\[L(q)=Fa\left[1-\sqrt{2-4mq/(Fa^2)}\right],\qquad
+U(q)=Fa\left[-1+\sqrt{2+4mq/(Fa^2)}\right].\]</span></p>
+<p>The compatible cut set and terminal increment set are exactly</p>
+<p><span class="math display">\[C=\{(q,p):l\le q\le r,\ L(q)\le p\le
+U(q)\},\qquad
+E=S_bC+K_b,\]</span></p>
+<p>where <span class="math inline">\(S_b(q,p)=(q+bp/m,p)\)</span> and
+<span class="math inline">\(K_b\)</span> is R08’s future lens.
+Intersection implements the error record; concatenation of any
+compatible past with any allowed future proves equality. A translation
+restores the known inertial terminal state without changing area.</p>
+<h2 id="exact-area">2. Exact area</h2>
+<p>Write <span class="math inline">\(w=r-l\)</span>, <span
+class="math inline">\(D_*=U(r)-L(l)\)</span>, and <span
+class="math inline">\(A_C=\int_l^r[U(q)-L(q)]dq\)</span>. Then</p>
+<p><span
+class="math display">\[\boxed{|E|=A_C+\frac{2F^2b^3}{3m}+2Fbw+\frac{Fb^2}{m}D_*.}\]</span></p>
+<p>The clipped area itself has the elementary expression</p>
+<p><span
+class="math display">\[A_C=\frac{F^2a^3}{m}[G(z_r)-G(z_l)],\quad
+z_q=\frac{mq}{Fa^2},\quad
+G(z)=\frac{(2+4z)^{3/2}-(2-4z)^{3/2}}6-2z.\]</span></p>
+<p><strong>Proof.</strong> Apply the determinant-one shear <span
+class="math inline">\(S_{-b}\)</span>. The future lens becomes the
+integral sum of symmetric segments in directions <span
+class="math inline">\(g_s=(-s/m,1)\)</span>, <span
+class="math inline">\(0\le s\le b\)</span>, each with force weight <span
+class="math inline">\(F\,ds\)</span>. For a convex planar set <span
+class="math inline">\(C\)</span> and a segment <span
+class="math inline">\([-\alpha g,\alpha g]\)</span>, section integration
+gives</p>
+<p><span class="math display">\[|C+[-\alpha g,\alpha g]|-|C|
+=2\alpha\,\operatorname{width}\{\det(x,g):x\in C\}.\]</span></p>
+<p>Successively adding finitely many segments and using additivity of
+widths under Minkowski sums splits the area into the original area, the
+area of their segment sum, and the sum of these original-set width
+terms. Approximating the continuous directions <span
+class="math inline">\(g_s\)</span> by step functions gives Hausdorff
+convergence of the integral sets: the support-function error is bounded
+by <span class="math inline">\(F\int\|g_s-g_s^{(n)}\|ds\)</span>.
+Continuity of convex planar area gives</p>
+<p><span class="math display">\[|C+S_{-b}K_b|=|C|+|K_b|
++2F\int_0^b\operatorname{width}_C(q+sp/m)\,ds.\]</span></p>
+<p>Both <span class="math inline">\(L(q)\)</span> and <span
+class="math inline">\(U(q)\)</span> increase with <span
+class="math inline">\(q\)</span>. For <span
+class="math inline">\(s\ge0\)</span>, the maximum of <span
+class="math inline">\(q+sp/m\)</span> on <span
+class="math inline">\(C\)</span> is <span
+class="math inline">\(r+sU(r)/m\)</span> and its minimum is <span
+class="math inline">\(l+sL(l)/m\)</span>. The width is therefore <span
+class="math inline">\(w+sD_*/m\)</span>. Integration proves the formula,
+including the degenerate strip <span class="math inline">\(l=r\)</span>
+by the same segment argument or continuity. Differentiating <span
+class="math inline">\(G\)</span> gives the displayed integral for <span
+class="math inline">\(A_C\)</span>.</p>
+<h2 id="joint-limit-and-endpoint-checks">3. Joint limit and endpoint
+checks</h2>
+<p>Since <span class="math inline">\(w\le2\varepsilon\)</span>, <span
+class="math inline">\(D_*\le2Fa\)</span>, and <span
+class="math inline">\(A_C\le2Fa\,w\)</span>, the exact expression yields
+the uniform estimate</p>
+<p><span class="math display">\[0\le|E|\le4FT\varepsilon
++\frac{2F^2ab^2}{m}+\frac{2F^2b^3}{3m}.\]</span></p>
+<p>Thus <span class="math inline">\(|E|\to0\)</span> for every joint
+approach <span class="math inline">\((\varepsilon,b)\to(0,0)\)</span>,
+uniformly over compatible reported values, with fixed <span
+class="math inline">\(F,m,T\)</span> and <span
+class="math inline">\(a=T-b\)</span>. There is no needed relation
+between the rates of improving precision and delay.</p>
+<p>The formula passes three independent limiting checks:</p>
+<ul>
+<li>Exact position: <span class="math inline">\(w=A_C=0\)</span>,
+recovering R08’s <span
+class="math inline">\(A(b)+Fb^2D_*/m\)</span>.</li>
+<li>Entire lens retained: <span class="math inline">\(w=Fa^2/m\)</span>,
+<span class="math inline">\(D_*=2Fa\)</span>, <span
+class="math inline">\(A_C=2F^2a^3/(3m)\)</span>; the four terms sum to
+<span class="math inline">\(2F^2(a+b)^3/(3m)\)</span>, as unobserved
+composition requires.</li>
+<li>Zero residual delay: the terminal area is just the clipped area
+<span class="math inline">\(A_C\)</span>.</li>
+</ul>
+<p>For a central record <span class="math inline">\(y=0\)</span> at
+<span class="math inline">\(b=0\)</span> and small positive <span
+class="math inline">\(\varepsilon\)</span>,</p>
+<p><span
+class="math display">\[A_C=4(\sqrt2-1)Fa\,\varepsilon+o(\varepsilon).\]</span></p>
+<p>Here continuity of the fibre width suffices. The momentum width tends
+to <span class="math inline">\(2(\sqrt2-1)FT&gt;0\)</span> in the joint
+limit: the information region becomes thin, rather than shrinking to a
+point. A fixed error tolerance alone also supplies no record-uniform
+positive area: a strip touching the extreme reachable position at one
+point has <span class="math inline">\(A_C=0\)</span>.</p>
+<h2 id="next-premise-test">4. Next premise test</h2>
+<p>Precision and latency now enter a single exact action-valued formula.
+A mechanical obstruction must constrain attainable records or their
+joint precision/latency, rather than follow from area geometry alone.
+The next bounded task should test two finite-precision position records:
+unlike one record, they may also shrink momentum uncertainty. Keep the
+total experiment fixed and derive the competing force and
+difference-quotient errors before introducing an apparatus resource
+premise.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The two Millennium problems</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The two Millennium problems</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/millennium-problem-definitions.md">Markdown source</a></p><p>Checked against the official Clay documents on 2026-09-05. These are
+compact mathematical restatements; the linked originals govern
+details.</p>
+<h2 id="navierstokes-existence-and-smoothness">Navier–Stokes: existence
+and smoothness</h2>
+<p>Source: <a
+href="https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf">Charles
+L. Fefferman, pp. 1–2, equations (1)–(11), alternatives A–D</a>.</p>
+<p>For viscosity <span class="math inline">\(\nu&gt;0\)</span>, velocity
+<span class="math inline">\(u\)</span>, pressure <span
+class="math inline">\(p\)</span>, and prescribed force <span
+class="math inline">\(f\)</span>:</p>
+<p><span class="math display">\[
+\partial_tu+(u\cdot\nabla)u=\nu\Delta u-\nabla p+f,
+\qquad \nabla\cdot u=0,
+\qquad u(x,0)=u_0(x).
+\]</span></p>
+<p>There are three spatial dimensions and <span
+class="math inline">\(t\geq0\)</span>. Initial velocity is smooth and
+divergence-free.</p>
+<p><strong>Whole space:</strong> <span class="math inline">\(x\in\mathbb
+R^3\)</span>. For every spatial multi-index <span
+class="math inline">\(\alpha\)</span> and nonnegative integers <span
+class="math inline">\(m,K\)</span>, require finite constants with</p>
+<p><span class="math display">\[
+|\partial_x^\alpha u_0(x)|\leq C_{\alpha K}(1+|x|)^{-K},
+\qquad
+|\partial_x^\alpha\partial_t^m f(x,t)|
+\leq C_{\alpha mK}(1+|x|+t)^{-K}.
+\]</span></p>
+<p>An admissible global solution has smooth <span
+class="math inline">\(u,p\)</span> and uniformly bounded energy:</p>
+<p><span class="math display">\[
+\sup_{t\geq0}\int_{\mathbb R^3}|u(x,t)|^2\,dx&lt;\infty.
+\]</span></p>
+<p><strong>Periodic case:</strong> <span
+class="math inline">\(u_0,f,u\)</span> are unit-periodic spatially;
+<span class="math inline">\(u,p\)</span> are globally smooth. Replace
+the decay assumptions by smooth periodic <span
+class="math inline">\(u_0\)</span> and</p>
+<p><span class="math display">\[
+|\partial_x^\alpha\partial_t^m f(x,t)|\leq C_{\alpha mK}(1+t)^{-K}.
+\]</span></p>
+<p>Proving any one alternative suffices:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Alternative</th>
+<th>Domain</th>
+<th>Required conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Whole space</td>
+<td>Every admissible <span class="math inline">\(u_0\)</span>, with
+<span class="math inline">\(f=0\)</span>, admits a global solution
+above.</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Periodic</td>
+<td>Every admissible <span class="math inline">\(u_0\)</span>, with
+<span class="math inline">\(f=0\)</span>, admits a global solution
+above.</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Whole space</td>
+<td>Some admissible <span class="math inline">\(u_0,f\)</span> admit no
+global solution above.</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>Periodic</td>
+<td>Some admissible <span class="math inline">\(u_0,f\)</span> admit no
+global solution above.</td>
+</tr>
+</tbody>
+</table>
+<p>Thus breakdown alternatives permit forcing; existence alternatives
+specify zero forcing.</p>
+<p>The forced side is the current comparison track. OpenAI’s public
+announcement of 8 September 2026 reports a proof of the forced breakdown
+alternatives C/D and links a paper and formalization. See the <a
+href="https://openai.com/index/navier-stokes-solution/">announcement</a>
+and our <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/OpenAI_NavierStokes_2026.md">source
+companion</a>. The repository records an attributed first reading of
+that artifact; independent proof verification and prize adjudication are
+separate statuses. The unforced existence alternatives A/B retain their
+distinct hypotheses. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B19.md">B19</a>
+records the related multiscale programme for other fluid equations.</p>
+<h2 id="yangmills-quantum-existence-and-mass-gap">Yang–Mills: quantum
+existence and mass gap</h2>
+<p>Source: <a
+href="https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf">Arthur
+Jaffe and Edward Witten, §§3–5, pp. 5–7</a>.</p>
+<p>For every compact simple gauge group <span
+class="math inline">\(G\)</span>, construct a nontrivial quantum
+Yang–Mills theory on <span class="math inline">\(\mathbb R^4\)</span>
+with a positive mass gap. Here four dimensions describe spacetime.</p>
+<p><strong>Existence</strong> requires axiomatic strength at least that
+of the cited Wightman or Osterwalder–Schrader formulations. The physical
+description includes a Hilbert space <span
+class="math inline">\(\mathcal H\)</span>, Poincaré covariance, positive
+energy, a vacuum <span class="math inline">\(\Omega\)</span> unique up
+to phase, and locality, subject to the full axiomatic requirements in
+the source.</p>
+<p>Local quantum observables must correspond, with renormalisation
+subtleties, to gauge-invariant polynomials in curvature and covariant
+derivatives. Short-distance correlations must match asymptotic freedom
+and perturbative renormalisation, including the prescribed stress tensor
+and operator product behaviour.</p>
+<p><strong>Mass gap:</strong> for the physical Hamiltonian <span
+class="math inline">\(H\)</span>,</p>
+<p><span class="math display">\[
+H\Omega=0,\qquad H\geq0,\qquad
+\operatorname{spec}(H)\cap(0,\Delta)=\varnothing
+\quad\text{for some }\Delta&gt;0.
+\]</span></p>
+<p>The supremum of such <span class="math inline">\(\Delta\)</span> must
+be finite: <span class="math inline">\(0&lt;m&lt;\infty\)</span>. Thus
+the lower edge of nonvacuum energies is strictly positive and
+finite.</p>
+<p>The construction concerns the continuum quantum theory in infinite
+volume. Confinement and an isolated one-particle state are listed as
+further questions beyond the stated existence and mass-gap target.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -37,7 +37,14 @@ def main():
             if not local.exists():
                 errors.append(f"{path.relative_to(ROOT)}: missing link {target}")
             link_count += 1
+    manifest = ROOT / "docs" / ".site-manifest"
+    generated = set()
+    if manifest.exists():
+        generated = {line.strip() for line in manifest.read_text().splitlines()
+                     if line.strip() and not line.startswith("#")}
     for path in (ROOT / "docs").rglob("*"):
+        if path.relative_to(ROOT).as_posix() in generated:
+            continue
         if path.suffix.lower() in {".pdf", ".html", ".xml"}:
             if not path.with_suffix(".md").exists():
                 errors.append(f"Missing source companion: {path.relative_to(ROOT)}")

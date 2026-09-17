@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An explicit strong-coupling gap for the Wilson transfer matrix: SU(3) is gapped for g2≥176, with Δ≥(ħ c/a) 4(g2/176)</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>An explicit strong-coupling gap for the Wilson transfer matrix: <span
+class="math inline">\(SU(3)\)</span> is gapped for <span
+class="math inline">\(g^2\ge176\)</span>, with <span
+class="math inline">\(\Delta\ge(\hbar c/a)\,4\log(g^2/176)\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/wilson-strong-coupling-explicit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/wilson-strong-coupling-explicit.pdf">PDF</a></p><p>The threshold that Yarotsky’s theorem supplies for the Kogut–Susskind
+Hamiltonian is <span class="math inline">\(g_0^2\sim10^{101}\)</span>
+(<a href="strong-coupling-threshold-explicit.html">threshold note</a>).
+The same statement for the other standard lattice Hamiltonian, the
+logarithm of the Wilson transfer matrix, has an explicit and usable
+threshold, because the Euclidean character expansion is a polymer gas of
+closed plaquette surfaces with no time discretization to pay for. With
+the plaquette activity <span class="math inline">\(\rho\)</span> of the
+fundamental representation, which is <span
+class="math inline">\(1/g^2\)</span> for <span
+class="math inline">\(SU(3)\)</span> to leading order, the
+Kotecký–Preiss criterion holds for <span
+class="math display">\[20e^2\rho\ \le\ 0.84,\qquad\text{that is}\qquad
+\rho\le5.7\times10^{-3},\]</span> and the truncated correlations of
+local observables then decay with rate at least <span
+class="math inline">\(4\log(1/(176\rho))\)</span> per lattice unit,
+because the smallest closed surface joining two distant plaquettes is a
+tube with four plaquettes per unit length. Through the transfer matrix
+<span class="math inline">\(\mathcal T=e^{-aH_W/\hbar c}\)</span>,
+self-adjoint and positive by link reflection positivity, the decay rate
+is a lower bound on the gap of <span class="math inline">\(H_W\)</span>
+on the cyclic subspace of local observables, so for <span
+class="math inline">\(SU(3)\)</span> <span
+class="math display">\[\Delta_W\ \ge\ \frac{\hbar
+c}{a}\,4\log\frac{g^2}{176}\qquad(g^2\ge176),\]</span> uniformly in the
+volume. The fully rigorous version, which sums all representations and
+both orientations with the bound <span
+class="math inline">\(e^{\beta_W}-1\simeq6/g^2\)</span>, gives the same
+form with <span class="math inline">\(1056\)</span> in place of <span
+class="math inline">\(176\)</span>. The entropy constant <span
+class="math inline">\(20e\)</span> for plaquette animals is the only
+place with room, and a careful count would lower <span
+class="math inline">\(176\)</span> to about <span
+class="math inline">\(10^2\)</span>. The gap of <span
+class="math inline">\(H_W\)</span> grows like <span
+class="math inline">\(\log g^2\)</span> where that of <span
+class="math inline">\(H_{\rm KS}\)</span> grows like <span
+class="math inline">\(g^2\)</span>, the two Hamiltonians being different
+regularizations that agree only in the continuum limit. Constants
+explicit; nothing promoted.</p>
+<h2 id="the-polymer-gas">1. The polymer gas</h2>
+<p>Write the Wilson weight of a plaquette in characters, <span
+class="math display">\[e^{\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}U_p}
+=c_0(\beta_W)\Big[1+\sum_{r\ne0}d_r\frac{c_r}{c_0}\chi_r(U_p)\Big],
+\qquad c_r=\frac1{d_r}\int
+e^{\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}U}\,\overline{\chi_r(U)}\,dU
+,\]</span> with <span class="math inline">\(\beta_W=2N/g^2\)</span>.
+Expanding the product over plaquettes and integrating over links, a set
+of plaquettes with nontrivial representations contributes only if the
+representations at every link fuse to the trivial one, so every link is
+covered by at least two plaquettes of the set: the surviving sets are
+<strong>closed surfaces</strong>, the smallest being the six faces of a
+cube. On a closed surface carrying the fundamental on every plaquette,
+the link integrals <span
+class="math inline">\(\int\chi_f(U_1g)\chi_f(g^{-1}U_2)dg=\chi_f(U_1U_2)/d_f\)</span>
+and the vertex closures combine to <span
+class="math inline">\(d_f^{\chi(P)}(c_f/c_0)^{|P|}\)</span> with <span
+class="math inline">\(\chi(P)\)</span> the Euler characteristic, so the
+activity per plaquette along a tube, where the vertex and link factors
+balance, is <span class="math display">\[\rho\ =\ d_f\,\frac{c_f}{c_0}\
+=\
+\frac{\beta_W}{2N}\big(1+O(\beta_W)\big)=\frac1{g^2}\big(1+O(g^{-2})\big)\qquad(SU(N)),\]</span>
+the textbook strong-coupling parameter. The polymers of the gas are the
+connected closed surfaces, two polymers being incompatible when they
+share a link, and <span class="math inline">\(Z=c_0^{|\mathcal
+P|}\sum_{\text{compatible}}\prod w(\gamma)\)</span>.</p>
+<p><strong>All representations, rigorously.</strong> Expand <span
+class="math inline">\(e^{x\operatorname{Re}\operatorname{tr}U}=\sum_kx^k(\operatorname{Re}\operatorname{tr}U)^k/k!\)</span>
+with <span class="math inline">\(x=\beta_W/N\)</span>, and <span
+class="math inline">\((\operatorname{Re}\operatorname{tr}U)^k=2^{-k}\sum_j\binom
+kj(\operatorname{tr}U)^j(\operatorname{tr}U^\dagger)^{k-j}\)</span>. The
+integral <span
+class="math inline">\(\int(\operatorname{tr}U)^j(\operatorname{tr}U^\dagger)^{k-j}\overline{\chi_r}\,dU\)</span>
+is the multiplicity <span class="math inline">\(m_r(j,k-j)\)</span> of
+<span class="math inline">\(r\)</span> in <span
+class="math inline">\(f^{\otimes j}\otimes\bar
+f^{\otimes(k-j)}\)</span>, so <span
+class="math inline">\(d_rc_r=\sum_k\frac{x^k}{k!}2^{-k}\sum_j\binom
+kjm_r(j,k-j)\ge0\)</span>, and <span
+class="math inline">\(\sum_rm_r(j,k-j)\le\dim\big(f^{\otimes
+j}\otimes\bar f^{\otimes(k-j)}\big)=N^k\)</span>. Hence <span
+class="math display">\[\sum_{r\ne0}d_rc_r\ \le\
+\sum_{k\ge1}\frac{x^k}{k!}2^{-k}\cdot2^kN^k=e^{Nx}-1=e^{\beta_W}-1
+,\]</span> and Jensen’s inequality with <span
+class="math inline">\(\int\operatorname{Re}\operatorname{tr}U\,dU=0\)</span>
+gives <span class="math inline">\(c_0=\int
+e^{x\operatorname{Re}\operatorname{tr}U}dU\ge1\)</span>. Therefore <span
+class="math display">\[\sum_{r\ne0}d_r\frac{c_r}{c_0}\ \le\
+e^{\beta_W}-1=e^{2N/g^2}-1\ \simeq\
+\frac{2N}{g^2}=\frac{6}{g^2}\quad(SU(3)),\]</span> which is the leading
+activity <span class="math inline">\(1/g^2\)</span> of the fundamental,
+its conjugate, and the higher representations together, with no spurious
+factor. The sum over representations also covers the branch lines where
+three fundamentals meet at a link, allowed for <span
+class="math inline">\(SU(3)\)</span> since <span
+class="math inline">\(f^{\otimes3}\ni1\)</span>. Everything below is
+stated for a per-plaquette activity <span
+class="math inline">\(\rho\)</span>; the two readings differ only in
+what <span class="math inline">\(\rho\)</span> is.</p>
+<h2 id="convergence-the-koteckýpreiss-criterion-with-numbers">2.
+Convergence: the Kotecký–Preiss criterion with numbers</h2>
+<p><em>Adjacency.</em> In four dimensions a link lies in six plaquettes,
+so a plaquette shares a link with <span
+class="math inline">\(4\times5=20\)</span> others, and the number of
+connected sets of <span class="math inline">\(n\)</span> plaquettes
+containing a given one is at most <span
+class="math inline">\((20e)^{n-1}\)</span>.</p>
+<p><em>Incompatible polymers.</em> A polymer <span
+class="math inline">\(\gamma&#39;\)</span> incompatible with <span
+class="math inline">\(\gamma\)</span> shares a link with it; <span
+class="math inline">\(\gamma\)</span> has at most <span
+class="math inline">\(4|\gamma|\)</span> links, each in six plaquettes,
+so the number of <span class="math inline">\(\gamma&#39;\)</span> of
+size <span class="math inline">\(n\)</span> is at most <span
+class="math inline">\(24|\gamma|(20e)^{n-1}\)</span>, and <span
+class="math inline">\(n\ge6\)</span>.</p>
+<p><em>Criterion.</em> With <span
+class="math inline">\(a(\gamma)=|\gamma|\)</span> and <span
+class="math inline">\(|w(\gamma&#39;)|\le\rho^{|\gamma&#39;|}\)</span>,
+the Kotecký–Preiss condition <span
+class="math inline">\(\sum_{\gamma&#39;\not\sim\gamma}|w(\gamma&#39;)|e^{a(\gamma&#39;)}\le
+a(\gamma)\)</span> follows from <span
+class="math display">\[\frac{24}{20e}\sum_{n\ge6}\big(20e^2\rho\big)^n\
+\le\ 1
+\qquad\Longleftarrow\qquad x\equiv20e^2\rho\le0.84 ,\]</span> since
+<span class="math inline">\(0.4415\,x^6/(1-x)\le1\)</span> there. So the
+expansion converges, uniformly in the volume, for <span
+class="math display">\[\rho\ \le\
+\frac{0.84}{20e^2}=5.7\times10^{-3}.\]</span></p>
+<h2 id="decay-of-correlations-and-the-gap">3. Decay of correlations and
+the gap</h2>
+<p>Running the criterion with <span
+class="math inline">\(a(\gamma)=(1+\delta)|\gamma|\)</span> instead, it
+holds as long as <span
+class="math inline">\(xe^{\delta}\le0.84\)</span>, that is for <span
+class="math inline">\(\delta\le\log(0.84/x)=\log(1/(176\rho))\)</span>,
+and then the cluster sums carry a factor <span
+class="math inline">\(e^{-\delta|X|}\)</span>. A cluster connecting two
+plaquettes at distance <span class="math inline">\(T\)</span> contains a
+closed connected surface through both, whose size is at least that of a
+tube, <span class="math inline">\(4T\)</span> plaquettes, so the
+truncated two-point function of any two local observables at separation
+<span class="math inline">\(T\)</span> is bounded by <span
+class="math inline">\(C\,e^{-4\delta T}\)</span>: <span
+class="math display">\[m\,a\ \ge\ 4\log\frac{1}{176\rho}.\]</span></p>
+<p><strong>Transfer.</strong> The Wilson action is link-reflection
+positive, so the transfer matrix <span class="math inline">\(\mathcal
+T\)</span> is self-adjoint and positive (Lüscher, Commun. Math. Phys. 54
+(1977) 283; Osterwalder and Seiler, Ann. Phys. 110 (1978) 440; metadata
+level), and <span class="math inline">\(H_W=-(\hbar c/a)\log\mathcal
+T\)</span>. For a local observable <span
+class="math inline">\(A\)</span> orthogonal to the vacuum, <span
+class="math inline">\(\langle A,\mathcal T^nA\rangle\le
+C_Ae^{-man}\)</span> for all <span class="math inline">\(n\)</span>
+forces the spectral measure of <span class="math inline">\(A\)</span> to
+vanish above <span class="math inline">\(e^{-ma}\)</span>, so on the
+cyclic subspace generated by local observables, which is the whole space
+of the reconstructed theory, <span class="math display">\[\Delta_W\ \ge\
+\hbar c\,m\ \ge\ \frac{\hbar c}{a}\,4\log\frac{1}{176\rho}.\]</span></p>
+<p><strong>Numbers for <span
+class="math inline">\(SU(3)\)</span>.</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>reading of <span class="math inline">\(\rho\)</span></th>
+<th>threshold <span
+class="math inline">\(\rho\le5.7\times10^{-3}\)</span></th>
+<th>gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>leading, <span class="math inline">\(\rho=1/g^2\)</span></td>
+<td><span class="math inline">\(g^2\ge176\)</span></td>
+<td><span class="math inline">\(\Delta_W\ge(\hbar
+c/a)\,4\log(g^2/176)\)</span></td>
+</tr>
+<tr class="even">
+<td>all representations, <span
+class="math inline">\(\rho=e^{6/g^2}-1\)</span></td>
+<td><span class="math inline">\(g^2\ge1056\)</span></td>
+<td><span class="math inline">\(\Delta_W\ge(\hbar
+c/a)\,4\log(g^2/1056)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The first line uses the fundamental alone; the second sums every
+representation and both orientations and is rigorous as written. The
+factor <span class="math inline">\(6\)</span> between them is the two
+orientations, each with activity <span
+class="math inline">\(1/g^2\)</span>, and the higher representations, so
+the rigorous line is close to the truth for a surface that may carry
+either orientation on each plaquette; a surface with a fixed global
+orientation would be counted by the first line.</p>
+<h2 id="relation-to-the-kogutsusskind-statement">4. Relation to the
+Kogut–Susskind statement</h2>
+<p><span class="math inline">\(H_W\)</span> and <span
+class="math inline">\(H_{\rm KS}\)</span> are different regularizations
+of the same continuum Hamiltonian. At strong coupling their gaps differ
+in kind: <span class="math inline">\(H_{\rm KS}\)</span> has an electric
+term of order <span class="math inline">\(g^2\hbar c/a\)</span> and the
+flux loop costs <span class="math inline">\((8/3)g^2\hbar c/a\)</span>
+for <span class="math inline">\(SU(3)\)</span>; <span
+class="math inline">\(H_W\)</span> has both electric and magnetic
+content in <span class="math inline">\(-\log\mathcal T\)</span>, and the
+flux loop costs <span class="math inline">\(4\log(g^2/\cdot)\,\hbar
+c/a\)</span>, the logarithm of the tube activity. The Jaffe–Witten
+statement asks for the continuum theory and is indifferent to the
+regularization, so either Hamiltonian serves for T2, and the one with
+the explicit threshold is <span class="math inline">\(H_W\)</span>. The
+anisotropic limit <span class="math inline">\(a_t\to0\)</span> that
+turns <span class="math inline">\(\mathcal T\)</span> into <span
+class="math inline">\(e^{-a_tH_{\rm KS}/\hbar}\)</span> sends the
+temporal plaquette activity to one, outside the expansion, which is why
+the Kogut–Susskind threshold needs a genuinely Hamiltonian expansion and
+why Yarotsky’s time discretization pays what it pays.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The strong-coupling boundary of the intermediate region is now a
+number: for the Wilson transfer matrix and <span
+class="math inline">\(SU(3)\)</span>, the theory is gapped uniformly in
+the volume for <span class="math inline">\(g^2\ge176\)</span> (leading
+activity) or <span class="math inline">\(g^2\ge1056\)</span> (all
+representations, rigorous), with the gap explicit. The only constant
+with room is the plaquette-animal entropy <span
+class="math inline">\(20e\)</span>. On the weak side the boundary is
+<span class="math inline">\(1/g^2\gtrsim10^2\)</span> with the crude
+window of <a href="large-field-operator-inequality.html">the
+operator-inequality note</a>, and the intermediate region between <span
+class="math inline">\(g^2\sim10^{-2}\)</span> and <span
+class="math inline">\(g^2\sim2\times10^2\)</span> is where the gap
+forms.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

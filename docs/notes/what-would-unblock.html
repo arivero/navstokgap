@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What would unblock the confinement-scale region, and what was checked and fails</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>What would unblock the confinement-scale region, and what was checked
+and fails</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/what-would-unblock.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/what-would-unblock.pdf">PDF</a></p><p>The map of <a href="mass-gap-position.html">the position note</a>
+leaves one region untouched by every tool with explicit constants: the
+confinement scale, where the effective coupling is of order one and the
+effective theory must be shown to be mixing uniformly in the volume.
+This note records the outcome of a review of every rigorous technique
+known to the author that might enter that region by written derivation,
+so that later sessions do not re-derive the same dead ends. The
+conclusion is that exactly two things would unblock it, and neither is
+available here:</p>
+<ol type="1">
+<li><strong>A correlation inequality for <span
+class="math inline">\(SU(3)\)</span> lattice gauge theory</strong> of
+Griffiths–Ginibre type, giving monotonicity in the coupling of the
+quantities that control mixing. Researched further in <a
+href="reasons-to-stop-as-research.html">the research note</a>: it would
+transfer control from weaker to stronger coupling only, replacing the
+strong-side steps and leaving the weak side untouched, so it is a
+simplification rather than an unblocking. This is what makes the Ising
+model’s intermediate regime accessible and what the abelian gauge
+theories have; for <span class="math inline">\(SU(N)\)</span> none of
+this type is known, Section 1 says where the standard constructions
+break, and the centre-based comparison inequalities that do exist
+concern the string tension rather than the vacuum-sector gap.</li>
+<li><strong>A computer-assisted verification of the Dobrushin–Shlosman
+block criterion</strong> for the Wilson interaction, or for the
+effective interaction at the confinement scale, as specified in <a
+href="dobrushin-uniqueness-wilson.html">the Dobrushin note</a> §4. This
+is numerics of a size beyond present practice and outside this
+repository’s rules.</li>
+</ol>
+<p>Everything else checked reduces to one of these or fails for a stated
+reason. References at metadata level; nothing promoted.</p>
+<h2 id="correlation-inequalities-where-they-break-for-sun">1.
+Correlation inequalities: where they break for <span
+class="math inline">\(SU(N)\)</span></h2>
+<p><em>Ising and abelian gauge theories.</em> Griffiths’ inequalities in
+Ginibre’s general form (Commun. Math. Phys. 16 (1970) 310) need a cone
+of functions on the single-site space, closed under products, such that
+the duplicate-variables integral <span
+class="math inline">\(\int\!\!\int\prod_i\big(f_i(x)-f_i(y)\big)\,d\nu(x)\,d\nu(y)\ge0\)</span>
+holds. For <span class="math inline">\(\pm1\)</span> spins and for <span
+class="math inline">\(U(1)\)</span> with the cosines this holds, so the
+Wilson loops of <span class="math inline">\(U(1)\)</span> lattice gauge
+theory are monotone in <span class="math inline">\(\beta_W\)</span> and
+the phase structure can be squeezed from both sides; the sharpness
+theorem of Aizenman, Barsky and Fernández (J. Stat. Phys. 47 (1987) 343)
+is the deepest form of this control for Ising-type models. The Coulomb
+phase of <span class="math inline">\(U(1)\)</span> (Guth;
+Fröhlich–Spencer) uses the dual representation, whose weights are
+positive.</p>
+<p><em>Non-abelian.</em> Three obstructions, each sufficient on its
+own.</p>
+<ul>
+<li>The dual representation has signs. Integrating the links of a
+character expansion produces recoupling coefficients, which are not
+nonnegative for <span class="math inline">\(SU(2)\)</span> and <span
+class="math inline">\(SU(3)\)</span>, so the surface gas is not a
+positive measure and no monotonicity in <span
+class="math inline">\(\beta_W\)</span> follows from it. The plaquette
+coefficients themselves are nonnegative (<a
+href="wilson-strong-coupling-explicit.html">Wilson note</a> §1), which
+is why the strong-coupling expansion is a positive gas; the signs appear
+at the vertices where more than two surfaces meet.</li>
+<li>The <span class="math inline">\(O(N)\)</span> analogy fails already
+at <span class="math inline">\(N=4\)</span>. <span
+class="math inline">\(SU(2)\simeq S^3\)</span>, and <span
+class="math inline">\(\tfrac12\operatorname{tr}(UV^\dagger)\)</span> is
+the Euclidean inner product of unit quaternions, so the plaquette term
+is a degree-four polynomial in four <span
+class="math inline">\(O(4)\)</span> spins; Ginibre’s construction covers
+<span class="math inline">\(O(2)\)</span> and specific <span
+class="math inline">\(O(N)\)</span> interactions but not this one, and
+<span class="math inline">\(SU(3)\)</span> has no such real form at
+all.</li>
+<li>The interaction is not ferromagnetic in any sign sense: for a
+complex defining representation <span
+class="math inline">\(\operatorname{Re}\operatorname{tr}U_p\)</span> is
+not a product of functions on the links with definite sign
+properties.</li>
+</ul>
+<p><em>What does exist for non-abelian groups, and why it does not
+reach.</em> Comparison inequalities built on the centre are known and
+rigorous. Mack and Petkova (Ann. Phys. 123 (1979) 442; 125 (1980) 117)
+bound the <span class="math inline">\(SU(2)\)</span> Wilson loop by a
+<span class="math inline">\(\mathbb Z_2\)</span> gauge theory’s through
+the decomposition <span class="math inline">\(SU(2)\to\mathbb Z_2\times
+SU(2)/\mathbb Z_2\)</span>, so confinement in <span
+class="math inline">\(SU(2)\)</span> follows wherever the <span
+class="math inline">\(\mathbb Z_2\)</span> theory confines; the
+four-dimensional <span class="math inline">\(\mathbb Z_2\)</span> theory
+deconfines at weak coupling, being dual to the Ising model, so the
+comparison reaches only strong coupling, and the same holds for <span
+class="math inline">\(SU(3)\)</span> against <span
+class="math inline">\(\mathbb Z_3\)</span>. Tomboulis and Yaffe (Commun.
+Math. Phys. 100 (1985) 313) derive exact inequalities between
+electric-flux and vortex free energies from reflection positivity and
+the <span class="math inline">\(\mathbb Z_N\)</span> Fourier structure,
+and use them to prove deconfinement at high temperature. A claimed proof
+of confinement for all couplings in <span
+class="math inline">\(SU(2)\)</span> by these methods with approximate
+decimations (Tomboulis, arXiv:0707.2179) has not been established as a
+theorem in the literature as far as this author knows. All of these
+concern the string tension, that is, the energy of the electric-flux
+sectors, which on a torus is the <span
+class="math inline">\(27\)</span>-sector structure of <a
+href="su3-constants.html">the SU(3) constants</a> §4 and which
+disappears in infinite volume. The Jaffe–Witten gap is the vacuum-sector
+gap, the glueball mass, and no rigorous inequality relates it to the
+string tension in either direction. So the centre-based inequalities are
+real, non-abelian, and aimed at a different quantity, and their
+comparison theory has a transition of its own.</p>
+<h2 id="reflection-positivity-tools">2. Reflection-positivity tools</h2>
+<p><em>Chessboard estimates</em> (Fröhlich, Israel, Lieb and Simon,
+Commun. Math. Phys. 62 (1978) 1) hold for the Wilson measure and bound
+the probability of a local event by a free-energy difference per block,
+uniformly in the volume and at every coupling. They give rigorous
+large-deviation bounds for bad blocks without an expansion. They do not
+give mixing on the good blocks, so they are an ingredient of a
+verification and not a substitute for it.</p>
+<p><em>Infrared bounds</em> (Fröhlich, Simon and Spencer, Commun. Math.
+Phys. 50 (1976) 79) need Gaussian domination, <span
+class="math inline">\(Z(h)\le Z(0)\)</span> for shifts <span
+class="math inline">\(h\)</span> of the field, which uses the
+translation structure of a flat target space or of <span
+class="math inline">\(U(1)\)</span>; on a non-abelian group manifold the
+shift is not a symmetry and the domination fails. This is consistent
+with confinement: an infrared bound would prove a massless phase.</p>
+<p><em>Reflection positivity proves transitions</em> (Peierls-type
+arguments via chessboard) and, through the transfer matrix, converts
+decay into a gap (<a href="dobrushin-uniqueness-wilson.html">Dobrushin
+note</a> §3). It does not prove the absence of a transition.</p>
+<h2 id="hamiltonian-finite-size-criteria">3. Hamiltonian finite-size
+criteria</h2>
+<p>Knabe’s criterion (J. Stat. Phys. 52 (1988) 627) and its descendants
+bound the gap of an infinite frustration-free Hamiltonian by the gap on
+finite blocks. The Kogut–Susskind Hamiltonian is not frustration-free:
+its ground state is not a ground state of the electric and magnetic
+terms separately, and no equivalent frustration-free form with the same
+gap is known. Ground-state clustering also does not imply a gap for a
+general Hamiltonian, while Euclidean decay in time does, through the
+positive transfer matrix; this is why the decay-to-gap step in this
+programme is always taken on the Euclidean side.</p>
+<h2 id="exact-transformations">4. Exact transformations</h2>
+<p><em>Flow conjugation</em> is exact and preserves the spectrum at the
+same coupling (<a
+href="flow-conjugation-truncation.html">flow-conjugation note</a>).
+<em>Electric–magnetic duality</em> is exact for abelian groups and maps
+strong to weak coupling; for <span class="math inline">\(SU(N)\)</span>
+the dual is the signed surface gas of Section 1. <em>Gauge fixing</em>
+changes the specification, so the Dobrushin coefficient can be reduced
+by removing fixed links from the neighbour count, by at most the
+fraction of links on a maximal tree, about one quarter in four
+dimensions; this moves <span class="math inline">\(444\)</span> to about
+<span class="math inline">\(330\)</span> and touches nothing else.</p>
+<h2 id="other-constructions">5. Other constructions</h2>
+<p><em>Large <span class="math inline">\(N\)</span></em> has <span
+class="math inline">\(1/N\)</span> as a small parameter; the goal is
+<span class="math inline">\(SU(3)\)</span>. <em>Stochastic
+quantization</em> (the Langevin dynamics of the gauge field) constructs
+the two- and three-dimensional theories locally in time and says nothing
+about the gap; four dimensions is not accessible. <em>Small volume</em>
+relocates the crossover from the coupling to the volume variable: the
+small-volume theory has an explicit gap <span
+class="math inline">\(\delta_1g^{2/3}\hbar c/L\)</span>, and the passage
+to <span class="math inline">\(L\Lambda\gg1\)</span> is the same
+confinement-scale problem.</p>
+<h2 id="the-confinement-scale-as-a-single-lattice-theory">6. The
+confinement scale as a single lattice theory</h2>
+<p>After the small-field renormalization has run to the scale where the
+effective coupling is of order one, the problem is one lattice gauge
+theory at that scale with a bounded but unknown effective interaction,
+to be shown mixing uniformly in the volume. Beyond that scale the block
+variables decorrelate and the effective interaction approaches the
+trivial fixed point, inside the completely analytical set. The whole
+difficulty is therefore concentrated at one scale and one effective
+interaction, which is the sharpest form of the statement that the
+problem has no small parameter, and which is exactly what the block
+verification of item 2 addresses.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The review is closed. By written derivation, the confinement-scale
+region is entered by nothing known; the two unblocking routes are a
+correlation inequality for <span class="math inline">\(SU(3)\)</span>,
+which would be new mathematics, and the computer-assisted block
+verification, which is a decision about the repository’s rules and a
+large project. Constant-tightening on either side of the region remains
+available and does not touch it.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

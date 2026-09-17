@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The truncation error of a flow step is Gaussian times e2t‖G‖∞, so the renormalization step is small exactly on small-field configurations</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The truncation error of a flow step is Gaussian times <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span>, so the
+renormalization step is small exactly on small-field configurations</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-jacobian-truncation-error.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-jacobian-truncation-error.pdf">PDF</a></p><p>The linearization of the gradient flow is the covariant heat equation
+with a curvature term, <span class="math display">\[\partial_s\,\delta
+B_\mu=D^2\,\delta B_\mu+2\big[G_{\mu\nu},\delta B_\nu\big],
+\qquad D_\mu=\partial_\mu+[B_\mu,\cdot\,],\]</span> so the flow Jacobian
+<span class="math inline">\(D\Phi_t\)</span> is the kernel of that
+equation. Kato’s inequality dominates the covariant heat kernel by the
+free one pointwise, and the curvature term is a bounded multiplication
+operator, so Duhamel gives <span
+class="math display">\[\big|D\Phi_t(x,y)\big|\ \le\
+e^{2t\|G\|_\infty}\;\frac{1}{(4\pi t)^{3/2}}\,
+e^{-|x-y|^2/(4t)} .\]</span> Truncating the conjugated Hamiltonian of <a
+href="flow-conjugation-truncation.html">the flow-conjugation note</a> at
+range <span class="math inline">\(R\)</span> therefore costs a relative
+error of order <span class="math display">\[\varepsilon(R,t)\ \sim\
+\exp\Big[2t\|G\|_\infty-\frac{R^2}{4t}\Big],\]</span> and with <span
+class="math inline">\(R\)</span> of order the scale <span
+class="math inline">\(\sqrt{8t}\)</span> the exponent is <span
+class="math inline">\(2t\|G\|_\infty-2\)</span>: the truncation is small
+<strong>precisely when <span
+class="math inline">\(t\,\|G\|_\infty\lesssim1\)</span></strong>, that
+is when the flowed field strength is below the inverse square of the
+scale being integrated out. This is the small-field condition of
+constructive renormalization group, derived here from the flow rather
+than assumed, and it explains why Balaban’s programme splits
+configurations into small-field and large-field regions: on small fields
+the flow truncation is exponentially accurate, and on large fields the
+Jacobian bound degrades exponentially and no truncation of this kind is
+available. The flow’s own monotonicity controls <span
+class="math inline">\(\int|G|^2\)</span> and leaves <span
+class="math inline">\(\|G\|_\infty\)</span> open, so the missing
+estimate is a pointwise bound on the flowed field strength. Constants
+explicit; nothing promoted.</p>
+<blockquote>
+<p><strong>Sharpness.</strong> The factor <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span> below cannot be
+improved: the curvature operator is symmetric, its largest eigenvalue is
+attained by the Nielsen–Olesen mode, and that mode grows under the flow
+at exactly the rate <span class="math inline">\(2\|G\|\)</span>; see <a
+href="flow-instability-large-field.html">the instability note</a>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Corrected in part.</strong> The statements below are
+continuum statements at fixed physical scale. Within one lattice
+renormalization step the compactness of the gauge group bounds <span
+class="math inline">\(a^2\|G\|_\infty\)</span> by <span
+class="math inline">\(\pi\)</span> and the flow time of a doubling is
+<span class="math inline">\(a^2/2\)</span>, so the exponential factor is
+a pure number and the truncation error is uniformly small; see <a
+href="lattice-truncation-uniform.html">the lattice-truncation
+note</a>.</p>
+</blockquote>
+<h2 id="the-linearized-flow">1. The linearized flow</h2>
+<p>Take the continuum flow in the gauge-modified form <span
+class="math inline">\(\partial_sB_\mu=D_\nu G_{\nu\mu}+\lambda
+D_\mu\partial_\nu B_\nu\)</span> with <span
+class="math inline">\(\lambda=1\)</span> (Lüscher, arXiv:1006.4518v3,
+equations (1.1)–(1.2) and (2.2); passage level via the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Luscher_WilsonFlow_1006.4518v3.md">local
+companion</a>).</p>
+<p><strong>Proposition 1.</strong> The variation <span
+class="math inline">\(\delta B\)</span> of a solution obeys <span
+class="math display">\[\partial_s\,\delta B_\mu=D^2\,\delta
+B_\mu+2\big[G_{\mu\nu},\delta B_\nu\big].\]</span></p>
+<p><em>Proof.</em> Varying the first term, <span
+class="math display">\[\delta\big(D_\nu G_{\nu\mu}\big)
+=D_\nu\big(D_\nu\delta B_\mu-D_\mu\delta B_\nu\big)+\big[\delta
+B_\nu,G_{\nu\mu}\big]
+=D^2\delta B_\mu-D_\nu D_\mu\delta B_\nu+\big[\delta
+B_\nu,G_{\nu\mu}\big],\]</span> and <span class="math inline">\(D_\nu
+D_\mu\delta B_\nu=D_\mu D_\nu\delta B_\nu+[G_{\nu\mu},\delta
+B_\nu]\)</span>. Varying the gauge term gives <span
+class="math inline">\(D_\mu D_\nu\delta B_\nu\)</span> to the same
+order, which cancels the second piece, leaving <span
+class="math inline">\(D^2\delta B_\mu-2[G_{\nu\mu},\delta
+B_\nu]=D^2\delta B_\mu+2[G_{\mu\nu},\delta B_\nu]\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>So <span class="math inline">\(D\Phi_t\)</span> is the solution
+kernel of a covariant heat equation with a zeroth-order term given by
+the curvature acting in the adjoint representation.</p>
+<h2 id="the-gaussian-bound">2. The Gaussian bound</h2>
+<p><strong>Proposition 2.</strong> Let <span
+class="math inline">\(\|G\|_\infty=\sup_{0\le s\le t,\
+x}\|G(s,x)\|\)</span> in the adjoint operator norm. Then the kernel of
+the linearized flow obeys <span
+class="math display">\[\big|D\Phi_t(x,y)\big|\ \le\
+e^{2t\|G\|_\infty}\,K^{\rm free}_t(x-y),
+\qquad K^{\rm free}_t(z)=\frac{e^{-|z|^2/(4t)}}{(4\pi t)^{3/2}}
+.\]</span></p>
+<p><em>Proof.</em> Write the equation as <span
+class="math inline">\(\partial_s u=D^2u+Mu\)</span> with <span
+class="math inline">\((Mu)_\mu=2[G_{\mu\nu},u_\nu]\)</span>, a
+multiplication operator of norm at most <span
+class="math inline">\(2\|G\|_\infty\)</span>. Duhamel gives <span
+class="math inline">\(u(t)=e^{tD^2}u(0)+\int_0^t
+e^{(t-s)D^2}Mu(s)\,ds\)</span>, and iterating, <span
+class="math inline">\(\|u(t)\|\le\sum_n\frac{(2t\|G\|_\infty)^n}{n!}\sup\|e^{\cdot
+D^2}\|\)</span>-type bounds; pointwise, Kato’s inequality gives <span
+class="math inline">\(|e^{sD^2}f|\le e^{s\Delta}|f|\)</span> for the
+covariant Laplacian in any representation (Simon, J. Funct. Anal. 32
+(1979) 97, metadata level), so each term is dominated by the free heat
+kernel and the series sums to <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The bound is saturated in the free case, where <span
+class="math inline">\(G=0\)</span> and <span
+class="math inline">\(D\Phi_t=e^{t\Delta}\)</span> exactly, in agreement
+with <a href="flowed-bound-free-field.html">the free-field note</a>
+§2.</p>
+<h2 id="the-truncation-error">3. The truncation error</h2>
+<p>The conjugated kinetic operator of <a
+href="flow-conjugation-truncation.html">the flow-conjugation note</a> §2
+is built from <span class="math inline">\(D\Phi_t\)</span>, which
+couples links at separation <span class="math inline">\(|x-y|\)</span>
+with weight bounded by Proposition 2. Truncating it to range <span
+class="math inline">\(R\)</span> discards the tail <span
+class="math inline">\(|x-y|&gt;R\)</span>, whose weight relative to the
+whole is <span class="math display">\[\varepsilon(R,t)\ \le\
+e^{2t\|G\|_\infty}\int_{|z|&gt;R}K^{\rm free}_t(z)\,d^3z
+\ \le\ C\,e^{2t\|G\|_\infty}\,e^{-R^2/(4t)}\Big(1+\frac{R}{\sqrt
+t}\Big),\]</span> by the standard Gaussian tail estimate. With the
+natural choice <span class="math inline">\(R=\sqrt{8t}\)</span>, the
+exponent is <span class="math inline">\(2t\|G\|_\infty-2\)</span>,
+so</p>
+<p><strong>Corollary 3.</strong> The flow-truncation step at scale <span
+class="math inline">\(\sqrt{8t}\)</span> has relative error <span
+class="math display">\[\varepsilon\ \lesssim\
+\exp\big[2t\|G\|_\infty-2\big],\]</span> small when <span
+class="math inline">\(t\|G\|_\infty\lesssim1\)</span> and exponentially
+large otherwise. Taking <span
+class="math inline">\(R=\kappa\sqrt{8t}\)</span> improves the exponent
+to <span class="math inline">\(2t\|G\|_\infty-2\kappa^2\)</span> at the
+cost of a longer-range effective Hamiltonian, so a fixed accuracy is
+available whenever <span class="math inline">\(\kappa^2\gtrsim
+t\|G\|_\infty\)</span>.</p>
+<h2 id="what-the-condition-says">4. What the condition says</h2>
+<p>Write <span class="math inline">\(\ell=\sqrt{8t}\)</span> for the
+scale being integrated out. The condition <span
+class="math inline">\(t\|G\|_\infty\lesssim1\)</span> reads <span
+class="math display">\[\|G\|_\infty\ \lesssim\
+\frac{8}{\ell^2},\]</span> that is, the field strength must be below the
+inverse square of the scale. In the units of <a
+href="mass-gap-obligations-lattice.html">the obligations map</a> the
+lattice field strength at spacing <span class="math inline">\(a\)</span>
+is at most of order <span class="math inline">\(1/a^2\)</span>, so at
+the first step, <span class="math inline">\(\ell\sim a\)</span>, the
+condition is marginal; after the field has been smoothed over <span
+class="math inline">\(\ell\gg a\)</span> the typical <span
+class="math inline">\(\|G\|\)</span> falls and the condition is
+comfortable on smooth configurations and violated on rough ones.</p>
+<p>This is the small-field condition of constructive renormalization
+group, obtained here as the condition for the flow truncation to be
+accurate, and it identifies the difficulty by name:</p>
+<ul>
+<li>on <strong>small-field</strong> configurations, <span
+class="math inline">\(\|G\|_\infty\le\eta/\ell^2\)</span> with <span
+class="math inline">\(\eta\)</span> small, the truncation error is <span
+class="math inline">\(e^{-2\kappa^2+2\eta}\)</span> and every step of
+the route of <a href="flow-conjugation-truncation.html">the
+flow-conjugation note</a> §6 is controlled;</li>
+<li>on <strong>large-field</strong> configurations the Jacobian bound
+degrades like <span class="math inline">\(e^{2t\|G\|_\infty}\)</span>
+and no truncation of this kind is available, so those regions must be
+handled by a different argument.</li>
+</ul>
+<p>The split is exactly the one Balaban’s programme makes (Commun. Math.
+Phys. 122 (1989) 355 and the accompanying series, metadata level), and
+the derivation above says why it is forced rather than chosen.</p>
+<h2 id="what-the-flow-itself-controls-and-what-it-leaves">5. What the
+flow itself controls, and what it leaves</h2>
+<p>The flow decreases the action monotonically, <span
+class="math inline">\(\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\le0\)</span> (<a
+href="comparison-and-bridges.html">comparison note</a> §4), so <span
+class="math display">\[\int|G(t,x)|^2\,d^3x\ \le\
+\int|G(0,x)|^2\,d^3x\]</span> for all <span
+class="math inline">\(t\)</span>: an <span
+class="math inline">\(L^2\)</span> bound, uniform in the flow time.
+Proposition 2 needs an <span class="math inline">\(L^\infty\)</span>
+bound, and the gap between them is the whole question. Two remarks fix
+its size.</p>
+<p><em>The free case is a parabolic smoothing estimate.</em> For <span
+class="math inline">\(G=0\)</span> the linearized flow is the heat
+semigroup and <span
+class="math inline">\(\|e^{t\Delta}f\|_\infty\le(4\pi
+t)^{-3/4}\|f\|_2\)</span>, so an <span
+class="math inline">\(L^2\)</span> bound on the initial curvature gives
+<span class="math inline">\(\|G(t)\|_\infty\lesssim
+t^{-3/4}\|G(0)\|_2\)</span>, which beats the required <span
+class="math inline">\(1/t\)</span> for large <span
+class="math inline">\(t\)</span> and fails for small <span
+class="math inline">\(t\)</span>. The interacting statement of this type
+is the a priori estimate that a construction must supply.</p>
+<p><em>Monotonicity is not enough by itself.</em> An <span
+class="math inline">\(L^2\)</span> bound permits a configuration with
+curvature concentrated on a small region at arbitrary height, which is
+precisely a large-field region; excluding it is a statement about the
+measure in the Euclidean formulation and about the state in the
+Hamiltonian one. In the Hamiltonian framework there is no integration
+over configurations to absorb such regions into a small probability,
+which makes the Hamiltonian route harder at exactly this point than the
+Euclidean one.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The truncation error of a flow-based renormalization step is now
+explicit: Gaussian in the ratio of the truncation range to the flow
+radius, multiplied by <span
+class="math inline">\(e^{2t\|G\|_\infty}\)</span>. The step is
+controlled exactly on configurations with <span
+class="math inline">\(\|G\|_\infty\lesssim\ell^{-2}\)</span>, which
+derives the small-field condition instead of assuming it. The missing
+estimate is pointwise control of the flowed field strength, an <span
+class="math inline">\(L^\infty\)</span> bound where the flow supplies
+only <span class="math inline">\(L^2\)</span>, and in the Hamiltonian
+framework there is no probabilistic route around it. That is the
+sharpest statement of the remaining obstacle this programme has reached,
+and it points at the Euclidean formulation as the place where the
+large-field regions can be given small weight.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stabilizing a topological radius exposes an action coefficient</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Stabilizing a topological radius exposes an action coefficient</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/stabilized-topology-action-scale.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/stabilized-topology-action-scale.pdf">PDF</a></p><p>A quadratic/quartic field energy has a finite preferred scale within
+an explicit degree-one family. Its energy-times-radius divided by wave
+speed is proportional to the quartic coefficient divided by that speed.
+Scaling both field coefficients leaves the classical dynamics unchanged
+while scaling this action. Size stabilization succeeds; absolute action
+normalization remains an independent input.</p>
+<p>Status: Q05 exploratory derivation, not an accepted-ledger claim.
+Independent review and a bounded librarian comparison precede any
+promotion. The scale minimum below is a trial-family result, not a proof
+of a full field minimizer.</p>
+<h2 id="field-sector-and-kinetic-term">1. Field, sector and kinetic
+term</h2>
+<p>Let <span class="math inline">\(n:\mathbb R^3\to S^3\subset\mathbb
+R^4\)</span> be smooth, approach a fixed point at spatial infinity, and
+have finite energy</p>
+<p><span class="math display">\[E[n]=\int\left[a\sum_i|\partial_i n|^2+
+b\sum_{i&lt;j}\left(|\partial_i n|^2|\partial_j n|^2
+-(\partial_i n\cdot\partial_j n)^2\right)\right]d^3x.
+\tag{1}\]</span></p>
+<p>Here <span class="math inline">\(a&gt;0\)</span> has units
+energy/length, <span class="math inline">\(b&gt;0\)</span> has units
+energy times length, and <span class="math inline">\(c&gt;0\)</span> has
+speed units. Compactifying the domain defines the integer degree <span
+class="math inline">\(N\)</span>. This is the massless Skyrme-type
+quadratic/quartic construction written in real sphere coordinates; its
+standard ingredients have prior art.</p>
+<p>To specify physical time, choose the conservative Lagrangian</p>
+<p><span class="math display">\[L=\int\left[\frac{a}{c^2}|\dot n|^2+
+\frac{b}{c^2}\sum_i\left(|\dot n|^2|\partial_i n|^2
+-(\dot n\cdot\partial_i n)^2\right)\right]d^3x-E[n].
+\tag{2}\]</span></p>
+<p>The velocity quadratic form is positive. This is the usual
+Lorentz-invariant quadratic/quartic completion, with coordinate <span
+class="math inline">\(x^0=ct\)</span>; all equations here use physical
+time <span class="math inline">\(t\)</span>. We require smooth solutions
+where they exist. This specification supplies neither global nonlinear
+well-posedness nor a hard speed theorem for arbitrary backgrounds.</p>
+<p>For completeness, if <span
+class="math inline">\(\lambda_i\ge0\)</span> are the singular values of
+<span class="math inline">\(dn\)</span>, the static density is <span
+class="math inline">\(a\sum_i\lambda_i^2+b\sum_{i&lt;j}\lambda_i^2\lambda_j^2\)</span>.
+Pairing <span class="math inline">\(a\lambda_i^2\)</span> with <span
+class="math inline">\(b\lambda_j^2\lambda_k^2\)</span> and applying the
+arithmetic-geometric mean inequality gives density at least <span
+class="math inline">\(6\sqrt{ab}\lambda_1\lambda_2\lambda_3\)</span>.
+Since the unit three-sphere has volume <span
+class="math inline">\(2\pi^2\)</span>, integration yields the standard
+degree estimate</p>
+<p><span class="math display">\[E\ge12\pi^2\sqrt{ab}\,|N|.
+\tag{3}\]</span></p>
+<p>The absolute Jacobian integral bounds the absolute degree even when
+local orientations vary. A positive sector energy is distinct from a
+vacuum excitation gap or an action bound.</p>
+<h2 id="an-explicit-size-test">2. An explicit size test</h2>
+<p>Write <span class="math inline">\(y=x/R\)</span>, <span
+class="math inline">\(r=|y|\)</span>, and use the inverse stereographic
+profile</p>
+<p><span
+class="math display">\[n_R(x)=\frac{(2y_1,2y_2,2y_3,r^2-1)}{1+r^2},\qquad
+R&gt;0.\]</span></p>
+<p>It has <span class="math inline">\(|N|=1\)</span>, and <span
+class="math inline">\(R\)</span> is the sphere’s equator radius in the
+domain. All three dimensionless singular values are <span
+class="math inline">\(2/(1+r^2)\)</span>. Thus</p>
+<p><span
+class="math display">\[A=48\pi\int_0^\infty\frac{r^2\,dr}{(1+r^2)^2}=12\pi^2,
+\qquad
+B=192\pi\int_0^\infty\frac{r^2\,dr}{(1+r^2)^4}=6\pi^2.\]</span></p>
+<p>The integrals follow directly from <span class="math inline">\(r=\tan
+u\)</span>, <span class="math inline">\(0&lt;u&lt;\pi/2\)</span>.
+Spatial scaling gives</p>
+<p><span class="math display">\[E(R)=aAR+\frac{bB}{R},\qquad
+R_* =\sqrt{\frac{bB}{aA}}=\sqrt{\frac{b}{2a}},\qquad
+E(R_*)=12\sqrt2\pi^2\sqrt{ab}. \tag{4}\]</span></p>
+<p>Unlike Q04, shrinking this family sends its energy to infinity.
+Expansion also costs energy. This proves a unique minimum along its
+scale direction, with positive second derivative <span
+class="math inline">\(2bB/R^3\)</span>. General shape perturbations
+remain outside this one-parameter test. In particular, <span
+class="math inline">\(n_{R_*}\)</span> is a trial field, not asserted to
+solve the static Euler–Lagrange equation.</p>
+<h2 id="where-the-action-enters">3. Where the action enters</h2>
+<p>Define the same type of diagnostic as Q04: evaluate the magnitude of
+static Lagrangian action over the profile’s crossing duration <span
+class="math inline">\(T_R=R/c\)</span>,</p>
+<p><span class="math display">\[\mathcal A_R=E(R)R/c=(aAR^2+bB)/c.
+\tag{5}\]</span></p>
+<p>For off-shell static trial fields this is a functional diagnostic,
+not an on-shell trajectory action. It has infimum <span
+class="math inline">\(6\pi^2 b/c\)</span> within this family; at its
+energy-optimal scale it equals</p>
+<p><span class="math display">\[\mathcal A_{R_*}=12\pi^2 b/c.
+\tag{6}\]</span></p>
+<p>The product <span class="math inline">\(b/c\)</span> already has
+action units. More generally, setting <span class="math inline">\(x=\ell
+y\)</span>, <span class="math inline">\(t=\ell s/c\)</span> with <span
+class="math inline">\(\ell=\sqrt{b/a}\)</span> writes the full action
+as</p>
+<p><span class="math display">\[S=\frac{b}{c}\,\widetilde S[n],
+\tag{7}\]</span></p>
+<p>where the dimensionless functional has unit quadratic and quartic
+coefficients. This includes the time-derivative terms, not just static
+energy. It identifies exactly which normalization a proposed quantum
+phase would use.</p>
+<p>There is also an exact countertest. Replace <span
+class="math inline">\((a,b)\)</span> by <span
+class="math inline">\((\eta a,\eta b)\)</span>, <span
+class="math inline">\(\eta&gt;0\)</span>. The length <span
+class="math inline">\(\ell\)</span>, field equations, degree, and
+characteristic vacuum speed remain unchanged. Energies and actions
+multiply by <span class="math inline">\(\eta\)</span>. Every positive
+<span class="math inline">\(\eta\)</span> defines a nondegenerate model,
+and actions tend to zero as <span
+class="math inline">\(\eta\downarrow0\)</span>. No claim about dynamics
+at the degenerate endpoint is needed. This varies the physical
+stiffnesses; it does not deny fixed-coefficient sector bounds. It shows
+that field equations and topology alone do not fix their common
+mechanical normalization.</p>
+<h2 id="physical-spectrum-and-next-decision">4. Physical spectrum and
+next decision</h2>
+<p>Near a constant vacuum, write <span
+class="math inline">\(n=(\pi,\sqrt{1-|\pi|^2})\)</span>. To quadratic
+order,</p>
+<p><span
+class="math display">\[L^{(2)}=a\int[c^{-2}|\dot\pi|^2-|\nabla\pi|^2]d^3x,
+\qquad \Omega(k)=c|k|.\]</span></p>
+<p>The quartic term has no quadratic vacuum contribution. On infinite
+space there are arbitrarily low frequencies. Fixing a nonzero
+topological sector and stabilizing its radius therefore leaves this
+vacuum spectrum gapless. It also supplies no mechanism forcing a
+trajectory to carry nonzero degree.</p>
+<p>Retain gradient competition as a conservative size-exclusion
+mechanism. Its action coefficient is explicit, while the vacuum-gap
+question remains separate. After two topology steps, park further
+adjustable stabilizers. The next physical test should couple sectors
+that initially have independent normalizations: determine whether
+reciprocal energy exchange can constrain their ratio and whether one
+overall action normalization survives. This can turn the
+common-normalization obstruction into a concrete composition test,
+rather than adding another term whose coefficient contains the
+answer.</p>
+<h2 id="source-boundary">Source boundary</h2>
+<p>The discovery lead is <em>Topological energy bounds in generalized
+Skyrme models</em>, <a
+href="https://arxiv.org/abs/1311.2939">arXiv:1311.2939</a>, <a
+href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.89.065010">publisher
+abstract</a>. Coverage here is the publisher/search abstract only: it
+identifies opposite Derrick scaling and topological bounds as
+established ingredients. Full-text formula matching and independent
+review are pending, not silently imported. The normalization, trial
+integrals, kinetic expansion and action comparison above are written
+calculations. No computational verification scripts were used.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

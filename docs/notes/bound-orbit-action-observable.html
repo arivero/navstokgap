@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bound motion: transport variance and a canonical action estimator</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Bound motion: transport variance and a canonical action estimator</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/bound-orbit-action-observable.md">Markdown source</a></p><p>A phase-uniform circular orbit has vanishing short- and long-window
+transport response, while twice its projected canonical covariance area
+equals its orbital action at every time. This supplies an action
+estimator for bound mechanics and separates conservation of a prepared
+scale from its selection. A15, 2026-09-09; C054–C055, written proof and
+sequential B29 source review.</p>
+<h2 id="one-orbit-one-preparation">1. One orbit, one preparation</h2>
+<p>Take any circular solution of the planar external-potential
+Hamiltonian <span
+class="math inline">\(H=\sqrt{m^2c^4+c^2|p|^2}+V(|q|)\)</span> with
+radius <span class="math inline">\(R&gt;0\)</span>, momentum magnitude
+<span class="math inline">\(P&gt;0\)</span> and positive angular
+frequency <span class="math inline">\(\omega\)</span>. Put</p>
+<p><span class="math display">\[
+q(t)=R(\cos\theta,\sin\theta),\quad
+p(t)=P(-\sin\theta,\cos\theta),\quad
+\theta=\omega t+\Phi,\quad \Phi\sim\operatorname{Unif}[0,2\pi).
+\]</span></p>
+<p>Hamilton’s velocity law gives <span class="math inline">\(P=\gamma
+mR\omega\)</span>, where <span
+class="math inline">\(\gamma=(1-R^2\omega^2/c^2)^{-1/2}\)</span>. The
+normalized orbital action is <span
+class="math inline">\(\ell=(2\pi)^{-1}\oint p\cdot dq=RP\)</span>. Use
+the canonical Cartesian projection <span
+class="math inline">\(x=q_1\)</span>, <span
+class="math inline">\(p_x=p_1\)</span>; the physical coordinate is
+bounded and the preparation is invariant. For the singular Kepler
+circles C052 gives <span class="math inline">\(\ell&gt;k/c\)</span>;
+C053 supplies softened circles with arbitrarily small positive <span
+class="math inline">\(\ell\)</span>. Newtonian circles obey the same
+formulas with <span class="math inline">\(P=mR\omega\)</span> and <span
+class="math inline">\(\gamma=1\)</span>.</p>
+<h2 id="what-a-finite-observation-window-measures">2. What a finite
+observation window measures</h2>
+<p>Let <span class="math inline">\(z=\omega\Delta&gt;0\)</span>.
+Uniform-phase trigonometric averaging gives <span
+class="math inline">\(\mathbb E[x(t)x(t+\Delta)]=(R^2/2)\cos z\)</span>.
+Consequently</p>
+<p><span class="math display">\[
+\mathsf h_x(\Delta)
+=\frac{m}{\Delta}\operatorname{Var}(x(t+\Delta)-x(t))
+=\frac{mR^2}{\Delta}(1-\cos z)
+=\frac{\ell}{\gamma}\frac{1-\cos z}{z}.
+\]</span></p>
+<p>At a known initial position <span
+class="math inline">\(x\in(-R,R)\)</span>, the two velocity signs have
+equal conditional weights. Their next positions are <span
+class="math inline">\(x\cos z\pm\sqrt{R^2-x^2}\sin z\)</span>. This
+specifies the conditional version, with the continuous degenerate
+extension at the endpoints, and gives</p>
+<p><span class="math display">\[
+\operatorname{Var}(x(t+\Delta)\mid x(t)=x)
+=(R^2-x^2)\sin^2z.
+\]</span></p>
+<p>Its phase-averaged action coefficient is <span
+class="math inline">\(\overline{\mathsf h}_{\rm
+cond}=\ell\sin^2z/(2\gamma z)\)</span>. Conditioning on the full
+canonical state makes the future deterministic. The conditional variance
+here measures the unobserved direction at a cut.</p>
+<p>Both coefficients vanish as <span
+class="math inline">\(\Delta\downarrow0\)</span> and as <span
+class="math inline">\(\Delta\to\infty\)</span>. There is no
+parametrically broad positive plateau of orbital-action size in this
+one-frequency family. Indeed <span class="math inline">\(1-\cos
+z\le\min(z^2/2,2)\)</span>, so <span class="math inline">\(\mathsf
+h_x\ge\eta\ell\)</span> for fixed <span
+class="math inline">\(\eta&gt;0\)</span> requires</p>
+<p><span class="math display">\[2\gamma\eta\le
+z\le\frac{2}{\gamma\eta}.\]</span></p>
+<p>Every interval satisfying this lower bound therefore has endpoint
+ratio at most <span class="math inline">\(1/(\gamma^2\eta^2)\)</span>.
+The statement keeps the positive fraction <span
+class="math inline">\(\eta\)</span> fixed; a broad intermediate plateau
+in another model requires additional time scales and a separate
+estimate.</p>
+<h2 id="a-canonical-covariance-area">3. A canonical covariance area</h2>
+<p>For <span class="math inline">\(Z=(x,p_x)\)</span> define the
+centered covariance matrix <span class="math inline">\(\Sigma\)</span>
+and</p>
+<p><span class="math display">\[
+\mathcal A_{\rm cov}=2\sqrt{\det\Sigma}.
+\]</span></p>
+<p>Uniform phase yields <span
+class="math inline">\(\operatorname{Var}x=R^2/2\)</span>, <span
+class="math inline">\(\operatorname{Var}p_x=P^2/2\)</span> and <span
+class="math inline">\(\operatorname{Cov}(x,p_x)=0\)</span>. Thus <span
+class="math inline">\(\mathcal A_{\rm cov}=RP=\ell\)</span>, with units
+of action. The factor two is chosen for this uniform orbit: the
+projected ellipse encloses area <span class="math inline">\(\pi
+RP\)</span>, half the full planar canonical orbit integral.</p>
+<p>For a linear canonical change <span
+class="math inline">\(Z&#39;=SZ+b\)</span>, <span
+class="math inline">\(\Sigma&#39;=S\Sigma S^T\)</span> and <span
+class="math inline">\(\det S=1\)</span>, hence <span
+class="math inline">\(\mathcal A_{\rm cov}\)</span> is unchanged. This
+invariance is for the selected canonical plane and affine symplectic
+maps; arbitrary nonlinear canonical transformations need a different
+argument. The determinant is the familiar rms-emittance construction;
+B29 audits that literature connection and the normalization.</p>
+<p>On this fixed circular family the projected evolution itself is
+linear:</p>
+<p><span class="math display">\[
+S_t=\begin{pmatrix}
+\cos\omega t &amp; (R/P)\sin\omega t\\
+-(P/R)\sin\omega t &amp; \cos\omega t
+\end{pmatrix},\qquad \det S_t=1.
+\]</span></p>
+<p>It preserves the determinant even for a nonuniform initial phase law.
+A point-phase preparation has determinant zero despite orbital action
+<span class="math inline">\(\ell&gt;0\)</span>. Uniform phase is
+sufficient for the equality with <span
+class="math inline">\(\ell\)</span>; other phase laws with the same
+first and second moments also give equality. The point-phase example
+shows the dependence on preparation. Hamiltonian phase rotation
+preserves the prepared estimator instead of attracting all preparations
+to a common value.</p>
+<h2 id="selection-consequence-and-next-test">4. Selection consequence
+and next test</h2>
+<p>For the uniform singular-Kepler circular family, <span
+class="math inline">\(\inf\mathcal A_{\rm cov}=k/c\)</span> by C052. For
+a fixed softened core it is zero by C053. The covariance estimator
+transfers the known admissibility threshold to an operational ensemble
+quantity, keeping its singular-core and preparation premises visible. It
+gives a constant-in-time classical action observable; the remaining
+selection problem is a physical mechanism fixing its value and its
+preparation across systems.</p>
+<p><a href="action-scale-dilation.html">A16</a> now proves the
+conditional dilation obstruction, including its effect on coupling and
+preparation. A17 tests a fixed potential and force ceiling. A future
+receiver extension of A15 would need two separated time scales before an
+intermediate-window plateau is proposed. The <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B29.md">B29
+audit</a> and coordinator review complete this single-orbit test.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

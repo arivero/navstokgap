@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>In three dimensions the mass gap is the positivity of one function at infinity</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>In three dimensions the mass gap is the positivity of one function at
+infinity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-dimensional-gap-one-function.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-dimensional-gap-one-function.pdf">PDF</a></p><p>For pure Yang–Mills in <span class="math inline">\(d=3\)</span> (two
+space dimensions) the coupling <span class="math inline">\(g^2\)</span>
+is itself a mass, so the finite-volume gap of the continuum theory on a
+periodic square torus of side <span class="math inline">\(L\)</span> has
+the exact form <span
+class="math display">\[\Delta(L)=g^2\hbar^2c\,f(x),\qquad x=g^2\hbar L\
+\text{(dimensionless)},\]</span> by dimensional analysis alone, and the
+Jaffe–Witten conjecture for <span class="math inline">\(d=3\)</span> is
+the single statement <span
+class="math display">\[\lim_{x\to\infty}f(x)=C\in(0,\infty),\qquad
+m=C\,g^2\hbar^2/c .\]</span> The small-<span
+class="math inline">\(x\)</span> end of <span
+class="math inline">\(f\)</span> is known from the constant-mode sector:
+with two spatial components the zero-mode Hamiltonian is C133 with <span
+class="math inline">\(D=2\)</span>, <span class="math inline">\(m_{\rm
+eff}=L^2/(g^2c)\)</span> and <span
+class="math inline">\(g_B^2=L^2c/g^2\)</span>, giving <span
+class="math inline">\(\Delta_0(L)=\delta_1^{(2)}\,g^2\hbar^2c\,x^{-2/3}\)</span>,
+that is <span
+class="math inline">\(f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]\)</span> as
+<span class="math inline">\(x\to0\)</span>. On the lattice, the
+strong-coupling theorem of <a
+href="strong-coupling-uniform-gap.html">the previous note</a> with <span
+class="math inline">\(\nu=2\)</span> gives a gap <span
+class="math inline">\(\ge\gamma_2(g_{\rm lat}^2/2)C_2\hbar c/a\)</span>
+uniform in the lattice size, and the continuum limit is the statement
+that <span class="math inline">\(\delta_\infty(g_{\rm lat})/g_{\rm
+lat}^2\)</span> stays bounded below as <span
+class="math inline">\(g_{\rm lat}^2=g^2\hbar a\to0\)</span>: the
+gap-to-coupling ratio is bounded below at both ends of the coupling
+axis, and the conjecture is its positivity in between. Contrast <span
+class="math inline">\(d=4\)</span>, where the ratio must pass from a
+power law <span class="math inline">\(\propto g^2\)</span> at strong
+coupling to the essential singularity <span
+class="math inline">\(e^{-1/(2b_0g^2)}\)</span> at weak coupling. The
+three-dimensional problem is therefore the natural first target: it has
+no transmutation, a single scaling variable, and both ends of <span
+class="math inline">\(f\)</span> in hand. The expected value <span
+class="math inline">\(C=N/(2\pi)\)</span> (Karabali–Nair, physics
+argument; metadata, B78) is a prediction to be proved, not an input.
+Nothing here is promoted.</p>
+<h2 id="units-and-the-one-variable-form">1. Units and the one-variable
+form</h2>
+<p>With <span class="math inline">\(S=\frac1{4g^2}\int
+F^a_{\mu\nu}F^{a\mu\nu}\,d^3x\)</span> and the quantization <span
+class="math inline">\(e^{iS/\hbar}\)</span>, the dimensional census of
+<a href="low-dimensional-mass-gap.html">G07</a> §4 gives <span
+class="math inline">\([1/g^2]=\)</span> action<span
+class="math inline">\(\cdot\)</span>length in <span
+class="math inline">\(d=3\)</span>, so <span
+class="math inline">\(g^2\hbar=1/\ell_g\)</span> is an inverse length,
+<span class="math inline">\(\mu:=g^2\hbar^2/c=\hbar/(c\ell_g)\)</span>
+is a mass, and <span class="math inline">\(\varepsilon_3:=\mu
+c^2=g^2\hbar^2c\)</span> is the unique energy formed from <span
+class="math inline">\((\hbar,c,g)\)</span>. The continuum theory on the
+periodic torus <span class="math inline">\(T^2_L\times\mathbb R\)</span>
+has the fixed constants <span class="math inline">\(\hbar\)</span>,
+<span class="math inline">\(c\)</span>, <span
+class="math inline">\(g\)</span> and the box size <span
+class="math inline">\(L\)</span>, and a gap <span
+class="math inline">\(\Delta(L)\)</span>, when the finite-volume theory
+exists, depends on them only. By the floor/unit theorem C131 applied to
+the observable “energy”, <span class="math inline">\(\Delta(L)\)</span>
+is <span class="math inline">\(\varepsilon_3\)</span> times a function
+of the single dimensionless combination <span
+class="math inline">\(x=L/\ell_g=g^2\hbar L\)</span>, because <span
+class="math inline">\((\hbar,c,g)\)</span> span exactly one energy and
+<span class="math inline">\(L\)</span> adds exactly one dimensionless
+ratio. Setting <span
+class="math inline">\(f(x)=\Delta(L)/\varepsilon_3\)</span>: <span
+class="math display">\[\Delta(L)=\varepsilon_3\,f(x),\qquad\varepsilon_3=g^2\hbar^2c,\qquad
+x=g^2\hbar L .\]</span> The infinite-volume gap, if it exists, is <span
+class="math inline">\(m c^2=\varepsilon_3\lim_{x\to\infty}f(x)\)</span>,
+and Jaffe–Witten’s <span class="math inline">\(0&lt;m&lt;\infty\)</span>
+is <span class="math inline">\(0&lt;\lim f&lt;\infty\)</span>.
+Vacuum-energy renormalization, the only ultraviolet divergence of the
+superrenormalizable theory relevant here, shifts <span
+class="math inline">\(E_0\)</span> and <span
+class="math inline">\(E_1\)</span> equally and leaves <span
+class="math inline">\(f\)</span> untouched.</p>
+<h2 id="the-small-x-end-from-the-constant-modes">2. The small-<span
+class="math inline">\(x\)</span> end from the constant modes</h2>
+<p>Temporal gauge on <span class="math inline">\(T^2_L\)</span> leaves
+two constant spatial components <span
+class="math inline">\(a_1,a_2\)</span> in the Lie algebra. With <span
+class="math inline">\(S=\frac1{4g^2}\int
+F^a_{\mu\nu}F^{a\mu\nu}d^2x\,c\,dt\)</span>, <span
+class="math inline">\(F_{0i}=c^{-1}\dot a_i\)</span> and <span
+class="math inline">\(F_{12}=\vec a_1\times\vec a_2\)</span>, the
+constant-mode Lagrangian is <span
+class="math inline">\(\frac{L^2}{2g^2c}|\dot{\vec
+a}|^2-\frac{L^2c}{2g^2}|\vec a_1\times\vec a_2|^2\)</span> and <span
+class="math display">\[H_0=\frac{g^2c}{2L^2}\sum_{i=1}^2|\vec
+p_i|^2+\frac{L^2c}{2g^2}\,|\vec a_1\times\vec a_2|^2,
+\qquad[a_i^a,p_j^b]=i\hbar\delta_{ij}\delta^{ab},\]</span> which is C133
+with <span class="math inline">\(D=2\)</span>, <span
+class="math inline">\(m_{\rm eff}=L^2/(g^2c)\)</span> and <span
+class="math inline">\(g_B^2=L^2c/g^2\)</span>; <span
+class="math inline">\(\hbar\)</span> enters only through <span
+class="math inline">\(g^2\)</span> and the commutator. Its energy unit
+is <span class="math display">\[\varepsilon=\hbar^{4/3}g_B^{2/3}m_{\rm
+eff}^{-2/3}
+=\hbar^{4/3}\Big(\frac{L^2c}{g^2}\Big)^{1/3}\Big(\frac{L^2}{g^2c}\Big)^{-2/3}
+=\hbar^{4/3}c\,g^{2/3}L^{-2/3}
+=\frac{\hbar c}{L}\Big(\frac{L}{\ell_g}\Big)^{1/3}
+=\varepsilon_3\,x^{-2/3},\]</span> using <span
+class="math inline">\(g^{2/3}\hbar^{1/3}=\ell_g^{-1/3}\)</span> and
+<span class="math inline">\(\hbar c/L=\varepsilon_3/x\)</span>. So the
+constant-mode gap is <span
+class="math inline">\(\Delta_0(L)=\delta_1^{(2)}\varepsilon_3x^{-2/3}\)</span>
+with <span class="math inline">\(\delta_1^{(2)}&gt;0\)</span> the pure
+number of C133 for <span class="math inline">\(D=2\)</span>, and <span
+class="math display">\[f(x)=\delta_1^{(2)}\,x^{-2/3}\,[1+o(1)],\qquad
+x\to0,\]</span> where <span class="math inline">\(o(1)\)</span> stands
+for the coupling to the nonzero momentum modes, controlled
+perturbatively by the small-volume expansion in the same way as in <span
+class="math inline">\(d=4\)</span> (Lüscher’s method; the <span
+class="math inline">\(d=3\)</span> expansion parameter is <span
+class="math inline">\(x^{1/3}\)</span> rather than <span
+class="math inline">\(g^{2/3}\)</span>, since <span
+class="math inline">\(x\)</span> is the only parameter). The claim <span
+class="math inline">\(f\to\infty\)</span> as <span
+class="math inline">\(x\to0\)</span> is the statement that the small box
+is gapped with a gap growing like <span
+class="math inline">\(L^{-2/3}\)</span>, slower than the <span
+class="math inline">\(1/L\)</span> of a free particle in a box: the
+zero-point mechanism of <a
+href="action-floor-yang-mills-gap.html">G08</a> gives a softer
+confinement than a hard wall.</p>
+<h2 id="the-lattice-route-in-d3-and-the-strong-coupling-end">3. The
+lattice route in <span class="math inline">\(d=3\)</span> and the
+strong-coupling end</h2>
+<p>On the periodic square lattice <span class="math inline">\((a\mathbb
+Z/N_sa\mathbb Z)^2\)</span> the Kogut–Susskind Hamiltonian is <span
+class="math display">\[H=\frac{\hbar c}{a}\Big[\frac{g_{\rm
+lat}^2}{2}\sum_\ell(-\Delta_\ell)
++\frac{2}{g_{\rm
+lat}^2}\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\Big],
+\qquad g_{\rm lat}^2=g^2\hbar a=\frac a{\ell_g},\]</span> with <span
+class="math inline">\(g_{\rm lat}\)</span> dimensionless. Theorem 1 of
+<a href="mass-gap-obligations-lattice.html">the obligations map</a>
+holds verbatim in two dimensions: <span
+class="math inline">\(\Delta_{a,L}=(\hbar c/a)\,\delta(g_{\rm
+lat};N_s,G)&gt;0\)</span> with a unique physical ground state. The
+strong-coupling theorem holds with <span
+class="math inline">\(\nu=2\)</span>, <span
+class="math inline">\(\Lambda_0=\{0,1\}^2\)</span>, two links and one
+plaquette per site: <span class="math display">\[\beta=\frac{4}{g_{\rm
+lat}^4C_2}\cdot2N=\frac{16N^2}{g_{\rm lat}^4(N^2-1)},\qquad
+\Delta_{a,L}\ge\gamma_2\,\frac{g_{\rm lat}^2}{2}\,C_2\,\frac{\hbar
+c}{a},\]</span> for <span class="math inline">\(g_{\rm lat}\ge
+g_0^{(2)}(N)=\big(16N^2/[(N^2-1)\beta_*(2,\{0,1\}^2)]\big)^{1/4}\)</span>,
+uniformly in <span class="math inline">\(N_s\)</span>, by the same
+hypothesis check.</p>
+<p>The continuum limit is <span class="math inline">\(a\to0\)</span> at
+fixed <span class="math inline">\(g^2\)</span>, <span
+class="math inline">\(L\)</span>, that is <span
+class="math inline">\(g_{\rm lat}^2\to0\)</span> with <span
+class="math inline">\(N_s=L/a\)</span> and <span
+class="math inline">\(x=g^2\hbar L=g_{\rm lat}^2N_s\)</span> fixed. The
+lattice gap in units of <span
+class="math inline">\(\varepsilon_3\)</span> is <span
+class="math display">\[\frac{\Delta_{a,L}}{\varepsilon_3}=\frac{\hbar
+c}{a\,g^2\hbar^2c}\,\delta
+=\frac{\delta(g_{\rm lat};N_s,G)}{g_{\rm lat}^2},\]</span> so the
+continuum finite-volume gap exists iff <span
+class="math inline">\(\delta(g_{\rm lat};x/g_{\rm lat}^2,G)/g_{\rm
+lat}^2\to f(x)\)</span> as <span class="math inline">\(g_{\rm
+lat}\to0\)</span>, and the infinite-volume mass is <span
+class="math display">\[\frac{mc^2}{\varepsilon_3}=\lim_{g_{\rm
+lat}\to0}\ \frac{\delta_\infty(g_{\rm lat})}{g_{\rm lat}^2},
+\qquad\delta_\infty(g_{\rm lat})=\liminf_{N_s\to\infty}\delta(g_{\rm
+lat};N_s,G).\]</span> At strong coupling the same ratio is bounded below
+by <span class="math inline">\(\gamma_2C_2/2\)</span>. The <span
+class="math inline">\(d=3\)</span> conjecture on the lattice route is
+therefore:</p>
+<blockquote>
+<p><strong>T3<span class="math inline">\(_{(3)}\)</span>.</strong> The
+function <span class="math inline">\(c(g_{\rm lat})=\delta_\infty(g_{\rm
+lat})/g_{\rm lat}^2\)</span>, which satisfies <span
+class="math inline">\(c\ge\gamma_2C_2/2\)</span> for <span
+class="math inline">\(g_{\rm lat}\ge g_0^{(2)}\)</span>, stays bounded
+below by a positive constant for all <span class="math inline">\(g_{\rm
+lat}&gt;0\)</span> and has a finite limit <span
+class="math inline">\(C\)</span> as <span class="math inline">\(g_{\rm
+lat}\to0\)</span>.</p>
+</blockquote>
+<p><strong>The abelian contrast in <span
+class="math inline">\(d=3\)</span>.</strong> For compact <span
+class="math inline">\(U(1)\)</span> in three dimensions Göpfert and Mack
+(abstract, B78) prove a gap at every coupling, so T2<span
+class="math inline">\(&#39;\)</span> holds for the abelian group here,
+and their Debye mass <span
+class="math inline">\(m_D^2=(2\beta/a^3)e^{-\beta v(0)/2}\)</span>,
+<span class="math inline">\(\beta=4\pi^2/e^2_{\rm lat}\)</span>, makes
+<span class="math inline">\(c(g_{\rm lat})=\delta_\infty/g_{\rm
+lat}^2\)</span> vanish with an essential singularity as <span
+class="math inline">\(g_{\rm lat}\to0\)</span>: the continuum photon is
+massless. In <span class="math inline">\(d=3\)</span> the
+abelian/non-abelian distinction is therefore the limit of the ratio,
+zero against a positive <span class="math inline">\(C\)</span>, with
+positivity at each coupling shared by both. Everything in this note up
+to here is a collection of known facts in one normalization; the only
+statement of this programme’s own is the reduction to <span
+class="math inline">\(f\)</span> and its two ends.</p>
+<p>No exponential enters. In <span class="math inline">\(d=4\)</span>
+the corresponding ratio <span
+class="math inline">\(\delta_\infty(g)/g^2\)</span> is bounded below at
+strong coupling by the same theorem and must vanish like <span
+class="math inline">\(g^{-2}e^{-1/(2b_0g^2)}\)</span> at weak coupling;
+the two ends of the <span class="math inline">\(d=4\)</span> problem
+have different functional forms and the lattice gap must interpolate
+between them, which is what makes T3 in <span
+class="math inline">\(d=4\)</span> a transmutation statement. In <span
+class="math inline">\(d=3\)</span> both ends are linear in <span
+class="math inline">\(g_{\rm lat}^2\)</span>.</p>
+<h2 id="what-is-in-hand-and-what-is-not">4. What is in hand and what is
+not</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(d=3\)</span></th>
+<th><span class="math inline">\(d=4\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>scale of the gap</td>
+<td><span class="math inline">\(\varepsilon_3=g^2\hbar^2c\)</span>,
+classical constant</td>
+<td><span class="math inline">\(\hbar c\Lambda\)</span>, generated by
+transmutation</td>
+</tr>
+<tr class="even">
+<td>finite-volume gap</td>
+<td><span class="math inline">\(\varepsilon_3f(x)\)</span>, <span
+class="math inline">\(x=g^2\hbar L\)</span></td>
+<td><span class="math inline">\((\hbar c/L)\,z(L)\)</span> with <span
+class="math inline">\(g(L)\)</span> running</td>
+</tr>
+<tr class="odd">
+<td>small-volume end</td>
+<td><span
+class="math inline">\(f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]\)</span></td>
+<td><span
+class="math inline">\(z=\delta_1^{(3)}g(L)^{2/3}[1+O(g^{2/3})]\)</span></td>
+</tr>
+<tr class="even">
+<td>strong-coupling lattice end</td>
+<td><span class="math inline">\(\delta_\infty/g_{\rm
+lat}^2\ge\gamma_2C_2/2\)</span></td>
+<td><span
+class="math inline">\(\delta_\infty/g^2\ge\gamma_3C_2/2\)</span></td>
+</tr>
+<tr class="odd">
+<td>conjecture</td>
+<td><span class="math inline">\(\inf_{g_{\rm lat}}c(g_{\rm
+lat})&gt;0\)</span>, <span class="math inline">\(c\to C\)</span></td>
+<td><span class="math inline">\(\delta_\infty(g)/(a\Lambda_{\rm
+lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\)</span></td>
+</tr>
+<tr class="even">
+<td>expected constant</td>
+<td><span class="math inline">\(C=N/(2\pi)\)</span> (Karabali–Nair,
+physics)</td>
+<td>none in closed form</td>
+</tr>
+<tr class="odd">
+<td>existence</td>
+<td>finite volume by stochastic quantisation (Chevyrev review,
+passage-level companion in docs)</td>
+<td>finite-volume UV stability only</td>
+</tr>
+</tbody>
+</table>
+<p>Open in <span class="math inline">\(d=3\)</span>: (i) the
+infinite-volume limit of the finite-volume construction; (ii) any lower
+bound on <span class="math inline">\(f\)</span> away from the two ends;
+(iii) the identification of <span class="math inline">\(f\)</span>’s
+small-<span class="math inline">\(x\)</span> correction with the
+stochastic construction’s estimates. Item (ii) is the conjecture itself,
+and the one-variable form means that a single inequality <span
+class="math inline">\(f(x)\ge f_-&gt;0\)</span> for <span
+class="math inline">\(x\ge x_0\)</span>, proved for the continuum
+finite-volume theory, together with the existence of <span
+class="math inline">\(\lim f\)</span>, would settle the <span
+class="math inline">\(d=3\)</span> mass gap.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The <span class="math inline">\(d=3\)</span> target is now a
+statement about one function of one variable with both ends known: <span
+class="math inline">\(f(x)\sim\delta_1^{(2)}x^{-2/3}\)</span> at <span
+class="math inline">\(x\to0\)</span> and <span
+class="math inline">\(f\to C\)</span> conjectured at <span
+class="math inline">\(x\to\infty\)</span>, with the lattice ratio <span
+class="math inline">\(\delta_\infty/g_{\rm lat}^2\)</span> bounded below
+at strong coupling. It replaces the <span
+class="math inline">\(d=3\)</span> line of STATE. The next theorem-sized
+step in <span class="math inline">\(d=3\)</span> is a lower bound <span
+class="math inline">\(f(x)\ge f_-&gt;0\)</span> on an interval <span
+class="math inline">\(x\in[x_0,x_1]\)</span> beyond the small-volume
+expansion, for which the candidate tool is a variational or
+operator-inequality argument on the torus Hamiltonian that keeps the
+zero-point mechanism of the constant modes while controlling the nonzero
+modes by their Gaussian part, which is what the weak-coupling lattice
+bound of STATE step 3 is meant to prepare.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

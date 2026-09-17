@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A uniform relaxation gap with nearest-neighbour interactions</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A uniform relaxation gap with nearest-neighbour interactions</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/interacting-ising-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/interacting-ising-gap.pdf">PDF</a></p><p>For a periodic zero-field Ising heat-bath chain with per-site refresh
+rate <span class="math inline">\(a&gt;0\)</span> and dimensionless
+ferromagnetic coupling <span class="math inline">\(b\ge0\)</span>, the
+full relaxation gap is exactly <span
+class="math inline">\(a[1-\tanh(2b)]\)</span> for every <span
+class="math inline">\(N\ge3\)</span>. This replaces G02’s independence
+premise by a quantitative interaction contraction. Bounded <span
+class="math inline">\(b\)</span> and a positive per-site clock floor
+give a size-independent bound; finite interaction range alone does not
+control joint size/coupling limits.</p>
+<p>The exact gap is an established result, explicitly recorded by <a
+href="https://arxiv.org/pdf/0909.4320v1">Lubetzky–Sly, preprint
+p. 4</a>. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B73.md">B73</a>
+matches their rate-one convention to the rate <span
+class="math inline">\(a\)</span> here. The following self-contained
+proof retains the model’s role as an interacting benchmark; its <a
+href="ising-foundational-value.html">foundational use</a> separates
+relaxation, global mixing and physical energy normalization.</p>
+<h2 id="model-law-clock-and-access">1. Model, law, clock and access</h2>
+<p>On <span class="math inline">\(\Omega_N=\{-1,1\}^N\)</span> with
+cyclic indices and <span class="math inline">\(N\ge3\)</span>, let</p>
+<p><span class="math display">\[
+\pi_{N,b}(\sigma)=Z_{N,b}^{-1}
+\exp\left(b\sum_{i=1}^N\sigma_i\sigma_{i+1}\right),
+\qquad b=\beta J\ge0.
+\]</span></p>
+<p>Here <span class="math inline">\(J\)</span> is an energy and <span
+class="math inline">\(\beta\)</span> an inverse energy; <span
+class="math inline">\(b\)</span> is dimensionless. Every site has an
+independent rate-<span class="math inline">\(a\)</span> Poisson refresh
+clock. Upon a ring, replace its sign by the conditional Gibbs sign,
+whose plus probability is</p>
+<p><span class="math display">\[
+p_i(\sigma)=\frac{1+\tanh[b(\sigma_{i-1}+\sigma_{i+1})]}2
+=\frac12+\frac{\theta}{4}(\sigma_{i-1}+\sigma_{i+1}),
+\qquad \theta=\tanh(2b).
+\]</span></p>
+<p>The generator on all functions on <span
+class="math inline">\(\Omega_N\)</span> is <span
+class="math inline">\(Q_N=a\sum_i(E_i-I)\)</span>, where <span
+class="math inline">\(E_i\)</span> conditions on all sites except <span
+class="math inline">\(i\)</span>. Refreshes may leave the sign
+unchanged. The actual flip rate is <span
+class="math inline">\(a[1-\theta\sigma_i(\sigma_{i-1}+\sigma_{i+1})/2]/2\)</span>.
+The conditional-expectation identity makes each <span
+class="math inline">\(E_i\)</span> an orthogonal projection in <span
+class="math inline">\(L^2(\pi_{N,b})\)</span>, hence <span
+class="math inline">\(Q_N\)</span> is self-adjoint and reversible. For
+finite <span class="math inline">\(b\)</span>, all conditional
+probabilities are strictly between zero and one, so single-spin flips
+connect all states and the chain is irreducible. Its full centered-space
+gap has inverse-time units. The time is an auxiliary stochastic
+evolution clock, specified independently of the invariant law.</p>
+<p>Fix a velocity calibration <span
+class="math inline">\(u&gt;0\)</span>, independent of <span
+class="math inline">\(N,b\)</span>, and observe <span
+class="math inline">\(v_i=u\sigma_i\)</span>. Spin-flip symmetry centers
+these observables; each has variance <span
+class="math inline">\(u^2\)</span> and two readout levels separated by
+<span class="math inline">\(2u\)</span>. The full vector identifies the
+configuration. Its linear span need not cover all centered functions:
+the proof below controls the full spectrum through the dynamics.</p>
+<h2 id="all-size-lower-bound-by-a-written-coupling-proof">2. All-size
+lower bound by a written coupling proof</h2>
+<p>Couple two copies with the same site clocks and the same uniform
+random number at every refresh. Let <span
+class="math inline">\(D_i\)</span> indicate disagreement at site <span
+class="math inline">\(i\)</span> and <span
+class="math inline">\(D=\sum_iD_i\)</span> be Hamming distance. The
+refresh disagreement probability is <span
+class="math inline">\(|p_i(\sigma)-p_i(\eta)|\)</span>, bounded by <span
+class="math inline">\(\theta(D_{i-1}+D_{i+1})/2\)</span>. Thus the
+coupled generator satisfies</p>
+<p><span class="math display">\[
+\mathcal L D\le-aD+\frac{a\theta}{2}\sum_i(D_{i-1}+D_{i+1})
+=-a(1-\theta)D.
+\]</span></p>
+<p>The finite-state evolution and Gronwall’s inequality give <span
+class="math inline">\(\mathbb E D_t\le e^{-rt}D_0\)</span>, <span
+class="math inline">\(r=a(1-\theta)&gt;0\)</span>. For the Hamming
+Lipschitz seminorm of any real function <span
+class="math inline">\(f\)</span>,</p>
+<p><span class="math display">\[
+|P_tf(\sigma)-P_tf(\eta)|
+\le \operatorname{Lip}(f)e^{-rt}d(\sigma,\eta),
+\qquad \operatorname{Lip}(P_tf)\le e^{-rt}\operatorname{Lip}(f).
+\]</span></p>
+<p>Every nonconstant real eigenfunction of <span
+class="math inline">\(-Q_N\)</span> with eigenvalue <span
+class="math inline">\(\lambda\)</span> has positive finite seminorm, and
+<span class="math inline">\(P_tf=e^{-\lambda t}f\)</span>. Cancellation
+yields <span class="math inline">\(e^{-\lambda t}\le e^{-rt}\)</span>
+for every <span class="math inline">\(t&gt;0\)</span>, so <span
+class="math inline">\(\lambda\ge r\)</span>. Reversibility supplies a
+real eigenbasis. This proves the lower bound for every centered mode,
+including functions invisible to the linear span of the local
+observables. No dimension-dependent prefactor enters the spectral
+estimate.</p>
+<h2 id="a-matching-eigenmode-and-susceptibility-c124">3. A matching
+eigenmode and susceptibility (C124)</h2>
+<p>For <span class="math inline">\(M=\sum_i\sigma_i\)</span>,
+conditional expectation gives</p>
+<p><span class="math display">\[
+Q_N\sigma_i=-a\sigma_i+\frac{a\theta}{2}(\sigma_{i-1}+\sigma_{i+1}),
+\qquad Q_N M=-a(1-\theta)M.
+\]</span></p>
+<p><span class="math inline">\(M\)</span> is centered and nonzero in
+<span class="math inline">\(L^2(\pi_{N,b})\)</span>, since every
+configuration has positive probability. The upper bound from this
+eigenfunction matches §2, proving</p>
+<p><span class="math display">\[
+\boxed{\operatorname{gap}(-Q_N)=a[1-\tanh(2b)]\quad(N\ge3).}
+\]</span></p>
+<p>For the bounded mean velocity <span
+class="math inline">\(V=uM/N\)</span>, <span
+class="math inline">\(|V|\le u\)</span> and</p>
+<p><span class="math display">\[
+\chi(V)=\frac{\operatorname{Var}_{\pi}(V)}{a[1-\tanh(2b)]},
+\qquad \frac{\chi(V)}{\operatorname{Var}_{\pi}(V)}
+=\frac1{\operatorname{gap}(-Q_N)}.
+\]</span></p>
+<p>The variance is positive for every finite member but is not asserted
+to have a uniform lower bound in <span class="math inline">\(N\)</span>.
+A fixed mass <span class="math inline">\(m&gt;0\)</span> gives the
+action-valued plateau <span
+class="math inline">\(H(V)=2m\chi(V)\)</span>, as in C019/C041. The
+normalized response has time units and detects the slow mode without an
+extensive full-frame sum.</p>
+<h2 id="premises-retained-and-closing-limits">4. Premises retained and
+closing limits</h2>
+<p>At fixed finite <span class="math inline">\(b\)</span>, the exact gap
+stays positive as <span class="math inline">\(N\to\infty\)</span>; this
+statement concerns the sequence of finite-volume gaps. More generally,
+<span class="math inline">\(a_N\ge a_0&gt;0\)</span> and <span
+class="math inline">\(0\le b_N\le B&lt;\infty\)</span> imply <span
+class="math inline">\(\operatorname{gap}(-Q_N)\ge
+a_0[1-\tanh(2B)]\)</span>. At <span class="math inline">\(b=0\)</span>
+the refresh chain flips with rate <span
+class="math inline">\(a/2\)</span>, recovering C046’s gap <span
+class="math inline">\(a\)</span>.</p>
+<p>Finite range and fixed calibration persist if <span
+class="math inline">\(b_N\to\infty\)</span> with <span
+class="math inline">\(a\)</span> fixed, but the exact gap tends to zero.
+For example <span class="math inline">\(b_N=(\log N)/4\)</span> gives
+<span class="math inline">\(\tanh(2b_N)=(N-1)/(N+1)\)</span> and gap
+<span class="math inline">\(2a/(N+1)\)</span>. This varies interaction
+strength as well as size; it is not a fixed-coupling thermodynamic
+closure. Alternatively dividing <span class="math inline">\(Q_N\)</span>
+by <span class="math inline">\(N\)</span> fixes the total refresh rate
+at <span class="math inline">\(a\)</span> and gives gap <span
+class="math inline">\(a[1-\tanh(2b)]/N\)</span> even at fixed <span
+class="math inline">\(b\)</span>.</p>
+<p>The sufficient replacement for independence in this family is a
+uniform margin in the neighbour-influence sum, together with the
+per-site clock floor. A prescribed invariant Gibbs law alone selects
+neither clock. For a supplied action constant <span
+class="math inline">\(K&gt;0\)</span>, the operator <span
+class="math inline">\(K(-Q_N)\)</span> has energy gap <span
+class="math inline">\(Ka[1-\tanh(2b)]\)</span>. This does not identify
+the sampling operator with a physical quantum Hamiltonian or select
+<span class="math inline">\(K\)</span>. An infinite-volume operator
+construction and a continuum or quantum-field transfer remain separate
+tasks.</p>
+<h2 id="evidence-and-strategic-consequence">5. Evidence and strategic
+consequence</h2>
+<p>The proof is a finite-state written contraction argument plus an
+explicit magnetization eigenfunction. The Ising dynamics and relaxation
+mechanism are classical prior literature; no novelty is asserted. The <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B68.md">B68
+audit</a> records model/method matches and the <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/ising-gap-B68.md">written
+proof review</a>. Glauber formula images remain unverified after the
+publisher access failure; the exact full-spectrum equality is accepted
+on the self-contained proof, with no imported source theorem
+required.</p>
+<p>G03’s first milestone ends here: independence is unnecessary for a
+uniform finite-volume gap in this interacting family, while finite range
+without coupling and clock control is insufficient. Q01 is the selected
+next main track. Further Ising variants are parked until they discharge
+a named physical-operator or uniform-limit dependency.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

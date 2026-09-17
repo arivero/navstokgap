@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A reversible spin interaction separates identical operational states</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A reversible spin interaction separates identical operational
+states</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/hamiltonian-moment-descent.md">Markdown source</a></p><p>Two classical spin preparations have identical first and cross
+moments, yet the Hamiltonian interaction H=J u_z v_z gives them
+different later probabilities for an allowed product measurement. The
+hidden dynamics is smooth, complete and reversible. It therefore
+supplies an explicit failure of descent to C125’s retained operational
+state, rather than the reversible gate required by B70.</p>
+<p>Q01 mechanical test, 2026-09-13. Keep C125’s unit orientations u,v,
+all joint Borel preparations and affine local/product terminal
+measurements. Their operational state is (1,E[u],E[v],E[u v^T]).
+Introduce fixed classical angular momentum magnitudes S_A,S_B&gt;0, with
+action units, and J&gt;0 with energy units. These are supplied
+mechanical parameters, not a selected Planck constant. Source coverage
+and written review are in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B72.md">B72</a>.</p>
+<h2 id="the-hamiltonian-flow">1. The Hamiltonian flow</h2>
+<p>On S^2 times S^2 use the classical spin Poisson brackets</p>
+<p><span
+class="math display">\[\{u_i,u_j\}=S_A^{-1}\epsilon_{ijk}u_k,\quad
+\{v_i,v_j\}=S_B^{-1}\epsilon_{ijk}v_k,\quad
+\{u_i,v_j\}=0,\qquad H=J u_z v_z. \tag{1}\]</span></p>
+<p>The convention is dot f={f,H}. In particular,</p>
+<p><span class="math display">\[\dot u_x=-\Omega_A u_y v_z,\quad
+\dot u_y=\Omega_A u_x v_z,\quad \dot u_z=0,
+\qquad\Omega_A=J/S_A,\]</span> <span class="math display">\[\dot
+v_x=-\Omega_B v_y u_z,\quad
+\dot v_y=\Omega_B v_x u_z,\quad \dot v_z=0,
+\qquad\Omega_B=J/S_B. \tag{2}\]</span></p>
+<p>The sphere norms and H are conserved. This smooth vector field on a
+compact phase space has a complete flow with inverse obtained by
+changing t to -t. It is an interaction: each rotation frequency depends
+on the other spin. Time is the specified Hamiltonian evolution time;
+Omega has inverse-time units.</p>
+<h2 id="an-exact-same-moment-pair">2. An exact same-moment pair</h2>
+<p>Let e_x,e_y,e_z be the standard unit vectors and prepare</p>
+<p><span class="math display">\[\mu_A=\delta_{e_y}(du)\,
+\tfrac12(\delta_{e_z}+\delta_{-e_z})(dv),\qquad
+\mu_B=\delta_{e_y}(du)\,
+\tfrac12(\delta_{e_x}+\delta_{-e_x})(dv). \tag{3}\]</span></p>
+<p>Both have E[u]=e_y, E[v]=0 and E[u v^T]=0. They are therefore exactly
+equivalent for all C125 terminal tests, including mixed and
+coarse-grained product tests. Their microscopic energies are also
+identically zero.</p>
+<p>Since u_z=0 remains zero, v is constant. For mu_A, write v=sign
+e_z:</p>
+<p><span class="math display">\[u(t)=(-\mathrm{sign}\sin(\Omega_A t),
+\cos(\Omega_A t),0),\qquad
+E_{\mu_A}[u_x(t)v_z(t)]=-\sin(\Omega_A t). \tag{4}\]</span></p>
+<p>For mu_B, v_z=0, so u(t)=e_y and E_muB[u_x(t)v_z(t)]=0. The allowed
+product effect e(u,v)=(1+u_x)(1+v_z)/4 consequently gives</p>
+<p><span class="math display">\[p_A(t)=\tfrac14[1-\sin(\Omega_A
+t)],\qquad
+p_B(t)=\tfrac14. \tag{5}\]</span></p>
+<p>For every sufficiently small positive t these differ. No map, linear
+or otherwise, from the retained initial operational state to the
+retained state at such a time can represent this Hamiltonian on all
+admitted preparations. Both evolved preparations still yield valid
+minimal-composite states; the failure is single-valued evolution on the
+quotient, not state positivity.</p>
+<h2 id="the-missing-moment-and-the-implication-for-reconstruction">3.
+The missing moment and the implication for reconstruction</h2>
+<p>Equations (2) expose the additional information immediately:</p>
+<p><span class="math display">\[\frac{d}{dt}E[u_xv_z]=-\Omega_A
+E[u_yv_z^2]. \tag{6}\]</span></p>
+<p>The right-hand side equals -Omega_A for mu_A and zero for mu_B at
+t=0. C125 retained E[u_i v_j] but not this moment quadratic in v. Adding
+the interaction to the allowed transformation toolbox therefore changes
+the operational equivalence relation: its precomposed terminal
+measurement now distinguishes the two preparations.</p>
+<p>This is consistent with B70’s theorem. That theorem assumes a
+reversible linear action on the fixed operational tensor state space.
+Here the classical interaction has a reversible action on hidden
+measures but fails to induce even a single-valued action on that fixed
+quotient. Physical interaction and operational reversible closure are
+distinct premises.</p>
+<p>The decisive remaining choice is to justify a preparation/effect
+restriction stable under physical interactions, or to enlarge the
+retained state space. A separate argument must show that such a repair
+remains finite-capacity and locally tomographic before importing B70.
+Exact Hamiltonian reversibility alone does not establish that repair.
+The fixed S_A,S_B supply action units to this example; none of the
+moment calculations forces a nonzero universal value.</p>
+<p>The <a href="hamiltonian-finite-closure.html">finite-repair
+decision</a> is now complete: C128 rules out finite observable
+enlargement for this interaction and all Borel preparations. The open
+repair must change a model premise or admit infinite observable
+dimension; STATE owns its strategic follow-through.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

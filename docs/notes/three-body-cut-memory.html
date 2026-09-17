@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tagged momentum and the memory of a third body</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Tagged momentum and the memory of a third body</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-body-cut-memory.md">Markdown source</a></p><p>An equal-mass three-body spring chain requires receiver information
+at a cut even when the tagged body’s position and momentum are retained.
+Eliminating the receiver gives an exact cosine memory kernel and two
+initial-data terms. Two sufficiently close exact tagged phase
+observations recover the missing state. This closes R04’s
+finite-receiver test: memory supplies classical interface information,
+while the available action scales remain preparation dependent.</p>
+<p>Proof status: C064–C065, accepted by written derivation and
+coordinator review, 2026-09-10. Literature status: established
+harmonic-bath elimination and observability ingredients; explicit
+finite-chain formulas are derived specializations. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B34.md">B34</a>
+records bounded coverage.</p>
+<h2 id="one-fixed-mechanical-experiment">1. One fixed mechanical
+experiment</h2>
+<p>Take three particles on the line with equal mass <span
+class="math inline">\(m&gt;0\)</span> and two springs of stiffness <span
+class="math inline">\(k&gt;0\)</span>:</p>
+<p><span class="math display">\[
+H=\sum_{i=1}^3\frac{p_i^2}{2m}
++\frac{k}{2}\big[(x_1-x_2)^2+(x_2-x_3)^2\big].
+\]</span></p>
+<p>Fix centre position and total momentum to zero. Write</p>
+<p><span class="math display">\[x=x_1,\qquad y=x_2-x_3,\qquad
+x_2=\frac{-x+y}{2},\quad x_3=\frac{-x-y}{2}.\]</span></p>
+<p>The restricted kinetic energy is <span class="math inline">\(3m\dot
+x^2/4+m\dot y^2/4\)</span>. Consequently the canonical momenta are <span
+class="math inline">\(P=\mu\dot x\)</span>, <span
+class="math inline">\(Q=\nu\dot y\)</span>, where <span
+class="math inline">\(\mu=3m/2\)</span> and <span
+class="math inline">\(\nu=m/2\)</span>. <strong>The physical tagged
+momentum is <span class="math inline">\(p_1=(2/3)P\)</span>.</strong>
+Retaining <span class="math inline">\((x,P)\)</span> therefore retains
+precisely the same information as <span
+class="math inline">\((x_1,p_1)\)</span>; the rescaling accounts for
+centre reduction.</p>
+<p>Put</p>
+<p><span class="math display">\[a=\frac{9k}{4},\quad
+g=\frac{3k}{4},\quad d=\frac{5k}{4}.
+\qquad
+H=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
++\frac a2x^2-gxy+\frac d2y^2.\]</span></p>
+<p>Here <span class="math inline">\(ad-g^2=9k^2/4&gt;0\)</span>, so the
+reduced quadratic Hamiltonian is positive definite. Its phase domain is
+<span class="math inline">\(\mathbb R^4\)</span> and all trajectories
+are global and smooth. Fix <span class="math inline">\(E&gt;0\)</span>
+and the normalized microcanonical Liouville measure <span
+class="math inline">\(\delta(H-E)\,dx\,dP\,dy\,dQ\)</span> throughout
+the cut experiment. This invariant preparation has compact support.
+Energy conservation gives <span class="math inline">\(|\dot
+x_i|\le\sqrt{2E/m}\)</span>; choosing <span
+class="math inline">\(E&lt;mc^2/2\)</span> supplies a hard particle
+speed ceiling in this frame. As in A10, this is a Newtonian spring
+model, with a speed-bounded preparation rather than a relativistic
+signal law.</p>
+<h2 id="exact-elimination-at-any-cut">2. Exact elimination at any
+cut</h2>
+<p>Hamilton’s equations give</p>
+<p><span class="math display">\[\mu\ddot x=-ax+gy,\qquad \nu\ddot
+y=gx-dy.\]</span></p>
+<p>Let <span class="math inline">\(\Omega^2=d/\nu=5k/(2m)\)</span>.
+Starting a segment at time zero,</p>
+<p><span class="math display">\[
+y(t)=y_0\cos\Omega t+\frac{Q_0}{\nu\Omega}\sin\Omega t
++\frac{g}{\nu\Omega}\int_0^t\sin\Omega(t-s)x(s)\,ds.
+\]</span></p>
+<p>Substitution gives the exact reduced equation</p>
+<p><span class="math display">\[
+\mu\ddot x(t)+ax(t)
+-\frac{g^2}{\nu\Omega}\int_0^t\sin\Omega(t-s)x(s)\,ds
+=g y_0\cos\Omega t+\frac{gQ_0}{\nu\Omega}\sin\Omega t.
+\]</span></p>
+<p>Integration by parts rewrites it as</p>
+<p><span class="math display">\[
+\boxed{\mu\ddot x(t)+a_{\rm eff}x(t)
++\int_0^t\Gamma(t-s)\dot x(s)\,ds=F_0(t)},
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+a_{\rm eff}=a-\frac{g^2}{d}=\frac{9k}{5},\qquad
+\Gamma(t)=\frac{g^2}{d}\cos\Omega t=\frac{9k}{20}\cos\Omega t,
+\]</span></p>
+<p><span class="math display">\[
+F_0(t)=g\left(y_0-\frac gd x_0\right)\cos\Omega t
++\frac{gQ_0}{\nu\Omega}\sin\Omega t.
+\]</span></p>
+<p>The kernel has stiffness units <span
+class="math inline">\(M/T^2\)</span>; its velocity convolution and <span
+class="math inline">\(F_0\)</span> have force units <span
+class="math inline">\(ML/T^2\)</span>. Under the chosen preparation
+<span class="math inline">\(F_0\)</span> is a random function determined
+by initial data, with its two quadratures correlated through the energy
+constraint. No independent noise is introduced at later cuts. The
+oscillatory memory is reversible, rather than a positive friction
+coefficient describing irreversible energy loss.</p>
+<p>At a cut <span class="math inline">\(\tau\)</span>, the same formulas
+hold with <span class="math inline">\(t\)</span> replaced by <span
+class="math inline">\(t-\tau\)</span> and <span
+class="math inline">\((x_0,y_0,Q_0)\)</span> by <span
+class="math inline">\((x_\tau,y_\tau,Q_\tau)\)</span>. The inherited
+<span class="math inline">\((y_\tau,Q_\tau)\)</span> encodes everything
+needed from earlier history. One may carry this pair or carry the
+equivalent memory and its initial quadratures.</p>
+<h2 id="what-fails-when-only-tagged-phase-is-carried">3. What fails when
+only tagged phase is carried</h2>
+<p>Write <span class="math inline">\(u=(x,P)\)</span>, <span
+class="math inline">\(w=(y,Q)\)</span> and block the exact linear flow
+as</p>
+<p><span class="math display">\[\binom{u_t}{w_t}
+=\Phi_t\binom{u_0}{w_0},\qquad
+\Phi_t=\begin{pmatrix}A_t&amp;B_t\\C_t&amp;D_t\end{pmatrix}.\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[u_{s+t}=A_tu_s+B_tw_s,\qquad
+A_{s+t}=A_tA_s+B_tC_s.\]</span></p>
+<p>Thus composing full segments and then projecting retains the
+excursion into the receiver and back. Multiplying only retained blocks
+discards <span class="math inline">\(B_tC_s\)</span>. At fixed energy,
+the states <span class="math inline">\(x=P=Q=0\)</span>, <span
+class="math inline">\(y=\pm\sqrt{2E/d}\)</span> have identical tagged
+phase but opposite tagged accelerations <span
+class="math inline">\(gy/\mu\)</span>. They establish that tagged phase
+alone cannot determine a unique future over the preparation’s
+support.</p>
+<p>For conditional laws, let <span class="math inline">\(L(u)\)</span>
+be a version of the microcanonical conditional receiver law given <span
+class="math inline">\(u\)</span>, and <span
+class="math inline">\(\mathcal P\)</span> the tagged projection. The
+exact one-segment conditional kernel is <span
+class="math inline">\(K_t=\mathcal P_\#(\Phi_t)_\#L\)</span>. Composing
+such kernels inserts <span class="math inline">\(L\mathcal P_\#\)</span>
+at a cut: it refreshes the receiver from its stationary conditional law
+instead of carrying the law conditioned on the full observed history.
+The deterministic block identity identifies the lost channel; no
+particular reset-refinement limit is claimed here. Marginalizing the
+true joint path law instead preserves every coarse observation on every
+partition.</p>
+<h2 id="finite-history-recovery">4. Finite-history recovery</h2>
+<p>The differential history gives a direct completion:</p>
+<p><span class="math display">\[y(t)=\frac{\mu\ddot x(t)+ax(t)}g,\qquad
+Q(t)=\frac\nu g\big[\mu x^{(3)}(t)+a\dot x(t)\big].\]</span></p>
+<p>There is also an exact two-time phase completion. For a separation
+<span class="math inline">\(\delta&gt;0\)</span>,</p>
+<p><span class="math display">\[u_t=A_\delta u_{t-\delta}+B_\delta
+w_{t-\delta}.\]</span></p>
+<p>If <span class="math inline">\(B_\delta\)</span> is invertible, solve
+this equation for <span class="math inline">\(w_{t-\delta}\)</span> and
+propagate to <span class="math inline">\(w_t=C_\delta
+u_{t-\delta}+D_\delta w_{t-\delta}\)</span>. Taylor expansion of the
+displayed Hamilton equations gives, in the row order <span
+class="math inline">\((x,P)\)</span> and column order <span
+class="math inline">\((y,Q)\)</span>,</p>
+<p><span class="math display">\[
+B_\delta=
+\begin{pmatrix}
+\dfrac{g}{2\mu}\delta^2+O(\delta^4)&amp;
+\dfrac{g}{6\mu\nu}\delta^3+O(\delta^5)\\
+g\delta+O(\delta^3)&amp;
+\dfrac{g}{2\nu}\delta^2+O(\delta^4)
+\end{pmatrix},
+\]</span></p>
+<p><span class="math display">\[\det
+B_\delta=\frac{g^2}{12\mu\nu}\delta^4+O(\delta^6).\]</span></p>
+<p>The leading coefficient is positive, so every sufficiently small
+positive <span class="math inline">\(\delta\)</span> permits exact
+recovery. Since <span class="math inline">\(\Phi_\delta\)</span> is
+analytic, exceptional sampling separations are isolated zeros of this
+determinant on finite intervals away from zero. For the local
+coefficients, differentiate <span class="math inline">\(\ddot
+x=(-ax+gy)/\mu\)</span> and <span class="math inline">\(\dot
+P=-ax+gy\)</span>: dependence on initial <span
+class="math inline">\(y\)</span> first enters <span
+class="math inline">\(x\)</span> at order two and <span
+class="math inline">\(P\)</span> at order one, while dependence on
+initial <span class="math inline">\(Q\)</span> enters one order later.
+This also verifies the remainder parities.</p>
+<p>Exact recovery becomes poorly conditioned as <span
+class="math inline">\(\delta\downarrow0\)</span>: the inverse block has
+entries growing as high as <span
+class="math inline">\(\delta^{-3}\)</span> in fixed physical units. The
+observed difference must be known with correspondingly increasing
+precision. This is an observability requirement, not a derived minimum
+action or minimum time. It gives R05 a concrete physical question: what
+receiver and back-reaction are required to obtain these observations at
+fixed precision?</p>
+<h2 id="what-survives-refinement-and-what-sets-its-scale">5. What
+survives refinement, and what sets its scale</h2>
+<p>Observational refinement leaves the full flow and the kernel <span
+class="math inline">\(\Gamma\)</span> unchanged. The surviving interface
+object is a receiver phase pair or its equivalent memory, with position
+and momentum units. Its existence follows from the nonzero spring
+coupling.</p>
+<p>For comparison with action, the chain Laplacian has eigenvalues <span
+class="math inline">\(0,k,3k\)</span>, with eigenvectors proportional to
+<span class="math inline">\((1,1,1)\)</span>, <span
+class="math inline">\((1,0,-1)\)</span> and <span
+class="math inline">\((1,-2,1)\)</span>. The two internal normal
+frequencies are therefore <span
+class="math inline">\(\omega_1=\sqrt{k/m}\)</span> and <span
+class="math inline">\(\omega_2=\sqrt{3k/m}\)</span>. In canonical normal
+coordinates each modal action, normalized by <span
+class="math inline">\(1/(2\pi)\)</span> around its own cycle on the
+invariant torus, is <span
+class="math inline">\(J_j=E_j/\omega_j\)</span>. Hence at total energy
+<span class="math inline">\(E\)</span>,</p>
+<p><span class="math display">\[\frac E{\omega_2}\le J_1+J_2\le\frac
+E{\omega_1}.\]</span></p>
+<p>The lower bound is a bound at supplied positive energy. Across
+preparations, scale every coordinate and momentum by <span
+class="math inline">\(b&gt;0\)</span> while keeping <span
+class="math inline">\(m,k\)</span> fixed. Energy and both actions scale
+by <span class="math inline">\(b^2\)</span>; the flow, memory kernel and
+sampling invertibility conditions remain the same. The force and speed
+amplitudes decrease with <span class="math inline">\(b\)</span>. Thus
+genuine receiver memory survives as a structural law while all these
+prepared action scales approach zero.</p>
+<p>The next selection test should address physical acquisition of
+interface information, rather than infer an action floor from memory
+alone. Specify a mechanical readout and its disturbance, then test
+whether arbitrary refinement at fixed useful accuracy remains possible
+under its independently stated resources. The present finite receiver
+supplies the exact baseline for that experiment.</p>
+<h2 id="source-route">Source route</h2>
+<p>Zwanzig (1973), printed p. 219, equations (21)–(24), supplies the
+established harmonic-bath elimination route; <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B23/harmonic-receiver-source-companion.md">B23’s
+companion</a> records the cached original and coverage. <a
+href="classical-cut-state.html">R03</a> supplies the projection/reset
+distinction. The finite-history reconstruction is a linear observability
+calculation, with the explicit block determinant derived above.
+Hermann–Krener (1977), printed p. 733, Theorem 3.1 supplies the general
+local weak observability framework, rather than the sampled determinant
+formula. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B34/receiver-memory-source-companion.md">B34’s
+companion</a> records three primary pages, and the <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/three-body-memory-B34.md">coordinator
+review</a> checks their scope and the derivation.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

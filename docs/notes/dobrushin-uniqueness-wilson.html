@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dobrushin&#x27;s uniqueness condition for the Wilson action: a two-line strong-coupling gap at g2&gt;444, and the block criterion that is the finite verification</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Dobrushin’s uniqueness condition for the Wilson action: a two-line
+strong-coupling gap at <span class="math inline">\(g^2&gt;444\)</span>,
+and the block criterion that is the finite verification</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/dobrushin-uniqueness-wilson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/dobrushin-uniqueness-wilson.pdf">PDF</a></p><p>The finite-volume criteria of <a
+href="intermediate-region-finite-verification.html">the
+finite-verification note</a> have a single-site ancestor, Dobrushin’s
+uniqueness condition (Theory Probab. Appl. 13 (1968) 197), and for the
+Wilson action it can be checked by hand. The conditional distribution of
+one link given all the others is <span
+class="math display">\[d\mu_\ell(U\,|\,\omega)\ \propto\
+\exp\Big[\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}\big(U\,M_\ell(\omega)\big)\Big]d\mu(U),
+\qquad M_\ell=\sum_{p\ni\ell}S_p ,\]</span> the sum of the six staples
+of <span class="math inline">\(\ell\)</span> in four dimensions.
+Changing one neighbouring link changes one staple, and the resulting
+total-variation distance between the two conditional distributions is at
+most <span class="math inline">\(e^{4\beta_W}-1\)</span>, independently
+of <span class="math inline">\(N\)</span>. Each link has <span
+class="math inline">\(18\)</span> neighbours that share a plaquette with
+it, so Dobrushin’s coefficient is <span
+class="math display">\[\alpha=\sup_\ell\sum_{\ell&#39;}\rho_{\ell\ell&#39;}\
+\le\ 18\big(e^{4\beta_W}-1\big),\]</span> and the condition <span
+class="math inline">\(\alpha&lt;1\)</span> holds for <span
+class="math inline">\(\beta_W&lt;\tfrac14\log\tfrac{19}{18}=0.01352\)</span>,
+that is <span class="math display">\[g^2\ &gt;\ 148\,N\ =\
+444\quad(SU(3)).\]</span> Dobrushin’s theorem gives a unique Gibbs
+state, Künsch’s theorem (Commun. Math. Phys. 84 (1982) 207) gives
+exponential decay of all truncated correlations at rate <span
+class="math inline">\(\log(1/\alpha)\)</span> per lattice unit, and link
+reflection positivity turns the rate into a gap: <span
+class="math display">\[\Delta_W\ \ge\ \frac{\hbar
+c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\ \simeq\ \frac{\hbar
+c}{a}\log\frac{g^2}{432}\qquad(g^2&gt;444),\]</span> uniformly in the
+volume. This is a better threshold than the polymer expansion’s <span
+class="math inline">\(1056\)</span> and a smaller rate than its <span
+class="math inline">\(4\log(g^2/1056)\)</span>. The block version of the
+same condition, the Dobrushin–Shlosman constructive criterion (in
+<em>Statistical Physics and Dynamical Systems</em>, Birkhäuser 1985,
+347), replaces the single link by a box <span
+class="math inline">\(V\)</span> of links and is expected to hold deeper
+into the intermediate region as <span class="math inline">\(V\)</span>
+grows; it is the quantity a finite verification would compute, and
+Section 4 states it as a specification. All references at metadata
+level; constants explicit; nothing promoted.</p>
+<h2 id="the-one-link-conditional-distribution">1. The one-link
+conditional distribution</h2>
+<p>Fix all links except <span class="math inline">\(\ell\)</span>. The
+plaquettes containing <span class="math inline">\(\ell\)</span> are six
+in four dimensions, and each contributes <span
+class="math inline">\(\operatorname{Re}\operatorname{tr}(U_\ell
+S_p)\)</span> with <span class="math inline">\(S_p\in SU(N)\)</span> the
+product of the other three links of <span
+class="math inline">\(p\)</span> in the appropriate order. Hence the
+conditional density is <span
+class="math inline">\(e^{f_\omega(U)}\)</span> with <span
+class="math inline">\(f_\omega(U)=(\beta_W/N)\operatorname{Re}\operatorname{tr}(UM_\ell)\)</span>,
+<span class="math inline">\(M_\ell=\sum_{p\ni\ell}S_p\)</span>,
+normalized by <span class="math inline">\(Z(\omega)=\int
+e^{f_\omega}d\mu\)</span>. Gauge invariance of the interaction is
+visible in the fact that a gauge transformation at an endpoint of <span
+class="math inline">\(\ell\)</span> rotates <span
+class="math inline">\(M_\ell\)</span> and the Haar measure absorbs it;
+nothing more is needed.</p>
+<h2 id="the-dobrushin-coefficient">2. The Dobrushin coefficient</h2>
+<p><strong>Lemma 1.</strong> For probability densities <span
+class="math inline">\(p\propto e^f\)</span>, <span
+class="math inline">\(q\propto e^{f&#39;}\)</span> with respect to the
+same measure, <span class="math inline">\(\|p-q\|_{\rm TV}\le
+e^{\operatorname{osc}(f-f&#39;)}-1\)</span>.</p>
+<p><em>Proof.</em> <span
+class="math inline">\(p/q=e^{f-f&#39;}Z_{f&#39;}/Z_f\le
+e^{\sup(f-f&#39;)}e^{\sup(f&#39;-f)}=e^{\operatorname{osc}(f-f&#39;)}\)</span>,
+so <span
+class="math inline">\(p-q\le(e^{\operatorname{osc}}-1)q\)</span> and
+<span class="math inline">\(\|p-q\|_{\rm TV}=\int(p-q)_+\le
+e^{\operatorname{osc}}-1\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Lemma 2.</strong> If <span
+class="math inline">\(\omega,\omega&#39;\)</span> differ only at a link
+<span class="math inline">\(\ell&#39;\)</span> sharing a plaquette with
+<span class="math inline">\(\ell\)</span>, then <span
+class="math inline">\(\operatorname{osc}_U(f_\omega-f_{\omega&#39;})\le4\beta_W\)</span>.</p>
+<p><em>Proof.</em> One staple changes, <span
+class="math inline">\(M_\ell-M_\ell&#39;=S_p-S_p&#39;\)</span> with
+<span class="math inline">\(S_p,S_p&#39;\in SU(N)\)</span>, so <span
+class="math inline">\(|f_\omega(U)-f_{\omega&#39;}(U)|=(\beta_W/N)|\operatorname{Re}\operatorname{tr}(U(S_p-S_p&#39;))|\le(\beta_W/N)\|S_p-S_p&#39;\|_1\le(\beta_W/N)\cdot2N\)</span>,
+the trace norm of a difference of two unitaries being at most <span
+class="math inline">\(2N\)</span>; the oscillation is at most twice the
+supremum. <span class="math inline">\(\square\)</span></p>
+<p>If <span class="math inline">\(\ell&#39;\)</span> shares no plaquette
+with <span class="math inline">\(\ell\)</span>, the conditional
+distribution at <span class="math inline">\(\ell\)</span> does not
+depend on it. Each link lies in six plaquettes with three further links
+each, and the six plaquettes share no link besides <span
+class="math inline">\(\ell\)</span>, so there are exactly <span
+class="math inline">\(18\)</span> links <span
+class="math inline">\(\ell&#39;\)</span> with <span
+class="math inline">\(\rho_{\ell\ell&#39;}\ne0\)</span>. Hence <span
+class="math display">\[\alpha=\sup_\ell\sum_{\ell&#39;}\rho_{\ell\ell&#39;}\le18\big(e^{4\beta_W}-1\big),\]</span>
+and <span class="math inline">\(\alpha&lt;1\)</span> for <span
+class="math inline">\(\beta_W&lt;0.01352\)</span>, i.e. <span
+class="math inline">\(g^2&gt;2N/0.01352=148N\)</span>.</p>
+<h2 id="from-the-condition-to-the-gap">3. From the condition to the
+gap</h2>
+<p>Dobrushin’s theorem: <span class="math inline">\(\alpha&lt;1\)</span>
+implies a unique Gibbs state on <span class="math inline">\(\mathbb
+Z^4\)</span> and on every torus. The covariance estimate of Föllmer (J.
+Funct. Anal. 46 (1982) 387; Künsch, loc. cit., for the decay
+statements): under <span class="math inline">\(\alpha&lt;1\)</span>, for
+local observables <span class="math inline">\(F,G\)</span>, <span
+class="math display">\[|\langle F;G\rangle|\ \le\
+\sum_{\ell\in\operatorname{supp}F,\
+\ell&#39;\in\operatorname{supp}G}\delta_\ell
+F\,\big[(1-\rho)^{-1}\big]_{\ell\ell&#39;}\,\delta_{\ell&#39;}G
+,\]</span> with <span class="math inline">\(\delta_\ell F\)</span> the
+oscillation of <span class="math inline">\(F\)</span> in the link <span
+class="math inline">\(\ell\)</span>, and since <span
+class="math inline">\(\rho^n_{\ell\ell&#39;}\)</span> vanishes unless
+the link distance is at most <span class="math inline">\(n\)</span>
+lattice units, <span
+class="math inline">\([(1-\rho)^{-1}]_{\ell\ell&#39;}\le\alpha^{d(\ell,\ell&#39;)}/(1-\alpha)\)</span>.
+Truncated correlations at time separation <span
+class="math inline">\(T\)</span> therefore decay at least like <span
+class="math inline">\(\alpha^{T/a}\)</span>, rate <span
+class="math inline">\(m=\log(1/\alpha)/a\)</span>. The Wilson transfer
+matrix is positive by link reflection positivity, and for a local <span
+class="math inline">\(A\)</span> orthogonal to the vacuum <span
+class="math inline">\(\langle A,\mathcal T^nA\rangle\le
+C_A\alpha^n\)</span> forces its spectral measure to vanish above <span
+class="math inline">\(\alpha\)</span>, so on the cyclic subspace of
+local observables <span class="math display">\[\Delta_W=-\frac{\hbar
+c}{a}\log\|\mathcal T|_{\Omega^\perp}\|\ \ge\ \frac{\hbar
+c}{a}\log\frac1\alpha
+\ \ge\ \frac{\hbar
+c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\qquad(SU(3)).\]</span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>route</th>
+<th>rigorous threshold (<span class="math inline">\(SU(3)\)</span>)</th>
+<th>gap bound</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>polymer expansion, all representations</td>
+<td><span class="math inline">\(g^2\ge1056\)</span></td>
+<td><span class="math inline">\((\hbar
+c/a)\,4\log(g^2/1056)\)</span></td>
+</tr>
+<tr class="even">
+<td>Dobrushin single-site condition</td>
+<td><span class="math inline">\(g^2&gt;444\)</span></td>
+<td><span class="math inline">\((\hbar c/a)\,\log(g^2/432)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The two are complementary: the Dobrushin route enters earlier, the
+polymer route’s rate is larger once both apply. For <span
+class="math inline">\(U(1)\)</span> the same computation gives <span
+class="math inline">\(g^2&gt;148\)</span> with <span
+class="math inline">\(N=1\)</span>.</p>
+<h2 id="the-block-criterion-as-a-specification">4. The block criterion,
+as a specification</h2>
+<blockquote>
+<p><strong>Corrected.</strong> The single-link form below is emptied by
+Elitzur’s theorem: the marginal of any link with an interior endpoint is
+Haar for every boundary condition, so <span
+class="math inline">\(\rho_V(x,y)=0\)</span> there and the sum sees only
+the boundary layer. The form to verify is the mixing condition on
+sub-blocks, organized around the conditional distribution of small
+Wilson loops, and the boxes needed are of side <span
+class="math inline">\(3\)</span> to <span
+class="math inline">\(5\)</span> at <span
+class="math inline">\(\beta_W\simeq5.7\)</span>; see <a
+href="confinement-scale-bands.html">the bands note</a>.</p>
+</blockquote>
+<p>The Dobrushin–Shlosman constructive criterion replaces the single
+link by a finite box <span class="math inline">\(V\)</span> of links.
+Writing <span class="math inline">\(\mu_V(\cdot|\omega)\)</span> for the
+Gibbs measure in <span class="math inline">\(V\)</span> with boundary
+condition <span class="math inline">\(\omega\)</span> and, for <span
+class="math inline">\(x\in V\)</span> and <span
+class="math inline">\(y\notin V\)</span>, <span
+class="math display">\[\rho_V(x,y)=\sup_{\omega,\omega&#39;\
+\text{differ only at
+}y}\big\|\mu_V(\cdot|\omega)|_x-\mu_V(\cdot|\omega&#39;)|_x\big\|_{\rm
+TV},\]</span> the criterion is that for some finite <span
+class="math inline">\(V\)</span> <span class="math display">\[\sum_{x\in
+V}\sum_{y\notin V}\rho_V(x,y)\ &lt;\ |V| ,\]</span> up to the
+normalization convention of the original, and it implies the same
+conclusions as the single-site condition, which is the case <span
+class="math inline">\(V=\{\ell\}\)</span>. Its content is that the total
+influence of the boundary on the box, summed over the box, is less than
+the size of the box; in a mixing phase this holds once the side of <span
+class="math inline">\(V\)</span> exceeds a few correlation lengths,
+which is why it can hold at couplings where the single-site condition
+fails. Dobrushin and Shlosman’s complete analyticity (<em>Statistical
+Physics and Dynamical Systems</em>, Birkhäuser 1985, 371; J. Stat. Phys.
+46 (1987) 983) is the statement that some such <span
+class="math inline">\(V\)</span> exists, together with its equivalent
+forms.</p>
+<p><strong>What a verification computes.</strong> For a box <span
+class="math inline">\(V\)</span> of side <span
+class="math inline">\(R\)</span> (about <span
+class="math inline">\(3R^4\)</span> links) and a coupling <span
+class="math inline">\(\beta_W\)</span>: for each boundary link <span
+class="math inline">\(y\)</span> and each interior link <span
+class="math inline">\(x\)</span>, a rigorous upper bound on <span
+class="math inline">\(\rho_V(x,y)\)</span>, which is a total-variation
+distance between two marginals of Gibbs measures on <span
+class="math inline">\(SU(3)^{|V|}\)</span>; then the double sum against
+<span class="math inline">\(|V|\)</span>. Lemma 1 bounds each <span
+class="math inline">\(\rho_V(x,y)\)</span> by <span
+class="math inline">\(e^{\operatorname{osc}}-1\)</span> of the
+log-density difference of the two marginals, but for <span
+class="math inline">\(|V|&gt;1\)</span> that oscillation involves the
+integral over the other links of <span class="math inline">\(V\)</span>
+and is what has to be bounded rigorously. The openness radius in the
+interaction norm <span
+class="math inline">\(\sup_\ell\sum_{p\ni\ell}\|\Phi_p\|_\infty\)</span>
+follows from the margin <span
+class="math inline">\(|V|-\sum\rho_V\)</span> by the same lemma.</p>
+<p><strong>Where it would have to hold.</strong> The numerical evidence
+places the <span class="math inline">\(SU(3)\)</span> crossover at <span
+class="math inline">\(\beta_W\simeq5\)</span>–<span
+class="math inline">\(6.5\)</span> with <span
+class="math inline">\(\xi/a\)</span> of order <span
+class="math inline">\(1\)</span> to <span
+class="math inline">\(10\)</span>; a verification at those couplings
+would need <span class="math inline">\(R\)</span> of order <span
+class="math inline">\(10\)</span>–<span
+class="math inline">\(30\)</span>, that is <span
+class="math inline">\(10^4\)</span>–<span
+class="math inline">\(10^6\)</span> links, and rigorous bounds on the
+corresponding integrals. That is far beyond present practice, and this
+repository performs no numerics. The specification is nonetheless
+complete: the quantity, the boxes, the inequality, and the two lemmas
+that convert its margin into a gap and into an openness radius.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The strong-coupling side now has a third, elementary proof with the
+best rigorous threshold for the Wilson transfer matrix, <span
+class="math inline">\(g^2&gt;444\)</span> for <span
+class="math inline">\(SU(3)\)</span>, and the finite verification of the
+intermediate region has a precise statement: the Dobrushin–Shlosman
+block criterion for the Wilson interaction, whose single-link case is
+proved here. The two numbers of the finite-verification note are
+unchanged, and the second of them, <span class="math inline">\(g_{\rm
+DS}^2\)</span>, is exactly the smallest coupling at which the block
+criterion has been verified for some <span
+class="math inline">\(V\)</span>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

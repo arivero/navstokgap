@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conjugation by the flow preserves the spectrum, so the renormalization step is a truncation</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Conjugation by the flow preserves the spectrum, so the
+renormalization step is a truncation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-conjugation-truncation.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-conjugation-truncation.pdf">PDF</a></p><p>The gradient flow is a diffeomorphism of the compact configuration
+space <span class="math inline">\(G^{\mathcal E}\)</span>, so it is
+implemented by a unitary on <span class="math inline">\(L^2(G^{\mathcal
+E})\)</span> and conjugation by it leaves every eigenvalue of the
+Kogut–Susskind Hamiltonian unchanged. Under that conjugation the
+magnetic term becomes the flowed action, which the flow decreases
+monotonically, and the electric term becomes the Laplace–Beltrami
+operator of the pulled-back metric together with a Jacobian potential.
+In the free case the two effects cancel exactly: the magnetic
+coefficient of the mode <span class="math inline">\(k\)</span> is
+multiplied by <span class="math inline">\(e^{-2tk^2}\)</span> and the
+electric one by <span class="math inline">\(e^{+2tk^2}\)</span>, leaving
+the frequencies <span class="math inline">\(\omega_k=ck\)</span>
+untouched. Reading the conjugated Hamiltonian as “classical part plus
+perturbation” and applying the strong-coupling criterion of <a
+href="strong-coupling-uniform-gap.html">the T2 note</a> would give <span
+class="math display">\[\beta\ \longmapsto\ \beta\,e^{-4tk^2},\]</span>
+an arbitrarily large improvement of a criterion whose conclusion, the
+gap, cannot have changed. The resolution names the content of a
+renormalization step: <strong>the criterion presupposes a local
+decomposition, the conjugated electric term is nonlocal with range <span
+class="math inline">\(\sqrt{8t}\)</span>, and any gain is charged
+entirely to truncating that nonlocality</strong>. A change of variables
+moves the difficulty and never removes it; the truncation error is the
+difficulty. This closes the last of the three ways of avoiding the
+constructive step that this programme has tried, and it states in one
+line what such a step must control. Constants explicit; nothing
+promoted.</p>
+<h2 id="the-flow-is-a-unitary-change-of-variables">1. The flow is a
+unitary change of variables</h2>
+<p>On a finite lattice the Wilson flow <span class="math display">\[\dot
+V_s(x,\mu)=-g^2\big\{\partial_{x,\mu}S_w(V_s)\big\}V_s(x,\mu),
+\qquad V_0=U,\]</span> has a unique smooth solution for all <span
+class="math inline">\(s\in\mathbb R\)</span> (Lüscher,
+arXiv:1006.4518v3, equation (1.4) and the sentence following it; passage
+level via the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Luscher_WilsonFlow_1006.4518v3.md">local
+companion</a>), so <span class="math inline">\(\Phi_t:U\mapsto
+V_t\)</span> is a diffeomorphism of the compact manifold <span
+class="math inline">\(\mathcal M=G^{\mathcal E}\)</span> with smooth
+inverse <span class="math inline">\(\Phi_{-t}\)</span>.</p>
+<p><strong>Proposition 1.</strong> Let <span
+class="math inline">\(\rho_t=\big|\!\det D\Phi_t\big|\)</span> be the
+Jacobian of <span class="math inline">\(\Phi_t\)</span> with respect to
+the Haar measure <span class="math inline">\(\mu\)</span>. Then <span
+class="math display">\[(W_t\psi)(U)=\rho_t(U)^{1/2}\,\psi\big(\Phi_t(U)\big)\]</span>
+is unitary on <span class="math inline">\(L^2(\mathcal M,\mu)\)</span>,
+and for any self-adjoint <span class="math inline">\(H\)</span> the
+operator <span class="math inline">\(W_tHW_t^*\)</span> has the same
+spectrum, multiplicities and gap.</p>
+<p><em>Proof.</em> Change of variables: for <span
+class="math inline">\(\psi,\varphi\in L^2\)</span>, <span
+class="math inline">\(\int\overline{(W_t\psi)}(W_t\varphi)\,d\mu=\int\rho_t\,\overline{\psi(\Phi_t
+U)}\varphi(\Phi_tU)\,d\mu(U) =\int\overline\psi\varphi\,d\mu\)</span>
+since <span class="math inline">\(\rho_t\,d\mu=\Phi_t^*d\mu\)</span>.
+Surjectivity follows from <span
+class="math inline">\(W_t^{-1}=W_{-t}\)</span> up to the Jacobian
+cocycle. Unitary conjugation preserves the spectrum. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="the-conjugated-hamiltonian">2. The conjugated Hamiltonian</h2>
+<p>Write <span class="math inline">\(H=\frac{\hbar
+cg^2}{2a}K+\frac{2\hbar c}{ag^2}V\)</span> with <span
+class="math inline">\(K=\sum_\ell(-\Delta_\ell)\)</span> and <span
+class="math inline">\(V(U)=\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\)</span>.</p>
+<p><strong>Magnetic term.</strong> For a multiplication operator, <span
+class="math inline">\(W_tM_VW_t^*=M_{V\circ\Phi_t}\)</span>, computed
+directly from the definition: the two Jacobian factors cancel. So the
+magnetic potential becomes the <strong>flowed action</strong>, and <span
+class="math inline">\(S_w(V_t)\)</span> is a monotonically decreasing
+function of <span class="math inline">\(t\)</span> (Lüscher, immediately
+after (1.4)), whence <span class="math display">\[0\ \le\ V\circ\Phi_t\
+\le\ V .\]</span></p>
+<p><strong>Electric term.</strong> <span
+class="math inline">\(K\)</span> is the Laplace–Beltrami operator of the
+product bi-invariant metric on <span class="math inline">\(\mathcal
+M\)</span>. Conjugation by <span class="math inline">\(W_t\)</span>
+gives the Laplace–Beltrami operator of the pulled-back metric <span
+class="math inline">\(\Phi_t^*\,\mathrm g\)</span>, together with a
+first-order term and a potential built from <span
+class="math inline">\(\rho_t\)</span> and its derivatives: <span
+class="math display">\[W_tKW_t^*=-\Delta_{\Phi_t^*\mathrm g}+Q_t,\qquad
+Q_t=\rho_t^{1/2}\big(\Delta_{\Phi_t^*\mathrm
+g}\,\rho_t^{-1/2}\big),\]</span> the standard ground-state transform.
+The pulled-back metric is no longer a product over links: <span
+class="math inline">\(D\Phi_t\)</span> mixes links within the flow
+radius <span class="math inline">\(\sqrt{8t}\)</span>, so the conjugated
+kinetic operator has <strong>range <span
+class="math inline">\(\sqrt{8t}\)</span></strong>.</p>
+<h2 id="the-free-case-exact-cancellation">3. The free case: exact
+cancellation</h2>
+<p>For the abelian theory in Coulomb gauge the flow is the heat equation
+(as in <a href="flowed-bound-free-field.html">the free-field note</a>
+§2), so <span class="math inline">\(\Phi_t\)</span> is the linear map
+<span class="math inline">\(A\mapsto e^{t\Delta}A\)</span>, its Jacobian
+is a constant, and <span class="math inline">\(W_t\)</span> is the
+induced unitary with no potential term. The conjugated Hamiltonian is,
+mode by mode, <span
+class="math display">\[W_tHW_t^*=\int\!\frac{d^3k}{(2\pi)^3}\Big[\frac{g^2c}{2\hbar}\,e^{+2tk^2}\big|\hat\Pi(k)\big|^2
++\frac{\hbar c}{2g^2}\,k^2e^{-2tk^2}\big|\hat A(k)\big|^2\Big],\]</span>
+since the conjugate momentum transforms by the inverse transpose of the
+map on the fields. Each mode is an oscillator of frequency <span
+class="math display">\[\omega_k=\sqrt{\big(c\,e^{+2tk^2}\big)\big(c\,k^2e^{-2tk^2}\big)}=ck,\]</span>
+independent of <span class="math inline">\(t\)</span>, as Proposition 1
+requires. The flow makes the potential smaller and the kinetic term
+correspondingly stiffer, and the product is invariant.</p>
+<h2 id="what-this-does-to-a-locality-based-criterion">4. What this does
+to a locality-based criterion</h2>
+<p>The criterion of <a href="strong-coupling-uniform-gap.html">the T2
+note</a> compares the norm of the perturbation with the local gap of the
+classical part: <span class="math inline">\(\beta=\|\phi\|/(\text{local
+gap})\)</span>. Applied to the conjugated Hamiltonian, mode by mode in
+the free case, the magnetic norm carries <span
+class="math inline">\(e^{-2tk^2}\)</span> and the local gap of the
+kinetic term carries <span class="math inline">\(e^{+2tk^2}\)</span>, so
+<span class="math display">\[\beta\ \longmapsto\
+\beta\,e^{-4tk^2},\]</span> which can be made as small as desired by
+taking <span class="math inline">\(t\)</span> large. On a lattice the
+modes run to <span class="math inline">\(k\sim\pi/a\)</span>, so at flow
+time <span class="math inline">\(t=(Ma)^2\)</span> the improvement
+factor reaches <span class="math inline">\(e^{-4\pi^2M^2}\)</span>.
+Since the spectrum is unchanged, no statement about the gap can follow
+from this improvement.</p>
+<p><strong>Where the criterion loses its validity.</strong> Yarotsky’s
+hypotheses require the classical part to be a sum of single-site terms
+and the perturbation to have finite range. After conjugation, the
+kinetic operator has range <span
+class="math inline">\(\sqrt{8t}\)</span> and the decomposition into
+single-link terms is gone. The apparent gain is therefore the price of
+dropping a hypothesis, and a criterion that keeps the hypothesis must
+first <strong>truncate</strong> the conjugated kinetic operator back to
+finite range. Truncation changes the operator, and the resulting gap
+bound applies to the truncated Hamiltonian; its relation to the original
+is exactly the truncation error.</p>
+<p><strong>Corollary 2.</strong> Any gap criterion formulated through a
+local decomposition into classical part and small perturbation fails to
+be invariant under unitary changes of variables, and can be improved
+without limit by conjugation. Consequently the improvement obtained in a
+renormalization step is charged in full to the truncation that restores
+locality, and no change of variables by itself improves a spectral
+bound.</p>
+<h2 id="the-three-closed-routes">5. The three closed routes</h2>
+<p>This completes a set. Of the ways to reach <span
+class="math inline">\(m&gt;0\)</span> while avoiding the constructive
+step, the notes have now closed:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>route</th>
+<th>why it closes</th>
+<th>note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>expansion around the free theory</td>
+<td>the bound reaches <span class="math inline">\(m\)</span> only at the
+confinement scale, where the coefficient is nonperturbative</td>
+<td><a href="flowed-bound-free-field.html">free field</a> §7</td>
+</tr>
+<tr class="even">
+<td>real-space blocking by projection</td>
+<td>boundary grows like <span class="math inline">\(M^2\)</span>, block
+gap does not grow; criterion worsens by <span
+class="math inline">\(3M^2/8\)</span></td>
+<td><a href="blocking-criterion-monotone.html">blocking
+criterion</a></td>
+</tr>
+<tr class="odd">
+<td>change of variables by the flow</td>
+<td>spectrum is invariant, so the gain is the truncation error</td>
+<td>this note</td>
+</tr>
+<tr class="even">
+<td>upper bounds of any kind</td>
+<td>finite negative moments are compatible with <span
+class="math inline">\(m=0\)</span></td>
+<td><a href="moment-hierarchy-upper-bounds.html">moment hierarchy</a>
+§5</td>
+</tr>
+</tbody>
+</table>
+<p>Each was closed by a computation with explicit constants rather than
+by an appeal to difficulty, and together they say the same thing: the
+only place a proof of <span class="math inline">\(m&gt;0\)</span> can
+come from is a controlled truncation, applied a finite number of times,
+with the error at each step small compared with the gap at that
+scale.</p>
+<h2 id="what-a-truncation-must-satisfy">6. What a truncation must
+satisfy</h2>
+<p>The requirement can now be stated with the constants of this
+programme. Let <span class="math inline">\(H^{(n)}\)</span> be the
+theory at scale <span class="math inline">\(\ell_n=2^n a\)</span>, with
+gap <span class="math inline">\(\Delta_n\ge\kappa\,\hbar
+c\,g_n^2/\ell_n\)</span> in the regime where the criterion applies, and
+let <span class="math inline">\(T_n\)</span> be the truncation to range
+<span class="math inline">\(\ell_n\)</span> following the conjugation. A
+proof needs <span
+class="math display">\[\big\|H^{(n)}-T_nW_{t_n}H^{(n)}W_{t_n}^*T_n^*\big\|_{\rm
+relative}\ \ll\ \Delta_n
+\qquad\text{for each of the
+}n\simeq\frac{1}{2b_0\log2}\Big(\frac1{g_{\rm UV}^2}-\frac1{g_{\rm
+thr}^2}\Big)\]</span> steps, with the norm taken in the relative sense
+of <a href="schur-error-ultraviolet.html">the Schur note</a> Lemma
+1<span class="math inline">\(&#39;\)</span>, so that constant shifts are
+free. The flow radius <span class="math inline">\(\sqrt{8t_n}\)</span>
+must be of order <span class="math inline">\(\ell_n\)</span> for the
+conjugation to reduce the action at the right scale, and the truncation
+error is governed by the decay of the flow Jacobian <span
+class="math inline">\(D\Phi_{t_n}\)</span> beyond that radius, which for
+the free case is Gaussian in <span
+class="math inline">\(|x|/\sqrt{8t_n}\)</span> and in the interacting
+case is the object the construction must bound.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The three ways of avoiding the constructive step are closed, and the
+step itself is stated in the form the constants of this programme give
+it: a conjugation by the flow at radius <span
+class="math inline">\(\ell_n\)</span> followed by a truncation whose
+relative error must stay below the gap at that scale, iterated a finite
+number of times. The next tractable item is the decay of the flow
+Jacobian <span class="math inline">\(D\Phi_t\)</span> on the lattice,
+which controls the truncation error and which the free case fixes
+exactly; that is a bounded question about the flow equation and is the
+natural next note.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

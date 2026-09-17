@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The map as one conditional theorem: two hypotheses, both finite in kind, and an explicit lower bound m≥ħ c &#x27;/a*</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The map as one conditional theorem: two hypotheses, both finite in
+kind, and an explicit lower bound <span class="math inline">\(m\ge\hbar
+c\,\gamma&#39;/a_*\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-conditional-theorem.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-conditional-theorem.pdf">PDF</a></p><p>Everything this programme has established about the <span
+class="math inline">\(SU(3)\)</span> mass gap can be stated as a single
+conditional theorem. Its two hypotheses are the two things not proved
+here: control of the blocking steps from the weak side down to the
+coupling where the correlation length is one lattice unit, and a
+certified mixing statement at that one coupling on one finite box. Its
+conclusion is the Jaffe–Witten gap along the trajectory with an explicit
+lower bound, <span class="math display">\[m\ \ge\ \frac{\hbar
+c\,\gamma&#39;}{a_*},\]</span> where <span
+class="math inline">\(a_*\)</span> is the physical lattice spacing at
+which the trajectory reaches the verified coupling, about <span
+class="math inline">\(0.1\)</span> to <span
+class="math inline">\(0.17\)</span> fm by the published scale, and <span
+class="math inline">\(\gamma&#39;\)</span> is the certified decay rate
+per lattice unit there. Any positive <span
+class="math inline">\(\gamma&#39;\)</span> gives a positive gap, and the
+data say the true rate is about <span
+class="math inline">\(0.8\)</span>. Constants explicit; nothing
+promoted.</p>
+<h2 id="setting">1. Setting</h2>
+<p>Wilson measure <span class="math inline">\(\mu_{\beta_0}\)</span> on
+the links of <span class="math inline">\((a_0\mathbb Z)^4\)</span> at
+bare coupling <span class="math inline">\(\beta_0=6/g_0^2\)</span>, in a
+periodic box of any size. A block-spin map <span
+class="math inline">\(\mathcal B\)</span> of block size <span
+class="math inline">\(2\)</span>: a gauge-covariant assignment of a
+coarse link variable to each block, measurable in the fine links, such
+that coarse Wilson loops are functions of fine Wilson loops. The
+renormalized measures <span class="math inline">\(\mu^{(k)}=\mathcal
+B^k\mu_{\beta_0}\)</span> live on the links of <span
+class="math inline">\((2^ka_0\mathbb Z)^4\)</span> and, by construction,
+reproduce exactly the correlations of coarse observables. Write <span
+class="math inline">\(\Phi^{(k)}\)</span> for the renormalized
+interaction when it exists, and <span
+class="math inline">\(\|\Phi\|_\kappa=\sup_\ell\sum_{X\ni\ell}e^{\kappa\operatorname{diam}X}\|\Phi_X\|_\infty\)</span>
+for the interaction norm with range weight <span
+class="math inline">\(\kappa&gt;0\)</span>.</p>
+<h2 id="the-hypotheses">2. The hypotheses</h2>
+<p><strong>H1 (the weak side).</strong> There is <span
+class="math inline">\(K=K(a_0)\)</span> with <span
+class="math inline">\(2^Ka_0\to a_*\)</span> as <span
+class="math inline">\(a_0\to0\)</span>, a rate <span
+class="math inline">\(\gamma_*&gt;0\)</span> and constants <span
+class="math inline">\(C_k\)</span> such that for each <span
+class="math inline">\(k&lt;K\)</span> and all local observables <span
+class="math inline">\(F,G\)</span> of the <span
+class="math inline">\(k\)</span>-th lattice with supports at distance
+<span class="math inline">\(d\)</span> in its units, <span
+class="math display">\[\Big|\langle F;G\rangle_{\mu^{(k)}}-\langle\bar
+F;\bar G\rangle_{\mu^{(k+1)}}\Big|
+\ \le\ C_k\,\|F\|_\infty\|G\|_\infty\,e^{-\gamma_*d},\]</span> where
+<span class="math inline">\(\bar F\)</span> is the conditional
+expectation of <span class="math inline">\(F\)</span> given the coarse
+links; and <span class="math inline">\(\Phi^{(K)}\)</span> exists, is
+finite in <span class="math inline">\(\|\cdot\|_\kappa\)</span>, and
+satisfies <span class="math inline">\(\|\Phi^{(K)}-\Phi_0\|_\kappa\le
+r\)</span> for a reference interaction <span
+class="math inline">\(\Phi_0\)</span> and radius <span
+class="math inline">\(r\)</span> fixed in H2.</p>
+<p>In words: at every step before the last, the fluctuations integrated
+out cluster exponentially at the scale of the step, and the trajectory
+arrives within a fixed distance of a reference interaction. For the
+steps at which the effective coupling is small this is the content of
+the constructive programme, perturbative in kind and unavailable with
+constants; for the last three, in which <span
+class="math inline">\(\xi/a\)</span> passes from about <span
+class="math inline">\(10\)</span> to about <span
+class="math inline">\(1\)</span>, it is the open problem (<a
+href="confinement-scale-bands.html">bands note</a> §2b).</p>
+<p><strong>H2 (one box).</strong> The reference interaction <span
+class="math inline">\(\Phi_0\)</span> satisfies the strong-mixing
+condition on a box <span class="math inline">\(V\)</span> of side <span
+class="math inline">\(R\)</span>: for every <span
+class="math inline">\(W\subseteq V\)</span>, every boundary link <span
+class="math inline">\(y\)</span> and boundary conditions <span
+class="math inline">\(\omega,\omega&#39;\)</span> differing at <span
+class="math inline">\(y\)</span>, <span
+class="math display">\[\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega&#39;}\big|_W\big\|_{\rm
+TV}\ \le\ C\,|W|\,e^{-\gamma\,d(W,y)},\]</span> with a margin such that
+every <span class="math inline">\(\Phi\)</span> with <span
+class="math inline">\(\|\Phi-\Phi_0\|_\kappa\le r\)</span> satisfies the
+same condition with some <span
+class="math inline">\(C&#39;,\gamma&#39;&gt;0\)</span>. The natural
+<span class="math inline">\(\Phi_0\)</span> is the Wilson interaction at
+<span class="math inline">\(\beta_W\simeq6\)</span>, where the published
+correlation length is about one lattice unit, and <span
+class="math inline">\(R\)</span> is <span
+class="math inline">\(3\)</span> to <span
+class="math inline">\(5\)</span>; the condition is to be read on the
+gauge-invariant content of <span class="math inline">\(W\)</span>, the
+small Wilson loops, since single-link marginals of interior links are
+Haar (<a href="confinement-scale-bands.html">bands note</a>).</p>
+<h2 id="the-theorem">3. The theorem</h2>
+<p><strong>Theorem (conditional).</strong> Assume H1 and H2. Then for
+every bare coupling on the trajectory and every periodic volume:</p>
+<ol type="1">
+<li><span class="math inline">\(\mu^{(K)}\)</span> has a unique Gibbs
+state and truncated correlations of all local observables decaying at
+rate at least <span class="math inline">\(\gamma&#39;\)</span> per unit
+of <span class="math inline">\(2^Ka_0\)</span> (Dobrushin–Shlosman;
+Martinelli–Olivieri);</li>
+<li><span class="math inline">\(\mu_{\beta_0}\)</span> has truncated
+correlations of all local fine observables decaying at rate at least
+<span
+class="math inline">\(\min\big(\gamma_*,\,\gamma&#39;\big)/2^K\)</span>
+per unit of <span class="math inline">\(a_0\)</span>;</li>
+<li>the Wilson transfer matrix at spacing <span
+class="math inline">\(a_0\)</span> has a spectral gap <span
+class="math display">\[\Delta(a_0)\ \ge\ \frac{\hbar
+c}{a_0}\cdot\frac{\min(\gamma_*,\gamma&#39;)}{2^{K(a_0)}}\]</span> on
+the cyclic subspace of local observables, uniformly in the volume;</li>
+<li>in the continuum limit along the trajectory, <span
+class="math display">\[m\ \ge\ \frac{\hbar
+c\,\min(\gamma_*,\gamma&#39;)}{a_*}\ &gt;\ 0 .\]</span></li>
+</ol>
+<p><em>Proof.</em> (1) is the mixing-to-decay theorem applied to <span
+class="math inline">\(\Phi^{(K)}\)</span>, which lies in the verified
+neighbourhood by H1 and H2. For (2), write a fine observable as its
+coarse part plus fluctuation parts step by step, <span
+class="math inline">\(F=\bar F^{(K)}+\sum_{k&lt;K}(F^{(k)}-\bar
+F^{(k)})\)</span>; the coarse-part correlations decay by (1) at rate
+<span class="math inline">\(\gamma&#39;\)</span> per coarse unit, that
+is <span class="math inline">\(\gamma&#39;/2^K\)</span> per fine unit,
+and the fluctuation-part correlations at step <span
+class="math inline">\(k\)</span> decay by H1 at rate <span
+class="math inline">\(\gamma_*\)</span> per unit of <span
+class="math inline">\(2^ka_0\)</span>, that is <span
+class="math inline">\(\gamma_*/2^k\ge\gamma_*/2^K\)</span> per fine
+unit; the cross terms are bounded by the same rates. (3) is link
+reflection positivity together with the spectral argument of <a
+href="wilson-strong-coupling-explicit.html">the Wilson note</a> §3:
+decay at rate <span class="math inline">\(\mu\)</span> per fine unit for
+all local observables forces the spectral measure of every local vector
+orthogonal to the vacuum to vanish above <span
+class="math inline">\(e^{-\mu}\)</span>. (4) follows from (3) as <span
+class="math inline">\(a_0\to0\)</span> with <span
+class="math inline">\(2^{K(a_0)}a_0\to a_*\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The Jaffe–Witten clause <span
+class="math inline">\(0&lt;m&lt;\infty\)</span> is then (4) together
+with the upper side of <a href="moment-hierarchy-upper-bounds.html">the
+moment-hierarchy note</a>; T3, the ratio <span
+class="math inline">\(m/(\hbar c\Lambda)\)</span>, is the statement that
+<span class="math inline">\(a_*\Lambda\)</span> has a limit, which is
+the convergence of the trajectory to one curve as in <a
+href="intermediate-region-finite-verification.html">the
+finite-verification note</a>.</p>
+<h2 id="what-the-theorem-makes-visible">4. What the theorem makes
+visible</h2>
+<p><em>The bound is a ratio of a certified rate to a physical
+length.</em> With <span class="math inline">\(a_*\simeq0.093\)</span> fm
+at <span class="math inline">\(\beta_W=6\)</span> and the measured
+glueball mass <span class="math inline">\(1.66\,\hbar c\,{\rm
+fm}^{-1}\)</span>, the true rate is <span class="math inline">\(m
+a_*\simeq0.78\)</span>; a certified <span
+class="math inline">\(\gamma&#39;\)</span> of any size gives a theorem,
+and one of order <span class="math inline">\(0.1\)</span> would already
+be a physically meaningful bound.</p>
+<p><em>Both hypotheses are finite in kind.</em> H2 is one box at one
+coupling. H1 is a sequence of steps, uniform in the perturbative regime,
+whose non-perturbative part is three steps. Neither is available today:
+H2 needs a certified computation, and H1’s last three steps are the
+confinement-scale problem.</p>
+<p><em>Nothing else is missing.</em> T1, T2, the strong-coupling side
+below the verified coupling, the transfer from decay to gap, the upper
+side of the gap, and the reduction of T3 are all in place with explicit
+constants. The theorem is the repository’s formal endpoint: a proof of
+the mass gap for <span class="math inline">\(SU(3)\)</span> consists of
+H1 and H2.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The map is a theorem with two hypotheses and an explicit conclusion
+<span class="math inline">\(m\ge\hbar
+c\min(\gamma_*,\gamma&#39;)/a_*\)</span>. Progress from here is progress
+on H1 or H2, and nothing else.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

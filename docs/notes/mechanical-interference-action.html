@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mechanical interference measures phase without fixing an action unit</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Mechanical interference measures phase without fixing an action
+unit</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mechanical-interference-action.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mechanical-interference-action.pdf">PDF</a></p><p>An ideal classical string network sends a finite pulse down two paths
+and transfers its entire energy into two mechanical absorbers. Their
+work records contain an interference cross term. Attenuating the
+incident displacement leaves the normalized fringe unchanged while every
+energy and canonical action shrinks quadratically. This exploratory Q08
+construction tests the physical phase premise left by Q07; it is not
+promoted to the claim ledger.</p>
+<h2 id="wave-junction-and-receiver-premises">1. Wave, junction and
+receiver premises</h2>
+<p>Take identical linear strings with mass per length <span
+class="math inline">\(\mu&gt;0\)</span>, tension <span
+class="math inline">\(T&gt;0\)</span>, transverse displacement <span
+class="math inline">\(u(x,t)\)</span> and small slopes. Position and
+displacement have length units. Define speed <span
+class="math inline">\(c=\sqrt{T/\mu}\)</span> and mechanical impedance
+<span class="math inline">\(Z=\sqrt{\mu T}=\mu c\)</span>, with units
+mass/time. The stipulated continuum model is</p>
+<p><span class="math display">\[
+L=\int\frac12(\mu u_t^2-Tu_x^2)\,dx,\qquad
+\mu u_{tt}=Tu_{xx},\qquad
+e=\frac12(\mu u_t^2+Tu_x^2),\quad j=-Tu_tu_x.
+\]</span></p>
+<p>Multiplying the equation by <span class="math inline">\(u_t\)</span>
+gives <span class="math inline">\(\partial_t e+\partial_x j=0\)</span>.
+A right-moving displacement <span
+class="math inline">\(f(t-x/c)\)</span> has <span
+class="math inline">\(e=\mu(f&#39;)^2\)</span> and <span
+class="math inline">\(j=Z(f&#39;)^2\)</span>. Prepare a nonzero smooth
+compactly supported pulse <span class="math inline">\(f\)</span>; its
+incident energy is <span class="math inline">\(E=Z\int_{\mathbb
+R}(f&#39;)^2dt&gt;0\)</span>. This preparation supplies energy; no
+source operates during its subsequent passage.</p>
+<p>A lossless four-port junction mixes two input strings into two output
+strings with the real matrix</p>
+<p><span class="math display">\[
+H=\frac1{\sqrt2}\begin{pmatrix}1&amp;1\\1&amp;-1\end{pmatrix},\qquad
+S=\begin{pmatrix}0&amp;H\\H&amp;0\end{pmatrix}.
+\]</span></p>
+<p>Here <span class="math inline">\(S\)</span> maps incoming to outgoing
+displacement profiles on four equal-impedance ports. It is symmetric,
+<span class="math inline">\(S^2=I\)</span>, and orthogonal. This is an
+ideal mechanical constraint, not an assertion that an ordinary
+tied-string knot has this rule. For an explicit boundary realization
+orient all four port coordinates outward, write <span
+class="math inline">\(u=a(t+x/c)+b(t-x/c)\)</span> and put <span
+class="math inline">\(P_\pm=(I\pm S)/2\)</span>. Impose <span
+class="math inline">\(P_-u(0,t)=0\)</span> and <span
+class="math inline">\(P_+u_x(0,t)=0\)</span>. The first fixes the
+constrained junction displacement; the second supplies free force
+balance in its orthogonal subspace. For pulses initially at rest these
+equations give <span class="math inline">\(b=Sa\)</span>. Indeed they
+give <span class="math inline">\(P_-b=-P_-a\)</span> and <span
+class="math inline">\(P_+b&#39;=P_+a&#39;\)</span>; the integration
+constant vanishes before arrival. The displacement velocity lies in the
+plus subspace and the boundary force in the minus subspace, so their
+scalar product and boundary work vanish. Equivalently <span
+class="math inline">\(\sum_j(a&#39;_j)^2=\sum_j(b&#39;_j)^2\)</span>. An
+ideal massless linkage enforcing these fixed linear constraints is a
+model premise. Finite junction inertia and bandwidth are outside this
+construction.</p>
+<p>At each final output install a viscous receiver with force
+coefficient <span class="math inline">\(Z\)</span>. At a right endpoint
+the balance <span class="math inline">\(Tu_x=-Z u_t\)</span> admits a
+pure outgoing wave without reflection. Work delivered to the receiver
+is</p>
+<p><span class="math display">\[
+Q(t)=\int_{-\infty}^t Z u_t(s)^2\,ds,\qquad \dot Q\ge0.
+\]</span></p>
+<p>The dashpot represents a sink with an internal energy record <span
+class="math inline">\(Q\)</span>; field energy plus these records is
+conserved after preparation. It is not a finite closed Hamiltonian model
+of the bath. A semi-infinite matched string supplies an alternative
+conservative energy sink, with <span class="math inline">\(Q\)</span>
+the energy transported into it. Neither realization imposes a minimum
+resolvable work or a discrete event rule.</p>
+<h2 id="exact-two-path-energy-readout">2. Exact two-path energy
+readout</h2>
+<p>Use two such junctions. The first splits the input <span
+class="math inline">\((f,0)\)</span>; the two arms have positive travel
+times <span class="math inline">\(\tau_1,\tau_2\)</span>; the second
+mixes their arriving waves. The unused source port has no incoming wave
+and is matched. All connections are reflectionless in the stipulated
+model. Output displacements are</p>
+<p><span class="math display">\[
+b_\pm(t)=\frac12[f(t-\tau_1)\pm f(t-\tau_2)].
+\]</span></p>
+<p>Integrating the receiver work over the complete pulse gives</p>
+<p><span class="math display">\[
+Q_\pm=\frac E2\pm\frac Z2
+\int f&#39;(t-\tau_1)f&#39;(t-\tau_2)\,dt,
+\qquad Q_++Q_-=E. \tag{1}
+\]</span></p>
+<p>For <span class="math inline">\(\delta=\tau_2-\tau_1\)</span>, define
+the normalized derivative autocorrelation</p>
+<p><span class="math display">\[
+C(\delta)=\frac{\int f&#39;(s)f&#39;(s-\delta)ds}{\int(f&#39;)^2ds},
+\qquad \frac{Q_\pm}{E}=\frac{1\pm C(\delta)}2. \tag{2}
+\]</span></p>
+<p>Cauchy–Schwarz gives <span class="math inline">\(|C|\le1\)</span>, so
+both receiver energies are nonnegative. At equal delays <span
+class="math inline">\(C=1\)</span> and all energy reaches the plus
+output. When the two derivative supports do not overlap <span
+class="math inline">\(C=0\)</span> and each receiver takes <span
+class="math inline">\(E/2\)</span>. These are deterministic energies in
+a single pulse experiment. Dividing by <span
+class="math inline">\(E\)</span> does not turn them into probabilities
+of exclusive detector clicks.</p>
+<p>For the coherent limit choose <span class="math inline">\(f_D(t)=A
+g(t/D)\cos(\omega t)\)</span> with a fixed nonzero smooth compactly
+supported envelope <span class="math inline">\(g\)</span>, <span
+class="math inline">\(\omega&gt;0\)</span>, and fixed delay <span
+class="math inline">\(\delta\)</span>. Let <span
+class="math inline">\(D\to\infty\)</span> at fixed <span
+class="math inline">\(A,\omega,\delta\)</span>. The leading derivative
+is <span class="math inline">\(-A\omega g(t/D)\sin(\omega t)\)</span>;
+the envelope derivative contributes lower order terms to the integrals
+divided by <span class="math inline">\(D\)</span>. Setting <span
+class="math inline">\(t=Dr\)</span>, translation of the envelope tends
+to the identity, while integration by parts makes the oscillatory
+double-frequency term vanish. Thus</p>
+<p><span class="math display">\[
+C_D(\delta)\longrightarrow\cos(\omega\delta),\qquad
+Q_+/E\longrightarrow\cos^2(\omega\delta/2),\quad
+Q_-/E\longrightarrow\sin^2(\omega\delta/2). \tag{3}
+\]</span></p>
+<p>This is a long coherent pulse limit, with energy growing with <span
+class="math inline">\(D\)</span> at fixed amplitude, not an exact
+sinusoidal formula for an arbitrary finite pulse. Equations (1)–(2)
+already give the finite-energy result. Scaling <span
+class="math inline">\(A\)</span> with <span
+class="math inline">\(D\)</span> to hold the energy fixed leaves the
+normalized correlation unchanged.</p>
+<h2 id="which-mechanical-action-could-the-phase-measure">3. Which
+mechanical action could the phase measure?</h2>
+<p>A carrier delay produces the unwrapped relative phase <span
+class="math inline">\(\phi=\omega\delta\)</span>; the two energy records
+measure its cosine. They determine neither its sign nor its winding
+without additional phase scans or timing information. Complex phasors
+may abbreviate the real sine/cosine solution; no quantum probability
+postulate enters (1).</p>
+<p>To expose the action normalization, take the right-moving
+monochromatic wave <span class="math inline">\(u=A\cos(\omega
+t-kx)\)</span>, <span class="math inline">\(k=\omega/c\)</span>, and one
+wavelength <span class="math inline">\(\ell=2\pi c/\omega\)</span>. This
+is a periodic carrier calculation, also applicable to an exact carrier
+plateau of a sufficiently long pulse while the cell stays inside that
+plateau. With momentum density <span class="math inline">\(p=\mu
+u_t\)</span>, its cell energy is</p>
+<p><span class="math display">\[
+E_\ell=\int_0^\ell e\,dx
+=\frac12\mu A^2\omega^2\ell=\pi Z A^2\omega.
+\]</span></p>
+<p>Over one temporal cycle the canonical loop integral and action
+variable are</p>
+<p><span class="math display">\[
+J_\ell=\int_0^{2\pi/\omega}\!dt\int_0^\ell p u_t\,dx
+=\frac{2\pi E_\ell}{\omega},\qquad
+I_\ell=\frac{J_\ell}{2\pi}=\frac{E_\ell}{\omega}=\pi Z A^2. \tag{4}
+\]</span></p>
+<p>Spatial integration over a complete wavelength makes <span
+class="math inline">\(\int p u_tdx=E_\ell\)</span> constant at every
+time. The signed canonical accumulation over a delay is <span
+class="math inline">\(W_\ell(\delta)=E_\ell\delta\)</span>, hence</p>
+<p><span class="math display">\[
+\phi=\frac{W_\ell(\delta)}{I_\ell}. \tag{5}
+\]</span></p>
+<p>This supplies an explicit action-to-phase conversion, with a
+preparation- and impedance-dependent coefficient. Choosing a cell of
+<span class="math inline">\(n\)</span> wavelengths multiplies both <span
+class="math inline">\(W\)</span> and <span
+class="math inline">\(I\)</span> by <span
+class="math inline">\(n\)</span> without altering the phase. Moreover
+the spacetime Lagrangian action of this pure traveling wave is zero:
+<span class="math inline">\(\mu u_t^2=Tu_x^2\)</span> pointwise.
+Equation (5) uses a canonical integral, not <span
+class="math inline">\(\int Ldt\)</span>. A claim that the receiver
+measures <span class="math inline">\(\exp(iS/K)\)</span> must specify
+its action functional and boundary convention; equal action units do not
+justify identifying these quantities.</p>
+<h2 id="decisive-attenuation-and-apparatus-tests">4. Decisive
+attenuation and apparatus tests</h2>
+<p>At fixed strings, junctions, delays and receivers replace <span
+class="math inline">\(f\)</span> by <span class="math inline">\(\epsilon
+f\)</span> with <span class="math inline">\(0&lt;\epsilon\le1\)</span>.
+Linearity preserves all travel times and the normalized correlation
+exactly, including for finite pulses. Equations (1) and (4) give</p>
+<p><span class="math display">\[
+E\mapsto\epsilon^2E,\qquad Q_\pm\mapsto\epsilon^2Q_\pm,
+\qquad I_\ell\mapsto\epsilon^2I_\ell,
+\qquad \phi\mapsto\phi. \tag{6}
+\]</span></p>
+<p>Every positive amplitude retains a defined normalized fringe; its
+absolute work vanishes in the zero-amplitude limit. No measurable signal
+is asserted at the zero endpoint. A fixed receiver resolution would end
+practical visibility earlier and would supply an apparatus energy
+threshold.</p>
+<p>A second family rescales <span class="math inline">\(\mu,T,Z\)</span>
+together by <span class="math inline">\(\eta&gt;0\)</span>, including
+receiver impedances. The speed and displacement equations stay fixed,
+whereas energies and action integrals acquire <span
+class="math inline">\(\eta\)</span>. A calibrated force or mass standard
+would distinguish this family. It demonstrates the same common
+normalization freedom as Q06 in an apparatus that now performs
+interference and absorbs work. Changing frequency at fixed delay changes
+the phase; at fixed cell energy it also changes <span
+class="math inline">\(I_\ell=E_\ell/\omega\)</span>. Neither a cosine
+fringe nor a square-law energy record fixes that ratio universally.</p>
+<h2 id="consequence-and-next-decision">5. Consequence and next
+decision</h2>
+<p>Within this model, coherent path composition and mechanical energy
+readout are compatible with arbitrarily small positive classical action.
+This closes Q07’s proposed linear-wave receiver test. The result is a
+physical countermodel to selecting an action unit from interference
+alone, not a reconstruction of quantum detection. The admitted field has
+infinitely many modes and its receivers record divisible energy.</p>
+<p>Park further linear splitter and impedance variants. The sharper next
+test is whether localized event readout excludes this alternative:
+construct a passive receiver with stored energy and a threshold, account
+for its reset work, and test whether exclusive events and their energy
+scale survive changes in receiver preparation. A threshold could sharpen
+event formation while still supplying its own scale; the calculation
+must decide that distinction. Compare this with the gap track before
+dispatch: the string model already specifies real physical dynamics, but
+its nondispersive relation <span
+class="math inline">\(\omega=c|k|\)</span> admits low frequencies as
+wavelength grows and supplies no positive infinite-volume frequency gap.
+Another linear mode calculation would not resolve the missing physical
+quantum Hamiltonian of G04.</p>
+<p>Written consistency checks: variation and local energy balance in
+section 1; zero junction work by orthogonal boundary subspaces; receiver
+work and the sum/difference cancellation in (1); Cauchy–Schwarz and the
+envelope limit; spatial and temporal integrations in (4); distinct
+canonical and Lagrangian actions; exact attenuation and common-parameter
+rescaling. No computational numerical or symbolic verification was
+used.</p>
+<p>Source context is the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B18/checkerboard-recurrence-source-companion.md">B18
+companion</a> and <a href="checkerboard-dynamics.html">checkerboard
+comparison</a>: their norm/probability construction motivates the
+comparison but does not supply the string junction or receiver model. <a
+href="spin-action-patching.html">Q07</a> isolates the phase premise; <a
+href="reciprocal-coupling-normalization.html">Q06</a> isolates
+reciprocal calibration. This note gives its own elementary derivation
+and coordinator consistency review. Independent proof review and bounded
+literature comparison remain required before ledger promotion; no
+novelty claim is made.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

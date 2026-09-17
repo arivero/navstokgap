@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A sharp information bound from indistinguishable motions</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A sharp information bound from indistinguishable motions</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/indistinguishable-phase-bound.md">Markdown source</a></p><p>Bounded-force reachability and noisy differentiation fit into one
+exact minimax argument. A symmetric reachable fibre determines the worst
+record; an explicit force-controlled pair attains the two-record upper
+bound, even when the observer instead receives the entire noisy position
+history.</p>
+<p>R11, 2026-09-10. C078–C079 accepted by <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/indistinguishability-B42.md">written
+review</a>. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B42.md">B42</a>
+matches the prepared zero-initial-state pair to Seeber–Haimovich,
+Proposition 3.1, equations (10)–(12). The mechanical notation and
+blind-delay extension reuse that established construction. Keep <span
+class="math inline">\(m,F,T&gt;0\)</span> and known initial state <span
+class="math inline">\((q_0,p_0)\)</span>. All measurable forces satisfy
+<span class="math inline">\(|f|\le F\)</span>. Position records have
+deterministic absolute error at most <span
+class="math inline">\(\varepsilon&gt;0\)</span> and are available
+through <span class="math inline">\(t_2=T-b\)</span>, where <span
+class="math inline">\(b\ge0\)</span> is a blind prediction interval.
+There is no stochastic law or measurement disturbance. Canonical error
+products have action units, without a <span
+class="math inline">\(2\pi\)</span> normalization.</p>
+<h2 id="convex-symmetry-turns-reachability-into-minimax-risk">1. Convex
+symmetry turns reachability into minimax risk</h2>
+<p>Let <span class="math inline">\(U\)</span> be a compact convex
+centrally symmetric set of admissible force histories or their
+finite-dimensional integral images. After subtracting the known inertial
+solution, let the continuous linear maps <span class="math inline">\(A
+u\)</span> and <span class="math inline">\(L u\)</span> give the sampled
+positions and one scalar terminal coordinate. Allowed records are <span
+class="math inline">\(y=A u+e\)</span> with <span
+class="math inline">\(|e_i|\le\varepsilon_i\)</span>. Define</p>
+<p><span class="math display">\[r_L=\max\{|Lu|:u\in U,\
+|(Au)_i|\le\varepsilon_i\}.\]</span></p>
+<p>Then the minimax worst-case absolute error, over all deterministic
+estimators using <span class="math inline">\(y\)</span>, is exactly
+<span class="math inline">\(r_L\)</span>. Indeed any two inputs <span
+class="math inline">\(u,v\)</span> compatible with the same record
+satisfy <span class="math inline">\((u-v)/2\in U\)</span> and <span
+class="math inline">\(|A(u-v)/2|\le\varepsilon\)</span>. Their output
+separation is at most <span class="math inline">\(2r_L\)</span>. The
+midpoint of the compatible output interval therefore has error at most
+<span class="math inline">\(r_L\)</span>. Conversely <span
+class="math inline">\(u\)</span> and <span
+class="math inline">\(-u\)</span> realizing <span
+class="math inline">\(r_L\)</span> share the zero record, with errors
+<span class="math inline">\(-Au\)</span> and <span
+class="math inline">\(Au\)</span>, and their outputs differ by <span
+class="math inline">\(2r_L\)</span>. Every estimator must incur error at
+least <span class="math inline">\(r_L\)</span> on one of them.</p>
+<p>For the bounded-force model, the <span
+class="math inline">\(L^\infty\)</span> ball is weak-star compact and
+all the required integrals are continuous in that topology; its
+finite-dimensional image is compact. The same argument applies to
+continuous position records with a pointwise error band: the central
+feasible set imposes the inequalities at every observed time. Thus
+shared initial data and joint force compatibility can be retained
+throughout. This is an optimal-recovery principle, not a new force
+law.</p>
+<h2 id="an-explicit-pair-with-the-same-complete-record">2. An explicit
+pair with the same complete record</h2>
+<p>Set</p>
+<p><span class="math display">\[d=2\sqrt{\frac{m\varepsilon}{F}},\qquad
+t_1=t_2-d,\qquad t_2\ge2d.\]</span></p>
+<p>Construct a displacement <span class="math inline">\(g\)</span> from
+the inertial trajectory, with <span
+class="math inline">\(g(0)=g&#39;(0)=0\)</span>. It stays zero until
+<span class="math inline">\(t_1-d\)</span>. Over the next two
+half-intervals of length <span class="math inline">\(d/2\)</span>, apply
+force <span class="math inline">\(-F\)</span> and then <span
+class="math inline">\(+F\)</span>. This ends at</p>
+<p><span
+class="math display">\[g(t_1)=-\frac{Fd^2}{4m}=-\varepsilon,\qquad
+mg&#39;(t_1)=0.\]</span></p>
+<p>Continue with <span class="math inline">\(+F\)</span> for time <span
+class="math inline">\(d\)</span>, and then through the blind interval
+<span class="math inline">\(b\)</span>. Writing <span
+class="math inline">\(\tau=t-t_1\)</span> on the middle segment,</p>
+<p><span
+class="math display">\[g(t)=-\varepsilon+\frac{F\tau^2}{2m},\qquad
+0\le\tau\le d.\]</span></p>
+<p>Hence <span class="math inline">\(g(t_2)=+\varepsilon\)</span>, <span
+class="math inline">\(mg&#39;(t_2)=Fd=2\sqrt{mF\varepsilon}\)</span>,
+and <span class="math inline">\(|g(t)|\le\varepsilon\)</span> throughout
+<span class="math inline">\([0,t_2]\)</span>. During preparation its
+position decreases monotonically from zero to <span
+class="math inline">\(-\varepsilon\)</span>; the last segment increases
+monotonically to <span class="math inline">\(+\varepsilon\)</span>.</p>
+<p>The trajectories <span class="math inline">\(q_\pm(t)=q_0+p_0t/m\pm
+g(t)\)</span> have identical initial state and admissible opposite
+forces. Both admit the <strong>same complete record</strong> <span
+class="math inline">\(y(t)=q_0+p_0t/m\)</span>, by choosing noise <span
+class="math inline">\(e_\pm(t)=\mp g(t)\)</span> through <span
+class="math inline">\(t_2\)</span>. In particular they share the records
+at <span class="math inline">\(t_1,t_2\)</span>. Their terminal
+deviations from the inertial motion are opposite, with magnitudes</p>
+<p><span
+class="math display">\[P_*=Fd+Fb=2\sqrt{mF\varepsilon}+Fb,\]</span></p>
+<p><span
+class="math display">\[Q_*=\varepsilon+\frac{Fdb}{m}+\frac{Fb^2}{2m}.\]</span></p>
+<h2 id="exact-risks-for-two-records-and-for-the-complete-history">3.
+Exact risks for two records and for the complete history</h2>
+<p>The shared record forces every estimator’s global worst-case momentum
+error to be at least <span class="math inline">\(P_*\)</span> and
+position error to be at least <span class="math inline">\(Q_*\)</span>.
+These are separate coordinate risks; the product does not assert a
+simultaneous lower bound on both actual errors for every individual
+motion or estimator.</p>
+<p><a href="two-position-recovery.html">R10</a>’s estimator, using just
+<span class="math inline">\(t_1,t_2\)</span> with separation <span
+class="math inline">\(d\)</span>, attains upper bounds <span
+class="math inline">\(P_*,Q_*\)</span> for every admissible record.
+Therefore</p>
+<p><span class="math display">\[\boxed{R_p^{\rm opt}=P_*,\qquad R_q^{\rm
+opt}=Q_*}\]</span></p>
+<p>for both information classes: the two fixed records and the entire
+noisy history through <span class="math inline">\(t_2\)</span>. One
+estimator attains both coordinate optima. Extra samples cannot improve
+the minimax risks under arbitrary bounded noise because the same entire
+history already hides the extremal pair.</p>
+<p>At zero blind delay, the product of coordinate minimax risks is
+exactly</p>
+<p><span class="math display">\[\mathcal H_\varepsilon=R_q^{\rm
+opt}R_p^{\rm opt}
+=2\sqrt{mF}\,\varepsilon^{3/2}&gt;0.\]</span></p>
+<p>The timing assumption is <span
+class="math inline">\(T-b\ge4\sqrt{m\varepsilon/F}\)</span>. It provides
+time to create the hidden displacement from the shared initial state;
+shorter horizons are a separate finite-horizon problem. For <span
+class="math inline">\(p_0=0\)</span>, the constructed pair satisfies
+<span class="math inline">\(|\dot q|&lt;c\)</span> whenever <span
+class="math inline">\(F(d+b)/m&lt;c\)</span>. This speed check applies
+to the pair; imposing a speed ceiling on the whole model requires
+rechecking attainability and the estimator domain.</p>
+<h2 id="what-the-connection-contributes">4. What the connection
+contributes</h2>
+<p>The force ceiling supplies regularity, the record band supplies
+unresolved alternatives, and convex symmetry supplies an exact
+worst-record construction. The information gap survives arbitrary
+insertion of observed time cuts at fixed precision. It closes as <span
+class="math inline">\(\varepsilon,b\to0\)</span> and depends on <span
+class="math inline">\(m,F\)</span>: the positivity comes from a physical
+resource premise still to be selected.</p>
+<p>This identifies a useful bridge toward the main target: prove an
+apparatus restriction on attainable record bands and delays, then use
+minimax recovery to transfer it to a lower bound. The resulting quantity
+must next pass a composition test. A08’s universality theorem concerns
+variances; its mass-weighted addition law cannot be applied directly to
+worst-case errors. R12 will compare these two forms of composition in
+one stated information model.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

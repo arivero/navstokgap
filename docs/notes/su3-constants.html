@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SU(3) in four dimensions: every constant of this programme, evaluated</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>SU(3) in four dimensions: every constant of this programme,
+evaluated</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su3-constants.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su3-constants.pdf">PDF</a></p><p>With the goal narrowed to <span class="math inline">\(SU(3)\)</span>,
+each bound proved in these notes becomes a number. The group data are
+<span class="math display">\[N=3,\quad \dim G=8,\quad
+C_2(R_{\rm f})=\frac{N^2-1}{2N}=\frac43,\quad
+C_2(\text{adj})=N=3,\quad
+Z(G)=\mathbb Z_3,\]</span> in the normalization <span
+class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>,
+and the one- and two-loop coefficients are <span
+class="math display">\[b_0=\frac{11N}{48\pi^2}=\frac{11}{16\pi^2}=0.06966,\qquad
+\frac{b_1}{2b_0^2}=\frac{51}{121}=0.4215 .\]</span> The consequences,
+collected: the strong-coupling criterion of <a
+href="strong-coupling-uniform-gap.html">the T2 note</a> reads <span
+class="math inline">\(54/g^4\le\beta_*\)</span>; the gap it gives is
+<span class="math inline">\(\Delta_{a,L}\ge\tfrac23\gamma g^2\,\hbar
+c/a\)</span>; the unperturbed flux-loop gap is <span
+class="math inline">\(\tfrac83g^2\hbar c/a\)</span>; the Lieb–Robinson
+velocity is <span
+class="math inline">\(v\le96e\,c/g^2\simeq261\,c/g^2\)</span>; the exact
+identities are <span class="math inline">\(\Delta
+V=\tfrac{16}3(3|\mathcal P|-V)\)</span> and <span
+class="math inline">\(|\nabla V|^2\le48V\)</span>; the number of
+renormalization doublings from a bare coupling <span
+class="math inline">\(g_{\rm UV}^2=1/2\)</span> to a strong-coupling
+threshold is <span
+class="math display">\[n\simeq\frac{1}{2b_0\log2}\Big(\frac1{g_{\rm
+UV}^2}-\frac1{g_{\rm thr}^2}\Big)\le\frac{2}{0.0966}\simeq21,\]</span>
+fewer than the thirty of <span class="math inline">\(SU(2)\)</span>
+because the coupling runs faster; and the flowed upper bound <span
+class="math inline">\(4.26\,\hbar c/\sqrt{8t}\)</span> is unchanged,
+because in the free limit the eight gluon species multiply numerator and
+denominator equally. Two features of <span
+class="math inline">\(SU(3)\)</span> that <span
+class="math inline">\(SU(2)\)</span> lacks are recorded in Section 4:
+the defining representation is complex, so <span
+class="math inline">\(\operatorname{tr}U_p\)</span> is complex and the
+plaquette term keeps only its real part, and the centre is <span
+class="math inline">\(\mathbb Z_3\)</span>, so a periodic box carries
+<span class="math inline">\(27\)</span> electric-flux sectors instead of
+<span class="math inline">\(8\)</span>. Constants explicit; nothing
+promoted.</p>
+<h2 id="group-data">1. Group data</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>quantity</th>
+<th>value</th>
+<th>where used</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(N\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td>everywhere</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\dim G\)</span></td>
+<td><span class="math inline">\(8\)</span></td>
+<td>free-limit species count</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_2(R_{\rm f})\)</span></td>
+<td><span class="math inline">\(4/3\)</span></td>
+<td>flux-loop energy, T2 gap</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(C_2(\text{adj})\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td>Jacobian curvature factor</td>
+</tr>
+<tr class="odd">
+<td>centre</td>
+<td><span class="math inline">\(\mathbb Z_3\)</span></td>
+<td>flux sectors, valley minima</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\operatorname{tr}(1)\)</span> in <span
+class="math inline">\(R_{\rm f}\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td>plaquette norm <span class="math inline">\(\|w_p\|\le4N\hbar
+c/(ag^2)=12\hbar c/(ag^2)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(b_0\)</span></td>
+<td><span class="math inline">\(11/(16\pi^2)=0.06966\)</span></td>
+<td>running, step count</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(b_1/(2b_0^2)\)</span></td>
+<td><span class="math inline">\(51/121=0.4215\)</span></td>
+<td>the power in <span class="math inline">\(a\Lambda_{\rm
+lat}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The lattice <span class="math inline">\(\Lambda\)</span> parameter of
+<a href="mass-gap-obligations-lattice.html">the obligations map</a> §5
+is therefore <span class="math display">\[a\Lambda_{\rm
+lat}(g)=\big(b_0g^2\big)^{-51/121}\,e^{-1/(2b_0g^2)}\big[1+O(g^2)\big],
+\qquad \frac1{2b_0}=\frac{8\pi^2}{11}=7.180 .\]</span></p>
+<h2 id="the-proved-bounds-evaluated">2. The proved bounds,
+evaluated</h2>
+<p><strong>T1.</strong> Unchanged in form: unique positive physical
+ground state and <span
+class="math inline">\(\delta(g;N_s,SU(3))&gt;0\)</span> at every finite
+lattice and coupling.</p>
+<p><strong>T2</strong> (<a href="strong-coupling-uniform-gap.html">T2
+note</a>). The perturbation parameter is <span
+class="math display">\[\beta=\frac{48N^2}{g^4(N^2-1)}=\frac{48\cdot9}{8\,g^4}=\frac{54}{g^4},\]</span>
+so the criterion <span
+class="math inline">\(\beta\le\beta_*(3,\{0,1\}^3)\)</span> becomes
+<span class="math display">\[g\ \ge\
+g_0=\Big(\frac{54}{\beta_*}\Big)^{1/4},\]</span> and the gap is <span
+class="math display">\[\Delta_{a,L}\ \ge\
+\gamma\,\frac{g^2}{2}\,\frac43\,\frac{\hbar c}{a}
+=\frac{2\gamma}{3}\,g^2\,\frac{\hbar c}{a}.\]</span> The unperturbed
+physical excitation, a single plaquette flux loop in the fundamental,
+costs <span class="math inline">\(2C_2g^2\hbar c/a=\tfrac83g^2\hbar
+c/a\)</span>.</p>
+<p><strong>Feynman–Bijl, strong coupling</strong> (<a
+href="lattice-gap-upper-bounds.html">upper-bound note</a> Corollary 3).
+At <span class="math inline">\(g=\infty\)</span> the Haar variance is
+<span
+class="math inline">\(\operatorname{Var}(\operatorname{Re}\operatorname{tr}U_p)=\tfrac12\)</span>
+for <span class="math inline">\(N\ge3\)</span>, so the two-sided
+statement reads <span
+class="math display">\[\frac{2\gamma}{3}g^2\,\frac{\hbar c}{a}\ \le\
+\Delta^{\rm phys}_{a,L}\ \le\ 12\,g^2\,\frac{\hbar c}{a}\]</span> for
+<span class="math inline">\(g\)</span> beyond both thresholds, a ratio
+of <span class="math inline">\(18/\gamma\)</span> between the two
+sides.</p>
+<p><strong>Lieb–Robinson</strong> (<a
+href="lieb-robinson-kogut-susskind.html">note</a>). Four plaquettes per
+link and <span class="math inline">\(\|w_p\|\le12\hbar c/(ag^2)\)</span>
+give <span class="math inline">\(J\le48\hbar c/(ag^2)\)</span> and <span
+class="math display">\[v=\frac{2eaJ}{\hbar}\ \le\ \frac{96\,e\,c}{g^2}\
+\simeq\ \frac{261\,c}{g^2},\]</span> so the lattice light cone exceeds
+<span class="math inline">\(c\)</span> for <span
+class="math inline">\(g^2&lt;261\)</span>, that is throughout any regime
+of interest, and the strong-coupling correlation length is <span
+class="math inline">\(\xi\le C&#39;\,a\,/(\gamma
+g^4)\cdot\tfrac94\)</span>.</p>
+<p><strong>Exact identities</strong> (<a
+href="magnetic-energy-identities.html">note</a>). With <span
+class="math inline">\(C_2=4/3\)</span> and <span
+class="math inline">\(N=3\)</span>, <span class="math display">\[\Delta
+V=\frac{16}{3}\big(3|\mathcal P|-V\big),\qquad
+|\nabla V|^2\le16NV=48\,V,\]</span> and the ground-state sum rule of
+that note holds with <span class="math inline">\(2C_2=8/3\)</span>.</p>
+<p><strong>Blocking</strong> (<a
+href="blocking-criterion-monotone.html">criterion note</a>). The block
+criterion is <span class="math inline">\(\beta_{\rm
+block}=72M^2/(g^2\delta(g;M))\)</span> and the direct one is <span
+class="math inline">\(\beta_{\rm direct}=24/g^4\)</span>, so the ratio
+at strong coupling is <span class="math inline">\(3M^2/8\)</span> as
+before, blocking losing by <span class="math inline">\(3/2\)</span>
+already at <span class="math inline">\(M=2\)</span>.</p>
+<p><strong>Small volume</strong> (<a
+href="low-dimensional-mass-gap.html">G07</a> Proposition 7). The
+constant-mode sector has <span class="math inline">\(D=3\)</span> and
+gauge group <span class="math inline">\(SU(3)\)</span>, so the matrix
+model runs over <span class="math inline">\(\vec x_i\in\mathbb
+R^8\)</span> with the structure constants of <span
+class="math inline">\(SU(3)\)</span> in place of the cross product; the
+gap keeps the form <span
+class="math inline">\(\delta_1^{(3)}g^{2/3}\hbar c/L\)</span> with a
+pure number <span class="math inline">\(\delta_1^{(3)}\)</span> specific
+to the group.</p>
+<h2 id="the-step-count">3. The step count</h2>
+<p>With <span
+class="math inline">\(2b_0\log2=2(0.06966)(0.6931)=0.09657\)</span>, the
+number of renormalization doublings needed to run from a bare coupling
+to a strong-coupling threshold is <span
+class="math display">\[n=\frac{1}{0.09657}\Big(\frac1{g_{\rm
+UV}^2}-\frac1{g_{\rm thr}^2}\Big).\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(g_{\rm UV}^2\)</span></th>
+<th><span class="math inline">\(n\)</span> to <span
+class="math inline">\(1/g_{\rm thr}^2\to0\)</span></th>
+<th>scale ratio <span class="math inline">\(2^n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(10.4\)</span></td>
+<td><span class="math inline">\(1.4\times10^{3}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1/2\)</span></td>
+<td><span class="math inline">\(20.7\)</span></td>
+<td><span class="math inline">\(1.7\times10^{6}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1/4\)</span></td>
+<td><span class="math inline">\(41.4\)</span></td>
+<td><span class="math inline">\(2.9\times10^{12}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>For <span class="math inline">\(SU(2)\)</span> the same table reads
+<span class="math inline">\(15.5\)</span>, <span
+class="math inline">\(31.1\)</span>, <span
+class="math inline">\(62.1\)</span>, since <span
+class="math inline">\(b_0\)</span> is smaller by <span
+class="math inline">\(2/3\)</span>. <strong>The <span
+class="math inline">\(SU(3)\)</span> problem needs about a third fewer
+steps than <span class="math inline">\(SU(2)\)</span></strong> at the
+same bare coupling, which is the only quantitative respect in which the
+physical case is easier.</p>
+<h2 id="two-features-specific-to-su3">4. Two features specific to <span
+class="math inline">\(SU(3)\)</span></h2>
+<p><strong>The defining representation is complex.</strong> For <span
+class="math inline">\(SU(2)\)</span>, <span
+class="math inline">\(\operatorname{tr}U_p\)</span> is real, and the
+plaquette term is the full trace; for <span
+class="math inline">\(SU(3)\)</span> it is complex and the Wilson term
+keeps <span
+class="math inline">\(\operatorname{Re}\operatorname{tr}U_p\)</span>.
+Consequences: the bound <span
+class="math inline">\(\int(\operatorname{tr}U)^2dU=0\)</span> used in <a
+href="lattice-gap-upper-bounds.html">the upper-bound note</a> Corollary
+3 holds for <span class="math inline">\(N\ge3\)</span> and gives Haar
+variance <span class="math inline">\(\tfrac12\)</span> rather than <span
+class="math inline">\(1\)</span>; and charge conjugation is a nontrivial
+symmetry, so the spectrum splits into <span
+class="math inline">\(C\)</span>-even and <span
+class="math inline">\(C\)</span>-odd sectors, and the glueball channel
+relevant to the gap is <span class="math inline">\(C\)</span>-even.</p>
+<p><strong>The centre is <span class="math inline">\(\mathbb
+Z_3\)</span>.</strong> The valley minima of <a
+href="torus-valley-potential.html">the valley note</a> §4 lie at
+holonomies that are central, so there are three per direction and <span
+class="math inline">\(27\)</span> electric-flux sectors on a
+three-torus, against <span class="math inline">\(8\)</span> for <span
+class="math inline">\(SU(2)\)</span>. The tunnelling barrier between
+them is the same <span class="math inline">\(O(\hbar c/L)\)</span>, and
+the sector structure is what the small-volume spectrum organizes itself
+by.</p>
+<h2 id="what-does-not-change">5. What does not change</h2>
+<p>The structural results are group-independent and stand as
+written:</p>
+<ul>
+<li>the seven closed routes of <a href="mass-gap-position.html">the
+position note</a> §3, each closed by an argument that uses no property
+of the group beyond compactness and non-abelianness;</li>
+<li>the moment hierarchy and the reduction of <span
+class="math inline">\(m&lt;\infty\)</span> to one flowed correlator,
+where the free-limit value <span class="math inline">\(4.26\,\hbar
+c/\sqrt{8t}\)</span> is unchanged because the <span
+class="math inline">\(\dim G=8\)</span> species multiply the
+susceptibility and the gradient term equally;</li>
+<li>the equivalence of T2<span class="math inline">\(&#39;\)</span> with
+the absence of a zero-temperature phase transition;</li>
+<li>the three places where the non-abelian structure is isolated, all of
+which are statements about the commutator and hold for <span
+class="math inline">\(SU(3)\)</span> with the <span
+class="math inline">\(SU(3)\)</span> structure constants.</li>
+</ul>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Specializing to <span class="math inline">\(SU(3)\)</span> fixes
+every constant and shortens the step count to about twenty-one doublings
+from <span class="math inline">\(g_{\rm UV}^2=1/2\)</span>. It changes
+no structural conclusion, and the open obligations are those of <a
+href="mass-gap-position.html">the position note</a> §5. The next work
+should be carried out with these numbers in place, and any new bound
+should be reported in them.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

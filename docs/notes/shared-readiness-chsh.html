@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Independent settings test shared readiness, while leaving action units free</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Independent settings test shared readiness, while leaving action
+units free</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/shared-readiness-chsh.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/shared-readiness-chsh.pdf">PDF</a></p><p>Arbitrary shared source and receiver variables satisfy the CHSH bound
+when settings are independent of them and responses are conditionally
+local. A specified singlet state exceeds that bound. This closes the
+shared-readiness escape for that local model class, but the witness is
+dimensionless: it neither determines a positive action constant nor
+constructs quantum mechanics.</p>
+<p>Q13 applies the established CHSH argument to the receiver programme.
+It adds no new theorem or novelty claim. The quantum state and
+probability rule below are explicit comparison inputs, not consequences
+of classical mechanics.</p>
+<h2 id="model-and-gate-convention">1. Model and gate convention</h2>
+<p>On every predesignated gate, each side chooses a setting <span
+class="math inline">\(x,y\in\{0,1\}\)</span> and assigns an outcome
+<span class="math inline">\(A,B\in\{-1,+1\}\)</span>. A fixed local rule
+assigns an outcome also to no-click or multiple-click records. Gates are
+not discarded according to their outcomes. Any source heralding occurs
+before setting choices, and the following assumptions concern that
+heralded ensemble.</p>
+<p>Let <span class="math inline">\(\lambda\)</span> include arbitrary
+correlated source and readiness information. The assumptions are</p>
+<p><span class="math display">\[\rho(d\lambda\mid
+x,y)=\rho(d\lambda),\qquad
+P(A,B\mid x,y,\lambda)=P_A(A\mid x,\lambda)P_B(B\mid y,\lambda).
+\tag{1}\]</span></p>
+<p>Thus settings do not select different hidden ensembles, and each
+response uses only its local setting once the common causes are
+specified. There is no monotonicity, scalar-intensity or
+independent-readiness assumption. The factorization is stronger than the
+absence of observable signalling; spacelike separation motivates a
+causal test but is not by itself a proof of this probability
+representation.</p>
+<p>Define conditional means <span
+class="math inline">\(a_x(\lambda),b_y(\lambda)\in[-1,1]\)</span> and
+<span class="math inline">\(E_{xy}=\int a_xb_y\,d\rho\)</span>. Private
+stochastic responses are included.</p>
+<h2 id="the-correlation-constraint">2. The correlation constraint</h2>
+<p>For each <span class="math inline">\(\lambda\)</span>,</p>
+<p><span class="math display">\[|a_0(b_0+b_1)+a_1(b_0-b_1)|
+\le |b_0+b_1|+|b_0-b_1|
+=2\max(|b_0|,|b_1|)\le2.\]</span></p>
+<p>Integration over the same measure for all four setting pairs
+gives</p>
+<p><span class="math display">\[|E_{00}+E_{01}+E_{10}-E_{11}|\le2.
+\tag{2}\]</span></p>
+<p>Constant positive outcomes attain two, so the bound is sharp.
+Correlated readiness cannot evade it while (1) remains true.
+Outcome-dependent gate selection can instead make the retained hidden
+distribution depend on the settings; an in-gate common controller can
+violate conditional locality. Those are changes of premise, not
+counterexamples to (2).</p>
+<h2 id="explicit-quantum-comparison">3. Explicit quantum comparison</h2>
+<p>Supply two qubits in <span
+class="math inline">\(|\psi^-\rangle=(|01\rangle-|10\rangle)/\sqrt2\)</span>,
+Pauli measurements <span class="math inline">\(a\cdot\sigma\)</span> and
+<span class="math inline">\(b\cdot\sigma\)</span>, and Born
+probabilities. Direct application of Pauli matrices gives</p>
+<p><span class="math display">\[\langle\sigma_i\otimes I\rangle=0,\qquad
+\langle\sigma_i\otimes\sigma_j\rangle=-\delta_{ij},\qquad
+E(a,b)=-a\cdot b. \tag{3}\]</span></p>
+<p>Choose <span class="math inline">\(a_0=e_z\)</span>, <span
+class="math inline">\(a_1=e_x\)</span>, <span
+class="math inline">\(b_0=-(e_z+e_x)/\sqrt2\)</span>, <span
+class="math inline">\(b_1=-(e_z-e_x)/\sqrt2\)</span>. The four
+correlations are <span class="math inline">\((1,1,1,-1)/\sqrt2\)</span>
+in the order <span class="math inline">\((00,01,10,11)\)</span>; the
+expression in (2) is <span class="math inline">\(2\sqrt2\)</span>. The
+marginal outcomes remain unbiased and independent of the remote setting.
+Thus no-signalling alone permits this comparison even though (1) cannot
+represent it.</p>
+<p>This is an ideal-state prediction. Actual receiver losses must be
+included in the assigned all-gate outcomes and can reduce the observed
+violation. No empirical loophole closure or experimental data analysis
+is claimed here.</p>
+<h2 id="why-this-does-not-measure-an-action-constant">4. Why this does
+not measure an action constant</h2>
+<p>If dimensional spin outcomes are written <span
+class="math inline">\(S_A=(K/2)A\)</span> and <span
+class="math inline">\(S_B=(K/2)B\)</span> for supplied <span
+class="math inline">\(K&gt;0\)</span> with action units, each
+correlation multiplies by <span class="math inline">\(K^2/4\)</span>.
+The classical bound becomes <span class="math inline">\(K^2/2\)</span>
+and the singlet value becomes <span
+class="math inline">\(K^2/\sqrt2\)</span>. Their ratio remains <span
+class="math inline">\(\sqrt2\)</span> for every positive K. Normalized
+outcome probabilities contain no energy or clock calibration. Sending K
+down through positive values leaves the dimensionless comparison
+unchanged; the zero endpoint would collapse the dimensional readout and
+is not needed for this scale test.</p>
+<p>The result locates a real exclusion: a theory matching (3), with
+independent settings and all-gate accounting, must abandon the
+conditional local model (1). It does not select quantum theory uniquely
+among possible correlation models, nor derive its dimensional
+normalization.</p>
+<h2 id="research-consequence">5. Research consequence</h2>
+<p>Q08–Q13 have separated classical fringes, threshold records, shared
+control and local-causal correlations. Park further detector and
+Bell-witness variants. The remaining action premise requires a physical
+relation between transformations, energy and time rather than another
+dimensionless inequality.</p>
+<p>Switch the next bounded construction to the gap track: specify a
+physical local spin Hamiltonian related by a finite-depth local unitary
+to independent spins, and calculate its interacting ground state and
+finite-volume gap. This supplies a direct Hamiltonian example rather
+than an auxiliary sampling clock. Quantum structure and the
+action-to-time conversion must be stated as inputs; the test is gap
+survival under local conjugation, not quantum necessity.</p>
+<h2 id="source-and-evidence">Source and evidence</h2>
+<p>J. F. Clauser, M. A. Horne, A. Shimony and R. A. Holt, <em>Proposed
+Experiment to Test Local Hidden-Variable Theories</em>, Physical Review
+Letters <strong>23</strong>, 880–884 (1969), <a
+href="https://doi.org/10.1103/PhysRevLett.23.880">DOI</a>, is the
+established source for the CHSH test; the publisher links its 1970
+erratum. One targeted query checked the primary bibliographic record.
+The proof used here is the displayed bounded-response derivation, not a
+transcription or audit of the original optical proposal. The singlet
+comparison is an explicit calculation under stated quantum inputs. No
+new accepted claim or numerical verification script is introduced.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

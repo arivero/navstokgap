@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One blocking step: the obstruction is the variation, not the size, of the inter-block coupling</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>One blocking step: the obstruction is the variation, not the size, of
+the inter-block coupling</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/blocking-step-obstruction.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/blocking-step-obstruction.pdf">PDF</a></p><p>Partition the lattice into blocks of <span
+class="math inline">\(M^3\)</span> sites and let <span
+class="math inline">\(P\)</span> project onto the tensor product of the
+low-energy subspaces of the blocks. The transfer lemma then reduces the
+gap of the whole system to the gap of the blocked Hamiltonian <span
+class="math inline">\(PHP\)</span> minus the Schur error of the
+straddling plaquettes. Counting gives, per block, <span
+class="math inline">\(6M^2\)</span> straddling plaquettes of norm <span
+class="math inline">\(\|w_p\|\le4N\hbar c/(ag^2)\)</span> each, against
+an intra-block gap <span class="math inline">\(\Delta_M=(\hbar
+c/a)\delta(g;M)\)</span>, so the naive operator-norm estimate gives a
+Schur error of order <span
+class="math display">\[\frac{\|B\|^2}{\Delta_M}\ \sim\
+36M^4\,\frac{\|w\|^2}{\Delta_M}
+=36M^4\,\frac{\hbar c}{a}\,\frac{16N^2}{g^4\,\delta(g;M)},\]</span>
+which exceeds the gap it is meant to preserve by a factor of order <span
+class="math inline">\(M^4N^2/(g^4\delta^2)\)</span>. Lemma 1<span
+class="math inline">\(&#39;\)</span> of <a
+href="schur-error-ultraviolet.html">the Schur note</a> shows where that
+estimate is wasteful: a part of the Schur term proportional to the
+identity shifts all levels equally and costs nothing, and the boundary
+energy is exactly of that kind. What the induction needs is the
+<strong>variation</strong> of the Schur term over the low-energy
+subspace, for which a connected estimate replaces <span
+class="math inline">\(\|B\|^2=\big(\sum_p\|w_p\|\big)^2\)</span> by
+<span class="math inline">\(\sum_p\|w_p\|^2\)</span> and so replaces
+<span class="math inline">\(M^4\)</span> by <span
+class="math inline">\(M^2\)</span>. Under that replacement one blocking
+step closes when <span class="math display">\[\frac{\|w\|}{\Delta_M}\
+\lesssim\ \frac1{M\sqrt6}\qquad\text{i.e.}\qquad
+g^4\ \gtrsim\ \frac{8\sqrt6\,MN}{\gamma\,C_2(R_{\min})}.\]</span>
+<strong>Correction, recorded after this note was written:</strong> the
+connected estimate is supplied by Yarotsky’s polymer expansion, and the
+resulting criterion is worse than the direct one by a factor <span
+class="math inline">\(3M^2/8\)</span>, so the induction sketched in
+Sections 4–5 does not close; <a
+href="blocking-criterion-monotone.html">the blocking-criterion note</a>
+carries the corrected statement. What survives is the counting: the
+number of renormalization-group doublings needed to reach a
+strong-coupling threshold from the cutoff is <span
+class="math display">\[n\ \simeq\ \frac{1}{2b_0\log2}\Big(\frac1{g_{\rm
+UV}^2}-\frac1{g_{\rm thr}^2}\Big),
+\qquad b_0=\frac{11N}{48\pi^2},\]</span> finite and of the order of tens
+for realistic couplings. The whole difficulty of the mass gap is
+therefore concentrated in a <strong>finite number of blocking steps in
+the intermediate coupling regime</strong>, each of which generates
+couplings beyond the Kogut–Susskind form that must be carried along.
+Constants explicit; the connected estimate is stated as the required
+input and is not proved here; nothing promoted.</p>
+<h2 id="the-block-decomposition-and-its-counting">1. The block
+decomposition and its counting</h2>
+<p>Fix a block factor <span class="math inline">\(M\ge2\)</span> and
+partition the periodic lattice of <span
+class="math inline">\(N_s^3\)</span> sites, <span
+class="math inline">\(N_s=MK\)</span>, into <span
+class="math inline">\(K^3\)</span> blocks of <span
+class="math inline">\(M^3\)</span> sites. Assign each link to the block
+containing its midpoint, so the links are partitioned. A plaquette is
+<em>interior</em> when all four of its links lie in one block and
+<em>straddling</em> otherwise. Write <span
+class="math display">\[H=\sum_{\alpha}H_\alpha+\sum_{p\ \rm
+straddling}w_p,\qquad
+H_\alpha=\frac{\hbar cg^2}{2a}\sum_{\ell\in\alpha}(-\Delta_\ell)
++\sum_{p\subset\alpha}w_p .\]</span></p>
+<p><strong>Counting.</strong> Each block has six faces of <span
+class="math inline">\(M^2\)</span> plaquettes, so <span
+class="math display">\[\#\{\text{straddling plaquettes touching one
+block}\}=6M^2,
+\qquad \|w_p\|\le\frac{4N\hbar c}{a\,g^2},\]</span> with <span
+class="math inline">\(N\)</span> replaced by <span
+class="math inline">\(\dim_{\rm f}\)</span> for a general compact group,
+as in <a href="lieb-robinson-kogut-susskind.html">the Lieb–Robinson
+note</a> §1. Each <span class="math inline">\(H_\alpha\)</span> is a
+Kogut–Susskind Hamiltonian on a block with free boundary, so T1 applies
+to it: discrete spectrum, unique positive ground state <span
+class="math inline">\(\Omega_\alpha\)</span>, gap <span
+class="math inline">\(\Delta_M=(\hbar c/a)\delta(g;M)\)</span>.</p>
+<p>Let <span class="math inline">\(\Pi_\alpha\)</span> project onto the
+spectral subspace of <span class="math inline">\(H_\alpha\)</span> below
+a cutoff <span class="math inline">\(E_c\)</span> chosen in the gap
+region, and <span
+class="math display">\[P=\bigotimes_\alpha\Pi_\alpha,\qquad A=PHP,\qquad
+D=\bar PH\bar P\ge\textstyle\sum_\alpha E_0^\alpha+E_c .\]</span> The
+compression <span class="math inline">\(A\)</span> is the blocked
+Hamiltonian: a Hamiltonian on the product of block low-energy spaces,
+whose gap the induction must track.</p>
+<h2 id="why-the-naive-estimate-fails">2. Why the naive estimate
+fails</h2>
+<p>The coupling operator is <span class="math inline">\(B=PH\bar
+P\)</span>, bounded by the sum of the straddling terms touching the
+blocks involved, <span class="math display">\[\|B\|\ \le\ \sum_{p\ \rm
+straddling}\|w_p\|\ \sim\ 6M^2\cdot\frac{4N\hbar c}{a g^2}
+\quad\text{per block},\]</span> and the transfer lemma of <a
+href="weak-coupling-feshbach-reduction.html">the Feshbach note</a>
+charges <span class="math inline">\(\|B\|^2/(E_c)\)</span> against the
+gap. With <span class="math inline">\(E_c\sim\Delta_M\)</span>, <span
+class="math display">\[\frac{\|B\|^2}{\Delta_M}\Big/\Delta_M
+\ \sim\ 36M^4\Big(\frac{\|w\|}{\Delta_M}\Big)^2
+=36M^4\Big(\frac{8N}{\gamma C_2\,g^4}\Big)^2,\]</span> using <span
+class="math inline">\(\Delta_M\ge\gamma(g^2/2)C_2\hbar c/a\)</span> from
+<a href="strong-coupling-uniform-gap.html">the T2 note</a> at strong
+coupling. The ratio exceeds one unless <span
+class="math inline">\(g^4\gtrsim M^2N\)</span>, and at weak coupling it
+is enormous. Taken at face value, real-space blocking is useless.</p>
+<h2 id="what-the-estimate-is-actually-measuring">3. What the estimate is
+actually measuring</h2>
+<p>The quantity <span class="math inline">\(\|B\|^2/\Delta_M\)</span> is
+dominated by the <strong>boundary energy</strong>: the second-order
+effect of the straddling plaquettes lowers the ground state of the
+coupled system by an amount proportional to the total boundary area,
+which is extensive in <span class="math inline">\(M^2\)</span> per block
+and has nothing to do with the gap. Lemma 1<span
+class="math inline">\(&#39;\)</span> of <a
+href="schur-error-ultraviolet.html">the Schur note</a> isolates that
+contribution: if <span
+class="math display">\[S(E)=B(D-E)^{-1}B^*=\eta_0(E)\,\mathbb
+1+R(E),\qquad
+0\le R(E)\le\epsilon\,(A-a_0)+\eta_1,\]</span> then the constant <span
+class="math inline">\(\eta_0\)</span> drops out of the gap entirely and
+only <span class="math inline">\(\epsilon\)</span>, <span
+class="math inline">\(\eta_1\)</span> and the slope <span
+class="math inline">\(\eta_0&#39;\)</span> enter. The boundary energy is
+the constant; what survives is the dependence of the boundary energy on
+<strong>which</strong> low-energy state of the blocks the system
+occupies.</p>
+<p><strong>The required input.</strong> For each straddling plaquette
+separately, <span class="math inline">\(w_p(D-E)^{-1}w_p\)</span> has
+norm at most <span class="math inline">\(\|w_p\|^2/E_c\)</span>, and its
+variation across <span
+class="math inline">\(\operatorname{ran}P\)</span> is at most twice
+that. Cross terms between two straddling plaquettes <span
+class="math inline">\(p\neq p&#39;\)</span> contribute to the constant
+when they are far apart and to the variation only through connected
+configurations. A connected estimate of the form <span
+class="math display">\[\big\|R(E)\big\|\ \le\ C\sum_{p\ \rm
+straddling}\frac{\|w_p\|^2}{E_c}
+\qquad\text{in place of}\qquad
+\frac{\big(\sum_p\|w_p\|\big)^2}{E_c}\]</span> therefore replaces <span
+class="math inline">\(M^4\)</span> by <span
+class="math inline">\(M^2\)</span>. This is exactly what a cluster
+expansion supplies at strong coupling, and it is the one analytic input
+the blocking step needs. It is stated here as a hypothesis.</p>
+<h2 id="the-one-step-inequality-under-that-input">4. The one-step
+inequality under that input</h2>
+<blockquote>
+<p><strong>Superseded.</strong> Sections 4 and 5 are corrected in <a
+href="blocking-criterion-monotone.html">the blocking-criterion note</a>:
+the connected estimate is available from Yarotsky’s polymer expansion,
+and the resulting threshold is worse than the direct one by a factor
+<span class="math inline">\(3M^2/8\)</span>, so the induction below does
+not close. The counting of Section 5 survives as a count of
+renormalization-group steps.</p>
+</blockquote>
+<p><strong>Proposition (conditional).</strong> Assume the connected
+estimate of Section 3 with constant <span
+class="math inline">\(C\)</span>, and take <span
+class="math inline">\(E_c=\Delta_M\)</span>. Then the transfer lemma
+gives <span class="math display">\[\operatorname{gap}(H)\ \ge\
+\operatorname{gap}(A)\Big(1-\epsilon\Big)-\eta_1,
+\qquad \epsilon,\ \frac{\eta_1}{\Delta_M}\ \le\
+6CM^2\Big(\frac{\|w\|}{\Delta_M}\Big)^2,\]</span> so one blocking step
+preserves a positive gap whenever <span
+class="math display">\[\frac{\|w\|}{\Delta_M}\ \le\ \frac1{M\sqrt{6C}},
+\qquad\text{that is}\qquad
+g^4\ \ge\ \frac{8\sqrt{6C}\;M\,N}{\gamma\,C_2(R_{\min})} .\]</span></p>
+<p>The threshold depends on the block factor <span
+class="math inline">\(M\)</span> and on the group, and on no other
+scale: it is a <strong>fixed</strong> coupling threshold once <span
+class="math inline">\(M\)</span> is fixed, say <span
+class="math inline">\(M=2\)</span>.</p>
+<h2 id="the-induction-and-where-the-finite-difficulty-sits">5. The
+induction, and where the finite difficulty sits</h2>
+<p>Under blocking, the effective coupling of an asymptotically free
+theory grows toward the infrared. If the blocked Hamiltonian <span
+class="math inline">\(A\)</span> were again of Kogut–Susskind form with
+a coupling <span class="math inline">\(g_{n+1}&gt;g_n\)</span>, then the
+threshold of Section 4, once satisfied at some step, would be satisfied
+at every later step, and the induction would give a gap at all larger
+scales, uniform in the volume. Two obligations remain.</p>
+<p><em>Reaching the threshold.</em> At the cutoff the coupling is small.
+With the one-loop running written for a doubling of scale, <span
+class="math display">\[\frac1{g_{n+1}^2}=\frac1{g_n^2}-2b_0\log2,\qquad
+b_0=\frac{11N}{48\pi^2},\]</span> the number of doublings from <span
+class="math inline">\(g_{\rm UV}\)</span> to <span
+class="math inline">\(g_{\rm thr}\)</span> is <span
+class="math display">\[n\simeq\frac{1}{2b_0\log2}\Big(\frac1{g_{\rm
+UV}^2}-\frac1{g_{\rm thr}^2}\Big),\]</span> finite and logarithmic in
+the ratio of scales. For <span class="math inline">\(SU(2)\)</span>,
+<span
+class="math inline">\(2b_0\log2=\tfrac{11}{12\pi^2}\log2\approx0.064\)</span>,
+so a bare coupling <span class="math inline">\(g_{\rm UV}^2=1/2\)</span>
+takes of the order of thirty doublings, a scale ratio of about <span
+class="math inline">\(10^9\)</span>, to reach a threshold at <span
+class="math inline">\(g_{\rm thr}^2\approx20\)</span>. The mass gap
+therefore requires control of a <strong>finite, explicitly bounded
+number of blocking steps</strong>, all of them in the intermediate
+regime where neither the perturbative expansion of <a
+href="weak-coupling-feshbach-reduction.html">the Feshbach note</a> nor
+the cluster estimate of Section 3 applies.</p>
+<p><em>Staying in the family.</em> The blocked Hamiltonian <span
+class="math inline">\(A\)</span> is a Hamiltonian on the product of
+block low-energy spaces, and it contains, besides a nearest-block
+plaquette term, every operator generated by the compression:
+longer-range terms, terms of higher order in the block observables, and
+terms without a Kogut–Susskind counterpart. Carrying a controlled family
+of such Hamiltonians through the steps is the constructive
+renormalization-group problem that Balaban’s programme solves on the
+Euclidean side in finite volume with an ultraviolet cutoff, and which
+remains open beyond that.</p>
+<h2 id="what-this-step-establishes">6. What this step establishes</h2>
+<p>The blocking route survives the first objection: the enormous
+inter-block coupling enters the gap only through its variation, and the
+boundary energy, which is what makes <span
+class="math inline">\(\|B\|\)</span> large, is free by Lemma 1<span
+class="math inline">\(&#39;\)</span>. The route then needs one analytic
+input, a connected estimate for the Schur variation, and one structural
+input, a stable family of effective Hamiltonians. The first is a cluster
+expansion and is available at strong coupling; the second is the open
+problem. The quantitative shape of the difficulty is now explicit: a
+fixed coupling threshold <span class="math inline">\(g_{\rm
+thr}^4\simeq8\sqrt{6C}MN/(\gamma C_2)\)</span>, and a finite number of
+steps, logarithmic in the scale ratio, to reach it.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Step 2 of the foreseen route is written out with its constants. The
+two inputs it needs are named and separated: a connected (cluster)
+estimate for the variation of the Schur term, which would make the
+one-step inequality unconditional at strong coupling, and a stable
+family of blocked Hamiltonians, which is the constructive
+renormalization-group problem. The next tractable item is the first of
+these at strong coupling, where Yarotsky’s expansion already produces
+connected estimates of the required kind and may be readable as such
+directly.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

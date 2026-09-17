@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The gap is bounded by the variance of the averaged spatial Polyakov loop, with the small-volume scaling built in</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The gap is bounded by the variance of the averaged spatial Polyakov
+loop, with the small-volume scaling built in</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/polyakov-average-gap-bound.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/polyakov-average-gap-bound.pdf">PDF</a></p><p>For the Kogut–Susskind Hamiltonian on the periodic lattice of side
+<span class="math inline">\(L=N_sa\)</span>, the Feynman–Bijl inequality
+with the transverse average of the spatial Polyakov loop in direction
+<span class="math inline">\(i\)</span>, <span
+class="math display">\[\bar P_i=\frac1{N_s^2}\sum_{\text{lines
+}\parallel i}\operatorname{Re}\operatorname{tr}\big(U_{\ell_1}\cdots
+U_{\ell_{N_s}}\big),\]</span> gives the exact bound <span
+class="math display">\[\Delta^{\rm phys}_{a,L}\ \le\ \frac{\hbar
+cg^2}{2a}\,\frac{\langle\sum_\ell|\nabla_\ell\bar
+P_i|^2\rangle_0}{\operatorname{Var}_0\bar P_i}
+\ \le\ \frac{\hbar c\,g^2N}{4L\,\operatorname{Var}_0\bar P_i},\]</span>
+for every coupling and lattice size. Three consequences. In a small box
+at weak coupling, where the ground state is the constant-mode state of
+C133 at leading order, numerator and denominator are both computable
+there and the bound is <span class="math inline">\((\hbar
+c/L)\,g^{2/3}\)</span> times a pure number, the scaling of the exact
+zero-mode gap, so the upper side of the small-volume corner S of <a
+href="mass-gap-obligations-lattice.html">the obligations map</a> follows
+from an exact inequality plus the zero-mode expectation values. In the
+infinite-volume limit, a mass gap <span class="math inline">\(m\)</span>
+forces the averaged spatial Polyakov loop to self-average at least like
+<span class="math inline">\(1/L\)</span>: <span
+class="math inline">\(\operatorname{Var}_0\bar P_i\le\hbar
+cg^2N/(4mc^2L)\)</span>, equivalently a bound on the transverse
+Polyakov-loop susceptibility, <span
+class="math inline">\(\sum_{y}a^2\langle\operatorname{Re}P(x)\operatorname{Re}P(x+y)\rangle_c\le\hbar
+cg^2NL/(4mc^2)\)</span>, which is a necessary condition for T3 expressed
+through one gauge-invariant correlation. At strong coupling the averaged
+loop has variance <span class="math inline">\(1/(2N_s^2)\)</span> and
+the bound is empty, so the plaquette bound of <a
+href="lattice-gap-upper-bounds.html">the upper-bound note</a> and the
+present one cover complementary ends of the coupling axis. Nothing here
+is promoted.</p>
+<h2 id="the-operator-and-the-exact-bound">1. The operator and the exact
+bound</h2>
+<p>Fix a direction <span class="math inline">\(i\)</span>. The lattice
+decomposes into <span class="math inline">\(N_s^2\)</span> lines
+parallel to <span class="math inline">\(i\)</span>, each of <span
+class="math inline">\(N_s\)</span> links closing around the torus. For a
+line <span class="math inline">\(\lambda\)</span> let <span
+class="math inline">\(P_\lambda=\operatorname{Re}\operatorname{tr}\prod_{\ell\in\lambda}U_\ell\)</span>,
+the ordered product along the line; it is gauge invariant (a closed
+loop), and <span class="math inline">\(\bar P_i=N_s^{-2}\sum_\lambda
+P_\lambda\)</span>. Let <span class="math inline">\(O=\bar
+P_i-\langle\bar P_i\rangle_0\)</span>.</p>
+<p><strong>Theorem 1.</strong> For every <span
+class="math inline">\(g&gt;0\)</span>, <span
+class="math inline">\(N_s\ge2\)</span> and compact <span
+class="math inline">\(G\)</span> with the normalization of <a
+href="mass-gap-obligations-lattice.html">the obligations map</a>, <span
+class="math display">\[\Delta^{\rm phys}_{a,L}\ \le\ \frac{\hbar
+cg^2}{2a}\,
+\frac{\big\langle\sum_\ell|\nabla_\ell\bar
+P_i|^2\big\rangle_0}{\operatorname{Var}_0\bar P_i}
+\ \le\ \frac{\hbar c\,g^2N}{4L\,\operatorname{Var}_0\bar
+P_i}.\]</span></p>
+<p><em>Proof.</em> <span class="math inline">\(O\)</span> is a real
+gauge-invariant function of the links with zero mean, so Proposition 1
+of <a href="lattice-gap-upper-bounds.html">the upper-bound note</a>
+applies and gives the first inequality. Each link in direction <span
+class="math inline">\(i\)</span> belongs to exactly one line and links
+in other directions do not enter <span class="math inline">\(\bar
+P_i\)</span>, so <span class="math inline">\(\nabla_\ell\bar
+P_i=N_s^{-2}\nabla_\ell P_{\lambda(\ell)}\)</span>. For a link of <span
+class="math inline">\(\lambda\)</span>, <span
+class="math inline">\(X_a\operatorname{tr}\prod
+U=\operatorname{tr}(T^aM)\)</span> up to a phase with <span
+class="math inline">\(M\)</span> a cyclic rearrangement of the product,
+and the completeness relation gives <span
+class="math inline">\(\sum_a|\operatorname{tr}(T^aM)|^2=\tfrac12(N-|\operatorname{tr}M|^2/N)\le
+N/2\)</span>; the real part has smaller gradient. Hence <span
+class="math inline">\(\sum_\ell|\nabla_\ell\bar P_i|^2\le N_s^{-4}\cdot
+N_s^2\cdot N_s\cdot N/2=N/(2N_s)\)</span>, and <span
+class="math inline">\(\frac{\hbar
+cg^2}{2a}\cdot\frac{N}{2N_s}=\frac{\hbar cg^2N}{4L}\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="weak-coupling-in-a-small-box">2. Weak coupling in a small
+box</h2>
+<p>At weak coupling the links are near the identity and the
+gauge-invariant content of a Polyakov line is the holonomy of the
+constant mode: <span
+class="math inline">\(\prod_{\ell\in\lambda}U_\ell\approx\exp(iLa_i)\)</span>
+with <span class="math inline">\(a_i=a_i^bT^b\)</span> the constant mode
+of <a href="low-dimensional-mass-gap.html">G07</a> Proposition 7, whose
+ground-state width is <span class="math inline">\(|a_i|\sim
+g^{2/3}/L\)</span> in natural units. Since <span
+class="math inline">\(\operatorname{tr}T^b=0\)</span>, <span
+class="math display">\[P_\lambda\approx\operatorname{Re}\operatorname{tr}e^{iLa_i}=N-\tfrac14L^2|\vec
+a_i|^2+O(L^4|a|^4),\qquad
+\nabla_\ell
+P_\lambda\approx\operatorname{Im}\operatorname{tr}(T^aLa_i)=\tfrac12La_i^a
+,\]</span> so the variance of <span class="math inline">\(\bar
+P_i\)</span> is second order and the gradient first order in the
+constant mode: <span class="math display">\[\operatorname{Var}_0\bar
+P_i\approx\tfrac1{16}L^4\operatorname{Var}(|\vec a_i|^2),\qquad
+\Big\langle\sum_\ell|\nabla_\ell\bar P_i|^2\Big\rangle_0\approx
+N_s^{-4}\cdot N_s^3\cdot\tfrac14L^2\langle|\vec a_i|^2\rangle
+=\frac{L^2\langle|\vec a_i|^2\rangle}{4N_s}.\]</span> In the
+dimensionless variables of C133, <span
+class="math inline">\(La_i=g^{2/3}\xi_i\)</span> with <span
+class="math inline">\(\xi_i\)</span> distributed by the unit ground
+state <span class="math inline">\(\psi_0^{(3)}\)</span> of <span
+class="math inline">\(\tfrac12(-\Delta_{\mathbb
+R^9}+\sum_{i&lt;j}|\vec\xi_i\times\vec\xi_j|^2)\)</span>: <span
+class="math display">\[\frac{\hbar
+cg^2}{2a}\cdot\frac{g^{4/3}\langle|\vec\xi_i|^2\rangle/(4N_s)}{g^{8/3}\operatorname{Var}(|\vec\xi_i|^2)/16}
+=\frac{\hbar
+c}{L}\,g^{2/3}\cdot\frac{2\langle|\vec\xi_i|^2\rangle}{\operatorname{Var}(|\vec\xi_i|^2)}
+.\]</span> The bound is therefore <span class="math inline">\((\hbar
+c/L)g^{2/3}\)</span> times the pure number <span
+class="math inline">\(2\langle|\vec\xi_i|^2\rangle/\operatorname{Var}(|\vec\xi_i|^2)\)</span>,
+finite because the unit ground state decays faster than any power along
+the valleys (the confining bound of C133 gives exponential decay of
+<span class="math inline">\(\psi_0\)</span> in <span
+class="math inline">\(\sum_i|\vec\xi_i|\)</span>). Consistency with the
+exact zero-mode gap <span
+class="math inline">\(\delta_1^{(3)}g^{2/3}\hbar c/L\)</span> requires
+this number to be at least <span
+class="math inline">\(\delta_1^{(3)}\)</span>, which is the Feynman–Bijl
+inequality applied inside the zero-mode model with the trial operator
+<span class="math inline">\(|\vec\xi_i|^2\)</span>; the model version of
+Theorem 1 is exact and says exactly that.</p>
+<p>What is proved and what is not: Theorem 1 is exact. The two
+approximations, replacing the ground-state expectations by their
+constant-mode values, are the leading order of the small-volume
+expansion (Lüscher; abstract, B78) and are not proved here. The
+statement that follows from them is that the exact lattice inequality
+carries the <span class="math inline">\(g^{2/3}\)</span> scaling of the
+small-volume corner on its upper side; a lower bound with that scaling
+remains the open weak-coupling target of STATE.</p>
+<h2 id="infinite-volume-a-necessary-condition-for-the-mass-gap">3.
+Infinite volume: a necessary condition for the mass gap</h2>
+<p>Suppose the lattice theory at fixed <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(g\)</span> has infinite-volume gap <span
+class="math inline">\(\Delta_a=\liminf_{N_s\to\infty}\Delta_{a,L}&gt;0\)</span>
+(T2<span class="math inline">\(&#39;\)</span>), and write <span
+class="math inline">\(mc^2=\Delta_a\)</span>. Theorem 1 gives, for every
+<span class="math inline">\(L\)</span>, <span
+class="math display">\[\operatorname{Var}_0\bar P_i\ \le\ \frac{\hbar
+cg^2N}{4L\,\Delta_{a,L}} .\]</span> By translation invariance in the
+transverse plane, <span class="math inline">\(\operatorname{Var}_0\bar
+P_i=N_s^{-2}\sum_{y}C_i(y)\)</span> with <span
+class="math inline">\(C_i(y)=\langle\operatorname{Re}P_\lambda(x)\operatorname{Re}P_\lambda(x+y)\rangle_c\)</span>
+the connected two-point function of the spatial Polyakov loop at
+transverse separation <span class="math inline">\(y\)</span>. Hence</p>
+<p><strong>Corollary 2.</strong> If the infinite-volume gap is <span
+class="math inline">\(mc^2&gt;0\)</span>, then along any sequence of
+boxes on which <span class="math inline">\(\Delta_{a,L}\ge
+mc^2/2\)</span>, <span class="math display">\[\sum_{y\in\text{transverse
+plane}}a^2\,C_i(y)\ \le\ \frac{\hbar cg^2N}{2mc^2}\,L ,\]</span> and the
+averaged spatial Polyakov loop self-averages at least like <span
+class="math inline">\(1/L\)</span>.</p>
+<p>Reading: in a confining phase the spatial Polyakov loop of length
+<span class="math inline">\(L\)</span> has connected correlations
+decaying on a transverse scale <span class="math inline">\(\xi\)</span>,
+and the left side is of order <span class="math inline">\(\xi^2\langle
+P^2\rangle_c\)</span>, so the corollary is satisfied with room; in a
+phase where the loop orders or its correlations do not decay, the left
+side grows like <span class="math inline">\(L^2\)</span> and the
+corollary forbids a gap. It is a necessary condition only, but it is one
+written entirely in terms of a single gauge-invariant correlation and
+the coupling, with no reference to the spectrum.</p>
+<h2 id="strong-coupling-the-bound-is-empty">4. Strong coupling: the
+bound is empty</h2>
+<p>At <span class="math inline">\(g=\infty\)</span> the links are
+independent Haar variables, distinct lines are independent, and <span
+class="math inline">\(\langle|\operatorname{tr}U_1\cdots
+U_{N_s}|^2\rangle=1\)</span> for a product of independent Haar elements
+of <span class="math inline">\(SU(N)\)</span> (the product is again Haar
+distributed), so <span
+class="math inline">\(\operatorname{Var}P_\lambda=\tfrac12\)</span> for
+<span class="math inline">\(N\ge3\)</span> and <span
+class="math inline">\(\operatorname{Var}\bar P_i=1/(2N_s^2)\)</span>.
+Theorem 1 then reads <span class="math inline">\(\Delta\le\hbar
+cg^2NN_s^2/(2L)\)</span>, which grows with the lattice and says nothing.
+The averaged loop is the wrong trial operator in the disordered phase,
+as the plaquette is in the ordered one; the two bounds are
+complementary, and neither is uniform in <span
+class="math inline">\(a\)</span> along the scaling curve.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The upper side of the small-volume corner is now an exact lattice
+inequality plus two zero-mode expectation values, and a mass gap has a
+necessary condition in the Polyakov-loop susceptibility (Corollary 2).
+The lower side, a bound <span class="math inline">\(\Delta_{a,L}\ge
+c\,g^{2/3}\hbar c/L\)</span> at weak coupling in a small box, remains
+the open weak-coupling target; its natural form, suggested by the shape
+of Theorem 1, is an operator inequality in which the constant-mode
+zero-point energy of C133 survives the coupling to the nonzero
+modes.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

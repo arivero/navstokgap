@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The large-field action lower bound is immediate in the natural variable, and the constant field saturates it</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The large-field action lower bound is immediate in the natural
+variable, and the constant field saturates it</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/large-field-action-lower-bound.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/large-field-action-lower-bound.pdf">PDF</a></p><p>The bound asked for at the end of <a
+href="large-field-entropy-count.html">the entropy note</a> holds with
+the optimal constant, once the large-field condition is written in the
+variable the action already measures. Define the region as <span
+class="math display">\[K_\eta=\Big\{A:\ \frac1{\ell^4}\int_{\rm
+block}\big|G_t(x)\big|^2d^4x\ \ge\
+\Big(\frac{\eta}{\ell^2}\Big)^2\Big\},
+\qquad \sqrt{8t}=\ell,\]</span> with <span
+class="math inline">\(G_t\)</span> the field strength at flow time <span
+class="math inline">\(t\)</span>. Then <span
+class="math display">\[\inf_{K_\eta}\frac{S_E}{\hbar}\ \ge\
+\frac{\eta^2}{4g^2},\]</span> by two steps only: the gradient flow
+decreases the Euclidean action, so <span class="math inline">\(S_E[A]\ge
+S_E[\text{flowed }A]\)</span>, and the flowed action is at least its
+restriction to the block, which the constraint bounds below. The bound
+is <strong>uniform in the block size, in the lattice spacing, in the
+volume and in the gauge group</strong> in the normalization used here,
+and it is <strong>saturated</strong>: a field of magnitude <span
+class="math inline">\(\eta/\ell^2\)</span> supported on the block
+attains it, so the constant <span class="math inline">\(1/4\)</span> is
+optimal. The Nielsen–Olesen instability is no obstruction, because every
+deformation that lowers the action also lowers the flowed block average
+and therefore leaves <span class="math inline">\(K_\eta\)</span>: the
+constant field is a saddle of the unconstrained action and a minimizer
+of the constrained one. Together with <a
+href="large-field-entropy-count.html">the entropy count</a> this closes
+the large-field corner as an estimate problem: cost <span
+class="math inline">\(\eta^2/(4g^2)\)</span>, count <span
+class="math inline">\(\eta^2/(8\pi^2)\)</span>, net exponent <span
+class="math inline">\(-\frac{\eta^2}{4g^2}\big(1-Cg^2/2\pi^2\big)\)</span>.
+Constants explicit; nothing promoted.</p>
+<h2 id="the-constraint-in-the-right-variable">1. The constraint in the
+right variable</h2>
+<p>The Euclidean action is the <span class="math inline">\(L^2\)</span>
+norm of the field strength, <span
+class="math display">\[\frac{S_E}{\hbar}=\frac1{4g^2}\int\big|F^a_{\mu\nu}(x)\big|^2d^4x
+,\]</span> so the natural measure of “how large the field is in a block”
+is the same quantity restricted to the block, and the natural smoothing
+is the gradient flow at the radius of the block. Take <span
+class="math inline">\(\sqrt{8t}=\ell\)</span> and <span
+class="math display">\[\mathcal F_\ell(A)=\frac1{\ell^4}\int_{\rm
+block}\big|G_t(x)\big|^2d^4x,
+\qquad K_\eta=\Big\{A:\ \mathcal
+F_\ell(A)\ge\eta^2/\ell^4\Big\}.\]</span> This is gauge invariant,
+because <span class="math inline">\(|G_t|^2\)</span> is, and it is the
+quantity that the truncation estimate of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a> is
+sensitive to, up to replacing a supremum by a block average.</p>
+<h2 id="the-bound">2. The bound</h2>
+<p><strong>Proposition 1.</strong> For every <span
+class="math inline">\(\ell&gt;0\)</span>, every lattice spacing <span
+class="math inline">\(a&lt;\ell\)</span> and every volume, <span
+class="math display">\[\inf_{A\in K_\eta}\ \frac{S_E[A]}{\hbar}\ \ge\
+\frac{\eta^2}{4g^2}.\]</span></p>
+<p><em>Proof.</em> Two steps.</p>
+<p><em>(i) The flow decreases the action.</em> Along the gradient flow
+<span class="math inline">\(\partial_sB=-D^*G\)</span> one has <span
+class="math inline">\(\frac{d}{ds}S_E(B_s)=-\|D^*G\|_2^2\le0\)</span>
+(<a href="comparison-and-bridges.html">comparison note</a> §4; Lüscher,
+arXiv:1006.4518v3, after equation (1.4), passage level), so <span
+class="math inline">\(S_E[A]=S_E[B_0]\ge
+S_E[B_t]=\frac{\hbar}{4g^2}\int|G_t|^2d^4x\)</span>.</p>
+<p><em>(ii) Positivity outside the block.</em> The integrand is
+nonnegative, so <span
+class="math display">\[\frac1{4g^2}\int\big|G_t\big|^2\ \ge\
+\frac1{4g^2}\int_{\rm block}\big|G_t\big|^2
+\ \ge\
+\frac1{4g^2}\,\ell^4\cdot\frac{\eta^2}{\ell^4}=\frac{\eta^2}{4g^2},\]</span>
+the middle inequality being the definition of <span
+class="math inline">\(K_\eta\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>No property of the gauge group beyond the normalization of the trace
+enters, and no property of the lattice beyond <span
+class="math inline">\(a&lt;\ell\)</span>, which is needed only so that
+the flow at radius <span class="math inline">\(\ell\)</span> is
+meaningful.</p>
+<p><strong>Proposition 2 (sharpness).</strong> The constant <span
+class="math inline">\(1/4\)</span> cannot be improved. A configuration
+whose field strength equals <span
+class="math inline">\(\eta/\ell^2\)</span> on the block and vanishes
+outside has <span class="math inline">\(S_E/\hbar=\eta^2/(4g^2)\)</span>
+and lies in <span class="math inline">\(K_\eta\)</span> up to the
+smoothing at the boundary of the block, which contributes a relative
+correction of order <span class="math inline">\(a/\ell\)</span>.</p>
+<h2 id="why-the-instability-does-not-obstruct-the-bound">3. Why the
+instability does not obstruct the bound</h2>
+<p><a href="flow-instability-large-field.html">The instability note</a>
+shows that a constant chromomagnetic field is a saddle of the
+unconstrained action, with <span class="math inline">\(\mathcal
+N(\eta)=\eta^2/(8\pi^2)\)</span> descent directions. Each of those
+directions lowers <span class="math inline">\(S_E\)</span>, and by step
+(i) of Proposition 1 it therefore lowers <span
+class="math inline">\(\int|G_t|^2\)</span> as well, so it lowers <span
+class="math inline">\(\mathcal F_\ell\)</span> and moves the
+configuration out of <span class="math inline">\(K_\eta\)</span>. The
+two statements are consistent and say different things:</p>
+<ul>
+<li><em>unconstrained</em>: the constant field is not a local minimum,
+and the flow runs away from it at rate <span
+class="math inline">\(2\|G\|\)</span>;</li>
+<li><em>constrained</em>: on <span class="math inline">\(K_\eta\)</span>
+the constant field attains the infimum, because every descent direction
+violates the constraint.</li>
+</ul>
+<p>The instability therefore affects the <strong>treatment</strong> of
+the region, which must expand around an inhomogeneous configuration if
+one insists on staying inside <span
+class="math inline">\(K_\eta\)</span> while following the flow, and not
+the <strong>cost</strong> of the region, which Proposition 1 fixes.</p>
+<h2 id="the-corner-assembled">4. The corner, assembled</h2>
+<p>Collecting the three statements about a large-field region of
+strength <span class="math inline">\(\eta\)</span> at scale <span
+class="math inline">\(\ell\)</span>:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>quantity</th>
+<th>value</th>
+<th>source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>minimal action cost</td>
+<td><span class="math inline">\(\eta^2/(4g^2)\)</span>, sharp</td>
+<td>Propositions 1–2 here</td>
+</tr>
+<tr class="even">
+<td>unstable directions</td>
+<td><span class="math inline">\(\eta^2/(8\pi^2)\)</span></td>
+<td><a href="large-field-entropy-count.html">entropy note</a> §2</td>
+</tr>
+<tr class="odd">
+<td>flow-truncation error inside</td>
+<td><span class="math inline">\(e^{2\eta}\)</span>, sharp</td>
+<td><a href="flow-instability-large-field.html">instability
+note</a></td>
+</tr>
+<tr class="even">
+<td>net weight</td>
+<td><span
+class="math inline">\(\exp\big[-\frac{\eta^2}{4g^2}\big(1-\frac{Cg^2}{2\pi^2}\big)\big]\)</span></td>
+<td>combining the first two</td>
+</tr>
+</tbody>
+</table>
+<p>All four are independent of <span class="math inline">\(\ell\)</span>
+and of the lattice spacing, which is the scale invariance that makes an
+induction over scales possible at all. The first three are proved or
+sharp; the fourth needs the standard conditional argument comparing the
+constrained partition function with the full one, in which the entropy
+of the block is exactly the count in the second row.</p>
+<p><strong>What is closed.</strong> The large-field region is no longer
+an unquantified obstacle. Its cost, its entropy and the failure mode of
+the flow inside it are all explicit, scale-invariant, and consistent
+with each other.</p>
+<p><strong>What is not.</strong> How the effective Hamiltonian is
+defined inside the region. Proposition 1 bounds the weight of the
+region; it does not say what replaces the flow-and-truncate step there,
+and the constructive answer, an expansion around the constrained
+minimizer with its <span class="math inline">\(\eta^2/(8\pi^2)\)</span>
+soft directions treated separately, is a construction rather than an
+estimate.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The lower bound asked for is proved with the optimal constant and
+uniformly in every parameter, by flow monotonicity and positivity, once
+the constraint is written as a block average of the flowed action
+density. The large-field corner is closed at the level of estimates. The
+remaining content of the decimation step is the construction inside the
+region, which is the same constructive problem the programme has reached
+from three directions now: after the small-field truncation is
+controlled, the large-field regions are rare and expensive but must
+still be given an effective description.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

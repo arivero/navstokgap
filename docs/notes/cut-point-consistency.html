@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A surviving action defect and consistency under inserting cuts</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A surviving action defect and consistency under inserting cuts</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-point-consistency.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-point-consistency.pdf">PDF</a></p><p>A03, reviewed with B12, 2026-09-07. Two exact tests separate
+refinement of one experiment from a changing family of fluctuation
+preparations. Constant-force chord errors vanish on every mesh tending
+to zero. Within the scalar Gaussian bridge family, exact consistency
+under retaining old nodes fixes the fluctuation parameter. These
+statements locate the next selection obligation at the refinement
+law.</p>
+<h2 id="arbitrary-partitions-of-the-constant-force-trajectory">1.
+Arbitrary partitions of the constant-force trajectory</h2>
+<p>Fix <span class="math inline">\(m,F,T&gt;0\)</span>, <span
+class="math inline">\(x(t)=v_0t\)</span> with <span
+class="math inline">\(v_0&gt;0\)</span>, <span
+class="math inline">\(y(t)=Ft^2/(2m)\)</span>, and the Lagrangian <span
+class="math inline">\(L=m(\dot x^2+\dot y^2)/2+Fy\)</span>. Let <span
+class="math inline">\(\pi=(0=t_0&lt;\cdots&lt;t_N=T)\)</span>, <span
+class="math inline">\(\tau_j=t_j-t_{j-1}\)</span>, and let <span
+class="math inline">\(q_\pi\)</span> linearly interpolate the exact
+trajectory at these times. Both global endpoints and all sampled
+positions are fixed in this comparison.</p>
+<p>On interval <span class="math inline">\(j\)</span>, with <span
+class="math inline">\(s=t-t_{j-1}\)</span>, the interpolation error is
+<span class="math inline">\(\eta_j(s)=Fs(\tau_j-s)/(2m)\)</span>. The
+classical first variation vanishes on that interval. Adding the exact
+local quadratic action differences gives</p>
+<p><span class="math display">\[D_\pi:=S[q_\pi]-S[q_{\rm cl}]
+=\frac{F^2}{24m}\sum_j\tau_j^3
+\le\frac{F^2T}{24m}|\pi|^2\longrightarrow0.\]</span></p>
+<p>The unsigned chord–arc lens areas similarly add to <span
+class="math inline">\(A_\pi=v_0F\sum_j\tau_j^3/(12m)\)</span>, so <span
+class="math inline">\(D_\pi=F A_\pi/(2v_0)\)</span>. The existing
+constant-force calculation applies after subtracting the local linear
+tangent; its slope cancels from the lens difference.</p>
+<p>For fixed <span class="math inline">\(N\)</span>, convexity yields
+<span class="math inline">\(\sum_j\tau_j^3\ge T^3/N^2\)</span>, attained
+by equal steps. Splitting one interval into positive lengths <span
+class="math inline">\(a,b\)</span> reduces the action defect by</p>
+<p><span class="math display">\[\frac{F^2}{24m}[(a+b)^3-a^3-b^3]
+=\frac{F^2}{8m}ab(a+b)&gt;0.\]</span></p>
+<p>Thus nonuniform cuts cannot defeat convergence when the maximum step
+tends to zero. This calculation concerns sampled chords; Newton’s
+impulsive polygon is a separate approximation scheme requiring its own
+error estimate.</p>
+<h2 id="exact-consistency-of-gaussian-node-laws">2. Exact consistency of
+Gaussian node laws</h2>
+<p>Fix the free-line experiment on <span
+class="math inline">\([0,T]\)</span>, mass <span
+class="math inline">\(m&gt;0\)</span> and fixed endpoints. For each
+partition with at least one internal node, let the centered node vector
+be Gaussian with covariance</p>
+<p><span class="math display">\[\operatorname{Cov}_{\pi}(\eta_i,\eta_j)
+=\frac{\kappa_\pi}{m}G(t_i,t_j),\qquad
+G(s,t)=\min(s,t)-st/T,\quad \kappa_\pi\ge0.\]</span></p>
+<p>The zero value denotes a point mass at the classical straight path.
+Exact refinement consistency means that when <span
+class="math inline">\(\pi&#39;\supset\pi\)</span>, deleting the new
+coordinates from the finer law gives precisely the coarser law, with the
+same physical times, positions and mass.</p>
+<p><strong>Proposition.</strong> Within this family, consistency forces
+<span class="math inline">\(\kappa_{\pi&#39;}=\kappa_\pi\)</span> for
+every refinement retaining an interior node. Conversely a fixed <span
+class="math inline">\(\kappa\)</span> gives consistent Gaussian node
+laws.</p>
+<p><strong>Proof.</strong> At any retained interior time <span
+class="math inline">\(s\)</span>, equality of the one-node marginals
+implies <span
+class="math inline">\(\kappa_{\pi&#39;}s(T-s)/(mT)=\kappa_\pi
+s(T-s)/(mT)\)</span>. The factor multiplying <span
+class="math inline">\(\kappa\)</span> is positive. Conversely the
+restriction of a centered Gaussian vector has the corresponding
+covariance submatrix, which here is exactly the coarse covariance. On
+the directed family of all partitions, any two nontrivial partitions
+have a common refinement, so their parameters agree. The endpoint-only
+partition has no observable variance and places no extra constraint.
+This completes the proof.</p>
+<p>For nested <span class="math inline">\(\pi_N\)</span> retaining an
+interior point <span class="math inline">\(s\)</span>, M05’s
+finite-defect scaling <span
+class="math inline">\((N-1)\kappa_N\to\ell&gt;0\)</span> makes that
+retained variance approach zero. It therefore describes changing
+preparations, rather than exact marginals of one positive-width bridge
+experiment. It remains a valid triangular-array limit, with the action
+defect proved in C014.</p>
+<h2 id="what-survives-at-fixed-preparation">3. What survives at fixed
+preparation?</h2>
+<p>Let <span class="math inline">\(d=N-1\)</span>. Under the fixed-<span
+class="math inline">\(\kappa&gt;0\)</span> bridge, the polygon’s free
+action excess satisfies <span
+class="math inline">\(2D_\pi/\kappa\sim\chi_d^2\)</span>, independent of
+the actual positive step lengths (C014’s finite law). Consequently</p>
+<p><span class="math display">\[\mathbb E D_\pi=d\kappa/2,\qquad
+\operatorname{Var}D_\pi=d\kappa^2/2,\]</span></p>
+<p>and <span class="math inline">\(D_\pi\to\infty\)</span> in
+probability as <span class="math inline">\(d\to\infty\)</span>. Indeed,
+Chebyshev gives <span
+class="math inline">\(\Pr\{D_\pi&lt;d\kappa/4\}\le8/d\)</span>. The
+normalized estimator</p>
+<p><span
+class="math display">\[\widehat\kappa_\pi=\frac{2D_\pi}{d}\]</span></p>
+<p>has mean <span class="math inline">\(\kappa\)</span> and variance
+<span class="math inline">\(2\kappa^2/d\)</span>, hence converges to
+<span class="math inline">\(\kappa\)</span> in mean square, even on
+nonuniform partitions. It estimates the supplied bridge parameter. It is
+not an additive accumulated action; division by the number of internal
+nodes is essential. For <span class="math inline">\(\kappa=0\)</span>
+every defect vanishes.</p>
+<p>Thus exact consistency permits a fixed positive action parameter and
+a consistent estimator of it, while the unnormalized kinetic action
+diverges. It also permits the deterministic zero family. Selection of a
+positive scale still requires a physical premise excluding that family
+and fixing the scale.</p>
+<h2 id="one-inserted-cut-and-the-fluctuation-it-introduces">4. One
+inserted cut and the fluctuation it introduces</h2>
+<p>On a coarse interval of length <span
+class="math inline">\(a+b\)</span>, fix endpoint positions <span
+class="math inline">\(x,z\)</span> and insert <span
+class="math inline">\(y\)</span> after duration <span
+class="math inline">\(a\)</span>, with <span
+class="math inline">\(a,b&gt;0\)</span>. Set <span
+class="math inline">\(\bar y=(bx+az)/(a+b)\)</span> and <span
+class="math inline">\(\zeta=y-\bar y\)</span>. Completing the square
+gives</p>
+<p><span class="math display">\[\frac
+m2\left[\frac{(y-x)^2}{a}+\frac{(z-y)^2}{b}
+-\frac{(z-x)^2}{a+b}\right]
+=\frac{m(a+b)}{2ab}\zeta^2.\]</span></p>
+<p>At fixed bridge parameter <span
+class="math inline">\(\kappa\)</span>, conditional Gaussian variance is
+<span class="math inline">\(\operatorname{Var}(\zeta\mid x,z)=\kappa
+ab/[m(a+b)]\)</span>. The expected extra action from inserting one node
+is therefore <span class="math inline">\(\kappa/2\)</span>, independent
+of the interval lengths. For deterministic interpolation <span
+class="math inline">\(\zeta=0\)</span> it is zero. The kinetic splitting
+identity is nonnegative, whereas section 1’s total constant-force chord
+error decreases under refinement: the latter includes the potential term
+and moves the inserted node onto the accelerated classical curve.</p>
+<p>This is a local, testable formulation of the missing premise: does
+inserting a physical cut introduce a nonzero conditional fluctuation,
+and what law sets its variance? Supplying the Gaussian rule answers the
+first question by assumption. A classical derivation would have to
+produce that rule or a different consistent fluctuation mechanism from
+independent physics.</p>
+<h2 id="next-test-and-prior-art-gate">5. Next test and prior-art
+gate</h2>
+<p>The <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B12.md">B12
+audit</a> classifies C027–C029 as elementary consequences. Pitman and
+Yor, <em>A guide to Brownian motion and related stochastic
+processes</em> (2018), <a
+href="https://arxiv.org/abs/1802.09679v1">arXiv:1802.09679v1</a>,
+printed pp. 6, 10, 12–13, supply the Gaussian bridge and restriction
+framework. The <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B12/PitmanYor2018.md">source
+companion</a> records coverage. The constant-force identity extends the
+<a href="principia-constant-force-action.html">existing calculation</a>.
+The action law and moments in section 3 are proved in <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/regulator-limits.tex">the
+regulator-limits paper</a>. The combined selection test is the research
+use of these established ingredients.</p>
+<p>Next distinguish coordinate sampling from a physically executed
+intervention at a cut. A candidate intervention law must state its
+effect on energy, momentum, conditional variance and coarse observables.
+Test consistency first, then positivity, scale universality and
+compatibility with finite speed. The Gaussian conditional law is a
+reference model for that audit, not yet a model with a hard physical
+speed ceiling.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

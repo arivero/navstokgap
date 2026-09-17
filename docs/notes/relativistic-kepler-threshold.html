@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relativistic Kepler: a singular-core angular-action threshold</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Relativistic Kepler: a singular-core angular-action threshold</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/relativistic-kepler-threshold.md">Markdown source</a></p><p>Regular bound motion in the fixed potential <span
+class="math inline">\(-k/r\)</span> exists exactly for <span
+class="math inline">\(|L|&gt;k/c\)</span>. Replacing it by <span
+class="math inline">\(-k/\sqrt{r^2+a^2}\)</span>, with any fixed <span
+class="math inline">\(a&gt;0\)</span>, admits regular bound circles for
+every <span class="math inline">\(|L|&gt;0\)</span>. Thus the positive
+infimum uses the singular core as well as finite speed and binding.</p>
+<h2 id="object-and-physical-premises">Object and physical premises</h2>
+<p>Use planar canonical coordinates <span
+class="math inline">\((r,\theta,p_r,L)\)</span>, <span
+class="math inline">\(r&gt;0\)</span>, and <span
+class="math inline">\(H=\sqrt{m^2c^4+c^2(p_r^2+L^2/r^2)}+V(r)\)</span>,
+with fixed <span class="math inline">\(m,c,k&gt;0\)</span>. Energy
+includes rest energy. A regular bound orbit is a complete Hamiltonian
+trajectory whose radius remains in a compact subset of <span
+class="math inline">\((0,\infty)\)</span>. The angular action is <span
+class="math inline">\(I_\theta=|L|\)</span>: the angular canonical cycle
+has <span
+class="math inline">\((2\pi)^{-1}|\int_0^{2\pi}L\,d\theta|=|L|\)</span>.
+This cycle normalization does not require a closed spatial rosette.
+Define <span class="math inline">\(g_\theta=\inf\{|L|:\text{a regular
+bound orbit exists}\}\)</span>. Its units are action, since <span
+class="math inline">\([k]=\text{energy}\times\text{length}\)</span>.
+This is an admissibility threshold, not a spacing of adjacent action
+values.</p>
+<p>The potential is external and static; recoil, radiation and field
+dynamics are excluded from this one-body model. Hamilton’s velocity
+always has magnitude less than <span class="math inline">\(c\)</span> at
+finite momentum.</p>
+<h2 id="singular-potential-domain-and-proof">Singular potential: domain
+and proof</h2>
+<p>Set <span class="math inline">\(\ell=|L|\)</span> and <span
+class="math inline">\(x=1/r\)</span>. The turning-point energy is <span
+class="math inline">\(F_\ell(x)=\sqrt{m^2c^4+c^2\ell^2x^2}-kx\)</span>.
+For <span class="math inline">\(\ell&gt;0\)</span> its second derivative
+is strictly positive, its derivative at zero is <span
+class="math inline">\(-k\)</span>, and its derivative at infinity tends
+to <span class="math inline">\(c\ell-k\)</span>. Consequently a finite
+minimum exists exactly for <span
+class="math inline">\(\ell&gt;k/c\)</span>, with</p>
+<p><span class="math display">\[
+E_{\min}=mc^2\sqrt{1-k^2/(c^2\ell^2)},\qquad
+r_0=\frac{\ell\sqrt{c^2\ell^2-k^2}}{mkc}.
+\]</span></p>
+<p>For each such <span class="math inline">\(\ell\)</span>, the complete
+bound domain has <span class="math inline">\(E_{\min}\le
+E&lt;mc^2\)</span>. Equality gives the circle; strict inequality gives
+two turning radii. Indeed <span
+class="math inline">\(F_\ell(0)=mc^2\)</span> and <span
+class="math inline">\(F_\ell(x)\to\infty\)</span> at large <span
+class="math inline">\(x\)</span>, so the allowed interval <span
+class="math inline">\(F_\ell(x)\le E\)</span> is compact and separated
+from zero. Energy bounds the momentum there; the smooth Hamiltonian
+vector field therefore extends for all time. For <span
+class="math inline">\(E\ge mc^2\)</span> the outer radius is unbounded.
+For <span class="math inline">\(E&lt;E_{\min}\)</span> there are no
+states.</p>
+<p>At <span class="math inline">\(\ell=k/c\)</span>, <span
+class="math inline">\(F_\ell(x)\)</span> decreases to zero without
+attaining it. For <span class="math inline">\(\ell&lt;k/c\)</span> it
+decreases to minus infinity (also directly for <span
+class="math inline">\(\ell=0\)</span>). There is no radial well in
+either case. For any allowed orbit with <span
+class="math inline">\(E&lt;mc^2\)</span>, the single outer turning point
+leads to a plunge. The energy identity and inward radial velocity
+are</p>
+<p><span class="math display">\[
+c^2p_r^2=E^2-m^2c^4+\frac{2Ek}{r}
++\frac{k^2-c^2\ell^2}{r^2},\qquad
+\dot r=\frac{c^2p_r}{E+k/r}.
+\]</span></p>
+<p>For <span class="math inline">\(\ell&lt;k/c\)</span>, <span
+class="math inline">\(|\dot r|\to c\sqrt{k^2-c^2\ell^2}/k&gt;0\)</span>
+at the centre. At equality the allowed energy satisfies <span
+class="math inline">\(E&gt;0\)</span>, and <span
+class="math inline">\(|\dot r|\sim c\sqrt{2E/k}\sqrt r\)</span>. Both
+give finite arrival time by integrating <span
+class="math inline">\(dr/|\dot r|\)</span>. A collision continuation is
+outside the domain. Hence <span
+class="math inline">\(g_\theta=k/c\)</span>, with the infimum excluded
+and all larger angular actions admitted continuously. At fixed <span
+class="math inline">\(k\)</span> it closes as <span
+class="math inline">\(c\to\infty\)</span>; at fixed <span
+class="math inline">\(c\)</span> it closes as <span
+class="math inline">\(k\downarrow0\)</span>. These are limits of
+thresholds for positive couplings; at <span
+class="math inline">\(k=0\)</span> there are no nonstationary bound
+orbits. At fixed <span class="math inline">\(\ell,k,m\)</span>, <span
+class="math inline">\(r_0\to\ell^2/(mk)\)</span> and <span
+class="math inline">\(E_{\min}-mc^2\to-mk^2/(2\ell^2)\)</span> in the
+Newtonian limit.</p>
+<p>Boyer’s equations (19)–(20), (37)–(42), mapped by <span
+class="math inline">\(\alpha=k\)</span>, supply the established
+classification; <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B27.md">B27</a>
+records the passage audit. The compactness and endpoint-time arguments
+above state the precise domain used here.</p>
+<h2 id="softened-core-the-threshold-closes-at-fixed-coupling">Softened
+core: the threshold closes at fixed coupling</h2>
+<p>Fix <span class="math inline">\(a&gt;0\)</span> and take <span
+class="math inline">\(V_a(r)=-k/\sqrt{r^2+a^2}\)</span>. For every <span
+class="math inline">\(\ell&gt;0\)</span> the turning-point energy</p>
+<p><span class="math display">\[
+U_{a,\ell}(r)=\sqrt{m^2c^4+c^2\ell^2/r^2}
+             -\frac{k}{\sqrt{r^2+a^2}}
+\]</span></p>
+<p>tends to infinity as <span
+class="math inline">\(r\downarrow0\)</span>. At large radius, <span
+class="math inline">\(U_{a,\ell}(r)=mc^2-k/r+\ell^2/(2mr^2)+O(r^{-3})\)</span>,
+so it takes values below its limit <span
+class="math inline">\(mc^2\)</span>. It therefore attains a global
+minimum at a finite positive radius. At that minimum <span
+class="math inline">\(p_r=0\)</span> and <span
+class="math inline">\(U&#39;_{a,\ell}=0\)</span>, giving a complete
+circular Hamiltonian trajectory. Every energy strictly between the
+minimum and <span class="math inline">\(mc^2\)</span> also has compact
+allowed radial components. These give regular bound trajectories by the
+same continuation argument. Thus <span
+class="math inline">\(g_\theta(a)=0\)</span> for every <span
+class="math inline">\(a&gt;0\)</span> even at fixed <span
+class="math inline">\(m,k,c\)</span>. This existence argument needs
+neither uniqueness of the minimum nor a small-velocity
+approximation.</p>
+<p>For each fixed subcritical <span
+class="math inline">\(0&lt;\ell&lt;k/c\)</span>, minimizing radii
+approach zero as <span class="math inline">\(a\downarrow0\)</span>. To
+see this, write <span class="math inline">\(r=ay\)</span> and choose a
+fixed large <span class="math inline">\(y\)</span> with <span
+class="math inline">\(c\ell/y&lt;k/\sqrt{1+y^2}\)</span>. Then <span
+class="math inline">\(aU_{a,\ell}(ay)\)</span> tends to a negative
+constant, so the minimum tends to minus infinity. On <span
+class="math inline">\(r\ge\delta&gt;0\)</span>, <span
+class="math inline">\(U_{a,\ell}\ge mc^2-k/\delta\)</span> uniformly in
+<span class="math inline">\(a\)</span>, forcing the minimizer below any
+such <span class="math inline">\(\delta\)</span>. These circles leave
+the regular domain of the singular model in the limit. In particular
+<span class="math inline">\(\lim_{a\downarrow0}g_\theta(a)=0\)</span>,
+whereas the singular model has <span
+class="math inline">\(g_\theta=k/c\)</span>.</p>
+<h2 id="next-observable-test">Next observable test</h2>
+<p>A15 should compare orbital action with a finite-window fluctuation in
+a specified bound preparation. M07 identifies which singular-core
+premise supports a positive angular threshold; it supplies no universal
+action value or attraction law for a physical-time field. Proof and
+literature status are recorded separately in the claim ledger and the
+follow-up audit.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

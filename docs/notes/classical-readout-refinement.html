@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classical readout under cut refinement</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Classical readout under cut refinement</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/classical-readout-refinement.md">Markdown source</a></p><p>Two classical canonical probes can read the tagged phase of R04 with
+arbitrarily small error and disturbance if their initial phase-space
+widths may shrink. For a fixed observation horizon, widths of order the
+fourth power of the mesh suffice for uniform recovery of the hidden
+receiver state despite the inverse observation map’s cubic sensitivity.
+This settles the quiet-preparation test for an externally switched
+impulsive Hamiltonian instrument. Finite-duration, autonomous
+implementation is the next mechanical obligation.</p>
+<h2 id="instrument-state-and-supplied-resources">1. Instrument, state
+and supplied resources</h2>
+<p>Use the fixed reduced three-body Hamiltonian and flow of <a
+href="three-body-cut-memory.html">the R04 note</a>: <span
+class="math inline">\(z=(u,w)\)</span>, <span
+class="math inline">\(u=(x,P)\)</span>, <span
+class="math inline">\(w=(y,Q)\)</span>, <span
+class="math inline">\(z_t=\Phi_tz_0\)</span>, with masses and stiffness
+fixed and <span class="math inline">\(z_0\)</span> on the compact
+positive-energy shell <span class="math inline">\(H=E\)</span>. The
+physical tagged momentum is <span
+class="math inline">\(p_1=2P/3\)</span>. Attach two fresh probes with
+canonical pairs <span class="math inline">\((q,\pi)\)</span> and <span
+class="math inline">\((r,\rho)\)</span>, positions in length units and
+momenta in momentum units. Let <span
+class="math inline">\(\alpha&gt;0\)</span> be dimensionless and <span
+class="math inline">\(\beta&gt;0\)</span> have units <span
+class="math inline">\(T/M\)</span>. All phase domains are Euclidean.</p>
+<p>At each cut apply, in order, the Hamiltonian kicks generated by the
+integrated Hamiltonians</p>
+<p><span class="math display">\[G_x=\alpha x\pi,\qquad G_P=\beta
+P\rho.\]</span></p>
+<p>Both <span class="math inline">\(G\)</span> have action units. They
+denote unit-parameter canonical flows, or ideal zero-duration pulses
+with those integrals; receiver drift and probe free drift during a pulse
+are omitted by definition. The coupling is externally switched and can
+depend on momentum. It is a classical Hamiltonian instrument, not yet a
+passive spring apparatus or a finite-speed measurement mechanism. On the
+unreduced chain it measures the internal coordinate <span
+class="math inline">\(x_1-X\)</span> and its conjugate <span
+class="math inline">\(P=p_1-(p_2+p_3)/2\)</span> on the
+zero-total-momentum subspace. Its reaction is distributed over the
+chain, preserving centre reduction; it is not a local interaction with
+particle 1 alone.</p>
+<p>The final probe positions are recorded exactly in this instrument
+model. Any additional recording error must be included in the position
+widths below. No energetic or entropic cost of preparing or recording
+the probes is assumed. These are explicit resources left open for the
+implementation test.</p>
+<h2 id="exact-readout-and-back-reaction">2. Exact readout and
+back-reaction</h2>
+<p>Hamilton’s equations for <span class="math inline">\(G_x\)</span>
+give <span class="math inline">\(q^+=q+\alpha x\)</span> and <span
+class="math inline">\(P^+=P-\alpha\pi\)</span>, with <span
+class="math inline">\(x,\pi\)</span> unchanged. The second flow gives
+<span class="math inline">\(r^+=r+\beta P^+\)</span> and <span
+class="math inline">\(x^+=x+\beta\rho\)</span>, with <span
+class="math inline">\(P^+,\rho\)</span> unchanged. The hidden pair <span
+class="math inline">\(w\)</span> is unchanged by both kicks. Thus, in
+terms of pre-cut values,</p>
+<p><span class="math display">\[\widehat x=\frac{q^+}{\alpha}=x+\frac
+q\alpha,
+\qquad
+\widehat P=\frac{r^+}{\beta}=P+\frac r\beta-\alpha\pi,\]</span></p>
+<p><span class="math display">\[d_x=x^+-x=\beta\rho,\qquad
+d_P=P^+-P=-\alpha\pi.\]</span></p>
+<p>In particular, the second measurement includes the disturbance from
+the first; its error is relative to the pre-cut momentum. Each shear is
+symplectic and invertible on system plus probes. Recording and
+discarding probes is a separate operation from that reversible
+evolution.</p>
+<p>Assume the incoming preparation has full rectangular support <span
+class="math inline">\(|q|\le s_q\)</span>, <span
+class="math inline">\(|\pi|\le t_q\)</span>, <span
+class="math inline">\(|r|\le s_r\)</span>, <span
+class="math inline">\(|\rho|\le t_r\)</span>, with positive widths. An
+independent uniform product distribution is one ordinary, nonsingular
+classical example. The exact worst-case bounds are</p>
+<p><span class="math display">\[\epsilon_x=\frac{s_q}{\alpha},\quad
+\epsilon_P=\frac{s_r}{\beta}+\alpha t_q,\quad
+D_x=\beta t_r,\quad D_P=\alpha t_q.\]</span></p>
+<p>The two intrinsic accuracy-disturbance products are</p>
+<p><span class="math display">\[\epsilon_xD_P=s_qt_q,\qquad
+\left(\frac{s_r}{\beta}\right)D_x=s_rt_r.\]</span></p>
+<p>They have action units, with support half-width normalization and no
+<span class="math inline">\(2\pi\)</span> factor. These are properties
+of a prepared instrument, not orbital actions. At fixed incoming widths
+changing gain exchanges accuracy and disturbance. Across incoming
+classical preparations, both products have infimum zero: replace all
+four widths by <span class="math inline">\(b\)</span> times themselves,
+<span class="math inline">\(b\downarrow0\)</span>. Each finite <span
+class="math inline">\(b\)</span> has positive phase-space volume.
+Liouville volume preservation constrains evolution of a fixed
+preparation; it does not prohibit choosing these different initial
+ensembles. The singular quiet limit <span
+class="math inline">\(q=\pi=r=\rho=0\)</span> gives exact, undisturbing
+readout in this ideal model and is not needed for the infimum.</p>
+<h2 id="propagation-through-the-inverse-observation-map">3. Propagation
+through the inverse observation map</h2>
+<p>Fix once and for all length and momentum units for each state
+component and a time unit <span class="math inline">\(t_*&gt;0\)</span>.
+All norms and big-<span class="math inline">\(O\)</span> constants in
+this section refer to these fixed dimensionless coordinates. Constants
+may depend on <span class="math inline">\(m,k,T,t_*\)</span>, the units
+and the fixed gains, but not on the mesh. In R04 notation,</p>
+<p><span class="math display">\[u_{i+1}=A_\delta(u_i+d_i)+B_\delta
+w_i,\]</span></p>
+<p>where <span class="math inline">\(z_i\)</span> is the actual pre-kick
+state at <span class="math inline">\(t_i\)</span>, and <span
+class="math inline">\(d_i=(d_x,d_P)\)</span>. Let <span
+class="math inline">\(\widehat u_i=u_i+e_i\)</span>. For sufficiently
+small <span class="math inline">\(\delta&gt;0\)</span>, define</p>
+<p><span class="math display">\[\widehat w_i=B_\delta^{-1}
+(\widehat u_{i+1}-A_\delta\widehat u_i).\]</span></p>
+<p>Subtracting the true relation proves the exact error identity</p>
+<p><span class="math display">\[\widehat w_i-w_i=B_\delta^{-1}
+(e_{i+1}-A_\delta e_i+A_\delta d_i).\]</span></p>
+<p>R04 gives <span class="math inline">\(\|B_\delta^{-1}\|\le
+C(\delta/t_*)^{-3}\)</span> for small positive <span
+class="math inline">\(\delta\)</span>. Hence, if each incoming width is
+<span class="math inline">\(O(\eta^p)\)</span>, where <span
+class="math inline">\(\eta=\delta/t_*\)</span> and gains are fixed,</p>
+<p><span class="math display">\[\max_i\|\widehat
+w_i-w_i\|=O(\eta^{p-3}).\]</span></p>
+<p>This is a deterministic support estimate: neither independent noise
+nor cancellation is required. It includes the ignored kick between
+samples. For the last sample, propagate the preceding estimate using
+<span class="math inline">\(w_{i+1}=C_\delta(u_i+d_i)+D_\delta
+w_i\)</span>; omitting the unknown <span
+class="math inline">\(d_i\)</span> adds only <span
+class="math inline">\(O(\eta^p)\)</span> because the flow blocks are
+uniformly bounded. Recovery has one sampling interval of latency, or
+uses the preceding pair at a current cut. The initial hidden state is
+recovered after the second sample.</p>
+<p>The inverse’s leading entries in physical units are</p>
+<p><span class="math display">\[B_\delta^{-1}=
+\begin{pmatrix}
+\dfrac{6\mu}{g\delta^2}+O(1)&amp;
+-\dfrac{2}{g\delta}+O(\delta)\\
+-\dfrac{12\mu\nu}{g\delta^3}+O(\delta^{-1})&amp;
+\dfrac{6\nu}{g\delta^2}+O(1)
+\end{pmatrix}.\]</span></p>
+<p>This follows by swapping the diagonal entries of R04’s <span
+class="math inline">\(B_\delta\)</span>, negating the off-diagonal
+entries and dividing by its determinant. It displays how a position
+error enters the recovered <span class="math inline">\(Q\)</span> with
+cubic amplification. Fixed nonzero rectangular error widths therefore
+give an unbounded worst-case sensitivity for this linear inversion as
+<span class="math inline">\(\delta\)</span> shrinks. It is not a lower
+bound for every estimator: known energy support can bound estimates, and
+a longer history can change conditioning.</p>
+<h2 id="uniform-finite-horizon-refinement-and-resource-ledger">4.
+Uniform finite-horizon refinement and resource ledger</h2>
+<p>Take equal cuts <span class="math inline">\(t_i=iT/N\)</span>, <span
+class="math inline">\(0\le i\le N\)</span>, at fixed <span
+class="math inline">\(T&gt;0\)</span>, and fresh probes at each cut.
+Choose all four widths proportional to <span
+class="math inline">\(\eta^4\)</span>. Let <span
+class="math inline">\(z^0(t)=\Phi_tz_0\)</span> denote the unmeasured
+trajectory with the same initial state. At pre-cut times the exact
+disturbance sum is</p>
+<p><span
+class="math display">\[z_i-z^0(t_i)=\sum_{j&lt;i}\Phi_{(i-j)\delta}(d_j,0).\]</span></p>
+<p>Since <span class="math inline">\(\sup_{|t|\le
+T}\|\Phi_t\|&lt;\infty\)</span> and <span
+class="math inline">\(N=O(\eta^{-1})\)</span>, this gives <span
+class="math inline">\(O(\eta^3)\)</span> uniformly, also between cuts
+and immediately after kicks. The reconstructed full state differs from
+the actual pre-cut state by <span class="math inline">\(O(\eta)\)</span>
+and thus from <span class="math inline">\(z^0(t_i)\)</span> by <span
+class="math inline">\(O(\eta)\)</span>. The conclusion holds uniformly
+over the original energy shell and all allowed probe data. The actual
+system energy is disturbed at finite mesh; quadratic continuity on a
+fixed compact neighbourhood gives <span
+class="math inline">\(H(z_i)-E=O(\eta^3)\)</span>. The preparation of
+the original system is held fixed throughout this limit.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Resource or observable</th>
+<th>Scaling at fixed <span
+class="math inline">\(T,m,k,\alpha,\beta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Incoming probe position and momentum half-widths</td>
+<td><span class="math inline">\(O(\eta^4)\)</span></td>
+</tr>
+<tr class="even">
+<td>Single-readout errors and state kicks</td>
+<td><span class="math inline">\(O(\eta^4)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Hidden-state reconstruction error</td>
+<td><span class="math inline">\(O(\eta)\)</span></td>
+</tr>
+<tr class="even">
+<td>Maximum deviation from unmeasured trajectory</td>
+<td><span class="math inline">\(O(\eta^3)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Each intrinsic support action product</td>
+<td><span class="math inline">\(O(\eta^8)\)</span></td>
+</tr>
+<tr class="even">
+<td>Probe count, two per cut</td>
+<td><span class="math inline">\(2(N+1)=O(\eta^{-1})\)</span></td>
+</tr>
+<tr class="odd">
+<td>Total mass for fixed positive probe masses</td>
+<td><span class="math inline">\(O(\eta^{-1})\)</span></td>
+</tr>
+<tr class="even">
+<td>Sum of initial free-probe kinetic energies</td>
+<td><span class="math inline">\(O(\eta^7)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>For the last row assign fixed masses <span
+class="math inline">\(M_q,M_r&gt;0\)</span> and free kinetic energies
+<span class="math inline">\(\pi^2/(2M_q)+\rho^2/(2M_r)\)</span> outside
+the ideal kicks; momenta are unchanged by the kicks. The row bounds only
+those energies at incoming readout times, not switching, trapping,
+preparation, storage or recording costs. Probe positions after readout
+contain an <span class="math inline">\(O(1)\)</span> signal and need not
+remain narrow. Arbitrarily many increasingly well-prepared probes and an
+externally timed impulse sequence are permitted. The limit is not
+fixed-apparatus refinement. It also changes the probe preparation and
+intervention schedule with <span class="math inline">\(N\)</span>;
+finite-mesh experiments are not exact restrictions of one common
+measured law. Their common limit is the unmeasured classical trajectory,
+whereas sampling that trajectory alone has exact restriction
+compatibility at every mesh.</p>
+<h2 id="selection-consequence-and-next-experiment">5. Selection
+consequence and next experiment</h2>
+<p>This explicit instrument shows that R04’s inverse sensitivity plus
+classical canonical back-reaction does not by itself force a positive
+action floor. At fixed probe phase widths there is a supplied
+accuracy-disturbance scale; quiet and increasingly concentrated
+preparations close it. A positive lower bound requires an additional
+restriction on admissible preparations or on the apparatus and its
+operation. The derivation advances the exclusion-of-zero test; it
+neither establishes a universal field nor its quantum phase role.</p>
+<p>R06 should replace the two ideal kicks by finite-duration
+interactions with specified positive kinetic energy and mechanical
+couplings, and include a clock and record. Hold total apparatus mass,
+force or coupling ceilings, preparation class and observation horizon
+explicitly fixed. First test whether accurate, weakly disturbing
+refinement remains possible; if it fails, identify whether the result is
+a time/resource bound or an action-valued bound and which supplied
+premise makes it positive. Reusing a probe requires a preparation or
+reset account before it can remove the growing-mass cost above.</p>
+<h2 id="source-route">Source route</h2>
+<p>Katagiri, <em>Measurement theory in classical mechanics</em>, v2 §5,
+supplies the classical von Neumann interaction and explicit
+pointer/target translations. The two-channel map and all estimates above
+follow directly from the stated Hamilton equations. Theurel’s 2024 APS
+abstract motivates an apparatus-specific thermal restriction; its
+full-model assumptions remain R06 reading. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B35.md">B35</a>
+and its <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B35/readout-source-companion.md">companion</a>
+give the bounded coverage and source-sign caveat. C066–C067 have <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/classical-readout-B35.md">coordinator
+proof review</a>; their literature status is derived consequences with
+novelty unassessed.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

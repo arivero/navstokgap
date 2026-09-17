@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From cone sections to time refinement</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>From cone sections to time refinement</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cone-time-refinement.md">Markdown source</a></p><p>The bibliography supplies a concrete experiment: insert an
+intermediate point, eliminate it by composition, and identify which data
+survive. For the free particle, this operation closes exactly on a
+family of Gaussian kernels with an arbitrary positive action scale. The
+next research question is the physical selection of a member of that
+family.</p>
+<p>The maintained calculation is <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/time-refinement.tex">Time
+Refinement and an Action Scale</a>. Proof and literature status are
+recorded separately in the claim ledger.</p>
+<h2 id="what-each-source-puts-into-the-model">What each source puts into
+the model</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Idea to retain</th>
+<th>Calculation or research obligation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/H04/Xylander1570_p823.md">Plutarch
+in Xylander, 1570</a></td>
+<td>Compare the faces produced by a cut</td>
+<td>Specify separated faces and their limiting object</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Rivero_Cone_1999.md">Rivero,
+cone, 1999</a></td>
+<td>Compare refinements at a common scale</td>
+<td>Retain a rescaled difference when raw differences vanish</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Rivero_FeynmanFormula_1998.md">Rivero,
+path integral, 1998</a></td>
+<td>Eliminate inserted positions and track regulators</td>
+<td>Write and test a normalized finite blocking map</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Brouder_RungeKutta_1999.md">Brouder,
+1999</a></td>
+<td>Rooted-tree algebra for composed numerical flows and
+renormalisation</td>
+<td>Organise nonlinear corrections after the Gaussian calculation</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/docs/CarinenaEtAl_TangentGroupoid_1999.md">Cariñena
+et al., 1999</a></td>
+<td>Quantum and classical structures in a single geometric
+construction</td>
+<td>Audit the precise quantum-completion and classical-limit
+theorem</td>
+</tr>
+</tbody>
+</table>
+<p>The Wilson–Kogut connection now has a direct <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/WilsonKogut_1974.md">§12.2
+source reading</a>: compare theories at a common physical correlation
+length. M05 implements that idea by fixing a reference bridge variance
+and running the bare kinetic coefficient. Brouder supplies the specific
+Butcher/Connes–Kreimer algebraic link. These are separate source links,
+each with a mathematical operation to investigate.</p>
+<h2 id="spatial-and-temporal-cuts">Spatial and temporal cuts</h2>
+<p>For a smooth cone profile with area <span
+class="math inline">\(A(z)\)</span>, a modern difference quotient
+retains <span
+class="math inline">\([A(z+\epsilon)-A(z)]/\epsilon\)</span> as the two
+faces approach. Its limit is <span
+class="math inline">\(A&#39;(z)\)</span>. The area’s units are length
+squared; this is ordinary spatial geometry.</p>
+<p>Time slicing introduces a different operation. At fixed endpoints
+<span class="math inline">\(x,z\)</span>, an inserted position <span
+class="math inline">\(y\)</span> is integrated over:</p>
+<p><span class="math display">\[K_{s+t}(z,x)=\int_{\mathbb
+R}K_t(z,y)K_s(y,x)\,dy.\]</span></p>
+<p>Thus temporal refinement involves both subdivision and a rule for
+eliminating the new degree of freedom. For real positive Gaussian
+kernels the integral is ordinary; for oscillatory free kernels it is
+defined through Fourier operators or a stated regularisation. Calling
+the positive-kernel model “Euclidean” refers to its quantum
+imaginary-time counterpart, a different use of the word from Euclidean
+cone geometry.</p>
+<h2 id="the-first-completed-test-and-the-next-selection-question">The
+first completed test and the next selection question</h2>
+<p>For <span class="math inline">\(m&gt;0\)</span>, time <span
+class="math inline">\(t&gt;0\)</span> and action parameter <span
+class="math inline">\(\kappa&gt;0\)</span>, the free positive kernel
+is</p>
+<p><span class="math display">\[G_t^\kappa(x)=\sqrt{\frac{m}{2\pi\kappa
+t}}
+\exp\!\left(-\frac{mx^2}{2\kappa t}\right).\]</span></p>
+<p>Its variance is <span class="math inline">\(\kappa t/m\)</span>.
+Convolution adds variances, so integrating out any number of inserted
+points leaves the same <span class="math inline">\(\kappa\)</span>. A
+Gaussian bridge between fixed endpoints concentrates on the straight
+Newtonian path as <span class="math inline">\(\kappa\to0\)</span>. These
+standard facts give an exact setting in which mesh refinement and the
+action-scale limit can be examined independently.</p>
+<p>The general time-homogeneous Gaussian family has variance <span
+class="math inline">\(a t\)</span>, with <span
+class="math inline">\(a\ge0\)</span>. The action scale is <span
+class="math inline">\(\kappa=ma\)</span>. Time composition and
+continuity leave <span class="math inline">\(a\)</span> free; <span
+class="math inline">\(a=0\)</span> is the deterministic member.
+Demanding a positive-width density selects <span
+class="math inline">\(a&gt;0\)</span> by assumption. The strong target
+requires an independently motivated physical principle that produces
+that selection and explains universality across interacting systems. A
+lower bound on <span class="math inline">\(\kappa\)</span> over an
+entire model class would be a stronger statement, with its own
+quantifiers and units.</p>
+<p>The corresponding oscillatory family supplies unitary free evolution
+for each <span class="math inline">\(\kappa&gt;0\)</span>. Converting
+the positive kernel to it is an explicitly chosen analytic-continuation
+step. A physical justification for that step belongs alongside, rather
+than downstream of, scale selection.</p>
+<h2 id="reception-history-a-testable-question">Reception history: a
+testable question</h2>
+<p>Xylander’s Latin <em>Moralia</em> contains the cone dilemma on
+printed pp. 823–824 in 1570. The <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/H04.md">H04
+batch</a> establishes availability and records a bounded reception
+search. Modern historical discussion is present: Auffret examines the
+cone in relation to limits in a chapter on Leibniz and Chrysippus. His
+direct Leibniz example concerns a rolling cylinder/cone and free will,
+which is a distinct passage.</p>
+<p>The next historical test is author-specific: did a mathematician
+invoke the section dilemma in work on indivisibles or the continuum?
+Begin with Newton’s Plutarch references in the existing dossier and an
+independently indexed Leibniz corpus. Search title variants and Latin
+phrases as well as names; record ownership, quotation and mathematical
+use separately. The hypothesis of disciplinary separation between
+philosophical reception and mathematical practice can then be tested
+against those records.</p>
+<h2 id="refinement-milestone-and-continuation">Refinement milestone and
+continuation</h2>
+<p>M05/B07a/B08 completed the quadratic normalization, exact scaling map
+and source audit. The new <a
+href="two-regulator-audit.html">two-regulator note</a> records the
+finite action-defect theorem and routes it into M06’s dynamical test.
+B07b retains the tangent-groupoid theorem’s hypotheses and limit
+topology; match these to the strong target’s quantum-completion
+branch.</p>
+<p>Each source task must end with a premise to test, a construction to
+implement, or a proof obligation to resolve. Use one small worker at a
+time and review its handoff before resuming coordinator work. The
+spectral laboratory M03 and Classical Scholia H02/H03 remain separate
+unfinished tasks.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

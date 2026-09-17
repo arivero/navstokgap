@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The one-loop potential along the abelian valley of the torus is periodic, reproduces C133&#x27;s linear term at the origin, and saturates at order 1/L</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The one-loop potential along the abelian valley of the torus is
+periodic, reproduces C133’s linear term at the origin, and saturates at
+order 1/L</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/torus-valley-potential.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/torus-valley-potential.pdf">PDF</a></p><p>For <span class="math inline">\(SU(2)\)</span> Yang–Mills on <span
+class="math inline">\(T^3_L\)</span> with a constant abelian background
+<span class="math inline">\(a=a_i^{\,3}T^3\)</span>, the zero-point
+energy of all modes, relative to <span
+class="math inline">\(a=0\)</span>, is the exact periodic function <span
+class="math display">\[U(a)=\frac{2\hbar c}{\pi^2L}\,\Phi(La),\qquad
+\Phi(b)=\sum_{m\in\mathbb Z^3\setminus\{0\}}\frac{1-\cos(m\cdot
+b)}{|m|^4}\ \ge0,\]</span> with <span class="math inline">\(a\)</span>
+of dimension inverse length (<span
+class="math inline">\([A]=L^{-1}\)</span> in the convention of G07
+Proposition 7), obtained by Poisson summation of the charged frequencies
+<span class="math inline">\(\hbar c|k\pm a|\)</span> over <span
+class="math inline">\(k\in(2\pi/L)\mathbb Z^3\)</span>; the divergent
+part of the sum is <span class="math inline">\(a\)</span>-independent
+under any periodic regularization and drops out. Near the origin <span
+class="math inline">\(\Phi(b)=\pi^2|b|+\tfrac16C_M|b|^2+O(|b|^3)\)</span>
+with <span class="math inline">\(C_M=\lim_{b\to0}[\sum&#39;_me^{im\cdot
+b}|m|^{-2}-2\pi^2/|b|]\)</span>, so <span
+class="math inline">\(U(a)=2\hbar c|a|+\tfrac{C_M}{3\pi^2}\hbar
+cL|a|^2+\cdots\)</span>. The linear term <span
+class="math inline">\(2\hbar c|a|\)</span> is exactly the <span
+class="math inline">\(k=0\)</span> contribution, four oscillators of
+angular frequency <span class="math inline">\(c|a|\)</span> with
+zero-point energy <span class="math inline">\(\tfrac12\hbar
+c|a|\)</span> each, which are the transverse oscillators of C133 along
+its abelian valley: the field-theory computation reproduces the
+mechanism of <a href="low-dimensional-mass-gap.html">G07</a> and <a
+href="action-floor-yang-mills-gap.html">G08</a> term by term. The
+nonzero modes contribute the correction <span
+class="math inline">\(U_\perp=U-2\hbar c|a|=O(\hbar cL|a|^2)\)</span>,
+of order <span class="math inline">\(g^{4/3}\hbar c/L\)</span> in the
+rescaled variables of <a
+href="weak-coupling-feshbach-reduction.html">the Feshbach note</a>,
+which is the input (H3) needs, with the sign of <span
+class="math inline">\(C_M\)</span> (negative for the cubic lattice)
+deciding that the correction lowers the valley potential. Globally <span
+class="math inline">\(U\)</span> is bounded by <span
+class="math inline">\(2\hbar c\max\Phi/(\pi^2L)=O(\hbar c/L)\)</span>
+and vanishes exactly at <span class="math inline">\(La\in2\pi\mathbb
+Z^3\)</span>, the holonomies that are central in the fundamental
+representation: the confinement of the constant modes along the valley
+is linear only for <span class="math inline">\(La\ll1\)</span>,
+saturates at order <span class="math inline">\(\hbar c/L\)</span>, and
+has degenerate minima at the centre elements, which is the small-volume
+origin of the electric-flux sectors. Since the zero-mode gap is <span
+class="math inline">\(g^{2/3}\hbar c/L\ll\hbar c/L\)</span>, the ground
+state is localized at <span class="math inline">\(La\sim
+g^{2/3}\)</span> and never reaches the saturation; the crossover <span
+class="math inline">\(z\simeq2\)</span> is where it does. Sources: this
+is the spatial-torus form of Weiss’s finite-temperature potential (Phys.
+Rev. D 24 (1981) 475, metadata), and it appears in the small-volume
+literature (Lüscher 1983, abstract); the derivation below is
+self-contained. Nothing here is promoted.</p>
+<h2 id="frequencies-in-a-constant-abelian-background">1. Frequencies in
+a constant abelian background</h2>
+<p>Let <span class="math inline">\(a_i=\alpha_iT^3\)</span>, <span
+class="math inline">\(i=1,2,3\)</span>, with <span
+class="math inline">\(\vec\alpha\in\mathbb R^3\)</span>, and write <span
+class="math inline">\(a\)</span> for <span
+class="math inline">\(\vec\alpha\)</span> when no confusion arises.
+Decompose the adjoint fluctuation <span class="math inline">\(\tilde
+A_i=\tilde A_i^3T^3+\tilde A_i^+T^++\tilde A_i^-T^-\)</span>. The
+covariant derivative <span
+class="math inline">\(D_j=\partial_j+[a_j,\cdot]\)</span> acts on the
+neutral component as <span class="math inline">\(\partial_j\)</span> and
+on the charged components as <span class="math inline">\(\partial_j\pm
+i\alpha_j\)</span>, so on the Fourier mode <span
+class="math inline">\(e^{ik\cdot x}\)</span>, <span
+class="math inline">\(k\in(2\pi/L)\mathbb Z^3\)</span>, the charged
+components have covariant momentum <span class="math inline">\(k\pm
+a\)</span>. The quadratic form <span
+class="math inline">\(\frac1{2g^2}\int|D_i\tilde A_j-D_j\tilde
+A_i|^2\)</span> is, for a constant abelian background, the free
+transverse form with <span class="math inline">\(k\)</span> replaced by
+<span class="math inline">\(k\pm a\)</span> on the charged components,
+so after the usual transverse gauge choice the frequencies are <span
+class="math display">\[\hbar\omega^{(0)}_k=\hbar
+c|k|\quad(\text{neutral, two polarizations}),\]</span> <span
+class="math display">\[\hbar\omega^{(\pm)}_k=\hbar c|k\pm
+a|\quad(\text{charged, two polarizations each}),\]</span> for <span
+class="math inline">\(k\ne0\)</span>. At <span
+class="math inline">\(k=0\)</span> the neutral components are the valley
+directions themselves and the charged components of <span
+class="math inline">\(\tilde A_j\)</span> have frequency <span
+class="math inline">\(|a|\)</span> for each of the two charges and,
+since there is no transversality at <span
+class="math inline">\(k=0\)</span>, for the components of <span
+class="math inline">\(\tilde A_j\)</span> orthogonal to the valley in
+field space: with <span class="math inline">\(a=\alpha_1T^3\)</span>
+along <span class="math inline">\(x_1\)</span> only, these are the
+charged parts of <span class="math inline">\(\tilde A_2,\tilde
+A_3\)</span>, four real oscillators of angular frequency <span
+class="math inline">\(c|a|\)</span>, while the charged parts of <span
+class="math inline">\(\tilde A_1\)</span> are gauge directions of
+frequency zero removed by Gauss’s law.</p>
+<p><strong>The <span class="math inline">\(k=0\)</span> term is
+C133.</strong> The SU(2) matrix model of C133 with <span
+class="math inline">\(\vec x_1=\lambda\hat n\)</span>, <span
+class="math inline">\(\vec x_2=\vec x_3=0\)</span> has potential <span
+class="math inline">\(\tfrac12g^2(|\vec x_1\times\vec x_2|^2+|\vec
+x_1\times\vec x_3|^2+\cdots)\)</span>, whose transverse Hessian at that
+point gives the components of <span class="math inline">\(\vec x_2,\vec
+x_3\)</span> orthogonal to <span class="math inline">\(\hat n\)</span>,
+four oscillators of frequency <span
+class="math inline">\(g|\lambda|/\sqrt m\)</span>; in the field-theory
+variables of <a href="low-dimensional-mass-gap.html">G07</a> Proposition
+7 (<span class="math inline">\(m=\hbar L^3/(g^2c)\)</span>, <span
+class="math inline">\(g_B^2=\hbar cL^3/g^2\)</span>) this frequency is
+<span class="math inline">\(c|a|\)</span>. The zero-point energy <span
+class="math inline">\(4\cdot\tfrac12\hbar c|a|=2\hbar c|a|\)</span> is
+the confining term of G07 Theorem 6(1) and the floor of G08 Theorem 2
+along the valley.</p>
+<h2 id="poisson-summation">2. Poisson summation</h2>
+<p>The zero-point energy of the fluctuations relative to <span
+class="math inline">\(a=0\)</span>, summing two polarizations and both
+charges, is <span class="math display">\[U(a)=\frac{\hbar
+c}2\sum_{k\in(2\pi/L)\mathbb Z^3}\sum_{\rm
+pol=1,2}\big(|k+a|+|k-a|-2|k|\big) =\hbar c\sum_{k\in(2\pi/L)\mathbb
+Z^3}\big(|k+a|+|k-a|-2|k|\big),\]</span> where the <span
+class="math inline">\(k=0\)</span> term is <span
+class="math inline">\(2\hbar c|a|\)</span> and the neutral modes cancel.
+Each term is nonnegative by convexity of <span
+class="math inline">\(|\cdot|\)</span> and of order <span
+class="math inline">\(|a|^2/|k|\)</span>, so the sum diverges in three
+dimensions; under a periodic regularization (lattice dispersion <span
+class="math inline">\(\omega_{\rm lat}\)</span> with the exact momentum
+grid) the divergent part is <span
+class="math inline">\(a\)</span>-independent, because <span
+class="math inline">\(\sum_{k\in\text{grid}}\omega_{\rm
+lat}(k+a)\)</span> is a periodic function of <span
+class="math inline">\(a\)</span> with period <span
+class="math inline">\(2\pi/L\)</span> whose mean over a period is the
+<span class="math inline">\(a\)</span>-independent Brillouin-zone
+integral. The <span class="math inline">\(a\)</span>-dependent part is
+obtained by Poisson summation. For <span
+class="math inline">\(f(k)=|k|\)</span> the distributional Fourier
+transform is <span class="math inline">\(\hat f(x)=\int|k|e^{-ik\cdot
+x}d^3k=-8\pi/|x|^4\)</span> for <span
+class="math inline">\(x\ne0\)</span> (the formula <span
+class="math inline">\(\widehat{|k|^\alpha}=2^{\alpha+3}\pi^{3/2}\frac{\Gamma((3+\alpha)/2)}{\Gamma(-\alpha/2)}|x|^{-3-\alpha}\)</span>
+at <span class="math inline">\(\alpha=1\)</span>, with <span
+class="math inline">\(\Gamma(-\tfrac12)=-2\sqrt\pi\)</span>), and <span
+class="math display">\[\sum_{k\in(2\pi/L)\mathbb Z^3}f(k+a)=\Big(\frac
+L{2\pi}\Big)^3\sum_{m\in\mathbb Z^3}\hat f(mL)\,e^{im\cdot La}\]</span>
+with the <span class="math inline">\(m=0\)</span> term the divergent,
+<span class="math inline">\(a\)</span>-independent one. Hence <span
+class="math display">\[U(a)=\hbar c\Big(\frac
+L{2\pi}\Big)^3\sum_{m\ne0}\Big(-\frac{8\pi}{L^4|m|^4}\Big)\big(e^{im\cdot
+La}+e^{-im\cdot La}-2\big) =\frac{2\hbar
+c}{\pi^2L}\sum_{m\ne0}\frac{1-\cos(m\cdot La)}{|m|^4}=\frac{2\hbar
+c}{\pi^2L}\Phi(La).\]</span> Lattice corrections change <span
+class="math inline">\(\hat f\)</span> only at <span
+class="math inline">\(|x|\lesssim a_{\rm lat}\)</span>, while the <span
+class="math inline">\(m\ne0\)</span> terms live at <span
+class="math inline">\(|x|=|m|L\ge L\)</span>, so they are <span
+class="math inline">\(O(a_{\rm lat}^2/L^2)\)</span> relative.</p>
+<p>Properties of <span class="math inline">\(\Phi\)</span>: it is
+nonnegative, periodic with period <span
+class="math inline">\(2\pi\)</span> in each component, invariant under
+the cubic group, bounded by <span
+class="math inline">\(2\sum&#39;|m|^{-4}\)</span>, and zero exactly on
+<span class="math inline">\(2\pi\mathbb Z^3\)</span>.</p>
+<h2 id="expansion-at-the-origin-and-the-sign-of-the-correction">3.
+Expansion at the origin and the sign of the correction</h2>
+<p><span class="math inline">\(\Phi\)</span> is not smooth at <span
+class="math inline">\(0\)</span>. Its Laplacian is the periodic Green’s
+function <span class="math inline">\(G(b)=\sum&#39;_me^{im\cdot
+b}|m|^{-2}\)</span>, which has the Coulomb singularity <span
+class="math inline">\(2\pi^2/|b|\)</span> at the origin (from <span
+class="math inline">\(\int d^3m\,e^{im\cdot b}|m|^{-2}\)</span>) and a
+finite remainder: <span
+class="math inline">\(G(b)=2\pi^2/|b|+C_M+O(|b|^2)\)</span>, where <span
+class="math inline">\(C_M\)</span> is the constant term of the periodic
+Coulomb Green’s function of the cubic lattice, the analytically
+continued Epstein sum <span
+class="math inline">\(\sum&#39;_m|m|^{-2}\)</span>. Since <span
+class="math inline">\(\Delta(\pi^2|b|)=2\pi^2/|b|\)</span>, the function
+<span class="math inline">\(\Phi-\pi^2|b|\)</span> has Laplacian <span
+class="math inline">\(C_M+O(|b|^2)\)</span> near <span
+class="math inline">\(0\)</span>, and the only quadratic form with cubic
+symmetry and Laplacian <span class="math inline">\(C_M\)</span> is <span
+class="math inline">\(\tfrac16C_M|b|^2\)</span>; so <span
+class="math display">\[\Phi(b)=\pi^2|b|+\tfrac16C_M|b|^2+O(|b|^3),\qquad
+U(a)=2\hbar c|a|+\frac{C_M}{3\pi^2}\,\hbar cL|a|^2+O(\hbar
+cL^2|a|^3).\]</span> The linear term <span class="math inline">\(2\hbar
+c|a|\)</span> is the <span class="math inline">\(k=0\)</span>
+contribution of Section 1, so the nonzero modes contribute <span
+class="math display">\[U_\perp(a)=U(a)-2\hbar
+c|a|=\frac{C_M}{3\pi^2}\hbar cL|a|^2+O(\hbar cL^2|a|^3),\]</span> with
+<span class="math inline">\(C_M&lt;0\)</span> for the cubic lattice
+(lattice-sum tables; the sign is not re-derived here and affects only
+the direction of a subleading correction). In the rescaled variables
+<span class="math inline">\(a=g^{2/3}\xi/L\)</span> this is <span
+class="math inline">\(\frac{C_M}{3\pi^2}g^{4/3}|\xi|^2\,\hbar
+c/L\)</span>, of relative order <span
+class="math inline">\(g^{2/3}\)</span> to the zero-mode Hamiltonian
+<span class="math inline">\(g^{2/3}h_3\,\hbar c/L\)</span>: the size
+that (H3) of the Feshbach reduction assumes, now with its coefficient
+identified.</p>
+<h2 id="a.-general-constant-backgrounds-at-quadratic-order">3a. General
+constant backgrounds at quadratic order</h2>
+<p>The abelian computation fixes the quadratic term of <span
+class="math inline">\(U_\perp\)</span> for every constant background.
+For <span class="math inline">\(|a|\)</span> small against <span
+class="math inline">\(2\pi/L\)</span> each nonzero-mode quadratic form
+is positive definite and depends smoothly on <span
+class="math inline">\((a_1,a_2,a_3)\in(\mathfrak{su}(2))^3\)</span>, and
+the trace of the square root of a smooth positive-definite family is
+smooth, so with a lattice regularization <span
+class="math inline">\(U_\perp\)</span> is a smooth function near <span
+class="math inline">\(a=0\)</span> (the non-smooth <span
+class="math inline">\(|a|\)</span> behaviour of <span
+class="math inline">\(U\)</span> comes only from the <span
+class="math inline">\(k=0\)</span> term). It is invariant under the
+constant gauge transformations, which rotate the three colour vectors
+<span class="math inline">\(\vec a_i\)</span> simultaneously, under the
+cubic group acting on the spatial index, and under <span
+class="math inline">\(a\to-a\)</span>. The quadratic invariants of <span
+class="math inline">\((\vec a_1,\vec a_2,\vec a_3)\)</span> under <span
+class="math inline">\(SO(3)_{\rm colour}\)</span> are the bilinears
+<span class="math inline">\(\vec a_i\cdot\vec a_j\)</span>, and the only
+cubic-invariant symmetric form in the spatial indices is <span
+class="math inline">\(\delta_{ij}\)</span>, so <span
+class="math display">\[U_\perp(a)=c\,\hbar cL\sum_{i=1}^3|\vec
+a_i|^2+O(\hbar cL^2|a|^3),\]</span> with a single pure number <span
+class="math inline">\(c\)</span>, which the abelian valley (<span
+class="math inline">\(\vec a_i=\alpha_i\hat e_3\)</span>, <span
+class="math inline">\(\sum_i|\vec a_i|^2=|\alpha|^2\)</span>)
+determines: <span class="math inline">\(c=C_M/(3\pi^2)\)</span>. The
+Landau-level structure of non-commuting backgrounds enters only at the
+cubic order <span class="math inline">\(O(\hbar cL^2|a|^3)\)</span>,
+which is of relative order <span class="math inline">\(g^{4/3}\)</span>
+to the zero-mode Hamiltonian; (H3) at its leading correction therefore
+needs no non-abelian spectral input beyond the symmetry argument.</p>
+<h2 id="b.-the-abelian-theory-in-the-same-expansion">3b. The abelian
+theory in the same expansion</h2>
+<p>For compact <span class="math inline">\(U(1)\)</span> the constant
+modes commute, the quartic potential vanishes, and the photons are
+neutral, so the one-loop potential of the holonomy is identically zero:
+the constant-mode Hamiltonian is the free Laplacian on the torus of
+holonomies, <span class="math inline">\(H_0=\frac{e^2c}{2\hbar
+L^3}|p|^2\)</span> with <span class="math inline">\(a\)</span> periodic
+of period <span class="math inline">\(2\pi/L\)</span>, spectrum <span
+class="math inline">\(e^2\hbar c|n|^2/(2L)\)</span>, <span
+class="math inline">\(n\in\mathbb Z^3\)</span>, gap <span
+class="math inline">\(e^2\hbar c/(2L)\)</span>. The abelian small-volume
+gap is linear in <span class="math inline">\(e^2\)</span>, not <span
+class="math inline">\(e^{2/3}\)</span>, because there is no commutator
+to confine the holonomy and no charged mode to give it a potential; with
+<span class="math inline">\(e\)</span> fixed by the absence of running,
+the <span class="math inline">\(1/L\)</span> decay is uncompensated and
+the infinite-volume theory is gapless, in agreement with the Coulomb
+phase of Guth and Fröhlich–Spencer. In the non-abelian theory both the
+<span class="math inline">\(g^{2/3}\)</span> and the running of <span
+class="math inline">\(g(L)\)</span> come from the charged modes, the
+former through the <span class="math inline">\(k=0\)</span> commutator
+term and the latter through the logarithm in the quartic coefficient of
+<span class="math inline">\(U\)</span>.</p>
+<h2 id="saturation-and-the-centre-degenerate-minima">4. Saturation and
+the centre-degenerate minima</h2>
+<p><span class="math inline">\(U(a)\le2\hbar c\max\Phi/(\pi^2L)=O(\hbar
+c/L)\)</span> for all <span class="math inline">\(a\)</span>, while the
+<span class="math inline">\(k=0\)</span> term <span
+class="math inline">\(2\hbar c|a|\)</span> alone grows without bound.
+The linear confinement of the constant modes along the abelian valley,
+which in C133 holds for all <span class="math inline">\(|a|\)</span>, is
+in the torus theory the small-<span class="math inline">\(La\)</span>
+regime of a bounded periodic function. The minima of <span
+class="math inline">\(U\)</span> are at <span
+class="math inline">\(La\in2\pi\mathbb Z^3\)</span>: for <span
+class="math inline">\(SU(2)\)</span> with the charged modes of charge
+<span class="math inline">\(\pm1\)</span>, <span
+class="math inline">\(La=2\pi e_i\)</span> corresponds to the
+fundamental holonomy <span class="math inline">\(\exp(2\pi
+iT^3)=-1\)</span>, a centre element, trivial on all adjoint fields but a
+distinct state of the theory; the degenerate minima are connected by
+tunnelling through the valley barrier of height <span
+class="math inline">\(O(\hbar c/L)\)</span>, which produces the
+splittings between the ’t Hooft electric-flux sectors of the
+small-volume spectrum (van Baal’s programme; not derived here).</p>
+<p>Consequence for the small-volume expansion: the zero-mode ground
+state has width <span class="math inline">\(La\sim g^{2/3}\)</span> and
+energy <span class="math inline">\(g^{2/3}\hbar c/L\)</span>, far below
+the valley saturation scale <span class="math inline">\(\hbar
+c/L\)</span> and the tunnelling barrier, so the C133 picture is exact at
+leading order and the corrections enter at relative order <span
+class="math inline">\(g^{2/3}\)</span>, as in the Feshbach reduction.
+The regime where the zero-mode energy reaches <span
+class="math inline">\(\hbar c/L\)</span>, <span
+class="math inline">\(g(L)^{2/3}\sim1\)</span>, is where the holonomy
+delocalizes over the whole compact valley, the flux sectors become
+degenerate and the description changes character: the crossover <span
+class="math inline">\(z\simeq2\)</span> of Lüscher–Münster in this
+language.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>(H3)’s one-loop input along the abelian valley is now explicit: <span
+class="math inline">\(U_\perp=\frac{C_M}{3\pi^2}\hbar cL|a|^2+O(\hbar
+cL^2|a|^3)\)</span>, bounded by <span class="math inline">\(O(\hbar
+c/L)\)</span> globally, periodic with centre-degenerate minima. By the
+symmetry argument of Section 3a the same quadratic term holds for every
+constant background, so (H3) at its leading correction is a relatively
+bounded perturbation of <span class="math inline">\(h_3\)</span> by
+<span class="math inline">\(-|C_M|g^{4/3}\sum_i|\xi_i|^2\,\hbar
+c/(3\pi^2L)\)</span> inside the region <span
+class="math inline">\(La\ll1\)</span> and by a bounded potential outside
+it, which the confining bound of C133 controls; the Landau-level input
+enters only at the next order. The abelian theory has no valley
+potential at all, which is the small-volume form of the
+abelian/non-abelian distinction.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

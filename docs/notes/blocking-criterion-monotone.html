@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The blocking criterion is monotonically worse in the block size: blocking gains nothing without a change of coupling</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The blocking criterion is monotonically worse in the block size:
+blocking gains nothing without a change of coupling</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/blocking-criterion-monotone.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/blocking-criterion-monotone.pdf">PDF</a></p><p>Reading Yarotsky’s proof (Commun. Math. Phys. 261 (2006) 799, §2,
+passage level) settles the input left open by <a
+href="blocking-step-obstruction.html">the blocking note</a>: the proof
+is a polymer expansion, its Lemma 1 bounds the non-classical evolution
+of an excited region <span class="math inline">\(I\)</span> by <span
+class="math inline">\((2\alpha e^{t_0\beta/\alpha})^{|I|}\)</span> and
+its Lemma 3 gives configuration weights exponentially damped in the size
+of the excited region, so the connected structure that the blocking step
+needed is present, and the criterion applies to a lattice of blocks with
+the block Hamiltonians as the classical part. The conclusion is negative
+and sharp. With blocks of <span class="math inline">\(M^3\)</span> sites
+the criterion reads <span class="math display">\[\beta_{\rm
+block}=\frac{\text{straddling norm per block}}{\text{block gap}}
+=\frac{24M^2N}{g^2\,\delta(g;M)}\ \le\ \beta_*,\]</span> and <span
+class="math inline">\(\delta(g;M)\)</span> degrades or stays flat as
+<span class="math inline">\(M\)</span> grows: at strong coupling the
+block gap is the single flux-loop energy <span
+class="math inline">\(2C_2g^2\)</span>, independent of <span
+class="math inline">\(M\)</span>, so <span
+class="math inline">\(\beta_{\rm block}\propto M^2\)</span>; in the
+small-volume regime <span
+class="math inline">\(\delta\simeq\delta_1g^{2/3}/M\)</span>, so <span
+class="math inline">\(\beta_{\rm block}\propto M^3\)</span>. Against the
+direct criterion <span class="math inline">\(\beta_{\rm
+direct}=32N/(C_2g^4)\)</span> of <a
+href="strong-coupling-uniform-gap.html">the T2 note</a> the ratio is
+<span class="math inline">\(\beta_{\rm block}/\beta_{\rm
+direct}\simeq\tfrac38M^2\)</span>, already above one at <span
+class="math inline">\(M=2\)</span>. <strong>Real-space blocking with a
+criterion of this form is strictly worse than no blocking at
+all</strong>, at every coupling, and iterating it cannot reach weaker
+coupling. This corrects Sections 4 and 5 of <a
+href="blocking-step-obstruction.html">the blocking note</a>, which
+assumed that the connected estimate would buy a fixed threshold and an
+induction: the estimate is available, and it buys nothing, because the
+boundary grows like <span class="math inline">\(M^2\)</span> while the
+gap it is measured against does not grow at all. Any gain must come from
+recognizing the blocked Hamiltonian as a theory of the same form with a
+<strong>larger effective coupling</strong>, which is the renormalization
+step itself. Constants explicit; nothing promoted.</p>
+<h2 id="the-connected-structure-is-present-in-the-proof">1. The
+connected structure is present in the proof</h2>
+<p>Yarotsky’s Theorem 1 is proved by writing <span
+class="math display">\[e^{-t_0H_\Lambda}=\sum_{I\subset\Lambda}T_{\Lambda,I},\qquad
+T_{\Lambda,I}=\sum_{J\subset
+I}(-1)^{|I|-|J|}\,e^{-t_0(H_{\Lambda,0}+\sum_{x\in J}\phi_x)},\]</span>
+so that <span class="math inline">\(T_{\Lambda,I}\)</span> collects the
+contributions in which every site of <span
+class="math inline">\(I\)</span> is touched by the perturbation. Two
+estimates carry the argument (§2, passage level).</p>
+<ul>
+<li><strong>Lemma 1.</strong> <span
+class="math inline">\(\|T_I\|\le(2\alpha
+e^{t_0\beta/\alpha})^{|I|}\)</span>, proved by analytic continuation of
+the couplings <span class="math inline">\(\phi_x\to z_x\phi_x\)</span>,
+the Hille–Yosida bound <span
+class="math inline">\(\|e^{-t_0H_J(z_J)}\|\le
+e^{t_0|J|\beta/\alpha}\)</span> on the numerical range, and a
+multidimensional Schwarz lemma using that <span
+class="math inline">\(T_I(z_I)\)</span> vanishes whenever any <span
+class="math inline">\(z_x=0\)</span>.</li>
+<li><strong>Lemma 3.</strong> The weight of a space-time configuration
+<span class="math inline">\(C=\{(I_k,J_k)\}\)</span> obeys <span
+class="math inline">\(|w(C)|\le\prod_k(2\alpha
+e^{t_0\beta/\alpha})^{|I_k|}e^{-t_0(|J_k|-|\Lambda_0|^3|I_k|)}\)</span>,
+the classically excited sites contributing <span
+class="math inline">\(e^{-t_0}\)</span> each through the local gap.</li>
+</ul>
+<p>Both are exponential in the size of the excited region, which is
+exactly the polymer structure that makes the expansion sum over
+<strong>connected</strong> clusters. So the hypothetical estimate of <a
+href="blocking-step-obstruction.html">the blocking note</a> §3,
+replacing <span class="math inline">\((\sum_p\|w_p\|)^2\)</span> by
+<span class="math inline">\(\sum_p\|w_p\|^2\)</span>, is precisely what
+the expansion produces, and the way to use it is to apply the theorem
+itself to the blocked system in place of a re-derived Schur bound.</p>
+<h2 id="the-criterion-on-a-lattice-of-blocks">2. The criterion on a
+lattice of blocks</h2>
+<p>Identify the blocks of <span class="math inline">\(M^3\)</span> sites
+with the sites of a coarse cubic lattice, as in <a
+href="blocking-step-obstruction.html">the blocking note</a> §1. Take as
+classical part the normalized block Hamiltonians <span
+class="math display">\[h_\alpha=\frac{H_\alpha-E_0^\alpha}{\Delta_M},\qquad
+\Delta_M=\frac{\hbar c}{a}\,\delta(g;M),\]</span> each with
+non-degenerate ground state <span
+class="math inline">\(\Omega_\alpha\)</span> (T1) and unit gap, and as
+perturbation the straddling plaquettes, <span
+class="math display">\[\phi_\alpha=\frac1{\Delta_M}\sum_{p\ \rm
+straddling\ at\ \alpha}w_p,
+\qquad
+\|\phi_\alpha\|\le\frac{6M^2\cdot4N\hbar c/(ag^2)}{\Delta_M}
+=\frac{24M^2N}{g^2\,\delta(g;M)}=:\beta_{\rm block}.\]</span> The
+perturbation is bounded, so <span
+class="math inline">\(\alpha=0\)</span> in Yarotsky’s condition (2) and
+the criterion is <span class="math inline">\(\beta_{\rm
+block}\le\beta_*(3,\{0,1\}^3)\)</span>, with the same constants as in <a
+href="strong-coupling-uniform-gap.html">the T2 note</a>. The classical
+part is a single-block operator, hence a function of its own spectral
+partition of unity, and the partition contains the projection onto <span
+class="math inline">\(\Omega_\alpha\)</span>; the interaction range is
+one coarse lattice spacing.</p>
+<h2 id="the-criterion-degrades-with-m">3. The criterion degrades with
+<span class="math inline">\(M\)</span></h2>
+<p>Two regimes fix the behaviour of <span
+class="math inline">\(\delta(g;M)\)</span>.</p>
+<p><em>Strong coupling.</em> The lowest gauge-invariant excitation of a
+block is a single plaquette flux loop, of energy <span
+class="math inline">\(2C_2(R_{\min})g^2\hbar c/a\)</span> independent of
+the block size, as in <a href="mass-gap-obligations-lattice.html">the
+obligations map</a> §3. So <span
+class="math inline">\(\delta(g;M)\to2C_2g^2\)</span> and <span
+class="math display">\[\beta_{\rm
+block}\simeq\frac{24M^2N}{2C_2g^4}=\frac{12M^2N}{C_2g^4},\]</span> <span
+class="math display">\[\frac{\beta_{\rm block}}{\beta_{\rm direct}}
+\simeq\frac{12M^2N/(C_2g^4)}{32N/(C_2g^4)}=\frac{3M^2}{8},\]</span>
+using <span class="math inline">\(\beta_{\rm
+direct}=32N/(C_2g^4)\)</span> from the link-level check of <a
+href="strong-coupling-uniform-gap.html">the T2 note</a>. At <span
+class="math inline">\(M=2\)</span> the ratio is <span
+class="math inline">\(3/2\)</span>, and it grows quadratically
+thereafter.</p>
+<p><em>Small volume.</em> For <span class="math inline">\(g\)</span>
+small and a block of side <span class="math inline">\(Ma\)</span> the
+gap is the zero-mode gap of <a
+href="low-dimensional-mass-gap.html">G07</a> Proposition 7, <span
+class="math inline">\(\Delta_M=\delta_1g^{2/3}\hbar c/(Ma)\)</span>,
+that is <span
+class="math inline">\(\delta(g;M)=\delta_1g^{2/3}/M\)</span>. Then <span
+class="math display">\[\beta_{\rm
+block}\simeq\frac{24M^3N}{\delta_1\,g^{8/3}},\]</span> growing like
+<span class="math inline">\(M^3\)</span> and diverging as <span
+class="math inline">\(g\to0\)</span>.</p>
+<p>In both regimes the numerator grows like the block surface, <span
+class="math inline">\(M^2\)</span>, while the denominator stays flat or
+shrinks. The criterion therefore has its best value at <span
+class="math inline">\(M=1\)</span>, which is the direct application
+already used for T2.</p>
+<p><strong>Proposition.</strong> For every <span
+class="math inline">\(M\ge2\)</span> and every <span
+class="math inline">\(g&gt;0\)</span>, <span
+class="math inline">\(\beta_{\rm block}(M)\ge\beta_{\rm
+block}(1)\)</span> whenever <span class="math inline">\(\delta(g;M)\le
+M^2\delta(g;1)\)</span>, which holds in both regimes above and follows
+in general from the upper bounds of <a
+href="polyakov-average-gap-bound.html">the Polyakov note</a>, where the
+gap of a box of side <span class="math inline">\(L\)</span> is at most
+of order <span class="math inline">\(\hbar c/L\)</span> times a coupling
+factor. Blocking therefore never improves the criterion.</p>
+<h2 id="what-this-rules-out-and-what-it-leaves">4. What this rules out,
+and what it leaves</h2>
+<p>The negative result is specific: <strong>a criterion that compares
+the total inter-block coupling with the block gap cannot be improved by
+blocking</strong>, because coupling scales with area and the gap does
+not scale with volume. It rules out the naive induction of <a
+href="blocking-step-obstruction.html">the blocking note</a> §5, in which
+one hoped that a fixed threshold, once reached, would propagate to all
+larger scales.</p>
+<p>What survives is the observation that made the induction attractive:
+the effective coupling of an asymptotically free theory grows toward the
+infrared. To use it, the blocked Hamiltonian must be <strong>recognized
+as a theory of the same type with a new coupling</strong>, so that the
+criterion is re-applied with <span
+class="math inline">\(g_{n+1}&gt;g_n\)</span> and with the block again
+playing the role of a single site of unit spacing. That identification
+is the renormalization-group step; it requires a change of variables at
+each scale, not a projection. Yarotsky’s own Theorem 3 does precisely
+this in its setting: he treats the AKLT model by showing that <em>on a
+large length scale it is a relatively bounded perturbation of a
+classical model</em>, which works because the frustration-free structure
+makes the block ground state exactly known. The Kogut–Susskind
+Hamiltonian at intermediate coupling has no such structure, and
+supplying a substitute is the open problem.</p>
+<h2 id="correction-to-the-previous-note">5. Correction to the previous
+note</h2>
+<p><a href="blocking-step-obstruction.html">The blocking note</a> §§4–5
+concluded that a connected estimate would give a one-step inequality
+valid above a fixed threshold <span
+class="math inline">\(g^4\gtrsim8\sqrt{6C}MN/(\gamma C_2)\)</span> and
+that the induction would then close. Sections 1–3 above show that the
+connected estimate is available and that the resulting threshold is
+worse than the direct one by the factor <span
+class="math inline">\(3M^2/8\)</span>, so the induction does not close
+by this route. The finite-step counting of §5 of that note, <span
+class="math inline">\(n\simeq(2b_0\log2)^{-1}(g_{\rm UV}^{-2}-g_{\rm
+thr}^{-2})\)</span>, retains its meaning as a count of
+renormalization-group steps, with the proviso that each step must
+redefine the coupling rather than merely project.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The blocking route in its projection form is closed, with the reason
+stated quantitatively: boundary grows like <span
+class="math inline">\(M^2\)</span>, gap does not grow. The route
+survives only in its renormalization form, where each step redefines the
+theory, which is the constructive problem. The nearest remaining
+tractable questions are on the other side of the ledger: the stability
+theorem without frustration-freeness named in <a
+href="lieb-robinson-kogut-susskind.html">the Lieb–Robinson note</a> §5,
+and the fixed-lattice small-volume theorem (1a) named in <a
+href="schur-error-ultraviolet.html">the Schur note</a> §5.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

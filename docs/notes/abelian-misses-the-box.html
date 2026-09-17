@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why the abelian theory has no gap, in the language of the target box: its coupling does not run</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Why the abelian theory has no gap, in the language of the target box:
+its coupling does not run</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/abelian-misses-the-box.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/abelian-misses-the-box.pdf">PDF</a></p><p>The founding question of this series, why the commutative theory is
+gapless while the non-abelian one is expected to be gapped, has a
+precise form once the strong-coupling gap is a box rather than a point
+at infinity. The continuous-time expansion of <a
+href="kogut-susskind-strong-coupling-explicit.html">the Kogut–Susskind
+note</a> is group-blind: it uses only that the electric term is diagonal
+with a least nonzero Casimir, that the plaquette term is bounded and
+acts on four links, and Gauss’s law. For compact <span
+class="math inline">\(U(1)\)</span> it gives a gap <span
+class="math inline">\(\Delta\ge4\lambda\)</span> with <span
+class="math inline">\(\varepsilon=g^2/2\)</span>, for <span
+class="math inline">\(g^2\)</span> above a threshold of the same size as
+for <span class="math inline">\(SU(3)\)</span>, uniformly in the volume.
+So <strong>both theories are gapped inside the box.</strong> What
+differs is whether the flow from weak coupling reaches it. For <span
+class="math inline">\(SU(3)\)</span> the coupling runs, <span
+class="math display">\[\frac{d\,g^2}{d\log(a)}=2b_0g^4+O(g^6),\qquad
+b_0=\frac{11}{16\pi^2}&gt;0,\]</span> and the conjecture is that it
+keeps running until it enters the box. For <span
+class="math inline">\(U(1)\)</span> the pure gauge theory has <span
+class="math inline">\(b_0=0\)</span>: the coupling does not run, the
+weak-coupling theory is the free photon at every scale, and it never
+reaches the box; the massless Coulomb phase of Guth (Phys. Rev. D 21
+(1980) 2291) and Fröhlich–Spencer (Commun. Math. Phys. 83 (1982) 411;
+both metadata level) is the rigorous form of this statement, and the
+gapped set of the lattice <span class="math inline">\(U(1)\)</span>
+theory is <span class="math inline">\((g_c,\infty)\)</span> with <span
+class="math inline">\(g_c&gt;0\)</span>. In the language of <a
+href="gapped-set-critical-coupling.html">the critical-coupling note</a>,
+T2<span class="math inline">\(&#39;\)</span> for <span
+class="math inline">\(SU(3)\)</span> is the statement that the
+renormalization flow has no fixed point between the ultraviolet and the
+box, and for <span class="math inline">\(U(1)\)</span> the whole
+weak-coupling region is a line of fixed points. Constants explicit;
+nothing promoted.</p>
+<h2 id="the-strong-coupling-box-does-not-see-the-group">1. The
+strong-coupling box does not see the group</h2>
+<p>Run the expansion of the Kogut–Susskind note for compact <span
+class="math inline">\(U(1)\)</span> with the Wilson term <span
+class="math inline">\((2/g^2)\sum_p(1-\cos\theta_p)\)</span>. The
+electric term is <span class="math inline">\((g^2/2)\sum_\ell
+n_\ell^2\)</span>, diagonal in the charge basis, with least nonzero
+eigenvalue <span class="math inline">\(\varepsilon=g^2/2\)</span> per
+link. The plaquette operator <span
+class="math inline">\(w_p=e^{i\theta_p}+e^{-i\theta_p}\)</span> has norm
+<span class="math inline">\(2\)</span> and shifts the charge on the four
+links of <span class="math inline">\(p\)</span> by <span
+class="math inline">\(\pm1\)</span>. Gauss’s law, <span
+class="math inline">\(\sum_{\ell\ni x}\pm n_\ell=0\)</span> at every
+site, makes every excited set a union of closed charged loops, so <span
+class="math inline">\(|S_k|\ge4\)</span>. The per-step factor of the
+adjacent-growth count is <span
+class="math inline">\(u=128e/(g^2(\varepsilon-\lambda))\)</span> with
+<span class="math inline">\(N\to1\)</span>, and the rest is verbatim.
+The abelian theory is therefore gapped, uniformly in the volume, for
+<span class="math inline">\(g^2\)</span> above an explicit threshold of
+the same order as for <span class="math inline">\(SU(3)\)</span>, with a
+gap approaching the flux-loop energy <span
+class="math inline">\(4\cdot\frac{g^2}2=2g^2\)</span> in units <span
+class="math inline">\(\hbar c/a\)</span>. This is the confining phase of
+compact <span class="math inline">\(U(1)\)</span>, and it is the same
+mechanism as for <span class="math inline">\(SU(3)\)</span>: electric
+flux costs energy per link, and Gauss’s law forces flux to close.</p>
+<h2 id="what-differs-is-the-flow">2. What differs is the flow</h2>
+<p>Let <span class="math inline">\(g(a)\)</span> be the effective
+coupling of the lattice theory at spacing <span
+class="math inline">\(a\)</span>, defined by any renormalization scheme
+that is an exact low-energy reduction. The target box of <a
+href="strong-coupling-target-box.html">the target-box note</a> is the
+region <span class="math inline">\(g^2\gtrsim4\times10^2\)</span> with
+few-link corrections of controlled local norm, and the Hamiltonian at
+any scale that lies in it has a gap.</p>
+<p><em><span class="math inline">\(SU(3)\)</span>.</em> Asymptotic
+freedom gives, at weak coupling, <span
+class="math inline">\(g^2(2a)=g^2(a)+2b_0\log2\,g^4(a)+O(g^6)\)</span>
+with <span class="math inline">\(2b_0\log2=0.0966\)</span>, so the
+coupling grows as the scale coarsens. The mass-gap conjecture is the
+statement that this growth continues, with corrections staying in the
+class <span class="math inline">\(\mathcal C\)</span>, until <span
+class="math inline">\(g^2\)</span> enters the box; equivalently, that
+the flow has no fixed point at intermediate coupling. The intermediate
+region of <a href="mass-gap-position.html">the position note</a> §6 is
+the stretch of the flow in which neither the perturbative form of the
+running nor the box applies.</p>
+<p><em><span class="math inline">\(U(1)\)</span>.</em> The pure abelian
+theory has no self-interaction of the gauge field, so <span
+class="math inline">\(b_0=0\)</span> and, at weak coupling, <span
+class="math inline">\(g(2a)=g(a)\)</span> to all orders: the free photon
+is a fixed point of the flow at every value of the coupling. The
+weak-coupling theory therefore never moves toward the box. Guth and
+Fröhlich–Spencer prove that for <span class="math inline">\(g\)</span>
+small the lattice theory is in a massless phase with power-law decay of
+the Wilson loop and a massless photon, and the strong-coupling expansion
+proves a gap for <span class="math inline">\(g\)</span> large; the
+gapped set is <span class="math inline">\((g_c,\infty)\)</span> with
+<span class="math inline">\(0&lt;g_c&lt;\infty\)</span>, and the
+transition at <span class="math inline">\(g_c\)</span> is the
+zero-temperature phase transition that T2<span
+class="math inline">\(&#39;\)</span> forbids for <span
+class="math inline">\(SU(3)\)</span>.</p>
+<h2
+id="the-three-earlier-isolations-of-the-non-abelian-structure-in-this-language">3.
+The three earlier isolations of the non-abelian structure, in this
+language</h2>
+<p><a href="mass-gap-position.html">The position note</a> §4 lists three
+places where the non-abelian structure enters: the commutator potential
+of the zero-momentum sector, the absence of a gauge-invariant operator
+linear in the electric field, and the one-loop valley potential. All
+three are statements about the first coefficient of the running: the
+commutator is what makes <span class="math inline">\(b_0\ne0\)</span>,
+the valley potential is its finite-volume image, and the absence of a
+linear gauge-invariant operator is why the photon channel through which
+the abelian gap closes does not exist. In the box language they are the
+reasons the <span class="math inline">\(SU(3)\)</span> flow leaves the
+ultraviolet at all; the open problem is whether it arrives.</p>
+<h2 id="what-this-settles-and-what-it-leaves">4. What this settles and
+what it leaves</h2>
+<p><em>Settled.</em> The gap is a property of the box, and the box is
+group-blind: confinement at strong coupling is the same for <span
+class="math inline">\(U(1)\)</span> and <span
+class="math inline">\(SU(3)\)</span>. The difference between the
+theories is the flow into the box, and for <span
+class="math inline">\(U(1)\)</span> the flow is absent. “Commutative
+fields have no gap” means: their coupling does not run, so the
+weak-coupling theory is a fixed point outside the box.</p>
+<p><em>Left.</em> For <span class="math inline">\(SU(3)\)</span> the
+flow leaves the ultraviolet with <span
+class="math inline">\(b_0&gt;0\)</span> and the box is at <span
+class="math inline">\(g^2\sim4\times10^2\)</span>. Whether the flow
+arrives is the intermediate-region problem, and every quantity in it is
+now explicit: the starting slope <span
+class="math inline">\(2b_0\log2=0.0966\)</span> per doubling, the class
+<span class="math inline">\(\mathcal C\)</span> that has to be
+preserved, and the box’s edge and tolerance.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The founding question has its answer at the level of the current map:
+the strong-coupling gap is group-blind, the flow is what distinguishes
+the groups, and the abelian theory’s coupling does not run. The
+non-abelian mass gap is the statement that the running, which begins
+with <span class="math inline">\(b_0=11/(16\pi^2)\)</span> for <span
+class="math inline">\(SU(3)\)</span>, does not stop before the box.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

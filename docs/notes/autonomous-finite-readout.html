@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A finite mechanical clock and four persistent readout records</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A finite mechanical clock and four persistent readout records</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/autonomous-finite-readout.md">Markdown source</a></p><p>A fixed finite-mass classical apparatus can reconstruct the initial
+state of R04’s receiver with vanishing error and disturbance over a
+fixed positive observation time. Five apparatus coordinates suffice: one
+clock and four free probe pointers. The interaction is a smooth
+coordinate potential, all kinetic terms are positive, and force and
+coupling ceilings are uniform. The closing limit weakens the coupling
+and concentrates the incoming apparatus preparation; it retains exact
+access to four final momentum records. Thus these upper resource bounds
+alone do not select a positive accuracy–disturbance action.</p>
+<p>This is a delayed reconstruction of a known deterministic trajectory.
+It supplies four physical records from which arbitrarily fine samples
+may be computed, with one fixed observation latency. It does not perform
+a fresh measurement at every refined cut. Preparation precision, final
+record access, and knowledge of the receiver dynamics are explicit
+resources of the result.</p>
+<p>Proof status: C068–C069 accepted by written derivation and
+coordinator review, 2026-09-10. Literature status: derived consequences,
+novelty unassessed; <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B37.md">B37</a>
+and <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/autonomous-readout-B37.md">review</a>
+record the bounded audit.</p>
+<h2 id="fixed-class-and-autonomous-hamiltonian">1. Fixed class and
+autonomous Hamiltonian</h2>
+<p>Use the reduced three-body receiver of <a
+href="three-body-cut-memory.html">R04</a>, with <span
+class="math inline">\(z=(x,P,y,Q)\)</span>, positive masses <span
+class="math inline">\(\mu=3m/2\)</span>, <span
+class="math inline">\(\nu=m/2\)</span>, and</p>
+<p><span class="math display">\[H_s(z)=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
++\frac a2x^2-gxy+\frac d2y^2,
+\qquad (a,g,d)=(9k/4,3k/4,5k/4).\]</span></p>
+<p>Fix <span class="math inline">\(m,k,E,T&gt;0\)</span> and initial
+receiver support <span class="math inline">\(H_s=E\)</span>. The
+reference motion is <span
+class="math inline">\(z^0(t)=\Phi_tz_0\)</span> on <span
+class="math inline">\(0\le t\le T\)</span>. The physical tagged momentum
+is <span class="math inline">\(2P/3\)</span>; all products below use
+canonical <span class="math inline">\(P\)</span>. Add a clock <span
+class="math inline">\((s,p_s)\)</span> of mass <span
+class="math inline">\(M_c&gt;0\)</span> and four probe pairs <span
+class="math inline">\((q_j,\pi_j)\)</span> of fixed masses <span
+class="math inline">\(M_j&gt;0\)</span>. All coordinates have length
+units and all conjugate momenta momentum units; the phase domain is
+<span class="math inline">\(\mathbb R^{14}\)</span>. The added total
+mass <span class="math inline">\(M_c+\sum_j M_j\)</span> is fixed.</p>
+<p>Let <span class="math inline">\(X(x)\)</span> and <span
+class="math inline">\(R(q)\)</span> be smooth bounded functions with
+bounded derivatives, equal to <span class="math inline">\(x\)</span> and
+<span class="math inline">\(q\)</span> respectively on fixed
+neighbourhoods containing the reference receiver trajectory and zero
+probe position. They have length units. For fixed dimensionless smooth
+compactly supported functions <span
+class="math inline">\(f_j(s)\)</span>, put</p>
+<p><span class="math display">\[H_\lambda=H_s+\frac{p_s^2}{2M_c}
++\sum_{j=1}^4\frac{\pi_j^2}{2M_j}
++\lambda K\sum_{j=1}^4 f_j(s)X(x)R(q_j),
+\qquad 0&lt;\lambda\le\lambda_0,\]</span></p>
+<p>where <span class="math inline">\(K&gt;0\)</span> is a fixed
+stiffness and <span class="math inline">\(\lambda\)</span> is
+dimensionless. There is no external time dependence. A fixed additive
+constant can make the Hamiltonian nonnegative, since the interaction is
+uniformly bounded below. Its kinetic quadratic form is positive
+definite. The reduced receiver coupling is an internal-coordinate
+interaction; no spatial locality or finite signal speed is assumed for
+this finite-dimensional potential model.</p>
+<p>Fix a nominal clock trajectory <span
+class="math inline">\(s^0(t)=s_0+vt\)</span>, <span
+class="math inline">\(v&gt;0\)</span>. Place all supports of <span
+class="math inline">\(f_j\)</span> strictly inside <span
+class="math inline">\((s_0,s_0+vT)\)</span> with a fixed endpoint
+margin. Their shapes, widths and derivatives are fixed before taking any
+limit. Preparation has full rectangular support of dimensionless
+half-width <span class="math inline">\(b&gt;0\)</span> about <span
+class="math inline">\(q_j=\pi_j=0\)</span>, <span
+class="math inline">\(s=s_0\)</span>, <span
+class="math inline">\(p_s=M_cv\)</span>, using fixed length and momentum
+units. An independent uniform density on this rectangle is admissible.
+Each <span class="math inline">\(b&gt;0\)</span> has positive phase
+volume. The class permits <span
+class="math inline">\(b\downarrow0\)</span>; there is no lower
+phase-volume or temperature constraint. Energy, coordinate and momentum
+upper bounds are fixed across this class. In particular the clock has
+fixed positive nominal energy <span
+class="math inline">\(M_cv^2/2\)</span>, which is never cooled to
+zero.</p>
+<p>The interaction forces are bounded globally by constants independent
+of <span class="math inline">\(\lambda,b\)</span>, including the clock
+force involving <span class="math inline">\(f&#39;_j\)</span>. The
+harmonic receiver forces are uniformly bounded on the admitted
+trajectories: conservation of <span
+class="math inline">\(H_\lambda\)</span>, bounded interaction and
+positive receiver quadratic energy bound all receiver positions and
+momenta. Thus a common finite total force ceiling and speed ceiling hold
+on this preparation class. A global ceiling outside the admitted energy
+class is not asserted for the harmonic springs. Any prescribed positive
+apparatus-force ceiling can be met by reducing <span
+class="math inline">\(\lambda_0\)</span> after fixing the shapes. The
+constants may depend on <span class="math inline">\(E,T\)</span>, all
+masses, <span class="math inline">\(K\)</span>, the cutoffs and the
+chosen pulse shapes.</p>
+<h2 id="four-fixed-duration-signals-determine-the-receiver-state">2.
+Four fixed-duration signals determine the receiver state</h2>
+<p>The scalar history <span
+class="math inline">\(x^0(t)=e_x\Phi_tz_0\)</span> observes all four
+receiver coordinates. At <span class="math inline">\(t=0\)</span> the
+first four derivative rows are</p>
+<p><span class="math display">\[
+x=x_0,\qquad \dot x=P_0/\mu,\qquad
+\ddot x=(-a x_0+g y_0)/\mu,\qquad
+x^{(3)}=-aP_0/\mu^2+gQ_0/(\mu\nu).
+\]</span></p>
+<p>The map from <span class="math inline">\(z_0\)</span> to these four
+derivatives is triangular with diagonal <span
+class="math inline">\(1,1/\mu,g/\mu,g/(\mu\nu)\)</span> and is
+invertible since <span class="math inline">\(g&gt;0\)</span>.
+Consequently the analytic row functions <span
+class="math inline">\(e_x\Phi_t\)</span> span four dimensions on any
+open time interval: a vector annihilated by every row on an interval has
+an analytic output identically zero and hence all four initial
+coordinates zero. Four distinct times <span
+class="math inline">\(t_j\in(0,T)\)</span> can therefore be selected
+with independent evaluation rows.</p>
+<p>Choose nonnegative smooth bumps <span
+class="math inline">\(f_j(s_0+vt)\)</span> near those times, with
+disjoint supports and positive time integrals <span
+class="math inline">\(c_j\)</span>. Their widths can be chosen positive
+and sufficiently small that the matrix</p>
+<p><span class="math display">\[\mathcal A_{j\cdot}=K\int_0^T
+f_j(s_0+vt)e_x\Phi_t\,dt\]</span></p>
+<p>is invertible: after dividing row <span
+class="math inline">\(j\)</span> by <span
+class="math inline">\(Kc_j\)</span>, its limit as the design width
+shrinks is the independent evaluation row. Continuity of the determinant
+then gives a fixed nonzero width. This existence argument selects the
+design once; no pulse width shrinks with <span
+class="math inline">\(\lambda\)</span>, <span
+class="math inline">\(b\)</span> or the output mesh. Small signal gains
+or poor conditioning enter the fixed constant <span
+class="math inline">\(\|\mathcal A^{-1}\|\)</span>; there is no uniform
+bound as <span class="math inline">\(T\downarrow0\)</span>. The rows
+carry the appropriate units so that <span class="math inline">\(\mathcal
+A z_0\)</span> is momentum. All following norms use the fixed component
+units of section 1.</p>
+<h2 id="finite-duration-motion-clock-reaction-and-stored-records">3.
+Finite-duration motion, clock reaction and stored records</h2>
+<p>Uniformly over receiver data and allowed apparatus preparation, the
+probes, receiver disturbance and clock deviation obey</p>
+<p><span
+class="math display">\[\sup_{[0,T]}(|q_j|+|\pi_j|)=O(b+\lambda),\]</span>
+<span class="math display">\[\sup_{[0,T]}\|z(t)-z^0(t)\|=O(\lambda
+b+\lambda^2),\]</span> <span
+class="math display">\[\sup_{[0,T]}\bigl(|s(t)-s^0(t)|+|p_s(t)-M_cv|\bigr)
+=O(b+\lambda^2).\]</span></p>
+<p>Here and below component sums mean dimensionless values. To prove
+these bounds, the global interaction-force bound gives <span
+class="math inline">\(\dot\pi_j=O(\lambda)\)</span>; integrating it and
+<span class="math inline">\(\dot q_j=\pi_j/M_j\)</span> gives the first
+estimate. For sufficiently small <span
+class="math inline">\(\lambda,b\)</span>, the cutoffs are therefore
+linear along every admitted trajectory. Hamilton’s equations then give
+exactly</p>
+<p><span class="math display">\[\dot\pi_j=-\lambda K f_j(s)x,\qquad
+\dot P=-ax+gy-\lambda K\sum_j f_j(s)q_j,\]</span> <span
+class="math display">\[\dot p_s=-\lambda K\sum_j
+f&#39;_j(s)xq_j.\]</span></p>
+<p>Variation of constants in the receiver equations gives the second
+estimate. The clock equation has force <span
+class="math inline">\(O(\lambda b+\lambda^2)\)</span>, which together
+with its initial uncertainty gives <span
+class="math inline">\(O(b+\lambda^2)\)</span> over fixed <span
+class="math inline">\(T\)</span>. Uniform energy bounds and cutoff
+margins justify these estimates by continuation. This proves the bounds
+without treating the clock as an unaffected external parameter. In
+particular <span class="math inline">\(p_s&gt;M_cv/2\)</span> for small
+enough parameters, so the clock traverses every pulse and leaves their
+supports before <span class="math inline">\(T\)</span>.</p>
+<p>The four final momenta satisfy</p>
+<p><span class="math display">\[\pi_j(T)=\pi_j(0)-\lambda(\mathcal A
+z_0)_j
++O(\lambda b+\lambda^3).\]</span></p>
+<p>Indeed replace <span class="math inline">\(s(t)\)</span> and <span
+class="math inline">\(x(t)\)</span> in the integrated force by <span
+class="math inline">\(s^0(t)\)</span> and <span
+class="math inline">\(x^0(t)\)</span>; bounded derivatives of <span
+class="math inline">\(f_j\)</span> give integrand error <span
+class="math inline">\(O(b+\lambda^2)\)</span>, and multiplication by
+<span class="math inline">\(\lambda\)</span> gives the stated remainder.
+Once the clock has passed all supports, each <span
+class="math inline">\(\pi_j\)</span> and <span
+class="math inline">\(p_s\)</span> is exactly conserved. The clock
+continues forward, so there is no later recoupling. These momenta are
+persistent mechanical records although their conjugate positions
+subsequently drift. The bounded-coordinate resource claim concerns the
+fixed observation horizon, not unlimited storage space.</p>
+<h2 id="reconstruction-action-product-and-output-refinement">4.
+Reconstruction, action product and output refinement</h2>
+<p>Assume the final four momentum records can be accessed exactly.
+Define the calibrated estimate</p>
+<p><span class="math display">\[\widehat z_0=-\mathcal
+A^{-1}\frac{\boldsymbol\pi(T)}{\lambda}.\]</span></p>
+<p>The incoming momenta are unknown but bounded by <span
+class="math inline">\(O(b)\)</span>, so</p>
+<p><span class="math display">\[\sup\|\widehat z_0-z_0\|
+=O(b/\lambda+b+\lambda^2).\]</span></p>
+<p>Choose <span class="math inline">\(b=\lambda^3\)</span>. Then
+reconstructed initial-state error and receiver trajectory disturbance
+are both <span class="math inline">\(O(\lambda^2)\)</span>. This choice
+keeps all masses, the receiver’s initial preparation, observation
+duration, clock mean energy, pulse geometry and upper resource ceilings
+fixed. Probe incoming phase-volume and clock uncertainty shrink;
+coupling strength decreases within one fixed upper bound. A fixed
+nonzero coupling or a lower preparation-width constraint is a different
+class.</p>
+<p>For a precise action-valued observable put</p>
+<p><span class="math display">\[\epsilon_x=\sup|\widehat x_0-x_0|,\qquad
+D_P=\sup_{0\le t\le T}|P(t)-P^0(t)|,\qquad
+\mathcal U=\epsilon_xD_P.\]</span></p>
+<p>Suprema include all permitted receiver and apparatus initial data.
+This is an accuracy–disturbance product for reconstruction of initial
+canonical position and finite-horizon canonical momentum disturbance, in
+units <span class="math inline">\(ML^2/T\)</span>, without a <span
+class="math inline">\(2\pi\)</span> factor. It is not R05’s intrinsic
+single-shear support product. For fixed length and momentum units <span
+class="math inline">\(L_*,P_*\)</span>,</p>
+<p><span class="math display">\[0\le\mathcal U\le C
+L_*P_*\lambda^4\longrightarrow0.\]</span></p>
+<p>Thus no uniform positive bound on this specified observable follows
+from fixed finite mass, finite duration, bounded forces and positive
+kinetic energy within this preparation and record-access class. The
+fixed nonzero clock energy does not change the conclusion.</p>
+<p>For any partition of <span class="math inline">\([0,T]\)</span>,
+report <span class="math inline">\(\widehat z(t_i)=\Phi_{t_i}\widehat
+z_0\)</span>. Boundedness of <span class="math inline">\(\Phi_t\)</span>
+gives uniform <span class="math inline">\(O(\lambda^2)\)</span> error
+relative to both the unmeasured reference and the actual receiver.
+Refining only the reporting partition uses the same four records and
+leaves all old estimated nodes unchanged. Taking also <span
+class="math inline">\(\lambda\downarrow0\)</span> changes the experiment
+but improves that common bound independently of the mesh. This is
+reconstruction after latency <span class="math inline">\(T\)</span> with
+known equations; causal repeated interventions, unknown forcing and
+model error are not covered by the theorem.</p>
+<p>If final record errors have component support width at most <span
+class="math inline">\(r\)</span> in fixed momentum units, the same
+estimator instead has bound <span
+class="math inline">\(O((b+r)/\lambda+b+\lambda^2)\)</span>. For this
+scheme <span class="math inline">\(r=O(\lambda^3)\)</span> suffices to
+retain the stated rate. A fixed nonzero <span
+class="math inline">\(r\)</span> prevents this particular weak-coupling
+estimate from proving convergence. That upper-bound observation is not
+an impossibility theorem for every estimator or apparatus.</p>
+<h2 id="source-connection-and-next-research-obligation">5. Source
+connection and next research obligation</h2>
+<p>Theurel’s <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B36.md">existing
+B36 audit</a> supplies the conserved-momentum record and isolates
+thermal preparation as an action-scale input; its delta interaction does
+not supply this finite-duration clock. Hermann–Krener’s observability
+construction, routed through <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B34/receiver-memory-source-companion.md">B34</a>,
+motivates using four output histories instead of shrinking R04’s
+two-sample baseline. The explicit derivative-rank argument, autonomous
+equations and bounds above are written derivations for this
+apparatus.</p>
+<p>R06’s bounded result advances the exclusion-of-zero test by
+identifying a finite apparatus counterclass with delayed records. The
+next task R07 is to fix a physically justified preparation or
+record-resolution restriction and require causal new information at
+shrinking latency. Specify that information task before seeking a lower
+bound; distinguish a latency or precision cost from a uniform positive
+action product. Theorem acceptance and the bounded prior-literature
+comparison are recorded separately in the ledger and review.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

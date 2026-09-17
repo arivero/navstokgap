@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Agmon bound controls the global excess only: the local large-field estimate does not follow</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The Agmon bound controls the global excess only: the local
+large-field estimate does not follow</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/agmon-global-not-local.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/agmon-global-not-local.pdf">PDF</a></p><p>Carrying out the distance estimate of <a
+href="agmon-ground-state-suppression.html">the Agmon note</a> §2 with
+constants changes its meaning. The rigorous chain is <span
+class="math display">\[d(U)\ \ge\
+\sqrt{\frac{B&#39;}{A&#39;}}\int_0^{f_0}\frac{\sqrt f\,df}{\|\nabla
+V\|_\infty}
+=\frac{2}{3}\,\frac{2}{g^2}\,\frac{f_0^{3/2}}{\|\nabla V\|_\infty},
+\qquad f_0=V(U)-\bar v,\]</span> obtained from <span
+class="math inline">\(|df|\le\|\nabla V\|_\infty|d\gamma|\)</span> along
+any path to the allowed region, and the gradient norm of the magnetic
+energy over the whole configuration space is <span
+class="math display">\[\|\nabla V\|_\infty\ \le\ 2\sqrt{2N|\mathcal
+E|},\]</span> <strong>extensive in the volume</strong>. For an excess
+<span class="math inline">\(w\)</span> per plaquette spread over the
+lattice this gives an extensive exponent, <span
+class="math display">\[\big|\Omega\big|^2\ \lesssim\
+\exp\Big[-\frac{2\sqrt2}{3}\,\frac{w^{3/2}}{g^2\sqrt N}\,|\mathcal
+P|\Big],\]</span> with the same rate per plaquette as the earlier
+estimate when <span class="math inline">\(w=O(N)\)</span>. For an excess
+carried by <span class="math inline">\(n\)</span> plaquettes in a
+<strong>fixed region</strong> of a large lattice the same chain gives
+<span class="math inline">\(d\gtrsim n^{3/2}N/(g^2\sqrt{|\mathcal
+P|})\)</span>, which tends to zero as the volume grows: the argument
+controls the total magnetic energy and says nothing about a local
+region. The reason is structural rather than technical. The forbidden
+region of the Agmon method is defined by the <strong>total</strong>
+potential exceeding the <strong>total</strong> energy, and in an
+extensive system a local excess never makes the total exceed its
+extensive mean. So <a href="agmon-ground-state-suppression.html">the
+Agmon note</a> proves a thermodynamic large-deviation bound, and the
+local large-field estimate that the renormalization step needs does not
+follow from it. The gap between the two is the same one the Euclidean
+formulation closes for free, because there the weight <span
+class="math inline">\(e^{-S_w}\)</span> factorizes over plaquettes.
+Constants explicit; this note corrects the previous one; nothing
+promoted.</p>
+<h2 id="the-rigorous-distance-bound">1. The rigorous distance bound</h2>
+<p>Let <span class="math inline">\(\bar v=e_0/B&#39;\)</span> and <span
+class="math inline">\(f=V-\bar v\)</span>, so the allowed region is
+<span class="math inline">\(\{f\le0\}\)</span> and the Agmon metric is
+<span class="math inline">\(\sqrt{(B&#39;/A&#39;)f}\,|dU|\)</span> on
+<span class="math inline">\(\{f&gt;0\}\)</span>.</p>
+<p><strong>Proposition 1.</strong> For every <span
+class="math inline">\(U\)</span> with <span
+class="math inline">\(f_0=f(U)&gt;0\)</span>, <span
+class="math display">\[d(U)\ \ge\
+\frac{2}{3}\sqrt{\frac{B&#39;}{A&#39;}}\;\frac{f_0^{3/2}}{\|\nabla
+V\|_\infty}
+=\frac{4}{3g^2}\;\frac{f_0^{3/2}}{\|\nabla V\|_\infty}.\]</span></p>
+<p><em>Proof.</em> Let <span class="math inline">\(\gamma\)</span> be
+any path from <span class="math inline">\(U\)</span> to <span
+class="math inline">\(\{f\le0\}\)</span>, parametrized by arclength.
+Along it <span class="math inline">\(|f&#39;(s)|\le|\nabla
+V(\gamma(s))|\le\|\nabla V\|_\infty\)</span>, so <span
+class="math display">\[\int_\gamma\sqrt{\tfrac{B&#39;}{A&#39;}f}\;ds
+\ \ge\
+\sqrt{\tfrac{B&#39;}{A&#39;}}\int_\gamma\sqrt{f}\;\frac{|f&#39;|\,ds}{\|\nabla
+V\|_\infty}
+\ \ge\ \frac{\sqrt{B&#39;/A&#39;}}{\|\nabla V\|_\infty}\int_0^{f_0}\sqrt
+f\,df
+=\frac{2}{3}\frac{\sqrt{B&#39;/A&#39;}}{\|\nabla
+V\|_\infty}f_0^{3/2},\]</span> using that <span
+class="math inline">\(f\)</span> runs from <span
+class="math inline">\(f_0\)</span> to <span
+class="math inline">\(0\)</span>. Take the infimum over <span
+class="math inline">\(\gamma\)</span> and insert <span
+class="math inline">\(\sqrt{B&#39;/A&#39;}=2/g^2\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Lemma 2.</strong> <span class="math inline">\(\|\nabla
+V\|_\infty\le2\sqrt{2N|\mathcal E|}\)</span> for <span
+class="math inline">\(SU(N)\)</span> in the normalization of <a
+href="mass-gap-obligations-lattice.html">the obligations map</a>.</p>
+<p><em>Proof.</em> For one link, <span
+class="math inline">\(|\nabla_\ell
+V|\le\sum_{p\ni\ell}|\nabla_\ell\operatorname{Re}\operatorname{tr}U_p|\)</span>,
+and the completeness relation of <a
+href="lattice-gap-upper-bounds.html">the upper-bound note</a> Corollary
+2 gives <span
+class="math inline">\(|\nabla_\ell\operatorname{Re}\operatorname{tr}U_p|\le\sqrt{N/2}\)</span>;
+each link lies in four plaquettes, so <span
+class="math inline">\(|\nabla_\ell V|\le4\sqrt{N/2}=2\sqrt{2N}\)</span>.
+Summing the squares over the <span class="math inline">\(|\mathcal
+E|\)</span> links gives <span class="math inline">\(\|\nabla
+V\|^2\le8N|\mathcal E|\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="what-follows-and-what-does-not">2. What follows, and what does
+not</h2>
+<p><em>Global excess.</em> With <span
+class="math inline">\(f_0=w|\mathcal P|\)</span> and <span
+class="math inline">\(|\mathcal E|=|\mathcal P|\)</span> in three
+dimensions, <span class="math display">\[d\ \ge\
+\frac{4}{3g^2}\,\frac{(w|\mathcal P|)^{3/2}}{2\sqrt{2N|\mathcal P|}}
+=\frac{\sqrt2}{3}\,\frac{w^{3/2}}{g^2\sqrt N}\,|\mathcal P| ,\]</span>
+extensive, and the Agmon estimate of <a
+href="agmon-ground-state-suppression.html">the Agmon note</a> Corollary
+2 gives <span class="math display">\[\int_{\{V-\bar v\ge w|\mathcal
+P|\}}\Omega^2\,d\mu
+\ \le\ C\exp\Big[-\frac{2\sqrt2(1-\delta)}{3}\,\frac{w^{3/2}}{g^2\sqrt
+N}\,|\mathcal P|\Big].\]</span> At <span
+class="math inline">\(w=O(N)\)</span> the rate per plaquette is of order
+<span class="math inline">\(N/g^2\)</span>, as the previous note
+stated.</p>
+<p><em>Local excess.</em> If instead the excess <span
+class="math inline">\(nv\)</span> sits on <span
+class="math inline">\(n\)</span> plaquettes of a fixed region while the
+rest of the lattice is at its mean, then <span
+class="math inline">\(f_0=nv\)</span> and <span
+class="math display">\[d\ \ge\
+\frac{4}{3g^2}\,\frac{(nv)^{3/2}}{2\sqrt{2N|\mathcal P|}}
+\ \sim\ \frac{n^{3/2}N}{g^2\sqrt{|\mathcal P|}}\ \xrightarrow[\
+|\mathcal P|\to\infty\ ]{}\ 0 .\]</span> The bound degrades with the
+volume and gives nothing in the thermodynamic limit.</p>
+<h2 id="why-the-local-statement-fails-structurally">3. Why the local
+statement fails structurally</h2>
+<p>The Agmon method measures tunnelling into the region where the
+<strong>total</strong> potential exceeds the <strong>total</strong>
+energy. In an extensive system <span class="math inline">\(\bar
+v=e_0/B&#39;\)</span> is extensive, of order <span
+class="math inline">\(N|\mathcal P|\)</span>, so a local excess of <span
+class="math inline">\(n\)</span> plaquettes leaves <span
+class="math inline">\(V\)</span> far below <span
+class="math inline">\(\bar v\)</span> whenever the rest of the lattice
+sits at or below its mean. Such a configuration is classically allowed,
+the Agmon weight vanishes on it, and no decay is asserted.</p>
+<p>A localized version would need a weight <span
+class="math inline">\(\rho\)</span> supported near the region, subject
+to <span class="math inline">\(A&#39;|\nabla\rho|^2\le
+B&#39;V-e_0\)</span> <strong>pointwise</strong>, and that inequality
+fails for exactly the same reason: its right side is a global quantity
+that a local excess does not control. Repairing it requires a local
+energy balance, that is, a statement that the ground-state energy
+density is locally attained, which is a form of the very locality one is
+trying to prove.</p>
+<h2 id="consequence-for-the-route">4. Consequence for the route</h2>
+<p><em>What survives.</em> A thermodynamic large-deviation bound on the
+total magnetic energy in the ground state, with the coupling dependence
+<span class="math inline">\(1/g^2\)</span> and an extensive rate. It is
+a genuine property of the Kogut–Susskind ground state and it is proved
+with explicit constants above.</p>
+<p><em>What was claimed too strongly.</em> <a
+href="agmon-ground-state-suppression.html">The Agmon note</a> read the
+same estimate as a suppression of a <strong>local</strong> large-field
+region, which is what the renormalization step needs, and that reading
+does not follow. Its Sections 3 and 4 should be read with “global
+excess” in place of “<span class="math inline">\(n\)</span> excited
+plaquettes”, and its comparison with the Euclidean Wilson weight holds
+only for the global statement. The Euclidean weight <span
+class="math inline">\(e^{-S_w}\)</span> factorizes over plaquettes and
+therefore gives the local statement immediately, which is the structural
+advantage the Hamiltonian formulation lacks and which <a
+href="typical-field-strength-window.html">the typical-field note</a> had
+already identified.</p>
+<p><em>What would close it.</em> Either a local energy-balance estimate
+for the Kogut–Susskind ground state, or a proof that the ground-state
+measure is dominated by a product-form weight, <span
+class="math inline">\(\Omega^2\le Ce^{-\lambda V}\)</span> with <span
+class="math inline">\(\lambda&gt;0\)</span>, which is a statement of
+exactly the kind the strong-coupling expansion produces and which is
+open at intermediate coupling. The second is the sharper target: it is a
+single inequality, it implies the local estimate by factorization, and
+at <span class="math inline">\(g=\infty\)</span> it holds with <span
+class="math inline">\(\lambda=0\)</span>.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The Agmon route yields the global large-deviation bound and stops
+there. The local estimate, which is what the decimation step requires,
+needs a pointwise domination of the ground state by a Gibbs weight,
+<span class="math inline">\(\Omega^2\le Ce^{-\lambda V}\)</span> with
+<span class="math inline">\(\lambda&gt;0\)</span> uniform in the volume.
+<strong>Answered in the negative</strong> by <a
+href="magnetic-energy-identities.html">the identities note</a>
+Proposition 4: the comparison function <span
+class="math inline">\(e^{-\lambda V/2}\)</span> gives a bound only above
+the extensive threshold <span class="math inline">\(V_*\simeq N|\mathcal
+P|\)</span>, for the same reason as the Agmon estimate, because <span
+class="math inline">\(e_0\)</span> enters every inequality derived from
+the eigenvalue equation and is extensive.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The target box: the strong-coupling gap survives local perturbations, so the renormalization group has an explicit finish line</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The target box: the strong-coupling gap survives local perturbations,
+so the renormalization group has an explicit finish line</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/strong-coupling-target-box.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-target-box.pdf">PDF</a></p><p>The continuous-time expansion of <a
+href="kogut-susskind-strong-coupling-explicit.html">the Kogut–Susskind
+note</a> tolerates a bounded, gauge-invariant, few-link perturbation of
+the Hamiltonian and a mild deformation of the electric term. That turns
+the strong-coupling result into a <strong>target</strong>: any
+renormalization scheme that steers the effective Hamiltonian into the
+class <span class="math display">\[\mathcal
+C(g,\eta,\eta_E,q)=\Big\{H_E&#39;-\tfrac1{g^2}\textstyle\sum_pw_p-\sum_jd_j\Big\},\]</span>
+where <span
+class="math inline">\(E&#39;(\sigma)\ge(1-\eta_E)\,\varepsilon|S(\sigma)|\)</span>,
+each <span class="math inline">\(d_j\)</span> is gauge invariant and
+acts on at most <span class="math inline">\(q\)</span> links, and <span
+class="math inline">\(\sum_{j\ni\ell}\|d_j\|\le\eta\,\hbar c/a\)</span>
+for every link <span class="math inline">\(\ell\)</span>, at some scale
+<span class="math inline">\(a\)</span> with <span
+class="math inline">\(g^2\)</span> and <span
+class="math inline">\(\eta\)</span> in the region below has a gap of at
+least <span
+class="math inline">\(4\lambda=\frac83g^2(1-\eta_E)(1-\theta)\,\hbar
+c/a\)</span> there, and the gap of the original Hamiltonian follows if
+the scheme is an exact low-energy reduction. The tolerance for <span
+class="math inline">\(SU(3)\)</span>, at <span
+class="math inline">\(\theta=1/2\)</span>, <span
+class="math inline">\(\eta_E=0.1\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(g^2\)</span></th>
+<th><span class="math inline">\(q=4\)</span> (plaquette-like terms)</th>
+<th><span class="math inline">\(q=8\)</span> (two-plaquette terms)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(100\)</span></td>
+<td><span class="math inline">\(\eta\le0.29\)</span></td>
+<td><span class="math inline">\(\eta\le0.0066\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(200\)</span></td>
+<td><span class="math inline">\(\eta\le0.62\)</span></td>
+<td><span class="math inline">\(\eta\le0.036\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(400\)</span></td>
+<td><span class="math inline">\(\eta\le1.3\)</span></td>
+<td><span class="math inline">\(\eta\le0.082\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>in units <span class="math inline">\(\hbar c/a\)</span> for the
+adjacent-growth count; the rigorous general count multiplies the
+per-step factor by <span class="math inline">\(24\)</span>, so the same
+table holds at <span class="math inline">\(24\)</span> times the
+coupling, <span class="math inline">\(g^2=2400,4800,9600\)</span>, or at
+the listed couplings with tolerances divided by <span
+class="math inline">\(24\)</span>. The tolerance grows linearly in <span
+class="math inline">\(g^2\)</span> as <span
+class="math inline">\(\eta_*\simeq
+g^2/(2e\,2^q)\cdot\frac{1-\eta_E}{3}\)</span>. The mass-gap problem for
+<span class="math inline">\(SU(3)\)</span> is therefore the statement
+that the flow from a weak bare coupling enters this box. The
+intermediate region is where that has to be shown, and the box says
+exactly what “enters” means: <span class="math inline">\(g^2\)</span> of
+order <span class="math inline">\(10^2\)</span> with few-link
+corrections of local norm below a few per cent of <span
+class="math inline">\(\hbar c/a\)</span>. Constants explicit; the
+adjacent-growth count and the quoted tree-graph step are as in the
+Kogut–Susskind note; nothing promoted.</p>
+<h2 id="the-perturbed-expansion">1. The perturbed expansion</h2>
+<p>Take <span class="math inline">\(H=H_E&#39;-W-D\)</span> with <span
+class="math inline">\(W=\frac1{g^2}\sum_pw_p\)</span> as before and
+<span class="math inline">\(D=\sum_jd_j\)</span>, each <span
+class="math inline">\(d_j\)</span> bounded, gauge invariant, acting on
+at most <span class="math inline">\(q\)</span> links, with the local
+norm <span class="math inline">\(\sum_{j\ni\ell}\|d_j\|\le\eta\)</span>
+for every link <span class="math inline">\(\ell\)</span>; units <span
+class="math inline">\(\hbar c/a=1\)</span>. Suppose <span
+class="math inline">\(H_E&#39;\)</span> is diagonal in the character
+basis with <span
+class="math inline">\(E&#39;(\sigma)\ge\varepsilon&#39;|S(\sigma)|\)</span>,
+<span
+class="math inline">\(\varepsilon&#39;=(1-\eta_E)\varepsilon\)</span>.</p>
+<p>The Duhamel expansion now has insertions of two kinds. Gauge
+invariance of every <span class="math inline">\(d_j\)</span> keeps all
+intermediate configurations gauge invariant, so Gauss’s law still forces
+<span class="math inline">\(|S_k|\ge4\)</span>. The factorization over
+disjoint supports holds because each <span
+class="math inline">\(d_j\)</span> acts on finitely many links. A <span
+class="math inline">\(d\)</span>-insertion at step <span
+class="math inline">\(k\)</span> that touches the current excited set
+<span class="math inline">\(S_{k-1}\)</span> contributes, summed with
+weights over the terms touching a given link and over the at most <span
+class="math inline">\(2^q\)</span> choices of <span
+class="math inline">\(S_k\)</span>, at most <span
+class="math inline">\(|S_{k-1}|\,\eta\,2^q\)</span>; the energy
+denominator <span
+class="math inline">\(1/((\varepsilon&#39;-\lambda)|S_{k-1}|)\)</span>
+cancels the <span class="math inline">\(|S_{k-1}|\)</span> as before.
+The per-step factor of the adjacent-growth count becomes <span
+class="math display">\[u&#39;=\frac{128Ne/g^2+e\,\eta\,2^q}{\varepsilon&#39;-\lambda},\]</span>
+and the first-step factor <span
+class="math inline">\(F=8Ne/g^2+e\eta\)</span>. The criterion of the
+Kogut–Susskind note, Section 2, holds when <span
+class="math display">\[u&#39;\le\tfrac12\qquad\text{and}\qquad4F\,u&#39;\le\lambda
+,\]</span> and then the gap is at least <span
+class="math inline">\(4\lambda\)</span> on the cyclic subspace of local
+observables.</p>
+<p><strong>Proposition.</strong> For <span
+class="math inline">\(\lambda=(1-\theta)\varepsilon&#39;\)</span> and
+<span class="math inline">\(u&#39;\le\frac12\)</span>, <span
+class="math inline">\(4Fu&#39;\le\lambda\)</span>, every <span
+class="math inline">\(H\in\mathcal C(g,\eta,\eta_E,q)\)</span> has a
+unique ground state and a gap of at least <span
+class="math inline">\(\frac83g^2(1-\eta_E)(1-\theta)\,\hbar
+c/a\)</span>, uniformly in the volume.</p>
+<h2 id="the-numbers">2. The numbers</h2>
+<p>For <span class="math inline">\(SU(3)\)</span>, <span
+class="math inline">\(\varepsilon=2g^2/3\)</span>. With <span
+class="math inline">\(\theta=\frac12\)</span> and <span
+class="math inline">\(\eta_E=0.1\)</span>, <span
+class="math inline">\(\varepsilon&#39;-\lambda=0.3g^2\)</span>, so <span
+class="math inline">\(u&#39;\le\frac12\)</span> reads <span
+class="math display">\[e\,\eta\,2^q\ \le\
+0.15\,g^2-\frac{384e}{g^2},\]</span> which is the table above, and <span
+class="math inline">\(4Fu&#39;\le\lambda=0.3g^2\)</span> is far from
+binding at these values (<span
+class="math inline">\(4Fu&#39;\le2(0.65+2.7\eta)\)</span> at <span
+class="math inline">\(g^2=100\)</span>). The tolerance is linear in
+<span class="math inline">\(g^2\)</span> and exponentially small in the
+locality <span class="math inline">\(q\)</span> of the corrections:
+<strong>the box is wide for plaquette-like corrections and narrow for
+longer-range ones</strong>, which is the quantitative form of
+“irrelevant operators must stay small”.</p>
+<h2 id="what-the-box-asks-of-the-intermediate-region">3. What the box
+asks of the intermediate region</h2>
+<p>A renormalization step at scale <span
+class="math inline">\(a\)</span> produces an effective Hamiltonian at
+<span class="math inline">\(2a\)</span>. Suppose a scheme exists such
+that</p>
+<ol type="1">
+<li>each step is an exact low-energy reduction: the spectrum of <span
+class="math inline">\(H(a)\)</span> below some <span
+class="math inline">\(E_c(a)\)</span> coincides with that of <span
+class="math inline">\(H_{\rm eff}(2a)\)</span>;</li>
+<li>the effective Hamiltonian stays in the class <span
+class="math inline">\(\mathcal C(g(a),\eta(a),\eta_E(a),q)\)</span> with
+<span class="math inline">\(q\)</span> fixed;</li>
+<li>the coupling runs, <span
+class="math inline">\(g(2a)&gt;g(a)\)</span>, and reaches <span
+class="math inline">\(g^2\ge10^2\)</span> after finitely many steps with
+<span class="math inline">\(\eta,\eta_E\)</span> inside the table.</li>
+</ol>
+<p>Then the gap of <span class="math inline">\(H(a_{\rm UV})\)</span>
+equals the gap of the effective Hamiltonian at the final scale, which
+the Proposition bounds below by <span
+class="math inline">\(\frac83g_s^2(1-\eta_E)(1-\theta)\,\hbar
+c/a_s\)</span>, a positive number in physical units, uniformly in the
+volume, and T2<span class="math inline">\(&#39;\)</span> holds along the
+trajectory. Items 1–3 in the weak region are the content of the
+constructive programme (the Euclidean form of item 2 is Balaban’s
+small-field effective action); in the intermediate region they are the
+open problem. The box makes the finish line explicit: the flow has to
+arrive at <span class="math inline">\(g^2\sim10^2\)</span> with
+corrections of local norm a few per cent of <span
+class="math inline">\(\hbar c/a\)</span> if they extend over two
+plaquettes, or of order one if they are single-plaquette terms.</p>
+<p>The one-loop distance from <span
+class="math inline">\(g^2=1/2\)</span> to <span
+class="math inline">\(g^2=100\)</span> is <span
+class="math inline">\((2-0.01)/0.0966\simeq21\)</span> doublings; the
+running is perturbative only at the start of that stretch, and how the
+corrections behave over the rest of it is precisely the question.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>The strong-coupling side is now a forgiving explicit region rather
+than a point at infinity, and the mass-gap problem for <span
+class="math inline">\(SU(3)\)</span> is the statement that a
+renormalization scheme satisfying items 1–3 exists through the
+intermediate region. Every quantity in the target is a number: <span
+class="math inline">\(g^2\sim10^2\)</span>, corrections of locality
+<span class="math inline">\(q\)</span> with local norm below <span
+class="math inline">\(\eta_*(g,q)\)</span> from Section 2, and the
+resulting gap <span
+class="math inline">\(\frac83g^2(1-\eta_E)(1-\theta)\,\hbar
+c/a\)</span>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

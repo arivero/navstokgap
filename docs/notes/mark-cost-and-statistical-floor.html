@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The mark cost is exactly ħ/2, and the worst-case theorem survives as a statistical one</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The mark cost is exactly <span
+class="math inline">\(\hbar/2\)</span>, and the worst-case theorem
+survives as a statistical one</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mark-cost-and-statistical-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mark-cost-and-statistical-floor.pdf">PDF</a></p><p>Reopening the question of what was wrong with the <a
+href="planck-gap-derivation.html">derivation note</a>: almost nothing.
+Its Proposition 6 claimed a positive quantum value for the mark cost
+<span class="math inline">\(\kappa=\delta\Delta\)</span>, and that claim
+is correct. The proof was invalid and the constant was too large by a
+factor of four, and the worst-case <em>formulation</em> of <span
+class="math inline">\(\delta\)</span> and <span
+class="math inline">\(\Delta\)</span> as support widths is what made the
+quantum instance empty. Replacing support widths by standard deviations
+repairs everything at once, and two theorems then close the gap the
+derivation note left open.</p>
+<p><strong>Theorem A.</strong> For a mark realized by the impulsive
+coupling <span class="math inline">\(\lambda\hat y\otimes\hat
+P_A\)</span> of the body’s position to a probe, with the probe’s pointer
+read afterwards, the mark’s error operator and the impulse it delivers
+are canonically conjugate,</p>
+<p><span class="math display">\[\hat N=\frac{\hat Q_A}{\lambda}-\hat
+y,\qquad \hat D=-\lambda\hat P_A,
+\qquad [\hat N,\hat D]=-i\hbar,\qquad\text{hence}\qquad
+\delta\Delta=\Delta_\psi\hat N\cdot\Delta_\psi\hat D\ \ge\
+\frac\hbar2\]</span></p>
+<p>for every probe state whatever. So <span
+class="math inline">\(\kappa\ge\hbar/2\)</span>, exactly, with no
+error–disturbance relation and no calibration argument.</p>
+<p><strong>Theorem B.</strong> In the Gaussian statistical model, for
+every protocol of marks with <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, of any number
+and at any times, with the initial position and velocity unknown, the
+optimal test’s deflection obeys</p>
+<p><span class="math display">\[d^2\ \le\
+\frac{2F^2\tau^3}{9\,m\kappa},\qquad\text{hence deciding at
+error probability }\epsilon\text{ requires}\qquad
+\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa
+,\]</span></p>
+<p>with <span
+class="math inline">\(z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)\)</span>.
+With Theorem A this is <span class="math inline">\(\tau\Delta
+E\ge\tfrac92z_{1-\epsilon}^2\hbar\)</span>, about <span
+class="math inline">\(12\hbar\)</span> at five per cent error. The proof
+is the derivation note’s proof unchanged: the same certificate, the same
+arithmetic–geometric step, the same integration by parts to a Dirichlet
+energy, with the separating hyperplane replaced by the optimal test
+direction. The constant <span class="math inline">\(9\)</span> reappears
+from the same Cauchy–Schwarz inequality.</p>
+<p>Newton’s premise M3 is Theorem A for his own probe: the interval of
+fits <span class="math inline">\(\Lambda\)</span> is the corpuscle’s
+transverse position spread and <span class="math inline">\(p\)</span>
+its transverse momentum spread, so <span
+class="math inline">\(\kappa=\Lambda p\)</span> is the corpuscle’s own
+uncertainty product, and the heuristic value <span
+class="math inline">\(h/2\)</span> of the <a
+href="newton-mark-floor.html">mark-floor note</a> differs from the
+theorem’s <span class="math inline">\(\hbar/2\)</span> by <span
+class="math inline">\(\pi\)</span>. Section 6 sets out the single paper
+this supports. Exploratory; no ledger promotion.</p>
+<h2 id="what-was-actually-wrong-stated-exactly">1. What was actually
+wrong, stated exactly</h2>
+<p>The derivation note’s framework defines a mark’s resolution <span
+class="math inline">\(\delta\)</span> and recoil width <span
+class="math inline">\(\Delta\)</span> as worst-case interval widths: the
+datum confines the position to an interval of length <span
+class="math inline">\(\delta\)</span> with certainty, and the records
+confine the delivered impulse to an interval of length <span
+class="math inline">\(\Delta\)</span> with certainty. Three claims about
+that framework are now settled.</p>
+<ul>
+<li><strong>Theorem 1 is correct and is not affected.</strong> For every
+finite protocol with <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, deciding the
+comparison needs <span
+class="math inline">\(F^2\tau^3&gt;9m\kappa\)</span>.</li>
+<li><strong>The worst-case framework has no quantum instance.</strong>
+Certain position confinement forces a compactly supported conditional
+state, whose momentum distribution has full support by Paley–Wiener. So
+no quantum mark has both widths finite, <span
+class="math inline">\(\kappa=\infty\)</span>, and Theorem 1 holds
+emptily. This is the correction that stands.</li>
+<li><strong>The conclusion of the first Proposition 6 was right
+anyway.</strong> Its assertion was that quantum kinematics gives <span
+class="math inline">\(\kappa\)</span> a positive value of the order of
+<span class="math inline">\(\hbar\)</span>, and that the Galileo
+comparison therefore has a floor of order <span
+class="math inline">\(\hbar\)</span> in <span
+class="math inline">\(\tau\Delta E\)</span>. Theorem A gives <span
+class="math inline">\(\kappa\ge\hbar/2\)</span> and Theorem B gives the
+floor, so both are true. What failed was the route: bounding a
+Wasserstein-2 calibration disturbance by half a worst-case width, when
+that disturbance is infinite for the instruments in question.</li>
+</ul>
+<p>So the defect was the choice of currency, and it cost one constant
+and one proof. Standard deviations are the right currency because they
+are finite for quantum states, because they are what the uncertainty
+relation constrains, and because the derivation note’s proof never used
+containment beyond a quadratic bound, as Section 3 shows.</p>
+<h2 id="theorem-a-the-marks-error-and-its-recoil-are-conjugate">2.
+Theorem A: the mark’s error and its recoil are conjugate</h2>
+<p>Take the von Neumann model of a position mark. The body has <span
+class="math inline">\(\hat y,\hat p\)</span>; the probe has <span
+class="math inline">\(\hat Q_A,\hat P_A\)</span> with <span
+class="math inline">\([\hat Q_A,\hat P_A]=i\hbar\)</span>; the mark is
+the impulsive unitary</p>
+<p><span
+class="math display">\[U=\exp\left(-\frac{i}{\hbar}\lambda\,\hat y\,\hat
+P_A\right),\qquad\lambda&gt;0 .\]</span></p>
+<p><strong>Theorem A.</strong> In the Heisenberg picture across the
+mark,</p>
+<p><span class="math display">\[U^\dagger\hat Q_AU=\hat Q_A+\lambda\hat
+y,\qquad
+U^\dagger\hat pU=\hat p-\lambda\hat P_A,\qquad
+U^\dagger\hat yU=\hat y,\qquad U^\dagger\hat P_AU=\hat P_A
+.\]</span></p>
+<p>Reading the pointer <span class="math inline">\(\hat Q_A\)</span> and
+estimating the body’s position by <span class="math inline">\(\hat
+Q_A/\lambda\)</span>, the error operator <span
+class="math inline">\(\hat N=\hat Q_A/\lambda-\hat y\)</span> and the
+delivered impulse <span class="math inline">\(\hat D=\hat p_{\rm
+after}-\hat p_{\rm before}=-\lambda\hat P_A\)</span> satisfy <span
+class="math inline">\([\hat N,\hat D]=-i\hbar\)</span>, hence for every
+joint state</p>
+<p><span class="math display">\[\delta\,\Delta:=\Delta\hat
+N\cdot\Delta\hat D\ \ge\ \frac\hbar2 .\]</span></p>
+<p><em>Proof.</em> With <span
+class="math inline">\(A=\frac{i}{\hbar}\lambda\hat y\hat P_A\)</span>,
+so that <span class="math inline">\(U^\dagger=e^{A}\)</span>, the
+commutators are <span class="math inline">\([A,\hat
+Q_A]=\frac{i\lambda\hat y}{\hbar}[\hat P_A,\hat Q_A]=\lambda\hat
+y\)</span> and <span class="math inline">\([A,\hat p]=\frac{i\lambda\hat
+P_A}{\hbar}[\hat y,\hat p]=-\lambda\hat P_A\)</span>, both central, so
+the Baker–Campbell–Hausdorff series terminates and gives the four
+displayed relations. The error operator is then <span
+class="math inline">\(\hat N=(\hat Q_A+\lambda\hat y)/\lambda-\hat
+y=\hat Q_A/\lambda\)</span>, whence</p>
+<p><span class="math display">\[[\hat N,\hat D]=\left[\frac{\hat
+Q_A}{\lambda},-\lambda\hat P_A\right]
+=-[\hat Q_A,\hat P_A]=-i\hbar,\]</span></p>
+<p>and Robertson’s inequality gives <span
+class="math inline">\(\Delta\hat N\,\Delta\hat D\ge\frac12|\langle[\hat
+N,\hat D]\rangle|=\hbar/2\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>Three features matter. The coupling strength <span
+class="math inline">\(\lambda\)</span> cancels, so the bound is a
+property of the mark and not of how hard it is made. The result holds
+for every probe state, pure or mixed, Gaussian or not. And the two
+quantities are the probe’s own position and momentum spreads: <span
+class="math inline">\(\delta=\Delta\hat Q_A/\lambda\)</span> and <span
+class="math inline">\(\Delta=\lambda\Delta\hat P_A\)</span>, so</p>
+<p><span class="math display">\[\kappa=\delta\Delta=\Delta\hat
+Q_A\cdot\Delta\hat P_A ,\]</span></p>
+<p>the mark’s cost is the probe’s uncertainty product, and the floor of
+the Galileo comparison is set by the probe rather than by the body. The
+contested error–disturbance relations play no part: Ozawa’s
+counterexamples concern instruments whose commutator <span
+class="math inline">\([\hat N,\hat D]\)</span> differs from <span
+class="math inline">\(-i\hbar\)</span>, and the present statement is
+confined to the momentum-transfer class where it equals <span
+class="math inline">\(-i\hbar\)</span>.</p>
+<p><strong>Why the records cannot recover the recoil.</strong> The
+pointer record is <span class="math inline">\(\hat R=\hat
+Q_A+\lambda\hat y\)</span> and the impulse is <span
+class="math inline">\(\hat D=-\lambda\hat P_A\)</span>, with <span
+class="math inline">\([\hat R,\hat D]=-i\hbar\lambda\)</span>. The
+record and the recoil are incompatible observables, so no reading of the
+pointer, however precise, determines the impulse. This is Proposition 5
+of the derivation note seen from the other side: the far-screen
+construction recovers the impulse by measuring the probe’s momentum, and
+measuring the probe’s momentum is exactly what reading its position
+forbids.</p>
+<h2 id="theorem-b-the-same-proof-in-the-gaussian-statistical-model">3.
+Theorem B: the same proof, in the Gaussian statistical model</h2>
+<p><strong>The model.</strong> Marks at <span
+class="math inline">\(0=t_0&lt;t_1&lt;\dots&lt;t_k\le\tau\)</span>. Mark
+<span class="math inline">\(j\)</span> returns <span
+class="math inline">\(R_j=y(t_j)+\xi_j\)</span> with <span
+class="math inline">\(\xi_j\)</span> centred Gaussian of standard
+deviation <span class="math inline">\(\delta_j\)</span>, and delivers an
+impulse <span class="math inline">\(\iota_j\)</span>, centred Gaussian
+of standard deviation <span class="math inline">\(\Delta_j\)</span>, all
+independent. The trajectory is</p>
+<p><span class="math display">\[y(t)=y_0+v_0t+\theta
+P(t)+\frac1m\sum_{j}\iota_j(t-t_j)_+,
+\qquad P(t)=\frac{Ft^2}{2m},\]</span></p>
+<p>with <span class="math inline">\(\theta=0\)</span> under <span
+class="math inline">\(\mathrm I\)</span> and <span
+class="math inline">\(\theta=1\)</span> under <span
+class="math inline">\(\mathrm F\)</span>, and <span
+class="math inline">\(y_0,v_0\)</span> unknown. A protocol satisfies the
+<strong>mark trade-off</strong> with constant <span
+class="math inline">\(\kappa\)</span> when <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span> for every <span
+class="math inline">\(j\)</span>.</p>
+<p><strong>Invariance and the deflection.</strong> Tests are required to
+be invariant under the unknown <span class="math inline">\(y_0\)</span>
+and <span class="math inline">\(v_0\)</span>, so the statistic is <span
+class="math inline">\(u^{\mathsf T}R\)</span> with <span
+class="math inline">\(u\)</span> orthogonal to the vectors <span
+class="math inline">\((1,\dots,1)\)</span> and <span
+class="math inline">\((t_0,\dots,t_k)\)</span>. For Gaussian data the
+optimal invariant test has error probability <span
+class="math inline">\(\Phi(-d/2)\)</span> with</p>
+<p><span class="math display">\[d^2=\sup\left\{\frac{(u^{\mathsf
+T}P)^2}{u^{\mathsf T}\Sigma u}\ :\
+\sum_iu_i=0,\ \sum_iu_it_i=0\right\},\qquad P_i=P(t_i),\]</span></p>
+<p><span class="math inline">\(\Sigma\)</span> being the covariance of
+<span class="math inline">\(R\)</span>. This <span
+class="math inline">\(u\)</span> is the statistical counterpart of the
+derivation note’s separating multipliers <span
+class="math inline">\(\mu\)</span>, and it obeys the same constraint
+<span class="math inline">\(\sum_iu_i=0\)</span>.</p>
+<p><strong>Theorem B.</strong> For every such protocol, <span
+class="math inline">\(d^2\le\dfrac{2F^2\tau^3}{9\,m\kappa}\)</span>.
+Consequently an invariant test with error probability at most <span
+class="math inline">\(\epsilon\)</span> requires</p>
+<p><span class="math display">\[F^2\tau^3\ \ge\
+18\,z_{1-\epsilon}^2\,m\kappa,\qquad
+\tau\Delta E\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,\qquad
+A_{\rm inertial,fall}\ \ge\
+\frac{6\,z_{1-\epsilon}^2\,v\kappa}{F}.\]</span></p>
+<p><em>Proof.</em> The noise decomposes exactly as in the derivation
+note’s feasibility system: <span class="math inline">\(\xi_j\)</span>
+enters <span class="math inline">\(R_j\)</span> alone, and <span
+class="math inline">\(\iota_j\)</span> enters <span
+class="math inline">\(R_i\)</span> for <span
+class="math inline">\(i&gt;j\)</span> with coefficient <span
+class="math inline">\((t_i-t_j)/m\)</span>. Hence</p>
+<p><span class="math display">\[u^{\mathsf T}\Sigma
+u=\sum_j\delta_j^2u_j^2+\sum_j\frac{\Delta_j^2}{m^2}S_j^2,
+\qquad S_j=\sum_{i&gt;j}u_i(t_i-t_j),\]</span></p>
+<p>the same <span class="math inline">\(S_j\)</span> as there. By the
+arithmetic–geometric mean inequality applied termwise, exactly as in
+that note’s Lemma 2,</p>
+<p><span class="math display">\[u^{\mathsf T}\Sigma u\ \ge\
+\sum_j\frac{2\delta_j\Delta_j}{m}|u_j||S_j|
+\ \ge\ \frac{2\kappa}{m}\sum_j|u_j||S_j| .\]</span></p>
+<p>Since <span class="math inline">\(\sum_iu_i=0\)</span>, Lemma 3 of
+that note applies verbatim with <span class="math inline">\(\mu\)</span>
+replaced by <span class="math inline">\(u\)</span>: with <span
+class="math inline">\(T(w)=\int_w^\tau\sum_{i:t_i&gt;s}u_i\,ds\)</span>
+one has <span class="math inline">\(T(t_j)=S_j\)</span>,</p>
+<p><span class="math display">\[u^{\mathsf T}P=\frac Fm\int_0^\tau
+T,\qquad
+\sum_ju_jT(t_j)=-E,\qquad E=\int_0^\tau T&#39;^2 ,\]</span></p>
+<p>so <span class="math inline">\(\sum_j|u_j||S_j|\ge E\)</span> and
+<span class="math inline">\(u^{\mathsf T}\Sigma u\ge2\kappa
+E/m\)</span>. Cauchy–Schwarz with <span
+class="math inline">\(T(\tau)=0\)</span> gives <span
+class="math inline">\(\int_0^\tau T\le\frac23\tau^{3/2}\sqrt E\)</span>,
+so</p>
+<p><span class="math display">\[\frac{(u^{\mathsf T}P)^2}{u^{\mathsf
+T}\Sigma u}
+\le\frac{(F/m)^2\frac49\tau^3E}{2\kappa
+E/m}=\frac{2F^2\tau^3}{9m\kappa},\]</span></p>
+<p>independently of <span class="math inline">\(u\)</span>, of the
+number of marks and of their times. The error probability <span
+class="math inline">\(\Phi(-d/2)\le\epsilon\)</span> requires <span
+class="math inline">\(d\ge2z_{1-\epsilon}\)</span>, and <span
+class="math inline">\(F^2\tau^3\ge\frac92m\kappa
+d^2\ge18z_{1-\epsilon}^2m\kappa\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The worst-case theorem and the statistical theorem therefore have one
+proof. The certificate changes meaning, from a hyperplane separating a
+feasible set to the direction of the optimal test, and every step after
+it is identical. This is the sense in which the derivation note’s
+content survived its formulation: the argument never needed interval
+containment, only a quadratic bound in the same two variables.</p>
+<h2 id="why-gaussian-quantum-experiments-are-covered-exactly">4. Why
+Gaussian quantum experiments are covered exactly</h2>
+<p>Within its class the statistical model of Section 3 reproduces the
+quantum one exactly. For Gaussian probe states, linear dynamics and
+pointer readouts, the Wigner function is a genuine probability density
+and evolves by the classical linear equations, so every measured
+distribution in the quantum experiment equals the corresponding
+distribution in the classical Gaussian model whose noise covariance is
+the probe’s Wigner covariance. Theorem A identifies that covariance’s
+uncertainty product as <span
+class="math inline">\(\delta\Delta\ge\hbar/2\)</span>. Hence for every
+protocol of Gaussian momentum-transfer marks on a body under the two
+hypotheses,</p>
+<p><span class="math display">\[\tau\Delta E\ \ge\
+\frac92\,z_{1-\epsilon}^2\,\hbar .\]</span></p>
+<p>At <span class="math inline">\(\epsilon=0.05\)</span>, where <span
+class="math inline">\(z=1.645\)</span>, this is <span
+class="math inline">\(\tau\Delta E\ge12.2\,\hbar\)</span>; at <span
+class="math inline">\(\epsilon=0.32\)</span>, where <span
+class="math inline">\(z=1\)</span>, it is <span
+class="math inline">\(4.5\,\hbar\)</span>. The insertion statement
+follows as before: marks inserted into a window of duration <span
+class="math inline">\(\tau&#39;\)</span>, used by themselves, record the
+force only if <span
+class="math inline">\(F^2\tau&#39;^3\ge18z^2m\kappa\)</span>, so
+Democritus insertion stops at the mesh</p>
+<p><span
+class="math display">\[\tau_*=\left(\frac{18\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3}
+=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},\]</span></p>
+<p>and finer marks record free motion at the stated confidence.</p>
+<p>This coexists with the counterexample of the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>, which
+distinguishes the hypotheses at arbitrarily small <span
+class="math inline">\(\tau\Delta E\)</span> using a two-packet
+preparation of separation <span
+class="math inline">\(\pi\hbar/(F\tau)\)</span>. That protocol is
+non-Gaussian and makes no marks: it prepares once, waits, and measures
+once. The two results divide the ground cleanly. <strong>Marking the
+trajectory costs <span class="math inline">\(\hbar/2\)</span> per mark
+and gives a floor of order <span class="math inline">\(\hbar\)</span>;
+declining to mark it costs an apparatus of size <span
+class="math inline">\(\pi\hbar/(F\tau)\)</span> and gives the floor
+<span class="math inline">\(\hbar^2/(4A)\)</span>.</strong> Newton’s
+refinement is the first case, which is why the floor is the relevant
+statement for the insertion question.</p>
+<h2 id="newtons-premise-is-robertsons-inequality-for-his-corpuscle">5.
+Newton’s premise is Robertson’s inequality for his corpuscle</h2>
+<p>The <a href="newton-mark-floor.html">mark-floor note</a> posited M3,
+that a mark fixing the position within <span
+class="math inline">\(\delta\)</span> leaves the delivered impulse
+undetermined within <span class="math inline">\(\Lambda
+p/\delta\)</span>, and observed that Newton’s optics supplies <span
+class="math inline">\(\Lambda\)</span> and <span
+class="math inline">\(p\)</span> while his determinism denies the
+premise. Theorem A says what M3 is. The corpuscle is the probe; <span
+class="math inline">\(\hat Q_A\)</span> is its transverse position and
+<span class="math inline">\(\hat P_A\)</span> its transverse momentum;
+the interval of fits <span class="math inline">\(\Lambda\)</span> is the
+scale of the first and the corpuscular impulse <span
+class="math inline">\(p\)</span> the scale of the second; and the
+premise asserts precisely that their product cannot be reduced. So</p>
+<p><span class="math display">\[\kappa=\Lambda
+p\quad\longleftrightarrow\quad
+\kappa=\Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \frac\hbar2
+,\]</span></p>
+<p>and M3 is Robertson’s inequality for the corpuscle, stated in the two
+quantities Newton had. Newton measured the first as <span
+class="math inline">\(1/89000\)</span> inch, had no access to the
+second, held both to be determinate properties of the corpuscle, and
+thereby denied exactly the inequality. His Prop. XII states the fits as
+a transient constitution that returns at equal intervals and disposes
+the ray at every return, which is a determinate periodic property; the
+<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Newton_Opticks_1730_fits_and_queries.md">source
+companion</a> holds that passage and the other four with their line
+anchors. The modern value <span class="math inline">\(\hbar/2\)</span>
+against the identification <span class="math inline">\(\Lambda
+p=h/2\)</span> differ by <span class="math inline">\(\pi\)</span>.</p>
+<p>The historical claim this licenses is narrow and checkable. Newton’s
+optics contains both factors of the product that bounds the recorded
+Galileo comparison; his mathematics contains the comparison and takes it
+to zero; and the single proposition that would join them is a claim of
+indeterminacy about the fits, which he considered and rejected in favour
+of a determinate periodic disposition. The gap between the
+<em>Principia</em>’s vanishing sagitta and the <em>Opticks</em>’ finite
+interval of fits follows from that single commitment, and the separation
+of the two books is incidental to it.</p>
+<h2 id="the-single-paper-valid-for-both-audiences">6. The single paper,
+valid for both audiences</h2>
+<p>The user’s requirement is one paper that a foundations-of-physics
+referee and a history-and-philosophy-of-science referee both accept.
+That is attainable, because the historical analysis now does
+argumentative work rather than decorating a theorem. The structure
+is:</p>
+<ol type="1">
+<li><strong>The comparison and its limit.</strong> Newton’s Lemmas X and
+XI and the projectile Scholium, with the sagitta, the inertial–parabola
+area and the identity <span class="math inline">\((3F/v)A=\tau\Delta
+E\)</span>. Berkeley’s objection and its resolution inside the geometry,
+with Guicciardini on what the limit arguments were for.</li>
+<li><strong>The two theorems.</strong> Theorem A, that a
+momentum-transfer mark’s error and recoil are conjugate, and Theorem B,
+that every protocol of such marks needs <span
+class="math inline">\(\tau\Delta E\ge9z^2\kappa\)</span>. Proof by
+certificate, arithmetic–geometric mean and Dirichlet energy. This is the
+foundations content and it stands alone.</li>
+<li><strong>The two factors in the <em>Opticks</em>.</strong> The
+interval of fits as a measured length, the corpuscular impulse as a
+posited one, and Shapiro’s account of what the theory of fits was and
+how determinate Newton meant it. This is the history content and it
+stands alone.</li>
+<li><strong>The junction.</strong> M3 is Robertson for the corpuscle.
+The counterfactual is replaced by an exact statement: the premise that
+the theorem needs is one Newton formulated the negation of, so the
+distance between his system and a positive <span
+class="math inline">\(h\)</span> is a single proposition, nameable in
+his own vocabulary.</li>
+<li><strong>What the theorem does not give.</strong> The aperture
+counterexample, the standard-quantum-limit literature and Ozawa’s class,
+and the honest prior-art label: the combination <span
+class="math inline">\(F^2\tau^3\gtrsim m\hbar\)</span> is the standard
+quantum limit, and the contribution is universality over protocols, the
+exact mark cost, and the identification of the premise.</li>
+</ol>
+<p>The venues that take this shape are Foundations of Physics and
+Studies in History and Philosophy of Modern Physics, both of which
+publish papers whose historical and technical halves are load-bearing
+for each other. Two obligations remain before submission: reading
+Shapiro, Guicciardini and Sabra rather than citing them, and replacing
+the Project Gutenberg <em>Opticks</em> and the Wikisource
+<em>Principia</em> with the fourth edition and the Cohen–Whitman
+translation.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The derivation note’s Proposition 6 is reinstated in substance with a
+correct proof and the constant <span
+class="math inline">\(\hbar/2\)</span> in place of <span
+class="math inline">\(2\hbar\)</span>, and its worst-case formulation is
+replaced by standard deviations. The Planck gap for marked trajectories
+is <span class="math inline">\(\tau\Delta
+E\ge\frac92z_{1-\epsilon}^2\hbar\)</span>, protocol-universal, with the
+insertion mesh <span
+class="math inline">\(\tau_*=(9z^2m\hbar/F^2)^{1/3}\)</span>. The
+remaining programme is item 6’s two obligations plus: extending Theorem
+A beyond the momentum-transfer class, where Ozawa’s instruments live;
+the general force law, which Theorem B’s proof already reduces to a norm
+of <span class="math inline">\(P&#39;&#39;\)</span>; and closing the
+constants between the worst-case, statistical and single-shot forms.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

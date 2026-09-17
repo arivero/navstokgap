@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The confinement scale in three bands, with published numbers, and the verification restated gauge-invariantly</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The confinement scale in three bands, with published numbers, and the
+verification restated gauge-invariantly</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/confinement-scale-bands.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/confinement-scale-bands.pdf">PDF</a></p><p>Two corrections to the finite-verification statement of <a
+href="dobrushin-uniqueness-wilson.html">the Dobrushin note</a> §4 and <a
+href="intermediate-region-finite-verification.html">the
+finite-verification note</a>, and a map of the region with numbers taken
+from the literature.</p>
+<p><strong>Elitzur empties the single-link form of the block
+criterion.</strong> Let <span class="math inline">\(V\)</span> be a box
+of links and <span class="math inline">\(s\)</span> a site all of whose
+links lie in <span class="math inline">\(V\)</span>. The gauge
+transformation at <span class="math inline">\(s\)</span> is a
+measure-preserving bijection of the Gibbs measure <span
+class="math inline">\(\mu_V^\omega\)</span> for every boundary condition
+<span class="math inline">\(\omega\)</span>, so the marginal of any link
+with an endpoint at <span class="math inline">\(s\)</span> is invariant
+under all left (or right) translations of <span
+class="math inline">\(SU(3)\)</span> and is therefore the Haar measure,
+whatever <span class="math inline">\(\omega\)</span> is. The single-link
+influence <span class="math inline">\(\rho_V(x,y)\)</span> vanishes for
+every link <span class="math inline">\(x\)</span> with an interior
+endpoint, and the sum <span class="math inline">\(\sum_{x\in
+V}\sum_{y\notin V}\rho_V(x,y)\)</span> receives contributions only from
+links with both endpoints on the boundary layer. That form of the
+criterion yields uniqueness and carries no information about the
+interior; the verification must use the <strong>mixing form on
+sub-blocks</strong>, which is the form equivalent to complete
+analyticity and the one that yields exponential decay: for every <span
+class="math inline">\(W\subseteq V\)</span> and every <span
+class="math inline">\(y\notin V\)</span>, <span
+class="math display">\[\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega&#39;}\big|_W\big\|_{\rm
+TV}\ \le\ C\,|W|\,e^{-\gamma\,d(W,y)}
+\qquad(\omega,\omega&#39;\text{ differing at }y).\]</span> Since the
+gauge-variant part of the marginal on <span
+class="math inline">\(W\)</span> is uniform over the gauge orbit at the
+interior sites of <span class="math inline">\(W\)</span>, the content of
+this condition is the conditional distribution of the gauge-invariant
+functions of the links in <span class="math inline">\(W\)</span>, the
+traces of small Wilson loops, and that is how a verification should be
+organized. The single-link Dobrushin condition of <a
+href="dobrushin-uniqueness-wilson.html">the Dobrushin note</a> §2 is
+unaffected, because it conditions on all other links and no gauge
+symmetry survives the conditioning.</p>
+<p><strong>The boxes are small where the verification is
+needed.</strong> With the scale <span
+class="math inline">\(r_0/a\)</span> of Necco and Sommer (Nucl. Phys. B
+622 (2002) 328) and the scalar glueball mass <span
+class="math inline">\(r_0m_{0^{++}}=4.21\)</span> of Morningstar and
+Peardon (Phys. Rev. D 60 (1999) 034509), both at metadata level and used
+for orientation only, the glueball correlation length in lattice units
+is</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\beta_W\)</span></th>
+<th><span class="math inline">\(g^2=6/\beta_W\)</span></th>
+<th><span class="math inline">\(r_0/a\)</span></th>
+<th><span class="math inline">\(m_{0^{++}}a\)</span></th>
+<th><span class="math inline">\(\xi/a\)</span></th>
+<th><span class="math inline">\(\sigma a^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(5.7\)</span></td>
+<td><span class="math inline">\(1.05\)</span></td>
+<td><span class="math inline">\(2.92\)</span></td>
+<td><span class="math inline">\(1.44\)</span></td>
+<td><span class="math inline">\(0.70\)</span></td>
+<td><span class="math inline">\(0.16\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(6.0\)</span></td>
+<td><span class="math inline">\(1.00\)</span></td>
+<td><span class="math inline">\(5.37\)</span></td>
+<td><span class="math inline">\(0.78\)</span></td>
+<td><span class="math inline">\(1.28\)</span></td>
+<td><span class="math inline">\(0.047\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(6.2\)</span></td>
+<td><span class="math inline">\(0.97\)</span></td>
+<td><span class="math inline">\(7.38\)</span></td>
+<td><span class="math inline">\(0.57\)</span></td>
+<td><span class="math inline">\(1.75\)</span></td>
+<td><span class="math inline">\(0.025\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(6.4\)</span></td>
+<td><span class="math inline">\(0.94\)</span></td>
+<td><span class="math inline">\(9.74\)</span></td>
+<td><span class="math inline">\(0.43\)</span></td>
+<td><span class="math inline">\(2.31\)</span></td>
+<td><span class="math inline">\(0.014\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>using <span class="math inline">\(r_0^2\sigma\simeq1.35\)</span> for
+the string tension. At <span class="math inline">\(\beta_W=5.7\)</span>
+the glueball correlation length is below one lattice spacing, and a
+mixing verification would concern boxes of side <span
+class="math inline">\(3\)</span> to <span
+class="math inline">\(5\)</span>, that is <span
+class="math inline">\(216\)</span> to <span
+class="math inline">\(2000\)</span> links, in place of the <span
+class="math inline">\(10^4\)</span> to <span
+class="math inline">\(10^6\)</span> links estimated earlier from a
+correlation length of <span class="math inline">\(1\)</span> to <span
+class="math inline">\(10\)</span>. The slowest influence is carried by
+the flux-tube channel, <span class="math inline">\(\sigma
+a^2\simeq0.16\)</span> per lattice unit at <span
+class="math inline">\(\beta_W=5.7\)</span>, which sets the box side
+rather than the glueball mass. Constants explicit where they are ours;
+nothing promoted.</p>
+<h2 id="three-bands-of-the-coupling">1. Three bands of the coupling</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>band</th>
+<th><span class="math inline">\(\beta_W\)</span></th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td><span class="math inline">\(&lt;0.0135\)</span></td>
+<td>gapped, proved by hand: Dobrushin single-link condition, <span
+class="math inline">\(g^2&gt;444\)</span></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td><span class="math inline">\(0.0135\)</span> to about <span
+class="math inline">\(5.7\)</span></td>
+<td>mixing with <span class="math inline">\(\xi/a&lt;1\)</span> by the
+published data; no rigorous method reaches it</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>above about <span class="math inline">\(5.7\)</span></td>
+<td><span class="math inline">\(\xi/a\)</span> grows, asymptotic scaling
+sets in near <span class="math inline">\(6\)</span> to <span
+class="math inline">\(6.5\)</span>; the renormalization group’s
+domain</td>
+</tr>
+</tbody>
+</table>
+<p><em>Band B is a sharpness problem.</em> The theory there is, by the
+data, more strongly mixing than anything band A contains, yet no
+expansion converges with rigorous constants: the polymer expansion of <a
+href="wilson-strong-coupling-explicit.html">the Wilson note</a> reaches
+<span class="math inline">\(\beta_W\simeq0.0057\)</span>, the Dobrushin
+condition <span class="math inline">\(0.0135\)</span>, and an ideal
+entropy constant for plaquette surfaces, of order <span
+class="math inline">\(10\)</span> to <span
+class="math inline">\(15\)</span> in place of <span
+class="math inline">\(20e\)</span>, would bring the expansion to <span
+class="math inline">\(\beta_W\sim0.1\)</span>. The strong-coupling
+series itself has singularities near <span
+class="math inline">\(\beta_W\simeq3.5\)</span> to <span
+class="math inline">\(4\)</span>, so even the true radius of convergence
+ends inside band B. The gap between <span
+class="math inline">\(0.1\)</span> and <span
+class="math inline">\(5.7\)</span> is a factor of <span
+class="math inline">\(50\)</span> in <span
+class="math inline">\(\beta_W\)</span> with no small parameter, in a
+regime where the correlation length is less than one lattice unit. This
+is the band the finite verification addresses, and Section 2 says what
+it costs.</p>
+<p><em>Band C is the renormalization group’s.</em> From <span
+class="math inline">\(g^2=1/2\)</span> (<span
+class="math inline">\(\beta_W=12\)</span>) to <span
+class="math inline">\(\beta_W=6\)</span> (<span
+class="math inline">\(g^2=1\)</span>) is <span
+class="math inline">\(1/0.0966\simeq10\)</span> one-loop doublings, over
+which <span class="math inline">\(\xi/a\)</span> falls from its
+asymptotic-scaling value to about one. The stretch where <span
+class="math inline">\(\xi/a\)</span> passes from about <span
+class="math inline">\(10\)</span> to about <span
+class="math inline">\(1\)</span> is three doublings wide at one loop.
+The physically nontrivial part of the problem, the place where the gap
+forms, is this stretch; everything in band B is, physically, already
+gapped with a gap of order <span class="math inline">\(\hbar
+c/a\)</span>.</p>
+<h2 id="what-the-verification-costs-restated">2. What the verification
+costs, restated</h2>
+<p>A mixing verification at <span
+class="math inline">\(\beta_W\simeq5.7\)</span> with boxes of side <span
+class="math inline">\(R=3\)</span> to <span
+class="math inline">\(5\)</span> involves rigorous bounds on the
+conditional distribution of small Wilson loops inside <span
+class="math inline">\(V\)</span>, with <span
+class="math inline">\(216\)</span> to <span
+class="math inline">\(2000\)</span> link variables, uniformly over the
+boundary condition, with the bound decaying in the distance from the
+boundary change at a rate consistent with <span
+class="math inline">\(\sigma a^2\simeq0.16\)</span>. The uniformity over
+boundary conditions is a supremum over a compact set of dimension <span
+class="math inline">\(8|\partial V|\)</span>, of order <span
+class="math inline">\(10^3\)</span> to <span
+class="math inline">\(10^4\)</span>, of a function defined by an
+integral over <span class="math inline">\(8|V|\)</span> dimensions. No
+rigorous numerical method known to the author evaluates such a quantity
+with certified bounds today; the problem is nevertheless three to four
+orders of magnitude smaller in the number of variables than the earlier
+estimate, and it sits at a coupling where the theory’s correlation
+length is below the lattice spacing, so that a certified bound on a
+single small box would settle band B at that coupling.</p>
+<h2
+id="b.-the-meeting-point-located-five-order-one-steps-around-beta_wsimeq6">2b.
+The meeting point located: five order-one steps around <span
+class="math inline">\(\beta_W\simeq6\)</span></h2>
+<p>The two unknown numbers of <a
+href="intermediate-region-finite-verification.html">the
+finite-verification note</a> §4 can be placed on the map. Read the three
+bands as blocking steps, one doubling of the lattice spacing each.</p>
+<p><em>Band C, from the weak side.</em> From <span
+class="math inline">\(g^2=1/2\)</span> to <span
+class="math inline">\(\beta_W\simeq6\)</span> is ten one-loop doublings,
+and only the last three, in which <span
+class="math inline">\(\xi/a\)</span> passes from about <span
+class="math inline">\(10\)</span> to about <span
+class="math inline">\(1\)</span>, are outside the reach of a small-field
+expansion in principle; the first seven are the regime of the
+constructive programme, unavailable with constants but perturbative in
+kind.</p>
+<p><em>Band B, crossed by three steps.</em> The coarse plaquette at
+scale <span class="math inline">\(2^ka\)</span> is a <span
+class="math inline">\(2^k\times2^k\)</span> Wilson loop of the fine
+lattice, whose expectation by the area law with <span
+class="math inline">\(\sigma a^2\simeq0.16\)</span> at <span
+class="math inline">\(\beta_W=5.7\)</span> is about <span
+class="math inline">\(e^{-0.16\cdot4^k}\)</span>: <span
+class="math inline">\(0.53\)</span>, <span
+class="math inline">\(0.077\)</span>, <span
+class="math inline">\(3.6\times10^{-5}\)</span> for <span
+class="math inline">\(k=1,2,3\)</span>. Band A needs an activity below
+about <span class="math inline">\(2\times10^{-3}\)</span>, so three
+doublings cross band B. The Migdal–Kadanoff recursion (Kadanoff, Ann.
+Phys. 100 (1976) 359; metadata level, a heuristic in four dimensions),
+which sends the activity to its fourth power per doubling, gives two and
+overestimates the decrease; the area-law count is the one to use.
+Rigorously, a block-spin step is well defined and its image is Gibbsian
+with a summable interaction in the strong-mixing regime (van Enter,
+Fernández and Sokal, J. Stat. Phys. 72 (1993) 879; metadata level), so
+once mixing is known at the top of band B the three steps that cross it
+are standard, and band A is proved by hand.</p>
+<p><em>The meeting point.</em> The verification is therefore needed at
+<strong>one coupling</strong>, <span
+class="math inline">\(\beta_W\simeq5.7\)</span> to <span
+class="math inline">\(6\)</span>, that is <span
+class="math inline">\(g^2\simeq1\)</span>, where <span
+class="math inline">\(\xi/a\simeq1\)</span>, on boxes of side <span
+class="math inline">\(3\)</span> to <span
+class="math inline">\(5\)</span>; its openness radius is the tolerance
+the renormalization group must meet, and everything below it follows. In
+the notation of the finite-verification note, <span
+class="math inline">\(g_{\rm DS}^2\simeq1\)</span> conditional on that
+single certified box, and the open requirement on the other side is
+<span class="math inline">\(g_{\rm RG}^2\ge1\)</span>: the small-field
+renormalization must be carried three doublings past the point where
+<span class="math inline">\(\xi/a\simeq10\)</span>.</p>
+<p><strong>The whole problem in one sentence.</strong> The mass gap for
+<span class="math inline">\(SU(3)\)</span> is the control of about six
+consecutive blocking steps of the lattice theory at order-one coupling,
+uniformly in the volume: three from the weak side, where <span
+class="math inline">\(\xi/a\)</span> falls from <span
+class="math inline">\(10\)</span> to <span
+class="math inline">\(1\)</span>, and three from the strong side, which
+are standard once mixing is certified at the coupling in between. <a
+href="mass-gap-conditional-theorem.html">The conditional theorem</a>
+states this as two hypotheses and an explicit conclusion. Everything
+else on the map is either perturbative in kind or proved with explicit
+constants.</p>
+<h2 id="what-this-changes">3. What this changes</h2>
+<p>The finite verification is restated gauge-invariantly and at its true
+size. The decision it asks for is unchanged in kind and smaller in
+scale. Bands A and C are as before; band B is where a certified
+computation on a box of a few hundred links would connect the
+hand-proved region to the physical crossover, and band C remains the
+renormalization group’s, ten doublings from <span
+class="math inline">\(g^2=1/2\)</span> to the crossover at one loop. The
+glueball gap along the trajectory is then, in physical units, <span
+class="math inline">\(m_{0^{++}}=4.21/r_0\simeq1.66\,\hbar c\,{\rm
+fm}^{-1}\)</span> by the same data, which is what a proof would have to
+reproduce as a positive number.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>The Dobrushin note’s specification is corrected: the block criterion
+in its single-link form is emptied by Elitzur and the mixing form on
+sub-blocks, organized around the conditional distribution of small
+Wilson loops, is the one to verify. The verification’s size is corrected
+downward to boxes of side <span class="math inline">\(3\)</span> to
+<span class="math inline">\(5\)</span> at <span
+class="math inline">\(\beta_W\simeq5.7\)</span>, where <span
+class="math inline">\(\xi/a&lt;1\)</span> by the published data. The
+three bands separate the sharpness problem (B, a factor <span
+class="math inline">\(50\)</span> in <span
+class="math inline">\(\beta_W\)</span> with <span
+class="math inline">\(\xi/a&lt;1\)</span>) from the physical problem (C,
+three doublings where <span class="math inline">\(\xi/a\)</span> passes
+from <span class="math inline">\(10\)</span> to <span
+class="math inline">\(1\)</span>).</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

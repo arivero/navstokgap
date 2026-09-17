@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The strong-coupling gap of the Kogut–Susskind Hamiltonian is uniform in the volume</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The strong-coupling gap of the Kogut–Susskind Hamiltonian is uniform
+in the volume</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/strong-coupling-uniform-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-uniform-gap.pdf">PDF</a></p><p>Statement T2 of <a href="mass-gap-obligations-lattice.html">the
+obligations map</a> holds in Hamiltonian form: for every compact
+connected gauge group <span class="math inline">\(G\)</span> and every
+lattice size, the Kogut–Susskind Hamiltonian at coupling <span
+class="math inline">\(g\ge g_0(G)\)</span> has a non-degenerate ground
+state and a gap <span class="math display">\[\Delta_{a,L}\ \ge\
+\gamma\,\frac{g^2}{2}\,C_2(R_{\min})\,\frac{\hbar c}{a},\]</span> with
+<span class="math inline">\(\gamma&gt;0\)</span> independent of the
+lattice size, and the physical (gauge-invariant) gap is at least as
+large. The proof is a hypothesis check against Yarotsky’s Theorem 1 on
+relatively bounded perturbations of classical lattice systems (Commun.
+Math. Phys. 261 (2006) 799, Sections 1 and Theorem 1 read at passage
+level): the electric term is a classical Hamiltonian in the Peter–Weyl
+partition with a product ground state and unit local gap after
+normalization, and the magnetic term is a bounded,
+translation-invariant, finite-range perturbation whose normalized size
+is <span class="math inline">\(\beta(g)=48N^2/[g^4(N^2-1)]\)</span> for
+<span class="math inline">\(SU(N)\)</span>, so the theorem’s smallness
+condition <span
+class="math inline">\(\beta\le\beta_*(3,\Lambda_0)\)</span> is the
+strong-coupling condition <span
+class="math inline">\(g^4\ge48N^2/[(N^2-1)\beta_*]\)</span>. The same
+theorem gives the infinite-volume ground state and exponential
+clustering at these couplings. The constants <span
+class="math inline">\(\beta_*\)</span> and <span
+class="math inline">\(\gamma\)</span> are existential in Yarotsky’s
+statement, so <span class="math inline">\(g_0\)</span> is a well-defined
+but not numerically explicit threshold. The result does not distinguish
+abelian from non-abelian groups; that distinction is T2<span
+class="math inline">\(&#39;\)</span>, and the rest of the problem is the
+descent of <span class="math inline">\(g_0\)</span> to zero along the
+scaling curve. No claim is promoted.</p>
+<h2 id="the-hamiltonian-in-yarotskys-normalization">1. The Hamiltonian
+in Yarotsky’s normalization</h2>
+<p>Notation as in <a href="mass-gap-obligations-lattice.html">the
+obligations map</a> §1: periodic cubic lattice <span
+class="math inline">\(\Lambda=(\mathbb Z/N_s\mathbb Z)^3\)</span>, links
+<span class="math inline">\(\mathcal E\)</span>, plaquettes <span
+class="math inline">\(\mathcal P\)</span>, <span
+class="math inline">\(\mathcal H=L^2(G^{\mathcal E})\)</span>, and <span
+class="math display">\[H=\frac{\hbar
+c}{a}\Big[\frac{g^2}{2}\sum_{\ell}(-\Delta_\ell)
++\frac{2}{g^2}\sum_{p}\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big].\]</span>
+Let <span class="math inline">\(C_2\equiv C_2(R_{\min})\)</span> be the
+smallest nonzero Casimir eigenvalue of <span
+class="math inline">\(-\Delta\)</span> on <span
+class="math inline">\(L^2(G)\)</span>; for <span
+class="math inline">\(SU(N)\)</span> with <span
+class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>,
+<span class="math inline">\(C_2=(N^2-1)/(2N)\)</span>. Divide by the
+unit <span class="math inline">\(\varepsilon_0=(g^2/2)C_2\,\hbar
+c/a\)</span>: <span
+class="math display">\[\frac{H}{\varepsilon_0}=\sum_{x\in\Lambda}h_x+\sum_{x\in\Lambda}\phi_x,\qquad
+h_x=\frac1{C_2}\sum_{i=1}^3(-\Delta_{(x,x+e_i)}),\qquad
+\phi_x=\frac{4}{g^4C_2}\sum_{i&lt;j}\big(N-\operatorname{Re}\operatorname{tr}U_{p(x,i,j)}\big),\]</span>
+where <span class="math inline">\(p(x,i,j)\)</span> is the plaquette
+with corner <span class="math inline">\(x\)</span> spanned by <span
+class="math inline">\(e_i,e_j\)</span>. Every link belongs to exactly
+one <span class="math inline">\(h_x\)</span> and every plaquette to
+exactly one <span class="math inline">\(\phi_x\)</span>, so the two sums
+reproduce <span class="math inline">\(H/\varepsilon_0\)</span>.</p>
+<h2 id="hypothesis-check">2. Hypothesis check</h2>
+<p>Yarotsky’s setting (Section 1 of the paper): a lattice <span
+class="math inline">\(\mathbb Z^\nu\)</span>, site spaces <span
+class="math inline">\(\mathcal H_x\)</span> possibly
+infinite-dimensional with a preferred vector <span
+class="math inline">\(\Omega_x\)</span>, translation-invariant
+interactions of finite range <span
+class="math inline">\(\Lambda_0\)</span>, a classical part <span
+class="math inline">\(H_0=\sum_xh_x\)</span> where <span
+class="math inline">\(h_x\)</span> is a function of a product partition
+of unity containing the projection onto <span
+class="math inline">\(\Omega_x\)</span> and satisfies <span
+class="math inline">\(h_x\Omega=0\)</span>, <span
+class="math inline">\(h_x\ge1\)</span> on the orthogonal complement of
+the product vector, and a perturbation <span
+class="math inline">\(\sum_x\phi_x\)</span> with each <span
+class="math inline">\(\phi_x\)</span> a symmetric form on <span
+class="math inline">\(\mathcal H_{\Lambda_0+x}\)</span> obeying <span
+class="math inline">\(|\phi_x(v,v)|\le\alpha\|h_x^{1/2}v\|^2+\beta\|v\|^2\)</span>
+with <span class="math inline">\(\alpha&lt;1\)</span>. Theorem 1 there:
+there are <span class="math inline">\(\alpha_*,\beta_*&gt;0\)</span>
+depending only on <span class="math inline">\(\nu\)</span> and <span
+class="math inline">\(\Lambda_0\)</span> such that if <span
+class="math inline">\(\alpha\le\alpha_*\)</span> and <span
+class="math inline">\(\beta\le\beta_*\)</span>, then for periodic cubic
+volumes <span class="math inline">\(H_\Lambda\)</span> has a
+non-degenerate ground state with a gap <span
+class="math inline">\(\gamma&gt;0\)</span> independent of <span
+class="math inline">\(\Lambda\)</span>, the ground states have a
+weak<span class="math inline">\(^*\)</span> thermodynamic limit, and
+that limit has exponentially decaying correlations.</p>
+<ol type="1">
+<li><em>Lattice and site spaces.</em> <span
+class="math inline">\(\nu=3\)</span>; <span
+class="math inline">\(\mathcal H_x=L^2(G)^{\otimes3}\)</span>, the three
+links leaving <span class="math inline">\(x\)</span>; <span
+class="math inline">\(\Omega_x\)</span> the constant function. Then
+<span class="math inline">\(\mathcal H_\Lambda=\bigotimes_x\mathcal
+H_x=L^2(G^{\mathcal E})\)</span> and <span
+class="math inline">\(\Omega_{\Lambda,0}\)</span> is the constant
+function on <span class="math inline">\(G^{\mathcal E}\)</span>.</li>
+<li><em>Partition and classicality.</em> On each link, Peter–Weyl gives
+the orthogonal partition of unity by isotypic projections <span
+class="math inline">\(P_R\)</span>, <span
+class="math inline">\(R\)</span> ranging over irreducible
+representations, with <span class="math inline">\(P_{\rm triv}\)</span>
+the projection onto constants. <span
+class="math inline">\(-\Delta_\ell=\sum_RC_2(R)P_R\)</span> is a
+function of this partition, so <span class="math inline">\(h_x\)</span>
+is a function of the product partition on <span
+class="math inline">\(\mathcal H_x\)</span>, and <span
+class="math inline">\(h_x\)</span> is self-adjoint and unbounded, as
+allowed.</li>
+<li><em>Local ground state and gap.</em> <span
+class="math inline">\(h_x\Omega_x=0\)</span>. On the orthogonal
+complement of <span class="math inline">\(\Omega_x\)</span> in <span
+class="math inline">\(\mathcal H_x\)</span> at least one of the three
+links carries a nontrivial representation, so <span
+class="math inline">\(h_x\ge C_2(R_{\min})/C_2=1\)</span> there:
+condition (1) of the paper holds with the range <span
+class="math inline">\(\Lambda_0=\{0\}\)</span> for <span
+class="math inline">\(h_x\)</span>, which may be enlarged to the common
+range below.</li>
+<li><em>Perturbation.</em> <span class="math inline">\(\phi_x\)</span>
+is multiplication by a continuous function on the twelve links of the
+three plaquettes at <span class="math inline">\(x\)</span>, whose sites
+lie in <span class="math inline">\(\Lambda_0+x\)</span> with <span
+class="math inline">\(\Lambda_0=\{0,1\}^3\)</span>; it is symmetric,
+bounded, and <span class="math inline">\(0\le
+N-\operatorname{Re}\operatorname{tr}U_p\le2N\)</span> gives <span
+class="math display">\[|\phi_x(v,v)|\le\beta\|v\|^2,\qquad
+\beta=\frac{4}{g^4C_2}\cdot3\cdot2N=\frac{24N}{g^4C_2}
+=\frac{48N^2}{g^4(N^2-1)}\ \ (SU(N)),\]</span> so condition (2) holds
+with <span class="math inline">\(\alpha=0\)</span> and this <span
+class="math inline">\(\beta\)</span>.</li>
+<li><em>Translation invariance and periodicity.</em> <span
+class="math inline">\(h_x\)</span> and <span
+class="math inline">\(\phi_x\)</span> are translates of <span
+class="math inline">\(h_0\)</span> and <span
+class="math inline">\(\phi_0\)</span>, and the lattice is a periodic
+cube, the case in which the paper states Theorem 1.</li>
+</ol>
+<p><strong>Theorem (T2, Hamiltonian form).</strong> Let <span
+class="math inline">\(\beta_*=\beta_*(3,\{0,1\}^3)\)</span> and <span
+class="math inline">\(\gamma\)</span> be the constants of Yarotsky’s
+Theorem 1 for this range. For every <span
+class="math inline">\(g\)</span> with <span
+class="math inline">\(48N^2/[g^4(N^2-1)]\le\beta_*\)</span>, that is
+<span class="math inline">\(g\ge
+g_0(N)=\big(48N^2/[(N^2-1)\beta_*]\big)^{1/4}\)</span>, and every <span
+class="math inline">\(N_s\ge2\)</span>: <span
+class="math inline">\(H\)</span> has a non-degenerate ground state, and
+<span class="math display">\[\Delta_{a,L}\ \ge\
+\gamma\,\varepsilon_0=\gamma\,\frac{g^2}{2}\,\frac{N^2-1}{2N}\,\frac{\hbar
+c}{a}.\]</span> The physical gap obeys <span
+class="math inline">\(\Delta^{\rm phys}_{a,L}\ge\Delta_{a,L}\)</span> by
+Theorem 1(3) of the obligations map. The ground states have a
+thermodynamic limit <span class="math inline">\(\omega\)</span> with
+exponentially decaying correlations of local observables.</p>
+<p><em>Proof.</em> Items 1–5 are the hypotheses of Yarotsky’s Theorem 1
+with <span class="math inline">\(\alpha=0\le\alpha_*\)</span> and <span
+class="math inline">\(\beta\le\beta_*\)</span>; its conclusions 1–3 are
+the statements, after multiplying the normalized gap <span
+class="math inline">\(\gamma\)</span> by <span
+class="math inline">\(\varepsilon_0\)</span>. The inheritance by the
+physical sector is the positivity argument already written for T1. <span
+class="math inline">\(\square\)</span></p>
+<p>For a general compact connected <span
+class="math inline">\(G\)</span> the same holds with <span
+class="math inline">\(C_2=C_2(R_{\min})\)</span> and the bound <span
+class="math inline">\(N-\operatorname{Re}\operatorname{tr}U_p\le2\dim\)</span>
+in place of <span class="math inline">\(2N\)</span>; the threshold is
+<span class="math inline">\(g_0^4=24\dim/(C_2\beta_*)\)</span>.</p>
+<h2 id="what-the-theorem-does-and-does-not-give">3. What the theorem
+does and does not give</h2>
+<ul>
+<li><em>Uniformity.</em> <span class="math inline">\(\gamma\)</span>
+depends only on <span class="math inline">\(\nu=3\)</span> and <span
+class="math inline">\(\Lambda_0=\{0,1\}^3\)</span>, so the bound holds
+for every lattice size at once. The extensive Kato bound of the
+obligations map §3 is replaced by a local one, which is exactly what the
+cluster structure of the perturbation provides.</li>
+<li><em>Large <span class="math inline">\(N\)</span>.</em> <span
+class="math inline">\(\beta\to48/g^4\)</span> as <span
+class="math inline">\(N\to\infty\)</span>, so <span
+class="math inline">\(g_0(N)\)</span> is bounded in <span
+class="math inline">\(N\)</span>: the strong-coupling gap is uniform in
+the rank at fixed bare <span class="math inline">\(g\)</span> in this
+convention. In the ’t Hooft normalization <span
+class="math inline">\(\lambda=g^2N\)</span> the threshold reads <span
+class="math inline">\(\lambda\ge g_0^2N\)</span>, growing with <span
+class="math inline">\(N\)</span>.</li>
+<li><em>Scale.</em> The gap is measured in <span
+class="math inline">\(\hbar c/a\)</span> and is proportional to <span
+class="math inline">\(g^2\)</span>: a supplied cutoff scale, as the
+dimensional census of <a href="low-dimensional-mass-gap.html">G07</a> §4
+requires at fixed <span class="math inline">\(g\)</span>. Nothing here
+survives <span class="math inline">\(a\to0\)</span> at fixed <span
+class="math inline">\(g\)</span>, and T3 asks for the behaviour along
+<span class="math inline">\(g(a)\to0\)</span>, outside the theorem’s
+range.</li>
+<li><em>Abelian case.</em> <span class="math inline">\(U(1)\)</span>
+satisfies every hypothesis with <span
+class="math inline">\(C_2(R_{\min})=1\)</span> (charge one) and <span
+class="math inline">\(\dim=1\)</span>, so it too is gapped uniformly in
+volume at strong coupling. The theorem is blind to the property that
+distinguishes the groups; that property enters only in T2<span
+class="math inline">\(&#39;\)</span>, where the abelian gap closes
+(Guth; Fröhlich–Spencer) and the non-abelian one is conjectured to
+persist.</li>
+<li><em>Explicitness.</em> <span class="math inline">\(\beta_*\)</span>
+and <span class="math inline">\(\gamma\)</span> exist by the theorem and
+are not given as numbers in its statement. Extracted from the proof (<a
+href="strong-coupling-threshold-explicit.html">threshold note</a>), the
+time-discretized expansion gives <span
+class="math inline">\(\beta_*\simeq e^{-465}\)</span> and <span
+class="math inline">\(g_0^2\simeq10^{101}\)</span> for <span
+class="math inline">\(SU(3)\)</span>; the continuous-time expansion of
+<a href="kogut-susskind-strong-coupling-explicit.html">the
+Kogut–Susskind note</a> gives <span
+class="math inline">\(g_0^2=388\)</span> rigorously (<span
+class="math inline">\(79\)</span> in the adjacent-growth class) with
+<span class="math inline">\(\gamma\to4\)</span>. The descent problem
+does not depend on that number, only on the structure of the
+expansion.</li>
+<li><em>Relation to the small-volume end.</em> Yarotsky’s expansion is
+in the electric basis, where the ground state at <span
+class="math inline">\(g=\infty\)</span> is the constant function. At
+weak coupling the ground state concentrates near <span
+class="math inline">\(U_p=1\)</span> and the good variables are the
+constant modes of <a href="low-dimensional-mass-gap.html">G07</a> §3.3,
+with gap <span class="math inline">\(\delta_1g^{2/3}\hbar c/L\)</span>
+in the continuum small box. The two expansions use different bases and
+different small parameters (<span class="math inline">\(g^{-4}\)</span>
+and <span class="math inline">\(g^{2/3}\)</span>); T2<span
+class="math inline">\(&#39;\)</span> is the statement that the gap does
+not close between them.</li>
+</ul>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>T2 is closed in Hamiltonian form as a corollary of an established
+theorem, with the threshold <span
+class="math inline">\(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\)</span>.
+The obligations table moves T2 to “established”; the open items are
+T2<span class="math inline">\(&#39;\)</span>, T3 and T4. The next
+theorem-sized target on the lattice route is a weak-coupling
+counterpart: a variational upper bound and, if possible, a lower bound
+on the Kogut–Susskind gap at small <span
+class="math inline">\(g\)</span> on a lattice whose side is small
+against <span class="math inline">\(\hbar c/\Lambda\)</span>, using the
+constant-mode ground state of C133 as the trial state, to connect the
+lattice gap <span class="math inline">\(\Delta_{a,L}\)</span> with the
+continuum small-volume corner and to locate the regime where neither
+expansion applies.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

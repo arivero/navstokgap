@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>On the lattice one flow step has a uniformly bounded truncation error: the obstruction is decimation</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>On the lattice one flow step has a uniformly bounded truncation
+error: the obstruction is decimation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/lattice-truncation-uniform.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/lattice-truncation-uniform.pdf">PDF</a></p><p>The lattice flow is independent of the coupling, because the <span
+class="math inline">\(g^2\)</span> in Lüscher’s equation (1.4) cancels
+the <span class="math inline">\(1/g^2\)</span> of the Wilson action, and
+one doubling step runs it for a dimensionless time <span
+class="math inline">\(t/a^2=1/2\)</span>. Its linearization has
+coefficients that are derivatives of a fixed smooth function on the
+compact manifold <span class="math inline">\(G^{\mathcal E}\)</span>,
+hence bounded by pure numbers, and the plaquette angles are bounded by
+the compactness of the group. So the Jacobian bound of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a>, <span
+class="math display">\[\big|D\Phi_t(x,y)\big|\le
+e^{2t\|G\|_\infty}K^{\rm free}_t(x-y),
+\qquad
+2t\|G\|_\infty\le2\cdot\frac{a^2}{2}\cdot\frac{\pi}{a^2}=\pi,\]</span>
+gives a <strong>pure number</strong> for a doubling step, uniformly in
+the coupling, the scale, the volume and the gauge group up to its
+Casimir. Truncating the conjugated Hamiltonian at a range of <span
+class="math inline">\(K\)</span> lattice spacings therefore costs <span
+class="math inline">\(Ce^{-cK}\)</span> with <span
+class="math inline">\(C,c\)</span> pure numbers, and <span
+class="math inline">\(K\)</span> of order three suffices. This corrects
+<a href="typical-field-strength-window.html">the typical-field note</a>
+and <a href="flow-jacobian-truncation-error.html">the Jacobian note</a>,
+which located the difficulty in the supremum of the field strength: that
+supremum is unbounded only in the continuum at fixed physical scale,
+which is where the Euclidean constructive programme meets it, and it is
+bounded within one lattice renormalization step. What remains once
+truncation is free is the step that actually coarsens the theory:
+<strong>decimation</strong>, the removal of degrees of freedom, which <a
+href="blocking-criterion-monotone.html">the blocking-criterion note</a>
+shows loses when performed by projection, together with the
+proliferation of couplings that any decimation produces. Constants
+explicit; nothing promoted.</p>
+<h2 id="the-lattice-flow-carries-no-coupling">1. The lattice flow
+carries no coupling</h2>
+<p>With the Wilson action <span
+class="math inline">\(S_w(U)=\frac1{g^2}\sum_p\operatorname{Re}\operatorname{tr}\{1-U_p\}\)</span>
+and the flow <span class="math display">\[\dot
+V_s(x,\mu)=-g^2\big\{\partial_{x,\mu}S_w(V_s)\big\}V_s(x,\mu)\]</span>
+(Lüscher, arXiv:1006.4518v3, equations (1.3)–(1.4); passage level via
+the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Luscher_WilsonFlow_1006.4518v3.md">local
+companion</a>), the factor <span class="math inline">\(g^2\)</span>
+cancels the <span class="math inline">\(1/g^2\)</span> in <span
+class="math inline">\(S_w\)</span>, so <span class="math display">\[\dot
+V_s(x,\mu)=-\big\{\partial_{x,\mu}\textstyle\sum_p\operatorname{Re}\operatorname{tr}(1-V_{s,p})\big\}V_s(x,\mu)\]</span>
+depends on no coupling. The right-hand side is a fixed smooth vector
+field on the compact manifold <span class="math inline">\(G^{\mathcal
+E}\)</span>, and the same holds for its derivatives.</p>
+<p><strong>Consequence.</strong> The flow map <span
+class="math inline">\(\Phi_t\)</span>, its Jacobian <span
+class="math inline">\(D\Phi_t\)</span> and every bound on them are
+functions of the dimensionless flow time <span
+class="math inline">\(t/a^2\)</span> and of the gauge group alone.</p>
+<h2 id="one-doubling-step-is-a-flow-time-of-one-half">2. One doubling
+step is a flow time of one half</h2>
+<p>Taking the smearing radius <span
+class="math inline">\(\sqrt{8t}\)</span> equal to the new lattice
+spacing <span class="math inline">\(2a\)</span> gives <span
+class="math inline">\(t=a^2/2\)</span>, that is <span
+class="math inline">\(t/a^2=1/2\)</span>. Two bounds then apply.</p>
+<p><em>Curvature.</em> The plaquette variable lies in the compact group,
+so the plaquette angle satisfies <span
+class="math inline">\(|a^2G|\le\pi\)</span> in the fundamental
+normalization and <span
+class="math inline">\(\|G\|_\infty\le\pi/a^2\)</span>; the adjoint
+action in the linearized flow of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a>
+Proposition 1 multiplies this by a Casimir factor <span
+class="math inline">\(c_A\)</span> of order one. Hence <span
+class="math display">\[2t\|G\|_\infty\ \le\
+2\cdot\frac{a^2}{2}\cdot\frac{c_A\pi}{a^2}=c_A\pi,\]</span> a pure
+number.</p>
+<p><em>Coefficients.</em> The linearization of the lattice flow is a
+discrete parabolic equation whose coefficients are second derivatives of
+a fixed smooth function on a compact manifold, so they are bounded by
+pure numbers; run for dimensionless time <span
+class="math inline">\(1/2\)</span>, its kernel obeys <span
+class="math display">\[\big|D\Phi_t(x,y)\big|\ \le\
+C_1\,e^{-c_1|x-y|/a},\]</span> the standard exponential bound for a
+discrete parabolic equation with bounded coefficients over a time of
+order the diffusive one, with <span
+class="math inline">\(C_1,c_1\)</span> depending only on <span
+class="math inline">\(G\)</span> and on the lattice geometry.</p>
+<h2 id="the-truncation-error">3. The truncation error</h2>
+<p><strong>Proposition.</strong> Truncating the conjugated Hamiltonian
+of <a href="flow-conjugation-truncation.html">the flow-conjugation
+note</a> to range <span class="math inline">\(Ka\)</span> costs a
+relative error <span class="math display">\[\varepsilon(K)\ \le\
+C\,e^{-cK},\]</span> with <span class="math inline">\(C,c\)</span> pure
+numbers depending only on the gauge group and the lattice geometry,
+uniformly in the coupling <span class="math inline">\(g\)</span>, the
+lattice spacing <span class="math inline">\(a\)</span>, the volume and
+the flow time of one doubling. In particular <span
+class="math inline">\(K=3\)</span> gives an error of order <span
+class="math inline">\(e^{-3c}\)</span>, and the effective Hamiltonian
+after one step has range one and a half new lattice spacings.</p>
+<p><em>Proof.</em> Section 2 bounds the Jacobian kernel by <span
+class="math inline">\(C_1e^{-c_1|x-y|/a}\)</span> uniformly; the
+discarded part of the conjugated kinetic operator is the sum of its
+matrix elements at separation beyond <span
+class="math inline">\(Ka\)</span>, which is bounded by the geometric
+tail of that estimate. The magnetic term after conjugation is <span
+class="math inline">\(V\circ\Phi_t\)</span>, a function of the flowed
+links, whose dependence on a link beyond range <span
+class="math inline">\(Ka\)</span> is bounded by the same kernel. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="correction-to-the-two-previous-notes">4. Correction to the two
+previous notes</h2>
+<p><a href="flow-jacobian-truncation-error.html">The Jacobian note</a>
+derived the condition <span
+class="math inline">\(t\|G\|_\infty\lesssim1\)</span> and read it as a
+small-field condition, and <a
+href="typical-field-strength-window.html">the typical-field note</a>
+concluded that the obstruction is the supremum of the field strength
+over the volume, hence probabilistic and Euclidean. Both statements hold
+in the continuum at fixed physical scale, where <span
+class="math inline">\(\|G\|_\infty\)</span> is unbounded and the
+Gaussian tail is the right tool. Within one lattice step they do not
+apply: the compactness of the gauge group bounds <span
+class="math inline">\(a^2\|G\|_\infty\)</span> by <span
+class="math inline">\(\pi\)</span>, and the flow time of a doubling is
+<span class="math inline">\(a^2/2\)</span>, so the product is a pure
+number and no configuration is large-field <strong>relative to the
+current spacing</strong>.</p>
+<p>The large-field problem of the constructive programme is therefore a
+statement about many steps rather than one: a configuration that is
+harmless at its own scale can be large relative to a much finer spacing,
+and it is the accumulation over the <span
+class="math inline">\(n\simeq(2b_0\log2)^{-1}g_{\rm UV}^{-2}\)</span>
+steps that produces it. The corrected reading is that the difficulty
+lives in the composition of the steps and in what each step does to the
+form of the Hamiltonian, and the tail estimate belongs to the
+former.</p>
+<h2 id="what-is-left-once-truncation-is-free">5. What is left once
+truncation is free</h2>
+<p>Conjugation is exact and truncation is cheap, and neither reduces the
+number of degrees of freedom: after both, the theory still lives on
+<span class="math inline">\(L^2(G^{\mathcal E})\)</span> with the
+original lattice. A renormalization step must also
+<strong>decimate</strong>, replacing the fine links by coarse ones. The
+notes already contain what happens then:</p>
+<ul>
+<li>decimation by projection onto block low-energy subspaces loses,
+because the boundary grows like <span class="math inline">\(M^2\)</span>
+while the block gap does not (<a
+href="blocking-criterion-monotone.html">blocking criterion</a>);</li>
+<li>decimation by any map at all produces an effective Hamiltonian
+outside the Kogut–Susskind family, and carrying a controlled family
+through the steps is the constructive problem (<a
+href="blocking-step-obstruction.html">blocking note</a> §5).</li>
+</ul>
+<p>So the sequence is: conjugate, which is free; truncate, which is
+cheap; decimate, which is the problem. The gain the flow provides is
+that after conjugation the magnetic term is the flowed action, smaller
+by the smoothing, so the decimation acts on a smoother field, and the
+question is whether that makes the projection estimate better than the
+<span class="math inline">\(3M^2/8\)</span> of the unflowed case. That
+is a well-posed question and it is the next one.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The truncation error is settled: uniformly bounded per lattice
+doubling by compactness of the gauge group and the coupling-independence
+of the flow, with a range of about three lattice spacings. The
+obstruction is decimation, and the remaining question native to this
+programme is whether flowing before decimating improves the projection
+estimate, since after conjugation the field entering the block boundary
+is the flowed one. The previous two notes stand as statements about the
+continuum at fixed physical scale, and carry the correction.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

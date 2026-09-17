@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A physical cut: elastic reversal, finite speed and memory</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A physical cut: elastic reversal, finite speed and memory</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/physical-cut-speed.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/physical-cut-speed.pdf">PDF</a></p><p>A05, reviewed with B13, 2026-09-07. An equal-mass elastic collision
+realizes a random midpoint with exact energy and momentum conservation.
+Its action cost tends to zero with the interval duration at fixed speed.
+A sharp midpoint bound extends this conclusion to every bounded-speed
+bridge law. Finally, a position-only convolution law with ballistic
+support is necessarily a deterministic drift. Together these tests
+identify velocity memory as a concrete ingredient for the next
+refinement model.</p>
+<h2 id="one-collision-with-a-momentum-receiver">1. One collision with a
+momentum receiver</h2>
+<p>Fix <span class="math inline">\(m&gt;0\)</span>, <span
+class="math inline">\(0&lt;u&lt;c\)</span> and duration <span
+class="math inline">\(\Delta&gt;0\)</span>. Choose a common random sign
+<span class="math inline">\(\sigma=\pm1\)</span> with equal
+probabilities. At time zero, a labelled tracer is at <span
+class="math inline">\(0\)</span> with velocity <span
+class="math inline">\(\sigma u\)</span>, and a second particle of the
+same mass is at <span class="math inline">\(\sigma u\Delta\)</span> with
+velocity <span class="math inline">\(-\sigma u\)</span>. Both move
+freely on the line until their instantaneous elastic collision at time
+<span class="math inline">\(\Delta/2\)</span>. The equal-mass collision
+exchanges their velocities. Thus the tracer follows</p>
+<p><span class="math display">\[X(t)=\begin{cases}\sigma ut,&amp;0\le
+t\le\Delta/2,\\
+\sigma u(\Delta-t),&amp;\Delta/2\le t\le\Delta.\end{cases}\]</span></p>
+<p>Its midpoint <span class="math inline">\(Y=\sigma u\Delta/2\)</span>
+is random, while <span class="math inline">\(X(0)=X(\Delta)=0\)</span>.
+The other particle returns to its own initial position. Throughout the
+motion, total momentum is zero and total kinetic energy is <span
+class="math inline">\(mu^2\)</span>. Each labelled velocity changes sign
+at the collision, with opposite impulses of magnitude <span
+class="math inline">\(2mu\)</span>. Both particles stay below <span
+class="math inline">\(c\)</span> in the chosen frame.</p>
+<p>The tracer’s free kinetic action relative to the stationary path with
+the same position endpoints is</p>
+<p><span class="math display">\[D=\frac m2\int_0^\Delta\dot
+X^2dt=\frac{mu^2\Delta}{2}.
+\qquad \operatorname{Var}Y=\frac{u^2\Delta^2}{4}.\]</span></p>
+<p>Define the midpoint action parameter in A03’s normalization by <span
+class="math inline">\(\kappa_{\rm
+mid}=4m\operatorname{Var}Y/\Delta\)</span>. This gives <span
+class="math inline">\(\kappa_{\rm mid}=mu^2\Delta\)</span> and <span
+class="math inline">\(\mathbb E D=\kappa_{\rm mid}/2\)</span>. At fixed
+energy and speed, both tend to zero as <span
+class="math inline">\(\Delta\downarrow0\)</span>. Keeping a supplied
+<span class="math inline">\(\kappa_{\rm mid}&gt;0\)</span> instead
+requires <span class="math inline">\(u^2=\kappa_{\rm
+mid}/(m\Delta)\)</span> and pair energy <span
+class="math inline">\(\kappa_{\rm mid}/\Delta\)</span>.</p>
+<p>This is an exactly specified hard-collision model with random initial
+data. The timing follows from the prepared initial separation <span
+class="math inline">\(u\Delta\)</span>, rather than a new stochastic
+clock. Changing <span class="math inline">\(\Delta\)</span> changes that
+separation. The stationary comparison shares positions and times, not
+initial velocities or apparatus state. Consequently the construction
+preserves the coarse position endpoints, but does not implement an
+invisible intervention on a fixed full phase-space preparation. Smooth
+collision potentials and a Lorentz-covariant dynamics are separate
+models.</p>
+<h2 id="sharp-midpoint-support-and-variance-bound">2. Sharp midpoint
+support and variance bound</h2>
+<p>Let any absolutely continuous path on <span
+class="math inline">\([0,\Delta]\)</span> have endpoints <span
+class="math inline">\(x,z\)</span> and <span class="math inline">\(|\dot
+X|\le u&lt;c\)</span> almost everywhere. Write <span
+class="math inline">\(v=(z-x)/\Delta\)</span>, with <span
+class="math inline">\(|v|\le u\)</span>, and <span
+class="math inline">\(\zeta=X(\Delta/2)-(x+z)/2\)</span>. Each
+half-interval gives</p>
+<p><span class="math display">\[X(\Delta/2)\in[x-u\Delta/2,x+u\Delta/2]
+\cap[z-u\Delta/2,z+u\Delta/2].\]</span></p>
+<p>This intersection is centered at <span
+class="math inline">\((x+z)/2\)</span> with half-width <span
+class="math inline">\(r=\Delta(u-|v|)/2\)</span>. Therefore any
+probability law on these admissible paths satisfies</p>
+<p><span class="math display">\[\operatorname{Var}Y\le r^2,
+\qquad 0\le\kappa_{\rm mid}:=\frac{4m}{\Delta}\operatorname{Var}Y
+\le m\Delta(u-|v|)^2.\]</span></p>
+<p>Proof of the variance bound: <span
+class="math inline">\(\operatorname{Var}Y\le \mathbb E(Y-(x+z)/2)^2\le
+r^2\)</span>. Equal probabilities at the two extremal midpoints saturate
+it; the corresponding two-segment paths obey the speed bound. For <span
+class="math inline">\(x=z\)</span> the elastic example realizes this
+sharp case.</p>
+<p>The two-segment interpolant through <span
+class="math inline">\(Y\)</span> has excess kinetic action <span
+class="math inline">\(D_{\rm poly}=2m\zeta^2/\Delta\)</span>. When the
+midpoint law is centered on <span
+class="math inline">\((x+z)/2\)</span>, <span
+class="math inline">\(\mathbb E D_{\rm poly}=\kappa_{\rm
+mid}/2\)</span>. For a biased midpoint there is the additional term
+<span class="math inline">\(2m(\mathbb E\zeta)^2/\Delta\)</span>. This
+distinction avoids identifying a variance with all action costs.</p>
+<p>A Gaussian midpoint with variance <span
+class="math inline">\(\kappa\Delta/(4m)\)</span> has unbounded support
+for every <span class="math inline">\(\kappa&gt;0\)</span> and so fails
+the exact speed constraint at every duration. Even a bounded replacement
+matching only that variance requires <span
+class="math inline">\(\kappa\le m\Delta(u-|v|)^2\)</span>. The latter
+inequality gives a necessary resolution restriction, not a derivation of
+<span class="math inline">\(\kappa\)</span>.</p>
+<p>At <span class="math inline">\(|v|=u\)</span> the allowable midpoint
+is unique. Indeed a path achieving the maximum displacement <span
+class="math inline">\(u\Delta\)</span> must have velocity <span
+class="math inline">\(u\)</span> almost everywhere. Thus after choosing
+an extremal midpoint in the return-path example, each half is already a
+saturated straight segment: finer admissible sampling inside that half
+is deterministic. Reapplying a nonzero midpoint fluctuation rule
+independently at every cut would change the coarse law or violate
+speed.</p>
+<h2 id="finite-speed-and-a-position-only-convolution-law">3. Finite
+speed and a position-only convolution law</h2>
+<p><strong>Proposition.</strong> Suppose probability measures <span
+class="math inline">\(\mu_t\)</span> on the line satisfy <span
+class="math inline">\(\mu_0=\delta_0\)</span>, <span
+class="math inline">\(\mu_{s+t}=\mu_s*\mu_t\)</span>, and <span
+class="math inline">\(\operatorname{supp}\mu_t\subset[-ut,ut]\)</span>
+for every <span class="math inline">\(t\ge0\)</span>, with a fixed
+finite <span class="math inline">\(u\)</span>. Then <span
+class="math inline">\(\mu_t=\delta_{bt}\)</span> for some <span
+class="math inline">\(|b|\le u\)</span>.</p>
+<p><strong>Proof.</strong> For fixed <span
+class="math inline">\(T&gt;0\)</span> and every positive integer <span
+class="math inline">\(n\)</span>, convolution and bounded support
+give</p>
+<p><span
+class="math display">\[\operatorname{Var}\mu_T=n\operatorname{Var}\mu_{T/n}
+\le n u^2(T/n)^2=u^2T^2/n.\]</span></p>
+<p>Let <span class="math inline">\(n\to\infty\)</span> to obtain zero
+variance at every <span class="math inline">\(T\)</span>. Write <span
+class="math inline">\(\mu_t=\delta_{a(t)}\)</span>. The convolution law
+makes <span class="math inline">\(a\)</span> additive, while <span
+class="math inline">\(|a(t)|\le ut\)</span> implies continuity at zero.
+Hence <span class="math inline">\(a(t)=bt\)</span>, <span
+class="math inline">\(|b|\le u\)</span>. This proof even derives the
+needed continuity from the support bound.</p>
+<p>The proposition concerns stationary, spatially homogeneous,
+independent increment composition on position alone. It leaves room for
+stochastic bounded-speed trajectories with velocity memory. For example
+A01’s telegraph process is Markov in <span
+class="math inline">\((X,V)\)</span>; deleting <span
+class="math inline">\(V\)</span> removes the information needed for such
+position-only convolution. General state-dependent Markov motion is also
+outside the stated convolution hypothesis.</p>
+<h2 id="consequence-for-the-cut-point-programme">4. Consequence for the
+cut-point programme</h2>
+<p>Finite propagation does not supply a positive microscopic midpoint
+action coefficient in these models. It identifies a structural
+requirement: a stochastic refinement law with strict speed must retain
+correlations or additional state information, rather than resetting
+independent position increments. The elastic construction makes this
+visible at a single cut.</p>
+<p>The next bounded task is to derive a finite-speed bridge on <span
+class="math inline">\((X,V)\)</span>, including its conditional midpoint
+law and endpoint atoms, and compare coarse and fine restrictions of the
+same experiment. Then separate a finite observation-window action scale
+from a microscopic refinement remainder. The universal positive scale
+remains a selection question about the physical premises.</p>
+<h2 id="proof-and-literature-record">Proof and literature record</h2>
+<p>The <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B13.md">B13
+audit</a> reviews C030–C032 as derived consequences. Barkai, <em>Stable
+Equilibrium Based on Lévy Statistics</em> (2003), <a
+href="https://arxiv.org/abs/cond-mat/0303255v1">arXiv:cond-mat/0303255v1</a>,
+pp. 3–4, (2)–(3), supplies the elastic map. The equal-mass map is
+well-defined even though the divided-density representation (5) excludes
+that mass ratio. Cinque, <em>A Note on the Conditional Probabilities of
+the Telegraph Process</em> (2022), <a
+href="https://arxiv.org/abs/2202.01904v1">arXiv:2202.01904v1</a>,
+pp. 1–2, supplies the velocity-memory and endpoint-atom comparison. The
+midpoint and convolution proofs above follow directly from their stated
+hypotheses; neither selected source states those combined results. The
+<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B13/B13-source-companion.md">source
+companion</a> records the bounded coverage. No priority claim follows
+from this audit.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

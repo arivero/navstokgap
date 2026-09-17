@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Local entangling gates preserve an energy gap uniformly in chain length</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Local entangling gates preserve an energy gap uniformly in chain
+length</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/finite-depth-spin-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/finite-depth-spin-gap.pdf">PDF</a></p><p>The standard cluster chain gives a local interacting quantum
+Hamiltonian with an entangled unique ground state and excitation gap
+<span class="math inline">\(J&gt;0\)</span> for every open chain of
+<span class="math inline">\(N\ge2\)</span> spins, when boundary terms
+are retained. The mechanism is exact unitary conjugation of independent
+spins. It supplies an energy gap directly; quantum kinematics and the
+action factor converting energy into frequency are inputs. This is an
+established construction worked through for G05.</p>
+<h2 id="specify-the-hamiltonian-and-the-local-circuit">1. Specify the
+Hamiltonian and the local circuit</h2>
+<p>The Hilbert space is <span class="math inline">\(\mathcal
+H_N=(\mathbb C^2)^{\otimes N}\)</span>, with its full finite-dimensional
+operator domain. Dimensionless Pauli matrices <span
+class="math inline">\(X_j,Z_j\)</span> act at site <span
+class="math inline">\(j\)</span>. Fix a lattice spacing <span
+class="math inline">\(a&gt;0\)</span> and an energy <span
+class="math inline">\(J&gt;0\)</span>, independent of <span
+class="math inline">\(N\)</span>. Start with</p>
+<p><span class="math display">\[
+H_N^{(0)}=\frac J2\sum_{j=1}^N(I-X_j),\qquad
+U_N=\prod_{j=1}^{N-1}\mathrm{CZ}_{j,j+1},\qquad
+H_N=U_NH_N^{(0)}U_N^\dagger.
+\]</span></p>
+<p>On computational bits, <span
+class="math inline">\(\mathrm{CZ}|b,c\rangle=(-1)^{bc}|b,c\rangle\)</span>.
+All gates commute, are Hermitian and square to identity. Odd bonds form
+one layer of disjoint gates and even bonds a second, so circuit depth is
+at most two for every open chain length. This is a specification of a
+model Hamiltonian; the circuit alone is not a laboratory implementation
+of it.</p>
+<p>Conjugation gives <span
+class="math inline">\(\mathrm{CZ}_{j,k}X_j\mathrm{CZ}_{j,k}=X_jZ_k\)</span>:
+flipping bit <span class="math inline">\(b_j\)</span> changes the gate
+phase by <span class="math inline">\((-1)^{b_k}\)</span>. Hence</p>
+<p><span class="math display">\[
+K_1=X_1Z_2,\quad K_N=Z_{N-1}X_N,\quad
+K_j=Z_{j-1}X_jZ_{j+1}\quad(2\le j\le N-1),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+H_N=\frac J2\sum_j(I-K_j).
+\]</span></p>
+<p>Each term has norm <span class="math inline">\(J\)</span> and support
+of diameter at most <span class="math inline">\(2a\)</span>. The bulk
+contains three-site interactions in the specified physical spin tensor
+factors. Commutation and independence of the <span
+class="math inline">\(K_j\)</span> follow by conjugating the independent
+<span class="math inline">\(X_j\)</span>; in particular, no hidden
+product relation removes single-defect states. Nonlocal entangling
+conjugation preserves spectrum without making the physical-site ground
+state a product.</p>
+<h2 id="ground-state-entanglement-and-all-excitation-energies">2. Ground
+state, entanglement and all excitation energies</h2>
+<p>For <span class="math inline">\(s_j\in\{+1,-1\}\)</span> let <span
+class="math inline">\(|s\rangle_X\)</span> be the product <span
+class="math inline">\(X\)</span> eigenbasis. The vectors <span
+class="math inline">\(U_N|s\rangle_X\)</span> are a complete orthonormal
+eigenbasis and</p>
+<p><span class="math display">\[
+E(s)=\frac J2\sum_j(1-s_j)=J\,\#\{j:s_j=-1\}.
+\]</span></p>
+<p>Thus the unique ground state is <span
+class="math inline">\(|C_N\rangle=U_N|+\rangle^{\otimes N}\)</span>,
+<span class="math inline">\(E_0=0\)</span>, the eigenvalue <span
+class="math inline">\(mJ\)</span> has multiplicity <span
+class="math inline">\(\binom Nm\)</span>, and</p>
+<p><span class="math display">\[
+\Delta_N=\min(\operatorname{spec}H_N\setminus\{0\})=J,
+\qquad \inf_{N\ge2}\Delta_N=J.
+\]</span></p>
+<p>The state <span class="math inline">\(Z_j|C_N\rangle\)</span> is a
+normalized energy-<span class="math inline">\(J\)</span> eigenstate:
+<span class="math inline">\(Z_j\)</span> flips precisely the <span
+class="math inline">\(K_j\)</span> sign. This checks attainment, not
+just a lower bound.</p>
+<p>Entanglement can be seen at any cut between sites <span
+class="math inline">\(k\)</span> and <span
+class="math inline">\(k+1\)</span>. Factor <span
+class="math inline">\(U_N\)</span> into gates internal to each side and
+the single crossing CZ gate. Internal gates are local unitaries relative
+to the cut. On the crossing pair,</p>
+<p><span class="math display">\[
+\mathrm{CZ}|+,+\rangle=
+\frac{|0\rangle|+\rangle+|1\rangle|-\rangle}{\sqrt2}.
+\]</span></p>
+<p>The two Schmidt coefficients are <span
+class="math inline">\(1/\sqrt2\)</span>, with all other spins initially
+factorized. Every such cut therefore has entanglement entropy <span
+class="math inline">\(\log2\)</span> (natural logarithm). Interaction
+and entanglement coexist with a spectrum that is exactly as simple as
+the independent-spin spectrum.</p>
+<h2 id="boundary-and-scale-tests">3. Boundary and scale tests</h2>
+<p>Removing the endpoint terms gives, for <span
+class="math inline">\(N\ge3\)</span>,</p>
+<p><span class="math display">\[
+H_N^{\rm bulk}=\frac J2\sum_{j=2}^{N-1}(I-K_j)
+=U_N\left[\frac J2\sum_{j=2}^{N-1}(I-X_j)\right]U_N^\dagger.
+\]</span></p>
+<p>The endpoint <span class="math inline">\(X\)</span> labels are now
+unconstrained. The ground space is four-dimensional, but the gap
+<em>above that entire space</em> remains <span
+class="math inline">\(J\)</span>. The separation of the two lowest
+eigenvalues counted with multiplicity is zero. Boundary conventions
+therefore matter for a unique-vacuum claim. For <span
+class="math inline">\(N=2\)</span> this bulk-only operator is zero and
+has no positive excitation.</p>
+<p>For an even periodic chain <span
+class="math inline">\(N\ge4\)</span>, include the closing CZ gate and
+all <span class="math inline">\(N\)</span> cyclic stabilizers. The
+two-layer construction, independent eigenlabels, unique ground state and
+gap <span class="math inline">\(J\)</span> persist. No symmetry
+constraint is imposed on the individual circuit gates here; no
+conclusion about symmetry-preserving phase equivalence is needed.</p>
+<p>The volume limit in this note is <span
+class="math inline">\(N\to\infty\)</span> at fixed <span
+class="math inline">\(a,J\)</span>: a uniform finite-volume
+excitation-gap statement. No continuum limit <span
+class="math inline">\(a\to0\)</span>, infinite-volume operator
+construction or relativistic dispersion is asserted. The defects in this
+exactly commuting model have no hopping term. If instead <span
+class="math inline">\(J=J_N\to0\)</span>, the gap closes; replacing
+<span class="math inline">\(H_N\)</span> by <span
+class="math inline">\(H_N/N\)</span> also gives <span
+class="math inline">\(J/N\)</span>. Locality and entanglement do not
+choose a positive energy normalization.</p>
+<h2 id="the-action-parameter-and-the-strategic-consequence">4. The
+action parameter and the strategic consequence</h2>
+<p>To specify physical unitary time evolution, supply an action constant
+<span class="math inline">\(\kappa&gt;0\)</span>:</p>
+<p><span class="math display">\[
+i\kappa\,\partial_t|\psi\rangle=H_N|\psi\rangle,
+\qquad \omega_{\rm excitation}=J/\kappa.
+\]</span></p>
+<p>This positive excitation frequency is relative to the ground state;
+it is not a relaxation rate. Unitary evolution does not equilibrate
+arbitrary states. The spectrum was defined in energy units without a
+Markov sampling clock, while its conversion to time still needs <span
+class="math inline">\(\kappa\)</span> (normally <span
+class="math inline">\(\hbar\)</span>). The construction does not select
+quantum kinematics or a universal action unit.</p>
+<p>G05 closes the requested direct-Hamiltonian construction. A
+consequential next test is whether an extensive local perturbation that
+does not commute with the stabilizers preserves a volume-uniform gap. A
+concrete candidate is <span class="math inline">\(-g\sum_j
+Z_jZ_{j+1}\)</span>: CZ conjugation leaves this perturbation unchanged,
+so its competition with the cluster terms reduces exactly to an Ising
+chain in a transverse field. That test addresses robustness beyond the
+exact conjugation family; it is a separate task, not a claim proved
+here.</p>
+<h2 id="source-and-verification-scope">Source and verification
+scope</h2>
+<p>Seifnashri and Shao, <em>Cluster state as a non-invertible symmetry
+protected topological phase</em>, <a
+href="https://arxiv.org/html/2404.01369v2">arXiv:2404.01369v2</a>,
+Introduction Eqs. (1)–(3), supplies the periodic cluster Hamiltonian,
+its unique gapped ground state and the controlled-Z entangler. The
+source normalizes the Hamiltonian as <span
+class="math inline">\(-\sum_jK_j\)</span>; ours adds <span
+class="math inline">\(NJ/2\)</span> times identity and multiplies by
+<span class="math inline">\(J/2\)</span>, so its dimensionless
+single-defect cost 2 becomes energy <span
+class="math inline">\(J\)</span>. Reading coverage: that introductory
+passage only, checked as primary HTML on 2026-09-14; later symmetry
+results were not audited. One discovery query and one primary-page read
+suffice for this established-model reuse.</p>
+<p>The written checks above cover conjugation, complete eigenbasis, gap
+attainment, Schmidt coefficients and missing-boundary degeneracy. No new
+ledger claim, novelty claim or computational verification is
+introduced.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The weak-coupling gap in a small box reduces to three inequalities through the Schur complement</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The weak-coupling gap in a small box reduces to three inequalities
+through the Schur complement</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/weak-coupling-feshbach-reduction.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/weak-coupling-feshbach-reduction.pdf">PDF</a></p><p>A lower bound <span
+class="math inline">\(\Delta\ge\delta_1^{(3)}g^{2/3}(1-Cg^{2/3})\,\hbar
+c/L\)</span> for the torus Hamiltonian with a momentum cutoff follows
+from a proved gap-transfer lemma and three inequalities about polynomial
+operators on finitely many oscillators. The lemma: if <span
+class="math inline">\(P\)</span> is an orthogonal projection, <span
+class="math inline">\(D=\bar PH\bar P\ge\mu\)</span> on <span
+class="math inline">\(\operatorname{ran}\bar P\)</span>, and the
+Schur-complement error <span class="math inline">\(\eta=\sup_{E\le
+a_1}\|(D-E)^{-1/2}\bar PHP\|^2\)</span> satisfies <span
+class="math inline">\(a_1-\eta&lt;\mu\)</span>, then the two lowest
+eigenvalues of <span class="math inline">\(H\)</span> obey <span
+class="math inline">\(a_0-\eta\le E_0\le a_0\)</span> and <span
+class="math inline">\(E_1\ge a_1-\eta\)</span>, so <span
+class="math inline">\(\operatorname{gap}(H)\ge\operatorname{gap}(PHP)-\eta\)</span>.
+Applied with <span class="math inline">\(P\)</span> the projection onto
+the ground state of the nonzero momentum modes, the three inequalities
+are: (H1) exciting any nonzero mode costs at least <span
+class="math inline">\((2\pi\hbar c/L)(1-Cg^{2/3})\)</span> in the
+presence of the constant modes and the couplings; (H2) the coupling
+between the constant-mode sector and the excited nonzero-mode sector has
+Schur error <span class="math inline">\(\eta\le Cg^{4/3}\hbar
+c/L\)</span>, which requires the projection to follow the constant mode
+(Section 3a) and a gauge-invariant cutoff; (H3) the effective
+constant-mode Hamiltonian <span class="math inline">\(PHP\)</span>,
+which is C133’s operator plus the nonzero-mode zero-point energy as a
+function of the constant modes, has gap <span
+class="math inline">\(\ge\delta_1^{(3)}g^{2/3}(1-Cg^{2/3})\hbar
+c/L\)</span>. The scaling analysis of the cubic and quartic couplings
+shows why each inequality is expected with the stated powers, and
+identifies the smallness parameter as <span
+class="math inline">\(g^{2/3}\)</span>, Lüscher’s expansion parameter.
+The lemma is proved; the three inequalities are the open content of the
+lower side of the small-volume corner. Constants are kept explicit with
+the conventions of <a href="low-dimensional-mass-gap.html">G07</a>
+Proposition 7: <span class="math inline">\(g\)</span> dimensionless,
+fields of dimension inverse length, every energy a multiple of <span
+class="math inline">\(\hbar c/L\)</span>. Nothing here is promoted.</p>
+<h2 id="the-gap-transfer-lemma">1. The gap-transfer lemma</h2>
+<p>Let <span class="math inline">\(H\)</span> be self-adjoint, bounded
+below, with compact resolvent on a Hilbert space <span
+class="math inline">\(\mathcal H\)</span>, and <span
+class="math inline">\(P\)</span> an orthogonal projection with <span
+class="math inline">\(P\,D(H)\subset D(H)\)</span>; write <span
+class="math inline">\(\bar P=1-P\)</span>, <span
+class="math inline">\(A=PHP|_{\operatorname{ran}P}\)</span>, <span
+class="math inline">\(D=\bar PH\bar P|_{\operatorname{ran}\bar
+P}\)</span>, <span class="math inline">\(B=PH\bar P\)</span>. Let <span
+class="math inline">\(a_0\le a_1\le\cdots\)</span> be the eigenvalues of
+<span class="math inline">\(A\)</span> and <span
+class="math inline">\(E_0\le E_1\le\cdots\)</span> those of <span
+class="math inline">\(H\)</span>.</p>
+<p><strong>Lemma 1.</strong> Suppose <span
+class="math inline">\(D\ge\mu\)</span> and, for some <span
+class="math inline">\(\eta\ge0\)</span>, <span
+class="math inline">\(\|(D-E)^{-1/2}B^*\|^2\le\eta\)</span> for all
+<span class="math inline">\(E\le a_1\)</span>, with <span
+class="math inline">\(a_1&lt;\mu\)</span>. Then <span
+class="math display">\[a_0-\eta\le E_0\le a_0,\qquad E_1\ge
+a_1-\eta,\qquad
+E_1-E_0\ \ge\ (a_1-a_0)-\eta .\]</span></p>
+<p><em>Proof.</em> For <span class="math inline">\(E&lt;\mu\)</span>,
+<span class="math inline">\(D-E\)</span> is invertible and the Schur
+complement of <span class="math inline">\(H-E\)</span> with respect to
+the decomposition <span
+class="math inline">\(\operatorname{ran}P\oplus\operatorname{ran}\bar
+P\)</span> is <span
+class="math inline">\(F(E)=A-E-B(D-E)^{-1}B^*\)</span> on <span
+class="math inline">\(\operatorname{ran}P\)</span>. The block
+factorization <span
+class="math display">\[H-E=\begin{pmatrix}1&amp;B(D-E)^{-1}\\0&amp;1\end{pmatrix}
+\begin{pmatrix}F(E)&amp;0\\0&amp;D-E\end{pmatrix}
+\begin{pmatrix}1&amp;0\\(D-E)^{-1}B^*&amp;1\end{pmatrix}\]</span> is a
+congruence, so by Sylvester’s law of inertia (the number of negative
+eigenvalues, finite here because <span class="math inline">\(H\)</span>
+has compact resolvent and <span class="math inline">\(E&lt;\mu\le\inf
+D\)</span>) the number of eigenvalues of <span
+class="math inline">\(H\)</span> below <span
+class="math inline">\(E\)</span> equals the number of negative
+eigenvalues of <span class="math inline">\(F(E)\)</span>, since <span
+class="math inline">\(D-E&gt;0\)</span> contributes none. The hypothesis
+gives <span class="math inline">\(0\le B(D-E)^{-1}B^*\le\eta\)</span>,
+hence <span class="math inline">\(A-E-\eta\le F(E)\le A-E\)</span> and,
+by min-max, the number of negative eigenvalues of <span
+class="math inline">\(F(E)\)</span> lies between <span
+class="math inline">\(\#\{k:a_k&lt;E\}\)</span> and <span
+class="math inline">\(\#\{k:a_k&lt;E+\eta\}\)</span>. Taking <span
+class="math inline">\(E\)</span> slightly above <span
+class="math inline">\(a_0\)</span> shows <span
+class="math inline">\(E_0\le a_0\)</span>; taking <span
+class="math inline">\(E=a_0-\eta\)</span> shows no eigenvalue of <span
+class="math inline">\(H\)</span> lies below <span
+class="math inline">\(a_0-\eta\)</span>; taking <span
+class="math inline">\(E=a_1-\eta\)</span> shows at most one eigenvalue
+of <span class="math inline">\(H\)</span> lies below <span
+class="math inline">\(a_1-\eta\)</span>, so <span
+class="math inline">\(E_1\ge a_1-\eta\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The lemma transfers a gap from the compressed operator <span
+class="math inline">\(PHP\)</span> to <span
+class="math inline">\(H\)</span> at the price <span
+class="math inline">\(\eta\)</span>, which is the size of the coupling
+between <span class="math inline">\(\operatorname{ran}P\)</span> and its
+complement measured against the energy <span
+class="math inline">\(D-E\)</span> needed to leave <span
+class="math inline">\(\operatorname{ran}P\)</span>. Everything below is
+the choice of <span class="math inline">\(P\)</span> and the estimation
+of <span class="math inline">\(a_1-a_0\)</span>, <span
+class="math inline">\(\mu\)</span> and <span
+class="math inline">\(\eta\)</span>.</p>
+<h2 id="the-cutoff-torus-hamiltonian-and-the-projection">2. The cutoff
+torus Hamiltonian and the projection</h2>
+<p>On <span class="math inline">\(T^3_L\)</span> in temporal gauge, with
+<span class="math inline">\(SU(2)\)</span> for definiteness, momentum
+cutoff <span class="math inline">\(|k|\le\Lambda\)</span> and the
+convention of G07 Proposition 7 (<span
+class="math inline">\(S=-\frac1{4g^2}\int F^aF^a\)</span>), decompose
+<span class="math inline">\(A_i(x)=a_i+\tilde A_i(x)\)</span> into the
+constant mode and the nonzero modes <span class="math inline">\(\tilde
+A_i(x)=L^{-3}\sum_{0&lt;|k|\le\Lambda}\hat A_i(k)e^{ik\cdot x}\)</span>,
+with conjugate momenta <span class="math inline">\(p_i\)</span> and
+<span class="math inline">\(\tilde\Pi_i\)</span>. Then <span
+class="math display">\[H=H_0+H_\perp+W,\]</span> <span
+class="math display">\[H_0=\frac{g^2c}{2\hbar L^3}\sum_i|\vec
+p_i|^2+\frac{\hbar cL^3}{2g^2}\sum_{i&lt;j}|\vec a_i\times\vec
+a_j|^2,\qquad
+H_\perp=\sum_{0&lt;|k|\le\Lambda}\Big[\frac{g^2c}{2\hbar}|\hat\Pi(k)|^2+\frac{\hbar
+c}{2g^2}|k\times\hat A(k)|^2\Big]\]</span> (with <span
+class="math inline">\([a^a_i,p^b_j]=i\hbar\delta_{ij}\delta^{ab}\)</span>
+and the corresponding normalization of <span
+class="math inline">\(\hat\Pi\)</span>, so that the free part has
+energies <span class="math inline">\(\hbar c|k|\)</span>), and <span
+class="math inline">\(W\)</span> collects every term of <span
+class="math inline">\(\frac{\hbar c}{2g^2}\int|F_{ij}|^2\)</span> that
+is neither purely constant-mode nor quadratic in <span
+class="math inline">\(\tilde A\)</span> at <span
+class="math inline">\(a=0\)</span>: <span
+class="math display">\[W=W_2+W_3+W_4,\quad
+W_2=\frac{\hbar c}{g^2}\int\big(\partial_i\tilde A_j-\partial_j\tilde
+A_i\big)\cdot\big([a_i,\tilde A_j]-[a_j,\tilde A_i]\big)+\frac{\hbar
+c}{2g^2}\int\big|[a_i,\tilde A_j]-[a_j,\tilde A_i]\big|^2,\]</span>
+<span class="math display">\[W_3=\frac{\hbar c}{g^2}\int\bar
+F_{ij}\cdot[\tilde A_i,\tilde A_j],\qquad
+\bar F_{ij}=\partial_i\tilde A_j-\partial_j\tilde A_i+[a_i,\tilde
+A_j]-[a_j,\tilde A_i]+[a_i,a_j],\]</span> <span
+class="math display">\[W_4=\frac{\hbar c}{2g^2}\int\big|[\tilde
+A_i,\tilde A_j]\big|^2 ,\]</span> where the purely constant part <span
+class="math inline">\(\frac{\hbar cL^3}{2g^2}|[a_i,a_j]|^2\)</span> of
+<span class="math inline">\(\frac{\hbar c}{2g^2}\int|F|^2\)</span> is in
+<span class="math inline">\(H_0\)</span> and <span
+class="math inline">\(W_4\)</span> is quartic in the nonzero modes. The
+Gauss constraint is imposed on states; the constant gauge
+transformations act on <span class="math inline">\(a_i\)</span> by the
+adjoint action and on the nonzero modes covariantly, and the nonconstant
+ones are fixed by keeping the transverse nonzero modes, the standard
+small-volume gauge choice.</p>
+<p>Let <span class="math inline">\(\Omega_\perp\)</span> be the ground
+state of <span class="math inline">\(H_\perp\)</span>, the Gaussian
+vacuum of the free transverse modes, with energy <span
+class="math inline">\(E_\perp=\hbar c\sum_k|k|\)</span> (a constant that
+cancels from gaps) and first excitation energy <span
+class="math inline">\(\mu_\perp=2\pi\hbar c/L\)</span>. Set <span
+class="math display">\[P=1_{\text{const}}\otimes|\Omega_\perp\rangle\langle\Omega_\perp|
+.\]</span> <span class="math inline">\(P\)</span> commutes with the
+constant gauge transformations because <span
+class="math inline">\(\Omega_\perp\)</span> is invariant under them, so
+Lemma 1 can be applied inside the physical sector. The compression is
+<span
+class="math display">\[A=PHP=H_0+\langle\Omega_\perp,W\Omega_\perp\rangle(a)+E_\perp,\]</span>
+where <span
+class="math inline">\(\langle\Omega_\perp,W_2\Omega_\perp\rangle(a)\)</span>
+is a function of the constant modes only (the Gaussian expectation of a
+quadratic form in <span class="math inline">\(\tilde A\)</span> with
+<span class="math inline">\(a\)</span>-dependent coefficients), <span
+class="math inline">\(\langle W_3\rangle\)</span> vanishes (odd in <span
+class="math inline">\(\tilde A\)</span>), and <span
+class="math inline">\(\langle W_4\rangle\)</span> is a constant. Thus
+<span class="math inline">\(A\)</span> is C133’s operator plus a
+potential <span class="math inline">\(U(a)=\langle
+W_2\rangle(a)\)</span>, which is the leading change of the nonzero-mode
+zero-point energy with the constant background.</p>
+<h2 id="the-three-inequalities-and-their-expected-sizes">3. The three
+inequalities and their expected sizes</h2>
+<p>Rescale <span class="math inline">\(\vec
+a_i=g^{2/3}L^{-1}\vec\xi_i\)</span> and <span class="math inline">\(\hat
+A(k)=g\,\hat A&#39;(k)\)</span> so that <span
+class="math inline">\(H_0=g^{2/3}(\hbar c/L)\,h_3(\xi)\)</span> with
+<span class="math inline">\(h_3\)</span> the unit operator of C133 and
+<span class="math inline">\(H_\perp\)</span> is <span
+class="math inline">\(g\)</span>-independent in the primed variables.
+Then, counting powers of <span class="math inline">\(g\)</span> at fixed
+<span class="math inline">\(L\)</span> and at typical values <span
+class="math inline">\(|\xi|=O(1)\)</span>, <span
+class="math inline">\(|\hat A&#39;|=O(1)\)</span>:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>term</th>
+<th>order in units of <span class="math inline">\(\hbar
+c/L\)</span></th>
+<th>role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(H_0\)</span></td>
+<td><span class="math inline">\(g^{2/3}\)</span></td>
+<td>the gap to be transferred</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H_\perp\)</span> excitations</td>
+<td><span class="math inline">\(\ge2\pi\)</span></td>
+<td>the energy <span class="math inline">\(\mu\)</span> of leaving <span
+class="math inline">\(\operatorname{ran}P\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(W_2\)</span>, linear in <span
+class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(g^{2/3}\)</span></td>
+<td>enters <span class="math inline">\(U(a)\)</span> and <span
+class="math inline">\(B\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(W_2\)</span>, quadratic in <span
+class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(g^{4/3}\)</span></td>
+<td>enters <span class="math inline">\(U(a)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(W_3\)</span>, term with <span
+class="math inline">\(\partial\tilde A\)</span></td>
+<td><span class="math inline">\(g\)</span></td>
+<td>enters <span class="math inline">\(B\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(W_3\)</span>, terms with <span
+class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(g^{5/3}\)</span>, <span
+class="math inline">\(g^{7/3}\)</span></td>
+<td>enters <span class="math inline">\(B\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(W_4\)</span></td>
+<td><span class="math inline">\(g^2\)</span></td>
+<td>enters <span class="math inline">\(A\)</span> and <span
+class="math inline">\(D\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>With these sizes the three inequalities that Lemma 1 needs are:</p>
+<blockquote>
+<p><strong>(H1)</strong> <span class="math inline">\(D=\bar PH\bar P\
+\ge\ E_\perp+\frac{2\pi\hbar c}{L}(1-C_1g^{2/3})\)</span> on &gt; <span
+class="math inline">\(\operatorname{ran}\bar P\)</span>: any state with
+an excited nonzero mode costs &gt; at least one quantum <span
+class="math inline">\(2\pi\hbar c/L\)</span> up to the shift produced by
+<span class="math inline">\(W\)</span> in a background <span
+class="math inline">\(|a|\sim g^{2/3}/L\)</span>.</p>
+</blockquote>
+<blockquote>
+<p><strong>(H2)</strong> <span class="math inline">\(\eta=\sup_{E\le
+a_1}\|(D-E)^{-1/2}\bar PWP\|^2\ \le\ C_2\,g^{4/3}\hbar c/L\)</span>.
+&gt; The leading contribution is the <span
+class="math inline">\(W_2\)</span> term linear in <span
+class="math inline">\(a\)</span> (order &gt; <span
+class="math inline">\(g^{2/3}\hbar c/L\)</span>, creating one or two
+nonzero quanta) squared and &gt; divided by <span
+class="math inline">\(2\pi\hbar c/L\)</span>; the <span
+class="math inline">\(W_3\)</span> term of order <span
+class="math inline">\(g\hbar c/L\)</span> &gt; contributes <span
+class="math inline">\(g^2\hbar c/L\)</span>.</p>
+</blockquote>
+<blockquote>
+<p><strong>(H3)</strong> <span
+class="math inline">\(\operatorname{gap}(A)=\operatorname{gap}\big(H_0+U(a)\big)\
+\ge\ \delta_1^{(3)}g^{2/3}(1-C_3g^{2/3})\,\hbar c/L\)</span>. &gt; <span
+class="math inline">\(U(a)\)</span> is even in <span
+class="math inline">\(a\)</span> (charge conjugation), its linear term
+vanishes, &gt; and its quadratic term is of order <span
+class="math inline">\(g^{4/3}\hbar c/L\)</span>, a relatively bounded
+perturbation of <span class="math inline">\(h_3\)</span> in the rescaled
+variables.</p>
+</blockquote>
+<p>Given (H1)–(H3), Lemma 1 with <span
+class="math inline">\(\mu=E_\perp+\frac{2\pi\hbar
+c}{L}(1-C_1g^{2/3})\)</span> and <span
+class="math inline">\(a_1-\eta&lt;\mu\)</span> (true for small <span
+class="math inline">\(g\)</span> since <span
+class="math inline">\(a_1-a_0=O(g^{2/3}\hbar c/L)\)</span> and <span
+class="math inline">\(a_0-E_\perp=O(g^{2/3}\hbar c/L)\)</span>) yields
+<span class="math display">\[\Delta\ \ge\
+\delta_1^{(3)}\,g^{2/3}\,\frac{\hbar
+c}{L}\,\big(1-Cg^{2/3}\big).\]</span> This is the lower side of the
+small-volume corner S, matching the upper side obtained in <a
+href="polyakov-average-gap-bound.html">the Polyakov-average note</a> up
+to pure numbers, and it is the leading term of Lüscher’s expansion
+(abstract, B78) as a two-sided bound.</p>
+<h2
+id="a.-correction-the-projection-must-follow-the-constant-mode-and-the-cutoff-must-be-gauge-invariant">3a.
+Correction: the projection must follow the constant mode, and the cutoff
+must be gauge invariant</h2>
+<p>The counting in the table is right for the sizes of the operators but
+(H2) fails for the projection <span class="math inline">\(P\)</span> of
+Section 2 when the cutoff is a sharp momentum cutoff. The term of <span
+class="math inline">\(W_2\)</span> linear in <span
+class="math inline">\(a\)</span> creates pairs of nonzero quanta <span
+class="math inline">\((k,-k)\)</span> from <span
+class="math inline">\(\Omega_\perp\)</span> with amplitude of order
+<span class="math inline">\(g^{2/3}|\xi|/L\)</span> for every <span
+class="math inline">\(k\)</span>, so <span class="math inline">\(\|\bar
+PW_2P\psi\|^2\sim(g^{4/3}/L^2)(\Lambda L)^3|\xi|^2\)</span> and, after
+dividing by the pair energy <span class="math inline">\(2|k|\)</span>,
+<span class="math display">\[\eta\ \sim\ \frac{g^{4/3}\hbar
+c}{L^2}\sum_{0&lt;|k|\le\Lambda}\frac{|\xi|^2}{2|k|} \ \sim\
+\frac{g^{4/3}\hbar c}{L}\,(\Lambda L)^2\,|\xi|^2 ,\]</span>
+quadratically divergent in the cutoff. This is the second-order energy
+shift <span class="math inline">\(-c\,|a|^2\Lambda^2L^3\)</span> of the
+constant mode. A quadratic term in <span
+class="math inline">\(a\)</span> is allowed by the constant gauge
+transformations, which act by conjugation and leave <span
+class="math inline">\(\operatorname{tr}a_i^2\)</span> invariant, and the
+exact one-loop potential of the constant modes on the torus does contain
+one: the sum <span
+class="math inline">\(\tfrac12\sum_k[\omega_k(a)-\omega_k(0)]\)</span>
+is a periodic function of the holonomy angles <span
+class="math inline">\(La_i\)</span> (shift of the summation variable),
+so its small-<span class="math inline">\(a\)</span> expansion is <span
+class="math inline">\(\hbar c\,[c_2(La)^2/L+O((La)^4/L)]\)</span> with a
+finite pure number <span class="math inline">\(c_2\)</span>, the
+Casimir-type Weiss potential, of order <span
+class="math inline">\(g^{4/3}\hbar c/L\)</span> in the rescaled
+variables and cutoff independent. The quadratic <span
+class="math inline">\(\Lambda^2\)</span> divergence above is an artefact
+of the sharp momentum cutoff, which breaks the periodicity in <span
+class="math inline">\(La\)</span>; a periodic (lattice) cutoff, or any
+regularization compatible with the large gauge transformations, gives
+the finite coefficient. Two changes make the reduction usable.</p>
+<p><em>Fibered projection.</em> <span
+class="math inline">\(H_\perp+W_2\)</span> is quadratic in <span
+class="math inline">\(\tilde A\)</span> at fixed <span
+class="math inline">\(a\)</span>, so it has, for <span
+class="math inline">\(|a|\)</span> small against <span
+class="math inline">\(2\pi/L\)</span>, a Gaussian ground state <span
+class="math inline">\(\Omega_\perp(a)\)</span> with frequencies <span
+class="math inline">\(\omega_k(a)\)</span>, the spectrum of the
+covariant transverse curl in the constant background (for non-commuting
+<span class="math inline">\(a_i\)</span> the background carries a
+constant field strength and the lowest shifted frequency is the
+Nielsen–Olesen mode, <span
+class="math inline">\(\omega^2=(2\pi/L)^2-c\,|[a,a]|\)</span>, still
+positive when <span class="math inline">\(g^{4/3}\ll(2\pi)^2\)</span>).
+Take <span class="math display">\[P=\int^\oplus
+da\;|\Omega_\perp(a)\rangle\langle\Omega_\perp(a)| ,\]</span> the
+Born–Oppenheimer projection. Then <span
+class="math inline">\(W_2\)</span> is absorbed exactly, the compression
+is <span class="math display">\[A=PHP=H_0+U(a)+\text{(non-adiabatic
+terms)},\qquad
+U(a)=\tfrac12\sum_k\big[\omega_k(a)-\omega_k(0)\big]+\text{const},\]</span>
+and <span class="math inline">\(U(a)\)</span> is the one-loop effective
+potential of the constant modes on the torus: even in <span
+class="math inline">\(a\)</span>, with the finite quadratic Casimir term
+<span class="math inline">\(c_2(La)^2/L\)</span>, a finite quartic term,
+and a quartic term <span
+class="math inline">\(\propto|[a,a]|^2\log(\Lambda L)\)</span> that
+renormalizes <span class="math inline">\(1/g^2\)</span>. In rescaled
+variables the finite part of <span class="math inline">\(U\)</span> is
+<span class="math inline">\(O(g^{4/3}/L)\)</span> and the logarithm is
+<span class="math inline">\(O(g^{4/3}\cdot g^{2}\log\Lambda
+L\,/L)\)</span> relative to <span class="math inline">\(H_0\)</span>’s
+<span class="math inline">\(g^{2/3}/L\)</span>: (H3) holds with <span
+class="math inline">\(g\)</span> understood as the renormalized coupling
+at the scale <span class="math inline">\(L\)</span>, which is Lüscher’s
+statement. With a periodic cutoff the <span
+class="math inline">\(a\)</span>-independent projection of Section 2
+also works at the level of sizes, since its second-order Schur term is
+the same finite Casimir sum; the fibered projection is cleaner because
+it removes <span class="math inline">\(W_2\)</span> from the error
+altogether. The non-adiabatic terms come from <span
+class="math inline">\(p_i\)</span> acting on <span
+class="math inline">\(\Omega_\perp(a)\)</span> (the Berry connection of
+the fibered vacuum) and are of relative order <span
+class="math inline">\(g^{4/3}\)</span>.</p>
+<p><em>Schur error.</em> With the fibered <span
+class="math inline">\(P\)</span>, <span class="math inline">\(\bar
+PWP\)</span> contains only <span class="math inline">\(W_3\)</span>,
+<span class="math inline">\(W_4\)</span> and the non-adiabatic terms.
+<span class="math inline">\(W_3\)</span> creates three quanta with
+amplitude of order <span class="math inline">\(g/L\)</span> per mode
+triple, and its second-order contribution is the <span
+class="math inline">\(a\)</span>-dependent part of a two-loop vacuum
+energy, whose divergent part is <span
+class="math inline">\(a\)</span>-independent and cancels from the gap;
+the finite <span class="math inline">\(a\)</span>-dependent part is of
+order <span class="math inline">\(g^2\hbar c/L\)</span>. (H2) is
+therefore expected in the form <span class="math inline">\(\eta\le
+C_2g^{4/3}(1+g^{2/3}\log\Lambda L)\,\hbar c/L\)</span>, with a
+gauge-invariant cutoff, and the constants <span
+class="math inline">\(C_i\)</span> grow with <span
+class="math inline">\(\log(L/a)\)</span> on a lattice: the reduction
+holds at fixed cutoff, and the cutoff dependence is exactly the running
+of the coupling.</p>
+<p><em>Relative form of the lemma.</em> The constant-mode coordinate
+<span class="math inline">\(\xi\)</span> is unbounded and the pair
+amplitudes grow with <span class="math inline">\(|\xi|\)</span>, so
+<span class="math inline">\(\eta\)</span> cannot be a uniform operator
+bound; the usable hypothesis is relative to <span
+class="math inline">\(A\)</span>: <span
+class="math inline">\(B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta\)</span>
+with <span class="math inline">\(0\le\epsilon&lt;1\)</span>. Then <span
+class="math inline">\(F(E)\ge(1-\epsilon)(A-a_0)+a_0-E-\eta\)</span>,
+the count of negative eigenvalues of <span
+class="math inline">\(F(E)\)</span> is at most <span
+class="math inline">\(\#\{k:a_0+(1-\epsilon)(a_k-a_0)-\eta&lt;E\}\)</span>,
+and the same argument gives <span class="math inline">\(E_0\ge
+a_0-\eta\)</span>, <span class="math inline">\(E_1\ge
+a_0+(1-\epsilon)(a_1-a_0)-\eta\)</span>, hence <span
+class="math inline">\(\operatorname{gap}(H)\ge(1-\epsilon)(a_1-a_0)-\eta\)</span>.
+The confining potential of <span class="math inline">\(h_3\)</span>
+controls <span class="math inline">\(\langle|\xi|^2\rangle\)</span> in
+terms of <span class="math inline">\(A-a_0\)</span>, which is what makes
+<span class="math inline">\(\epsilon\)</span> small, of order <span
+class="math inline">\(g^{2/3}\)</span>.</p>
+<p>The corrected list is: (H1) as before for <span
+class="math inline">\(H_\perp(a)\)</span>; (H2) in the relative form for
+the fibered Schur error; (H3) for <span
+class="math inline">\(h_3+U\)</span> with <span
+class="math inline">\(U\)</span> the finite one-loop torus potential
+including its Casimir quadratic term.</p>
+<h2 id="what-the-reduction-shows">4. What the reduction shows</h2>
+<p>The smallness parameter is <span
+class="math inline">\(g^{2/3}\)</span> in every entry of the table,
+which is the reason the small-volume expansion is a series in <span
+class="math inline">\(g^{2/3}\)</span>. The mechanism transferred is the
+zero-point confinement of C133: <span class="math inline">\(A\)</span>
+is that operator plus a small even potential, and the nonzero modes
+enter only through the price <span class="math inline">\(\eta\)</span>
+of leaving their vacuum. The reduction also shows where the small-volume
+regime ends: (H1) fails when <span
+class="math inline">\(C_1g(L)^{2/3}\)</span> reaches order one, that is
+when <span class="math inline">\(\Delta_0(L)\sim2\pi\hbar c/L\)</span>,
+which is the crossover <span class="math inline">\(z\simeq2\)</span> of
+Lüscher–Münster in the variable <span class="math inline">\(z=\Delta
+L\)</span>. Beyond it, leaving the nonzero-mode vacuum is no longer
+expensive compared with the constant-mode gap, no projection of the form
+<span class="math inline">\(P\)</span> separates scales, and the
+argument gives nothing, which is the statement of T2<span
+class="math inline">\(&#39;\)</span>’s difficulty in this language.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The weak-coupling lower bound is now three inequalities on explicit
+polynomial operators, with a proved transfer lemma. The next step on the
+lower side is the fibered (H2): the non-adiabatic terms and the <span
+class="math inline">\(W_3\)</span> Schur error against the nonzero-mode
+gap, on a lattice cutoff, with the C133 ground state as weight; (H1) and
+(H3) are relatively bounded perturbation statements, (H3) requiring the
+finite one-loop torus potential. Their proof would close the
+small-volume corner S from both sides and make the crossover statement
+the whole remaining content of T2<span
+class="math inline">\(&#39;\)</span> at fixed cutoff.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

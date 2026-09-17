@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Schur error of the small-volume reduction is an ultraviolet problem: a fixed-lattice theorem is available, the renormalized regime is not</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The Schur error of the small-volume reduction is an ultraviolet
+problem: a fixed-lattice theorem is available, the renormalized regime
+is not</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/schur-error-ultraviolet.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/schur-error-ultraviolet.pdf">PDF</a></p><p>Inequality (H2) of <a
+href="weak-coupling-feshbach-reduction.html">the Feshbach reduction</a>
+is estimated here at second order with the fibered vacuum, on the
+abelian valley and with the cutoff <span
+class="math inline">\(\Lambda\)</span> kept explicit. Two terms have
+different characters. The non-adiabatic (Berry) coupling, produced by
+the constant-mode momentum acting on the <span
+class="math inline">\(a\)</span>-dependent Gaussian vacuum, has Schur
+error <span class="math display">\[\eta_{\rm Berry}\ \simeq\
+\frac{g^{8/3}}{96\pi^2}\,\log(\Lambda
+L)\,\langle|\partial_\xi\psi|^2\rangle\,\frac{\hbar c}{L},\]</span> of
+relative order <span class="math inline">\(g^2\log(\Lambda L)\)</span>
+to the zero-mode gap <span class="math inline">\(g^{2/3}\hbar
+c/L\)</span>: logarithmic, and of the size and form of the one-loop
+renormalization of the coupling, so it is absorbed by writing the gap in
+terms of <span class="math inline">\(g(L)\)</span>. The cubic coupling
+<span class="math inline">\(W_3\)</span> produces at second order a
+constant vacuum shift <span class="math inline">\(\eta_0\sim g^2(\hbar
+c/L)(\Lambda L)^4\)</span> and an energy derivative <span
+class="math inline">\(d\eta_0/dE\sim g^2(\Lambda L)^2\)</span>; the
+shift cancels from the gap, but the derivative rescales it, and the
+transfer lemma holds only when <span class="math inline">\(g^2(\Lambda
+L)^2\ll1\)</span>, that is <span
+class="math inline">\(g\ll1/N_s\)</span> on a lattice of <span
+class="math inline">\(N_s\)</span> sites per side. Consequently the
+reduction proves the small-volume gap <span
+class="math inline">\(\Delta\ge\delta_1^{(3)}g^{2/3}(1-o(1))\hbar
+c/L\)</span> as a fixed-lattice theorem, in the regime <span
+class="math inline">\(g\to0\)</span> at fixed <span
+class="math inline">\(N_s\)</span>, and does not reach the regime <span
+class="math inline">\(g^2\log N_s\ll1\)</span> of the renormalized
+expansion, where the bare Gaussian fiber is far from the true
+nonzero-mode vacuum. The small-volume corner is therefore an ultraviolet
+problem at fixed <span class="math inline">\(L\)</span>: its control
+uniformly in the cutoff is a renormalization theorem, the same
+obligation as T4 of <a href="mass-gap-obligations-lattice.html">the
+obligations map</a>. The route’s step 1 splits accordingly into a
+provable fixed-lattice statement and a renormalized statement that needs
+vacuum dressing. Constants explicit throughout; nothing here is
+promoted.</p>
+<h2 id="the-refined-transfer-lemma-with-a-constant-shift">1. The refined
+transfer lemma with a constant shift</h2>
+<p>Lemma 1 of the Feshbach note bounds the Schur term <span
+class="math inline">\(S(E)=B(D-E)^{-1}B^*\)</span> by a constant. When
+<span class="math inline">\(S(E)\)</span> contains a large part
+proportional to the identity, that part shifts all eigenvalues of the
+compression equally and must not be charged to the gap.</p>
+<p><strong>Lemma 1<span class="math inline">\(&#39;\)</span>.</strong>
+In the setting of Lemma 1 suppose that for <span
+class="math inline">\(E\in I=[a_0-\eta_1-\bar\eta_0,\,a_1]\)</span>,
+<span class="math display">\[S(E)=\eta_0(E)\,1+R(E),\qquad 0\le
+R(E)\le\epsilon(A-a_0)+\eta_1,\]</span> with <span
+class="math inline">\(\eta_0\)</span> a nonnegative nondecreasing
+function, <span class="math inline">\(\bar\eta_0=\sup_I\eta_0\)</span>,
+<span class="math inline">\(0\le\epsilon&lt;1\)</span>, and <span
+class="math inline">\(\eta_0(E)\)</span> differentiable with <span
+class="math inline">\(0\le\eta_0&#39;(E)\le\theta&lt;1\)</span> on <span
+class="math inline">\(I\)</span>. Then <span
+class="math display">\[E_1-E_0\ \ge\
+\frac{(1-\epsilon)(a_1-a_0)-2\eta_1}{1+\theta}.\]</span></p>
+<p><em>Proof.</em> <span
+class="math inline">\(F(E)=A-E-\eta_0(E)-R(E)\)</span>. The count of
+negative eigenvalues of <span class="math inline">\(F(E)\)</span> lies
+between the counts of <span
+class="math inline">\(A-E-\eta_0(E)-\epsilon(A-a_0)-\eta_1\)</span> and
+<span class="math inline">\(A-E-\eta_0(E)\)</span>. Write <span
+class="math inline">\(\tilde E=E+\eta_0(E)\)</span>, which is increasing
+in <span class="math inline">\(E\)</span> with <span
+class="math inline">\(d\tilde E/dE\le1+\theta\)</span>. The bounds show
+that <span class="math inline">\(E_0\)</span> is the solution of <span
+class="math inline">\(\tilde E=e_0\)</span> with <span
+class="math inline">\(e_0\in[a_0-\eta_1,a_0]\)</span> and <span
+class="math inline">\(E_1\)</span> the solution of <span
+class="math inline">\(\tilde E=e_1\)</span> with <span
+class="math inline">\(e_1\ge a_0+(1-\epsilon)(a_1-a_0)-\eta_1\)</span>;
+since <span class="math inline">\(\tilde E\)</span> has slope at most
+<span class="math inline">\(1+\theta\)</span>, <span
+class="math inline">\(E_1-E_0\ge(e_1-e_0)/(1+\theta)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The constant shift costs nothing; its energy dependence costs the
+factor <span class="math inline">\(1/(1+\theta)\)</span>, and <span
+class="math inline">\(\theta\)</span> is the quantity that the cubic
+coupling makes large.</p>
+<h2
+id="the-fibered-vacuum-and-its-a-derivative-on-the-abelian-valley">2.
+The fibered vacuum and its <span
+class="math inline">\(a\)</span>-derivative on the abelian valley</h2>
+<p>On the abelian valley of <a href="torus-valley-potential.html">the
+valley note</a>, <span class="math inline">\(a=\alpha T^3\)</span>, the
+charged modes at momentum <span class="math inline">\(k\)</span> have
+energies <span class="math inline">\(\hbar\omega_k^{(\pm)}=\hbar c|k\pm
+a|\)</span> and the fibered vacuum is the product of Gaussians <span
+class="math inline">\(\Omega_\perp(a)=\prod_k\Omega_k(a)\)</span> with
+<span
+class="math inline">\(\Omega_k\propto\exp[-\omega_k(a)|q_k|^2/(2\hbar\cdot\text{norm})]\)</span>
+in the real mode coordinates <span class="math inline">\(q_k\)</span> of
+each polarization and charge. For a single oscillator of frequency <span
+class="math inline">\(\omega\)</span> the derivative of the normalized
+ground state with respect to <span class="math inline">\(\omega\)</span>
+is <span
+class="math inline">\(\partial_\omega\Omega=-\frac{1}{2\sqrt2\,\omega}\,\Omega_2\)</span>,
+with <span class="math inline">\(\Omega_2\)</span> the normalized second
+excited state, so <span class="math display">\[\bar
+P\,\partial_{a_i}\Omega_\perp(a)=-\sum_{k,\pm,{\rm
+pol}}\frac{\partial_{a_i}\omega_k^{(\pm)}}{2\sqrt2\,\omega_k^{(\pm)}}\;\Omega_{k,2}\otimes\prod_{k&#39;\ne
+k}\Omega_{k&#39;},
+\qquad\frac{\partial_{a_i}\omega_k^{(\pm)}}{\omega_k^{(\pm)}}=\pm\frac{(k\pm
+a)_i}{|k\pm a|^2}.\]</span> Its norm squared is <span
+class="math inline">\(\sum_{k,\pm,{\rm pol}}\frac{(k\pm a)_i^2}{8|k\pm
+a|^4}\simeq\frac{2\cdot2}{8}\sum_k\frac{\hat k_i^2}{|k|^2}
+=\frac12\Big(\frac
+L{2\pi}\Big)^3\frac{4\pi}{3}\Lambda\,[1+O(a/\Lambda)]=\frac{L^3\Lambda}{12\pi^2}\)</span>,
+linearly divergent: the vacua at different <span
+class="math inline">\(a\)</span> are not close in norm as the cutoff is
+removed, which is the first sign that the fiber is
+ultraviolet-sensitive. What enters the Schur error is the same sum with
+the energy denominator, which converges better.</p>
+<h2 id="the-berry-term">3. The Berry term</h2>
+<p>The constant-mode kinetic operator <span
+class="math inline">\(\frac{g^2c}{2\hbar L^3}\sum_i|\vec p_i|^2\)</span>
+with <span class="math inline">\(p_i=-i\hbar\partial_{a_i}\)</span> acts
+on <span class="math inline">\(\psi(a)\Omega_\perp(a)\)</span> as <span
+class="math inline">\(\frac{g^2c}{2\hbar
+L^3}\big[(-\hbar^2\Delta_a\psi)\Omega_\perp-2\hbar^2(\partial_{a_i}\psi)(\partial_{a_i}\Omega_\perp)-\hbar^2\psi\,\Delta_a\Omega_\perp\big]\)</span>.
+The <span class="math inline">\(\bar P\)</span>-component of the middle
+term is the leading non-adiabatic coupling, <span
+class="math display">\[B_{\rm
+Berry}\,\psi=-\frac{g^2c\hbar}{L^3}\sum_i(\partial_{a_i}\psi)\,\bar
+P\,\partial_{a_i}\Omega_\perp .\]</span> Each two-quantum state <span
+class="math inline">\(\Omega_{k,2}\)</span> costs <span
+class="math inline">\(D-E\ge2\hbar\omega_k\)</span> above the fiber, so
+<span class="math display">\[\|(D-E)^{-1/2}B_{\rm Berry}\psi\|^2
+\simeq\Big(\frac{g^2c\hbar}{L^3}\Big)^2\sum_i\sum_{k,\pm,{\rm
+pol}}\frac{(k_i)^2}{8|k|^4\cdot2\hbar c|k|}\,|\partial_{a_i}\psi|^2
+=\frac{g^4c\hbar}{16L^6}\sum_i\Big(\sum_k\frac{\hat
+k_i^2}{|k|^3}\Big)|\partial_{a_i}\psi|^2 ,\]</span> with <span
+class="math inline">\(\sum_k\hat k_i^2|k|^{-3}\simeq\frac13\big(\frac
+L{2\pi}\big)^3
+4\pi\int_{2\pi/L}^{\Lambda}\frac{dk}{k}=\frac{L^3}{6\pi^2}\log\frac{\Lambda
+L}{2\pi}\)</span>. In the rescaled variable <span
+class="math inline">\(a=g^{2/3}\xi/L\)</span>, <span
+class="math inline">\(\partial_a=(L/g^{2/3})\partial_\xi\)</span>, and
+<span class="math display">\[\eta_{\rm Berry}\ \simeq\
+\frac{g^4c\hbar}{16L^6}\cdot\frac{L^3}{6\pi^2}\log(\Lambda
+L)\cdot\frac{L^2}{g^{4/3}}\,\langle|\partial_\xi\psi|^2\rangle
+=\frac{g^{8/3}}{96\pi^2}\,\log(\Lambda
+L)\,\langle|\partial_\xi\psi|^2\rangle\,\frac{\hbar c}{L}.\]</span>
+Since <span
+class="math inline">\(\langle|\partial_\xi\psi|^2\rangle\)</span> is
+controlled by the kinetic part of <span
+class="math inline">\(h_3\)</span>, this is a relative bound of the form
+<span class="math inline">\(R\le\epsilon(A-a_0)+\eta_1\)</span> with
+<span class="math inline">\(\epsilon\sim g^2\log(\Lambda
+L)/(96\pi^2)\)</span>. The logarithm is the ultraviolet signature of the
+vacuum polarization by the constant background; the one-loop coefficient
+of the running coupling for <span class="math inline">\(SU(2)\)</span>
+is <span class="math inline">\(b_0=11/(24\pi^2)\)</span>, and the Berry
+term is one of the contributions that together must reproduce it, which
+is the consistency check the renormalized expansion has to pass. Its
+size, relative order <span class="math inline">\(g^2\log(\Lambda
+L)\)</span>, is what “<span class="math inline">\(g\)</span> is the
+renormalized coupling at scale <span class="math inline">\(L\)</span>”
+absorbs; at fixed cutoff it is small for <span
+class="math inline">\(g^2\log N_s\ll1\)</span>.</p>
+<h2 id="the-cubic-coupling-constant-shift-and-slope">4. The cubic
+coupling: constant shift and slope</h2>
+<p><span class="math inline">\(W_3=\frac{\hbar c}{g^2}\int\bar
+F_{ij}\cdot[\tilde A_i,\tilde A_j]\)</span> with <span
+class="math inline">\(\tilde A=g\tilde A&#39;\)</span> creates three
+quanta from the fiber vacuum. With the mode normalization <span
+class="math inline">\(\tilde A&#39;\sim\sqrt{\hbar/(2\omega
+L^3)}(b+b^\dagger)\)</span> the amplitude for <span
+class="math inline">\((k,k&#39;,k&#39;&#39;)\)</span>, <span
+class="math inline">\(k+k&#39;+k&#39;&#39;=0\)</span>, is of order <span
+class="math inline">\(g\hbar c\,|k|\,(\hbar/(2\hbar
+c))^{3/2}L^{-3/2}(|k||k&#39;||k&#39;&#39;|)^{-1/2}\)</span> times colour
+factors, and the second-order shift is <span
+class="math display">\[\eta_0\ \sim\ g^2\hbar
+c\sum_{k,k&#39;}\frac{|k|^2/L^3}{|k||k&#39;||k&#39;&#39;|\,(|k|+|k&#39;|+|k&#39;&#39;|)}
+\ \sim\ g^2\hbar c\,L^3\Lambda^4\cdot{\rm const}=g^2\,\frac{\hbar
+c}{L}\,(\Lambda L)^4\cdot{\rm const},\]</span> the two-loop vacuum
+energy of the box: extensive and quartically divergent, and independent
+of <span class="math inline">\(a\)</span> at leading order. By Lemma
+1<span class="math inline">\(&#39;\)</span> it costs nothing as a shift.
+Its energy derivative is <span
+class="math display">\[\theta=\eta_0&#39;(E)\ \sim\
+g^2\sum_{k,k&#39;}\frac{|k|^2/L^3}{|k||k&#39;||k&#39;&#39;|\,(|k|+|k&#39;|+|k&#39;&#39;|)^2}\cdot\frac{1}{\hbar
+c}\cdot\hbar c
+\ \sim\ g^2(\Lambda L)^2\cdot{\rm const},\]</span> and Lemma 1<span
+class="math inline">\(&#39;\)</span> needs <span
+class="math inline">\(\theta&lt;1\)</span>: the bare-fiber reduction is
+valid only for <span class="math inline">\(g^2(\Lambda
+L)^2\ll1\)</span>. On a lattice <span class="math inline">\(\Lambda
+L=\pi N_s\)</span>, so the condition is <span
+class="math inline">\(g\ll1/N_s\)</span>. The <span
+class="math inline">\(a\)</span>-dependent part of the <span
+class="math inline">\(W_3\)</span> shift is the two-loop contribution to
+the valley potential, of order <span class="math inline">\(g^2\hbar
+c/L\)</span> with a logarithm, and poses no separate problem.</p>
+<h2 id="what-is-provable-and-what-is-not">5. What is provable and what
+is not</h2>
+<p><strong>Fixed-lattice theorem (available by this route).</strong> On
+the periodic lattice with <span class="math inline">\(N_s\)</span> sites
+per side, with the lattice regularization of the nonzero modes, for
+<span class="math inline">\(g\le g_1/N_s\)</span> with <span
+class="math inline">\(g_1\)</span> a pure number, the hypotheses of
+Lemma 1<span class="math inline">\(&#39;\)</span> hold with <span
+class="math inline">\(\epsilon,\theta=O(g^2N_s^2)\)</span> and <span
+class="math inline">\(\eta_1=O(g^{4/3}\hbar c/L)\)</span>, the
+compression is <span class="math inline">\(h_3+U\)</span> with <span
+class="math inline">\(U\)</span> the valley potential, and therefore
+<span class="math display">\[\Delta_{a,L}\ \ge\
+\delta_1^{(3)}\,g^{2/3}\,\frac{\hbar
+c}{L}\,\big(1-C\,g^{2/3}-C&#39;g^2N_s^2\big).\]</span> This is the
+statement that the zero-mode picture of C133 is exact at leading order
+on any fixed lattice as <span class="math inline">\(g\to0\)</span>:
+Lüscher’s leading term at fixed regularization. Its proof is the
+bookkeeping of Sections 2–4 with rigorous constants; it is not carried
+out here.</p>
+<p><strong>Renormalized regime (not available by this route).</strong>
+The continuum small-volume expansion holds for <span
+class="math inline">\(g(L)^2\log(\Lambda L)\ll1\)</span>, a far weaker
+condition than <span class="math inline">\(gN_s\ll1\)</span>. In that
+regime the bare Gaussian vacuum of the nonzero modes is not close to
+their true vacuum: the two-loop dressing <span
+class="math inline">\(\eta_0\)</span> exceeds the one-quantum gap <span
+class="math inline">\(2\pi\hbar c/L\)</span> by the factor <span
+class="math inline">\(g^2N_s^4\)</span>. A reduction that reaches the
+renormalized regime must use a dressed fiber, the ground state of the
+nonzero modes at <span class="math inline">\(a=0\)</span> including
+their self-interaction, and treat only the <span
+class="math inline">\(a\)</span>-dependence perturbatively; constructing
+that dressed vacuum with cutoff-uniform control is a renormalization
+theorem, the finite-volume ultraviolet problem that Balaban’s work
+addresses on the Euclidean side.</p>
+<p><strong>Consequence.</strong> The small-volume corner S carries the
+ultraviolet problem with it. Its lower side splits into a fixed-lattice
+theorem, provable by the present tools, and a renormalized theorem that
+is part of T4. This is consistent with the structure found in <a
+href="mass-gap-obligations-lattice.html">the obligations map</a>: every
+statement uniform in the cutoff is a renormalization statement, and the
+zero-mode mechanism supplies the physics but not the ultraviolet
+control.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Step 1 of the route (close the corner) becomes: (1a) the
+fixed-lattice theorem, <span
+class="math inline">\(\Delta\ge\delta_1g^{2/3}\hbar
+c/L\,(1-o(1))\)</span> for <span
+class="math inline">\(g\ll1/N_s\)</span>, provable now with explicit
+constants; (1b) the renormalized version, which requires a dressed
+nonzero-mode vacuum with cutoff-uniform bounds and is a T4-type problem.
+The Berry term’s logarithm, with its coefficient, is the first check
+that a dressed reduction must pass against the one-loop <span
+class="math inline">\(b_0\)</span>. The blocking induction of the
+foreseen route inherits the same split: each blocking step is a
+fixed-cutoff statement, and its uniformity is the renormalization
+problem.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

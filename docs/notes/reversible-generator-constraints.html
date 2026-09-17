@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product probabilities restrict reversible generators</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Product probabilities restrict reversible generators</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/reversible-generator-constraints.md">Markdown source</a></p><p>The first technical step of de la Torre et al.’s Theorem 1 is valid:
+two-sided reversible evolution and product-test positivity force every
+local matrix slice of its generator to have a scalar diagonal, symmetric
+time-space entries and an antisymmetric spatial off-diagonal part. Thus
+the generator belongs to the tensor power of a seven-dimensional matrix
+space. This is an expanded proof of an established source step, not a
+new reconstruction result.</p>
+<p>C129, Q01 acceptance audit, 2026-09-14. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/reversible-generator-B77.md">B77
+review</a>. Source: <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B70/de-la-Torre-Masanes-Short-Mueller-2011.pdf">B70
+original</a>, PDF pp. 3–4, equations (4), (6), (8)–(14). The written
+argument below fixes an explicit row/column convention and retains the
+Taylor remainder.</p>
+<h2 id="object-and-assumptions">Object and assumptions</h2>
+<p>Fix a finite number n of local three-dimensional unit balls. Put
+u(a)=(1,a) and v(a_1,…,a_n)=u(a_1) tensor … tensor u(a_n) in
+R<sup>(4</sup>n). A product preparation has coordinate v(a), and a
+product effect has coordinate 2^(-n)v(b). All unit Bloch vectors in each
+factor are available independently. The coordinates and probabilities
+are dimensionless; no volume or continuum limit is taken.</p>
+<p>Let X be a real 4^n by 4^n matrix such that exp(tX) is an allowed
+reversible transformation for every t in a two-sided neighbourhood of
+zero. Assume</p>
+<p><span class="math display">\[p_{b,a}(t)=2^{-n}v(b)^T
+e^{tX}v(a)\in[0,1].\]</span></p>
+<p>These assumptions follow for a one-parameter subgroup of the source’s
+matrix Lie group. We need only these local one-parameter curves, not a
+claim that every element of an arbitrary connected group is a single
+exponential. If t is assigned physical time, X has inverse-time units;
+the argument itself makes no physical clock or energy/action
+identification.</p>
+<h2 id="boundary-derivatives-with-the-remainder-retained">Boundary
+derivatives, with the remainder retained</h2>
+<p>The matrix exponential gives the exact expansion</p>
+<p><span class="math display">\[p(t)=p(0)+2^{-n}t\,v(b)^TXv(a)
+       +2^{-n}\frac{t^2}{2}v(b)^TX^2v(a)+O(t^3).\]</span></p>
+<p>Take unit vectors and b_1=-a_1, leaving the remaining b_k and a_k
+independent. Since u(-a_1)^T u(a_1)=0, p(0)=0. A differentiable
+nonnegative function on a two-sided neighbourhood has p’(0)=0 and
+p’’(0)&gt;=0. Therefore</p>
+<p><span
+class="math display">\[v(-a_1,b_2,\ldots,b_n)^TXv(a_1,\ldots,a_n)=0,\]</span>
+<span
+class="math display">\[v(-a_1,b_2,\ldots,b_n)^TX^2v(a_1,\ldots,a_n)\geq0.\]</span></p>
+<p>With b_k=a_k for every k, p(0)=2^(-n) product_k(1+|a_k|^2)=1. The
+maximum instead gives p’(0)=0 and</p>
+<p><span class="math display">\[v(a)^TX^2v(a)\leq0.\]</span></p>
+<p>These are source equations (10)–(12). Equation (9) is used as an
+asymptotic expansion, not an exact interval bound on a truncated
+polynomial. The sign of the second derivative is necessary even when it
+vanishes; it is not a sufficient criterion for positivity at finite t.
+For a forward semigroup alone a boundary minimum gives only a one-sided
+first-derivative inequality, so this inference specifically uses
+reversibility.</p>
+<h2 id="from-the-vanishing-derivative-to-local-matrix-blocks">From the
+vanishing derivative to local matrix blocks</h2>
+<p>Use row = output and column = input. Fix all spectator output and
+input indices. The first-order identity implies, for the resulting 4 by
+4 slice M,</p>
+<p><span class="math display">\[u(-a)^T M u(a)=0\qquad
+(|a|=1).\]</span></p>
+<p>To justify fixing these indices, u(e_i)+u(-e_i)=2e_0 and
+u(e_i)-u(-e_i)=2e_i show that unit-vector preparations span R^4. Their
+tensor products span the spectator space, independently for input and
+output. The bilinear identity therefore vanishes coefficient by
+coefficient. This is a linear-span argument; the signed combinations
+need not be physical states.</p>
+<p>Write</p>
+<p><span
+class="math display">\[M=\begin{pmatrix}c&amp;r^T\\s&amp;D\end{pmatrix}.\]</span></p>
+<p>Then the identity becomes c+(r-s) dot a-a^T D a=0. Subtraction at a
+and -a gives r=s. Evaluation at each e_i gives D_ii=c. Evaluation at
+(e_i+e_j)/sqrt(2), i unequal j, gives D_ij+D_ji=0. Consequently</p>
+<p><span
+class="math display">\[M=cI_4+\begin{pmatrix}0&amp;r^T\\r&amp;K\end{pmatrix},
+\qquad K^T=-K.\]</span></p>
+<p>Conversely every such block satisfies the identity. These are exactly
+the entry constraints (13)–(14), independent of the source’s
+index-placement convention. With A the three-dimensional space having
+only an antisymmetric spatial block, B the three-dimensional space with
+equal time-space blocks, and I the span of I_4, the slice belongs to L=A
+direct-sum B direct-sum I. Its dimension is 3+3+1=7. Source equation (6)
+supplies a basis of A and B.</p>
+<p>The same proof works at every site because an orthogonal input/effect
+pair can be chosen in any factor. In End(R<sup>4)</sup>(tensor n), the
+constraints for site k put X in End(R<sup>4)</sup>(tensor(k-1)) tensor L
+tensor End(R<sup>4)</sup>(tensor(n-k)). Choose any vector-space
+complement of L and expand in a basis adapted to L plus that complement.
+Intersecting these n conditions removes every tensor coefficient with a
+complement factor. Hence</p>
+<p><span class="math display">\[X\in L^{\otimes n}=(\mathcal
+A\oplus\mathcal B\oplus\mathcal I)^{\otimes n}.\]</span></p>
+<p>This completes the selected step. L^(tensor n) is a necessary ambient
+linear space, not by itself the Lie algebra of an admissible group. In
+particular the second-order conditions, normalization and further group
+constraints still restrict which elements are actual generators.</p>
+<h2 id="dependencies-and-strategic-consequence">Dependencies and
+strategic consequence</h2>
+<p>The proof imports finite-dimensional matrix exponentiation, the
+elementary calculus test at an interior extremum, spanning by product
+tensors, and a basis/complement intersection argument. Local SO(3)
+containment, compact-group averaging, entangling-gate universality,
+identical-copy extension and ancilla/discard closure are not needed for
+this step. Later portions of the source theorem use additional
+assumptions and arguments.</p>
+<p>Accept equations (10)–(14) and their tensor-space consequence under
+the stated hypotheses. The next named proof dependency is whether
+local-rotation averaging isolates a nonzero generator as claimed in
+equations (15)–(17). It remains supporting until STATE selects it. The
+minimal-composite exclusion still relies on the rest of Theorem 1;
+neither its full proof nor the physical origin of reversible descent or
+a positive universal action constant is established here.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A passive threshold creates events, but its scale belongs to the receiver</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A passive threshold creates events, but its scale belongs to the
+receiver</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/passive-threshold-events.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/passive-threshold-events.pdf">PDF</a></p><p>Equal independent thresholds applied to two complementary classical
+work outputs trade missed events against double events. A mechanical
+barrier gives a physical threshold, but stored preparation energy can
+reduce the required signal arbitrarily. Accounting for reset locates
+that energy in the apparatus; it does not turn the threshold into a
+universal action constant.</p>
+<p>This Q09 calculation is exploratory and unpromoted. It specifies a
+deterministic detector class, not a theorem about all classical
+detectors or a model of single-photon experiments. Independent proof and
+literature review precede any accepted-ledger promotion.</p>
+<h2 id="integrated-work-and-an-event-rule">1. Integrated work and an
+event rule</h2>
+<p>Use Q08’s two output works <span
+class="math inline">\(W_+,W_-\ge0\)</span>, with total incident energy E
+and</p>
+<p><span class="math display">\[W_+=\frac E2(1+z),\qquad W_-=\frac
+E2(1-z),\qquad -1\le z\le1. \tag{1}\]</span></p>
+<p>Here z is normalized pulse overlap. For ideal coherent paths it is
+the relative-phase cosine. Equation (1) and the threshold analysis apply
+directly to any overlap value, without taking a monochromatic
+infinite-energy limit.</p>
+<p>An ideal lossless work accumulator starts with zero stored energy and
+receives nonnegative input power: <span class="math inline">\(\dot
+e_i=P_i(t)\)</span>, <span class="math inline">\(e_i(0)=0\)</span>. At
+the end of one gate its record is</p>
+<p><span class="math display">\[C_i=\mathbf1_{W_i&gt;\Delta},\qquad
+\Delta&gt;0. \tag{2}\]</span></p>
+<p>The comparator is a stipulated coarse readout, not an independently
+derived measurement law. The strict inequality excludes marginal barrier
+trajectories. It counts at most one event per gate; rearming and
+repeated firing require additional dynamics. Equation (2) by itself does
+not model permanent memory.</p>
+<h2 id="the-complete-event-regions">2. The complete event regions</h2>
+<p>For <span class="math inline">\(E&gt;0\)</span> put <span
+class="math inline">\(r=\Delta/E\)</span>. Then</p>
+<p><span class="math display">\[C_+=1\ \Longleftrightarrow\
+z&gt;2r-1,\qquad
+C_-=1\ \Longleftrightarrow\ z&lt;1-2r. \tag{3}\]</span></p>
+<p>If <span class="math inline">\(\Delta&lt;E&lt;2\Delta\)</span>, both
+thresholds cannot be crossed. There is one event only for <span
+class="math inline">\(|z|&gt;2\Delta/E-1\)</span>; the remaining central
+interval has no event. For <span
+class="math inline">\(E\le\Delta\)</span> there is no event anywhere. If
+<span class="math inline">\(E&gt;2\Delta\)</span>, every overlap gives
+at least one event, but both fire for</p>
+<p><span class="math display">\[|z|&lt;1-2\Delta/E. \tag{4}\]</span></p>
+<p>At the tuned value <span class="math inline">\(E=2\Delta\)</span>,
+exactly one fires for every <span class="math inline">\(z\ne0\)</span>,
+while neither fires at <span class="math inline">\(z=0\)</span>. Using a
+non-strict comparator changes this single boundary point to two events,
+rather than solving the tie. Thus equal deterministic thresholds give no
+open range of incident energies with both unit efficiency and exclusive
+events for all overlaps.</p>
+<p>At a balanced splitter with equal input signals and identical
+receiver states, exchange symmetry is even more immediate: the two
+deterministic records are identical, so they are either both zero or
+both one. Asymmetric preparations, random local thresholds or
+communication between receivers alter this premise. Their statistics and
+physical cost would have to be specified separately.</p>
+<p>If z is experimentally sampled, counts depend on its sampling law and
+the threshold. Neither <span class="math inline">\(W_i/E\)</span> nor
+the conditional fraction of surviving single events is automatically a
+Born probability. Discarding no-click or double-click gates changes the
+ensemble; it cannot be hidden in normalization.</p>
+<h2 id="a-mechanical-threshold-and-stored-readiness-energy">3. A
+mechanical threshold and stored readiness energy</h2>
+<p>Consider a receiver coordinate q, momentum p, mass M and
+potential</p>
+<p><span class="math display">\[H_R=\frac{p^2}{2M}+U(q),\qquad
+U(q)=\Delta\left(1-\frac{q^2}{\ell^2}\right)^2,
+\quad M,\ell,\Delta&gt;0. \tag{5}\]</span></p>
+<p>The left and right minima have zero energy; the intervening saddle at
+q=0 has energy <span class="math inline">\(\Delta\)</span>. Prepare q at
+<span class="math inline">\(-\ell\)</span>, p=0, and deliver a positive
+impulse I. The deposited energy is <span
+class="math inline">\(W=I^2/(2M)\)</span>. The subsequent conservative
+motion crosses q=0 precisely when <span
+class="math inline">\(W&gt;\Delta\)</span>. Below threshold it turns on
+the left; at equality it approaches the saddle only asymptotically.
+Indeed, near q=0 at equality, <span class="math inline">\(\dot
+q\simeq\sqrt{4\Delta/(M\ell^2)}|q|\)</span>, giving a logarithmically
+divergent travel time. A finite readout deadline adds another receiver
+scale.</p>
+<p>This is an exact barrier-crossing event after an impulse. General
+forcing cannot be replaced by its total work alone without checking its
+direction and timing. The conservative particle can recross later: a
+persistent record requires a latch, capture or damping and its own
+energy accounting. Thus this example justifies a physical threshold, not
+a free permanent bit.</p>
+<p>Now prepare q at <span class="math inline">\(q_0\in(-\ell,0)\)</span>
+at rest. It already stores <span
+class="math inline">\(e_0=U(q_0)\)</span>. A positive impulse crosses
+if</p>
+<p><span class="math display">\[W&gt;\Delta-e_0. \tag{6}\]</span></p>
+<p>As <span class="math inline">\(q_0\uparrow0\)</span>, the required
+signal tends to zero at fixed M, <span
+class="math inline">\(\ell\)</span> and <span
+class="math inline">\(\Delta\)</span>. The receiver is correspondingly
+close to an unstable state. This is stored readiness energy, not
+creation of energy by a small signal.</p>
+<p>For a cycle that captures the particle at the right minimum with zero
+energy, restoring this ready state requires net work at least <span
+class="math inline">\(e_0\)</span>, when the reset apparatus supplies
+all work and losses are nonnegative. Capture must account for the
+released <span class="math inline">\(e_0+W\)</span>. If energy is
+recovered into a separate storage device, include that device in the
+cycle: it can reduce external work but does not remove the energy
+balance. For full return of every storage degree of freedom, net
+supplied energy equals exported work plus dissipation. No universal
+reset-energy number follows from (5).</p>
+<h2 id="action-test-and-strategic-consequence">4. Action test and
+strategic consequence</h2>
+<p>For a narrow-band incident pulse of angular frequency <span
+class="math inline">\(\omega\)</span>, its canonical wave action is
+approximately <span class="math inline">\(E/\omega\)</span> (with Q08’s
+finite-pulse qualification). The detector’s corresponding scale is <span
+class="math inline">\(\Delta/\omega\)</span>, or <span
+class="math inline">\((\Delta-e_0)/\omega\)</span> for a preloaded
+receiver. Changing the frequency, barrier or readiness changes it.
+Defining instead a barrier energy times a crossing time gives another
+apparatus-dependent quantity, with a divergence at the separatrix rather
+than a selected constant.</p>
+<p>Retain passive barriers as an explicit mechanism for discrete
+records. Their thresholds neither guarantee exclusive efficient events
+nor select a universal action. Further threshold tuning is parked. A
+worthwhile next test is to specify an independent reliability
+requirement: can a finite-temperature, finite-retention receiver keep
+false events below a prescribed probability while its signal threshold
+goes to zero? That asks what measurable stability cost replaces
+arbitrary preloading. Any resulting scale must retain its temperature,
+lifetime and error dependence rather than be called universal.</p>
+<p>Source context: <a href="mechanical-interference-action.html">Q08</a>
+supplies the work split and wave-action convention. One discovery query
+identified the primary experimental lead P. Grangier, G. Roger and A.
+Aspect, <em>Experimental Evidence for a Photon Anticorrelation Effect on
+a Beam Splitter: A New Light on Single-Photon Interferences</em>, EPL
+<strong>1</strong>, 173–179 (1986), <a
+href="https://doi.org/10.1209/0295-5075/1/4/004">DOI</a>. Only discovery
+metadata was checked; no experimental data or detector model is imported
+into this derivation. The ideal comparator and passive barrier are
+declared model premises. No numerical or symbolic scripts were used.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

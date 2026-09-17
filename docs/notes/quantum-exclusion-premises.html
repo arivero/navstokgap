@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two ways to exclude a classical operational model</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Two ways to exclude a classical operational model</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/quantum-exclusion-premises.md">Markdown source</a></p><p>Hardy and Chiribella–D’Ariano–Perinotti (CDP) identify different
+extra premises: reversible connectivity of pure states, and purification
+of mixed states. Their classical alternatives are operational
+probability models. Applying either reconstruction to mechanics first
+requires specifying which preparations, transformations and measurements
+constitute a closed system description. A dimensional action parameter
+then needs a dynamical bridge.</p>
+<p>Q01 first milestone, 2026-09-13. This is a dependency audit of
+selected primary passages, with source coverage in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B67.md">B67</a>.
+The full reconstruction proofs remain outside this milestone.</p>
+<h2 id="premise-to-use-map">Premise-to-use map</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dependency</th>
+<th>Hardy, version 4</th>
+<th>CDP, version 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Operational class used here</td>
+<td>Finite distinguishability capacity N and finite
+probability-coordinate count K; preparations, measurements, reversible
+transformations and composition</td>
+<td>Finite-dimensional state/effect spaces defined through operational
+statistics; tests, transformations and composites</td>
+</tr>
+<tr class="even">
+<td>Additional premise</td>
+<td>Any two pure states admit a continuous reversible connection within
+the system</td>
+<td>Every state has a pure extension; fixed purifying systems give
+uniqueness up to their reversible transformations</td>
+</tr>
+<tr class="odd">
+<td>Classical failure</td>
+<td>A finite simplex has isolated pure states and reversible
+permutations</td>
+<td>Pure states of the standard classical composite are products, whose
+marginals remain pure</td>
+</tr>
+<tr class="even">
+<td>Other assumptions retained</td>
+<td>Probability, simplicity, subspace and composition axioms</td>
+<td>Causality, perfect distinguishability, ideal compression, local
+distinguishability and pure conditioning</td>
+</tr>
+<tr class="odd">
+<td>Action step</td>
+<td>Match transformations to physical time, energy and mechanical
+action</td>
+<td>The same dimensional identification is needed after state/composite
+reconstruction</td>
+</tr>
+</tbody>
+</table>
+<p>Hardy §1 states the axiom package; §§4 and 7 explain the classical
+failure. CDP §II specifies finite statistical dimension, and
+§§III.1–III.2 locate the classical-compatible principles and
+purification. These are conditional reconstructions, not assumptions
+already supplied by the receiver model. <a
+href="https://arxiv.org/html/quant-ph/0101012v4">Hardy</a>, <a
+href="https://arxiv.org/html/1011.6451v3">CDP</a>.</p>
+<h2 id="what-the-classical-alternatives-actually-fail">What the
+classical alternatives actually fail</h2>
+<p>For the finite simplex, a reversible affine map permutes its
+vertices. A continuous path starting at one vertex cannot reach a
+different vertex while remaining in that finite set. This is the
+elementary content of Hardy’s classical exclusion; the rest of his axiom
+package matters for selecting the quantum alternative rather than merely
+rejecting the simplex.</p>
+<p>For a classical joint probability table, a pure normalized state is
+concentrated at one pair of labels. Summing over either label still
+gives a concentrated state. A mixed marginal therefore has no pure
+classical extension. Already the existence clause of purification fails;
+uniqueness adds an independent requirement to the reconstruction. A
+correlated classical ensemble can encode ignorance, but remains mixed
+globally. These are the standard elementary classical comparisons
+identified in the source passages, not new no-go theorems.</p>
+<h2 id="the-newtonian-connection-is-closure-during-a-transformation">The
+Newtonian connection is closure during a transformation</h2>
+<p>Hardy §7 explicitly motivates continuity with a ball moving between
+the two boxes representing a bit. Its intermediate positions exceed the
+two-state description. This supports a more precise question than
+whether classical motion is continuous: can the operational description
+be finite-capacity, exact and closed under the entire reversible
+transformation?</p>
+<p>Project inference: ordinary phase-space motion and a finite bit
+description operate at different descriptive levels. A proposed
+classical derivation must justify its measurement restrictions and
+transformation closure together. Suppressing intermediate distinctions
+by coarse-graining alone does not prove that the resulting
+transformations are reversible on the reduced states. Likewise, calling
+a global mechanical microstate definite does not establish CDP’s
+operational pure extension of a locally mixed preparation. Its allowed
+effects, composition and operational equivalence must be specified.</p>
+<p>This preserves the useful physical motivation in Hardy while keeping
+the ambient-model dependency visible. The paper’s countably infinite
+extension is not audited here; this finite-simplex comparison is not a
+rejection of every continuous classical phase-space theory.</p>
+<h2 id="what-would-supply-the-action-unit">What would supply the action
+unit?</h2>
+<p>The selected axioms concern probabilities, distinguishability,
+composition and transformations. The outstanding project step is to
+relate their transformation parameters to measured mechanical time and
+energy, and then to a phase accumulated per unit action. The
+checkerboard model supplies this relation through its chosen K,
+amplitudes and measurement rule; see <a
+href="checkerboard-dynamics.html">the maintained comparison</a>. This
+audit identifies that input rather than deriving a positive value or
+universal lower bound.</p>
+<h2 id="strategic-consequence">Strategic consequence</h2>
+<p>Retain both reconstruction packages as candidate premises. The next
+quantum decision is whether an independently motivated operational
+closure/composition principle forces one of them for the admitted
+mechanical class. K01 is useful only if its context/measurement
+assumptions decide that question. Further receiver calibration
+coefficients do not currently resolve it.</p>
+<p>The bounded passage milestone is complete. Subsequent C125–C128 tests
+now locate a concrete failure of the finite operational premise: the
+reversible spin interaction cannot close on any finite enlargement of
+the retained observables for all preparations; see the <a
+href="hamiltonian-finite-closure.html">finite-closure proof</a>. <a
+href="reversible-generator-constraints.html">C129/B77</a> accepts the
+initial generator restriction; <a
+href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>
+selects the next bounded technical dependency. Full reconstruction
+proofs remain separately unaudited.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

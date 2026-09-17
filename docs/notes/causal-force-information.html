@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New information behind a delayed record</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>New information behind a delayed record</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/causal-force-information.md">Markdown source</a></p><p>A delayed observer of a particle with an unknown bounded force has a
+sharp prediction error, even with perfect records of its earlier state.
+The joint position–momentum uncertainty is a curved reachable region
+with a finite phase-space area. Both scales come from the force budget
+and the delay; refining records strictly before the delay boundary
+leaves them unchanged.</p>
+<p>R07, 2026-09-10: C070–C071 accepted by written proof and <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/causal-information-B38.md">coordinator
+review</a>. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B38.md">B38</a>
+identifies established bounded-input double-integrator machinery; these
+fixed-time formulas are derived specializations, with exact prior
+publication unassessed.</p>
+<h2 id="experiment-and-information-boundary">1. Experiment and
+information boundary</h2>
+<p>Take a particle on the line with mass <span
+class="math inline">\(m&gt;0\)</span>, on an observation window <span
+class="math inline">\([0,\ell]\)</span>, <span
+class="math inline">\(\ell&gt;0\)</span>. The state at zero, <span
+class="math inline">\((q_0,p_0)\)</span>, and the complete earlier
+history are known exactly. The observer receives no information about
+the force or state after zero before making a prediction at time <span
+class="math inline">\(\ell\)</span>. This is a delay assumption about
+the accessible records, not a minimum time axiom. The future force lies
+in the fixed admissible class</p>
+<p><span class="math display">\[\mathcal F=\{f\in
+L^\infty([0,\ell]):|f|\le F\text{ a.e.}\},\qquad F&gt;0.\]</span></p>
+<p>Both signs and independent future profiles are allowed by this
+information model. The external force is an unresolved input, rather
+than a previously reconstructed deterministic receiver. No probability
+law is assigned to it. For each <span class="math inline">\(f\)</span>
+the classical dynamics is</p>
+<p><span class="math display">\[\dot q=p/m,\qquad \dot p=f,\]</span></p>
+<p>with unique absolutely continuous momentum and continuously
+differentiable position. All experiments share the same accessible past.
+Constant or piecewise constant forces are permitted; they create no
+momentum impulses. If desired, set <span
+class="math inline">\(p_0=0\)</span> and choose <span
+class="math inline">\(F\ell/m&lt;c\)</span> to keep every admitted
+particle speed strictly below <span class="math inline">\(c\)</span>. A
+finite propagation law for the recording apparatus would need its own
+model.</p>
+<p>The exact endpoint increments from inertial prediction are</p>
+<p><span class="math display">\[v:=p(\ell)-p_0=\int_0^\ell f(s)ds,\qquad
+u:=q(\ell)-q_0-\frac{p_0\ell}{m}
+=\frac1m\int_0^\ell(\ell-s)f(s)ds.\]</span></p>
+<h2 id="sharp-causal-prediction-bounds">2. Sharp causal prediction
+bounds</h2>
+<p>For a deterministic predictor based only on the accessible records,
+define separate worst-case absolute errors <span
+class="math inline">\(R_q=\sup_{f\in\mathcal F}|\widehat
+q-q_f(\ell)|\)</span> and <span
+class="math inline">\(R_p=\sup_{f\in\mathcal F}|\widehat
+p-p_f(\ell)|\)</span>. The two forces <span
+class="math inline">\(f=+F\)</span> and <span
+class="math inline">\(f=-F\)</span> give indistinguishable input records
+and endpoint separations <span class="math inline">\(F\ell^2/m\)</span>
+in position and <span class="math inline">\(2F\ell\)</span> in momentum.
+The triangle inequality therefore gives</p>
+<p><span class="math display">\[R_q\ge\frac{F\ell^2}{2m},\qquad R_p\ge
+F\ell.\]</span></p>
+<p>The inertial predictor <span class="math inline">\((\widehat
+q,\widehat p)=(q_0+p_0\ell/m,p_0)\)</span> attains both bounds, since
+the endpoint integrals above have these absolute maxima. Thus the
+coordinatewise minimax errors and their product are</p>
+<p><span class="math display">\[r_q=\frac{F\ell^2}{2m},\qquad
+r_p=F\ell,\qquad
+r_qr_p=\frac{F^2\ell^3}{2m}.\]</span></p>
+<p>The product has action units <span
+class="math inline">\(ML^2/T\)</span>. It is a product of prediction
+risks for one information task, not a variance product or a
+measurement-disturbance relation. Its lower bound concerns estimators;
+individual admitted motions include the undisturbed inertial
+trajectory.</p>
+<h2 id="the-joint-uncertainty-region">3. The joint uncertainty
+region</h2>
+<p>Independent coordinate error bars obscure correlations between the
+two increments. Put <span class="math inline">\(d=v/(F\ell)\)</span> and
+<span class="math inline">\(z=mu/(F\ell^2)\)</span>. Their exact
+reachable region is</p>
+<p><span class="math display">\[\boxed{-1\le d\le1,\qquad
+\left|z-\frac d2\right|\le\frac{1-d^2}{4}.}\]</span></p>
+<p>To prove the upper boundary, fix <span
+class="math inline">\(v\)</span> and write <span
+class="math inline">\(f=2Fh-F\)</span> with <span
+class="math inline">\(0\le h\le1\)</span>. Then <span
+class="math inline">\(\int_0^\ell h(s)ds=a:=\ell(1+d)/2\)</span>. The
+decreasing weight <span class="math inline">\(\ell-s\)</span> makes its
+weighted integral largest when <span class="math inline">\(h=1\)</span>
+on <span class="math inline">\([0,a]\)</span> and zero afterwards.
+Indeed the integral of <span
+class="math inline">\([(\ell-s)-(\ell-a)]\,[h(s)-\mathbf1_{[0,a]}(s)]\)</span>
+is nonpositive on both sides of <span class="math inline">\(a\)</span>,
+while the constant-weight integral vanishes. Evaluating the weighted
+integral gives <span class="math inline">\(z=d/2+(1-d^2)/4\)</span>.
+Putting the positive-force portion last gives the lower boundary <span
+class="math inline">\(z=d/2-(1-d^2)/4\)</span>. Convex combinations of
+these two force profiles give every intermediate <span
+class="math inline">\(z\)</span> at the same <span
+class="math inline">\(d\)</span>. This proves necessity and sufficiency
+without a numerical reachability calculation.</p>
+<p>With canonical area measure <span
+class="math inline">\(dq\,dp=du\,dv\)</span>, the region has area</p>
+<p><span class="math display">\[\mathcal A_{\rm reach}
+=\frac{F^2\ell^3}{m}\int_{-1}^{1}\frac{1-d^2}{2}\,dd
+=\frac{2F^2\ell^3}{3m}.\]</span></p>
+<p>There is no <span class="math inline">\(2\pi\)</span> normalization:
+this is ordinary canonical area of the reachable set, not an orbital
+action. The extremal controls are the familiar one-switch bounded-force
+profiles of the double integrator.</p>
+<h2 id="what-the-result-selects">4. What the result selects</h2>
+<p>At fixed <span class="math inline">\(F,m,\ell\)</span> the unresolved
+endpoint region persists despite arbitrarily fine observation of the
+accessible past. This is genuine missing information relative to the
+stated observer, whereas R06 reconstructs a known deterministic flow
+from sufficient stored records. It does not require ontic
+randomness.</p>
+<p>The positive scale depends on the allowed force range and the
+observation delay. Taking <span
+class="math inline">\(F\downarrow0\)</span> at fixed <span
+class="math inline">\(m,\ell\)</span>, or <span
+class="math inline">\(\ell\downarrow0\)</span> at fixed <span
+class="math inline">\(m,F\)</span>, closes both action-valued
+quantities. A force ceiling alone specifies a worst-case class; it
+supplies no irreducible force fluctuation in every trajectory. A
+derivation of a universal action scale must explain what fixes the
+relevant force–delay combination and why the observer’s information
+boundary is physically unavoidable.</p>
+<h2 id="completed-comparison-insert-a-cut-inside-the-hidden-window">5.
+Completed comparison: insert a cut inside the hidden window</h2>
+<p><a href="reachable-cut-composition.html">R08</a> proves exact joint
+composition across an unobserved cut and derives the momentum fibre and
+terminal area after an observed position. It retains the same
+bounded-force class and total horizon. This connects the <a
+href="ancient-cuts-provenance.html">ancient-cut compatibility
+question</a> to an explicit classical information region. R09 now tests
+finite-precision position records and the joint precision/delay
+limit.</p>
+<p>The present formulas are elementary bounded-input reachability and
+deterministic minimax specializations. <a
+href="https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html">Liberzon
+§4.4.1</a> supplies the classical double-integrator and one-switch
+control precedent. His task minimizes arrival time; our fixed-time lens
+is proved directly above. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B38/causal-information-source-companion.md">B38’s
+companion</a> records the one readable primary passage and two failed
+source routes.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

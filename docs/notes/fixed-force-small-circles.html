@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fixed force ceiling: small bound circles and an excitation floor</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Fixed force ceiling: small bound circles and an excitation floor</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/fixed-force-small-circles.md">Markdown source</a></p><p>One fixed smooth confining potential with a globally bounded force
+admits stable circular orbits with positive angular actions tending to
+zero. A lower bound on circular speed, together with the force ceiling,
+instead gives a positive action bound. This identifies the missing
+excitation premise in A16’s fixed-force follow-up. A17, C058–C059;
+written proof and B31 review.</p>
+<h2 id="fixed-hamiltonian-and-exact-circles">1. Fixed Hamiltonian and
+exact circles</h2>
+<p>Fix <span class="math inline">\(m,c,K,b&gt;0\)</span> and use
+Cartesian configuration space <span class="math inline">\(\mathbb
+R^2\)</span> with</p>
+<p><span class="math display">\[
+H(q,p)=\sqrt{m^2c^4+c^2|p|^2}+V(|q|),\qquad
+V(r)=Kb^2\left(\sqrt{1+r^2/b^2}-1\right).
+\]</span></p>
+<p>The potential is smooth even at the origin, tends to infinity, and
+has inward force magnitude <span
+class="math inline">\(f(r)=Kr/\sqrt{1+r^2/b^2}&lt;Kb\)</span>. Thus
+<span class="math inline">\(Kb\le F_{\max}\)</span> gives a prescribed
+global force ceiling without changing the potential across the orbit
+family. Finite energy bounds both position and momentum, giving complete
+trajectories. Particle velocities are strictly below <span
+class="math inline">\(c\)</span>; this external-potential model
+specifies no propagating mediator.</p>
+<p>For each radius <span class="math inline">\(R&gt;0\)</span>, set
+<span class="math inline">\(s=Rf(R)\)</span> and</p>
+<p><span class="math display">\[
+\gamma_R=\frac{s/(mc^2)+\sqrt{[s/(mc^2)]^2+4}}2,
+\quad v_R=c\sqrt{1-\gamma_R^{-2}},\quad
+P_R=m\gamma_Rv_R,\quad \ell_R=RP_R.
+\]</span></p>
+<p>Circular force balance is <span
+class="math inline">\(P_Rv_R/R=f(R)\)</span>, equivalent to <span
+class="math inline">\(mc^2(\gamma_R-\gamma_R^{-1})=s\)</span>. The
+positive solution above therefore gives an exact complete circle with
+<span class="math inline">\(\omega_R=v_R/R\)</span>. The normalized
+canonical orbit integral is <span class="math inline">\(\ell_R\)</span>
+in action units. Uniform circular phase gives A15’s <span
+class="math inline">\(\mathcal A_{\rm cov}=\ell_R\)</span>.</p>
+<p>At fixed <span class="math inline">\(\ell=\ell_R\)</span>, the radial
+effective energy is <span
+class="math inline">\(U_\ell(r)=\sqrt{m^2c^4+c^2\ell^2/r^2}+V(r)\)</span>.
+Differentiation at the circle gives</p>
+<p><span class="math display">\[
+U_\ell&#39;&#39;(R)=f&#39;(R)+(3-v_R^2/c^2)\frac{f(R)}R&gt;0.
+\]</span></p>
+<p>Indeed the kinetic contribution is <span
+class="math inline">\(P_R^2/(m\gamma_R^3R^2)+2P_Rv_R/R^2\)</span>; use
+force balance and <span
+class="math inline">\(\gamma_R^{-2}=1-v_R^2/c^2\)</span>. Here <span
+class="math inline">\(f&#39;(R)=K(1+R^2/b^2)^{-3/2}&gt;0\)</span>. The
+circle is a strict radial minimum and is stable against sufficiently
+small radial perturbations at fixed angular momentum. This is the
+stability notion used here, rather than asymptotic attraction of the
+Hamiltonian flow.</p>
+<h2 id="the-small-orbit-limit-keeps-every-upper-ceiling">2. The
+small-orbit limit keeps every upper ceiling</h2>
+<p>As <span class="math inline">\(R\downarrow0\)</span> at fixed <span
+class="math inline">\(m,c,K,b\)</span>,</p>
+<p><span class="math display">\[
+s=KR^2+O(R^4),\quad
+v_R\sim\sqrt{K/m}\,R,\quad
+\ell_R\sim\sqrt{mK}\,R^2,\quad
+\omega_R\longrightarrow\sqrt{K/m}.
+\]</span></p>
+<p>These follow by expanding <span
+class="math inline">\(\gamma_R=1+s/(2mc^2)+O(s^2)\)</span>. Kinetic
+energy above rest is <span class="math inline">\(mc^2(\gamma_R-1)\sim
+KR^2/2\)</span> and <span class="math inline">\(V(R)\sim
+KR^2/2\)</span>, hence <span class="math inline">\(H-mc^2\sim
+KR^2\)</span>. Force and coordinate acceleration satisfy <span
+class="math inline">\(f(R)\sim KR\)</span> and <span
+class="math inline">\(v_R^2/R\sim KR/m\)</span>, both tending to zero.
+Any strictly positive prescribed speed and acceleration upper bounds
+hold on all sufficiently small members, alongside the global force
+ceiling. The period tends to <span
+class="math inline">\(2\pi\sqrt{m/K}\)</span>: rapid cycling is
+unnecessary.</p>
+<p>Every circle is nonstationary, regular and bound, with positive
+energy above the minimum and positive covariance action. Their infimum
+is nevertheless zero in this single fixed Hamiltonian. The limiting
+state is its smooth central equilibrium. Quantitative excitation
+restrictions, rather than merely positivity of excitation, would exclude
+this family.</p>
+<h2 id="a-positive-conditional-bound">3. A positive conditional
+bound</h2>
+<p>For any relativistic circular orbit under inward force <span
+class="math inline">\(0&lt;f(R)\le F_{\max}\)</span>, force balance
+gives the exact identity</p>
+<p><span class="math display">\[
+\ell=RP=\frac{P^2v}{f(R)}.
+\]</span></p>
+<p>If an independently specified speed floor <span
+class="math inline">\(v\ge v_*&gt;0\)</span>, <span
+class="math inline">\(v_*&lt;c\)</span>, is imposed, then the increasing
+function <span class="math inline">\(m^2v^3/(1-v^2/c^2)\)</span>
+yields</p>
+<p><span class="math display">\[
+\ell\ge\frac{m^2v_*^3}{F_{\max}(1-v_*^2/c^2)}&gt;0.
+\]</span></p>
+<p>The dimensions are action. This is a lower bound on circular orbital
+action, and on A15’s estimator under uniform phase. The speed floor is a
+lower kinetic excitation premise; the ceiling alone gives Section 2’s
+zero-infimum family. The bound is parameter-dependent and does not
+establish a universal value or physical-time attraction. For Newtonian
+circular motion the same calculation uses <span
+class="math inline">\(P=mv\)</span> and gives <span
+class="math inline">\(m^2v_*^3/F_{\max}\)</span>.</p>
+<h2 id="next-selection-question">4. Next selection question</h2>
+<p>A18 should test the positive bound beyond circles, using total
+turning of a closed regular trajectory and the force ceiling. Its source
+audit should check the relevant total-curvature theorem before importing
+it.</p>
+<p>The useful positive mechanism combines an upper force scale with a
+lower excitation scale. The next task should identify a physical source
+for persistent excitation in a closed mechanical model, with its energy
+allocation and any attraction claim explicit. Reuse A07’s
+prescribed-endpoint turn cost and A02’s prepared reservoir as comparison
+mechanisms. Another arbitrary upper ceiling would leave the small-circle
+family intact.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

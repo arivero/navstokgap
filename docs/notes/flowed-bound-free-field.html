@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The flowed bound in free field theory: the coupling cancels, and the bound is informative only at the confinement scale</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The flowed bound in free field theory: the coupling cancels, and the
+bound is informative only at the confinement scale</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flowed-bound-free-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flowed-bound-free-field.pdf">PDF</a></p><p>The two ground-state quantities of <a
+href="finiteness-half-flowed-susceptibility.html">the finiteness
+note</a> are computed in closed form for the free (abelian) theory with
+the flowed magnetic energy density <span
+class="math inline">\(\varphi_t=\tfrac12(b_t\!\cdot\!b_t-\langle\cdot\rangle)\)</span>:
+<span
+class="math display">\[\chi_{\varphi_t}=\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}},\qquad
+\big\langle|D_{\varphi_t}|^2\big\rangle=\frac{g^2}{128\,\pi^2\,t^3},\qquad
+\frac{\langle|D|^2\rangle}{\chi}=\frac{16}{3\,g^2\sqrt{\pi t}},\]</span>
+so that the bound <span class="math inline">\(m\le\frac{g^2\hbar
+c}{2}\langle|D|^2\rangle/\chi\)</span> becomes <span
+class="math display">\[\boxed{\;m\ \le\ \frac{8}{3\sqrt\pi}\,\frac{\hbar
+c}{\sqrt t}\;=\;\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar
+c}{\sqrt{8t}}\;\approx\;4.26\,\frac{\hbar c}{\sqrt{8t}}\;}\]</span> with
+the coupling cancelling between numerator and denominator. This corrects
+Section 5 of the finiteness note, which carried a factor <span
+class="math inline">\(g^2\)</span> from dimensional analysis alone:
+<span class="math inline">\(\chi\propto g^4\)</span> and <span
+class="math inline">\(\langle|D|^2\rangle\propto g^2\)</span>, so the
+ratio supplies <span class="math inline">\(g^{-2}\)</span>. The result
+is confirmed independently by the spectral form of the same bound: the
+smeared operator creates two photons of momenta <span
+class="math inline">\(\pm k\)</span> with weight <span
+class="math inline">\(\propto k^4e^{-4tk^2}dk\)</span>, and the weighted
+mean of their energy <span class="math inline">\(2\hbar ck\)</span> is
+exactly <span class="math inline">\(8\hbar c/(3\sqrt{\pi t})\)</span>.
+Two consequences. The free bound tends to zero as the smearing grows, as
+it must for <span class="math inline">\(m=0\)</span>, so the inequality
+retains content. And in the interacting theory the weak-coupling regime
+is <span class="math inline">\(\sqrt{8t}\ll\hbar c/(\text{confinement
+scale})\)</span>, where the bound reads <span
+class="math inline">\(m\lesssim4.26\,\hbar c/\sqrt{8t}\)</span> and is
+far weaker than the expected gap: the bound becomes informative exactly
+at <span class="math inline">\(\sqrt{8t}\sim\hbar c/m\)</span>, where
+its coefficient is no longer perturbative. No perturbative computation
+can make the finiteness half useful; what is needed is the value of one
+susceptibility at the confinement scale. Constants explicit; nothing
+promoted.</p>
+<h2 id="the-free-ground-state-with-explicit-constants">1. The free
+ground state with explicit constants</h2>
+<p>Take the abelian case of the Hamiltonian of <a
+href="finiteness-half-flowed-susceptibility.html">the finiteness
+note</a> §1, <span class="math display">\[H=\int
+d^3x\;\Big[\frac{g^2c}{2\hbar}\,\Pi_i\Pi_i+\frac{\hbar
+c}{2g^2}\,b_ib_i\Big],
+\qquad b_i=\varepsilon_{ijk}\partial_jA_k,
+\qquad[A_i(x),\Pi_j(y)]=i\hbar\delta_{ij}\delta^3(x-y),\]</span> in
+Coulomb gauge <span class="math inline">\(\partial_iA_i=0\)</span>, two
+transverse polarizations. In Fourier modes each transverse mode is an
+oscillator of mass <span class="math inline">\(M=\hbar/(g^2c)\)</span>
+and frequency <span class="math inline">\(\omega_k=ck\)</span>, since
+<span class="math inline">\(\tfrac12M\omega_k^2=\hbar
+ck^2/(2g^2)\)</span> matches the magnetic term. Its ground-state width
+gives <span class="math display">\[\big\langle\hat A_i(k)\hat
+A_j(k&#39;)\big\rangle_0=(2\pi)^3\delta^3(k+k&#39;)\,P^{\rm
+T}_{ij}(k)\,\frac{\hbar}{2M\omega_k}
+=(2\pi)^3\delta^3(k+k&#39;)\,P^{\rm T}_{ij}(k)\,\frac{g^2}{2k},\]</span>
+with <span class="math inline">\(P^{\rm T}_{ij}=\delta_{ij}-\hat k_i\hat
+k_j\)</span>. Dimensions: <span class="math inline">\([\hat
+A]=L^2\)</span>, <span
+class="math inline">\([(2\pi)^3\delta^3]=L^3\)</span>, and <span
+class="math inline">\(g^2/2k\)</span> is a length.</p>
+<h2 id="the-flow-is-the-heat-equation-here">2. The flow is the heat
+equation here</h2>
+<p>For an abelian field the flow equation of <a
+href="finiteness-half-flowed-susceptibility.html">the finiteness
+note</a> §4 reduces to <span class="math inline">\(\partial_sB_i=\Delta
+B_i-\partial_i(\partial_jB_j)\)</span>, and a transverse initial field
+stays transverse, so <span class="math display">\[\hat
+B_i(t,k)=e^{-tk^2}\hat A_i(k),\qquad
+\hat b_i(t,k)=i\varepsilon_{ijl}k_j\,e^{-tk^2}\hat A_l(k).\]</span> The
+flow time has dimension of length squared; the conventional smearing
+radius is <span class="math inline">\(\sqrt{8t}\)</span>. Set <span
+class="math inline">\(\varphi_t=\tfrac12\big(b_t\!\cdot\!b_t-\langle
+b_t\!\cdot\!b_t\rangle_0\big)\)</span>, of dimension <span
+class="math inline">\(L^{-4}\)</span>.</p>
+<h2 id="the-susceptibility">3. The susceptibility</h2>
+<p>Write <span class="math inline">\(G_{ij}(z)=\langle
+b_{t,i}(z)b_{t,j}(0)\rangle_0\)</span>. Using <span
+class="math inline">\(\varepsilon_{iab}\varepsilon_{jcd}k_ak_cP^{\rm
+T}_{bd}(k)=k^2P^{\rm T}_{ij}(k)\)</span> (the longitudinal part of <span
+class="math inline">\(P^{\rm T}\)</span> drops because <span
+class="math inline">\(\varepsilon_{iab}k_a\hat k_b=0\)</span>), <span
+class="math display">\[\tilde G_{ij}(k)=k^2P^{\rm
+T}_{ij}(k)\,\frac{g^2}{2k}\,e^{-2tk^2}
+=\frac{g^2k}{2}\,e^{-2tk^2}\,P^{\rm T}_{ij}(k).\]</span> For a Gaussian
+field Wick’s theorem gives <span
+class="math inline">\(\langle\varphi_t(z)\varphi_t(0)\rangle^{\rm
+c}_0=\tfrac12\sum_{ij}G_{ij}(z)^2\)</span> (two pairings), so by
+Parseval, with <span class="math inline">\(\sum_{ij}[P^{\rm
+T}_{ij}]^2=\operatorname{tr}P^{\rm T}=2\)</span>, <span
+class="math display">\[\chi_{\varphi_t}=\int
+d^3z\,\langle\varphi_t\varphi_t\rangle^{\rm c}
+=\frac12\int\frac{d^3k}{(2\pi)^3}\,\frac{g^4k^2}{2}\,e^{-4tk^2}
+=\frac{g^4}{4}\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^4e^{-4tk^2}.\]</span>
+With <span class="math inline">\(\int_0^\infty k^4e^{-\alpha
+k^2}dk=3\sqrt\pi/(8\alpha^{5/2})\)</span> and <span
+class="math inline">\(\alpha=4t\)</span>, so <span
+class="math inline">\((4t)^{5/2}=32t^{5/2}\)</span>, <span
+class="math display">\[\chi_{\varphi_t}=\frac{g^4}{4}\cdot\frac1{2\pi^2}\cdot\frac{3\sqrt\pi}{256\,t^{5/2}}
+=\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}} .\]</span> Dimension: <span
+class="math inline">\([\chi]=[\varphi]^2L^3=L^{-5}\)</span> and <span
+class="math inline">\(t^{5/2}\sim L^5\)</span>, as required.</p>
+<h2 id="the-gradient-term">4. The gradient term</h2>
+<p>By Parseval <span class="math inline">\(O=\int
+d^3y\,\varphi_t=\tfrac12\int\frac{d^3k}{(2\pi)^3}k^2e^{-2tk^2}|\hat
+A(k)|^2+\text{const}\)</span>, so <span
+class="math display">\[D_i(x)=\frac{\delta O}{\delta
+A_i(x)}=\big(-\Delta\,e^{2t\Delta}A\big)_i(x)
+=\big(\nabla\times b_{2t}\big)_i(x),\qquad
+\hat D_i(k)=k^2e^{-2tk^2}\hat A_i(k),\]</span> the curl of the magnetic
+field at twice the flow time. Hence <span
+class="math display">\[\big\langle|D|^2\big\rangle_0=\int\frac{d^3k}{(2\pi)^3}k^4e^{-4tk^2}\cdot2\cdot\frac{g^2}{2k}
+=g^2\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^5e^{-4tk^2}
+=\frac{g^2}{2\pi^2}\cdot\frac1{64\,t^3}=\frac{g^2}{128\,\pi^2\,t^3},\]</span>
+using <span class="math inline">\(\int_0^\infty k^5e^{-\alpha
+k^2}dk=1/\alpha^3\)</span>. Dimension: <span
+class="math inline">\([\varphi]^2L^2=L^{-6}\)</span> and <span
+class="math inline">\(t^3\sim L^6\)</span>, as required.</p>
+<h2 id="the-bound-and-the-cancellation-of-the-coupling">5. The bound,
+and the cancellation of the coupling</h2>
+<p><span class="math display">\[\frac{\langle|D|^2\rangle}{\chi}
+=\frac{g^2}{128\pi^2t^3}\cdot\frac{2048\,\pi^{3/2}t^{5/2}}{3g^4}
+=\frac{16}{3\,g^2\sqrt{\pi t}},\]</span> <span class="math display">\[m\
+\le\ \frac{g^2\hbar c}{2}\cdot\frac{16}{3g^2\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}
+=\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar
+c}{\sqrt{8t}}\approx4.26\,\frac{\hbar c}{\sqrt{8t}} .\]</span></p>
+<p><strong>Correction.</strong> Section 5 of <a
+href="finiteness-half-flowed-susceptibility.html">the finiteness
+note</a> inferred <span class="math inline">\(m\le Cg^2\hbar
+c/\sqrt{8t}\)</span> from dimensional analysis, assigning the pure
+numbers <span class="math inline">\(k_1,k_2\)</span> no coupling
+dependence. The computation shows <span
+class="math inline">\(\chi\propto g^4\)</span> while <span
+class="math inline">\(\langle|D|^2\rangle\propto g^2\)</span>, so the
+ratio carries <span class="math inline">\(g^{-2}\)</span> and the bound
+is of order <span class="math inline">\(g^0\)</span>. The corrected
+statement is that the perturbative bound is <span
+class="math inline">\(4.26\,\hbar c/\sqrt{8t}\,[1+O(g^2)]\)</span>, with
+the coupling entering only through the corrections. The <span
+class="math inline">\(t\)</span>-dependence <span
+class="math inline">\(1/\sqrt{8t}\)</span> of the earlier note
+stands.</p>
+<h2 id="independent-check-the-two-photon-sum-rule">6. Independent check:
+the two-photon sum rule</h2>
+<p>By the spectral reading of <a
+href="finiteness-half-flowed-susceptibility.html">the finiteness
+note</a> §3, the bound equals the mean excitation energy weighted by the
+spectral weight of <span class="math inline">\(O\)</span>. In the free
+theory <span class="math inline">\(O\)</span> is quadratic in <span
+class="math inline">\(\hat A\)</span> and creates two photons of momenta
+<span class="math inline">\(k\)</span> and <span
+class="math inline">\(-k\)</span>, of total energy <span
+class="math inline">\(2\hbar ck\)</span>, with weight proportional to
+<span
+class="math inline">\(\big[k^2e^{-2tk^2}\big]^2\big[g^2/2k\big]^2\,k^2\,dk\propto
+k^4e^{-4tk^2}dk\)</span> after the phase-space factor. Therefore <span
+class="math display">\[\frac{\int_0^\infty 2\hbar ck\cdot
+k^4e^{-4tk^2}dk}{\int_0^\infty k^4e^{-4tk^2}dk}
+=2\hbar c\,\frac{1/(64t^3)}{3\sqrt\pi/(256\,t^{5/2})}
+=2\hbar c\cdot\frac{4}{3\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t},\]</span> the same number.
+The agreement checks Proposition 1, the intensive form of Corollary 2
+and the Gaussian computation against each other, since the two routes
+share no step beyond the definition of <span
+class="math inline">\(\varphi_t\)</span>.</p>
+<h2 id="what-this-says-about-the-interacting-theory">7. What this says
+about the interacting theory</h2>
+<p><em>The free limit is correct.</em> For <span
+class="math inline">\(m=0\)</span> the bound must be able to vanish, and
+it does, like <span class="math inline">\(1/\sqrt{8t}\)</span>: the
+inequality is not vacuous, and the flow time is the only resolution
+scale in the free theory.</p>
+<p><em>Weak coupling proves nothing.</em> In the interacting theory the
+perturbative regime at flow time <span class="math inline">\(t\)</span>
+is <span class="math inline">\(\sqrt{8t}\ll\hbar c/(\hbar
+c\Lambda)\)</span>, where the flowed correlators are the free ones up to
+<span class="math inline">\(O(g^2(\sqrt t))\)</span>. There the bound
+reads <span class="math inline">\(m\lesssim4.26\,\hbar
+c/\sqrt{8t}\)</span>, which is weaker than <span
+class="math inline">\(\hbar c\Lambda\)</span> by the ratio <span
+class="math inline">\(1/(\sqrt{8t}\Lambda)\gg1\)</span>: no constraint
+on the gap. The bound reaches the expected value of <span
+class="math inline">\(m\)</span> only at <span
+class="math display">\[\sqrt{8t_*}\ \simeq\ 4.26\,\frac{\hbar
+c}{m},\]</span> the correlation length, and there the coefficient is a
+nonperturbative number, since the leading behaviour of <span
+class="math inline">\(\chi_{\varphi_t}\)</span> at <span
+class="math inline">\(\sqrt{8t}\sim\hbar c/m\)</span> is not given by
+the Gaussian formula of Section 3. This sharpens the statement of <a
+href="finiteness-half-flowed-susceptibility.html">the finiteness
+note</a> §5: the breakdown of the <span
+class="math inline">\(1/\sqrt{8t}\)</span> scaling carries the content
+of the problem. <strong>Proving <span
+class="math inline">\(m&lt;\infty\)</span> requires the value of one
+susceptibility at the confinement scale, and no expansion around the
+free theory supplies it.</strong></p>
+<p><em>Which susceptibility.</em> At <span
+class="math inline">\(\sqrt{8t}\sim\hbar c/m\)</span>, <span
+class="math inline">\(\chi_{\varphi_t}\)</span> is the zero-momentum
+fluctuation of the energy density smeared over a correlation length,
+which in a gapped theory is finite and positive, and in a theory with no
+finite-energy excitations would have to vanish. It is therefore the
+natural target for a nonperturbative lower bound, and a lattice
+statement of the form <span class="math inline">\(\chi_{\varphi_t}\ge
+c\,t^{-5/2}\)</span> uniform in the cutoff would close the finiteness
+half.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>The finiteness half is now quantitative: an exact inequality, a
+closed free-field value with an independent check, and an explicit
+statement of where it becomes informative. The next step it names is a
+lower bound on <span class="math inline">\(\chi_{\varphi_t}\)</span> at
+<span class="math inline">\(\sqrt{8t}\)</span> of order the correlation
+length, uniform in the lattice spacing, which is a positivity statement
+about one flowed correlator rather than a spectral statement. Together
+with hypothesis (F1) it would give <span
+class="math inline">\(m&lt;\infty\)</span>; the clause <span
+class="math inline">\(m&gt;0\)</span> remains untouched by this whole
+line, and its obstruction is the one recorded in <a
+href="schur-error-ultraviolet.html">the Schur note</a>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

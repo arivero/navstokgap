@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One small-field blocking step for SU(3), part 1: the Gaussian fluctuation integral with block averaging, with explicit constants</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>One small-field blocking step for <span
+class="math inline">\(SU(3)\)</span>, part 1: the Gaussian fluctuation
+integral with block averaging, with explicit constants</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/small-field-step-gaussian.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/small-field-step-gaussian.pdf">PDF</a></p><p>This opens the line set in <a
+href="reasons-to-stop-as-research.html">the research-directions
+note</a>: one Euclidean blocking step of the small-field renormalization
+for <span class="math inline">\(SU(3)\)</span> with every constant
+written down. Part 1 is the Gaussian level, where the Wilson action is
+expanded to second order and the fluctuation integral is exact. Four
+things are established. <strong>(i)</strong> A block averaging <span
+class="math inline">\(W\)</span> of link variables that intertwines
+gauge transformations, <span class="math inline">\(Wd=\bar
+dW_0\)</span>, so that the coarse field is a gauge field.
+<strong>(ii)</strong> In Feynman gauge the quadratic Wilson form
+separates into <span class="math inline">\(4\times8=32\)</span>
+identical scalar problems, one per direction and colour, and the
+fluctuation integral is the conditional law of a massless free field
+given its tube averages. <strong>(iii)</strong> A block Poincaré
+inequality with an explicit constant, <span
+class="math display">\[\langle f,-\Delta f\rangle\ \ge\
+\frac49\,\|f\|^2\qquad\text{on tube-mean-zero }f,\]</span> so the
+fluctuation covariance is at most <span
+class="math inline">\(\tfrac94g^2\)</span> and the root-mean-square
+fluctuation of one link angle is at most <span
+class="math inline">\(\tfrac32g\)</span>; the alternating modes show the
+true constant lies in <span class="math inline">\([\tfrac49,4]\)</span>.
+<strong>(iv)</strong> The coarse quadratic form is the Wilson form at
+the same <span class="math inline">\(g^2\)</span> for slowly varying
+fields, the classical scale invariance of four dimensions, and its
+correction and the fluctuation propagator decay exponentially. For the
+decay rate the generic Combes–Thomas argument gives about <span
+class="math inline">\(7\times10^{-4}\)</span> per lattice unit against a
+true rate of order one: <strong>the weak side’s sharpness problem begins
+at the Gaussian propagator</strong>, and the block random-walk expansion
+is the defined next piece. Units: <span
+class="math inline">\(\hbar\)</span> and <span
+class="math inline">\(c\)</span> enter only through <span
+class="math inline">\(S_E/\hbar\)</span>, and all lattice quantities are
+dimensionless with <span class="math inline">\(a=1\)</span> where not
+shown. Constants explicit; nothing promoted.</p>
+<h2 id="conventions">1. Conventions</h2>
+<p>Fine lattice <span class="math inline">\(\mathbb Z^4\)</span>,
+spacing <span class="math inline">\(a\)</span>; link angles <span
+class="math inline">\(\theta_\ell\in\mathfrak{su}(3)\)</span>, <span
+class="math inline">\(U_\ell=e^{i\theta_\ell}\)</span>, so <span
+class="math inline">\(\theta=aA\)</span> with <span
+class="math inline">\(A\)</span> the gauge potential and <span
+class="math inline">\(g\)</span> dimensionless. With <span
+class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>,
+<span
+class="math display">\[\frac{S_W}{\hbar}=\frac2{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)
+=\frac1{2g^2}\sum_p\sum_{a=1}^8\big((d\theta)^a_p\big)^2+O(\theta^3),\]</span>
+where <span
+class="math inline">\((d\theta)_p=\theta_{x,\mu}+\theta_{x+\hat\mu,\nu}-\theta_{x+\hat\nu,\mu}-\theta_{x,\nu}\)</span>
+is the lattice exterior derivative. The quadratic part is eight copies
+of the lattice Maxwell form <span
+class="math inline">\(S_2(\theta)=\frac1{2g^2}\|d\theta\|^2\)</span>,
+and the fluctuation amplitude is of order <span
+class="math inline">\(g\)</span>: a field strength <span
+class="math inline">\(\eta\)</span> per plaquette costs <span
+class="math inline">\(\eta^2/(2g^2)\)</span>, in agreement with the
+large-field bound <span
+class="math inline">\(e^{-\eta^2/(4g^2)}\)</span> of <a
+href="large-field-action-lower-bound.html">the lower-bound note</a> in
+its continuum normalization. The cubic and quartic terms, the Haar
+measure correction <span
+class="math inline">\(dU=(1+O(\theta^2))d\theta\)</span> and the
+non-abelian part of the averaging are the remainder, treated in part
+2.</p>
+<h2 id="the-averaging-and-its-intertwining-property">2. The averaging
+and its intertwining property</h2>
+<p>Blocks <span class="math inline">\(B\)</span> of side <span
+class="math inline">\(2\)</span>; coarse links <span
+class="math inline">\((B,\mu)\)</span> from <span
+class="math inline">\(B\)</span> to <span
+class="math inline">\(B&#39;=B+2\hat\mu\)</span>. Define, for each
+colour component, <span
+class="math display">\[(W\theta)_{B,\mu}=\frac1{16}\sum_{x\in
+B}\big(\theta_{x,\mu}+\theta_{x+\hat\mu,\mu}\big),\]</span> the average
+over the sixteen sites of <span class="math inline">\(B\)</span> of the
+two-link path from <span class="math inline">\(x\)</span> to <span
+class="math inline">\(x+2\hat\mu\)</span>; and for site functions the
+block mean <span
+class="math inline">\((W_0\lambda)_B=\frac1{16}\sum_{x\in
+B}\lambda_x\)</span>.</p>
+<p><strong>Lemma 1 (intertwining).</strong> <span
+class="math inline">\(W\,d=\bar d\,W_0\)</span>, where <span
+class="math inline">\(\bar d\)</span> is the coarse exterior
+derivative.</p>
+<p><em>Proof.</em> <span
+class="math inline">\((Wd\lambda)_{B,\mu}=\frac1{16}\sum_{x\in
+B}\big[(\lambda_{x+\hat\mu}-\lambda_x)+(\lambda_{x+2\hat\mu}-\lambda_{x+\hat\mu})\big]
+=\frac1{16}\sum_{x\in
+B}(\lambda_{x+2\hat\mu}-\lambda_x)=(W_0\lambda)_{B&#39;}-(W_0\lambda)_B.\)</span>
+<span class="math inline">\(\square\)</span></p>
+<p>So a fine gauge transformation <span
+class="math inline">\(\lambda\)</span> moves the coarse field by the
+coarse gauge transformation <span
+class="math inline">\(W_0\lambda\)</span>, and coarse Wilson loops are
+functions of fine gauge-invariant data. This is the property that makes
+the gauge fixing of Section 3 harmless for the coarse theory.</p>
+<p>The tube of <span class="math inline">\((B,\mu)\)</span> is the set
+of fine links entering the average: <span
+class="math inline">\(T_{B,\mu}=\{(y,\mu):y\in
+B\cup(B+\hat\mu)\}\)</span>, three <span
+class="math inline">\(\mu\)</span>-layers of eight links with weights
+<span class="math inline">\(w=(1,2,1)\)</span>, the middle layer counted
+from both <span class="math inline">\(x=y\)</span> and <span
+class="math inline">\(x=y-\hat\mu\)</span>. Each fine link lies in one
+or two tubes.</p>
+<h2 id="feynman-gauge-thirty-two-scalar-problems">3. Feynman gauge:
+thirty-two scalar problems</h2>
+<p>Add the gauge-fixing term <span
+class="math inline">\(\frac1{2g^2}\|d^*\theta\|^2\)</span>. Then <span
+class="math inline">\(S_2+S_{\rm
+gf}=\frac1{2g^2}\sum_\mu\sum_a\langle\theta^a_\mu,-\Delta\theta^a_\mu\rangle\)</span>,
+because <span class="math inline">\(d^*d+dd^*\)</span> is the scalar
+Laplacian on each component of a lattice one-form. The averaging <span
+class="math inline">\(W\)</span> acts on each component separately, so
+the Gaussian step is <span class="math inline">\(32\)</span> copies of
+one scalar problem: a massless free field <span
+class="math inline">\(f\)</span> on <span class="math inline">\(\mathbb
+Z^4\)</span> with covariance <span
+class="math inline">\(g^2(-\Delta)^{-1}\)</span>, conditioned on its
+tube averages <span class="math inline">\(\bar f_B=\frac1{16}\sum_{y\in
+T_B}w_yf_y\)</span> for every block <span
+class="math inline">\(B\)</span>, with the tubes elongated along the
+direction <span class="math inline">\(\mu\)</span> of the component. The
+four directions are equivalent by lattice symmetry.</p>
+<p>For gauge-invariant observables the Feynman and Landau measures
+agree; for the coarse field they differ by a fine pure gauge <span
+class="math inline">\(d\lambda\)</span>, which by Lemma 1 moves the
+coarse field by the coarse pure gauge <span class="math inline">\(\bar
+dW_0\lambda\)</span>, so the law of every coarse gauge-invariant
+observable is the same in both. That is what the intertwining buys.</p>
+<p><strong>Decomposition.</strong> Let <span class="math inline">\(H\bar
+f\)</span> be the minimizer of <span class="math inline">\(\langle
+f,-\Delta f\rangle\)</span> subject to <span
+class="math inline">\(Wf=\bar f\)</span>, and <span
+class="math inline">\(\xi=f-H\bar f\)</span>, so <span
+class="math inline">\(W\xi=0\)</span>. Then, exactly, <span
+class="math display">\[\langle f,-\Delta f\rangle=\langle H\bar
+f,-\Delta H\bar f\rangle+\langle\xi,-\Delta\xi\rangle,
+\qquad H=GW^T(WGW^T)^{-1},\quad G=(-\Delta)^{-1},\]</span> the cross
+term vanishing by the variational characterization. The fluctuation
+<span class="math inline">\(\xi\)</span> is Gaussian on <span
+class="math inline">\(K=\{W\xi=0\}\)</span> with covariance <span
+class="math display">\[C_{\rm fl}=g^2\big[G-GW^T(WGW^T)^{-1}WG\big]
+=g^2\big(P(-\Delta)P\big)^{-1}\Big|_K ,\]</span> the conditional
+covariance of the free field given its tube averages, <span
+class="math inline">\(P\)</span> the orthogonal projection onto <span
+class="math inline">\(K\)</span>; and the coarse quadratic form is <span
+class="math display">\[\bar S_2(\bar f)=\frac1{2g^2}\big\langle\bar
+f,(WGW^T)^{-1}\bar f\big\rangle
+=\min\Big\{\frac1{2g^2}\langle f,-\Delta f\rangle:\ Wf=\bar
+f\Big\}.\]</span></p>
+<h2 id="the-block-poincaré-inequality">4. The block Poincaré
+inequality</h2>
+<p><strong>Proposition 1.</strong> If <span
+class="math inline">\(\sum_{y\in T_B}w_yf_y=0\)</span> for every block
+<span class="math inline">\(B\)</span>, then <span
+class="math display">\[\|\partial f\|^2=\langle f,-\Delta f\rangle\ \ge\
+\frac49\,\|f\|^2 .\]</span></p>
+<p><em>Proof.</em> One tube <span class="math inline">\(T\)</span> is a
+<span class="math inline">\(2\times2\times2\times3\)</span> box of <span
+class="math inline">\(24\)</span> sites whose graph Laplacian has
+smallest nonzero eigenvalue <span
+class="math inline">\(\lambda_2=\min(\lambda_2(P_2),\lambda_2(P_3))=\min(2,1)=1\)</span>,
+so for the plain mean <span class="math inline">\(m\)</span> of <span
+class="math inline">\(f\)</span> on <span
+class="math inline">\(T\)</span>, <span
+class="math inline">\(\sum_T(f-m)^2\le\sum_{\text{bonds}\subset
+T}(\partial f)^2\)</span>. The weighted constraint gives <span
+class="math inline">\(m=-\frac1{32}\sum_T(w_y-\bar w)(f_y-m)\)</span>
+with <span class="math inline">\(\bar w=\tfrac43\)</span>, and <span
+class="math inline">\(\sum_T(w_y-\bar
+w)^2=8(\tfrac19+\tfrac49+\tfrac19)=\tfrac{16}3\)</span>, so <span
+class="math inline">\(|m|\le\frac{4/\sqrt3}{32}\|f-m\|_T\)</span> and
+<span class="math inline">\(24m^2\le\tfrac18\|f-m\|_T^2\)</span>. Hence
+<span
+class="math inline">\(\sum_Tf^2=\|f-m\|_T^2+24m^2\le\tfrac98\sum_{\text{bonds}\subset
+T}(\partial f)^2\)</span>. Summing over all tubes of the direction <span
+class="math inline">\(\mu\)</span>: every site lies in at least one
+tube, and every bond lies in at most two, so <span
+class="math inline">\(\|f\|^2\le\tfrac98\cdot2\,\|\partial
+f\|^2\)</span>. <span class="math inline">\(\square\)</span></p>
+<p><strong>Consequences.</strong> On <span
+class="math inline">\(K\)</span> the precision <span
+class="math inline">\(P(-\Delta)P/g^2\ge\frac4{9g^2}\)</span>, so <span
+class="math display">\[\|C_{\rm fl}\|\le\frac94\,g^2,\qquad
+\big\langle\xi_\ell^2\big\rangle^{1/2}=C_{\rm
+fl}(\ell,\ell)^{1/2}\le\frac32\,g\]</span> for every fine link and
+colour. The modes alternating in sign between consecutive <span
+class="math inline">\(\mu\)</span>-layers, or between consecutive sites
+in a transverse direction, satisfy the constraint and have <span
+class="math inline">\(\langle f,-\Delta f\rangle=4\|f\|^2\)</span>, so
+the sharp constant lies in <span
+class="math inline">\([\tfrac49,4]\)</span>; the value <span
+class="math inline">\(\tfrac49\)</span> is what the tube-by-tube
+argument gives and is enough for part 2, whose smallness condition is on
+<span class="math inline">\(\tfrac32g\)</span>.</p>
+<h2 id="the-coarse-form-and-the-decay-problem">5. The coarse form, and
+the decay problem</h2>
+<p><em>Scale invariance.</em> For a slowly varying coarse field, <span
+class="math inline">\(H\bar f\)</span> is the slowly varying fine field
+with the same values, and <span class="math inline">\(\bar S_2\)</span>
+is the fine Maxwell form evaluated on it. In the coarse angle <span
+class="math inline">\(\theta_c=2\bar f\)</span>, the natural variable of
+a link of length <span class="math inline">\(2a\)</span>, the result is
+the coarse Wilson quadratic form <span
+class="math inline">\(\frac1{2g^2}\|\bar d\theta_c\|^2\)</span> with the
+same <span class="math inline">\(g^2\)</span>, up to corrections of
+relative order <span class="math inline">\(\bar k^2a^2\)</span>: the
+Maxwell action is scale invariant in four dimensions, and the Gaussian
+step does not run the coupling. The running appears in part 2, from the
+dependence of the fluctuation determinant on the background through the
+cubic and quartic vertices.</p>
+<p><em>Decay.</em> Both <span class="math inline">\(C_{\rm fl}\)</span>
+and the correction to the coarse form decay exponentially, because the
+conditioning removes the long-wavelength modes; the massless pole of
+<span class="math inline">\(G\)</span> cancels exactly in <span
+class="math inline">\(G-GW^T(WGW^T)^{-1}WG\)</span> at <span
+class="math inline">\(\bar k\to0\)</span>. An explicit rate is the first
+place where the weak side loses sharpness. The generic Combes–Thomas
+argument on <span class="math inline">\(\tilde
+A=P(-\Delta)P+\tfrac49(1-P)\ge\tfrac49\)</span>, conjugated by <span
+class="math inline">\(e^{\kappa x\cdot e}\)</span>, needs the
+conjugation error below <span class="math inline">\(\tfrac29\)</span>;
+the Laplacian contributes <span
+class="math inline">\(2\sinh\kappa\)</span>, and the projection, through
+<span
+class="math inline">\((WW^T)^{-1}=\big(48+8(S+S^{-1})\big)^{-1}\)</span>
+along <span class="math inline">\(\mu\)</span>, contributes <span
+class="math inline">\(\|P_\kappa-P\|\le10\kappa+O(\kappa^2)\)</span>
+multiplied by <span
+class="math inline">\(2\|{-\Delta}\|\simeq33\)</span>, so <span
+class="math display">\[\kappa\ \le\ \frac{2/9}{2+330}\ \simeq\
+7\times10^{-4}\ \text{per lattice unit},
+\qquad |C_{\rm
+fl}(x,y)|\le\frac92\,g^2\,e^{-\kappa|x-y|_\infty}.\]</span> The true
+rate is of order one per block, as the exact cancellation of the pole
+and the alternating-mode energies indicate; the factor of a thousand is
+the generic argument’s price for the nonlocality of <span
+class="math inline">\(P\)</span> and the size of <span
+class="math inline">\(\|{-\Delta}\|\)</span>. Balaban’s propagator paper
+(Commun. Math. Phys. 95 (1984) 17; metadata level) obtains the order-one
+rate by a random-walk expansion adapted to the block structure; carrying
+that expansion with explicit constants is the next piece, and every
+downstream constant, the locality of the effective interaction and the
+polymer activities of part 2, inherits its rate.</p>
+<h2 id="what-part-2-needs-from-here">6. What part 2 needs from here</h2>
+<p>The remainder <span class="math inline">\(S_W-S_2\)</span> on the
+small-field region, the Haar correction and the non-abelian averaging
+are functions of <span class="math inline">\(H\bar\theta+\xi\)</span>
+with <span class="math inline">\(\xi\)</span> Gaussian of size <span
+class="math inline">\(\tfrac32g\)</span> per link; their expansion is a
+polymer gas whose activities carry powers of <span
+class="math inline">\(g\)</span> and whose locality carries the decay
+rate of <span class="math inline">\(C_{\rm fl}\)</span>. The large-field
+region <span class="math inline">\(|\theta_\ell|\gtrsim1\)</span> has
+probability at most <span class="math inline">\(e^{-c/g^2}\)</span> per
+link with <span class="math inline">\(c\)</span> of order <span
+class="math inline">\(\tfrac29\)</span> from the covariance bound,
+consistent with <a href="large-field-action-lower-bound.html">the
+lower-bound note</a>. The deliverable of part 2 is the Kotecký–Preiss
+threshold <span class="math inline">\(g_{\rm pert}^2\)</span> for this
+gas.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Part 1 of the explicit small-field step is in place: an intertwining
+averaging, the reduction to one scalar conditional-Gaussian problem in
+Feynman gauge, the block Poincaré constant <span
+class="math inline">\(\tfrac49\)</span> with fluctuation size <span
+class="math inline">\(\tfrac32g\)</span> per link, scale invariance of
+the coarse form, and the decay problem located with its generic rate
+<span class="math inline">\(7\times10^{-4}\)</span> against a true rate
+of order one. Next: the block random-walk expansion for the decay rate,
+then part 2.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

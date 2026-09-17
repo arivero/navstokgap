@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claim ledger — navstokgap</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="index.html">navstokgap</a>
+<nav class="site">
+<a href="index.html">Results</a>
+<a href="papers.html">Papers</a>
+<a href="ledger.html">Claim ledger</a>
+<a href="sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Claim ledger</h1><p>Updated 2026-09-16. Current verification uses written derivations and
+source/proof review. Script checks in earlier entries are historical
+under AGENTS.md’s hard rule. Each entry names its assumptions and
+supporting artifact. IDs remain stable through revision.</p>
+<p><a href="action-scale-obstructions.html">The P04 synthesis</a>
+consolidates the accepted action-selection and gap arguments through
+C123. It adds no claim IDs or literature assertions; detailed proofs and
+audit statuses below govern.</p>
+<h2 id="q01-interaction-dependency-b70">Q01 interaction dependency
+(B70)</h2>
+<p><a href="reversible-interaction-premise.html">The B70 map</a> applies
+de la Torre et al.’s Theorems 1–2 to C125. A continuous reversible
+nonlocal extension cannot preserve its minimal composite; the full
+quantum operations conclusion includes identical-copy and
+ancilla/measurement/discard closure. Evidence: selected primary
+theorem/setup passages and <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/reversible-interaction-B70.md">written
+application review</a>. Literature status: established source theorem
+and derived application, no novelty asserted. Proof status: hypothesis
+map and consequence reviewed; C129/B77 subsequently accepts the initial
+generator restriction; later Lie-algebra steps and imported universality
+remain unaudited. C125 remains accepted for its original local-operation
+class; no new theorem ID or positive action claim is added by this
+source milestone.</p>
+<h2 id="mechanical-and-operational-results">Mechanical and operational
+results</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Statement</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C001</td>
+<td>Constant force, matched endpoints: chord action excess <span
+class="math inline">\(F^2T^3/(24m)=T\delta E/12\)</span></td>
+<td>Constant-force note and symbolic script</td>
+</tr>
+<tr class="even">
+<td>C002</td>
+<td>Positive action differences in the fixed-endpoint constant-force
+class have infimum zero</td>
+<td>Foundations Proposition 1; exact family <span
+class="math inline">\(\eta=a t(T-t)\)</span></td>
+</tr>
+<tr class="odd">
+<td>C003</td>
+<td>Absolute action differences accumulate at zero along a continuous
+variation with nonzero second variation</td>
+<td>Foundations Proposition 2; restricted action is <span
+class="math inline">\(C^2\)</span> in its parameter</td>
+</tr>
+<tr class="even">
+<td>C004</td>
+<td>The constant-force Dirichlet Hessian has lowest eigenvalue <span
+class="math inline">\(m\pi^2/T^2\)</span>; scaling the variation scales
+its quadratic cost continuously</td>
+<td>Foundations §3; <span class="math inline">\(L^2\)</span>
+normalization</td>
+</tr>
+<tr class="odd">
+<td>C005</td>
+<td>The free Schrödinger kernel tends to <span
+class="math inline">\(\delta\)</span>, with first short-time correction
+<span
+class="math inline">\(i\hbar\tau\delta&#39;&#39;/(2m)\)</span></td>
+<td>Foundations §4; Schwartz-distribution Fourier proof</td>
+</tr>
+<tr class="even">
+<td>C006</td>
+<td>Fixed-<span class="math inline">\(N\)</span>, equal-prior quantum
+two-arm discrimination has an explicit positive first-lobe action
+threshold for <span class="math inline">\(1/2&lt;p\le1\)</span></td>
+<td>Foundations Proposition 3; specified pure states, phase rule and
+joint measurement</td>
+</tr>
+<tr class="odd">
+<td>C007</td>
+<td>For fixed <span class="math inline">\(1/2&lt;p&lt;1\)</span>, C006’s
+threshold tends to zero as <span
+class="math inline">\(N\to\infty\)</span>; at <span
+class="math inline">\(p=1\)</span> it is <span
+class="math inline">\(\pi\hbar\)</span> for finite <span
+class="math inline">\(N\)</span></td>
+<td>Explicit formula and endpoint checks</td>
+</tr>
+<tr class="even">
+<td>C008</td>
+<td>The free relativistic particle admits arbitrarily small positive
+fixed-endpoint action differences within a strict speed margin</td>
+<td>Foundations §6; explicit small-amplitude family</td>
+</tr>
+<tr class="odd">
+<td>C009</td>
+<td>Free normalized Gaussian kernels on the line compose at every finite
+partition with unchanged action parameter <span
+class="math inline">\(\kappa&gt;0\)</span></td>
+<td>Time-refinement Proposition 1; square completion and normalization
+checks; B06 assumption audit</td>
+</tr>
+<tr class="even">
+<td>C010</td>
+<td>A weakly continuous centered Gaussian convolution semigroup has
+variance <span class="math inline">\(at\)</span>, <span
+class="math inline">\(a\ge0\)</span>; at fixed mass <span
+class="math inline">\(\kappa=ma\)</span> remains free</td>
+<td>Time-refinement Proposition 2; characteristic-function proof,
+including the degenerate family</td>
+</tr>
+<tr class="odd">
+<td>C011</td>
+<td>Fixed-endpoint Gaussian bridges have linear mean and variance <span
+class="math inline">\(\kappa s(T-s)/(mT)\)</span>; fixed
+finite-dimensional laws concentrate on the free classical path as <span
+class="math inline">\(\kappa\to0\)</span></td>
+<td>Time-refinement §3; square completion, Chebyshev and union
+bound</td>
+</tr>
+<tr class="even">
+<td>C012</td>
+<td>For every <span class="math inline">\(\kappa&gt;0\)</span>, the free
+multiplier <span class="math inline">\(\exp[-i\kappa t
+k^2/(2m)]\)</span> gives a strongly continuous unitary group on <span
+class="math inline">\(L^2(\mathbb R)\)</span> with Hamiltonian domain
+<span class="math inline">\(H^2\)</span></td>
+<td>Time-refinement §4; Fourier proof and composition check; B06
+assumption audit</td>
+</tr>
+<tr class="odd">
+<td>C013</td>
+<td>At any positive finite time partition, the free endpoint Hessian has
+determinant <span class="math inline">\(m^{N-1}T/\prod\tau_j\)</span>
+and inverse <span
+class="math inline">\([\min(t_i,t_j)-t_it_j/T]/m\)</span>; these give
+the normalized bridge law</td>
+<td>Regulator-limits Proposition 1; B08 proof review; exact
+nonuniform-partition checks</td>
+</tr>
+<tr class="even">
+<td>C014</td>
+<td>Under that bridge, <span class="math inline">\(2\Delta
+S/\kappa\sim\chi^2_{N-1}\)</span>; if <span
+class="math inline">\(\kappa_N\to0\)</span> and <span
+class="math inline">\((N-1)\kappa_N\to\ell&lt;\infty\)</span>, a common
+coupling gives uniform almost-sure path convergence and <span
+class="math inline">\(L^2\)</span> action excess <span
+class="math inline">\(\ell/2\)</span></td>
+<td>Regulator-limits Proposition 2; B08 review of covariance coupling
+and moments</td>
+</tr>
+<tr class="odd">
+<td>C015</td>
+<td>Smooth fixed-endpoint sine perturbations with amplitude proportional
+to <span class="math inline">\(1/n\)</span> retain excess Newtonian
+action <span class="math inline">\(mv_*^2T/4\)</span> within a strict
+speed bound; acceleration grows with <span
+class="math inline">\(n\)</span></td>
+<td>Regulator-limits §4; off-shell paths, direct integration and B08
+review</td>
+</tr>
+<tr class="even">
+<td>C016</td>
+<td>At one SPD quadratic critical point, the normalized oscillatory
+amplitude has a scalar squared-modulus limit <span
+class="math inline">\(|O(q_*)|^2/\det A=\langle\delta^{(d)}(\nabla
+F),|O|^2\rangle\)</span> for each Schwartz test function</td>
+<td>Regulator-limits §5; fixed dimension, Fourier proof; B08 constants
+review</td>
+</tr>
+<tr class="odd">
+<td>C017</td>
+<td>For a physical free Lagrangian, <span
+class="math inline">\(\epsilon=b\tau\)</span> gives energy units to
+<span class="math inline">\(b\)</span>; choosing the bare coefficient
+<span class="math inline">\(m_B=\epsilon m_R/\kappa_R\)</span> exactly
+preserves the normalized reference kernels</td>
+<td>Regulator-limits §6; explicit reference condition, fixed square-root
+branch; B08 algebra/units review</td>
+</tr>
+<tr class="even">
+<td>C018</td>
+<td>For almost-sure absolutely continuous paths with speed at most <span
+class="math inline">\(u&lt;c\)</span>, <span
+class="math inline">\(\mathsf
+h_\Delta=m\operatorname{Var}(X(t+\Delta)-X(t))/\Delta\)</span> lies in
+<span class="math inline">\([0,mu^2\Delta]\)</span> and tends to zero as
+<span class="math inline">\(\Delta\downarrow0\)</span></td>
+<td>Classical-action-field Proposition 1; elementary variance proof; B09
+and coordinator review</td>
+</tr>
+<tr class="odd">
+<td>C019</td>
+<td>A stationary finite irreducible reversible velocity chain with
+nonzero centered velocity gives <span class="math inline">\(\mathsf
+h(\Delta)\uparrow H_*=2m\langle v,(-Q)^{-1}v\rangle_\pi&gt;0\)</span>,
+with spectral bounds and convergence estimate</td>
+<td>Classical-action-field Proposition 2; fixed-model action plateau,
+mean-zero inverse; spectral proof and B09 review</td>
+</tr>
+<tr class="even">
+<td>C020</td>
+<td>Symmetric velocities <span class="math inline">\(\pm u\)</span>,
+<span class="math inline">\(0&lt;u&lt;c\)</span>, reversed at rate <span
+class="math inline">\(\lambda&gt;0\)</span>, give <span
+class="math inline">\(H_*=mu^2/\lambda\)</span>; universality across
+masses requires <span
+class="math inline">\(\lambda_m=mu_m^2/H_*\)</span></td>
+<td>Classical-action-field §§4, 6; exact correlation, variance and
+telegraph equations; 16-check suite and B09 review</td>
+</tr>
+<tr class="odd">
+<td>C021</td>
+<td>In the formal scaling <span
+class="math inline">\(u_\lambda^2=a\lambda\)</span>, <span
+class="math inline">\(a&gt;0\)</span>, iterated second-moment action
+limits are <span class="math inline">\(ma\)</span> (rate first) and zero
+(duration first)</td>
+<td>Classical-action-field §5; explicit formula; scaling leaves a fixed
+speed ceiling; B09 review</td>
+</tr>
+<tr class="even">
+<td>C022</td>
+<td>A centered bounded refreshed bath, <span class="math inline">\(m\ge
+M&gt;0\)</span> and independent rate <span
+class="math inline">\(\nu&gt;0\)</span> give unique stationary tracer
+variance <span class="math inline">\(S_*=Ms^2/m\)</span>, covariance
+<span class="math inline">\(S_*e^{-\gamma r}\)</span> and action plateau
+<span class="math inline">\((m+M)s^2/\nu\)</span>, <span
+class="math inline">\(\gamma=2\nu M/(m+M)\)</span></td>
+<td>Collision-action-relaxation Proposition 1; invariant series and
+contraction; B10 and coordinator review</td>
+</tr>
+<tr class="odd">
+<td>C023</td>
+<td>With centered bounded initial velocity, <span
+class="math inline">\(\mathsf
+a(t)=2m\int_0^\infty\operatorname{Cov}(V(t+r),V(t))dr\)</span> obeys
+<span class="math inline">\(\dot{\mathsf a}=\beta(H_*-\mathsf
+a)\)</span>, <span class="math inline">\(\beta=4\nu mM/(m+M)^2\)</span>;
+displacement retains a separate window formula</td>
+<td>Collision-action-relaxation Proposition 2; physical preparation time
+and action units; B10 and 15 checks</td>
+</tr>
+<tr class="even">
+<td>C024</td>
+<td>At fixed masses/clock and rest preparation, scaling incoming
+velocities by <span class="math inline">\(0&lt;\epsilon\le1\)</span>
+preserves the collision premises and scales <span
+class="math inline">\(H_*\)</span> and <span
+class="math inline">\(\mathsf a(t)\)</span> by <span
+class="math inline">\(\epsilon^2\)</span></td>
+<td>Collision-action-relaxation §4; class countermodel to a uniform
+positive plateau; B10 review</td>
+</tr>
+<tr class="odd">
+<td>C027</td>
+<td>For constant-force sampled chords on arbitrary positive partitions,
+<span class="math inline">\(D_\pi=F^2\sum\tau_j^3/(24m)\le
+F^2T|\pi|^2/(24m)\)</span>; equal steps minimize at fixed count, and
+every split reduces the error</td>
+<td>Cut-point note §1; matched endpoints; B12 and exact checks</td>
+</tr>
+<tr class="even">
+<td>C028</td>
+<td>In the scalar Gaussian endpoint-bridge family at fixed mass/times,
+exact restriction consistency forces fixed <span
+class="math inline">\(\kappa\ge0\)</span>; for positive <span
+class="math inline">\(\kappa\)</span>, <span
+class="math inline">\(D_\pi\to\infty\)</span> in probability but <span
+class="math inline">\(2D_\pi/(N-1)\to\kappa\)</span> in mean square</td>
+<td>Cut-point note §§2–3; covariance proof, C014 finite chi-square law
+and Chebyshev; B12</td>
+</tr>
+<tr class="odd">
+<td>C029</td>
+<td>Inserting a node after lengths <span
+class="math inline">\(a,b&gt;0\)</span> in the fixed-<span
+class="math inline">\(\kappa\)</span> free bridge adds conditional mean
+kinetic action <span class="math inline">\(\kappa/2\)</span>, using
+variance <span class="math inline">\(\kappa ab/[m(a+b)]\)</span></td>
+<td>Cut-point note §4; square completion; B12 and nine-check suite</td>
+</tr>
+<tr class="even">
+<td>C030</td>
+<td>Equal-mass particles prepared with opposite velocities <span
+class="math inline">\(\pm u\)</span> and separation <span
+class="math inline">\(u\Delta\)</span> exchange velocities at the
+midpoint; the tracer returns with <span
+class="math inline">\(\kappa_{\rm mid}=mu^2\Delta\)</span> and action
+<span class="math inline">\(\kappa_{\rm mid}/2\)</span></td>
+<td>Physical-cut note §1; total energy <span
+class="math inline">\(mu^2\)</span>, momentum zero, preparation changes
+with duration; B13 and twelve checks</td>
+</tr>
+<tr class="odd">
+<td>C031</td>
+<td>For absolutely continuous paths with fixed endpoints and speed at
+most <span class="math inline">\(u\)</span>, <span
+class="math inline">\(\kappa_{\rm mid}=4m\operatorname{Var}Y/\Delta\le
+m\Delta(u-|v|)^2\)</span>, <span
+class="math inline">\(v=(z-x)/\Delta\)</span>; the bound is sharp</td>
+<td>Physical-cut note §2; endpoint-conditioned laws, two-segment action
+with explicit bias term; B13</td>
+</tr>
+<tr class="even">
+<td>C032</td>
+<td>A probability convolution semigroup on position with support in
+<span class="math inline">\([-ut,ut]\)</span> for all <span
+class="math inline">\(t\ge0\)</span> is <span
+class="math inline">\(\delta_{bt}\)</span>, <span
+class="math inline">\(|b|\le u\)</span></td>
+<td>Physical-cut note §3; variance additivity and ballistic bound;
+spatially homogeneous stationary independent increments only; B13</td>
+</tr>
+<tr class="odd">
+<td>C033</td>
+<td>The explicit density-disintegrated telegraph return bridge from
+<span class="math inline">\((0,+u)\)</span> to <span
+class="math inline">\((0,-u)\)</span> has odd-count weights <span
+class="math inline">\(w_k=(\lambda T/2)^{2k}/[(k!)^2I_0(\lambda
+T)]\)</span> and midpoint atom <span class="math inline">\(1/I_0(\lambda
+T)\)</span> at <span class="math inline">\(uT/2\)</span></td>
+<td><a href="telegraph-return-bridge.html">Return-bridge note</a> §§1–3;
+fixed <span class="math inline">\(u,\lambda,T&gt;0\)</span>, independent
+occupation simplexes, right-continuous velocity version; B14 and
+coordinator proof/source review</td>
+</tr>
+<tr class="even">
+<td>C034</td>
+<td>This fixed bridge has consistent cut restrictions and <span
+class="math inline">\(0\le S[X]-S_\pi\le(mu^2/2)N_T|\pi|\)</span>,
+giving almost-sure and <span class="math inline">\(L^1\)</span>
+polygon-action convergence to <span
+class="math inline">\(mu^2T/2\)</span></td>
+<td>Return-bridge note §§4–5; positional samples, kinetic functional,
+deterministic shrinking meshes; B14, 12 symbolic checks and 45 rational
+partition cases</td>
+</tr>
+<tr class="odd">
+<td>C035</td>
+<td>Independent composition gives the mass-weighted COM coefficient and
+complementary reduced-mass coefficient; if a finite nonnegative
+mass-only coefficient on all <span class="math inline">\(m&gt;0\)</span>
+equals its COM-composed value, it is constant</td>
+<td><a href="composition-universality.html">Composition note</a> §§1–2;
+common observable and preparation class, product-state memory retained;
+monotone additive-function proof, B16 and five checks</td>
+</tr>
+<tr class="even">
+<td>C036</td>
+<td>Under C035 for Green–Kubo plateaus, one stationary two-state
+reference with <span class="math inline">\(m_0,u_0&gt;0\)</span> and
+<span class="math inline">\(0&lt;\lambda_0&lt;\infty\)</span> forces the
+shared coefficient <span
+class="math inline">\(K=m_0u_0^2/\lambda_0&gt;0\)</span></td>
+<td>Composition note §§3–4; C020 input; finite-product consistency
+family and preparation/correlation countertests; B16 and coordinator
+proof/source review</td>
+</tr>
+<tr class="odd">
+<td>C037</td>
+<td>In the C033 bridge, <span class="math inline">\((Q+1)/2\mid
+K=k\)</span> is Beta<span class="math inline">\((k+1,k)\)</span> for
+<span class="math inline">\(k\ge1\)</span>, with <span
+class="math inline">\(Q=1\)</span> at <span
+class="math inline">\(k=0\)</span>; <span
+class="math inline">\(\kappa_{\rm mid}/H_*=zR(1-R)\)</span>, <span
+class="math inline">\(R=\int_0^zI_0(s)ds/[zI_0(z)]\)</span>, has cubic
+onset and limit one</td>
+<td><a href="telegraph-return-bridge.html">Combined return-bridge
+note</a> §§6–8; same density-disintegrated return preparation, <span
+class="math inline">\(Q=2X_{T/2}/(uT)\)</span>; factorial convolution,
+beta moments, Bessel integral proof; B17 and 29 exact checks</td>
+</tr>
+<tr class="even">
+<td>C038</td>
+<td>A prescribed positive increment or return-midpoint coefficient
+requires <span class="math inline">\(T\ge K_*/(mu^2)\)</span>; a common
+finite window and uniform speed ceiling force a mass-independent
+coefficient to zero if admissible masses approach zero</td>
+<td>Combined return-bridge note §9; C018/C031 necessary bounds, explicit
+small-mass limit; B17 and coordinator review</td>
+</tr>
+<tr class="odd">
+<td>C039</td>
+<td>The normalized coin <span
+class="math inline">\(C_\varepsilon=(I-i\omega\varepsilon\sigma_x)/\sqrt{1+\omega^2\varepsilon^2}\)</span>
+with opposite translations gives <span
+class="math inline">\(U_{T/N}^N\to e^{-iTH_D/K}\)</span> strongly on
+<span class="math inline">\(L^2\)</span>; the rest-subtracted positive
+branch tends to free Schrödinger evolution as <span
+class="math inline">\(c\to\infty\)</span></td>
+<td><a href="checkerboard-dynamics.html">Checkerboard note</a> §§1–4;
+supplied <span class="math inline">\(m,c,K&gt;0\)</span>, <span
+class="math inline">\(\omega=mc^2/K\)</span>, complex amplitudes;
+self-adjoint domain <span class="math inline">\(H^1\)</span>,
+Fourier/dominated-convergence proof; B18, 28 exact checks and three mode
+tests</td>
+</tr>
+<tr class="even">
+<td>C040</td>
+<td>Ideal direction measurement after every coherent step gives flip
+probability <span
+class="math inline">\(q_\varepsilon=\omega^2\varepsilon^2/(1+\omega^2\varepsilon^2)\)</span>
+and probability of any flip at most <span
+class="math inline">\(\omega^2T\varepsilon\to0\)</span>, a ballistic
+limit</td>
+<td>Checkerboard note §5; initial definite direction, Born rule and
+repeated projective measurement, fixed <span
+class="math inline">\(\omega,T\)</span>; B18 addendum and coordinator
+proof review</td>
+</tr>
+<tr class="odd">
+<td>C041</td>
+<td>The C019 product bounds give an upper bound on the full relaxation
+gap; an independent slow label keeps <span
+class="math inline">\(H=mu^2/\lambda\)</span> fixed while <span
+class="math inline">\(\gamma_1=2\min(\lambda,\epsilon)\to0\)</span></td>
+<td><a href="susceptibility-gap.html">Spectral-control note</a> §§1–3,5;
+finite reversible <span class="math inline">\(L^2(\pi)\)</span>, fixed
+positive <span class="math inline">\(m,u,\lambda\)</span>, supplied
+energy unit; B20, 20 finite checks</td>
+</tr>
+<tr class="even">
+<td>C042</td>
+<td>If centered velocity-unit observables have frame lower bound <span
+class="math inline">\(\alpha&gt;0\)</span> and total susceptibility
+<span class="math inline">\(S\)</span>, then <span
+class="math inline">\(\gamma_1\ge\alpha/S\)</span>; uniform coverage and
+response bounds give a uniform family gap</td>
+<td>Spectral-control note §4; full centered-space frame, eigenbasis
+proof, varying-mass normalization; B20 and coordinator review</td>
+</tr>
+<tr class="odd">
+<td>C043</td>
+<td>The bounded-acceleration return is feasible iff <span
+class="math inline">\(T\ge2u/a\)</span> and has unique minimum kinetic
+cost <span class="math inline">\(mu^3/(3a)\)</span>; longer durations
+allow positive excess costs tending to zero</td>
+<td><a href="bounded-acceleration-return.html">Bounded-turn note</a>
+§§1–2; <span class="math inline">\(W^{2,\infty}\)</span>, prescribed
+<span class="math inline">\(\pm u\)</span>, return endpoints, <span
+class="math inline">\(m,u,a&gt;0\)</span>; external-control kinetic
+functional; B21 and 27 checks</td>
+</tr>
+<tr class="even">
+<td>C044</td>
+<td>Lipschitz velocity gives sharp chord kinetic error <span
+class="math inline">\(0\le S_K-S_\pi\le ma^2\sum d_i^3/24\le
+ma^2T|\pi|^2/24\)</span></td>
+<td>Bounded-turn note §3; arbitrary partition, pair-variance proof,
+affine equality case; uniform fixed-<span
+class="math inline">\(m,a,T\)</span> convergence; B21</td>
+</tr>
+<tr class="odd">
+<td>C045</td>
+<td>Four distinct bounded velocities can have fixed positive <span
+class="math inline">\(H=mu^2/\lambda\)</span> and closing gap <span
+class="math inline">\(2\lambda\delta^2\)</span>; recovering the slow
+sign requires gain at least <span
+class="math inline">\(\sqrt2/\delta\)</span></td>
+<td>Spectral-control note §6; independent signs, <span
+class="math inline">\(\epsilon=\lambda\delta^2\)</span>, <span
+class="math inline">\(0&lt;\delta\le1/4\)</span>, fixed <span
+class="math inline">\(m,u,\lambda&gt;0\)</span>; B22 and exact
+checks</td>
+</tr>
+<tr class="even">
+<td>C046</td>
+<td>Independent reversible factors with local frame bounds satisfy <span
+class="math inline">\(\gamma_{\rm
+prod}=\min_i\gamma_i\ge\min_i\alpha_i/S_i\)</span> despite an unobserved
+mixed sector</td>
+<td>Spectral-control note §7; tensor eigenbasis, unchanged constituent
+clocks, <span class="math inline">\(S_i=\sum_aH_i/(2m_i)\)</span>; B22
+and product-matrix checks</td>
+</tr>
+<tr class="odd">
+<td>C047</td>
+<td>Finite connected harmonic receiver at fixed centre velocity and
+independent fixed-energy uniform phases has <span
+class="math inline">\(h_i(\Delta)=2m_i\sum_j
+w_{ij}(1-\cos\omega_j\Delta)/(\Delta\omega_j^2)\to0\)</span>;
+independent random centre velocity adds <span
+class="math inline">\(m_i\sigma_0^2\Delta\)</span></td>
+<td><a href="conservative-harmonic-receiver.html">Conservative receiver
+note</a>; exact modal/two-body proof, bounded-energy speed margin,
+necessary joint-limit bound; B23 review and 15 checks</td>
+</tr>
+<tr class="even">
+<td>C048</td>
+<td>Equal-mode-energy odd harmonic rings have iterated action limits
+<span class="math inline">\(2\Theta/\Omega\)</span> and zero in opposite
+size/window orders; <span class="math inline">\(z\to\infty\)</span>,
+<span class="math inline">\(z^2/N\to0\)</span> gives the positive joint
+limit</td>
+<td>Receiver note §5; <span
+class="math inline">\(\Omega=2\sqrt{k/m}\)</span>, fixed <span
+class="math inline">\(m,k,\Theta&gt;0\)</span>, zero centre mode,
+density and Lipschitz proofs; B24</td>
+</tr>
+<tr class="odd">
+<td>C049</td>
+<td>A common hard speed ceiling in C048’s phase preparation forces <span
+class="math inline">\(\Theta_N=O(N^{-1})\)</span> and <span
+class="math inline">\(\sup_\Delta h_N\to0\)</span>; bounded total energy
+also suffices for this closure</td>
+<td>Receiver note §6; exact site-zero support maximum, cosecant sum and
+uniform bound; B24 and checks</td>
+</tr>
+<tr class="even">
+<td>C050</td>
+<td>Equal-mass Poisson hard-point gas at density <span
+class="math inline">\(\rho\)</span> with iid velocities <span
+class="math inline">\(\pm u\)</span> and Palm tag has independent
+reversal waits of rate <span class="math inline">\(\rho u\)</span> and
+plateau <span class="math inline">\(mu/\rho\)</span>; fixed-density
+cooling scales it linearly</td>
+<td>Collision paper §5; ordered-gap proof, stationary velocity
+preparation, infinite gas first; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/jepsen-receiver-B25.md">B25
+review</a></td>
+</tr>
+<tr class="odd">
+<td>C051</td>
+<td>Independent uniform phases of two opposite-speed lattices, each
+spacing <span class="math inline">\(2/\rho\)</span>, give a stationary
+square-wave tag and <span class="math inline">\(0\le\mathsf h(\Delta)\le
+m/(3\rho^2\Delta)\to0\)</span> at C050’s mass, speed, density and mean
+collision rate</td>
+<td>Collision paper §6; Palm/intersection proof and folded cubic
+variance; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/ordered-preparation-B26.md">B26
+review</a>; joint mark/position preparation changes</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">C052 | Fixed external relativistic Kepler
+potential has regular bound domain <span class="math inline">\(\lvert
+L\rvert&gt;k/c\)</span>, <span class="math inline">\(E_{\min}(L)\le
+E&lt;mc^2\)</span> and excluded angular-action infimum <span
+class="math inline">\(k/c\)</span> | <a
+href="relativistic-kepler-threshold.html">M07 note</a>; written
+effective-potential, continuation and endpoint-time proofs; B27/B28 and
+coordinator visual/source review |<br />
+C053 | For every fixed softened core <span
+class="math inline">\(a&gt;0\)</span> and <span
+class="math inline">\(m,k,c&gt;0\)</span>, every <span
+class="math inline">\(\lvert L\rvert&gt;0\)</span> admits a regular
+bound circle, giving angular-action infimum zero; at each fixed <span
+class="math inline">\(0&lt;\lvert L\rvert&lt;k/c\)</span> minimizing
+radii tend to zero as <span class="math inline">\(a\downarrow0\)</span>
+| M07 note and gap laboratory Kepler section; compact-sublevel and
+scaling proofs; B28 and coordinator review; no computational
+verification |</div>
+<div class="line-block">C054 | Uniform circular phase gives transport
+response <span class="math inline">\(\ell(1-\cos z)/(\gamma z)\)</span>
+and averaged position-conditioned coefficient <span
+class="math inline">\(\ell\sin^2z/(2\gamma z)\)</span>; fixed positive
+action fraction bounds window ratios | <a
+href="bound-orbit-action-observable.html">A15 note</a>, <span
+class="math inline">\(z=\omega\Delta\)</span>; phase-average proofs and
+B29 |<br />
+C055 | Twice the projected canonical covariance area equals orbital
+action for uniform circular phase and is affine-symplectic invariant;
+other phase preparations conserve their own value, including zero;
+C052/C053 thresholds transfer within uniform preparation | A15
+covariance/orbit-map proofs, gap laboratory, B29 and coordinator source
+review |</div>
+<div class="line-block">C056 | External-potential dilation preserves
+mass, velocity, energy and invariant pushforward preparation; normalized
+orbit action, covariance area and corresponding-window response scale by
+<span class="math inline">\(a\)</span> | <a
+href="action-scale-dilation.html">A16 proof</a>; smooth transformed
+domain, finite moments; B30 and coordinator written review |<br />
+C057 | A class containing arbitrarily small contractions of one positive
+finite degree-one action observable has positive-value infimum zero; a
+common finite value must be zero under any nontrivial admitted
+contraction | A16 closure proposition; model/preparation class explicit;
+coupling and force countertests; B30 |</div>
+<div class="line-block">C058 | One fixed smooth confining potential with
+global force ceiling admits radially stable uniform-phase circles with
+<span class="math inline">\(\ell_R\sim\sqrt{mK}R^2\to0\)</span>,
+vanishing speed/acceleration and finite limiting period | <a
+href="fixed-force-small-circles.html">A17 proof</a>; exact force
+balance, effective energy and asymptotics; B31 |<br />
+C059 | Relativistic circular motion with <span
+class="math inline">\(f\le F_{\max}\)</span> and independent speed floor
+<span class="math inline">\(v\ge v_*&gt;0\)</span> satisfies <span
+class="math inline">\(\ell\ge m^2v_*^3/[F_{\max}(1-v_*^2/c^2)]\)</span>
+| A17 identity <span class="math inline">\(\ell=P^2v/f\)</span> and
+monotonicity; uniform-phase covariance transfer C055; B31 and
+coordinator review |</div>
+<div class="line-block">C060 | Regular closed <span
+class="math inline">\(C^2\)</span> trajectories with speed floor, stated
+momentum law and force ceiling satisfy <span class="math inline">\(T\ge
+P_*\mathcal K/F_{\max}\)</span> and normalized orbit action <span
+class="math inline">\(J\ge P_*^2v_*\mathcal K/(2\pi F_{\max})\ge
+P_*^2v_*/F_{\max}\)</span> | <a
+href="closed-orbit-force-action.html">A18 proof</a>; Fenchel–Borsuk
+input, momentum derivative and monotonicity; B32 and coordinator review
+|<br />
+C061 | C060’s lower constant is attained by a circle in a smooth
+globally force-bounded confining potential | A18 cutoff construction;
+equality over the admissible model class, not every fixed potential; B32
+review |</div>
+<div class="line-block">C062 | Fixed-energy uniform-phase two-body
+spring receiver: stationary position-conditioned kernels have mean
+composition defect <span class="math inline">\(-q\sin\omega s\sin\omega
+t\)</span>; phase state restores exact composition, and two positions
+recover momentum off half-period sampling | <a
+href="classical-cut-state.html">R03 §§1–2</a>; written derivation, B33
+and coordinator review |<br />
+C063 | At fixed duration and initial position, independent equal-step
+conditional direction resets converge terminally in <span
+class="math inline">\(L^2\)</span> to that position; stationary one-time
+law is preserved but two-time correlation freezes. Canonical <span
+class="math inline">\(J=E/\omega\)</span> tends to zero across cooled
+preparations at fixed Hamiltonian | R03 §§3–4; explicit moment
+recurrences and ellipse integral; B33 review |</div>
+<div class="line-block">C064 | Centre-reduced equal-mass three-body
+chain with tagged phase retained has exact cosine memory <span
+class="math inline">\(\Gamma(t)=(9k/20)\cos(\sqrt{5k/(2m)}t)\)</span>
+and inherited receiver quadratures; identical tagged phase can have
+different futures at fixed energy | <a
+href="three-body-cut-memory.html">R04 §§1–3</a>; canonical reduction,
+elimination and fixed-energy pair; B34 review |<br />
+C065 | Two sufficiently close exact tagged-phase samples recover the
+receiver pair through <span class="math inline">\(\det
+B_\delta=g^2\delta^4/(12\mu\nu)+O(\delta^6)\)</span>; inverse
+sensitivity grows while cooling closes modal actions without changing
+the memory kernel | R04 §§4–5; Taylor coefficients, analytic determinant
+and normal-mode scaling; B34 review |</div>
+<div class="line-block">C066 | Two ordered canonical probe shears give
+exact pre-cut phase errors and back-reaction; intrinsic
+rectangular-support products are <span
+class="math inline">\(s_qt_q\)</span> and <span
+class="math inline">\(s_rt_r\)</span>, with zero infimum across
+shrinking positive-volume probe preparations | <a
+href="classical-readout-refinement.html">R05 §§1–2</a>; fixed gains,
+ideal impulses and records; B35 and coordinator written review |<br />
+C067 | At fixed receiver, system preparation and horizon, fresh probe
+widths <span class="math inline">\(O(\eta^4)\)</span> give uniform
+hidden-state reconstruction error <span
+class="math inline">\(O(\eta)\)</span> and trajectory disturbance <span
+class="math inline">\(O(\eta^3)\)</span>, while probe count and
+fixed-mass apparatus mass grow as <span
+class="math inline">\(O(\eta^{-1})\)</span> | R05 §§3–4; exact
+kick-inclusive error identity and bounded-flow sum; B35 review; scalable
+impulsive instrument |<br />
+C068 | Fixed finite-mass clock and four probes with smooth coordinate
+coupling <span class="math inline">\(\lambda K\sum
+f_j(s)X(x)R(q_j)\)</span> give persistent momentum records <span
+class="math inline">\(\boldsymbol\pi(T)=\boldsymbol\pi(0)-\lambda\mathcal
+A z_0+O(\lambda b+\lambda^3)\)</span> with invertible fixed-width pulse
+matrix; receiver disturbance is <span class="math inline">\(O(\lambda
+b+\lambda^2)\)</span> at fixed horizon | <a
+href="autonomous-finite-readout.html">R06 §§1–3</a>; positive kinetic
+energy, compact receiver preparation, bounded forces, clock reaction
+included; B37 and coordinator written review |<br />
+C069 | For C068 with known dynamics and exact final momentum records,
+incoming apparatus width <span
+class="math inline">\(b=\lambda^3\)</span> gives delayed initial-state
+reconstruction and trajectory disturbance <span
+class="math inline">\(O(\lambda^2)\)</span>; canonical initial-position
+error times finite-horizon momentum disturbance tends to zero as <span
+class="math inline">\(O(\lambda^4)\)</span> | R06 §4; fixed masses,
+pulse widths and clock mean energy; increasingly precise preparation and
+weak coupling; reporting refinement is sampling after fixed latency; B37
+review |</div>
+<div class="line-block">C070 | Exact delayed past records with
+unresolved force <span class="math inline">\(f\in L^\infty\)</span>,
+<span class="math inline">\(|f|\le F\)</span>, give coordinate minimax
+prediction errors <span class="math inline">\(F\ell^2/(2m)\)</span> and
+<span class="math inline">\(F\ell\)</span>, simultaneously attained by
+inertial prediction; risk product is <span
+class="math inline">\(F^2\ell^3/(2m)\)</span> | <a
+href="causal-force-information.html">R07 §§1–2</a>; identical-record
+force pair and endpoint-integral upper bounds; B38 review |<br />
+C071 | R07’s exact joint reachable region satisfies <span
+class="math inline">\(|z-d/2|\le(1-d^2)/4\)</span>, <span
+class="math inline">\(|d|\le1\)</span>, and has canonical area <span
+class="math inline">\(2F^2\ell^3/(3m)\)</span>; force-budget or delay
+closure sends the area to zero | R07 §§3–4; fixed-impulse extremizers,
+convex interpolation and area integral; B38 review |</div>
+<div class="line-block">C072 | For arbitrary measurable bounded force,
+<span class="math inline">\(K_T=S_bK_a+K_b\)</span> at every interior
+cut; all unobserved refinements preserve the endpoint set, while
+replacing the intermediate lens by its marginal rectangle strictly
+enlarges it | <a href="reachable-cut-composition.html">R08 §§1–2</a>;
+split/concatenate proof and saturated-impulse counterexample; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/cut-composition-B39.md">B39
+review</a> |<br />
+C073 | Exact cut position leaves momentum interval of width <span
+class="math inline">\(D(\zeta)=Fa[\sqrt{2-4\zeta}+\sqrt{2+4\zeta}-2]\)</span>
+and terminal canonical area <span
+class="math inline">\(2F^2b^3/(3m)+Fb^2D(\zeta)/m\)</span>; area tends
+uniformly to zero as <span class="math inline">\(b\to0\)</span> although
+the central momentum width stays positive | R08 §§3–4; ideal available
+records, lens inversion and determinant-one shear; B39 written review
+|</div>
+<div class="line-block">C074 | A bounded-error position strip clipped to
+the force lens has terminal area <span
+class="math inline">\(A_C+2F^2b^3/(3m)+2Fbw+Fb^2D_*/m\)</span>, with
+strip width <span class="math inline">\(w\)</span> and extreme
+compatible momentum span <span class="math inline">\(D_*\)</span> | <a
+href="finite-precision-cut.html">R09 §§1–2</a>; segment extrusion,
+monotone fibres and <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/finite-precision-B40.md">B40
+review</a> |<br />
+C075 | At fixed <span class="math inline">\(F,m,T\)</span>, R09’s area
+is at most <span
+class="math inline">\(4FT\varepsilon+2F^2ab^2/m+2F^2b^3/(3m)\)</span>
+and closes uniformly as precision error and delay vanish at any relative
+rates; central momentum uncertainty persists | R09 §3; written bound and
+exact/full/no-delay endpoint checks; B40 review |</div>
+<div class="line-block">C076 | Two bounded-error positions give exact
+compatible-set propagation and estimator-specific worst-case terminal
+errors <span class="math inline">\(R_p=B+Fb\)</span>, <span
+class="math inline">\(R_q=\varepsilon_2+bB/m+Fb^2/(2m)\)</span>, where
+<span
+class="math inline">\(B=m(\varepsilon_1+\varepsilon_2)/\delta+F\delta/2\)</span>
+| <a href="two-position-recovery.html">R10 §§1–2</a>; weighted force
+integral and simultaneous saturation; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/two-record-B41.md">B41
+review</a> |<br />
+C077 | If <span class="math inline">\(\delta,b\to0\)</span> and <span
+class="math inline">\((\varepsilon_1+\varepsilon_2)/\delta\to0\)</span>,
+both coordinate errors close uniformly; equal errors and <span
+class="math inline">\(b=\delta_*=2\sqrt{m\varepsilon/F}\)</span> give
+action-error product <span
+class="math inline">\(28\sqrt{mF}\varepsilon^{3/2}\)</span> at fixed
+horizon | R10 §3; timing feasibility and written bounds; established
+equal-error differentiation optimum, derived mechanical product |</div>
+<div class="line-block">C078 | For compact centrally symmetric convex
+inputs, linear records with bounded errors and a scalar linear target,
+global minimax error equals the maximal target magnitude in the central
+compatible fibre | <a href="indistinguishable-phase-bound.html">R11
+§1</a>; half-difference and midpoint proof; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/indistinguishability-B42.md">B42
+review</a> |<br />
+C079 | At <span class="math inline">\(d=2\sqrt{m\varepsilon/F}\)</span>,
+<span class="math inline">\(T-b\ge2d\)</span>, two position records and
+the entire bounded-error position history have identical coordinate
+minimax risks <span class="math inline">\(P_*=Fd+Fb\)</span> and <span
+class="math inline">\(Q_*=\varepsilon+Fdb/m+Fb^2/(2m)\)</span>; at <span
+class="math inline">\(b=0\)</span> their product is <span
+class="math inline">\(2\sqrt{mF}\varepsilon^{3/2}\)</span> | R11 §§2–3;
+established prepared opposite-motion pair, R10 upper bound, blind-delay
+extension; B42 review |<br />
+C080 | Product symmetric convex input/error classes with all constituent
+records give exact scalar minimax radius <span
+class="math inline">\(\sum_i \lvert a_i\rvert r_i\)</span>; canonical
+centre/relative radii follow, and n identical copies have <span
+class="math inline">\(H_R=nH_1\)</span>. Mass-only nonnegative
+coordinate-radius closure on all positive masses forces <span
+class="math inline">\(Q(m)=q_*\)</span>, <span
+class="math inline">\(P(m)=p_*m\)</span> | <a
+href="minimax-composition.html">R12 §§1,4</a>; product-fibre extremizers
+and nonnegative additivity; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/minimax-composition-B43.md">B43
+written review</a> |<br />
+C081 | For product bounded forces/errors, complete records, known
+initial states and <span
+class="math inline">\(T\ge\max_i4\sqrt{m_i\varepsilon_i/F_i}\)</span>,
+centre risks are <span class="math inline">\(Q_A=E\)</span>, <span
+class="math inline">\(P_A=2\sum_i\sqrt{m_iF_i\varepsilon_i}\)</span>;
+retaining only the centre record gives <span
+class="math inline">\(Q_B=E\)</span>, <span
+class="math inline">\(P_B=2\sqrt{MF_\Sigma E}\)</span>, strictly larger
+momentum risk unless <span
+class="math inline">\(F_i/(m_i\varepsilon_i)\)</span> is common | R12
+§§2–3; R11 sharp radii, exact force/error image, Cauchy–Schwarz; B43
+written review |</div>
+<div class="line-block">C082 | Known initial phase, complete position
+records of error epsilon and arbitrary force bound F give exact
+finite-horizon radii <span
+class="math inline">\(Q=\varepsilon\min(s^2/2,1)\)</span> and <span
+class="math inline">\(P=\sqrt{mF\varepsilon}V(s)\)</span>, with <span
+class="math inline">\(s=T\sqrt{F/(m\varepsilon)}\)</span> and <span
+class="math inline">\(V=s,\sqrt{2s^2+4}-s,2\)</span> on intervals split
+at sqrt(2),4; blind-delay radii are <span
+class="math inline">\(P+Fb\)</span>, <span
+class="math inline">\(Q+bP/m+Fb^2/(2m)\)</span> | <a
+href="finite-horizon-minimax.html">R13 §§1–2</a>; rearrangement and
+path-strip extremizers; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/finite-horizon-B44.md">B44
+written review</a> |<br />
+C083 | R12 product and aggregate radius formulas extend to every horizon
+using C082; aggregate position risk strictly increases exactly when some
+<span class="math inline">\(F_iT^2/2&lt;m_i\varepsilon_i\)</span> and
+another is strictly greater. The F,16F example loses both phase
+coordinates; identical-copy risk products remain extensive at every
+horizon | R13 §3; product fibres, exact image and minimum-of-sums
+identity; B44 written review |</div>
+<div class="line-block">C084 | Two identical constituents with pointwise
+quadratic shared record-error budget have exactly the one-body centre
+risks at mass 2m, force bound 2F and precision epsilon/sqrt(2), for full
+or averaged records, at every horizon; blind-delay extension and
+saturated factor 2^(1/4) follow | <a
+href="shared-record-budget.html">R14 §§1–2</a>; exact
+projection/synchronous lift and C082; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/shared-budget-B45.md">B45
+written review</a> |<br />
+C085 | For n identical constituents with fixed pointwise l^r budget,
+1&lt;=r&lt;=infinity, effective centre precision is epsilon n^(-1/r),
+with equal full/aggregate scalar risks; saturated canonical product is
+n^(1-3/(2r)) times the one-copy product, including invariant copy-count
+scaling at r=3/2 | R14 §3; norm inequality, synchronous lift, canonical
+mass and C082; B45 written review |</div>
+<div class="line-block">C086 | Independent blocks of identical
+bounded-force constituents, pointwise l^r budgets and known initial
+phases have exact full/block-record centre risks Q=sum w_j q(T,E_j),
+P=sum n_j p(T,E_j), E_j=epsilon_j n_j^(-1/r); whole-centre-only records
+give q(T,bar E), Np(T,bar E). Saturated momentum loss is strict unless
+all E_j coincide | <a href="block-apparatus-composition.html">R15
+§§1–2</a>; product fibres and exact aggregate lift; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/block-apparatus-B46.md">B46
+written review</a> |<br />
+C087 | k independent equal blocks of a constituents have saturated H=k
+a^(1-3/(2r)) H_1, hence k H_1 at r=3/2. Finite-r product block budgets
+differ from every single unweighted global ball; equal centre risks can
+occur despite strict set inclusion. Matching fixed global-budget centre
+risks requires block allowance epsilon k^(-1/r) | R15 §§3–4; copy-count
+substitution, enclosing radius and explicit strict inclusion; B46
+written review |</div>
+<div class="line-block">C088 | R06’s nominal four-record map has <span
+class="math inline">\(F_\lambda=-\lambda\mathcal A
+z+O_{C^1}(\lambda^3)\)</span> on a fixed convex receiver neighbourhood,
+hence a uniform lower Lipschitz bound at fixed sufficiently small
+positive coupling | <a href="fixed-coupling-calibration.html">R16
+§2</a>; variational equations, compact bounds and matrix margin; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/fixed-calibration-B47.md">B47
+review</a> |<br />
+C089 | At that fixed coupling, exact nonlinear minimum-residual
+calibration has uniform initial-state error bounded by <span
+class="math inline">\(C_\lambda(b+\rho)\)</span> for preparation width b
+and four final-record errors rho. Accuracy–disturbance and canonical
+reconstruction-error products close as b,rho tend to zero at fixed
+apparatus masses, duration and geometry | R16 §§3–4; compact
+minimization, C088 and R06 disturbance bound; B47 review |</div>
+<div class="line-block">C090 | At fixed sufficiently small positive
+coupling and incoming preparation width b, unknown initial probe momenta
+compensate every shell-state displacement at most b/(4L lambda),
+preserving all four exact nonlinear records with at least b/2
+preparation margin | <a href="fixed-preparation-ambiguity.html">R17
+§§1–2</a>; compact smooth dependence, contraction and shell chart; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/fixed-preparation-B48.md">B48
+written review</a> |<br />
+C091 | A common-record shell patch projects onto a canonical rectangle
+of half-widths L_<em>r and P_</em>r, r=min(r_0,b/(4LC_0 lambda)); every
+deterministic estimator has coordinate risks at least these half-widths,
+reconstruction product at least L_<em>P_</em>r^2, and compatible
+projected area at least 4L_<em>P_</em>r^2 | R17 §§2–3; exact shell chart
+and endpoint triangle inequality; B48 review; fixed product support and
+four-record access |</div>
+<div class="line-block">C092 | For an admissible fixed R06 pulse design,
+unknown initial probe positions have final-momentum derivative lambda
+squared B plus a uniform order-three remainder; the finite-clock
+response makes B lower triangular with nonzero diagonal near the
+selected shell point | <a href="position-preparation-ambiguity.html">R18
+§§1–2</a>; variational equations and pulse integration by parts; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/position-preparation-B49.md">B49
+review</a> |<br />
+C093 | With four initial and four final probe momenta revealed, a
+positive unknown initial-position box hides an exact shell square of
+radius r=min(r_0,lambda b/(4CC_0)); canonical reconstruction product is
+at least L_<em>P_</em>r squared and projected compatible area at least
+four times that value | R18 §§3–4; contraction with interior margin and
+R17 shell chart; B49 review; fixed design, small positive coupling and
+Cartesian preparation support |</div>
+<div class="line-block">C094 | With known incoming clock data and probe
+momenta in fixed small boxes, the eight final pointer records uniformly
+determine receiver state and unknown incoming positions: the scaled
+record map is C1-close to (-A_c z,q) on a convex domain and has lower
+Lipschitz constant beta/2 at sufficiently small positive coupling | <a
+href="full-pointer-recovery.html">R19 §§1–3</a>; fixed pulse/cutoff
+margins, uniform clock signal rank, written variational and segment
+estimates; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/full-pointer-B50.md">B50
+review</a> |<br />
+C095 | Under C094, minimum-residual recovery gives canonical error
+product at most 16 L_<em>P_</em> max(rho_pi/lambda,rho_q)^2 / beta^2; it
+closes with final record errors at fixed positive coupling and fixed
+positive preparation widths | R19 §4; compact fit and triangle
+inequality, action units without 2 pi factor; B50 review; exact incoming
+clock/momentum information and joint final access supplied |</div>
+<div class="line-block">C096 | An admissible fixed four-pulse design has
+clock-speed signal determinant derivative -partial_v log abs(det
+A)=10/v_0+O(epsilon)&gt;0; two implicit equations give an exact
+common-eight-record receiver energy-shell curve with both canonical
+phase derivatives nonzero when initial clock data are hidden | <a
+href="hidden-clock-ambiguity.html">R20 §§1–4</a>; moment determinant,
+quadratic-energy transversality and preparation margins; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/hidden-clock-B51.md">B51
+review</a> |<br />
+C097 | On that fixed-domain family, clock offsets of half-width sigma
+give every deterministic estimator canonical risks at least k_x sigma
+and k_P sigma and product at least k_x k_P sigma squared, uniformly at
+sufficiently small positive coupling | R20 §5; common-record endpoints,
+fixed positive preparation margins; B51 review; action units, no
+positive-area conclusion |</div>
+<div class="line-block">C098 | With revealed initial clock position,
+known zero probe momenta and exact receiver energy, the augmented
+eight-record/energy map has a uniform local lower Lipschitz bound
+gamma/2 on a fixed convex neighbourhood of R20’s transverse shell point,
+for all sufficiently small coupling | <a
+href="clock-position-local-recovery.html">R21 §§1–3</a>; kernel
+reduction tau dv=0, fixed-unit derivative margin and segment
+integration; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/clock-position-B52.md">B52
+review</a> |<br />
+C099 | On a compact local shell patch times independent fixed apparatus
+boxes, minimum-residual fitting recovers receiver/probe positions and
+unknown initial clock momentum with joint error at most 4 delta/gamma
+and canonical product at most 16 L_<em>P_</em> delta squared/gamma
+squared, delta=max(rho_pi/lambda,rho_q) | R21 §4; compact fit, exact
+energy and triangle inequality; fixed positive coupling record-error
+limit closes the product; B52 review |</div>
+<div class="line-block">C100 | For a sufficiently early fixed R20 pulse
+design, two distinct fixed clock speeds and revealed offset admit
+equal-energy distinct receiver states with identical eight scaled
+zero-coupling pointer records; the limiting energy-speed quadratic form
+has both signs and the actual pair follows by continuity | <a
+href="global-clock-speed-ambiguity.html">R22 §§1–2</a>; derivative-row
+expansion and normalized shell path; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/global-clock-B53.md">B53
+review</a> |<br />
+C101 | These common-record pairs persist with full back-reaction for all
+sufficiently small positive coupling inside fixed preparation margins;
+both canonical separations stay positive and every deterministic
+estimator has error product at least c_x c_P d_v squared/16 | R22 §§3–4;
+uniform implicit continuation, endpoint signs and two-point risks; B53
+review; full shell and fixed speed separation |</div>
+<div class="line-block">C102 | With known initial offset and zero
+incoming probe momenta, eight final pointer coordinates plus final clock
+momentum recover receiver state, incoming positions and unknown initial
+speed globally on a fixed bounded convex domain; the nonlinear leading
+map has lower Lipschitz constant beta=min(1,alpha/(1+D)), and the exact
+map at least beta/2 | <a href="final-clock-momentum-recovery.html">R23
+§§1–2</a>; full clock reaction, uniform C1 perturbation and direct
+global bound; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/final-clock-B54.md">B54
+review</a> |<br />
+C103 | Under C102, minimum-residual recovery has canonical error product
+at most 16 L_<em>P_</em> max(rho_pi/lambda,rho_q,rho_c) squared/beta
+squared; it closes with record error at fixed coupling and positive
+preparation widths, without supplying exact receiver energy | R23 §3;
+compact fit, clock-record normalization and action units; B54 review
+|</div>
+<div class="line-block">C104 | All ten final apparatus coordinates
+recover receiver state, incoming probe positions and both initial clock
+coordinates globally on a fixed bounded convex domain at sufficiently
+small positive coupling, with known zero incoming probe momenta and time
+T | <a href="full-clock-phase-recovery.html">R24 §§1–2</a>; explicit
+clock shear, uniform signal variation and complete C1 remainder; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/full-clock-B55.md">B55
+review</a> |<br />
+C105 | Under C104, minimum-residual fitting gives canonical error
+product at most 16 L_<em>P_</em> max(rho_pi/lambda,rho_q,rho_s,rho_c)
+squared/beta squared, closing with record precision at fixed apparatus
+and preparation without initial clock calibration or exact receiver
+energy | R24 §3; compact fit, unit conversion and fixed/joint limit
+conditions; B55 review |</div>
+<div class="line-block">C106 | With every initial apparatus coordinate
+unknown in a full positive box, the inverse free shear gives exact
+compensation of all ten final records for receiver changes of norm at
+most b/(4 L lambda), with b/2 preparation margin; an exact energy-shell
+chart gives positive coordinate risks and projected area | <a
+href="full-apparatus-preparation-ambiguity.html">R25 §§1–2</a>; compact
+smooth-flow derivatives, self-mapping contraction, canonical shell
+chart; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/full-apparatus-B56.md">B56
+review</a> |<br />
+C107 | Under C106, if lambda&lt;=min(lambda_0,b/(4 L D)), one full
+apparatus record is compatible with the entire receiver shell;
+coordinate minimax risks are sqrt(2E/k_x) and sqrt(2mu E), the optimal
+error product is 2E sqrt(mu/k_x), and projected compatible area is pi
+times that product | R25 §3; k_x=a-g^2/d&gt;0, exact shell ellipse,
+endpoint lower bounds and constant estimator attaining both; B56 review;
+fixed positive width, no known exact apparatus energy |</div>
+<div class="line-block">C108 | A backward trajectory from zero terminal
+probe phase, with terminal total energy E+H_0 and scalar amplitude
+adjustment, gives exact initial receiver energy E and apparatus energy
+H_0 with O(lambda) apparatus displacement and b/2 preparation margin |
+<a href="energy-constrained-apparatus-ambiguity.html">R26 §§1–2</a>;
+smooth inverse flow, derivative 2E, exact conservation; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/energy-symmetry-B57.md">B57
+review</a> |<br />
+C109 | Simultaneous receiver/probe sign reversal gives an exact
+antipodal initial receiver pair with identical full final apparatus
+records and both initial energies; the canonical risk-product lower
+bound tends to E sqrt(mu/(a-g squared/d)) as coupling vanishes at fixed
+positive preparation width | R26 §§3–4; local equation symmetry, zero
+terminal probes and two-point risk; B57 review; lower-bound limit, not
+exact minimax or area |</div>
+<div class="line-block">C110 | With one nonzero calibrated initial probe
+displacement and exact receiver/apparatus energies, an eleven-coordinate
+preparation chart and Borsuk–Ulam give distinct initial states with
+identical ten final apparatus coordinates and positive box margins | <a
+href="calibrated-displacement-ambiguity.html">R27 §§1–2</a>; exact
+energy charts, compact S^10 and continuous record map; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/calibrated-displacement-B58.md">B58
+review</a> |<br />
+C111 | Under C110, the inverse-shear flow estimate forces receiver
+separation at least 2r/sqrt(1+4L squared lambda squared) and full-state
+minimax error at least r/sqrt(1+4L squared lambda squared), in fixed
+Euclidean component units | R27 §3; ambient convex-domain derivative
+bounds and parameter projection; B58 review; dimensionless full-state
+bound, canonical product unresolved |</div>
+<div class="line-block">C112 | For a fixed smooth pulse design, nonzero
+q_1 calibration and exact receiver/apparatus energies admit an exact
+common-ten-record curve with both canonical derivatives bounded away
+from zero on a fixed weak-coupling rectangle | <a
+href="calibrated-canonical-ambiguity.html">R28 §§1–3</a>; scaled
+compensator constraints, pulse kernel and uniform implicit continuation;
+<a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/calibrated-canonical-B59.md">B59
+review</a> |<br />
+C113 | Under C112, every deterministic estimator has canonical risk
+product at least delta squared times absolute v_x v_P divided by 4,
+uniformly for sufficiently weak positive coupling at fixed preparation |
+R28 §4; exact common-record endpoints and triangle inequality; action
+units, design/preparation/energy-dependent, no area or minimax equality
+|</div>
+<div class="line-block">C114 | A fixed smooth pulse design with q_1=c
+nonzero, q_2=0 and exact energies E,H_0 has two exact common-record
+branches tending to opposite receiver shell points; the augmented
+fourteen-coordinate map is locally invertible at each branch for fixed
+small positive coupling | <a href="two-calibration-branches.html">R29
+§§1–4</a>; rank-three pulse rows, regular shell roots, compensator
+continuation and block elimination; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/two-calibration-B60.md">B60
+review</a> |<br />
+C115 | The branches in C114 differ in both canonical coordinates; every
+global receiver estimator has an action-unit error-product lower bound
+tending to abs(z_bar_x z_bar_P)&gt;0 as coupling decreases at fixed
+preparation and design | R29 §4; common-record endpoint bounds; B60
+review; local inverse margins may depend on coupling, no area or exact
+minimax claim |</div>
+<div class="line-block">C116 | Three exact initial positions q_1=c
+nonzero, q_2=q_3=0, exact apparatus energy and ten final records give
+uniform global receiver/apparatus recovery on a bounded convex receiver
+domain and sufficiently small fixed box about eta_c, without exact
+receiver energy | <a href="three-calibration-global-recovery.html">R30
+§§1–3</a>; four-row pulse rank, varying-record chart and uniform segment
+estimate; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/three-calibration-B61.md">B61
+review</a> |<br />
+C117 | Under C116 the receiver inverse is bounded by K_z/lambda times
+final-record error; minimum-residual fitting gives canonical error
+product at most 4 L_* P_* K_z squared times (delta/lambda) squared | R30
+§4; fixed physical units and positive preparation width; closes at fixed
+coupling as delta tends to zero; no sharp minimax or larger-box claim
+|</div>
+<div class="line-block">C118 | On R30’s unchanged fixed preparation box,
+errors epsilon in supplied C=(q_1,q_2,q_3,H_app) and delta in full final
+records permit a feasible estimator with receiver error at most
+2K(epsilon+delta)/lambda and canonical product at most 4 L_<em>P_</em> K
+squared ((epsilon+delta)/lambda) squared | <a
+href="calibration-tolerance-recovery.html">R31 §1</a>; general two-data
+chart estimate and compact feasible selector; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/calibration-tolerance-B62.md">B62
+review</a> |<br />
+C119 | With equal positive calibration tolerances epsilon and exact
+final records, one compatible set contains tZ for t=min(1,epsilon/(MB
+lambda R_Z)); the optimal canonical product has order
+min(1,(epsilon/lambda) squared), and at t=1 equals the no-record value
+2E_max sqrt(mu/(a-g squared/d)) exactly | R31 §§2–3; exact compensator,
+full energy-ball geometry, matched coordinate bounds and zero estimator;
+B62 review; sufficient saturation threshold |</div>
+<div class="line-block">C120 | With only supplied constraint j
+uncertain, R30’s exact coupled reference admits a smooth common-record
+curve T_lambda^{-1}(s e_j), with tangent tending to L^{-1}e_j and
+abs(s)&lt;=min(s_0,epsilon/lambda); if both canonical tangent components
+are nonzero, the optimal canonical risk product has order
+min(1,(epsilon/lambda) squared), although the projected curve has zero
+planar area | <a href="single-calibration-fibres.html">R32 stage 1</a>;
+local uniform inverse and exact endpoint construction; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/single-calibration-B63.md">B63
+review</a>; C121 supplies an explicit pulse subfamily satisfying all
+four tests |</div>
+<div class="line-block">C121 | An explicit R30 pulse subfamily with
+first centres tau, 2 tau, 3 tau and sufficiently small fixed positive
+widths has all eight canonical entries of L inverse nonzero; hence C120
+gives matched single-tolerance canonical risk-product order for every j
+| <a href="single-calibration-fibres.html">R32 §4</a>; scaled ODE, four
+cubic cardinal polynomials, normalized width estimate and inverse
+margins; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/pulse-column-B64.md">B64
+review</a>; existence within the design class |</div>
+<div class="line-block">C122 | For the fixed correlated calibration line
+r=L e_y at R32’s exact reference, the local common-record curve has
+w_lambda(s)=s e_y-lambda L^{-1}V(s e_y)+O(lambda squared abs(s)), with
+V=partial_lambda squared N/2; its conditional canonical risk product is
+at most a fixed action constant times min(lambda s_0,epsilon) squared |
+<a href="correlated-calibration-response.html">R33 stage 1</a>; smooth
+inverse and anchored mixed derivatives; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/correlated-response-B65.md">B65
+review</a>; local-fibre upper bound; C123 settles the tangent
+cancellation, curvature and global risk open |</div>
+<div class="line-block">C123 | On R33’s fixed linear-cutoff chart,
+N(-lambda,-w)=N(lambda,w), D V(0)=0 and V is the homogeneous quadratic
+map (13); for S=min(s_0,epsilon/lambda), conditional canonical product
+is bounded by a fixed action constant times (lambda S squared + lambda
+squared S) squared | <a href="correlated-calibration-response.html">R33
+stage 2</a>; terminal variational equations with explicit
+moving-reference cancellation; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/correlated-variation-B66.md">B66
+review</a>; curvature nonvanishing and full-class minimax risk remain
+open |</div>
+<div class="line-block">C124 | The periodic zero-field Ising heat-bath
+chain on N&gt;=3 sites has exact full gap a[1-tanh(2b)]; bounded
+nonnegative coupling and a positive per-site refresh-clock floor give a
+uniform finite-volume bound, whereas growing coupling or total-clock
+normalization can close it | <a
+href="interacting-ising-gap.html">Interacting proof</a> §§1–4; all-mode
+Hamming/Lipschitz contraction, matching magnetization mode and
+normalized susceptibility; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/ising-gap-B68.md">B68
+written review</a> |</div>
+<div class="line-block">C125 | Hidden orientations with affine effects
+give an exact operational ball of capacity two and reversible pure-state
+rotations; n-component joint measures and product tests have capacity
+2^n and linear dimension 4^n, but pure composites are products and the
+equal-sign capacity-two face is a segment, so purification and Hardy
+subspace structure fail | <a
+href="classical-orientation-closure.html">Q01 countermodel</a>;
+stipulated measurement/composition class and written moment/capacity
+proof; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/orientation-closure-B69.md">B69
+review</a> |</div>
+<div class="line-block">C126 | For C124, the square-root Gibbs transform
+is a positive three-site local frustration-free Hermitian operator with
+unique ground state sqrt(pi), exact gap a[1-tanh(2b)] and energy gap
+Ka[1-tanh(2b)] for supplied action K&gt;0; physical clock/action
+identification remains a premise | <a
+href="ising-hermitian-transfer.html">G04 derivation</a>; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/ising-hermitian-B71.md">B71
+written review</a>; full finite-volume spectrum inherited from C124
+|</div>
+<div class="line-block">C127 | H=J u_z v_z on two fixed-magnitude
+classical spin spheres has two zero-energy preparations with identical
+first/cross moments but product-test probabilities (1-sin(Jt/S_A))/4 and
+1/4; its reversible hidden flow therefore fails to induce a
+single-valued evolution on C125’s quotient | <a
+href="hamiltonian-moment-descent.html">Mechanical proof</a>; exact
+preparations/trajectories; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/spin-descent-B72.md">B72
+review</a>; supplied spin magnitudes and fixed effects |</div>
+<div class="line-block">C128 | For C127 with J&gt;0 and all Borel
+preparations, no finite-dimensional bounded real observable space
+containing the retained effects is invariant on any nonzero time
+interval; nonlinear updates of finitely many expectations cannot repair
+exact descent | <a href="hamiltonian-finite-closure.html">Orbit and
+atomic-separation proof</a>; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/finite-closure-B74.md">B74
+written review</a>; exact finite repair only, no capacity or
+action-selection conclusion |</div>
+<div class="line-block">C129 | For finite n local Bloch balls with all
+unit product preparations/effects, two-sided admissibility of exp(tX)
+forces zero first derivatives at zero probabilities, the boundary
+second-derivative signs, and X in the tensor power of the
+seven-dimensional space of scalar diagonal, equal time-space and
+antisymmetric spatial blocks | <a
+href="reversible-generator-constraints.html">Expanded source proof</a>;
+<a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/reversible-generator-B77.md">B77
+review</a>; necessary generator constraint only; no physical clock or
+action identification |</div>
+<div class="line-block">C130 | For C052’s Hamiltonian, the plunge
+threshold <span class="math inline">\(\lvert L\rvert&gt;k/c\)</span> and
+the circular energies <span
+class="math inline">\(mc^2\sqrt{1-k^2/(c^2L^2)}\)</span> at <span
+class="math inline">\(\lvert L\rvert=\hbar\lvert\kappa\rvert\)</span>
+coincide with the Dirac Coulomb indicial thresholds <span
+class="math inline">\(Z\alpha&lt;\lvert\kappa\rvert\)</span> and
+zero-radial-node levels; the radial action <span
+class="math inline">\(J_r=c^{-1}[Ek/\sqrt{m^2c^4-E^2}-\sqrt{c^2L^2-k^2}]\)</span>
+with <span class="math inline">\(J_r=n_r\hbar\)</span>, <span
+class="math inline">\(\lvert L\rvert=n_\varphi\hbar\)</span> gives
+Sommerfeld’s formula, equal to the Dirac spectrum under <span
+class="math inline">\(n_\varphi\leftrightarrow\lvert\kappa\rvert\)</span>;
+the Klein–Gordon threshold is the plunge condition at <span
+class="math inline">\(\lvert L\rvert=\hbar(l+1/2)\)</span> | <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/kepler-collapse-Q14.md">Q14
+review</a> §§1–4; symbol identity, Frobenius indicial equations and
+closed-form radial action; <span class="math inline">\(Z\alpha=k/(\hbar
+c)\)</span>, fixed external singular Coulomb centre, no recoil or
+radiation; the unit of angular action is supplied |<br />
+C131 | Under dimensional homogeneity and universality, the floor <span
+class="math inline">\(\gamma(c)=\inf(\mathcal
+X(c)\cap(0,\infty))\)</span> of an observable of dimension <span
+class="math inline">\(d_X\)</span> over a theory with fixed constants of
+dimensions <span class="math inline">\(d_1,\dots,d_r\)</span> is <span
+class="math inline">\(\Pi(c)F(\pi_1,\dots,\pi_s)\)</span> when <span
+class="math inline">\(d_X\in\operatorname{span}\{d_i\}\)</span> and lies
+in <span class="math inline">\(\{0,\infty\}\)</span> otherwise; an
+admitted one-parameter similarity multiplying <span
+class="math inline">\(X\)</span> by every <span
+class="math inline">\(s&gt;0\)</span> forces <span
+class="math inline">\(\gamma=0\)</span> | <a
+href="low-dimensional-mass-gap.html">G07 note</a> §1, Theorem 1 and
+Corollary 2; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/mass-gap-dictionary-G07.md">written
+review</a> §1; unit-change argument; universality is a stated modelling
+hypothesis |<br />
+C132 | In the classical model with constants <span
+class="math inline">\(m\)</span>, <span class="math inline">\(g\)</span>
+(<span class="math inline">\(V=\tfrac12g^2x^2y^2\)</span> or the SU(2)
+commutator potential), any positive finite gap <span
+class="math inline">\(\Delta\)</span> of any dimensionally homogeneous
+enlargement supplies the action unit <span
+class="math inline">\(\Delta^{3/4}m^{1/2}g^{-1/2}\)</span>, and an
+action unit <span class="math inline">\(A\)</span> supplies the energy
+unit <span class="math inline">\(A^{4/3}g^{2/3}m^{-2/3}\)</span>; for
+pure Yang–Mills with classical coupling <span
+class="math inline">\(1/g^2\)</span> of dimension action<span
+class="math inline">\(\cdot\)</span>length<span
+class="math inline">\(^{4-d}\)</span> and speed <span
+class="math inline">\(c\)</span>, a gap yields an action unit in <span
+class="math inline">\(d=2\)</span> (<span
+class="math inline">\((1/g^2)^{1/3}c^{-2/3}\Delta^{2/3}\)</span>) and
+<span class="math inline">\(d=3\)</span> (<span
+class="math inline">\((1/g^2)^{1/2}c^{-1/2}\Delta^{1/2}\)</span>) and
+none in <span class="math inline">\(d=4\)</span> | <a
+href="action-floor-yang-mills-gap.html">G08 note</a> §3, Propositions
+4–5; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/mass-gap-dictionary-G07.md">written
+review</a> §2; linear systems over mass, length, time |<br />
+C133 | <span
+class="math inline">\(H=-\frac{\hbar^2}{2m}\Delta+\frac{g^2}{2}x^2y^2\)</span>
+on <span class="math inline">\(L^2(\mathbb R^2)\)</span> and the SU(2)
+<span class="math inline">\(D\)</span>-matrix model <span
+class="math inline">\(H=-\frac{\hbar^2}{2m}\Delta_{\mathbb
+R^{3D}}+\frac{g^2}{2}\sum_{i&lt;j}|\vec x_i\times\vec x_j|^2\)</span>,
+<span class="math inline">\(D\ge2\)</span>, satisfy <span
+class="math inline">\(H\ge\tfrac12[-\frac{\hbar^2}{2m}\Delta+W]\)</span>
+with <span class="math inline">\(W=\frac{\hbar g}{2\sqrt
+m}(|x|+|y|)\)</span>, respectively <span
+class="math inline">\(W=\frac{\hbar g}{\sqrt m}\sum_i|\vec
+x_i|\)</span>; hence compact resolvent, simple positive ground state,
+gap <span
+class="math inline">\(\Delta=\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}\)</span>
+with <span class="math inline">\(0&lt;\delta_1&lt;\infty\)</span> a pure
+number, and the <span class="math inline">\(SO(3)\)</span>-invariant
+sector inherits a gap <span class="math inline">\(\ge\Delta\)</span>;
+the gap vanishes as <span class="math inline">\(\hbar\to0\)</span> and
+as <span class="math inline">\(g\to0\)</span>, the <span
+class="math inline">\(g=0\)</span> and <span
+class="math inline">\(D=1\)</span> operators have spectrum <span
+class="math inline">\([0,\infty)\)</span>, and the classical energy
+range is <span class="math inline">\([0,\infty)\)</span> | <a
+href="low-dimensional-mass-gap.html">G07 note</a> §3, Theorems 5–6; <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/mass-gap-dictionary-G07.md">written
+review</a> §3; zero-point oscillator bound, Fubini slicing, form-ball
+compactness, Feynman–Kac simplicity (Reed–Simon IV XIII.44 cited),
+dilation; the classical floor reading is <a
+href="action-floor-yang-mills-gap.html">G08</a> Theorem 2 |</div>
+<p>These are checked derivations. C006 is conditional on its stated
+quantum measurement premises. For a new result, provide quantifiers,
+units, path/operator domain, boundary conditions, dependencies and
+gap-closing limits in the proof.</p>
+<h2 id="literature-status">Literature status</h2>
+<p>C130: <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/kepler-collapse-Q14.md">the
+Q14 review</a> is an exact match with the Sommerfeld–Dirac coincidence:
+Suslov, arXiv:2401.07485, Eqs. (5)–(6), (27)–(28) and (31)–(32),
+pp. 2–7, at passage level, and Bouaziz, arXiv:1311.7405, Eqs. (5)–(7),
+pp. 3–4, for the scalar threshold; Biedenharn 1983 and Sommerfeld 1916
+at record level; Zeldovich–Popov 1972 at abstract level. Proof status:
+written derivations accepted by coordinator review; promoted by user
+direction on 2026-09-14. Literature status: established textbook result,
+no novelty claim; three discovery queries, two open papers read, nothing
+archived. The Q14 dimensional criteria (Theorems A–B) remain exploratory
+pending their bounded librarian comparison.</p>
+<p>C131–C133: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B78.md">B78</a>
+and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B79.md">B79</a>.
+C131 is Buckingham’s <span class="math inline">\(\Pi\)</span> theorem
+(Phys. Rev. 4 (1914) 345, metadata) applied to a floor; C132 is
+dimensional analysis; C133 is Simon 1983 (passage level: first proof,
+display (5), and Corollary 4 for the Lie-algebra model) with the
+project’s explicit constants and SU(2) bookkeeping. Exact matches, no
+novelty; established results with project-specific exposition and
+limits.</p>
+<p>C129: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B77.md">B77</a>
+is an exact match to de la Torre et al., arXiv:1110.5482v1, equations
+(8)–(14) and the following tensor-space sentence, pp. 3–4. Proof status:
+written derivative, slice and intersection arguments accepted after
+saved librarian and coordinator source-image review. Literature status:
+established result with expanded exposition, no novelty claim; one
+existing paper, zero discovery queries. Equations (15) onward and the
+full reconstruction remain unaudited.</p>
+<p>C125–C128 publication positioning: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B76.md">B76</a>
+adds classical-extension and transformation-relative
+preparation-equivalence precedents. The combined exact spin pair and
+finite-expectation repair obstruction remain unmatched within four
+queries and two papers/eight pages. P06a adopts conceptual
+worked-example framing; proof acceptance is unchanged.</p>
+<p>C050–C051 publication positioning: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B75.md">B75</a>
+adds result-specific coverage to B25–B26. Preparation-dependent tagged
+transport has close Brownian random-versus-lattice precedent in
+Leibovich–Barkai (2013) and broader arbitrary-initial-position context
+in Cividini–Kundu (2017). The full two-speed Hamiltonian matched-rate
+comparison remains unmatched in four queries and eight selected pages.
+P05 is a teaching synthesis of accepted claims, with no new claim ID or
+novelty assertion.</p>
+<p>C128: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B74.md">B74</a>
+matches the established finite Koopman-invariant-space framework in
+Brunton et al. (2016), selected publisher HTML passages. The spin orbit
+and expectation-separation lemma are written derived consequences,
+reviewed by one Luna-low worker and the coordinator. One source and one
+query; no exhaustive search or novelty claim.</p>
+<p>C127: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B72.md">B72</a>
+verifies classical-spin precedent in Radošević et al.,
+arXiv:2503.16308v2 §§V.1–V.2. The quotient counterexample is a derived
+application, with no novelty claim. One Luna-low worker and coordinator
+proof/source review; publisher access failure, preprint coverage and
+query overrun are recorded.</p>
+<p>C126: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B71.md">B71</a>
+matches the established detailed-balance Hermitian and
+stochastic-matrix-form constructions of Henley and Castelnovo et al. The
+local Ising formula is a written derived specialization with an
+independent coefficient review; the exact gap inherits C124. Two primary
+sources and eight selected pages, corrected to one-based page anchors in
+coordinator review. No novelty claim or independent physical
+identification.</p>
+<p>C125: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B69.md">B69</a>
+matches established restricted single-system models and minimal tensor
+products in Janotta–Hinrichsen. Capacity and parity-face checks are
+derived applications; no novelty claim. One Luna-low worker and
+coordinator proof/source review; date and anchors corrected. Measurement
+restrictions remain explicit model premises.</p>
+<p>C124: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B73.md">B73</a>,
+added 2026-09-13, supplies a direct statement match in Lubetzky–Sly,
+arXiv:0909.4320v1 p. 4, with the rate-one conditional-refresh convention
+on p. 5. The exact gap is established literature, rederived by the
+project’s accepted proof. The source itself calls it already known. B73
+supersedes the unmatched-formula status; it preserves C124’s proof and
+the following historical coverage.</p>
+<p>Historical B68 coverage: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B68.md">B68</a>
+matches Glauber model/magnetization passages through an indexed
+transcription and Bubley–Dyer coupling passages in a primary PDF.
+Glauber formula images remain unverified; no exact source transcription
+is promoted. The self-contained all-mode proof is reviewed and accepted
+independently. Exact prior publication of the combined equality was not
+established in this bounded audit; no novelty claim. One requested
+Sol-medium worker and coordinator source/proof review.</p>
+<p>C123: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B66.md">B66</a>
+supplies standard variational-method support from Teschl after one
+Luna-low audit returned a secondary route. Coordinator written
+proof/source review accepts the model-derived cancellation and
+quadratures. Exact model matches and novelty remain unassessed.</p>
+<p>C122: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B65.md">B65</a>
+matches smooth inverse and Taylor methods, with one Luna-low audit and
+coordinator source/proof review. The coordinator corrected a page
+anchor. Exact model matches and novelty remain unassessed; C123 now
+evaluates V, leaving its projected curvature test open.</p>
+<p>C121: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B64.md">B64</a>
+matches standard polynomial interpolation and confluence methods in NIST
+DLMF §3.3. The pulse selection and canonical-column conclusion are
+model-derived; one sequential Luna-low audit and coordinator
+source/proof review, novelty unassessed.</p>
+<p>C120: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B63.md">B63</a>
+verifies the standard inverse-map method in Freire pp. 1–3, with
+inherited information-radius context from B62. One Luna-low worker and
+coordinator proof/source review; exact model matches and novelty
+unassessed. Canonical positivity is explicitly conditional.</p>
+<p>C118–C119: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B62.md">B62</a>
+verifies Werschulz’s standard information-radius interpretation, with
+one mathematical source and one query. The tolerance/coupling estimate,
+compatible ball and exact saturation are model-derived. Coordinator
+corrected page anchors and reviewed the proof; novelty remains
+unassessed.</p>
+<p>C116–C117: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B61.md">B61</a>
+audits inherited inverse and smooth-flow methods with one Luna-low
+worker; coordinator rechecked two primary sources and the written model
+proof. Exact result matches and novelty are unassessed. The reduced
+fixed preparation box is part of the theorem.</p>
+<p>C114–C115: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B60.md">B60</a>
+audits inherited B59 inverse/flow/contraction methods, with zero
+discovery or retrieval. The pulse kernel, two branches and canonical
+risks are model-derived; exact matches and novelty are unassessed. One
+Luna-low audit and coordinator proof review completed, with no fresh
+source-reading claim.</p>
+<p>C112–C113: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B59.md">B59</a>
+audits inherited smooth-flow, contraction and inverse methods, with
+coordinator checking Freire pp. 1–3. The scaled Hamiltonian constraints,
+fixed pulse-kernel design, exact curve and canonical bounds are
+model-derived; novelty unassessed. One sequential Luna-low worker and
+coordinator written proof review completed.</p>
+<p>C110–C111: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B58.md">B58</a>
+directly verifies the established Borsuk–Ulam theorem in Arora’s
+Princeton Lecture 13, Theorem 1, PDF p. 1. The constrained chart and
+quantitative receiver separation are model-derived consequences. One
+sequential Luna-low audit and coordinator source/proof review completed;
+exact mechanical prior-art matches and novelty remain unassessed.</p>
+<p>C108–C109: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B57.md">B57</a>
+audits inherited smooth-flow and implicit/contraction methods, with zero
+queries or retrievals. The backward terminal construction, two-energy
+sign pair and canonical risks are model-derived. One Luna-low audit and
+coordinator written review completed; exact prior-art matches and
+novelty remain unassessed.</p>
+<p>C106–C107: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B56.md">B56</a>
+audits inherited B48/B55 contraction, inverse and smooth-flow methods
+with zero queries or retrievals. The free-shear compensator and exact
+whole-shell saturation are model-derived consequences; novelty is
+unassessed. One sequential Luna-low worker and coordinator written
+proof/coverage review completed; no fresh source-page reading.</p>
+<p>C104–C105: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B55.md">B55</a>
+is a zero-query inherited-source audit of B54/B50 inverse and
+smooth-flow methods. The full clock extension and canonical precision
+bound are model-derived; novelty unassessed. One Luna-low worker and
+coordinator written review completed, with no fresh passage claim.</p>
+<p>C102–C103: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B54.md">B54</a>
+rechecks the existing Freire perturbation precedent in three pages, with
+zero discovery queries. The nonlinear leading-map bound, clock
+calibration and risk closure are derived consequences. One Luna-low
+audit and coordinator source/proof review complete; novelty
+unassessed.</p>
+<p>C100–C101: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B53.md">B53</a>
+audits the local/global identifiability distinction in Quaiser et
+al. (2011). The shell pair, positive-coupling continuation and canonical
+risk bound are model-derived. One sequential Luna-low worker and
+coordinator source/proof review completed; source metadata was corrected
+and novelty remains unassessed.</p>
+<p>C098–C099: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B52.md">B52</a>
+identifies the established small-Lipschitz-perturbation inverse method
+in Freire’s institutional lecture notes. The energy-speed Schur
+complement, uniform physical domain and canonical recovery bound are
+model-derived. One sequential Luna-low audit and coordinator
+source/proof review are complete; novelty is unassessed.</p>
+<p>C096–C097: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B51.md">B51</a>
+supplies a bounded Sontag input-output-equivalence precedent and
+inherits B50 smooth-flow methods. The pulse determinant, exact shell
+family and risk product are model-derived; novelty is unassessed. One
+sequential Luna-low worker and coordinator source and written proof
+reviews are complete.</p>
+<p>C094–C095: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B50.md">B50</a>
+verifies the standard smooth-ODE dependence premise in four selected
+Sideris pages. The uniform block inverse and canonical error-product
+bound are model-derived consequences of standard perturbation and
+residual estimates. This bounded premise audit leaves novelty unassessed
+and supplies no exact apparatus match.</p>
+<p>C092–C093: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B49.md">B49</a>
+verifies a standard local observability precedent and inherits
+smooth-flow/contraction methods from B47/B48. The clock-response matrix
+and exact position compensation are derived consequences. The bounded
+audit leaves novelty unassessed; coordinator scan review corrected the
+article and theorem pagination.</p>
+<p>C090–C091: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B48.md">B48</a>
+supplies established contraction and two-point lower-bound precedents.
+Exact nonlinear apparatus compensation, energy-shell patch and canonical
+projected area are derived consequences; novelty remains unassessed.
+Coordinator corrected source metadata and coverage and reviewed the
+written proof independently of the statistical comparison.</p>
+<p>C088–C089: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B47.md">B47</a>
+checks a standard smooth-ODE dependence premise and inherits the Theurel
+pointer comparison from B37. Uniform record-map remainder, nonlinear
+calibration and fixed-coupling product closure are derived consequences.
+The bounded assumption audit leaves novelty unassessed; fresh and
+inherited coverage are recorded separately.</p>
+<p>C086–C087: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B46.md">B46</a>
+supplies bounded optimal-recovery and convex-support context, with no
+exact mechanical match in two queries and two selected passages. These
+are derived consequences of the stated model; novelty remains
+unassessed. Coordinator corrected a worker exponent label and versioned
+source anchor before acceptance.</p>
+<p>C084–C085: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B45.md">B45</a>
+supplies bounded optimal-recovery and convex-norm context. Exact
+mechanical projection, finite-horizon transfer and copy-count exponents
+are derived consequences; no exact match was obtained in the two-query
+coverage. Novelty remains unassessed.</p>
+<p>C082–C083: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B44.md">B44</a>
+retains the established prepared pair; the finite-horizon law,
+blind-delay extension and transient composition are derived
+consequences. No exact match was obtained in the bounded coverage;
+novelty remains unassessed. Coordinator corrected source attribution and
+timing.</p>
+<p>C080–C081: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B43.md">B43</a>
+reuses Seeber–Haimovich’s established one-body bounds. Product support
+addition, canonical composition, aggregate image equality, strict
+information loss and radius-closure conclusions are derived here from
+explicit hypotheses. Ruan–Chirikjian supplies geometric context, with no
+exact minimax match in the bounded coverage. Novelty remains unassessed;
+proof acceptance rests on the written argument and coordinator
+review.</p>
+<p>C078–C079: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B42.md">B42</a>
+matches C079’s prepared zero-initial-state pair exactly to
+Seeber–Haimovich Proposition 3.1 and its upper bound to §4. The
+blind-delay phase risks are derived consequences. C078 has a written
+proof but no direct source match in this bounded batch; novelty remains
+unassessed. The review corrects the worker’s initial-data and
+half-separation statements.</p>
+<p>C076–C077: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B41.md">B41</a>
+identifies the exact equal-error finite-difference bound and optimum in
+Seeber–Haimovich §4. These are established results. The fixed mechanical
+experiment, unequal-error delayed phase estimate and action-product
+consequences are derived here; novelty is unassessed.</p>
+<p>C074–C075: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B40.md">B40</a>
+identifies bounded-error set-membership and classical mixed-area
+precedents. The clipped-lens area and joint bound are derived
+specializations; novelty is unassessed. Proof acceptance and limited
+source coverage are separated in the coordinator review.</p>
+<p>C072–C073: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B39.md">B39</a>
+records the bounded double-integrator and discrete hybrid reachable-set
+precedents. Continuous-time composition, the rectangle counterexample
+and conditional areas are derived specializations; novelty is
+unassessed. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/cut-composition-B39.md">Coordinator
+review</a> accepts the written proofs separately from the two-query
+source coverage.</p>
+<p>C070–C071: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B38.md">B38</a>
+verifies Liberzon’s classical double-integrator and one-switch
+time-optimal control passage. The fixed-time lens, information
+restriction and deterministic minimax proof are derived specializations,
+with novelty unassessed. Two other source routes were unreadable. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/causal-information-B38.md">Coordinator
+review</a> verifies the self-contained proof separately from this
+bounded prior-art coverage.</p>
+<p>C068–C069: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B37.md">B37</a>
+uses zero searches and four cached primary pages: Theurel pp. 5–7 and
+Hermann–Krener p. 733. Conserved pointer records and the observability
+rank condition are established ingredients. The autonomous construction,
+integrated signal map and uniform bounds are derived consequences, with
+novelty unassessed. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/autonomous-readout-B37.md">Coordinator
+review</a> accepts the written proofs under the explicit preparation,
+record-access and latency premises. B36’s existing source work is
+preserved and integrated.</p>
+<p>C066–C067: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B35.md">B35</a>
+covers Katagiri v2 §5 and Theurel’s APS abstract with two queries and
+two bounded primary readings. Canonical pointer coupling is established;
+the support-width and finite-chain refinement estimates are derived
+consequences with novelty unassessed. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/classical-readout-B35.md">Coordinator
+review</a> accepts the written proofs for scalable impulsive probes.
+R06/B37 now supplies a finite-mass, finite-duration delayed
+reconstruction and selected full-model Theurel readings; causal new
+information with restricted precision remains R07.</p>
+<p>C064–C065: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B34.md">B34</a>
+covers Zwanzig’s exact oscillator-bath reduction and Hermann–Krener’s
+observability framework in two searches and three primary pages. Chain
+coefficients, sampled determinant and scaling are derived
+specializations; exact prior publication is unassessed. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/three-body-memory-B34.md">Coordinator
+review</a> accepts the written proofs separately from the bounded
+literature coverage.</p>
+<p>C062–C063: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B33.md">B33</a>
+audits two cached primary pages with zero searches. Harmonic propagation
+and bath-memory reduction are established ingredients; the fixed-energy
+conditional kernel, reset limit and action comparison are elementary
+derived consequences, with novelty unassessed. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/classical-cut-state-B33.md">Coordinator
+review</a> accepts the written proofs and corrects the worker’s
+source-page coverage.</p>
+<p>C060–C061: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B32.md">B32</a>
+verifies the classical Fenchel–Borsuk input in Milnor (1950). Mechanical
+inequalities and the smooth equality construction are derived
+consequences, with novelty unassessed in the bounded one-query, two-page
+audit.</p>
+<p>C058–C059: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B31.md">B31</a>
+matches the established relativistic circular-balance and
+radial-stability framework. The fixed smooth force-bounded example and
+conditional speed-floor inequality are derived consequences; exact prior
+publication is unassessed in the bounded search.</p>
+<p>C056–C057 have the bounded <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B30.md">B30
+audit</a>: conformally symplectic scaling has established geometric
+prior art; the exact model map and conditional infimum statements are
+elementary derived consequences. No exact match was found in the
+two-source coverage; novelty is unassessed. <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/dilation-B30.md">Coordinator
+review</a> accepts the written proofs.</p>
+<p>C054–C055 have the bounded <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B29.md">B29
+audit</a>: covariance determinant and affine symplectic invariance are
+established rms-emittance machinery; circular formulas and threshold
+transfer are derived specializations, with novelty unassessed. Uniform
+phase is sufficient for the action equality; matching its first and
+second moments also suffices.</p>
+<p>Proof status above and literature status below are independent. Each
+accepted result has a bounded librarian audit; exact source inputs and
+elementary consequences are identified separately.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Claims</th>
+<th>Literature classification</th>
+<th>Audit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C052</td>
+<td>Established Boyer orbit classification, with explicit domain and
+normalization</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B27.md">B27</a>,
+<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B28.md">B28</a></td>
+</tr>
+<tr class="even">
+<td>C053</td>
+<td>Elementary effective-potential consequence; no exact match in
+two-query follow-up coverage; novelty unassessed</td>
+<td>B28</td>
+</tr>
+<tr class="odd">
+<td>C001–C004, C008</td>
+<td>Classical geometry/variation framework; specialized formulas are
+elementary consequences</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B05.md">B05</a></td>
+</tr>
+<tr class="even">
+<td>C005</td>
+<td>Teschl’s standard free kernel; Taylor correction is a Fourier
+consequence</td>
+<td>B05</td>
+</tr>
+<tr class="odd">
+<td>C006–C007</td>
+<td>Holevo–Helstrom theorem specialized to the stated pure-state
+protocol; threshold inversion and limits are consequences</td>
+<td>B05</td>
+</tr>
+<tr class="even">
+<td>C009</td>
+<td>Standard Gaussian/Chapman–Kolmogorov formula with mass/action
+rescaling</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B06.md">B06</a></td>
+</tr>
+<tr class="odd">
+<td>C010</td>
+<td>Elementary characteristic-function/additivity consequence within the
+Gaussian class</td>
+<td>B06</td>
+</tr>
+<tr class="even">
+<td>C011</td>
+<td>Standard Brownian bridge with rescaling; finite-dimensional
+concentration is a consequence</td>
+<td>B06</td>
+</tr>
+<tr class="odd">
+<td>C012</td>
+<td>Standard free Schrödinger group and domain, with restored units</td>
+<td>B06</td>
+</tr>
+<tr class="even">
+<td>C013</td>
+<td>Elementary determinant/Green-function consequence of the standard
+Gaussian bridge</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B08.md">B08</a></td>
+</tr>
+<tr class="odd">
+<td>C014</td>
+<td>Finite chi-square law and joint limit derived from standard Gaussian
+facts; exact combined statement unmatched in the four-source
+coverage</td>
+<td>B08; bounded coverage, novelty unassessed</td>
+</tr>
+<tr class="even">
+<td>C015</td>
+<td>Elementary mechanics instance of the established oscillatory
+weak-limit mechanism</td>
+<td>B08; Rindler §§2.1, 3.3</td>
+</tr>
+<tr class="odd">
+<td>C016</td>
+<td>Exact quadratic Fourier identity in Guillemin–Sternberg (14.7);
+scalar limit and delta pullback are consequences</td>
+<td>B08</td>
+</tr>
+<tr class="even">
+<td>C017</td>
+<td>Explicit elementary scaling construction motivated by Rivero; exact
+map unmatched in the selected sources</td>
+<td>B08; bounded coverage, novelty unassessed</td>
+</tr>
+<tr class="odd">
+<td>C018</td>
+<td>Elementary bounded-displacement variance consequence</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B09.md">B09</a></td>
+</tr>
+<tr class="even">
+<td>C019</td>
+<td>Exact Green–Kubo/Poisson backbone in Pavliotis; finite-state bounds
+and monotonicity are spectral consequences</td>
+<td>B09; combined package unmatched in bounded coverage, novelty
+unassessed</td>
+</tr>
+<tr class="odd">
+<td>C020</td>
+<td>Exact telegraph construction/PDE in Cinque; action normalization and
+mass-rate law are elementary consequences</td>
+<td>B09</td>
+</tr>
+<tr class="even">
+<td>C021</td>
+<td>Elementary iterated-limit consequence; related Kac scaling in
+Cinque</td>
+<td>B09; exact double-limit statement unmatched in selected
+passages</td>
+</tr>
+<tr class="odd">
+<td>C022</td>
+<td>Exact affine collision and bath model in Barkai; bounded invariant
+law and moments are consequences; stationary covariance matches
+Barbier–Trizac</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B10.md">B10</a></td>
+</tr>
+<tr class="even">
+<td>C023</td>
+<td>Established stationary covariance integral; preparation-time and
+window formulas derived for the specified ensemble</td>
+<td>B10; combined statement unmatched in selected pages, novelty
+unassessed</td>
+</tr>
+<tr class="odd">
+<td>C024</td>
+<td>Elementary parameter-scaling countermodel</td>
+<td>B10; bounded coverage, novelty unassessed</td>
+</tr>
+<tr class="even">
+<td>C027</td>
+<td>Elementary arbitrary-partition extension of the audited
+constant-force formula</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B12.md">B12</a>;
+existing Newton source route</td>
+</tr>
+<tr class="odd">
+<td>C028–C029</td>
+<td>Elementary Gaussian restriction, chi-square and conditional-variance
+consequences; action interpretation is project-specific</td>
+<td>B12; Pitman–Yor selected bridge/Markov passages, novelty
+unassessed</td>
+</tr>
+<tr class="even">
+<td>C030</td>
+<td>Elementary construction using the established equal-mass elastic
+collision map</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B13.md">B13</a>;
+Barkai (2)–(3)</td>
+</tr>
+<tr class="odd">
+<td>C031–C032</td>
+<td>Elementary support/variance and convolution consequences; exact
+statements unmatched in the two-source coverage</td>
+<td>B13; novelty unassessed; Cinque supplies the memory comparison, not
+these theorems</td>
+</tr>
+<tr class="even">
+<td>C033</td>
+<td>Equal-rate occupation density specializes Cinque (2.6); bridge
+normalization, midpoint atom and version/protocol comparison are derived
+consequences</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B14.md">B14</a>;
+pp. 1–4 and two worker searches; exact combined statement unmatched,
+novelty unassessed</td>
+</tr>
+<tr class="odd">
+<td>C034</td>
+<td>Elementary pathwise restriction and kinetic square-completion
+consequences</td>
+<td>B14; exact action estimate unmatched in bounded source coverage,
+novelty unassessed</td>
+</tr>
+<tr class="even">
+<td>C035–C036</td>
+<td>Standard covariance/product-chain and nonnegative-additivity
+consequences, with project-specific composition/positive-reference
+premises</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B16.md">B16</a>;
+two searches and two cached source pages; combined statement unmatched
+in bounded coverage, novelty unassessed</td>
+</tr>
+<tr class="odd">
+<td>C037–C038</td>
+<td>Derived midpoint/count specialization and necessary-window
+consequences; standard telegraph occupation and Bessel-integral
+ingredients</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B17.md">B17</a>;
+two searches, Cinque pp. 3–4 and DLMF 10.32.1; exact combined statements
+unmatched, novelty unassessed</td>
+</tr>
+<tr class="even">
+<td>C039</td>
+<td>Established normalized checkerboard reconstruction; elementary
+wavepacket and spectral-limit consequences</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B18.md">B18</a>;
+Skopenkov–Ustinov Definition 2, Propositions 5–6, direct basis match and
+coordinator proof</td>
+</tr>
+<tr class="odd">
+<td>C040</td>
+<td>Elementary measurement-protocol consequence of the audited coin,
+with no novelty claim</td>
+<td>B18 bounded addendum checks Born probability and union bound; exact
+prior-art formulation not separately searched</td>
+</tr>
+<tr class="even">
+<td>C041</td>
+<td>Standard finite reversible spectral/product-chain consequence of the
+established Green–Kubo representation</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B20.md">B20</a>;
+Pavliotis pp. 4–5, coordinator proof; explicit hidden-label
+specialization</td>
+</tr>
+<tr class="odd">
+<td>C042</td>
+<td>Elementary frame/inverse-operator consequence; exact combined
+formulation unmatched and not independently searched</td>
+<td>B20 bounded algebra/prior-art audit; novelty unassessed, no novelty
+claim</td>
+</tr>
+<tr class="even">
+<td>C043–C044</td>
+<td>Elementary bounded-control and Lipschitz-variance specializations;
+exact combined prior-art match not found in bounded search</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B21.md">B21</a>;
+two worker searches, one coordinator search and Liberzon framework
+passage; no novelty claim</td>
+</tr>
+<tr class="odd">
+<td>C045</td>
+<td>Elementary product-chain and response counterexample; exact example
+publication not established, no novelty claim</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B22.md">B22</a>;
+saved Luna-low audit and coordinator review</td>
+</tr>
+<tr class="even">
+<td>C046</td>
+<td>Standard tensorization and derived local-frame consequence</td>
+<td>B22; Levin–Peres §12.4, direct continuous-generator proof and clock
+audit</td>
+</tr>
+<tr class="odd">
+<td>C047</td>
+<td>Elementary finite harmonic propagation and displacement-variance
+consequence; phase-torus and centre conventions explicit</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B23.md">B23</a>;
+Ford–Kac–Mazur and Zwanzig source ingredients; bounded audit, no novelty
+claim</td>
+</tr>
+<tr class="even">
+<td>C048–C049</td>
+<td>Harmonic-chain spectral ingredients established; normalized limit
+and fixed-phase speed-support consequences derived</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B24.md">B24</a>;
+three-page bounded audit, coordinator proof/source review; no novelty
+claim</td>
+</tr>
+<tr class="odd">
+<td>C050</td>
+<td>Established dichotomic Jepsen-gas covariance and Markov
+interpretation; explicit gap proof and action/scaling consequences</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B25.md">B25</a>;
+source pp. 7–8, 17–19 and coordinator proof review</td>
+</tr>
+<tr class="even">
+<td>C051</td>
+<td>Explicit ordered-preparation consequence; exact ensemble unmatched
+in two-query search, novelty unassessed</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B26.md">B26</a>;
+two HTML documents, coordinator proof review</td>
+</tr>
+<tr class="odd">
+<td>C131</td>
+<td>Buckingham <span class="math inline">\(\Pi\)</span> theorem applied
+to a universal floor; universality hypothesis project-specific</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B78.md">B78</a></td>
+</tr>
+<tr class="even">
+<td>C132</td>
+<td>Elementary dimensional analysis over mass, length, time</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B79.md">B79</a></td>
+</tr>
+<tr class="odd">
+<td>C133</td>
+<td>Established Simon 1983 theorem (first proof and Corollary 4) with
+explicit constants; exact match, no novelty</td>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B78.md">B78</a></td>
+</tr>
+</tbody>
+</table>
+<p>M03’s unaccepted spectral draft has its own completed <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B04.md">B04</a>
+literature audit. Its mathematical review and checks remain pending.</p>
+<h2 id="historical-findings-and-research-targets">Historical findings
+and research targets</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Claim or question</th>
+<th>Status / evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H001</td>
+<td>The selected Book I passages formulate geometric first and last
+ratios</td>
+<td>Source-grounded interpretation; opening-source companions and
+note</td>
+</tr>
+<tr class="even">
+<td>H002</td>
+<td>Doubts about vanishing magnitudes delayed the 1687 first
+edition</td>
+<td>Open historical conjecture; H02/H03 seek dated causal evidence</td>
+</tr>
+<tr class="odd">
+<td>H003</td>
+<td>NATP00385 is a miscellaneous calculus-priority fragment
+collection</td>
+<td>Verified catalogue metadata and H01 audit</td>
+</tr>
+<tr class="even">
+<td>H004</td>
+<td>Selected NATP00385 passages describe analytic discovery and
+synthetic presentation</td>
+<td>Passage-level audit; exact coverage and chronology question in the
+historical note</td>
+</tr>
+<tr class="odd">
+<td>H005</td>
+<td>Plutarch’s cone-section passage was printed in Xylander’s 1570 Latin
+Moralia, pp. 823–824</td>
+<td>H04 librarian retrieval; coordinator visual verification of IIIF
+canvases 603151/603152</td>
+</tr>
+<tr class="even">
+<td>H006</td>
+<td>How did the cone-section dilemma enter early-modern discussions of
+indivisibles and the continuum?</td>
+<td>H04 bounded search; H05 author-specific reception audit remains</td>
+</tr>
+<tr class="odd">
+<td>Q001</td>
+<td>Which independent premises force a positive universal action
+parameter?</td>
+<td>Open target; WP4 Branch B</td>
+</tr>
+<tr class="even">
+<td>Q002</td>
+<td>Which additional-field action generates an action-value or spectral
+gap?</td>
+<td>Model design; <code>ideas/I001-action-field.md</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="resolved-objections">Resolved objections</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Inference assessed</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X001</td>
+<td>Equal phases at differences <span class="math inline">\(nh\)</span>
+imply a smallest positive action difference</td>
+<td>Rejected: phase periodicity permits arbitrarily close phases</td>
+</tr>
+<tr class="even">
+<td>X002</td>
+<td>A toy Hessian/oscillator gap establishes the Yang–Mills gap or NS
+regularity</td>
+<td>Rejected: transfer requires the target operators, spaces and
+continuum/infinite-volume/regularity estimates</td>
+</tr>
+</tbody>
+</table>
+<h2 id="review-record">Review record</h2>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/mass-gap-dictionary-G07.md">The
+G07/G08 review</a> supports C131–C133: coordinator written re-derivation
+of the unit-change argument, the three linear systems, the
+completed-square oscillator bound, the slicing, compactness and dilation
+steps, and the SU(2) convex-combination bookkeeping. Ground-state
+simplicity is cited. Propositions 7 and 11–13 of G07 and the
+semiclassical remarks of G08 stay exploratory.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/harmonic-receiver-B23.md">B23</a>
+supports C047 through one Luna-low audit and coordinator source/proof
+review. Eight identities, three network checks and four bound cases
+pass. Finite-size and large-receiver limits remain separate; the
+friction kernel is distinguished from velocity covariance.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/observable-access-B22.md">B22</a>
+supports C045–C046: saved Luna-low audit, coordinator source-image and
+proof review, six identities, three rational velocity cases, three
+product spectra and two frame checks. The source’s clock normalization
+and printed proof index are explicitly corrected.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/susceptibility-B20.md">B20</a>
+audited C041–C042 with one Luna-low worker. Coordinator verified the
+weighted centered-space inverse, inequality directions, frame
+hypothesis, parameter-family limits and Pavliotis p. 5 visually. Eleven
+identities, five rational bound cases and four weighted-chain checks
+pass. Sokal remains a discovery-only route, not a passage
+attribution.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/checkerboard-B18.md">B18</a>
+audited C039–C040 with one Luna-medium worker and a bounded addendum.
+Coordinator checked source pp. 12, 13, 19, 31 visually; corrected
+version date, proof-page anchor and kernel scope; proved the explicit
+basis map and strong wavepacket limit. Fourteen algebra identities,
+fourteen finite path/norm checks and three numerical mode tests
+pass.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/bridge-crossover-B17.md">B17</a>
+audited C037–C038 with one Luna-medium worker. Coordinator verified the
+even/odd segment density factors, midpoint Jacobian, atom, beta moments
+and large-window argument; checked Cinque p. 4 visually and DLMF’s
+integral formula. The exact mean tends to <span
+class="math inline">\(u/(2\lambda)\)</span> at fixed <span
+class="math inline">\(u,\lambda\)</span>, correcting P02’s unscaled-mean
+statement. Twenty-nine exact checks and seven quadrature/count-series
+comparisons pass.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/composition-B16.md">B16</a>
+audited C035–C036 with one Luna-low worker. Coordinator verified
+Pavliotis p. 5 and Pitman–Yor printed p. 6 visually, corrected source
+titles, and retained the preparation class, all-positive-mass domain,
+Markov product label and finite-rate assumptions. Five dedicated algebra
+checks and P02’s independent product-chain checks support the written
+proofs. Positivity concerns the common plateau inside the selected
+class; rate scaling across classes remains possible.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/telegraph-return-B14.md">B14</a>
+audited C033–C034. Coordinator verified Cinque (2.6) against the PDF
+image, strengthened the affine-simplex absolute-continuity argument, and
+corrected a discovery-only source’s authors to Bogachev–Ratanov. Exact
+conditioning uses a specified path version; the endpoint-window velocity
+mixture is a distinct protocol. Algebra and rational partition checks
+accompany the general written proof.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/collision-action-B10.md">B10</a>
+audited C022–C024. Coordinator verified collision coefficients,
+covariance, source versions/hashes and the cooling-clock contrast; added
+Barkai p. 3 and corrected source page counts. Receding-centre and
+polygon-threshold derivations remain drafts pending the interrupted B11
+librarian audit, outside the accepted claim set.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/classical-action-field-B09.md">B09</a>
+audited C018–C021 after the draft derivation. Coordinator review checked
+source formula images and hashes, the mean-zero inverse, rate
+convention, limit order and model-specific bounds. Velocity-resolved
+measures were defined as joint subprobability measures. The written
+proofs support the general statements; 16 exact checks support their
+finite algebraic instances. The next obligation is physical
+universality.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/action-gap-foundations-R01.md">R01</a>
+audited the three propositions and supporting calculations behind
+C001–C008. Its two scope clarifications are incorporated: endpoint terms
+mean <span class="math inline">\(dG(q,t)/dt\)</span>, and path-space
+locality requires continuity of the parameterized paths. The current
+editorial revision retains the theorem statements, proof arguments and
+evidence classifications.</p>
+<p><a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/regulator-limits-B08.md">B08</a>
+independently checked C013–C017. Coordinator review verified the source
+formulas, retained the distinction between path and action convergence,
+specified the oscillatory branch and made the scalar test-function
+interpretation explicit. All 24 finite checks pass; the general analytic
+statements rest on the written proofs.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

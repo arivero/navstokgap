@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One small-field blocking step, part 1b: the decay rate and the shape of the threshold, and why the weak side&#x27;s deficit is ten orders of magnitude</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>One small-field blocking step, part 1b: the decay rate and the shape
+of the threshold, and why the weak side’s deficit is ten orders of
+magnitude</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/small-field-step-decay-and-threshold.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/small-field-step-decay-and-threshold.pdf">PDF</a></p><p>Part 1 (<a href="small-field-step-gaussian.html">Gaussian level</a>)
+left one constant unresolved, the exponential decay rate <span
+class="math inline">\(\kappa\)</span> of the fluctuation propagator, and
+part 2 was to produce the Kotecký–Preiss threshold <span
+class="math inline">\(g_{\rm pert}^2\)</span> of the remainder gas. This
+note settles what can be settled about both without new mathematics, and
+the result reshapes the weak-side programme. <strong>The literature
+carries no explicit rate.</strong> Dimock’s exposition of Balaban’s
+construction (Rev. Math. Phys. 25 (2013) 1330010, §2.4; read from the
+arXiv text) proves the decay by a parametrix built from Neumann inverses
+on cubes of side <span class="math inline">\(M\)</span> and a
+random-walk expansion that converges “for <span
+class="math inline">\(M\)</span> sufficiently large”, with constants
+“depending on <span class="math inline">\(L\)</span> but no other
+parameters”; the local estimate (80) there has a rate <span
+class="math inline">\(\gamma_0\)</span> stated only as <span
+class="math inline">\(O(L^{-2})\)</span>. <strong>Explicit routes give
+<span class="math inline">\(\kappa\sim10^{-3}\)</span>.</strong> The
+generic Combes–Thomas argument gives <span
+class="math inline">\(7\times10^{-4}\)</span> for the hard constraint
+(part 1); the soft-constraint operator <span
+class="math inline">\(-\Delta+aQ^TQ\)</span> is local, has gap <span
+class="math inline">\(\tfrac29\)</span> for <span
+class="math inline">\(a\ge130\)</span>, and gives <span
+class="math inline">\(1.7\times10^{-3}\)</span>; the analytic-structure
+route through the folded symbol is set up in Section 2 and reduces to a
+zero-free strip for one explicit function, which is the defined
+computation for an order-one rate. <strong>The threshold scales as <span
+class="math inline">\(\kappa^4\)</span>.</strong> With the tree-graph
+organization of the remainder gas, <span class="math display">\[g_{\rm
+pert}\ \simeq\ \frac{1}{e\,C_3\,c_{\rm adj}\,\|C_{\rm
+fl}\|_{1,\kappa}/g^2}
+\ \simeq\ \frac{\kappa^4}{2\times10^{4}\,C_3},\]</span> with <span
+class="math inline">\(C_3\)</span> the cubic-vertex constant, of order
+<span class="math inline">\(10\)</span> to <span
+class="math inline">\(30\)</span>, so that even at the expected
+order-one rate <span class="math inline">\(\kappa\simeq\tfrac12\)</span>
+the threshold is <span class="math inline">\(g_{\rm
+pert}^2\sim10^{-12}\)</span>, and at the proven rate it is <span
+class="math inline">\(10^{-35}\)</span>. Against the physical onset of
+the perturbative running at <span
+class="math inline">\(g^2\simeq1\)</span>, <strong>the weak side’s
+explicit deficit is twelve orders of magnitude in <span
+class="math inline">\(g^2\)</span> with an ideal propagator and more
+than thirty with the proven one, where the strong side’s is a factor
+<span class="math inline">\(400\)</span> in <span
+class="math inline">\(\beta_W\)</span>.</strong> The sub-target H1a of
+<a href="reasons-to-stop-as-research.html">the research-directions
+note</a> is therefore closed as a constant-chasing problem: no
+sharpening of the present method reaches <span
+class="math inline">\(g^2\sim1\)</span>, and H1 is a methods problem.
+The estimate of the threshold is a scaling estimate with explicit but
+crude constants, labelled as such; the decay-rate statements are proved.
+Constants explicit; nothing promoted.</p>
+<h2 id="what-the-literature-does-and-the-soft-constraint">1. What the
+literature does, and the soft constraint</h2>
+<p>Dimock’s Green’s function is <span
+class="math inline">\(G_k=(-\Delta+\bar\mu_k+a_kQ_k^TQ_k)^{-1}\)</span>:
+the block averaging enters as a <strong>soft</strong> Gaussian
+constraint <span class="math inline">\(aQ^TQ\)</span> rather than the
+hard conditioning of part 1, and the operator is then local. The decay
+is proved by covering the lattice with cubes of side <span
+class="math inline">\(M\)</span>, inverting with Neumann conditions on
+each, gluing with a partition of unity, and expanding the error in a
+random walk whose steps carry a factor <span
+class="math inline">\(O(M^{-1})\)</span>; the walk converges for <span
+class="math inline">\(M\)</span> large and the rate is half the local
+rate. No numerical value is attached to <span
+class="math inline">\(M\)</span>, <span class="math inline">\(C\)</span>
+or <span class="math inline">\(\gamma_0\)</span> anywhere in the
+construction, and Balaban’s original (Commun. Math. Phys. 95 (1984) 17)
+is of the same kind.</p>
+<p>The soft constraint can be made explicit here. With <span
+class="math inline">\(Q\)</span> the averaging of part 1 (normalized by
+<span class="math inline">\(\tfrac1{16}\)</span>), <span
+class="math inline">\(QQ^T=\big(48+8(S+S^{-1})\big)/256\)</span> along
+<span class="math inline">\(\mu\)</span> has spectrum in <span
+class="math inline">\([\tfrac18,\tfrac14]\)</span>, so <span
+class="math inline">\(\|Qf\|^2\ge\tfrac18\|f_\perp\|^2\)</span> for the
+component <span class="math inline">\(f_\perp\)</span> of <span
+class="math inline">\(f\)</span> orthogonal to <span
+class="math inline">\(K=\ker Q\)</span>. Writing <span
+class="math inline">\(f=f_K+f_\perp\)</span> and using <span
+class="math inline">\(\|\partial f\|^2\ge\tfrac12\|\partial
+f_K\|^2-\|\partial f_\perp\|^2\)</span> with <span
+class="math inline">\(\|\partial f_K\|^2\ge\tfrac49\|f_K\|^2\)</span>
+(part 1, Proposition 1) and <span class="math inline">\(\|\partial
+f_\perp\|^2\le16\|f_\perp\|^2\)</span>, <span
+class="math display">\[\big\langle f,(-\Delta+aQ^TQ)f\big\rangle\ \ge\
+\frac29\|f_K\|^2+\Big(\frac a8-16\Big)\|f_\perp\|^2
+\ \ge\ \frac29\,\|f\|^2\qquad(a\ge130).\]</span> The operator has range
+<span class="math inline">\(2\)</span> along <span
+class="math inline">\(\mu\)</span> and <span
+class="math inline">\(1\)</span> transversally, with <span
+class="math inline">\(\|Q^TQ\|\le\tfrac14\)</span>. Conjugating by <span
+class="math inline">\(e^{\kappa x\cdot e}\)</span> changes <span
+class="math inline">\(-\Delta\)</span> by at most <span
+class="math inline">\(2\sinh\kappa\)</span> and <span
+class="math inline">\(aQ^TQ\)</span> by at most <span
+class="math inline">\(\tfrac a4(e^{2\kappa}-1)\)</span>, so the
+conjugated operator stays invertible with norm <span
+class="math inline">\(\le9\)</span> when <span
+class="math inline">\(2\sinh\kappa+\tfrac{130}4(e^{2\kappa}-1)\le\tfrac19\)</span>,
+that is <span class="math display">\[\kappa\ \le\
+1.7\times10^{-3},\qquad
+\big|(-\Delta+aQ^TQ)^{-1}(x,y)\big|\le9\,e^{-\kappa|x-y|_\infty}.\]</span>
+This is a proved rate for the soft-constraint scheme, better than the
+hard-constraint figure by a factor of two and of the same order: the
+loss is intrinsic to any argument whose only inputs are the gap and the
+hopping norm, since their ratio is about <span
+class="math inline">\(10^{-2}\)</span>.</p>
+<h2 id="the-analytic-structure-route-set-up">2. The analytic-structure
+route, set up</h2>
+<p>For the hard constraint, the fluctuation covariance is diagonal in
+the coarse momentum <span class="math inline">\(\bar
+k\in[-\tfrac\pi2,\tfrac\pi2]^4\)</span> and couples the sixteen folded
+fine momenta <span class="math inline">\(k=\bar k+\pi n\)</span>, <span
+class="math inline">\(n\in\{0,1\}^4\)</span>. The tube weight has the
+product form <span class="math display">\[|\hat
+w(k)|^2=\prod_{\nu\ne\mu}\cos^2\tfrac{k_\nu}2\ \cdot\
+\cos^4\tfrac{k_\mu}2,
+\qquad\hat k^2=\sum_\nu4\sin^2\tfrac{k_\nu}2,\]</span> and folding
+exchanges <span
+class="math inline">\(\cos^2\leftrightarrow\sin^2\)</span> in the
+flipped components. With <span class="math inline">\(s(\bar
+k)=\sum_n|\hat w(\bar k+\pi n)|^2/\hat k^2(\bar k+\pi n)\)</span>, the
+diagonal entry of the fluctuation covariance at the unfolded momentum is
+<span class="math display">\[C_{\rm fl}(\bar k,\bar k)\ \propto\
+\frac{\sum_{n\ne0}|\hat w(\bar k+\pi n)|^2/\hat k^2(\bar k+\pi n)}
+{|\hat w(\bar k)|^2+\hat k^2(\bar k)\sum_{n\ne0}|\hat w(\bar k+\pi
+n)|^2/\hat k^2(\bar k+\pi n)},\]</span> in which the massless pole <span
+class="math inline">\(1/\hat k^2(\bar k)\)</span> has cancelled
+identically. Three facts fix where singularities can be. (a) For <span
+class="math inline">\(\bar k\to\bar k+i\kappa e\)</span> with <span
+class="math inline">\(\cosh\kappa&lt;2\)</span>, every flipped
+denominator satisfies <span class="math inline">\(\operatorname{Re}\hat
+k^2(\bar k+\pi n)\ge2-2(\cosh\kappa-1)&gt;0\)</span>, so only the
+unfolded term can have a pole, and it has cancelled. (b) <span
+class="math inline">\(|\hat w(\bar k)|^2\ge\tfrac1{32}\)</span>
+throughout the strip, since each factor has modulus at least <span
+class="math inline">\(\tfrac12\)</span> there. (c) The remaining
+singularities are the zeros of the denominator <span
+class="math inline">\(D(\bar k)=|\hat w(\bar k)|^2+\hat k^2(\bar
+k)R(\bar k)\)</span>, with <span class="math inline">\(R\)</span> the
+flipped sum, analytic and bounded in the strip. <strong>The decay rate
+of the hard-constraint fluctuation propagator is the width of the
+largest strip <span class="math inline">\(|\operatorname{Im}\bar
+k|&lt;\kappa_*\)</span> in which <span class="math inline">\(D\)</span>
+has no zero</strong>, and <span class="math inline">\(\kappa_*\)</span>
+is expected to be of order one. Establishing it is a bounded computation
+with four real variables and one explicit function, and it is the
+defined task for an order-one rate; no part of it is done here.</p>
+<h2 id="the-shape-of-the-threshold">3. The shape of the threshold</h2>
+<p>Part 2 organizes the remainder <span
+class="math inline">\(S_W-S_2\)</span>, the Haar correction and the
+non-abelian averaging as a gas of polymers on plaquettes, integrated
+against the fluctuation Gaussian. Its structure is fixed by three
+ingredients, whatever the details.</p>
+<p><em>Vertices.</em> The cubic term of <span
+class="math inline">\(N-\operatorname{Re}\operatorname{tr}U_p\)</span>
+is <span
+class="math inline">\(\operatorname{tr}\big(d\theta\,[\theta,\theta]\big)\)</span>-type;
+with fluctuations of root-mean-square size <span
+class="math inline">\(\tfrac32g\)</span> per link (part 1), <span
+class="math inline">\(d\xi\)</span> is of size up to <span
+class="math inline">\(6g\)</span> and the cubic vertex per plaquette is
+of size <span
+class="math inline">\(\tfrac2{g^2}\cdot6g\cdot\tfrac94g^2\cdot c_{\rm
+col}\simeq27c_{\rm col}\,g\)</span>, so <span
+class="math inline">\(C_3g\)</span> with <span
+class="math inline">\(C_3\)</span> of order <span
+class="math inline">\(10\)</span> to <span
+class="math inline">\(30\)</span>; quartic and Haar terms are <span
+class="math inline">\(O(g^2)\)</span> and subleading.</p>
+<p><em>Covariance sums.</em> Factorizing the Gaussian integral of a
+product over a set of plaquettes into connected polymers by the
+Brydges–Kennedy interpolation puts one fluctuation covariance on each
+edge of a spanning tree, so every polymer of <span
+class="math inline">\(n\)</span> plaquettes carries a factor <span
+class="math inline">\(\big(\|C_{\rm
+fl}\|_{1,\kappa}/g^2\big)^{n-1}\)</span> with <span
+class="math display">\[\frac{\|C_{\rm
+fl}\|_{1,\kappa}}{g^2}=\sup_x\sum_y\frac{|C_{\rm fl}(x,y)|}{g^2}
+\le\frac92\Big(\coth\frac\kappa2\Big)^4\ \simeq\
+\frac{72}{\kappa^4}\qquad(\kappa\ll1),\]</span> using <span
+class="math inline">\(|C_{\rm
+fl}(x,y)|\le\tfrac92g^2e^{-\kappa|x-y|_\infty}\)</span>.</p>
+<p><em>Entropy.</em> Plaquette adjacency <span
+class="math inline">\(20\)</span> in four dimensions, so connected sets
+of <span class="math inline">\(n\)</span> plaquettes through a given one
+number at most <span class="math inline">\((20e)^{n-1}\)</span> (<a
+href="wilson-strong-coupling-explicit.html">Wilson note</a> §2).</p>
+<p>The Kotecký–Preiss condition then holds when the per-plaquette
+activity times <span class="math inline">\(e\)</span>, the adjacency
+entropy and the covariance sum is below one, <span
+class="math display">\[e\cdot C_3g\cdot20e\cdot\frac{72}{\kappa^4}\ \le\
+1
+\qquad\Longleftrightarrow\qquad
+g\ \le\ g_{\rm pert}\simeq\frac{\kappa^4}{1.1\times10^4\,C_3},\]</span>
+which is the form quoted in the abstract.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\kappa\)</span> (per lattice unit)</th>
+<th>origin</th>
+<th><span class="math inline">\(g_{\rm pert}\)</span> (<span
+class="math inline">\(C_3=20\)</span>)</th>
+<th><span class="math inline">\(g_{\rm pert}^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(7\times10^{-4}\)</span></td>
+<td>proved, hard constraint</td>
+<td><span class="math inline">\(10^{-18}\)</span></td>
+<td><span class="math inline">\(10^{-36}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1.7\times10^{-3}\)</span></td>
+<td>proved, soft constraint</td>
+<td><span class="math inline">\(4\times10^{-17}\)</span></td>
+<td><span class="math inline">\(10^{-33}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(0.5\)</span></td>
+<td>expected order-one rate</td>
+<td><span class="math inline">\(3\times10^{-7}\)</span></td>
+<td><span class="math inline">\(10^{-13}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1\)</span></td>
+<td>optimistic</td>
+<td><span class="math inline">\(5\times10^{-6}\)</span></td>
+<td><span class="math inline">\(2\times10^{-11}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>This is a scaling estimate: the constants <span
+class="math inline">\(C_3\)</span>, the adjacency, and the tree-graph
+organization are the standard ones and the form is robust, but no
+polymer expansion has been carried out here, and a full treatment adds
+factors of order one to ten in either direction. It does not change the
+conclusion, because the conclusion is about orders of magnitude.</p>
+<h2 id="the-conclusion-for-the-weak-side">4. The conclusion for the weak
+side</h2>
+<p>The physical onset of the perturbative running is at <span
+class="math inline">\(g^2\simeq1\)</span>, <span
+class="math inline">\(\beta_W\simeq6\)</span>, where asymptotic scaling
+is observed. The explicit small-field step, done with the sharpest
+propagator rate one can hope for and the standard organization, covers
+<span class="math inline">\(g^2\lesssim10^{-12}\)</span>; with the
+proven rate, <span class="math inline">\(10^{-35}\)</span>. Every step
+between <span class="math inline">\(g^2_{\rm pert}\)</span> and <span
+class="math inline">\(g^2\simeq1\)</span> is, in the rigorous sense, a
+step without a small parameter, and their number is irrelevant since
+none is controlled. The strong side’s corresponding deficit, from the
+proved <span class="math inline">\(\beta_W=0.0135\)</span> to the
+physical <span class="math inline">\(5.7\)</span>, is a factor <span
+class="math inline">\(400\)</span>, and its methods are polymer
+expansions of the same family. The difference is that the strong-side
+gas has activities <span class="math inline">\(\beta_W/6\)</span> per
+plaquette and a local structure, while the weak-side gas has activities
+<span class="math inline">\(C_3g\)</span> dressed by covariance sums
+that scale like <span class="math inline">\(\kappa^{-4}\)</span> and
+vertex constants of order ten.</p>
+<p>So H1a, the sharpness sub-target, is closed: sharpening constants
+within the present method cannot bring <span
+class="math inline">\(g_{\rm pert}^2\)</span> within twelve orders of
+magnitude of the physical onset, and the meeting of the two reaches
+through constant-chasing is not a viable route. H1 is a methods problem,
+which is the content of the constructive programme extended through the
+confinement scale: control of the renormalization steps at couplings
+where the fluctuation is not small compared with the nonlinearity, with
+no expansion in any parameter. That is the open problem, stated as
+precisely as this programme can state it.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The decay rate is proved at <span
+class="math inline">\(10^{-3}\)</span> per lattice unit by two routes
+and its order-one value is reduced to a zero-free strip for the explicit
+function <span class="math inline">\(D\)</span> of Section 2. The
+threshold of the remainder gas scales as <span
+class="math inline">\(\kappa^4\)</span> and lies at <span
+class="math inline">\(g^2\sim10^{-12}\)</span> even for an ideal rate,
+twelve orders below the physical onset of the running. The weak-side
+sharpness sub-target is closed as not viable; the open problem is a
+methods problem at order-one coupling, and the map of this programme
+ends there.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

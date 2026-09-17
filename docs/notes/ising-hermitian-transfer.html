@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Ising gap gives a conditional local parent Hamiltonian</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The Ising gap gives a conditional local parent Hamiltonian</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/ising-hermitian-transfer.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/ising-hermitian-transfer.pdf">PDF</a></p><p>The square-root Gibbs transform of C124 is a positive, three-site
+local, frustration-free Hermitian operator with unique ground state
+<span class="math inline">\(\sqrt{\pi_{N,b}}\)</span> and exact gap
+<span class="math inline">\(a[1-\tanh(2b)]\)</span>. Multiplication by a
+supplied action constant gives an energy-unit Hamiltonian. This
+construction preserves the chosen stochastic clock and does not select
+physical dynamics or action units. It resolves G04’s finite-volume
+transfer decision.</p>
+<h2 id="object-domain-and-transform">1. Object, domain and
+transform</h2>
+<p>Use <a href="interacting-ising-gap.html">C124’s model</a>: <span
+class="math inline">\(N\ge3\)</span> periodic spins, <span
+class="math inline">\(0\le b&lt;\infty\)</span>, per-site refresh rate
+<span class="math inline">\(a&gt;0\)</span> and stationary law <span
+class="math inline">\(\pi(\sigma)=Z^{-1}\exp(b\sum_i\sigma_i\sigma_{i+1})\)</span>.
+The generator <span class="math inline">\(Q=a\sum_i(E_i-I)\)</span> acts
+on functions in complex <span class="math inline">\(L^2(\pi)\)</span>;
+<span class="math inline">\(E_i\)</span> is conditional expectation over
+spin <span class="math inline">\(i\)</span>. Its time parameter is the
+auxiliary sampling clock and <span class="math inline">\(a\)</span> has
+inverse-time units.</p>
+<p>Let <span class="math inline">\(D=\operatorname{diag}\pi\)</span> and
+<span class="math inline">\(U:L^2(\pi)\to\mathcal H_N=(\mathbb
+C^2)^{\otimes N}\)</span> be <span
+class="math inline">\((Uf)_\sigma=\sqrt{\pi(\sigma)}f(\sigma)\)</span>.
+The codomain has the standard counting inner product; <span
+class="math inline">\(U\)</span> is unitary between these two
+inner-product spaces. All operators below have the entire
+finite-dimensional space as domain. Set</p>
+<p><span class="math display">\[
+A_N=-UQU^{-1}=-D^{1/2}QD^{-1/2}.
+\]</span></p>
+<p>Detailed balance makes this matrix Hermitian. Its quadratic form
+is</p>
+<p><span class="math display">\[
+\langle\psi,A_N\psi\rangle
+=\frac12\sum_{\sigma,\eta}\pi(\sigma)Q_{\sigma\eta}
+\left|\frac{\psi_\eta}{\sqrt{\pi(\eta)}}-
+      \frac{\psi_\sigma}{\sqrt{\pi(\sigma)}}\right|^2\ge0,
+\]</span></p>
+<p>where diagonal terms vanish. Irreducibility implies a one-dimensional
+kernel, spanned by the normalized vector</p>
+<p><span class="math display">\[
+|\Omega\rangle=Z^{-1/2}\sum_\sigma
+e^{(b/2)\sum_i\sigma_i\sigma_{i+1}}|\sigma\rangle.
+\]</span></p>
+<p>Its squared basis amplitudes reproduce the Gibbs probabilities.
+Regarding those amplitudes and other vectors as physical quantum states
+requires a state/measurement interpretation in addition to this
+Hilbert-space map.</p>
+<h2 id="explicit-local-terms-and-their-positivity">2. Explicit local
+terms and their positivity</h2>
+<p>Write <span
+class="math inline">\(Z_i|\sigma\rangle=\sigma_i|\sigma\rangle\)</span>
+and let <span class="math inline">\(X_i\)</span> flip spin <span
+class="math inline">\(i\)</span>. Put <span
+class="math inline">\(\theta=\tanh(2b)\)</span>, <span
+class="math inline">\(s=\operatorname{sech}(2b)\)</span>, <span
+class="math inline">\(c_+=(1+s)/2\)</span>, <span
+class="math inline">\(c_-=(s-1)/2\)</span>. Then</p>
+<p><span class="math display">\[
+A_N=\sum_i h_i,\qquad
+h_i=\frac a2\left[I-\frac\theta2Z_i(Z_{i-1}+Z_{i+1})
+-(c_+I+c_-Z_{i-1}Z_{i+1})X_i\right].
+\]</span></p>
+<p><strong>Derivation.</strong> For fixed neighbours with sum <span
+class="math inline">\(S=\sigma_{i-1}+\sigma_{i+1}\)</span>, the original
+flip rate is <span
+class="math inline">\(r_i(\sigma)=a[1-\sigma_i\tanh(bS)]/2\)</span>.
+Detailed balance gives transformed off-diagonal entry <span
+class="math inline">\(-\sqrt{r_i(\sigma)r_i(\sigma^i)}=-a/[2\cosh(bS)]\)</span>.
+The diagonal entry is unchanged. Since <span
+class="math inline">\(S=0,\pm2\)</span>, the off-diagonal coefficient
+equals <span
+class="math inline">\(c_++c_-\sigma_{i-1}\sigma_{i+1}\)</span>, giving
+the formula. The two neighbours are distinct even for <span
+class="math inline">\(N=3\)</span>; all indices are cyclic.</p>
+<p>Alternatively <span
+class="math inline">\(h_i=a(I-UE_iU^{-1})\)</span>. Each <span
+class="math inline">\(E_i\)</span> is an orthogonal projection, so <span
+class="math inline">\(h_i\ge0\)</span>, <span
+class="math inline">\(h_i^2=ah_i\)</span> and <span
+class="math inline">\(h_i|\Omega\rangle=0\)</span>. Thus the sum is
+frustration-free, although its overlapping terms need not commute. Each
+term has norm <span class="math inline">\(a\)</span> and support in the
+three sites <span class="math inline">\(i-1,i,i+1\)</span>; the global
+density transform has not introduced interactions of growing range. For
+a fixed neighbour block the local ground vector has components
+proportional to <span class="math inline">\(e^{bS/2},e^{-bS/2}\)</span>,
+which also checks the square-root and sign conventions. At <span
+class="math inline">\(b=0\)</span>, <span
+class="math inline">\(h_i=a(I-X_i)/2\)</span> and the ground state is
+the product of plus-<span class="math inline">\(X\)</span> vectors.
+These statements are direct finite-dimensional derivations.</p>
+<h2 id="exact-gap-normalization-and-limits-c126">3. Exact gap,
+normalization and limits (C126)</h2>
+<p>Unitary equivalence and C124 give</p>
+<p><span class="math display">\[
+\operatorname{gap}(A_N)=a[1-\tanh(2b)].
+\]</span></p>
+<p>The corresponding nonzero eigenvector is <span
+class="math inline">\(U M\)</span> with <span
+class="math inline">\(M(\sigma)=\sum_i\sigma_i\)</span>, orthogonal to
+<span class="math inline">\(|\Omega\rangle\)</span> by spin-flip
+symmetry. This is an all-mode spectral statement, inherited from C124
+rather than inferred from locality or the ground state alone.</p>
+<p>For a supplied constant <span class="math inline">\(K&gt;0\)</span>
+with action units, define <span class="math inline">\(H_N=K
+A_N\)</span>. Its ground energy is zero and its excitation gap in energy
+units is</p>
+<p><span class="math display">\[
+\Delta_N=Ka[1-\tanh(2b)].
+\]</span></p>
+<p>For <span class="math inline">\(K_N\ge K_0&gt;0\)</span>, <span
+class="math inline">\(a_N\ge a_0&gt;0\)</span>, <span
+class="math inline">\(0\le b_N\le B&lt;\infty\)</span>, <span
+class="math inline">\(\Delta_N\ge K_0a_0[1-\tanh(2B)]\)</span> uniformly
+in <span class="math inline">\(N\)</span>. These are bounds on a
+sequence of finite-volume Hamiltonians. They do not construct an
+infinite-volume Hilbert representation or establish a continuum gap.
+Fixed total refresh rate replaces <span class="math inline">\(a\)</span>
+by <span class="math inline">\(a/N\)</span> and closes the gap. Growing
+<span class="math inline">\(b_N\)</span> or vanishing <span
+class="math inline">\(K_N\)</span> can close it as well when the other
+parameters stay fixed.</p>
+<h2 id="which-physical-premise-has-been-supplied">4. Which physical
+premise has been supplied?</h2>
+<p>The exact semigroup identity is</p>
+<p><span class="math display">\[
+e^{-tH_N/K}=Ue^{tQ}U^{-1}.
+\]</span></p>
+<p>It identifies the transformed sampling semigroup with imaginary-time
+evolution of the constructed operator, in the same time units. Defining
+the unitary <span class="math inline">\(e^{-itH_N/K}\)</span> is
+mathematically possible but is an additional choice of real-time
+evolution; it is not the original stochastic transition law.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>Use</th>
+<th>What remains to identify physically</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Positive Gibbs law and detailed balance</td>
+<td>Unitary weighted-space transform and Hermiticity</td>
+<td>Physical state and observable interpretation</td>
+</tr>
+<tr class="even">
+<td>Single-site heat-bath generator</td>
+<td>Three-site terms and exact inherited gap</td>
+<td>Why this generator governs physical imaginary time</td>
+</tr>
+<tr class="odd">
+<td>Per-site rate <span class="math inline">\(a\)</span></td>
+<td>Overall spectral rate scale</td>
+<td>Conversion from sampling time to physical time</td>
+</tr>
+<tr class="even">
+<td>Supplied action constant <span class="math inline">\(K\)</span></td>
+<td>Converts inverse time to energy and sets phase units</td>
+<td>Positive universal action normalization</td>
+</tr>
+<tr class="odd">
+<td>Uniform <span class="math inline">\(K,a,b\)</span> bounds</td>
+<td>Finite-volume energy-gap lower bound</td>
+<td>Their physical origin and any further limit construction</td>
+</tr>
+</tbody>
+</table>
+<p>The classical energy function <span
+class="math inline">\(-J\sum_i\sigma_i\sigma_{i+1}\)</span> used to
+prepare <span class="math inline">\(\pi\)</span> is not the constructed
+<span class="math inline">\(H_N\)</span>: the latter has off-diagonal
+spin flips and coefficients depending on <span
+class="math inline">\(b=\beta J\)</span> and <span
+class="math inline">\(Ka\)</span>. Knowledge of <span
+class="math inline">\(J\)</span> and <span
+class="math inline">\(\beta\)</span> fixes neither the refresh clock nor
+a universal action constant. For the same <span
+class="math inline">\(\pi\)</span>, replacing <span
+class="math inline">\(Q\)</span> by <span class="math inline">\(\lambda
+Q\)</span>, <span class="math inline">\(\lambda&gt;0\)</span>, preserves
+the ground state and locality while multiplying every excitation gap by
+<span class="math inline">\(\lambda\)</span>. Holding <span
+class="math inline">\(Q\)</span> fixed and varying <span
+class="math inline">\(K\)</span> independently gives the other
+normalization freedom. Thus the map yields a conditional
+stochastic-parent Hamiltonian; an independent physical identification is
+still a premise.</p>
+<h2 id="evidence-and-strategic-consequence">5. Evidence and strategic
+consequence</h2>
+<p>Written proof and literature status are recorded separately in the
+ledger. The <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B71.md">B71
+audit</a> matches the established detailed-balance parent mapping in
+Henley and Castelnovo et al.; the explicit Ising term is a derived
+specialization. The <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/ising-hermitian-B71.md">written
+review</a> checks its coefficients and inherited gap. No novelty is
+asserted.</p>
+<p>G04 stops at the explicit finite-volume operator. Additional Ising
+spectra would not select its clock or action scale. A further operator
+task requires an independently specified physical dynamics whose
+imaginary-time generator can be compared with this one. The quantum
+track’s reversible-descent premise is selected next: test whether a
+specified interacting mechanical orientation flow closes on C125’s
+moment coordinates. <a
+href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>
+owns that bounded decision.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

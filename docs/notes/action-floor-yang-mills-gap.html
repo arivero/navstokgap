@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An action floor on transverse phase-space area produces the Yang–Mills quantum-mechanical gap, and a gap forces an action unit</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>An action floor on transverse phase-space area produces the
+Yang–Mills quantum-mechanical gap, and a gap forces an action unit</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/action-floor-yang-mills-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-floor-yang-mills-gap.pdf">PDF</a></p><p>In the Yang–Mills quantum-mechanical model of <a
+href="low-dimensional-mass-gap.html">G07</a> the two directions of the
+analogy between a positive action floor <span
+class="math inline">\(h&gt;0\)</span> and a mass gap can both be stated
+and proved inside one solved system. Forward: classical mechanics plus
+the single postulate that no transverse oscillation has phase-space area
+below <span class="math inline">\(h/2\)</span> confines the escaping
+valley motion to <span class="math inline">\(|x|\le2\sqrt m\,E/(\hbar
+g)\)</span> at energy <span class="math inline">\(E\)</span>, makes the
+accessible phase-space volume finite with the growth <span
+class="math inline">\(E^{3/2}\ln E\)</span> that Simon records for the
+true eigenvalue counting function, and reproduces through
+Bohr–Sommerfeld quantization the energy unit <span
+class="math inline">\(\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3}\)</span> of
+the exact spectrum; the operator inequality behind G07’s Theorem 5 is
+this postulate made rigorous by the uncertainty inequality. The abelian
+model has no transverse oscillation, so the same floor constrains
+nothing and its spectrum stays continuous: with <span
+class="math inline">\(h&gt;0\)</span> assumed, a commutative field still
+has no gap. Backward: in the classical model with constants <span
+class="math inline">\(m\)</span> and <span
+class="math inline">\(g\)</span>, any positive finite gap <span
+class="math inline">\(\Delta\)</span>, whatever extra constant produces
+it, supplies the action unit <span
+class="math inline">\(\Delta^{3/4}m^{1/2}g^{-1/2}\)</span>, so within
+the model “gap” and “action unit” are dimensionally equivalent. The same
+equivalence holds for Yang–Mills in <span
+class="math inline">\(d=2\)</span> and <span
+class="math inline">\(d=3\)</span>, where the classical coupling is
+dimensionful, and fails exactly in <span
+class="math inline">\(d=4\)</span>, the action-critical dimension, where
+a mass gap together with <span class="math inline">\(c\)</span> admits
+no action unit. The floor postulate is a phase-space area statement; the
+necessity theorem sought in STATE item 1 is the derivation of such a
+floor. This is G08, exploratory, with no ledger promotion.</p>
+<h2 id="the-transverse-phase-space-area-and-the-floor-postulate">1. The
+transverse phase-space area and the floor postulate</h2>
+<p>Take the scalar model of G07, Theorem 5, with classical Hamiltonian
+<span class="math display">\[H_{\rm
+cl}=\frac{p_x^2+p_y^2}{2m}+\frac{g^2}{2}x^2y^2 .\]</span> At fixed <span
+class="math inline">\(x\neq0\)</span> the transverse motion is the
+oscillator <span
+class="math inline">\(E_y=p_y^2/2m+\tfrac12m\omega_x^2y^2\)</span> with
+<span class="math inline">\(\omega_x=g|x|/\sqrt m\)</span>.</p>
+<p><strong>Proposition 1.</strong> The transverse orbit at fixed <span
+class="math inline">\(x\)</span> and transverse energy <span
+class="math inline">\(E_y\)</span> is the ellipse <span
+class="math inline">\(\{p_y^2/2m+\tfrac12m\omega_x^2y^2=E_y\}\)</span>,
+and its enclosed phase-space area is <span
+class="math display">\[J_y=\oint p_y\,dy=\frac{2\pi
+E_y}{\omega_x}=\frac{2\pi\sqrt m\,E_y}{g|x|}.\]</span></p>
+<p><em>Proof.</em> The ellipse has semi-axes <span
+class="math inline">\(\sqrt{2mE_y}\)</span> in <span
+class="math inline">\(p_y\)</span> and <span
+class="math inline">\(\sqrt{2E_y/(m\omega_x^2)}\)</span> in <span
+class="math inline">\(y\)</span>; the product times <span
+class="math inline">\(\pi\)</span> gives <span
+class="math inline">\(2\pi E_y/\omega_x\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><span class="math inline">\(J_y\)</span> is the adiabatic invariant
+of the transverse oscillation: along the valley it is conserved to
+leading order when <span class="math inline">\(\omega_x\)</span> changes
+slowly on the oscillation’s time scale, <span
+class="math inline">\(|\dot x/x|\ll\omega_x\)</span>, that is <span
+class="math inline">\(|x|\gg x_{\rm ad}(E)=(2E)^{1/4}g^{-1/2}\)</span>
+at energy <span class="math inline">\(E\)</span> (Landau–Lifshitz,
+<em>Mechanics</em> §49; the note uses only Proposition 1 and the
+inequality below, which need no adiabatic limit).</p>
+<p><strong>Floor postulate <span class="math inline">\(\mathsf
+F(h)\)</span>.</strong> No admitted state has a transverse oscillation
+of phase-space area below <span
+class="math inline">\(h/2=\pi\hbar\)</span>: <span
+class="math inline">\(J_y\ge h/2\)</span> whenever <span
+class="math inline">\(x\ne0\)</span>, and <span
+class="math inline">\(J_x\ge h/2\)</span> whenever <span
+class="math inline">\(y\ne0\)</span>.</p>
+<p>The value <span class="math inline">\(h/2\)</span> is the
+Bohr–Sommerfeld ground-state area <span
+class="math inline">\((n+\tfrac12)h\)</span> at <span
+class="math inline">\(n=0\)</span>; any positive multiple of <span
+class="math inline">\(h\)</span> gives the same conclusions with a
+different pure number.</p>
+<h2 id="forward-the-floor-confines-the-valley-and-produces-the-gap">2.
+Forward: the floor confines the valley and produces the gap</h2>
+<p><strong>Theorem 2.</strong> Under <span class="math inline">\(\mathsf
+F(h)\)</span>, every admitted classical state of energy <span
+class="math inline">\(E\)</span> satisfies <span
+class="math display">\[|x|\le X(E)=\frac{2\sqrt m\,E}{\hbar g},\qquad
+|y|\le X(E),\]</span> and the transverse energy obeys <span
+class="math inline">\(E_y\ge\hbar\omega_x/2=\hbar g|x|/(2\sqrt
+m)\)</span>. In particular the admitted region of the energy shell is
+bounded, whereas without the floor the shell contains the unbounded
+valley motions <span class="math inline">\(y=p_y=0\)</span>, <span
+class="math inline">\(x(t)=x_0+p_xt/m\)</span> of every energy <span
+class="math inline">\(p_x^2/2m&gt;0\)</span>.</p>
+<p><em>Proof.</em> For <span class="math inline">\(x\ne0\)</span>,
+Proposition 1 and <span class="math inline">\(E_y\le E\)</span> give
+<span class="math inline">\(J_y=2\pi\sqrt m\,E_y/(g|x|)\le2\pi\sqrt
+m\,E/(g|x|)\)</span>; the floor <span
+class="math inline">\(J_y\ge\pi\hbar\)</span> then forces <span
+class="math inline">\(|x|\le2\sqrt mE/(\hbar g)\)</span>. Reading the
+same inequality as a bound on <span class="math inline">\(E_y\)</span>
+gives <span class="math inline">\(E_y\ge\hbar g|x|/(2\sqrt m)\)</span>.
+The <span class="math inline">\(y\)</span> bound is symmetric. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Remarks.</strong></p>
+<ol type="1">
+<li><em>The floor is the quantum bound.</em> The inequality <span
+class="math inline">\(E_y\ge\hbar g|x|/(2\sqrt m)\)</span> is word for
+word the oscillator bound of G07, Theorem 5 (Lemma 0 there): <span
+class="math inline">\(-\frac{\hbar^2}{2m}\partial_y^2
++\frac{g^2}{2}x^2y^2\ge\hbar g|x|/(2\sqrt m)\)</span>. The quantum
+theorem is the floor postulate enforced by the uncertainty inequality
+<span class="math inline">\(\int(\mu|\phi&#39;|^2+\nu
+y^2|\phi|^2)\ge\sqrt{\mu\nu}\int|\phi|^2\)</span>, which is the
+statement that no normalizable state occupies a transverse phase-space
+area below <span class="math inline">\(h/2\)</span>. So in this model
+the implication “<span class="math inline">\(h&gt;0\)</span> gives the
+gap” is exact, with <span class="math inline">\(h\)</span> entering only
+through the area floor, and the rest of quantum kinematics is not
+used.</li>
+<li><em>Self-consistency of the adiabatic reading.</em> The cutoff <span
+class="math inline">\(X(E)\)</span> lies in the adiabatic region: <span
+class="math inline">\(X(E)/x_{\rm
+ad}(E)=2^{3/4}(E/\varepsilon)^{3/4}\)</span> with <span
+class="math inline">\(\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3}\)</span>,
+so for <span class="math inline">\(E\gg\varepsilon\)</span> the floor
+acts where <span class="math inline">\(J_y\)</span> is conserved, and
+near the ground state, <span
+class="math inline">\(E\sim\varepsilon\)</span>, the classical reading
+is only an estimate.</li>
+<li><em>Counting.</em> Without the floor the phase-space volume <span
+class="math inline">\(|\{H_{\rm cl}\le E\}|\)</span> is infinite for
+every <span class="math inline">\(E&gt;0\)</span> (G07, Theorem 5, proof
+of (iv)). With the floor, the transverse area at fixed <span
+class="math inline">\(x\)</span> and fixed <span
+class="math inline">\(p_x\)</span> is <span
+class="math inline">\(2\pi(E-p_x^2/2m)/\omega_x\)</span>; integrating
+over <span class="math inline">\(|p_x|\le\sqrt{2mE}\)</span> gives <span
+class="math inline">\((8\pi/3)\sqrt{2m}\,E^{3/2}\sqrt m/(g|x|)\)</span>
+per unit <span class="math inline">\(x\)</span>, and integrating <span
+class="math inline">\(|x|\)</span> from a fixed inner scale to <span
+class="math inline">\(X(E)\)</span> gives <span
+class="math display">\[|\{H_{\rm cl}\le E\}\cap\mathsf F(h)|
+=\frac{16\sqrt2\,\pi
+m}{3g}\,E^{3/2}\ln\frac{X(E)}{x_0}+O(E^{3/2}),\]</span> which grows like
+<span class="math inline">\(E^{3/2}\ln E\)</span>. Simon states (Ann.
+Phys. 146 (1983) 209, p. 3, passage read) that the true counting
+function <span class="math inline">\(N(E)\)</span> of <span
+class="math inline">\(-\Delta+x^2y^2\)</span> grows like <span
+class="math inline">\(E^{3/2}\ln E\)</span>, while the classical volume
+is infinite. The floor therefore reproduces the growth law of the exact
+spectrum; the identification <span
+class="math inline">\(N(E)\approx|\{\cdot\}|/h^2\)</span> is the Weyl
+heuristic, stated here as a consistency check and not as a theorem.</li>
+<li><em>Semiclassical levels.</em> With <span
+class="math inline">\(J_y=(n+\tfrac12)h\)</span> conserved, the valley
+motion has effective Hamiltonian <span
+class="math inline">\(p_x^2/2m+\kappa_n|x|\)</span>, <span
+class="math inline">\(\kappa_n=(n+\tfrac12)\hbar g/\sqrt m\)</span>, and
+Bohr–Sommerfeld quantization <span class="math inline">\(\oint
+p_x\,dx=(N+\tfrac12)h\)</span> with <span class="math inline">\(\oint
+p_x\,dx=\tfrac{8\sqrt{2m}}{3}E^{3/2}/\kappa_n\)</span> gives <span
+class="math display">\[E^{\rm
+BS}_{n,N}=\varepsilon\Big[\frac{3\pi(2n+1)(2N+1)}{16\sqrt2}\Big]^{2/3},
+\qquad\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3}.\]</span> The unit <span
+class="math inline">\(\varepsilon\)</span> is the exact one of G07,
+Theorem 5(4), as Theorem 1 of G07 requires; the pure numbers are
+semiclassical estimates of <span class="math inline">\(e_n\)</span> and
+are labelled as such. The lowest level and the first spacing are
+positive: the old quantum theory of this model already has a gap.</li>
+</ol>
+<p><strong>Corollary 3 (the commutative model).</strong> For the abelian
+matrix model, and for <span class="math inline">\(D=1\)</span>, the
+potential vanishes identically: there is no transverse oscillation,
+<span class="math inline">\(\mathsf F(h)\)</span> imposes no condition,
+the classical energy shells stay unbounded and the quantum spectrum is
+<span class="math inline">\([0,\infty)\)</span> (G07, Theorem 6(5)). An
+action floor produces a gap only in the presence of the commutator
+potential, which is what supplies the transverse ellipses whose area the
+floor bounds.</p>
+<p>For the SU(2) model with <span class="math inline">\(D\ge2\)</span>
+the same argument applies to each of the two transverse directions of
+<span class="math inline">\(\vec x_j\)</span> relative to <span
+class="math inline">\(\vec x_i\)</span>: the floor gives <span
+class="math inline">\(E_\perp\ge\hbar g|\vec x_i|/\sqrt m\)</span>, the
+bound of G07, Theorem 6(1), and <span class="math inline">\(|\vec
+x_i|\le\sqrt m\,E/(\hbar g)\)</span> on the energy shell.</p>
+<h2
+id="backward-a-gap-forces-an-action-unit-except-in-the-action-critical-case">3.
+Backward: a gap forces an action unit, except in the action-critical
+case</h2>
+<p><strong>Proposition 4.</strong> Let the classical model with fixed
+constants <span class="math inline">\(m\)</span>, <span
+class="math inline">\(g\)</span> (dimension vectors <span
+class="math inline">\(d_m=(1,0,0)\)</span>, <span
+class="math inline">\(d_g=(\tfrac12,-1,-1)\)</span>) be enlarged by any
+fixed constants, and suppose the enlarged theory has a positive finite
+gap <span class="math inline">\(\Delta\)</span> depending on the fixed
+constants only. Then the theory has the action unit <span
+class="math display">\[A=\Delta^{3/4}\,m^{1/2}\,g^{-1/2},\]</span> and
+conversely an action unit <span class="math inline">\(A\)</span> gives
+the energy unit <span
+class="math inline">\(A^{4/3}g^{2/3}m^{-2/3}\)</span>.</p>
+<p><em>Proof.</em> Energy has dimension vector <span
+class="math inline">\((1,2,-2)\)</span> and action <span
+class="math inline">\((1,2,-1)\)</span>. The system <span
+class="math inline">\(a\,d_m+b\,d_g+c\,(1,2,-2)=(1,2,-1)\)</span> has
+the unique solution <span class="math inline">\(a=\tfrac12\)</span>,
+<span class="math inline">\(b=-\tfrac12\)</span>, <span
+class="math inline">\(c=\tfrac34\)</span>: the length and time
+components give <span class="math inline">\(-b+2c=2\)</span>, <span
+class="math inline">\(-b-2c=-1\)</span>, hence <span
+class="math inline">\(c=\tfrac34\)</span>, <span
+class="math inline">\(b=-\tfrac12\)</span>, and the mass component gives
+<span class="math inline">\(a=\tfrac12\)</span>. So <span
+class="math inline">\(m^{1/2}g^{-1/2}\Delta^{3/4}\)</span> has action
+dimension whatever the extra constants are. The converse is G07, Theorem
+3 with <span class="math inline">\(k=4\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>Within the model, therefore, “the gap is positive” and “an action
+unit exists” are the same dimensional statement, and G07’s Theorem 5
+supplies the dynamical content, <span
+class="math inline">\(0&lt;\delta_1&lt;\infty\)</span>, that turns the
+unit into the number <span
+class="math inline">\(\Delta=\delta_1\varepsilon\)</span>.</p>
+<p><strong>Proposition 5 (which field theories share this
+equivalence).</strong> With the classical coupling <span
+class="math inline">\(1/g^2\)</span> of dimension action<span
+class="math inline">\(\cdot\)</span>length<span
+class="math inline">\(^{4-d}\)</span>, the speed <span
+class="math inline">\(c\)</span> and a gap <span
+class="math inline">\(\Delta\)</span>, an action unit exists in <span
+class="math inline">\(d=2\)</span> and <span
+class="math inline">\(d=3\)</span> and does not exist in <span
+class="math inline">\(d=4\)</span>:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(d\)</span></th>
+<th>fixed classical constants</th>
+<th>action unit from <span
+class="math inline">\((1/g^2,c,\Delta)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td><span class="math inline">\(1/g^2\sim(1,4,-1)\)</span>, <span
+class="math inline">\(c\)</span></td>
+<td><span
+class="math inline">\((1/g^2)^{1/3}c^{-2/3}\Delta^{2/3}\)</span></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><span class="math inline">\(1/g^2\sim(1,3,-1)\)</span>, <span
+class="math inline">\(c\)</span></td>
+<td><span
+class="math inline">\((1/g^2)^{1/2}c^{-1/2}\Delta^{1/2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><span class="math inline">\(c\)</span> only</td>
+<td>none: <span
+class="math inline">\(a(0,1,-1)+b(1,2,-2)=(1,2,-1)\)</span> has no
+solution</td>
+</tr>
+<tr class="even">
+<td>mechanics, <span class="math inline">\(k=-2\)</span></td>
+<td><span class="math inline">\(m\)</span>, <span
+class="math inline">\(\lambda\sim(1,4,-2)\)</span></td>
+<td><span class="math inline">\(\sqrt{m\lambda}\)</span> already
+classical; <span class="math inline">\(\Delta\)</span> adds nothing</td>
+</tr>
+</tbody>
+</table>
+<p><em>Proof.</em> Solve <span
+class="math inline">\(a\,d_{1/g^2}+b\,d_c+c&#39;\,(1,2,-2)=(1,2,-1)\)</span>:
+for <span class="math inline">\(d=3\)</span>, adding the length and time
+equations gives <span class="math inline">\(2a=1\)</span>, then <span
+class="math inline">\(c&#39;=\tfrac12\)</span>, <span
+class="math inline">\(b=-\tfrac12\)</span>; for <span
+class="math inline">\(d=2\)</span>, <span
+class="math inline">\(3a=1\)</span>, <span
+class="math inline">\(c&#39;=\tfrac23\)</span>, <span
+class="math inline">\(b=-\tfrac23\)</span>; for <span
+class="math inline">\(d=4\)</span> the mass component forces <span
+class="math inline">\(b=1\)</span>, the length component then forces
+<span class="math inline">\(a=0\)</span>, and the time component reads
+<span class="math inline">\(-2=-1\)</span>. The <span
+class="math inline">\(k=-2\)</span> row is G07, Section 6. <span
+class="math inline">\(\square\)</span></p>
+<p>The equivalence “gap if and only if action unit” thus holds whenever
+the classical theory carries a dimensionful coupling, and fails exactly
+at the action-critical dimension, where the classical theory carries no
+constant at all and a mass gap with <span
+class="math inline">\(c\)</span> yields a length only after <span
+class="math inline">\(\hbar\)</span> is supplied. This is the
+dimensional reason the four-dimensional problem is one-directional: the
+gap needs a scale generated by transmutation, and that scale does not by
+itself return an action unit.</p>
+<h2 id="what-this-decides-for-the-positive-action-question">4. What this
+decides for the positive-action question</h2>
+<ul>
+<li><strong>Direction.</strong> In the solved model the analogy is an
+equivalence at the level of units and an implication at the level of
+dynamics: the floor postulate, used only through the transverse area,
+produces the gap (Theorem 2 and Remark 1), and the gap returns the unit
+(Proposition 4). The mass-gap problem is the forward direction with
+<span class="math inline">\(\hbar\)</span> and the gauge group given;
+the necessity problem of STATE item 1 is the derivation of the floor
+itself. Inside this model those two problems have the same dimensional
+content, and the necessity problem is exactly as hard as proving a gap
+from a consistency premise that does not name <span
+class="math inline">\(\hbar\)</span>.</li>
+<li><strong>The second ingredient.</strong> Corollary 3 states the
+commutative case with <span class="math inline">\(h&gt;0\)</span>
+assumed: an action floor alone gives no gap; the commutator potential is
+what creates transverse oscillations for the floor to act on. Any
+transported statement “<span class="math inline">\(h&gt;0\)</span> gives
+a gap” must name the structure that plays this role.</li>
+<li><strong>Areas.</strong> The floor is a bound on a phase-space area,
+the ellipse of Proposition 1. The programme’s anchor, Galileo’s area
+<span class="math inline">\(vF\tau^3/(6m)\)</span> between the inertial
+line and the parabola, is a configuration-space area converted to action
+by the factor <span class="math inline">\(3F/v\)</span> (<a
+href="newton-insertion-action.html">N01</a> §1). The model shows what a
+successful floor would have to look like on the phase-space side: a
+lower bound on the area of a closed transverse orbit, invariant under
+the adiabatic deformation of the orbit. A constant-force motion has no
+closed transverse orbit, which is one more statement of why the Galileo
+class is similarity-covariant (G07, Proposition 14).</li>
+<li><strong>Gate.</strong> For gap-track work the supplied/generated
+gate of G07 can be applied in phase-space terms: a generated gap needs a
+family of closed orbits whose area can fall below <span
+class="math inline">\(h\)</span> along a non-compact direction.</li>
+</ul>
+<h2 id="strategic-consequence">5. Strategic consequence</h2>
+<p>G08 closes the loop inside the Yang–Mills quantum-mechanical model:
+floor gives gap, gap gives unit, and the commutative model is inert
+under the floor. Two dimensional facts are retained for the programme:
+the equivalence of gap and action unit holds exactly when the classical
+theory has a dimensionful coupling, and fails at <span
+class="math inline">\(d=4\)</span>; and the phase-space area of a closed
+transverse orbit is the object a floor must bound. Neither changes STATE
+item 1’s target, which remains the derivation of the floor from
+consistency premises; N02 gains the phase-space form of the floor as the
+statement to aim at. No ledger claim is promoted; Theorem 2 and
+Propositions 1, 4, 5 are elementary and the semiclassical remarks are
+labelled estimates. Sources are in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B79.md">B79</a>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Planck gap as a theorem: every marking protocol needs F2τ3&gt;9mκ</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The Planck gap as a theorem: every marking protocol needs <span
+class="math inline">\(F^2\tau^3&gt;9m\kappa\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/planck-gap-derivation.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-derivation.pdf">PDF</a></p><p>Let <span class="math inline">\(\kappa\)</span> be the smallest
+product of resolution and recoil width over the marks a record model can
+make. Then for <strong>every</strong> finite protocol of marks, of any
+number, at any times, the falling parabola can be told from the inertial
+line over a duration <span class="math inline">\(\tau\)</span> in the
+worst case only if</p>
+<p><span
+class="math display">\[\boxed{F^2\tau^3&gt;9\,m\kappa,\qquad\text{equivalently}\qquad
+\tau\Delta E=\frac{F^2\tau^3}{2m}&gt;\frac92\,\kappa,\qquad
+A_{\rm
+inertial,fall}=\frac{vF\tau^3}{6m}&gt;\frac{3v\kappa}{F},}\]</span></p>
+<p>and a two-mark protocol decides as soon as <span
+class="math inline">\(F^2\tau^3&gt;36m\kappa\)</span> when marks
+saturating <span class="math inline">\(\kappa\)</span> are available
+(Theorems 1–2). The threshold duration is therefore pinned within a
+factor <span class="math inline">\(4^{1/3}\)</span> by <span
+class="math inline">\(\kappa\)</span> alone, and the Planck gap of the
+recorded Galileo comparison is positive exactly when <span
+class="math inline">\(\kappa&gt;0\)</span> (Corollary 3). The same bound
+governs Democritus insertion: the marks inside a window of duration
+<span class="math inline">\(\tau&#39;\)</span>, used by themselves,
+record the force only if <span
+class="math inline">\(F^2\tau&#39;^3&gt;9m\kappa\)</span> (Corollary 4).
+Any record model in which a probe’s later position records fix its
+momentum to arbitrary accuracy has <span
+class="math inline">\(\kappa=0\)</span> (Proposition 5), and Newton’s
+optics gives the heuristic value <span
+class="math inline">\(\kappa=\Lambda p=h/2\)</span> of the <a
+href="newton-mark-floor.html">mark-floor note</a>. <strong>Quantum
+kinematics has no non-vacuous instance of this framework:</strong> no
+mark has both a finite worst-case resolution and a finite worst-case
+recoil width, by Paley–Wiener, so <span
+class="math inline">\(\kappa=\infty\)</span> and the theorem holds
+emptily (Proposition 6). What stands is the classical half of the
+programme’s question, and the quantum half is carried out in the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>, which
+proves <span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span> for every protocol of quantum
+instruments, <span class="math inline">\(A\)</span> being the apparatus
+aperture, with floor <span class="math inline">\(\hbar/2\)</span> at the
+smallest aperture the uncertainty relation allows. The proof is a
+separation argument for the adversary’s feasibility set, an AM–GM step
+that turns <span class="math inline">\(\delta\Delta\ge\kappa\)</span>
+into a square root, and one integration by parts that converts the
+certificate into a Dirichlet energy. Constants are explicit throughout;
+nothing is fitted.</p>
+<h2 id="setting-and-definitions">1. Setting and definitions</h2>
+<p>Transverse coordinate <span class="math inline">\(y\)</span>, mass
+<span class="math inline">\(m&gt;0\)</span>, comparison on <span
+class="math inline">\([0,\tau]\)</span> between the inertial hypothesis
+<span class="math inline">\(\mathrm I\)</span> and the falling
+hypothesis <span class="math inline">\(\mathrm F\)</span>, which differ
+by the displacement</p>
+<p><span class="math display">\[P(t)=\frac{Ft^2}{2m},\qquad
+P(0)=P&#39;(0)=0,\qquad P&#39;&#39;=\frac Fm .\]</span></p>
+<p>A <strong>mark</strong> at time <span
+class="math inline">\(t_j\)</span> has a <strong>resolution</strong>
+<span class="math inline">\(\delta_j&gt;0\)</span>: the datum it leaves
+is an interval of length <span class="math inline">\(\delta_j\)</span>
+containing <span class="math inline">\(y(t_j)\)</span>; and a
+<strong>recoil width</strong> <span
+class="math inline">\(\Delta_j\ge0\)</span>: the transverse impulse it
+delivers to the body lies, under either hypothesis, in an interval of
+length <span class="math inline">\(\Delta_j\)</span> that is fixed by
+the totality of records, so that two runs which agree in every record
+can differ in that impulse by at most <span
+class="math inline">\(\Delta_j\)</span>. Between marks the body moves
+freely under <span class="math inline">\(\mathrm I\)</span> and with the
+force <span class="math inline">\(F\)</span> under <span
+class="math inline">\(\mathrm F\)</span>. A <strong>protocol</strong> is
+a finite set of marks at times <span
+class="math inline">\(0=t_0&lt;t_1&lt;\dots&lt;t_k\le\tau\)</span>; the
+mark at <span class="math inline">\(t_0=0\)</span> is the preparation,
+whose recoil width <span class="math inline">\(\Delta_0\)</span> is the
+width within which the records fix the initial transverse momentum. A
+protocol <strong>decides</strong> the comparison in the worst case when
+no pair of runs, one under <span class="math inline">\(\mathrm
+I\)</span> and one under <span class="math inline">\(\mathrm F\)</span>,
+with initial positions, initial momenta and recoils allowed by the
+marks, produces the same data. Set</p>
+<p><span
+class="math display">\[\kappa=\inf_j\delta_j\Delta_j\]</span></p>
+<p>over the marks the model can make; a model satisfies the <strong>mark
+trade-off</strong> with constant <span
+class="math inline">\(\kappa\)</span> when every available mark has
+<span class="math inline">\(\delta\Delta\ge\kappa\)</span>. For the
+corpuscular model of the mark-floor note this is premise M3 with <span
+class="math inline">\(\kappa=\Lambda p\)</span>.</p>
+<p><strong>Feasibility system.</strong> Write <span
+class="math inline">\(y_{\rm F}-y_{\rm I}=P+d\)</span>. Then <span
+class="math inline">\(d(t)=x+vt+\sum_{j\ge1}\rho_j(t-t_j)_+/m\)</span>
+with <span class="math inline">\(x\in\mathbb R\)</span> free (both
+initial positions lie in the same datum interval, so their difference is
+bounded only by the datum constraint at <span
+class="math inline">\(t_0\)</span>), <span
+class="math inline">\(|v|\le\Delta_0/m\)</span> and <span
+class="math inline">\(|\rho_j|\le\Delta_j\)</span>. Two runs give the
+same data exactly when</p>
+<p><span
+class="math display">\[|d(t_i)+P(t_i)|\le\delta_i\qquad(i=0,1,\dots,k).
+\tag{1}\]</span></p>
+<p>The protocol decides if and only if (1) has no solution <span
+class="math inline">\((x,v,\rho_1,\dots,\rho_{k-1})\)</span> in the
+stated ranges. (The last mark’s recoil affects nothing that is recorded
+and is omitted.)</p>
+<h2 id="certificate-of-decidability">2. Certificate of decidability</h2>
+<p><strong>Lemma 1 (separation).</strong> The protocol decides if and
+only if there are multipliers <span
+class="math inline">\(\mu_0,\dots,\mu_k\in\mathbb R\)</span> with <span
+class="math inline">\(\sum_i\mu_i=0\)</span> and</p>
+<p><span
+class="math display">\[\sum_i\mu_iP(t_i)&gt;\sum_i|\mu_i|\delta_i+\frac{\Delta_0}{m}|S_0|
++\sum_{j\ge1}\frac{\Delta_j}{m}|S_j|,\qquad
+S_j=\sum_{i&gt;j}\mu_i(t_i-t_j). \tag{2}\]</span></p>
+<p><em>Proof.</em> Let <span
+class="math inline">\(L:(x,v,\rho)\mapsto(d(t_i))_i\in\mathbb
+R^{k+1}\)</span> be the linear map of Section 1 and <span
+class="math inline">\(B\)</span> the box <span
+class="math inline">\(|v|\le\Delta_0/m\)</span>, <span
+class="math inline">\(|\rho_j|\le\Delta_j\)</span>. The system (1) is
+feasible exactly when the closed convex set <span
+class="math inline">\(C=\{L(x,v,\rho):x\in\mathbb R,(v,\rho)\in
+B\}\)</span> meets the compact box <span
+class="math inline">\(Q=\{q:|q_i+P(t_i)|\le\delta_i\}\)</span>. <span
+class="math inline">\(C\)</span> is the sum of a line and a compact
+convex set, hence closed and convex. If <span
+class="math inline">\(C\cap Q=\emptyset\)</span>, the separation theorem
+for a closed and a compact convex set gives <span
+class="math inline">\(\mu\)</span> with <span
+class="math inline">\(\sup_{q\in Q}\mu\cdot q&lt;\inf_{c\in C}\mu\cdot
+c\)</span>. Since <span class="math inline">\(x\)</span> is free the
+infimum is <span class="math inline">\(-\infty\)</span> unless <span
+class="math inline">\(\mu\cdot L(1,0,0)=\sum_i\mu_i=0\)</span>; with
+that, <span class="math inline">\(\inf_C\mu\cdot
+c=-\frac{\Delta_0}m|\sum_i\mu_it_i|-\sum_{j\ge1}\frac{\Delta_j}m|\sum_{i&gt;j}\mu_i(t_i-t_j)|\)</span>
+by choosing the signs of <span class="math inline">\(v\)</span> and
+<span class="math inline">\(\rho_j\)</span>, and <span
+class="math inline">\(\sup_Q\mu\cdot
+q=-\sum_i\mu_iP(t_i)+\sum_i|\mu_i|\delta_i\)</span>. The strict
+inequality between them is (2); if the separation comes with the
+opposite orientation, replace <span class="math inline">\(\mu\)</span>
+by <span class="math inline">\(-\mu\)</span>. Note <span
+class="math inline">\(\sum_i\mu_it_i=S_0\)</span> when <span
+class="math inline">\(\sum_i\mu_i=0\)</span>. Conversely, if (2) holds
+and <span class="math inline">\((x,v,\rho)\)</span> solved (1), pairing
+(1) with <span class="math inline">\(\mu\)</span> would give <span
+class="math inline">\(\sum_i\mu_iP(t_i)\le\sum_i|\mu_i|\delta_i-\sum_i\mu_id(t_i)
+\le\sum_i|\mu_i|\delta_i+\frac{\Delta_0}m|S_0|+\sum_{j\ge1}\frac{\Delta_j}m|S_j|\)</span>,
+contradicting (2). <span class="math inline">\(\square\)</span></p>
+<p><strong>Lemma 2 (trade-off to a square root).</strong> If <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span> for all <span
+class="math inline">\(j\)</span>, then the right side of (2) is at least
+<span
+class="math inline">\(2\sqrt{\kappa/m}\,\sum_{j=0}^k\sqrt{|\mu_j||S_j|}\)</span>.</p>
+<p><em>Proof.</em> For each <span class="math inline">\(j\)</span>,
+<span class="math inline">\(|\mu_j|\delta_j+\frac{\Delta_j}m|S_j|
+\ge2\sqrt{|\mu_j||S_j|\delta_j\Delta_j/m}\ge2\sqrt{\kappa|\mu_j||S_j|/m}\)</span>
+by the arithmetic–geometric mean inequality; <span
+class="math inline">\(S_k=0\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="the-universal-lower-bound">3. The universal lower bound</h2>
+<p><strong>Lemma 3 (the certificate as a Dirichlet energy).</strong> Let
+<span class="math inline">\(\sum_i\mu_i=0\)</span>, <span
+class="math inline">\(N(u)=\sum_{i:\,t_i&gt;u}\mu_i\)</span> and <span
+class="math inline">\(T(u)=\int_u^\tau N(w)\,dw\)</span> for <span
+class="math inline">\(u\in\mathbb R\)</span>. Then <span
+class="math inline">\(T\)</span> is continuous and piecewise linear,
+<span class="math inline">\(T\equiv T(0)\)</span> on <span
+class="math inline">\((-\infty,0]\)</span>, <span
+class="math inline">\(T\equiv0\)</span> on <span
+class="math inline">\([\tau,\infty)\)</span>, <span
+class="math inline">\(T(t_j)=S_j\)</span>, the slope of <span
+class="math inline">\(T\)</span> jumps by <span
+class="math inline">\(\mu_j\)</span> at <span
+class="math inline">\(t_j\)</span>, and</p>
+<p><span class="math display">\[\sum_i\mu_iP(t_i)=\frac Fm\int_0^\tau
+T(u)\,du,\qquad
+\sum_j\mu_jT(t_j)=-\int_0^\tau T&#39;(u)^2\,du. \tag{3}\]</span></p>
+<p><em>Proof.</em> <span class="math inline">\(N\)</span> is piecewise
+constant, vanishes for <span class="math inline">\(u&lt;0\)</span>
+because <span class="math inline">\(\sum_i\mu_i=0\)</span> and for <span
+class="math inline">\(u\ge t_k\)</span>, and drops by <span
+class="math inline">\(\mu_j\)</span> as <span
+class="math inline">\(u\)</span> crosses <span
+class="math inline">\(t_j\)</span>; so <span
+class="math inline">\(T&#39;=-N\)</span> has the stated jumps and
+support. Also <span
+class="math inline">\(T(t_j)=\sum_i\mu_i\,|\{u\in[t_j,\tau]:u&lt;t_i\}|=\sum_{i&gt;j}\mu_i(t_i-t_j)=S_j\)</span>.
+For the first identity, <span
+class="math inline">\(P(t_i)=\int_0^{t_i}P&#39;(u)\,du\)</span> and
+Fubini give <span class="math inline">\(\sum_i\mu_iP(t_i)=\int_0^\tau
+P&#39;(u)N(u)\,du=-\int_0^\tau P&#39;T&#39;\,du
+=-[P&#39;T]_0^\tau+\int_0^\tau P&#39;&#39;T\,du=\frac Fm\int_0^\tau
+T\,du\)</span>, using <span class="math inline">\(T(\tau)=0\)</span> and
+<span class="math inline">\(P&#39;(0)=0\)</span>. For the second, <span
+class="math inline">\(T&#39;\)</span> is of bounded variation with jumps
+<span class="math inline">\(\mu_j\)</span> at <span
+class="math inline">\(t_j\)</span> and no other variation, so <span
+class="math inline">\(\sum_j\mu_jT(t_j)=\int_{\mathbb
+R}T\,dT&#39;=[TT&#39;]_{-\infty}^{\infty}-\int T&#39;^2 =-\int_0^\tau
+T&#39;^2\)</span>, as <span class="math inline">\(T&#39;\)</span>
+vanishes outside <span class="math inline">\([0,\tau]\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Theorem 1 (universal lower bound).</strong> Suppose every
+mark of a protocol satisfies <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>. If the
+protocol decides the Galileo comparison on <span
+class="math inline">\([0,\tau]\)</span> in the worst case, then</p>
+<p><span class="math display">\[F^2\tau^3&gt;9\,m\kappa .\]</span></p>
+<p><em>Proof.</em> By Lemma 1 there is <span
+class="math inline">\(\mu\)</span> with <span
+class="math inline">\(\sum_i\mu_i=0\)</span> satisfying (2), and by
+Lemma 2 and (3)</p>
+<p><span class="math display">\[\frac Fm\int_0^\tau
+T\,du&gt;2\sqrt{\frac\kappa m}\sum_j\sqrt{|\mu_j||S_j|}
+\ge2\sqrt{\frac\kappa m}\sqrt{\sum_j|\mu_j||S_j|}
+\ge2\sqrt{\frac\kappa m}\sqrt{E},\qquad E=\int_0^\tau
+T&#39;^2\,du,\]</span></p>
+<p>using <span
+class="math inline">\(\sum_j\sqrt{a_j}\ge\sqrt{\sum_ja_j}\)</span> for
+<span class="math inline">\(a_j\ge0\)</span> and <span
+class="math inline">\(\sum_j|\mu_j||S_j|\ge|\sum_j\mu_jT(t_j)|=E\)</span>.
+The right side is nonnegative, so <span
+class="math inline">\(\int_0^\tau T&gt;0\)</span>. Since <span
+class="math inline">\(T(\tau)=0\)</span>, <span
+class="math inline">\(|T(u)|=|\int_u^\tau T&#39;|\le\sqrt{\tau-u}\sqrt
+E\)</span> by Cauchy–Schwarz, hence <span
+class="math inline">\(\int_0^\tau
+T\le\int_0^\tau\sqrt{\tau-u}\,du\,\sqrt E=\tfrac23\tau^{3/2}\sqrt
+E\)</span>, that is <span class="math inline">\(\sqrt
+E\ge\tfrac32\tau^{-3/2}\int_0^\tau T\)</span>. Inserting, <span
+class="math inline">\(\frac Fm\int_0^\tau
+T&gt;3\sqrt{\kappa/m}\,\tau^{-3/2}\int_0^\tau T\)</span>, and dividing
+by the positive integral, <span
+class="math inline">\(F\tau^{3/2}&gt;3\sqrt{\kappa m}\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The theorem uses nothing about the marks except the product bound: no
+least length, no least impulse separately, no restriction on how many
+marks are made or when, no assumption that the marks are of one kind,
+and no probabilistic model. In the mark-floor note’s two-mark protocol
+the same inequality appeared with the constant <span
+class="math inline">\(16\)</span>; Theorem 1 says that no protocol
+whatever can push the constant below <span
+class="math inline">\(9\)</span>.</p>
+<h2 id="the-matching-upper-bound-and-the-gap">4. The matching upper
+bound and the gap</h2>
+<p><strong>Theorem 2 (two marks suffice).</strong> Suppose the model
+offers, for the duration <span class="math inline">\(\tau\)</span> in
+question, a preparation mark with <span
+class="math inline">\(\delta_0=\sqrt{\kappa\tau/m}\)</span> and <span
+class="math inline">\(\Delta_0=\kappa/\delta_0\)</span>, and a terminal
+mark with <span
+class="math inline">\(\delta_1\le\sqrt{\kappa\tau/m}\)</span>. Then the
+two-mark protocol decides the comparison whenever <span
+class="math inline">\(F^2\tau^3&gt;36\,m\kappa\)</span>.</p>
+<p><em>Proof.</em> Under <span class="math inline">\(\mathrm I\)</span>
+the terminal position lies in an interval of length <span
+class="math inline">\(w=\delta_0+\Delta_0\tau/m=2\sqrt{\kappa\tau/m}\)</span>;
+under <span class="math inline">\(\mathrm F\)</span> in its translate by
+<span class="math inline">\(s(\tau)=F\tau^2/2m\)</span>. A datum of
+length <span class="math inline">\(\delta_1\)</span> cannot meet both
+when <span class="math inline">\(s(\tau)&gt;w+\delta_1\)</span>, which
+holds if <span
+class="math inline">\(F\tau^2/2m&gt;3\sqrt{\kappa\tau/m}\)</span>, that
+is <span class="math inline">\(F^2\tau^3&gt;36m\kappa\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Corollary 3 (the Planck gap of the recorded
+comparison).</strong> Let <span
+class="math inline">\(\tau_*(F,m)\)</span> be the infimum of durations
+over which some available protocol decides the comparison. Under the
+hypotheses of Theorems 1–2,</p>
+<p><span class="math display">\[9\,m\kappa\le
+F^2\tau_*^3\le36\,m\kappa,\qquad
+\frac92\kappa\le\tau_*\Delta E(\tau_*)\le18\kappa,\qquad
+\frac{3v\kappa}{F}\le A(\tau_*)\le\frac{12v\kappa}{F},\]</span></p>
+<p>the lower bounds from Theorem 1 as infima and the upper bounds from
+Theorem 2.</p>
+<p>In particular the recorded comparison has a positive floor if and
+only if <span class="math inline">\(\kappa&gt;0\)</span>, and the floor
+is a fixed multiple of <span class="math inline">\(\kappa\)</span>,
+between <span class="math inline">\(\tfrac92\)</span> and <span
+class="math inline">\(18\)</span> in the action-scaled variable <span
+class="math inline">\(\tau\Delta E\)</span>. The geometric area inherits
+the factor <span class="math inline">\(v/F\)</span> and has no floor of
+its own, which is the <a
+href="action-unit-dimensional-selection.html">Q14</a> gate: the only
+action the record model contains is <span
+class="math inline">\(\kappa\)</span>.</p>
+<p><strong>Corollary 4 (Democritus insertion).</strong> Let marks be
+inserted at <span
+class="math inline">\(t_a=t_{j}&lt;t_{j+1}&lt;\dots&lt;t_{j+r}=t_b\)</span>
+inside <span class="math inline">\([0,\tau]\)</span>, and let the
+observer use these marks alone to decide whether the motion on <span
+class="math inline">\([t_a,t_b]\)</span> was free or forced, with no
+information about the momentum at <span
+class="math inline">\(t_a\)</span> beyond what these marks give. Then
+the window records the force only if <span
+class="math inline">\(F^2(t_b-t_a)^3&gt;9m\kappa\)</span>.</p>
+<p><em>Proof.</em> Shift the origin to <span
+class="math inline">\(t_a\)</span>. With the momentum at <span
+class="math inline">\(t_a\)</span> unknown, <span
+class="math inline">\(v\)</span> is free as well as <span
+class="math inline">\(x\)</span>, so the certificate of Lemma 1 acquires
+the extra condition <span
+class="math inline">\(S_0=\sum_i\mu_it_i=0\)</span> and loses the term
+<span class="math inline">\(\frac{\Delta_0}m|S_0|\)</span>, which was
+zero under that condition anyway. Lemmas 2–3 and the proof of Theorem 1
+go through unchanged with <span class="math inline">\(\tau\)</span>
+replaced by <span class="math inline">\(t_b-t_a\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>So inserted points finer than <span
+class="math inline">\(\tau_*=(9m\kappa/F^2)^{1/3}\)</span> show, by
+themselves, free motion only; the force reappears when enough of them
+are pooled that the pooled window exceeds <span
+class="math inline">\(\tau_*\)</span>, and it also reappears if momentum
+information from before the window is carried in, in which case the
+comparison is the whole-interval one and Theorem 1 applies to it. This
+is the rigorous form of the mark-floor note’s Theorem 2, and of I003’s
+remark 3: <span class="math inline">\(\kappa\)</span> controls the mesh
+at which the marked polygon stops converging to Newton’s curve.</p>
+<h2 id="what-fixes-kappa">5. What fixes <span
+class="math inline">\(\kappa\)</span></h2>
+<p><strong>Proposition 5 (deterministic probes give <span
+class="math inline">\(\kappa=0\)</span>).</strong> Suppose the marks are
+made by probes that travel freely after the mark, that a probe’s
+transverse momentum after the mark equals its momentum before minus the
+impulse delivered, and that a probe’s position can be recorded at any
+distance <span class="math inline">\(D\)</span> with a resolution <span
+class="math inline">\(\delta_s\)</span> bounded independently of <span
+class="math inline">\(D\)</span>. Then for every mark <span
+class="math inline">\(\Delta\le p_\parallel(\delta+\delta_s)/D\)</span>
+for all <span class="math inline">\(D\)</span>, where <span
+class="math inline">\(p_\parallel\)</span> is the probe’s longitudinal
+momentum, so <span class="math inline">\(\Delta=0\)</span> and <span
+class="math inline">\(\kappa=0\)</span>.</p>
+<p><em>Proof.</em> The probe’s transverse momentum after the mark is
+<span class="math inline">\(p_\parallel\)</span> times the tangent of
+its direction, which the two recorded positions fix to within <span
+class="math inline">\((\delta+\delta_s)/D\)</span>; momentum
+conservation transfers the same width to the delivered impulse; let
+<span class="math inline">\(D\to\infty\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>This is the far-screen countermodel of the mark-floor note stated for
+any deterministic probe, and it is the mechanism behind the classical
+closures C068–C123 (<a
+href="action-scale-obstructions.html">synthesis</a>): full-state records
+fix the recoil, the trade-off constant is zero, and Corollary 3 gives
+floor zero. A positive <span class="math inline">\(\kappa\)</span>
+therefore requires that the probe’s later position records <strong>do
+not</strong> fix its momentum, which is an indeterminacy of the probe’s
+own kinematics.</p>
+<p><strong>Proposition 6 (the worst-case framework has no quantum
+instance).</strong> In quantum kinematics no mark has both a finite
+worst-case resolution and a finite worst-case recoil width. Hence <span
+class="math inline">\(\kappa=\infty\)</span>, Theorem 1 holds emptily,
+and no protocol of marks decides the comparison with worst-case
+certainty.</p>
+<p><em>Proof.</em> Suppose a mark’s datum confines the position to an
+interval <span class="math inline">\(I\)</span> of length <span
+class="math inline">\(\delta&lt;\infty\)</span> with certainty, so that
+every conditional post-mark state <span
+class="math inline">\(\psi\)</span> has <span
+class="math inline">\(\operatorname{supp}\psi\subseteq I\)</span>. By
+the Paley–Wiener theorem <span class="math inline">\(\hat\psi\)</span>
+extends to an entire function of exponential type; a nonzero entire
+function cannot vanish on a set with nonempty interior, so the momentum
+distribution <span class="math inline">\(|\hat\psi|^2\)</span> has full
+support. The impulse the mark delivered is the difference between the
+post-mark and pre-mark momenta, so no bounded interval fixed by the
+records contains it with certainty, and <span
+class="math inline">\(\Delta=\infty\)</span>. Symmetrically, a mark with
+<span class="math inline">\(\Delta&lt;\infty\)</span> confines momentum
+to a bounded set with certainty and so has <span
+class="math inline">\(\delta=\infty\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>This is the decisive limitation of the present theorem, and it is
+structural rather than technical. Worst-case interval widths express a
+record model in which a datum <em>excludes</em> values outright. Quantum
+data exclude nothing: every position outcome leaves momentum tails, and
+every finite sequence of finite-precision quantum measurements leaves
+the two hypotheses compatible with the data at some probability. So
+Theorem 1, Theorem 2 and Corollaries 3–4 are theorems about
+<strong>classical bounded-error record models</strong>, with Proposition
+5 supplying the mechanism that sets <span
+class="math inline">\(\kappa=0\)</span> there. The quantum statement of
+the same combination is Corollary 3 of the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>, proved by a
+different route. <strong>Exactly what was wrong with the first version
+of this section.</strong> Its Proposition 6 asserted <span
+class="math inline">\(\kappa\ge2\hbar\)</span> for quantum marks and
+drew the floor <span class="math inline">\(\tau\Delta
+E&gt;9\hbar\)</span>. Both statements are true, and both are empty:
+<span class="math inline">\(\kappa=\infty\)</span> satisfies <span
+class="math inline">\(\kappa\ge2\hbar\)</span>, and Theorem 1’s
+hypothesis is then unsatisfiable, so its conclusion holds vacuously. The
+defect was the proof and the reading rather than the statements. The
+proof bounded the Busch–Lahti–Werner calibration disturbance by half a
+worst-case momentum width; that disturbance is a Wasserstein-2 distance,
+which needs a finite second moment, and the post-mark momentum
+distribution after a sharp position confinement has tails too heavy for
+one. So the argument read a finite bound off a quantity that is
+infinite, and the reading presented an empty inequality as a substantive
+quantum floor. The repair is the theorem of the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>, which
+reaches a genuine quantum floor of the same combination by abandoning
+worst-case widths.</p>
+<p><strong>What the probabilistic version is.</strong> It is carried out
+in the <a href="planck-gap-probabilistic.html">companion note</a>, which
+reaches the floor <span class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span> without any error–disturbance
+relation, using Mandelstam–Tamm and the uncertainty relation alone. The
+rest of this section records the requirement it had to meet. Replace the
+decision criterion by a hypothesis test: two prepared ensembles, a fixed
+error probability <span class="math inline">\(\epsilon\)</span>, and a
+criterion that the data distinguish <span class="math inline">\(\mathrm
+I\)</span> from <span class="math inline">\(\mathrm F\)</span> at level
+<span class="math inline">\(\epsilon\)</span>. Replace <span
+class="math inline">\(\delta\)</span> and <span
+class="math inline">\(\Delta\)</span> by the error and disturbance of an
+instrument in a stated metric. The expected shape of the conclusion,
+<span class="math inline">\(F^2\tau^3\gtrsim m\hbar\)</span>, is the
+standard quantum limit for detecting a force on a free mass (<a
+href="https://doi.org/10.1017/CBO9780511622748">Braginsky and Khalili,
+<em>Quantum Measurement</em>, 1992</a>, metadata). That limit is
+contested in exactly the regime this note needs: Yuen argued it can be
+beaten, <a href="https://doi.org/10.1103/PhysRevLett.54.2465">Caves
+defended it</a> (PRL <strong>54</strong>, 2465, 1985, abstract), and <a
+href="https://doi.org/10.1103/PhysRevLett.60.385">Ozawa exhibited a
+measurement breaking the standard quantum limit for free-mass
+position</a> (PRL <strong>60</strong>, 385, 1988, abstract) using an
+instrument whose disturbance is correlated with its outcome rather than
+independent of it. The same distinction reappears in the
+error–disturbance literature, where Ozawa’s counterexamples to the naive
+Heisenberg product coexist with the proved calibration-based relation of
+<a href="https://doi.org/10.1103/PhysRevLett.111.160405">Busch, Lahti
+and Werner</a> (PRL <strong>111</strong>, 160405, 2013, abstract; <a
+href="https://doi.org/10.1063/1.4871444">J. Math. Phys.
+<strong>55</strong>, 042111, 2014</a>, abstract). A probabilistic
+version of Theorem 1 is therefore not a corollary of any single
+error–disturbance inequality. It has to say which instruments are
+admitted, and its interest lies precisely in whether the
+protocol-universality proved here (over all finite numbers of marks at
+all times) survives when Ozawa’s outcome-correlated disturbances are
+admitted.</p>
+<p><strong>The Newton-age value.</strong> The corpuscular premises M1–M3
+of the mark-floor note give <span class="math inline">\(\kappa=\Lambda
+p\)</span>, with <span class="math inline">\(\Lambda=1/89000\)</span>
+inch measured by Newton and <span class="math inline">\(p\)</span>
+unmeasured in his age; on the identification <span
+class="math inline">\(p=h/\lambda\)</span>, <span
+class="math inline">\(\Lambda=\lambda/2\)</span> this is <span
+class="math inline">\(\kappa=h/2\)</span>. Newton-age materials give
+Corollary 3 in full once M3 is granted, and Proposition 5 shows that
+Newton’s own determinate fits deny M3 and give <span
+class="math inline">\(\kappa=0\)</span>. The corpuscular model is a
+classical bounded-error record model, which is why it fits this
+framework and why its value of <span
+class="math inline">\(\kappa\)</span> is a heuristic analogy rather than
+a quantum result. The logical structure established here is
+therefore:</p>
+<p><span class="math display">\[\text{floor of the classically recorded
+comparison}\;&gt;0
+\quad\Longleftrightarrow\quad\kappa&gt;0,\qquad
+\text{deterministic probes}\;\Longrightarrow\;\kappa=0,\]</span></p>
+<p>proved here for all finite mark protocols with explicit constants. No
+step assumes a path-integral phase rule, a fixed measurement budget, or
+a supplied action unit other than <span
+class="math inline">\(\kappa\)</span> itself, and <span
+class="math inline">\(\kappa\)</span> is characterized rather than
+supplied on the classical side. The quantum side is open: Proposition 6
+shows this framework cannot reach it, and names the reformulation that
+could.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>What is proved: Theorems 1–2 sandwich the threshold of the recorded
+Galileo comparison between <span class="math inline">\(9m\kappa\)</span>
+and <span class="math inline">\(36m\kappa\)</span> in <span
+class="math inline">\(F^2\tau^3\)</span> for every finite protocol of
+marks with <span class="math inline">\(\delta\Delta\ge\kappa\)</span>;
+Corollary 4 does the same for a window of inserted marks used by itself;
+Proposition 5 gives <span class="math inline">\(\kappa=0\)</span> for
+every deterministic probe with far-field position records. Together
+these characterize the floor of a classical bounded-error record model
+by one number and identify what kills it.</p>
+<p>What is not proved, and was wrongly claimed in the first version of
+this note: any quantum value of <span
+class="math inline">\(\kappa\)</span>. Proposition 6 shows the
+worst-case framework has no non-vacuous quantum instance, so the route
+to <span class="math inline">\(\hbar\)</span> runs through a
+probabilistic reformulation, which lands in the disputed territory of
+the standard quantum limit for free-mass measurement (Yuen; Caves 1985;
+Ozawa 1988) and of error–disturbance relations (Ozawa;
+Busch–Lahti–Werner 2013).</p>
+<p>Open, in the order that matters:</p>
+<ol type="1">
+<li><strong>Done: the probabilistic theorem.</strong> The <a
+href="planck-gap-probabilistic.html">probabilistic note</a> proves it
+for every finite adaptive protocol and decides the universality
+question: universality over instruments holds, universality over
+preparations fails, and the resource that prices the failure is the
+apparatus aperture.</li>
+<li><strong>The sharp constant.</strong> The interval <span
+class="math inline">\([9,36]\)</span> in <span
+class="math inline">\(F^2\tau_*^3/(m\kappa)\)</span> is not closed; find
+the optimal protocol and the matching certificate.</li>
+<li><strong>General force law.</strong> Extend from <span
+class="math inline">\(P=Ft^2/2m\)</span> to general <span
+class="math inline">\(P\)</span> with <span
+class="math inline">\(P(0)=P&#39;(0)=0\)</span>; the proof already pairs
+<span class="math inline">\(\int_0^\tau P&#39;&#39;T\)</span> against
+the Dirichlet energy of <span class="math inline">\(T\)</span>, so the
+natural statement bounds a norm of <span
+class="math inline">\(P&#39;&#39;\)</span> from below.</li>
+<li><strong>Why <span class="math inline">\(\kappa&gt;0\)</span> without
+quantum kinematics.</strong> Proposition 5 names exactly what must fail:
+far-field position records fixing a probe’s momentum.</li>
+</ol>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

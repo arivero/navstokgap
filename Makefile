@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: check paper papers figures programme publication
+.PHONY: check paper papers figures programme publication site
 
 check:
 	$(PYTHON) scripts/check_repository.py
@@ -29,3 +29,6 @@ figures:
 publication: papers
 	$(PYTHON) scripts/package_publication.py
 	$(PYTHON) scripts/package_publication.py --paper classical-spins-operational-closure
+
+site:
+	$(PYTHON) scripts/build_site.py

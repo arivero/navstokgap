@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The intermediate region as a finite verification: complete analyticity, the transfer matrix, and the two numbers whose meeting closes the proof</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The intermediate region as a finite verification: complete
+analyticity, the transfer matrix, and the two numbers whose meeting
+closes the proof</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/intermediate-region-finite-verification.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/intermediate-region-finite-verification.pdf">PDF</a></p><p>The intermediate region has been described in this series as the part
+of the coupling range where no expansion applies. That is true of
+expansions, and it leaves out a different class of rigorous tools: the
+finite-volume criteria for exponential decay of correlations in lattice
+spin systems, of which the Dobrushin–Shlosman conditions of <em>complete
+analyticity</em> (J. Stat. Phys. 46 (1987) 983) and the strong-mixing
+conditions of Martinelli and Olivieri (Commun. Math. Phys. 161 (1994)
+447 and 487) are the standard forms; all references here are at metadata
+level. The Wilson measure is a lattice spin system of exactly their
+type: compact spins <span class="math inline">\(U_\ell\in
+SU(3)\)</span>, a product a priori measure (Haar), a
+translation-invariant finite-range interaction (the plaquette term).
+Gauge invariance is a symmetry of the interaction and no obstruction,
+since Elitzur’s theorem (Phys. Rev. D 12 (1975) 3978) only says that
+gauge-variant local observables have zero expectation. Three
+consequences, each a chain of known results:</p>
+<ol type="1">
+<li>If a Dobrushin–Shlosman condition holds for the Wilson interaction
+at coupling <span class="math inline">\(\beta_W\)</span>, then truncated
+correlations of all local observables decay exponentially, uniformly in
+boundary conditions, and by link reflection positivity the Wilson
+transfer matrix has a spectral gap: <strong>the theory at <span
+class="math inline">\(\beta_W\)</span> is gapped, uniformly in the
+volume</strong>.</li>
+<li>The condition is a finite computation on boxes whose side is a few
+correlation lengths <span class="math inline">\(\xi/a\)</span>, and the
+set of interactions satisfying it is open, so an interval of couplings
+is covered by finitely many verifications, each with an explicit
+radius.</li>
+<li>The region where the verification is feasible in principle is the
+one where <span class="math inline">\(\xi/a\)</span> is moderate, that
+is precisely the intermediate region; the weak side, where <span
+class="math inline">\(\xi/a=1/(a\Lambda)\)</span> grows beyond any box,
+is the domain of the renormalization group, and the target box of <a
+href="strong-coupling-target-box.html">the target-box note</a> may be
+replaced by the verified interval, whose openness radius supplies the
+tolerance.</li>
+</ol>
+<p>So the mass-gap problem for <span
+class="math inline">\(SU(3)\)</span> on the lattice reduces to the
+meeting of two numbers: <span class="math inline">\(g_{\rm
+RG}^2\)</span>, the largest coupling up to which a small-field
+renormalization argument delivers the effective interaction inside the
+openness radius of the Wilson interaction; and <span
+class="math inline">\(g_{\rm DS}^2\)</span>, the smallest coupling at
+which a Dobrushin–Shlosman condition has been verified. The proof closes
+when <span class="math inline">\(g_{\rm RG}^2\ge g_{\rm DS}^2\)</span>.
+Neither number is known today, the verification is a computer-assisted
+task of a size far beyond present practice, and this repository performs
+no numerics; what is new here is that the intermediate region is a
+finite problem with a precise statement rather than a region without
+tools. Constants where they exist; nothing promoted.</p>
+<h2 id="the-wilson-measure-as-a-spin-system">1. The Wilson measure as a
+spin system</h2>
+<p>Sites: the links of <span class="math inline">\(\mathbb Z^4\)</span>
+(or of a periodic lattice). Spin space: <span
+class="math inline">\(SU(3)\)</span>, compact, with Haar measure <span
+class="math inline">\(d\mu\)</span>. Interaction: for each plaquette
+<span class="math inline">\(p\)</span>, <span
+class="math display">\[\Phi_p(U)=-\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}U_p,\qquad\beta_W=\frac{2N}{g^2},\]</span>
+a bounded function of the four link variables of <span
+class="math inline">\(p\)</span>, translation invariant, of range one.
+The Gibbs measures in a box <span class="math inline">\(\Lambda\)</span>
+with boundary condition <span class="math inline">\(\bar U\)</span> on
+the links outside <span class="math inline">\(\Lambda\)</span> are <span
+class="math display">\[d\mu_\Lambda^{\bar U}(U)=\frac{1}{Z_\Lambda^{\bar
+U}}\exp\Big[-\sum_{p\cap\Lambda\ne\emptyset}\Phi_p(U\vee\bar
+U)\Big]\prod_{\ell\in\Lambda}d\mu(U_\ell),\]</span> well defined for
+every <span class="math inline">\(\bar U\)</span>, gauge-invariant or
+not. Gauge transformations at interior sites are a symmetry of each
+<span class="math inline">\(\mu_\Lambda^{\bar U}\)</span> restricted to
+interior links, so the expectation of a gauge-variant interior
+observable vanishes for every <span class="math inline">\(\bar
+U\)</span> (Elitzur); gauge-invariant observables are the ones with
+content, and nothing in the Dobrushin–Shlosman framework asks for more
+than boundedness and finite range of <span
+class="math inline">\(\Phi\)</span>.</p>
+<h2 id="the-finite-volume-criteria-and-what-they-imply">2. The
+finite-volume criteria and what they imply</h2>
+<p>Dobrushin and Shlosman give a list of conditions on the finite-volume
+Gibbs measures, proved equivalent, each of the form: for boxes of a
+fixed side <span class="math inline">\(R\)</span> and all pairs of
+boundary conditions differing at one site, the influence on the interior
+is small in a specified sense. Any one of them implies: a unique
+infinite-volume Gibbs state; exponential decay of truncated correlations
+of all local observables, with a rate <span
+class="math inline">\(m&gt;0\)</span> and uniformly in boundary
+conditions; analyticity of the free energy and of the expectations of
+local observables in the interaction. Martinelli and Olivieri prove that
+a weaker condition, strong mixing on boxes of side <span
+class="math inline">\(R\)</span>, suffices for the decay statement in
+the one-phase region, for general (Part II) as well as attractive (Part
+I) systems.</p>
+<p><strong>From decay to the gap.</strong> The Wilson action is
+link-reflection positive, so the transfer matrix <span
+class="math inline">\(\mathcal T\)</span> in the time direction is
+self-adjoint and positive, <span class="math inline">\(H_W=-(\hbar
+c/a)\log\mathcal T\)</span>, and for a local observable <span
+class="math inline">\(A\)</span> orthogonal to the vacuum <span
+class="math inline">\(\langle A,\mathcal T^nA\rangle\)</span> is a
+truncated Euclidean correlation at time separation <span
+class="math inline">\(n\)</span>. Exponential decay at rate <span
+class="math inline">\(m\)</span> for all local <span
+class="math inline">\(A\)</span> forces the spectral measure of every
+such <span class="math inline">\(A\)</span> to vanish above <span
+class="math inline">\(e^{-ma}\)</span>, so <span
+class="math inline">\(\operatorname{gap}(H_W)\ge\hbar c\,m\)</span> on
+the cyclic subspace of local observables, as in <a
+href="wilson-strong-coupling-explicit.html">the Wilson note</a> §3.
+Uniformity in the boundary conditions is what makes this hold on every
+spatial torus.</p>
+<p><strong>Proposition.</strong> If a Dobrushin–Shlosman or
+Martinelli–Olivieri condition holds for the Wilson interaction at <span
+class="math inline">\(\beta_W\)</span>, then the lattice <span
+class="math inline">\(SU(3)\)</span> theory at that coupling has a
+unique vacuum and a spectral gap <span
+class="math inline">\(\Delta_W\ge\hbar c\,m&gt;0\)</span>, uniformly in
+the spatial volume.</p>
+<h2 id="covering-an-interval-and-what-the-box-becomes">3. Covering an
+interval, and what “the box” becomes</h2>
+<p><em>Openness.</em> The set of interactions satisfying a
+Dobrushin–Shlosman condition on boxes of side <span
+class="math inline">\(R\)</span> is open in the norm <span
+class="math inline">\(\|\Phi\|=\sup_\ell\sum_{p\ni\ell}\|\Phi_p\|_\infty\)</span>,
+with a radius that the condition’s own margin fixes. A verification at
+<span class="math inline">\(\beta_W^{(i)}\)</span> on side <span
+class="math inline">\(R_i\)</span> therefore covers an explicit interval
+around it, and a finite interval <span
+class="math inline">\([\beta_1,\beta_2]\)</span> is covered by finitely
+many verifications.</p>
+<p><em>Feasibility scales with <span
+class="math inline">\(\xi/a\)</span>.</em> The side <span
+class="math inline">\(R\)</span> needed is a few correlation lengths in
+lattice units; at strong coupling <span
+class="math inline">\(\xi/a\)</span> is small and the condition is
+implied by the convergent expansion, while toward weak coupling <span
+class="math inline">\(\xi/a=1/(a\Lambda(g))\)</span> grows like <span
+class="math inline">\(e^{1/(2b_0g^2)}\)</span> and no box suffices. The
+condition is thus a tool for the intermediate region and only for
+it.</p>
+<p><em>The box moves.</em> Whatever interval <span
+class="math inline">\([\beta_1,\beta_2]\)</span> is verified, the
+renormalization group of the weak-coupling side no longer has to reach
+the strong-coupling threshold; it has to deliver an effective
+interaction within the openness radius of the Wilson interaction at some
+<span class="math inline">\(\beta_W\in[\beta_1,\beta_2]\)</span>. The
+openness radius is the tolerance that <a
+href="strong-coupling-target-box.html">the target-box note</a> supplied
+by hand, and the effective interaction is allowed to contain any
+finite-range bounded terms, since the criteria are stated for general
+finite-range interactions.</p>
+<h2 id="the-two-numbers">4. The two numbers</h2>
+<p>Define <span class="math inline">\(g_{\rm DS}^2\)</span> as the
+smallest coupling at which a Dobrushin–Shlosman condition for the Wilson
+interaction has been verified on some box, and <span
+class="math inline">\(g_{\rm RG}^2\)</span> as the largest coupling up
+to which a rigorous small-field renormalization argument brings the
+effective interaction within the openness radius of the Wilson
+interaction at that coupling. Then:</p>
+<ul>
+<li>for <span class="math inline">\(g^2\ge g_{\rm DS}^2\)</span> the
+theory is gapped (Section 2);</li>
+<li>for <span class="math inline">\(g^2\le g_{\rm RG}^2\)</span> the
+effective theory at some coarser scale lies in the verified region and
+inherits its gap, provided the renormalization steps are exact
+low-energy reductions;</li>
+<li><strong>the mass gap holds along the trajectory if <span
+class="math inline">\(g_{\rm RG}^2\ge g_{\rm DS}^2\)</span></strong> in
+the refined sense of Section 4b, and T3 then concerns only the continuum
+limit along the trajectory.</li>
+</ul>
+<p>Today <span class="math inline">\(g_{\rm DS}^2\)</span> is not below
+the strong-coupling threshold, no verification having been attempted,
+and <span class="math inline">\(g_{\rm RG}^2\)</span> is not known to
+exceed zero with an explicit constant. The physical expectation, from
+the numerical evidence for a smooth crossover with <span
+class="math inline">\(\xi/a\)</span> of order <span
+class="math inline">\(1\)</span>–<span class="math inline">\(10\)</span>
+for <span class="math inline">\(\beta_W\)</span> between <span
+class="math inline">\(5\)</span> and <span
+class="math inline">\(6.5\)</span>, is that a verification at those
+couplings would need boxes of side <span
+class="math inline">\(10\)</span>–<span
+class="math inline">\(30\)</span> and that <span
+class="math inline">\(g_{\rm DS}^2\)</span> could in principle be
+brought to about <span class="math inline">\(1\)</span>; the
+verification itself, a rigorous bound on integrals over <span
+class="math inline">\(SU(3)^{3R^4}\)</span> with all boundary
+conditions, is beyond present computational practice by a wide margin,
+and this repository performs no numerics.</p>
+<p><strong>T3 in this framework.</strong> Suppose the renormalization
+steps are exact low-energy reductions and the trajectory from bare
+coupling <span class="math inline">\(g\)</span> enters the verified
+interval after <span class="math inline">\(n(g)\)</span> doublings at an
+effective interaction <span class="math inline">\(\Phi_s(g)\)</span>.
+The gap in lattice units is then <span
+class="math inline">\(\delta(g)=2^{-n(g)}\,\delta_{\rm
+eff}(\Phi_s(g))\)</span>, with <span class="math inline">\(\delta_{\rm
+eff}\)</span> the gap of the verified theory at its own scale, and the
+ratio <span class="math inline">\(\delta(g)/(a\Lambda_{\rm
+lat}(g))\)</span> of T3 depends on <span
+class="math inline">\(g\)</span> only through the point <span
+class="math inline">\(\Phi_s(g)\)</span> at which the trajectory enters
+the interval. Its convergence as <span
+class="math inline">\(g\to0\)</span> is therefore the statement that the
+trajectories from different bare couplings converge to one curve as they
+reach the interval, that is, that the irrelevant directions contract
+along the flow; the strong-coupling threshold plays no role in it. The
+clause T3 is in this way absorbed into the same hypothesis on the
+renormalization map as T2<span class="math inline">\(&#39;\)</span>, and
+the finite verification supplies the gap <span
+class="math inline">\(\delta_{\rm eff}\)</span> with an explicit value
+at each point of the interval.</p>
+<h2 id="b.-three-refinements-of-the-two-number-statement">4b. Three
+refinements of the two-number statement</h2>
+<p>Reviewing the statement “the proof closes when <span
+class="math inline">\(g_{\rm RG}^2\ge g_{\rm DS}^2\)</span>” at full
+effort gives three corrections, recorded here because each changes what
+an unblocking would have to look like.</p>
+<p><em>Sufficient, not necessary.</em> The meeting of the two reaches is
+one route, the natural one for any strategy built from expansions at the
+two ends and a finite check between them. Necessity is not a theorem: a
+proof of T2<span class="math inline">\(&#39;\)</span> by a different
+mechanism would bypass the verification altogether. What is true is that
+every rigorous route known today has this shape, because the confinement
+scale is a region with no small parameter, and the finite verification
+is the only general tool that handles such a region.</p>
+<p><em>The target is a set in interaction space.</em> The
+renormalization map does not return the Wilson interaction at a larger
+coupling; it returns an effective interaction with many terms,
+exponentially decaying in range. The completely analytical interactions
+form an open set <span class="math inline">\(\mathcal{CA}\)</span> in
+the space of summable interactions, which contains the Wilson
+interactions at <span class="math inline">\(g^2&gt;444\)</span> by the
+Dobrushin condition, and the correct statement is: <strong>the
+trajectory of effective interactions from <span
+class="math inline">\(g\to0\)</span> must enter <span
+class="math inline">\(\mathcal{CA}\)</span>.</strong> The two-number
+version is the special case in which the trajectory passes close to a
+Wilson interaction, and “the coupling reaches <span
+class="math inline">\(g_{\rm DS}^2\)</span>” is neither necessary nor
+sufficient by itself; the rest of the effective interaction has to lie
+within the openness radius as well. The entry, if it happens, is at the
+scale where the effective coupling is of order one, and beyond that
+scale the block variables decorrelate and the trajectory approaches the
+trivial fixed point, deep inside <span
+class="math inline">\(\mathcal{CA}\)</span>.</p>
+<p><em>The trajectory statement is weaker than the whole-range
+statement.</em> “The lattice theory is gapped for every <span
+class="math inline">\(g\)</span>” is a statement about the Wilson action
+on its full coupling range, believed true for <span
+class="math inline">\(SU(3)\)</span> and false for other actions and
+groups with bulk transitions. The Jaffe–Witten problem needs only the
+trajectory from <span class="math inline">\(g\to0\)</span>, that is, the
+scaling region, and the finite verification is needed only along it.
+Nothing about couplings the trajectory never visits enters the
+proof.</p>
+<p><em>What a hand computation cannot do.</em> Bounding the block
+influence <span class="math inline">\(\rho_V(x,y)\)</span> by the
+oscillation of the joint log-density, as in Lemma 1 of <a
+href="dobrushin-uniqueness-wilson.html">the Dobrushin note</a>, gives
+<span class="math inline">\(e^{4\beta_W}-1\)</span> for every <span
+class="math inline">\(x\in V\)</span> and every boundary link <span
+class="math inline">\(y\)</span>, so the block sum is at most <span
+class="math inline">\(|V|\,|\partial V|\,(e^{4\beta_W}-1)\)</span> and
+the block criterion reads <span class="math inline">\(|\partial
+V|(e^{4\beta_W}-1)&lt;1\)</span>, which is worse than the single-link
+condition for every <span class="math inline">\(V\)</span>. Blocks help
+only through the decay of <span
+class="math inline">\(\rho_V(x,y)\)</span> in the distance from <span
+class="math inline">\(x\)</span> to <span
+class="math inline">\(y\)</span> inside <span
+class="math inline">\(V\)</span>, that is, through screening by the
+integrated links, and that decay is exactly what the verification
+computes and what no oscillation bound captures. The single-link
+threshold <span class="math inline">\(g^2&gt;444\)</span> is therefore
+the end of what hand bounds of this type give.</p>
+<h2 id="what-this-changes-and-what-it-does-not">5. What this changes and
+what it does not</h2>
+<p><em>Changes.</em> The intermediate region is a finite verification
+problem with a precise statement, and the renormalization group’s finish
+line is an interval with an explicit openness radius rather than the
+strong-coupling threshold. The three tools of the map, small-field
+renormalization, finite-volume mixing conditions, and the
+strong-coupling expansion, cover the coupling range if the first two
+overlap.</p>
+<p><em>Does not change.</em> No step of the proof is completed here. The
+verification is not performed, the small-field argument is not carried
+out with constants, and the meeting of <span
+class="math inline">\(g_{\rm RG}^2\)</span> and <span
+class="math inline">\(g_{\rm DS}^2\)</span> is a conjecture supported by
+numerical evidence outside this repository. The size estimate given
+above, boxes of side <span class="math inline">\(10\)</span> to <span
+class="math inline">\(30\)</span>, is corrected in <a
+href="confinement-scale-bands.html">the bands note</a> to side <span
+class="math inline">\(3\)</span> to <span
+class="math inline">\(5\)</span> at <span
+class="math inline">\(\beta_W\simeq5.7\)</span>, where the published
+correlation length is below one lattice unit; and the criterion to
+verify is the mixing form on sub-blocks, since the single-link form is
+emptied by Elitzur’s theorem.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The intermediate region has a rigorous finite reformulation: verify a
+Dobrushin–Shlosman condition for the Wilson interaction on finite boxes,
+transfer the decay to the gap through the transfer matrix, and cover
+intervals by openness. The proof closes when the renormalization group’s
+reach <span class="math inline">\(g_{\rm RG}^2\)</span> meets the
+verified reach <span class="math inline">\(g_{\rm DS}^2\)</span>. Both
+are numbers, neither is known, and the second is the one that a
+computation, outside this repository’s rules, could in principle
+produce.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

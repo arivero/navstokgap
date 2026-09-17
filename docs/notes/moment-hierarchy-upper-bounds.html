@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A monotone hierarchy of upper bounds from one flowed correlator, and why no bound of this kind can give m&gt;0</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A monotone hierarchy of upper bounds from one flowed correlator, and
+why no bound of this kind can give <span
+class="math inline">\(m&gt;0\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/moment-hierarchy-upper-bounds.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/moment-hierarchy-upper-bounds.pdf">PDF</a></p><p>Let <span class="math inline">\(\varphi_t\)</span> be any flowed
+gauge-invariant local scalar with <span
+class="math inline">\(\langle\varphi_t\rangle=0\)</span> and let <span
+class="math display">\[C_0(\tau)=\int
+d^3z\;\big\langle\varphi_t(z,\tau)\,\varphi_t(0,0)\big\rangle^{\rm c}
+=\int_{[m,\infty)}d\rho(E)\;e^{-E\tau/\hbar},\qquad \rho\ge0,\]</span>
+be its zero-spatial-momentum Euclidean correlator, with <span
+class="math inline">\(\rho\)</span> the Källén–Lehmann measure supplied
+by Osterwalder–Schrader reconstruction. Writing <span
+class="math inline">\(M_k=\int E^k\,d\rho(E)\)</span>, every consecutive
+ratio is an upper bound for the mass gap and the bounds improve
+monotonically as the index decreases: <span class="math display">\[m\
+\le\ \cdots\ \le\ \frac{M_{-1}}{M_{-2}}\ \le\ \frac{M_0}{M_{-1}}\ \le\
+\frac{M_1}{M_0},
+\qquad\text{with}\qquad \frac{M_1}{M_0}\ \text{the }f\text{-sum bound
+of}\]</span> <a href="finiteness-half-flowed-susceptibility.html">the
+finiteness note</a>, which is therefore the weakest member of the
+family. The first member below it is <span
+class="math display">\[\boxed{\;m\ \le\ \frac{M_0}{M_{-1}}\ =\
+\frac{\hbar\,C_0(0)}{\displaystyle\int_0^\infty
+C_0(\tau)\,d\tau}\;}\]</span> and it needs strictly less than the <span
+class="math inline">\(f\)</span>-sum bound: no gradient term, no
+equal-time Hamiltonian smearing, hence no hypothesis (F1). Both
+quantities are integrals of the four-dimensional flowed correlator that
+Lüscher’s renormalization statement covers, so the only inputs are the
+existence of the theory with the Osterwalder–Schrader axioms and <span
+class="math inline">\(C_0\not\equiv0\)</span>. In free Maxwell theory
+the first three members take the values <span
+class="math inline">\(1.504\)</span>, <span
+class="math inline">\(1.329\)</span>, <span
+class="math inline">\(1.128\)</span> in units of <span
+class="math inline">\(\hbar c/\sqrt t\)</span>, decreasing as the
+hierarchy requires. The negative moments diverge when the spectral
+measure reaches down to <span class="math inline">\(E=0\)</span>, so
+their finiteness is necessary for a gap; it is not sufficient, since
+<span class="math inline">\(d\rho=e^{-\hbar c\kappa/E}dE\)</span> has
+every negative moment finite with <span
+class="math inline">\(\inf\operatorname{supp}\rho=0\)</span>.
+Consequently <strong>no member of this hierarchy, and no upper bound of
+this type, can establish <span
+class="math inline">\(m&gt;0\)</span></strong>: the entire upper side of
+the problem settles the finiteness clause and is silent on the clause
+that matters. Constants explicit; nothing promoted.</p>
+<h2 id="moments-of-the-flowed-correlator">1. Moments of the flowed
+correlator</h2>
+<p>Assume the continuum theory exists with the Osterwalder–Schrader
+axioms, a unique vacuum and a self-adjoint <span
+class="math inline">\(H\ge0\)</span> with <span
+class="math inline">\(H\Omega=0\)</span>; let <span
+class="math inline">\(\varphi_t\)</span> be a gauge-invariant local
+scalar in the field at flow time <span
+class="math inline">\(t&gt;0\)</span>, with <span
+class="math inline">\(\langle\varphi_t\rangle_0=0\)</span>.
+Reconstruction gives, for the zero-spatial-momentum correlator at
+Euclidean separation <span class="math inline">\(\tau&gt;0\)</span>,
+<span class="math display">\[C_0(\tau)=\int
+d^3z\,\big\langle\varphi_t(z,\tau)\varphi_t(0,0)\big\rangle^{\rm c}_0
+=\big\langle\Omega,\Phi^\dagger e^{-\tau H/\hbar}\Phi\,\Omega\big\rangle
+=\int_{[m,\infty)}e^{-E\tau/\hbar}\,d\rho(E),\]</span> where <span
+class="math inline">\(\Phi\)</span> is the zero-momentum smeared
+operator of <a href="finiteness-half-flowed-susceptibility.html">the
+finiteness note</a> §2 and <span class="math inline">\(d\rho\)</span> is
+the spectral measure of <span class="math inline">\(H\)</span> in the
+state <span class="math inline">\(\Phi\Omega\)</span>, divided by the
+volume so that <span class="math inline">\(\rho\)</span> is intensive.
+The vacuum contribution is removed by the connected part, so <span
+class="math inline">\(\operatorname{supp}\rho\subset[m,\infty)\)</span>
+where <span
+class="math inline">\(m=\inf\big(\operatorname{spec}H\setminus\{0\}\big)\)</span>.
+Set <span
+class="math display">\[M_k=\int_{[m,\infty)}E^k\,d\rho(E)\in[0,\infty],\qquad
+k\in\mathbb Z .\]</span> Two of them have elementary readings: <span
+class="math display">\[M_0=C_0(0^+),\qquad
+M_{-1}=\frac1\hbar\int_0^\infty C_0(\tau)\,d\tau,\qquad
+M_{1}=-\hbar\,\frac{dC_0}{d\tau}\Big|_{\tau=0^+},\]</span> the
+equal-time zero-momentum variance, the time-integrated correlator, and
+the <span class="math inline">\(f\)</span>-sum rule.</p>
+<h2 id="the-hierarchy">2. The hierarchy</h2>
+<p><strong>Proposition 1.</strong> If <span
+class="math inline">\(M_k\)</span> and <span
+class="math inline">\(M_{k+1}\)</span> are finite and <span
+class="math inline">\(M_k&gt;0\)</span>, then <span
+class="math display">\[m\ \le\ \frac{M_{k+1}}{M_k}.\]</span> If in
+addition <span class="math inline">\(M_{k-1}&lt;\infty\)</span> and
+<span class="math inline">\(M_{k-1}&gt;0\)</span>, then <span
+class="math display">\[\frac{M_k}{M_{k-1}}\ \le\
+\frac{M_{k+1}}{M_k}.\]</span></p>
+<p><em>Proof.</em> On <span
+class="math inline">\(\operatorname{supp}\rho\)</span> one has <span
+class="math inline">\(E\ge m\)</span>, so <span
+class="math inline">\(M_{k+1}=\int E\cdot E^k\,d\rho\ge m\int
+E^k\,d\rho=mM_k\)</span>, which is the first claim. For the second,
+Cauchy–Schwarz in <span class="math inline">\(L^2(d\rho)\)</span>
+applied to <span class="math inline">\(E^{(k-1)/2}\)</span> and <span
+class="math inline">\(E^{(k+1)/2}\)</span> gives <span
+class="math inline">\(M_k^2=\big(\int
+E^{(k-1)/2}E^{(k+1)/2}d\rho\big)^2\le M_{k-1}M_{k+1}\)</span>, that is,
+<span class="math inline">\((M_k)\)</span> is log-convex; dividing by
+<span class="math inline">\(M_{k-1}M_k\)</span> gives the claim. <span
+class="math inline">\(\square\)</span></p>
+<p>The chain therefore runs downward from the <span
+class="math inline">\(f\)</span>-sum bound: <span
+class="math display">\[m\ \le\ \cdots\ \le\ \frac{M_{-1}}{M_{-2}}\ \le\
+\frac{M_{0}}{M_{-1}}\ \le\ \frac{M_{1}}{M_{0}} .\]</span> Each step uses
+one more inverse power of the energy and so weights the low-lying states
+more heavily; in the limit of small index the ratio converges to <span
+class="math inline">\(\inf\operatorname{supp}\rho\)</span> whenever the
+moments stay finite, by dominated convergence applied to <span
+class="math inline">\(\rho\)</span> restricted to <span
+class="math inline">\([m,m+\epsilon]\)</span> against its
+complement.</p>
+<h2 id="the-first-improvement-and-what-it-costs">3. The first
+improvement, and what it costs</h2>
+<p><strong>Corollary 2.</strong> If <span
+class="math inline">\(0&lt;M_{-1}\)</span> and <span
+class="math inline">\(M_0&lt;\infty\)</span>, then <span
+class="math display">\[m\ \le\
+\frac{M_0}{M_{-1}}=\frac{\hbar\,C_0(0^+)}{\int_0^\infty
+C_0(\tau)\,d\tau}\ &lt;\ \infty .\]</span></p>
+<p>Compare the inputs.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>bound</th>
+<th>needs</th>
+<th>supplied by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(M_1/M_0\)</span></td>
+<td><span class="math inline">\(\int\langle|\delta O/\delta
+A|^2\rangle&lt;\infty\)</span>, equal-time spatial smearing</td>
+<td>hypothesis (F1) of the finiteness note</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M_0/M_{-1}\)</span></td>
+<td><span class="math inline">\(C_0(0^+)&lt;\infty\)</span> and <span
+class="math inline">\(\int_0^\infty C_0&gt;0\)</span></td>
+<td>four-dimensional flow: Lüscher’s statement</td>
+</tr>
+</tbody>
+</table>
+<p>The <span class="math inline">\(f\)</span>-sum bound required the
+Hamiltonian counterpart of the flow’s renormalization, because <span
+class="math inline">\(M_1\)</span> involves the functional derivative of
+the operator with respect to the equal-time field. The ratio <span
+class="math inline">\(M_0/M_{-1}\)</span> involves only the flowed
+correlator itself, and Lüscher states that the gauge field at flow time
+<span class="math inline">\(t&gt;0\)</span> is a smooth renormalized
+field, so that expectation values of local gauge-invariant expressions
+in it are well-defined physical quantities (arXiv:1006.4518v3, abstract
+and §2; passage level via the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Luscher_WilsonFlow_1006.4518v3.md">local
+companion</a>). Hypothesis (F1) is therefore not needed for Corollary 2,
+and the remaining inputs are the existence of the theory with the
+axioms, which is T4 of <a href="mass-gap-obligations-lattice.html">the
+obligations map</a>, and <span
+class="math inline">\(C_0\not\equiv0\)</span>.</p>
+<p><strong>Proposition 3 (the finiteness half, restated).</strong>
+Assume T4 and that some flowed local gauge-invariant scalar has <span
+class="math inline">\(C_0\not\equiv0\)</span> with <span
+class="math inline">\(C_0(0^+)&lt;\infty\)</span>. Then <span
+class="math inline">\(m&lt;\infty\)</span>.</p>
+<p><em>Proof.</em> <span class="math inline">\(C_0\not\equiv0\)</span>
+and <span class="math inline">\(\rho\ge0\)</span> give <span
+class="math inline">\(M_{-1}&gt;0\)</span>; Corollary 2 applies. <span
+class="math inline">\(\square\)</span></p>
+<p>The clause <span class="math inline">\(m&lt;\infty\)</span> of the
+Jaffe–Witten statement is thus equivalent, given the construction, to
+the nontriviality of a single flowed correlator, which is the sharpest
+form this programme has reached.</p>
+<h2 id="free-field-check-of-the-monotonicity">4. Free-field check of the
+monotonicity</h2>
+<p>For free Maxwell theory with <span
+class="math inline">\(\varphi_t\)</span> the flowed magnetic energy
+density, <a href="flowed-bound-free-field.html">the free-field note</a>
+gives the spectral weight <span class="math inline">\(d\rho\propto
+k^4e^{-4tk^2}dk\)</span> at energy <span class="math inline">\(E=2\hbar
+ck\)</span>. With <span class="math inline">\(\int_0^\infty
+k^ne^{-4tk^2}dk\)</span> evaluated by <span
+class="math inline">\(\int_0^\infty k^{2j}e^{-\alpha
+k^2}dk=\frac{(2j-1)!!}{2(2\alpha)^j}\sqrt{\pi/\alpha}\)</span> and <span
+class="math inline">\(\int_0^\infty k^{2j+1}e^{-\alpha
+k^2}dk=\frac{j!}{2\alpha^{j+1}}\)</span> at <span
+class="math inline">\(\alpha=4t\)</span>: <span
+class="math display">\[\frac{M_1}{M_0}=2\hbar c\,\frac{\int
+k^5e^{-4tk^2}}{\int k^4e^{-4tk^2}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}\approx1.504\,\frac{\hbar
+c}{\sqrt t},\]</span> <span
+class="math display">\[\frac{M_0}{M_{-1}}=2\hbar c\,\frac{\int
+k^4e^{-4tk^2}}{\int k^3e^{-4tk^2}}
+=\frac{3\sqrt\pi}{4}\,\frac{\hbar c}{\sqrt t}\approx1.329\,\frac{\hbar
+c}{\sqrt t},\]</span> <span
+class="math display">\[\frac{M_{-1}}{M_{-2}}=2\hbar c\,\frac{\int
+k^3e^{-4tk^2}}{\int k^2e^{-4tk^2}}
+=\frac{2}{\sqrt\pi}\,\frac{\hbar c}{\sqrt t}\approx1.128\,\frac{\hbar
+c}{\sqrt t},\]</span> using <span class="math inline">\(\int
+k^5=1/(64t^3)\)</span>, <span class="math inline">\(\int
+k^4=3\sqrt\pi/(256\,t^{5/2})\)</span>, <span class="math inline">\(\int
+k^3=1/(32t^2)\)</span>, <span class="math inline">\(\int
+k^2=\sqrt\pi/(32\,t^{3/2})\)</span>. The three numbers decrease, as
+Proposition 1 requires, and the first reproduces the free-field note. In
+this theory <span class="math inline">\(M_k\)</span> is finite for <span
+class="math inline">\(k\ge-4\)</span> and diverges for <span
+class="math inline">\(k\le-5\)</span>, since <span
+class="math inline">\(d\rho\propto E^4dE\)</span> near <span
+class="math inline">\(E=0\)</span>: the hierarchy terminates, and its
+terminating member does not reach <span
+class="math inline">\(m=0\)</span>. Termination at a finite index is the
+spectral signature of weight accumulating at zero energy.</p>
+<h2 id="why-the-upper-side-cannot-give-m0">5. Why the upper side cannot
+give <span class="math inline">\(m&gt;0\)</span></h2>
+<p>Every bound above is of the form <span
+class="math inline">\(m\le(\text{ratio of moments})\)</span>, and each
+is finite whenever the corresponding moments are. Finiteness of all
+negative moments is necessary for <span
+class="math inline">\(m&gt;0\)</span> but not sufficient: take <span
+class="math display">\[d\rho(E)=e^{-\hbar c\kappa/E}\,dE\ \ \text{near}\
+E=0,\qquad\kappa&gt;0,\]</span> whose support reaches <span
+class="math inline">\(E=0\)</span>, so <span
+class="math inline">\(m=0\)</span>, while <span
+class="math inline">\(M_{-k}=\int E^{-k}e^{-\hbar c\kappa/E}dE=(\hbar
+c\kappa)^{1-k}\Gamma(k-1)\)</span> after <span
+class="math inline">\(u=\hbar c\kappa/E\)</span>, finite for every <span
+class="math inline">\(k\ge2\)</span>. A theory with this spectral
+density would satisfy every bound in the hierarchy with a positive
+right-hand side and still be gapless. No amount of information about the
+moments of one correlator distinguishes it from a gapped theory.</p>
+<p>The variational principle produces upper bounds, and <span
+class="math inline">\(m&gt;0\)</span> is a lower bound; the two require
+different mathematics. The entire content of Sections 1–4, like that of
+<a href="lattice-gap-upper-bounds.html">the upper-bound note</a> and <a
+href="polyakov-average-gap-bound.html">the Polyakov note</a>, belongs to
+the finiteness clause. The clause <span
+class="math inline">\(m&gt;0\)</span> needs an argument of the kind
+attempted on the lower side: an operator inequality <span
+class="math inline">\(H\ge m\,(1-|\Omega\rangle\langle\Omega|)\)</span>,
+which is what the strong-coupling theorem of <a
+href="strong-coupling-uniform-gap.html">the T2 note</a> achieves at
+fixed cutoff and what <a href="schur-error-ultraviolet.html">the Schur
+note</a> shows is obstructed by ultraviolet dressing in the
+continuum.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The upper side is closed as far as it can go: a monotone hierarchy
+whose best members need only T4 and the nontriviality of one flowed
+correlator, with the <span class="math inline">\(f\)</span>-sum bound
+identified as its weakest member and hypothesis (F1) eliminated. The
+finiteness clause is therefore reduced to the construction plus one
+nonvanishing correlator, and no further work on upper bounds changes the
+standing of the problem. Everything remaining is the lower bound:
+T2<span class="math inline">\(&#39;\)</span> at fixed cutoff and its
+uniformity, which is where the next steps belong.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

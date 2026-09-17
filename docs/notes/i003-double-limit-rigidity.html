@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I003: finite propagation, internal state and resolution</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>I003: finite propagation, internal state and resolution</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/i003-double-limit-rigidity.md">Markdown source</a></p><p>Finite propagation remains a promising route to the structure of the
+state at a cut. This revised draft preserves that question, the exact
+two-state commutator comparison and the measurement-resolution test. It
+separates them from the stronger claims superseded by the repository
+review.</p>
+<p>Origin: the user’s I003 remarks and the independent Fable draft of
+2026-09-08. Revised 2026-09-09 after coordinator review. The earlier
+version is preserved in Git at commit <code>0632c7d</code>. No claim ID
+is assigned; R02 owns the remaining theorem and prior-art audit.</p>
+<h2 id="finite-propagation-classification-to-audit">1.
+Finite-propagation classification to audit</h2>
+<p>Use Fourier phase <span class="math inline">\(e^{-ikx}\)</span> and
+write</p>
+<p><span class="math display">\[M_t(k)=e^{t(B-ikA)},\qquad
+\partial_t\psi=-A\partial_x\psi+B\psi.\]</span></p>
+<p>A candidate theorem is that every translation-invariant strongly
+continuous <span class="math inline">\(L^2(\mathbb R;\mathbb
+C^n)\)</span> contraction semigroup whose convolution kernels have
+support in <span class="math inline">\([-ut,ut]\)</span> has this
+first-order form, with <span class="math inline">\(A=A^\dagger\)</span>,
+<span class="math inline">\(\|A\|\le u\)</span> and <span
+class="math inline">\(B+B^\dagger\le0\)</span>. In the unitary case
+<span class="math inline">\(B=-iB_H\)</span> with <span
+class="math inline">\(B_H\)</span> Hermitian.</p>
+<p>This is the corrected proposed formulation, not a newly accepted
+classification. The scalar unitary argument remains in <a
+href="cut-paradox-two-faces.html">the two-faces note</a>. The matrix
+proof must justify pointwise continuity in time from strong operator
+continuity, the local matrix-logarithm construction, and differentiation
+of the generator.</p>
+<p>A useful route is to apply Bernstein bounds to every matrix entry:
+finite propagation gives exponential type at most <span
+class="math inline">\(ut\)</span>, while contraction bounds the
+multiplier on the real axis. If a differentiable generator is
+established, the second derivative estimate should force its affine
+dependence on <span class="math inline">\(k\)</span>. Dissipativity for
+all real <span class="math inline">\(k\)</span> then constrains the
+derivative coefficient. These are proof obligations for R02.</p>
+<p>Positivity preservation adds a diagonal real velocity matrix in the
+physical component basis. To conclude that <span
+class="math inline">\(B\)</span> is a conservative Markov switching
+generator one must also impose conservation of total probability. For
+example, <span class="math inline">\(T_tf=e^{-t}f\)</span> has
+positivity, contraction and zero propagation but loses mass. Choose
+row/column conventions explicitly, and retain the <span
+class="math inline">\(L^2\)</span> contraction hypothesis or its
+appropriate invariant-weight norm.</p>
+<h2 id="exact-two-state-scale-and-its-scope">2. Exact two-state scale
+and its scope</h2>
+<p>For symmetric velocities <span
+class="math inline">\(V=u\sigma_z\)</span> and switching <span
+class="math inline">\(Q=\lambda(\sigma_x-I)\)</span>, the accepted C020
+comparison gives</p>
+<p><span class="math display">\[\|[V,Q]\|=2u\lambda,\qquad
+H_*=\frac{mu^2}{\lambda}
+=\frac{2mu^3}{\|[V,Q]\|}.\]</span></p>
+<p>For the coherent specialization <span
+class="math inline">\(A=c\sigma_z\)</span>, <span
+class="math inline">\(B_H=\omega_0\sigma_x\)</span>, the same matrix
+calculation gives <span
+class="math inline">\(\|[A,B_H]\|=2c\omega_0\)</span>. Assigning rest
+energy through a supplied action unit <span
+class="math inline">\(K\)</span> gives <span
+class="math inline">\(m=K\omega_0/c^2\)</span>. C039 provides the
+resulting Dirac model. This keeps the source of <span
+class="math inline">\(K\)</span> separate from the frequency.</p>
+<p>The two-state equalities are useful. A general multicomponent system
+carries more than one rate, and a commutator norm need not detect every
+slow mode. C041’s independent hidden sign changes the full gap while
+preserving the velocity commutator and plateau.</p>
+<p>The commuting case also needs the preparation: a random constant
+velocity <span class="math inline">\(V=\pm u\)</span> with <span
+class="math inline">\(Q=0\)</span> gives</p>
+<p><span class="math display">\[\operatorname{Var}(\Delta
+X)=u^2\Delta^2,\qquad
+\mathsf h(\Delta)=mu^2\Delta.\]</span></p>
+<p>A deterministic velocity gives zero variance instead. Thus commuting
+matrices describe unchanged velocity sectors; their mixture can be
+ballistic. The old general zero-response conclusion is superseded by
+this distinction. Within C019’s finite irreducible reversible class, its
+spectral proof—not a commutator alone—establishes positivity.</p>
+<h2 id="a-specified-measurement-noise-double-limit">3. A specified
+measurement-noise double limit</h2>
+<p>Suppose a finite-speed process is measured with independent additive
+errors, independent also of the motion, each centered with variance
+<span class="math inline">\(\varepsilon^2/12\)</span>. For two
+measurements the error in the increment has variance <span
+class="math inline">\(\varepsilon^2/6\)</span>, so</p>
+<p><span class="math display">\[\mathsf h_\varepsilon(\Delta)
+=\mathsf h(\Delta)+\frac{m\varepsilon^2}{6\Delta}.\]</span></p>
+<p>This is an additive-noise or suitably dithered readout model.
+Deterministic rounding to a fixed lattice does not automatically supply
+independent uniform errors. In this specified model the two iterated
+limits are zero and infinity; a path <span
+class="math inline">\(\varepsilon^2=6\kappa_0\Delta/m\)</span> gives the
+selected value <span class="math inline">\(\kappa_0\)</span>. It tests
+readout dependence, not a restriction on real-number subdivision.</p>
+<p>For a uniform partition with <span class="math inline">\(N-1\)</span>
+interior nodes, pin endpoint errors to zero and give independent
+interior errors that same variance. The expected added kinetic action is
+<span class="math inline">\(m(N-1)\varepsilon^2/(12\Delta)\)</span>;
+normalizing by <span class="math inline">\(2/(N-1)\)</span> gives the
+same bias. Other endpoint/readout conventions need their own
+calculation. The algebra and general classification remain under R02
+review.</p>
+<h2 id="preserved-research-questions">4. Preserved research
+questions</h2>
+<ul>
+<li>Does finite propagation force a first-order internal-state model
+under the precise semigroup assumptions above?</li>
+<li>Which observable separates local fluctuation strength from
+bounded-motion transport cancellation? A15 now asks this
+explicitly.</li>
+<li>What makes a positive coefficient common across preparation classes?
+C035–C036 address mass composition within a specified class; A14 tests
+gap variability, and neither substitutes for a physical coherent phase
+rule.</li>
+<li>Can the cone/arrow analogy suggest a useful cut-state invariant? Its
+historical reception and modern mathematical interpretation remain
+distinct.</li>
+</ul>
+<p>R02 should start with the scalar theorem and the corrected matrix
+convention, then obtain a bounded prior-art audit. The earlier scripts
+remain historical artifacts under the hard rule and are not an
+acceptance gate.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

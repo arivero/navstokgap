@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Three calibrated positions give uniform global receiver recovery</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Three calibrated positions give uniform global receiver recovery</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-calibration-global-recovery.md">Markdown source</a></p><p>Three exact initial calibrations q_1=c nonzero, q_2=q_3=0, exact
+apparatus energy H_0, and all ten final apparatus coordinates determine
+the entire initial receiver state on a bounded convex domain. A fixed
+smooth pulse design and a sufficiently small but fixed apparatus box
+about the calibrated centre make the inverse uniform over that domain.
+Exact receiver energy is redundant. The inverse amplifies record errors
+by at most a constant divided by coupling.</p>
+<p>R30, 2026-09-12. Retain <a
+href="autonomous-finite-readout.html">R06</a>’s Hamiltonian, positive
+masses, coupled stable receiver, known T, smooth pulses and cutoff
+margins. Use <a
+href="full-apparatus-preparation-ambiguity.html">R25</a>’s free
+apparatus shear S and full record G_lambda. Coordinates and norms below
+use fixed positive component units; physical canonical units are L_* and
+P_*. The receiver domain Z is a fixed compact convex energy ball
+H_s&lt;=E_max, with an open neighbourhood for derivatives. Its energy is
+not supplied.</p>
+<p>Let eta_c have q_1=c, all other probe coordinates and momenta zero,
+and clock (s_0,M_c v_0), v_0&gt;0. Fix c first. The admitted apparatus
+states satisfy</p>
+<p><span class="math display">\[\|\eta-\eta_c\|\le\rho,\qquad
+q_1=c,\quad q_2=q_3=0,\quad
+H_{\rm app}(\eta)=H_0=M_cv_0^2/2. \tag{1}\]</span></p>
+<p>Here H_app is the free probe and clock kinetic energy, since the
+initial interaction vanishes. The positive radius rho is chosen below,
+independently of lambda. This is a box centred at eta_c, possibly
+smaller than R29’s original box. The theorem covers every state
+satisfying (1) in this box; it does not assert recovery on the original
+larger box. All physical and record units, pulse widths, masses, c, rho
+and T stay fixed in the precision limit.</p>
+<h2 id="four-independent-leading-rows">1. Four independent leading
+rows</h2>
+<p>For free receiver motion x_w(t)=e_x Phi_t w at the nominal clock
+define</p>
+<p><span class="math display">\[A_j(w)=\int_0^T t
+f_j(s_0+v_0t)x_w(t)\,dt,\qquad
+B_1(w)=\int_0^T f_1(s_0+v_0t)\dot x_w(t)\,dt.\]</span></p>
+<p>Choose the first two pulses as in <a
+href="two-calibration-branches.html">R29 §2</a>: A_1,B_1,A_2 have rank
+three. Select a third time in a remaining open interval where the output
+of their nonzero kernel vector is nonzero. Such a time exists because
+the output is analytic and observable: its first four time derivatives
+recover x,P,y,Q with nonzero diagonal coefficients 1,1/mu,g/mu,g/(mu
+nu). A sufficiently narrow positive third pulse therefore makes A_3
+nonzero on that kernel. All widths are fixed and positive. The position
+rows A_1,A_2,A_3 are independent. To retain the additional R06 ordinary
+position-signal rank, make these choices first in the narrow-pulse
+evaluation limit: the first three evaluation rows are independent, and
+analytic observability selects a fourth disjoint time completing them.
+Then choose all four positive widths sufficiently small to preserve both
+rank conditions.</p>
+<p>In fixed output units the constant matrix</p>
+<p><span class="math display">\[L=\begin{pmatrix}-K A_1/M_1\\-K
+A_2/M_2\\-K A_3/M_3\\-Kc B_1\end{pmatrix}
+\tag{2}\]</span></p>
+<p>is invertible. The nonzero displacement c is essential to its fourth
+row. Pulse supports and the free nominal clock have strict endpoint
+margins. After choosing pulses, reduce the apparatus neighbourhood and
+coupling to preserve those margins, positive clock speed, bounded forces
+and linear cutoffs.</p>
+<h2 id="an-inverse-apparatus-chart-for-every-nearby-record">2. An
+inverse apparatus chart for every nearby record</h2>
+<p>Write F_lambda=S^{-1}G_lambda. On a fixed enlarged apparatus
+neighbourhood, R25’s smooth-flow estimates give</p>
+<p><span class="math display">\[F_\lambda(w,\eta)=\eta+\lambda
+R_\lambda(w,\eta), \tag{3}\]</span></p>
+<p>with R_lambda and the finitely many derivatives used below uniformly
+bounded on a neighbourhood of Z, including small signed lambda. Fix a
+sufficiently small radius r for this enlarged neighbourhood. For
+||a-eta_c||&lt;=r/2 and |lambda| sufficiently small, the map eta -&gt;
+a-lambda R_lambda(w,eta) is a contraction of the closed r-ball about
+eta_c into itself, uniformly in w in Z. It defines the unique smooth
+chart eta_lambda(w,a), with F_lambda(w,eta_lambda(w,a))=a and
+eta_0(w,a)=a. Bounds on derivatives are uniform on a slightly smaller
+compact product domain. All physical records use a=S^{-1}Y.</p>
+<p>Choose rho&lt;=r/8. Equation (3) and a further coupling restriction
+ensure that all admitted records satisfy ||a-eta_c||&lt;=r/4. The
+segment between any two such a’s stays inside the chart domain. The
+chart for counterfactual w may leave the admitted rho-box; it remains in
+the enlarged smooth-flow domain. This extension is what permits segment
+integration over the full convex Z.</p>
+<h2 id="a-global-margin-for-the-exact-constrained-map">3. A global
+margin for the exact constrained map</h2>
+<p>Set C(eta)=(q_1,q_2,q_3,H_app)(eta), in fixed output units.
+Define</p>
+<p><span class="math display">\[D_\lambda(w,a)=
+\frac{C(\eta_\lambda(w,a))-C(a)}{\lambda}. \tag{4}\]</span></p>
+<p>The numerator vanishes identically at lambda=0 for every (w,a).
+Integrating its coupling derivative from 0 to lambda gives a joint
+smooth extension, including w and a derivatives. Subtracting C(a) is
+essential when the final record varies; the divided constraint itself
+need not have a finite limit.</p>
+<p>At a=eta_c the exact pointer drift identity and clock impulse
+calculation in <a href="calibrated-canonical-ambiguity.html">R28 §1</a>
+give</p>
+<p><span class="math display">\[D_wD_0(w,\eta_c)=L \quad\hbox{for every
+}w\in Z. \tag{5}\]</span></p>
+<p>Indeed each pointer row is -K A_j/M_j. Only q_1=c contributes to the
+first-order clock energy variation. Integrating its f’_1 term by parts,
+with pulse-free endpoints, gives -Kc B_1. Initial probe kinetic energy
+has zero first derivative at eta_c. Receiver and clock reaction enter
+the exact smooth remainder, rather than being discarded.</p>
+<p>Uniform continuity on compact Z and invertibility of L allow r and
+then the coupling ceiling to be reduced until, throughout the product
+chart,</p>
+<p><span
+class="math display">\[\|L^{-1}(D_wD_\lambda(w,a)-L)\|\le\tfrac12.
+\tag{6}\]</span></p>
+<p>This is a small-neighbourhood condition depending on c and the pulse
+design; rho is chosen after it. Integrating along the receiver segment
+proves</p>
+<p><span class="math display">\[\|w-w&#39;\|\le2\|L^{-1}\|
+\|D_\lambda(w,a)-D_\lambda(w&#39;,a)\|. \tag{7}\]</span></p>
+<p>For two admitted preparations with the same record a, their C values
+equal C_*=(c,0,0,H_0). Equations (4) and (7) force w=w’. The apparatus
+chart then forces eta=eta’. Thus the full admitted preparation is
+globally recovered, without a receiver energy-shell equation or a local
+branch label.</p>
+<h2 id="record-stability-and-the-action-unit-precision-limit">4. Record
+stability and the action-unit precision limit</h2>
+<p>For different admitted records a,a’, their exact constraints
+imply</p>
+<p><span
+class="math display">\[D_\lambda(w,a)=\frac{C_*-C(a)}{\lambda},\qquad
+D_\lambda(w&#39;,a&#39;)=\frac{C_*-C(a&#39;)}{\lambda}.\]</span></p>
+<p>Let M_C bound ||DC|| and M_D bound ||D_aD_lambda|| on the convex
+chart record domain, uniformly in lambda. Apply (7) at a and insert the
+second constraint to obtain</p>
+<p><span class="math display">\[\|w-w&#39;\|\le
+2\|L^{-1}\|(M_C/\lambda+M_D)\|a-a&#39;\|
+\le\frac{K_z}{\lambda}\|Y-Y&#39;\|,\quad0&lt;\lambda\le\lambda_*.
+\tag{8}\]</span></p>
+<p>The last constant includes ||S^{-1}|| and the fixed coupling ceiling.
+The apparatus chart also gives
+||eta-eta’||&lt;=K_eta(||Y-Y’||+lambda||w-w’||), so its reconstruction
+is stable on the same admitted class. Constants are independent of the
+actual receiver state, preparation and small positive lambda.</p>
+<p>For a measured record within delta of a true record, minimize record
+distance over the compact admitted class (1) times Z. A minimizer
+exists, the true state is a competitor, and its fitted record differs
+from the true one by at most 2 delta. Therefore this deterministic
+estimator has</p>
+<p><span
+class="math display">\[\epsilon_x\le2L_*K_z\delta/\lambda,\qquad
+\epsilon_P\le2P_*K_z\delta/\lambda,\qquad
+\epsilon_x\epsilon_P\le4L_*P_*K_z^2(\delta/\lambda)^2.
+\tag{9}\]</span></p>
+<p>The product has action units ML^2/T, with no 2 pi factor. At fixed
+positive coupling it tends to zero as final-record error tends to zero,
+while the positive preparation width stays fixed. A joint weak-coupling
+limit is controlled if delta/lambda tends to zero. These are upper
+bounds, not a sharp conditioning or minimax claim. Supplied calibrations
+and apparatus energy are exact; their errors require a separate
+stability analysis.</p>
+<p>This settles a bounded-domain exclusion-of-zero test under the stated
+access and preparation premises. It supplies no universal action
+parameter or quantum identification. Source methods and their bounded
+coverage are recorded in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B61.md">B61</a>;
+novelty remains unassessed.</p>
+<p>Next R31: allow errors in the three supplied calibrations and
+apparatus energy. Determine which precision/coupling ratios suffice for
+recovery and whether a fixed calibration tolerance restores an actual
+common-record canonical ambiguity inside the same fixed box. Keep c
+bounded away from zero.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

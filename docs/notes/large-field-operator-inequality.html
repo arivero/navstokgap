@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The large-field region in the Hamiltonian route needs an operator inequality, and the measure statement is weaker than that</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The large-field region in the Hamiltonian route needs an operator
+inequality, and the measure statement is weaker than that</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/large-field-operator-inequality.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/large-field-operator-inequality.pdf">PDF</a></p><p>Working out what the gap inequality requires from the large-field
+region replaces “an effective description” by something more precise,
+and corrects one earlier reading. Three positive facts first.
+<strong>The truncation inside the large-field region costs only a longer
+range.</strong> The error of truncating the flow-conjugated Hamiltonian
+at range <span class="math inline">\(Ka\)</span> is <span
+class="math inline">\(C\exp[2t\|G\|_\infty-cK]\)</span>, so on
+configurations with <span
+class="math inline">\(t\|G\|_\infty\le\eta_\infty/8\)</span> a range
+<span
+class="math inline">\(K\ge\eta_\infty/(4c)+\log(C/\delta)/c\)</span>
+brings it below <span class="math inline">\(\delta\)</span> there too;
+the competition recorded in <a
+href="ground-state-measure-transfer.html">the transfer note</a> §4
+between <span class="math inline">\(e^{-c\eta^2/g^2}\)</span> and <span
+class="math inline">\(e^{2\eta}\)</span> was a fixed-<span
+class="math inline">\(K\)</span> artifact, and in the window <span
+class="math inline">\(\eta\le C_2\)</span> of Section 4 the range is
+<span class="math inline">\(O(1)\)</span>. <strong>Localizing to the
+small-field region is cheap per doubling.</strong> For a smooth
+partition <span class="math inline">\(\chi_P^2+\chi_Q^2=1\)</span>
+depending on the flowed block density at radius <span
+class="math inline">\(2a\)</span>, the IMS localization formula gives
+<span class="math inline">\(H=\chi_PH\chi_P+\chi_QH\chi_Q-L\)</span>
+with <span class="math display">\[L\ \le\ C_L\,\frac{\hbar
+c}{a}\,\frac{g^2}{\eta^2},\qquad C_L=\frac{32\pi^2c_0^2}{3},\]</span>
+supported on the transition region, against the <span
+class="math inline">\(\hbar c/a\)</span> scale of the step. <strong>A
+positive perturbation that is large only on a rare set is
+harmless</strong>: for <span class="math inline">\(W\ge0\)</span>, <span
+class="math inline">\(\operatorname{gap}(H+W)\ge\operatorname{gap}(H)-\langle\Omega,W\Omega\rangle\)</span>,
+and the expectation is the measure of the support times the size. The
+obstruction is the sign. What the chain of lower bounds needs on the
+large-field region is the operator inequality <span
+class="math display">\[H-E_0\ \ge\ c\,\frac{\hbar
+c}{a}\,\frac{\eta^2}{g^2}\ \mathbf 1_Q\ -\ (\text{small})\,\mathbf 1_P
+,\]</span> a local energy excess, and every route to it from the
+Hamiltonian alone loses a term of order <span
+class="math inline">\((\hbar c/a)\times(\text{surface of the
+block})\)</span> on the small-field region, because cutting the vacuum
+costs zero-point energy on every shared link. That loss is a
+<em>negative</em> perturbation of order <span
+class="math inline">\(\hbar c/a\)</span> on <span
+class="math inline">\(P\)</span>, and negative perturbations of that
+size bind: a well of depth <span class="math inline">\(D\)</span> on a
+set of ground-state measure <span
+class="math inline">\(\varepsilon\)</span> captures a state once <span
+class="math inline">\(D\)</span> exceeds the localization cost <span
+class="math inline">\(L\)</span>, whatever <span
+class="math inline">\(\varepsilon\)</span> is. So the Euclidean
+estimate, which is a measure statement, is strictly weaker than what the
+Hamiltonian chain consumes, which is an operator statement. The polymer
+expansion is the device that makes measure statements sufficient, by
+attaching the factor <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span> to each large-field
+polymer as a convergence factor rather than asking for an operator
+bound. That is the reason the constructive programme is Euclidean,
+stated as a computation. Constants explicit; nothing promoted.</p>
+<h2 id="what-the-gap-inequality-consumes">1. What the gap inequality
+consumes</h2>
+<p>The route proves <span
+class="math inline">\(\operatorname{gap}(H)\ge\Delta\)</span> by a chain
+of operator lower bounds: conjugation (exact), truncation (<span
+class="math inline">\(H\ge(1-\delta)H_{\rm eff}\)</span> in the relative
+sense, since the truncated kinetic metric differs from the full one by a
+small multiple of it), decimation of the modes between <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(2a\)</span> (Feshbach, <a
+href="weak-coupling-feshbach-reduction.html">Lemma 1<span
+class="math inline">\(&#39;\)</span></a>), and induction. The comparison
+with <span class="math inline">\(\Delta\)</span> is made only at the
+end, at strong coupling, because at any intermediate scale <span
+class="math inline">\(\Delta=\hbar c\Lambda\)</span> is smaller than
+every error the step can afford, all of which are measured against <span
+class="math inline">\(\hbar c/a\)</span>. So each step must deliver
+<span class="math display">\[H^{(a)}\ \ge\ H^{(2a)}_{\rm eff}\ -\
+R,\qquad R\ \text{small against }\hbar c/a\ \text{and
+irrelevant},\]</span> and the question for the large-field region <span
+class="math inline">\(Q\)</span> is what it contributes to <span
+class="math inline">\(R\)</span>.</p>
+<h2 id="localization-the-ims-formula-on-the-configuration-manifold">2.
+Localization: the IMS formula on the configuration manifold</h2>
+<p>For <span class="math inline">\(H=K(-\Delta)+V\)</span> on a
+Riemannian manifold and smooth <span
+class="math inline">\(\chi_1^2+\chi_2^2=1\)</span>, the IMS formula
+(Cycon, Froese, Kirsch and Simon, <em>Schrödinger Operators</em>,
+Springer 1987, Theorem 3.2; metadata level) is the identity <span
+class="math display">\[H=\chi_1H\chi_1+\chi_2H\chi_2-K\big(|\nabla\chi_1|^2+|\nabla\chi_2|^2\big).\]</span>
+On <span class="math inline">\(G^{\mathcal E}\)</span> with <span
+class="math inline">\(K=(\hbar c/a)(g^2/2)\)</span> per link, take <span
+class="math inline">\(\chi_P=\cos\theta(f_B)\)</span>, <span
+class="math inline">\(\chi_Q=\sin\theta(f_B)\)</span> with <span
+class="math inline">\(\theta\)</span> rising from <span
+class="math inline">\(0\)</span> to <span
+class="math inline">\(\pi/2\)</span> as the flowed block density <span
+class="math inline">\(f_B=\ell\int_B|B_t|^2d^3x\)</span> rises from
+<span class="math inline">\(\eta^2\)</span> to <span
+class="math inline">\(4\eta^2\)</span>, at <span
+class="math inline">\(\ell=2a\)</span> and <span
+class="math inline">\(\sqrt{8t}=\ell\)</span>. Then <span
+class="math inline">\(|\nabla\chi_P|^2+|\nabla\chi_Q|^2=\theta&#39;(f_B)^2|\nabla
+f_B|^2\)</span> with <span
+class="math inline">\(\theta&#39;=\pi/(6\eta^2)\)</span>, and <span
+class="math display">\[\frac{\partial f_B}{\partial\theta_{\rm
+link}}=2\ell a\int_BB_t(x)\,K_t(x-y)\,d^3x\ \le\ 4c_0\,\frac{\eta
+a}{\ell},\]</span> since a unit change of a link angle changes the
+flowed field by <span class="math inline">\(aK_t(x-y)\)</span> and <span
+class="math inline">\(|B_t|\le2c_0\eta/\ell^2\)</span> on the transition
+region. Summing over the <span
+class="math inline">\(3(2\ell/a)^3\)</span> links of the smearing
+neighbourhood, <span class="math inline">\(|\nabla
+f_B|^2\le384c_0^2\eta^2\,\ell/a=768c_0^2\eta^2\)</span> at <span
+class="math inline">\(\ell=2a\)</span>, so <span
+class="math display">\[L_B\ \le\ \frac{\hbar
+c}{a}\frac{g^2}2\cdot\frac{\pi^2}{36\eta^4}\cdot768c_0^2\eta^2
+=\frac{32\pi^2c_0^2}{3}\,\frac{\hbar c}{a}\,\frac{g^2}{\eta^2}.\]</span>
+Two remarks. The general-<span class="math inline">\(\ell\)</span> form
+carries a factor <span class="math inline">\(\ell/a\)</span>, so
+localizing at a scale far above the lattice is expensive and the
+localization must be done one doubling at a time, in the variables of
+the current scale. And <span class="math inline">\(L_B\)</span> is a
+multiplication operator supported on the transition region of block
+<span class="math inline">\(B\)</span>, whose ground-state measure is
+<span class="math inline">\(e^{-c\eta^2/g^2}\)</span>: it is small
+against <span class="math inline">\(\hbar c/a\)</span> by <span
+class="math inline">\(C_Lg^2/\eta^2\)</span> and rare.</p>
+<h2 id="the-sign-of-a-rare-perturbation">3. The sign of a rare
+perturbation</h2>
+<p><strong>Proposition 1.</strong> If <span
+class="math inline">\(W\ge0\)</span> then <span
+class="math inline">\(\operatorname{gap}(H+W)\ge\operatorname{gap}(H)-\langle\Omega,W\Omega\rangle\)</span>.</p>
+<p><em>Proof.</em> <span class="math inline">\(E_1(H+W)\ge
+E_1(H)\)</span> by min-max, and <span
+class="math inline">\(E_0(H+W)\le\langle\Omega,(H+W)\Omega\rangle=E_0+\langle\Omega,W\Omega\rangle\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p>So a positive perturbation of size <span
+class="math inline">\(D\)</span> on a set of ground-state measure <span
+class="math inline">\(\varepsilon\)</span> costs the gap at most <span
+class="math inline">\(D\varepsilon\)</span>, and with <span
+class="math inline">\(\varepsilon=e^{-c\eta^2/g^2}\)</span> and <span
+class="math inline">\(D=O(\hbar c/a)\)</span> that is negligible.</p>
+<p><strong>Proposition 2.</strong> A negative perturbation <span
+class="math inline">\(-W\)</span> with <span class="math inline">\(W\ge
+D\,\mathbf 1_A\)</span> on a set <span class="math inline">\(A\)</span>
+of ground-state measure <span class="math inline">\(\varepsilon\)</span>
+produces a state of energy at most <span
+class="math inline">\(E_0+L_A-D\)</span>, where <span
+class="math inline">\(L_A=K\int|\nabla\chi_A|^2\Omega^2/\|\chi_A\Omega\|^2\)</span>
+is the localization cost of a cutoff <span
+class="math inline">\(\chi_A\)</span> supported in <span
+class="math inline">\(A\)</span>.</p>
+<p><em>Proof.</em> The trial state <span
+class="math inline">\(\chi_A\Omega/\|\chi_A\Omega\|\)</span> has energy
+<span class="math inline">\(E_0+L_A\)</span> in <span
+class="math inline">\(H\)</span> by the exact identity <span
+class="math inline">\(\langle\chi\Omega,(H-E_0)\chi\Omega\rangle=K\int|\nabla\chi|^2\Omega^2\)</span>,
+and <span class="math inline">\(-W\)</span> lowers it by at least <span
+class="math inline">\(D\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The measure <span class="math inline">\(\varepsilon\)</span> does not
+appear in the conclusion. A negative perturbation of order <span
+class="math inline">\(\hbar c/a\)</span> on a rare set reorganizes the
+low spectrum as soon as <span class="math inline">\(D&gt;L_A\)</span>,
+and <span class="math inline">\(L_A\)</span> is of order <span
+class="math inline">\((\hbar c/a)C_Lg^2/\eta^2\ll\hbar c/a\)</span>.
+<strong>The sign of the error on the large-field region decides
+everything, and the measure of the region decides nothing.</strong></p>
+<h2 id="the-operator-inequality-the-chain-needs-and-its-cost">4. The
+operator inequality the chain needs, and its cost</h2>
+<p>For the large-field sector to contribute only harmlessly to <span
+class="math inline">\(R\)</span>, the step needs <span
+class="math display">\[\chi_Q(H-E_0)\chi_Q\ \ge\ c_1\,\frac{\hbar
+c}{a}\,\frac{\eta^2}{g^2}\,\chi_Q^2 ,\]</span> a <em>local energy
+excess</em>: configurations with a large flowed field in a block have
+energy above the vacuum by the field’s energy. This is physically
+evident at weak coupling and is the Hamiltonian form of the action lower
+bound of <a href="large-field-action-lower-bound.html">the lower-bound
+note</a>. Its proof from the Hamiltonian splits <span
+class="math inline">\(H=H_N+H&#39;\)</span> with <span
+class="math inline">\(N\)</span> the neighbourhood of the block and uses
+two facts: <span class="math inline">\(V_N\ge(\hbar
+c/a)(2/g^2)c_1\eta^2\)</span> on <span class="math inline">\(Q\)</span>,
+by three-dimensional flow monotonicity and positivity, exactly as in the
+Euclidean case; and an upper bound on <span
+class="math inline">\(E_0-E_0(H-V_N)\)</span>, the energy the
+neighbourhood’s magnetic terms add to the vacuum. The second is where
+the loss occurs. The crude bound uses the ground state of <span
+class="math inline">\(H-V_N\)</span>, which is Haar-flat on the interior
+links and gives <span class="math inline">\(\langle V_N\rangle_{\rm
+Haar}=(\hbar c/a)(2N/g^2)|N|_p\)</span>, of the same order <span
+class="math inline">\(1/g^2\)</span> as the excess and useless. The
+correct order is the zero-point energy, <span
+class="math inline">\(O(1)\cdot(\hbar c/a)|N|_p\)</span>, and any trial
+state that achieves it must extend the outside vacuum smoothly into
+<span class="math inline">\(N\)</span>; the cut then costs <span
+class="math inline">\(O(\hbar c/a)\)</span> per shared link, an amount
+<span class="math display">\[C_V\,\frac{\hbar c}{a}\,|\partial
+N|\]</span> that is subtracted <em>everywhere</em>, including on <span
+class="math inline">\(P\)</span>. The resulting inequality is <span
+class="math display">\[H-E_0\ \ge\
+\Big[\frac{2c_1\eta^2}{g^2}-C_V|N|_p\Big]\frac{\hbar c}{a}\,\mathbf 1_Q
+\ -\ C_V|\partial N|\,\frac{\hbar c}{a}\,\mathbf 1_P ,\]</span> and the
+second term is a negative perturbation of order <span
+class="math inline">\(\hbar c/a\)</span> on the small-field region, of
+exactly the kind Proposition 2 says cannot be tolerated. The window in
+which the first term is positive, <span class="math display">\[\eta\
+\ge\ C_1g,\qquad C_1^2=\frac{C_V|N|_p}{2c_1}\ \simeq\ 160\ \text{for a
+}4a\text{ neighbourhood},\]</span> together with the small-angle
+requirement of the perturbative decimation on <span
+class="math inline">\(P\)</span>, <span class="math inline">\(\eta/4\le
+C_2\)</span>, is nonempty only for <span
+class="math inline">\(g\le4C_2/C_1\)</span>, that is <span
+class="math inline">\(1/g^2\gtrsim10^2\)</span> with these crude
+constants. Even inside the window the <span
+class="math inline">\(P\)</span>-side loss remains.</p>
+<h2 id="why-the-euclidean-framework-escapes-this">5. Why the Euclidean
+framework escapes this</h2>
+<p>The Euclidean side proves a measure statement, <span
+class="math inline">\(\mathbb P(Q)\le e^{-c\eta^2/g^2}\)</span>, and
+never an operator one. It can afford this because the cluster (polymer)
+expansion consumes measure statements directly: a large-field polymer
+enters the expansion with the weight <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span> as a convergence factor,
+and the effective action outside the polymers is computed
+perturbatively. No inequality of the form <span
+class="math inline">\(H-E_0\ge(\cdots)\mathbf 1_Q\)</span> is ever
+needed, because there is no Hamiltonian to bound; the gap is read off at
+the end from the decay of the two-point function, which is again a
+measure statement.</p>
+<p>The Hamiltonian chain of Section 1, by contrast, consumes operator
+inequalities, and Section 3 shows it cannot substitute a measure
+statement for them when the sign is wrong. This is the precise content
+of “the constructive programme is Euclidean”: <strong>the large-field
+region is controllable in measure and uncontrollable in norm, and the
+polymer expansion is the device that makes measure control
+sufficient.</strong></p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The obligation “an effective description inside the large-field
+region” is replaced by the following. The truncation there is cheap
+(range <span class="math inline">\(O(\eta)\)</span>), the localization
+is cheap (<span class="math inline">\(C_Lg^2/\eta^2\)</span> per
+doubling), and positive rare errors are harmless. The chain needs the
+local energy-excess operator inequality, whose Hamiltonian proof loses
+<span class="math inline">\(C_V|\partial N|\,\hbar c/a\)</span> on the
+small-field region, a negative perturbation of the order that binds. So
+the Hamiltonian route, as a chain of operator lower bounds, cannot close
+through the large-field region, and the Euclidean route closes it by
+consuming measure statements in a polymer expansion. The honest division
+of labour is: Hamiltonian for T1, T2, the small-volume theorem, the
+upper bounds and the final gap extraction; Euclidean polymer expansion
+for the renormalization steps. The coupling map is then: weak-coupling
+expansion for <span class="math inline">\(1/g^2\gtrsim
+C_1^2/(16C_2^2)\)</span>, strong-coupling theorem for <span
+class="math inline">\(54/g^4\le\beta_*\)</span>, and the intermediate
+region between them, in which the gap forms and no expansion applies;
+its width in one-loop doublings is about <span
+class="math inline">\(10^3\)</span> with the crude constants above and
+about <span class="math inline">\(20\)</span> if the weak side reaches
+<span class="math inline">\(g^2\sim1/2\)</span> (<a
+href="strong-coupling-threshold-explicit.html">threshold note</a>
+§4).</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>

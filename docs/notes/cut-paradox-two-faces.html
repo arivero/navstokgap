@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The cut paradox in two signatures: sections of a solid and instants of a motion</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The cut paradox in two signatures: sections of a solid and instants
+of a motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-paradox-two-faces.md">Markdown source</a></p><p>Test 1 of <a
+href="https://github.com/arivero/navstokgap/blob/main/ideas/I003-cut-paradox-arrow-obstruction.md">I003</a>,
+drafted 2026-09-08 by the independent Claude Fable 5.1 session. Earlier
+scripts are historical artifacts; current verification uses written
+proof and source review. The proposition below is a working derivation
+awaiting review and a prior-art audit; no claim ID is assigned. The
+2026-09-09 review preserves the scalar rigidity candidate and routes
+proof and source review to R02. The cone/arrow connection below is a
+modern heuristic; analytic continuation relates the specified evolution
+equations, rather than establishing a historical identity.</p>
+<p><strong>Result.</strong> The Euclidean statement C032, that a
+position-only law with ballistic support and independent stationary
+increments is a deterministic drift, has a Lorentzian counterpart: a
+scalar, translation-invariant, strongly continuous unitary evolution on
+the line whose kernels are supported in the light cone <span
+class="math inline">\([-ut,ut]\)</span> is a uniform translation at some
+speed <span class="math inline">\(|a|\le u\)</span>, up to a constant
+phase. In both signatures a bounded-speed law with nontrivial
+fluctuation or dispersion needs a second state variable, the velocity
+sign of the telegraph process or the second component of the Dirac
+evolution, and the continuation <span class="math inline">\(\lambda\to
+i\omega_0\)</span> of A09 carries the one situation into the other. The
+obstruction sits at the Compton wave number: the scalar reduction of the
+massive evolution has dispersion <span
+class="math inline">\(\omega(k)=\sqrt{u^2k^2+\omega_0^2}\)</span> with
+branch points at <span class="math inline">\(k=\pm i\omega_0/u\)</span>,
+which at <span class="math inline">\(u=c\)</span>, <span
+class="math inline">\(\omega_0=mc^2/\hbar\)</span> is <span
+class="math inline">\(k=\pm imc/\hbar\)</span>. This is the reading of
+the user’s remark 2 in I003 that the present calculation supports;
+remark 3, an <span class="math inline">\(h\)</span> that controls
+convergence, is the crossover <span class="math inline">\(g(z)\)</span>
+of the <a href="bridge-crossover.html">coordinator’s exact bridge
+note</a>.</p>
+<h2 id="the-two-paradoxes-as-slicing-laws">1. The two paradoxes as
+slicing laws</h2>
+<p><strong>Cone.</strong> A solid is a family of sections <span
+class="math inline">\(A(z)\)</span>, <span class="math inline">\(0\le
+z\le h\)</span>. The cone <span class="math inline">\(A(z)=\pi
+r^2(1-z/h)^2\)</span> has <span class="math inline">\(A&#39;(z)=-2\pi
+r^2(1-z/h)/h\ne0\)</span> below the apex; the cylinder has <span
+class="math inline">\(A&#39;=0\)</span>. Democritus asks whether
+adjacent sections are equal or unequal, Chrysippus answers neither, and
+the continuum answer is that <span
+class="math inline">\(A(z+\delta)-A(z)=A&#39;(z)\delta+O(\delta^2)\)</span>:
+adjacent sections differ by a quantity that vanishes with the cut
+spacing while their ratio of differences to spacing does not. The Mohist
+Canon stops the halving at an endpoint; Liu Hui and Archimedes cut
+“until it cannot be cut” and keep the limit. Cutting the solid at more
+places preserves the old sections; this is the restriction consistency
+of a fixed solid, the analogue of C034 for a fixed bridge.</p>
+<p><strong>Arrow.</strong> A motion is a family <span
+class="math inline">\(X(t)\)</span>. Zeno asks whether at each instant
+the arrow is where it is, and Aristotle answers that the argument takes
+time to be composed of nows (Physics VI.9). In the project’s models the
+state at a cut is <span class="math inline">\((X,V)\)</span>: the
+finite-speed bridge of C033 retains the velocity sign at every cut, and
+its midpoint atom is exactly the arrow at its turning instant, where the
+position is <span class="math inline">\(uT/2\)</span> with probability
+<span class="math inline">\(1/I_0(\lambda T)\)</span> and the velocity
+is fixed only by the right-continuous convention. Al-Naẓẓām’s leap is
+the discrete crossing of the same instant.</p>
+<p>Under the exchange of the slicing variable <span
+class="math inline">\(z\)</span> with <span
+class="math inline">\(t\)</span> and of the slope <span
+class="math inline">\(A&#39;\)</span> with the velocity, the two
+dilemmas are one question: what an infinitesimally adjacent slice
+carries. The continuation of A09 makes the exchange precise for the
+telegraph and checkerboard dynamics, and the rest of this note states
+what survives on each side.</p>
+<h2 id="the-euclidean-face">2. The Euclidean face</h2>
+<p><strong>C032.</strong> If <span
+class="math inline">\(\mu_0=\delta_0\)</span>, <span
+class="math inline">\(\mu_{s+t}=\mu_s*\mu_t\)</span> and <span
+class="math inline">\(\operatorname{supp}\mu_t\subset[-ut,ut]\)</span>,
+then <span
+class="math inline">\(\operatorname{Var}\mu_T=n\operatorname{Var}\mu_{T/n}\le
+u^2T^2/n\to0\)</span> and <span
+class="math inline">\(\mu_t=\delta_{bt}\)</span> with <span
+class="math inline">\(|b|\le u\)</span>. Adjacent sections of such a law
+are translates of one another. The telegraph process escapes the theorem
+because its position alone is not Markov: its kernel’s Fourier transform
+<span class="math inline">\(e^{-\lambda
+t}[\cosh(st)+(\lambda/s)\sinh(st)]\)</span> with <span
+class="math inline">\(s=\sqrt{\lambda^2-u^2k^2}\)</span> is an even
+function of <span class="math inline">\(s\)</span>, hence entire in
+<span class="math inline">\(k\)</span>, but it is not a convolution
+semigroup in <span class="math inline">\(t\)</span>.</p>
+<h2 id="the-lorentzian-face">3. The Lorentzian face</h2>
+<p><strong>Proposition.</strong> Let <span
+class="math inline">\((U_t)_{t\in\mathbb R}\)</span> be a strongly
+continuous one-parameter unitary group on <span
+class="math inline">\(L^2(\mathbb R)\)</span> that commutes with
+translations, and suppose that for every <span
+class="math inline">\(t\)</span> the kernel <span
+class="math inline">\(K_t\)</span> with <span
+class="math inline">\(U_t\psi=K_t*\psi\)</span> has support in <span
+class="math inline">\([-u|t|,u|t|]\)</span>. Then there are real
+constants <span class="math inline">\(a,b\)</span> with <span
+class="math inline">\(|a|\le u\)</span> such that <span
+class="math inline">\(U_t\psi(x)=e^{-ibt}\psi(x-at)\)</span>.</p>
+<p><strong>Proof.</strong> Commutation with translations makes <span
+class="math inline">\(U_t\)</span> a Fourier multiplier by a unimodular
+measurable <span class="math inline">\(m_t(k)\)</span>, and Stone’s
+theorem gives <span
+class="math inline">\(m_t(k)=e^{-it\omega(k)}\)</span> for a real
+measurable <span class="math inline">\(\omega\)</span>. The support
+hypothesis and the Paley–Wiener–Schwartz theorem extend each <span
+class="math inline">\(m_t\)</span> to an entire function with <span
+class="math inline">\(|m_t(k)|\le
+C_t(1+|k|)^{N}e^{u|t||\operatorname{Im}k|}\)</span>. The identity <span
+class="math inline">\(m_tm_{-t}=1\)</span> holds on the real axis, hence
+on <span class="math inline">\(\mathbb C\)</span>, so <span
+class="math inline">\(m_t\)</span> has no zeros and <span
+class="math inline">\(G_t=\log m_t\)</span> is entire. For fixed <span
+class="math inline">\(t\)</span>, the bounds for <span
+class="math inline">\(m_t\)</span> and <span
+class="math inline">\(m_{-t}\)</span> give <span
+class="math inline">\(|\operatorname{Re}G_t(z)|\le
+u|t||\operatorname{Im}z|+N_t\log(1+|z|)+C_t\)</span>. Harmonic
+derivative estimates make this function affine; its value on the real
+axis is zero. Thus <span
+class="math inline">\(m_t(k)=e^{-i(a_tk+b_t)}\)</span>, with real <span
+class="math inline">\(a_t,b_t\)</span> and <span
+class="math inline">\(|a_t|\le u|t|\)</span>. The group law makes <span
+class="math inline">\(a_t\)</span> additive; the bound implies <span
+class="math inline">\(a_t=at\)</span>. Strong continuity makes the
+remaining phase a continuous character, hence <span
+class="math inline">\(e^{-ibt}\)</span>. This proves the form without
+selecting logarithms continuously in time. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Reading.</strong> Scalar evolutions in this class are
+translations at any <span class="math inline">\(|a|\le u\)</span>, with
+an arbitrary constant phase rate. The massless chiral choices <span
+class="math inline">\(a=\pm u\)</span> saturate the speed bound.
+Interpreting phase rate as energy requires an action conversion factor.
+The Dirac evolution keeps light-cone support and unitarity by carrying
+two components; its scalar reduction has <span
+class="math inline">\(\omega(k)=\sqrt{u^2k^2+\omega_0^2}\)</span>, which
+is real on the axis but has branch points at <span
+class="math inline">\(k=\pm i\omega_0/u\)</span> and so cannot be the
+dispersion of a scalar kernel of compact support. At <span
+class="math inline">\(u=c\)</span> and <span
+class="math inline">\(\omega_0=mc^2/\hbar\)</span> the branch points sit
+at the inverse reduced Compton length. The analytic obstruction and the
+physical crossover <span class="math inline">\(\Delta_*\)</span> of the
+P02 note are the same scale seen from the two sides of the
+continuation.</p>
+<h2 id="the-double-limit">4. The double limit</h2>
+<p>Refining cuts in time and resolving positions together is the double
+limit of I003’s remark 2. At finite speed and fixed <span
+class="math inline">\(\lambda\)</span>, the window observable obeys
+<span class="math inline">\(\mathsf h(\Delta)\le
+H_*\Delta/\Delta_*\)</span> (P02), and the conditioned midpoint obeys
+the exact law <span class="math inline">\(\kappa_{\rm mid}/H_*=g(\lambda
+T)=zR(z)[1-R(z)]\)</span> of the bridge-crossover note, with cubic
+onset. A window-independent coefficient therefore exists only above
+<span class="math inline">\(\Delta_*=K/(mu^2)\)</span>, and the joint
+limit of mesh and resolution to zero leaves no coefficient unless the
+speed bound is removed, which is the Gaussian class. The surviving
+constant is the plateau, and <span class="math inline">\(g\)</span> is
+the rate it controls. Which premise makes that plateau positive and
+common to all bodies is A08’s question, and this note adds nothing to
+it.</p>
+<h2 id="review-and-next-step">5. Review and next step</h2>
+<p>R02 will audit the scalar proof and its Paley–Wiener/harmonic-growth
+ingredients, then examine the matrix extension in <a
+href="i003-double-limit-rigidity.html">the revised I003 note</a>. The
+historical analogy remains available for idea generation. Its
+mathematical content must be established model by model.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated by
+<code>scripts/build_site.py</code>; every note is also the Markdown source in
+<code>notes/</code> and a typeset PDF in <code>out/papers/</code>.
+Notes are working research, not peer-reviewed publications; each states its own
+status and the premises it uses.
+</div></footer>
+</body></html>
