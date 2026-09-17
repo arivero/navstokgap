@@ -1,9 +1,54 @@
 # State
 
-Updated 2026-09-16. Read this page and the note it points to; AGENTS.md
+Updated 2026-09-17. Read this page and the note it points to; AGENTS.md
 governs. Older files in this directory are context.
 
 ## Goal
+
+User direction, 2026-09-17: the $SU(3)$ mass-gap attack is stuck at the
+map in the position note, and the active goal returns to the **Planck
+gap**: a logical argument, from Newton-age materials, that $h>0$ in the
+Galileo comparison, where Newton explicitly took the inertial--parabola
+area to zero (Lemmas X--XI) to mark the difference between free and
+forced motion. The mass-gap sections below are retained as context and
+are no longer the queue.
+
+## What is in hand for the Planck gap
+
+[The mark-floor note](../notes/newton-mark-floor.md) (N02) settles the
+form of the argument. Newton's limit has no geometric floor (every
+partition's impulses, sagittas and areas vanish with the mesh). A floor
+follows for *recorded* comparisons from three premises stated in Newton's
+optics: least corpuscle impulse $p$ (Query 29), least mark length equal to
+the interval of fits $\Lambda=1/89000$ inch (Book II Part III Prop. XVIII),
+and the mark trade-off $\delta\,\Delta\ge\Lambda p$ between a mark's
+resolution and the indeterminacy of the impulse it delivers (M3). Then
+$	au\Delta E=F^2	au^3/2m>8\Lambda p$, the inertial--fall area exceeds
+$8v\Lambda p/3F$, and Democritus insertion of marks stops at the mesh
+$	au_*=(16m\Lambda p/F^2)^{1/3}$; on the modern identification
+$\Lambda p=h/2$ the floor is $4h$. Keeping Newton's determinate fits and
+dropping M3 is an exact countermodel with floor zero (the far-screen
+recovery of the recoil), so M3 is the single premise carrying $h>0$: an
+indeterminacy premise, statable by Newton and denied by him. Q14's
+dimensional gate explains why both a least length and a least impulse
+are needed and why they enter as a product.
+
+## Next steps for the Planck gap (each a note)
+
+1. **Does M3 have a consistency derivation?** Require that marks on
+   probes obey the same premise as marks on bodies, and ask whether any
+   deterministic record model survives without the far-screen loophole;
+   this is where a non-commuting record structure (G07's two scale-free
+   non-commuting structures) must enter, or where the argument stops.
+2. **Phase-space form.** State Theorem 1 of the mark-floor note for a
+   general force law and for the C070--C071 force lens, whose canonical
+   area $2F^2\ell^3/3m$ is the same combination, so the floor is a
+   statement about the lens rather than the parabola.
+3. **Opticks companion.** A `docs/classics/` companion for Book II Part
+   III Props. XII--XVIII, Book II Part I Obs. 13 and Queries 1 and 29
+   (pre-1901 source; cited from the 1730 text without one).
+
+## Paused goal: $SU(3)$ mass gap (2026-09-16 to 2026-09-17)
 
 Prove the existence of a mass gap for **$SU(3)$ in four dimensions**
 (user direction, 2026-09-16; Jaffe--Witten statement in the
@@ -582,9 +627,10 @@ labour; consult it before opening a new item.
 
 ## Supporting
 
-The Galileo area/necessity question (N01, N02) and the $h>0$ analogy
-(G07, G08, C131--C133) serve the goal as heuristics. Publication drafts
-wait for author input.
+While the mass gap was the goal, the Galileo area/necessity question
+(N01, N02) and the $h>0$ analogy (G07, G08, C131--C133) served it as
+heuristics; since 2026-09-17 the roles are reversed and the mass-gap
+map is the supporting material. Publication drafts wait for author input.
 
 ## Constraints
 

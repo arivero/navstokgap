@@ -1,0 +1,366 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The cost of a mark: a Newton-age floor for the Galileo comparison},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-cost-of-a-mark-a-newton-age-floor-for-the-galileo-comparison}{%
+\section{The cost of a mark: a Newton-age floor for the Galileo
+comparison}\label{the-cost-of-a-mark-a-newton-age-floor-for-the-galileo-comparison}}
+
+Newton takes the sagitta and the swept area of the Galileo comparison to
+zero in Lemmas X--XI and keeps only their ratio to the time. That limit
+is a statement about the unmarked curve, and it has no floor: every
+partition of the fall carries impulses, sagittas and areas that vanish
+with the mesh (Proposition 1). A floor appears as soon as the comparison
+must be \emph{recorded}, and it appears from three premises that
+Newton's own optics supplies: light is made of least corpuscles of
+impulse \(p\) (M1), a mark made with light of one colour fixes a
+position no better than the interval of fits \(\Lambda\) (M2), and a
+mark that fixes a position within \(\delta\) leaves the impulse it
+delivered undetermined within \(\Lambda p/\delta\) (M3). Under M1--M3
+the falling parabola can be told from the inertial line over a duration
+\(\tau\) only if
+
+\[\boxed{\tau\,\Delta E=\frac{F^2\tau^3}{2m}>8\Lambda p,\qquad
+A_{\rm inertial,fall}=\frac{vF\tau^3}{6m}>\frac{8v\Lambda p}{3F},}\]
+
+and Democritus insertion of marks into the trajectory stops at the mesh
+\(\tau_*=(16m\Lambda p/F^2)^{1/3}\): finer marks record free motion only
+(Theorems 1--2). Dropping M3 and keeping Newton's determinate fits gives
+an exact countermodel with floor zero (Section 5), so M3 is the single
+premise that carries \(h>0\); it is a statement of indeterminacy, and no
+Newton-age mechanics or optics derives it. Newton measured
+\(\Lambda=1/89000\) inch; he could not measure \(p\); and his corpuscle
+sizes make \(\Lambda p\) colour dependent. On the modern identification
+\(\Lambda p=h/2\) the floor is \(4h\). This is N02's principle,
+obstruction and countermodel. Exploratory; no ledger promotion.
+
+\hypertarget{what-newtons-limit-commits-to}{%
+\subsection{1. What Newton's limit commits
+to}\label{what-newtons-limit-commits-to}}
+
+Take \(m,F,v,\tau>0\), horizontal coordinate \(x\), downward coordinate
+\(y\), inertial path \(q_I(t)=(vt,0)\) and falling path
+\(q_F(t)=(vt,Ft^2/2m)\) on \([0,\tau]\), as in
+\href{newton-insertion-action.md}{N01}. The sagitta, the inertial--fall
+area and the gained energy are
+
+\[s(\tau)=\frac{F\tau^2}{2m},\qquad A(\tau)=\frac{vF\tau^3}{6m},\qquad
+\Delta E(\tau)=\frac{F^2\tau^2}{2m},\qquad \frac{3F}{v}A=\tau\Delta E .\]
+
+Lemma X says \(s\propto\tau^2\) at the start of the motion; Lemma XI,
+Corollaries 4--5, that the curved segment is one third of the tangent
+triangle and both scale as \(\tau^3\); Proposition VI reads the force
+off the limit \(2ms/\tau^2\); Proposition I builds the orbit as a
+polygon with ``a single but great impulse'' at each vertex and lets the
+number of vertices be ``augmented in infinitum'' (Motte/Wilkins,
+passage; the \href{principia-constant-force-action.md}{Principia note}
+has the paragraph map). The impulses, sagittas and areas at the vertices
+all vanish in that limit; the force survives as a ratio.
+
+\textbf{Proposition 1 (no geometric floor).} For every partition
+\(0=t_0<t_1<\dots<t_n=\tau\) with steps \(\tau_j\) and mesh
+\(|\pi|=\max\tau_j\), the vertex impulse \(F\tau_j\), the step sagitta
+\(F\tau_j^2/2m\) and the step area \(vF\tau_j^3/6m\) tend to zero with
+the mesh, their sum obeys \(\sum_jvF\tau_j^3/6m\le vF\tau|\pi|^2/6m\),
+and the ratio \(2m\,s(\tau_j)/\tau_j^2=F\) is exact at every step. No
+partition, however fine, produces a contradiction.
+
+\emph{Proof.} Direct from the formulas; the bound on the sum is C027's
+computation with the constant-force chord replaced by the inertial
+tangent. \(\square\)
+
+Berkeley's objection that evanescent increments are ``neither finite
+Quantities nor Quantities infinitely small, nor yet nothing''
+(\href{../docs/classics/Berkeley_Analyst_1734_Wilkins.md}{Analyst §35},
+passage) is answered inside the geometry by the limit ratio, as
+C027--C029 and the full-state classical cuts answer it inside mechanics.
+A floor therefore has to come from what it takes to \emph{mark} the
+curve, since refinement consistency of the curve offers none. That is
+the reading of ``Democritus insertion'' used here: inserting a point
+into the trajectory means making a physical mark on the body at a time,
+and marks have a cost.
+
+\hypertarget{the-comparison-as-a-record}{%
+\subsection{2. The comparison as a
+record}\label{the-comparison-as-a-record}}
+
+A \textbf{mark} is an interaction between the body and a recording
+system that leaves a datum about the transverse coordinate \(y\) at a
+time \(t\). Its \textbf{resolution} \(\delta\) is the width of the
+interval to which the datum confines \(y(t)\). Its \textbf{recoil width}
+\(\Delta\) is the width of the interval to which the totality of
+records, made before or after the mark, confines the transverse impulse
+the mark delivered to the body. Both are worst-case widths; nothing
+probabilistic is assumed.
+
+\textbf{Two-mark protocol.} A preparation mark at \(t=0\) with
+\((\delta_0,\Delta_0)\) and a terminal mark at \(t=\tau\) with
+resolution \(\delta_1\). From the preparation the inertial prediction is
+an interval \(I_I\) of width
+
+\[w=\delta_0+\frac{\Delta_0\tau}{m},\]
+
+and the falling prediction is \(I_F=I_I+s(\tau)\). The terminal datum
+decides between them in the worst case exactly when
+
+\[s(\tau)>w+\delta_1. \tag{1}\]
+
+The velocity \(v\) plays no role in (1); it enters only the conversion
+of the action-scaled product \(\tau\Delta E\) into the geometric area
+\(A\).
+
+\textbf{Insertion protocol.} Marks at \(t_j=j\tau/n\), each with
+\((\delta_j,\Delta_j)\). The force is \emph{recorded on step \(j\)} when
+the comparison restricted to \([t_j,t_{j+1}]\), with mark \(j\) as
+preparation and mark \(j+1\) as terminal, satisfies (1) with \(\tau\)
+replaced by \(\tau_n=\tau/n\).
+
+\hypertarget{three-premises-from-newtons-optics}{%
+\subsection{3. Three premises from Newton's
+optics}\label{three-premises-from-newtons-optics}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{(M1) Least impulse.} Light consists of corpuscles (``Are not
+  the Rays of Light very small Bodies emitted from shining
+  Substances?'', Opticks Query 29, passage). Corpuscles of one colour
+  are alike; each carries an impulse \(p>0\), and no part of the light
+  of that colour carries less. This is Democritus' least part applied to
+  the probe.
+\item
+  \textbf{(M2) Least length.} A mark made with light of one colour has
+  resolution \(\delta\ge\Lambda\), the interval of fits of that colour.
+  Newton defines the interval as ``the space it passes between every
+  return and the next return'' of the disposition to be reflected (Book
+  II Part III, Definition after Prop. XII, passage), and measures it:
+  ``the Intervals of their Fits of easy Reflexion are the 1/89000th part
+  of an Inch'' for the yellow--orange confine (Prop. XVIII, passage),
+  that is \(\Lambda\approx0.285\,\mu\)m. A datum obtained through the
+  fits repeats every \(\Lambda\) and so fixes a length no better than
+  \(\Lambda\); Newton's rings are exactly such a gauge.
+\item
+  \textbf{(M3) Mark trade-off.} A mark made with light of one colour
+  that fixes the position within \(\delta\) has recoil width
+  \(\Delta\ge\Lambda p/\delta\). Newton's theory motivates the
+  \emph{pre-mark} half of this: whether a corpuscle is reflected or
+  transmitted at the body is settled by its fit, the fit depends on the
+  path length modulo \(\Lambda\), and that path length is the very
+  position the mark is to find, so no record made before the mark fixes
+  the delivered impulse (\(2p\) on reflection, about \(0\) on
+  transmission) better than \(p\); confining the ray to a breadth
+  \(\delta\) adds the inflexion of Book III (``Do not Bodies act upon
+  Light at a distance, and by their action bend its Rays'', Query 1,
+  passage; Grimaldi 1665, metadata) with angles of order
+  \(\Lambda/\delta\). The premise asserts more: that records made
+  \emph{after} the mark do not recover the impulse either. Section 5
+  shows this is the whole content.
+\end{itemize}
+
+The dimensional gate of
+\href{action-unit-dimensional-selection.md}{Q14}, Theorem A, sorts the
+premises before any calculation. The marking model's fixed constants are
+\(\Lambda\), with dimension vector \((0,1,0)\), and \(p\), with
+\((1,1,-1)\). Their unique action product is \(\Lambda p\). A model with
+M2 alone (fixed \(\Lambda\)) or M1 alone (fixed \(p\)) holds no action
+product and so has floor \(0\) or \(\infty\) for every observable;
+Section 5 shows it is \(0\). Both least quantities are needed, and they
+are needed as a product, which is what M3 says. The speed of light \(c\)
+does not enter the protocol; admitting it would only add the mass
+\(p/c\) and a possible factor \(F(mc/p)\) that the argument below never
+produces.
+
+\hypertarget{the-floor-and-the-insertion-mesh}{%
+\subsection{4. The floor and the insertion
+mesh}\label{the-floor-and-the-insertion-mesh}}
+
+\textbf{Theorem 1 (floor for the Galileo comparison).} Under M1--M3,
+with the preparation and terminal marks made by light of one colour, the
+two-mark protocol decides the comparison in the worst case only if
+
+\[s(\tau)>2\sqrt{\frac{\Lambda p\,\tau}{m}}+\delta_1,\qquad\text{hence}\qquad
+\tau\Delta E=\frac{F^2\tau^3}{2m}>8\Lambda p,\qquad
+A>\frac{8v\Lambda p}{3F}.\]
+
+\emph{Proof.} By M3, \(\Delta_0\ge\Lambda p/\delta_0\), so
+\(w\ge\delta_0+\Lambda p\tau/(m\delta_0)\ge2\sqrt{\Lambda p\tau/m}\),
+with equality at \(\delta_0=\sqrt{\Lambda p\tau/m}\). Insert in (1) and
+drop \(\delta_1\ge\Lambda>0\): \(F\tau^2/2m>2\sqrt{\Lambda p\tau/m}\).
+Squaring, \(F^2\tau^4/4m^2>4\Lambda p\tau/m\), so
+\(F^2\tau^3>16m\Lambda p\), which is the displayed bound; the area
+follows from \((3F/v)A=\tau\Delta E\). \(\square\)
+
+The constant is protocol dependent, the form is not. A three-mark
+protocol with no prepared velocity, marks at \(0,\tau/2,\tau\) and the
+mid-chord test \(y(\tau/2)-\tfrac12[y(0)+y(\tau)]\), has deviation
+\(s(\tau)/4\); the first recoil cancels in the chord test, the second
+enters as \(\Delta\tau/4m\), the three resolutions enter with weights
+\(1,\tfrac12,\tfrac12\), and the same minimization gives
+\(F^2\tau^3>128m\Lambda p\), that is \(\tau\Delta E>64\Lambda p\). Any
+protocol built from marks obeying M1--M3 gives
+\(\tau\Delta E>\kappa\Lambda p\) with a positive number \(\kappa\) fixed
+by the protocol, because (Theorem A) \(\Lambda p\) is the only action
+the model contains. The action-scaled product carries the universal
+floor; the geometric area carries the extra factor \(v/F\). This is the
+Q14 gate seen from Newton's side, and the reason the anchor's conversion
+factor \(3F/v\) is indispensable.
+
+\textbf{Theorem 2 (insertion mesh).} Under M1--M3, in the insertion
+protocol the force is recorded on a step only if \(\tau_n>\tau_*\),
+where
+
+\[\tau_*=\left(\frac{16\,m\Lambda p}{F^2}\right)^{1/3},\qquad
+n<n_*=\frac{\tau}{\tau_*}=\tau\left(\frac{F^2}{16m\Lambda p}\right)^{1/3},\]
+
+and at the finest recording mesh each step's area is
+\(A(\tau_*)=8v\Lambda p/3F\). Over \(k\) consecutive steps of a finer
+mesh the comparison becomes decidable exactly when \(k\tau_n>\tau_*\).
+
+\emph{Proof.} Theorem 1 applied to one step of duration \(\tau_n\), then
+to the duration \(k\tau_n\), using the marks at the ends and ignoring
+the interior marks, which the observer may make with \(\delta\to\infty\)
+and hence zero recoil. \(\square\)
+
+Below \(\tau_*\) every recorded step is consistent with inertial motion.
+The polygon of Proposition I can be refined past \(n_*\), and its
+vertices still carry Newton's impulses \(F\tau_n\) in the geometry, but
+no mark shows them: the body is free at every recorded instant and
+curved over any \(k>n/n_*\) of them. Zeno's arrow and Democritus' cone
+(I003, remark 1) receive one answer: adjacent recorded instants are
+equal, adjacent recorded slices are equal, and the difference lives in
+the unrecorded accumulation over more than \(n/n_*\) of them.
+
+\hypertarget{the-countermodel-determinate-fits}{%
+\subsection{5. The countermodel: determinate
+fits}\label{the-countermodel-determinate-fits}}
+
+Keep M1 and M2 and take the fits and the inflexion as Newton took them,
+as determinate dispositions: the corpuscle's fate at the body is a
+function of its phase and its distance from the edge, and the corpuscle
+then travels freely to a screen at distance \(D\), where a second mark
+of resolution \(\delta_s\ge\Lambda\) records its landing. The
+corpuscle's transverse momentum after the mark is then fixed by the two
+positions to within \(p(\delta+\delta_s)/D\), and by momentum
+conservation so is the impulse it left in the body. Since \(D\) is free,
+the recoil width \(\Delta\to0\) at fixed \(\delta\ge\Lambda\): M3 fails.
+The two-mark protocol then needs only \(s(\tau)>2\Lambda+\delta_1\),
+roughly \(F\tau^2>6m\Lambda\), and
+
+\[\tau\Delta E>\frac{F^2}{2m}\left(\frac{6m\Lambda}{F}\right)^{3/2}
+=\sqrt{54\,mF\Lambda^3}\longrightarrow0\quad(F\to0),\]
+
+so the floor over admitted forces and masses is zero, as Theorem A(i)
+requires of a model whose only fixed constant is a length. This is the
+same closure the classical apparatus results record: position and
+momentum records with independent precisions close the canonical product
+(C068--C123, \href{action-scale-obstructions.md}{synthesis}), and the
+force lens of C070--C071, whose canonical area \(2F^2\ell^3/3m\) is the
+same combination as \(\tau\Delta E\), closes with the delay. Theorem 1
+is the statement that this lens cannot be resolved below a fixed
+multiple of \(\Lambda p\) once M3 holds.
+
+The countermodel isolates the premise. Ignorance of the fit before the
+mark, which Newton's theory grants, is removed by the far screen and is
+too weak. M3 therefore means that no record, before or after, fixes both
+where the corpuscle struck within \(\delta\) and what impulse it left
+within \(\Lambda p/\delta\): the delivered impulse is not a function of
+the records. In later language this is the complementarity of the
+probe's position and momentum records. A Newton-age physicist can state
+M3, can see from the fits that it is at least true of all prior records,
+and cannot derive it; Newton himself held the negation. Everything in
+Theorems 1--2 follows from M3 with Newton's other materials, and nothing
+in them follows without it. This is the precise sense in which the
+Newton-age argument for \(h>0\) exists: it is one premise long, and the
+premise is the one Newton's determinism denies.
+
+\hypertarget{newtons-numbers-universality-and-the-quantum-value}{%
+\subsection{6. Newton's numbers, universality and the quantum
+value}\label{newtons-numbers-universality-and-the-quantum-value}}
+
+Newton had \(\Lambda\) to three figures and had no way to measure \(p\),
+so his floor \(\kappa\Lambda p\) is positive and unknown. He also had
+the colour dependence of \(\Lambda\): the ring intervals for the utmost
+red and utmost violet are ``as 14 to 9'' (Book II Part I, Obs. 13,
+passage), and Query 29 makes the red corpuscles the biggest and the
+violet the least (passage). If bigger means more impulse, \(\Lambda p\)
+increases toward the red and the floor over the spectrum is its violet
+value; if size and impulse are unrelated the floor is
+\(\min_{\rm colour}\Lambda p\), positive because the spectrum is
+bounded. In Q14's terms the fixed constants \(\{\Lambda_i,p_i\}\) give
+the action products \(\Lambda_ip_j\) and the dimensionless ratios
+\(\Lambda_i/\Lambda_j\), \(p_i/p_j\), so Theorem A(ii) allows any
+positive function of them; Newton-age data fix its positivity and not
+its value or constancy.
+
+Universality across colours is what Planck's constant adds and what the
+Newton-age argument cannot reach. With \(p=h/\lambda\) and
+\(\Lambda=\lambda/2\) (the fits alternate every half wavelength),
+\(\Lambda p=h/2\) for every colour, and Theorem 1 reads
+\(\tau\Delta E>4h\). The quantum benchmark of N01 is the same
+combination with a different criterion: perfect discrimination of the
+closed-loop phase needs
+\(|\Delta S_{\rm loop}|=\tfrac43\tau\Delta E\ge\pi\hbar\), that is
+\(\tau\Delta E\ge3h/8\). The factor between \(4h\) and \(3h/8\) is the
+difference between worst-case intervals and optimal quantum
+discrimination, and between an open two-mark record and a closed
+interferometric one. Both say that the inertial--fall lens must carry an
+action-scaled product of order \(h\) before it is a distinguishable
+alternative.
+
+\hypertarget{where-hto0-and-h0-both-hold}{%
+\subsection{\texorpdfstring{7. Where \(h\to0\) and \(h>0\) both
+hold}{7. Where h\textbackslash to0 and h\textgreater0 both hold}}\label{where-hto0-and-h0-both-hold}}
+
+Newton's limit lives in the geometry of the unmarked curve, where
+Proposition 1 shows it is sound and C027 shows the chord error closes as
+\(|\pi|^2\) at every mesh, marks or no marks. The floor lives in the
+marks. The two are compatible because the force is a ratio approached
+from durations above \(\tau_*\), where the comparison is recordable, and
+because Lemma I's ``ultimately equal'' quantities become literally equal
+for every record once the mesh passes \(\tau_*\). Below that mesh
+Berkeley's departed quantities are the sagitta and the interval of a
+step that no mark can distinguish from free motion, and their ratio is
+still \(F\) because the geometry does not depend on being marked.
+
+For I003 this places the two remarks. Remark 2, the obstruction to
+mapping time to positions as a double limit, is Theorem 1 and needs M3.
+Remark 3, an \(h\) that controls the convergence, is Theorem 2 and the
+mesh \(\tau_*\): the marked polygon converges to Newton's curve on
+meshes above \(\tau_*\) and stops carrying information below it. The
+area-rate floor \(GM/2c\) noted earlier in STATE is a rate and gives no
+area floor, since \(GM\tau/2c\to0\); it is set aside.
+
+\hypertarget{consequence-for-state}{%
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
+
+N02 asked for one non-quantum consistency principle for joint
+time/position refinement of the Galileo comparison, its cut state and
+composition, and either a zero-action contradiction or an exact
+countermodel. The principle is M3, stated for marks; the cut state at a
+mark is the pair of intervals \((\delta,\Delta)\); composition is the
+worst-case propagation of Section 2; the contradiction with zero-action
+refinement is Theorems 1--2; the countermodel is Section 5. The
+principle turns out to be an added indeterminacy premise, statable in
+Newton's terms and denied by Newton, and it is the entire difference
+between a floor and none; Newtonian mechanics and Newton's optics
+contain no consistency requirement that yields it. The user's necessity
+question is thereby sharpened to a question about M3 alone.
+
+Next: (a) ask whether M3 has a consistency derivation of its own, for
+instance from requiring that marks on probes obey the same premise as
+marks on bodies without a far-screen loophole, which is the point where
+a non-commuting record structure must enter (G07's ``two scale-free
+non-commuting structures''); (b) state Theorem 1 for a general force law
+and for the C070--C071 lens, where the same \(F^2\tau^3/m\) combination
+already appears, so that the floor is a phase-space statement rather
+than a parabola statement; (c) an Opticks source companion in
+\texttt{docs/classics/} for Props. XII--XVIII, Obs. 13 and Queries 1 and
+29, which this note cites from the 1730 text without one.
+\end{document}

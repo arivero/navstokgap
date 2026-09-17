@@ -8,6 +8,15 @@ wins. Explicit user instructions take precedence over everything here.
 
 # The goal
 
+User direction, 2026-09-17: the $SU(3)$ attack below is stuck at the
+map in [the position note](notes/mass-gap-position.md), and the active
+goal returns to the Planck gap: a logical argument, from Newton-age
+materials, that $h>0$ in the Galileo comparison where Newton took the
+inertial--parabola area to zero. `research/STATE.md` carries the queue;
+[the mark-floor note](notes/newton-mark-floor.md) is the current
+result. The paragraphs that follow record the 2026-09-16 direction and
+remain valid for any mass-gap step that is taken.
+
 User direction, 2026-09-16: the goal is a proof of the Yang--Mills
 existence and mass-gap conjecture
 ([digest](notes/millennium-problem-definitions.md)), **narrowed by the
