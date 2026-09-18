@@ -151,6 +151,43 @@ and instruments outside the momentum-transfer class.
    centripetal force at the second, which is unavailable until uniform
    motion needs no account; the one ancient circular case, the firebrand
    circle, is used for sampling instead.
+
+   **Three more primary sources, 2026-09-18**, recalled from model weights
+   and then verified against the texts. **Plutarch**, *De facie* 923C--D:
+   the moon "saved from falling by its very motion and the rapidity of its
+   revolution, just as missiles placed in slings are kept from falling by
+   being whirled around in a circle". This overturns the first version of
+   the arrow-and-sling note, which said the sling is absent from ancient
+   argument; the note is corrected and now explains why the exception
+   stayed isolated, namely that the inference runs the opposite way and
+   that for a heavenly body the natural motion was already circular.
+   Newton's Classical Scholia name Plutarch, so the sling sat in a text he
+   was mining for authority. **Diogenes Laertius VII.158**: Stoic hearing
+   as a vibration that "spreads spherically and then forms waves", with the
+   water-ring image that also carries Praśastapāda's *vīcī-santāna*, so the
+   model is attested independently in both traditions. **Epicurus**,
+   *Letter to Herodotus* 61--62 in Diogenes Laertius X: atoms at equal
+   speed in the void, and continuity of motion "appreciated by sense" while
+   the times below it are "appreciable only by the reason" — the closest
+   ancient statement to what the theorems say about records, and it names
+   the fallacy of extrapolating observed continuity downward.
+
+   Secondary literature added to the bibliography at metadata level and
+   listed in the paper's obligations: McGuire and Rattansi 1966 on the
+   scholia; Sorabji 1983, von Rospatt 1995, Dhanani 1994 and Lloyd and
+   Sivin 2002 on the ancient comparison and its method; De Gandt 1995,
+   Guicciardini 2009 and Bertoloni Meli 2006 on the *Principia*; Clagett
+   1959 on impetus; Caves et al. 1980, Anandan and Aharonov 1990,
+   Giovannetti, Lloyd and Maccone 2004, Ozawa 2003, Helstrom 1976,
+   Robertson 1929, von Neumann 1932 and Micchelli and Rivlin 1977 on the
+   foundations side. **Not yet incorporated, recalled but unverified:**
+   Diodorus Cronus in Sextus Empiricus *Adv. Math.* X, the Greek twin of
+   Vasubandhu's denial of motion; Empedocles on light travelling, reported
+   and rejected at Aristotle *De anima* II.7 and *De sensu* 446a, which
+   would fill the light-takes-time gap on the Greek side; Aristotle *De
+   caelo* I.2 on natural circular motion; Theophrastus *De sensibus* on the
+   Democritean differentiae indexed to the senses; Vitruvius V.3 and
+   Boethius I.14 on the water-ring acoustics.
 2. **Historiography, read rather than cited.** Shapiro 1993 on the theory
    of fits, where the central historical claim must be tested; Sabra 1981
    on the optical context; Guicciardini 1999 on the limit arguments;

@@ -386,6 +386,25 @@ positions, each held here in a primary witness:
   *adharma*. These substances push nothing; they are the standing condition
   without which motion could not occur, and space is given the separate
   office of accommodation.
+- **Sound as spreading waves** (Diogenes Laertius VII.158, reporting Stoic
+  doctrine). Hearing occurs when the air between is struck, "a vibration
+  which spreads spherically and then forms waves and strikes upon the ears,
+  just as the water in a reservoir forms wavy circles when a stone is thrown
+  into it". The same water-ring image carries the Vaiśeṣika *vīcī-santāna*,
+  so the model is attested independently in both traditions.
+- **Continuity that fails below sense** (Epicurus, *Letter to Herodotus*
+  61--62, in Diogenes Laertius X). Atoms travel at equal speed through the
+  void, and in aggregates they "move in different directions in times so
+  short as to be appreciable only by the reason, but frequently collide
+  until the continuity of their motion is appreciated by sense"; the
+  assumption that continuity persists below observation "is not true in the
+  case before us".
+- **The sling, applied to an orbit** (Plutarch, *De facie in orbe lunae*
+  923C--D, c. 100 CE). "The moon is saved from falling by its very motion
+  and the rapidity of its revolution, just as missiles placed in slings are
+  kept from falling by being whirled around in a circle", with 923D adding
+  that "each thing is governed by its natural motion unless it be diverted
+  by something else".
 
 Lemmas X and XI perform exactly the operation these positions dispute.
 The scholia cite the ancients for what Book III concludes and leave them
@@ -464,13 +483,29 @@ rung of a ladder whose first rung is Zeno's.
 
 ### Why the arrow and not the sling
 
-One feature of the list needs saying, because it looks like an omission.
-Every ancient entry is rectilinear or static, while the case Newton uses to
-**define** centripetal force is the sling: Definition V has the stone
-whirled about in a sling endeavouring to recede from the hand, and names
-the force that "retains it in its orbit" after the planets "perpetually
-drawn aside from the rectilinear motions, which otherwise they would
-pursue". Theorem 5 explains the difference. The ancient question is the
+One feature of the list needs saying. Almost every ancient entry is
+rectilinear or static, while the case Newton uses to **define** centripetal
+force is the sling: Definition V has the stone whirled about in a sling
+endeavouring to recede from the hand, and names the force that "retains it
+in its orbit" after the planets "perpetually drawn aside from the
+rectilinear motions, which otherwise they would pursue".
+
+The exception is Plutarch, and it is a pointed one. *De facie* 923C has the
+moon kept from falling "just as missiles placed in slings are kept from
+falling by being whirled around in a circle", which is Newton's apparatus
+applied to Newton's case a millennium and a half earlier. The inference
+runs the other way: for Plutarch the whirling *prevents* the fall, so speed
+sustains; for Newton the cord *pulls the stone inward*, and what it diverts
+is a straight line that would need no cause. The same object supports
+opposite accounts, and what separates them is which motion is taken to be
+free. Plutarch's next clause, that "each thing is governed by its natural
+motion unless it be diverted by something else", is as near as the passage
+comes, with natural motion still doing the work inertia later does. Newton
+had read him: the Classical Scholia name Plutarch among the ancients said
+to have known the doctrine of gravitation, so the sling was available in a
+text he was mining for authority while writing the propositions it models.
+
+Theorem 5 explains why the exception stayed isolated. The ancient question is the
 first rung, whether the thing moves at all, with position as the only
 nuisance. The sling is the second rung, whether a force acts, with uniform
 motion as a further nuisance, and that rung cannot be stated until
@@ -507,6 +542,12 @@ it mimics. The [companion note](arrow-not-sling.md) sets this out.
   displayed, only inferred from enough instants together. The theorem
   declines his further step from the records to the world, and Theorem 5(i)
   measures exactly how many instants are needed.
+- **Epicurus.** His is the closest ancient statement to what the theorems
+  say about records. Motion presents itself as continuous to sense and is a
+  succession below it, and he names the fallacy of extrapolating the
+  observed continuity downward. He draws the boundary where sense fails;
+  Theorem 5 draws it at a mesh computed from the mark cost, which is the
+  difference between a threshold that is reported and one that is derived.
 - **Umāsvāti.** The Jain medium is the one ancient category with no
   counterpart in the theorem, and its absence is informative. Theorems 2
   and 5 need no medium: what they price is the mark, not the motion.
@@ -548,7 +589,11 @@ denied in the single place where he had a measurement.
 mark the trajectory. A protocol that prepares once, waits and measures
 once faces a different bound. In that case the two hypotheses differ by
 the phase-space displacement $(-F t^2/2m,\ Ft)$, whose components have
-product exactly $\tau\Delta E$, and Mandelstam--Tamm with Helstrom gives
+product exactly $\tau\Delta E$, and Mandelstam--Tamm in the geometric form
+of [Anandan and Aharonov](https://doi.org/10.1103/PhysRevLett.65.1697)
+(PRL **65**, 1697, 1990), with Helstrom's
+discrimination bound (*Quantum Detection and Estimation Theory*, 1976),
+gives
 
 $$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon,
 \qquad\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar^2}{4A},$$
@@ -566,10 +611,14 @@ non-Gaussian preparation of unbounded extent evades it.
 
 **Prior art.** The combination $F^2\tau^3\gtrsim m\hbar$ is the standard
 quantum limit for detecting a force on a free mass (Braginsky and
-Khalili, *Quantum Measurement*, 1992), and its status has been disputed
-since Yuen's objection: Caves defended it (PRL **54**, 2465, 1985) and
-Ozawa exhibited a measurement breaking it for free-mass position (PRL
-**60**, 385, 1988). The contribution here is universality over protocols
+Khalili, *Quantum Measurement*, 1992; the canonical statement is Caves,
+Thorne, Drever, Sandberg and Zimmermann, *Rev. Mod. Phys.* **52**, 341,
+1980), and its status has been disputed since Yuen's objection: Caves
+defended it (PRL **54**, 2465, 1985) and Ozawa exhibited a measurement
+breaking it for free-mass position (PRL **60**, 385, 1988). That
+non-Gaussian preparations beat the limit, which is §7's counterexample,
+is stated as a principle by Giovannetti, Lloyd and Maccone (*Science*
+**306**, 1330, 2004). The contribution here is universality over protocols
 with an explicit constant, the exact mark cost of Theorem 4, and the
 identification of the premise. The inequality itself is not new.
 
@@ -585,12 +634,25 @@ kind. No error--disturbance relation is used above.
 Two, both on the history side, and both stated so that a reader can see
 what the present draft rests on.
 
-1. **Historiography, to be read rather than cited.** Shapiro's *Fits,
-   Passions, and Paroxysms* (1993) on the theory of fits and how
-   determinate Newton meant it, which is where §6's central claim must
-   be tested; Sabra's *Theories of Light from Descartes to Newton*
-   (1981) for the optical context of Query 29; Guicciardini's *Reading
-   the Principia* (1999) for what the limit arguments of §2 were for.
+1. **Historiography, to be read rather than cited.** On the *Opticks*
+   side, Shapiro's *Fits, Passions, and Paroxysms* (1993) on the theory of
+   fits and how determinate Newton meant it, which is where §6's central
+   claim must be tested, and Sabra's *Theories of Light from Descartes to
+   Newton* (1981) for the context of Query 29. On the *Principia* side,
+   Guicciardini's *Reading the Principia* (1999) and his *Isaac Newton on
+   Mathematical Certainty and Method* (2009) for what the limit arguments
+   of §2 were for, De Gandt's *Force and Geometry* (1995) directly on the
+   sagitta, and Bertoloni Meli's *Thinking with Objects* (2006) on the
+   sling and the pendulum as objects to think with. On the scholia,
+   McGuire and Rattansi, "Newton and the 'Pipes of Pan'" (1966), beside
+   Casini and Mosley. On the ancient comparison, Sorabji's *Time,
+   Creation and the Continuum* (1983), which treats Zeno, Diodorus
+   Cronus, Epicurean minima and kalām atoms together; von Rospatt (1995)
+   on momentariness; Dhanani (1994) on kalām atomism and the Indian
+   influence question; and Lloyd and Sivin's *The Way and the Word*
+   (2002) as the methodological standard that protects §7 from the charge
+   of naive parallelism. Clagett (1959) for impetus, where Philoponus'
+   *rhopē* is the Western counterpart of *saṃskāra*.
 2. **Editions.** The *Opticks* passages come from a transcription of the
    1730 fourth edition and should be cited from that printing; the
    *Principia* passages should be cited from Cohen and Whitman in place
