@@ -361,10 +361,37 @@ positions, each held here in a primary witness:
 - **The leap and the time-atom** (al-Shahrastani on al-Nazzam; Maimonides,
   *Guide* I.73). The interval is divisible, yet it is crossed by leaps;
   and for the kalam, time is composed of atoms.
+- **The Vaiśeṣika arrow** (*Vaiśeṣikasūtra* 5.1.16--18, layered, c. 100
+  BCE--200 CE, attribution to Kaṇāda traditional). The arrow's particular
+  conjunctions are *ayugapat*, non-simultaneous, and that is the ground of
+  the plurality of its motions; impulsion causes only the **first** motion,
+  and each later one is caused by the *saṃskāra* deposited by the motion
+  before it, until the impression is spent and gravity takes over.
+- **Sound produced from sound** (*Vaiśeṣikasūtra* 2.2.36--37 in the
+  Candrānanda recension, 2.2.31 in the vulgate). Sound arises from
+  conjunction, from disjunction, and from sound, and is non-eternal, so what
+  reaches the ear is a later member of a generated chain. Vātsyāyana's
+  *Nyāyabhāṣya*, within the window at about 400 to 450 CE, argues the point
+  from observation: the axe-blow is still heard at a distance after the
+  axe-wood contact has ceased.
 
 Lemmas X and XI perform exactly the operation these positions dispute.
 The scholia cite the ancients for what Book III concludes and leave them
 silent on how Book I proceeds.
+
+The last two entries differ in kind from the rest, and they matter most
+here. The Greek and Chinese items are paradoxes about division, which set
+a problem. The Vaiśeṣika sūtras state a **positive theory of
+propagation**: motion is a succession of numerically distinct events, each
+carried to the next by a quantity the previous one deposits, and
+transmission through a medium is a chain in which what arrives is a later
+member than what was sent. That is the structure Theorem 2 quantifies. Its
+protocol-universality holds because the signal is a phase-space path whose
+total variation is unchanged by subdivision, which is the modern form of
+the claim that impulsion supplies only the first motion while the
+impression carries the rest. An ancient author had therefore already
+framed propagation as a bounded succession rather than a continuous
+traversal, and Newton's classical preface reached for none of it.
 
 ### The hierarchy the ancient premises generate
 
@@ -422,6 +449,13 @@ rung of a ladder whose first rung is Zeno's.
   $\tau_{\rm arrow}=8z^2\kappa/(mv^2)$ every mark is consistent with
   rest. Aristotle's diagnosis explains why, since a now carries no
   record and every datum is a window.
+- **The Vaiśeṣika arrow and the chain of sounds.** These supply the
+  positive half the Greek material lacks. Theorem 5's ladder is their
+  statement made quantitative: the succession is real, each step carries a
+  bounded quantity to the next, and reading any one step costs $\kappa$.
+  The sound chain is the case where an ancient author asserts a finite
+  propagation time and argues it from an experiment, which is the premise
+  Newton's determinate fits deny for light.
 - **Democritus and Chrysippus.** The dilemma about adjacent sections
   dissolves with resolution alone, and case (iii) shows it needs no
   action floor. Adjacent recorded sections are equal, and the inequality

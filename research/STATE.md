@@ -110,7 +110,22 @@ and instruments outside the momentum-transfer class.
 
 ## Remaining before submission
 
-1. **Historiography, read rather than cited.** Shapiro 1993 on the theory
+1. **Done (2026-09-18): Asian propagation sources.** A research round in
+   Chinese and Sanskrit added the
+   [Vaiśeṣikasūtra companion](../docs/classics/Vaisesikasutra_propagation_GRETIL.md):
+   5.1.16--18 make the arrow's flight many motions, the first from
+   impulsion and each later one from the $saṃskāra$ the previous deposited;
+   2.2.36--37 derive sound from sound and make it non-eternal; 4.1.6--7 put
+   the atom below perception. Verified character by character against
+   GRETIL. This is the first source here that states a positive theory of
+   propagation rather than a paradox, and §7 of the paper now says so.
+   Unverified leads recorded in the companion: Vātsyāyana's *Nyāyabhāṣya*
+   on finite sound transmission and on the stopping rule for division;
+   Praśastapāda's *vega*, which sits at or past the 500 CE boundary.
+   Four priority topics returned nothing and stay open: Buddhist
+   momentariness, Jain *dharma* and *adharma* as media of motion, Chinese
+   *qi* and *ganying*, and any pre-500 CE Asian claim that light takes time.
+2. **Historiography, read rather than cited.** Shapiro 1993 on the theory
    of fits, where the central historical claim must be tested; Sabra 1981
    on the optical context; Guicciardini 1999 on the limit arguments;
    Casini 1984 and Mosley 2024 on the Classical Scholia, both verified at
@@ -120,15 +135,15 @@ and instruments outside the momentum-transfer class.
    which withdraws the earlier heuristic that it is the arrow rotated
    into Euclidean time, and the mesh is no atom of time, since it moves
    with the force and the mass.
-2. **Editions.** Cite the 1730 *Opticks* printing rather than the
+3. **Editions.** Cite the 1730 *Opticks* printing rather than the
    transcription, and Cohen--Whitman for the *Principia* in place of the
    Motte text.
-3. **Theorem 4 beyond momentum transfer**, where Ozawa's instruments have
+4. **Theorem 4 beyond momentum transfer**, where Ozawa's instruments have
    $[\hat N,\hat D]\ne-i\hbar$.
-4. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$
+5. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$
    against the Dirichlet energy of $T$, so the general statement bounds a
    norm of $P''$ from below.
-5. **Constants.** Close the gap between the worst-case form ($9$ to
+6. **Constants.** Close the gap between the worst-case form ($9$ to
    $36$), the statistical form ($9z^2$) and the single-shot aperture
    form ($\arccos$ versus $1-2\epsilon$).
 
