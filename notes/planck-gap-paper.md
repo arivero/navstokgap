@@ -399,6 +399,20 @@ positions, each held here in a primary witness:
   until the continuity of their motion is appreciated by sense"; the
   assumption that continuity persists below observation "is not true in the
   case before us".
+- **Least partless bodies** (Diodorus Cronus, reported at Sextus Empiricus,
+  *Pyrrhoneion Hypotyposeis* III.32). Listed in the doxography of material
+  principles between the atoms of Democritus and Epicurus and the unjointed
+  masses of Heraclides. Diodorus argued from those minima that "a thing
+  never is moving, but it has moved", the Greek twin of Vasubandhu's *na
+  gatiḥ* three centuries earlier; the formula is at *Adversus Mathematicos*
+  X and is cited here without being read.
+- **The voice as spherical waves** (Vitruvius, *De architectura* V.3.6--7,
+  c. 25 BCE). The voice is propelled "by an infinite number of circles
+  similar to those generated in standing water when a stone is cast
+  therein", but "whereas the circles in water only spread horizontally, the
+  voice, on the contrary, extends vertically as well as horizontally", so
+  the water-ring image is corrected into a spherical wave by argument from
+  the disanalogy.
 - **The sling, applied to an orbit** (Plutarch, *De facie in orbe lunae*
   923C--D, c. 100 CE). "The moon is saved from falling by its very motion
   and the rapidity of its revolution, just as missiles placed in slings are
@@ -505,7 +519,14 @@ had read him: the Classical Scholia name Plutarch among the ancients said
 to have known the doctrine of gravitation, so the sling was available in a
 text he was mining for authority while writing the propositions it models.
 
-Theorem 5 explains why the exception stayed isolated. The ancient question is the
+Theorem 5 explains why the exception stayed isolated, and Aristotle supplies
+the other half of the reason. *De caelo* I.2 makes uniform circular motion
+the natural motion of the aether, needing no cause, which is the exact
+inverse of Definition V. For the heavens, then, curved motion was the default
+and straight motion the anomaly, so the sling illustrates a conclusion
+already held rather than posing a problem. The claim that the ancients treat
+rest as natural holds below the moon and is incomplete above it; the
+reference is at metadata level here. The ancient question is the
 first rung, whether the thing moves at all, with position as the only
 nuisance. The sling is the second rung, whether a force acts, with uniform
 motion as a further nuisance, and that rung cannot be stated until
@@ -622,8 +643,22 @@ is stated as a principle by Giovannetti, Lloyd and Maccone (*Science*
 with an explicit constant, the exact mark cost of Theorem 4, and the
 identification of the premise. The inequality itself is not new.
 
+**The classical theorem belongs to a literature it does not cite.**
+Worst-case recovery of a linear functional from noisy linear data is optimal
+recovery in the sense of Micchelli and Rivlin (1977), and the apparatus
+series this programme built, together with Theorem 1's worst-case form, are
+results of that kind; information-based complexity (Traub, Wasilkowski and
+Woźniakowski, 1988) is the same setting. The invariant-test step of
+Theorem 2 is standard (Lehmann and Romano). A referee from either community
+will ask why these go unmentioned, and the honest answer is that the
+theorems were derived without them.
+
 **Instruments outside the momentum-transfer class.** Theorem 4 holds
-where $[\hat N,\hat D]=-i\hbar$. Ozawa's counterexamples to the naive
+where $[\hat N,\hat D]=-i\hbar$. Its coupling is von Neumann's (1932), its
+inequality Robertson's (1929), and its ancestor the Heisenberg microscope
+(1927); Bohr and Rosenfeld (1933) and Araki and Yanase (1960) are where
+limits of this kind from field measurability and from conservation laws are
+set. Ozawa's counterexamples to the naive
 Heisenberg product concern instruments where that commutator differs,
 and a general class would need the proved calibration relation of Busch,
 Lahti and Werner (PRL **111**, 160405, 2013) or an argument of another

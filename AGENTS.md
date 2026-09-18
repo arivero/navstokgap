@@ -59,6 +59,31 @@ structures; a floor on transverse phase-space area produces the
 matrix-model gap), and the Galileo area/necessity question, which now
 serves the main goal rather than replacing it.
 
+# The working frame: the scholion Newton did not write
+
+User direction, 2026-09-18. Newton drafted Classical Scholia to Book III,
+the propositions about gravitation, and never printed them; Gregory's 1702
+preface is the surviving printed witness. He wrote **no such scholia for
+Book I**, where the method lives: the vanishing sagitta of Lemmas X and XI,
+the polygon of Proposition I, the limit that makes a force a ratio. That
+absence is this project's opening. The ancient dispute that bears on Book I
+is the one about division and the cut, and Newton passed it over while
+collecting ancient authority for Book III's results.
+
+So the classics work here is not decoration on a theorem, and it is not a
+source hunt for its own sake. **It is the Book I scholion, supplied.** For
+each ancient position the obligations are the same three: quote the text in
+its own script from a named edition, say what it commits its author to, and
+say what the modern theorem does with that commitment, including where the
+theorem declines to follow. An entry earns its place by changing what the
+paper can claim, not by resembling something.
+
+Two standing cautions. Resemblance is not transmission: record convergence
+as convergence and name what evidence would settle it, as the Laozi triad
+entry does. And the reconstruction has limits worth stating: where an
+ancient category has no counterpart in the theorem, as the Jain medium of
+motion does not, say so rather than forcing a match.
+
 # How to work
 
 Be a researcher. Propose mechanisms, compare them, develop the strongest into

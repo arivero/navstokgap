@@ -188,6 +188,28 @@ and instruments outside the momentum-transfer class.
    caelo* I.2 on natural circular motion; Theophrastus *De sensibus* on the
    Democritean differentiae indexed to the senses; Vitruvius V.3 and
    Boethius I.14 on the water-ring acoustics.
+
+   **Completed the same day.** Three more verified and added in
+   [one companion](../docs/classics/Greek_propagation_minima_senses.md):
+   Theophrastus, *De sensibus*, where Democritus "has no uniform account of
+   all the sensory objects: some he distinguishes by the size of their
+   atoms, others by the shape, and a few by the order and position", which
+   cuts against the Laozi parallel from the Greek side because the mapping
+   is inconsistent there too; Sextus, *PH* III.32, certifying Diodorus
+   Cronus's least partless bodies; and Vitruvius V.3.6--7, correcting the
+   water-ring image into a spherical wave by argument from the disanalogy.
+   Aristotle *De caelo* I.2 is now cited in the paper as the celestial half
+   of the reason the sling stayed isolated. Twenty further bibliography
+   entries added, covering the *Principia* historiography, the impetus and
+   transmission literatures, the Buddhist and Jain monographs, the
+   foundations references, and optimal recovery with information-based
+   complexity, which is the literature the classical theorem belongs to and
+   did not cite. **Still unverified and cited only:** Diodorus's motion
+   formula at Sextus *AM* X.85--120, Empedocles on light travelling at
+   Aristotle *De anima* II.7 and *De sensu* 446a, Lucretius IV on the
+   *simulacra*, Boethius I.14, Simplicius on Epicurean jerky motion,
+   Philoponus and Hipparchus on impetus, and Gauḍapāda's
+   *Māṇḍūkyakārikā* IV, the locus classicus of the firebrand.
 2. **Historiography, read rather than cited.** Shapiro 1993 on the theory
    of fits, where the central historical claim must be tested; Sabra 1981
    on the optical context; Guicciardini 1999 on the limit arguments;
