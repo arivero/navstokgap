@@ -1,0 +1,102 @@
+# Why the ancients argued about the arrow and not the sling
+
+The ancient debate on motion is almost entirely rectilinear. Zeno's arrow,
+the Vaiśeṣika arrow, Vasubandhu's denial of passage, Hui Shi's stick and the
+Mohist shadow all take straight-line or static cases, while the sling and
+stone, which is where Newton **defines** centripetal force, is missing from
+the philosophical argument even though slings were ordinary objects. The
+absence is systematic, and the reason is that the ancient question and
+Newton's are at different rungs of the same ladder: the ancients asked
+whether motion is possible at all, which is a first-order question about
+succession, and Newton asked what sustains a departure from straight-line
+motion, which is second order and becomes askable only once inertia is
+assumed. Section 3 gives the one ancient case that is genuinely circular,
+the whirled firebrand, and shows it was used for a third purpose again:
+neither possibility nor force, but the difference between what appears and
+what is. Lateral to the main argument; no ledger promotion.
+
+## 1. Newton's definition uses the sling
+
+Definition V of the *Principia* introduces the concept with the stone, in the
+Motte translation held in this repository:
+
+> A stone, whirled about in a sling, endeavours to recede from the hand that
+> turns it; and by that endeavour, distends the sling, and that with so much
+> the greater force, as it is revolved with the greater velocity, and as soon
+> as ever it is let go, flies away. That force which opposes itself to this
+> endeavour, and by which the sling perpetually draws back the stone towards
+> the hand, and retains it in its orbit, because it is directed to the hand
+> as the centre of the orbit, I call the centripetal force.
+
+The sentence before it names the planets, "perpetually drawn aside from the
+rectilinear motions, which otherwise they would pursue". So the sling is the
+laboratory model of Proposition I, and the clause "which otherwise they would
+pursue" is the load-bearing one: the straight line is what happens by
+default, and only the deviation needs a cause.
+
+## 2. The ladder, and why the ancients stood on its first rung
+
+Theorem 5 of the [paper](planck-gap-paper.md) makes the difference exact. For
+a signal that is an $n$-th order departure, with the lower orders unknown and
+therefore nuisance, the quantity bounded below is
+$m\,(P^{(n)})^2\,\tau^{2n-1}\gtrsim\kappa$:
+
+| Rung | Question | Nuisance | Bound |
+| --- | --- | --- | --- |
+| $n=1$ | Is it moving at all? | position | $mv^2\tau\ge8z^2\kappa$ |
+| $n=2$ | Is a force acting? | position and velocity | $F^2\tau^3/m\ge18z^2\kappa$ |
+
+Zeno, the Vaiśeṣika sūtras and Vasubandhu are all at $n=1$: the thing in
+dispute is whether the arrow moves, and the unknown to be beaten is merely
+where it is. The sling is at $n=2$, and so is Galileo's comparison and all of
+Newton's Book I. The second rung cannot even be **stated** without treating
+uniform motion as needing no account, because otherwise curved motion is not
+more puzzling than straight motion and there is no distinguished thing for a
+centripetal force to explain. Ancient physics on the whole treats rest as the
+natural state, so the second rung is not available to it, and the case that
+would exhibit it has no work to do.
+
+The Vaiśeṣika comes closest to opening it. VS 5.1.17 gives impulsion the
+**first** motion only and hands the rest to the impression the previous
+motion deposits, so the continuation of motion is already not being charged
+to a continuing push. What is missing is the further step that a *straight*
+continuation is free while a *curved* one is not, and without that step the
+sling is an ordinary event rather than a problem.
+
+## 3. The one circular case, used for a third purpose
+
+Indian sources do have a whirled object: the firebrand circle,
+*alātacakra*, the ring of fire seen when a burning stick is swung. Vasubandhu
+uses it in the [Abhidharmakośabhāṣya](../docs/classics/Abhidharmakosabhasya_motion_atoms_GRETIL.md),
+Pradhan 189.23--24, arguing that because contact with the parts is
+successive, the cognition of a whole is really a cognition of the parts,
+*avayaveṣv eva tad-buddhir alātacakravat*, "the awareness is of the parts
+only, as with the firebrand circle". At Pradhan 33.9 the same image appears
+with *āśuvṛttyā*, "by rapid action", in asking whether the eye grasps objects
+of its own size. The firebrand is therefore an argument about **sampling**:
+a rapid succession presents itself as a continuous extended thing, and the
+continuity is the observer's.
+
+That is a third use, and for this programme it is the most interesting of the
+three. It is the ancient form of the point Theorem 5 makes about records
+rather than about the world: below the mesh a succession is indistinguishable
+from the continuous object it mimics, and above it the succession is
+recoverable. The Buddhist example runs the inference in the direction the
+theorem does not license, from the appearance being a succession to the whole
+being unreal, but the phenomenon it names is exactly the one being measured.
+
+## 4. Consequence for STATE
+
+The case selection in the ancient sources is explained rather than merely
+noted: the arrow is the first rung and the sling the second, and the second
+needs inertia before it becomes a question. The Vaiśeṣika impression is the
+nearest ancient approach to the missing premise. The firebrand supplies the
+one circular example and uses it for sampling, which is the closest ancient
+statement of what Theorem 5 says about records. Section 7 of the paper now
+carries the point in short form.
+
+Open: whether any Greek source argues about the sling rather than merely
+using it, with Ps.-Aristotle *Mechanica* and Aristotle *Physics* VIII.10 on
+projectiles as the places to look; and whether the *alātacakra* appears in
+the Nyāya-Vaiśeṣika commentaries on VS 5.1.16 beside the arrow and the bird,
+which the Upaskāra is reported to do and this collection cannot yet check.

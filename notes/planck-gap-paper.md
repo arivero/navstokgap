@@ -462,6 +462,32 @@ $mv^2\tau$, twice the kinetic energy times the duration, and at $n=2$ it
 is $F^2\tau^3/m$, twice $\tau\Delta E$. Newton's comparison is the second
 rung of a ladder whose first rung is Zeno's.
 
+### Why the arrow and not the sling
+
+One feature of the list needs saying, because it looks like an omission.
+Every ancient entry is rectilinear or static, while the case Newton uses to
+**define** centripetal force is the sling: Definition V has the stone
+whirled about in a sling endeavouring to recede from the hand, and names
+the force that "retains it in its orbit" after the planets "perpetually
+drawn aside from the rectilinear motions, which otherwise they would
+pursue". Theorem 5 explains the difference. The ancient question is the
+first rung, whether the thing moves at all, with position as the only
+nuisance. The sling is the second rung, whether a force acts, with uniform
+motion as a further nuisance, and that rung cannot be stated until
+straight-line motion is held to need no account. Ancient physics largely
+does not hold that, so the sling has no work to do in it. The Vaiśeṣika
+comes closest by charging only the first motion to impulsion, and stops
+short of making a straight continuation free and a curved one costly.
+
+Indian sources do supply one whirled object, and use it for a third
+purpose again. The firebrand circle, *alātacakra*, appears in Vasubandhu
+(Pradhan 189.23--24) to argue that because contact with the parts is
+successive, the awareness of a whole is really of the parts, and at
+Pradhan 33.9 with *āśuvṛttyā*, by rapid action. That is an argument about
+sampling, and it is the ancient form of what Theorem 5 says about records:
+below the mesh a succession is indistinguishable from the continuous thing
+it mimics. The [companion note](arrow-not-sling.md) sets this out.
+
 ### What each ancient premise buys
 
 - **Zeno.** His conclusion holds of records: below

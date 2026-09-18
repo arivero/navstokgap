@@ -138,6 +138,19 @@ and instruments outside the momentum-transfer class.
    distinct Indian answers to the arrow and three stopping rules for
    division. Still open: Chinese *qi* and *ganying* as transmitted
    influence, and any pre-500 CE Asian claim that light takes time.
+
+   Two laterals the user raised, both recorded 2026-09-18. **Laozi 11 and
+   14** are in the [companion](../docs/classics/Laozi_ch11_ch14_void_and_triad_wikisource.md):
+   the void as the seat of function, a fourth ancient answer beside the
+   Greek void, Vasubandhu's gaps and the Jain medium; and the sensory
+   triad, whose resemblance to Democritus's three differentiae is
+   convergence of form, since the two recensions swap 夷 and 微 between
+   sight and touch, so the terms were never stably tied to the modalities.
+   **The arrow and the sling** is [its own note](../notes/arrow-not-sling.md):
+   the ancients argue the first rung of Theorem 5 and Newton defines
+   centripetal force at the second, which is unavailable until uniform
+   motion needs no account; the one ancient circular case, the firebrand
+   circle, is used for sampling instead.
 2. **Historiography, read rather than cited.** Shapiro 1993 on the theory
    of fits, where the central historical claim must be tested; Sabra 1981
    on the optical context; Guicciardini 1999 on the limit arguments;

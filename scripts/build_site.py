@@ -38,6 +38,7 @@ TRACKS = [
         "newton-NATP00385-audit", "cut-paradox-two-faces",
         "static-composition-classics", "ancient-cuts-provenance",
         "cone-time-refinement", "i003-double-limit-rigidity",
+        "arrow-not-sling",
     ]),
     ("mass-gap", "The Yang&ndash;Mills mass gap for SU(3)", """The conjecture
      turned into a finite list of named theorems, with explicit dependence on
