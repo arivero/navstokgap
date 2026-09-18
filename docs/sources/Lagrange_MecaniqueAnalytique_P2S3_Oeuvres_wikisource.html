@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lagrange, Mécanique analytique, Part II, Section III: general properties of motion, including least action</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Lagrange, Mécanique analytique, Part II, Section III: general
+properties of motion, including least action</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Lagrange_MecaniqueAnalytique_P2S3_Oeuvres_wikisource.md">Companion source</a></p><blockquote>
+<p>Source: <a
+href="https://fr.wikisource.org/wiki/M%C3%A9canique_analytique/Partie_2/Section_3">Wikisource</a>;
+local HTML rendering
+<code>Lagrange_MecaniqueAnalytique_P2S3_Oeuvres_wikisource.html</code>,
+retrieved 2026-09-08 with <code>action=render</code>. Metadata:
+Joseph-Louis Lagrange, <em>Mécanique analytique</em>, Seconde Partie,
+Section III, Œuvres tome XI, pp. 273–324 (Paris: Gauthier-Villars; date
+as for Section I). Extraction:
+<code>pandoc -f html -t gfm-raw_html</code> on the rendered page; the
+Wikisource header and page links are kept in the transcription. Rights:
+public-domain original text; the Wikisource transcription is CC BY-SA,
+with contributors credited through the source page history.</p>
+</blockquote>
+<h2 id="source-digest">Source digest</h2>
+<p>The text supplies the derivation of the conservation laws and of the
+least-action property from the general formula of dynamics; §VI,
+‘Propriétés relatives à la moindre action’, from paragraph 39, states
+the principle as the stationarity of the sum of m·u·ds under
+conservation of vis viva. Reading level: <code>passage</code> for the
+anchor below and <code>full-read</code> of the transcription for
+structure.</p>
+<h2 id="passage-anchor">Passage anchor</h2>
+<p>Section §VI, paragraph 39: “Nous allons maintenant considérer le
+quatrième principe, celui de la moindre action”; displayed formulae are
+carried as LaTeX in the transcription.</p>
+<h2 id="transcription-wikisource-rendering">Transcription (Wikisource
+rendering)</h2>
+<p><a href="//fr.wikisource.org/wiki/Auteur:Joseph-Louis_Lagrange"
+title="Auteur:Joseph-Louis Lagrange">Joseph-Louis Lagrange</a></p>
+<p><a href="//fr.wikisource.org/wiki/M%C3%A9canique_analytique"
+title="Mécanique analytique">Mécanique analytique</a></p>
+<p><a
+href="//fr.wikisource.org/wiki/Cat%C3%A9gorie:%C3%89diteur_-_Gauthier-Villars"
+title="Catégorie:Éditeur - Gauthier-Villars">Gauthier-Villars</a>, 1868
+(<a href="//fr.wikisource.org/wiki/%C5%92uvres_de_Lagrange"
+title="Œuvres de Lagrange">Œuvres de Lagrange</a>. Tome
+XI, p. 273-324).</p>
+<p>◄  <a
+href="//fr.wikisource.org/wiki/M%C3%A9canique_analytique/Partie_2/Section_2"
+title="Mécanique analytique/Partie 2/Section 2">SECT. II</a></p>
+<p><a
+href="//fr.wikisource.org/wiki/M%C3%A9canique_analytique/Partie_2/Section_4"
+title="Mécanique analytique/Partie 2/Section 4">SECT. IV</a>  ►</p>
+<p>Deuxième partie</p>
+<p>book<a href="//fr.wikisource.org/wiki/M%C3%A9canique_analytique"
+title="Mécanique analytique">Mécanique analytique</a><a
+href="//fr.wikisource.org/wiki/Auteur:Joseph-Louis_Lagrange"
+title="Auteur:Joseph-Louis Lagrange">Joseph-Louis Lagrange</a><a
+href="//fr.wikisource.org/wiki/Cat%C3%A9gorie:%C3%89diteur_-_Gauthier-Villars"
+title="Catégorie:Éditeur - Gauthier-Villars">Gauthier-Villars</a>1868ParisT<a
+href="//fr.wikisource.org/wiki/%C5%92uvres_de_Lagrange"
+title="Œuvres de Lagrange">Œuvres de Lagrange</a>. Tome XIDeuxième
+partieJoseph Louis de Lagrange - Œuvres, Tome 11.djvuJoseph Louis de
+Lagrange - Œuvres, Tome 11.djvu/3273-324 </p>
+<h3 id="section-troisième.">SECTION TROISIÈME.</h3>
+<p>PROPRIÉTÉS GÉNÉRALES DU MOUVEMENT DÉDUITES DE LA FORMULE
+PRÉCÉDENTE.</p>
+<hr />
+<p>1. Considérons un système de corps disposés les uns par rapport aux
+autres et liés ensemble comme l’on voudra, mais sans qu’il y ait aucun
+point ou obstacle fixe qui gêne leur mouvement ; il est évident que,
+dans ce cas, les conditions du système ne peuvent dépendre que de la
+position respective des corps entre eux ; par conséquent, les équations
+de condition ne pourront contenir d’autres fonctions des coordonnées que
+les expressions des distances mutuelles des corps. Cette considération
+fournit, pour le mouvement d’un système, des équations générales
+indépendantes de la nature du système et analogues à celles que nous
+avons trouvées pour l’équilibre dans la première Partie (Sect. III, §
+I).</p>
+<p>§ I. <em>Propriétés relatives au centre de gravité</em>.</p>
+<p>2. Soient <span class="math inline">\(x^{\prime},\, y^{\prime},\
+z^{\prime}\)</span> les coordonnées d’un corps quelconque déterminé du
+système, tandis que <span class="math inline">\(x,\ y,\ z\)</span>
+représentent, en générale, les coordonnées d’un autre corps quelconque.
+Faisons, ce qui est toujours permis,</p>
+<p><span class="math inline">\(x = x^{\prime} + \xi,\qquad y =
+y^{\prime} + \eta,\qquad z = z^{\prime} + \zeta\,;\)</span></p>
+<p>il est visible que les quantités <span
+class="math inline">\(x^{\prime},\ y^{\prime},\ z^{\prime}\)</span>
+n’entreront point dans les expressions des distances mutuelles des
+corps, mais que ces distances ne dépendront que des différentes
+quantités <span class="math inline">\(\xi,\,\eta,\ \zeta\)</span> qui
+expriment proprement les coordonnées des différents corps, rapportés à
+celui qui répond à <span class="math inline">\(x^{\prime},\,
+y^{\prime},\, z^{\prime}\,;\)</span> par conséquent, les équations de
+condition du système seront entre les seules variables <span
+class="math inline">\(\xi,\,\eta,\,\zeta\)</span> et ne renfermeront
+point <span class="math inline">\(x^{\prime},\, y^{\prime},\,
+z^{\prime}.\)</span></p>
+<p>Donc, si dans la formule générale de la Dynamique (sect. II, art. 5)
+on réduit toutes les variations à <span class="math inline">\(\delta
+x,\,\delta y,\,\delta z\)</span> et qu’on substitue, pour <span
+class="math inline">\(\delta x,\,\delta y,\,\delta z\)</span> leurs
+valeurs <span class="math inline">\(\delta x^{\prime} + \delta\xi,\
+\delta y^{\prime} + \delta\eta,\ \delta z^{\prime} +
+\delta\zeta,\)</span> les variations <span class="math inline">\(\delta
+x^{\prime},\,\delta y^{\prime},\,\delta z^{\prime}\)</span> seront
+indépendantes de toutes les autres et arbitraires en elles-mêmes ;
+ainsi, il faudra égaler séparément à zéro la totalité des termes
+affectés de chacune de ces variations, ce qui donnera trois équations
+générales et indépendantes de la constitution particulière du
+système.</p>
+<p>Les forces intérieures par lesquelles les corps pourraient agir les
+uns sur les autres, et que nous dénotons par <span
+class="math inline">\({\bar{P},\,\bar{Q}},\ldots,\)</span> comme dans la
+première Partie (sect. II, art. 2), n’entreront point dans ces
+équations, parce que, les distances mutuelles <span
+class="math inline">\(\overline{p},\overline{q},\ldots\)</span> étant
+indépendantes de <span
+class="math inline">\(x^{\prime},y^{\prime},z^{\prime},\)</span> les
+variations <span
+class="math inline">\(\delta\overline{p},\delta\overline{q},\ldots,\)</span>
+relatives à ces variables, seront nulles.</p>
+<p>À l’égard des forces extérieures <span class="math inline">\({P,\,
+Q,\, R},\ldots,\)</span> si on les réduit aux trois forces <span
+class="math inline">\(X,\, Y,\, Z\)</span> dirigées suivant les
+coordonnées <span class="math inline">\(x,\, y,\, z\)</span> et
+tendantes à les diminuer, d’après les formules données dans la première
+Partie (sect. V, Chap. I), on a</p>
+<p><span class="math inline">\(P\,\delta p + Q\,\delta q + R\,\delta r +
+\ldots = X\,\delta x + Y\,\delta y + Z\,\delta z,\)</span></p>
+<p>et la formule générale devient</p>
+<p><em>(S)<span class="math inline">\(m\left( \frac{d^{2}x}{dt^{2}} + X
+\right)\delta x +\)</span></em>(S)<span class="math inline">\(m\left(
+\frac{d^{2}y}{dt^{2}} + Y \right)\delta y +\)</span>_(S)<span
+class="math inline">\(m\left( \frac{d^{2}z}{dt^{2}} + Z \right)\delta z
+= 0,\)</span></p>
+<p>laquelle, en n’ayant égard qu’aux variations <span
+class="math inline">\(\delta x^{\prime},\,\delta y^{\prime},\,\delta
+z^{\prime},\)</span> qui sont indépendantes de toutes les autres,
+donnera</p>
+<p><span class="math inline">\(\delta x^{\prime}\)</span><em>(S)<span
+class="math inline">\(m\left( \frac{d^{2}x}{dt^{2}} + X \right) + \delta
+y^{\prime}\)</span></em>(S)<span class="math inline">\(m\left(
+\frac{d^{2}y}{dt^{2}} + Y \right) + \delta z^{\prime}\)</span>_(S)<span
+class="math inline">\(m\left( \frac{d^{2}z}{dt^{2}} + Z \right) =
+0\,;\)</span></p>
+<p>d’où l’on tire sur-le-champ ces trois équations</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{d^{2}x}{dt^{2}} + X
+\right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( \frac{d^{2}y}{dt^{2}} + Y
+\right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( \frac{d^{2}z}{dt^{2}} + Z
+\right) = 0,\)</span></p>
+<p>lesquelles auront toujours lieu dans le mouvement d’un système
+quelconque de corps, lorsque le système est entièrement libre.</p>
+<p>3. Supposons maintenant que le corps auquel répondent les coordonnées
+<span class="math inline">\(x^{\prime},\, y^{\prime},\,
+z^{\prime}\)</span> soit placé dans le centre de gravité de tout le
+système. On aura, par les propriétés connues de ce centre (Part. I,
+sect. III, § IV), les équations</p>
+<p><em>(S)<span class="math inline">\(m\xi =
+0,\qquad\)</span></em>(S)<span class="math inline">\(m\eta =
+0,\qquad\)</span>_(S)<span class="math inline">\(m\zeta =
+0,\)</span></p>
+<p>lesquelles, en différentiant par rapport à <span
+class="math inline">\(t,\)</span> donneront celles-ci :</p>
+<p><em>(S)<span class="math inline">\(m\frac{d^{2}\xi}{dt^{2}} =
+0,\qquad\)</span></em>(S)<span
+class="math inline">\(m\frac{d^{2}\eta}{dt^{2}} =
+0,\qquad\)</span>_(S)<span
+class="math inline">\(m\frac{d^{2}\zeta}{dt^{2}} = 0.\)</span></p>
+<p>Donc on aura</p>
+<p><em>(S)<span class="math inline">\(m\frac{d^{2}x}{dt^{2}}
+=\)</span></em>(S)<span
+class="math inline">\(m\frac{d^{2}x^{\prime}}{dt^{2}} =
+\frac{d^{2}x^{\prime}}{dt^{2}}\)</span>_(S)<span
+class="math inline">\(m,\)</span></p>
+<p>parce que <span class="math inline">\(x^{\prime},\)</span> ayant la
+même valeur pour tous les corps, est indépendante du signe _(S) ; on
+aura pareillement</p>
+<p><em>(S)<span class="math inline">\(m\frac{d^{2}y}{dt^{2}} =
+\frac{d^{2}y^{\prime}}{dt^{2}}\)</span></em>(S)<span
+class="math inline">\(m,\qquad\)</span><em>(S)<span
+class="math inline">\(m\frac{d^{2}z}{dt^{2}} =
+\frac{d^{2}z^{\prime}}{dt^{2}}\)</span></em>(S)<span
+class="math inline">\(m.\)</span></p>
+<p>Ainsi les trois équations de l’article précédent prendront cette
+forme plus simple :</p>
+<p><span
+class="math inline">\(\frac{d^{2}x^{\prime}}{dt^{2}}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span
+class="math inline">\({mX} = 0,\)</span></p>
+<p><span
+class="math inline">\(\frac{d^{2}y^{\prime}}{dt^{2}}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span
+class="math inline">\({mY} = 0,\)</span></p>
+<p><span
+class="math inline">\(\frac{d^{2}z^{\prime}}{dt^{2}}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span
+class="math inline">\({mZ} = 0.\)</span></p>
+<p>Ces équations serviront à déterminer le mouvement du centre de
+gravité de tous les corps, indépendamment du mouvement particulier de
+chacun d’eux ; et, comme les valeurs de <em>(S)<span
+class="math inline">\({mX},\)</span> </em>(S)<span
+class="math inline">\({mY},\)</span> _(S)<span
+class="math inline">\({mZ},\)</span> ne renferment point les forces
+intérieures du système, le mouvement de ce centre ne dépendra point de
+l’action mutuelle que les corps peuvent exercer les uns sur les autres,
+mais seulement des forces accélératrices qui sollicitent chaque corps.
+C’est en quoi consiste le principe général de la <em>conservation du
+mouvement du centre de gravité</em>.</p>
+<p>Ce principe subsiste aussi dans le cas où les corps, dans leurs
+mouvements, viendraient à se choquer ; car, de quelque nature que soient
+les corps, on peut toujours imaginer que leur action dans le choc se
+fasse par le moyen d’un ressort interposé entre les corps et qui, après
+la compression, tende à se rétablir ou non suivant que les corps seront
+élastiques ou non. De cette manière, l’effet du choc sera le produit de
+forces de la nature de celles que nous avons désignées par <span
+class="math inline">\({\bar{P},\,\bar{Q}},\ldots\)</span> et qui
+disparaissent dans la formule générale (art. 2).</p>
+<p>4. On voit, au reste, que les équations du mouvement du centre de
+gravité sont les mêmes que celles du mouvement d’un seul corps qui
+serait animé à la fois par toutes les forces accélératrices qui agissent
+sur les différents corps du système. En effet, si l’on conçoit que tous
+ces corps soient réunis en un point qui réponde aux coordonnées <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime},\)</span>
+on a alors, dans la formule générale,</p>
+<p><span class="math inline">\(x = x^{\prime},\qquad y =
+y^{\prime},\qquad z = z^{\prime}\,;\)</span></p>
+<p>et, égalant à zéro la totalité des termes affectés de chacune des
+trois variations <span class="math inline">\(\delta x^{\prime},\,\delta
+y^{\prime},\,\delta z^{\prime},\)</span> on aura les mêmes équations que
+ci-dessus.</p>
+<p>De là résulte ce théorème général :</p>
+<p><em>Le mouvement du centre de gravité d’un système libre de corps,
+disposés, les uns par rapport aux autres, comme l’on voudra, est
+toujours le même que si les corps étaient tous réunis dans un seul point
+et qu’en même temps chacun d’eux fût animé des mêmes forces
+accélératrices que dans leur état naturel.</em></p>
+<p>5. Ce théorème a encore lieu lorsque les corps qui composent un
+système libre ne reçoivent que des impulsions quelconques ; car, en
+substituant, dans l’équation de l’article 11 de la Section précédente,
+<span class="math inline">\(\delta x^{\prime} + \delta\xi,\)</span>
+<span class="math inline">\(\delta y^{\prime} + \delta\eta,\)</span>
+<span class="math inline">\(\delta z^{\prime} + \delta\zeta\)</span> à
+la place de <span class="math inline">\(\delta x,\delta y,\delta
+z,\)</span> et réduisant les forces <span
+class="math inline">\({P,Q,R},\ldots\)</span> aux forces <span
+class="math inline">\({X,Y,Z},\ldots\)</span> on prouvera, comme dans
+l’article 2, que les variations <span class="math inline">\(\delta
+x^{\prime},\,\delta y^{\prime},\)</span> <span
+class="math inline">\(\delta z^{\prime}\)</span> doivent demeurer
+arbitraires, ce qui donnera les trois équations</p>
+<p><em>(S)<span class="math inline">\((m\overset{˙}{x} + X) =
+0,\quad\)</span></em>(S)<span class="math inline">\((m\overset{˙}{y} +
+Y) = 0,\quad\)</span>_(S)<span class="math inline">\((m\overset{˙}{z} +
+Z) = 0.\)</span></p>
+<p>Or, si l’on rapporte les coordonnées <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime}\)</span> au
+centre de gravité du système, on a, par les propriétés de ce centre,</p>
+<p><span class="math inline">\(x^{\prime}\)</span><em>(S)<span
+class="math inline">\(m =\)</span></em>(S)<span
+class="math inline">\(mx,\quad y^{\prime}\)</span><em>(S)<span
+class="math inline">\(m =\)</span></em>(S)<span
+class="math inline">\(my,\quad z^{\prime}\)</span><em>(S)<span
+class="math inline">\(m =\)</span></em>(S)<span
+class="math inline">\(mz,\quad\)</span></p>
+<p>Donc aussi, en différentiant relativement à <span
+class="math inline">\(t,\)</span> et faisant</p>
+<p><span class="math inline">\(\begin{matrix} {dx =} &amp;
+{\overset{˙}{x}\ dt,\qquad} &amp; {dy =} &amp; {\overset{˙}{y}\
+dt,\qquad} &amp; {dz =} &amp; {\overset{˙}{z}\ dt,} \\ {dx^{\prime} =}
+&amp; {{\overset{˙}{x}}^{\prime}dt,} &amp; {dy^{\prime} =} &amp;
+{{\overset{˙}{y}}^{\prime}dt,} &amp; {dz^{\prime} =} &amp;
+{{\overset{˙}{z}}^{\prime}dt,} \end{matrix}\)</span></p>
+<p>on aura</p>
+<p><span
+class="math inline">\({\overset{˙}{x}}^{\prime}\)</span><em>(S)<span
+class="math inline">\(m =\)</span></em>(S)<span
+class="math inline">\(m\overset{˙}{x},\quad{\overset{˙}{y}}^{\prime}\)</span><em>(S)<span
+class="math inline">\(m =\)</span></em>(S)<span
+class="math inline">\(m\overset{˙}{y},\quad{\overset{˙}{z}}^{\prime}\)</span><em>(S)<span
+class="math inline">\(m =\)</span></em>(S)<span
+class="math inline">\(m\overset{˙}{z}\)</span></p>
+<p>et, par conséquent,</p>
+<p><span
+class="math inline">\({\overset{˙}{x}}^{\prime}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span class="math inline">\(X
+= 0,\quad{\overset{˙}{y}}^{\prime}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span class="math inline">\(Y
+= 0,\quad{\overset{˙}{z}}^{\prime}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span class="math inline">\(Z
+= 0,\)</span></p>
+<p>ce qui fait voir que les vitesses <span
+class="math inline">\({\overset{˙}{x}}^{\prime},\,{\overset{˙}{y}}^{\prime},\,{\overset{˙}{z}}^{\prime}\)</span>
+imprimées au centre de gravité sont les mêmes que si tous les corps,
+étant réunis dans ce centre, recevaient à la fois les impulsions <span
+class="math inline">\({X,\, Y,\, Z}.\)</span></p>
+<p>6. La formule générale (art. 2), après la substitution <span
+class="math inline">\(\delta x^{\prime} + \delta\xi,\)</span> <span
+class="math inline">\(\delta y^{\prime} + \delta\eta,\)</span> <span
+class="math inline">\(\delta z^{\prime} + \delta\zeta\)</span> à la
+place de <span class="math inline">\(\delta x,\,\delta y,\,\delta
+z\)</span> et l’évanouissement des termes affectés de <span
+class="math inline">\(\delta x^{\prime},\,\delta y^{\prime},\,\delta
+z^{\prime},\)</span> se réduira à</p>
+<p>_(S)<span class="math inline">\(m\left(
+\frac{d^{2}x}{dt^{2}}\delta\xi + \frac{d^{2}y}{dt^{2}}\delta\eta +
+\frac{d^{2}z}{dt^{2}}\delta\zeta + X\delta\xi + Y\delta\eta +
+Z\delta\zeta \right) = 0.\)</span></p>
+<p>Substituant <span class="math inline">\(x^{\prime} + \xi,\,
+y^{\prime} + \eta,\, z^{\prime} + \zeta\)</span> pour <span
+class="math inline">\(x,\, y,\, z\)</span> dans les différentielles
+<span class="math inline">\(d^{2}x,\, d^{2}y,\)</span> <span
+class="math inline">\(d^{2}z,\)</span> et faisant sortir hors du signe
+_(S) les différentielles <span
+class="math inline">\(d^{2}x^{\prime},d^{2}y^{\prime},\)</span> <span
+class="math inline">\(d^{2}z^{\prime},\)</span> les termes affectés de
+ces différentielles seront</p>
+<p><span
+class="math inline">\(\frac{d^{2}x^{\prime}}{dt^{2}}\)</span><em>(S)<span
+class="math inline">\(m\,\delta\xi +
+\frac{d^{2}y^{\prime}}{dt^{2}}\)</span></em>(S)<span
+class="math inline">\(m\,\delta\eta +
+\frac{d^{2}z^{\prime}}{dt^{2}}\)</span>_(S)<span
+class="math inline">\(m\,\delta\zeta.\)</span></p>
+<p>Mais, en rapportant au centre de gravité les coordonnées <span
+class="math inline">\(x^{\prime},y^{\prime},z^{\prime},\)</span> on a
+(art. 3)</p>
+<p><em>(S)<span class="math inline">\(m\xi =
+0,\qquad\)</span></em>(S)<span class="math inline">\(m\eta =
+0,\qquad\)</span>_(S)<span class="math inline">\(m\zeta =
+0\,;\)</span></p>
+<p>donc aussi, en différentiant par <span
+class="math inline">\(\delta,\)</span> on aura</p>
+<p><em>(S)<span class="math inline">\(m\delta\xi =
+0,\qquad\)</span></em>(S)<span class="math inline">\(m\delta\eta =
+0,\qquad\)</span>_(S)<span class="math inline">\(m\delta\zeta =
+0,\)</span></p>
+<p>ce qui fait évanouir les termes dont il s’agit.</p>
+<p>Ainsi la formule générale se réduira à</p>
+<p>_(S)<span class="math inline">\(m\left(
+\frac{d^{2}\xi}{dt^{2}}\delta\xi + \frac{d^{2}\eta}{dt^{2}}\delta\eta +
+\frac{d^{2}\zeta}{dt^{2}}\delta\zeta + X\delta\xi + Y\delta\eta +
+Z\delta\zeta \right) = 0,\)</span></p>
+<p>qui est tout à fait semblable à la première formule, les coordonnées
+<span class="math inline">\(x,\, y,\, z,\)</span> dont l’origine est
+fixe dans l’espace, étant changées en <span
+class="math inline">\(\xi,\,\eta,\,\zeta,\)</span> dont l’origine est au
+centre de gravité.</p>
+<p>On peut conclure de là^(<a href="#cite_note-1">[1]</a>), en général,
+que, dans un système libre, on aura, par rapport au centre de gravité,
+les mêmes équations et les mêmes propriétés que par rapport à un point
+fixe hors du système.</p>
+<p>§ II. — <em>Propriétés relatives aux aires</em>.</p>
+<p>7. Considérons maintenant le mouvement du système autour d’un point
+fixe, et supposons qu’il soit entièrement libre de tourner en tout sens
+autour de ce point. En faisant abstraction des mouvements respectifs des
+corps du système les uns à l’égard des autres, la rotation autour de
+chacun des trois axes des <span class="math inline">\(x,\, y,\,
+z\)</span> fournira, comme on l’a vu dans la première Partie (sect. III,
+art. 8), les expressions suivantes des variations <span
+class="math inline">\(\delta x,\,\delta y,\,\delta z,\)</span></p>
+<p><span class="math inline">\(\delta x = z\,\delta\omega -
+y\,\delta\varphi,\qquad\delta y = x\,\delta\varphi -
+z\,\delta\psi,\,\qquad\delta z = y\,\delta\psi -
+x\,\delta\omega,\)</span></p>
+<p>dans lesquelles <span
+class="math inline">\(\delta\varphi,\,\delta\omega,\delta\psi\)</span>
+sont les rotations élémentaires par rapport aux trois axes des <span
+class="math inline">\(z,\, y,\, x,\)</span> qui doivent demeurer
+arbitraires.</p>
+<p>Ces expressions sont générales pour les variations des coordonnées de
+tous les corps du système, et il ne s’agira que de les substituer dans
+la formule de l’article 5 de la Section précédente, après avoir réduit
+toutes les variations à <span class="math inline">\(\delta x,\,\delta
+y,\,\delta z,\)</span> et d’égaler ensuite à zéro séparément les
+quantités affectées des trois indéterminées <span
+class="math inline">\(\delta\varphi,\,\delta\omega,\delta\psi.\)</span></p>
+<p>On trouvera d’abord, comme dans l’article cité de la première Partie,
+que la variation <span class="math inline">\(\delta\bar{p}\)</span>
+devient nulle, et qu’ainsi les termes dus aux forces intérieures <span
+class="math inline">\(\bar{P}\)</span> du système, ne renfermant point
+les variations <span
+class="math inline">\(\delta\varphi,\,\delta\omega,\delta\psi,\,\)</span>
+ne donneront rien dans les équations dont il s’agit. On trouve aussi,
+comme on l’a vu dans le même article, que la variation <span
+class="math inline">\(\delta p\)</span> est nulle lorsque la force <span
+class="math inline">\(P\)</span> tend vers l’origine des coordonnées, et
+qu’ainsi cette force n’entrera point dans les mêmes équations.</p>
+<p>En faisant donc simplement pour <span class="math inline">\(\delta
+x,\,\delta y,\,\delta z\)</span> les substitutions indiquées, après
+avoir changé les forces <span
+class="math inline">\({P,Q,R},\ldots\)</span> en <span
+class="math inline">\({X,Y,Z},\)</span> comme ci-dessus (art. 2), on
+aura, relativement aux variations <span
+class="math inline">\(\delta\varphi,\,\delta\omega,\delta\psi,\,\)</span>
+l’équation</p>
+<p>_(S)<span class="math inline">\(m\begin{Bmatrix}  &amp; {\left(
+x\frac{d^{2}y}{dt^{2}} - y\frac{d^{2}x}{dt^{2}} + Yx - Xy
+\right)\delta\varphi} \\  + &amp; {\left( z\frac{d^{2}x}{dt^{2}} -
+x\frac{d^{2}z}{dt^{2}} + Xz\, - Zx \right)\delta\omega} \\  + &amp;
+{\left( y\frac{d^{2}z}{dt^{2}}\, - z\frac{d^{2}y}{dt^{2}} + Zy\, - Yz
+\right)\delta\psi} \end{Bmatrix} = 0\,;\)</span></p>
+<p>et, comme les variations <span
+class="math inline">\(\delta\varphi,\,\delta\psi,\,\delta\omega\)</span>
+sont les mêmes pour tous les corps du système, elles n’entreront pas
+sous le signe d’intégration _(S) ; de sorte qu’on aura les trois
+équations relatives à chacune de ces variations</p>
+<p>_(S)<span class="math inline">\(m\left( x\frac{d^{2}y}{dt^{2}} -
+y\frac{d^{2}x}{dt^{2}} + xY - yX \right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( z\frac{d^{2}x}{dt^{2}} -
+x\frac{d^{2}z}{dt^{2}} + zX - xZ \right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( y\frac{d^{2}z}{dt^{2}} -
+z\frac{d^{2}y}{dt^{2}} + yZ - zY \right) = 0.\)</span></p>
+<p>Ces équations auront lieu à la fois, lorsque le système aura la
+liberté de tourner autour de chacun des trois axes, c’est-à-dire toutes
+les fois que le système sera disposé de manière à pouvoir pirouetter
+librement en tout sens autour du point fixe qui est l’origine des
+coordonnées.</p>
+<p>Et il est bon de remarquer que ces équations ont toujours lieu
+indépendamment de l’action mutuelle des corps, de quelque manière que
+cette action puisse s’exercer, même par le choc mutuel des corps du
+système, comme dans l’article 3 et par la même raison ; elles sont, de
+plus, indépendantes des forces qui tendraient vers le point fixe où est
+l’origine des coordonnées.</p>
+<p>8. Pour se former une idée plus nette de ces équations, on
+remarquera :</p>
+<p>1^(o) Que les quantités</p>
+<p><span class="math inline">\(xd^{2}y - yd^{2}x,\quad zd^{2}x -
+xd^{2}z,\quad yd^{2}z - zd^{2}y\)</span></p>
+<p>sont les différentielles de celles-ci</p>
+<p><span class="math inline">\(xdy - ydx,\quad zdx - xdz,\quad ydz -
+zdy,\)</span></p>
+<p>lesquelles représentent le double des secteurs élémentaires décrits
+par le corps <span class="math inline">\(m\)</span> sur le plan des
+<span class="math inline">\(xy,\)</span> des <span
+class="math inline">\(xz\)</span> et des <span
+class="math inline">\(yz,\)</span> c’est-à-dire sur les plans
+perpendiculaires aux axes des <span class="math inline">\(z,\)</span>
+des <span class="math inline">\(y\)</span> et des <span
+class="math inline">\(x.\)</span> En effet, si dans</p>
+<p><span class="math inline">\(xdy - ydx\)</span></p>
+<p>on substitue pour <span class="math inline">\(x\)</span> et <span
+class="math inline">\(y\)</span> les valeurs <span
+class="math inline">\(\rho\cos\varphi,\,\rho\sin\varphi,\)</span> on
+a</p>
+<p><span class="math inline">\(\rho^{2}\delta\varphi\)</span></p>
+<p>double de l’aire comprise entre le rayon vecteur <span
+class="math inline">\(\rho\)</span> et le rayon consécutif qui fait avec
+lui l’angle <span class="math inline">\(d\varphi\,;\)</span></p>
+<p>2^(o) Que les quantités <span class="math inline">\(X,\, Y,\,
+Z\)</span> représentent les forces qui sollicitent chaque corps <span
+class="math inline">\(m\)</span> suivant les coordonnées <span
+class="math inline">\(x,\, y,\, z\)</span> et vers leur origine, et qui
+résultent de toutes les forces <span class="math inline">\({P,\, Q,\,
+R},\ldots\)</span> agissantes sur ce corps suivant des directions
+quelconques (sect. II, art. 5), et qu’ainsi les quantités</p>
+<p><span class="math inline">\(yX - xY,\qquad xZ - zX,\qquad zY -
+yZ\)</span></p>
+<p>expriment les moments des forces qui tendent à faire tourner les
+corps autour de chacun des trois axes des coordonnées <span
+class="math inline">\(z,\, y,\, x,\)</span> en prenant le mot
+<em>moment</em>, dans le sens ordinaire, pour le produit de la force et
+de la perpendiculaire menée sur sa direction.</p>
+<p>9. Si le système n’était animé par aucune force extérieure, ou s’il
+l’était seulement par des forces tendantes au point que nous avons pris
+pour l’origine des coordonnées, les trois équations précédentes se
+réduiraient à celles-ci</p>
+<p>_(S)<span class="math inline">\(m\left( x\frac{d^{2}y}{dt^{2}} -
+y\frac{d^{2}x}{dt^{2}} \right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( z\frac{d^{2}x}{dt^{2}} -
+x\frac{d^{2}z}{dt^{2}} \right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( y\frac{d^{2}z}{dt^{2}} -
+z\frac{d^{2}y}{dt^{2}} \right) = 0,\)</span></p>
+<p>lesquelles, étant intégrées par rapport à la variable <span
+class="math inline">\(t,\)</span> donneront, en prenant trois constantes
+arbitraires <span class="math inline">\({A,B,C},\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( x\frac{d^{2}y}{dt^{2}} -
+y\frac{d^{2}x}{dt^{2}} \right) = C,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( z\frac{d^{2}x}{dt^{2}} -
+x\frac{d^{2}z}{dt^{2}} \right) = B,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( y\frac{d^{2}z}{dt^{2}} -
+z\frac{d^{2}y}{dt^{2}} \right) = A.\)</span></p>
+<p>Ces dernières équations renferment évidemment le <em>principe des
+aires</em>, dont nous avons parlé dans la première Section.</p>
+<p>10. Il est à propos de remarquer que ces équations sont dans le cas
+de l’article 10 de la Section précédente ; de sorte qu’on y peut
+introduire trois nouvelles constantes arbitraires, par le changement des
+axes des coordonnées.</p>
+<p>Soient <span class="math inline">\(x^{\prime},\, y^{\prime},\,
+z^{\prime}\)</span> les nouvelles coordonnées ; on aura également</p>
+<p>_(S)<span class="math inline">\(m\left(
+x^{\prime}\frac{d^{2}y^{\prime}}{dt^{2}} -
+y^{\prime}\frac{d^{2}x^{\prime}}{dt^{2}} \right) =
+C^{\prime},\)</span></p>
+<p>_(S)<span class="math inline">\(m\left(
+z^{\prime}\frac{d^{2}x^{\prime}}{dt^{2}} -
+x^{\prime}\frac{d^{2}z^{\prime}}{dt^{2}} \right) =
+B^{\prime},\)</span></p>
+<p>_(S)<span class="math inline">\(m\left(
+y^{\prime}\frac{d^{2}z^{\prime}}{dt^{2}} -
+z^{\prime}\frac{d^{2}y^{\prime}}{dt^{2}} \right) =
+A^{\prime},\)</span></p>
+<p>les quantités <span class="math inline">\(A^{\prime},\, B^{\prime},\,
+C^{\prime}\)</span> étant aussi des constantes arbitraires, mais
+différentes de <span class="math inline">\({A,\, B,\, C}.\)</span></p>
+<p>Substituons maintenant dans l’expression <span
+class="math inline">\(x\, dy - y\, dx\)</span> les valeurs de <span
+class="math inline">\(x,\, y\)</span> en <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime}\)</span>
+données dans l’article cité de la même Section : on aura</p>
+<p><span class="math inline">\(\begin{matrix} {xdy - ydx =} &amp; {+
+(\alpha\beta^{\prime}} &amp; - &amp; {\beta\alpha^{\prime})(x^{\prime}}
+&amp; {dy^{\prime} - y^{\prime}} &amp; {dx^{\prime}) +
+(\gamma\alpha^{\prime} - \alpha\gamma^{\prime})(z^{\prime}dx^{\prime} -
+x^{\prime}dz^{\prime})} \\  &amp; {+ (\beta\gamma^{\prime}} &amp; -
+&amp; {\gamma\beta^{\prime})(y^{\prime}} &amp; {dz^{\prime} -
+z^{\prime}} &amp; {dy^{\prime}).} \end{matrix}\)</span></p>
+<p>On trouvera de même</p>
+<p><span class="math inline">\(\begin{matrix} {zdx - xdz =} &amp; {+
+(\beta\alpha^{&#39;&#39;}} &amp; - &amp;
+{\alpha\beta^{&#39;&#39;})(x^{\prime}} &amp; {dx^{\prime} - y^{\prime}}
+&amp; {dz^{\prime}) + (\alpha\gamma^{&#39;&#39;} -
+\gamma\alpha^{&#39;&#39;})(z^{\prime}dx^{\prime} -
+x^{\prime}dz^{\prime})} \\  &amp; {+ (\gamma\beta^{&#39;&#39;}} &amp; -
+&amp; {\beta\gamma^{&#39;&#39;})(y^{\prime}} &amp; {dz^{\prime} -
+z^{\prime}} &amp; {dy^{\prime}),} \end{matrix}\)</span></p>
+<p><span class="math inline">\(\begin{matrix} {ydz - zdy =} &amp; {+
+(\alpha^{\prime}\beta^{&#39;&#39;}} &amp; - &amp;
+{\beta^{\prime}\alpha^{&#39;&#39;})(x^{\prime}} &amp; {dy^{\prime} -
+y^{\prime}} &amp; {dx^{\prime}) + (\gamma^{\prime}\alpha^{&#39;&#39;} -
+\alpha^{\prime}\gamma^{&#39;&#39;})(z^{\prime}dx^{\prime} -
+x^{\prime}dz^{\prime})} \\  &amp; {+ (\gamma^{\prime}\beta^{&#39;&#39;}}
+&amp; - &amp; {\beta^{\prime}\gamma^{&#39;&#39;})(y^{\prime}} &amp;
+{dz^{\prime} - z^{\prime}} &amp; {dy^{\prime}).}
+\end{matrix}\)</span></p>
+<p>Si l’on affecte tous les termes de ces équations du signe <em>(S),
+après les avoir multipliées par <span class="math inline">\(m\)</span>
+et divisées par <span class="math inline">\(dt,\)</span> et qu’on y
+substitue, à la place des intégrales affectées de </em>(S), leurs
+valeurs <span class="math inline">\({A,\, B,\, C},\)</span> <span
+class="math inline">\({A^{\prime},\, B^{\prime},\, C^{\prime}},\)</span>
+on aura</p>
+<p><span class="math inline">\(\begin{matrix} {C =} &amp;
+{(\alpha\beta^{\prime}} &amp; - &amp; {\beta\alpha^{\prime})C^{\prime}}
+&amp; + &amp; {(\gamma\alpha^{\prime}} &amp; - &amp;
+{\alpha\gamma^{\prime})B^{\prime}} &amp; + &amp; {(\beta\gamma^{\prime}}
+&amp; - &amp; {\gamma\beta^{\prime})A^{\prime},} \\ {B =} &amp;
+{(\beta\alpha^{&#39;&#39;}} &amp; - &amp;
+{\alpha\beta^{&#39;&#39;})C^{\prime}} &amp; + &amp;
+{(\alpha\gamma^{&#39;&#39;}} &amp; - &amp;
+{\gamma\alpha^{&#39;&#39;})B^{\prime}} &amp; + &amp;
+{(\gamma\beta^{&#39;&#39;}} &amp; - &amp;
+{\beta\gamma^{&#39;&#39;})A^{\prime},} \\ {A =} &amp;
+{(\alpha^{\prime}\beta^{&#39;&#39;}} &amp; - &amp;
+{\beta^{\prime}\alpha^{&#39;&#39;})C^{\prime}} &amp; + &amp;
+{(\gamma^{\prime}\alpha^{&#39;&#39;}} &amp; - &amp;
+{\alpha^{\prime}\gamma^{&#39;&#39;})B^{\prime}} &amp; + &amp;
+{(\gamma^{\prime}\beta^{&#39;&#39;}} &amp; - &amp;
+{\beta^{\prime}\gamma^{&#39;&#39;})A^{\prime}.}
+\end{matrix}\)</span></p>
+<p>On peut réduire ces formules à une expression plus simple, en
+observant que l’on a identiquement</p>
+<p><span class="math inline">\(\begin{matrix}  &amp;
+{(\alpha\beta^{\prime} - \beta\alpha^{\prime})^{2} +
+(\beta\alpha^{&#39;&#39;} - \alpha\beta^{&#39;&#39;})^{2} +
+(\alpha^{\prime}\beta^{&#39;&#39;} -
+\beta^{\prime}\alpha^{&#39;&#39;})^{2}} \\  &amp; {\qquad = \left(
+\alpha^{2} + \alpha&#39;^{2} + \alpha^{\prime}&#39;^{2} \right)\left(
+\beta^{2} + \beta&#39;^{2} + \beta^{\prime}&#39;^{2} \right) -
+(\alpha\beta + \alpha^{\prime}\beta^{\prime} +
+\alpha^{&#39;&#39;}\beta^{&#39;&#39;})^{2},} \end{matrix}\)</span></p>
+<p>quantité qui se réduit à l’unité, en vertu des équations de condition
+de la première Partie (sect. III, art. 10). On a, de plus, ces équations
+identiques</p>
+<p><span class="math inline">\(\begin{matrix}
+{\alpha(\alpha^{\prime}\beta^{&#39;&#39;} -
+\beta^{\prime}\alpha^{&#39;&#39;}) +
+\alpha^{\prime}(\beta\alpha^{&#39;&#39;} - \alpha\beta^{&#39;&#39;}) +
+\alpha^{&#39;&#39;}(\alpha\beta^{\prime} - \beta\alpha^{\prime}) =}
+&amp; {0,} \\ {\beta(\alpha^{\prime}\beta^{&#39;&#39;} -
+\beta^{\prime}\alpha^{&#39;&#39;}) +
+\beta^{\prime}\,(\beta\alpha^{&#39;&#39;} - \alpha\beta^{&#39;&#39;}) +
+\beta^{&#39;&#39;}(\alpha\beta^{\prime} - \beta\alpha^{\prime}) =} &amp;
+{0,} \\  &amp; \end{matrix}\)</span></p>
+<p>Si donc on compare ces équations avec les trois équations de
+condition</p>
+<p><span class="math inline">\(\gamma^{2} + \gamma^{2} + \gamma^{2} =
+1,\quad\alpha\gamma + \alpha^{\prime}\gamma^{\prime} +
+\alpha^{&#39;&#39;}\gamma^{&#39;&#39;} = 0,\quad\beta\gamma +
+\beta^{\prime}\gamma^{\prime} + \beta^{&#39;&#39;}\gamma^{&#39;&#39;} =
+0,\)</span></p>
+<p>il est facile de conclure de cette comparaison qu’on aura</p>
+<p><span class="math inline">\(\alpha^{\prime}\beta^{&#39;&#39;} -
+\beta^{\prime}\alpha^{&#39;&#39;} = \gamma,\quad\beta\alpha^{&#39;&#39;}
+- \alpha\beta^{&#39;&#39;} = \gamma^{\prime},\quad\alpha\beta^{\prime} -
+\beta\alpha^{\prime} = \gamma^{&#39;&#39;}.\)</span></p>
+<p>Les quantités <span
+class="math inline">\(\gamma,\gamma^{\prime},\gamma^{&#39;&#39;}\)</span>
+pourraient avoir également le signe <span class="math inline">\(-
+\,;\)</span> mais comme, dans la coïncidence des axes des <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime}\)</span>
+avec ceux des <span class="math inline">\(x,\, y,\, z\)</span>, on doit
+avoir (Part. I, sect. III, art. 11)</p>
+<p><span class="math inline">\(\alpha = 1,\ \ \beta = 0,\ \ \gamma = 0,\
+\ \alpha^{\prime} = 0,\ \ \beta^{\prime} = 1,\ \ \gamma^{\prime} = 0,\ \
+\alpha^{&#39;&#39;} = 0,\ \ \beta^{&#39;&#39;} = 0,\ \
+\gamma^{&#39;&#39;} = 1,\)</span></p>
+<p>cette condition ne peut avoir lieu qu’en prenant <span
+class="math inline">\(\gamma^{&#39;&#39;}\)</span> positivement, et par
+conséquent aussi <span class="math inline">\(\gamma^{\prime}\)</span> et
+<span class="math inline">\(\gamma.\)</span></p>
+<p>On trouvera, de la même manière,</p>
+<p><span class="math inline">\(\begin{matrix}
+{\gamma^{\prime}\alpha^{&#39;&#39;} - \alpha^{\prime}\gamma^{&#39;&#39;}
+=} &amp; {\beta,\quad} &amp; {\quad\alpha\gamma^{&#39;&#39;} -
+\gamma\alpha^{&#39;&#39;} =} &amp; {\beta^{\prime},\quad} &amp;
+{\quad\gamma\alpha^{\prime} - \alpha\gamma^{\prime} =} &amp;
+{\beta^{&#39;&#39;},} \\ {\gamma^{\prime}\beta^{&#39;&#39;} -
+\beta^{\prime}\gamma^{&#39;&#39;} =} &amp; {\alpha,} &amp;
+{\quad\gamma\beta^{&#39;&#39;} - \beta\gamma^{&#39;&#39;} =} &amp;
+{\alpha^{\prime},} &amp; {\quad\beta\gamma^{\prime} -
+\gamma\beta^{\prime} =} &amp; {\alpha^{&#39;&#39;}\,;}
+\end{matrix}\)</span></p>
+<p>de sorte que l’on aura</p>
+<p><span class="math inline">\(\begin{matrix} {A =} &amp; \alpha &amp;
+{A^{\prime} +} &amp; \beta &amp; {B^{\prime} +} &amp; \gamma &amp;
+{C^{\prime},} \\ {B =} &amp; \alpha^{\prime} &amp; {A^{\prime} +} &amp;
+\beta^{\prime} &amp; {B^{\prime} +} &amp; \gamma^{\prime} &amp;
+{C^{\prime},} \\ {C =} &amp; \alpha^{&#39;&#39;} &amp; {A^{\prime} +}
+&amp; \beta^{&#39;&#39;} &amp; {B^{\prime} +} &amp; \gamma^{&#39;&#39;}
+&amp; {C^{\prime}\,;} \end{matrix}\)</span></p>
+<p>d’où l’on tire, par les équations de condition de l’article 10
+(Part. 1, sect. III),</p>
+<p><span class="math inline">\(\begin{matrix} {A^{\prime} =} &amp;
+{{A\alpha + B\alpha^{\prime} + C\alpha^{&#39;&#39;}},} \\ {B^{\prime} =}
+&amp; {{A\beta + B\beta^{\prime} + C\beta^{&#39;&#39;}},} \\ {C^{\prime}
+=} &amp; {A\gamma + B\gamma^{\prime} + C\gamma^{&#39;&#39;}}
+\end{matrix}\)</span></p>
+<p>et</p>
+<p><span class="math inline">\({A^{2} + B^{2} + C^{2} = A&#39;^{2} +
+B&#39;^{2} + C&#39;^{2}}.\)</span></p>
+<p>Il résulte de cette dernière équation qu’on a, en général,</p>
+<p><span class="math inline">\(\quad\left\lbrack \operatorname{}
+\right.\)</span><em>(S)<span class="math inline">\(\left.
+\operatorname{}m\left( x\ \frac{dy}{dt}\  - y\ \frac{dx}{dt}\,\  \right)
+\right\rbrack^{2} + \left\lbrack \operatorname{}
+\right.\)</span></em>(S)<span class="math inline">\(\left.
+\operatorname{}m\left( z\ \frac{dx}{dt}\  - x\ \frac{dz}{dt}\,\  \right)
+\right\rbrack^{2} +\)</span><span class="math inline">\(\left\lbrack
+\operatorname{} \right.\)</span>_(S)<span class="math inline">\(\left.
+\operatorname{}m\left( y\ \frac{dz}{dt}\  - z\ \frac{dy}{dt}\  \right)
+\right\rbrack^{2},\)</span></p>
+<p><span class="math inline">\(= \left\lbrack \operatorname{}
+\right.\)</span><em>(S)<span class="math inline">\(\left.
+\operatorname{}m\left( x^{\prime}\frac{dy^{\prime}}{dt} -
+y^{\prime}\frac{dx^{\prime}}{dt} \right) \right\rbrack^{2} +
+\left\lbrack \operatorname{} \right.\)</span></em>(S)<span
+class="math inline">\(\left. \operatorname{}m\left(
+z^{\prime}\frac{dx^{\prime}}{dt} - x^{\prime}\frac{dz^{\prime}}{dt}
+\right) \right\rbrack^{2} +\)</span><span
+class="math inline">\(\left\lbrack \operatorname{}
+\right.\)</span>_(S)<span class="math inline">\(\left.
+\operatorname{}m\left( y^{\prime}\frac{dz^{\prime}}{dt} -
+z^{\prime}\frac{dy^{\prime}}{dt} \right) \right\rbrack^{2},\)</span></p>
+<p>d’où l’on peut conclure que la fonction</p>
+<p><span class="math inline">\(\quad\left\lbrack \operatorname{}
+\right.\)</span><em>(S)<span class="math inline">\(\left.
+\operatorname{}m\left( x\frac{dy}{dt} - y\frac{dx}{dt} \right)
+\right\rbrack^{2} + \left\lbrack \operatorname{}
+\right.\)</span></em>(S)<span class="math inline">\(\left.
+\operatorname{}m\left( z\frac{dx}{dt} - x\frac{dz}{dt} \right)
+\right\rbrack^{2} +\)</span><span class="math inline">\(\left\lbrack
+\operatorname{} \right.\)</span>_(S)<span class="math inline">\(\left.
+\operatorname{}m\left( y\frac{dz}{dt} - z\frac{dy}{dt} \right)
+\right\rbrack^{2},\)</span></p>
+<p>a toujours une valeur indépendante du plan de projection et de la
+position des axes des coordonnées <span class="math inline">\(x,\, y,\,
+z\)</span> dans l’espace, pourvu que ces coordonnées soient
+rectangulaires entre elles.</p>
+<p>11. Ces expressions de <span class="math inline">\(A,\, B,\,
+C\)</span> en <span class="math inline">\(A^{\prime},\, B^{\prime},\,
+C^{\prime}\)</span> qu’on vient de trouver sont semblables à celles de
+<span class="math inline">\(x,\, y,\, z\)</span> en <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime}\)</span> de
+l’article 9 de la Section précédente ; par conséquent, si l’on prend</p>
+<p><span class="math inline">\(x^{\prime} = A^{\prime},\quad y^{\prime}
+= B^{\prime},\quad z^{\prime} = C^{\prime},\)</span></p>
+<p>on aura</p>
+<p><span class="math inline">\(A = x,\quad B = y,\quad C =
+z,\)</span></p>
+<p>et réciproquement</p>
+<p><span class="math inline">\(x = A,\quad y = B,\quad z =
+C\)</span></p>
+<p>donnera</p>
+<p><span class="math inline">\(A^{\prime} = x^{\prime},\quad B^{\prime}
+= y^{\prime},\quad C^{\prime} = z^{\prime}\,;\)</span></p>
+<p>c’est-à-dire que <span class="math inline">\(A,\, B,\, C\)</span> et
+<span class="math inline">\(A^{\prime},\, B^{\prime},\,
+C^{\prime}\)</span> seront deux systèmes de coordonnées qui répondent à
+un même point, le premier étant relatif aux axes des <span
+class="math inline">\(x,\, y,\, z\)</span> et le second aux axes des
+<span class="math inline">\(x^{\prime},\, y^{\prime},\,
+z^{\prime}.\)</span></p>
+<p>On voit tout de suite par là qu’on peut faire</p>
+<p><span class="math inline">\(A^{\prime} = 0,\qquad B^{\prime} =
+0,\)</span></p>
+<p>en faisant passer l’axe des <span
+class="math inline">\(C^{\prime}\)</span> ou <span
+class="math inline">\(z^{\prime}\)</span> par le point auquel répondent
+les coordonnées <span class="math inline">\({A,\, B,\, C},\)</span> et
+qu’alors la coordonnée <span class="math inline">\(C^{\prime}\)</span>
+aura sa plus grande valeur égale à <span
+class="math inline">\(\sqrt{A^{2} + B^{2} + C^{2}}.\)</span> On aura,
+dans ce cas,</p>
+<p><span class="math inline">\({A = \gamma C^{\prime},\quad B =
+\gamma^{\prime}C^{\prime},\quad C =
+\gamma^{&#39;&#39;}C^{\prime}},\)</span></p>
+<p>et il est facile de voir que les coefficients <span
+class="math inline">\(\gamma,\,\gamma^{\prime},\,\gamma^{&#39;&#39;}\)</span>
+ne seront autre chose que les cosinus des angles que la ligne <span
+class="math inline">\(C^{\prime}\)</span> fait avec les axes des <span
+class="math inline">\({A,\, B,\, C}.\)</span></p>
+<p>Ainsi la résolution des équations</p>
+<p>_(S)<span class="math inline">\(m\left(
+x^{\prime}\frac{dy^{\prime}}{dt} - y^{\prime}\frac{dx^{\prime}}{dt}
+\right) = C^{\prime},\)</span></p>
+<p>_(S)<span class="math inline">\(m\left(
+z^{\prime}\frac{dx^{\prime}}{dt} - x^{\prime}\frac{dz^{\prime}}{dt}
+\right) = 0,\ \)</span></p>
+<p>_(S)<span class="math inline">\(m\left(
+y^{\prime}\frac{dz^{\prime}}{dt} - z^{\prime}\frac{dy^{\prime}}{dt}
+\right) = 0\ \,\)</span></p>
+<p>donnera celle des équations</p>
+<p>_(S)<span class="math inline">\(m\left( x\frac{dy}{dt} -
+y\frac{dx}{dt} \right) = \gamma^{&#39;&#39;}C^{\prime},\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( z\frac{dx}{dt} -
+x\frac{dz}{dt} \right) = \gamma^{\prime}C^{\prime},\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( y\frac{dz}{dt} -
+z\frac{dy}{dt} \right) = \gamma C^{\prime},\)</span></p>
+<p>les quantités <span
+class="math inline">\(\gamma,\,\gamma^{\prime},\,\gamma^{&#39;&#39;}\)</span>
+étant trois constantes telles que</p>
+<p><span class="math inline">\(\gamma^{2} + \gamma&#39;^{2} +
+\gamma^{\prime}&#39;^{2} = 1\)</span></p>
+<p>et dont deux sont arbitraires.</p>
+<p>Le plan perpendiculaire à l’axe des <span
+class="math inline">\(C^{\prime},\)</span> lorsque <span
+class="math inline">\(C^{\prime}\)</span> devient un maximum, est celui
+que M. Laplace nomme <em>plan invariable</em>, et dont il a le premier
+démontré l’existence et la position.</p>
+<p>Cette position est facile à déterminer par les équations</p>
+<p><span class="math inline">\({A = \gamma C^{\prime},\qquad B =
+\gamma^{\prime}C^{\prime},\qquad C =
+\gamma^{&#39;&#39;}C^{\prime}}\,;\)</span></p>
+<p>car, puisque les quantités <span
+class="math inline">\(\gamma,\,\gamma^{\prime},\,\gamma^{&#39;&#39;}\)</span>
+sont les cosinus des angles que l’axe des <span
+class="math inline">\(C^{\prime}\)</span> ou <span
+class="math inline">\(z^{\prime},\)</span> qui est perpendiculaire au
+plan variable, fait avec les axes des <span class="math inline">\(x,\,
+y,\, z\)</span> du système, en nommant ces angles <span
+class="math inline">\(l,\, m,\, n,\)</span> on aura, à cause de</p>
+<p><span class="math inline">\({C^{\prime} = \sqrt{A^{2} + B^{2} +
+C^{2}}},\)</span></p>
+<p><span class="math inline">\(\cos l = \frac{A}{\sqrt{A^{2} + B^{2} +
+C^{2}}},\quad\cos m = \frac{B}{\sqrt{A^{2} + B^{2} +
+C^{2}}},\)</span></p>
+<p><span class="math inline">\(\cos n = \frac{C}{\sqrt{A^{2} + B^{2} +
+C^{2}}}.\)</span></p>
+<p>12. Si le système est libre, c’est-à-dire s’il n’y a aucun des points
+du système qui doive être fixe, on peut prendre l’origine, supposée
+fixe, des coordonnées <span class="math inline">\(x,\, y,\, z\)</span>
+partout où l’on voudra ; par conséquent, les propriétés des aires et des
+moments que nous venons de démontrer auront lieu par rapport à un point
+fixe quelconque pris à volonté dans l’espace.</p>
+<p>Mais, par ce que nous avons démontré dans l’article 6, ces mêmes
+propriétés auront lieu également par rapport au centre de gravité de
+tout le système, soit que ce centre soit fixe ou non. En effet, si, dans
+le s trois équations de l’article 7, on substitue pour <span
+class="math inline">\(x,\, y,\, z\)</span> les quantités <span
+class="math inline">\(x^{\prime} + \xi,\ y^{\prime} + \eta,\ z^{\prime}
++ \zeta,\)</span> en rapportant, comme dans l’article 3, les coordonnées
+<span class="math inline">\(x^{\prime},\, y^{\prime},\,
+z^{\prime}\)</span> au centre de gravité du système, et qu’on ait égard
+aux trois équations de ce dernier article, on aura ces transformées</p>
+<p>_(S)<span class="math inline">\(m\left( \xi\frac{d^{2}\eta}{dt^{2}} -
+\eta\frac{d^{2}\xi}{dt^{2}} + \xi Y - \eta X \right) = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( \zeta\frac{d^{2}\xi}{dt^{2}}
+- \xi\frac{d^{2}\zeta}{dt^{2}} + \zeta X - \xi Z \right) =
+0,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( \eta\frac{d^{2}\zeta}{dt^{2}}
+- \zeta\frac{d^{2}\eta}{dt^{2}} + \eta Z - \zeta Y \right) =
+0,\)</span></p>
+<p>qui sont, comme l’on voit, semblables à celles de l’article 7, et
+dont toute la différence consiste en ce que, à la place des coordonnées
+<span class="math inline">\(x,\)</span> <span
+class="math inline">\(y,z\)</span> partant d’un point fixe, il y a les
+coordonnées <span class="math inline">\(\xi,\,\eta,\,\zeta\)</span> dont
+l’origine est dans le centre de gravité du système.</p>
+<p>Ainsi, lorsque les forces accélératrices sont nulles, on aura les
+intégrales</p>
+<p>_(S)<span class="math inline">\(m\left( \xi\frac{d\eta}{dt} -
+\eta\frac{d\xi}{dt} \right) = C,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( \zeta\frac{d\xi}{dt} -
+\xi\frac{d\zeta}{dt} \right) = B,\)</span></p>
+<p>_(S)<span class="math inline">\(m\left( \eta\frac{d\zeta}{dt} -
+\zeta\frac{d\eta}{dt} \right) = A,\)</span></p>
+<p>sur lesquelles on pourra faire des remarques analogues à celles que
+nous avons faites sur les équations de l’article 9.</p>
+<p>13. Quand un des corps du système est retenu fixement par un obstacle
+quelconque, en plaçant dans ce corps l’origine des coordonnées, on a le
+cas de l’article 7. Mais, si deux corps du système sont supposés fixes,
+on regardera la ligne qui passe par ces deux corps comme un axe fixe
+autour duquel le système peut tourner librement, et, prenant cet axe
+pour celui des coordonnées <span class="math inline">\(z,\)</span> on
+aura simplement, par le même article,</p>
+<p><span class="math inline">\(\delta x = - y\,\delta\varphi,\quad\delta
+y = x\,\delta\varphi,\)</span></p>
+<p><span class="math inline">\(\delta\varphi\)</span> étant la rotation
+élémentaire autour de cet axe, laquelle doit demeurer indéterminée. On
+n’aura ainsi qu’une seule équation relative à cette variation <span
+class="math inline">\(\delta\varphi,\)</span> laquelle sera</p>
+<p>_(S)<span class="math inline">\(m\left( x\frac{d^{2}y}{dt^{2}} -
+y\frac{d^{2}x}{dt^{2}} + xY - yX \right) = 0\,;\)</span></p>
+<p>et lorsque le moment <span class="math inline">\(xY - yX\)</span> des
+forces extérieures par rapport à l’axe de rotation est nul, on aura par
+l’intégration, comme dans l’article 9,</p>
+<p>_(S)<span class="math inline">\(m\left( x\frac{dy}{dt} -
+y\frac{dx}{dt} \right) = C,\)</span></p>
+<p>équation qui donne le principe des aires par rapport au plan des
+<span class="math inline">\(xy\)</span> perpendiculaire à l’axe de
+rotation, et sur lequel les aires décrites par les corps doivent être
+projetées.</p>
+<p>Si trois corps du système étaient supposés fixes, alors la position
+de chacun des autres corps dans l’espace serait déterminée par ses
+distances à ces trois corps, et il n’y aurait plus de variations
+indépendantes de la nature du système et de la disposition respective
+des corps entre eux, d’où l’on pût déduire des équations générales pour
+le mouvement d’un système quelconque.</p>
+<p>§ III. — <em>Propriétés relatives aux rotations produites par des
+forces d’impulsion</em>.</p>
+<p>14. Quand un, système libre de tourner en tout sens autour d’un point
+fixe reçoit des impulsions quelconques, on peut aussi employer, dans
+l’équation de l’article 11 de la Section précédente, les expressions de
+<span class="math inline">\(\delta x,\,\delta y,\,\delta z\)</span> de
+l’article 7, après avoir réduit à <span class="math inline">\(X,\, Y,\,
+Z\)</span> les forces d’impulsion <span class="math inline">\({P,\, Q,\,
+R},\ldots\)</span> et, en égalant séparément à zéro les termes
+multipliés par les variations <span
+class="math inline">\(\delta\varphi,\,\delta\omega,\,\delta\psi,\)</span>
+on aura les trois équations</p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(x\overset{˙}{y} -
+y\overset{˙}{x}) + xY - yX \right\rbrack = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(z\,\overset{˙}{x} -
+x\overset{˙}{z}\,) + z\, X - xZ \right\rbrack = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(y\overset{˙}{z}\, -
+z\,\overset{˙}{y}) + y\ Z\, - zY \right\rbrack = 0,\)</span></p>
+<p>pour le premier instant du mouvement produit par les impulsions <span
+class="math inline">\({X,\, Y,\, Z}.\)</span></p>
+<p>Dans les systèmes qui sont tout à fait libres, on peut prendre le
+point fixe partout où l’on veut dans l’espace, et les équations
+précédentes auront toujours lieu par rapport à ce point.</p>
+<p>15. Dans ces systèmes, on peut aussi rapporter leurs rotations à
+trois axes qui passent par le centre de gravité ; car, en faisant, comme
+dans l’article 5,</p>
+<p><span class="math inline">\(\delta x = \delta x^{\prime} +
+\delta\xi,\quad\delta y = \delta y^{\prime} + \delta\eta,\quad\delta z =
+\delta z^{\prime} + \delta\zeta,\)</span></p>
+<p>les variations <span class="math inline">\(\delta x^{\prime},\,\delta
+y^{\prime},\,\delta z^{\prime}\)</span> donneront d’abord les trois
+équations relatives au mouvement du centre de gravité trouvées dans ce
+même article.</p>
+<p>Il restera ensuite l’équation</p>
+<p>_(S)<span class="math inline">\(\left\lbrack (m\overset{˙}{x} +
+X)\delta\xi + (m\overset{˙}{y} + Y)\delta\eta + (m\overset{˙}{z} +
+Z)\delta\zeta \right\rbrack = 0.\)</span></p>
+<p>Or, en rapportant les rotations <span
+class="math inline">\(\delta\psi,\,\delta\omega,\,\delta\varphi\)</span>
+aux axes des coordonnées <span
+class="math inline">\(\xi,\,\eta,\,\zeta,\)</span> et n’ayant égard qu’à
+ces rotations, on a, comme dans l’article 7,</p>
+<p><span class="math inline">\(\delta\xi = \zeta\,\delta\omega -
+\eta\,\delta\varphi,\quad\delta\eta = \xi\,\delta\varphi -
+\zeta\,\delta\psi,\quad\delta\zeta = \eta\,\delta\psi -
+\xi\,\delta\omega,\)</span></p>
+<p>et les trois variations indéterminées <span
+class="math inline">\(\delta\psi,\delta\omega,\delta\varphi\)</span>
+donneront les trois équations</p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(\xi\overset{˙}{y} -
+\eta\overset{˙}{x}) + \xi Y - \eta X \right\rbrack = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(\zeta\overset{˙}{x} -
+\xi\overset{˙}{z}) + \zeta X - \xi Z \right\rbrack = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(\eta\overset{˙}{z} -
+\zeta\overset{˙}{y}) + \eta Z - \zeta Y \right\rbrack = 0,\)</span></p>
+<p>Mais</p>
+<p><span class="math inline">\(\overset{˙}{x} =
+{\overset{˙}{x}}^{\prime} + \overset{˙}{\xi},\qquad\overset{˙}{y} =
+{\overset{˙}{y}}^{\prime} + \overset{˙}{\eta},\qquad\overset{˙}{z} =
+{\overset{˙}{z}}^{\prime} + \overset{˙}{\zeta}\,;\)</span></p>
+<p>donc, substituant ces valeurs, faisant sortir hors du signe _(S) les
+quantités <span
+class="math inline">\({\overset{˙}{x}}^{\prime},\,{\overset{˙}{y}}^{\prime},\,{\overset{˙}{z}}^{\prime},\)</span>
+qui ne se rapportent qu’au centre de gravité, et observant que, par les
+propriétés de ce centre, on a</p>
+<p><em>(S)<span class="math inline">\(m\xi =
+0,\quad\)</span></em>(S)<span class="math inline">\(m\eta =
+0,\quad\)</span>_(S)<span class="math inline">\(m\zeta = 0,\)</span></p>
+<p>les trois équations précédentes deviendront</p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(\xi\overset{˙}{\eta} -
+\eta\overset{˙}{\xi}) + \xi Y - \eta X \right\rbrack = 0,\)</span></p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(\zeta\overset{˙}{\xi}
+- \xi\overset{˙}{\zeta}) + \zeta X - \xi Z \right\rbrack =
+0,\)</span></p>
+<p>_(S)<span class="math inline">\(\left\lbrack m(\eta\overset{˙}{\zeta}
+- \zeta\,\overset{˙}{\eta}) + \eta Z - \zeta Y \right\rbrack =
+0,\)</span></p>
+<p>qui sont tout à fait semblables à celles de l’article précédent, et
+dans lesquelles les coordonnées <span
+class="math inline">\(\xi,\,\eta,\,\zeta\)</span> ont leur origine au
+centre de gravité, et les vitesses <span
+class="math inline">\(\overset{˙}{\xi},\,\overset{˙}{\eta},\,\overset{˙}{\zeta}\)</span>
+sont relatives à ce centre.</p>
+<p>Ainsi les équations relatives à un point fixé subsistent aussi,
+lorsque le système est libre, par rapport à son centre de gravité.</p>
+<p>16. Les équations que nous venons de trouver, pour l’effet des
+impulsions dans le premier instant, ont lieu aussi dans les instants
+suivants, s’il n’y a point de forces accélératrices, en regardant comme
+constants les termes qui dépendent des impulsions <span
+class="math inline">\({X,\, Y,\, Z}\,;\)</span> car, <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z}\)</span>
+étant les vitesses parallèlement aux axes des <span
+class="math inline">\(x,\, y,\, z,\)</span> on a</p>
+<p><span class="math inline">\(dx = \overset{˙}{x}dt,\quad dy =
+\overset{˙}{y}dt,\quad dz = \overset{˙}{z}dt,\)</span></p>
+<p>et les équations de l’article 9 deviennent</p>
+<p>_(S)<span class="math inline">\(m(x\overset{˙}{y} - y\overset{˙}{x})
+= C,\)</span></p>
+<p>_(S)<span class="math inline">\(m(z\overset{˙}{x} - x\overset{˙}{z})
+= B,\)</span></p>
+<p>_(S)<span class="math inline">\(m(y\overset{˙}{z}\, -
+z\,\overset{˙}{y}) = A,\)</span></p>
+<p>lesquelles, étant comparées à celles de l’article 14, donnent</p>
+<p><span class="math inline">\(C =\)</span>_(S)<span
+class="math inline">\((yX - xY),\)</span></p>
+<p><span class="math inline">\(B =\)</span>_(S)<span
+class="math inline">\((xZ - zX),\)</span></p>
+<p><span class="math inline">\(A =\)</span>_(S)<span
+class="math inline">\((zY - yZ),\)</span></p>
+<p>Ainsi on a les valeurs des constantes <span
+class="math inline">\(A,\, B,\, C\)</span> exprimées par les impulsions
+primitives données à chaque corps ; et l’on voit que ces valeurs ne sont
+autre chose que les sommes des moments de ces impulsions par rapport aux
+axes des <span class="math inline">\(x,\)</span> des <span
+class="math inline">\(y\)</span> et des <span
+class="math inline">\(z.\)</span></p>
+<p>Il en sera de même des équations relatives au centre de gravité, en
+comparant les équations de l’article 12 avec celles de l’article 15.</p>
+<p>17. Si l’on ne considère que les mouvements de rotation par rapport
+aux trois axes des coordonnées <span class="math inline">\(x,\, y,\,
+z,\)</span> et qu’on désigne par <span
+class="math inline">\(\overset{˙}{\psi},\overset{˙}{\omega},\overset{˙}{\varphi}\)</span>
+les vitesses de ces rotations, les variations <span
+class="math inline">\(\delta x,\,\delta y,\,\delta z\)</span> seront
+proportionnelles aux vitesses <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z},\)</span>
+et les variations <span
+class="math inline">\(\delta\psi,\,\delta\omega,\,\delta\varphi\)</span>
+seront en même temps proportionnelles aux vitesses <span
+class="math inline">\(\overset{˙}{\psi},\overset{˙}{\omega},\overset{˙}{\varphi}\,;\)</span>
+les formules de l’article 7 donneront ainsi</p>
+<p><span class="math inline">\(\overset{˙}{x} = z\overset{˙}{\omega} -
+y\overset{˙}{\varphi},\qquad\overset{˙}{y} = x\overset{˙}{\varphi} -
+z\overset{˙}{\psi},\qquad\overset{˙}{z} = y\overset{˙}{\psi} -
+x\overset{˙}{\omega}.\)</span></p>
+<p>Ces valeurs de <span class="math inline">\(x,\, y,\, z\)</span> ne
+sont que les parties qui dépendent des trois rotations ; pour avoir les
+valeurs complètes des vraies vitesses <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z},\)</span>
+il faut y ajouter les parties qui dépendent du changement de situation
+des corps du système entre eux, et qui sont indépendantes des
+rotations.</p>
+<p>Mais lorsque le système est invariable, ce qui a lieu dans tous les
+corps solides d’une figure quelconque, ces parties des vitesses sont
+nulles et les valeurs de <span class="math inline">\(x,\, y,\,
+z\)</span> se réduisent simplement à celles que nous venons de donner.
+On pourra donc substituer ces valeurs dans les équations précédentes et,
+faisant sortir hors du signe _(S) les quantités <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi},\)</span>
+on aura, pour un solide de figure quelconque, en mettant l’élément <span
+class="math inline">\(Dm\)</span> à la place de <span
+class="math inline">\(m\)</span> (sect. 11, art. 7), les équations</p>
+<p><span class="math inline">\(\overset{˙}{\varphi}\)</span><em>(S)<span
+class="math inline">\(\left( x^{2} + y^{2} \right){Dm} -
+\overset{˙}{\psi}\)</span></em>(S)<span class="math inline">\(xz{Dm} -
+\overset{˙}{\omega}\)</span>_(S)<span class="math inline">\(yz{Dm =
+C},\)</span></p>
+<p><span
+class="math inline">\(\overset{˙}{\omega}\,\)</span><em>(S)<span
+class="math inline">\(\left( x^{2} + z^{2}\, \right){Dm} -
+\overset{˙}{\psi}\)</span></em>(S)<span class="math inline">\(xy{Dm} -
+\overset{˙}{\varphi}\)</span>_(S)<span class="math inline">\(yz{Dm =
+B},\)</span></p>
+<p><span class="math inline">\(\overset{˙}{\psi}\ \)</span><em>(S)<span
+class="math inline">\(\left( y^{2} + z^{2}\, \right){Dm} -
+\overset{˙}{\omega}\)</span></em>(S)<span class="math inline">\(xy{Dm} -
+\overset{˙}{\varphi}\)</span>_(S)<span class="math inline">\(xz{Dm =
+A},\)</span></p>
+<p>par lesquelles on pourra déterminer les vitesses des rotations
+initiales <span class="math inline">\(\psi,\,\omega,\,\varphi,\)</span>
+produites par les impulsions <span class="math inline">\(X,\, Y,\,
+Z\)</span> appliquées à des points quelconques du corps et dont les
+moments par rapport aux axes des <span class="math inline">\(x,\, y,\,
+z\)</span> sont <span class="math inline">\({A,\, B,\, C}.\)</span></p>
+<p>Comme les vitesses de rotation sont proportionnelles aux angles
+infiniment petits décrits en même temps par les rotations respectives,
+il s’ensuit de ce qu’on a démontré dans la première Partie (sect. III,
+art. 11) que les trois vitesses <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+se composent en une seule vitesse <span
+class="math inline">\(\overset{˙}{\theta}\)</span> telle que</p>
+<p><span class="math inline">\(\overset{˙}{\theta} =
+\sqrt{\overset{˙}{\psi^{2}} + \overset{˙}{\omega^{2}} +
+\overset{˙}{\varphi^{2}}},\)</span></p>
+<p>avec laquelle le corps tournera réellement autour d’un axe
+<em>instantané</em>, faisant, avec les axes des <span
+class="math inline">\(x,\, y,\, z,\)</span> des angles <span
+class="math inline">\(\lambda,\mu,\nu,\)</span> tels que</p>
+<p><span class="math inline">\(\cos\lambda =
+\frac{\overset{˙}{\psi}}{\overset{˙}{\theta}},\qquad\cos\mu =
+\frac{\overset{˙}{\omega}}{\overset{˙}{\theta}},\qquad\cos\nu =
+\frac{\overset{˙}{\varphi}}{\overset{˙}{\theta}}.\)</span></p>
+<p>Ainsi les trois équations précédentes donneront la position de l’axe
+autour duquel le corps tournera dans le premier instant, et la vitesse
+de rotation autour de cet axe. C’est celui qu’on appelle <em>axe
+spontané de rotation</em>.</p>
+<p>18. Dans les instants suivants, le corps continuera à tourner par sa
+force d’inertie, et les trois équations qu’on vient de trouver auront
+encore lieu, en regardant comme constants les termes qui contiennent les
+forces d’impulsion <span class="math inline">\({X,\, Y,\, Z},\)</span>
+comme on l’a vu dans l’article 16 ; mais les quantités <em>(S)<span
+class="math inline">\(\left( x^{2} + y^{2} \right){Dm},\)</span>
+</em>(S)<span class="math inline">\(xy{Dm},\ldots\)</span> deviendront
+variables à raison de la variation des coordonnées <span
+class="math inline">\(x,\, y,\, z\)</span> pendant la rotation.</p>
+<p>Mais une conséquence remarquable qu’on tire de ces équations, c’est
+que, dans un instant quelconque, le corps a le même mouvement de
+rotation qu’il recevrait dans cet instant par l’impulsion des mêmes
+forces qui l’ont mis d’abord en mouvement, si ces forces lui étaient
+appliquées de manière à produire les mêmes moments autour des axes des
+<span class="math inline">\(x,\, y,\, z.\)</span></p>
+<p>Et comme ces équations ne sont que les équations générales de
+l’article 16 pour un système quelconque de corps, appliquées à un corps
+solide de figure quelconque, il s’ensuit que, si le système qui a reçu
+des impulsions primitives devient, par l’action mutuelle et successive
+des corps, un système invariable ou un solide quelconque, les mêmes
+équations auront encore lieu ; de sorte que le solide aura à chaque
+instant le même mouvement de rotation qu’il recevrait par les mêmes
+impulsions primitives, si elles lui étaient appliquées immédiatement de
+manière à produire les mêmes moments.</p>
+<p>Donc aussi une masse fluide, agitée primitivement par des forces
+quelconques, abandonnée ensuite à elle-même et devenue solide par
+l’attraction mutuelle de ses parties, aura, à chaque instant, le même
+mouvement de rotation que les forces primitives lui imprimeraient si
+elles agissaient de la même manière sur la masse solide.</p>
+<p>19. Les trois équations de l’article 17 donneront les valeurs des
+moments <span class="math inline">\(A,\, B,\, C\)</span> de toutes les
+forces primitives, en connaissant la position instantanée du corps et
+ses trois vitesses de rotation <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+par rapport aux axes fixes des <span class="math inline">\(x,\, y,\,
+z,\)</span> ou la vitesse composée <span
+class="math inline">\(\overset{˙}{\theta}\)</span> autour de l’axe
+instantané, avec les angles <span
+class="math inline">\(\lambda,\mu,\nu\)</span> de cet axe avec les axes
+fixes des <span class="math inline">\(x,\, y,\, z\,;\)</span> et
+réciproquement, ayant ces moments, on peut en déduire les valeurs des
+vitesses de rotation.</p>
+<p>On voit aussi par ces équations que les moments seront nuls si les
+vitesses sont nulles ; mais, les moments étant supposés nuls, il ne
+s’ensuit pas évidemment que les vitesses de rotation doivent être
+nulles. Car, en faisant</p>
+<p><span class="math inline">\(A = 0,\qquad B = 0,\qquad C =
+0,\)</span></p>
+<p>on a trois équations linéaires entre <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+et il faudrait prouver que ces trois équations ne peuvent pas subsister
+ensemble, à moins de supposer <span
+class="math inline">\(\overset{˙}{\psi} = 0,\,\overset{˙}{\omega} =
+0,\,\overset{˙}{\varphi} = 0.\)</span></p>
+<p>En éliminant deux de ces inconnues, on a une équation qui donne la
+troisième inconnue nulle ou arbitraire, mais avec la condition</p>
+<p><em>(S)<span class="math inline">\(\left( x^{2} + y^{2} \right){Dm}
+\times\)</span></em>(S)<span class="math inline">\(\left( x^{2} + z^{2}
+\right){Dm} \times\)</span>_(S)<span class="math inline">\(\left( y^{2}
++ z^{2} \right){Dm}\)</span></p>
+<p><span class="math inline">\(= +\)</span><em>(S)<span
+class="math inline">\(\left( x^{2} + y^{2} \right){Dm} \times
+(\)</span></em>(S)<span class="math inline">\(xy\,{Dm})^{2}
++\)</span><em>(S)<span class="math inline">\(\left( x^{2} + z^{2}
+\right){Dm} \times (\)</span></em>(S)<span
+class="math inline">\(xz\,{Dm})^{2}\)</span></p>
+<p><span class="math inline">\(+\)</span><em>(S)<span
+class="math inline">\(\left( y^{2} + z^{2} \right){Dm} \times
+(\)</span></em>(S)<span class="math inline">\(yz\,{Dm})^{2} +
+2\)</span><em>(S)<span class="math inline">\(xy\,{Dm}
+\times\)</span></em>(S)<span class="math inline">\(xz\,{Dm}
+\times\)</span>_(S)<span class="math inline">\(yz\,{Dm}\,;\)</span></p>
+<p>et il faudrait prouver que cette condition est impossible à remplir,
+ce qui paraît très difficile^(<a href="#cite_note-2">[2]</a>). Mais nous
+démontrerons plus bas (art. 31) que, lorsque les moments sont nuls,
+toute rotation s’évanouit aussi.</p>
+<p>D’où nous pouvons d’abord conclure qu’il est impossible qu’un système
+de points isolés ou une masse fluide quelconque puisse former un corps
+solide qui ait un mouvement de rotation, à moins que les impulsions
+primitives n’aient été telles qu’il en soit résulté un moment par
+rapport à l’axe de cette rotation.</p>
+<p>20. Par les transformations exposées dans l’article 10, on peut
+changer les trois équations de l’article 17 en des équations semblables
+dans lesquelles les quantités <span class="math inline">\(x,\, y,\,
+z,\)</span> <span class="math inline">\(A,\, B,\, C\)</span> soient
+remplacées par les quantités analogues <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime},\)</span>
+<span class="math inline">\({A^{\prime},\, B^{\prime},\,
+C^{\prime}}.\)</span></p>
+<p>Désignons par <span
+class="math inline">\(\overset{˙}{\psi^{\prime}},\overset{˙}{\omega^{\prime}},\overset{˙}{\varphi^{\prime}}\)</span>
+les vitesses de rotation par rapport aux nouveaux axes des <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime}\,;\)</span>
+on aura aussi</p>
+<p><span class="math inline">\(\begin{matrix} {dx^{\prime} =} &amp;
+{{\overset{˙}{x}}^{\prime}dt = (z^{\prime}\overset{˙}{\omega^{\prime}} -
+y^{\prime}\overset{˙}{\varphi^{\prime}})dt,} \\ {dy^{\prime} =} &amp;
+{{\overset{˙}{y}}^{\prime}dt = (x^{\prime}\overset{˙}{\varphi^{\prime}}
+- z^{\prime}\overset{˙}{\psi^{\prime}})dt,} \\ {dz^{\prime} =} &amp;
+{{\overset{˙}{z}}^{\prime}dt = (y^{\prime}\overset{˙}{\psi^{\prime}} -
+x^{\prime}\overset{˙}{\omega^{\prime}})dt\,;} \end{matrix}\)</span></p>
+<p>et les trois premières équations de l’article 10 deviendront, par ces
+substitutions, en changeant <span class="math inline">\(m\)</span> en
+<span class="math inline">\({Dm},\)</span></p>
+<p><span
+class="math inline">\(\overset{˙}{\varphi^{\prime}}\)</span><em>(S)<span
+class="math inline">\(\left( x&#39;^{2} + y&#39;^{2} \right){Dm} -
+\overset{˙}{\psi^{\prime}}\)</span></em>(S)<span
+class="math inline">\(x^{\prime}z^{\prime}{Dm} -
+\overset{˙}{\omega^{\prime}}\)</span>_(S)<span
+class="math inline">\(y^{\prime}z^{\prime}{Dm =
+C^{\prime}},\)</span></p>
+<p><span
+class="math inline">\(\overset{˙}{\omega^{\prime}}\)</span><em>(S)<span
+class="math inline">\(\left( z&#39;^{2} + x&#39;^{2} \right){Dm} -
+\overset{˙}{\psi^{\prime}}\)</span></em>(S)<span
+class="math inline">\(x^{\prime}y^{\prime}{Dm} -
+\overset{˙}{\varphi^{\prime}}\)</span>_(S)<span
+class="math inline">\(y^{\prime}z^{\prime}{Dm =
+B^{\prime}},\)</span></p>
+<p><span
+class="math inline">\(\overset{˙}{\psi^{\prime}}\)</span><em>(S)<span
+class="math inline">\(\left( y&#39;^{2} + z&#39;^{2} \right){Dm} -
+\overset{˙}{\omega^{\prime}}\)</span></em>(S)<span
+class="math inline">\(x^{\prime}y^{\prime}{Dm} -
+\overset{˙}{\varphi^{\prime}}\)</span>_(S)<span
+class="math inline">\(x^{\prime}z^{\prime}{Dm =
+A^{\prime}},\)</span></p>
+<p>dans lesquelles on aura, par le même article,</p>
+<p><span class="math inline">\(\begin{matrix}  &amp; {{A^{\prime} =
+A\alpha + B\alpha^{\prime} + C\alpha^{&#39;&#39;}},} \\  &amp;
+{{B^{\prime} = A\beta\, + B\beta^{\prime} + C\beta^{&#39;&#39;}},}
+\\  &amp; {{C^{\prime} = A\gamma\  + B\gamma^{\prime} +
+C\gamma^{&#39;&#39;}}.} \end{matrix}\)</span></p>
+<p>Ces équations ont l’avantage que la position des axes de rotation y
+est entièrement arbitraire, puisqu’elle ne dépend que des quantités
+<span
+class="math inline">\(\alpha,\,\beta,\,\gamma,\,\alpha^{\prime},\ldots\,;\)</span>
+et, comme elles ne sont que du premier ordre, rien n’empêche de donner à
+ces axes une position différente d’un instant à l’autre et de les
+prendre de manière qu’ils soient fixes dans l’intérieur du corps et, par
+conséquent, mobiles avec lui dans l’espace. Alors les quantités
+<em>(S)<span class="math inline">\(\left( x&#39;^{2} + y&#39;^{2}
+\right){Dm},\)</span> </em>(S)<span
+class="math inline">\(x^{\prime}y^{\prime}{Dm}\ldots\)</span>
+deviendront constantes ; mais les quantités <span
+class="math inline">\(A^{\prime},\, B^{\prime},\, C^{\prime}\)</span>
+seront variables, à cause de la variabilité des quantités <span
+class="math inline">\(\alpha,\beta,\gamma,\)</span> <span
+class="math inline">\(\alpha^{\prime},\ldots.\)</span> Nous donnerons
+dans la suite des moyens directs de parvenir à ces équations, qui sont
+d’une grande utilité dans le problème de la rotation des corps.</p>
+<p>21. On a vu dans l’article 16 que les constantes <span
+class="math inline">\(A,\, B,\, C\)</span> expriment les sommes des
+moments des impulsions primitives données aux corps, relativement aux
+axes des <span class="math inline">\(x,\, y,\, z.\)</span> Or il est
+facile de prouver que les quantités <span
+class="math inline">\(\alpha,\alpha^{\prime},\alpha^{&#39;&#39;}\)</span>
+représentent les cosinus des angles que l’axe des <span
+class="math inline">\(x^{\prime}\)</span> fait avec les axes des <span
+class="math inline">\(x,\, y,\, z\,;\)</span> que les quantités <span
+class="math inline">\(\beta,\,\beta^{\prime},\,\beta^{&#39;&#39;}\)</span>
+représentent les cosinus des angles que l’axe des <span
+class="math inline">\(y^{\prime}\)</span> fait avec les mêmes axes des
+<span class="math inline">\(x,\, y,\, z,\)</span> et que les quantités
+<span
+class="math inline">\(\gamma,\gamma^{\prime},\gamma^{&#39;&#39;}\)</span>
+représentent les cosinus des angles que l’axe des <span
+class="math inline">\(z^{\prime}\)</span> fait avec ces mêmes axes.
+Donc, par ce qu’on a démontré dans la première Partie sur la composition
+des moments (sect. III, art. 16), les trois quantités <span
+class="math inline">\(A^{\prime},\, B^{\prime},\, C^{\prime}\)</span>
+seront les moments des mêmes impulsions rapportés aux axes des <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime},\)</span>
+c’est-à-dire aux axes de rotation fixes dans le corps et mobiles dans
+l’espace. Ainsi l’on pourra appliquer à ces axes les mêmes conclusions
+qu’on a trouvées dans l’article 19.</p>
+<p>§ IV. — <em>Propriétés des axes fixes de rotation d’un corps libre de
+figure quelconque</em>.</p>
+<p>22. Nous réservons pour un Chapitre particulier la solution complète
+du problème général de la rotation d’un corps solide de figure
+quelconque ; nous allons seulement examiner ici le cas où l’axe
+instantané de rotation demeure immobile dans l’espace, ou au moins
+toujours parallèle à lui-même lorsque le corps a un mouvement
+progressif, parce que ce cas se résout facilement par les formules du
+paragraphe précédent et qu’il conduit aux belles propriétés des axes
+qu’on nomme <em>principaux</em>, ou <em>axes naturels de
+rotation</em>.</p>
+<p>Reprenons les équations fondamentales de l’article 17 ; faisons, pour
+abréger,</p>
+<p><span class="math inline">\(l =\)</span><em>(S)<span
+class="math inline">\(x^{2}{Dm},\qquad m =\)</span></em>(S)<span
+class="math inline">\(y^{2}{Dm},\qquad n =\)</span>_(S)<span
+class="math inline">\(z^{2}{Dm},\)</span></p>
+<p><span class="math inline">\(f =\)</span><em>(S)<span
+class="math inline">\(yz{Dm},\qquad\; g =\)</span></em>(S)<span
+class="math inline">\(xz{Dm},\qquad h =\)</span>_(S)<span
+class="math inline">\(xy{Dm},\)</span></p>
+<p>et substituons pour <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+leurs valeurs <span
+class="math inline">\(\overset{˙}{\theta}\cos\lambda,\,\overset{˙}{\theta}\cos\mu,\,\overset{˙}{\theta}\cos\nu,\)</span>
+<span class="math inline">\(\overset{˙}{\theta}\)</span> étant la
+vitesse de rotation autour de l’axe instantané qui fait les angles <span
+class="math inline">\(\lambda,\,\mu,\,\nu\)</span> avec les axes fixes
+des <span class="math inline">\(x,\, y,\, z\,;\)</span> ces équations
+deviendront ainsi, en les divisant par <span
+class="math inline">\(\overset{˙}{\theta},\)</span></p>
+<p><span class="math inline">\(\begin{matrix}  &amp; {(m} &amp; + &amp;
+{n)} &amp; {\cos\lambda -} &amp; {h\cos\mu -} &amp; {g\cos\nu =} &amp;
+{\frac{A}{\overset{˙}{\theta}},} \\  &amp; {(l} &amp; + &amp; {n)} &amp;
+{\cos\mu -} &amp; {h\cos\lambda -} &amp; {f\cos\nu =} &amp;
+{\frac{B}{\overset{˙}{\theta}},} \\  &amp; {(l} &amp; + &amp; {m)} &amp;
+{\cos\nu -} &amp; {g\cos\lambda -} &amp; {f\cos\mu =} &amp;
+{\frac{C}{\overset{˙}{\theta}}.} \end{matrix}\)</span></p>
+<p>23. Les six quantités <span class="math inline">\(l,\, m,\, n,\, f,\,
+g,\, h\)</span> sont variables ; en les différentiant, substituant pour
+<span class="math inline">\(dx,\, dy,\, dz,\)</span> les quantités <span
+class="math inline">\(\overset{˙}{x}dt,\overset{˙}{y}dt,\overset{˙}{z}dt,\)</span>
+et ensuite pour <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z}\)</span>
+leurs valeurs (article cité), on aura</p>
+<p><span class="math inline">\(\begin{matrix} {dl\ \  =} &amp;
+{2(g\cos\mu - h\cos\nu)\overset{˙}{\theta}dt,} \\ {dm =} &amp;
+{2(h\cos\nu - f\cos\lambda)\overset{˙}{\theta}dt,} \\ {dn\  =} &amp;
+{2(f\cos\lambda - g\cos\mu)\overset{˙}{\theta}dt,} \\ {df\; =} &amp;
+{\left\lbrack (m - n\ )\cos\lambda + g\cos\nu - h\cos\mu
+\right\rbrack\overset{˙}{\theta}dt,} \\ {dg\; =} &amp; {\left\lbrack
+(n\; - l\ \ )\cos\mu + h\cos\lambda - f\cos\nu
+\right\rbrack\overset{˙}{\theta}dt,} \\ {dh\  =} &amp; {\left\lbrack (l\
+\; - m)\cos\nu + f\cos\mu - g\cos\lambda
+\right\rbrack\overset{˙}{\theta}dt.} \end{matrix}\)</span></p>
+<p>Ces six équations, jointes aux trois de l’article précédent,
+renferment la solution générale ; mais nous ne considérons ici que le
+cas où les angles <span
+class="math inline">\(\lambda,\,\mu,\,\nu\)</span> demeurent
+invariables, et il s’agit de voir sous quelles conditions ces quantités
+peuvent être constantes.</p>
+<p>24. Pour cela, il n’y a qu’à différentier les trois premières
+équations dans cette supposition, et y substituer les valeurs des
+différentielles <span class="math inline">\(dl,\)</span> <span
+class="math inline">\(dm,\ldots\,;\)</span> on aura, après avoir divisé
+par <span class="math inline">\(\overset{˙}{\theta}dt,\)</span> ces
+trois-ci :</p>
+<p><span class="math inline">\(\begin{matrix} {f\left( \cos^{2}\nu -
+\cos^{2}\mu \right) - g\cos\lambda\cos\mu + h\cos\lambda\cos\nu} &amp;
+\\ {+ (m - n)\cos\mu\cos\nu} &amp; {= -
+\frac{A}{\overset{˙}{\theta}\,\!^{2}}\frac{d\overset{˙}{\theta}}{dt},}
+\\ {f\cos\lambda\cos\mu + g\left( \cos^{2}\lambda - \cos^{2}\nu \right)
+- h\cos\mu\cos\nu} &amp; \\ {+ (n - l\ \ )\cos\lambda\cos\nu} &amp; {= -
+\frac{B}{\overset{˙}{\theta}\,\!^{3}}\frac{d\overset{˙}{\theta}}{dt},}
+\\ {- f\cos\lambda\cos\nu + g\cos\mu\cos\nu + h\left( \cos^{2}\mu -
+\cos^{2}\lambda \right)} &amp; \\ {+ (l\, - m)\cos\lambda\cos\mu} &amp;
+{= -
+\frac{C}{\overset{˙}{\theta}\,\!^{3}}\frac{d\overset{˙}{\theta}}{dt}.}
+\end{matrix}\)</span></p>
+<p>Si l’on ajoute ces trois équations ensemble, après, avoir multiplié
+la première par <span class="math inline">\(\cos\lambda,\)</span> la
+deuxième par <span class="math inline">\(\cos\mu,\)</span> la troisième
+par <span class="math inline">\(\cos\nu,\)</span> on a l’équation</p>
+<p><span class="math inline">\(\frac{A\cos\lambda + B\cos\mu +
+C\cos\nu}{{\overset{˙}{\theta}}^{3}}\frac{d\overset{˙}{\theta}}{dt} =
+0,\)</span></p>
+<p>laquelle donne</p>
+<p><span class="math inline">\(d\overset{˙}{\theta} = 0,\)</span></p>
+<p>ou bien</p>
+<p><span class="math inline">\({A\cos\lambda + B\cos\mu + C\cos\nu} =
+0.\)</span></p>
+<p>Nous verrons plus bas (art. 38) que la quantité</p>
+<p><span class="math inline">\({A\overset{˙}{\psi} +
+B\overset{˙}{\omega} + C\overset{˙}{\varphi}},\)</span></p>
+<p>qui est la même chose que</p>
+<p><span class="math inline">\(({A\cos\lambda + B\cos\mu +
+C\cos\nu})\overset{˙}{\theta},\)</span></p>
+<p>exprime la force vive du corps, laquelle ne peut jamais être nulle
+tant que le corps est en mouvement.</p>
+<p>Il faut donc supposer en général</p>
+<p><span class="math inline">\(d\overset{˙}{\theta} = 0,\)</span></p>
+<p>et, par conséquent, la vitesse de rotation <span
+class="math inline">\(\overset{˙}{\theta}\)</span> constante. Alors les
+trois équations ci-dessus se réduisent à deux, qui donnent les rapports
+des <span class="math inline">\(\cos\lambda,\,\cos\mu,\)</span> <span
+class="math inline">\(\cos\nu\,;\)</span> et, comme on a</p>
+<p><span class="math inline">\(\cos^{2}\lambda + \cos^{2}\mu +
+\cos^{2}\nu = 1,\)</span></p>
+<p>ces rapports suffiront pour déterminer les trois cosinus.</p>
+<p>25. Supposons</p>
+<p><span class="math inline">\(s = \frac{\cos\mu}{\cos\lambda},\qquad u
+= \frac{\cos\nu}{\cos\lambda}\,;\)</span></p>
+<p>les trois équations précédentes deviendront, à cause de <span
+class="math inline">\(d\overset{˙}{\theta} = 0,\)</span></p>
+<p><span class="math inline">\(\begin{matrix}  &amp; {f\left( u^{2} -
+s^{2} \right)} &amp; - &amp; {gs} &amp; + &amp; {hu} &amp; + &amp; {(m}
+&amp; - &amp; n &amp; ) &amp; {su} &amp; = &amp; {0,} \\  &amp; {g\left(
+1\ \; - u^{2} \right)} &amp; - &amp; {hsu} &amp; + &amp; {fs} &amp; +
+&amp; {(n} &amp; - &amp; l &amp; ) &amp; u &amp; = &amp; {0,} \\  &amp;
+{h\left( s^{2}\, - 1 \right)} &amp; + &amp; {gsu} &amp; - &amp; {fu}
+&amp; + &amp; {(l} &amp; - &amp; m &amp; ) &amp; s &amp; = &amp; 0.
+\end{matrix}\)</span></p>
+<p>La dernière donne</p>
+<p><span class="math inline">\(u = \frac{h\left( s^{2} - 1 \right) + (l
+- m)s}{f - gs}\,;\)</span></p>
+<p>cette valeur étant substituée dans la première ou dans la seconde, ou
+plutôt dans la somme de ces deux, après avoir multiplié l’une par <span
+class="math inline">\(g\)</span> et l’autre par <span
+class="math inline">\(f,\)</span> pour en chasser le terme en <span
+class="math inline">\(u^{2},\)</span> on a</p>
+<p><span class="math inline">\(\left\lbrack gh(m - n) + f\left( g^{2} -
+h^{2} \right) \right\rbrack s^{2}\)</span></p>
+<p><span class="math inline">\(\begin{matrix} {+ \left\lbrack g(l - m)(m
+- n) + fh(n - 2l + m) + g\left( g^{2} + h^{2} - f^{2} \right)
+\right\rbrack s^{2}} &amp; \\ {+ \left\lbrack f(l - m)(m - n) + gh(n -
+2m + l) + f\left( f^{2} + h^{2} - g^{2} \right) \right\rbrack s\ \ }
+&amp; \\ {+ fh(l - n) + g\left( f^{2} - h^{2} \right)} &amp; {= 0.}
+\end{matrix}\)</span></p>
+<p>Cette équation, étant du troisième degré, aura nécessairement une
+racine réelle ; ainsi l’on aura une valeur de <span
+class="math inline">\(s\)</span> et une valeur correspondante de <span
+class="math inline">\(u,\)</span> par le moyen desquelles on pourra
+déterminer la position d’un axe invariable et de rotation uniforme.
+Mais, comme cette détermination dépend des quantités <span
+class="math inline">\(l,\, m,\)</span> <span class="math inline">\(n,\,
+f,\, g,\, h\)</span> qui varient avec le temps <span
+class="math inline">\(t,\)</span> il faut encore prouver que la
+variabilité de ces quantités n’influe point sur la valeur des deux
+quantités <span class="math inline">\(s\)</span> et <span
+class="math inline">\(u.\)</span></p>
+<p>26. Pour y parvenir, nommons <span class="math inline">\(P,\, Q,\,
+R\)</span> les premiers membres des trois équations de l’article 22 ;
+les premiers membres des équations de l’article 24 seront <span
+class="math inline">\(\frac{dP}{\overset{˙}{\theta}dt},\,\frac{dQ}{\overset{˙}{\theta}dt},\,\frac{dR}{\overset{˙}{\theta}dt},\)</span>
+en y mettant pour <span class="math inline">\(dl,\, dm,\ldots\)</span>
+leurs valeurs. Or il est facile de voir qu’on a, par la substitution de
+ces mêmes valeurs,</p>
+<p><span class="math inline">\(\begin{matrix} {dP =} &amp; {(R\cos\mu -
+Q\cos\nu)\overset{˙}{\theta}dt,} \\ {dQ =} &amp; {(P\cos\nu -
+R\cos\lambda)\overset{˙}{\theta}dt,} \\ {dR =} &amp; {(Q\cos\lambda -
+P\cos\mu)\overset{˙}{\theta}dt.} \end{matrix}\)</span></p>
+<p>D’après ces équations, dans lesquelles <span
+class="math inline">\(\lambda,\,\mu,\,\nu\)</span> et <span
+class="math inline">\(\overset{˙}{\theta}\)</span> sont des quantités
+constantes, il est facile de voir que, si les valeurs de <span
+class="math inline">\(\frac{dP}{dt},\,\frac{dQ}{dt},\,\frac{dR}{dt}\)</span>
+sont nulles lorsque <span class="math inline">\(t\)</span> est nul ou
+égal à une quantité quelconque donnée, celles de <span
+class="math inline">\(\frac{d^{2}P}{dt^{2}},\,\frac{d^{2}Q}{dt^{2}},\,\frac{d^{2}R}{dt^{2}},\)</span>
+de <span
+class="math inline">\(\frac{d^{3}P}{dt^{3}},\frac{d^{3}Q}{dt^{3}},\frac{d^{3}R}{dt^{3}},\)</span>
+et ainsi de suite à l’infini, seront aussi nulles pour la même valeur de
+<span class="math inline">\(t.\)</span></p>
+<p>Or on sait, par le théorème de Taylor, que la valeur d’une fonction
+<span class="math inline">\(\frac{dP}{dt}\)</span> de <span
+class="math inline">\(t,\)</span> lorsque <span
+class="math inline">\(t\)</span> devient <span class="math inline">\(t +
+t^{\prime},\)</span> devient en même temps</p>
+<p><span class="math inline">\(\frac{dP}{dt} +
+\frac{d^{2}P}{dt^{2}}t^{\prime} +
+\frac{1}{2}\frac{d^{3}P}{dt^{3}}t&#39;^{2} +
+\frac{1}{2.3}\frac{d^{4}P}{dt^{4}}t&#39;^{3} + \ldots.\)</span></p>
+<p>Donc, si <span class="math inline">\(\frac{dP}{dt}\)</span> est nul
+lorsque l’on a <span class="math inline">\(t^{\prime} = 0,\)</span> on
+aura toujours</p>
+<p><span class="math inline">\(\frac{dP}{dt} = 0,\)</span></p>
+<p>quel que soit <span class="math inline">\(t^{\prime}.\)</span> Et la
+même chose aura lieu pour les valeurs de <span
+class="math inline">\(\frac{dQ}{dt}\)</span> et <span
+class="math inline">\(\frac{dR}{dt}.\)</span></p>
+<p>Il s’ensuit de là que, si les équations de l’article 25, qui ne sont
+que les transformées des équations <span
+class="math inline">\(\frac{dP}{dt} = 0,\,\frac{dQ}{dt} =
+0,\,\frac{dR}{dt} = 0,\)</span> ont lieu dans un instant quelconque,
+elles auront lieu, quel que soit le temps <span
+class="math inline">\(t,\)</span> dans l’hypothèse des quantités <span
+class="math inline">\(s\)</span> et <span
+class="math inline">\(u\)</span> constantes. Par conséquent, les valeurs
+de ces quantités seront indépendantes de la variabilité des quantités
+<span class="math inline">\(l,\, m,\, n,\, f,\, g,\, h\,;\)</span> de
+sorte qu’il suffira de déterminer les valeurs de ces dernières quantités
+pour une position quelconque du corps à l’égard des axes fixes des <span
+class="math inline">\(x,\, y,\, z,\)</span> pour avoir celles des
+quantités <span class="math inline">\(s\)</span> et <span
+class="math inline">\(u\)</span> qui déterminent la position de l’axe de
+rotation, lequel doit demeurer immobile dans l’espace ou du moins
+toujours parallèle à lui-même si le corps a un mouvement progressif.</p>
+<p>Et comme cet axe, par sa nature, est fixe dans l’intérieur du corps
+pendant un instant, puisque le corps est censé tourner autour de lui, il
+s’ensuit qu’il y doit toujours demeurer fixe ; car il est évident que
+si, dans l’instant suivant, il changeait de place dans le corps, il
+changerait nécessairement de place dans l’espace, ce qui est contre
+l’hypothèse.</p>
+<p>27. Ayant trouvé la position de cet axe dans l’espace, rien n’empêche
+de supposer qu’il coïncide avec l’axe des <span
+class="math inline">\(x,\)</span> dont la position est arbitraire.</p>
+<p>On pourra ainsi supposer <span class="math inline">\(\lambda =
+0\)</span> et, par conséquent, <span class="math inline">\(\cos\lambda =
+1,\)</span> ce qui donnera</p>
+<p><span class="math inline">\(s = 0,\qquad u = 0.\)</span></p>
+<p>De là on trouve, par les équations de l’article 25,</p>
+<p><span class="math inline">\(g = 0,\qquad h = 0.\)</span></p>
+<p>Ainsi cet axe a la propriété qu’en le prenant pour l’axe des <span
+class="math inline">\(x,\)</span> les valeurs des deux intégrales
+<em>(S)<span class="math inline">\(xy\,{Dm},\)</span> </em>(S)<span
+class="math inline">\(xz\,{Dm}\)</span> (art. 22) deviennent nulles.</p>
+<p>Supposons maintenant dans nos formules</p>
+<p><span class="math inline">\(g = 0,\qquad h = 0,\)</span></p>
+<p>et désignons par <span class="math inline">\(f^{\prime},\,
+l^{\prime},\, m^{\prime},\, n^{\prime}\)</span> ce que deviennent les
+quantités <span class="math inline">\(f,\, l,\, m,\, n\)</span> dans ce
+cas. Cette supposition donne d’abord</p>
+<p><span class="math inline">\(s = 0,\qquad u = 0\,;\)</span></p>
+<p>c’est le cas précédent. Ensuite elle donne aussi <span
+class="math inline">\(s\)</span> et <span
+class="math inline">\(u\)</span> infinis et, par conséquent,</p>
+<p><span class="math inline">\(\cos\lambda = 0,\qquad\lambda =
+90^{\circ}\,;\)</span></p>
+<p>cette valeur répond aux deux autres racines de l’équation en <span
+class="math inline">\(s\)</span> du troisième degré et, par conséquent,
+à la position des deux autres axes. Or la première des équations en
+<span class="math inline">\(s\)</span> et <span
+class="math inline">\(u\)</span> (art. 25) devient, lorsque <span
+class="math inline">\(g\)</span> et <span
+class="math inline">\(h\)</span> sont nuls,</p>
+<p><span class="math inline">\(f^{\prime}\left( u^{2} - s^{2} \right) +
+(m^{\prime} - n^{\prime})su = 0,\)</span></p>
+<p>et, substituant pour <span class="math inline">\(s\)</span> et <span
+class="math inline">\(u\)</span> leurs valeurs,</p>
+<p><span class="math inline">\(f^{\prime}(cos^{2}\nu - \cos^{2}\mu) +
+(m^{\prime} - n^{\prime})\cos\mu\cos\nu = 0\,;\)</span></p>
+<p>mais, en faisant <span class="math inline">\(\cos\lambda = 0\)</span>
+dans</p>
+<p><span class="math inline">\(\cos^{2}\lambda + \cos^{2}\mu +
+\cos^{2}\nu = 1,\)</span></p>
+<p>on a</p>
+<p><span class="math inline">\(\cos\nu = \sqrt{1 - \cos^{2}\mu} =
+\sin\mu\,;\)</span></p>
+<p>et l’équation précédente se réduit à celle-ci</p>
+<p><span class="math inline">\({tang}2\mu =
+\frac{2f^{\prime}}{m^{\prime} - n^{\prime}},\)</span></p>
+<p>laquelle donne pour l’angle <span class="math inline">\(\mu\)</span>
+deux valeurs dont l’une surpasse l’autre de <span
+class="math inline">\(90^{\circ}.\)</span></p>
+<p>Ainsi, ayant pris l’axe des <span class="math inline">\(x\)</span>
+dans le premier axe de rotation, les deux autres axes de rotation
+uniforme seront dans le plan des <span class="math inline">\(yz\)</span>
+et feront avec l’axe des <span class="math inline">\(y\)</span> les
+angles <span class="math inline">\(\mu\)</span> et <span
+class="math inline">\(\mu + 90^{\circ},\)</span> de manière que les
+trois axes de rotation seront rectangulaires entre eux, comme ceux des
+coordonnées. On pourra donc prendre aussi ces deux derniers axes pour
+ceux des <span class="math inline">\(y\)</span> et des <span
+class="math inline">\(z\,;\)</span> on aura alors</p>
+<p><span class="math inline">\(\mu = 0\)</span></p>
+<p>et, par conséquent,</p>
+<p><span class="math inline">\(f^{\prime} = 0\,;\)</span></p>
+<p>de sorte que la valeur de l’intégrale _(S)<span
+class="math inline">\(yz\,{Dm}\)</span> sera aussi nulle.</p>
+<p>28. Il existe donc, pour chaque corps solide, quelles que soient sa
+figure et sa constitution, et par rapport à un point quelconque du
+corps, trois axes rectangulaires, qui se coupent dans ce point, autour
+desquels le corps peut tourner librement et uniformément ; et ces trois
+axes sont déterminés par les conditions suivantes</p>
+<p><em>(S)<span class="math inline">\(xy\,{Dm} =
+0,\qquad\)</span></em>(S)<span class="math inline">\(xz\,{Dm} =
+0,\qquad\)</span>_(S)<span class="math inline">\(yz\,{Dm} =
+0,\)</span></p>
+<p>en prenant ces axes pour ceux des coordonnées <span
+class="math inline">\(x,\, y,\, z.\)</span></p>
+<p>Lorsque ces axes passent par le centre de gravité, on les nomme axes
+<em>principaux</em>, d’après Euler, à qui on en doit la connaissance ;
+on les nomme aussi <em>axes naturels de rotation</em> ou, en général,
+<em>axes principaux</em>, soit qu’ils passent par le centre de gravité
+ou non.</p>
+<p>29. En faisant</p>
+<p><span class="math inline">\(f = 0,\qquad g = 0,\qquad h =
+0,\)</span></p>
+<p>ce qui a lieu par rapport aux trois axes principaux, on a aussi, par
+les équations de l’article 23,</p>
+<p><span class="math inline">\(\frac{dl}{dt} = 0,\qquad\frac{dm}{dt} =
+0,\qquad\frac{dn}{dt} = 0,\)</span></p>
+<p>ce qui fait voir que les quantités <span class="math inline">\(l,\,
+m,\, n\)</span> sont alors les plus grandes ou les plus petites. Pour
+pouvoir distinguer les maxima et les minima, il n’y aura qu’à chercher
+les valeurs de <span
+class="math inline">\(\frac{d^{2}l}{dt^{2}},\,\frac{d^{2}m}{dt^{2}},\,\frac{d^{2}n}{dt^{2}}\,;\)</span>
+et l’on trouvera, à cause de <span
+class="math inline">\(\overset{˙}{\theta}\)</span> constante,</p>
+<p><span class="math inline">\(\begin{matrix} {\frac{d^{2}l}{dt^{2}}\
+\  =} &amp; {2\left\lbrack (n\  - l\ \ )\cos^{2}\mu - (l\ \  -
+m)\cos^{2}\nu \right\rbrack\overset{˙}{\theta}\,\!^{2},} \\
+{\frac{d^{2}m}{dt^{2}} =} &amp; {2\left\lbrack (l\ \  - m)\cos^{2}\nu -
+(m - n\ )\cos^{2}\lambda \right\rbrack\overset{˙}{\theta}\,\!^{2},} \\
+{\frac{d^{2}n}{dt^{2}}\  =} &amp; {2\left\lbrack (m - n\
+)\cos^{2}\lambda - (n\  - l\ \ )\cos^{2}\mu
+\right\rbrack\overset{˙}{\theta}\,\!^{2}.} \end{matrix}\)</span></p>
+<p>Donc, si <span class="math inline">\(l &gt; m,\, m &gt; n,\)</span>
+la valeur de <span class="math inline">\(\frac{d^{2}l}{dt^{2}}\)</span>
+sera toujours négative, celle de <span
+class="math inline">\(\frac{d^{2}n}{dt^{2}}\)</span> toujours positive,
+et celle de <span class="math inline">\(\frac{d^{2}m}{dt^{2}}\)</span>
+pourra être positive ou négative par conséquent, <span
+class="math inline">\(l\)</span> sera toujours un maximum, <span
+class="math inline">\(n\)</span> un minimum, et <span
+class="math inline">\(m\)</span> ne sera ni l’un ni l’autre. On voit
+aussi que <span class="math inline">\(\frac{d^{2}l}{dt^{2}} +
+\frac{d^{2}m}{dt^{2}}\)</span> aura toujours une valeur négative, et
+<span class="math inline">\(\frac{d^{2}m}{dt^{2}} +
+\frac{d^{2}n}{dt^{2}}\)</span> aura toujours une valeur positive ; de
+sorte que la quantité <span class="math inline">\(l + m\)</span> sera
+toujours un maximum, et <span class="math inline">\(m + n\)</span> un
+minimum.</p>
+<p>Les quantités <span class="math inline">\(l + m,\, l + n,\, m +
+n,\)</span> qui expriment les sommes des produits de chaque molécule du
+corps par le carré de sa distance aux trois axes des <span
+class="math inline">\(z,\, y,\, x,\)</span> se nomment, d’après Euler,
+<em>moments d’inertie</em> du corps relativement à ces axes ; ils sont
+pour le mouvement de rotation ce que les simples masses sont pour le
+mouvement progressif, puisque c’est par ces moments qu’il faut diviser
+les moments des forces d’impulsion pour avoir les vitesses de rotation
+autour des mêmes axes.</p>
+<p>C’est par la considération des plus grands et des plus petits moments
+d’inertie qu’Euler a trouvé les axes principaux ; maintenant, on les
+détermine ordinairement par les trois conditions</p>
+<p><em>(S)<span class="math inline">\(xy\,{Dm} =
+0,\qquad\)</span></em>(S)<span class="math inline">\(xz\,{Dm} =
+0,\qquad\)</span>_(S)<span class="math inline">\(yz\,{Dm} =
+0.\)</span></p>
+<p>30. Puisqu’on est assuré, par l’analyse de l’article 27, que
+l’équation en <span class="math inline">\(s\)</span> (art. 25) a ses
+trois racines réelles, il sera toujours facile de les trouver en
+comparant cette équation, dégagée de son second terme, avec l’équation
+connue</p>
+<p><span class="math inline">\(x^{3} - 3r^{2}x - 2r^{2}\cos\varphi =
+0,\)</span></p>
+<p>dont les trois racines sont</p>
+<p><span class="math inline">\(2r\cos\frac{\varphi}{3},\qquad -
+2r\cos\left( 60^{\circ} + \frac{\varphi}{3} \right),\qquad -
+2r\cos\left( 60^{\circ} - \frac{\varphi}{3} \right).\)</span></p>
+<p>On aura ainsi les trois valeurs de <span
+class="math inline">\(s,\)</span> que nous désignerons par <span
+class="math inline">\(s,\, s^{\prime},\, s^{&#39;&#39;},\)</span> et les
+valeurs correspondantes <span class="math inline">\(u,\, u^{\prime},\,
+u^{&#39;&#39;}.\)</span> Et, si l’on désigne de même par <span
+class="math inline">\(\lambda,\,\lambda^{\prime},\,\lambda^{&#39;&#39;}\)</span>
+les angles que les trois axes principaux font avec l’axe des <span
+class="math inline">\(x,\)</span> par <span
+class="math inline">\(\mu,\,\mu^{\prime},\,\mu^{&#39;&#39;}\)</span> les
+angles qu’ils font avec l’axe des <span
+class="math inline">\(y,\)</span> et par <span
+class="math inline">\(\nu,\,\nu^{\prime},\,\nu^{&#39;&#39;}\)</span>
+ceux que ces mêmes axes font avec l’axe des <span
+class="math inline">\(z,\)</span> on aura, par les articles 24 et
+25,</p>
+<p><span class="math inline">\(\begin{matrix} {\cos\lambda =} &amp;
+{\frac{1}{\sqrt{1 + s^{2} + u^{2}}},} \\ {\cos\mu =} &amp;
+{\frac{s}{\sqrt{1 + s^{2} + u^{2}}},} \\ {\cos\nu =} &amp;
+{\frac{u}{\sqrt{1 + s^{2} + u^{2}}},} \end{matrix}\)</span></p>
+<p>et l’on aura des expressions semblables en marquant les lettres,
+<span class="math inline">\(\lambda,\,\mu,\,\nu,\, s,\, u\)</span> d’un
+trait ou de deux. Ainsi la détermination des trois axes principaux
+pourra toujours s’effectuer par ces formules dans tout corps solide de
+figure quelconque, homogène ou non, pourvu que l’on connaisse les
+valeurs des quantités <span class="math inline">\(f,\, g,\, h,\, l,\,
+m,\, n\)</span> pour une position quelconque donnée du corps,
+relativement aux axes fixes des <span class="math inline">\(x,\, y,\,
+z.\)</span></p>
+<p>En substituant ces valeurs de <span
+class="math inline">\(\cos\lambda,\,\cos\mu,\,\cos\nu\)</span> dans les
+trois équations de l’article 22, on aura les valeurs des moments <span
+class="math inline">\(A,\, B,\, C\)</span> qui seront nécessaires pour
+faire tourner le corps, avec une vitesse constante donnée <span
+class="math inline">\(\overset{˙}{\theta},\)</span> autour d’un axe fixe
+dans l’espace, dont la position sera donnée par les mêmes angles <span
+class="math inline">\(\lambda,\,\mu,\,\nu\)</span> et qui sera en même
+temps un des trois axes principaux du corps, selon qu’on prendra pour
+<span class="math inline">\(s\)</span> et <span
+class="math inline">\(u\)</span> l’une des trois racines de l’équation
+en <span class="math inline">\(s.\)</span></p>
+<p>31. Comme ces trois axes sont toujours perpendiculaires entre eux, on
+pourra les prendre pour les axes des <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime}\)</span>
+dans les formules de l’article 20. On aura ainsi, par la nature de ces
+axes,</p>
+<p><em>(S)<span class="math inline">\(x^{\prime}y^{\prime}\,{Dm} =
+0,\qquad\)</span></em>(S)<span
+class="math inline">\(x^{\prime}z^{\prime}\,{Dm} =
+0,\qquad\)</span>_(S)<span
+class="math inline">\(y^{\prime}z^{\prime}\,{Dm} = 0.\)</span></p>
+<p>et si l’on fait</p>
+<p><span class="math inline">\(l^{\prime} =\)</span><em>(S)<span
+class="math inline">\(x&#39;^{2}\,{Dm} = 0,\quad m^{\prime}
+=\)</span></em>(S)<span class="math inline">\(y&#39;^{2}\,{Dm} = 0,\quad
+n^{\prime} =\)</span>_(S)<span class="math inline">\(z&#39;^{2}\,{Dm} =
+0,\)</span></p>
+<p>les trois équations de l’article cité prendront cette forme très
+simple</p>
+<p><span class="math inline">\(\begin{matrix} {(m^{\prime} + n^{\prime}\
+)\overset{˙}{\psi}\,\!^{\prime} =} &amp; {A^{\prime},} \\ {(l^{\prime}\
+\  + m^{\prime})\overset{˙}{\omega}\,\!^{\prime} =} &amp; {B^{\prime},}
+\\ {(l^{\prime}\ \  + n^{\prime}\ )\overset{˙}{\varphi}\,\!^{\prime} =}
+&amp; {C^{\prime},} \\  &amp; \end{matrix}\)</span></p>
+<p>par lesquelles on a tout de suite les vitesses de rotation <span
+class="math inline">\(\overset{˙}{\psi}\,\!^{\prime},\,\overset{˙}{\omega}\,\!^{\prime},\,\overset{˙}{\varphi}\,\!^{\prime}\)</span>
+autour des trois axes principaux.</p>
+<p>C’est ici le lieu de démontrer la proposition que nous avons indiquée
+dans l’article 19. En effet, en faisant</p>
+<p><span class="math inline">\(A = 0,\qquad B = 0,\qquad C =
+0,\)</span></p>
+<p>on aura aussi (art. 20)</p>
+<p><span class="math inline">\(A^{\prime} = 0,\qquad B^{\prime} =
+0,\qquad C^{\prime} = 0\,;\)</span></p>
+<p>donc les équations précédentes donneront</p>
+<p><span class="math inline">\(\overset{˙}{\psi}\,\!^{\prime} =
+0,\qquad\overset{˙}{\omega}\,\!^{\prime} =
+0,\qquad\overset{˙}{\varphi}\,\!^{\prime} = 0,\)</span></p>
+<p>puisque les quantités <span class="math inline">\(l,\, m,\,
+n\)</span> ne peuvent jamais être nulles pour un corps de trois
+dimensions. D’où l’on doit conclure qu’il ne peut y avoir de mouvement
+de rotation si les moments primitifs sont nuls.</p>
+<p>Quand, parmi les trois moments <span
+class="math inline">\({A^{\prime},\, B^{\prime},\, C^{\prime}},\)</span>
+deux sont nuls, comme <span class="math inline">\(B^{\prime}\)</span> et
+<span class="math inline">\(C^{\prime},\)</span> ce qui a lieu lorsque
+l’impulsion se fait dans le plan des <span
+class="math inline">\(y^{\prime}z^{\prime},\)</span> les deux vitesses
+de rotation <span
+class="math inline">\(\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+seront aussi nulles et le corps tournera autour de l’axe principal des
+<span class="math inline">\(x^{\prime}\)</span> avec la vitesse <span
+class="math inline">\(\overset{˙}{\psi}\,\!^{\prime}.\)</span> Or, par
+les formules de l’article 20, on a</p>
+<p><span class="math inline">\({A&#39;^{2} + B&#39;^{2} + C&#39;^{2} =
+A^{2} + B^{2} + C^{2}},\)</span></p>
+<p>à cause des équations de condition entre les quantités <span
+class="math inline">\(\alpha,\beta,\gamma,\alpha^{\prime},\ldots\,;\)</span>
+donc, faisant</p>
+<p><span class="math inline">\(B^{\prime} = 0,\qquad C^{\prime} =
+0,\)</span></p>
+<p>on aura</p>
+<p><span class="math inline">\({A^{\prime} = \sqrt{A^{2} + B^{2} +
+C^{2}}},\)</span></p>
+<p>et, par conséquent, <span class="math inline">\(A^{\prime}\)</span>
+sera constant ; donc, par la première équation, la vitesse <span
+class="math inline">\(\overset{˙}{\psi}\,\!^{\prime}\)</span> sera aussi
+constante.</p>
+<p>32. À l’égard des valeurs de <span
+class="math inline">\(l^{\prime},\, m^{\prime},\, n^{\prime},\)</span>
+il sera facile de les déduire de celles de <span
+class="math inline">\(l,\, m,\, n,\, f,\, g,\, h\,;\)</span> car les
+expressions de <span class="math inline">\(x,\, y,\, z\)</span> en <span
+class="math inline">\(x^{\prime},\, y^{\prime},\, z^{\prime},\)</span>
+en vertu des équations de condition (Part. I, sect. III, art. 10),
+donnent réciproquement</p>
+<p><span class="math inline">\(\begin{matrix} {x^{\prime} =} &amp;
+{\alpha x + \alpha^{\prime}y + \alpha^{&#39;&#39;}z,} \\ {y^{\prime} =}
+&amp; {\beta x\, + \beta^{\prime}y + \beta^{&#39;&#39;}z,} \\
+{z^{\prime} =} &amp; {\gamma x\  + \gamma^{\prime}y +
+\gamma^{&#39;&#39;}z.} \end{matrix}\)</span></p>
+<p>Or, en prenant les axes des <span class="math inline">\(x^{\prime},\,
+y^{\prime},\, z^{\prime}\)</span> pour les axes principaux, on voit par
+l’article 21 que les quantités <span
+class="math inline">\(\alpha,\,\alpha^{\prime},\,\alpha^{&#39;&#39;}\)</span>
+sont identiques avec <span
+class="math inline">\(\cos\lambda,\,\cos\mu,\)</span> <span
+class="math inline">\(\cos\nu,\)</span> que, pareillement <span
+class="math inline">\(\beta,\,\beta^{\prime},\,\beta^{&#39;&#39;}\)</span>
+seront identiques avec <span
+class="math inline">\(\cos\lambda^{\prime},\,\cos\mu^{\prime},\)</span>
+<span class="math inline">\(\cos\nu^{\prime},\)</span> et <span
+class="math inline">\(\gamma,\,\gamma^{\prime},\,\gamma^{&#39;&#39;}\)</span>
+avec <span
+class="math inline">\(\cos\lambda^{&#39;&#39;},\,\cos\mu^{&#39;&#39;},\,\cos\nu^{&#39;&#39;}.\)</span>
+Ainsi, en substituant les valeurs de ces cosinus données ci-dessus
+(art. 20), on aura</p>
+<p><span class="math inline">\(\begin{matrix} {x^{\prime} =} &amp;
+{\frac{x + sy\ \  + uz}{\sqrt{1 + s^{2}\ \  + u^{2}}},} \\ {y^{\prime}
+=} &amp; {\frac{x + s^{\prime}y\ \  + u^{\prime}z}{\sqrt{1 +
+s&#39;^{2}\  + u&#39;^{2}}},} \\ {z^{\prime} =} &amp; {\frac{x +
+s^{&#39;&#39;}y + u^{&#39;&#39;}z}{\sqrt{1 + s^{\prime}&#39;^{2} +
+u^{\prime}&#39;^{2}}}\,;} \end{matrix}\)</span></p>
+<p>d’où l’on tirera, en carrant et intégrant après avoir multiplié par
+<span class="math inline">\({Dm},\)</span></p>
+<p><span class="math inline">\(\begin{matrix} {l^{\prime} =} &amp;
+{\frac{l + s^{2}m + u^{2}n + 2sh + 2ug + 2suf}{1 + s^{2} + u^{2}},} \\
+{m^{\prime} =} &amp; {\frac{l + s&#39;^{2}m + u&#39;^{2}n + 2s^{\prime}h
++ 2u^{\prime}g + 2s^{\prime}u^{\prime}f}{1 + s&#39;^{2} + u&#39;^{2}},}
+\\ {n^{\prime} =} &amp; {\frac{l + s^{\prime}&#39;^{2}m +
+u^{\prime}&#39;^{2}n + 2s^{&#39;&#39;}h + 2u^{&#39;&#39;}g +
+2s^{&#39;&#39;}u^{&#39;&#39;}f}{1 + s^{\prime}&#39;^{2} +
+u^{\prime}&#39;^{2}},} \\  &amp; \end{matrix}\)</span></p>
+<p>On trouve, dans la plupart des Traités de Mécanique, la détermination
+des axes principaux dans différents corps ; dans ceux dont la forme est
+symétrique, l’axe de figure est toujours un des axes principaux on peut
+trouver ensuite les deux autres par la formule de l’article 27.</p>
+<p>§ V. — <em>Propriétés relatives aux forces vives</em>.</p>
+<p>33. En général, de quelque manière que les différents corps qui
+composent un système soient disposés ou liés entre eux, pourvu que cette
+disposition soit indépendante du temps, c’est-à-dire que les équations
+de condition entre les coordonnées des différents corps ne renferment
+point la variable <span class="math inline">\(t,\)</span> il est clair
+qu’on pourra toujours, dans la formule générale de la Dynamique,
+supposer les variations <span class="math inline">\(\delta x,\,\delta
+y,\,\delta z\)</span> égales aux différentielles <span
+class="math inline">\(dx,\, dy,\, dz\)</span> qui représentent les
+espaces effectifs parcourus par les corps dans l’instant <span
+class="math inline">\(dt,\)</span> tandis que les variations dont nous
+parlons doivent représenter les espaces quelconques que les corps
+pourraient parcourir dans le même instant, eu égard à leur disposition
+mutuelle.</p>
+<p>Cette supposition n’est que particulière et ne peut fournir, par
+conséquent, qu’une seule équation ; mais, étant indépendante de la forme
+du système, elle a l’avantage de donner une équation générale pour le
+mouvement de quelque système que ce soit.</p>
+<p>Substituant donc dans la formule de l’article 5 (Section précédente),
+à la place des variations <span class="math inline">\(\delta x,\,\delta
+y,\,\delta z,\)</span> les différentielles <span
+class="math inline">\(dx,\, dy,\, dz,\)</span> et, par conséquent aussi,
+les différentielles <span class="math inline">\(dp,\, dq,\,
+dr,\ldots\)</span> au lieu des variations <span
+class="math inline">\(\delta p,\,\delta q,\)</span> <span
+class="math inline">\(\delta r,\ldots\)</span> qui dépendent de <span
+class="math inline">\(\delta x,\,\delta y,\,\delta z,\)</span> on aura
+cette équation générale, pour quelque système de corps que ce soit,</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{d^{2}x}{dt^{2}}dx +
+\frac{d^{2}y}{dt^{2}}dy + \frac{d^{2}z}{dt^{2}}dz + Pdp + Qdq + Rdr +
+\ldots \right) = 0.\)</span></p>
+<p>34. Dans le cas où la quantité</p>
+<p><span class="math inline">\(Pdp + Qdq + Rdr + \ldots\)</span></p>
+<p>est intégrable, lequel a lieu lorsque les forces <span
+class="math inline">\({P,\, Q,\, R},\ldots\)</span> tendent à des
+centres fixes ou à des corps du même système et sont fonctions des
+distances <span class="math inline">\(p,\, q,\, r,\ldots,\)</span> en
+faisant</p>
+<p><span class="math inline">\(Pdp + Qdq + Rdr + \ldots =
+d\Pi,\)</span></p>
+<p>l’équation précédente devient</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{d^{2}x}{dt^{2}}dx +
+\frac{d^{2}y}{dt^{2}}dy + \frac{d^{2}z}{dt^{2}}dz + d\Pi \right) =
+0,\)</span></p>
+<p>dont l’intégrale est</p>
+<p>_(S)<span class="math inline">\(m\left\lbrack \frac{1}{2}\left(
+\frac{d^{2}x}{dt^{2}} + \frac{d^{2}y}{dt^{2}} + \frac{d^{2}z}{dt^{2}}
+\right) + \Pi \right\rbrack = H,\)</span></p>
+<p>dans laquelle <span class="math inline">\(H\)</span> désigne une
+constante arbitraire, égale à la valeur du premier membre de l’équation
+dans un instant donné.</p>
+<p>Cette dernière équation renferme le principe connu sous le nom de
+<em>conservation des forces vives</em>. En effet, <span
+class="math inline">\(dx^{2} + dy^{2} + dz^{2}\)</span> étant le carré
+de l’espace que le corps parcourt dans l’instant <span
+class="math inline">\(dt,\)</span></p>
+<p><span class="math inline">\(\frac{d^{2}x}{dt^{2}} +
+\frac{d^{2}y}{dt^{2}} + \frac{d^{2}z}{dt^{2}}\)</span></p>
+<p>sera le carré de sa vitesse, et</p>
+<p><span class="math inline">\(m\left( \frac{dx^{2}}{dt^{2}} +
+\frac{dy^{2}}{dt^{2}} + \frac{dz^{2}}{dt^{2}} \right)\)</span></p>
+<p>sa force vive. Donc</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{dx^{2}}{dt^{2}} +
+\frac{dy^{2}}{dt^{2}} + \frac{dz^{2}}{dt^{2}} \right)\)</span></p>
+<p>sera la somme des forces vives de tous les corps, ou la force vive de
+tout le système ; et l’on voit, par l’équation dont il s’agit, que cette
+force vive est égale à la quantité</p>
+<p><span class="math inline">\(2H - 2\)</span>_(S)<span
+class="math inline">\(\Pi m,\)</span></p>
+<p>laquelle dépend simplement des forces accélératrices qui agissent sur
+les corps, et nullement de leur liaison mutuelle, de sorte que la force
+vive du système est à chaque instant la même que les corps auraient
+acquise si, étant animés par les mêmes puissances, ils s’étaient mus
+librement chacun sur la ligne qu’il a décrite. C’est ce qui a fait
+donner le nom de <em>conservation des forces vives</em> à cette
+propriété du mouvement.</p>
+<p>35. Ce principe a lieu aussi lorsqu’on rapporte les mouvements des
+corps à leur centre de gravité ; car, en nommant, comme ci-dessus,
+(art. 3) <span class="math inline">\(x^{\prime},\, y^{\prime},\,
+z^{\prime}\)</span> les trois coordonnées du centre de gravité, et
+faisant</p>
+<p><span class="math inline">\(x = x^{\prime} + \xi,\qquad y =
+y^{\prime} + \eta,\qquad z = z^{\prime} + \zeta,\)</span></p>
+<p>les coordonnées auront leur origine dans le centre de gravité. On
+aura ainsi</p>
+<p><span class="math inline">\(\frac{1}{2}\)</span>_(S)<span
+class="math inline">\(m\left( \frac{dx^{2}}{dt^{2}} +
+\frac{dy^{2}}{dt^{2}} + \frac{dz^{2}}{dt^{2}} \right)\)</span></p>
+<p><span class="math inline">\(= \frac{1}{2}\left(
+\frac{dx&#39;^{2}}{dt^{2}} + \frac{dy&#39;^{2}}{dt^{2}} +
+\frac{dz&#39;^{2}}{dt^{2}} \right)\)</span><em>(S)<span
+class="math inline">\(m + \frac{1}{2}\)</span></em>(S)<span
+class="math inline">\(m\left( \frac{d\xi^{2}}{dt^{2}} +
+\frac{d\eta^{2}}{dt^{2}} + \frac{d\zeta^{2}}{dt^{2}}
+\right)\)</span></p>
+<p><span class="math inline">\(+
+\frac{dx^{\prime}}{dt}\)</span><em>(S)<span
+class="math inline">\(m\frac{d\xi}{dt} +
+\frac{dy^{\prime}}{dt}\)</span></em>(S)<span
+class="math inline">\(m\frac{d\eta}{dt} +
+\frac{dz^{\prime}}{dt}\)</span>_(S)<span
+class="math inline">\(m\frac{d\zeta}{dt}.\)</span></p>
+<p>Par la nature du centre de gravité, on a (article cité)</p>
+<p><em>(S)<span class="math inline">\(m\frac{d\xi}{dt} =
+0,\qquad\)</span></em>(S)<span class="math inline">\(m\frac{d\eta}{dt} =
+0,\qquad\)</span>_(S)<span class="math inline">\(m\frac{d\zeta}{dt} =
+0.\)</span></p>
+<p>Donc, l’équation précédente étant différentiée et retranchée de celle
+de l’article 33, on aura</p>
+<p><span class="math inline">\(\frac{d^{2}x^{\prime}}{dt^{2}}dx^{\prime}
++ \frac{d^{2}y^{\prime}}{dt^{2}}dy^{\prime} +
+\frac{d^{2}z^{\prime}}{dt^{2}}dz^{\prime}\)</span><em>(S)<span
+class="math inline">\(m +\)</span></em>(S)<span
+class="math inline">\(m\left( \frac{d^{2}\xi}{dt^{2}}d\xi +
+\frac{d^{2}\eta}{dt^{2}}d\eta + \frac{d^{2}\zeta}{dt^{2}}d\zeta
+\right)\)</span></p>
+<p><span class="math inline">\(+\)</span>_(S)<span
+class="math inline">\(m(Pdp + Qdq + Rdr + \ldots) = 0.\)</span></p>
+<p>Mettons à la place de</p>
+<p><span class="math inline">\(Pdp + Qdq + Rdr + \ldots\)</span></p>
+<p>la quantité équivalente</p>
+<p><span class="math inline">\(Xdx + Ydy + Zdz,\)</span></p>
+<p>et substituons pour <span class="math inline">\(dx,\, dy,\,
+dz\)</span> les valeurs <span class="math inline">\(dx^{\prime} +
+d\xi,\, dy^{\prime} + d\eta,\)</span> <span
+class="math inline">\(dz^{\prime} + d\zeta\,;\)</span> la dernière
+équation se réduira, en vertu des équations différentielles de l’article
+3, à celle-ci</p>
+<p><em>(S)<span class="math inline">\(m\left(
+\frac{d^{2}\xi}{dt^{2}}d\xi + \frac{d^{2}\eta}{dt^{2}}d\eta +
+\frac{d^{2}\zeta}{dt^{2}}d\zeta \right) +\)</span></em>(S)<span
+class="math inline">\(m(Xd\xi + Yd\eta + Zd\zeta) = 0.\)</span></p>
+<p>qui est analogue à celle de l’article 33, mais où la quantité</p>
+<p><span class="math inline">\(Xd\xi + Yd\xi + Zd\zeta\)</span></p>
+<p>ne sera intégrable qu’<em>autant que</em> les forces seront dirigées
+vers les corps mêmes du système et proportionnelles à des fonctions des
+distances. Dans ce cas, on aura</p>
+<p><span class="math inline">\(\frac{1}{2}\)</span>_(S)<span
+class="math inline">\(m\left( \frac{d\xi^{2}}{dt^{2}} +
+\frac{d\eta^{2}}{dt^{2}} + \frac{d\zeta^{2}}{dt^{2}} \right) =
+H,\)</span></p>
+<p>équation qui renferme la <em>conservation des forces vives</em> par
+rapport au centre de gravité.</p>
+<p>36. Au reste, il n’en est pas du principe des <em>forces vives</em>
+comme de ceux du <em>centre de gravité</em> et <em>des aires</em>, qui
+ont lieu, quelle que soit l’action que les corps du système puissent
+exercer les uns sur les autres, même en se choquant, parce que toutes
+les forces intérieures disparaissent des équations qui renferment ces
+deux principes.</p>
+<p>L’équation de la conservation des forces vives contient tous les
+termes dus aux forces tant extérieures qu’intérieures et n’est
+indépendante que de l’action des corps provenant de leur liaison
+mutuelle. Aussi ce principe a-t-il lieu dans le mouvement des fluides
+non élastiques, tant qu’ils forment une masse continue et qu’il n’y a
+point de choc entre leurs parties et, si la quantité de <em>forces
+vives</em> est la même avant et après le choc des corps élastiques,
+c’est qu’on suppose que les corps se sont rétablis après le choc dans le
+même état où ils étaient auparavant ; de sorte que les termes <span
+class="math inline">\(\int Pdp\)</span> de l’expression <span
+class="math inline">\(\Pi,\)</span> qui proviennent des forces <span
+class="math inline">\(P\)</span> dues au ressort des corps, et dont la
+valeur est la plus grande lorsque la compression est à son terme,
+décroissent ensuite par degrés égaux pendant la restitution et
+redeviennent nuls à la fin du choc. C’est uniquement dans cette
+hypothèse que la conservation des forces vives peut avoir lieu dans le
+choc des corps élastiques.</p>
+<p>Dans tout autre cas, lorsqu’il y a des changements brusques dans les
+vitesses de quelques corps du système, la force vive totale se trouve
+diminuée de la quantité des forces vives dues aux forces accélératrices
+qui ont pu produire ces changements ; et cette quantité peut toujours
+s’estimer par la somme des masses multipliées par les carrés des
+vitesses que ces masses ont perdues, ou sont censées avoir perdues dans
+les changements brusques des vitesses réelles des corps. C’est le
+théorème que M. Carnot avait trouvé dans le choc des corps durs.</p>
+<p>37. On peut aussi, dans l’équation de l’article 11 de la Section
+précédente, supposer les variations <span class="math inline">\(\delta
+x,\,\delta y,\,\delta z\)</span> proportionnelles aux vitesses <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z}\)</span>
+que les corps reçoivent par l’impulsion. On aura ainsi l’équation</p>
+<p>_(S)<span class="math inline">\(\left\lbrack m\left(
+\overset{˙}{x}\,\!^{2} + \overset{˙}{y}\,\!^{2} + \overset{˙}{z}\,\!^{2}
+\right) + X\overset{˙}{x} + Y\overset{˙}{y} + Z\overset{˙}{z}
+\right\rbrack = 0,\)</span></p>
+<p>dans laquelle la partie _(S)<span class="math inline">\(m\left(
+{\overset{˙}{x}}^{2} + {\overset{˙}{y}}^{2} + {\overset{˙}{z}}^{2}
+\right)\)</span> représente la force vive de tout le système.</p>
+<p>Cette équation, étant combinée avec les trois équations de l’article
+14, donne lieu à une propriété <em>de maximis et minimis</em> relative à
+la ligne autour de laquelle le système tourne au premier instant,
+lorsqu’il a reçu une impulsion quelconque, ligne qu’on peut aussi nommer
+<em>axe de rotation spontané</em>.</p>
+<p>Si l’on nomme <span
+class="math inline">\(\alpha,\,\beta,\,\gamma\)</span> les parties des
+vitesses <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z}\)</span>
+qui dépendent du changement de position respective des corps du
+système^(<a href="#cite_note-3">[3]</a>), et qu’on les ajoute à celles
+qui résultent des rotations (art. 17), on aura les valeurs complètes de
+<span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z},\)</span>
+exprimées ainsi :</p>
+<p><span class="math inline">\(\overset{˙}{x} = z\overset{˙}{\omega} -
+y\overset{˙}{\varphi} + \alpha,\qquad\overset{˙}{y} =
+x\overset{˙}{\varphi} - z\overset{˙}{\psi} + \beta,\qquad\overset{˙}{z}
+= y\overset{˙}{\psi} - x\overset{˙}{\omega} + \gamma.\)</span></p>
+<p>Supposons maintenant qu’on différentie ces valeurs, en ne regardant
+que <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+comme variables, et qu’on dénote ces différentielles par la
+caractéristique <span class="math inline">\(\delta\)</span>^(<a
+href="#cite_note-4">[4]</a>), on aura</p>
+<p><span class="math inline">\(\delta\overset{˙}{x} =
+z\delta\overset{˙}{\omega} -
+y\delta\overset{˙}{\varphi},\qquad\delta\overset{˙}{y} =
+x\delta\overset{˙}{\varphi} -
+z\delta\overset{˙}{\psi},\qquad\delta\overset{˙}{z} =
+y\delta\overset{˙}{\psi} - x\delta\overset{˙}{\omega}.\)</span></p>
+<p>Or les trois équations de l’article 14, étant multipliées
+respectivement par <span
+class="math inline">\(\delta\overset{˙}{\varphi},\,\delta\overset{˙}{\omega},\,\delta\overset{˙}{\psi}\)</span>
+et ajoutées ensemble, en faisant passer sous le signe _(S) les
+différentielles <span
+class="math inline">\(\delta\overset{˙}{\varphi},\,\delta\overset{˙}{\omega},\,\delta\overset{˙}{\psi}\)</span>
+qui sont les mêmes pour tous les corps, donnent, par la substitution des
+valeurs précédentes,</p>
+<p>_(S)<span class="math inline">\(\left\lbrack
+m(\overset{˙}{x}\delta\overset{˙}{x} +
+\overset{˙}{y}\delta\overset{˙}{y} + \overset{˙}{z}\delta\overset{˙}{z})
++ X\delta\overset{˙}{x} + Y\delta\overset{˙}{y} + Z\delta\overset{˙}{z}
+\right\rbrack = 0.\)</span></p>
+<p>Mais l’équation de la force vive trouvée ci-dessus, étant
+différentiée relativement à <span
+class="math inline">\(\delta\)</span>^(<a href="#cite_note-5">[5]</a>),
+donne</p>
+<p>_(S)<span class="math inline">\(\left\lbrack
+2m(\overset{˙}{x}\delta\overset{˙}{x} +
+\overset{˙}{y}\delta\overset{˙}{y} + \overset{˙}{z}\delta\overset{˙}{z})
++ X\delta\overset{˙}{x} + Y\delta\overset{˙}{y} + Z\delta\overset{˙}{z}
+\right\rbrack = 0.\)</span></p>
+<p>Donc on a, par la comparaison de ces deux équations,</p>
+<p>_(S)<span class="math inline">\(m(\overset{˙}{x}\delta\overset{˙}{x}
++ \overset{˙}{y}\delta\overset{˙}{y} +
+\overset{˙}{z}\delta\overset{˙}{z}) = 0\)</span></p>
+<p>et, par conséquent,</p>
+<p><span class="math inline">\(\delta\)</span>_(S)<span
+class="math inline">\(m\left( \overset{˙}{x}\,\!^{2} +
+\overset{˙}{y}\,\!^{2} + \overset{˙}{z}\,\!^{2} \right) =
+0,\)</span></p>
+<p>ce qui fait voir que la force vive que le système acquiert par
+l’impulsion est toujours un maximum ou un minimum^(<a
+href="#cite_note-6">[6]</a>), par rapport aux rotations relatives aux
+trois axes ; et, comme ces trois rotations se composent en une rotation
+unique autour de l’axe spontané, il s’ensuit que la position de cet axe
+est toujours telle que la force vive de tout le système est la plus
+petite ou la plus grande, par rapport à ce même axe.</p>
+<p>Euler avait démontré cette propriété de l’axe spontané de rotation
+pour les corps solides d’une figure quelconque ; on voit par l’analyse
+précédente qu’elle est générale pour un système de corps unis entre eux
+d’une manière invariable ou non, lorsque ces corps reçoivent des
+impulsions quelconques.</p>
+<p>38. Lorsque le système est un corps solide qui peut tourner librement
+autour d’un point et qui n’est animé par aucune force accélératrice, on
+peut tirer de la combinaison de l’équation des <em>forces vives</em>
+avec celle des aires une relation digne d’être remarquée par sa
+simplicité, et qui ne l’avait pas encore été, que je sache, entre les
+vitesses de rotation <span
+class="math inline">\(\overset{˙}{\psi},\,\overset{˙}{\omega},\,\overset{˙}{\varphi}\)</span>
+par rapport aux trois axes fixes des coordonnées <span
+class="math inline">\(x,\, y,\, z.\)</span> Dans ce cas, on a simplement
+(art. 17)</p>
+<p><span class="math inline">\(\begin{matrix} {dx =} &amp;
+{\overset{˙}{x}dt = (z\overset{˙}{\omega}\, - y\overset{˙}{\varphi})dt,}
+\\ {dy =} &amp; {\overset{˙}{y}dt = (x\overset{˙}{\varphi} -
+z\overset{˙}{\psi})dt,} \\ {dz =} &amp; {\overset{˙}{z}dt =
+(y\overset{˙}{\psi}\, - x\overset{˙}{\omega})dt.}
+\end{matrix}\)</span></p>
+<p>Donc, si l’on ajoute ensemble les trois dernières équations de
+l’article 9, après les avoir multipliées par <span
+class="math inline">\(\overset{˙}{\varphi},\overset{˙}{\omega},\overset{˙}{\psi},\)</span>
+qu’on fasse passer ces quantités sous le signe _(S) et qu’on substitue
+<span
+class="math inline">\(\frac{dx}{dt},\,\frac{dy}{dt},\,\frac{dz}{dt}\)</span>
+à la place de leurs valeurs, on aura</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{dx^{2}}{dt^{2}} +
+\frac{dy^{2}}{dt^{2}} + \frac{dz^{2}}{dt^{2}} \right) =
+A\overset{˙}{\psi} + B\overset{˙}{\omega} +
+C\overset{˙}{\varphi}\,;\)</span></p>
+<p>mais l’équation de l’article 34 donne, lorsque <span
+class="math inline">\(\Pi = 0,\)</span></p>
+<p><span class="math inline">\(\frac{1}{2}\)</span>_(S)<span
+class="math inline">\(m\left( \frac{dx^{2}}{dt^{2}} +
+\frac{dy^{2}}{dt^{2}} + \frac{dz^{2}}{dt^{2}} \right) = H.\)</span></p>
+<p>Donc on aura</p>
+<p><span class="math inline">\(A\overset{˙}{\psi} + B\overset{˙}{\omega}
++ C\overset{˙}{\varphi} = 2H,\)</span></p>
+<p><span class="math inline">\(A,B,C\)</span> étant les moments des
+forces primitives d’impulsion et <span class="math inline">\(H\)</span>
+étant une constante arbitraire, qui doit être nécessairement
+positive.</p>
+<p>Si, dans cette équation, on substitue pour <span
+class="math inline">\(A,\, B,\, C\)</span> les expressions de l’article
+11,</p>
+<p><span class="math inline">\(\gamma
+C^{\prime},\qquad\gamma^{\prime}C^{\prime},\qquad\gamma^{&#39;&#39;}C^{\prime},\)</span></p>
+<p>ou</p>
+<p><span class="math inline">\(C^{\prime}\cos l,\qquad C^{\prime}\cos
+m,\qquad C^{\prime}\cos n,\)</span></p>
+<p>et pour <span
+class="math inline">\(\overset{˙}{\psi},\overset{˙}{\omega},\overset{˙}{\varphi}\)</span>
+celles de l’article 17,</p>
+<p><span
+class="math inline">\(\overset{˙}{\theta}\cos\lambda,\qquad\overset{˙}{\theta}\cos\mu,\qquad\overset{˙}{\theta}\cos\nu,\)</span></p>
+<p>on aura</p>
+<p><span class="math inline">\(\overset{˙}{\theta}(\cos l\cos\lambda +
+\cos m\cos\mu + \cos n\cos\nu) = \frac{2H}{C^{\prime}}.\)</span></p>
+<p>Dans cette formule, <span class="math inline">\(l,\, m,\, n\)</span>
+sont les angles que l’axe perpendiculaire au <em>plan invariable</em>
+fait avec les axes fixes des <span class="math inline">\(x,\, y,\,
+z,\)</span> et <span class="math inline">\(\lambda,\,\mu,\,\nu\)</span>
+sont les angles que l’axe instantané de la rotation composée, dont <span
+class="math inline">\(\overset{˙}{\theta}\)</span> est la vitesse, fait
+avec les mêmes axes ; donc, si l’on nomme <span
+class="math inline">\(\sigma\)</span> l’angle que l’axe instantané de
+rotation fait avec l’axe perpendiculaire au plan invariable, on aura,
+par une formule connue,</p>
+<p><span class="math inline">\(\cos\sigma = \cos l\cos\lambda + \cos
+m\cos\mu + \cos n\cos\nu\)</span></p>
+<p>et, par conséquent,</p>
+<p><span class="math inline">\(\overset{˙}{\theta}\cos\sigma =
+\frac{2H}{C^{\prime}},\)</span></p>
+<p>où la quantité <span
+class="math inline">\(\frac{2H}{C^{\prime}}\)</span> est une constante
+qui dépend de l’état initial ; ce qui donne un rapport, indépendant de
+la figure du corps, entre la vitesse réelle de rotation à chaque instant
+et la position de l’axe de rotation relativement au plan invariable.</p>
+<p>Au reste, si l’on prend le plan des <span
+class="math inline">\(xy\)</span> de manière qu’il passe par le centre
+du corps et par la droite suivant laquelle se fait l’impulsion, les
+constantes <span class="math inline">\(A\)</span> et <span
+class="math inline">\(B\)</span> deviendront nulles (art. 16), et
+l’équation générale trouvée ci-dessus se réduira à</p>
+<p><span class="math inline">\(C\overset{˙}{\varphi} = 2H,\)</span></p>
+<p>laquelle fait voir que la vitesse de rotation par rapport à l’axe des
+<span class="math inline">\(z,\)</span> c’est-à-dire parallèlement au
+plan de l’impulsion, demeure toujours la même.</p>
+<p>§ VI. — <em>Propriétés relatives à la moindre action</em>.</p>
+<p>39. Nous allons maintenant considérer le quatrième principe, celui de
+la <em>moindre action</em>.</p>
+<p>En nommant <span class="math inline">\(u\)</span> la vitesse de
+chaque corps <span class="math inline">\(m\)</span> du système, on a</p>
+<p><span class="math inline">\(u^{2} = \frac{d^{2}x}{dt^{2}} +
+\frac{d^{2}y}{dt^{2}} + \frac{d^{2}z}{dt^{2}},\)</span></p>
+<p>et l’équation des forces vives (art. 34) devient</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{u^{2}}{2} + \Pi \right)
+= H,\)</span></p>
+<p>laquelle, étant différentiée par rapport à la caractéristique <span
+class="math inline">\(\delta,\)</span> donne</p>
+<p>_(S)<span class="math inline">\(m(u\delta u + \delta\Pi) =
+0.\)</span></p>
+<p>Or, <span class="math inline">\(\Pi\)</span> étant une fonction de
+<span class="math inline">\(p,\, q,\, r,\ldots\)</span> on a</p>
+<p><span class="math inline">\(\delta\Pi = P\delta p + Q\delta q +
+R\delta r + \ldots.\)</span></p>
+<p>Donc</p>
+<p><em>(S)<span class="math inline">\(m(P\delta p + Q\delta q + R\delta
+r + \ldots) = -\)</span></em>(S)<span class="math inline">\(mu\delta
+u.\)</span></p>
+<p>Et cette équation aura toujours lieu, pourvu que</p>
+<p><span class="math inline">\(Pdp + Qdq + Rdr + \ldots\)</span></p>
+<p>soit une quantité intégrable et que la liaison des corps soit
+indépendante du temps ; elle cesserait d’être vraie si l’une de ces
+conditions n’avait pas lieu.</p>
+<p>Qu’on substitue maintenant l’expression précédente dans la formule
+générale de la Dynamique (sect. II, art. 5), elle deviendra</p>
+<p>_(S)<span class="math inline">\(m\left( \frac{d^{2}x}{dt^{2}}\delta x
++ \frac{d^{2}y}{dt^{2}}\delta y + \frac{d^{2}z}{dt^{2}}\delta z -
+u\delta u \right) = 0.\)</span></p>
+<p>Or</p>
+<p><span class="math inline">\(\begin{matrix} {d^{2}x\,\delta x +
+d^{2}y\,\delta y + d^{2}z\,\delta z =} &amp; {d(dx\,\delta x +
+dy\,\delta y + dz\,\delta z)} \\  &amp; {- dx\, d\,\delta x - dy\,
+d\,\delta y - dz\, d\,\delta z.} \end{matrix}\)</span></p>
+<p>Mais, parce que les caractéristiques <span
+class="math inline">\(d\)</span> et <span
+class="math inline">\(\delta\)</span> représentent des différences ou
+variations tout à fait indépendantes les unes des autres, les quantités
+<span class="math inline">\(d\delta x,\, d\delta y,\, d\delta z\)</span>
+doivent être la même chose que <span class="math inline">\(\delta
+dx,\,\delta dy,\,\delta dz.\)</span> D’ailleurs, il est visible que</p>
+<p><span class="math inline">\(dx\,\delta dx + dy\,\delta dy +
+dz\,\delta dz = \frac{1}{2}\delta\left( dx^{2} + dy^{2} + dz^{2}
+\right).\)</span></p>
+<p>Donc on aura</p>
+<p><span class="math inline">\(d^{2}x\delta x + d^{2}y\delta y +
+d^{2}z\delta z = d(dx\,\delta x + dy\,\delta y + dz\,\delta z) -
+\frac{1}{2}\delta\left( dx^{2} + dy^{2} + dz^{2} \right).\)</span></p>
+<p>Soit <span class="math inline">\(s\)</span> l’espace ou l’arc décrit
+par le corps <span class="math inline">\(m\)</span> dans le temps <span
+class="math inline">\(t\,;\)</span> on aura</p>
+<p><span class="math inline">\(ds = \sqrt{dx^{2} + dy^{2} +
+dz^{2}},\qquad dt = \frac{ds}{u}.\)</span></p>
+<p>Donc</p>
+<p><span class="math inline">\(d^{2}x\delta x + d^{2}y\delta y +
+d^{2}z\delta z = d(dx\,\delta x + dy\,\delta y + dz\,\delta z) -
+ds\,\delta\, ds\,;\)</span></p>
+<p>et, de là,</p>
+<p><span class="math inline">\(\frac{d^{2}x}{dt^{2}}\delta x +
+\frac{d^{2}y}{dt^{2}}\delta y + \frac{d^{2}z}{dt^{2}}\delta z =
+\frac{d(dx\,\delta x + dy\,\delta y + dz\,\delta z)}{dt^{2}} -
+u^{2}\frac{\delta\, ds}{ds}.\)</span></p>
+<p>Ainsi la formule générale dont il s’agit deviendra</p>
+<p>_(S)<span class="math inline">\(m\left\lbrack \frac{d(dx\,\delta x +
+dy\,\delta y + dz\,\delta z)}{dt^{2}} - u^{2}\frac{\delta\, ds}{ds} -
+u\,\delta u \right\rbrack = 0,\)</span></p>
+<p>ou, en multipliant tous les termes par l’élément constant <span
+class="math inline">\(dt = \frac{ds}{u}\)</span> et remarquant que <span
+class="math inline">\(u\,\delta\, ds + ds\,\delta u = \delta(u\,
+ds),\)</span></p>
+<p>_(S)<span class="math inline">\(m\left\lbrack \frac{d(dx\,\delta x +
+dy\,\delta y + dz\,\delta z)}{dt} - \delta(u\, ds) \right\rbrack =
+0.\)</span></p>
+<p>Comme le signe intégral _(S) n’a aucun rapport aux signes
+différentiels <span class="math inline">\(d\)</span> et <span
+class="math inline">\(\delta,\)</span> on peut faire sortir ceux-ci hors
+de celui-là ; et l’équation précédente prendra cette forme</p>
+<p><span class="math inline">\(d\)</span><em>(S)<span
+class="math inline">\(m\left( \frac{dx}{dt}\delta x +
+\frac{dy}{dt}\delta y + \frac{dz}{dt}\delta z \right) -
+\delta\)</span></em>(S)<span class="math inline">\(mu\, ds =
+0.\)</span></p>
+<p>Intégrons par rapport au signe différentiel <span
+class="math inline">\(d,\)</span> et dénotons cette intégration par le
+signe intégral ordinaire <span class="math inline">\(\int\,;\)</span>
+nous aurons</p>
+<p><em>(S)<span class="math inline">\(m\left( \frac{dx}{dt}\delta x +
+\frac{dy}{dt}\delta y + \frac{dz}{dt}\delta z \right) -
+\int\delta\)</span></em>(S)<span class="math inline">\(mu\, ds =
+{const}.\)</span></p>
+<p>Or le signe <span class="math inline">\(\int,\)</span> dans
+l’expression</p>
+<p><span class="math inline">\(\int\delta\)</span>_(S)<span
+class="math inline">\(mu\, ds,\)</span></p>
+<p>ne pouvant regarder que les variables <span
+class="math inline">\(u\)</span> et <span
+class="math inline">\(s\)</span> et n’ayant aucune relation avec les
+signes _(S) et <span class="math inline">\(\delta,\)</span> il est clair
+que cette expression est la même chose que celle-ci</p>
+<p><span class="math inline">\(\delta\)</span>_(S)<span
+class="math inline">\(m\int u\, ds\,;\)</span></p>
+<p>et, si l’on suppose que, dans les points où commencent les intégrales
+<span class="math inline">\(\int u\, ds,\)</span> on ait</p>
+<p><span class="math inline">\(\delta x = 0,\qquad\delta y =
+0,\qquad\delta z = 0,\)</span></p>
+<p>il faudra que la constante arbitraire soit nulle, parce que le
+premier membre de l’équation devient nul dans ces points. Ainsi on aura,
+dans ce cas,</p>
+<p><span class="math inline">\(\delta\)</span><em>(S)<span
+class="math inline">\(m\int u\, ds =\)</span></em>(S)<span
+class="math inline">\(m\left( \frac{dx}{dt}\delta x +
+\frac{dy}{dt}\delta y + \frac{dz}{dt}\delta z \right).\)</span></p>
+<p>Donc, si l’on suppose de plus que les variations <span
+class="math inline">\(\delta x,\,\delta y,\,\delta z\)</span> soient
+aussi nulles pour les points où les intégrales <span
+class="math inline">\(\int u\, ds\)</span> finissent, on aura
+simplement</p>
+<p><span class="math inline">\(\delta\)</span>_(S)<span
+class="math inline">\(m\int u\, ds = 0,\)</span></p>
+<p>c’est-à-dire que la variation de la quantité _(S)<span
+class="math inline">\(m\int u\, ds\)</span> sera nulle ; par conséquent,
+cette quantité sera un maximum ou un minimum.</p>
+<p>De là résulte donc ce théorème général :</p>
+<p><em>Dans le mouvement d’un système quelconque de corps animés par des
+forces mutuelles d’attraction, ou tendantes à des centres fixes, et
+proportionnelles à des fonctions quelconques des distances, les courbes
+décrites par les différents corps, et leurs vitesses, sont
+nécessairement telles que la somme des produits de chaque masse par
+l’intégrale de la vitesse multipliée par l’élément de la courbe est un
+maximum ou un minimum, pourvu que l’on regarde les premiers et les
+derniers points de chaque courbe comme donnés, en sorte que les
+variations des coordonnées répondantes à ces points soient
+nulles.</em></p>
+<p>C’est le théorème dont nous avons parlé à la fin de la première
+Section, sous le nom de <em>Principe de la moindre action</em>^(<a
+href="#cite_note-7">[7]</a>).</p>
+<p>40. Mais ce théorème ne contient pas seulement une propriété très
+remarquable du mouvement des corps, il peut encore servir à déterminer
+ce mouvement. En effet, puisque la formule _(S)<span
+class="math inline">\(m\int u\, ds\)</span> doit être un maximum ou un
+minimum, il n’y a qu’à chercher, par la méthode des <em>variations</em>,
+les conditions qui peuvent la rendre telle ; et, en employant l’équation
+générale de là conservation des forces vives, on trouvera toujours
+toutes les équations nécessaires pour déterminer le mouvement de chaque
+corps. Car, pour le maximum ou minimum, il faut que la variation soit
+nulle et que, par conséquent, on ait</p>
+<p><span class="math inline">\(\delta\)</span>_(S)<span
+class="math inline">\(m\int u\, ds = 0\,;\)</span></p>
+<p>et de là, en pratiquant dans un ordre rétrograde les opérations
+exposées ci-dessus, on trouvera la même formule générale d’où l’on était
+parti.</p>
+<p>Pour rendre cette méthode plus sensible, nous allons l’exposer ici en
+peu de mots. La condition du maximum ou minimum donne, en général,</p>
+<p><span class="math inline">\(\delta\)</span>_(S)<span
+class="math inline">\(m\int u\, ds = 0,\)</span></p>
+<p>et, faisant passer le signe différentiel <span
+class="math inline">\(\delta\)</span> sous les signes _(S) et <span
+class="math inline">\(\int\)</span> (ce qui est évidemment permis par la
+nature de ces différents signes), on aura l’équation</p>
+<p>_(S)<span class="math inline">\(m\int\delta(u\, ds) = 0,\)</span></p>
+<p>ou bien, en exécutant la différentiation par <span
+class="math inline">\(\delta,\)</span></p>
+<p>_(S)<span class="math inline">\(m\int(ds\,\delta u + u\,\delta\, ds)
+= 0.\)</span></p>
+<p>Je considère d’abord la partie</p>
+<p>_(S)<span class="math inline">\(m\int ds\,\delta u\,;\)</span></p>
+<p>en mettant pour <span class="math inline">\(ds\)</span> sa valeur
+<span class="math inline">\(u\, dt,\)</span> elle devient</p>
+<p>_(S)<span class="math inline">\(m\int u\,\delta u\, dt,\)</span></p>
+<p>ou, changeant l’ordre des signes _(S) et <span
+class="math inline">\(\int,\)</span> qui sont absolument indépendants
+l’un de l’autre,</p>
+<p><span class="math inline">\(\int dt\)</span>_(S)<span
+class="math inline">\(mu\,\delta u.\)</span></p>
+<p>Or l’équation générale du principe des forces vives donne
+(art. 34)</p>
+<p><em>(S)<span class="math inline">\(mu^{2} = 2H +
+2\)</span></em>(S)<span class="math inline">\({mH},\)</span></p>
+<p><span class="math inline">\(d\Pi\)</span> étant égal à</p>
+<p><span class="math inline">\(P\,\delta p + Q\,\delta q + R\,\delta r +
+\ldots\,;\)</span></p>
+<p>donc, différentiant suivant <span
+class="math inline">\(\delta,\)</span> on aura</p>
+<p><em>(S)<span class="math inline">\(mu\,\delta u =
+-\)</span></em>(S)<span class="math inline">\(m\,\delta\Pi =
+-\)</span>_(S)<span class="math inline">\(m(P\,\delta p + Q\,\delta q +
+R\,\delta r + \ldots).\)</span></p>
+<p>parce que, <span class="math inline">\(\Pi\)</span> étant supposée
+une fonction algébrique de <span class="math inline">\(p,\, q,\,
+r,\ldots\)</span> la différentielle <span
+class="math inline">\(\delta\Pi\)</span> est la même que <span
+class="math inline">\(d\Pi,\)</span> en changeant seulement <span
+class="math inline">\(d\)</span> en <span
+class="math inline">\(\delta.\)</span> Ainsi la quantité</p>
+<p>_(S)<span class="math inline">\(m\int ds\,\delta u\)</span></p>
+<p>se réduira à cette forme</p>
+<p><span class="math inline">\(- \int dt\)</span>_(S) <span
+class="math inline">\(m(P\,\delta p + Q\,\delta q + R\,\delta r +
+\ldots).\)</span></p>
+<p>Je considère ensuite l’autre partie</p>
+<p>_(S)<span class="math inline">\(m\int u\,\delta\, ds,\)</span></p>
+<p>et j’y substitue, à la place de <span
+class="math inline">\(ds,\)</span> sa valeur exprimée par des
+coordonnées rectangles, ou par d’autres variables quelconques. En
+employant les coordonnées rectangles <span class="math inline">\(x,\,
+y,\, z,\)</span> on a</p>
+<p><span class="math inline">\(ds = \sqrt{dx^{2} + dy^{2} +
+dz^{2}}\,;\)</span></p>
+<p>donc, différentiant suivant <span
+class="math inline">\(\delta,\)</span></p>
+<p><span class="math inline">\(\delta\, ds = \frac{dx}{ds}\delta\, dx +
+\frac{dy}{ds}\delta\, dy + \frac{dz}{ds}\delta\, dz,\)</span></p>
+<p>ou bien, en transposant les signes <span
+class="math inline">\(d,\,\delta,\)</span> et écrivant <span
+class="math inline">\(d\,\delta\)</span> au lieu de <span
+class="math inline">\(\delta\, d,\)</span> ce qui est toujours permis à
+cause de l’indépendance de ces signes,</p>
+<p><span class="math inline">\(\delta\, ds = \frac{dx}{ds}d\,\delta x +
+\frac{dy}{ds}d\,\delta y + \frac{dz}{ds}d\,\delta z\,;\)</span></p>
+<p>on aura ainsi, en substituant cette valeur et mettant <span
+class="math inline">\(dt\)</span> à la place de <span
+class="math inline">\(\frac{ds}{u},\)</span></p>
+<p><span class="math inline">\(\int u\,\delta\, ds = \int\left(
+\frac{dx}{dt}d\,\delta x + \frac{dy}{dt}d\,\delta y +
+\frac{dz}{dt}d\,\delta z \right).\)</span></p>
+<p>Comme il se trouve ici, sous le signe intégral <span
+class="math inline">\(\int,\)</span> des différentielles des variations
+<span class="math inline">\(\delta x,\,\delta y,\,\delta z,\)</span> il
+faut les faire disparaître par l’opération connue des intégrations par
+parties, suivant les principes de la méthode des variations. On
+transformera donc la quantité <span
+class="math inline">\(\int\frac{dx}{dt}d\,\delta x\)</span> en celle-ci,
+qui lui est équivalente,</p>
+<p><span class="math inline">\(\frac{dx}{dt}\,\delta x - \int\delta x\,
+d\frac{dx}{dt}\,;\)</span></p>
+<p>et, supposant que les deux termes de la courbe soient donnés, en
+sorte que les coordonnées qui répondent au commencement et à la fin de
+l’intégrale ne varient point, on aura simplement</p>
+<p><span class="math inline">\(\int\frac{dx}{dt}d\,\delta x = -
+\int\delta x\, d\frac{dx}{dt}.\)</span></p>
+<p>On trouvera de même</p>
+<p><span class="math inline">\(\int\frac{dy}{dt}d\,\delta y = -
+\int\delta y\, d\frac{dy}{dt}\)</span></p>
+<p>et, pareillement,</p>
+<p><span class="math inline">\(\int\frac{dz}{dt}d\,\delta z = -
+\int\delta z\, d\frac{dz}{dt}\,;\)</span></p>
+<p>de sorte qu’on aura cette transformée</p>
+<p><span class="math inline">\(\int u\,\delta\, ds = - \int\left( \delta
+x\, d\frac{dx}{dt} + \delta y\, d\frac{dy}{dt} + \delta z\,
+d\frac{dz}{dt} \right).\)</span></p>
+<p>Donc la quantité</p>
+<p>_(S)<span class="math inline">\(m\int u\,\delta\, ds\)</span></p>
+<p>deviendra, en transposant les signes _(S) et <span
+class="math inline">\(\int\)</span> et supposant <span
+class="math inline">\(dt\)</span> constant,</p>
+<p><span class="math inline">\(- \int dt\)</span>_(S)<span
+class="math inline">\(m\left( \delta x\, d\frac{d^{2}x}{dt^{2}} + \delta
+y\, d\frac{d^{2}y}{dt^{2}} + \delta z\, d\frac{d^{2}z}{dt^{2}}
+\right).\)</span></p>
+<p>L’équation du maximum ou minimum sera donc</p>
+<p><span class="math inline">\(\int dt\)</span>_(S)<span
+class="math inline">\(m\left( P\,\delta p + Q\,\delta q + R\,\delta r +
+\ldots + \frac{d^{2}x}{dt^{2}}\delta x + \frac{d^{2}y}{dt^{2}}\delta y +
+\frac{d^{2}z}{dt^{2}}\delta z \right) = 0,\)</span></p>
+<p>laquelle devant avoir lieu, en général, pour toutes les variations
+possibles, il faudra que la quantité sous le signe <span
+class="math inline">\(\int\)</span> soit nulle à chaque instant ; on
+aura ainsi l’équation indéfinie</p>
+<p>_(S)<span class="math inline">\(m\left( P\,\delta p + Q\,\delta q +
+R\,\delta r + \ldots + \frac{d^{2}x}{dt^{2}}\delta x +
+\frac{d^{2}y}{dt^{2}}\delta y + \frac{d^{2}z}{dt^{2}}\delta z \right) =
+0,\)</span></p>
+<p>équation qui est la même chose que la formule générale de la
+Dynamique (sect. 11, art. 5), et qui donnera par conséquent, comme
+celle-ci, toutes les équations nécessaires pour la solution du
+problème.</p>
+<p>41. Au lieu des coordonnées <span class="math inline">\(x,\, y,\,
+z,\)</span> on peut employer d’autres indéterminées quelconques, et tout
+se réduit à exprimer l’élément de l’arc <span
+class="math inline">\(ds\)</span> en fonction de ces indéterminées.
+Qu’on prenne, par exemple, le rayon ou la distance rectiligne à
+l’origine des coordonnées, qu’on nommera <span
+class="math inline">\(\rho,\)</span> avec deux angles, dont l’un <span
+class="math inline">\(\psi\)</span> soit l’inclinaison de ce rayon sur
+le plan des <span class="math inline">\(xy\)</span> et l’autre <span
+class="math inline">\(\varphi\)</span> soit l’angle de la projection du
+même rayon sur ce plan avec l’axe des <span
+class="math inline">\(x\,;\)</span> on aura</p>
+<p><span class="math inline">\(z = \rho\sin\psi,\quad y =
+\rho\cos\psi\sin\varphi,\quad x = \rho\cos\psi\cos\varphi,\)</span></p>
+<p>et, de là, on trouvera</p>
+<p><span class="math inline">\(ds^{2} = dx^{2} + dy^{2} + dz^{2} =
+d\rho^{2} + \rho^{2}\left( d\psi^{2} + \cos^{2}\psi\, d\varphi^{2}
+\right),\)</span></p>
+<p>expression qu’on pourrait aussi trouver directement par la Géométrie.
+Différentiant donc par <span class="math inline">\(\delta\)</span> et
+changeant <span class="math inline">\(\delta d\)</span> en <span
+class="math inline">\(d\delta,\)</span> on aura</p>
+<p><span class="math inline">\(\begin{matrix} {ds\,\delta\, ds =} &amp;
+{d\rho\, d\,\delta\rho + \rho\left( d\psi^{2} + \cos^{2}\psi\,
+d\varphi^{2} \right)\delta\rho} \\  &amp; {+ \rho^{2}\left( d\psi\,
+d\,\delta\psi - \sin\psi\cos\psi\, d\varphi^{2}\delta\psi +
+\cos^{2}\psi\, d\varphi\, d\,\delta\varphi \right)\,;}
+\end{matrix}\)</span></p>
+<p>d’où, en divisant par <span class="math inline">\(dt =
+\frac{ds}{u}\)</span> et en intégrant, on aura</p>
+<p><span class="math inline">\(\begin{matrix} {\int u\,\delta\, ds =}
+&amp; {\int dt\left\lbrack \frac{d\rho}{dt}\frac{d\,\delta\rho}{dt} +
+\rho\left( \frac{d\psi^{2}}{dt^{2}} +
+\cos^{2}\psi\frac{d\varphi^{2}}{dt^{2}} \right)\delta\rho \right\rbrack}
+\\  &amp; {+ \int dt\left(
+\rho^{2}\frac{d\psi}{dt}\frac{d\,\delta\psi}{dt} -
+\rho^{2}\sin\psi\cos\psi\frac{d\varphi^{2}}{dt^{2}}\delta\psi +
+\rho^{2}\cos^{2}\psi\frac{d\varphi}{dt}\frac{d\,\delta\varphi}{dt}
+\right).} \end{matrix}\)</span></p>
+<p>On fera disparaître de dessous le signe <span
+class="math inline">\(\int\)</span> les doubles signes <span
+class="math inline">\(d\,\delta\)</span> par des intégrations par
+parties et l’on rejettera d’abord les termes qui contiendraient des
+variations hors du signe <span class="math inline">\(\int,\)</span>
+parce que ces variations, devant alors se rapporter aux extrémités de
+l’intégrale, deviennent nulles par la supposition que les premiers et
+derniers points des courbes décrites par les corps soient donnés et
+invariables. On aura ainsi cette transformée</p>
+$u,ds = - du,s = - dt{ ( - - ^{2} )
+<span class="math display">\[\begin{matrix}
+\\
+\\
+\\
+\\
+
+\end{matrix}\]</span>
+<p>.$</p>
+<p><span class="math inline">\(\left. \operatorname{} + \left\lbrack
+\rho^{2}\sin\psi\cos\psi\frac{d\varphi^{2}}{dt^{2}} + \frac{d\left(
+\rho^{2}\frac{d\psi}{dt} \right)}{dt} \right\rbrack\delta\psi +
+\frac{d\left( \cos^{2}\psi\frac{d\varphi}{dt} \right)}{dt}\delta\varphi
+\right\}\,;\)</span></p>
+<p>par conséquent, l’équation du maximum ou minimum sera</p>
+<span class="math inline">\(\int dt\)</span>_(S)$m{ P,p + Q,q + R,r + +
+( - - ^{2} )
+<span class="math display">\[\begin{matrix}
+\\
+\\
+\\
+\\
+
+\end{matrix}\]</span>
+<p>.$</p>
+<p><span class="math inline">\(\left. \operatorname{} + \left\lbrack
+\rho^{2}\sin\psi\cos\psi\frac{d\varphi^{2}}{dt^{2}} + \frac{d\left(
+\rho^{2}\frac{d\psi}{dt} \right)}{dt} \right\rbrack\delta\psi +
+\frac{d\left( \cos^{2}\psi\frac{d\varphi}{dt} \right)}{dt}\delta\varphi
+\right\} = 0.\)</span></p>
+<p>Égalant à zéro la quantité qui est sous le signe <span
+class="math inline">\(\int,\)</span> on aura une équation indéfinie,
+analogue à celle de l’article précédent, mais qui, au lieu de variations
+<span class="math inline">\(\delta x,\,\delta y,\,\delta z,\)</span>
+contiendra les <span
+class="math inline">\(\delta\rho,\,\delta\varphi,\,\delta\psi\,;\)</span>
+et l’on en tirera les équations nécessaires pour la solution du
+problème, en réduisant d’abord toutes les variations au plus petit
+nombre possible et faisant ensuite des équations séparées des termes
+affectés de chacune des variations restantes.</p>
+<p>En employant d’autres indéterminées, on aura des formules
+différentes, et l’on sera assuré d’avoir toujours, dans chaque cas, les
+formules les plus simples que la nature des indéterminées puisse
+comporter. <em>Voir</em> le second Volume des <em>Mémoires de l’Académie
+de Turin</em>, où l’on a employé cette méthode pour résoudre différents
+problèmes de Mécanique^(<a href="#cite_note-8">[8]</a>).</p>
+<p>42. Au reste, puisque <span class="math inline">\(ds = u\,
+dt,\)</span> la formule</p>
+<p>_(S)<span class="math inline">\(m\int u\, ds,\)</span></p>
+<p>qui est un maximum ou un minimum, peut aussi se mettre sous la forme
+_(S)<span class="math inline">\(m\int u^{2}dt,\)</span> ou</p>
+<p><span class="math inline">\(\int dt\)</span>_(S)<span
+class="math inline">\(m\, u^{2},\)</span></p>
+<p>dans laquelle _(S)<span class="math inline">\(m\, u^{2},\)</span>
+exprime la force vive de tout le système dans un instant quelconque.
+Ainsi le principe dont il s’agit se réduit proprement à ce que la somme
+des forces vives instantanées de tous les corps, depuis le moment où ils
+partent des points donnés jusqu’à celui où ils arrivent à d’autres
+points donnés, soit un maximum ou un minimum. On pourrait donc
+l’appeler, avec plus de fondement, le <em>principe de la</em> <em>plus
+grande</em> ou <em>plus petite force vive ;</em> et cette manière de
+l’envisager aurait l’avantage d’être générale, tant pour le mouvement
+que pour l’équilibre, puisque nous avons vu, dans la troisième Section
+de la I^(re) Partie (art. 22), que la force vive d’un système est
+toujours la plus grandie ou la plus petite dans la situation
+d’équilibre.</p>
+<figure>
+<img
+src="../classics///upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sep4.svg/120px-Sep4.svg.png?utm_source=fr.wikisource.org&amp;utm_campaign=parser&amp;utm_content=thumbnail"
+alt="Séparateur" />
+<figcaption aria-hidden="true">Séparateur</figcaption>
+</figure>
+<ol type="1">
+<li><p><a href="#cite_ref-1">↑</a> Cette conclusion est trop absolue.
+L’équation différentielle qui lie <span
+class="math inline">\(\xi,\,\eta,\,\zeta\)</span> est, en effet, de même
+forme que celle qui lie <span class="math inline">\(x,\, y,\,
+z\,;\)</span> mais les forces <span class="math inline">\(X,\, Y,\,
+Z\)</span> n’auront pas des expressions de même forme par rapport aux
+deux systèmes de variables. Ainsi, par exemple, si l’on considère deux
+points qui s’attirent mutuellement avec une force réciproquement
+proportionnelle au carré de la distance, ils décriront des ellipses par
+rapport aux axes mobiles passant par le centre de gravité. Par rapport à
+des axes fixes, les trajectoires seraient beaucoup plus compliquées.
+(<em>J. Bertrand.</em>)</p></li>
+<li><p><a href="#cite_ref-2">↑</a> On trouvera à la fin du Volume la
+démonstration de ce théorème, qui n’offre pas, à beaucoup près, la
+difficulté que Lagrange semble lui attribuer. M. Binet en a publié une
+depuis longtemps dans le <em>Bulletin de la Société philomathique</em>.
+(<em>J. Bertrand.</em>)</p></li>
+<li><p><a href="#cite_ref-3">↑</a> Ces quantités <span
+class="math inline">\(\alpha,\,\,\beta,\,\,\gamma\)</span> ne sont pas
+suffisamment définies. Quel que soit, en effet, le déplacement d’un
+système variable de forme, on peut le regarder comme résultant d’un
+mouvement <em>arbitraire</em> imprimé au système solidifié, puis d’un
+second mouvement produisant le changement de position respective des
+points considérés. L’indétermination des quantités <span
+class="math inline">\(\alpha,\,\beta,\,\gamma\)</span> rend cet article
+37 extrêmement obscur. Je dois avouer qu’il m’a été impossible de
+comprendre le raisonnement de Lagrange et d’attacher même aucun sens
+précis au théorème qui termine le paragraphe. Les notes qui suivent se
+rapportent donc au seul cas d’un système solide. (<em>J.
+Bertrand.</em>)</p>
+<p>Tout en souscrivant aux remarques précédentes, nous proposerons
+l’interprétation suivante du résultat obtenu par Lagrange : si, dans les
+formules qui donnent <span
+class="math inline">\(\overset{˙}{x},\,\overset{˙}{y},\,\overset{˙}{z},\)</span>
+on considère <span
+class="math inline">\(\alpha,\,\beta,\,\gamma\)</span> comme des
+fonctions données de <span class="math inline">\(x,\, y,\, z\)</span> et
+<span
+class="math inline">\(\overset{˙}{\omega},\,\overset{˙}{\varphi},\,\overset{˙}{\psi},\)</span>
+comme des arbitraires variables, cela revient à considérer tous les
+mouvements du système dans lesquels la déformation est la même au bout
+d’un instant infiniment petit ; car, si l’on cherche, par exemple, la
+dérivée de la distance de deux points du système par rapport au temps,
+on reconnaît aisément que cette dérivée ne dépend nullement des
+arbitraires <span
+class="math inline">\(\overset{˙}{\omega},\,\overset{˙}{\varphi},\,\overset{˙}{\psi}\)</span>
+et demeure, par conséquent, la même quand ces arbitraires prennent
+toutes les valeurs possibles. Le théorème de Lagrange peut donc
+s’énoncer comme il suit :</p>
+<p><em>Si l’on compare le mouvement que prend le système sous les
+impulsions données à tous ceux dans lesquels la déformation serait la
+même au bout d’un instant infiniment petit, la force vive acquise par le
+système dans le mouvement naturel sera toujours un maximum ou un
+minimum.</em></p>
+<p>Il résulte d’ailleurs de la démonstration donnée par M. Bertrand dans
+la note suivante que cette <em>force vive sera toujours un
+maximum</em>.</p>
+<p>Au reste, la proposition de Lagrange est comprise comme cas
+particulier dans un théorème très général que l’on doit à Sturm, et que
+l’on trouvera énoncé dans une Note insérée aux <em>Comptes rendus de
+l’Académie des Sciences</em>, tome XIII, page 1045, et démontré dans un
+Mémoire posthume de Sturm publié par M. Prouhet. (<em>Voir</em> Sturm,
+<em>Leçons de Mécanique</em>, t. II.) G. D.</p></li>
+<li><p><a href="#cite_ref-4">↑</a> Ces variations, représentées par la
+caractéristique <span class="math inline">\(\delta,\)</span> se
+rapportent aux changements qu’éprouvent les vitesses par suite de
+l’introduction de liaisons nouvelles, les forces motrices restant les
+mêmes. Ainsi, par exemple, dans le cas d’un corps solide, les variations
+<span class="math inline">\(\delta\)</span> peuvent résulter de
+l’introduction d’un axe fixe dans le système. (<em>J.
+Bertrand.</em>)</p></li>
+<li><p><a href="#cite_ref-5">↑</a> Si l’on suppose que les variations
+désignées par <span class="math inline">\(\delta\)</span> soient finies,
+on aura, en différentiant l’équation des forces vives,</p>
+<p>_(S)<span class="math inline">\(\left\{
+2m(\overset{˙}{x}\delta\overset{˙}{x} +
+\overset{˙}{y}\delta\overset{˙}{y} + \overset{˙}{z}\delta\overset{˙}{z})
++ m\left\lbrack (\delta\overset{˙}{x})^{2} + (\delta\overset{˙}{y})^{2}
++ (\delta\overset{˙}{z})^{2} \right\rbrack + X\delta\overset{˙}{x} +
+Y\delta\overset{˙}{y} + Z\delta\overset{˙}{z} \right\} =
+0\,;\)</span></p>
+<p>et si l’on continue le raisonnement en ayant égard aux nouveaux
+termes introduits par cette hypothèse, on trouvera</p>
+<p><span class="math inline">\(\delta\)</span><em>(S)<span
+class="math inline">\(m\left( \overset{˙}{x}\,\!^{2} +
+\overset{˙}{y}\,\!^{2} + \overset{˙}{z}\,\!^{2} \right) =
+-\)</span></em>(S)<span class="math inline">\(m\left\lbrack
+(\delta\overset{˙}{x})^{2} + (\delta\overset{˙}{y})^{2} +
+(\delta\overset{˙}{z})^{2} \right\rbrack,\)</span></p>
+<p>ce qui montre que l’accroissement des forces vives est négatif et
+égal à la somme des forces vives dues aux vitesses perdues par les
+différents points. (<em>J. Bertrand.</em>)</p></li>
+<li><p><a href="#cite_ref-6">↑</a> Il résulte de la note précédente
+qu’elle est toujours un maximum. Cette remarque a été faite pour la
+première fois par M. Delaunay, qui la justifie d’une manière très
+différente. (<em>Journal de Liouville</em>, I^(re) série, t. V, p. 255.)
+(<em>J. Bertrand.</em>)</p></li>
+<li><p><a href="#cite_ref-7">↑</a> L’intégrale _(S)<span
+class="math inline">\(m\int u\, ds\)</span> est un maximum ou un
+minimum, si on la compare aux intégrales analogues relatives à tout
+autre mouvement du système qui serait produit par les mêmes forces et
+dans lequel, malgré l’introduction de liaisons nouvelles laissant
+subsister le principe des forces vives, les positions initiales et
+finales resteraient les mêmes. Peut-être cet énoncé, qui résulte
+évidemment de la démonstration, n’est-il pas rendu assez explicite dans
+le texte. (<em>J. Bertrand.</em>)</p>
+<p>On pourra consulter, au sujet de ce principe, un article d’Olinde
+Rodrigues inséré dans la <em>Correspondance de l’École
+Polytechnique</em>, t. III, p. 159, et les <em>Vorlesungen über
+Dynamik</em> de Jacobi. G. D.</p></li>
+<li><p><a href="#cite_ref-8">↑</a> <em>Voir</em> aussi une Note
+remarquable d’Olinde Rodrigues ; <em>Correspondance sur l’École
+Polytechnique</em>, tome III, page 159. (<em>J. Bertrand.</em>)</p></li>
+</ol>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
