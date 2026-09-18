@@ -122,9 +122,22 @@ and instruments outside the momentum-transfer class.
    Unverified leads recorded in the companion: Vātsyāyana's *Nyāyabhāṣya*
    on finite sound transmission and on the stopping rule for division;
    Praśastapāda's *vega*, which sits at or past the 500 CE boundary.
-   Four priority topics returned nothing and stay open: Buddhist
-   momentariness, Jain *dharma* and *adharma* as media of motion, Chinese
-   *qi* and *ganying*, and any pre-500 CE Asian claim that light takes time.
+   **Closed 2026-09-18, sequentially and without a workflow:** the Buddhist
+   and Jain gaps. [Vasubandhu's *Abhidharmakośabhāṣya*](../docs/classics/Abhidharmakosabhasya_motion_atoms_GRETIL.md)
+   ad IV.2 denies motion outright, *na gatir yasmāt saṃskṛtaṃ kṣaṇikam*,
+   because everything conditioned is destroyed in the place where it arose,
+   so passage to another place is impossible; ad I.43 denies that atoms
+   touch, argues it by asking what would obstruct motion through the empty
+   intervals, and closes with the directional-parts reductio.
+   [Umāsvāti's *Tattvārthasūtra* 5.17--18](../docs/classics/Tattvarthasutra_ch5_wikisource.md)
+   makes *dharma* and *adharma* the media that assist motion and rest,
+   with space given the separate office of accommodation, and 5.11 gives
+   the atom no space-points. Both verified character by character; both
+   flagged for edition slips and, for the Jain text, for the Śvetāmbara
+   and Digambara recension divergence. The paper's §7 now carries three
+   distinct Indian answers to the arrow and three stopping rules for
+   division. Still open: Chinese *qi* and *ganying* as transmitted
+   influence, and any pre-500 CE Asian claim that light takes time.
 2. **Historiography, read rather than cited.** Shapiro 1993 on the theory
    of fits, where the central historical claim must be tested; Sabra 1981
    on the optical context; Guicciardini 1999 on the limit arguments;

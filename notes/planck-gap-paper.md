@@ -374,15 +374,34 @@ positions, each held here in a primary witness:
   *Nyāyabhāṣya*, within the window at about 400 to 450 CE, argues the point
   from observation: the axe-blow is still heard at a distance after the
   axe-wood contact has ceased.
+- **No motion at all** (Vasubandhu, *Abhidharmakośabhāṣya* ad IV.2, c.
+  350--450 CE). *na gatir yasmāt saṃskṛtaṃ kṣaṇikam*, there is no motion,
+  because the conditioned is momentary; everything conditioned "is destroyed
+  in the very place where it arose", so its passage to another place is
+  impossible. Zeno concludes this and treats it as absurd; Vasubandhu
+  concludes it and accepts it.
+- **A medium that permits motion** (Umāsvāti, *Tattvārthasūtra* 5.17--18,
+  c. 2nd--5th c. CE). *gatisthityupagrahau dharmādharmayor upakāraḥ*: the
+  assisting of motion and of rest is the function of *dharma* and
+  *adharma*. These substances push nothing; they are the standing condition
+  without which motion could not occur, and space is given the separate
+  office of accommodation.
 
 Lemmas X and XI perform exactly the operation these positions dispute.
 The scholia cite the ancients for what Book III concludes and leave them
 silent on how Book I proceeds.
 
-The last two entries differ in kind from the rest, and they matter most
+The last four entries differ in kind from the rest, and they matter most
 here. The Greek and Chinese items are paradoxes about division, which set
-a problem. The Vaiśeṣika sūtras state a **positive theory of
-propagation**: motion is a succession of numerically distinct events, each
+a problem. The Indian entries answer it, and they answer it three
+different ways: the arrow's flight is many motions carried by an
+impression (Vaiśeṣika), or it is no motion at all because each thing
+perishes where it arose (Vasubandhu), or it is possible only because a
+medium stands ready to permit it (Umāsvāti). Each also carries a stopping
+rule for division: the Nyāya *paramāṇu* than which nothing is smaller, the
+directional-parts reductio by which a touched atom would have parts, and
+the Jain atom that has no space-points at all. The Vaiśeṣika sūtras in
+particular state a **positive theory of propagation**: motion is a succession of numerically distinct events, each
 carried to the next by a quantity the previous one deposits, and
 transmission through a medium is a chain in which what arrives is a later
 member than what was sent. That is the structure Theorem 2 quantifies. Its
@@ -456,6 +475,18 @@ rung of a ladder whose first rung is Zeno's.
   The sound chain is the case where an ancient author asserts a finite
   propagation time and argues it from an experiment, which is the premise
   Newton's determinate fits deny for light.
+- **Vasubandhu.** His conclusion is what the theorem says about *records*
+  rather than about the world. Below the mesh every mark is consistent with
+  rest, so no recorded instant exhibits motion and travel is never
+  displayed, only inferred from enough instants together. The theorem
+  declines his further step from the records to the world, and Theorem 5(i)
+  measures exactly how many instants are needed.
+- **Umāsvāti.** The Jain medium is the one ancient category with no
+  counterpart in the theorem, and its absence is informative. Theorems 2
+  and 5 need no medium: what they price is the mark, not the motion.
+  A doctrine on which motion requires a permitting substance predicts
+  nothing about the cost of observing it, which is the respect in which
+  this entry sets a limit on how far the reconstruction reaches.
 - **Democritus and Chrysippus.** The dilemma about adjacent sections
   dissolves with resolution alone, and case (iii) shows it needs no
   action floor. Adjacent recorded sections are equal, and the inequality
