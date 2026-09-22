@@ -51,8 +51,9 @@ and an independent check. `AGENTS.md` already asks each note to say which
 operator, which limits and which order; the same discipline applies to
 reading other people's announcements.
 
-The advisory group now sets the norms for announcing machine results:
-statement, attribution and a presentable writeup before release. This
+The advisory group now advises on how machine results are announced:
+statement, attribution and a presentable writeup before release, with no
+decision-making power at any company. This
 repository already publishes in that form, one dated note per result
 with its proof and its literature label, and the notes it produces on
 the Planck gap and the mass gap should stay ready to meet that standard.

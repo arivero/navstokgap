@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The record costs recoil: a floor for every probe state</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The record costs recoil: a floor for every probe state</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/record-costs-recoil.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-costs-recoil.pdf">PDF</a></p><p>For every protocol of momentum-transfer marks, with probes in any
+states whatever (Gaussian or not, squeezed, correlated, mixed, grid
+states), deciding between free motion and a constant force <span
+class="math inline">\(F\)</span> over a duration <span
+class="math inline">\(\tau\)</span> at error probability <span
+class="math inline">\(\epsilon\)</span> requires</p>
+<p><span class="math display">\[\boxed{\;s\sum_j\Delta_j\ \ge\
+8\,(1-2\epsilon)\,\hbar,\qquad s=\frac{F\tau^2}{2m},\;}\]</span></p>
+<p>where <span class="math inline">\(s\)</span> is Newton’s sagitta for
+the interval and <span class="math inline">\(\Delta_j\)</span> is the
+spread of the impulse delivered by mark <span
+class="math inline">\(j\)</span>. The resolutions of the marks do not
+enter. For a general force the sagitta is replaced by the uniform
+distance of the forced displacement from straight motion (Theorem
+R).</p>
+<p>The theorem answers the question the non-Gaussian probes raise. The
+floor <span class="math inline">\(\tau\Delta
+E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span> of the <a
+href="mark-cost-and-statistical-floor.html">mark-cost note</a> is a
+theorem about Gaussian probes: a grid state with zero position–momentum
+correlation decides the comparison at any force (Proposition G), so no
+bound on second moments alone survives. What does survive, for every
+probe, is the recoil. A pointer registers a displacement only through
+the spread of its conjugate momentum, and that momentum is the impulse
+the body receives. This is M3 in its universal form: a record of the
+sagitta must leave the delivered impulse undetermined by at least <span
+class="math inline">\(8(1-2\epsilon)\hbar/s\)</span> in total. The
+correlated three-mark protocol of Proposition D attains the bound within
+a factor <span
+class="math inline">\(\sqrt2\,z_{1-\epsilon}/(1-2\epsilon)\)</span>,
+uniformly in its squeezing (Section 4). Exploratory; no ledger
+promotion.</p>
+<h2 id="setting">1. Setting</h2>
+<p>Transverse coordinate <span class="math inline">\(\hat y\)</span>,
+momentum <span class="math inline">\(\hat p\)</span>, mass <span
+class="math inline">\(m\)</span>, on <span
+class="math inline">\([0,\tau]\)</span>. Marks <span
+class="math inline">\(j=1,\dots,k\)</span> act at times <span
+class="math inline">\(t_j\)</span>: the body is coupled to probe <span
+class="math inline">\(j\)</span>, prepared in a state <span
+class="math inline">\(\varphi_j\)</span> (pure or mixed, arbitrary), by
+<span class="math inline">\(U_j=\exp(-\frac i\hbar\lambda_j\hat y\hat
+P_j)\)</span>, and the pointer <span class="math inline">\(\hat
+Q_j\)</span> is read afterwards with no further evolution. Under
+hypothesis <span class="math inline">\(\mathrm I\)</span> the body moves
+freely; under <span class="math inline">\(\mathrm F\)</span> it feels a
+force whose displacement relative to free motion from rest at the origin
+is <span class="math inline">\(P(t)\)</span>, with <span
+class="math inline">\(P(0)=P&#39;(0)=0\)</span>; for the constant force
+<span class="math inline">\(P(t)=Ft^2/2m\)</span>. The body’s initial
+state is unknown: a test <strong>decides at error <span
+class="math inline">\(\epsilon\)</span></strong> when its equal-prior
+error probability is at most <span
+class="math inline">\(\epsilon\)</span> for every initial state under
+<span class="math inline">\(\mathrm I\)</span> and every initial state
+under <span class="math inline">\(\mathrm F\)</span>. Write <span
+class="math inline">\(\hat N_j=\hat Q_j/\lambda_j\)</span> and <span
+class="math inline">\(\hat D_j=-\lambda_j\hat P_j\)</span> for the error
+and the delivered impulse of mark <span
+class="math inline">\(j\)</span>, as in Theorem A, and <span
+class="math inline">\(\Delta_j=\lambda_j\Delta_{\varphi_j}\hat
+P_j\)</span> for its recoil spread.</p>
+<p><strong>Lemma 1 (the record).</strong> In the Heisenberg picture the
+<span class="math inline">\(j\)</span>-th reading is</p>
+<p><span class="math display">\[\hat R_j=\hat y+\frac{\hat
+p\,t_j}{m}+\theta P(t_j)
++\sum_{i:\,t_i&lt;t_j}\frac{t_j-t_i}{m}\hat D_i+\hat N_j ,\]</span></p>
+<p>with <span class="math inline">\(\theta=0\)</span> under <span
+class="math inline">\(\mathrm I\)</span> and <span
+class="math inline">\(\theta=1\)</span> under <span
+class="math inline">\(\mathrm F\)</span>, and the initial pointer <span
+class="math inline">\(\hat Q_j\)</span> appears in <span
+class="math inline">\(\hat R_j\)</span> alone.</p>
+<p><em>Proof.</em> Theorem A of the mark-cost note for each coupling,
+the linear free evolution between marks, and the c-number force, which
+adds <span class="math inline">\(P(t)\)</span> to <span
+class="math inline">\(\hat y(t)\)</span>. The pointer <span
+class="math inline">\(\hat Q_j\)</span> is shifted by the coupling and
+coupled to nothing afterwards. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Lemma 2 (the signal moves into the pointers).</strong> For
+real <span class="math inline">\(a,b\)</span> let the body’s initial
+state under <span class="math inline">\(\mathrm F\)</span> be the state
+under <span class="math inline">\(\mathrm I\)</span> translated by <span
+class="math inline">\(-a\)</span> in position and <span
+class="math inline">\(-mb\)</span> in momentum. Then the record under
+<span class="math inline">\(\mathrm F\)</span> has the distribution of
+the record under <span class="math inline">\(\mathrm I\)</span> with
+each probe state <span class="math inline">\(\varphi_j\)</span> replaced
+by its translate by <span class="math inline">\(\lambda_jc_j\)</span> in
+<span class="math inline">\(\hat Q_j\)</span>, where <span
+class="math inline">\(c_j=P(t_j)-a-bt_j\)</span>.</p>
+<p><em>Proof.</em> The translation of the body replaces <span
+class="math inline">\(\hat y,\hat p\)</span> in Lemma 1 by <span
+class="math inline">\(\hat y-a\)</span>, <span
+class="math inline">\(\hat p-mb\)</span>, which shifts <span
+class="math inline">\(\hat R_j\)</span> by <span
+class="math inline">\(-a-bt_j\)</span>; the force adds <span
+class="math inline">\(P(t_j)\)</span>. The net effect is the c-number
+shift <span class="math inline">\(\hat R_j\mapsto\hat R_j+c_j\)</span>.
+Translating probe <span class="math inline">\(j\)</span> by <span
+class="math inline">\(\lambda_jc_j\)</span> in <span
+class="math inline">\(\hat Q_j\)</span> shifts <span
+class="math inline">\(\hat N_j\)</span> by <span
+class="math inline">\(c_j\)</span> and leaves every <span
+class="math inline">\(\hat D_i\)</span> and every other reading
+unchanged, by the last clause of Lemma 1. The record operators commute,
+so their joint distribution is fixed by these shifts and the states.
+<span class="math inline">\(\square\)</span></p>
+<h2 id="the-theorem">2. The theorem</h2>
+<p><strong>Theorem R.</strong> Every protocol deciding at error <span
+class="math inline">\(\epsilon\)</span> satisfies</p>
+<p><span class="math display">\[1-2\epsilon\ \le\
+\frac1\hbar\,\min_{a,b}\sum_j\Delta_j\,\bigl|P(t_j)-a-bt_j\bigr|
+.\]</span></p>
+<p><em>Proof.</em> Fix <span class="math inline">\(a,b\)</span> and any
+initial state <span class="math inline">\(\sigma\)</span> under <span
+class="math inline">\(\mathrm I\)</span>, and take under <span
+class="math inline">\(\mathrm F\)</span> the translate of Lemma 2. A
+test with error at most <span class="math inline">\(\epsilon\)</span>
+against this pair has <span
+class="math inline">\(\mathrm{TV}\ge1-2\epsilon\)</span> between the two
+record distributions. By Lemma 2 those are the records of one fixed
+protocol, with body state <span class="math inline">\(\sigma\)</span>,
+applied to the probe states <span
+class="math inline">\(\otimes_j\varphi_j\)</span> and <span
+class="math inline">\(\otimes_j\varphi_j&#39;\)</span>, <span
+class="math inline">\(\varphi_j&#39;\)</span> the translate by <span
+class="math inline">\(q_j=\lambda_jc_j\)</span>. The data-processing
+inequality and the triangle inequality over the factors give</p>
+<p><span
+class="math display">\[\mathrm{TV}\le\tfrac12\bigl\|\otimes_j\varphi_j-\otimes_j\varphi_j&#39;\bigr\|_1
+\le\sum_j\tfrac12\|\varphi_j-\varphi_j&#39;\|_1 .\]</span></p>
+<p>The translate is <span class="math inline">\(e^{-iq_j\hat
+P_j/\hbar}\varphi_je^{iq_j\hat P_j/\hbar}\)</span>. By Mandelstam–Tamm
+for a pure state, and through a purification for a mixed one exactly as
+in Theorem 2 of the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>, <span
+class="math inline">\(\frac12\|\varphi_j-\varphi_j&#39;\|_1\le|q_j|\Delta_{\varphi_j}\hat
+P_j/\hbar=\Delta_j|c_j|/\hbar\)</span>. Minimize over <span
+class="math inline">\(a,b\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Corollary R1 (the Galileo comparison).</strong> For <span
+class="math inline">\(P(t)=Ft^2/2m\)</span>, the line <span
+class="math inline">\(a+bt\)</span> that best approximates <span
+class="math inline">\(P\)</span> uniformly on <span
+class="math inline">\([0,\tau]\)</span> is <span
+class="math inline">\(\frac{F}{2m}(\tau t-\tau^2/8)\)</span>, and <span
+class="math inline">\(|P(t)-a-bt|\le F\tau^2/16m=s/8\)</span> there,
+with equality at <span class="math inline">\(t=0,\tau/2,\tau\)</span>.
+Hence</p>
+<p><span class="math display">\[s\sum_j\Delta_j\ \ge\
+8(1-2\epsilon)\hbar .\]</span></p>
+<p>For a general force the same step gives <span
+class="math inline">\(E_1(P)\sum_j\Delta_j\ge(1-2\epsilon)\hbar\)</span>,
+with <span
+class="math inline">\(E_1(P)=\min_{a,b}\max_{[0,\tau]}|P(t)-a-bt|\)</span>
+the uniform distance of the forced displacement from straight motion.
+<span class="math inline">\(\square\)</span></p>
+<p>The mechanism is the conjugacy of Theorem A read in the other
+direction. The record of the force is a translation of the pointers, and
+a pointer feels a translation only through the spread of the operator
+that generates it, which is its momentum <span
+class="math inline">\(\hat P_j\)</span>. That same momentum, times <span
+class="math inline">\(\lambda_j\)</span>, is the impulse the body
+receives. So sensitivity is paid in recoil at the exchange rate <span
+class="math inline">\(\hbar\)</span>, whatever the pointer’s state, and
+a resolution bought by squeezing, correlation or a grid is bought with
+recoil.</p>
+<p>For adaptive protocols, in which couplings and times depend on
+earlier readings, the hybrid argument of the probabilistic note gives
+the same bound with each <span
+class="math inline">\(\Delta_j|c_j|\)</span> replaced by its supremum
+over the choices available at step <span
+class="math inline">\(j\)</span>.</p>
+<h2 id="the-gaussian-floor-needs-gaussian-probes">3. The Gaussian floor
+needs Gaussian probes</h2>
+<p><strong>Proposition G.</strong> In the three-mark protocol of
+Proposition D of the mark-cost note (marks at <span
+class="math inline">\(0,\tau/2,\tau\)</span>, test <span
+class="math inline">\(R_1-2R_2+R_3\)</span>, outer marks sharp), let the
+middle probe be a grid state with a real wavefunction, so that <span
+class="math inline">\(\operatorname{Cov}(\hat Q_2,\hat P_2)=0\)</span>
+and its correlation <span class="math inline">\(\rho\)</span> vanishes.
+For every <span class="math inline">\(F\)</span> whose signal <span
+class="math inline">\(u^{\mathsf T}P=F\tau^2/4m\)</span> is not a
+multiple of <span
+class="math inline">\(\sigma=\sqrt{2\pi\hbar\,|u_2S_2|/m}=\sqrt{2\pi\hbar\tau/m}\)</span>,
+the error probability tends to zero as the grid is made finer.</p>
+<p><em>Proof.</em> The statistic’s noise is <span
+class="math inline">\(-2\hat N_2+\frac{\tau}{2m}\hat D_2\)</span> plus
+the vanishing contributions of the outer marks, that is <span
+class="math inline">\(\alpha\hat Q_2+\beta\hat P_2\)</span> with <span
+class="math inline">\(\alpha\beta=|u_2S_2|/m=\tau/m\)</span> independent
+of <span class="math inline">\(\lambda_2\)</span>. Take the ideal grid
+state stabilized by the commuting translations <span
+class="math inline">\(e^{-i\ell_Q\hat P_2/\hbar}\)</span> and <span
+class="math inline">\(e^{i\ell_P\hat Q_2/\hbar}\)</span>, <span
+class="math inline">\(\ell_Q\ell_P=2\pi\hbar\)</span> (Gottesman, Kitaev
+and Preskill, <a href="https://doi.org/10.1103/PhysRevA.64.012310">PRA
+<strong>64</strong>, 012310, 2001</a>, metadata), with the aspect chosen
+as <span class="math inline">\(\ell_P/\ell_Q=\alpha/\beta\)</span>. The
+product of the two stabilizers is <span
+class="math inline">\(-e^{ic(\alpha\hat Q_2+\beta\hat P_2)}\)</span>
+with <span class="math inline">\(c=\ell_P/(\hbar\alpha)\)</span>, by the
+Baker–Campbell–Hausdorff phase <span
+class="math inline">\(e^{-i\pi}\)</span>, so <span
+class="math inline">\(\alpha\hat Q_2+\beta\hat P_2\)</span> is supported
+on a comb of spacing <span
+class="math inline">\(2\pi/c=\sqrt{2\pi\hbar\alpha\beta}=\sigma\)</span>.
+Finite-energy grid states with Gaussian teeth of width <span
+class="math inline">\(w\)</span> and a Gaussian envelope keep a real
+wavefunction and converge to the ideal state as <span
+class="math inline">\(w\to0\)</span>; the statistic then has teeth of
+width of order <span class="math inline">\(w\)</span>, and a shift by a
+non-multiple of <span class="math inline">\(\sigma\)</span> separates
+the two combs. <span class="math inline">\(\square\)</span></p>
+<p>Such states measure both quadratures of a small displacement at once,
+which is the principle of the grid-state displacement sensor of
+Duivenvoorden, Terhal and Weigand (<a
+href="https://doi.org/10.1103/PhysRevA.95.012305">PRA
+<strong>95</strong>, 012305, 2017</a>, metadata). Two features connect
+it to the rest of the programme. Its recoil diverges: the envelope of
+the momentum distribution widens as <span
+class="math inline">\(\hbar/w\)</span>, so Theorem R is met. And its
+blind spots are the shifts in <span class="math inline">\(\sigma\mathbb
+Z\)</span>, the translations whose Weyl phase with the stabilizers is a
+multiple of <span class="math inline">\(2\pi\)</span>: the grid reads
+the signal modulo the same central phase that the <a
+href="polygon-lift-phase.html">polygon-lift note</a> identifies as the
+part no preparation can move.</p>
+<p>So Theorems B and C of the mark-cost note hold for Gaussian probes,
+where the Wigner function is a density and the record is the classical
+Gaussian model, and the correlation coefficient is the resource that
+lowers the floor within that class. Outside it the second moments do not
+bound the error, and Theorem R is the statement that holds.</p>
+<h2 id="tightness">4. Tightness</h2>
+<p>In the correlated protocol of Proposition D the outer marks are
+sharp, so their recoils are unbounded and the minimum in Theorem R takes
+the line through the endpoints, <span
+class="math inline">\(c_1=c_3=0\)</span>, <span
+class="math inline">\(|c_2|=F\tau^2/8m\)</span>. The balanced middle
+mark has <span class="math inline">\(2\delta_2=\tau\Delta_2/2m\)</span>
+and, for a pure Gaussian probe, <span
+class="math inline">\(\delta_2\Delta_2=\hbar/(2\sqrt{1-\rho^2})\)</span>,
+so <span
+class="math inline">\(\Delta_2^2=2m\hbar/(\tau\sqrt{1-\rho^2})\)</span>.
+At its decision threshold <span class="math inline">\(\tau\Delta
+E=32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span>,</p>
+<p><span
+class="math display">\[\Delta_2|c_2|=z_{1-\epsilon}\,\hbar\,\sqrt{\frac{2}{1+\rho}},\]</span></p>
+<p>between <span class="math inline">\(z\hbar\)</span> and <span
+class="math inline">\(\sqrt2z\hbar\)</span> for every <span
+class="math inline">\(\rho\in[0,1)\)</span>. Theorem R asks for <span
+class="math inline">\((1-2\epsilon)\hbar\)</span>, so the protocol sits
+within the factor <span
+class="math inline">\(\sqrt2z_{1-\epsilon}/(1-2\epsilon)\)</span> of the
+bound, about <span class="math inline">\(2.6\)</span> at five per cent
+error, however strongly it is squeezed. The recoil-weighted sagitta is
+the right universal resource: squeezing moves the protocol along it and
+never below it.</p>
+<h2 id="what-this-changes">5. What this changes</h2>
+<p><strong>The three floors, ordered.</strong> Resource-free: the phase
+<span class="math inline">\(\mathcal K_\tau/\hbar\)</span> between the
+motion and its inscribed polygon (polygon-lift note, Theorems 1 and 7).
+Universal over probe states: the recoil bound <span
+class="math inline">\(s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar\)</span>
+(Theorem R). Universal over instruments with a bounded laboratory: the
+aperture bound <span class="math inline">\(F\tau
+L+\frac{F\tau^2}{2m}P\ge(1-2\epsilon)\hbar\)</span> (probabilistic
+note). And for Gaussian probes with correlation at most <span
+class="math inline">\(\rho\)</span>, the sharp floor <span
+class="math inline">\(\tau\Delta
+E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span> (mark-cost note).</p>
+<p><strong>M3, restated.</strong> The mark-floor note’s premise has two
+clauses, a product of resolution and recoil and the independence of the
+two. Theorem R shows that the recoil clause alone is universal: a mark
+that records the sagitta must leave the delivered impulse undetermined,
+with <span
+class="math inline">\(s\sum\Delta_j\ge8(1-2\epsilon)\hbar\)</span>. In
+Newton’s words from the <a href="newton-mark-floor.html">mark-floor
+note</a>, the premise that carries <span
+class="math inline">\(h&gt;0\)</span> for every probe is that a record
+costs an undetermined impulse, and the pairing is with the sagitta of
+Lemma X.</p>
+<p><strong>Beyond the momentum-transfer class.</strong> The proof uses
+only that the pointer’s error is translated by the unitary generated by
+the delivered impulse, <span class="math inline">\([\hat N_j,\hat
+D_j]=-i\hbar\)</span>, and that the apparatus enters the record through
+<span class="math inline">\(\hat N_j\)</span> and <span
+class="math inline">\(\hat D_j\)</span>. The commutation of the pointer
+with the body’s momentum after any coupling gives <span
+class="math inline">\([\hat N,\hat D]=-i\hbar-[\hat y,\hat D]-[\hat
+N,\hat p]\)</span>, so Theorem R extends to every instrument whose error
+and recoil do not depend on the body (Arthurs and Goodman, <a
+href="https://doi.org/10.1103/PhysRevLett.60.2447">PRL
+<strong>60</strong>, 2447, 1988</a>, metadata). That is the next step,
+and the body-dependent case, where Ozawa’s relation (<a
+href="https://doi.org/10.1103/PhysRevA.67.042105">PRA
+<strong>67</strong>, 042105, 2003</a>, metadata) adds the body’s own
+spreads, is the one after.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Theorem A’s extension, option 3 of the 2026-09-22 plan, is settled
+constructively. The Gaussian floor holds for Gaussian probes and grid
+probes break it (Proposition G); the universal statement over probe
+states is Theorem R, sagitta times total recoil at least <span
+class="math inline">\(8(1-2\epsilon)\hbar\)</span>, attained within a
+constant by squeezed probes at every squeezing. Next: option 1
+(additive-noise instruments), then option 2 (Ozawa’s relation).</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

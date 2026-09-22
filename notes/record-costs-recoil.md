@@ -1,0 +1,229 @@
+# The record costs recoil: a floor for every probe state
+
+For every protocol of momentum-transfer marks, with probes in any states
+whatever (Gaussian or not, squeezed, correlated, mixed, grid states),
+deciding between free motion and a constant force $F$ over a duration
+$\tau$ at error probability $\epsilon$ requires
+
+$$\boxed{\;s\sum_j\Delta_j\ \ge\ 8\,(1-2\epsilon)\,\hbar,\qquad s=\frac{F\tau^2}{2m},\;}$$
+
+where $s$ is Newton's sagitta for the interval and $\Delta_j$ is the
+spread of the impulse delivered by mark $j$. The resolutions of the marks
+do not enter. For a general force the sagitta is replaced by the uniform
+distance of the forced displacement from straight motion (Theorem R).
+
+The theorem answers the question the non-Gaussian probes raise. The floor
+$\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$ of the
+[mark-cost note](mark-cost-and-statistical-floor.md) is a theorem about
+Gaussian probes: a grid state with zero position--momentum correlation
+decides the comparison at any force (Proposition G), so no bound on
+second moments alone survives. What does survive, for every probe, is the
+recoil. A pointer registers a displacement only through the spread of its
+conjugate momentum, and that momentum is the impulse the body receives.
+This is M3 in its universal form: a record of the sagitta must leave the
+delivered impulse undetermined by at least $8(1-2\epsilon)\hbar/s$ in
+total. The correlated three-mark protocol of Proposition D attains the
+bound within a factor $\sqrt2\,z_{1-\epsilon}/(1-2\epsilon)$, uniformly in
+its squeezing (Section 4). Exploratory; no ledger promotion.
+
+## 1. Setting
+
+Transverse coordinate $\hat y$, momentum $\hat p$, mass $m$, on
+$[0,\tau]$. Marks $j=1,\dots,k$ act at times $t_j$: the body is coupled to
+probe $j$, prepared in a state $\varphi_j$ (pure or mixed, arbitrary), by
+$U_j=\exp(-\frac i\hbar\lambda_j\hat y\hat P_j)$, and the pointer
+$\hat Q_j$ is read afterwards with no further evolution. Under hypothesis
+$\mathrm I$ the body moves freely; under $\mathrm F$ it feels a force whose
+displacement relative to free motion from rest at the origin is $P(t)$,
+with $P(0)=P'(0)=0$; for the constant force $P(t)=Ft^2/2m$. The body's
+initial state is unknown: a test **decides at error $\epsilon$** when its
+equal-prior error probability is at most $\epsilon$ for every initial state
+under $\mathrm I$ and every initial state under $\mathrm F$. Write
+$\hat N_j=\hat Q_j/\lambda_j$ and $\hat D_j=-\lambda_j\hat P_j$ for the
+error and the delivered impulse of mark $j$, as in Theorem A, and
+$\Delta_j=\lambda_j\Delta_{\varphi_j}\hat P_j$ for its recoil spread.
+
+**Lemma 1 (the record).** In the Heisenberg picture the $j$-th reading is
+
+$$\hat R_j=\hat y+\frac{\hat p\,t_j}{m}+\theta P(t_j)
++\sum_{i:\,t_i<t_j}\frac{t_j-t_i}{m}\hat D_i+\hat N_j ,$$
+
+with $\theta=0$ under $\mathrm I$ and $\theta=1$ under $\mathrm F$, and the
+initial pointer $\hat Q_j$ appears in $\hat R_j$ alone.
+
+*Proof.* Theorem A of the mark-cost note for each coupling, the linear
+free evolution between marks, and the c-number force, which adds $P(t)$
+to $\hat y(t)$. The pointer $\hat Q_j$ is shifted by the coupling and
+coupled to nothing afterwards. $\square$
+
+**Lemma 2 (the signal moves into the pointers).** For real $a,b$ let the
+body's initial state under $\mathrm F$ be the state under $\mathrm I$
+translated by $-a$ in position and $-mb$ in momentum. Then the record
+under $\mathrm F$ has the distribution of the record under $\mathrm I$
+with each probe state $\varphi_j$ replaced by its translate by
+$\lambda_jc_j$ in $\hat Q_j$, where $c_j=P(t_j)-a-bt_j$.
+
+*Proof.* The translation of the body replaces $\hat y,\hat p$ in Lemma 1
+by $\hat y-a$, $\hat p-mb$, which shifts $\hat R_j$ by $-a-bt_j$; the force
+adds $P(t_j)$. The net effect is the c-number shift $\hat R_j\mapsto\hat R_j+c_j$.
+Translating probe $j$ by $\lambda_jc_j$ in $\hat Q_j$ shifts $\hat N_j$ by
+$c_j$ and leaves every $\hat D_i$ and every other reading unchanged, by the
+last clause of Lemma 1. The record operators commute, so their joint
+distribution is fixed by these shifts and the states. $\square$
+
+## 2. The theorem
+
+**Theorem R.** Every protocol deciding at error $\epsilon$ satisfies
+
+$$1-2\epsilon\ \le\ \frac1\hbar\,\min_{a,b}\sum_j\Delta_j\,\bigl|P(t_j)-a-bt_j\bigr| .$$
+
+*Proof.* Fix $a,b$ and any initial state $\sigma$ under $\mathrm I$, and take
+under $\mathrm F$ the translate of Lemma 2. A test with error at most
+$\epsilon$ against this pair has $\mathrm{TV}\ge1-2\epsilon$ between the two
+record distributions. By Lemma 2 those are the records of one fixed
+protocol, with body state $\sigma$, applied to the probe states
+$\otimes_j\varphi_j$ and $\otimes_j\varphi_j'$, $\varphi_j'$ the translate
+by $q_j=\lambda_jc_j$. The data-processing inequality and the triangle
+inequality over the factors give
+
+$$\mathrm{TV}\le\tfrac12\bigl\|\otimes_j\varphi_j-\otimes_j\varphi_j'\bigr\|_1
+\le\sum_j\tfrac12\|\varphi_j-\varphi_j'\|_1 .$$
+
+The translate is $e^{-iq_j\hat P_j/\hbar}\varphi_je^{iq_j\hat P_j/\hbar}$. By
+Mandelstam--Tamm for a pure state, and through a purification for a mixed
+one exactly as in Theorem 2 of the
+[probabilistic note](planck-gap-probabilistic.md),
+$\frac12\|\varphi_j-\varphi_j'\|_1\le|q_j|\Delta_{\varphi_j}\hat P_j/\hbar=\Delta_j|c_j|/\hbar$.
+Minimize over $a,b$. $\square$
+
+**Corollary R1 (the Galileo comparison).** For $P(t)=Ft^2/2m$, the line
+$a+bt$ that best approximates $P$ uniformly on $[0,\tau]$ is
+$\frac{F}{2m}(\tau t-\tau^2/8)$, and $|P(t)-a-bt|\le F\tau^2/16m=s/8$ there,
+with equality at $t=0,\tau/2,\tau$. Hence
+
+$$s\sum_j\Delta_j\ \ge\ 8(1-2\epsilon)\hbar .$$
+
+For a general force the same step gives $E_1(P)\sum_j\Delta_j\ge(1-2\epsilon)\hbar$,
+with $E_1(P)=\min_{a,b}\max_{[0,\tau]}|P(t)-a-bt|$ the uniform distance of the
+forced displacement from straight motion. $\square$
+
+The mechanism is the conjugacy of Theorem A read in the other direction.
+The record of the force is a translation of the pointers, and a pointer
+feels a translation only through the spread of the operator that generates
+it, which is its momentum $\hat P_j$. That same momentum, times $\lambda_j$,
+is the impulse the body receives. So sensitivity is paid in recoil at the
+exchange rate $\hbar$, whatever the pointer's state, and a resolution
+bought by squeezing, correlation or a grid is bought with recoil.
+
+For adaptive protocols, in which couplings and times depend on earlier
+readings, the hybrid argument of the probabilistic note gives the same
+bound with each $\Delta_j|c_j|$ replaced by its supremum over the choices
+available at step $j$.
+
+## 3. The Gaussian floor needs Gaussian probes
+
+**Proposition G.** In the three-mark protocol of Proposition D of the
+mark-cost note (marks at $0,\tau/2,\tau$, test $R_1-2R_2+R_3$, outer
+marks sharp), let the middle probe be a grid state with a real
+wavefunction, so that $\operatorname{Cov}(\hat Q_2,\hat P_2)=0$ and its
+correlation $\rho$ vanishes. For every $F$ whose signal
+$u^{\mathsf T}P=F\tau^2/4m$ is not a multiple of
+$\sigma=\sqrt{2\pi\hbar\,|u_2S_2|/m}=\sqrt{2\pi\hbar\tau/m}$, the error
+probability tends to zero as the grid is made finer.
+
+*Proof.* The statistic's noise is $-2\hat N_2+\frac{\tau}{2m}\hat D_2$ plus
+the vanishing contributions of the outer marks, that is
+$\alpha\hat Q_2+\beta\hat P_2$ with $\alpha\beta=|u_2S_2|/m=\tau/m$
+independent of $\lambda_2$. Take the ideal grid state stabilized by the
+commuting translations $e^{-i\ell_Q\hat P_2/\hbar}$ and $e^{i\ell_P\hat Q_2/\hbar}$,
+$\ell_Q\ell_P=2\pi\hbar$ (Gottesman, Kitaev and Preskill,
+[PRA **64**, 012310, 2001](https://doi.org/10.1103/PhysRevA.64.012310),
+metadata), with the aspect chosen as $\ell_P/\ell_Q=\alpha/\beta$. The
+product of the two stabilizers is $-e^{ic(\alpha\hat Q_2+\beta\hat P_2)}$
+with $c=\ell_P/(\hbar\alpha)$, by the Baker--Campbell--Hausdorff phase
+$e^{-i\pi}$, so $\alpha\hat Q_2+\beta\hat P_2$ is supported on a comb of
+spacing $2\pi/c=\sqrt{2\pi\hbar\alpha\beta}=\sigma$. Finite-energy grid
+states with Gaussian teeth of width $w$ and a Gaussian envelope keep a
+real wavefunction and converge to the ideal state as $w\to0$; the
+statistic then has teeth of width of order $w$, and a shift by a
+non-multiple of $\sigma$ separates the two combs. $\square$
+
+Such states measure both quadratures of a small displacement at once,
+which is the principle of the grid-state displacement sensor of
+Duivenvoorden, Terhal and Weigand
+([PRA **95**, 012305, 2017](https://doi.org/10.1103/PhysRevA.95.012305),
+metadata). Two features connect it to the rest of the programme. Its
+recoil diverges: the envelope of the momentum distribution widens as
+$\hbar/w$, so Theorem R is met. And its blind spots are the shifts in
+$\sigma\mathbb Z$, the translations whose Weyl phase with the stabilizers
+is a multiple of $2\pi$: the grid reads the signal modulo the same
+central phase that the [polygon-lift note](polygon-lift-phase.md)
+identifies as the part no preparation can move.
+
+So Theorems B and C of the mark-cost note hold for Gaussian probes, where
+the Wigner function is a density and the record is the classical
+Gaussian model, and the correlation coefficient is the resource that
+lowers the floor within that class. Outside it the second moments do
+not bound the error, and Theorem R is the statement that holds.
+
+## 4. Tightness
+
+In the correlated protocol of Proposition D the outer marks are sharp, so
+their recoils are unbounded and the minimum in Theorem R takes the line
+through the endpoints, $c_1=c_3=0$, $|c_2|=F\tau^2/8m$. The balanced
+middle mark has $2\delta_2=\tau\Delta_2/2m$ and, for a pure Gaussian probe,
+$\delta_2\Delta_2=\hbar/(2\sqrt{1-\rho^2})$, so
+$\Delta_2^2=2m\hbar/(\tau\sqrt{1-\rho^2})$. At its decision threshold
+$\tau\Delta E=32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$,
+
+$$\Delta_2|c_2|=z_{1-\epsilon}\,\hbar\,\sqrt{\frac{2}{1+\rho}},$$
+
+between $z\hbar$ and $\sqrt2z\hbar$ for every $\rho\in[0,1)$. Theorem R
+asks for $(1-2\epsilon)\hbar$, so the protocol sits within the factor
+$\sqrt2z_{1-\epsilon}/(1-2\epsilon)$ of the bound, about $2.6$ at five per
+cent error, however strongly it is squeezed. The recoil-weighted sagitta
+is the right universal resource: squeezing moves the protocol along it and
+never below it.
+
+## 5. What this changes
+
+**The three floors, ordered.** Resource-free: the phase
+$\mathcal K_\tau/\hbar$ between the motion and its inscribed polygon
+(polygon-lift note, Theorems 1 and 7). Universal over probe states: the
+recoil bound $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ (Theorem R). Universal
+over instruments with a bounded laboratory: the aperture bound
+$F\tau L+\frac{F\tau^2}{2m}P\ge(1-2\epsilon)\hbar$ (probabilistic note).
+And for Gaussian probes with correlation at most $\rho$, the sharp floor
+$\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$ (mark-cost note).
+
+**M3, restated.** The mark-floor note's premise has two clauses, a
+product of resolution and recoil and the independence of the two. Theorem
+R shows that the recoil clause alone is universal: a mark that records the
+sagitta must leave the delivered impulse undetermined, with
+$s\sum\Delta_j\ge8(1-2\epsilon)\hbar$. In Newton's words from the
+[mark-floor note](newton-mark-floor.md), the premise that carries $h>0$ for
+every probe is that a record costs an undetermined impulse, and the pairing
+is with the sagitta of Lemma X.
+
+**Beyond the momentum-transfer class.** The proof uses only that the
+pointer's error is translated by the unitary generated by the delivered
+impulse, $[\hat N_j,\hat D_j]=-i\hbar$, and that the apparatus enters the
+record through $\hat N_j$ and $\hat D_j$. The commutation of the pointer
+with the body's momentum after any coupling gives
+$[\hat N,\hat D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]$, so Theorem R
+extends to every instrument whose error and recoil do not depend on the
+body (Arthurs and Goodman,
+[PRL **60**, 2447, 1988](https://doi.org/10.1103/PhysRevLett.60.2447),
+metadata). That is the next step, and the body-dependent case, where
+Ozawa's relation
+([PRA **67**, 042105, 2003](https://doi.org/10.1103/PhysRevA.67.042105),
+metadata) adds the body's own spreads, is the one after.
+
+## 6. Consequence for STATE
+
+Theorem A's extension, option 3 of the 2026-09-22 plan, is settled
+constructively. The Gaussian floor holds for Gaussian probes and grid
+probes break it (Proposition G); the universal statement over probe states
+is Theorem R, sagitta times total recoil at least $8(1-2\epsilon)\hbar$,
+attained within a constant by squeezed probes at every squeezing. Next:
+option 1 (additive-noise instruments), then option 2 (Ozawa's relation).

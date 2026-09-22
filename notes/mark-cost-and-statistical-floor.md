@@ -352,6 +352,13 @@ $(1-2\epsilon)^2\hbar^2/(4LP)$ at the balanced aperture.** Newton's
 refinement is the first case, which is why the floor is the relevant
 statement for the insertion question.
 
+**Gaussian probes are needed, 2026-09-22.** Theorems B and C concern
+Gaussian probes, where the Wigner function is a density. A grid probe
+with a real wavefunction has $\rho=0$ and still decides the comparison at
+any force, and for probes in arbitrary states the statement that holds is
+the recoil bound $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ of the
+[recoil note](record-costs-recoil.md).
+
 Both escapes use one resource. A correlated probe and an unbalanced
 aperture each stretch an uncertainty ellipse of fixed area along a
 direction the test does not see: the rotated quadrature of the middle

@@ -21,7 +21,7 @@ over no-go results.
 [The paper draft](../notes/planck-gap-paper.md) is the synthesis; the
 proofs are in four notes.
 
-- **Classical floor.** Every protocol of marks with uncorrelated error
+- **Classical floor.** Every protocol of Gaussian marks with uncorrelated error
   and recoil and $\delta_j\Delta_j\ge\kappa$ needs
   $\tau\Delta E\ge48z_{1-\epsilon}^2\kappa$, sharp (constant from the
   Poincaré inequality, since invariance under $v_0$ pins $T$ at both ends)
@@ -78,7 +78,16 @@ the shape parameter explicit.
 3. **Done, 2026-09-22: mixed conditional states.** The probabilistic
    Theorem 2 holds for every instrument, any Kraus rank and any apparatus
    memory, by purification.
-4. **Theorem A beyond the momentum-transfer class.**
+4. **Theorem A beyond the momentum-transfer class**, in the order the
+   user set on 2026-09-22: option 3 first, then 1, then 2. **Option 3
+   done:** [the recoil note](../notes/record-costs-recoil.md). Grid probes
+   with $\rho=0$ break the Gaussian floor (Proposition G); for every probe
+   state, $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ (Theorem R, paper
+   Theorem 8), within a constant of squeezed protocols at every squeezing.
+   **Next, option 1:** instruments whose error and recoil do not depend on
+   the body, by $[\hat N,\hat D]=-i\hbar$ from the commutation of pointer
+   and momentum. **Then option 2:** Ozawa's relation for body-dependent
+   instruments, where the body's own spreads enter.
 
 History, lower priority: the Section I Scholium, where Newton cites
 Euclid X against least magnitudes, as the first entry of the Book I

@@ -32,7 +32,7 @@ TRACKS = [
      must be <em>recorded</em>, it has a floor of order &#8463;. These notes
      carry the theorems, the Newton-age premises and the ancient dispute about
      the cut.""", [
-        "planck-gap-paper", "polygon-lift-phase",
+        "planck-gap-paper", "polygon-lift-phase", "record-costs-recoil",
         "mark-cost-and-statistical-floor",
         "planck-gap-derivation", "planck-gap-probabilistic",
         "newton-mark-floor", "newton-insertion-action",
@@ -140,7 +140,7 @@ TRACKS = [
 HIGHLIGHTS = [
     ("planck-gap-paper",
      "A recorded trajectory has a floor of order &#8463;",
-     "Every protocol of marks whose resolution and recoil are uncorrelated "
+     "Every protocol of Gaussian marks whose resolution and recoil are uncorrelated "
      "and obey &delta;&Delta; &ge; &kappa; needs &tau;&Delta;E &ge; "
      "48z&sup2;&kappa;, sharply, to tell free motion from forced. A momentum-transfer "
      "mark has &kappa; &ge; &#8463;/2 exactly, because its error operator "

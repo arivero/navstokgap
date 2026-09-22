@@ -19,9 +19,9 @@ sagitta and the area between the inertial tangent and the curve go to
 zero, keeping their ratio to the time. We show that the same comparison,
 once it must be \emph{recorded}, has a floor. For every protocol of
 marks, of any number and at any times, whose resolution and recoil are
-uncorrelated and obey \(\delta_j\Delta_j\ge\kappa\), deciding between
-free and forced motion over a duration \(\tau\) at error probability
-\(\epsilon\) requires
+Gaussian, uncorrelated, and obey \(\delta_j\Delta_j\ge\kappa\), deciding
+between free and forced motion over a duration \(\tau\) at error
+probability \(\epsilon\) requires
 
 \[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa,\]
 
@@ -34,19 +34,21 @@ error, and insertion of marks finer than
 only. A correlation \(\rho\) between a mark's error and its recoil
 multiplies the floor by \(\sqrt{(1-\rho)/(1+\rho)}\), and a three-mark
 protocol attains that dependence, so the floor is a statement about
-marks whose uncertainty ellipse has bounded shape as well as area. The
-part of the signal that no preparation can move is a phase: Newton's
-polygon inscribed in the parabola agrees with it classically at every
-vertex and differs quantum mechanically by
-\(F^2\sum_j\tau_j^3/(24m\hbar)\), the parabolic segments of the chords
-times \(F/2v\hbar\), whatever the state of the body. The historical
-claim is that Newton's \emph{Opticks} contains both factors of
-\(\kappa\), one of them measured as the \(1/89000\)th part of an inch,
-and that the single proposition joining them to a floor is an
-indeterminacy about the fits which Newton formulated the negation of.
-The distance between his system and a positive \(h\) is therefore one
-nameable proposition, and that proposition is Robertson's inequality for
-his corpuscle.
+marks whose uncertainty ellipse has bounded shape as well as area. For
+probes in any state, Gaussian or not, one statement survives: the
+sagitta times the total undetermined impulse the marks deliver is at
+least \(8(1-2\epsilon)\hbar\), whatever their resolution. The part of
+the signal that no preparation can move is a phase: Newton's polygon
+inscribed in the parabola agrees with it classically at every vertex and
+differs quantum mechanically by \(F^2\sum_j\tau_j^3/(24m\hbar)\), the
+parabolic segments of the chords times \(F/2v\hbar\), whatever the state
+of the body. The historical claim is that Newton's \emph{Opticks}
+contains both factors of \(\kappa\), one of them measured as the
+\(1/89000\)th part of an inch, and that the single proposition joining
+them to a floor is an indeterminacy about the fits which Newton
+formulated the negation of. The distance between his system and a
+positive \(h\) is therefore one nameable proposition, and that
+proposition is Robertson's inequality for his corpuscle.
 
 Draft, 2026-09-17. Synthesis of the
 \href{newton-mark-floor.md}{mark-floor},
@@ -361,7 +363,7 @@ be the kinetic action of the motion relative to its chord,
 each step's impulse split between its ends so as to match the step's
 displacement, differs from the motion by the phase
 \(\sum_j\mathcal K_{\tau_j}[f]/\hbar\), which refinement never raises;
-and every protocol of uncorrelated marks has
+and every protocol of uncorrelated Gaussian marks has
 \(d^2\le\mathcal K_\tau[f]/\kappa\), sharp for \(f\) of one sign. At
 \(\kappa=\hbar/2\) the best recorded deflection is twice the phase
 between the motion and its chord. The proofs are in §6 of the
@@ -370,6 +372,40 @@ force history, the part of the motion that Newton's refinement removes,
 is converted by \(\hbar\) into a phase and by the mark cost into a
 statistical distance; for a constant force it is the chord's segment
 times \(F/2v\).
+
+\hypertarget{every-probe-state-the-record-costs-recoil}{%
+\subsubsection{Every probe state: the record costs
+recoil}\label{every-probe-state-the-record-costs-recoil}}
+
+The floors above assume Gaussian probes, and the assumption is needed. A
+grid state of the Gottesman--Kitaev--Preskill kind with a real
+wavefunction has no position--momentum correlation, yet as the middle
+probe of the three-mark protocol it turns the statistic into a comb of
+spacing \(\sqrt{2\pi\hbar\tau/m}\) with teeth as narrow as desired, and
+so decides the comparison at any force whose signal is not a multiple of
+that spacing. What holds for every probe state is a bound on the recoil.
+
+\textbf{Theorem 8.} For every protocol of momentum-transfer marks with
+probes in arbitrary states, deciding at error \(\epsilon\) for every
+initial state of the body requires
+\(1-2\epsilon\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|\),
+with \(\Delta_j\) the recoil spread of mark \(j\). For the constant
+force,
+
+\[s\sum_j\Delta_j\ \ge\ 8(1-2\epsilon)\hbar,\qquad s=\frac{F\tau^2}{2m}. \tag{4}\]
+
+The proof moves the signal into the pointers: translating the body's
+initial state along the best straight line turns the force into a
+translation of each pointer by \(\lambda_jc_j\), and a pointer registers
+a translation only through the spread of its momentum, which is the
+impulse the body receives. Mandelstam--Tamm and the triangle inequality
+over the probes finish it. The correlated three-mark protocol reaches
+(4) within a factor \(\sqrt2z_{1-\epsilon}/(1-2\epsilon)\) at every
+squeezing. The proofs, the grid construction and the tightness
+computation are in the \href{record-costs-recoil.md}{recoil note}. This
+is M3 in its universal form: the clause that carries \(h>0\) for every
+probe is that a record of the sagitta leaves the delivered impulse
+undetermined.
 
 \hypertarget{both-factors-are-in-the-opticks}{%
 \subsection{\texorpdfstring{5. Both factors are in the

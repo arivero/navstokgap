@@ -83,7 +83,7 @@ letting the sagitta and the area between the inertial tangent and the
 curve go to zero, keeping their ratio to the time. We show that the same
 comparison, once it must be <em>recorded</em>, has a floor. For every
 protocol of marks, of any number and at any times, whose resolution and
-recoil are uncorrelated and obey <span
+recoil are Gaussian, uncorrelated, and obey <span
 class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, deciding
 between free and forced motion over a duration <span
 class="math inline">\(\tau\)</span> at error probability <span
@@ -104,9 +104,12 @@ recoil multiplies the floor by <span
 class="math inline">\(\sqrt{(1-\rho)/(1+\rho)}\)</span>, and a
 three-mark protocol attains that dependence, so the floor is a statement
 about marks whose uncertainty ellipse has bounded shape as well as area.
-The part of the signal that no preparation can move is a phase: Newton’s
-polygon inscribed in the parabola agrees with it classically at every
-vertex and differs quantum mechanically by <span
+For probes in any state, Gaussian or not, one statement survives: the
+sagitta times the total undetermined impulse the marks deliver is at
+least <span class="math inline">\(8(1-2\epsilon)\hbar\)</span>, whatever
+their resolution. The part of the signal that no preparation can move is
+a phase: Newton’s polygon inscribed in the parabola agrees with it
+classically at every vertex and differs quantum mechanically by <span
 class="math inline">\(F^2\sum_j\tau_j^3/(24m\hbar)\)</span>, the
 parabolic segments of the chords times <span
 class="math inline">\(F/2v\hbar\)</span>, whatever the state of the
@@ -486,8 +489,8 @@ class="math inline">\(G_\tau(s,u)=\min(s,u)(\tau-\max(s,u))/\tau\)</span>.
 Newton’s polygon, with each step’s impulse split between its ends so as
 to match the step’s displacement, differs from the motion by the phase
 <span class="math inline">\(\sum_j\mathcal K_{\tau_j}[f]/\hbar\)</span>,
-which refinement never raises; and every protocol of uncorrelated marks
-has <span class="math inline">\(d^2\le\mathcal
+which refinement never raises; and every protocol of uncorrelated
+Gaussian marks has <span class="math inline">\(d^2\le\mathcal
 K_\tau[f]/\kappa\)</span>, sharp for <span
 class="math inline">\(f\)</span> of one sign. At <span
 class="math inline">\(\kappa=\hbar/2\)</span> the best recorded
@@ -498,6 +501,39 @@ that Newton’s refinement removes, is converted by <span
 class="math inline">\(\hbar\)</span> into a phase and by the mark cost
 into a statistical distance; for a constant force it is the chord’s
 segment times <span class="math inline">\(F/2v\)</span>.</p>
+<h3 id="every-probe-state-the-record-costs-recoil">Every probe state:
+the record costs recoil</h3>
+<p>The floors above assume Gaussian probes, and the assumption is
+needed. A grid state of the Gottesman–Kitaev–Preskill kind with a real
+wavefunction has no position–momentum correlation, yet as the middle
+probe of the three-mark protocol it turns the statistic into a comb of
+spacing <span class="math inline">\(\sqrt{2\pi\hbar\tau/m}\)</span> with
+teeth as narrow as desired, and so decides the comparison at any force
+whose signal is not a multiple of that spacing. What holds for every
+probe state is a bound on the recoil.</p>
+<p><strong>Theorem 8.</strong> For every protocol of momentum-transfer
+marks with probes in arbitrary states, deciding at error <span
+class="math inline">\(\epsilon\)</span> for every initial state of the
+body requires <span
+class="math inline">\(1-2\epsilon\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|\)</span>,
+with <span class="math inline">\(\Delta_j\)</span> the recoil spread of
+mark <span class="math inline">\(j\)</span>. For the constant force,</p>
+<p><span class="math display">\[s\sum_j\Delta_j\ \ge\
+8(1-2\epsilon)\hbar,\qquad s=\frac{F\tau^2}{2m}. \tag{4}\]</span></p>
+<p>The proof moves the signal into the pointers: translating the body’s
+initial state along the best straight line turns the force into a
+translation of each pointer by <span
+class="math inline">\(\lambda_jc_j\)</span>, and a pointer registers a
+translation only through the spread of its momentum, which is the
+impulse the body receives. Mandelstam–Tamm and the triangle inequality
+over the probes finish it. The correlated three-mark protocol reaches
+(4) within a factor <span
+class="math inline">\(\sqrt2z_{1-\epsilon}/(1-2\epsilon)\)</span> at
+every squeezing. The proofs, the grid construction and the tightness
+computation are in the <a href="record-costs-recoil.html">recoil
+note</a>. This is M3 in its universal form: the clause that carries
+<span class="math inline">\(h&gt;0\)</span> for every probe is that a
+record of the sagitta leaves the delivered impulse undetermined.</p>
 <h2 id="both-factors-are-in-the-opticks">5. Both factors are in the
 <em>Opticks</em></h2>
 <p>Newton’s optics supplies the two spreads whose product is <span
