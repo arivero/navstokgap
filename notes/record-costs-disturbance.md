@@ -6,7 +6,7 @@ apparatus state), deciding at error probability $\epsilon$ between free
 motion and a constant force $F$ over a duration $\tau$, for every initial
 state of the body, requires
 
-$$\boxed{\;\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\,\hbar,
+$$\boxed{\;\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 \qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,\;}$$
 
 where $\hat D_j$ and $\hat X_j$ are the impulse and the position jump that
@@ -16,7 +16,12 @@ reading error does not appear. The sagitta of Lemma X is paired with the
 momentum disturbance and the impulse of Proposition I with the position
 disturbance, the same pairing as in the aperture theorem of the
 [probabilistic note](planck-gap-probabilistic.md),
-$J\,L+s\,P\ge(1-2\epsilon)\hbar$.
+$J\,L+s\,P\ge\hbar\arcsin(1-2\epsilon)$. The constant
+$\arcsin(1-2\epsilon)$ comes from running the proof with the Bures angle
+in place of total variation (Theorem P of the
+[path-length note](record-distance-path-length.md), 2026-09-23); the
+proof as written gives the weaker $1-2\epsilon$, and the path-length note
+also joins this bound and the aperture bound in one accounting.
 
 This is option 2 of the plan set on 2026-09-22 for extending Theorem A,
 and it closes that plan. Ozawa's error--disturbance relation
@@ -148,9 +153,9 @@ sufficiency side, how close a given protocol comes to the bound.
 | Statement | Holds for | Pays in |
 | --- | --- | --- |
 | Phase $\mathcal K_\tau/\hbar$ between the motion and its inscribed polygon ([polygon-lift note](polygon-lift-phase.md)) | Every body state | Nothing: a c-number |
-| $J\,L+s\,P\ge(1-2\epsilon)\hbar$ (probabilistic note) | Every instrument, bounded laboratory | The body's spreads $L$, $P$ |
-| $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$ (Theorem U) | Every instrument, every body state | The marks' disturbances |
-| $s\sum\Delta_j\ge8(1-2\epsilon)\hbar$ (recoil note) | Body-independent noise, every probe state | Recoil |
+| $J\,L+s\,P\ge\hbar\arcsin(1-2\epsilon)$ (probabilistic note) | Every instrument, bounded laboratory | The body's spreads $L$, $P$ |
+| $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)$ (Theorem U) | Every instrument, every body state | The marks' disturbances |
+| $s\sum\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$ (recoil note) | Body-independent noise, every probe state | Recoil |
 | $\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$, sharp (mark-cost note) | Gaussian probes with correlation at most $\rho$ | Resolution times recoil |
 
 The two universal statements are the second and third rows. Both are

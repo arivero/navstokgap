@@ -1,4 +1,13 @@
-# The probabilistic Planck gap: $F\tau(L+\tau P/2m)\ge(1-2\epsilon)\hbar$, and why it is resource-relative
+# The probabilistic Planck gap: $F\tau(L+\tau P/2m)\ge\hbar\arcsin(1-2\epsilon)$, and why it is resource-relative
+
+**Sharpening, 2026-09-23.** Every $1-2\epsilon$ in the protocol statements
+below improves to $\arcsin(1-2\epsilon)=\arccos(2\sqrt{\epsilon(1-\epsilon)})$,
+the single-shot constant of Theorem 1, by running Theorem 2's hybrid chain
+with the Bures angle in place of total variation (Theorem P of the
+[path-length note](record-distance-path-length.md)); the proof of Theorem 2
+as written gives the weaker constant. That note also gives the kick form
+$\int_0^\tau|f(t)|L(t)\,dt\ge\hbar\arcsin(1-2\epsilon)$, with $L(t)$ the
+position spread at time $t$, from which Theorem 2 follows.
 
 **Correction, 2026-09-22.** The first version stated Corollary 3 at fixed
 area $A=LP$ with the aperture's shape free. Its proof minimized
@@ -20,23 +29,23 @@ with any intermediate outcomes and any final measurement, distinguishing
 the falling from the inertial hypothesis with error probability at most
 $\epsilon$ requires
 
-$$\boxed{\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge1-2\epsilon,
+$$\boxed{\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge\arcsin(1-2\epsilon),
 \qquad\text{hence}\qquad
-\tau\Delta E=\frac{F^2\tau^3}{2m}\ge\frac{(1-2\epsilon)^2\hbar^2}{A\,(r+r^{-1})^2},}$$
+\tau\Delta E=\frac{F^2\tau^3}{2m}\ge\frac{\arcsin^2(1-2\epsilon)\,\hbar^2}{A\,(r+r^{-1})^2},}$$
 
 with $r=L/\sqrt{\tau A/2m}$ the aperture's aspect measured against the
 duration (Theorem 2, Corollary 3). In Newton's quantities the first form
-reads $J L+sP\ge(1-2\epsilon)\hbar$: the impulse $J=F\tau$ of
+reads $J L+sP\ge\hbar\arcsin(1-2\epsilon)$: the impulse $J=F\tau$ of
 Proposition I weighed against the position aperture, plus the sagitta
 $s=F\tau^2/2m$ of Lemma X weighed against the momentum aperture. At the
 balanced aperture $r=1$, where the two terms are equal, and at the
 minimal area $A=\hbar/2$, the floor is
-$\tau\Delta E\ge(1-2\epsilon)^2\hbar/2$, the same combination
+$\tau\Delta E\ge\frac12\arcsin^2(1-2\epsilon)\,\hbar$, the same combination
 $F^2\tau^3/m$ that Newton's geometry sends to zero and that the classical
-theorem bounds by the marks' phase-space cost. A single-shot protocol
-obeys the sharper condition with $1-2\epsilon$ replaced by
-$\arccos(2\sqrt{\epsilon(1-\epsilon)})$, which is $\pi/2$ at
-$\epsilon=0$ (Theorem 1).
+theorem bounds by the marks' phase-space cost. The single-shot bound
+(Theorem 1) and the protocol bound share the constant
+$\arcsin(1-2\epsilon)=\arccos(2\sqrt{\epsilon(1-\epsilon)})$, which is
+$\pi/2$ at $\epsilon=0$.
 
 **The universality question is decided, and the answer is negative
 without the resource bound.** For every $\tau\Delta E>0$ there is a
@@ -206,22 +215,23 @@ $P$ that those states respect.
 **Corollary 3 (the floor at a given aperture).** Under Theorem 2, with
 $A=LP$ and $r=L/\sqrt{\tau A/2m}$,
 
-$$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ \frac{2m(1-2\epsilon)^2\hbar^2\tau}{(2mL+\tau P)^2}
-=\frac{(1-2\epsilon)^2\hbar^2}{A\,(r+r^{-1})^2},$$
+$$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ \frac{2m\,\theta^2\hbar^2\tau}{(2mL+\tau P)^2}
+=\frac{\theta^2\hbar^2}{A\,(r+r^{-1})^2},\qquad\theta=\arcsin(1-2\epsilon),$$
 
 and at the balanced aperture of minimal area, $r=1$ and $A=\hbar/2$,
 that is $L=\sqrt{\hbar\tau/4m}$ and $P=\sqrt{m\hbar/\tau}$,
-$\tau\Delta E\ge(1-2\epsilon)^2\hbar/2$.
+$\tau\Delta E\ge\theta^2\hbar/2$.
 
-*Proof.* Theorem 2 gives $F\ge2m\hbar(1-2\epsilon)/[\tau(2mL+\tau P)]$,
-so $\tau\Delta E\ge2m\hbar^2(1-2\epsilon)^2\tau/(2mL+\tau P)^2$. With
+*Proof.* Theorem 2 with the sharp constant gives
+$F\ge2m\hbar\theta/[\tau(2mL+\tau P)]$, so
+$\tau\Delta E\ge2m\hbar^2\theta^2\tau/(2mL+\tau P)^2$. With
 $L=r\sqrt{\tau A/2m}$ one has $2mL=r\sqrt{2m\tau A}$ and
 $\tau P=\tau A/L=r^{-1}\sqrt{2m\tau A}$, so the denominator is
 $2m\tau A(r+r^{-1})^2$. $\square$
 
 The floor is positive exactly when both sides of the aperture are
 bounded, and it falls as either side grows. At fixed area it is largest
-at $r=1$, with value $(1-2\epsilon)^2\hbar^2/(4A)$, and it tends to zero
+at $r=1$, with value $\theta^2\hbar^2/(4A)$, and it tends to zero
 as $r\to0$ or $r\to\infty$: a minimum-uncertainty Gaussian with $L\to\infty$
 and $P=\hbar/2L$ keeps $A=\hbar/2$ and distinguishes the hypotheses at any
 force. So the resource the floor prices is the aperture's two sides, and
@@ -321,7 +331,7 @@ form and opposite in direction. Classically the floor of the recorded
 comparison is $\tau\Delta E\ge\frac92\kappa$, with $\kappa=\delta\Delta$
 the phase-space cost of a single mark, so **coarser marks raise the
 floor**. Quantum mechanically the floor at aperture $(L,P)$ is
-$2m(1-2\epsilon)^2\hbar^2\tau/(2mL+\tau P)^2$, so **a larger laboratory,
+$2m\arcsin^2(1-2\epsilon)\hbar^2\tau/(2mL+\tau P)^2$, so **a larger laboratory,
 in either direction of phase space, lowers it**. The two meet at the
 balanced aperture of the smallest area the uncertainty relation permits:
 there $A=\hbar/2$ and the floor is $\hbar/2$, which is the order of the
@@ -344,8 +354,9 @@ gives the single-shot bound with the sharp constant
 $\arccos(2\sqrt{\epsilon(1-\epsilon)})$, Theorem 2 extends it to every
 finite adaptive protocol of instruments, with any Kraus rank and any
 apparatus memory, with the constant
-$1-2\epsilon$, Corollary 3 converts it to the floor at each aperture,
-$(1-2\epsilon)^2\hbar^2/(4A)$ at the balanced one, and Proposition 4 decides
+$1-2\epsilon$, sharpened to $\arcsin(1-2\epsilon)$ by the path-length
+note, Corollary 3 converts it to the floor at each aperture,
+$\arcsin^2(1-2\epsilon)\hbar^2/(4A)$ at the balanced one, and Proposition 4 decides
 the universality question: universality over instruments holds, and
 universality over preparations fails, with an explicit family that
 saturates the theorem. Positioning against the standard quantum limit is
@@ -357,16 +368,13 @@ Open, in order:
    Theorem 2 assumed rank-one Kraus operators. Purification closes the
    general case with the aperture imposed on the body's own marginal,
    since $\Delta_\psi(G\otimes\mathbf 1)=\Delta_{\sigma_{\rm body}}G$.
-2. **The sharp constant.** Theorem 1 gives $\theta(\epsilon)$ and
-   Theorem 2 gives $1-2\epsilon$ for the same quantity; the gap between
-   them is an artifact of the telescoping step, and closing it would also
-   close the interval $[9,36]$ left by the classical theorem.
-3. **The general force law.** Both theorems use only that the
-   phase-space path $t\mapsto(\alpha(t),\beta(t))$ has total variation
-   $F\tau^2/2m$ and $F\tau$ in its two components. For a general force
-   the statement is that the two total variations, weighted by $P$ and
-   $L$, must exceed $\hbar(1-2\epsilon)$; the constant-force case is then
-   one evaluation.
+2. **The sharp constant: done, 2026-09-23.** The Bures-angle chain gives
+   Theorem 2 the constant $\theta(\epsilon)=\arcsin(1-2\epsilon)$ of
+   Theorem 1 (path-length note, Theorem P). The worst-case interval
+   $[9,36]$ of the derivation note is a separate question.
+3. **The general force law: done, 2026-09-23.** The kick form
+   $\int_0^\tau|f|L\ge\hbar\theta(\epsilon)$ of the path-length note holds for
+   every force history.
 4. **Publication.** With Section 5 in place the foundations paper has its
    positioning; what remains before submission is item 1, item 2 and a
    literature pass on resource-bounded quantum metrology, where a bound

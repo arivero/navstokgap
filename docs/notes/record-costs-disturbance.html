@@ -85,7 +85,7 @@ constant force <span class="math inline">\(F\)</span> over a duration
 <span class="math inline">\(\tau\)</span>, for every initial state of
 the body, requires</p>
 <p><span class="math display">\[\boxed{\;\frac s8\sum_j\Delta(\hat
-D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\,\hbar,
+D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 \qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,\;}\]</span></p>
 <p>where <span class="math inline">\(\hat D_j\)</span> and <span
 class="math inline">\(\hat X_j\)</span> are the impulse and the position
@@ -97,7 +97,14 @@ X is paired with the momentum disturbance and the impulse of Proposition
 I with the position disturbance, the same pairing as in the aperture
 theorem of the <a href="planck-gap-probabilistic.html">probabilistic
 note</a>, <span
-class="math inline">\(J\,L+s\,P\ge(1-2\epsilon)\hbar\)</span>.</p>
+class="math inline">\(J\,L+s\,P\ge\hbar\arcsin(1-2\epsilon)\)</span>.
+The constant <span class="math inline">\(\arcsin(1-2\epsilon)\)</span>
+comes from running the proof with the Bures angle in place of total
+variation (Theorem P of the <a
+href="record-distance-path-length.html">path-length note</a>,
+2026-09-23); the proof as written gives the weaker <span
+class="math inline">\(1-2\epsilon\)</span>, and the path-length note
+also joins this bound and the aperture bound in one accounting.</p>
 <p>This is option 2 of the plan set on 2026-09-22 for extending Theorem
 A, and it closes that plan. Ozawa’s error–disturbance relation (<a
 href="https://doi.org/10.1103/PhysRevA.67.042105">PRA
@@ -309,7 +316,8 @@ href="polygon-lift-phase.html">polygon-lift note</a>)</td>
 <td>Nothing: a c-number</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(J\,L+s\,P\ge(1-2\epsilon)\hbar\)</span>
+<td><span
+class="math inline">\(J\,L+s\,P\ge\hbar\arcsin(1-2\epsilon)\)</span>
 (probabilistic note)</td>
 <td>Every instrument, bounded laboratory</td>
 <td>The body’s spreads <span class="math inline">\(L\)</span>, <span
@@ -317,13 +325,14 @@ class="math inline">\(P\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\frac s8\sum\Delta(\hat D_j)+\frac
-J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar\)</span> (Theorem U)</td>
+J2\sum\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)\)</span> (Theorem
+U)</td>
 <td>Every instrument, every body state</td>
 <td>The marks’ disturbances</td>
 </tr>
 <tr class="even">
 <td><span
-class="math inline">\(s\sum\Delta_j\ge8(1-2\epsilon)\hbar\)</span>
+class="math inline">\(s\sum\Delta_j\ge8\hbar\arcsin(1-2\epsilon)\)</span>
 (recoil note)</td>
 <td>Body-independent noise, every probe state</td>
 <td>Recoil</td>

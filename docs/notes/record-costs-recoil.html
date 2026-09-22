@@ -84,14 +84,21 @@ class="math inline">\(F\)</span> over a duration <span
 class="math inline">\(\tau\)</span> at error probability <span
 class="math inline">\(\epsilon\)</span> requires</p>
 <p><span class="math display">\[\boxed{\;s\sum_j\Delta_j\ \ge\
-8\,(1-2\epsilon)\,\hbar,\qquad s=\frac{F\tau^2}{2m},\;}\]</span></p>
+8\hbar\,\arcsin(1-2\epsilon),\qquad
+s=\frac{F\tau^2}{2m},\;}\]</span></p>
 <p>where <span class="math inline">\(s\)</span> is Newton’s sagitta for
 the interval and <span class="math inline">\(\Delta_j\)</span> is the
 spread of the impulse delivered by mark <span
 class="math inline">\(j\)</span>. The resolutions of the marks do not
 enter. For a general force the sagitta is replaced by the uniform
-distance of the forced displacement from straight motion (Theorem
-R).</p>
+distance of the forced displacement from straight motion (Theorem R). At
+certain decision the bound is <span
+class="math inline">\(s\sum_j\Delta_j\ge4\pi\hbar=2h\)</span>. The
+constant <span class="math inline">\(\arcsin(1-2\epsilon)\)</span> comes
+from running the proof with the Bures angle in place of total variation
+(Theorem P of the <a href="record-distance-path-length.html">path-length
+note</a>, 2026-09-23); the proof as written below gives the weaker <span
+class="math inline">\(1-2\epsilon\)</span>.</p>
 <p>The theorem answers the question the non-Gaussian probes raise. The
 floor <span class="math inline">\(\tau\Delta
 E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span> of the <a
@@ -103,10 +110,10 @@ probe, is the recoil. A pointer registers a displacement only through
 the spread of its conjugate momentum, and that momentum is the impulse
 the body receives. This is M3 in its universal form: a record of the
 sagitta must leave the delivered impulse undetermined by at least <span
-class="math inline">\(8(1-2\epsilon)\hbar/s\)</span> in total. The
-correlated three-mark protocol of Proposition D attains the bound within
-a factor <span
-class="math inline">\(\sqrt2\,z_{1-\epsilon}/(1-2\epsilon)\)</span>,
+class="math inline">\(8\hbar\arcsin(1-2\epsilon)/s\)</span> in total.
+The correlated three-mark protocol of Proposition D attains the bound
+within a factor <span
+class="math inline">\(\sqrt2\,z_{1-\epsilon}/\arcsin(1-2\epsilon)\)</span>,
 uniformly in its squeezing (Section 4). Exploratory; no ledger
 promotion.</p>
 <h2 id="setting">1. Setting</h2>
@@ -332,24 +339,26 @@ class="math display">\[\Delta_2|c_2|=z_{1-\epsilon}\,\hbar\,\sqrt{\frac{2}{1+\rh
 <p>between <span class="math inline">\(z\hbar\)</span> and <span
 class="math inline">\(\sqrt2z\hbar\)</span> for every <span
 class="math inline">\(\rho\in[0,1)\)</span>. Theorem R asks for <span
-class="math inline">\((1-2\epsilon)\hbar\)</span>, so the protocol sits
-within the factor <span
-class="math inline">\(\sqrt2z_{1-\epsilon}/(1-2\epsilon)\)</span> of the
-bound, about <span class="math inline">\(2.6\)</span> at five per cent
-error, however strongly it is squeezed. The recoil-weighted sagitta is
-the right universal resource: squeezing moves the protocol along it and
-never below it.</p>
+class="math inline">\(\hbar\arcsin(1-2\epsilon)\)</span>, so the
+protocol sits within the factor <span
+class="math inline">\(\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)\)</span>
+of the bound, about <span class="math inline">\(2.1\)</span> at five per
+cent error, however strongly it is squeezed. The recoil-weighted sagitta
+is the right universal resource: squeezing moves the protocol along it
+and never below it.</p>
 <h2 id="what-this-changes">5. What this changes</h2>
 <p><strong>The three floors, ordered.</strong> Resource-free: the phase
 <span class="math inline">\(\mathcal K_\tau/\hbar\)</span> between the
 motion and its inscribed polygon (polygon-lift note, Theorems 1 and 7).
 Universal over probe states: the recoil bound <span
-class="math inline">\(s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar\)</span>
+class="math inline">\(s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)\)</span>
 (Theorem R). Universal over instruments with a bounded laboratory: the
 aperture bound <span class="math inline">\(F\tau
-L+\frac{F\tau^2}{2m}P\ge(1-2\epsilon)\hbar\)</span> (probabilistic
-note). And for Gaussian probes with correlation at most <span
-class="math inline">\(\rho\)</span>, the sharp floor <span
+L+\frac{F\tau^2}{2m}P\ge\hbar\arcsin(1-2\epsilon)\)</span>
+(probabilistic note, with the kick form <span
+class="math inline">\(\int|f|L\ge\hbar\arcsin(1-2\epsilon)\)</span> of
+the path-length note). And for Gaussian probes with correlation at most
+<span class="math inline">\(\rho\)</span>, the sharp floor <span
 class="math inline">\(\tau\Delta
 E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span> (mark-cost note).</p>
 <p><strong>M3, restated.</strong> The mark-floor note’s premise has two
@@ -357,8 +366,8 @@ clauses, a product of resolution and recoil and the independence of the
 two. Theorem R shows that the recoil clause alone is universal: a mark
 that records the sagitta must leave the delivered impulse undetermined,
 with <span
-class="math inline">\(s\sum\Delta_j\ge8(1-2\epsilon)\hbar\)</span>. In
-Newton’s words from the <a href="newton-mark-floor.html">mark-floor
+class="math inline">\(s\sum\Delta_j\ge8\hbar\arcsin(1-2\epsilon)\)</span>.
+In Newton’s words from the <a href="newton-mark-floor.html">mark-floor
 note</a>, the premise that carries <span
 class="math inline">\(h&gt;0\)</span> for every probe is that a record
 costs an undetermined impulse, and the pairing is with the sagitta of
@@ -384,8 +393,8 @@ spreads, is the one after.</p>
 constructively. The Gaussian floor holds for Gaussian probes and grid
 probes break it (Proposition G); the universal statement over probe
 states is Theorem R, sagitta times total recoil at least <span
-class="math inline">\(8(1-2\epsilon)\hbar\)</span>, attained within a
-constant by squeezed probes at every squeezing. Next: option 1
+class="math inline">\(8\hbar\arcsin(1-2\epsilon)\)</span>, attained
+within a constant by squeezed probes at every squeezing. Next: option 1
 (additive-noise instruments), then option 2 (Ozawa’s relation).</p>
 
 </main>

@@ -5,12 +5,17 @@ whatever (Gaussian or not, squeezed, correlated, mixed, grid states),
 deciding between free motion and a constant force $F$ over a duration
 $\tau$ at error probability $\epsilon$ requires
 
-$$\boxed{\;s\sum_j\Delta_j\ \ge\ 8\,(1-2\epsilon)\,\hbar,\qquad s=\frac{F\tau^2}{2m},\;}$$
+$$\boxed{\;s\sum_j\Delta_j\ \ge\ 8\hbar\,\arcsin(1-2\epsilon),\qquad s=\frac{F\tau^2}{2m},\;}$$
 
 where $s$ is Newton's sagitta for the interval and $\Delta_j$ is the
 spread of the impulse delivered by mark $j$. The resolutions of the marks
 do not enter. For a general force the sagitta is replaced by the uniform
 distance of the forced displacement from straight motion (Theorem R).
+At certain decision the bound is $s\sum_j\Delta_j\ge4\pi\hbar=2h$. The
+constant $\arcsin(1-2\epsilon)$ comes from running the proof with the
+Bures angle in place of total variation (Theorem P of the
+[path-length note](record-distance-path-length.md), 2026-09-23); the
+proof as written below gives the weaker $1-2\epsilon$.
 
 The theorem answers the question the non-Gaussian probes raise. The floor
 $\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$ of the
@@ -21,9 +26,9 @@ second moments alone survives. What does survive, for every probe, is the
 recoil. A pointer registers a displacement only through the spread of its
 conjugate momentum, and that momentum is the impulse the body receives.
 This is M3 in its universal form: a record of the sagitta must leave the
-delivered impulse undetermined by at least $8(1-2\epsilon)\hbar/s$ in
-total. The correlated three-mark protocol of Proposition D attains the
-bound within a factor $\sqrt2\,z_{1-\epsilon}/(1-2\epsilon)$, uniformly in
+delivered impulse undetermined by at least $8\hbar\arcsin(1-2\epsilon)/s$
+in total. The correlated three-mark protocol of Proposition D attains the
+bound within a factor $\sqrt2\,z_{1-\epsilon}/\arcsin(1-2\epsilon)$, uniformly in
 its squeezing (Section 4). Exploratory; no ledger promotion.
 
 ## 1. Setting
@@ -180,8 +185,8 @@ $\tau\Delta E=32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$,
 $$\Delta_2|c_2|=z_{1-\epsilon}\,\hbar\,\sqrt{\frac{2}{1+\rho}},$$
 
 between $z\hbar$ and $\sqrt2z\hbar$ for every $\rho\in[0,1)$. Theorem R
-asks for $(1-2\epsilon)\hbar$, so the protocol sits within the factor
-$\sqrt2z_{1-\epsilon}/(1-2\epsilon)$ of the bound, about $2.6$ at five per
+asks for $\hbar\arcsin(1-2\epsilon)$, so the protocol sits within the factor
+$\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of the bound, about $2.1$ at five per
 cent error, however strongly it is squeezed. The recoil-weighted sagitta
 is the right universal resource: squeezing moves the protocol along it and
 never below it.
@@ -191,9 +196,10 @@ never below it.
 **The three floors, ordered.** Resource-free: the phase
 $\mathcal K_\tau/\hbar$ between the motion and its inscribed polygon
 (polygon-lift note, Theorems 1 and 7). Universal over probe states: the
-recoil bound $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ (Theorem R). Universal
+recoil bound $s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$ (Theorem R). Universal
 over instruments with a bounded laboratory: the aperture bound
-$F\tau L+\frac{F\tau^2}{2m}P\ge(1-2\epsilon)\hbar$ (probabilistic note).
+$F\tau L+\frac{F\tau^2}{2m}P\ge\hbar\arcsin(1-2\epsilon)$ (probabilistic note,
+with the kick form $\int|f|L\ge\hbar\arcsin(1-2\epsilon)$ of the path-length note).
 And for Gaussian probes with correlation at most $\rho$, the sharp floor
 $\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$ (mark-cost note).
 
@@ -201,7 +207,7 @@ $\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$ (mark-cost note).
 product of resolution and recoil and the independence of the two. Theorem
 R shows that the recoil clause alone is universal: a mark that records the
 sagitta must leave the delivered impulse undetermined, with
-$s\sum\Delta_j\ge8(1-2\epsilon)\hbar$. In Newton's words from the
+$s\sum\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$. In Newton's words from the
 [mark-floor note](newton-mark-floor.md), the premise that carries $h>0$ for
 every probe is that a record costs an undetermined impulse, and the pairing
 is with the sagitta of Lemma X.
@@ -225,6 +231,6 @@ metadata) adds the body's own spreads, is the one after.
 Theorem A's extension, option 3 of the 2026-09-22 plan, is settled
 constructively. The Gaussian floor holds for Gaussian probes and grid
 probes break it (Proposition G); the universal statement over probe states
-is Theorem R, sagitta times total recoil at least $8(1-2\epsilon)\hbar$,
+is Theorem R, sagitta times total recoil at least $8\hbar\arcsin(1-2\epsilon)$,
 attained within a constant by squeezed probes at every squeezing. Next:
 option 1 (additive-noise instruments), then option 2 (Ozawa's relation).

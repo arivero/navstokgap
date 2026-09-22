@@ -4,15 +4,26 @@
 \usepackage{lmodern,amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={The probabilistic Planck gap: $F\tau(L+\tau P/2m)\ge(1-2\epsilon)\hbar$, and why it is res},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={The probabilistic Planck gap: $F\tau(L+\tau P/2m)\ge\hbar\arcsin(1-2\epsilon)$, and why it},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{the-probabilistic-planck-gap-ftaultau-p2mge1-2epsilonhbar-and-why-it-is-resource-relative}{%
+\hypertarget{the-probabilistic-planck-gap-ftaultau-p2mgehbararcsin1-2epsilon-and-why-it-is-resource-relative}{%
 \section{\texorpdfstring{The probabilistic Planck gap:
-\(F\tau(L+\tau P/2m)\ge(1-2\epsilon)\hbar\), and why it is
-resource-relative}{The probabilistic Planck gap: F\textbackslash tau(L+\textbackslash tau P/2m)\textbackslash ge(1-2\textbackslash epsilon)\textbackslash hbar, and why it is resource-relative}}\label{the-probabilistic-planck-gap-ftaultau-p2mge1-2epsilonhbar-and-why-it-is-resource-relative}}
+\(F\tau(L+\tau P/2m)\ge\hbar\arcsin(1-2\epsilon)\), and why it is
+resource-relative}{The probabilistic Planck gap: F\textbackslash tau(L+\textbackslash tau P/2m)\textbackslash ge\textbackslash hbar\textbackslash arcsin(1-2\textbackslash epsilon), and why it is resource-relative}}\label{the-probabilistic-planck-gap-ftaultau-p2mgehbararcsin1-2epsilon-and-why-it-is-resource-relative}}
+
+\textbf{Sharpening, 2026-09-23.} Every \(1-2\epsilon\) in the protocol
+statements below improves to
+\(\arcsin(1-2\epsilon)=\arccos(2\sqrt{\epsilon(1-\epsilon)})\), the
+single-shot constant of Theorem 1, by running Theorem 2's hybrid chain
+with the Bures angle in place of total variation (Theorem P of the
+\href{record-distance-path-length.md}{path-length note}); the proof of
+Theorem 2 as written gives the weaker constant. That note also gives the
+kick form \(\int_0^\tau|f(t)|L(t)\,dt\ge\hbar\arcsin(1-2\epsilon)\),
+with \(L(t)\) the position spread at time \(t\), from which Theorem 2
+follows.
 
 \textbf{Correction, 2026-09-22.} The first version stated Corollary 3 at
 fixed area \(A=LP\) with the aperture's shape free. Its proof minimized
@@ -35,23 +46,23 @@ instruments, of any number, at any times, with any intermediate outcomes
 and any final measurement, distinguishing the falling from the inertial
 hypothesis with error probability at most \(\epsilon\) requires
 
-\[\boxed{\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge1-2\epsilon,
+\[\boxed{\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge\arcsin(1-2\epsilon),
 \qquad\text{hence}\qquad
-\tau\Delta E=\frac{F^2\tau^3}{2m}\ge\frac{(1-2\epsilon)^2\hbar^2}{A\,(r+r^{-1})^2},}\]
+\tau\Delta E=\frac{F^2\tau^3}{2m}\ge\frac{\arcsin^2(1-2\epsilon)\,\hbar^2}{A\,(r+r^{-1})^2},}\]
 
 with \(r=L/\sqrt{\tau A/2m}\) the aperture's aspect measured against the
 duration (Theorem 2, Corollary 3). In Newton's quantities the first form
-reads \(J L+sP\ge(1-2\epsilon)\hbar\): the impulse \(J=F\tau\) of
+reads \(J L+sP\ge\hbar\arcsin(1-2\epsilon)\): the impulse \(J=F\tau\) of
 Proposition I weighed against the position aperture, plus the sagitta
 \(s=F\tau^2/2m\) of Lemma X weighed against the momentum aperture. At
 the balanced aperture \(r=1\), where the two terms are equal, and at the
 minimal area \(A=\hbar/2\), the floor is
-\(\tau\Delta E\ge(1-2\epsilon)^2\hbar/2\), the same combination
-\(F^2\tau^3/m\) that Newton's geometry sends to zero and that the
-classical theorem bounds by the marks' phase-space cost. A single-shot
-protocol obeys the sharper condition with \(1-2\epsilon\) replaced by
-\(\arccos(2\sqrt{\epsilon(1-\epsilon)})\), which is \(\pi/2\) at
-\(\epsilon=0\) (Theorem 1).
+\(\tau\Delta E\ge\frac12\arcsin^2(1-2\epsilon)\,\hbar\), the same
+combination \(F^2\tau^3/m\) that Newton's geometry sends to zero and
+that the classical theorem bounds by the marks' phase-space cost. The
+single-shot bound (Theorem 1) and the protocol bound share the constant
+\(\arcsin(1-2\epsilon)=\arccos(2\sqrt{\epsilon(1-\epsilon)})\), which is
+\(\pi/2\) at \(\epsilon=0\).
 
 \textbf{The universality question is decided, and the answer is negative
 without the resource bound.} For every \(\tau\Delta E>0\) there is a
@@ -232,24 +243,24 @@ states \(\sigma\), and therefore matters only through the apertures
 \textbf{Corollary 3 (the floor at a given aperture).} Under Theorem 2,
 with \(A=LP\) and \(r=L/\sqrt{\tau A/2m}\),
 
-\[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ \frac{2m(1-2\epsilon)^2\hbar^2\tau}{(2mL+\tau P)^2}
-=\frac{(1-2\epsilon)^2\hbar^2}{A\,(r+r^{-1})^2},\]
+\[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ \frac{2m\,\theta^2\hbar^2\tau}{(2mL+\tau P)^2}
+=\frac{\theta^2\hbar^2}{A\,(r+r^{-1})^2},\qquad\theta=\arcsin(1-2\epsilon),\]
 
 and at the balanced aperture of minimal area, \(r=1\) and \(A=\hbar/2\),
 that is \(L=\sqrt{\hbar\tau/4m}\) and \(P=\sqrt{m\hbar/\tau}\),
-\(\tau\Delta E\ge(1-2\epsilon)^2\hbar/2\).
+\(\tau\Delta E\ge\theta^2\hbar/2\).
 
-\emph{Proof.} Theorem 2 gives
-\(F\ge2m\hbar(1-2\epsilon)/[\tau(2mL+\tau P)]\), so
-\(\tau\Delta E\ge2m\hbar^2(1-2\epsilon)^2\tau/(2mL+\tau P)^2\). With
+\emph{Proof.} Theorem 2 with the sharp constant gives
+\(F\ge2m\hbar\theta/[\tau(2mL+\tau P)]\), so
+\(\tau\Delta E\ge2m\hbar^2\theta^2\tau/(2mL+\tau P)^2\). With
 \(L=r\sqrt{\tau A/2m}\) one has \(2mL=r\sqrt{2m\tau A}\) and
 \(\tau P=\tau A/L=r^{-1}\sqrt{2m\tau A}\), so the denominator is
 \(2m\tau A(r+r^{-1})^2\). \(\square\)
 
 The floor is positive exactly when both sides of the aperture are
 bounded, and it falls as either side grows. At fixed area it is largest
-at \(r=1\), with value \((1-2\epsilon)^2\hbar^2/(4A)\), and it tends to
-zero as \(r\to0\) or \(r\to\infty\): a minimum-uncertainty Gaussian with
+at \(r=1\), with value \(\theta^2\hbar^2/(4A)\), and it tends to zero as
+\(r\to0\) or \(r\to\infty\): a minimum-uncertainty Gaussian with
 \(L\to\infty\) and \(P=\hbar/2L\) keeps \(A=\hbar/2\) and distinguishes
 the hypotheses at any force. So the resource the floor prices is the
 aperture's two sides, and the area \(A\) controls it only once the shape
@@ -367,12 +378,12 @@ comparison is \(\tau\Delta E\ge\frac92\kappa\), with
 \(\kappa=\delta\Delta\) the phase-space cost of a single mark, so
 \textbf{coarser marks raise the floor}. Quantum mechanically the floor
 at aperture \((L,P)\) is
-\(2m(1-2\epsilon)^2\hbar^2\tau/(2mL+\tau P)^2\), so \textbf{a larger
-laboratory, in either direction of phase space, lowers it}. The two meet
-at the balanced aperture of the smallest area the uncertainty relation
-permits: there \(A=\hbar/2\) and the floor is \(\hbar/2\), which is the
-order of the value \(\kappa=\Lambda p=h/2\) that Newton's interval of
-fits and corpuscle impulse supply in the
+\(2m\arcsin^2(1-2\epsilon)\hbar^2\tau/(2mL+\tau P)^2\), so \textbf{a
+larger laboratory, in either direction of phase space, lowers it}. The
+two meet at the balanced aperture of the smallest area the uncertainty
+relation permits: there \(A=\hbar/2\) and the floor is \(\hbar/2\),
+which is the order of the value \(\kappa=\Lambda p=h/2\) that Newton's
+interval of fits and corpuscle impulse supply in the
 \href{newton-mark-floor.md}{mark-floor note}.
 
 The Newton-age reading is therefore sharper than before. Newton's limit
@@ -392,13 +403,14 @@ The goal of proving the probabilistic form is discharged. Theorem 1
 gives the single-shot bound with the sharp constant
 \(\arccos(2\sqrt{\epsilon(1-\epsilon)})\), Theorem 2 extends it to every
 finite adaptive protocol of instruments, with any Kraus rank and any
-apparatus memory, with the constant \(1-2\epsilon\), Corollary 3
-converts it to the floor at each aperture,
-\((1-2\epsilon)^2\hbar^2/(4A)\) at the balanced one, and Proposition 4
-decides the universality question: universality over instruments holds,
-and universality over preparations fails, with an explicit family that
-saturates the theorem. Positioning against the standard quantum limit is
-in Section 5, and no error--disturbance relation is used.
+apparatus memory, with the constant \(1-2\epsilon\), sharpened to
+\(\arcsin(1-2\epsilon)\) by the path-length note, Corollary 3 converts
+it to the floor at each aperture, \(\arcsin^2(1-2\epsilon)\hbar^2/(4A)\)
+at the balanced one, and Proposition 4 decides the universality
+question: universality over instruments holds, and universality over
+preparations fails, with an explicit family that saturates the theorem.
+Positioning against the standard quantum limit is in Section 5, and no
+error--disturbance relation is used.
 
 Open, in order:
 
@@ -411,17 +423,14 @@ Open, in order:
   general case with the aperture imposed on the body's own marginal,
   since \(\Delta_\psi(G\otimes\mathbf 1)=\Delta_{\sigma_{\rm body}}G\).
 \item
-  \textbf{The sharp constant.} Theorem 1 gives \(\theta(\epsilon)\) and
-  Theorem 2 gives \(1-2\epsilon\) for the same quantity; the gap between
-  them is an artifact of the telescoping step, and closing it would also
-  close the interval \([9,36]\) left by the classical theorem.
+  \textbf{The sharp constant: done, 2026-09-23.} The Bures-angle chain
+  gives Theorem 2 the constant \(\theta(\epsilon)=\arcsin(1-2\epsilon)\)
+  of Theorem 1 (path-length note, Theorem P). The worst-case interval
+  \([9,36]\) of the derivation note is a separate question.
 \item
-  \textbf{The general force law.} Both theorems use only that the
-  phase-space path \(t\mapsto(\alpha(t),\beta(t))\) has total variation
-  \(F\tau^2/2m\) and \(F\tau\) in its two components. For a general
-  force the statement is that the two total variations, weighted by
-  \(P\) and \(L\), must exceed \(\hbar(1-2\epsilon)\); the
-  constant-force case is then one evaluation.
+  \textbf{The general force law: done, 2026-09-23.} The kick form
+  \(\int_0^\tau|f|L\ge\hbar\theta(\epsilon)\) of the path-length note
+  holds for every force history.
 \item
   \textbf{Publication.} With Section 5 in place the foundations paper
   has its positioning; what remains before submission is item 1, item 2
