@@ -13,8 +13,9 @@ map in [the position note](notes/mass-gap-position.md), and the active
 goal returns to the Planck gap: a logical argument, from Newton-age
 materials, that $h>0$ in the Galileo comparison where Newton took the
 inertial--parabola area to zero. `research/STATE.md` carries the queue;
-[the mark-floor note](notes/newton-mark-floor.md) is the current
-result. The paragraphs that follow record the 2026-09-16 direction and
+[the paper draft](notes/planck-gap-paper.md) is the current synthesis
+(updated 2026-09-23; it started from the
+[mark-floor note](notes/newton-mark-floor.md)). The paragraphs that follow record the 2026-09-16 direction and
 remain valid for any mass-gap step that is taken.
 
 User direction, 2026-09-16: the goal is a proof of the Yang--Mills
@@ -73,7 +74,11 @@ Book I**, where the method lives: the vanishing sagitta of Lemmas X and XI,
 the polygon of Proposition I, the limit that makes a force a ratio. That
 absence is this project's opening. The ancient dispute that bears on Book I
 is the one about division and the cut, and Newton passed it over while
-collecting ancient authority for Book III's results.
+collecting ancient authority for Book III's results. (Precision,
+2026-09-23: Book I does carry one methodological scholium, closing
+Section I, which cites Euclid X against least magnitudes; it takes the
+geometers' side of the division question and leaves the physical dispute
+and the atomists aside. The paper's §9 quotes it and answers it.)
 
 So the classics work here is not decoration on a theorem, and it is not a
 source hunt for its own sake. **It is the Book I scholion, supplied.** For

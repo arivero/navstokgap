@@ -1,18 +1,54 @@
-# Toward the Yang--Mills mass gap
+# navstokgap: the Planck gap in Newton's comparison, and the Yang--Mills mass gap
 
 **Website:** <https://arivero.github.io/navstokgap/> lists every result by
 track, with the Markdown source and the typeset PDF for each. Rebuild it with
 `make site`.
 
-The goal of this project, set on 2026-09-16, is a proof of the existence
-of a mass gap for $SU(3)$ Yang--Mills theory in four dimensions, in the
-Jaffe--Witten formulation. Work
-proceeds by theorems with explicit volume, cutoff and coupling dependence,
-by lower-dimensional solved cases, and by the analogy with a positive
-universal action scale, which the earlier phase of the project developed
-through Newtonian trajectories and cut refinement.
+The active goal, set on 2026-09-17, is to establish the Planck gap with
+Newton-age arguments and their modern equivalents. Galileo's comparison of
+the inertial line with the falling parabola, whose area Newton takes to
+zero in Lemmas X and XI, acquires a floor of order $\hbar$ once it has to
+be recorded. The $SU(3)$ Yang--Mills mass gap, the goal from 2026-09-16,
+is paused with its map intact.
 
-## Read the consolidated result
+## Read the current result
+
+[The cost of a mark: Newton's vanishing sagitta and a floor of order $\hbar$](notes/planck-gap-paper.md)
+([PDF](out/papers/planck-gap-paper.pdf)) is the synthesis:
+
+- Newton's limit has no geometric floor, and a recorded comparison has one.
+- For every instrument,
+  $\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$:
+  Newton's sagitta $s$ is paired with the impulse a record leaves
+  undetermined, and his impulse $J$ with the displacement.
+- For uncorrelated Gaussian marks the floor takes the sharp form
+  $\tau\Delta E\ge24z_{1-\epsilon}^2\hbar$, from the conjugacy of a mark's
+  error and the impulse it delivers.
+- Newton's inscribed polygon differs from the parabola by the pure phase
+  $F^2\sum_j\tau_j^3/(24m\hbar)$, the parabolic segments of the chords
+  converted by $\hbar$, whatever the state of the body.
+- Newton's *Opticks* holds a measured least length, a posited least
+  impulse and a disposition whose period times momentum is invariant under
+  refraction; its Prop. XII denies the premise that would join them to a
+  floor.
+
+[STATE](research/STATE.md) lists every result with the note that proves it.
+
+## The paused mass-gap track
+
+[The position note](notes/mass-gap-position.md)
+([PDF](out/papers/mass-gap-position.pdf)) is the synthesis: what is
+proved, what is imported, what has been ruled out, and what remains.
+Its full working queue as of 2026-09-18 is STATE at commit 6bc52cb. In
+short, the
+conjecture decomposes into six named statements, of which the
+finite-lattice gap and the volume-uniform strong-coupling gap are proved
+here; the clause $m<\infty$ is reduced to the existence of the theory
+plus the nontriviality of one flowed correlator; and the clause $m>0$
+remains, with real-space blocking and expansion around the free theory
+both closed off by explicit computation.
+
+## Earlier consolidated result
 
 [Classical action scales: obstructions, conditional bounds and quantum premises](notes/action-scale-obstructions.md)
 ([PDF](out/papers/action-scale-obstructions.pdf)) brings the accepted results
@@ -30,19 +66,6 @@ into one argument:
 The paper links its statements to the full proofs and inherited source audits.
 It establishes no general impossibility theorem for classical reconstruction,
 no new novelty claim and no Yang–Mills mass-gap result.
-
-## Current research direction
-
-[The position note](notes/mass-gap-position.md)
-([PDF](out/papers/mass-gap-position.pdf)) is the synthesis: what is
-proved, what is imported, what has been ruled out, and what remains.
-[STATE](research/STATE.md) holds the working queue. In short, the
-conjecture decomposes into six named statements, of which the
-finite-lattice gap and the volume-uniform strong-coupling gap are proved
-here; the clause $m<\infty$ is reduced to the existence of the theory
-plus the nontriviality of one flowed correlator; and the clause $m>0$
-remains, with real-space blocking and expansion around the free theory
-both closed off by explicit computation.
 
 ## Supporting proofs and sources
 

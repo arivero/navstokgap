@@ -48,7 +48,7 @@ default, and only the deviation needs a cause.
 
 ## 2. The ladder, and why the ancients stood on its first rung
 
-Theorem 5 of the [paper](planck-gap-paper.md) makes the difference exact. For
+Theorem 9 of the [paper](planck-gap-paper.md) makes the difference exact. For
 a signal that is an $n$-th order departure, with the lower orders unknown and
 therefore nuisance, the quantity bounded below is
 $m\,(P^{(n)})^2\,\tau^{2n-1}\gtrsim\kappa$:
@@ -90,7 +90,7 @@ a rapid succession presents itself as a continuous extended thing, and the
 continuity is the observer's.
 
 That is a third use, and for this programme it is the most interesting of the
-three. It is the ancient form of the point Theorem 5 makes about records
+three. It is the ancient form of the point Theorem 9 makes about records
 rather than about the world: below the mesh a succession is indistinguishable
 from the continuous object it mimics, and above it the succession is
 recoverable. The Buddhist example runs the inference in the direction the
@@ -128,7 +128,7 @@ noted: the arrow is the first rung and the sling the second, and the second
 needs inertia before it becomes a question. The Vaiśeṣika impression is the
 nearest ancient approach to the missing premise. The firebrand supplies the
 one circular example and uses it for sampling, which is the closest ancient
-statement of what Theorem 5 says about records. Section 7 of the paper now
+statement of what Theorem 9 says about records. Section 9 of the paper now
 carries the point in short form.
 
 Open: whether any Greek source besides Plutarch argues about the sling

@@ -286,9 +286,8 @@ metadata). Its status has been disputed since Yuen's objection:
 [Caves defended it](https://doi.org/10.1103/PhysRevLett.54.2465)
 (PRL **54**, 2465, 1985, abstract) and
 [Ozawa exhibited a measurement breaking it for free-mass position](https://doi.org/10.1103/PhysRevLett.60.385)
-(PRL **60**, 385, 1988, abstract). The present statement is not a new
-bound of that kind and does not adjudicate that dispute on its own
-terms. Three differences fix its place.
+(PRL **60**, 385, 1988, abstract). The present statement sits beside
+that dispute, and three differences fix its place.
 
 - **Universality over protocols is proved, not assumed.** The usual
   derivations fix a monitoring scheme and balance its imprecision against

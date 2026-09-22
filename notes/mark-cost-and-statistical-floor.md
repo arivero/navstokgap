@@ -1,32 +1,32 @@
 # The mark cost is exactly $\hbar/2$, and the worst-case theorem survives as a statistical one
 
-**Correction, 2026-09-22.** Section 4 of the first version applied
-Theorem B to every Gaussian probe. Theorem B assumes that each mark's
-error and recoil are independent, and a probe whose position and momentum
-are correlated delivers correlated ones. The corrected statement is
-Theorem C: with correlation coefficient $\rho$ between a mark's error and
-its recoil, the cost that enters the floor is
-$\kappa_{\rm eff}=\delta\Delta(1-|\rho|)\ge\frac\hbar2\sqrt{(1-|\rho|)/(1+|\rho|)}$,
-so every protocol whose marks have $|\rho_j|\le\rho$ needs
+A mark made by coupling the body's position to a probe has canonically
+conjugate error and recoil, so its cost is $\kappa=\delta\Delta\ge\hbar/2$
+for every probe state (Theorem A). In the Gaussian statistical model every
+protocol of marks with $\delta_j\Delta_j\ge\kappa$ needs
+$\tau\Delta E\ge48z_{1-\epsilon}^2\kappa$, with a sharp constant
+(Theorem B), hence $\tau\Delta E\ge24z_{1-\epsilon}^2\hbar$ for Gaussian
+probes whose error and recoil are uncorrelated, about $65\hbar$ at five
+per cent error. A correlation $\rho$ between error and recoil multiplies
+the floor by $\sqrt{(1-\rho)/(1+\rho)}$ (Theorem C), and three marks attain
+that dependence within a factor $4/3$ (Proposition D), deciding at every
+force as $\rho\to1$: this is the resource of Yuen's contractive states.
+These floors concern Gaussian probes. For probes in arbitrary states and
+for every instrument, the statements that hold are the recoil bound of
+the [recoil note](record-costs-recoil.md) and the disturbance bound of the
+[disturbance note](record-costs-disturbance.md).
 
-$$\tau\Delta E\ \ge\ 24\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
-
-The value $24z^2\hbar$ is the uncorrelated case $\rho=0$, which
-contains every coherent probe and every probe squeezed along its
-pointer's axes. A three-mark protocol whose middle probe is squeezed
-along a rotated quadrature has $\rho\to1$ and decides the comparison at
-any force (Proposition D), and Yuen's contractive states are this
-resource. The same mechanism corrects the aperture corollary of the
-[probabilistic note](planck-gap-probabilistic.md): in both places a floor
-of order $\hbar$ holds once the shape of the uncertainty ellipse is
-bounded, and its area alone leaves the floor free.
-
-**Sharpening, 2026-09-22.** The constant of Theorem B improves from
-$\frac29$ to $\frac1{24}$ in $d^2\,m\kappa/F^2\tau^3$. The invariance
-under $v_0$ makes the function $T$ of the proof vanish at both ends, so
-the Poincaré constant $\tau^3/12$ replaces the earlier Cauchy--Schwarz
-bound $\frac49\tau^3$. Dense protocols attain the new constant, so
-$\tau\Delta E\ge48z^2\kappa$ is sharp.
+**Revisions, 2026-09-22.** The first version applied Theorem B to every
+Gaussian probe. Theorem B assumes independent error and recoil, and a
+probe with correlated position and momentum delivers correlated ones,
+which Theorem C now prices. The constant of Theorem B improved from
+$\frac29$ to $\frac1{24}$ in $d^2\,m\kappa/F^2\tau^3$: the invariance under
+$v_0$ makes the function $T$ of the proof vanish at both ends, so the
+Poincaré constant $\tau^3/12$ replaces the Cauchy--Schwarz bound
+$\frac49\tau^3$. The same squeezing mechanism corrects the aperture
+corollary of the [probabilistic note](planck-gap-probabilistic.md): a
+floor of order $\hbar$ needs the shape of the uncertainty ellipse bounded
+as well as its area.
 
 Reopening the question of what was wrong with the
 [derivation note](planck-gap-derivation.md): almost nothing. Its
@@ -409,8 +409,7 @@ to it.
 
 The user's requirement is one paper that a foundations-of-physics referee
 and a history-and-philosophy-of-science referee both accept. That is
-attainable, because the historical analysis now does argumentative work
-rather than decorating a theorem. The structure is:
+attainable, because the historical analysis now does argumentative work. The structure is:
 
 1. **The comparison and its limit.** Newton's Lemmas X and XI and the
    projectile Scholium, with the sagitta, the inertial--parabola area and

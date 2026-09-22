@@ -141,12 +141,12 @@ TRACKS = [
 HIGHLIGHTS = [
     ("planck-gap-paper",
      "A recorded trajectory has a floor of order &#8463;",
-     "Every protocol of Gaussian marks whose resolution and recoil are uncorrelated "
-     "and obey &delta;&Delta; &ge; &kappa; needs &tau;&Delta;E &ge; "
-     "48z&sup2;&kappa;, sharply, to tell free motion from forced. A momentum-transfer "
-     "mark has &kappa; &ge; &#8463;/2 exactly, because its error operator "
-     "and the impulse it delivers are canonically conjugate; a correlation "
-     "&rho; lowers the floor by &radic;((1&minus;&rho;)/(1+&rho;))."),
+     "For every instrument, the sagitta times the momentum disturbance and "
+     "the impulse times the position disturbance of the marks must add up to "
+     "(1&minus;2&epsilon;)&#8463;: a record costs disturbance. For uncorrelated "
+     "Gaussian marks the floor is &tau;&Delta;E &ge; 24z&sup2;&#8463;, sharply. "
+     "Newton's inscribed polygon differs from the parabola by a pure phase, "
+     "the parabolic segments of the chords over &#8463;."),
     ("wilson-strong-coupling-explicit",
      "SU(3) is gapped at strong coupling, with an explicit threshold",
      "For the Wilson transfer matrix the gap is explicit for g&sup2; &ge; 176, "

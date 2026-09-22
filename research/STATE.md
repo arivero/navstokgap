@@ -1,8 +1,8 @@
 # State
 
-Updated 2026-09-22. Read this page and the note it points to; AGENTS.md
-governs. The previous long version, with the full $SU(3)$ queue and the
-source-by-source classics log, is in git at commit 6bc52cb.
+Updated 2026-09-23. Read this page and the note it points to; AGENTS.md
+governs. The long version with the full $SU(3)$ queue and the
+source-by-source classics log is in git at commit 6bc52cb.
 
 ## Goal
 
@@ -14,88 +14,47 @@ area Newton takes to zero in Lemmas X and XI. User direction, 2026-09-22:
 put the effort on the modern leg; the classics serve mostly as
 inspiration, and the formal and textual work on the *Principia* lives in
 the sibling repository `newtonlean`. Constructive steps take precedence
-over no-go results.
+over no-go results. Context: since 2026-09-21 an advisory group hosted at
+the IAS advises on releasing machine results
+([news digest](../docs/AI_Mathematics_News_2026.md)); the aim here is a
+presentable result first, on the Planck gap or the mass gap.
 
 ## In hand
 
-[The paper draft](../notes/planck-gap-paper.md) is the synthesis; the
-proofs are in four notes.
+[The paper draft](../notes/planck-gap-paper.md), revised 2026-09-23 into
+twelve sections with Theorems 2--9 in order, is the synthesis. Its
+results and the notes that prove them:
 
-- **Classical floor.** Every protocol of Gaussian marks with uncorrelated error
-  and recoil and $\delta_j\Delta_j\ge\kappa$ needs
-  $\tau\Delta E\ge48z_{1-\epsilon}^2\kappa$, sharp (constant from the
-  Poincaré inequality, since invariance under $v_0$ pins $T$ at both ends)
-  ([mark-cost note](../notes/mark-cost-and-statistical-floor.md),
-  Theorem B; worst-case form in the
-  [derivation note](../notes/planck-gap-derivation.md)).
-- **Mark cost.** A momentum-transfer mark has conjugate error and recoil,
-  so $\kappa\ge\hbar/2$ (Theorem A). A correlation $\rho$ between them
-  multiplies the floor by $\sqrt{(1-\rho)/(1+\rho)}$ (Theorem C), and
-  three marks attain that dependence (Proposition D).
-- **Unmarked preparations.** At aperture $(L,P)$,
-  $F\tau L+\frac{F\tau^2}{2m}P\ge(1-2\epsilon)\hbar$ for every adaptive
-  protocol ([probabilistic note](../notes/planck-gap-probabilistic.md),
-  Theorem 2): impulse against position aperture plus sagitta against
-  momentum aperture. The floor is $(1-2\epsilon)^2\hbar^2/(4LP)$ at the
-  balanced aperture $L=\tau P/2m$.
-- **The junction.** M3 is Robertson's inequality for Newton's corpuscle,
-  with the interval of fits as one factor
-  ([mark-floor note](../notes/newton-mark-floor.md)), plus the clause
-  that the undetermined impulse is unrelated to the mark's error.
-- **Classics.** Paper §7 and the [arrow-and-sling note](../notes/arrow-not-sling.md);
-  companions in `docs/classics/`.
+| Result | Paper | Proof |
+| --- | --- | --- |
+| Newton's limit has no geometric floor | Prop. 1 | paper §2 |
+| Gaussian marks: $\tau\Delta E\ge48z^2\kappa$, sharp | Thm 2 | [mark-cost](../notes/mark-cost-and-statistical-floor.md), Thm B |
+| Mark cost $\kappa\ge\hbar/2$ (error and recoil conjugate); $24z^2\hbar$ for uncorrelated Gaussian probes; correlation $\rho$ lowers it by $\sqrt{(1-\rho)/(1+\rho)}$ | Thm 4, eqs. (2)--(3) | mark-cost, Thms A, C, Prop. D |
+| Every probe state: $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$; grid probes break the Gaussian form | Thm 5 | [recoil](../notes/record-costs-recoil.md) |
+| Body-independent noise forces the von Neumann form | §5 | [additive-noise](../notes/additive-noise-marks.md) |
+| Every instrument: $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$ | Thm 6 | [disturbance](../notes/record-costs-disturbance.md) |
+| Inscribed polygon differs from the parabola by the phase $F^2\sum\tau_j^3/24m\hbar$; insertion law; ordering holonomy | Thm 7 | [polygon-lift](../notes/polygon-lift-phase.md) |
+| Every force law: one functional $\mathcal K_\tau$, phase $\mathcal K/\hbar$, sharp deflection $\mathcal K/\kappa$ | Thm 8 | polygon-lift §6 |
+| Unmarked preparations: $J L+s P\ge(1-2\epsilon)\hbar$, every instrument | §10 | [probabilistic](../notes/planck-gap-probabilistic.md) |
+| *Opticks*: measured $\Lambda$, posited $p$, $\Lambda p$ invariant under refraction (II.iii Props. X, XVII); Newton's Prop. XII denies M3 | §§7--8 | [mark-floor](../notes/newton-mark-floor.md), polygon-lift §5 |
+| The ladder: arrow, then Galileo; the Section I scholium's Euclid-X objection answered | Thm 9, §9 | paper §9, [arrow and sling](../notes/arrow-not-sling.md) |
 
-**Correction, 2026-09-22.** Both quantum floors needed a bound on the
-shape of an uncertainty ellipse, since each falls to zero under squeezing
-at fixed area. An exported ChatGPT review found the aperture case; the
-correlated-mark case was found here. Both are restated as theorems with
-the shape parameter explicit.
+The premise that carries $h>0$, in its universal form: a record costs
+disturbance. A mark that registers the sagitta leaves the impulse
+undetermined, and one that registers the impulse leaves the displacement
+undetermined, at the exchange rate $\hbar$.
 
 ## Next, modern leg first
 
-1. **Done, 2026-09-22: the squeeze-immune core.**
-   [The polygon-lift note](../notes/polygon-lift-phase.md): Newton's
-   inscribed polygon and the parabola coincide classically at every
-   vertex, and quantum mechanically differ by the pure phase
-   $\theta_N=F^2\sum_j\tau_j^3/(24m\hbar)=(F/2v\hbar)\sum_jS_j$, with
-   $S_j$ the parabolic segments. Each inserted vertex lowers it by the
-   inscribed triangle over $\hbar$, in Archimedes' proportions; the
-   reversed ordering carries the complement,
-   $\Phi_N+4\theta_N=\tau\Delta E/3\hbar$ for every partition. Newton-age
-   form, §5: *Opticks* II.iii Props. X and XVII make $\Lambda p$ a
-   refraction invariant, so the fits count along a path is the Maupertuis
-   action in units of $\Lambda p$, and it separates the polygon from the
-   curve by $(F/v)\sum_jA_j/(2\Lambda p)$ fits. The paper carries
-   it as Theorem 6 (§4) with the refraction invariant in §§5--6.
-2. **Done, 2026-09-22: general force law and one functional.** Theorem 2
-   is sharp with constant $48$ (Poincaré, since $T(0)=T(\tau)=0$). For any
-   force history, with $\mathcal K_\tau$ the kinetic action of the motion
-   relative to its chord, the polygon phase is $\sum_j\mathcal K_{\tau_j}/\hbar$
-   and the sharp mark bound is $d^2\le\mathcal K_\tau/\kappa$; at
-   $\kappa=\hbar/2$ the best recorded deflection is twice the chord phase
-   (polygon-lift note §6, paper Theorem 7). Open on this line: the
-   aperture form for a general force, and correlated marks in Theorem 7.
-3. **Done, 2026-09-22: mixed conditional states.** The probabilistic
-   Theorem 2 holds for every instrument, any Kraus rank and any apparatus
-   memory, by purification.
-4. **Theorem A beyond the momentum-transfer class**, in the order the
-   user set on 2026-09-22: option 3 first, then 1, then 2. **Option 3
-   done:** [the recoil note](../notes/record-costs-recoil.md). Grid probes
-   with $\rho=0$ break the Gaussian floor (Proposition G); for every probe
-   state, $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ (Theorem R, paper
-   Theorem 8), within a constant of squeezed protocols at every squeezing.
-   **Option 1 done:** [the additive-noise note](../notes/additive-noise-marks.md).
-   Body-independent noise forces $[\hat N,\hat D]=-i\hbar$; with the
-   position undisturbed the mark is a von Neumann mark on a canonical pair
-   of the apparatus; Theorem R holds for the whole class. **Option 2 done:** [the disturbance note](../notes/record-costs-disturbance.md).
-   For every instrument, $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$
-   (Theorem U); the reading error drops out and Ozawa's relation is not
-   needed. Open: the combined accounting (offset removed at the body in
-   some intervals, carried through marks in others) as one optimization.
-
-History, lower priority: the Section I Scholium, where Newton cites
-Euclid X against least magnitudes, as the first entry of the Book I
-scholion; §9's reading and edition obligations.
+1. **One accounting.** The aperture bound pays at the body between marks,
+   Theorem 6 pays at the marks. State the mixed accounting as one
+   optimization and find its minimum; decide whether the constants
+   $1/8$ and $1/2$ of Theorem 6 are attained.
+2. **Remaining constants.** The worst-case interval $[9,36]$ in
+   $F^2\tau_*^3/(m\kappa)$, and $\arccos(2\sqrt{\epsilon(1-\epsilon)})$
+   against $1-2\epsilon$ in the aperture bound.
+3. **Submission.** Paper §11: read Shapiro 1993 and the *Principia*
+   historiography; cite the 1730 *Opticks* and Cohen--Whitman.
 
 ## Paused
 

@@ -80,55 +80,56 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <h1>The cost of a mark: Newton’s vanishing sagitta and a floor of order
 <span class="math inline">\(\hbar\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/planck-gap-paper.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-paper.pdf">PDF</a></p><p><strong>Abstract.</strong> Newton reads a force off a trajectory by
 letting the sagitta and the area between the inertial tangent and the
-curve go to zero, keeping their ratio to the time. We show that the same
-comparison, once it must be <em>recorded</em>, has a floor. For every
-protocol of marks, of any number and at any times, whose resolution and
-recoil are Gaussian, uncorrelated, and obey <span
-class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, deciding
-between free and forced motion over a duration <span
+curve go to zero, keeping their ratio to the time. Once the comparison
+must be <em>recorded</em>, it has a floor. For every protocol of marks,
+made by any instruments at any times and deciding for every initial
+state of the body, distinguishing free motion from a constant force
+<span class="math inline">\(F\)</span> over a duration <span
 class="math inline">\(\tau\)</span> at error probability <span
 class="math inline">\(\epsilon\)</span> requires</p>
-<p><span class="math display">\[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\
-48\,z_{1-\epsilon}^2\,\kappa,\]</span></p>
-<p>and for a mark realized by coupling the body’s position to a probe,
-the error operator and the impulse delivered are canonically conjugate,
-so <span class="math inline">\(\kappa\ge\hbar/2\)</span> exactly. The
-constant <span class="math inline">\(48\)</span> is sharp, approached by
-dense protocols. The floor is about <span
-class="math inline">\(65\hbar\)</span> at five per cent error, and
+<p><span class="math display">\[\frac s8\sum_j\Delta(\hat D_j)+\frac
+J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\,\hbar,
+\qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,\]</span></p>
+<p>where <span class="math inline">\(\hat D_j\)</span> and <span
+class="math inline">\(\hat X_j\)</span> are the momentum and position
+disturbances of mark <span class="math inline">\(j\)</span>. Newton’s
+sagitta is paired with the impulse a record leaves undetermined, and his
+impulse with the displacement. For marks with uncorrelated Gaussian
+probes the floor takes the sharp form <span
+class="math inline">\(\tau\Delta
+E=F^2\tau^3/2m\ge24z_{1-\epsilon}^2\hbar\)</span>, about <span
+class="math inline">\(65\hbar\)</span> at five per cent error, because a
+mark’s error and the impulse it delivers are canonically conjugate;
 insertion of marks finer than <span
 class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>
-records free motion only. A correlation <span
-class="math inline">\(\rho\)</span> between a mark’s error and its
-recoil multiplies the floor by <span
-class="math inline">\(\sqrt{(1-\rho)/(1+\rho)}\)</span>, and a
-three-mark protocol attains that dependence, so the floor is a statement
-about marks whose uncertainty ellipse has bounded shape as well as area.
-For probes in any state, Gaussian or not, one statement survives: the
-sagitta times the total undetermined impulse the marks deliver is at
-least <span class="math inline">\(8(1-2\epsilon)\hbar\)</span>, whatever
-their resolution. The part of the signal that no preparation can move is
-a phase: Newton’s polygon inscribed in the parabola agrees with it
-classically at every vertex and differs quantum mechanically by <span
+then records free motion only. Correlated and grid-state probes lower
+that form, and the disturbance bound holds for them. The part of the
+signal that no preparation can move is a phase: Newton’s polygon
+inscribed in the parabola agrees with it classically at every vertex and
+differs quantum mechanically by <span
 class="math inline">\(F^2\sum_j\tau_j^3/(24m\hbar)\)</span>, the
 parabolic segments of the chords times <span
-class="math inline">\(F/2v\hbar\)</span>, whatever the state of the
-body. The historical claim is that Newton’s <em>Opticks</em> contains
-both factors of <span class="math inline">\(\kappa\)</span>, one of them
-measured as the <span class="math inline">\(1/89000\)</span>th part of
-an inch, and that the single proposition joining them to a floor is an
-indeterminacy about the fits which Newton formulated the negation of.
-The distance between his system and a positive <span
-class="math inline">\(h\)</span> is therefore one nameable proposition,
-and that proposition is Robertson’s inequality for his corpuscle.</p>
-<p>Draft, 2026-09-17. Synthesis of the <a
+class="math inline">\(F/2v\hbar\)</span>. On the historical side,
+Newton’s <em>Opticks</em> contains a measured least length, the <span
+class="math inline">\(1/89000\)</span>th part of an inch, a posited
+least impulse, and a disposition whose period times the corpuscle’s
+momentum is invariant under refraction. The proposition that would join
+them to a floor is that a record leaves an undetermined impulse, and
+Newton asserted its negation in print.</p>
+<p>Draft, 2026-09-17; revised 2026-09-23. Synthesis of the <a
 href="newton-mark-floor.html">mark-floor</a>, <a
 href="planck-gap-derivation.html">derivation</a>, <a
-href="planck-gap-probabilistic.html">probabilistic</a> and <a
-href="mark-cost-and-statistical-floor.html">mark-cost</a> and <a
+href="planck-gap-probabilistic.html">probabilistic</a>, <a
+href="mark-cost-and-statistical-floor.html">mark-cost</a>, <a
+href="record-costs-recoil.html">recoil</a>, <a
+href="additive-noise-marks.html">additive-noise</a>, <a
+href="record-costs-disturbance.html">disturbance</a> and <a
 href="polygon-lift-phase.html">polygon-lift</a> notes, which hold the
-proofs in full. Two obligations remain before submission and are stated
-in §9. Exploratory; no ledger promotion.</p>
+proofs in full. The revision of 2026-09-22 restated two floors: the
+Gaussian floor needs uncorrelated Gaussian probes, and the aperture
+floor takes its area form only at the balanced aperture. Two obligations
+remain before submission and are stated in §11. Exploratory; no ledger
+promotion.</p>
 <h2 id="the-question">1. The question</h2>
 <p>Galileo’s comparison is an inertial horizontal line against a falling
 parabola. With mass <span class="math inline">\(m\)</span>, transverse
@@ -157,19 +158,24 @@ their ratios survive.</p>
 <p>Our question is what stops that refinement when the trajectory has to
 be recorded rather than contemplated, and whether the stopping point can
 be reached from materials Newton possessed.</p>
-<p>The answer has four parts. The geometry alone supplies no floor (§2).
-Recording supplies one, which is set by a single number <span
-class="math inline">\(\kappa\)</span> with the dimensions of action, and
-every protocol of marks faces the same bound in the same combination
-<span class="math inline">\(F^2\tau^3/m\)</span> (§3). Quantum
-kinematics fixes <span class="math inline">\(\kappa\ge\hbar/2\)</span>
-by an exact and elementary argument (§4). Newton’s optics supplies both
-factors of <span class="math inline">\(\kappa\)</span> and denies the
-inequality between them (§§5–6). Newton also attempted a preface founded
-on the ancients, and the ancient arguments that bear on his own method
-are the ones he passed over; stated as premises about records they
-generate a hierarchy whose first rung is Zeno’s arrow and whose second
-is the comparison above (§7).</p>
+<p>The answer has five parts. The geometry alone supplies no floor (§2).
+Recording supplies one: in a Gaussian model of marks it is set by a
+single number <span class="math inline">\(\kappa\)</span> with the
+dimensions of action, sharply, in the combination <span
+class="math inline">\(F^2\tau^3/m\)</span> (§3), and quantum kinematics
+fixes <span class="math inline">\(\kappa\ge\hbar/2\)</span> because a
+mark’s error and its recoil are conjugate (§4). For probes and
+instruments of every kind the floor survives as a bound on disturbance,
+paired with Newton’s sagitta and impulse (§5), and a phase that no
+preparation can move carries the same quantity through Newton’s
+inscribed polygon (§6). Newton’s optics supplies both factors of <span
+class="math inline">\(\kappa\)</span>, a phase whose rate is
+proportional to momentum, and the negation of the premise that joins
+them (§§7–8). Newton also attempted a preface founded on the ancients,
+and the ancient arguments that bear on his own method are the ones he
+passed over; stated as premises about records they generate a hierarchy
+whose first rung is Zeno’s arrow and whose second is the comparison
+above (§9).</p>
 <h2 id="the-geometry-has-no-floor">2. The geometry has no floor</h2>
 <p><strong>Proposition 1.</strong> For every partition <span
 class="math inline">\(0=t_0&lt;\dots&lt;t_n=\tau\)</span> with steps
@@ -347,8 +353,8 @@ bounded by the preparation’s recoil width instead of being free, so
 class="math inline">\(0\)</span> and the Cauchy–Schwarz step is the one
 available. That version has no quantum instance, since certain position
 confinement forces full-support momentum by Paley–Wiener; it is recorded
-here because it shows that the argument depends on the quadratic
-structure rather than on any probabilistic assumption.</p>
+here because it shows that the argument needs only the quadratic
+structure.</p>
 <h2 id="the-cost-of-a-mark-is-the-probes-uncertainty-product">4. The
 cost of a mark is the probe’s uncertainty product</h2>
 <p><strong>Theorem 4.</strong> Let a mark be realized by the impulsive
@@ -382,8 +388,8 @@ Q_A/\lambda\)</span>, and <span class="math inline">\([\hat N,\hat
 D]=-[\hat Q_A,\hat P_A]=-i\hbar\)</span>. Robertson’s inequality closes
 it. <span class="math inline">\(\square\)</span></p>
 <p>The coupling strength cancels, so the cost is a property of the mark
-rather than of how hard it is made. The record and the recoil are
-themselves incompatible, since <span class="math inline">\([\hat
+itself, whatever the strength of the coupling. The record and the recoil
+are themselves incompatible, since <span class="math inline">\([\hat
 Q_A+\lambda\hat y,-\lambda\hat P_A]=-i\hbar\lambda\)</span>, which is
 why no reading of the pointer determines the impulse. A deterministic
 probe, whose later position records fix its momentum, has <span
@@ -431,18 +437,106 @@ of Yuen’s contractive states (PRL <strong>51</strong>, 719, 1983). The
 proofs are in the <a
 href="mark-cost-and-statistical-floor.html">mark-cost note</a>, Theorem
 C and Proposition D.</p>
-<h3 id="the-part-no-preparation-can-move">The part no preparation can
-move</h3>
-<p>Both escapes from the floor, a correlated probe here and an
-unbalanced aperture in §8, stretch an uncertainty ellipse of fixed area.
-A quantity immune to that must be a c-number, and the comparison
-supplies one. Newton’s polygon of Proposition I inscribed in the
-parabola, with each step’s impulse <span
+<h2
+id="every-probe-and-every-instrument-the-record-costs-disturbance">5.
+Every probe and every instrument: the record costs disturbance</h2>
+<p>The floors of §§3–4 assume Gaussian probes, and the assumption is
+needed. A grid state of the Gottesman–Kitaev–Preskill kind with a real
+wavefunction has no position–momentum correlation, yet as the middle
+probe of the three-mark protocol it turns the statistic into a comb of
+spacing <span class="math inline">\(\sqrt{2\pi\hbar\tau/m}\)</span> with
+teeth as narrow as desired, and so decides the comparison at any force
+whose signal is not a multiple of that spacing. Grid states read both
+quadratures of a small displacement at once, the principle of the
+displacement sensor of Duivenvoorden, Terhal and Weigand (PRA
+<strong>95</strong>, 012305, 2017). What holds for every probe state is
+a bound on the recoil, and for every instrument a bound on
+disturbance.</p>
+<p><strong>Theorem 5.</strong> For every protocol of momentum-transfer
+marks with probes in arbitrary states, deciding at error <span
+class="math inline">\(\epsilon\)</span> for every initial state of the
+body requires <span
+class="math inline">\(1-2\epsilon\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|\)</span>,
+with <span class="math inline">\(\Delta_j\)</span> the recoil spread of
+mark <span class="math inline">\(j\)</span>. For the constant force,</p>
+<p><span class="math display">\[s\sum_j\Delta_j\ \ge\
+8(1-2\epsilon)\hbar,\qquad s=\frac{F\tau^2}{2m}. \tag{4}\]</span></p>
+<p>The proof moves the signal into the pointers: translating the body’s
+initial state along the best straight line <span
+class="math inline">\(a+bt\)</span> turns the force into a translation
+of each pointer by <span class="math inline">\(\lambda_jc_j\)</span>,
+with <span class="math inline">\(c_j=P(t_j)-a-bt_j\)</span> the line’s
+residual at the mark, and a pointer registers a translation only through
+the spread of its momentum, which is the impulse the body receives.
+Mandelstam–Tamm and the triangle inequality over the probes finish it.
+The correlated three-mark protocol reaches (4) within a factor <span
+class="math inline">\(\sqrt2z_{1-\epsilon}/(1-2\epsilon)\)</span> at
+every squeezing. The proofs, the grid construction and the tightness
+computation are in the <a href="record-costs-recoil.html">recoil
+note</a>. It is the recoil clause of M3, and Theorem 6 completes it.</p>
+<p>The recoil bound reaches well beyond von Neumann’s coupling. For any
+coupling and any pointer, the pointer commutes with the body’s momentum
+after the mark, which gives <span class="math inline">\([\hat N,\hat
+D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]\)</span>; this is the
+joint-measurement argument of Arthurs and Goodman (PRL
+<strong>60</strong>, 2447, 1988). So every mark whose error and impulse
+are independent of the body has conjugate error and impulse; if it also
+leaves the position alone it is a von Neumann mark on some canonical
+pair of the apparatus; and Theorem 5 holds for all such marks,
+position-displacing ones included (<a
+href="additive-noise-marks.html">additive-noise note</a>). When the
+noise depends on the body, the offset between the hypotheses still has
+to be carried through each mark, and the cost of carrying it is fixed by
+what the mark does to the body.</p>
+<p><strong>Theorem 6 (every instrument).</strong> Let mark <span
+class="math inline">\(j\)</span> be any unitary coupling of the body to
+an apparatus followed by reading a pointer, with momentum and position
+disturbances <span class="math inline">\(\hat D_j=U_j^\dagger\hat
+pU_j-\hat p\)</span> and <span class="math inline">\(\hat
+X_j=U_j^\dagger\hat yU_j-\hat y\)</span>, operators on body and
+apparatus that may depend on both. Deciding at error <span
+class="math inline">\(\epsilon\)</span> for every initial state of the
+body requires, for every line <span class="math inline">\(a+bt\)</span>,
+<span
+class="math inline">\(1-2\epsilon\le\hbar^{-1}\sum_j\sup\Delta(c_j\hat
+D_j-mc_j&#39;\hat X_j)\)</span> with <span
+class="math inline">\(c_j=P(t_j)-a-bt_j\)</span>, the supremum over the
+states that can enter the mark; for the constant force,</p>
+<p><span class="math display">\[\frac s8\sum_j\Delta(\hat D_j)+\frac
+J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\hbar,\qquad J=F\tau.
+\tag{5}\]</span></p>
+<p>The proof is a hybrid argument that carries the offset <span
+class="math inline">\((c,mc&#39;)\)</span> between the hypotheses
+through the marks one at a time. Passing mark <span
+class="math inline">\(j\)</span> applies the unitary <span
+class="math inline">\(T^\dagger U_jTU_j^\dagger\)</span>, with <span
+class="math inline">\(T\)</span> the translation by the offset; its
+generator, conjugated back to the state entering the mark, is <span
+class="math inline">\((c_j\hat D_j-mc_j&#39;\hat X_j)/\hbar\)</span>,
+and Mandelstam–Tamm bounds its effect by that operator’s spread. The
+line of best uniform approximation gives <span
+class="math inline">\(|c_j|\le s/8\)</span> and <span
+class="math inline">\(m|c_j&#39;|\le J/2\)</span> (<a
+href="record-costs-disturbance.html">disturbance note</a>). Von Neumann
+marks give Theorem 5, and marks that read momentum pay in position
+jumps.</p>
+<p>Equation (5) involves the disturbances alone, so the
+error–disturbance relations, Ozawa’s included (PRA <strong>67</strong>,
+042105, 2003), are unused. Newton’s two quantities appear with the
+partners they have in the aperture bound of §10: the sagitta with
+momentum, the impulse with position.</p>
+<h2 id="the-part-no-preparation-can-move">6. The part no preparation can
+move</h2>
+<p>The floors of §§3–5 are paid in spreads, of resolution, recoil or
+disturbance, and a protocol can move a spread from one quantity to
+another, as squeezing and grid states do. The comparison also carries a
+quantity with no spread at all. Newton’s polygon of Proposition I
+inscribed in the parabola, with each step’s impulse <span
 class="math inline">\(F\tau_j\)</span> split equally between its ends,
 moves uniformly along each chord and has the parabola’s position and
 velocity at every vertex, so classically the two are the same state
 there.</p>
-<p><strong>Theorem 6.</strong> For every partition of <span
+<p><strong>Theorem 7.</strong> For every partition of <span
 class="math inline">\([0,\tau]\)</span> into steps <span
 class="math inline">\(\tau_j\)</span>, the two evolutions satisfy <span
 class="math inline">\(W_{\rm poly}=e^{i\theta_N}W_F\)</span> with</p>
@@ -479,7 +573,7 @@ class="math inline">\(\epsilon\)</span> only if <span
 class="math inline">\(\tau_j\ge(48m\hbar\arcsin(1-2\epsilon)/F^2)^{1/3}\)</span>,
 for every state of the body. The single chord lens and the closed loop
 of the earlier notes are instances.</p>
-<p><strong>Theorem 7 (every force law).</strong> For a force history
+<p><strong>Theorem 8 (every force law).</strong> For a force history
 <span class="math inline">\(f\)</span> on an interval of duration <span
 class="math inline">\(\tau\)</span>, let <span
 class="math inline">\(\mathcal K_\tau[f]=\int\frac12m(\dot y_f-\dot
@@ -501,40 +595,7 @@ that Newton’s refinement removes, is converted by <span
 class="math inline">\(\hbar\)</span> into a phase and by the mark cost
 into a statistical distance; for a constant force it is the chord’s
 segment times <span class="math inline">\(F/2v\)</span>.</p>
-<h3 id="every-probe-state-the-record-costs-recoil">Every probe state:
-the record costs recoil</h3>
-<p>The floors above assume Gaussian probes, and the assumption is
-needed. A grid state of the Gottesman–Kitaev–Preskill kind with a real
-wavefunction has no position–momentum correlation, yet as the middle
-probe of the three-mark protocol it turns the statistic into a comb of
-spacing <span class="math inline">\(\sqrt{2\pi\hbar\tau/m}\)</span> with
-teeth as narrow as desired, and so decides the comparison at any force
-whose signal is not a multiple of that spacing. What holds for every
-probe state is a bound on the recoil.</p>
-<p><strong>Theorem 8.</strong> For every protocol of momentum-transfer
-marks with probes in arbitrary states, deciding at error <span
-class="math inline">\(\epsilon\)</span> for every initial state of the
-body requires <span
-class="math inline">\(1-2\epsilon\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|\)</span>,
-with <span class="math inline">\(\Delta_j\)</span> the recoil spread of
-mark <span class="math inline">\(j\)</span>. For the constant force,</p>
-<p><span class="math display">\[s\sum_j\Delta_j\ \ge\
-8(1-2\epsilon)\hbar,\qquad s=\frac{F\tau^2}{2m}. \tag{4}\]</span></p>
-<p>The proof moves the signal into the pointers: translating the body’s
-initial state along the best straight line turns the force into a
-translation of each pointer by <span
-class="math inline">\(\lambda_jc_j\)</span>, and a pointer registers a
-translation only through the spread of its momentum, which is the
-impulse the body receives. Mandelstam–Tamm and the triangle inequality
-over the probes finish it. The correlated three-mark protocol reaches
-(4) within a factor <span
-class="math inline">\(\sqrt2z_{1-\epsilon}/(1-2\epsilon)\)</span> at
-every squeezing. The proofs, the grid construction and the tightness
-computation are in the <a href="record-costs-recoil.html">recoil
-note</a>. This is M3 in its universal form: the clause that carries
-<span class="math inline">\(h&gt;0\)</span> for every probe is that a
-record of the sagitta leaves the delivered impulse undetermined.</p>
-<h2 id="both-factors-are-in-the-opticks">5. Both factors are in the
+<h2 id="both-factors-are-in-the-opticks">7. Both factors are in the
 <em>Opticks</em></h2>
 <p>Newton’s optics supplies the two spreads whose product is <span
 class="math inline">\(\kappa\)</span>, in the form of two least
@@ -577,7 +638,7 @@ class="math inline">\(\Lambda p\)</span>, the same in every medium for
 each colour. A fit counted per interval along the path therefore counts
 the Maupertuis action <span class="math inline">\(\int p\cdot
 dq\)</span> in units of <span class="math inline">\(\Lambda p\)</span>,
-and the inscribed polygon and the parabola of Theorem 6 differ by <span
+and the inscribed polygon and the parabola of Theorem 7 differ by <span
 class="math inline">\((F/v)\sum_jA_j/(2\Lambda p)\)</span> fits, with
 <span class="math inline">\(A_j\)</span> Lemma XI’s tangent areas. Since
 the fit at arrival decides reflection or transmission (Prop. XII), the
@@ -588,10 +649,10 @@ complicated than a count along the path.</p>
 <p>All eight passages are held verbatim with line anchors in the <a
 href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Newton_Opticks_1730_fits_and_queries.md">source
 companion</a>, from the fourth edition of 1730.</p>
-<h2 id="the-junction-and-the-proposition-newton-denied">6. The junction,
+<h2 id="the-junction-and-the-proposition-newton-denied">8. The junction,
 and the proposition Newton denied</h2>
-<p>Theorem 4 says what the missing premise is. In the mark-floor note it
-was stated as M3, that a mark fixing the position within <span
+<p>Theorems 4 to 6 say what the missing premise is. In the mark-floor
+note it was stated as M3, that a mark fixing the position within <span
 class="math inline">\(\delta\)</span> leaves the delivered impulse
 undetermined within <span class="math inline">\(\kappa/\delta\)</span>.
 Theorem 4 identifies <span class="math inline">\(\kappa\)</span> as the
@@ -601,25 +662,30 @@ corpuscle}\quad\Longleftrightarrow\quad
 \Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \text{a positive
 constant},\]</span></p>
 <p>which is Robertson’s inequality stated in Newton’s two quantities.
-The floor also uses a clause M3 carries implicitly, that the
+The Gaussian floor also uses a clause M3 carries implicitly, that the
 undetermined impulse is unrelated to the mark’s error; eq. (3) prices
-that clause. With M3, §§3–4 give the floor and the insertion mesh from
-Newton’s own materials, with <span class="math inline">\(\kappa=\Lambda
-p\)</span> in place of <span class="math inline">\(\hbar/2\)</span>; the
-identification <span class="math inline">\(\Lambda=\lambda/2\)</span>,
-<span class="math inline">\(p=h/\lambda\)</span> makes <span
+that clause. Theorems 5 and 6 give M3 its universal form, in which the
+resolution drops out: a record of the sagitta leaves the body’s impulse
+undetermined, a record of the impulse leaves its displacement
+undetermined, and the exchange rate is <span
+class="math inline">\(\hbar\)</span>. With M3, §§3–4 give the floor and
+the insertion mesh from Newton’s own materials, with <span
+class="math inline">\(\kappa=\Lambda p\)</span> in place of <span
+class="math inline">\(\hbar/2\)</span>; the identification <span
+class="math inline">\(\Lambda=\lambda/2\)</span>, <span
+class="math inline">\(p=h/\lambda\)</span> makes <span
 class="math inline">\(\Lambda p=h/2\)</span>, which differs from <span
 class="math inline">\(\hbar/2\)</span> by <span
 class="math inline">\(\pi\)</span>.</p>
-<p>Newton denied M3, and the denial is explicit rather than inferred.
-Proposition XII of Book II Part III states that every ray is “put into a
-certain transient Constitution or State, which in the progress of the
-Ray returns at equal Intervals, and disposes the Ray at every return to
-be easily transmitted”. The disposition is a determinate periodic
-property carried by the ray, so its fate at a surface is fixed by its
-phase, and what a prior record fails to supply is knowledge rather than
-determination. On that reading a probe’s position and momentum are both
-definite, later records can recover the impulse it delivered, <span
+<p>Newton denied M3 explicitly, in print. Proposition XII of Book II
+Part III states that every ray is “put into a certain transient
+Constitution or State, which in the progress of the Ray returns at equal
+Intervals, and disposes the Ray at every return to be easily
+transmitted”. The disposition is a determinate periodic property carried
+by the ray, so its fate at a surface is fixed by its phase, and what a
+prior record fails to supply is knowledge rather than determination. On
+that reading a probe’s position and momentum are both definite, later
+records can recover the impulse it delivered, <span
 class="math inline">\(\kappa=0\)</span>, and the comparison has no
 floor. The countermodel is explicit: let the corpuscle travel freely
 after the mark to a screen at distance <span
@@ -636,9 +702,9 @@ about the fits whose negation he asserted in print. The gap between the
 interval of fits follows from that single commitment, and the separation
 of the two books is incidental to it. No counterfactual about what
 Newton might have discovered is needed, and none is offered.</p>
-<p>Theorem 6 adds a second junction, and it holds without any bound on
-shape. The premise that Theorem 6 uses is the central extension, that an
-impulse <span class="math inline">\(J\)</span> and a displacement <span
+<p>Theorem 7 adds a second junction, one with no spread in it. The
+premise that Theorem 7 uses is the central extension, that an impulse
+<span class="math inline">\(J\)</span> and a displacement <span
 class="math inline">\(d\)</span> compose only up to the phase <span
 class="math inline">\(Jd/\hbar\)</span> of their parallelogram, where
 Newton’s Corollary I composes them exactly. Newton’s fits already carry
@@ -648,7 +714,7 @@ and his determinism in Prop. XII does not touch it. So one of the two
 quantum premises, the one that squeezing cannot evade, is present in the
 <em>Opticks</em> in working form; what it lacks is the universality of
 <span class="math inline">\(\Lambda p\)</span> across colours.</p>
-<h2 id="newton-and-the-classics">7. Newton and the classics</h2>
+<h2 id="newton-and-the-classics">9. Newton and the classics</h2>
 <h3 id="what-newton-attempted">What Newton attempted</h3>
 <p>In the early 1690s Newton drafted a set of Classical Scholia to
 Propositions IV to IX of Book III, arguing that the oldest philosophers
@@ -673,6 +739,20 @@ metadata level here and both still to be read.</p>
 attempt was doxographic. He sought ancient authority for a law he had
 already proved, and the authority he sought was for the
 <em>conclusions</em> of Book III.</p>
+<p>Book I has one scholium on method, closing Section I, and it does
+touch the ancient question, from the geometers’ side. Newton prefers
+limits to the method of indivisibles, answers the objection that
+ultimate ratios would imply ultimate magnitudes, so that quantity would
+consist of indivisibles, <em>contra quam Euclides de
+incommensurabilibus, in libro decimo Elementorum, demonstravit</em>, and
+concludes <em>cave intelligas quantitates magnitudine determinatas, sed
+cogita semper diminuendas sine limite</em>: do not take them as
+quantities of determinate magnitude, but think of them as always
+diminishing without limit (<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md">Section
+I text</a>). Euclid is cited against least magnitudes, and the physical
+dispute about the cut, with the atomists who held least parts, is left
+aside.</p>
 <h3 id="the-ancient-arguments-he-passed-over">The ancient arguments he
 passed over</h3>
 <p>The ancient material that bears on the <em>method</em> of Book I is
@@ -790,14 +870,14 @@ all. The Vaiśeṣika sūtras in particular state a <strong>positive theory
 of propagation</strong>: motion is a succession of numerically distinct
 events, each carried to the next by a quantity the previous one
 deposits, and transmission through a medium is a chain in which what
-arrives is a later member than what was sent. That is the structure
-Theorem 2 quantifies. Its protocol-universality holds because the signal
-is a phase-space path whose total variation is unchanged by subdivision,
-which is the modern form of the claim that impulsion supplies only the
-first motion while the impression carries the rest. An ancient author
-had therefore already framed propagation as a bounded succession rather
-than a continuous traversal, and Newton’s classical preface reached for
-none of it.</p>
+arrives is a later member than what was sent. That is the structure the
+theorems quantify. The aperture bound of §10 is protocol-universal
+because the signal is a phase-space path whose total variation is
+unchanged by subdivision, which is the modern form of the claim that
+impulsion supplies only the first motion while the impression carries
+the rest. An ancient author had therefore already framed propagation as
+a bounded succession rather than a continuous traversal, and Newton’s
+classical preface reached for none of it.</p>
 <h3 id="the-hierarchy-the-ancient-premises-generate">The hierarchy the
 ancient premises generate</h3>
 <p>Read as premises about records rather than about geometry, the cone
@@ -805,7 +885,7 @@ and the arrow are the first members of a sequence whose next member is
 Newton’s comparison. The apparatus of §3 covers all of them; what
 changes is the order of the signal against the nuisance it must
 beat.</p>
-<p><strong>Theorem 5.</strong> In the model of §3, with every mark
+<p><strong>Theorem 9.</strong> In the model of §3, with every mark
 obeying <span
 class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>:</p>
 <ol type="i">
@@ -891,28 +971,28 @@ him: the Classical Scholia name Plutarch among the ancients said to have
 known the doctrine of gravitation, so the sling was available in a text
 he was mining for authority while writing the propositions it
 models.</p>
-<p>Theorem 5 explains why the exception stayed isolated, and Aristotle
+<p>Theorem 9 explains why the exception stayed isolated, and Aristotle
 supplies the other half of the reason. <em>De caelo</em> I.2 makes
 uniform circular motion the natural motion of the aether, needing no
 cause, which is the exact inverse of Definition V. For the heavens,
 then, curved motion was the default and straight motion the anomaly, so
-the sling illustrates a conclusion already held rather than posing a
-problem. The claim that the ancients treat rest as natural holds below
-the moon and is incomplete above it; the reference is at metadata level
-here. The ancient question is the first rung, whether the thing moves at
-all, with position as the only nuisance. The sling is the second rung,
-whether a force acts, with uniform motion as a further nuisance, and
-that rung cannot be stated until straight-line motion is held to need no
-account. Ancient physics largely does not hold that, so the sling has no
-work to do in it. The Vaiśeṣika comes closest by charging only the first
-motion to impulsion, and stops short of making a straight continuation
-free and a curved one costly.</p>
+the sling illustrated a conclusion already held. The claim that the
+ancients treat rest as natural holds below the moon and is incomplete
+above it; the reference is at metadata level here. The ancient question
+is the first rung, whether the thing moves at all, with position as the
+only nuisance. The sling is the second rung, whether a force acts, with
+uniform motion as a further nuisance, and that rung cannot be stated
+until straight-line motion is held to need no account. Ancient physics
+largely does not hold that, so the sling has no work to do in it. The
+Vaiśeṣika comes closest by charging only the first motion to impulsion,
+and stops short of making a straight continuation free and a curved one
+costly.</p>
 <p>Indian sources do supply one whirled object, and use it for a third
 purpose again. The firebrand circle, <em>alātacakra</em>, appears in
 Vasubandhu (Pradhan 189.23–24) to argue that because contact with the
 parts is successive, the awareness of a whole is really of the parts,
 and at Pradhan 33.9 with <em>āśuvṛttyā</em>, by rapid action. That is an
-argument about sampling, and it is the ancient form of what Theorem 5
+argument about sampling, and it is the ancient form of what Theorem 9
 says about records: below the mesh a succession is indistinguishable
 from the continuous thing it mimics. The <a
 href="arrow-not-sling.html">companion note</a> sets this out.</p>
@@ -924,7 +1004,7 @@ class="math inline">\(\tau_{\rm arrow}=8z^2\kappa/(mv^2)\)</span> every
 mark is consistent with rest. Aristotle’s diagnosis explains why, since
 a now carries no record and every datum is a window.</li>
 <li><strong>The Vaiśeṣika arrow and the chain of sounds.</strong> These
-supply the positive half the Greek material lacks. Theorem 5’s ladder is
+supply the positive half the Greek material lacks. Theorem 9’s ladder is
 their statement made quantitative: the succession is real, each step
 carries a bounded quantity to the next, and reading any one step costs
 <span class="math inline">\(\kappa\)</span>. The sound chain is the case
@@ -936,17 +1016,17 @@ about <em>records</em> rather than about the world. Below the mesh every
 mark is consistent with rest, so no recorded instant exhibits motion and
 travel is never displayed, only inferred from enough instants together.
 The theorem declines his further step from the records to the world, and
-Theorem 5(i) measures exactly how many instants are needed.</li>
+Theorem 9(i) measures exactly how many instants are needed.</li>
 <li><strong>Epicurus.</strong> His is the closest ancient statement to
 what the theorems say about records. Motion presents itself as
 continuous to sense and is a succession below it, and he names the
 fallacy of extrapolating the observed continuity downward. He draws the
-boundary where sense fails; Theorem 5 draws it at a mesh computed from
+boundary where sense fails; Theorem 9 draws it at a mesh computed from
 the mark cost, which is the difference between a threshold that is
 reported and one that is derived.</li>
 <li><strong>Umāsvāti.</strong> The Jain medium is the one ancient
 category with no counterpart in the theorem, and its absence is
-informative. Theorems 2 and 5 need no medium: what they price is the
+informative. Theorems 2 and 9 need no medium: what they price is the
 mark, not the motion. A doctrine on which motion requires a permitting
 substance predicts nothing about the cost of observing it, which is the
 respect in which this entry sets a limit on how far the reconstruction
@@ -959,6 +1039,15 @@ Chrysippus’s answer given a definite sense. This corrects a heuristic
 recorded earlier in this programme, that the cone is the arrow rotated
 into Euclidean time: the static problem lacks back-action, and
 back-action is the entire source of the floor.</li>
+<li><strong>Newton’s own objection.</strong> Answered on his terms. The
+mesh <span class="math inline">\(\tau_*\)</span> is a least
+<em>recorded</em> duration and implies no least magnitude: it moves with
+<span class="math inline">\(F\)</span>, <span
+class="math inline">\(m\)</span> and the confidence demanded, so
+Euclid’s incommensurables survive and the quantities of the geometry
+still diminish without limit, as the Section I scholium requires. What
+is bounded is the record, at the rate <span
+class="math inline">\(\hbar\)</span>.</li>
 <li><strong>The Mohists and Liu Hui.</strong> They are right about
 records. Cutting stops, and the endpoint is the mesh <span
 class="math inline">\(\tau_*=(96z^2m\kappa/F^2)^{1/3}\)</span>, which is
@@ -973,7 +1062,7 @@ only in finitely many steps.</li>
 <span class="math inline">\(F\)</span>, on <span
 class="math inline">\(m\)</span> and on the confidence demanded, so it
 is a dynamical resolution rather than a universal atom of time. A floor
-on action coexists with a continuum of instants, and Theorem 5 shows the
+on action coexists with a continuum of instants, and Theorem 9 shows the
 mesh moving as the force changes.</li>
 </ul>
 <p>The section’s claim about Newton is therefore double. He looked to
@@ -983,12 +1072,12 @@ that his own Lemmas turn on. And the premise that would have converted
 that dispute into a theorem, an indeterminacy in the least parts of
 light, is one the atomists supply in the form of a least part and one he
 denied in the single place where he had a measurement.</p>
-<h2 id="what-the-theorem-does-not-give">8. What the theorem does not
-give</h2>
-<p><strong>Preparations of unbounded extent.</strong> Theorem 2 concerns
-protocols that mark the trajectory. A protocol that prepares once, waits
-and measures once faces a different bound. In that case the two
-hypotheses differ by the phase-space displacement <span
+<h2 id="unmarked-preparations-and-prior-art">10. Unmarked preparations
+and prior art</h2>
+<p><strong>Preparations of unbounded extent.</strong> Theorems 2, 5 and
+6 concern protocols that mark the trajectory. A protocol that prepares
+once, waits and measures once faces a different bound. In that case the
+two hypotheses differ by the phase-space displacement <span
 class="math inline">\((-F t^2/2m,\ Ft)\)</span>, whose components have
 product exactly <span class="math inline">\(\tau\Delta E\)</span>, and
 Mandelstam–Tamm in the geometric form of <a
@@ -1011,10 +1100,10 @@ one does. In Newton’s quantities the first inequality is <span
 class="math inline">\(F\tau\cdot L+\frac{F\tau^2}{2m}\cdot
 P\ge(1-2\epsilon)\hbar\)</span>, the impulse of Proposition I against
 the position aperture plus the sagitta of Lemma X against the momentum
-aperture. It holds for every finite adaptive protocol of instruments,
-because the displacement is a phase-space path whose total variation
-does not grow when it is subdivided. The bound is tight: two narrow
-packets separated by <span
+aperture. It holds for every finite adaptive protocol of instruments, of
+any Kraus rank and with any apparatus memory, because the displacement
+is a phase-space path whose total variation does not grow when it is
+subdivided. The bound is tight: two narrow packets separated by <span
 class="math inline">\(\pi\hbar/(F\tau)\)</span> decide the comparison
 with error probability of order <span class="math inline">\(\tau\Delta
 E/\hbar\)</span>, for arbitrarily small <span
@@ -1031,57 +1120,32 @@ Caves, Thorne, Drever, Sandberg and Zimmermann, <em>Rev. Mod. Phys.</em>
 <strong>52</strong>, 341, 1980), and its status has been disputed since
 Yuen’s objection: Caves defended it (PRL <strong>54</strong>, 2465,
 1985) and Ozawa exhibited a measurement breaking it for free-mass
-position (PRL <strong>60</strong>, 385, 1988). That non-Gaussian
-preparations beat the limit, which is §7’s counterexample, is stated as
-a principle by Giovannetti, Lloyd and Maccone (<em>Science</em>
-<strong>306</strong>, 1330, 2004). The contribution here is universality
-over protocols with an explicit constant, the exact mark cost of Theorem
-4, and the identification of the premise. The inequality itself is not
-new.</p>
+position (PRL <strong>60</strong>, 385, 1988). Theorem 4’s coupling is
+von Neumann’s (1932), its inequality Robertson’s (1929) and its ancestor
+the Heisenberg microscope (1927); Bohr and Rosenfeld (1933) and Araki
+and Yanase (1960) set limits of this kind from field measurability and
+from conservation laws. That non-Gaussian preparations beat the limit,
+as the two-packet preparation above does, is stated as a principle by
+Giovannetti, Lloyd and Maccone (<em>Science</em> <strong>306</strong>,
+1330, 2004), and the correlated and grid probes of §§4–5 are Yuen’s
+contractive states and the grid states of Gottesman, Kitaev and Preskill
+(PRA <strong>64</strong>, 012310, 2001). The contribution here is
+universality over protocols and instruments with explicit constants, the
+sharp constant of the Gaussian form, the disturbance form of Theorem 6,
+the phase identities of §6 and the identification of the premise. The
+inequality <span class="math inline">\(F^2\tau^3\gtrsim m\hbar\)</span>
+itself is standard.</p>
 <p><strong>The classical theorem belongs to a literature it does not
 cite.</strong> Worst-case recovery of a linear functional from noisy
 linear data is optimal recovery in the sense of Micchelli and Rivlin
-(1977), and the apparatus series this programme built, together with
-Theorem 1’s worst-case form, are results of that kind; information-based
+(1977), and the apparatus series this programme built, together with the
+worst-case form of §3, are results of that kind; information-based
 complexity (Traub, Wasilkowski and Woźniakowski, 1988) is the same
 setting. The invariant-test step of Theorem 2 is standard (Lehmann and
 Romano). A referee from either community will ask why these go
 unmentioned, and the honest answer is that the theorems were derived
 without them.</p>
-<p><strong>Instruments outside the momentum-transfer class.</strong>
-Theorem 4 holds where <span class="math inline">\([\hat N,\hat
-D]=-i\hbar\)</span>. Its coupling is von Neumann’s (1932), its
-inequality Robertson’s (1929), and its ancestor the Heisenberg
-microscope (1927); Bohr and Rosenfeld (1933) and Araki and Yanase (1960)
-are where limits of this kind from field measurability and from
-conservation laws are set. The class is wider than it looks. For any
-coupling and any pointer, the commutation of the pointer with the body’s
-momentum after the mark gives <span class="math inline">\([\hat N,\hat
-D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]\)</span> (the
-joint-measurement argument of Arthurs and Goodman, PRL
-<strong>60</strong>, 2447, 1988), so every mark whose error and impulse
-do not depend on the body has conjugate error and impulse; if it also
-leaves the position alone it is a von Neumann mark on some canonical
-pair of the apparatus; and Theorem 8 holds for all such marks,
-position-displacing ones included (<a
-href="additive-noise-marks.html">additive-noise note</a>). For every
-instrument, body-dependent noise included, the offset between the
-hypotheses must be carried through each mark, and that costs the spread
-of <span class="math inline">\(c_j\hat D_j-mc_j&#39;\hat X_j\)</span>,
-with <span class="math inline">\(\hat D_j\)</span> and <span
-class="math inline">\(\hat X_j\)</span> the mark’s momentum and position
-disturbances; for the constant force,</p>
-<p><span class="math display">\[\frac s8\sum_j\Delta(\hat D_j)+\frac
-J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\hbar,\qquad
-J=F\tau,\]</span></p>
-<p>the sagitta paired with the momentum disturbance and the impulse with
-the position disturbance, as in the aperture bound (<a
-href="record-costs-disturbance.html">disturbance note</a>). The reading
-error does not enter, so Ozawa’s relation (PRA <strong>67</strong>,
-042105, 2003) is not needed; the calibration relation of Busch, Lahti
-and Werner (PRL <strong>111</strong>, 160405, 2013) is likewise unused.
-No error–disturbance relation is used above.</p>
-<h2 id="obligations-before-submission">9. Obligations before
+<h2 id="obligations-before-submission">11. Obligations before
 submission</h2>
 <p>Two, both on the history side, and both stated so that a reader can
 see what the present draft rests on.</p>
@@ -1089,7 +1153,7 @@ see what the present draft rests on.</p>
 <li><strong>Historiography, to be read rather than cited.</strong> On
 the <em>Opticks</em> side, Shapiro’s <em>Fits, Passions, and
 Paroxysms</em> (1993) on the theory of fits and how determinate Newton
-meant it, which is where §6’s central claim must be tested, and Sabra’s
+meant it, which is where §8’s central claim must be tested, and Sabra’s
 <em>Theories of Light from Descartes to Newton</em> (1981) for the
 context of Query 29. On the <em>Principia</em> side, Guicciardini’s
 <em>Reading the Principia</em> (1999) and his <em>Isaac Newton on
@@ -1105,7 +1169,7 @@ Rospatt (1995) on momentariness; Dhanani (1994) on kalām atomism and the
 Indian influence question; and Lloyd and Sivin’s <em>The Way and the
 Word</em>
 <ol start="2002" type="1">
-<li>as the methodological standard that protects §7 from the charge of
+<li>as the methodological standard that protects §9 from the charge of
 naive parallelism. Clagett (1959) for impetus, where Philoponus’
 <em>rhopē</em> is the Western counterpart of <em>saṃskāra</em>.</li>
 </ol></li>
@@ -1115,34 +1179,28 @@ printing; the <em>Principia</em> passages should be cited from Cohen and
 Whitman in place of the Motte text used here.</li>
 </ol>
 <p>Three mathematical items remain open and are not obligations of the
-paper: extending Theorem 4 beyond the momentum-transfer class; the
-general force law, for which the proof of Theorem 2 already pairs <span
-class="math inline">\(\int_0^\tau P&#39;&#39;T\)</span> against the
-Dirichlet energy and so bounds a norm of <span
-class="math inline">\(P&#39;&#39;\)</span>; and closing the constants
-between the worst-case form, the statistical form of Theorem 2 and the
-single-shot form of §7.</p>
-<h2 id="consequence-for-state">10. Consequence for STATE</h2>
+paper: the worst-case interval <span class="math inline">\(9\le
+F^2\tau_*^3/(m\kappa)\le36\)</span> of §3 and the gap between <span
+class="math inline">\(\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span> and
+<span class="math inline">\(1-2\epsilon\)</span> in the single-shot and
+protocol forms of the aperture bound; the combined accounting that
+removes the offset at the body in some intervals and carries it through
+the marks in others, as one optimization joining Theorem 6 and the
+aperture bound; and whether the constants <span
+class="math inline">\(1/8\)</span> and <span
+class="math inline">\(1/2\)</span> of (5) are attained.</p>
+<h2 id="consequence-for-state">12. Consequence for STATE</h2>
 <p>This is the synthesis the goal asked for: the Planck gap established
 with Newton-age arguments and their modern equivalents, in one document
 whose historical and technical halves are load-bearing for each other.
-The foundations content is Theorems 2 and 4 with §7’s honest
-positioning; the history content is §§5–7, resting on the source
-companions; the junction is the identification of M3 with Robertson’s
-inequality for the corpuscle. STATE’s queue reduces to §9’s obligations
-and the three open mathematical items.</p>
-<p>Revision, 2026-09-22: both quantum floors needed a bound on the shape
-of an uncertainty ellipse, since the aperture corollary and the mark
-floor each fall to zero under squeezing at fixed area. Eq. (3) and the
-<span class="math inline">\((L,P)\)</span> form of §8 are the corrected
-statements. A floor with no shape bound needs a quantity that squeezing
-cannot move, and Theorem 6 supplies it: the phase between Newton’s
-inscribed polygon and the parabola, whose Newton-age form is the fits
-count of §5. The same day Theorem 2’s constant became sharp, <span
-class="math inline">\(48\)</span> in place of <span
-class="math inline">\(9\)</span>, because the invariance under <span
-class="math inline">\(v_0\)</span> pins <span
-class="math inline">\(T\)</span> at both ends of the interval.</p>
+The foundations content is §§3–6: the sharp Gaussian floor, the mark
+cost, the disturbance floor for every instrument and the phase that no
+preparation moves. The history content is §§7–9, resting on the source
+companions. The junction is §8: M3 is Robertson’s inequality for
+Newton’s corpuscle, its universal form is that a record costs
+disturbance, and Newton’s fits carry a phase whose rate is proportional
+to momentum and whose unit <span class="math inline">\(\Lambda
+p\)</span> is a refraction invariant. STATE’s queue reduces to §11.</p>
 
 </main>
 <footer class="site"><div class="wrap">

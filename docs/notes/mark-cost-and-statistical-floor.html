@@ -79,42 +79,45 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <main class="wrap">
 <h1>The mark cost is exactly <span
 class="math inline">\(\hbar/2\)</span>, and the worst-case theorem
-survives as a statistical one</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mark-cost-and-statistical-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mark-cost-and-statistical-floor.pdf">PDF</a></p><p><strong>Correction, 2026-09-22.</strong> Section 4 of the first
-version applied Theorem B to every Gaussian probe. Theorem B assumes
-that each mark’s error and recoil are independent, and a probe whose
-position and momentum are correlated delivers correlated ones. The
-corrected statement is Theorem C: with correlation coefficient <span
-class="math inline">\(\rho\)</span> between a mark’s error and its
-recoil, the cost that enters the floor is <span
-class="math inline">\(\kappa_{\rm
-eff}=\delta\Delta(1-|\rho|)\ge\frac\hbar2\sqrt{(1-|\rho|)/(1+|\rho|)}\)</span>,
-so every protocol whose marks have <span
-class="math inline">\(|\rho_j|\le\rho\)</span> needs</p>
-<p><span class="math display">\[\tau\Delta E\ \ge\
-24\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .\]</span></p>
-<p>The value <span class="math inline">\(24z^2\hbar\)</span> is the
-uncorrelated case <span class="math inline">\(\rho=0\)</span>, which
-contains every coherent probe and every probe squeezed along its
-pointer’s axes. A three-mark protocol whose middle probe is squeezed
-along a rotated quadrature has <span
-class="math inline">\(\rho\to1\)</span> and decides the comparison at
-any force (Proposition D), and Yuen’s contractive states are this
-resource. The same mechanism corrects the aperture corollary of the <a
-href="planck-gap-probabilistic.html">probabilistic note</a>: in both
-places a floor of order <span class="math inline">\(\hbar\)</span> holds
-once the shape of the uncertainty ellipse is bounded, and its area alone
-leaves the floor free.</p>
-<p><strong>Sharpening, 2026-09-22.</strong> The constant of Theorem B
-improves from <span class="math inline">\(\frac29\)</span> to <span
+survives as a statistical one</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mark-cost-and-statistical-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mark-cost-and-statistical-floor.pdf">PDF</a></p><p>A mark made by coupling the body’s position to a probe has
+canonically conjugate error and recoil, so its cost is <span
+class="math inline">\(\kappa=\delta\Delta\ge\hbar/2\)</span> for every
+probe state (Theorem A). In the Gaussian statistical model every
+protocol of marks with <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span> needs <span
+class="math inline">\(\tau\Delta E\ge48z_{1-\epsilon}^2\kappa\)</span>,
+with a sharp constant (Theorem B), hence <span
+class="math inline">\(\tau\Delta E\ge24z_{1-\epsilon}^2\hbar\)</span>
+for Gaussian probes whose error and recoil are uncorrelated, about <span
+class="math inline">\(65\hbar\)</span> at five per cent error. A
+correlation <span class="math inline">\(\rho\)</span> between error and
+recoil multiplies the floor by <span
+class="math inline">\(\sqrt{(1-\rho)/(1+\rho)}\)</span> (Theorem C), and
+three marks attain that dependence within a factor <span
+class="math inline">\(4/3\)</span> (Proposition D), deciding at every
+force as <span class="math inline">\(\rho\to1\)</span>: this is the
+resource of Yuen’s contractive states. These floors concern Gaussian
+probes. For probes in arbitrary states and for every instrument, the
+statements that hold are the recoil bound of the <a
+href="record-costs-recoil.html">recoil note</a> and the disturbance
+bound of the <a href="record-costs-disturbance.html">disturbance
+note</a>.</p>
+<p><strong>Revisions, 2026-09-22.</strong> The first version applied
+Theorem B to every Gaussian probe. Theorem B assumes independent error
+and recoil, and a probe with correlated position and momentum delivers
+correlated ones, which Theorem C now prices. The constant of Theorem B
+improved from <span class="math inline">\(\frac29\)</span> to <span
 class="math inline">\(\frac1{24}\)</span> in <span
-class="math inline">\(d^2\,m\kappa/F^2\tau^3\)</span>. The invariance
+class="math inline">\(d^2\,m\kappa/F^2\tau^3\)</span>: the invariance
 under <span class="math inline">\(v_0\)</span> makes the function <span
 class="math inline">\(T\)</span> of the proof vanish at both ends, so
 the Poincaré constant <span class="math inline">\(\tau^3/12\)</span>
-replaces the earlier Cauchy–Schwarz bound <span
-class="math inline">\(\frac49\tau^3\)</span>. Dense protocols attain the
-new constant, so <span class="math inline">\(\tau\Delta
-E\ge48z^2\kappa\)</span> is sharp.</p>
+replaces the Cauchy–Schwarz bound <span
+class="math inline">\(\frac49\tau^3\)</span>. The same squeezing
+mechanism corrects the aperture corollary of the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>: a floor of
+order <span class="math inline">\(\hbar\)</span> needs the shape of the
+uncertainty ellipse bounded as well as its area.</p>
 <p>Reopening the question of what was wrong with the <a
 href="planck-gap-derivation.html">derivation note</a>: almost nothing.
 Its Proposition 6 claimed a positive quantum value for the mark cost
@@ -598,8 +601,7 @@ valid for both audiences</h2>
 <p>The user’s requirement is one paper that a foundations-of-physics
 referee and a history-and-philosophy-of-science referee both accept.
 That is attainable, because the historical analysis now does
-argumentative work rather than decorating a theorem. The structure
-is:</p>
+argumentative work. The structure is:</p>
 <ol type="1">
 <li><strong>The comparison and its limit.</strong> Newton’s Lemmas X and
 XI and the projectile Scholium, with the sagitta, the inertial–parabola
