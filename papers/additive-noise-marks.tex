@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Every mark with body-independent noise is a momentum-transfer mark},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{every-mark-with-body-independent-noise-is-a-momentum-transfer-mark}{%
+\section{Every mark with body-independent noise is a momentum-transfer
+mark}\label{every-mark-with-body-independent-noise-is-a-momentum-transfer-mark}}
+
+Theorem A of the \href{mark-cost-and-statistical-floor.md}{mark-cost
+note} was proved for the von Neumann coupling \(\lambda\hat y\hat P_A\).
+That class is all there is. For an arbitrary unitary coupling of the
+body to an apparatus and an arbitrary pointer, suppose the reading
+error, the delivered impulse and the position disturbance are operators
+of the apparatus alone, independent of the body's state. Then:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  the error \(\hat N\) and the impulse \(\hat D\) are canonically
+  conjugate, \([\hat N,\hat D]=-i\hbar\), and the position disturbance
+  \(\hat X\) commutes with both (Proposition 1);
+\item
+  if the mark leaves the position undisturbed, \(\hat X=0\), the
+  coupling is \(e^{-i\hat y\otimes\hat B/\hbar}\) followed by an
+  apparatus unitary, with the pointer canonically conjugate to
+  \(\hat B\): Theorem A's form exactly, with \(\hat B\) in place of
+  \(\lambda\hat P_A\) and extra apparatus degrees of freedom allowed
+  (Proposition 2);
+\item
+  the recoil bound \(s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar\) of the
+  \href{record-costs-recoil.md}{recoil note} holds for every protocol of
+  such marks, including those that disturb position (Proposition 3).
+\end{enumerate}
+
+This is option 1 of the plan the user set on 2026-09-22 for extending
+Theorem A. The commutator identity is the joint-measurement argument of
+Arthurs and Goodman
+(\href{https://doi.org/10.1103/PhysRevLett.60.2447}{PRL \textbf{60},
+2447, 1988}, metadata); the characterization and the transfer to the
+Galileo comparison are new here. Exploratory; no ledger promotion.
+
+\hypertarget{the-identity}{%
+\subsection{1. The identity}\label{the-identity}}
+
+A mark is a unitary \(U\) on body \(\otimes\) apparatus, applied
+impulsively, followed by reading a pointer \(\hat R\) of the apparatus.
+In the Heisenberg picture define
+
+\[\hat N=U^\dagger\hat RU-\hat y,\qquad \hat D=U^\dagger\hat pU-\hat p,\qquad
+\hat X=U^\dagger\hat yU-\hat y,\]
+
+the error of the reading as an estimate of the position before the mark,
+the delivered impulse, and the displacement of the position.
+
+\textbf{Proposition 1.} Always
+\([\hat N,\hat D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]\). If
+\(\hat N\), \(\hat D\) and \(\hat X\) commute with \(\hat y\) and
+\(\hat p\), then
+
+\[[\hat N,\hat D]=-i\hbar,\qquad[\hat X,\hat N]=[\hat X,\hat D]=0,\]
+
+so \(\delta^2\Delta^2-c^2\ge\hbar^2/4\) with \(c\) the symmetrized
+covariance of error and impulse, for every joint state.
+
+\emph{Proof.} \(\hat R\) acts on the apparatus and \(\hat p\) on the
+body, so
+\([U^\dagger\hat RU,U^\dagger\hat pU]=U^\dagger[\hat R,\hat p]U=0\),
+that is \([\hat y+\hat N,\hat p+\hat D]=0\); expanding with
+\([\hat y,\hat p]=i\hbar\) gives the identity. Under the hypothesis the
+cross terms vanish. The same argument with
+\([U^\dagger\hat RU,U^\dagger\hat yU]=0\) gives \([\hat N,\hat X]=0\),
+and the preservation of the canonical relation,
+\([\hat y+\hat X,\hat p+\hat D]=i\hbar\), gives \([\hat X,\hat D]=0\).
+The last statement is the Robertson--Schrödinger inequality. \(\square\)
+
+Operators commuting with \(\hat y\) and \(\hat p\) commute with every
+body operator, so the hypothesis says exactly that \(\hat N\),
+\(\hat D\), \(\hat X\) are apparatus operators.
+
+\hypertarget{the-class-is-the-momentum-transfer-class}{%
+\subsection{2. The class is the momentum-transfer
+class}\label{the-class-is-the-momentum-transfer-class}}
+
+\textbf{Proposition 2.} Suppose \(\hat X=0\) and \(\hat N\), \(\hat D\)
+are apparatus operators. Then
+\(U=(\mathbf 1\otimes U_0)\,e^{-i\hat y\otimes\hat B/\hbar}\) for an
+apparatus unitary \(U_0\) and a self-adjoint apparatus operator
+\(\hat B\), the delivered impulse is \(\hat D=-\hat B\), and
+\(\hat R_0=U_0^\dagger\hat RU_0\) satisfies
+\([\hat R_0,\hat B]=i\hbar\), with \(\hat N=\hat R_0\).
+
+\emph{Proof.} \(U^\dagger\hat yU=\hat y\) means \(U\) commutes with
+\(\hat y\), so in the position representation
+\(U=\int|y\rangle\langle y|\otimes U(y)\,dy\) with apparatus unitaries
+\(U(y)\), which we take differentiable in \(y\). Then
+\(\hat D=-i\hbar\,U(\hat y)^\dagger\partial_yU(\hat y)\), and \(\hat D\)
+commutes with \(\hat p\) only if it is independent of \(y\):
+\(U(y)^{-1}U'(y)\) is a constant \(-i\hat B/\hbar\), so
+\(U(y)=U_0e^{-iy\hat B/\hbar}\) and \(\hat D=-\hat B\). The reading is
+\(U^\dagger\hat RU=e^{i\hat y\hat B/\hbar}\hat R_0e^{-i\hat y\hat B/\hbar}\),
+and \(\hat N\) is independent of \(\hat y\) only if this equals
+\(\hat y+\hat R_0\), whose derivative in \(y\) gives
+\(\frac i\hbar[\hat B,\hat R_0]=\mathbf 1\). \(\square\)
+
+By the Stone--von Neumann theorem in its Weyl form, the pair
+\((\hat R_0,\hat B)\) is a canonical pair on one factor of the
+apparatus, \(L^2(\mathbb R)\otimes\mathcal K\), and \(\mathcal K\)
+carries whatever else the apparatus holds. So a mark that leaves the
+position alone and whose noise is independent of the body is a von
+Neumann mark: it couples the body's position to one canonical momentum
+of the apparatus and reads the conjugate coordinate. Theorems A, B and
+C, and the recoil theorem, apply to it verbatim, with
+\(\lambda\hat P_A\) replaced by \(\hat B\) and the probe's state
+replaced by its reduced state on the canonical factor, entangled with
+\(\mathcal K\) or not.
+
+\hypertarget{marks-that-also-displace-the-body}{%
+\subsection{3. Marks that also displace the
+body}\label{marks-that-also-displace-the-body}}
+
+A mark with \(\hat X\ne0\) adds the jump \(\hat X_j\) to the body's
+position at \(t_j\), and every later reading carries it. Proposition 1
+makes \(\hat X_j\) commute with the pair \((\hat N_j,\hat D_j)\), so it
+acts on the multiplicity factor \(\mathcal K\). An apparatus state that
+entangles \(\mathcal K\) with the canonical factor can correlate
+\(\hat X_j\) with the error and the impulse, so the Gaussian floors of
+the mark-cost note need that correlation bounded too. The recoil bound
+needs nothing more.
+
+\textbf{Proposition 3.} Theorem R of the recoil note holds for every
+protocol of marks whose \(\hat N_j\), \(\hat D_j\), \(\hat X_j\) are
+apparatus operators, with \(\Delta_j\) the spread of \(\hat D_j\).
+
+\emph{Proof.} Lemma 2 of the recoil note needs a unitary on apparatus
+\(j\) that translates \(\hat N_j\) by \(c_j\) and leaves everything else
+in the record unchanged. The record depends on apparatus \(j\) through
+\(\hat N_j\), \(\hat D_j\) and \(\hat X_j\) only. The unitary
+\(e^{ic_j\hat D_j/\hbar}\), applied to the initial state of apparatus
+\(j\), translates \(\hat N_j\) by \(c_j\) because
+\([\hat N_j,\hat D_j]=-i\hbar\) (for the von Neumann mark it is the
+translation of \(\hat Q_j\) by \(\lambda_jc_j\)), and fixes \(\hat D_j\)
+and \(\hat X_j\), which commute with \(\hat D_j\). Mandelstam--Tamm
+bounds its effect on the state by \(|c_j|\Delta_{\hat D_j}/\hbar\), and
+the rest of the proof of Theorem R is unchanged. \(\square\)
+
+\hypertarget{consequence-for-state}{%
+\subsection{4. Consequence for STATE}\label{consequence-for-state}}
+
+Option 1 is settled. Body-independent noise forces the canonical pair,
+the position-undisturbed marks with such noise are exactly the von
+Neumann marks, and the recoil bound
+\(s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar\) covers every mark with
+body-independent noise, position-displacing ones included. What remains
+outside is noise that depends on the body, where \([\hat y,\hat D]\) or
+\([\hat N,\hat p]\) survives in Proposition 1; that is Ozawa's setting
+and option 2.
+\end{document}

@@ -33,6 +33,7 @@ TRACKS = [
      carry the theorems, the Newton-age premises and the ancient dispute about
      the cut.""", [
         "planck-gap-paper", "polygon-lift-phase", "record-costs-recoil",
+        "additive-noise-marks",
         "mark-cost-and-statistical-floor",
         "planck-gap-derivation", "planck-gap-probabilistic",
         "newton-mark-floor", "newton-insertion-action",

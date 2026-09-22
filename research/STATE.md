@@ -84,9 +84,10 @@ the shape parameter explicit.
    with $\rho=0$ break the Gaussian floor (Proposition G); for every probe
    state, $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ (Theorem R, paper
    Theorem 8), within a constant of squeezed protocols at every squeezing.
-   **Next, option 1:** instruments whose error and recoil do not depend on
-   the body, by $[\hat N,\hat D]=-i\hbar$ from the commutation of pointer
-   and momentum. **Then option 2:** Ozawa's relation for body-dependent
+   **Option 1 done:** [the additive-noise note](../notes/additive-noise-marks.md).
+   Body-independent noise forces $[\hat N,\hat D]=-i\hbar$; with the
+   position undisturbed the mark is a von Neumann mark on a canonical pair
+   of the apparatus; Theorem R holds for the whole class. **Next, option 2:** Ozawa's relation for body-dependent
    instruments, where the body's own spreads enter.
 
 History, lower priority: the Section I Scholium, where Newton cites

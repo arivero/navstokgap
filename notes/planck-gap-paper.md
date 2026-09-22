@@ -825,11 +825,19 @@ where $[\hat N,\hat D]=-i\hbar$. Its coupling is von Neumann's (1932), its
 inequality Robertson's (1929), and its ancestor the Heisenberg microscope
 (1927); Bohr and Rosenfeld (1933) and Araki and Yanase (1960) are where
 limits of this kind from field measurability and from conservation laws are
-set. Ozawa's counterexamples to the naive
-Heisenberg product concern instruments where that commutator differs,
-and a general class would need the proved calibration relation of Busch,
-Lahti and Werner (PRL **111**, 160405, 2013) or an argument of another
-kind. No error--disturbance relation is used above.
+set. The class is wider than it looks. For any coupling and any pointer,
+the commutation of the pointer with the body's momentum after the mark
+gives $[\hat N,\hat D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]$ (the
+joint-measurement argument of Arthurs and Goodman, PRL **60**, 2447, 1988),
+so every mark whose error and impulse do not depend on the body has
+conjugate error and impulse; if it also leaves the position alone it is a
+von Neumann mark on some canonical pair of the apparatus; and Theorem 8
+holds for all such marks, position-displacing ones included
+([additive-noise note](additive-noise-marks.md)). What lies outside is
+noise that depends on the body, where Ozawa's relation (PRA **67**, 042105,
+2003) adds the body's own spreads; the proved calibration relation of
+Busch, Lahti and Werner (PRL **111**, 160405, 2013) is the other route.
+No error--disturbance relation is used above.
 
 ## 9. Obligations before submission
 
