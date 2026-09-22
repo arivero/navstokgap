@@ -3,6 +3,9 @@
 For public-facing writing, see the [blog drafts](blog/README.md), including
 the repository introduction prepared for `a.rivero.nom.es`.
 
+News behind the working mandate: [machine-assisted mathematics, 2026](AI_Mathematics_News_2026.md),
+dated entries with reading labels, updated 2026-09-22.
+
 Original fiction: [Zeno's Constant](fiction/zenos-constant.md), an alternate
 history in which Newton carries interference from optics into mechanics.
 

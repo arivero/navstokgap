@@ -15,6 +15,11 @@ The main theorem concerns smooth compact forcing, initially zero velocity,
 finite-energy velocity blowup, and alternatives C/D. The narrative motivates
 careful separation of integral control and local concentration.
 
+Aftermath, read 2026-09-22: the Clay Institute's statement of 2026-09-11,
+the priority dispute with Buckmaster and Alpöge, OpenAI's updated release
+and the Fields Medalists' open letter are recorded with reading labels in
+the [news digest](AI_Mathematics_News_2026.md).
+
 Repository use: [second blog entry](blog/after-the-navier-stokes-announcement.md).
 Its proposed transfer is methodological: identify the controlled observable
 and the missing uniform estimate. This reading adds no accepted mathematical

@@ -42,8 +42,13 @@ mass gap ([comparison](notes/comparison-and-bridges.md) §6).
 light of recent machine-assisted results on Millennium problems: the
 8 September 2026 Navier--Stokes breakdown proof by GPT-6 Astra's developer
 ([recorded companion](docs/OpenAI_NavierStokes_2026.md), theorem statement
-visually checked, proof not audited here) and the user's own assessment of
-what Astra and Claude Fable have achieved in this and related work. A proof
+visually checked, proof not audited here), which the Clay Institute calls
+"apparently settled" while its evaluation proceeds; the other 2026 results
+in the [news digest](docs/AI_Mathematics_News_2026.md), among them the
+critical-line proportion of zeta zeros raised to 67.2% with a Lean proof
+and Fermat's Last Theorem formalized end to end; and the user's own
+assessment of what Astra and Claude Fable have achieved in this and
+related work. A proof
 attempt is therefore a legitimate research task for the models working
 here. The right response to difficulty is a smaller theorem with explicit
 hypotheses, or a precise statement of the missing estimate, never a
