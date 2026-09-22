@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The record costs disturbance: a floor for every instrument</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The record costs disturbance: a floor for every instrument</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/record-costs-disturbance.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-costs-disturbance.pdf">PDF</a></p><p>For every protocol of marks of any kind (any unitary coupling of the
+body to an apparatus, any pointer, noise that depends on the body or
+not, any apparatus state), deciding at error probability <span
+class="math inline">\(\epsilon\)</span> between free motion and a
+constant force <span class="math inline">\(F\)</span> over a duration
+<span class="math inline">\(\tau\)</span>, for every initial state of
+the body, requires</p>
+<p><span class="math display">\[\boxed{\;\frac s8\sum_j\Delta(\hat
+D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\,\hbar,
+\qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,\;}\]</span></p>
+<p>where <span class="math inline">\(\hat D_j\)</span> and <span
+class="math inline">\(\hat X_j\)</span> are the impulse and the position
+jump that mark <span class="math inline">\(j\)</span> gives the body, as
+Heisenberg operators on body and apparatus, and <span
+class="math inline">\(\Delta\)</span> is their spread in the states that
+enter the mark. The reading error does not appear. The sagitta of Lemma
+X is paired with the momentum disturbance and the impulse of Proposition
+I with the position disturbance, the same pairing as in the aperture
+theorem of the <a href="planck-gap-probabilistic.html">probabilistic
+note</a>, <span
+class="math inline">\(J\,L+s\,P\ge(1-2\epsilon)\hbar\)</span>.</p>
+<p>This is option 2 of the plan set on 2026-09-22 for extending Theorem
+A, and it closes that plan. Ozawa’s error–disturbance relation (<a
+href="https://doi.org/10.1103/PhysRevA.67.042105">PRA
+<strong>67</strong>, 042105, 2003</a>, metadata), which was the expected
+tool for body-dependent noise, turns out to be unnecessary. The floor is
+a statement about disturbance alone, because the offset between the two
+hypotheses has to be carried through every mark, and what a mark does to
+that offset is fixed by what it does to the body. For von Neumann marks,
+which disturb only momentum, the theorem is the recoil theorem of the <a
+href="record-costs-recoil.html">recoil note</a>; for marks that read
+momentum, which disturb position, it is new. Exploratory; no ledger
+promotion.</p>
+<h2 id="setting">1. Setting</h2>
+<p>Transverse coordinate <span class="math inline">\(\hat y\)</span>,
+momentum <span class="math inline">\(\hat p\)</span>, mass <span
+class="math inline">\(m\)</span>, on <span
+class="math inline">\([0,\tau]\)</span>. Mark <span
+class="math inline">\(j\)</span> acts impulsively at <span
+class="math inline">\(t_j\)</span> by a unitary <span
+class="math inline">\(U_j\)</span> on body <span
+class="math inline">\(\otimes\)</span> apparatus <span
+class="math inline">\(j\)</span>, after which a pointer of apparatus
+<span class="math inline">\(j\)</span> is read; the apparatus starts in
+any state, and couplings may depend on earlier readings. Define the
+mark’s disturbances</p>
+<p><span class="math display">\[\hat D_j=U_j^\dagger\hat pU_j-\hat
+p,\qquad \hat X_j=U_j^\dagger\hat yU_j-\hat y,\]</span></p>
+<p>operators on body and apparatus, with no restriction on how they
+depend on either. Under <span class="math inline">\(\mathrm F\)</span>
+the body feels a force whose displacement relative to free motion from
+rest is <span class="math inline">\(P(t)\)</span>, <span
+class="math inline">\(P(0)=P&#39;(0)=0\)</span>. A test decides at error
+<span class="math inline">\(\epsilon\)</span> when its equal-prior error
+is at most <span class="math inline">\(\epsilon\)</span> for every pair
+of initial states.</p>
+<p>For a line <span class="math inline">\(a+bt\)</span> set <span
+class="math inline">\(c(t)=P(t)-a-bt\)</span> and <span
+class="math inline">\(w(t)=(c(t),\,mc&#39;(t))\)</span>, the
+<strong>offset</strong>: if the initial state under <span
+class="math inline">\(\mathrm F\)</span> is the initial state under
+<span class="math inline">\(\mathrm I\)</span> translated by <span
+class="math inline">\(w(0)=(-a,-mb)\)</span>, then between marks the
+state under <span class="math inline">\(\mathrm F\)</span> is the state
+under <span class="math inline">\(\mathrm I\)</span> translated by <span
+class="math inline">\(w(t)\)</span>, up to a phase, because free
+evolution carries a translation by <span
+class="math inline">\((c,mc&#39;)\)</span> to one by <span
+class="math inline">\((c+c&#39;\delta t,mc&#39;)\)</span> and the force
+adds <span class="math inline">\((P(t&#39;)-P(t)-P&#39;(t)\delta
+t,\,m(P&#39;(t&#39;)-P&#39;(t)))\)</span>. Write <span
+class="math inline">\(T(w)=e^{-iG_w}\)</span>, <span
+class="math inline">\(G_w=(c\hat p-mc&#39;\hat y)/\hbar\)</span>, for
+the translation by <span class="math inline">\(w\)</span>.</p>
+<h2 id="the-theorem">2. The theorem</h2>
+<p><strong>Theorem U.</strong> For every line <span
+class="math inline">\(a+bt\)</span> and every initial state <span
+class="math inline">\(\sigma\)</span>,</p>
+<p><span class="math display">\[1-2\epsilon\ \le\ \frac1\hbar\sum_j\
+\sup\ \Delta\bigl(c_j\hat D_j-mc_j&#39;\hat X_j\bigr),\]</span></p>
+<p>with <span class="math inline">\(c_j=c(t_j)\)</span>, <span
+class="math inline">\(c_j&#39;=c&#39;(t_j)\)</span>, and the supremum
+over the conditional states that can enter mark <span
+class="math inline">\(j\)</span> when the protocol is run from <span
+class="math inline">\(\sigma\)</span> with the offset carried through
+the earlier marks and then removed, translated by <span
+class="math inline">\(sw(t_j)\)</span> for <span
+class="math inline">\(s\in[0,1]\)</span>. For marks whose disturbances
+are apparatus operators, these are the apparatus’s own states and the
+body drops out.</p>
+<p><em>Proof.</em> Take the pair of initial states <span
+class="math inline">\(\sigma\)</span> under <span
+class="math inline">\(\mathrm I\)</span> and <span
+class="math inline">\(T(w(0))\sigma T(w(0))^\dagger\)</span> under <span
+class="math inline">\(\mathrm F\)</span>; a test deciding at error <span
+class="math inline">\(\epsilon\)</span> has <span
+class="math inline">\(\mathrm{TV}\ge1-2\epsilon\)</span> between their
+record distributions. Let hybrid <span
+class="math inline">\(H_r\)</span> run <span
+class="math inline">\(\mathrm F\)</span> with the offset through mark
+<span class="math inline">\(r\)</span>, remove the offset immediately
+after mark <span class="math inline">\(r\)</span>, and run <span
+class="math inline">\(\mathrm I\)</span> afterwards. By §1, removing the
+offset at any time between marks gives the same process, so <span
+class="math inline">\(H_0\)</span> is <span
+class="math inline">\(\mathrm I\)</span> from <span
+class="math inline">\(\sigma\)</span>, <span
+class="math inline">\(H_k\)</span> is <span
+class="math inline">\(\mathrm F\)</span> from the translated state, and
+<span class="math inline">\(H_{r-1}\)</span> and <span
+class="math inline">\(H_r\)</span> agree up to mark <span
+class="math inline">\(r\)</span> and differ only there: with <span
+class="math inline">\(\rho\)</span> the state entering mark <span
+class="math inline">\(r\)</span> in <span
+class="math inline">\(H_{r-1}\)</span> and <span
+class="math inline">\(w=w(t_r)\)</span>, <span
+class="math inline">\(H_{r-1}\)</span> applies <span
+class="math inline">\(U_r\)</span> and <span
+class="math inline">\(H_r\)</span> applies <span
+class="math inline">\(T(w)^\dagger U_rT(w)=E\,U_r\)</span> with <span
+class="math inline">\(E=T(w)^\dagger U_rT(w)U_r^\dagger\)</span>. The
+remainders are the same channel, so by data processing and the triangle
+inequality</p>
+<p><span
+class="math display">\[\mathrm{TV}\le\sum_r\tfrac12\bigl\|E\rho&#39;E^\dagger-\rho&#39;\bigr\|_1,\qquad\rho&#39;=U_r\rho
+U_r^\dagger .\]</span></p>
+<p>For <span
+class="math inline">\(E(u)=e^{iuG}U_re^{-iuG}U_r^\dagger\)</span>, <span
+class="math inline">\(u\in[0,1]\)</span>, <span
+class="math inline">\(G=G_w\)</span>, one has <span
+class="math inline">\(\frac{d}{du}E(u)=iK(u)E(u)\)</span> with <span
+class="math inline">\(K(u)=e^{iuG}(G-U_rGU_r^\dagger)e^{-iuG}\)</span>.
+The Mandelstam–Tamm bound in the geometric form of Anandan and Aharonov
+bounds the Fubini–Study angle between a purification of <span
+class="math inline">\(\rho&#39;\)</span> and its image under <span
+class="math inline">\(E=E(1)\)</span> by <span
+class="math inline">\(\int_0^1\Delta K(u)\,du\)</span>, each spread
+taken in the state <span
+class="math inline">\(E(u)\rho&#39;E(u)^\dagger\)</span>, and the trace
+distance by the sine of that angle, as in Theorem 2 of the probabilistic
+note. Conjugating back, the spread of <span
+class="math inline">\(K(u)\)</span> in <span
+class="math inline">\(E(u)\rho&#39;E(u)^\dagger\)</span> equals the
+spread of <span class="math inline">\(U_r^\dagger GU_r-G\)</span> in
+<span class="math inline">\(T(uw)\rho T(uw)^\dagger\)</span>, and</p>
+<p><span class="math display">\[U_r^\dagger
+G_wU_r-G_w=\frac1\hbar\bigl(c\,\hat D_r-mc&#39;\,\hat
+X_r\bigr).\]</span></p>
+<p>Adaptive couplings replace each term by its supremum over the
+conditional states, as in the hybrid argument of the probabilistic note.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Corollary U1 (constant force).</strong> Take the line of best
+uniform approximation, <span class="math inline">\(a+bt=\frac F{2m}(\tau
+t-\tau^2/8)\)</span>. Then <span class="math inline">\(|c_j|\le
+s/8\)</span> and <span
+class="math inline">\(m|c_j&#39;|=F|t_j-\tau/2|\le J/2\)</span>, and the
+spread is a seminorm, so</p>
+<p><span class="math display">\[(1-2\epsilon)\hbar\ \le\ \frac
+s8\sum_j\sup\Delta(\hat D_j)+\frac J2\sum_j\sup\Delta(\hat X_j).
+\qquad\square\]</span></p>
+<p>For a general force the same step gives any line’s <span
+class="math inline">\(\max|c|\)</span> and <span
+class="math inline">\(m\max|c&#39;|\)</span> in place of <span
+class="math inline">\(s/8\)</span> and <span
+class="math inline">\(J/2\)</span>.</p>
+<h2 id="what-the-theorem-covers">3. What the theorem covers</h2>
+<p><strong>Von Neumann marks.</strong> <span
+class="math inline">\(U=e^{-i\lambda\hat y\hat P_A/\hbar}\)</span> gives
+<span class="math inline">\(\hat D=-\lambda\hat P_A\)</span> and <span
+class="math inline">\(\hat X=0\)</span>, so Theorem U is Theorem R of
+the recoil note, <span
+class="math inline">\(1-2\epsilon\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|c_j|\)</span>.</p>
+<p><strong>Marks that read momentum.</strong> <span
+class="math inline">\(U=e^{-i\mu\hat p\hat Q_A/\hbar}\)</span> shifts
+the pointer momentum by <span class="math inline">\(-\mu\hat p\)</span>
+and gives <span class="math inline">\(\hat D=0\)</span>, <span
+class="math inline">\(\hat X=\mu\hat Q_A\)</span>. A momentum mark
+therefore pays in position jumps, and its term is paired with the
+impulse <span class="math inline">\(J\)</span>: recording that the body
+has gained momentum costs an undetermined displacement.</p>
+<p><strong>Marks with body-independent noise that also displace
+position.</strong> The <a
+href="additive-noise-marks.html">additive-noise note</a> shows that
+Theorem R holds for them with the recoil spread alone, since the jump
+<span class="math inline">\(\hat X_j\)</span> then commutes with the
+reading and the kick. Theorem U gives the weaker bound with the extra
+<span class="math inline">\(J\)</span>-term; the difference is that
+Theorem U removes the offset after every mark, while the argument there
+carries it to the end.</p>
+<p><strong>Body-dependent noise.</strong> When <span
+class="math inline">\(\hat D_j\)</span> or <span
+class="math inline">\(\hat X_j\)</span> involves the body, their spreads
+involve the body’s state, and the bound must hold for every initial
+state, including the most benign. A kick <span
+class="math inline">\(\hat D=-\lambda\hat P_A+\kappa\hat y\)</span> with
+a fresh probe uncorrelated with the body has <span
+class="math inline">\(\Delta(\hat D)^2=\lambda^2\Delta\hat
+P_A^2+\kappa^2\Delta\hat y^2\ge\lambda^2\Delta\hat P_A^2\)</span>, so
+body dependence adds to the cost and never lowers it. Lowering it needs
+an apparatus already correlated with the body, which an earlier mark can
+create; Theorem U accounts for that through the conditional states.</p>
+<p><strong>Why the error drops out.</strong> Ozawa’s relation bounds a
+product of error and disturbance and includes the body’s own spreads.
+Theorem U needs only the second factor. The test can separate the
+hypotheses only if some mark responds differently to the offset, and how
+a mark responds to a translation of the body is fixed by the generator
+<span class="math inline">\(U^\dagger G_wU-G_w\)</span>, which is a
+combination of disturbances. The reading error enters the sufficiency
+side, how close a given protocol comes to the bound.</p>
+<h2 id="the-floors-now-complete">4. The floors, now complete</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Statement</th>
+<th>Holds for</th>
+<th>Pays in</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Phase <span class="math inline">\(\mathcal K_\tau/\hbar\)</span>
+between the motion and its inscribed polygon (<a
+href="polygon-lift-phase.html">polygon-lift note</a>)</td>
+<td>Every body state</td>
+<td>Nothing: a c-number</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(J\,L+s\,P\ge(1-2\epsilon)\hbar\)</span>
+(probabilistic note)</td>
+<td>Every instrument, bounded laboratory</td>
+<td>The body’s spreads <span class="math inline">\(L\)</span>, <span
+class="math inline">\(P\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac s8\sum\Delta(\hat D_j)+\frac
+J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar\)</span> (Theorem U)</td>
+<td>Every instrument, every body state</td>
+<td>The marks’ disturbances</td>
+</tr>
+<tr class="even">
+<td><span
+class="math inline">\(s\sum\Delta_j\ge8(1-2\epsilon)\hbar\)</span>
+(recoil note)</td>
+<td>Body-independent noise, every probe state</td>
+<td>Recoil</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tau\Delta
+E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span>, sharp (mark-cost
+note)</td>
+<td>Gaussian probes with correlation at most <span
+class="math inline">\(\rho\)</span></td>
+<td>Resolution times recoil</td>
+</tr>
+</tbody>
+</table>
+<p>The two universal statements are the second and third rows. Both are
+hybrid accountings of one offset: the aperture theorem removes it at the
+body between marks and pays in the body’s spreads; Theorem U carries it
+through the marks and pays in their disturbances. Both are necessary,
+and in both Newton’s two quantities appear with the same partners: the
+sagitta with momentum, the impulse with position.</p>
+<p><strong>M3, final form.</strong> The premise that carries <span
+class="math inline">\(h&gt;0\)</span> into the recorded Galileo
+comparison, for every instrument, is that a record costs disturbance: a
+mark that registers the sagitta must leave the body’s impulse
+undetermined, and a mark that registers the impulse must leave its
+position undetermined, with total exchange rate <span
+class="math inline">\(\hbar\)</span>.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>Theorem A’s extension is finished: option 3 (every probe state, the
+recoil note), option 1 (body-independent noise, the additive-noise note)
+and option 2 (every instrument, Theorem U). The universal floor for
+arbitrary instruments is a disturbance bound paired with Newton’s
+sagitta and impulse, and it needs no error–disturbance relation. What
+remains on the modern leg is to state the combined accounting, which
+removes the offset at the body in some intervals and carries it through
+the marks in others, as one optimization, and to decide whether its
+minimum is attained.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

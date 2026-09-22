@@ -87,8 +87,11 @@ the shape parameter explicit.
    **Option 1 done:** [the additive-noise note](../notes/additive-noise-marks.md).
    Body-independent noise forces $[\hat N,\hat D]=-i\hbar$; with the
    position undisturbed the mark is a von Neumann mark on a canonical pair
-   of the apparatus; Theorem R holds for the whole class. **Next, option 2:** Ozawa's relation for body-dependent
-   instruments, where the body's own spreads enter.
+   of the apparatus; Theorem R holds for the whole class. **Option 2 done:** [the disturbance note](../notes/record-costs-disturbance.md).
+   For every instrument, $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$
+   (Theorem U); the reading error drops out and Ozawa's relation is not
+   needed. Open: the combined accounting (offset removed at the body in
+   some intervals, carried through marks in others) as one optimization.
 
 History, lower priority: the Section I Scholium, where Newton cites
 Euclid X against least magnitudes, as the first entry of the Book I

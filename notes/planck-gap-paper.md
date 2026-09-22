@@ -833,11 +833,20 @@ so every mark whose error and impulse do not depend on the body has
 conjugate error and impulse; if it also leaves the position alone it is a
 von Neumann mark on some canonical pair of the apparatus; and Theorem 8
 holds for all such marks, position-displacing ones included
-([additive-noise note](additive-noise-marks.md)). What lies outside is
-noise that depends on the body, where Ozawa's relation (PRA **67**, 042105,
-2003) adds the body's own spreads; the proved calibration relation of
-Busch, Lahti and Werner (PRL **111**, 160405, 2013) is the other route.
-No error--disturbance relation is used above.
+([additive-noise note](additive-noise-marks.md)). For every instrument,
+body-dependent noise included, the offset between the hypotheses must be
+carried through each mark, and that costs the spread of
+$c_j\hat D_j-mc_j'\hat X_j$, with $\hat D_j$ and $\hat X_j$ the mark's
+momentum and position disturbances; for the constant force,
+
+$$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\hbar,\qquad J=F\tau,$$
+
+the sagitta paired with the momentum disturbance and the impulse with the
+position disturbance, as in the aperture bound
+([disturbance note](record-costs-disturbance.md)). The reading error does
+not enter, so Ozawa's relation (PRA **67**, 042105, 2003) is not needed;
+the calibration relation of Busch, Lahti and Werner (PRL **111**, 160405,
+2013) is likewise unused. No error--disturbance relation is used above.
 
 ## 9. Obligations before submission
 
