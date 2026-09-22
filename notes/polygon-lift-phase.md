@@ -24,13 +24,14 @@ that step. Three consequences follow.
 - **Ordering.** The same Weyl increments composed in reverse order give
   the phase $\Phi_N=F^2(\tau^3-\sum_j\tau_j^3)/(6m\hbar)$ relative to the
   chronological order, the largest over all orderings.
-- **Conservation.** For every partition,
+- **A partition identity.** For every partition,
 
   $$\Phi_N+4\theta_N=\frac{F^2\tau^3}{6m\hbar}=\frac{\tau\Delta E}{3\hbar}
   =\frac{F}{v\hbar}\,A_{\rm inertial,fall},$$
 
-  so refinement moves phase from the polygon's segments into the ordering
-  holonomy and keeps the total fixed at the Galileo area over $\hbar$.
+  an identity between two quantities each linear in $\sum_j\tau_j^3$: the
+  ordering holonomy carries the part of the Galileo area that refinement
+  keeps, and the polygon's segments carry the part it removes.
 
 Both phases are c-numbers, so squeezing, mixing or any other choice of
 body state leaves them unchanged. That is the property the two quantum
@@ -40,9 +41,14 @@ floors lacked, as corrected on 2026-09-22 in the
 is the chord lens of the
 [constant-force note](principia-constant-force-action.md), and the closed
 loop of [N01](newton-insertion-action.md) is another instance of Lemma 2
-below. New here are the identity for every partition, the insertion law,
-the ordering holonomy and the conservation law. Exploratory; no ledger
-promotion.
+below. The phase of Theorem 1 is also known from numerical analysis: the
+inscribed polygon is the kick--drift--kick (Strang) splitting of the
+propagator, and for a linear potential that splitting is exact up to a
+c-number, the double commutator of the potential with the kinetic term.
+New here are the reading of that c-number in Newton's areas (Lemma XI's
+tangent areas, Archimedes' segments and inscribed triangles), the
+insertion law, the ordering holonomy and Theorem 7's identity between the
+phase and the mark bound. Exploratory; no ledger promotion.
 
 ## 1. Setting and the exact lift
 
@@ -65,9 +71,9 @@ path** is
 $$z_f(t)=\bigl(\alpha_f(t),\beta_f(t)\bigr)
 =\Bigl(-\frac1m\int_0^ts\,f(s)\,ds,\ \int_0^tf(s)\,ds\Bigr),$$
 
-the accumulated transverse displacement relative to free motion and the
-accumulated impulse. For the constant force, $z_F(t)=(-Ft^2/2m,\ Ft)$, a
-parabola in the phase plane.
+the transverse displacement relative to free motion referred back to
+$t=0$ by the free flow, and the accumulated impulse. For the constant
+force, $z_F(t)=(-Ft^2/2m,\ Ft)$, a parabola in the phase plane.
 
 **Lemma 1.** $W_f(\tau)=\exp\bigl[\frac{i}{2\hbar}\int_0^\tau\omega(z_f,dz_f)\bigr]\,D\bigl(z_f(\tau)\bigr)$.
 
@@ -143,7 +149,13 @@ $S_j=vF\tau_j^3/12m$. Then $\frac{F}{2v}S_j=\frac{F^2\tau_j^3}{24m}$. $\square$
 Lemma XI's tangent area for the step is $A_j=vF\tau_j^3/6m=2S_j$, so
 $\theta_N=(F/4v\hbar)\sum_jA_j$, and Proposition 1 of the
 [paper](planck-gap-paper.md) is the statement that this sum vanishes with
-the mesh.
+the mesh. In the phase plane the polygon's path is the circumscribed
+tangent polygon of the parabola $z_F$: each impulse at $t_j$ moves along
+the tangent direction $(-t_j/m,1)$, and the two paths touch at every
+$z_F(t_j)$, which is why the area between them splits step by step. The
+phase is also the difference of the two histories' classical actions
+between the same endpoints, whatever the endpoints, which is why a
+comparison of quadratic Hamiltonians leaves only a global phase.
 
 **Corollary 2 (insertion).** Replacing step $j$ by steps $\lambda\tau_j$ and
 $(1-\lambda)\tau_j$ lowers $\theta_N$ by
@@ -173,7 +185,7 @@ $\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, has the same form, obtained
 there from the cost of a mark and here from the phase of a segment with no
 apparatus at all.
 
-## 3. The ordering holonomy and the conservation law
+## 3. The ordering holonomy and a partition identity
 
 Keep the curve's step operators $V_j=e^{i\varphi_j}D(\delta z_j)$ and
 compose them in another order. For a permutation $\sigma$, write $U_\sigma$
@@ -201,22 +213,24 @@ $\sum_{i<j}\tau_i\tau_j(c_j-c_i)=\frac12\sum_{i\ne j}\tau_i^2\tau_j+\sum_{i<k<j}
 and $(\sum_j\tau_j)^3=\sum_j\tau_j^3+3\sum_{i\ne j}\tau_i^2\tau_j+6\sum_{i<k<j}\tau_i\tau_k\tau_j$
 gives $\frac16(\tau^3-\sum_j\tau_j^3)$. $\square$
 
-**Corollary 4 (conservation).** $\Phi_N+4\theta_N=F^2\tau^3/(6m\hbar)$ for
+**Corollary 4 (a partition identity).** $\Phi_N+4\theta_N=F^2\tau^3/(6m\hbar)$ for
 every partition, and $F^2\tau^3/6m=\tau\Delta E/3=(F/v)A_{\rm inertial,fall}$
 with $A_{\rm inertial,fall}=vF\tau^3/6m$ the paper's area (1). $\square$
 
 In areas, $\hbar\Phi_N=(F/v)(A-\sum_jA_j)$ and $4\hbar\theta_N=(F/v)\sum_jA_j$:
 the ordering holonomy carries the part of the Galileo area that refinement
-keeps, the polygon defect carries the part that Proposition 1 sends to zero,
-and the weighted total is fixed. For the uniform partition,
+keeps, and the polygon defect carries the part that Proposition 1 sends to
+zero. For the uniform partition,
 $\Phi_N=\frac{\tau\Delta E}{3\hbar}(1-N^{-2})$.
 
 The chronological and reversed products realize the same displacement, so
-the holonomy is a property of the composition law. Realizing a reversed
-order in the laboratory needs displacements as well as impulses, since an
-impulse applied at the wrong time must be translated back; trapped-ion
-practice supplies such operations. Theorem 1 needs only two force
-histories that act on a real body.
+the holonomy is a property of the composition law. No force history
+acting on a body realizes a reordering other than the chronological one:
+an impulse applied at the wrong time must be translated back, so a
+reversed order needs displacements as well as impulses, which trapped-ion
+practice supplies. Theorem 3 is therefore a statement about the
+composition law, and Theorem 1 is the one that needs only two force
+histories acting on a real body.
 
 ## 4. What the phases give as a record
 
@@ -225,16 +239,19 @@ N01 §4. The body ends in the same state on both arms, so the qubit
 acquires the relative phase $\theta_N$ and nothing else, and the optimal
 single-shot error in deciding polygon against curve is
 $\epsilon=\frac12(1-|\sin(\theta_N/2)|)$, with N01's formula for $n$
-copies. A single step is resolved from its chord at error $\epsilon$ only if
+copies. In one controlled pass, a single step is resolved from its chord
+at error $\epsilon$ only if
 
 $$\frac{F^2\tau_j^3}{24m\hbar}\ \ge\ 2\arcsin(1-2\epsilon),\qquad
 \tau_j\ \ge\ \left(\frac{48\,m\hbar\,\arcsin(1-2\epsilon)}{F^2}\right)^{1/3},$$
 
 for every state of the body, pure or mixed, squeezed or not. The bound
-concerns this readout: the body's own displacement is a separate record,
-priced by the mark and aperture theorems, and squeezing acts on that
-record. What the phase supplies is the part of the signal that no
-preparation can move.
+concerns this readout and its resource, the number of controlled passes:
+$k$ passes accumulate $k\theta_N$ and lower the threshold on $\tau_j$ by
+$k^{1/3}$, as $n$ copies do through N01's formula. The body's own
+displacement is a separate record, priced by the mark and aperture
+theorems, and squeezing acts on that record. What the phase supplies is
+the part of the signal that no preparation of the body can move.
 
 ## 5. The premise, restated
 
@@ -265,6 +282,14 @@ $$\Lambda\,v=\text{const across media},\qquad\text{hence}\qquad
 \Lambda\,p=\text{const across media}$$
 
 for each colour, the corpuscle's mass being unchanged by refraction.
+That Newton's interval shortens where his corpuscle speeds up, so that it
+varies inversely with the speed as de Broglie's wavelength does, is an
+old observation (Sakkopoulos,
+[Eur. J. Phys. **9**, 123, 1988](https://doi.org/10.1088/0143-0807/9/2/007),
+metadata; the fits are discussed in Whittaker's *History of the Theories
+of Aether and Electricity*, and de Broglie's Nobel lecture of 1929 names
+them). What is ours is the continuous-speed extension below and its
+identification with Lemma XI's areas.
 
 **Proposition 5.** Suppose, extending Props. X and XVII from a step in
 the medium to a continuously varying speed, that a corpuscle's fits
@@ -293,15 +318,25 @@ velocity at every vertex. Every ingredient is his: Lemma XI's areas, the
 measured $\Lambda=1/89000$ inch, the refraction invariance of $\Lambda p$
 from Props. X and XVII, and the fits as a determinate periodic
 disposition. The unknown is $p$, which he could not measure. Against the
-quantum statement, with $\Lambda=\lambda/2$ and $\lambda p=2\pi\hbar$, the
-fits phase in radians is $4\theta_N$: one factor $2$ because Newton's
+quantum statement, with $\Lambda=\lambda/2$ and $\lambda p=2\pi\hbar$, and
+counting $2\pi$ per interval, a full return of the disposition from one
+fit of easy reflexion to the next (the period of the thin-film intensity),
+the fits phase in radians is $4\theta_N$: one factor $2$ because Newton's
 interval is half a wavelength, and one because $\Delta W=2\Delta S$ for
-this pair of histories.
+this pair of histories. The wave's own phase, which advances $\pi$ per
+interval, differs by $2\theta_N$.
 
-The determinism of Prop. XII is untouched by this; what the fits supply is
-a phase whose rate is proportional to momentum, and that is the content
-of the central extension. So the premise that carries $h>0$ in the
-squeeze-immune form is present in Newton's optics, with $\Lambda p$ a
+The determinism of Prop. XII is untouched by this, and it makes Newton's
+version stronger than the quantum one in one respect: his fit is a
+determinate property of a single corpuscle, so on his terms the polygon
+and the curve would be told apart on one corpuscle at the next surface,
+where the quantum phase is visible only in a superposition. What the fits
+supply is a phase whose rate is proportional to momentum, and a count of
+such a phase is order-sensitive in the parallelogram sense: a
+displacement $d$ followed by a kick $J$ counts $p\,d$, the kick first
+counts $(p+J)\,d$, and the difference $Jd$ is the area of Corollary I's
+parallelogram. So a per-colour form of the premise that carries $h>0$ in
+the squeeze-immune form is present in Newton's optics, with $\Lambda p$ a
 positive refraction invariant. Two limits remain. Prop. XV's rule for
 oblique emergence, a product of two secants, is more complicated than a
 count of intervals along the path, so Proposition 5's extension is ours.
@@ -333,7 +368,7 @@ $$W_{\rm poly}=\exp\Bigl[\frac{i}{\hbar}\sum_j\mathcal K_{\tau_j}[f]\Bigr]W_f .$
 
 Inserting vertices never raises the phase:
 $\sum_j\mathcal K_{\tau_j}[f]\le\mathcal K_\tau[f]$. (b) For every
-protocol of marks with uncorrelated error and recoil and
+protocol of Gaussian marks with uncorrelated error and recoil and
 $\delta_j\Delta_j\ge\kappa$, with the initial position and velocity
 unknown, the deflection between the motion under $f$ and free motion
 obeys
@@ -378,9 +413,14 @@ history. $\mathcal K_\tau$ is what Newton's refinement removes: it is the
 kinetic action of the motion relative to its chord, and for a constant
 force it is the chord's segment times $F/2v$. Planck's constant converts
 it into the phase by which the motion differs from its inscribed polygon,
-a c-number that no preparation moves; the mark cost converts it into the
-largest statistical distance any record of the motion can reach. At
-$\kappa=\hbar/2$ the second is exactly twice the first. The $24$ in
+a c-number that no preparation of the body moves; the mark cost converts
+it into the largest statistical distance any record of the motion can
+reach within the Gaussian model of marks. At $\kappa=\hbar/2$ the second is
+exactly twice the first. The two legs stand on different footing: the
+phase is exact and uses the Weyl relations alone, while the mark bound
+holds inside a linear Gaussian model with the trade-off
+$\delta\Delta\ge\kappa$, a model that squeezing and grid probes leave, as the
+[recoil note](record-costs-recoil.md) records. The $24$ in
 Theorem 1's $F^2\tau^3/24m$ and in the sharp bound
 $d^2\le F^2\tau^3/24m\kappa$ of the paper's Theorem 2 is one integral,
 $\iint G_\tau=\tau^3/12$, multiplied by $F^2/2m$.

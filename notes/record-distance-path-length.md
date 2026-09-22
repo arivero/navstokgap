@@ -36,11 +36,29 @@ $$\hbar\arcsin(1-2\epsilon)\ \le\ \int_0^\tau|f(u)|\,\min\bigl(L(u),R(u)\bigr)\,
 R(u)=\frac1m\sum_j\Delta_j\,G_\tau(t_j,u),$$
 
 with $G_\tau$ the Dirichlet Green's function of the interval. $R(u)$ is
-the **recoil length**: the position uncertainty at time $u$, measured from
-the chord pinned at the ends, that the marks' recoils produce. So the
-force is paid in length, at every moment the smaller of the body's
-spread and the marks' recoil length (Corollary M1). Exploratory; no
-ledger promotion.
+the **recoil length**: the marks' recoil spreads weighted by the
+displacement each one would produce at time $u$ relative to the chord
+pinned at the ends, summed, which is a length (an upper bound on the
+spread those recoils produce, since independent recoils add in
+quadrature). So the force is paid in length, at every moment the smaller
+of the body's spread and the marks' recoil length (Corollary M1).
+
+*Prior art.* Lemma 1 is the mixed-state Mandelstam--Tamm bound in the
+Bures angle (Uhlmann, [Phys. Lett. A **161**, 329, 1992](https://doi.org/10.1016/0375-9601(92)90555-Z);
+Anandan and Aharonov, [PRL **65**, 1697, 1990](https://doi.org/10.1103/PhysRevLett.65.1697));
+statistical distance as a path length is Wootters's
+([PRD **23**, 357, 1981](https://doi.org/10.1103/PhysRevD.23.357)) and
+Braunstein and Caves's
+([PRL **72**, 3439, 1994](https://doi.org/10.1103/PhysRevLett.72.3439)); the
+hybrid chain is the hybrid argument of Bennett, Bernstein, Brassard and
+Vazirani ([SIAM J. Comput. **26**, 1510, 1997](https://doi.org/10.1137/S0097539796300933));
+Bures-angle speed limits for general processes are those of Taddei and
+coauthors ([PRL **110**, 050402, 2013](https://doi.org/10.1103/PhysRevLett.110.050402));
+and the position-spread form of force sensitivity is the waveform
+estimation limit of Tsang, Wiseman and Caves
+([PRL **106**, 090401, 2011](https://doi.org/10.1103/PhysRevLett.106.090401));
+all metadata. New here are the split accounting of Theorem M and the
+recoil length of Corollary M1. Exploratory; no ledger promotion.
 
 ## 1. The Bures angle
 
@@ -99,10 +117,13 @@ $\Sigma\ge A\ge\arcsin(1-2\epsilon)$. In the recoil theorem the two
 probe families are products, and the chain replaces one factor at a
 time. $\square$
 
-The constant is sharp. For a single shot it is Theorem 1 of the
-probabilistic note, and the aperture bound's protocol form is now the
-same inequality with the same constant. At $\epsilon\to0$ the constant is
-$\pi/2$ where it was $1$.
+The constant is sharp in the single-shot and aperture forms. For a
+single shot it is Theorem 1 of the probabilistic note, the aperture
+bound's protocol form is now the same inequality with the same constant,
+and the two-packet preparation attains the kick form as $\epsilon\to0$
+(§3). The recoil and disturbance bounds are not shown attained: the best
+known recoil protocol sits a factor of about $2.1$ above the bound at five
+per cent error. At $\epsilon\to0$ the constant is $\pi/2$ where it was $1$.
 
 ## 3. Theorem K: the aperture bound in its kick form
 
@@ -126,8 +147,12 @@ the displacement the force produces from rest,
 $(\int_t^{t+\delta}(t+\delta-s)f\,ds/m,\ \int_t^{t+\delta}f\,ds)$. Its
 generator has spread at most $|\int_t^{t+\delta}f|\,\Delta\hat y+O(\delta^2)\Delta\hat p$
 in the state it acts on. Lemma 1 and Theorem P's chain give
-$\hbar A\le\sum_{\rm cells}|\int f|\,L+O(\delta)$, and refining the
-partition gives the integral. $\square$
+$\hbar A\le\sum_{\rm cells}|\int f|\,L+O(\delta)\sup\Delta\hat p$, and refining the
+partition gives the integral when the momentum spread of the chain's
+states is bounded. If it is infinite for some conditional state on some
+cell, free evolution makes that state's position spread infinite at every
+later time of the cell, so $L=\infty$ on a set of positive measure and the
+theorem holds vacuously. $\square$
 
 **Corollary K1 (the aperture form).** If the conditional states after
 each mark, and at $t=0$, have position spread at most $L$ and momentum
@@ -157,7 +182,10 @@ is attained exactly in that limit.
 
 **Theorem M.** Split the force as $f=g+h$, and let $c$ be any function
 on $[0,\tau]$ with $c''=g/m$. For every protocol of instruments deciding at
-error $\epsilon$ for every initial state of the body,
+error $\epsilon$ whatever the body's initial state under each hypothesis
+(the composite requirement of Theorem U; with the same initial state
+assumed under both, the chain's mixed pair would only give
+$\arcsin(1-4\epsilon)$),
 
 $$\hbar\arcsin(1-2\epsilon)\ \le\ \int_0^\tau|h(t)|\,L(t)\,dt
 +\sum_j\sup\Delta\bigl(c(t_j)\hat D_j-mc'(t_j)\hat X_j\bigr),$$
@@ -191,7 +219,9 @@ with recoil spreads $\Delta_j$ and a force of one sign, take $g=\chi f$
 with $0\le\chi\le1$ and $c$ the solution vanishing at $0$ and $\tau$,
 $c(t)=-\frac1m\int_0^\tau G_\tau(t,u)g(u)\,du$,
 $G_\tau(t,u)=\min(t,u)(\tau-\max(t,u))/\tau$. Then
-$\sum_j\Delta_j|c(t_j)|=\int\chi fR$, and minimizing over $\chi$ pointwise,
+$\sum_j\Delta_j|c(t_j)|=\int\chi|f|R$, and minimizing over $\chi$ pointwise,
+which is legitimate because for von Neumann marks the chain's conditional
+spreads do not depend on $\chi$,
 
 $$\hbar\arcsin(1-2\epsilon)\ \le\ \int_0^\tau|f(u)|\min\bigl(L(u),R(u)\bigr)\,du,
 \qquad R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u). \qquad\square$$

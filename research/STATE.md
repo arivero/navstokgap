@@ -47,11 +47,12 @@ undetermined, at the exchange rate $\hbar$.
 
 ## Next, modern leg first
 
-1. **Adversarial review, batch 2** (user direction 2026-09-23: Fable as a
-   critic). Batch 1 (recoil, additive-noise, disturbance notes) found no
-   false result and three proof gaps, repaired the same day. Batch 2:
-   the polygon-lift and path-length notes, the sharp constant 48, and the
-   paper's overclaims and prior art.
+1. **Adversarial review, batch 3** (user direction 2026-09-23: Fable as a
+   critic). Batches 1 (recoil, additive-noise, disturbance) and 2
+   (polygon-lift, path-length) found no false result; their proof gaps,
+   conventions and prior-art labels are repaired. Batch 3: the sharp
+   constant 48 and Theorem C of the mark-cost note, and the paper's
+   overclaims, history and prior art.
 2. **Attainment.** Whether the minimum of the one accounting over splits
    and lines is attained, which would make it the exact floor; whether
    the constants $1/8$ and $1/2$ of Theorem 6 are attained.

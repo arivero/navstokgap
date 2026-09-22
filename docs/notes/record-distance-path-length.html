@@ -119,11 +119,35 @@ R(u)=\frac1m\sum_j\Delta_j\,G_\tau(t_j,u),\]</span></p>
 <p>with <span class="math inline">\(G_\tau\)</span> the Dirichlet
 Green’s function of the interval. <span
 class="math inline">\(R(u)\)</span> is the <strong>recoil
-length</strong>: the position uncertainty at time <span
-class="math inline">\(u\)</span>, measured from the chord pinned at the
-ends, that the marks’ recoils produce. So the force is paid in length,
-at every moment the smaller of the body’s spread and the marks’ recoil
-length (Corollary M1). Exploratory; no ledger promotion.</p>
+length</strong>: the marks’ recoil spreads weighted by the displacement
+each one would produce at time <span class="math inline">\(u\)</span>
+relative to the chord pinned at the ends, summed, which is a length (an
+upper bound on the spread those recoils produce, since independent
+recoils add in quadrature). So the force is paid in length, at every
+moment the smaller of the body’s spread and the marks’ recoil length
+(Corollary M1).</p>
+<p><em>Prior art.</em> Lemma 1 is the mixed-state Mandelstam–Tamm bound
+in the Bures angle (Uhlmann, <a
+href="https://doi.org/10.1016/0375-9601(92)90555-Z">Phys. Lett. A
+<strong>161</strong>, 329, 1992</a>; Anandan and Aharonov, <a
+href="https://doi.org/10.1103/PhysRevLett.65.1697">PRL
+<strong>65</strong>, 1697, 1990</a>); statistical distance as a path
+length is Wootters’s (<a
+href="https://doi.org/10.1103/PhysRevD.23.357">PRD <strong>23</strong>,
+357, 1981</a>) and Braunstein and Caves’s (<a
+href="https://doi.org/10.1103/PhysRevLett.72.3439">PRL
+<strong>72</strong>, 3439, 1994</a>); the hybrid chain is the hybrid
+argument of Bennett, Bernstein, Brassard and Vazirani (<a
+href="https://doi.org/10.1137/S0097539796300933">SIAM J. Comput.
+<strong>26</strong>, 1510, 1997</a>); Bures-angle speed limits for
+general processes are those of Taddei and coauthors (<a
+href="https://doi.org/10.1103/PhysRevLett.110.050402">PRL
+<strong>110</strong>, 050402, 2013</a>); and the position-spread form of
+force sensitivity is the waveform estimation limit of Tsang, Wiseman and
+Caves (<a href="https://doi.org/10.1103/PhysRevLett.106.090401">PRL
+<strong>106</strong>, 090401, 2011</a>); all metadata. New here are the
+split accounting of Theorem M and the recoil length of Corollary M1.
+Exploratory; no ledger promotion.</p>
 <h2 id="the-bures-angle">1. The Bures angle</h2>
 <p>For density operators <span
 class="math inline">\(\rho,\sigma\)</span> let <span
@@ -203,9 +227,14 @@ class="math inline">\(\Sigma\ge A\ge\arcsin(1-2\epsilon)\)</span>. In
 the recoil theorem the two probe families are products, and the chain
 replaces one factor at a time. <span
 class="math inline">\(\square\)</span></p>
-<p>The constant is sharp. For a single shot it is Theorem 1 of the
-probabilistic note, and the aperture bound’s protocol form is now the
-same inequality with the same constant. At <span
+<p>The constant is sharp in the single-shot and aperture forms. For a
+single shot it is Theorem 1 of the probabilistic note, the aperture
+bound’s protocol form is now the same inequality with the same constant,
+and the two-packet preparation attains the kick form as <span
+class="math inline">\(\epsilon\to0\)</span> (§3). The recoil and
+disturbance bounds are not shown attained: the best known recoil
+protocol sits a factor of about <span class="math inline">\(2.1\)</span>
+above the bound at five per cent error. At <span
 class="math inline">\(\epsilon\to0\)</span> the constant is <span
 class="math inline">\(\pi/2\)</span> where it was <span
 class="math inline">\(1\)</span>.</p>
@@ -246,8 +275,14 @@ class="math inline">\((\int_t^{t+\delta}(t+\delta-s)f\,ds/m,\
 class="math inline">\(|\int_t^{t+\delta}f|\,\Delta\hat
 y+O(\delta^2)\Delta\hat p\)</span> in the state it acts on. Lemma 1 and
 Theorem P’s chain give <span class="math inline">\(\hbar A\le\sum_{\rm
-cells}|\int f|\,L+O(\delta)\)</span>, and refining the partition gives
-the integral. <span class="math inline">\(\square\)</span></p>
+cells}|\int f|\,L+O(\delta)\sup\Delta\hat p\)</span>, and refining the
+partition gives the integral when the momentum spread of the chain’s
+states is bounded. If it is infinite for some conditional state on some
+cell, free evolution makes that state’s position spread infinite at
+every later time of the cell, so <span
+class="math inline">\(L=\infty\)</span> on a set of positive measure and
+the theorem holds vacuously. <span
+class="math inline">\(\square\)</span></p>
 <p><strong>Corollary K1 (the aperture form).</strong> If the conditional
 states after each mark, and at <span class="math inline">\(t=0\)</span>,
 have position spread at most <span class="math inline">\(L\)</span> and
@@ -286,8 +321,11 @@ class="math inline">\(c\)</span> be any function on <span
 class="math inline">\([0,\tau]\)</span> with <span
 class="math inline">\(c&#39;&#39;=g/m\)</span>. For every protocol of
 instruments deciding at error <span
-class="math inline">\(\epsilon\)</span> for every initial state of the
-body,</p>
+class="math inline">\(\epsilon\)</span> whatever the body’s initial
+state under each hypothesis (the composite requirement of Theorem U;
+with the same initial state assumed under both, the chain’s mixed pair
+would only give <span
+class="math inline">\(\arcsin(1-4\epsilon)\)</span>),</p>
 <p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
 \int_0^\tau|h(t)|\,L(t)\,dt
 +\sum_j\sup\Delta\bigl(c(t_j)\hat D_j-mc&#39;(t_j)\hat
@@ -342,9 +380,12 @@ class="math inline">\(\tau\)</span>, <span
 class="math inline">\(c(t)=-\frac1m\int_0^\tau
 G_\tau(t,u)g(u)\,du\)</span>, <span
 class="math inline">\(G_\tau(t,u)=\min(t,u)(\tau-\max(t,u))/\tau\)</span>.
-Then <span class="math inline">\(\sum_j\Delta_j|c(t_j)|=\int\chi
-fR\)</span>, and minimizing over <span
-class="math inline">\(\chi\)</span> pointwise,</p>
+Then <span
+class="math inline">\(\sum_j\Delta_j|c(t_j)|=\int\chi|f|R\)</span>, and
+minimizing over <span class="math inline">\(\chi\)</span> pointwise,
+which is legitimate because for von Neumann marks the chain’s
+conditional spreads do not depend on <span
+class="math inline">\(\chi\)</span>,</p>
 <p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
 \int_0^\tau|f(u)|\min\bigl(L(u),R(u)\bigr)\,du,
 \qquad R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u).

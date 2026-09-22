@@ -21,7 +21,7 @@ are canonically conjugate; insertion of marks finer than
 $\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ then records free motion
 only. Correlated and grid-state probes lower that form, and the
 disturbance bound holds for them. The part of the signal that no
-preparation can move is a phase: Newton's polygon inscribed in the
+preparation of the body can move is a phase: Newton's polygon inscribed in the
 parabola agrees with it classically at every vertex and differs quantum
 mechanically by $F^2\sum_j\tau_j^3/(24m\hbar)$, the parabolic segments of
 the chords times $F/2v\hbar$. On the historical side, Newton's *Opticks*
@@ -79,7 +79,7 @@ combination $F^2\tau^3/m$ (§3), and quantum kinematics fixes
 $\kappa\ge\hbar/2$ because a mark's error and its recoil are conjugate
 (§4). For probes and instruments of every kind the floor survives as a
 bound on disturbance, paired with Newton's sagitta and impulse (§5), and
-a phase that no preparation can move carries the same quantity through
+a phase that no preparation of the body can move carries the same quantity through
 Newton's inscribed polygon (§6). Newton's optics supplies both factors of
 $\kappa$, a phase whose rate is proportional to momentum, and the
 negation of the premise that joins them (§§7--8). Newton also attempted
@@ -409,11 +409,16 @@ per-step lobe is $F^2\tau_j^3/24m$ (the
 $W_{\rm poly}W_F^\dagger$ is a multiple of the identity, no preparation of
 the body, squeezed or mixed, changes $\theta_N$. A control qubit that
 selects the history reads it at single-shot error
-$\frac12(1-|\sin(\theta_N/2)|)$, so one step is told from its chord at
-error $\epsilon$ only if
+$\frac12(1-|\sin(\theta_N/2)|)$, so in one controlled pass a step is told
+from its chord at error $\epsilon$ only if
 $\tau_j\ge(48m\hbar\arcsin(1-2\epsilon)/F^2)^{1/3}$, for every state of the
-body. The single chord lens and the closed loop of the earlier notes are
-instances.
+body; $k$ passes accumulate $k\theta_N$ and lower that threshold by
+$k^{1/3}$, so the readout's resource is the number of passes. The single
+chord lens and the closed loop of the earlier notes are instances. In
+numerical analysis the inscribed polygon is the kick--drift--kick (Strang)
+splitting of the propagator, exact for a linear potential up to this
+c-number; what is new is its reading in Lemma XI's areas and Archimedes'
+segments.
 
 **Theorem 8 (every force law).** For a force history $f$ on an interval
 of duration $\tau$, let $\mathcal K_\tau[f]=\int\frac12m(\dot y_f-\dot y_{\rm chord})^2dt
@@ -469,13 +474,20 @@ Part III Prop. XVII makes the intervals in two mediums "as the Sine of
 Incidence to the Sine of Refraction", from Observation 10 of Part I, and
 Prop. X takes light to be "swifter in Bodies than in Vacuo, in the
 proportion of the Sines". Together they make $\Lambda v$, and so
-$\Lambda p$, the same in every medium for each colour. A fit counted per
-interval along the path therefore counts the Maupertuis action
+$\Lambda p$, the same in every medium for each colour; that Newton's
+interval varies inversely with the corpuscle's speed, as de Broglie's
+wavelength does, is an old observation (Sakkopoulos, *Eur. J. Phys.*
+**9**, 123, 1988). A fit counted per interval along the path therefore
+counts the Maupertuis action
 $\int p\cdot dq$ in units of $\Lambda p$, and the inscribed polygon and the
 parabola of Theorem 7 differ by $(F/v)\sum_jA_j/(2\Lambda p)$ fits, with
 $A_j$ Lemma XI's tangent areas. Since the fit at arrival decides
 reflection or transmission (Prop. XII), the two are optically different
-corpuscles on Newton's own terms once that count reaches half an interval.
+corpuscles on Newton's own terms once that count reaches half an interval,
+told apart on a single corpuscle, where the quantum phase needs a
+superposition. Counting $2\pi$ per interval, a full return of the
+disposition, the fits phase is $4\theta_N$ at $\Lambda=\lambda/2$; the wave's
+own phase, which advances $\pi$ per interval, differs by $2\theta_N$.
 Extending Props. X and XVII to a continuously varying speed is ours, and
 Prop. XV's oblique rule is more complicated than a count along the path.
 
@@ -535,10 +547,12 @@ impulse $J$ and a displacement $d$ compose only up to the phase $Jd/\hbar$
 of their parallelogram, where Newton's Corollary I composes them exactly.
 Newton's fits already carry a phase whose rate is proportional to
 momentum, with the refraction invariant $\Lambda p$ as its unit, and his
-determinism in Prop. XII does not touch it. So one of the two quantum
-premises, the one that squeezing cannot evade, is present in the
-*Opticks* in working form; what it lacks is the universality of
-$\Lambda p$ across colours.
+determinism in Prop. XII does not touch it. A count of such a phase is
+order-sensitive in the parallelogram sense: a displacement $d$ then a kick
+$J$ counts $p\,d$, the kick first counts $(p+J)\,d$, and the difference is
+the parallelogram's area $Jd$. So a per-colour form of the quantum premise
+that squeezing cannot evade is present in the *Opticks*; what it lacks is
+the universality of $\Lambda p$ across colours.
 
 ## 9. Newton and the classics
 
@@ -900,9 +914,10 @@ Theorem 6 pays for it at the marks, and any split of the force between
 the two gives a valid bound. For von Neumann marks and a force of one
 sign the best split is pointwise,
 $\hbar\theta\le\int_0^\tau|f(u)|\min\bigl(L(u),R(u)\bigr)du$, where
-$R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u)$ is the recoil length, the position
-uncertainty the marks' recoils produce at time $u$ measured from the chord,
-with $G_\tau$ the Dirichlet Green's function of the interval: at every
+$R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u)$ is the recoil length, the marks'
+recoil spreads weighted by the displacement each produces at time $u$
+relative to the chord and summed, with $G_\tau$ the Dirichlet Green's
+function of the interval: at every
 moment the force is paid in the smaller of the two lengths (path-length
 note, Theorem M).
 
@@ -921,11 +936,20 @@ beat the limit, as the two-packet preparation above does, is stated as a
 principle by Giovannetti, Lloyd and Maccone (*Science* **306**, 1330,
 2004), and the correlated and grid probes of §§4--5 are Yuen's
 contractive states and the grid states of Gottesman, Kitaev and Preskill
-(PRA **64**, 012310, 2001). The contribution here is universality over
-protocols and instruments with explicit constants, the sharp constant of
-the Gaussian form, the disturbance form of Theorem 6, the phase
-identities of §6 and the identification of the premise. The inequality
-$F^2\tau^3\gtrsim m\hbar$ itself is standard.
+(PRA **64**, 012310, 2001). The ingredients of §§5--6 and §10 are
+standard: Ozawa's disturbance operators, Mandelstam--Tamm in the Bures
+angle (Uhlmann 1992; Anandan and Aharonov 1990), hybrid arguments
+(Bennett, Bernstein, Brassard and Vazirani 1997), Bures-angle speed limits
+for processes (Taddei et al. 2013), the position-spread form of force
+sensitivity (Tsang, Wiseman and Caves 2011), and symmetry-based
+information--disturbance bounds of Wigner--Araki--Yanase type. The
+contribution here is universality over protocols and instruments with
+explicit constants, the sharp constant of the Gaussian form, the
+disturbance form of Theorem 6, the split accounting of §10, the phase
+identities of §6 read in Newton's areas, and the identification of the
+premise. An adversarial review of the notes behind §§5, 6 and 10 on
+2026-09-23 found no false result and led to the repairs recorded in
+them. The inequality $F^2\tau^3\gtrsim m\hbar$ itself is standard.
 
 **The classical theorem belongs to a literature it does not cite.**
 Worst-case recovery of a linear functional from noisy linear data is optimal
