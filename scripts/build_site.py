@@ -32,7 +32,8 @@ TRACKS = [
      must be <em>recorded</em>, it has a floor of order &#8463;. These notes
      carry the theorems, the Newton-age premises and the ancient dispute about
      the cut.""", [
-        "planck-gap-paper", "mark-cost-and-statistical-floor",
+        "planck-gap-paper", "polygon-lift-phase",
+        "mark-cost-and-statistical-floor",
         "planck-gap-derivation", "planck-gap-probabilistic",
         "newton-mark-floor", "newton-insertion-action",
         "principia-constant-force-action", "receding-centre-area-audit",

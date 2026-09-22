@@ -52,15 +52,18 @@ the shape parameter explicit.
 
 ## Next, modern leg first
 
-1. **The quantum Corollary VI phase.** Under a constant force,
-   $\psi_F(x,t)=\psi_0(x-Ft^2/2m,t)\,e^{i(Ftx-F^2t^3/6m)/\hbar}$, so
-   Newton's Corollary VI holds up to a boost and the state-independent
-   phase $\Phi=F^2\tau^3/(6m\hbar)=\tau\Delta E/(3\hbar)=(F/v)A/\hbar$,
-   with $A$ the inertial--parabola area. The same $\Phi$ is the Weyl
-   holonomy between forward and reversed orderings of the impulse
-   polygon. It is the candidate quantity that squeezing cannot move.
-   Deliverable: a note with the derivation, the floor it gives in its
-   protocol class, and prior art (Greenberger and Overhauser 1979).
+1. **Done, 2026-09-22: the squeeze-immune core.**
+   [The polygon-lift note](../notes/polygon-lift-phase.md): Newton's
+   inscribed polygon and the parabola coincide classically at every
+   vertex, and quantum mechanically differ by the pure phase
+   $\theta_N=F^2\sum_j\tau_j^3/(24m\hbar)=(F/2v\hbar)\sum_jS_j$, with
+   $S_j$ the parabolic segments. Each inserted vertex lowers it by the
+   inscribed triangle over $\hbar$, in Archimedes' proportions; the
+   reversed ordering carries the complement,
+   $\Phi_N+4\theta_N=\tau\Delta E/3\hbar$ for every partition. Next on
+   this line: the Newton-age form of the central extension through the
+   fits (the note's §5 conjecture, $\Lambda p$ invariant under refraction
+   in Newton's emission theory), and a paper section.
 2. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$ with
    a Dirichlet energy, so it bounds a norm of $P''$; the aperture form
    becomes the total variations of the displacement path.
