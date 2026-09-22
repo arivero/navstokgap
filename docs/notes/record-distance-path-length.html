@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The record&#x27;s distance is a path length</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The record’s distance is a path length</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/record-distance-path-length.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-distance-path-length.pdf">PDF</a></p><p>Three results that close STATE’s next items 1 and 2 of
+2026-09-23.</p>
+<p><strong>The single-shot constant for every protocol.</strong> Every
+protocol theorem of the programme — the aperture bound of the <a
+href="planck-gap-probabilistic.html">probabilistic note</a>, the recoil
+bound of the <a href="record-costs-recoil.html">recoil note</a>, the
+disturbance bound of the <a
+href="record-costs-disturbance.html">disturbance note</a> — holds with
+<span class="math inline">\(\arcsin(1-2\epsilon)\)</span> in place of
+<span class="math inline">\(1-2\epsilon\)</span> (Theorem P). Since
+<span
+class="math inline">\(\arcsin(1-2\epsilon)=\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span>,
+this is the sharp single-shot constant of Theorem 1 of the probabilistic
+note, so the gap between the single-shot and protocol forms is closed,
+and at certain decision the recoil bound reads</p>
+<p><span class="math display">\[s\sum_j\Delta_j\ \ge\ 4\pi\hbar=2h
+.\]</span></p>
+<p><strong>The aperture bound in its kick form.</strong> For every
+protocol of any instruments, with the same preparation under both
+hypotheses,</p>
+<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
+\int_0^\tau|f(t)|\,L(t)\,dt ,\]</span></p>
+<p>with <span class="math inline">\(L(t)\)</span> the body’s position
+spread at time <span class="math inline">\(t\)</span> (Theorem K). A
+force is a succession of impulses, and an impulse is registered only
+through the position spread it acts on. The <span
+class="math inline">\((L,P)\)</span> form of the probabilistic note
+follows because free motion spreads position at the rate <span
+class="math inline">\(P/m\)</span>, and the two-packet preparation
+saturates the kick form exactly as <span
+class="math inline">\(\epsilon\to0\)</span>.</p>
+<p><strong>One accounting.</strong> The aperture bound pays for the
+force at the body, the disturbance bound pays for it at the marks. Any
+split of the force between the two gives a valid bound (Theorem M), and
+for von Neumann marks and a force of one sign the best split is
+pointwise:</p>
+<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
+\int_0^\tau|f(u)|\,\min\bigl(L(u),R(u)\bigr)\,du,\qquad
+R(u)=\frac1m\sum_j\Delta_j\,G_\tau(t_j,u),\]</span></p>
+<p>with <span class="math inline">\(G_\tau\)</span> the Dirichlet
+Green’s function of the interval. <span
+class="math inline">\(R(u)\)</span> is the <strong>recoil
+length</strong>: the position uncertainty at time <span
+class="math inline">\(u\)</span>, measured from the chord pinned at the
+ends, that the marks’ recoils produce. So the force is paid in length,
+at every moment the smaller of the body’s spread and the marks’ recoil
+length (Corollary M1). Exploratory; no ledger promotion.</p>
+<h2 id="the-bures-angle">1. The Bures angle</h2>
+<p>For density operators <span
+class="math inline">\(\rho,\sigma\)</span> let <span
+class="math inline">\(F(\rho,\sigma)=\operatorname{Tr}|\sqrt\rho\sqrt\sigma|\)</span>
+be the root fidelity and <span
+class="math inline">\(A(\rho,\sigma)=\arccos
+F(\rho,\sigma)\in[0,\pi/2]\)</span> the Bures angle. Four standard facts
+are used.</p>
+<ol type="1">
+<li><span class="math inline">\(A\)</span> is a metric on states: it
+obeys the triangle inequality.</li>
+<li><span class="math inline">\(A\)</span> does not increase under any
+channel, measurements and classical post-processing included
+(monotonicity of the fidelity).</li>
+<li><span
+class="math inline">\(F(\rho,\sigma)=\max|\langle\psi|\phi\rangle|\)</span>
+over purifications (Uhlmann, <a
+href="https://doi.org/10.1016/0034-4877(76)90060-4">Rep. Math. Phys.
+<strong>9</strong>, 273, 1976</a>, metadata), so <span
+class="math inline">\(A(\rho,\sigma)\)</span> is at most the
+Fubini–Study angle between any two purifications.</li>
+<li><span class="math inline">\(\tfrac12\|\rho-\sigma\|_1\le\sin
+A(\rho,\sigma)\)</span> (Fuchs and van de Graaf, <a
+href="https://doi.org/10.1109/18.761271">IEEE Trans. Inf. Theory
+<strong>45</strong>, 1216, 1999</a>, metadata); for probability
+distributions this is the classical statement.</li>
+</ol>
+<p><strong>Lemma 1 (one unitary step).</strong> Let <span
+class="math inline">\(\rho\)</span> be a state of body, apparatus and a
+classical record register <span class="math inline">\(x\)</span>, <span
+class="math inline">\(\rho=\sum_xp_x|x\rangle\langle
+x|\otimes\rho_x\)</span>, and let <span
+class="math inline">\(V=\sum_x|x\rangle\langle x|\otimes V_x\)</span>
+with <span class="math inline">\(V_x=\mathcal
+T\exp(i\int_0^1K_x(u)\,du)\)</span>. Then <span
+class="math inline">\(A(\rho,V\rho V^\dagger)\le\sup_x\int_0^1\Delta
+K_x(u)\,du\)</span>, each spread taken in the state <span
+class="math inline">\(V_x(u)\rho_xV_x(u)^\dagger\)</span> along the
+path.</p>
+<p><em>Proof.</em> Square roots of block-diagonal operators are block
+diagonal, so <span class="math inline">\(F(\rho,V\rho
+V^\dagger)=\sum_xp_xF(\rho_x,V_x\rho_xV_x^\dagger)\)</span>, and <span
+class="math inline">\(\sum_xp_x\cos A_x\ge\cos\sup_xA_x\)</span>. For
+each block, purify <span class="math inline">\(\rho_x\)</span> to <span
+class="math inline">\(\psi_x\)</span>; by fact 3 the angle is at most
+the Fubini–Study length of the curve <span
+class="math inline">\(V_x(u)\psi_x\)</span>, whose speed is the spread
+of <span class="math inline">\(K_x(u)\)</span> in the current state, and
+that spread equals the spread in the mixed state it purifies. <span
+class="math inline">\(\square\)</span></p>
+<p>For a time-independent generator <span
+class="math inline">\(G\)</span> acting on the body, the bound is <span
+class="math inline">\(\sup_x\Delta_{\rho_x}G\)</span>, the spread in the
+body’s marginal.</p>
+<h2 id="theorem-p-the-single-shot-constant-for-every-protocol">2.
+Theorem P: the single-shot constant for every protocol</h2>
+<p><strong>Theorem P.</strong> In Theorem 2 of the probabilistic note,
+Theorem R and Corollary R1 of the recoil note, Theorem U and Corollary
+U1 of the disturbance note, and Theorems K and M below, the conclusion
+holds with <span class="math inline">\(\arcsin(1-2\epsilon)\)</span> in
+place of <span class="math inline">\(1-2\epsilon\)</span>.</p>
+<p><em>Proof.</em> Each proof builds a chain of hybrid processes <span
+class="math inline">\(H_0,\dots,H_n\)</span> joining the two hypotheses,
+in which consecutive hybrids apply the same channel before and after one
+step where they differ by a unitary. Replace the triangle inequality for
+total variation by fact 1, data processing by fact 2, and the per-step
+trace-distance bound by Lemma 1. This gives <span
+class="math inline">\(A(P_{\mathrm I},P_{\mathrm F})\le\Sigma\)</span>,
+the same sum <span class="math inline">\(\Sigma\)</span> of spreads over
+<span class="math inline">\(\hbar\)</span> that each proof obtains. A
+test with equal-prior error at most <span
+class="math inline">\(\epsilon\)</span> has <span
+class="math inline">\(\tfrac12\|P_{\mathrm I}-P_{\mathrm
+F}\|_1\ge1-2\epsilon\)</span>, so by fact 4 <span
+class="math inline">\(\sin A\ge1-2\epsilon\)</span>, hence <span
+class="math inline">\(\Sigma\ge A\ge\arcsin(1-2\epsilon)\)</span>. In
+the recoil theorem the two probe families are products, and the chain
+replaces one factor at a time. <span
+class="math inline">\(\square\)</span></p>
+<p>The constant is sharp. For a single shot it is Theorem 1 of the
+probabilistic note, and the aperture bound’s protocol form is now the
+same inequality with the same constant. At <span
+class="math inline">\(\epsilon\to0\)</span> the constant is <span
+class="math inline">\(\pi/2\)</span> where it was <span
+class="math inline">\(1\)</span>.</p>
+<h2 id="theorem-k-the-aperture-bound-in-its-kick-form">3. Theorem K: the
+aperture bound in its kick form</h2>
+<p>Write <span class="math inline">\(f(t)\)</span> for the force
+history, <span class="math inline">\(F\)</span>-hypothesis against free
+motion, with the same preparation <span
+class="math inline">\(\sigma\)</span> under both. Let <span
+class="math inline">\(L(t)\)</span> be the supremum of the body’s
+position spread <span class="math inline">\(\Delta\hat y\)</span> at
+time <span class="math inline">\(t\)</span>, in the laboratory frame,
+over the conditional states that can occur at time <span
+class="math inline">\(t\)</span> when the force acts on any initial part
+of the interval.</p>
+<p><strong>Theorem K.</strong> Every protocol of instruments, of any
+kind, adaptive or not, deciding at error <span
+class="math inline">\(\epsilon\)</span> satisfies <span
+class="math inline">\(\hbar\arcsin(1-2\epsilon)\le\int_0^\tau|f(t)|L(t)\,dt\)</span>.</p>
+<p><em>Proof.</em> Let hybrid <span
+class="math inline">\(H_{t^*}\)</span> apply the force on <span
+class="math inline">\([0,t^*]\)</span> and none afterwards, the marks
+unchanged; <span class="math inline">\(H_\tau\)</span> is <span
+class="math inline">\(\mathrm F\)</span> and <span
+class="math inline">\(H_0\)</span> is <span
+class="math inline">\(\mathrm I\)</span>. Take a partition containing
+the mark times. On a cell <span
+class="math inline">\([t,t+\delta]\)</span> free of marks, <span
+class="math inline">\(H_{t+\delta}\)</span> and <span
+class="math inline">\(H_t\)</span> agree up to <span
+class="math inline">\(t\)</span> and after <span
+class="math inline">\(t+\delta\)</span>, and differ by the forced
+evolution over the cell, which for linear dynamics is the free evolution
+followed by the translation by the displacement the force produces from
+rest, <span
+class="math inline">\((\int_t^{t+\delta}(t+\delta-s)f\,ds/m,\
+\int_t^{t+\delta}f\,ds)\)</span>. Its generator has spread at most <span
+class="math inline">\(|\int_t^{t+\delta}f|\,\Delta\hat
+y+O(\delta^2)\Delta\hat p\)</span> in the state it acts on. Lemma 1 and
+Theorem P’s chain give <span class="math inline">\(\hbar A\le\sum_{\rm
+cells}|\int f|\,L+O(\delta)\)</span>, and refining the partition gives
+the integral. <span class="math inline">\(\square\)</span></p>
+<p><strong>Corollary K1 (the aperture form).</strong> If the conditional
+states after each mark, and at <span class="math inline">\(t=0\)</span>,
+have position spread at most <span class="math inline">\(L\)</span> and
+momentum spread at most <span class="math inline">\(P\)</span>, then
+between marks the spread grows at most linearly, <span
+class="math inline">\(L(t)\le L+P(t-t_j)/m\)</span>, because a c-number
+force translates and free motion shears. For the constant force,</p>
+<p><span class="math display">\[F\tau L+\frac{F\tau^2}{2m}P\ \ge\
+\hbar\arcsin(1-2\epsilon),\]</span></p>
+<p>and with marks every <span class="math inline">\(\delta t\)</span>
+the second term shrinks to at most <span
+class="math inline">\(F\tau\,\delta t\,P/2m\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>This is Theorem 2 of the probabilistic note with the sharp constant,
+and it holds under either reading of that note’s aperture. With spreads
+bounded in the interaction picture, <span
+class="math inline">\(\Delta(\hat y-\hat pt/m)\le L\)</span>, the
+laboratory spread is at most <span
+class="math inline">\(L+Pt/m\)</span>, and the same integral
+results.</p>
+<p><strong>Saturation.</strong> The two-packet preparation of the
+probabilistic note, separation <span
+class="math inline">\(\pi\hbar/(F\tau)\)</span>, has position spread
+<span class="math inline">\(\pi\hbar/(2F\tau)\)</span> up to a relative
+correction of order <span class="math inline">\(\sqrt{\tau\Delta
+E/\hbar}\)</span> from spreading. So <span
+class="math inline">\(\int_0^\tau F\,L\,dt\to\pi\hbar/2\)</span> as
+<span class="math inline">\(\tau\Delta E\to0\)</span>, while its error
+probability tends to zero and <span
+class="math inline">\(\arcsin(1-2\epsilon)\to\pi/2\)</span>. The kick
+form is attained exactly in that limit.</p>
+<h2 id="theorem-m-one-accounting">4. Theorem M: one accounting</h2>
+<p><strong>Theorem M.</strong> Split the force as <span
+class="math inline">\(f=g+h\)</span>, and let <span
+class="math inline">\(c\)</span> be any function on <span
+class="math inline">\([0,\tau]\)</span> with <span
+class="math inline">\(c&#39;&#39;=g/m\)</span>. For every protocol of
+instruments deciding at error <span
+class="math inline">\(\epsilon\)</span> for every initial state of the
+body,</p>
+<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
+\int_0^\tau|h(t)|\,L(t)\,dt
++\sum_j\sup\Delta\bigl(c(t_j)\hat D_j-mc&#39;(t_j)\hat
+X_j\bigr),\]</span></p>
+<p>with <span class="math inline">\(\hat D_j,\hat X_j\)</span> the
+disturbances of mark <span class="math inline">\(j\)</span> as in the
+disturbance note, and <span class="math inline">\(L(t)\)</span> taken
+over the states of the chain below.</p>
+<p><em>Proof.</em> Take the pair of initial states <span
+class="math inline">\(\sigma\)</span> under <span
+class="math inline">\(\mathrm I\)</span> and <span
+class="math inline">\(T_c(0)\sigma\)</span> under <span
+class="math inline">\(\mathrm F\)</span>, <span
+class="math inline">\(T_c(t)\)</span> the translation by <span
+class="math inline">\((c(t),mc&#39;(t))\)</span>. The chain has two
+legs. First, starting from the process with force <span
+class="math inline">\(f\)</span> from <span
+class="math inline">\(T_c(0)\sigma\)</span>, switch off <span
+class="math inline">\(h\)</span> cell by cell as in Theorem K, paying
+<span class="math inline">\(\int|h|L/\hbar\)</span>; this ends at the
+process with force <span class="math inline">\(g\)</span> from <span
+class="math inline">\(T_c(0)\sigma\)</span>. Since <span
+class="math inline">\(c&#39;&#39;=g/m\)</span>, the process with force
+<span class="math inline">\(g\)</span> from <span
+class="math inline">\(T_c(0)\sigma\)</span> is the free process from
+<span class="math inline">\(\sigma\)</span> translated by <span
+class="math inline">\(T_c(t)\)</span> between marks, which is the
+setting of Theorem U; its chain reaches the free process from <span
+class="math inline">\(\sigma\)</span> and pays the second sum. Lemma 1
+bounds every step and fact 1 adds the legs. <span
+class="math inline">\(\square\)</span></p>
+<p>With <span class="math inline">\(h=f\)</span> and <span
+class="math inline">\(c=0\)</span> it is Theorem K; with <span
+class="math inline">\(h=0\)</span> and <span
+class="math inline">\(c=P-a-bt\)</span> it is Theorem U. The theorem
+reads as a transport of the offset between the hypotheses. A free line
+of offset is absorbed in the initial state at no cost, curvature carried
+through a mark costs that mark’s disturbance weighted by the offset it
+meets, and force removed at the body costs impulse times position
+spread. The record’s Bures distance is at most the length of any such
+transport, and a protocol escapes the floor only if at every moment the
+body is spread, or the marks disturb, enough to cover the force acting
+then.</p>
+<p><strong>Corollary M1 (the force is paid in length).</strong> For von
+Neumann marks with recoil spreads <span
+class="math inline">\(\Delta_j\)</span> and a force of one sign, take
+<span class="math inline">\(g=\chi f\)</span> with <span
+class="math inline">\(0\le\chi\le1\)</span> and <span
+class="math inline">\(c\)</span> the solution vanishing at <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(\tau\)</span>, <span
+class="math inline">\(c(t)=-\frac1m\int_0^\tau
+G_\tau(t,u)g(u)\,du\)</span>, <span
+class="math inline">\(G_\tau(t,u)=\min(t,u)(\tau-\max(t,u))/\tau\)</span>.
+Then <span class="math inline">\(\sum_j\Delta_j|c(t_j)|=\int\chi
+fR\)</span>, and minimizing over <span
+class="math inline">\(\chi\)</span> pointwise,</p>
+<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
+\int_0^\tau|f(u)|\min\bigl(L(u),R(u)\bigr)\,du,
+\qquad R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u).
+\qquad\square\]</span></p>
+<p>A mark at <span class="math inline">\(0\)</span> or at <span
+class="math inline">\(\tau\)</span> contributes nothing to <span
+class="math inline">\(R\)</span>, whatever its recoil, since <span
+class="math inline">\(G_\tau\)</span> vanishes there; its reading still
+fixes the chord. For the three marks of Proposition D of the <a
+href="mark-cost-and-statistical-floor.html">mark-cost note</a>, outer
+marks sharp, <span
+class="math inline">\(R(u)=\Delta_2\min(u,\tau-u)/2m\)</span>, a tent of
+height <span class="math inline">\(\Delta_2\tau/4m\)</span>. The pure
+recoil bound is <span class="math inline">\(F\int
+R=\Delta_2s/4\)</span>; the pure aperture bound is <span
+class="math inline">\(F\int L\)</span>. The recoil length vanishes at
+the ends and peaks in the middle, so the mixed bound pays at the marks
+near the ends and at the body wherever the body is more compact than
+<span class="math inline">\(R\)</span>. Whenever <span
+class="math inline">\(L\)</span> and <span
+class="math inline">\(R\)</span> cross, <span class="math inline">\(\int
+F\min(L,R)\)</span> is strictly below both pure costs, and the necessary
+condition it states is strictly stronger than either.</p>
+<h2 id="the-numbers">5. The numbers</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bound</th>
+<th>Old constant</th>
+<th>Sharp constant</th>
+<th>At <span class="math inline">\(\epsilon=0.05\)</span></th>
+<th>Certain decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Recoil, <span
+class="math inline">\(s\sum_j\Delta_j/\hbar\ge\)</span></td>
+<td><span class="math inline">\(8(1-2\epsilon)\)</span></td>
+<td><span class="math inline">\(8\arcsin(1-2\epsilon)\)</span></td>
+<td><span class="math inline">\(8.96\)</span></td>
+<td><span class="math inline">\(4\pi\)</span>, i.e. <span
+class="math inline">\(s\sum\Delta_j\ge2h\)</span></td>
+</tr>
+<tr class="even">
+<td>Disturbance, <span class="math inline">\(\bigl(\frac
+s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat
+X_j)\bigr)/\hbar\ge\)</span></td>
+<td><span class="math inline">\(1-2\epsilon\)</span></td>
+<td><span class="math inline">\(\arcsin(1-2\epsilon)\)</span></td>
+<td><span class="math inline">\(1.12\)</span></td>
+<td><span class="math inline">\(\pi/2\)</span></td>
+</tr>
+<tr class="odd">
+<td>Aperture, <span class="math inline">\(\bigl(F\tau
+L+\frac{F\tau^2}{2m}P\bigr)/\hbar\ge\)</span></td>
+<td><span class="math inline">\(1-2\epsilon\)</span></td>
+<td><span class="math inline">\(\arcsin(1-2\epsilon)\)</span></td>
+<td><span class="math inline">\(1.12\)</span></td>
+<td><span class="math inline">\(\pi/2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The balanced aperture of minimal area now gives <span
+class="math inline">\(\tau\Delta
+E\ge\frac12\hbar\arcsin^2(1-2\epsilon)\)</span>, which is <span
+class="math inline">\(\pi^2\hbar/8\)</span> at certain decision. The
+correlated three-mark protocol sits within <span
+class="math inline">\(\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)\)</span>
+of the recoil bound, about <span class="math inline">\(2.1\)</span> at
+five per cent error, at every squeezing.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Items 1 and 2 of STATE’s queue are settled, apart from the worst-case
+interval <span class="math inline">\([9,36]\)</span> of the derivation
+note, which concerns a framework without quantum instances. Every
+protocol theorem carries the sharp single-shot constant; the aperture
+bound is the kick form <span
+class="math inline">\(\int|f|L\ge\hbar\arcsin(1-2\epsilon)\)</span>; and
+one accounting, Theorem M, contains the aperture and disturbance bounds
+and interpolates between them, with the pointwise form <span
+class="math inline">\(\int|f|\min(L,R)\)</span> for von Neumann marks.
+The remaining modern item is whether the minimum over splits and lines
+in Theorem M is attained by some protocol, which would make it the exact
+floor.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
