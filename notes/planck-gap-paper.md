@@ -203,7 +203,9 @@ and its impulses remain in the geometry, though no record exhibits them.
 impulse to intervals with certainty, the same three steps run with a
 separating hyperplane in place of the optimal test direction and give
 $F^2\tau^3>9m\kappa$ for every protocol, with two marks sufficing above
-$36m\kappa$. That version has no quantum instance, since certain
+$36m\kappa$. There the initial velocity is bounded by the preparation's
+recoil width instead of being free, so $T$ need not vanish at $0$ and the
+Cauchy--Schwarz step is the one available. That version has no quantum instance, since certain
 position confinement forces full-support momentum by Paley--Wiener; it
 is recorded here because it shows that the argument depends on the
 quadratic structure rather than on any probabilistic assumption.
