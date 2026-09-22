@@ -4,8 +4,8 @@
 sagitta and the area between the inertial tangent and the curve go to
 zero, keeping their ratio to the time. We show that the same comparison,
 once it must be *recorded*, has a floor. For every protocol of marks, of
-any number and at any times, whose resolution and recoil obey
-$\delta_j\Delta_j\ge\kappa$, deciding between free and forced motion over
+any number and at any times, whose resolution and recoil are
+uncorrelated and obey $\delta_j\Delta_j\ge\kappa$, deciding between free and forced motion over
 a duration $\tau$ at error probability $\epsilon$ requires
 
 $$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,$$
@@ -15,6 +15,10 @@ error operator and the impulse delivered are canonically conjugate, so
 $\kappa\ge\hbar/2$ exactly. The floor is about $12\hbar$ at five per cent
 error, and insertion of marks finer than
 $\tau_*=(9z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ records free motion only.
+A correlation $\rho$ between a mark's error and its recoil multiplies the
+floor by $\sqrt{(1-\rho)/(1+\rho)}$, and a three-mark protocol attains
+that dependence, so the floor is a statement about marks whose
+uncertainty ellipse has bounded shape as well as area.
 The historical claim is that Newton's *Opticks* contains both factors of
 $\kappa$, one of them measured as the $1/89000$th part of an inch, and
 that the single proposition joining them to a floor is an indeterminacy
@@ -221,15 +225,37 @@ deterministic probe, whose later position records fix its momentum, has
 $\kappa=0$ and no floor; this is the exact point at which classical
 record models differ.
 
-For Gaussian probe states and the linear dynamics of the comparison, the
-Wigner function is a probability density evolving classically, so the
-statistical model of §3 reproduces the quantum experiment exactly. With
-Theorem 4,
+For Gaussian probe states whose position and momentum are uncorrelated,
+and the linear dynamics of the comparison, the Wigner function is a
+probability density evolving classically, so the statistical model of
+§3 reproduces the quantum experiment exactly. With Theorem 4,
 
 $$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar,\qquad
 \tau_*=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3}, \tag{2}$$
 
 about $12\hbar$ at $\epsilon=0.05$ and $4.5\hbar$ at $\epsilon=0.32$.
+
+**Correlated marks.** A probe whose position and momentum are correlated
+delivers an error and a recoil with correlation
+$\rho=-\operatorname{Cov}(\hat Q_A,\hat P_A)/(\Delta\hat Q_A\Delta\hat P_A)$,
+and the Robertson--Schrödinger inequality gives
+$\delta^2\Delta^2(1-\rho^2)\ge\hbar^2/4$. The cross terms enter the proof
+of Theorem 2 as $2c_ju_jS_j/m$, and
+$ax^2+2cxy+by^2\ge2(\sqrt{ab}-|c|)|x||y|$ replaces the
+arithmetic--geometric step, so every protocol whose marks have
+$|\rho_j|\le\rho$ needs
+
+$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} . \tag{3}$$
+
+Three marks at $0,\tau/2,\tau$ with the test $R_1-2R_2+R_3$ attain this
+up to the constant, since the outer marks' recoils are invisible to the
+test and the middle mark's noise $-2\xi_2+(\tau/2m)\iota_2$ is one
+quadrature of its probe: they decide once
+$\tau\Delta E\ge32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$, at every force as
+$\rho\to1$. This is the back-action evasion of Yuen's contractive states
+(PRL **51**, 719, 1983). The proofs are in the
+[mark-cost note](mark-cost-and-statistical-floor.md), Theorem C and
+Proposition D.
 
 ## 5. Both factors are in the *Opticks*
 
@@ -278,8 +304,10 @@ identifies $\kappa$ as the probe's own uncertainty product, so
 $$\text{M3 for Newton's corpuscle}\quad\Longleftrightarrow\quad
 \Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \text{a positive constant},$$
 
-which is Robertson's inequality stated in Newton's two quantities. With
-M3, §§3--4 give the floor and the insertion mesh from Newton's own
+which is Robertson's inequality stated in Newton's two quantities. The
+floor also uses a clause M3 carries implicitly, that the undetermined
+impulse is unrelated to the mark's error; eq. (3) prices that clause.
+With M3, §§3--4 give the floor and the insertion mesh from Newton's own
 materials, with $\kappa=\Lambda p$ in place of $\hbar/2$; the
 identification $\Lambda=\lambda/2$, $p=h/\lambda$ makes $\Lambda p=h/2$,
 which differs from $\hbar/2$ by $\pi$.
@@ -617,10 +645,16 @@ discrimination bound (*Quantum Detection and Estimation Theory*, 1976),
 gives
 
 $$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon,
-\qquad\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar^2}{4A},$$
+\qquad\tau\Delta E\ \ge\ \frac{2m(1-2\epsilon)^2\hbar^2\tau}{(2mL+\tau P)^2},$$
 
 for an apparatus whose position and momentum spreads are bounded by $L$
-and $P$ with $A=LP\ge\hbar/2$; and this holds for every finite adaptive
+and $P$. The floor equals $(1-2\epsilon)^2\hbar^2/(4LP)$ at the balanced
+aperture $L=\tau P/2m$ and falls to zero as either side grows at fixed
+area, so a squeezed state of area $\hbar/2$ evades it as a large one
+does. In Newton's quantities the first inequality is
+$F\tau\cdot L+\frac{F\tau^2}{2m}\cdot P\ge(1-2\epsilon)\hbar$, the
+impulse of Proposition I against the position aperture plus the sagitta
+of Lemma X against the momentum aperture. It holds for every finite adaptive
 protocol of instruments, because the displacement is a phase-space path
 whose total variation does not grow when it is subdivided. The bound is
 tight: two narrow packets separated by $\pi\hbar/(F\tau)$ decide the
@@ -710,3 +744,11 @@ positioning; the history content is §§5--7, resting on the source
 companions; the junction is the identification of M3 with Robertson's
 inequality for the corpuscle. STATE's queue reduces to §9's
 obligations and the three open mathematical items.
+
+Revision, 2026-09-22: both quantum floors needed a bound on the shape of
+an uncertainty ellipse, since the aperture corollary and the mark floor
+each fall to zero under squeezing at fixed area. Eq. (3) and the
+$(L,P)$ form of §8 are the corrected statements. A floor with no shape
+bound needs a quantity that squeezing cannot move; the state-independent
+phase of the quantum Corollary VI is the candidate, and it is the next
+note.

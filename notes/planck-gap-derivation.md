@@ -26,9 +26,11 @@ Paley--Wiener, so $\kappa=\infty$ and the theorem holds emptily
 (Proposition 6). What stands is the classical half of the
 programme's question, and the quantum half is carried out in the
 [probabilistic note](planck-gap-probabilistic.md), which proves
-$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$ for every protocol of
-quantum instruments, $A$ being the apparatus aperture, with floor
-$\hbar/2$ at the smallest aperture the uncertainty relation allows.
+$F\tau(L+\tau P/2m)\ge(1-2\epsilon)\hbar$ for every protocol of
+quantum instruments, $(L,P)$ being the apparatus aperture, hence
+$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4LP)$ at the balanced aperture
+$L=\tau P/2m$ and $(1-2\epsilon)^2\hbar/2$ when that aperture has the
+smallest area the uncertainty relation allows.
 The proof is a separation argument for the adversary's feasibility set,
 an AM--GM step that turns $\delta\Delta\ge\kappa$ into a square root, and
 one integration by parts that converts the certificate into a Dirichlet
@@ -293,7 +295,7 @@ widths.
 
 **What the probabilistic version is.** It is carried out in the
 [companion note](planck-gap-probabilistic.md), which reaches the floor
-$\tau\Delta E\ge(1-2\epsilon)^2\hbar^2/(4A)$ without any
+$F\tau(L+\tau P/2m)\ge(1-2\epsilon)\hbar$ at aperture $(L,P)$ without any
 error--disturbance relation, using Mandelstam--Tamm and the uncertainty
 relation alone. The rest of this section records the requirement it had
 to meet. Replace the

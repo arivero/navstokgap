@@ -83,7 +83,7 @@ letting the sagitta and the area between the inertial tangent and the
 curve go to zero, keeping their ratio to the time. We show that the same
 comparison, once it must be <em>recorded</em>, has a floor. For every
 protocol of marks, of any number and at any times, whose resolution and
-recoil obey <span
+recoil are uncorrelated and obey <span
 class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, deciding
 between free and forced motion over a duration <span
 class="math inline">\(\tau\)</span> at error probability <span
@@ -96,15 +96,20 @@ so <span class="math inline">\(\kappa\ge\hbar/2\)</span> exactly. The
 floor is about <span class="math inline">\(12\hbar\)</span> at five per
 cent error, and insertion of marks finer than <span
 class="math inline">\(\tau_*=(9z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>
-records free motion only. The historical claim is that Newton’s
-<em>Opticks</em> contains both factors of <span
-class="math inline">\(\kappa\)</span>, one of them measured as the <span
-class="math inline">\(1/89000\)</span>th part of an inch, and that the
-single proposition joining them to a floor is an indeterminacy about the
-fits which Newton formulated the negation of. The distance between his
-system and a positive <span class="math inline">\(h\)</span> is
-therefore one nameable proposition, and that proposition is Robertson’s
-inequality for his corpuscle.</p>
+records free motion only. A correlation <span
+class="math inline">\(\rho\)</span> between a mark’s error and its
+recoil multiplies the floor by <span
+class="math inline">\(\sqrt{(1-\rho)/(1+\rho)}\)</span>, and a
+three-mark protocol attains that dependence, so the floor is a statement
+about marks whose uncertainty ellipse has bounded shape as well as area.
+The historical claim is that Newton’s <em>Opticks</em> contains both
+factors of <span class="math inline">\(\kappa\)</span>, one of them
+measured as the <span class="math inline">\(1/89000\)</span>th part of
+an inch, and that the single proposition joining them to a floor is an
+indeterminacy about the fits which Newton formulated the negation of.
+The distance between his system and a positive <span
+class="math inline">\(h\)</span> is therefore one nameable proposition,
+and that proposition is Robertson’s inequality for his corpuscle.</p>
 <p>Draft, 2026-09-17. Synthesis of the <a
 href="newton-mark-floor.html">mark-floor</a>, <a
 href="planck-gap-derivation.html">derivation</a>, <a
@@ -351,10 +356,11 @@ why no reading of the pointer determines the impulse. A deterministic
 probe, whose later position records fix its momentum, has <span
 class="math inline">\(\kappa=0\)</span> and no floor; this is the exact
 point at which classical record models differ.</p>
-<p>For Gaussian probe states and the linear dynamics of the comparison,
-the Wigner function is a probability density evolving classically, so
-the statistical model of §3 reproduces the quantum experiment exactly.
-With Theorem 4,</p>
+<p>For Gaussian probe states whose position and momentum are
+uncorrelated, and the linear dynamics of the comparison, the Wigner
+function is a probability density evolving classically, so the
+statistical model of §3 reproduces the quantum experiment exactly. With
+Theorem 4,</p>
 <p><span class="math display">\[\tau\Delta E\ \ge\
 \frac92\,z_{1-\epsilon}^2\,\hbar,\qquad
 \tau_*=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},
@@ -363,6 +369,33 @@ With Theorem 4,</p>
 class="math inline">\(\epsilon=0.05\)</span> and <span
 class="math inline">\(4.5\hbar\)</span> at <span
 class="math inline">\(\epsilon=0.32\)</span>.</p>
+<p><strong>Correlated marks.</strong> A probe whose position and
+momentum are correlated delivers an error and a recoil with correlation
+<span class="math inline">\(\rho=-\operatorname{Cov}(\hat Q_A,\hat
+P_A)/(\Delta\hat Q_A\Delta\hat P_A)\)</span>, and the
+Robertson–Schrödinger inequality gives <span
+class="math inline">\(\delta^2\Delta^2(1-\rho^2)\ge\hbar^2/4\)</span>.
+The cross terms enter the proof of Theorem 2 as <span
+class="math inline">\(2c_ju_jS_j/m\)</span>, and <span
+class="math inline">\(ax^2+2cxy+by^2\ge2(\sqrt{ab}-|c|)|x||y|\)</span>
+replaces the arithmetic–geometric step, so every protocol whose marks
+have <span class="math inline">\(|\rho_j|\le\rho\)</span> needs</p>
+<p><span class="math display">\[\tau\Delta E\ \ge\
+\frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .
+\tag{3}\]</span></p>
+<p>Three marks at <span class="math inline">\(0,\tau/2,\tau\)</span>
+with the test <span class="math inline">\(R_1-2R_2+R_3\)</span> attain
+this up to the constant, since the outer marks’ recoils are invisible to
+the test and the middle mark’s noise <span
+class="math inline">\(-2\xi_2+(\tau/2m)\iota_2\)</span> is one
+quadrature of its probe: they decide once <span
+class="math inline">\(\tau\Delta
+E\ge32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span>, at every force as <span
+class="math inline">\(\rho\to1\)</span>. This is the back-action evasion
+of Yuen’s contractive states (PRL <strong>51</strong>, 719, 1983). The
+proofs are in the <a
+href="mark-cost-and-statistical-floor.html">mark-cost note</a>, Theorem
+C and Proposition D.</p>
 <h2 id="both-factors-are-in-the-opticks">5. Both factors are in the
 <em>Opticks</em></h2>
 <p>Newton’s optics supplies the two spreads whose product is <span
@@ -412,9 +445,11 @@ corpuscle}\quad\Longleftrightarrow\quad
 \Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \text{a positive
 constant},\]</span></p>
 <p>which is Robertson’s inequality stated in Newton’s two quantities.
-With M3, §§3–4 give the floor and the insertion mesh from Newton’s own
-materials, with <span class="math inline">\(\kappa=\Lambda p\)</span> in
-place of <span class="math inline">\(\hbar/2\)</span>; the
+The floor also uses a clause M3 carries implicitly, that the
+undetermined impulse is unrelated to the mark’s error; eq. (3) prices
+that clause. With M3, §§3–4 give the floor and the insertion mesh from
+Newton’s own materials, with <span class="math inline">\(\kappa=\Lambda
+p\)</span> in place of <span class="math inline">\(\hbar/2\)</span>; the
 identification <span class="math inline">\(\Lambda=\lambda/2\)</span>,
 <span class="math inline">\(p=h/\lambda\)</span> makes <span
 class="math inline">\(\Lambda p=h/2\)</span>, which differs from <span
@@ -795,14 +830,23 @@ discrimination bound (<em>Quantum Detection and Estimation Theory</em>,
 1976), gives</p>
 <p><span class="math display">\[\frac{F\tau
 L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon,
-\qquad\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar^2}{4A},\]</span></p>
+\qquad\tau\Delta E\ \ge\ \frac{2m(1-2\epsilon)^2\hbar^2\tau}{(2mL+\tau
+P)^2},\]</span></p>
 <p>for an apparatus whose position and momentum spreads are bounded by
 <span class="math inline">\(L\)</span> and <span
-class="math inline">\(P\)</span> with <span
-class="math inline">\(A=LP\ge\hbar/2\)</span>; and this holds for every
-finite adaptive protocol of instruments, because the displacement is a
-phase-space path whose total variation does not grow when it is
-subdivided. The bound is tight: two narrow packets separated by <span
+class="math inline">\(P\)</span>. The floor equals <span
+class="math inline">\((1-2\epsilon)^2\hbar^2/(4LP)\)</span> at the
+balanced aperture <span class="math inline">\(L=\tau P/2m\)</span> and
+falls to zero as either side grows at fixed area, so a squeezed state of
+area <span class="math inline">\(\hbar/2\)</span> evades it as a large
+one does. In Newton’s quantities the first inequality is <span
+class="math inline">\(F\tau\cdot L+\frac{F\tau^2}{2m}\cdot
+P\ge(1-2\epsilon)\hbar\)</span>, the impulse of Proposition I against
+the position aperture plus the sagitta of Lemma X against the momentum
+aperture. It holds for every finite adaptive protocol of instruments,
+because the displacement is a phase-space path whose total variation
+does not grow when it is subdivided. The bound is tight: two narrow
+packets separated by <span
 class="math inline">\(\pi\hbar/(F\tau)\)</span> decide the comparison
 with error probability of order <span class="math inline">\(\tau\Delta
 E/\hbar\)</span>, for arbitrarily small <span
@@ -897,6 +941,13 @@ positioning; the history content is §§5–7, resting on the source
 companions; the junction is the identification of M3 with Robertson’s
 inequality for the corpuscle. STATE’s queue reduces to §9’s obligations
 and the three open mathematical items.</p>
+<p>Revision, 2026-09-22: both quantum floors needed a bound on the shape
+of an uncertainty ellipse, since the aperture corollary and the mark
+floor each fall to zero under squeezing at fixed area. Eq. (3) and the
+<span class="math inline">\((L,P)\)</span> form of §8 are the corrected
+statements. A floor with no shape bound needs a quantity that squeezing
+cannot move; the state-independent phase of the quantum Corollary VI is
+the candidate, and it is the next note.</p>
 
 </main>
 <footer class="site"><div class="wrap">

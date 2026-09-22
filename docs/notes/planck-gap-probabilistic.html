@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The probabilistic Planck gap: τΔE ≥ (1-2ε)²ℏ²/(4A), and why it is resource-relative</title>
+<title>The probabilistic Planck gap: Fτ(L+τ P/2m) ≥ (1-2ε)ℏ, and why it is resource-relative</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -77,9 +77,25 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The probabilistic Planck gap: <span class="math inline">\(\tau\Delta
-E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, and why it is
-resource-relative</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/planck-gap-probabilistic.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-probabilistic.pdf">PDF</a></p><p>The worst-case theorem of the <a
+<h1>The probabilistic Planck gap: <span
+class="math inline">\(F\tau(L+\tau P/2m)\ge(1-2\epsilon)\hbar\)</span>,
+and why it is resource-relative</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/planck-gap-probabilistic.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-probabilistic.pdf">PDF</a></p><p><strong>Correction, 2026-09-22.</strong> The first version stated
+Corollary 3 at fixed area <span class="math inline">\(A=LP\)</span> with
+the aperture’s shape free. Its proof minimized <span
+class="math inline">\(2mL+\tau A/L\)</span> over <span
+class="math inline">\(L\)</span>, which yields the largest lower bound,
+attained only at the balanced aperture <span
+class="math inline">\(L=\tau P/2m\)</span>. For an aperture of aspect
+<span class="math inline">\(r=L/\sqrt{\tau A/2m}\)</span> the floor is
+<span
+class="math inline">\((1-2\epsilon)^2\hbar^2/(A(r+r^{-1})^2)\)</span>,
+and a squeezed Gaussian of area <span
+class="math inline">\(\hbar/2\)</span> and large <span
+class="math inline">\(r\)</span> drives it to zero. Theorems 1 and 2,
+stated in <span class="math inline">\(L\)</span> and <span
+class="math inline">\(P\)</span> separately, are unaffected; Corollary
+3, the lead and Sections 5–6 now carry the balanced form.</p>
+<p>The worst-case theorem of the <a
 href="planck-gap-derivation.html">derivation note</a> has no quantum
 instance. Its probabilistic replacement does, and it decides the
 universality question that the worst-case version left open. Let the
@@ -98,11 +114,18 @@ requires</p>
 L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ge1-2\epsilon,
 \qquad\text{hence}\qquad
 \tau\Delta
-E=\frac{F^2\tau^3}{2m}\ge\frac{(1-2\epsilon)^2\hbar^2}{4A},}\]</span></p>
-<p>the second form after optimizing the apparatus shape at fixed <span
-class="math inline">\(A\)</span> (Theorem 2, Corollary 3). At the
-minimal area <span class="math inline">\(A=\hbar/2\)</span> this is
-<span class="math inline">\(\tau\Delta
+E=\frac{F^2\tau^3}{2m}\ge\frac{(1-2\epsilon)^2\hbar^2}{A\,(r+r^{-1})^2},}\]</span></p>
+<p>with <span class="math inline">\(r=L/\sqrt{\tau A/2m}\)</span> the
+aperture’s aspect measured against the duration (Theorem 2, Corollary
+3). In Newton’s quantities the first form reads <span
+class="math inline">\(J L+sP\ge(1-2\epsilon)\hbar\)</span>: the impulse
+<span class="math inline">\(J=F\tau\)</span> of Proposition I weighed
+against the position aperture, plus the sagitta <span
+class="math inline">\(s=F\tau^2/2m\)</span> of Lemma X weighed against
+the momentum aperture. At the balanced aperture <span
+class="math inline">\(r=1\)</span>, where the two terms are equal, and
+at the minimal area <span class="math inline">\(A=\hbar/2\)</span>, the
+floor is <span class="math inline">\(\tau\Delta
 E\ge(1-2\epsilon)^2\hbar/2\)</span>, the same combination <span
 class="math inline">\(F^2\tau^3/m\)</span> that Newton’s geometry sends
 to zero and that the classical theorem bounds by the marks’ phase-space
@@ -325,28 +348,41 @@ states <span class="math inline">\(\sigma\)</span>, and therefore
 matters only through the apertures <span
 class="math inline">\(L\)</span> and <span
 class="math inline">\(P\)</span> that those states respect.</p>
-<p><strong>Corollary 3 (the floor).</strong> Under Theorem 2, with <span
-class="math inline">\(A=LP\)</span> fixed and the aperture shape
-free,</p>
+<p><strong>Corollary 3 (the floor at a given aperture).</strong> Under
+Theorem 2, with <span class="math inline">\(A=LP\)</span> and <span
+class="math inline">\(r=L/\sqrt{\tau A/2m}\)</span>,</p>
 <p><span class="math display">\[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\
-\frac{(1-2\epsilon)^2\hbar^2}{4A},
-\qquad\text{and at }A=\frac\hbar2:\quad
-\tau\Delta E\ \ge\ \frac{(1-2\epsilon)^2\hbar}{2}.\]</span></p>
+\frac{2m(1-2\epsilon)^2\hbar^2\tau}{(2mL+\tau P)^2}
+=\frac{(1-2\epsilon)^2\hbar^2}{A\,(r+r^{-1})^2},\]</span></p>
+<p>and at the balanced aperture of minimal area, <span
+class="math inline">\(r=1\)</span> and <span
+class="math inline">\(A=\hbar/2\)</span>, that is <span
+class="math inline">\(L=\sqrt{\hbar\tau/4m}\)</span> and <span
+class="math inline">\(P=\sqrt{m\hbar/\tau}\)</span>, <span
+class="math inline">\(\tau\Delta
+E\ge(1-2\epsilon)^2\hbar/2\)</span>.</p>
 <p><em>Proof.</em> Theorem 2 gives <span
 class="math inline">\(F\ge2m\hbar(1-2\epsilon)/[\tau(2mL+\tau
 P)]\)</span>, so <span class="math inline">\(\tau\Delta
-E\ge2m\hbar^2(1-2\epsilon)^2\tau/(2mL+\tau P)^2\)</span>. At fixed <span
-class="math inline">\(A=LP\)</span> the denominator <span
-class="math inline">\(2mL+\tau A/L\)</span> is minimized at <span
-class="math inline">\(L=\sqrt{\tau A/2m}\)</span> with value <span
-class="math inline">\(2\sqrt{2m\tau A}\)</span>, whose square is <span
-class="math inline">\(8m\tau A\)</span>. <span
-class="math inline">\(\square\)</span></p>
-<p>A larger aperture lowers the floor, and the floor is positive exactly
-when the aperture is bounded. The maximum of the floor over apertures is
-attained at the smallest one the uncertainty relation allows, and equals
-<span class="math inline">\(\hbar/2\)</span> as <span
-class="math inline">\(\epsilon\to0\)</span>.</p>
+E\ge2m\hbar^2(1-2\epsilon)^2\tau/(2mL+\tau P)^2\)</span>. With <span
+class="math inline">\(L=r\sqrt{\tau A/2m}\)</span> one has <span
+class="math inline">\(2mL=r\sqrt{2m\tau A}\)</span> and <span
+class="math inline">\(\tau P=\tau A/L=r^{-1}\sqrt{2m\tau A}\)</span>, so
+the denominator is <span class="math inline">\(2m\tau
+A(r+r^{-1})^2\)</span>. <span class="math inline">\(\square\)</span></p>
+<p>The floor is positive exactly when both sides of the aperture are
+bounded, and it falls as either side grows. At fixed area it is largest
+at <span class="math inline">\(r=1\)</span>, with value <span
+class="math inline">\((1-2\epsilon)^2\hbar^2/(4A)\)</span>, and it tends
+to zero as <span class="math inline">\(r\to0\)</span> or <span
+class="math inline">\(r\to\infty\)</span>: a minimum-uncertainty
+Gaussian with <span class="math inline">\(L\to\infty\)</span> and <span
+class="math inline">\(P=\hbar/2L\)</span> keeps <span
+class="math inline">\(A=\hbar/2\)</span> and distinguishes the
+hypotheses at any force. So the resource the floor prices is the
+aperture’s two sides, and the area <span
+class="math inline">\(A\)</span> controls it only once the shape is
+fixed.</p>
 <h2 id="the-counterexample-universality-fails-without-the-aperture">4.
 The counterexample: universality fails without the aperture</h2>
 <p><strong>Proposition 4.</strong> Fix <span
@@ -446,11 +482,10 @@ it.</li>
 <li><strong>The resource is named and the bound is tight in it.</strong>
 Ozawa’s construction and Proposition 4 both buy distinguishability with
 preparations of large phase-space extent. Corollary 3 prices that
-exchange as <span class="math inline">\(\tau\Delta
-E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, and Proposition 4 shows the
-price is right, so the standard quantum limit appears here as the
-special case <span class="math inline">\(A=\hbar/2\)</span> rather than
-as a law.</li>
+exchange at each aperture <span class="math inline">\((L,P)\)</span>,
+and Proposition 4 shows the price is right, so the standard quantum
+limit appears here as the balanced aperture of area <span
+class="math inline">\(\hbar/2\)</span> rather than as a law.</li>
 <li><strong>The criterion is hypothesis testing, not
 estimation.</strong> The quantity bounded is the error probability of
 deciding between two known histories, which is the question Newton’s
@@ -473,15 +508,16 @@ recorded comparison is <span class="math inline">\(\tau\Delta
 E\ge\frac92\kappa\)</span>, with <span
 class="math inline">\(\kappa=\delta\Delta\)</span> the phase-space cost
 of a single mark, so <strong>coarser marks raise the floor</strong>.
-Quantum mechanically the floor is <span class="math inline">\(\tau\Delta
-E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, with <span
-class="math inline">\(A\)</span> the phase-space aperture of the
-apparatus, so <strong>a larger laboratory lowers it</strong>. The two
-meet where the aperture is as small as the uncertainty relation permits:
-there <span class="math inline">\(A=\hbar/2\)</span> and the floor is
-<span class="math inline">\(\hbar/2\)</span>, which is the order of the
-value <span class="math inline">\(\kappa=\Lambda p=h/2\)</span> that
-Newton’s interval of fits and corpuscle impulse supply in the <a
+Quantum mechanically the floor at aperture <span
+class="math inline">\((L,P)\)</span> is <span
+class="math inline">\(2m(1-2\epsilon)^2\hbar^2\tau/(2mL+\tau
+P)^2\)</span>, so <strong>a larger laboratory, in either direction of
+phase space, lowers it</strong>. The two meet at the balanced aperture
+of the smallest area the uncertainty relation permits: there <span
+class="math inline">\(A=\hbar/2\)</span> and the floor is <span
+class="math inline">\(\hbar/2\)</span>, which is the order of the value
+<span class="math inline">\(\kappa=\Lambda p=h/2\)</span> that Newton’s
+interval of fits and corpuscle impulse supply in the <a
 href="newton-mark-floor.html">mark-floor note</a>.</p>
 <p>The Newton-age reading is therefore sharper than before. Newton’s
 limit in Lemmas X and XI takes the sagitta and the swept area to zero,
@@ -500,12 +536,13 @@ class="math inline">\(\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span>,
 Theorem 2 extends it to every finite adaptive protocol of rank-one
 instruments with the constant <span
 class="math inline">\(1-2\epsilon\)</span>, Corollary 3 converts it to
-the floor <span class="math inline">\(\tau\Delta
-E\ge(1-2\epsilon)^2\hbar^2/(4A)\)</span>, and Proposition 4 decides the
-universality question: universality over instruments holds, and
-universality over preparations fails, with an explicit family that
-saturates the theorem. Positioning against the standard quantum limit is
-in Section 5, and no error–disturbance relation is used.</p>
+the floor at each aperture, <span
+class="math inline">\((1-2\epsilon)^2\hbar^2/(4A)\)</span> at the
+balanced one, and Proposition 4 decides the universality question:
+universality over instruments holds, and universality over preparations
+fails, with an explicit family that saturates the theorem. Positioning
+against the standard quantum limit is in Section 5, and no
+error–disturbance relation is used.</p>
 <p>Open, in order:</p>
 <ol type="1">
 <li><strong>Mixed conditional states.</strong> Theorem 2 assumes

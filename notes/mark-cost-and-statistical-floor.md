@@ -1,5 +1,26 @@
 # The mark cost is exactly $\hbar/2$, and the worst-case theorem survives as a statistical one
 
+**Correction, 2026-09-22.** Section 4 of the first version applied
+Theorem B to every Gaussian probe. Theorem B assumes that each mark's
+error and recoil are independent, and a probe whose position and momentum
+are correlated delivers correlated ones. The corrected statement is
+Theorem C: with correlation coefficient $\rho$ between a mark's error and
+its recoil, the cost that enters the floor is
+$\kappa_{\rm eff}=\delta\Delta(1-|\rho|)\ge\frac\hbar2\sqrt{(1-|\rho|)/(1+|\rho|)}$,
+so every protocol whose marks have $|\rho_j|\le\rho$ needs
+
+$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
+
+The value $\frac92z^2\hbar$ is the uncorrelated case $\rho=0$, which
+contains every coherent probe and every probe squeezed along its
+pointer's axes. A three-mark protocol whose middle probe is squeezed
+along a rotated quadrature has $\rho\to1$ and decides the comparison at
+any force (Proposition D), and Yuen's contractive states are this
+resource. The same mechanism corrects the aperture corollary of the
+[probabilistic note](planck-gap-probabilistic.md): in both places a floor
+of order $\hbar$ holds once the shape of the uncertainty ellipse is
+bounded, and its area alone leaves the floor free.
+
 Reopening the question of what was wrong with the
 [derivation note](planck-gap-derivation.md): almost nothing. Its
 Proposition 6 claimed a positive quantum value for the mark cost
@@ -33,7 +54,8 @@ error probability }\epsilon\text{ requires}\qquad
 
 with $z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)$. With Theorem A this is
 $\tau\Delta E\ge\tfrac92z_{1-\epsilon}^2\hbar$, about $12\hbar$ at five
-per cent error. The proof is the derivation note's proof unchanged:
+per cent error, for probes whose error and recoil are uncorrelated;
+Theorem C gives the correlated case. The proof is the derivation note's proof unchanged:
 the same certificate, the same arithmetic--geometric step, the same
 integration by parts to a Dirichlet energy, with the separating
 hyperplane replaced by the optimal test direction. The constant $9$
@@ -127,6 +149,20 @@ counterexamples concern instruments whose commutator $[\hat N,\hat D]$
 differs from $-i\hbar$, and the present statement is confined to the
 momentum-transfer class where it equals $-i\hbar$.
 
+**The correlation of error and recoil.** The same commutator bounds the
+joint covariance of the two quantities. With $c=\operatorname{Cov}(\hat N,\hat D)$
+the symmetrized covariance, the Robertson--Schrödinger inequality gives
+
+$$\delta^2\Delta^2-c^2\ \ge\ \frac{\hbar^2}{4},\qquad
+c=-\operatorname{Cov}(\hat Q_A,\hat P_A),$$
+
+with $\lambda$ cancelling again. The correlation coefficient
+$\rho=c/(\delta\Delta)$ is a property of the probe state. It vanishes for
+coherent states and for states squeezed along $\hat Q_A$ or $\hat P_A$,
+and it approaches $\pm1$ for a state squeezed along a rotated quadrature
+$\hat Q_A\cos\varphi+\hat P_A\sin\varphi$. Section 4 shows that $\rho$
+enters the floor.
+
 **Why the records cannot recover the recoil.** The pointer record is
 $\hat R=\hat Q_A+\lambda\hat y$ and the impulse is $\hat D=-\lambda\hat P_A$,
 with $[\hat R,\hat D]=-i\hbar\lambda$. The record and the recoil are
@@ -209,22 +245,74 @@ it is identical. This is the sense in which the derivation note's content
 survived its formulation: the argument never needed interval containment,
 only a quadratic bound in the same two variables.
 
-## 4. Why Gaussian quantum experiments are covered exactly
+## 4. Gaussian quantum experiments, with and without correlation
 
-Within its class the statistical model of Section 3 reproduces the
-quantum one exactly. For Gaussian probe states, linear dynamics and
-pointer readouts, the Wigner function is a genuine probability density
-and evolves by the classical linear equations, so every measured
-distribution in the quantum experiment equals the corresponding
-distribution in the classical Gaussian model whose noise covariance is
-the probe's Wigner covariance. Theorem A identifies that covariance's
-uncertainty product as $\delta\Delta\ge\hbar/2$. Hence for every protocol
-of Gaussian momentum-transfer marks on a body under the two hypotheses,
+For Gaussian probe states, linear dynamics and pointer readouts, the
+Wigner function is a genuine probability density and evolves by the
+classical linear equations, so every measured distribution in the
+quantum experiment equals the corresponding distribution in the
+classical Gaussian model whose noise covariance is the probe's Wigner
+covariance. That covariance gives mark $j$ a jointly Gaussian pair
+$(\xi_j,\iota_j)$ with variances $\delta_j^2,\Delta_j^2$ and covariance
+$c_j=\rho_j\delta_j\Delta_j$, independent across marks. Section 3 is the
+case $c_j=0$.
 
-$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar .$$
+**Theorem C.** In this model, if every mark has
+$\delta_j\Delta_j(1-|\rho_j|)\ge\kappa_{\rm eff}$, then
+$d^2\le2F^2\tau^3/(9m\kappa_{\rm eff})$ and deciding at error
+probability $\epsilon$ requires $\tau\Delta E\ge9z_{1-\epsilon}^2\kappa_{\rm eff}$.
+For momentum-transfer marks with $|\rho_j|\le\rho$,
 
-At $\epsilon=0.05$, where $z=1.645$, this is $\tau\Delta E\ge12.2\,\hbar$;
-at $\epsilon=0.32$, where $z=1$, it is $4.5\,\hbar$. The insertion
+$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
+
+*Proof.* The statistic's noise is
+$\sum_j\bigl(u_j\xi_j+S_j\iota_j/m\bigr)$, so the variance acquires the
+cross terms $2c_ju_jS_j/m$:
+
+$$u^{\mathsf T}\Sigma u=\sum_j\Bigl(\delta_j^2u_j^2+\frac{2c_j}{m}u_jS_j
++\frac{\Delta_j^2}{m^2}S_j^2\Bigr).$$
+
+For $a,b\ge0$ and $|c|\le\sqrt{ab}$, the arithmetic--geometric mean
+inequality and $2cxy\ge-2|c||x||y|$ give
+$ax^2+2cxy+by^2\ge2(\sqrt{ab}-|c|)|x||y|$, so each term is at least
+$2\delta_j\Delta_j(1-|\rho_j|)|u_j||S_j|/m\ge2\kappa_{\rm eff}|u_j||S_j|/m$.
+From here the proof of Theorem B runs unchanged with $\kappa_{\rm eff}$ in
+place of $\kappa$. For the quantum value, the section-2 inequality
+$\delta^2\Delta^2(1-\rho^2)\ge\hbar^2/4$ gives
+$\delta\Delta(1-|\rho|)\ge\frac\hbar2(1-|\rho|)/\sqrt{1-\rho^2}
+=\frac\hbar2\sqrt{(1-|\rho|)/(1+|\rho|)}$, with equality for pure Gaussian
+probes. $\square$
+
+At $\rho=0$ this is $\tau\Delta E\ge\frac92z^2\hbar$: $12.2\,\hbar$ at
+$\epsilon=0.05$, where $z=1.645$, and $4.5\,\hbar$ at $\epsilon=0.32$,
+where $z=1$. The dependence on $\rho$ is attained, up to the constant, by
+three marks.
+
+**Proposition D.** Marks at $0,\tau/2,\tau$ and the test
+$R_1-2R_2+R_3$ decide the comparison when
+$\tau\Delta E\ge32z_{1-\epsilon}^2\hbar\sqrt{(1-\rho)/(1+\rho)}$, where
+$\rho$ is the middle probe's correlation.
+
+*Proof.* The weights $u=(1,-2,1)$ annihilate the unknown position and
+velocity, and $u^{\mathsf T}P=F\tau^2/4m$. The recoils of the outer
+marks have $S_1=S_3=0$: the first is absorbed into the unknown initial
+velocity and the last acts after every reading. So the outer marks may
+be made as sharp as desired at no cost, and the noise is that of the
+middle mark, $-2\xi_2+(\tau/2m)\iota_2$. With the coupling chosen so
+that $2\delta_2=\tau\Delta_2/2m$ and a pure Gaussian probe of correlation
+$\rho>0$, its variance is
+$(2\tau/m)\delta_2\Delta_2(1-\rho)=(\tau\hbar/m)\sqrt{(1-\rho)/(1+\rho)}$.
+Hence $d^2=\frac{\tau\Delta E}{8\hbar}\sqrt{(1+\rho)/(1-\rho)}$, and
+$d\ge2z$ is the stated condition. $\square$
+
+As $\rho\to1$ the three-mark protocol decides at every force. The middle
+probe's kick is correlated with its reading error so that the kick's
+effect on the third reading cancels the error in the second, which is
+the back-action evasion of Yuen's contractive states
+([PRL **51**, 719, 1983](https://doi.org/10.1103/PhysRevLett.51.719),
+metadata). The floor of order $\hbar$ is therefore a statement about
+marks whose error--recoil correlation is bounded, and Theorem C gives
+its value for every bound. The insertion
 statement follows as before: marks inserted into a window of duration
 $\tau'$, used by themselves, record the force only if
 $F^2\tau'^3\ge18z^2m\kappa$, so Democritus insertion stops at the mesh
@@ -240,10 +328,20 @@ the hypotheses at arbitrarily small $\tau\Delta E$ using a two-packet
 preparation of separation $\pi\hbar/(F\tau)$. That protocol is
 non-Gaussian and makes no marks: it prepares once, waits, and measures
 once. The two results divide the ground cleanly. **Marking the trajectory
-costs $\hbar/2$ per mark and gives a floor of order $\hbar$; declining to
-mark it costs an apparatus of size $\pi\hbar/(F\tau)$ and gives the floor
-$\hbar^2/(4A)$.** Newton's refinement is the first case, which is why the
-floor is the relevant statement for the insertion question.
+with uncorrelated probes costs $\hbar/2$ per mark and gives a floor of
+order $\hbar$; declining to mark it costs an apparatus of size
+$\pi\hbar/(F\tau)$, and the floor at aperture $(L,P)$ is
+$2m(1-2\epsilon)^2\hbar^2\tau/(2mL+\tau P)^2$, equal to
+$(1-2\epsilon)^2\hbar^2/(4LP)$ at the balanced aperture.** Newton's
+refinement is the first case, which is why the floor is the relevant
+statement for the insertion question.
+
+Both escapes use one resource. A correlated probe and an unbalanced
+aperture each stretch an uncertainty ellipse of fixed area along a
+direction the test does not see: the rotated quadrature of the middle
+probe in Proposition D, the long side of the aperture in the
+probabilistic note. Robertson's inequality fixes the area; the floor
+needs the shape bounded as well, and then $\hbar$ fixes its value.
 
 ## 5. Newton's premise is Robertson's inequality for his corpuscle
 
@@ -261,7 +359,10 @@ $$\kappa=\Lambda p\quad\longleftrightarrow\quad
 \kappa=\Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \frac\hbar2 ,$$
 
 and M3 is Robertson's inequality for the corpuscle, stated in the two
-quantities Newton had. Newton measured the first as $1/89000$ inch, had
+quantities Newton had. The floor uses M3 with a second clause that the
+mark-floor note left implicit: the undetermined impulse is unrelated to
+the mark's error. Theorem C prices that clause, since a correlation
+$\rho$ multiplies the floor by $\sqrt{(1-\rho)/(1+\rho)}$. Newton measured the first as $1/89000$ inch, had
 no access to the second, held both to be determinate properties of the
 corpuscle, and thereby denied exactly the inequality. His Prop. XII
 states the fits as a transient constitution that returns at equal
@@ -295,7 +396,8 @@ rather than decorating a theorem. The structure is:
    arguments were for.
 2. **The two theorems.** Theorem A, that a momentum-transfer mark's error
    and recoil are conjugate, and Theorem B, that every protocol of such
-   marks needs $\tau\Delta E\ge9z^2\kappa$. Proof by certificate,
+   marks needs $\tau\Delta E\ge9z^2\kappa$, with Theorem C for correlated
+   error and recoil. Proof by certificate,
    arithmetic--geometric mean and Dirichlet energy. This is the
    foundations content and it stands alone.
 3. **The two factors in the *Opticks*.** The interval of fits as a
@@ -326,9 +428,13 @@ Cohen--Whitman translation.
 The derivation note's Proposition 6 is reinstated in substance with a
 correct proof and the constant $\hbar/2$ in place of $2\hbar$, and its
 worst-case formulation is replaced by standard deviations. The Planck gap
-for marked trajectories is $\tau\Delta E\ge\frac92z_{1-\epsilon}^2\hbar$,
-protocol-universal, with the insertion mesh
-$\tau_*=(9z^2m\hbar/F^2)^{1/3}$. The remaining programme is item 6's two
+for marked trajectories is
+$\tau\Delta E\ge\frac92z_{1-\epsilon}^2\hbar\sqrt{(1-\rho)/(1+\rho)}$,
+protocol-universal for marks whose error--recoil correlation is at most
+$\rho$, with the insertion mesh $\tau_*=(9z^2m\hbar/F^2)^{1/3}$ at
+$\rho=0$; Proposition D attains the $\rho$-dependence up to the
+constant. A floor with no shape bound needs a quantity that squeezing
+cannot move, which is the task of the next note. The remaining programme is item 6's two
 obligations plus: extending Theorem A beyond the momentum-transfer class,
 where Ozawa's instruments live; the general force law, which Theorem B's
 proof already reduces to a norm of $P''$; and closing the constants
