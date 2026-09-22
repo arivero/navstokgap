@@ -67,9 +67,14 @@ the shape parameter explicit.
    action in units of $\Lambda p$, and it separates the polygon from the
    curve by $(F/v)\sum_jA_j/(2\Lambda p)$ fits. The paper carries
    it as Theorem 6 (§4) with the refraction invariant in §§5--6.
-2. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$ with
-   a Dirichlet energy, so it bounds a norm of $P''$; the aperture form
-   becomes the total variations of the displacement path.
+2. **Done, 2026-09-22: general force law and one functional.** Theorem 2
+   is sharp with constant $48$ (Poincaré, since $T(0)=T(\tau)=0$). For any
+   force history, with $\mathcal K_\tau$ the kinetic action of the motion
+   relative to its chord, the polygon phase is $\sum_j\mathcal K_{\tau_j}/\hbar$
+   and the sharp mark bound is $d^2\le\mathcal K_\tau/\kappa$; at
+   $\kappa=\hbar/2$ the best recorded deflection is twice the chord phase
+   (polygon-lift note §6, paper Theorem 7). Open on this line: the
+   aperture form for a general force, and correlated marks in Theorem 7.
 3. **Mixed conditional states** in the probabilistic Theorem 2, by the
    Bures metric in place of rank-one Kraus operators.
 4. **Theorem A beyond the momentum-transfer class.**

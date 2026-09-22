@@ -308,7 +308,84 @@ count of intervals along the path, so Proposition 5's extension is ours.
 And $\Lambda p$ is a per-colour constant in Newton's system: universality
 across colours is what Planck's constant adds.
 
-## 6. Consequence for STATE
+## 6. Every force law, and one functional for both legs
+
+Let $f$ be any integrable force history on an interval of duration
+$\tau$, and compare the motion with its **chord**, the uniform motion
+between the same two positions. The deviation $\delta y=y_{\rm chord}-y_f$
+obeys $m\,\delta y''=-f$ with $\delta y=0$ at both ends, so
+$\delta y=G_\tau f/m$ with the Dirichlet Green's function
+$G_\tau(s,u)=\min(s,u)\,(\tau-\max(s,u))/\tau$ in time measured from the
+start of the interval. Define the **kinetic action of the deviation**
+
+$$\mathcal K_\tau[f]=\int_0^\tau\tfrac12m\,\delta\dot y^{\,2}\,dt
+=\frac1{2m}\int_0^\tau\!\!\int_0^\tau G_\tau(s,u)f(s)f(u)\,ds\,du\ \ge0,$$
+
+zero only for $f=0$. For the constant force it is
+$F^2\tau^3/24m=\tau\Delta E/12=(F/2v)S$, with $S$ the segment of the chord.
+
+**Theorem 7.** (a) On each step of a partition, the two impulses
+$J_j^-=\int(1-s/\tau_j)f$ and $J_j^+=\int(s/\tau_j)f$ at its ends
+reproduce the step's impulse and displacement, so Newton's polygon built
+from them agrees with the motion at every vertex, and
+
+$$W_{\rm poly}=\exp\Bigl[\frac{i}{\hbar}\sum_j\mathcal K_{\tau_j}[f]\Bigr]W_f .$$
+
+Inserting vertices never raises the phase:
+$\sum_j\mathcal K_{\tau_j}[f]\le\mathcal K_\tau[f]$. (b) For every
+protocol of marks with uncorrelated error and recoil and
+$\delta_j\Delta_j\ge\kappa$, with the initial position and velocity
+unknown, the deflection between the motion under $f$ and free motion
+obeys
+
+$$d^2\ \le\ \frac{\mathcal K_\tau[f]}{\kappa},$$
+
+with equality approached by dense protocols when $f$ has one sign.
+(c) Hence at $\kappa=\hbar/2$ the best deflection any such protocol can
+reach is **twice the phase between the motion and its chord**,
+$d^2_{\max}=2\,\mathcal K_\tau/\hbar=2\theta_1$.
+
+*Proof.* (a) Measure time from the start of the step. The impulses at
+$0$ and $\tau_j$ are $k^-=(0,J^-)$ and $k^+=(-\tau_jJ^+/m,\ J^+)$ in the
+phase plane, and $J^-+J^+=\int f$, $\tau_jJ^+=\int sf$ match the step's
+increment. Lemma 1 gives the polygon's step phase
+$\frac1{2\hbar}\omega(k^-,k^+)=\tau_jJ^+J^-/2m\hbar$ and the motion's step
+phase $\frac1{2\hbar}\int\omega(z,dz)=\frac1{2m\hbar}\iint_{u<s}(s-u)f(s)f(u)$,
+because along the path $\omega(z,dz)=f(s)\,\frac1m\int_0^s(s-u)f(u)\,du\,ds$.
+Now $\tau_jJ^+J^-=\iint s(\tau_j-u)f(s)f(u)/\tau_j$; symmetrizing and
+subtracting $\frac12\iint|s-u|ff$ leaves the kernel
+$\frac1{2\tau_j}[s(\tau_j-u)+u(\tau_j-s)-\tau_j|s-u|]=G_{\tau_j}(s,u)$.
+Shifting the time origin is the shear $(a,b)\mapsto(a-t_{j-1}b/m,b)$,
+which preserves $\omega$, so the per-step phases are
+$\mathcal K_{\tau_j}/\hbar$, and they multiply as in Theorem 1. The
+Dirichlet principle $2m\mathcal K_\tau=\sup_T(2\int fT-\int T'^2)$ over $T$
+vanishing at the ends, restricted to $T$ vanishing also at the interior
+vertices, gives the monotonicity.
+
+(b) As in Theorem 2 of the paper, $u^{\mathsf T}\Sigma u\ge2\kappa E/m$ and
+$u^{\mathsf T}P=\frac1m\int_0^\tau fT$ with $T$ vanishing at both ends.
+Since $-(G_\tau f)''=f$, $\int fT=\int(G_\tau f)'T'\le\sqrt{\langle f,G_\tau f\rangle}\sqrt E$,
+so $d^2\le\langle f,G_\tau f\rangle/(2m\kappa)=\mathcal K_\tau/\kappa$. For
+$f$ of one sign take $T\propto G_\tau f$, which has one sign while $T''$
+has the other, so the interior weights and the $S_j$ have opposite signs
+throughout and the dense balanced construction of Theorem 2 applies.
+
+(c) Theorem 1 with a single step is the chord, whose phase is
+$\theta_1=\mathcal K_\tau/\hbar$. $\square$
+
+The two legs of the programme are governed by one functional of the force
+history. $\mathcal K_\tau$ is what Newton's refinement removes: it is the
+kinetic action of the motion relative to its chord, and for a constant
+force it is the chord's segment times $F/2v$. Planck's constant converts
+it into the phase by which the motion differs from its inscribed polygon,
+a c-number that no preparation moves; the mark cost converts it into the
+largest statistical distance any record of the motion can reach. At
+$\kappa=\hbar/2$ the second is exactly twice the first. The $24$ in
+Theorem 1's $F^2\tau^3/24m$ and in the sharp bound
+$d^2\le F^2\tau^3/24m\kappa$ of the paper's Theorem 2 is one integral,
+$\iint G_\tau=\tau^3/12$, multiplied by $F^2/2m$.
+
+## 7. Consequence for STATE
 
 STATE's next item 1 is discharged in a stronger form than it was stated.
 The state-independent quantity is identified for every refinement:
@@ -318,7 +395,8 @@ inscribed triangle over $\hbar$ in Archimedes' proportions, and the ordering
 holonomy carries the complement, with $\Phi_N+4\theta_N=\tau\Delta E/3\hbar$.
 The Newton-age form of the central extension is in §5: Props. X and XVII
 make $\Lambda p$ a refraction invariant, and the fits count separates the
-polygon from the curve by $(F/v)\sum_jA_j/(2\Lambda p)$. Next: the general
-force law, where Lemma 2 holds unchanged and Theorem 1's segment areas
-become the areas between the phase-plane path and its chords; and a paper
-section presenting Theorem 1 and Corollary 4 as the squeeze-immune core.
+polygon from the curve by $(F/v)\sum_jA_j/(2\Lambda p)$. Section 6 settles the
+general force law and joins the legs: for any force history the polygon
+phase is $\sum_j\mathcal K_{\tau_j}/\hbar$, the sharp mark bound is
+$d^2\le\mathcal K_\tau/\kappa$, and at $\kappa=\hbar/2$ the best recorded
+deflection is twice the chord phase.

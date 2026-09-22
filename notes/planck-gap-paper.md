@@ -313,6 +313,22 @@ $\tau_j\ge(48m\hbar\arcsin(1-2\epsilon)/F^2)^{1/3}$, for every state of the
 body. The single chord lens and the closed loop of the earlier notes are
 instances.
 
+**Theorem 7 (every force law).** For a force history $f$ on an interval
+of duration $\tau$, let $\mathcal K_\tau[f]=\int\frac12m(\dot y_f-\dot y_{\rm chord})^2dt
+=\frac1{2m}\iint G_\tau ff$ be the kinetic action of the motion relative
+to its chord, $G_\tau(s,u)=\min(s,u)(\tau-\max(s,u))/\tau$. Newton's
+polygon, with each step's impulse split between its ends so as to match
+the step's displacement, differs from the motion by the phase
+$\sum_j\mathcal K_{\tau_j}[f]/\hbar$, which refinement never raises; and
+every protocol of uncorrelated marks has $d^2\le\mathcal K_\tau[f]/\kappa$,
+sharp for $f$ of one sign. At $\kappa=\hbar/2$ the best recorded deflection
+is twice the phase between the motion and its chord. The proofs are in
+§6 of the [polygon-lift note](polygon-lift-phase.md). One functional of
+the force history, the part of the motion that Newton's refinement
+removes, is converted by $\hbar$ into a phase and by the mark cost into a
+statistical distance; for a constant force it is the chord's segment
+times $F/2v$.
+
 ## 5. Both factors are in the *Opticks*
 
 Newton's optics supplies the two spreads whose product is $\kappa$, in

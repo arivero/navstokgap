@@ -474,7 +474,118 @@ complicated than a count of intervals along the path, so Proposition 5’s
 extension is ours. And <span class="math inline">\(\Lambda p\)</span> is
 a per-colour constant in Newton’s system: universality across colours is
 what Planck’s constant adds.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<h2 id="every-force-law-and-one-functional-for-both-legs">6. Every force
+law, and one functional for both legs</h2>
+<p>Let <span class="math inline">\(f\)</span> be any integrable force
+history on an interval of duration <span
+class="math inline">\(\tau\)</span>, and compare the motion with its
+<strong>chord</strong>, the uniform motion between the same two
+positions. The deviation <span class="math inline">\(\delta y=y_{\rm
+chord}-y_f\)</span> obeys <span class="math inline">\(m\,\delta
+y&#39;&#39;=-f\)</span> with <span class="math inline">\(\delta
+y=0\)</span> at both ends, so <span class="math inline">\(\delta
+y=G_\tau f/m\)</span> with the Dirichlet Green’s function <span
+class="math inline">\(G_\tau(s,u)=\min(s,u)\,(\tau-\max(s,u))/\tau\)</span>
+in time measured from the start of the interval. Define the
+<strong>kinetic action of the deviation</strong></p>
+<p><span class="math display">\[\mathcal
+K_\tau[f]=\int_0^\tau\tfrac12m\,\delta\dot y^{\,2}\,dt
+=\frac1{2m}\int_0^\tau\!\!\int_0^\tau G_\tau(s,u)f(s)f(u)\,ds\,du\
+\ge0,\]</span></p>
+<p>zero only for <span class="math inline">\(f=0\)</span>. For the
+constant force it is <span
+class="math inline">\(F^2\tau^3/24m=\tau\Delta E/12=(F/2v)S\)</span>,
+with <span class="math inline">\(S\)</span> the segment of the
+chord.</p>
+<p><strong>Theorem 7.</strong> (a) On each step of a partition, the two
+impulses <span class="math inline">\(J_j^-=\int(1-s/\tau_j)f\)</span>
+and <span class="math inline">\(J_j^+=\int(s/\tau_j)f\)</span> at its
+ends reproduce the step’s impulse and displacement, so Newton’s polygon
+built from them agrees with the motion at every vertex, and</p>
+<p><span class="math display">\[W_{\rm
+poly}=\exp\Bigl[\frac{i}{\hbar}\sum_j\mathcal K_{\tau_j}[f]\Bigr]W_f
+.\]</span></p>
+<p>Inserting vertices never raises the phase: <span
+class="math inline">\(\sum_j\mathcal K_{\tau_j}[f]\le\mathcal
+K_\tau[f]\)</span>. (b) For every protocol of marks with uncorrelated
+error and recoil and <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, with the
+initial position and velocity unknown, the deflection between the motion
+under <span class="math inline">\(f\)</span> and free motion obeys</p>
+<p><span class="math display">\[d^2\ \le\ \frac{\mathcal
+K_\tau[f]}{\kappa},\]</span></p>
+<p>with equality approached by dense protocols when <span
+class="math inline">\(f\)</span> has one sign. (c) Hence at <span
+class="math inline">\(\kappa=\hbar/2\)</span> the best deflection any
+such protocol can reach is <strong>twice the phase between the motion
+and its chord</strong>, <span
+class="math inline">\(d^2_{\max}=2\,\mathcal
+K_\tau/\hbar=2\theta_1\)</span>.</p>
+<p><em>Proof.</em> (a) Measure time from the start of the step. The
+impulses at <span class="math inline">\(0\)</span> and <span
+class="math inline">\(\tau_j\)</span> are <span
+class="math inline">\(k^-=(0,J^-)\)</span> and <span
+class="math inline">\(k^+=(-\tau_jJ^+/m,\ J^+)\)</span> in the phase
+plane, and <span class="math inline">\(J^-+J^+=\int f\)</span>, <span
+class="math inline">\(\tau_jJ^+=\int sf\)</span> match the step’s
+increment. Lemma 1 gives the polygon’s step phase <span
+class="math inline">\(\frac1{2\hbar}\omega(k^-,k^+)=\tau_jJ^+J^-/2m\hbar\)</span>
+and the motion’s step phase <span
+class="math inline">\(\frac1{2\hbar}\int\omega(z,dz)=\frac1{2m\hbar}\iint_{u&lt;s}(s-u)f(s)f(u)\)</span>,
+because along the path <span
+class="math inline">\(\omega(z,dz)=f(s)\,\frac1m\int_0^s(s-u)f(u)\,du\,ds\)</span>.
+Now <span class="math inline">\(\tau_jJ^+J^-=\iint
+s(\tau_j-u)f(s)f(u)/\tau_j\)</span>; symmetrizing and subtracting <span
+class="math inline">\(\frac12\iint|s-u|ff\)</span> leaves the kernel
+<span
+class="math inline">\(\frac1{2\tau_j}[s(\tau_j-u)+u(\tau_j-s)-\tau_j|s-u|]=G_{\tau_j}(s,u)\)</span>.
+Shifting the time origin is the shear <span
+class="math inline">\((a,b)\mapsto(a-t_{j-1}b/m,b)\)</span>, which
+preserves <span class="math inline">\(\omega\)</span>, so the per-step
+phases are <span class="math inline">\(\mathcal
+K_{\tau_j}/\hbar\)</span>, and they multiply as in Theorem 1. The
+Dirichlet principle <span class="math inline">\(2m\mathcal
+K_\tau=\sup_T(2\int fT-\int T&#39;^2)\)</span> over <span
+class="math inline">\(T\)</span> vanishing at the ends, restricted to
+<span class="math inline">\(T\)</span> vanishing also at the interior
+vertices, gives the monotonicity.</p>
+<ol start="2" type="a">
+<li><p>As in Theorem 2 of the paper, <span
+class="math inline">\(u^{\mathsf T}\Sigma u\ge2\kappa E/m\)</span> and
+<span class="math inline">\(u^{\mathsf T}P=\frac1m\int_0^\tau
+fT\)</span> with <span class="math inline">\(T\)</span> vanishing at
+both ends. Since <span class="math inline">\(-(G_\tau
+f)&#39;&#39;=f\)</span>, <span class="math inline">\(\int fT=\int(G_\tau
+f)&#39;T&#39;\le\sqrt{\langle f,G_\tau f\rangle}\sqrt E\)</span>, so
+<span class="math inline">\(d^2\le\langle f,G_\tau
+f\rangle/(2m\kappa)=\mathcal K_\tau/\kappa\)</span>. For <span
+class="math inline">\(f\)</span> of one sign take <span
+class="math inline">\(T\propto G_\tau f\)</span>, which has one sign
+while <span class="math inline">\(T&#39;&#39;\)</span> has the other, so
+the interior weights and the <span class="math inline">\(S_j\)</span>
+have opposite signs throughout and the dense balanced construction of
+Theorem 2 applies.</p></li>
+<li><p>Theorem 1 with a single step is the chord, whose phase is <span
+class="math inline">\(\theta_1=\mathcal K_\tau/\hbar\)</span>. <span
+class="math inline">\(\square\)</span></p></li>
+</ol>
+<p>The two legs of the programme are governed by one functional of the
+force history. <span class="math inline">\(\mathcal K_\tau\)</span> is
+what Newton’s refinement removes: it is the kinetic action of the motion
+relative to its chord, and for a constant force it is the chord’s
+segment times <span class="math inline">\(F/2v\)</span>. Planck’s
+constant converts it into the phase by which the motion differs from its
+inscribed polygon, a c-number that no preparation moves; the mark cost
+converts it into the largest statistical distance any record of the
+motion can reach. At <span class="math inline">\(\kappa=\hbar/2\)</span>
+the second is exactly twice the first. The <span
+class="math inline">\(24\)</span> in Theorem 1’s <span
+class="math inline">\(F^2\tau^3/24m\)</span> and in the sharp bound
+<span class="math inline">\(d^2\le F^2\tau^3/24m\kappa\)</span> of the
+paper’s Theorem 2 is one integral, <span class="math inline">\(\iint
+G_\tau=\tau^3/12\)</span>, multiplied by <span
+class="math inline">\(F^2/2m\)</span>.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>STATE’s next item 1 is discharged in a stronger form than it was
 stated. The state-independent quantity is identified for every
 refinement: Newton’s inscribed polygon differs from the parabola by
@@ -486,11 +597,14 @@ class="math inline">\(\Phi_N+4\theta_N=\tau\Delta E/3\hbar\)</span>. The
 Newton-age form of the central extension is in §5: Props. X and XVII
 make <span class="math inline">\(\Lambda p\)</span> a refraction
 invariant, and the fits count separates the polygon from the curve by
-<span class="math inline">\((F/v)\sum_jA_j/(2\Lambda p)\)</span>. Next:
-the general force law, where Lemma 2 holds unchanged and Theorem 1’s
-segment areas become the areas between the phase-plane path and its
-chords; and a paper section presenting Theorem 1 and Corollary 4 as the
-squeeze-immune core.</p>
+<span class="math inline">\((F/v)\sum_jA_j/(2\Lambda p)\)</span>.
+Section 6 settles the general force law and joins the legs: for any
+force history the polygon phase is <span
+class="math inline">\(\sum_j\mathcal K_{\tau_j}/\hbar\)</span>, the
+sharp mark bound is <span class="math inline">\(d^2\le\mathcal
+K_\tau/\kappa\)</span>, and at <span
+class="math inline">\(\kappa=\hbar/2\)</span> the best recorded
+deflection is twice the chord phase.</p>
 
 </main>
 <footer class="site"><div class="wrap">
