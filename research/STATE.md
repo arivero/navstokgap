@@ -64,15 +64,14 @@ the shape parameter explicit.
    form, §5: *Opticks* II.iii Props. X and XVII make $\Lambda p$ a
    refraction invariant, so the fits count along a path is the Maupertuis
    action in units of $\Lambda p$, and it separates the polygon from the
-   curve by $(F/v)\sum_jA_j/(2\Lambda p)$ fits. Next on this line: a
-   paper section.
+   curve by $(F/v)\sum_jA_j/(2\Lambda p)$ fits. The paper carries
+   it as Theorem 6 (§4) with the refraction invariant in §§5--6.
 2. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$ with
    a Dirichlet energy, so it bounds a norm of $P''$; the aperture form
    becomes the total variations of the displacement path.
 3. **Mixed conditional states** in the probabilistic Theorem 2, by the
    Bures metric in place of rank-one Kraus operators.
 4. **Theorem A beyond the momentum-transfer class.**
-5. **Paper revision** after item 1.
 
 History, lower priority: the Section I Scholium, where Newton cites
 Euclid X against least magnitudes, as the first entry of the Book I
