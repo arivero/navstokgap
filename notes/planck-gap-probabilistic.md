@@ -137,11 +137,12 @@ alone.
 ## 3. Every protocol of instruments
 
 **Theorem 2.** Let instruments $M_1,\dots,M_k$ act at times
-$0<t_1<\dots<t_k\le\tau$, each with rank-one Kraus operators, identical
-under the two hypotheses, with arbitrary dependence of later instruments
-on earlier outcomes, followed by any final measurement. Let the apparatus
-have aperture $(L,P)$, in the sense that every conditional state arising
-in the protocol satisfies the two spread bounds. If the full record
+$0<t_1<\dots<t_k\le\tau$, identical under the two hypotheses, with any
+Kraus operators, any quantum memory in the apparatus and arbitrary
+dependence of later instruments on earlier outcomes, followed by any
+final measurement. Let the apparatus have aperture $(L,P)$, in the sense
+that the body's marginal of every conditional state arising in the
+protocol satisfies the two spread bounds. If the full record
 decides between the hypotheses with equal priors and error probability at
 most $\epsilon$, then
 
@@ -168,13 +169,18 @@ inequality for the common remainder of the protocol,
 $$\mathrm{TV}(P_{\mathrm I},P_{\mathrm F})\le\sum_{s}
 \mathrm{TV}(P_{H_{s-1}},P_{H_s})\le\sum_s\ \sup_{\sigma}\ \tfrac12\bigl\|\sigma-V_s\sigma V_s^\dagger\bigr\|_1,$$
 
-the supremum over the conditional states $\sigma$ reachable at step $s$.
-Each such $\sigma$ is pure, the Kraus operators having rank one, so
-$\tfrac12\|\sigma-V_s\sigma V_s^\dagger\|_1
-=\sqrt{1-|\langle\sigma|V_s|\sigma\rangle|^2}\le\sin(\Delta_\sigma G_s)\le\Delta_\sigma G_s$
-when $\Delta_\sigma G_s\le\pi/2$, by Mandelstam--Tamm as in Theorem 1, and
-the left side is at most $1\le\Delta_\sigma G_s\cdot(2/\pi)^{-1}$ otherwise;
-in both cases it is at most $\Delta_\sigma G_s$. Therefore
+the supremum over the conditional states $\sigma$ of body and apparatus
+memory reachable at step $s$, with $V_s$ acting as $V_s\otimes\mathbf 1$.
+Purify $\sigma$ to a vector $\psi$. The partial trace does not increase
+the trace norm, so
+$\tfrac12\|\sigma-V_s\sigma V_s^\dagger\|_1\le\sqrt{1-|\langle\psi|V_s\otimes\mathbf 1|\psi\rangle|^2}$,
+and $\Delta_\psi(G_s\otimes\mathbf 1)=\Delta_{\sigma_{\rm body}}G_s$ because
+the first two moments of $G_s\otimes\mathbf 1$ are those of $G_s$ in the
+body's marginal. The right side is at most
+$\sin(\Delta_\psi G_s)\le\Delta_\psi G_s$ when $\Delta_\psi G_s\le\pi/2$, by
+Mandelstam--Tamm as in Theorem 1, and at most $1\le\Delta_\psi G_s$
+otherwise; in both cases the left side is at most
+$\Delta_{\sigma_{\rm body}}G_s$. Therefore
 
 $$\mathrm{TV}(P_{\mathrm I},P_{\mathrm F})\le\sum_s
 \frac{|\Delta\beta_s|L+|\Delta\alpha_s|P}{\hbar}
@@ -337,7 +343,8 @@ and had no reason to pair them with spreads of anything.
 The goal of proving the probabilistic form is discharged. Theorem 1
 gives the single-shot bound with the sharp constant
 $\arccos(2\sqrt{\epsilon(1-\epsilon)})$, Theorem 2 extends it to every
-finite adaptive protocol of rank-one instruments with the constant
+finite adaptive protocol of instruments, with any Kraus rank and any
+apparatus memory, with the constant
 $1-2\epsilon$, Corollary 3 converts it to the floor at each aperture,
 $(1-2\epsilon)^2\hbar^2/(4A)$ at the balanced one, and Proposition 4 decides
 the universality question: universality over instruments holds, and
@@ -347,11 +354,10 @@ in Section 5, and no error--disturbance relation is used.
 
 Open, in order:
 
-1. **Mixed conditional states.** Theorem 2 assumes rank-one Kraus
-   operators so that every conditional state is pure. The extension needs
-   a bound on $\|\sigma-V\sigma V^\dagger\|_1$ for mixed $\sigma$ in terms
-   of a spread, where the natural route is a purification with the
-   aperture imposed on the purified state.
+1. **Mixed conditional states: done, 2026-09-22.** The first version of
+   Theorem 2 assumed rank-one Kraus operators. Purification closes the
+   general case with the aperture imposed on the body's own marginal,
+   since $\Delta_\psi(G\otimes\mathbf 1)=\Delta_{\sigma_{\rm body}}G$.
 2. **The sharp constant.** Theorem 1 gives $\theta(\epsilon)$ and
    Theorem 2 gives $1-2\epsilon$ for the same quantity; the gap between
    them is an artifact of the telescoping step, and closing it would also

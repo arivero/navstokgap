@@ -75,8 +75,9 @@ the shape parameter explicit.
    $\kappa=\hbar/2$ the best recorded deflection is twice the chord phase
    (polygon-lift note §6, paper Theorem 7). Open on this line: the
    aperture form for a general force, and correlated marks in Theorem 7.
-3. **Mixed conditional states** in the probabilistic Theorem 2, by the
-   Bures metric in place of rank-one Kraus operators.
+3. **Done, 2026-09-22: mixed conditional states.** The probabilistic
+   Theorem 2 holds for every instrument, any Kraus rank and any apparatus
+   memory, by purification.
 4. **Theorem A beyond the momentum-transfer class.**
 
 History, lower priority: the Section I Scholium, where Newton cites

@@ -262,15 +262,15 @@ alone.</p>
 instruments</h2>
 <p><strong>Theorem 2.</strong> Let instruments <span
 class="math inline">\(M_1,\dots,M_k\)</span> act at times <span
-class="math inline">\(0&lt;t_1&lt;\dots&lt;t_k\le\tau\)</span>, each
-with rank-one Kraus operators, identical under the two hypotheses, with
-arbitrary dependence of later instruments on earlier outcomes, followed
-by any final measurement. Let the apparatus have aperture <span
-class="math inline">\((L,P)\)</span>, in the sense that every
-conditional state arising in the protocol satisfies the two spread
-bounds. If the full record decides between the hypotheses with equal
-priors and error probability at most <span
-class="math inline">\(\epsilon\)</span>, then</p>
+class="math inline">\(0&lt;t_1&lt;\dots&lt;t_k\le\tau\)</span>,
+identical under the two hypotheses, with any Kraus operators, any
+quantum memory in the apparatus and arbitrary dependence of later
+instruments on earlier outcomes, followed by any final measurement. Let
+the apparatus have aperture <span class="math inline">\((L,P)\)</span>,
+in the sense that the body’s marginal of every conditional state arising
+in the protocol satisfies the two spread bounds. If the full record
+decides between the hypotheses with equal priors and error probability
+at most <span class="math inline">\(\epsilon\)</span>, then</p>
 <p><span class="math display">\[\frac{F\tau
 L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon .\]</span></p>
 <p><em>Proof.</em> Pass to the interaction picture of <span
@@ -308,18 +308,28 @@ F})\le\sum_{s}
 \mathrm{TV}(P_{H_{s-1}},P_{H_s})\le\sum_s\ \sup_{\sigma}\
 \tfrac12\bigl\|\sigma-V_s\sigma V_s^\dagger\bigr\|_1,\]</span></p>
 <p>the supremum over the conditional states <span
-class="math inline">\(\sigma\)</span> reachable at step <span
-class="math inline">\(s\)</span>. Each such <span
-class="math inline">\(\sigma\)</span> is pure, the Kraus operators
-having rank one, so <span
-class="math inline">\(\tfrac12\|\sigma-V_s\sigma V_s^\dagger\|_1
-=\sqrt{1-|\langle\sigma|V_s|\sigma\rangle|^2}\le\sin(\Delta_\sigma
-G_s)\le\Delta_\sigma G_s\)</span> when <span
-class="math inline">\(\Delta_\sigma G_s\le\pi/2\)</span>, by
-Mandelstam–Tamm as in Theorem 1, and the left side is at most <span
-class="math inline">\(1\le\Delta_\sigma G_s\cdot(2/\pi)^{-1}\)</span>
-otherwise; in both cases it is at most <span
-class="math inline">\(\Delta_\sigma G_s\)</span>. Therefore</p>
+class="math inline">\(\sigma\)</span> of body and apparatus memory
+reachable at step <span class="math inline">\(s\)</span>, with <span
+class="math inline">\(V_s\)</span> acting as <span
+class="math inline">\(V_s\otimes\mathbf 1\)</span>. Purify <span
+class="math inline">\(\sigma\)</span> to a vector <span
+class="math inline">\(\psi\)</span>. The partial trace does not increase
+the trace norm, so <span
+class="math inline">\(\tfrac12\|\sigma-V_s\sigma
+V_s^\dagger\|_1\le\sqrt{1-|\langle\psi|V_s\otimes\mathbf
+1|\psi\rangle|^2}\)</span>, and <span
+class="math inline">\(\Delta_\psi(G_s\otimes\mathbf
+1)=\Delta_{\sigma_{\rm body}}G_s\)</span> because the first two moments
+of <span class="math inline">\(G_s\otimes\mathbf 1\)</span> are those of
+<span class="math inline">\(G_s\)</span> in the body’s marginal. The
+right side is at most <span class="math inline">\(\sin(\Delta_\psi
+G_s)\le\Delta_\psi G_s\)</span> when <span
+class="math inline">\(\Delta_\psi G_s\le\pi/2\)</span>, by
+Mandelstam–Tamm as in Theorem 1, and at most <span
+class="math inline">\(1\le\Delta_\psi G_s\)</span> otherwise; in both
+cases the left side is at most <span
+class="math inline">\(\Delta_{\sigma_{\rm body}}G_s\)</span>.
+Therefore</p>
 <p><span class="math display">\[\mathrm{TV}(P_{\mathrm I},P_{\mathrm
 F})\le\sum_s
 \frac{|\Delta\beta_s|L+|\Delta\alpha_s|P}{\hbar}
@@ -533,8 +543,8 @@ and had no reason to pair them with spreads of anything.</p>
 <p>The goal of proving the probabilistic form is discharged. Theorem 1
 gives the single-shot bound with the sharp constant <span
 class="math inline">\(\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span>,
-Theorem 2 extends it to every finite adaptive protocol of rank-one
-instruments with the constant <span
+Theorem 2 extends it to every finite adaptive protocol of instruments,
+with any Kraus rank and any apparatus memory, with the constant <span
 class="math inline">\(1-2\epsilon\)</span>, Corollary 3 converts it to
 the floor at each aperture, <span
 class="math inline">\((1-2\epsilon)^2\hbar^2/(4A)\)</span> at the
@@ -545,13 +555,12 @@ against the standard quantum limit is in Section 5, and no
 error–disturbance relation is used.</p>
 <p>Open, in order:</p>
 <ol type="1">
-<li><strong>Mixed conditional states.</strong> Theorem 2 assumes
-rank-one Kraus operators so that every conditional state is pure. The
-extension needs a bound on <span class="math inline">\(\|\sigma-V\sigma
-V^\dagger\|_1\)</span> for mixed <span
-class="math inline">\(\sigma\)</span> in terms of a spread, where the
-natural route is a purification with the aperture imposed on the
-purified state.</li>
+<li><strong>Mixed conditional states: done, 2026-09-22.</strong> The
+first version of Theorem 2 assumed rank-one Kraus operators.
+Purification closes the general case with the aperture imposed on the
+body’s own marginal, since <span
+class="math inline">\(\Delta_\psi(G\otimes\mathbf 1)=\Delta_{\sigma_{\rm
+body}}G\)</span>.</li>
 <li><strong>The sharp constant.</strong> Theorem 1 gives <span
 class="math inline">\(\theta(\epsilon)\)</span> and Theorem 2 gives
 <span class="math inline">\(1-2\epsilon\)</span> for the same quantity;
