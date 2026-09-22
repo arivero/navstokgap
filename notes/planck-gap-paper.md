@@ -8,13 +8,14 @@ any number and at any times, whose resolution and recoil are
 uncorrelated and obey $\delta_j\Delta_j\ge\kappa$, deciding between free and forced motion over
 a duration $\tau$ at error probability $\epsilon$ requires
 
-$$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,$$
+$$\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa,$$
 
 and for a mark realized by coupling the body's position to a probe, the
 error operator and the impulse delivered are canonically conjugate, so
-$\kappa\ge\hbar/2$ exactly. The floor is about $12\hbar$ at five per cent
-error, and insertion of marks finer than
-$\tau_*=(9z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ records free motion only.
+$\kappa\ge\hbar/2$ exactly. The constant $48$ is sharp, approached by
+dense protocols. The floor is about $65\hbar$ at five per cent error, and
+insertion of marks finer than
+$\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ records free motion only.
 A correlation $\rho$ between a mark's error and its recoil multiplies the
 floor by $\sqrt{(1-\rho)/(1+\rho)}$, and a three-mark protocol attains
 that dependence, so the floor is a statement about marks whose
@@ -122,14 +123,15 @@ over such $u$.
 **Theorem 2.** For every protocol satisfying the mark trade-off with
 constant $\kappa$,
 
-$$d^2\ \le\ \frac{2F^2\tau^3}{9\,m\kappa},$$
+$$d^2\ \le\ \frac{F^2\tau^3}{24\,m\kappa},$$
 
-independently of the number of marks and of their times. Hence deciding
-at error probability $\epsilon$ requires
+independently of the number of marks and of their times, and the
+constant is sharp. Hence deciding at error probability $\epsilon$
+requires
 
-$$F^2\tau^3\ \ge\ 18\,z_{1-\epsilon}^2\,m\kappa,\qquad
-\tau\Delta E\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,\qquad
-A\ \ge\ \frac{6\,z_{1-\epsilon}^2\,v\kappa}{F},$$
+$$F^2\tau^3\ \ge\ 96\,z_{1-\epsilon}^2\,m\kappa,\qquad
+\tau\Delta E\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa,\qquad
+A\ \ge\ \frac{16\,z_{1-\epsilon}^2\,v\kappa}{F},$$
 
 with $z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)$.
 
@@ -145,8 +147,9 @@ $u^{\mathsf T}\Sigma u\ge\frac{2\kappa}{m}\sum_j|u_j||S_j|$.
 
 Introduce $N(w)=\sum_{i:t_i>w}u_i$ and $T(w)=\int_w^\tau N$. Since
 $\sum_iu_i=0$, $N$ vanishes for $w<0$ and for $w\ge t_k$; $T$ is
-continuous, piecewise linear, constant on $(-\infty,0]$, zero on
-$[\tau,\infty)$, with $T'=-N$ jumping by $u_j$ at $t_j$ and
+continuous, piecewise linear, zero on $[\tau,\infty)$, and zero on
+$(-\infty,0]$ as well, since $T(0)=\int_0^\tau N=\sum_iu_it_i=0$ by the
+invariance under $v_0$; it has $T'=-N$ jumping by $u_j$ at $t_j$ and
 $T(t_j)=S_j$. Two identities follow. Fubini and one integration by
 parts, using $P'(0)=0$ and $T(\tau)=0$, give
 
@@ -160,28 +163,37 @@ $$\sum_ju_jT(t_j)=\int_{\mathbb R}T\,dT'=-\int_{\mathbb R}T'^2=-E,
 \qquad E=\int_0^\tau T'^2 .$$
 
 Therefore $\sum_j|u_j||S_j|\ge E$ and $u^{\mathsf T}\Sigma u\ge2\kappa E/m$.
-Cauchy--Schwarz with $T(\tau)=0$ gives
-$|T(w)|\le\sqrt{\tau-w}\sqrt E$, hence
-$\int_0^\tau T\le\frac23\tau^{3/2}\sqrt E$, and
+Since $T$ vanishes at both ends of $[0,\tau]$, the Poincaré inequality
+$(\int_0^\tau T)^2\le\frac{\tau^3}{12}\int_0^\tau T'^2$ applies, with
+equality for $T\propto w(\tau-w)$ (the Euler--Lagrange equation is
+$T''=$ const), and
 
 $$\frac{(u^{\mathsf T}P)^2}{u^{\mathsf T}\Sigma u}
-\le\frac{(F/m)^2\frac49\tau^3E}{2\kappa E/m}=\frac{2F^2\tau^3}{9m\kappa}.$$
+\le\frac{(F/m)^2\frac{\tau^3}{12}E}{2\kappa E/m}=\frac{F^2\tau^3}{24m\kappa}.$$
 
-Finally $\Phi(-d/2)\le\epsilon$ requires $d\ge2z_{1-\epsilon}$. $\square$
+Finally $\Phi(-d/2)\le\epsilon$ requires $d\ge2z_{1-\epsilon}$. For
+sharpness, take marks dense in $[0,\tau]$ with weights making $N$
+approximate $2w-\tau$, so that $T$ approximates $w(\tau-w)$; the interior
+weights are negative where $T$ is positive, so every $u_jS_j$ has one
+sign and $\sum_j|u_j||S_j|=E$; balance each mark,
+$\delta_j|u_j|=\Delta_j|S_j|/m$, so the arithmetic--geometric step is an
+equality; and make the end marks sharp, which costs nothing since
+$S=T=0$ there. Every inequality then becomes an equality in the
+limit. $\square$
 
 Three features of the proof carry the paper's claim to universality. The
 certificate $u$ ranges over all invariant tests, so no monitoring scheme
 is privileged. The function $T$ encodes the whole protocol in one
 object, and the bound depends on it only through the Dirichlet energy
-$E$, which cancels. And the exponent $3$ on $\tau$ comes from a single
-Cauchy--Schwarz inequality against $\sqrt{\tau-w}$, which is where the
+$E$, which cancels. And the exponent $3$ on $\tau$ comes from the
+Poincaré constant of the interval, $\tau^3/12$, which is where the
 combination in (1) originates.
 
 **Corollary 3 (insertion).** Marks inside a window of duration $\tau'$,
 used by themselves, record the force only if
-$F^2\tau'^3\ge18z_{1-\epsilon}^2m\kappa$. So insertion stops at
+$F^2\tau'^3\ge96z_{1-\epsilon}^2m\kappa$. So insertion stops at
 
-$$\tau_*=\left(\frac{18\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3},$$
+$$\tau_*=\left(\frac{96\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3},$$
 
 and finer marks are consistent with free motion at the stated
 confidence. Newton's polygon may be refined past $\tau/\tau_*$ vertices,
@@ -236,10 +248,10 @@ and the linear dynamics of the comparison, the Wigner function is a
 probability density evolving classically, so the statistical model of
 §3 reproduces the quantum experiment exactly. With Theorem 4,
 
-$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar,\qquad
-\tau_*=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3}, \tag{2}$$
+$$\tau\Delta E\ \ge\ 24\,z_{1-\epsilon}^2\,\hbar,\qquad
+\tau_*=\left(\frac{48\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3}, \tag{2}$$
 
-about $12\hbar$ at $\epsilon=0.05$ and $4.5\hbar$ at $\epsilon=0.32$.
+about $65\hbar$ at $\epsilon=0.05$ and $24\hbar$ at $\epsilon=0.16$.
 
 **Correlated marks.** A probe whose position and momentum are correlated
 delivers an error and a recoil with correlation
@@ -251,10 +263,11 @@ $ax^2+2cxy+by^2\ge2(\sqrt{ab}-|c|)|x||y|$ replaces the
 arithmetic--geometric step, so every protocol whose marks have
 $|\rho_j|\le\rho$ needs
 
-$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} . \tag{3}$$
+$$\tau\Delta E\ \ge\ 24\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} , \tag{3}$$
 
-Three marks at $0,\tau/2,\tau$ with the test $R_1-2R_2+R_3$ attain this
-up to the constant, since the outer marks' recoils are invisible to the
+sharp by the dense construction of Theorem 2 with every mark at
+correlation $\rho$ of the helpful sign. Three marks at $0,\tau/2,\tau$
+with the test $R_1-2R_2+R_3$ come within a factor $4/3$, since the outer marks' recoils are invisible to the
 test and the middle mark's noise $-2\xi_2+(\tau/2m)\iota_2$ is one
 quadrature of its probe: they decide once
 $\tau\Delta E\ge32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$, at every force as
@@ -560,7 +573,7 @@ $$m\,v^2\tau\ \ge\ 8\,z_{1-\epsilon}^2\,\kappa,
 
 (ii) *Newton.* Distinguishing uniform motion from constant force, with
 the initial position and velocity unknown, requires
-$F^2\tau^3/m\ge18z_{1-\epsilon}^2\kappa$, which is Theorem 2.
+$F^2\tau^3/m\ge96z_{1-\epsilon}^2\kappa$, which is Theorem 2.
 
 (iii) *The cone.* Measuring a static taper requires nothing. With no
 recoil to propagate, the deflection grows without bound as marks
@@ -682,7 +695,7 @@ it mimics. The [companion note](arrow-not-sling.md) sets this out.
   entire source of the floor.
 - **The Mohists and Liu Hui.** They are right about records. Cutting
   stops, and the endpoint is the mesh
-  $\tau_*=(18z^2m\kappa/F^2)^{1/3}$, which is Corollary 3.
+  $\tau_*=(96z^2m\kappa/F^2)^{1/3}$, which is Corollary 3.
 - **Hui Shi.** He is right about geometry, which is Proposition 1: the
   halving never ends, and nothing in the figure resists it.
 - **Al-Nazzam.** The recorded trajectory below the mesh is his leap. The
@@ -820,4 +833,6 @@ each fall to zero under squeezing at fixed area. Eq. (3) and the
 $(L,P)$ form of §8 are the corrected statements. A floor with no shape
 bound needs a quantity that squeezing cannot move, and Theorem 6
 supplies it: the phase between Newton's inscribed polygon and the
-parabola, whose Newton-age form is the fits count of §5.
+parabola, whose Newton-age form is the fits count of §5. The same day
+Theorem 2's constant became sharp, $48$ in place of $9$, because the
+invariance under $v_0$ pins $T$ at both ends of the interval.

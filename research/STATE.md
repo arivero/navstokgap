@@ -23,7 +23,8 @@ proofs are in four notes.
 
 - **Classical floor.** Every protocol of marks with uncorrelated error
   and recoil and $\delta_j\Delta_j\ge\kappa$ needs
-  $\tau\Delta E\ge9z_{1-\epsilon}^2\kappa$
+  $\tau\Delta E\ge48z_{1-\epsilon}^2\kappa$, sharp (constant from the
+  Poincaré inequality, since invariance under $v_0$ pins $T$ at both ends)
   ([mark-cost note](../notes/mark-cost-and-statistical-floor.md),
   Theorem B; worst-case form in the
   [derivation note](../notes/planck-gap-derivation.md)).

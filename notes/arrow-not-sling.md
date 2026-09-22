@@ -56,7 +56,7 @@ $m\,(P^{(n)})^2\,\tau^{2n-1}\gtrsim\kappa$:
 | Rung | Question | Nuisance | Bound |
 | --- | --- | --- | --- |
 | $n=1$ | Is it moving at all? | position | $mv^2\tau\ge8z^2\kappa$ |
-| $n=2$ | Is a force acting? | position and velocity | $F^2\tau^3/m\ge18z^2\kappa$ |
+| $n=2$ | Is a force acting? | position and velocity | $F^2\tau^3/m\ge96z^2\kappa$ |
 
 Zeno, the Vaiśeṣika sūtras and Vasubandhu are all at $n=1$: the thing in
 dispute is whether the arrow moves, and the unknown to be beaten is merely

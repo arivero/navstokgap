@@ -89,13 +89,15 @@ between free and forced motion over a duration <span
 class="math inline">\(\tau\)</span> at error probability <span
 class="math inline">\(\epsilon\)</span> requires</p>
 <p><span class="math display">\[\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\
-9\,z_{1-\epsilon}^2\,\kappa,\]</span></p>
+48\,z_{1-\epsilon}^2\,\kappa,\]</span></p>
 <p>and for a mark realized by coupling the body’s position to a probe,
 the error operator and the impulse delivered are canonically conjugate,
 so <span class="math inline">\(\kappa\ge\hbar/2\)</span> exactly. The
-floor is about <span class="math inline">\(12\hbar\)</span> at five per
-cent error, and insertion of marks finer than <span
-class="math inline">\(\tau_*=(9z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>
+constant <span class="math inline">\(48\)</span> is sharp, approached by
+dense protocols. The floor is about <span
+class="math inline">\(65\hbar\)</span> at five per cent error, and
+insertion of marks finer than <span
+class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>
 records free motion only. A correlation <span
 class="math inline">\(\rho\)</span> between a mark’s error and its
 recoil multiplies the floor by <span
@@ -225,14 +227,14 @@ u)\)</span> over such <span class="math inline">\(u\)</span>.</p>
 <p><strong>Theorem 2.</strong> For every protocol satisfying the mark
 trade-off with constant <span class="math inline">\(\kappa\)</span>,</p>
 <p><span class="math display">\[d^2\ \le\
-\frac{2F^2\tau^3}{9\,m\kappa},\]</span></p>
-<p>independently of the number of marks and of their times. Hence
-deciding at error probability <span
+\frac{F^2\tau^3}{24\,m\kappa},\]</span></p>
+<p>independently of the number of marks and of their times, and the
+constant is sharp. Hence deciding at error probability <span
 class="math inline">\(\epsilon\)</span> requires</p>
 <p><span class="math display">\[F^2\tau^3\ \ge\
-18\,z_{1-\epsilon}^2\,m\kappa,\qquad
-\tau\Delta E\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,\qquad
-A\ \ge\ \frac{6\,z_{1-\epsilon}^2\,v\kappa}{F},\]</span></p>
+96\,z_{1-\epsilon}^2\,m\kappa,\qquad
+\tau\Delta E\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa,\qquad
+A\ \ge\ \frac{16\,z_{1-\epsilon}^2\,v\kappa}{F},\]</span></p>
 <p>with <span
 class="math inline">\(z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)\)</span>.</p>
 <p><em>Proof.</em> The noise enters <span
@@ -257,9 +259,11 @@ class="math inline">\(\sum_iu_i=0\)</span>, <span
 class="math inline">\(N\)</span> vanishes for <span
 class="math inline">\(w&lt;0\)</span> and for <span
 class="math inline">\(w\ge t_k\)</span>; <span
-class="math inline">\(T\)</span> is continuous, piecewise linear,
-constant on <span class="math inline">\((-\infty,0]\)</span>, zero on
-<span class="math inline">\([\tau,\infty)\)</span>, with <span
+class="math inline">\(T\)</span> is continuous, piecewise linear, zero
+on <span class="math inline">\([\tau,\infty)\)</span>, and zero on <span
+class="math inline">\((-\infty,0]\)</span> as well, since <span
+class="math inline">\(T(0)=\int_0^\tau N=\sum_iu_it_i=0\)</span> by the
+invariance under <span class="math inline">\(v_0\)</span>; it has <span
 class="math inline">\(T&#39;=-N\)</span> jumping by <span
 class="math inline">\(u_j\)</span> at <span
 class="math inline">\(t_j\)</span> and <span
@@ -279,17 +283,33 @@ R}T\,dT&#39;=-\int_{\mathbb R}T&#39;^2=-E,
 \qquad E=\int_0^\tau T&#39;^2 .\]</span></p>
 <p>Therefore <span class="math inline">\(\sum_j|u_j||S_j|\ge E\)</span>
 and <span class="math inline">\(u^{\mathsf T}\Sigma u\ge2\kappa
-E/m\)</span>. Cauchy–Schwarz with <span
-class="math inline">\(T(\tau)=0\)</span> gives <span
-class="math inline">\(|T(w)|\le\sqrt{\tau-w}\sqrt E\)</span>, hence
-<span class="math inline">\(\int_0^\tau T\le\frac23\tau^{3/2}\sqrt
-E\)</span>, and</p>
+E/m\)</span>. Since <span class="math inline">\(T\)</span> vanishes at
+both ends of <span class="math inline">\([0,\tau]\)</span>, the Poincaré
+inequality <span class="math inline">\((\int_0^\tau
+T)^2\le\frac{\tau^3}{12}\int_0^\tau T&#39;^2\)</span> applies, with
+equality for <span class="math inline">\(T\propto w(\tau-w)\)</span>
+(the Euler–Lagrange equation is <span
+class="math inline">\(T&#39;&#39;=\)</span> const), and</p>
 <p><span class="math display">\[\frac{(u^{\mathsf T}P)^2}{u^{\mathsf
 T}\Sigma u}
-\le\frac{(F/m)^2\frac49\tau^3E}{2\kappa
-E/m}=\frac{2F^2\tau^3}{9m\kappa}.\]</span></p>
+\le\frac{(F/m)^2\frac{\tau^3}{12}E}{2\kappa
+E/m}=\frac{F^2\tau^3}{24m\kappa}.\]</span></p>
 <p>Finally <span class="math inline">\(\Phi(-d/2)\le\epsilon\)</span>
-requires <span class="math inline">\(d\ge2z_{1-\epsilon}\)</span>. <span
+requires <span class="math inline">\(d\ge2z_{1-\epsilon}\)</span>. For
+sharpness, take marks dense in <span
+class="math inline">\([0,\tau]\)</span> with weights making <span
+class="math inline">\(N\)</span> approximate <span
+class="math inline">\(2w-\tau\)</span>, so that <span
+class="math inline">\(T\)</span> approximates <span
+class="math inline">\(w(\tau-w)\)</span>; the interior weights are
+negative where <span class="math inline">\(T\)</span> is positive, so
+every <span class="math inline">\(u_jS_j\)</span> has one sign and <span
+class="math inline">\(\sum_j|u_j||S_j|=E\)</span>; balance each mark,
+<span class="math inline">\(\delta_j|u_j|=\Delta_j|S_j|/m\)</span>, so
+the arithmetic–geometric step is an equality; and make the end marks
+sharp, which costs nothing since <span
+class="math inline">\(S=T=0\)</span> there. Every inequality then
+becomes an equality in the limit. <span
 class="math inline">\(\square\)</span></p>
 <p>Three features of the proof carry the paper’s claim to universality.
 The certificate <span class="math inline">\(u\)</span> ranges over all
@@ -298,16 +318,16 @@ invariant tests, so no monitoring scheme is privileged. The function
 object, and the bound depends on it only through the Dirichlet energy
 <span class="math inline">\(E\)</span>, which cancels. And the exponent
 <span class="math inline">\(3\)</span> on <span
-class="math inline">\(\tau\)</span> comes from a single Cauchy–Schwarz
-inequality against <span class="math inline">\(\sqrt{\tau-w}\)</span>,
-which is where the combination in (1) originates.</p>
+class="math inline">\(\tau\)</span> comes from the Poincaré constant of
+the interval, <span class="math inline">\(\tau^3/12\)</span>, which is
+where the combination in (1) originates.</p>
 <p><strong>Corollary 3 (insertion).</strong> Marks inside a window of
 duration <span class="math inline">\(\tau&#39;\)</span>, used by
 themselves, record the force only if <span
-class="math inline">\(F^2\tau&#39;^3\ge18z_{1-\epsilon}^2m\kappa\)</span>.
+class="math inline">\(F^2\tau&#39;^3\ge96z_{1-\epsilon}^2m\kappa\)</span>.
 So insertion stops at</p>
 <p><span
-class="math display">\[\tau_*=\left(\frac{18\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3},\]</span></p>
+class="math display">\[\tau_*=\left(\frac{96\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3},\]</span></p>
 <p>and finer marks are consistent with free motion at the stated
 confidence. Newton’s polygon may be refined past <span
 class="math inline">\(\tau/\tau_*\)</span> vertices, and its impulses
@@ -369,13 +389,13 @@ function is a probability density evolving classically, so the
 statistical model of §3 reproduces the quantum experiment exactly. With
 Theorem 4,</p>
 <p><span class="math display">\[\tau\Delta E\ \ge\
-\frac92\,z_{1-\epsilon}^2\,\hbar,\qquad
-\tau_*=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},
+24\,z_{1-\epsilon}^2\,\hbar,\qquad
+\tau_*=\left(\frac{48\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},
 \tag{2}\]</span></p>
-<p>about <span class="math inline">\(12\hbar\)</span> at <span
+<p>about <span class="math inline">\(65\hbar\)</span> at <span
 class="math inline">\(\epsilon=0.05\)</span> and <span
-class="math inline">\(4.5\hbar\)</span> at <span
-class="math inline">\(\epsilon=0.32\)</span>.</p>
+class="math inline">\(24\hbar\)</span> at <span
+class="math inline">\(\epsilon=0.16\)</span>.</p>
 <p><strong>Correlated marks.</strong> A probe whose position and
 momentum are correlated delivers an error and a recoil with correlation
 <span class="math inline">\(\rho=-\operatorname{Cov}(\hat Q_A,\hat
@@ -388,14 +408,16 @@ class="math inline">\(ax^2+2cxy+by^2\ge2(\sqrt{ab}-|c|)|x||y|\)</span>
 replaces the arithmetic–geometric step, so every protocol whose marks
 have <span class="math inline">\(|\rho_j|\le\rho\)</span> needs</p>
 <p><span class="math display">\[\tau\Delta E\ \ge\
-\frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .
+24\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} ,
 \tag{3}\]</span></p>
-<p>Three marks at <span class="math inline">\(0,\tau/2,\tau\)</span>
-with the test <span class="math inline">\(R_1-2R_2+R_3\)</span> attain
-this up to the constant, since the outer marks’ recoils are invisible to
-the test and the middle mark’s noise <span
-class="math inline">\(-2\xi_2+(\tau/2m)\iota_2\)</span> is one
-quadrature of its probe: they decide once <span
+<p>sharp by the dense construction of Theorem 2 with every mark at
+correlation <span class="math inline">\(\rho\)</span> of the helpful
+sign. Three marks at <span class="math inline">\(0,\tau/2,\tau\)</span>
+with the test <span class="math inline">\(R_1-2R_2+R_3\)</span> come
+within a factor <span class="math inline">\(4/3\)</span>, since the
+outer marks’ recoils are invisible to the test and the middle mark’s
+noise <span class="math inline">\(-2\xi_2+(\tau/2m)\iota_2\)</span> is
+one quadrature of its probe: they decide once <span
 class="math inline">\(\tau\Delta
 E\ge32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}\)</span>, at every force as <span
 class="math inline">\(\rho\to1\)</span>. This is the back-action evasion
@@ -737,7 +759,7 @@ unknown, requires</li>
 <ol start="2" type="i">
 <li><p><em>Newton.</em> Distinguishing uniform motion from constant
 force, with the initial position and velocity unknown, requires <span
-class="math inline">\(F^2\tau^3/m\ge18z_{1-\epsilon}^2\kappa\)</span>,
+class="math inline">\(F^2\tau^3/m\ge96z_{1-\epsilon}^2\kappa\)</span>,
 which is Theorem 2.</p></li>
 <li><p><em>The cone.</em> Measuring a static taper requires nothing.
 With no recoil to propagate, the deflection grows without bound as marks
@@ -878,7 +900,7 @@ into Euclidean time: the static problem lacks back-action, and
 back-action is the entire source of the floor.</li>
 <li><strong>The Mohists and Liu Hui.</strong> They are right about
 records. Cutting stops, and the endpoint is the mesh <span
-class="math inline">\(\tau_*=(18z^2m\kappa/F^2)^{1/3}\)</span>, which is
+class="math inline">\(\tau_*=(96z^2m\kappa/F^2)^{1/3}\)</span>, which is
 Corollary 3.</li>
 <li><strong>Hui Shi.</strong> He is right about geometry, which is
 Proposition 1: the halving never ends, and nothing in the figure resists
@@ -1033,7 +1055,11 @@ floor each fall to zero under squeezing at fixed area. Eq. (3) and the
 statements. A floor with no shape bound needs a quantity that squeezing
 cannot move, and Theorem 6 supplies it: the phase between Newton’s
 inscribed polygon and the parabola, whose Newton-age form is the fits
-count of §5.</p>
+count of §5. The same day Theorem 2’s constant became sharp, <span
+class="math inline">\(48\)</span> in place of <span
+class="math inline">\(9\)</span>, because the invariance under <span
+class="math inline">\(v_0\)</span> pins <span
+class="math inline">\(T\)</span> at both ends of the interval.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -36,7 +36,7 @@ probe, the error operator and the impulse delivered are canonically
 conjugate, so $\kappa\ge\hbar/2$ exactly by Robertson's inequality, and
 M3 is that inequality stated in Newton's two quantities. In the Gaussian
 statistical model the floor becomes
-$\tau\Delta E\ge9z_{1-\epsilon}^2\kappa$ for marks whose error and recoil
+$\tau\Delta E\ge48z_{1-\epsilon}^2\kappa$, sharp, for marks whose error and recoil
 are uncorrelated; a correlation $\rho$ lowers the effective cost to
 $\frac\hbar2\sqrt{(1-\rho)/(1+\rho)}$, which is the one resource that
 moves the floor. An earlier version of this

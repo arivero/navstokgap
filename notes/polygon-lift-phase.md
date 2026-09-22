@@ -169,7 +169,7 @@ $$\tau_\hbar=\left(\frac{24m\hbar}{F^2}\right)^{1/3},$$
 
 the scale that the constant-force note found for the single chord lens.
 The insertion mesh of the mark theorem,
-$\tau_*=(9z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, has the same form, obtained
+$\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, has the same form, obtained
 there from the cost of a mark and here from the phase of a segment with no
 apparatus at all.
 

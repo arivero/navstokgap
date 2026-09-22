@@ -9,9 +9,9 @@ its recoil, the cost that enters the floor is
 $\kappa_{\rm eff}=\delta\Delta(1-|\rho|)\ge\frac\hbar2\sqrt{(1-|\rho|)/(1+|\rho|)}$,
 so every protocol whose marks have $|\rho_j|\le\rho$ needs
 
-$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
+$$\tau\Delta E\ \ge\ 24\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
 
-The value $\frac92z^2\hbar$ is the uncorrelated case $\rho=0$, which
+The value $24z^2\hbar$ is the uncorrelated case $\rho=0$, which
 contains every coherent probe and every probe squeezed along its
 pointer's axes. A three-mark protocol whose middle probe is squeezed
 along a rotated quadrature has $\rho\to1$ and decides the comparison at
@@ -20,6 +20,13 @@ resource. The same mechanism corrects the aperture corollary of the
 [probabilistic note](planck-gap-probabilistic.md): in both places a floor
 of order $\hbar$ holds once the shape of the uncertainty ellipse is
 bounded, and its area alone leaves the floor free.
+
+**Sharpening, 2026-09-22.** The constant of Theorem B improves from
+$\frac29$ to $\frac1{24}$ in $d^2\,m\kappa/F^2\tau^3$. The invariance
+under $v_0$ makes the function $T$ of the proof vanish at both ends, so
+the Poincaré constant $\tau^3/12$ replaces the earlier Cauchy--Schwarz
+bound $\frac49\tau^3$. Dense protocols attain the new constant, so
+$\tau\Delta E\ge48z^2\kappa$ is sharp.
 
 Reopening the question of what was wrong with the
 [derivation note](planck-gap-derivation.md): almost nothing. Its
@@ -48,18 +55,20 @@ marks with $\delta_j\Delta_j\ge\kappa$, of any number and at any times,
 with the initial position and velocity unknown, the optimal test's
 deflection obeys
 
-$$d^2\ \le\ \frac{2F^2\tau^3}{9\,m\kappa},\qquad\text{hence deciding at
+$$d^2\ \le\ \frac{F^2\tau^3}{24\,m\kappa},\qquad\text{hence deciding at
 error probability }\epsilon\text{ requires}\qquad
-\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa ,$$
+\tau\Delta E=\frac{F^2\tau^3}{2m}\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa ,$$
 
 with $z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)$. With Theorem A this is
-$\tau\Delta E\ge\tfrac92z_{1-\epsilon}^2\hbar$, about $12\hbar$ at five
+$\tau\Delta E\ge24z_{1-\epsilon}^2\hbar$, about $65\hbar$ at five
 per cent error, for probes whose error and recoil are uncorrelated;
 Theorem C gives the correlated case. The proof is the derivation note's proof unchanged:
 the same certificate, the same arithmetic--geometric step, the same
 integration by parts to a Dirichlet energy, with the separating
-hyperplane replaced by the optimal test direction. The constant $9$
-reappears from the same Cauchy--Schwarz inequality.
+hyperplane replaced by the optimal test direction. One step is sharper
+here: the invariance under the unknown velocity makes $T$ vanish at both
+ends, so the Poincaré constant replaces the Cauchy--Schwarz bound and the
+constant becomes $48$, which is sharp.
 
 Newton's premise M3 is Theorem A for his own probe: the interval of fits
 $\Lambda$ is the corpuscle's transverse position spread and $p$ its
@@ -200,12 +209,13 @@ counterpart of the derivation note's separating multipliers $\mu$, and it
 obeys the same constraint $\sum_iu_i=0$.
 
 **Theorem B.** For every such protocol,
-$d^2\le\dfrac{2F^2\tau^3}{9\,m\kappa}$. Consequently an invariant test
-with error probability at most $\epsilon$ requires
+$d^2\le\dfrac{F^2\tau^3}{24\,m\kappa}$, and the constant is sharp.
+Consequently an invariant test with error probability at most $\epsilon$
+requires
 
-$$F^2\tau^3\ \ge\ 18\,z_{1-\epsilon}^2\,m\kappa,\qquad
-\tau\Delta E\ \ge\ 9\,z_{1-\epsilon}^2\,\kappa,\qquad
-A_{\rm inertial,fall}\ \ge\ \frac{6\,z_{1-\epsilon}^2\,v\kappa}{F}.$$
+$$F^2\tau^3\ \ge\ 96\,z_{1-\epsilon}^2\,m\kappa,\qquad
+\tau\Delta E\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa,\qquad
+A_{\rm inertial,fall}\ \ge\ \frac{16\,z_{1-\epsilon}^2\,v\kappa}{F}.$$
 
 *Proof.* The noise decomposes exactly as in the derivation note's
 feasibility system: $\xi_j$ enters $R_j$ alone, and $\iota_j$ enters
@@ -228,15 +238,20 @@ $$u^{\mathsf T}P=\frac Fm\int_0^\tau T,\qquad
 \sum_ju_jT(t_j)=-E,\qquad E=\int_0^\tau T'^2 ,$$
 
 so $\sum_j|u_j||S_j|\ge E$ and $u^{\mathsf T}\Sigma u\ge2\kappa E/m$.
-Cauchy--Schwarz with $T(\tau)=0$ gives
-$\int_0^\tau T\le\frac23\tau^{3/2}\sqrt E$, so
+The constraint $\sum_iu_it_i=0$ gives $T(0)=\sum_iu_it_i=0$, so $T$
+vanishes at both ends of $[0,\tau]$ and the Poincaré inequality
+$(\int_0^\tau T)^2\le\frac{\tau^3}{12}E$ holds, with equality for
+$T\propto w(\tau-w)$. Hence
 
 $$\frac{(u^{\mathsf T}P)^2}{u^{\mathsf T}\Sigma u}
-\le\frac{(F/m)^2\frac49\tau^3E}{2\kappa E/m}=\frac{2F^2\tau^3}{9m\kappa},$$
+\le\frac{(F/m)^2\frac{\tau^3}{12}E}{2\kappa E/m}=\frac{F^2\tau^3}{24m\kappa},$$
 
 independently of $u$, of the number of marks and of their times. The
 error probability $\Phi(-d/2)\le\epsilon$ requires $d\ge2z_{1-\epsilon}$,
-and $F^2\tau^3\ge\frac92m\kappa d^2\ge18z_{1-\epsilon}^2m\kappa$. $\square$
+and $F^2\tau^3\ge24m\kappa d^2\ge96z_{1-\epsilon}^2m\kappa$. Every step is
+an equality in the limit of dense marks whose weights make $T$
+parabolic, each balanced with $\delta_j|u_j|=\Delta_j|S_j|/m$, with sharp
+end marks; the interior $u_jS_j$ then share one sign. $\square$
 
 The worst-case theorem and the statistical theorem therefore have one
 proof. The certificate changes meaning, from a hyperplane separating a
@@ -259,11 +274,11 @@ case $c_j=0$.
 
 **Theorem C.** In this model, if every mark has
 $\delta_j\Delta_j(1-|\rho_j|)\ge\kappa_{\rm eff}$, then
-$d^2\le2F^2\tau^3/(9m\kappa_{\rm eff})$ and deciding at error
-probability $\epsilon$ requires $\tau\Delta E\ge9z_{1-\epsilon}^2\kappa_{\rm eff}$.
+$d^2\le F^2\tau^3/(24m\kappa_{\rm eff})$ and deciding at error
+probability $\epsilon$ requires $\tau\Delta E\ge48z_{1-\epsilon}^2\kappa_{\rm eff}$.
 For momentum-transfer marks with $|\rho_j|\le\rho$,
 
-$$\tau\Delta E\ \ge\ \frac92\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
+$$\tau\Delta E\ \ge\ 24\,z_{1-\epsilon}^2\,\hbar\,\sqrt{\frac{1-\rho}{1+\rho}} .$$
 
 *Proof.* The statistic's noise is
 $\sum_j\bigl(u_j\xi_j+S_j\iota_j/m\bigr)$, so the variance acquires the
@@ -283,10 +298,11 @@ $\delta\Delta(1-|\rho|)\ge\frac\hbar2(1-|\rho|)/\sqrt{1-\rho^2}
 =\frac\hbar2\sqrt{(1-|\rho|)/(1+|\rho|)}$, with equality for pure Gaussian
 probes. $\square$
 
-At $\rho=0$ this is $\tau\Delta E\ge\frac92z^2\hbar$: $12.2\,\hbar$ at
-$\epsilon=0.05$, where $z=1.645$, and $4.5\,\hbar$ at $\epsilon=0.32$,
-where $z=1$. The dependence on $\rho$ is attained, up to the constant, by
-three marks.
+At $\rho=0$ this is $\tau\Delta E\ge24z^2\hbar$: $65\,\hbar$ at
+$\epsilon=0.05$, where $z=1.645$, and $24\,\hbar$ at $\epsilon=0.16$,
+where $z=1$. The dense construction of Theorem B, with every mark at
+correlation $\rho$ of the sign opposite to $u_jS_j$, attains the bound;
+three marks already come within a factor $4/3$.
 
 **Proposition D.** Marks at $0,\tau/2,\tau$ and the test
 $R_1-2R_2+R_3$ decide the comparison when
@@ -315,10 +331,10 @@ marks whose error--recoil correlation is bounded, and Theorem C gives
 its value for every bound. The insertion
 statement follows as before: marks inserted into a window of duration
 $\tau'$, used by themselves, record the force only if
-$F^2\tau'^3\ge18z^2m\kappa$, so Democritus insertion stops at the mesh
+$F^2\tau'^3\ge96z^2m\kappa$, so Democritus insertion stops at the mesh
 
-$$\tau_*=\left(\frac{18\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3}
-=\left(\frac{9\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},$$
+$$\tau_*=\left(\frac{96\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3}
+=\left(\frac{48\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},$$
 
 and finer marks record free motion at the stated confidence.
 
@@ -396,7 +412,7 @@ rather than decorating a theorem. The structure is:
    arguments were for.
 2. **The two theorems.** Theorem A, that a momentum-transfer mark's error
    and recoil are conjugate, and Theorem B, that every protocol of such
-   marks needs $\tau\Delta E\ge9z^2\kappa$, with Theorem C for correlated
+   marks needs $\tau\Delta E\ge48z^2\kappa$, sharp, with Theorem C for correlated
    error and recoil. Proof by certificate,
    arithmetic--geometric mean and Dirichlet energy. This is the
    foundations content and it stands alone.
@@ -429,11 +445,11 @@ The derivation note's Proposition 6 is reinstated in substance with a
 correct proof and the constant $\hbar/2$ in place of $2\hbar$, and its
 worst-case formulation is replaced by standard deviations. The Planck gap
 for marked trajectories is
-$\tau\Delta E\ge\frac92z_{1-\epsilon}^2\hbar\sqrt{(1-\rho)/(1+\rho)}$,
+$\tau\Delta E\ge24z_{1-\epsilon}^2\hbar\sqrt{(1-\rho)/(1+\rho)}$,
 protocol-universal for marks whose error--recoil correlation is at most
-$\rho$, with the insertion mesh $\tau_*=(9z^2m\hbar/F^2)^{1/3}$ at
-$\rho=0$; Proposition D attains the $\rho$-dependence up to the
-constant. A floor with no shape bound needs a quantity that squeezing
+$\rho$, with the insertion mesh $\tau_*=(48z^2m\hbar/F^2)^{1/3}$ at
+$\rho=0$; the constant is sharp, and Proposition D comes within $4/3$
+with three marks. A floor with no shape bound needs a quantity that squeezing
 cannot move, which is the task of the next note. The remaining programme is item 6's two
 obligations plus: extending Theorem A beyond the momentum-transfer class,
 where Ozawa's instruments live; the general force law, which Theorem B's
