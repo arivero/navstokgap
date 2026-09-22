@@ -30,12 +30,13 @@ results and the notes that prove them:
 | Newton's limit has no geometric floor | Prop. 1 | paper §2 |
 | Gaussian marks: $\tau\Delta E\ge48z^2\kappa$, sharp | Thm 2 | [mark-cost](../notes/mark-cost-and-statistical-floor.md), Thm B |
 | Mark cost $\kappa\ge\hbar/2$ (error and recoil conjugate); $24z^2\hbar$ for uncorrelated Gaussian probes; correlation $\rho$ lowers it by $\sqrt{(1-\rho)/(1+\rho)}$ | Thm 4, eqs. (2)--(3) | mark-cost, Thms A, C, Prop. D |
-| Every probe state: $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$; grid probes break the Gaussian form | Thm 5 | [recoil](../notes/record-costs-recoil.md) |
-| Body-independent noise forces the von Neumann form | §5 | [additive-noise](../notes/additive-noise-marks.md) |
-| Every instrument: $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$ | Thm 6 | [disturbance](../notes/record-costs-disturbance.md) |
+| Every probe state: $s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$, $\ge2h$ at certain decision; grid probes break the Gaussian form | Thm 5 | [recoil](../notes/record-costs-recoil.md) |
+| Body-independent noise (Ozawa's independent intervention) forces the von Neumann form | §5 | [additive-noise](../notes/additive-noise-marks.md) |
+| Every instrument: $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)$ | Thm 6 | [disturbance](../notes/record-costs-disturbance.md) |
+| Sharp constant $\arcsin(1-2\epsilon)$ in every protocol bound; kick form $\int\lvert f\rvert L\ge\hbar\arcsin(1-2\epsilon)$; one accounting $\int\lvert f\rvert\min(L,R)$ | §§5, 10 | [path-length](../notes/record-distance-path-length.md) |
 | Inscribed polygon differs from the parabola by the phase $F^2\sum\tau_j^3/24m\hbar$; insertion law; ordering holonomy | Thm 7 | [polygon-lift](../notes/polygon-lift-phase.md) |
 | Every force law: one functional $\mathcal K_\tau$, phase $\mathcal K/\hbar$, sharp deflection $\mathcal K/\kappa$ | Thm 8 | polygon-lift §6 |
-| Unmarked preparations: $J L+s P\ge(1-2\epsilon)\hbar$, every instrument | §10 | [probabilistic](../notes/planck-gap-probabilistic.md) |
+| Unmarked preparations: $J L+s P\ge\hbar\arcsin(1-2\epsilon)$, every instrument | §10 | [probabilistic](../notes/planck-gap-probabilistic.md) |
 | *Opticks*: measured $\Lambda$, posited $p$, $\Lambda p$ invariant under refraction (II.iii Props. X, XVII); Newton's Prop. XII denies M3 | §§7--8 | [mark-floor](../notes/newton-mark-floor.md), polygon-lift §5 |
 | The ladder: arrow, then Galileo; the Section I scholium's Euclid-X objection answered | Thm 9, §9 | paper §9, [arrow and sling](../notes/arrow-not-sling.md) |
 
@@ -46,13 +47,14 @@ undetermined, at the exchange rate $\hbar$.
 
 ## Next, modern leg first
 
-1. **One accounting.** The aperture bound pays at the body between marks,
-   Theorem 6 pays at the marks. State the mixed accounting as one
-   optimization and find its minimum; decide whether the constants
-   $1/8$ and $1/2$ of Theorem 6 are attained.
-2. **Remaining constants.** The worst-case interval $[9,36]$ in
-   $F^2\tau_*^3/(m\kappa)$, and $\arccos(2\sqrt{\epsilon(1-\epsilon)})$
-   against $1-2\epsilon$ in the aperture bound.
+1. **Adversarial review, batch 2** (user direction 2026-09-23: Fable as a
+   critic). Batch 1 (recoil, additive-noise, disturbance notes) found no
+   false result and three proof gaps, repaired the same day. Batch 2:
+   the polygon-lift and path-length notes, the sharp constant 48, and the
+   paper's overclaims and prior art.
+2. **Attainment.** Whether the minimum of the one accounting over splits
+   and lines is attained, which would make it the exact floor; whether
+   the constants $1/8$ and $1/2$ of Theorem 6 are attained.
 3. **Submission.** Paper §11: read Shapiro 1993 and the *Principia*
    historiography; cite the 1730 *Opticks* and Cohen--Whitman.
 

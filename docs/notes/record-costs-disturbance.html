@@ -82,8 +82,8 @@ body to an apparatus, any pointer, noise that depends on the body or
 not, any apparatus state), deciding at error probability <span
 class="math inline">\(\epsilon\)</span> between free motion and a
 constant force <span class="math inline">\(F\)</span> over a duration
-<span class="math inline">\(\tau\)</span>, for every initial state of
-the body, requires</p>
+<span class="math inline">\(\tau\)</span>, whatever the body’s initial
+state under each hypothesis, requires</p>
 <p><span class="math display">\[\boxed{\;\frac s8\sum_j\Delta(\hat
 D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 \qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,\;}\]</span></p>
@@ -91,10 +91,19 @@ D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 class="math inline">\(\hat X_j\)</span> are the impulse and the position
 jump that mark <span class="math inline">\(j\)</span> gives the body, as
 Heisenberg operators on body and apparatus, and <span
-class="math inline">\(\Delta\)</span> is their spread in the states that
-enter the mark. The reading error does not appear. The sagitta of Lemma
-X is paired with the momentum disturbance and the impulse of Proposition
-I with the position disturbance, the same pairing as in the aperture
+class="math inline">\(\Delta\)</span> is their spread, the supremum over
+the states that enter the mark in the interpolating processes of the
+proof; for disturbances that are apparatus operators these are the
+apparatus’s own states. The reading error does not appear. The initial
+state may differ between the two hypotheses, which is what an unknown
+initial state means for a test between them, and the constants <span
+class="math inline">\(1/8\)</span> and <span
+class="math inline">\(1/2\)</span> are the price of that: a test allowed
+to assume the same initial state under both faces the coefficients <span
+class="math inline">\(s\)</span> and <span
+class="math inline">\(J\)</span> instead. The sagitta of Lemma X is
+paired with the momentum disturbance and the impulse of Proposition I
+with the position disturbance, the same pairing as in the aperture
 theorem of the <a href="planck-gap-probabilistic.html">probabilistic
 note</a>, <span
 class="math inline">\(J\,L+s\,P\ge\hbar\arcsin(1-2\epsilon)\)</span>.
@@ -109,7 +118,20 @@ also joins this bound and the aperture bound in one accounting.</p>
 A, and it closes that plan. Ozawa’s error–disturbance relation (<a
 href="https://doi.org/10.1103/PhysRevA.67.042105">PRA
 <strong>67</strong>, 042105, 2003</a>, metadata), which was the expected
-tool for body-dependent noise, turns out to be unnecessary. The floor is
+tool for body-dependent noise, turns out to be unnecessary, though <span
+class="math inline">\(\hat D_j\)</span> and <span
+class="math inline">\(\hat X_j\)</span> are his disturbance operators.
+The ingredients are standard: Ozawa’s disturbance operators,
+Mandelstam–Tamm along a path, and a symmetry-based hybrid argument, the
+reasoning behind information–disturbance bounds for covariant families
+and behind Wigner–Araki–Yanase-type bounds (Marvian and Spekkens, <a
+href="https://doi.org/10.1038/ncomms4821">Nat. Commun.
+<strong>5</strong>, 3821, 2014</a>; Tajima, Shiraishi and Saito, <a
+href="https://doi.org/10.1103/PhysRevLett.121.110403">PRL
+<strong>121</strong>, 110403, 2018</a>; Kuramochi and Tajima, <a
+href="https://doi.org/10.1103/PhysRevLett.131.210201">PRL
+<strong>131</strong>, 210201, 2023</a>; metadata). What is claimed here
+is the combination and its reading in Newton’s quantities. The floor is
 a statement about disturbance alone, because the offset between the two
 hypotheses has to be carried through every mark, and what a mark does to
 that offset is fixed by what it does to the body. For von Neumann marks,
@@ -216,10 +238,17 @@ class="math inline">\(u\in[0,1]\)</span>, <span
 class="math inline">\(G=G_w\)</span>, one has <span
 class="math inline">\(\frac{d}{du}E(u)=iK(u)E(u)\)</span> with <span
 class="math inline">\(K(u)=e^{iuG}(G-U_rGU_r^\dagger)e^{-iuG}\)</span>.
-The Mandelstam–Tamm bound in the geometric form of Anandan and Aharonov
-bounds the Fubini–Study angle between a purification of <span
-class="math inline">\(\rho&#39;\)</span> and its image under <span
-class="math inline">\(E=E(1)\)</span> by <span
+The generators are unbounded; the step below assumes that <span
+class="math inline">\(E(u)\)</span> maps the purification into the
+domain of <span class="math inline">\(K(u)\)</span> with <span
+class="math inline">\(u\mapsto E(u)|\Psi\rangle\)</span> differentiable,
+which holds on a dense set of states and extends to the rest by
+continuity, and it allows <span class="math inline">\(\Delta
+K=\infty\)</span>, in which case the bound is vacuous (a sharp position
+mark pays that). The Mandelstam–Tamm bound in the geometric form of
+Anandan and Aharonov bounds the Fubini–Study angle between a
+purification of <span class="math inline">\(\rho&#39;\)</span> and its
+image under <span class="math inline">\(E=E(1)\)</span> by <span
 class="math inline">\(\int_0^1\Delta K(u)\,du\)</span>, each spread
 taken in the state <span
 class="math inline">\(E(u)\rho&#39;E(u)^\dagger\)</span>, and the trace
@@ -237,8 +266,10 @@ conditional states, as in the hybrid argument of the probabilistic note.
 <span class="math inline">\(\square\)</span></p>
 <p><strong>Corollary U1 (constant force).</strong> Take the line of best
 uniform approximation, <span class="math inline">\(a+bt=\frac F{2m}(\tau
-t-\tau^2/8)\)</span>. Then <span class="math inline">\(|c_j|\le
-s/8\)</span> and <span
+t-\tau^2/8)\)</span>, a valid choice that is optimal for the momentum
+term alone; with position disturbances present, the minimum of the
+combined sum over lines can be smaller. Then <span
+class="math inline">\(|c_j|\le s/8\)</span> and <span
 class="math inline">\(m|c_j&#39;|=F|t_j-\tau/2|\le J/2\)</span>, and the
 spread is a seminorm, so</p>
 <p><span class="math display">\[(1-2\epsilon)\hbar\ \le\ \frac
@@ -250,6 +281,9 @@ class="math inline">\(m\max|c&#39;|\)</span> in place of <span
 class="math inline">\(s/8\)</span> and <span
 class="math inline">\(J/2\)</span>.</p>
 <h2 id="what-the-theorem-covers">3. What the theorem covers</h2>
+<p>The marks are impulsive. A coupling that lasts a finite time is
+covered by slicing it into short impulsive pieces, each charged with the
+offset at its own time.</p>
 <p><strong>Von Neumann marks.</strong> <span
 class="math inline">\(U=e^{-i\lambda\hat y\hat P_A/\hbar}\)</span> gives
 <span class="math inline">\(\hat D=-\lambda\hat P_A\)</span> and <span
@@ -282,9 +316,14 @@ class="math inline">\(\hat D=-\lambda\hat P_A+\kappa\hat y\)</span> with
 a fresh probe uncorrelated with the body has <span
 class="math inline">\(\Delta(\hat D)^2=\lambda^2\Delta\hat
 P_A^2+\kappa^2\Delta\hat y^2\ge\lambda^2\Delta\hat P_A^2\)</span>, so
-body dependence adds to the cost and never lowers it. Lowering it needs
-an apparatus already correlated with the body, which an earlier mark can
-create; Theorem U accounts for that through the conditional states.</p>
+additive body dependence with a fresh probe adds to the cost. Other
+forms can lower it for particular states: a kick <span
+class="math inline">\(-\lambda\hat P_Af(\hat y)\)</span> with <span
+class="math inline">\(f\)</span> small where some initial state is
+concentrated costs little on that state, and the theorem then says that
+the protocol fails for that state unless other marks pay. An apparatus
+already correlated with the body, which an earlier mark can create, is
+accounted for through the conditional states.</p>
 <p><strong>Why the error drops out.</strong> Ozawa’s relation bounds a
 product of error and disturbance and includes the body’s own spreads.
 Theorem U needs only the second factor. The test can separate the
@@ -327,7 +366,8 @@ class="math inline">\(P\)</span></td>
 <td><span class="math inline">\(\frac s8\sum\Delta(\hat D_j)+\frac
 J2\sum\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)\)</span> (Theorem
 U)</td>
-<td>Every instrument, every body state</td>
+<td>Every instrument, every pair of initial states; spreads over the
+proof’s interpolating states</td>
 <td>The marks’ disturbances</td>
 </tr>
 <tr class="even">

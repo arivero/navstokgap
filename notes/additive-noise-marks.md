@@ -1,11 +1,12 @@
 # Every mark with body-independent noise is a momentum-transfer mark
 
 Theorem A of the [mark-cost note](mark-cost-and-statistical-floor.md) was
-proved for the von Neumann coupling $\lambda\hat y\hat P_A$. That class is
-all there is. For an arbitrary unitary coupling of the body to an
-apparatus and an arbitrary pointer, suppose the reading error, the
-delivered impulse and the position disturbance are operators of the
-apparatus alone, independent of the body's state. Then:
+proved for the von Neumann coupling $\lambda\hat y\hat P_A$. Among marks
+whose noise does not depend on the body, that class is all there is. For
+an arbitrary unitary coupling of the body to an apparatus and an
+arbitrary pointer, suppose the reading error, the delivered impulse and
+the position disturbance are operators of the apparatus alone,
+independent of the body's state. Then:
 
 1. the error $\hat N$ and the impulse $\hat D$ are canonically conjugate,
    $[\hat N,\hat D]=-i\hbar$, and the position disturbance $\hat X$
@@ -20,11 +21,21 @@ apparatus alone, independent of the body's state. Then:
    marks, including those that disturb position (Proposition 3).
 
 This is option 1 of the plan the user set on 2026-09-22 for extending
-Theorem A. The commutator identity is the joint-measurement argument of
-Arthurs and Goodman
+Theorem A. The class is Ozawa's measurements with *independent
+intervention*, for which he proves the Heisenberg product
+$\epsilon\eta\ge\hbar/2$ ([PRA **67**, 042105, 2003](https://doi.org/10.1103/PhysRevA.67.042105);
+[Ann. Phys. **311**, 350, 2004](https://doi.org/10.1016/j.aop.2003.12.012);
+metadata); the joint-measurement analogue is Arthurs and Goodman
 ([PRL **60**, 2447, 1988](https://doi.org/10.1103/PhysRevLett.60.2447),
-metadata); the characterization and the transfer to the Galileo
-comparison are new here. Exploratory; no ledger promotion.
+metadata). Proposition 2 is a unitary-dilation form of the classification
+of translation-covariant instruments on the line (Davies, *Quantum Theory
+of Open Systems*, 1976, metadata), stated here in the language of marks.
+What is new is the transfer to the Galileo comparison, Proposition 3.
+The class needs a pointer with continuous, unbounded spectrum, since the
+pointer and the impulse form a canonical pair; marks with a discrete or
+bounded pointer lie outside it and are covered by the
+[disturbance note](record-costs-disturbance.md). Exploratory; no ledger
+promotion.
 
 ## 1. The identity
 
@@ -56,9 +67,11 @@ $[\hat N,\hat X]=0$, and the preservation of the canonical relation,
 $[\hat y+\hat X,\hat p+\hat D]=i\hbar$, gives $[\hat X,\hat D]=0$. The last
 statement is the Robertson--Schrödinger inequality. $\square$
 
-Operators commuting with $\hat y$ and $\hat p$ commute with every body
-operator, so the hypothesis says exactly that $\hat N$, $\hat D$, $\hat X$
-are apparatus operators.
+Commutation with $\hat y$ and $\hat p$ is meant in the strong sense, with
+their spectral projections, equivalently with the Weyl operators.
+Operators commuting in that sense with $\hat y$ and $\hat p$ commute with
+every body operator, so the hypothesis says exactly that $\hat N$,
+$\hat D$, $\hat X$ are apparatus operators.
 
 ## 2. The class is the momentum-transfer class
 
@@ -70,26 +83,34 @@ $\hat R_0=U_0^\dagger\hat RU_0$ satisfies $[\hat R_0,\hat B]=i\hbar$, with
 $\hat N=\hat R_0$.
 
 *Proof.* $U^\dagger\hat yU=\hat y$ means $U$ commutes with $\hat y$, so in
-the position representation $U=\int|y\rangle\langle y|\otimes U(y)\,dy$
-with apparatus unitaries $U(y)$, which we take differentiable in $y$.
-Then $\hat D=-i\hbar\,U(\hat y)^\dagger\partial_yU(\hat y)$, and $\hat D$
-commutes with $\hat p$ only if it is independent of $y$: $U(y)^{-1}U'(y)$
-is a constant $-i\hat B/\hbar$, so $U(y)=U_0e^{-iy\hat B/\hbar}$ and
-$\hat D=-\hat B$. The reading is
-$U^\dagger\hat RU=e^{i\hat y\hat B/\hbar}\hat R_0e^{-i\hat y\hat B/\hbar}$, and
-$\hat N$ is independent of $\hat y$ only if this equals $\hat y+\hat R_0$,
-whose derivative in $y$ gives $\frac i\hbar[\hat B,\hat R_0]=\mathbf 1$. $\square$
+the position representation $U=\int^\oplus U(y)\,dy$ with apparatus
+unitaries $U(y)$, measurable in $y$. Exponentiate the two hypotheses.
+Since $\hat D$ commutes with $\hat p$,
+$U^\dagger e^{ia\hat p/\hbar}U=e^{ia(\hat p+\hat D)/\hbar}=e^{ia\hat p/\hbar}e^{ia\hat D/\hbar}$,
+and in the decomposition, where $e^{ia\hat p/\hbar}$ translates $y$ by $a$,
+this reads $U(y)^\dagger U(y+a)=e^{ia\hat D/\hbar}$ for almost every $y$ and
+every $a$. The measurable solutions are $U(y)=U_0e^{iy\hat D/\hbar}$, so
+$U=(\mathbf 1\otimes U_0)e^{-i\hat y\otimes\hat B/\hbar}$ with $\hat B=-\hat D$,
+and no differentiability is needed. For the pointer, $\hat y$ commutes
+with $\hat N$, so $U^\dagger e^{ib\hat R}U=e^{ib\hat y}e^{ib\hat N}$; in the
+decomposition, with $\hat R_0=U_0^\dagger\hat RU_0$, this reads
+$e^{iy\hat B/\hbar}e^{ib\hat R_0}e^{-iy\hat B/\hbar}=e^{iby}e^{ib\hat N}$ for every
+$y$ and $b$. At $y=0$ it gives $\hat N=\hat R_0$, and for every $y$ it is the
+Weyl relation between $\hat B$ and $\hat R_0$, which contains
+$[\hat R_0,\hat B]=i\hbar$. $\square$
 
-By the Stone--von Neumann theorem in its Weyl form, the pair
+By the Stone--von Neumann theorem, which applies to the Weyl relation
+just obtained, the pair
 $(\hat R_0,\hat B)$ is a canonical pair on one factor of the apparatus,
 $L^2(\mathbb R)\otimes\mathcal K$, and $\mathcal K$ carries whatever else the
 apparatus holds. So a mark that leaves the position alone and whose
 noise is independent of the body is a von Neumann mark: it couples the
 body's position to one canonical momentum of the apparatus and reads the
-conjugate coordinate. Theorems A, B and C, and the recoil theorem, apply
-to it verbatim, with $\lambda\hat P_A$ replaced by $\hat B$ and the probe's
-state replaced by its reduced state on the canonical factor, entangled
-with $\mathcal K$ or not.
+conjugate coordinate. Theorem A and the recoil theorem apply to it
+verbatim, with $\lambda\hat P_A$ replaced by $\hat B$ and the probe's state
+replaced by its reduced state on the canonical factor, entangled with
+$\mathcal K$ or not; Theorems B and C apply with their Gaussian hypothesis
+placed on that reduced state.
 
 ## 3. Marks that also displace the body
 
@@ -114,7 +135,10 @@ $[\hat N_j,\hat D_j]=-i\hbar$ (for the von Neumann mark it is the
 translation of $\hat Q_j$ by $\lambda_jc_j$), and fixes $\hat D_j$ and $\hat X_j$, which commute
 with $\hat D_j$. Mandelstam--Tamm bounds its effect on the state by
 $|c_j|\Delta_{\hat D_j}/\hbar$, and the rest of the proof of Theorem R is
-unchanged. $\square$
+unchanged. An apparatus state entangled across marks is covered too:
+the $\hat D_j$ commute, so the translations combine into one unitary
+generated by $\sum_jc_j\hat D_j$, and the seminorm property
+$\Delta(\sum_jc_j\hat D_j)\le\sum_j|c_j|\Delta\hat D_j$ gives the same bound. $\square$
 
 ## 4. Consequence for STATE
 

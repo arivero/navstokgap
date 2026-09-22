@@ -3,16 +3,22 @@
 For every protocol of marks of any kind (any unitary coupling of the body
 to an apparatus, any pointer, noise that depends on the body or not, any
 apparatus state), deciding at error probability $\epsilon$ between free
-motion and a constant force $F$ over a duration $\tau$, for every initial
-state of the body, requires
+motion and a constant force $F$ over a duration $\tau$, whatever the
+body's initial state under each hypothesis, requires
 
 $$\boxed{\;\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 \qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,\;}$$
 
 where $\hat D_j$ and $\hat X_j$ are the impulse and the position jump that
 mark $j$ gives the body, as Heisenberg operators on body and apparatus,
-and $\Delta$ is their spread in the states that enter the mark. The
-reading error does not appear. The sagitta of Lemma X is paired with the
+and $\Delta$ is their spread, the supremum over the states that enter the
+mark in the interpolating processes of the proof; for disturbances that
+are apparatus operators these are the apparatus's own states. The
+reading error does not appear. The initial state may differ between the
+two hypotheses, which is what an unknown initial state means for a test
+between them, and the constants $1/8$ and $1/2$ are the price of that: a
+test allowed to assume the same initial state under both faces the
+coefficients $s$ and $J$ instead. The sagitta of Lemma X is paired with the
 momentum disturbance and the impulse of Proposition I with the position
 disturbance, the same pairing as in the aperture theorem of the
 [probabilistic note](planck-gap-probabilistic.md),
@@ -27,7 +33,18 @@ This is option 2 of the plan set on 2026-09-22 for extending Theorem A,
 and it closes that plan. Ozawa's error--disturbance relation
 ([PRA **67**, 042105, 2003](https://doi.org/10.1103/PhysRevA.67.042105),
 metadata), which was the expected tool for body-dependent noise, turns out
-to be unnecessary. The floor is a statement about disturbance alone,
+to be unnecessary, though $\hat D_j$ and $\hat X_j$ are his disturbance
+operators. The ingredients are standard: Ozawa's disturbance operators,
+Mandelstam--Tamm along a path, and a symmetry-based hybrid argument, the
+reasoning behind information--disturbance bounds for covariant families
+and behind Wigner--Araki--Yanase-type bounds (Marvian and Spekkens,
+[Nat. Commun. **5**, 3821, 2014](https://doi.org/10.1038/ncomms4821);
+Tajima, Shiraishi and Saito,
+[PRL **121**, 110403, 2018](https://doi.org/10.1103/PhysRevLett.121.110403);
+Kuramochi and Tajima,
+[PRL **131**, 210201, 2023](https://doi.org/10.1103/PhysRevLett.131.210201);
+metadata). What is claimed here is the combination and its reading in
+Newton's quantities. The floor is a statement about disturbance alone,
 because the offset between the two hypotheses has to be carried through
 every mark, and what a mark does to that offset is fixed by what it does
 to the body. For von Neumann marks, which disturb only momentum, the
@@ -90,8 +107,13 @@ $$\mathrm{TV}\le\sum_r\tfrac12\bigl\|E\rho'E^\dagger-\rho'\bigr\|_1,\qquad\rho'=
 
 For $E(u)=e^{iuG}U_re^{-iuG}U_r^\dagger$, $u\in[0,1]$, $G=G_w$, one has
 $\frac{d}{du}E(u)=iK(u)E(u)$ with $K(u)=e^{iuG}(G-U_rGU_r^\dagger)e^{-iuG}$.
-The Mandelstam--Tamm bound in the geometric form of Anandan and
-Aharonov bounds the Fubini--Study angle between a purification of $\rho'$
+The generators are unbounded; the step below assumes that $E(u)$ maps
+the purification into the domain of $K(u)$ with $u\mapsto E(u)|\Psi\rangle$
+differentiable, which holds on a dense set of states and extends to the
+rest by continuity, and it allows $\Delta K=\infty$, in which case the bound
+is vacuous (a sharp position mark pays that). The Mandelstam--Tamm bound
+in the geometric form of Anandan and Aharonov bounds the Fubini--Study
+angle between a purification of $\rho'$
 and its image under $E=E(1)$ by $\int_0^1\Delta K(u)\,du$, each spread taken
 in the state $E(u)\rho'E(u)^\dagger$, and the trace distance by the sine
 of that angle, as in Theorem 2 of the probabilistic note. Conjugating
@@ -104,7 +126,9 @@ Adaptive couplings replace each term by its supremum over the conditional
 states, as in the hybrid argument of the probabilistic note. $\square$
 
 **Corollary U1 (constant force).** Take the line of best uniform
-approximation, $a+bt=\frac F{2m}(\tau t-\tau^2/8)$. Then $|c_j|\le s/8$ and
+approximation, $a+bt=\frac F{2m}(\tau t-\tau^2/8)$, a valid choice that is
+optimal for the momentum term alone; with position disturbances present,
+the minimum of the combined sum over lines can be smaller. Then $|c_j|\le s/8$ and
 $m|c_j'|=F|t_j-\tau/2|\le J/2$, and the spread is a seminorm, so
 
 $$(1-2\epsilon)\hbar\ \le\ \frac s8\sum_j\sup\Delta(\hat D_j)+\frac J2\sum_j\sup\Delta(\hat X_j). \qquad\square$$
@@ -113,6 +137,10 @@ For a general force the same step gives any line's $\max|c|$ and
 $m\max|c'|$ in place of $s/8$ and $J/2$.
 
 ## 3. What the theorem covers
+
+The marks are impulsive. A coupling that lasts a finite time is covered
+by slicing it into short impulsive pieces, each charged with the offset
+at its own time.
 
 **Von Neumann marks.** $U=e^{-i\lambda\hat y\hat P_A/\hbar}$ gives
 $\hat D=-\lambda\hat P_A$ and $\hat X=0$, so Theorem U is Theorem R of the
@@ -136,9 +164,13 @@ their spreads involve the body's state, and the bound must hold for every
 initial state, including the most benign. A kick $\hat D=-\lambda\hat P_A+\kappa\hat y$
 with a fresh probe uncorrelated with the body has
 $\Delta(\hat D)^2=\lambda^2\Delta\hat P_A^2+\kappa^2\Delta\hat y^2\ge\lambda^2\Delta\hat P_A^2$,
-so body dependence adds to the cost and never lowers it. Lowering it needs
-an apparatus already correlated with the body, which an earlier mark can
-create; Theorem U accounts for that through the conditional states.
+so additive body dependence with a fresh probe adds to the cost. Other
+forms can lower it for particular states: a kick
+$-\lambda\hat P_Af(\hat y)$ with $f$ small where some initial state is
+concentrated costs little on that state, and the theorem then says that
+the protocol fails for that state unless other marks pay. An apparatus
+already correlated with the body, which an earlier mark can create, is
+accounted for through the conditional states.
 
 **Why the error drops out.** Ozawa's relation bounds a product of error
 and disturbance and includes the body's own spreads. Theorem U needs only
@@ -154,7 +186,7 @@ sufficiency side, how close a given protocol comes to the bound.
 | --- | --- | --- |
 | Phase $\mathcal K_\tau/\hbar$ between the motion and its inscribed polygon ([polygon-lift note](polygon-lift-phase.md)) | Every body state | Nothing: a c-number |
 | $J\,L+s\,P\ge\hbar\arcsin(1-2\epsilon)$ (probabilistic note) | Every instrument, bounded laboratory | The body's spreads $L$, $P$ |
-| $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)$ (Theorem U) | Every instrument, every body state | The marks' disturbances |
+| $\frac s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)$ (Theorem U) | Every instrument, every pair of initial states; spreads over the proof's interpolating states | The marks' disturbances |
 | $s\sum\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$ (recoil note) | Body-independent noise, every probe state | Recoil |
 | $\tau\Delta E\ge24z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$, sharp (mark-cost note) | Gaussian probes with correlation at most $\rho$ | Resolution times recoil |
 

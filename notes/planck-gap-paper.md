@@ -4,11 +4,11 @@
 sagitta and the area between the inertial tangent and the curve go to
 zero, keeping their ratio to the time. Once the comparison must be
 *recorded*, it has a floor. For every protocol of marks, made by any
-instruments at any times and deciding for every initial state of the
-body, distinguishing free motion from a constant force $F$ over a
-duration $\tau$ at error probability $\epsilon$ requires
+instruments at any times, deciding at error probability $\epsilon$ between
+free motion and a constant force $F$ over a duration $\tau$, whatever the
+body's initial state under each hypothesis, requires
 
-$$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\,\hbar,
+$$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 \qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,$$
 
 where $\hat D_j$ and $\hat X_j$ are the momentum and position disturbances
@@ -38,9 +38,12 @@ Draft, 2026-09-17; revised 2026-09-23. Synthesis of the
 [mark-cost](mark-cost-and-statistical-floor.md),
 [recoil](record-costs-recoil.md),
 [additive-noise](additive-noise-marks.md),
-[disturbance](record-costs-disturbance.md) and
+[disturbance](record-costs-disturbance.md),
+[path-length](record-distance-path-length.md) and
 [polygon-lift](polygon-lift-phase.md) notes, which hold the proofs in
-full. The revision of 2026-09-22 restated two floors: the Gaussian floor
+full. An adversarial review of the recoil, additive-noise and disturbance
+notes on 2026-09-23 found no false result and three proof gaps, now
+repaired. The revision of 2026-09-22 restated two floors: the Gaussian floor
 needs uncorrelated Gaussian probes, and the aperture floor takes its area
 form only at the balanced aperture. Two obligations remain before
 submission and are stated in §11. Exploratory; no ledger promotion.
@@ -291,21 +294,24 @@ The floors of §§3--4 assume Gaussian probes, and the assumption is needed. A
 grid state of the Gottesman--Kitaev--Preskill kind with a real
 wavefunction has no position--momentum correlation, yet as the middle
 probe of the three-mark protocol it turns the statistic into a comb of
-spacing $\sqrt{2\pi\hbar\tau/m}$ with teeth as narrow as desired, and so
-decides the comparison at any force whose signal is not a multiple of that
-spacing. Grid states read both quadratures of a small displacement at
+spacing $\sqrt{2\pi\hbar\tau/m}$, and along the standard family of
+approximate grid states the teeth narrow, so the error tends to zero at
+any force whose signal is not a multiple of that spacing, at the price of
+a recoil that diverges. Grid states read both quadratures of a small displacement at
 once, the principle of the displacement sensor of Duivenvoorden, Terhal
 and Weigand (PRA **95**, 012305, 2017). What holds for every probe state
 is a bound on the recoil, and for every instrument a bound on
 disturbance.
 
-**Theorem 5.** For every protocol of momentum-transfer marks with probes
-in arbitrary states, deciding at error $\epsilon$ for every initial state of
-the body requires
-$1-2\epsilon\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|$, with
+**Theorem 5.** For every protocol of momentum-transfer marks with their
+pointers read and probes in arbitrary states, deciding at error $\epsilon$
+whatever the body's initial state under each hypothesis requires
+$\arcsin(1-2\epsilon)\le\hbar^{-1}\min_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|$, with
 $\Delta_j$ the recoil spread of mark $j$. For the constant force,
 
-$$s\sum_j\Delta_j\ \ge\ 8(1-2\epsilon)\hbar,\qquad s=\frac{F\tau^2}{2m}. \tag{4}$$
+$$s\sum_j\Delta_j\ \ge\ 8\hbar\arcsin(1-2\epsilon),\qquad s=\frac{F\tau^2}{2m}, \tag{4}$$
+
+which at certain decision reads $s\sum_j\Delta_j\ge4\pi\hbar=2h$.
 
 The proof moves the signal into the pointers: translating the body's
 initial state along the best straight line $a+bt$ turns the force into a
@@ -313,8 +319,12 @@ translation of each pointer by $\lambda_jc_j$, with $c_j=P(t_j)-a-bt_j$
 the line's residual at the mark, and a pointer registers a
 translation only through the spread of its momentum, which is the impulse
 the body receives. Mandelstam--Tamm and the triangle inequality over the
-probes finish it. The correlated three-mark protocol reaches (4) within a
-factor $\sqrt2z_{1-\epsilon}/(1-2\epsilon)$ at every squeezing. The
+probes finish it, and running the same chain with the Bures angle in
+place of total variation gives the constant $\arcsin(1-2\epsilon)$, the sharp
+single-shot one ([path-length note](record-distance-path-length.md),
+Theorem P). At fixed $\epsilon$ the correlated three-mark protocol reaches
+(4) within a factor $\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)$, about $2.1$ at
+five per cent error, at every squeezing. The
 proofs, the grid construction and the tightness computation are in the
 [recoil note](record-costs-recoil.md). It is the recoil clause of M3,
 and Theorem 6 completes it.
@@ -322,11 +332,13 @@ and Theorem 6 completes it.
 The recoil bound reaches well beyond von Neumann's coupling. For any
 coupling and any pointer, the pointer commutes with the body's momentum
 after the mark, which gives
-$[\hat N,\hat D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]$; this is the
-joint-measurement argument of Arthurs and Goodman (PRL **60**, 2447, 1988).
-So every mark whose error and impulse are independent of the body has
-conjugate error and impulse; if it also leaves the position alone it is a
-von Neumann mark on some canonical pair of the apparatus; and Theorem 5
+$[\hat N,\hat D]=-i\hbar-[\hat y,\hat D]-[\hat N,\hat p]$. So every mark whose
+error and impulse are independent of the body has conjugate error and
+impulse, which is Ozawa's class of measurements with independent
+intervention (PRA **67**, 042105, 2003; Ann. Phys. **311**, 350, 2004); if it
+also leaves the position alone it is a von Neumann mark on some canonical
+pair of the apparatus, a dilation form of Davies's translation-covariant
+instruments (1976); and Theorem 5
 holds for all such marks, position-displacing ones included
 ([additive-noise note](additive-noise-marks.md)). When the noise depends
 on the body, the offset between the hypotheses still has to be carried
@@ -337,13 +349,17 @@ does to the body.
 the body to an apparatus followed by reading a pointer, with momentum and
 position disturbances $\hat D_j=U_j^\dagger\hat pU_j-\hat p$ and
 $\hat X_j=U_j^\dagger\hat yU_j-\hat y$, operators on body and apparatus
-that may depend on both. Deciding at error $\epsilon$ for every initial
-state of the body requires, for every line $a+bt$,
-$1-2\epsilon\le\hbar^{-1}\sum_j\sup\Delta(c_j\hat D_j-mc_j'\hat X_j)$ with
-$c_j=P(t_j)-a-bt_j$, the supremum over the states that can enter the
-mark; for the constant force,
+that may depend on both. Deciding at error $\epsilon$ whatever the body's
+initial state under each hypothesis requires, for every line $a+bt$,
+$\arcsin(1-2\epsilon)\le\hbar^{-1}\sum_j\sup\Delta(c_j\hat D_j-mc_j'\hat X_j)$ with
+$c_j=P(t_j)-a-bt_j$, the supremum over the states that enter the mark in
+the interpolating processes of the proof; for the constant force,
 
-$$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ (1-2\epsilon)\hbar,\qquad J=F\tau. \tag{5}$$
+$$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),\qquad J=F\tau. \tag{5}$$
+
+The constants $1/8$ and $1/2$ are the price of an initial state that may
+differ between the hypotheses: a test allowed to assume the same initial
+state under both faces the coefficients $s$ and $J$.
 
 The proof is a hybrid argument that carries the offset $(c,mc')$ between
 the hypotheses through the marks one at a time. Passing mark $j$ applies
@@ -852,15 +868,21 @@ of [Anandan and Aharonov](https://doi.org/10.1103/PhysRevLett.65.1697)
 discrimination bound (*Quantum Detection and Estimation Theory*, 1976),
 gives
 
-$$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon,
-\qquad\tau\Delta E\ \ge\ \frac{2m(1-2\epsilon)^2\hbar^2\tau}{(2mL+\tau P)^2},$$
+$$\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ \theta,
+\qquad\tau\Delta E\ \ge\ \frac{2m\theta^2\hbar^2\tau}{(2mL+\tau P)^2},
+\qquad\theta=\arcsin(1-2\epsilon),$$
 
 for an apparatus whose position and momentum spreads are bounded by $L$
-and $P$. The floor equals $(1-2\epsilon)^2\hbar^2/(4LP)$ at the balanced
+and $P$. It is the integrated form of a kick bound,
+$\int_0^\tau|f(t)|L(t)\,dt\ge\hbar\theta$ with $L(t)$ the body's position spread
+at time $t$: a force is a succession of impulses, and an impulse is
+registered only through the position spread it acts on
+([path-length note](record-distance-path-length.md), Theorem K). The
+floor equals $\theta^2\hbar^2/(4LP)$ at the balanced
 aperture $L=\tau P/2m$ and falls to zero as either side grows at fixed
 area, so a squeezed state of area $\hbar/2$ evades it as a large one
 does. In Newton's quantities the first inequality is
-$F\tau\cdot L+\frac{F\tau^2}{2m}\cdot P\ge(1-2\epsilon)\hbar$, the
+$F\tau\cdot L+\frac{F\tau^2}{2m}\cdot P\ge\hbar\theta$, the
 impulse of Proposition I against the position aperture plus the sagitta
 of Lemma X against the momentum aperture. It holds for every finite adaptive
 protocol of instruments, of any Kraus rank and with any apparatus memory,
@@ -872,6 +894,17 @@ arbitrarily small $\tau\Delta E$, at the price of an apparatus whose
 extent diverges. So the floor of order $\hbar$ requires either that the
 trajectory be marked or that the laboratory be bounded, and a
 non-Gaussian preparation of unbounded extent evades it.
+
+**One accounting.** The kick bound pays for the force at the body and
+Theorem 6 pays for it at the marks, and any split of the force between
+the two gives a valid bound. For von Neumann marks and a force of one
+sign the best split is pointwise,
+$\hbar\theta\le\int_0^\tau|f(u)|\min\bigl(L(u),R(u)\bigr)du$, where
+$R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u)$ is the recoil length, the position
+uncertainty the marks' recoils produce at time $u$ measured from the chord,
+with $G_\tau$ the Dirichlet Green's function of the interval: at every
+moment the force is paid in the smaller of the two lengths (path-length
+note, Theorem M).
 
 **Prior art.** The combination $F^2\tau^3\gtrsim m\hbar$ is the standard
 quantum limit for detecting a force on a free mass (Braginsky and
@@ -934,13 +967,12 @@ what the present draft rests on.
    of the Motte text used here.
 
 Three mathematical items remain open and are not obligations of the
-paper: the worst-case interval $9\le F^2\tau_*^3/(m\kappa)\le36$ of §3 and
-the gap between $\arccos(2\sqrt{\epsilon(1-\epsilon)})$ and $1-2\epsilon$ in
-the single-shot and protocol forms of the aperture bound; the combined
-accounting that removes the offset at the body in some intervals and
-carries it through the marks in others, as one optimization joining
-Theorem 6 and the aperture bound; and whether the constants $1/8$ and
-$1/2$ of (5) are attained.
+paper: the worst-case interval $9\le F^2\tau_*^3/(m\kappa)\le36$ of §3,
+which concerns a framework without quantum instances; whether the minimum
+of the one accounting of §10 over splits and lines is attained by some
+protocol, which would make it the exact floor; and whether the constants
+$1/8$ and $1/2$ of (5) are attained, the line of best uniform approximation
+being optimal for the momentum term alone.
 
 ## 12. Consequence for STATE
 

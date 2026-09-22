@@ -81,11 +81,12 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 mark</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/additive-noise-marks.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/additive-noise-marks.pdf">PDF</a></p><p>Theorem A of the <a
 href="mark-cost-and-statistical-floor.html">mark-cost note</a> was
 proved for the von Neumann coupling <span
-class="math inline">\(\lambda\hat y\hat P_A\)</span>. That class is all
-there is. For an arbitrary unitary coupling of the body to an apparatus
-and an arbitrary pointer, suppose the reading error, the delivered
-impulse and the position disturbance are operators of the apparatus
-alone, independent of the body’s state. Then:</p>
+class="math inline">\(\lambda\hat y\hat P_A\)</span>. Among marks whose
+noise does not depend on the body, that class is all there is. For an
+arbitrary unitary coupling of the body to an apparatus and an arbitrary
+pointer, suppose the reading error, the delivered impulse and the
+position disturbance are operators of the apparatus alone, independent
+of the body’s state. Then:</p>
 <ol type="1">
 <li>the error <span class="math inline">\(\hat N\)</span> and the
 impulse <span class="math inline">\(\hat D\)</span> are canonically
@@ -107,12 +108,25 @@ protocol of such marks, including those that disturb position
 (Proposition 3).</li>
 </ol>
 <p>This is option 1 of the plan the user set on 2026-09-22 for extending
-Theorem A. The commutator identity is the joint-measurement argument of
-Arthurs and Goodman (<a
+Theorem A. The class is Ozawa’s measurements with <em>independent
+intervention</em>, for which he proves the Heisenberg product <span
+class="math inline">\(\epsilon\eta\ge\hbar/2\)</span> (<a
+href="https://doi.org/10.1103/PhysRevA.67.042105">PRA
+<strong>67</strong>, 042105, 2003</a>; <a
+href="https://doi.org/10.1016/j.aop.2003.12.012">Ann. Phys.
+<strong>311</strong>, 350, 2004</a>; metadata); the joint-measurement
+analogue is Arthurs and Goodman (<a
 href="https://doi.org/10.1103/PhysRevLett.60.2447">PRL
-<strong>60</strong>, 2447, 1988</a>, metadata); the characterization and
-the transfer to the Galileo comparison are new here. Exploratory; no
-ledger promotion.</p>
+<strong>60</strong>, 2447, 1988</a>, metadata). Proposition 2 is a
+unitary-dilation form of the classification of translation-covariant
+instruments on the line (Davies, <em>Quantum Theory of Open
+Systems</em>, 1976, metadata), stated here in the language of marks.
+What is new is the transfer to the Galileo comparison, Proposition 3.
+The class needs a pointer with continuous, unbounded spectrum, since the
+pointer and the impulse form a canonical pair; marks with a discrete or
+bounded pointer lie outside it and are covered by the <a
+href="record-costs-disturbance.html">disturbance note</a>. Exploratory;
+no ledger promotion.</p>
 <h2 id="the-identity">1. The identity</h2>
 <p>A mark is a unitary <span class="math inline">\(U\)</span> on body
 <span class="math inline">\(\otimes\)</span> apparatus, applied
@@ -152,12 +166,15 @@ class="math inline">\([\hat y+\hat X,\hat p+\hat D]=i\hbar\)</span>,
 gives <span class="math inline">\([\hat X,\hat D]=0\)</span>. The last
 statement is the Robertson–Schrödinger inequality. <span
 class="math inline">\(\square\)</span></p>
-<p>Operators commuting with <span class="math inline">\(\hat y\)</span>
-and <span class="math inline">\(\hat p\)</span> commute with every body
-operator, so the hypothesis says exactly that <span
-class="math inline">\(\hat N\)</span>, <span class="math inline">\(\hat
-D\)</span>, <span class="math inline">\(\hat X\)</span> are apparatus
-operators.</p>
+<p>Commutation with <span class="math inline">\(\hat y\)</span> and
+<span class="math inline">\(\hat p\)</span> is meant in the strong
+sense, with their spectral projections, equivalently with the Weyl
+operators. Operators commuting in that sense with <span
+class="math inline">\(\hat y\)</span> and <span
+class="math inline">\(\hat p\)</span> commute with every body operator,
+so the hypothesis says exactly that <span class="math inline">\(\hat
+N\)</span>, <span class="math inline">\(\hat D\)</span>, <span
+class="math inline">\(\hat X\)</span> are apparatus operators.</p>
 <h2 id="the-class-is-the-momentum-transfer-class">2. The class is the
 momentum-transfer class</h2>
 <p><strong>Proposition 2.</strong> Suppose <span
@@ -175,39 +192,55 @@ class="math inline">\(\hat R_0=U_0^\dagger\hat RU_0\)</span> satisfies
 <p><em>Proof.</em> <span class="math inline">\(U^\dagger\hat yU=\hat
 y\)</span> means <span class="math inline">\(U\)</span> commutes with
 <span class="math inline">\(\hat y\)</span>, so in the position
-representation <span class="math inline">\(U=\int|y\rangle\langle
-y|\otimes U(y)\,dy\)</span> with apparatus unitaries <span
-class="math inline">\(U(y)\)</span>, which we take differentiable in
-<span class="math inline">\(y\)</span>. Then <span
-class="math inline">\(\hat D=-i\hbar\,U(\hat y)^\dagger\partial_yU(\hat
-y)\)</span>, and <span class="math inline">\(\hat D\)</span> commutes
-with <span class="math inline">\(\hat p\)</span> only if it is
-independent of <span class="math inline">\(y\)</span>: <span
-class="math inline">\(U(y)^{-1}U&#39;(y)\)</span> is a constant <span
-class="math inline">\(-i\hat B/\hbar\)</span>, so <span
-class="math inline">\(U(y)=U_0e^{-iy\hat B/\hbar}\)</span> and <span
-class="math inline">\(\hat D=-\hat B\)</span>. The reading is <span
-class="math inline">\(U^\dagger\hat RU=e^{i\hat y\hat B/\hbar}\hat
-R_0e^{-i\hat y\hat B/\hbar}\)</span>, and <span
-class="math inline">\(\hat N\)</span> is independent of <span
-class="math inline">\(\hat y\)</span> only if this equals <span
-class="math inline">\(\hat y+\hat R_0\)</span>, whose derivative in
-<span class="math inline">\(y\)</span> gives <span
-class="math inline">\(\frac i\hbar[\hat B,\hat R_0]=\mathbf 1\)</span>.
-<span class="math inline">\(\square\)</span></p>
-<p>By the Stone–von Neumann theorem in its Weyl form, the pair <span
-class="math inline">\((\hat R_0,\hat B)\)</span> is a canonical pair on
-one factor of the apparatus, <span class="math inline">\(L^2(\mathbb
-R)\otimes\mathcal K\)</span>, and <span class="math inline">\(\mathcal
-K\)</span> carries whatever else the apparatus holds. So a mark that
-leaves the position alone and whose noise is independent of the body is
-a von Neumann mark: it couples the body’s position to one canonical
-momentum of the apparatus and reads the conjugate coordinate. Theorems
-A, B and C, and the recoil theorem, apply to it verbatim, with <span
-class="math inline">\(\lambda\hat P_A\)</span> replaced by <span
-class="math inline">\(\hat B\)</span> and the probe’s state replaced by
-its reduced state on the canonical factor, entangled with <span
-class="math inline">\(\mathcal K\)</span> or not.</p>
+representation <span class="math inline">\(U=\int^\oplus
+U(y)\,dy\)</span> with apparatus unitaries <span
+class="math inline">\(U(y)\)</span>, measurable in <span
+class="math inline">\(y\)</span>. Exponentiate the two hypotheses. Since
+<span class="math inline">\(\hat D\)</span> commutes with <span
+class="math inline">\(\hat p\)</span>, <span
+class="math inline">\(U^\dagger e^{ia\hat p/\hbar}U=e^{ia(\hat p+\hat
+D)/\hbar}=e^{ia\hat p/\hbar}e^{ia\hat D/\hbar}\)</span>, and in the
+decomposition, where <span class="math inline">\(e^{ia\hat
+p/\hbar}\)</span> translates <span class="math inline">\(y\)</span> by
+<span class="math inline">\(a\)</span>, this reads <span
+class="math inline">\(U(y)^\dagger U(y+a)=e^{ia\hat D/\hbar}\)</span>
+for almost every <span class="math inline">\(y\)</span> and every <span
+class="math inline">\(a\)</span>. The measurable solutions are <span
+class="math inline">\(U(y)=U_0e^{iy\hat D/\hbar}\)</span>, so <span
+class="math inline">\(U=(\mathbf 1\otimes U_0)e^{-i\hat y\otimes\hat
+B/\hbar}\)</span> with <span class="math inline">\(\hat B=-\hat
+D\)</span>, and no differentiability is needed. For the pointer, <span
+class="math inline">\(\hat y\)</span> commutes with <span
+class="math inline">\(\hat N\)</span>, so <span
+class="math inline">\(U^\dagger e^{ib\hat R}U=e^{ib\hat y}e^{ib\hat
+N}\)</span>; in the decomposition, with <span class="math inline">\(\hat
+R_0=U_0^\dagger\hat RU_0\)</span>, this reads <span
+class="math inline">\(e^{iy\hat B/\hbar}e^{ib\hat R_0}e^{-iy\hat
+B/\hbar}=e^{iby}e^{ib\hat N}\)</span> for every <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(b\)</span>. At <span
+class="math inline">\(y=0\)</span> it gives <span
+class="math inline">\(\hat N=\hat R_0\)</span>, and for every <span
+class="math inline">\(y\)</span> it is the Weyl relation between <span
+class="math inline">\(\hat B\)</span> and <span
+class="math inline">\(\hat R_0\)</span>, which contains <span
+class="math inline">\([\hat R_0,\hat B]=i\hbar\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>By the Stone–von Neumann theorem, which applies to the Weyl relation
+just obtained, the pair <span class="math inline">\((\hat R_0,\hat
+B)\)</span> is a canonical pair on one factor of the apparatus, <span
+class="math inline">\(L^2(\mathbb R)\otimes\mathcal K\)</span>, and
+<span class="math inline">\(\mathcal K\)</span> carries whatever else
+the apparatus holds. So a mark that leaves the position alone and whose
+noise is independent of the body is a von Neumann mark: it couples the
+body’s position to one canonical momentum of the apparatus and reads the
+conjugate coordinate. Theorem A and the recoil theorem apply to it
+verbatim, with <span class="math inline">\(\lambda\hat P_A\)</span>
+replaced by <span class="math inline">\(\hat B\)</span> and the probe’s
+state replaced by its reduced state on the canonical factor, entangled
+with <span class="math inline">\(\mathcal K\)</span> or not; Theorems B
+and C apply with their Gaussian hypothesis placed on that reduced
+state.</p>
 <h2 id="marks-that-also-displace-the-body">3. Marks that also displace
 the body</h2>
 <p>A mark with <span class="math inline">\(\hat X\ne0\)</span> adds the
@@ -249,7 +282,13 @@ class="math inline">\(\hat X_j\)</span>, which commute with <span
 class="math inline">\(\hat D_j\)</span>. Mandelstam–Tamm bounds its
 effect on the state by <span class="math inline">\(|c_j|\Delta_{\hat
 D_j}/\hbar\)</span>, and the rest of the proof of Theorem R is
-unchanged. <span class="math inline">\(\square\)</span></p>
+unchanged. An apparatus state entangled across marks is covered too: the
+<span class="math inline">\(\hat D_j\)</span> commute, so the
+translations combine into one unitary generated by <span
+class="math inline">\(\sum_jc_j\hat D_j\)</span>, and the seminorm
+property <span class="math inline">\(\Delta(\sum_jc_j\hat
+D_j)\le\sum_j|c_j|\Delta\hat D_j\)</span> gives the same bound. <span
+class="math inline">\(\square\)</span></p>
 <h2 id="consequence-for-state">4. Consequence for STATE</h2>
 <p>Option 1 is settled. Body-independent noise forces the canonical
 pair, the position-undisturbed marks with such noise are exactly the von
