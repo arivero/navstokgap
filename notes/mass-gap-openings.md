@@ -120,6 +120,61 @@ For $SU(3)$ the endpoint matters twice.
   Rindlisbacher, Rummukainen and Salami report from earlier work
   (arXiv:2306.14319, passage).
 
+### What the problem statement itself points to
+
+Jaffe and Witten's official description, held as a
+[local PDF](../docs/JaffeWitten_YangMills.pdf), names in its §6.6 four
+routes to the gap (passage), and two of them are openings 1 and 4 below:
+
+- a "duality transformation", with Debye screening in the Coulomb gas,
+  proved through the sine-Gordon representation, as the model;
+- the quartic potential $(A\wedge A)^2$ (Feynman,
+  [Nucl. Phys. B **188**, 479, 1981](https://doi.org/10.1016/0550-3213(81)90005-5)),
+  which "may be tied to curvature in the space of connections" (Singer,
+  [Phys. Scripta **24**, 817, 1981](https://doi.org/10.1088/0031-8949/24/5/002)):
+  opening 1;
+- "certain quantum mechanics problems with potentials involving flat
+  directions ... do lead to bound states" (Simon 1983): opening 4;
+- the $1/N$ expansion ('t Hooft 1974): gauge theory with $SU(N)$, $SO(N)$
+  or $Sp(N)$ "may be equivalent to a string theory with $1/N$ as the
+  string coupling constant", which "might give a clear-cut explanation of
+  the mass gap and confinement and perhaps a good starting point for a
+  rigorous proof (for sufficiently large $N$)". Maldacena's paper is cited
+  there as "surprising progress along these lines for certain strongly
+  coupled four-dimensional gauge systems with matter, but as of yet there
+  is no effective approach to the gauge theory without fermions." Earlier,
+  §6.1 allows that "there might some day be an asymptotic solution in a
+  large $N$ limit."
+
+**Chronology.** Maldacena's conjecture was posted in November 1997
+([hep-th/9711200](https://arxiv.org/abs/hep-th/9711200)); Witten's
+holographic account of non-supersymmetric Yang--Mills, in which "the
+spontaneous breaking of the center of the gauge group, magnetic
+confinement, and the mass gap are coded in classical geometry", in March
+1998 ([hep-th/9803131](https://arxiv.org/abs/hep-th/9803131), abstract);
+supergravity glueball masses in agreement with lattice ratios in June 1998
+(Csáki, Ooguri, Oz and Terning,
+[hep-th/9806021](https://arxiv.org/abs/hep-th/9806021), abstract); the
+Clay problems in May 2000. The statement was written with holography in
+hand, by one of its authors, and records no effective approach to the
+pure gauge theory. The usual reasons, not checked here against a primary
+text, are that the tractable supergravity regime is the opposite limit
+from the continuum one, with Kaluza--Klein modes at the glueball scale,
+and that it holds at large $N$ only.
+
+**The large-$N$ thread.** It runs through Witten's own work: the $1/N$
+expansion for baryons ([Nucl. Phys. B **160**, 57, 1979](https://doi.org/10.1016/0550-3213(79)90232-3))
+and for the $U(1)$ problem
+([Nucl. Phys. B **156**, 269, 1979](https://doi.org/10.1016/0550-3213(79)90031-2)),
+and the large-$N$ lattice transition with Gross (1980), the
+non-analyticity behind the $N\ge5$ bulk transition above. This programme
+records the route and does not adopt it: the conjecture is posed for every
+compact simple group, so a proof for sufficiently large $N$ would leave
+$SU(3)$ open unless it came with explicit control down to $N=3$; and at
+large $N$ a lattice route meets the bulk transition, which it would have
+to avoid with a bulk-preventing action or with the centre-stabilized
+volume independence of opening 2, itself a large-$N$ construction.
+
 ## 2. The openings
 
 ### Opening 1: curvature
