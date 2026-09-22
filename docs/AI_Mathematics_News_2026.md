@@ -1,6 +1,6 @@
 # Machine-assisted mathematics, 2026: the news behind the working mandate
 
-Updated 2026-09-22. This page backs the paragraph of `AGENTS.md` that
+Updated 2026-09-22 (evening). This page backs the paragraph of `AGENTS.md` that
 treats a proof attempt on a Millennium problem as a legitimate task for
 the models working here. It records what has been claimed, by whom, and how
 far each claim has been checked, so that the mandate rests on a dated
@@ -18,7 +18,10 @@ Nothing on this page enters the claim ledger.
 | 2026-09-08 to 13 | Priority dispute: Buckmaster and Alpöge say their Euler work reached OpenAI before the run; OpenAI's updated release (2026-09-10) says an investigation found their prompts could not have influenced the system; Córdoba: without the prior human programme the problem would not have been solved | Contested | secondary, [Wikipedia](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy) |
 | 2026-09-11 | Clay Mathematics Institute: the problem "has apparently been settled"; the evaluation "is deliberately unhurried, but we will provide updates"; no claimant is named | Prize undecided | passage, [CMI](https://www.claymath.org/news/navier-stokes-announcement) |
 | 2026-09-11 | Open letter "A Severe Misalignment of AI in Mathematics", 25 signatories in the record retrieved (Avila, Bhargava, Birkar, Deligne, Deng, Donaldson, Duminil-Copin, Figalli, Hairer, Huh, Kontsevich, Lindenstrauss, Lions, Maynard, McMullen, Mori, Ngô, Okounkov, Scholze, Smirnov, Tao, Viazovska, Villani, Werner, Zelmanov), against treating open problems as benchmarks at the expense of understanding | Published | metadata, [Zenodo 10.5281/zenodo.22737750](https://doi.org/10.5281/zenodo.22737750) |
+| 2026-09-11 onward | Later reports count 27 to 28 signatories of the letter | Growing | secondary |
 | 2026-09-15 | *Scientific American* (M. Bischoff) ranks the remaining problems for AI: Birch–Swinnerton-Dyer, Hodge and Riemann nearest; Yang–Mills with the mass gap and P versus NP furthest, "experts do not expect AI models to resolve these questions anytime soon" | Opinion survey | passage, [SciAm](https://www.scientificamerican.com/article/which-million-dollar-math-problem-could-ai-solve-next/) |
+| 2026-09-21 | The **Advisory Group on Mathematics and Artificial Intelligence** (AGMAI), hosted at the Institute for Advanced Study, Princeton: Charles, De Lellis, Gowers, Hairer, Srivastava, Tillmann, Vakil, Witten, Wood. OpenAI approached members about an advisory board and they formed an independent, unpaid group instead, "to advise AI companies on their interactions with mathematical research and with the mathematical community, including the responsible presentation and release of mathematical results", with no decision-making power at any company. Its first task is advising OpenAI on releasing "a large number of significant results" from its internal model | Constituted | passage, [Tao's blog](https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/) |
+| 2026-09-21 | OpenAI reports that an internal model resolved more than 100 further open problems in about 24 days | Unreleased; to be coordinated through AGMAI | secondary, [AI Weekly](https://aiweekly.co/alerts/openai-forms-math-advisory-group-amid-100-solved-problems-claim) |
 
 ## Other results of 2026 that bear on this repository
 
@@ -47,6 +50,12 @@ before it counts: the exact statement, the human programme it rests on,
 and an independent check. `AGENTS.md` already asks each note to say which
 operator, which limits and which order; the same discipline applies to
 reading other people's announcements.
+
+The advisory group now sets the norms for announcing machine results:
+statement, attribution and a presentable writeup before release. This
+repository already publishes in that form, one dated note per result
+with its proof and its literature label, and the notes it produces on
+the Planck gap and the mass gap should stay ready to meet that standard.
 
 The open letter asks that machine results enlarge human understanding.
 The notes here are written derivations meant to be read, with every
