@@ -60,10 +60,12 @@ the shape parameter explicit.
    $S_j$ the parabolic segments. Each inserted vertex lowers it by the
    inscribed triangle over $\hbar$, in Archimedes' proportions; the
    reversed ordering carries the complement,
-   $\Phi_N+4\theta_N=\tau\Delta E/3\hbar$ for every partition. Next on
-   this line: the Newton-age form of the central extension through the
-   fits (the note's §5 conjecture, $\Lambda p$ invariant under refraction
-   in Newton's emission theory), and a paper section.
+   $\Phi_N+4\theta_N=\tau\Delta E/3\hbar$ for every partition. Newton-age
+   form, §5: *Opticks* II.iii Props. X and XVII make $\Lambda p$ a
+   refraction invariant, so the fits count along a path is the Maupertuis
+   action in units of $\Lambda p$, and it separates the polygon from the
+   curve by $(F/v)\sum_jA_j/(2\Lambda p)$ fits. Next on this line: a
+   paper section.
 2. **General force law.** Theorem 2's proof pairs $\int_0^\tau P''T$ with
    a Dirichlet energy, so it bounds a norm of $P''$; the aperture form
    becomes the total variations of the displacement path.
