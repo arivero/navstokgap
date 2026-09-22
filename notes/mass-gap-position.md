@@ -29,12 +29,17 @@ $$H=\frac{\hbar c}{a}\Big[\frac{g^2}{2}\sum_{\ell}(-\Delta_\ell)
 | --- | --- | --- |
 | T1 | finite lattice: unique physical ground state, $\delta>0$ | **proved here** |
 | T2 | $\delta\ge\gamma(g^2/2)C_2$ for $g\ge g_0$, uniform in volume | **proved here** from an imported theorem; explicit for the Wilson transfer matrix, $g^2\ge176$ |
-| T2$'$ | $\liminf_{N_s}\delta>0$ for every $g>0$ | open; false for $U(1)$ |
+| T2$'$ | $\liminf_{N_s}\delta>0$ for every $g>0$ | open; false for $U(1)$, and for $SU(N\ge5)$ with the Wilson action (numerical evidence) |
 | T3 | $\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda)\in(0,\infty)$ | open |
 | T4 | continuum infinite-volume theory with the axioms | finite-volume ultraviolet stability known |
 | S | small volume: $\Delta=\delta_1g^{2/3}\hbar c/L\,[1+O(g^{2/3})]$ | upper side proved, lower side fixed-lattice only |
 
-The conjecture is T2$'$ together with T3, given T4, and
+The conjecture is T3, given T4, with a gap $\delta_\infty>0$ on an
+interval $(0,g_1)$ along the scaling curve; T2$'$ is the stronger
+statement that the lattice action has a gap at every coupling, which
+fails for $SU(N\ge5)$ with the Wilson action (precision of 2026-09-23;
+the [openings note](mass-gap-openings.md) records four ways in). Taken as
+a lattice statement,
 [the critical-coupling note](gapped-set-critical-coupling.md) shows that
 T2$'$ is exactly the absence of a zero-temperature bulk phase
 transition, hence on its second-order branch the uniqueness of the
@@ -141,9 +146,9 @@ one of them.
 
 | obligation | kind |
 | --- | --- |
-| T2$'$: closedness of the gapped set | the conjecture |
+| a gap on $(0,g_1)$ along the scaling curve | the conjecture's lattice half; T2$'$, closedness of the gapped set, is sufficient |
 | openness of the gapped set | technical: gap stability without frustration-freeness |
-| T3 | the conjecture, given T2$'$ |
+| T3 | the conjecture, given that gap |
 | T4 | construction |
 | local large-field control | available via the transfer-matrix identification: $|\Omega|^2$ is the Euclidean time-slice marginal |
 | the large-field region itself | closed in measure (cost $\eta^2/(4g^2)$ sharp, entropy $\eta^2/(8\pi^2)$); the Hamiltonian chain needs an operator inequality there, whose proof loses $C_V|\partial N|\hbar c/a$ on the small-field side, a negative perturbation that binds; the polymer expansion consumes measure statements instead |

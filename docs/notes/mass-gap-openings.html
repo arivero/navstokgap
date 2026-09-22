@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Openings for the mass gap, and why it is not special to SU(3)</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Openings for the mass gap, and why it is not special to SU(3)</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-openings.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-openings.pdf">PDF</a></p><p>Recorded 2026-09-23 at the user’s request and
+<strong>parked</strong>: the Planck-gap paper comes first, and none of
+these is being attacked now, except possibly the fourth, which is the
+link from the Planck-gap work. The note answers two questions the user
+asked and corrects one statement of the map.</p>
+<p><strong>The gap is expected for every compact simple non-abelian
+group.</strong> Lattice evidence shows gapped glueball spectra for <span
+class="math inline">\(SU(N)\)</span> from <span
+class="math inline">\(N=2\)</span> to large <span
+class="math inline">\(N\)</span>, with masses smooth in <span
+class="math inline">\(1/N^2\)</span>, and for the other classical
+groups; the dividing line is between abelian and non-abelian, since
+compact <span class="math inline">\(U(1)\)</span> in four dimensions has
+a proven massless phase at weak coupling. <span
+class="math inline">\(SU(3)\)</span> fixes the constants; a method that
+works will almost surely be group-general.</p>
+<p><strong>A precision on the map.</strong> The <a
+href="mass-gap-position.html">position note</a> says that the conjecture
+is T2<span class="math inline">\(&#39;\)</span> together with T3, given
+T4, and the <a href="mass-gap-obligations-lattice.html">obligations
+map</a> says that T3 presupposes T2<span
+class="math inline">\(&#39;\)</span>. T3 needs less: a gap <span
+class="math inline">\(\delta_\infty(g)&gt;0\)</span> on some interval
+<span class="math inline">\((0,g_1)\)</span> along the scaling curve.
+T2<span class="math inline">\(&#39;\)</span>, a gap at every lattice
+coupling, is a property of a particular lattice action, and for the
+Wilson action it fails for <span
+class="math inline">\(SU(N\ge5)\)</span>, where a first-order bulk
+transition occurs at intermediate coupling. For <span
+class="math inline">\(SU(3)\)</span> with the Wilson action the bulk
+behaviour is a crossover, so T2<span
+class="math inline">\(&#39;\)</span> remains plausible there; the
+conditional theorem of the <a
+href="mass-gap-conditional-theorem.html">conditional-theorem note</a>,
+stated along the trajectory, needs no T2<span
+class="math inline">\(&#39;\)</span> at all.</p>
+<p><strong>Four openings,</strong> ranked by how directly they reach the
+place where the map ends, the control of about six blocking steps at
+order-one coupling.</p>
+<ol type="1">
+<li>Curvature: the Bakry–Émery criterion and its multiscale form.</li>
+<li>The centre-stabilized theory on <span class="math inline">\(\mathbb
+R^3\times S^1\)</span> at small radius.</li>
+<li>Three dimensions first.</li>
+<li>The Planck-gap link: Simon’s valley lifting, a floor that holds for
+every state.</li>
+</ol>
+<h2 id="evidence-across-groups">1. Evidence across groups</h2>
+<ul>
+<li><strong><span class="math inline">\(SU(N)\)</span>.</strong>
+Glueball masses and string tensions computed for <span
+class="math inline">\(N\)</span> from <span
+class="math inline">\(2\)</span> to about <span
+class="math inline">\(12\)</span> are finite and extrapolate smoothly in
+<span class="math inline">\(1/N^2\)</span> (Lucini and Panero, <a
+href="https://doi.org/10.1016/j.physrep.2013.01.001">Phys.
+Rep. <strong>526</strong>, 93, 2013</a>, metadata; Lucini and Teper, <a
+href="https://doi.org/10.1088/1126-6708/2001/06/050">JHEP
+<strong>2001</strong>(06), 050</a>, metadata).</li>
+<li><strong><span class="math inline">\(G_2\)</span>.</strong> The
+exceptional group has a trivial centre and still shows confinement
+behaviour and a first-order deconfinement transition (Pepe and Wiese, <a
+href="https://doi.org/10.1016/j.nuclphysb.2006.12.024">Nucl. Phys. B
+<strong>768</strong>, 21, 2007</a>, metadata), so the centre is not what
+the gap rests on.</li>
+<li><strong><span class="math inline">\(U(1)\)</span>.</strong>
+Four-dimensional compact <span class="math inline">\(U(1)\)</span> has a
+massless Coulomb phase at weak coupling (Guth, <a
+href="https://doi.org/10.1103/PhysRevD.21.2291">PRD <strong>21</strong>,
+2291, 1980</a>; Fröhlich and Spencer, <a
+href="https://doi.org/10.1007/BF01213610">CMP <strong>83</strong>, 411,
+1982</a>; metadata), which is why the <a
+href="abelian-misses-the-box.html">abelian note</a> separates the groups
+by the running, <span class="math inline">\(b_0=0\)</span> against <span
+class="math inline">\(b_0=11N/(48\pi^2)\)</span>. In three dimensions
+compact <span class="math inline">\(U(1)\)</span> is gapped at every
+coupling (Polyakov, <a
+href="https://doi.org/10.1016/0550-3213(77)90086-4">Nucl. Phys. B
+<strong>120</strong>, 429, 1977</a>; proved by Göpfert and Mack, <a
+href="https://doi.org/10.1007/BF01961240">CMP <strong>82</strong>, 545,
+1982</a>; metadata), with a gap that vanishes in physical units in the
+continuum.</li>
+</ul>
+<p><strong>Bulk transitions depend on the action.</strong> With the
+standard Wilson plaquette action, “the bulk transition is a rapid
+cross-over if <span class="math inline">\(N\le4\)</span> but becomes an
+increasingly strong first order transition for <span
+class="math inline">\(N\ge5\)</span>”; for <span
+class="math inline">\(N=3\)</span> a negative adjoint term avoids the
+bulk phase altogether (Rindlisbacher, Rummukainen and Salami, <a
+href="https://arxiv.org/abs/2306.14319">arXiv:2306.14319</a>, passage).
+In the plane of fundamental and adjoint couplings, a line of first-order
+transitions ends at a critical point near the Wilson axis (Bhanot and
+Creutz, <a href="https://doi.org/10.1103/PhysRevD.24.3212">PRD
+<strong>24</strong>, 3212, 1981</a>, metadata). By Corollary 3 of the <a
+href="gapped-set-critical-coupling.html">gapped-set note</a>, a
+first-order transition at <span class="math inline">\(g_b\)</span> gives
+<span class="math inline">\(\delta_\infty(g_b)=0\)</span> through vacuum
+coexistence, so the gapped set <span class="math inline">\(\mathcal
+G\)</span> has a hole there while the physical gap, which lives at <span
+class="math inline">\(g\to0\)</span>, is untouched. The statement the
+conjecture needs is <span class="math inline">\(\mathcal
+G\supseteq(0,g_1)\)</span> for some <span
+class="math inline">\(g_1&gt;0\)</span>, joined to T3 along the scaling
+curve.</p>
+<h2 id="the-openings">2. The openings</h2>
+<h3 id="opening-1-curvature">Opening 1: curvature</h3>
+<p>The configuration space of lattice gauge theory is a product of
+copies of the group, and a compact simple group carries positive Ricci
+curvature: for <span class="math inline">\(SU(N)\)</span> with the
+metric <span class="math inline">\(\langle
+X,Y\rangle=\operatorname{Tr}(XY^*)\)</span>, <span
+class="math inline">\(\operatorname{Ric}=\frac N2\,g\)</span>. The
+Bakry–Émery criterion turns a positive lower bound on <span
+class="math inline">\(\operatorname{Ric}+\operatorname{Hess}S\)</span>
+into a log-Sobolev and a Poincaré inequality, that is into a spectral
+gap of the Langevin dynamics and exponential decay of correlations
+(Bakry and Émery, <a href="https://doi.org/10.1007/BFb0075847">LNM 1123,
+177, 1985</a>, metadata). A flat group, <span
+class="math inline">\(U(1)\)</span>, gets nothing from the first term,
+which lines up with the abelian failure.</p>
+<p>Shen, Zhu and Zhu use exactly this to prove, for lattice Yang–Mills
+with ’t Hooft coupling <span class="math inline">\(\beta N\)</span> in
+any dimension <span class="math inline">\(d&gt;1\)</span>, uniqueness of
+the infinite-volume measure, log-Sobolev and Poincaré inequalities and
+exponential decay of correlations, “a strictly positive mass gap”, for
+<span class="math inline">\(|\beta|&lt;1/(16(d-1))\)</span> when the
+group is <span class="math inline">\(SU(N)\)</span> (<a
+href="https://doi.org/10.1007/s00220-022-04609-1">CMP
+<strong>400</strong>, 2022</a>; <a
+href="https://arxiv.org/abs/2204.12737">arXiv:2204.12737</a>, abstract).
+In the Wilson normalization of this repository, <span
+class="math inline">\(\beta_W=2N/g^2\)</span> with weight <span
+class="math inline">\(e^{(\beta_W/N)\sum\operatorname{Re}\operatorname{Tr}U_p}\)</span>,
+their <span class="math inline">\(\beta\)</span> is <span
+class="math inline">\(\beta_W/N^2\)</span>, so for <span
+class="math inline">\(SU(3)\)</span> in four dimensions the condition is
+<span class="math inline">\(\beta_W&lt;3/16\)</span>, that is</p>
+<p><span class="math display">\[g^2&gt;32 .\]</span></p>
+<p>That conversion is ours and must be checked against their
+definitions. If it stands, the curvature method already beats this
+repository’s strong-coupling thresholds, <span
+class="math inline">\(g^2\ge176\)</span> for the Wilson transfer matrix
+(<a href="wilson-strong-coupling-explicit.html">note</a>), <span
+class="math inline">\(g^2\ge388\)</span> for Kogut–Susskind (<a
+href="kogut-susskind-strong-coupling-explicit.html">note</a>) and <span
+class="math inline">\(g^2&gt;444\)</span> by Dobrushin (<a
+href="dobrushin-uniqueness-wilson.html">note</a>), and narrows band B of
+the <a href="confinement-scale-bands.html">bands note</a> from <span
+class="math inline">\(\beta_W\in(0.0135,5.7)\)</span> to <span
+class="math inline">\(\beta_W\in(0.19,5.7)\)</span>.</p>
+<p>The weak side is where the multiscale form enters. Bauerschmidt and
+Bodineau derive “a multiscale generalisation of the Bakry–Émery
+criterion” through the Polchinski renormalization equation, “effective
+for measures which are far from log-concave”, and prove optimal
+log-Sobolev inequalities for the continuum sine-Gordon model at <span
+class="math inline">\(\beta&lt;6\pi\)</span> (<a
+href="https://doi.org/10.1002/cpa.21926">CPAM <strong>74</strong>,
+2020</a>; <a
+href="https://arxiv.org/abs/1907.12308">arXiv:1907.12308</a>, abstract).
+Its output is a spectral gap controlled at every scale, which is the
+form of hypothesis H1 in the conditional theorem. It also sits outside
+the family closed in <a
+href="flow-before-decimation.html">flow-before-decimation</a>: that note
+closes every criterion that depends on the perturbation through a norm,
+and a curvature bound is a lower bound on a Hessian.</p>
+<p>The risk is concrete. After a blocking step the effective action is a
+function on the coarse configuration manifold, and the criterion needs
+<span class="math inline">\(\operatorname{Ric}+\operatorname{Hess}S_{\rm
+eff}\)</span> bounded below at every scale. At weak coupling the Hessian
+is degenerate along gauge orbits and along the abelian valleys, and the
+curvature of the group has to carry those directions. <strong>First note
+if opened:</strong> check the conversion to <span
+class="math inline">\(g^2&gt;32\)</span>; compute the curvature budget
+for <span class="math inline">\(SU(2)\)</span> and <span
+class="math inline">\(SU(3)\)</span> against the Hessian of the Wilson
+action; and state exactly what lower bound one blocking step must
+preserve.</p>
+<h3 id="opening-2-the-centre-stabilized-theory-at-small-radius">Opening
+2: the centre-stabilized theory at small radius</h3>
+<p>Ünsal and Yaffe add a double-trace deformation that keeps centre
+symmetry unbroken; on <span class="math inline">\(\mathbb R^3\times
+S^1\)</span> at small radius “the deformed Yang–Mills theory has a mass
+gap and exhibits linear confinement”, by an analytic semiclassical
+treatment, and “there are no order parameters which distinguish the
+small and large radius regimes” (<a
+href="https://doi.org/10.1103/PhysRevD.78.065035">PRD
+<strong>78</strong>, 065035, 2008</a>, abstract). The mechanism at small
+radius is Polyakov’s monopole plasma, which Göpfert and Mack made
+rigorous for three-dimensional compact <span
+class="math inline">\(U(1)\)</span> at every coupling. <strong>Target if
+opened:</strong> a rigorous mass gap for the deformed theory at small
+radius, with explicit constants. That would be a theorem about a
+deformed theory; carrying it to <span class="math inline">\(\mathbb
+R^4\)</span> is the adiabatic-continuity conjecture.</p>
+<h3 id="opening-3-three-dimensions-first">Opening 3: three dimensions
+first</h3>
+<p>In three dimensions <span class="math inline">\(g^2\)</span> has the
+dimensions of energy, the theory is superrenormalizable, and the
+coupling at lattice scale is <span class="math inline">\(g^2a/\hbar
+c\)</span>, which vanishes as a power of <span
+class="math inline">\(a\)</span>. The weak-side deficit of twelve orders
+of magnitude found in <a
+href="small-field-step-decay-and-threshold.html">the small-field
+threshold note</a> comes from the logarithmic running of four
+dimensions, and in three dimensions the ultraviolet steps shrink
+geometrically, so the constant-chasing that failed in four dimensions
+may close. The <a
+href="three-dimensional-gap-one-function.html">one-function note</a>
+reduces the problem to a lower bound <span class="math inline">\(f(x)\ge
+f_-&gt;0\)</span> on one function of one variable. A three-dimensional
+gap uniform in the spacing is open and would be a major result by
+itself.</p>
+<h3 id="opening-4-the-planck-gap-link">Opening 4: the Planck-gap
+link</h3>
+<p>The small-volume mechanism of <a
+href="low-dimensional-mass-gap.html">G07</a> and <a
+href="action-floor-yang-mills-gap.html">G08</a> is Simon’s: along the
+flat valleys of the commutator potential the transverse modes are
+oscillators whose frequency grows with the distance along the valley,
+and their zero-point energy lifts the valley (Simon, <a
+href="https://doi.org/10.1016/0003-4916(83)90057-X">Ann. Phys.
+<strong>146</strong>, 209, 1983</a>, metadata). In its simplest form,
+for fixed <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display">\[\frac{\hat
+p_y^2}{2m}+\frac12m\Omega(x)^2\hat y^2\ \ge\
+\frac12\hbar\,\Omega(x),\]</span></p>
+<p>an operator inequality that holds in every state. The <a
+href="torus-valley-potential.html">torus-valley note</a> finds the
+field-theory version term by term: the linear term <span
+class="math inline">\(2|a|\)</span> of the valley potential is the
+zero-point energy of the <span class="math inline">\(k=0\)</span>
+charged modes.</p>
+<p>The Planck-gap work sharpens what kind of floor this is. Its floors
+that rest on second moments of a prepared state fall to squeezing and to
+grid states, and the ones that survive rest on the commutator alone: the
+phase between Newton’s polygon and the parabola, and the cost of
+disturbance. Simon’s inequality is of the surviving kind, a spectral
+statement, so the valley lifting is the mass-gap instance of the lesson
+the Planck paper draws. <strong>First step if opened:</strong>
+hypothesis (H3) of the <a
+href="weak-coupling-feshbach-reduction.html">Feshbach note</a>, the gap
+of the zero-mode Hamiltonian <span class="math inline">\(h_3\)</span>
+plus the even valley potential <span
+class="math inline">\(U(a)\)</span>, proved by a Simon-type operator
+inequality with every constant explicit. That is the lower side of the
+small-volume corner S at weak coupling, and it stays within reach of the
+Planck-gap methods.</p>
+<h2 id="consequence-for-state">3. Consequence for STATE</h2>
+<p>The mass-gap track stays paused. This note records the four openings
+and the answer on groups: the gap is expected for every compact simple
+non-abelian group, and <span class="math inline">\(SU(3)\)</span> is the
+group that fixes the constants. The map’s statement that the conjecture
+is T2<span class="math inline">\(&#39;\)</span> with T3 is too strong:
+T3, with a gap on an interval <span
+class="math inline">\((0,g_1)\)</span> along the scaling curve, is what
+is needed, and T2<span class="math inline">\(&#39;\)</span> fails for
+<span class="math inline">\(SU(N\ge5)\)</span> with the Wilson action.
+If one opening is taken up next, it is the fourth, which uses the
+Planck-gap methods directly; the first carries the most promise, and its
+first check is the conversion of Shen, Zhu and Zhu’s threshold to <span
+class="math inline">\(g^2&gt;32\)</span>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

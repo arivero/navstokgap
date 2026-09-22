@@ -61,6 +61,7 @@ TRACKS = [
         "dobrushin-uniqueness-wilson", "lieb-robinson-kogut-susskind",
         "intermediate-region-finite-verification", "confinement-scale-bands",
         "what-would-unblock", "reasons-to-stop-as-research",
+        "mass-gap-openings",
         "comparison-and-bridges", "millennium-problem-definitions",
     ]),
     ("renormalization", "Blocking, flow and the large-field obstruction", """What

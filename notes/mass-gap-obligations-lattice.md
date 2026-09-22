@@ -180,6 +180,14 @@ non-abelian potential has flat directions of measure zero along which a
 transverse zero-point energy grows. T2$'$ is where that mechanism would
 have to be turned into an estimate at weak coupling.
 
+*Precision, 2026-09-23.* T2$'$ is a property of the lattice action. With
+the Wilson action, $SU(N\ge5)$ has a first-order bulk transition at
+intermediate coupling, where $\delta_\infty$ vanishes by vacuum
+coexistence, while the continuum gap is expected; for $SU(3)$ the Wilson
+action gives a crossover. What T3 needs is $\delta_\infty(g)>0$ on an
+interval $(0,g_1)$ along the scaling curve
+([openings note](mass-gap-openings.md), §1).
+
 ## 5. T3: the scaling limit, as one asymptotic statement
 
 Along the continuum curve the bare coupling runs with the cutoff. With
@@ -200,7 +208,8 @@ $e^{-1/(2b_0g^2)}$ times the prescribed power, with a positive finite
 prefactor. Any weaker vanishing gives $m=\infty$ in the continuum (the
 theory is gapped only at the cutoff scale, as the compact abelian theory
 in three dimensions is, G07 §4); any faster vanishing, or
-$\delta_\infty=0$ at some $g$, gives $m=0$. T3 presupposes T2$'$. The
+$\delta_\infty=0$ at arbitrarily small $g$, gives $m=0$. T3 presupposes
+$\delta_\infty>0$ on an interval $(0,g_1)$, which T2$'$ implies. The
 order of limits is $N\to\infty$ at fixed $g$ first, then $g\to0$ with
 $a=\Lambda_{\rm lat}^{-1}\,a\Lambda_{\rm lat}(g)$; Jaffe and Witten note
 (p. 6, passage) that a gap uniform in the volume would also serve to

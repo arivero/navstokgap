@@ -60,7 +60,15 @@ undetermined, at the exchange rate $\hbar$.
 
 $SU(3)$ mass gap: [the position note](../notes/mass-gap-position.md) and
 [the conditional theorem](../notes/mass-gap-conditional-theorem.md) hold
-the map; a proof consists of hypotheses H1 and H2 there.
+the map; a proof consists of hypotheses H1 and H2 there. The
+[openings note](../notes/mass-gap-openings.md) (2026-09-23) records four
+ways in, parked: curvature (Bakry--Émery; Shen--Zhu--Zhu's threshold
+converts to $g^2>32$ for $SU(3)$, to be checked), the centre-stabilized
+small circle, three dimensions, and the Planck-gap link through Simon's
+valley lifting, the one that may be taken up. It also records that the
+gap is expected for every compact simple non-abelian group, and that
+T2$'$ is sufficient, with the conjecture needing only a gap on $(0,g_1)$
+along the scaling curve.
 
 ## Constraints
 

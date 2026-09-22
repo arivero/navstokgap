@@ -91,6 +91,14 @@ what matters here is that neither is excluded by anything proved so far.
 bulk phase transition at any finite coupling. In particular T2$'$ fails
 if and only if such a transition exists.
 
+*Precision, 2026-09-23.* Such transitions occur for some actions: with
+the Wilson action, $SU(N\ge5)$ has a first-order bulk transition, so its
+$\mathcal G$ has a hole there, and the continuum gap is still expected
+because it lives at $g\to0$. The requirement of the conjecture is
+$\mathcal G\supseteq(0,g_1)$ for some $g_1>0$ together with T3; closedness
+of $\mathcal G$ is sufficient, and it is necessary only for an action
+without bulk transitions ([openings note](mass-gap-openings.md), §1).
+
 ## 3. What a second-order point would mean
 
 At a second-order point $g_*$ the correlation length diverges in lattice
