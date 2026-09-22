@@ -58,7 +58,11 @@ $$\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega'}\big|_W\big\|_{\rm TV}\ \le\ C\,|W|
 with a margin such that every $\Phi$ with $\|\Phi-\Phi_0\|_\kappa\le r$
 satisfies the same condition with some $C',\gamma'>0$. The natural
 $\Phi_0$ is the Wilson interaction at $\beta_W\simeq6$, where the
-published correlation length is about one lattice unit, and $R$ is $3$
+published correlation length is about one lattice unit, or, better, a
+nearby interaction with a small negative adjoint term, which moves
+$\Phi_0$ away from the endpoint of the fundamental--adjoint first-order
+line where the scalar channel softens (precision of 2026-09-23,
+[openings note](mass-gap-openings.md) §1); $R$ is $3$
 to $5$; the condition is to be read on the gauge-invariant content of
 $W$, the small Wilson loops, since single-link marginals of interior
 links are Haar ([bands note](confinement-scale-bands.md)).

@@ -52,6 +52,13 @@ carried by the flux-tube channel, $\sigma a^2\simeq0.16$ per lattice
 unit at $\beta_W=5.7$, which sets the box side rather than the glueball
 mass. Constants explicit where they are ours; nothing promoted.
 
+*Caveat, 2026-09-23.* The $m_{0^{++}}a$ column scales the continuum ratio
+to each coupling. Near $\beta_W\simeq5.7$ the Wilson axis passes beside the
+endpoint of the fundamental--adjoint first-order line, where the scalar
+glueball softens (Heller 1995), so the lattice $\xi/a$ there is likely
+larger than $0.70$ and should be taken from the measured lattice mass
+([openings note](mass-gap-openings.md), §1).
+
 ## 1. Three bands of the coupling
 
 | band | $\beta_W$ | status |
