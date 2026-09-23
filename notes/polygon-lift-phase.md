@@ -200,6 +200,28 @@ equal height"
 ([companion](../docs/classics/Archimedes_QuadratureParabola_Heath1897_OCR.md),
 passage).
 
+The method begins with the cone. In the preface to *The Method*,
+Archimedes gives Eudoxus the proof "that the cone is a third part of the
+cylinder, and the pyramid of the prism, having the same base and equal
+height", and gives "no small share of the credit to Democritus who was the
+first to make the assertion with regard to the said figure though he did
+not prove it" ([companion](../docs/classics/Archimedes_Method_Heath1912_OCR.md),
+passage). On Heath's reading, Democritus reached the third by treating the
+cone as made of sections, the setting of the dilemma about adjacent
+sections that Plutarch reports, and Eudoxus's exhaustion is the proof that
+does without them. The Galileo comparison contains the same third. The
+sagitta grows as the square of the time, as the cone's section grows as
+the square of the height, so the area between the inertial line and the
+parabola is one third of the rectangle with sides $v\tau$ and $s$:
+
+$$A_{\rm inertial,fall}=\frac{vF\tau^3}{6m}=\frac13\,v\tau\,s,$$
+
+as the cone is one third of its cylinder. What $\hbar$ adds separates the
+two figures. The cone is static: marking its sections disturbs nothing,
+and Theorem 9(iii) of the [paper](planck-gap-paper.md) finds no floor for
+it. The parabola here is traced by a motion, its pieces are phases of
+Newton's polygon, and its exhaustion acquires the stopping scales below.
+
 On the Galileo parabola, traced in time, the vertex of the segment over
 a step is the midpoint in time. There the velocity,
 $F(t_{j-1}+t_j)/2m$, equals the slope of the chord. So Archimedes'
