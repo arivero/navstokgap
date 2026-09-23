@@ -1,7 +1,11 @@
 # Start here
 
 Read `research/STATE.md` (one page: what is being worked on and why) and
-the note it points to. Nothing else is required reading. Older governance
+the note it points to. Then read the latest handout,
+[`research/handoffs/HANDOFF-2026-09-23.md`](research/handoffs/HANDOFF-2026-09-23.md),
+written at the user's request after the session of 2026-09-22/23: what
+changed, what an adversarial review checked, what is open, and how the
+user works. Nothing else is required reading. Older governance
 files (PROGRAMME, STRATEGY, TASKS, PROTOCOL, the skill, old handoffs) are
 context, and where they demand more bookkeeping than this file, this file
 wins. Explicit user instructions take precedence over everything here.
@@ -114,7 +118,10 @@ besides the STATE edit.
 Do not create handoffs for completed work, task rows, decision blocks,
 programme versions, source batches, claim rows, validation narratives or
 review files. Git history is the record. If work is interrupted, leave one
-paragraph at the top of the note saying where it stopped.
+paragraph at the top of the note saying where it stopped. (Exception, user
+direction 2026-09-23: at the end of a long session the user may ask for a
+handout for the next agent, kept in `research/handoffs/` and pointed to
+from "Start here"; write one only when asked.)
 
 `claims/LEDGER.md` is retained for the claims already in it. Add a row only
 for a result another note will cite by ID, with the proof location and an
