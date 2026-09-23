@@ -63,7 +63,7 @@ again in the excerpt.
 | Book II, Part III, Prop. XVII | 6489–6495 | Intervals of the fits in two mediums “as the Sine of Incidence to the Sine of Refraction” |
 | Book II, Part III, Prop. XVIII | 6498–6506 | “the 1/89000th part of an Inch” |
 | Book III, Query 1 | 7717–7720 | Bodies act on light at a distance and bend its rays |
-| Book III, Query 29 | 8479–8530 | Rays are small bodies of different sizes, put into fits |
+| Book III, Query 29 | 8479–8533 | Rays are small bodies of different sizes, put into fits by vibrations they "stir up" that "overtake them" |
 
 ## Coverage and limits
 

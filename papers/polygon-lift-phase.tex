@@ -226,9 +226,58 @@ The insertion mesh of the mark theorem,
 obtained there from the cost of a mark and here from the phase of a
 segment with no apparatus at all.
 
-\hypertarget{the-ordering-holonomy-and-the-conservation-law}{%
-\subsection{3. The ordering holonomy and the conservation
-law}\label{the-ordering-holonomy-and-the-conservation-law}}
+\hypertarget{archimedes-exhaustion-read-through-hbar}{%
+\subsubsection{\texorpdfstring{Archimedes' exhaustion, read through
+\(\hbar\)}{Archimedes' exhaustion, read through \textbackslash hbar}}\label{archimedes-exhaustion-read-through-hbar}}
+
+Archimedes squares the parabola by exhaustion. In the segment cut off by
+a chord he inscribes the triangle whose third vertex is ``the vertex of
+the segment'', the point of the arc where the tangent is parallel to the
+chord. That leaves two smaller segments, and he inscribes a triangle in
+each; every round's triangles total a quarter of the round before.
+Proposition 23 sums the series: for areas \(A,B,C,\dots,Z\), each four
+times the next, \(A+B+C+\dots+Z+\frac13Z=\frac43A\). Proposition 24
+concludes that ``every segment bounded by a parabola and a chord
+\ldots{} is equal to four-thirds of the triangle which has the same base
+as the segment and equal height''
+(\href{../docs/classics/Archimedes_QuadratureParabola_Heath1897_OCR.md}{companion},
+passage).
+
+On the Galileo parabola, traced in time, the vertex of the segment over
+a step is the midpoint in time. There the velocity,
+\(F(t_{j-1}+t_j)/2m\), equals the slope of the chord. So Archimedes'
+construction is Newton's refinement by halving. After \(k\) rounds, the
+inscribed polygon of Theorem 1 is Archimedes' inscribed polygon after
+\(k\) rounds, and the triangles he adds in a round are exactly the
+triangles that Corollary 2 removes. Newton measures the same figures
+from the other side: by Lemma XI and its corollaries the segment is one
+third of the tangent triangle and the area between tangent and arc two
+thirds, so \(A_j=2S_j\) and the tangent triangle is \(3S_j\).
+
+Theorem 1 and Corollary 2 read Archimedes' series as phases. Over one
+step, with \(T_j=\frac34S_j=vF\tau_j^3/16m\) the first inscribed
+triangle,
+
+\[\theta_{\rm step}=\frac{F}{2v\hbar}S_j=\frac{F}{2v\hbar}\cdot\frac43T_j
+=\frac{F}{2v\hbar}\Bigl(T_j+\frac{T_j}4+\frac{T_j}{16}+\cdots\Bigr).\]
+
+The first round of halving removes the phase \((F/2v\hbar)T_j\), the
+next a quarter of that, and so on. Proposition 23 is the statement that
+the phases removed by all the rounds add up to the step's whole phase,
+the quantum difference between Newton's polygon and the parabola.
+Classically, exhaustion shows that the segments left after \(k\) rounds,
+a fraction \(4^{-k}\) of the whole, can be made smaller than any given
+area. Quantum mechanically the same leftovers are phases, one per
+remaining segment, and \(\hbar\) sets two scales. Each segment's phase
+falls below one radian once the steps are shorter than \(\tau_\hbar\);
+their total, which each round divides by four, falls below one radian
+once \(4^k\) exceeds \((\tau/\tau_\hbar)^3\). Up to that round
+Archimedes' triangles are phases of order one or more, and after it the
+rest of his series is below a radian.
+
+\hypertarget{the-ordering-holonomy-and-a-partition-identity}{%
+\subsection{3. The ordering holonomy and a partition
+identity}\label{the-ordering-holonomy-and-a-partition-identity}}
 
 Keep the curve's step operators \(V_j=e^{i\varphi_j}D(\delta z_j)\) and
 compose them in another order. For a permutation \(\sigma\), write
@@ -386,22 +435,34 @@ histories. The wave's own phase, which advances \(\pi\) per interval,
 differs by \(2\theta_N\).
 
 The determinism of Prop. XII is untouched by this, and it makes Newton's
-version stronger than the quantum one in one respect: his fit is a
-determinate property of a single corpuscle, so on his terms the polygon
-and the curve would be told apart on one corpuscle at the next surface,
-where the quantum phase is visible only in a superposition. What the
-fits supply is a phase whose rate is proportional to momentum, and a
-count of such a phase is order-sensitive in the parallelogram sense: a
-displacement \(d\) followed by a kick \(J\) counts \(p\,d\), the kick
-first counts \((p+J)\,d\), and the difference \(Jd\) is the area of
-Corollary I's parallelogram. So a per-colour form of the premise that
-carries \(h>0\) in the squeeze-immune form is present in Newton's
-optics, with \(\Lambda p\) a positive refraction invariant. Two limits
-remain. Prop. XV's rule for oblique emergence, a product of two secants,
-is more complicated than a count of intervals along the path, so
-Proposition 5's extension is ours. And \(\Lambda p\) is a per-colour
-constant in Newton's system: universality across colours is what
-Planck's constant adds.
+version different in kind from the quantum one. His fit is a determinate
+periodic property of a single corpuscle, so on his terms the polygon and
+the curve would be told apart on one corpuscle at the next surface; the
+quantum phase is relative between two histories and shows only in a
+superposition. Newton had no superposition of amplitudes to state the
+quantum version with. Imaginary quantities enter his algebra only as
+``impossible'' roots of equations, and his mechanism for the fits, in
+Query 29, is that the rays ``stir up Vibrations in what they act upon,
+which Vibrations being swifter than the Rays, overtake them
+successively, and agitate them so as by turns to increase and decrease
+their Velocities, and thereby put them into those Fits''
+(\href{../docs/classics/Newton_Opticks_1730_fits_and_queries.md}{companion},
+passage): a wave that disposes the corpuscle, with no adding of
+amplitudes. Addition of amplitudes arrives with Young's principle of
+interference (\href{https://doi.org/10.1098/rstl.1802.0004}{Phil. Trans.
+\textbf{92}, 12, 1802}, metadata). What the fits supply is a phase whose
+rate is proportional to momentum, and a count of such a phase is
+order-sensitive in the parallelogram sense: a displacement \(d\)
+followed by a kick \(J\) counts \(p\,d\), the kick first counts
+\((p+J)\,d\), and the difference \(Jd\) is the area of Corollary I's
+parallelogram. So a per-colour form of the premise that carries \(h>0\)
+in the squeeze-immune form is present in Newton's optics, with
+\(\Lambda p\) a positive refraction invariant. Two limits remain. Prop.
+XV's rule for oblique emergence, a product of two secants, is more
+complicated than a count of intervals along the path, so Proposition 5's
+extension is ours. And \(\Lambda p\) is a per-colour constant in
+Newton's system: universality across colours is what Planck's constant
+adds.
 
 \hypertarget{every-force-law-and-one-functional-for-both-legs}{%
 \subsection{6. Every force law, and one functional for both
