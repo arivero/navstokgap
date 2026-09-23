@@ -27,10 +27,12 @@ is paused with its map intact.
 - Newton's inscribed polygon differs from the parabola by the pure phase
   $F^2\sum_j\tau_j^3/(24m\hbar)$, the parabolic segments of the chords
   converted by $\hbar$, whatever the state of the body.
-- Newton's *Opticks* holds a measured least length, a posited least
-  impulse and a disposition whose period times momentum is invariant under
-  refraction; its Prop. XII denies the premise that would join them to a
-  floor.
+- Newton's *Opticks* holds a measured least length, corpuscles that carry
+  an impulse and a disposition whose period times momentum is invariant
+  under refraction; what it prints entails the negation of the premise
+  that would join them to a floor.
+- Archimedes' exhaustion of the parabola, read through $\hbar$, removes a
+  phase at each round; the Galileo area is Democritus's third.
 
 [STATE](research/STATE.md) lists every result with the note that proves it.
 

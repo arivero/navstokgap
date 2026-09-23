@@ -28,9 +28,9 @@ recoil. A pointer registers a displacement only through the spread of its
 conjugate momentum, and that momentum is the impulse the body receives.
 This is M3 in its universal form: a record of the sagitta must leave the
 delivered impulse undetermined by at least $8\hbar\arcsin(1-2\epsilon)/s$
-in total. The correlated three-mark protocol of Proposition D attains the
-bound within a factor $\sqrt2\,z_{1-\epsilon}/\arcsin(1-2\epsilon)$, uniformly in
-its squeezing (Section 4). Exploratory; no ledger promotion.
+in total. The three-mark protocol of Proposition D, with the best
+Gaussian probe, comes within a factor $z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of the
+bound at every recoil, about $1.47$ at five per cent error (Section 4). Exploratory; no ledger promotion.
 
 ## 1. Setting
 
@@ -209,15 +209,27 @@ $\tau\Delta E=32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$,
 
 $$\Delta_2|c_2|=z_{1-\epsilon}\,\hbar\,\sqrt{\frac{2}{1+\rho}},$$
 
-between $z\hbar$ and $\sqrt2z\hbar$ for every $\rho\in[0,1)$. Theorem R
-asks for $\hbar\arcsin(1-2\epsilon)$, so the protocol sits within the factor
-$\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of the bound at fixed $\epsilon$. The
-factor grows without bound as $\epsilon\to0$, since $z_{1-\epsilon}$ does while
-$\arcsin(1-2\epsilon)$ stays below $\pi/2$; whether some non-Gaussian protocol
-meets the bound up to a constant at every $\epsilon$ is open here. It is about $2.1$ at five per
-cent error, however strongly it is squeezed. The recoil-weighted sagitta
-is the right universal resource: squeezing moves the protocol along it and
-never below it.
+between $z\hbar$ and $\sqrt2z\hbar$ for every $\rho\in[0,1)$. The balance
+$2\delta_2=\tau\Delta_2/2m$ is the one that is optimal at $\rho=0$, and at fixed
+$\rho$ it wastes the factor $\sqrt{2/(1+\rho)}$. The best probe at a fixed
+recoil does better. The statistic's noise is
+$-(\alpha\hat Q_2+\beta\hat P_2)$ with $\alpha=2/\lambda_2$, and
+$[\alpha\hat Q_2+\beta\hat P_2,\hat P_2]=i\hbar\alpha$, so Robertson gives
+$\Delta(\alpha\hat Q_2+\beta\hat P_2)\ge\hbar\alpha/(2\Delta\hat P_2)=\hbar/\Delta_2$,
+attained by a pure Gaussian state of minimum uncertainty for that pair.
+The protocol then decides once $s\Delta_2\ge4z_{1-\epsilon}\hbar$, that is
+$\Delta_2|c_2|=z\hbar$, for every recoil. Theorem R asks for
+$\hbar\arcsin(1-2\epsilon)$, so the best Gaussian three-mark protocol sits within
+the factor $z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of the bound, about $1.47$ at five
+per cent error, and uncorrelated probes within $\sqrt2$ times that. The
+bound in question is Theorem R with the line through the end marks; its
+constant-force form (4), with the line of best uniform approximation,
+charges the end marks too, and their unbounded recoil makes its left side
+infinite. The factor grows without bound as $\epsilon\to0$, since
+$z_{1-\epsilon}$ does while $\arcsin(1-2\epsilon)$ stays below $\pi/2$; whether some
+non-Gaussian protocol meets the bound up to a constant at every $\epsilon$ is
+open here. The recoil-weighted sagitta is the right universal resource:
+squeezing moves the protocol along it and never below it.
 
 ## 5. What this changes
 

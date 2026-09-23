@@ -37,7 +37,7 @@ results and the notes that prove them:
 | Inscribed polygon differs from the parabola by the phase $F^2\sum\tau_j^3/24m\hbar$; insertion law; ordering holonomy | Thm 7 | [polygon-lift](../notes/polygon-lift-phase.md) |
 | Every force law: one functional $\mathcal K_\tau$, phase $\mathcal K/\hbar$, sharp deflection $\mathcal K/\kappa$ | Thm 8 | polygon-lift §6 |
 | Unmarked preparations: $J L+s P\ge\hbar\arcsin(1-2\epsilon)$, every instrument | §10 | [probabilistic](../notes/planck-gap-probabilistic.md) |
-| *Opticks*: measured $\Lambda$, posited $p$, $\Lambda p$ invariant under refraction (II.iii Props. X, XVII); Newton's Prop. XII denies M3 | §§7--8 | [mark-floor](../notes/newton-mark-floor.md), polygon-lift §5 |
+| *Opticks*: measured $\Lambda$, corpuscular $p$ (a reading), $\Lambda p$ invariant under refraction (II.iii Props. X, XVII); what Newton printed entails the negation of M3 | §§7--8 | [mark-floor](../notes/newton-mark-floor.md), polygon-lift §5 |
 | The ladder: arrow, then Galileo; the Section I scholium's Euclid-X objection answered | Thm 9, §9 | paper §9, [arrow and sling](../notes/arrow-not-sling.md) |
 
 The premise that carries $h>0$, in its universal form: a record costs

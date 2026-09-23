@@ -4,32 +4,39 @@
 sagitta and the area between the inertial tangent and the curve go to
 zero, keeping their ratio to the time. Once the comparison must be
 *recorded*, it has a floor. For every protocol of marks, made by any
-instruments at any times, deciding at error probability $\epsilon$ between
-free motion and a constant force $F$ over a duration $\tau$, whatever the
-body's initial state under each hypothesis, requires
+instruments at any times, a test that decides at error probability
+$\epsilon$ between free motion and a constant force $F$ over a duration
+$\tau$, and must do so whatever the body's initial state, the state under
+the force being allowed to differ by an unknown displacement, requires
 
 $$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ \ge\ \hbar\arcsin(1-2\epsilon),
 \qquad s=\frac{F\tau^2}{2m},\quad J=F\tau,$$
 
-where $\hat D_j$ and $\hat X_j$ are the momentum and position disturbances
-of mark $j$. Newton's sagitta is paired with the impulse a record leaves
-undetermined, and his impulse with the displacement. For marks with
-uncorrelated Gaussian probes the floor takes the sharp form
-$\tau\Delta E=F^2\tau^3/2m\ge24z_{1-\epsilon}^2\hbar$, about $65\hbar$ at
-five per cent error, because a mark's error and the impulse it delivers
-are canonically conjugate; insertion of marks finer than
-$\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ then records free motion
-only. Correlated and grid-state probes lower that form, and the
-disturbance bound holds for them. The part of the signal that no
-preparation of the body can move is a phase: Newton's polygon inscribed in the
-parabola agrees with it classically at every vertex and differs quantum
-mechanically by $F^2\sum_j\tau_j^3/(24m\hbar)$, the parabolic segments of
-the chords times $F/2v\hbar$. On the historical side, Newton's *Opticks*
-contains a measured least length, the $1/89000$th part of an inch, a
-posited least impulse, and a disposition whose period times the
-corpuscle's momentum is invariant under refraction. The proposition that
-would join them to a floor is that a record leaves an undetermined
-impulse, and Newton asserted its negation in print.
+where $\Delta(\hat D_j)$ and $\Delta(\hat X_j)$ are the spreads of the
+momentum and position disturbances of mark $j$ in the states the marks
+receive. Newton's sagitta is paired with the impulse a record leaves
+undetermined, and his impulse with the displacement. A protocol that
+knows the body's preparation escapes the floor, and pays instead in the
+body's spread along the way. For non-adaptive marks with uncorrelated
+Gaussian probes, read by tests invariant under the unknown initial
+position and velocity, the floor takes the sharp form
+$\tau\Delta E=F^2\tau^3/2m\ge24z_{1-\epsilon}^2\hbar$, about $65\hbar$ at five
+per cent error, because a mark's error and the impulse it delivers are
+canonically conjugate; a window of marks shorter than
+$\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, used by itself, cannot tell the
+force from free motion. Correlated and grid-state probes lower that
+form, and the disturbance bound holds for them. The comparison also
+carries a quantity that no preparation of the body can move, a phase:
+Newton's polygon inscribed in the parabola agrees with it classically at
+every vertex and differs quantum mechanically by
+$F^2\sum_j\tau_j^3/(24m\hbar)$, the parabolic segments of the chords times
+$F/2v\hbar$, so that each round of Archimedes' exhaustion removes a phase.
+On the historical side, Newton's *Opticks* contains a measured least
+length, the $1/89000$th part of an inch, corpuscles that carry an
+impulse, and a disposition whose period times the corpuscle's momentum is
+invariant under refraction. The proposition that would join them to a
+floor is that a record leaves an undetermined impulse, and what Newton
+printed entails its negation.
 
 Draft, 2026-09-17; revised 2026-09-23. Synthesis of the
 [mark-floor](newton-mark-floor.md),
@@ -41,11 +48,12 @@ Draft, 2026-09-17; revised 2026-09-23. Synthesis of the
 [disturbance](record-costs-disturbance.md),
 [path-length](record-distance-path-length.md) and
 [polygon-lift](polygon-lift-phase.md) notes, which hold the proofs in
-full. An adversarial review of the recoil, additive-noise and disturbance
-notes on 2026-09-23 found no false result and three proof gaps, now
-repaired. The revision of 2026-09-22 restated two floors: the Gaussian floor
-needs uncorrelated Gaussian probes, and the aperture floor takes its area
-form only at the balanced aperture. Two obligations remain before
+full. An adversarial review in three batches on 2026-09-23, covering
+those notes and this paper, found no false result; its proof gaps,
+overclaims, historical corrections and missing prior art are repaired
+here and in the notes. The revision of 2026-09-22 restated two floors:
+the Gaussian floor needs uncorrelated Gaussian probes, and the aperture
+floor takes its area form only at the balanced aperture. Two obligations remain before
 submission and are stated in §11. Exploratory; no ledger promotion.
 
 ## 1. The question
@@ -60,9 +68,15 @@ $$A=\frac{vF\tau^3}{6m},\qquad s(\tau)=\frac{F\tau^2}{2m},\qquad
 
 The sagitta $s$, the area $A$ and the product $\tau\Delta E$ all scale as
 powers of $\tau$ and vanish together. Newton's Lemma X makes the first
-displacement quadratic in the time; Lemma XI, Corollaries 4 and 5, make
-the curved segment one third of the tangent triangle with both cubic in
-the time; Proposition VI reads the force off the limit $2ms/\tau^2$; and
+displacement quadratic in the time. Lemma XI (Corollary 3 of the first
+edition) makes the area between tangent and arc two thirds of the tangent
+triangle and the segment between chord and arc one third, "ex natura
+Parabolæ", both cubic in the time; the area $A$ is the first of these.
+It is also Democritus's third: the sagitta grows as the square of the
+time as a cone's section grows as the square of the height, so
+$A=\frac13v\tau s$, one third of the rectangle, as the cone is one third of
+its cylinder (§9). Proposition VI reads the force off the limit
+$2ms/\tau^2$; and
 Proposition I builds an orbit as a polygon struck by impulses at its
 vertices, the number of vertices "augmented in infinitum". The construction
 is designed so that the quantities in (1) disappear and their ratios
@@ -82,9 +96,10 @@ bound on disturbance, paired with Newton's sagitta and impulse (§5), and
 a phase that no preparation of the body can move carries the same quantity through
 Newton's inscribed polygon (§6). Newton's optics supplies both factors of
 $\kappa$, a phase whose rate is proportional to momentum, and the
-negation of the premise that joins them (§§7--8). Newton also attempted
-a preface founded on the ancients, and the ancient arguments that bear on
-his own method are the ones he passed over; stated as premises about
+premises from which the negation of the premise that joins them follows
+(§§7--8). Newton also drafted classical scholia founded on the ancients,
+and the ancient arguments that bear on his own method are the ones he
+passed over; stated as premises about
 records they generate a hierarchy whose first rung is Zeno's arrow and
 whose second is the comparison above (§9).
 
@@ -98,7 +113,7 @@ $2m\,s(\tau_j)/\tau_j^2=F$ exactly at every step.
 
 The proof is immediate from (1). Berkeley's objection, that evanescent
 increments are "neither finite Quantities nor Quantities infinitely
-small, nor yet nothing", is answered inside the geometry by the limit
+small, nor yet nothing", is met inside the geometry by the limit
 ratio, which is what Newton's closing Scholium to Book I Section I
 provides. A floor must therefore come from the act of marking the curve,
 and the reading of "inserting a point" used here is physical: a point of
@@ -124,14 +139,17 @@ $$y(t)=y_0+v_0t+\theta P(t)+\frac1m\sum_j\iota_j(t-t_j)_+,\qquad
 P(t)=\frac{Ft^2}{2m},$$
 
 with $\theta=0$ under the inertial hypothesis and $\theta=1$ under the
-falling one, and $y_0,v_0$ unknown. Tests are invariant under the two
-unknowns, so the statistic is $u^{\mathsf T}R$ with $\sum_iu_i=0$ and
-$\sum_iu_it_i=0$, and the optimal invariant test has error probability
-$\Phi(-d/2)$ with $d^2=\sup(u^{\mathsf T}P)^2/(u^{\mathsf T}\Sigma u)$
-over such $u$.
+falling one, and $y_0,v_0$ unknown. The marks are fixed in advance, and
+tests are invariant under the two unknowns, which is minimax for this
+location family by the Hunt--Stein theorem (Lehmann and Romano,
+*Testing Statistical Hypotheses*); the statistic is $u^{\mathsf T}R$ with
+$\sum_iu_i=0$ and $\sum_iu_it_i=0$, and the optimal invariant test has
+error probability $\Phi(-d/2)$ with
+$d^2=\sup(u^{\mathsf T}P)^2/(u^{\mathsf T}\Sigma u)$ over such $u$.
 
-**Theorem 2.** For every protocol satisfying the mark trade-off with
-constant $\kappa$,
+**Theorem 2.** For every non-adaptive protocol satisfying the mark
+trade-off with constant $\kappa$, read by tests invariant under the
+unknown initial position and velocity,
 
 $$d^2\ \le\ \frac{F^2\tau^3}{24\,m\kappa},$$
 
@@ -191,23 +209,37 @@ equality; and make the end marks sharp, which costs nothing since
 $S=T=0$ there. Every inequality then becomes an equality in the
 limit. $\square$
 
-Three features of the proof carry the paper's claim to universality. The
-certificate $u$ ranges over all invariant tests, so no monitoring scheme
-is privileged. The function $T$ encodes the whole protocol in one
+Three features of the proof carry the claim that the bound holds for
+every protocol of the model. The certificate $u$ ranges over all
+invariant tests, so no monitoring scheme is privileged. The function $T$ encodes the whole protocol in one
 object, and the bound depends on it only through the Dirichlet energy
 $E$, which cancels. And the exponent $3$ on $\tau$ comes from the
 Poincaré constant of the interval, $\tau^3/12$, which is where the
-combination in (1) originates.
+combination in (1) originates. The sharp constant is approached, never
+attained, by dense protocols whose end marks are sharp, with a recoil
+that no invariant statistic sees.
+
+**The floor rests on invariance.** The body's initial operators enter
+every reading as $\hat y_0+\hat p_0t_j/m$ and cancel from every invariant
+statistic, so the body's state plays no part in Theorem 2. A protocol
+that knows the preparation escapes the floor even with Gaussian states: a
+contractive Gaussian state focused at time $\tau$ and one sharp final
+mark decide at every force, which is Yuen's protocol (PRL **51**, 719,
+1983). The boundary is knowledge of the preparation, and §10 prices the
+preparation route by the body's spread along the way.
 
 **Corollary 3 (insertion).** Marks inside a window of duration $\tau'$,
 used by themselves, record the force only if
-$F^2\tau'^3\ge96z_{1-\epsilon}^2m\kappa$. So insertion stops at
+$F^2\tau'^3\ge96z_{1-\epsilon}^2m\kappa$. So a window shorter than
 
 $$\tau_*=\left(\frac{96\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3},$$
 
-and finer marks are consistent with free motion at the stated
-confidence. Newton's polygon may be refined past $\tau/\tau_*$ vertices,
-and its impulses remain in the geometry, though no record exhibits them.
+used by itself, is consistent with free motion at the stated confidence.
+Refinement continues below $\tau_*$, and the sharp protocol of Theorem 2
+needs marks far denser than that; what stops is local exhibition of the
+force. Newton's polygon may be refined past $\tau/\tau_*$ vertices, and
+its impulses remain in the geometry, though no record confined to one
+such window exhibits them.
 
 **A worst-case counterpart.** If the marks instead confine position and
 impulse to intervals with certainty, the same three steps run with a
@@ -256,9 +288,11 @@ $\kappa=0$ and no floor; this is the exact point at which classical
 record models differ.
 
 For Gaussian probe states whose position and momentum are uncorrelated,
-and the linear dynamics of the comparison, the Wigner function is a
-probability density evolving classically, so the statistical model of
-§3 reproduces the quantum experiment exactly. With Theorem 4,
+a fresh probe for each mark, and the linear dynamics of the comparison,
+the Wigner function is a probability density evolving classically, so
+the statistical model of §3 reproduces the quantum experiment exactly for
+every invariant statistic; the body's own state cancels from those and
+need not be Gaussian. With Theorem 4,
 
 $$\tau\Delta E\ \ge\ 24\,z_{1-\epsilon}^2\,\hbar,\qquad
 \tau_*=\left(\frac{48\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3}, \tag{2}$$
@@ -283,8 +317,10 @@ with the test $R_1-2R_2+R_3$ come within a factor $4/3$, since the outer marks' 
 test and the middle mark's noise $-2\xi_2+(\tau/2m)\iota_2$ is one
 quadrature of its probe: they decide once
 $\tau\Delta E\ge32z^2\hbar\sqrt{(1-\rho)/(1+\rho)}$, at every force as
-$\rho\to1$. This is the back-action evasion of Yuen's contractive states
-(PRL **51**, 719, 1983). The proofs are in the
+$\rho\to1$. This is the mechanism of Yuen's contractive states (PRL
+**51**, 719, 1983), which correlate the body's position and momentum,
+applied to the meter, as in the back-action-evading measurements of
+Braginsky and Khalili. The proofs are in the
 [mark-cost note](mark-cost-and-statistical-floor.md), Theorem C and
 Proposition D.
 
@@ -322,9 +358,13 @@ the body receives. Mandelstam--Tamm and the triangle inequality over the
 probes finish it, and running the same chain with the Bures angle in
 place of total variation gives the constant $\arcsin(1-2\epsilon)$, the sharp
 single-shot one ([path-length note](record-distance-path-length.md),
-Theorem P). At fixed $\epsilon$ the correlated three-mark protocol reaches
-(4) within a factor $\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)$, about $2.1$ at
-five per cent error, at every squeezing. The
+Theorem P). With sharp end marks the minimum over lines is the line
+through them, and the three-mark protocol with the best Gaussian middle
+probe, whose statistic then has spread exactly $\hbar/\Delta_2$, comes within
+a factor $z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of that bound at every recoil, about
+$1.47$ at five per cent error; uncorrelated probes come within $\sqrt2$
+times that. The constant-force form (4) charges the end marks as well, and
+their unbounded recoil makes its left side infinite. The
 proofs, the grid construction and the tightness computation are in the
 [recoil note](record-costs-recoil.md). It is the recoil clause of M3,
 and Theorem 6 completes it.
@@ -420,6 +460,34 @@ splitting of the propagator, exact for a linear potential up to this
 c-number; what is new is its reading in Lemma XI's areas and Archimedes'
 segments.
 
+**Archimedes' exhaustion, read through $\hbar$.** Archimedes squares the
+parabola by inscribing, in the segment cut off by a chord, the triangle
+whose apex is "the vertex of the segment", where the tangent is parallel
+to the chord; the two segments left over receive their own triangles,
+each round totalling a quarter of the one before, and his Proposition 23
+sums the series, $A+B+C+\dots+Z+\frac13Z=\frac43A$, so that the segment is
+four thirds of its first triangle (Proposition 24). On the Galileo
+parabola traced in time the vertex of a step's segment is its midpoint in
+time, where the velocity equals the chord's slope, so his construction is
+Newton's refinement by halving, and the triangles he adds are those
+Theorem 7 removes. With $T_j=\frac34S_j$ the first triangle,
+
+$$\theta_{\rm step}=\frac{F}{2v\hbar}\cdot\frac43T_j
+=\frac{F}{2v\hbar}\Bigl(T_j+\frac{T_j}4+\frac{T_j}{16}+\cdots\Bigr),$$
+
+and Proposition 23 becomes the statement that the phases removed by all
+the rounds add up to the phase between polygon and parabola. Exhaustion
+shows classically that the leftover segments, $4^{-k}$ of the whole after
+$k$ rounds, fall below any given area. With $\hbar$ they are phases, and two
+scales appear: each segment's phase falls below a radian once the steps
+are shorter than $\tau_\hbar=(24m\hbar/F^2)^{1/3}$, and their total once $4^k$
+exceeds $(\tau/\tau_\hbar)^3$. The method began with Democritus's cone,
+which Eudoxus proved to be a third of its cylinder (§9), and the Galileo
+area is the same third, $A=\frac13v\tau s$. The two figures differ in
+what $\hbar$ does to them: the cone is static, its sections can be marked
+without disturbing it, and Theorem 9(iii) finds no floor; the parabola is
+traced by a motion, and its exhaustion carries phases.
+
 **Theorem 8 (every force law).** For a force history $f$ on an interval
 of duration $\tau$, let $\mathcal K_\tau[f]=\int\frac12m(\dot y_f-\dot y_{\rm chord})^2dt
 =\frac1{2m}\iint G_\tau ff$ be the kinetic action of the motion relative
@@ -438,8 +506,9 @@ times $F/2v$.
 
 ## 7. Both factors are in the *Opticks*
 
-Newton's optics supplies the two spreads whose product is $\kappa$, in
-the form of two least quantities of the probe.
+Newton's optics supplies, on this paper's reading, the two spreads whose
+product is $\kappa$, in the form of two quantities of the probe; the
+identifications below are readings, and each says what it rests on.
 
 **A least length, measured.** Book II Part III defines the interval of
 the fits as "the space it passes between every return and the next
@@ -449,20 +518,24 @@ into air, "the Intervals of their Fits of easy Reflexion are the
 $1/89000$th part of an Inch", that is about $0.285\,\mu\mathrm{m}$. A
 datum obtained through the fits repeats with that period, so it locates
 the corpuscle no better; Newton's rings are a gauge of exactly this kind.
-This is $\Delta\hat Q_A$.
+We read it as $\Delta\hat Q_A$. The reading is an analogy: the interval is a
+period along the ray, a longitudinal length, while $\Delta\hat Q_A$ is the
+spread of a transverse mark's pointer.
 
-**A least impulse, posited.** Query 29 asks whether the rays of light are
-"very small Bodies emitted from shining Substances", which gives each a
-transverse momentum scale. Newton has no way to measure it. This is
-$\Delta\hat P_A$.
+**An impulse, inferred.** Query 29 asks whether the rays of light are
+"very small Bodies emitted from shining Substances". A body carries an
+impulse, and we read its scale as $\Delta\hat P_A$; Query 29 itself speaks
+of sizes, and it is a query, so the impulse scale is our inference. Newton
+has no way to measure it.
 
 **Colour dependence, measured.** Observation 13 of Book II Part I reports
 the ratio of the red to the violet interval as "greater than as 3 to 2,
 and less than as 13 to 8", and "By the most of my Observations it was as
 14 to 9". Query 29 makes the violet corpuscles the least and the red the
-biggest. The product $\Delta\hat Q_A\Delta\hat P_A$ is therefore colour
-dependent on Newton-age evidence, and its universality across the
-spectrum is what Planck's constant later supplies.
+biggest. On Newton-age evidence the product is therefore colour
+dependent, and it grows toward the red, since both the interval and the
+corpuscle's size do; its constancy across the spectrum is what Planck's
+constant later supplies.
 
 **Inflexion.** Query 1 asks whether bodies "act upon Light at a distance,
 and by their action bend its Rays", most strongly at the least distance,
@@ -472,30 +545,42 @@ narrowed to improve it.
 **The interval times the momentum is a refraction invariant.** Book II
 Part III Prop. XVII makes the intervals in two mediums "as the Sine of
 Incidence to the Sine of Refraction", from Observation 10 of Part I, and
-Prop. X takes light to be "swifter in Bodies than in Vacuo, in the
-proportion of the Sines". Together they make $\Lambda v$, and so
+Prop. X states its result on the hypothesis that light is "swifter in
+Bodies than in Vacuo, in the proportion of the Sines", which Newton holds
+categorically in the *Principia*, Book I Section XIV. Together they make
+$\Lambda v$, and so
 $\Lambda p$, the same in every medium for each colour; that Newton's
 interval varies inversely with the corpuscle's speed, as de Broglie's
 wavelength does, is an old observation (Sakkopoulos, *Eur. J. Phys.*
-**9**, 123, 1988). A fit counted per interval along the path therefore
+**9**, 123, 1988, metadata). A fit counted per interval along the path therefore
 counts the Maupertuis action
 $\int p\cdot dq$ in units of $\Lambda p$, and the inscribed polygon and the
 parabola of Theorem 7 differ by $(F/v)\sum_jA_j/(2\Lambda p)$ fits, with
 $A_j$ Lemma XI's tangent areas. Since the fit at arrival decides
 reflection or transmission (Prop. XII), the two are optically different
-corpuscles on Newton's own terms once that count reaches half an interval,
-told apart on a single corpuscle, where the quantum phase needs a
-superposition. Counting $2\pi$ per interval, a full return of the
+corpuscles on Newton's own terms once that count reaches half an interval:
+on this reading his determinate fit would tell them apart on a single
+corpuscle, where the quantum phase is relative between two histories and
+shows only in a superposition. The two are different in kind. Newton had
+no superposition of amplitudes: imaginary quantities enter his algebra
+only as "impossible" roots, and his mechanism for the fits, in Query 29,
+is that the rays "stir up Vibrations in what they act upon, which
+Vibrations being swifter than the Rays, overtake them successively, and
+agitate them so as by turns to increase and decrease their Velocities,
+and thereby put them into those Fits", a wave that disposes the
+corpuscle, with no adding of amplitudes. Addition of amplitudes arrives
+with Young's principle of interference (*Phil. Trans.* **92**, 12, 1802).
+Counting $2\pi$ per interval, a full return of the
 disposition, the fits phase is $4\theta_N$ at $\Lambda=\lambda/2$; the wave's
 own phase, which advances $\pi$ per interval, differs by $2\theta_N$.
 Extending Props. X and XVII to a continuously varying speed is ours, and
 Prop. XV's oblique rule is more complicated than a count along the path.
 
-All eight passages are held verbatim with line anchors in the
+These passages, with Prop. XI below, are held verbatim with line anchors in the
 [source companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md),
 from the fourth edition of 1730.
 
-## 8. The junction, and the proposition Newton denied
+## 8. The junction, and the proposition Newton's commitments exclude
 
 Theorems 4 to 6 say what the missing premise is. In the mark-floor note
 it was stated as M3, that a mark fixing the position within $\delta$ leaves the
@@ -514,19 +599,21 @@ undetermined, a record of the impulse leaves its displacement
 undetermined, and the exchange rate is $\hbar$.
 With M3, §§3--4 give the floor and the insertion mesh from Newton's own
 materials, with $\kappa=\Lambda p$ in place of $\hbar/2$; the
-identification $\Lambda=\lambda/2$, $p=h/\lambda$ makes $\Lambda p=h/2$,
-which differs from $\hbar/2$ by $\pi$.
+identification $\Lambda=\lambda/2$, $p=h/\lambda$ makes $\Lambda p=h/2=\pi\hbar$,
+which differs from $\hbar/2$ by a factor $2\pi$.
 
-Newton denied M3 explicitly, in print.
-Proposition XII of Book II Part III states that every ray is "put into a
-certain transient Constitution or State, which in the progress of the Ray
-returns at equal Intervals, and disposes the Ray at every return to be
-easily transmitted". The disposition is a determinate periodic property
-carried by the ray, so its fate at a surface is fixed by its phase, and
-what a prior record fails to supply is knowledge rather than
-determination. On that reading a probe's position and momentum are both
-definite, later records can recover the impulse it delivered, $\kappa=0$,
-and the comparison has no floor. The countermodel is explicit: let the
+What Newton printed entails the negation of M3, though he nowhere states
+M3 or its negation. Proposition XII of Book II Part III states that
+every ray is "put into a certain transient Constitution or State, which
+in the progress of the Ray returns at equal Intervals, and disposes the
+Ray at every return to be easily transmitted". A determinate periodic
+disposition is not by itself the negation, since a wave's phase is
+determinate too. It becomes one when the disposition is carried by a
+corpuscle of Query 29 moving by ordinary deterministic mechanics: the
+ray's fate at a surface is then fixed by its phase, what a prior record
+fails to supply is, on this reading, knowledge of a definite state, both
+position and momentum are definite, later records can recover the
+impulse a mark delivered, $\kappa=0$, and the comparison has no floor. The countermodel is explicit: let the
 corpuscle travel freely after the mark to a screen at distance $D$, and
 two position records fix its transverse momentum to within
 $p(\delta+\delta_s)/D$, which vanishes as $D$ grows.
@@ -535,7 +622,7 @@ The historical claim is therefore narrow and checkable. Newton's optics
 contains both factors of the product that bounds the recorded
 comparison; his mathematics contains the comparison and takes it to zero;
 and the one proposition that would join them is an indeterminacy about
-the fits whose negation he asserted in print. The gap between the
+the fits whose negation follows from what he printed. The gap between the
 *Principia*'s vanishing sagitta and the *Opticks*' finite interval of
 fits follows from that single commitment, and the separation of the two
 books is incidental to it. No counterfactual about what Newton might have
@@ -550,8 +637,10 @@ momentum, with the refraction invariant $\Lambda p$ as its unit, and his
 determinism in Prop. XII does not touch it. A count of such a phase is
 order-sensitive in the parallelogram sense: a displacement $d$ then a kick
 $J$ counts $p\,d$, the kick first counts $(p+J)\,d$, and the difference is
-the parallelogram's area $Jd$. So a per-colour form of the quantum premise
-that squeezing cannot evade is present in the *Opticks*; what it lacks is
+the parallelogram's area $Jd$. The phase with a momentum-proportional
+rate is in the *Opticks*; the order-sensitivity is this paper's
+construction on it. So a per-colour form of the quantum premise that
+squeezing cannot evade can be read into the *Opticks*; what it lacks is
 the universality of $\Lambda p$ across colours.
 
 ## 9. Newton and the classics
@@ -570,28 +659,45 @@ new and unheard of in astronomy, *eandem vetustissimis Philosophis notam
 philosophers, naming Anaxagoras, Archelaus, Euripides and Pythagoras.
 That preface is the printed witness closest to the unpublished scholia,
 and the [source companion](../docs/classics/Gregory_AstronomiaeElementa_Praefatio_1702_OCR.md)
-holds its programmatic paragraph. The scholarship is Casini, "Newton: The
-Classical Scholia", *History of Science* **22** (1984), 1--46, and
-Mosley, "The Origins and Sources of Newton's Classical Scholia",
-*Erudition and the Republic of Letters* **9** (2024), 171--217, both
-verified at metadata level here and both still to be read.
+holds its programmatic paragraph. The founding study is McGuire and
+Rattansi, "Newton and the 'Pipes of Pan'",
+[*Notes Rec. R. Soc.* **21** (1966), 108--143](https://doi.org/10.1098/rsnr.1966.0014);
+the scholarship continues in Casini, "Newton: The Classical Scholia",
+*History of Science* **22** (1984), 1--46, and Mosley, "The Origins and
+Sources of Newton's Classical Scholia", *Erudition and the Republic of
+Letters* **9** (2024), 171--217; Schüller edited the scholia from Gregory's
+papers. All are verified at metadata level here and still to be read.
 
-So Newton did attempt a preface founded on the classics, and the attempt
-was doxographic. He sought ancient authority for a law he had already
+So Newton did draft a set of scholia founded on the classics, with
+Gregory's preface as their printed witness, and the attempt was
+doxographic. He sought ancient authority for a law he had already
 proved, and the authority he sought was for the *conclusions* of Book III.
 
-Book I has one scholium on method, closing Section I, and it does touch
-the ancient question, from the geometers' side. Newton prefers limits to
-the method of indivisibles, answers the objection that ultimate ratios
-would imply ultimate magnitudes, so that quantity would consist of
-indivisibles, *contra quam Euclides de incommensurabilibus, in libro
-decimo Elementorum, demonstravit*, and concludes *cave intelligas
-quantitates magnitudine determinatas, sed cogita semper diminuendas sine
-limite*: do not take them as quantities of determinate magnitude, but
-think of them as always diminishing without limit
-([Section I text](../docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md)).
-Euclid is cited against least magnitudes, and the physical dispute about
-the cut, with the atomists who held least parts, is left aside.
+Book I does carry two scholia that touch the ancient question, both from
+the geometers' side, and the first edition's Latin is held here
+([1687 witness](../docs/classics/Newton_Principia_1687_BookI_SectI_scholia_la_wikisource.md);
+English renderings ours). The scholium after Lemma XI continues the
+series of contact angles without end: between any two, a new series
+"inseri potest", can be inserted, "Neq; novit natura limitem", and nature
+knows no limit. The scholium closing Section I opens by saying that the
+lemmas were put first "ut effugerem tædium deducendi perplexas
+demonstrationes, more veterum Geometrarum, ad absurdum", to escape the
+tedium of the ancient geometers' reductio: the method of exhaustion that
+Archimedes credits to Eudoxus, who used it to prove that the cone is a
+third of its cylinder, a result Archimedes says Democritus had asserted
+first without proof (preface to *The Method*). Newton prefers limits to
+the method of indivisibles, "quoniam durior est indivisibilium
+Hypothesis", answers the objection that ultimate ratios would imply
+ultimate magnitudes, so that quantity would consist of indivisibles,
+"contra quam Euclides de incommensurabilibus, in libro decimo
+Elementorum, demonstravit", and closes "cave intelligas quantitates
+magnitudine determinatas, sed cogita semper diminuendas sine limite": do
+not take them as quantities of determinate magnitude, but think of them as
+always diminishing without limit. Euclid is cited against least
+magnitudes, the ancients' exhaustion is replaced by limits, and the
+physical dispute about the cut, with the atomists who held least parts,
+is left aside. §6 reads that exhaustion through $\hbar$: for a figure traced
+by a motion, each round of it removes a phase.
 
 ### The ancient arguments he passed over
 
@@ -744,6 +850,11 @@ $\delta$ at each of two heights separated by $\Delta h$, the taper
 $\vartheta$ gives $d^2=N\vartheta^2\Delta h^2/(2\delta^2)$, unbounded in
 $N$. $\square$
 
+The arrow's rung is attained by two marks: weights $(-1,1)$ at $0$ and
+$\tau$ make $T$ linear, so the Cauchy--Schwarz step is an equality, with the
+first mark balanced, $\delta_0=\Delta_0\tau/m$, and the last sharp. Newton's
+rung needs the dense limit of Theorem 2.
+
 The two dynamical cases share one invariant. If the signal is the $n$-th
 order departure $P$ with $P(0)=\dots=P^{(n-1)}(0)=0$, the quantity the
 theorem bounds below is
@@ -752,7 +863,8 @@ $$m\,\bigl(P^{(n)}\bigr)^2\,\tau^{2n-1}\ \gtrsim\ \kappa ,$$
 
 which has the dimensions of action for every $n$: at $n=1$ it is
 $mv^2\tau$, twice the kinetic energy times the duration, and at $n=2$ it
-is $F^2\tau^3/m$, twice $\tau\Delta E$. Newton's comparison is the second
+is $F^2\tau^3/m$, twice $\tau\Delta E$. The theorem covers $n=1$ and $n=2$;
+for higher $n$ the form is dimensional analysis. Newton's comparison is the second
 rung of a ladder whose first rung is Zeno's.
 
 ### Why the arrow and not the sling
@@ -774,10 +886,12 @@ is a straight line that would need no cause. The same object supports
 opposite accounts, and what separates them is which motion is taken to be
 free. Plutarch's next clause, that "each thing is governed by its natural
 motion unless it be diverted by something else", is as near as the passage
-comes, with natural motion still doing the work inertia later does. Newton
-had read him: the Classical Scholia name Plutarch among the ancients said
-to have known the doctrine of gravitation, so the sling was available in a
-text he was mining for authority while writing the propositions it models.
+comes, with natural motion still doing the work inertia later does. The
+Classical Scholia are reported to cite Plutarch's *De facie* among the
+ancients said to have known the doctrine of gravitation (Casini 1984;
+McGuire and Rattansi 1966; metadata, not read here), which would put the
+sling in a text Newton was mining for authority while writing the
+propositions it models; whether they cite this passage is open.
 
 Theorem 9 explains why the exception stayed isolated, and Aristotle supplies
 the other half of the reason. *De caelo* I.2 makes uniform circular motion
@@ -797,30 +911,37 @@ short of making a straight continuation free and a curved one costly.
 
 Indian sources do supply one whirled object, and use it for a third
 purpose again. The firebrand circle, *alātacakra*, appears in Vasubandhu
-(Pradhan 189.23--24) to argue that because contact with the parts is
+(Pradhan 189.23--24, cited from the GRETIL text and not yet held in a
+companion here) to argue that because contact with the parts is
 successive, the awareness of a whole is really of the parts, and at
 Pradhan 33.9 with *āśuvṛttyā*, by rapid action. That is an argument about
 sampling, and it is the ancient form of what Theorem 9 says about records:
-below the mesh a succession is indistinguishable from the continuous thing
-it mimics. The [companion note](arrow-not-sling.md) sets this out.
+within a window below the mesh a succession is indistinguishable from the
+continuous thing it mimics. The [companion note](arrow-not-sling.md) sets this out.
 
 ### What each ancient premise buys
 
-- **Zeno.** His conclusion holds of records: below
-  $\tau_{\rm arrow}=8z^2\kappa/(mv^2)$ every mark is consistent with
-  rest. Aristotle's diagnosis explains why, since a now carries no
-  record and every datum is a window.
+- **Zeno.** His conclusion holds of local records: marks confined to a
+  window shorter than $\tau_{\rm arrow}=8z^2\kappa/(mv^2)$, used by
+  themselves, are consistent with rest. Aristotle's diagnosis explains
+  why, since a now carries no record and every datum is a window.
 - **The Vaiśeṣika arrow and the chain of sounds.** These supply the
-  positive half the Greek material lacks. Theorem 9's ladder is their
-  statement made quantitative: the succession is real, each step carries a
-  bounded quantity to the next, and reading any one step costs $\kappa$.
-  The sound chain is the case where an ancient author asserts a finite
-  propagation time and argues it from an experiment, which is the premise
-  Newton's determinate fits deny for light.
-- **Vasubandhu.** His conclusion is what the theorem says about *records*
-  rather than about the world. Below the mesh every mark is consistent with
-  rest, so no recorded instant exhibits motion and travel is never
-  displayed, only inferred from enough instants together. The theorem
+  positive half the Greek material lacks. Theorem 9's ladder can be read
+  as their statement made quantitative, a reading, since the theorem
+  prices marks and is silent on whether motion is a succession: each step
+  carries a bounded quantity to the next, and reading any one step costs
+  $\kappa$. The sound chain is the case where an ancient author asserts a
+  finite propagation time and argues it from an experiment. Newton held
+  that light takes time too, "about seven or eight Minutes of an Hour in
+  passing from the Sun to the Earth" (*Opticks* II.iii Prop. XI); what
+  his corpuscle lacks is the chain, since the same body arrives carrying
+  its own disposition, where the Vaiśeṣika sound is a later member of a
+  generated series.
+- **Vasubandhu.** His conclusion is what the theorem says about local
+  *records* rather than about the world. Within a window below the mesh
+  the marks are consistent with rest, so no recorded instant exhibits
+  motion and travel is never displayed, only inferred from enough instants
+  together. The theorem
   declines his further step from the records to the world, and Theorem 9(i)
   measures exactly how many instants are needed.
 - **Epicurus.** His is the closest ancient statement to what the theorems
@@ -835,9 +956,12 @@ it mimics. The [companion note](arrow-not-sling.md) sets this out.
   A doctrine on which motion requires a permitting substance predicts
   nothing about the cost of observing it, which is the respect in which
   this entry sets a limit on how far the reconstruction reaches.
-- **Democritus and Chrysippus.** The dilemma about adjacent sections
-  dissolves with resolution alone, and case (iii) shows it needs no
-  action floor. Adjacent recorded sections are equal, and the inequality
+- **Democritus and Chrysippus.** Democritus's sections gave the first
+  result the method of exhaustion was built to prove, the cone as a third
+  of its cylinder, which Archimedes credits to him as asserted without
+  proof and to Eudoxus as proved; the Galileo area is the same third,
+  $A=\frac13v\tau s$. The dilemma about adjacent sections dissolves with
+  resolution alone, and case (iii) shows it needs no action floor. Adjacent recorded sections are equal, and the inequality
   of the bodies is recovered cumulatively, which is Chrysippus's answer
   given a definite sense. This corrects a heuristic recorded earlier in
   this programme, that the cone is the arrow rotated into Euclidean
@@ -849,12 +973,15 @@ it mimics. The [companion note](arrow-not-sling.md) sets this out.
   survive and the quantities of the geometry still diminish without
   limit, as the Section I scholium requires. What is bounded is the
   record, at the rate $\hbar$.
-- **The Mohists and Liu Hui.** They are right about records. Cutting
-  stops, and the endpoint is the mesh
-  $\tau_*=(96z^2m\kappa/F^2)^{1/3}$, which is Corollary 3.
+- **The Mohists and Liu Hui.** They are right about local records. A
+  window shorter than the mesh $\tau_*=(96z^2m\kappa/F^2)^{1/3}$ cannot
+  exhibit the force by itself, which is Corollary 3; cutting itself goes
+  on, and the sharp protocol of Theorem 2 needs marks far denser than
+  $\tau_*$. What stops is local exhibition, not division, so the Mohist
+  unhalvable endpoint is a reading the theorem does not give.
 - **Hui Shi.** He is right about geometry, which is Proposition 1: the
   halving never ends, and nothing in the figure resists it.
-- **Al-Nazzam.** The recorded trajectory below the mesh is his leap. The
+- **Al-Nazzam.** The local record below the mesh is his leap. The
   interval stays divisible, and the crossing is exhibited only in
   finitely many steps.
 - **The kalam time-atom.** Denied. The mesh depends on $F$, on $m$ and on
@@ -867,8 +994,10 @@ ancients for authority and found the wrong ancients, taking the
 doxography of gravitation while passing over the dispute about division
 that his own Lemmas turn on. And the premise that would have converted
 that dispute into a theorem, an indeterminacy in the least parts of
-light, is one the atomists supply in the form of a least part and one he
-denied in the single place where he had a measurement.
+light, is one the atomists approached through least parts, which the
+theorem replaces by a least action for records and no least magnitude,
+and one that what he printed about the fits excludes, in the single place
+where he had a measurement.
 
 ## 10. Unmarked preparations and prior art
 
@@ -922,34 +1051,55 @@ moment the force is paid in the smaller of the two lengths (path-length
 note, Theorem M).
 
 **Prior art.** The combination $F^2\tau^3\gtrsim m\hbar$ is the standard
-quantum limit for detecting a force on a free mass (Braginsky and
-Khalili, *Quantum Measurement*, 1992; the canonical statement is Caves,
-Thorne, Drever, Sandberg and Zimmermann, *Rev. Mod. Phys.* **52**, 341,
-1980), and its status has been disputed since Yuen's objection: Caves
-defended it (PRL **54**, 2465, 1985) and Ozawa exhibited a measurement
-breaking it for free-mass position (PRL **60**, 385, 1988). Theorem 4's
-coupling is von Neumann's (1932), its inequality Robertson's (1929) and
-its ancestor the Heisenberg microscope (1927); Bohr and Rosenfeld (1933)
-and Araki and Yanase (1960) set limits of this kind from field
-measurability and from conservation laws. That non-Gaussian preparations
-beat the limit, as the two-packet preparation above does, is stated as a
-principle by Giovannetti, Lloyd and Maccone (*Science* **306**, 1330,
-2004), and the correlated and grid probes of §§4--5 are Yuen's
-contractive states and the grid states of Gottesman, Kitaev and Preskill
-(PRA **64**, 012310, 2001). The ingredients of §§5--6 and §10 are
-standard: Ozawa's disturbance operators, Mandelstam--Tamm in the Bures
-angle (Uhlmann 1992; Anandan and Aharonov 1990), hybrid arguments
-(Bennett, Bernstein, Brassard and Vazirani 1997), Bures-angle speed limits
-for processes (Taddei et al. 2013), the position-spread form of force
-sensitivity (Tsang, Wiseman and Caves 2011), and symmetry-based
-information--disturbance bounds of Wigner--Araki--Yanase type. The
-contribution here is universality over protocols and instruments with
-explicit constants, the sharp constant of the Gaussian form, the
-disturbance form of Theorem 6, the split accounting of §10, the phase
-identities of §6 read in Newton's areas, and the identification of the
-premise. An adversarial review of the notes behind §§5, 6 and 10 on
-2026-09-23 found no false result and led to the repairs recorded in
-them. The inequality $F^2\tau^3\gtrsim m\hbar$ itself is standard.
+quantum limit for detecting a force on a free mass. It goes back to
+Braginsky and Vorontsov
+([*Sov. Phys. Usp.* **17**, 644, 1975](https://doi.org/10.1070/PU1975v017n05ABEH004362));
+the canonical statement is Caves, Thorne, Drever, Sandberg and
+Zimmermann, *Rev. Mod. Phys.* **52**, 341 (1980); the standard accounts are
+Braginsky and Khalili, *Quantum Measurement* (1992), and Bocko and Onofrio,
+[*Rev. Mod. Phys.* **68**, 755 (1996)](https://doi.org/10.1103/RevModPhys.68.755).
+Its status has been disputed since Yuen's objection: Caves defended it
+(PRL **54**, 2465, 1985) and Ozawa exhibited a measurement breaking it for
+free-mass position (PRL **60**, 385, 1988). The dense-mark limit of §3 is
+the continuous position measurement of Caves and Milburn
+([PRA **36**, 5543, 1987](https://doi.org/10.1103/PhysRevA.36.5543)), with
+the force limit worked out in Clerk, Devoret, Girvin, Marquardt and
+Schoelkopf ([*Rev. Mod. Phys.* **82**, 1155, 2010](https://doi.org/10.1103/RevModPhys.82.1155));
+what Theorem 2 adds to that model is the invariant-test criterion at a
+fixed error probability and the sharp constant. Hypothesis testing of a
+force waveform on a quantum probe is Tsang and Nair
+([PRA **86**, 042115, 2012](https://doi.org/10.1103/PhysRevA.86.042115)),
+the closest prior art to §10's framing, and a quantum-mechanics-free
+subsystem removes the back-action floor altogether (Tsang and Caves,
+[PRX **2**, 031016, 2012](https://doi.org/10.1103/PhysRevX.2.031016)).
+Theorem 4's coupling is von Neumann's (1932), its inequality Robertson's
+(1929) and its ancestor the Heisenberg microscope (1927); Bohr and
+Rosenfeld (1933) and Araki and Yanase (1960) set limits of this kind from
+field measurability and from conservation laws. That preparations beat
+the limit is Yuen's point (PRL **51**, 719, 1983); the two-packet
+preparation of this section is the delocalized force sensor of Childs,
+Preskill and Renes ([*J. Mod. Opt.* **47**, 155, 2000](https://doi.org/10.1080/09500340008244034)),
+and its sensitivity to displacements below the uncertainty area is that
+of Zurek's sub-Planck structures ([*Nature* **412**, 712, 2001](https://doi.org/10.1038/35089017);
+Toscano, Dalvit, Davidovich and Zurek,
+[PRA **73**, 023803, 2006](https://doi.org/10.1103/PhysRevA.73.023803)).
+The correlated probes of §4 apply the mechanism of Yuen's contractive
+states to the meter, as Braginsky and Khalili's back-action-evading
+measurements do, and the grid probes of §5 are the grid states of
+Gottesman, Kitaev and Preskill (PRA **64**, 012310, 2001). The ingredients
+of §§5--6 and §10 are standard: Ozawa's disturbance operators,
+Mandelstam--Tamm in the Bures angle (Uhlmann 1992; Anandan and Aharonov
+1990), hybrid arguments (Bennett, Bernstein, Brassard and Vazirani 1997),
+Bures-angle speed limits for processes (Taddei et al. 2013), the
+position-spread form of force sensitivity (Tsang, Wiseman and Caves 2011),
+symmetry-based information--disturbance bounds of Wigner--Araki--Yanase
+type, and the Strang splitting behind Theorem 7. All these are cited at
+metadata level. The contribution here is universality over protocols and
+instruments with explicit constants, the sharp constant of the Gaussian
+form, the disturbance form of Theorem 6, the split accounting of §10, the
+phase identities of §6 read in Newton's and Archimedes' areas, and the
+identification of the premise. The inequality $F^2\tau^3\gtrsim m\hbar$
+itself is standard.
 
 **The classical theorem belongs to a literature it does not cite.**
 Worst-case recovery of a linear functional from noisy linear data is optimal
@@ -987,8 +1137,13 @@ what the present draft rests on.
    *rhopē* is the Western counterpart of *saṃskāra*.
 2. **Editions.** The *Opticks* passages come from a transcription of the
    1730 fourth edition and should be cited from that printing; the
-   *Principia* passages should be cited from Cohen and Whitman in place
-   of the Motte text used here.
+   *Principia* passages should be cited from Koyré and Cohen's variorum
+   for the Latin, the first edition of which is now held for Book I
+   Section I, and from Cohen and Whitman for the English, in place of the
+   Motte text and this paper's own renderings. The firebrand passages of
+   the *Abhidharmakośabhāṣya* are to be added to that companion, and
+   whether the Classical Scholia cite *De facie* 923 itself is to be
+   checked in McGuire and Rattansi and in Casini.
 
 Three mathematical items remain open and are not obligations of the
 paper: the worst-case interval $9\le F^2\tau_*^3/(m\kappa)\le36$ of §3,
@@ -1000,14 +1155,15 @@ being optimal for the momentum term alone.
 
 ## 12. Consequence for STATE
 
-This is the synthesis the goal asked for: the Planck gap established
-with Newton-age arguments and their modern equivalents, in one document
-whose historical and technical halves are load-bearing for each other.
+This is the synthesis the goal asked for: a floor on marked comparisons
+established with Newton-age arguments and their modern equivalents, with
+its evasions priced, in one document whose historical and technical
+halves are load-bearing for each other.
 The foundations content is §§3--6: the sharp Gaussian floor, the mark
 cost, the disturbance floor for every instrument and the phase that no
-preparation moves. The history content is §§7--9, resting on the source
+preparation of the body moves. The history content is §§7--9, resting on the source
 companions. The junction is §8: M3 is Robertson's inequality for
 Newton's corpuscle, its universal form is that a record costs
-disturbance, and Newton's fits carry a phase whose rate is proportional
-to momentum and whose unit $\Lambda p$ is a refraction invariant.
-STATE's queue reduces to §11.
+disturbance, what Newton printed entails its negation, and Newton's fits
+carry a phase whose rate is proportional to momentum and whose unit
+$\Lambda p$ is a refraction invariant. STATE's queue reduces to §11.

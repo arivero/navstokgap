@@ -2,7 +2,7 @@
 
 > Source: [Project Gutenberg eBook #33504](https://www.gutenberg.org/ebooks/33504), release date 23 August 2010, which prints the fourth edition; local verbatim excerpt [`.txt`](Newton_Opticks_1730_fits_and_queries_excerpt.txt); retrieved 2026-09-17.
 > Metadata: Isaac Newton, *Opticks: or, a Treatise of the Reflections, Refractions, Inflections and Colours of Light*, the fourth edition, corrected (London: William Innys, 1730).
-> Extraction: nine passages (three added 2026-09-22) copied verbatim from the plain-text file, with its line numbers recorded in each heading. Underscores mark the original italics, as in that file.
+> Extraction: ten passages (three added 2026-09-22, one on 2026-09-23) copied verbatim from the plain-text file, with its line numbers recorded in each heading. Underscores mark the original italics, as in that file.
 > Rights: public domain text; Project Gutenberg transcription.
 > Limit: a transcription of the fourth edition, not a critical edition. The paper drafted from it must cite the 1730 printing itself, and Shapiro's edition and commentary for the textual history of the fits.
 
@@ -59,6 +59,7 @@ again in the excerpt.
 | Book II, Part I, Obs. 13 | 4662–4690 | Red-to-violet interval ratio “as 14 to 9” |
 | Book II, Part III, Prop. XII | 6325–6332 | Transient constitution returning at equal intervals |
 | Book II, Part III, Definition | 6404–6410 | “the space it passes between every return and the next return, the *Interval of its Fits*” |
+| Book II, Part III, Prop. XI | 6303–6306 | Light "is propagated from luminous Bodies in time, and spends about seven or eight Minutes of an Hour in passing from the Sun to the Earth" |
 | Book II, Part III, Prop. X | 6124–6128 | Light “swifter in Bodies than in Vacuo, in the proportion of the Sines” |
 | Book II, Part III, Prop. XVII | 6489–6495 | Intervals of the fits in two mediums “as the Sine of Incidence to the Sine of Refraction” |
 | Book II, Part III, Prop. XVIII | 6498–6506 | “the 1/89000th part of an Inch” |
@@ -67,7 +68,7 @@ again in the excerpt.
 
 ## Coverage and limits
 
-Reading level `passage` for the nine anchors; `metadata` for the rest of
+Reading level `passage` for the ten anchors; `metadata` for the rest of
 the work. The historiography is not covered here and is an open
 obligation of the paper: Shapiro's *Fits, Passions, and Paroxysms* (1993)
 for the theory of fits and its development, Sabra's *Theories of Light

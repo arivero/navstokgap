@@ -252,11 +252,13 @@ $\Lambda p/\delta$: the delivered impulse is not a function of the records.
 In later language this is the complementarity of the probe's position and
 momentum records. A Newton-age physicist can state M3, can see from the
 fits that it is at least true of all prior records, and cannot derive it;
-Newton himself held the negation. Everything in Theorems 1--2 follows from
+What Newton printed entails the negation (a determinate disposition
+carried by a corpuscle under deterministic mechanics; he states neither
+M3 nor its negation). Everything in Theorems 1--2 follows from
 M3 with Newton's other materials, and nothing in them follows without it.
 This is the precise sense in which the Newton-age argument for $h>0$
 exists: it is one premise long, and the premise is the one Newton's
-determinism denies.
+determinism excludes.
 
 ## 6. Newton's numbers, universality and the quantum value
 
@@ -318,7 +320,7 @@ mark is the pair of intervals $(\delta,\Delta)$; composition is the
 worst-case propagation of Section 2; the contradiction with zero-action
 refinement is Theorems 1--2; the countermodel is Section 5. The principle
 turns out to be an added indeterminacy premise, statable in Newton's
-terms and denied by Newton, and it is the entire difference between a
+terms and excluded by what he printed, and it is the entire difference between a
 floor and none; Newtonian mechanics and Newton's optics contain no
 consistency requirement that yields it. The user's necessity question is
 thereby sharpened to a question about M3 alone.

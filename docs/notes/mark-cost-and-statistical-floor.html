@@ -95,10 +95,14 @@ recoil multiplies the floor by <span
 class="math inline">\(\sqrt{(1-\rho)/(1+\rho)}\)</span> (Theorem C), and
 three marks attain that dependence within a factor <span
 class="math inline">\(4/3\)</span> (Proposition D), deciding at every
-force as <span class="math inline">\(\rho\to1\)</span>: this is the
-resource of Yuen’s contractive states. These floors concern Gaussian
-probes. For probes in arbitrary states and for every instrument, the
-statements that hold are the recoil bound of the <a
+force as <span class="math inline">\(\rho\to1\)</span>: the mechanism of
+Yuen’s contractive states, applied to the meter. These floors concern
+non-adaptive Gaussian marks read by tests invariant under the body’s
+unknown initial position and velocity. Invariance is what carries them:
+the body’s state cancels from every invariant statistic, and a protocol
+that knows the preparation escapes them even with Gaussian states (§4).
+For probes in arbitrary states and for every instrument, the statements
+that hold are the recoil bound of the <a
 href="record-costs-recoil.html">recoil note</a> and the disturbance
 bound of the <a href="record-costs-disturbance.html">disturbance
 note</a>.</p>
@@ -143,10 +147,10 @@ y,\qquad \hat D=-\lambda\hat P_A,
 class="math inline">\(\kappa\ge\hbar/2\)</span>, exactly, with no
 error–disturbance relation and no calibration argument.</p>
 <p><strong>Theorem B.</strong> In the Gaussian statistical model, for
-every protocol of marks with <span
+every non-adaptive protocol of marks with <span
 class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, of any number
-and at any times, with the initial position and velocity unknown, the
-optimal test’s deflection obeys</p>
+and at any times, with the initial position and velocity unknown and the
+tests invariant under them, the optimal test’s deflection obeys</p>
 <p><span class="math display">\[d^2\ \le\
 \frac{F^2\tau^3}{24\,m\kappa},\qquad\text{hence deciding at
 error probability }\epsilon\text{ requires}\qquad
@@ -174,8 +178,8 @@ class="math inline">\(\kappa=\Lambda p\)</span> is the corpuscle’s own
 uncertainty product, and the heuristic value <span
 class="math inline">\(h/2\)</span> of the <a
 href="newton-mark-floor.html">mark-floor note</a> differs from the
-theorem’s <span class="math inline">\(\hbar/2\)</span> by <span
-class="math inline">\(\pi\)</span>. Section 6 sets out the single paper
+theorem’s <span class="math inline">\(\hbar/2\)</span> by a factor <span
+class="math inline">\(2\pi\)</span>. Section 6 sets out the single paper
 this supports. Exploratory; no ledger promotion.</p>
 <h2 id="what-was-actually-wrong-stated-exactly">1. What was actually
 wrong, stated exactly</h2>
@@ -349,9 +353,10 @@ class="math inline">\(\mu\)</span>, and it obeys the same constraint
 <span class="math inline">\(\sum_iu_i=0\)</span>.</p>
 <p><strong>Theorem B.</strong> For every such protocol, <span
 class="math inline">\(d^2\le\dfrac{F^2\tau^3}{24\,m\kappa}\)</span>, and
-the constant is sharp. Consequently an invariant test with error
-probability at most <span class="math inline">\(\epsilon\)</span>
-requires</p>
+the constant is sharp: it is approached, never attained, by dense
+protocols whose end marks are sharp, with a recoil that no invariant
+statistic sees. Consequently an invariant test with error probability at
+most <span class="math inline">\(\epsilon\)</span> requires</p>
 <p><span class="math display">\[F^2\tau^3\ \ge\
 96\,z_{1-\epsilon}^2\,m\kappa,\qquad
 \tau\Delta E\ \ge\ 48\,z_{1-\epsilon}^2\,\kappa,\qquad
@@ -414,12 +419,15 @@ content survived its formulation: the argument never needed interval
 containment, only a quadratic bound in the same two variables.</p>
 <h2 id="gaussian-quantum-experiments-with-and-without-correlation">4.
 Gaussian quantum experiments, with and without correlation</h2>
-<p>For Gaussian probe states, linear dynamics and pointer readouts, the
-Wigner function is a genuine probability density and evolves by the
-classical linear equations, so every measured distribution in the
-quantum experiment equals the corresponding distribution in the
-classical Gaussian model whose noise covariance is the probe’s Wigner
-covariance. That covariance gives mark <span
+<p>For Gaussian probe states, a fresh probe for each mark, linear
+dynamics and pointer readouts, the Wigner function is a genuine
+probability density and evolves by the classical linear equations, so
+every distribution of an invariant statistic in the quantum experiment
+equals the corresponding distribution in the classical Gaussian model
+whose noise covariance is the probe’s Wigner covariance. The body’s own
+state enters every reading as <span class="math inline">\(\hat y_0+\hat
+p_0t_j/m\)</span> and cancels from every invariant statistic, so it need
+not be Gaussian. That covariance gives mark <span
 class="math inline">\(j\)</span> a jointly Gaussian pair <span
 class="math inline">\((\xi_j,\iota_j)\)</span> with variances <span
 class="math inline">\(\delta_j^2,\Delta_j^2\)</span> and covariance
@@ -499,50 +507,59 @@ class="math inline">\(\square\)</span></p>
 <p>As <span class="math inline">\(\rho\to1\)</span> the three-mark
 protocol decides at every force. The middle probe’s kick is correlated
 with its reading error so that the kick’s effect on the third reading
-cancels the error in the second, which is the back-action evasion of
-Yuen’s contractive states (<a
-href="https://doi.org/10.1103/PhysRevLett.51.719">PRL
-<strong>51</strong>, 719, 1983</a>, metadata). The floor of order <span
+cancels the error in the second: the mechanism of Yuen’s contractive
+states (<a href="https://doi.org/10.1103/PhysRevLett.51.719">PRL
+<strong>51</strong>, 719, 1983</a>, metadata), which correlate the
+body’s position and momentum, applied here to the meter, as in Braginsky
+and Khalili’s back-action-evading measurements. In the convention of
+Section 2 the favourable sign is <span
+class="math inline">\(\rho&gt;0\)</span>, that is <span
+class="math inline">\(\operatorname{Cov}(\hat Q_A,\hat
+P_A)&lt;0\)</span>. The floor of order <span
 class="math inline">\(\hbar\)</span> is therefore a statement about
 marks whose error–recoil correlation is bounded, and Theorem C gives its
 value for every bound. The insertion statement follows as before: marks
 inserted into a window of duration <span
 class="math inline">\(\tau&#39;\)</span>, used by themselves, record the
 force only if <span
-class="math inline">\(F^2\tau&#39;^3\ge96z^2m\kappa\)</span>, so
-Democritus insertion stops at the mesh</p>
+class="math inline">\(F^2\tau&#39;^3\ge96z^2m\kappa\)</span>, so a
+window shorter than the mesh cannot exhibit the force by itself</p>
 <p><span
 class="math display">\[\tau_*=\left(\frac{96\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3}
 =\left(\frac{48\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},\]</span></p>
-<p>and finer marks record free motion at the stated confidence.</p>
+<p>and marks confined to such a window are consistent with free motion
+at the stated confidence. Refinement below the mesh continues, and the
+sharp protocol of Theorem B needs it: what stops is local exhibition of
+the force.</p>
 <p>This coexists with the counterexample of the <a
 href="planck-gap-probabilistic.html">probabilistic note</a>, which
 distinguishes the hypotheses at arbitrarily small <span
 class="math inline">\(\tau\Delta E\)</span> using a two-packet
 preparation of separation <span
-class="math inline">\(\pi\hbar/(F\tau)\)</span>. That protocol is
-non-Gaussian and makes no marks: it prepares once, waits, and measures
-once. The two results divide the ground cleanly. <strong>Marking the
-trajectory with uncorrelated probes costs <span
-class="math inline">\(\hbar/2\)</span> per mark and gives a floor of
-order <span class="math inline">\(\hbar\)</span>; declining to mark it
-costs an apparatus of size <span
-class="math inline">\(\pi\hbar/(F\tau)\)</span>, and the floor at
-aperture <span class="math inline">\((L,P)\)</span> is <span
-class="math inline">\(2m(1-2\epsilon)^2\hbar^2\tau/(2mL+\tau
-P)^2\)</span>, equal to <span
-class="math inline">\((1-2\epsilon)^2\hbar^2/(4LP)\)</span> at the
-balanced aperture.</strong> Newton’s refinement is the first case, which
-is why the floor is the relevant statement for the insertion
-question.</p>
+class="math inline">\(\pi\hbar/(F\tau)\)</span>. The boundary between
+the two results is knowledge of the preparation. <strong>A test that
+must work whatever the body’s initial position and velocity faces the
+floor of Theorems B and C; a protocol that knows the preparation escapes
+it, even with Gaussian states:</strong> a contractive Gaussian state
+focused at time <span class="math inline">\(\tau\)</span>, whose
+position spread there is as small as desired, and one sharp final mark
+decide at every force, which is Yuen’s own protocol. What prices the
+preparation route is the body’s spread along the way: the two-packet
+preparation, and the contractive state, pay in the aperture bound of the
+probabilistic note, <span
+class="math inline">\(2m\arcsin^2(1-2\epsilon)\hbar^2\tau/(2mL+\tau
+P)^2\)</span> at aperture <span class="math inline">\((L,P)\)</span>.
+Newton’s refinement, which learns the trajectory from the marks alone,
+is the first case, which is why the floor is the relevant statement for
+the insertion question.</p>
 <p><strong>Gaussian probes are needed, 2026-09-22.</strong> Theorems B
 and C concern Gaussian probes, where the Wigner function is a density. A
 grid probe with a real wavefunction has <span
 class="math inline">\(\rho=0\)</span> and still decides the comparison
 at any force, and for probes in arbitrary states the statement that
 holds is the recoil bound <span
-class="math inline">\(s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar\)</span> of
-the <a href="record-costs-recoil.html">recoil note</a>.</p>
+class="math inline">\(s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)\)</span>
+of the <a href="record-costs-recoil.html">recoil note</a>.</p>
 <p>Both escapes use one resource. A correlated probe and an unbalanced
 aperture each stretch an uncertainty ellipse of fixed area along a
 direction the test does not see: the rotated quadrature of the middle
@@ -561,11 +578,15 @@ class="math inline">\(\Lambda\)</span> and <span
 class="math inline">\(p\)</span> while his determinism denies the
 premise. Theorem A says what M3 is. The corpuscle is the probe; <span
 class="math inline">\(\hat Q_A\)</span> is its transverse position and
-<span class="math inline">\(\hat P_A\)</span> its transverse momentum;
-the interval of fits <span class="math inline">\(\Lambda\)</span> is the
-scale of the first and the corpuscular impulse <span
-class="math inline">\(p\)</span> the scale of the second; and the
-premise asserts precisely that their product cannot be reduced. So</p>
+<span class="math inline">\(\hat P_A\)</span> its transverse momentum.
+On this note’s reading the interval of fits <span
+class="math inline">\(\Lambda\)</span> is the scale of the first and the
+corpuscular impulse <span class="math inline">\(p\)</span> the scale of
+the second: the interval is a period along the ray, a longitudinal
+length, and a gauge built on the fits resolves no better than one
+interval, which is the analogy used; and Query 29 speaks of the
+corpuscles’ sizes, so the impulse scale is an inference. The premise
+asserts that the product of the two cannot be reduced. So</p>
 <p><span class="math display">\[\kappa=\Lambda
 p\quad\longleftrightarrow\quad
 \kappa=\Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \frac\hbar2
@@ -576,26 +597,30 @@ mark-floor note left implicit: the undetermined impulse is unrelated to
 the mark’s error. Theorem C prices that clause, since a correlation
 <span class="math inline">\(\rho\)</span> multiplies the floor by <span
 class="math inline">\(\sqrt{(1-\rho)/(1+\rho)}\)</span>. Newton measured
-the first as <span class="math inline">\(1/89000\)</span> inch, had no
-access to the second, held both to be determinate properties of the
-corpuscle, and thereby denied exactly the inequality. His Prop. XII
-states the fits as a transient constitution that returns at equal
-intervals and disposes the ray at every return, which is a determinate
-periodic property; the <a
+the first as <span class="math inline">\(1/89000\)</span> inch and had
+no access to the second. His Prop. XII states the fits as a transient
+constitution that returns at equal intervals and disposes the ray at
+every return, a determinate periodic property. That alone is compatible
+with the inequality, since a wave’s phase is determinate too; what
+excludes it is the disposition carried by a corpuscle of Query 29 moving
+by ordinary deterministic mechanics, whose later records recover the
+impulse it delivered. So what Newton printed entails the negation of the
+inequality, which he nowhere states; the <a
 href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Newton_Opticks_1730_fits_and_queries.md">source
 companion</a> holds that passage and the other four with their line
 anchors. The modern value <span class="math inline">\(\hbar/2\)</span>
 against the identification <span class="math inline">\(\Lambda
-p=h/2\)</span> differ by <span class="math inline">\(\pi\)</span>.</p>
+p=h/2=\pi\hbar\)</span> differ by a factor <span
+class="math inline">\(2\pi\)</span>.</p>
 <p>The historical claim this licenses is narrow and checkable. Newton’s
 optics contains both factors of the product that bounds the recorded
 Galileo comparison; his mathematics contains the comparison and takes it
 to zero; and the single proposition that would join them is a claim of
-indeterminacy about the fits, which he considered and rejected in favour
-of a determinate periodic disposition. The gap between the
-<em>Principia</em>’s vanishing sagitta and the <em>Opticks</em>’ finite
-interval of fits follows from that single commitment, and the separation
-of the two books is incidental to it.</p>
+indeterminacy about the fits, whose negation follows from his
+determinate periodic disposition carried by a corpuscle. The gap between
+the <em>Principia</em>’s vanishing sagitta and the <em>Opticks</em>’
+finite interval of fits follows from that single commitment, and the
+separation of the two books is incidental to it.</p>
 <h2 id="the-single-paper-valid-for-both-audiences">6. The single paper,
 valid for both audiences</h2>
 <p>The user’s requirement is one paper that a foundations-of-physics

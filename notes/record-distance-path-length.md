@@ -122,7 +122,7 @@ single shot it is Theorem 1 of the probabilistic note, the aperture
 bound's protocol form is now the same inequality with the same constant,
 and the two-packet preparation attains the kick form as $\epsilon\to0$
 (§3). The recoil and disturbance bounds are not shown attained: the best
-known recoil protocol sits a factor of about $2.1$ above the bound at five
+known recoil protocol sits a factor of about $1.47$ above the bound at five
 per cent error. At $\epsilon\to0$ the constant is $\pi/2$ where it was $1$.
 
 ## 3. Theorem K: the aperture bound in its kick form
@@ -248,9 +248,9 @@ is strictly stronger than either.
 
 The balanced aperture of minimal area now gives
 $\tau\Delta E\ge\frac12\hbar\arcsin^2(1-2\epsilon)$, which is $\pi^2\hbar/8$ at
-certain decision. The correlated three-mark protocol sits within
-$\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of the recoil bound, about $2.1$
-at five per cent error, at every squeezing.
+certain decision. The three-mark protocol with the best Gaussian probe
+sits within $z_{1-\epsilon}/\arcsin(1-2\epsilon)$ of the recoil bound, about
+$1.47$ at five per cent error, at every recoil (recoil note, §4).
 
 ## 6. Consequence for STATE
 

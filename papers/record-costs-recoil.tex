@@ -42,10 +42,11 @@ probe, is the recoil. A pointer registers a displacement only through
 the spread of its conjugate momentum, and that momentum is the impulse
 the body receives. This is M3 in its universal form: a record of the
 sagitta must leave the delivered impulse undetermined by at least
-\(8\hbar\arcsin(1-2\epsilon)/s\) in total. The correlated three-mark
-protocol of Proposition D attains the bound within a factor
-\(\sqrt2\,z_{1-\epsilon}/\arcsin(1-2\epsilon)\), uniformly in its
-squeezing (Section 4). Exploratory; no ledger promotion.
+\(8\hbar\arcsin(1-2\epsilon)/s\) in total. The three-mark protocol of
+Proposition D, with the best Gaussian probe, comes within a factor
+\(z_{1-\epsilon}/\arcsin(1-2\epsilon)\) of the bound at every recoil,
+about \(1.47\) at five per cent error (Section 4). Exploratory; no
+ledger promotion.
 
 \hypertarget{setting}{%
 \subsection{1. Setting}\label{setting}}
@@ -198,8 +199,8 @@ of the outer marks, that is \(-(\alpha\hat Q_2+\beta\hat P_2)\) with
 stabilize the ideal grid state (Gottesman, Kitaev and Preskill,
 \href{https://doi.org/10.1103/PhysRevA.64.012310}{PRA \textbf{64},
 012310, 2001}, metadata). With the aspect
-\(\ell_P/\ell_Q=\alpha/\beta\), the Baker--Campbell--Hausdorff phase
-\(e^{-i\pi}\) gives \(\hat S_1\hat S_2=-e^{ic\hat S}\) with
+\(\ell_P/\ell_Q=\alpha/\beta\), the Baker--Campbell--Hausdorff factor
+\(-1\) gives \(\hat S_1\hat S_2=-e^{ic\hat S}\) with
 \(c=\ell_P/(\hbar\alpha)\), and
 \(2\pi/c=\sqrt{2\pi\hbar\alpha\beta}=\sigma\). Along the family,
 \(\langle\hat S_1\rangle\to1\) and \(\langle\hat S_2\rangle\to1\) mean
@@ -249,17 +250,31 @@ Gaussian probe, \(\delta_2\Delta_2=\hbar/(2\sqrt{1-\rho^2})\), so
 
 \[\Delta_2|c_2|=z_{1-\epsilon}\,\hbar\,\sqrt{\frac{2}{1+\rho}},\]
 
-between \(z\hbar\) and \(\sqrt2z\hbar\) for every \(\rho\in[0,1)\).
-Theorem R asks for \(\hbar\arcsin(1-2\epsilon)\), so the protocol sits
-within the factor \(\sqrt2z_{1-\epsilon}/\arcsin(1-2\epsilon)\) of the
-bound at fixed \(\epsilon\). The factor grows without bound as
-\(\epsilon\to0\), since \(z_{1-\epsilon}\) does while
+between \(z\hbar\) and \(\sqrt2z\hbar\) for every \(\rho\in[0,1)\). The
+balance \(2\delta_2=\tau\Delta_2/2m\) is the one that is optimal at
+\(\rho=0\), and at fixed \(\rho\) it wastes the factor
+\(\sqrt{2/(1+\rho)}\). The best probe at a fixed recoil does better. The
+statistic's noise is \(-(\alpha\hat Q_2+\beta\hat P_2)\) with
+\(\alpha=2/\lambda_2\), and
+\([\alpha\hat Q_2+\beta\hat P_2,\hat P_2]=i\hbar\alpha\), so Robertson
+gives
+\(\Delta(\alpha\hat Q_2+\beta\hat P_2)\ge\hbar\alpha/(2\Delta\hat P_2)=\hbar/\Delta_2\),
+attained by a pure Gaussian state of minimum uncertainty for that pair.
+The protocol then decides once \(s\Delta_2\ge4z_{1-\epsilon}\hbar\),
+that is \(\Delta_2|c_2|=z\hbar\), for every recoil. Theorem R asks for
+\(\hbar\arcsin(1-2\epsilon)\), so the best Gaussian three-mark protocol
+sits within the factor \(z_{1-\epsilon}/\arcsin(1-2\epsilon)\) of the
+bound, about \(1.47\) at five per cent error, and uncorrelated probes
+within \(\sqrt2\) times that. The bound in question is Theorem R with
+the line through the end marks; its constant-force form (4), with the
+line of best uniform approximation, charges the end marks too, and their
+unbounded recoil makes its left side infinite. The factor grows without
+bound as \(\epsilon\to0\), since \(z_{1-\epsilon}\) does while
 \(\arcsin(1-2\epsilon)\) stays below \(\pi/2\); whether some
 non-Gaussian protocol meets the bound up to a constant at every
-\(\epsilon\) is open here. It is about \(2.1\) at five per cent error,
-however strongly it is squeezed. The recoil-weighted sagitta is the
-right universal resource: squeezing moves the protocol along it and
-never below it.
+\(\epsilon\) is open here. The recoil-weighted sagitta is the right
+universal resource: squeezing moves the protocol along it and never
+below it.
 
 \hypertarget{what-this-changes}{%
 \subsection{5. What this changes}\label{what-this-changes}}

@@ -10,8 +10,12 @@ probes whose error and recoil are uncorrelated, about $65\hbar$ at five
 per cent error. A correlation $\rho$ between error and recoil multiplies
 the floor by $\sqrt{(1-\rho)/(1+\rho)}$ (Theorem C), and three marks attain
 that dependence within a factor $4/3$ (Proposition D), deciding at every
-force as $\rho\to1$: this is the resource of Yuen's contractive states.
-These floors concern Gaussian probes. For probes in arbitrary states and
+force as $\rho\to1$: the mechanism of Yuen's contractive states, applied
+to the meter. These floors concern non-adaptive Gaussian marks read by
+tests invariant under the body's unknown initial position and velocity.
+Invariance is what carries them: the body's state cancels from every
+invariant statistic, and a protocol that knows the preparation escapes
+them even with Gaussian states (§4). For probes in arbitrary states and
 for every instrument, the statements that hold are the recoil bound of
 the [recoil note](record-costs-recoil.md) and the disturbance bound of the
 [disturbance note](record-costs-disturbance.md).
@@ -50,10 +54,10 @@ $$\hat N=\frac{\hat Q_A}{\lambda}-\hat y,\qquad \hat D=-\lambda\hat P_A,
 for every probe state whatever. So $\kappa\ge\hbar/2$, exactly, with no
 error--disturbance relation and no calibration argument.
 
-**Theorem B.** In the Gaussian statistical model, for every protocol of
-marks with $\delta_j\Delta_j\ge\kappa$, of any number and at any times,
-with the initial position and velocity unknown, the optimal test's
-deflection obeys
+**Theorem B.** In the Gaussian statistical model, for every
+non-adaptive protocol of marks with $\delta_j\Delta_j\ge\kappa$, of any
+number and at any times, with the initial position and velocity unknown
+and the tests invariant under them, the optimal test's deflection obeys
 
 $$d^2\ \le\ \frac{F^2\tau^3}{24\,m\kappa},\qquad\text{hence deciding at
 error probability }\epsilon\text{ requires}\qquad
@@ -75,7 +79,7 @@ $\Lambda$ is the corpuscle's transverse position spread and $p$ its
 transverse momentum spread, so $\kappa=\Lambda p$ is the corpuscle's own
 uncertainty product, and the heuristic value $h/2$ of the
 [mark-floor note](newton-mark-floor.md) differs from the theorem's
-$\hbar/2$ by $\pi$. Section 6 sets out the single paper this supports.
+$\hbar/2$ by a factor $2\pi$. Section 6 sets out the single paper this supports.
 Exploratory; no ledger promotion.
 
 ## 1. What was actually wrong, stated exactly
@@ -209,7 +213,9 @@ counterpart of the derivation note's separating multipliers $\mu$, and it
 obeys the same constraint $\sum_iu_i=0$.
 
 **Theorem B.** For every such protocol,
-$d^2\le\dfrac{F^2\tau^3}{24\,m\kappa}$, and the constant is sharp.
+$d^2\le\dfrac{F^2\tau^3}{24\,m\kappa}$, and the constant is sharp: it is
+approached, never attained, by dense protocols whose end marks are sharp,
+with a recoil that no invariant statistic sees.
 Consequently an invariant test with error probability at most $\epsilon$
 requires
 
@@ -262,12 +268,14 @@ only a quadratic bound in the same two variables.
 
 ## 4. Gaussian quantum experiments, with and without correlation
 
-For Gaussian probe states, linear dynamics and pointer readouts, the
-Wigner function is a genuine probability density and evolves by the
-classical linear equations, so every measured distribution in the
-quantum experiment equals the corresponding distribution in the
-classical Gaussian model whose noise covariance is the probe's Wigner
-covariance. That covariance gives mark $j$ a jointly Gaussian pair
+For Gaussian probe states, a fresh probe for each mark, linear
+dynamics and pointer readouts, the Wigner function is a genuine
+probability density and evolves by the classical linear equations, so
+every distribution of an invariant statistic in the quantum experiment
+equals the corresponding distribution in the classical Gaussian model
+whose noise covariance is the probe's Wigner covariance. The body's own
+state enters every reading as $\hat y_0+\hat p_0t_j/m$ and cancels from
+every invariant statistic, so it need not be Gaussian. That covariance gives mark $j$ a jointly Gaussian pair
 $(\xi_j,\iota_j)$ with variances $\delta_j^2,\Delta_j^2$ and covariance
 $c_j=\rho_j\delta_j\Delta_j$, independent across marks. Section 3 is the
 case $c_j=0$.
@@ -323,40 +331,50 @@ $d\ge2z$ is the stated condition. $\square$
 
 As $\rho\to1$ the three-mark protocol decides at every force. The middle
 probe's kick is correlated with its reading error so that the kick's
-effect on the third reading cancels the error in the second, which is
-the back-action evasion of Yuen's contractive states
+effect on the third reading cancels the error in the second: the
+mechanism of Yuen's contractive states
 ([PRL **51**, 719, 1983](https://doi.org/10.1103/PhysRevLett.51.719),
-metadata). The floor of order $\hbar$ is therefore a statement about
+metadata), which correlate the body's position and momentum, applied here
+to the meter, as in Braginsky and Khalili's back-action-evading
+measurements. In the convention of Section 2 the favourable sign is
+$\rho>0$, that is $\operatorname{Cov}(\hat Q_A,\hat P_A)<0$. The floor of order $\hbar$ is therefore a statement about
 marks whose error--recoil correlation is bounded, and Theorem C gives
 its value for every bound. The insertion
 statement follows as before: marks inserted into a window of duration
 $\tau'$, used by themselves, record the force only if
-$F^2\tau'^3\ge96z^2m\kappa$, so Democritus insertion stops at the mesh
+$F^2\tau'^3\ge96z^2m\kappa$, so a window shorter than the mesh cannot
+exhibit the force by itself
 
 $$\tau_*=\left(\frac{96\,z_{1-\epsilon}^2\,m\kappa}{F^2}\right)^{1/3}
 =\left(\frac{48\,z_{1-\epsilon}^2\,m\hbar}{F^2}\right)^{1/3},$$
 
-and finer marks record free motion at the stated confidence.
+and marks confined to such a window are consistent with free motion at
+the stated confidence. Refinement below the mesh continues, and the
+sharp protocol of Theorem B needs it: what stops is local exhibition of
+the force.
 
 This coexists with the counterexample of the
 [probabilistic note](planck-gap-probabilistic.md), which distinguishes
 the hypotheses at arbitrarily small $\tau\Delta E$ using a two-packet
-preparation of separation $\pi\hbar/(F\tau)$. That protocol is
-non-Gaussian and makes no marks: it prepares once, waits, and measures
-once. The two results divide the ground cleanly. **Marking the trajectory
-with uncorrelated probes costs $\hbar/2$ per mark and gives a floor of
-order $\hbar$; declining to mark it costs an apparatus of size
-$\pi\hbar/(F\tau)$, and the floor at aperture $(L,P)$ is
-$2m(1-2\epsilon)^2\hbar^2\tau/(2mL+\tau P)^2$, equal to
-$(1-2\epsilon)^2\hbar^2/(4LP)$ at the balanced aperture.** Newton's
-refinement is the first case, which is why the floor is the relevant
-statement for the insertion question.
+preparation of separation $\pi\hbar/(F\tau)$. The boundary between the
+two results is knowledge of the preparation. **A test that must work
+whatever the body's initial position and velocity faces the floor of
+Theorems B and C; a protocol that knows the preparation escapes it, even
+with Gaussian states:** a contractive Gaussian state focused at time
+$\tau$, whose position spread there is as small as desired, and one sharp
+final mark decide at every force, which is Yuen's own protocol. What
+prices the preparation route is the body's spread along the way: the
+two-packet preparation, and the contractive state, pay in the aperture
+bound of the probabilistic note, $2m\arcsin^2(1-2\epsilon)\hbar^2\tau/(2mL+\tau P)^2$
+at aperture $(L,P)$. Newton's refinement, which learns the trajectory
+from the marks alone, is the first case, which is why the floor is the
+relevant statement for the insertion question.
 
 **Gaussian probes are needed, 2026-09-22.** Theorems B and C concern
 Gaussian probes, where the Wigner function is a density. A grid probe
 with a real wavefunction has $\rho=0$ and still decides the comparison at
 any force, and for probes in arbitrary states the statement that holds is
-the recoil bound $s\sum_j\Delta_j\ge8(1-2\epsilon)\hbar$ of the
+the recoil bound $s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$ of the
 [recoil note](record-costs-recoil.md).
 
 Both escapes use one resource. A correlated probe and an unbalanced
@@ -373,10 +391,14 @@ fixing the position within $\delta$ leaves the delivered impulse
 undetermined within $\Lambda p/\delta$, and observed that Newton's optics
 supplies $\Lambda$ and $p$ while his determinism denies the premise.
 Theorem A says what M3 is. The corpuscle is the probe; $\hat Q_A$ is its
-transverse position and $\hat P_A$ its transverse momentum; the interval
-of fits $\Lambda$ is the scale of the first and the corpuscular impulse
-$p$ the scale of the second; and the premise asserts precisely that their
-product cannot be reduced. So
+transverse position and $\hat P_A$ its transverse momentum. On this
+note's reading the interval of fits $\Lambda$ is the scale of the first
+and the corpuscular impulse $p$ the scale of the second: the interval is
+a period along the ray, a longitudinal length, and a gauge built on the
+fits resolves no better than one interval, which is the analogy used;
+and Query 29 speaks of the corpuscles' sizes, so the impulse scale is an
+inference. The premise asserts that the product of the two cannot be
+reduced. So
 
 $$\kappa=\Lambda p\quad\longleftrightarrow\quad
 \kappa=\Delta\hat Q_A\cdot\Delta\hat P_A\ \ge\ \frac\hbar2 ,$$
@@ -385,22 +407,26 @@ and M3 is Robertson's inequality for the corpuscle, stated in the two
 quantities Newton had. The floor uses M3 with a second clause that the
 mark-floor note left implicit: the undetermined impulse is unrelated to
 the mark's error. Theorem C prices that clause, since a correlation
-$\rho$ multiplies the floor by $\sqrt{(1-\rho)/(1+\rho)}$. Newton measured the first as $1/89000$ inch, had
-no access to the second, held both to be determinate properties of the
-corpuscle, and thereby denied exactly the inequality. His Prop. XII
-states the fits as a transient constitution that returns at equal
-intervals and disposes the ray at every return, which is a determinate
-periodic property; the
+$\rho$ multiplies the floor by $\sqrt{(1-\rho)/(1+\rho)}$. Newton measured the first as $1/89000$ inch and
+had no access to the second. His Prop. XII states the fits as a
+transient constitution that returns at equal intervals and disposes the
+ray at every return, a determinate periodic property. That alone is
+compatible with the inequality, since a wave's phase is determinate too;
+what excludes it is the disposition carried by a corpuscle of Query 29
+moving by ordinary deterministic mechanics, whose later records recover
+the impulse it delivered. So what Newton printed entails the negation of
+the inequality, which he nowhere states; the
 [source companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md)
 holds that passage and the other four with their line anchors. The modern value
-$\hbar/2$ against the identification $\Lambda p=h/2$ differ by $\pi$.
+$\hbar/2$ against the identification $\Lambda p=h/2=\pi\hbar$ differ by a factor
+$2\pi$.
 
 The historical claim this licenses is narrow and checkable. Newton's
 optics contains both factors of the product that bounds the recorded
 Galileo comparison; his mathematics contains the comparison and takes it
 to zero; and the single proposition that would join them is a claim of
-indeterminacy about the fits, which he considered and rejected in favour
-of a determinate periodic disposition. The gap between the *Principia*'s
+indeterminacy about the fits, whose negation follows from his
+determinate periodic disposition carried by a corpuscle. The gap between the *Principia*'s
 vanishing sagitta and the *Opticks*' finite interval of fits follows from
 that single commitment, and the separation of the two books is incidental
 to it.
