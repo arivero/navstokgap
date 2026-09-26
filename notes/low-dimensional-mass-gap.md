@@ -394,7 +394,7 @@ $\hbar$, $c$ and $g$:
 
 | $d$ | $g^2\hbar$ | Mass unit from $(\hbar,c,g)$ | Solved or expected gap |
 | --- | --- | --- | --- |
-| 2 | $L^{-2}$ | none; $g^2\hbar^2c$ is a string tension (energy/length) | $E_R=\tfrac12g^2\hbar^2cLC_2(R)$ on a circle, diverging with $L$ (Section 5) |
+| 2 | $L^{-2}$ | $\hbar\sqrt{g^2\hbar}/c$; $g^2\hbar^2c$ is a string tension | $E_R=\tfrac12g^2\hbar^2cLC_2(R)$ on a circle, diverging with $L$ (Section 5) |
 | 3 | $L^{-1}$ | $g^2\hbar^2/c$ | expected $m\propto g^2\hbar^2/c$ (Karabali--Nair, physics argument; lattice) |
 | 4 | dimensionless | none | $m=a^{-1}F(g^2\hbar)$ with $F\to0$ along $g(a)$: transmutation |
 
@@ -405,8 +405,13 @@ the continuum limit at fixed $m$ requires $F(g^2(a)\hbar)\to0$ along a curve,
 which is dimensional transmutation stated as a dimensional necessity; the
 one-loop form $m\propto a^{-1}\exp[-1/(2b_0g^2)]$ is the standard
 asymptotic-freedom expression (Gross--Wilczek, Politzer 1973). In $d=3$ the
-coupling itself carries the unit, and in $d=2$ it carries a tension but no
-mass.
+coupling itself carries the unit. In $d=2$ its square root also permits a
+mass unit, while the circle spectrum below consists of electric flux.
+**Correction, 2026-09-26:** the earlier claim that no mass unit exists in
+$d=2$ was dimensionally incorrect; absence of propagating local particles
+is a dynamical statement. The [refinement note](refinement-composition-and-limit.md)
+uses the exact two-dimensional heat-kernel construction with this
+distinction explicit.
 
 **Compact abelian theories.** Compactness of the gauge group supplies
 topological excitations and, with them, gaps that are again supplied

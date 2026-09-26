@@ -1,7 +1,9 @@
 # State
 
 Updated 2026-09-26. Read this page and the
-[working note](../notes/three-continuum-limits.md); AGENTS.md governs.
+[refinement note](../notes/refinement-composition-and-limit.md);
+AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
+gives the wider comparison.
 The [September 23 handout](handoffs/HANDOFF-2026-09-23.md) records the
 earlier results and reviews; this page carries the current direction.
 
@@ -13,8 +15,9 @@ Newton's Galileo comparison, from independently justified physical
 premises**, and **the continuum existence and mass gap of pure $SU(3)$
 Yang--Mills**. QCD pions at zero and nonzero quark mass provide orientation
 and inspiration; constructing fermionic QCD is outside the active queue.
-The working note gives the limit orders, quantities, mechanisms and
-paper architecture. The modern leg remains primary; formal and textual
+The latest direction is to build the limit from local insertion laws:
+an intermediate Newtonian time, an edge or cell in gauge theory, and
+their lower-dimensional counterparts. The modern leg remains primary; formal and textual
 Principia work lives in the sibling `newtonlean` repository.
 
 ## In hand
@@ -33,21 +36,27 @@ Principia work lives in the sibling `newtonlean` repository.
 - [The working note, §5](../notes/three-continuum-limits.md) states the
   elementary spectral criteria for retaining a positive or zero
   threshold, including the need for surviving observable weight.
+- [The refinement note](../notes/refinement-composition-and-limit.md)
+  constructs the arbitrary-partition constant-force limit, gives exact
+  two-dimensional gauge subdivision and a sufficient summable-error
+  criterion, and distinguishes these from a surviving physical gap.
 
 ## Next
 
-1. **Constructive bridge:** the H3 small-volume $SU(3)$ estimate in the
-   [Feshbach note](../notes/weak-coupling-feshbach-reduction.md), using
-   transverse valley lifting with explicit constants and cutoff
-   dependence. Stop at one estimate or its precise uncontrolled term.
-2. **Newton necessity:** one explicit physical model of marks and
-   composition that can justify a positive cost under refinement.
-   The [working note, §7](../notes/three-continuum-limits.md) distinguishes
-   this from assuming M3 or the canonical commutator, and states the
-   separate universality and calibration obligations.
-3. Use the pion benchmark only where it tests a proposed mechanism;
-   carry successful estimates toward cutoff uniformity, reconstruction
-   and the joint paper following the working note's plan.
+1. **A local gauge refinement estimate:** one $1+2$-dimensional blocking
+   step retaining its boundary interaction, in an explicit local
+   observable norm. The [refinement note, §8](../notes/refinement-composition-and-limit.md)
+   gives its inputs and stop rule. Test whether errors are summable.
+2. **Newton necessity:** construct the refinement map for body and
+   physical record, with the unobserved constant-force composition as
+   the reference. Seek positive cost from independently justified
+   premises; retain universality and calibration as obligations.
+3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
+   [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
+   the valley-lifting task to connect to the refinement construction.
+   Use the pion benchmark where it tests the symmetry of a proposed
+   mechanism; carry successful bounds toward reconstruction and the
+   joint paper.
 
 Attainment of the existing disturbance bounds and the Planck paper's
 §11 historical/submission obligations remain open. Other mass-gap

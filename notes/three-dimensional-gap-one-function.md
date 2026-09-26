@@ -1,8 +1,17 @@
 # In three dimensions the mass gap is the positivity of one function at infinity
 
+**Qualification, 2026-09-26.** The continuum spectral formulas below
+are conditional on constructing the physical theory. The cited
+stochastic-quantization result constructs local auxiliary-time dynamics,
+not an invariant measure or OS reconstruction. Small physical volume,
+strong lattice coupling and the infinite-volume continuum limit are
+separate regimes. The [refinement note](refinement-composition-and-limit.md)
+gives the corrected source boundary and the corresponding construction
+target.
+
 For pure Yang--Mills in $d=3$ (two space dimensions) the coupling
 $g^2$ is itself a mass, so the finite-volume gap of the continuum theory
-on a periodic square torus of side $L$ has the exact form
+on a periodic square torus of side $L$, when that theory exists, has the form
 $$\Delta(L)=g^2\hbar^2c\,f(x),\qquad x=g^2\hbar L\ \text{(dimensionless)},$$
 by dimensional analysis alone, and the Jaffe--Witten conjecture for
 $d=3$ is the single statement
@@ -16,15 +25,17 @@ strong-coupling theorem of [the previous note](strong-coupling-uniform-gap.md)
 with $\nu=2$ gives a gap $\ge\gamma_2(g_{\rm lat}^2/2)C_2\hbar c/a$ uniform in
 the lattice size, and the continuum limit is the statement that
 $\delta_\infty(g_{\rm lat})/g_{\rm lat}^2$ stays bounded below as
-$g_{\rm lat}^2=g^2\hbar a\to0$: the gap-to-coupling ratio is bounded below
-at both ends of the coupling axis, and the conjecture is its positivity
-in between. Contrast $d=4$, where the ratio must pass from a power law
+$g_{\rm lat}^2=g^2\hbar a\to0$, together with construction and a finite
+positive limiting ratio. The strong-coupling lower bound supplies only
+one end of this lattice question. The small-volume result concerns a
+different order of limits. Contrast $d=4$, where the ratio must pass from a power law
 $\propto g^2$ at strong coupling to the essential singularity
 $e^{-1/(2b_0g^2)}$ at weak coupling. The three-dimensional problem is
-therefore the natural first target: it has no transmutation, a single
-scaling variable, and both ends of $f$ in hand. The expected value
-$C=N/(2\pi)$ (Karabali--Nair, physics argument; metadata, B78) is a
-prediction to be proved, not an input. Nothing here is promoted.
+therefore a natural target: it has a dimensionful coupling and a single
+scaling variable. Karabali--Nair's $N/(2\pi)$ is a current-variable
+kinetic scale, not an established value of the full physical gap
+([1996 paper, eqs. (28)--(29)](https://arxiv.org/pdf/hep-th/9602155),
+passage). The constant $C$ remains to be determined. Nothing here is promoted.
 
 ## 1. Units and the one-variable form
 
@@ -101,7 +112,8 @@ $g_{\rm lat}^2\to0$ with $N_s=L/a$ and $x=g^2\hbar L=g_{\rm lat}^2N_s$
 fixed. The lattice gap in units of $\varepsilon_3$ is
 $$\frac{\Delta_{a,L}}{\varepsilon_3}=\frac{\hbar c}{a\,g^2\hbar^2c}\,\delta
 =\frac{\delta(g_{\rm lat};N_s,G)}{g_{\rm lat}^2},$$
-so the continuum finite-volume gap exists iff
+so, conditional on the physical continuum construction and convergence
+of its spectral threshold, its finite-volume scaling requires
 $\delta(g_{\rm lat};x/g_{\rm lat}^2,G)/g_{\rm lat}^2\to f(x)$ as $g_{\rm lat}\to0$,
 and the infinite-volume mass is
 $$\frac{mc^2}{\varepsilon_3}=\lim_{g_{\rm lat}\to0}\ \frac{\delta_\infty(g_{\rm lat})}{g_{\rm lat}^2},
@@ -113,6 +125,10 @@ The $d=3$ conjecture on the lattice route is therefore:
 > which satisfies $c\ge\gamma_2C_2/2$ for $g_{\rm lat}\ge g_0^{(2)}$, stays
 > bounded below by a positive constant for all $g_{\rm lat}>0$ and has a
 > finite limit $C$ as $g_{\rm lat}\to0$.
+
+This is a sufficient all-coupling version; the continuum target needs
+the positive finite limit near $g_{\rm lat}=0$, with construction, rather
+than positivity at every intermediate lattice coupling.
 
 **The abelian contrast in $d=3$.** For compact $U(1)$ in three dimensions
 Göpfert and Mack (abstract, B78) prove a gap at every coupling, so
@@ -143,11 +159,17 @@ $g_{\rm lat}^2$.
 | small-volume end | $f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]$ | $z=\delta_1^{(3)}g(L)^{2/3}[1+O(g^{2/3})]$ |
 | strong-coupling lattice end | $\delta_\infty/g_{\rm lat}^2\ge\gamma_2C_2/2$ | $\delta_\infty/g^2\ge\gamma_3C_2/2$ |
 | conjecture | $\inf_{g_{\rm lat}}c(g_{\rm lat})>0$, $c\to C$ | $\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda_{\rm lat})$ |
-| expected constant | $C=N/(2\pi)$ (Karabali--Nair, physics) | none in closed form |
-| existence | finite volume by stochastic quantisation (Chevyrev review, passage-level companion in docs) | finite-volume UV stability only |
+| physical gap constant | $C$ open; Karabali--Nair's $N/(2\pi)$ is a kinetic scale | none in closed form |
+| construction input | local renormalized stochastic flow; invariant measure and OS theory not supplied by that result | finite-volume UV stability only |
 
-Open in $d=3$: (i) the infinite-volume limit of the finite-volume
-construction; (ii) any lower bound on $f$ away from the two ends; (iii)
+Chandra, Chevyrev, Hairer and Shen explicitly leave global stochastic
+survival and an invariant measure open
+([2024 paper, introduction](https://arxiv.org/pdf/2201.03487), passage).
+The earlier table entry claiming finite-volume existence by stochastic
+quantization was too strong.
+
+Open in $d=3$: (i) the required finite- and infinite-volume physical
+construction; (ii) a lower bound on $f$ beyond the small-volume regime; (iii)
 the identification of $f$'s small-$x$ correction with the stochastic
 construction's estimates. Item (ii) is the conjecture itself, and the
 one-variable form means that a single inequality
@@ -157,8 +179,9 @@ $d=3$ mass gap.
 
 ## 5. Consequence for STATE
 
-The $d=3$ target is now a statement about one function of one variable
-with both ends known: $f(x)\sim\delta_1^{(2)}x^{-2/3}$ at $x\to0$ and
+The $d=3$ spectral target, conditional on construction, concerns one
+function of one variable: $f(x)\sim\delta_1^{(2)}x^{-2/3}$ in the
+small-volume approximation at $x\to0$ and
 $f\to C$ conjectured at $x\to\infty$, with the lattice ratio
 $\delta_\infty/g_{\rm lat}^2$ bounded below at strong coupling. It replaces
 the $d=3$ line of STATE. The next theorem-sized step in $d=3$ is a lower
