@@ -28,6 +28,12 @@ Principia work lives in the sibling `newtonlean` repository.
   Positive quantum action is an input to those quantum results; the
   independent necessity argument remains open. All three September 23
   adversarial review batches are complete.
+- [The premise-candidates note](../notes/record-floor-premise-candidates.md)
+  (2026-09-26) splits that argument into unit (charge quantization:
+  $\kappa_0=k_ee^2/c$), trade-off (a trilemma: no classical premise
+  closes M3) and auxiliary slots, adds a Larmor persistence bound
+  $\kappa_{\rm reg}(t_p)=(k_ee^2/c)(t_p/t_0)^{1/6}$ on registers, and
+  ranks the candidate premises with smuggling flags. Exploratory.
 - [The mass-gap position](../notes/mass-gap-position.md) and
   [conditional theorem](../notes/mass-gap-conditional-theorem.md) hold
   the pure-gauge map: finite-lattice and strong-coupling results,
