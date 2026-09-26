@@ -923,9 +923,9 @@ class="math inline">\(\prod_jm_j\)</span>, enters at the same order and
 is not computed here. The <span class="math inline">\(SU(2)\)</span>
 case of P(<span class="math inline">\(\alpha\)</span>) therefore needs
 one more fact: that the <span class="math inline">\(O(t)\)</span> terms,
-N2 and N3 together, combine into a constant, a coupling shift <span
-class="math inline">\(\delta_tS\)</span> and operators that are
-irrelevant on smooth fields.</p>
+N2 and N3 together, combine into a constant, coupling shifts and
+operators that are irrelevant on smooth fields. Proposition 7 below
+derives this formally for any compact group.</p>
 <p><strong>Correction, 2026-09-26 (referee check).</strong> The first
 version of the hypothesis below bounded <span
 class="math inline">\(-\log\Psi\)</span> itself and demanded large-field
@@ -941,7 +941,8 @@ Fix <span class="math inline">\(\delta\in(0,\frac14)\)</span>. Let</p>
 <p><span class="math display">\[\mathcal
 D(U)=-\log\Psi(U)-\sum_{f\perp1}\log
 \frac{k_{2t_{23}}(U_f)}{k_{t_{23}}(U_f)},\qquad
-S_{23}(U)=\sum_{f\perp1}\frac{|\log U_f|^2}{2t_{23}},\]</span></p>
+S_{\mu\nu}(U)=\sum_{f\in(\mu\nu)}\frac{|\log
+U_f|^2}{2t_{\mu\nu}},\]</span></p>
 <p>so that <span class="math inline">\(p_*\mu&#39;\)</span> is the
 coarse heat-kernel density times <span
 class="math inline">\(e^{-\mathcal D}\)</span> (for the free field,
@@ -954,14 +955,14 @@ class="math inline">\(\{\log U_p\}\)</span> (the form (5), with <span
 class="math inline">\(t_{23}\)</span> possibly renormalized by <span
 class="math inline">\(O(t)\)</span>), and for each <span
 class="math inline">\(t=\lambda_3a\le t_0\)</span> numbers <span
-class="math inline">\(c_{\rm vac}(t)\)</span> and <span
-class="math inline">\(\delta_t\)</span> with <span
-class="math inline">\(|\delta_t|\le Ct\)</span>, such that on the
-small-field set <span class="math inline">\(\{|\log U_p|\le
+class="math inline">\(c_{\rm vac}(t)\)</span> and coupling shifts <span
+class="math inline">\(\delta_t^{\mu\nu}\)</span>, one per plane, with
+<span class="math inline">\(|\delta_t^{\mu\nu}|\le Ct\)</span>, such
+that on the small-field set <span class="math inline">\(\{|\log U_p|\le
 t^{1/2-\delta}\ \text{for all }p\}\)</span></p>
 <p><span class="math display">\[\bigl|\mathcal D(U)-\mathcal
 D_0(U)-c_{\rm vac}N_{\rm cells}
--\delta_t\,S_{23}(U)\bigr|
+-\textstyle\sum_{\mu&lt;\nu}\delta_t^{\mu\nu}S_{\mu\nu}(U)\bigr|
 \le C\,t^{\alpha}\sum_p\bigl(1+|\log U_p|^2/t\bigr),\]</span></p>
 <p>the sum running over all coarse plaquettes. The same statement is
 required for heat-kernel actions perturbed by local terms of the size on
@@ -972,8 +973,81 @@ explicit factors of (2) suppress each plaquette outside the small-field
 set by <span class="math inline">\(e^{-t^{-2\delta}/4}\)</span>, up to a
 factor <span class="math inline">\(t^{-n/2}\)</span> per cell.
 Free-field check: <span class="math inline">\(\mathcal D=\mathcal
-D_0\)</span>, <span class="math inline">\(\delta_t=0\)</span>, every
-<span class="math inline">\(\alpha\)</span>.</p>
+D_0\)</span>, all <span
+class="math inline">\(\delta_t^{\mu\nu}=0\)</span>, every <span
+class="math inline">\(\alpha\)</span>. (Amended the same night: the
+first version allowed a shift of the transverse coupling only; the
+one-loop determinant below shifts the couplings of the cut faces as
+well.)</p>
+<p><strong>Proposition 7 (formal, any compact <span
+class="math inline">\(G\)</span>, isolated cube).</strong> Assume that
+Laplace’s method applies to (3) for one refined cube with a remainder of
+relative order <span class="math inline">\(t^2\)</span>, uniformly on
+the small-field set. Then P(<span class="math inline">\(\alpha\)</span>)
+holds for that cube with <span
+class="math inline">\(\alpha=\frac12-\delta\)</span> for every <span
+class="math inline">\(\delta&lt;\frac16\)</span>.</p>
+<p><em>Derivation.</em> To relative order <span
+class="math inline">\(t\)</span>, <span
+class="math inline">\(-\log\Psi=S_{\rm cl}+\frac12\log\det H+{\rm
+const}\)</span>, where <span class="math inline">\(S_{\rm cl}\)</span>
+is the minimum over the four midpoints of the exponent <span
+class="math inline">\(\sum_j[d(Q_j^{-1},m_j)^2+d(m_j,P_j)^2]/t_j+d(e,m_{\partial
+g})^2/(2t_m)\)</span> (the <span class="math inline">\(w=0\)</span>
+terms of the heat kernels) and <span class="math inline">\(H\)</span>
+its Hessian there; the two-loop terms are constants up to relative order
+<span class="math inline">\(t^2\)</span>. (i) <em>Classical part.</em>
+The Lie-algebra linearization of <span class="math inline">\(S_{\rm
+cl}\)</span> is the abelian problem, so its quadratic part is the free
+form, which is <span class="math inline">\(\mathcal D_0\)</span> after
+the old-face subtraction. The rest starts at cubic order:
+Baker–Campbell–Hausdorff terms such as the N1 commutator, <span
+class="math inline">\(\langle X_{\rm
+mid},[X_{12},X_{13}]\rangle/t\)</span>, and quartic invariants <span
+class="math inline">\(|X|^4/t\)</span>. On the small-field set, <span
+class="math inline">\(|X|^3/t\le t^{1/2-\delta}|X|^2/t\)</span> and
+<span class="math inline">\(|X|^4/t\le t^{1-2\delta}|X|^2/t\)</span>,
+both inside the remainder of P(<span
+class="math inline">\(\alpha\)</span>) with <span
+class="math inline">\(\alpha=\frac12-\delta\)</span>. (ii) <em>One-loop
+part.</em> The Hessian of <span class="math inline">\(|\log(e^\xi
+e^Y)|^2\)</span> in <span class="math inline">\(\xi\)</span> has no term
+linear in <span class="math inline">\(Y\)</span>, because the inner
+product is <span
+class="math inline">\(\operatorname{ad}\)</span>-invariant; its first
+correction is quadratic, of the form <span
+class="math inline">\(|[\xi,Y]|^2\)</span>. Hence <span
+class="math inline">\(\log\det H=\log\det H_0+{\rm
+tr}(H_0^{-1}H_1)+\dots\)</span> with <span
+class="math inline">\(H_1\)</span> quadratic in the fluxes, a
+combination of Killing inner products <span
+class="math inline">\(\langle X_f,X_{f&#39;}\rangle\)</span> with
+coefficients of order one, that is, <span
+class="math inline">\(O(t)\)</span> relative to the action. The terms
+with <span class="math inline">\(f,f&#39;\)</span> in different planes
+are odd under a reflection of the cube (the mid-plane reflection
+reverses the <span class="math inline">\((1j)\)</span> fluxes and fixes
+the mid-face flux; the reflection <span
+class="math inline">\(x_2\mapsto-x_2\)</span> reverses the <span
+class="math inline">\((12)\)</span> flux and fixes the <span
+class="math inline">\((13)\)</span> flux), and <span
+class="math inline">\(\Psi\)</span> is invariant under these
+reflections, so they vanish. What remains is diagonal in the planes: the
+coupling shifts <span
+class="math inline">\(\delta_t^{\mu\nu}S_{\mu\nu}\)</span>. (iii) The
+old-face ratio <span class="math inline">\(k_{2t}/k_t\)</span> is even
+in <span class="math inline">\(\log U_f\)</span> and contributes a
+constant and a transverse coupling shift. <span
+class="math inline">\(\square\)</span></p>
+<p>Proposition 7 is power counting made explicit for one cube; its
+hypothesis, a uniform Laplace remainder on the small-field set, is
+exactly the missing estimate. Proposition 6 computes the curvature part
+of (ii) for <span class="math inline">\(SU(2)\)</span>. For a whole
+mid-plane the same bookkeeping applies, but <span
+class="math inline">\(H\)</span> couples all mid-edges and <span
+class="math inline">\(\log\det H\)</span> is non-local in the fluxes;
+controlling it is the cluster expansion of open problem 2 in the
+README.</p>
 <p>Under P(<span class="math inline">\(\alpha\)</span>) the per-step
 error on smooth observables is <span
 class="math inline">\(O((\lambda_3a)^\alpha)\)</span> and the coupling

@@ -571,8 +571,9 @@ side flux. For fluctuating fields $d_j^2\sim t$, so both are
 $O(t)$ relative to the action. N3, the non-Gaussian and commutator
 corrections in $\prod_jm_j$, enters at the same order and is not computed
 here. The $SU(2)$ case of P($\alpha$) therefore needs one more fact: that
-the $O(t)$ terms, N2 and N3 together, combine into a constant, a coupling
-shift $\delta_tS$ and operators that are irrelevant on smooth fields.
+the $O(t)$ terms, N2 and N3 together, combine into a constant, coupling
+shifts and operators that are irrelevant on smooth fields. Proposition 7
+below derives this formally for any compact group.
 
 **Correction, 2026-09-26 (referee check).** The first version of the
 hypothesis below bounded $-\log\Psi$ itself and demanded large-field
@@ -585,18 +586,19 @@ $\delta\in(0,\frac14)$. Let
 
 $$\mathcal D(U)=-\log\Psi(U)-\sum_{f\perp1}\log
 \frac{k_{2t_{23}}(U_f)}{k_{t_{23}}(U_f)},\qquad
-S_{23}(U)=\sum_{f\perp1}\frac{|\log U_f|^2}{2t_{23}},$$
+S_{\mu\nu}(U)=\sum_{f\in(\mu\nu)}\frac{|\log U_f|^2}{2t_{\mu\nu}},$$
 
 so that $p_*\mu'$ is the coarse heat-kernel density times $e^{-\mathcal D}$
 (for the free field, $\mathcal D$ is (5)). There exist $\alpha>2\delta$,
 $t_0>0$, $C<\infty$, a local quadratic form $\mathcal D_0$ in
 $\{\log U_p\}$ (the form (5), with $t_{23}$ possibly renormalized by
 $O(t)$), and for each $t=\lambda_3a\le t_0$ numbers $c_{\rm vac}(t)$ and
-$\delta_t$ with $|\delta_t|\le Ct$, such that on the small-field set
+coupling shifts $\delta_t^{\mu\nu}$, one per plane, with
+$|\delta_t^{\mu\nu}|\le Ct$, such that on the small-field set
 $\{|\log U_p|\le t^{1/2-\delta}\ \text{for all }p\}$
 
 $$\bigl|\mathcal D(U)-\mathcal D_0(U)-c_{\rm vac}N_{\rm cells}
--\delta_t\,S_{23}(U)\bigr|
+-\textstyle\sum_{\mu<\nu}\delta_t^{\mu\nu}S_{\mu\nu}(U)\bigr|
 \le C\,t^{\alpha}\sum_p\bigl(1+|\log U_p|^2/t\bigr),$$
 
 the sum running over all coarse plaquettes. The same statement is
@@ -605,7 +607,52 @@ on the right, so that it can be iterated. No large-field clause on
 $\Psi$ is needed: $\Psi\le\prod_gk_{2t_g}(1)$, and the explicit factors
 of (2) suppress each plaquette outside the small-field set by
 $e^{-t^{-2\delta}/4}$, up to a factor $t^{-n/2}$ per cell. Free-field
-check: $\mathcal D=\mathcal D_0$, $\delta_t=0$, every $\alpha$.
+check: $\mathcal D=\mathcal D_0$, all $\delta_t^{\mu\nu}=0$, every
+$\alpha$. (Amended the same night: the first version allowed a shift of
+the transverse coupling only; the one-loop determinant below shifts the
+couplings of the cut faces as well.)
+
+**Proposition 7 (formal, any compact $G$, isolated cube).** Assume that
+Laplace's method applies to (3) for one refined cube with a remainder of
+relative order $t^2$, uniformly on the small-field set. Then P($\alpha$)
+holds for that cube with $\alpha=\frac12-\delta$ for every
+$\delta<\frac16$.
+
+*Derivation.* To relative order $t$,
+$-\log\Psi=S_{\rm cl}+\frac12\log\det H+{\rm const}$, where $S_{\rm cl}$
+is the minimum over the four midpoints of the exponent
+$\sum_j[d(Q_j^{-1},m_j)^2+d(m_j,P_j)^2]/t_j+d(e,m_{\partial g})^2/(2t_m)$
+(the $w=0$ terms of the heat kernels) and $H$ its Hessian there; the
+two-loop terms are constants up to relative order $t^2$.
+(i) *Classical part.* The Lie-algebra linearization of $S_{\rm cl}$ is the
+abelian problem, so its quadratic part is the free form, which is
+$\mathcal D_0$ after the old-face subtraction. The rest starts at cubic
+order: Baker--Campbell--Hausdorff terms such as the N1 commutator,
+$\langle X_{\rm mid},[X_{12},X_{13}]\rangle/t$, and quartic invariants
+$|X|^4/t$. On the small-field set, $|X|^3/t\le t^{1/2-\delta}|X|^2/t$
+and $|X|^4/t\le t^{1-2\delta}|X|^2/t$, both inside the remainder of
+P($\alpha$) with $\alpha=\frac12-\delta$.
+(ii) *One-loop part.* The Hessian of $|\log(e^\xi e^Y)|^2$ in $\xi$ has no
+term linear in $Y$, because the inner product is $\operatorname{ad}$-invariant;
+its first correction is quadratic, of the form $|[\xi,Y]|^2$. Hence
+$\log\det H=\log\det H_0+{\rm tr}(H_0^{-1}H_1)+\dots$ with $H_1$
+quadratic in the fluxes, a combination of Killing inner products
+$\langle X_f,X_{f'}\rangle$ with coefficients of order one, that is,
+$O(t)$ relative to the action. The terms with $f,f'$ in different planes
+are odd under a reflection of the cube (the mid-plane reflection
+reverses the $(1j)$ fluxes and fixes the mid-face flux; the reflection
+$x_2\mapsto-x_2$ reverses the $(12)$ flux and fixes the $(13)$ flux), and
+$\Psi$ is invariant under these reflections, so they vanish. What remains
+is diagonal in the planes: the coupling shifts $\delta_t^{\mu\nu}S_{\mu\nu}$.
+(iii) The old-face ratio $k_{2t}/k_t$ is even in $\log U_f$ and
+contributes a constant and a transverse coupling shift. $\square$
+
+Proposition 7 is power counting made explicit for one cube; its
+hypothesis, a uniform Laplace remainder on the small-field set, is
+exactly the missing estimate. Proposition 6 computes the curvature part
+of (ii) for $SU(2)$. For a whole mid-plane the same bookkeeping applies,
+but $H$ couples all mid-edges and $\log\det H$ is non-local in the fluxes;
+controlling it is the cluster expansion of open problem 2 in the README.
 
 Under P($\alpha$) the per-step error on smooth observables is
 $O((\lambda_3a)^\alpha)$ and the coupling shifts sum to a finite

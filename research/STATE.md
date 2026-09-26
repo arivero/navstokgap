@@ -50,9 +50,9 @@ Principia work lives in the sibling `newtonlean` repository.
    renormalization in $\binom{D-1}{2}$ transverse planes. The free-field
    defect is exact (Prop. 2); for $U(1)$ one step is proved (Thm 5:
    free-field step up to density $e^{-\pi^2/(8\lambda_3a)}$). $SU(2)$
-   midpoint: exact structure and leading curvature term (Prop. 6). Next:
-   show the $O(t)$ terms N2+N3 of the $SU(2)$ cube reduce to a coupling
-   shift plus irrelevant operators; then $SU(3)$; then iteration.
+   midpoint: exact structure and leading curvature term (Prop. 6); P($\alpha$)
+   for one cube holds formally for any compact $G$ (Prop. 7). Next: its
+   uniform Laplace remainder for $SU(2)$, then a mid-plane, then iteration.
 2. **Newton necessity:** construct the refinement map for body and
    physical record, with the unobserved constant-force composition as
    the reference. Seek positive cost from independently justified
