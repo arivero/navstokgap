@@ -837,6 +837,95 @@ limit.</p>
 class="math inline">\(SU(3)\)</span> the bridge expectations <span
 class="math inline">\(E\,R(m_j)\)</span> are matrices, and the isolated
 cube is where N2 and N3 first appear.</p>
+<p><strong>The <span class="math inline">\(SU(2)\)</span> bridge
+midpoint.</strong> In the group metric of §1, <span
+class="math inline">\(SU(2)\)</span> is the three-sphere of radius 2
+(curvature <span class="math inline">\(\frac14\)</span>), with cut locus
+at geodesic distance <span class="math inline">\(2\pi\)</span> and <span
+class="math inline">\(|\rho|^2=\frac14\)</span>. Poisson summation of
+the character series gives the exact kernel</p>
+<p><span
+class="math display">\[k_t(e^X)=e^{t/8}\sqrt{8\pi}\,t^{-3/2}\sum_{w\in\mathbb
+Z}
+\frac{\theta-4\pi w}{\sin(\theta/2)}\,e^{-(\theta-4\pi w)^2/(2t)},
+\qquad\theta=|X|, \tag{11}\]</span></p>
+<p>with respect to normalized Haar measure; the <span
+class="math inline">\(w=0\)</span> term is the Gaussian with the
+Jacobian <span class="math inline">\((\theta/2)/\sin(\theta/2)\)</span>,
+and <span class="math inline">\(e^{t/8}=e^{t|\rho|^2/2}\)</span>. For a
+cut side face, left-translate so that the bridge runs from <span
+class="math inline">\(e\)</span> to <span
+class="math inline">\(e^X\)</span>, <span
+class="math inline">\(d=|X|&lt;2\pi\)</span>, and write the midpoint as
+<span class="math inline">\(m=m_*e^{\xi}\)</span> with <span
+class="math inline">\(m_*=e^{X/2}\)</span>.</p>
+<p><strong>Proposition 6 (<span class="math inline">\(SU(2)\)</span>
+midpoint: structure and leading covariance).</strong> (a) Exactly, <span
+class="math inline">\(E\,D^J(m)=D^J(m_*)\Lambda^J\)</span> with <span
+class="math inline">\(\Lambda^J\)</span> real and diagonal in the weight
+basis of the axis <span class="math inline">\(\hat X\)</span>, and all
+odd moments of <span class="math inline">\(\xi\)</span> vanish. (b) As
+<span class="math inline">\(t\to0\)</span>, uniformly for <span
+class="math inline">\(d\le d_0&lt;2\pi\)</span>, <span
+class="math inline">\(\xi\)</span> is Gaussian to leading order with
+covariance</p>
+<p><span class="math display">\[\frac t4\,{\rm
+diag}\Bigl(1,\frac1{h(d)},\frac1{h(d)}\Bigr),\qquad
+h(d)=\frac d4\cot\frac d4,\]</span></p>
+<p>in the frame (axis, two transverse directions), so that</p>
+<p><span
+class="math display">\[\Lambda^J_{\mu\mu}\simeq\exp\Bigl\{-\frac
+t8\Bigl[\mu^2
++\frac{J(J+1)-\mu^2}{h(d)}\Bigr]\Bigr\}.\]</span></p>
+<p><em>Proof.</em> (a) The geodesic symmetry <span
+class="math inline">\(g\mapsto m_*g^{-1}m_*\)</span> is an isometry that
+exchanges the endpoints, so it preserves the bridge law, and in normal
+coordinates at <span class="math inline">\(m_*\)</span> it is <span
+class="math inline">\(\xi\mapsto-\xi\)</span>. Conjugation by the
+one-parameter group <span class="math inline">\(e^{sX}\)</span> fixes
+both endpoints and <span class="math inline">\(m_*\)</span>, so <span
+class="math inline">\(\Lambda^J\)</span> commutes with it and is
+diagonal in the axis basis; the symmetry gives <span
+class="math inline">\(\Lambda^J=(\Lambda^J)^\dagger\)</span>. (b) By
+(11), off the image terms (which are <span
+class="math inline">\(O(e^{-c/t})\)</span> for <span
+class="math inline">\(d\le d_0\)</span>), the bridge density is <span
+class="math inline">\(e^{-(d(e,m)^2+d(m,e^X)^2)/t}\)</span> times smooth
+factors. On a space of constant curvature <span
+class="math inline">\(\kappa\)</span>, the Hessian of <span
+class="math inline">\(\frac12d(p,\cdot)^2\)</span> at distance <span
+class="math inline">\(r\)</span> is 1 radially and <span
+class="math inline">\(r\sqrt\kappa\cot(r\sqrt\kappa)\)</span>
+transversally. At the midpoint <span
+class="math inline">\(r=d/2\)</span>, <span
+class="math inline">\(\kappa=\frac14\)</span>, so the exponent has
+Hessian <span class="math inline">\((4/t)\,{\rm diag}(1,h,h)\)</span>;
+Laplace’s method gives the covariance, and the Gaussian characteristic
+function on the spin-<span class="math inline">\(J\)</span>
+representation gives <span class="math inline">\(\Lambda^J\)</span> to
+leading order. <span class="math inline">\(\square\)</span></p>
+<p>Part (b) is labelled as leading-order asymptotics: an explicit
+remainder bound is open. It makes N2 concrete. Positive curvature
+enlarges the transverse fluctuation of the midpoint, <span
+class="math inline">\(1/h(d)=1+d^2/48+O(d^4)\)</span>, so the softening
+of the mid-face weight grows with the side-face flux. Splitting <span
+class="math inline">\(J(J+1)/h+\mu^2(1-1/h)\)</span>, each cut face adds
+<span class="math inline">\(t_j/(4h(d_j))\)</span> to the mid-face heat
+time, about <span class="math inline">\(t_jd_j^2/192\)</span> above the
+abelian value <span class="math inline">\(t_j/4\)</span>, and an axial
+term <span class="math inline">\(-\frac{t_j}8(1-\frac1{h(d_j)})(\hat
+X_j\cdot T)^2\)</span> of the same order, which couples the mid-face to
+the direction of the side flux. For fluctuating fields <span
+class="math inline">\(d_j^2\sim t\)</span>, so both are <span
+class="math inline">\(O(t)\)</span> relative to the action. N3, the
+non-Gaussian and commutator corrections in <span
+class="math inline">\(\prod_jm_j\)</span>, enters at the same order and
+is not computed here. The <span class="math inline">\(SU(2)\)</span>
+case of P(<span class="math inline">\(\alpha\)</span>) therefore needs
+one more fact: that the <span class="math inline">\(O(t)\)</span> terms,
+N2 and N3 together, combine into a constant, a coupling shift <span
+class="math inline">\(\delta_tS\)</span> and operators that are
+irrelevant on smooth fields.</p>
 <p><strong>Correction, 2026-09-26 (referee check).</strong> The first
 version of the hypothesis below bounded <span
 class="math inline">\(-\log\Psi\)</span> itself and demanded large-field

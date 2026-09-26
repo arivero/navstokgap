@@ -515,6 +515,65 @@ For $SU(2)$ and
 $SU(3)$ the bridge expectations $E\,R(m_j)$ are matrices, and the
 isolated cube is where N2 and N3 first appear.
 
+**The $SU(2)$ bridge midpoint.** In the group metric of §1, $SU(2)$ is
+the three-sphere of radius 2 (curvature $\frac14$), with cut locus at
+geodesic distance $2\pi$ and $|\rho|^2=\frac14$. Poisson summation of the
+character series gives the exact kernel
+
+$$k_t(e^X)=e^{t/8}\sqrt{8\pi}\,t^{-3/2}\sum_{w\in\mathbb Z}
+\frac{\theta-4\pi w}{\sin(\theta/2)}\,e^{-(\theta-4\pi w)^2/(2t)},
+\qquad\theta=|X|, \tag{11}$$
+
+with respect to normalized Haar measure; the $w=0$ term is the Gaussian
+with the Jacobian $(\theta/2)/\sin(\theta/2)$, and $e^{t/8}=e^{t|\rho|^2/2}$.
+For a cut side face, left-translate so that the bridge runs from $e$ to
+$e^X$, $d=|X|<2\pi$, and write the midpoint as $m=m_*e^{\xi}$ with
+$m_*=e^{X/2}$.
+
+**Proposition 6 ($SU(2)$ midpoint: structure and leading covariance).**
+(a) Exactly, $E\,D^J(m)=D^J(m_*)\Lambda^J$ with $\Lambda^J$ real and
+diagonal in the weight basis of the axis $\hat X$, and all odd moments of
+$\xi$ vanish. (b) As $t\to0$, uniformly for $d\le d_0<2\pi$, $\xi$ is
+Gaussian to leading order with covariance
+
+$$\frac t4\,{\rm diag}\Bigl(1,\frac1{h(d)},\frac1{h(d)}\Bigr),\qquad
+h(d)=\frac d4\cot\frac d4,$$
+
+in the frame (axis, two transverse directions), so that
+
+$$\Lambda^J_{\mu\mu}\simeq\exp\Bigl\{-\frac t8\Bigl[\mu^2
++\frac{J(J+1)-\mu^2}{h(d)}\Bigr]\Bigr\}.$$
+
+*Proof.* (a) The geodesic symmetry $g\mapsto m_*g^{-1}m_*$ is an isometry
+that exchanges the endpoints, so it preserves the bridge law, and in
+normal coordinates at $m_*$ it is $\xi\mapsto-\xi$. Conjugation by the
+one-parameter group $e^{sX}$ fixes both endpoints and $m_*$, so
+$\Lambda^J$ commutes with it and is diagonal in the axis basis; the
+symmetry gives $\Lambda^J=(\Lambda^J)^\dagger$. (b) By (11), off the image
+terms (which are $O(e^{-c/t})$ for $d\le d_0$), the bridge density is
+$e^{-(d(e,m)^2+d(m,e^X)^2)/t}$ times smooth factors. On a space of
+constant curvature $\kappa$, the Hessian of $\frac12d(p,\cdot)^2$ at
+distance $r$ is 1 radially and $r\sqrt\kappa\cot(r\sqrt\kappa)$
+transversally. At the midpoint $r=d/2$, $\kappa=\frac14$, so the exponent
+has Hessian $(4/t)\,{\rm diag}(1,h,h)$; Laplace's method gives the
+covariance, and the Gaussian characteristic function on the spin-$J$
+representation gives $\Lambda^J$ to leading order. $\square$
+
+Part (b) is labelled as leading-order asymptotics: an explicit remainder
+bound is open. It makes N2 concrete. Positive curvature enlarges the
+transverse fluctuation of the midpoint, $1/h(d)=1+d^2/48+O(d^4)$, so the
+softening of the mid-face weight grows with the side-face flux. Splitting
+$J(J+1)/h+\mu^2(1-1/h)$, each cut face adds $t_j/(4h(d_j))$ to the
+mid-face heat time, about $t_jd_j^2/192$ above the abelian value
+$t_j/4$, and an axial term $-\frac{t_j}8(1-\frac1{h(d_j)})(\hat X_j\cdot T)^2$
+of the same order, which couples the mid-face to the direction of the
+side flux. For fluctuating fields $d_j^2\sim t$, so both are
+$O(t)$ relative to the action. N3, the non-Gaussian and commutator
+corrections in $\prod_jm_j$, enters at the same order and is not computed
+here. The $SU(2)$ case of P($\alpha$) therefore needs one more fact: that
+the $O(t)$ terms, N2 and N3 together, combine into a constant, a coupling
+shift $\delta_tS$ and operators that are irrelevant on smooth fields.
+
 **Correction, 2026-09-26 (referee check).** The first version of the
 hypothesis below bounded $-\log\Psi$ itself and demanded large-field
 suppression of $\Psi$; the free field violates the first (it needs
