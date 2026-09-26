@@ -1,54 +1,89 @@
-# navstokgap: the Planck gap in Newton's comparison, and the Yang--Mills mass gap
+# navstokgap: what survives refinement, from Newton's action to the $SU(3)$ mass gap
 
 **Website:** <https://arivero.github.io/navstokgap/> lists every result by
 track, with the Markdown source and the typeset PDF for each. Rebuild it with
 `make site`.
 
-The active goal, set on 2026-09-17, is to establish the Planck gap with
-Newton-age arguments and their modern equivalents. Galileo's comparison of
-the inertial line with the falling parabola, whose area Newton takes to
-zero in Lemmas X and XI, acquires a floor of order $\hbar$ once it has to
-be recorded. The $SU(3)$ Yang--Mills mass gap, the goal from 2026-09-16,
-is paused with its map intact.
+**Goal (2026-09-26).** One paper comparing what survives refinement in
+Newton's action problem, in pure $SU(3)$ Yang--Mills theory, and in QCD
+with zero and nonzero quark masses. The two proof goals are **the
+necessity of a positive action scale in Newton's Galileo comparison**,
+from independently justified premises, and **the continuum existence and
+mass gap of pure $SU(3)$ Yang--Mills** in four dimensions. The pion is a
+benchmark for which symmetries a mechanism preserves. The
+[working note](notes/three-continuum-limits.md) sets out the comparison;
+[STATE](research/STATE.md) is the live queue.
 
-## Read the current result
+## The organizing idea: local insertion laws
 
-[The cost of a mark: Newton's vanishing sagitta and a floor of order $\hbar$](notes/planck-gap-paper.md)
-([PDF](out/papers/planck-gap-paper.pdf)) is the synthesis:
+A limit is built by inserting one new variable at a time and asking how
+the old observations and the dynamics are recovered.
 
-- Newton's limit has no geometric floor, and a recorded comparison has one.
-- For every instrument,
-  $\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ge(1-2\epsilon)\hbar$:
-  Newton's sagitta $s$ is paired with the impulse a record leaves
-  undetermined, and his impulse $J$ with the displacement.
-- For uncorrelated Gaussian marks the floor takes the sharp form
-  $\tau\Delta E\ge24z_{1-\epsilon}^2\hbar$, from the conjugacy of a mark's
-  error and the impulse it delivers.
-- Newton's inscribed polygon differs from the parabola by the pure phase
-  $F^2\sum_j\tau_j^3/(24m\hbar)$, the parabolic segments of the chords
-  converted by $\hbar$, whatever the state of the body.
-- Newton's *Opticks* holds a measured least length, corpuscles that carry
-  an impulse and a disposition whose period times momentum is invariant
-  under refraction; what it prints entails the negation of the premise
-  that would join them to a floor.
-- Archimedes' exhaustion of the parabola, read through $\hbar$, removes a
-  phase at each round; the Galileo area is Democritus's third.
+- [Inserting a point, subdividing a cell](notes/refinement-composition-and-limit.md)
+  ([PDF](out/papers/refinement-composition-and-limit.pdf)): eliminating an
+  inserted Newtonian time changes the discrete action by
+  $-F^2uv(u+v)/(8M)$, a cubic counterterm restores exact composition, and a
+  summable-defect theorem gives the limit over arbitrary partitions,
+  $\|Q_\pi-U_T\|\le F^2T|\pi|^2/(24M\hbar)$. Two-dimensional Yang--Mills
+  subdivides exactly by heat-kernel convolution.
+- [Series and parallel](notes/series-parallel-gauge-refinement.md)
+  ([PDF](out/papers/series-parallel-gauge-refinement.pdf)): halving one
+  lattice direction factors exactly into series moves, which close in
+  every dimension, and parallel insertions in the $\binom{D-1}{2}$
+  transverse planes, which carry the whole renormalization problem (none
+  in $D=2$, one in $D=3$, three in $D=4$). The free-field defect is exact
+  and equals the error of Migdal's bond moving. For compact $U(1)$ in
+  three dimensions one step is proved to equal the free step up to an
+  extensive error of density $e^{-\pi^2/(8\lambda_3a)}$, which explains
+  why its lattice gap (Göpfert--Mack) disappears in the fixed-coupling
+  continuum limit (Gross). The $SU(2)$ midpoint's curvature term is explicit.
 
-[STATE](research/STATE.md) lists every result with the note that proves it.
+## Open problems, stated for the next agents
 
-## The paused mass-gap track
+Each item is a theorem-sized step with its hypotheses written in the
+linked note.
+
+1. **The $SU(2)$ cube at order $t$.** Show that the $O(\lambda_3a)$
+   curvature and commutator terms of one parallel insertion reduce to a
+   coupling shift plus operators irrelevant on smooth fields (Hypothesis
+   P($\alpha$) of the series/parallel note, §4), then do $SU(3)$.
+2. **A full mid-plane and iteration.** Prove P($\alpha$) for a whole
+   non-abelian mid-plane by a small-field cluster expansion, stable under
+   iteration, giving three-dimensional ultraviolet control in the
+   insertion language; compare Balaban's 1985 ultraviolet stability.
+3. **The four-dimensional logarithm.** Extract the one-loop running
+   $g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2$ from the three parallel insertions
+   of each directional halving.
+4. **From ultraviolet control to a gap.** On the fixed-$\lambda_3$
+   trajectory, prove $E=C_3\hbar c\lambda_3$ with $0<C_3<\infty$. The
+   compact $U(1)$ comparison shows the mechanism must come from the
+   non-abelian terms.
+5. **Newton's record.** Give the refinement law for body and record, and
+   derive a positive action cost from premises justified independently of
+   quantum kinematics ([the Planck paper](notes/planck-gap-paper.md)
+   holds the conditional bounds and the map of what fails).
+
+## The Newton component
+
+[The cost of a mark](notes/planck-gap-paper.md)
+([PDF](out/papers/planck-gap-paper.pdf)) is the developed synthesis. With
+canonical quantum kinematics supplied, every instrument obeys
+$\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)$,
+pairing Newton's sagitta $s$ with the impulse a record leaves undetermined
+and his impulse $J$ with the displacement; Newton's inscribed polygon
+differs from the parabola by the pure phase $F^2\sum_j\tau_j^3/(24m\hbar)$;
+and the *Opticks* holds a measured least length and a period-times-momentum
+invariant under refraction. The independent necessity of $\hbar>0$ is
+open problem 5.
+
+## The Yang--Mills map
 
 [The position note](notes/mass-gap-position.md)
-([PDF](out/papers/mass-gap-position.pdf)) is the synthesis: what is
-proved, what is imported, what has been ruled out, and what remains.
-Its full working queue as of 2026-09-18 is STATE at commit 6bc52cb. In
-short, the
-conjecture decomposes into six named statements, of which the
-finite-lattice gap and the volume-uniform strong-coupling gap are proved
-here; the clause $m<\infty$ is reduced to the existence of the theory
-plus the nontriviality of one flowed correlator; and the clause $m>0$
-remains, with real-space blocking and expansion around the free theory
-both closed off by explicit computation.
+([PDF](out/papers/mass-gap-position.pdf)) and the
+[conditional theorem](notes/mass-gap-conditional-theorem.md) hold what is
+proved (finite-lattice and volume-uniform strong-coupling gaps), what is
+imported, and the open blocking and mixing estimates (H1, H2), with
+construction and nontriviality explicit.
 
 ## Earlier consolidated result
 
