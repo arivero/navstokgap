@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What survives refinement: the pion, the Yang–Mills gap and Newton&#x27;s action</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>What survives refinement: the pion, the Yang–Mills gap and Newton’s
+action</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-continuum-limits.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-continuum-limits.pdf">PDF</a></p><p><strong>Working conclusion, 2026-09-26.</strong> The common problem
+is to construct a limit while preserving a specified physical structure.
+In pure <span class="math inline">\(SU(3)\)</span> Yang–Mills it is a
+positive energy threshold. In chiral QCD it is the broken global
+symmetry and observable spectral weight that require a zero threshold.
+In Newton’s comparison it is a positive action cost of physical records
+while the time partition becomes arbitrarily fine. All three require
+control independent of the regulator. The quantities controlled, and the
+reasons for their survival, differ.</p>
+<p>User direction of this date makes this comparison the intended frame
+of the eventual paper. <strong>The two main proof goals remain the pure
+<span class="math inline">\(SU(3)\)</span> mass gap and the necessity of
+a positive action scale in Newton’s comparison.</strong> QCD with
+massless and with nonzero quark masses is an orientation and a source of
+mechanisms, rather than a third full construction programme. This note
+supplies the definitions, two elementary limit criteria, and the plan.
+It proves neither main goal.</p>
+<p>The <a href="planck-gap-paper.html">Planck paper</a> remains the
+developed Newton component; the <a
+href="mass-gap-position.html">Yang–Mills position</a> and <a
+href="mass-gap-conditional-theorem.html">conditional theorem</a> remain
+the technical map for pure gauge theory. Their results retain their
+stated hypotheses. The present note changes the destination of the
+synthesis.</p>
+<h2 id="compare-physical-quantities-with-the-regulators-separate">1.
+Compare physical quantities, with the regulators separate</h2>
+<p>Use <span class="math inline">\(a\)</span> for the spacetime lattice
+spacing, <span class="math inline">\(L\)</span> for spatial box size,
+<span class="math inline">\(m_q\)</span> for a renormalized quark mass,
+and <span class="math inline">\(\varepsilon=|\pi|\)</span> for the
+largest step of a Newtonian time partition. Euclidean time extent is
+taken to infinity to select zero temperature. Write <span
+class="math inline">\(E_*\)</span> for an energy threshold, <span
+class="math inline">\(M_*=E_*/c^2\)</span> for a mass, and <span
+class="math inline">\(\mu_*=E_*/(\hbar c)\)</span> for an inverse
+correlation length. This avoids the convention in older notes where
+<span class="math inline">\(m\)</span> sometimes denotes an energy.</p>
+<p>For an isotropic reflection-positive lattice theory, on a specified
+physical channel, normalize the transfer matrix by its vacuum eigenvalue
+and write</p>
+<p><span class="math display">\[T_a=e^{-aH_a/(\hbar c)},\qquad
+\delta_a=\frac{aE_*(a)}{\hbar c}=a\mu_*(a).\]</span></p>
+<p>A continuum theory with <span
+class="math inline">\(0&lt;E_*&lt;\infty\)</span> therefore has <span
+class="math inline">\(\delta_a\to0\)</span>. A massless channel also has
+<span class="math inline">\(\delta_a\to0\)</span>. Their distinction is
+the limit of <span class="math inline">\(\delta_a/a\)</span>, together
+with convergence of the states and observables that detect it. A
+strong-coupling lattice gap at fixed bare coupling does not specify that
+limit.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison</th>
+<th>Quantity to retain in physical units</th>
+<th>Required limiting structure</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pure <span class="math inline">\(SU(3)\)</span></td>
+<td><span class="math inline">\(0&lt;E_{\rm YM}&lt;\infty\)</span></td>
+<td>A nontrivial continuum theory; a gap above its vacuum</td>
+</tr>
+<tr class="even">
+<td>Two-flavour QCD, <span class="math inline">\(m_q=0\)</span></td>
+<td><span class="math inline">\(E_\pi=0\)</span> with nonzero pion
+spectral weight</td>
+<td>Conserved non-singlet axial current and a broken-symmetry
+vacuum</td>
+</tr>
+<tr class="odd">
+<td>Two-flavour QCD, small <span
+class="math inline">\(m_q&gt;0\)</span></td>
+<td><span class="math inline">\(E_\pi(m_q)&gt;0\)</span>, tending to
+zero with <span class="math inline">\(m_q\)</span></td>
+<td>Controlled explicit symmetry breaking and the same physical
+scale</td>
+</tr>
+<tr class="even">
+<td>Newton comparison</td>
+<td><span class="math inline">\(h_*&gt;0\)</span> in a specified class
+of physical records</td>
+<td>A record algebra and cost surviving <span
+class="math inline">\(\varepsilon\to0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The first three rows use a quantum theory with <span
+class="math inline">\(\hbar&gt;0\)</span> already in its definition. The
+last main goal asks how that positive action structure is justified. The
+pion supplies a useful check: positive <span
+class="math inline">\(\hbar\)</span> and a dynamically generated
+strong-interaction scale can coexist with zero energy gap.</p>
+<h2 id="pure-yangmills-retain-coercivity-through-the-limit">2. Pure
+Yang–Mills: retain coercivity through the limit</h2>
+<p>The target is a nontrivial four-dimensional <span
+class="math inline">\(SU(3)\)</span> theory with the Wightman or
+Osterwalder–Schrader properties, and physical Hamiltonian <span
+class="math inline">\(H\)</span> satisfying</p>
+<p><span class="math display">\[H\Omega=0,\qquad
+E_{\rm YM}:=\inf\bigl(\operatorname{spec}H\setminus\{0\}\bigr)
+\in(0,\infty).\]</span></p>
+<p>One chooses a vacuum sector and proves the corresponding vacuum and
+clustering properties. This target requires a gap above the vacuum; it
+does not prescribe every point of the spectrum above the threshold. The
+official statement explicitly couples existence, axioms and the gap (<a
+href="https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf">Jaffe–Witten,
+§§4–6</a>, passage).</p>
+<p>For the lattice route, fix a renormalized physical scale and tune
+<span class="math inline">\(g_0(a)\)</span> toward zero. A sufficient
+spectral estimate has the form</p>
+<p><span class="math display">\[H_{a,L}-E_{0,a,L}\ \ge\
+E_-(1-P_{0,a,L}),\qquad E_-&gt;0,\]</span></p>
+<p>uniformly along the trajectory in sufficiently small <span
+class="math inline">\(a\)</span> and arbitrarily large <span
+class="math inline">\(L\)</span>, on the gauge-invariant Hilbert space.
+To pass this estimate to a continuum theory one still needs convergence
+of renormalized local observables, positivity, covariance, regularity
+and nontriviality. An upper estimate or a surviving finite-energy
+excitation prevents all non-vacuum states from escaping to infinite
+energy.</p>
+<p>A corresponding correlation route is a bound <span
+class="math inline">\(C_O(t)\le K_Oe^{-E_-t/\hbar}\)</span> for positive
+Euclidean time autocorrelations of a dense family of vacuum-subtracted
+local vectors. The constants must survive the cutoff limit for their
+chosen renormalizations. One rapidly decaying glueball correlator
+establishes only a channel statement. Reflection positivity and
+reconstruction are part of the route from correlations to the physical
+Hamiltonian; a Langevin relaxation rate by itself is a different
+object.</p>
+<p>The existing H1/H2 route aims to deliver <span
+class="math inline">\(E_-=(\hbar
+c/a_*)\min(\gamma_*,\gamma&#39;)\)</span>. It remains conditional on the
+blocking and mixing estimates. Construction and nontriviality, called T4
+in the <a href="mass-gap-obligations-lattice.html">obligations map</a>,
+must remain explicit as well. We choose <span
+class="math inline">\(L\to\infty\)</span> at fixed <span
+class="math inline">\(a\)</span> followed by <span
+class="math inline">\(a\to0\)</span> along the trajectory as the working
+order; interchanging these operations requires its own uniform
+estimates.</p>
+<h2 id="the-pion-preserve-the-symmetry-that-requires-a-soft-channel">3.
+The pion: preserve the symmetry that requires a soft channel</h2>
+<p>Take <span class="math inline">\(SU(3)\)</span> colour with two
+degenerate quarks, zero temperature, vacuum angle zero, and no
+electromagnetism. This fixes what is meant by the comparison with and
+without a quark mass. Additional flavours or electromagnetism would
+change the statement.</p>
+<p><strong>Massless case.</strong> Conditional on a local relativistic
+continuum theory and spontaneous breaking <span
+class="math inline">\(SU(2)_L\mathbin{\times}SU(2)_R\to
+SU(2)_V\)</span>, the Goldstone theorem requires three massless modes
+with nonzero axial-current matrix elements. These are the pion modes.
+The theorem’s symmetry-breaking premise is a dynamical obligation in
+QCD; the theorem does not establish it merely from the presence of
+fermions (<a
+href="https://doi.org/10.1103/PhysRev.127.965">Goldstone–Salam–Weinberg
+1962</a>, abstract; <a
+href="https://arxiv.org/pdf/hep-ph/9311274">Leutwyler 1993, §§2–3</a>,
+passage).</p>
+<p>A possible order of limits for the per-flavour order parameter is</p>
+<p><span
+class="math display">\[\Sigma_R=-\lim_{m_q\downarrow0}\lim_{L\to\infty}\lim_{a\to0}
+\langle\bar u u\rangle_{R,a,L,m_q}&gt;0,\]</span></p>
+<p>with a positive mass selecting the vacuum and the physical scale held
+fixed. The inner continuum limit is taken at fixed physical <span
+class="math inline">\(L,m_q\)</span>. An exactly symmetric finite-volume
+state has zero symmetry-breaking expectation at zero source; it cannot
+select the required vacuum by itself. Finite-volume zero modes and the
+infinite-volume order parameter must be distinguished (<a
+href="https://arxiv.org/pdf/0812.2797">Damgaard–Fukaya 2009,
+introduction</a>, passage). The displayed order is a proposed
+construction order, with existence at each stage an obligation.</p>
+<p><strong>Nonzero case.</strong> At fixed small positive <span
+class="math inline">\(m_q\)</span>, removing <span
+class="math inline">\(a\)</span> retains explicit chiral breaking. In
+the conventional broken-phase low-energy description, put <span
+class="math inline">\(e_q=m_qc^2\)</span> and let <span
+class="math inline">\(B_E&gt;0\)</span> have energy units. Then</p>
+<p><span class="math display">\[E_\pi^2=2B_Ee_q[1+r(e_q)],\qquad
+r(e_q)\longrightarrow0
+\quad(e_q\downarrow0).\]</span></p>
+<p>This is the leading chiral mass relation, conditional on the broken
+phase and its controlled low-energy expansion; higher orders include
+chiral logarithms. In particular, <span
+class="math inline">\(a\to0\)</span> at fixed <span
+class="math inline">\(e_q&gt;0\)</span> is different from <span
+class="math inline">\(e_q\to0\)</span> (<a
+href="https://arxiv.org/pdf/hep-ph/9609467">Leutwyler, <em>Light Quark
+Masses</em>, eq. (1)</a>, passage). We use this as a benchmark, without
+claiming a constructive proof of massive QCD or a lower bound on every
+channel from this formula.</p>
+<p>There is a sharper identity underneath the expansion. Define <span
+class="math inline">\(\mu_q=m_qc/\hbar\)</span> and <span
+class="math inline">\(\mu_\pi=E_\pi/(\hbar c)\)</span>, both inverse
+lengths. Assume the renormalized non-singlet Ward identity in compatible
+Euclidean conventions, away from contact insertions:</p>
+<p><span class="math display">\[\partial_\alpha A^b_\alpha=2\mu_q
+P^b.\]</span></p>
+<p>With pole amplitudes defined by <span
+class="math inline">\(\langle0|A^b_\alpha|\pi^d(k)\rangle=i\delta^{bd}{\cal
+F}_\pi k_\alpha\)</span> and <span
+class="math inline">\(\langle0|P^b|\pi^d\rangle=\delta^{bd}{\cal
+G}_\pi\)</span>, its one-pion matrix element reads</p>
+<p><span class="math display">\[\mu_\pi^2{\cal F}_\pi=2\mu_q{\cal
+G}_\pi.\]</span></p>
+<p>The conventional continuation fixes the displayed phases. The
+equation is exact once the current identity and the pion pole exist;
+deriving the leading mass formula also uses the small-mass behaviour of
+the residues. A pole with nonzero residue must survive the limit. An
+unrenormalized divergent pseudoscalar susceptibility is insufficient:
+contact terms and ultraviolet divergences need separate control.</p>
+<p>At finite <span class="math inline">\(a\)</span> the regulator
+matters. A Ginsparg–Wilson Dirac operator has an exact lattice
+non-singlet chiral symmetry (<a
+href="https://arxiv.org/abs/hep-lat/9802011">Lüscher 1998</a>,
+abstract). Wilson fermions instead require critical-mass tuning and a
+restored, renormalized Ward identity (<a
+href="https://doi.org/10.1140/epjc/s10052-019-7287-1">Bali et al. 2019,
+§2</a>, passage). Exact lattice chirality alone supplies neither
+spontaneous breaking nor a continuum construction.</p>
+<p>For the final paper this comparison earns its place by testing the
+mechanism. A proposed pure-gauge estimate cannot be carried unchanged to
+chirally broken QCD if it gaps the pion channel. Colour gauge symmetry
+and global axial flavour symmetry have different roles. Supersymmetric
+cancellation of transverse zero-point energies, recorded in <a
+href="low-dimensional-mass-gap.html">G07</a>, is a separate mechanism
+from QCD’s Goldstone pions. Nor does a massless pion imply a massless
+coloured gluon.</p>
+<h2 id="newton-retain-a-record-cost-while-the-polygon-error-vanishes">4.
+Newton: retain a record cost while the polygon error vanishes</h2>
+<p>Use <span class="math inline">\(M\)</span> for the body’s mass,
+constant force <span class="math inline">\(F\)</span>, horizontal speed
+<span class="math inline">\(v\)</span>, and comparison duration <span
+class="math inline">\(T\)</span>. The specified Galileo comparison
+is</p>
+<p><span class="math display">\[q_I(t)=(vt,0),\qquad
+q_F(t)=(vt,Ft^2/2M),\]</span> <span
+class="math display">\[A(T)=\frac{vFT^3}{6M},\qquad
+{\cal A}(T):=\frac{3F}{v}A(T)=\frac{F^2T^3}{2M}=T\Delta E.\]</span></p>
+<p>For a partition <span class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,T]\)</span>, the action difference associated
+with its inscribed chord segments is</p>
+<p><span class="math display">\[K_\pi=\frac{F^2}{24M}\sum_j(\Delta
+t_j)^3,
+\qquad 0\le K_\pi\le\frac{F^2T}{24M}\varepsilon^2\to0.\]</span></p>
+<p>This follows by <span class="math inline">\((\Delta
+t_j)^3\le\varepsilon^2\Delta t_j\)</span> and <span
+class="math inline">\(\sum_j\Delta t_j=T\)</span>. In the supplied
+quantum lift the phase difference is <span
+class="math inline">\(K_\pi/\hbar\)</span>, which also tends to zero at
+fixed <span class="math inline">\(\hbar&gt;0\)</span>. The <a
+href="polygon-lift-phase.html">polygon note</a> separately gives an
+ordering phase <span class="math inline">\(\Phi_\pi\)</span> with</p>
+<p><span class="math display">\[\hbar\Phi_\pi+4K_\pi=\frac{{\cal
+A}(T)}3.\]</span></p>
+<p>Thus one geometric action defect vanishes while the ordering
+comparison retains a finite action at fixed <span
+class="math inline">\(T\)</span>. Reading that phase requires a
+relative-phase experiment. Its derivation already assumes the Weyl
+relations and positive <span class="math inline">\(\hbar\)</span>.</p>
+<p>The proposed <span class="math inline">\(h\)</span> gap concerns what
+a physical record must cost. For a fixed class <span
+class="math inline">\(\mathfrak M_\varepsilon\)</span> of calibrated
+marks, define</p>
+<p><span class="math display">\[\kappa_\varepsilon
+=\inf_{M_j\in\mathfrak M_\varepsilon}\delta_j\Delta_j,\]</span></p>
+<p>where <span class="math inline">\(\delta_j\)</span> is reading error
+and <span class="math inline">\(\Delta_j\)</span> impulse uncertainty.
+The class, available preparations, apparatus resources and meaning of
+the uncertainty must be specified, with feasible informative records of
+finite cost retained in the limit. A restricted theorem might establish
+<span
+class="math inline">\(\inf_{0&lt;\varepsilon&lt;\varepsilon_0}\kappa_\varepsilon\ge\kappa_*&gt;0\)</span>.
+The general-instrument formulation instead bounds the disturbance
+functional defined in the <a
+href="record-costs-disturbance.html">disturbance note</a>. These are
+distinct formulations of record cost; a single-mark product does not by
+itself establish a universal protocol bound.</p>
+<p>The current paper proves such conditional bounds using quantum
+kinematics or an assumed positive mark trade-off. The main necessity
+goal is to supply independently justified physical premises that force a
+positive scale and its universality, without placing that scale in the
+premise. Identification with <span
+class="math inline">\(h=2\pi\hbar\)</span> is a further calibration
+obligation. Newton’s optical fits provide a candidate product <span
+class="math inline">\(\Lambda p\)</span>; the <a
+href="planck-gap-paper.html">paper’s §8</a> keeps its extra
+indeterminacy and cross-colour universality premises visible.</p>
+<p>Two refinement operations must stay separate: making more marks
+within fixed <span class="math inline">\(T\)</span>, and asking each
+shrinking cell to decide the force on its own. The Gaussian result
+bounds the latter decision window; it permits marks much denser than
+that window. A positive action cost is compatible with continuous time
+and with convergence of the polygon. It is also compatible with zero
+energy gap, as the quantum free particle illustrates.</p>
+<h2
+id="two-elementary-criteria-for-carrying-spectral-information-to-a-limit">5.
+Two elementary criteria for carrying spectral information to a
+limit</h2>
+<p>These statements are standard consequences of the spectral theorem
+and weak convergence of positive measures, included to state exactly
+what the comparison needs. They are written derivations, with no
+numerical test and no claim of novelty.</p>
+<p><strong>Proposition 1 (a surviving lower bound).</strong> Suppose
+renormalized, vacuum-subtracted local vectors <span
+class="math inline">\(O_n\Omega_n\)</span> have finite positive energy
+spectral measures <span class="math inline">\(\nu_n\)</span> converging
+weakly to <span class="math inline">\(\nu\)</span> in a reconstructed
+limiting theory. If every <span class="math inline">\(\nu_n\)</span> is
+supported in <span class="math inline">\([E_-,\infty)\)</span> for one
+<span class="math inline">\(E_-&gt;0\)</span>, then so is <span
+class="math inline">\(\nu\)</span>.</p>
+<p><em>Proof.</em> Every nonnegative continuous test function compactly
+supported in <span class="math inline">\([0,E_-)\)</span> integrates to
+zero against every <span class="math inline">\(\nu_n\)</span>, hence
+against <span class="math inline">\(\nu\)</span>. Such test functions
+exhaust the interval. If the statement holds on a dense family of local
+vectors orthogonal to the vacuum, the spectral projection of <span
+class="math inline">\(H\)</span> onto <span
+class="math inline">\((0,E_-)\)</span> is zero. A nonzero limiting
+measure supplies surviving finite-energy spectral content. <span
+class="math inline">\(\square\)</span></p>
+<p>For positive autocorrelations <span class="math inline">\(C_n(t)=\int
+e^{-Et/\hbar}\,d\nu_n(E)\)</span>, a uniform physical decay rate is
+another way to obtain the support condition. The normalization of the
+observables and their nonzero limit are part of the hypotheses.</p>
+<p><strong>Proposition 2 (a surviving zero threshold).</strong> Suppose
+instead that <span class="math inline">\(\nu_n\Rightarrow\nu\)</span>,
+that <span class="math inline">\(\nu(\{0\})=0\)</span>, and that for
+every <span class="math inline">\(\eta&gt;0\)</span> there is <span
+class="math inline">\(w_\eta&gt;0\)</span> such that, for all
+sufficiently large <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\nu_n([0,\eta/2])\ge
+w_\eta.\]</span></p>
+<p>Then <span class="math inline">\(\nu((0,\eta))&gt;0\)</span> for
+every <span class="math inline">\(\eta&gt;0\)</span>, and the channel’s
+excited energy threshold is zero.</p>
+<p><em>Proof.</em> The closed-set inequality for weak convergence
+gives</p>
+<p><span
+class="math display">\[\nu([0,\eta/2])\ge\limsup_n\nu_n([0,\eta/2])\ge
+w_\eta.\]</span></p>
+<p>Removing the zero atom leaves positive weight in <span
+class="math inline">\((0,\eta)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The no-atom hypothesis distinguishes arbitrarily soft excitations
+from an extra vacuum contribution. It belongs to a selected pure vacuum
+and a connected observable. The chiral comparison suggests obtaining the
+required surviving weight from an axial Ward identity and a nonzero
+order parameter, with the Goldstone theorem supplying the continuum
+implication.</p>
+<p><strong>Why convergence of eigenvalues alone is too weak.</strong>
+For <span class="math inline">\(E_0&gt;0\)</span> let <span
+class="math inline">\(\mathrm d_x\)</span> denote unit point mass at
+energy <span class="math inline">\(x\)</span>, and set</p>
+<p><span class="math display">\[\nu_n=(1-e^{-n})\mathrm
+d_{E_0}+e^{-n}\mathrm d_{E_0/n}.\]</span></p>
+<p>Every <span class="math inline">\(\nu_n\)</span> has lowest energy
+<span class="math inline">\(E_0/n\to0\)</span>, yet <span
+class="math inline">\(\nu_n\Rightarrow\mathrm d_{E_0}\)</span>. The soft
+state’s observable weight disappears. Conversely, a positive gap at each
+<span class="math inline">\(n\)</span> can collapse with nonvanishing
+weight. These examples identify the estimates a continuum argument must
+actually carry.</p>
+<p>For Newton the analogous surviving object is a calibrated record and
+its information about the comparison. No spectral measure is supplied by
+classical mechanics for this purpose. The useful transfer is the proof
+discipline: compatible observable limits, nonvanishing response, and a
+bound uniform over admitted refinements. Any stronger equivalence
+requires a constructed mathematical map.</p>
+<h2 id="the-mechanism-worth-developing-across-the-two-main-goals">6. The
+mechanism worth developing across the two main goals</h2>
+<p>The <a href="action-floor-yang-mills-gap.html">action-floor note
+G08</a> supplies one concrete bridge. A transverse oscillator of
+frequency <span class="math inline">\(\Omega(x)\)</span> obeys</p>
+<p><span class="math display">\[\frac{p_y^2}{2M}+\frac12M\Omega(x)^2y^2
+\ \ge\ \frac12\hbar\Omega(x).\]</span></p>
+<p>When <span class="math inline">\(\Omega(x)\)</span> grows along a
+classically escaping valley, this all-state operator bound can confine
+that valley. Its force comes from the action scale together with the
+non-abelian commutator potential. The solved matrix models establish the
+mechanism in a specified Hamiltonian; extension to four-dimensional
+gauge theory requires uniform control of the additional modes and
+renormalization.</p>
+<p>The pion comparison asks which flat directions an interaction is
+allowed to lift. A broken exact global symmetry protects Goldstone
+directions. Pure Yang–Mills has no corresponding axial flavour symmetry.
+The absence of that protection makes lifting possible; the positive
+bound still has to be proved. Finite quark mass then supplies a
+controlled way to lift the protected direction, which is why both pion
+cases are useful as orientation.</p>
+<p>The candidate unifying question is therefore: <strong>which
+structures enforce an irreducible cost, which protect a soft direction,
+and which survive the removal of the regulator?</strong> Quantum
+kinematics supplies an action unit to both QCD theories. Their different
+spectra depend on dynamics and symmetry. A successful Newton necessity
+argument must explain the action structure at the preceding level.</p>
+<h2 id="work-toward-the-final-paper">7. Work toward the final paper</h2>
+<p>The intended paper can be called <em>What survives refinement:
+action, symmetry and the continuum</em>. Its architecture is: Galileo’s
+comparison and the three regulators; the pion benchmark with and without
+explicit breaking; physical spectral limits and reconstruction; the
+established Newton record bounds; the valley-lifting bridge; and the two
+remaining proof obligations. Historical claims stay tied to the held
+source companions and the sibling <code>newtonlean</code> work. The
+present Planck paper becomes a component of this synthesis. This working
+architecture does not designate either open goal as solved.</p>
+<p>The research order is deliberately bounded.</p>
+<ol type="1">
+<li><strong>Next constructive step: the <span
+class="math inline">\(SU(3)\)</span> small-volume bridge.</strong>
+Develop the H3 estimate for the zero-mode Hamiltonian plus the even
+torus valley potential in the <a
+href="weak-coupling-feshbach-reduction.html">Feshbach note</a>. Seek an
+explicit lower bound <span class="math display">\[E_{\rm small}(L)\ge
+(d_3-Cg(L)^{2/3})g(L)^{2/3}\frac{\hbar c}{L},\qquad d_3&gt;0,\]</span>
+with an explicit admissible coupling interval. State the operator, gauge
+sector and cutoff dependence. A confining potential or a positive ground
+energy alone does not establish the excitation gap; the first excited
+energy and the ground energy need comparison. Stop at one proved
+estimate, or the precise uncontrolled term in that estimate.
+Fixed-cutoff H3 would be a result, with its boundary retained; it would
+not close H1/H2 or T4 of the full mass-gap map.</li>
+<li><strong>Newton necessity: construct the missing physical
+premise.</strong> Use one explicit model of records and their
+composition, with calibrated lengths, impulses and time. Seek a
+refinement-independent positive cost from dynamical or optical premises
+that have their own justification. The deliverable is one implication
+with its full admissible class, or an explicit identification of the
+additional premise needed. A result starting from the canonical
+commutator or M3 belongs to the existing conditional branch. For the
+optical route, observable relative phase and a common action unit across
+probes must be established separately. Attainment of the existing
+disturbance bounds remains useful, but secondary to this task.</li>
+<li><strong>Use the pion as a bounded test of a proposed
+mechanism.</strong> Carry a non-singlet Ward identity and its nonzero
+residue through the chosen regulator, or state these as explicit inputs.
+Recover the zero-mass case and its small-mass lifting. This is one
+comparison section; a full fermionic-QCD construction is outside the
+active queue.</li>
+<li><strong>Return the successful bridge to the field theory.</strong>
+Determine whether the small-volume estimate survives eliminating nonzero
+modes with constants uniform in <span class="math inline">\(a\)</span>,
+and then whether it supplies the order-one-coupling blocking estimate
+missing from H1. Preserve the chosen vacuum, physical scale and
+observable normalization. Reconstruction and nontriviality stay separate
+obligations; their order may interact with the estimates rather than
+follow a single irreversible chain.</li>
+<li><strong>Integrate proved results into the final synthesis.</strong>
+Replace the corresponding conditional statements only when their
+hypotheses are discharged. Complete the historical reading obligations
+in the Planck paper before submission. Keep the pion’s role explanatory
+unless it actually changes one of the two proofs.</li>
+</ol>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>The destination becomes a joint paper on survival under refinement,
+with the Newton action necessity and pure <span
+class="math inline">\(SU(3)\)</span> continuum mass gap as the two main
+goals. Pion physics, at zero and nonzero quark mass, is the symmetry and
+limit-order benchmark requested by the user. The next bounded
+constructive task is the H3 small-volume bridge; the Newton necessity
+task retains the independent-premise requirement. The three review
+batches of the existing Planck paper are complete; attainment and its
+submission obligations remain open. This note is the live plan, and adds
+no claim of a four-dimensional construction or an independent derivation
+of <span class="math inline">\(h&gt;0\)</span>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

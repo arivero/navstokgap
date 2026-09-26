@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inserting a point, subdividing a cell: how the limit is built</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Inserting a point, subdividing a cell: how the limit is built</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/refinement-composition-and-limit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-composition-and-limit.pdf">PDF</a></p><p><strong>Result and direction, 2026-09-26.</strong> The user’s
+insertion <span
+class="math inline">\((t_0,t_1,t_2,t_3)\mapsto(t_0,t_1,t_2,t_{2.6},t_3)\)</span>
+identifies the right local question: after adding a variable, how are
+the old observations and the dynamics recovered? For Galileo’s constant
+force, eliminating the new point gives an exact composition law and an
+explicit action correction. A summable-defect lemma then constructs a
+limit independent of the sequence of insertions. In <span
+class="math inline">\(1+1\)</span>-dimensional pure Yang–Mills, a
+heat-kernel convolution gives exact consistency under inserting an edge.
+In <span class="math inline">\(1+2\)</span> and <span
+class="math inline">\(1+3\)</span> dimensions the corresponding
+integration produces interactions among several boundary variables;
+their control is the renormalization problem.</p>
+<p>This is a constructive development of the <a
+href="three-continuum-limits.html">joint-paper plan</a>. The elementary
+proofs below assemble established ingredients, with no novelty claim.
+They produce the constant-force limit and the exact two-dimensional
+comparison, and specify sufficient estimates for further limits. The
+positive action necessity and the four-dimensional <span
+class="math inline">\(SU(3)\)</span> gap remain the two main goals; the
+pion remains a symmetry benchmark.</p>
+<h2 id="what-an-insertion-has-to-preserve">1. What an insertion has to
+preserve</h2>
+<p>Three operations occur at a new time <span
+class="math inline">\(r\)</span> between <span
+class="math inline">\(s\)</span> and <span
+class="math inline">\(t\)</span>.</p>
+<ol type="1">
+<li>A classical calculation adds <span
+class="math inline">\(q(r)\)</span> and eliminates it by the equations
+of motion, or by stationary action with fixed endpoints.</li>
+<li>A quantum propagator integrates over an unobserved intermediate
+coordinate: <span class="math inline">\(K(t,s)=\int
+K(t,r)K(r,s)\,dq(r)\)</span>.</li>
+<li>A physical mark introduces an apparatus and a record. Forgetting
+that record applies the mark’s nonselective channel to the body.</li>
+</ol>
+<p>Each is a precise composition question. In the third case the
+nonselective channel must act as the identity on retained observables if
+one is to recover the unmarked dynamics. Trace preservation alone does
+not establish that. Thus inserting a variable in a calculation and
+inserting an actual measurement have separate refinement laws.</p>
+<p>For a gauge lattice, multiplying fine links along an old edge defines
+the old holonomy, while integrating the other variables defines its new
+probability law. Both the projection of variables and the law must be
+specified. A choice of fine variables over a coarse configuration also
+needs a conditional distribution; coarse data alone do not choose that
+distribution.</p>
+<h2 id="newtons-one-point-insertion-with-all-constants">2. Newton’s
+one-point insertion, with all constants</h2>
+<p>Take transverse mass <span class="math inline">\(M&gt;0\)</span>,
+force <span class="math inline">\(F\)</span>, and a cell of duration
+<span class="math inline">\(h=u+v\)</span>, split after <span
+class="math inline">\(u&gt;0\)</span>, with <span
+class="math inline">\(v&gt;0\)</span>. This is the symmetric impulsive
+construction of the <a href="polygon-lift-phase.html">polygon note</a>,
+a modern constant-force realization of the inscribed-chord comparison.
+It does not assert that every historical force polygon used this
+update.</p>
+<p>Write a kick and a free drift as</p>
+<p><span class="math display">\[K_J(q,p)=(q,p+J),\qquad
+D_h(q,p)=(q+hp/M,p).\]</span></p>
+<p>The cell map is</p>
+<p><span class="math display">\[S_h=K_{Fh/2}D_hK_{Fh/2},\qquad
+S_h(q,p)=\left(q+\frac{hp}{M}+\frac{Fh^2}{2M},p+Fh\right).\]</span></p>
+<p>The input momentum is before the first half-kick and the output is
+after the last. At a shared vertex the retained momentum is the one
+between the two adjacent half-kicks; the incoming and outgoing chord
+momenta depend on the partition.</p>
+<p><strong>Proposition 1 (finite classical compatibility).</strong>
+<span class="math inline">\(S_vS_u=S_{u+v}\)</span> for every positive
+<span class="math inline">\(u,v\)</span>.</p>
+<p><em>Proof.</em> The composed position increment is <span
+class="math inline">\(up/M+Fu^2/(2M)+v(p+Fu)/M+Fv^2/(2M)
+=(u+v)p/M+F(u+v)^2/(2M)\)</span>; the impulses sum to <span
+class="math inline">\(F(u+v)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The insertion changes the old endpoint half-kicks as well. Relative
+to the old two-kick cell, the impulse changes at times <span
+class="math inline">\(0,u,h\)</span> are</p>
+<p><span class="math display">\[-\frac{Fv}{2},\qquad \frac{Fh}{2},\qquad
+-\frac{Fu}{2}.\]</span></p>
+<p>Their total and their first time moment vanish. Consequently the old
+endpoint position and momentum, with the convention just specified, are
+preserved. Adding only the middle kick would describe a different force
+history. The new chord slopes change, while retained positions and the
+states between half-kicks agree.</p>
+<p>The same result can be read directly from a discrete action. Put</p>
+<p><span
+class="math display">\[L_h(x,y)=\frac{M(y-x)^2}{2h}+\frac{Fh}{2}(x+y).\]</span></p>
+<p><strong>Proposition 2 (eliminating the new point).</strong> For fixed
+endpoints <span class="math inline">\(x,y\)</span>, the unique minimizer
+of <span class="math inline">\(L_u(x,z)+L_v(z,y)\)</span> is</p>
+<p><span class="math display">\[z_*
+=\frac{vx+uy}{h}-\frac{Fuv}{2M},\]</span></p>
+<p>and</p>
+<p><span class="math display">\[\min_z\{L_u(x,z)+L_v(z,y)\}
+=L_h(x,y)-\frac{F^2uvh}{8M}. \tag{1}\]</span></p>
+<p><em>Proof.</em> With <span class="math inline">\(\bar
+z=(vx+uy)/h\)</span> and <span class="math inline">\(w=z-\bar
+z\)</span>, completing the square gives</p>
+<p><span class="math display">\[L_u(x,z)+L_v(z,y)-L_h(x,y)
+=\frac{Mh}{2uv}w^2+\frac{Fh}{2}w.\]</span></p>
+<p>The minimum is at <span class="math inline">\(w=-Fuv/(2M)\)</span>
+and equals the displayed constant. <span
+class="math inline">\(\square\)</span></p>
+<p>That constant is independent of the endpoints, so its derivatives do
+not change the classical endpoint momenta. It does change the action.
+Define</p>
+<p><span
+class="math display">\[\ell_h(x,y)=L_h(x,y)-\frac{F^2h^3}{24M}.\]</span></p>
+<p>Since <span class="math inline">\(h^3-u^3-v^3=3uvh\)</span>, equation
+(1) becomes the exact law</p>
+<p><span
+class="math display">\[\min_z\{\ell_u(x,z)+\ell_v(z,y)\}=\ell_h(x,y).
+\tag{2}\]</span></p>
+<p>This constructs the corrected endpoint action from finite insertion
+compatibility. Two different orders of inserting several points agree:
+the correction removed is always <span
+class="math inline">\(F^2(h^3-\sum_i h_i^3)/(24M)\)</span>.
+Equivalently, the two-step insertion correction satisfies the
+associativity identity <span
+class="math inline">\(d(u,v)+d(u+v,w)=d(v,w)+d(u,v+w)\)</span>.</p>
+<p>Among continuous corrections depending only on the cell duration, the
+cubic correction is determined up to <span class="math inline">\(E_{\rm
+ref}h\)</span>: subtracting two solutions of the insertion equation
+gives the additive Cauchy equation. This remaining freedom changes the
+zero of energy, leaving spectral differences unchanged. Thus insertion
+consistency fixes a nontrivial part of the action while retaining the
+expected energy-normalization freedom.</p>
+<p>For the user’s example, if <span
+class="math inline">\(t_{2.6}\)</span> lies at <span
+class="math inline">\(3/5\)</span> of the old cell, then <span
+class="math inline">\(u=3h/5\)</span>, <span
+class="math inline">\(v=2h/5\)</span>. The insertion removes <span
+class="math inline">\(3F^2h^3/(100M)\)</span>, or <span
+class="math inline">\(18/25\)</span> of that cell’s original cubic
+correction; <span class="math inline">\(7/25\)</span> remains. These are
+exact fractions.</p>
+<p>The geometric interpretation stays with Galileo’s inertial line and
+parabola. At horizontal speed <span class="math inline">\(V\)</span>,
+the triangle between the old chord and the two new chords has area <span
+class="math inline">\(VFuvh/(4M)\)</span> for <span
+class="math inline">\(F,V&gt;0\)</span>; multiplying by <span
+class="math inline">\(F/(2V)\)</span> gives (1)’s action correction. It
+is the chord-segment diagnostic of that comparison, not a Kepler swept
+sector.</p>
+<h2 id="quantum-composition-and-the-arbitrary-partition-limit">3.
+Quantum composition, and the arbitrary-partition limit</h2>
+<p>Supply canonical quantum kinematics <span
+class="math inline">\([q,p]=i\hbar\)</span>, <span
+class="math inline">\(\hbar&gt;0\)</span>, and use the unitary cell
+operator</p>
+<p><span
+class="math display">\[Q_h=e^{iFhq/(2\hbar)}e^{-ihp^2/(2M\hbar)}e^{iFhq/(2\hbar)}.\]</span></p>
+<p>Its coordinate kernel has phase <span
+class="math inline">\(L_h/\hbar\)</span> and free normalization <span
+class="math inline">\((M/(2\pi i\hbar h))^{1/2}\)</span>, with the usual
+positive-time branch. Completing the same square as in Proposition 2 in
+the oscillatory Gaussian integral gives</p>
+<p><span
+class="math display">\[Q_vQ_u=e^{-iF^2uvh/(8M\hbar)}Q_h.\]</span></p>
+<p>The Gaussian normalization composes too: the intermediate integral
+contributes <span class="math inline">\((2\pi i\hbar
+uv/(Mh))^{1/2}\)</span>. Hence</p>
+<p><span class="math display">\[U_h=e^{-iF^2h^3/(24M\hbar)}Q_h,
+\qquad U_vU_u=U_{u+v}. \tag{3}\]</span></p>
+<p>This is the constant-force propagator, with generator <span
+class="math inline">\(p^2/(2M)-Fq\)</span>. The scalar correction is
+measurable as a relative phase when histories are coherently compared.
+It cancels from the body-only channel <span
+class="math inline">\(\rho\mapsto Q_h\rho Q_h^\dagger\)</span>.</p>
+<p>For <span class="math inline">\(F\ne0\)</span> this mechanical
+Hamiltonian on the line has spectrum <span class="math inline">\(\mathbb
+R\)</span>: unitary translations of <span
+class="math inline">\(q\)</span> shift it by arbitrary real constants.
+The present limit is a unitary evolution over a finite experiment. Its
+action-cost question concerns records of that experiment; the
+field-theory vacuum spectral gap is a further kind of statement.</p>
+<p>The following finite-to-limit statement also covers situations with
+an error instead of an exact scalar correction. It is an elementary
+contractive form of a noncommutative sewing argument (<a
+href="https://arxiv.org/abs/0706.0202">Feyel–de La Pradelle–Mokobodzki
+2007</a>, abstract; the stronger telescoping hypothesis used here is
+stated and proved below).</p>
+<p><strong>Theorem 3 (summable insertion defects).</strong> Let <span
+class="math inline">\(Q(t,s)\)</span> be bounded operators on a fixed
+Banach space, <span class="math inline">\(s&lt;t\)</span> in a finite
+interval, with <span class="math inline">\(\|Q(t,s)\|\le1\)</span>.
+Suppose for every <span class="math inline">\(s&lt;r&lt;t\)</span>,</p>
+<p><span class="math display">\[\|Q(t,s)-Q(t,r)Q(r,s)\|
+\le C\bigl((t-s)^p-(r-s)^p-(t-r)^p\bigr),\qquad p&gt;1.
+\tag{4}\]</span></p>
+<p>For a finite partition <span class="math inline">\(\pi\)</span> of
+<span class="math inline">\([s,t]\)</span>, let <span
+class="math inline">\(Q_\pi\)</span> be the chronological product. There
+exists a unique limit <span class="math inline">\(U(t,s)\)</span> as the
+mesh tends to zero, independent of nesting, unequal cell lengths or
+insertion order, and</p>
+<p><span class="math display">\[\|Q_\pi-U(t,s)\|\le C\sum_{I\in\pi}|I|^p
+\le C(t-s)|\pi|^{p-1}. \tag{5}\]</span></p>
+<p>The limit is contractive and satisfies <span
+class="math inline">\(U(t,r)U(r,s)=U(t,s)\)</span>. If <span
+class="math inline">\(Q(t,s)\)</span> tends strongly to the identity as
+<span class="math inline">\(t\downarrow s\)</span>, so does <span
+class="math inline">\(U(t,s)\)</span>.</p>
+<p><em>Proof.</em> One insertion changes the full product by at most
+(4), since all operators before and after that cell are contractions.
+Successive insertions telescope the potential <span
+class="math inline">\(\sum_I|I|^p\)</span>, so for a refinement <span
+class="math inline">\(\pi&#39;\)</span>,</p>
+<p><span class="math display">\[\|Q_\pi-Q_{\pi&#39;}\|
+\le C\left(\sum_{I\in\pi}|I|^p-
+\sum_{J\in\pi&#39;}|J|^p\right).\]</span></p>
+<p>Two arbitrary partitions have a common refinement, their union. Their
+products differ by at most <span class="math inline">\(C(t-s)\)</span>
+times the sum of their meshes to the power <span
+class="math inline">\(p-1\)</span>. Completeness gives the limit;
+refining a fixed <span class="math inline">\(\pi\)</span> proves (5).
+Joining partitions on <span class="math inline">\([s,r]\)</span> and
+<span class="math inline">\([r,t]\)</span> proves composition. The
+one-cell bound <span class="math inline">\(\|U(t,s)-Q(t,s)\|\le
+C(t-s)^p\)</span> proves the final assertion. <span
+class="math inline">\(\square\)</span></p>
+<p>For constant force, <span
+class="math inline">\(|e^{ix}-1|\le|x|\)</span> gives (4) with <span
+class="math inline">\(p=3\)</span> and <span
+class="math inline">\(C=F^2/(24M\hbar)\)</span>. Thus, for duration
+<span class="math inline">\(T\)</span>,</p>
+<p><span class="math display">\[\|Q_\pi-U_T\|
+\le\frac{F^2T}{24M\hbar}|\pi|^2. \tag{6}\]</span></p>
+<p>This is a constructed arbitrary-partition limit. The analogous
+estimate for a general nonlinear force needs a suitable domain and
+stability norm; unbounded commutators need not satisfy (4) in operator
+norm. The constant-force proof does not silently supply that
+extension.</p>
+<p>Neither (2) nor (3) determines a universal action unit. The classical
+composition is exact, and the quantum composition works at every
+supplied <span class="math inline">\(\hbar&gt;0\)</span>. For the Newton
+necessity goal, the new question is which independently justified
+physical record or optical law selects the quantum composition structure
+and a common positive normalization. Refinement of unobserved
+intermediate variables already works at fixed <span
+class="math inline">\(\hbar\)</span>; an action floor concerns the
+physical records, not a failure of (6).</p>
+<h2 id="gauge-refinement-geometry-marginalization-and-reflection">4.
+Gauge refinement: geometry, marginalization and reflection</h2>
+<p>Take a finite oriented lattice <span
+class="math inline">\(\Gamma\)</span> and a refinement <span
+class="math inline">\(\Gamma&#39;\)</span>. For an old edge represented
+by a path of fine edges, define</p>
+<p><span class="math display">\[p_{\Gamma&#39;\Gamma}(U)_e=U_{e_1}\cdots
+U_{e_k},\]</span></p>
+<p>using inverses when an orientation reverses. These maps compose
+exactly under further refinements and are gauge covariant:
+transformations at the new interior vertices cancel in the product.
+Holonomies of old loops are therefore represented exactly on the fine
+lattice.</p>
+<p>For a probability measure the consistency equation is stronger:</p>
+<p><span
+class="math display">\[p_{\Gamma&#39;\Gamma*}\mu_{\Gamma&#39;}=\mu_\Gamma.
+\tag{7}\]</span></p>
+<p>At finite volume the left side can always be formed. Its effective
+Boltzmann weight is the integral of the fine weight over the fibres of
+<span class="math inline">\(p\)</span>, with the Haar disintegration.
+This defines an effective action up to a normalization constant.
+Equation (7) with a proposed coarse action is a theorem to prove, not a
+consequence of having multiplied the links correctly.</p>
+<p>Uniformly halving a <span class="math inline">\(D\)</span>-cube
+produces <span class="math inline">\(2^D\)</span> subcubes: four, eight
+or sixteen for <span class="math inline">\(D=2,3,4\)</span>. Local
+subdivisions and anisotropic spacetime refinements are possible as well,
+provided neighbouring cells and the projection maps remain compatible.
+The uniform grid is a convenient sequence through a larger refinement
+problem.</p>
+<p><strong>Time refinement alone versus a field continuum.</strong> At
+fixed spatial spacing <span class="math inline">\(a_s\)</span>, a
+Hamiltonian lattice theory has the exact temporal law <span
+class="math inline">\(T_{a_s}(t)=e^{-tH_{a_s}/\hbar}\)</span> and <span
+class="math inline">\(T_{a_s}(u+v)=T_{a_s}(v)T_{a_s}(u)\)</span>. Taking
+the time step to zero leaves the spatial cutoff in place. Refining space
+adds degrees of freedom and changes the Hilbert space, so Theorem 3 on
+one fixed space cannot be applied without comparison maps. An isotropic
+Euclidean refinement removes both cutoffs together; an anisotropic route
+must also match electric and magnetic normalizations to recover the same
+physical speed <span class="math inline">\(c\)</span>. This is the
+additional task in the four-cube comparison beyond inserting a time in
+mechanics.</p>
+<p>One essential property can be carried exactly. Suppose a fine measure
+is reflection positive, <span class="math inline">\(p\)</span> commutes
+with time reflection <span class="math inline">\(\Theta\)</span>, and
+every coarse positive-time observable pulls back to a fine positive-time
+observable. Then its pushforward is reflection positive:</p>
+<p><span class="math display">\[\int\overline{\Theta f}\,f\,d(p_*\mu)
+=\int\overline{\Theta(f\circ p)}(f\circ p)\,d\mu\ge0.
+\tag{8}\]</span></p>
+<p>The support condition on <span class="math inline">\(p\)</span>
+matters; a block straddling the reflection plane cannot be assumed to
+have it. Equation (8) supplies positivity for an exact blocking map with
+those properties. Subsequent truncation of the effective action must
+preserve it separately.</p>
+<h2 id="the-exactly-soluble-subdivision-law-in-11-dimensions">5. The
+exactly soluble subdivision law in <span
+class="math inline">\(1+1\)</span> dimensions</h2>
+<p>Let <span class="math inline">\(G=SU(3)\)</span> with normalized Haar
+measure. Choose the group metric so that <span
+class="math inline">\(-\Delta_G\chi_R=C_2(R)\chi_R\)</span> and <span
+class="math inline">\(C_2(\mathbf3)=4/3\)</span>. Let <span
+class="math inline">\(\lambda_2&gt;0\)</span> have units of inverse area
+and define the face kernel</p>
+<p><span class="math display">\[k_A(U)=\sum_R d_R\chi_R(U)e^{-\lambda_2
+A C_2(R)/2}.\]</span></p>
+<p>It is the heat kernel at group heat-time <span
+class="math inline">\(\lambda_2A\)</span>. Character orthogonality gives
+the exact convolution identity</p>
+<p><span class="math display">\[\int_G k_{A_1}(XU^{-1})k_{A_2}(UY)\,dU
+=k_{A_1+A_2}(XY). \tag{9}\]</span></p>
+<p>Indeed, integrating two characters contributes <span
+class="math inline">\(\delta_{RS}\chi_R(XY)/d_R\)</span>, so their heat
+exponents add and one factor <span class="math inline">\(d_R\)</span>
+remains. When an interior edge splits a face, (9) integrates out
+precisely that new edge. Splitting an edge alone uses invariance of Haar
+measure under multiplication. These elementary moves yield (7) for the
+heat-kernel surface measure with density <span
+class="math inline">\(Z^{-1}\prod_f k_{A_f}(U_{\partial
+f})\)</span>.</p>
+<p>This is the established lattice-to-continuum construction of
+two-dimensional Yang–Mills. Lévy proves subdivision consistency and
+constructs continuum random holonomy, including the continuity needed to
+extend beyond a nested set of graph edges (<a
+href="https://arxiv.org/pdf/math/0101239">Lévy, <em>Yang–Mills Measure
+on Compact Surfaces</em>, Theorem 1.6.1 and §§2.5–2.10</a>,
+passage).</p>
+<p>Here the counterpart of Newton’s unequal-time insertion is division
+into any two positive areas, <span
+class="math inline">\(A=A_1+A_2\)</span>. The law already knows how to
+remove the new variable. It also keeps its coupling parameter:
+composition works for every <span
+class="math inline">\(\lambda_2&gt;0\)</span>.</p>
+<p><strong>The spectrum must still be identified.</strong> On a spatial
+circle of circumference <span class="math inline">\(L\)</span>, a
+Euclidean duration <span class="math inline">\(t\)</span> has area <span
+class="math inline">\(Lct\)</span>. The physical Hilbert space is <span
+class="math inline">\(L^2(G)^G\)</span>, the class functions, and the
+character expansion gives</p>
+<p><span class="math display">\[E_R=\frac{\hbar
+c\lambda_2L}{2}C_2(R),\qquad
+E_1-E_0=\frac23\hbar c\lambda_2L\quad\text{for }SU(3).
+\tag{10}\]</span></p>
+<p>These are global electric-flux energies. Pure <span
+class="math inline">\(1+1\)</span>-dimensional Yang–Mills has no
+propagating transverse gluon, and (10) grows with <span
+class="math inline">\(L\)</span>. Thus the solved refinement limit
+supplies neither a finite infinite-line glueball mass nor the
+four-dimensional spectrum. Its value for this programme is the exact
+composition mechanism and a spectral problem whose operator and boundary
+conditions are explicit.</p>
+<p>There is a dimensional mass unit <span
+class="math inline">\(\hbar\sqrt{\lambda_2}/c\)</span> and a string
+tension unit <span class="math inline">\(\hbar c\lambda_2\)</span>. The
+absence of local particle excitations has a dynamical cause. This
+corrects the older dimensional claim in <a
+href="low-dimensional-mass-gap.html">G07</a> that no mass unit can be
+formed in two dimensions.</p>
+<p><strong>Other <span class="math inline">\(1+1\)</span> gap theories
+sharpen the comparison.</strong> The Schwinger model, <span
+class="math inline">\(U(1)\)</span> gauge theory with one massless
+charged Dirac fermion, has an exactly soluble massive local boson (<a
+href="https://doi.org/10.1103/PhysRev.128.2425">Schwinger 1962</a>,
+abstract). Its axial singlet symmetry is anomalous. With several
+massless flavours, the spectrum instead includes a massive boson and
+<span class="math inline">\(N_f-1\)</span> massless bosons (<a
+href="https://arxiv.org/pdf/1508.01685">Keegan 2015, §3</a>, passage).
+Coleman’s theorem also constrains continuous symmetry breaking under its
+relativistic <span class="math inline">\(1+1\)</span> hypotheses (<a
+href="https://doi.org/10.1007/BF01646487">Coleman 1973</a>, metadata).
+Thus lower dimension supplies exact theories with real spectral content,
+but the four-dimensional pion’s symmetry-breaking mechanism must be
+checked afresh there. These examples serve the comparison; they do not
+enlarge the main proof goals.</p>
+<h2 id="what-changes-in-12-and-13-dimensions">6. What changes in <span
+class="math inline">\(1+2\)</span> and <span
+class="math inline">\(1+3\)</span> dimensions</h2>
+<p>An interior link of a hypercubic <span
+class="math inline">\(D\)</span>-dimensional lattice borders <span
+class="math inline">\(2(D-1)\)</span> plaquettes. In <span
+class="math inline">\(D=2\)</span> the two-face convolution closes. In
+<span class="math inline">\(D=3\)</span> or <span
+class="math inline">\(4\)</span>, integrating a shared link couples four
+or six incident plaquettes. The result generally depends on several
+boundary loops, rather than on one coarse plaquette with one adjusted
+coefficient.</p>
+<p>There is an exact local representation of this operation. Expand the
+face weights in characters. For chosen incident representations, the
+link integral is</p>
+<p><span class="math display">\[P_{\rm inv}=\int_G\bigotimes_i
+R_i^{\sigma_i}(U)\,dU, \tag{11}\]</span></p>
+<p>where a reversed orientation uses the dual representation. Haar
+invariance and unitarity give <span class="math inline">\(P_{\rm
+inv}^*=P_{\rm inv}\)</span> and <span class="math inline">\(P_{\rm
+inv}^2=P_{\rm inv}\)</span>, with <span class="math inline">\(\|P_{\rm
+inv}\|\le1\)</span>. It is the orthogonal projector onto invariant
+tensors. In two dimensions Schur orthogonality gives (9); in higher
+dimensions the additional representation labels and invariant tensors
+carry the boundary interaction. Formula (11) is an exact finite
+integration identity, not a physical transfer-matrix gap.</p>
+<p>The analogy with (1) is now precise. Newton’s quadratic elimination
+adds an endpoint-independent scalar; after the cubic correction, the
+same cell law closes. Gauge-field elimination produces an entire
+boundary-dependent effective interaction. A continuum argument must
+control that interaction and the observables along with the
+coupling.</p>
+<p>Use a dimensionally explicit convention</p>
+<p><span class="math display">\[\frac{S_E}{\hbar}=\frac1{4\lambda_D}
+\int F^a_{\mu\nu}F^a_{\mu\nu}\,d^Dx,
+\qquad [\lambda_D]={\rm length}^{D-4}.\]</span></p>
+<p>In the classical-coupling convention of G07, <span
+class="math inline">\(\lambda_D=\hbar g_{\rm cl,D}^2\)</span>. The
+dimensionless lattice coupling is <span class="math inline">\(g_{\rm
+lat}^2=\lambda_Da^{4-D}\)</span>; in <span
+class="math inline">\(D=4\)</span> it must also be run with the
+cutoff.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Spacetime</th>
+<th>Refinement parameter at fixed physical coupling</th>
+<th>Physical gap question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1+1\)</span></td>
+<td><span class="math inline">\(\lambda_2a^2\)</span></td>
+<td>Exact holonomy construction; circle flux spectrum (10)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+2\)</span></td>
+<td><span class="math inline">\(\lambda_3a\)</span></td>
+<td><span class="math inline">\(E_{\rm gap}=C_3\hbar
+c\lambda_3\)</span>, with <span
+class="math inline">\(0&lt;C_3&lt;\infty\)</span> to prove</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+3\)</span></td>
+<td><span class="math inline">\(g_0^2(a)\)</span>, dimensionless</td>
+<td><span class="math inline">\(E_{\rm gap}=C_4\hbar c\Lambda\)</span>,
+with scale and positive finite <span class="math inline">\(C_4\)</span>
+to establish</td>
+</tr>
+</tbody>
+</table>
+<p>In <span class="math inline">\(1+2\)</span> dimensions the coupling
+supplies an inverse length, and the ultraviolet problem is
+superrenormalizable. Dimensional analysis fixes the unit in the table,
+conditional on constructing the theory; it does not determine <span
+class="math inline">\(C_3\)</span> or its sign. At finite physical <span
+class="math inline">\(L\)</span>, the form is <span
+class="math inline">\(E(L)=\hbar c\lambda_3 f(\lambda_3L)\)</span>, with
+the large-<span class="math inline">\(L\)</span> limit still to control.
+The small-box constant-mode approximation is a distinct limit from small
+lattice spacing at fixed box size.</p>
+<p><strong>Source boundary in three dimensions.</strong> Chandra,
+Chevyrev, Hairer and Shen construct a renormalized stochastic
+Yang–Mills–Higgs flow on the three-torus, locally in its auxiliary
+stochastic time, allowing possible finite-time blow-up. Global survival
+and an invariant measure remain open in that construction (<a
+href="https://arxiv.org/pdf/2201.03487">2024 paper, introduction</a>,
+passage). It therefore does not establish a finite-volume OS quantum
+theory or its physical gap. The earlier <a
+href="three-dimensional-gap-one-function.html">one-function note</a>
+overstated this input; its dimensional reduction is conditional on
+existence.</p>
+<p>The Karabali–Nair Hamiltonian approach supplies another mechanism,
+but its current-variable kinetic scale must be distinguished from a
+proved gap on the full physical Hilbert space (<a
+href="https://arxiv.org/pdf/hep-th/9602155">Karabali–Nair 1996, eqs.
+(28)–(29)</a>, passage). Nair’s 2026 treatment presents an outline of a
+proof and identifies the gap as open (<a
+href="https://arxiv.org/abs/2608.10133"><em>Towards a Proof of Mass Gap
+in 3d Yang–Mills Theory</em></a>, abstract and introductory passage).
+The <span class="math inline">\(1+2\)</span> case is a genuine target
+with simpler scaling, not a solved theorem to import wholesale.</p>
+<p>In <span class="math inline">\(1+3\)</span> dimensions the leading
+coupling is marginal. Perturbatively, one blocking step changes it
+by</p>
+<p><span
+class="math display">\[g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2+O(g_0^2(a)),
+\qquad b_0=\frac{11}{16\pi^2}\quad(SU(3)).\]</span></p>
+<p>The ultraviolet running sets the scale convention; the gap requires
+control through the regime where that expansion no longer suffices. This
+is the role of H1 in the existing <a
+href="mass-gap-conditional-theorem.html">mass-gap map</a>, with
+construction and nontriviality still explicit. The dimension table
+supplies a hierarchy of constructive problems rather than an implication
+from one dimension’s gap to another’s.</p>
+<h2 id="what-estimate-would-construct-the-gauge-limit">7. What estimate
+would construct the gauge limit?</h2>
+<p>Here is a probability counterpart of Theorem 3. Fix a finite physical
+box and nested lattices <span class="math inline">\(\Gamma_n\)</span>,
+<span class="math inline">\(a_n=2^{-n}a_0\)</span>, with compatible
+projections <span class="math inline">\(p_{mn}\)</span>, <span
+class="math inline">\(m&gt;n\)</span>. Let <span
+class="math inline">\(\mu_n\)</span> be probability measures and use
+total variation with convention <span
+class="math inline">\(\|\mu-\nu\|_{\rm
+TV}=\sup_A|\mu(A)-\nu(A)|\)</span>.</p>
+<p><strong>Proposition 4 (summable consistency errors).</strong> If</p>
+<p><span class="math display">\[\|p_{n+1,n*}\mu_{n+1}-\mu_n\|_{\rm
+TV}\le e_n,
+\qquad \sum_{n=0}^\infty e_n&lt;\infty, \tag{12}\]</span></p>
+<p>then <span class="math inline">\(p_{mn*}\mu_m\)</span> converges in
+total variation as <span class="math inline">\(m\to\infty\)</span> to a
+probability measure <span class="math inline">\(\nu_n\)</span>. These
+limits are exactly consistent, <span
+class="math inline">\(p_{n+1,n*}\nu_{n+1}=\nu_n\)</span>, with</p>
+<p><span class="math display">\[\|\nu_n-\mu_n\|_{\rm TV}\le\sum_{j\ge
+n}e_j.\]</span></p>
+<p><em>Proof.</em> Pushforward contracts total variation, so the
+difference of the <span class="math inline">\(m\)</span>-th and <span
+class="math inline">\((m+1)\)</span>-st projected measures is at most
+<span class="math inline">\(e_m\)</span>. The series is Cauchy in the
+space of finite measures. Limits preserve normalization and commute with
+each fixed pushforward. <span class="math inline">\(\square\)</span></p>
+<p>The consistent measures define a measure on the inverse limit of
+these compact graph-configuration spaces. This is a measure on
+generalized holonomies for the chosen graphs. Extending it to physical
+continuum fields or all relevant paths, establishing Euclidean
+covariance and OS regularity, and proving nontriviality need additional
+estimates. A fixed-volume bound in (12) also needs a local version
+uniform in the box to support <span
+class="math inline">\(L\to\infty\)</span>.</p>
+<p>For <span class="math inline">\(e_n\le C a_n^\alpha\)</span>, <span
+class="math inline">\(\alpha&gt;0\)</span>, the tail is bounded by <span
+class="math inline">\(Ca_n^\alpha/(1-2^{-\alpha})\)</span>. The Newton
+estimate uses this kind of summability. In a fixed <span
+class="math inline">\(D\)</span>-dimensional volume, a per-cell
+contribution of size <span class="math inline">\(a^{D+\alpha}\)</span>
+would sum to order <span class="math inline">\(a^\alpha\)</span>;
+obtaining an actual bound on normalized observables or measures from
+that power counting is a separate step. Marginal terms with accumulated
+logarithms must first be absorbed into running couplings and
+counterterms. A geometrically shrinking cell by itself supplies no
+summable estimate.</p>
+<p>Total variation in (12) is a sufficient, potentially overstrong norm.
+A useful implementation can instead bound a separating class of
+renormalized local observables and prove tightness in a suitable
+topology. The topology, observables and constants must be named. In
+higher dimensions unsmeared loop holonomies may themselves require
+renormalization, so the bare graph projective limit alone is too weak a
+target for the physical theory.</p>
+<p>Finally, consistency of measures supplies no energy threshold. To
+retain a positive physical gap, carry a uniform large-time bound</p>
+<p><span class="math display">\[\langle O^*e^{-t(H-E_0)/\hbar}O\rangle_c
+\le K_Oe^{-E_-t/\hbar},\qquad E_-&gt;0,\]</span></p>
+<p>for a dense family of reconstructed local vectors, with surviving
+finite-energy spectral weight. For the pion benchmark, the preserved
+Ward identity and broken-symmetry residue instead require a soft
+channel. The <a href="three-continuum-limits.html">spectral criteria</a>
+state the two limiting conclusions. Short-distance consistency and
+long-distance spectral control are complementary parts of one
+construction.</p>
+<h2 id="consequence-for-state-and-the-final-paper">8. Consequence for
+STATE and the final paper</h2>
+<p>The final paper should be organized around <strong>local insertion
+laws, their composition, and the quantity carried through the
+limit</strong>. The sequence is now concrete: the Newton action
+elimination (1), the arbitrary-partition construction (4)–(6), exact
+surface subdivision (9), and the higher-dimensional consistency estimate
+(12), followed by the physical spectral or record-cost estimate. Pion
+physics tests which symmetries those estimates preserve.</p>
+<p>The next bounded field-theory task is <strong>one <span
+class="math inline">\(1+2\)</span>-dimensional blocking step with its
+boundary interaction retained</strong>. Start with a subdivided finite
+cube and compatible reflection plane; specify its exact boundary weight
+via (11), then choose a renormalized local observable norm in which the
+difference from a proposed coarse weight can be bounded. The deliverable
+is one explicit estimate, with dependence on <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(\lambda_3\)</span> and boundary data, or the exact
+term preventing that estimate. Its purpose is to test summability, not
+to fit the answer to a one-plaquette action. The small-volume H3
+valley-lifting task remains the separate spectral mechanism to connect
+to this construction.</p>
+<p>For Newton, the next physical step is an explicit refinement rule for
+the <strong>joint body and record</strong>, deciding which old records
+are preserved and what happens when the new one is forgotten. Test
+whether its physical premises force a positive action cost and common
+scale, with the unobserved composition (2)–(3) serving as the exact
+reference. Assuming canonical quantum kinematics already puts it on the
+existing conditional branch. The two goals are advanced by finding and
+controlling these concrete maps, with the limit, the surviving scale and
+the physical interpretation proved separately.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

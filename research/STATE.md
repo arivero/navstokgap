@@ -43,10 +43,14 @@ Principia work lives in the sibling `newtonlean` repository.
 
 ## Next
 
-1. **A local gauge refinement estimate:** one $1+2$-dimensional blocking
-   step retaining its boundary interaction, in an explicit local
-   observable norm. The [refinement note, §8](../notes/refinement-composition-and-limit.md)
-   gives its inputs and stop rule. Test whether errors are summable.
+1. **A local gauge refinement estimate.** The
+   [series/parallel note](../notes/series-parallel-gauge-refinement.md)
+   factors one directional halving exactly: series moves close in every
+   dimension, and the parallel insertion $\Psi$ (Prop. 1) carries the
+   renormalization in $\binom{D-1}{2}$ transverse planes. The free-field
+   defect is exact (Prop. 2). Next: prove its Hypothesis P($\alpha$) for
+   one isolated cube, then for a mid-plane by small-field cluster
+   expansion.
 2. **Newton necessity:** construct the refinement map for body and
    physical record, with the unobserved constant-force composition as
    the reference. Seek positive cost from independently justified

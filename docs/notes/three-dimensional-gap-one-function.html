@@ -78,11 +78,20 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>In three dimensions the mass gap is the positivity of one function at
-infinity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-dimensional-gap-one-function.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-dimensional-gap-one-function.pdf">PDF</a></p><p>For pure Yang–Mills in <span class="math inline">\(d=3\)</span> (two
+infinity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-dimensional-gap-one-function.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-dimensional-gap-one-function.pdf">PDF</a></p><p><strong>Qualification, 2026-09-26.</strong> The continuum spectral
+formulas below are conditional on constructing the physical theory. The
+cited stochastic-quantization result constructs local auxiliary-time
+dynamics, not an invariant measure or OS reconstruction. Small physical
+volume, strong lattice coupling and the infinite-volume continuum limit
+are separate regimes. The <a
+href="refinement-composition-and-limit.html">refinement note</a> gives
+the corrected source boundary and the corresponding construction
+target.</p>
+<p>For pure Yang–Mills in <span class="math inline">\(d=3\)</span> (two
 space dimensions) the coupling <span class="math inline">\(g^2\)</span>
 is itself a mass, so the finite-volume gap of the continuum theory on a
-periodic square torus of side <span class="math inline">\(L\)</span> has
-the exact form <span
+periodic square torus of side <span class="math inline">\(L\)</span>,
+when that theory exists, has the form <span
 class="math display">\[\Delta(L)=g^2\hbar^2c\,f(x),\qquad x=g^2\hbar L\
 \text{(dimensionless)},\]</span> by dimensional analysis alone, and the
 Jaffe–Witten conjecture for <span class="math inline">\(d=3\)</span> is
@@ -106,19 +115,22 @@ class="math inline">\(\ge\gamma_2(g_{\rm lat}^2/2)C_2\hbar c/a\)</span>
 uniform in the lattice size, and the continuum limit is the statement
 that <span class="math inline">\(\delta_\infty(g_{\rm lat})/g_{\rm
 lat}^2\)</span> stays bounded below as <span
-class="math inline">\(g_{\rm lat}^2=g^2\hbar a\to0\)</span>: the
-gap-to-coupling ratio is bounded below at both ends of the coupling
-axis, and the conjecture is its positivity in between. Contrast <span
-class="math inline">\(d=4\)</span>, where the ratio must pass from a
-power law <span class="math inline">\(\propto g^2\)</span> at strong
-coupling to the essential singularity <span
+class="math inline">\(g_{\rm lat}^2=g^2\hbar a\to0\)</span>, together
+with construction and a finite positive limiting ratio. The
+strong-coupling lower bound supplies only one end of this lattice
+question. The small-volume result concerns a different order of limits.
+Contrast <span class="math inline">\(d=4\)</span>, where the ratio must
+pass from a power law <span class="math inline">\(\propto g^2\)</span>
+at strong coupling to the essential singularity <span
 class="math inline">\(e^{-1/(2b_0g^2)}\)</span> at weak coupling. The
-three-dimensional problem is therefore the natural first target: it has
-no transmutation, a single scaling variable, and both ends of <span
-class="math inline">\(f\)</span> in hand. The expected value <span
-class="math inline">\(C=N/(2\pi)\)</span> (Karabali–Nair, physics
-argument; metadata, B78) is a prediction to be proved, not an input.
-Nothing here is promoted.</p>
+three-dimensional problem is therefore a natural target: it has a
+dimensionful coupling and a single scaling variable. Karabali–Nair’s
+<span class="math inline">\(N/(2\pi)\)</span> is a current-variable
+kinetic scale, not an established value of the full physical gap (<a
+href="https://arxiv.org/pdf/hep-th/9602155">1996 paper, eqs.
+(28)–(29)</a>, passage). The constant <span
+class="math inline">\(C\)</span> remains to be determined. Nothing here
+is promoted.</p>
 <h2 id="units-and-the-one-variable-form">1. Units and the one-variable
 form</h2>
 <p>With <span class="math inline">\(S=\frac1{4g^2}\int
@@ -242,8 +254,9 @@ lattice gap in units of <span
 class="math inline">\(\varepsilon_3\)</span> is <span
 class="math display">\[\frac{\Delta_{a,L}}{\varepsilon_3}=\frac{\hbar
 c}{a\,g^2\hbar^2c}\,\delta
-=\frac{\delta(g_{\rm lat};N_s,G)}{g_{\rm lat}^2},\]</span> so the
-continuum finite-volume gap exists iff <span
+=\frac{\delta(g_{\rm lat};N_s,G)}{g_{\rm lat}^2},\]</span> so,
+conditional on the physical continuum construction and convergence of
+its spectral threshold, its finite-volume scaling requires <span
 class="math inline">\(\delta(g_{\rm lat};x/g_{\rm lat}^2,G)/g_{\rm
 lat}^2\to f(x)\)</span> as <span class="math inline">\(g_{\rm
 lat}\to0\)</span>, and the infinite-volume mass is <span
@@ -265,6 +278,10 @@ lat}&gt;0\)</span> and has a finite limit <span
 class="math inline">\(C\)</span> as <span class="math inline">\(g_{\rm
 lat}\to0\)</span>.</p>
 </blockquote>
+<p>This is a sufficient all-coupling version; the continuum target needs
+the positive finite limit near <span class="math inline">\(g_{\rm
+lat}=0\)</span>, with construction, rather than positivity at every
+intermediate lattice coupling.</p>
 <p><strong>The abelian contrast in <span
 class="math inline">\(d=3\)</span>.</strong> For compact <span
 class="math inline">\(U(1)\)</span> in three dimensions Göpfert and Mack
@@ -346,22 +363,27 @@ lat})&gt;0\)</span>, <span class="math inline">\(c\to C\)</span></td>
 lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\)</span></td>
 </tr>
 <tr class="even">
-<td>expected constant</td>
-<td><span class="math inline">\(C=N/(2\pi)\)</span> (Karabali–Nair,
-physics)</td>
+<td>physical gap constant</td>
+<td><span class="math inline">\(C\)</span> open; Karabali–Nair’s <span
+class="math inline">\(N/(2\pi)\)</span> is a kinetic scale</td>
 <td>none in closed form</td>
 </tr>
 <tr class="odd">
-<td>existence</td>
-<td>finite volume by stochastic quantisation (Chevyrev review,
-passage-level companion in docs)</td>
+<td>construction input</td>
+<td>local renormalized stochastic flow; invariant measure and OS theory
+not supplied by that result</td>
 <td>finite-volume UV stability only</td>
 </tr>
 </tbody>
 </table>
-<p>Open in <span class="math inline">\(d=3\)</span>: (i) the
-infinite-volume limit of the finite-volume construction; (ii) any lower
-bound on <span class="math inline">\(f\)</span> away from the two ends;
+<p>Chandra, Chevyrev, Hairer and Shen explicitly leave global stochastic
+survival and an invariant measure open (<a
+href="https://arxiv.org/pdf/2201.03487">2024 paper, introduction</a>,
+passage). The earlier table entry claiming finite-volume existence by
+stochastic quantization was too strong.</p>
+<p>Open in <span class="math inline">\(d=3\)</span>: (i) the required
+finite- and infinite-volume physical construction; (ii) a lower bound on
+<span class="math inline">\(f\)</span> beyond the small-volume regime;
 (iii) the identification of <span class="math inline">\(f\)</span>’s
 small-<span class="math inline">\(x\)</span> correction with the
 stochastic construction’s estimates. Item (ii) is the conjecture itself,
@@ -372,9 +394,10 @@ finite-volume theory, together with the existence of <span
 class="math inline">\(\lim f\)</span>, would settle the <span
 class="math inline">\(d=3\)</span> mass gap.</p>
 <h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>The <span class="math inline">\(d=3\)</span> target is now a
-statement about one function of one variable with both ends known: <span
-class="math inline">\(f(x)\sim\delta_1^{(2)}x^{-2/3}\)</span> at <span
+<p>The <span class="math inline">\(d=3\)</span> spectral target,
+conditional on construction, concerns one function of one variable:
+<span class="math inline">\(f(x)\sim\delta_1^{(2)}x^{-2/3}\)</span> in
+the small-volume approximation at <span
 class="math inline">\(x\to0\)</span> and <span
 class="math inline">\(f\to C\)</span> conjectured at <span
 class="math inline">\(x\to\infty\)</span>, with the lattice ratio <span

@@ -48,7 +48,9 @@ TRACKS = [
      turned into a finite list of named theorems, with explicit dependence on
      the box size, the lattice spacing and the coupling. The strong side is
      proved; the weak side and the region between are where the work stands.""", [
-        "mass-gap-position", "mass-gap-obligations-lattice",
+        "mass-gap-position", "three-continuum-limits",
+        "refinement-composition-and-limit", "series-parallel-gauge-refinement",
+        "mass-gap-obligations-lattice",
         "mass-gap-conditional-theorem", "su3-constants",
         "strong-coupling-uniform-gap", "wilson-strong-coupling-explicit",
         "kogut-susskind-strong-coupling-explicit",

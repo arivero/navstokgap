@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Series and parallel: where the gauge insertion law stops closing</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Series and parallel: where the gauge insertion law stops closing</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/series-parallel-gauge-refinement.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/series-parallel-gauge-refinement.pdf">PDF</a></p><p><strong>Result, 2026-09-26.</strong> Halve one lattice direction of a
+heat-kernel lattice gauge theory in <span
+class="math inline">\(D\)</span> dimensions. The step splits exactly
+into two kinds of move. Faces containing the refined direction are cut
+in two; these are <em>series</em> moves, and the heat-kernel convolution
+integrates them out exactly in every dimension. Faces transverse to the
+refined direction acquire a new parallel copy at doubled heat time;
+these are <em>parallel</em> moves, and integrating out the new copy
+leaves the factor <span class="math inline">\(\Psi\)</span> of
+Proposition 1: the partition function of a two-dimensional gauge theory
+on the inserted mid-plane, whose edges carry Brownian-bridge laws fixed
+by the coarse field instead of Haar measure. The number of transverse
+planes is <span class="math inline">\(\binom{D-1}{2}\)</span>: none in
+<span class="math inline">\(D=2\)</span>, which is why two-dimensional
+Yang–Mills closes; one in <span class="math inline">\(D=3\)</span>;
+three in <span class="math inline">\(D=4\)</span>. In the free (abelian
+Gaussian) theory <span class="math inline">\(\Psi\)</span> is computed
+exactly (Proposition 2): the defect against the coarse action is a
+negative semidefinite quadratic form of relative size <span
+class="math inline">\(a^2K^2/16+(Ga)^2/8\)</span> for fields with
+transverse momenta at most <span class="math inline">\(K\)</span> and
+layer gradient <span class="math inline">\(G\)</span>. It is the
+field-theory counterpart of Newton’s <span
+class="math inline">\(-F^2uvh/(8M)\)</span> in the <a
+href="refinement-composition-and-limit.html">refinement note</a>, eq.
+(1), and it equals exactly the error of Migdal’s bond-moving
+approximation in the Gaussian theory. The non-abelian estimate needed
+for one step in <span class="math inline">\(1+2\)</span> dimensions is
+stated in §4 as Hypothesis P(<span
+class="math inline">\(\alpha\)</span>), with the four terms it must
+control and their orders in <span
+class="math inline">\(\lambda_3a\)</span>.</p>
+<p>This answers the stop rule of the refinement note, §8, in its second
+form: it gives the exact term that prevents closure, with an explicit
+free-field estimate, and states the interacting estimate that remains.
+The ingredients are established (heat-kernel convolution, Brownian
+bridges, Gaussian integration); the decomposition and the exact
+free-field defect are elementary, and no novelty is claimed for them
+beyond their use here as the organizing comparison. Migdal’s recursion
+(1975) is the approximate form of the same series/parallel split, as
+Kadanoff’s notes describe it (<a
+href="https://doi.org/10.1016/0003-4916(76)90066-X">Kadanoff 1976</a>,
+metadata).</p>
+<h2 id="heat-times-on-an-anisotropic-lattice">1. Heat times on an
+anisotropic lattice</h2>
+<p>Take a hypercubic lattice in <span class="math inline">\(D\)</span>
+dimensions with spacings <span
+class="math inline">\(a_1,\dots,a_D\)</span>, compact gauge group <span
+class="math inline">\(G\)</span> with the group metric of the refinement
+note §5 (<span
+class="math inline">\(-\Delta_G\chi_R=C_2(R)\chi_R\)</span>, <span
+class="math inline">\(C_2(\mathbf3)=4/3\)</span> for <span
+class="math inline">\(SU(3)\)</span>), and heat kernel <span
+class="math inline">\(k_t=e^{t\Delta_G/2}\)</span>, <span
+class="math inline">\(k_t(U)=\sum_Rd_R\chi_R(U)e^{-tC_2(R)/2}\)</span>.
+Use the dimensionally explicit continuum action of the refinement note
+§6,</p>
+<p><span class="math display">\[\frac{S_E}{\hbar}=\frac1{4\lambda_D}\int
+F^a_{\mu\nu}F^a_{\mu\nu}\,d^Dx,
+\qquad[\lambda_D]={\rm length}^{D-4},\]</span></p>
+<p>so that <span class="math inline">\(\lambda_D=\hbar g_{{\rm
+cl},D}^2\)</span> contains <span class="math inline">\(\hbar\)</span>.
+The anisotropic heat-kernel action assigns to a plaquette <span
+class="math inline">\(p\)</span> in the plane <span
+class="math inline">\((\mu\nu)\)</span> the weight <span
+class="math inline">\(k_{t_{\mu\nu}}(U_p)\)</span> with</p>
+<p><span class="math display">\[t_{\mu\nu}=\lambda_D\,\frac{a_\mu
+a_\nu}{\prod_{\rho\ne\mu,\nu}a_\rho}.
+\tag{1}\]</span></p>
+<p><em>Derivation of (1).</em> For a smooth field, <span
+class="math inline">\(U_p=\exp(a_\mu a_\nu F_{\mu\nu}+O(a^3))\)</span>
+and, for small <span class="math inline">\(t\)</span> away from the cut
+locus, <span class="math inline">\(-\log k_t(e^X)=|X|^2/(2t)+{\rm
+const}+O(t+|X|^2)\)</span>. Matching <span
+class="math inline">\(a_\mu^2a_\nu^2|F_{\mu\nu}|^2/(2t_{\mu\nu})\)</span>
+to the continuum density <span
+class="math inline">\((1/2\lambda_D)|F_{\mu\nu}|^2\prod_\rho
+a_\rho\)</span> (the factor <span class="math inline">\(1/2\)</span>
+collects <span class="math inline">\(F_{\mu\nu}\)</span> and <span
+class="math inline">\(F_{\nu\mu}\)</span>) gives (1). <span
+class="math inline">\(\square\)</span></p>
+<p>The heat time is dimensionless. In <span
+class="math inline">\(D=2\)</span> it is <span
+class="math inline">\(\lambda_2\)</span> times the face area, as in the
+refinement note; in <span class="math inline">\(D=3\)</span> the
+isotropic value is <span class="math inline">\(t=\lambda_3a\)</span>,
+the refinement parameter of that note’s table; in <span
+class="math inline">\(D=4\)</span> it is <span
+class="math inline">\(t=\lambda_4=g_{\rm lat}^2\)</span>, independent of
+<span class="math inline">\(a\)</span>. Equation (1) is a choice of
+regularization, the heat-kernel counterpart of the anisotropic Wilson
+action; the theorems below concern it exactly.</p>
+<h2 id="halving-one-direction-series-moves-and-a-parallel-insertion">2.
+Halving one direction: series moves and a parallel insertion</h2>
+<p>Halve direction 1: <span class="math inline">\(a_1\mapsto
+a_1/2\)</span>. By (1),</p>
+<ul>
+<li>a plaquette in a plane <span class="math inline">\((1\nu)\)</span>
+has <span class="math inline">\(t_{1\nu}\mapsto t_{1\nu}/2\)</span>, and
+each coarse <span class="math inline">\((1\nu)\)</span> face is cut by a
+new edge into two fine faces;</li>
+<li>a plaquette in a plane <span class="math inline">\((jk)\)</span>
+with <span class="math inline">\(j,k\ne1\)</span> has <span
+class="math inline">\(t_{jk}\mapsto2t_{jk}\)</span>; the old <span
+class="math inline">\((jk)\)</span> faces survive with doubled heat
+time, and a new <span class="math inline">\((jk)\)</span> face appears
+in each mid-plane <span
+class="math inline">\(x_1=(\ell+\tfrac12)a_1\)</span>, also at heat time
+<span class="math inline">\(2t_{jk}\)</span>.</li>
+</ul>
+<p>The new variables are the half-edges in direction 1 and the
+<em>mid-edges</em> lying in the mid-planes. Each mid-edge in direction
+<span class="math inline">\(j\ne1\)</span> lies in exactly one coarse
+face of the plane <span class="math inline">\((1j)\)</span>, which it
+cuts in two, and it borders <span class="math inline">\(2(D-2)\)</span>
+mid-faces.</p>
+<p><strong>Proposition 1 (exact pushforward).</strong> Let <span
+class="math inline">\(\mu&#39;\)</span> be the fine heat-kernel measure
+and <span class="math inline">\(p\)</span> the projection multiplying
+half-edges. Then <span class="math inline">\(p_*\mu&#39;\)</span> has
+density, with respect to the product Haar measure on coarse links,</p>
+<p><span
+class="math display">\[\frac1{Z&#39;}\prod_{f\ni1}k_{t_f}(U_f)\prod_{f\perp1}k_{2t_f}(U_f)\;
+\Psi(U), \tag{2}\]</span></p>
+<p>where <span class="math inline">\(f\ni1\)</span> ranges over coarse
+faces containing direction 1, <span
+class="math inline">\(f\perp1\)</span> over the others, and</p>
+<p><span class="math display">\[\Psi(U)=\int\prod_{g\ \rm
+mid}k_{2t_g}(m_{\partial g})
+\prod_{e\ \rm mid}\beta_e(dm_e\,|\,U). \tag{3}\]</span></p>
+<p>Here <span class="math inline">\(m_{\partial g}\)</span> is the
+ordered product of mid-edge variables around the mid-face <span
+class="math inline">\(g\)</span>, and <span
+class="math inline">\(\beta_e\)</span> is the midpoint law of the
+Brownian bridge on <span class="math inline">\(G\)</span> of duration
+<span class="math inline">\(t_{1j}\)</span> determined by the coarse
+face that <span class="math inline">\(e\)</span> cuts: if the two halves
+of that face have holonomies <span
+class="math inline">\(P_em_e^{-1}\)</span> and <span
+class="math inline">\(m_eQ_e\)</span>, with <span
+class="math inline">\(P_eQ_e=U_f\)</span>,</p>
+<p><span
+class="math display">\[\beta_e(dm\,|\,U)=\frac{k_{t_{1j}/2}(P_em^{-1})\,
+k_{t_{1j}/2}(mQ_e)}{k_{t_{1j}}(U_f)}\,dm. \tag{4}\]</span></p>
+<p><em>Proof.</em> At each new vertex on a direction-1 edge, only the
+two half-edges and the incident mid-edges meet. Changing variables to
+(coarse product, upper half) and using Haar invariance, the gauge
+transformation at that vertex sets the upper half-edge to the identity
+without changing the integral; the lower half-edge becomes the coarse
+link. The half-faces then have the holonomies displayed, with <span
+class="math inline">\(P_e\)</span>, <span
+class="math inline">\(Q_e\)</span> built from coarse links only.
+Multiply and divide by <span
+class="math inline">\(k_{t_{1j}}(U_f)\)</span> for each cut face. By the
+convolution identity, eq. (9) of the refinement note, each <span
+class="math inline">\(\beta_e\)</span> is a probability measure. Fubini
+gives (2)–(3). <span class="math inline">\(\square\)</span></p>
+<p><strong>The dimension count.</strong> Refining one direction produces
+parallel insertions in the <span
+class="math inline">\(\binom{D-1}{2}\)</span> planes transverse to it:
+zero for <span class="math inline">\(D=2\)</span>, one for <span
+class="math inline">\(D=3\)</span>, three for <span
+class="math inline">\(D=4\)</span>. With no transverse plane, <span
+class="math inline">\(\Psi=1\)</span> and (2) is the exact consistency
+(7) of the refinement note, recovering its §5. An isotropic dyadic step
+is <span class="math inline">\(D\)</span> successive directional
+halvings. By (1) the heat times change as follows:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(D\)</span></th>
+<th>one directional halving</th>
+<th>full isotropic step</th>
+<th>parallel planes per halving</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td><span class="math inline">\(t\mapsto t/2\)</span></td>
+<td><span class="math inline">\(t\mapsto t/4\)</span> (area)</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><span class="math inline">\(t_{1\nu}/2\)</span>, <span
+class="math inline">\(2t_{23}\)</span></td>
+<td><span class="math inline">\(t\mapsto t/2\)</span></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><span class="math inline">\(t_{1\nu}/2\)</span>, <span
+class="math inline">\(2t_{jk}\)</span></td>
+<td><span class="math inline">\(t\mapsto t\)</span></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>The last column locates the whole renormalization problem. The middle
+column is the classical scaling: superrenormalizable in <span
+class="math inline">\(D=3\)</span>, where the heat time halves per step,
+and marginal in <span class="math inline">\(D=4\)</span>, where it
+returns to itself and any running must come from <span
+class="math inline">\(\Psi\)</span>.</p>
+<p>The structure matches Newton’s insertion. There the new time splits
+one cell in series and the elimination leaves the endpoint-independent
+scalar <span class="math inline">\(-F^2uvh/(8M)\)</span>; here the
+series moves close with no remainder (the heat kernel is already the
+exact propagator, the counterpart of <span
+class="math inline">\(U_h\)</span> rather than <span
+class="math inline">\(Q_h\)</span>), and the parallel insertion leaves
+<span class="math inline">\(\Psi\)</span>. A Wilson action would also
+leave series remainders, as <span class="math inline">\(Q_h\)</span>
+does.</p>
+<h2 id="the-free-field-the-parallel-defect-in-closed-form">3. The free
+field: the parallel defect in closed form</h2>
+<p>Take <span class="math inline">\(G=\mathbb R^n\)</span> with the
+Euclidean metric (the Gaussian limit of a compact group of dimension
+<span class="math inline">\(n\)</span>; <span
+class="math inline">\(n=8\)</span> for <span
+class="math inline">\(SU(3)\)</span>) and <span
+class="math inline">\(D=3\)</span>. Then <span
+class="math inline">\(k_t(x)=(2\pi t)^{-n/2}e^{-|x|^2/(2t)}\)</span>,
+and <span class="math inline">\(\beta_e\)</span> is Gaussian with mean
+<span class="math inline">\((P_e-Q_e)/2\)</span> in additive notation
+and covariance <span class="math inline">\((t_{1j}/4)\,I_n\)</span>,
+independent of the coarse data. Put the lattice on a torus with <span
+class="math inline">\(N_2\times N_3\)</span> transverse sites and <span
+class="math inline">\(N_1\)</span> layers. Write <span
+class="math inline">\(\Phi_\ell(x)\)</span> for the flux of the old
+<span class="math inline">\((23)\)</span> face at layer <span
+class="math inline">\(\ell\)</span> and transverse site <span
+class="math inline">\(x\)</span>, and <span
+class="math inline">\(\hat\Phi_\ell(k)\)</span> for its unitary discrete
+Fourier transform in <span class="math inline">\((x_2,x_3)\)</span>,
+with <span class="math inline">\(s_j=\sin(k_ja_j/2)\)</span> and</p>
+<p><span class="math display">\[v(k)=t_{12}\,s_3^2+t_{13}\,s_2^2
+.\]</span></p>
+<p>On a torus the transverse zero mode of a lattice curl vanishes, so
+<span class="math inline">\(k\ne0\)</span> throughout. All statements
+concern gauge-invariant functions, which depend on the links only
+through the fluxes; the non-compact gauge orbits drop out with the
+normalization constants.</p>
+<p><strong>Proposition 2 (exact free-field parallel defect).</strong> In
+this Gaussian theory, the pushforward (2) is the coarse heat-kernel
+measure multiplied by <span class="math inline">\(e^{-\mathcal
+D}\)</span> (up to a constant), with</p>
+<p><span class="math display">\[\mathcal D=-\sum_\ell\sum_{k\ne0}\left[
+\frac{v(k)\bigl(|\hat\Phi_\ell|^2+|\hat\Phi_{\ell+1}|^2\bigr)}
+{8t_{23}\bigl(2t_{23}+v(k)\bigr)}
++\frac{|\hat\Phi_\ell-\hat\Phi_{\ell+1}|^2}{8\bigl(2t_{23}+v(k)\bigr)}
+\right]\ \le\ 0. \tag{5}\]</span></p>
+<p><em>Proof.</em> (i) The mean mid-edge configuration interpolates
+linearly between layers <span class="math inline">\(\ell\)</span> and
+<span class="math inline">\(\ell+1\)</span>; the direction-1 links enter
+it as a lattice gradient, which the curl annihilates. Hence the mean
+mid-face flux is exactly <span
+class="math inline">\((\Phi_\ell+\Phi_{\ell+1})/2\)</span>. (ii) The
+fluctuation of the mid-face flux is the lattice curl of independent edge
+noises with variances <span class="math inline">\(t_{12}/4\)</span>
+(direction 2) and <span class="math inline">\(t_{13}/4\)</span>
+(direction 3). Its Fourier covariance is <span
+class="math inline">\((t_{12}/4)|1-e^{ik_3a_3}|^2+(t_{13}/4)|1-e^{ik_2a_2}|^2=v(k)\)</span>,
+diagonal in <span class="math inline">\(k\)</span>. (iii) For Gaussian
+<span class="math inline">\(\eta\)</span> of variance <span
+class="math inline">\(v\)</span>, <span
+class="math inline">\(E\,e^{-|\bar\Phi+\eta|^2/(2\sigma^2)}\propto
+e^{-|\bar\Phi|^2/(2(\sigma^2+v))}\)</span>; with <span
+class="math inline">\(\sigma^2=2t_{23}\)</span>, <span
+class="math inline">\(-\log\Psi=\sum_{\ell,k}|\hat\Phi_\ell+\hat\Phi_{\ell+1}|^2/
+(8(2t_{23}+v))+{\rm const}\)</span>. (iv) The old <span
+class="math inline">\((23)\)</span> faces contribute <span
+class="math inline">\(\sum|\hat\Phi_\ell|^2/(4t_{23})\)</span>, the
+coarse target is <span
+class="math inline">\(\sum|\hat\Phi_\ell|^2/(2t_{23})\)</span>, and the
+cut faces return <span class="math inline">\(k_{t_{1j}}(U_f)\)</span>
+exactly. Subtract, and use <span
+class="math inline">\(|A+B|^2=2|A|^2+2|B|^2-|A-B|^2\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>At zero transverse momentum and constant flux in <span
+class="math inline">\(\ell\)</span>, the two old and new faces at heat
+time <span class="math inline">\(2t_{23}\)</span> combine in parallel to
+one face at <span class="math inline">\(t_{23}\)</span>, as conductances
+do. The defect measures the two departures: transverse lattice momentum
+(<span class="math inline">\(v&gt;0\)</span>) and variation between
+layers.</p>
+<p><strong>Corollary (size of one step).</strong> On an isotropic coarse
+lattice (<span class="math inline">\(a_j=a\)</span>, <span
+class="math inline">\(t_{\mu\nu}=t=\lambda_3a\)</span>), suppose <span
+class="math inline">\(\hat\Phi_\ell\)</span> is supported on <span
+class="math inline">\(|k|\le K\)</span> and <span
+class="math inline">\(\sum_\ell\|\Phi_\ell-\Phi_{\ell+1}\|^2\le(Ga)^2\sum_\ell\|\Phi_\ell\|^2\)</span>,
+with <span class="math inline">\(\|\cdot\|\)</span> the <span
+class="math inline">\(\ell^2\)</span> norm over transverse sites.
+Then</p>
+<p><span class="math display">\[|\mathcal
+D|\le\Bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}{8}\Bigr)
+\sum_\ell\frac{\|\Phi_\ell\|^2}{2t}. \tag{6}\]</span></p>
+<p><em>Proof.</em> Use <span class="math inline">\(2t+v\ge2t\)</span>
+and <span class="math inline">\(v\le ta^2|k|^2/4\)</span> in (5). <span
+class="math inline">\(\square\)</span></p>
+<p>For a smooth field, <span
+class="math inline">\(\Phi=a^2F_{23}\)</span> and the right side of (6)
+is <span class="math inline">\(a^2(K^2/16+G^2/8)\)</span> times the
+continuum magnetic action <span
+class="math inline">\((1/2\lambda_3)\int|F_{23}|^2d^3x\)</span>: a
+dimension-six correction with coefficient <span
+class="math inline">\(a^2\)</span>. At fixed physical <span
+class="math inline">\(K\)</span> and <span
+class="math inline">\(G\)</span> the relative defects along <span
+class="math inline">\(a_n=2^{-n}a_0\)</span> are summable, which is the
+free-field instance of the refinement note’s criterion (12), in a norm
+on Gaussian actions rather than total variation. Two cautions keep this
+honest. After one step the effective action is (2) with <span
+class="math inline">\(\mathcal D\)</span>, so the next step starts from
+a slightly different action; the free field is controlled exactly
+because every stage is Gaussian, and its blocked actions converge to a
+fixed point, the perfect action of <a
+href="https://doi.org/10.1016/0550-3213(94)90261-5">Hasenfratz and
+Niedermayer (1994)</a> (metadata). And (6) holds for smooth coarse data;
+typical lattice fields at fixed <span class="math inline">\(t\)</span>
+are rough, so (6) states the irrelevance of the defect, while the
+measure-level estimate needs the whole quadratic form (5).</p>
+<p><strong>Migdal’s bond moving, read exactly.</strong> Moving each
+mid-face onto the old face of layer <span
+class="math inline">\(\ell\)</span> multiplies two Gaussian weights at
+<span class="math inline">\(2t_{23}\)</span> into one at <span
+class="math inline">\(t_{23}\)</span>, which is the coarse target. So in
+the Gaussian theory <span class="math inline">\(\mathcal D\)</span> is
+exactly the error of the bond-moving step, and (5) splits it into its
+noise part (<span class="math inline">\(v\)</span>) and its displacement
+part (<span class="math inline">\(\Phi_\ell-\Phi_{\ell+1}\)</span>).
+Tomboulis’s attempt to bound the exact decimation between
+Migdal–Kadanoff-type approximations (<a
+href="https://arxiv.org/abs/0707.2179">arXiv:0707.2179</a>, abstract;
+not established as a theorem, see <a
+href="what-would-unblock.html">what-would-unblock</a>) worked on the
+same parallel step.</p>
+<p><strong>The comparison with Newton.</strong> Both eliminations
+complete a square, and both lower the action. Newton’s defect is a
+constant, removed by one cubic counterterm, after which the cell law
+closes exactly. The free-field defect is an irrelevant quadratic form;
+no finite set of nearest-neighbour counterterms removes it, and the
+closed object is the fixed point in the space of all quadratic actions.
+In the interacting theory <span class="math inline">\(\Psi\)</span> is
+non-Gaussian.</p>
+<h2 id="the-non-abelian-parallel-move-in-12-dimensions">4. The
+non-abelian parallel move in <span class="math inline">\(1+2\)</span>
+dimensions</h2>
+<p>For compact <span class="math inline">\(G\)</span>, (3) says:
+<strong><span class="math inline">\(\Psi(U)\)</span> is the partition
+function of a two-dimensional heat-kernel lattice gauge theory on the
+mid-planes, at heat time <span class="math inline">\(2t_{23}\)</span>,
+in which each edge is distributed by the bridge law <span
+class="math inline">\(\beta_e(\cdot\,|\,U)\)</span> instead of Haar
+measure.</strong> Two limits are exactly soluble. As <span
+class="math inline">\(t_{1j}\to\infty\)</span> the bridge laws tend to
+Haar measure, the mid-plane is the exactly soluble two-dimensional
+theory of the refinement note §5, and <span
+class="math inline">\(\Psi\)</span> is a constant: the old transverse
+faces stay at heat time <span class="math inline">\(2t_{23}\)</span>. As
+<span class="math inline">\(t_{1j}\to0\)</span> the bridge laws
+concentrate at the geodesic interpolation and <span
+class="math inline">\(\Psi\)</span> is the product of mid-face weights
+on the interpolated holonomies, a classical evaluation, like Newton’s
+<span class="math inline">\(z_*\)</span>. Between those limits,
+two-dimensional exact solvability fails, because it rests on Haar
+invariance of every edge.</p>
+<p>Relative to the Gaussian computation of §3, four terms appear, with
+the orders that power counting assigns them at <span
+class="math inline">\(t=\lambda_3a\ll1\)</span> (labelled as power
+counting; proving them is the content of the hypothesis below):</p>
+<ul>
+<li><strong>N1, interpolation.</strong> The mean mid-face holonomy
+differs from the abelian average by Baker–Campbell–Hausdorff commutators
+of the fluxes, of order <span class="math inline">\(a^4[F,F]\)</span> in
+<span class="math inline">\(\log U_g\)</span>. In the action this is a
+dimension-six operator, <span class="math inline">\(O(a^2)\)</span>
+relative, like (6).</li>
+<li><strong>N2, bridge shape.</strong> The bridge law depends on the
+coarse face holonomy through the group’s curvature (the Jacobian of the
+exponential map in the small-<span class="math inline">\(t\)</span> heat
+kernel). Relative size <span
+class="math inline">\(O(t)=O(\lambda_3a)\)</span>; gauge invariance
+allows it to shift the coupling and the vacuum energy only, at leading
+order.</li>
+<li><strong>N3, non-Gaussian fluctuation.</strong> The mid-face holonomy
+is a non-commutative product of noisy edges; the connected corrections
+to <span class="math inline">\(-\log\Psi\)</span> are <span
+class="math inline">\(O(t)\)</span> relative and local.</li>
+<li><strong>N4, large fields.</strong> Bridges that wind around the
+group (the image terms of the heat kernel near the cut locus) contribute
+<span class="math inline">\(O(e^{-c/t})\)</span> per face,
+non-perturbatively small at each step but to be controlled uniformly in
+the volume.</li>
+</ul>
+<p><strong>Hypothesis P(<span class="math inline">\(\alpha\)</span>)
+(one parallel step, <span class="math inline">\(D=3\)</span>).</strong>
+There exist <span class="math inline">\(\alpha&gt;0\)</span>, <span
+class="math inline">\(t_0&gt;0\)</span>, <span
+class="math inline">\(C&lt;\infty\)</span> and a local quadratic form
+<span class="math inline">\(\mathcal D_0\)</span> (the free defect (5),
+possibly with renormalized <span class="math inline">\(t_{23}\)</span>),
+such that for <span class="math inline">\(t=\lambda_3a\le t_0\)</span>,
+on the small-field set where every plaquette satisfies <span
+class="math inline">\(|\log U_p|\le t^{1/2-\delta}\)</span>,</p>
+<p><span class="math display">\[\Bigl|-\log\Psi(U)-\mathcal
+D_0(U)-c_{\rm vac}N_{\rm cells}
+-\delta_t\,S_{23}(U)\Bigr|
+\le C\,t^{\alpha}\sum_{\rm cells}\bigl(1+|\log
+U_p|^2/t\bigr),\]</span></p>
+<p>with a coupling shift <span class="math inline">\(|\delta_t|\le
+Ct\)</span>, and with a large-field suppression of <span
+class="math inline">\(\Psi\)</span> by at least <span
+class="math inline">\(e^{-c\,t^{-2\delta}}\)</span> per violating
+plaquette, relative to its small-field value.</p>
+<p>Under P(<span class="math inline">\(\alpha\)</span>) the per-step
+error on smooth observables is <span
+class="math inline">\(O((\lambda_3a)^\alpha)\)</span> and the coupling
+shifts sum to a finite renormalization, because <span
+class="math inline">\(\sum_n\lambda_3a_n=2\lambda_3a_0\)</span>: the
+superrenormalizable pattern of the refinement note’s table, now with the
+term to be bounded identified exactly. P(<span
+class="math inline">\(\alpha\)</span>) is the directional form of what
+Balaban’s three-dimensional ultraviolet stability controls in his
+block-averaging scheme (<a
+href="https://doi.org/10.1007/BF01229380">Balaban 1985, CMP 102,
+255</a>, metadata); whether his estimates transfer to the heat-kernel
+directional scheme is unverified. P(<span
+class="math inline">\(\alpha\)</span>) yields ultraviolet control and
+says nothing about the gap: the long-distance spectral estimate of the
+refinement note §7 remains a separate obligation.</p>
+<h2 id="four-dimensions">5. Four dimensions</h2>
+<p>In <span class="math inline">\(D=4\)</span> a halving of direction 1
+inserts parallel copies in the three planes <span
+class="math inline">\((23),(24),(34)\)</span>, and the mid-space is a
+three-dimensional lattice gauge theory with bridge-distributed edges. By
+the table in §2 the heat time returns to itself after an isotropic step,
+so the whole one-loop running <span
+class="math inline">\(g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2+O(g_0^2)\)</span>,
+with <span class="math inline">\(b_0=11/(16\pi^2)\)</span> for <span
+class="math inline">\(SU(3)\)</span> in the convention <span
+class="math inline">\(g_{\rm lat}^2=\lambda_4\)</span>, must come out of
+the four <span class="math inline">\(\Psi\)</span> factors of one
+isotropic step. The N3 fluctuation term is therefore order one in <span
+class="math inline">\(D=4\)</span> (it carries the logarithm), while in
+<span class="math inline">\(D=3\)</span> it is <span
+class="math inline">\(O(\lambda_3a)\)</span>. This is the exact location
+of marginality in the insertion language. The corresponding hypothesis
+is H1 of the <a href="mass-gap-conditional-theorem.html">conditional
+theorem</a>, and Balaban’s four-dimensional work (<a
+href="https://doi.org/10.1007/BF01215223">Balaban 1987</a>, metadata) is
+the established partial control.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Item 1 of STATE is answered in its “exact obstruction” form. The
+one-step <span class="math inline">\(1+2\)</span> gauge refinement
+factors exactly into series moves, which close, and a parallel insertion
+<span class="math inline">\(\Psi\)</span> (Proposition 1). <span
+class="math inline">\(\Psi\)</span> is computed in closed form for the
+free field (Proposition 2, bound (6)), and the interacting estimate is
+stated as Hypothesis P(<span class="math inline">\(\alpha\)</span>) with
+its four terms. The next concrete step on this line is to prove P(<span
+class="math inline">\(\alpha\)</span>) for <strong>one isolated
+cube</strong> (a single mid-face, where independence of the four bridge
+variables reduces <span class="math inline">\(\Psi\)</span> to <span
+class="math inline">\(\sum_Rd_Re^{-t_mC_2(R)/2}{\rm
+tr}_R\prod_{j}E\,R(m_j^{\pm1})\)</span> with <span
+class="math inline">\(t_m\)</span> the mid-face heat time and the sign
+fixed by orientation), and then for a mid-plane with small-field cluster
+expansion. For the paper, the series/parallel split is the organizing
+statement of the dimension comparison: Newton’s time insertion is a
+series move closed by one scalar; two-dimensional gauge theory has only
+series moves; three and four dimensions add <span
+class="math inline">\(\binom{D-1}{2}\)</span> parallel insertions whose
+elimination is the renormalization problem.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
