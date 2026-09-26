@@ -539,8 +539,16 @@ compact corrections die step by step, in agreement with Gross's limit.
 Holding $m_D$ fixed instead needs $t_n\to0$ only logarithmically in
 $a_n$, with the vortex density per physical area held finite; the same
 errors are then of order one per step, and the compact effect survives
-as the mass. So whether a gap survives depends on the trajectory,
-and it is read off from the error density per physical volume. The
+as the mass. So whether a gap survives depends on the trajectory. The
+error density per physical volume gives a sufficient condition for the
+free limit; its failure is necessary for a surviving compact effect and
+does not force one. Four dimensions show the difference: there
+$t=g^2$ does not decrease, the error density per physical volume grows
+along the refinement, and the compact theory still converges, on its
+current sector, to a renormalized free electromagnetic field
+([Driver 1987](https://doi.org/10.1007/BF01212424), abstract as indexed),
+because the monopole loops become irrelevant at long distance by a
+different mechanism. The
 constant $\pi^2/8$ in Theorem 5 is a bound and is not claimed to match
 the monopole action. For $SU(3)$ the gap is expected on the
 fixed-$\lambda_3$ trajectory itself, $E=C_3\hbar c\lambda_3$; by this
@@ -728,5 +736,6 @@ series/parallel split is the organizing statement of the dimension
 comparison: Newton's time insertion is a series move closed by one
 scalar; two-dimensional gauge theory has only series moves; three and
 four dimensions add $\binom{D-1}{2}$ parallel insertions whose
-elimination is the renormalization problem, and whether a gap survives
-is read from the error density of those insertions in physical units.
+elimination is the renormalization problem; the error density of those
+insertions in physical units gives a sufficient test for which lattice
+effects the limit discards.
