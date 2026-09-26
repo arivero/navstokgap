@@ -17,37 +17,43 @@ closing}\label{series-and-parallel-where-the-gauge-insertion-law-stops-closing}}
 \textbf{Result, 2026-09-26.} Halve one lattice direction of a
 heat-kernel lattice gauge theory in \(D\) dimensions. The step splits
 exactly into two kinds of move. Faces containing the refined direction
-are cut in two; these are \emph{series} moves, and the heat-kernel
-convolution integrates them out exactly in every dimension. Faces
-transverse to the refined direction acquire a new parallel copy at
-doubled heat time; these are \emph{parallel} moves, and integrating out
-the new copy leaves the factor \(\Psi\) of Proposition 1: the partition
-function of a \((D-1)\)-dimensional gauge theory on the inserted
-mid-plane, whose edges carry Brownian-bridge laws fixed by the coarse
-field instead of Haar measure. The number of transverse planes is
-\(\binom{D-1}{2}\): none in \(D=2\), which is why two-dimensional
-Yang--Mills closes; one in \(D=3\); three in \(D=4\). In the free
-(abelian Gaussian) theory \(\Psi\) is computed exactly (Proposition 2):
-the defect against the coarse action is a negative semidefinite
-quadratic form of relative size at most \(a^2K^2/16+(Ga)^2/8\) for
-fields with transverse momenta at most \(K\) and layer gradient \(G\).
-It is the field-theory counterpart of Newton's \(-F^2uvh/(8M)\) in the
-\href{refinement-composition-and-limit.md}{refinement note}, eq. (1),
-and it equals exactly the error of Migdal's bond-moving approximation in
-the Gaussian theory. For a single cube with \(G=U(1)\) the parallel move
-is exact in closed form (Proposition 3): a heat kernel at softened heat
-time on the interpolated flux, plus an odd-charge correction carrying a
-theta-function factor: the large-field term, with rate
-\(e^{-2\pi(\pi-|\phi|)/t}\). For a whole \(U(1)\) mid-plane the move is
-exact as a sum over integer charges (Proposition 4), and its vortex part
-is bounded by an extensive error of density \(e^{-c/t}\) per face; with
-the parity factors included this gives Hypothesis P(\(\alpha\)) for
-\(U(1)\) (Theorem 5). Its error density in physical units separates the
-two known continuum limits of compact \(U(1)\) in three dimensions:
-massless at fixed coupling (Gross), massive at fixed Debye mass
-(Göpfert--Mack). The non-abelian estimate needed for one step in \(1+2\)
-dimensions is stated in §4 as Hypothesis P(\(\alpha\)), with the four
-terms it must control and their orders in \(\lambda_3a\).
+are cut in two; these \emph{series} moves integrate out exactly in every
+dimension, by the heat-kernel convolution. Faces transverse to the
+refined direction acquire a new parallel copy at doubled heat time;
+integrating out these \emph{parallel} insertions leaves the factor
+\(\Psi\) of Proposition 1, the partition function of a
+\((D-1)\)-dimensional gauge theory on the inserted mid-plane whose edges
+carry Brownian-bridge laws fixed by the coarse field. There are
+\(\binom{D-1}{2}\) transverse planes: none in \(D=2\), which is why
+two-dimensional Yang--Mills closes, one in \(D=3\), three in \(D=4\).
+
+What is proved about \(\Psi\):
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Free field} (Proposition 2): the defect against the coarse
+  action is an exact negative semidefinite quadratic form, of relative
+  size at most \(a^2K^2/16+(Ga)^2/8\) on fields with transverse momenta
+  up to \(K\) and layer gradient \(G\). It is the counterpart of
+  Newton's \(-F^2uvh/(8M)\)
+  (\href{refinement-composition-and-limit.md}{refinement note}, eq. (1))
+  and exactly the error of Migdal's bond moving.
+\item
+  \emph{Compact \(U(1)\)} (Propositions 3--4, Theorem 5): exact formulas
+  for a cube and a mid-plane, and a proof that one step equals the free
+  step up to an extensive error of density \(e^{-\pi^2/(8\lambda_3a)}\)
+  on the small-field set. Measured in physical units, that error density
+  separates the two known continuum limits of three-dimensional compact
+  \(U(1)\): massless at fixed coupling (Gross), massive at fixed Debye
+  mass (Göpfert--Mack).
+\item
+  \emph{Non-abelian groups} (Propositions 6--7): the bridge midpoint's
+  curvature term is explicit for every compact group (for \(SU(3)\) the
+  averaged softening per cut face is \(t_j|X_j|^2/512\)), and the
+  one-step estimate, Hypothesis P(\(\alpha\)) of §4, holds formally for
+  one cube. The missing estimate is a uniform Laplace remainder.
+\end{itemize}
 
 This answers the stop rule of the refinement note, §8, in its second
 form: it gives the exact term that prevents closure, with an explicit
@@ -358,6 +364,45 @@ hypothesis below):
   cut locus, and \(O(1)\) at it (Proposition 3 below gives the rate);
   the small-field split of Hypothesis P(\(\alpha\)) handles them.
 \end{itemize}
+
+\textbf{Correction, 2026-09-26 (referee check).} The first version of
+the hypothesis below bounded \(-\log\Psi\) itself and demanded
+large-field suppression of \(\Psi\); the free field violates the first
+(it needs \(\delta_t=\frac12\)) and Proposition 3 the second. The
+version below bounds the log-ratio \(\mathcal D\) of (2) against the
+coarse density.
+
+\textbf{Hypothesis P(\(\alpha\)) (one parallel step, \(D=3\)).} Fix
+\(\delta\in(0,\frac14)\). Let
+
+\[\mathcal D(U)=-\log\Psi(U)-\sum_{f\perp1}\log
+\frac{k_{2t_{23}}(U_f)}{k_{t_{23}}(U_f)},\qquad
+S_{\mu\nu}(U)=\sum_{f\in(\mu\nu)}\frac{|\log U_f|^2}{2t_{\mu\nu}},\]
+
+so that \(p_*\mu'\) is the coarse heat-kernel density times
+\(e^{-\mathcal D}\) (for the free field, \(\mathcal D\) is (5)). There
+exist \(\alpha>2\delta\), \(t_0>0\), \(C<\infty\), a local quadratic
+form \(\mathcal D_0\) in \(\{\log U_p\}\) (the form (5), with \(t_{23}\)
+possibly renormalized by \(O(t)\)), and for each \(t=\lambda_3a\le t_0\)
+numbers \(c_{\rm vac}(t)\) and coupling shifts \(\delta_t^{\mu\nu}\),
+one per plane, with \(|\delta_t^{\mu\nu}|\le Ct\), such that on the
+small-field set \(\{|\log U_p|\le t^{1/2-\delta}\ \text{for all }p\}\)
+
+\[\bigl|\mathcal D(U)-\mathcal D_0(U)-c_{\rm vac}N_{\rm cells}
+-\textstyle\sum_{\mu<\nu}\delta_t^{\mu\nu}S_{\mu\nu}(U)\bigr|
+\le C\,t^{\alpha}\sum_p\bigl(1+|\log U_p|^2/t\bigr),\]
+
+the sum running over all coarse plaquettes. The same statement is
+required for heat-kernel actions perturbed by local terms of the size on
+the right, so that it can be iterated. No large-field clause on \(\Psi\)
+is needed: \(\Psi\le\prod_gk_{2t_g}(1)\), and the explicit factors of
+(2) suppress each plaquette outside the small-field set by
+\(e^{-t^{-2\delta}/4}\), up to a factor \(t^{-n/2}\) per cell.
+Free-field check: \(\mathcal D=\mathcal D_0\), all
+\(\delta_t^{\mu\nu}=0\), every \(\alpha\). (Amended the same night: the
+first version allowed a shift of the transverse coupling only; the
+one-loop determinant below shifts the couplings of the cut faces as
+well.)
 
 \textbf{The compact abelian cube isolates N4 exactly.} Take \(G=U(1)\)
 with \(k_t(\theta)=\sum_{n\in\mathbb Z}e^{-tn^2/2}e^{in\theta}\) (the
@@ -671,45 +716,6 @@ action. N3, the non-Gaussian and commutator corrections in
 \(O(t)\) terms, N2 and N3 together, combine into a constant, coupling
 shifts and operators that are irrelevant on smooth fields. Proposition 7
 below derives this formally for any compact group.
-
-\textbf{Correction, 2026-09-26 (referee check).} The first version of
-the hypothesis below bounded \(-\log\Psi\) itself and demanded
-large-field suppression of \(\Psi\); the free field violates the first
-(it needs \(\delta_t=\frac12\)) and Proposition 3 the second. The
-version below bounds the log-ratio \(\mathcal D\) of (2) against the
-coarse density.
-
-\textbf{Hypothesis P(\(\alpha\)) (one parallel step, \(D=3\)).} Fix
-\(\delta\in(0,\frac14)\). Let
-
-\[\mathcal D(U)=-\log\Psi(U)-\sum_{f\perp1}\log
-\frac{k_{2t_{23}}(U_f)}{k_{t_{23}}(U_f)},\qquad
-S_{\mu\nu}(U)=\sum_{f\in(\mu\nu)}\frac{|\log U_f|^2}{2t_{\mu\nu}},\]
-
-so that \(p_*\mu'\) is the coarse heat-kernel density times
-\(e^{-\mathcal D}\) (for the free field, \(\mathcal D\) is (5)). There
-exist \(\alpha>2\delta\), \(t_0>0\), \(C<\infty\), a local quadratic
-form \(\mathcal D_0\) in \(\{\log U_p\}\) (the form (5), with \(t_{23}\)
-possibly renormalized by \(O(t)\)), and for each \(t=\lambda_3a\le t_0\)
-numbers \(c_{\rm vac}(t)\) and coupling shifts \(\delta_t^{\mu\nu}\),
-one per plane, with \(|\delta_t^{\mu\nu}|\le Ct\), such that on the
-small-field set \(\{|\log U_p|\le t^{1/2-\delta}\ \text{for all }p\}\)
-
-\[\bigl|\mathcal D(U)-\mathcal D_0(U)-c_{\rm vac}N_{\rm cells}
--\textstyle\sum_{\mu<\nu}\delta_t^{\mu\nu}S_{\mu\nu}(U)\bigr|
-\le C\,t^{\alpha}\sum_p\bigl(1+|\log U_p|^2/t\bigr),\]
-
-the sum running over all coarse plaquettes. The same statement is
-required for heat-kernel actions perturbed by local terms of the size on
-the right, so that it can be iterated. No large-field clause on \(\Psi\)
-is needed: \(\Psi\le\prod_gk_{2t_g}(1)\), and the explicit factors of
-(2) suppress each plaquette outside the small-field set by
-\(e^{-t^{-2\delta}/4}\), up to a factor \(t^{-n/2}\) per cell.
-Free-field check: \(\mathcal D=\mathcal D_0\), all
-\(\delta_t^{\mu\nu}=0\), every \(\alpha\). (Amended the same night: the
-first version allowed a shift of the transverse coupling only; the
-one-loop determinant below shifts the couplings of the cut faces as
-well.)
 
 \textbf{Proposition 7 (formal, any compact \(G\), isolated cube).}
 Assume that Laplace's method applies to (3) for one refined cube with a
