@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The zero-spacing limit for any plaquette action and any dimension</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The zero-spacing limit for any plaquette action and any dimension</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/zero-spacing-any-action.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/zero-spacing-any-action.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> The <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>
+worked with the heat-kernel action. Here the question is how the <span
+class="math inline">\(a\to0\)</span> limit depends on the choice of
+plaquette action, and on the dimension.</p>
+<ol type="1">
+<li><strong>Two semigroups.</strong> A series move convolves plaquette
+weights, so it multiplies their character coefficients; the heat kernel
+is the family closed under it. A parallel move multiplies weights
+pointwise, so it adds their logarithms; exponential families <span
+class="math inline">\(e^{-\beta V}\)</span> (Wilson, Villain-type) are
+closed under it. In the small-field regime the two agree: for <span
+class="math inline">\(U(1)\)</span> the product of two heat kernels is
+exactly a heat kernel at the parallel heat time <span
+class="math inline">\(st/(s+t)\)</span> plus vortex terms of relative
+size <span class="math inline">\(e^{-2\pi^2/(s+t)}\)</span> (Proposition
+1).</li>
+<li><strong>Two dimensions, any action</strong> (Theorem 2). The
+possible continuum limits of refining a two-dimensional lattice gauge
+theory with any symmetric class-function plaquette weight are exactly
+the conjugation-invariant Lévy exponents <span
+class="math inline">\(\psi(R)=\frac{\sigma^2}2C_2(R)+\int(1-{\rm
+Re}\,\chi_R/d_R)\,d\nu\)</span>, with <span
+class="math inline">\(\psi(R)=\lim a^{-2}(1-\hat c_R(a))\)</span>.
+Yang–Mills is the Gaussian member, <span
+class="math inline">\(\nu=0\)</span>, selected by a Lindeberg condition
+on the action. A weight with an atom at a centre element produces a
+centre-vortex gas, and the circle spectrum becomes <span
+class="math inline">\(E_R-E_0=\hbar cL\,\psi(R)\)</span>.</li>
+<li><strong>Any dimension: an error budget per physical volume.</strong>
+One refinement step leaves three kinds of error. The perturbative part
+is of relative order <span class="math inline">\(t_n\)</span>, the
+plaquette heat time at step <span class="math inline">\(n\)</span>. The
+large-field part has density <span
+class="math inline">\(a_n^{-D}e^{-c/t_n}\)</span> per physical volume,
+with <span class="math inline">\(c\)</span> the minimal large-field
+action of the chosen lattice action in units of the inverse heat time.
+The jump part is the action’s Lévy content. With <span
+class="math inline">\(t\propto\lambda_Da^{4-D}\)</span>:
+<ul>
+<li><span class="math inline">\(D&lt;4\)</span>: all three are summable
+at fixed <span class="math inline">\(\lambda_D\)</span> once the jump
+part vanishes, which is why the lattice gap of compact <span
+class="math inline">\(U(1)\)</span> disappears at fixed coupling (Gross,
+Theorem 5 of the series/parallel note);</li>
+<li><span class="math inline">\(D=4\)</span>: the perturbative part
+resums into the running coupling, and the large-field part decays only
+as a power of <span class="math inline">\(a\)</span>, <span
+class="math inline">\((a\Lambda)^{2b_0c}\)</span>, so it dies iff <span
+class="math inline">\(2b_0c&gt;4\)</span>, that is <span
+class="math inline">\(c&gt;96\pi^2/(11N)\)</span> for pure <span
+class="math inline">\(SU(N)\)</span>: <span
+class="math inline">\(c&gt;43.1\)</span> for <span
+class="math inline">\(SU(2)\)</span>, <span
+class="math inline">\(c&gt;28.7\)</span> for <span
+class="math inline">\(SU(3)\)</span>. Instantons (<span
+class="math inline">\(c=8\pi^2\approx79\)</span>) pass for every <span
+class="math inline">\(N\)</span>, and the condition on lattice
+dislocations is the kind studied by Pugh and Teper;</li>
+<li><span class="math inline">\(D&gt;4\)</span>: <span
+class="math inline">\(t\)</span> grows as <span
+class="math inline">\(a\to0\)</span> at fixed <span
+class="math inline">\(\lambda_D\)</span>, so no small-field regime
+exists at short distances.</li>
+</ul></li>
+</ol>
+<p>So, in the ultraviolet, the limit depends on the lattice action only
+through its second moment (the coupling, and in <span
+class="math inline">\(D=4\)</span> the ratio of <span
+class="math inline">\(\Lambda\)</span> parameters), its minimal
+large-field action and its jump content. A gap, being an infrared
+property, is then the same for every action that meets the three
+conditions, up to the <span class="math inline">\(\Lambda\)</span>
+ratio. The ingredients are established (character expansions, Poisson
+summation, Hunt’s classification of convolution semigroups, the one-loop
+running); the organization by the two semigroups and the error budget is
+the contribution, with no novelty claimed for the parts.</p>
+<h2
+id="series-and-parallel-act-on-different-coordinates-of-the-weight">1.
+Series and parallel act on different coordinates of the weight</h2>
+<p>Let <span class="math inline">\(w\)</span> be a class-function
+probability density on a compact connected Lie group <span
+class="math inline">\(G\)</span> (Haar measure normalized), symmetric,
+<span class="math inline">\(w(g^{-1})=w(g)\)</span>, with character
+coefficients <span class="math inline">\(\hat c_R=d_R^{-1}\int
+w\,\overline{\chi_R}\,dg\in[-1,1]\)</span>, so that <span
+class="math inline">\(w=\sum_Rd_R\hat c_R\chi_R\)</span>. Group metric
+as in the series/parallel note §1 (<span
+class="math inline">\(-\Delta\chi_R=C_2(R)\chi_R\)</span>).</p>
+<ul>
+<li><strong>Series.</strong> Integrating out an edge shared by two faces
+convolves their weights, and <span
+class="math inline">\(\widehat{(w_1*w_2)}_R=\hat c_R(w_1)\hat
+c_R(w_2)\)</span>. The heat kernels <span
+class="math inline">\(k_t\)</span>, <span class="math inline">\(\hat
+c_R=e^{-tC_2(R)/2}\)</span>, form the one-parameter family closed under
+this product with <span class="math inline">\(t\)</span> additive.</li>
+<li><strong>Parallel.</strong> Two faces with the same holonomy combine
+by the pointwise product <span class="math inline">\(w_1w_2\)</span>,
+and <span class="math inline">\(\log(w_1w_2)=\log w_1+\log w_2\)</span>.
+The families <span class="math inline">\(w_\beta\propto e^{-\beta
+V}\)</span> with fixed <span class="math inline">\(V\)</span> are closed
+under this operation with <span class="math inline">\(\beta\)</span>
+additive; Wilson’s <span class="math inline">\(V=1-{\rm
+Re\,tr}\,U/N\)</span> is one.</li>
+</ul>
+<p><strong>Proposition 1 (parallel product of <span
+class="math inline">\(U(1)\)</span> heat kernels).</strong> With <span
+class="math inline">\(k_s(\theta)=\sum_{n\in\mathbb
+Z}e^{-sn^2/2}e^{in\theta}\)</span> and <span
+class="math inline">\(\tau=st/(s+t)\)</span>,</p>
+<p><span
+class="math display">\[k_s(\theta)\,k_t(\theta)=\frac1{\sqrt{2\pi(s+t)}}\sum_{m\in\mathbb
+Z}
+e^{-2\pi^2m^2/(s+t)}\,k_\tau\!\Bigl(\theta+\frac{2\pi
+ms}{s+t}\Bigr).\]</span></p>
+<p><em>Proof.</em> Poisson summation gives <span
+class="math inline">\(k_s(\theta)=\sum_wG_s(\theta+2\pi w)\)</span> with
+<span class="math inline">\(G_s(x)=(2\pi
+s)^{-1/2}e^{-x^2/(2s)}\)</span>. For Gaussians, <span
+class="math inline">\(G_s(x)G_t(y)=G_{s+t}(x-y)\,G_\tau\bigl((tx+sy)/(s+t)\bigr)\)</span>.
+Put <span class="math inline">\(x=\theta+2\pi w\)</span>, <span
+class="math inline">\(y=\theta+2\pi w&#39;\)</span> and <span
+class="math inline">\(m=w&#39;-w\)</span>; the sum over <span
+class="math inline">\(w\)</span> at fixed <span
+class="math inline">\(m\)</span> is a wrapped Gaussian of variance <span
+class="math inline">\(\tau\)</span> centred at <span
+class="math inline">\(-2\pi ms/(s+t)\)</span>, which is <span
+class="math inline">\(k_\tau\)</span> at the shifted argument by Poisson
+summation again. <span class="math inline">\(\square\)</span></p>
+<p>The <span class="math inline">\(m=0\)</span> term is the heat kernel
+at the parallel heat time, the conductance rule of the series/parallel
+note §3. The terms <span class="math inline">\(m\neq0\)</span> are
+vortices, of relative weight <span
+class="math inline">\(e^{-2\pi^2m^2/(s+t)}\)</span>. So the heat kernel
+is closed under series moves exactly and under parallel moves up to
+<span class="math inline">\(e^{-c/t}\)</span> corrections; exponential
+families have the opposite property. Both reduce to the Gaussian in the
+small-field regime, where they agree.</p>
+<p><strong>A limit of validity for heat-kernel anisotropy.</strong>
+Equation (1) of the series/parallel note matches heat times to the
+continuum action in the small-field regime. Refining one direction
+alone, for instance Euclidean time at fixed spatial lattice, sends the
+transverse heat times to infinity. Heat-kernel weights then become flat
+up to corrections <span class="math inline">\(e^{-tC_2/2}\)</span>,
+whereas the Kogut–Susskind limit needs a magnetic weight <span
+class="math inline">\(e^{-a_0V}\)</span> with <span
+class="math inline">\(a_0\)</span> the time step. The Hamiltonian limit
+is reached within the exponential family. The directional halvings of an
+isotropic cycle change heat times only by factors of two, so the
+propositions of that note are unaffected.</p>
+<h2
+id="two-dimensions-the-continuum-limits-of-every-plaquette-action">2.
+Two dimensions: the continuum limits of every plaquette action</h2>
+<p>In two dimensions every refinement is a series move (the
+series/parallel note, §2). A face of area <span
+class="math inline">\(A\)</span> tiled by <span
+class="math inline">\(A/a^2\)</span> plaquettes of weight <span
+class="math inline">\(w_a\)</span> has, after integrating the interior
+edges, the weight whose coefficients are <span
+class="math inline">\(\hat c_R(a)^{A/a^2}\)</span>.</p>
+<p><strong>Theorem 2.</strong> Let <span
+class="math inline">\(w_a\)</span> be symmetric class-function plaquette
+weights on the lattice of spacing <span
+class="math inline">\(a\)</span>, with <span class="math inline">\(\hat
+c_R(a)\to1\)</span> for every <span class="math inline">\(R\)</span>.
+Suppose that for every <span class="math inline">\(R\)</span> the
+limit</p>
+<p><span class="math display">\[\psi(R)=\lim_{a\to0}\frac{1-\hat
+c_R(a)}{a^2}
+=\lim_{a\to0}a^{-2}\int_G\Bigl(1-\frac{{\rm Re}\,\chi_R(g)}{d_R}\Bigr)
+w_a(g)\,dg\]</span></p>
+<p>exists. Then every face of area <span
+class="math inline">\(A\)</span> has the limiting coefficients <span
+class="math inline">\(e^{-A\psi(R)}\)</span>, and <span
+class="math inline">\(\psi\)</span> has the form</p>
+<p><span
+class="math display">\[\psi(R)=\frac{\sigma^2}2C_2(R)+\int_{G\setminus\{e\}}
+\Bigl(1-\frac{{\rm Re}\,\chi_R(g)}{d_R}\Bigr)\nu(dg),\]</span></p>
+<p>with <span class="math inline">\(\sigma^2\ge0\)</span> and <span
+class="math inline">\(\nu\)</span> a conjugation-invariant symmetric
+measure satisfying</p>
+<p><span
+class="math display">\[\int_G\min\bigl(1,d(e,g)^2\bigr)\,\nu(dg)&lt;\infty.\]</span>
+The continuum theory is Yang–Mills with <span
+class="math inline">\(\lambda_2=\sigma^2\)</span> exactly when <span
+class="math inline">\(\nu=0\)</span>, and <span
+class="math inline">\(\nu=0\)</span> holds when, for every <span
+class="math inline">\(\varepsilon&gt;0\)</span>, <span
+class="math inline">\(a^{-2}\int_{d(e,g)&gt;\varepsilon}w_a\,dg\to0\)</span>.</p>
+<p><em>Proof.</em> Since <span class="math inline">\(\hat
+c_R(a)\to1\)</span>, <span class="math inline">\((A/a^2)\log\hat
+c_R(a)=-(A/a^2)(1-\hat c_R(a))(1+o(1))\to-A\psi(R)\)</span>. Split the
+integral defining <span class="math inline">\(\psi\)</span> at <span
+class="math inline">\(d(e,g)=\varepsilon\)</span>. Near the identity,
+<span class="math inline">\(1-{\rm
+Re}\,\chi_R(e^X)/d_R=C_2(R)|X|^2/(2\dim G)+O(|X|^3)\)</span> after
+averaging over the directions of <span class="math inline">\(X\)</span>,
+which conjugation invariance of <span class="math inline">\(w_a\)</span>
+permits; this part converges to <span
+class="math inline">\(\frac{\sigma^2}2C_2(R)\)</span> with</p>
+<p><span
+class="math display">\[\sigma^2=\lim_{\varepsilon\to0}\lim_{a\to0}\frac1{a^2\dim
+G}
+\int_{d(e,g)&lt;\varepsilon}|X|^2\,w_a(g)\,dg,\qquad g=e^X,\]</span></p>
+<p>along a subsequence if needed. Away from the identity, the measures
+<span class="math inline">\(a^{-2}w_a\,dg\)</span> restricted to <span
+class="math inline">\(\{d\ge\varepsilon\}\)</span> have bounded mass (a
+finite sum of the functions <span class="math inline">\(1-{\rm
+Re}\,\chi_R/d_R\)</span> over representations separating the points of
+<span class="math inline">\(G\)</span> is continuous and positive off
+<span class="math inline">\(e\)</span>, hence bounded below there), so a
+subsequence converges weakly to <span class="math inline">\(\nu\)</span>
+on that set, conjugation invariant and symmetric. The integrability of
+<span class="math inline">\(\nu\)</span> near <span
+class="math inline">\(e\)</span> follows from the bound on the near
+part. The form of <span class="math inline">\(\psi\)</span> agrees with
+Hunt’s classification of convolution semigroups on Lie groups,
+restricted to central ones (<a
+href="https://doi.org/10.1090/S0002-9947-1956-0079232-9">Hunt 1956</a>,
+metadata). The Lindeberg condition sets the far part to zero. <span
+class="math inline">\(\square\)</span></p>
+<p>The limiting objects are Lévy’s two-dimensional Markovian holonomy
+fields, which he constructs from Lévy processes on <span
+class="math inline">\(G\)</span> (<a
+href="https://doi.org/10.24033/ast.785">Lévy, Astérisque 329</a>,
+metadata). Theorem 2 adds only the lattice-side statement: which
+plaquette actions lead to which member.</p>
+<p><strong>Examples.</strong> The Wilson action <span
+class="math inline">\(w_a\propto e^{\beta_a{\rm Re\,tr}U}\)</span> with
+<span class="math inline">\(\beta_a\propto1/(\lambda_2a^2)\)</span>
+concentrates like a Gaussian of width <span
+class="math inline">\(\sqrt{\lambda_2}a\)</span>, satisfies the
+Lindeberg condition, and gives Yang–Mills. A weight carrying an explicit
+centre-vortex fugacity, <span class="math inline">\(w_a=(1-\kappa
+a^2)k_{\lambda_2a^2}+\frac{\kappa a^2}2\bigl[k_{\lambda_2a^2}(z\,\cdot)
++k_{\lambda_2a^2}(z^{-1}\cdot)\bigr]\)</span> with <span
+class="math inline">\(z\)</span> a generator of the centre <span
+class="math inline">\(\mathbb Z_N\)</span> of <span
+class="math inline">\(SU(N)\)</span>, gives <span
+class="math inline">\(\nu=\frac\kappa2(\delta_z+\delta_{z^{-1}})\)</span>
+and</p>
+<p><span
+class="math display">\[\psi(R)=\frac{\lambda_2}2C_2(R)+\kappa\Bigl(1-\cos\frac{2\pi
+k(R)}N\Bigr),\]</span></p>
+<p>with <span class="math inline">\(k(R)\)</span> the <span
+class="math inline">\(N\)</span>-ality. On a spatial circle of
+circumference <span class="math inline">\(L\)</span> the refinement
+note’s eq. (10) becomes <span class="math inline">\(E_R-E_0=\hbar
+cL\,\psi(R)\)</span>: the vortex gas adds an <span
+class="math inline">\(N\)</span>-ality-dependent string tension. The
+limit is action-dependent exactly through <span
+class="math inline">\((\sigma^2,\nu)\)</span>.</p>
+<h2 id="any-dimension-the-error-budget-of-one-step">3. Any dimension:
+the error budget of one step</h2>
+<p>Let <span class="math inline">\(t_n\)</span> be the plaquette heat
+time at refinement step <span class="math inline">\(n\)</span>, which by
+eq. (1) of the series/parallel note scales as <span
+class="math inline">\(\lambda_Da_n^{4-D}\)</span> at fixed physical
+coupling, and let <span class="math inline">\(L\)</span> be a fixed
+physical box side. One directional step leaves three kinds of error.</p>
+<ul>
+<li><strong>Perturbative.</strong> Coupling shifts and irrelevant
+operators of relative size <span class="math inline">\(O(t_n)\)</span>
+(Hypothesis P(<span class="math inline">\(\alpha\)</span>) and
+Proposition 7 of the series/parallel note).</li>
+<li><strong>Large-field.</strong> Configurations far from the identity
+at the lattice scale, with action at least <span
+class="math inline">\(c/t_n\)</span>, of density per physical volume
+about <span class="math inline">\(a_n^{-D}e^{-c/t_n}\)</span>; here
+<span class="math inline">\(c\)</span> depends on the lattice action
+(for heat-kernel <span class="math inline">\(U(1)\)</span> it is the
+vortex constant of Theorem 5 there).</li>
+<li><strong>Jump.</strong> The action’s Lévy content, the part of <span
+class="math inline">\(\nu\)</span> in Theorem 2.</li>
+</ul>
+<p>The continuum limit discards the lattice structure when the three are
+summable over steps in a fixed physical box.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(D\)</span></th>
+<th><span class="math inline">\(t_n\)</span>, fixed <span
+class="math inline">\(\lambda_D\)</span></th>
+<th>Perturbative</th>
+<th>Large-field, <span
+class="math inline">\(\sum(L/a_n)^De^{-c/t_n}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td><span class="math inline">\(\lambda_2a_n^2\to0\)</span></td>
+<td>summable</td>
+<td>summable; limit set by <span
+class="math inline">\((\sigma^2,\nu)\)</span></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><span class="math inline">\(\lambda_3a_n\to0\)</span></td>
+<td>summable</td>
+<td>summable faster than any power</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><span class="math inline">\(g^2(a_n)\to0\)</span>,
+logarithmically</td>
+<td>resums into running</td>
+<td><span class="math inline">\(\propto(a_n\Lambda)^{2b_0c-4}\)</span>,
+needs <span class="math inline">\(2b_0c&gt;4\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(&gt;4\)</span></td>
+<td><span
+class="math inline">\(\lambda_Da_n^{4-D}\to\infty\)</span></td>
+<td>no small parameter</td>
+<td>no small-field regime</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The four-dimensional threshold.</strong> With <span
+class="math inline">\(g^{-2}(a)=2b_0\log(1/(a\Lambda))\)</span>, the
+convention of the refinement note §6, <span
+class="math inline">\(e^{-c/g^2(a)}=(a\Lambda)^{2b_0c}\)</span>. For
+pure <span class="math inline">\(SU(N)\)</span>, <span
+class="math inline">\(b_0=11N/(48\pi^2)\)</span>, so the large-field
+density per physical volume vanishes iff</p>
+<p><span
+class="math display">\[c&gt;\frac2{b_0}=\frac{96\pi^2}{11N}:\qquad
+c&gt;43.1\ (SU(2)),\qquad
+c&gt;28.7\ (SU(3)).\]</span></p>
+<p>A continuum instanton has <span
+class="math inline">\(c=8\pi^2\approx79\)</span>, giving the density
+<span class="math inline">\((a\Lambda)^{11N/3}a^{-4}\)</span> of small
+instantons, which vanishes for every <span
+class="math inline">\(N\ge2\)</span> because <span
+class="math inline">\(11N/3&gt;4\)</span>. Lattice actions admit
+dislocations, small configurations of topological charge whose action
+lies below <span class="math inline">\(8\pi^2\)</span>; whether they
+survive the continuum limit is decided by the same inequality, the kind
+of criterion <a href="https://doi.org/10.1016/0370-2693(89)91067-8">Pugh
+and Teper (1989)</a> (metadata) analysed for <span
+class="math inline">\(SU(2)\)</span>, and the reason for admissibility
+conditions on lattice fields (<a
+href="https://doi.org/10.1007/BF02029132">Lüscher 1982</a>, metadata).
+The numerical thresholds above are computed here from the one-loop
+coefficient and are subject to the higher-order corrections of the
+running.</p>
+<p><strong>What this says about the mass gap.</strong> In <span
+class="math inline">\(D=3\)</span> at fixed <span
+class="math inline">\(\lambda_3\)</span> every plaquette action with
+vanishing jump content has an ultraviolet limit governed by the same
+small-field analysis; a gap <span class="math inline">\(C_3\hbar
+c\lambda_3\)</span> is then a property of the infrared and, if it
+exists, the same for all such actions. In <span
+class="math inline">\(D=4\)</span> the same holds for actions whose
+large-field constant exceeds <span class="math inline">\(2/b_0\)</span>,
+with gap <span class="math inline">\(C_4\hbar c\Lambda\)</span> and a
+<span class="math inline">\(\Lambda\)</span> parameter that depends on
+the action by a computable finite factor. The universality of the gap
+across actions is thereby reduced to the three ultraviolet conditions,
+and the gap itself remains the infrared obligation of the mass-gap
+map.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>Item 1 of STATE gains its action and dimension dependence. The next
+steps on this line are to state Hypothesis P(<span
+class="math inline">\(\alpha\)</span>) for a general symmetric
+class-function action (second moment, large-field constant and jump
+content as its data), and to connect the four-dimensional large-field
+threshold to the H1 blocking hypothesis of the <a
+href="mass-gap-conditional-theorem.html">conditional theorem</a>. For
+the joint paper, Theorem 2 gives the two-dimensional row of the
+comparison for every action at once, and the table gives the other
+rows.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

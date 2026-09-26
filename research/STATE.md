@@ -53,6 +53,9 @@ Principia work lives in the sibling `newtonlean` repository.
    midpoint: exact structure and leading curvature term (Prop. 6); P($\alpha$)
    for one cube holds formally for any compact $G$ (Prop. 7). Next: its
    uniform Laplace remainder for $SU(2)$, then a mid-plane, then iteration.
+   The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
+   to any action and dimension: all 2D limits (Lévy exponents), and the
+   per-volume error budget, with the 4D large-field threshold $c>2/b_0$.
 2. **Newton necessity.** The
    [unit-and-indeterminacy note](../notes/necessity-unit-and-indeterminacy.md)
    splits it: a universal action unit follows from classical radiation

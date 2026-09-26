@@ -33,7 +33,7 @@ TRACKS = [
      pion's zero threshold. Series insertions close exactly; parallel
      insertions carry the renormalization.""", [
         "three-continuum-limits", "refinement-composition-and-limit",
-        "series-parallel-gauge-refinement",
+        "series-parallel-gauge-refinement", "zero-spacing-any-action",
     ]),
     ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
      letting the sagitta and the enclosed area go to zero. Once the comparison

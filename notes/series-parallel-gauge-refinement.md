@@ -77,7 +77,11 @@ face area, as in the refinement note; in $D=3$ the isotropic value is
 $t=\lambda_3a$, the refinement parameter of that note's table; in $D=4$
 it is $t=\lambda_4=g_{\rm lat}^2$, independent of $a$. Equation (1) is a
 choice of regularization, the heat-kernel counterpart of the anisotropic
-Wilson action; the theorems below concern it exactly.
+Wilson action; the theorems below concern it exactly. The matching holds in the small-field regime; under large anisotropy,
+such as refining time alone, the transverse heat times grow and the
+Hamiltonian limit requires exponential (Wilson-type) weights instead
+([zero-spacing note](zero-spacing-any-action.md), §1). The halvings used
+here change heat times by factors of two.
 
 ## 2. Halving one direction: series moves and a parallel insertion
 

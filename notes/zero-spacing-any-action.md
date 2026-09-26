@@ -1,0 +1,249 @@
+# The zero-spacing limit for any plaquette action and any dimension
+
+**Result, 2026-09-27.** The [series/parallel note](series-parallel-gauge-refinement.md)
+worked with the heat-kernel action. Here the question is how the
+$a\to0$ limit depends on the choice of plaquette action, and on the
+dimension.
+
+1. **Two semigroups.** A series move convolves plaquette weights, so it
+   multiplies their character coefficients; the heat kernel is the family
+   closed under it. A parallel move multiplies weights pointwise, so it
+   adds their logarithms; exponential families $e^{-\beta V}$ (Wilson,
+   Villain-type) are closed under it. In the small-field regime the two
+   agree: for $U(1)$ the product of two heat kernels is exactly a heat
+   kernel at the parallel heat time $st/(s+t)$ plus vortex terms of
+   relative size $e^{-2\pi^2/(s+t)}$ (Proposition 1).
+2. **Two dimensions, any action** (Theorem 2). The possible continuum
+   limits of refining a two-dimensional lattice gauge theory with any
+   symmetric class-function plaquette weight are exactly the
+   conjugation-invariant Lévy exponents
+   $\psi(R)=\frac{\sigma^2}2C_2(R)+\int(1-{\rm Re}\,\chi_R/d_R)\,d\nu$,
+   with $\psi(R)=\lim a^{-2}(1-\hat c_R(a))$. Yang--Mills is the Gaussian
+   member, $\nu=0$, selected by a Lindeberg condition on the action. A
+   weight with an atom at a centre element produces a centre-vortex gas,
+   and the circle spectrum becomes $E_R-E_0=\hbar cL\,\psi(R)$.
+3. **Any dimension: an error budget per physical volume.** One
+   refinement step leaves three kinds of error. The perturbative part is
+   of relative order $t_n$, the plaquette heat time at step $n$. The
+   large-field part has density $a_n^{-D}e^{-c/t_n}$ per physical volume,
+   with $c$ the minimal large-field action of the chosen lattice action
+   in units of the inverse heat time. The jump part is the action's Lévy
+   content. With $t\propto\lambda_Da^{4-D}$:
+   - $D<4$: all three are summable at fixed $\lambda_D$ once the jump part
+     vanishes, which is why the lattice gap of compact $U(1)$ disappears
+     at fixed coupling (Gross, Theorem 5 of the series/parallel note);
+   - $D=4$: the perturbative part resums into the running coupling, and
+     the large-field part decays only as a power of $a$,
+     $(a\Lambda)^{2b_0c}$, so it dies iff $2b_0c>4$, that is
+     $c>96\pi^2/(11N)$ for pure $SU(N)$: $c>43.1$ for $SU(2)$, $c>28.7$ for
+     $SU(3)$. Instantons ($c=8\pi^2\approx79$) pass for every $N$, and the
+     condition on lattice dislocations is the kind studied by Pugh and
+     Teper;
+   - $D>4$: $t$ grows as $a\to0$ at fixed $\lambda_D$, so no small-field
+     regime exists at short distances.
+
+So, in the ultraviolet, the limit depends on the lattice action only
+through its second moment (the coupling, and in $D=4$ the ratio of
+$\Lambda$ parameters), its minimal large-field action and its jump
+content. A gap, being an infrared property, is then the same for every
+action that meets the three conditions, up to the $\Lambda$ ratio.
+The ingredients are established (character expansions, Poisson
+summation, Hunt's classification of convolution semigroups, the
+one-loop running); the organization by the two semigroups and the error
+budget is the contribution, with no novelty claimed for the parts.
+
+## 1. Series and parallel act on different coordinates of the weight
+
+Let $w$ be a class-function probability density on a compact connected
+Lie group $G$ (Haar measure normalized), symmetric,
+$w(g^{-1})=w(g)$, with character coefficients
+$\hat c_R=d_R^{-1}\int w\,\overline{\chi_R}\,dg\in[-1,1]$, so that
+$w=\sum_Rd_R\hat c_R\chi_R$. Group metric as in the series/parallel note
+§1 ($-\Delta\chi_R=C_2(R)\chi_R$).
+
+- **Series.** Integrating out an edge shared by two faces convolves their
+  weights, and $\widehat{(w_1*w_2)}_R=\hat c_R(w_1)\hat c_R(w_2)$. The heat
+  kernels $k_t$, $\hat c_R=e^{-tC_2(R)/2}$, form the one-parameter family
+  closed under this product with $t$ additive.
+- **Parallel.** Two faces with the same holonomy combine by the
+  pointwise product $w_1w_2$, and $\log(w_1w_2)=\log w_1+\log w_2$. The
+  families $w_\beta\propto e^{-\beta V}$ with fixed $V$ are closed under
+  this operation with $\beta$ additive; Wilson's $V=1-{\rm Re\,tr}\,U/N$
+  is one.
+
+**Proposition 1 (parallel product of $U(1)$ heat kernels).** With
+$k_s(\theta)=\sum_{n\in\mathbb Z}e^{-sn^2/2}e^{in\theta}$ and
+$\tau=st/(s+t)$,
+
+$$k_s(\theta)\,k_t(\theta)=\frac1{\sqrt{2\pi(s+t)}}\sum_{m\in\mathbb Z}
+e^{-2\pi^2m^2/(s+t)}\,k_\tau\!\Bigl(\theta+\frac{2\pi ms}{s+t}\Bigr).$$
+
+*Proof.* Poisson summation gives $k_s(\theta)=\sum_wG_s(\theta+2\pi w)$
+with $G_s(x)=(2\pi s)^{-1/2}e^{-x^2/(2s)}$. For Gaussians,
+$G_s(x)G_t(y)=G_{s+t}(x-y)\,G_\tau\bigl((tx+sy)/(s+t)\bigr)$. Put
+$x=\theta+2\pi w$, $y=\theta+2\pi w'$ and $m=w'-w$; the sum over $w$ at
+fixed $m$ is a wrapped Gaussian of variance $\tau$ centred at
+$-2\pi ms/(s+t)$, which is $k_\tau$ at the shifted argument by Poisson
+summation again. $\square$
+
+The $m=0$ term is the heat kernel at the parallel heat time, the
+conductance rule of the series/parallel note §3. The terms $m\neq0$ are
+vortices, of relative weight $e^{-2\pi^2m^2/(s+t)}$. So the heat kernel is
+closed under series moves exactly and under parallel moves up to
+$e^{-c/t}$ corrections; exponential families have the opposite property.
+Both reduce to the Gaussian in the small-field regime, where they agree.
+
+**A limit of validity for heat-kernel anisotropy.** Equation (1) of the
+series/parallel note matches heat times to the continuum action in the
+small-field regime. Refining one direction alone, for instance Euclidean
+time at fixed spatial lattice, sends the transverse heat times to
+infinity. Heat-kernel weights then become flat up to corrections
+$e^{-tC_2/2}$, whereas the Kogut--Susskind limit needs a magnetic weight
+$e^{-a_0V}$ with $a_0$ the time step. The Hamiltonian limit is reached
+within the exponential family. The directional halvings of an isotropic
+cycle change heat times only by factors of two, so the propositions of
+that note are unaffected.
+
+## 2. Two dimensions: the continuum limits of every plaquette action
+
+In two dimensions every refinement is a series move (the series/parallel
+note, §2). A face of area $A$ tiled by $A/a^2$ plaquettes of weight $w_a$
+has, after integrating the interior edges, the weight whose coefficients
+are $\hat c_R(a)^{A/a^2}$.
+
+**Theorem 2.** Let $w_a$ be symmetric class-function plaquette weights on
+the lattice of spacing $a$, with $\hat c_R(a)\to1$ for every $R$. Suppose
+that for every $R$ the limit
+
+$$\psi(R)=\lim_{a\to0}\frac{1-\hat c_R(a)}{a^2}
+=\lim_{a\to0}a^{-2}\int_G\Bigl(1-\frac{{\rm Re}\,\chi_R(g)}{d_R}\Bigr)
+w_a(g)\,dg$$
+
+exists. Then every face of area $A$ has the limiting coefficients
+$e^{-A\psi(R)}$, and $\psi$ has the form
+
+$$\psi(R)=\frac{\sigma^2}2C_2(R)+\int_{G\setminus\{e\}}
+\Bigl(1-\frac{{\rm Re}\,\chi_R(g)}{d_R}\Bigr)\nu(dg),$$
+
+with $\sigma^2\ge0$ and $\nu$ a conjugation-invariant symmetric measure
+satisfying
+
+$$\int_G\min\bigl(1,d(e,g)^2\bigr)\,\nu(dg)<\infty.$$
+ The continuum theory is
+Yang--Mills with $\lambda_2=\sigma^2$ exactly when $\nu=0$, and $\nu=0$ holds
+when, for every $\varepsilon>0$,
+$a^{-2}\int_{d(e,g)>\varepsilon}w_a\,dg\to0$.
+
+*Proof.* Since $\hat c_R(a)\to1$,
+$(A/a^2)\log\hat c_R(a)=-(A/a^2)(1-\hat c_R(a))(1+o(1))\to-A\psi(R)$.
+Split the integral defining $\psi$ at $d(e,g)=\varepsilon$. Near the
+identity, $1-{\rm Re}\,\chi_R(e^X)/d_R=C_2(R)|X|^2/(2\dim G)+O(|X|^3)$ after
+averaging over the directions of $X$, which conjugation invariance of
+$w_a$ permits; this part converges to $\frac{\sigma^2}2C_2(R)$ with
+
+$$\sigma^2=\lim_{\varepsilon\to0}\lim_{a\to0}\frac1{a^2\dim G}
+\int_{d(e,g)<\varepsilon}|X|^2\,w_a(g)\,dg,\qquad g=e^X,$$
+
+along a subsequence if needed. Away from
+the identity, the measures $a^{-2}w_a\,dg$ restricted to
+$\{d\ge\varepsilon\}$ have bounded mass (a finite sum of the functions
+$1-{\rm Re}\,\chi_R/d_R$ over representations separating the points of
+$G$ is continuous and positive off $e$, hence bounded below there), so a subsequence
+converges weakly to $\nu$ on that set, conjugation invariant and
+symmetric. The integrability of $\nu$ near $e$ follows from the bound on
+the near part. The form of $\psi$ agrees with Hunt's classification of
+convolution semigroups on Lie groups, restricted to central ones
+([Hunt 1956](https://doi.org/10.1090/S0002-9947-1956-0079232-9),
+metadata). The Lindeberg condition sets the far part to zero. $\square$
+
+The limiting objects are Lévy's two-dimensional Markovian holonomy
+fields, which he constructs from Lévy processes on $G$
+([Lévy, Astérisque 329](https://doi.org/10.24033/ast.785), metadata).
+Theorem 2 adds only the lattice-side statement: which plaquette actions
+lead to which member.
+
+**Examples.** The Wilson action $w_a\propto e^{\beta_a{\rm Re\,tr}U}$ with
+$\beta_a\propto1/(\lambda_2a^2)$ concentrates like a Gaussian of width
+$\sqrt{\lambda_2}a$, satisfies the Lindeberg condition, and gives
+Yang--Mills. A weight carrying an explicit centre-vortex fugacity,
+$w_a=(1-\kappa a^2)k_{\lambda_2a^2}+\frac{\kappa a^2}2\bigl[k_{\lambda_2a^2}(z\,\cdot)
++k_{\lambda_2a^2}(z^{-1}\cdot)\bigr]$ with $z$ a generator of the centre
+$\mathbb Z_N$ of $SU(N)$, gives
+$\nu=\frac\kappa2(\delta_z+\delta_{z^{-1}})$ and
+
+$$\psi(R)=\frac{\lambda_2}2C_2(R)+\kappa\Bigl(1-\cos\frac{2\pi k(R)}N\Bigr),$$
+
+with $k(R)$ the $N$-ality. On a spatial circle of circumference $L$ the
+refinement note's eq. (10) becomes $E_R-E_0=\hbar cL\,\psi(R)$: the vortex
+gas adds an $N$-ality-dependent string tension. The limit is
+action-dependent exactly through $(\sigma^2,\nu)$.
+
+## 3. Any dimension: the error budget of one step
+
+Let $t_n$ be the plaquette heat time at refinement step $n$, which by
+eq. (1) of the series/parallel note scales as $\lambda_Da_n^{4-D}$ at fixed
+physical coupling, and let $L$ be a fixed physical box side. One
+directional step leaves three kinds of error.
+
+- **Perturbative.** Coupling shifts and irrelevant operators of relative
+  size $O(t_n)$ (Hypothesis P($\alpha$) and Proposition 7 of the
+  series/parallel note).
+- **Large-field.** Configurations far from the identity at the lattice
+  scale, with action at least $c/t_n$, of density per physical volume
+  about $a_n^{-D}e^{-c/t_n}$; here $c$ depends on the lattice action (for
+  heat-kernel $U(1)$ it is the vortex constant of Theorem 5 there).
+- **Jump.** The action's Lévy content, the part of $\nu$ in Theorem 2.
+
+The continuum limit discards the lattice structure when the three are
+summable over steps in a fixed physical box.
+
+| $D$ | $t_n$, fixed $\lambda_D$ | Perturbative | Large-field, $\sum(L/a_n)^De^{-c/t_n}$ |
+| --- | --- | --- | --- |
+| 2 | $\lambda_2a_n^2\to0$ | summable | summable; limit set by $(\sigma^2,\nu)$ |
+| 3 | $\lambda_3a_n\to0$ | summable | summable faster than any power |
+| 4 | $g^2(a_n)\to0$, logarithmically | resums into running | $\propto(a_n\Lambda)^{2b_0c-4}$, needs $2b_0c>4$ |
+| $>4$ | $\lambda_Da_n^{4-D}\to\infty$ | no small parameter | no small-field regime |
+
+**The four-dimensional threshold.** With $g^{-2}(a)=2b_0\log(1/(a\Lambda))$,
+the convention of the refinement note §6, $e^{-c/g^2(a)}=(a\Lambda)^{2b_0c}$.
+For pure $SU(N)$, $b_0=11N/(48\pi^2)$, so the large-field density per
+physical volume vanishes iff
+
+$$c>\frac2{b_0}=\frac{96\pi^2}{11N}:\qquad c>43.1\ (SU(2)),\qquad
+c>28.7\ (SU(3)).$$
+
+A continuum instanton has $c=8\pi^2\approx79$, giving the density
+$(a\Lambda)^{11N/3}a^{-4}$ of small instantons, which vanishes for every
+$N\ge2$ because $11N/3>4$. Lattice actions admit dislocations, small
+configurations of topological charge whose action lies below $8\pi^2$;
+whether they survive the continuum limit is decided by the same
+inequality, the kind of criterion
+[Pugh and Teper (1989)](https://doi.org/10.1016/0370-2693(89)91067-8)
+(metadata) analysed for $SU(2)$, and the reason for admissibility
+conditions on lattice fields
+([Lüscher 1982](https://doi.org/10.1007/BF02029132), metadata). The
+numerical thresholds above are computed here from the one-loop
+coefficient and are subject to the higher-order corrections of the
+running.
+
+**What this says about the mass gap.** In $D=3$ at fixed $\lambda_3$ every
+plaquette action with vanishing jump content has an ultraviolet limit
+governed by the same small-field analysis; a gap $C_3\hbar c\lambda_3$ is
+then a property of the infrared and, if it exists, the same for all such
+actions. In $D=4$ the same holds for actions whose large-field constant
+exceeds $2/b_0$, with gap $C_4\hbar c\Lambda$ and a $\Lambda$ parameter
+that depends on the action by a computable finite factor. The
+universality of the gap across actions is thereby reduced to the three
+ultraviolet conditions, and the gap itself remains the infrared
+obligation of the mass-gap map.
+
+## 4. Consequence for STATE
+
+Item 1 of STATE gains its action and dimension dependence. The next
+steps on this line are to state Hypothesis P($\alpha$) for a general
+symmetric class-function action (second moment, large-field constant
+and jump content as its data), and to connect the four-dimensional
+large-field threshold to the H1 blocking hypothesis of the
+[conditional theorem](mass-gap-conditional-theorem.md). For the joint
+paper, Theorem 2 gives the two-dimensional row of the comparison for
+every action at once, and the table gives the other rows.
