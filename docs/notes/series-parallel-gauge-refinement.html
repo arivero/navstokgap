@@ -109,7 +109,11 @@ class="math inline">\(G=U(1)\)</span> the parallel move is exact in
 closed form (Proposition 3): a heat kernel at softened heat time on the
 interpolated flux, plus an odd-charge correction carrying a
 theta-function factor: the large-field term, with rate <span
-class="math inline">\(e^{-2\pi(\pi-|\phi|)/t}\)</span>. The non-abelian
+class="math inline">\(e^{-2\pi(\pi-|\phi|)/t}\)</span>. For a whole
+<span class="math inline">\(U(1)\)</span> mid-plane the move is exact as
+a sum over integer charges (Proposition 4), and its vortex part is
+bounded by an extensive error of density <span
+class="math inline">\(e^{-c/t}\)</span> per face. The non-abelian
 estimate needed for one step in <span class="math inline">\(1+2\)</span>
 dimensions is stated in §4 as Hypothesis P(<span
 class="math inline">\(\alpha\)</span>), with the four terms it must
@@ -575,12 +579,121 @@ class="math inline">\(\Psi=\frac12[k_T(\bar\Phi)+k_T(\bar\Phi+\pi)]\)</span>,
 at most a factor 2 below its small-field value: large side fluxes are
 suppressed by the explicit factors <span
 class="math inline">\(k_{t_{1j}}(U_f)\)</span> of (2), and <span
-class="math inline">\(\Psi\)</span> adds no suppression. For a whole
-mid-plane, Poisson summation on each edge turns <span
-class="math inline">\(\Psi\)</span> into a sum over integer windings of
-Gaussian terms, a Coulomb-gas representation in which the same rate
-controls the winding activities; that computation is left open. For
-<span class="math inline">\(SU(2)\)</span> and <span
+class="math inline">\(\Psi\)</span> adds no suppression.</p>
+<p><strong>The whole <span class="math inline">\(U(1)\)</span>
+mid-plane.</strong> The same computation extends to a full mid-plane of
+<span class="math inline">\(N\)</span> mid-faces <span
+class="math inline">\(g\)</span> and mid-edges <span
+class="math inline">\(e\)</span>, with <span
+class="math inline">\(\delta\)</span> the coboundary from faces to
+edges, <span class="math inline">\((\delta n)_e\)</span> the signed sum
+of <span class="math inline">\(n_g\)</span> over the two mid-faces at
+<span class="math inline">\(e\)</span>, <span
+class="math inline">\(t_e\)</span> the heat time of the side face that
+<span class="math inline">\(e\)</span> cuts, and</p>
+<p><span class="math display">\[C=2t_{23}\,I+\delta^{\sf T}{\rm
+diag}(t_e/4)\,\delta ,\]</span></p>
+<p>a positive definite <span class="math inline">\(N\times N\)</span>
+matrix. <span class="math inline">\(\bar\Phi_g\)</span> is the
+interpolated flux of <span class="math inline">\(g\)</span> and <span
+class="math inline">\(\phi_e\)</span> the flux of the side face cut by
+<span class="math inline">\(e\)</span>.</p>
+<p><strong>Proposition 4 (exact <span
+class="math inline">\(U(1)\)</span> mid-plane).</strong></p>
+<p><span class="math display">\[\Psi=\sum_{n\in\mathbb
+Z^N}e^{-\frac12n^{\sf T}Cn}\,e^{in\cdot\bar\Phi}
+\prod_{e:\,(\delta n)_e\ {\rm odd}}\rho_{t_e}(\phi_e).
+\tag{8}\]</span></p>
+<p>If every <span class="math inline">\(\rho_{t_e}(\phi_e)\)</span> is
+replaced by <span class="math inline">\(1\)</span>, Poisson summation
+gives the vortex form</p>
+<p><span
+class="math display">\[\Psi_1(\bar\Phi)=\frac{(2\pi)^{N/2}}{\sqrt{\det
+C}}
+\sum_{w\in\mathbb Z^N}
+e^{-\frac12(\bar\Phi+2\pi w)^{\sf T}C^{-1}(\bar\Phi+2\pi w)}.
+\tag{9}\]</span></p>
+<p><em>Proof.</em> The proof of Proposition 3 shows that each bridge
+midpoint is <span class="math inline">\(m_e=\bar m_e+\pi
+s_e+\xi_e\)</span> modulo <span class="math inline">\(2\pi\)</span>,
+with <span class="math inline">\(\bar m_e\)</span> the interpolation,
+<span class="math inline">\(s_e\in\{0,1\}\)</span> with <span
+class="math inline">\(P(s_e=1)=(1-\rho_e)/2\)</span>, and <span
+class="math inline">\(\xi_e\)</span> Gaussian of variance <span
+class="math inline">\(t_e/4\)</span>, all independent. (The bridge
+density is a product of two wrapped Gaussians; its two winding numbers
+combine into a total, which carries the weight <span
+class="math inline">\(e^{-(\phi_e+2\pi W)^2/(2t_e)}\)</span>, and a
+relative one, which shifts the centre by <span class="math inline">\(\pi
+W\)</span>.) Expand each mid-face weight <span
+class="math inline">\(k_{2t_{23}}(\cdot)=\sum_{n_g}e^{-t_{23}n_g^2}e^{in_g(\cdot)}\)</span>.
+The Gaussian average gives <span
+class="math inline">\(e^{-\sum_et_e(\delta n)_e^2/8}\)</span>, and the
+average over <span class="math inline">\(s_e\)</span> gives <span
+class="math inline">\(1\)</span> for even <span
+class="math inline">\((\delta n)_e\)</span> and <span
+class="math inline">\(\rho_e\)</span> for odd; this is (8). For (9),
+apply the Poisson summation formula on <span
+class="math inline">\(\mathbb Z^N\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>For one mid-face, (8) is (7). With isotropic coarse heat times (<span
+class="math inline">\(t_e=t_{23}=t\)</span>), <span
+class="math inline">\(C=2t(I+L/8)\)</span> with <span
+class="math inline">\(L=\delta^{\sf T}\delta\)</span> the Laplacian of
+the dual lattice, whose spectrum lies in <span
+class="math inline">\([0,8]\)</span>. In Fourier variables <span
+class="math inline">\(C=2t+v(k)\)</span>, the covariance of Proposition
+2, so the <span class="math inline">\(w=0\)</span> term of (9) is the
+free field exactly. The vortices <span
+class="math inline">\(w\ne0\)</span> are the compact correction, a
+periodic Gaussian of the Villain type (<a
+href="https://doi.org/10.1016/0550-3213(77)90129-8">Banks, Myerson and
+Kogut 1977</a>, metadata, for the duality in abelian lattice gauge
+theories).</p>
+<p><strong>Corollary (vortex bound).</strong> In the isotropic case,
+write <span class="math inline">\(\Psi_1^{(0)}\)</span> for the <span
+class="math inline">\(w=0\)</span> term of (9) and assume <span
+class="math inline">\(\|\bar\Phi\|_\infty&lt;\pi/2\)</span>. Then</p>
+<p><span
+class="math display">\[0\le\log\frac{\Psi_1(\bar\Phi)}{\Psi_1^{(0)}(\bar\Phi)}
+\le\frac{2N\,e^{-c/t}}{1-e^{-c/t}},\qquad
+c=\pi\Bigl(\frac\pi2-\|\bar\Phi\|_\infty\Bigr). \tag{10}\]</span></p>
+<p><em>Proof.</em> <span class="math inline">\(I+L/8\)</span> is a
+symmetric M-matrix with row sums <span class="math inline">\(1\)</span>,
+so its inverse has nonnegative entries and row sums <span
+class="math inline">\(1\)</span>. Hence <span
+class="math inline">\(\|C^{-1}\|_{\infty\to\infty}=1/(2t)\)</span>, and
+<span class="math inline">\(C^{-1}\ge1/(4t)\)</span> because <span
+class="math inline">\(L\le8\)</span>. For integer <span
+class="math inline">\(w\)</span>, <span
+class="math inline">\(\|w\|_2^2\ge\|w\|_1\)</span>. The exponent of the
+<span class="math inline">\(w\)</span> term minus that of the <span
+class="math inline">\(w=0\)</span> term is <span
+class="math inline">\(-\frac12(2\pi w)^{\sf T}C^{-1}(2\pi w)-2\pi w^{\sf
+T}C^{-1}\bar\Phi
+\le-\pi^2\|w\|_1/(2t)+\pi\|w\|_1\|\bar\Phi\|_\infty/t=-c\|w\|_1/t\)</span>.
+Every term is positive, and <span
+class="math inline">\(\sum_{w\ne0}e^{-c\|w\|_1/t}
+=(1+2e^{-c/t}/(1-e^{-c/t}))^N-1\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The bound is extensive with density <span
+class="math inline">\(O(e^{-c/t})\)</span> per mid-face, the form of
+error that Hypothesis P(<span class="math inline">\(\alpha\)</span>)
+allows, for every <span class="math inline">\(\alpha\)</span>. So for
+<span class="math inline">\(G=U(1)\)</span> with the parity factors set
+to <span class="math inline">\(1\)</span>, the parallel move equals the
+free-field move up to a local error exponentially small in <span
+class="math inline">\(1/(\lambda_3a)\)</span>. What remains for the
+<span class="math inline">\(U(1)\)</span> case of P(<span
+class="math inline">\(\alpha\)</span>) is the parity factor <span
+class="math inline">\(\prod\rho_e\)</span>: on the small-field set each
+<span
+class="math inline">\(1-\rho_e\le5e^{-2\pi(\pi-t^{1/2-\delta})/t}\)</span>,
+and a polymer expansion in the edges with <span
+class="math inline">\(s_e=1\)</span> has to control the shift <span
+class="math inline">\(\pi\,\delta^{\sf T}s\)</span> that such edges
+produce in (9). That expansion is left open.</p>
+<p>For <span class="math inline">\(SU(2)\)</span> and <span
 class="math inline">\(SU(3)\)</span> the bridge expectations <span
 class="math inline">\(E\,R(m_j)\)</span> are matrices, and the isolated
 cube is where N2 and N3 first appear.</p>
@@ -684,11 +797,12 @@ factors exactly into series moves, which close, and a parallel insertion
 class="math inline">\(\Psi\)</span> is computed in closed form for the
 free field (Proposition 2, bound (6)), and the interacting estimate is
 stated as Hypothesis P(<span class="math inline">\(\alpha\)</span>) with
-its four terms; Proposition 3 settles the isolated cube for <span
-class="math inline">\(U(1)\)</span>. The next concrete step on this line
-is to prove P(<span class="math inline">\(\alpha\)</span>) for
-<strong>one isolated cube with <span
-class="math inline">\(G=SU(2)\)</span>, then <span
+its four terms; Propositions 3 and 4 settle the isolated <span
+class="math inline">\(U(1)\)</span> cube and the <span
+class="math inline">\(U(1)\)</span> mid-plane up to the parity polymer
+expansion. The next concrete step on this line is to prove P(<span
+class="math inline">\(\alpha\)</span>) for <strong>one isolated cube
+with <span class="math inline">\(G=SU(2)\)</span>, then <span
 class="math inline">\(SU(3)\)</span></strong> (a single mid-face, where
 independence of the four bridge variables reduces <span
 class="math inline">\(\Psi\)</span> to <span
