@@ -27,7 +27,9 @@ $e^{-2\pi(\pi-|\phi|)/t}$. For a whole $U(1)$ mid-plane the move is exact
 as a sum over integer charges (Proposition 4), and its vortex part is
 bounded by an extensive error of density $e^{-c/t}$ per face; with the
 parity factors included this gives Hypothesis P($\alpha$) for $U(1)$
-(Theorem 5). The non-abelian
+(Theorem 5). Its error density in physical units separates the two
+known continuum limits of compact $U(1)$ in three dimensions: massless
+at fixed coupling (Gross), massive at fixed Debye mass (Göpfert--Mack). The non-abelian
 estimate needed for one step in $1+2$ dimensions is stated in §4 as
 Hypothesis P($\alpha$), with the four terms it must control and their
 orders in $\lambda_3a$.
@@ -479,6 +481,35 @@ for heat-kernel actions perturbed by the defect, which is the stability
 clause of P($\alpha$). The non-abelian terms N1--N3 are absent here, so
 Theorem 5 tests the large-field and representative bookkeeping, and
 leaves the curvature and commutator terms to the $SU(2)$ cube.
+
+**What survives: compact $U(1)$ in three dimensions.** This theory is
+the proved example of a lattice gap that the fixed-coupling refinement
+removes. Göpfert and Mack prove a nonzero string tension for all
+couplings of the Villain theory, bounded below through a Debye mass
+$m_D>0$ (the monopole mechanism of
+[Polyakov 1977](https://doi.org/10.1016/0550-3213(77)90086-4), metadata),
+and report a continuum limit $a\to0$ at fixed $m_D$ that is a free scalar
+field of mass $m_D$
+([Göpfert--Mack 1982](https://doi.org/10.1007/BF01961240), abstract as
+indexed). Gross proves that at fixed coupling the same lattice theory
+converges to the free electromagnetic field, which is massless
+([Gross 1983](https://doi.org/10.1007/BF01210842), abstract as indexed).
+Theorem 5 locates the difference in the size of its error in physical
+units. In a box of fixed physical side $L$ one step carries an error of
+order $(L/a_n)^2e^{-\pi^2/(8t_n)}$ per mid-plane. Along the fixed-$\lambda_3$
+trajectory, $t_n=\lambda_3a_n$ and these errors are summable, so the
+compact corrections die step by step, in agreement with Gross's limit.
+Holding $m_D$ fixed instead needs $t_n\to0$ only logarithmically in
+$a_n$, with the vortex density per physical area held finite; the same
+errors are then of order one per step, and the compact effect survives
+as the mass. So whether a gap survives depends on the trajectory,
+and it is read off from the error density per physical volume. The
+constant $\pi^2/8$ in Theorem 5 is a bound and is not claimed to match
+the monopole action. For $SU(3)$ the gap is expected on the
+fixed-$\lambda_3$ trajectory itself, $E=C_3\hbar c\lambda_3$; by this
+comparison its mechanism must come from the non-abelian terms N1--N3,
+since the abelian bookkeeping of Theorem 5 by itself leads to a massless
+limit.
 
 For $SU(2)$ and
 $SU(3)$ the bridge expectations $E\,R(m_j)$ are matrices, and the
