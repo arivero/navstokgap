@@ -27,6 +27,14 @@ BLOB = f"{REPO}/blob/main"
 # --------------------------------------------------------------------------
 
 TRACKS = [
+    ("refinement", "What survives refinement", """The joint frame since
+     2026-09-26: build each limit by inserting one variable at a time, and ask
+     what survives &mdash; Newton's action cost, the Yang&ndash;Mills gap, the
+     pion's zero threshold. Series insertions close exactly; parallel
+     insertions carry the renormalization.""", [
+        "three-continuum-limits", "refinement-composition-and-limit",
+        "series-parallel-gauge-refinement",
+    ]),
     ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
      letting the sagitta and the enclosed area go to zero. Once the comparison
      must be <em>recorded</em>, it has a floor of order &#8463;. These notes
@@ -48,9 +56,7 @@ TRACKS = [
      turned into a finite list of named theorems, with explicit dependence on
      the box size, the lattice spacing and the coupling. The strong side is
      proved; the weak side and the region between are where the work stands.""", [
-        "mass-gap-position", "three-continuum-limits",
-        "refinement-composition-and-limit", "series-parallel-gauge-refinement",
-        "mass-gap-obligations-lattice",
+        "mass-gap-position", "mass-gap-obligations-lattice",
         "mass-gap-conditional-theorem", "su3-constants",
         "strong-coupling-uniform-gap", "wilson-strong-coupling-explicit",
         "kogut-susskind-strong-coupling-explicit",
