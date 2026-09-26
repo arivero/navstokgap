@@ -559,6 +559,26 @@ has Hessian $(4/t)\,{\rm diag}(1,h,h)$; Laplace's method gives the
 covariance, and the Gaussian characteristic function on the spin-$J$
 representation gives $\Lambda^J$ to leading order. $\square$
 
+**Any compact group, and $SU(3)$.** The same argument applies to a
+compact group with the bi-invariant metric of §1. Along a geodesic with
+unit tangent $\hat X$ the curvature operator is $\frac14\operatorname{ad}(\hat X)^2$,
+with eigenvalue $0$ on the centralizer of $X$ and $\frac14\alpha(\hat X)^2$ on
+the root plane of each positive root $\alpha$ (with $\operatorname{ad}X$ having
+eigenvalues $\pm i\alpha(X)$ there). The midpoint covariance is therefore
+$t/4$ along the centralizer and $(t/4)/h_\alpha$ on each root plane, with
+$h_\alpha=\frac{\alpha(X)}4\cot\frac{\alpha(X)}4$, and part (a) holds with
+"diagonal in a weight basis of a maximal torus containing $X$". For
+$SU(2)$ the single positive root has $\alpha(X)=d$, recovering (b). Since
+$\sum_{\rm all\ roots}\alpha(X)^2=C_2({\rm adj})|X|^2$ and
+$1/h_\alpha-1=\alpha(X)^2/48+O(\alpha^4)$, the curvature excess averaged
+over the $\dim G$ directions is, per cut face,
+
+$$\Delta T_j\simeq\frac{t_j}4\cdot\frac{C_2({\rm adj})\,|X_j|^2}{48\dim G},$$
+
+that is $t_j|X_j|^2/288$ for $SU(2)$ ($C_2({\rm adj})=2$, $\dim G=3$) and
+$t_j|X_j|^2/512$ for $SU(3)$ ($C_2({\rm adj})=3$, $\dim G=8$, two flat
+Cartan directions and three root planes).
+
 Part (b) is labelled as leading-order asymptotics: an explicit remainder
 bound is open. It makes N2 concrete. Positive curvature enlarges the
 transverse fluctuation of the midpoint, $1/h(d)=1+d^2/48+O(d^4)$, so the
