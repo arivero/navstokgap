@@ -12,6 +12,16 @@ wins. Explicit user instructions take precedence over everything here.
 
 # The goal
 
+User direction, 2026-09-26: the eventual paper compares what survives
+refinement in Newton's action problem, pure $SU(3)$ Yang--Mills, and QCD
+with zero and nonzero quark masses. **The two main proof goals are the
+Newton action necessity and the pure $SU(3)$ continuum mass gap.** The
+pion is an orientation and source of mechanisms, not a third full
+construction programme. [The working note](notes/three-continuum-limits.md)
+sets out the distinctions and research order; STATE is the live queue.
+This direction supersedes the earlier choice of a Planck-only final
+paper and the blanket pause of the mass-gap track.
+
 User direction, 2026-09-17: the $SU(3)$ attack below is stuck at the
 map in [the position note](notes/mass-gap-position.md), and the active
 goal returns to the Planck gap: a logical argument, from Newton-age
