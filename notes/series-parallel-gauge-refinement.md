@@ -710,21 +710,23 @@ metadata) is the established partial control.
 
 ## 6. Consequence for STATE
 
-Item 1 of STATE is answered in its "exact obstruction" form. The one-step
-$1+2$ gauge refinement factors exactly into series moves, which close,
-and a parallel insertion $\Psi$ (Proposition 1). $\Psi$ is computed in
-closed form for the free field (Proposition 2, bound (6)), and the
-interacting estimate is stated as Hypothesis P($\alpha$) with its four
-terms; Propositions 3--4 and Theorem 5 settle the $U(1)$ case of one
-step. The next
-concrete step on this line is to prove P($\alpha$) for **one isolated
-cube with $G=SU(2)$, then $SU(3)$** (a single mid-face, where independence of the four
-bridge variables reduces $\Psi$ to
-$\sum_Rd_Re^{-t_mC_2(R)/2}{\rm tr}_R\prod_{j}E\,R(m_j^{\pm1})$ with
-$t_m$ the mid-face heat time and the sign fixed by orientation), and
-then for a mid-plane with small-field cluster expansion. For the paper,
-the series/parallel split is the organizing statement of the dimension
+Item 1 of STATE is answered in its "exact obstruction" form, and its
+first rungs are proved. One directional refinement step factors exactly
+into series moves, which close, and a parallel insertion $\Psi$
+(Proposition 1). $\Psi$ is exact for the free field (Proposition 2),
+for the $U(1)$ cube (Proposition 3) and the $U(1)$ mid-plane
+(Proposition 4), and for $U(1)$ one step satisfies Hypothesis P($\alpha$)
+with an error of density $e^{-\pi^2/(8\lambda_3a)}$ (Theorem 5), which
+also explains why the lattice gap of compact $U(1)$ does not survive the
+fixed-coupling limit. For non-abelian groups the midpoint curvature term
+is explicit (Proposition 6 and its group-general form), and P($\alpha$)
+for one cube holds formally for any compact group (Proposition 7). The
+next step is the uniform Laplace remainder that turns Proposition 7 into
+a theorem for $SU(2)$ and $SU(3)$; after it, a mid-plane by small-field
+cluster expansion, and stability under iteration. For the paper, the
+series/parallel split is the organizing statement of the dimension
 comparison: Newton's time insertion is a series move closed by one
 scalar; two-dimensional gauge theory has only series moves; three and
 four dimensions add $\binom{D-1}{2}$ parallel insertions whose
-elimination is the renormalization problem.
+elimination is the renormalization problem, and whether a gap survives
+is read from the error density of those insertions in physical units.
