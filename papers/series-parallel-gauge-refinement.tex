@@ -22,25 +22,25 @@ convolution integrates them out exactly in every dimension. Faces
 transverse to the refined direction acquire a new parallel copy at
 doubled heat time; these are \emph{parallel} moves, and integrating out
 the new copy leaves the factor \(\Psi\) of Proposition 1: the partition
-function of a two-dimensional gauge theory on the inserted mid-plane,
-whose edges carry Brownian-bridge laws fixed by the coarse field instead
-of Haar measure. The number of transverse planes is \(\binom{D-1}{2}\):
-none in \(D=2\), which is why two-dimensional Yang--Mills closes; one in
-\(D=3\); three in \(D=4\). In the free (abelian Gaussian) theory
-\(\Psi\) is computed exactly (Proposition 2): the defect against the
-coarse action is a negative semidefinite quadratic form of relative size
-\(a^2K^2/16+(Ga)^2/8\) for fields with transverse momenta at most \(K\)
-and layer gradient \(G\). It is the field-theory counterpart of Newton's
-\(-F^2uvh/(8M)\) in the
+function of a \((D-1)\)-dimensional gauge theory on the inserted
+mid-plane, whose edges carry Brownian-bridge laws fixed by the coarse
+field instead of Haar measure. The number of transverse planes is
+\(\binom{D-1}{2}\): none in \(D=2\), which is why two-dimensional
+Yang--Mills closes; one in \(D=3\); three in \(D=4\). In the free
+(abelian Gaussian) theory \(\Psi\) is computed exactly (Proposition 2):
+the defect against the coarse action is a negative semidefinite
+quadratic form of relative size at most \(a^2K^2/16+(Ga)^2/8\) for
+fields with transverse momenta at most \(K\) and layer gradient \(G\).
+It is the field-theory counterpart of Newton's \(-F^2uvh/(8M)\) in the
 \href{refinement-composition-and-limit.md}{refinement note}, eq. (1),
 and it equals exactly the error of Migdal's bond-moving approximation in
 the Gaussian theory. For a single cube with \(G=U(1)\) the parallel move
 is exact in closed form (Proposition 3): a heat kernel at softened heat
-time on the interpolated flux, times a theta-function factor that is the
-large-field term with rate \(e^{-2\pi(\pi-|\phi|)/t}\). The non-abelian
-estimate needed for one step in \(1+2\) dimensions is stated in §4 as
-Hypothesis P(\(\alpha\)), with the four terms it must control and their
-orders in \(\lambda_3a\).
+time on the interpolated flux, plus an odd-charge correction carrying a
+theta-function factor: the large-field term, with rate
+\(e^{-2\pi(\pi-|\phi|)/t}\). The non-abelian estimate needed for one
+step in \(1+2\) dimensions is stated in §4 as Hypothesis P(\(\alpha\)),
+with the four terms it must control and their orders in \(\lambda_3a\).
 
 This answers the stop rule of the refinement note, §8, in its second
 form: it gives the exact term that prevents closure, with an explicit
@@ -271,10 +271,14 @@ actions rather than total variation. Two cautions keep this honest.
 After one step the effective action is (2) with \(\mathcal D\), so the
 next step starts from a slightly different action; the free field is
 controlled exactly because every stage is Gaussian, and its blocked
-actions converge to a fixed point, the perfect action of
+actions should converge to a Gaussian fixed point. That fixed point goes
+back to \href{https://doi.org/10.1103/PhysRevB.11.3431}{Bell and Wilson
+(1975)} (metadata), and the perfect-action programme of
 \href{https://doi.org/10.1016/0550-3213(94)90261-5}{Hasenfratz and
-Niedermayer (1994)} (metadata). And (6) holds for smooth coarse data;
-typical lattice fields at fixed \(t\) are rough, so (6) states the
+Niedermayer (1994)} (metadata) develops it for asymptotically free
+models with a smeared blocking; for the product blocking used here the
+convergence is asserted, not proved. And (6) holds for smooth coarse
+data; typical lattice fields at fixed \(t\) are rough, so (6) states the
 irrelevance of the defect, while the measure-level estimate needs the
 whole quadratic form (5).
 
@@ -324,10 +328,12 @@ hypothesis below):
 \begin{itemize}
 \tightlist
 \item
-  \textbf{N1, interpolation.} The mean mid-face holonomy differs from
-  the abelian average by Baker--Campbell--Hausdorff commutators of the
-  fluxes, of order \(a^4[F,F]\) in \(\log U_g\). In the action this is a
-  dimension-six operator, \(O(a^2)\) relative, like (6).
+  \textbf{N1, interpolation.} The mid-face holonomy of the geodesic
+  interpolation (the \(t_{1j}\to0\) bridge) differs from the abelian
+  average by Baker--Campbell--Hausdorff commutators; in the axial gauge
+  realized by the mid-vertex gauge fixing the leading term is
+  \(-\tfrac18a^4[F_{12},F_{13}]\) in \(\log U_g\). In the action this is
+  a dimension-six operator, \(O(a^2)\) relative, like (6).
 \item
   \textbf{N2, bridge shape.} The bridge law depends on the coarse face
   holonomy through the group's curvature (the Jacobian of the
@@ -341,8 +347,9 @@ hypothesis below):
 \item
   \textbf{N4, large fields.} Bridges that wind around the group (the
   image terms of the heat kernel near the cut locus) contribute
-  \(O(e^{-c/t})\) per face, non-perturbatively small at each step but to
-  be controlled uniformly in the volume.
+  \(O(e^{-c/t})\) per face for coarse fluxes a fixed distance from the
+  cut locus, and \(O(1)\) at it (Proposition 3 below gives the rate);
+  the small-field split of Hypothesis P(\(\alpha\)) handles them.
 \end{itemize}
 
 \textbf{The compact abelian cube isolates N4 exactly.} Take \(G=U(1)\)
@@ -365,8 +372,8 @@ with the same representatives), and
 +\Bigl(\prod_{j=1}^4\rho_{t_j}(\phi_j)\Bigr)
 \sum_{n\ {\rm odd}}e^{-Tn^2/2}e^{in\bar\Phi}. \tag{7}\]
 
-If every \(\rho_{t_j}(\phi_j)=1\), then \(\Psi=k_T(\bar\Phi)\) exactly.
-For \(|\phi_j|\le\pi\) and \(t_j\le1\),
+As every \(\rho_{t_j}(\phi_j)\to1\), \(\Psi\to k_T(\bar\Phi)\). For
+\(|\phi_j|\le\pi\) and \(t_j\le1\),
 \(0\le1-\rho_{t_j}(\phi_j)\le5\,e^{-2\pi(\pi-|\phi_j|)/t_j}\).
 
 \emph{Proof.} The bridge numerator for \(E\,e^{inm}\) is
@@ -389,31 +396,58 @@ total is below \(5e^{-2\pi(\pi-|\phi|)/t}\). \(\square\)
 Equation (7) displays the parallel move for one cube with N1--N3 absent
 (the group is abelian and flat): the mid-face weight is the heat kernel
 at the \emph{softened} heat time \(t_m+\frac14\sum t_j\), the
-isolated-cube counterpart of the noise \(v(k)\) in (5), evaluated at the
-interpolated flux. The only departure is the odd-charge factor, which
-differs from 1 only where a side-face flux approaches the cut locus
-\(|\phi|=\pi\), where its bridge midpoint becomes bimodal. That is N4,
-exactly, with the rate \(e^{-2\pi(\pi-|\phi|)/t}\). For a whole
-mid-plane, Poisson summation on each edge turns \(\Psi\) into a sum over
-integer windings of Gaussian terms, a Coulomb-gas representation in
-which the same rate controls the winding activities; that computation is
-left open. For \(SU(2)\) and \(SU(3)\) the bridge expectations
-\(E\,R(m_j)\) are matrices, and the isolated cube is where N2 and N3
-first appear.
+isolated-cube counterpart of the noise \(v(k)\) in (5) (indeed
+\(\frac14\sum_jt_j=(t_{12}+t_{13})/2\) is the Brillouin-zone average of
+\(v\)), evaluated at the interpolated flux. The only departure is the
+odd-charge factor, which differs from 1 only where a side-face flux
+approaches the cut locus \(|\phi|=\pi\), where its bridge midpoint
+becomes bimodal. That is N4, exactly, with the rate
+\(e^{-2\pi(\pi-|\phi|)/t}\). At the cut locus itself, \(\rho=0\) and
+\(\Psi=\frac12[k_T(\bar\Phi)+k_T(\bar\Phi+\pi)]\), at most a factor 2
+below its small-field value: large side fluxes are suppressed by the
+explicit factors \(k_{t_{1j}}(U_f)\) of (2), and \(\Psi\) adds no
+suppression. For a whole mid-plane, Poisson summation on each edge turns
+\(\Psi\) into a sum over integer windings of Gaussian terms, a
+Coulomb-gas representation in which the same rate controls the winding
+activities; that computation is left open. For \(SU(2)\) and \(SU(3)\)
+the bridge expectations \(E\,R(m_j)\) are matrices, and the isolated
+cube is where N2 and N3 first appear.
 
-\textbf{Hypothesis P(\(\alpha\)) (one parallel step, \(D=3\)).} There
-exist \(\alpha>0\), \(t_0>0\), \(C<\infty\) and a local quadratic form
-\(\mathcal D_0\) (the free defect (5), possibly with renormalized
-\(t_{23}\)), such that for \(t=\lambda_3a\le t_0\), on the small-field
-set where every plaquette satisfies \(|\log U_p|\le t^{1/2-\delta}\),
+\textbf{Correction, 2026-09-26 (referee check).} The first version of
+the hypothesis below bounded \(-\log\Psi\) itself and demanded
+large-field suppression of \(\Psi\); the free field violates the first
+(it needs \(\delta_t=\frac12\)) and Proposition 3 the second. The
+version below bounds the log-ratio \(\mathcal D\) of (2) against the
+coarse density.
 
-\[\Bigl|-\log\Psi(U)-\mathcal D_0(U)-c_{\rm vac}N_{\rm cells}
--\delta_t\,S_{23}(U)\Bigr|
-\le C\,t^{\alpha}\sum_{\rm cells}\bigl(1+|\log U_p|^2/t\bigr),\]
+\textbf{Hypothesis P(\(\alpha\)) (one parallel step, \(D=3\)).} Fix
+\(\delta\in(0,\frac14)\). Let
 
-with a coupling shift \(|\delta_t|\le Ct\), and with a large-field
-suppression of \(\Psi\) by at least \(e^{-c\,t^{-2\delta}}\) per
-violating plaquette, relative to its small-field value.
+\[\mathcal D(U)=-\log\Psi(U)-\sum_{f\perp1}\log
+\frac{k_{2t_{23}}(U_f)}{k_{t_{23}}(U_f)},\qquad
+S_{23}(U)=\sum_{f\perp1}\frac{|\log U_f|^2}{2t_{23}},\]
+
+so that \(p_*\mu'\) is the coarse heat-kernel density times
+\(e^{-\mathcal D}\) (for the free field, \(\mathcal D\) is (5)). There
+exist \(\alpha>2\delta\), \(t_0>0\), \(C<\infty\), a local quadratic
+form \(\mathcal D_0\) in \(\{\log U_p\}\) (the form (5), with \(t_{23}\)
+possibly renormalized by \(O(t)\)), and for each \(t=\lambda_3a\le t_0\)
+numbers \(c_{\rm vac}(t)\) and \(\delta_t\) with \(|\delta_t|\le Ct\),
+such that on the small-field set
+\(\{|\log U_p|\le t^{1/2-\delta}\ \text{for all }p\}\)
+
+\[\bigl|\mathcal D(U)-\mathcal D_0(U)-c_{\rm vac}N_{\rm cells}
+-\delta_t\,S_{23}(U)\bigr|
+\le C\,t^{\alpha}\sum_p\bigl(1+|\log U_p|^2/t\bigr),\]
+
+the sum running over all coarse plaquettes. The same statement is
+required for heat-kernel actions perturbed by local terms of the size on
+the right, so that it can be iterated. No large-field clause on \(\Psi\)
+is needed: \(\Psi\le\prod_gk_{2t_g}(1)\), and the explicit factors of
+(2) suppress each plaquette outside the small-field set by
+\(e^{-t^{-2\delta}/4}\), up to a factor \(t^{-n/2}\) per cell.
+Free-field check: \(\mathcal D=\mathcal D_0\), \(\delta_t=0\), every
+\(\alpha\).
 
 Under P(\(\alpha\)) the per-step error on smooth observables is
 \(O((\lambda_3a)^\alpha)\) and the coupling shifts sum to a finite
@@ -438,12 +472,15 @@ the heat time returns to itself after an isotropic step, so the whole
 one-loop running \(g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2+O(g_0^2)\), with
 \(b_0=11/(16\pi^2)\) for \(SU(3)\) in the convention
 \(g_{\rm lat}^2=\lambda_4\), must come out of the four \(\Psi\) factors
-of one isotropic step. The N3 fluctuation term is therefore order one in
-\(D=4\) (it carries the logarithm), while in \(D=3\) it is
-\(O(\lambda_3a)\). This is the exact location of marginality in the
-insertion language. The corresponding hypothesis is H1 of the
-\href{mass-gap-conditional-theorem.md}{conditional theorem}, and
-Balaban's four-dimensional work
+of one isotropic step, to leading order and within the class of actions
+of P(\(\alpha\)). N2 and N3 are \(O(t)\) relative in both dimensions. In
+\(D=4\), \(t=g^2\) does not decrease along the sequence, so their
+step-independent shift of \(g^{-2}\) is the whole one-loop running,
+\(-2b_0\log2\) per isotropic step; in \(D=3\) the shifts,
+\(O(\lambda_3a_n)\) relative, are summable. This is the exact location
+of marginality in the insertion language. The corresponding hypothesis
+is H1 of the \href{mass-gap-conditional-theorem.md}{conditional
+theorem}, and Balaban's four-dimensional work
 (\href{https://doi.org/10.1007/BF01215223}{Balaban 1987}, metadata) is
 the established partial control.
 
