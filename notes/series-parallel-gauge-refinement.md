@@ -19,9 +19,13 @@ momenta at most $K$ and layer gradient $G$. It is the field-theory
 counterpart of Newton's $-F^2uvh/(8M)$ in the
 [refinement note](refinement-composition-and-limit.md), eq. (1), and it
 equals exactly the error of Migdal's bond-moving approximation in the
-Gaussian theory. The non-abelian estimate needed for one step in
-$1+2$ dimensions is stated in §4 as Hypothesis P($\alpha$), with the four
-terms it must control and their orders in $\lambda_3a$.
+Gaussian theory. For a single cube with $G=U(1)$ the parallel move is
+exact in closed form (Proposition 3): a heat kernel at softened heat
+time on the interpolated flux, times a theta-function factor that is the
+large-field term with rate $e^{-2\pi(\pi-|\phi|)/t}$. The non-abelian
+estimate needed for one step in $1+2$ dimensions is stated in §4 as
+Hypothesis P($\alpha$), with the four terms it must control and their
+orders in $\lambda_3a$.
 
 This answers the stop rule of the refinement note, §8, in its second
 form: it gives the exact term that prevents closure, with an explicit
@@ -278,6 +282,59 @@ as power counting; proving them is the content of the hypothesis below):
   $O(e^{-c/t})$ per face, non-perturbatively small at each step but to be
   controlled uniformly in the volume.
 
+**The compact abelian cube isolates N4 exactly.** Take $G=U(1)$ with
+$k_t(\theta)=\sum_{n\in\mathbb Z}e^{-tn^2/2}e^{in\theta}$ (the Villain
+weight), and refine a single cube: one mid-face at heat time $t_m$,
+bounded by four mid-edges $m_j$ with orientations $\sigma_j=\pm1$, each
+cutting a side face of heat time $t_j$ whose halves have angles
+$p_j-m_j$ and $m_j+q_j$. Put $\phi_j=p_j+q_j$ (the side-face flux, any
+real representative), $\bar\Phi=\sum_j\sigma_j(p_j-q_j)/2$ (the
+interpolated mid-face flux, with the same representatives), and
+
+$$\rho_t(\phi)=\frac{\sum_{w\in\mathbb Z}(-1)^we^{-(\phi-2\pi w)^2/(2t)}}
+{\sum_{w\in\mathbb Z}e^{-(\phi-2\pi w)^2/(2t)}}\in[-1,1].$$
+
+**Proposition 3 (exact $U(1)$ cube).** With $T=t_m+\tfrac14\sum_jt_j$,
+
+$$\Psi=\sum_{n\ {\rm even}}e^{-Tn^2/2}e^{in\bar\Phi}
++\Bigl(\prod_{j=1}^4\rho_{t_j}(\phi_j)\Bigr)
+\sum_{n\ {\rm odd}}e^{-Tn^2/2}e^{in\bar\Phi}. \tag{7}$$
+
+If every $\rho_{t_j}(\phi_j)=1$, then $\Psi=k_T(\bar\Phi)$ exactly. For
+$|\phi_j|\le\pi$ and $t_j\le1$,
+$0\le1-\rho_{t_j}(\phi_j)\le5\,e^{-2\pi(\pi-|\phi_j|)/t_j}$.
+
+*Proof.* The bridge numerator for $E\,e^{inm}$ is
+$\sum_{r}e^{-t(r^2+(r-n)^2)/4}e^{irp}e^{i(r-n)q}$ by character
+orthogonality, and $r^2+(r-n)^2=2(r-n/2)^2+n^2/2$. For even $n$ the
+shift $r\mapsto r+n/2$ reproduces the denominator $k_t(\phi)$, giving
+$E\,e^{inm}=e^{-tn^2/8}e^{in(p-q)/2}$. For odd $n$ the shift is by a
+half-integer and leaves the ratio
+$\sum_se^{-t(s-\frac12)^2/2}e^{i(s-\frac12)\phi}/\sum_se^{-ts^2/2}e^{is\phi}$,
+which Poisson summation turns into $\rho_t(\phi)$. The four $m_j$ are
+independent, so $E\,k_{t_m}(\sum_j\sigma_jm_j)$ is the sum over $n$ of
+$e^{-t_mn^2/2}\prod_jE\,e^{in\sigma_jm_j}$, which is (7). For the
+bound, write $G_w=e^{-(\phi-2\pi w)^2/(2t)}$; then
+$1-\rho=2\sum_{w\ \rm odd}G_w/\sum_wG_w\le2\sum_{w\ \rm odd}G_w/G_0$.
+For $|\phi|\le\pi$ the odd term nearest $\phi$ gives
+$e^{-2\pi(\pi-|\phi|)/t}$, the opposite one at most the same, and the
+terms $|w|\ge3$ are smaller by $e^{-12\pi^2/t}$; for $t\le1$ the total
+is below $5e^{-2\pi(\pi-|\phi|)/t}$. $\square$
+
+Equation (7) displays the parallel move for one cube with N1--N3 absent
+(the group is abelian and flat): the mid-face weight is the heat kernel
+at the *softened* heat time $t_m+\frac14\sum t_j$, the isolated-cube
+counterpart of the noise $v(k)$ in (5), evaluated at the interpolated
+flux. The only departure is the odd-charge factor, which differs from 1
+only where a side-face flux approaches the cut locus $|\phi|=\pi$, where
+its bridge midpoint becomes bimodal. That is N4, exactly, with the rate
+$e^{-2\pi(\pi-|\phi|)/t}$. For a whole mid-plane, Poisson summation on
+each edge turns $\Psi$ into a sum over integer windings of Gaussian
+terms, a Coulomb-gas representation in which the same rate controls the
+winding activities; that computation is left open. For $SU(2)$ and
+$SU(3)$ the bridge expectations $E\,R(m_j)$ are matrices, and the
+isolated cube is where N2 and N3 first appear.
+
 **Hypothesis P($\alpha$) (one parallel step, $D=3$).** There exist
 $\alpha>0$, $t_0>0$, $C<\infty$ and a local quadratic form
 $\mathcal D_0$ (the free defect (5), possibly with renormalized
@@ -329,8 +386,9 @@ $1+2$ gauge refinement factors exactly into series moves, which close,
 and a parallel insertion $\Psi$ (Proposition 1). $\Psi$ is computed in
 closed form for the free field (Proposition 2, bound (6)), and the
 interacting estimate is stated as Hypothesis P($\alpha$) with its four
-terms. The next concrete step on this line is to prove P($\alpha$) for
-**one isolated cube** (a single mid-face, where independence of the four
+terms; Proposition 3 settles the isolated cube for $U(1)$. The next
+concrete step on this line is to prove P($\alpha$) for **one isolated
+cube with $G=SU(2)$, then $SU(3)$** (a single mid-face, where independence of the four
 bridge variables reduces $\Psi$ to
 $\sum_Rd_Re^{-t_mC_2(R)/2}{\rm tr}_R\prod_{j}E\,R(m_j^{\pm1})$ with
 $t_m$ the mid-face heat time and the sign fixed by orientation), and
