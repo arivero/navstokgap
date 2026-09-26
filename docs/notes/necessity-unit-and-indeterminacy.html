@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What a necessity argument for h &gt; 0 must supply: a unit and an indeterminacy</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>What a necessity argument for <span
+class="math inline">\(h&gt;0\)</span> must supply: a unit and an
+indeterminacy</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/necessity-unit-and-indeterminacy.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/necessity-unit-and-indeterminacy.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> A positive universal floor on
+recorded comparisons in Newton’s Galileo comparison needs two separable
+ingredients. <strong>(U)</strong> a universal action unit, and
+<strong>(I)</strong> an indeterminacy of the record’s back-action, since
+the floors of the <a href="planck-gap-paper.html">Planck paper</a>
+(Theorems 5–6) bound <em>spreads</em> of disturbances, and a definite,
+later recoverable kick has zero spread. The two have opposite
+status.</p>
+<ul>
+<li><strong>(U) follows from classical radiation thermodynamics</strong>
+(Theorem U). Kirchhoff’s universality, Wien’s scaling law, finite
+equilibrium energy density and low-frequency equipartition force the
+equilibrium spectrum to contain a universal constant <span
+class="math inline">\(\beta\)</span> with units of kelvin-seconds. With
+Boltzmann’s constant it gives an action <span
+class="math inline">\(h=k_B\beta\)</span>, independent of every material
+constant. Its value is already in Wien’s displacement constant <span
+class="math inline">\(b\)</span>: <span
+class="math inline">\(h=y_*k_Bb/c\)</span>, with <span
+class="math inline">\(y_*\)</span> a pure number fixed by the spectral
+shape. No premise about the body, its mass or a commutator enters.</li>
+<li><strong>(I) is impossible classically</strong> (Theorem I). Any
+model with Liouville dynamics of body and pointers, product preparations
+obeying a prior density ceiling, and Bayesian conditioning on pointer
+readings admits records whose body posterior has arbitrarily small area.
+A premise that yields (I) must deny one of these three. Quantum
+kinematics denies the third; a universal unrecordable background
+(stochastic electrodynamics) denies the second; an epistemic restriction
+in Spekkens’s sense imposes the ceiling directly. Newton’s printed
+optics denies none, which is paper §8’s <span
+class="math inline">\(\neg\)</span>M3 as an instance.</li>
+</ul>
+<p>So the necessity question becomes sharper than before. The existence
+of a universal action unit is forced by nineteenth-century physics that
+never mentions the body. What remains open is which of three explicit
+classical structures a physically justified premise must give up for
+that unit to act as a floor on records.</p>
+<p>The candidate list and both theorems were proposed by a Fable
+reviewer at the user’s request (report in the session scratchpad,
+2026-09-27), after three external models (DeepSeek, Mimosa, Muse Spark
+1.1) converged on the Stoney unit <span
+class="math inline">\(k_e/c\)</span>, which the <a
+href="action-unit-dimensional-selection.html">dimensional note</a>
+already holds. The ingredients are classical and the theorems
+elementary; no novelty is claimed for either. Their use here is to
+replace the obstruction map of <a
+href="action-scale-obstructions.html">action-scale-obstructions</a> by
+one statement of what is missing.</p>
+<h2 id="two-ingredients">1. Two ingredients</h2>
+<p>The floor of the Planck paper, Theorem 6, is</p>
+<p><span class="math display">\[\frac s8\sum_j\Delta(\hat D_j)+\frac
+J2\sum_j\Delta(\hat X_j)
+\ge\hbar\arcsin(1-2\epsilon),\]</span></p>
+<p>with <span class="math inline">\(\Delta\)</span> a spread of an
+undetermined disturbance. Its proof uses Mandelstam–Tamm in the Bures
+angle and the Weyl relations, that is, <span
+class="math inline">\(\hbar&gt;0\)</span> in two roles.</p>
+<ul>
+<li><strong>(U), the unit.</strong> By Theorem A of the <a
+href="action-unit-dimensional-selection.html">dimensional note</a>, a
+floor shared by all masses and preparations is a pure number times a
+product of the model’s fixed constants with action units. Classical
+mechanics, gravity and electrodynamics hold exactly one mass-independent
+such product, <span
+class="math inline">\(k_e/c=e^2/(4\pi\epsilon_0c)=\alpha\hbar\)</span>.</li>
+<li><strong>(I), the indeterminacy.</strong> The floor bounds spreads. A
+record whose kick is definite and later recoverable contributes nothing,
+whatever the size of the kick. For example, a charged probe passing a
+charged body at speed <span class="math inline">\(u&lt;c\)</span> and
+impact parameter <span class="math inline">\(b\)</span> delivers the
+transverse impulse <span class="math inline">\(2n_1n_2k_e/(bu)\)</span>,
+so charge atomicity gives <span class="math inline">\(|\Delta
+p|\,b\ge2k_e/c=2\alpha\hbar\)</span>: a universal, mass-independent
+floor on the <em>magnitude</em> of a record’s kick. The kick is
+determined by the reading, so its spread is zero. The right unit gives
+the wrong kind of quantity.</li>
+</ul>
+<h2 id="theorem-u-the-unit-from-radiation-thermodynamics">2. Theorem U:
+the unit from radiation thermodynamics</h2>
+<p>Let <span class="math inline">\(u(\nu,T)\,d\nu\)</span> be the
+equilibrium energy density of electromagnetic radiation between
+frequencies <span class="math inline">\(\nu\)</span> and <span
+class="math inline">\(\nu+d\nu\)</span> at absolute temperature <span
+class="math inline">\(T\)</span>. Assume:</p>
+<ul>
+<li><strong>(K)</strong> <span class="math inline">\(u\)</span> is the
+same for every material enclosure (Kirchhoff 1859, from the second law:
+two cavities at one temperature with different spectra would drive an
+engine through a colour filter);</li>
+<li><strong>(W)</strong> <span
+class="math inline">\(u(\nu,T)=\nu^3f(\nu/T)\)</span> (Wien 1893, from
+adiabatic compression of a reflecting cavity and the second law (<a
+href="https://doi.org/10.1007/978-3-663-13885-3_12">Wien 1893,
+reprint</a>, metadata));</li>
+<li><strong>(S)</strong> <span class="math inline">\(\int_0^\infty
+u\,d\nu&lt;\infty\)</span> for every <span
+class="math inline">\(T&gt;0\)</span> (Stefan’s measured law;
+Boltzmann’s <span class="math inline">\(T^4\)</span> theorem from
+Maxwell’s radiation pressure);</li>
+<li><strong>(R)</strong> <span
+class="math inline">\(u(\nu,T)\to(8\pi\nu^2/c^3)\,k_BT\)</span> as <span
+class="math inline">\(\nu/T\to0\)</span> (equipartition of the
+low-frequency modes, the regime Rayleigh and Jeans describe).</li>
+</ul>
+<p><strong>Theorem U.</strong> Under (K), (W), (S), (R) there is a
+constant <span class="math inline">\(\beta&gt;0\)</span> with units of
+kelvin-seconds, independent of every material constant, such that <span
+class="math inline">\(f(\nu/T)=(8\pi
+k_B/c^3)(T/\nu)\,\varphi(\beta\nu/T)\)</span> with <span
+class="math inline">\(\varphi\)</span> a function of one dimensionless
+variable, <span class="math inline">\(\varphi(0)=1\)</span>. Hence <span
+class="math inline">\(h:=k_B\beta\)</span> is a universal action,
+and</p>
+<p><span class="math display">\[\sigma&#39;=\frac{8\pi
+k_B^4}{h^3c^3}\int_0^\infty y^2\varphi(y)\,dy,
+\qquad h=\frac{y_*k_Bb}{c},\]</span></p>
+<p>where <span class="math inline">\(\sigma&#39;\)</span> is the Stefan
+constant of the energy density, <span class="math inline">\(b\)</span>
+is Wien’s displacement constant (<span
+class="math inline">\(\lambda_{\max}T=b\)</span> for the peak of the
+spectrum per unit wavelength), and <span
+class="math inline">\(y_*\)</span> is the pure number at which that peak
+sits.</p>
+<p><em>Proof.</em> By (W), <span class="math inline">\(u\)</span>
+depends on <span class="math inline">\(\nu\)</span> and <span
+class="math inline">\(T\)</span> through <span
+class="math inline">\(\nu^3\)</span> and the ratio <span
+class="math inline">\(\nu/T\)</span>, whose units are <span
+class="math inline">\(1/({\rm s\cdot K})\)</span>. By (K) the only
+constants <span class="math inline">\(u\)</span> may contain are
+universal ones, and (R) displays two, <span
+class="math inline">\(c\)</span> and <span
+class="math inline">\(k_B\)</span>. From <span
+class="math inline">\(c\)</span>, <span
+class="math inline">\(k_B\)</span> and <span
+class="math inline">\(\nu/T\)</span> no dimensionless combination
+exists, because <span class="math inline">\(c\)</span> contains a length
+and <span class="math inline">\(k_B\)</span> an energy, and neither
+appears in <span class="math inline">\(\nu/T\)</span>. If <span
+class="math inline">\(u\)</span> contained no further constant, <span
+class="math inline">\(f\)</span> would be a pure power, and (R) would
+fix it to <span class="math inline">\(f=(8\pi k_B/c^3)(T/\nu)\)</span>,
+whose frequency integral diverges, contradicting (S). So <span
+class="math inline">\(u\)</span> contains a further universal constant.
+By (W) it can enter only through a dimensionless multiple of <span
+class="math inline">\(\nu/T\)</span>, so it has units of kelvin-seconds;
+call it <span class="math inline">\(\beta\)</span>. Then <span
+class="math inline">\(f\)</span> has the displayed form, (R) gives <span
+class="math inline">\(\varphi(0)=1\)</span>, and substituting <span
+class="math inline">\(y=\beta\nu/T\)</span> in the integral gives <span
+class="math inline">\(\sigma&#39;\)</span>. The peak of <span
+class="math inline">\(u_\lambda=u\,c/\lambda^2\)</span> lies at a fixed
+value <span class="math inline">\(y_*\)</span> of <span
+class="math inline">\(\beta c/(\lambda T)\)</span>, so <span
+class="math inline">\(\lambda_{\max}T=\beta c/y_*\)</span>, which is the
+expression for <span class="math inline">\(h=k_B\beta\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>With the spectral shape of Planck 1900 (<a
+href="https://doi.org/10.1002/andp.19003060105">Ann. Phys. 306, 69</a>,
+metadata), <span class="math inline">\(\varphi(y)=y/(e^y-1)\)</span>,
+the integral is <span class="math inline">\(\pi^4/15\)</span>, <span
+class="math inline">\(y_*\approx4.965\)</span>, and <span
+class="math inline">\(h\)</span> is Planck’s constant. The theorem needs
+no shape: any finite spectrum obeying (K), (W), (R) contains a universal
+action, fixed up to a pure number by the measured <span
+class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>
+and <span class="math inline">\(k_B\)</span>. Planck formed his natural
+units from exactly this constant in 1899–1900, before the quantum
+hypothesis; the theorem states why a constant had to be there.</p>
+<p>Two remarks keep the statement honest. First, <span
+class="math inline">\(k_B\)</span> converts kelvins to energy, and its
+value needs atomism (the gas constant divided by Avogadro’s number); the
+universal constant of (K)–(W) alone is <span
+class="math inline">\(\beta\)</span>. Second, with <span
+class="math inline">\(h\)</span> and <span
+class="math inline">\(k_e/c\)</span> both available, Theorem A of the
+dimensional note no longer fixes a unique unit: any universal floor is
+<span class="math inline">\(h\,G(\alpha)\)</span> with <span
+class="math inline">\(\alpha=k_e/(hc/2\pi)\)</span> dimensionless.
+Uniqueness of the unit requires that the floor not depend on the charge,
+which holds for records made with neutral probes.</p>
+<p><strong>Bridge to the Opticks.</strong> Newton’s <em>Opticks</em>
+holds, per colour, an interval of fits <span
+class="math inline">\(\Lambda\)</span> and a corpuscle whose <span
+class="math inline">\(\Lambda p\)</span> is invariant under refraction
+(paper §§7–8), but no universality across colours: on his ordering of
+corpuscle sizes, <span class="math inline">\(\Lambda p\)</span>
+decreases toward the violet with no least colour. Theorem U supplies
+exactly the missing cross-colour constant. Reading <span
+class="math inline">\(h\)</span> as a per-corpuscle impulse, <span
+class="math inline">\(p=h/\lambda\)</span>, needs more: Einstein’s
+fluctuation argument applied to an exponential spectral tail, which is
+the quantization of the field. So the unit enters honestly through
+(K)–(R), and quanta enter through the tail.</p>
+<h2 id="theorem-i-no-classical-ceiling-on-posteriors">3. Theorem I: no
+classical ceiling on posteriors</h2>
+<p><strong>Theorem I.</strong> Consider a classical model with (i)
+Liouville (Hamiltonian) dynamics of the body and its pointers, (ii)
+product preparations, each factor with a prior phase-space density at
+most <span class="math inline">\(1/X\)</span>, and (iii) records formed
+by Bayesian conditioning on a pointer coordinate read to finite
+precision. Then for every <span class="math inline">\(X&gt;0\)</span>
+and <span class="math inline">\(\eta&gt;0\)</span> there is a protocol
+whose body posterior satisfies <span class="math inline">\(\Delta
+q\,\Delta p&lt;\eta\)</span>, with <span
+class="math inline">\(\Delta\)</span> the width of the support.</p>
+<p><em>Proof.</em> Let the body prior be uniform on <span
+class="math inline">\([0,a]\times[0,X/a]\)</span> and the first pointer
+<span class="math inline">\((y,p_y)\)</span> uniform on <span
+class="math inline">\([0,\epsilon]\times[0,X/\epsilon]\)</span>; both
+have density <span class="math inline">\(1/X\)</span>. The impulsive
+coupling with Hamiltonian <span class="math inline">\(g\,q\,p_y\)</span>
+acting for unit time maps <span class="math inline">\(y\mapsto
+y+gq\)</span> and <span class="math inline">\(p\mapsto p-gp_y\)</span>,
+leaving <span class="math inline">\(q\)</span> and <span
+class="math inline">\(p_y\)</span> unchanged, and preserves the joint
+density by Liouville. Reading <span class="math inline">\(y\)</span> to
+precision <span class="math inline">\(\epsilon&#39;\)</span> confines
+<span class="math inline">\(q\)</span> to width <span
+class="math inline">\((\epsilon+\epsilon&#39;)/g\)</span>. A second
+pointer <span class="math inline">\((z,p_z)\)</span>, uniform on <span
+class="math inline">\([0,\epsilon_2]\times[0,X/\epsilon_2]\)</span> and
+coupled by <span class="math inline">\(g_2\,p_y\,p_z\)</span>, maps
+<span class="math inline">\(z\mapsto z+g_2p_y\)</span> and kicks only
+<span class="math inline">\(y\)</span>, which is already read. Reading
+<span class="math inline">\(z\)</span> to precision <span
+class="math inline">\(\epsilon_2&#39;\)</span> confines <span
+class="math inline">\(p_y\)</span> to width <span
+class="math inline">\((\epsilon_2+\epsilon_2&#39;)/g_2\)</span>. The
+body’s momentum is <span class="math inline">\(p-gp_y\)</span>, so its
+posterior width is at most <span
+class="math inline">\(X/a+g(\epsilon_2+\epsilon_2&#39;)/g_2\)</span>,
+and</p>
+<p><span class="math display">\[\Delta q\,\Delta
+p\le\frac{X(\epsilon+\epsilon&#39;)}{ag}
++\frac{(\epsilon+\epsilon&#39;)(\epsilon_2+\epsilon_2&#39;)}{g_2},\]</span></p>
+<p>which is below <span class="math inline">\(\eta\)</span> for <span
+class="math inline">\(g_2\)</span> large and <span
+class="math inline">\(a\)</span> large, or <span
+class="math inline">\(\epsilon\)</span>, <span
+class="math inline">\(\epsilon&#39;\)</span> small. The prior ceiling
+only widens the unread conjugates <span
+class="math inline">\(p_y\)</span> and <span
+class="math inline">\(p_z\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The second pointer reads the first pointer’s kick; this is paper §8’s
+countermodel (two position records recover the momentum) in mechanical
+form, and each classical entry of the obstruction map is a corner of it.
+The recoverable-delayed-record results C068–C069 are the corner <span
+class="math inline">\(a\to\infty\)</span>, <span
+class="math inline">\(\epsilon&#39;\to0\)</span>.</p>
+<p><strong>What (I) must deny.</strong> A premise that yields a
+universal posterior ceiling, and with it paper Theorem 6 with the
+ceiling in place of <span class="math inline">\(\hbar\)</span>, must
+deny (i), (ii) or (iii).</p>
+<ul>
+<li><em>Quantum kinematics</em> denies (iii): there is no joint
+phase-space density on which to condition, and every read is also a
+kick.</li>
+<li><em>A universal background that no record can fully capture</em>
+denies (ii): every preparation is correlated with it. Stochastic
+electrodynamics is of this kind; Lorentz invariance fixes the spectrum
+of a random classical background as <span
+class="math inline">\(\propto\nu^3\)</span> up to one constant with
+action units (<a href="https://doi.org/10.1098/rspa.1963.0220">Marshall
+1963</a>; <a href="https://doi.org/10.1103/PhysRevD.11.790">Boyer
+1975</a>; metadata). The ceiling then needs the extra clause that
+records cannot read the background itself, since otherwise Theorem I
+applies to the enlarged system.</li>
+<li><em>An epistemic restriction</em> imposes the ceiling on every state
+of knowledge. Bartlett, Rudolph and Spekkens show that Liouville
+mechanics with such a restriction reproduces Gaussian quantum mechanics
+(<a href="https://doi.org/10.1103/PhysRevA.86.012103">PRA 86, 012103,
+2012</a>, metadata; <a
+href="https://doi.org/10.1103/PhysRevA.75.032110">Spekkens 2007</a> for
+the discrete toy theory). This is the posterior ceiling as a principle,
+with its value free; Theorem U then fixes the value up to a number.</li>
+<li><em>Newton’s printed optics</em> denies none: its fits are
+determinate and its records conditionable, which is why paper §8 finds
+that what Newton printed entails <span
+class="math inline">\(\neg\)</span>M3.</li>
+</ul>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>STATE item 2 (Newton necessity) gains a sharp statement. The unit is
+settled classically by Theorem U. The open task is a physically
+justified premise that denies one of (i)–(iii) of Theorem I, of which
+the three known routes are quantum kinematics, an unrecordable universal
+background and an epistemic restriction. The historical test worth doing
+next is the reviewer’s second candidate: whether Newton’s inflexion
+experiments (<em>Opticks</em> Book III, Obs. 1–11) give a bending law
+<span class="math inline">\(\theta b\approx C\Lambda\)</span> per
+colour. If they do, Newton’s own optics denies (iii) for corpuscle
+records, per colour, and paper §8 must be reworded to say that <span
+class="math inline">\(\neg\)</span>M3 follows only for inflexion-free
+records.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

@@ -53,10 +53,13 @@ Principia work lives in the sibling `newtonlean` repository.
    midpoint: exact structure and leading curvature term (Prop. 6); P($\alpha$)
    for one cube holds formally for any compact $G$ (Prop. 7). Next: its
    uniform Laplace remainder for $SU(2)$, then a mid-plane, then iteration.
-2. **Newton necessity:** construct the refinement map for body and
-   physical record, with the unobserved constant-force composition as
-   the reference. Seek positive cost from independently justified
-   premises; retain universality and calibration as obligations.
+2. **Newton necessity.** The
+   [unit-and-indeterminacy note](../notes/necessity-unit-and-indeterminacy.md)
+   splits it: a universal action unit follows from classical radiation
+   thermodynamics (Thm U); back-action indeterminacy is impossible with
+   Liouville dynamics, product preparations and Bayesian records (Thm I).
+   Next: a justified premise denying one of the three; test Newton's
+   inflexion data (*Opticks* III, Obs. 1--11) for a bending law.
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.

@@ -58,10 +58,14 @@ linked note.
    trajectory, prove $E=C_3\hbar c\lambda_3$ with $0<C_3<\infty$. The
    compact $U(1)$ comparison shows the mechanism must come from the
    non-abelian terms.
-5. **Newton's record.** Give the refinement law for body and record, and
-   derive a positive action cost from premises justified independently of
-   quantum kinematics ([the Planck paper](notes/planck-gap-paper.md)
-   holds the conditional bounds and the map of what fails).
+5. **Newton's record.** A universal action unit already follows from
+   classical radiation thermodynamics, and back-action indeterminacy is
+   impossible with Liouville dynamics, product preparations and Bayesian
+   records ([unit and indeterminacy](notes/necessity-unit-and-indeterminacy.md)).
+   Find a physically justified premise that denies one of those three and
+   makes the unit a floor on records
+   ([the Planck paper](notes/planck-gap-paper.md) holds the conditional
+   bounds).
 
 ## The Newton component
 
