@@ -25,7 +25,9 @@ time on the interpolated flux, plus an odd-charge correction carrying a
 theta-function factor: the large-field term, with rate
 $e^{-2\pi(\pi-|\phi|)/t}$. For a whole $U(1)$ mid-plane the move is exact
 as a sum over integer charges (Proposition 4), and its vortex part is
-bounded by an extensive error of density $e^{-c/t}$ per face. The non-abelian
+bounded by an extensive error of density $e^{-c/t}$ per face; with the
+parity factors included this gives Hypothesis P($\alpha$) for $U(1)$
+(Theorem 5). The non-abelian
 estimate needed for one step in $1+2$ dimensions is stated in §4 as
 Hypothesis P($\alpha$), with the four terms it must control and their
 orders in $\lambda_3a$.
@@ -408,14 +410,75 @@ term is positive, and $\sum_{w\ne0}e^{-c\|w\|_1/t}
 =(1+2e^{-c/t}/(1-e^{-c/t}))^N-1$. $\square$
 
 The bound is extensive with density $O(e^{-c/t})$ per mid-face, the form
-of error that Hypothesis P($\alpha$) allows, for every $\alpha$. So for
-$G=U(1)$ with the parity factors set to $1$, the parallel move equals
-the free-field move up to a local error exponentially small in
-$1/(\lambda_3a)$. What remains for the $U(1)$ case of P($\alpha$) is the
-parity factor $\prod\rho_e$: on the small-field set each
-$1-\rho_e\le5e^{-2\pi(\pi-t^{1/2-\delta})/t}$, and a polymer expansion
-in the edges with $s_e=1$ has to control the shift $\pi\,\delta^{\sf T}s$
-that such edges produce in (9). That expansion is left open.
+of error that Hypothesis P($\alpha$) allows, for every $\alpha$. The
+parity factors are handled by the same device, which completes the
+$U(1)$ step.
+
+**Theorem 5 ($U(1)$ case of P($\alpha$)).** Take $G=U(1)$, $D=3$, an
+isotropic coarse lattice with $t=\lambda_3a$, one halving of direction 1,
+and a coarse configuration in the small-field set: every coarse
+plaquette angle, taken in $(-\pi,\pi]$, has modulus at most
+$\varepsilon=t^{1/2-\delta}$, with $3\varepsilon\le\pi/8$ and
+$e^{-\pi^2/(16t)}\le\frac13$. Use these principal values for the
+fluxes. Then $\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})_g/2$, and
+
+$$-10\,N\,e^{-2\pi(\pi-\varepsilon)/t}\ \le\
+\log\Psi-\log\Psi_1^{(0)}(\bar\Phi)\ \le\
+\frac{2N\,e^{-\pi^2/(8t)}}{1-e^{-\pi^2/(8t)}},$$
+
+where $\Psi_1^{(0)}(\bar\Phi)=(2\pi)^{N/2}(\det C)^{-1/2}
+e^{-\frac12\bar\Phi^{\sf T}C^{-1}\bar\Phi}$ is exactly the free-field
+parallel move of Proposition 2. Consequently $\mathcal D$ equals the free
+defect (5) plus a constant, up to an error at most
+$C_0Ne^{-\pi^2/(8t)}$ with $C_0$ absolute, and P($\alpha$) holds for $U(1)$
+with $\delta_t=0$ and every $\alpha$.
+
+*Proof.* (i) Representatives. Formula (8) is $2\pi$-periodic in each
+$\bar\Phi_g$ and invariant under the joint change of lifts
+($\phi_e\mapsto\phi_e+2\pi$ flips $\rho_e$ and shifts the adjacent
+$\bar\Phi_g$ by $\pi$), so any consistent lifts may be used. Take
+principal $\phi_e$. Then $\bar\Phi_g\equiv\Phi_{\ell+1}-\frac12
+\sum_{e\in\partial g}\sigma_e\phi_e$ modulo $2\pi$, and Stokes' theorem on the
+half-cell, whose terms are all below $6\varepsilon<2\pi$ in modulus, gives
+$\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})/2$ with
+$\|\bar\Phi\|_\infty\le\varepsilon$.
+(ii) Mixture form. By the proof of Proposition 4,
+$\Psi=E_s\,\Psi_1(\bar\Phi+\pi\delta^{\sf T}s)$ with independent
+$s_e\in\{0,1\}$, $P(s_e=1)=q_e=(1-\rho_e)/2\le\frac52
+e^{-2\pi(\pi-\varepsilon)/t}$ by Proposition 3.
+(iii) Lower bound. Every $\Psi_1$ is positive, so
+$\Psi\ge\prod_e(1-q_e)\,\Psi_1(\bar\Phi)\ge\prod_e(1-q_e)\,
+\Psi_1^{(0)}(\bar\Phi)$; there are $2N$ mid-edges and
+$\log(1-q)\ge-2q$ for $q\le\frac12$.
+(iv) Upper bound, uniform in $s$. For $c=\delta^{\sf T}s$, the terms of
+(9) at $\bar\Phi+\pi c$ are indexed by $u=c+2w$, the integer vectors
+congruent to $c$ modulo 2. Relative to the $w=0$ term at $\bar\Phi$ the
+exponent is
+$-\pi u^{\sf T}C^{-1}\bar\Phi-\frac12\pi^2u^{\sf T}C^{-1}u
+\le-c'\|u\|_1/t$, with $c'=\frac\pi2(\frac\pi4-\|\bar\Phi\|_\infty)
+\ge\pi^2/16$, by the two matrix facts of the Corollary and
+$\|u\|_2^2\ge\|u\|_1$. Summing coordinatewise,
+$\Psi_1(\bar\Phi+\pi c)/\Psi_1^{(0)}(\bar\Phi)\le A_0^{N-k}A_1^k\le A_0^N$,
+where $k$ is the number of odd entries of $c$,
+$A_0=1+2e^{-2c'/t}/(1-e^{-2c'/t})$ and
+$A_1=2e^{-c'/t}/(1-e^{-2c'/t})\le A_0$ under the stated condition on $t$.
+Average over $s$ and use $\log A_0\le2e^{-2c'/t}/(1-e^{-2c'/t})$.
+(v) The old transverse faces. $\log[k_{2t}(\theta)/k_t(\theta)]$ for
+Villain weights equals $\theta^2/(4t)+\frac12\log\frac12$ up to the
+one-dimensional vortex corrections, at most
+$3e^{-2\pi(\pi-\varepsilon)/(2t)}$ per face for $|\theta|\le\varepsilon$
+by the same Poisson estimate; this is where $e^{-\pi^2/(8t)}$ dominates.
+Collect (iii)--(v) with the definition of $\mathcal D$. $\square$
+
+This is the first rung of the ladder completed as a theorem: for the
+compact abelian group, one directional step of the three-dimensional
+refinement equals the free-field step of Proposition 2 up to an extensive
+error of density $e^{-\pi^2/(8\lambda_3a)}$ on the small-field set. It
+concerns the heat-kernel action; iterating it requires the same estimate
+for heat-kernel actions perturbed by the defect, which is the stability
+clause of P($\alpha$). The non-abelian terms N1--N3 are absent here, so
+Theorem 5 tests the large-field and representative bookkeeping, and
+leaves the curvature and commutator terms to the $SU(2)$ cube.
 
 For $SU(2)$ and
 $SU(3)$ the bridge expectations $E\,R(m_j)$ are matrices, and the
@@ -495,8 +558,8 @@ $1+2$ gauge refinement factors exactly into series moves, which close,
 and a parallel insertion $\Psi$ (Proposition 1). $\Psi$ is computed in
 closed form for the free field (Proposition 2, bound (6)), and the
 interacting estimate is stated as Hypothesis P($\alpha$) with its four
-terms; Propositions 3 and 4 settle the isolated $U(1)$ cube and the
-$U(1)$ mid-plane up to the parity polymer expansion. The next
+terms; Propositions 3--4 and Theorem 5 settle the $U(1)$ case of one
+step. The next
 concrete step on this line is to prove P($\alpha$) for **one isolated
 cube with $G=SU(2)$, then $SU(3)$** (a single mid-face, where independence of the four
 bridge variables reduces $\Psi$ to

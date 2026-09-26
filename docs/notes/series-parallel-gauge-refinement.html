@@ -113,7 +113,10 @@ class="math inline">\(e^{-2\pi(\pi-|\phi|)/t}\)</span>. For a whole
 <span class="math inline">\(U(1)\)</span> mid-plane the move is exact as
 a sum over integer charges (Proposition 4), and its vortex part is
 bounded by an extensive error of density <span
-class="math inline">\(e^{-c/t}\)</span> per face. The non-abelian
+class="math inline">\(e^{-c/t}\)</span> per face; with the parity
+factors included this gives Hypothesis P(<span
+class="math inline">\(\alpha\)</span>) for <span
+class="math inline">\(U(1)\)</span> (Theorem 5). The non-abelian
 estimate needed for one step in <span class="math inline">\(1+2\)</span>
 dimensions is stated in §4 as Hypothesis P(<span
 class="math inline">\(\alpha\)</span>), with the four terms it must
@@ -679,20 +682,116 @@ class="math inline">\(\square\)</span></p>
 <p>The bound is extensive with density <span
 class="math inline">\(O(e^{-c/t})\)</span> per mid-face, the form of
 error that Hypothesis P(<span class="math inline">\(\alpha\)</span>)
-allows, for every <span class="math inline">\(\alpha\)</span>. So for
-<span class="math inline">\(G=U(1)\)</span> with the parity factors set
-to <span class="math inline">\(1\)</span>, the parallel move equals the
-free-field move up to a local error exponentially small in <span
-class="math inline">\(1/(\lambda_3a)\)</span>. What remains for the
-<span class="math inline">\(U(1)\)</span> case of P(<span
-class="math inline">\(\alpha\)</span>) is the parity factor <span
-class="math inline">\(\prod\rho_e\)</span>: on the small-field set each
+allows, for every <span class="math inline">\(\alpha\)</span>. The
+parity factors are handled by the same device, which completes the <span
+class="math inline">\(U(1)\)</span> step.</p>
+<p><strong>Theorem 5 (<span class="math inline">\(U(1)\)</span> case of
+P(<span class="math inline">\(\alpha\)</span>)).</strong> Take <span
+class="math inline">\(G=U(1)\)</span>, <span
+class="math inline">\(D=3\)</span>, an isotropic coarse lattice with
+<span class="math inline">\(t=\lambda_3a\)</span>, one halving of
+direction 1, and a coarse configuration in the small-field set: every
+coarse plaquette angle, taken in <span
+class="math inline">\((-\pi,\pi]\)</span>, has modulus at most <span
+class="math inline">\(\varepsilon=t^{1/2-\delta}\)</span>, with <span
+class="math inline">\(3\varepsilon\le\pi/8\)</span> and <span
+class="math inline">\(e^{-\pi^2/(16t)}\le\frac13\)</span>. Use these
+principal values for the fluxes. Then <span
+class="math inline">\(\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})_g/2\)</span>,
+and</p>
+<p><span class="math display">\[-10\,N\,e^{-2\pi(\pi-\varepsilon)/t}\
+\le\
+\log\Psi-\log\Psi_1^{(0)}(\bar\Phi)\ \le\
+\frac{2N\,e^{-\pi^2/(8t)}}{1-e^{-\pi^2/(8t)}},\]</span></p>
+<p>where <span
+class="math inline">\(\Psi_1^{(0)}(\bar\Phi)=(2\pi)^{N/2}(\det C)^{-1/2}
+e^{-\frac12\bar\Phi^{\sf T}C^{-1}\bar\Phi}\)</span> is exactly the
+free-field parallel move of Proposition 2. Consequently <span
+class="math inline">\(\mathcal D\)</span> equals the free defect (5)
+plus a constant, up to an error at most <span
+class="math inline">\(C_0Ne^{-\pi^2/(8t)}\)</span> with <span
+class="math inline">\(C_0\)</span> absolute, and P(<span
+class="math inline">\(\alpha\)</span>) holds for <span
+class="math inline">\(U(1)\)</span> with <span
+class="math inline">\(\delta_t=0\)</span> and every <span
+class="math inline">\(\alpha\)</span>.</p>
+<p><em>Proof.</em> (i) Representatives. Formula (8) is <span
+class="math inline">\(2\pi\)</span>-periodic in each <span
+class="math inline">\(\bar\Phi_g\)</span> and invariant under the joint
+change of lifts (<span
+class="math inline">\(\phi_e\mapsto\phi_e+2\pi\)</span> flips <span
+class="math inline">\(\rho_e\)</span> and shifts the adjacent <span
+class="math inline">\(\bar\Phi_g\)</span> by <span
+class="math inline">\(\pi\)</span>), so any consistent lifts may be
+used. Take principal <span class="math inline">\(\phi_e\)</span>. Then
+<span class="math inline">\(\bar\Phi_g\equiv\Phi_{\ell+1}-\frac12
+\sum_{e\in\partial g}\sigma_e\phi_e\)</span> modulo <span
+class="math inline">\(2\pi\)</span>, and Stokes’ theorem on the
+half-cell, whose terms are all below <span
+class="math inline">\(6\varepsilon&lt;2\pi\)</span> in modulus, gives
 <span
-class="math inline">\(1-\rho_e\le5e^{-2\pi(\pi-t^{1/2-\delta})/t}\)</span>,
-and a polymer expansion in the edges with <span
-class="math inline">\(s_e=1\)</span> has to control the shift <span
-class="math inline">\(\pi\,\delta^{\sf T}s\)</span> that such edges
-produce in (9). That expansion is left open.</p>
+class="math inline">\(\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})/2\)</span>
+with <span
+class="math inline">\(\|\bar\Phi\|_\infty\le\varepsilon\)</span>. (ii)
+Mixture form. By the proof of Proposition 4, <span
+class="math inline">\(\Psi=E_s\,\Psi_1(\bar\Phi+\pi\delta^{\sf
+T}s)\)</span> with independent <span
+class="math inline">\(s_e\in\{0,1\}\)</span>, <span
+class="math inline">\(P(s_e=1)=q_e=(1-\rho_e)/2\le\frac52
+e^{-2\pi(\pi-\varepsilon)/t}\)</span> by Proposition 3. (iii) Lower
+bound. Every <span class="math inline">\(\Psi_1\)</span> is positive, so
+<span
+class="math inline">\(\Psi\ge\prod_e(1-q_e)\,\Psi_1(\bar\Phi)\ge\prod_e(1-q_e)\,
+\Psi_1^{(0)}(\bar\Phi)\)</span>; there are <span
+class="math inline">\(2N\)</span> mid-edges and <span
+class="math inline">\(\log(1-q)\ge-2q\)</span> for <span
+class="math inline">\(q\le\frac12\)</span>. (iv) Upper bound, uniform in
+<span class="math inline">\(s\)</span>. For <span
+class="math inline">\(c=\delta^{\sf T}s\)</span>, the terms of (9) at
+<span class="math inline">\(\bar\Phi+\pi c\)</span> are indexed by <span
+class="math inline">\(u=c+2w\)</span>, the integer vectors congruent to
+<span class="math inline">\(c\)</span> modulo 2. Relative to the <span
+class="math inline">\(w=0\)</span> term at <span
+class="math inline">\(\bar\Phi\)</span> the exponent is <span
+class="math inline">\(-\pi u^{\sf T}C^{-1}\bar\Phi-\frac12\pi^2u^{\sf
+T}C^{-1}u \le-c&#39;\|u\|_1/t\)</span>, with <span
+class="math inline">\(c&#39;=\frac\pi2(\frac\pi4-\|\bar\Phi\|_\infty)
+\ge\pi^2/16\)</span>, by the two matrix facts of the Corollary and <span
+class="math inline">\(\|u\|_2^2\ge\|u\|_1\)</span>. Summing
+coordinatewise, <span class="math inline">\(\Psi_1(\bar\Phi+\pi
+c)/\Psi_1^{(0)}(\bar\Phi)\le A_0^{N-k}A_1^k\le A_0^N\)</span>, where
+<span class="math inline">\(k\)</span> is the number of odd entries of
+<span class="math inline">\(c\)</span>, <span
+class="math inline">\(A_0=1+2e^{-2c&#39;/t}/(1-e^{-2c&#39;/t})\)</span>
+and <span class="math inline">\(A_1=2e^{-c&#39;/t}/(1-e^{-2c&#39;/t})\le
+A_0\)</span> under the stated condition on <span
+class="math inline">\(t\)</span>. Average over <span
+class="math inline">\(s\)</span> and use <span
+class="math inline">\(\log
+A_0\le2e^{-2c&#39;/t}/(1-e^{-2c&#39;/t})\)</span>. (v) The old
+transverse faces. <span
+class="math inline">\(\log[k_{2t}(\theta)/k_t(\theta)]\)</span> for
+Villain weights equals <span
+class="math inline">\(\theta^2/(4t)+\frac12\log\frac12\)</span> up to
+the one-dimensional vortex corrections, at most <span
+class="math inline">\(3e^{-2\pi(\pi-\varepsilon)/(2t)}\)</span> per face
+for <span class="math inline">\(|\theta|\le\varepsilon\)</span> by the
+same Poisson estimate; this is where <span
+class="math inline">\(e^{-\pi^2/(8t)}\)</span> dominates. Collect
+(iii)–(v) with the definition of <span class="math inline">\(\mathcal
+D\)</span>. <span class="math inline">\(\square\)</span></p>
+<p>This is the first rung of the ladder completed as a theorem: for the
+compact abelian group, one directional step of the three-dimensional
+refinement equals the free-field step of Proposition 2 up to an
+extensive error of density <span
+class="math inline">\(e^{-\pi^2/(8\lambda_3a)}\)</span> on the
+small-field set. It concerns the heat-kernel action; iterating it
+requires the same estimate for heat-kernel actions perturbed by the
+defect, which is the stability clause of P(<span
+class="math inline">\(\alpha\)</span>). The non-abelian terms N1–N3 are
+absent here, so Theorem 5 tests the large-field and representative
+bookkeeping, and leaves the curvature and commutator terms to the <span
+class="math inline">\(SU(2)\)</span> cube.</p>
 <p>For <span class="math inline">\(SU(2)\)</span> and <span
 class="math inline">\(SU(3)\)</span> the bridge expectations <span
 class="math inline">\(E\,R(m_j)\)</span> are matrices, and the isolated
@@ -797,10 +896,9 @@ factors exactly into series moves, which close, and a parallel insertion
 class="math inline">\(\Psi\)</span> is computed in closed form for the
 free field (Proposition 2, bound (6)), and the interacting estimate is
 stated as Hypothesis P(<span class="math inline">\(\alpha\)</span>) with
-its four terms; Propositions 3 and 4 settle the isolated <span
-class="math inline">\(U(1)\)</span> cube and the <span
-class="math inline">\(U(1)\)</span> mid-plane up to the parity polymer
-expansion. The next concrete step on this line is to prove P(<span
+its four terms; Propositions 3–4 and Theorem 5 settle the <span
+class="math inline">\(U(1)\)</span> case of one step. The next concrete
+step on this line is to prove P(<span
 class="math inline">\(\alpha\)</span>) for <strong>one isolated cube
 with <span class="math inline">\(G=SU(2)\)</span>, then <span
 class="math inline">\(SU(3)\)</span></strong> (a single mid-face, where

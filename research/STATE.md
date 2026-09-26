@@ -48,9 +48,10 @@ Principia work lives in the sibling `newtonlean` repository.
    factors one directional halving exactly: series moves close in every
    dimension, and the parallel insertion $\Psi$ (Prop. 1) carries the
    renormalization in $\binom{D-1}{2}$ transverse planes. The free-field
-   defect is exact (Prop. 2), and so is the $U(1)$ cube (Prop. 3). Next:
-   prove its Hypothesis P($\alpha$) for one isolated $SU(2)$ or $SU(3)$
-   cube, then for a mid-plane by small-field cluster expansion.
+   defect is exact (Prop. 2); for $U(1)$ one step is proved (Thm 5:
+   free-field step up to density $e^{-\pi^2/(8\lambda_3a)}$). Next: the
+   isolated $SU(2)$ cube (curvature and commutator terms N1--N3), then
+   $SU(3)$, then stability of P($\alpha$) under iteration.
 2. **Newton necessity:** construct the refinement map for body and
    physical record, with the unobserved constant-force composition as
    the reference. Seek positive cost from independently justified
