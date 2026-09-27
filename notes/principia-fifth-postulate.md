@@ -53,8 +53,8 @@ Euclid's fifth postulate holds in the following precise, partial sense.
    fifth postulate (similar figures of every size) and of the absolute
    length of Lambert and Gauss, in the sense made precise in §6.
 
-**What the analogy does not give.** The state route shows that
-noncommutativity is not the only way to a floor: GPT-6 Astra's
+**Where the analogy stops.** The state route reaches the same floor
+without noncommutativity: GPT-6 Astra's
 [routes note](newton-indeterminacy-routes.md) proves the same floor in a
 commutative theory with a Gaussian covariance restriction, with
 $h_*=2\zeta$. So "floor if and only if $\hbar\ne0$" holds only with the
@@ -169,8 +169,8 @@ on instantaneous velocity is
 [Arntzenius (2000)](https://doi.org/10.5840/monist20008328) and
 [Smith (2003)](https://doi.org/10.1016/S1355-2198(03)00007-8) (abstracts).
 The quantum Zeno effect of Misra and Sudarshan is a different phenomenon.
-No author found connects Newton's *velocitas ultima* to uncertainty; that
-is a limit of the search, not a claim of absence.
+No author found connects Newton's *velocitas ultima* to uncertainty; the
+statement reports the reach of the search.
 
 ## 2. The family of products
 
@@ -270,7 +270,7 @@ case is exact). A Gaussian state of one degree of freedom has mean
 $m\in\mathbb R^2$ and covariance $\Sigma>0$; write $\nu(\Sigma)=\sqrt{\det\Sigma}$, which has
 the units of action.
 
-**Theorem B$'$.** Let $\mathcal G$ be a set of nondegenerate Gaussian states
+**Theorem B$'$.** Let $\mathcal G$ be a nonempty set of nondegenerate Gaussian states
 that is (i) invariant under the affine symplectic group, the flows of
 Newton's integrable cases (as in (H2)), and (ii) closed under adding
 independent Gaussian noise, $\Sigma\mapsto\Sigma+K$ with $K\ge0$, which is what
@@ -376,8 +376,8 @@ Bohr's founding statement of complementarity names Newton's joint
 determinacy as the thing given up. In the Como lecture
 ([Bohr 1928, *Nature* 121, 580](https://doi.org/10.1038/121580a0), p. 580;
 the sentence checked as quoted in
-[Busch and Shilladay 2006, arXiv:quant-ph/0609048](https://arxiv.org/abs/quant-ph/0609048)
-and in arXiv:physics/9807009):
+[Busch and Shilladay 2006, arXiv:quant-ph/0609048](https://arxiv.org/abs/quant-ph/0609048),
+§2.2.1):
 
 > The very nature of the quantum theory thus forces us to regard the
 > space-time co-ordination and the claim of causality, the union of which
@@ -421,18 +421,34 @@ every $a,b>0$, and there is no bound.
 *Proof.* In the Schrödinger representation $p=-i\hbar\,d/dq$, so confining
 $p$ to $[-b,b]$ is band-limiting the wavefunction to spatial frequencies
 $|\nu|\le b/(2\pi|\hbar|)$. With the interval length $2a$, the Slepian parameter
-$c=\pi WT$ equals $\pi\cdot\frac b{2\pi|\hbar|}\cdot2a=ab/|\hbar|$. The inequality for
-pure states is the theorem of
+$c=\pi WT$ equals $\pi\cdot\frac b{2\pi|\hbar|}\cdot2a=ab/|\hbar|$ (equivalently $c=\Omega T/2$
+with the angular band $\Omega=b/|\hbar|$); the shifts $q_0,p_0$ are removed by
+a translation and a boost. With $D=P_a$, $B=Q_b$ one has
+$\|DB\|=\sqrt{\lambda_0(c)}$
+([Slepian and Pollak 1961](https://doi.org/10.1002/j.1538-7305.1961.tb03976.x)).
+For a pure state $f$: if $\alpha\beta=0$ the left side is at least
+$\pi/2>\arccos\sqrt{\lambda_0}$. Otherwise put $g=Df/\alpha$, $h=Bf/\beta$; then
+${\rm Re}\langle f,g\rangle=\alpha$, ${\rm Re}\langle f,h\rangle=\beta$ and
+$|\langle g,h\rangle|=|\langle Df,DB\,Bf\rangle|/(\alpha\beta)\le\sqrt{\lambda_0}$. The angle
+$d(x,y)=\arccos{\rm Re}\langle x,y\rangle$ is the geodesic distance on the unit sphere
+of the underlying real Hilbert space, so
+$\arccos\sqrt{\lambda_0}\le d(g,h)\le d(g,f)+d(f,h)=\arccos\alpha+\arccos\beta$
+(proof supplied by the reviewer).
 [Landau and Pollak (1961)](https://doi.org/10.1002/j.1538-7305.1961.tb03977.x)
-(metadata), with $\lambda_0$ from
-[Slepian and Pollak (1961)](https://doi.org/10.1002/j.1538-7305.1961.tb03976.x)
-(metadata). In the coordinates $u=\alpha^2+\beta^2-1$, $v=\alpha^2-\beta^2$ the
-boundary $\arccos\alpha+\arccos\beta=\theta_0$ is the arc of the ellipse
-$(u/\cos\theta_0)^2+(v/\sin\theta_0)^2=1$ that faces the corner $\alpha=\beta=1$, so
-the allowed set of $(\alpha^2,\beta^2)$ is convex and mixed states obey the same
-inequality. With $\alpha,\beta\ge\sqrt{1-\epsilon}$, $\arccos\sqrt{1-\epsilon}=\arcsin\sqrt\epsilon$
-and $\cos(2\arcsin\sqrt\epsilon)=1-2\epsilon$ give the second display. The
-$\epsilon=0$ statement is the theorem of
+(passage, as read by the reviewer in the archive.org scan) show that the
+inequality is sharp and characterize the attainable pairs in four cases;
+it binds only when $\alpha^2,\beta^2\ge\lambda_0$ and holds everywhere as a necessary
+condition, which is all that is used here. Mixed states: in the
+coordinates $u=\alpha^2+\beta^2-1$, $v=\alpha^2-\beta^2$ the boundary is an arc of the
+ellipse $(u/\cos\theta_0)^2+(v/\sin\theta_0)^2=1$, $\theta_0=\arccos\sqrt{\lambda_0}$, centred
+at $(\frac12,\frac12)$, inscribed in the unit square and tangent to its sides at
+$(\lambda_0,1)$ and $(1,\lambda_0)$, where the arc ends. The allowed set is the
+square with that one corner rounded off, a convex set, and
+$(\langle P_a\rangle,\langle Q_b\rangle)$ is linear in the state. With $\alpha,\beta\ge\sqrt{1-\epsilon}$,
+$\arccos\sqrt{1-\epsilon}=\arcsin\sqrt\epsilon$ and $\cos(2\arcsin\sqrt\epsilon)=1-2\epsilon$ give
+the second display ($\epsilon\le\frac12$ keeps the angles in the monotone range).
+For interval windows $\epsilon=0$ is excluded because $\lambda_0(c)<1$; for general
+sets of finite measure it is the theorem of
 [Amrein and Berthier (1977)](https://doi.org/10.1016/0022-1236(77)90056-8)
 and [Benedicks (1985)](https://doi.org/10.1016/0022-247X(85)90140-4)
 (metadata). For $\hbar=0$ the state $\delta_{(q_0,p_0)}$ lies in every window.
@@ -443,9 +459,12 @@ record leaves; Theorem E bounds the concentration of the body's state
 that records can produce, which is the quantity Theorem I of the
 [unit-and-indeterminacy note](necessity-unit-and-indeterminacy.md) shows
 can be made arbitrarily small classically. It uses no Gaussian
-assumption, it depends on the windows only through the area $ab/\hbar$, the
-action of the comparison Newton takes to zero, and its error dependence
-$(1-2\epsilon)$ is the one in the Planck paper's floor. It holds for every
+assumption, and it depends on the windows only through the product of
+half-widths $ab$ in units of $\hbar$, the action scale of the comparison
+Newton takes to zero (the windows' area is $4ab$). It shares with the
+Planck paper's floor only the total-variation input $(1-2\epsilon)$; for small
+$\epsilon$, Slepian's asymptotics give $c_*(\epsilon)\approx\frac12\ln(1/\epsilon)$ (reviewer's
+recollection), a few units of $\hbar$ at practical error levels. It holds for every
 $\hbar\ne0$; the state route of the routes note must reproduce it separately.
 
 ## 7. The same structure in Rivero 1998: the classical Dirac measure and its constant
@@ -461,15 +480,19 @@ functional spaces." Theorems A--D fit it point by point.
 
 - **The complex exponential is classical.** The Dirac measure
   concentrated on the critical points of $f$, which is the principle of
-  virtual work, has the representation
+  virtual work, is given the representation
   $\langle\delta(f')|g\rangle=\lim_{\varepsilon\to0}\iint
   e^{i(f(y)-f(x))/\varepsilon}g(x)\,dx\,dy/\varepsilon$ (its eqs. (1)--(2)). The
   "halved" functional $\varepsilon^{-1/2}\int e^{if/\varepsilon}O\,dx$ recovers it by
-  modulus squared, $g=|O|^2$ (eqs. (3)--(4)). The classical variational
+  modulus squared, $g=|O|^2$, when $f$ has a single critical point
+  (eqs. (3)--(4); the paper proposes eq. (2) as asymptotically equivalent
+  to eq. (1), with the normalization of the Dirac measure absorbing a
+  factor $2\pi$). The classical variational
   problem already carries an amplitude whose square is the record.
 - **Theorem A is its Ehrenfest remark.** The paper's control
   transformation $\tau_\mu\delta^h=\delta^{\mu h}$ (eq. (10)) leaves the mean of the
-  Euler--Lagrange expression invariant, "RG invariance in this context
+  Euler--Lagrange expression invariant in a formal manipulation (the
+  paper's word), "RG invariance in this context
   relates to Ehrenfest theorem" (eq. (11)): the equations of motion hold
   for every value of the constant. Theorem A(a) is the operator form.
 - **The dilation family.** The map $h\mapsto\mu h$ is the isomorphism
@@ -483,14 +506,16 @@ functional spaces." Theorems A--D fit it point by point.
   Gaussian marks, Astra's Gaussian restriction) are exact because
   Galileo's comparison and Newton's other integrable cases are quadratic;
   this is Theorem A(b) in the language of the Dirac measure. For general
-  forces the object is the oscillatory measure, not a Gaussian.
+  forces the object is the oscillatory measure.
 - **Where a fixed constant enters.** On paths, the regularized measure has
   two parameters, the action resolution $\varepsilon$ of the Dirac measure and the
   time step $\varepsilon'$ of the partition (eq. (5)). Newton's classical
   mechanics takes $\varepsilon\to0$ at each partition (the classical elimination,
   Proposition 2 of the [refinement note](refinement-composition-and-limit.md))
-  and then refines; the path integral holds the action resolution at a
-  fixed $h$ while the partition is refined (eqs. (7)--(8)). For Newton's
+  and then refines; the path integral of eqs. (7)--(8) holds the action
+  resolution at a fixed $h$ while the partition is refined. (The paper
+  also writes $\varepsilon=h\varepsilon'$ after eq. (5), where the resolution itself goes to
+  zero; the reading here follows eq. (7).) For Newton's
   quadratic cases both orders converge (the refinement note's
   Proposition 2 and Theorem 3), which is the independence of Theorem A.
   The 1998 conjecture that finiteness forces the joint limit concerns the
@@ -508,8 +533,9 @@ functional spaces." Theorems A--D fit it point by point.
   place and velocity together, a commutative algebra, while at $\varepsilon>0$ the
   groupoid convolution of kernels is noncommutative. Joint determinacy
   holds on the boundary fibre, and the deformation of Theorem B is the
-  passage to the interior with $\varepsilon$ playing the part of $\hbar$. (A reading of
-  the cited constructions, not a new theorem.)
+  passage to the interior with $\varepsilon$ playing the part of $\hbar$. This is a
+  reading of the cited constructions; on the Moyal side the boundary
+  algebra is functions on $T^*M$, Fourier dual to $TM$.
 
 ## 8. What remains, and consequence for STATE
 

@@ -46,10 +46,15 @@ Three consequences fill the Newton row of the
   (Corollary 2).
 \item
   \textbf{Information and disturbance are locked at \(\hbar^2/4\) per
-  unit:} \(\sigma^2v=\hbar^2/4\) for every record and every mesh. For
-  \(\hbar=0\) the move is the identity for every \(\sigma\): records are
-  series-exact, the Newtonian counterpart of a theory with no parallel
-  planes, and exactly the joint determinacy of the
+  unit:} \(\sigma^2v=\hbar^2/4\) for every Gaussian record and every
+  mesh (for other pointers the product is bounded below by the Planck
+  paper's Theorem 4). For \(\hbar=0\) the move is the identity for every
+  \(\sigma\) on the classical phase-space distribution, since averaging
+  the posterior over a forgotten outcome returns the prior (the factor
+  \(e^{-s^2/(8\sigma^2)}\) contains no \(\hbar\); its effect on \(W\) is
+  a momentum convolution of variance proportional to \(\hbar^2\)):
+  records are series-exact, the Newtonian counterpart of a theory with
+  no parallel planes, and exactly the joint determinacy of the
   \href{principia-fifth-postulate.md}{fifth-postulate note}.
 \end{itemize}
 
@@ -112,22 +117,28 @@ Gaussian convolutions and affine symplectic maps form a closed family.
 \textbf{Corollary 2 (refinement with records).} Put a record of width
 \(\sigma_j\) at each vertex of a partition of \([0,T]\). The forgotten
 records convolve the final momentum distribution with a Gaussian of
-variance \(\frac{\hbar^2}4\sum_j\sigma_j^{-2}\) (the shear adds a
-position spread of the same order in \(T\) and changes nothing below).
-The limit of refinement exists iff \(\sum_j\sigma_j^{-2}\) converges.
-The records' information about the place, measured by the Fisher
-information \(\sum_j\sigma_j^{-2}\) for a static position, converges on
-the same condition. With \(\sigma_j^{-2}=\kappa\tau_j\) the sum is
+variance \(\frac{\hbar^2}4\sum_j\sigma_j^{-2}\); the shear adds the
+position spread \(\sum_jv_j(T-t_j)^2/M^2\le(T/M)^2\sum_jv_j\). The noise
+covariance of the forgotten-record channel converges along the
+refinement iff \(\sum_j\sigma_j^{-2}\) converges; for a divergent sum
+the momentum marginal flattens and the channel has no limit. The
+records' Fisher information about the initial place, for free motion
+with known momentum, is \(\sum_j\sigma_j^{-2}\) and converges on the
+same condition. With \(\sigma_j^{-2}=\kappa\tau_j\) the sum is
 \(\kappa T\): individual records become coarse as the mesh shrinks, and
 the rate \(\kappa\) and the momentum diffusion rate \(\hbar^2\kappa/4\)
-survive the limit. This is the continuous position measurement of Caves
-and Milburn.
+survive the limit (the Lindblad term \(-\frac\kappa8[x,[x,\rho]]\)).
+This is a continuous limit of the kind Caves and Milburn construct; the
+Gaussian-pointer parametrization is stated here, their abstract being
+the part checked.
 
 \emph{Proof.} The multiplicative factors of Proposition 1 at one instant
 multiply; free evolution between vertices is an affine symplectic map,
 which carries Gaussian convolutions to Gaussian convolutions without
 changing the momentum variance of a convolution applied before it. The
-momentum variances therefore add. \(\square\)
+momentum variances therefore add (a harmonic force would rotate the
+kicks, which is why the corollary is stated for free and constant-force
+motion). \(\square\)
 
 \hypertarget{what-the-newton-row-of-the-atlas-now-says}{%
 \subsection{3. What the Newton row of the atlas now

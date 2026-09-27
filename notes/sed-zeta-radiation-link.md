@@ -1,103 +1,137 @@
-# A Lorentz-invariant background fixes the state-route constant to the radiation unit
+# A Lorentz-invariant background and the state-route constant: a conditional link to the radiation unit
 
-**Result, 2026-09-27.** STATE item 2 asked for a physical reason why the
-constant $\zeta$ of the state route (GPT-6 Astra's
+**Result, 2026-09-27; revised the same day after an adversarial Fable
+review.** STATE item 2 asked for a physical reason why the constant $\zeta$
+of the state route (GPT-6 Astra's
 [routes note](newton-indeterminacy-routes.md), floor with $h_*=2\zeta$; the
 [fifth-postulate note](principia-fifth-postulate.md), Theorem B$'$) should
-equal a fixed multiple of the radiation unit $h_{\rm rad}$ of Theorem U
+be a fixed multiple of the radiation unit $h_{\rm rad}$ of Theorem U
 ([unit-and-indeterminacy note](necessity-unit-and-indeterminacy.md)).
-Within stochastic electrodynamics it does:
+Stochastic electrodynamics supplies one, conditionally.
 
-$$2\zeta=\frac{h_{\rm rad}}{2\pi},\qquad\text{so}\qquad h_*=\frac{h_{\rm rad}}{2\pi}=\hbar .$$
+1. A stationary random electromagnetic background that is Lorentz
+   invariant has energy $\kappa\omega$ per normal mode, one constant $\kappa$ with
+   the units of action.
+2. For a charged oscillator in equilibrium with it, the *resonant*
+   part of the motion is Gaussian with $\sqrt{\det\Sigma}=\kappa$, independent of
+   mass, charge and frequency (Theorem 1). The full momentum variance
+   diverges in the Lorentz-invariant background; a frequency cutoff
+   removes the divergence and breaks the invariance that fixed the
+   spectrum. So the background realizes the restriction of Theorem B$'$
+   with $\zeta=\kappa$ for band-filtered (resonant) variables.
+3. *If* the Planck spectrum, zero-point term included, is derived within
+   stochastic electrodynamics, the thermal quantum is twice the zero-point
+   constant: $h_P=4\pi\kappa$, where $h_P$ is Planck's constant. With
+   $2\zeta=2\kappa$ this gives $2\zeta=h_P/(2\pi)$. Relative to Theorem U's
+   $h_{\rm rad}$, which differs from $h_P$ by the pure number
+   $h_P=(\pi^4/15)^{1/3}h_{\rm rad}$ stated in the unit note,
+   $$2\zeta=\gamma\,h_{\rm rad},\qquad
+   \gamma=\frac{(\pi^4/15)^{1/3}}{2\pi}\approx0.297 .$$
 
-Three steps. (1) A stationary random electromagnetic background that is
-Lorentz invariant has energy $\kappa\omega$ per normal mode for one constant
-$\kappa$. (2) Every weakly damped linear oscillator in equilibrium with it
-has a Gaussian stationary state with $\sqrt{\det\Sigma}=\kappa$, whatever its
-mass and frequency (Theorem 1): the background realizes the covariant,
-noise-closed Gaussian restriction of Theorem B$'$ with $\zeta=\kappa$, and it
-does so universally. (3) With the same background, Boyer derives the
-Planck spectrum from classical electrodynamics and classical
-thermodynamics, with zero-point energy $\frac12\hbar\omega$ per mode; so
-$\kappa=\hbar/2$ and $h_{\rm rad}=2\pi\hbar=4\pi\kappa$. The pure number of Astra's
-matching condition $2\zeta=\gamma h_{\rm rad}$ is therefore $\gamma=1/(2\pi)$ in this
-theory.
+Every stochastic-electrodynamics derivation of the Planck spectrum is
+disputed in that literature (§3), and the value $\kappa=\hbar/2$ is then
+experimental, fixed by matching the zero-point term. The link is
+therefore conditional on step 3 and restricted to resonant variables by
+step 2. Astra's closure premise, that records cannot read the background
+and leave its equilibrium set, stays open. The ingredients are
+established; the assembly is this note's, with no novelty claimed for
+the parts.
 
-What stays open is Astra's closure premise: that no record, however it
-couples to the background, can infer the background's value and so
-sharpen the body's state below $\zeta$. Step (2) fixes $\zeta$ for states in
-equilibrium with the background; it does not show that records cannot
-leave that set. The ingredients are established (Lorentz-invariant
-random radiation, Planck's resonator relation, linear response); the
-assembly is this note's, with no novelty claimed for the parts.
+## 1. The background
 
-## 1. The background and the oscillator
-
-**(1) Lorentz invariance fixes the spectrum up to one constant.** A
-homogeneous, isotropic, stationary random electromagnetic field whose
+A homogeneous, isotropic, stationary random electromagnetic field whose
 spectrum is Lorentz invariant has energy density proportional to
-$\omega^3$, that is, energy per normal mode linear in frequency, $\kappa\omega$
-([Marshall 1963](https://doi.org/10.1098/rspa.1963.0220), metadata;
-[Boyer 1969](https://doi.org/10.1103/PhysRev.182.1374), abstract: "linear
-in frequency", $\frac12\hbar\omega$ per normal mode). The constant $\kappa$ has the units of
-action, and Lorentz invariance leaves it free.
+$\omega^3$, that is, energy per normal mode linear in frequency,
+$\kappa\omega$. Boyer states it in the abstract of his derivation
+([Boyer 1969](https://doi.org/10.1103/PhysRev.182.1374), abstract: the
+zero-point spectrum is "linear in frequency", $\frac12\hbar\omega$ per normal
+mode); the random-electrodynamics programme goes back to
+[Marshall (1963)](https://doi.org/10.1098/rspa.1963.0220) (metadata).
+Lorentz invariance leaves $\kappa$ free.
 
-**Theorem 1 (universal Gaussian area).** Let a particle of mass $M$ and
-charge $e$ be bound harmonically at frequency $\omega_0$, with radiation
-damping small compared with $\omega_0$, and driven by the background of (1),
-taken Gaussian. Its stationary phase-space state is Gaussian with
+## 2. Theorem 1: the resonant Gaussian area
 
-$$\langle q^2\rangle=\frac\kappa{M\omega_0},\qquad\langle p^2\rangle=\kappa M\omega_0,\qquad
-\langle qp+pq\rangle=0,\qquad \sqrt{\det\Sigma}=\kappa ,$$
+**Theorem 1.** Let a particle of mass $M$ and charge $e$ be bound
+harmonically at frequency $\omega_0$ with radiation damping,
+$M\ddot x=-M\omega_0^2x+M\tau\dddot x+eE_x$, $\tau=2e^2/(3Mc^3)$, weak damping
+$\tau\omega_0\ll1$, driven by the Gaussian background of §1. The stationary
+state is Gaussian, and its resonant part (frequencies within a few
+linewidths of $\omega_0$) has
+
+$$\langle x^2\rangle_{\rm res}=\frac\kappa{M\omega_0},\qquad
+\langle p^2\rangle_{\rm res}=\kappa M\omega_0,\qquad
+\langle xp+px\rangle=0,\qquad\sqrt{\det\Sigma_{\rm res}}=\kappa,$$
 
 independent of $M$, $e$ and $\omega_0$.
 
-*Proof.* The equation of motion is linear with Gaussian forcing, so the
-stationary state is Gaussian. A weakly damped oscillator in equilibrium
-with a radiation field acquires mean energy equal to the field's energy
-per normal mode at its frequency (Planck's resonator relation, derived
-in classical electrodynamics;
-[Planck 1900](https://doi.org/10.1002/andp.19003060105), metadata), here
-$\kappa\omega_0$. For a harmonic oscillator the mean kinetic and potential
-energies are equal, so $\langle p^2\rangle/(2M)=\frac12M\omega_0^2\langle q^2\rangle=\frac12\kappa\omega_0$,
-and stationarity gives $\langle qp+pq\rangle=0$. Then
-$\det\Sigma=\langle q^2\rangle\langle p^2\rangle=\kappa^2$. $\square$
+*Proof.* Linear response to Gaussian forcing is Gaussian. Near
+resonance the susceptibility satisfies
+$|\chi|^{-2}\simeq4\omega_0^2(\omega-\omega_0)^2+\tau^2\omega_0^6$, whose integral gives
+$\int|\chi|^2d\omega\simeq\pi/(2\tau\omega_0^4)$; with the background's spectral
+density the charge and $\tau$ cancel, and the resonant mean energy is the
+field energy per mode at $\omega_0$, $\kappa\omega_0$ (Planck's resonator relation
+for a dipole with radiation damping,
+[Planck 1900](https://doi.org/10.1002/andp.19003060105), metadata),
+split equally between kinetic and potential terms. Stationarity gives
+$\langle xp+px\rangle=0$. (Hand check of the resonant moments by the reviewer.)
+$\square$
 
-The mass and the frequency drop out because the energy per mode is
-proportional to $\omega$: the area $\langle E\rangle/\omega_0$ is the same for every
-oscillator. That is the universality the dimensional note requires of a
-floor (its Theorem A), supplied here by Lorentz invariance of the
-background rather than assumed.
+**The off-resonant part.** In the $\omega^3$ background the momentum variance
+has a contribution from $\omega_0\ll\omega\ll1/\tau$ of relative size about
+$1/(\pi\tau\omega_0)$, which grows as the damping weakens, and above $1/\tau$ the
+integrand behaves like $1/(\tau^2\omega)$: the full $\langle p^2\rangle$ diverges
+logarithmically. The position moment is safe; the off-resonant part of
+$\langle x^2\rangle$ is of relative order $\tau\omega_0\ln(1/\tau\omega_0)$. This is the known
+difficulty of the oscillator in stochastic electrodynamics
+([Goedecke 1983](https://doi.org/10.1007/BF00728140), metadata;
+[Nieuwenhuizen 2019](https://doi.org/10.3390/atoms7020059), abstract:
+only "after introducing a cut-off in the stochastic power spectrum and
+regularizing the stochastic force" are the integrals dominated by
+resonance). A cutoff $\Omega_c\ll\sqrt{\pi\omega_0/\tau}$ keeps the resonant answer,
+and any such cutoff breaks the Lorentz invariance of §1, as Astra's
+routes note already observes. Theorem 1 is therefore a statement about
+band-filtered variables.
 
-**(2) The link to Theorem B$'$.** The set of Gaussian states with
-$\sqrt{\det\Sigma}\ge\kappa$ is invariant under the affine symplectic group and
-closed under adding noise, and Theorem 1 says the background puts every
-harmonically bound body on its lower boundary. So the background
-realizes the restriction of Theorem B$'$ with $\zeta=\kappa$, and Astra's
-conditional floor applies with $h_*=2\kappa$ to comparisons whose records are
-confined to this set.
+**The link to Theorem B$'$.** The Gaussian states with $\sqrt{\det\Sigma}\ge\kappa$
+form an affine-symplectic-invariant, noise-closed set, and Theorem 1
+puts the resonant variables of every harmonically bound body on its
+lower boundary. The noise direction that Theorem B$'$ needs is supplied
+by a forgotten record, which adds momentum variance only
+([record note](newton-record-parallel-move.md), Proposition 1).
 
-**(3) The link to the radiation unit.** Boyer derives the Planck law
-"without the formalism of quantum theory" from this background, classical
-electrodynamics of dipole oscillators, and classical equipartition of the
-particles' kinetic energy (Boyer 1969, abstract). The zero-point part is
-$\frac12\hbar\omega$ per mode, so $\kappa=\hbar/2$; the thermal part is Planck's, whose
-constant is the $h_{\rm rad}=2\pi\hbar$ of Theorem U. Hence
+## 3. The radiation unit, conditionally
 
-$$2\zeta=2\kappa=\hbar=\frac{h_{\rm rad}}{2\pi}.$$
+Boyer derives the Planck law "without the formalism of quantum theory"
+from this background, classical electrodynamics of dipole oscillators
+and classical equipartition of the particles' kinetic energy (Boyer 1969,
+abstract), by an Einstein--Hopf argument. What such a derivation fixes is
+a ratio: the thermal part has the form of Planck's with quantum $h_P$,
+and the zero-point part is $\kappa\omega=h_P\omega/(4\pi)$, so $h_P=4\pi\kappa$; the value
+$\kappa=\hbar/2$ is then read from experiment.
 
-This rests on Boyer's derivation at abstract level; the thermodynamic
-steps of that derivation are not re-derived here.
+The derivation is contested. Senatchin argues that "his derivation
+contains a loophole in its argument", the wall damping making the
+equilibrium radiation inhomogeneous
+([arXiv:physics/0105054](https://arxiv.org/abs/physics/0105054), passage
+as reported by the reviewer), citing
+[Jiménez, de la Peña and Brody (1980)](https://doi.org/10.1119/1.12221)
+(metadata); Boyer's own historical review maintains the calculation with
+a modification of the wall damping
+([arXiv:1711.04179](https://arxiv.org/abs/1711.04179), passage as
+reported). Nonlinear systems in stochastic electrodynamics are known to
+depart from the Planck spectrum (reviewer's recollection, not checked
+here). So the honest statement is: within stochastic electrodynamics,
+and conditional on an SED derivation of the Planck spectrum with its
+zero-point term,
 
-## 2. Consequence for STATE
+$$2\zeta=\frac{h_P}{2\pi}=\frac{(\pi^4/15)^{1/3}}{2\pi}\,h_{\rm rad}\approx0.297\,h_{\rm rad}.$$
 
-STATE item 2 asked for two things: a physical justification of closure
-under recording, and the identification $2\zeta=\gamma h_{\rm rad}$. The second
-is supplied within stochastic electrodynamics, with $\gamma=1/(2\pi)$: one
-Lorentz-invariant constant sets both the equilibrium spectrum of
-radiation and the phase-space area of every bound body. The first
-remains open. It is now the single premise between a classical,
-pre-quantum account (Maxwell, Lorentz invariance, thermodynamics, a
-random background) and the Planck paper's floor on recording the
-inertial-versus-parabola comparison: that records cannot read the
-background and so leave its equilibrium set.
+## 4. Consequence for STATE
+
+STATE item 2 asked for the identification $2\zeta=\gamma h_{\rm rad}$ and for
+closure under recording. The identification holds within stochastic
+electrodynamics, conditionally on its disputed derivation of the Planck
+spectrum and for resonant variables, with $\gamma=(\pi^4/15)^{1/3}/(2\pi)$.
+Closure under recording remains the open premise, now joined by the
+tension between a Lorentz-invariant background and the cutoff that the
+oscillator's momentum variance requires.

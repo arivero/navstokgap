@@ -70,8 +70,9 @@ fill its cells (open cells in its §5).
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
    change is joint determinacy ([fifth postulate](../notes/principia-fifth-postulate.md)):
-   A Lorentz-invariant background gives $2\zeta=h_{\rm rad}/2\pi$
-   ([SED link](../notes/sed-zeta-radiation-link.md)); closure under recording is the open premise.
+   Within SED, conditionally on its disputed Planck derivation and for
+   resonant variables, $2\zeta=h_P/2\pi\approx0.297\,h_{\rm rad}$
+   ([SED link](../notes/sed-zeta-radiation-link.md)); closure under recording is open.
    Newton's *velocitas ultima*; Laws independent of it, one action constant
    under covariance (Gutt), floor for $\hbar\ne0$; reviewed: the analogy is
    partial, since a commutative state restriction also floors.
