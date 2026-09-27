@@ -61,7 +61,7 @@ fill its cells (open cells in its §5).
    TV distance $\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ in $D=3$; the route fails in
    $D=4$ (loop density per cell fixed by $g$). The $SU(2)$ midpoint character
    is exact for every spin ([closed form](../notes/su2-midpoint-exact.md)).
-   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); next: higher spins and their sum, then a mid-plane, then iteration.
+   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 now has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). Next: its normalized estimate (18) with winding control, then iteration; higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.

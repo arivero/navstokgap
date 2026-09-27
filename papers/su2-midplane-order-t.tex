@@ -1,0 +1,571 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={SU(2) on the full mid-plane: the relative-order-t halving defect},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{su2-on-the-full-mid-plane-the-relative-order-t-halving-defect}{%
+\section{SU(2) on the full mid-plane: the relative-order-t halving
+defect}\label{su2-on-the-full-mid-plane-the-relative-order-t-halving-defect}}
+
+\textbf{Result, 2026-09-27 (formal one-loop calculation).} For one
+halving of direction 1, with isotropic coarse heat time
+\(t=\lambda_3a\), the zero-momentum coupling coefficients in Hypothesis
+P(\(\alpha\)) are
+
+\[\boxed{\begin{aligned}
+\delta_t^{12}=\delta_t^{13}
+ &=\frac{t}{24}\int_{\mathcal B}\frac{q}{R}+O(t^2)>0,\\
+\delta_t^{23}
+ &=t\left(-\frac1{12}+2\mathcal I\right)+O(t^2)<0,
+\end{aligned}}\tag{1}\]
+
+where the inequalities describe the leading coefficients, and
+
+\[\begin{gathered}
+\int_{\mathcal B}:=\int_{-\pi}^{\pi}\int_{-\pi}^{\pi}
+ \frac{dk_2\,dk_3}{(2\pi)^2},\qquad
+q=2-2\cos k_2,\quad r=2-2\cos k_3,\quad d=8+r,\quad R=8+r+q,\\
+\boxed{\displaystyle
+\mathcal I=\int_{\mathcal B}
+\left\{\frac{r^3+10r^2+4r-1248+q(8+r)^2}{24(8+r)^2(8+r+q)}
+-\frac{q(2\sin k_3)^2(2\sin k_2)^2}
+ {4(8+r)(8+r+q)^4}\right\}<0.}
+\end{gathered}\tag{2}\]
+
+All integrals are finite. Their denominators are bounded below by
+positive powers of 8. The first numerator in (2) increases with each of
+\(q,r\in[0,4]\) and has maximum \(-432\); the second summand is
+nonpositive. The cut integral is strictly positive. These statements use
+no numerical evaluation.
+
+The cut shifts come from the normalized bridge-curvature determinant
+(N2). For equal adjacent layers, the bridges have an exactly Gaussian
+zero-image density in exponential coordinates. The transverse shift then
+consists of the mid-face heat-kernel amplitude, \(-t/12\), and the
+coupled noncommutative fluctuation determinant, \(2t\mathcal I\) (N3,
+including the curvature of the mid-face action). Neighbouring faces
+share fluctuations throughout this calculation.
+
+After these shifts and the vacuum term are extracted, the formal
+\textbf{bulk local} smooth-field expansion contains only operators of
+geometric dimension at least six. Here \([D]=1\) and \([F]=2\), the
+convention used for irrelevance in the
+\href{series-parallel-gauge-refinement.md}{series/parallel note}. The
+full small-field statement still requires the volume-uniform, normalized
+estimates in §7. Equation (1) gives bulk coefficients; finite tori also
+carry the explicit flat-holonomy term (16) below. It obstructs the
+literal flux-only P(\(\alpha\)) inequality at fixed torus size as
+\(t\to0\), and is exponentially small when the number of sites around
+the torus tends to infinity. Iteration requires a further stability
+estimate.
+
+\textbf{Inputs and scope.} The exact definition of \(\Psi\) and
+\(\mathcal D\) is Proposition 1, equations (3)--(4), and Hypothesis
+P(\(\alpha\)) of the
+\href{series-parallel-gauge-refinement.md}{series/parallel note}
+(full-read: relevant sections, including Propositions 4, 6 and 7). The
+bridge checks use \href{su2-midpoint-exact.md}{the exact midpoint note},
+Theorems 1--4 (full-read). The calculations below are written
+derivations of the formal coefficients, rather than an invocation of
+uniformity from fixed-spin expansions. We use
+\([T_a,T_b]=\epsilon_{abc}T_c\), \(|T_a|=1\), \(C_2(\mathrm{adj})=2\),
+and normalized Haar measure.
+
+\hypertarget{expansion-and-the-massive-mid-plane-covariance}{%
+\subsection{1. Expansion and the massive mid-plane
+covariance}\label{expansion-and-the-massive-mid-plane-covariance}}
+
+Use the mid-vertex gauge of Proposition 1 and write
+\(m_e=m_{*e}\exp\xi_e\). At the trivial background the quadratic
+exponent is
+
+\[\frac1t\left(2\sum_e|\xi_e|^2
+ +\frac14\sum_g|\bar\Phi_g+(C\xi)_g|^2\right),\qquad
+\bar\Phi=\frac{\Phi_\ell+\Phi_{\ell+1}}2.\]
+
+The Fourier symbol of the curl and the inverse fluctuation Hessian are
+
+\[c(k)=(1-e^{ik_3},\ e^{ik_2}-1),\qquad
+H_0=4I+\frac12c^*c,\qquad
+G=H_0^{-1}=\frac14\left(I-\frac{c^*c}{R}\right).\tag{3}\]
+
+There is an additional identity matrix on the three colour components.
+In particular \(4I\le H_0\le8I\), including zero momentum. The bridge
+term supplies a mass for every mid-edge fluctuation. Integrating (3)
+gives precisely the free defect \(\mathcal D_0\) of Proposition 2; the
+plane coupling agrees with the covariance in Proposition 4.
+
+For precision about orders, introduce local boundary coordinates \(X\)
+and the zero-image exponent \(\mathcal S(X,\xi)\) of the
+\emph{normalized} integral defining the defect. Thus it includes the
+subtraction \(-\sum_e|X_e|^2/2\) from the bridge denominators and
+\(-\sum_{f\perp1}|X_f|^2/4\) from the old-face ratio. Its positive terms
+are the two squared half-face distances per cut face and
+\(\sum_g|\log m_{\partial g}|^2/4\). Let
+\(F(X)=\min_\xi\mathcal S(X,\xi)\). The formal normalized Laplace
+expansion of the bulk part is
+
+\[\mathcal D(X,t)=c_{\rm vac}(t)N+\frac{F_2+F_3+F_4}{t}
+ +A_2(X)+\text{higher terms},\qquad F_2/t=\mathcal D_0.\tag{4}\]
+
+Finite periodic planes also have the winding functional of §7.
+Subscripts are homogeneous boundary degree about the trivial field. The
+one-loop amplitude \(A\) includes \(\tfrac12\log\det H\), Haar and
+heat-kernel amplitudes, and the bridge denominators. An explicit
+prescription, useful also for its derivative terms, is
+
+\[\begin{aligned}
+A(X)={}&\tfrac12\log\det H(X)
+ +\tfrac12\sum_e[\log j(L_e^-)+\log j(L_e^+)-\log j(X_e)]\\
+ &-\sum_e\log j(\xi_e^*)+\tfrac12\sum_g\log j(Y_g^*),
+\qquad j(Z)=\left[\frac{\sin(|Z|/2)}{|Z|/2}\right]^2.
+\end{aligned}\]
+
+Here \(\xi^*\) is the classical saddle, \(L_e^\pm\) are the logarithms
+of its two half-face holonomies, \(Y_g^*\) is its mid-face logarithm,
+and \(H\) is the Hessian in the \(\xi\) coordinates.
+Boundary-independent constants are suppressed. Gauge invariance removes
+the linear term of the bulk local expansion. Its quadratic term is
+
+\[A_2(X)=\frac1{48}\int_{\mathcal B}\frac qR
+ \sum_{f\in(12),(13)}|X_f|^2
+ +\left(-\frac1{24}+\mathcal I\right)
+ \sum_{f\in(23)}|X_f|^2+A_{2,\mathrm{der}}(X).\tag{5}\]
+
+The last quadratic kernel has zero constant term in its covariant
+external-momentum expansion. Equation (5) defines the convention for
+coupling shifts: the coefficient of \(|X_f|^2\) is
+\(\delta_t^{\mu\nu}/(2t)\). On a finite periodic plane, momentum
+integrals for local contractions become sums; (1)--(2) specify their
+bulk limit.
+
+For typical perturbative counting \(X=O(\sqrt t)\), \(F_3/t\) has order
+\(\sqrt t\), and both \(F_4/t\) and \(A_2\) have order \(t\). Keeping
+the cubic and quartic classical terms is essential to an order-\(t\)
+expansion. On P(\(\alpha\))'s larger set, \(|X|\le t^{1/2-\delta}\),
+retain their actual powers of \(X\) rather than replacing \(X^2\) by
+\(t\).
+
+\hypertarget{n2-curvature-of-the-normalized-bridges}{%
+\subsection{2. N2: curvature of the normalized
+bridges}\label{n2-curvature-of-the-normalized-bridges}}
+
+Proposition 6 in its group-general form gives
+
+\[h_X=I+\frac{(\operatorname{ad}X)^2}{48}+O(|X|^4),\qquad
+\operatorname{Cov}\xi=\frac t4h_X^{-1}+O_X(t^2).\tag{6}\]
+
+For \(SU(2)\), \(h_X\) has eigenvalues \(1,h,h\), with
+\(h=(|X|/4)\cot(|X|/4)\). The trace of its covariance excess is
+\(t|X|^2/96\), or \(t|X|^2/288\) per colour direction. This is the
+softening in Proposition 6, with its axial part retained.
+
+Theorems 1--2 of the midpoint note check (6) in every fixed-spin
+character. Theorem 3 gives the scalar spin-\(1/2\) matrix; Theorem 4
+gives distinct spin-1 entries and their image bounds. At \(X=0\) there
+is a stronger useful identity. In exponential coordinates the zero-image
+factors satisfy
+
+\[k_{t/2}(e^\xi)^2\,dm
+ \ \propto\ e^{-2|\xi|^2/t}\,d^3\xi.\tag{7}\]
+
+Indeed, the two factors \((|\xi|/2)/\sin(|\xi|/2)\) cancel the Haar
+Jacobian \([\sin(|\xi|/2)/(|\xi|/2)]^2\). Continuing this Gaussian to
+\(\mathbb R^3\) gives covariance exactly \(tI/4\); truncation to the
+injectivity chart changes it by an exponentially small tail. Its
+fundamental expectation \(e^{-t/32}(1-t/16)\) and spin-1 expectation
+\([1+2e^{-t/8}(1-t/4)]/3\) agree with the exact endpoint limits. There
+is no omitted central-bridge covariance correction of order \(t^2\) in
+these coordinates.
+
+To extract the \(12\) coefficient, take constant commuting cut flux
+\(X_{12}=X\), \(X_{13}=0\), and flat midpoint connection. Adjacent
+layers can be represented by constant links \(e^{-X/2}\) and \(e^{X/2}\)
+in direction 2. The classical defect vanishes. The Hessian in (3)
+changes by \(4(h_X-I)\) on direction-2 edges, while bridge normalization
+supplies \(-\tfrac12\operatorname{Tr}\log h_X\). Therefore its quadratic
+amplitude is
+
+\[\begin{aligned}
+A_{2,\mathrm{cut}}
+ &=\frac1{96}\operatorname{Tr}
+ [(4G-I)(\operatorname{ad}X)^2]\\
+ &=\frac{|X|^2}{48}\int_{\mathcal B}\frac rR
+ =\frac{|X|^2}{48}\int_{\mathcal B}\frac qR.
+\end{aligned}\tag{8}\]
+
+Here \(4G_{22}-1=-r/R\) and
+\(\operatorname{tr}_{\rm colour}(\operatorname{ad}X)^2=-2|X|^2\). The
+exchange of the two integration variables gives the last equality.
+Direction 3 gives the same result. Normalization explains the positive
+sign: the unconstrained bridge's curvature determinant is subtracted,
+and the mid-face weights constrain its broadened directions.
+
+N2 also contributes higher boundary-degree terms. For example, at the
+Gaussian saddle \(\xi^{(0)}\) the quadratic bridge-curvature insertion
+in the classical exponent is
+
+\[\frac1{24t}\sum_e
+ \langle\xi_e^{(0)},(\operatorname{ad}X_e)^2\xi_e^{(0)}\rangle
+ =-\frac1{24t}\sum_e|[X_e,\xi_e^{(0)}]|^2.\tag{9}\]
+
+It belongs to \(F_4/t\); its coefficient follows directly from (6).
+Other fourth-degree classical terms are retained by the saddle formula
+in §6. At equal adjacent layers \(X_{12}=X_{13}=0\), (7) removes the
+bridge-shape contribution altogether, which isolates the transverse
+calculation below.
+
+\hypertarget{n3-the-full-plaquette-hessian}{%
+\subsection{3. N3: the full plaquette
+Hessian}\label{n3-the-full-plaquette-hessian}}
+
+Set both adjacent layers equal to a constant Abelian magnetic
+background, with \(U_{23}=e^{BT_3}\) and zero cut flux. It is sufficient
+to extract the local bulk coefficient at \(B=0\); one can use a large
+box before taking this coefficient. The midpoint connection is an exact
+stationary point, since neighbouring plaquettes have the same
+covariantly constant flux. Its bridge coordinates have density (7).
+
+For four oriented fluctuations transported to a plaquette base, write
+\(\eta_1,\ldots,\eta_4\), and \(Y=BT_3\). The quadratic part of
+\(L=\tfrac12|\log m_{\partial g}|^2\) is
+
+\[L^{(2)}=\frac12\left\langle\sum_i\eta_i,
+ Q_Y\sum_i\eta_i\right\rangle
+ +\frac12\sum_{i<j}\langle Y,[\eta_i,\eta_j]\rangle,
+\qquad Q_Y=\frac{\operatorname{ad}Y}{2}
+ \coth\frac{\operatorname{ad}Y}{2}.\tag{10}\]
+
+This follows by inserting
+\(\log(\prod_i e^{\eta_i})=\sum_i\eta_i+\tfrac12\sum_{i<j}[\eta_i,\eta_j] +O(\eta^3)\)
+into the squared-distance function. On the charged colour plane
+\(Q_Y=h_B I\), \(h_B=(B/2)\cot(B/2)\). The neutral colour has the
+unchanged free Hessian. Both the radial Hessian and the ordered
+commutator in (10) are needed.
+
+Here is an explicit determinant evaluation retaining both terms. Choose
+background links \(U_2=1\), \(U_3(x)=e^{Bx_2T_3}\) and Fourier transform
+in direction 3. Combine the two charged real colours into one complex
+field \((u,v)\) on edges in directions \((2,3)\). Put
+
+\[s_B=\frac{B/2}{\sin(B/2)},\qquad h_B=s_B\cos(B/2),\qquad
+z=k_3+Bx_2,\quad y=z+B/2,\]
+
+and let \(E\) shift \(x_2\) by one. The charged Hessian of \(L\) is the
+Hermitian block operator \(K\) with
+
+\[\begin{aligned}
+K_{uu}&=2h_B-2s_B\cos y,\\
+K_{vv}&=2h_B-s_B(e^{-iB/2}E+e^{iB/2}E^*),\\
+K_{uv}&=f(y)E+g(y),\\
+f(y)&=s_B(e^{-iB/2}-e^{-iy}),\qquad
+ g(y)=s_B(e^{-iy}-e^{iB/2}).
+\end{aligned}\tag{11}\]
+
+For example the four transported charged fluctuations are \(u(x)\),
+\(v(x+\hat2)\), \(-e^{iB(x_2+1)}u(x+\hat3)\), \(-e^{iB}v(x)\).
+Substitution in (10), using \(h_B\pm iB/2=s_Be^{\pm iB/2}\), gives (11).
+
+The fluctuation Hessian in the exponent is \(H=4I+K/2\). The two charged
+real colours contribute
+\(\tfrac12\operatorname{Tr}_{\mathbb R}\log H =\operatorname{Tr}_{\mathbb C}\log H\).
+Thus the desired one-loop coefficient is the \(B^2\) coefficient per
+site of \(\log\det(8+K)\). The neutral determinant is constant. This
+formula contains the connected two-vertex contribution
+\(-\tfrac14\operatorname{Tr}(H_0^{-1}H_1H_0^{-1}H_1)\) in real-colour
+notation, together with \(\tfrac12\operatorname{Tr}(H_0^{-1}H_2)\); it
+keeps their cancellations in one expression.
+
+\hypertarget{evaluating-the-transverse-coefficient-as-a-lattice-integral}{%
+\subsection{4. Evaluating the transverse coefficient as a lattice
+integral}\label{evaluating-the-transverse-coefficient-as-a-lattice-integral}}
+
+The \(uu\) block of \(8+K\) is multiplication by
+
+\[D(y)=8+2s_B[\cos(B/2)-\cos y].\]
+
+Eliminating \(u\) gives a scalar tridiagonal Schur complement \(S\). The
+elementary identity \(g(y)^*f(y)=-s_Be^{-iB/2}[D(y)-8]\) gives its
+forward hopping \(-8s_Be^{-iB/2}/D(y)\). Its diagonal at site \(x_2\) is
+
+\[8+2h_B-s_B^2\left[
+\frac{2-2\cos(z+B)}{D(z+B/2)}+
+\frac{2-2\cos(z-B)}{D(z-B/2)}\right].\tag{12}\]
+
+A constant unitary phase removes \(e^{-iB/2}\) from the hopping.
+Consequently
+\(\log\det(8+K)=\operatorname{Tr}\log D+ \operatorname{Tr}\log S\)
+exactly at finite volume with compatible boundary conditions.
+
+For the bulk derivative expansion let \(k=k_2\), \(r=2-2\cos z\),
+\(q=2-2\cos k\), \(d=8+r\), \(R=d+q\), and \(w=\sin^2z=r(4-r)/4\). The
+scalar symmetric, or Weyl, symbol of \(S\) has expansion
+\(s_0+B^2s_2+O(B^4)\), where
+
+\[\begin{aligned}
+s_0&=\frac{8R}{d},\\
+s_2&=-\frac16-\frac{2\cos z}{d}+\frac{4w}{d^2}
+ -\frac{2rw}{d^3}-\frac{r^2}{6d^2}-\frac r{6d}
+ -\frac{28\cos k}{3d^2}.
+\end{aligned}\tag{13}\]
+
+Indeed \(D(z\pm B/2)=d\pm B\sin z-B^2r/12+O(B^3)\), while at a hopping
+midpoint \(D(y)=d(y)+B^2(r(y)/24-1/4)+O(B^4)\). These two expansions in
+(12) yield (13). The multiplication determinant contributes
+\(\int_{\mathcal B}(r-6)/(24d)\) at order \(B^2\).
+
+The trace of the logarithm also includes the symbol-product correction.
+Since \(z\) and \(k\) have commutator of magnitude \(B\), the
+second-order product of scalar symbols is
+
+\[f\star g=fg+\frac{iB}{2}\{f,g\}
+ -\frac{B^2}{8}(f_{zz}g_{kk}-2f_{zk}g_{zk}+f_{kk}g_{zz})+O(B^3).\]
+
+Expanding the resolvent of \(s_0+u\) in this formula and integrating
+\(\log s_0=\int_0^\infty[(1+u)^{-1}-(s_0+u)^{-1}]\,du\) gives
+
+\[[B^2]\operatorname{Tr}\log S\,/N
+=\int_{\mathcal B}\left[
+\frac{s_2}{s_0}+\frac{\det(\partial^2s_0)}{24s_0^2}\right].\tag{14}\]
+
+Here and below \([B^2]\) means the Taylor coefficient. To check the
+factor \(1/24\), the resolvent correction is
+\(-\det(\partial^2s_0)/(4(s_0+u)^3)+ Q/(4(s_0+u)^4)\), with
+\(Q=s_{0,zz}s_{0,k}^2-2s_{0,zk}s_{0,z}s_{0,k} +s_{0,kk}s_{0,z}^2\).
+Integration in \(u\) gives \(\det(\partial^2s_0)/(8s_0^2)-Q/(12s_0^3)\).
+Integration by parts on the momentum torus gives
+\(\int Q/s_0^3=\int\det(\partial^2s_0)/s_0^2\), proving (14).
+
+Two final simplifications expose the sign. Direct substitution gives
+
+\[\frac{r-6}{24d}+\frac{s_2}{s_0}
+=\frac{r^3+10r^2+4r-1248+qd^2}{24d^2R}.\]
+
+For \(s_0=8(1+q/d)\), integration by parts first in \(z\) and then in
+\(k\) gives
+
+\[\int_{\mathcal B}\frac{\det(\partial^2s_0)}{s_0^2}
+=-6\int_{\mathcal B}\frac{q(r')^2(q')^2}{dR^4}.\]
+
+Together these are exactly (2). As an algebraic normalization check,
+replacing the 8 in \(8+K\) by a large mass parameter \(M\) gives
+\([B^2]\operatorname{Tr}\log(M+K)/N =-1/(3M)+1/(6M^2)+O(M^{-3})\): (11)
+yields \([B^2]\operatorname{Tr}K/N=-1/3\) and
+\([B^2]\operatorname{Tr}K^2/N=-1/3\) directly.
+
+Finally, the zero-image heat kernel contains
+\(j(Y)^{-1/2}=(|Y|/2)/\sin(|Y|/2)\), so the mid-face amplitude
+contributes \(-\log j(Y)^{-1/2}=-|Y|^2/24+O(|Y|^4)\) to the action. The
+corresponding factors in \(k_{2t}(U_f)/k_t(U_f)\) cancel exactly. Adding
+this \(-1/24\) to \(\mathcal I\) and multiplying by \(2t\) proves (1)'s
+transverse coefficient in the formal expansion.
+
+\hypertarget{what-the-midpoint-matrices-say-about-n3}{%
+\subsection{5. What the midpoint matrices say about
+N3}\label{what-the-midpoint-matrices-say-about-n3}}
+
+The exact midpoint results provide a local check and specify their
+scope. In spin \(1/2\), the centered expectation is a scalar matrix, so
+an isolated face factors into four scalar bridge expectations times its
+interpolated holonomy. In spin 1, Theorem 4 gives
+
+\[\lambda_0-\lambda_1
+=\frac t8(1-1/h)+O_X(t^2)
+=-\frac{t|X|^2}{384}+O(t|X|^4)+O_X(t^2).\]
+
+The unequal eigenvalues retain the axis of each cut flux. Their
+commutator is proportional to \([P_i,P_j]\) for transported axial
+projectors, and therefore survives for generic oblique axes. This
+fixed-spin matrix commutator has order \(t^2\) at fixed side angles; it
+alone cannot provide the full order-\(t\) plane coefficient.
+
+The heat-kernel character sum samples spins of size \(t^{-1/2}\), and
+each shared edge joins neighbouring face representations. The
+local-coordinate Hessian (10)--(14) resums the needed quadratic
+fluctuations before any fixed-spin truncation. Its linear-in-\(Y\)
+commutator vertices have a connected square at quadratic boundary
+degree. This is the N3 contribution relevant to a coupling shift.
+Theorems 1--4 are consistent with that contribution, including the
+special scalar factorization of the isolated fundamental sector.
+
+For a more detailed split of the determinant, the radial-curvature part
+\(Q_Y-I=(\operatorname{ad}Y)^2/12+O(Y^4)\) contributes
+
+\[\mathcal I_{\rm radial}
+=-\frac1{12}\int_{\mathcal B}\frac{q+r}{R}.\]
+
+The rest is \(\mathcal I-\mathcal I_{\rm radial}\), including parallel
+transport and ordered-commutator vertices and their connected square.
+Equations (10)--(14) specify this split unambiguously. The strict
+negative sign in (2) concerns the complete determinant. The separate
+bridge term N2 is (8); changing fluctuation coordinates can redistribute
+intermediate geometric and product terms while leaving (1) fixed.
+
+\hypertarget{the-other-terms-and-their-smooth-field-dimensions}{%
+\subsection{6. The other terms and their smooth-field
+dimensions}\label{the-other-terms-and-their-smooth-field-dimensions}}
+
+The classical part in (4) can be retained without guessing individual
+local counterterms. Expand the explicit squared-distance exponent of §1
+as \(\mathcal S_2+\mathcal S_3+\mathcal S_4+\cdots\) and solve its
+Gaussian saddle, \(\xi^{(0)}=-G C^*\bar\Phi/2\). Then
+
+\[\begin{aligned}
+F_3&=\mathcal S_3(X,\xi^{(0)}),\\
+F_4&=\mathcal S_4(X,\xi^{(0)})-
+\frac12\langle\partial_\xi\mathcal S_3(X,\xi^{(0)}),
+G\,\partial_\xi\mathcal S_3(X,\xi^{(0)})\rangle.
+\end{aligned}\tag{15}\]
+
+Thus (4), (5), (10) and (15) define every term through the stated
+boundary and loop orders. This includes (9), the classical interpolation
+commutator, and the quartic terms from the ordered mid-face product. A
+smooth-field example is the N1 term
+\(\langle F_{23},[F_{12},F_{13}]\rangle\), of dimension six; quartic
+curvature invariants have dimension eight. The free defect and the
+quadratic remainder \(A_{2,\mathrm{der}}\) start with covariant
+derivatives of curvature, of dimension six.
+
+The reason this list exhausts relevant smooth-field terms is local. The
+inverse of (3) has exponential decay in lattice distance, so its formal
+connected contractions have analytic external-momentum expansions. Gauge
+invariance forces their bulk local terms to be curvature invariants.
+Reflection symmetry forbids the odd-parity Chern--Simons term and
+dimension-five terms. At dimension four, independent reflections leave
+only \(|F_{12}|^2\), \(|F_{13}|^2\) and \(|F_{23}|^2\); their
+coefficients are (1). Differences between opposite faces and mixed
+quadratic kernels, allowed by Proposition 7, give higher derivatives in
+this expansion. Terms with three curvatures start at dimension six. This
+argument uses smooth fields and the bulk local expansion; arbitrary
+small plaquettes can still vary at lattice momenta of order one.
+
+Consequently the mid-plane extension of Proposition 7 has the expected
+\textbf{formal} operator content. Equations (1)--(15) leave no extra
+relevant bulk operator at relative order \(t\). They leave a
+quantitative uniform-integral problem, specified next.
+
+\hypertarget{a-finite-torus-obstruction-and-the-estimates-needed-for-a-theorem}{%
+\subsection{7. A finite-torus obstruction and the estimates needed for a
+theorem}\label{a-finite-torus-obstruction-and-the-estimates-needed-for-a-theorem}}
+
+The global qualification has a direct test. On an \(N_2\times N_3\)
+periodic plane take identical flat adjacent layers with commuting
+holonomies \(e^{\theta_2T_3}\) and \(e^{\theta_3T_3}\). Every coarse
+plaquette logarithm vanishes. The charged version of (3) has momenta
+\(k_j+\theta_j/N_j\), where \(k_j=2\pi n_j/N_j\). Finite-dimensional
+Laplace expansion at its unique zero-action saddle therefore gives
+
+\[\begin{aligned}
+\mathcal D(U_\theta,t)-\mathcal D(1,t)
+ &=\Omega_N(\theta)+O_N(t),\\
+\Omega_N(\theta)
+ &=\sum_{k}\log\frac{12-2\cos(k_2+\theta_2/N_2)
+                          -2\cos(k_3+\theta_3/N_3)}
+                         {12-2\cos k_2-2\cos k_3}.
+\end{aligned}\tag{16}\]
+
+The bridge distance term has a unique minimum and positive Hessian for
+each such fixed flat background. Rescaling the finitely many normal
+coordinates by \(\sqrt t\) gives (16); the complement of a fixed saddle
+neighbourhood has exponentially small weight. This argument needs no
+estimate uniform in \(N\).
+
+There is a signed, elementary bound. Write \(N=N_2N_3\) and
+\(n_*=\min(N_2,N_3)\). Expand \(\log(12-\mathsf A_\theta)\), with
+\(\mathsf A_\theta\) the nearest-neighbour adjacency matrix carrying the
+flat phases. If \(a_n(w)\) counts length-\(n\) walks from one site to
+its translate by \((w_2N_2,w_3N_3)\) on the covering lattice, then
+
+\[\begin{aligned}
+\Omega_N(\theta)
+ &=N\sum_{n\ge1}\frac1{n12^n}\sum_{w\ne0}
+ a_n(w)[1-\cos(w\cdot\theta)],\\
+0\le\Omega_N(\theta)&\le
+\frac{3N}{n_*}\,3^{-n_*}.
+\end{aligned}\tag{17}\]
+
+The bound uses \(\sum_wa_n(w)\le4^n\) and \(n\ge n_*\) for nonzero
+winding. Straight winding paths make the inequality strict whenever at
+least one adjoint holonomy is nontrivial. At fixed \(N\), (16) is an
+order-one background-dependent term as \(t\to0\). Both coupling shifts
+and every local curvature operator vanish on these configurations.
+Subtracting P(\(\alpha\)) for \(U_\theta\) and for \(1\) would bound
+their difference by \(Ct^\alpha N\), contradicting (16). Thus that
+hypothesis, interpreted uniformly on fixed periodic planes with
+arbitrary flat holonomies, requires an extra global term or a
+restriction on volume/scaling.
+
+For \(N_j=L_j/a\) at fixed positive physical lengths and
+\(t=\lambda_3a\), (17) is beyond every power of \(t\). Its origin is a
+winding determinant; assigning it a local operator dimension would lose
+its dependence on the torus. This is the precise exception to the bulk
+irrelevance statement of §6.
+
+A sufficient formulation for a theorem is the following. Work in local
+gauge charts on the small-field set, including the treatment of global
+holonomies and boundary conditions. For every plane size require a
+unique contributing small saddle, a Hessian bounded below by a fixed
+\(cI>0\), and exponentially summable connected kernels for its classical
+value \(F\) and normalized one-loop amplitude \(A\). Constants and decay
+rates must be independent of plane area. The normalized integral,
+including all bridge denominators, Haar factors and images, must obey
+the following after separating a finite-volume winding functional
+\(W_N(U,t)\) (absent in the infinite-plane bulk expansion):
+
+\[\begin{aligned}
+\mathcal D(U,t)&=c_{\rm vac}(t)N+F(U)/t+A(U)-A(1)+W_N(U,t)+E(U,t),\\
+|E(U,t)-E(1,t)|&\le C t\sum_p|X_p|^2+CNe^{-c/t},\\
+|F-F_2-F_3-F_4|&\le C\varepsilon^3\sum_p|X_p|^2,\\
+|A-A(1)-A_2|&\le C\varepsilon\sum_p|X_p|^2,
+\qquad \varepsilon=\sup_p|X_p|\le t^{1/2-\delta}.
+\end{aligned}\tag{18}\]
+
+An \(E(1,t)\) constant is absorbed into \(c_{\rm vac}\). The quadratic
+Taylor kernel of \(A\) must have the bulk coefficients (5), with
+exponentially summable second spatial moments. Here \(F,A\) denote the
+bulk local kernels; \(W_N\) collects their winding corrections and has
+\(W_N(U_\theta,t)=\Omega_N(\theta)+O_N(t)\) after vacuum subtraction.
+One further needs \(|W_N|\le C e^{-\kappa n_*}\sum_p(1+|X_p|^2/t)\) with
+fixed \(\kappa>0\) in the chosen small-field charts. These conditions
+justify both the order-\(t\) coefficient extraction and the derivative
+expansion. They also give, after retaining the terms in (4), a remainder
+bounded by
+
+\[C\left(\frac{\varepsilon^3}{t}+\varepsilon+t\right)
+\sum_p|X_p|^2+CNe^{-c/t}.\]
+
+For the weaker unperturbed P(\(\alpha\)) inequality, it suffices to
+replace the strong remainder line of (18) by
+\(|E|\le Ct\sum_p(1+|X_p|^2/t)\) and use
+\(|F-F_2|\le C\varepsilon\sum_p|X_p|^2\) and
+\(|A-A(1)|\le C\sum_p|X_p|^2\). Then \(\alpha=1/2-\delta>2\delta\) for
+\(0<\delta<1/6\), exactly as in Proposition 7, provided \(W_N\) is
+retained or \(e^{-\kappa n_*}\le Ct^\alpha\) in the allowed
+volume/scaling regime. The same estimates for the perturbed actions
+produced by preceding steps are the additional iteration obligation.
+
+The mass bound in (3) establishes the free reference's locality. The
+remaining estimate is (18) for the \textbf{full normalized interacting
+integral}, uniformly in the plane size and across the required gauge
+charts. Fixed-spin image bounds and a finite-cube Laplace expansion
+supply local ingredients; they do not establish this uniform estimate.
+
+\hypertarget{consequence-for-state}{%
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
+
+Atlas cell 2 now has a formal full-plane relative-order-\(t\)
+calculation: the cut couplings shift positively, the transverse coupling
+negatively, and all other bulk smooth-field terms start at dimension
+six. On fixed periodic planes the winding term (16) obstructs flux-only
+closure; fixed physical volumes suppress it exponentially. The next
+obligation for this cell is the normalized estimate (18), with winding
+control, followed by stability under iteration. The infrared
+spectral-gap obligation remains separate. STATE continues to route work
+through the atlas; the coefficients and their derivation live here.
+\end{document}
