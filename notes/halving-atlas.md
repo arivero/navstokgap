@@ -247,8 +247,9 @@ way; in mechanics refining makes each cell more quantum
   normalized along a trajectory on which $\lambda_3=\hbar g_{\rm cl}^2$ diverges. The
   refinement at fixed coupling removes the lattice mass gap and keeps the
   unit of action. And $h$ was first measured in this same gapless theory
-  in $1+3$, cavity radiation (Planck 1900, through the resonators' energy
-  elements; the field-mode reading is
+  in $1+3$, cavity radiation (Planck's talk of 14 December 1900, written
+  up as [Ann. Phys. 309, 553 (1901)](https://doi.org/10.1002/andp.19013090310),
+  through the resonators' energy elements; the field-mode reading is
   [Debye 1910](https://doi.org/10.1002/andp.19103381617), metadata); in a
   finite cavity the supplied box gap $2\pi\hbar c/L$ remains, and "gapless" is
   the infinite-volume statement. The atlas thus carries two gaps of

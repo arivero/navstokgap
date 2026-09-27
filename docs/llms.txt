@@ -256,6 +256,20 @@ correction is dated in the note. Do not reintroduce them.
 19. **A one-step upper bound proves neither convergence nor a density.**
     The $\pi^2/8$ constant of Theorem 5 says nothing about the monopole
     density on the Göpfert--Mack trajectory.
+20. **`make paper` used to exit 0 when LaTeX failed** (before commit
+    `bfcc529`). A note quoting Chinese never produced its PDF; notes with CJK
+    ideographs now select XeLaTeX automatically (`b8bacd7`). Check the PDF's
+    timestamp, never make's stdout.
+21. **Bridge mean at a cut at fraction $s$** is $(1-s)P_e-sQ_e$ in the additive
+    convention where $s=\frac12$ gives $(P_e-Q_e)/2$, with $P_em_e^{-1}$ the half of
+    thickness $sa_1$ (Corollary 2$_s$); a first draft had $+sQ_e$.
+22. **Cut measure: two floors.** A floor on a cell's action $K_\tau$ and a floor
+    on a cut's share $3s(1-s)K_L$ differ by $\frac34$ for halving; the two-path
+    phase is $K_\tau/\varepsilon$ (its half-phase is $K_\tau/(2\varepsilon)$); the Euclidean
+    per-cut quantity is a Kullback--Leibler divergence
+    ([cut-measure-newton](https://github.com/arivero/navstokgap/blob/main/notes/cut-measure-newton.md), commit `88344a9`).
+23. **At an $SU(2)$ halving a winding $n$ acts by $(-1)^n$**, not always by
+    $-1$; even windings act trivially (atlas §1b, commit `7d8518a`).
 
 ## 5. Open problems, with the smallest next theorem
 
