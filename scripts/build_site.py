@@ -34,14 +34,17 @@ TRACKS = [
      insertions carry the renormalization.""", [
         "three-continuum-limits", "refinement-composition-and-limit",
         "series-parallel-gauge-refinement", "zero-spacing-any-action",
-        "dimension-ladder",
+        "dimension-ladder", "villain-monopole-refinement",
+        "su2-midpoint-exact",
     ]),
     ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
      letting the sagitta and the enclosed area go to zero. Once the comparison
      must be <em>recorded</em>, it has a floor of order &#8463;. These notes
      carry the theorems, the Newton-age premises and the ancient dispute about
      the cut.""", [
-        "planck-gap-paper", "necessity-unit-and-indeterminacy",
+        "planck-gap-paper", "principia-fifth-postulate",
+        "necessity-unit-and-indeterminacy", "newton-indeterminacy-routes",
+        "thermodynamic-records-no-floor",
         "newton-indeterminacy-routes",
         "polygon-lift-phase", "record-costs-recoil",
         "additive-noise-marks", "record-costs-disturbance",

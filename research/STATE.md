@@ -52,12 +52,20 @@ Principia work lives in the sibling `newtonlean` repository.
    free-field step up to density $e^{-\pi^2/(8\lambda_3a)}$). $SU(2)$
    midpoint: exact structure and leading curvature term (Prop. 6); the
    finite-cube bound assumes full normalized Laplace estimates (Prop. 7).
-   Next: those estimates for $SU(2)$, then a mid-plane, then iteration.
+   Measure level for $U(1)$: [monopole note](../notes/villain-monopole-refinement.md),
+   TV distance $\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ in $D=3$; the route fails in
+   $D=4$ (loop density per cell fixed by $g$). The $SU(2)$ midpoint character
+   is exact for every spin ([closed form](../notes/su2-midpoint-exact.md)).
+   Next: its diagonal entries $\Lambda^J_{\mu\mu}$, then a mid-plane, then iteration.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
 2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
    Next: physically justify closure under recording and $2\zeta=\gamma h_{\rm rad}$; hidden-background and deterministic-inflexion premises leave both open.
+   Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
+   ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
+   change is joint determinacy ([fifth postulate](../notes/principia-fifth-postulate.md)):
+   Laws independent of it, one action constant, floor iff $\hbar\ne0$ (under review).
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Principia&#x27;s fifth postulate: joint determinacy of place and motion</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The Principia’s fifth postulate: joint determinacy of place and
+motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/principia-fifth-postulate.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/principia-fifth-postulate.pdf">PDF</a></p><p><strong>Result, 2026-09-27 (user’s goal: identify the statement whose
+change gives mechanics with <span class="math inline">\(h&gt;0\)</span>,
+as the parallel postulate does for curved geometry).</strong> The
+statement is <strong>joint determinacy</strong>: the place of a body and
+its quantity of motion are quantities given together, so that the
+observables of a body multiply commutatively. Newton never states it as
+a postulate. He uses it in Definition II, in Lemma X and in the polygon
+of Proposition I, and its explicit trace is the last sentence of the
+scholium closing Book I, Section I: the quantities compared are “always
+to be diminished without limit”. Four theorems make the analogy with
+Euclid’s fifth postulate exact.</p>
+<ol type="1">
+<li><strong>Independence (Theorem A).</strong> For every value of a real
+constant <span class="math inline">\(\hbar\)</span>, the Moyal product
+<span class="math inline">\(*_\hbar\)</span> on the observables of one
+degree of freedom satisfies Newton’s second law as an identity of
+observables, and the flows of Newton’s own integrable cases (inertia,
+uniform gravity, force proportional to distance) are the classical flows
+and automorphisms of the product. The Laws cannot decide joint
+determinacy, which holds exactly when <span
+class="math inline">\(\hbar=0\)</span>.</li>
+<li><strong>Exactly one constant (Theorem B).</strong> Every associative
+product on the observables that deforms the commutative one, is
+covariant under the group generated by those three flows (the affine
+symplectic group), and respects complex conjugation, is a Moyal product
+<span class="math inline">\(*_\hbar\)</span> with one real constant
+<span class="math inline">\(\hbar\)</span>, which has units of
+action.</li>
+<li><strong>The floor (Theorem C).</strong> For <span
+class="math inline">\(\hbar\ne0\)</span>, every regular state obeys
+<span class="math inline">\(\Delta q\,\Delta p\ge|\hbar|/2\)</span>, and
+every recorded comparison of the inertial line with the constant-force
+parabola obeys the floor of the <a href="planck-gap-paper.html">Planck
+paper</a>, Theorem 6: <span class="math inline">\(\frac
+s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ge|\hbar|
+\arcsin(1-2\epsilon)\)</span>. For <span
+class="math inline">\(\hbar=0\)</span> there is no floor (Theorem I of
+the <a
+href="necessity-unit-and-indeterminacy.html">unit-and-indeterminacy
+note</a>).</li>
+<li><strong>The mechanical Wallis postulate (Theorem D).</strong> The
+similarity that rescales every action, <span
+class="math inline">\((q,p)\mapsto(\lambda q,\lambda p)\)</span>, is a
+symmetry of <span class="math inline">\(*_\hbar\)</span> exactly when
+<span class="math inline">\(\hbar=0\)</span>. Wallis showed that
+Euclid’s fifth postulate is equivalent to the existence of similar
+figures of different size; here joint determinacy is equivalent to
+mechanical similarity of recorded motions at every scale, and <span
+class="math inline">\(\hbar\)</span> plays the part of the absolute
+length of non-Euclidean geometry. Up to isomorphism there are exactly
+two structures, <span class="math inline">\(\hbar=0\)</span> and <span
+class="math inline">\(\hbar\ne0\)</span>.</li>
+</ol>
+<p>The mathematics is established: Moyal’s product (<a
+href="https://doi.org/10.1017/S0305004100000487">Moyal 1949</a>,
+metadata), Groenewold’s observation that its bracket reduces to the
+Poisson bracket for quadratic functions (<a
+href="https://doi.org/10.1007/978-94-017-6065-2_1">Groenewold 1946</a>,
+metadata), the deformation-quantization programme (<a
+href="https://doi.org/10.1016/0003-4916(78)90224-5">Bayen, Flato,
+Fronsdal, Lichnerowicz and Sternheimer 1978</a>, metadata), and
+Robertson’s inequality (<a
+href="https://doi.org/10.1103/PhysRev.34.163">Robertson 1929</a>,
+metadata). The uniqueness statement of Theorem B is standard in
+substance; the proof below is self-contained. The contribution is the
+identification: which statement of the <em>Principia</em> is the one to
+change, and the proof that the Laws are independent of it in Newton’s
+own integrable cases.</p>
+<h2 id="the-textual-anchor">1. The textual anchor</h2>
+<p>The scholium closing Book I, Section I (1687 text, held in this
+repository’s <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Newton_Principia_1687_BookI_SectI_scholia_la_wikisource.md">Latin
+companion</a>), ends:</p>
+<blockquote>
+<p>Igitur in sequentibus, siquando facili rerum imaginationi consulens,
+dixero quantitates quam minimas, vel evanescentes vel ultimas, cave
+intelligas quantitates magnitudine determinatas, sed cogita semper
+diminuendas sine limite.</p>
+</blockquote>
+<p>“So in what follows, if for ease of imagination I speak of quantities
+as least, or vanishing, or ultimate, do not understand quantities
+determinate in magnitude, but think of them always as to be diminished
+without limit.” Newton defends this against the objection from Euclid,
+<em>Elements</em> X, and applies it to the sagitta of Lemma X and the
+chords of Proposition I. The sentence is about geometry; its application
+to motion needs one more, unstated, premise: that the place of the body
+and its quantity of motion (Definition II) are given together at each
+instant, so that the sagitta measured from a place and the impulse
+inferred from a change of motion can both be diminished without limit in
+one and the same comparison. That premise is joint determinacy. Its
+algebraic form is the commutativity of the product of observables.</p>
+<p>The other division scholium, after Lemma XI, says of contact angles
+that between any two a new series can be inserted, “Neq; novit natura
+limitem”. That statement concerns unobserved insertion, and it remains
+true for every <span class="math inline">\(\hbar\)</span>: the <a
+href="refinement-composition-and-limit.html">refinement note</a> shows
+that inserting unobserved times composes exactly at every <span
+class="math inline">\(\hbar\)</span>. The change is confined to recorded
+comparisons.</p>
+<h2 id="the-family-of-products">2. The family of products</h2>
+<p>Observables of one degree of freedom (the transverse coordinate of
+Galileo’s comparison) are polynomials in <span
+class="math inline">\(q\)</span> and <span
+class="math inline">\(p\)</span> with complex coefficients. Write <span
+class="math inline">\(\mu(f\otimes g)=fg\)</span> and</p>
+<p><span
+class="math display">\[P=\partial_q\otimes\partial_p-\partial_p\otimes\partial_q,\qquad
+f*_\hbar g=\mu\circ\exp\Bigl(\frac{i\hbar}2P\Bigr)(f\otimes
+g),\]</span></p>
+<p>a finite sum on polynomials. For <span
+class="math inline">\(\hbar=0\)</span> it is the commutative product;
+<span class="math inline">\(q*_\hbar p-p*_\hbar q=i\hbar\)</span>. The
+Moyal bracket is <span class="math inline">\(\{f,g\}_\hbar=(f*_\hbar
+g-g*_\hbar f)/(i\hbar)=\frac2\hbar\, \mu\circ\sin(\frac\hbar2P)(f\otimes
+g)\)</span>, with <span class="math inline">\(\{f,g\}_0\)</span> the
+Poisson bracket.</p>
+<h2 id="theorem-a-independence">3. Theorem A: independence</h2>
+<p><strong>Theorem A.</strong> Let <span
+class="math inline">\(H=p^2/(2M)+V(q)\)</span> with <span
+class="math inline">\(V\)</span> a polynomial and <span
+class="math inline">\(M&gt;0\)</span>. For every real <span
+class="math inline">\(\hbar\)</span>:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\{q,H\}_\hbar=p/M\)</span> and <span
+class="math inline">\(\{p,H\}_\hbar=-V&#39;(q)\)</span>: the Heisenberg
+equations are Newton’s second law, <span class="math inline">\(M\ddot
+q=-V&#39;(q)\)</span>, as an identity of observables;</p></li>
+<li><p>if <span class="math inline">\(\deg V\le2\)</span>, which covers
+inertia (<span class="math inline">\(V=0\)</span>), uniform gravity
+(<span class="math inline">\(V=-Fq\)</span>) and the force proportional
+to distance of Book I, Proposition X (<span
+class="math inline">\(V=kq^2/2\)</span>), then <span
+class="math inline">\(\{f,H\}_\hbar=\{f,H\}_0\)</span> for every <span
+class="math inline">\(f\)</span>: every observable evolves by the
+classical flow <span class="math inline">\(\varphi_t\)</span>, and each
+<span class="math inline">\(\varphi_t\)</span> is an automorphism of
+<span class="math inline">\(*_\hbar\)</span>.</p></li>
+</ol>
+<p>So the commutative product (<span
+class="math inline">\(\hbar=0\)</span>) and every Moyal product (<span
+class="math inline">\(\hbar\ne0\)</span>) satisfy the Laws and reproduce
+Newton’s integrable motions exactly; joint determinacy holds in the
+first and fails in the others.</p>
+<p><em>Proof.</em> The bracket <span
+class="math inline">\(\{f,g\}_\hbar\)</span> is the Poisson bracket plus
+terms <span class="math inline">\(\hbar^{2j}\,\mu\,P^{2j+1}(f\otimes
+g)\)</span>, <span class="math inline">\(j\ge1\)</span>, each of which
+puts at least three derivatives on each factor. If one factor has degree
+at most two they vanish. This gives (a) because <span
+class="math inline">\(q\)</span> and <span
+class="math inline">\(p\)</span> have degree one, and (b) because <span
+class="math inline">\(H\)</span> has degree two. For (b), the flow of a
+quadratic Hamiltonian is an affine symplectic map, and <span
+class="math inline">\(*_\hbar\)</span> is covariant under affine
+symplectic maps: translations commute with the constant-coefficient
+operator <span class="math inline">\(P\)</span>, and a linear map of
+determinant one leaves <span class="math inline">\(P\)</span> invariant.
+<span class="math inline">\(\square\)</span></p>
+<h2 id="theorem-b-exactly-one-action-constant">4. Theorem B: exactly one
+action constant</h2>
+<p>Consider products on <span class="math inline">\(\mathbb
+C[q,p]\)</span> of the form <span class="math inline">\(f*g=\mu\circ
+B(f\otimes g)\)</span>, with <span
+class="math inline">\(B=\sum_{\alpha,\beta}c_{\alpha\beta}(q,p)\,
+\partial^\alpha\otimes\partial^\beta\)</span> a bidifferential operator
+(a finite sum on each pair of polynomials), such that</p>
+<ul>
+<li>(H1) <span class="math inline">\(*\)</span> is associative with unit
+1, and <span class="math inline">\(c_{00}=1\)</span> (it deforms the
+commutative product);</li>
+<li>(H2) <span class="math inline">\(*\)</span> is covariant under the
+affine symplectic group: for every translation and every linear map
+<span class="math inline">\(A\)</span> of determinant one, <span
+class="math inline">\((f\circ A)*(g\circ A)=(f*g)\circ A\)</span>;</li>
+<li>(H3) <span class="math inline">\(\overline{f*g}=\bar g*\bar
+f\)</span>.</li>
+</ul>
+<p>By Theorem A(b), the flows of inertia, uniform gravity and the force
+proportional to distance are affine symplectic maps; free flight is the
+shear <span class="math inline">\((q,p)\mapsto(q+tp/M,p)\)</span>,
+uniform gravity adds translations, and the harmonic flow is a rotation
+in suitable units. The shears and rotations generate the group of linear
+maps of determinant one. So (H2) says that the motions Newton integrated
+in closed form are symmetries of the product.</p>
+<p><strong>Theorem B.</strong> Under (H1)–(H3), <span
+class="math inline">\(*=*_\hbar\)</span> for a unique real <span
+class="math inline">\(\hbar\)</span>. The constant <span
+class="math inline">\(\hbar\)</span> has the units of action, the
+reciprocal of the units of <span class="math inline">\(P\)</span>.</p>
+<p><em>Proof.</em> Translation covariance makes the coefficients <span
+class="math inline">\(c_{\alpha\beta}\)</span> constant. Then <span
+class="math inline">\(B\)</span> is a polynomial (a formal series,
+acting finitely on polynomials) in the components of two vectors <span
+class="math inline">\(u=\partial^{(1)}\)</span> and <span
+class="math inline">\(v=\partial^{(2)}\)</span>, invariant under the
+simultaneous action of the group of determinant-one linear maps. By the
+first fundamental theorem of invariant theory for <span
+class="math inline">\(SL(2)\)</span>, such invariants are functions of
+the single determinant <span class="math inline">\(\det(u,v)=P\)</span>.
+So <span class="math inline">\(B=F(P)\)</span> with <span
+class="math inline">\(F\)</span> a formal power series, <span
+class="math inline">\(F(0)=1\)</span>. For three factors write <span
+class="math inline">\(x=P_{12}\)</span>, <span
+class="math inline">\(y=P_{13}\)</span>, <span
+class="math inline">\(z=P_{23}\)</span> for the determinants of the
+pairs of derivative vectors. The three <span
+class="math inline">\(2\times2\)</span> minors of a <span
+class="math inline">\(2\times3\)</span> matrix are algebraically
+independent, and <span class="math inline">\((f*g)*h\)</span>, <span
+class="math inline">\(f*(g*h)\)</span> correspond to <span
+class="math inline">\(F(x)F(y+z)\)</span> and <span
+class="math inline">\(F(z)F(x+y)\)</span>. Associativity therefore gives
+<span class="math inline">\(F(x)F(y+z)=F(z)F(x+y)\)</span> as formal
+series; setting <span class="math inline">\(z=0\)</span> gives <span
+class="math inline">\(F(x)F(y)=F(x+y)\)</span>, so <span
+class="math inline">\(F(x)=e^{\kappa x}\)</span>. Exchanging the two
+factors reverses the sign of <span class="math inline">\(P\)</span> and
+complex conjugation leaves <span class="math inline">\(P\)</span> real,
+so (H3) gives <span class="math inline">\(\bar F(x)=F(-x)\)</span>, that
+is <span class="math inline">\(\bar\kappa=-\kappa\)</span>, and <span
+class="math inline">\(\kappa=i\hbar/2\)</span> with <span
+class="math inline">\(\hbar\)</span> real. Units: <span
+class="math inline">\(P\)</span> carries the reciprocal of the units of
+<span class="math inline">\(q\,p\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Only two structures up to isomorphism.</strong> The dilation
+<span class="math inline">\(D_\lambda(q,p)=(\lambda q,\lambda
+p)\)</span> satisfies <span class="math inline">\(P((f\circ
+D_\lambda)\otimes(g\circ D_\lambda))=\lambda^2(P(f\otimes g))\circ
+D_\lambda\)</span>, so <span class="math inline">\(f\mapsto f\circ
+D_\lambda\)</span> is an isomorphism from <span
+class="math inline">\(*_{\lambda^2\hbar}\)</span> to <span
+class="math inline">\(*_\hbar\)</span>, and <span
+class="math inline">\((q,p)\mapsto(q,-p)\)</span> carries <span
+class="math inline">\(*_\hbar\)</span> to <span
+class="math inline">\(*_{-\hbar}\)</span> (with complex conjugation).
+All products with <span class="math inline">\(\hbar\ne0\)</span> are
+therefore isomorphic, and distinct from the commutative one. Geometry
+has three constant-curvature classes (flat, spherical, hyperbolic);
+mechanics has two. The value of <span
+class="math inline">\(\hbar\)</span> in physical units is fixed by an
+external standard, as the absolute length of non-Euclidean geometry
+is.</p>
+<h2 id="theorem-c-the-floor-on-the-recorded-comparison">5. Theorem C:
+the floor on the recorded comparison</h2>
+<p>A state is a linear functional <span
+class="math inline">\(\omega\)</span> on the observables with <span
+class="math inline">\(\omega(1)=1\)</span> and <span
+class="math inline">\(\omega(\bar f*_\hbar f)\ge0\)</span>; it is
+regular if its GNS representation integrates to Weyl operators.</p>
+<p><strong>Theorem C.</strong> (a) For <span
+class="math inline">\(\hbar\ne0\)</span> every state satisfies <span
+class="math inline">\(\Delta q\,\Delta p\ge|\hbar|/2\)</span>. (b) For
+<span class="math inline">\(\hbar\ne0\)</span> and regular states, every
+recorded comparison of the inertial line with the constant-force
+parabola, over a cell of duration <span
+class="math inline">\(\tau\)</span> with sagitta <span
+class="math inline">\(s=F\tau^2/(8M)\)</span> and impulse <span
+class="math inline">\(J=F\tau\)</span>, made by any instrument at error
+probability <span class="math inline">\(\epsilon&lt;\frac12\)</span>,
+leaves undetermined impulses <span class="math inline">\(\hat
+D_j\)</span> and displacements <span class="math inline">\(\hat
+X_j\)</span> with</p>
+<p><span class="math display">\[\frac s8\sum_j\Delta(\hat D_j)+\frac
+J2\sum_j\Delta(\hat X_j)\ \ge\
+|\hbar|\arcsin(1-2\epsilon)&gt;0 .\]</span></p>
+<ol start="3" type="a">
+<li>For <span class="math inline">\(\hbar=0\)</span>, with the
+instruments of Theorem I of the unit-and-indeterminacy note available,
+the body’s posterior area can be made arbitrarily small: there is no
+floor.</li>
+</ol>
+<p><em>Proof.</em> (a) The form <span
+class="math inline">\((f,g)\mapsto\omega(\bar f*_\hbar g)\)</span> is
+positive semidefinite; apply Cauchy–Schwarz to <span
+class="math inline">\(f=q-\omega(q)\)</span>, <span
+class="math inline">\(g=p-\omega(p)\)</span> and use <span
+class="math inline">\(q*_\hbar p-p*_\hbar q=i\hbar\)</span> (Robertson’s
+argument). (b) A regular state’s GNS representation satisfies the Weyl
+relations with constant <span class="math inline">\(\hbar\)</span>; by
+the Stone–von Neumann theorem it is a multiple of the Schrödinger
+representation. Theorem 6 of the Planck paper is proved there from the
+Weyl relations and Mandelstam–Tamm in the Bures angle, with <span
+class="math inline">\(\hbar\)</span> as the constant, and applies with
+<span class="math inline">\(|\hbar|\)</span> after the reflection <span
+class="math inline">\((q,p)\mapsto(q,-p)\)</span> if <span
+class="math inline">\(\hbar&lt;0\)</span>. (c) is Theorem I. <span
+class="math inline">\(\square\)</span></p>
+<p>Newton’s scholium asks that the compared quantities be “always
+diminished without limit”. Theorem A says his Laws allow it or forbid it
+equally; Theorem C says that in every model other than the commutative
+one, the recorded comparison of the inertial line with the parabola
+cannot be diminished below the single constant of Theorem B.</p>
+<h2 id="theorem-d-the-mechanical-wallis-postulate">6. Theorem D: the
+mechanical Wallis postulate</h2>
+<p><strong>Theorem D.</strong> For <span
+class="math inline">\(\lambda\ne\pm1\)</span>, the action-rescaling
+similarity <span class="math inline">\(D_\lambda\)</span> is an
+automorphism of <span class="math inline">\(*_\hbar\)</span> if and only
+if <span class="math inline">\(\hbar=0\)</span>.</p>
+<p><em>Proof.</em> By §4, <span class="math inline">\(D_\lambda\)</span>
+carries <span class="math inline">\(*_{\lambda^2\hbar}\)</span> to <span
+class="math inline">\(*_\hbar\)</span>, and <span
+class="math inline">\(*_{\lambda^2\hbar}=*_\hbar\)</span> iff <span
+class="math inline">\(\lambda^2\hbar=\hbar\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>Wallis replaced Euclid’s fifth postulate by the existence of a
+triangle similar to a given one at any size; the non-Euclidean
+geometries are exactly those without similar figures of different size,
+and they possess an absolute unit of length. Theorem D is the mechanical
+counterpart. Mechanical similarity that rescales actions, the principle
+behind comparing motions at every scale, holds exactly when joint
+determinacy does; its failure is the existence of an absolute action.
+The <a href="action-unit-dimensional-selection.html">dimensional
+note</a> states the same fact from the other side: an admitted
+similarity that rescales the observable forces the floor to be zero (its
+Theorem B).</p>
+<h2 id="what-remains-and-consequence-for-state">7. What remains, and
+consequence for STATE</h2>
+<p>The theorems are exact; the identification of joint determinacy as
+the statement to change is interpretive, because Newton used the premise
+without stating it. Two limits of scope. Theorem B concerns one degree
+of freedom and bidifferential products; several degrees of freedom
+follow with <span class="math inline">\(Sp(2n)\)</span> in place of
+<span class="math inline">\(SL(2)\)</span>, whose invariants of two
+vectors are again generated by the symplectic pairing. And the
+independence of Theorem A is independence from the Laws and from
+Newton’s integrable cases; it leaves open which physical premise, stated
+before quantum mechanics, forces <span
+class="math inline">\(\hbar\ne0\)</span>. That is STATE item 2, where
+Theorem U supplies the unit’s value from radiation thermodynamics and
+Theorem I says what must be denied. This note shows that the denial of
+joint determinacy is, up to isomorphism, a single step with a single
+constant.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
