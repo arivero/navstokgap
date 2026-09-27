@@ -205,6 +205,38 @@ summable over steps in a fixed physical box.
 | 4 | $g^2(a_n)\to0$, logarithmically | resums into running | $\propto(a_n\Lambda)^{2b_0c-4}$, needs $2b_0c>4$ |
 | $>4$ | $\lambda_Da_n^{4-D}\to\infty$ | no small parameter | no small-field regime |
 
+**The perturbative column, with its sources.** For $D<4$, $t_n$ falls
+geometrically along the dyadic sequence, so coupling shifts of relative
+order $t_n$ sum to a finite renormalization: superrenormalizability.
+For three-dimensional lattice Yang--Mills, Balaban's ultraviolet
+stability is the constructive form of this statement in his
+block-averaging scheme
+([Balaban 1985](https://doi.org/10.1007/BF01229380), metadata). For
+$D=4$ the heat time is the coupling itself, and each isotropic step
+shifts $g^{-2}$ by the same amount, $-2b_0\log2$ at one loop, with
+$b_0=11N/(48\pi^2)$ for pure $SU(N)$
+([Gross and Wilczek 1973](https://doi.org/10.1103/PhysRevLett.30.1343);
+[Politzer 1973](https://doi.org/10.1103/PhysRevLett.30.1346); metadata).
+These shifts do not sum; they are the running coupling. Different
+lattice actions share the first two coefficients of the running and
+differ by a finite factor in $\Lambda$, computed at one loop for the
+Wilson action by
+[Hasenfratz and Hasenfratz (1980)](https://doi.org/10.1016/0370-2693(80)90118-5)
+(abstract as indexed) and
+[Dashen and Gross (1981)](https://doi.org/10.1103/PhysRevD.23.2340)
+(metadata); for pure $SU(3)$ with the Wilson action the standard value is
+$\Lambda_{\overline{\rm MS}}/\Lambda_{\rm lat}\approx28.81$
+([Capitani 2003, review](https://doi.org/10.1016/S0370-1573(03)00211-4),
+as indexed). The heat-kernel action as a lattice action is treated by
+[Menotti and Onofri (1981)](https://doi.org/10.1016/0550-3213(81)90560-5)
+(metadata). For $D>4$, $t_n$ grows as $a\to0$ at fixed $\lambda_D$;
+lattice Monte Carlo finds a phase transition between the confining
+strong-coupling regime and a weak-coupling spin-wave phase for $SU(2)$ in
+five dimensions, and none in four
+([Creutz 1979](https://doi.org/10.1103/PhysRevLett.43.553), abstract). A
+continuum limit there would need a non-trivial ultraviolet fixed point,
+and none is established.
+
 **The four-dimensional threshold.** With $g^{-2}(a)=2b_0\log(1/(a\Lambda))$,
 the convention of the refinement note §6, $e^{-c/g^2(a)}=(a\Lambda)^{2b_0c}$.
 For pure $SU(N)$, $b_0=11N/(48\pi^2)$, so the large-field density per
@@ -241,7 +273,8 @@ governed by the same small-field analysis; a gap $C_3\hbar c\lambda_3$ is
 then a property of the infrared and, if it exists, the same for all such
 actions. In $D=4$ the same holds for actions whose large-field constant
 exceeds $2/b_0$, with gap $C_4\hbar c\Lambda$ and a $\Lambda$ parameter
-that depends on the action by a computable finite factor. The
+that depends on the action by a computable finite factor (the
+perturbative column above). The
 universality of the gap across actions is thereby reduced to the three
 ultraviolet conditions, and the gap itself remains the infrared
 obligation of the mass-gap map.
