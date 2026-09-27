@@ -48,8 +48,13 @@ metadata), the deformation-quantization programme
 ([Bayen, Flato, Fronsdal, Lichnerowicz and Sternheimer 1978](https://doi.org/10.1016/0003-4916(78)90224-5),
 metadata), and Robertson's inequality
 ([Robertson 1929](https://doi.org/10.1103/PhysRev.34.163), metadata). The
-uniqueness statement of Theorem B is standard in substance; the proof
-below is self-contained. The contribution is the identification: which
+uniqueness in Theorem B is Gutt's theorem: the Moyal star product is the
+unique $Sp(2n,\mathbb R)\ltimes\mathbb R^{2n}$-invariant and covariant star
+product on $\mathbb R^{2n}$ (S. Gutt, *Mém. Acad. Roy. Belg. Cl. Sci.* 44:6,
+1983, as cited in
+[Duval, El Gradechi and Ovsienko 2004](https://doi.org/10.1007/s00220-003-0973-7),
+passage). The proof below is a short self-contained version for the
+products considered here. The contribution is the identification: which
 statement of the *Principia* is the one to change, and the proof that the
 Laws are independent of it in Newton's own integrable cases.
 
@@ -189,7 +194,8 @@ representation integrates to Weyl operators.
 **Theorem C.** (a) For $\hbar\ne0$ every state satisfies
 $\Delta q\,\Delta p\ge|\hbar|/2$. (b) For $\hbar\ne0$ and regular states,
 every recorded comparison of the inertial line with the constant-force
-parabola, over a cell of duration $\tau$ with sagitta $s=F\tau^2/(8M)$ and
+parabola, over a cell of duration $\tau$ with fall $s=F\tau^2/(2M)$ (the
+Planck paper's convention) and
 impulse $J=F\tau$, made by any instrument at error probability
 $\epsilon<\frac12$, leaves undetermined impulses $\hat D_j$ and displacements
 $\hat X_j$ with
