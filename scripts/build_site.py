@@ -44,7 +44,7 @@ TRACKS = [
      the cut.""", [
         "planck-gap-paper", "principia-fifth-postulate",
         "necessity-unit-and-indeterminacy", "newton-indeterminacy-routes",
-        "thermodynamic-records-no-floor",
+        "thermodynamic-records-no-floor", "sed-zeta-radiation-link",
         "newton-indeterminacy-routes",
         "polygon-lift-phase", "record-costs-recoil",
         "additive-noise-marks", "record-costs-disturbance",

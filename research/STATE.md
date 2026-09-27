@@ -65,6 +65,8 @@ Principia work lives in the sibling `newtonlean` repository.
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
    change is joint determinacy ([fifth postulate](../notes/principia-fifth-postulate.md)):
+   A Lorentz-invariant background gives $2\zeta=h_{\rm rad}/2\pi$
+   ([SED link](../notes/sed-zeta-radiation-link.md)); closure under recording is the open premise.
    Newton's *velocitas ultima*; Laws independent of it, one action constant
    under covariance (Gutt), floor for $\hbar\ne0$; reviewed: the analogy is
    partial, since a commutative state restriction also floors.

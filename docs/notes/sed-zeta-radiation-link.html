@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Lorentz-invariant background fixes the state-route constant to the radiation unit</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A Lorentz-invariant background fixes the state-route constant to the
+radiation unit</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-zeta-radiation-link.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-zeta-radiation-link.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> STATE item 2 asked for a
+physical reason why the constant <span
+class="math inline">\(\zeta\)</span> of the state route (GPT-6 Astra’s
+<a href="newton-indeterminacy-routes.html">routes note</a>, floor with
+<span class="math inline">\(h_*=2\zeta\)</span>; the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a>, Theorem
+B<span class="math inline">\(&#39;\)</span>) should equal a fixed
+multiple of the radiation unit <span class="math inline">\(h_{\rm
+rad}\)</span> of Theorem U (<a
+href="necessity-unit-and-indeterminacy.html">unit-and-indeterminacy
+note</a>). Within stochastic electrodynamics it does:</p>
+<p><span class="math display">\[2\zeta=\frac{h_{\rm
+rad}}{2\pi},\qquad\text{so}\qquad h_*=\frac{h_{\rm rad}}{2\pi}=\hbar
+.\]</span></p>
+<p>Three steps. (1) A stationary random electromagnetic background that
+is Lorentz invariant has energy <span
+class="math inline">\(\kappa\omega\)</span> per normal mode for one
+constant <span class="math inline">\(\kappa\)</span>. (2) Every weakly
+damped linear oscillator in equilibrium with it has a Gaussian
+stationary state with <span
+class="math inline">\(\sqrt{\det\Sigma}=\kappa\)</span>, whatever its
+mass and frequency (Theorem 1): the background realizes the covariant,
+noise-closed Gaussian restriction of Theorem B<span
+class="math inline">\(&#39;\)</span> with <span
+class="math inline">\(\zeta=\kappa\)</span>, and it does so universally.
+(3) With the same background, Boyer derives the Planck spectrum from
+classical electrodynamics and classical thermodynamics, with zero-point
+energy <span class="math inline">\(\frac12\hbar\omega\)</span> per mode;
+so <span class="math inline">\(\kappa=\hbar/2\)</span> and <span
+class="math inline">\(h_{\rm rad}=2\pi\hbar=4\pi\kappa\)</span>. The
+pure number of Astra’s matching condition <span
+class="math inline">\(2\zeta=\gamma h_{\rm rad}\)</span> is therefore
+<span class="math inline">\(\gamma=1/(2\pi)\)</span> in this theory.</p>
+<p>What stays open is Astra’s closure premise: that no record, however
+it couples to the background, can infer the background’s value and so
+sharpen the body’s state below <span
+class="math inline">\(\zeta\)</span>. Step (2) fixes <span
+class="math inline">\(\zeta\)</span> for states in equilibrium with the
+background; it does not show that records cannot leave that set. The
+ingredients are established (Lorentz-invariant random radiation,
+Planck’s resonator relation, linear response); the assembly is this
+note’s, with no novelty claimed for the parts.</p>
+<h2 id="the-background-and-the-oscillator">1. The background and the
+oscillator</h2>
+<p><strong>(1) Lorentz invariance fixes the spectrum up to one
+constant.</strong> A homogeneous, isotropic, stationary random
+electromagnetic field whose spectrum is Lorentz invariant has energy
+density proportional to <span class="math inline">\(\omega^3\)</span>,
+that is, energy per normal mode linear in frequency, <span
+class="math inline">\(\kappa\omega\)</span> (<a
+href="https://doi.org/10.1098/rspa.1963.0220">Marshall 1963</a>,
+metadata; <a href="https://doi.org/10.1103/PhysRev.182.1374">Boyer
+1969</a>, abstract: “linear in frequency”, <span
+class="math inline">\(\frac12\hbar\omega\)</span> per normal mode). The
+constant <span class="math inline">\(\kappa\)</span> has the units of
+action, and Lorentz invariance leaves it free.</p>
+<p><strong>Theorem 1 (universal Gaussian area).</strong> Let a particle
+of mass <span class="math inline">\(M\)</span> and charge <span
+class="math inline">\(e\)</span> be bound harmonically at frequency
+<span class="math inline">\(\omega_0\)</span>, with radiation damping
+small compared with <span class="math inline">\(\omega_0\)</span>, and
+driven by the background of (1), taken Gaussian. Its stationary
+phase-space state is Gaussian with</p>
+<p><span class="math display">\[\langle
+q^2\rangle=\frac\kappa{M\omega_0},\qquad\langle p^2\rangle=\kappa
+M\omega_0,\qquad
+\langle qp+pq\rangle=0,\qquad \sqrt{\det\Sigma}=\kappa ,\]</span></p>
+<p>independent of <span class="math inline">\(M\)</span>, <span
+class="math inline">\(e\)</span> and <span
+class="math inline">\(\omega_0\)</span>.</p>
+<p><em>Proof.</em> The equation of motion is linear with Gaussian
+forcing, so the stationary state is Gaussian. A weakly damped oscillator
+in equilibrium with a radiation field acquires mean energy equal to the
+field’s energy per normal mode at its frequency (Planck’s resonator
+relation, derived in classical electrodynamics; <a
+href="https://doi.org/10.1002/andp.19003060105">Planck 1900</a>,
+metadata), here <span class="math inline">\(\kappa\omega_0\)</span>. For
+a harmonic oscillator the mean kinetic and potential energies are equal,
+so <span class="math inline">\(\langle
+p^2\rangle/(2M)=\frac12M\omega_0^2\langle
+q^2\rangle=\frac12\kappa\omega_0\)</span>, and stationarity gives <span
+class="math inline">\(\langle qp+pq\rangle=0\)</span>. Then <span
+class="math inline">\(\det\Sigma=\langle q^2\rangle\langle
+p^2\rangle=\kappa^2\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The mass and the frequency drop out because the energy per mode is
+proportional to <span class="math inline">\(\omega\)</span>: the area
+<span class="math inline">\(\langle E\rangle/\omega_0\)</span> is the
+same for every oscillator. That is the universality the dimensional note
+requires of a floor (its Theorem A), supplied here by Lorentz invariance
+of the background rather than assumed.</p>
+<p><strong>(2) The link to Theorem B<span
+class="math inline">\(&#39;\)</span>.</strong> The set of Gaussian
+states with <span
+class="math inline">\(\sqrt{\det\Sigma}\ge\kappa\)</span> is invariant
+under the affine symplectic group and closed under adding noise, and
+Theorem 1 says the background puts every harmonically bound body on its
+lower boundary. So the background realizes the restriction of Theorem
+B<span class="math inline">\(&#39;\)</span> with <span
+class="math inline">\(\zeta=\kappa\)</span>, and Astra’s conditional
+floor applies with <span class="math inline">\(h_*=2\kappa\)</span> to
+comparisons whose records are confined to this set.</p>
+<p><strong>(3) The link to the radiation unit.</strong> Boyer derives
+the Planck law “without the formalism of quantum theory” from this
+background, classical electrodynamics of dipole oscillators, and
+classical equipartition of the particles’ kinetic energy (Boyer 1969,
+abstract). The zero-point part is <span
+class="math inline">\(\frac12\hbar\omega\)</span> per mode, so <span
+class="math inline">\(\kappa=\hbar/2\)</span>; the thermal part is
+Planck’s, whose constant is the <span class="math inline">\(h_{\rm
+rad}=2\pi\hbar\)</span> of Theorem U. Hence</p>
+<p><span class="math display">\[2\zeta=2\kappa=\hbar=\frac{h_{\rm
+rad}}{2\pi}.\]</span></p>
+<p>This rests on Boyer’s derivation at abstract level; the thermodynamic
+steps of that derivation are not re-derived here.</p>
+<h2 id="consequence-for-state">2. Consequence for STATE</h2>
+<p>STATE item 2 asked for two things: a physical justification of
+closure under recording, and the identification <span
+class="math inline">\(2\zeta=\gamma h_{\rm rad}\)</span>. The second is
+supplied within stochastic electrodynamics, with <span
+class="math inline">\(\gamma=1/(2\pi)\)</span>: one Lorentz-invariant
+constant sets both the equilibrium spectrum of radiation and the
+phase-space area of every bound body. The first remains open. It is now
+the single premise between a classical, pre-quantum account (Maxwell,
+Lorentz invariance, thermodynamics, a random background) and the Planck
+paper’s floor on recording the inertial-versus-parabola comparison: that
+records cannot read the background and so leave its equilibrium set.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
