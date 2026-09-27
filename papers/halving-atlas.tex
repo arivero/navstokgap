@@ -74,6 +74,51 @@ is an exact parallel move with defect proportional to \(\hbar^2\), the
 identity for \(\hbar=0\) (\href{newton-record-parallel-move.md}{record
 as parallel move}).
 
+\hypertarget{b.-cuts-at-any-position-user-remark-2026-09-27}{%
+\subsubsection{1b. Cuts at any position (user remark,
+2026-09-27)}\label{b.-cuts-at-any-position-user-remark-2026-09-27}}
+
+Halving is the easiest cut; any cut at fraction \(s\in(0,1)\) of a cell
+performs the same two moves, with \(s\) as a parameter.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Series move.} The cut face splits into heat times \(st\) and
+  \((1-s)t\); the convolution returns \(t\) exactly, for heat-kernel
+  weights, in every dimension.
+\item
+  \textbf{Parallel move.} In \(D=3\) the transverse copies get heat
+  times \(t/s\) and \(t/(1-s)\); at the quadratic level precisions add,
+  \(s/t+(1-s)/t=1/t\). The inserted edges carry the bridge law observed
+  at fraction \(s\), variance \(s(1-s)t_e\) in place of \(t_e/4\).
+  Halving maximizes the bridge variance, so each non-symmetric cut is
+  gentler than a halving; the \(s\)-dependence of the defect bounds
+  (Prop. 2, Theorem 5) is expected through \(4s(1-s)\) and has not been
+  derived.
+\item
+  \textbf{Newton.} The cell action \(K_\tau=F^2\tau^3/(24m)\)
+  (\href{galileo-two-path-interference.md}{two-path note}) obeys
+  \(\tau^3=(s\tau)^3+((1-s)\tau)^3+3s(1-s)\tau^3\), so one cut removes
+  exactly \(3s(1-s)K_\tau\), at most \(\frac34K_\tau\) (halving). Along
+  any sequence of cuts whose mesh tends to zero the removed amounts sum
+  to \(K_\tau\), whatever the positions and order (the remainder is
+  \(\sum_i C\tau_i^3\le C\tau\max_i\tau_i^2\)). The Galileo action is
+  therefore an additive measure on the cut process: the refinement limit
+  is cut-independent, and every cut spends a definite share of the
+  action that Newton sends to zero. This is the Lévy--Ciesielski
+  structure of the Brownian bridge (variance \(s(1-s)\) at each dyadic
+  or non-dyadic insertion) seen in the action.
+\item
+  \textbf{The frame.} A cut at an arbitrary, even irrational, position
+  is the geometers' cut of Book I's closing scholium. The questions for
+  each cell become: does the limit depend on the cut sequence (for the
+  free field and for Newton, no), and does the universal part (the
+  \(\log2\) of cell 4, which for general cuts should read \(\log(1/s)\)
+  summed over the step) survive when \(s\) varies (conjecture: yes, as
+  the scheme- independent one-loop coefficient).
+\end{itemize}
+
 \hypertarget{the-atlas-by-dimension}{%
 \subsection{2. The atlas by dimension}\label{the-atlas-by-dimension}}
 
