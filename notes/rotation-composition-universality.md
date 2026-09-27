@@ -1,5 +1,16 @@
 # One action constant from composition and spatial rotations
 
+**After refereeing (Fable, 2026-09-27).** The identity
+$[L_x,L_y]=i\sum_ih_iL_{iz}$ is exact, so Theorem 1's closure requirement
+restates $h_i=h$; its content is the premise it names, that the measured
+additive angular momentum is the same multiple of the rotation generator
+for every body. The genuine dynamical result is equation (10): if each
+body's Newton equations hold with its own constant in a shared product,
+any pair with a nonzero mixed force derivative $\partial_{ia}\partial_{jb}V$
+must have $h_i=h_j$. Interaction forces a common constant, with no
+appeal to centrality or angular momentum; $h=0$ stays admissible. Theorem
+2 is a special case, with the sign of (8) corrected.
+
 **Result, 2026-09-27 (round 2).** Independent constituent canonical
 algebras with constants $h_i$ obey
 $[L_x,L_y]=i\sum_i h_iL_{iz}$. Requiring the **mechanical sum**
@@ -238,7 +249,7 @@ $(q_i-q_j)\times\nabla_i V_{ij}=0$. Consequently
 $$
 [\mathbf L,V_{ij}]
 =i(h_i-h_j)q_i\times\nabla_i V_{ij}
-=-i(h_i-h_j)\frac{V_{ij}'(r_{ij})}{r_{ij}}q_i\times q_j. \tag{8}
+=+i(h_i-h_j)\frac{V_{ij}'(r_{ij})}{r_{ij}}q_i\times q_j. \tag{8}
 $$
 
 The configuration factor is a nonzero observable on the stated open
@@ -248,7 +259,8 @@ conservation statement as well. $\square$
 
 One central harmonic interaction suffices as a polynomial test:
 $V_{ij}=k_{ij}|q_i-q_j|^2/2$, $k_{ij}>0$, gives the exact defect
-$-ik_{ij}(h_i-h_j)q_i\times q_j$. This permits full configuration
+$+ik_{ij}(h_i-h_j)q_i\times q_j$ (sign corrected 2026-09-27 after a Fable
+review; the conclusion is unaffected). This permits full configuration
 variation and keeps every step inside the polynomial algebra.
 Restriction to collinear configurations or to a pair's fixed
 centre-of-mass frame would remove this particular torque test;
@@ -276,7 +288,10 @@ $$
 =i(h_i-h_j)\partial_{ia}\partial_{jb}V,\qquad i\ne j. \tag{10}
 $$
 
-A nonzero mixed force derivative again equates the constants. Equation
+A nonzero mixed force derivative again equates the constants. This
+is the main dynamical result of the note (reviewer's assessment): it
+needs no centrality and no angular momentum, and it holds for every
+interacting pair. Equation
 (10) follows by applying the Leibniz rule to the zero cross commutator;
 it exposes the compatibility obligation of separate denominators.
 The common zero branch satisfies (10) and supports ordinary classical

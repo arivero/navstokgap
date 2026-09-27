@@ -1,5 +1,13 @@
 # Galileo's comparison as two-path interference
 
+**After refereeing (Fable, 2026-09-27).** Lemma 1, the conversions
+$K_\tau=F^2\tau^3/(24m)=(F/4v)A=\tau\Delta E/12$, the error law and the
+polygon-phase match, and Theorem 3(a),(c) are accepted. Theorem 3(b)
+holds for the relative-averaging prescription stated there (see after
+(12)). "Two-path interference" here means a controlled-unitary
+comparison, and the $n$ passes are product copies; Proposition 2 is not
+used by Theorem 3.
+
 **Result, 2026-09-27 (round 3).** A coherent, endpoint-matched comparison
 of Newton's impulsive chord with Galileo's constant-force parabola has
 action difference
@@ -311,6 +319,14 @@ $$
 \lim_{\tau\downarrow0}\lim_{\varepsilon\downarrow0}\Gamma_b=0.
 \tag{12}
 $$
+
+(Refinement after a Fable review, 2026-09-27.) The non-commuting limits
+(12) depend on averaging over a *relative* window of the inverse
+resolution. With an absolute window of half-width $w_0$ in $1/\varepsilon$ the
+average is $e^{i\phi}\operatorname{sinc}(K_\tau w_0)$, independent of $\varepsilon$, and both
+iterated limits equal one. Theorem 3(b) therefore states a property of
+the relative-averaging prescription, which is the prescription (12)
+uses.
 
 For fixed weights and signature difference in (4), this prescription
 leaves a diagonal-intensity error bounded by
