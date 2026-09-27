@@ -77,6 +77,22 @@ performs the same two moves, with $s$ as a parameter.
   spends a definite share of the action that Newton sends to zero. This
   is the Lévy–Ciesielski structure of the Brownian bridge (variance
   $s(1-s)$ at each dyadic or non-dyadic insertion) seen in the action.
+- **Relative windings** (compact groups; 2026-09-28, not refereed). On
+  $U(1)$ the bridge midpoint at fraction $s$ is a mixture over the total
+  winding $W\in\mathbb Z$, with $s$-independent weights $\propto e^{-(\phi_e+2\pi W)^2/(2t_e)}$, of
+  wrapped Gaussians of variance $s(1-s)t_e$ centred at the interpolation
+  shifted by $2\pi(1-s)W$ ([Remark 5$_s$](series-parallel-gauge-refinement.md)).
+  Halving is the only cut whose shifts form $\mathbb Z_2$, the parity mixture of
+  Prop. 4; $s=p/q$ in lowest terms gives $\mathbb Z_q$, an irrational $s$ a dense set.
+  For a simply connected group the heat kernel's image sum runs over the
+  coroot lattice $Q^\vee$, and the image midpoints sit at $e^{isX}e^{2\pi isH}$, $H\in Q^\vee$
+  (semiclassical placement; the exact weights carry Jacobians). These
+  shifts are all central iff $sQ^\vee\subset P^\vee$, the coweight lattice ($P^\vee/Q^\vee$ is
+  the centre). For $SU(2)$, $\frac12Q^\vee=P^\vee$: at a halving every relative winding
+  acts by the centre element $-1$, the $\mathbb Z_2$ of thin centre vortices. For
+  $SU(N)$, $N\ge3$, only integer $s$ satisfies the condition ($H=(1,-1,0,\dots)$
+  forces $s\in\mathbb Z$); at $s=1/N$ only $H\in NP^\vee$ give central shifts. Whether
+  this ties the halving to centre vortices is a question.
 - **The rod** (user remark, 2026-09-27). The dialecticians' stick of
   *Zhuangzi* 33, 一尺之捶，日取其半，萬世不竭 ("a one-foot stick, each day take
   half, in ten thousand generations it is not exhausted";
@@ -151,6 +167,24 @@ way; in mechanics refining makes each cell more quantum
   a gap along $\lambda_3a\simeq c_0/(2\log(1/a))$, $c_0\approx4.99$ the monopole
   exponent, where the monopole density per physical volume diverges, and
   loses it at fixed $\lambda_3$ (Göpfert--Mack versus Gross).
+- **The action floor survives what removes the mass gap** (user
+  observation, 2026-09-28). The heat time is $t=\lambda_3a=\hbar g_{\rm cl}^2a$, so the
+  compact corrections a step leaves, $e^{-c/t}=e^{-c/(\hbar g_{\rm cl}^2a)}$, vanish
+  both as $a\to0$ and as $\hbar\to0$, while the $w=0$ Gaussian term of (9) of the
+  [series/parallel note](series-parallel-gauge-refinement.md), whose width is
+  set by $\hbar$, is what remains. Both $U(1)$ continuum limits on record are
+  Gaussian quantum fields with covariance proportional to $\hbar$: Gross's
+  massless photon at fixed $\lambda_3$, and Göpfert--Mack's free massive scalar.
+  The refinement at fixed coupling removes the lattice mass gap and keeps
+  the unit of action, and Planck found $h$ in this same gapless theory in
+  $1+3$, cavity radiation. The atlas thus carries two gaps of different
+  kinds: a mass gap, generated and trajectory-dependent, and an action
+  floor, a unit that every cell of every limit keeps (each cut weighted
+  by $e^{-{\rm share}/\hbar}$, [cut-measure note](cut-measure-newton.md), Prop. 4).
+  This is the distinction of [G07](low-dimensional-mass-gap.md) and
+  [G08](action-floor-yang-mills-gap.md): a floor is a unit multiple of the
+  fixed constants, while a generated gap needs two non-commuting
+  scale-free structures.
 - **Constants that emerge.** Mechanics: one scalar counterterm per cell,
   and one action constant if joint determinacy is denied (Theorems B and
   B$'$ of the fifth-postulate note). $1+1$: the Lévy exponent (one
