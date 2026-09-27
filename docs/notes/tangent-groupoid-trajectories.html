@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The tangent groupoid, its zoom, and whole trajectories</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The tangent groupoid, its zoom, and whole trajectories</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/tangent-groupoid-trajectories.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/tangent-groupoid-trajectories.pdf">PDF</a></p><p><strong>Result, 2026-09-27 (user’s question: what Connes’s tangent
+groupoid adds, beyond the user’s 1998 and 2003 readings, and whether it
+extends to a whole trajectory).</strong> Three statements.</p>
+<ol type="1">
+<li><strong>The zoom is the renormalization.</strong> Debord and
+Skandalis’s action of <span class="math inline">\(\mathbb R_+^*\)</span>
+on the tangent groupoid, <span
+class="math inline">\((x,y,\varepsilon)\mapsto(x,y,\lambda^{-1}\varepsilon)\)</span>
+and <span class="math inline">\((x,v,0)\mapsto(x,\lambda v,0)\)</span>,
+is the dilation family of the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a> (§4,
+Theorem D) and the control transformation <span
+class="math inline">\(h\mapsto\mu h\)</span> of the user’s 1998 note. By
+van Erp and Yuncken, pseudodifferential operators are exactly the
+distributions on the tangent groupoid that are homogeneous under the
+zoom up to smoothing terms; their restriction to <span
+class="math inline">\(\varepsilon=0\)</span> is the principal symbol.
+What survives the passage <span
+class="math inline">\(\varepsilon\to0\)</span> is therefore the
+principal symbol, a function of place and velocity together.</li>
+<li><strong>Trajectories live on a time-graded groupoid.</strong> The
+tangent groupoid composes chords at one fixed <span
+class="math inline">\(\varepsilon\)</span>, and at <span
+class="math inline">\(\varepsilon=0\)</span> it composes only vectors at
+one point. Refining a trajectory into more pieces is an operation on the
+groupoid <span
+class="math inline">\((x,y,u)\circ(y,z,v)=(x,z,u+v)\)</span> that the
+user introduced in 2003 as the “elementary school” groupoid. Refinement
+consistency is a morphism property on it: classically <span
+class="math inline">\(\min_y[S(x,y,r)+S(y,z,u-r)]=S(x,z,u)\)</span>,
+satisfied by Hamilton’s principal function, the exact discrete
+Lagrangian of discrete mechanics, and for Galileo’s constant force by
+the corrected action <span class="math inline">\(\ell_h\)</span> of the
+<a href="refinement-composition-and-limit.html">refinement note</a>, eq.
+(2) (Proposition 1); quantum mechanically the convolution law <span
+class="math inline">\(K(u+v)=K(u)*K(v)\)</span>. The first is the <span
+class="math inline">\(\hbar\to0\)</span> tropical shadow of the second
+(Maslov dequantization).</li>
+<li><strong>Along a quantum trajectory the ultimate velocity
+fails.</strong> Quantum paths have Hausdorff dimension two: <span
+class="math inline">\(\langle\Delta x^2\rangle\sim\hbar\tau/M\)</span>
+over a step <span class="math inline">\(\tau\)</span>, so <span
+class="math inline">\(\Delta x/\tau\)</span> diverges like <span
+class="math inline">\(\tau^{-1/2}\)</span>. The tangent groupoid’s <span
+class="math inline">\(\varepsilon\to0\)</span> fibre, where <span
+class="math inline">\((y-x)/\varepsilon\to v\)</span>, is reached by
+ballistic scaling; quantum trajectories need the diffusive scaling <span
+class="math inline">\(\Delta x^2\propto\tau\)</span>, the user’s 1998
+remark that the path groupoid relates to Connes’s only after <span
+class="math inline">\((x,y,\varepsilon)\mapsto(x,y,\varepsilon^2)\)</span>,
+and his 2003 remark on the <span class="math inline">\(\sqrt t\)</span>
+of Itô’s calculus. Newton’s <em>velocitas ultima</em> is the ballistic
+boundary fibre, which quantum paths do not reach.</li>
+</ol>
+<p>The constructions are established; the identifications are readings,
+and Proposition 1 is elementary. The note gives the atlas’s Newton row a
+geometric home: one step is an arrow of the tangent groupoid, a
+trajectory is a factorization in the time-graded groupoid, the zoom is
+the renormalization, and the principal symbol is what survives.</p>
+<h2 id="conness-construction">1. Connes’s construction</h2>
+<p>For a manifold <span class="math inline">\(M\)</span>, the tangent
+groupoid is <span class="math inline">\(\mathbb G_M=(M\times
+M\times(0,1])\cup(TM\times\{0\})\)</span>, with the pair-groupoid law at
+each <span class="math inline">\(\varepsilon&gt;0\)</span>, the
+fibrewise vector addition <span
+class="math inline">\((x,X)\circ(x,Y)=(x,X+Y)\)</span> at <span
+class="math inline">\(\varepsilon=0\)</span>, and the topology in which
+<span class="math inline">\((x_n,y_n,\varepsilon_n)\to(x,v,0)\)</span>
+iff <span class="math inline">\(x_n\to x\)</span> and <span
+class="math inline">\((y_n-x_n)/\varepsilon_n\to v\)</span> (in a
+chart). Its <span class="math inline">\(C^*\)</span>-algebra is a
+continuous field whose fibre at <span
+class="math inline">\(\varepsilon&gt;0\)</span> is the compact operators
+on <span class="math inline">\(L^2(M)\)</span> and at <span
+class="math inline">\(\varepsilon=0\)</span> is <span
+class="math inline">\(C_0(T^*M)\)</span> by Fourier transform; Connes
+used the deformation to prove the index theorem (A. Connes,
+<em>Noncommutative Geometry</em>, Academic Press 1994, §II.5, metadata),
+and the construction generalizes the Moyal rule (<a
+href="https://doi.org/10.1016/S0393-0440(98)00028-X">Cariñena,
+Clemente-Gallardo, Follana, Gracia-Bondía, Rivero and Várilly 1999</a>,
+abstract; <a href="https://arxiv.org/abs/math-ph/0208004">Landsman 2002,
+arXiv:math-ph/0208004</a>, abstract). The <span
+class="math inline">\(\varepsilon=0\)</span> fibre is where a chord has
+become a velocity at a place: Newton’s <em>velocitas ultima</em>,
+“certain and definite”, with place and velocity commuting. The fibre at
+<span class="math inline">\(\varepsilon&gt;0\)</span> is
+noncommutative.</p>
+<h2 id="the-zoom-action-and-what-survives">2. The zoom action and what
+survives</h2>
+<p><a href="https://doi.org/10.1016/j.aim.2014.02.012">Debord and
+Skandalis (2014)</a> (metadata) define the action of <span
+class="math inline">\(\mathbb R_+^*\)</span> on the adiabatic (tangent)
+groupoid displayed in the summary and identify the crossed product with
+an ideal of pseudodifferential operators; <a
+href="https://doi.org/10.1515/crelle-2017-0035">van Erp and Yuncken
+(2019)</a> (metadata) characterize pseudodifferential operators as the
+distributions on the tangent groupoid, properly supported and
+transversal, that are homogeneous under the zoom modulo smooth ones.
+Three identifications follow (readings):</p>
+<ul>
+<li>the zoom on the <span class="math inline">\(\varepsilon=0\)</span>
+fibre, <span class="math inline">\(v\mapsto\lambda v\)</span>, is dual
+on <span class="math inline">\(T^*M\)</span> to the scaling that carries
+the Moyal product with constant <span
+class="math inline">\(\hbar\)</span> to the one with constant <span
+class="math inline">\(\lambda^{\pm2}\hbar\)</span> (fifth-postulate
+note, §4);</li>
+<li>the user’s 1998 “dressed series”, invariant under <span
+class="math inline">\(h\mapsto\mu h\)</span> (<a
+href="https://arxiv.org/abs/quant-ph/9803035">arXiv:quant-ph/9803035</a>,
+eq. (10)), is a zoom-invariance condition, and his Ehrenfest remark (eq.
+(11)) is the statement that the equations of motion are zoom-invariant
+(Theorem A of the fifth-postulate note);</li>
+<li>the principal symbol, the <span
+class="math inline">\(\varepsilon=0\)</span> restriction of a
+zoom-homogeneous distribution, is the classical datum that survives the
+limit. The atlas’s question “what survives refinement” has here a
+precise answer for one step.</li>
+</ul>
+<h2 id="whole-trajectories-the-time-graded-groupoid">3. Whole
+trajectories: the time-graded groupoid</h2>
+<p>The user’s 2003 note (<a
+href="https://arxiv.org/abs/math/0302285">Rivero, “Flashes of
+noncommutativity”, arXiv:math/0302285</a>, full read) introduces the
+groupoid over configuration space with arrows <span
+class="math inline">\((x,y,u)\)</span>, <span
+class="math inline">\(u\)</span> an elapsed time, and law <span
+class="math inline">\((x,y,u)\circ(y,z,v)=(x,z,u+v)\)</span>. Its
+convolution algebra has product <span
+class="math inline">\((AB)(x,z,t)=\int\!\!\int
+A(x,y,r)\,B(y,z,t-r)\,dy\,dr\)</span>; Fourier transformation in <span
+class="math inline">\(t\)</span> gives, with <span
+class="math inline">\(\varepsilon\sim1/\hat t\)</span>, the product of
+the <span class="math inline">\(\varepsilon&gt;0\)</span> part of the
+tangent groupoid, so the latter’s algebra sits inside the former’s (the
+2003 note’s second flash). Refining a trajectory is factoring an arrow
+<span class="math inline">\((x,z,u)\)</span> through intermediate points
+and times, which is Newton’s insertion of <span
+class="math inline">\(t_{2.6}\)</span>.</p>
+<p><strong>Proposition 1.</strong> (a) A function <span
+class="math inline">\(S(x,y,u)\)</span> satisfies <span
+class="math inline">\(\min_y[S(x,y,r)+S(y,z,u-r)]=S(x,z,u)\)</span> for
+all <span class="math inline">\(0&lt;r&lt;u\)</span> exactly when it is
+a morphism of the time-graded groupoid into the <span
+class="math inline">\((\min,+)\)</span> semiring. For Galileo’s constant
+force <span class="math inline">\(F\)</span> on a mass <span
+class="math inline">\(M\)</span> this holds for <span
+class="math display">\[S(x,y,u)=\frac{M(y-x)^2}{2u}+\frac{Fu}2(x+y)-\frac{F^2u^3}{24M},\]</span>
+the corrected action <span class="math inline">\(\ell_u\)</span> of the
+refinement note, eq. (2), which is the action along the true path. (b) A
+kernel <span class="math inline">\(K(x,y,u)\)</span> satisfies <span
+class="math inline">\(\int K(x,y,r)K(y,z,u-r)\,dy=K(x,z,u)\)</span>
+exactly when it is a morphism into the convolution algebra; the
+constant-force propagator <span class="math inline">\(U_u\)</span> of
+the refinement note, eq. (3), does.</p>
+<p><em>Proof.</em> (a) and (b) restate the morphism property. The
+displayed <span class="math inline">\(S\)</span> is the classical action
+of the path <span class="math inline">\(q(s)=x+(y-x)s/u+\frac
+F{2M}s(s-u)\)</span>, which is the refinement note’s <span
+class="math inline">\(\ell_u\)</span>; its composition law is eq. (2)
+there, and <span class="math inline">\(U_u\)</span>’s is eq. (3). <span
+class="math inline">\(\square\)</span></p>
+<p>The displayed <span class="math inline">\(S\)</span> is the exact
+discrete Lagrangian of discrete mechanics (<a
+href="https://doi.org/10.1017/S096249290100006X">Marsden and West
+2001</a>, metadata), and discrete Lagrangian mechanics on groupoids is
+<a href="https://doi.org/10.1090/fic/007/10">Weinstein’s (1996)</a>
+(metadata). The kick–drift–kick cell <span
+class="math inline">\(S_h=K_{Fh/2}D_hK_{Fh/2}\)</span> of the refinement
+note is the variational (Störmer–Verlet) integrator of the trapezoidal
+discrete Lagrangian <span class="math inline">\(L_h\)</span>, and the
+cubic counterterm turns <span class="math inline">\(L_h\)</span> into
+the exact one. The two laws of Proposition 1 are related by Maslov
+dequantization: in Euclidean form, <span
+class="math inline">\(-\hbar\log\int e^{-S/\hbar}\to\min S\)</span> as
+<span class="math inline">\(\hbar\to0\)</span> (<a
+href="https://doi.org/10.1090/conm/377/06982">Litvinov 2005</a>,
+metadata). So refinement consistency of a whole trajectory is the
+morphism property, tropical in classical mechanics and convolutional in
+quantum mechanics.</p>
+<h2 id="quantum-trajectories-miss-the-ultimate-velocity">4. Quantum
+trajectories miss the ultimate velocity</h2>
+<p>In a path integral the typical increment over a step <span
+class="math inline">\(\tau\)</span> has <span
+class="math inline">\(\langle\Delta x^2\rangle\sim\hbar\tau/M\)</span>,
+so the paths have Hausdorff dimension two (<a
+href="https://doi.org/10.1119/1.12657">Abbott and Wise 1981</a>,
+metadata), and the difference quotient <span
+class="math inline">\(\Delta x/\tau\sim(\hbar/M\tau)^{1/2}\)</span>
+diverges. The tangent groupoid reaches its <span
+class="math inline">\(\varepsilon=0\)</span> fibre along ballistic
+sequences, <span class="math inline">\((y-x)/\varepsilon\to v\)</span>.
+Quantum trajectories approach along diffusive ones, <span
+class="math inline">\(\Delta x^2\propto\tau\)</span>: the user’s 1998
+remark that Connes’s groupoid relates to the groupoid of paths only
+after the rescaling <span
+class="math inline">\((x,y,\varepsilon)\mapsto(x,y,\varepsilon^2)\)</span>,
+and his 2003 remark on the <span class="math inline">\(\sqrt t\)</span>
+of Itô’s calculus, are this fact. The dimensionless ratio <span
+class="math inline">\(M\,\Delta x^2/(\hbar\tau)\)</span> is the action
+per step in units of <span class="math inline">\(\hbar\)</span>:
+ballistic refinement sends it to zero (the classical limit, Newton’s
+ultimate velocity), diffusive refinement holds it fixed (the <a
+href="dimension-ladder.html">dimension ladder</a>: refining makes each
+Newtonian cell quantum). The failure of joint determinacy of the
+fifth-postulate note is, along a trajectory, the failure of the
+ballistic limit.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The atlas’s Newton row gains a geometric home: one step is an arrow
+of the tangent groupoid, a trajectory is a factorization in the
+time-graded groupoid, refinement consistency is the morphism property of
+Proposition 1, the zoom action is the renormalization, and the principal
+symbol is what survives <span
+class="math inline">\(\varepsilon\to0\)</span>. A natural next question
+for the gauge atlas is the corresponding groupoid of the lattice: the
+holonomy groupoid for two dimensions, where series moves are
+compositions, and a higher (double) groupoid for the parallel moves of
+three and four dimensions.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

@@ -33,6 +33,7 @@ TRACKS = [
      pion's zero threshold. Series insertions close exactly; parallel
      insertions carry the renormalization.""", [
         "halving-atlas", "newton-record-parallel-move",
+        "tangent-groupoid-trajectories",
         "three-continuum-limits",
         "refinement-composition-and-limit",
         "series-parallel-gauge-refinement", "zero-spacing-any-action",
