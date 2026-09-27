@@ -65,7 +65,9 @@ Principia work lives in the sibling `newtonlean` repository.
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
    change is joint determinacy ([fifth postulate](../notes/principia-fifth-postulate.md)):
-   Laws independent of it, one action constant, floor iff $\hbar\ne0$ (under review).
+   Newton's *velocitas ultima*; Laws independent of it, one action constant
+   under covariance (Gutt), floor for $\hbar\ne0$; reviewed: the analogy is
+   partial, since a commutative state restriction also floors.
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.
