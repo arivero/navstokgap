@@ -280,6 +280,38 @@ with \(\|\cdot\|\) the \(\ell^2\) norm over transverse sites. Then
 \emph{Proof.} Use \(2t+v\ge2t\) and \(v\le ta^2|k|^2/4\) in (5).
 \(\square\)
 
+\textbf{Corollary 2\(_s\) (a cut at fraction \(s\); added 2026-09-27,
+atlas §1b).} Cut every direction-1 cell at \(x_1=(\ell+s)a_1\),
+\(0<s<1\), and give each transverse face the heat time
+\(\lambda_3a_2a_3/\ell_1\) with \(\ell_1\) its dual length in direction
+1 (the trapezoid weight). The two layers adjacent to any old or new
+\((23)\) face are a distance \(a_1\) apart, so every transverse face has
+dual length \(a_1/2\) and keeps heat time \(2t_{23}\); the cut faces
+have \(st_{1j}\) and \((1-s)t_{1j}\), and the mid-edge law is the
+Gaussian bridge at fraction \(s\), with mean \((1-s)P_e-sQ_e\) (in the
+additive notation above, where \(s=\frac12\) gives \((P_e-Q_e)/2\)) and
+covariance \(s(1-s)t_{1j}I_n\). Steps (i)--(iv) of the proof go through
+with mean mid-edge \((1-s)A_j(\ell)+sA_j(\ell+1)\) plus a transverse
+gradient, hence mean mid-face flux \((1-s)\Phi_\ell+s\Phi_{\ell+1}\),
+and with noise covariance \(v_s=4s(1-s)v(k)\). Using
+\(|(1-s)A+sB|^2=(1-s)|A|^2+s|B|^2-s(1-s)|A-B|^2\) and periodicity in
+\(\ell\),
+
+\[\mathcal D_s=-\sum_\ell\sum_{k\ne0}\left[
+\frac{v_s(k)\,|\hat\Phi_\ell|^2}{4t_{23}\bigl(2t_{23}+v_s(k)\bigr)}
++\frac{s(1-s)\,|\hat\Phi_\ell-\hat\Phi_{\ell+1}|^2}{2\bigl(2t_{23}+v_s(k)\bigr)}
+\right]\le0,\]
+
+which is (5) at \(s=\frac12\). Under the hypotheses of the Corollary,
+\(|\mathcal D_s|\le4s(1-s)\bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}8\bigr)\sum_\ell\|\Phi_\ell\|^2/(2t)\):
+the bound (6) times \(4s(1-s)\), so halving is the largest single step
+and an off-centre cut is gentler in both the noise and the displacement
+parts; it also shrinks the mesh less, to \(\max(s,1-s)\,a_1\). The
+statement covers one step from a uniform lattice; after it the layers
+have thicknesses \(sa_1\) and \((1-s)a_1\), and the next cut starts from
+that non-uniform lattice. The \(s\)-dependence of Theorem 5's exponent
+is not derived here. \(\square\)
+
 For a smooth field, \(\Phi=a^2F_{23}\) and the right side of (6) is
 \(a^2(K^2/16+G^2/8)\) times the continuum magnetic action
 \((1/2\lambda_3)\int|F_{23}|^2d^3x\): a dimension-six correction with

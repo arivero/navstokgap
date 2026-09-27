@@ -55,13 +55,15 @@ performs the same two moves, with $s$ as a parameter.
 - **Series move.** The cut face splits into heat times $st$ and $(1-s)t$;
   the convolution returns $t$ exactly, for heat-kernel weights, in every
   dimension.
-- **Parallel move.** In $D=3$ the transverse copies get heat times $t/s$
-  and $t/(1-s)$; at the quadratic level precisions add,
-  $s/t+(1-s)/t=1/t$. The inserted edges carry the bridge law observed at
-  fraction $s$, variance $s(1-s)t_e$ in place of $t_e/4$. Halving
-  maximizes the bridge variance, so each non-symmetric cut is gentler
-  than a halving; the $s$-dependence of the defect bounds (Prop. 2,
-  Theorem 5) is expected through $4s(1-s)$ and has not been derived.
+- **Parallel move.** In $D=3$, with each transverse face weighted by
+  its dual length (trapezoid rule), every old and new transverse face
+  keeps heat time $2t$, as in halving. The inserted edges carry the bridge
+  law at fraction $s$, variance $s(1-s)t_e$ in place of $t_e/4$. The free-field
+  defect is (5) with $v\to4s(1-s)v$ and weight $s(1-s)/2$ on the layer
+  differences, so the size bound (6) scales exactly by $4s(1-s)$
+  ([Corollary 2$_s$](series-parallel-gauge-refinement.md)): halving is the
+  largest single step, and an off-centre cut is gentler and shrinks the
+  mesh less. The $s$-dependence of Theorem 5 is open.
 - **Newton.** The cell action $K_\tau=F^2\tau^3/(24m)$
   ([two-path note](galileo-two-path-interference.md)) obeys
   $\tau^3=(s\tau)^3+((1-s)\tau)^3+3s(1-s)\tau^3$, so one cut removes exactly
@@ -100,8 +102,9 @@ performs the same two moves, with $s$ as a parameter.
   evidence this note does not have.
 - **The frame.** A cut at an arbitrary, even irrational, position is the
   geometers' cut of Book I's closing scholium. The questions for each
-  cell become: does the limit depend on the cut sequence (for the free
-  field and for Newton, no), and does the universal part (the $\log2$ of
+  cell become: does the limit depend on the cut sequence (for Newton, no,
+  proved in the [cut-measure note](cut-measure-newton.md); for the free
+  field, expected), and does the universal part (the $\log2$ of
   cell 4, which for general cuts should read $\log(1/s)$ summed over the
   step) survive when $s$ varies (conjecture: yes, as the scheme-
   independent one-loop coefficient).

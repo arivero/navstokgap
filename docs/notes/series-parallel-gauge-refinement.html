@@ -404,6 +404,52 @@ D|\le\Bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}{8}\Bigr)
 <p><em>Proof.</em> Use <span class="math inline">\(2t+v\ge2t\)</span>
 and <span class="math inline">\(v\le ta^2|k|^2/4\)</span> in (5). <span
 class="math inline">\(\square\)</span></p>
+<p><strong>Corollary 2<span class="math inline">\(_s\)</span> (a cut at
+fraction <span class="math inline">\(s\)</span>; added 2026-09-27, atlas
+§1b).</strong> Cut every direction-1 cell at <span
+class="math inline">\(x_1=(\ell+s)a_1\)</span>, <span
+class="math inline">\(0&lt;s&lt;1\)</span>, and give each transverse
+face the heat time <span
+class="math inline">\(\lambda_3a_2a_3/\ell_1\)</span> with <span
+class="math inline">\(\ell_1\)</span> its dual length in direction 1
+(the trapezoid weight). The two layers adjacent to any old or new <span
+class="math inline">\((23)\)</span> face are a distance <span
+class="math inline">\(a_1\)</span> apart, so every transverse face has
+dual length <span class="math inline">\(a_1/2\)</span> and keeps heat
+time <span class="math inline">\(2t_{23}\)</span>; the cut faces have
+<span class="math inline">\(st_{1j}\)</span> and <span
+class="math inline">\((1-s)t_{1j}\)</span>, and the mid-edge law is the
+Gaussian bridge at fraction <span class="math inline">\(s\)</span>, with
+mean <span class="math inline">\((1-s)P_e-sQ_e\)</span> (in the additive
+notation above, where <span class="math inline">\(s=\frac12\)</span>
+gives <span class="math inline">\((P_e-Q_e)/2\)</span>) and covariance
+<span class="math inline">\(s(1-s)t_{1j}I_n\)</span>. Steps (i)–(iv) of
+the proof go through with mean mid-edge <span
+class="math inline">\((1-s)A_j(\ell)+sA_j(\ell+1)\)</span> plus a
+transverse gradient, hence mean mid-face flux <span
+class="math inline">\((1-s)\Phi_\ell+s\Phi_{\ell+1}\)</span>, and with
+noise covariance <span class="math inline">\(v_s=4s(1-s)v(k)\)</span>.
+Using <span
+class="math inline">\(|(1-s)A+sB|^2=(1-s)|A|^2+s|B|^2-s(1-s)|A-B|^2\)</span>
+and periodicity in <span class="math inline">\(\ell\)</span>,</p>
+<p><span class="math display">\[\mathcal
+D_s=-\sum_\ell\sum_{k\ne0}\left[
+\frac{v_s(k)\,|\hat\Phi_\ell|^2}{4t_{23}\bigl(2t_{23}+v_s(k)\bigr)}
++\frac{s(1-s)\,|\hat\Phi_\ell-\hat\Phi_{\ell+1}|^2}{2\bigl(2t_{23}+v_s(k)\bigr)}
+\right]\le0,\]</span></p>
+<p>which is (5) at <span class="math inline">\(s=\frac12\)</span>. Under
+the hypotheses of the Corollary, <span class="math inline">\(|\mathcal
+D_s|\le4s(1-s)\bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}8\bigr)\sum_\ell\|\Phi_\ell\|^2/(2t)\)</span>:
+the bound (6) times <span class="math inline">\(4s(1-s)\)</span>, so
+halving is the largest single step and an off-centre cut is gentler in
+both the noise and the displacement parts; it also shrinks the mesh
+less, to <span class="math inline">\(\max(s,1-s)\,a_1\)</span>. The
+statement covers one step from a uniform lattice; after it the layers
+have thicknesses <span class="math inline">\(sa_1\)</span> and <span
+class="math inline">\((1-s)a_1\)</span>, and the next cut starts from
+that non-uniform lattice. The <span
+class="math inline">\(s\)</span>-dependence of Theorem 5’s exponent is
+not derived here. <span class="math inline">\(\square\)</span></p>
 <p>For a smooth field, <span
 class="math inline">\(\Phi=a^2F_{23}\)</span> and the right side of (6)
 is <span class="math inline">\(a^2(K^2/16+G^2/8)\)</span> times the
