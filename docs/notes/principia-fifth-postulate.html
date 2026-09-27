@@ -122,7 +122,18 @@ obeys the floor of the <a href="planck-gap-paper.html">Planck paper</a>,
 Theorem 6, with <span class="math inline">\(|\hbar|\)</span> in place of
 <span class="math inline">\(\hbar\)</span>. For <span
 class="math inline">\(\hbar=0\)</span> with all states admissible, point
-states give zero undetermined disturbance, so there is no floor.</li>
+states give zero undetermined disturbance, so there is no floor. 3b.
+<strong>Complementarity (Theorem E).</strong> For <span
+class="math inline">\(\hbar\ne0\)</span>, no state confines place and
+momentum to windows of half-widths <span
+class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>
+with probabilities at least <span
+class="math inline">\(1-\epsilon\)</span> unless <span
+class="math inline">\(\lambda_0(ab/|\hbar|)\ge(1-2\epsilon)^2\)</span>
+(Landau–Pollak–Slepian): a non-Gaussian floor on the area <span
+class="math inline">\(ab\)</span>. Bohr’s Como statement of
+complementarity names the classical “union” of space-time co-ordination
+and causality that this denies (§6b).</li>
 <li><strong>Similarity (Theorem D).</strong> The action-rescaling map
 <span class="math inline">\((q,p)\mapsto(\lambda q,\lambda p)\)</span>
 preserves the product <span class="math inline">\(*_\hbar\)</span> only
@@ -483,6 +494,116 @@ existence of similar figures of different size; Lambert and Gauss saw
 that its negation brings an absolute length. Theorem D is the
 counterpart for the product of observables, with <span
 class="math inline">\(\hbar\)</span> as the absolute action.</p>
+<h2
+id="b.-complementarity-the-negated-postulate-in-bohrs-words-and-in-exact-form">6b.
+Complementarity: the negated postulate in Bohr’s words and in exact
+form</h2>
+<p>Bohr’s founding statement of complementarity names Newton’s joint
+determinacy as the thing given up. In the Como lecture (<a
+href="https://doi.org/10.1038/121580a0">Bohr 1928, <em>Nature</em> 121,
+580</a>, p. 580; the sentence checked as quoted in <a
+href="https://arxiv.org/abs/quant-ph/0609048">Busch and Shilladay 2006,
+arXiv:quant-ph/0609048</a> and in arXiv:physics/9807009):</p>
+<blockquote>
+<p>The very nature of the quantum theory thus forces us to regard the
+space-time co-ordination and the claim of causality, the union of which
+characterizes the classical theories, as complementary but exclusive
+features of the description, symbolizing the idealization of observation
+and definition respectively.</p>
+</blockquote>
+<p>Space-time co-ordination is the place at an instant; the claim of
+causality is the quantity of motion governed by the Laws and conserved
+by the third. Their union is the <em>velocitas ultima</em> of §1, and
+Bohr’s pair “observation and definition” is the distinction of §1
+between the recorded comparison and the geometrical thesis. So the
+negated fifth postulate has a name, and its author stated it as a
+negation of the classical union.</p>
+<p>It also has an exact, non-Gaussian form. Write <span
+class="math inline">\(P_a\)</span> for the spectral projection of <span
+class="math inline">\(q-q_0\)</span> on <span
+class="math inline">\([-a,a]\)</span> and <span
+class="math inline">\(Q_b\)</span> for that of <span
+class="math inline">\(p-p_0\)</span> on <span
+class="math inline">\([-b,b]\)</span>.</p>
+<p><strong>Theorem E (complementarity).</strong> Let <span
+class="math inline">\(\hbar\ne0\)</span> and <span
+class="math inline">\(c=ab/|\hbar|\)</span>. For every state, the
+probabilities <span class="math inline">\(\alpha^2=\langle
+P_a\rangle\)</span> and <span class="math inline">\(\beta^2=\langle
+Q_b\rangle\)</span> satisfy</p>
+<p><span class="math display">\[\arccos\alpha+\arccos\beta\ \ge\
+\arccos\sqrt{\lambda_0(c)},\]</span></p>
+<p>where <span class="math inline">\(\lambda_0(c)&lt;1\)</span> is the
+largest eigenvalue of the time- and band-limiting operator of Slepian
+and Pollak, increasing in <span class="math inline">\(c\)</span>, with
+<span class="math inline">\(\lambda_0(c)\simeq2c/\pi\)</span> for small
+<span class="math inline">\(c\)</span>. In particular, a state (a
+posterior after records) that confines the place to a window of
+half-width <span class="math inline">\(a\)</span> and the momentum to
+one of half-width <span class="math inline">\(b\)</span>, each with
+probability at least <span class="math inline">\(1-\epsilon\)</span>,
+<span class="math inline">\(\epsilon&lt;\frac12\)</span>, obeys</p>
+<p><span class="math display">\[\lambda_0\Bigl(\frac{ab}{|\hbar|}\Bigr)\
+\ge\ (1-2\epsilon)^2,
+\qquad\text{so}\qquad ab\ \ge\ |\hbar|\,c_*(\epsilon),\quad
+c_*(\epsilon)=\lambda_0^{-1}\bigl((1-2\epsilon)^2\bigr)&gt;0
+.\]</span></p>
+<p>For <span class="math inline">\(\epsilon\to0\)</span> no state
+reaches it at all: a nonzero wavefunction and its Fourier transform
+cannot both vanish outside sets of finite measure. For <span
+class="math inline">\(\hbar=0\)</span> with all states admissible, point
+states give <span class="math inline">\(\alpha=\beta=1\)</span> for
+every <span class="math inline">\(a,b&gt;0\)</span>, and there is no
+bound.</p>
+<p><em>Proof.</em> In the Schrödinger representation <span
+class="math inline">\(p=-i\hbar\,d/dq\)</span>, so confining <span
+class="math inline">\(p\)</span> to <span
+class="math inline">\([-b,b]\)</span> is band-limiting the wavefunction
+to spatial frequencies <span class="math inline">\(|\nu|\le
+b/(2\pi|\hbar|)\)</span>. With the interval length <span
+class="math inline">\(2a\)</span>, the Slepian parameter <span
+class="math inline">\(c=\pi WT\)</span> equals <span
+class="math inline">\(\pi\cdot\frac
+b{2\pi|\hbar|}\cdot2a=ab/|\hbar|\)</span>. The inequality for pure
+states is the theorem of <a
+href="https://doi.org/10.1002/j.1538-7305.1961.tb03977.x">Landau and
+Pollak (1961)</a> (metadata), with <span
+class="math inline">\(\lambda_0\)</span> from <a
+href="https://doi.org/10.1002/j.1538-7305.1961.tb03976.x">Slepian and
+Pollak (1961)</a> (metadata). In the coordinates <span
+class="math inline">\(u=\alpha^2+\beta^2-1\)</span>, <span
+class="math inline">\(v=\alpha^2-\beta^2\)</span> the boundary <span
+class="math inline">\(\arccos\alpha+\arccos\beta=\theta_0\)</span> is
+the arc of the ellipse <span
+class="math inline">\((u/\cos\theta_0)^2+(v/\sin\theta_0)^2=1\)</span>
+that faces the corner <span
+class="math inline">\(\alpha=\beta=1\)</span>, so the allowed set of
+<span class="math inline">\((\alpha^2,\beta^2)\)</span> is convex and
+mixed states obey the same inequality. With <span
+class="math inline">\(\alpha,\beta\ge\sqrt{1-\epsilon}\)</span>, <span
+class="math inline">\(\arccos\sqrt{1-\epsilon}=\arcsin\sqrt\epsilon\)</span>
+and <span
+class="math inline">\(\cos(2\arcsin\sqrt\epsilon)=1-2\epsilon\)</span>
+give the second display. The <span
+class="math inline">\(\epsilon=0\)</span> statement is the theorem of <a
+href="https://doi.org/10.1016/0022-1236(77)90056-8">Amrein and Berthier
+(1977)</a> and <a
+href="https://doi.org/10.1016/0022-247X(85)90140-4">Benedicks (1985)</a>
+(metadata). For <span class="math inline">\(\hbar=0\)</span> the state
+<span class="math inline">\(\delta_{(q_0,p_0)}\)</span> lies in every
+window. <span class="math inline">\(\square\)</span></p>
+<p>Theorem E complements Theorem C. Theorem C bounds the disturbance
+that a record leaves; Theorem E bounds the concentration of the body’s
+state that records can produce, which is the quantity Theorem I of the
+<a href="necessity-unit-and-indeterminacy.html">unit-and-indeterminacy
+note</a> shows can be made arbitrarily small classically. It uses no
+Gaussian assumption, it depends on the windows only through the area
+<span class="math inline">\(ab/\hbar\)</span>, the action of the
+comparison Newton takes to zero, and its error dependence <span
+class="math inline">\((1-2\epsilon)\)</span> is the one in the Planck
+paper’s floor. It holds for every <span
+class="math inline">\(\hbar\ne0\)</span>; the state route of the routes
+note must reproduce it separately.</p>
 <h2
 id="the-same-structure-in-rivero-1998-the-classical-dirac-measure-and-its-constant">7.
 The same structure in Rivero 1998: the classical Dirac measure and its

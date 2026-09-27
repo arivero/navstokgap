@@ -38,6 +38,12 @@ Euclid's fifth postulate holds in the following precise, partial sense.
    [Planck paper](planck-gap-paper.md), Theorem 6, with $|\hbar|$ in place
    of $\hbar$. For $\hbar=0$ with all states admissible, point states give
    zero undetermined disturbance, so there is no floor.
+3b. **Complementarity (Theorem E).** For $\hbar\ne0$, no state confines place and
+   momentum to windows of half-widths $a$, $b$ with probabilities at least
+   $1-\epsilon$ unless $\lambda_0(ab/|\hbar|)\ge(1-2\epsilon)^2$ (Landau--Pollak--Slepian):
+   a non-Gaussian floor on the area $ab$. Bohr's Como statement of
+   complementarity names the classical "union" of space-time co-ordination
+   and causality that this denies (§6b).
 4. **Similarity (Theorem D).** The action-rescaling map
    $(q,p)\mapsto(\lambda q,\lambda p)$ preserves the product $*_\hbar$ only for
    $\hbar=0$; up to isomorphism there are two products, commutative and
@@ -324,6 +330,84 @@ available. Wallis replaced Euclid's fifth postulate by the existence of
 similar figures of different size; Lambert and Gauss saw that its
 negation brings an absolute length. Theorem D is the counterpart for the
 product of observables, with $\hbar$ as the absolute action.
+
+## 6b. Complementarity: the negated postulate in Bohr's words and in exact form
+
+Bohr's founding statement of complementarity names Newton's joint
+determinacy as the thing given up. In the Como lecture
+([Bohr 1928, *Nature* 121, 580](https://doi.org/10.1038/121580a0), p. 580;
+the sentence checked as quoted in
+[Busch and Shilladay 2006, arXiv:quant-ph/0609048](https://arxiv.org/abs/quant-ph/0609048)
+and in arXiv:physics/9807009):
+
+> The very nature of the quantum theory thus forces us to regard the
+> space-time co-ordination and the claim of causality, the union of which
+> characterizes the classical theories, as complementary but exclusive
+> features of the description, symbolizing the idealization of
+> observation and definition respectively.
+
+Space-time co-ordination is the place at an instant; the claim of
+causality is the quantity of motion governed by the Laws and conserved
+by the third. Their union is the *velocitas ultima* of §1, and Bohr's pair
+"observation and definition" is the distinction of §1 between the
+recorded comparison and the geometrical thesis. So the negated fifth
+postulate has a name, and its author stated it as a negation of the
+classical union.
+
+It also has an exact, non-Gaussian form. Write $P_a$ for the spectral
+projection of $q-q_0$ on $[-a,a]$ and $Q_b$ for that of $p-p_0$ on $[-b,b]$.
+
+**Theorem E (complementarity).** Let $\hbar\ne0$ and $c=ab/|\hbar|$. For every
+state, the probabilities $\alpha^2=\langle P_a\rangle$ and $\beta^2=\langle Q_b\rangle$
+satisfy
+
+$$\arccos\alpha+\arccos\beta\ \ge\ \arccos\sqrt{\lambda_0(c)},$$
+
+where $\lambda_0(c)<1$ is the largest eigenvalue of the time- and
+band-limiting operator of Slepian and Pollak, increasing in $c$, with
+$\lambda_0(c)\simeq2c/\pi$ for small $c$. In particular, a state (a posterior
+after records) that confines the place to a window of half-width $a$ and
+the momentum to one of half-width $b$, each with probability at least
+$1-\epsilon$, $\epsilon<\frac12$, obeys
+
+$$\lambda_0\Bigl(\frac{ab}{|\hbar|}\Bigr)\ \ge\ (1-2\epsilon)^2,
+\qquad\text{so}\qquad ab\ \ge\ |\hbar|\,c_*(\epsilon),\quad
+c_*(\epsilon)=\lambda_0^{-1}\bigl((1-2\epsilon)^2\bigr)>0 .$$
+
+For $\epsilon\to0$ no state reaches it at all: a nonzero wavefunction and
+its Fourier transform cannot both vanish outside sets of finite measure.
+For $\hbar=0$ with all states admissible, point states give $\alpha=\beta=1$ for
+every $a,b>0$, and there is no bound.
+
+*Proof.* In the Schrödinger representation $p=-i\hbar\,d/dq$, so confining
+$p$ to $[-b,b]$ is band-limiting the wavefunction to spatial frequencies
+$|\nu|\le b/(2\pi|\hbar|)$. With the interval length $2a$, the Slepian parameter
+$c=\pi WT$ equals $\pi\cdot\frac b{2\pi|\hbar|}\cdot2a=ab/|\hbar|$. The inequality for
+pure states is the theorem of
+[Landau and Pollak (1961)](https://doi.org/10.1002/j.1538-7305.1961.tb03977.x)
+(metadata), with $\lambda_0$ from
+[Slepian and Pollak (1961)](https://doi.org/10.1002/j.1538-7305.1961.tb03976.x)
+(metadata). In the coordinates $u=\alpha^2+\beta^2-1$, $v=\alpha^2-\beta^2$ the
+boundary $\arccos\alpha+\arccos\beta=\theta_0$ is the arc of the ellipse
+$(u/\cos\theta_0)^2+(v/\sin\theta_0)^2=1$ that faces the corner $\alpha=\beta=1$, so
+the allowed set of $(\alpha^2,\beta^2)$ is convex and mixed states obey the same
+inequality. With $\alpha,\beta\ge\sqrt{1-\epsilon}$, $\arccos\sqrt{1-\epsilon}=\arcsin\sqrt\epsilon$
+and $\cos(2\arcsin\sqrt\epsilon)=1-2\epsilon$ give the second display. The
+$\epsilon=0$ statement is the theorem of
+[Amrein and Berthier (1977)](https://doi.org/10.1016/0022-1236(77)90056-8)
+and [Benedicks (1985)](https://doi.org/10.1016/0022-247X(85)90140-4)
+(metadata). For $\hbar=0$ the state $\delta_{(q_0,p_0)}$ lies in every window.
+$\square$
+
+Theorem E complements Theorem C. Theorem C bounds the disturbance that a
+record leaves; Theorem E bounds the concentration of the body's state
+that records can produce, which is the quantity Theorem I of the
+[unit-and-indeterminacy note](necessity-unit-and-indeterminacy.md) shows
+can be made arbitrarily small classically. It uses no Gaussian
+assumption, it depends on the windows only through the area $ab/\hbar$, the
+action of the comparison Newton takes to zero, and its error dependence
+$(1-2\epsilon)$ is the one in the Planck paper's floor. It holds for every
+$\hbar\ne0$; the state route of the routes note must reproduce it separately.
 
 ## 7. The same structure in Rivero 1998: the classical Dirac measure and its constant
 
