@@ -224,7 +224,13 @@ way; in mechanics refining makes each cell more quantum
   $e^{-c/t}$ (vortices, monopoles, dislocations). In $D<4$ it is summable
   per physical volume at fixed coupling, so compact effects die; in $D=4$
   the running turns it into a power of $a$, so survival is a threshold
-  condition; in $D>4$ there is no small $t$.
+  condition; in $D>4$ there is no small $t$. In $1+3$ at one loop,
+  $a\Lambda=e^{-1/(2b_0t)}$ with $t=\hbar g^2(a)$, so $e^{-c/t}=(a\Lambda)^{2b_0c}$ and $2b_0c$ is the
+  scaling dimension of the correction. The generated gap is itself on the
+  ladder: $am\propto e^{-1/(2b_0\hbar g^2)}$ is the member with $2b_0c=1$. The bridge
+  windings sit far above the per-volume threshold $2b_0c=4$: $2b_0c=11N/3$ for
+  root images ($c=8\pi^2$) and $11N$ for the $SU(3)$ centre images of a
+  trisection ($c=24\pi^2$, [centre note](sun-midpoint-centre.md)) (2026-09-28).
 - **What survives is trajectory-dependent.** Compact $U(1)$ in $1+2$ keeps
   a gap along $\lambda_3a\simeq c_0/(2\log(1/a))$, $c_0\approx4.99$ the monopole
   exponent, where the monopole density per physical volume diverges, and
