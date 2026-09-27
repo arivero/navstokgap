@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas of halving: what one refinement step does, and what emerges, in each dimension</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Atlas of halving: what one refinement step does, and what emerges, in
+each dimension</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/halving-atlas.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/halving-atlas.pdf">PDF</a></p><p><strong>Purpose, 2026-09-27 (user direction: a collective
+understanding of the halving of the lattice and what emerges in each
+case and dimension, as the mid-term goal).</strong> This note is the
+shared map. Each cell says what one halving does, what it leaves behind,
+and what survives the limit, with the status of the statement and the
+note that holds it. It adds no new theorem; it fixes one vocabulary so
+that the agents working here (Claude, GPT-6 Astra, Fable reviewers) and
+the user fill the same cells. Open cells are listed in §5.</p>
+<p>Status labels: <strong>proved</strong> (theorem in a repository note,
+reviewed or not as marked), <strong>exact</strong> (closed-form
+identity), <strong>formal</strong> (derivation assuming an unproved
+estimate), <strong>known</strong> (established literature, cited),
+<strong>open</strong>.</p>
+<h2 id="the-operation">1. The operation</h2>
+<p><strong>Halving one direction</strong> <span
+class="math inline">\(a_1\mapsto a_1/2\)</span> of a lattice with
+plaquette heat times <span
+class="math inline">\(t_{\mu\nu}=\lambda_Da_\mu
+a_\nu/\prod_{\rho\ne\mu,\nu}a_\rho\)</span> (<a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>,
+eq. (1), small-field regime) splits exactly into two moves.</p>
+<ul>
+<li><strong>Series move.</strong> A face containing the refined
+direction is cut in two; its heat time halves. Integrating the cutting
+edge is a convolution of the two half-weights: character coefficients
+multiply. For heat-kernel weights it closes exactly in every
+dimension.</li>
+<li><strong>Parallel move.</strong> A face transverse to the refined
+direction gets a new copy in the mid-plane, both at doubled heat time.
+Integrating the mid-plane leaves the factor <span
+class="math inline">\(\Psi\)</span>: a <span
+class="math inline">\((D-1)\)</span>-dimensional gauge theory whose
+edges carry Brownian-bridge laws fixed by the coarse field. Pointwise
+products of weights add their logarithms; the heat kernel is closed
+under this only up to vortex terms (<a
+href="zero-spacing-any-action.html">zero-spacing note</a>, Proposition
+1).</li>
+<li><strong>Count.</strong> A halving produces parallel moves in <span
+class="math inline">\(\binom{D-1}2\)</span> transverse planes. An
+isotropic step is <span class="math inline">\(D\)</span> directional
+halvings; the isotropic heat time scales as <span
+class="math inline">\(t\propto\lambda_Da^{4-D}\)</span>.</li>
+<li><strong>Time-only halving</strong> (Euclidean time at fixed spatial
+lattice) sends the transverse heat times to infinity; the Hamiltonian
+limit needs exponential (Wilson-type) magnetic weights (zero-spacing
+note, §1).</li>
+</ul>
+<p><strong>Newton’s halving</strong> is the one-dimensional case:
+inserting a time <span class="math inline">\(t_{2.6}\)</span> in a cell
+is a series move (<a
+href="refinement-composition-and-limit.html">refinement note</a>, §2). A
+physical record at the inserted time is a new variable attached to the
+body, the nearest analogue of a parallel insertion; whether forgetting
+it returns the unrecorded dynamics is the question of the Planck-gap
+programme.</p>
+<h2 id="the-atlas-by-dimension">2. The atlas by dimension</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(1+n\)</span></th>
+<th>Series move</th>
+<th>Parallel planes per halving</th>
+<th>What one step leaves</th>
+<th>What survives the limit</th>
+<th>Status and notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(0+0\)</span></td>
+<td>none (a single weight)</td>
+<td>none</td>
+<td>the weight <span class="math inline">\(k_t(U)\)</span> itself; a
+single integral with an <span
+class="math inline">\(e^{-c/\hbar}\)</span> structure</td>
+<td>a large-<span class="math inline">\(N\)</span> transition
+(Gross–Witten)</td>
+<td>known; <a href="dimension-ladder.html">dimension ladder</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+0\)</span> Newton</td>
+<td>exact after one cubic counterterm <span
+class="math inline">\(-F^2h^3/(24M)\)</span>; the defect <span
+class="math inline">\(-F^2uvh/(8M)\)</span> is a coboundary</td>
+<td>none</td>
+<td>a scalar</td>
+<td>unobserved: the exact propagator at every <span
+class="math inline">\(\hbar\)</span>; recorded: a floor only if joint
+determinacy fails</td>
+<td>proved; <a href="refinement-composition-and-limit.html">refinement
+note</a>, <a href="principia-fifth-postulate.html">fifth
+postulate</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+1\)</span></td>
+<td>exact (heat-kernel convolution)</td>
+<td>0</td>
+<td>nothing for heat kernels; for any action, <span
+class="math inline">\(a^{-2}(1-\hat c_R)\)</span></td>
+<td>a conjugation-invariant Lévy exponent <span
+class="math inline">\(\psi(R)\)</span>; Yang–Mills iff Lindeberg; circle
+spectrum <span class="math inline">\(\hbar cL\psi(R)\)</span>; no local
+particle</td>
+<td>proved (Theorem 2 of the zero-spacing note); known (Lévy)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+2\)</span></td>
+<td>exact</td>
+<td>1</td>
+<td>free: an irrelevant quadratic form of relative size <span
+class="math inline">\(a^2K^2/16+(Ga)^2/8\)</span>; <span
+class="math inline">\(U(1)\)</span>: vortices of density <span
+class="math inline">\(e^{-\pi^2/(8t)}\)</span>; <span
+class="math inline">\(SU(N)\)</span>: coupling shifts <span
+class="math inline">\(O(t)\)</span>, curvature term explicit</td>
+<td>free photon for <span class="math inline">\(U(1)\)</span> at fixed
+<span class="math inline">\(\lambda_3\)</span> (every lattice gap dies);
+conjectured gap <span class="math inline">\(C_3\hbar c\lambda_3\)</span>
+for <span class="math inline">\(SU(N)\)</span></td>
+<td>proved for free and <span class="math inline">\(U(1)\)</span>;
+formal for <span class="math inline">\(SU(N)\)</span> (Proposition 7);
+see §3</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+3\)</span></td>
+<td>exact</td>
+<td>3</td>
+<td><span class="math inline">\(t=g^2\)</span> fixed: coupling shifts
+that recur each step; large fields suppressed only as <span
+class="math inline">\((a\Lambda)^{2b_0c}\)</span></td>
+<td>running coupling, <span class="math inline">\(\Lambda=\mu
+e^{-1/(2b_0g^2)}\)</span>; small instantons die (<span
+class="math inline">\(11N/3&gt;4\)</span>); dislocations need <span
+class="math inline">\(c&gt;2/b_0\)</span> (<span
+class="math inline">\(\tfrac{6}{11}\)</span> of an instanton for <span
+class="math inline">\(SU(2)\)</span>); <span
+class="math inline">\(U(1)\)</span>: Coulomb phase</td>
+<td>known (running, 6/11 criterion, Driver); the measure-level route
+fails for <span class="math inline">\(U(1)\)</span> (proved)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+n\)</span>, <span
+class="math inline">\(n\ge4\)</span></td>
+<td>exact</td>
+<td><span class="math inline">\(\binom n2\)</span></td>
+<td><span class="math inline">\(t\)</span> grows as <span
+class="math inline">\(a\to0\)</span></td>
+<td>no small-field regime; a phase transition, no established continuum
+limit</td>
+<td>known (Creutz for <span class="math inline">\(SU(2)\)</span> in
+5D)</td>
+</tr>
+</tbody>
+</table>
+<p>The same heat time <span class="math inline">\(t=\hbar g_{\rm
+cl}^2a^{4-D}\)</span> controls the column “what one step leaves”. For
+<span class="math inline">\(D&lt;4\)</span> refining and taking <span
+class="math inline">\(\hbar\to0\)</span> push it the same way; in
+mechanics refining makes each cell more quantum (<a
+href="dimension-ladder.html">dimension ladder</a>, §2).</p>
+<h2 id="the-atlas-for-12-by-group">3. The atlas for <span
+class="math inline">\(1+2\)</span> by group</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Isolated cube</th>
+<th>Full mid-plane</th>
+<th>One step, measure level</th>
+<th>Iteration and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>free (<span class="math inline">\(\mathbb R^n\)</span>)</td>
+<td>exact</td>
+<td>exact defect (Proposition 2 of the series/parallel note)</td>
+<td>Gaussian, exact</td>
+<td>blocked actions converge to a Gaussian fixed point (known,
+Bell–Wilson; for this blocking asserted)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(U(1)\)</span></td>
+<td>exact (Proposition 3)</td>
+<td>exact charge form, vortex bound (Proposition 4, Corollary)</td>
+<td>one step equals the free step up to density <span
+class="math inline">\(e^{-\pi^2/(8t)}\)</span> (Theorem 5, refereed);
+whole measure within TV <span
+class="math inline">\(2(L/a)^3e^{-\pi^2/(6\lambda_3a)}\)</span> of the
+monopole-free part (<a href="villain-monopole-refinement.html">monopole
+note</a>)</td>
+<td>free photon (Gross 1983, known)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(SU(2)\)</span></td>
+<td>midpoint characters exact for every spin; spin-<span
+class="math inline">\(\frac12\)</span> sector of the cube exact (<a
+href="su2-midpoint-exact.html">closed form</a>, Theorems 1–3)</td>
+<td>open</td>
+<td>formal (Proposition 7), needs the uniform Laplace remainder</td>
+<td>open</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(SU(3)\)</span></td>
+<td>curvature term explicit, softening <span
+class="math inline">\(t_j|X_j|^2/512\)</span> (group-general form of
+Proposition 6)</td>
+<td>open</td>
+<td>formal</td>
+<td>open; the gap <span class="math inline">\(C_3\hbar
+c\lambda_3\)</span> is the infrared obligation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-emerges-read-across-the-atlas">4. What emerges, read across
+the atlas</h2>
+<ul>
+<li><strong>Series moves never produce anything new.</strong> In every
+dimension they close exactly for heat-kernel weights, and in mechanics
+after one scalar counterterm. The one-dimensional Newton problem and the
+two-dimensional gauge theory are all series.</li>
+<li><strong>Parallel moves carry everything that renormalizes.</strong>
+Their number, <span class="math inline">\(\binom{D-1}2\)</span>, is zero
+exactly where the theory is exactly soluble.</li>
+<li><strong>The exponential ladder.</strong> Each compact correction
+left by a step is <span class="math inline">\(e^{-c/t}\)</span>
+(vortices, monopoles, dislocations). In <span
+class="math inline">\(D&lt;4\)</span> it is summable per physical volume
+at fixed coupling, so compact effects die; in <span
+class="math inline">\(D=4\)</span> the running turns it into a power of
+<span class="math inline">\(a\)</span>, so survival is a threshold
+condition; in <span class="math inline">\(D&gt;4\)</span> there is no
+small <span class="math inline">\(t\)</span>.</li>
+<li><strong>What survives is trajectory-dependent.</strong> Compact
+<span class="math inline">\(U(1)\)</span> in <span
+class="math inline">\(1+2\)</span> keeps a gap along trajectories with
+<span class="math inline">\(\lambda_3a\simeq c/\log(1/a)\)</span> and
+loses it at fixed <span class="math inline">\(\lambda_3\)</span>
+(Göpfert–Mack versus Gross).</li>
+<li><strong>Constants that emerge.</strong> Mechanics: one scalar
+counterterm per cell, and one action constant if joint determinacy is
+denied (Theorems B and B<span class="math inline">\(&#39;\)</span> of
+the fifth-postulate note). <span class="math inline">\(1+1\)</span>: the
+Lévy exponent (one coupling for Yang–Mills). <span
+class="math inline">\(1+2\)</span>: one coupling, shifted summably.
+<span class="math inline">\(1+3\)</span>: one scale <span
+class="math inline">\(\Lambda\)</span> by dimensional
+transmutation.</li>
+</ul>
+<h2 id="open-cells">5. Open cells</h2>
+<ol type="1">
+<li><span class="math inline">\(SU(2)\)</span> cube, <span
+class="math inline">\(J\ge1\)</span>: the diagonal entries <span
+class="math inline">\(\Lambda^J_{\mu\mu}\)</span> of the midpoint’s
+matrix expectation, by the Clebsch–Gordan form of the orthogonality
+computation (closed-form note, §5).</li>
+<li><span class="math inline">\(SU(2)\)</span> full mid-plane in <span
+class="math inline">\(1+2\)</span>: small-field expansion of <span
+class="math inline">\(\Psi\)</span>, the non-abelian counterpart of
+Proposition 4.</li>
+<li>Stability of Hypothesis P(<span
+class="math inline">\(\alpha\)</span>) under iteration, first for <span
+class="math inline">\(U(1)\)</span> within one isotropic step (three
+directional halvings).</li>
+<li><span class="math inline">\(1+3\)</span>: the one-loop coefficient
+<span class="math inline">\(-2b_0\log2\)</span> per isotropic step from
+the three parallel insertions of each halving.</li>
+<li>Time-only halving: the exponential-family parallel move and its
+Trotter limit, stated as a theorem at fixed spatial lattice.</li>
+<li>Newton’s record insertion as a parallel move: forgetting a record as
+a channel, and when it returns the unrecorded composition (<a
+href="refinement-composition-and-limit.html">refinement note</a>,
+§1).</li>
+<li>The infrared: from ultraviolet control in <span
+class="math inline">\(1+2\)</span> to <span
+class="math inline">\(C_3&gt;0\)</span>.</li>
+</ol>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>STATE carries the mid-term goal and points here. Each result that
+fills a cell updates the cell in this note and nothing else; the notes
+that prove results remain the record.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

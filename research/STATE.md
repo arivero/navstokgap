@@ -20,6 +20,11 @@ an intermediate Newtonian time, an edge or cell in gauge theory, and
 their lower-dimensional counterparts. The modern leg remains primary; formal and textual
 Principia work lives in the sibling `newtonlean` repository.
 
+**Mid-term goal (user, 2026-09-27):** a collective understanding of the
+halving of the lattice and what emerges in each case and dimension. The
+[atlas of halving](../notes/halving-atlas.md) is the shared map; results
+fill its cells (open cells in its §5).
+
 ## In hand
 
 - [The Planck paper](../notes/planck-gap-paper.md) is the developed Newton
