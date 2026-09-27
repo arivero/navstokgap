@@ -34,6 +34,7 @@ TRACKS = [
      insertions carry the renormalization.""", [
         "three-continuum-limits", "refinement-composition-and-limit",
         "series-parallel-gauge-refinement", "zero-spacing-any-action",
+        "dimension-ladder",
     ]),
     ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
      letting the sagitta and the enclosed area go to zero. Once the comparison

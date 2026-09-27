@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The dimension ladder: from 0+0 to 1+3, and what the action constant does on each rung</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The dimension ladder: from 0+0 to 1+3, and what the action constant
+does on each rung</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/dimension-ladder.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/dimension-ladder.pdf">PDF</a></p><p><strong>Record of a discussion with the user, 2026-09-27,
+02:50–03:15.</strong> The user proposed the frame: quantization is a
+consistency condition that Newton’s rework of the <em>Principia</em>
+missed, so any supposedly well-posed wave equation without a
+quantization carries a logical issue; the ladder of dimensions runs from
+<span class="math inline">\(0+0\)</span> through Newton and quantum
+mechanics (<span class="math inline">\(1+0\)</span>, “YM<span
+class="math inline">\(_0\)</span>”) to <span
+class="math inline">\(1+3\)</span>; and the exponential <span
+class="math inline">\(e^{-1/(2b_0\hbar g^2)}\)</span> plays a distinct
+role. This note records the resulting statements with their status. The
+two layers of §1 and the table of §2 are the parts meant for the joint
+paper; §§3–4 are readings, labelled as such.</p>
+<h2 id="quantization-as-a-consistency-condition-two-layers">1.
+Quantization as a consistency condition: two layers</h2>
+<p><strong>Layer 1: every classical wave equation needs a universal
+action constant to be thermodynamically consistent.</strong> Theorem U
+of the <a
+href="necessity-unit-and-indeterminacy.html">unit-and-indeterminacy
+note</a> uses Maxwell’s field, but its mechanism is general. A classical
+field whose normal-mode frequencies are unbounded (every wave equation
+on a continuum) has, in equilibrium at temperature <span
+class="math inline">\(T\)</span>, energy <span
+class="math inline">\(k_BT\)</span> per mode by equipartition, hence
+infinite energy density. A finite equilibrium, which the second law and
+every thermometer presuppose, needs the high modes to freeze out; that
+compares <span class="math inline">\(k_BT\)</span> with a frequency and
+so needs a constant with units of action. Two different fields in mutual
+equilibrium must share their occupation law, or a filter between them
+would run a perpetual motion of the second kind (Kirchhoff’s argument
+extended from colours to fields); so the constant is common to all
+fields. Einstein applied Planck’s constant to the vibrations of solids
+in exactly this way (<a
+href="https://doi.org/10.1002/andp.19063270110">Einstein 1907</a>,
+metadata). Stated as a conjecture-level extension of Theorem U, to be
+proved in the same form: <em>any classical field with unbounded mode
+frequencies that admits a finite thermal equilibrium requires a
+universal action constant, and mutual equilibrium makes it the same for
+all fields.</em> A well-posed wave equation remains consistent as
+deterministic mathematics; as physics it is inconsistent once it can
+exchange energy with thermal matter. This is the kind of gap the
+programme attributes to Newton’s rework: the limits of the
+<em>Principia</em> are consistent, and the inconsistency appears when
+they are combined with thermodynamics and physical records.</p>
+<p><strong>Layer 2: the quantized theory must itself survive
+refinement.</strong> Once <span class="math inline">\(\hbar\)</span> is
+present, the per-cell parameter of the lattice refinement is <span
+class="math inline">\(t=\hbar g_{\rm cl}^2a^{4-D}\)</span> (<a
+href="zero-spacing-any-action.html">zero-spacing note</a>, §3):</p>
+<ul>
+<li><span class="math inline">\(D&lt;4\)</span>: <span
+class="math inline">\(t\to0\)</span> and the refinement converges
+(superrenormalizable);</li>
+<li><span class="math inline">\(D=4\)</span>: marginal; the theory
+survives only if its coupling runs to zero at short distances.
+Yang–Mills does (asymptotic freedom). Continuum <span
+class="math inline">\(\phi^4_4\)</span> is trivial, a free field (<a
+href="https://doi.org/10.1007/BF01205659">Aizenman 1982</a>; <a
+href="https://doi.org/10.1016/0550-3213(82)90088-8">Fröhlich 1982</a>;
+<a href="https://doi.org/10.4007/annals.2021.194.1.3">Aizenman and
+Duminil-Copin 2021</a>; metadata), and QED has a Landau pole; on this
+reading both classical equations are effective theories with a
+cutoff;</li>
+<li>gravity: <span class="math inline">\(t=\hbar
+G/(c^3a^2)=(\ell_P/a)^2\)</span> grows as <span
+class="math inline">\(a\to0\)</span>, the failure mode of the <span
+class="math inline">\(D&gt;4\)</span> row.</li>
+</ul>
+<p><strong>What “consistency” means in each layer.</strong> Layer 1 is a
+logical inconsistency: classical fields, the second law and finite
+energy are jointly contradictory without an action constant. Layer 2 is
+an existence condition on the continuum quantum theory, decided by
+estimates of the kind proved in the series/parallel and zero-spacing
+notes. Neither makes a classical PDE self-contradictory; both say it
+cannot be a complete physical theory by itself. Classical Yang–Mills in
+<span class="math inline">\(3+1\)</span> Minkowski space exists globally
+(<a href="https://doi.org/10.1007/BF01976040">Eardley and Moncrief
+1982</a>, metadata), and classical <span
+class="math inline">\(\phi^4_4\)</span> is well posed, although its
+continuum quantum theory is free: the large-quantum-number limit of that
+quantum theory is a free classical field. The implication “quantum
+theory exists <span class="math inline">\(\Rightarrow\)</span> its
+classical limit exists” holds in the sense of limits; the converse fails
+as mathematics. The Euclidean formulation makes one version exact: the
+measure <span class="math inline">\(e^{-S/\hbar}\)</span> is a classical
+statistical field theory in <span class="math inline">\(D\)</span>
+dimensions with <span class="math inline">\(\hbar\)</span> as
+temperature, so “quantum YM<span class="math inline">\(_4\)</span>
+exists” (Osterwalder–Schrader) and “classical statistical YM<span
+class="math inline">\(_4\)</span> at temperature <span
+class="math inline">\(\hbar\)</span> exists in the continuum” are one
+problem, while the classical deterministic PDE is a different
+object.</p>
+<h2 id="the-ladder-in-the-users-1n-labelling">2. The ladder, in the
+user’s <span class="math inline">\(1+n\)</span> labelling</h2>
+<p>Write <span class="math inline">\(\lambda_D=\hbar g_{\rm
+cl}^2\)</span> with <span class="math inline">\([\lambda_D]={\rm
+length}^{D-4}\)</span>, <span class="math inline">\(D=1+n\)</span>, and
+hold the classical coupling <span class="math inline">\(g_{\rm
+cl}\)</span> fixed as <span
+class="math inline">\(\hbar\to0\)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(1+n\)</span></th>
+<th>Theory</th>
+<th>Scale from <span class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, <span class="math inline">\(g_{\rm
+cl}\)</span></th>
+<th><span class="math inline">\(\hbar\)</span>-dependence</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(0+0\)</span></td>
+<td>single integral <span class="math inline">\(\int
+dU\,e^{-S/\hbar}\)</span></td>
+<td>no time, no spectrum</td>
+<td>series in <span class="math inline">\(\hbar\)</span> plus <span
+class="math inline">\(e^{-c/\hbar}\)</span></td>
+<td>integrals</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+0\)</span></td>
+<td>Newton, QM (“YM<span class="math inline">\(_0\)</span>”)</td>
+<td>record floor on action; rotor <span
+class="math inline">\(\hbar^2C_2/(2I)\)</span></td>
+<td><span class="math inline">\(\hbar\)</span> (action), <span
+class="math inline">\(\hbar^2\)</span> (rotor)</td>
+<td>Planck paper; rotor exact</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+1\)</span></td>
+<td>YM<span class="math inline">\(_1\)</span></td>
+<td><span class="math inline">\(\hbar c\sqrt{\lambda_2}\)</span>; circle
+<span class="math inline">\(\hbar c\lambda_2LC_2/2\)</span></td>
+<td><span class="math inline">\(\hbar^{3/2}\)</span>; <span
+class="math inline">\(\hbar^2L\)</span></td>
+<td>exact; no local particle</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+2\)</span></td>
+<td>YM<span class="math inline">\(_2\)</span></td>
+<td><span class="math inline">\(C_3\hbar c\lambda_3\)</span></td>
+<td><span class="math inline">\(\hbar^2\)</span></td>
+<td><span class="math inline">\(C_3\)</span> open</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+3\)</span></td>
+<td>YM<span class="math inline">\(_3\)</span></td>
+<td><span class="math inline">\(C_4\hbar c\Lambda\)</span></td>
+<td><span class="math inline">\(e^{-1/(2b_0\hbar g_{\rm
+cl}^2)}\)</span></td>
+<td>the Millennium problem</td>
+</tr>
+</tbody>
+</table>
+<p>(The subscripts of the series/parallel and zero-spacing notes count
+spacetime dimension <span class="math inline">\(D\)</span>; here YM<span
+class="math inline">\(_n\)</span> is <span
+class="math inline">\(D=n+1\)</span>.)</p>
+<p><strong><span class="math inline">\(0+0\)</span>.</strong> There is
+no time direction, so no Hamiltonian and no gap. What remains is one
+integral. It is the building block of every rung: the plaquette weight
+<span class="math inline">\(k_t(U)\)</span> is a <span
+class="math inline">\(0+0\)</span> theory, series moves (convolution)
+and parallel moves (products) assemble higher dimensions from it, and
+the elimination of one inserted Newtonian time (Proposition 2 of the <a
+href="refinement-composition-and-limit.html">refinement note</a>) is the
+<span class="math inline">\(0+0\)</span> piece of mechanics. A
+zero-dimensional integral such as <span class="math inline">\(\int
+d\phi\,e^{-(\phi^2/2+g\phi^4)/\hbar}\)</span> already has an asymptotic,
+non-Borel-summable series in <span class="math inline">\(\hbar\)</span>
+with ambiguities of order <span
+class="math inline">\(e^{-c/\hbar}\)</span>. At large <span
+class="math inline">\(N\)</span> the one-plaquette unitary matrix
+integral, the building block of two-dimensional lattice Yang–Mills, has
+a third-order phase transition (<a
+href="https://doi.org/10.1103/PhysRevD.21.446">Gross and Witten
+1980</a>, metadata): non-analyticity from a zero-dimensional integral in
+a limit that plays the role of <span
+class="math inline">\(a\to0\)</span>.</p>
+<p><strong><span class="math inline">\(1+1\)</span> on a circle is
+exactly a <span class="math inline">\(1+0\)</span> rotor.</strong> Eq.
+(10) of the refinement note, <span class="math inline">\(E_R=\hbar
+c\lambda_2L\,C_2(R)/2\)</span>, equals <span
+class="math inline">\(\hbar^2C_2(R)/(2I)\)</span> with <span
+class="math inline">\(I=1/(c\,g_{\rm cl}^2L)\)</span>: a quantum rigid
+rotor on the gauge group whose moment of inertia is classical (<span
+class="math inline">\(\hbar\)</span> cancels from <span
+class="math inline">\(I\)</span>). On the infinite line there is no
+particle; the string tension <span class="math inline">\(\sigma=\hbar
+c\lambda_2C_2/2\)</span> between static charges goes like <span
+class="math inline">\(\hbar^2\)</span>.</p>
+<p><strong>The exponents interpolate.</strong> The only energy formed
+from <span class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span> and a fixed classical coupling is <span
+class="math inline">\(E\sim\hbar c\,\lambda_D^{1/(4-D)}\)</span>, which
+goes like <span class="math inline">\(\hbar^{(5-D)/(4-D)}\)</span>:
+<span class="math inline">\(\hbar^{3/2}\)</span> for <span
+class="math inline">\(D=2\)</span>, <span
+class="math inline">\(\hbar^2\)</span> for <span
+class="math inline">\(D=3\)</span>, and a diverging exponent as <span
+class="math inline">\(D\to4\)</span>. At <span
+class="math inline">\(D=4\)</span> no power is available, and the
+running coupling turns the divergent power into <span
+class="math inline">\(e^{-1/(2b_0\hbar g_{\rm cl}^2)}\)</span>, as
+dimensional regularization sees it (<span
+class="math inline">\((g^2)^{1/\varepsilon}\)</span> with <span
+class="math inline">\(\varepsilon=4-D\)</span> becomes an exponential of
+<span class="math inline">\(-1/g^2\)</span>). This is dimensional
+analysis; whether each rung has a positive gap is the open content
+(<span class="math inline">\(C_3\)</span>, and the Millennium
+problem).</p>
+<p><strong>Classical Yang–Mills has no gap in any dimension</strong>:
+its waves are massless and carry arbitrarily small energy. On every rung
+the large-quantum-number limit is the limit in which the gap
+disappears.</p>
+<p><strong>Refinement runs in opposite directions in mechanics and in
+field theory.</strong> For <span class="math inline">\(D&lt;4\)</span>,
+<span class="math inline">\(\hbar\to0\)</span> and <span
+class="math inline">\(a\to0\)</span> push the same per-plaquette
+parameter <span class="math inline">\(t=\hbar g_{\rm
+cl}^2a^{4-D}\)</span> to zero: per plaquette, “more classical” and
+“finer lattice” are one direction, while the global scale where a gap
+lives stays quantum. In mechanics, refining the time cells makes each
+cell more quantum: the classical polygon action per cell shrinks like
+<span class="math inline">\(\tau^3\)</span>, while the fluctuation
+action per cell stays of order <span
+class="math inline">\(\hbar\)</span>.</p>
+<h2
+id="a-third-route-to-a-universal-action-gravity-with-a-least-length">3.
+A third route to a universal action: gravity with a least length</h2>
+<p>Classical gravitation with finite light speed has no mass-independent
+action (<span class="math inline">\(Gm^2/c\)</span> depends on the
+mass). A fixed length <span class="math inline">\(\ell\)</span> supplies
+one: <span class="math inline">\(c^3\ell^2/G\)</span>. So <span
+class="math inline">\((G,c,\ell)\)</span> is a third route to a
+universal action, beside radiation thermodynamics (Theorem U) and the
+Stoney unit <span class="math inline">\(k_e/c\)</span>, and the most
+Newtonian of the three: <span class="math inline">\(G\)</span> is
+Newton’s constant, <span class="math inline">\(c\)</span> is Rømer’s
+(1676), and the missing ingredient is exactly the least magnitude that
+the scholium closing Book I, Section I refuses by citing Euclid X. The
+value needs <span
+class="math inline">\(\ell=\ell_P\approx1.6\times10^{-35}\)</span> m;
+Newton’s interval of fits (<span class="math inline">\(1/89000\)</span>
+inch) gives <span
+class="math inline">\(c^3\Lambda^2/G\sim10^{22}\)</span> J s, off by
+about 56 orders of magnitude. The route is logically Newtonian; its
+value is outside Newton-age data.</p>
+<h2 id="the-exponential-ladder-a-reading">4. The exponential ladder (a
+reading)</h2>
+<p>The factor <span class="math inline">\(e^{-1/(2b_0\hbar
+g^2)}\)</span> has four properties worth keeping together.</p>
+<ul>
+<li>It vanishes to all orders in <span
+class="math inline">\(\hbar\)</span>, so no finite order of the loop
+expansion sees the gap.</li>
+<li>In four dimensions the running converts it into a power of length,
+<span class="math inline">\(e^{-c/g^2(a)}=(a\Lambda)^{2b_0c}\)</span>:
+dimensional transmutation. This is why the large-field criterion of the
+zero-spacing note is a power-law condition, <span
+class="math inline">\(2b_0c&gt;4\)</span>, and why small instantons go
+like <span class="math inline">\((a\Lambda)^{11N/3}\)</span>.</li>
+<li>Every scale of pure YM<span class="math inline">\(_4\)</span> then
+reads as a suppression with an “action”: <span
+class="math inline">\(\Lambda^k\propto e^{-k/(2b_0g^2)}\)</span>. The
+gap behaves like a configuration of action <span
+class="math inline">\(1/(2b_0)\)</span> in units of <span
+class="math inline">\(g^{-2}\)</span>, which is <span
+class="math inline">\(24\pi^2/33\approx7.2\)</span> for <span
+class="math inline">\(SU(3)\)</span>, against <span
+class="math inline">\(8\pi^2\approx79\)</span> for an instanton; the
+dislocation threshold is <span class="math inline">\(k=D=4\)</span>
+times it. This is a reading, not a result.</li>
+<li>It lies where perturbation theory is ambiguous: the series in <span
+class="math inline">\(g^2\)</span> is not Borel summable, with
+ambiguities of order <span class="math inline">\(e^{-{\rm
+const}/g^2}\)</span>, powers of <span
+class="math inline">\(\Lambda\)</span> (’t Hooft’s renormalons). The gap
+is in the class of quantities the perturbative expansion cannot decide,
+which is why non-perturbative estimates of the H1 type are
+unavoidable.</li>
+</ul>
+<p>The same exponential runs through the programme: Theorem 5’s <span
+class="math inline">\(e^{-\pi^2/(8\lambda_3a)}\)</span> in the
+series/parallel note, the instanton <span
+class="math inline">\(e^{-8\pi^2/g^2}\)</span>, Wien’s tail <span
+class="math inline">\(e^{-h\nu/k_BT}\)</span> (where quantization enters
+Theorem U, through the lumps <span class="math inline">\(h\nu\)</span>),
+and on Newton’s side the action as a phase <span
+class="math inline">\(e^{iS/\hbar}\)</span> or, in Euclidean form, <span
+class="math inline">\(e^{-S/\hbar}\)</span>. In each case the
+exponential is where an action constant meets a threshold. The paper
+could organize the comparison by what each exponential suppresses and
+what survives refinement once the exponent is converted into a
+scale.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>No change to the queue. The table of §2 is proposed as the spine of
+the joint paper’s comparison section, and Layer 1 of §1 as a theorem to
+prove in the form of Theorem U for a general wave field (with the
+cross-field universality). The gravity route of §3 belongs with the
+dimensional note when that note is next revised.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

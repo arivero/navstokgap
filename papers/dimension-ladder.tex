@@ -1,0 +1,269 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The dimension ladder: from 0+0 to 1+3, and what the action constant does on each rung},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{the-dimension-ladder-from-00-to-13-and-what-the-action-constant-does-on-each-rung}{%
+\section{The dimension ladder: from 0+0 to 1+3, and what the action
+constant does on each
+rung}\label{the-dimension-ladder-from-00-to-13-and-what-the-action-constant-does-on-each-rung}}
+
+\textbf{Record of a discussion with the user, 2026-09-27, 02:50--03:15.}
+The user proposed the frame: quantization is a consistency condition
+that Newton's rework of the \emph{Principia} missed, so any supposedly
+well-posed wave equation without a quantization carries a logical issue;
+the ladder of dimensions runs from \(0+0\) through Newton and quantum
+mechanics (\(1+0\), ``YM\(_0\)'') to \(1+3\); and the exponential
+\(e^{-1/(2b_0\hbar g^2)}\) plays a distinct role. This note records the
+resulting statements with their status. The two layers of §1 and the
+table of §2 are the parts meant for the joint paper; §§3--4 are
+readings, labelled as such.
+
+\hypertarget{quantization-as-a-consistency-condition-two-layers}{%
+\subsection{1. Quantization as a consistency condition: two
+layers}\label{quantization-as-a-consistency-condition-two-layers}}
+
+\textbf{Layer 1: every classical wave equation needs a universal action
+constant to be thermodynamically consistent.} Theorem U of the
+\href{necessity-unit-and-indeterminacy.md}{unit-and-indeterminacy note}
+uses Maxwell's field, but its mechanism is general. A classical field
+whose normal-mode frequencies are unbounded (every wave equation on a
+continuum) has, in equilibrium at temperature \(T\), energy \(k_BT\) per
+mode by equipartition, hence infinite energy density. A finite
+equilibrium, which the second law and every thermometer presuppose,
+needs the high modes to freeze out; that compares \(k_BT\) with a
+frequency and so needs a constant with units of action. Two different
+fields in mutual equilibrium must share their occupation law, or a
+filter between them would run a perpetual motion of the second kind
+(Kirchhoff's argument extended from colours to fields); so the constant
+is common to all fields. Einstein applied Planck's constant to the
+vibrations of solids in exactly this way
+(\href{https://doi.org/10.1002/andp.19063270110}{Einstein 1907},
+metadata). Stated as a conjecture-level extension of Theorem U, to be
+proved in the same form: \emph{any classical field with unbounded mode
+frequencies that admits a finite thermal equilibrium requires a
+universal action constant, and mutual equilibrium makes it the same for
+all fields.} A well-posed wave equation remains consistent as
+deterministic mathematics; as physics it is inconsistent once it can
+exchange energy with thermal matter. This is the kind of gap the
+programme attributes to Newton's rework: the limits of the
+\emph{Principia} are consistent, and the inconsistency appears when they
+are combined with thermodynamics and physical records.
+
+\textbf{Layer 2: the quantized theory must itself survive refinement.}
+Once \(\hbar\) is present, the per-cell parameter of the lattice
+refinement is \(t=\hbar g_{\rm cl}^2a^{4-D}\)
+(\href{zero-spacing-any-action.md}{zero-spacing note}, §3):
+
+\begin{itemize}
+\tightlist
+\item
+  \(D<4\): \(t\to0\) and the refinement converges (superrenormalizable);
+\item
+  \(D=4\): marginal; the theory survives only if its coupling runs to
+  zero at short distances. Yang--Mills does (asymptotic freedom).
+  Continuum \(\phi^4_4\) is trivial, a free field
+  (\href{https://doi.org/10.1007/BF01205659}{Aizenman 1982};
+  \href{https://doi.org/10.1016/0550-3213(82)90088-8}{Fröhlich 1982};
+  \href{https://doi.org/10.4007/annals.2021.194.1.3}{Aizenman and
+  Duminil-Copin 2021}; metadata), and QED has a Landau pole; on this
+  reading both classical equations are effective theories with a cutoff;
+\item
+  gravity: \(t=\hbar G/(c^3a^2)=(\ell_P/a)^2\) grows as \(a\to0\), the
+  failure mode of the \(D>4\) row.
+\end{itemize}
+
+\textbf{What ``consistency'' means in each layer.} Layer 1 is a logical
+inconsistency: classical fields, the second law and finite energy are
+jointly contradictory without an action constant. Layer 2 is an
+existence condition on the continuum quantum theory, decided by
+estimates of the kind proved in the series/parallel and zero-spacing
+notes. Neither makes a classical PDE self-contradictory; both say it
+cannot be a complete physical theory by itself. Classical Yang--Mills in
+\(3+1\) Minkowski space exists globally
+(\href{https://doi.org/10.1007/BF01976040}{Eardley and Moncrief 1982},
+metadata), and classical \(\phi^4_4\) is well posed, although its
+continuum quantum theory is free: the large-quantum-number limit of that
+quantum theory is a free classical field. The implication ``quantum
+theory exists \(\Rightarrow\) its classical limit exists'' holds in the
+sense of limits; the converse fails as mathematics. The Euclidean
+formulation makes one version exact: the measure \(e^{-S/\hbar}\) is a
+classical statistical field theory in \(D\) dimensions with \(\hbar\) as
+temperature, so ``quantum YM\(_4\) exists'' (Osterwalder--Schrader) and
+``classical statistical YM\(_4\) at temperature \(\hbar\) exists in the
+continuum'' are one problem, while the classical deterministic PDE is a
+different object.
+
+\hypertarget{the-ladder-in-the-users-1n-labelling}{%
+\subsection{\texorpdfstring{2. The ladder, in the user's \(1+n\)
+labelling}{2. The ladder, in the user's 1+n labelling}}\label{the-ladder-in-the-users-1n-labelling}}
+
+Write \(\lambda_D=\hbar g_{\rm cl}^2\) with
+\([\lambda_D]={\rm length}^{D-4}\), \(D=1+n\), and hold the classical
+coupling \(g_{\rm cl}\) fixed as \(\hbar\to0\).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\(1+n\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theory
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Scale from \(\hbar\), \(c\), \(g_{\rm cl}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(\hbar\)-dependence
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(0+0\) & single integral \(\int dU\,e^{-S/\hbar}\) & no time, no
+spectrum & series in \(\hbar\) plus \(e^{-c/\hbar}\) & integrals \\
+\(1+0\) & Newton, QM (``YM\(_0\)'') & record floor on action; rotor
+\(\hbar^2C_2/(2I)\) & \(\hbar\) (action), \(\hbar^2\) (rotor) & Planck
+paper; rotor exact \\
+\(1+1\) & YM\(_1\) & \(\hbar c\sqrt{\lambda_2}\); circle
+\(\hbar c\lambda_2LC_2/2\) & \(\hbar^{3/2}\); \(\hbar^2L\) & exact; no
+local particle \\
+\(1+2\) & YM\(_2\) & \(C_3\hbar c\lambda_3\) & \(\hbar^2\) & \(C_3\)
+open \\
+\(1+3\) & YM\(_3\) & \(C_4\hbar c\Lambda\) &
+\(e^{-1/(2b_0\hbar g_{\rm cl}^2)}\) & the Millennium problem \\
+\end{longtable}
+
+(The subscripts of the series/parallel and zero-spacing notes count
+spacetime dimension \(D\); here YM\(_n\) is \(D=n+1\).)
+
+\textbf{\(0+0\).} There is no time direction, so no Hamiltonian and no
+gap. What remains is one integral. It is the building block of every
+rung: the plaquette weight \(k_t(U)\) is a \(0+0\) theory, series moves
+(convolution) and parallel moves (products) assemble higher dimensions
+from it, and the elimination of one inserted Newtonian time (Proposition
+2 of the \href{refinement-composition-and-limit.md}{refinement note}) is
+the \(0+0\) piece of mechanics. A zero-dimensional integral such as
+\(\int d\phi\,e^{-(\phi^2/2+g\phi^4)/\hbar}\) already has an asymptotic,
+non-Borel-summable series in \(\hbar\) with ambiguities of order
+\(e^{-c/\hbar}\). At large \(N\) the one-plaquette unitary matrix
+integral, the building block of two-dimensional lattice Yang--Mills, has
+a third-order phase transition
+(\href{https://doi.org/10.1103/PhysRevD.21.446}{Gross and Witten 1980},
+metadata): non-analyticity from a zero-dimensional integral in a limit
+that plays the role of \(a\to0\).
+
+\textbf{\(1+1\) on a circle is exactly a \(1+0\) rotor.} Eq. (10) of the
+refinement note, \(E_R=\hbar c\lambda_2L\,C_2(R)/2\), equals
+\(\hbar^2C_2(R)/(2I)\) with \(I=1/(c\,g_{\rm cl}^2L)\): a quantum rigid
+rotor on the gauge group whose moment of inertia is classical (\(\hbar\)
+cancels from \(I\)). On the infinite line there is no particle; the
+string tension \(\sigma=\hbar c\lambda_2C_2/2\) between static charges
+goes like \(\hbar^2\).
+
+\textbf{The exponents interpolate.} The only energy formed from
+\(\hbar\), \(c\) and a fixed classical coupling is
+\(E\sim\hbar c\,\lambda_D^{1/(4-D)}\), which goes like
+\(\hbar^{(5-D)/(4-D)}\): \(\hbar^{3/2}\) for \(D=2\), \(\hbar^2\) for
+\(D=3\), and a diverging exponent as \(D\to4\). At \(D=4\) no power is
+available, and the running coupling turns the divergent power into
+\(e^{-1/(2b_0\hbar g_{\rm cl}^2)}\), as dimensional regularization sees
+it (\((g^2)^{1/\varepsilon}\) with \(\varepsilon=4-D\) becomes an
+exponential of \(-1/g^2\)). This is dimensional analysis; whether each
+rung has a positive gap is the open content (\(C_3\), and the Millennium
+problem).
+
+\textbf{Classical Yang--Mills has no gap in any dimension}: its waves
+are massless and carry arbitrarily small energy. On every rung the
+large-quantum-number limit is the limit in which the gap disappears.
+
+\textbf{Refinement runs in opposite directions in mechanics and in field
+theory.} For \(D<4\), \(\hbar\to0\) and \(a\to0\) push the same
+per-plaquette parameter \(t=\hbar g_{\rm cl}^2a^{4-D}\) to zero: per
+plaquette, ``more classical'' and ``finer lattice'' are one direction,
+while the global scale where a gap lives stays quantum. In mechanics,
+refining the time cells makes each cell more quantum: the classical
+polygon action per cell shrinks like \(\tau^3\), while the fluctuation
+action per cell stays of order \(\hbar\).
+
+\hypertarget{a-third-route-to-a-universal-action-gravity-with-a-least-length}{%
+\subsection{3. A third route to a universal action: gravity with a least
+length}\label{a-third-route-to-a-universal-action-gravity-with-a-least-length}}
+
+Classical gravitation with finite light speed has no mass-independent
+action (\(Gm^2/c\) depends on the mass). A fixed length \(\ell\)
+supplies one: \(c^3\ell^2/G\). So \((G,c,\ell)\) is a third route to a
+universal action, beside radiation thermodynamics (Theorem U) and the
+Stoney unit \(k_e/c\), and the most Newtonian of the three: \(G\) is
+Newton's constant, \(c\) is Rømer's (1676), and the missing ingredient
+is exactly the least magnitude that the scholium closing Book I, Section
+I refuses by citing Euclid X. The value needs
+\(\ell=\ell_P\approx1.6\times10^{-35}\) m; Newton's interval of fits
+(\(1/89000\) inch) gives \(c^3\Lambda^2/G\sim10^{22}\) J s, off by about
+56 orders of magnitude. The route is logically Newtonian; its value is
+outside Newton-age data.
+
+\hypertarget{the-exponential-ladder-a-reading}{%
+\subsection{4. The exponential ladder (a
+reading)}\label{the-exponential-ladder-a-reading}}
+
+The factor \(e^{-1/(2b_0\hbar g^2)}\) has four properties worth keeping
+together.
+
+\begin{itemize}
+\tightlist
+\item
+  It vanishes to all orders in \(\hbar\), so no finite order of the loop
+  expansion sees the gap.
+\item
+  In four dimensions the running converts it into a power of length,
+  \(e^{-c/g^2(a)}=(a\Lambda)^{2b_0c}\): dimensional transmutation. This
+  is why the large-field criterion of the zero-spacing note is a
+  power-law condition, \(2b_0c>4\), and why small instantons go like
+  \((a\Lambda)^{11N/3}\).
+\item
+  Every scale of pure YM\(_4\) then reads as a suppression with an
+  ``action'': \(\Lambda^k\propto e^{-k/(2b_0g^2)}\). The gap behaves
+  like a configuration of action \(1/(2b_0)\) in units of \(g^{-2}\),
+  which is \(24\pi^2/33\approx7.2\) for \(SU(3)\), against
+  \(8\pi^2\approx79\) for an instanton; the dislocation threshold is
+  \(k=D=4\) times it. This is a reading, not a result.
+\item
+  It lies where perturbation theory is ambiguous: the series in \(g^2\)
+  is not Borel summable, with ambiguities of order
+  \(e^{-{\rm const}/g^2}\), powers of \(\Lambda\) ('t Hooft's
+  renormalons). The gap is in the class of quantities the perturbative
+  expansion cannot decide, which is why non-perturbative estimates of
+  the H1 type are unavoidable.
+\end{itemize}
+
+The same exponential runs through the programme: Theorem 5's
+\(e^{-\pi^2/(8\lambda_3a)}\) in the series/parallel note, the instanton
+\(e^{-8\pi^2/g^2}\), Wien's tail \(e^{-h\nu/k_BT}\) (where quantization
+enters Theorem U, through the lumps \(h\nu\)), and on Newton's side the
+action as a phase \(e^{iS/\hbar}\) or, in Euclidean form,
+\(e^{-S/\hbar}\). In each case the exponential is where an action
+constant meets a threshold. The paper could organize the comparison by
+what each exponential suppresses and what survives refinement once the
+exponent is converted into a scale.
+
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
+
+No change to the queue. The table of §2 is proposed as the spine of the
+joint paper's comparison section, and Layer 1 of §1 as a theorem to
+prove in the form of Theorem U for a general wave field (with the
+cross-field universality). The gravity route of §3 belongs with the
+dimensional note when that note is next revised.
+\end{document}
