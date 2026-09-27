@@ -1,0 +1,462 @@
+# One action constant from composition and spatial rotations
+
+**Result, 2026-09-27 (round 2).** Independent constituent canonical
+algebras with constants $h_i$ obey
+$[L_x,L_y]=i\sum_i h_iL_{iz}$. Requiring the **mechanical sum**
+$\mathbf L=\sum_i\mathbf q_i\times\mathbf p_i$ to obey
+$[L_x,L_y]=ihL_z$ as an identity on the full constituent algebra forces
+$h_i=h$ for every constituent (Theorem 1). Equivalently, at $h\ne0$,
+requiring $\mathbf L/h$ to generate the same spatial rotation on every
+constituent fixes the same normalization. Admissible pair composition
+propagates this equality through a connected graph. Central interactions
+provide a second route if conservation of the mechanical sum is imposed
+under a common commutator evolution (Theorem 2).
+
+Both conclusions admit a common zero value. Spatial rotation covariance
+alone permits unequal $h_i$: for nonzero constants the dimensionless
+generator is $\sum_i\mathbf L_i/h_i$. The additional physical premise
+identifies this generator with the measured additive angular momentum
+divided by one action constant. Integer and half-integer representation
+labels constrain angular momenta relative to that constant; selecting
+its positive magnitude requires further physical input.
+
+These are elementary conditional results, with written proofs below.
+They test the user's composition proposal following
+[round 1, §§4--5](rivero-1998-conjecture-central-forces.md)
+(full-read). Here **$h$ is the reduced phase constant**, so identification
+with quantum mechanics would give $h=\hbar$ and $h_P=2\pi h$.
+The algebra permits signed real constants; positive floors use $|h|$.
+All momenta are measured quantities of motion, with fixed mass and unit
+conventions throughout.
+
+## 1. The constituent algebra and what rotation must mean
+
+Take finitely many labelled bodies, $i=1,\ldots,N$, with masses $m_i>0$,
+three spatial coordinates and three momenta. Assume an associative unital
+complex algebra with self-adjoint generators satisfying
+
+$$
+[q_{ia},q_{jb}]=[p_{ia},p_{jb}]=0,\qquad
+[q_{ia},p_{jb}]=i\delta_{ij}\delta_{ab}h_i1,
+\quad a,b\in\{x,y,z\}. \tag{1}
+$$
+
+The scalars $h_i\in\mathbb R$ remain fixed when the body is put in a
+composite. Distinct constituent algebras commute. Assume also that the
+normally ordered monomials $q^\alpha p^\beta$ are linearly independent:
+we retain the full tensor product of canonical polynomial algebras,
+including its commutative factors when some $h_i=0$. This is the
+precise independence used in coefficient comparisons. Statistical
+independence of states is unnecessary; entangled states are allowed.
+For unbounded operator realizations all displayed identities are on a
+common invariant dense domain representing these polynomials faithfully.
+
+Define, with $\epsilon_{xyz}=1$,
+
+$$
+L_{ia}=\sum_{b,c}\epsilon_{abc}q_{ib}p_{ic},\qquad
+L_a=\sum_iL_{ia}. \tag{2}
+$$
+
+Each term in (2) has unambiguous ordering because $q_{ib}$ and $p_{ic}$
+commute for $b\ne c$. The additivity and mechanical normalization in
+(2) are hypotheses. Independently rescaling each body's momentum would
+change its measured quantity of motion and these hypotheses.
+
+Three distinct requirements can now be stated precisely.
+
+- **Spatial covariance:** the map $q_i\mapsto Rq_i$, $p_i\mapsto Rp_i$
+  is an algebra automorphism for every $R\in SO(3)$.
+- **Mechanical closure:** for one real $h$,
+  $[L_a,L_b]=ih\sum_c\epsilon_{abc}L_c$ on the full algebra.
+- **Mechanical generator identification:** for $h\ne0$, the generator
+  $K_a=L_a/h$ satisfies
+  $[K_a,q_{ib}]=i\sum_c\epsilon_{abc}q_{ic}$ and
+  $[K_a,p_{ib}]=i\sum_c\epsilon_{abc}p_{ic}$ for every body.
+
+The last convention gives
+$U(\theta)=\exp(-i\theta K_a)$ and
+$U(\theta)^\dagger q_{ib}U(\theta)
+=q_{ib}-\theta\sum_c\epsilon_{abc}q_{ic}+O(\theta^2)$,
+the usual active rotation of the vector's components about axis $a$.
+Integration to a group representation additionally needs a strongly
+continuous unitary action with these generators. Lie commutator
+identities alone leave those domain and integrability obligations open.
+For $h\ne0$, such an action is a representation of $SU(2)$; descent to
+$SO(3)$ additionally requires a full $2\pi$ rotation to act as the identity.
+
+The round-1 phase $e^{iL\theta/h_i}$ yields (1) only after an additional
+canonical observable/quantization prescription. A single orbit's angular
+descent condition by itself supplies neither the tensor algebra nor its
+mechanical generator identification. The present theorem begins at that
+explicit algebraic extension.
+
+## 2. Theorem 1: mechanical closure forces a shared constant
+
+**Theorem 1.** Under (1)--(2) and the monomial independence hypothesis,
+mechanical closure holds for a scalar $h$ if and only if $h_i=h$ for
+all $i$. It suffices to impose the single identity
+$[L_x,L_y]=ihL_z$. For $h\ne0$, mechanical generator identification
+is also equivalent to $h_i=h$ for all $i$.
+
+*Proof.* The product rule for commutators gives
+
+$$
+[L_{ia},q_{jb}]=i\delta_{ij}h_i\sum_c\epsilon_{abc}q_{ic},\qquad
+[L_{ia},p_{jb}]=i\delta_{ij}h_i\sum_c\epsilon_{abc}p_{ic}. \tag{3}
+$$
+
+For example, writing $L_{ix}=q_{iy}p_{iz}-q_{iz}p_{iy}$ and
+$L_{iy}=q_{iz}p_{ix}-q_{ix}p_{iz}$, their commutator has exactly the
+surviving terms
+
+$$
+-i h_i q_{iy}p_{ix}+i h_i q_{ix}p_{iy}=ih_iL_{iz}.
+$$
+
+Different bodies commute, so closure of the sum is equivalent to
+
+$$
+\sum_i(h_i-h)L_{iz}=0. \tag{4}
+$$
+
+The monomial $q_{ix}p_{iy}$ in (4) occurs only in $L_{iz}$, with
+coefficient $h_i-h$. Independence makes that coefficient zero for
+each $i$, including a constituent with $h_i=0$. Conversely, equal
+constants give closure in all three directions by the same calculation.
+
+For generator identification, (3) gives, for example,
+$[L_x,q_{iy}]=ih_iq_{iz}$, whereas the required action is
+$ihq_{iz}$. Independence makes $q_{iz}\ne0$, hence $h_i=h$.
+The converse follows directly from (3). $\square$
+
+A restricted observable space needs the corresponding separation
+hypothesis in place of monomial independence: each relation
+$\sum_i c_iL_{ia}=0$ must force every $c_i=0$. Compression to a subspace
+where all orbital $L_i$ vanish makes closure vacuous for arbitrary
+$h_i$. A single orbit, expectation value or rigidly constrained
+configuration can likewise lose the necessary separation. The theorem
+uses observable identities valid for all admitted preparations and
+configurations, with the constituents still individually accessible.
+
+**Transitivity.** Form a graph whose vertices are bodies or species with
+persistent constants $h_i$. Put an edge between two vertices when their
+full pair algebra is admitted and its mechanical sum is required to
+have one closure constant. Theorem 1 gives equality on each edge and
+therefore throughout each connected component. Connectedness gives one
+constant for the whole class, without assuming that every pair interacts
+directly. Disconnected components remain unrelated unless a common
+composite or generator condition links them. A context-dependent $h_i$
+would require a further preparation-equivalence premise before this
+argument could compare contexts.
+
+**Role of three dimensions.** A single planar rotation generator has
+$[L_z,L_z]=0$, which tests no normalization. In three dimensions the
+non-abelian bracket in (4) compares the mechanical sums internally.
+Requiring the correct action on each $q_i,p_i$ already compares
+normalizations in two dimensions by (3). Three dimensions strengthen
+the closure test; generator identification itself needs only one
+nontrivial rotation plane.
+
+## 3. Rotation covariance and the interaction test
+
+### Covariance with unequal constants
+
+For arbitrary $h_i$, each scalar canonical block in (1) is rotation
+invariant. An explicit associative realization on polynomials is
+
+$$
+f*g=\mu\exp\left[\frac i2\sum_i h_i P_i\right] (f\otimes g),\qquad
+P_i=\sum_a\left(\partial_{q_{ia}}\otimes\partial_{p_{ia}}
+-\partial_{p_{ia}}\otimes\partial_{q_{ia}}\right). \tag{5}
+$$
+
+The exponential terminates on polynomials. The constant derivative
+operators commute, so either association of three factors gives the
+same exponential of the sum over their three pairings. Each $P_i$ is
+invariant under simultaneous spatial rotations. Thus (5) supplies
+covariance for every tuple $(h_1,\ldots,h_N)$.
+
+If all $h_i\ne0$, define
+
+$$
+K_a=\sum_i L_{ia}/h_i.
+$$
+
+Equations (3) give $[K_a,K_b]=i\epsilon_{abc}K_c$ (summed $c$)
+and the correct rotations of all constituent observables. Concretely,
+on $L^2(\mathbb R^{3N})$, $p_i=-ih_i\nabla_i$ yields
+$\mathbf K=-i\sum_i\mathbf q_i\times\nabla_i$, which integrates to
+simultaneous scalar rotations for arbitrary nonzero $h_i$. The
+identification $K_a=L_a/h$ adds exactly the normalization tested in
+Theorem 1. With some zero factors, spatial covariance still holds as
+an automorphism; commutators with their central observables vanish,
+so their rotations require an outer derivation.
+
+### Central interactions and conservation
+
+For classical Newton dynamics about a fixed inertial origin,
+$\dot q_i=p_i/m_i$ and $\dot p_i=\sum_{j\ne i}F_{ij}$, the strong central
+form of the Third Law is
+$F_{ji}=-F_{ij}$ with $F_{ij}$ parallel to $q_i-q_j$. It gives
+
+$$
+\dot{\mathbf L}
+=\sum_{i<j}(q_i-q_j)\times F_{ij}=0. \tag{6}
+$$
+
+Equal and opposite forces together with centrality do the work here.
+Equation (6) uses neither a commutator nor an action constant. Transferring
+this conservation law to the deformed observable algebra needs a
+specified evolution law.
+
+**Theorem 2 (conservation propagates equality along interacting pairs).**
+Assume (1), faithful configuration observables on open sets, and a
+Hamiltonian
+
+$$
+H=\sum_i\frac{p_i^2}{2m_i}+\sum_{i<j}V_{ij}(r_{ij}),\qquad
+r_{ij}=|q_i-q_j|. \tag{7}
+$$
+
+Assume commutator differentiation
+$[p_{ia},V]=-ih_i\partial_{q_{ia}}V$ on a common domain. This holds
+algebraically for polynomial potentials, or on a smooth domain away
+from collisions for the coordinate realization. Give time evolution
+one fixed nonzero action normalization $h_t$,
+$\dot A=[A,H]/(ih_t)$. Require conservation of the mechanical sum
+for every admitted pair interaction, with other pair couplings
+independently switchable off. For each tested edge require
+$V_{ij}'(r_{ij})\ne0$ on some open set allowing
+$q_i\times q_j\ne0$. Then conservation forces $h_i=h_j$ on that
+edge, and therefore one value per connected interaction component.
+
+*Proof.* The kinetic energies commute with each $L_i$. For one pair,
+$\nabla_j V_{ij}=-\nabla_i V_{ij}$, and centrality gives
+$(q_i-q_j)\times\nabla_i V_{ij}=0$. Consequently
+
+$$
+[\mathbf L,V_{ij}]
+=i(h_i-h_j)q_i\times\nabla_i V_{ij}
+=-i(h_i-h_j)\frac{V_{ij}'(r_{ij})}{r_{ij}}q_i\times q_j. \tag{8}
+$$
+
+The configuration factor is a nonzero observable on the stated open
+set. Conservation, equivalent to $[\mathbf L,H]=0$, forces $h_i=h_j$.
+When constants agree on every interacting edge, (8) proves the converse
+conservation statement as well. $\square$
+
+One central harmonic interaction suffices as a polynomial test:
+$V_{ij}=k_{ij}|q_i-q_j|^2/2$, $k_{ij}>0$, gives the exact defect
+$-ik_{ij}(h_i-h_j)q_i\times q_j$. This permits full configuration
+variation and keeps every step inside the polynomial algebra.
+Restriction to collinear configurations or to a pair's fixed
+centre-of-mass frame would remove this particular torque test;
+conservation about arbitrary fixed origins restores its stated scope.
+An external central potential for each isolated body gives no such
+exchange test and allows different constants.
+
+Theorem 2 compares the $h_i$ but leaves their common value relative to
+$h_t$ undetermined. Demanding the full Newton equations with the
+physical Hamiltonian (7) gives the stronger identities
+
+$$
+\dot q_i=\frac{h_i}{h_t}\frac{p_i}{m_i},\qquad
+\dot p_i=-\frac{h_i}{h_t}\nabla_i V. \tag{9}
+$$
+
+Requiring $\dot q_i=p_i/m_i$ for unrestricted momenta forces
+$h_i=h_t$. This route already assumes a nonzero inner-commutator
+clock. Alternatively, assigning each body its own denominator and
+retaining all Newton equations must respect the shared product:
+for any derivation $D$ with $Dp_{ia}=-\partial_{ia}V$,
+
+$$
+0=D[p_{ia},p_{jb}]
+=i(h_i-h_j)\partial_{ia}\partial_{jb}V,\qquad i\ne j. \tag{10}
+$$
+
+A nonzero mixed force derivative again equates the constants. Equation
+(10) follows by applying the Leibniz rule to the zero cross commutator;
+it exposes the compatibility obligation of separate denominators.
+The common zero branch satisfies (10) and supports ordinary classical
+Hamiltonian evolution by a Poisson derivation.
+
+## 4. What happens at zero, and what spin can add
+
+**Corollary (universality and positivity).** Theorem 1 forces a common
+real value, with $h=0$ allowed. If one constituent has an independently
+established $h_i\ne0$, connected composition propagates its nonzero value
+to the entire component. The positivity input lies in that reference
+constituent. Theorem 2 likewise permits all $h_i=0$; its commutator
+clock then gives trivial evolution. Classical nontrivial dynamics uses
+the Poisson bracket instead.
+
+For the common family (5), all real $h$ give associative algebras.
+At $h=0$ the product is ordinary multiplication. Spatial rotations
+remain non-abelian: their derivations are
+$D_a f=\{f,L_a\}_{\rm P}$, and classical angular momenta obey
+$\{L_a,L_b\}_{\rm P}=\epsilon_{abc}L_c$. The Poisson algebra supplies
+the rotation structure while the multiplication algebra is commutative.
+For polynomial observables the common Moyal family has
+
+$$
+\lim_{h\to0}\frac{[f,g]_{*_h}}{ih}=\{f,g\}_{\rm P}. \tag{11}
+$$
+
+Requiring a nontrivial rotation to be implemented specifically by
+$\exp(-i\theta L_a/h)$ selects $h\ne0$ in the premise. Its formula
+requires division by $h$; classical rotations remain perfectly defined
+by their derivations at zero. A strongly continuous unitary rotation
+representation alone also leaves this choice open: pullback rotates
+classical phase-space functions in $L^2$ using differential generators,
+while measured classical angular momenta act by multiplication.
+
+For $h\ne0$, supply self-adjoint angular generators integrating to a
+unitary $SU(2)$ representation. Its irreducible sectors have
+
+$$
+J^2=h^2j(j+1),\qquad J_z=hm,\qquad
+j\in\{0,\tfrac12,1,\tfrac32,\ldots\},\quad
+m=-j,-j+1,\ldots,j. \tag{12}
+$$
+
+Here $J$ denotes total angular momentum, including any supplied
+internal spin. To recall the dimensionless argument, put $K=J/h$ and
+$K_\pm=K_x\pm iK_y$. Then
+$[K_z,K_\pm]=\pm K_\pm$ and
+$K_\mp K_\pm=K^2-K_z^2\mp K_z$. In an irreducible unitary sector,
+positivity bounds the ladder above and below. Its highest weight $j$
+has $K^2=j(j+1)$; the lowest weight is $-j$, so $2j$ is a nonnegative
+integer. A full rotation acts by $e^{-2\pi im}=(-1)^{2j}$;
+$SO(3)$ descent retains integer $j$.
+
+For ordinary scalar orbital wavefunctions, $L=q\times(-ih\nabla)$
+has integer orbital labels and spherical harmonics. The canonical
+angular algebra and this orbital spectrum are standard; see
+[Tong, *Quantum Mechanics*, §§4.1.1--4.1.2](https://www.damtp.cam.ac.uk/user/tong/qm/qmhtml/S4.html)
+(passage, commutator and spherical-harmonic derivations read).
+Half-integer spin requires additional internal degrees of freedom or
+an explicitly different state space. The central-force orbital
+construction supplies no such degrees of freedom by itself.
+If independent spin observables commute with the orbital variables,
+requiring $J=L+S$ to rotate those variables still gives (3), hence the
+same orbital universality result. Requiring it also to rotate each
+nontrivial spin algebra fixes the spin normalization in the same way.
+
+Equation (12) supplies dimensionless spectral ratios. The Casimir is
+discrete; its factor $j(j+1)$ is integer for integer $j$ and can be
+fractional for half-integer $j$. Conditional on fixed $|h|>0$, the
+smallest nonzero $J^2$ among all integer sectors is $2h^2$, and among
+all $SU(2)$ sectors it is $3h^2/4$. A chosen representation can omit
+these sectors; the scalar sector $j=0$ always remains an allowed
+representation. Both spectral factors leave the dimensional value of $h$ free.
+
+More explicitly, rescaling $J\mapsto\lambda J$, $h\mapsto\lambda h$
+for $\lambda>0$ preserves the generators $K$, all rotation matrices,
+and the integer/half-integer labels. A measured nonzero magnitude
+$\ell$ and a known $j>0$ would fix
+$|h|=\ell/\sqrt{j(j+1)}$, using that dimensional measurement as input.
+With only $\ell$ fixed, unbounded $j$ allows values tending to zero.
+Several specified component and Casimir eigenvalues can further
+constrain $j$ and their ratios; this constitutes additional spectral
+data. The scale freedom of the representation conditions alone remains.
+
+## 5. Comparison with the two composition and dimensional results
+
+The [classical composition note, §§1--3](composition-universality.md)
+(full-read) concerns a fluctuation coefficient $\kappa(m)\ge0$ and
+independent displacement variances. Its whole-body premise is
+
+$$
+\kappa(m_1+m_2)
+=\frac{m_1\kappa(m_1)+m_2\kappa(m_2)}{m_1+m_2}.
+$$
+
+For all positive masses, $f(m)=m\kappa(m)$ is additive and nonnegative,
+hence linear; $\kappa(m)=K\ge0$. A reference constituent then supplies
+$K=m_0u_0^2/\lambda_0>0$ under the stated nonzero-speed and finite-rate
+premises. The rotation theorem replaces this mass-additivity premise
+with mechanical generator identification and separation of constituent
+observables. A connected species graph suffices, and arbitrary positive
+masses need not be admitted. Both arguments propagate a coefficient;
+each obtains positivity only with additional input. Identifying $K$
+with the phase constant $h$ remains another physical obligation.
+
+There is an exact parallel in centre and relative variables. Set
+$M=m_1+m_2$, $\mu=m_1m_2/M$,
+
+$$
+R=\frac{m_1q_1+m_2q_2}{M},\quad r=q_1-q_2,\quad
+P=p_1+p_2,\quad p=\frac{m_2p_1-m_1p_2}{M}.
+$$
+
+Bilinearity in (1) gives
+
+$$
+\begin{aligned}
+{}[R_a,P_b]&=i\delta_{ab}\frac{m_1h_1+m_2h_2}{M},&
+[r_a,p_b]&=i\delta_{ab}\frac{m_2h_1+m_1h_2}{M},\\
+[R_a,p_b]&=i\delta_{ab}\frac{\mu}{M}(h_1-h_2),&
+[r_a,P_b]&=i\delta_{ab}(h_1-h_2).
+\end{aligned} \tag{13}
+$$
+
+Thus canonical independence of the centre and relative algebras forces
+$h_1=h_2$. The classical note has the corresponding covariance
+$\operatorname{Cov}(\Delta R,\Delta r)=\Delta(\kappa_1-\kappa_2)/M$;
+for its Gaussian preparations vanishing covariance gives statistical
+independence. Equation (13) concerns commuting observable algebras,
+which can carry correlated or entangled states. The two independence
+premises have distinct meanings despite their matching coefficients.
+
+The [fifth-postulate note](principia-fifth-postulate.md) (full-read)
+places these results as follows. Its Theorem B obtains a single Moyal
+constant under full affine symplectic covariance. Applying that premise
+to the combined phase space already includes transformations mixing
+bodies, including (13), whereas separate one-body covariance allows
+one constant per factor as in (5). Theorem 1 isolates a narrower
+comparison using physical angular generators; it leaves general
+star-product uniqueness to the stronger covariance theorem. Theorem A
+retains the common zero and nonzero families under its Newton equations.
+Theorems C and E give conditional disturbance and concentration bounds
+once $|h|>0$ is supplied. Theorem D records action rescaling. The
+Gaussian state restriction of B' supplies its own $\zeta$ in a
+commutative algebra; spatial rotations and the present commutator
+test leave a relation $2\zeta=|h|$ to an additional premise.
+
+Finally, [the dimensional note, Theorem A](action-unit-dimensional-selection.md)
+(full-read) applies to a universal floor $g(c)$ determined by fixed
+constants $c_r$. If an action product exists, its form is
+
+$$
+g(c)=\left(\prod_r c_r^{a_r}\right)F(\pi_1,\ldots,\pi_s),\qquad
+\sum_r a_r d_r=(1,2,-1). \tag{14}
+$$
+
+It reduces to a pure number times the product when the fixed constants
+have no independent dimensionless products. Rotation angles, group
+structure constants, $j$ and $m$ are dimensionless and add no action
+unit to (14). When the fixed constants admit no action-dimensional
+product, Theorem A allows only a zero or infinite universal floor;
+dimensionless rotations preserve that conclusion. Treating $h$ as a new independent fixed constant makes
+$|h|$ the supplied unit. Deriving a universal $|h|$ from pre-existing
+constants instead requires dimensional homogeneity and the same
+covariance argument as (14); angular universality provides no value
+for its dimensionless factor or proof of its positivity. For the
+fixed $k_e=e^2/(4\pi\epsilon_0)$, $c$ and $G$ of that note, this would
+read $|h|=Ck_e/c$. The rotation theorem leaves $C$ undetermined.
+A coefficient and the infimum of a specified action observable also
+need a proved relation before (14) can be used as a floor statement.
+
+## 6. Consequence for STATE
+
+Item 2 gains conditional universality from mechanical angular-momentum
+composition: one constant per connected class follows from faithful
+rotation closure, or from conservation under the stated interacting
+commutator dynamics. The precise additional premise beyond round 1
+is the identification of additive measured angular momentum with the
+common rotation generator. The remaining necessity task is a physical
+premise selecting a nonzero branch and an action unit; spin topology
+and Casimir discreteness leave that obligation open. All conclusions
+above are proved under their displayed hypotheses.

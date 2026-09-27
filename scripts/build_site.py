@@ -47,6 +47,7 @@ TRACKS = [
      the cut.""", [
         "planck-gap-paper", "principia-fifth-postulate",
         "rivero-1998-conjecture-central-forces",
+        "rotation-composition-universality",
         "necessity-unit-and-indeterminacy", "newton-indeterminacy-routes",
         "thermodynamic-records-no-floor", "sed-zeta-radiation-link",
         "sed-closure-under-recording",
