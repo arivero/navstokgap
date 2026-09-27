@@ -1,0 +1,223 @@
+# The bridge midpoint on a compact group at any cut: windings and the centre
+
+**Result, 2026-09-28 (Claude; written derivation, to be refereed by
+GPT-6 Astra).** Let $G$ be a compact simply connected Lie group and take
+the heat-kernel bridge of total heat time $t$ from $e$ to $g=e^{iX}$, cut
+at fraction $s\in(0,1)$, so that the first piece has heat time $st$. For
+every irreducible representation $\lambda$ the midpoint expectation of its
+character is an exact finite sum, over the weights $\kappa$ of $\lambda$, of
+image sums over the coroot lattice $Q^\vee$ (Theorem 1):
+
+$$E\,\chi_\lambda(m)=\frac{\displaystyle\sum_\kappa m_\lambda(\kappa)\,
+e^{-ts(1-s)|\kappa|^2/2}\,e^{is\langle\kappa,X\rangle}
+\sum_{H\in Q^\vee}e^{2\pi i(1-s)\langle\kappa,H\rangle}\,
+\pi\!\Bigl(\tfrac it(X-2\pi H)-(1-s)\kappa\Bigr)\,G_H}
+{\displaystyle\sum_{H\in Q^\vee}\pi\!\Bigl(\tfrac it(X-2\pi H)\Bigr)\,G_H},
+\qquad G_H=e^{-|X-2\pi H|^2/(2t)}, \tag{1}$$
+
+with $m_\lambda(\kappa)$ the weight multiplicities and
+$\pi(v)=\prod_{\alpha>0}\langle v,\alpha\rangle/\langle\rho,\alpha\rangle$ the Weyl dimension
+polynomial.
+
+- **Corollary 2 (reductions).** For $U(1)$, (1) is the winding mixture of
+  [Corollary 5$_s$](series-parallel-gauge-refinement.md)(a). For $SU(2)$ at
+  $s=\frac12$ it is Theorems 1 and 3 of the
+  [$SU(2)$ midpoint note](su2-midpoint-exact.md), image terms included.
+- **Corollary 3 (the centre).** The phase $e^{2\pi i(1-s)\langle\kappa,H\rangle}$ of an image is
+  the same for all weights of every representation iff $(1-s)H\in P^\vee$,
+  the coweight lattice, and it is then the central character of $\lambda$ at
+  $z_H=e^{2\pi i(1-s)H}$. At $s=p/q$ in lowest terms these central images reach
+  exactly the $q$-torsion of the centre: $\mathbb Z_{\gcd(q,N)}$ for $SU(N)$.
+- **Corollary 4 ($SU(3)$).** At $s=\frac13$ the central images are $H\in3P^\vee$;
+  the smallest are the two Weyl triples of $\pm(1,1,-2)$, of relative weight
+  about $e^{-24\pi^2/t}$, and they carry $\omega^2$ and $\omega$ on the fundamental
+  ($\omega=e^{2\pi i/3}$), the conjugates on the antifundamental and $1$ on the
+  adjoint. At $s=\frac12$ every image with a nontrivial phase has a
+  weight-dependent one: no halving of $SU(3)$ reaches the centre.
+
+For $SU(2)$ at $s=\frac12$ the phase is $(-1)^w$ for half-integer spin and $1$
+for integer spin. This is Dirac's belt trick, $\pi_1(SO(3))=\mathbb Z_2$
+([Newman 1942](https://doi.org/10.1112/jlms/s1-17.3.173), metadata),
+appearing in the exact midpoint law: a bridge winding $w$ times round the
+group makes $w$ extra $720^\circ$ turns, and its midpoint makes $w$ extra $360^\circ$
+turns, which the spinor characters detect. For $SU(3)$ the same mechanism
+carries the triality, and only cuts at thirds (or at denominators
+divisible by $3$) produce it.
+
+The ingredients are character orthogonality, the Brauer--Klimyk rule and
+Poisson summation, as in the $SU(2)$ note; the denominator of (1) is the
+classical image formula for the heat kernel on a compact group
+([Fegan 1983](https://doi.org/10.4310/jdg/1214438176), metadata). No
+novelty is claimed for the method.
+
+## 1. Conventions
+
+The group metric is that of the
+[series/parallel note](series-parallel-gauge-refinement.md) §1:
+$-\Delta_G\chi_\lambda=C_2(\lambda)\chi_\lambda$ with $C_2(\lambda)=|\lambda+\rho|^2-|\rho|^2$ in the inner product on
+weights dual to the metric on the Cartan algebra $\mathfrak t$. For $SU(N)$
+roots have $|\alpha|^2=1$ and coroots $\alpha^\vee=2\alpha/|\alpha|^2$ have $|\alpha^\vee|^2=4$, which is
+the metric $|Y|^2=2\,{\rm tr}\,Y^2$ on $\mathfrak t$; then $C_2(j)=j(j+1)$ for $SU(2)$ and
+$C_2(\mathbf 3)=\frac43$ for $SU(3)$. Torus elements are $e^{iX}$, $X\in\mathfrak t$; the
+pairing of the weight lattice $P$ with the coroot lattice $Q^\vee$ is
+integral, $P$ and $Q^\vee$ are dual lattices, and $e^{iX}=e$ iff $X\in2\pi Q^\vee$ ($G$
+simply connected). The coweight lattice $P^\vee$ is dual to the root lattice
+$Q$, and $P^\vee/Q^\vee\cong Z(G)$ through $Y\mapsto e^{2\pi iY}$. For $SU(2)$, $|X|=\theta$ is the
+rotation angle of the $SU(2)$ note, and $X-2\pi w\alpha^\vee$ has length $|\theta-4\pi w|$.
+
+Heat kernel $k_t=\sum_\lambda d_\lambda e^{-tC_2(\lambda)/2}\chi_\lambda$. The bridge midpoint $m$ has
+density $k_{st}(m)\,k_{(1-s)t}(m^{-1}g)/k_t(g)$ with respect to Haar measure;
+the bridge law (4) of the series/parallel note becomes this one after a
+left translation, and Corollary 2$_s$ there gives the cut faces heat
+times $st$ and $(1-s)t$.
+
+Weyl: $A_v(X)=\sum_{w\in W}\varepsilon(w)e^{i\langle wv,X\rangle}$, $\chi_\lambda=A_{\lambda+\rho}/A_\rho$, $d_\lambda=\pi(\lambda+\rho)$.
+Extend $\chi_\nu:=A_{\nu+\rho}/A_\rho$ to every $\nu\in P$: it is zero or $\pm$ an irreducible
+character, and $C_2(\nu):=|\nu+\rho|^2-|\rho|^2$ is invariant under the shifted Weyl
+action, so it is the Casimir of that character.
+
+*Brauer--Klimyk rule.* $\chi_\lambda\chi_\mu=\sum_\kappa m_\lambda(\kappa)\chi_{\mu+\kappa}$ for dominant $\mu$.
+Indeed $\chi_\lambda A_{\mu+\rho}=\sum_\kappa m_\lambda(\kappa)e^{i\langle\kappa,X\rangle}\sum_w\varepsilon(w)e^{i\langle w(\mu+\rho),X\rangle}$, and
+replacing $\kappa$ by $w\kappa$, which leaves $m_\lambda$ invariant, gives
+$\sum_\kappa m_\lambda(\kappa)A_{\mu+\kappa+\rho}$.
+
+## 2. Theorem 1 and its proof
+
+**Theorem 1.** For $X$ regular, (1) holds; for singular $X$ it holds by
+continuity.
+
+*Proof.* (i) *Characters.* Expanding both heat kernels,
+$k_t(g)E\chi_\lambda(m)=\sum_{\mu,\nu}d_\mu d_\nu e^{-stC_2(\mu)/2-(1-s)tC_2(\nu)/2}
+\int\chi_\lambda(m)\chi_\mu(m)\chi_\nu(m^{-1}g)\,dm$. The Brauer--Klimyk rule and
+$\int\chi_a(m)\chi_b(m^{-1}g)dm=\delta_{ab}\chi_a(g)/d_a$ give
+
+$$k_t(g)\,E\chi_\lambda(m)=\sum_{\mu\ {\rm dominant}}d_\mu\sum_\kappa m_\lambda(\kappa)\,
+e^{-stC_2(\mu)/2-(1-s)tC_2(\mu+\kappa)/2}\,\chi_{\mu+\kappa}(g).$$
+
+(ii) *Unfolding.* Multiply by $A_\rho(X)$ and put $v=\mu+\rho$, which runs over
+the strictly dominant weights. The summand becomes
+$\pi(v)\,m_\lambda(\kappa)\,e^{-\frac t2[s|v|^2+(1-s)|v+\kappa|^2-|\rho|^2]}A_{v+\kappa}(X)$. Expand
+$A_{v+\kappa}$ and substitute $v\mapsto w^{-1}v$, $\kappa\mapsto w^{-1}\kappa$: $\varepsilon(w)\pi(w^{-1}v)=\pi(v)$, and
+$m_\lambda$ and the norms are Weyl invariant. Each regular weight is the image
+of exactly one strictly dominant weight, and $\pi$ vanishes on the walls, so
+
+$$A_\rho(X)k_t(g)E\chi_\lambda(m)=e^{t|\rho|^2/2}\sum_\kappa m_\lambda(\kappa)
+\sum_{v\in P}\pi(v)\,e^{-\frac t2[s|v|^2+(1-s)|v+\kappa|^2]}e^{i\langle v+\kappa,X\rangle}.$$
+
+(iii) *Square.* $s|v|^2+(1-s)|v+\kappa|^2=|v+(1-s)\kappa|^2+s(1-s)|\kappa|^2$.
+
+(iv) *Poisson summation* over $P$, whose dual lattice is $Q^\vee$:
+$\sum_{v\in P}f(v)={\rm vol}(\mathfrak t^*/P)^{-1}\sum_{H\in Q^\vee}\hat f(H)$ with
+$\hat f(H)=\int f(y)e^{-2\pi i\langle y,H\rangle}dy$. With $y=u-(1-s)\kappa$ one has
+$\langle y+\kappa,X\rangle=\langle u,X\rangle+s\langle\kappa,X\rangle$ and $\langle y,H\rangle=\langle u,H\rangle-(1-s)\langle\kappa,H\rangle$, so
+
+$$\hat f(H)=e^{is\langle\kappa,X\rangle}e^{2\pi i(1-s)\langle\kappa,H\rangle}\int\pi(u-(1-s)\kappa)\,
+e^{-t|u|^2/2}e^{i\langle u,Z\rangle}du,\qquad Z=X-2\pi H.$$
+
+(v) *The Gaussian integral.* $\pi$ is harmonic: $\Delta\pi$ is Weyl-antisymmetric
+of lower degree, and every Weyl-antisymmetric polynomial is divisible by
+$\pi$. Its derivatives are harmonic too. For a harmonic homogeneous $h$ of
+degree $d$, Hobson's formula $h(\partial)F(|Z|^2)=2^dh(Z)F^{(d)}(|Z|^2)$ gives
+$h(-i\partial_Z)e^{-|Z|^2/(2t)}=h(iZ/t)\,e^{-|Z|^2/(2t)}$. Taylor-expanding $\pi(u-c)$ in $c$
+into harmonic pieces and summing back,
+
+$$\int\pi(u-c)\,e^{-t|u|^2/2+i\langle u,Z\rangle}du=\Bigl(\frac{2\pi}t\Bigr)^{n/2}
+\pi\Bigl(\frac{iZ}t-c\Bigr)e^{-|Z|^2/(2t)},\qquad n=\dim\mathfrak t.$$
+
+(vi) The trivial representation ($\kappa=0$ only) gives the denominator.
+The constants $e^{t|\rho|^2/2}$, ${\rm vol}(\mathfrak t^*/P)^{-1}$ and $(2\pi/t)^{n/2}$ cancel. All
+sums converge absolutely. $\square$
+
+The polynomial ratio for a single image is
+$\pi(\frac it Z-(1-s)\kappa)/\pi(\frac itZ)=\prod_{\alpha>0}\bigl(1+i(1-s)t\langle\kappa,\alpha\rangle/\langle Z,\alpha\rangle\bigr)$, the
+curvature correction; for $SU(2)$ at $s=\frac12$ it is the factor
+$1+ikt/(2\theta)$ behind the $-\frac t{2\theta}k\sin\frac{k\theta}2$ term of the $SU(2)$ note.
+
+## 3. Reductions (Corollary 2)
+
+*$U(1)$.* $P=Q^\vee=\mathbb Z$, $\pi\equiv1$, $\rho=0$, $\langle n,H\rangle=nH$, $X=\theta$:
+$E\,e^{inm}=e^{-ts(1-s)n^2/2}\sum_He^{in(s\theta+2\pi(1-s)H)}G_H/\sum_HG_H$, the characteristic
+function of the mixture over the winding $H$, with weights $\propto e^{-(\theta-2\pi H)^2/(2t)}$,
+of wrapped Gaussians of variance $s(1-s)t$ centred at $s\theta+2\pi(1-s)H$. This is
+Corollary 5$_s$(a) of the series/parallel note.
+
+*$SU(2)$, $s=\frac12$.* The weights of spin $J$ are $\kappa=k\alpha$, $k=-J,\dots,J$, with
+$|\kappa|^2=k^2$, $\langle\kappa,X\rangle=k\theta$, $\langle\kappa,w\alpha^\vee\rangle=2kw$, and $\pi(v)=2\langle v,\alpha\rangle$. The
+phase is $e^{2\pi ikw}$: $(-1)^w$ for half-integer $J$ and $1$ for integer $J$. With
+$\Xi_{(\sigma)},\Theta_{(\sigma)}$ as in the $SU(2)$ note, the numerator of (1) is
+$\sum_ke^{-tk^2/8}e^{ik\theta/2}\bigl[\frac it\Xi_{(\sigma)}-\frac k2\Theta_{(\sigma)}\bigr]$ and the denominator is $\frac it\Xi_+$.
+Symmetrizing in $k$ gives Theorem 3 of that note, and $J=\frac12$ gives its
+Theorem 1, $e^{-t/32}[2\cos\frac\theta4\,\Xi_--\frac t2\sin\frac\theta4\,\Theta_-]/\Xi_+$.
+
+## 4. The centre (Corollary 3)
+
+*Proof.* Two weights of one representation differ by an element of the
+root lattice $Q$, so $e^{2\pi i(1-s)\langle\kappa,H\rangle}$ is independent of $\kappa$ for every $\lambda$ iff
+$\langle\beta,(1-s)H\rangle\in\mathbb Z$ for all $\beta\in Q$, i.e. iff $(1-s)H\in Q^*=P^\vee$. Then
+$e^{2\pi i(1-s)\langle\kappa,H\rangle}=e^{2\pi i\langle\lambda,(1-s)H\rangle}$ is the scalar by which the central element
+$z_H=e^{2\pi i(1-s)H}$ acts in $\lambda$. For $s=p/q$ in lowest terms, $(1-s)=(q-p)/q$ with
+$\gcd(q-p,q)=1$, and $(q-p)H/q\in P^\vee$ iff $H/q\in P^\vee$ (Bézout, since
+$H\in Q^\vee\subset P^\vee$). So the central images are $H\in qP^\vee\cap Q^\vee$, and the elements
+reached are $e^{2\pi i(q-p)Y}$ with $Y\in P^\vee\cap q^{-1}Q^\vee$: the $q$-torsion of
+$P^\vee/Q^\vee\cong Z(G)$, on which multiplication by $q-p$ is an automorphism. For
+$SU(N)$, $Z(G)=\mathbb Z_N$ and its $q$-torsion is $\mathbb Z_{\gcd(q,N)}$. $\square$
+
+Consequences. Dyadic refinement ($q=2^n$) reaches the $2$-primary part of
+the centre: all of it for $SU(2)$ at the first halving, $\pm1$ at a halving
+and $\mathbb Z_4$ at quarters for $SU(4)$, nothing for $SU(3)$ or any odd $N$. The
+image classes of a halving are all central only for $SU(2)$, where
+$\frac12Q^\vee=P^\vee$.
+
+Geometrically the central elements are focal points of $e$: the shortest
+geodesics from $e$ to $e^{2\pi iY}$ ($Y\in P^\vee$ of minimal norm in its class) form
+the adjoint orbit of $Y$, a sphere $S^2$ for $-1\in SU(2)$ and a $\mathbb{CP}^2$ for
+$\omega\cdot1\in SU(3)$, because conjugation fixes both endpoints.
+
+## 5. $SU(3)$ (Corollary 4)
+
+Use $\mathfrak t=\{H\in\mathbb R^3:\sum H_i=0\}$, $Q^\vee=\mathfrak t\cap\mathbb Z^3$, $|H|^2=2\sum H_i^2$. The weights of $\mathbf3$
+are $\kappa_i=e_i-\frac13(1,1,1)$, so $\langle\kappa_i,H\rangle=H_i$: the image $H$ carries the phase
+$e^{2\pi i(1-s)H_i}$ on the $i$-th weight.
+
+- $s=\frac13$: the phases $e^{4\pi iH_i/3}$ agree iff $H_1\equiv H_2\equiv H_3\pmod3$, i.e.
+  $H\in3P^\vee$. For $(1,1,-2)$ and its Weyl images all $H_i\equiv1$ and the phase is
+  $e^{4\pi i/3}=\omega^2$; for $(-1,-1,2)$ and its images it is $\omega$. The
+  antifundamental gets the conjugates; the adjoint, with weights $e_i-e_j$,
+  gets $e^{4\pi i(H_i-H_j)/3}=1$. These images have $|H|^2=12$, so
+  $G_H/G_0=e^{-24\pi^2/t+2\pi\langle X,H\rangle/t}$. The root images, such as $(1,-1,0)$ with
+  $|H|^2=4$ and $G_H/G_0\approx e^{-8\pi^2/t}$, give the fundamental the phases $\omega^2,\omega,1$:
+  weight-dependent.
+- $s=\frac12$: the phases $e^{\pi iH_i}$ agree iff all $H_i$ have the same parity;
+  with $\sum H_i=0$ they are then all even, $H\in2Q^\vee$, and the phase is $1$.
+
+So an $SU(3)$ halving produces only weight-dependent phases (non-central
+shifts), and a trisection produces the triality character on the classes
+$3P^\vee$, below the root images by the factor $e^{-16\pi^2/t}$.
+
+## 6. What the result says, and what it leaves open
+
+It is an exact statement about one bridge, the building block of the
+parallel insertion, for every compact simply connected group, every
+representation and every cut fraction. In the refinement it fixes which
+windings of a single step act through the centre. The weights are small
+per step: in $1+3$ the image exponents $8\pi^2$ (roots) and $24\pi^2$ (central
+$SU(3)$ trisection images) lie far beyond the per-volume threshold
+$c>2/b_0=32\pi^2/11$ of the [zero-spacing note](zero-spacing-any-action.md) for
+$SU(3)$. Centre-valued link configurations exist on any lattice whatever
+the blocking, and thick centre vortices
+([Mack and Petkova 1979](https://doi.org/10.1016/0003-4916(79)90346-4);
+['t Hooft 1978](https://doi.org/10.1016/0550-3213(78)90153-0); metadata)
+are a question about many steps. Whether a triadic refinement, $b=3$,
+organizes the $SU(3)$ large-field terms better than dyadic refinement is
+open; factor-2 decimation with the $\mathbb Z_2$ factor kept explicit goes back to
+[Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata),
+and prior art on $b=3$ or centre-adapted blocking for $SU(3)$ has not been
+searched.
+
+## 7. Consequence for STATE
+
+Atlas §1b: the bullet on which part of the centre a cut reaches now rests
+on Corollary 3 of an exact formula, (1), which also carries the $SU(2)$
+belt trick and the $SU(3)$ triality at thirds. Refereeing by Astra is
+pending; the exact trisection formula for the fundamental of $SU(3)$ is
+(1) with $s=\frac13$ and the weights of §5.

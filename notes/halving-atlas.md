@@ -106,7 +106,9 @@ performs the same two moves, with $s$ as a parameter.
   all three). Whether the bridge parity at a halving ties refinement to
   centre vortices is a question; the observation itself is elementary.
 - **Which part of the centre a cut reaches** (2026-09-28, from the
-  user's question on Dirac's belt trick; not yet refereed). *Lemma:* for
+  user's question on Dirac's belt trick; now Corollary 3 of the exact
+  midpoint formula of the [centre note](sun-midpoint-centre.md), Astra
+  referee pending). *Lemma:* for
   $SU(N)$ and a cut at $s=p/q$ in lowest terms, the relative windings land
   on exactly the subgroup $\mathbb Z_{\gcd(q,N)}$ of the centre $\mathbb Z_N$. *Proof:* a winding
   $H\in Q^\vee$ shifts the midpoint by $e^{2\pi ipH/q}$, central iff $pH/q\in P^\vee$, iff
@@ -129,7 +131,7 @@ performs the same two moves, with $s$ as a parameter.
   [Hasenfratz and 't Hooft 1976](https://doi.org/10.1103/PhysRevLett.36.1119);
   metadata). For $SU(3)$ the phase a centre-landing winding leaves on a
   character is its triality, so quark representations see $\omega$ and gluons do
-  not; the exact trisection formula is the next computation. Per step,
+  not; the exact trisection formula is (1) of the centre note at $s=\frac13$. Per step,
   the smallest centre-landing trisection winding costs $e^{-24\pi^2/t}$
   against $e^{-8\pi^2/t}$ for root windings ($|H|^2=2\,{\rm tr}H^2=12$ and $4$), both
   beyond the $1+3$ threshold $c>2/b_0$. The lemma concerns which classes the
