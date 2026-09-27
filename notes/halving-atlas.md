@@ -59,8 +59,8 @@ performs the same two moves, with $s$ as a parameter.
   its dual length (trapezoid rule), every old and new transverse face
   keeps heat time $2t$, as in halving. The inserted edges carry the bridge
   law at fraction $s$, variance $s(1-s)t_e$ in place of $t_e/4$. The free-field
-  defect is (5) with $v\to4s(1-s)v$ and weight $s(1-s)/2$ on the layer
-  differences, so the size bound (6) scales exactly by $4s(1-s)$
+  defect is (5) with $v\to v_s=4s(1-s)v$ and coefficient $s(1-s)/(2(2t+v_s))$
+  on the layer differences in place of $1/(8(2t+v))$, so the size bound (6) scales exactly by $4s(1-s)$
   ([Corollary 2$_s$](series-parallel-gauge-refinement.md)): halving is the
   largest single step, and an off-centre cut is gentler and shrinks the
   mesh less. The $s$-dependence of Theorem 5 is open.

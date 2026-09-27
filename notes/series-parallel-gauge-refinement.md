@@ -222,7 +222,8 @@ $$|\mathcal D|\le\Bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}{8}\Bigr)
 
 *Proof.* Use $2t+v\ge2t$ and $v\le ta^2|k|^2/4$ in (5). $\square$
 
-**Corollary 2$_s$ (a cut at fraction $s$; added 2026-09-27, atlas §1b).**
+**Corollary 2$_s$ (a cut at fraction $s$; added 2026-09-27, atlas §1b;
+refereed by Fable 2026-09-28, accepted).**
 Cut every direction-1 cell at $x_1=(\ell+s)a_1$, $0<s<1$, and give each
 transverse face the heat time $\lambda_3a_2a_3/\ell_1$ with $\ell_1$ its dual length in
 direction 1 (the trapezoid weight). The two layers adjacent to any old
@@ -230,7 +231,8 @@ or new $(23)$ face are a distance $a_1$ apart, so every transverse face has
 dual length $a_1/2$ and keeps heat time $2t_{23}$; the cut faces have $st_{1j}$ and
 $(1-s)t_{1j}$, and the mid-edge law is the Gaussian bridge at fraction $s$, with
 mean $(1-s)P_e-sQ_e$ (in the additive notation above, where $s=\frac12$ gives
-$(P_e-Q_e)/2$) and covariance $s(1-s)t_{1j}I_n$. Steps (i)--(iv) of the proof go
+$(P_e-Q_e)/2$, and with $P_em_e^{-1}$ the holonomy of the half of thickness
+$sa_1$) and covariance $s(1-s)t_{1j}I_n$. Steps (i)--(iv) of the proof go
 through with mean mid-edge $(1-s)A_j(\ell)+sA_j(\ell+1)$ plus a transverse
 gradient, hence mean mid-face flux $(1-s)\Phi_\ell+s\Phi_{\ell+1}$, and with noise
 covariance $v_s=4s(1-s)v(k)$. Using $|(1-s)A+sB|^2=(1-s)|A|^2+s|B|^2-s(1-s)|A-B|^2$ and
