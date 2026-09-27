@@ -56,8 +56,8 @@ is Proposition 1, equations (3)--(4), and Hypothesis P($\alpha$) of the
 relevant sections, including Propositions 4, 6 and 7). The bridge checks
 use [the exact midpoint note](su2-midpoint-exact.md), Theorems 1--4
 (full-read). The calculations below are written derivations of the
-formal coefficients, rather than an invocation of uniformity from
-fixed-spin expansions. We use $[T_a,T_b]=\epsilon_{abc}T_c$,
+formal coefficients; uniformity in the spin sum is a separate estimate
+(§7). We use $[T_a,T_b]=\epsilon_{abc}T_c$,
 $|T_a|=1$, $C_2(\mathrm{adj})=2$, and normalized Haar measure.
 
 ## 1. Expansion and the massive mid-plane covariance
@@ -158,8 +158,14 @@ injectivity chart changes it by an exponentially small tail.
 Its fundamental expectation
 $e^{-t/32}(1-t/16)$ and spin-1 expectation
 $[1+2e^{-t/8}(1-t/4)]/3$ agree with the exact endpoint limits.
-There is no omitted central-bridge covariance correction of order
-$t^2$ in these coordinates.
+In these coordinates the central-bridge covariance is exactly $tI/4$ up
+to the exponentially small tail. (Convention: §1 writes $m_e=m_*e^\xi$ and
+§3 transports as $m_e=e^\xi U_e$; the two lists differ by a diagonal
+unitary, which leaves every determinant unchanged. Abelian limit:
+$(\operatorname{ad}X)^2=0$, no commutator and no Jacobian factor, so all three
+shifts vanish, matching the free-field check of P($\alpha$) and
+Propositions 2 and 4 of the series/parallel note. Fable referee,
+2026-09-27.)
 
 To extract the $12$ coefficient, take constant commuting cut flux
 $X_{12}=X$, $X_{13}=0$, and flat midpoint connection. Adjacent layers
@@ -351,7 +357,7 @@ Adding this $-1/24$ to $\mathcal I$ and multiplying by $2t$ proves
 
 The exact midpoint results provide a local check and specify their
 scope. In spin $1/2$, the centered expectation is a scalar matrix, so
-an isolated face factors into four scalar bridge expectations times
+an isolated cube's mid-face factors into four scalar bridge expectations times
 its interpolated holonomy. In spin 1, Theorem 4 gives
 
 $$\lambda_0-\lambda_1
@@ -361,8 +367,8 @@ $$\lambda_0-\lambda_1
 The unequal eigenvalues retain the axis of each cut flux. Their
 commutator is proportional to $[P_i,P_j]$ for transported axial
 projectors, and therefore survives for generic oblique axes.
-This fixed-spin matrix commutator has order $t^2$ at fixed side angles;
-it alone cannot provide the full order-$t$ plane coefficient.
+This fixed-spin matrix commutator has order $t^2$ at fixed side angles,
+so the full order-$t$ plane coefficient needs the plane Hessian of §3.
 
 The heat-kernel character sum samples spins of size $t^{-1/2}$,
 and each shared edge joins neighbouring face representations.
@@ -370,8 +376,9 @@ The local-coordinate Hessian (10)--(14) resums the needed quadratic
 fluctuations before any fixed-spin truncation. Its linear-in-$Y$
 commutator vertices have a connected square at quadratic boundary
 degree. This is the N3 contribution relevant to a coupling shift.
-Theorems 1--4 are consistent with that contribution, including the
-special scalar factorization of the isolated fundamental sector.
+Theorems 1--4 test the curvature term N2 and the bridge law at $X=0$
+($\lambda(0,t)=1-t/4$), and the scalar factorization of the isolated
+fundamental sector; they give no check on the value of $\mathcal I$.
 
 For a more detailed split of the determinant, the radial-curvature
 part $Q_Y-I=(\operatorname{ad}Y)^2/12+O(Y^4)$ contributes
@@ -414,12 +421,17 @@ The inverse of (3) has exponential decay in lattice distance, so its
 formal connected contractions have analytic external-momentum
 expansions. Gauge invariance forces their bulk local terms to be
 curvature invariants. Reflection symmetry forbids the odd-parity
-Chern--Simons term and dimension-five terms. At dimension four,
+Chern--Simons term and dimension-five terms: a dimension-five term has
+five index slots, so some coordinate direction occurs an odd number of
+times and the reflection of that direction reverses its sign. At
+dimension four,
 independent reflections leave only $|F_{12}|^2$, $|F_{13}|^2$ and
 $|F_{23}|^2$; their coefficients are (1). Differences between opposite
 faces and mixed quadratic kernels, allowed by Proposition 7, give
 higher derivatives in this expansion. Terms with three curvatures
-start at dimension six. This argument uses smooth fields and the
+start at dimension six; for $SU(2)$ the only cubic is the N1 term, since
+$\langle A,[A,B]\rangle=0$, while for $SU(3)$ the symmetric tensor $d_{abc}$ admits a
+second dimension-six cubic, ${\rm tr}(F_{12}\{F_{13},F_{23}\})$. This argument uses smooth fields and the
 bulk local expansion; arbitrary small plaquettes can still vary at
 lattice momenta of order one.
 
@@ -449,8 +461,8 @@ $$\begin{aligned}
 The bridge distance term has a unique minimum and positive Hessian
 for each such fixed flat background. Rescaling the finitely many
 normal coordinates by $\sqrt t$ gives (16); the complement of a fixed
-saddle neighbourhood has exponentially small weight. This argument
-needs no estimate uniform in $N$.
+saddle neighbourhood has exponentially small weight. The argument is a
+fixed-$N$ Laplace expansion.
 
 There is a signed, elementary bound. Write $N=N_2N_3$ and
 $n_*=\min(N_2,N_3)$. Expand $\log(12-\mathsf A_\theta)$, with
@@ -472,9 +484,15 @@ one adjoint holonomy is nontrivial. At fixed $N$, (16) is an order-one
 background-dependent term as $t\to0$. Both coupling shifts and every
 local curvature operator vanish on these configurations. Subtracting
 P($\alpha$) for $U_\theta$ and for $1$ would bound their difference by
-$Ct^\alpha N$, contradicting (16). Thus that hypothesis, interpreted
-uniformly on fixed periodic planes with arbitrary flat holonomies,
-requires an extra global term or a restriction on volume/scaling.
+$Ct^\alpha N$, contradicting (16). So P($\alpha$) as literally stated fails
+on fixed periodic planes with arbitrary flat holonomies. The failure is
+an artifact of $t\to0$ at fixed $N$: under the refinement scaling, with
+$\min_jN_j\ge c_0/t$ (fixed physical size), the winding term is
+$O(t^{-1}e^{-c/t})$ and lies inside every P($\alpha$) remainder. The simplest
+repair is to add the clause $\min_jN_j\ge c_0/t$ to P($\alpha$). The
+exponential smallness comes from the massive mid-plane modes only; the
+coarse theory's own holonomy potential is a separate object, not
+exponentially small (Fable referee, 2026-09-27).
 
 For $N_j=L_j/a$ at fixed positive physical lengths and
 $t=\lambda_3a$, (17) is beyond every power of $t$. Its origin is a
@@ -530,16 +548,21 @@ by preceding steps are the additional iteration obligation.
 The mass bound in (3) establishes the free reference's locality.
 The remaining estimate is (18) for the **full normalized interacting
 integral**, uniformly in the plane size and across the required gauge
-charts. Fixed-spin image bounds and a finite-cube Laplace expansion
-supply local ingredients; they do not establish this uniform estimate.
+charts, with $W_N$ defined as the torus kernel minus the periodized bulk
+kernels and the saddle's uniqueness supplied by $H\ge(4-C\varepsilon)I$ on the
+small-field set. Fixed-spin image bounds and a finite-cube Laplace
+expansion supply local ingredients only; the uniform estimate is the
+open item. The remainder exponents, $\alpha=\frac32-3\delta$ (strong) and
+$\frac12-\delta$ (weak) with $\delta<\frac16$, suffice for one step.
 
 ## 8. Consequence for STATE
 
 Atlas cell 2 now has a formal full-plane relative-order-$t$ calculation:
 the cut couplings shift positively, the transverse coupling negatively,
 and all other bulk smooth-field terms start at dimension six.
-On fixed periodic planes the winding term (16) obstructs flux-only
-closure; fixed physical volumes suppress it exponentially.
+The winding term (16) obstructs P($\alpha$) as literally stated at fixed
+plane size $N$; in the refinement scaling it lies in the remainder, and
+P($\alpha$) gains the clause $\min_jN_j\ge c_0/t$.
 The next obligation for this cell is the normalized estimate (18),
 with winding control, followed by stability under iteration. The infrared
 spectral-gap obligation remains separate. STATE continues to route

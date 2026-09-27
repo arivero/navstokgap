@@ -337,6 +337,12 @@ $\alpha$. (Amended the same night: the first version allowed a shift of
 the transverse coupling only; the one-loop determinant below shifts the
 couplings of the cut faces as well.)
 
+(Amended 2026-09-27, from the [SU(2) mid-plane note](su2-midplane-order-t.md)
+and its referee: on periodic planes P($\alpha$) is required for plane sizes
+$\min_jN_j\ge c_0/t$, fixed physical size; at fixed $N$ with $t\to0$ a
+flat-holonomy winding determinant of the massive mid-plane modes is of
+order one and violates the literal statement.)
+
 **The compact abelian cube isolates N4 exactly.** Take $G=U(1)$ with
 $k_t(\theta)=\sum_{n\in\mathbb Z}e^{-tn^2/2}e^{in\theta}$ (the Villain
 weight), and refine a single cube: one mid-face at heat time $t_m$,

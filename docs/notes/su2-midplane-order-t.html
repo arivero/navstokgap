@@ -136,8 +136,8 @@ of the <a href="series-parallel-gauge-refinement.html">series/parallel
 note</a> (full-read: relevant sections, including Propositions 4, 6 and
 7). The bridge checks use <a href="su2-midpoint-exact.html">the exact
 midpoint note</a>, Theorems 1–4 (full-read). The calculations below are
-written derivations of the formal coefficients, rather than an
-invocation of uniformity from fixed-spin expansions. We use <span
+written derivations of the formal coefficients; uniformity in the spin
+sum is a separate estimate (§7). We use <span
 class="math inline">\([T_a,T_b]=\epsilon_{abc}T_c\)</span>, <span
 class="math inline">\(|T_a|=1\)</span>, <span
 class="math inline">\(C_2(\mathrm{adj})=2\)</span>, and normalized Haar
@@ -256,9 +256,17 @@ to the injectivity chart changes it by an exponentially small tail. Its
 fundamental expectation <span
 class="math inline">\(e^{-t/32}(1-t/16)\)</span> and spin-1 expectation
 <span class="math inline">\([1+2e^{-t/8}(1-t/4)]/3\)</span> agree with
-the exact endpoint limits. There is no omitted central-bridge covariance
-correction of order <span class="math inline">\(t^2\)</span> in these
-coordinates.</p>
+the exact endpoint limits. In these coordinates the central-bridge
+covariance is exactly <span class="math inline">\(tI/4\)</span> up to
+the exponentially small tail. (Convention: §1 writes <span
+class="math inline">\(m_e=m_*e^\xi\)</span> and §3 transports as <span
+class="math inline">\(m_e=e^\xi U_e\)</span>; the two lists differ by a
+diagonal unitary, which leaves every determinant unchanged. Abelian
+limit: <span class="math inline">\((\operatorname{ad}X)^2=0\)</span>, no
+commutator and no Jacobian factor, so all three shifts vanish, matching
+the free-field check of P(<span class="math inline">\(\alpha\)</span>)
+and Propositions 2 and 4 of the series/parallel note. Fable referee,
+2026-09-27.)</p>
 <p>To extract the <span class="math inline">\(12\)</span> coefficient,
 take constant commuting cut flux <span
 class="math inline">\(X_{12}=X\)</span>, <span
@@ -461,9 +469,9 @@ coefficient in the formal expansion.</p>
 matrices say about N3</h2>
 <p>The exact midpoint results provide a local check and specify their
 scope. In spin <span class="math inline">\(1/2\)</span>, the centered
-expectation is a scalar matrix, so an isolated face factors into four
-scalar bridge expectations times its interpolated holonomy. In spin 1,
-Theorem 4 gives</p>
+expectation is a scalar matrix, so an isolated cube’s mid-face factors
+into four scalar bridge expectations times its interpolated holonomy. In
+spin 1, Theorem 4 gives</p>
 <p><span class="math display">\[\lambda_0-\lambda_1
 =\frac t8(1-1/h)+O_X(t^2)
 =-\frac{t|X|^2}{384}+O(t|X|^4)+O_X(t^2).\]</span></p>
@@ -472,9 +480,9 @@ commutator is proportional to <span
 class="math inline">\([P_i,P_j]\)</span> for transported axial
 projectors, and therefore survives for generic oblique axes. This
 fixed-spin matrix commutator has order <span
-class="math inline">\(t^2\)</span> at fixed side angles; it alone cannot
-provide the full order-<span class="math inline">\(t\)</span> plane
-coefficient.</p>
+class="math inline">\(t^2\)</span> at fixed side angles, so the full
+order-<span class="math inline">\(t\)</span> plane coefficient needs the
+plane Hessian of §3.</p>
 <p>The heat-kernel character sum samples spins of size <span
 class="math inline">\(t^{-1/2}\)</span>, and each shared edge joins
 neighbouring face representations. The local-coordinate Hessian
@@ -482,8 +490,11 @@ neighbouring face representations. The local-coordinate Hessian
 truncation. Its linear-in-<span class="math inline">\(Y\)</span>
 commutator vertices have a connected square at quadratic boundary
 degree. This is the N3 contribution relevant to a coupling shift.
-Theorems 1–4 are consistent with that contribution, including the
-special scalar factorization of the isolated fundamental sector.</p>
+Theorems 1–4 test the curvature term N2 and the bridge law at <span
+class="math inline">\(X=0\)</span> (<span
+class="math inline">\(\lambda(0,t)=1-t/4\)</span>), and the scalar
+factorization of the isolated fundamental sector; they give no check on
+the value of <span class="math inline">\(\mathcal I\)</span>.</p>
 <p>For a more detailed split of the determinant, the radial-curvature
 part <span
 class="math inline">\(Q_Y-I=(\operatorname{ad}Y)^2/12+O(Y^4)\)</span>
@@ -524,16 +535,24 @@ The inverse of (3) has exponential decay in lattice distance, so its
 formal connected contractions have analytic external-momentum
 expansions. Gauge invariance forces their bulk local terms to be
 curvature invariants. Reflection symmetry forbids the odd-parity
-Chern–Simons term and dimension-five terms. At dimension four,
-independent reflections leave only <span
+Chern–Simons term and dimension-five terms: a dimension-five term has
+five index slots, so some coordinate direction occurs an odd number of
+times and the reflection of that direction reverses its sign. At
+dimension four, independent reflections leave only <span
 class="math inline">\(|F_{12}|^2\)</span>, <span
 class="math inline">\(|F_{13}|^2\)</span> and <span
 class="math inline">\(|F_{23}|^2\)</span>; their coefficients are (1).
 Differences between opposite faces and mixed quadratic kernels, allowed
 by Proposition 7, give higher derivatives in this expansion. Terms with
-three curvatures start at dimension six. This argument uses smooth
-fields and the bulk local expansion; arbitrary small plaquettes can
-still vary at lattice momenta of order one.</p>
+three curvatures start at dimension six; for <span
+class="math inline">\(SU(2)\)</span> the only cubic is the N1 term,
+since <span class="math inline">\(\langle A,[A,B]\rangle=0\)</span>,
+while for <span class="math inline">\(SU(3)\)</span> the symmetric
+tensor <span class="math inline">\(d_{abc}\)</span> admits a second
+dimension-six cubic, <span class="math inline">\({\rm
+tr}(F_{12}\{F_{13},F_{23}\})\)</span>. This argument uses smooth fields
+and the bulk local expansion; arbitrary small plaquettes can still vary
+at lattice momenta of order one.</p>
 <p>Consequently the mid-plane extension of Proposition 7 has the
 expected <strong>formal</strong> operator content. Equations (1)–(15)
 leave no extra relevant bulk operator at relative order <span
@@ -563,8 +582,8 @@ Laplace expansion at its unique zero-action saddle therefore gives</p>
 for each such fixed flat background. Rescaling the finitely many normal
 coordinates by <span class="math inline">\(\sqrt t\)</span> gives (16);
 the complement of a fixed saddle neighbourhood has exponentially small
-weight. This argument needs no estimate uniform in <span
-class="math inline">\(N\)</span>.</p>
+weight. The argument is a fixed-<span class="math inline">\(N\)</span>
+Laplace expansion.</p>
 <p>There is a signed, elementary bound. Write <span
 class="math inline">\(N=N_2N_3\)</span> and <span
 class="math inline">\(n_*=\min(N_2,N_3)\)</span>. Expand <span
@@ -593,10 +612,20 @@ local curvature operator vanish on these configurations. Subtracting
 P(<span class="math inline">\(\alpha\)</span>) for <span
 class="math inline">\(U_\theta\)</span> and for <span
 class="math inline">\(1\)</span> would bound their difference by <span
-class="math inline">\(Ct^\alpha N\)</span>, contradicting (16). Thus
-that hypothesis, interpreted uniformly on fixed periodic planes with
-arbitrary flat holonomies, requires an extra global term or a
-restriction on volume/scaling.</p>
+class="math inline">\(Ct^\alpha N\)</span>, contradicting (16). So
+P(<span class="math inline">\(\alpha\)</span>) as literally stated fails
+on fixed periodic planes with arbitrary flat holonomies. The failure is
+an artifact of <span class="math inline">\(t\to0\)</span> at fixed <span
+class="math inline">\(N\)</span>: under the refinement scaling, with
+<span class="math inline">\(\min_jN_j\ge c_0/t\)</span> (fixed physical
+size), the winding term is <span
+class="math inline">\(O(t^{-1}e^{-c/t})\)</span> and lies inside every
+P(<span class="math inline">\(\alpha\)</span>) remainder. The simplest
+repair is to add the clause <span class="math inline">\(\min_jN_j\ge
+c_0/t\)</span> to P(<span class="math inline">\(\alpha\)</span>). The
+exponential smallness comes from the massive mid-plane modes only; the
+coarse theory’s own holonomy potential is a separate object, not
+exponentially small (Fable referee, 2026-09-27).</p>
 <p>For <span class="math inline">\(N_j=L_j/a\)</span> at fixed positive
 physical lengths and <span class="math inline">\(t=\lambda_3a\)</span>,
 (17) is beyond every power of <span class="math inline">\(t\)</span>.
@@ -659,20 +688,31 @@ additional iteration obligation.</p>
 <p>The mass bound in (3) establishes the free reference’s locality. The
 remaining estimate is (18) for the <strong>full normalized interacting
 integral</strong>, uniformly in the plane size and across the required
-gauge charts. Fixed-spin image bounds and a finite-cube Laplace
-expansion supply local ingredients; they do not establish this uniform
-estimate.</p>
+gauge charts, with <span class="math inline">\(W_N\)</span> defined as
+the torus kernel minus the periodized bulk kernels and the saddle’s
+uniqueness supplied by <span
+class="math inline">\(H\ge(4-C\varepsilon)I\)</span> on the small-field
+set. Fixed-spin image bounds and a finite-cube Laplace expansion supply
+local ingredients only; the uniform estimate is the open item. The
+remainder exponents, <span
+class="math inline">\(\alpha=\frac32-3\delta\)</span> (strong) and <span
+class="math inline">\(\frac12-\delta\)</span> (weak) with <span
+class="math inline">\(\delta&lt;\frac16\)</span>, suffice for one
+step.</p>
 <h2 id="consequence-for-state">8. Consequence for STATE</h2>
 <p>Atlas cell 2 now has a formal full-plane relative-order-<span
 class="math inline">\(t\)</span> calculation: the cut couplings shift
 positively, the transverse coupling negatively, and all other bulk
-smooth-field terms start at dimension six. On fixed periodic planes the
-winding term (16) obstructs flux-only closure; fixed physical volumes
-suppress it exponentially. The next obligation for this cell is the
-normalized estimate (18), with winding control, followed by stability
-under iteration. The infrared spectral-gap obligation remains separate.
-STATE continues to route work through the atlas; the coefficients and
-their derivation live here.</p>
+smooth-field terms start at dimension six. The winding term (16)
+obstructs P(<span class="math inline">\(\alpha\)</span>) as literally
+stated at fixed plane size <span class="math inline">\(N\)</span>; in
+the refinement scaling it lies in the remainder, and P(<span
+class="math inline">\(\alpha\)</span>) gains the clause <span
+class="math inline">\(\min_jN_j\ge c_0/t\)</span>. The next obligation
+for this cell is the normalized estimate (18), with winding control,
+followed by stability under iteration. The infrared spectral-gap
+obligation remains separate. STATE continues to route work through the
+atlas; the coefficients and their derivation live here.</p>
 
 </main>
 <footer class="site"><div class="wrap">

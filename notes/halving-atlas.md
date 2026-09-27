@@ -98,7 +98,7 @@ way; in mechanics refining makes each cell more quantum
 ## 5. Open cells
 
 1. $SU(2)$ cube: *filled through $J=1$* ([Theorem 4](su2-midpoint-exact.md), exact diagonal entries, image bounds and cube sector); $J>1$ entries and control of the full spin sum remain open.
-2. $SU(2)$ full mid-plane in $1+2$: [formal order-$t$ calculation filled](su2-midplane-order-t.md); fixed-torus flux-only closure is obstructed by (16); open: uniform estimate (18) with winding control.
+2. $SU(2)$ full mid-plane in $1+2$: [formal order-$t$ calculation filled](su2-midplane-order-t.md), refereed (all items accepted): cut shifts positive, transverse negative, remaining bulk terms of dimension six; the fixed-torus winding term is removed by the clause $\min_jN_j\ge c_0/t$; open: the uniform estimate (18).
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
