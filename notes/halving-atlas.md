@@ -106,8 +106,23 @@ way; in mechanics refining makes each cell more quantum
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
 4. $1+3$: the one-loop coefficient $-2b_0\log2$ per isotropic step from the
    three parallel insertions of each halving.
-5. Time-only halving: the exponential-family parallel move and its
-   Trotter limit, stated as a theorem at fixed spatial lattice.
+5. Time-only halving. *Structural reading, 2026-09-27, of known results.*
+   At fixed spatial lattice the electric faces make the series moves:
+   heat-kernel electric weights are a semigroup in the time step, so they
+   compose exactly. The magnetic faces make the parallel moves: with
+   exponential weights $e^{-a_0V}$ they close exactly in their own family,
+   since products of such weights add the exponents. The whole defect of a
+   time halving is the non-commutation of the two families, and it
+   vanishes as $a_0\to0$ by the Trotter product formula
+   ([Trotter 1959](https://doi.org/10.1090/S0002-9939-1959-0108732-6);
+   [Chernoff 1968](https://doi.org/10.1016/0022-1236(68)90020-7); metadata;
+   strong convergence for the Laplacian on $G^E$ plus a bounded magnetic
+   potential). This is why the Hamiltonian limit
+   ([Kogut and Susskind 1975](https://doi.org/10.1103/PhysRevD.11.395);
+   transfer matrix: [Creutz 1977](https://doi.org/10.1103/PhysRevD.15.1128);
+   metadata) exists at every fixed spatial lattice, while spatial halving
+   leaves the non-closing factor $\Psi$. Open: an operator-norm rate, which
+   needs domain estimates for the commutator of the Laplacian with $V$.
 6. *Filled 2026-09-27 for Gaussian records*
    ([record as parallel move](newton-record-parallel-move.md)): forgetting a
    record convolves momentum with variance $\hbar^2/(4\sigma^2)$; precisions add in
