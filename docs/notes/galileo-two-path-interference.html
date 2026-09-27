@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galileo&#x27;s comparison as two-path interference</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Galileo’s comparison as two-path interference</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/galileo-two-path-interference.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/galileo-two-path-interference.pdf">PDF</a></p><p><strong>Result, 2026-09-27 (round 3).</strong> A coherent,
+endpoint-matched comparison of Newton’s impulsive chord with Galileo’s
+constant-force parabola has action difference</p>
+<p><span class="math display">\[
+K_\tau:=\Delta S=\frac{F^2\tau^3}{24m}
+=\frac{F}{4v}A_{\rm inertial,fall}=\frac{\tau\Delta E}{12}.
+\]</span></p>
+<p>At supplied action resolution <span
+class="math inline">\(\varepsilon&gt;0\)</span>, its optimal equal-prior
+error against the zero-phase reference, using <span
+class="math inline">\(n\)</span> independent controlled passes and an
+arbitrary joint measurement, is exactly</p>
+<p><span class="math display">\[
+p_{\rm err}^{(n)}=\frac12\left(1-
+\sqrt{1-\cos^{2n}\!\left(\frac{K_\tau}{2\varepsilon}\right)}\right).
+\]</span></p>
+<p>For fixed <span class="math inline">\(n,\varepsilon\)</span>,
+refinement sends this error to <span class="math inline">\(1/2\)</span>.
+At fixed <span class="math inline">\(\tau&gt;0\)</span>, the coherent
+error oscillates as <span
+class="math inline">\(\varepsilon\downarrow0\)</span> and has no limit.
+A specified averaging of the inverse resolution gives a genuine
+noncommutation theorem for coherence; a specified tunable comparison
+gives one for distinguishability (Theorem 3). These prescriptions make
+precise the extra operation needed in the proposed classical-first
+limit.</p>
+<p>The resulting action threshold is conditional on the phase rule, the
+Born rule and the resources of the comparison. It re-expresses the
+polygon-lift phase bound through the halved functional. Theorems C and E
+of the fifth-postulate note constrain different records with the same
+supplied quantum action constant. Positivity of that constant remains an
+independent physical obligation. All results below are proved under
+their displayed hypotheses; the scale-selection step remains open.</p>
+<h2 id="the-galileo-area-and-the-two-histories">1. The Galileo area and
+the two histories</h2>
+<p>Let <span class="math inline">\(m,F,v,\tau&gt;0\)</span>, with
+downward coordinate <span class="math inline">\(y\)</span> and common
+horizontal motion <span class="math inline">\(x=vt\)</span>. The initial
+tangent and falling curve are</p>
+<p><span class="math display">\[
+y_I(t)=0,\qquad y_F(t)=\frac{Ft^2}{2m},\qquad
+A_{\rm inertial,fall}=\frac{vF\tau^3}{6m},\qquad
+\Delta E=\frac{F^2\tau^2}{2m}.
+\tag{1}
+\]</span></p>
+<p>Thus <span class="math inline">\((3F/v)A_{\rm
+inertial,fall}=\tau\Delta E\)</span>. The common-endpoint chord is <span
+class="math inline">\(y_C(t)=F\tau t/(2m)\)</span>. For the transverse
+Lagrangian <span class="math inline">\(L=m\dot y^2/2+Fy\)</span>, direct
+integration gives</p>
+<p><span class="math display">\[
+S[y_I]=0,\qquad S[y_F]=\frac{F^2\tau^3}{3m},\qquad
+S[y_C]=\frac{3F^2\tau^3}{8m},\qquad S[y_C]-S[y_F]=K_\tau.
+\tag{2}
+\]</span></p>
+<p>The horizontal action cancels in every difference. Equation (2) also
+exposes the endpoint issue: the bare tangent and parabola finish at
+different heights. Adding <span
+class="math inline">\(d\chi(y,t)/dt\)</span> to <span
+class="math inline">\(L\)</span> changes their action difference by
+their unequal final <span class="math inline">\(\chi\)</span> values.
+Their measurable relative phase therefore requires endpoint matching and
+specified control phases. The conversion coefficient for <span
+class="math inline">\(K_\tau\)</span> is <span
+class="math inline">\(F/(4v)\)</span>; the area conversion <span
+class="math inline">\((F/v)A_{\rm inertial,fall}\)</span> equals <span
+class="math inline">\(4K_\tau\)</span>.</p>
+<p>Here is the exact matching used throughout. Supply canonical quantum
+kinematics <span class="math inline">\([y,p]=i\varepsilon\)</span> in
+the Schrödinger representation, and set</p>
+<p><span class="math display">\[
+U_\tau=\exp\left[-\frac{i\tau}{\varepsilon}
+\left(\frac{p^2}{2m}-Fy\right)\right],\qquad
+Q_\tau=e^{iF\tau y/(2\varepsilon)}
+e^{-i\tau p^2/(2m\varepsilon)}e^{iF\tau y/(2\varepsilon)}.
+\]</span></p>
+<p><strong>Lemma 1 (matched comparison).</strong> With these
+scalar-potential conventions,</p>
+<p><span
+class="math display">\[Q_\tau=e^{iK_\tau/\varepsilon}U_\tau.\tag{3}\]</span></p>
+<p><em>Proof.</em> The kernel of <span
+class="math inline">\(Q_\tau\)</span> has the free normalization and
+phase <span
+class="math inline">\(L_\tau(x,y)=m(y-x)^2/(2\tau)+F\tau(x+y)/2\)</span>.
+The classical solution joining <span class="math inline">\(x\)</span> to
+<span class="math inline">\(y\)</span> is <span
+class="math inline">\(q_*(t)=x+(y-x)t/\tau+F(t^2-\tau t)/(2m)\)</span>.
+Substitution into the action gives <span
+class="math inline">\(L_\tau-K_\tau\)</span>. The fluctuation action
+about <span class="math inline">\(q_*\)</span> is exactly <span
+class="math inline">\(\int m\dot\xi^2/2\)</span>, with zero endpoint
+fluctuations, hence the same free Gaussian normalization. This proves
+(3), equivalently the exact quadratic kernel identity in the <a
+href="refinement-composition-and-limit.html">insertion note, §§2–3</a>
+(passage). <span class="math inline">\(\square\)</span></p>
+<p>The impulses in <span class="math inline">\(Q_\tau\)</span> reproduce
+the chord and match the parabola’s final momentum after the last
+half-kick. Equation (3) holds for every initial body state. A
+branch-dependent scalar potential would add its own phase, so its
+absence or calibration is part of the experiment. The <a
+href="polygon-lift-phase.html">polygon-lift note, Theorem 1</a>
+(full-read) proves the corresponding identity for every partition.</p>
+<p>For a literal tangent arm, the explicit reunion in <a
+href="newton-insertion-action.html">the Galileo note, §§3–4</a>
+(full-read) uses signal forces <span
+class="math inline">\(F,-F,F\)</span> over durations <span
+class="math inline">\(\tau,2\tau,\tau\)</span> against a free reference.
+Its closed action difference is <span class="math inline">\(\Delta
+S_{\rm loop}=-2F^2\tau^3/(3m)=-16K_\tau\)</span>. Every phase formula
+below applies with that signed difference when that four-cell experiment
+is chosen. The coefficient belongs to the reunion protocol; the original
+area (1) remains the geometric anchor.</p>
+<p>For fixed endpoints the constant-force action has one stationary
+path. The chord is an off-shell path for the continuous-force action and
+a classical history for the impulsive control. Thus (3) compares two
+controlled histories, each with an exact quadratic path integral.
+Treating the tangent and parabola as two stationary points of one
+fixed-endpoint constant-force functional would change the variational
+problem.</p>
+<h2 id="what-the-halved-functional-measures">2. What the halved
+functional measures</h2>
+<p>Use <span class="math inline">\(\varepsilon\)</span> for action
+resolution and <span class="math inline">\(\eta\in[0,1/2)\)</span> for a
+target decision error. Identification with quantum mechanics means <span
+class="math inline">\(\varepsilon=|\hbar|\)</span>, with ordinary Planck
+constant <span class="math inline">\(h_P=2\pi|\hbar|\)</span>.</p>
+<p><strong>Proposition 2 (two contributions and their
+remainder).</strong> Suppose a halved functional, with its normalization
+and observable fixed, has two retained contributions</p>
+<p><span class="math display">\[
+\mathcal A_\varepsilon
+=a_0e^{iS_0/\varepsilon+i\mu_0}
++a_1e^{iS_1/\varepsilon+i\mu_1}+R_\varepsilon,
+\quad a_j\ge0,\quad |R_\varepsilon|\le r.
+\]</span></p>
+<p>Put <span class="math inline">\(\phi=(S_1-S_0)/\varepsilon\)</span>
+and <span class="math inline">\(\beta=\mu_1-\mu_0\)</span>. Then</p>
+<p><span class="math display">\[
+|\mathcal A_\varepsilon|^2
+=a_0^2+a_1^2+2a_0a_1\cos(\phi+\beta)+E,
+\qquad |E|\le2(a_0+a_1)r+r^2.\tag{4}
+\]</span></p>
+<p><em>Proof.</em> Expand the square, bound the leading amplitude by
+<span class="math inline">\(a_0+a_1\)</span>, and bound its cross term
+with <span class="math inline">\(R_\varepsilon\)</span> by <span
+class="math inline">\(2(a_0+a_1)r\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>For two nondegenerate stationary points at a fixed partition, <span
+class="math inline">\(a_j=|O(z_j)|/\sqrt{|\det
+S&#39;&#39;(z_j)|}\)</span> and <span
+class="math inline">\(\mu_j\)</span> contains the observable phase and
+Hessian signature. Stationary phase supplies <span
+class="math inline">\(r\le C_\pi\varepsilon\)</span> for sufficiently
+small <span class="math inline">\(\varepsilon\)</span>, with cutoffs and
+smoothness as in <a
+href="rivero-1998-conjecture-central-forces.html">round 1, §1</a>
+(full-read). Equation (4) retains that partition-dependent constant;
+uniform control as the partition changes needs a separate estimate. For
+the exactly matched quadratic propagators in (3), the relative phase has
+zero remainder and zero relative Gaussian signature.</p>
+<p>At a fixed phase, a large <span
+class="math inline">\(|S_1-S_0|/\varepsilon\)</span> still leaves the
+cross term in (4) at full amplitude. Averaging, selecting a branch, or
+retaining an orthogonal branch record supplies the missing
+diagonalization. Equal-action contributions survive phase averaging, as
+round 1’s pair of quartic saddles demonstrates.</p>
+<p>An operational record requires a preparation and measurement rule in
+addition to (4). For example, tag the arms by normalized pointer states
+<span class="math inline">\(|r_0\rangle,|r_1\rangle\)</span>, and put
+<span class="math inline">\(\gamma=\langle r_0|r_1\rangle\)</span>.
+Recombining the arms gives the cross term <span
+class="math inline">\(2a_0a_1\operatorname{Re}(\gamma
+e^{i(\phi+\beta)})\)</span> and visibility <span
+class="math inline">\(V=2a_0a_1|\gamma|/(a_0^2+a_1^2)\)</span>. For
+balanced arms and pure tags, optimal inference of the arm from the
+pointer has</p>
+<p><span class="math display">\[
+D_{\rm path}=\sqrt{1-|\gamma|^2},\qquad
+p_{\rm path}=\frac{1-D_{\rm path}}2,\qquad
+V^2+D_{\rm path}^2=1.\tag{5}
+\]</span></p>
+<p>The eigenvalues of the difference of the two rank-one tag states are
+<span class="math inline">\(\pm\sqrt{1-|\gamma|^2}\)</span>, proving (5)
+by the binary measurement optimization used below. This is the pure
+balanced case of established interferometric duality; see <a
+href="https://arxiv.org/abs/quant-ph/9908072">Schwindt, Kwiat and
+Englert 1999</a> (abstract). Path identification depends on the tags,
+while phase detection depends on coherent recombination. Orthogonal tags
+identify the arm even at <span class="math inline">\(\Delta S=0\)</span>
+and remove its interference. A bare halved functional supplies neither
+those tags nor their physical cost.</p>
+<h2 id="exact-phase-record-error-target-and-resources">3. Exact phase
+record, error target and resources</h2>
+<p>Prepare a balanced control qubit and a common arbitrary body density
+operator <span class="math inline">\(\rho\)</span>. Under hypothesis
+<span class="math inline">\(H_0\)</span>, apply <span
+class="math inline">\(U_\tau\)</span> in both arms; under <span
+class="math inline">\(H_1\)</span>, apply <span
+class="math inline">\(U_\tau\)</span> in arm 0 and <span
+class="math inline">\(Q_\tau\)</span> in arm 1. Supply coherent control
+with calibrated relative scalar phases, no extra environmental tags, the
+Born rule, and equal hypothesis priors. Equation (3) factorizes the
+output into the same body state under both hypotheses and the control
+states</p>
+<p><span class="math display">\[
+|+\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2},\qquad
+|+_\phi\rangle=\frac{|0\rangle+e^{i\phi}|1\rangle}{\sqrt2},
+\qquad \phi=K_\tau/\varepsilon.\tag{6}
+\]</span></p>
+<p>A recombiner of phase <span class="math inline">\(\alpha\)</span> has
+exact port probabilities <span
+class="math inline">\(P_\pm(\alpha|\phi)=[1\pm\cos(\phi-\alpha)]/2\)</span>.
+Scanning <span class="math inline">\(\alpha\)</span> reveals the fringe
+shift; its visibility remains one for every <span
+class="math inline">\(\phi\)</span>. The optimal distinction of the two
+hypotheses is</p>
+<p><span class="math display">\[
+D_n=\sqrt{1-\cos^{2n}(\phi/2)},\qquad
+p_{\rm err}^{(n)}=\frac{1-D_n}{2}.\tag{7}
+\]</span></p>
+<p><em>Proof.</em> For normalized vectors with overlap <span
+class="math inline">\(c\)</span>, the difference of their rank-one
+density operators has eigenvalues <span
+class="math inline">\(\pm\sqrt{1-|c|^2}\)</span>. For any equal-prior
+binary test <span class="math inline">\(0\le M\le I\)</span>, the
+success probability is <span
+class="math inline">\([1+\operatorname{tr}M(\rho_1-\rho_0)]/2\)</span>;
+the positive eigenspace attains the maximum. Here <span
+class="math inline">\(|\langle+|+_\phi\rangle|=|\cos(\phi/2)|\)</span>
+and <span class="math inline">\(n\)</span> independent copies raise the
+overlap to its <span class="math inline">\(n\)</span>th power. This
+proves (7) including attainability. <span
+class="math inline">\(\square\)</span></p>
+<p>Thus (7) detects a history-dependent phase against a reference. The
+uncontrolled body channels of <span
+class="math inline">\(Q_\tau\)</span> and <span
+class="math inline">\(U_\tau\)</span> coincide for every <span
+class="math inline">\(\rho\)</span>, giving error <span
+class="math inline">\(1/2\)</span> even with arbitrarily many copies.
+The coherence resource in (6) is essential to exposing the scalar.</p>
+<p>For the original unclosed free/falling pair, the final displacement
+and impulse themselves supply a further signal. A pure body’s overlap
+then contains the expectation of a Weyl displacement in its prepared
+state, so its magnitude depends on that preparation. For each <span
+class="math inline">\(\tau&gt;0\)</span> one can choose a wavefunction
+with position support narrower than the nonzero interaction-picture
+displacement <span class="math inline">\(F\tau^2/(2m)\)</span>; its
+translated support is disjoint and the two outputs are orthogonal.
+Shrinking that support costs increasing momentum spread. Thus the
+phase-only theorem applies to the matched, coherently controlled record
+(6), with its specified resources; an unrestricted detector of the raw
+endpoint separation requires a separate preparation or disturbance
+budget.</p>
+<p>Write <span
+class="math inline">\(\delta=\operatorname{dist}(\phi,2\pi\mathbb
+Z)\in[0,\pi]\)</span>. For a fixed positive integer <span
+class="math inline">\(n\)</span>, (7) reaches error at most <span
+class="math inline">\(\eta\)</span> iff</p>
+<p><span class="math display">\[
+\delta\ge d_{n,\eta},\qquad
+d_{n,\eta}=2\arccos\left([4\eta(1-\eta)]^{1/(2n)}\right).
+\tag{8}
+\]</span></p>
+<p>On the first lobe <span class="math inline">\(0\le
+K_\tau/\varepsilon\le\pi\)</span>, this is equivalent to</p>
+<p><span class="math display">\[
+K_\tau\ge\varepsilon d_{n,\eta},\qquad
+\tau\ge\left(\frac{24m\varepsilon d_{n,\eta}}{F^2}\right)^{1/3},
+\qquad A_{\rm inertial,fall}\ge\frac{4v\varepsilon}{F}d_{n,\eta}.
+\tag{9}
+\]</span></p>
+<p>For <span class="math inline">\(n=1\)</span>, <span
+class="math inline">\(d_{1,\eta}=2\arcsin(1-2\eta)\)</span>, exactly the
+<a href="polygon-lift-phase.html">polygon-lift record bound, §4</a>
+(passage). For <span class="math inline">\(0&lt;\eta&lt;1/2\)</span>,
+<span class="math inline">\(d_{n,\eta}\to0\)</span> as <span
+class="math inline">\(n\to\infty\)</span>; for <span
+class="math inline">\(\eta=0\)</span> it equals <span
+class="math inline">\(\pi\)</span> at every finite <span
+class="math inline">\(n\)</span>. With <span
+class="math inline">\(k\)</span> coherent passes replace <span
+class="math inline">\(\phi\)</span> by <span
+class="math inline">\(k\phi\)</span>. These resource choices change the
+threshold.</p>
+<p>The dependence on errors is explicit. If actual hypothesis states
+<span class="math inline">\(\widetilde\rho_i\)</span> satisfy <span
+class="math inline">\(\tfrac12\|\widetilde\rho_i-\rho_i\|_1\le
+e_i\)</span>, the optimum error changes by at most <span
+class="math inline">\((e_0+e_1)/2\)</span>, by the triangle inequality
+in (7). A common phase calibration error <span
+class="math inline">\(u\)</span> on each of <span
+class="math inline">\(n\)</span> independent signal copies gives
+distance at most <span
+class="math inline">\(\sqrt{1-\cos^{2n}(u/2)}\le\sqrt n\,|u|/2\)</span>,
+and hence changes the optimal error by at most <span
+class="math inline">\(\sqrt n\,|u|/4\)</span> when the reference is
+exact. An action uncertainty <span class="math inline">\(|\delta
+S|\)</span> contributes <span class="math inline">\(|u|=|\delta
+S|/\varepsilon\)</span>. These bounds state how accurately the control
+must be known to use (9).</p>
+<h2 id="the-two-orders-of-limits">4. The two orders of limits</h2>
+<p>Put <span class="math inline">\(C=F^2/(24m)&gt;0\)</span>, so <span
+class="math inline">\(K_\tau=C\tau^3\)</span>.</p>
+<p><strong>Theorem 3 (refinement, classical resolution and the missing
+prescription).</strong></p>
+<ol type="a">
+<li>For the fixed coherent protocol (6), with fixed finite <span
+class="math inline">\(n\)</span>,</li>
+</ol>
+<p><span class="math display">\[
+D_n\le\min\left(1,\frac{\sqrt n\,C\tau^3}{2\varepsilon}\right),
+\qquad \lim_{\tau\downarrow0}p_{\rm err}^{(n)}=\frac12
+\quad(\varepsilon&gt;0).\tag{10}
+\]</span></p>
+<p>At every fixed <span class="math inline">\(\tau&gt;0\)</span>, <span
+class="math inline">\(\lim_{\varepsilon\downarrow0}D_n\)</span> fails to
+exist: its liminf is zero and limsup is one. Consequently the coherent
+classical-first iterated limit is undefined.</p>
+<ol start="2" type="a">
+<li>Fix <span class="math inline">\(b\in(0,1)\)</span> and average the
+inverse resolution by replacing <span
+class="math inline">\(\phi\)</span> with <span
+class="math inline">\(u\phi\)</span>, uniformly over <span
+class="math inline">\(u\in[1-b,1+b]\)</span>, forgetting <span
+class="math inline">\(u\)</span>. For this explicitly averaged two-arm
+state, its normalized coherence is</li>
+</ol>
+<p><span class="math display">\[
+\Gamma_b(\tau,\varepsilon)
+=\frac1{2b}\int_{1-b}^{1+b}e^{iuK_\tau/\varepsilon}\,du
+=e^{i\phi}\operatorname{sinc}(b\phi),\qquad
+|\Gamma_b|\le\min\left(1,\frac{\varepsilon}{bK_\tau}\right).
+\tag{11}
+\]</span></p>
+<p>With <span class="math inline">\(\operatorname{sinc}(0)=1\)</span>,
+the iterated limits are</p>
+<p><span class="math display">\[
+\lim_{\varepsilon\downarrow0}\lim_{\tau\downarrow0}\Gamma_b=1,
+\qquad
+\lim_{\tau\downarrow0}\lim_{\varepsilon\downarrow0}\Gamma_b=0.
+\tag{12}
+\]</span></p>
+<p>For fixed weights and signature difference in (4), this prescription
+leaves a diagonal-intensity error bounded by <span
+class="math inline">\(2a_0a_1\min(1,\varepsilon/(b|\Delta S|))\)</span>
+in addition to the averaged remainder bound of (4), with bound <span
+class="math inline">\(2a_0a_1\)</span> when <span
+class="math inline">\(\Delta S=0\)</span>. If the stationary-phase
+remainder obeys <span class="math inline">\(r\le
+C_\pi\varepsilon\)</span> uniformly for small resolution, averaging uses
+resolutions <span class="math inline">\(\varepsilon/u\)</span> and one
+may take <span class="math inline">\(r\le
+C_\pi\varepsilon/(1-b)\)</span>.</p>
+<ol start="3" type="a">
+<li>Alternatively, assume a calibrated comparison can be attenuated to
+any action <span class="math inline">\(rK_\tau\)</span>, <span
+class="math inline">\(0\le r\le1\)</span>, under both hypotheses, with
+no additional relative phase. For example, use duration <span
+class="math inline">\(r^{1/3}\tau\)</span> in (6), keeping <span
+class="math inline">\(F,m\)</span> fixed. Let <span
+class="math inline">\(D_{\rm tun}\)</span> be the best single-copy
+distance over these choices. Then</li>
+</ol>
+<p><span class="math display">\[
+D_{\rm tun}(\tau,\varepsilon)
+=\sin\left(\min\left\{\frac{K_\tau}{2\varepsilon},\frac\pi2\right\}\right),
+\tag{13}
+\]</span> <span class="math display">\[
+\lim_{\varepsilon\downarrow0}\lim_{\tau\downarrow0}D_{\rm tun}=0,
+\qquad
+\lim_{\tau\downarrow0}\lim_{\varepsilon\downarrow0}D_{\rm tun}=1.
+\tag{14}
+\]</span></p>
+<p><em>Proof.</em> The inequality <span
+class="math inline">\(1-(1-x)^n\le nx\)</span> for <span
+class="math inline">\(x\in[0,1]\)</span>, with <span
+class="math inline">\(x=\sin^2(\phi/2)\)</span>, proves (10). For fixed
+<span class="math inline">\(K_\tau&gt;0\)</span>, the sequences <span
+class="math inline">\(\varepsilon_j=K_\tau/(2\pi j)\)</span> and <span
+class="math inline">\(\varepsilon&#39;_j=K_\tau/((2j+1)\pi)\)</span>
+give respectively <span class="math inline">\(D_n=0\)</span> and <span
+class="math inline">\(D_n=1\)</span>. Integration gives (11); dominated
+continuity at <span class="math inline">\(\phi=0\)</span> and the
+displayed reciprocal bound at <span
+class="math inline">\(\phi\to\infty\)</span> prove (12). In (c),
+maximize <span class="math inline">\(|\sin(r\phi/2)|\)</span> over <span
+class="math inline">\([0,1]\)</span>. The first maximum is reached at
+<span class="math inline">\(r=\pi/\phi\)</span> when <span
+class="math inline">\(\phi\ge\pi\)</span>; otherwise <span
+class="math inline">\(r=1\)</span> maximizes it. This proves (13)–(14).
+<span class="math inline">\(\square\)</span></p>
+<p>Part (b) formalizes the loss of off-diagonal terms needed to recover
+the two selected critical-point weights. Its averaged balanced state
+approaches <span class="math inline">\(I/2\)</span> classically first,
+and <span class="math inline">\(|+\rangle\langle+|\)</span> when refined
+first. The trace distance between these two limiting states is <span
+class="math inline">\(1/2\)</span>; dephasing by itself supplies no
+accessible which-path tag. Part (c) instead supplies an actual
+discrimination experiment with errors tending respectively to <span
+class="math inline">\(1/2\)</span> and zero. Its extra tunable control
+is a physical hypothesis; changing the output recombiner alone would
+leave (7) unchanged. A classical branch-selection prescription can also
+retain distinct histories at every positive cell length, but their paths
+converge together as that length vanishes. A limiting Dirac measure
+alone expresses no retained record of the shrinking difference.</p>
+<p>These conclusions sharpen the proposed classical-first statement. For
+any fixed <span class="math inline">\(b\)</span> the condition <span
+class="math inline">\(b|\Delta S|/\varepsilon\gg1\)</span> controls the
+averaged cross term, with the explicit error in (11). For coherent
+discrimination the exact condition is (8), with its phase aliases. The
+two conditions express different measurements. Along a joint limit the
+dimensionless ratio <span
+class="math inline">\(C\tau^3/\varepsilon\)</span> governs both: tending
+to zero erases the phase signal; a finite ratio gives the corresponding
+signal, including the aliases in (8); a diverging ratio requires the
+prescription in (b) or (c) for a definite limit.</p>
+<p>For a partition of fixed total duration <span
+class="math inline">\(T\)</span>, the matched polygon action is <span
+class="math inline">\(K_\pi=C\sum_j\tau_j^3\le CT|\pi|^2\)</span>. Its
+coherent distance from the exact curve is at most <span
+class="math inline">\(\sqrt n\,CT|\pi|^2/(2\varepsilon)\)</span>. After
+<span class="math inline">\(k\)</span> uniform halvings a cell’s action
+falls by <span class="math inline">\(8^{-k}\)</span> and the whole
+polygon defect by <span class="math inline">\(4^{-k}\)</span>. Hence the
+whole fixed-duration comparison converges as well. Resolving ever
+smaller cells can require increasing resources: for a fixed small-error
+target the small-phase independent-copy scaling is <span
+class="math inline">\(n\)</span> of order <span
+class="math inline">\((\varepsilon/K_\tau)^2\)</span>, whereas coherent
+repetition uses <span class="math inline">\(k\)</span> of order <span
+class="math inline">\(\varepsilon/K_\tau\)</span>. Such budgets were
+held fixed in (10).</p>
+<h2 id="relation-to-the-disturbance-and-concentration-floors">5.
+Relation to the disturbance and concentration floors</h2>
+<p>The <a href="principia-fifth-postulate.html">fifth-postulate note,
+Theorems C, E and §7</a> (passage) separates observable algebra, states
+and records. With <span
+class="math inline">\(\varepsilon=|\hbar|\)</span>, the three bounds
+here have the following scopes.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bound</th>
+<th>Quantity constrained</th>
+<th>Extra hypotheses beyond Newtonian geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Phase record (9), one copy</td>
+<td><span
+class="math inline">\(K_\tau\ge2|\hbar|\arcsin(1-2\eta)\)</span> on the
+first lobe</td>
+<td>Coherent controlled comparison, calibrated reunion, Born rule and
+one pass</td>
+</tr>
+<tr class="even">
+<td>Theorem C(b)</td>
+<td><span class="math inline">\((s/8)\sum_j\Delta D_j+(J/2)\sum_j\Delta
+X_j\ge|\hbar|\arcsin(1-2\eta)\)</span></td>
+<td>Regular quantum joint states, unitary instrument, test valid for
+every initial body state; the theorem’s interpolating-state suprema</td>
+</tr>
+<tr class="odd">
+<td>Theorem E</td>
+<td><span
+class="math inline">\(\lambda_0(ab/|\hbar|)\ge(1-2\eta)^2\)</span></td>
+<td>Quantum state concentrated in both position and momentum windows
+with probability at least <span class="math inline">\(1-\eta\)</span>
+each</td>
+</tr>
+</tbody>
+</table>
+<p>Here <span class="math inline">\(s=F\tau^2/(2m)\)</span>, <span
+class="math inline">\(J=F\tau\)</span>, <span
+class="math inline">\(a,b\)</span> are window half-widths, and <span
+class="math inline">\(\lambda_0\)</span> is the largest eigenvalue of
+the time-and-band-limiting operator with the fifth-postulate note’s
+convention. For Theorem E’s finite threshold take <span
+class="math inline">\(0&lt;\eta&lt;1/2\)</span>; at <span
+class="math inline">\(\eta=0\)</span> simultaneous compact concentration
+is impossible for finite <span class="math inline">\(a,b\)</span>. A
+phase difference of <span class="math inline">\(\pi\)</span> already
+gives perfect discrimination in (7).</p>
+<p>The geometry relates <span
+class="math inline">\(sJ=12K_\tau\)</span>. Converting Theorem C into a
+bound on <span class="math inline">\(K_\tau\)</span> additionally needs
+bounds on the allowed disturbances <span class="math inline">\(\Delta
+D_j,\Delta X_j\)</span> relative to <span
+class="math inline">\(J,s\)</span>. Converting Theorem E needs a
+physical identification of the concentration widths <span
+class="math inline">\(a,b\)</span> with trajectory resolution. Choosing,
+for example, <span class="math inline">\(a=\alpha s\)</span> and <span
+class="math inline">\(b=\beta J\)</span> would give <span
+class="math inline">\(K_\tau\ge|\hbar|c_*(\eta)/(12\alpha\beta)\)</span>,
+with <span
+class="math inline">\(c_*(\eta)=\lambda_0^{-1}((1-2\eta)^2)\)</span> and
+the positive dimensionless apertures <span
+class="math inline">\(\alpha,\beta\)</span> supplied. Geometry alone
+fixes neither choice.</p>
+<p>The phase experiment has a two-dimensional record space. Its
+Fubini–Study distance from the reference is <span
+class="math inline">\(\delta/2\)</span>, and the equal-prior error
+target requires that distance to be at least <span
+class="math inline">\(\arcsin(1-2\eta)\)</span>. This is the same
+statistical-angle step used in Theorem C’s disturbance proof. Theorem E
+uses the overlap norm of two spectral projections in an
+infinite-dimensional canonical state space. Its concentration function
+and error dependence carry different information. Their common
+right-hand scale comes from the supplied canonical phase constant; the
+equality of the scale alone establishes no equivalence of the three
+experimental tasks.</p>
+<p>There is a stronger exact bridge within the restricted Gaussian mark
+model. The <a href="polygon-lift-phase.html">polygon-lift note, Theorem
+7</a> (passage) uses the same functional <span
+class="math inline">\(\mathcal K_\tau[f]=(2m)^{-1}\iint
+G_\tau(s,u)f(s)f(u)\,ds\,du\)</span> for the polygon phase and the
+optimal mark deflection. For constant force, <span
+class="math inline">\(\mathcal K_\tau=K_\tau\)</span>; with mark
+trade-off <span class="math inline">\(\kappa=|\hbar|/2\)</span>, its
+supremal squared deflection is <span class="math inline">\(d_{\rm
+mark}^2=2K_\tau/|\hbar|\)</span>. That equality retains the Gaussian,
+uncorrelated error/recoil and dense-protocol hypotheses. It leaves the
+general C and E bounds with their own quantities and quantifiers.</p>
+<p>Thus the two-path calculation gives the polygon theorem’s existing
+phase bound in the halved-functional representation, plus its explicit
+limit prescriptions. It adds no independent exclusion of the common zero
+branch allowed by <a href="rotation-composition-universality.html">round
+2, §4</a> (passage). Every <span
+class="math inline">\(\varepsilon&gt;0\)</span> supports (3)–(14); their
+thresholds scale with that freely supplied value. At zero, the
+exponential representation is singular, while classical mechanics still
+supplies ordinary trajectories and, with state completeness, sharp
+pointer records as in Theorem C(c). A singular coordinate for that
+classical theory creates no inconsistency in the theory itself.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Item 2 gains an exact two-path error law on the Galileo cubic action,
+with the endpoint conversion, phase aliases, resources and limiting
+prescriptions explicit. Fixed-resolution refinement erases this phase
+record; classical-first averaging or calibrated attenuation gives the
+precise contrasting limits. The result locates a conditional record
+threshold at <span class="math inline">\(K_\tau=\tau\Delta E/12\)</span>
+for the matched polygon protocol, and at the corresponding calibrated
+action for a literal inertial reunion. The remaining necessity step is
+to justify a common positive phase/readout scale independently of the
+quantum premises and a fixed experimental budget. Round 3 supplies the
+representation and its exact obstruction, while that physical
+scale-selection problem remains open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

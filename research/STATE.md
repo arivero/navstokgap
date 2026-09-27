@@ -78,6 +78,7 @@ fill its cells (open cells in its §5).
    partial, since a commutative state restriction also floors.
    [Rivero 1998 test](../notes/rivero-1998-conjecture-central-forces.md): quartic interference, convergent fixed-$h$ refinement and angular/EBK consistency leave scale selection open.
    [Rotation composition](../notes/rotation-composition-universality.md): mechanical generator closure forces one constant per connected class; the common zero branch remains admissible.
+   [Galileo two-path interference](../notes/galileo-two-path-interference.md): exact cubic-action error law; contrasting limits require averaging or calibrated control, with positive scale still supplied.
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.
