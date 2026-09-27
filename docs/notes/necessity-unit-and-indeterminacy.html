@@ -79,301 +79,290 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <main class="wrap">
 <h1>What a necessity argument for <span
 class="math inline">\(h&gt;0\)</span> must supply: a unit and an
-indeterminacy</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/necessity-unit-and-indeterminacy.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/necessity-unit-and-indeterminacy.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> A positive universal floor on
-recorded comparisons in Newton’s Galileo comparison needs two separable
-ingredients. <strong>(U)</strong> a universal action unit, and
-<strong>(I)</strong> an indeterminacy of the record’s back-action, since
-the floors of the <a href="planck-gap-paper.html">Planck paper</a>
-(Theorems 5–6) bound <em>spreads</em> of disturbances, and a definite,
-later recoverable kick has zero spread. The two have opposite
-status.</p>
-<ul>
-<li><strong>(U) follows from classical radiation thermodynamics</strong>
-(Theorem U). Kirchhoff’s universality, Wien’s scaling law, finite
-equilibrium energy density and low-frequency equipartition force the
-equilibrium spectrum to contain a universal constant <span
-class="math inline">\(\beta\)</span> with units of kelvin-seconds. With
-Boltzmann’s constant it gives an action <span
-class="math inline">\(h=k_B\beta\)</span>, independent of every material
-constant. Its value is already in Wien’s displacement constant <span
-class="math inline">\(b\)</span>: <span
-class="math inline">\(h=y_*k_Bb/c\)</span>, with <span
-class="math inline">\(y_*\)</span> a pure number fixed by the spectral
-shape. No premise about the body, its mass or a commutator enters.</li>
-<li><strong>(I) is impossible classically</strong> (Theorem I). Any
-model with Liouville dynamics of body and pointers, product preparations
-obeying a prior density ceiling, and Bayesian conditioning on pointer
-readings admits records whose body posterior has arbitrarily small area.
-A premise that yields (I) must deny one of these three. Quantum
-kinematics denies the third; a universal unrecordable background
-(stochastic electrodynamics) denies the second; an epistemic restriction
-in Spekkens’s sense imposes the ceiling directly. Newton’s printed
-optics denies none, which is paper §8’s <span
-class="math inline">\(\neg\)</span>M3 as an instance.</li>
-</ul>
-<p>So the necessity question becomes sharper than before. The existence
-of a universal action unit is forced by nineteenth-century physics that
-never mentions the body. What remains open is which of three explicit
-classical structures a physically justified premise must give up for
-that unit to act as a floor on records.</p>
-<p>The candidate list and both theorems were proposed by a Fable
-reviewer at the user’s request (report in the session scratchpad,
-2026-09-27), after three external models (DeepSeek, Mimosa, Muse Spark
-1.1) converged on the Stoney unit <span
-class="math inline">\(k_e/c\)</span>, which the <a
-href="action-unit-dimensional-selection.html">dimensional note</a>
-already holds. The ingredients are classical and the theorems
-elementary; no novelty is claimed for either. Their use here is to
-replace the obstruction map of <a
-href="action-scale-obstructions.html">action-scale-obstructions</a> by
-one statement of what is missing.</p>
-<h2 id="two-ingredients">1. Two ingredients</h2>
-<p>The floor of the Planck paper, Theorem 6, is</p>
+indeterminacy</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/necessity-unit-and-indeterminacy.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/necessity-unit-and-indeterminacy.pdf">PDF</a></p><p><strong>Result, 2026-09-27; corrected the same day.</strong>
+Radiation assumptions (K), (W), (S), (R) define a positive universal
+action scale by a spectral integral (Theorem U). A separate physical
+principle must connect that scale to restrictions on records. Theorem I
+constructs arbitrarily concentrated classical posteriors when the
+specified pointer couplings, preparations and sequential readouts are
+available. A prior density ceiling alone permits this construction. A
+posterior ceiling alone also leaves a further task: deriving the
+disturbance-versus-distinguishability bound used by Theorem 6 of the <a
+href="planck-gap-paper.html">Planck paper</a>.</p>
+<p><strong>Correction (GPT-6 Astra referee), 2026-09-27 —
+REFINE:</strong> distinguish the spectral unit, posterior restrictions,
+and the operational disturbance bound; the three original assumptions of
+Theorem I need an instrument-access assumption.</p>
+<p>The original unit/indeterminacy split and the two-pointer
+construction were proposed by a Fable reviewer at the user’s request on
+2026-09-27. The ingredients are elementary; no novelty claim is made.
+The <a href="newton-indeterminacy-routes.html">new route note</a>
+develops the physical candidates and the remaining operational
+estimate.</p>
+<h2 id="two-ingredients-and-the-bridge-between-them">1. Two ingredients,
+and the bridge between them</h2>
+<p>The Planck paper’s Theorem 6 states</p>
 <p><span class="math display">\[\frac s8\sum_j\Delta(\hat D_j)+\frac
 J2\sum_j\Delta(\hat X_j)
-\ge\hbar\arcsin(1-2\epsilon),\]</span></p>
-<p>with <span class="math inline">\(\Delta\)</span> a spread of an
-undetermined disturbance. Its proof uses Mandelstam–Tamm in the Bures
-angle and the Weyl relations, that is, <span
-class="math inline">\(\hbar&gt;0\)</span> in two roles.</p>
+\ge\hbar\arcsin(1-2\epsilon).\]</span></p>
+<p>Here <span class="math inline">\(\Delta\)</span> is the standard
+deviation in the proof’s interpolating states, with the prescribed
+suprema. Its proof uses both canonical translation kinematics and a
+bound on statistical distance generated by an observable. A conditional
+classical posterior variance and this operator disturbance variance are
+different quantities. A later estimate of a kick can reduce its
+conditional uncertainty; it need not erase the spread charged by that
+theorem.</p>
 <ul>
-<li><strong>(U), the unit.</strong> By Theorem A of the <a
-href="action-unit-dimensional-selection.html">dimensional note</a>, a
-floor shared by all masses and preparations is a pure number times a
-product of the model’s fixed constants with action units. Classical
-mechanics, gravity and electrodynamics hold exactly one mass-independent
-such product, <span
-class="math inline">\(k_e/c=e^2/(4\pi\epsilon_0c)=\alpha\hbar\)</span>.</li>
-<li><strong>(I), the indeterminacy.</strong> The floor bounds spreads. A
-record whose kick is definite and later recoverable contributes nothing,
-whatever the size of the kick. For example, a charged probe passing a
-charged body at speed <span class="math inline">\(u&lt;c\)</span> and
-impact parameter <span class="math inline">\(b\)</span> delivers the
-transverse impulse <span class="math inline">\(2n_1n_2k_e/(bu)\)</span>,
-so charge atomicity gives <span class="math inline">\(|\Delta
-p|\,b\ge2k_e/c=2\alpha\hbar\)</span>: a universal, mass-independent
-floor on the <em>magnitude</em> of a record’s kick. The kick is
-determined by the reading, so its spread is zero. The right unit gives
-the wrong kind of quantity.</li>
+<li><strong>(U), the unit.</strong> Given the fixed constants of the <a
+href="action-unit-dimensional-selection.html">dimensional note</a>,
+<span class="math inline">\(k_e/c=e^2/(4\pi\epsilon_0c)\)</span> has
+action units. Thermal radiation supplies another universal action scale,
+as proved below.</li>
+<li><strong>(I), the physical restriction.</strong> A floor needs a
+relation between the information a record carries and its disturbance.
+Prior or stationary spreads provide possible ingredients; admissible
+subsequent observations must preserve whatever restriction is
+invoked.</li>
 </ul>
-<h2 id="theorem-u-the-unit-from-radiation-thermodynamics">2. Theorem U:
-the unit from radiation thermodynamics</h2>
-<p>Let <span class="math inline">\(u(\nu,T)\,d\nu\)</span> be the
-equilibrium energy density of electromagnetic radiation between
-frequencies <span class="math inline">\(\nu\)</span> and <span
-class="math inline">\(\nu+d\nu\)</span> at absolute temperature <span
-class="math inline">\(T\)</span>. Assume:</p>
+<p><strong>Correction (GPT-6 Astra referee), 2026-09-27 — REJECT the
+universal Coulomb impulse bound:</strong> <span
+class="math inline">\(|\Delta p|b\ge2k_e/c\)</span> follows only from an
+ideal straight-path impulse formula, not from exact scattering.</p>
+<p>For a prescribed path <span class="math inline">\((ut,b)\)</span> and
+coupling <span class="math inline">\(k=|n_1n_2|k_e\)</span>, integration
+of the transverse Coulomb force gives</p>
+<p><span class="math display">\[|\Delta p_\perp|=\int_{-\infty}^{\infty}
+\frac{kb\,dt}{(b^2+u^2t^2)^{3/2}}=\frac{2k}{bu}.\]</span></p>
+<p>This is the small-deflection approximation for scattering, or an
+exact force integral along an externally maintained path. Charge
+atomicity and <span class="math inline">\(u&lt;c\)</span> give the
+proposed inequality within that prescription. For exact repulsive
+Rutherford scattering with reduced mass <span
+class="math inline">\(\mu\)</span>, <span
+class="math inline">\(\tan(\Theta/2)=k/(\mu u^2b)\)</span>, so the
+magnitude of the full momentum change satisfies</p>
+<p><span class="math display">\[b|\Delta p|=\frac{2k/u}{\sqrt{1+[k/(\mu
+u^2b)]^2}}\longrightarrow0
+\quad(b\downarrow0).\]</span></p>
+<p>An infinitely heavy repulsive centre with <span
+class="math inline">\(u\ll c\)</span> supplies this counterexample
+within nonrelativistic mechanics: the particle slows near the centre.
+Finite particle sizes would add a model-dependent cutoff. In either
+calculation a known trajectory gives a calculable impulse; its magnitude
+supplies no universal stochastic spread.</p>
+<h2 id="theorem-u-a-normalized-unit-from-radiation-thermodynamics">2.
+Theorem U: a normalized unit from radiation thermodynamics</h2>
+<p>Let <span class="math inline">\(u(\nu,T)\,d\nu\)</span> be a
+nonnegative measurable equilibrium energy density at <span
+class="math inline">\(T&gt;0\)</span>. Assume:</p>
 <ul>
-<li><strong>(K)</strong> <span class="math inline">\(u\)</span> is the
-same for every material enclosure (Kirchhoff 1859, from the second law:
-two cavities at one temperature with different spectra would drive an
-engine through a colour filter);</li>
+<li><strong>(K)</strong> the same spectrum for all material enclosures
+(Kirchhoff universality);</li>
 <li><strong>(W)</strong> <span
-class="math inline">\(u(\nu,T)=\nu^3f(\nu/T)\)</span> (Wien 1893, from
-adiabatic compression of a reflecting cavity and the second law (<a
+class="math inline">\(u(\nu,T)=\nu^3f(\nu/T)\)</span> (Wien scaling; <a
 href="https://doi.org/10.1007/978-3-663-13885-3_12">Wien 1893,
-reprint</a>, metadata));</li>
-<li><strong>(S)</strong> <span class="math inline">\(\int_0^\infty
-u\,d\nu&lt;\infty\)</span> for every <span
-class="math inline">\(T&gt;0\)</span> (Stefan’s measured law;
-Boltzmann’s <span class="math inline">\(T^4\)</span> theorem from
-Maxwell’s radiation pressure);</li>
+reprint</a>, metadata);</li>
+<li><strong>(S)</strong> <span class="math inline">\(0&lt;\int_0^\infty
+u(\nu,T)\,d\nu&lt;\infty\)</span>;</li>
 <li><strong>(R)</strong> <span
-class="math inline">\(u(\nu,T)\to(8\pi\nu^2/c^3)\,k_BT\)</span> as <span
-class="math inline">\(\nu/T\to0\)</span> (equipartition of the
-low-frequency modes, the regime Rayleigh and Jeans describe).</li>
+class="math inline">\(u(\nu,T)/[(8\pi\nu^2/c^3)k_BT]\to1\)</span> as
+<span class="math inline">\(\nu/T\to0\)</span>, with fixed <span
+class="math inline">\(c,k_B&gt;0\)</span>.</li>
 </ul>
-<p><strong>Theorem U.</strong> Under (K), (W), (S), (R) there is a
-constant <span class="math inline">\(\beta&gt;0\)</span> with units of
-kelvin-seconds, independent of every material constant, such that <span
-class="math inline">\(f(\nu/T)=(8\pi
-k_B/c^3)(T/\nu)\,\varphi(\beta\nu/T)\)</span> with <span
-class="math inline">\(\varphi\)</span> a function of one dimensionless
-variable, <span class="math inline">\(\varphi(0)=1\)</span>. Hence <span
-class="math inline">\(h:=k_B\beta\)</span> is a universal action,
-and</p>
-<p><span class="math display">\[\sigma&#39;=\frac{8\pi
-k_B^4}{h^3c^3}\int_0^\infty y^2\varphi(y)\,dy,
-\qquad h=\frac{y_*k_Bb}{c},\]</span></p>
-<p>where <span class="math inline">\(\sigma&#39;\)</span> is the Stefan
-constant of the energy density, <span class="math inline">\(b\)</span>
-is Wien’s displacement constant (<span
-class="math inline">\(\lambda_{\max}T=b\)</span> for the peak of the
-spectrum per unit wavelength), and <span
-class="math inline">\(y_*\)</span> is the pure number at which that peak
-sits.</p>
-<p><em>Proof.</em> By (W), <span class="math inline">\(u\)</span>
-depends on <span class="math inline">\(\nu\)</span> and <span
-class="math inline">\(T\)</span> through <span
-class="math inline">\(\nu^3\)</span> and the ratio <span
-class="math inline">\(\nu/T\)</span>, whose units are <span
-class="math inline">\(1/({\rm s\cdot K})\)</span>. By (K) the only
-constants <span class="math inline">\(u\)</span> may contain are
-universal ones, and (R) displays two, <span
-class="math inline">\(c\)</span> and <span
-class="math inline">\(k_B\)</span>. From <span
-class="math inline">\(c\)</span>, <span
-class="math inline">\(k_B\)</span> and <span
-class="math inline">\(\nu/T\)</span> no dimensionless combination
-exists, because <span class="math inline">\(c\)</span> contains a length
-and <span class="math inline">\(k_B\)</span> an energy, and neither
-appears in <span class="math inline">\(\nu/T\)</span>. If <span
-class="math inline">\(u\)</span> contained no further constant, <span
-class="math inline">\(f\)</span> would be a pure power, and (R) would
-fix it to <span class="math inline">\(f=(8\pi k_B/c^3)(T/\nu)\)</span>,
-whose frequency integral diverges, contradicting (S). So <span
-class="math inline">\(u\)</span> contains a further universal constant.
-By (W) it can enter only through a dimensionless multiple of <span
-class="math inline">\(\nu/T\)</span>, so it has units of kelvin-seconds;
-call it <span class="math inline">\(\beta\)</span>. Then <span
-class="math inline">\(f\)</span> has the displayed form, (R) gives <span
-class="math inline">\(\varphi(0)=1\)</span>, and substituting <span
-class="math inline">\(y=\beta\nu/T\)</span> in the integral gives <span
-class="math inline">\(\sigma&#39;\)</span>. The peak of <span
-class="math inline">\(u_\lambda=u\,c/\lambda^2\)</span> lies at a fixed
-value <span class="math inline">\(y_*\)</span> of <span
-class="math inline">\(\beta c/(\lambda T)\)</span>, so <span
-class="math inline">\(\lambda_{\max}T=\beta c/y_*\)</span>, which is the
-expression for <span class="math inline">\(h=k_B\beta\)</span>. <span
-class="math inline">\(\square\)</span></p>
-<p>With the spectral shape of Planck 1900 (<a
-href="https://doi.org/10.1002/andp.19003060105">Ann. Phys. 306, 69</a>,
-metadata), <span class="math inline">\(\varphi(y)=y/(e^y-1)\)</span>,
-the integral is <span class="math inline">\(\pi^4/15\)</span>, <span
-class="math inline">\(y_*\approx4.965\)</span>, and <span
-class="math inline">\(h\)</span> is Planck’s constant. The theorem needs
-no shape: any finite spectrum obeying (K), (W), (R) contains a universal
-action, fixed up to a pure number by the measured <span
-class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>
-and <span class="math inline">\(k_B\)</span>. Planck formed his natural
-units from exactly this constant in 1899–1900, before the quantum
-hypothesis; the theorem states why a constant had to be there.</p>
-<p>Two remarks keep the statement honest. First, <span
-class="math inline">\(k_B\)</span> converts kelvins to energy, and its
-value needs atomism (the gas constant divided by Avogadro’s number); the
-universal constant of (K)–(W) alone is <span
-class="math inline">\(\beta\)</span>. Second, with <span
-class="math inline">\(h\)</span> and <span
-class="math inline">\(k_e/c\)</span> both available, Theorem A of the
-dimensional note no longer fixes a unique unit: any universal floor is
-<span class="math inline">\(h\,G(\alpha)\)</span> with <span
-class="math inline">\(\alpha=k_e/(hc/2\pi)\)</span> dimensionless.
-Uniqueness of the unit requires that the floor not depend on the charge,
-which holds for records made with neutral probes.</p>
-<p><strong>Bridge to the Opticks.</strong> Newton’s <em>Opticks</em>
-holds, per colour, an interval of fits <span
-class="math inline">\(\Lambda\)</span> and a corpuscle whose <span
-class="math inline">\(\Lambda p\)</span> is invariant under refraction
-(paper §§7–8), but no universality across colours: on his ordering of
-corpuscle sizes, <span class="math inline">\(\Lambda p\)</span>
-decreases toward the violet with no least colour. Theorem U supplies
-exactly the missing cross-colour constant. Reading <span
-class="math inline">\(h\)</span> as a per-corpuscle impulse, <span
-class="math inline">\(p=h/\lambda\)</span>, needs more: Einstein’s
-fluctuation argument applied to an exponential spectral tail, which is
-the quantization of the field. So the unit enters honestly through
-(K)–(R), and quanta enter through the tail.</p>
-<h2 id="theorem-i-no-classical-ceiling-on-posteriors">3. Theorem I: no
-classical ceiling on posteriors</h2>
-<p><strong>Theorem I.</strong> Consider a classical model with (i)
-Liouville (Hamiltonian) dynamics of the body and its pointers, (ii)
-product preparations, each factor with a prior phase-space density at
-most <span class="math inline">\(1/X\)</span>, and (iii) records formed
-by Bayesian conditioning on a pointer coordinate read to finite
-precision. Then for every <span class="math inline">\(X&gt;0\)</span>
-and <span class="math inline">\(\eta&gt;0\)</span> there is a protocol
-whose body posterior satisfies <span class="math inline">\(\Delta
-q\,\Delta p&lt;\eta\)</span>, with <span
-class="math inline">\(\Delta\)</span> the width of the support.</p>
-<p><em>Proof.</em> Let the body prior be uniform on <span
-class="math inline">\([0,a]\times[0,X/a]\)</span> and the first pointer
-<span class="math inline">\((y,p_y)\)</span> uniform on <span
-class="math inline">\([0,\epsilon]\times[0,X/\epsilon]\)</span>; both
-have density <span class="math inline">\(1/X\)</span>. The impulsive
-coupling with Hamiltonian <span class="math inline">\(g\,q\,p_y\)</span>
-acting for unit time maps <span class="math inline">\(y\mapsto
-y+gq\)</span> and <span class="math inline">\(p\mapsto p-gp_y\)</span>,
-leaving <span class="math inline">\(q\)</span> and <span
-class="math inline">\(p_y\)</span> unchanged, and preserves the joint
-density by Liouville. Reading <span class="math inline">\(y\)</span> to
-precision <span class="math inline">\(\epsilon&#39;\)</span> confines
-<span class="math inline">\(q\)</span> to width <span
-class="math inline">\((\epsilon+\epsilon&#39;)/g\)</span>. A second
-pointer <span class="math inline">\((z,p_z)\)</span>, uniform on <span
-class="math inline">\([0,\epsilon_2]\times[0,X/\epsilon_2]\)</span> and
-coupled by <span class="math inline">\(g_2\,p_y\,p_z\)</span>, maps
-<span class="math inline">\(z\mapsto z+g_2p_y\)</span> and kicks only
-<span class="math inline">\(y\)</span>, which is already read. Reading
-<span class="math inline">\(z\)</span> to precision <span
-class="math inline">\(\epsilon_2&#39;\)</span> confines <span
-class="math inline">\(p_y\)</span> to width <span
-class="math inline">\((\epsilon_2+\epsilon_2&#39;)/g_2\)</span>. The
-body’s momentum is <span class="math inline">\(p-gp_y\)</span>, so its
-posterior width is at most <span
+<p><strong>Correction (GPT-6 Astra referee), 2026-09-27 —
+REFINE:</strong> replace the dimensional heuristic by an integral
+definition; a finite nonnegative spectrum and a ratio asymptotic are
+explicit, and the wavelength-peak formula needs a peak hypothesis.</p>
+<p><strong>Theorem U.</strong> Define <span
+class="math inline">\(x=\nu/T\)</span> and</p>
+<p><span class="math display">\[r(x)=\frac{c^3x f(x)}{8\pi k_B},\qquad
+I=\int_0^\infty x^2r(x)\,dx,\qquad
+\beta=I^{-1/3},\qquad h_{\rm rad}=k_B\beta.\]</span></p>
+<p>Then <span class="math inline">\(0&lt;I&lt;\infty\)</span>, <span
+class="math inline">\([\beta]={\rm K\,s}\)</span>, and <span
+class="math inline">\(h_{\rm rad}&gt;0\)</span> is a universal action
+scale independent of the enclosure. With <span
+class="math inline">\(\varphi(y)=r(y/\beta)\)</span>,</p>
+<p><span class="math display">\[u(\nu,T)=\frac{8\pi k_B
+T\nu^2}{c^3}\varphi(\beta\nu/T),\qquad
+\lim_{y\downarrow0}\varphi(y)=1,\qquad
+\int_0^\infty y^2\varphi(y)\,dy=1.\]</span></p>
+<p>Writing <span class="math inline">\(\int
+u\,d\nu=\sigma&#39;T^4\)</span> gives</p>
+<p><span class="math display">\[h_{\rm rad}=\left(\frac{8\pi
+k_B^4}{c^3\sigma&#39;}\right)^{1/3}.\]</span></p>
+<p><em>Proof.</em> Substitution <span
+class="math inline">\(\nu=Tx\)</span> gives <span
+class="math inline">\(\int u\,d\nu=(8\pi k_B/c^3)T^4 I\)</span>.
+Assumptions (S) and nonnegativity make <span
+class="math inline">\(I\)</span> finite, and (R), <span
+class="math inline">\(r(x)\to1\)</span>, makes it positive. Universality
+of <span class="math inline">\(f\)</span> makes <span
+class="math inline">\(I\)</span> enclosure-independent. Its units are
+<span class="math inline">\(({\rm K\,s})^{-3}\)</span>. Changing
+variable <span class="math inline">\(y=\beta x\)</span> proves the
+normalized shape and the formula for <span class="math inline">\(h_{\rm
+rad}\)</span>. <span class="math inline">\(\square\)</span></p>
+<p>This proof uses measurability and positivity inherent in an energy
+spectrum, and the constants explicitly present in (R). It makes no
+assumption that a physical law is built from a finite list of
+dimensional monomials. Kirchhoff universality allows dependence on other
+universal constants, including charge or particle masses; it establishes
+enclosure independence rather than independence from every microscopic
+constant. The normalization is conventional: any fixed positive
+numerical multiple of <span class="math inline">\(h_{\rm rad}\)</span>
+is an equally universal action unit.</p>
+<p>If <span class="math inline">\(y^4\varphi(y)\)</span> has a specified
+finite positive maximizer <span class="math inline">\(y_*\)</span>, then
+the spectrum per unit wavelength peaks at <span
+class="math inline">\(\lambda_{\max}T=b\)</span>, where</p>
+<p><span class="math display">\[h_{\rm
+rad}=\frac{y_*k_Bb}{c}.\]</span></p>
+<p>Integrability and (R) alone permit narrow high-frequency spikes and
+need not give such a maximum or a unique one. For the Planck shape in
+its usual normalization <span
+class="math inline">\(\varphi_P(y)=y/(e^y-1)\)</span>, the integral is
+<span class="math inline">\(\pi^4/15\)</span>, so <span
+class="math inline">\(h_P=(\pi^4/15)^{1/3}h_{\rm rad}\)</span> and its
+wavelength peak has <span
+class="math inline">\(y_{*,P}\simeq4.965\)</span>. The measured spectral
+shape fixes this numerical conversion. The original Planck citation here
+was to the earlier Wien-law entropy work, Ann. Phys. 306, 69; the Planck
+distribution is reported in <a
+href="https://doi.org/10.1002/andp.19013090310">Planck 1901, Ann. Phys.
+309, 553–563</a> (metadata). No quantization of a body follows from
+choosing this unit.</p>
+<p><strong>Correction (GPT-6 Astra referee), 2026-09-27 —
+REFINE:</strong> neutral probes alone do not remove charge dependence,
+and an exponential radiation tail alone does not derive corpuscle
+quantization.</p>
+<p>With both <span class="math inline">\(h_{\rm rad}\)</span> and <span
+class="math inline">\(k_e/c\)</span> available, a proposed floor can
+depend on their dimensionless ratio. Neutral composites may retain
+charged constituents and polarizability. To claim a pure-number multiple
+shared by all records requires an additional universality principle.
+Likewise, reading the action unit as a per-corpuscle law <span
+class="math inline">\(p=h_P/\lambda\)</span> needs physical assumptions
+beyond (K)–(R). The interval of fits and corpuscle momenta in Newton’s
+optics remain separate source quantities.</p>
+<h2 id="theorem-i-the-two-pointer-construction">3. Theorem I: the
+two-pointer construction</h2>
+<p><strong>Correction (GPT-6 Astra referee), 2026-09-27 —
+REFINE:</strong> ACCEPT the support-width algebra; specify the available
+Hamiltonians, freely squeezable preparations, and retained first
+reading.</p>
+<p><strong>Theorem I.</strong> Suppose a classical instrument class
+permits (i) Hamiltonian dynamics of body and pointers, (ii) the product
+rectangular preparations below, each canonical pair having density at
+most <span class="math inline">\(1/X\)</span>, (iii) finite-resolution
+coordinate readouts interpreted by Bayesian conditioning, and
+<strong>(iv)</strong> the two specified impulsive couplings and storage
+of the first reading before the second coupling. There are no additional
+restrictions on squeezing, apparatus energy, gains or readout
+resolution. Then for every <span class="math inline">\(X&gt;0\)</span>
+and <span class="math inline">\(\eta&gt;0\)</span> it contains a
+protocol whose final body posterior has support widths <span
+class="math inline">\(\Delta q\,\Delta p&lt;\eta\)</span> on every
+record of positive probability.</p>
+<p><em>Proof.</em> Put the body uniformly on <span
+class="math inline">\([0,a]\times[0,X/a]\)</span>, the first pointer
+<span class="math inline">\((y,p_y)\)</span> on <span
+class="math inline">\([0,\epsilon]\times[0,X/\epsilon]\)</span>, and a
+second independent pointer <span class="math inline">\((z,p_z)\)</span>
+on <span
+class="math inline">\([0,\epsilon_2]\times[0,X/\epsilon_2]\)</span>. The
+first Hamiltonian pulse, integrated strength <span
+class="math inline">\(g&gt;0\)</span>, is <span
+class="math inline">\(gqp_y\)</span>. Its canonical map is <span
+class="math inline">\(y\mapsto y+gq\)</span>, <span
+class="math inline">\(p\mapsto p-gp_y\)</span>, with <span
+class="math inline">\(q,p_y\)</span> fixed. Store a reading of <span
+class="math inline">\(y\)</span> in an interval of width <span
+class="math inline">\(\epsilon&#39;\)</span>. It confines <span
+class="math inline">\(q\)</span> to width <span
+class="math inline">\((\epsilon+\epsilon&#39;)/g\)</span>.</p>
+<p>The second pulse <span class="math inline">\(g_2p_yp_z\)</span>,
+<span class="math inline">\(g_2&gt;0\)</span>, sends <span
+class="math inline">\(z\mapsto z+g_2p_y\)</span> and <span
+class="math inline">\(y\mapsto y+g_2p_z\)</span>. It leaves <span
+class="math inline">\(q,p,p_y\)</span> fixed; the stored earlier reading
+is retained. A reading of <span class="math inline">\(z\)</span> in a
+bin of width <span class="math inline">\(\epsilon_2&#39;\)</span>
+confines <span class="math inline">\(p_y\)</span> to width <span
+class="math inline">\((\epsilon_2+\epsilon_2&#39;)/g_2\)</span>. Thus
+the body’s final momentum <span class="math inline">\(p_{\rm
+initial}-gp_y\)</span> has width at most <span
 class="math inline">\(X/a+g(\epsilon_2+\epsilon_2&#39;)/g_2\)</span>,
 and</p>
-<p><span class="math display">\[\Delta q\,\Delta
-p\le\frac{X(\epsilon+\epsilon&#39;)}{ag}
-+\frac{(\epsilon+\epsilon&#39;)(\epsilon_2+\epsilon_2&#39;)}{g_2},\]</span></p>
-<p>which is below <span class="math inline">\(\eta\)</span> for <span
-class="math inline">\(g_2\)</span> large and <span
-class="math inline">\(a\)</span> large, or <span
-class="math inline">\(\epsilon\)</span>, <span
-class="math inline">\(\epsilon&#39;\)</span> small. The prior ceiling
-only widens the unread conjugates <span
-class="math inline">\(p_y\)</span> and <span
-class="math inline">\(p_z\)</span>. <span
+<p><span class="math display">\[\Delta q\,\Delta p\le
+\frac{X(\epsilon+\epsilon&#39;)}{ag}
++\frac{(\epsilon+\epsilon&#39;)(\epsilon_2+\epsilon_2&#39;)}{g_2}.\]</span></p>
+<p>Choosing small positive <span
+class="math inline">\(\epsilon,\epsilon&#39;\)</span> at fixed finite
+values of the other parameters makes this less than <span
+class="math inline">\(\eta\)</span>. Both pulses preserve phase-space
+volume. All preparation densities meet the ceiling; the unread conjugate
+ranges increase as their coordinate ranges decrease. <span
 class="math inline">\(\square\)</span></p>
-<p>The second pointer reads the first pointer’s kick; this is paper §8’s
-countermodel (two position records recover the momentum) in mechanical
-form, and each classical entry of the obstruction map is a corner of it.
-The recoverable-delayed-record results C068–C069 are the corner <span
-class="math inline">\(a\to\infty\)</span>, <span
-class="math inline">\(\epsilon&#39;\to0\)</span>.</p>
-<p><strong>What (I) must deny.</strong> A premise that yields a
-universal posterior ceiling, and with it paper Theorem 6 with the
-ceiling in place of <span class="math inline">\(\hbar\)</span>, must
-deny (i), (ii) or (iii).</p>
+<p>A posterior supported in such a rectangle cannot obey a fixed density
+ceiling <span class="math inline">\(1/X\)</span> when its area is less
+than <span class="math inline">\(X\)</span>. This is a counterexample to
+preservation of a <em>prior-only</em> ceiling by the specified
+instruments. Hamiltonian dynamics as an abstract property alone does not
+guarantee access to these pulses. A physical theory can instead restrict
+its admissible instruments, their composition, or the recording
+memory.</p>
+<h2 id="what-a-record-floor-principle-must-restrict">4. What a
+record-floor principle must restrict</h2>
+<p><strong>Correction (GPT-6 Astra referee), 2026-09-27 — REJECT the
+exhaustive three-way list and the automatic inference of Theorem
+6:</strong> instrument availability is a fourth premise, and posterior
+concentration and disturbance cost require distinct bounds.</p>
+<p>A universal posterior restriction excludes at least one premise of
+the <em>four-part</em> Theorem I. A theory can keep classical Bayesian
+inference and product preparations while constraining readouts and their
+composition. Its disturbance bound then needs an operational proof.</p>
 <ul>
-<li><em>Quantum kinematics</em> denies (iii): there is no joint
-phase-space density on which to condition, and every read is also a
-kick.</li>
-<li><em>A universal background that no record can fully capture</em>
-denies (ii): every preparation is correlated with it. Stochastic
-electrodynamics is of this kind; Lorentz invariance fixes the spectrum
-of a random classical background as <span
-class="math inline">\(\propto\nu^3\)</span> up to one constant with
-action units (<a href="https://doi.org/10.1098/rspa.1963.0220">Marshall
-1963</a>; <a href="https://doi.org/10.1103/PhysRevD.11.790">Boyer
-1975</a>; metadata). The ceiling then needs the extra clause that
-records cannot read the background itself, since otherwise Theorem I
-applies to the enlarged system.</li>
-<li><em>An epistemic restriction</em> imposes the ceiling on every state
-of knowledge. Bartlett, Rudolph and Spekkens show that Liouville
-mechanics with such a restriction reproduces Gaussian quantum mechanics
-(<a href="https://doi.org/10.1103/PhysRevA.86.012103">PRA 86, 012103,
-2012</a>, metadata; <a
-href="https://doi.org/10.1103/PhysRevA.75.032110">Spekkens 2007</a> for
-the discrete toy theory). This is the posterior ceiling as a principle,
-with its value free; Theorem U then fixes the value up to a number.</li>
-<li><em>Newton’s printed optics</em> denies none: its fits are
-determinate and its records conditionable, which is why paper §8 finds
-that what Newton printed entails <span
-class="math inline">\(\neg\)</span>M3.</li>
+<li><em>Quantum kinematics</em> changes the classical phase-space state
+and transformation structure: there is generally no positive joint
+distribution for all canonical observables with unrestricted classical
+conditioning. Bayesian updating of ordinary classical records remains
+valid. Saying every read gives a kick supplies no quantitative lower
+bound on an unknown kick.</li>
+<li><em>A random background</em> can correlate stationary bodies and
+pointers. The presence of an unobserved background alone neither forbids
+all product preparations nor stops inference of its effects through a
+body. <a href="https://doi.org/10.1098/rspa.1963.0220">Marshall 1963</a>
+(publisher abstract through Crossref) starts with oscillator
+distributions matched to quantum ground states and derives a sustaining
+field. <a href="https://doi.org/10.1103/PhysRevD.11.790">Boyer 1975</a>
+(publisher abstract) supplies a Lorentz-invariant random boundary field
+and sets its scale by <span class="math inline">\(\hbar\)</span>. These
+source claims leave an independent posterior ceiling and its constant to
+be proved.</li>
+<li><em>An epistemic restriction</em> can constrain every preparation,
+transformation and measurement. <a
+href="https://arxiv.org/abs/1111.5057">Bartlett, Rudolph and Spekkens
+2012</a> (author abstract) impose a covariance uncertainty condition and
+maximum entropy and obtain Gaussian quantum statistics. This specifies
+much more than a pointwise density ceiling. Matching its freely chosen
+scale to <span class="math inline">\(h_{\rm rad}\)</span> remains a
+physical hypothesis.</li>
+<li><em>Newton’s optics</em> provides determinate ray mechanisms and
+measured fringe geometry. Even a deterministic bending law with nonzero
+recoil is compatible with classical conditioning. Its bearing on an
+irreducible unknown disturbance is tested in the new route note.</li>
 </ul>
-<h2 id="consequence-for-state">4. Consequence for STATE</h2>
-<p>STATE item 2 (Newton necessity) gains a sharp statement. The unit is
-settled classically by Theorem U. The open task is a physically
-justified premise that denies one of (i)–(iii) of Theorem I, of which
-the three known routes are quantum kinematics, an unrecordable universal
-background and an epistemic restriction. The historical test worth doing
-next is the reviewer’s second candidate: whether Newton’s inflexion
-experiments (<em>Opticks</em> Book III, Obs. 1–11) give a bending law
-<span class="math inline">\(\theta b\approx C\Lambda\)</span> per
-colour. If they do, Newton’s own optics denies (iii) for corpuscle
-records, per colour, and paper §8 must be reworded to say that <span
-class="math inline">\(\neg\)</span>M3 follows only for inflexion-free
-records.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>Theorem U supplies an enclosure-independent radiation action scale
+with an explicit normalization. Theorem I identifies a concrete set of
+classical instruments that defeats a prior-only ceiling. The next
+necessity step must justify a restriction on admissible records and the
+associated disturbance-versus-distinguishability bound. The <a
+href="newton-indeterminacy-routes.html">new route note</a> evaluates the
+background and inflexion candidates and states the missing estimate
+precisely.</p>
 
 </main>
 <footer class="site"><div class="wrap">

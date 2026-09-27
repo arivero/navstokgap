@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compact U(1) under refinement: an explicit total-variation bound in three dimensions, and why it fails in four</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Compact U(1) under refinement: an explicit total-variation bound in
+three dimensions, and why it fails in four</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/villain-monopole-refinement.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/villain-monopole-refinement.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> For the heat-kernel (Villain)
+<span class="math inline">\(U(1)\)</span> lattice gauge theory on the
+periodic lattice <span class="math inline">\((\mathbb Z/N)^D\)</span> of
+spacing <span class="math inline">\(a\)</span>, physical side <span
+class="math inline">\(L=Na\)</span> and plaquette heat time <span
+class="math inline">\(t\)</span>, the lattice measure splits exactly
+into a monopole-free part (the free photon together with the physical
+flux sectors of the torus) and a gas of lattice monopoles with Coulomb
+weights (Proposition 1; the duality of Banks, Myerson and Kogut). A
+bound on the lattice Laplacian then gives:</p>
+<ul>
+<li><strong><span class="math inline">\(D=3\)</span> (Theorem
+2).</strong> With <span class="math inline">\(t=\lambda_3a\le1\)</span>,
+<span class="math display">\[\bigl\|\mu_{a}-\mu_{a}^{\,0}\bigr\|_{\rm
+TV}\ \le\
+\frac{2(L/a)^3\,e^{-\pi^2/(6\lambda_3a)}}{1-e^{-\pi^2/(2\lambda_3a)}},\]</span>
+where <span class="math inline">\(\mu_a^0\)</span> is the monopole-free
+measure. The monopole free-energy density per physical volume lies
+between <span
+class="math inline">\(a^{-3}\cdot6e^{-2\pi^2/(3\lambda_3a)}\)</span> (up
+to a factor tending to one) and <span
+class="math inline">\(a^{-3}\cdot2e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})\)</span>.
+At fixed <span class="math inline">\(\lambda_3\)</span> and <span
+class="math inline">\(L\)</span> everything compact vanishes faster than
+any power of <span class="math inline">\(a\)</span>; along trajectories
+with <span class="math inline">\(\lambda_3a\simeq c/\log(1/a)\)</span>
+it stays finite. The flux sectors carry the weight <span
+class="math inline">\(e^{-2\pi^2|m|^2/(\lambda_3L)}\)</span>,
+independent of <span class="math inline">\(a\)</span>.</li>
+<li><strong><span class="math inline">\(D=4\)</span> (Theorem 3, and a
+recorded failure).</strong> With <span
+class="math inline">\(t=g^2\)</span>, the same decomposition holds with
+flux-sector weight <span
+class="math inline">\(e^{-2\pi^2|m|^2/g^2}\)</span>, independent of both
+<span class="math inline">\(a\)</span> and <span
+class="math inline">\(L\)</span>, and the monopole-loop free energy per
+lattice cell lies between <span
+class="math inline">\(12e^{-\pi^2/g^2}\)</span> and <span
+class="math inline">\(8e^{-\pi^2/(8g^2)}/(1-e^{-3\pi^2/(8g^2)})\)</span>,
+up to factors tending to one. The total-variation bound is then of order
+<span class="math inline">\((L/a)^4e^{-\pi^2/(8g^2)}\)</span>, which
+grows as <span class="math inline">\(a\to0\)</span> at fixed <span
+class="math inline">\(g\)</span>. The criterion that closes the
+three-dimensional case fails here for an exact reason: the loop density
+per lattice cell is fixed by <span class="math inline">\(g\)</span>
+alone. The four-dimensional continuum statement (Driver’s renormalized
+free field) needs observables and a coupling renormalization, which a
+partition-function bound cannot supply.</li>
+</ul>
+<p>This is the first step of the <span
+class="math inline">\(D=3\)</span> programme of STATE carried out at the
+level of the measure, with explicit <span
+class="math inline">\(a\)</span>, <span class="math inline">\(L\)</span>
+and coupling, for the smallest compact group. It sharpens Theorem 5 of
+the <a href="series-parallel-gauge-refinement.html">series/parallel
+note</a> (one step, rate <span
+class="math inline">\(e^{-\pi^2/(8t)}\)</span>) into a bound on the
+whole lattice measure with rate <span
+class="math inline">\(e^{-\pi^2/(6t)}\)</span>, and it puts numbers on
+the error-budget row of the <a
+href="zero-spacing-any-action.html">zero-spacing note</a>. The duality
+is established (<a
+href="https://doi.org/10.1016/0550-3213(77)90129-8">Banks, Myerson and
+Kogut 1977</a>, metadata) and the continuum limit at fixed coupling is
+Gross’s theorem (<a href="https://doi.org/10.1007/BF01210842">Gross
+1983</a>, abstract as indexed); the explicit total-variation bound and
+the flux-sector bookkeeping are elementary consequences, with no novelty
+claimed.</p>
+<h2 id="the-exact-decomposition">1. The exact decomposition</h2>
+<p>Let <span class="math inline">\(E\)</span>, <span
+class="math inline">\(P\)</span> and <span
+class="math inline">\(C_3\)</span> be the links, plaquettes and 3-cells
+of the periodic hypercubic lattice <span class="math inline">\((\mathbb
+Z/N)^D\)</span>, <span class="math inline">\(d\)</span> the coboundary
+on cochains, and <span class="math inline">\(\Delta=dd^{\sf T}+d^{\sf
+T}d\)</span> the Hodge Laplacian. The heat-kernel measure on link angles
+<span class="math inline">\(\theta\in[0,2\pi)^E\)</span> is</p>
+<p><span class="math display">\[\mu_a(d\theta)=\frac1Z\prod_{p\in
+P}k_t\bigl((d\theta)_p\bigr)\,
+\frac{d\theta}{(2\pi)^{|E|}},\qquad
+k_t(\phi)=\sum_{n\in\mathbb Z}e^{-tn^2/2}e^{in\phi}
+=\sqrt{\frac{2\pi}t}\sum_{n\in\mathbb Z}e^{-(\phi+2\pi
+n)^2/(2t)}.\]</span></p>
+<p>Write <span class="math inline">\(\mathbb
+R^P=\operatorname{im}d\oplus\operatorname{im}d^{\sf T}\oplus\mathcal
+H\)</span> (exact, coexact and harmonic 2-cochains; <span
+class="math inline">\(\mathcal H\)</span> is spanned by the cochains
+constant on each of the <span class="math inline">\(\binom D2\)</span>
+plaquette orientations). For <span class="math inline">\(n\in\mathbb
+Z^P\)</span> let <span class="math inline">\(q=dn\in\mathbb
+Z^{C_3}\)</span> (the monopole charges) and <span
+class="math inline">\(n_{\mathcal H}\)</span> the harmonic projection of
+<span class="math inline">\(n\)</span>.</p>
+<p><strong>Proposition 1 (monopole decomposition).</strong> <span
+class="math inline">\(\mu_a\)</span> is a mixture</p>
+<p><span class="math display">\[\mu_a=\frac1Z\sum_{[n]\in\mathbb
+Z^P/d\mathbb Z^E}
+w([n])\,\nu_{[n]},\qquad
+w([n])=\exp\Bigl\{-\frac{2\pi^2}t\Bigl(q^{\sf T}(dd^{\sf T})^+q
++|n_{\mathcal H}|^2\Bigr)\Bigr\},\]</span></p>
+<p>of probability measures <span
+class="math inline">\(\nu_{[n]}\)</span> on link angles, where <span
+class="math inline">\((dd^{\sf T})^+\)</span> is the pseudo-inverse on
+<span class="math inline">\(\operatorname{im}d\)</span> and <span
+class="math inline">\(|\cdot|\)</span> the Euclidean norm on cochains.
+The classes <span class="math inline">\([n]\)</span> with <span
+class="math inline">\(q=0\)</span> make up the monopole-free measure
+<span class="math inline">\(\mu_a^0\)</span>.</p>
+<p><em>Proof.</em> Insert the Poisson form of <span
+class="math inline">\(k_t\)</span> and exchange sum and integral. The
+substitution <span class="math inline">\(n\mapsto n+d\ell\)</span>,
+<span class="math inline">\(\theta\mapsto\theta-2\pi\ell\)</span> (<span
+class="math inline">\(\ell\in\mathbb Z^E\)</span>) groups the sum over
+<span class="math inline">\(n\)</span> into classes and extends the
+angle integral to <span class="math inline">\(\mathbb R^E\)</span>
+modulo <span class="math inline">\(2\pi\)</span> times the integer
+closed 1-cochains, a lattice of full rank in the closed 1-cochains; the
+remaining integrand depends on <span
+class="math inline">\(\theta\)</span> only through <span
+class="math inline">\(\omega=d\theta\)</span>. So the class <span
+class="math inline">\([n]\)</span> contributes a constant times <span
+class="math inline">\(\int_{\operatorname{im}d}e^{-|\omega+2\pi
+n|^2/(2t)}d\omega\)</span>. Decompose <span
+class="math inline">\(n=n_{\rm ex}+n_{\rm co}+n_{\mathcal H}\)</span>
+orthogonally. The exact part is absorbed by translating <span
+class="math inline">\(\omega\)</span>, and <span
+class="math inline">\(|n_{\rm co}|^2=(dn)^{\sf T}(dd^{\sf
+T})^+(dn)\)</span> because <span class="math inline">\(n_{\rm co}=d^{\sf
+T}(dd^{\sf T})^+dn\)</span>. The remaining Gaussian integral is the same
+for every class. <span class="math inline">\(\square\)</span></p>
+<p>The classes are labelled by <span class="math inline">\(q\in d\mathbb
+Z^P\)</span> together with an integer flux vector <span
+class="math inline">\(m\in\mathbb Z^{\binom D2}\)</span> through the
+coordinate 2-tori (the integral cohomology of the torus is free). For
+fixed <span class="math inline">\(q\)</span> the harmonic part is <span
+class="math inline">\(n_{\mathcal H}=h(m)+y(q)\)</span> with <span
+class="math inline">\(h(m)\)</span> the constant cochain of flux <span
+class="math inline">\(m\)</span> and <span
+class="math inline">\(y(q)\)</span> an offset fixed by <span
+class="math inline">\(q\)</span>. A cochain of flux <span
+class="math inline">\(m_{\mu\nu}\)</span> through each <span
+class="math inline">\((\mu\nu)\)</span> torus has value <span
+class="math inline">\(m_{\mu\nu}/N^2\)</span> on each of the <span
+class="math inline">\(N^D\)</span> plaquettes of that orientation,
+so</p>
+<p><span
+class="math display">\[|h(m)|^2=N^{D-4}\sum_{\mu&lt;\nu}m_{\mu\nu}^2
+.\]</span></p>
+<p><strong>Two elementary facts.</strong> (i) Each Fourier mode of <span
+class="math inline">\(\Delta\)</span> on the hypercubic lattice has
+eigenvalue <span
+class="math inline">\(\sum_\mu4\sin^2(k_\mu/2)\le4D\)</span>, so <span
+class="math inline">\(\|dd^{\sf T}\|\le4D\)</span> and <span
+class="math inline">\(q^{\sf T}(dd^{\sf T})^+q\ge|q|^2/(4D)\)</span> on
+<span class="math inline">\(\operatorname{im}d\)</span>. (ii) For <span
+class="math inline">\(y\)</span> fixed, the theta-type sum <span
+class="math inline">\(\sum_me^{-\alpha|h(m)+y|^2}\)</span> lies between
+<span
+class="math inline">\(e^{-\alpha|y|^2}\sum_me^{-\alpha|h(m)|^2}\)</span>
+(pair <span class="math inline">\(m\)</span> with <span
+class="math inline">\(-m\)</span>) and <span
+class="math inline">\(\sum_me^{-\alpha|h(m)|^2}\)</span> (its Fourier
+coefficients are positive).</p>
+<p><strong>The elementary monopole pair or loop.</strong> For a single
+plaquette <span class="math inline">\(p\)</span>, the charge <span
+class="math inline">\(q=d\,e_p\)</span> is a nearest monopole pair
+(<span class="math inline">\(D=3\)</span>) or an elementary monopole
+loop (<span class="math inline">\(D=4\)</span>), and <span
+class="math inline">\(q^{\sf T}(dd^{\sf T})^+q=|P_{\rm
+co}e_p|^2\)</span>. By translation invariance each plaquette has the
+same projections, so <span class="math inline">\(|P_{\rm ex}e_p|^2={\rm
+rank}\,d_1/|P|\)</span> and <span class="math inline">\(|P_{\mathcal
+H}e_p|^2=\binom D2/|P|\)</span>. With <span class="math inline">\({\rm
+rank}\,d_1=|E|-(N^D-1)-D\)</span>:</p>
+<p><span class="math display">\[D=3:\ |P_{\rm
+co}e_p|^2=\frac13\Bigl(1-\frac1{N^3}\Bigr),\qquad
+D=4:\ |P_{\rm co}e_p|^2=\frac12\Bigl(1-\frac1{N^4}\Bigr).\]</span></p>
+<p>For <span class="math inline">\(D=3\)</span> this agrees with the
+lattice Green’s function: <span
+class="math inline">\(G(0)-G(e_1)=\frac16(1-N^{-3})\)</span>, so a
+nearest pair has energy <span
+class="math inline">\(2(G(0)-G(e_1))\)</span>.</p>
+<h2 id="three-dimensions-the-theorem">2. Three dimensions: the
+theorem</h2>
+<p><strong>Theorem 2.</strong> Let <span
+class="math inline">\(D=3\)</span>, <span
+class="math inline">\(N=L/a\)</span>, <span
+class="math inline">\(t=\lambda_3a\le1\)</span>, and <span
+class="math inline">\(R=Z/Z^0\)</span> the ratio of the full partition
+function to its monopole-free part. Then</p>
+<p><span
+class="math display">\[1+6N^3\exp\Bigl\{-\frac{2\pi^2}{3\lambda_3a}
+-\frac{2\pi^2a^2}{\lambda_3L^3}\Bigr\}\ \le\ R\ \le\
+\exp\Bigl\{\frac{2N^3e^{-\pi^2/(6\lambda_3a)}}{1-e^{-\pi^2/(2\lambda_3a)}}\Bigr\},\]</span></p>
+<p>and</p>
+<p><span class="math display">\[\|\mu_a-\mu_a^0\|_{\rm
+TV}\le1-\frac1R\le
+\frac{2(L/a)^3e^{-\pi^2/(6\lambda_3a)}}{1-e^{-\pi^2/(2\lambda_3a)}}.\]</span></p>
+<p>The monopole-free part is the free photon on the torus with the flux
+sectors weighted by <span
+class="math inline">\(\exp\{-2\pi^2|m|^2/(\lambda_3L)\}\)</span>.</p>
+<p><em>Proof.</em> The flux weight is <span
+class="math inline">\(|h(m)|^2=N^{-1}|m|^2\)</span> and <span
+class="math inline">\(tN=\lambda_3L\)</span>. Upper bound: by fact (ii)
+the sum over <span class="math inline">\(m\)</span> at fixed <span
+class="math inline">\(q\)</span> is at most its value at <span
+class="math inline">\(q=0\)</span>, so <span
+class="math inline">\(R\le\sum_{q\in d\mathbb Z^P} e^{-(2\pi^2/t)q^{\sf
+T}(dd^{\sf T})^+q}\)</span>. By fact (i) with <span
+class="math inline">\(4D=12\)</span> each term is at most <span
+class="math inline">\(e^{-(\pi^2/6t)|q|^2}\)</span>. Enlarge the sum to
+all of <span class="math inline">\(\mathbb Z^{C_3}\)</span>, <span
+class="math inline">\(|C_3|=N^3\)</span>, and use <span
+class="math inline">\(\sum_{k\in\mathbb Z}e^{-\alpha
+k^2}\le1+2e^{-\alpha}/(1-e^{-3\alpha})\)</span> (from <span
+class="math inline">\(k^2-1\ge3(k-1)\)</span>) with <span
+class="math inline">\(\alpha=\pi^2/(6t)\)</span>, then <span
+class="math inline">\(\log(1+x)\le x\)</span>. Lower bound: keep <span
+class="math inline">\(q=0\)</span> and the <span
+class="math inline">\(6N^3\)</span> nearest pairs <span
+class="math inline">\(q=\pm d\,e_p\)</span> (<span
+class="math inline">\(3N^3\)</span> plaquettes, two signs). Each pair
+has Coulomb energy at most <span class="math inline">\(\frac13\)</span>
+and harmonic offset <span class="math inline">\(|y|^2=|P_{\mathcal
+H}e_p|^2=N^{-3}\)</span>, and fact (ii) gives the stated factor. Total
+variation: <span class="math inline">\(\mu_a\)</span> is the mixture
+<span class="math inline">\(R^{-1}\mu_a^0+(1-R^{-1})\mu_a^{\rm
+rest}\)</span>, so <span class="math inline">\(\|\mu_a-\mu_a^0\|_{\rm
+TV}\le1-R^{-1}\le\log R\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Reading.</strong> In a box of fixed physical side, the
+lattice measure is within total variation <span
+class="math inline">\(O((L/a)^3e^{-\pi^2/(6\lambda_3a)})\)</span> of the
+monopole-free measure. At fixed <span
+class="math inline">\(\lambda_3\)</span> this tends to zero faster than
+any power of <span class="math inline">\(a\)</span>. By the
+summable-error criterion of the <a
+href="refinement-composition-and-limit.html">refinement note</a>,
+Proposition 4, the continuum question for the compact theory then
+reduces to that for the free photon with flux sectors, which is
+Gaussian; Gross’s theorem is the continuum statement. The monopole
+free-energy density <span class="math inline">\(L^{-3}\log R\)</span>
+lies between the two bounds in the summary. It stays finite exactly when
+<span class="math inline">\(e^{-c/(\lambda_3a)}\sim a^3\)</span>, that
+is along <span class="math inline">\(\lambda_3a\simeq
+c/(3\log(1/a))\)</span> with <span class="math inline">\(c\)</span>
+between <span class="math inline">\(\pi^2/6\)</span> and <span
+class="math inline">\(2\pi^2/3\)</span>: the trajectories on which a
+Debye mass survives (<a
+href="https://doi.org/10.1007/BF01961240">Göpfert–Mack 1982</a>,
+abstract as indexed). The exponents are bounds; the monopole self-energy
+of the infinite lattice, <span
+class="math inline">\(2\pi^2G(0)\approx4.99\)</span> with <span
+class="math inline">\(G(0)\approx0.2527\)</span>, lies between them.</p>
+<h2 id="four-dimensions-the-same-bound-and-why-it-fails">3. Four
+dimensions: the same bound, and why it fails</h2>
+<p><strong>Theorem 3.</strong> Let <span
+class="math inline">\(D=4\)</span>, <span
+class="math inline">\(N=L/a\)</span>, <span
+class="math inline">\(t=g^2\)</span> with <span
+class="math inline">\(g^2\le1\)</span>. Then</p>
+<p><span
+class="math display">\[1+12N^4\exp\Bigl\{-\frac{\pi^2}{g^2}-\frac{2\pi^2}{g^2N^4}\Bigr\}\
+\le\ R\
+\le\
+\exp\Bigl\{\frac{8N^4e^{-\pi^2/(8g^2)}}{1-e^{-3\pi^2/(8g^2)}}\Bigr\},\]</span></p>
+<p><span class="math inline">\(\|\mu_a-\mu_a^0\|_{\rm TV}\le\log
+R\)</span>, and the flux sectors carry the weight <span
+class="math inline">\(\exp\{-(2\pi^2/g^2)\sum_{\mu&lt;\nu}m_{\mu\nu}^2\}\)</span>.</p>
+<p><em>Proof.</em> As for Theorem 2, with <span
+class="math inline">\(4D=16\)</span>, <span
+class="math inline">\(|C_3|=4N^4\)</span>, <span
+class="math inline">\(|h(m)|^2=|m|^2\)</span>, <span
+class="math inline">\(6N^4\)</span> plaquettes and two signs for the
+elementary loops, loop energy at most <span
+class="math inline">\(\frac12\)</span>, and harmonic offset <span
+class="math inline">\(N^{-4}\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>The recorded failure.</strong> In four dimensions the heat
+time is the coupling itself, so at fixed <span
+class="math inline">\(g\)</span> the monopole-loop free energy per
+lattice cell is a fixed number between the two bounds, and the
+total-variation bound grows like <span
+class="math inline">\((L/a)^4\)</span>. The three-dimensional route,
+closeness of the whole lattice measure to its Gaussian part, is
+unavailable in four dimensions for an exact reason, and the free-energy
+density it controls is a vacuum constant. The known continuum statement
+is different in kind: the compact theory converges on its current sector
+to a renormalized free electromagnetic field (<a
+href="https://doi.org/10.1007/BF01212424">Driver 1987</a>, abstract as
+indexed), with the monopole loops renormalizing the charge. A
+four-dimensional theorem in the insertion language therefore has to
+control observables and a coupling shift per step, as Hypothesis P(<span
+class="math inline">\(\alpha\)</span>) does, rather than the measure.
+This is the four-dimensional row of the error budget in the zero-spacing
+note, now with the density per cell made explicit: between <span
+class="math inline">\(12e^{-\pi^2/g^2}\)</span> and <span
+class="math inline">\(8e^{-\pi^2/(8g^2)}\)</span> up to factors tending
+to one.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>Item 1 of STATE gains a measure-level theorem for <span
+class="math inline">\(U(1)\)</span> in <span
+class="math inline">\(D=3\)</span> with explicit <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(L\)</span>, <span
+class="math inline">\(\lambda_3\)</span> (Theorem 2), and a recorded
+failure of the same route in <span class="math inline">\(D=4\)</span>
+with its reason (Theorem 3). The non-abelian step that corresponds to
+Theorem 2 needs a replacement for the Poisson decomposition: for <span
+class="math inline">\(SU(2)\)</span> the exact kernel (11) of the
+series/parallel note has image terms of both signs, so the mixture of
+Proposition 1 is not available and the Laplace-remainder route of its
+Proposition 7 remains the path.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

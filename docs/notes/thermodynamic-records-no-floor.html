@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thermodynamics of records gives a trade-off and no floor</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Thermodynamics of records gives a trade-off and no floor</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/thermodynamic-records-no-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/thermodynamic-records-no-floor.pdf">PDF</a></p><p><strong>Result, 2026-09-27 (a recorded failure of one
+route).</strong> Theorem I of the <a
+href="necessity-unit-and-indeterminacy.html">unit-and-indeterminacy
+note</a> says that back-action indeterminacy is impossible for classical
+models with Liouville dynamics, product preparations obeying a prior
+density ceiling, and Bayesian conditioning on records. A natural attempt
+to escape it adds a heat bath and requires records to be physical:
+stored, and eventually erased, at temperature <span
+class="math inline">\(T&gt;0\)</span>. This note shows that the attempt
+yields an exponential trade-off between dissipated energy and posterior
+area, and no positive floor:</p>
+<p><span class="math display">\[\eta\ \ge\
+A_0\,e^{-W/(k_BT)},\]</span></p>
+<p>where <span class="math inline">\(A_0\)</span> is the prior
+phase-space area of the body, <span class="math inline">\(\eta\)</span>
+the area of its posterior support after the records, and <span
+class="math inline">\(W\)</span> the total work spent on measurement and
+erasure (Theorem 1). For every <span
+class="math inline">\(\eta&gt;0\)</span> the construction of Theorem I
+reaches <span class="math inline">\(\eta\)</span> with finitely many
+finite-precision readings, hence finite <span
+class="math inline">\(W\)</span>. Thermodynamics therefore prices
+resolution logarithmically, <span class="math inline">\(W\ge
+k_BT\ln(A_0/\eta)\)</span>, and cannot single out an action. The
+would-be unit <span class="math inline">\(k_BT\,\tau\)</span> built from
+the bath and a record time rescales under the similarity of Theorem B of
+the <a href="action-unit-dimensional-selection.html">dimensional
+note</a>. So the thermodynamic route supplies neither ingredient (U) nor
+(I), and the question of STATE item 2 stays with the three denials
+listed in the unit-and-indeterminacy note.</p>
+<p>The ingredients are standard (Landauer, Bennett, the Sagawa–Ueda
+bound for measurement plus erasure); the note records their consequence
+for this programme, with no novelty claimed.</p>
+<h2 id="the-bound">1. The bound</h2>
+<p>Setting: the classical model of Theorem I, with body and pointers
+coupled to a heat bath at temperature <span
+class="math inline">\(T\)</span>. Records are pointer states that are
+read, used, and eventually reset to a standard state. The generalized
+second law for measurement and erasure (classical form of the bound of
+<a href="https://doi.org/10.1103/PhysRevLett.102.250602">Sagawa and Ueda
+2009</a>, metadata; the erasure part is <a
+href="https://doi.org/10.1147/rd.53.0183">Landauer 1961</a> and <a
+href="https://doi.org/10.1007/BF02084158">Bennett 1982</a>, metadata)
+states that the total work of a measurement that gains mutual
+information <span class="math inline">\(I\)</span> (in nats) about the
+system, followed by erasure of the record, satisfies <span
+class="math inline">\(W_{\rm meas}+W_{\rm eras}\ge k_BT\,I\)</span>.</p>
+<p><strong>Theorem 1.</strong> Let the body’s prior be uniform on a
+phase-space region of area <span class="math inline">\(A_0\)</span>, and
+let a protocol of records leave, for almost every outcome, a body
+posterior supported in a region of area at most <span
+class="math inline">\(\eta\)</span>. Then the total work of measurement
+and erasure satisfies</p>
+<p><span class="math display">\[W\ \ge\
+k_BT\,\ln\frac{A_0}{\eta},\qquad\text{equivalently}\qquad
+\eta\ \ge\ A_0\,e^{-W/(k_BT)}.\]</span></p>
+<p><em>Proof.</em> The differential entropy of the uniform prior is
+<span class="math inline">\(\ln A_0\)</span> (area measured in any fixed
+unit), and a density supported in area at most <span
+class="math inline">\(\eta\)</span> has differential entropy at most
+<span class="math inline">\(\ln\eta\)</span>. The mutual information
+between body and records is the prior entropy minus the average
+posterior entropy, so <span
+class="math inline">\(I\ge\ln(A_0/\eta)\)</span>; the unit of area
+cancels. Apply the measurement-plus-erasure bound. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>The construction of Theorem I is thermodynamically
+cheap.</strong> Its two pointers are read to precisions <span
+class="math inline">\(\epsilon&#39;\)</span> and <span
+class="math inline">\(\epsilon_2&#39;\)</span>; each reading stores
+finitely many bits for a bounded pointer range, and erasing them costs a
+finite multiple of <span class="math inline">\(k_BT\ln2\)</span>. So
+every posterior area <span class="math inline">\(\eta&gt;0\)</span> is
+reached at finite work, and the bound of Theorem 1 is the only
+thermodynamic constraint.</p>
+<h2 id="what-this-says-about-the-necessity-question">2. What this says
+about the necessity question</h2>
+<ul>
+<li><strong>No floor.</strong> The minimal posterior area at work budget
+<span class="math inline">\(W\)</span> is <span
+class="math inline">\(A_0e^{-W/(k_BT)}\)</span>, which tends to zero as
+the budget grows. A record of Newton’s sagitta at resolution <span
+class="math inline">\(s\)</span> with impulse resolution <span
+class="math inline">\(\delta p\)</span> costs at least <span
+class="math inline">\(k_BT\ln(A_0/(s\,\delta p))\)</span>: resolving a
+phase-space area a thousand times below <span
+class="math inline">\(\hbar\)</span> costs only <span
+class="math inline">\(k_BT\ln1000\)</span> more than resolving <span
+class="math inline">\(\hbar\)</span> itself. Thermodynamics cannot
+distinguish <span class="math inline">\(\hbar\)</span>.</li>
+<li><strong>No unit.</strong> The constants of the route are <span
+class="math inline">\(k_BT\)</span> and whatever times the protocol
+uses. An action <span class="math inline">\(k_BT\,\tau\)</span> rescales
+with <span class="math inline">\(\tau\)</span>, and the admitted class
+is closed under slowing the protocol, so Theorem B of the dimensional
+note gives floor zero. The universal unit of Theorem U enters through
+the equilibrium spectrum of radiation, which the record bound never
+uses.</li>
+<li><strong>The exponential again.</strong> The trade-off is a Boltzmann
+factor, as in the exponential ladder of the <a
+href="dimension-ladder.html">dimension-ladder note</a>, §4. Here the
+exponent contains no action constant, so the factor suppresses without
+setting a scale; in Wien’s tail <span
+class="math inline">\(e^{-h\nu/(k_BT)}\)</span> the same factor sets
+one, because <span class="math inline">\(h\)</span> appears in the
+exponent.</li>
+</ul>
+<h2 id="consequence-for-state">3. Consequence for STATE</h2>
+<p>The thermodynamic route to (I) is closed at theorem level: records
+with Landauer costs satisfy Theorem I with an exponential work–area
+trade-off. STATE item 2 keeps its three candidate denials (of Liouville
+dynamics, of product preparations, of Bayesian conditioning); the
+background and inflexion routes are under evaluation in the 2026-09-27
+Astra run.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

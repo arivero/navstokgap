@@ -24,15 +24,15 @@ What is proved about $\Psi$:
 - *Compact $U(1)$* (Propositions 3--4, Theorem 5): exact formulas for a
   cube and a mid-plane, and a proof that one step equals the free step up
   to an extensive error of density $e^{-\pi^2/(8\lambda_3a)}$ on the
-  small-field set. Measured in physical units, that error density
-  separates the two known continuum limits of three-dimensional compact
-  $U(1)$: massless at fixed coupling (Gross), massive at fixed Debye mass
-  (Göpfert--Mack).
+  small-field set. This is a one-step estimate for the unperturbed action;
+  stability under iteration remains open. The known massless fixed-coupling
+  and massive fixed-Debye-mass limits require their separate continuum theorems.
 - *Non-abelian groups* (Propositions 6--7): the bridge midpoint's
   curvature term is explicit for every compact group (for $SU(3)$ the
   averaged softening per cut face is $t_j|X_j|^2/512$), and the one-step
-  estimate, Hypothesis P($\alpha$) of §4, holds formally for one cube. The
-  missing estimate is a uniform Laplace remainder.
+  inequality in Hypothesis P($\alpha$) of §4 holds for one cube conditional
+  on the full normalized Laplace bounds in Proposition 7. Uniformity and
+  stability under iteration remain to be established.
 
 This answers the stop rule of the refinement note, §8, in its second
 form: it gives the exact term that prevents closure, with an explicit
@@ -402,6 +402,8 @@ flux of $g$ and $\phi_e$ the flux of the side face cut by $e$.
 
 **Proposition 4 (exact $U(1)$ mid-plane).**
 
+**Referee verdict, 2026-09-27: ACCEPT.** Equations (8)--(9) and the independent parity-mixture proof have the stated normalized-Haar constants.
+
 $$\Psi=\sum_{n\in\mathbb Z^N}e^{-\frac12n^{\sf T}Cn}\,e^{in\cdot\bar\Phi}
 \prod_{e:\,(\delta n)_e\ {\rm odd}}\rho_{t_e}(\phi_e). \tag{8}$$
 
@@ -442,6 +444,8 @@ $$0\le\log\frac{\Psi_1(\bar\Phi)}{\Psi_1^{(0)}(\bar\Phi)}
 \le\frac{2N\,e^{-c/t}}{1-e^{-c/t}},\qquad
 c=\pi\Bigl(\frac\pi2-\|\bar\Phi\|_\infty\Bigr). \tag{10}$$
 
+**Referee verdict, 2026-09-27: ACCEPT.** The M-matrix argument applies to the periodic square mid-plane used here; taking the logarithm of the product bound gives (10).
+
 *Proof.* $I+L/8$ is a symmetric M-matrix with row sums $1$, so its
 inverse has nonnegative entries and row sums $1$. Hence
 $\|C^{-1}\|_{\infty\to\infty}=1/(2t)$, and $C^{-1}\ge1/(4t)$ because
@@ -457,13 +461,16 @@ of error that Hypothesis P($\alpha$) allows, for every $\alpha$. The
 parity factors are handled by the same device, which completes the
 $U(1)$ step.
 
-**Theorem 5 ($U(1)$ case of P($\alpha$)).** Take $G=U(1)$, $D=3$, an
+**Correction (GPT-6 Astra referee), 2026-09-27 — REFINE:** use coarse-cube Bianchi identities for the lifts, retain harmonic flux sectors, and claim only the unperturbed one-step part of P($\alpha$).
+
+**Theorem 5 (unperturbed $U(1)$ one-step estimate).** Take $G=U(1)$, $D=3$, an
 isotropic coarse lattice with $t=\lambda_3a$, one halving of direction 1,
 and a coarse configuration in the small-field set: every coarse
 plaquette angle, taken in $(-\pi,\pi]$, has modulus at most
 $\varepsilon=t^{1/2-\delta}$, with $3\varepsilon\le\pi/8$ and
 $e^{-\pi^2/(16t)}\le\frac13$. Use these principal values for the
-fluxes. Then $\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})_g/2$, and
+coarse fluxes and choose the interpolated flux representative modulo
+$2\pi$ as $\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})_g/2$. Then
 
 $$-10\,N\,e^{-2\pi(\pi-\varepsilon)/t}\ \le\
 \log\Psi-\log\Psi_1^{(0)}(\bar\Phi)\ \le\
@@ -471,20 +478,27 @@ $$-10\,N\,e^{-2\pi(\pi-\varepsilon)/t}\ \le\
 
 where $\Psi_1^{(0)}(\bar\Phi)=(2\pi)^{N/2}(\det C)^{-1/2}
 e^{-\frac12\bar\Phi^{\sf T}C^{-1}\bar\Phi}$ is exactly the free-field
-parallel move of Proposition 2. Consequently $\mathcal D$ equals the free
-defect (5) plus a constant, up to an error at most
-$C_0Ne^{-\pi^2/(8t)}$ with $C_0$ absolute, and P($\alpha$) holds for $U(1)$
-with $\delta_t=0$ and every $\alpha$.
+parallel Gaussian integral. On the sector with zero total principal
+transverse flux in each periodic layer, $\mathcal D$ equals (5) plus a
+constant, up to an error at most $C_0Ne^{-\pi^2/(8t)}$ with $C_0$ absolute.
+On other sectors use the same real quadratic calculation including its
+harmonic ($k=0$) flux. Thus the unperturbed estimate in P($\alpha$) holds
+with $\delta_t=0$ for every $\alpha$; its perturbed-action stability clause
+requires a further proof.
 
 *Proof.* (i) Representatives. Formula (8) is $2\pi$-periodic in each
 $\bar\Phi_g$ and invariant under the joint change of lifts
 ($\phi_e\mapsto\phi_e+2\pi$ flips $\rho_e$ and shifts the adjacent
 $\bar\Phi_g$ by $\pi$), so any consistent lifts may be used. Take
-principal $\phi_e$. Then $\bar\Phi_g\equiv\Phi_{\ell+1}-\frac12
-\sum_{e\in\partial g}\sigma_e\phi_e$ modulo $2\pi$, and Stokes' theorem on the
-half-cell, whose terms are all below $6\varepsilon<2\pi$ in modulus, gives
-$\bar\Phi_g=(\Phi_\ell+\Phi_{\ell+1})/2$ with
-$\|\bar\Phi\|_\infty\le\varepsilon$.
+principal $\phi_e$ by changing the midpoint lifts together with the parity
+weights. The boundary identity for a coarse cube gives
+$\sum_{e\in\partial g}\sigma_e\phi_e=\Phi_{\ell+1}-\Phi_\ell+2\pi n$.
+The absolute value of the difference of the six principal face terms is
+at most $6\varepsilon<2\pi$, hence $n=0$. Since
+$\bar\Phi_g\equiv\Phi_{\ell+1}-\frac12\sum_e\sigma_e\phi_e\pmod{2\pi}$,
+its small representative is the asserted average and has modulus at most
+$\varepsilon$. This uses only coarse data; the fluctuating half-cell
+faces have no assumed smallness. Global torus flux can still be nonzero.
 (ii) Mixture form. By the proof of Proposition 4,
 $\Psi=E_s\,\Psi_1(\bar\Phi+\pi\delta^{\sf T}s)$ with independent
 $s_e\in\{0,1\}$, $P(s_e=1)=q_e=(1-\rho_e)/2\le\frac52
@@ -506,6 +520,8 @@ where $k$ is the number of odd entries of $c$,
 $A_0=1+2e^{-2c'/t}/(1-e^{-2c'/t})$ and
 $A_1=2e^{-c'/t}/(1-e^{-2c'/t})\le A_0$ under the stated condition on $t$.
 Average over $s$ and use $\log A_0\le2e^{-2c'/t}/(1-e^{-2c'/t})$.
+In fact, writing $r=e^{-c'/t}$, $A_0-A_1=(1-r)/(1+r)\ge0$
+for every $t>0$; the uniform-in-$s$ bound needs no further restriction.
 (v) The old transverse faces. $\log[k_{2t}(\theta)/k_t(\theta)]$ for
 Villain weights equals $\theta^2/(4t)+\frac12\log\frac12$ up to the
 one-dimensional vortex corrections, at most
@@ -529,36 +545,37 @@ removes. Göpfert and Mack prove a nonzero string tension for all
 couplings of the Villain theory, bounded below through a Debye mass
 $m_D>0$ (the monopole mechanism of
 [Polyakov 1977](https://doi.org/10.1016/0550-3213(77)90086-4), metadata),
-and report a continuum limit $a\to0$ at fixed $m_D$ that is a free scalar
-field of mass $m_D$
+and establish a continuum limit $a\to0$ at fixed physical $m_D$ that is a
+free scalar field of mass $m_D$, with string tension divided by $m_D^2$
+diverging in that limit
 ([Göpfert--Mack 1982](https://doi.org/10.1007/BF01961240), abstract as
-indexed). Gross proves that at fixed coupling the same lattice theory
-converges to the free electromagnetic field, which is massless
-([Gross 1983](https://doi.org/10.1007/BF01210842), abstract as indexed).
-Theorem 5 locates the difference in the size of its error in physical
-units. In a box of fixed physical side $L$ one step carries an error of
-order $(L/a_n)^2e^{-\pi^2/(8t_n)}$ per mid-plane. Along the fixed-$\lambda_3$
-trajectory, $t_n=\lambda_3a_n$ and these errors are summable, so the
-compact corrections die step by step, in agreement with Gross's limit.
-Holding $m_D$ fixed instead needs $t_n\to0$ only logarithmically in
-$a_n$, with the vortex density per physical area held finite; the same
-errors are then of order one per step, and the compact effect survives
-as the mass. So whether a gap survives depends on the trajectory. The
-error density per physical volume gives a sufficient condition for the
-free limit; its failure is necessary for a surviving compact effect and
-does not force one. Four dimensions show the difference: there
-$t=g^2$ does not decrease, the error density per physical volume grows
-along the refinement, and the compact theory still converges, on its
-current sector, to a renormalized free electromagnetic field
-([Driver 1987](https://doi.org/10.1007/BF01212424), abstract as indexed),
-because the monopole loops become irrelevant at long distance by a
-different mechanism. The
-constant $\pi^2/8$ in Theorem 5 is a bound and is not claimed to match
-the monopole action. For $SU(3)$ the gap is expected on the
-fixed-$\lambda_3$ trajectory itself, $E=C_3\hbar c\lambda_3$; by this
-comparison its mechanism must come from the non-abelian terms N1--N3,
-since the abelian bookkeeping of Theorem 5 by itself leads to a massless
-limit.
+indexed; publisher abstract checked 2026-09-27). Gross proves that at
+fixed physical coupling the Villain theory converges to the massless free
+electromagnetic field; his Wilson-action statement concerns the electric sector
+([Gross 1983](https://doi.org/10.1007/BF01210842), publisher abstract).
+
+**Correction (GPT-6 Astra referee), 2026-09-27 — REFINE:** the source results have different scalings and sectors; a one-step upper bound alone establishes neither continuum convergence nor the monopole density.
+
+In a fixed physical box the Theorem 5 bound is of order
+$(L/a_n)^2e^{-\pi^2/(8t_n)}$ per mid-plane and
+$(L/a_n)^3e^{-\pi^2/(8t_n)}$ over all planes. At $t_n=\lambda_3a_n$
+its tail vanishes and is summable. Turning this into convergence needs
+iteration stability and large-field probability control. Göpfert--Mack's
+fixed-$m_D$ trajectory instead has logarithmically decreasing $t_n$;
+their Debye formula supplies its normalization. The bound's constant
+$\pi^2/8$ cannot determine the error's actual order or the monopole density
+on that trajectory.
+
+In four dimensions [Driver 1987](https://doi.org/10.1007/BF01212424)
+(publisher abstract) proves convergence on the current sector to a
+renormalized free electromagnetic field for general energy functions at
+sufficiently large inverse coupling. For the Wilson energy he obtains
+convergence at arbitrary coupling by an appropriate Gibbs-state choice,
+and state independence away from at most countably many coupling values.
+The sector and state qualifications matter. These results motivate the
+comparison with the expected nonabelian three-dimensional gap
+$C_3\hbar c\lambda_3$; locating that gap in particular N1--N3 terms needs
+infrared control beyond the present ultraviolet estimate.
 
 For $SU(2)$ and
 $SU(3)$ the bridge expectations $E\,R(m_j)$ are matrices, and the
@@ -580,6 +597,9 @@ $e^X$, $d=|X|<2\pi$, and write the midpoint as $m=m_*e^{\xi}$ with
 $m_*=e^{X/2}$.
 
 **Proposition 6 ($SU(2)$ midpoint: structure and leading covariance).**
+
+**Correction (GPT-6 Astra referee), 2026-09-27 — REFINE:** the covariance is accepted; the representation formula is a fixed-representation expansion through order $t$, and the logarithm uses its almost-everywhere principal branch.
+
 (a) Exactly, $E\,D^J(m)=D^J(m_*)\Lambda^J$ with $\Lambda^J$ real and
 diagonal in the weight basis of the axis $\hat X$, and all odd moments of
 $\xi$ vanish. (b) As $t\to0$, uniformly for $d\le d_0<2\pi$, $\xi$ is
@@ -590,8 +610,12 @@ h(d)=\frac d4\cot\frac d4,$$
 
 in the frame (axis, two transverse directions), so that
 
-$$\Lambda^J_{\mu\mu}\simeq\exp\Bigl\{-\frac t8\Bigl[\mu^2
-+\frac{J(J+1)-\mu^2}{h(d)}\Bigr]\Bigr\}.$$
+$$\Lambda^J_{\mu\mu}=1-\frac t8\Bigl[\mu^2
++\frac{J(J+1)-\mu^2}{h(d)}\Bigr]+O_J(t^2).$$
+
+Here $J$ is fixed and $d\le d_0<2\pi$. The exponential of the displayed
+order-$t$ term is equivalent at this accuracy; noncommuting representation
+generators prevent treating it as an exact Gaussian characteristic function.
 
 *Proof.* (a) The geodesic symmetry $g\mapsto m_*g^{-1}m_*$ is an isometry
 that exchanges the endpoints, so it preserves the bridge law, and in
@@ -605,20 +629,26 @@ constant curvature $\kappa$, the Hessian of $\frac12d(p,\cdot)^2$ at
 distance $r$ is 1 radially and $r\sqrt\kappa\cot(r\sqrt\kappa)$
 transversally. At the midpoint $r=d/2$, $\kappa=\frac14$, so the exponent
 has Hessian $(4/t)\,{\rm diag}(1,h,h)$; Laplace's method gives the
-covariance, and the Gaussian characteristic function on the spin-$J$
-representation gives $\Lambda^J$ to leading order. $\square$
+covariance. Expanding $D^J(e^\xi)$ through second order and using the
+vanishing odd moments gives the fixed-$J$ order-$t$ formula. $\square$
 
-**Any compact group, and $SU(3)$.** The same argument applies to a
-compact group with the bi-invariant metric of §1. Along a geodesic with
-unit tangent $\hat X$ the curvature operator is $\frac14\operatorname{ad}(\hat X)^2$,
+**Correction (GPT-6 Astra referee), 2026-09-27 — REFINE:** change the curvature sign, allow weight multiplicities, restrict to a unique minimizing geodesic, and use the Killing form for nonsimple groups.
+
+**Any compact connected group, and $SU(3)$.** The local covariance
+argument applies with a bi-invariant metric and $X$ in a compact subset
+of the injectivity domain. Along its geodesic the curvature operator is
+$-\frac14\operatorname{ad}(\hat X)^2$,
 with eigenvalue $0$ on the centralizer of $X$ and $\frac14\alpha(\hat X)^2$ on
 the root plane of each positive root $\alpha$ (with $\operatorname{ad}X$ having
 eigenvalues $\pm i\alpha(X)$ there). The midpoint covariance is therefore
 $t/4$ along the centralizer and $(t/4)/h_\alpha$ on each root plane, with
-$h_\alpha=\frac{\alpha(X)}4\cot\frac{\alpha(X)}4$, and part (a) holds with
-"diagonal in a weight basis of a maximal torus containing $X$". For
-$SU(2)$ the single positive root has $\alpha(X)=d$, recovering (b). Since
-$\sum_{\rm all\ roots}\alpha(X)^2=C_2({\rm adj})|X|^2$ and
+$h_\alpha=\frac{\alpha(X)}4\cot\frac{\alpha(X)}4$. The centered representation
+average is Hermitian and commutes with the centralizer of $X$. It is
+block diagonal on weight spaces of a maximal torus containing $X$;
+weight multiplicities allow mixing within each block. For
+$SU(2)$ the single positive root has $\alpha(X)=d$, recovering (b). For a
+compact simple Lie algebra,
+$\sum_{\rm all\ roots}\alpha(X)^2=C_2({\rm adj})|X|^2$, and
 $1/h_\alpha-1=\alpha(X)^2/48+O(\alpha^4)$, the curvature excess averaged
 over the $\dim G$ directions is, per cut face,
 
@@ -628,8 +658,17 @@ that is $t_j|X_j|^2/288$ for $SU(2)$ ($C_2({\rm adj})=2$, $\dim G=3$) and
 $t_j|X_j|^2/512$ for $SU(3)$ ($C_2({\rm adj})=3$, $\dim G=8$, two flat
 Cartan directions and three root planes).
 
-Part (b) is labelled as leading-order asymptotics: an explicit remainder
-bound is open. It makes N2 concrete. Positive curvature enlarges the
+For a general compact Lie algebra replace $C_2({\rm adj})|X|^2$ by
+$-\operatorname{tr}(\operatorname{ad}X)^2$; central directions contribute
+zero and simple factors carry their own metric-dependent Casimirs.
+
+Part (b) gives the leading covariance as $t\to0$ at fixed $X$ in the
+specified compact domain. The displayed softening then expands this
+coefficient at small $X$. When $|X|^2\sim t$, other order-$t^2$
+covariance terms also contribute; the softening coefficient alone is
+insufficient to compute the complete correction at that order. Numerical
+remainder constants and control after representation summation remain
+open. Positive curvature enlarges the
 transverse fluctuation of the midpoint, $1/h(d)=1+d^2/48+O(d^4)$, so the
 softening of the mid-face weight grows with the side-face flux. Splitting
 $J(J+1)/h+\mu^2(1-1/h)$, each cut face adds $t_j/(4h(d_j))$ to the
@@ -639,23 +678,44 @@ of the same order, which couples the mid-face to the direction of the
 side flux. For fluctuating fields $d_j^2\sim t$, so both are
 $O(t)$ relative to the action. N3, the non-Gaussian and commutator
 corrections in $\prod_jm_j$, enters at the same order and is not computed
-here. The $SU(2)$ case of P($\alpha$) therefore needs one more fact: that
-the $O(t)$ terms, N2 and N3 together, combine into a constant, coupling
-shifts and operators that are irrelevant on smooth fields. Proposition 7
-below derives this formally for any compact group.
+here. Proposition 7 below gives a weaker finite-cube inequality by
+bounding all such terms in the remainder; extracting their coupling and
+irrelevant-operator coefficients requires a separate calculation.
 
-**Proposition 7 (formal, any compact $G$, isolated cube).** Assume that
-Laplace's method applies to (3) for one refined cube with a remainder of
-relative order $t^2$, uniformly on the small-field set. Then P($\alpha$)
-holds for that cube with $\alpha=\frac12-\delta$ for every
-$\delta<\frac16$.
+**Correction (GPT-6 Astra referee), 2026-09-27 — REFINE:** the reflection cancellation is rejected; a conditional finite-cube bound survives with mixed terms in its remainder.
 
-*Derivation.* To relative order $t$,
-$-\log\Psi=S_{\rm cl}+\frac12\log\det H+{\rm const}$, where $S_{\rm cl}$
+**Proposition 7 (conditional finite-cube power bound).** Fix a compact
+connected group, one cube, and positive bounded heat-time ratios. In a
+local gauge let $X$ collect its independent boundary flux coordinates,
+$r^2=\sum_f|X_f|^2$. Assume a uniform Laplace expansion of the *normalized*
+bridge integral and old-face ratio,
+
+$$\mathcal D(X,t)=c(t)+F(X)/t+A(X)-A(0)+R(X,t),$$
+
+with $|F(X)-F_2(X)|\le Cr^3$, $|A(X)-A(0)|\le Cr$, and
+$|R(X,t)|\le Ct(1+r^2/t)$. Here $F_2/t$ is the quadratic defect of
+the isolated Gaussian cube, including the bridge denominators. These
+bounds require a unique nondegenerate saddle and control of the full
+heat-kernel/Haar amplitudes. For $r\le C_1t^{1/2-\delta}$ and
+$0<\delta<1/6$,
+
+$$|\mathcal D-c(t)-F_2/t|\le C_2t^{1/2-\delta}(1+r^2/t).$$
+
+Thus the unperturbed finite-cube inequality has
+$\alpha=1/2-\delta>2\delta$, even with coupling shifts set to zero.
+
+*Derivation.* The cubic classical remainder is bounded by
+$Cr(r^2/t)$, the amplitude variation by $Cr$, and $t\le t^{1/2-\delta}$
+for small $t$. This proves the asserted inequality. The following
+power counting explains the hypotheses without establishing their uniformity.
+The leading saddle contributions are
+$S_{\rm cl}+\frac12\log\det H$, where $S_{\rm cl}$
 is the minimum over the four midpoints of the exponent
 $\sum_j[d(Q_j^{-1},m_j)^2+d(m_j,P_j)^2]/t_j+d(e,m_{\partial g})^2/(2t_m)$
-(the $w=0$ terms of the heat kernels) and $H$ its Hessian there; the
-two-loop terms are constants up to relative order $t^2$.
+(the $w=0$ exponents) and $H$ its Hessian there. One must also add
+$\sum_j\log k_{t_j}(e^{X_j})$ from the bridge denominators and include the heat-kernel
+and Haar amplitudes. A remainder order for the bare integral alone
+does not supply the displayed expansion.
 (i) *Classical part.* The Lie-algebra linearization of $S_{\rm cl}$ is the
 abelian problem, so its quadratic part is the free form, which is
 $\mathcal D_0$ after the old-face subtraction. The rest starts at cubic
@@ -664,18 +724,21 @@ $\langle X_{\rm mid},[X_{12},X_{13}]\rangle/t$, and quartic invariants
 $|X|^4/t$. On the small-field set, $|X|^3/t\le t^{1/2-\delta}|X|^2/t$
 and $|X|^4/t\le t^{1-2\delta}|X|^2/t$, both inside the remainder of
 P($\alpha$) with $\alpha=\frac12-\delta$.
-(ii) *One-loop part.* The Hessian of $|\log(e^\xi e^Y)|^2$ in $\xi$ has no
-term linear in $Y$, because the inner product is $\operatorname{ad}$-invariant;
-its first correction is quadratic, of the form $|[\xi,Y]|^2$. Hence
-$\log\det H=\log\det H_0+{\rm tr}(H_0^{-1}H_1)+\dots$ with $H_1$
-quadratic in the fluxes, a combination of Killing inner products
-$\langle X_f,X_{f'}\rangle$ with coefficients of order one, that is,
-$O(t)$ relative to the action. The terms with $f,f'$ in different planes
-are odd under a reflection of the cube (the mid-plane reflection
-reverses the $(1j)$ fluxes and fixes the mid-face flux; the reflection
-$x_2\mapsto-x_2$ reverses the $(12)$ flux and fixes the $(13)$ flux), and
-$\Psi$ is invariant under these reflections, so they vanish. What remains
-is diagonal in the planes: the coupling shifts $\delta_t^{\mu\nu}S_{\mu\nu}$.
+(ii) *One-loop part.* Mixed quadratic boundary terms can survive cube
+reflections because reflections also permute the faces. For example,
+$\langle\Delta_1X_{23},\Delta_2X_{31}\rangle$, with $\Delta_i$ the
+difference between opposite faces normal to direction $i$, is even
+under each coordinate reflection: each factor transforms as a pseudoscalar.
+Axis permutations can be accommodated by summing the corresponding pairs.
+The linear Bianchi relation among the three differences can rewrite
+such terms as squares of differences, which still couple opposite faces.
+Thus reflection invariance permits more than a sum of individual
+plaquette norms. The coupled Hessian can also have linear
+off-diagonal blocks from cubic BCH terms, whose squared contribution
+enters $\log\det H$ at quadratic order. Every bounded quadratic amplitude
+term is $O(r^2)=O(t)(r^2/t)$ and already fits the stated remainder since
+$\alpha<1$. Identifying plane-diagonal coupling shifts requires a separate
+calculation. The present bound makes no such identification.
 (iii) The old-face ratio $k_{2t}/k_t$ is even in $\log U_f$ and
 contributes a constant and a transverse coupling shift. $\square$
 
@@ -727,12 +790,12 @@ first rungs are proved. One directional refinement step factors exactly
 into series moves, which close, and a parallel insertion $\Psi$
 (Proposition 1). $\Psi$ is exact for the free field (Proposition 2),
 for the $U(1)$ cube (Proposition 3) and the $U(1)$ mid-plane
-(Proposition 4), and for $U(1)$ one step satisfies Hypothesis P($\alpha$)
-with an error of density $e^{-\pi^2/(8\lambda_3a)}$ (Theorem 5), which
-also explains why the lattice gap of compact $U(1)$ does not survive the
-fixed-coupling limit. For non-abelian groups the midpoint curvature term
-is explicit (Proposition 6 and its group-general form), and P($\alpha$)
-for one cube holds formally for any compact group (Proposition 7). The
+(Proposition 4), and for $U(1)$ the unperturbed one-step bound has
+error density $e^{-\pi^2/(8\lambda_3a)}$ (Theorem 5).
+For non-abelian groups the midpoint curvature term
+is explicit (Proposition 6 and its group-general form), and the
+finite-cube bound is conditional on a full normalized Laplace expansion
+(Proposition 7). The
 next step is the uniform Laplace remainder that turns Proposition 7 into
 a theorem for $SU(2)$ and $SU(3)$; after it, a mid-plane by small-field
 cluster expansion, and stability under iteration. For the paper, the

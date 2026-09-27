@@ -42,6 +42,7 @@ TRACKS = [
      carry the theorems, the Newton-age premises and the ancient dispute about
      the cut.""", [
         "planck-gap-paper", "necessity-unit-and-indeterminacy",
+        "newton-indeterminacy-routes",
         "polygon-lift-phase", "record-costs-recoil",
         "additive-noise-marks", "record-costs-disturbance",
         "record-distance-path-length",

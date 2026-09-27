@@ -1,6 +1,6 @@
 # State
 
-Updated 2026-09-26. Read this page and the
+Updated 2026-09-27. Read this page and the
 [refinement note](../notes/refinement-composition-and-limit.md);
 AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
 gives the wider comparison.
@@ -48,21 +48,16 @@ Principia work lives in the sibling `newtonlean` repository.
    factors one directional halving exactly: series moves close in every
    dimension, and the parallel insertion $\Psi$ (Prop. 1) carries the
    renormalization in $\binom{D-1}{2}$ transverse planes. The free-field
-   defect is exact (Prop. 2); for $U(1)$ one step is proved (Thm 5:
+   defect is exact (Prop. 2); for unperturbed $U(1)$ one step is proved (Thm 5:
    free-field step up to density $e^{-\pi^2/(8\lambda_3a)}$). $SU(2)$
-   midpoint: exact structure and leading curvature term (Prop. 6); P($\alpha$)
-   for one cube holds formally for any compact $G$ (Prop. 7). Next: its
-   uniform Laplace remainder for $SU(2)$, then a mid-plane, then iteration.
+   midpoint: exact structure and leading curvature term (Prop. 6); the
+   finite-cube bound assumes full normalized Laplace estimates (Prop. 7).
+   Next: those estimates for $SU(2)$, then a mid-plane, then iteration.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
-   per-volume error budget, with the 4D large-field threshold $c>2/b_0$.
-2. **Newton necessity.** The
-   [unit-and-indeterminacy note](../notes/necessity-unit-and-indeterminacy.md)
-   splits it: a universal action unit follows from classical radiation
-   thermodynamics (Thm U); back-action indeterminacy is impossible with
-   Liouville dynamics, product preparations and Bayesian records (Thm I).
-   Next: a justified premise denying one of the three; test Newton's
-   inflexion data (*Opticks* III, Obs. 1--11) for a bending law.
+   conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
+2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
+   Next: physically justify closure under recording and $2\zeta=\gamma h_{\rm rad}$; hidden-background and deterministic-inflexion premises leave both open.
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.

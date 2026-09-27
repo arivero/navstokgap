@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The SU(2) bridge midpoint in closed form: the curvature term is exact</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The SU(2) bridge midpoint in closed form: the curvature term is
+exact</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midpoint-exact.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midpoint-exact.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> Proposition 6 of the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>
+described the midpoint of the Brownian bridge on <span
+class="math inline">\(SU(2)\)</span>, the building block of the
+non-abelian parallel insertion, only to leading order in the heat time,
+with the curvature factor <span class="math inline">\(1/h\)</span>,
+<span class="math inline">\(h=(d/4)\cot(d/4)\)</span>, derived by
+Laplace’s method and labelled as asymptotics. For the fundamental
+character the midpoint expectation is computable exactly. For a bridge
+of duration <span class="math inline">\(t\)</span> from <span
+class="math inline">\(e\)</span> to a group element at geodesic distance
+<span class="math inline">\(\theta\in[0,2\pi)\)</span>,</p>
+<p><span
+class="math display">\[E\,\chi_{1/2}(m)=e^{-t/32}\Bigl[2\cos\frac\theta4-\frac
+t{2\theta}\,
+\sin\frac\theta4\Bigr]\ \ \text{up to image terms of relative size}\
+\Bigl(2+\frac{32\pi^2}t\Bigr)e^{-4\pi(2\pi-\theta)/t}\]</span></p>
+<p>(Theorem 1). Expanded to first order it is exactly the prediction of
+Proposition 6(b), <span
+class="math inline">\(2\cos\frac\theta4\,[1-\frac
+t{32}(1+\frac2{h(\theta)})]\)</span>, because <span
+class="math inline">\(\frac t{32}\cdot\frac2h=\frac
+t{4\theta}\tan\frac\theta4\)</span>. So the curvature term N2, the
+side-flux-dependent softening of the mid-face weight, is confirmed with
+no remainder of order <span class="math inline">\(t^2\)</span> in the
+<span class="math inline">\(w=0\)</span> sector: the only correction to
+the displayed formula is the exponentially small winding of the bridge
+around the group. This is the first exact non-abelian statement about
+the parallel insertion in three dimensions, and it settles the
+fundamental-representation part of the uniform Laplace remainder that
+Proposition 7 of the series/parallel note assumes.</p>
+<p>The ingredients are character orthogonality and Poisson summation;
+the computation is elementary and no novelty is claimed for it.</p>
+<h2 id="setting">1. Setting</h2>
+<p>Group metric as in the series/parallel note §1: <span
+class="math inline">\(C_2(j)=j(j+1)\)</span>, <span
+class="math inline">\(SU(2)\)</span> the three-sphere of radius 2, heat
+kernel <span
+class="math inline">\(k_t=\sum_j(2j+1)e^{-tj(j+1)/2}\chi_j\)</span> with
+<span
+class="math inline">\(\chi_j(\theta)=\sin((2j+1)\theta/2)/\sin(\theta/2)\)</span>
+at rotation angle <span class="math inline">\(\theta\)</span> (the
+geodesic distance from <span class="math inline">\(e\)</span>). The
+midpoint <span class="math inline">\(m\)</span> of the bridge of
+duration <span class="math inline">\(t\)</span> from <span
+class="math inline">\(e\)</span> to <span
+class="math inline">\(g\)</span> has density <span
+class="math inline">\(k_{t/2}(m)\,k_{t/2}(m^{-1}g)/k_t(g)\)</span> with
+respect to Haar measure. Its geodesic midpoint <span
+class="math inline">\(m_*=\exp(\frac12\log g)\)</span> has rotation
+angle <span class="math inline">\(\theta/2\)</span>, so <span
+class="math inline">\(\chi_{1/2}(m_*)=\sin(\theta/2)/\sin(\theta/4)=2\cos(\theta/4)\)</span>.</p>
+<h2 id="the-exact-formula">2. The exact formula</h2>
+<p><strong>Theorem 1.</strong> Put <span
+class="math inline">\(\Theta_\pm(\theta)=\sum_{w\in\mathbb Z}(\pm1)^w
+e^{-(\theta-4\pi w)^2/(2t)}\)</span> and <span
+class="math inline">\(\Xi_\pm(\theta)=\sum_{w\in\mathbb
+Z}(\pm1)^w(\theta-4\pi w) e^{-(\theta-4\pi w)^2/(2t)}\)</span>. For
+<span class="math inline">\(\theta\in(0,2\pi)\)</span>,</p>
+<p><span class="math display">\[E\,\chi_{1/2}(m)=e^{-t/32}\,
+\frac{2\cos(\theta/4)\,\Xi_-(\theta)-\frac
+t2\sin(\theta/4)\,\Theta_-(\theta)}
+{\Xi_+(\theta)}. \tag{1}\]</span></p>
+<p>Keeping only <span class="math inline">\(w=0\)</span> gives the
+displayed formula of the summary.</p>
+<p><em>Proof.</em> Expand both heat kernels in characters. Character
+orthogonality in the form <span
+class="math inline">\(\int\chi_a(m)\chi_b(m^{-1}g)\,dm=\delta_{ab}\chi_a(g)/d_a\)</span>,
+together with <span
+class="math inline">\(\chi_{j_1}\chi_{1/2}=\chi_{j_1+1/2}+\chi_{j_1-1/2}\)</span>,
+gives</p>
+<p><span class="math display">\[k_t(g)\,E\,\chi_{1/2}(m)=\sum_{j_1}\
+\sum_{j_2=j_1\pm1/2}(2j_1+1)\,
+e^{-t[C_2(j_1)+C_2(j_2)]/4}\,\chi_{j_2}(g).\]</span></p>
+<p>Write <span class="math inline">\(n=2j_1+1\)</span>. Then <span
+class="math inline">\(C_2(j_1)+C_2(j_2)=\frac14[n^2+(n\pm1)^2-2]
+=\frac12(n\pm\frac12)^2-\frac38\)</span>, so the exponential is <span
+class="math inline">\(e^{3t/32}e^{-t(n\pm1/2)^2/8}\)</span>. Multiply by
+<span class="math inline">\(\sin(\theta/2)\)</span>, reindex the <span
+class="math inline">\(j_2=j_1-\frac12\)</span> sum by <span
+class="math inline">\(n\mapsto n+1\)</span>, and write <span
+class="math inline">\(s=n+\frac12\)</span> over <span
+class="math inline">\(s\in\frac12+\mathbb N\)</span>: the summand
+becomes <span
+class="math inline">\((s-\frac12)\sin\frac{(s+\frac12)\theta}2+(s+\frac12)\sin\frac{(s-\frac12)\theta}2
+=2s\cos\frac\theta4\sin\frac{s\theta}2-\sin\frac\theta4\cos\frac{s\theta}2\)</span>,
+which is even in <span class="math inline">\(s\)</span>. Hence</p>
+<p><span
+class="math display">\[k_t(g)\sin\frac\theta2\;E\,\chi_{1/2}(m)=\frac{e^{3t/32}}2
+\Bigl[2\cos\frac\theta4\,A-\sin\frac\theta4\,B\Bigr],\]</span></p>
+<p>with <span class="math inline">\(B=\sum_{s\in\frac12+\mathbb
+Z}e^{-ts^2/8}\cos\frac{s\theta}2\)</span> and <span
+class="math inline">\(A=\sum_{s\in\frac12+\mathbb
+Z}s\,e^{-ts^2/8}\sin\frac{s\theta}2=-2\partial_\theta B\)</span>. In the
+same way <span
+class="math inline">\(k_t(g)\sin\frac\theta2=\frac{e^{t/8}}2A_0\)</span>
+with <span class="math inline">\(A_0=\sum_{n\in\mathbb
+Z}n\,e^{-tn^2/8}\sin\frac{n\theta}2\)</span>. Poisson summation over the
+half-integers (which introduces the sign <span
+class="math inline">\((-1)^w\)</span>) and over the integers gives <span
+class="math inline">\(B=\sqrt{8\pi/t}\,\Theta_-\)</span>, <span
+class="math inline">\(A=(2/t)\sqrt{8\pi/t}\,\Xi_-\)</span> and <span
+class="math inline">\(A_0=(2/t)\sqrt{8\pi/t}\,\Xi_+\)</span>. Divide.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>The image terms.</strong> For <span
+class="math inline">\(\theta\in(0,2\pi)\)</span> the pair <span
+class="math inline">\(w=\pm1\)</span> in <span
+class="math inline">\(\Xi_\pm\)</span> has, relative to the <span
+class="math inline">\(w=0\)</span> term <span
+class="math inline">\(\theta e^{-\theta^2/(2t)}\)</span>, the size <span
+class="math inline">\(e^{-8\pi^2/t}\,|2\theta\cosh(4\pi\theta/t)\mp8\pi\sinh(4\pi\theta/t)|/\theta
+\le(2+32\pi^2/t)\,e^{-4\pi(2\pi-\theta)/t}\)</span>, using <span
+class="math inline">\(\sinh x\le x\cosh x\)</span>. In <span
+class="math inline">\(\Theta_-\)</span> the same pair has relative size
+at most <span class="math inline">\(2e^{-4\pi(2\pi-\theta)/t}\)</span>.
+The pairs <span class="math inline">\(|w|\ge2\)</span> are smaller by a
+further factor <span class="math inline">\(e^{-16\pi^2/t}\)</span> up to
+polynomial factors. This is the large-field term N4, the winding of the
+bridge around the group, and it is negligible uniformly on <span
+class="math inline">\(\theta\le\theta_0&lt;2\pi\)</span>.</p>
+<h2 id="comparison-with-proposition-6">3. Comparison with Proposition
+6</h2>
+<p>Proposition 6(b) predicts that <span
+class="math inline">\(m=m_*e^\xi\)</span> with <span
+class="math inline">\(\xi\)</span> Gaussian of mean zero and covariance
+<span class="math inline">\(\frac t4{\rm
+diag}(1,\frac1h,\frac1h)\)</span> in the frame (axis, transverse). In
+the spin-<span class="math inline">\(\frac12\)</span> representation
+<span class="math inline">\((\xi\cdot T)^2=-\frac14|\xi|^2\)</span>, so
+<span
+class="math inline">\(E\,D^{1/2}(e^\xi)=1-\frac18E|\xi|^2+O(t^2)=1-\frac
+t{32}(1+\frac2h)+O(t^2)\)</span>, and <span
+class="math inline">\(E\,\chi_{1/2}(m)=2\cos\frac\theta4\,[1-\frac
+t{32}(1+\frac2h)]+O(t^2)\)</span>. The <span
+class="math inline">\(w=0\)</span> part of (1) equals <span
+class="math inline">\(2\cos\frac\theta4\,e^{-t/32}[1-\frac
+t{4\theta}\tan\frac\theta4]\)</span>, and <span
+class="math inline">\(\frac t{32}\cdot\frac2{h(\theta)}=\frac
+t{16}\cdot\frac{\tan(\theta/4)}{\theta/4} =\frac
+t{4\theta}\tan\frac\theta4\)</span>. The two agree at first order,
+curvature factor included. As <span
+class="math inline">\(\theta\to0\)</span> both give <span
+class="math inline">\(2(1-\frac{3t}{32})\)</span>, the flat value <span
+class="math inline">\(E|\xi|^2=\frac{3t}4\)</span>.</p>
+<p>Formula (1) says more than the asymptotics. In the <span
+class="math inline">\(w=0\)</span> sector the fundamental character of
+the midpoint is the product of an isotropic factor <span
+class="math inline">\(e^{-t/32}\)</span> and the exactly linear
+curvature correction <span class="math inline">\(1-\frac
+t{4\theta}\tan\frac\theta4\)</span>; there are no higher-order terms in
+<span class="math inline">\(t\)</span>. The correction grows as <span
+class="math inline">\(\theta\to2\pi\)</span>, where <span
+class="math inline">\(\tan(\theta/4)\)</span> diverges and the midpoint
+becomes bimodal, and there the image terms take over. This is the
+non-abelian counterpart of the parity factor <span
+class="math inline">\(\rho_t(\phi)\)</span> of the <span
+class="math inline">\(U(1)\)</span> cube (Proposition 3 of the
+series/parallel note).</p>
+<h2 id="every-spin">4. Every spin</h2>
+<p><strong>Theorem 2.</strong> For every spin <span
+class="math inline">\(J\)</span> and <span
+class="math inline">\(\theta\in(0,2\pi)\)</span>, with <span
+class="math inline">\(\sigma=0\)</span> for integer <span
+class="math inline">\(J\)</span> and <span
+class="math inline">\(\sigma=\frac12\)</span> for half-integer <span
+class="math inline">\(J\)</span>,</p>
+<p><span
+class="math display">\[E\,\chi_J(m)=\frac{\Xi_{(\sigma)}(\theta)}{\Xi_+(\theta)}
+\sum_{k=-J}^{J}e^{-tk^2/8}\cos\frac{k\theta}2
+-\frac t2\,\frac{\Theta_{(\sigma)}(\theta)}{\Xi_+(\theta)}
+\sum_{k=-J}^{J}k\,e^{-tk^2/8}\sin\frac{k\theta}2,\]</span></p>
+<p>where <span class="math inline">\(\Xi_{(0)}=\Xi_+\)</span>, <span
+class="math inline">\(\Theta_{(0)}=\Theta_+\)</span>, <span
+class="math inline">\(\Xi_{(1/2)}=\Xi_-\)</span>, <span
+class="math inline">\(\Theta_{(1/2)}=\Theta_-\)</span>, and <span
+class="math inline">\(k\)</span> runs in unit steps. In the <span
+class="math inline">\(w=0\)</span> sector,</p>
+<p><span
+class="math display">\[E\,\chi_J(m)=\sum_{k=-J}^{J}e^{-tk^2/8}\Bigl[\cos\frac{k\theta}2
+-\frac t{2\theta}\,k\sin\frac{k\theta}2\Bigr]. \tag{2}\]</span></p>
+<p>For integer <span class="math inline">\(J\)</span> the first ratio is
+exactly one, image terms included.</p>
+<p><em>Proof.</em> As for Theorem 1, now with <span
+class="math inline">\(\chi_{j_1}\chi_J=\sum_{k=-J}^{J}\chi_{j_1+k}\)</span>.
+This identity holds for every <span class="math inline">\(j_1\)</span>
+if <span class="math inline">\(\chi_j\)</span> is defined by <span
+class="math inline">\(\sin((2j+1)\theta/2)/\sin(\theta/2)\)</span> also
+for <span class="math inline">\(2j+1\le0\)</span>: it is the
+product-to-sum formula for <span
+class="math inline">\(\sin(n\theta/2)\sum_ke^{ik\theta}\)</span>. The
+formal terms with <span class="math inline">\(2j_2+1\le0\)</span> cancel
+in pairs carrying the same weight, so the sum may be taken over all
+<span class="math inline">\(n=2j_1+1\in\mathbb Z\)</span>, halved; the
+summand is even under <span
+class="math inline">\((n,k)\mapsto(-n,-k)\)</span>. With <span
+class="math inline">\(n_2=n+2k\)</span>, <span
+class="math inline">\(C_2(j_1)+C_2(j_2)=\frac12(n+k)^2+\frac12(k^2-1)\)</span>,
+so the weight is <span
+class="math inline">\(e^{t/8}e^{-tk^2/8}e^{-ts^2/8}\)</span> with <span
+class="math inline">\(s=n+k\in\mathbb Z+\sigma\)</span>. Expanding <span
+class="math inline">\((s-k)\sin\frac{(s+k)\theta}2\)</span> and
+discarding the terms odd in <span class="math inline">\(s\)</span>
+leaves <span class="math inline">\(\cos\frac{k\theta}2\cdot
+s\sin\frac{s\theta}2-k\sin\frac{k\theta}2\cos\frac{s\theta}2\)</span>.
+Summing over <span class="math inline">\(s\)</span> gives <span
+class="math inline">\(A_\sigma\)</span> and <span
+class="math inline">\(B_\sigma\)</span>, Poisson summation gives <span
+class="math inline">\(\Xi_{(\sigma)}\)</span> and <span
+class="math inline">\(\Theta_{(\sigma)}\)</span>, and the factor <span
+class="math inline">\(e^{t/8}\)</span> cancels against the denominator.
+For <span class="math inline">\(J=\frac12\)</span> this is Theorem 1.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Agreement with Proposition 6 for every spin.</strong> The
+leading term of (2) is <span
+class="math inline">\(\sum_k\cos(k\theta/2)=\chi_J(m_*)\)</span>, the
+character at the geodesic midpoint (rotation angle <span
+class="math inline">\(\theta/2\)</span>). The Gaussian prediction of
+Proposition 6(b) at first order is <span
+class="math inline">\(\sum_k\cos\frac{k\theta}2\,[1-\frac t8k^2-\frac
+t8(J(J+1)-k^2)/h]\)</span> with <span
+class="math inline">\(1/h=4\tan(\theta/4)/\theta\)</span>. The two agree
+iff, with <span class="math inline">\(\varphi=\theta/2\)</span>,</p>
+<p><span
+class="math display">\[\sum_kk\sin(k\varphi)=\tan\frac\varphi2\sum_k\bigl(J(J+1)-k^2\bigr)\cos(k\varphi).\]</span></p>
+<p>The left side is <span
+class="math inline">\(-\chi_J&#39;(\varphi)\)</span> and the sum on the
+right is <span
+class="math inline">\(J(J+1)\chi_J+\chi_J&#39;&#39;\)</span>. The
+class-function Laplacian of <span class="math inline">\(SU(2)\)</span>
+in this metric gives <span
+class="math inline">\(\chi_J&#39;&#39;+\cot(\varphi/2)\,\chi_J&#39;=-J(J+1)\chi_J\)</span>,
+which is the identity. (For <span
+class="math inline">\(J=\frac12\)</span> and <span
+class="math inline">\(J=1\)</span> it can be checked directly: <span
+class="math inline">\(\sin(\varphi/2)=\tan(\varphi/2)\cos(\varphi/2)\)</span>
+and <span
+class="math inline">\(2\sin\varphi=\tan(\varphi/2)(2+2\cos\varphi)\)</span>.)
+So the curvature term of Proposition 6 is exact at first order in every
+representation, and (2) contains no terms of order <span
+class="math inline">\(t^2\)</span> beyond the Gaussian factors <span
+class="math inline">\(e^{-tk^2/8}\)</span>.</p>
+<p><strong>What the trace does not give.</strong> By Proposition 6(a),
+<span class="math inline">\(E\,D^J(m)=D^J(m_*)\Lambda^J\)</span> with
+<span class="math inline">\(\Lambda^J\)</span> real diagonal in the axis
+basis, and (2) fixes only <span class="math inline">\(\sum_\mu
+e^{i\mu\theta/2}\Lambda^J_{\mu\mu}\)</span>, one equation for <span
+class="math inline">\(2J+1\)</span> entries. The isolated cube needs the
+entries, because its four cut faces have different axes.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The curvature term of the <span class="math inline">\(SU(2)\)</span>
+parallel insertion is now exact for every character (Theorems 1 and 2),
+with only exponentially small winding terms left. One step remains
+before Proposition 7 becomes a theorem for the isolated <span
+class="math inline">\(SU(2)\)</span> cube: the diagonal entries <span
+class="math inline">\(\Lambda^J_{\mu\mu}\)</span> of the midpoint’s
+matrix expectation, since the cube’s character sum <span
+class="math inline">\(\sum_Jd_Je^{-t_mC_2(J)/2}{\rm
+tr}_J\prod_jE\,D^J(m_j^{\pm1})\)</span> multiplies matrices with
+different axes. They follow from the same orthogonality method applied
+to matrix elements, or from the characters of the midpoint translated
+along the centralizer of the side holonomy.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
