@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton&#x27;s record as a parallel move: what forgetting a record leaves</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Newton’s record as a parallel move: what forgetting a record
+leaves</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/newton-record-parallel-move.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-record-parallel-move.pdf">PDF</a></p><p><strong>Result, 2026-09-27 (atlas of halving, open cell 6).</strong>
+Inserting an unobserved time into Newton’s cell is a series move and
+closes exactly (<a
+href="refinement-composition-and-limit.html">refinement note</a>, §2).
+Inserting a <em>record</em> at that time attaches a new variable, the
+pointer, to the body; forgetting it is the Newtonian counterpart of the
+parallel move of the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>.
+For a position record with Gaussian pointer of width <span
+class="math inline">\(\sigma\)</span> this move is exact (Proposition
+1): it leaves the body’s position distribution unchanged and convolves
+its momentum distribution with a Gaussian of variance</p>
+<p><span
+class="math display">\[v=\frac{\hbar^2}{4\sigma^2}.\]</span></p>
+<p>Three consequences fill the Newton row of the <a
+href="halving-atlas.html">atlas</a>.</p>
+<ul>
+<li><strong>Records at one instant combine in parallel:</strong>
+precisions add, <span
+class="math inline">\(\sigma^{-2}=\sigma_1^{-2}+\sigma_2^{-2}\)</span>,
+and so do the momentum variances, as the heat times of parallel faces
+combine by conductances in the gauge case.</li>
+<li><strong>Refining with a record at every inserted time converges
+iff</strong> <span
+class="math inline">\(\sum_j\sigma_j^{-2}&lt;\infty\)</span>: the total
+momentum diffusion is <span
+class="math inline">\(\frac{\hbar^2}4\sum_j\sigma_j^{-2}\)</span>, and
+the same sum measures the information gathered about the place. The
+continuous-measurement limit of Caves and Milburn is the case <span
+class="math inline">\(\sigma_j^{-2}=\kappa\tau_j\)</span> (Corollary
+2).</li>
+<li><strong>Information and disturbance are locked at <span
+class="math inline">\(\hbar^2/4\)</span> per unit:</strong> <span
+class="math inline">\(\sigma^2v=\hbar^2/4\)</span> for every record and
+every mesh. For <span class="math inline">\(\hbar=0\)</span> the move is
+the identity for every <span class="math inline">\(\sigma\)</span>:
+records are series-exact, the Newtonian counterpart of a theory with no
+parallel planes, and exactly the joint determinacy of the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a>.</li>
+</ul>
+<p>The Gaussian record channel and its continuous limit are standard (<a
+href="https://doi.org/10.1103/PhysRevA.36.5543">Caves and Milburn
+1987</a>, metadata, cited in the Planck paper); the reading as the
+parallel move of the atlas is this note’s. For non-Gaussian records the
+general floor is Theorem 6 of the <a href="planck-gap-paper.html">Planck
+paper</a>.</p>
+<h2 id="the-record-channel">1. The record channel</h2>
+<p>A position record with Gaussian pointer of width <span
+class="math inline">\(\sigma\)</span> and outcome <span
+class="math inline">\(y\)</span> has Kraus operator <span
+class="math inline">\(M_y\)</span> acting on wavefunctions by
+multiplication with <span
+class="math inline">\((2\pi\sigma^2)^{-1/4}e^{-(x-y)^2/(4\sigma^2)}\)</span>;
+forgetting the outcome gives the channel <span
+class="math inline">\(\rho\mapsto\int M_y\rho M_y^\dagger\,dy\)</span>.
+Write <span class="math inline">\(W(q,p)\)</span> for the Wigner
+function of <span class="math inline">\(\rho\)</span>.</p>
+<p><strong>Proposition 1.</strong> The forgotten record acts as <span
+class="math inline">\(\rho(x,x&#39;)\mapsto\rho(x,x&#39;)\,e^{-(x-x&#39;)^2/(8\sigma^2)}\)</span>,
+that is,</p>
+<p><span class="math display">\[W(q,p)\ \mapsto\ \int
+W(q,p-p&#39;)\,\frac{e^{-p&#39;^2/(2v)}}{\sqrt{2\pi v}}\,dp&#39;,
+\qquad v=\frac{\hbar^2}{4\sigma^2}.\]</span></p>
+<p>The position marginal is unchanged; the momentum marginal is
+convolved with a centred Gaussian of variance <span
+class="math inline">\(v\)</span>.</p>
+<p><em>Proof.</em> <span class="math inline">\(\int
+M_y(x)M_y(x&#39;)\,dy=(2\pi\sigma^2)^{-1/2}\int
+e^{-[(x-y)^2+(x&#39;-y)^2]/(4\sigma^2)}dy=e^{-(x-x&#39;)^2/(8\sigma^2)}\)</span>.
+With <span class="math inline">\(s=x-x&#39;\)</span> and <span
+class="math inline">\(W(q,p)=(2\pi\hbar)^{-1}\int\rho(q+\frac s2,q-\frac
+s2)e^{-ips/\hbar}ds\)</span>, multiplication by <span
+class="math inline">\(e^{-s^2/(8\sigma^2)}\)</span> is convolution in
+<span class="math inline">\(p\)</span> with the Gaussian whose
+characteristic function in <span class="math inline">\(s/\hbar\)</span>
+is <span class="math inline">\(e^{-s^2/(8\sigma^2)}\)</span>, of
+variance <span class="math inline">\(v\)</span> with <span
+class="math inline">\(v/(2\hbar^2)=1/(8\sigma^2)\)</span>. The factor
+equals one on the diagonal <span class="math inline">\(s=0\)</span>, so
+the position marginal is unchanged. <span
+class="math inline">\(\square\)</span></p>
+<p>The record’s error is <span class="math inline">\(\sigma\)</span> and
+its delivered impulse has spread <span class="math inline">\(\sqrt
+v\)</span>; their product is <span
+class="math inline">\(\hbar/2\)</span>, the saturated mark cost of the
+Planck paper’s Theorem 4.</p>
+<h2 id="composition">2. Composition</h2>
+<p><strong>Parallel.</strong> Two forgotten records at one instant
+multiply the density matrix by <span
+class="math inline">\(e^{-s^2/(8\sigma_1^2)}e^{-s^2/(8\sigma_2^2)}=e^{-s^2(\sigma_1^{-2}+\sigma_2^{-2})/8}\)</span>:
+one record with <span
+class="math inline">\(\sigma^{-2}=\sigma_1^{-2}+\sigma_2^{-2}\)</span>.
+Precisions add like conductances, and the momentum variances add. This
+is the Newtonian counterpart of two parallel faces at heat time <span
+class="math inline">\(2t\)</span> combining into one at <span
+class="math inline">\(t\)</span> (the series/parallel note, §3).</p>
+<p><strong>Series.</strong> Between records at different times the body
+evolves freely or under constant force, an affine symplectic map on
+<span class="math inline">\(W\)</span>; a momentum convolution at one
+time becomes a sheared convolution in <span
+class="math inline">\((q,p)\)</span> at a later time. The channels
+compose exactly, because Gaussian convolutions and affine symplectic
+maps form a closed family.</p>
+<p><strong>Corollary 2 (refinement with records).</strong> Put a record
+of width <span class="math inline">\(\sigma_j\)</span> at each vertex of
+a partition of <span class="math inline">\([0,T]\)</span>. The forgotten
+records convolve the final momentum distribution with a Gaussian of
+variance <span
+class="math inline">\(\frac{\hbar^2}4\sum_j\sigma_j^{-2}\)</span> (the
+shear adds a position spread of the same order in <span
+class="math inline">\(T\)</span> and changes nothing below). The limit
+of refinement exists iff <span
+class="math inline">\(\sum_j\sigma_j^{-2}\)</span> converges. The
+records’ information about the place, measured by the Fisher information
+<span class="math inline">\(\sum_j\sigma_j^{-2}\)</span> for a static
+position, converges on the same condition. With <span
+class="math inline">\(\sigma_j^{-2}=\kappa\tau_j\)</span> the sum is
+<span class="math inline">\(\kappa T\)</span>: individual records become
+coarse as the mesh shrinks, and the rate <span
+class="math inline">\(\kappa\)</span> and the momentum diffusion rate
+<span class="math inline">\(\hbar^2\kappa/4\)</span> survive the limit.
+This is the continuous position measurement of Caves and Milburn.</p>
+<p><em>Proof.</em> The multiplicative factors of Proposition 1 at one
+instant multiply; free evolution between vertices is an affine
+symplectic map, which carries Gaussian convolutions to Gaussian
+convolutions without changing the momentum variance of a convolution
+applied before it. The momentum variances therefore add. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="what-the-newton-row-of-the-atlas-now-says">3. What the Newton
+row of the atlas now says</h2>
+<ul>
+<li><strong>Series move</strong> (unobserved insertion): exact after one
+scalar counterterm, at every <span
+class="math inline">\(\hbar\)</span>.</li>
+<li><strong>Parallel move</strong> (forgotten record): a momentum
+convolution of variance <span
+class="math inline">\(\hbar^2/(4\sigma^2)\)</span>. It is the identity
+for <span class="math inline">\(\hbar=0\)</span>, as a gauge theory with
+no transverse planes has no parallel defect.</li>
+<li><strong>What survives refinement with records:</strong> the
+information rate <span class="math inline">\(\kappa\)</span> and the
+diffusion rate <span class="math inline">\(\hbar^2\kappa/4\)</span>,
+with fixed product per record. This is the Newtonian form of the atlas’s
+error budget: summable records, like summable parallel defects, give a
+limit, and the ratio that survives is set by the one action
+constant.</li>
+</ul>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>Atlas cell 6 is filled for Gaussian records: forgetting a record is
+an exact parallel move whose defect is proportional to <span
+class="math inline">\(\hbar^2\)</span>, which makes joint determinacy
+the statement that Newton’s refinement has no parallel defect. The
+general, non-Gaussian record is covered by the Planck paper’s Theorem 6
+and by Theorem E of the fifth-postulate note.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
