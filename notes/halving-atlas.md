@@ -68,6 +68,8 @@ performs the same two moves, with $s$ as a parameter.
   $3s(1-s)K_\tau$, at most $\frac34K_\tau$ (halving). Along any sequence of cuts
   whose mesh tends to zero the removed amounts sum to $K_\tau$, whatever
   the positions and order (the remainder is $\sum_i C\tau_i^3\le C\tau\max_i\tau_i^2$).
+  Proved, with the Cameron--Martin reading (each share is the energy of
+  the Schauder hat the cut inserts), in the [cut-measure note](cut-measure-newton.md).
   The Galileo action is therefore an additive measure on the cut
   process: the refinement limit is cut-independent, and every cut
   spends a definite share of the action that Newton sends to zero. This

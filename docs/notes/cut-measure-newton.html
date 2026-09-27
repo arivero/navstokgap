@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton&#x27;s cell action as a measure on cuts</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Newton’s cell action as a measure on cuts</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-measure-newton.md">Markdown source</a></p><p><strong>Result, 2026-09-27 (atlas §1b, user remarks on arbitrary cuts
+and on the rod).</strong> Let a constant force <span
+class="math inline">\(F\)</span> act on a body of mass <span
+class="math inline">\(m\)</span> over a cell of duration <span
+class="math inline">\(\tau\)</span>, and let <span
+class="math inline">\(\delta x\)</span> be the parabola minus its chord
+(the inertial comparison path with the same endpoints). Its Galileo
+action</p>
+<p><span class="math display">\[K_\tau=\frac m2\int_0^\tau\dot{\delta
+x}^2\,dt=\frac{F^2\tau^3}{24m}\]</span></p>
+<p>(the <a href="galileo-two-path-interference.html">two-path note</a>
+writes the same quantity as <span
+class="math inline">\((F/4v)A=\tau\Delta E/12\)</span>) behaves as a
+measure on the process of cutting the cell.</p>
+<ul>
+<li><strong>Theorem 1 (one cut).</strong> A cut at fraction <span
+class="math inline">\(s\in(0,1)\)</span> spends exactly <span
+class="math inline">\(3s(1-s)K_\tau\)</span>, and this share equals the
+Cameron–Martin energy <span class="math inline">\(\frac
+m2\int\dot\phi^2\)</span> of the Schauder hat <span
+class="math inline">\(\phi\)</span> that the cut inserts, of height the
+sagitta <span class="math inline">\(Fs(1-s)\tau^2/(2m)\)</span>.</li>
+<li><strong>Theorem 2 (any cut sequence).</strong> The hats of
+successive cuts are orthogonal in the energy <span
+class="math inline">\(\int\dot f\dot g\)</span>, so the spent shares
+add. Along any sequence of cuts, at any positions and in any order, the
+total spent equals <span
+class="math inline">\(K_\tau-\sum_iK_{\tau_i}\)</span> over the current
+pieces, and it tends to <span class="math inline">\(K_\tau\)</span> iff
+the mesh <span class="math inline">\(\max_i\tau_i\)</span> tends to
+zero; the remainder is at most <span
+class="math inline">\(K_\tau\max_i\tau_i^2/\tau^2\)</span>.</li>
+<li><strong>Corollary 3 (the rod and the Mohist schedules).</strong>
+Halving only the remaining piece each day, the schedule of the stick in
+<em>Zhuangzi</em> 33, spends <span
+class="math inline">\(\frac67K_\tau\)</span>. Removing a quarter from
+each end each day (a reading of the Mohist “taking from front and back”)
+spends <span class="math inline">\(\frac{27}{28}K_\tau\)</span>. Both
+leave a definite share unspent forever, because both keep cut-off pieces
+of fixed length.</li>
+<li><strong>Proposition 4 (weight of a cut).</strong> Under the
+Euclidean path measure of a free particle with diffusion constant <span
+class="math inline">\(\hbar/m\)</span> (Wiener measure), the force
+signal in one cut has log-likelihood ratio exactly (spent share)<span
+class="math inline">\(/\hbar\)</span>. In real time the same share,
+divided by the action resolution, is the phase of the two-path
+comparison.</li>
+<li><strong>Corollary 5 (a floor counts the cuts).</strong> If every
+exhibited cut must spend at least an action <span
+class="math inline">\(\kappa&gt;0\)</span>, at most <span
+class="math inline">\(K_\tau/\kappa\)</span> cuts can be exhibited,
+whatever the schedule. For halving refinement, level <span
+class="math inline">\(n\)</span> is exhibited iff <span
+class="math inline">\(\frac34K_\tau8^{-n}\ge\kappa\)</span>. The Planck
+paper’s mark mesh <span
+class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>
+is the cell whose action is <span
+class="math inline">\(2z_{1-\epsilon}^2\hbar\)</span>.</li>
+</ul>
+<p>Theorems 1 and 2 are elementary, and their content lies in the
+reading they give: Newton’s refinement is a process that spends a fixed,
+finite action, exactly as the Lévy–Ciesielski construction spends the
+variance of a Brownian bridge. Corollary 5 is a consistency statement.
+It says where a floor, if present, stops the cutting, and leaves the
+necessity question of the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a> where it
+was.</p>
+<h2 id="one-cut">1. One cut</h2>
+<p>Put <span class="math inline">\(C=F^2/(24m)\)</span>, so <span
+class="math inline">\(K_\tau=C\tau^3\)</span>. On <span
+class="math inline">\([0,\tau]\)</span> the parabola with acceleration
+<span class="math inline">\(F/m\)</span> and the chord through its
+endpoints differ by</p>
+<p><span class="math display">\[\delta x(t)=\frac
+F{2m}\,t(\tau-t),\qquad
+\dot{\delta x}(t)=\frac Fm\Bigl(\frac\tau2-t\Bigr),\]</span></p>
+<p>so <span class="math inline">\(\frac m2\int_0^\tau\dot{\delta
+x}^2dt=\frac
+m2\cdot\frac{F^2}{m^2}\cdot\frac{\tau^3}{12}=C\tau^3\)</span>.</p>
+<p>Cut at <span class="math inline">\(t_c=s\tau\)</span>. The polygon
+through the three points <span
+class="math inline">\(0,s\tau,\tau\)</span> differs from the chord by
+the hat <span class="math inline">\(\phi\)</span> of height <span
+class="math inline">\(h=\delta x(s\tau)=Fs(1-s)\tau^2/(2m)\)</span>,
+linear on <span class="math inline">\([0,s\tau]\)</span> and on <span
+class="math inline">\([s\tau,\tau]\)</span>. The parabola differs from
+the polygon, on each piece, by the parabola-minus- chord of that piece:
+<span class="math inline">\(\delta x=\phi+\delta x_1+\delta x_2\)</span>
+with <span class="math inline">\(\delta x_j\)</span> supported on piece
+<span class="math inline">\(j\)</span> and vanishing at its ends.</p>
+<p><em>Orthogonality.</em> <span class="math inline">\(\dot\phi\)</span>
+is constant on each piece and <span class="math inline">\(\int_{\rm
+piece}\dot{\delta x_j}=0\)</span>, so <span
+class="math inline">\(\int\dot\phi\,\dot{\delta x_j}=0\)</span>; the
+<span class="math inline">\(\delta x_j\)</span> have disjoint supports.
+Hence</p>
+<p><span class="math display">\[K_\tau=\frac
+m2\int\dot\phi^2+K_{s\tau}+K_{(1-s)\tau}.\]</span></p>
+<p><em>The hat’s energy.</em> <span class="math inline">\(\frac
+m2\int\dot\phi^2=\frac m2h^2\bigl(\frac1{s\tau}+\frac1{(1-s)\tau}\bigr)
+=\frac{mh^2}{2s(1-s)\tau}=\frac{F^2s(1-s)\tau^3}{8m}=3s(1-s)C\tau^3.\)</span>
+The same number follows from <span
+class="math inline">\(\tau^3=(s\tau)^3+((1-s)\tau)^3+3s(1-s)\tau^3\)</span>,
+which is the algebraic form of Theorem 1. The share is largest for
+halving, <span class="math inline">\(\frac34K_\tau\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="any-cut-sequence">2. Any cut sequence</h2>
+<p>Each later cut acts inside one current piece, and Theorem 1 applies
+to that piece with its own <span class="math inline">\(s\)</span>. The
+new hat is supported in the piece and vanishes at its ends; every
+earlier hat is linear there. The argument of §1 gives orthogonality to
+all earlier hats and to the other pieces’ remainders. After any finite
+set of cuts, with pieces <span class="math inline">\(\tau_i\)</span>
+(<span class="math inline">\(\sum\tau_i=\tau\)</span>),</p>
+<p><span class="math display">\[K_\tau=\sum_{\rm cuts}\frac
+m2\int\dot\phi_{\rm cut}^2+\sum_iK_{\tau_i},\qquad
+\sum_iK_{\tau_i}=C\sum_i\tau_i^3\le C\tau\max_i\tau_i^2 .\]</span></p>
+<p>The remainder vanishes iff the mesh does (<span
+class="math inline">\(\sum_i\tau_i^3\ge(\max_i\tau_i)^3\)</span>). The
+positions and the order enter only through which pieces are cut, never
+through the total. <span class="math inline">\(\square\)</span></p>
+<p>This is the Schauder (Lévy–Ciesielski) expansion of <span
+class="math inline">\(\delta x\)</span> in the Cameron–Martin space
+<span class="math inline">\(H^1_0[0,\tau]\)</span>, adapted to an
+arbitrary nested cut sequence; for dyadic cuts it is the textbook
+expansion (<a
+href="https://doi.org/10.1090/S0002-9947-1961-0132591-2">Ciesielski
+1961</a>; metadata). The <a
+href="reachable-cut-composition.html">reachability note</a> has the same
+cubic law for the area <span class="math inline">\(2F^2t^3/(3m)\)</span>
+of the reachable lens of a cut.</p>
+<h2 id="the-rod-and-the-two-mohist-schedules">3. The rod and the two
+Mohist schedules</h2>
+<p><em>Zhuangzi</em> 33 (dialecticians’ list, <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Zhuangzi_33_Tianxia_zh_wikisource.md">text</a>):
+一尺之捶，日取其半，萬世不竭, “a one-foot stick, each day take half, in
+ten thousand generations it is not exhausted.” Mohist Canon B (<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Mozi_Canons_B_Explanations_JingShuoXia_zh_wikisource.md">text</a>):
+非半弗𣃈，則不動，說在端, “without halving there is no cutting and no
+moving; the explanation lies in the point (端)”, with the explanation
+前則中無爲半，猶端也。前後取，則端中也 (working gloss: “taking from the
+front, the middle is never halved, and one ends as at a point; taking
+from front and back, the point is in the middle”).</p>
+<p><em>One-ended schedule.</em> Day <span
+class="math inline">\(k\)</span> halves the remaining piece, of length
+<span class="math inline">\(\tau2^{-(k-1)}\)</span>, and spends <span
+class="math inline">\(\frac34C\tau^38^{-(k-1)}\)</span>. The total is
+<span
+class="math inline">\(\frac34\cdot\frac87K_\tau=\frac67K_\tau\)</span>;
+the pieces taken away keep <span
+class="math inline">\(\sum_{k\ge1}8^{-k}K_\tau=\frac17K_\tau\)</span>.</p>
+<p><em>Two-ended schedule</em> (one reading of 前後取). Day <span
+class="math inline">\(k\)</span> cuts the remaining piece <span
+class="math inline">\(r=\tau2^{-(k-1)}\)</span> at <span
+class="math inline">\(s=\frac14\)</span> and <span
+class="math inline">\(s=\frac34\)</span>, keeping the middle half. The
+two cuts spend <span class="math inline">\(C
+r^3\bigl(1-2\cdot\frac1{64}-\frac18\bigr)=\frac{27}{32}Cr^3\)</span>,
+and the total is <span
+class="math inline">\(\frac{27}{32}\cdot\frac87K_\tau=\frac{27}{28}K_\tau\)</span>,
+with <span class="math inline">\(\frac1{28}K_\tau\)</span> kept in the
+pieces taken away.</p>
+<p>Both schedules converge to a point, the Mohist 端: the end in the
+first, the middle in the second, as the explanation says. What each
+author is committed to, and what the theorem does with it:</p>
+<ul>
+<li>The dialecticians hold that the halving never ends. Theorem 2 agrees
+for the figure and adds a price: their schedule spends only <span
+class="math inline">\(\frac67\)</span> of the action, since it never
+cuts again what it took away.</li>
+<li>The Mohists hold that the halving ends at a point. Theorem 2 agrees
+that both schedules converge to a point, and the point carries no
+action. The unhalvable 端 as a least magnitude is a reading the theorem
+leaves aside, as the <a href="planck-gap-paper.html">Planck paper</a>
+already records.</li>
+<li>Newton’s scholium closing Book I, Section I, takes the geometers’
+side (divisibility without end). Theorem 2 is that side made
+quantitative: refinement exhausts the action only when every piece is
+cut again.</li>
+</ul>
+<p>The parallel with Zeno’s dichotomy (Aristotle, <em>Physics</em> VI.9)
+is recorded as convergence; transmission would need evidence this note
+does not have.</p>
+<h2 id="the-weight-of-a-cut">4. The weight of a cut</h2>
+<p>Take the Euclidean path measure of a free particle with diffusion
+constant <span class="math inline">\(\hbar/m\)</span>: Brownian motion
+<span class="math inline">\(X\)</span> with <span
+class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, pinned at the cell’s
+endpoints. Given the endpoints of a piece of length <span
+class="math inline">\(L\)</span>, the value at fraction <span
+class="math inline">\(s\)</span> is Gaussian with variance <span
+class="math inline">\(\hbar s(1-s)L/m\)</span>, independent of the finer
+hats (the Brownian bridge and its Lévy construction). A force <span
+class="math inline">\(F\)</span> shifts the mean of that value by the
+sagitta <span class="math inline">\(h=Fs(1-s)L^2/(2m)\)</span>. The
+log-likelihood ratio of the shifted and the free laws, at the shift,
+is</p>
+<p><span class="math display">\[\frac{h^2}{2\,\hbar
+s(1-s)L/m}=\frac{mh^2}{2s(1-s)L\,\hbar}
+=\frac{3s(1-s)CL^3}{\hbar},\]</span></p>
+<p>the spent share of Theorem 1 divided by <span
+class="math inline">\(\hbar\)</span>. Summed over all cuts it is <span
+class="math inline">\(K_\tau/\hbar\)</span>, the Cameron–Martin theorem
+for the drift <span class="math inline">\(F/m\)</span>. This is the
+Euclidean counterpart of the real-time two-path phase <span
+class="math inline">\(K_\tau/(2\varepsilon)\)</span> of the two-path
+note, and it is the Gaussian structure of the classical Dirac measure of
+<a href="https://arxiv.org/abs/quant-ph/9803035">Rivero 1998</a> (see
+the <a href="principia-fifth-postulate.html">fifth-postulate note</a>,
+§7), with each cut contributing its own factor <span
+class="math inline">\(e^{-3s(1-s)CL^3/\hbar}\)</span>. For <span
+class="math inline">\(\hbar\to0\)</span> every cut, however small, is
+decisive; for <span class="math inline">\(\hbar&gt;0\)</span> the cuts
+whose share falls below <span class="math inline">\(\hbar\)</span> carry
+vanishing evidence. <span class="math inline">\(\square\)</span></p>
+<h2 id="a-floor-counts-the-cuts">5. A floor counts the cuts</h2>
+<p>If every cut that a record exhibits must spend at least <span
+class="math inline">\(\kappa&gt;0\)</span>, Theorem 2 gives at most
+<span class="math inline">\(K_\tau/\kappa\)</span> such cuts, for every
+schedule. For halving refinement the <span
+class="math inline">\(2^n\)</span> cuts of level <span
+class="math inline">\(n\)</span> each spend <span
+class="math inline">\(\frac34K_\tau8^{-n}\)</span>, so the exhibited
+levels are those with <span class="math inline">\(8^n\le
+3K_\tau/(4\kappa)\)</span>. With <span
+class="math inline">\(\kappa\)</span> a multiple of <span
+class="math inline">\(\hbar\)</span> this is the mesh of the Planck
+paper, eq. (2): <span class="math inline">\(\tau_*\)</span> there is the
+cell with <span
+class="math inline">\(K_{\tau_*}=2z_{1-\epsilon}^2\hbar\)</span>. The
+round-3 resolution threshold <span
+class="math inline">\(\tau\ge(24m\varepsilon
+d_{n,\eta}/F^2)^{1/3}\)</span> is the same statement with <span
+class="math inline">\(\kappa=\varepsilon d_{n,\eta}\)</span>. Corollary
+5 thus places a floor, when one is given, at a definite depth of the cut
+process; it supplies no floor.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Atlas §1b: the Newton row of “cuts at any position” is proved here
+(Theorems 1–2, Corollary 3), with the Lévy–Ciesielski identification and
+the Euclidean weight of a cut (Proposition 4). The necessity question is
+unchanged; the gauge rows of §1b (the <span
+class="math inline">\(s\)</span>-dependence of the defect bounds) remain
+open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

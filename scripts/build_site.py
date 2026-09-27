@@ -37,6 +37,7 @@ TRACKS = [
         "three-continuum-limits",
         "refinement-composition-and-limit",
         "series-parallel-gauge-refinement", "zero-spacing-any-action",
+        "cut-measure-newton",
         "dimension-ladder", "villain-monopole-refinement",
         "su2-midpoint-exact", "su2-midplane-order-t",
     ]),
