@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rivero&#x27;s consistency conjecture: quartic paths and central-force angles</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Rivero’s consistency conjecture: quartic paths and central-force
+angles</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/rivero-1998-conjecture-central-forces.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/rivero-1998-conjecture-central-forces.pdf">PDF</a></p><p><strong>Result, 2026-09-27.</strong> The quartic oscillator supplies
+three precise tests of the user’s 1998 proposal. Its real-time path
+integral exists as a strong operator limit for every supplied action
+constant <span class="math inline">\(h&gt;0\)</span>. Its halved
+critical-point functional already fails to recover the classical Dirac
+measure on a two-cell partition with three stationary paths (Theorem 1).
+Branch selection repairs the classical iterated limit; in Euclidean time
+there is also a positive, non-quadratic construction in which both
+iterated limits and every joint zero-resolution limit agree (Theorems
+2–3).</p>
+<p>For Newton’s central-force polygon, angular momentum and equal areas
+survive every central kick. Requiring a separated angular phase to
+descend to the angle circle gives <span class="math inline">\(L=n
+h\)</span>, or <span class="math inline">\(\oint L\,d\theta=2\pi n
+h\)</span> (Theorem 4). This condition uses an additional coherent-state
+premise. For one fixed orbit it permits <span
+class="math inline">\(h=|L|/n\to0\)</span>. Hooke and Kepler radial
+actions give the corresponding Keller–Maslov conditions explicitly; even
+a fixed torus satisfying both conditions admits a sequence <span
+class="math inline">\(h\downarrow0\)</span> (Theorem 5). These are
+consistency relations between a phase constant and orbit data. Selection
+of one universal positive value requires a further premise.</p>
+<p>The tests and proofs below develop the question in <a
+href="principia-fifth-postulate.html">the fifth-postulate note, §7</a>,
+using <a href="tangent-groupoid-trajectories.html">the time-graded
+groupoid</a> and <a href="refinement-composition-and-limit.html">the
+insertion laws, §§2–3</a>. The constructions assemble established
+stationary phase, product formulas and semiclassical quantization.</p>
+<h2 id="two-regulators-and-three-meanings-of-consistency">1. Two
+regulators and three meanings of consistency</h2>
+<p>Use mass <span class="math inline">\(m&gt;0\)</span>, duration <span
+class="math inline">\(T&gt;0\)</span>, fixed endpoints, and a partition
+<span class="math inline">\(\pi=(0=t_0&lt;\cdots&lt;t_N=T)\)</span>.
+Write <span class="math inline">\(\tau_j=t_{j+1}-t_j\)</span> and <span
+class="math inline">\(\varepsilon&#39;=|\pi|=\max_j\tau_j\)</span>. The
+symmetric discrete action is</p>
+<p><span class="math display">\[
+S_\pi(q)=\sum_{j=0}^{N-1}\left\{
+\frac{m(q_{j+1}-q_j)^2}{2\tau_j}
+-\frac{\tau_j}{2}[V(q_j)+V(q_{j+1})]\right\}. \tag{1}
+\]</span></p>
+<p>The action resolution <span
+class="math inline">\(\varepsilon\)</span> and the constant <span
+class="math inline">\(h\)</span> have units of action. Throughout this
+note <strong><span class="math inline">\(h\)</span> denotes a reduced
+phase constant</strong>: when identified with quantum mechanics, <span
+class="math inline">\(h=\hbar\)</span> and the ordinary Planck constant
+is <span class="math inline">\(h_P=2\pi h\)</span>. Time steps always
+use <span class="math inline">\(\tau\)</span> or <span
+class="math inline">\(\varepsilon&#39;\)</span>.</p>
+<p><a href="https://arxiv.org/pdf/quant-ph/9803035">Rivero 1998, eqs.
+(1)–(10)</a> (full-read, three pages) proposes a critical-point
+distribution, its halved oscillatory functional, a discretization with
+two regulators, and a controlled limit with arbitrary positive <span
+class="math inline">\(h\)</span>. The control map in eq. (6) remains
+unspecified. The conjectural equivalence therefore needs both a
+normalization and a topology. The following definitions supply those for
+the tests here.</p>
+<p>For <span class="math inline">\(d=N-1\)</span> internal coordinates,
+choose a reference length <span class="math inline">\(b&gt;0\)</span>
+and put <span class="math inline">\(z_j=q_j/b\)</span>, so <span
+class="math inline">\(\partial_{z_j}S_\pi\)</span> has action units.
+With a smooth compact cutoff <span class="math inline">\(\chi\)</span>,
+supported away from degenerate critical points, define a genuine
+regularization</p>
+<p><span class="math display">\[
+D_{\varepsilon,\pi}(O)=
+\int\frac{\chi(z)O(z)}{(2\pi\varepsilon^2)^{d/2}}
+\exp\left[-\frac{|\nabla_z S_\pi(z)|^2}{2\varepsilon^2}\right]dz.
+\]</span></p>
+<p>The change-of-variables formula at the finitely many critical points
+<span class="math inline">\(z_a\)</span> gives</p>
+<p><span class="math display">\[
+D_{0,\pi}(O)=\sum_a
+\frac{\chi(z_a)O(z_a)}{|\det S_\pi&#39;&#39;(z_a)|}. \tag{2}
+\]</span></p>
+<p>The coordinate convention and determinant weights are part of the
+definition. A normalized single-branch version is the point measure
+<span class="math inline">\(\delta_{z_a}\)</span>. Define separately the
+halved functional</p>
+<p><span class="math display">\[
+A_{\varepsilon,\pi}(O)=
+(2\pi\varepsilon)^{-d/2}\int\chi(z)O(z)e^{iS_\pi(z)/\varepsilon}\,dz.
+\]</span></p>
+<p>If <span class="math inline">\(\chi=1\)</span> near all retained
+critical points, stationary phase gives</p>
+<p><span class="math display">\[
+A_{\varepsilon,\pi}(O)=
+\sum_a\frac{O(z_a)e^{iS_\pi(z_a)/\varepsilon+i\pi\sigma_a/4}}
+{\sqrt{|\det S_\pi&#39;&#39;(z_a)|}}+O_\pi(\varepsilon), \tag{3}
+\]</span></p>
+<p>where <span class="math inline">\(\sigma_a\)</span> is the Hessian
+signature. For one critical point, <span
+class="math inline">\(|A(O)|^2\to D_{0,\pi}(|O|^2)\)</span>. The complex
+amplitude itself needs its critical phase removed, or the ratio <span
+class="math inline">\(A(O)/A(1)\)</span>. For several critical points,
+(3) retains cross terms. Also, a squared amplitude is quadratic in <span
+class="math inline">\(O\)</span>, whereas (2) is linear in its test
+function. Equations (2)–(3) state precisely the limited sense in which
+halving recovers a Dirac measure.</p>
+<p>The two proposed routes are now:</p>
+<ol type="1">
+<li><strong>Classical:</strong> take <span
+class="math inline">\(\varepsilon\downarrow0\)</span> at fixed <span
+class="math inline">\(\pi\)</span> in (2), or in a branch-normalized
+(3), then refine the resulting discrete stationary paths. Convergence
+means weak convergence on continuous paths, or convergence against
+specified cylinder observables.</li>
+<li><strong>Controlled at fixed <span
+class="math inline">\(h\)</span>:</strong> use free-kernel normalization
+on each cell and integrate <span
+class="math inline">\(e^{iS_\pi/h}\)</span> over the new vertices.
+Refine with <span class="math inline">\(h&gt;0\)</span> fixed. In real
+time, convergence means strong operator convergence on <span
+class="math inline">\(L^2\)</span>, allowing distributional coordinate
+kernels. A finite complex measure of bounded variation on all continuous
+paths is a stronger requirement and is not assumed here.</li>
+</ol>
+<p>The second route implements Rivero’s eqs. (7)–(8). Calling it a joint
+limit of the <em>bare</em> regulators requires an explicit control map.
+For example, with <span
+class="math inline">\(\eta=\varepsilon&#39;/T_0\)</span> dimensionless,
+a prescribed rescaling <span class="math inline">\(S_\pi^{\rm bare}=Z_S
+S_\pi\)</span> has effective phase constant <span
+class="math inline">\(h_{\rm eff}=\varepsilon/Z_S\)</span>. Taking <span
+class="math inline">\(Z_S=\eta\)</span> and <span
+class="math inline">\(\varepsilon=h\eta\)</span> keeps <span
+class="math inline">\(h_{\rm eff}=h\)</span>. Simply substituting <span
+class="math inline">\(\varepsilon=h\eta\)</span> into <span
+class="math inline">\(e^{iS_\pi/\varepsilon}\)</span> changes the phase
+to <span class="math inline">\(S_\pi/(h\eta)\)</span>; obtaining <span
+class="math inline">\(S_\pi/h\)</span> requires the action/control
+transformation as well. This specifies the dimensional form of a
+possible control map; deriving that map remains an obligation.</p>
+<p><strong>Conjecture R (a sharpened version to test).</strong> For a
+specified action class, boundary data, blocking maps and normalizations,
+existence of a refinement-compatible classical critical-point
+distribution is equivalent to existence of its controlled oscillatory
+continuum functional; the classical limit of the latter recovers the
+former on a stated observable class. Every quantifier here matters. A
+stronger <em>selection conjecture</em> would also require these
+conditions to exclude all zero-action limits, or to select a common
+<span class="math inline">\(h&gt;0\)</span>. The latter claim goes
+beyond existence.</p>
+<p>There are three concrete theorem forms for “consistency”:</p>
+<ul>
+<li><strong>Classical elimination:</strong> on a specified noncaustic
+branch, <span
+class="math inline">\(S_{t+s}(x,y)=\operatorname{stat}_z[S_t(x,z)+S_s(z,y)]\)</span>
+for the exact endpoint action. A minimum replaces stationarity when the
+branch is a genuine global minimizing problem. For real-time quartic
+mechanics, the unrestricted action is unbounded below; the <span
+class="math inline">\((\min,+)\)</span> law in the groupoid note needs
+this qualification. Euclidean action restores a minimizing problem.</li>
+<li><strong>Oscillatory composition:</strong> <span
+class="math inline">\(U_h(t+s)=U_h(t)U_h(s)\)</span>, with intermediate
+coordinates integrated. Eliminating a vertex by stationary phase
+produces its Hessian factor and higher corrections as well as its
+stationary action. Exact integration carries those amplitudes
+along.</li>
+<li><strong>Compatibility of limits:</strong> after specifying a common
+observable functional <span class="math inline">\(F_{h,\pi}\)</span>, an
+estimate <span class="math inline">\(|F_{h,\pi}(O)-F_{h,0}(O)|\le
+r(|\pi|,h)\)</span> plus a controlled classical limit is sufficient
+along routes where <span class="math inline">\(r\to0\)</span>.
+Uniformity in <span class="math inline">\(h\)</span> would justify
+interchanging limits. The summable-defect theorem of the refinement note
+supplies such a criterion when its norm hypotheses hold. Determinant
+weights in (2) also need compatible pushforwards; meshwise existence
+alone does not supply them.</li>
+</ul>
+<p>The determinant issue has an exact local formula. Write an insertion
+as <span class="math inline">\(S(z,y)\)</span> and assume <span
+class="math inline">\(S_y(z,y_*(z))=0\)</span> defines one branch with
+invertible <span class="math inline">\(S_{yy}\)</span>. Set <span
+class="math inline">\(S_{\rm eff}(z)=S(z,y_*(z))\)</span>. Integration
+of the two Euler–Lagrange delta factors gives, locally on this
+branch,</p>
+<p><span class="math display">\[
+\int\delta(S_y(z,y))\,\delta(S_z(z,y))\,dy
+=\frac{\delta(\nabla S_{\rm eff}(z))}
+{|\det S_{yy}(z,y_*(z))|}.
+\]</span></p>
+<p>Indeed the first delta fixes <span
+class="math inline">\(y=y_*(z)\)</span> with the displayed Jacobian, and
+<span class="math inline">\(\nabla S_{\rm eff}=S_z\)</span> there. At a
+joint critical point the same identity follows from the Schur complement
+<span class="math inline">\(\det S&#39;&#39;=\det S_{yy}\det S_{\rm
+eff}&#39;&#39;\)</span>. Classical refinement therefore has an explicit
+weight to transport; stationary phase transports its square root,
+signature and higher corrections.</p>
+<p>Thus even quadratic exactness presupposes a Gaussian normalization
+and appropriate topology; focal times require distributional kernels.
+The quartic test below separates the three theorem forms explicitly.</p>
+<h2 id="quartic-real-time-a-finite-interference-obstruction">2. Quartic
+real time: a finite interference obstruction</h2>
+<p>Fix <span class="math inline">\(V(q)=\lambda q^4\)</span>, <span
+class="math inline">\(\lambda&gt;0\)</span>, so <span
+class="math inline">\(F(q)=-4\lambda q^3\)</span>. Take endpoints zero,
+two cells of length <span class="math inline">\(T/2\)</span>, and
+internal coordinate <span class="math inline">\(y\)</span>. Work in the
+physical <span class="math inline">\(y\)</span> coordinate; choosing
+<span class="math inline">\(z=y/b\)</span> multiplies the following
+functionals by common coordinate factors and leaves the failure of
+convergence unchanged. Equation (1) becomes</p>
+<p><span class="math display">\[
+f(y)=\frac{2my^2}{T}-\frac{\lambda T}{2}y^4.
+\]</span></p>
+<p><strong>Theorem 1.</strong> A compact cutoff equal to one near the
+three critical points gives a finite <span
+class="math inline">\(\delta(f&#39;)\)</span>, while the squared halved
+functional fails to converge as <span
+class="math inline">\(\varepsilon\downarrow0\)</span>.</p>
+<p><em>Proof.</em> The critical points and their data are</p>
+<p><span class="math display">\[
+y_0=0,\qquad y_\pm=\pm\sqrt{\frac{2m}{\lambda T^2}},\qquad
+f(y_\pm)=s_*:=\frac{2m^2}{\lambda T^3},
+\]</span> <span class="math display">\[
+f&#39;&#39;(0)=\frac{4m}{T},\qquad f&#39;&#39;(y_\pm)=-\frac{8m}{T}.
+\]</span></p>
+<p>For <span class="math inline">\(O=1\)</span> on the cutoff support,
+put <span class="math inline">\(a=\sqrt{T/(4m)}\)</span> and <span
+class="math inline">\(b_1=\sqrt{T/(8m)}\)</span>. Equation (3) reads</p>
+<p><span class="math display">\[
+A_\varepsilon=a e^{i\pi/4}
++2b_1 e^{is_*/\varepsilon-i\pi/4}+O(\varepsilon),
+\]</span> <span class="math display">\[
+|A_\varepsilon|^2=
+\frac{3T}{4m}+\frac{T}{\sqrt2\,m}
+\sin(s_*/\varepsilon)+O(\varepsilon). \tag{4}
+\]</span></p>
+<p>Sequences with <span class="math inline">\(s_*/\varepsilon=2\pi
+k+\pi/2\)</span> and <span class="math inline">\(2\pi k+3\pi/2\)</span>
+give different limits. Meanwhile <span
+class="math inline">\(\int\chi\,\delta(f&#39;)dy=T/(2m)\)</span> by (2).
+Even averaging away the sine in (4) retains interference between <span
+class="math inline">\(y_+\)</span> and <span
+class="math inline">\(y_-\)</span>, whose actions coincide. A separate
+diagonalization or branch label would be needed. <span
+class="math inline">\(\square\)</span></p>
+<p>This is an obstruction to extending the halving identity to all
+critical paths by one overall normalization. It appears before a
+continuum limit or a choice of <span class="math inline">\(h\)</span>.
+Retaining the pair of independent amplitudes also introduces
+off-diagonal terms; it cannot be identified with (2) without an
+additional prescription.</p>
+<p><strong>Theorem 2 (two existing limits for the quartic).</strong></p>
+<ol type="a">
+<li><p>On every partition, select only a small neighborhood of the zero
+stationary path. Then <span
+class="math inline">\(A_{\varepsilon,\pi}(O)/A_{\varepsilon,\pi}(1)\)</span>
+converges to <span class="math inline">\(O(0)\)</span>, and refining
+these branch measures gives the Dirac measure on the zero path.</p></li>
+<li><p>For every <span class="math inline">\(h&gt;0\)</span>, the
+symmetric time-sliced operators converge strongly on <span
+class="math inline">\(L^2(\mathbb R)\)</span> to the unitary quartic
+evolution, independently of the sequence of partitions with mesh tending
+to zero:</p></li>
+</ol>
+<p><span class="math display">\[
+A_h=-\frac{h^2}{2m}\frac{d^2}{dq^2},\quad B=\lambda q^4,\quad
+H_h=A_h+B,
+\]</span> <span class="math display">\[
+Q_{h,\tau}=e^{-i\tau B/(2h)}e^{-i\tau A_h/h}e^{-i\tau B/(2h)},
+\qquad Q_{h,\pi}\longrightarrow U_h(T)=e^{-iTH_h/h}. \tag{5}
+\]</span></p>
+<p><em>Proof of (a).</em> At zero the Hessian of (1) is the positive
+definite Dirichlet kinetic matrix: the quartic term has zero second
+derivative. The inverse function theorem isolates this branch at each
+partition. Equation (3) cancels its nonzero leading coefficient in the
+ratio. Its polygon is identically zero on every partition, proving the
+outer limit. This proves branch selection explicitly; its cutoff may
+depend on <span class="math inline">\(\pi\)</span>.</p>
+<p><em>Proof of (b).</em> The positive polynomial Schrödinger operator
+is essentially self-adjoint on <span
+class="math inline">\(C_c^\infty(\mathbb R)\)</span>; see the
+continuous, bounded-below case recorded in <a
+href="https://arxiv.org/pdf/math-ph/9907022">Simon 1999, p. 2</a>
+(passage, Theorem 1.1 and following self-adjointness statement). Its
+domain is <span class="math inline">\(D(A_h)\cap D(B)\)</span>. For
+completeness, the estimate ensuring this domain identification follows
+by integration by parts. With <span
+class="math inline">\(a_h=h^2/(2m)\)</span>,</p>
+<p><span class="math display">\[
+\|H_h f\|^2=a_h^2\|f&#39;&#39;\|^2+\lambda^2\|q^4f\|^2
++2a_h\lambda\int q^4|f&#39;|^2dq
+-12a_h\lambda\int q^2|f|^2dq.
+\]</span></p>
+<p>The pointwise inequality <span class="math inline">\(12a_h\lambda
+q^2\le\lambda^2q^8/2+C_h\)</span>, with <span
+class="math inline">\(C_h=9a_h\lambda(6a_h/\lambda)^{1/3}\)</span>,
+absorbs the negative term. Closure and smooth cutoff approximation give
+the stated domain and its equivalent graph norm. Both factors in (5) are
+unitary, and on this domain</p>
+<p><span class="math display">\[
+\tau^{-1}(Q_{h,\tau}-U_h(\tau))f\longrightarrow0.
+\]</span></p>
+<p>The difference quotients are uniformly bounded from the graph domain
+to <span class="math inline">\(L^2\)</span>. The orbit <span
+class="math inline">\(\{U_h(s)f:0\le s\le T\}\)</span> is compact in
+that domain, so convergence is uniform on the orbit. Telescoping an
+arbitrary partition therefore bounds the error by</p>
+<p><span class="math display">\[
+T\sup_{\substack{0&lt;\tau\le|\pi|\\0\le s\le T}}
+\frac{\|(Q_{h,\tau}-U_h(\tau))U_h(s)f\|}{\tau}\longrightarrow0.
+\]</span></p>
+<p>Density extends convergence to <span
+class="math inline">\(L^2\)</span>. This is the product-formula argument
+of <a
+href="https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe.pdf">Teschl,
+Theorem 5.10, pp. 131–132</a> (passage), with the same telescoping proof
+for unequal cells. The kernel of <span
+class="math inline">\(Q_{h,\tau}\)</span> has phase (1) and
+normalization <span class="math inline">\((m/(2\pi i
+h\tau))^{1/2}\)</span>. Hence (5) is exactly the stated time slicing.
+<span class="math inline">\(\square\)</span></p>
+<p>Composition and <span class="math inline">\(\|U_h(T)\|=1\)</span>
+hold for every supplied <span class="math inline">\(h&gt;0\)</span>. The
+proof gives convergence at fixed <span class="math inline">\(h\)</span>,
+with graph estimates depending on <span
+class="math inline">\(h\)</span>; it makes no assertion of an
+unnormalized real-time amplitude limit as <span
+class="math inline">\(h\downarrow0\)</span>. Theorem 1 blocks the
+unrestricted classical-first halved prescription, while (a) gives a
+precise classical-first repair. An equivalence in Conjecture R must
+retain that distinction.</p>
+<h2 id="quartic-euclidean-time-a-uniform-two-limit-theorem">3. Quartic
+Euclidean time: a uniform two-limit theorem</h2>
+<p>A positive version gives a stronger existence test, with a direct
+uniform estimate. Keep the quartic potential and endpoints zero; change
+the action to</p>
+<p><span class="math display">\[
+S^E_\pi=\sum_j\frac{m(q_{j+1}-q_j)^2}{2\tau_j}+W_\pi,
+\qquad W_\pi=\frac\lambda2\sum_j\tau_j(q_j^4+q_{j+1}^4).
+\]</span></p>
+<p>Let <span class="math inline">\(\nu_{h,\pi}\)</span> be the
+normalized density proportional to <span
+class="math inline">\(e^{-S^E_\pi/h}\)</span>, embedded as piecewise
+linear paths. Here <span class="math inline">\(h\)</span> is the same
+action resolution called <span
+class="math inline">\(\varepsilon\)</span> in the classical-first
+route.</p>
+<p><strong>Theorem 3.</strong> For every <span
+class="math inline">\(h&gt;0\)</span>, arbitrary mesh refinement gives
+the quartic Feynman–Kac bridge <span
+class="math inline">\(\nu_h\)</span> on <span
+class="math inline">\(C([0,T])\)</span>. Both iterated limits, and every
+joint limit <span class="math inline">\(h\downarrow0\)</span>, <span
+class="math inline">\(|\pi|\downarrow0\)</span>, give <span
+class="math inline">\(\delta_{q\equiv0}\)</span>. More precisely, for
+every <span class="math inline">\(r&gt;0\)</span> and every
+partition,</p>
+<p><span class="math display">\[
+\nu_{h,\pi}(\|q\|_\infty&gt;r)
+\le 2\exp\left\{\frac{3\lambda hT^3}{16m^2}
+-\frac{2mr^2}{hT}\right\}. \tag{6}
+\]</span></p>
+<p><em>Proof.</em> Let <span class="math inline">\(B_h\)</span> be the
+zero-endpoint Brownian bridge with covariance</p>
+<p><span class="math display">\[
+\mathbb E[B_h(s)B_h(t)]=\frac hm
+\left(\min(s,t)-\frac{st}{T}\right).
+\]</span></p>
+<p>Its values at the vertices have the normalized free kinetic density.
+Thus <span class="math inline">\(\nu_{h,\pi}\)</span> is their polygonal
+interpolation, tilted by <span
+class="math inline">\(e^{-W_\pi(B_h)/h}/Z_{h,\pi}\)</span>. Continuity
+of bridge paths gives uniform convergence of the interpolation and
+convergence of the trapezoidal potential sum to <span
+class="math inline">\(\lambda\int_0^T B_h^4dt\)</span>. The weights lie
+between zero and one, and their expectation tends to a strictly positive
+value. Dominated convergence proves the fixed-<span
+class="math inline">\(h\)</span> limit. Its identification with the heat
+kernel of <span class="math inline">\(H_h\)</span>, including diffusion
+coefficient <span class="math inline">\(h/m\)</span>, is the
+bounded-below Feynman–Kac formula (<a
+href="https://arxiv.org/pdf/math-ph/9907022">Simon, Theorem 1.1</a>,
+passage). The unnormalized heat kernels obey exact convolution.</p>
+<p>For uniformity in <span class="math inline">\(h\)</span>, use <span
+class="math inline">\(\mathbb E
+B_h(t)^4=3[ht(T-t)/(mT)]^2\le3h^2T^2/(16m^2)\)</span>. The trapezoidal
+weights sum to <span class="math inline">\(T\)</span>, so Jensen
+gives</p>
+<p><span class="math display">\[
+Z_{h,\pi}\ge
+\exp[-\mathbb E W_\pi/h]
+\ge\exp[-3\lambda hT^3/(16m^2)].
+\]</span></p>
+<p>The interpolated supremum is bounded by the bridge supremum.
+Reflection of Brownian motion at its first passage through <span
+class="math inline">\(r\)</span>, followed by conditioning on the final
+value zero, gives <span class="math inline">\(\mathbb P(\sup
+B_h&gt;r)=e^{-2mr^2/(hT)}\)</span>; applying the same identity to <span
+class="math inline">\(-B_h\)</span> gives the two-sided bound with
+factor two. Multiplying by <span
+class="math inline">\(Z_{h,\pi}^{-1}\)</span> proves (6). It tends to
+zero uniformly in <span class="math inline">\(\pi\)</span> as <span
+class="math inline">\(h\downarrow0\)</span>; the limiting bridge obeys
+the same bound. The unique Euclidean minimizing path is zero since every
+term of <span class="math inline">\(S^E\)</span> is nonnegative and the
+endpoints vanish. This proves all the claimed orders of limits. <span
+class="math inline">\(\square\)</span></p>
+<p>This theorem concerns the Euclidean positive measure, with its stated
+boundary data. Analytic continuation provides real-time operators
+through the self-adjoint <span class="math inline">\(H_h\)</span>;
+transferring probability estimates such as (6) to oscillatory real-time
+path measures would require another argument. Together, Theorems 1–3
+give an explicit status for each limit: a failing unrestricted halved
+classical limit, an existing selected classical limit, an existing
+fixed-<span class="math inline">\(h\)</span> real-time continuum limit,
+and commuting Euclidean limits with a bound. These consistency tests
+permit phase constants approaching zero.</p>
+<h2 id="proposition-i-the-polygon-and-the-angle-circle">4. Proposition
+I: the polygon and the angle circle</h2>
+<p>Now use the plane, a central potential <span
+class="math inline">\(V(r)\)</span>, and scalar signed angular momentum
+<span class="math inline">\(L=q\mathbin{\times}p\)</span>. Work on a
+regular segment away from <span class="math inline">\(r=0\)</span>. A
+central kick changes <span class="math inline">\(p\)</span> by <span
+class="math inline">\(-a q\)</span> for some scalar <span
+class="math inline">\(a\)</span>, and a drift changes <span
+class="math inline">\(q\)</span> by <span class="math inline">\(\tau
+p/m\)</span>. Each separately preserves <span
+class="math inline">\(L\)</span>. The oriented area of the drift
+triangle is exactly</p>
+<p><span class="math display">\[
+\Delta\mathcal A=\frac12q_j\mathbin{\times}q_{j+1}
+=\frac{\tau_j L}{2m}. \tag{7}
+\]</span></p>
+<p>This is the finite equal-area mechanism of Newton’s Proposition I.
+Symmetric kicks from (1) have the same property. Nonlinear forces
+generally change old endpoints when a finite cell is split; their
+consistent integrators converge on compact collision-free segments as
+the mesh vanishes. Equation (7) remains exact at each mesh. These swept
+areas serve the angular test here; the Galileo inertial–parabola defect
+in the Planck programme remains a separate observable.</p>
+<p>In polar coordinates the kinetic numerator in (1) is</p>
+<p><span class="math display">\[
+r_j^2+r_{j+1}^2-2r_jr_{j+1}\cos(\theta_{j+1}-\theta_j).
+\]</span></p>
+<p>The full discrete action and its exponential are single-valued under
+every change of angular representative <span
+class="math inline">\(\theta_j\mapsto\theta_j+2\pi k_j\)</span>, for
+every <span class="math inline">\(\varepsilon&gt;0\)</span>. The angular
+discrete Euler–Lagrange equation conserves</p>
+<p><span class="math display">\[
+L_j=\frac{m r_jr_{j+1}}{\tau_j}
+\sin(\theta_{j+1}-\theta_j).
+\]</span></p>
+<p>Thus periodicity of the original path weight, together with the
+polygon law, places no arithmetic restriction on <span
+class="math inline">\(\varepsilon\)</span>.</p>
+<p>An extra requirement arises when a <em>stationary state</em> is
+assembled from a fixed angular-momentum branch. The separated
+Hamilton–Jacobi function on the angular cover is <span
+class="math inline">\(S(r,\theta,t)=W_r(r;E,L)+L\theta-Et\)</span>.</p>
+<p><strong>Theorem 4 (angular descent).</strong> Assume the branch
+amplitude is a scalar, single-valued function of <span
+class="math inline">\(\theta\)</span>, and require its angular phase
+<span class="math inline">\(e^{iL\theta/h}\)</span> to descend from
+<span class="math inline">\(\mathbb R\)</span> to <span
+class="math inline">\(S^1\)</span> with trivial boundary holonomy. Then,
+necessarily and sufficiently,</p>
+<p><span class="math display">\[
+\frac Lh\in\mathbb Z,
+\qquad \oint L\,d\theta=2\pi n h. \tag{8}
+\]</span></p>
+<p><em>Proof.</em> Translation by <span
+class="math inline">\(2\pi\)</span> multiplies the phase by <span
+class="math inline">\(e^{2\pi iL/h}\)</span>. Its equality to one is
+(8). For lifted polygon increments the product is <span
+class="math inline">\(\prod_j
+e^{iL\Delta\theta_j/h}=e^{iL\sum_j\Delta\theta_j/h}\)</span>; inserting
+a vertex leaves it unchanged. Descent through a full turn then imposes
+exactly the same condition, independently of the mesh. <span
+class="math inline">\(\square\)</span></p>
+<p>This is also the exact angular spectrum of <span
+class="math inline">\(-ih\partial_\theta\)</span> on periodic scalar
+wavefunctions. Allowing a flat boundary phase <span
+class="math inline">\(\psi(\theta+2\pi)=e^{2\pi
+i\alpha}\psi(\theta)\)</span> changes the relation to <span
+class="math inline">\(L/h\in\mathbb Z+\alpha\)</span>. The trivial
+scalar choice is an explicit premise; neither central kicks nor angle
+periodicity chooses a state space. Distinct winding paths remain
+distinct integration histories, even when their endpoints agree.</p>
+<p>For a fixed <span class="math inline">\(\ell=|L|&gt;0\)</span>, (8)
+permits precisely <span class="math inline">\(h=\ell/n\)</span> with
+<span class="math inline">\(n=1,2,\ldots\)</span>, whose infimum is
+zero. Holding the winding number <span class="math inline">\(n\)</span>
+fixed determines <span class="math inline">\(h\)</span> from that orbit.
+A bound <span class="math inline">\(n\le N_*\)</span> would produce the
+conditional floor <span class="math inline">\(h\ge\ell/N_*\)</span>,
+with both orbit scale and bound supplied. A common <span
+class="math inline">\(h\)</span> for several prescribed orbits requires
+their angular actions to be integer multiples of it; incommensurate
+actions cannot all satisfy that exact-state premise.</p>
+<h2 id="hooke-and-kepler-radial-actions-and-maslov-phases">5. Hooke and
+Kepler: radial actions and Maslov phases</h2>
+<p>For regular noncircular bound tori with <span
+class="math inline">\(\ell=|L|&gt;0\)</span>, define</p>
+<p><span class="math display">\[
+I_\theta=\ell,\qquad
+I_r=\frac1\pi\int_{r_-}^{r_+}
+\sqrt{2m(E-V(r))-\ell^2/r^2}\,dr.
+\]</span></p>
+<p>The angular cycle has no turning point. The radial cycle has two
+simple turning points. Supplying the usual WKB transport and its caustic
+phase gives the Keller–Maslov rule</p>
+<p><span class="math display">\[
+\exp\left[\frac{i}{h}\oint p\cdot dq-\frac{i\pi\mu}{2}\right]=1,
+\qquad I=h(n+\mu/4). \tag{9}
+\]</span></p>
+<p>Here <span class="math inline">\(\mu_\theta=0\)</span>, <span
+class="math inline">\(\mu_r=2\)</span>. Each simple turning point
+contributes <span class="math inline">\(-\pi/2\)</span> to the
+transported cycle phase, yielding <span
+class="math inline">\(I_r=h(n_r+1/2)\)</span> and <span
+class="math inline">\(I_\theta=h|n_\theta|\)</span>. This is
+semiclassical state consistency, with WKB transport supplied; the
+angular rule is exact on the stated scalar state space. <a
+href="https://doi.org/10.1016/0003-4916(58)90032-0">Keller 1958</a>
+(metadata, <em>Annals of Physics</em> 4, 180–188) is the established
+source; <a href="https://doi.org/10.1137/1027139">Keller’s later
+account</a> (abstract) describes the integer and half-integer conditions
+from WKB. We use (9) conditionally and derive the following mechanical
+actions.</p>
+<p><strong>Hooke, <span class="math inline">\(V=m\omega^2r^2/2\)</span>,
+<span class="math inline">\(\omega&gt;0\)</span> (Proposition
+X).</strong> The radial period is <span
+class="math inline">\(T_r=\pi/\omega\)</span>, since <span
+class="math inline">\(r^2\)</span> oscillates at <span
+class="math inline">\(2\omega\)</span>. Differentiating the action
+integral gives <span class="math inline">\(\partial I_r/\partial
+E=T_r/(2\pi)=1/(2\omega)\)</span>. The circular orbit has <span
+class="math inline">\(E_c=\omega\ell\)</span> and <span
+class="math inline">\(I_r=0\)</span>, hence</p>
+<p><span class="math display">\[
+I_r=\frac{E}{2\omega}-\frac\ell2,
+\qquad E=\omega(2I_r+\ell). \tag{10}
+\]</span></p>
+<p>Equation (9) consequently gives the EBK values</p>
+<p><span
+class="math display">\[E=h\omega(2n_r+|n_\theta|+1).\]</span></p>
+<p>For a circle <span class="math inline">\(\ell=m\omega R^2\)</span>,
+taking <span class="math inline">\(R\downarrow0\)</span> produces
+arbitrarily small positive classical angular actions at fixed <span
+class="math inline">\(m,\omega\)</span>. The radial turning-point
+argument applies to noncircular tori; circular orbits follow as the
+mechanical limit of (10), with a degenerate radial cycle requiring its
+own wave analysis.</p>
+<p><strong>Kepler, <span class="math inline">\(V=-k/r\)</span>, <span
+class="math inline">\(k&gt;0\)</span>.</strong> For <span
+class="math inline">\(E&lt;0\)</span> and <span
+class="math inline">\(0&lt;\ell&lt;k\sqrt{m/(-2E)}\)</span>, the ellipse
+has two distinct positive radial turning points. Its semimajor axis is
+<span class="math inline">\(a=-k/(2E)\)</span> and its period is <span
+class="math inline">\(T_r=2\pi\sqrt{ma^3/k}\)</span>. Thus <span
+class="math inline">\(\partial I_r/\partial E=k\sqrt
+m/(-2E)^{3/2}\)</span>. At the circle <span
+class="math inline">\(E_c=-mk^2/(2\ell^2)\)</span>, <span
+class="math inline">\(I_r=0\)</span>, giving</p>
+<p><span class="math display">\[
+I_r=k\sqrt{\frac{m}{-2E}}-\ell,
+\qquad E=-\frac{mk^2}{2(I_r+\ell)^2}. \tag{11}
+\]</span></p>
+<p>The planar EBK rule yields</p>
+<p><span
+class="math display">\[E=-\frac{mk^2}{2h^2(n_r+|n_\theta|+1/2)^2}.\]</span></p>
+<p>This is the planar action calculation; the three-dimensional Coulomb
+problem has additional angular variables. The angular law alone fixes
+<span class="math inline">\(\ell/h\)</span> and leaves <span
+class="math inline">\(I_r\)</span> free. Classical circles satisfy <span
+class="math inline">\(\ell=\sqrt{mkR}\)</span>, so <span
+class="math inline">\(R\downarrow0\)</span> also gives angular infimum
+zero at fixed <span class="math inline">\(m,k\)</span>, through regular
+circles of individually positive radius.</p>
+<p><strong>Theorem 5 (even both cycle conditions allow <span
+class="math inline">\(h\downarrow0\)</span>).</strong> Fix a Hooke or
+Kepler noncircular torus satisfying (9) at some <span
+class="math inline">\(h_0&gt;0\)</span>, with integers <span
+class="math inline">\(n_r\ge0\)</span>, <span
+class="math inline">\(|n_\theta|\ge1\)</span>. The <em>same</em> actions
+satisfy (9) at every</p>
+<p><span class="math display">\[
+h_j=\frac{h_0}{2j+1},\quad
+n_{r,j}=(2j+1)n_r+j,\quad
+n_{\theta,j}=(2j+1)n_\theta,\qquad j=0,1,\ldots . \tag{12}
+\]</span></p>
+<p><em>Proof.</em> Substitution gives <span
+class="math inline">\(h_j(n_{r,j}+1/2)=h_0(n_r+1/2)\)</span> and <span
+class="math inline">\(h_j|n_{\theta,j}|=h_0|n_\theta|\)</span>.
+Equations (10)–(11) then preserve the energy and angular momentum. <span
+class="math inline">\(\square\)</span></p>
+<p>Some fixed tori admit no <span class="math inline">\(h\)</span>
+satisfying both exact EBK relations, because their action ratio fails
+the required integer/half-integer relation. Whenever one value exists,
+(12) excludes a positive lower bound from these relations alone.
+Asymptotic WKB errors carry their usual separate status; (12) is an
+exact statement about the proposed cycle conditions.</p>
+<p>Finally, the action in a closed spatial circuit must be identified
+correctly. Write <span class="math inline">\(W=\oint p\cdot dq=2\pi
+J_{\rm orb}\)</span>, whereas <span
+class="math inline">\(S_T=W-ET\)</span>. For Hooke, <span
+class="math inline">\(J_{\rm orb}=2I_r+\ell=E/\omega\)</span> and <span
+class="math inline">\(T=2\pi/\omega\)</span>, so <span
+class="math inline">\(S_T=0\)</span> on every ellipse. Imposing <span
+class="math inline">\(e^{iS_T/h}=1\)</span> there gives no restriction
+whatever. For Kepler, <span class="math inline">\(J_{\rm
+orb}=I_r+\ell\)</span> and <span class="math inline">\(ET=-\pi J_{\rm
+orb}\)</span>, so <span class="math inline">\(S_T=3\pi J_{\rm
+orb}\)</span>. Equal configuration after a dynamical period allows a
+stationary state to acquire its temporal phase <span
+class="math inline">\(e^{-iET/h}\)</span>. The spatial cycle condition
+(9) therefore uses <span class="math inline">\(W\)</span> and the
+caustic phase, with time held separate. Identifying it with the bare
+full-period halved action would change the condition.</p>
+<h2 id="relation-to-the-orbit-bounds-and-kepler-threshold">6. Relation
+to the orbit bounds and Kepler threshold</h2>
+<p>The <a href="closed-orbit-force-action.html">closed-orbit
+force-action note</a> proves <span class="math inline">\(J_{\rm orb}\ge
+m^2v_*^3/F_{\max}\)</span> in Newtonian mechanics under a uniform speed
+floor and force ceiling. For eccentric orbits this is the total orbit
+action above; it differs from <span
+class="math inline">\(I_\theta=\ell\)</span>. The excitation and force
+hypotheses supply that bound. Combining it with an integer rule would
+still require an upper bound on the integer to bound <span
+class="math inline">\(h\)</span> from below.</p>
+<p>On a circle <span class="math inline">\(J_{\rm orb}=\ell\)</span>.
+The <a href="bound-orbit-action-observable.html">bound-orbit observable
+note</a> gives <span
+class="math inline">\(2\sqrt{\det\Sigma}=\ell\)</span> for its
+uniform-phase preparation. Equation (8) would turn this into <span
+class="math inline">\(2\sqrt{\det\Sigma}=|n_\theta|h\)</span> if that
+classical estimator is used to label an admitted angular action.
+Identifying the classical ensemble with a quantum state would need an
+additional preparation argument.</p>
+<p>The <a href="relativistic-kepler-threshold.html">relativistic Kepler
+note</a> has a different, explicit mechanism: in the external singular
+potential <span class="math inline">\(-k/r\)</span>, regular bound
+motion requires <span class="math inline">\(\ell&gt;k/c\)</span>.
+Combining this classical admissibility condition with angular descent
+gives</p>
+<p><span class="math display">\[|n_\theta|h&gt;k/c.\]</span></p>
+<p>For fixed <span class="math inline">\(h\)</span> it excludes low
+angular integers. For a fixed integer it requires <span
+class="math inline">\(h&gt;k/(c|n_\theta|)\)</span>. With unbounded
+integers it permits arbitrarily small <span
+class="math inline">\(h\)</span>; for a fixed allowed orbit use <span
+class="math inline">\(h=\ell/n\)</span>. The threshold remains coupling
+dependent and closes in the Newtonian limit <span
+class="math inline">\(c\to\infty\)</span>. A softened core has angular
+infimum zero already at fixed <span
+class="math inline">\(m,k,c\)</span>, as proved in that note. Thus the
+singular-core threshold, the orbital action estimator, and the angular
+phase lattice each retain their distinct hypotheses.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Item 2 gains a tested form of the 1998 conjecture: quartic
+interference requires a branch or diagonal prescription for
+critical-point recovery; fixed-<span class="math inline">\(h\)</span>
+real-time refinement exists for all <span
+class="math inline">\(h&gt;0\)</span>, and a Euclidean quartic test has
+commuting zero-resolution limits. Central-force angular descent gives an
+orbit-dependent integer relation whose allowed phase constants
+accumulate at zero, even with both EBK cycles imposed. The constructive
+next obligation is a physically justified control and observable
+prescription that addresses the interference in (4), together with a
+scale-selection premise surviving the sequences (8) and (12). These
+results settle the stated tests; the general controlled equivalence in
+Conjecture R retains those explicit open obligations.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

@@ -46,6 +46,7 @@ TRACKS = [
      carry the theorems, the Newton-age premises and the ancient dispute about
      the cut.""", [
         "planck-gap-paper", "principia-fifth-postulate",
+        "rivero-1998-conjecture-central-forces",
         "necessity-unit-and-indeterminacy", "newton-indeterminacy-routes",
         "thermodynamic-records-no-floor", "sed-zeta-radiation-link",
         "sed-closure-under-recording",
