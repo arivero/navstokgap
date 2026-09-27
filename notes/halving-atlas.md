@@ -101,8 +101,9 @@ way; in mechanics refining makes each cell more quantum
    orthogonality computation (closed-form note, §5).
 2. $SU(2)$ full mid-plane in $1+2$: small-field expansion of $\Psi$, the
    non-abelian counterpart of Proposition 4.
-3. Stability of Hypothesis P($\alpha$) under iteration, first for $U(1)$
-   within one isotropic step (three directional halvings).
+3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
+   reduced to exact Gaussian blocking* (Corollary 2$'$ of the
+   [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
 4. $1+3$: the one-loop coefficient $-2b_0\log2$ per isotropic step from the
    three parallel insertions of each halving.
 5. Time-only halving: the exponential-family parallel move and its

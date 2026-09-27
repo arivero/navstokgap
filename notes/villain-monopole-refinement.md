@@ -172,6 +172,33 @@ indexed). The exponents are bounds; the monopole self-energy of the
 infinite lattice, $2\pi^2G(0)\approx4.99$ with $G(0)\approx0.2527$, lies
 between them.
 
+**Corollary 2$'$ (iteration reduces to the free field).** Let
+$a_n=2^{-n}a_0$ and let $p_{n0}$ be the composite of the $3n$ directional
+halvings from spacing $a_n$ to $a_0$ (multiplying fine links). Then
+
+$$\bigl\|p_{n0*}\mu_{a_n}-p_{n0*}\mu_{a_n}^0\bigr\|_{\rm TV}\ \le\
+\frac{2(L/a_n)^3e^{-\pi^2/(6\lambda_3a_n)}}{1-e^{-\pi^2/(2\lambda_3a_n)}},$$
+
+and $p_{n0*}\mu^0_{a_n}$ is the blocked free photon with the flux sectors of
+the torus, which blocking maps to the same sectors. So stability under
+iteration, the open clause of Hypothesis P($\alpha$) in the
+[series/parallel note](series-parallel-gauge-refinement.md), is reduced
+for $U(1)$ in $D=3$ to exact Gaussian blocking: the compact part never has
+to be iterated.
+
+*Proof.* A pushforward does not increase total variation, and Theorem 2
+bounds the distance before the pushforward. The flux of a coarse
+2-torus is the sum of the fluxes of the fine plaquettes it contains,
+so the sector label $m$ is preserved. $\square$
+
+The Gaussian comparison that remains, between the blocked free photon
+and the free photon at spacing $a_0$, is not small in total variation:
+the two quadratic forms differ at order one on modes of the lattice
+scale, and agree to relative order $a^2K^2$ on smooth modes (Proposition 2
+and bound (6) of the series/parallel note). It must be made through
+smooth observables, where it is explicit because both sides are
+Gaussian.
+
 ## 3. Four dimensions: the same bound, and why it fails
 
 **Theorem 3.** Let $D=4$, $N=L/a$, $t=g^2$ with $g^2\le1$. Then
