@@ -116,14 +116,72 @@ the midpoint becomes bimodal, and there the image terms take over. This
 is the non-abelian counterpart of the parity factor $\rho_t(\phi)$ of the
 $U(1)$ cube (Proposition 3 of the series/parallel note).
 
-## 4. Consequence for STATE
+## 4. Every spin
 
-The curvature term of the $SU(2)$ parallel insertion is now exact for the
-fundamental character. Two steps remain before Proposition 7 becomes a
-theorem for the isolated $SU(2)$ cube: the same computation for every
-spin $J$, since the cube's character sum
-$\sum_Jd_Je^{-t_mC_2(J)/2}{\rm tr}_J\prod_jE\,D^J(m_j^{\pm1})$ involves all
-spins, and the matrix structure of $E\,D^J$ beyond its trace, which
-Proposition 6(a) reduces to one real diagonal matrix per cut face. The
-first follows the proof above with $\chi_{j_1}\chi_J=\sum_{|j_1-J|}^{j_1+J}\chi_{j_2}$
-and is the next step on this line.
+**Theorem 2.** For every spin $J$ and $\theta\in(0,2\pi)$, with $\sigma=0$ for
+integer $J$ and $\sigma=\frac12$ for half-integer $J$,
+
+$$E\,\chi_J(m)=\frac{\Xi_{(\sigma)}(\theta)}{\Xi_+(\theta)}
+\sum_{k=-J}^{J}e^{-tk^2/8}\cos\frac{k\theta}2
+-\frac t2\,\frac{\Theta_{(\sigma)}(\theta)}{\Xi_+(\theta)}
+\sum_{k=-J}^{J}k\,e^{-tk^2/8}\sin\frac{k\theta}2,$$
+
+where $\Xi_{(0)}=\Xi_+$, $\Theta_{(0)}=\Theta_+$, $\Xi_{(1/2)}=\Xi_-$,
+$\Theta_{(1/2)}=\Theta_-$, and $k$ runs in unit steps. In the $w=0$ sector,
+
+$$E\,\chi_J(m)=\sum_{k=-J}^{J}e^{-tk^2/8}\Bigl[\cos\frac{k\theta}2
+-\frac t{2\theta}\,k\sin\frac{k\theta}2\Bigr]. \tag{2}$$
+
+For integer $J$ the first ratio is exactly one, image terms included.
+
+*Proof.* As for Theorem 1, now with $\chi_{j_1}\chi_J=\sum_{k=-J}^{J}\chi_{j_1+k}$.
+This identity holds for every $j_1$ if $\chi_j$ is defined by
+$\sin((2j+1)\theta/2)/\sin(\theta/2)$ also for $2j+1\le0$: it is the
+product-to-sum formula for $\sin(n\theta/2)\sum_ke^{ik\theta}$. The
+formal terms with $2j_2+1\le0$ cancel in pairs carrying the same weight,
+so the sum may be taken over all $n=2j_1+1\in\mathbb Z$, halved; the
+summand is even under $(n,k)\mapsto(-n,-k)$. With $n_2=n+2k$,
+$C_2(j_1)+C_2(j_2)=\frac12(n+k)^2+\frac12(k^2-1)$, so the weight is
+$e^{t/8}e^{-tk^2/8}e^{-ts^2/8}$ with $s=n+k\in\mathbb Z+\sigma$. Expanding
+$(s-k)\sin\frac{(s+k)\theta}2$ and discarding the terms odd in $s$ leaves
+$\cos\frac{k\theta}2\cdot s\sin\frac{s\theta}2-k\sin\frac{k\theta}2\cos\frac{s\theta}2$.
+Summing over $s$ gives $A_\sigma$ and $B_\sigma$, Poisson summation gives
+$\Xi_{(\sigma)}$ and $\Theta_{(\sigma)}$, and the factor $e^{t/8}$ cancels
+against the denominator. For $J=\frac12$ this is Theorem 1. $\square$
+
+**Agreement with Proposition 6 for every spin.** The leading term of (2)
+is $\sum_k\cos(k\theta/2)=\chi_J(m_*)$, the character at the geodesic
+midpoint (rotation angle $\theta/2$). The Gaussian prediction of
+Proposition 6(b) at first order is
+$\sum_k\cos\frac{k\theta}2\,[1-\frac t8k^2-\frac t8(J(J+1)-k^2)/h]$ with
+$1/h=4\tan(\theta/4)/\theta$. The two agree iff, with $\varphi=\theta/2$,
+
+$$\sum_kk\sin(k\varphi)=\tan\frac\varphi2\sum_k\bigl(J(J+1)-k^2\bigr)\cos(k\varphi).$$
+
+The left side is $-\chi_J'(\varphi)$ and the sum on the right is
+$J(J+1)\chi_J+\chi_J''$. The class-function Laplacian of $SU(2)$ in this
+metric gives $\chi_J''+\cot(\varphi/2)\,\chi_J'=-J(J+1)\chi_J$, which is the
+identity. (For $J=\frac12$ and $J=1$ it can be checked directly:
+$\sin(\varphi/2)=\tan(\varphi/2)\cos(\varphi/2)$ and
+$2\sin\varphi=\tan(\varphi/2)(2+2\cos\varphi)$.) So the curvature term of
+Proposition 6 is exact at first order in every representation, and (2)
+contains no terms of order $t^2$ beyond the Gaussian factors
+$e^{-tk^2/8}$.
+
+**What the trace does not give.** By Proposition 6(a),
+$E\,D^J(m)=D^J(m_*)\Lambda^J$ with $\Lambda^J$ real diagonal in the axis basis,
+and (2) fixes only $\sum_\mu e^{i\mu\theta/2}\Lambda^J_{\mu\mu}$, one equation
+for $2J+1$ entries. The isolated cube needs the entries, because its four
+cut faces have different axes.
+
+## 5. Consequence for STATE
+
+The curvature term of the $SU(2)$ parallel insertion is now exact for
+every character (Theorems 1 and 2), with only exponentially small winding
+terms left. One step remains before Proposition 7 becomes a theorem for
+the isolated $SU(2)$ cube: the diagonal entries $\Lambda^J_{\mu\mu}$ of the
+midpoint's matrix expectation, since the cube's character sum
+$\sum_Jd_Je^{-t_mC_2(J)/2}{\rm tr}_J\prod_jE\,D^J(m_j^{\pm1})$ multiplies
+matrices with different axes. They follow from the same orthogonality
+method applied to matrix elements, or from the characters of the midpoint
+translated along the centralizer of the side holonomy.
