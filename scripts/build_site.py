@@ -40,6 +40,7 @@ TRACKS = [
         "cut-measure-newton",
         "dimension-ladder", "villain-monopole-refinement",
         "su2-midpoint-exact", "su2-midplane-order-t",
+        "four-dimensional-parallel-log",
     ]),
     ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
      letting the sagitta and the enclosed area go to zero. Once the comparison

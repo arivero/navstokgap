@@ -1,7 +1,10 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern,amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Noto Serif CJK SC}[ItalicFeatures={FakeSlant=0.2}]
+\newfontfamily\cjkupperfont{HanaMinB}
+\usepackage{newunicodechar}
+\newunicodechar{𣃈}{{\cjkupperfont\symbol{"230C8}}}
+\usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
@@ -390,8 +393,11 @@ atlas}\label{what-emerges-read-across-the-atlas}}
   2\('\) of the \href{villain-monopole-refinement.md}{monopole note});
   open for \(SU(N)\).
 \item
-  \(1+3\): the one-loop coefficient \(-2b_0\log2\) per isotropic step
-  from the three parallel insertions of each halving.
+  \(1+3\): \href{four-dimensional-parallel-log.md}{formal anisotropic
+  one-step integrals and conditional logarithm}; the massive mid-space
+  sums are infrared regular. Open: composition with generated
+  interactions and finite endpoint matching; equal endpoint schemes give
+  \(-2b_0\log2\) analytically.
 \item
   Time-only halving. \emph{Structural reading, 2026-09-27, of known
   results.} At fixed spatial lattice the electric faces make the series

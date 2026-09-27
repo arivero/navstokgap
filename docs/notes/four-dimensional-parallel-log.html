@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Four-dimensional parallel insertions: one-loop shifts and the logarithm</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Four-dimensional parallel insertions: one-loop shifts and the
+logarithm</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/four-dimensional-parallel-log.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-parallel-log.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (formal calculation and precise
+obstruction).</strong> One directional cut in four dimensions has the
+six coupling shifts (4) and (10) below, as explicit, convergent
+Brillouin-zone integrals. They extend the refereed <span
+class="math inline">\(SU(2)\)</span> mid-plane calculation to three
+coupled transverse planes, arbitrary positive anisotropy and cut
+fraction <span class="math inline">\(s\)</span>. The bridge mass makes
+every one-step integral regular at zero momentum.</p>
+<p>The universal logarithm belongs to the matched, four-dimensional
+background-field determinant. Its coefficient is analytically</p>
+<p><span class="math display">\[2b_0=\frac{11N}{24\pi^2},\qquad
+g_0^{-2}(2a)-g_0^{-2}(a)=-\frac{11N}{24\pi^2}\log2+O(g_0^2)
+\tag{1}\]</span></p>
+<p><strong>when the endpoints use the same coupling scheme.</strong> For
+a full blocking step between different action shapes, the right side
+additionally contains <span class="math inline">\(c_{\rm in}-c_{\rm
+out}\)</span>, equation (15). Returning the six heat times and the
+anisotropy to their initial values leaves that difference undetermined.
+The exact pushforward generates interactions already at tree level;
+carrying them through the next elimination is essential. Consequently
+four applications of the unperturbed one-step coefficients alone do not
+establish (1). The missing task is the finite matching of the generated
+action, or construction of a stationary action family under rescaled
+blocking. Numerical evaluation of one lattice integral would leave this
+obstruction in place.</p>
+<p><strong>Status and inputs.</strong> Theorem 1 concerns coefficients
+of a formal, zero-image, bulk Laplace expansion. Its matrix and integral
+identities are written derivations; uniform remainder estimates remain
+open. Theorem 2 is a conditional one-loop matching theorem, with the
+continuum logarithm derived analytically. Neither theorem establishes a
+continuum measure or a physical mass gap. Inputs read here: the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>,
+Proposition 1, heat-time table, Hypothesis P(<span
+class="math inline">\(\alpha\)</span>), including its size clause, and
+§5; the <a href="su2-midplane-order-t.html">mid-plane calculation</a>,
+including N2, N3 and the winding qualification; the <a
+href="su2-midpoint-exact.html">midpoint formulas</a>, Theorems 1–4; and
+the <a href="zero-spacing-any-action.html">zero-spacing note</a>,
+perturbative column and finite <span
+class="math inline">\(\Lambda\)</span> matching (full-read: these
+sections). The new three-dimensional determinant has received no
+independent referee review.</p>
+<h2 id="normalization-and-a-positive-mid-space-hessian">1. Normalization
+and a positive mid-space Hessian</h2>
+<p>Set <span class="math inline">\(t=g^2=\hbar g_{\rm cl}^2\)</span>
+and</p>
+<p><span class="math display">\[\tau_{\mu\nu}=\frac{a_\mu a_\nu}
+{\prod_{\rho\ne\mu,\nu}a_\rho},\qquad
+t_{\mu\nu}=t\tau_{\mu\nu}.\]</span></p>
+<p>Cut direction 1 at <span class="math inline">\(s\in(0,1)\)</span>.
+With the trapezoid dual-length weights of atlas §1b, every old and new
+transverse face has heat time <span
+class="math inline">\(2t\tau_{jk}\)</span>, <span
+class="math inline">\(j,k\in\{2,3,4\}\)</span>. The cut faces have times
+<span class="math inline">\(st\tau_{1j}\)</span> and <span
+class="math inline">\((1-s)t\tau_{1j}\)</span>. This prescription
+extends to <span class="math inline">\(D=4\)</span> because only the
+dual length in direction 1 changes. It describes one cut of a uniform
+anisotropic lattice.</p>
+<p>Write <span class="math inline">\(m_e=m_{*e}e^{\xi_e}\)</span> in the
+mid-vertex gauge, put <span
+class="math inline">\(\sigma=s(1-s)\)</span>, and use dimensionless
+momenta <span class="math inline">\(k\in\mathcal
+B_3=[-\pi,\pi]^3\)</span> with measure <span
+class="math inline">\(d^3k/(2\pi)^3\)</span>. Define the three-by-three
+curl symbol and positive diagonal matrices by</p>
+<p><span class="math display">\[\begin{gathered}
+(C\xi)_{jk}=(1-e^{ik_k})\xi_j+(e^{ik_j}-1)\xi_k,\quad j&lt;k,\\
+M_{jj}=M_j=\frac1{\sigma\tau_{1j}},\qquad
+W_{jk,jk}=W_{jk}=\frac1{2\tau_{jk}},\\
+H_0(k)=M+C(k)^*WC(k),\qquad G(k)=H_0(k)^{-1}.
+\end{gathered}\tag{2}\]</span></p>
+<p>The exponent at zero coarse field is <span
+class="math inline">\(\langle\xi,H_0\xi\rangle/(2t)\)</span>, so the
+covariance is <span class="math inline">\(tG\)</span>. There is an
+identity in colour space. For fixed positive ratios,</p>
+<p><span class="math display">\[M_{\min}I\le
+H_0(k)\le(M_{\max}+12W_{\max})I.\tag{3}\]</span></p>
+<p>Indeed <span class="math inline">\(C^*C\)</span> has eigenvalues
+<span class="math inline">\(0,Q,Q\)</span>, where <span
+class="math inline">\(Q=\sum_{j=2}^4(2-2\cos k_j)\le12\)</span>. In
+particular <span class="math inline">\(H_0(0)=M\)</span>. For isotropic
+midpoint cutting, <span class="math inline">\(H_0=4I+C^*C/2\)</span> and
+<span class="math inline">\(4I\le H_0\le10I\)</span>. The
+three-dimensional conditional theory has a bridge mass in lattice units,
+even as <span class="math inline">\(t\downarrow0\)</span>.</p>
+<p>We extract the coefficient of <span
+class="math inline">\(|X_{\mu\nu}|^2\)</span> in the bulk local
+amplitude <span class="math inline">\(A_2\)</span> of the normalized
+defect <span class="math inline">\(\mathcal D\)</span>. If that
+coefficient is <span class="math inline">\(A_{\mu\nu}\)</span> per
+coarse plaquette, write</p>
+<p><span
+class="math display">\[\Delta(t_{\mu\nu}^{-1})=2A_{\mu\nu}+O(t),\qquad
+\delta_t^{\mu\nu}=2t\tau_{\mu\nu}A_{\mu\nu}+O(t^2).\]</span></p>
+<p>Thus the shift is <span class="math inline">\(O(t)\)</span>
+<strong>relative</strong> to the inverse heat time; its absolute leading
+value is <span class="math inline">\(O(1)\)</span>. In continuum units
+the inverse coupling shift for this plane is <span
+class="math inline">\(2\tau_{\mu\nu}A_{\mu\nu}\)</span>, since <span
+class="math inline">\(a_\mu^2a_\nu^2/\prod_\rho
+a_\rho=\tau_{\mu\nu}\)</span>. All statements about <span
+class="math inline">\(O(t)\)</span> below refer to formal loop order at
+fixed heat-time ratios.</p>
+<h2 id="n2-the-three-cut-plane-shifts">2. N2: the three cut-plane
+shifts</h2>
+<p><strong>Theorem 1(a).</strong> In the formal bulk expansion, for
+<span class="math inline">\(SU(N)\)</span> with <span
+class="math inline">\(C_A=C_2(\mathrm{adj})=N\)</span> and the metric of
+the input notes,</p>
+<p><span class="math display">\[\boxed{\begin{aligned}
+A_{1j}&amp;=\frac{C_A\sigma}{24}
+\int_{\mathcal B_3}[1-M_jG_{jj}(k)],\\
+\delta_t^{1j}&amp;=\frac{C_A\sigma\,t\tau_{1j}}{12}
+\int_{\mathcal B_3}[1-M_jG_{jj}(k)]+O(t^2),\quad j=2,3,4.
+\end{aligned}}\tag{4}\]</span></p>
+<p>The leading coefficients are strictly positive for positive
+transverse weights. At isotropy and <span
+class="math inline">\(s=1/2\)</span> this becomes</p>
+<p><span class="math display">\[\delta_t^{1j}=\frac{C_A t}{48}
+\int_{\mathcal B_3}\frac{\sum_{k\ne j}(2-2\cos k_k)}{8+Q}
++O(t^2).\tag{5}\]</span></p>
+<p><em>Proof.</em> Use a constant commuting cut flux <span
+class="math inline">\(X_{1j}=X\)</span>, all other cut fluxes zero, and
+choose the geodesically interpolated mid-connection flat. The classical
+defect vanishes on this test. Put</p>
+<p><span
+class="math display">\[Q_Z=\frac{\operatorname{ad}Z}{2}\coth\frac{\operatorname{ad}Z}{2}.
+\]</span></p>
+<p>The bridge Hessian, divided by its value at <span
+class="math inline">\(X=0\)</span>, is</p>
+<p><span class="math display">\[\begin{aligned}
+h_{s,X}&amp;=(1-s)Q_{sX}+sQ_{(1-s)X}\\
+&amp;=I+\frac{\sigma}{12}(\operatorname{ad}X)^2+O(|X|^4).
+\end{aligned}\]</span></p>
+<p>This follows by taking the Hessians of the two squared distances,
+weighted by <span class="math inline">\(1/(s\tau_{1j})\)</span> and
+<span class="math inline">\(1/((1-s)\tau_{1j})\)</span>. Normalization
+subtracts the determinant of the unconstrained bridge. Hence the
+quadratic amplitude is</p>
+<p><span class="math display">\[\frac{\sigma}{24}\int_{\mathcal B_3}
+(M_jG_{jj}-1)\operatorname{tr}_{\rm adj}(\operatorname{ad}X)^2
+=\frac{C_A\sigma|X|^2}{24}\int_{\mathcal B_3}(1-M_jG_{jj}).\]</span></p>
+<p>The matrix <span class="math inline">\(M^{1/2}GM^{1/2}\)</span> lies
+between zero and <span class="math inline">\(I\)</span>, with a strict
+diagonal inequality on a set of positive momentum measure. For (5),
+invert <span class="math inline">\(4I+C^*C/2\)</span> to get <span
+class="math inline">\(G=\frac14[I-C^*C/(8+Q)]\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>Suppressing direction 4 and taking <span
+class="math inline">\(C_A=2\)</span> gives exactly the cut coefficient
+<span class="math inline">\(t\int q/R\,/24\)</span> of the D=3 note. The
+full colour trace, rather than an isotropic average of the bridge
+covariance, fixes this normalization.</p>
+<h2 id="n3-an-explicit-integral-for-each-transverse-plane">3. N3: an
+explicit integral for each transverse plane</h2>
+<p>Take identical adjacent layers with a covariantly constant Abelian
+flux <span class="math inline">\(X_{jk}=BT_3\)</span> in one transverse
+plane and zero flux in the other two. Here <span
+class="math inline">\(|T_3|=1\)</span> for <span
+class="math inline">\(SU(2)\)</span>; <span
+class="math inline">\(j,k,h\)</span> are the three distinct transverse
+directions. The interpolated field is an exact stationary point. For
+equal endpoints, the two zero-image heat-kernel amplitudes cancel the
+Haar Jacobian, at every <span class="math inline">\(s\)</span>:</p>
+<p><span
+class="math display">\[k_{st_e}(e^\xi)k_{(1-s)t_e}(e^{-\xi})\,dm
+\ \propto\ e^{-|\xi|^2/(2\sigma t_e)}\,d\xi.\]</span></p>
+<p>Thus the bridges contribute only <span
+class="math inline">\(M\)</span> to this determinant. The remaining
+mid-face amplitude is <span class="math inline">\(-B^2/24\)</span> per
+<span class="math inline">\((jk)\)</span> face for <span
+class="math inline">\(SU(2)\)</span>.</p>
+<p>Here is a fully specified matrix-integral expression retaining all
+three edge components. It avoids a scalar Schur reduction of the third
+component and leaves the lattice integral unevaluated. Put</p>
+<p><span class="math display">\[p=k_j,\quad z=k_k,\quad w=k_h,\quad
+q(v)=2-2\cos v,\qquad
+d_B=\frac{B/2}{\sin(B/2)},\quad h_B=d_B\cos(B/2).\]</span></p>
+<p>Use magnetic Weyl symbols, with <span
+class="math inline">\([z,p]=iB\)</span>. The Hermitian matrix <span
+class="math inline">\(K^{jk}_B\)</span>, supported on rows and columns
+<span class="math inline">\(j,k\)</span>, has entries</p>
+<p><span class="math display">\[\begin{aligned}
+(K^{jk}_B)_{jj}&amp;=2h_B-2d_B\cos(z+B/2),\\
+(K^{jk}_B)_{kk}&amp;=2h_B-2d_B\cos(p-B/2),\\
+(K^{jk}_B)_{jk}&amp;=d_B\{(e^{-iB/2}-e^{-iz})e^{ip}
+                       +e^{-i(z+B/2)}-e^{iB/2}\},\\
+(K^{jk}_B)_{kj}&amp;=\overline{(K^{jk}_B)_{jk}}.
+\end{aligned}\tag{6}\]</span></p>
+<p>The other two plane matrices have the following nonzero entries, with
+their reverse entries given by complex conjugation:</p>
+<p><span class="math display">\[\begin{array}{lll}
+(K^{jh})_{jj}=q(w),&amp; (K^{jh})_{hh}=q(p),&amp;
+(K^{jh})_{jh}=(1-e^{-iw})(e^{ip}-1),\\
+(K^{kh})_{kk}=q(w),&amp; (K^{kh})_{hh}=q(z),&amp;
+(K^{kh})_{kh}=(1-e^{-iw})(e^{iz}-1).
+\end{array}\tag{7}\]</span></p>
+<p>Define</p>
+<p><span class="math display">\[\begin{gathered}
+H_B=M+W_{jk}K^{jk}_B+W_{jh}K^{jh}+W_{kh}K^{kh}
+       =H_0+BH_1+B^2H_2+O(B^3),\\
+H_1=\left.\partial_BH_B\right|_0,\qquad
+H_2=\left.\tfrac12\partial_B^2H_B\right|_0.
+\end{gathered}\]</span></p>
+<p>The derivatives here act on the explicit symbols (6)–(7). To include
+the orbital contribution, use the ordered matrix products</p>
+<p><span class="math display">\[\begin{aligned}
+\{A,B\}&amp;=A_zB_p-A_pB_z,\\
+\mathcal Q(A,B)&amp;=A_{zz}B_{pp}-2A_{zp}B_{zp}+A_{pp}B_{zz}.
+\end{aligned}\]</span></p>
+<p>For a real spectral parameter <span
+class="math inline">\(v\ge0\)</span> set</p>
+<p><span class="math display">\[\begin{aligned}
+R_0&amp;=(H_0+vI)^{-1},\\
+R_1&amp;=-R_0\left(H_1R_0+\frac i2\{H_0,R_0\}\right),\\
+R_2&amp;=-R_0\left(H_2R_0+H_1R_1
++\frac i2\{H_0,R_1\}+\frac i2\{H_1,R_0\}
+-\frac18\mathcal Q(H_0,R_0)\right),\\
+\mathcal I_{jk}(M,W)&amp;=-\operatorname{Re}\int_{[-\pi,\pi]^3}
+\frac{d^3k}{(2\pi)^3}\int_0^\infty\operatorname{tr}_3 R_2(k,v)\,dv.
+\end{aligned}\tag{8}\]</span></p>
+<p>Equations (6)–(8) are an explicit Brillouin-zone integral with an
+elementary resolvent parameter. They require only inverses and
+derivatives of specified three-by-three matrices. Bound (3) guarantees
+convergence at <span class="math inline">\(v=0\)</span>; <span
+class="math inline">\(R_2=O(v^{-2})\)</span> guarantees convergence at
+infinity.</p>
+<p><em>Derivation.</em> The squared-distance plaquette Hessian, for
+transported oriented edge fluctuations <span
+class="math inline">\(\eta_i\)</span> and background logarithm <span
+class="math inline">\(Y\)</span>, is</p>
+<p><span
+class="math display">\[L^{(2)}=\frac12\left\langle\sum_i\eta_i,Q_Y\sum_i\eta_i\right\rangle
++\frac12\sum_{i&lt;l}\langle Y,[\eta_i,\eta_l]\rangle,
+\qquad L=\tfrac12|\log m_{\partial g}|^2.\tag{9}\]</span></p>
+<p>In the gauge <span class="math inline">\(U_j=U_h=1\)</span>, <span
+class="math inline">\(U_k(x)=e^{Bx_jT_3}\)</span>, the <span
+class="math inline">\((jk)\)</span> operator is equation (11) of the
+mid-plane note. A term <span class="math inline">\(f(z)E_j\)</span> has
+Weyl symbol <span class="math inline">\(f(z-B/2)e^{ip}\)</span>, giving
+(6). The zero-flux <span class="math inline">\((jh)\)</span> and <span
+class="math inline">\((kh)\)</span> plaquettes have the covariant curls
+<span class="math inline">\((1-e^{iw})\xi_j+(E_j-1)\xi_h\)</span> and
+<span class="math inline">\((1-e^{iw})\xi_k+(e^{iz}-1)\xi_h\)</span>,
+which give (7). This retains the shared <span
+class="math inline">\(h\)</span>-edge, the radial term <span
+class="math inline">\(Q_Y\)</span>, and the ordered commutator in
+(9).</p>
+<p>Expanding <span
+class="math inline">\((H_B+v)\star(R_0+BR_1+B^2R_2)=I\)</span> with
+<span class="math inline">\(A\star B=AB+(iB/2)\{A,B\}-(B^2/8)\mathcal
+Q(A,B)+O(B^3)\)</span> gives (8). The logarithm identity <span
+class="math inline">\(\log
+H=\int_0^\infty[(1+v)^{-1}I-(H+v)^{-1}]\,dv\)</span> then proves that
+<span class="math inline">\(\mathcal I_{jk}\)</span> is the <span
+class="math inline">\(B^2\)</span> coefficient of the charged
+determinant per site. Two charged real colours contribute <span
+class="math inline">\(\tfrac12\operatorname{Tr}_{\mathbb R}\log H
+=\operatorname{Tr}_{\mathbb C}\log H\)</span>. The neutral colour is
+constant. This is a bulk magnetic expansion, taken before imposing
+quantized flux on a finite torus.</p>
+<p><strong>Theorem 1(b).</strong> The other three plane shifts are</p>
+<p><span class="math display">\[\boxed{\begin{aligned}
+A_{jk}&amp;=-\frac{C_A}{48}+\frac{C_A}{2}\mathcal I_{jk}(M,W),\\
+\delta_t^{jk}&amp;=C_A t\tau_{jk}
+\left(-\frac1{24}+\mathcal I_{jk}(M,W)\right)+O(t^2).
+\end{aligned}}\tag{10}\]</span></p>
+<p>For <span class="math inline">\(SU(2)\)</span>, the Jacobian
+contribution is <span class="math inline">\(-1/24\)</span> in <span
+class="math inline">\(A_{jk}\)</span> and the determinant contribution
+is exactly (8). For <span class="math inline">\(SU(N)\)</span> the root
+planes have charges <span class="math inline">\(\alpha(T)\)</span>, with
+<span
+class="math inline">\(\sum_{\alpha&gt;0}\alpha(T)^2=C_A|T|^2/2\)</span>;
+this multiplies the unit-charge determinant by <span
+class="math inline">\(C_A/2\)</span>. Also <span
+class="math inline">\(\log
+j(X)=\operatorname{tr}(\operatorname{ad}X)^2/24+O(|X|^4)\)</span>, so
+the heat-kernel amplitude contributes <span
+class="math inline">\(\tfrac12\log j(X) =-C_A|X|^2/48\)</span>. The
+old-face heat-kernel ratio cancels its Jacobian. Together these give
+(10). <span class="math inline">\(\square\)</span></p>
+<p>As a dimensional reduction check, set <span
+class="math inline">\(W_{jh}=W_{kh}=0\)</span>. The third component
+becomes a constant determinant; with <span
+class="math inline">\(M_j=M_k=4\)</span> and <span
+class="math inline">\(W_{jk}=1/2\)</span>, (8) is the <span
+class="math inline">\(B^2\)</span> coefficient of <span
+class="math inline">\(\log\det(8+K)\)</span> of the D=3 note. Its scalar
+reduction is exactly that note’s integral (2), including the
+Weyl-product correction. Simply adding three independent copies of that
+two-dimensional integral would discard the shared fluctuations in
+(7).</p>
+<h2 id="the-infrared-and-the-size-clause">4. The infrared and the size
+clause</h2>
+<p>For every fixed positive anisotropy and <span
+class="math inline">\(s\in(0,1)\)</span>, (3) makes the integrands in
+(4) and (8) analytic near <span class="math inline">\(k=0\)</span>.
+Their integral over a ball <span
+class="math inline">\(|k|&lt;\varepsilon\)</span> is <span
+class="math inline">\(O(\varepsilon^3)\)</span>. The cut integrand even
+vanishes at <span class="math inline">\(k=0\)</span>. Thus the
+elementary mid-space propagator supplies <strong>zero coefficient of an
+infrared logarithmic divergence</strong>. A finite value containing
+<span class="math inline">\(\log2\)</span> could still arise from
+integration over the whole Brillouin zone; its presence would require a
+matching argument before identifying it with the beta function.</p>
+<p>The finite-torus issue of P(<span
+class="math inline">\(\alpha\)</span>) survives in <span
+class="math inline">\(D=4\)</span>. At isotropy and <span
+class="math inline">\(s=1/2\)</span>, take equal flat <span
+class="math inline">\(SU(2)\)</span> layers with adjoint twists <span
+class="math inline">\(\theta_j\)</span> and <span
+class="math inline">\(V_3=\prod_jN_j\)</span>. Since the charged
+determinant has two transverse eigenvalues, its one-loop winding term
+is</p>
+<p><span class="math display">\[\begin{aligned}
+\Omega_N(\theta)&amp;=2\sum_k\log
+\frac{14-2\sum_{j=2}^4\cos(k_j+\theta_j/N_j)}
+      {14-2\sum_{j=2}^4\cos k_j},\\
+0\le\Omega_N(\theta)&amp;\le\frac{7V_3}{n_*}
+           \left(\frac37\right)^{n_*},\qquad n_*=\min_jN_j.
+\end{aligned}\tag{11}\]</span></p>
+<p>The closed-walk expansion of <span
+class="math inline">\(\log(14-\mathsf A_\theta)\)</span> proves the
+bound: at most <span class="math inline">\(6^n\)</span> walks of length
+<span class="math inline">\(n\)</span>, winding requires <span
+class="math inline">\(n\ge n_*\)</span>, and <span
+class="math inline">\(1-\cos(w\cdot\theta)\le2\)</span>. The leading
+factor 2 counts the transverse eigenvalues. At fixed <span
+class="math inline">\(N\)</span> this term persists as <span
+class="math inline">\(t\to0\)</span>. The size clause <span
+class="math inline">\(n_*\ge c_0/t\)</span> gives density at most <span
+class="math inline">\((7t/c_0)e^{-c_0\log(7/3)/t}\)</span>. It controls
+this winding contribution; it leaves the bulk bridge mass intact.
+Positive bounded anisotropies have analogous exponential decay with
+ratio-dependent constants.</p>
+<p>Theorem 1 uses bulk coefficients, or a volume limit eliminating these
+winding terms. Extending it to a normalized small-field estimate needs
+the saddle, connected-kernel, heat-kernel-image and remainder controls
+specified in §7 of the mid-plane note. P(<span
+class="math inline">\(\alpha\)</span>)’s size clause alone supplies none
+of those missing bounds. Moreover a bound with <span
+class="math inline">\(\alpha&lt;1\)</span> can absorb an <span
+class="math inline">\(O(t)\)</span> relative coupling change, so the
+inequality alone cannot determine the one-loop coefficient.</p>
+<h2 id="four-halvings-what-actually-composes">5. Four halvings: what
+actually composes</h2>
+<p>Let <span class="math inline">\(\mathcal L_r\)</span> have its first
+<span class="math inline">\(r\)</span> directions halved, starting with
+spacing <span class="math inline">\(2a\)</span> in every direction. Then
+<span class="math inline">\(\mathcal L_4\)</span> has spacing <span
+class="math inline">\(a\)</span>, and the unperturbed heat-time ratios
+are</p>
+<p><span class="math display">\[\begin{array}{c|rrrrrr}
+r&amp;\tau_{12}&amp;\tau_{13}&amp;\tau_{14}&amp;\tau_{23}&amp;\tau_{24}&amp;\tau_{34}\\\hline
+0&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\\
+1&amp;1/2&amp;1/2&amp;1/2&amp;2&amp;2&amp;2\\
+2&amp;1/4&amp;1&amp;1&amp;1&amp;1&amp;4\\
+3&amp;1/2&amp;1/2&amp;2&amp;1/2&amp;2&amp;2\\
+4&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1
+\end{array}\]</span></p>
+<p>Equations (4) and (10), relabeling direction 1 as direction <span
+class="math inline">\(r\)</span>, give the unperturbed defect from <span
+class="math inline">\(\mathcal L_r\)</span> to <span
+class="math inline">\(\mathcal L_{r-1}\)</span> using row <span
+class="math inline">\(r-1\)</span>. The coarsening integration proceeds
+in reverse order, <span class="math inline">\(r=4,3,2,1\)</span>. Denote
+the reference heat-kernel law on <span class="math inline">\(\mathcal
+L_r\)</span> by <span class="math inline">\(\mu_r\)</span>, its
+unperturbed defect by <span class="math inline">\(\mathcal D_r\)</span>,
+and the accumulated additional action by <span
+class="math inline">\(\mathcal R_r\)</span>. Up to vacuum constants,
+exact conditional integration says</p>
+<p><span class="math display">\[\boxed{\mathcal R_{r-1}(U)=\mathcal
+D_r(U)
+-\log E_{\mu_r}\!\left[e^{-\mathcal R_r}\mid p_rU_r=U\right],
+\qquad\mathcal R_4=0.}\tag{12}\]</span></p>
+<p>The conditional law here includes all mid-face weights. Proposition 1
+specifies it through the bridge integral. Already <span
+class="math inline">\(\mathcal D_4\)</span> has the nonzero Gaussian
+defect, its nonabelian classical completion and its one-loop amplitude.
+Their conditional average in the next step changes both the saddle and
+its Hessian. On smooth fields the Gaussian defect starts at dimension
+six, but internal momenta in (8) range over the whole Brillouin zone:
+that smooth-field suppression gives no permission to discard it in a
+one-loop contraction.</p>
+<p>At quadratic fluctuation order, exact composition has the familiar
+Schur-complement identity</p>
+<p><span class="math display">\[\det\begin{pmatrix}A&amp;B\\
+B^*&amp;D\end{pmatrix}
+=\det D\,\det(A-BD^{-1}B^*).\tag{13}\]</span></p>
+<p>It is the <strong>successively updated</strong> determinants that
+telescope. Replacing each Schur complement by a new nearest-plaquette
+heat-kernel Hessian changes the finite coupling matching. The four
+pristine <span class="math inline">\(\Psi\)</span> integrals locate the
+generated terms; (12) governs their composition. This is the precise
+qualification needed for the proposed four-factor calculation in §5 of
+the series/parallel note.</p>
+<h2 id="conditional-matching-theorem-and-the-universal-coefficient">6.
+Conditional matching theorem and the universal coefficient</h2>
+<p><strong>Theorem 2 (formal one-loop matching).</strong> Suppose a
+gauge-covariant blocking calculation retains the full generated action
+as in (12). Assume its perturbative actions have local kernels with
+controlled small-momentum expansions, the continuum Yang–Mills kinetic
+normalization, no additional massless modes, and background Ward
+identities. Assume that, after a common infrared regulator is inserted,
+the one-loop determinants match the continuum operators</p>
+<p><span
+class="math display">\[\Delta_{1,\mu\nu}=-D^2\delta_{\mu\nu}-2\operatorname{ad}F_{\mu\nu},
+\qquad \Delta_0=-D^2,\qquad
+\Gamma_1=\tfrac12\log\det\Delta_1-\log\det\Delta_0,
+\tag{14}\]</span></p>
+<p>up to infrared-integrable lattice differences and finite local <span
+class="math inline">\(F^2\)</span> matching terms. The scalar
+determinant is the ghost determinant in this background gauge. Its
+counterpart in a gauge-fixed bridge calculation must be accounted for by
+the measure and gauge reduction. Assume also that the coupling is
+extracted using this same background normalization at the two
+endpoints.</p>
+<p>Let <span class="math inline">\(\ell=(\prod_\mu
+a_\mu)^{1/4}\)</span>, let <span
+class="math inline">\(\zeta_\mu=a_\mu/\ell\)</span> specify the
+anisotropy, and let <span class="math inline">\(\mathcal K\)</span>
+specify all remaining dimensionless action kernels. Define the finite
+matching coefficient <span class="math inline">\(c\)</span> by</p>
+<p><span class="math display">\[u_R(\mu)=u(\ell)+2b_0\log(\ell\mu)
+              +c(\zeta,\mathcal K)+O(t),\qquad u=g^{-2}.\]</span></p>
+<p>Then one isotropic coarsening gives</p>
+<p><span class="math display">\[\boxed{u_{\rm out}(2a)-u_{\rm in}(a)
+=-2b_0\log2+c(\zeta_{\rm in},\mathcal K_{\rm in})
+                 -c(\zeta_{\rm out},\mathcal K_{\rm out})+O(t),
+\quad b_0=\frac{11N}{48\pi^2}.}\tag{15}\]</span></p>
+<p>If the dimensionless action family returns to itself through one-loop
+matching accuracy, or if its finite matching terms are subtracted in
+defining the coupling, (15) gives (1).</p>
+<p><em>Analytical coefficient.</em> Write <span
+class="math inline">\(F^2=\sum_{a,\mu,\nu}(F^a_{\mu\nu})^2\)</span>,
+with both orders of <span class="math inline">\(\mu,\nu\)</span>
+included, so the classical action is <span class="math inline">\(u\int
+F^2/4\)</span>. The flat-space heat coefficient is</p>
+<p><span class="math display">\[a_4(\Delta)=\frac1{(4\pi)^2}\int
+\operatorname{tr}\left(\tfrac12E^2+\tfrac1{12}\Omega_{\mu\nu}\Omega_{\mu\nu}\right).\]</span></p>
+<p>For (14), the traces are <span class="math inline">\(4C_AF^2\)</span>
+for the vector <span class="math inline">\(E^2\)</span>, <span
+class="math inline">\(-4C_AF^2\)</span> for its <span
+class="math inline">\(\Omega^2\)</span>, and <span
+class="math inline">\(-C_AF^2\)</span> for the ghost <span
+class="math inline">\(\Omega^2\)</span>. Consequently</p>
+<p><span class="math display">\[\tfrac12a_4(\Delta_1)-a_4(\Delta_0)
+=\frac{C_A}{16\pi^2}\left(\frac56+\frac1{12}\right)\int F^2
+=\frac{11C_A}{192\pi^2}\int F^2.\]</span></p>
+<p>The proper-time shell <span
+class="math inline">\(a^2&lt;\rho&lt;(2a)^2\)</span> gives <span
+class="math inline">\(\Gamma_{1,\rm shell}=-(11C_A/192\pi^2)\log4\int
+F^2\)</span>. Multiplication by 4 to extract <span
+class="math inline">\(u\)</span> proves <span
+class="math inline">\(\Delta u=-11C_A\log2/(24\pi^2)\)</span>. This
+normalization calculation uses <a
+href="https://arxiv.org/pdf/hep-th/0306138">Vassilevich, §4.2.1,
+equations (4.28)–(4.34)</a> (passage; DOI <a
+href="https://doi.org/10.1016/j.physrep.2003.09.002">10.1016/j.physrep.2003.09.002</a>,
+metadata checked). It is the established one-loop coefficient.</p>
+<p><em>Telescoping.</em> Each reverse directional step multiplies <span
+class="math inline">\(\ell\)</span> by <span
+class="math inline">\(2^{1/4}\)</span>, and its universal scalar part is
+<span class="math inline">\(-(2b_0/4)\log2\)</span> in this choice of
+scale. Its finite part is <span class="math inline">\(c_{\rm
+before}-c_{\rm after}\)</span>. Summing the four steps cancels the three
+intermediate matching terms and gives (15). Plane-dependent anisotropy
+counterterms obey the same endpoint cancellation in a fixed background
+convention. Splitting <span class="math inline">\(c\)</span> into a
+reference anisotropy function and an action-dependent remainder is a
+scheme choice. The anisotropy function cancels because <span
+class="math inline">\(\zeta_{\rm in}=\zeta_{\rm out}\)</span>; the
+remaining endpoint difference requires <span
+class="math inline">\(\mathcal K\)</span> as well. Equation (12) changes
+<span class="math inline">\(\mathcal K\)</span> even when the table
+returns to row 0. <span class="math inline">\(\square\)</span></p>
+<p>For the pristine heat-kernel family, matching two isotropic bare
+regularizations along a line of fixed renormalized coupling has the same
+endpoint <span class="math inline">\(c\)</span> and gives (1).
+Identifying the coupling obtained by projecting a single blocked density
+onto its plaquette term with that bare-family coupling requires the
+finite conversion in (15). This is the same distinction behind the
+finite <span class="math inline">\(\Lambda\)</span> ratios in the
+zero-spacing note: if <span
+class="math inline">\(u_B=u_A+d+O(t)\)</span> at the same scale, then
+<span class="math inline">\(\Lambda_B/\Lambda_A=e^{-d/(2b_0)}\)</span>
+at one loop.</p>
+<h2 id="the-integral-carrying-the-logarithm-and-general-cuts">7. The
+integral carrying the logarithm, and general cuts</h2>
+<p>The infrared singularity can be isolated without numerical
+quadrature. With <span class="math inline">\(\widehat
+k^2=\sum_{\mu=1}^4(2-2\cos k_\mu)\)</span>, use the reference
+integral</p>
+<p><span
+class="math display">\[J(a\mu)=\int_{[-\pi,\pi]^4}\frac{d^4k}{(2\pi)^4}
+\frac1{(\widehat k^2+(a\mu)^2)^2}
+=\frac1{8\pi^2}\log\frac1{a\mu}+j_{\rm lat}+o(1).
+\tag{16}\]</span></p>
+<p>To see its residue, split at <span
+class="math inline">\(a\mu\ll\varepsilon\ll1\)</span>. In the inner ball
+<span class="math inline">\(\widehat k^2=k^2+O(k^4)\)</span>; the
+correction is integrable. The spherical measure is <span
+class="math inline">\(2\pi^2r^3dr/(2\pi)^4\)</span>, giving <span
+class="math inline">\(\log(\varepsilon/(a\mu))/(8\pi^2)\)</span>. The
+outer region has a finite limit. Equivalently, integrating one continuum
+momentum first gives</p>
+<p><span class="math display">\[\int_{\mathbb
+R}\frac{dk_1}{2\pi}\frac1{(k_1^2+r^2)^2}
+=\frac1{4r^3},\qquad
+\int_{\mu a&lt;|k_\perp|&lt;\varepsilon}
+\frac{d^3k_\perp}{(2\pi)^3}\frac1{4|k_\perp|^3}
+=\frac1{8\pi^2}\log\frac\varepsilon{a\mu}.\tag{17}\]</span></p>
+<p>This is the three-dimensional propagator integral whose infrared end
+carries the logarithm <strong>after matching to the full massless
+four-dimensional determinant</strong>. The conditional propagator <span
+class="math inline">\(G\)</span> of (2) has a different infrared end,
+proved regular in §4. Successive Schur complements and the
+retained-field determinant must reconstruct the massless expression
+before (17) applies. Thus assigning the logarithm to the infrared end of
+each elementary massive <span class="math inline">\(\Psi\)</span> sum
+would miss the required reassembly.</p>
+<p>Under Theorem 2’s hypotheses, the singular contribution to the
+inverse coupling is <span class="math inline">\(-(11C_A/3)J\)</span>, as
+fixed by (14). Therefore</p>
+<p><span class="math display">\[-\frac{11C_A}{3}[J(a\mu)-J(2a\mu)]
+\longrightarrow-\frac{11C_A}{24\pi^2}\log2.\tag{18}\]</span></p>
+<p>Changing a local regularization with the same continuum kinetic
+operator changes <span class="math inline">\(j_{\rm lat}\)</span> and
+the finite tensor integrals, while the residue in (16) stays fixed. In
+the inner ball the difference is integrable; in the outer region it
+contributes only to <span class="math inline">\(c\)</span>. The
+scheme-independent object is this logarithmic residue. The finite values
+of (8) depend on <span class="math inline">\(M,W\)</span> and <span
+class="math inline">\(s\)</span>. Evaluating them numerically would
+compute one-step finite shifts, and would still require (12) and the
+endpoint matching to establish a universal isotropic step. The lattice
+background-field method and its symmetry requirements are established in
+<a href="https://arxiv.org/abs/hep-lat/9504006">Lüscher and Weisz
+(1995)</a> (abstract; their renormalization result supplies context,
+with transfer to this blocking retained as an explicit hypothesis).</p>
+<p><strong>General fractions.</strong> Equations (2), (4) and (8)–(10)
+already give the one-step answer for every fixed <span
+class="math inline">\(s\in(0,1)\)</span>. In (8) the fraction enters
+only through <span
+class="math inline">\(M_j=1/(\sigma\tau_{1j})\)</span>; the explicit N2
+prefactor is <span class="math inline">\(\sigma/24\)</span>. The
+coefficients are invariant under <span
+class="math inline">\(s\leftrightarrow1-s\)</span> and their finite
+values generally depend on <span class="math inline">\(s\)</span>. The
+three-dimensional Jacobian term in (10) also remains present as <span
+class="math inline">\(s\)</span> approaches an endpoint.</p>
+<p>A cut produces both lengths <span class="math inline">\(sa_1\)</span>
+and <span class="math inline">\((1-s)a_1\)</span>. Repeating such cuts
+creates a nonuniform lattice, so the resulting global scale change needs
+a specified schedule and matching convention. A factor <span
+class="math inline">\(\log(1/s)\)</span> alone would describe following
+just one daughter; it omits the other daughter and its dual-volume
+weights. For shape-regular schedules whose successive effective actions
+satisfy Theorem 2 and whose endpoint schemes agree, the coefficient per
+logarithm of the physical scale is <span
+class="math inline">\(2b_0\)</span>, independent of cut positions.
+Finite matching terms and winding estimates can depend on the schedule.
+Uniform control for fractions tending to 0 or 1 and for arbitrary
+nonuniform meshes remains an additional obligation.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>Atlas cell 4 gains formal anisotropic one-step integrals and a
+precise composition obstruction, with a conditional analytic recovery of
+<span class="math inline">\(2b_0\)</span>. The next bounded
+four-dimensional task is to retain the Gaussian Schur complement and its
+nonabelian background completion through (12), then determine the finite
+endpoint matching in (15). This targets a concrete determinant identity;
+the D=3 normalized estimate and the separate infrared mass-gap
+obligation remain open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

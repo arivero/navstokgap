@@ -1,7 +1,16 @@
 \documentclass[11pt,a4paper]{article}
+$if(unicode-cjk)$
+\usepackage{fontspec}
+\setmainfont{Noto Serif CJK SC}[ItalicFeatures={FakeSlant=0.2}]
+\newfontfamily\cjkupperfont{HanaMinB}
+\usepackage{newunicodechar}
+\newunicodechar{𣃈}{{\cjkupperfont\symbol{"230C8}}}
+$else$
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern,amsmath,amssymb}
+\usepackage{lmodern}
+$endif$
+\usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 $if(tables)$
 \usepackage{longtable,booktabs,array,calc}

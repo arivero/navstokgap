@@ -217,8 +217,8 @@ way; in mechanics refining makes each cell more quantum
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
-4. $1+3$: the one-loop coefficient $-2b_0\log2$ per isotropic step from the
-   three parallel insertions of each halving.
+4. $1+3$: [formal anisotropic one-step integrals and conditional logarithm](four-dimensional-parallel-log.md); the massive mid-space sums are infrared regular.
+   Open: composition with generated interactions and finite endpoint matching; equal endpoint schemes give $-2b_0\log2$ analytically.
 5. Time-only halving. *Structural reading, 2026-09-27, of known results.*
    At fixed spatial lattice the electric faces make the series moves:
    heat-kernel electric weights are a semigroup in the time step, so they
