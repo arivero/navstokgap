@@ -66,7 +66,7 @@ fill its cells (open cells in its §5).
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
 2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
-   [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; next justify the retained-memory disturbance law that restores closure.
+   [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; the premise that restores closure is a bound on every terminal readout, which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory (refereed).
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
    change is joint determinacy ([fifth postulate](../notes/principia-fifth-postulate.md)):

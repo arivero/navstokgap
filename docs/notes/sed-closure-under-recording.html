@@ -85,13 +85,31 @@ joint covariance</strong>, including all body–pointer and
 pointer–pointer correlations. At fixed ultraviolet cutoff, radiation
 damping and continuing exposure to the background preserve the
 counterexample for sufficiently short finite pulses (Theorems 1 and 2).
-The infimum of the body’s posterior area is zero. For ideal resonant
-marginal covariances of area <span
+At fixed cutoff the infimum of the body’s posterior area is zero. For
+ideal resonant marginal covariances of area <span
 class="math inline">\(\kappa\)</span>, finite gains <span
 class="math inline">\(2\)</span> and <span
 class="math inline">\(4\)</span> already give <span
 class="math inline">\(\sqrt{\det\Sigma_{\rm
 post}}\le3\kappa/4\)</span>.</p>
+<p><strong>After refereeing (Fable, two passes, 2026-09-27; all theorems
+accepted).</strong> The shared background’s own prior already satisfies
+the Gaussian restriction (22): each bath mode sits on its boundary and
+the flow is symplectic. So Theorems 1–2 break closure through the
+readout class alone, a passive, noise-free retained reading. Any
+Hamiltonian readout of a pointer coordinate kicks its conjugate; for a
+resonant device in the background, imprecision times kick equals the
+device area <span class="math inline">\(\kappa\)</span>, which is
+Proposition 3’s law, and nesting pointers only relocates the passive
+readout. At <span class="math inline">\(\kappa=\hbar/2\)</span> the
+recording law (20)–(22) is Gaussian quantum measurement theory term by
+term (the Simon–Mukunda–Dutta state condition, general-dyne
+measurements, the Giedke–Cirac update); Bartlett, Rudolph and Spekkens
+prove the operational equivalence. The minimal premise that restores
+closure is therefore a bound on every terminal classical readout, with
+retained pairs read only through couplings. It is a restriction on
+observation, and the classical dynamics of the background cannot supply
+it.</p>
 <p>The decisive instrument premise is classical storage of a pointer
 coordinate without an obligatory conjugate disturbance when that pointer
 is subsequently reused. An explicit Gaussian recording law restores
@@ -106,14 +124,14 @@ finite-duration statement. Its background has mode energy <span
 class="math inline">\(\kappa\omega\)</span> below the cutoff and a
 specified regulator above it. A laboratory frequency cutoff adds a
 preferred frame. The resonant approximation gives the simpler constant
-<span class="math inline">\(3\kappa/4\)</span>; the proof for arbitrary
-finite covariance requires neither that approximation nor product
-preparations. The unregulated full momentum variance is divergent, as
-stressed in the revised <a href="sed-zeta-radiation-link.html">SED
-link</a>, §2 (local full-read). No limit removing the cutoff is
-asserted. The controls and classical readouts are explicitly granted
-model operations; an electrodynamic construction of a complete measuring
-device would have to justify or exclude them.</p>
+<span class="math inline">\(3\kappa/4\)</span>; the proof holds for
+arbitrary finite covariance, with or without those simplifications. The
+unregulated full momentum variance is divergent, as stressed in the
+revised <a href="sed-zeta-radiation-link.html">SED link</a>, §2 (local
+full-read). The cutoff stays fixed throughout. The controls and
+classical readouts are explicitly granted model operations; an
+electrodynamic construction of a complete measuring device would have to
+justify or exclude them.</p>
 <h2 id="the-common-field-its-damping-and-its-correlations">1. The common
 field, its damping and its correlations</h2>
 <p>Use SI units, <span class="math inline">\(\kappa&gt;0\)</span>, speed
@@ -134,11 +152,12 @@ class="math display">\[u_0(\omega)=\frac{\kappa\omega^3}{\pi^2c^3},\qquad
 <p>Introduce a real common form factor <span
 class="math inline">\(f_\Lambda(\omega)\)</span>, equal to one on the
 frequencies of interest and zero for <span
-class="math inline">\(\omega&gt;\Lambda&lt;\infty\)</span>. This can
-regulate the incident force itself or the dipole coupling to the field.
-In the latter convention the full incident field retains (1), while the
-apparatus response selects a frame and a frequency band. All covariances
-below refer to the regulated response.</p>
+class="math inline">\(\omega&gt;\Lambda\)</span>, with <span
+class="math inline">\(\Lambda&lt;\infty\)</span>. This can regulate the
+incident force itself or the dipole coupling to the field. In the latter
+convention the full incident field retains (1), while the apparatus
+response selects a frame and a frequency band. All covariances below
+refer to the regulated response.</p>
 <p>The angular correlation matrix is</p>
 <p><span class="math display">\[K_{ij}(\omega)=\frac{3}{8\pi}\int_{S^2}
 \left[\mathbf n_i\!\cdot\!\mathbf n_j
@@ -225,10 +244,15 @@ H(\omega)^\dagger\,d\omega. \tag{8}\]</span></p>
 (4); momentum rows before the controls are <span
 class="math inline">\(-i m_i\omega\)</span> times the coordinate rows
 before scaling. Any undamped initially populated normal modes add their
-own covariance. Formula (8) displays the cross correlations explicitly.
-Setting its off-diagonal entries to zero would require a separate
-preparation or decoupling argument. The theorems use the actual <span
-class="math inline">\(V\)</span> instead.</p>
+own covariance. Formula (8) displays the cross correlations explicitly,
+and the theorems use the full <span class="math inline">\(V\)</span> of
+(8), cross correlations included. Its dispersive cross part and the
+constant <span class="math inline">\(K\)</span> of (14) are cutoff
+constants (<span class="math inline">\(\sigma_P^2\)</span> grows with
+<span class="math inline">\(\Lambda\)</span>). The radiation time here
+is the SI <span
+class="math inline">\(\tau=e^2/(6\pi\epsilon_0mc^3)\)</span>; the SED
+link note uses the Gaussian-unit form.</p>
 <p>For an isolated weakly damped resonance the ideal narrow-resonance
 limit gives <span
 class="math inline">\(\operatorname{Var}Q_i=\operatorname{Var}P_i=\kappa\)</span>.
@@ -310,9 +334,9 @@ For example the two record covariances include</p>
 <p>The covariance of the error vector in (12) has off-diagonal entry
 <span class="math inline">\(-V_{YP}/G-V_{YZ_2}/B\)</span> and second
 diagonal entry <span class="math inline">\(V_{PP}+2G
-V_{PZ_2}/B+G^2V_{Z_2Z_2}/B^2\)</span>. These formulas track the
-correlations rather than replacing the common field by three independent
-baths. Equation (11) bounds their most unfavourable possible effect.</p>
+V_{PZ_2}/B+G^2V_{Z_2Z_2}/B^2\)</span>. These formulas keep every cross
+entry of <span class="math inline">\(V\)</span>. Equation (11) bounds
+their most unfavourable possible effect.</p>
 <p><strong>Explicit constants.</strong> If <span
 class="math inline">\(\sigma_Y^2,\sigma_P^2, \sigma_{Z_2}^2\le
 K\kappa\)</span>, put <span class="math inline">\(B=G^2\)</span>.
@@ -425,9 +449,23 @@ D_T(t)C_F(t-s)D_T(s)^{\sf T}\,dt\,ds,\]</span></p>
 <p>with any prehistory terms included in <span
 class="math inline">\(\eta_T\)</span>. Thus both the common increments
 and their correlation with the initial state are retained. Equation (17)
-uses an <span class="math inline">\(L^2\)</span> bound, so none of the
-cross terms in (19) has been discarded by assuming fresh independent
-noise.</p>
+uses an <span class="math inline">\(L^2\)</span> bound, so (17) holds
+with every cross term of (19) retained. Explicitly, with <span
+class="math inline">\(\Lambda_*=\sqrt{\pi\omega_0/\tau}\)</span>, the
+budget <span class="math inline">\(d_P\le\sqrt\kappa/10\)</span> needs
+<span
+class="math inline">\(T\Lambda\le0.14\,(\Lambda_*/\Lambda)\)</span> from
+the force noise and <span
+class="math inline">\(T\Lambda\le0.15\,(\Lambda_*/\Lambda)^2\)</span>
+from memory: the pulses must outrun every retained field mode, and
+without a cutoff no <span class="math inline">\(T&gt;0\)</span> works
+(Fable referee). The resonant value <span
+class="math inline">\(K=1\)</span> used for the <span
+class="math inline">\(3\kappa/4\)</span> example requires <span
+class="math inline">\(\Lambda\ll\Lambda_*\)</span>; at <span
+class="math inline">\(\Lambda\sim1/\tau\)</span>, <span
+class="math inline">\(K\sim1/(\pi\tau\omega_0)\)</span> and the gains
+must exceed <span class="math inline">\(2K\)</span>.</p>
 <p>Small independent Gaussian readout noises of standard deviations
 <span class="math inline">\(r_1,r_2\)</span> add at most <span
 class="math inline">\(r_1/G\)</span> and <span
@@ -520,10 +558,12 @@ classical covariance language. Bartlett, Rudolph and Spekkens derive
 Gaussian quantum preparations, transformations and measurements from an
 epistemic restriction (<a href="https://arxiv.org/abs/1111.5057">2012
 paper</a>, author abstract checked). Proposition 3 supplies the needed
-covariance proof here. The common-field covariance (8) alone supplies
-neither the seed restriction nor the retained-pointer disturbance law.
-Even separate one-pair bounds on every prior leave the joint condition
-(22) to be established.</p>
+covariance proof here. The common-field covariance (8) fixes the prior,
+which already obeys (22); the seed restriction and the retained-pointer
+law are separate premises. Law (20) is the uncorrelated case; the
+dilation gives in general <span class="math inline">\(\det{\rm
+Cov}(N,D)\ge\kappa^2\)</span>. Even separate one-pair bounds on every
+prior leave the joint condition (22) to be established.</p>
 <h2 id="constants-complementarity-and-the-newton-comparison">5.
 Constants, complementarity and the Newton comparison</h2>
 <p>The positive constant that a closure law would preserve is the
@@ -554,11 +594,10 @@ J2\sum_j\sup\Delta X_j
 \ge2\kappa\arcsin(1-2\epsilon),\qquad
 s=\frac{F\tau^2}{2m},\quad J=F\tau. \tag{24}\]</span></p>
 <p>The passive retained readings of Theorem 1 fall outside this
-restricted class. Their small posterior by itself says nothing about
-erasing the unconditional impulse spread charged in (24). The
-unrestricted, non-Gaussian comparison requires the further
-operator/statistical-speed premises of Theorem C and Theorem F
-respectively.</p>
+restricted class. Their small posterior leaves the unconditional impulse
+spread charged in (24) in place. The unrestricted, non-Gaussian
+comparison requires the further operator/statistical-speed premises of
+Theorem C and Theorem F respectively.</p>
 <p><strong>Theorem E’s window bound.</strong> Write <span
 class="math inline">\(z_\epsilon= \Phi^{-1}(1-\epsilon/2)\)</span> for
 <span class="math inline">\(0&lt;\epsilon&lt;1/2\)</span>, where <span
@@ -607,10 +646,14 @@ its cross correlations and radiation damping, allows the two-pointer
 counterexample at every fixed finite cutoff when classical retained
 readouts and the stated controls are available. The next physical
 premise to justify is a restriction such as (20)–(22) for reusable
-pointers and their memories, or an electrodynamic instrument constraint
-that excludes this protocol and proves an equally strong closed bound.
-The conditional scale identification and the unregulated momentum
-problem retain the scope stated in the revised SED link.</p>
+pointers and their memories. The referee’s analysis narrows it: the
+background’s prior already obeys (22), so the premise is a bound on
+every terminal classical readout, a restriction on observation
+equivalent at <span class="math inline">\(\kappa=\hbar/2\)</span> to
+Gaussian quantum measurement theory; an electrodynamic instrument
+constraint would only relocate it. The conditional scale identification
+and the unregulated momentum problem retain the scope stated in the
+revised SED link.</p>
 
 </main>
 <footer class="site"><div class="wrap">

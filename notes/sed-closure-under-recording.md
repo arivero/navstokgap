@@ -7,9 +7,27 @@ of Theorem I. This holds for **every finite joint covariance**, including
 all body--pointer and pointer--pointer correlations. At fixed ultraviolet
 cutoff, radiation damping and continuing exposure to the background
 preserve the counterexample for sufficiently short finite pulses
-(Theorems 1 and 2). The infimum of the body's posterior area is zero.
+(Theorems 1 and 2). At fixed cutoff the infimum of the body's posterior
+area is zero.
 For ideal resonant marginal covariances of area $\kappa$, finite gains
 $2$ and $4$ already give $\sqrt{\det\Sigma_{\rm post}}\le3\kappa/4$.
+
+**After refereeing (Fable, two passes, 2026-09-27; all theorems
+accepted).** The shared background's own prior already satisfies the
+Gaussian restriction (22): each bath mode sits on its boundary and the
+flow is symplectic. So Theorems 1--2 break closure through the readout
+class alone, a passive, noise-free retained reading. Any Hamiltonian
+readout of a pointer coordinate kicks its conjugate; for a resonant
+device in the background, imprecision times kick equals the device area
+$\kappa$, which is Proposition 3's law, and nesting pointers only relocates
+the passive readout. At $\kappa=\hbar/2$ the recording law (20)--(22) is
+Gaussian quantum measurement theory term by term (the Simon--Mukunda--Dutta
+state condition, general-dyne measurements, the Giedke--Cirac update);
+Bartlett, Rudolph and Spekkens prove the operational equivalence. The
+minimal premise that restores closure is therefore a bound on every
+terminal classical readout, with retained pairs read only through
+couplings. It is a restriction on observation, and the classical dynamics
+of the background cannot supply it.
 
 The decisive instrument premise is classical storage of a pointer
 coordinate without an obligatory conjugate disturbance when that pointer
@@ -24,11 +42,11 @@ alone leaves it unspecified.
 statement. Its background has mode energy $\kappa\omega$ below the
 cutoff and a specified regulator above it. A laboratory frequency cutoff
 adds a preferred frame. The resonant approximation gives the simpler
-constant $3\kappa/4$; the proof for arbitrary finite covariance requires
-neither that approximation nor product preparations. The unregulated
+constant $3\kappa/4$; the proof holds for arbitrary finite covariance,
+with or without those simplifications. The unregulated
 full momentum variance is divergent, as stressed in the revised
 [SED link](sed-zeta-radiation-link.md), §2 (local full-read).
-No limit removing the cutoff is asserted. The controls and classical
+The cutoff stays fixed throughout. The controls and classical
 readouts are explicitly granted model operations; an electrodynamic
 construction of a complete measuring device would have to justify or
 exclude them.
@@ -46,7 +64,7 @@ $$u_0(\omega)=\frac{\kappa\omega^3}{\pi^2c^3},\qquad
 \mathcal E_0(\omega)=\kappa\omega. \tag{1}$$
 
 Introduce a real common form factor $f_\Lambda(\omega)$, equal to one
-on the frequencies of interest and zero for $\omega>\Lambda<\infty$.
+on the frequencies of interest and zero for $\omega>\Lambda$, with $\Lambda<\infty$.
 This can regulate the incident force itself or the dipole coupling to
 the field. In the latter convention the full incident field retains
 (1), while the apparatus response selects a frame and a frequency band.
@@ -135,9 +153,11 @@ $$V=\operatorname{Re}\int_0^\Lambda
 The susceptibility in $H$ includes (4); momentum rows before the controls
 are $-i m_i\omega$ times the coordinate rows before scaling. Any
 undamped initially populated normal modes add their own covariance.
-Formula (8) displays the cross correlations explicitly. Setting its
-off-diagonal entries to zero would require a separate preparation or
-decoupling argument. The theorems use the actual $V$ instead.
+Formula (8) displays the cross correlations explicitly, and the theorems
+use the full $V$ of (8), cross correlations included. Its dispersive
+cross part and the constant $K$ of (14) are cutoff constants
+($\sigma_P^2$ grows with $\Lambda$). The radiation time here is the SI
+$\tau=e^2/(6\pi\epsilon_0mc^3)$; the SED link note uses the Gaussian-unit form.
 
 For an isolated weakly damped resonance the ideal narrow-resonance limit
 gives $\operatorname{Var}Q_i=\operatorname{Var}P_i=\kappa$.
@@ -222,8 +242,7 @@ $$\operatorname{Cov}(R_1,R_2)
 The covariance of the error vector in (12) has off-diagonal entry
 $-V_{YP}/G-V_{YZ_2}/B$ and second diagonal entry
 $V_{PP}+2G V_{PZ_2}/B+G^2V_{Z_2Z_2}/B^2$.
-These formulas track the correlations rather than replacing the common
-field by three independent baths. Equation (11) bounds their most
+These formulas keep every cross entry of $V$. Equation (11) bounds their most
 unfavourable possible effect.
 
 **Explicit constants.** If $\sigma_Y^2,\sigma_P^2,
@@ -324,8 +343,14 @@ D_T(t)C_F(t-s)D_T(s)^{\sf T}\,dt\,ds,$$
 
 with any prehistory terms included in $\eta_T$. Thus both the common
 increments and their correlation with the initial state are retained.
-Equation (17) uses an $L^2$ bound, so none of the cross terms in (19)
-has been discarded by assuming fresh independent noise.
+Equation (17) uses an $L^2$ bound, so (17) holds with every cross term of
+(19) retained. Explicitly, with $\Lambda_*=\sqrt{\pi\omega_0/\tau}$, the budget
+$d_P\le\sqrt\kappa/10$ needs $T\Lambda\le0.14\,(\Lambda_*/\Lambda)$ from the force noise and
+$T\Lambda\le0.15\,(\Lambda_*/\Lambda)^2$ from memory: the pulses must outrun every retained
+field mode, and without a cutoff no $T>0$ works (Fable referee). The
+resonant value $K=1$ used for the $3\kappa/4$ example requires
+$\Lambda\ll\Lambda_*$; at $\Lambda\sim1/\tau$, $K\sim1/(\pi\tau\omega_0)$ and the gains must exceed
+$2K$.
 
 Small independent Gaussian readout noises of standard deviations
 $r_1,r_2$ add at most $r_1/G$ and $Gr_2/B$ to the two budgets (16).
@@ -414,8 +439,10 @@ covariance language. Bartlett, Rudolph and Spekkens derive Gaussian
 quantum preparations, transformations and measurements from an epistemic
 restriction ([2012 paper](https://arxiv.org/abs/1111.5057), author
 abstract checked). Proposition 3 supplies the needed covariance proof
-here. The common-field covariance (8) alone supplies neither the seed
-restriction nor the retained-pointer disturbance law. Even separate
+here. The common-field covariance (8) fixes the prior, which already
+obeys (22); the seed restriction and the retained-pointer law are
+separate premises. Law (20) is the uncorrelated case; the dilation gives
+in general $\det{\rm Cov}(N,D)\ge\kappa^2$. Even separate
 one-pair bounds on every prior leave the joint condition (22) to be
 established.
 
@@ -447,8 +474,8 @@ $$\frac s8\sum_j\sup\Delta D_j+\frac J2\sum_j\sup\Delta X_j
 s=\frac{F\tau^2}{2m},\quad J=F\tau. \tag{24}$$
 
 The passive retained readings of Theorem 1 fall outside this restricted
-class. Their small posterior by itself says nothing about erasing the
-unconditional impulse spread charged in (24). The unrestricted,
+class. Their small posterior leaves the unconditional impulse spread
+charged in (24) in place. The unrestricted,
 non-Gaussian comparison requires the further operator/statistical-speed
 premises of Theorem C and Theorem F respectively.
 
@@ -499,7 +526,10 @@ cross correlations and radiation damping, allows the two-pointer
 counterexample at every fixed finite cutoff when classical retained
 readouts and the stated controls are available. The next physical
 premise to justify is a restriction such as (20)--(22) for reusable
-pointers and their memories, or an electrodynamic instrument constraint
-that excludes this protocol and proves an equally strong closed bound.
+pointers and their memories. The referee's analysis narrows it: the
+background's prior already obeys (22), so the premise is a bound on every
+terminal classical readout, a restriction on observation equivalent at
+$\kappa=\hbar/2$ to Gaussian quantum measurement theory; an electrodynamic
+instrument constraint would only relocate it.
 The conditional scale identification and the unregulated momentum
 problem retain the scope stated in the revised SED link.
