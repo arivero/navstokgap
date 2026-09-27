@@ -105,6 +105,36 @@ performs the same two moves, with $s$ as a parameter.
   [Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata for
   all three). Whether the bridge parity at a halving ties refinement to
   centre vortices is a question; the observation itself is elementary.
+- **Which part of the centre a cut reaches** (2026-09-28, from the
+  user's question on Dirac's belt trick; not yet refereed). *Lemma:* for
+  $SU(N)$ and a cut at $s=p/q$ in lowest terms, the relative windings land
+  on exactly the subgroup $\mathbb Z_{\gcd(q,N)}$ of the centre $\mathbb Z_N$. *Proof:* a winding
+  $H\in Q^\vee$ shifts the midpoint by $e^{2\pi ipH/q}$, central iff $pH/q\in P^\vee$, iff
+  $H/q\in P^\vee$ (Bézout, since $H\in Q^\vee\subset P^\vee$); so the central shifts are
+  $(P^\vee\cap q^{-1}Q^\vee)/Q^\vee$, the $q$-torsion of $P^\vee/Q^\vee\cong\mathbb Z_N$. $\square$ Dyadic
+  refinement therefore reaches the 2-primary part of the centre: all of it
+  for $SU(2)$ at the first halving, nothing for $SU(3)$ at any depth, while
+  one trisection reaches all of $\mathbb Z_3$. Centre elements are focal points:
+  the shortest geodesics from $e$ to $-1$ in $SU(2)$ form an $S^2$, those from $e$
+  to $\omega\cdot1$ in $SU(3)$ a $\mathbb{CP}^2$, and the closed geodesic along $(1,1,-2)$
+  passes $\omega\cdot1$ and $\omega^2\cdot1$ at its thirds. For $SU(2)$ this is Dirac's belt
+  trick, $\pi_1(SO(3))=\mathbb Z_2$
+  ([Newman 1942](https://doi.org/10.1112/jlms/s1-17.3.173), metadata): the
+  halving turns $w$ extra $720^\circ$ turns of a bridge into $w$ extra $360^\circ$ turns
+  at its midpoint, and the exact formula shows it, since in Theorem 3 of
+  the [$SU(2)$ midpoint note](su2-midpoint-exact.md) the image sums enter
+  with $(-1)^w$ for half-integer $J$ ($\Xi_-/\Xi_+$) and drop out of the ratio for
+  integer $J$. In $1+3$ the internal and the spatial $\mathbb Z_2$ meet in "spin
+  from isospin" ([Jackiw and Rebbi 1976](https://doi.org/10.1103/PhysRevLett.36.1116);
+  [Hasenfratz and 't Hooft 1976](https://doi.org/10.1103/PhysRevLett.36.1119);
+  metadata). For $SU(3)$ the phase a centre-landing winding leaves on a
+  character is its triality, so quark representations see $\omega$ and gluons do
+  not; the exact trisection formula is the next computation. Per step,
+  the smallest centre-landing trisection winding costs $e^{-24\pi^2/t}$
+  against $e^{-8\pi^2/t}$ for root windings ($|H|^2=2\,{\rm tr}H^2=12$ and $4$), both
+  beyond the $1+3$ threshold $c>2/b_0$. The lemma concerns which classes the
+  windings of a step can reach; centre-valued link configurations exist
+  on any lattice, and thick vortices are a separate question.
 - **The rod** (user remark, 2026-09-27). The dialecticians' stick of
   *Zhuangzi* 33, 一尺之捶，日取其半，萬世不竭 ("a one-foot stick, each day take
   half, in ten thousand generations it is not exhausted";
