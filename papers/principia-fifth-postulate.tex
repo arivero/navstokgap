@@ -49,7 +49,10 @@ Euclid's fifth postulate holds in the following precise, partial sense.
   the commutative one, respects complex conjugation, and is covariant
   under the affine symplectic group (premise (H2), stated and justified
   in §4) is a Moyal product with one real constant \(\hbar\), of the
-  units of action.
+  units of action. The state route adds one constant too (Theorem
+  B\('\)): a covariant, noise-closed restriction on the Gaussian states
+  is \(\sqrt{\det\Sigma}\ge\zeta\), with \(\zeta=\hbar/2\) in quantum
+  mechanics.
 \item
   \textbf{The floor (Theorem C).} For \(\hbar\ne0\), every state obeys
   \(\Delta q\,\Delta p\ge|\hbar|/2\), and every recorded comparison of
@@ -312,6 +315,48 @@ algebraically independent, and associativity reads
 Exchanging the factors reverses \(P\) and conjugation leaves it real, so
 (H3) gives \(\bar\kappa=-\kappa\): \(\kappa=i\hbar/2\) with \(\hbar\)
 real. \(P\) carries the reciprocal units of \(q\,p\). \(\square\)
+
+\textbf{The state route also adds exactly one constant.} The second
+denial of joint determinacy keeps the commutative algebra and restricts
+the states. For Newton's quadratic cases the natural class is the
+Gaussian states, which quadratic flows preserve (§7 explains why the
+quadratic case is exact). A Gaussian state of one degree of freedom has
+mean \(m\in\mathbb R^2\) and covariance \(\Sigma>0\); write
+\(\nu(\Sigma)=\sqrt{\det\Sigma}\), which has the units of action.
+
+\textbf{Theorem B\('\).} Let \(\mathcal G\) be a set of nondegenerate
+Gaussian states that is (i) invariant under the affine symplectic group,
+the flows of Newton's integrable cases (as in (H2)), and (ii) closed
+under adding independent Gaussian noise, \(\Sigma\mapsto\Sigma+K\) with
+\(K\ge0\), which is what forgetting or coarse-graining a record does.
+Then there is a unique \(\zeta\ge0\) with
+\(\{\nu(\Sigma):\Sigma\in\mathcal G\}=[\zeta,\infty)\) or
+\((\zeta,\infty)\): the admissible Gaussian states are exactly those
+with \(\sqrt{\det\Sigma}\ge\zeta\) (up to the endpoint). The constant
+\(\zeta\) has the units of action; \(\zeta=0\) is joint determinacy
+(states arbitrarily close to point states), and \(\zeta>0\) is the
+state-route denial of GPT-6 Astra's
+\href{newton-indeterminacy-routes.md}{routes note}, whose Theorem F
+gives the floor with \(h_*=2\zeta\).
+
+\emph{Proof.} By Williamson's theorem in one degree of freedom, every
+\(\Sigma>0\) is \(S(\nu I)S^{\sf T}\) with \(S\) of determinant one and
+\(\nu=\nu(\Sigma)\); translations move the mean. So the affine
+symplectic group acts transitively on the Gaussian states with a given
+\(\nu\), and by (i) \(\mathcal G\) is a union of such levels, fixed by a
+set \(N\subset(0,\infty)\) of allowed \(\nu\). By (ii), if \(\nu\in N\)
+then \(\Sigma+\kappa I\in\mathcal G\) for all \(\kappa\ge0\), and
+\(\nu(\Sigma+\kappa I)\) increases continuously from \(\nu\) to
+\(\infty\); so \(N\) is an interval unbounded above. Set
+\(\zeta=\inf N\). \(\square\)
+
+In quantum mechanics the Gaussian states obey the Robertson--Schrödinger
+bound \(\det\Sigma\ge\hbar^2/4\), so \(\zeta=\hbar/2\) there, and
+Astra's \(h_*=2\zeta\) equals \(\hbar\). The two routes of denial each
+add exactly one action constant, the algebraic one \(\hbar\) (Theorem B)
+and the Gaussian-state one \(\zeta\) (Theorem B\('\)). They coincide in
+quantum mechanics, and no further premise here makes them coincide in
+general.
 
 \textbf{Two products up to isomorphism.} The dilation
 \(D_\lambda(q,p)=(\lambda q,\lambda p)\) satisfies

@@ -112,7 +112,11 @@ observables that deforms the commutative one, respects complex
 conjugation, and is covariant under the affine symplectic group (premise
 (H2), stated and justified in §4) is a Moyal product with one real
 constant <span class="math inline">\(\hbar\)</span>, of the units of
-action.</li>
+action. The state route adds one constant too (Theorem B<span
+class="math inline">\(&#39;\)</span>): a covariant, noise-closed
+restriction on the Gaussian states is <span
+class="math inline">\(\sqrt{\det\Sigma}\ge\zeta\)</span>, with <span
+class="math inline">\(\zeta=\hbar/2\)</span> in quantum mechanics.</li>
 <li><strong>The floor (Theorem C).</strong> For <span
 class="math inline">\(\hbar\ne0\)</span>, every state obeys <span
 class="math inline">\(\Delta q\,\Delta p\ge|\hbar|/2\)</span>, and every
@@ -397,6 +401,68 @@ class="math inline">\(\hbar\)</span> real. <span
 class="math inline">\(P\)</span> carries the reciprocal units of <span
 class="math inline">\(q\,p\)</span>. <span
 class="math inline">\(\square\)</span></p>
+<p><strong>The state route also adds exactly one constant.</strong> The
+second denial of joint determinacy keeps the commutative algebra and
+restricts the states. For Newton’s quadratic cases the natural class is
+the Gaussian states, which quadratic flows preserve (§7 explains why the
+quadratic case is exact). A Gaussian state of one degree of freedom has
+mean <span class="math inline">\(m\in\mathbb R^2\)</span> and covariance
+<span class="math inline">\(\Sigma&gt;0\)</span>; write <span
+class="math inline">\(\nu(\Sigma)=\sqrt{\det\Sigma}\)</span>, which has
+the units of action.</p>
+<p><strong>Theorem B<span class="math inline">\(&#39;\)</span>.</strong>
+Let <span class="math inline">\(\mathcal G\)</span> be a set of
+nondegenerate Gaussian states that is (i) invariant under the affine
+symplectic group, the flows of Newton’s integrable cases (as in (H2)),
+and (ii) closed under adding independent Gaussian noise, <span
+class="math inline">\(\Sigma\mapsto\Sigma+K\)</span> with <span
+class="math inline">\(K\ge0\)</span>, which is what forgetting or
+coarse-graining a record does. Then there is a unique <span
+class="math inline">\(\zeta\ge0\)</span> with <span
+class="math inline">\(\{\nu(\Sigma):\Sigma\in\mathcal
+G\}=[\zeta,\infty)\)</span> or <span
+class="math inline">\((\zeta,\infty)\)</span>: the admissible Gaussian
+states are exactly those with <span
+class="math inline">\(\sqrt{\det\Sigma}\ge\zeta\)</span> (up to the
+endpoint). The constant <span class="math inline">\(\zeta\)</span> has
+the units of action; <span class="math inline">\(\zeta=0\)</span> is
+joint determinacy (states arbitrarily close to point states), and <span
+class="math inline">\(\zeta&gt;0\)</span> is the state-route denial of
+GPT-6 Astra’s <a href="newton-indeterminacy-routes.html">routes
+note</a>, whose Theorem F gives the floor with <span
+class="math inline">\(h_*=2\zeta\)</span>.</p>
+<p><em>Proof.</em> By Williamson’s theorem in one degree of freedom,
+every <span class="math inline">\(\Sigma&gt;0\)</span> is <span
+class="math inline">\(S(\nu I)S^{\sf T}\)</span> with <span
+class="math inline">\(S\)</span> of determinant one and <span
+class="math inline">\(\nu=\nu(\Sigma)\)</span>; translations move the
+mean. So the affine symplectic group acts transitively on the Gaussian
+states with a given <span class="math inline">\(\nu\)</span>, and by (i)
+<span class="math inline">\(\mathcal G\)</span> is a union of such
+levels, fixed by a set <span
+class="math inline">\(N\subset(0,\infty)\)</span> of allowed <span
+class="math inline">\(\nu\)</span>. By (ii), if <span
+class="math inline">\(\nu\in N\)</span> then <span
+class="math inline">\(\Sigma+\kappa I\in\mathcal G\)</span> for all
+<span class="math inline">\(\kappa\ge0\)</span>, and <span
+class="math inline">\(\nu(\Sigma+\kappa I)\)</span> increases
+continuously from <span class="math inline">\(\nu\)</span> to <span
+class="math inline">\(\infty\)</span>; so <span
+class="math inline">\(N\)</span> is an interval unbounded above. Set
+<span class="math inline">\(\zeta=\inf N\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>In quantum mechanics the Gaussian states obey the
+Robertson–Schrödinger bound <span
+class="math inline">\(\det\Sigma\ge\hbar^2/4\)</span>, so <span
+class="math inline">\(\zeta=\hbar/2\)</span> there, and Astra’s <span
+class="math inline">\(h_*=2\zeta\)</span> equals <span
+class="math inline">\(\hbar\)</span>. The two routes of denial each add
+exactly one action constant, the algebraic one <span
+class="math inline">\(\hbar\)</span> (Theorem B) and the Gaussian-state
+one <span class="math inline">\(\zeta\)</span> (Theorem B<span
+class="math inline">\(&#39;\)</span>). They coincide in quantum
+mechanics, and no further premise here makes them coincide in
+general.</p>
 <p><strong>Two products up to isomorphism.</strong> The dilation <span
 class="math inline">\(D_\lambda(q,p)=(\lambda q,\lambda p)\)</span>
 satisfies <span class="math inline">\(P((f\circ D_\lambda)\otimes(g\circ
