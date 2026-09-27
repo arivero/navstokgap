@@ -33,7 +33,8 @@ Euclid's fifth postulate holds in the following precise, partial sense.
    action.
 3. **The floor (Theorem C).** For $\hbar\ne0$, every state obeys
    $\Delta q\,\Delta p\ge|\hbar|/2$, and every recorded comparison of the
-   inertial line with the constant-force parabola obeys the floor of the
+   inertial line with the constant-force parabola, whose enclosed area
+   Newton takes to zero in Lemmas X and XI, obeys the floor of the
    [Planck paper](planck-gap-paper.md), Theorem 6, with $|\hbar|$ in place
    of $\hbar$. For $\hbar=0$ with all states admissible, point states give
    zero undetermined disturbance, so there is no floor.
@@ -53,6 +54,12 @@ state-completeness premise of Theorem C(c). Noncommutativity is the
 unique *algebraic* denial of joint determinacy under (H1)--(H3); it is
 one of two denials. And (H2) is a premise about the observables,
 Weyl or Groenewold covariance, which the *Principia* does not supply.
+
+The thesis that the constant enters as a consistency condition, and the
+classical origin of the complex exponential, are in the user's
+[1998 note](https://arxiv.org/abs/quant-ph/9803035); §7 reads Theorems
+A--D against it and against Connes's tangent groupoid, whose $\varepsilon=0$
+boundary is Newton's ultimate velocity.
 
 The mathematics is established. Moyal's product
 ([Moyal 1949](https://doi.org/10.1017/S0305004100000487), metadata);
@@ -318,7 +325,70 @@ similar figures of different size; Lambert and Gauss saw that its
 negation brings an absolute length. Theorem D is the counterpart for the
 product of observables, with $\hbar$ as the absolute action.
 
-## 7. What remains, and consequence for STATE
+## 7. The same structure in Rivero 1998: the classical Dirac measure and its constant
+
+The thesis that the path-integral constant is a consistency condition
+was stated by the user in 1998
+([Rivero, "A short derivation of Feynman formula", arXiv:quant-ph/9803035](https://arxiv.org/abs/quant-ph/9803035),
+full read). Its abstract: "The complex exponential weighting of Feynman
+formalism is seen to happen at the classical level. (Finiteness of)
+Feynman path integral formula is suspected then to appear as a
+consistency condition for the existence of certain Dirac measures over
+functional spaces." Theorems A--D fit it point by point.
+
+- **The complex exponential is classical.** The Dirac measure
+  concentrated on the critical points of $f$, which is the principle of
+  virtual work, has the representation
+  $\langle\delta(f')|g\rangle=\lim_{\varepsilon\to0}\iint
+  e^{i(f(y)-f(x))/\varepsilon}g(x)\,dx\,dy/\varepsilon$ (its eqs. (1)--(2)). The
+  "halved" functional $\varepsilon^{-1/2}\int e^{if/\varepsilon}O\,dx$ recovers it by
+  modulus squared, $g=|O|^2$ (eqs. (3)--(4)). The classical variational
+  problem already carries an amplitude whose square is the record.
+- **Theorem A is its Ehrenfest remark.** The paper's control
+  transformation $\tau_\mu\delta^h=\delta^{\mu h}$ (eq. (10)) leaves the mean of the
+  Euler--Lagrange expression invariant, "RG invariance in this context
+  relates to Ehrenfest theorem" (eq. (11)): the equations of motion hold
+  for every value of the constant. Theorem A(a) is the operator form.
+- **The dilation family.** The map $h\mapsto\mu h$ is the isomorphism
+  $*_{\lambda^2\hbar}\to*_\hbar$ of §4: every nonzero value of the constant gives an
+  equivalent theory, and only the value $0$ is distinguished.
+- **Why Gaussian integrals are exact here.** For a quadratic $f$, the
+  halved functional gives the classical value of every linear observable
+  for every $\varepsilon$, because the odd moments of $e^{ia(x-x_*)^2/\varepsilon}$ about
+  $x_*$ vanish. The Gaussian integrals that run through this programme's
+  notes (the elimination law of the refinement note, heat kernels,
+  Gaussian marks, Astra's Gaussian restriction) are exact because
+  Galileo's comparison and Newton's other integrable cases are quadratic;
+  this is Theorem A(b) in the language of the Dirac measure. For general
+  forces the object is the oscillatory measure, not a Gaussian.
+- **Where a fixed constant enters.** On paths, the regularized measure has
+  two parameters, the action resolution $\varepsilon$ of the Dirac measure and the
+  time step $\varepsilon'$ of the partition (eq. (5)). Newton's classical
+  mechanics takes $\varepsilon\to0$ at each partition (the classical elimination,
+  Proposition 2 of the [refinement note](refinement-composition-and-limit.md))
+  and then refines; the path integral holds the action resolution at a
+  fixed $h$ while the partition is refined (eqs. (7)--(8)). For Newton's
+  quadratic cases both orders converge (the refinement note's
+  Proposition 2 and Theorem 3), which is the independence of Theorem A.
+  The 1998 conjecture that finiteness forces the joint limit concerns the
+  general, non-quadratic case, and it remains open.
+- **The tangent groupoid and the ultimate velocity.** The paper proposes
+  Connes's tangent groupoid as the frame
+  ([Rivero 1997, arXiv:dg-ga/9710026](https://arxiv.org/abs/dg-ga/9710026),
+  abstract;
+  [Cariñena, Clemente-Gallardo, Follana, Gracia-Bondía, Rivero and Várilly 1999](https://doi.org/10.1016/S0393-0440(98)00028-X),
+  abstract: the construction "generalizes the standard Moyal rule"). In
+  that groupoid a pair of points $(x,y)$ at scale $\varepsilon>0$ is a chord, and
+  the smooth structure glues it at $\varepsilon=0$ to the tangent vector
+  $\lim(y-x)/\varepsilon$. The $\varepsilon=0$ boundary is Newton's *velocitas ultima*, the
+  "certain and definite" limit of §1; functions there are functions of
+  place and velocity together, a commutative algebra, while at $\varepsilon>0$ the
+  groupoid convolution of kernels is noncommutative. Joint determinacy
+  holds on the boundary fibre, and the deformation of Theorem B is the
+  passage to the interior with $\varepsilon$ playing the part of $\hbar$. (A reading of
+  the cited constructions, not a new theorem.)
+
+## 8. What remains, and consequence for STATE
 
 Theorems A--D are proved for one degree of freedom; several degrees
 follow with $Sp(2n)$, whose invariants of two vectors are again generated

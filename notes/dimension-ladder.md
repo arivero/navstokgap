@@ -1,8 +1,12 @@
 # The dimension ladder: from 0+0 to 1+3, and what the action constant does on each rung
 
 **Record of a discussion with the user, 2026-09-27, 02:50--03:15.** The
-user proposed the frame: quantization is a consistency condition that
-Newton's rework of the *Principia* missed, so any supposedly well-posed
+user proposed the frame, first stated in
+[Rivero 1998, arXiv:quant-ph/9803035](https://arxiv.org/abs/quant-ph/9803035)
+(the path-integral formula "as a consistency condition for the existence
+of certain Dirac measures over functional spaces"; see the
+[fifth-postulate note](principia-fifth-postulate.md), §7): quantization is
+a consistency condition that Newton's rework of the *Principia* missed, so any supposedly well-posed
 wave equation without a quantization carries a logical issue; the
 ladder of dimensions runs from $0+0$ through Newton and quantum mechanics
 ($1+0$, "YM$_0$") to $1+3$; and the exponential $e^{-1/(2b_0\hbar g^2)}$
