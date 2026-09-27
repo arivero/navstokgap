@@ -326,14 +326,94 @@ basis, and (2) fixes only <span class="math inline">\(\sum_\mu
 e^{i\mu\theta/2}\Lambda^J_{\mu\mu}\)</span>, one equation for <span
 class="math inline">\(2J+1\)</span> entries. The isolated cube needs the
 entries, because its four cut faces have different axes.</p>
-<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<h2 id="the-fundamental-sector-of-the-isolated-cube-is-exact">5. The
+fundamental sector of the isolated cube is exact</h2>
+<p><strong>Theorem 3.</strong> (a) In spin <span
+class="math inline">\(\frac12\)</span> the midpoint’s matrix expectation
+is a real multiple of a unitary: <span
+class="math inline">\(E\,D^{1/2}(m)=\lambda(\theta,t)\,D^{1/2}(m_*)\)</span>
+with</p>
+<p><span
+class="math display">\[\lambda(\theta,t)=e^{-t/32}\,\frac{\Xi_-(\theta)-\frac
+t4\tan\frac\theta4\,\Theta_-(\theta)}{\Xi_+(\theta)}
+\ \overset{w=0}{=}\ e^{-t/32}\Bigl[1-\frac
+t{4\theta}\tan\frac\theta4\Bigr],
+\qquad\theta\in(0,2\pi).\]</span></p>
+<ol start="2" type="a">
+<li>For one refined cube (series/parallel note, §4), whose four cut side
+faces have heat times <span class="math inline">\(t_j\)</span> and side
+angles <span class="math inline">\(\theta_j\)</span>, the spin-<span
+class="math inline">\(\frac12\)</span> term of the character sum for
+<span class="math inline">\(\Psi\)</span> is exactly</li>
+</ol>
+<p><span class="math display">\[d_{1/2}\,e^{-3t_m/8}\,{\rm
+tr}_{1/2}\prod_jE\,D^{1/2}(m_j^{\pm1})
+=2\,e^{-3t_m/8}\Bigl(\prod_{j=1}^4\lambda(\theta_j,t_j)\Bigr)\chi_{1/2}(h_{\rm
+int}),\]</span></p>
+<p>where <span class="math inline">\(h_{\rm int}\)</span> is the
+holonomy of the geodesic interpolation around the mid-face. In this
+sector the interpolation term N1 is exact (it is <span
+class="math inline">\(h_{\rm int}\)</span>), the curvature term N2 is
+exact (it is <span class="math inline">\(\prod\lambda\)</span>), and the
+commutator term N3 vanishes.</p>
+<p><em>Proof.</em> (a) By Proposition 6(a) of the series/parallel note,
+<span class="math inline">\(E\,D^{1/2}(m)=D^{1/2}(m_*)\Lambda\)</span>
+with <span class="math inline">\(\Lambda={\rm
+diag}(\Lambda_+,\Lambda_-)\)</span> real in the axis basis, where <span
+class="math inline">\(D^{1/2}(m_*)={\rm
+diag}(e^{i\theta/4},e^{-i\theta/4})\)</span>. Its trace <span
+class="math inline">\(e^{i\theta/4}\Lambda_++e^{-i\theta/4}\Lambda_-\)</span>
+equals <span class="math inline">\(E\,\chi_{1/2}(m)\)</span>, which is
+real because the midpoint density and <span
+class="math inline">\(\chi_{1/2}\)</span> are real. The imaginary part
+gives <span
+class="math inline">\(\sin(\theta/4)(\Lambda_+-\Lambda_-)=0\)</span>, so
+<span class="math inline">\(\Lambda_+=\Lambda_-=\lambda\)</span>, and
+<span
+class="math inline">\(\lambda=E\,\chi_{1/2}(m)/(2\cos(\theta/4))\)</span>
+by Theorem 1. (b) The bridge for a cut face runs from <span
+class="math inline">\(Q_j^{-1}\)</span> to <span
+class="math inline">\(P_j\)</span>; left translation by <span
+class="math inline">\(Q_j^{-1}\)</span> maps it to a bridge from <span
+class="math inline">\(e\)</span>, so <span
+class="math inline">\(E\,D^{1/2}(m_j)=\lambda_jD^{1/2}(m_{*j})\)</span>
+with <span class="math inline">\(m_{*j}\)</span> the geodesic midpoint,
+and <span
+class="math inline">\(E\,D^{1/2}(m_j^{-1})=\lambda_jD^{1/2}(m_{*j})^{-1}\)</span>
+because <span class="math inline">\(\lambda_j\)</span> is real. The four
+midpoints are independent, since each is fixed by its own cut face and
+an isolated cube has no shared mid-edges, so the trace of the product of
+expectations is <span class="math inline">\(\prod_j\lambda_j\)</span>
+times the trace of the product of the unitaries, which is <span
+class="math inline">\(\chi_{1/2}(h_{\rm int})\)</span>. The prefactor is
+<span class="math inline">\(d_{1/2}e^{-t_mC_2(1/2)/2}\)</span> with
+<span class="math inline">\(C_2(\frac12)=\frac34\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>For <span class="math inline">\(J\ge1\)</span> the diagonal entries
+differ: the Gaussian prediction is <span
+class="math inline">\(\Lambda^J_{\mu\mu}\simeq1-\frac
+t8[\mu^2+(J(J+1)-\mu^2)/h]\)</span>, which depends on <span
+class="math inline">\(\mu\)</span> unless <span
+class="math inline">\(h=1\)</span>. The reality argument gives only
+<span
+class="math inline">\(\Lambda^J_{\mu\mu}=\Lambda^J_{-\mu,-\mu}\)</span>,
+so for <span class="math inline">\(J=1\)</span> one equation remains for
+the two entries <span class="math inline">\(\Lambda^1_{11}\)</span> and
+<span class="math inline">\(\Lambda^1_{00}\)</span>. The matrix-element
+version of the orthogonality computation of Theorem 1, with the
+Clebsch–Gordan coefficients of <span class="math inline">\(j_1\otimes
+J\)</span>, is the tool for them.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>The curvature term of the <span class="math inline">\(SU(2)\)</span>
 parallel insertion is now exact for every character (Theorems 1 and 2),
-with only exponentially small winding terms left. One step remains
-before Proposition 7 becomes a theorem for the isolated <span
-class="math inline">\(SU(2)\)</span> cube: the diagonal entries <span
-class="math inline">\(\Lambda^J_{\mu\mu}\)</span> of the midpoint’s
-matrix expectation, since the cube’s character sum <span
+with only exponentially small winding terms left, and the spin-<span
+class="math inline">\(\frac12\)</span> sector of the isolated cube is
+exact (Theorem 3). One step remains before Proposition 7 becomes a
+theorem for the isolated <span class="math inline">\(SU(2)\)</span>
+cube: the diagonal entries <span
+class="math inline">\(\Lambda^J_{\mu\mu}\)</span>, <span
+class="math inline">\(J\ge1\)</span>, of the midpoint’s matrix
+expectation, since the cube’s character sum <span
 class="math inline">\(\sum_Jd_Je^{-t_mC_2(J)/2}{\rm
 tr}_J\prod_jE\,D^J(m_j^{\pm1})\)</span> multiplies matrices with
 different axes. They follow from the same orthogonality method applied

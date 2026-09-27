@@ -174,12 +174,58 @@ and (2) fixes only $\sum_\mu e^{i\mu\theta/2}\Lambda^J_{\mu\mu}$, one equation
 for $2J+1$ entries. The isolated cube needs the entries, because its four
 cut faces have different axes.
 
-## 5. Consequence for STATE
+## 5. The fundamental sector of the isolated cube is exact
+
+**Theorem 3.** (a) In spin $\frac12$ the midpoint's matrix expectation is a
+real multiple of a unitary: $E\,D^{1/2}(m)=\lambda(\theta,t)\,D^{1/2}(m_*)$ with
+
+$$\lambda(\theta,t)=e^{-t/32}\,\frac{\Xi_-(\theta)-\frac t4\tan\frac\theta4\,\Theta_-(\theta)}{\Xi_+(\theta)}
+\ \overset{w=0}{=}\ e^{-t/32}\Bigl[1-\frac t{4\theta}\tan\frac\theta4\Bigr],
+\qquad\theta\in(0,2\pi).$$
+
+(b) For one refined cube (series/parallel note, §4), whose four cut side
+faces have heat times $t_j$ and side angles $\theta_j$, the spin-$\frac12$ term
+of the character sum for $\Psi$ is exactly
+
+$$d_{1/2}\,e^{-3t_m/8}\,{\rm tr}_{1/2}\prod_jE\,D^{1/2}(m_j^{\pm1})
+=2\,e^{-3t_m/8}\Bigl(\prod_{j=1}^4\lambda(\theta_j,t_j)\Bigr)\chi_{1/2}(h_{\rm int}),$$
+
+where $h_{\rm int}$ is the holonomy of the geodesic interpolation around the
+mid-face. In this sector the interpolation term N1 is exact (it is
+$h_{\rm int}$), the curvature term N2 is exact (it is $\prod\lambda$), and the
+commutator term N3 vanishes.
+
+*Proof.* (a) By Proposition 6(a) of the series/parallel note,
+$E\,D^{1/2}(m)=D^{1/2}(m_*)\Lambda$ with $\Lambda={\rm diag}(\Lambda_+,\Lambda_-)$ real in
+the axis basis, where $D^{1/2}(m_*)={\rm diag}(e^{i\theta/4},e^{-i\theta/4})$. Its
+trace $e^{i\theta/4}\Lambda_++e^{-i\theta/4}\Lambda_-$ equals $E\,\chi_{1/2}(m)$, which is
+real because the midpoint density and $\chi_{1/2}$ are real. The imaginary
+part gives $\sin(\theta/4)(\Lambda_+-\Lambda_-)=0$, so $\Lambda_+=\Lambda_-=\lambda$, and
+$\lambda=E\,\chi_{1/2}(m)/(2\cos(\theta/4))$ by Theorem 1. (b) The bridge for a cut
+face runs from $Q_j^{-1}$ to $P_j$; left translation by $Q_j^{-1}$ maps it to a
+bridge from $e$, so $E\,D^{1/2}(m_j)=\lambda_jD^{1/2}(m_{*j})$ with $m_{*j}$ the
+geodesic midpoint, and $E\,D^{1/2}(m_j^{-1})=\lambda_jD^{1/2}(m_{*j})^{-1}$ because
+$\lambda_j$ is real. The four midpoints are independent, since each is fixed by its own
+cut face and an isolated cube has no shared mid-edges, so the trace of the product of expectations is
+$\prod_j\lambda_j$ times the trace of the product of the unitaries, which is
+$\chi_{1/2}(h_{\rm int})$. The prefactor is $d_{1/2}e^{-t_mC_2(1/2)/2}$ with
+$C_2(\frac12)=\frac34$. $\square$
+
+For $J\ge1$ the diagonal entries differ: the Gaussian prediction is
+$\Lambda^J_{\mu\mu}\simeq1-\frac t8[\mu^2+(J(J+1)-\mu^2)/h]$, which depends on $\mu$
+unless $h=1$. The reality argument gives only $\Lambda^J_{\mu\mu}=\Lambda^J_{-\mu,-\mu}$,
+so for $J=1$ one equation remains for the two entries $\Lambda^1_{11}$ and
+$\Lambda^1_{00}$. The matrix-element version of the orthogonality computation
+of Theorem 1, with the Clebsch--Gordan coefficients of $j_1\otimes J$, is the
+tool for them.
+
+## 6. Consequence for STATE
 
 The curvature term of the $SU(2)$ parallel insertion is now exact for
 every character (Theorems 1 and 2), with only exponentially small winding
-terms left. One step remains before Proposition 7 becomes a theorem for
-the isolated $SU(2)$ cube: the diagonal entries $\Lambda^J_{\mu\mu}$ of the
+terms left, and the spin-$\frac12$ sector of the isolated cube is exact
+(Theorem 3). One step remains before Proposition 7 becomes a theorem for
+the isolated $SU(2)$ cube: the diagonal entries $\Lambda^J_{\mu\mu}$, $J\ge1$, of the
 midpoint's matrix expectation, since the cube's character sum
 $\sum_Jd_Je^{-t_mC_2(J)/2}{\rm tr}_J\prod_jE\,D^J(m_j^{\pm1})$ multiplies
 matrices with different axes. They follow from the same orthogonality
