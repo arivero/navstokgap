@@ -1,11 +1,14 @@
 PYTHON ?= python3
 
-# The atlas quotes Chinese, including a supplementary-plane character.
-# Its Unicode build needs XeLaTeX, Noto Serif CJK SC and HanaMinB
-# (Ubuntu packages fonts-noto-cjk and fonts-hanazono).
-ifeq ($(NOTE),halving-atlas)
+# Notes that quote Chinese (the atlas and the cut-measure note, including
+# the supplementary-plane character U+230C8) build with XeLaTeX, Noto Serif
+# CJK SC and HanaMinB (Ubuntu packages fonts-noto-cjk and fonts-hanazono).
+# Detection is automatic: any CJK ideograph in notes/$(NOTE).md selects it.
+ifneq ($(NOTE),)
+ifneq ($(shell LC_ALL=C.UTF-8 grep -qP '[\x{3000}-\x{9FFF}\x{20000}-\x{2FFFF}]' notes/$(NOTE).md 2>/dev/null && echo cjk),)
 PAPER_ENGINE ?= xelatex
 PAPER_UNICODE ?= true
+endif
 endif
 PAPER_ENGINE ?= pdflatex
 
