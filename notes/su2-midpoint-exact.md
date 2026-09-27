@@ -227,15 +227,286 @@ remains between $\Lambda^1_{11}$ and $\Lambda^1_{00}$. The matrix-element versio
 of Theorem 1, with the Clebsch--Gordan coefficients of $j_1\otimes J$, is the
 tool for them.
 
-## 6. Consequence for STATE
+## 6. The spin-1 matrix and isolated cube
 
-The curvature term of the $SU(2)$ parallel insertion is now exact for
-every character (Theorems 1 and 2), with only exponentially small winding
-terms left, and the spin-$\frac12$ sector of the isolated cube is exact
-(Theorem 3). One step remains before Proposition 7 becomes a theorem for
-the isolated $SU(2)$ cube: the diagonal entries $\Lambda^J_{\mu\mu}$, $J\ge1$, of the
-midpoint's matrix expectation, since the cube's character sum
-$\sum_Jd_Je^{-t_mC_2(J)/2}{\rm tr}_J\prod_jE\,D^J(m_j^{\pm1})$ multiplies
-matrices with different axes. They follow from the same orthogonality
-method applied to matrix elements, or from the characters of the midpoint
-translated along the centralizer of the side holonomy.
+**Theorem 4 (2026-09-27, GPT-6 Astra).** The spin-1 midpoint matrix is
+exactly determined by two real entries
+$\lambda_0=\Lambda^1_{00}$ and
+$\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}$.
+The formulas below give both entries, including winding, for every
+$t>0$ and $0<\theta<2\pi$. They involve a Gaussian tail, which retains
+higher-order curvature corrections beyond the character formula.
+
+Put $x=\theta/2$, $\eta=e^{t/8}$, and define
+
+$$G_t(z)=e^{-2z^2/t},\qquad
+T_t(z)=\int_z^\infty(1-\eta\cos u)e^{-2u^2/t}\,du,
+\qquad S_t(x)=\sum_{w\in\mathbb Z}T_t(x-2\pi w). \tag{3}$$
+
+The Gaussian integral of $1-\eta\cos u$ over the real line is zero;
+thus $T_t$ is odd and decays at both ends. In particular the image sum
+in (3) is absolutely convergent. A special-function closed form is
+
+$$T_t(z)=\sqrt{\frac{\pi t}{8}}\left[
+\operatorname{erfc}\!\left(\sqrt{\frac2t}\,z\right)
+-\operatorname{Re}\operatorname{erfc}\!\left(
+\sqrt{\frac2t}\,z-i\sqrt{\frac t8}\right)\right]. \tag{4}$$
+
+With $\Theta=\Theta_+(\theta)$ and $\Xi=\Xi_+(\theta)$ of Theorem 1,
+
+$$\boxed{\lambda_0=1+\frac{t\eta^{-1}}{\sin x\,\Xi}
+\left[(\eta\cos x-1)\Theta-\cot x\,S_t(x)\right],} \tag{5}$$
+
+$$\boxed{\lambda_1=\eta^{-1}\left\{1-\frac{t}{2\sin x\,\Xi}
+\left[(\eta-\cos x)\Theta-\frac{S_t(x)}{\sin x}\right]\right\}.} \tag{6}$$
+
+These expressions are regular at $\theta=\pi$. The endpoint
+$\theta=0$ is obtained by continuity and has $\lambda_0=\lambda_1$ by
+conjugation invariance. The denominator $\Xi$ is positive on the stated
+open interval, since it is proportional to $k_t(g)\sin x$.
+
+**Matrix-element computation.** Write
+$c_{a,b}(\alpha,\mu)=|\langle a\alpha;1\mu\mid b,\alpha+\mu\rangle|^2$.
+The spin-1 Clebsch--Gordan squares are
+
+| $b$ | $c_{a,b}(\alpha,0)$ | $c_{a,b}(\alpha,1)$ |
+| --- | --- | --- |
+| $a+1$ | $\dfrac{(a+1)^2-\alpha^2}{(a+1)(2a+1)}$ | $\dfrac{(a+\alpha+1)(a+\alpha+2)}{2(a+1)(2a+1)}$ |
+| $a$ | $\dfrac{\alpha^2}{a(a+1)}$ | $\dfrac{(a-\alpha)(a+\alpha+1)}{2a(a+1)}$ |
+| $a-1$ | $\dfrac{a^2-\alpha^2}{a(2a+1)}$ | $\dfrac{(a-\alpha)(a-\alpha-1)}{2a(2a+1)}$ |
+
+Here $c_{a,b}(\alpha,-1)=c_{a,b}(-\alpha,1)$, and only actual summands
+of $a\otimes1$ are included: $a=0$ has just $b=1$, and $a=1/2$ has
+$b=1/2,3/2$. These squares follow by lowering the highest vector
+of spin $a+1$ and taking the orthogonal spin-$a$ and spin-$(a-1)$
+vectors at each total weight. The lowering rule used is
+$J_-|a,\alpha\rangle=\sqrt{(a+\alpha)(a-\alpha+1)}
+|a,\alpha-1\rangle$; normalization gives the denominators in the table.
+
+Matrix-element orthogonality gives, with $C_a=a(a+1)$,
+
+$$k_t(g)E[D^1(m)]_{\mu\mu}
+=\sum_{a,b}(2a+1)e^{-t(C_a+C_b)/4}
+\sum_{\alpha=-a}^{a}c_{a,b}(\alpha,\mu)e^{i(\alpha+\mu)\theta}.
+\tag{7}$$
+
+The factor $2b+1$ in the second heat kernel cancels its orthogonality
+denominator. For $\mu=0$, put $N_0=k_t(g)\lambda_0$ and
+
+$$B(x)=\sum_{n\in\mathbb Z}e^{-tn^2/8}\cos(nx),\qquad
+H(x)=\sum_{n\ne0}e^{-tn^2/8}\frac{\sin(nx)}n,
+\qquad H(x)=\int_0^x(B(y)-1)\,dy.$$
+
+We compute the $b=a\pm1$ and $b=a$ parts of (7) separately. In the
+first two parts multiplication by $\alpha^2$ becomes
+$-\partial_\theta^2$. Write $n=2a+1$ and shift to $s=n\pm1$;
+the common heat weight is $e^{-ts^2/8}$. Combining the two parts gives
+
+$$\begin{aligned}
+N_{\rm off}
+&=\sum_{s\ge1}e^{-ts^2/8}
+\left(s+\frac1s\partial_x^2\right)[\cot x\sin(sx)]\\
+&=\frac{\cot x\,H(x)-B(x)+1}{\sin^2x}.
+\end{aligned}\tag{8}$$
+
+The formal lower-spin term at $a=1/2$ vanishes because
+$(a^2+\partial_\theta^2)\chi_a=0$; the missing upper partner at
+$s=1$ has $\sin((s-1)x)=0$. This accounts for the endpoints of the
+reindexing. The cancellation in (8) follows directly from
+
+$$\partial_x^2[\cot x\sin(sx)]
+=2\csc^2x\cot x\sin(sx)-2s\csc^2x\cos(sx)
+-s^2\cot x\sin(sx).$$
+
+For the diagonal coupling $b=a$, set
+$f_n(x)=\sin(nx)/\sin x$. Its elementary differential identity is
+$f_n''+2\cot x\,f_n'=-(n^2-1)f_n$. Hence
+
+$$N_{\rm diag}=k_t(g)-1
++2\eta\cot x\left(\frac{V(x)}{\sin x}\right)',\qquad
+V(x)=\sum_{n\ge2}\frac{n e^{-tn^2/8}}{n^2-1}\sin(nx).$$
+
+The omitted $n=1$ term in the heat kernel is exactly 1. Moreover,
+$V''+V=B'/2+\eta^{-1}\sin x$ and $V(0)=0$, so the Wronskian identity gives
+
+$$\left(\frac{V}{\sin x}\right)'
+=\frac1{\sin^2x}\int_0^x\sin y
+\left(\frac{B'(y)}2+\eta^{-1}\sin y\right)dy.$$
+
+Adding (8), integrating $\sin y B'(y)$ once, and using
+$2\int_0^x\sin^2y\,dy=x-\sin x\cos x$ yields
+
+$$N_0=k_t(g)+\frac1{\sin^2x}\left[
+(\eta\cos x-1)B(x)+\cot x\int_0^x(1-\eta\cos y)B(y)\,dy\right].
+\tag{9}$$
+
+Every series above and its displayed derivatives converge absolutely
+for $t>0$. Poisson summation, with the normalization of Theorem 1, gives
+
+$$B(x)=\sqrt{\frac{8\pi}t}\sum_wG_t(x-2\pi w),\qquad
+k_t(g)=\frac{\eta}{t\sin x}\sqrt{\frac{8\pi}t}\,\Xi.$$
+
+Periodicity of the cosine and oddness of $T_t$ give
+
+$$\int_0^x(1-\eta\cos y)B(y)\,dy
+=-\sqrt{\frac{8\pi}t}\,S_t(x):$$
+
+the integration constants are $\sum_wT_t(-2\pi w)=0$, paired in
+$w$. Substitution into (9) proves (5).
+
+Weyl reflection with time reversal, as proved in §5, gives
+$\Lambda^1_{11}=\Lambda^1_{-1,-1}$. Theorem 2 therefore reads
+
+$$\lambda_0+2\cos x\,\lambda_1
+=1+2\eta^{-1}\cos x-t\eta^{-1}\sin x\frac{\Theta}{\Xi}. \tag{10}$$
+
+Inserting (5), the numerator for $2\cos x\,\lambda_1$ factors by
+$\cos x$, giving (6). This first proves (6) when $\cos x\ne0$;
+continuity proves it also at $x=\pi/2$. Thus (5)--(6) satisfy the
+trace identity at every angle in the stated interval. Reality and
+the equality of the opposite weights are explicit. $\square$
+
+**The zero image and explicit image bounds.** Define
+$R_t(x)=e^{2x^2/t}T_t(x)$ and
+
+$$A_0=\eta\cos x-1-\cot x\,R_t(x),\qquad
+A_1=\eta-\cos x-\frac{R_t(x)}{\sin x}.$$
+
+Keeping $w=0$ in both numerator and denominator of (5)--(6) gives
+
+$$\lambda_0^{(0)}=1+\frac{t\eta^{-1}}{\theta\sin x}A_0,
+\qquad
+\lambda_1^{(0)}=\eta^{-1}\left[1-\frac{t}{2\theta\sin x}A_1\right].
+\tag{11}$$
+
+For explicit bounds on all remaining images, put
+
+$$q=e^{-4\pi(2\pi-\theta)/t},\qquad r=e^{-16\pi^2/t},\qquad
+E=\frac{2q}{1-r},$$
+
+$$
+\delta=q\left[\frac2{1-r}+\frac{32\pi^2}{t}
+\frac{1+r}{(1-r)^3}\right],\qquad
+M=\frac{(1+\eta)t}{4(2\pi-x)}.$$
+
+Whenever $\delta<1$,
+
+$$|\lambda_0-\lambda_0^{(0)}|
+\le\frac{t\eta^{-1}}{\theta\sin x(1-\delta)}
+\left\{E\bigl[|\eta\cos x-1|+|\cot x|M\bigr]
++\delta|A_0|\right\}, \tag{12}$$
+
+$$|\lambda_1-\lambda_1^{(0)}|
+\le\frac{t\eta^{-1}}{2\theta\sin x(1-\delta)}
+\left\{E\left[\eta-\cos x+\frac M{\sin x}\right]
++\delta|A_1|\right\}. \tag{13}$$
+
+To verify these bounds, write $G=G_t(x)$. The pair $w=\pm n$ has
+Gaussian ratio bounded by $2q_n$, where
+$q_n=e^{-8\pi^2n^2/t+8\pi nx/t}\le q r^{n-1}$. Its contribution to
+$\Xi/(\theta G)-1$ is at most
+$(2+32\pi^2n^2/t)q_n$, by the same $\sinh u\le u\cosh u$
+estimate as in Theorem 1. Consequently
+
+$$\left|\frac\Theta G-1\right|\le E,\qquad
+\left|\frac\Xi{\theta G}-1\right|\le\delta.$$
+
+For $z\ne0$, oddness and the Gaussian tail bound give
+
+$$|T_t(z)|\le(1+\eta)\int_{|z|}^\infty G_t(u)\,du
+\le\frac{(1+\eta)t}{4|z|}G_t(z).$$
+
+All nonzero images have $|x-2\pi w|\ge2\pi-x$, whence
+$|S_t(x)/G-R_t(x)|\le ME$. Dividing by
+$\Xi/(\theta G)$ proves (12)--(13), including the denominator error.
+The formulas (5)--(6) hold at all $t>0$; the explicit small-image
+estimates require the displayed condition $\delta<1$. They are
+exponentially small uniformly on each compact subinterval of
+$0<\theta<2\pi$ as $t\downarrow0$. Their displayed prefactors become
+loose at $\theta=0$, where the exact expressions have removable
+singularities; their exponential separation degenerates at the cut
+locus $\theta=2\pi$.
+
+**Gaussian and central-endpoint checks.** Integration by parts in (3),
+at fixed $x>0$, gives
+
+$$R_t(x)=\frac{t}{4x}(1-\eta\cos x)+O_x(t^2).$$
+
+Thus, with $h=(x/2)\cot(x/2)$,
+
+$$\lambda_0=1-\frac{t}{4h}+O_\theta(t^2),\qquad
+\lambda_1=1-\frac t8\left(1+\frac1h\right)+O_\theta(t^2). \tag{14}$$
+
+Here the exponentially small image errors are absorbed into the
+remainder. This is exactly
+$1-\frac t8[\mu^2+(2-\mu^2)/h]$ for $\mu=0,\pm1$.
+At $\theta=0$, conjugation invariance and (10) give the independent check
+
+$$\lambda_0(0,t)=\lambda_1(0,t)
+=\frac13\left[1+2\eta^{-1}-\frac{t\eta^{-1}}2
+\frac{\Theta_+(0)}{\partial_\theta\Xi_+(0)}\right].$$
+
+The zero-image limit of either expression (11) is
+$[1+2\eta^{-1}-(t/2)\eta^{-1}]/3=1-t/4+O(t^2)$, in agreement
+with $h(0)=1$.
+
+**Consequence for the isolated cube.** For cut face $j$, denote the
+bridge endpoints by $A_j,B_j$, put
+$X_j=\log(A_j^{-1}B_j)$, and set $m_{*j}=A_je^{X_j/2}$.
+Let $P_j$ project onto weight zero along $X_j$ in spin 1. In the
+three-dimensional vector realization it is the rank-one projector
+$\hat X_j\hat X_j^{\mathsf T}$. With (5)--(6) at $(\theta_j,t_j)$, put
+
+$$L_j=\lambda_{1j}I+(\lambda_{0j}-\lambda_{1j})P_j,\qquad
+U_j=D^1(m_{*j}),\qquad
+F_j^+=U_jL_j,\quad F_j^-=L_jU_j^{-1}.$$
+
+The four independent bridges of one isolated cube give its exact
+spin-1 contribution to $\Psi$:
+
+$$\boxed{\Psi_1=3e^{-t_m}\operatorname{tr}_1
+\left(F_1^{\varepsilon_1}F_2^{\varepsilon_2}
+F_3^{\varepsilon_3}F_4^{\varepsilon_4}\right),\qquad
+\varepsilon_j\in\{+,-\},} \tag{15}$$
+
+in the boundary order and orientations of the mid-face. The exponent
+is $-t_m C_2(1)/2=-t_m$. Left translation reduces each bridge to (5)--(6);
+inversion takes the adjoint and explains the order in $F_j^-$.
+The independence is the same isolated-cube hypothesis as in Theorem 3.
+
+This sector retains an exact anisotropy
+$\lambda_0-\lambda_1=(t/8)(1-1/h)+O_\theta(t^2)$.
+After transporting axes to a common frame, two such factors obey
+
+$$[L_i,L_j]=(\lambda_{0i}-\lambda_{1i})
+(\lambda_{0j}-\lambda_{1j})[P_i,P_j],\qquad
+\|[P_i,P_j]\|=|c|\sqrt{1-c^2}\le\tfrac12,$$
+
+where $c$ is the scalar product of the transported unit axes.
+Consequently the axis-dependent matrix product in (15) supplies the
+spin-1 noncommuting correction explicitly; generic oblique axes give
+a commutator of order $t_it_j$ at fixed nonzero side angles.
+The scalar factorization of Theorem 3 is special to spin $1/2$.
+
+For an explicit winding bound on (15), let $\epsilon_j$ be the maximum
+of the right sides of (12)--(13) for face $j$, assuming each
+$\delta_j<1$, and replace each $L_j$ by its zero-image value to obtain
+$\Psi_1^{(0)}$. Since an expectation of unitary matrices has norm at
+most 1, telescoping the four products gives
+
+$$|\Psi_1-\Psi_1^{(0)}|
+\le9e^{-t_m}\left[\prod_{j=1}^4(1+\epsilon_j)-1\right]. \tag{16}$$
+
+The factor 9 is the character coefficient 3 times the trace-norm
+bound $|\operatorname{tr}_1 A|\le3\|A\|$.
+
+## 7. Consequence for STATE
+
+Atlas cell 1 is filled through spin 1 by Theorem 4, with exact matrix
+entries, explicit image bounds and the isolated-cube contribution.
+For $J>1$, (7) with the spin-$J$ Clebsch--Gordan squares is still an
+exact spectral representation. The finite Gaussian-tail reduction and
+its bounds have been completed here for $J=1$; the higher-spin entries
+and estimates permitting the full character sum remain the next
+obligation before the isolated-cube Laplace claim of Proposition 7.
+The full mid-plane and iteration remain the subsequent atlas cells.

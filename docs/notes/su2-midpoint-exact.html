@@ -421,22 +421,342 @@ class="math inline">\(\Lambda^1_{00}\)</span>. The matrix-element
 version of the orthogonality computation of Theorem 1, with the
 Clebsch–Gordan coefficients of <span class="math inline">\(j_1\otimes
 J\)</span>, is the tool for them.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
-<p>The curvature term of the <span class="math inline">\(SU(2)\)</span>
-parallel insertion is now exact for every character (Theorems 1 and 2),
-with only exponentially small winding terms left, and the spin-<span
-class="math inline">\(\frac12\)</span> sector of the isolated cube is
-exact (Theorem 3). One step remains before Proposition 7 becomes a
-theorem for the isolated <span class="math inline">\(SU(2)\)</span>
-cube: the diagonal entries <span
-class="math inline">\(\Lambda^J_{\mu\mu}\)</span>, <span
-class="math inline">\(J\ge1\)</span>, of the midpoint’s matrix
-expectation, since the cube’s character sum <span
-class="math inline">\(\sum_Jd_Je^{-t_mC_2(J)/2}{\rm
-tr}_J\prod_jE\,D^J(m_j^{\pm1})\)</span> multiplies matrices with
-different axes. They follow from the same orthogonality method applied
-to matrix elements, or from the characters of the midpoint translated
-along the centralizer of the side holonomy.</p>
+<h2 id="the-spin-1-matrix-and-isolated-cube">6. The spin-1 matrix and
+isolated cube</h2>
+<p><strong>Theorem 4 (2026-09-27, GPT-6 Astra).</strong> The spin-1
+midpoint matrix is exactly determined by two real entries <span
+class="math inline">\(\lambda_0=\Lambda^1_{00}\)</span> and <span
+class="math inline">\(\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}\)</span>.
+The formulas below give both entries, including winding, for every <span
+class="math inline">\(t&gt;0\)</span> and <span
+class="math inline">\(0&lt;\theta&lt;2\pi\)</span>. They involve a
+Gaussian tail, which retains higher-order curvature corrections beyond
+the character formula.</p>
+<p>Put <span class="math inline">\(x=\theta/2\)</span>, <span
+class="math inline">\(\eta=e^{t/8}\)</span>, and define</p>
+<p><span class="math display">\[G_t(z)=e^{-2z^2/t},\qquad
+T_t(z)=\int_z^\infty(1-\eta\cos u)e^{-2u^2/t}\,du,
+\qquad S_t(x)=\sum_{w\in\mathbb Z}T_t(x-2\pi w). \tag{3}\]</span></p>
+<p>The Gaussian integral of <span class="math inline">\(1-\eta\cos
+u\)</span> over the real line is zero; thus <span
+class="math inline">\(T_t\)</span> is odd and decays at both ends. In
+particular the image sum in (3) is absolutely convergent. A
+special-function closed form is</p>
+<p><span class="math display">\[T_t(z)=\sqrt{\frac{\pi t}{8}}\left[
+\operatorname{erfc}\!\left(\sqrt{\frac2t}\,z\right)
+-\operatorname{Re}\operatorname{erfc}\!\left(
+\sqrt{\frac2t}\,z-i\sqrt{\frac t8}\right)\right]. \tag{4}\]</span></p>
+<p>With <span class="math inline">\(\Theta=\Theta_+(\theta)\)</span> and
+<span class="math inline">\(\Xi=\Xi_+(\theta)\)</span> of Theorem 1,</p>
+<p><span
+class="math display">\[\boxed{\lambda_0=1+\frac{t\eta^{-1}}{\sin x\,\Xi}
+\left[(\eta\cos x-1)\Theta-\cot x\,S_t(x)\right],} \tag{5}\]</span></p>
+<p><span
+class="math display">\[\boxed{\lambda_1=\eta^{-1}\left\{1-\frac{t}{2\sin
+x\,\Xi}
+\left[(\eta-\cos x)\Theta-\frac{S_t(x)}{\sin x}\right]\right\}.}
+\tag{6}\]</span></p>
+<p>These expressions are regular at <span
+class="math inline">\(\theta=\pi\)</span>. The endpoint <span
+class="math inline">\(\theta=0\)</span> is obtained by continuity and
+has <span class="math inline">\(\lambda_0=\lambda_1\)</span> by
+conjugation invariance. The denominator <span
+class="math inline">\(\Xi\)</span> is positive on the stated open
+interval, since it is proportional to <span
+class="math inline">\(k_t(g)\sin x\)</span>.</p>
+<p><strong>Matrix-element computation.</strong> Write <span
+class="math inline">\(c_{a,b}(\alpha,\mu)=|\langle a\alpha;1\mu\mid
+b,\alpha+\mu\rangle|^2\)</span>. The spin-1 Clebsch–Gordan squares
+are</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(b\)</span></th>
+<th><span class="math inline">\(c_{a,b}(\alpha,0)\)</span></th>
+<th><span class="math inline">\(c_{a,b}(\alpha,1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a+1\)</span></td>
+<td><span
+class="math inline">\(\dfrac{(a+1)^2-\alpha^2}{(a+1)(2a+1)}\)</span></td>
+<td><span
+class="math inline">\(\dfrac{(a+\alpha+1)(a+\alpha+2)}{2(a+1)(2a+1)}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(\dfrac{\alpha^2}{a(a+1)}\)</span></td>
+<td><span
+class="math inline">\(\dfrac{(a-\alpha)(a+\alpha+1)}{2a(a+1)}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a-1\)</span></td>
+<td><span
+class="math inline">\(\dfrac{a^2-\alpha^2}{a(2a+1)}\)</span></td>
+<td><span
+class="math inline">\(\dfrac{(a-\alpha)(a-\alpha-1)}{2a(2a+1)}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Here <span
+class="math inline">\(c_{a,b}(\alpha,-1)=c_{a,b}(-\alpha,1)\)</span>,
+and only actual summands of <span
+class="math inline">\(a\otimes1\)</span> are included: <span
+class="math inline">\(a=0\)</span> has just <span
+class="math inline">\(b=1\)</span>, and <span
+class="math inline">\(a=1/2\)</span> has <span
+class="math inline">\(b=1/2,3/2\)</span>. These squares follow by
+lowering the highest vector of spin <span
+class="math inline">\(a+1\)</span> and taking the orthogonal spin-<span
+class="math inline">\(a\)</span> and spin-<span
+class="math inline">\((a-1)\)</span> vectors at each total weight. The
+lowering rule used is <span
+class="math inline">\(J_-|a,\alpha\rangle=\sqrt{(a+\alpha)(a-\alpha+1)}
+|a,\alpha-1\rangle\)</span>; normalization gives the denominators in the
+table.</p>
+<p>Matrix-element orthogonality gives, with <span
+class="math inline">\(C_a=a(a+1)\)</span>,</p>
+<p><span class="math display">\[k_t(g)E[D^1(m)]_{\mu\mu}
+=\sum_{a,b}(2a+1)e^{-t(C_a+C_b)/4}
+\sum_{\alpha=-a}^{a}c_{a,b}(\alpha,\mu)e^{i(\alpha+\mu)\theta}.
+\tag{7}\]</span></p>
+<p>The factor <span class="math inline">\(2b+1\)</span> in the second
+heat kernel cancels its orthogonality denominator. For <span
+class="math inline">\(\mu=0\)</span>, put <span
+class="math inline">\(N_0=k_t(g)\lambda_0\)</span> and</p>
+<p><span class="math display">\[B(x)=\sum_{n\in\mathbb
+Z}e^{-tn^2/8}\cos(nx),\qquad
+H(x)=\sum_{n\ne0}e^{-tn^2/8}\frac{\sin(nx)}n,
+\qquad H(x)=\int_0^x(B(y)-1)\,dy.\]</span></p>
+<p>We compute the <span class="math inline">\(b=a\pm1\)</span> and <span
+class="math inline">\(b=a\)</span> parts of (7) separately. In the first
+two parts multiplication by <span
+class="math inline">\(\alpha^2\)</span> becomes <span
+class="math inline">\(-\partial_\theta^2\)</span>. Write <span
+class="math inline">\(n=2a+1\)</span> and shift to <span
+class="math inline">\(s=n\pm1\)</span>; the common heat weight is <span
+class="math inline">\(e^{-ts^2/8}\)</span>. Combining the two parts
+gives</p>
+<p><span class="math display">\[\begin{aligned}
+N_{\rm off}
+&amp;=\sum_{s\ge1}e^{-ts^2/8}
+\left(s+\frac1s\partial_x^2\right)[\cot x\sin(sx)]\\
+&amp;=\frac{\cot x\,H(x)-B(x)+1}{\sin^2x}.
+\end{aligned}\tag{8}\]</span></p>
+<p>The formal lower-spin term at <span
+class="math inline">\(a=1/2\)</span> vanishes because <span
+class="math inline">\((a^2+\partial_\theta^2)\chi_a=0\)</span>; the
+missing upper partner at <span class="math inline">\(s=1\)</span> has
+<span class="math inline">\(\sin((s-1)x)=0\)</span>. This accounts for
+the endpoints of the reindexing. The cancellation in (8) follows
+directly from</p>
+<p><span class="math display">\[\partial_x^2[\cot x\sin(sx)]
+=2\csc^2x\cot x\sin(sx)-2s\csc^2x\cos(sx)
+-s^2\cot x\sin(sx).\]</span></p>
+<p>For the diagonal coupling <span class="math inline">\(b=a\)</span>,
+set <span class="math inline">\(f_n(x)=\sin(nx)/\sin x\)</span>. Its
+elementary differential identity is <span
+class="math inline">\(f_n&#39;&#39;+2\cot
+x\,f_n&#39;=-(n^2-1)f_n\)</span>. Hence</p>
+<p><span class="math display">\[N_{\rm diag}=k_t(g)-1
++2\eta\cot x\left(\frac{V(x)}{\sin x}\right)&#39;,\qquad
+V(x)=\sum_{n\ge2}\frac{n e^{-tn^2/8}}{n^2-1}\sin(nx).\]</span></p>
+<p>The omitted <span class="math inline">\(n=1\)</span> term in the heat
+kernel is exactly 1. Moreover, <span
+class="math inline">\(V&#39;&#39;+V=B&#39;/2+\eta^{-1}\sin x\)</span>
+and <span class="math inline">\(V(0)=0\)</span>, so the Wronskian
+identity gives</p>
+<p><span class="math display">\[\left(\frac{V}{\sin x}\right)&#39;
+=\frac1{\sin^2x}\int_0^x\sin y
+\left(\frac{B&#39;(y)}2+\eta^{-1}\sin y\right)dy.\]</span></p>
+<p>Adding (8), integrating <span class="math inline">\(\sin y
+B&#39;(y)\)</span> once, and using <span
+class="math inline">\(2\int_0^x\sin^2y\,dy=x-\sin x\cos x\)</span>
+yields</p>
+<p><span class="math display">\[N_0=k_t(g)+\frac1{\sin^2x}\left[
+(\eta\cos x-1)B(x)+\cot x\int_0^x(1-\eta\cos y)B(y)\,dy\right].
+\tag{9}\]</span></p>
+<p>Every series above and its displayed derivatives converge absolutely
+for <span class="math inline">\(t&gt;0\)</span>. Poisson summation, with
+the normalization of Theorem 1, gives</p>
+<p><span class="math display">\[B(x)=\sqrt{\frac{8\pi}t}\sum_wG_t(x-2\pi
+w),\qquad
+k_t(g)=\frac{\eta}{t\sin x}\sqrt{\frac{8\pi}t}\,\Xi.\]</span></p>
+<p>Periodicity of the cosine and oddness of <span
+class="math inline">\(T_t\)</span> give</p>
+<p><span class="math display">\[\int_0^x(1-\eta\cos y)B(y)\,dy
+=-\sqrt{\frac{8\pi}t}\,S_t(x):\]</span></p>
+<p>the integration constants are <span
+class="math inline">\(\sum_wT_t(-2\pi w)=0\)</span>, paired in <span
+class="math inline">\(w\)</span>. Substitution into (9) proves (5).</p>
+<p>Weyl reflection with time reversal, as proved in §5, gives <span
+class="math inline">\(\Lambda^1_{11}=\Lambda^1_{-1,-1}\)</span>. Theorem
+2 therefore reads</p>
+<p><span class="math display">\[\lambda_0+2\cos x\,\lambda_1
+=1+2\eta^{-1}\cos x-t\eta^{-1}\sin x\frac{\Theta}{\Xi}.
+\tag{10}\]</span></p>
+<p>Inserting (5), the numerator for <span class="math inline">\(2\cos
+x\,\lambda_1\)</span> factors by <span class="math inline">\(\cos
+x\)</span>, giving (6). This first proves (6) when <span
+class="math inline">\(\cos x\ne0\)</span>; continuity proves it also at
+<span class="math inline">\(x=\pi/2\)</span>. Thus (5)–(6) satisfy the
+trace identity at every angle in the stated interval. Reality and the
+equality of the opposite weights are explicit. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>The zero image and explicit image bounds.</strong> Define
+<span class="math inline">\(R_t(x)=e^{2x^2/t}T_t(x)\)</span> and</p>
+<p><span class="math display">\[A_0=\eta\cos x-1-\cot x\,R_t(x),\qquad
+A_1=\eta-\cos x-\frac{R_t(x)}{\sin x}.\]</span></p>
+<p>Keeping <span class="math inline">\(w=0\)</span> in both numerator
+and denominator of (5)–(6) gives</p>
+<p><span
+class="math display">\[\lambda_0^{(0)}=1+\frac{t\eta^{-1}}{\theta\sin
+x}A_0,
+\qquad
+\lambda_1^{(0)}=\eta^{-1}\left[1-\frac{t}{2\theta\sin x}A_1\right].
+\tag{11}\]</span></p>
+<p>For explicit bounds on all remaining images, put</p>
+<p><span class="math display">\[q=e^{-4\pi(2\pi-\theta)/t},\qquad
+r=e^{-16\pi^2/t},\qquad
+E=\frac{2q}{1-r},\]</span></p>
+<p><span class="math display">\[
+\delta=q\left[\frac2{1-r}+\frac{32\pi^2}{t}
+\frac{1+r}{(1-r)^3}\right],\qquad
+M=\frac{(1+\eta)t}{4(2\pi-x)}.\]</span></p>
+<p>Whenever <span class="math inline">\(\delta&lt;1\)</span>,</p>
+<p><span class="math display">\[|\lambda_0-\lambda_0^{(0)}|
+\le\frac{t\eta^{-1}}{\theta\sin x(1-\delta)}
+\left\{E\bigl[|\eta\cos x-1|+|\cot x|M\bigr]
++\delta|A_0|\right\}, \tag{12}\]</span></p>
+<p><span class="math display">\[|\lambda_1-\lambda_1^{(0)}|
+\le\frac{t\eta^{-1}}{2\theta\sin x(1-\delta)}
+\left\{E\left[\eta-\cos x+\frac M{\sin x}\right]
++\delta|A_1|\right\}. \tag{13}\]</span></p>
+<p>To verify these bounds, write <span
+class="math inline">\(G=G_t(x)\)</span>. The pair <span
+class="math inline">\(w=\pm n\)</span> has Gaussian ratio bounded by
+<span class="math inline">\(2q_n\)</span>, where <span
+class="math inline">\(q_n=e^{-8\pi^2n^2/t+8\pi nx/t}\le q
+r^{n-1}\)</span>. Its contribution to <span
+class="math inline">\(\Xi/(\theta G)-1\)</span> is at most <span
+class="math inline">\((2+32\pi^2n^2/t)q_n\)</span>, by the same <span
+class="math inline">\(\sinh u\le u\cosh u\)</span> estimate as in
+Theorem 1. Consequently</p>
+<p><span class="math display">\[\left|\frac\Theta G-1\right|\le E,\qquad
+\left|\frac\Xi{\theta G}-1\right|\le\delta.\]</span></p>
+<p>For <span class="math inline">\(z\ne0\)</span>, oddness and the
+Gaussian tail bound give</p>
+<p><span class="math display">\[|T_t(z)|\le(1+\eta)\int_{|z|}^\infty
+G_t(u)\,du
+\le\frac{(1+\eta)t}{4|z|}G_t(z).\]</span></p>
+<p>All nonzero images have <span class="math inline">\(|x-2\pi
+w|\ge2\pi-x\)</span>, whence <span
+class="math inline">\(|S_t(x)/G-R_t(x)|\le ME\)</span>. Dividing by
+<span class="math inline">\(\Xi/(\theta G)\)</span> proves (12)–(13),
+including the denominator error. The formulas (5)–(6) hold at all <span
+class="math inline">\(t&gt;0\)</span>; the explicit small-image
+estimates require the displayed condition <span
+class="math inline">\(\delta&lt;1\)</span>. They are exponentially small
+uniformly on each compact subinterval of <span
+class="math inline">\(0&lt;\theta&lt;2\pi\)</span> as <span
+class="math inline">\(t\downarrow0\)</span>. Their displayed prefactors
+become loose at <span class="math inline">\(\theta=0\)</span>, where the
+exact expressions have removable singularities; their exponential
+separation degenerates at the cut locus <span
+class="math inline">\(\theta=2\pi\)</span>.</p>
+<p><strong>Gaussian and central-endpoint checks.</strong> Integration by
+parts in (3), at fixed <span class="math inline">\(x&gt;0\)</span>,
+gives</p>
+<p><span class="math display">\[R_t(x)=\frac{t}{4x}(1-\eta\cos
+x)+O_x(t^2).\]</span></p>
+<p>Thus, with <span class="math inline">\(h=(x/2)\cot(x/2)\)</span>,</p>
+<p><span
+class="math display">\[\lambda_0=1-\frac{t}{4h}+O_\theta(t^2),\qquad
+\lambda_1=1-\frac t8\left(1+\frac1h\right)+O_\theta(t^2).
+\tag{14}\]</span></p>
+<p>Here the exponentially small image errors are absorbed into the
+remainder. This is exactly <span class="math inline">\(1-\frac
+t8[\mu^2+(2-\mu^2)/h]\)</span> for <span
+class="math inline">\(\mu=0,\pm1\)</span>. At <span
+class="math inline">\(\theta=0\)</span>, conjugation invariance and (10)
+give the independent check</p>
+<p><span class="math display">\[\lambda_0(0,t)=\lambda_1(0,t)
+=\frac13\left[1+2\eta^{-1}-\frac{t\eta^{-1}}2
+\frac{\Theta_+(0)}{\partial_\theta\Xi_+(0)}\right].\]</span></p>
+<p>The zero-image limit of either expression (11) is <span
+class="math inline">\([1+2\eta^{-1}-(t/2)\eta^{-1}]/3=1-t/4+O(t^2)\)</span>,
+in agreement with <span class="math inline">\(h(0)=1\)</span>.</p>
+<p><strong>Consequence for the isolated cube.</strong> For cut face
+<span class="math inline">\(j\)</span>, denote the bridge endpoints by
+<span class="math inline">\(A_j,B_j\)</span>, put <span
+class="math inline">\(X_j=\log(A_j^{-1}B_j)\)</span>, and set <span
+class="math inline">\(m_{*j}=A_je^{X_j/2}\)</span>. Let <span
+class="math inline">\(P_j\)</span> project onto weight zero along <span
+class="math inline">\(X_j\)</span> in spin 1. In the three-dimensional
+vector realization it is the rank-one projector <span
+class="math inline">\(\hat X_j\hat X_j^{\mathsf T}\)</span>. With
+(5)–(6) at <span class="math inline">\((\theta_j,t_j)\)</span>, put</p>
+<p><span
+class="math display">\[L_j=\lambda_{1j}I+(\lambda_{0j}-\lambda_{1j})P_j,\qquad
+U_j=D^1(m_{*j}),\qquad
+F_j^+=U_jL_j,\quad F_j^-=L_jU_j^{-1}.\]</span></p>
+<p>The four independent bridges of one isolated cube give its exact
+spin-1 contribution to <span class="math inline">\(\Psi\)</span>:</p>
+<p><span
+class="math display">\[\boxed{\Psi_1=3e^{-t_m}\operatorname{tr}_1
+\left(F_1^{\varepsilon_1}F_2^{\varepsilon_2}
+F_3^{\varepsilon_3}F_4^{\varepsilon_4}\right),\qquad
+\varepsilon_j\in\{+,-\},} \tag{15}\]</span></p>
+<p>in the boundary order and orientations of the mid-face. The exponent
+is <span class="math inline">\(-t_m C_2(1)/2=-t_m\)</span>. Left
+translation reduces each bridge to (5)–(6); inversion takes the adjoint
+and explains the order in <span class="math inline">\(F_j^-\)</span>.
+The independence is the same isolated-cube hypothesis as in Theorem
+3.</p>
+<p>This sector retains an exact anisotropy <span
+class="math inline">\(\lambda_0-\lambda_1=(t/8)(1-1/h)+O_\theta(t^2)\)</span>.
+After transporting axes to a common frame, two such factors obey</p>
+<p><span class="math display">\[[L_i,L_j]=(\lambda_{0i}-\lambda_{1i})
+(\lambda_{0j}-\lambda_{1j})[P_i,P_j],\qquad
+\|[P_i,P_j]\|=|c|\sqrt{1-c^2}\le\tfrac12,\]</span></p>
+<p>where <span class="math inline">\(c\)</span> is the scalar product of
+the transported unit axes. Consequently the axis-dependent matrix
+product in (15) supplies the spin-1 noncommuting correction explicitly;
+generic oblique axes give a commutator of order <span
+class="math inline">\(t_it_j\)</span> at fixed nonzero side angles. The
+scalar factorization of Theorem 3 is special to spin <span
+class="math inline">\(1/2\)</span>.</p>
+<p>For an explicit winding bound on (15), let <span
+class="math inline">\(\epsilon_j\)</span> be the maximum of the right
+sides of (12)–(13) for face <span class="math inline">\(j\)</span>,
+assuming each <span class="math inline">\(\delta_j&lt;1\)</span>, and
+replace each <span class="math inline">\(L_j\)</span> by its zero-image
+value to obtain <span class="math inline">\(\Psi_1^{(0)}\)</span>. Since
+an expectation of unitary matrices has norm at most 1, telescoping the
+four products gives</p>
+<p><span class="math display">\[|\Psi_1-\Psi_1^{(0)}|
+\le9e^{-t_m}\left[\prod_{j=1}^4(1+\epsilon_j)-1\right].
+\tag{16}\]</span></p>
+<p>The factor 9 is the character coefficient 3 times the trace-norm
+bound <span class="math inline">\(|\operatorname{tr}_1
+A|\le3\|A\|\)</span>.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Atlas cell 1 is filled through spin 1 by Theorem 4, with exact matrix
+entries, explicit image bounds and the isolated-cube contribution. For
+<span class="math inline">\(J&gt;1\)</span>, (7) with the spin-<span
+class="math inline">\(J\)</span> Clebsch–Gordan squares is still an
+exact spectral representation. The finite Gaussian-tail reduction and
+its bounds have been completed here for <span
+class="math inline">\(J=1\)</span>; the higher-spin entries and
+estimates permitting the full character sum remain the next obligation
+before the isolated-cube Laplace claim of Proposition 7. The full
+mid-plane and iteration remain the subsequent atlas cells.</p>
 
 </main>
 <footer class="site"><div class="wrap">

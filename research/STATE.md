@@ -61,7 +61,7 @@ fill its cells (open cells in its §5).
    TV distance $\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ in $D=3$; the route fails in
    $D=4$ (loop density per cell fixed by $g$). The $SU(2)$ midpoint character
    is exact for every spin ([closed form](../notes/su2-midpoint-exact.md)).
-   Next: its diagonal entries $\Lambda^J_{\mu\mu}$, then a mid-plane, then iteration.
+   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); next: higher spins and their sum, then a mid-plane, then iteration.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.

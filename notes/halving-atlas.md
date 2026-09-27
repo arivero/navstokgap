@@ -69,7 +69,7 @@ way; in mechanics refining makes each cell more quantum
 | --- | --- | --- | --- | --- |
 | free ($\mathbb R^n$) | exact | exact defect (Proposition 2 of the series/parallel note) | Gaussian, exact | blocked actions converge to a Gaussian fixed point (known, Bell--Wilson; for this blocking asserted) |
 | $U(1)$ | exact (Proposition 3) | exact charge form, vortex bound (Proposition 4, Corollary) | one step equals the free step up to density $e^{-\pi^2/(8t)}$ (Theorem 5, refereed); whole measure within TV $2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ of the monopole-free part ([monopole note](villain-monopole-refinement.md)) | free photon (Gross 1983, known) |
-| $SU(2)$ | midpoint characters exact for every spin; spin-$\frac12$ sector of the cube exact ([closed form](su2-midpoint-exact.md), Theorems 1--3) | open | formal (Proposition 7), needs the uniform Laplace remainder | open |
+| $SU(2)$ | midpoint characters exact for every spin; spin-$\frac12$ and spin-1 cube sectors exact, with matrix image bounds for spin 1 ([closed form](su2-midpoint-exact.md), Theorems 1--4) | open | formal (Proposition 7), needs the uniform Laplace remainder | open |
 | $SU(3)$ | curvature term explicit, softening $t_j|X_j|^2/512$ (group-general form of Proposition 6) | open | formal | open; the gap $C_3\hbar c\lambda_3$ is the infrared obligation |
 
 ## 4. What emerges, read across the atlas
@@ -97,9 +97,7 @@ way; in mechanics refining makes each cell more quantum
 
 ## 5. Open cells
 
-1. $SU(2)$ cube, $J\ge1$: the diagonal entries $\Lambda^J_{\mu\mu}$ of the
-   midpoint's matrix expectation, by the Clebsch--Gordan form of the
-   orthogonality computation (closed-form note, §5).
+1. $SU(2)$ cube: *filled through $J=1$* ([Theorem 4](su2-midpoint-exact.md), exact diagonal entries, image bounds and cube sector); $J>1$ entries and control of the full spin sum remain open.
 2. $SU(2)$ full mid-plane in $1+2$: small-field expansion of $\Psi$, the
    non-abelian counterpart of Proposition 4.
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
