@@ -464,7 +464,13 @@ half-widths $ab$ in units of $\hbar$, the action scale of the comparison
 Newton takes to zero (the windows' area is $4ab$). It shares with the
 Planck paper's floor only the total-variation input $(1-2\epsilon)$; for small
 $\epsilon$, Slepian's asymptotics give $c_*(\epsilon)\approx\frac12\ln(1/\epsilon)$ (reviewer's
-recollection), a few units of $\hbar$ at practical error levels. It holds for every
+recollection), a few units of $\hbar$ at practical error levels. (Check,
+2026-09-27: the large-$c$ formula $1-\lambda_0(c)\simeq4\sqrt{\pi c}\,e^{-2c}$ of
+[Slepian 1965](https://doi.org/10.1002/sapm196544199) and Fuchs 1964, recalled,
+printed passage not yet located, turns $\lambda_0\ge(1-2\epsilon)^2\simeq1-4\epsilon$ into
+$2c-\frac12\ln c-\frac12\ln\pi\ge\ln(1/\epsilon)$, so
+$c_*(\epsilon)=\frac12\ln(1/\epsilon)+\frac14\ln\ln(1/\epsilon)+O(1)$; the leading term
+agrees with the reviewer.) It holds for every
 $\hbar\ne0$; the state route of the routes note must reproduce it separately.
 
 ## 7. The same structure in Rivero 1998: the classical Dirac measure and its constant
