@@ -423,7 +423,14 @@ Clebsch–Gordan coefficients of <span class="math inline">\(j_1\otimes
 J\)</span>, is the tool for them.</p>
 <h2 id="the-spin-1-matrix-and-isolated-cube">6. The spin-1 matrix and
 isolated cube</h2>
-<p><strong>Theorem 4 (2026-09-27, GPT-6 Astra).</strong> The spin-1
+<p><strong>Theorem 4 (2026-09-27, GPT-6 Astra; refereed by Fable the
+same day, all fifteen items verified by hand, no errors).</strong>
+Notation of this section: <span class="math inline">\(E\)</span> in the
+image bounds, <span class="math inline">\(A_0\)</span>, <span
+class="math inline">\(A_1\)</span>, <span
+class="math inline">\(B(x)\)</span> and <span
+class="math inline">\(P_j\)</span> are local to Theorem 4 and differ
+from the quantities of the same names in Theorems 1 and 3. The spin-1
 midpoint matrix is exactly determined by two real entries <span
 class="math inline">\(\lambda_0=\Lambda^1_{00}\)</span> and <span
 class="math inline">\(\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}\)</span>.
@@ -605,10 +612,39 @@ class="math inline">\(\Lambda^1_{11}=\Lambda^1_{-1,-1}\)</span>. Theorem
 x\,\lambda_1\)</span> factors by <span class="math inline">\(\cos
 x\)</span>, giving (6). This first proves (6) when <span
 class="math inline">\(\cos x\ne0\)</span>; continuity proves it also at
-<span class="math inline">\(x=\pi/2\)</span>. Thus (5)–(6) satisfy the
-trace identity at every angle in the stated interval. Reality and the
-equality of the opposite weights are explicit. <span
+<span class="math inline">\(x=\pi/2\)</span>. Here (6) is obtained from
+(5) through (10), and (10) itself follows from (7) because <span
+class="math inline">\(\sum_\mu c_{a,b}(m-\mu,\mu)=1\)</span>; so the
+trace is a consistency of the framework. Reality and the equality of the
+opposite weights are explicit. <span
 class="math inline">\(\square\)</span></p>
+<p><strong>Independent check through the <span
+class="math inline">\(\mu=1\)</span> column (Fable referee,
+2026-09-27).</strong> Reducing (7) directly at <span
+class="math inline">\(\mu=1\)</span>, with total weight <span
+class="math inline">\(m\)</span>, <span
+class="math inline">\(p=2m\)</span> and <span
+class="math inline">\(q=p-1\)</span>: the <span
+class="math inline">\(b=a\pm1\)</span> parts combine to the summand
+<span
+class="math inline">\((s+p)(s+p-2)+(s-p)(s-p+2)=2s^2+2q^2-2\)</span>,
+where <span class="math inline">\(q\)</span> runs over the weights of
+spin <span class="math inline">\((s-1)/2\)</span>, so the off-diagonal
+part is <span
+class="math inline">\(\sum_{s\ge1}(e^{-ts^2/8}/s)[(s^2-1)f_s+\cot
+x\,f_s&#39;]\)</span> with <span class="math inline">\(f_s\)</span> the
+character sum of spin <span class="math inline">\((s-1)/2\)</span>; the
+diagonal part has bracket <span class="math inline">\(2f_n&#39;(i-\cot
+x)=-2f_n&#39;e^{-ix}/\sin x\)</span>. Assembling with <span
+class="math inline">\(H&#39;=B-1\)</span> and the Wronskian of the
+diagonal step reproduces (6) exactly. Since (6) was derived from (5) and
+(10), this confirms (5) as well. (Before (9), the <span
+class="math inline">\(-1\)</span> of the diagonal part is absorbed by
+<span class="math inline">\(1-\cos^2x=\sin^2x\)</span>.) At first order
+<span class="math inline">\(\lambda_0-\lambda_1=-\frac
+t8(\frac1h-1)&lt;0\)</span>, since <span
+class="math inline">\(h&lt;1\)</span> on <span
+class="math inline">\(0&lt;\theta&lt;2\pi\)</span>.</p>
 <p><strong>The zero image and explicit image bounds.</strong> Define
 <span class="math inline">\(R_t(x)=e^{2x^2/t}T_t(x)\)</span> and</p>
 <p><span class="math display">\[A_0=\eta\cos x-1-\cot x\,R_t(x),\qquad

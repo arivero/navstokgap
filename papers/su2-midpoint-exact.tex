@@ -283,10 +283,14 @@ computation of Theorem 1, with the Clebsch--Gordan coefficients of
 \subsection{6. The spin-1 matrix and isolated
 cube}\label{the-spin-1-matrix-and-isolated-cube}}
 
-\textbf{Theorem 4 (2026-09-27, GPT-6 Astra).} The spin-1 midpoint matrix
-is exactly determined by two real entries \(\lambda_0=\Lambda^1_{00}\)
-and \(\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}\). The formulas below
-give both entries, including winding, for every \(t>0\) and
+\textbf{Theorem 4 (2026-09-27, GPT-6 Astra; refereed by Fable the same
+day, all fifteen items verified by hand, no errors).} Notation of this
+section: \(E\) in the image bounds, \(A_0\), \(A_1\), \(B(x)\) and
+\(P_j\) are local to Theorem 4 and differ from the quantities of the
+same names in Theorems 1 and 3. The spin-1 midpoint matrix is exactly
+determined by two real entries \(\lambda_0=\Lambda^1_{00}\) and
+\(\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}\). The formulas below give
+both entries, including winding, for every \(t>0\) and
 \(0<\theta<2\pi\). They involve a Gaussian tail, which retains
 higher-order curvature corrections beyond the character formula.
 
@@ -434,9 +438,25 @@ Weyl reflection with time reversal, as proved in §5, gives
 
 Inserting (5), the numerator for \(2\cos x\,\lambda_1\) factors by
 \(\cos x\), giving (6). This first proves (6) when \(\cos x\ne0\);
-continuity proves it also at \(x=\pi/2\). Thus (5)--(6) satisfy the
-trace identity at every angle in the stated interval. Reality and the
-equality of the opposite weights are explicit. \(\square\)
+continuity proves it also at \(x=\pi/2\). Here (6) is obtained from (5)
+through (10), and (10) itself follows from (7) because
+\(\sum_\mu c_{a,b}(m-\mu,\mu)=1\); so the trace is a consistency of the
+framework. Reality and the equality of the opposite weights are
+explicit. \(\square\)
+
+\textbf{Independent check through the \(\mu=1\) column (Fable referee,
+2026-09-27).} Reducing (7) directly at \(\mu=1\), with total weight
+\(m\), \(p=2m\) and \(q=p-1\): the \(b=a\pm1\) parts combine to the
+summand \((s+p)(s+p-2)+(s-p)(s-p+2)=2s^2+2q^2-2\), where \(q\) runs over
+the weights of spin \((s-1)/2\), so the off-diagonal part is
+\(\sum_{s\ge1}(e^{-ts^2/8}/s)[(s^2-1)f_s+\cot x\,f_s']\) with \(f_s\)
+the character sum of spin \((s-1)/2\); the diagonal part has bracket
+\(2f_n'(i-\cot x)=-2f_n'e^{-ix}/\sin x\). Assembling with \(H'=B-1\) and
+the Wronskian of the diagonal step reproduces (6) exactly. Since (6) was
+derived from (5) and (10), this confirms (5) as well. (Before (9), the
+\(-1\) of the diagonal part is absorbed by \(1-\cos^2x=\sin^2x\).) At
+first order \(\lambda_0-\lambda_1=-\frac t8(\frac1h-1)<0\), since
+\(h<1\) on \(0<\theta<2\pi\).
 
 \textbf{The zero image and explicit image bounds.} Define
 \(R_t(x)=e^{2x^2/t}T_t(x)\) and
