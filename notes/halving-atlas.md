@@ -202,6 +202,24 @@ way; in mechanics refining makes each cell more quantum
   two-dimensional gauge theory are all series.
 - **Parallel moves carry everything that renormalizes.** Their number,
   $\binom{D-1}2$, is zero exactly where the theory is exactly soluble.
+- **Additivity is universal; locality is one-dimensional** (2026-09-28).
+  Integrating out the fine variables of a Gaussian step leaves the Schur
+  complement of the action, its minimum over the fine variables with the
+  coarse ones fixed (the Dirichlet principle), and successive Schur
+  complements compose exactly ((13) of the
+  [four-dimensional note](four-dimensional-parallel-log.md)). In Newton's
+  cell this additivity is Theorem 2 of the
+  [cut-measure note](cut-measure-newton.md): the hats of successive cuts
+  are orthogonal and their energies add up to $K_\tau$. What one dimension
+  alone grants is locality: the minimizer between two cut points is the
+  chord, so the blocked action is again nearest-neighbour and the series
+  move closes; $1+1$ gauge theory, with no transverse planes, shares it.
+  With transverse planes the minimizer is coupled across the mid-space,
+  the Schur complement is non-local, and its local truncation error is
+  the parallel defect: (5) and Corollary 2$_s$ of the
+  [series/parallel note](series-parallel-gauge-refinement.md) split it
+  into a displacement part, which at $v=0$ is the convexity gap of the
+  interpolated flux, and a noise part from relaxing the interpolant.
 - **The exponential ladder.** Each compact correction left by a step is
   $e^{-c/t}$ (vortices, monopoles, dislocations). In $D<4$ it is summable
   per physical volume at fixed coupling, so compact effects die; in $D=4$

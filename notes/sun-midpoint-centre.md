@@ -198,7 +198,10 @@ $3P^\vee$, below the root images by the factor $e^{-16\pi^2/t}$.
 
 It is an exact statement about one bridge, the building block of the
 parallel insertion, for every compact simply connected group, every
-representation and every cut fraction. In the refinement it fixes which
+representation and every cut fraction. It concerns characters only: the
+diagonal entries of the midpoint matrix $E\,D^\lambda(m)$ differ from the weight
+terms of (1), since Theorem 4 of the $SU(2)$ note gives the spin-1 entries
+an additional Gaussian tail, so atlas cell 1 is unaffected. In the refinement it fixes which
 windings of a single step act through the centre. The weights are small
 per step: in $1+3$ the image exponents $8\pi^2$ (roots) and $24\pi^2$ (central
 $SU(3)$ trisection images) lie far beyond the per-volume threshold
