@@ -14,7 +14,7 @@ diagonal sum with no cross terms for any number of critical points. The
 separate diagonalization the proof of Theorem 1 calls for is the
 paper's own eq. (2). (iii) Theorem 4's premise is a single-valued scalar
 stationary-state premise (a trivial line bundle on the angle circle),
-named "coherent-state premise" below by mistake. (iv) The paper itself
+named "coherent-state premise" in the first version by mistake. (iv) The paper itself
 asserts that $h$ is arbitrary (its eqs. (9)--(10)), so Theorems 2--5
 agree with it; selecting one value is the later programme's question.
 
@@ -30,7 +30,7 @@ limits and every joint zero-resolution limit agree (Theorems 2--3).
 For Newton's central-force polygon, angular momentum and equal areas
 survive every central kick. Requiring a separated angular phase to descend
 to the angle circle gives $L=n h$, or $\oint L\,d\theta=2\pi n h$
-(Theorem 4). This condition uses an additional coherent-state premise.
+(Theorem 4). This condition uses an additional single-valued stationary-state premise.
 For one fixed orbit it permits $h=|L|/n\to0$. Hooke and Kepler radial
 actions give the corresponding Keller--Maslov conditions explicitly;
 even a fixed torus satisfying both conditions admits a sequence
