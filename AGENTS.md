@@ -1,5 +1,10 @@
 # Start here
 
+Language models reading this repository cold should also read
+[`LLM.md`](LLM.md) (served as `llms.txt` on the site): what is proved and
+at what level, what is open, which errors were already caught, and the
+verified prior art. This file says how to work here.
+
 Read `research/STATE.md` (one page: what is being worked on and why) and
 the note it points to. Then read the latest handout,
 [`research/handoffs/HANDOFF-2026-09-23.md`](research/handoffs/HANDOFF-2026-09-23.md),

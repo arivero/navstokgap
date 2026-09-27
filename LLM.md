@@ -1,0 +1,478 @@
+# LLM.md: what this repository knows
+
+> navstokgap asks what survives refinement in Newton's action problem and
+> in pure SU(3) Yang--Mills: a positive action floor on recorded
+> comparisons (Newton), and a continuum mass gap (gauge theory). This file
+> maps what is proved, at what level, what is open, which errors were
+> caught, and where the evidence is. Human-facing site:
+> https://arivero.github.io/navstokgap/ ; repository:
+> https://github.com/arivero/navstokgap ; working rules: AGENTS.md.
+
+Written for language models reading `arivero/navstokgap` cold. `AGENTS.md`
+says how to work here; this file says what is known, at what level, what is
+open, which errors were already caught, and where the evidence is. Every
+claim links to the note that holds its proof. Paths are relative to the
+repository root. Status vocabulary, used throughout: **proved, refereed**
+(a written proof in a note, checked claim by claim by an adversarial
+reviewer whose verdict is recorded in the note or the commit); **proved,
+unrefereed**; **conditional** (a theorem whose hypothesis is itself open);
+**formal** (a derivation that assumes an unproved uniform estimate);
+**exact** (closed-form identity); **known** (literature, cited with DOI);
+**reading** (an identification or interpretation, labelled as such);
+**open**. Dates are 2026; the state described is that of 2026-09-27.
+
+## 1. Orientation
+
+The repository pursues two proof goals inside one frame. The frame is
+**what survives refinement**: a limit is built by inserting one new
+variable at a time (a Newtonian instant, a lattice edge or cell) and
+asking what the old observations and dynamics recover
+([three-continuum-limits](notes/three-continuum-limits.md),
+[refinement-composition-and-limit](notes/refinement-composition-and-limit.md)).
+Goal one is **Newton action necessity**: a logical argument, from
+independently justified physical premises, that the comparison Newton
+takes to zero in *Principia* Book I (inertial line against constant-force
+parabola, Lemmas X--XI, Proposition I) carries a positive action floor once
+it must be recorded. Goal two is the **continuum existence and mass gap of
+pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten sense
+([digest](notes/millennium-problem-definitions.md)). QCD pions are a
+benchmark for which symmetries a mechanism preserves, and no fermionic
+construction is in the queue. The mid-term goal (user, 2026-09-27) is a
+collective **atlas of halving**: what one lattice halving does, what it
+leaves, and what survives, for each dimension and group
+([halving-atlas](notes/halving-atlas.md); its §5 lists the open cells).
+The user's thesis, first stated in Rivero 1998
+([arXiv:quant-ph/9803035](https://arxiv.org/abs/quant-ph/9803035), the
+Feynman formula "as a consistency condition for the existence of certain
+Dirac measures over functional spaces") and continued in Rivero 2003
+([arXiv:math/0302285](https://arxiv.org/abs/math/0302285), the time-graded
+"elementary school" groupoid), is that **quantization is a consistency
+condition that Newton's rework of mechanics missed**; the repository reads
+its theorems against that thesis in
+[principia-fifth-postulate §7](notes/principia-fifth-postulate.md),
+[dimension-ladder](notes/dimension-ladder.md) and
+[tangent-groupoid-trajectories](notes/tangent-groupoid-trajectories.md),
+and tests it in [rivero-1998-conjecture-central-forces](notes/rivero-1998-conjecture-central-forces.md).
+Live queue: [research/STATE.md](research/STATE.md). Public site with
+every note and PDF: <https://arivero.github.io/navstokgap/> (tracks in
+`scripts/build_site.py`). Formal and textual *Principia* work lives in the
+sibling repository `newtonlean`; cite it, do not edit it.
+
+## 2. Claim map
+
+Constants are explicit everywhere: $\hbar$, $c$, $k_B$, and the coupling
+$\lambda_D=\hbar g_{\rm cl}^2$ with $[\lambda_D]={\rm length}^{D-4}$; heat time
+$t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
+
+### 2a. Newton side
+
+| Result | Statement | Status | Note |
+| --- | --- | --- | --- |
+| Prop. 1 (geometry) | Vertex impulse, step sagitta and step area all vanish with the mesh; $2ms/\tau^2=F$ at every step; no floor from geometry | proved, refereed | [planck-gap-paper §2](notes/planck-gap-paper.md) |
+| Thm 2 (Gaussian floor) | Non-adaptive marks with $\delta\Delta\ge\kappa$, invariant tests: $\tau\Delta E=F^2\tau^3/2m\ge48z_{1-\epsilon}^2\kappa$, sharp | proved, refereed | [planck-gap-paper §3](notes/planck-gap-paper.md), [mark-cost](notes/mark-cost-and-statistical-floor.md) |
+| Thm 4 (mark cost) | Von Neumann mark: error operator and delivered impulse are conjugate, so $\kappa\ge\hbar/2$ for every probe state | proved, refereed | [planck-gap-paper §4](notes/planck-gap-paper.md) |
+| Thm 5 (every probe) | $s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$, $s=F\tau^2/(2m)$ | proved, refereed | [record-costs-recoil](notes/record-costs-recoil.md) |
+| **Thm 6 (every instrument)** | $\frac s8\sum_j\Delta(\hat D_j)+\frac J2\sum_j\Delta(\hat X_j)\ge\hbar\arcsin(1-2\epsilon)$, $J=F\tau$; sagitta pairs with momentum disturbance, impulse with position; no error--disturbance relation used | proved, refereed (three Fable batches, 2026-09-23) | [record-costs-disturbance](notes/record-costs-disturbance.md), [paper §5](notes/planck-gap-paper.md) |
+| Thm 7 (polygon phase) | Newton's inscribed polygon differs from the parabola by the pure phase $F^2\sum_j\tau_j^3/(24m\hbar)$; midpoint halving removes it in Archimedes' proportions | proved, refereed | [polygon-lift-phase](notes/polygon-lift-phase.md) |
+| Thm 8 (every force law) | One functional $\mathcal K_\tau[f]=\frac1{2m}\iint G_\tau ff$ gives both the phase and the sharp Gaussian mark bound | proved, refereed | [polygon-lift-phase §6](notes/polygon-lift-phase.md) |
+| Thm 9 (ladder) | Arrow: $mv^2\tau\ge8z^2\kappa$; Newton: Thm 2; static cone: nothing | proved, refereed | [planck-gap-paper §9](notes/planck-gap-paper.md) |
+| Aperture bound | Unmarked preparation of extent $L,P$: $F\tau L+\frac{F\tau^2}{2m}P\ge\hbar\theta$; area form only at the balanced aperture | proved, refereed | [record-distance-path-length](notes/record-distance-path-length.md) |
+| Thm A (independence) | Moyal product $*_\hbar$ satisfies Newton's second law for every real $\hbar$; quadratic cases evolve classically | proved, refereed (Fable) | [principia-fifth-postulate §3](notes/principia-fifth-postulate.md) |
+| Thm B (one constant) | Under (H1) associativity, (H2) affine-symplectic covariance, (H3) conjugation: $*=*_\hbar$, unique real $\hbar$ (Gutt 1983) | proved, refereed; (H2) is a premise outside the *Principia* | [fifth-postulate §4](notes/principia-fifth-postulate.md) |
+| Thm B$'$ (state route) | Covariant, noise-closed Gaussian state restriction is $\sqrt{\det\Sigma}\ge\zeta$; $\zeta=\hbar/2$ in QM | proved, refereed | [fifth-postulate §4](notes/principia-fifth-postulate.md) |
+| Thm C (floor) | $\hbar\ne0$: $\Delta q\Delta p\ge|\hbar|/2$ and Thm 6 with $|\hbar|$; $\hbar=0$ with state completeness: no floor | proved, refereed (C(c) rewritten) | [fifth-postulate §5](notes/principia-fifth-postulate.md) |
+| Thm D (similarity) | $D_\lambda$ is an automorphism of $*_\hbar$ iff $\hbar=0$; two products up to isomorphism | proved, refereed | [fifth-postulate §6](notes/principia-fifth-postulate.md) |
+| Thm E (complementarity) | $\arccos\alpha+\arccos\beta\ge\arccos\sqrt{\lambda_0(ab/|\hbar|)}$ (Slepian--Pollak); windows need $ab\ge|\hbar|c_*(\epsilon)$ | proved, refereed (reviewer supplied the proof) | [fifth-postulate §6b](notes/principia-fifth-postulate.md) |
+| Thm U (unit) | Kirchhoff, Wien scaling, finite spectrum, Rayleigh--Jeans limit give $h_{\rm rad}=(8\pi k_B^4/c^3\sigma')^{1/3}$, enclosure-independent; $h_P=(\pi^4/15)^{1/3}h_{\rm rad}$ | proved, refereed (Astra) | [necessity-unit-and-indeterminacy §2](notes/necessity-unit-and-indeterminacy.md) |
+| Thm I (two pointers) | Liouville dynamics + product preparations with density ceiling + Bayesian readouts + two pulses with stored first reading give posteriors of arbitrarily small $\Delta q\Delta p$ | proved, refereed (four-part premise) | [necessity-unit §3](notes/necessity-unit-and-indeterminacy.md) |
+| Thm F (classical Thm 6) | Uniform statistical-speed bound with constant $h_*$ gives (Thm 6) classically; Gaussian covariance floor $\zeta$ gives $h_*=2\zeta$ | conditional, proved (Astra) | [newton-indeterminacy-routes](notes/newton-indeterminacy-routes.md) |
+| Thermodynamic no-floor | Records at temperature $T$: $\eta\ge A_0e^{-W/k_BT}$, a trade-off with no action floor | proved, unrefereed | [thermodynamic-records-no-floor](notes/thermodynamic-records-no-floor.md) |
+| SED link | Lorentz-invariant background: resonant Gaussian area $\kappa$; *if* SED derives Planck, $2\zeta=h_P/2\pi=\gamma h_{\rm rad}$, $\gamma=(\pi^4/15)^{1/3}/2\pi\approx0.297$ | conditional (SED Planck derivation disputed), refereed | [sed-zeta-radiation-link](notes/sed-zeta-radiation-link.md) |
+| Closure under recording | Shared Gaussian bath at fixed cutoff: sharp two-pointer posteriors survive (Thms 1--2); closure needs a readout law $\text{imprecision}\times\text{kick}\ge\kappa$ on every terminal readout (Prop. 3), which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory | proved, refereed (Fable, two passes); negative for closure | [sed-closure-under-recording](notes/sed-closure-under-recording.md) |
+| Record as parallel move | Forgetting a Gaussian record of width $\sigma$ convolves momentum with variance $\hbar^2/4\sigma^2$; refinement with records converges iff $\sum\sigma_j^{-2}<\infty$; identity for $\hbar=0$ | proved, refereed | [newton-record-parallel-move](notes/newton-record-parallel-move.md) |
+| Insertion law | Eliminating an inserted time changes the discrete action by $-F^2uv(u+v)/(8M)$; cubic counterterm $-F^2h^3/(24M)$ restores exact composition; $\|Q_\pi-U_T\|\le F^2T|\pi|^2/(24M\hbar)$ (Thm 3) | proved, unrefereed | [refinement-composition-and-limit §§2--4](notes/refinement-composition-and-limit.md) |
+| Groupoid Prop. 1 | Refinement consistency of a trajectory is the morphism property on the time-graded groupoid: $(\min,+)$ classically, convolution quantum mechanically | proved (elementary); rest of note is reading | [tangent-groupoid-trajectories](notes/tangent-groupoid-trajectories.md) |
+| Rivero 1998 tests | Quartic: real-time path integral exists for every $h>0$; halved functional fails on a two-cell partition (Thm 1); angular descent gives $L=nh$ (Thm 4); EBK conditions still allow $h\downarrow0$ (Thm 5) | proved, unrefereed; file untracked at drafting time | [rivero-1998-conjecture-central-forces](notes/rivero-1998-conjecture-central-forces.md) |
+
+### 2b. Gauge side
+
+| Result | Statement | Status | Note |
+| --- | --- | --- | --- |
+| Series/parallel factorization (Prop. 1) | One directional halving of a heat-kernel lattice theory is exactly: series moves (heat-kernel convolution, close in every $D$) times a parallel factor $\Psi$, a $(D-1)$-dimensional gauge theory on the mid-plane with Brownian-bridge edge laws; $\binom{D-1}2$ transverse planes (0, 1, 3 for $D=2,3,4$) | proved, refereed (Fable, Astra) | [series-parallel-gauge-refinement §2](notes/series-parallel-gauge-refinement.md) |
+| Free-field defect (Prop. 2) | $\mathcal D\le0$ exact quadratic form, relative size $\le a^2K^2/16+(Ga)^2/8$; equals the error of Migdal bond moving | exact, refereed | [series/parallel §3](notes/series-parallel-gauge-refinement.md) |
+| $U(1)$ cube and mid-plane (Props. 3--4, vortex Corollary) | Closed forms; parity factor $\rho_t$ isolates the large-field term N4; vortex bound density $O(e^{-c/t})$ | exact, refereed (ACCEPT) | [series/parallel §4](notes/series-parallel-gauge-refinement.md) |
+| **$U(1)$ Theorem 5** | One unperturbed step in $D=3$ equals the free step up to extensive error of density $e^{-\pi^2/(8\lambda_3a)}$ on the small-field set | proved, refereed (Astra REFINE applied) | [series/parallel §4](notes/series-parallel-gauge-refinement.md) |
+| Monopole TV theorem (Thm 2) | $D=3$: $\|\mu_a-\mu_a^0\|_{\rm TV}\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})$; Cor. 2$'$: iteration reduces to exact Gaussian blocking; Thm 3: the same bound is useless in $D=4$ at fixed $g$ (route failure recorded) | proved, refereed (Fable) | [villain-monopole-refinement](notes/villain-monopole-refinement.md) |
+| $SU(2)$ midpoint Prop. 6 | Bridge midpoint covariance $\frac t4{\rm diag}(1,1/h,1/h)$, $h=\frac d4\cot\frac d4$; group-general softening $t_j|X_j|^2/512$ for $SU(3)$ | proved (leading order), refereed | [series/parallel §4](notes/series-parallel-gauge-refinement.md) |
+| $SU(2)$ Theorems 1--4 | Thm 1: exact spin-$\frac12$ midpoint character; Thm 2: exact for every spin; Thm 3: spin-$\frac12$ cube sector exact; Thm 4 (Astra): spin-1 diagonal entries exact with winding, image bounds | exact, refereed (Fable; Thm 4 all fifteen items by hand) | [su2-midpoint-exact](notes/su2-midpoint-exact.md) |
+| $SU(2)$ mid-plane order $t$ | $\delta_t^{12}=\delta_t^{13}=\frac t{24}\int_{\mathcal B}q/R>0$, $\delta_t^{23}=t(-\frac1{12}+2\mathcal I)<0$; other bulk operators dimension $\ge6$; explicit flat-holonomy torus term (16); P($\alpha$) gains the clause $\min_jN_j\ge c_0/t$ | formal, refereed (two Fable passes, all items accepted as a formal calculation) | [su2-midplane-order-t](notes/su2-midplane-order-t.md) |
+| Hypothesis P($\alpha$) | One-step small-field bound on the log-ratio $\mathcal D$ with coupling shifts $O(t)$ and remainder $Ct^\alpha\sum_p(1+|\log U_p|^2/t)$, stable under iteration | open hypothesis; Prop. 7 gives it for one cube conditionally on uniform Laplace bounds | [series/parallel §4](notes/series-parallel-gauge-refinement.md) |
+| Zero-spacing Thm 2 | $D=2$, any symmetric class-function action: limits are exactly the conjugation-invariant Lévy exponents $\psi(R)=\frac{\sigma^2}2C_2(R)+\int(1-{\rm Re}\chi_R/d_R)d\nu$; Yang--Mills iff Lindeberg; circle spectrum $E_R-E_0=\hbar cL\psi(R)$ | proved, refereed (Astra REFINE applied) | [zero-spacing-any-action §2](notes/zero-spacing-any-action.md) |
+| Zero-spacing Prop. 1 | Parallel product of $U(1)$ heat kernels is a heat kernel at $st/(s+t)$ plus shifted images of mixture weight $e^{-2\pi^2m^2/(s+t)}$ | exact, refereed | [zero-spacing §1](notes/zero-spacing-any-action.md) |
+| 4D large-field threshold | Density $(a\Lambda)^{2b_0c}a^{-4}$ vanishes iff $c>2/b_0=96\pi^2/(11N)$: $12/(11N)$ of the instanton action, the known $6/11$ dislocation criterion for $SU(2)$ | known (Pugh--Teper, Göckeler et al. 1989), recovered; strict threshold refereed ACCEPT | [zero-spacing §3](notes/zero-spacing-any-action.md) |
+| Error budget by dimension | Perturbative $O(t_n)$, large-field $a_n^{-D}e^{-c/t_n}$, jump $\nu$; summable for $D<4$, running for $D=4$, no small-field regime for $D>4$ | organizing table; universality inference REJECTED by referee | [zero-spacing §3](notes/zero-spacing-any-action.md) |
+| Time-only halving | Electric faces are series (semigroup), magnetic faces parallel (exponential family); defect is Trotter non-commutation; heat-kernel anisotropy formula (1) fails there | reading of known results | [halving-atlas §5.5](notes/halving-atlas.md), [zero-spacing §1](notes/zero-spacing-any-action.md) |
+| T1 | Finite lattice: unique ground state, $\delta>0$, every $a,N_s,g$, compact $G$ | proved | [mass-gap-obligations-lattice](notes/mass-gap-obligations-lattice.md) |
+| T2 | Volume-uniform strong-coupling gap: Wilson transfer matrix $\Delta_W\ge\frac{\hbar c}a4\log(g^2/176)$ for $g^2\ge176$ (rigorous 1056); Kogut--Susskind $\Delta_{\rm KS}\ge\frac43g^2\hbar c/a$ for $g^2\ge388$ | proved (from Kotecký--Preiss, Yarotsky) | [wilson-strong-coupling-explicit](notes/wilson-strong-coupling-explicit.md), [kogut-susskind-strong-coupling-explicit](notes/kogut-susskind-strong-coupling-explicit.md) |
+| T2$'$, T3, T4 | Gap at every coupling; scaling limit $\delta_\infty/(a\Lambda_{\rm lat})\to m/\hbar c\Lambda$; continuum theory with the axioms | open (T2$'$ false for $U(1)$ and for $SU(N\ge5)$ Wilson action) | [mass-gap-position](notes/mass-gap-position.md), [mass-gap-openings](notes/mass-gap-openings.md) |
+| Conditional theorem | H1 (blocking clusters to $\xi\simeq a$) + H2 (certified mixing on one box) $\Rightarrow m\ge\hbar c\gamma'/a_*$ | conditional | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
+| Small volume (S) | Gap-transfer lemma proved; H1--H3 inequalities open; $\Delta=\delta_1g^{2/3}\hbar c/L[1+O(g^{2/3})]$ upper side proved | conditional | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md) |
+| Seven closed routes | Variational, free expansion, projection blocking, flow conjugation, flow before decimation, Agmon, Gibbs domination: each fails for a stated reason with constants | recorded failures | [mass-gap-position §3](notes/mass-gap-position.md) |
+| G07, G08 | Supplied vs generated gaps; YM quantum mechanics gap $\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ from an action floor on transverse area (C133) | exploratory, ledgered | [low-dimensional-mass-gap](notes/low-dimensional-mass-gap.md), [action-floor-yang-mills-gap](notes/action-floor-yang-mills-gap.md) |
+
+## 3. Conventions a model must respect
+
+- **$\hbar$ and $c$ explicit in every formula.** Never "set $\hbar=c=1$", even
+  for readability. Energies as multiples of $\hbar c/L$ or $\hbar c/a$;
+  $[a,p]=i\hbar$; $g^2=\hbar g_{\rm cl}^2$ in $D=4$; write $\hbar c|k|$,
+  $\hbar c/(2g^2)$ before magnetic terms, $g^2c/(2\hbar)$ before electric
+  terms (conventions of [G07 Prop. 7](notes/low-dimensional-mass-gap.md)).
+- **No numerical or symbolic verification scripts** (user rule, 2026-09-09).
+  Written derivations are the check. Document tooling (pandoc, LaTeX,
+  pdftotext, `make check`, shell queries to Crossref) is allowed.
+- **One-note builds:** `make paper NOTE=<slug>`; then `make site`; then
+  `python3 scripts/check_repository.py`. Never `make papers` as a routine
+  gate; never read PDF pages as images.
+- **Style:** the negation-first pattern ("X is not Y; it is Z", "not
+  merely", "not because A but because B") is banned; state what a thing is.
+  At most one short load-bearing contrast per page. Reviewers rewrite
+  offending sentences and say so in the commit.
+- **Reading labels** on every citation: metadata / abstract / passage /
+  full-read. Verify DOIs through Crossref before use; quotations only from
+  a held companion in `docs/` or `docs/classics/`, registered in
+  `docs/SHA256SUMS`.
+- **Results go in `notes/<slug>.md`:** lead with the result and date, state
+  each assumption where used, keep constants explicit, keep negations that
+  change a theorem's meaning, end with "Consequence for STATE". Corrections
+  are dated and kept in the note, never silently overwritten. No handoffs,
+  task rows, review files or programme versions (git history is the record).
+- **Commits:** end with the model's trailer (`Co-Authored-By: Claude Fable
+  5.1 <noreply@anthropic.com>` for this model; Astra work carries
+  `Co-Authored-By: GPT-6 Astra <noreply@openai.com>`; mixed commits carry
+  both). Check `git status` for the other agent's uncommitted work before
+  committing. Pushes to `origin/main` are authorized after each result.
+- **Public repository.** Everything committed is public. Redistribution
+  rights are checked before archived editorial material is added; in-copyright
+  passages are quoted, never reproduced as companions.
+- Claims cited by ID live in [claims/LEDGER.md](claims/LEDGER.md) (frozen
+  format); add a row only for a result another note cites by ID.
+
+## 4. Traps already caught
+
+Each of these was written once, caught by a referee, and corrected; the
+correction is dated in the note. Do not reintroduce them.
+
+1. **Sagitta convention.** The fall is $s=F\tau^2/(2M)$ and the impulse
+   $J=F\tau$ (Planck paper eq. (1)). Theorem C(b) of the fifth-postulate
+   note first used $s=F\tau^2/M$ and was aligned (commit `facfba7`).
+2. **$\gamma$ is relative to $h_{\rm rad}$, and $h_{\rm rad}\ne h_P$.** The SED
+   link first wrote $\gamma=1/(2\pi)$; that holds relative to Planck's $h_P$.
+   Relative to Theorem U's $h_{\rm rad}$, $h_P=(\pi^4/15)^{1/3}h_{\rm rad}$ and
+   $\gamma\approx0.297$. The whole link is conditional on a disputed SED
+   derivation of the Planck spectrum, and Theorem 1 there holds for
+   resonant variables only (full momentum variance diverges)
+   ([sed-zeta-radiation-link](notes/sed-zeta-radiation-link.md), commit `a330d4e`).
+3. **Göpfert--Mack trajectory.** The fixed-Debye-mass limit lies on
+   $\lambda_3a\simeq c_0/(2\log(1/a))$, $c_0=2\pi^2G(0)\approx4.99$, where the
+   monopole density per physical volume diverges. The constant-density
+   trajectory $c_0/(3\log(1/a))$ has $m_D\to0$. The first version conflated
+   them ([villain-monopole-refinement](notes/villain-monopole-refinement.md), commit `07c9501`).
+4. **P($\alpha$), first version, was false for the free field.** Bounding
+   $-\log\Psi$ itself needs $\delta_t=\frac12$ for the free field, and the
+   large-field clause on $\Psi$ contradicts Prop. 3 (factor 2 at the cut
+   locus). The hypothesis now bounds the log-ratio $\mathcal D$, allows
+   shifts on cut faces as well as transverse ones, and (after the mid-plane
+   note) carries the clause $\min_jN_j\ge c_0/t$ on periodic planes
+   ([series/parallel §4](notes/series-parallel-gauge-refinement.md), commits `d67c4c7`, `06ab8b8`).
+5. **Heat-kernel anisotropy is a small-field matching.** Eq. (1)
+   $t_{\mu\nu}=\lambda_Da_\mu a_\nu/\prod a_\rho$ fails under time-only refinement:
+   transverse heat times go to infinity and the magnetic potential
+   vanishes. The Hamiltonian (Kogut--Susskind) limit needs exponential
+   $e^{-a_0V}$ magnetic weights ([zero-spacing §1](notes/zero-spacing-any-action.md)).
+6. **The $6/11$ criterion is known.** $2b_0c>4$ recovers the dislocation
+   criterion of Pugh--Teper and Göckeler et al. (1989), stated as "$6/11$ of
+   an instanton" by DeGrand--Hasenfratz--Zhu (1996). Claim only the
+   organization, and only as a strict power threshold; an action lower
+   bound gives an upper density bound after entropy control
+   ([zero-spacing §3](notes/zero-spacing-any-action.md), commit `5ef4e38`).
+7. **Lynds (2003) distinguishes his indeterminacy from $h$.** An earlier
+   sentence had him identify them. No author found connects Newton's
+   *velocitas ultima* to uncertainty ([fifth-postulate §1](notes/principia-fifth-postulate.md), commit `ef5857f`).
+8. **"Floor iff $\hbar\ne0$" needs state completeness.** Astra's routes
+   note gives the same floor in a commutative theory with a Gaussian
+   covariance restriction ($h_*=2\zeta$). Noncommutativity is the unique
+   *algebraic* denial of joint determinacy under (H1)--(H3); the state
+   route is a second denial. The analogy with the parallel postulate is
+   partial, and (H2) is a premise the *Principia* does not supply
+   ([fifth-postulate, "Where the analogy stops"](notes/principia-fifth-postulate.md)).
+9. **Bohm, *Quantum Theory* (1951): copyright renewed 1979** (US Copyright
+   Office renewal RE010931, 23 January 1979, claimant David Bohm, original
+   registration A52291, per the Stanford Copyright Renewal Database; in the
+   EU protected to the end of 2062). Cite by page
+   (ch. 8, pp. 145--148, on Zeno's arrow); no companion transcription may be
+   added. The passage was reported from an Astra search and is unchecked
+   here ([fifth-postulate §1](notes/principia-fifth-postulate.md)).
+10. **Universal Coulomb impulse bound rejected.** $|\Delta p|b\ge2k_e/c$ holds
+    only on a prescribed straight path; exact Rutherford scattering gives
+    $b|\Delta p|\to0$ as $b\downarrow0$ ([necessity-unit §1](notes/necessity-unit-and-indeterminacy.md)).
+11. **Theorem I needs a fourth premise.** Instrument access (the two pulses
+    and a stored first reading) is a premise beside Liouville dynamics,
+    product preparations and Bayesian readouts; posterior concentration and
+    disturbance cost need distinct bounds ([necessity-unit §4](notes/necessity-unit-and-indeterminacy.md)).
+12. **Prop. 7's reflection cancellation was rejected.** Mixed quadratic
+    boundary terms survive cube reflections; the surviving statement is a
+    conditional finite-cube bound with mixed terms in the remainder
+    ([series/parallel §4](notes/series-parallel-gauge-refinement.md)).
+13. **Normalized Haar supplies $2\pi$.** Prop. 1 of the zero-spacing note and
+    Prop. 4 of the series/parallel note carry normalized-Haar constants;
+    an earlier $\pi$ in the Planck paper was $2\pi$ (batch 2, 2026-09-23).
+    Also $\Lambda p=h/2=\pi\hbar$ differs from $\hbar/2$ by $2\pi$.
+14. **The balanced-aperture loophole.** The unmarked-preparation bound
+    takes its area form $\theta^2\hbar^2/(4LP)$ only at $L=\tau P/2m$; squeezing
+    evades a fixed-area form (ChatGPT review, 2026-09-21; user: "every non
+    go is distraction", so the fix is the corrected positive theorem).
+15. **Historical overclaims.** Newton nowhere "asserted in print" the
+    negation of M3; what he printed entails it (*Opticks* II.iii Prop. XII
+    with Query 29). The fits do not deny finite propagation time (II.iii
+    Prop. XI). Planck 1900 (*Ann. Phys.* 306, 69) is the Wien-entropy paper;
+    the distribution is Planck 1901 (*Ann. Phys.* 309, 553).
+16. **T2$'$ is sufficient, not required.** A gap at every lattice coupling
+    fails for $SU(N\ge5)$ with the Wilson action (first-order bulk
+    transition); the conjecture needs a gap on $(0,g_1)$ along the scaling
+    curve ([mass-gap-openings](notes/mass-gap-openings.md)).
+17. **Yarotsky's threshold for Kogut--Susskind is $g^2\sim10^{101}$.** Usable
+    numbers ($176$ Wilson, $388$ KS) come from the Euclidean polymer gas and
+    the Duhamel expansion respectively.
+18. **Thm 2 of the zero-spacing note needs finite exponents and a simple
+    group** (or an isotropy assumption); $U(1)^2$ admits anisotropic
+    diffusion. **Thm 5's** lifts use coarse-cube Bianchi identities and
+    keep harmonic flux sectors.
+19. **A one-step upper bound proves neither convergence nor a density.**
+    The $\pi^2/8$ constant of Theorem 5 says nothing about the monopole
+    density on the Göpfert--Mack trajectory.
+
+## 5. Open problems, with the smallest next theorem
+
+Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-atlas.md).
+
+1. **$SU(2)$ mid-plane, estimate (18).** Prove the uniform normalized
+   Laplace remainder for the full interacting mid-plane integral on the
+   small-field set, uniformly in plane size, with the torus kernel $W_N$
+   retained and saddle uniqueness from $H\ge(4-C\varepsilon)I$
+   ([su2-midplane-order-t §7](notes/su2-midplane-order-t.md)). *Smallest
+   theorem:* the weak form, remainder $|E|\le Ct\sum_p(1+|X_p|^2/t)$ with
+   $\alpha=\frac12-\delta$, for the unperturbed heat-kernel action on one plane.
+2. **Stability of P($\alpha$) under iteration for $SU(N)$.** Done for $U(1)$
+   in $D=3$ by Cor. 2$'$ (exact Gaussian blocking). *Smallest theorem:*
+   P($\alpha$) for a heat-kernel action perturbed by one step's defect
+   $\mathcal D_0+\sum\delta_tS_{\mu\nu}$, same constants.
+3. **$SU(2)$ cube beyond spin 1.** Diagonal entries for $J>1$ and control of
+   the full spin sum ([su2-midpoint-exact](notes/su2-midpoint-exact.md)).
+   *Smallest theorem:* a uniform-in-$J$ bound on $\|\Lambda^J-\Lambda^J_{(1)}\|$
+   with $\Lambda^J_{(1)}$ the order-$t$ formula of Prop. 6.
+4. **The four-dimensional logarithm.** Extract $g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2$
+   from the three parallel insertions of each directional halving
+   ([series/parallel §5](notes/series-parallel-gauge-refinement.md)).
+   *Smallest theorem:* the $SU(2)$ analogue of the mid-plane order-$t$
+   calculation for one $D=4$ halving, showing the three shifts sum to a
+   step-independent constant.
+5. **From ultraviolet control to a gap in $1+2$.** Prove $E=C_3\hbar c\lambda_3$
+   with $0<C_3<\infty$; the $U(1)$ comparison shows the mechanism must sit
+   in the non-abelian terms N1--N3. *Smallest theorem:* a lower bound on the
+   plaquette--plaquette decay rate of the blocked measure at one coupling
+   in physical units, uniform in $a$.
+6. **Time-only halving rate.** An operator-norm Trotter rate for
+   $e^{-a_0(T+V)}$ versus $e^{-a_0T}e^{-a_0V}$ on $G^E$, which needs domain
+   estimates for $[\Delta_G,V]$ ([halving-atlas §5.5](notes/halving-atlas.md)).
+7. **H1 and H2 of the conditional theorem** ([mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md)):
+   exponential clustering of integrated-out fluctuations per blocking step
+   down to $\xi\simeq a$, and certified mixing at one coupling on one box.
+   The Feshbach H3 small-volume estimate is the valley-lifting task
+   ([weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md)).
+8. **Newton necessity: the readout law.** Every premise so far is either
+   supplied (quantum kinematics, Thm C), circular ($\zeta$ from SED at
+   $\kappa=\hbar/2$), or insufficient (thermodynamics, the shared bath).
+   The statement to change is joint determinacy; the missing physical
+   premise is a bound $\text{imprecision}\times\text{kick}\ge\kappa$ on every
+   terminal classical readout, closed under composition
+   ([sed-closure-under-recording](notes/sed-closure-under-recording.md),
+   [newton-indeterminacy-routes](notes/newton-indeterminacy-routes.md)).
+   *Smallest theorem:* derive that law for one physically specified
+   readout class (electrodynamic, with retained memory) and show closure.
+9. **Layer 1 of the dimension ladder.** Extend Theorem U to any classical
+   field with unbounded mode frequencies admitting finite thermal
+   equilibrium, with cross-field universality by Kirchhoff's filter
+   argument ([dimension-ladder §1](notes/dimension-ladder.md)); stated as a
+   conjecture.
+10. **Rivero 1998, general case.** Whether finiteness of the path integral
+    forces the joint limit (action resolution and time step) for
+    non-quadratic actions; the quadratic case is Theorem A
+    ([fifth-postulate §7](notes/principia-fifth-postulate.md),
+    [rivero-1998-conjecture-central-forces](notes/rivero-1998-conjecture-central-forces.md)).
+11. **Planck paper, attainment and submission.** Whether the constants
+    $1/8$, $1/2$ of Thm 6 and the minimum of the one accounting (Thm M) are
+    attained; the §11 historiography and edition obligations
+    ([planck-gap-paper §11](notes/planck-gap-paper.md)).
+12. **A groupoid for the lattice.** The holonomy groupoid for series moves
+    and a double groupoid for parallel moves
+    ([tangent-groupoid-trajectories §5](notes/tangent-groupoid-trajectories.md)); a question, with no theorem yet.
+
+## 6. Verified prior-art map
+
+All DOIs below appear in the notes with reading labels and were checked
+through Crossref before use. `references/library.bib` holds keys for those
+cited by key.
+
+**Lattice gauge theory and constructive field theory.**
+Wilson--Kogut 1974 [10.1016/0370-1573(74)90023-4];
+Kogut--Susskind 1975 [10.1103/PhysRevD.11.395];
+Creutz 1977 transfer matrix [10.1103/PhysRevD.15.1128];
+Lüscher 1977 transfer matrix [10.1007/BF01614090];
+Osterwalder--Seiler 1978 [10.1016/0003-4916(78)90039-8];
+Kadanoff 1976 on Migdal [10.1016/0003-4916(76)90066-X];
+Bell--Wilson 1975 [10.1103/PhysRevB.11.3431];
+Hasenfratz--Niedermayer 1994 [10.1016/0550-3213(94)90261-5];
+Banks--Myerson--Kogut 1977 [10.1016/0550-3213(77)90129-8];
+Polyakov 1977 [10.1016/0550-3213(77)90086-4];
+Göpfert--Mack 1982 [10.1007/BF01961240];
+Gross 1983 [10.1007/BF01210842];
+Driver 1987 [10.1007/BF01212424]; Driver 1989 YM$_2$ [10.1007/BF01218586];
+Guth 1980 [10.1103/PhysRevD.21.2291];
+Fröhlich--Spencer 1982 [10.1007/BF01213610];
+Balaban 1984 [10.1007/BF01215753], 1985 (3D UV stability) [10.1007/BF01229380],
+1987 [10.1007/BF01215223], 1988 [10.1007/BF01217741],
+1989 I [10.1007/BF01257412], II [10.1007/BF01238433];
+Dimock 2013 [10.1142/S0129055X13300100];
+Magnen--Rivasseau--Sénéor 1993 [10.1007/BF02097397];
+Yarotsky 2005 [10.1007/s00220-005-1456-9];
+Lüscher 1982 lattice topology [10.1007/BF02029132];
+Lüscher 1983 torus [10.1016/0550-3213(83)90436-4];
+Lüscher--Münster 1984 [10.1016/0550-3213(84)90038-5];
+Gross--Wilczek 1973 [10.1103/PhysRevLett.30.1343]; Politzer 1973 [10.1103/PhysRevLett.30.1346];
+Hasenfratz--Hasenfratz 1980 [10.1016/0370-2693(80)90118-5];
+Dashen--Gross 1981 [10.1103/PhysRevD.23.2340];
+Capitani 2003 [10.1016/S0370-1573(03)00211-4];
+Menotti--Onofri 1981 [10.1016/0550-3213(81)90560-5];
+Creutz 1979 (5D transition) [10.1103/PhysRevLett.43.553];
+Gross--Witten 1980 [10.1103/PhysRevD.21.446];
+Pugh--Teper 1989 [10.1016/0370-2693(89)91067-8];
+Göckeler et al. 1989 [10.1016/0370-2693(89)90640-0];
+DeGrand--Hasenfratz--Zhu 1996 [10.1016/0550-3213(96)00301-X];
+Hunt 1956 [10.1090/S0002-9947-1956-0079232-9]; Lévy, *Astérisque* 329 [10.24033/ast.785];
+Trotter 1959 [10.1090/S0002-9939-1959-0108732-6]; Chernoff 1968 [10.1016/0022-1236(68)90020-7];
+Eardley--Moncrief 1982 [10.1007/BF01976040];
+Aizenman 1982 [10.1007/BF01205659]; Fröhlich 1982 [10.1016/0550-3213(82)90088-8];
+Aizenman--Duminil-Copin 2021 [10.4007/annals.2021.194.1.3];
+Jaffe--Witten, Clay problem statement (companion `docs/JaffeWitten_YangMills.md`).
+
+**Deformation quantization.**
+Moyal 1949 [10.1017/S0305004100000487];
+Groenewold 1946 [10.1016/S0031-8914(46)80059-4];
+van Hove 1951 [10.3406/barb.1951.70660];
+Vey 1975 [10.1007/BF02565761];
+Bayen--Flato--Fronsdal--Lichnerowicz--Sternheimer 1978 [10.1016/0003-4916(78)90224-5];
+Flato 1982 [10.1007/BF01596202]; Sternheimer 1998 [10.1063/1.57093];
+Gutt 1983 (*Mém. Acad. Roy. Belg.* 44:6), as cited in Duval--El Gradechi--Ovsienko 2004 [10.1007/s00220-003-0973-7];
+Fletcher 1990 [10.1016/0370-2693(90)90300-U];
+Bertelson--Bieliavsky--Gutt 1998 [10.1023/A:1007598606137];
+Robertson 1929 [10.1103/PhysRev.34.163].
+
+**Measurement theory and quantum limits.**
+Bohr 1928 Como [10.1038/121580a0] (quoted via Busch--Shilladay, arXiv:quant-ph/0609048);
+Slepian--Pollak 1961 [10.1002/j.1538-7305.1961.tb03976.x]; Landau--Pollak 1961 [10.1002/j.1538-7305.1961.tb03977.x];
+Amrein--Berthier 1977 [10.1016/0022-1236(77)90056-8]; Benedicks 1985 [10.1016/0022-247X(85)90140-4];
+Braginsky--Vorontsov 1975 [10.1070/PU1975v017n05ABEH004362];
+Caves--Thorne--Drever--Sandberg--Zimmermann 1980 [10.1103/RevModPhys.52.341];
+Caves 1985 [10.1103/PhysRevLett.54.2465]; Ozawa 1988 [10.1103/PhysRevLett.60.385];
+Bocko--Onofrio 1996 [10.1103/RevModPhys.68.755];
+Caves--Milburn 1987 [10.1103/PhysRevA.36.5543];
+Clerk et al. 2010 [10.1103/RevModPhys.82.1155];
+Tsang--Nair 2012 [10.1103/PhysRevA.86.042115]; Tsang--Caves 2012 [10.1103/PhysRevX.2.031016];
+Anandan--Aharonov 1990 [10.1103/PhysRevLett.65.1697];
+Ozawa 2003 [10.1103/PhysRevA.67.042105];
+Busch--Lahti--Werner 2013 [10.1103/PhysRevLett.111.160405], 2014 [10.1063/1.4871444];
+Childs--Preskill--Renes 2000 [10.1080/09500340008244034];
+Zurek 2001 [10.1038/35089017]; Toscano et al. 2006 [10.1103/PhysRevA.73.023803];
+Gottesman--Kitaev--Preskill 2001 [10.1103/PhysRevA.64.012310];
+Bartlett--Rudolph--Spekkens 2012 (arXiv:1111.5057);
+Landauer 1961 [10.1147/rd.53.0183]; Bennett 1982 [10.1007/BF02084158];
+Sagawa--Ueda 2009 [10.1103/PhysRevLett.102.250602];
+Helstrom 1976 (book); Braginsky--Khalili 1992 (book).
+
+**Stochastic electrodynamics and radiation thermodynamics.**
+Marshall 1963 [10.1098/rspa.1963.0220]; Boyer 1969 [10.1103/PhysRev.182.1374];
+Boyer 1975 [10.1103/PhysRevD.11.790];
+Goedecke 1983 [10.1007/BF00728140]; Nieuwenhuizen 2019 [10.3390/atoms7020059];
+Jiménez--de la Peña--Brody 1980 [10.1119/1.12221] (the Planck derivation disputed);
+Wien 1893 reprint [10.1007/978-3-663-13885-3_12];
+Planck 1900 [10.1002/andp.19003060105]; Planck 1901 [10.1002/andp.19013090310];
+Einstein 1907 [10.1002/andp.19063270110].
+
+**History of the *Principia*, the *Opticks* and the ancient dispute.**
+Held companions (public domain, checksummed) in `docs/classics/`: 1687
+Latin of Book I Section I scholia, Motte 1729/1846, Berkeley's *Analyst*
+1734, Gregory 1702 preface (witness to the Classical Scholia), Archimedes
+(Heath), Galileo, Cavalieri, Guldin, Hamilton, Jacobi, Helmholtz, Hertz,
+and the Greek, Sanskrit, Chinese and Latin sources of the arrow debate
+(catalogue: `docs/classics/README.md`). Scholarship cited: McGuire--Rattansi
+1966 [10.1098/rsnr.1966.0014]; Casini on the Classical Scholia; Schüller's
+edition (companion `docs/Newton_ClassicalScholia_Schuller2000.md`);
+Shapiro 1993 *Fits, Passions, and Paroxysms*; Guicciardini 1999, 2009;
+De Gandt 1995; Koyré--Cohen variorum and Cohen--Whitman (edition
+obligations, paper §11). Zeno and uncertainty: Vaidman 2008
+[10.1038/451137a]; Goyal 2026 [10.1007/s10701-026-00922-0]; Lynds 2003
+[10.1023/A:1025361725408]; Arntzenius 2000 [10.5840/monist20008328];
+Smith 2003 [10.1016/S1355-2198(03)00007-8].
+
+**Tangent groupoid and discrete mechanics.**
+Connes, *Noncommutative Geometry* 1994 §II.5;
+Cariñena--Clemente-Gallardo--Follana--Gracia-Bondía--Rivero--Várilly 1999 [10.1016/S0393-0440(98)00028-X] (companion `docs/CarinenaEtAl_TangentGroupoid_1999.md`);
+Rivero 1997 (arXiv:dg-ga/9710026), 1998 (arXiv:quant-ph/9803035, companion `docs/Rivero_FeynmanFormula_1998.md`), 2003 (arXiv:math/0302285);
+Landsman 2002 (arXiv:math-ph/0208004);
+Debord--Skandalis 2014 [10.1016/j.aim.2014.02.012];
+van Erp--Yuncken 2019 [10.1515/crelle-2017-0035];
+Marsden--West 2001 [10.1017/S096249290100006X]; Weinstein 1996 [10.1090/fic/007/10];
+Litvinov 2005 [10.1090/conm/377/06982]; Abbott--Wise 1981 [10.1119/1.12657].
+
+**Machine-assisted mathematics context.** `docs/AI_Mathematics_News_2026.md`
+and `docs/OpenAI_NavierStokes_2026.md` (theorem statement visually checked,
+proof unaudited here). A proof attempt is a legitimate task; the right
+response to difficulty is a smaller theorem with explicit hypotheses.
+
+## 7. How agents work here
+
+- **Author and referee are separate passes, and every result crosses the
+  gate before STATE cites it as more than "unrefereed".** The author
+  writes the note with proofs; a second model re-derives claim by claim
+  and returns a verdict per item (ACCEPT / REFINE / REJECT). Verdicts are
+  written into the note in place (dated "Correction (GPT-6 Astra referee)"
+  or "Referee verdict") and summarized in the commit message. A rejected
+  claim is replaced by the true theorem with its hypothesis explicit,
+  never by a bare retraction ("every non go is distraction").
+- **Roles as practised.** GPT-6 Astra (Codex, autonomous sessions in the
+  same checkout, trailer `GPT-6 Astra`) authored the routes note, the SED
+  closure note, $SU(2)$ Theorem 4 and the mid-plane order-$t$ calculation,
+  and refereed the series/parallel, zero-spacing and necessity notes.
+  Claude (Opus 5.5 and Fable 5.1, trailer per model) authored the atlas,
+  fifth-postulate, refinement, monopole, $SU(2)$ midpoint, dimension-ladder
+  and groupoid notes and the Planck paper, and refereed Astra's notes.
+  Bounded Sol 6 / Luna 6 workers may do menial source tasks, one at a
+  time, never as Astra subagents. The user reads closely, contributes
+  mid-task (the Archimedes and Democritus links, the $1+n$ ladder, the
+  fifth-postulate question) and is credited in the note and commit.
+- **Review in batches of two or three notes.** A single broad review
+  prompt hits the 64k-token output cap and fails silently. Working
+  pattern: one batch per referee call, findings appended to a scratch
+  file after each note, one commit per batch. Two passes (sections 1--4,
+  then 5--7) were needed for the mid-plane note.
+- **No multi-agent workflows and no parallel subagents.** They inherit
+  the main model and multiply usage without gain; work sequentially.
+- **Pipeline for a result:** write `notes/<slug>.md`; `make paper
+  NOTE=<slug>`; add the slug to a track in `scripts/build_site.py` and run
+  `make site`; `python3 scripts/check_repository.py`; update the atlas
+  cell and STATE (short); commit with the trailer; push.
+- **What the user considers drift:** reframing results in the parked
+  apparatus series (C068--C123), no-go notes without a replacement
+  theorem, full rebuilds, image reads of PDFs, source hunts that change no
+  claim. What counts: a cell of the atlas filled, a hypothesis of the
+  conditional theorems discharged, a premise for the readout law derived.

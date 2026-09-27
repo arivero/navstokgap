@@ -4,6 +4,11 @@
 track, with the Markdown source and the typeset PDF for each. Rebuild it with
 `make site`.
 
+**For language models:** [`LLM.md`](LLM.md), also served at
+<https://arivero.github.io/navstokgap/llms.txt>, maps every claim to its
+status and proof, the caught errors, the open problems and the verified
+references.
+
 **Goal (2026-09-26).** One paper comparing what survives refinement in
 Newton's action problem, in pure $SU(3)$ Yang--Mills theory, and in QCD
 with zero and nonzero quark masses. The two proof goals are **the
