@@ -4,12 +4,17 @@
 gives mechanics with $h>0$, as the parallel postulate does for curved
 geometry).** The statement is **joint determinacy**: the place of a body
 and its quantity of motion are quantities given together, so that the
-observables of a body multiply commutatively. Newton never states it as
-a postulate. He uses it in Definition II, in Lemma X and in the polygon
-of Proposition I, and its explicit trace is the last sentence of the
-scholium closing Book I, Section I: the quantities compared are "always to
-be diminished without limit". Four theorems make the analogy with
-Euclid's fifth postulate exact.
+observables of a body multiply commutatively. Newton states it in the
+scholium closing Book I, Section I, as his answer to the objection that
+the ratio of vanishing quantities is not ultimate before they vanish and
+is nothing once they have: the ultimate velocity is "the very velocity
+with which the body reaches its last place", a limit "certain and
+definite" (§1). A place belongs to an instant and a motion to an
+interval; the classical debate from Zeno's arrow onward keeps them
+apart, and Newton's ultimate velocity is the step that joins them. He
+then uses the joined pair in Definition II, Lemma X and the polygon of
+Proposition I. Four theorems make the analogy with Euclid's fifth
+postulate exact.
 
 1. **Independence (Theorem A).** For every value of a real constant
    $\hbar$, the Moyal product $*_\hbar$ on the observables of one degree of
@@ -60,27 +65,58 @@ Laws are independent of it in Newton's own integrable cases.
 
 ## 1. The textual anchor
 
-The scholium closing Book I, Section I (1687 text, held in this
-repository's [Latin companion](../docs/classics/Newton_Principia_1687_BookI_SectI_scholia_la_wikisource.md)),
-ends:
+A place is predicated of an instant; a quantity of motion, of an
+interval. The distinction is the substance of Zeno's arrow and of
+Aristotle's thesis that nothing moves in the now (*Physics* VI; cited
+here by book only, the Greek is not held in this repository), and the
+division debates that the programme's classical companions record turn
+on it. Newton addresses it directly in the second paragraph of the
+scholium closing Book I, Section I (1687 text, held in the
+[Latin companion](../docs/classics/Newton_Principia_1687_BookI_SectI_scholia_la_wikisource.md),
+added 2026-09-27 at the user's prompting):
 
-> Igitur in sequentibus, siquando facili rerum imaginationi consulens,
-> dixero quantitates quam minimas, vel evanescentes vel ultimas, cave
-> intelligas quantitates magnitudine determinatas, sed cogita semper
-> diminuendas sine limite.
+> Objectio est, quod quantitatum evanescentium nulla sit ultima
+> proportio; quippe quæ, antequam evanuerunt, non est ultima, ubi
+> evanuerunt, nulla est. Sed & eodem argumento æque contendi posset
+> nullam esse corporis ad certum locum pergentis velocitatem ultimam.
+> [...] Per velocitatem ultimam intelligi eam, qua corpus movetur neq;
+> antequam attingit locum ultimum & motus cessat, neq; postea, sed tunc
+> cum attingit, id est illam ipsam velocitatem quacum corpus attingit
+> locum ultimum & quacum motus cessat. [...] Extat limes quem velocitas
+> in fine motus attingere potest, non autem transgredi. Hæc est velocitas
+> ultima. [...] Cumq; hic limes sit certus & definitus, Problema est vere
+> Geometricum eundem determinare.
 
-"So in what follows, if for ease of imagination I speak of quantities as
-least, or vanishing, or ultimate, do not understand quantities
-determinate in magnitude, but think of them always as to be diminished
-without limit." Newton defends this against the objection from Euclid,
-*Elements* X, and applies it to the sagitta of Lemma X and the chords of
-Proposition I. The sentence is about geometry; its application to
-motion needs one more, unstated, premise: that the place of the body
-and its quantity of motion (Definition II) are given together at each
-instant, so that the sagitta measured from a place and the impulse
-inferred from a change of motion can both be diminished without limit
-in one and the same comparison. That premise is joint determinacy. Its
-algebraic form is the commutativity of the product of observables.
+"The objection is that vanishing quantities have no ultimate proportion,
+since before they vanish it is not ultimate and when they have vanished
+it is none. By the same argument one could claim that a body reaching a
+given place has no ultimate velocity [...]. By the ultimate velocity is
+meant that with which the body moves neither before it reaches its last
+place and the motion ceases, nor after, but when it reaches it, that is,
+the very velocity with which the body reaches its last place [...]. There
+is a limit which the velocity at the end of the motion can reach and not
+pass. This is the ultimate velocity. [...] And since this limit is
+certain and definite, determining it is a truly geometrical problem."
+
+This is joint determinacy stated as a thesis: a velocity, which is a
+ratio over an interval, is assigned as a certain and definite quantity
+to the instant of arrival at a place. The paragraph closes with the
+third, which the same companion holds:
+
+> [...] cave intelligas quantitates magnitudine determinatas, sed cogita
+> semper diminuendas sine limite.
+
+"[...] do not understand quantities determinate in magnitude, but think
+of them always as to be diminished without limit." With the ultimate
+velocity in hand, Newton applies this to the sagitta of Lemma X and the
+chords of Proposition I, and Definition II attaches the quantity of
+motion to the body at its place. For a geometrical ratio the thesis is a
+theorem about limits and holds in every model below. For a *recorded*
+comparison, where the place is read at an instant and the motion is
+inferred from a change over an interval, it is a physical claim: that
+both can be sharp in one and the same comparison. Its algebraic form is
+the commutativity of the product of observables, and that is the
+statement whose change the theorems below analyse.
 
 The other division scholium, after Lemma XI, says of contact angles that
 between any two a new series can be inserted, "Neq; novit natura
@@ -244,9 +280,11 @@ observable forces the floor to be zero (its Theorem B).
 
 ## 7. What remains, and consequence for STATE
 
-The theorems are exact; the identification of joint determinacy as the
-statement to change is interpretive, because Newton used the premise
-without stating it. Two limits of scope. Theorem B concerns one degree of
+The theorems are exact. The identification rests on Newton's own
+thesis that the ultimate velocity at arrival at a place is "certain and
+definite" (§1); what remains interpretive is the step from that
+geometrical thesis to recorded comparisons, which Newton did not
+distinguish. Two limits of scope. Theorem B concerns one degree of
 freedom and bidifferential products; several degrees of freedom follow
 with $Sp(2n)$ in place of $SL(2)$, whose invariants of two vectors are again
 generated by the symplectic pairing. And the independence of Theorem A is

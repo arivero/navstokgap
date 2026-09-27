@@ -2,7 +2,7 @@
 
 > Source: [Latin Wikisource, *Philosophiae Naturalis Principia Mathematica*, Liber I, Sect. I](https://la.wikisource.org/wiki/Philosophiae_Naturalis_Principia_Mathematica/Liber_I/Sect._I._DE_Methodo_rationum_primarum_%26_ultima_rum.), a proofread transcription of the first edition (London, 1687); local verbatim excerpt [`.txt`](Newton_Principia_1687_BookI_SectI_scholia_la_wikisource_excerpt.txt); rendered text retrieved 2026-09-23 through the MediaWiki parse API.
 > Metadata: Isaac Newton, *Philosophiae Naturalis Principia Mathematica* (London: Joseph Streater for the Royal Society, 1687), Book I, Section I, "De Methodo rationum primarum & ultimarum".
-> Extraction: four passages copied verbatim from the rendered page; layout line breaks kept; superscript exponents appear flattened (AD3 for AD cubed).
+> Extraction: five passages copied verbatim from the rendered page (the second paragraph of the closing scholium added 2026-09-27, same page, same API); layout line breaks kept; superscript exponents appear flattened (AD3 for AD cubed).
 > Rights: the 1687 text is in the public domain; Wikisource transcriptions of public-domain texts are freely reusable.
 > Limit: a transcription of the first edition. Corollary numbering and some wording changed in 1713 and 1726; the English versions in the notes are this repository's own renderings, and the paper must cite a critical edition (Koyré and Cohen's variorum) and Cohen--Whitman for the English.
 
@@ -32,6 +32,20 @@ from a sibling repository's passage store, with no witness here.
   to Eudoxus; the method of indivisibles is shorter, "Sed quoniam durior
   est indivisibilium Hypothesis", Newton prefers limits, and where he
   later speaks of particles he means "evanescentia divisibilia".
+- **The same scholium, second paragraph.** The objection that vanishing
+  quantities have no ultimate ratio, "quippe quæ, antequam evanuerunt,
+  non est ultima, ubi evanuerunt, nulla est", and its extension to motion:
+  there would be no ultimate velocity of a body reaching a place. Newton's
+  answer: the ultimate velocity is "illam ipsam velocitatem quacum corpus
+  attingit locum ultimum", the very velocity with which the body reaches
+  its last place; "Extat limes quem velocitas in fine motus attingere
+  potest, non autem transgredi. Hæc est velocitas ultima", and since "hic
+  limes sit certus & definitus", determining it is a truly geometrical
+  problem. This is Newton's reply to the instant-versus-interval
+  objection of Zeno's arrow: a determinate velocity assigned to arrival
+  at a place, which the
+  [fifth-postulate note](../../notes/principia-fifth-postulate.md) reads as
+  joint determinacy of place and motion.
 - **The same scholium, third paragraph.** The objection that given
   ultimate ratios give ultimate magnitudes, so that "quantitas omnis
   constabit ex indivisibilibus, contra quam Euclides de incommensurabilibus,
