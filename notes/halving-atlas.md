@@ -43,8 +43,9 @@ small-field regime) splits exactly into two moves.
 $t_{2.6}$ in a cell is a series move
 ([refinement note](refinement-composition-and-limit.md), §2). A physical
 record at the inserted time is a new variable attached to the body, the
-nearest analogue of a parallel insertion; whether forgetting it returns
-the unrecorded dynamics is the question of the Planck-gap programme.
+analogue of a parallel insertion. Forgetting a Gaussian record is an
+exact parallel move with defect proportional to $\hbar^2$, the identity for
+$\hbar=0$ ([record as parallel move](newton-record-parallel-move.md)).
 
 ## 2. The atlas by dimension
 
@@ -106,9 +107,10 @@ way; in mechanics refining makes each cell more quantum
    three parallel insertions of each halving.
 5. Time-only halving: the exponential-family parallel move and its
    Trotter limit, stated as a theorem at fixed spatial lattice.
-6. Newton's record insertion as a parallel move: forgetting a record as a
-   channel, and when it returns the unrecorded composition
-   ([refinement note](refinement-composition-and-limit.md), §1).
+6. *Filled 2026-09-27 for Gaussian records*
+   ([record as parallel move](newton-record-parallel-move.md)): forgetting a
+   record convolves momentum with variance $\hbar^2/(4\sigma^2)$; precisions add in
+   parallel; refinement converges iff $\sum\sigma_j^{-2}<\infty$; identity for $\hbar=0$.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 
 ## 6. Consequence for STATE
