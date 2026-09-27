@@ -95,16 +95,19 @@ bound on the lattice Laplacian then gives:</p>
 TV}\ \le\
 \frac{2(L/a)^3\,e^{-\pi^2/(6\lambda_3a)}}{1-e^{-\pi^2/(2\lambda_3a)}},\]</span>
 where <span class="math inline">\(\mu_a^0\)</span> is the monopole-free
-measure. The monopole free-energy density per physical volume lies
-between <span
-class="math inline">\(a^{-3}\cdot6e^{-2\pi^2/(3\lambda_3a)}\)</span> (up
-to a factor tending to one) and <span
-class="math inline">\(a^{-3}\cdot2e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})\)</span>.
-At fixed <span class="math inline">\(\lambda_3\)</span> and <span
-class="math inline">\(L\)</span> everything compact vanishes faster than
-any power of <span class="math inline">\(a\)</span>; along trajectories
-with <span class="math inline">\(\lambda_3a\simeq c/\log(1/a)\)</span>
-it stays finite. The flux sectors carry the weight <span
+measure. At fixed <span class="math inline">\(\lambda_3\)</span> and
+<span class="math inline">\(L\)</span> the monopole free-energy density
+per physical volume lies between <span
+class="math inline">\(6a^{-3}e^{-2\pi^2/(3\lambda_3a)}(1+o(1))\)</span>
+and <span
+class="math inline">\(a^{-3}\cdot2e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})\)</span>,
+and everything compact vanishes faster than any power of <span
+class="math inline">\(a\)</span>. Göpfert and Mack’s fixed-Debye-mass
+limit lies on a different trajectory, <span
+class="math inline">\(\lambda_3a\simeq c_0/(2\log(1/a))\)</span> with
+<span class="math inline">\(c_0\approx4.99\)</span> the monopole
+exponent, where the monopole density per physical volume diverges. The
+flux sectors carry the weight <span
 class="math inline">\(e^{-2\pi^2|m|^2/(\lambda_3L)}\)</span>,
 independent of <span class="math inline">\(a\)</span>.</li>
 <li><strong><span class="math inline">\(D=4\)</span> (Theorem 3, and a
@@ -114,18 +117,18 @@ flux-sector weight <span
 class="math inline">\(e^{-2\pi^2|m|^2/g^2}\)</span>, independent of both
 <span class="math inline">\(a\)</span> and <span
 class="math inline">\(L\)</span>, and the monopole-loop free energy per
-lattice cell lies between <span
-class="math inline">\(12e^{-\pi^2/g^2}\)</span> and <span
-class="math inline">\(8e^{-\pi^2/(8g^2)}/(1-e^{-3\pi^2/(8g^2)})\)</span>,
-up to factors tending to one. The total-variation bound is then of order
-<span class="math inline">\((L/a)^4e^{-\pi^2/(8g^2)}\)</span>, which
-grows as <span class="math inline">\(a\to0\)</span> at fixed <span
-class="math inline">\(g\)</span>. The criterion that closes the
-three-dimensional case fails here for an exact reason: the loop density
-per lattice cell is fixed by <span class="math inline">\(g\)</span>
-alone. The four-dimensional continuum statement (Driver’s renormalized
-free field) needs observables and a coupling renormalization, which a
-partition-function bound cannot supply.</li>
+lattice cell is at most <span
+class="math inline">\(8e^{-\pi^2/(8g^2)}/(1-e^{-3\pi^2/(8g^2)})\)</span>.
+The total-variation bound is then of order <span
+class="math inline">\((L/a)^4e^{-\pi^2/(8g^2)}\)</span>, useless as
+<span class="math inline">\(a\to0\)</span> at fixed <span
+class="math inline">\(g\)</span>: the criterion that closes the
+three-dimensional case gives nothing here, because the heat time does
+not decrease. That the route fails, and not only the bound, needs an
+extensive lower bound on the loop free energy (a dilute-gas estimate,
+expected and not given here). The four-dimensional continuum statement
+(Driver’s renormalized free field) needs observables and a coupling
+renormalization, which a partition-function bound cannot supply.</li>
 </ul>
 <p>This is the first step of the <span
 class="math inline">\(D=3\)</span> programme of STATE carried out at the
@@ -316,22 +319,39 @@ class="math inline">\(\lambda_3\)</span> this tends to zero faster than
 any power of <span class="math inline">\(a\)</span>. By the
 summable-error criterion of the <a
 href="refinement-composition-and-limit.html">refinement note</a>,
-Proposition 4, the continuum question for the compact theory then
-reduces to that for the free photon with flux sectors, which is
-Gaussian; Gross’s theorem is the continuum statement. The monopole
-free-energy density <span class="math inline">\(L^{-3}\log R\)</span>
-lies between the two bounds in the summary. It stays finite exactly when
-<span class="math inline">\(e^{-c/(\lambda_3a)}\sim a^3\)</span>, that
-is along <span class="math inline">\(\lambda_3a\simeq
-c/(3\log(1/a))\)</span> with <span class="math inline">\(c\)</span>
-between <span class="math inline">\(\pi^2/6\)</span> and <span
-class="math inline">\(2\pi^2/3\)</span>: the trajectories on which a
-Debye mass survives (<a
+Proposition 4, the consistency error of the compact theory is bounded by
+that of the free photon with flux sectors plus a summable
+total-variation term; the Gaussian comparison itself is not summable in
+total variation (see after Corollary 2<span
+class="math inline">\(&#39;\)</span>) and must be made through smooth
+observables, and Gross’s theorem is the continuum statement. At fixed
+<span class="math inline">\(\lambda_3\)</span> and <span
+class="math inline">\(L\)</span> the monopole free-energy density <span
+class="math inline">\(L^{-3}\log R\)</span> lies between <span
+class="math inline">\(6a^{-3}e^{-2\pi^2/(3\lambda_3a)}(1+o(1))\)</span>
+and the upper bound of the summary; the lower bound is a single-defect
+bound, extensive only while <span
+class="math inline">\(N^3e^{-2\pi^2/(3t)}\ll1\)</span>, and an extensive
+lower bound elsewhere needs a dilute-gas estimate. The monopole exponent
+<span class="math inline">\(c_0\)</span> lies between the bounds’ <span
+class="math inline">\(\pi^2/6\)</span> and <span
+class="math inline">\(2\pi^2/3\)</span> and equals <span
+class="math inline">\(2\pi^2G(0)\approx4.99\)</span> (<span
+class="math inline">\(G(0)\approx0.2527\)</span>) on the infinite
+lattice, single monopoles dominating. The density per physical volume
+stays finite along <span class="math inline">\(\lambda_3a\simeq
+c_0/(3\log(1/a))\)</span>, where the Debye mass <span
+class="math inline">\(m_D^2\propto\rho/\lambda_3\)</span> tends to zero.
+Göpfert and Mack’s fixed-Debye-mass limit (<a
 href="https://doi.org/10.1007/BF01961240">Göpfert–Mack 1982</a>,
-abstract as indexed). The exponents are bounds; the monopole self-energy
-of the infinite lattice, <span
-class="math inline">\(2\pi^2G(0)\approx4.99\)</span> with <span
-class="math inline">\(G(0)\approx0.2527\)</span>, lies between them.</p>
+abstract as indexed) is the trajectory <span
+class="math inline">\(\lambda_3a\simeq c_0/(2\log(1/a))\)</span>, on
+which the density per physical volume diverges like <span
+class="math inline">\(1/(a\log(1/a))\)</span> and <span
+class="math inline">\(\lambda_3\to\infty\)</span>, consistent with their
+string tension over <span class="math inline">\(m_D^2\)</span>
+diverging. (Corrected 2026-09-27 after a Fable review: the first version
+placed the Göpfert–Mack limit on the constant-density trajectory.)</p>
 <p><strong>Corollary 2<span class="math inline">\(&#39;\)</span>
 (iteration reduces to the free field).</strong> Let <span
 class="math inline">\(a_n=2^{-n}a_0\)</span> and let <span
@@ -358,11 +378,12 @@ contains, so the sector label <span class="math inline">\(m\)</span> is
 preserved. <span class="math inline">\(\square\)</span></p>
 <p>The Gaussian comparison that remains, between the blocked free photon
 and the free photon at spacing <span class="math inline">\(a_0\)</span>,
-is not small in total variation: the two quadratic forms differ at order
-one on modes of the lattice scale, and agree to relative order <span
-class="math inline">\(a^2K^2\)</span> on smooth modes (Proposition 2 and
-bound (6) of the series/parallel note). It must be made through smooth
-observables, where it is explicit because both sides are Gaussian.</p>
+has total-variation distance of order one, because the two quadratic
+forms differ at order one on modes of the lattice scale, and agree to
+relative order <span class="math inline">\(a^2K^2\)</span> on smooth
+modes (Proposition 2 and bound (6) of the series/parallel note). It must
+be made through smooth observables, where it is explicit because both
+sides are Gaussian.</p>
 <h2 id="four-dimensions-the-same-bound-and-why-it-fails">3. Four
 dimensions: the same bound, and why it fails</h2>
 <p><strong>Theorem 3.</strong> Let <span
@@ -390,24 +411,30 @@ class="math inline">\(\square\)</span></p>
 <p><strong>The recorded failure.</strong> In four dimensions the heat
 time is the coupling itself, so at fixed <span
 class="math inline">\(g\)</span> the monopole-loop free energy per
-lattice cell is a fixed number between the two bounds, and the
-total-variation bound grows like <span
-class="math inline">\((L/a)^4\)</span>. The three-dimensional route,
-closeness of the whole lattice measure to its Gaussian part, is
-unavailable in four dimensions for an exact reason, and the free-energy
-density it controls is a vacuum constant. The known continuum statement
-is different in kind: the compact theory converges on its current sector
-to a renormalized free electromagnetic field (<a
+lattice cell is bounded above by a fixed number, and the total-variation
+bound grows like <span class="math inline">\((L/a)^4\)</span>. The bound
+is then useless. That the three-dimensional route itself fails needs an
+extensive lower bound on <span class="math inline">\(\log R\)</span>:
+elementary loops on a sparse sublattice, whose mutual interaction decays
+like <span class="math inline">\(r^{-4}\)</span>, give one with a worse
+constant (a dilute-gas estimate, expected and not written out here), and
+an extensive observable such as <span
+class="math inline">\(\sum_p\cos(d\theta)_p\)</span> would then show
+that the total-variation distance itself tends to one. The free-energy
+density this controls is a vacuum constant. The known continuum
+statement is different in kind: the compact theory converges on its
+current sector to a renormalized free electromagnetic field (<a
 href="https://doi.org/10.1007/BF01212424">Driver 1987</a>, abstract as
 indexed), with the monopole loops renormalizing the charge. A
 four-dimensional theorem in the insertion language therefore has to
 control observables and a coupling shift per step, as Hypothesis P(<span
 class="math inline">\(\alpha\)</span>) does, rather than the measure.
 This is the four-dimensional row of the error budget in the zero-spacing
-note, now with the density per cell made explicit: between <span
-class="math inline">\(12e^{-\pi^2/g^2}\)</span> and <span
-class="math inline">\(8e^{-\pi^2/(8g^2)}\)</span> up to factors tending
-to one.</p>
+note, now with an explicit upper bound <span
+class="math inline">\(8e^{-\pi^2/(8g^2)}\)</span> on the density per
+cell and a single-loop lower bound <span
+class="math inline">\(12N^4e^{-\pi^2/g^2}\)</span> on <span
+class="math inline">\(R-1\)</span>.</p>
 <h2 id="consequence-for-state">4. Consequence for STATE</h2>
 <p>Item 1 of STATE gains a measure-level theorem for <span
 class="math inline">\(U(1)\)</span> in <span
@@ -419,9 +446,9 @@ failure of the same route in <span class="math inline">\(D=4\)</span>
 with its reason (Theorem 3). The non-abelian step that corresponds to
 Theorem 2 needs a replacement for the Poisson decomposition: for <span
 class="math inline">\(SU(2)\)</span> the exact kernel (11) of the
-series/parallel note has image terms of both signs, so the mixture of
-Proposition 1 is not available and the Laplace-remainder route of its
-Proposition 7 remains the path.</p>
+series/parallel note has image terms of both signs, so Proposition 1 has
+no <span class="math inline">\(SU(2)\)</span> counterpart, and the
+Laplace-remainder route of its Proposition 7 remains the path.</p>
 
 </main>
 <footer class="site"><div class="wrap">

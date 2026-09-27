@@ -86,8 +86,9 @@ way; in mechanics refining makes each cell more quantum
   the running turns it into a power of $a$, so survival is a threshold
   condition; in $D>4$ there is no small $t$.
 - **What survives is trajectory-dependent.** Compact $U(1)$ in $1+2$ keeps
-  a gap along trajectories with $\lambda_3a\simeq c/\log(1/a)$ and loses it at
-  fixed $\lambda_3$ (Göpfert--Mack versus Gross).
+  a gap along $\lambda_3a\simeq c_0/(2\log(1/a))$, $c_0\approx4.99$ the monopole
+  exponent, where the monopole density per physical volume diverges, and
+  loses it at fixed $\lambda_3$ (Göpfert--Mack versus Gross).
 - **Constants that emerge.** Mechanics: one scalar counterterm per cell,
   and one action constant if joint determinacy is denied (Theorems B and
   B$'$ of the fifth-postulate note). $1+1$: the Lévy exponent (one

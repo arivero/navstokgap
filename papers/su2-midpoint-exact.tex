@@ -21,7 +21,7 @@ the heat time, with the curvature factor \(1/h\), \(h=(d/4)\cot(d/4)\),
 derived by Laplace's method and labelled as asymptotics. For the
 fundamental character the midpoint expectation is computable exactly.
 For a bridge of duration \(t\) from \(e\) to a group element at geodesic
-distance \(\theta\in[0,2\pi)\),
+distance \(\theta\in(0,2\pi)\),
 
 \[E\,\chi_{1/2}(m)=e^{-t/32}\Bigl[2\cos\frac\theta4-\frac t{2\theta}\,
 \sin\frac\theta4\Bigr]\ \ \text{up to image terms of relative size}\
@@ -38,7 +38,9 @@ exponentially small winding of the bridge around the group. This is the
 first exact non-abelian statement about the parallel insertion in three
 dimensions, and it settles the fundamental-representation part of the
 uniform Laplace remainder that Proposition 7 of the series/parallel note
-assumes.
+assumes, for the trace in the fundamental representation (the image
+terms are of the stated order, and not uniformly so as
+\(\theta\to2\pi\)).
 
 The ingredients are character orthogonality and Poisson summation; the
 computation is elementary and no novelty is claimed for it.
@@ -105,7 +107,7 @@ Divide. \(\square\)
 \textbf{The image terms.} For \(\theta\in(0,2\pi)\) the pair \(w=\pm1\)
 in \(\Xi_\pm\) has, relative to the \(w=0\) term
 \(\theta e^{-\theta^2/(2t)}\), the size
-\(e^{-8\pi^2/t}\,|2\theta\cosh(4\pi\theta/t)\mp8\pi\sinh(4\pi\theta/t)|/\theta \le(2+32\pi^2/t)\,e^{-4\pi(2\pi-\theta)/t}\),
+\(e^{-8\pi^2/t}\,|2\theta\cosh(4\pi\theta/t)-8\pi\sinh(4\pi\theta/t)|/\theta \le(2+32\pi^2/t)\,e^{-4\pi(2\pi-\theta)/t}\),
 using \(\sinh x\le x\cosh x\). In \(\Theta_-\) the same pair has
 relative size at most \(2e^{-4\pi(2\pi-\theta)/t}\). The pairs
 \(|w|\ge2\) are smaller by a further factor \(e^{-16\pi^2/t}\) up to
@@ -262,9 +264,16 @@ times the trace of the product of the unitaries, which is
 
 For \(J\ge1\) the diagonal entries differ: the Gaussian prediction is
 \(\Lambda^J_{\mu\mu}\simeq1-\frac t8[\mu^2+(J(J+1)-\mu^2)/h]\), which
-depends on \(\mu\) unless \(h=1\). The reality argument gives only
-\(\Lambda^J_{\mu\mu}=\Lambda^J_{-\mu,-\mu}\), so for \(J=1\) one
-equation remains for the two entries \(\Lambda^1_{11}\) and
+depends on \(\mu\) unless \(h=1\). The Weyl reflection combined with
+time reversal gives \(\Lambda^J_{\mu\mu}=\Lambda^J_{-\mu,-\mu}\) for
+every \(J\): with \(w\) in the normaliser of the torus,
+\(\operatorname{Ad}(w)X=-X\), the map \(g\mapsto e^Xwgw^{-1}\) carries
+the bridge from \(e\) to \(e^X\) to the bridge from \(e^X\) to \(e\),
+whose midpoint law is the same by reversibility, and conjugation by
+\(D(w)\) exchanges \(\mu\) and \(-\mu\) on a diagonal matrix (reviewer's
+argument; the reality of the trace alone gives only one relation). The
+trace (2) then fixes \(\lfloor J\rfloor+1\) unknowns by one equation, so
+for \(J=1\) one relation remains between \(\Lambda^1_{11}\) and
 \(\Lambda^1_{00}\). The matrix-element version of the orthogonality
 computation of Theorem 1, with the Clebsch--Gordan coefficients of
 \(j_1\otimes J\), is the tool for them.
