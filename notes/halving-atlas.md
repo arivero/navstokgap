@@ -63,7 +63,7 @@ performs the same two moves, with $s$ as a parameter.
   on the layer differences in place of $1/(8(2t+v))$, so the size bound (6) scales exactly by $4s(1-s)$
   ([Corollary 2$_s$](series-parallel-gauge-refinement.md)): halving is the
   largest single step, and an off-centre cut is gentler and shrinks the
-  mesh less. The $s$-dependence of Theorem 5 is open.
+  mesh less. Theorem 5 holds for every $s$ (Corollary 5$_s$ there).
 - **Newton.** The cell action $K_\tau=F^2\tau^3/(24m)$
   ([two-path note](galileo-two-path-interference.md)) obeys
   $\tau^3=(s\tau)^3+((1-s)\tau)^3+3s(1-s)\tau^3$, so one cut removes exactly
@@ -77,22 +77,34 @@ performs the same two moves, with $s$ as a parameter.
   spends a definite share of the action that Newton sends to zero. This
   is the Lévy–Ciesielski structure of the Brownian bridge (variance
   $s(1-s)$ at each dyadic or non-dyadic insertion) seen in the action.
-- **Relative windings** (compact groups; 2026-09-28, not refereed). On
+- **Relative windings** (compact groups; 2026-09-28, refereed). On
   $U(1)$ the bridge midpoint at fraction $s$ is a mixture over the total
   winding $W\in\mathbb Z$, with $s$-independent weights $\propto e^{-(\phi_e+2\pi W)^2/(2t_e)}$, of
   wrapped Gaussians of variance $s(1-s)t_e$ centred at the interpolation
-  shifted by $2\pi(1-s)W$ ([Remark 5$_s$](series-parallel-gauge-refinement.md)).
-  Halving is the only cut whose shifts form $\mathbb Z_2$, the parity mixture of
-  Prop. 4; $s=p/q$ in lowest terms gives $\mathbb Z_q$, an irrational $s$ a dense set.
-  For a simply connected group the heat kernel's image sum runs over the
-  coroot lattice $Q^\vee$, and the image midpoints sit at $e^{isX}e^{2\pi isH}$, $H\in Q^\vee$
+  shifted by $2\pi(1-s)W$; Theorem 5 holds for every $s$
+  ([Corollary 5$_s$](series-parallel-gauge-refinement.md)). Halving is the
+  only cut whose shifts form $\mathbb Z_2$, the parity mixture of Prop. 4; $s=p/q$ in
+  lowest terms gives $\mathbb Z_q$, an irrational $s$ a dense set. For a simply
+  connected group the heat kernel's image sum runs over the coroot
+  lattice $Q^\vee$, and the image midpoints sit at $e^{isX}e^{2\pi isH}$, $H\in Q^\vee$
   (semiclassical placement; the exact weights carry Jacobians). These
   shifts are all central iff $sQ^\vee\subset P^\vee$, the coweight lattice ($P^\vee/Q^\vee$ is
-  the centre). For $SU(2)$, $\frac12Q^\vee=P^\vee$: at a halving every relative winding
-  acts by the centre element $-1$, the $\mathbb Z_2$ of thin centre vortices. For
-  $SU(N)$, $N\ge3$, only integer $s$ satisfies the condition ($H=(1,-1,0,\dots)$
-  forces $s\in\mathbb Z$); at $s=1/N$ only $H\in NP^\vee$ give central shifts. Whether
-  this ties the halving to centre vortices is a question.
+  the centre). For $SU(2)$, $\frac12Q^\vee=P^\vee$: at a halving a relative winding $n$
+  acts by the centre element $(-1)^n$. Geometrically, $SU(2)=S^3$ and $-1$ is the
+  antipode of $e$, so every closed geodesic through $e$ passes through $-1$
+  at half length. For $SU(N)$, $N\ge3$, only integer $s$ satisfies the
+  condition ($H=(1,-1,0,\dots)$ forces $s\in\mathbb Z$); the shortest closed geodesics
+  pass at half length through ${\rm diag}(\dots,-1,\dots,-1,\dots)$, which is not
+  central, and at $s=1/N$ only $H\in NP^\vee$ give central shifts. Flipping one
+  mid-edge by $-1$ flips every plaquette containing it, the smallest thin
+  $\mathbb Z_2$ vortex in the sense of
+  [Mack and Petkova (1979)](https://doi.org/10.1016/0003-4916(79)90346-4);
+  centre vortices go back to
+  ['t Hooft (1978)](https://doi.org/10.1016/0550-3213(78)90153-0), and
+  factor-2 decimation with the $\mathbb Z_2$ factor kept explicit to
+  [Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata for
+  all three). Whether the bridge parity at a halving ties refinement to
+  centre vortices is a question; the observation itself is elementary.
 - **The rod** (user remark, 2026-09-27). The dialecticians' stick of
   *Zhuangzi* 33, 一尺之捶，日取其半，萬世不竭 ("a one-foot stick, each day take
   half, in ten thousand generations it is not exhausted";
@@ -169,22 +181,29 @@ way; in mechanics refining makes each cell more quantum
   loses it at fixed $\lambda_3$ (Göpfert--Mack versus Gross).
 - **The action floor survives what removes the mass gap** (user
   observation, 2026-09-28). The heat time is $t=\lambda_3a=\hbar g_{\rm cl}^2a$, so the
-  compact corrections a step leaves, $e^{-c/t}=e^{-c/(\hbar g_{\rm cl}^2a)}$, vanish
-  both as $a\to0$ and as $\hbar\to0$, while the $w=0$ Gaussian term of (9) of the
+  compact corrections a step leaves, $e^{-c/t}=e^{-c/(\hbar g_{\rm cl}^2a)}$, vanish as
+  $a\to0$ at fixed coupling and as $\hbar\to0$ at fixed $g_{\rm cl}$ and $a$, while the
+  $w=0$ Gaussian term of (9) of the
   [series/parallel note](series-parallel-gauge-refinement.md), whose width is
   set by $\hbar$, is what remains. Both $U(1)$ continuum limits on record are
-  Gaussian quantum fields with covariance proportional to $\hbar$: Gross's
-  massless photon at fixed $\lambda_3$, and Göpfert--Mack's free massive scalar.
-  The refinement at fixed coupling removes the lattice mass gap and keeps
-  the unit of action, and Planck found $h$ in this same gapless theory in
-  $1+3$, cavity radiation. The atlas thus carries two gaps of different
-  kinds: a mass gap, generated and trajectory-dependent, and an action
-  floor, a unit that every cell of every limit keeps (each cut weighted
-  by $e^{-{\rm share}/\hbar}$, [cut-measure note](cut-measure-newton.md), Prop. 4).
-  This is the distinction of [G07](low-dimensional-mass-gap.md) and
-  [G08](action-floor-yang-mills-gap.md): a floor is a unit multiple of the
-  fixed constants, while a generated gap needs two non-commuting
-  scale-free structures.
+  Gaussian: Gross's photon, with field-strength covariance $\lambda_3K_0=\hbar g_{\rm cl}^2K_0$
+  at fixed $g_{\rm cl}$, and Göpfert--Mack's free massive scalar, canonically
+  normalized along a trajectory on which $\lambda_3=\hbar g_{\rm cl}^2$ diverges. The
+  refinement at fixed coupling removes the lattice mass gap and keeps the
+  unit of action. And $h$ was first measured in this same gapless theory
+  in $1+3$, cavity radiation (Planck 1900, through the resonators' energy
+  elements; the field-mode reading is
+  [Debye 1910](https://doi.org/10.1002/andp.19103381617), metadata); in a
+  finite cavity the supplied box gap $2\pi\hbar c/L$ remains, and "gapless" is
+  the infinite-volume statement. The atlas thus carries two gaps of
+  different kinds: a mass gap, generated and trajectory-dependent, and an
+  action floor, a unit that every cell of every limit keeps (each cut
+  weighted by $e^{-{\rm share}/\hbar}$, [cut-measure note](cut-measure-newton.md),
+  Prop. 4). In the terms of [G07](low-dimensional-mass-gap.md) both are unit
+  multiples of the fixed constants (its Theorem 1); the action floor is
+  supplied, $\hbar$ written into $e^{-S/\hbar}$, while a generated gap needs two
+  scale-free structures that do not commute (G07 §1;
+  [G08](action-floor-yang-mills-gap.md)).
 - **Constants that emerge.** Mechanics: one scalar counterterm per cell,
   and one action constant if joint determinacy is denied (Theorems B and
   B$'$ of the fifth-postulate note). $1+1$: the Lévy exponent (one

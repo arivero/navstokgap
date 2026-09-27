@@ -217,5 +217,5 @@ Atlas §1b: the Newton row of "cuts at any position" is proved here
 and the Euclidean weight of a cut (Proposition 4). The necessity question
 is unchanged. On the gauge side of §1b the free-field defect of a cut at
 fraction $s$ is (5) scaled by $4s(1-s)$ in its size bound
-([Corollary 2$_s$](series-parallel-gauge-refinement.md)); the $s$-dependence
-of the $U(1)$ Theorem 5 remains open.
+([Corollary 2$_s$](series-parallel-gauge-refinement.md)); the $U(1)$ Theorem 5
+holds for every cut fraction (Corollary 5$_s$ there).

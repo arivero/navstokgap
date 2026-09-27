@@ -450,9 +450,9 @@ less, to <span class="math inline">\(\max(s,1-s)\,a_1\)</span>. The
 statement covers one step from a uniform lattice; after it the layers
 have thicknesses <span class="math inline">\(sa_1\)</span> and <span
 class="math inline">\((1-s)a_1\)</span>, and the next cut starts from
-that non-uniform lattice. The <span
-class="math inline">\(s\)</span>-dependence of Theorem 5’s exponent is
-not derived here. <span class="math inline">\(\square\)</span></p>
+that non-uniform lattice. Theorem 5 for a general cut is Corollary
+5<span class="math inline">\(_s\)</span> below. <span
+class="math inline">\(\square\)</span></p>
 <p>For a smooth field, <span
 class="math inline">\(\Phi=a^2F_{23}\)</span> and the right side of (6)
 is <span class="math inline">\(a^2(K^2/16+G^2/8)\)</span> times the
@@ -930,17 +930,53 @@ class="math inline">\(\alpha\)</span>). The non-abelian terms N1–N3 are
 absent here, so Theorem 5 tests the large-field and representative
 bookkeeping, and leaves the curvature and commutator terms to the <span
 class="math inline">\(SU(2)\)</span> cube.</p>
-<p><strong>Remark 5<span class="math inline">\(_s\)</span> (compact
+<p><strong>Corollary 5<span class="math inline">\(_s\)</span> (compact
 <span class="math inline">\(U(1)\)</span>, a cut at fraction <span
-class="math inline">\(s\)</span>; 2026-09-28, not refereed).</strong>
-Use the trapezoid weights of Corollary 2<span
-class="math inline">\(_s\)</span>. (a) The bridge density is <span
-class="math inline">\(\sum_{w_1,w_2}e^{-(P_e-m+2\pi
+class="math inline">\(s\)</span>; 2026-09-28; refereed by Fable the same
+day, which supplied the uniform bound of step (d), checked
+here).</strong> Take the hypotheses of Theorem 5 with the trapezoid
+weights of Corollary 2<span class="math inline">\(_s\)</span>, a cut at
+fraction <span class="math inline">\(s\in(0,1)\)</span>, and the
+representative <span
+class="math inline">\(\bar\Phi=(1-s)\Phi_\ell+s\Phi_{\ell+1}\)</span>.
+Put <span
+class="math inline">\(c^*_s=\pi^2/(1+4s(1-s))\in[\pi^2/2,\pi^2]\)</span>,
+<span class="math inline">\(r_s=e^{-(c^*_s-\pi\varepsilon)/t}\)</span>,
+<span class="math inline">\(h_*=\varepsilon^2(1+4s(1-s))/(4t)\)</span>,
+and let <span
+class="math inline">\(q_e\le\frac52e^{-2\pi(\pi-\varepsilon)/t}\)</span>
+be the probability that the total winding <span
+class="math inline">\(W_e\)</span> of mid-edge <span
+class="math inline">\(e\)</span> is nonzero. Then</p>
+<p><span class="math display">\[-\sum_e2q_e\ \le\
+\log\Psi-\log\Psi_1^{(0)}(\bar\Phi)\ \le\
+\frac{2Nr_s}{1-r_s}+\sum_eq_eS_*^2,\qquad
+S_*=e^{h_*}+e^{-(c^*_s/2-\pi\varepsilon)/(2t)}+\frac{2r_s}{1-r_s},\]</span></p>
+<p>with <span class="math inline">\(\Psi_1^{(0)}\)</span> built from the
+covariance <span class="math inline">\(C_s\)</span> of (b) below. For
+<span class="math inline">\(\varepsilon\le\pi/24\)</span> (Theorem 5’s
+hypothesis) both error densities are <span
+class="math inline">\(O(e^{-\pi^2/(8t)})\)</span> for every <span
+class="math inline">\(s\)</span>, so Theorem 5 holds for every cut
+fraction, and <span class="math inline">\(\mathcal D\)</span> equals
+<span class="math inline">\(\mathcal D_s\)</span> of Corollary 2<span
+class="math inline">\(_s\)</span> plus a constant up to such an error on
+the sector of zero total transverse flux. At <span
+class="math inline">\(s=\frac12\)</span> the vortex term <span
+class="math inline">\(2Nr_{1/2}/(1-r_{1/2})\)</span>, <span
+class="math inline">\(r_{1/2}=e^{-(\pi^2/2-\pi\varepsilon)/t}\)</span>,
+sharpens step (iv) of Theorem 5, whose bound uniform in the parities was
+lossy.</p>
+<p><em>Proof.</em> (a) <em>Midpoint law.</em> The bridge density is
+<span class="math inline">\(\sum_{w_1,w_2}e^{-(P_e-m+2\pi
 w_1)^2/(2st_e)-(m+Q_e+2\pi w_2)^2/(2(1-s)t_e)}\)</span>. With <span
 class="math inline">\(W=w_1+w_2\)</span> fixed, the minimum over <span
 class="math inline">\(m\)</span> is <span
 class="math inline">\((\phi_e+2\pi W)^2/(2t_e)\)</span>, <span
-class="math inline">\(\phi_e=P_e+Q_e\)</span>, and the centre is <span
+class="math inline">\(\phi_e=P_e+Q_e\)</span>, the curvature is <span
+class="math inline">\(1/(s(1-s)t_e)\)</span>, the prefactor is <span
+class="math inline">\((2\pi t_e)^{-1/2}\)</span> for every <span
+class="math inline">\(s\)</span>, and the centre is <span
 class="math inline">\(\bar m_e+2\pi(1-s)W-2\pi w_2\)</span>; the last
 term vanishes modulo <span class="math inline">\(2\pi\)</span>. So the
 midpoint is a mixture over <span class="math inline">\(W\in\mathbb
@@ -951,34 +987,80 @@ class="math inline">\(s(1-s)t_e\)</span> centred at <span
 class="math inline">\(\bar m_e+2\pi(1-s)W\)</span>. At <span
 class="math inline">\(s=\frac12\)</span> the shifts are <span
 class="math inline">\(\pi W\)</span>, the parity mixture of the proof of
-Proposition 4. (b) The Gaussian average in that proof now gives <span
-class="math inline">\(e^{-\frac12s(1-s)t\,n^{\sf T}Ln}\)</span>, so in
-the isotropic case (9) has covariance <span
-class="math inline">\(C_s=2t(I+\frac12s(1-s)L)\)</span>, again an
-M-matrix with row sums <span class="math inline">\(1\)</span>: <span
-class="math inline">\(\|C_s^{-1}\|_{\infty\to\infty}=1/(2t)\)</span> and
-<span class="math inline">\(C_s^{-1}\ge1/(2t(1+4s(1-s)))\)</span>. The
-vortex bound (10) holds with <span
-class="math inline">\(c_s=\pi\bigl(\pi/(1+4s(1-s))-\|\bar\Phi\|_\infty\bigr)\)</span>,
-which is <span class="math inline">\(c\)</span> at <span
-class="math inline">\(s=\frac12\)</span> and tends to <span
-class="math inline">\(\pi(\pi-\|\bar\Phi\|_\infty)\)</span> as <span
-class="math inline">\(s\to0\)</span> or <span
-class="math inline">\(1\)</span>. (c) For <span
-class="math inline">\(s\ne\frac12\)</span> the mixture shifts are
-fractional multiples of <span class="math inline">\(2\pi\)</span>, and
-step (iv) of Theorem 5 used the integrality of <span
-class="math inline">\(u=c+2w\)</span>. The weights of <span
-class="math inline">\(W_e\ne0\)</span> are <span
-class="math inline">\(s\)</span>-independent and of order <span
-class="math inline">\(e^{-2\pi(\pi-\varepsilon)/t}\)</span>, and a
-shifted term exceeds the unshifted one by at most <span
-class="math inline">\(e^{O(\varepsilon^2/t)}\)</span> per affected face.
-The expected statement is Theorem 5 with the vortex density <span
-class="math inline">\(e^{-c_s/t}\)</span> of (b) and a mixture density
-of order <span
-class="math inline">\(e^{-2\pi(\pi-\varepsilon)/t+O(\varepsilon^2/t)}\)</span>;
-the uniform bound over fractional shifts is the missing step.</p>
+Proposition 4, and <span class="math inline">\(q_e\)</span> obeys
+Proposition 3’s bound for every <span class="math inline">\(s\)</span>.
+(b) <em>Covariance.</em> The Gaussian average of that proof now gives
+<span class="math inline">\(e^{-\frac12s(1-s)t\,n^{\sf T}Ln}\)</span>,
+so in the isotropic case (9) has covariance <span
+class="math inline">\(C_s=2t(I+\frac12s(1-s)L)\)</span>, a symmetric
+diagonally dominant M-matrix with row sums <span
+class="math inline">\(1\)</span>: <span
+class="math inline">\(\|C_s^{-1}\|_{\infty\to\infty}=1/(2t)\)</span>,
+and <span class="math inline">\(C_s^{-1}\ge1/(2t(1+4s(1-s)))\)</span>
+since <span class="math inline">\(L\le8\)</span>. (The vortex bound (10)
+holds with <span
+class="math inline">\(c_s=\pi(\pi/(1+4s(1-s))-\|\bar\Phi\|_\infty)\ge
+c\)</span>.) (c) <em>Representative.</em> The mean mid-edges are <span
+class="math inline">\((1-s)A_j(\ell)+sA_j(\ell+1)\)</span> plus a
+transverse gradient, and the argument of Theorem 5 (i) with weights
+<span class="math inline">\(1-s\)</span> and <span
+class="math inline">\(s\)</span> gives mean mid-face flux <span
+class="math inline">\(\bar\Phi\)</span> up to multiples of <span
+class="math inline">\(2\pi\)</span>, with <span
+class="math inline">\(|\bar\Phi|\le\varepsilon\)</span>. (d) <em>Upper
+bound.</em> <span
+class="math inline">\(\Psi=E_W\,\Psi_1(\bar\Phi+2\pi(1-s)\delta^{\sf
+T}W)\)</span>. For given <span class="math inline">\(W\)</span> the
+terms of (9) are indexed by <span
+class="math inline">\(u=(1-s)\delta^{\sf T}W+w\)</span>, <span
+class="math inline">\(w\in\mathbb Z^N\)</span>, and relative to the
+<span class="math inline">\(w=0\)</span> term at <span
+class="math inline">\(\bar\Phi\)</span> the exponent is <span
+class="math inline">\(F(u)=-2\pi u^{\sf T}C_s^{-1}\bar\Phi-2\pi^2u^{\sf
+T}C_s^{-1}u\le\sum_gh(|u_g|)\)</span>, <span
+class="math inline">\(h(x)=(\pi\varepsilon x-c^*_sx^2)/t\)</span>, by
+the two matrix facts of (b). Here <span class="math inline">\(h\le
+h_*\)</span>, and <span
+class="math inline">\(h(x)\le-(c^*_s-\pi\varepsilon)x/t\)</span> for
+<span class="math inline">\(x\ge1\)</span>. Summing over <span
+class="math inline">\(w\)</span> coordinatewise, <span
+class="math inline">\(\Psi_1(\bar\Phi+2\pi(1-s)\delta^{\sf
+T}W)/\Psi_1^{(0)}(\bar\Phi)\le\prod_gS(\theta_g)\)</span>, <span
+class="math inline">\(\theta_g\)</span> the fractional part of <span
+class="math inline">\(u_g\)</span>, <span
+class="math inline">\(S(\theta)=\sum_ke^{h(|\theta+k|)}\)</span>, with
+<span class="math inline">\(S(0)\le1+2r_s/(1-r_s)\)</span> and <span
+class="math inline">\(S(\theta)\le S_*\)</span> (one point of <span
+class="math inline">\(\theta+\mathbb Z\)</span> within <span
+class="math inline">\(\frac12\)</span> of <span
+class="math inline">\(0\)</span>, one in <span
+class="math inline">\([\frac12,1)\)</span>, the rest at distance at
+least <span class="math inline">\(1\)</span>). Only the two mid-faces
+adjacent to an edge with <span class="math inline">\(W_e\ne0\)</span>
+can have <span class="math inline">\(\theta_g\ne0\)</span>, and <span
+class="math inline">\(S_*\ge S(0)\ge1\)</span>, so <span
+class="math inline">\(\prod_gS(\theta_g)\le
+S(0)^NS_*^{2\#\{e:W_e\ne0\}}\)</span>. The <span
+class="math inline">\(W_e\)</span> are independent, so <span
+class="math inline">\(E_W\,S_*^{2\#\{e:W_e\ne0\}}\le\prod_e(1+q_eS_*^2)\)</span>;
+take logarithms. When <span
+class="math inline">\(\min(s,1-s)&gt;\varepsilon(1+4s(1-s))/\pi\)</span>
+the shifted terms are in fact suppressed, and the factor <span
+class="math inline">\(e^{h_*}\)</span> enters only for cuts within about
+<span class="math inline">\(\varepsilon\)</span> of an end. (e)
+<em>Lower bound.</em> Every term is positive, so <span
+class="math inline">\(\Psi\ge\prod_e(1-q_e)\Psi_1^{(0)}(\bar\Phi)\)</span>,
+and <span class="math inline">\(\log(1-q)\ge-2q\)</span>. (f) <em>Old
+faces and sizes.</em> Step (v) of Theorem 5 is unchanged, since every
+transverse face keeps heat time <span class="math inline">\(2t\)</span>.
+For <span class="math inline">\(\varepsilon\le\pi/24\)</span>: <span
+class="math inline">\(c^*_s-\pi\varepsilon\ge11\pi^2/24\)</span>, and
+<span
+class="math inline">\(2\pi(\pi-\varepsilon)-2th_*\ge2\pi^2\cdot\frac{23}{24}-\frac{\pi^2}{576}&gt;\pi^2/8\)</span>,
+although <span
+class="math inline">\(h_*=\varepsilon^2/(4t)\cdot(1+4s(1-s))\)</span>
+grows like <span class="math inline">\(t^{-2\delta}\)</span>. <span
+class="math inline">\(\square\)</span></p>
 <p><strong>What survives: compact <span
 class="math inline">\(U(1)\)</span> in three dimensions.</strong> This
 theory is the proved example of a lattice gap that the fixed-coupling

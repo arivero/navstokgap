@@ -250,8 +250,8 @@ off-centre cut is gentler in both the noise and the displacement parts;
 it also shrinks the mesh less, to $\max(s,1-s)\,a_1$.
 The statement covers one step from a uniform lattice; after it the
 layers have thicknesses $sa_1$ and $(1-s)a_1$, and the next cut starts from
-that non-uniform lattice. The $s$-dependence of Theorem 5's exponent is
-not derived here. $\square$
+that non-uniform lattice. Theorem 5 for a general cut is Corollary 5$_s$
+below. $\square$
 
 For a smooth field, $\Phi=a^2F_{23}$ and the right side of (6) is
 $a^2(K^2/16+G^2/8)$ times the continuum magnetic action
@@ -576,27 +576,68 @@ clause of P($\alpha$). The non-abelian terms N1--N3 are absent here, so
 Theorem 5 tests the large-field and representative bookkeeping, and
 leaves the curvature and commutator terms to the $SU(2)$ cube.
 
-**Remark 5$_s$ (compact $U(1)$, a cut at fraction $s$; 2026-09-28, not
-refereed).** Use the trapezoid weights of Corollary 2$_s$. (a) The bridge
-density is $\sum_{w_1,w_2}e^{-(P_e-m+2\pi w_1)^2/(2st_e)-(m+Q_e+2\pi w_2)^2/(2(1-s)t_e)}$. With
-$W=w_1+w_2$ fixed, the minimum over $m$ is $(\phi_e+2\pi W)^2/(2t_e)$, $\phi_e=P_e+Q_e$, and the
-centre is $\bar m_e+2\pi(1-s)W-2\pi w_2$; the last term vanishes modulo $2\pi$. So the
-midpoint is a mixture over $W\in\mathbb Z$, with weights $\propto e^{-(\phi_e+2\pi W)^2/(2t_e)}$
-independent of $s$, of wrapped Gaussians of variance $s(1-s)t_e$ centred at
-$\bar m_e+2\pi(1-s)W$. At $s=\frac12$ the shifts are $\pi W$, the parity mixture of the
-proof of Proposition 4. (b) The Gaussian average in that proof now gives
+**Corollary 5$_s$ (compact $U(1)$, a cut at fraction $s$; 2026-09-28;
+refereed by Fable the same day, which supplied the uniform bound of step
+(d), checked here).** Take the hypotheses of Theorem 5 with the trapezoid
+weights of Corollary 2$_s$, a cut at fraction $s\in(0,1)$, and the
+representative $\bar\Phi=(1-s)\Phi_\ell+s\Phi_{\ell+1}$. Put
+$c^*_s=\pi^2/(1+4s(1-s))\in[\pi^2/2,\pi^2]$, $r_s=e^{-(c^*_s-\pi\varepsilon)/t}$,
+$h_*=\varepsilon^2(1+4s(1-s))/(4t)$, and let $q_e\le\frac52e^{-2\pi(\pi-\varepsilon)/t}$ be the probability
+that the total winding $W_e$ of mid-edge $e$ is nonzero. Then
+
+$$-\sum_e2q_e\ \le\ \log\Psi-\log\Psi_1^{(0)}(\bar\Phi)\ \le\
+\frac{2Nr_s}{1-r_s}+\sum_eq_eS_*^2,\qquad
+S_*=e^{h_*}+e^{-(c^*_s/2-\pi\varepsilon)/(2t)}+\frac{2r_s}{1-r_s},$$
+
+with $\Psi_1^{(0)}$ built from the covariance $C_s$ of (b) below. For $\varepsilon\le\pi/24$
+(Theorem 5's hypothesis) both error densities are $O(e^{-\pi^2/(8t)})$ for
+every $s$, so Theorem 5 holds for every cut fraction, and $\mathcal D$ equals
+$\mathcal D_s$ of Corollary 2$_s$ plus a constant up to such an error on the
+sector of zero total transverse flux. At $s=\frac12$ the vortex term
+$2Nr_{1/2}/(1-r_{1/2})$, $r_{1/2}=e^{-(\pi^2/2-\pi\varepsilon)/t}$, sharpens step (iv) of Theorem 5,
+whose bound uniform in the parities was lossy.
+
+*Proof.* (a) *Midpoint law.* The bridge density is
+$\sum_{w_1,w_2}e^{-(P_e-m+2\pi w_1)^2/(2st_e)-(m+Q_e+2\pi w_2)^2/(2(1-s)t_e)}$. With
+$W=w_1+w_2$ fixed, the minimum over $m$ is $(\phi_e+2\pi W)^2/(2t_e)$, $\phi_e=P_e+Q_e$,
+the curvature is $1/(s(1-s)t_e)$, the prefactor is $(2\pi t_e)^{-1/2}$ for every
+$s$, and the centre is $\bar m_e+2\pi(1-s)W-2\pi w_2$; the last term vanishes
+modulo $2\pi$. So the midpoint is a mixture over $W\in\mathbb Z$, with weights
+$\propto e^{-(\phi_e+2\pi W)^2/(2t_e)}$ independent of $s$, of wrapped Gaussians of variance
+$s(1-s)t_e$ centred at $\bar m_e+2\pi(1-s)W$. At $s=\frac12$ the shifts are $\pi W$, the
+parity mixture of the proof of Proposition 4, and $q_e$ obeys Proposition
+3's bound for every $s$.
+(b) *Covariance.* The Gaussian average of that proof now gives
 $e^{-\frac12s(1-s)t\,n^{\sf T}Ln}$, so in the isotropic case (9) has covariance
-$C_s=2t(I+\frac12s(1-s)L)$, again an M-matrix with row sums $1$:
-$\|C_s^{-1}\|_{\infty\to\infty}=1/(2t)$ and $C_s^{-1}\ge1/(2t(1+4s(1-s)))$. The vortex bound (10) holds
-with $c_s=\pi\bigl(\pi/(1+4s(1-s))-\|\bar\Phi\|_\infty\bigr)$, which is $c$ at $s=\frac12$ and tends to
-$\pi(\pi-\|\bar\Phi\|_\infty)$ as $s\to0$ or $1$. (c) For $s\ne\frac12$ the mixture shifts are
-fractional multiples of $2\pi$, and step (iv) of Theorem 5 used the
-integrality of $u=c+2w$. The weights of $W_e\ne0$ are $s$-independent and of
-order $e^{-2\pi(\pi-\varepsilon)/t}$, and a shifted term exceeds the unshifted one by at
-most $e^{O(\varepsilon^2/t)}$ per affected face. The expected statement is Theorem 5
-with the vortex density $e^{-c_s/t}$ of (b) and a mixture density of order
-$e^{-2\pi(\pi-\varepsilon)/t+O(\varepsilon^2/t)}$; the uniform bound over fractional shifts is the
-missing step.
+$C_s=2t(I+\frac12s(1-s)L)$, a symmetric diagonally dominant M-matrix with row
+sums $1$: $\|C_s^{-1}\|_{\infty\to\infty}=1/(2t)$, and $C_s^{-1}\ge1/(2t(1+4s(1-s)))$ since $L\le8$. (The
+vortex bound (10) holds with $c_s=\pi(\pi/(1+4s(1-s))-\|\bar\Phi\|_\infty)\ge c$.)
+(c) *Representative.* The mean mid-edges are $(1-s)A_j(\ell)+sA_j(\ell+1)$
+plus a transverse gradient, and the argument of Theorem 5 (i) with
+weights $1-s$ and $s$ gives mean mid-face flux $\bar\Phi$ up to multiples of $2\pi$,
+with $|\bar\Phi|\le\varepsilon$.
+(d) *Upper bound.* $\Psi=E_W\,\Psi_1(\bar\Phi+2\pi(1-s)\delta^{\sf T}W)$. For given $W$ the terms of
+(9) are indexed by $u=(1-s)\delta^{\sf T}W+w$, $w\in\mathbb Z^N$, and relative to the $w=0$
+term at $\bar\Phi$ the exponent is
+$F(u)=-2\pi u^{\sf T}C_s^{-1}\bar\Phi-2\pi^2u^{\sf T}C_s^{-1}u\le\sum_gh(|u_g|)$, $h(x)=(\pi\varepsilon x-c^*_sx^2)/t$,
+by the two matrix facts of (b). Here $h\le h_*$, and $h(x)\le-(c^*_s-\pi\varepsilon)x/t$ for
+$x\ge1$. Summing over $w$ coordinatewise,
+$\Psi_1(\bar\Phi+2\pi(1-s)\delta^{\sf T}W)/\Psi_1^{(0)}(\bar\Phi)\le\prod_gS(\theta_g)$, $\theta_g$ the fractional part
+of $u_g$, $S(\theta)=\sum_ke^{h(|\theta+k|)}$, with $S(0)\le1+2r_s/(1-r_s)$ and $S(\theta)\le S_*$
+(one point of $\theta+\mathbb Z$ within $\frac12$ of $0$, one in $[\frac12,1)$, the rest at
+distance at least $1$). Only the two mid-faces adjacent to an edge with
+$W_e\ne0$ can have $\theta_g\ne0$, and $S_*\ge S(0)\ge1$, so
+$\prod_gS(\theta_g)\le S(0)^NS_*^{2\#\{e:W_e\ne0\}}$. The $W_e$ are independent, so
+$E_W\,S_*^{2\#\{e:W_e\ne0\}}\le\prod_e(1+q_eS_*^2)$; take logarithms. When
+$\min(s,1-s)>\varepsilon(1+4s(1-s))/\pi$ the shifted terms are in fact suppressed, and
+the factor $e^{h_*}$ enters only for cuts within about $\varepsilon$ of an end.
+(e) *Lower bound.* Every term is positive, so
+$\Psi\ge\prod_e(1-q_e)\Psi_1^{(0)}(\bar\Phi)$, and $\log(1-q)\ge-2q$.
+(f) *Old faces and sizes.* Step (v) of Theorem 5 is unchanged, since
+every transverse face keeps heat time $2t$. For $\varepsilon\le\pi/24$:
+$c^*_s-\pi\varepsilon\ge11\pi^2/24$, and
+$2\pi(\pi-\varepsilon)-2th_*\ge2\pi^2\cdot\frac{23}{24}-\frac{\pi^2}{576}>\pi^2/8$, although $h_*=\varepsilon^2/(4t)\cdot(1+4s(1-s))$
+grows like $t^{-2\delta}$. $\square$
 
 **What survives: compact $U(1)$ in three dimensions.** This theory is
 the proved example of a lattice gap that the fixed-coupling refinement

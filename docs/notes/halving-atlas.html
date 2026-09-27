@@ -162,9 +162,9 @@ class="math inline">\(1/(8(2t+v))\)</span>, so the size bound (6) scales
 exactly by <span class="math inline">\(4s(1-s)\)</span> (<a
 href="series-parallel-gauge-refinement.html">Corollary 2<span
 class="math inline">\(_s\)</span></a>): halving is the largest single
-step, and an off-centre cut is gentler and shrinks the mesh less. The
-<span class="math inline">\(s\)</span>-dependence of Theorem 5 is
-open.</li>
+step, and an off-centre cut is gentler and shrinks the mesh less.
+Theorem 5 holds for every <span class="math inline">\(s\)</span>
+(Corollary 5<span class="math inline">\(_s\)</span> there).</li>
 <li><strong>Newton.</strong> The cell action <span
 class="math inline">\(K_\tau=F^2\tau^3/(24m)\)</span> (<a
 href="galileo-two-path-interference.html">two-path note</a>) obeys <span
@@ -184,7 +184,7 @@ share of the action that Newton sends to zero. This is the
 Lévy–Ciesielski structure of the Brownian bridge (variance <span
 class="math inline">\(s(1-s)\)</span> at each dyadic or non-dyadic
 insertion) seen in the action.</li>
-<li><strong>Relative windings</strong> (compact groups; 2026-09-28, not
+<li><strong>Relative windings</strong> (compact groups; 2026-09-28,
 refereed). On <span class="math inline">\(U(1)\)</span> the bridge
 midpoint at fraction <span class="math inline">\(s\)</span> is a mixture
 over the total winding <span class="math inline">\(W\in\mathbb
@@ -192,8 +192,9 @@ Z\)</span>, with <span class="math inline">\(s\)</span>-independent
 weights <span class="math inline">\(\propto e^{-(\phi_e+2\pi
 W)^2/(2t_e)}\)</span>, of wrapped Gaussians of variance <span
 class="math inline">\(s(1-s)t_e\)</span> centred at the interpolation
-shifted by <span class="math inline">\(2\pi(1-s)W\)</span> (<a
-href="series-parallel-gauge-refinement.html">Remark 5<span
+shifted by <span class="math inline">\(2\pi(1-s)W\)</span>; Theorem 5
+holds for every <span class="math inline">\(s\)</span> (<a
+href="series-parallel-gauge-refinement.html">Corollary 5<span
 class="math inline">\(_s\)</span></a>). Halving is the only cut whose
 shifts form <span class="math inline">\(\mathbb Z_2\)</span>, the parity
 mixture of Prop. 4; <span class="math inline">\(s=p/q\)</span> in lowest
@@ -208,18 +209,35 @@ shifts are all central iff <span class="math inline">\(sQ^\vee\subset
 P^\vee\)</span>, the coweight lattice (<span
 class="math inline">\(P^\vee/Q^\vee\)</span> is the centre). For <span
 class="math inline">\(SU(2)\)</span>, <span
-class="math inline">\(\frac12Q^\vee=P^\vee\)</span>: at a halving every
-relative winding acts by the centre element <span
-class="math inline">\(-1\)</span>, the <span
-class="math inline">\(\mathbb Z_2\)</span> of thin centre vortices. For
-<span class="math inline">\(SU(N)\)</span>, <span
+class="math inline">\(\frac12Q^\vee=P^\vee\)</span>: at a halving a
+relative winding <span class="math inline">\(n\)</span> acts by the
+centre element <span class="math inline">\((-1)^n\)</span>.
+Geometrically, <span class="math inline">\(SU(2)=S^3\)</span> and <span
+class="math inline">\(-1\)</span> is the antipode of <span
+class="math inline">\(e\)</span>, so every closed geodesic through <span
+class="math inline">\(e\)</span> passes through <span
+class="math inline">\(-1\)</span> at half length. For <span
+class="math inline">\(SU(N)\)</span>, <span
 class="math inline">\(N\ge3\)</span>, only integer <span
 class="math inline">\(s\)</span> satisfies the condition (<span
 class="math inline">\(H=(1,-1,0,\dots)\)</span> forces <span
-class="math inline">\(s\in\mathbb Z\)</span>); at <span
-class="math inline">\(s=1/N\)</span> only <span
-class="math inline">\(H\in NP^\vee\)</span> give central shifts. Whether
-this ties the halving to centre vortices is a question.</li>
+class="math inline">\(s\in\mathbb Z\)</span>); the shortest closed
+geodesics pass at half length through <span class="math inline">\({\rm
+diag}(\dots,-1,\dots,-1,\dots)\)</span>, which is not central, and at
+<span class="math inline">\(s=1/N\)</span> only <span
+class="math inline">\(H\in NP^\vee\)</span> give central shifts.
+Flipping one mid-edge by <span class="math inline">\(-1\)</span> flips
+every plaquette containing it, the smallest thin <span
+class="math inline">\(\mathbb Z_2\)</span> vortex in the sense of <a
+href="https://doi.org/10.1016/0003-4916(79)90346-4">Mack and Petkova
+(1979)</a>; centre vortices go back to <a
+href="https://doi.org/10.1016/0550-3213(78)90153-0">’t Hooft (1978)</a>,
+and factor-2 decimation with the <span class="math inline">\(\mathbb
+Z_2\)</span> factor kept explicit to <a
+href="https://doi.org/10.1103/PhysRevD.23.2371">Tomboulis (1981)</a>
+(metadata for all three). Whether the bridge parity at a halving ties
+refinement to centre vortices is a question; the observation itself is
+elementary.</li>
 <li><strong>The rod</strong> (user remark, 2026-09-27). The
 dialecticians’ stick of <em>Zhuangzi</em> 33,
 一尺之捶，日取其半，萬世不竭 (“a one-foot stick, each day take half, in
@@ -470,28 +488,39 @@ versus Gross).</li>
 class="math inline">\(t=\lambda_3a=\hbar g_{\rm cl}^2a\)</span>, so the
 compact corrections a step leaves, <span
 class="math inline">\(e^{-c/t}=e^{-c/(\hbar g_{\rm cl}^2a)}\)</span>,
-vanish both as <span class="math inline">\(a\to0\)</span> and as <span
-class="math inline">\(\hbar\to0\)</span>, while the <span
+vanish as <span class="math inline">\(a\to0\)</span> at fixed coupling
+and as <span class="math inline">\(\hbar\to0\)</span> at fixed <span
+class="math inline">\(g_{\rm cl}\)</span> and <span
+class="math inline">\(a\)</span>, while the <span
 class="math inline">\(w=0\)</span> Gaussian term of (9) of the <a
 href="series-parallel-gauge-refinement.html">series/parallel note</a>,
 whose width is set by <span class="math inline">\(\hbar\)</span>, is
 what remains. Both <span class="math inline">\(U(1)\)</span> continuum
-limits on record are Gaussian quantum fields with covariance
-proportional to <span class="math inline">\(\hbar\)</span>: Gross’s
-massless photon at fixed <span class="math inline">\(\lambda_3\)</span>,
-and Göpfert–Mack’s free massive scalar. The refinement at fixed coupling
-removes the lattice mass gap and keeps the unit of action, and Planck
-found <span class="math inline">\(h\)</span> in this same gapless theory
-in <span class="math inline">\(1+3\)</span>, cavity radiation. The atlas
-thus carries two gaps of different kinds: a mass gap, generated and
-trajectory-dependent, and an action floor, a unit that every cell of
-every limit keeps (each cut weighted by <span
-class="math inline">\(e^{-{\rm share}/\hbar}\)</span>, <a
-href="cut-measure-newton.html">cut-measure note</a>, Prop. 4). This is
-the distinction of <a href="low-dimensional-mass-gap.html">G07</a> and
-<a href="action-floor-yang-mills-gap.html">G08</a>: a floor is a unit
-multiple of the fixed constants, while a generated gap needs two
-non-commuting scale-free structures.</li>
+limits on record are Gaussian: Gross’s photon, with field-strength
+covariance <span class="math inline">\(\lambda_3K_0=\hbar g_{\rm
+cl}^2K_0\)</span> at fixed <span class="math inline">\(g_{\rm
+cl}\)</span>, and Göpfert–Mack’s free massive scalar, canonically
+normalized along a trajectory on which <span
+class="math inline">\(\lambda_3=\hbar g_{\rm cl}^2\)</span> diverges.
+The refinement at fixed coupling removes the lattice mass gap and keeps
+the unit of action. And <span class="math inline">\(h\)</span> was first
+measured in this same gapless theory in <span
+class="math inline">\(1+3\)</span>, cavity radiation (Planck 1900,
+through the resonators’ energy elements; the field-mode reading is <a
+href="https://doi.org/10.1002/andp.19103381617">Debye 1910</a>,
+metadata); in a finite cavity the supplied box gap <span
+class="math inline">\(2\pi\hbar c/L\)</span> remains, and “gapless” is
+the infinite-volume statement. The atlas thus carries two gaps of
+different kinds: a mass gap, generated and trajectory-dependent, and an
+action floor, a unit that every cell of every limit keeps (each cut
+weighted by <span class="math inline">\(e^{-{\rm share}/\hbar}\)</span>,
+<a href="cut-measure-newton.html">cut-measure note</a>, Prop. 4). In the
+terms of <a href="low-dimensional-mass-gap.html">G07</a> both are unit
+multiples of the fixed constants (its Theorem 1); the action floor is
+supplied, <span class="math inline">\(\hbar\)</span> written into <span
+class="math inline">\(e^{-S/\hbar}\)</span>, while a generated gap needs
+two scale-free structures that do not commute (G07 §1; <a
+href="action-floor-yang-mills-gap.html">G08</a>).</li>
 <li><strong>Constants that emerge.</strong> Mechanics: one scalar
 counterterm per cell, and one action constant if joint determinacy is
 denied (Theorems B and B<span class="math inline">\(&#39;\)</span> of
