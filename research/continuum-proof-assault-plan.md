@@ -185,26 +185,45 @@ space, and weak convergence of vacuum-subtracted spectral measures.
    massless-pion channel, both of which have a positive action scale but
    soft observable spectral weight.
 
-## 6. Workstream E — scale matching and the $h$ calibration audit
+## 6. Workstream E — foundations model and action calibration (independent)
 
-**Question.**  Once a spectral theorem exists, what is needed to write it
-as $E=C\hbar c\Lambda$ and to relate its action unit to the QM/Planck
-programme?
+**Question.**  What exactly follows from a universal positive action
+constant once quantum kinematics and operational record closure are stated
+rather than smuggled in?  This is independent of the Yang--Mills gap and
+now takes priority.
 
-**Precise target.**  Prove a scheme-controlled step-scaling relation with
-finite nonzero physical $a_*\Lambda$, and separately state the empirical
-calibration
-\[
- h_*=\hbar_{\rm YM}=h_P/(2\pi).                              \tag{E1}
-\]
-The record/radiation programme may conditionally supply $h_*>0$; it does
-not derive (E1), the Yang--Mills beta function, or $C>0$.
+**Completed model target.**  The conditional finite nonrelativistic model
+in [the foundations note](../notes/foundations-model-nonrelativistic-quantum-mechanics.md)
+separates five premises: a positive calibrated action (F0), regular Weyl
+kinematics (F1), positive states/effects (F2), self-adjoint dynamics (F3),
+CP record closure (F4), and interacting composition (F5).  Under them it
+reconstructs the finite Schrödinger/Weyl representation, Born
+probabilities, unitary dynamics, tensor composition, and an explicit
+quantum-limited Gaussian instrument.  It is a model, not a derivation of
+F0--F5.
+
+**Physical targets now open.**
+
+1. Derive a composition-closed physical readout restriction selecting
+   $h_*>0$, then justify the empirical calibration
+   \[
+   h_*=\hbar=\hbar_{\rm YM}=h_P/(2\pi).                      \tag{E1}
+   \]
+2. Find a nonclassical operational principle that selects F1's Weyl
+   cocycle and complex Hilbert kinematics.  A record floor alone cannot do
+   this because it has a commutative Gaussian realization.
+3. Extend the finite model beyond Stone--von Neumann uniqueness to
+   relativistic fields, gauge constraints and inequivalent
+   representations, without using the Yang--Mills gap as an input.
+4. Separately, if a Yang--Mills theorem is obtained, prove a
+   scheme-controlled finite nonzero $a_*\Lambda$ before writing
+   $E=C\hbar c\Lambda$.
 
 **Adversarial checks.**  Compact weak-coupling $U(1)$ and massless
 Goldstone channels must continue to satisfy the positive-action premises
-while failing the spectral conclusion.  Any proposed proof that cannot
-make this distinction has identified a supplied scale, not a Yang--Mills
-gap mechanism.
+while failing the spectral conclusion.  Likewise a commutative
+noise-closed Gaussian record model must remain a counterexample to any
+claim that a record floor by itself derives F1.
 
 ## 7. Dependency order and stop rules
 
@@ -212,7 +231,10 @@ gap mechanism.
 A (fixed-cutoff nonconstant modes) ─┐
                                     ├─> B (H1_gap) ─┐
 C (one-box mixing H2) ─────────────┘                ├─> D (H1_OS + H3) ─> (1)
-E (scale/calibration) ──────────────────────────────┘                 └─> T3 / C
+                                                     └─> T3 / C only after scale control
+
+E (F0--F5 foundations model and calibration) ── independent;
+    its calibrated hbar may be used by both programmes but proves neither.
 ```
 
 - A is not required to begin B, but it is the clearest weak-small-volume
@@ -221,8 +243,9 @@ E (scale/calibration) ───────────────────�
   not control the ultraviolet depth, while weak-step estimates do not
   prove an infrared box gap.
 - D begins by fixing the observable algebra, not after declaring a gap.
-- E is an audit stream and must never be used to fill an analytic gap in
-  A--D.
+- E is now a first-class independent foundations programme.  It may supply
+  a calibrated $\hbar$, but must never be used to fill an analytic gap in
+  A--D, and A--D must never be represented as deriving F1.
 
 A workstream stops and reports rather than silently broadening its claim
 when it encounters: cutoff growth not absorbed by a stated renormalization;

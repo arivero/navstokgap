@@ -1,10 +1,13 @@
 # LLM.md: what this repository knows
 
-> navstokgap asks what survives refinement in Newton's action problem and
-> in pure SU(3) Yang--Mills: a positive action floor on recorded
-> comparisons (Newton), and a continuum mass gap (gauge theory). This file
-> maps what is proved, at what level, what is open, which errors were
-> caught, and where the evidence is. Human-facing site:
+> navstokgap asks what survives refinement in a quantum-foundations model
+> rooted in Newton's action problem and in pure SU(3) Yang--Mills: a
+> positive action floor together with explicit quantum kinematic and
+> record premises (Newton/foundations), and a continuum mass gap (gauge
+> theory). The two programmes share a possible calibration of $\hbar$ but
+> do not prove one another. This file maps what is proved, at what level,
+> what is open, which errors were caught, and where the evidence is.
+> Human-facing site:
 > https://arivero.github.io/navstokgap/ ; repository:
 > https://github.com/arivero/navstokgap ; working rules: AGENTS.md.
 
@@ -19,7 +22,7 @@ unrefereed**; **conditional** (a theorem whose hypothesis is itself open);
 **formal** (a derivation that assumes an unproved uniform estimate);
 **exact** (closed-form identity); **known** (literature, cited with DOI);
 **reading** (an identification or interpretation, labelled as such);
-**open**. Dates are 2026; the state described is that of 2026-09-27.
+**open**. Dates are 2026; the state described is that of 2026-09-28.
 
 ## 1. Orientation
 
@@ -29,13 +32,17 @@ variable at a time (a Newtonian instant, a lattice edge or cell) and
 asking what the old observations and dynamics recover
 ([three-continuum-limits](notes/three-continuum-limits.md),
 [refinement-composition-and-limit](notes/refinement-composition-and-limit.md)).
-Goal one is **Newton action necessity**: a logical argument, from
-independently justified physical premises, that the comparison Newton
-takes to zero in *Principia* Book I (inertial line against constant-force
-parabola, Lemmas X--XI, Proposition I) carries a positive action floor once
-it must be recorded. Goal two is the **continuum existence and mass gap of
-pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten sense
-([digest](notes/millennium-problem-definitions.md)). QCD pions are a
+Goal one, now the first priority, is a **conditional operational
+foundations model of quantum mechanics**: first identify a positive action
+scale from independently justified record premises, then state rather than
+hide the additional Weyl kinematics, positive-state, dynamical,
+record-closure and composition premises that reconstruct finite
+nonrelativistic quantum mechanics.  The Newton comparison is the test case:
+the inertial line against the constant-force parabola in *Principia* Book I
+(Lemmas X--XI, Proposition I).  The model is independent of, and does not
+solve, the Clay problem.  Goal two is the **continuum existence and mass
+gap of pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten
+sense ([digest](notes/millennium-problem-definitions.md)). QCD pions are a
 benchmark for which symmetries a mechanism preserves, and no fermionic
 construction is in the queue. The mid-term goal (user, 2026-09-27) is a
 collective **atlas of halving**: what one lattice halving does, what it
@@ -82,6 +89,7 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | Thm A (independence) | Moyal product $*_\hbar$ satisfies Newton's second law for every real $\hbar$; quadratic cases evolve classically | proved, refereed (Fable) | [principia-fifth-postulate §3](notes/principia-fifth-postulate.md) |
 | Thm B (one constant) | Under (H1) associativity, (H2) affine-symplectic covariance, (H3) conjugation: $*=*_\hbar$, unique real $\hbar$ (Gutt 1983) | proved, refereed; (H2) is a premise outside the *Principia* | [fifth-postulate §4](notes/principia-fifth-postulate.md) |
 | Thm B$'$ (state route) | Covariant, noise-closed Gaussian state restriction is $\sqrt{\det\Sigma}\ge\zeta$; $\zeta=\hbar/2$ in QM | proved, refereed | [fifth-postulate §4](notes/principia-fifth-postulate.md) |
+| Conditional finite QM model | F0--F5 (calibrated action, regular Weyl kinematics, normal positive states/effects, self-adjoint dynamics, CP instruments, interacting composition) yield the finite Schrödinger representation, Born rule, unitary dynamics, tensor composition and a Gaussian quantum-limit record; F0, F1 and physical F4 remain premises | conditional assembly, proved from the premises | [foundations model](notes/foundations-model-nonrelativistic-quantum-mechanics.md) |
 | Thm C (floor) | $\hbar\ne0$: $\Delta q\Delta p\ge|\hbar|/2$ and Thm 6 with $|\hbar|$; $\hbar=0$ with state completeness: no floor | proved, refereed (C(c) rewritten) | [fifth-postulate §5](notes/principia-fifth-postulate.md) |
 | Thm D (similarity) | $D_\lambda$ is an automorphism of $*_\hbar$ iff $\hbar=0$; two products up to isomorphism | proved, refereed | [fifth-postulate §6](notes/principia-fifth-postulate.md) |
 | Thm E (complementarity) | $\arccos\alpha+\arccos\beta\ge\arccos\sqrt{\lambda_0(ab/|\hbar|)}$ (Slepian--Pollak); windows need $ab\ge|\hbar|c_*(\epsilon)$ | proved, refereed (reviewer supplied the proof) | [fifth-postulate §6b](notes/principia-fifth-postulate.md) |

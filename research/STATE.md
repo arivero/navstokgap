@@ -9,16 +9,20 @@ earlier results and reviews; this page carries the current direction.
 
 ## Goal
 
-User direction, 2026-09-26: one eventual paper on what survives
-refinement. The two main proof goals are **a positive action scale in
-Newton's Galileo comparison, from independently justified physical
-premises**, and **the continuum existence and mass gap of pure $SU(3)$
-Yang--Mills**. QCD pions at zero and nonzero quark mass provide orientation
-and inspiration; constructing fermionic QCD is outside the active queue.
-The latest direction is to build the limit from local insertion laws:
-an intermediate Newtonian time, an edge or cell in gauge theory, and
-their lower-dimensional counterparts. The modern leg remains primary; formal and textual
-Principia work lives in the sibling `newtonlean` repository.
+User direction, 2026-09-26 and 2026-09-28: one eventual paper on what
+survives refinement. The two main proof goals are **a foundations model of
+quantum mechanics with a positive action scale in Newton's Galileo
+comparison, from independently justified physical premises**, and **the
+continuum existence and mass gap of pure $SU(3)$ Yang--Mills**.  The
+foundations model is independent of the Clay problem and has current
+priority; it may share a calibrated $\hbar$ with gauge theory but neither
+programme proves the other. QCD pions at zero and nonzero quark mass
+provide orientation and inspiration; constructing fermionic QCD is outside
+the active queue. The latest direction is to build the limit from local
+insertion laws: an intermediate Newtonian time, an edge or cell in gauge
+theory, and their lower-dimensional counterparts. The modern leg remains
+primary; formal and textual Principia work lives in the sibling
+`newtonlean` repository.
 
 **Mid-term goal (user, 2026-09-27):** a collective understanding of the
 halving of the lattice and what emerges in each case and dimension. The
@@ -33,6 +37,13 @@ fill its cells (open cells in its §5).
   Positive quantum action is an input to those quantum results; the
   independent necessity argument remains open. All three September 23
   adversarial review batches are complete.
+- [The finite operational foundations model](../notes/foundations-model-nonrelativistic-quantum-mechanics.md)
+  now makes the intended target explicit.  Under F0--F5 it reconstructs
+  finite Schrödinger/Weyl kinematics, normal-state Born probabilities,
+  unitary dynamics, CP records, composition, and a quantum-limited Gaussian
+  measurement.  It does not derive F0's scale, F1's Weyl cocycle, or F4's
+  physical CP closure; these are now the named first-priority foundations
+  obligations, rather than implicit quantum inputs.
 - [The mass-gap position](../notes/mass-gap-position.md) and the
   sharpened [conditional assembly theorem](../notes/mass-gap-conditional-theorem.md)
   hold the pure-gauge map.  Its proved implication now separates
@@ -71,7 +82,17 @@ fill its cells (open cells in its §5).
 
 ## Next
 
-1. **A local gauge refinement estimate.** The
+1. **Foundations before the gap programme.** The finite operational model
+   identifies the exact physical gaps: select a universal positive action
+   and calibration $h_*=\hbar=h_P/(2\pi)$; justify the noncommutative Weyl
+   kinematics rather than merely an affine record floor; and give a
+   composition-closed physical reason for CP record dynamics.  Start with
+   one retained-memory readout class and state precisely whether it yields
+   only the commutative Gaussian alternative or the full F1--F4 model.
+   The finite model must not be mislabeled as a derivation of those
+   premises, and its extension to relativistic fields is a later separate
+   obligation.
+2. **A local gauge refinement estimate.** The
    [series/parallel note](../notes/series-parallel-gauge-refinement.md)
    factors one directional halving exactly: series moves close in every
    dimension, and the parallel insertion $\Psi$ (Prop. 1) carries the
@@ -92,7 +113,7 @@ fill its cells (open cells in its §5).
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
    Atlas cell 4: [round 6 composition](../notes/four-dimensional-composition.md) gives the exact Gaussian kernel and sharp-blocking growth (unrefereed); next, bound its (14), the subtracted generated-vertex contractions, for finite endpoint matching and the conditional average rate.
-2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
+3. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
    [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; the premise that restores closure is a bound on every terminal readout, which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory (refereed).
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
@@ -112,7 +133,7 @@ fill its cells (open cells in its §5).
    increments, mass composition and additive-noise testing give the
    conditional Planck mesh. Positivity and the physical noise law remain
    premises; Nelson supplies a separate mean-dynamics framework.
-3. **Spectral bridge:** the fibrewise relative-Schur estimate needed by
+4. **Spectral bridge:** the fibrewise relative-Schur estimate needed by
    the small-volume programme remains the valley-lifting task to connect
    to refinement.  The new [SU(3) Cartan root sum](../notes/torus-valley-potential.md)
    fixes the one-loop local coefficient but is not that estimate.  Its
