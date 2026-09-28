@@ -698,6 +698,104 @@ information: the amplitudes in (1) and (1<span
 class="math inline">\(&#39;\)</span>) include signed Weyl polynomials.
 In particular <span class="math inline">\(G_H\)</span> alone gives no
 probability for such a vortex.</p>
+<h3
+id="b.-fundamental-trisection-with-its-first-image-shells-round-5b-b1">5b.
+Fundamental trisection with its first image shells (Round 5B B1)</h3>
+<p>For <span class="math inline">\(t&gt;0\)</span>, write <span
+class="math inline">\(X=\operatorname{diag}(x_1,x_2,x_3)\)</span> with
+<span class="math inline">\(\sum x_i=0\)</span> and initially <span
+class="math inline">\(A_\rho(X)\ne0\)</span>. Put <span
+class="math inline">\(u=t/3\)</span>, <span
+class="math inline">\(z_{ij}=z_i-z_j\)</span>, and <span
+class="math inline">\(\Delta(Z)=z_{12}z_{13}z_{23}\)</span>. The three
+polynomial prefactors are</p>
+<p><span class="math display">\[\begin{aligned}
+P_1(Z)&amp;=z_{23}(z_{12}+iu)(z_{13}+iu),\\
+P_2(Z)&amp;=z_{13}(z_{12}-iu)(z_{23}+iu),\\
+P_3(Z)&amp;=z_{12}(z_{13}-iu)(z_{23}-iu).
+\end{aligned}\tag{2}\]</span></p>
+<p>Thus <span
+class="math inline">\(P_i(Z)=\Delta(Z+iu\kappa_i)\)</span>, with the
+coordinates of <span class="math inline">\(\kappa_i\)</span> regarded
+here as ordinary triples. The shifts of differences are what matters; no
+metric identification is implicit in (2). Define the two explicitly
+weighted polynomials</p>
+<p><span class="math display">\[\begin{aligned}
+F_X(Z)&amp;=\sum_{i=1}^3 e^{ix_i/3}P_i(Z),\\
+F_X^{ab}(Z)&amp;=\omega^2e^{ix_a/3}P_a(Z)
++\omega e^{ix_b/3}P_b(Z)+e^{ix_c/3}P_c(Z),
+\end{aligned}\]</span></p>
+<p>where <span class="math inline">\(a\ne b\)</span> and <span
+class="math inline">\(c\)</span> is the remaining index. Let <span
+class="math inline">\(R_{ab}=e_a-e_b\)</span> and <span
+class="math inline">\(C_a=(1,1,1)-3e_a\)</span>. The six <span
+class="math inline">\(R_{ab}\)</span> are the leading root images and
+the two triples <span class="math inline">\(\{C_a\}\)</span>, <span
+class="math inline">\(\{-C_a\}\)</span> are the leading nonzero central
+images. Formula (1) becomes the exact identity</p>
+<p><span class="math display">\[E\chi_{\mathbf3}(m)=e^{-t/27}
+\frac{\mathcal N_0+\mathcal N_R+\mathcal N_C+\mathcal R_N}
+{\mathcal D_0+\mathcal D_R+\mathcal D_C+\mathcal R_D},
+\qquad s=\frac13,\tag{3}\]</span></p>
+<p>with the following terms displayed without a small-<span
+class="math inline">\(t\)</span> expansion:</p>
+<p><span class="math display">\[\begin{aligned}
+\mathcal N_0&amp;=F_X(X),&amp;\mathcal D_0&amp;=\Delta(X),\\
+\mathcal N_R&amp;=e^{-8\pi^2/t}\sum_{a\ne b}
+e^{4\pi(x_a-x_b)/t}F_X^{ab}(X-2\pi R_{ab}),\\
+\mathcal D_R&amp;=e^{-8\pi^2/t}\sum_{a\ne b}
+e^{4\pi(x_a-x_b)/t}\Delta(X-2\pi R_{ab}),\\
+\mathcal N_C&amp;=e^{-24\pi^2/t}\sum_{a=1}^3
+\Bigl[\omega^2e^{-12\pi x_a/t}F_X(X-2\pi C_a)\\
+&amp;\hspace{43mm}+\omega e^{12\pi x_a/t}F_X(X+2\pi C_a)\Bigr],\\
+\mathcal D_C&amp;=e^{-24\pi^2/t}\sum_{a=1}^3
+\Bigl[e^{-12\pi x_a/t}\Delta(X-2\pi C_a)\\
+&amp;\hspace{43mm}+e^{12\pi x_a/t}\Delta(X+2\pi C_a)\Bigr].
+\end{aligned}\tag{4}\]</span></p>
+<p>For precision the remainders are exact sums. With <span
+class="math inline">\(\mathcal
+T=Q^\vee\setminus(\{0\}\cup\{R_{ab}\}\cup\{\pm C_a\})\)</span>, <span
+class="math inline">\(Z_H=X-2\pi H\)</span> and <span
+class="math inline">\(r_H=\exp[-2\pi^2|H|^2/t+4\pi\sum_i
+x_iH_i/t]\)</span>,</p>
+<p><span class="math display">\[\begin{aligned}
+\mathcal R_N&amp;=\sum_{H\in\mathcal T}r_H
+\sum_i e^{ix_i/3}\omega^{2H_i}P_i(Z_H),\\
+\mathcal R_D&amp;=\sum_{H\in\mathcal T}r_H\Delta(Z_H).
+\end{aligned}\tag{5}\]</span></p>
+<p><em>Written derivation.</em> In the dual metric <span
+class="math inline">\(|\kappa_i|^2=1/3\)</span>, giving <span
+class="math inline">\(ts(1-s)|\kappa_i|^2/2=t/27\)</span>. For a
+covector <span class="math inline">\(v\)</span>, <span
+class="math inline">\(\pi(v)=\frac12(v_1-v_2)(v_1-v_3)(v_2-v_3)\)</span>,
+so</p>
+<p><span
+class="math display">\[\pi(iZ^\flat/t-2\kappa_i/3)=(-4i/t^3)P_i(Z),
+\qquad \pi(iZ^\flat/t)=(-4i/t^3)\Delta(Z).\]</span></p>
+<p>Cancel <span class="math inline">\((-4i/t^3)G_0\)</span> from
+numerator and denominator of (1). For <span
+class="math inline">\(R_{ab}\)</span>, the three phases are <span
+class="math inline">\(\omega^2,\omega,1\)</span>; for <span
+class="math inline">\(C_a\)</span> they are all <span
+class="math inline">\(\omega^2\)</span> and for <span
+class="math inline">\(-C_a\)</span> all <span
+class="math inline">\(\omega\)</span>. Also <span
+class="math inline">\(\sum_i x_i(C_a)_i=-3x_a\)</span>. These
+substitutions prove (3)–(5). In particular the exact zero-image sector
+is</p>
+<p><span class="math display">\[e^{-t/27}\sum_i e^{ix_i/3}
+\prod_{j\ne i}\left(1+\frac{it}{3(x_i-x_j)}\right).\tag{6}\]</span></p>
+<p>The full expression extends continuously across affine walls. The
+remainders start at <span class="math inline">\(|H|^2=16\)</span>, hence
+at Gaussian exponent <span class="math inline">\(32\pi^2\)</span> at
+<span class="math inline">\(X=0\)</span>: ordering an integral zero-sum
+triple shows the only nonzero norms below 16 are 4 and 12, represented
+by the two displayed shells. At a general endpoint the linear terms in
+<span class="math inline">\(r_H\)</span> remain essential. Discarding
+(5) is a formal image truncation until a normalized bound on the chosen
+endpoint set has been proved. In particular the polynomial zeros at
+<span class="math inline">\(X=0\)</span> require the complete regular
+limit.</p>
 <h2 id="what-the-result-says-and-what-it-leaves-open">6. What the result
 says, and what it leaves open</h2>
 <p><strong>A5: ACCEPT the threshold; REFINE the inference from
@@ -758,9 +856,72 @@ the <span class="math inline">\(SU(3)\)</span> large-field terms better
 than dyadic refinement is open; factor-2 decimation with the <span
 class="math inline">\(\mathbb Z_2\)</span> factor kept explicit goes
 back to <a href="https://doi.org/10.1103/PhysRevD.23.2371">Tomboulis
-(1981)</a> (metadata), and prior art on <span
-class="math inline">\(b=3\)</span> or centre-adapted blocking for <span
-class="math inline">\(SU(3)\)</span> has not been searched.</p>
+(1981)</a> (metadata).</p>
+<p><strong>Blocking and centre prior art (Round 5B B2, bounded search,
+2026-09-28).</strong> The following DOI/title pairs were verified
+through Crossref; the reading labels specify the evidence used.</p>
+<ul>
+<li><a href="https://doi.org/10.1103/PhysRevLett.53.1721">Gupta,
+Guralnik, Patel, Warnock and Zemach (1984), <em>Monte Carlo
+Renormalization Group for SU(3) Lattice Gauge Theory</em></a>
+(abstract): SU(3) MCRG estimates both the beta function and the
+generated effective action. This supplies direct SU(3) precedent for the
+blocking programme, with no centre-based choice of factor claimed in the
+abstract read here.</li>
+<li><a
+href="https://doi.org/10.1016/S0920-5632(00)00465-5">Bhattacharya, Gupta
+and Lee (2000), <em>Fixed-point pure gauge action using <span
+class="math inline">\(b=\sqrt3\)</span> RGT</em></a> (<a
+href="https://arxiv.org/pdf/hep-lat/9910046">passage, §1, eqs.
+(1)–(4)</a>): the block basis uses cube body diagonals, and two
+successive transformations satisfy <span
+class="math inline">\(T_2T_1=3I\)</span>. This is a concrete net
+factor-3 construction through two rotated <span
+class="math inline">\(\sqrt3\)</span> steps. Its stated motivations
+concern geometry, locality and degrees of freedom. The coordinate twists
+of its intermediate lattice are specified by eq. (2); those coordinate
+identifications alone supply no <span class="math inline">\(\mathbb
+Z_3\)</span> vortex twist.</li>
+<li><a href="https://doi.org/10.22323/1.042.0336">Tomboulis (2007),
+<em>Deriving confinement via RG decimations</em></a> (<a
+href="https://arxiv.org/pdf/0710.1894">passage, §§2–4 and
+conclusion</a>): potential-moving decimations with scale factor <span
+class="math inline">\(b\)</span> are applied to partition functions with
+and without external centre flux. The explicit group is SU(2); SU(3) is
+proposed as an extension in the conclusion. This supplies a centre-flux
+observable and a decimation strategy to compare with <span
+class="math inline">\(\Psi\)</span>. Its confinement claim is recorded
+as the author’s proposal, with no proof of that claim imported
+here.</li>
+<li><a
+href="https://doi.org/10.1016/S0920-5632(99)85139-1">Kovács–Tomboulis
+(1999), <em>SU(3) string tension and the presence of vortices</em></a>
+(<a href="https://arxiv.org/abs/hep-lat/9808046">abstract</a>):
+simulations report that centre fluctuations reproduce the heavy-quark
+potential and persist under smoothing. This concerns thick centre
+vortices; the abstract supplies no preferred blocking factor.</li>
+</ul>
+<p>The search covered SU(3) Migdal–Kadanoff with <span
+class="math inline">\(b=3\)</span>, MCRG with <span
+class="math inline">\(b=3\)</span> or <span
+class="math inline">\(\sqrt3\)</span>, and centre-vortex free energies
+under decimation. Within the passages checked, an explicit SU(3) <span
+class="math inline">\(b=3\)</span> Migdal–Kadanoff calculation tied to
+triality, or a <span class="math inline">\(\mathbb Z_3\)</span>
+vortex-free-energy decimation justified by the centre order, was not
+located. This is a bounded search outcome. The positive finding is the
+established <span class="math inline">\(\sqrt3\)</span> geometry and its
+net factor 3, alongside the external-flux decimation strategy.</p>
+<p><strong>Relation to Corollary 3 (inference).</strong> Equal
+subdivision into <span class="math inline">\(b\)</span> pieces gives
+first cut <span class="math inline">\(s=1/b\)</span> and hence central
+image phases in <span class="math inline">\(Z(G)[b]\)</span>. A general
+lattice RG transformation also integrates transverse variables and can
+use rotated blocks, so its length factor alone does not specify this
+bridge cut. Testing a centre advantage requires an actual map retaining
+the joint layers and comparing normalized twisted and untwisted
+observables. Equations (3)–(5) provide explicit character inputs for
+that test; their image exponents alone leave the estimate open.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>Atlas §1b: the bullet on which part of the centre a cut reaches now
 rests on Corollary 3 of an exact formula, (1), which also carries the
@@ -768,8 +929,12 @@ rests on Corollary 3 of an exact formula, (1), which also carries the
 <span class="math inline">\(SU(3)\)</span> triality at thirds. The Round
 5B Part A referee is complete, with verdicts and corrections above. The
 exact trisection formula for the fundamental of <span
-class="math inline">\(SU(3)\)</span> is (1) with <span
-class="math inline">\(s=\frac13\)</span> and the weights of §5.</p>
+class="math inline">\(SU(3)\)</span> is now displayed in §5b, including
+polynomial prefactors and exact residual sums (Part B, written
+derivation, no independent referee yet). The bounded prior-art search in
+§6 locates factor-<span class="math inline">\(\sqrt3\)</span> and net
+factor-3 blocking; the centre-adapted normalized refinement estimate
+remains the next question.</p>
 
 </main>
 <footer class="site"><div class="wrap">

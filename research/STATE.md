@@ -62,7 +62,8 @@ fill its cells (open cells in its §5).
    $D=4$ (loop density per cell fixed by $g$). The $SU(2)$ midpoint character
    is exact for every spin ([closed form](../notes/su2-midpoint-exact.md)).
    [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
-   are refereed (Round 5B A); image-to-volume control remains open.
+   are refereed (Round 5B A); its §5b displays the fundamental SU(3)
+   trisection (5B B, written). Image-to-volume control remains open.
    Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 now has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). Next: its normalized estimate (18) with winding control, then iteration; higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the

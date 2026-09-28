@@ -362,6 +362,92 @@ additional measure information: the amplitudes in (1) and (1$'$)
 include signed Weyl polynomials. In particular $G_H$ alone gives no
 probability for such a vortex.
 
+### 5b. Fundamental trisection with its first image shells (Round 5B B1)
+
+For $t>0$, write $X=\operatorname{diag}(x_1,x_2,x_3)$ with
+$\sum x_i=0$ and initially $A_\rho(X)\ne0$. Put $u=t/3$,
+$z_{ij}=z_i-z_j$, and $\Delta(Z)=z_{12}z_{13}z_{23}$. The three
+polynomial prefactors are
+
+$$\begin{aligned}
+P_1(Z)&=z_{23}(z_{12}+iu)(z_{13}+iu),\\
+P_2(Z)&=z_{13}(z_{12}-iu)(z_{23}+iu),\\
+P_3(Z)&=z_{12}(z_{13}-iu)(z_{23}-iu).
+\end{aligned}\tag{2}$$
+
+Thus $P_i(Z)=\Delta(Z+iu\kappa_i)$, with the coordinates of
+$\kappa_i$ regarded here as ordinary triples. The shifts of differences
+are what matters; no metric identification is implicit in (2).
+Define the two explicitly weighted polynomials
+
+$$\begin{aligned}
+F_X(Z)&=\sum_{i=1}^3 e^{ix_i/3}P_i(Z),\\
+F_X^{ab}(Z)&=\omega^2e^{ix_a/3}P_a(Z)
++\omega e^{ix_b/3}P_b(Z)+e^{ix_c/3}P_c(Z),
+\end{aligned}$$
+
+where $a\ne b$ and $c$ is the remaining index. Let
+$R_{ab}=e_a-e_b$ and $C_a=(1,1,1)-3e_a$. The six $R_{ab}$ are the
+leading root images and the two triples $\{C_a\}$, $\{-C_a\}$ are
+the leading nonzero central images. Formula (1) becomes the exact identity
+
+$$E\chi_{\mathbf3}(m)=e^{-t/27}
+\frac{\mathcal N_0+\mathcal N_R+\mathcal N_C+\mathcal R_N}
+{\mathcal D_0+\mathcal D_R+\mathcal D_C+\mathcal R_D},
+\qquad s=\frac13,\tag{3}$$
+
+with the following terms displayed without a small-$t$ expansion:
+
+$$\begin{aligned}
+\mathcal N_0&=F_X(X),&\mathcal D_0&=\Delta(X),\\
+\mathcal N_R&=e^{-8\pi^2/t}\sum_{a\ne b}
+e^{4\pi(x_a-x_b)/t}F_X^{ab}(X-2\pi R_{ab}),\\
+\mathcal D_R&=e^{-8\pi^2/t}\sum_{a\ne b}
+e^{4\pi(x_a-x_b)/t}\Delta(X-2\pi R_{ab}),\\
+\mathcal N_C&=e^{-24\pi^2/t}\sum_{a=1}^3
+\Bigl[\omega^2e^{-12\pi x_a/t}F_X(X-2\pi C_a)\\
+&\hspace{43mm}+\omega e^{12\pi x_a/t}F_X(X+2\pi C_a)\Bigr],\\
+\mathcal D_C&=e^{-24\pi^2/t}\sum_{a=1}^3
+\Bigl[e^{-12\pi x_a/t}\Delta(X-2\pi C_a)\\
+&\hspace{43mm}+e^{12\pi x_a/t}\Delta(X+2\pi C_a)\Bigr].
+\end{aligned}\tag{4}$$
+
+For precision the remainders are exact sums. With
+$\mathcal T=Q^\vee\setminus(\{0\}\cup\{R_{ab}\}\cup\{\pm C_a\})$,
+$Z_H=X-2\pi H$ and
+$r_H=\exp[-2\pi^2|H|^2/t+4\pi\sum_i x_iH_i/t]$,
+
+$$\begin{aligned}
+\mathcal R_N&=\sum_{H\in\mathcal T}r_H
+\sum_i e^{ix_i/3}\omega^{2H_i}P_i(Z_H),\\
+\mathcal R_D&=\sum_{H\in\mathcal T}r_H\Delta(Z_H).
+\end{aligned}\tag{5}$$
+
+*Written derivation.* In the dual metric $|\kappa_i|^2=1/3$, giving
+$ts(1-s)|\kappa_i|^2/2=t/27$. For a covector $v$,
+$\pi(v)=\frac12(v_1-v_2)(v_1-v_3)(v_2-v_3)$, so
+
+$$\pi(iZ^\flat/t-2\kappa_i/3)=(-4i/t^3)P_i(Z),
+\qquad \pi(iZ^\flat/t)=(-4i/t^3)\Delta(Z).$$
+
+Cancel $(-4i/t^3)G_0$ from numerator and denominator of (1).
+For $R_{ab}$, the three phases are $\omega^2,\omega,1$; for $C_a$
+they are all $\omega^2$ and for $-C_a$ all $\omega$. Also
+$\sum_i x_i(C_a)_i=-3x_a$. These substitutions prove (3)--(5).
+In particular the exact zero-image sector is
+
+$$e^{-t/27}\sum_i e^{ix_i/3}
+\prod_{j\ne i}\left(1+\frac{it}{3(x_i-x_j)}\right).\tag{6}$$
+
+The full expression extends continuously across affine walls. The
+remainders start at $|H|^2=16$, hence at Gaussian exponent $32\pi^2$
+at $X=0$: ordering an integral zero-sum triple shows the only nonzero
+norms below 16 are 4 and 12, represented by the two displayed shells.
+At a general endpoint the linear terms in $r_H$ remain essential.
+Discarding (5) is a formal image truncation until a normalized bound
+on the chosen endpoint set has been proved. In particular the
+polynomial zeros at $X=0$ require the complete regular limit.
+
 ## 6. What the result says, and what it leaves open
 
 **A5: ACCEPT the threshold; REFINE the inference from it.** The result
@@ -407,9 +493,60 @@ in the [joint-paper comparison](three-continuum-limits.md).
 Whether a triadic refinement, $b=3$,
 organizes the $SU(3)$ large-field terms better than dyadic refinement is
 open; factor-2 decimation with the $\mathbb Z_2$ factor kept explicit goes back to
-[Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata),
-and prior art on $b=3$ or centre-adapted blocking for $SU(3)$ has not been
-searched.
+[Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata).
+
+**Blocking and centre prior art (Round 5B B2, bounded search,
+2026-09-28).** The following DOI/title pairs were verified through
+Crossref; the reading labels specify the evidence used.
+
+- [Gupta, Guralnik, Patel, Warnock and Zemach (1984), *Monte Carlo
+  Renormalization Group for SU(3) Lattice Gauge Theory*](https://doi.org/10.1103/PhysRevLett.53.1721)
+  (abstract): SU(3) MCRG estimates both the beta function and the
+  generated effective action. This supplies direct SU(3) precedent for
+  the blocking programme, with no centre-based choice of factor claimed
+  in the abstract read here.
+- [Bhattacharya, Gupta and Lee (2000), *Fixed-point pure gauge action
+  using $b=\sqrt3$ RGT*](https://doi.org/10.1016/S0920-5632(00)00465-5)
+  ([passage, §1, eqs. (1)--(4)](https://arxiv.org/pdf/hep-lat/9910046)):
+  the block basis uses cube body diagonals, and two successive
+  transformations satisfy $T_2T_1=3I$. This is a concrete net factor-3
+  construction through two rotated $\sqrt3$ steps. Its stated motivations
+  concern geometry, locality and degrees of freedom. The coordinate
+  twists of its intermediate lattice are specified by eq. (2); those
+  coordinate identifications alone supply no $\mathbb Z_3$ vortex twist.
+- [Tomboulis (2007), *Deriving confinement via RG decimations*](https://doi.org/10.22323/1.042.0336)
+  ([passage, §§2--4 and conclusion](https://arxiv.org/pdf/0710.1894)):
+  potential-moving decimations with scale factor $b$ are applied to
+  partition functions with and without external centre flux. The
+  explicit group is SU(2); SU(3) is proposed as an extension in the
+  conclusion. This supplies a centre-flux observable and a decimation
+  strategy to compare with $\Psi$. Its confinement claim is recorded as
+  the author's proposal, with no proof of that claim imported here.
+- [Kovács--Tomboulis (1999), *SU(3) string tension and the presence of
+  vortices*](https://doi.org/10.1016/S0920-5632(99)85139-1)
+  ([abstract](https://arxiv.org/abs/hep-lat/9808046)): simulations report
+  that centre fluctuations reproduce the heavy-quark potential and
+  persist under smoothing. This concerns thick centre vortices; the
+  abstract supplies no preferred blocking factor.
+
+The search covered SU(3) Migdal--Kadanoff with $b=3$, MCRG with
+$b=3$ or $\sqrt3$, and centre-vortex free energies under decimation.
+Within the passages checked, an explicit SU(3) $b=3$ Migdal--Kadanoff
+calculation tied to triality, or a $\mathbb Z_3$ vortex-free-energy
+decimation justified by the centre order, was not located. This is a
+bounded search outcome. The positive finding is the established
+$\sqrt3$ geometry and its net factor 3, alongside the external-flux
+decimation strategy.
+
+**Relation to Corollary 3 (inference).** Equal subdivision into $b$
+pieces gives first cut $s=1/b$ and hence central image phases in
+$Z(G)[b]$. A general lattice RG transformation also integrates
+transverse variables and can use rotated blocks, so its length factor
+alone does not specify this bridge cut. Testing a centre advantage
+requires an actual map retaining the joint layers and comparing
+normalized twisted and untwisted observables. Equations (3)--(5)
+provide explicit character inputs for that test; their image exponents
+alone leave the estimate open.
 
 ## 7. Consequence for STATE
 
@@ -417,5 +554,8 @@ Atlas §1b: the bullet on which part of the centre a cut reaches now rests
 on Corollary 3 of an exact formula, (1), which also carries the $SU(2)$
 belt-trick phase and the $SU(3)$ triality at thirds. The Round 5B Part A
 referee is complete, with verdicts and corrections above. The exact
-trisection formula for the fundamental of $SU(3)$ is
-(1) with $s=\frac13$ and the weights of §5.
+trisection formula for the fundamental of $SU(3)$ is now displayed in
+§5b, including polynomial prefactors and exact residual sums (Part B,
+written derivation, no independent referee yet). The bounded prior-art
+search in §6 locates factor-$\sqrt3$ and net factor-3 blocking; the
+centre-adapted normalized refinement estimate remains the next question.
