@@ -938,18 +938,21 @@ constants and an explicit new term obstructing the proposed proof of
 $C\varepsilon/t$; a plane-uniform first-order constant for $h$ remains
 open. The calculation asserts no failure theorem for every covariant chart.
 
+### 9.3 Higher orders (Part 3)
+
+After resolving the strip term, (27) still requires summable connected
+BCH insertions, including the cubic pair in (31), with derivatives of
+the tree frames and the admissibility constraints included. Short
+pairwise transports would require their own compatible Hessian and
+path-cost construction. Uniform barrier moments, holonomy-dependent
+winding control and the large-field comparison must then transfer the
+formal coefficients to the normalized $h$; iteration remains a further step.
+
 ## 10. Consequence for STATE
 
-Atlas cell 2 keeps its formal order-$t$ calculation. Round 8 Part A
-accepts the covariant decay and corrected bridge/convexity bounds,
-rejects Proposition 4 as stated, and replaces its Taylor step by the
-explicit conditional implication (17)--(18). The next small-field task
-is the normalized, gauge-covariant response estimate with barrier and
-winding control. Part B proves locality for local-potential increments
-under Theorem 5's analytic hypotheses and isolates (27), including its
-admissible-coordinate and cancellation requirements, as the unresolved
-step toward replacing Hypothesis I. Round 9 §8.1 establishes the exact
-Gaussian cancellation and its plane-uniform flux-kernel bound; §8.2
-finds a formal cubic transport obstruction in the fixed-frame Coulomb
-chart. A covariant replacement for (27) is the next response task.
-The large-field and iteration obligations remain.
+Atlas cell 2 now has the explicit tree response of §9. Its Gaussian
+bound persists; the next response task is cancellation of (34) in the
+full admissible Hessian, or a compatible response using short pairwise
+paths. Round 8's rejection of Proposition 4 and the conditional status
+of (18) stand. The remaining normalized and iteration estimates are
+listed in §9.3.
