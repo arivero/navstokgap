@@ -245,7 +245,11 @@ second derivation of the mesh, with the necessity question of the
 [fifth-postulate note](principia-fifth-postulate.md) unchanged. What it
 adds is the reading of the floor on recording the inertial--parabola
 difference as the distinguishability threshold of the force in the
-free-particle path measure.
+free-particle path measure. At small $\epsilon$, $z_{1-\epsilon}^2\simeq2\ln(1/\epsilon)$, so this floor
+grows like $4\hbar\ln(1/\epsilon)$ in cell action, the same logarithmic law as
+Theorem E of the fifth-postulate note, $ab\ge\hbar c_*(\epsilon)$ with
+$c_*(\epsilon)\simeq\frac12\ln(1/\epsilon)$ in window half-widths; the constants refer to
+different quantities (a cell's Galileo action and a phase-space window).
 
 ## 6. Consequence for STATE
 

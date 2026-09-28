@@ -217,6 +217,12 @@ way; in mechanics refining makes each cell more quantum
    record convolves momentum with variance $\hbar^2/(4\sigma^2)$; precisions add in
    parallel; refinement converges iff $\sum\sigma_j^{-2}<\infty$; identity for $\hbar=0$.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
+8. Cuts at any position (§1b), open rows: the free-field independence of
+   the limit from the cut sequence (a convergence question for the
+   discrete-exterior-calculus Hodge star on nested tensor grids); for
+   $SU(3)$, whether triadic refinement, the only kind whose windings reach
+   the centre ([centre note](sun-midpoint-centre.md)), organizes the
+   large-field terms better than dyadic refinement.
 
 ## 6. Consequence for STATE
 
