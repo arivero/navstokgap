@@ -9,6 +9,7 @@ the repository on GitHub. PDFs are linked, never copied.
 Usage: python3 scripts/build_site.py   (or: make site)
 """
 
+import datetime
 import html
 import re
 import subprocess
@@ -412,6 +413,18 @@ def pandoc(md_text):
     return r.stdout
 
 
+def last_edited_date():
+    """Date of the most recent git commit (YYYY-MM-DD); today's date if git fails."""
+    try:
+        r = subprocess.run(["git", "log", "-1", "--format=%cs"], cwd=ROOT,
+                            capture_output=True, text=True)
+        if r.returncode == 0 and r.stdout.strip():
+            return r.stdout.strip()
+    except Exception:
+        pass
+    return datetime.date.today().isoformat()
+
+
 def main():
     notes = sorted(ROOT.glob("notes/*.md"))
     slugs = {p.stem for p in notes}
@@ -436,6 +449,7 @@ def main():
     # 2. Landing page.
     used, parts = set(), []
     parts.append("<h1>A minimum action, and a mass gap</h1>")
+    parts.append(f'<p class="meta">Last edited: {last_edited_date()}</p>')
     parts.append(
         '<p class="lede">A research repository on two questions that turn out '
         "to share a shape. Does anything in physics force a positive unit of "
