@@ -15,10 +15,13 @@
 infrared}\label{halving-goes-to-the-ultraviolet-confinement-lives-in-the-infrared}}
 
 \textbf{Didactic note, 2026-09-28 (Claude, prompted by the user's
-question).} Confinement and the mass gap are infrared properties, while
-halving the lattice moves toward the ultraviolet. The refinement
-programme of the \href{halving-atlas.md}{atlas} nevertheless bears on
-the gap, for five reasons, each stated with its source:
+question; §7 and several refinements come from independent answers to
+the same question by GPT-6 Astra and Claude Fable).} Confinement and the
+mass gap are infrared properties, and distinct ones: a spectral bound
+for the gap, an area law for confinement. Halving the lattice moves
+toward the ultraviolet. The refinement programme of the
+\href{halving-atlas.md}{atlas} nevertheless bears on the gap, for five
+reasons, each stated with its source:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -38,21 +41,26 @@ the gap, for five reasons, each stated with its source:
   is whether these stay constant in physical units.
 \item
   \textbf{The exponential ladder selects what survives.} Along the
-  one-loop trajectory a non-perturbative term \(e^{-c/t}\), with
-  \(t=\hbar g^2(a)\), equals \((a\Lambda)^{2b_0c}\), so a halving
-  multiplies it by \(2^{-2b_0c}\). The generated gap,
-  \(am\propto e^{-1/(2b_0\hbar g^2)}\), is the term with \(2b_0c=1\): it
-  halves exactly when the lattice halves, and so survives in physical
-  units. Every term with \(2b_0c>1\) dies.
+  one-loop trajectory a non-perturbative term \(e^{-\gamma/t}\), with
+  \(t=\hbar g^2(a)\) (the atlas writes \(c\) for \(\gamma\)), equals
+  \((a\Lambda)^{2b_0\gamma}\), so a halving multiplies it by
+  \(2^{-2b_0\gamma}\). A gap, \(am\propto e^{-1/(2b_0\hbar g^2)}\),
+  would be the term with \(2b_0\gamma=1\): it halves exactly when the
+  lattice halves, and so survives in physical units. Every term with
+  \(2b_0\gamma>1\) dies. The ladder fixes the size a surviving gap must
+  have; that the coefficient \(C\) in \(E=C\hbar c\Lambda\) is positive
+  needs non-perturbative input (Astra).
 \item
   \textbf{A growing ultraviolet end and a fixed infrared end.} From
   spacing \(a\) to the correlation length \(\xi\) there are
   \(\log_2(\xi/a)\) halvings. Refining adds steps only at the
   ultraviolet end, where \(t\) is small; the steps where \(t\) is of
-  order one, around \(\beta_W\simeq6\) for \(SU(3)\), are the same
-  finite set for every \(a\). Confinement is decided there once;
-  refinement requires the growing number of ultraviolet steps to be
-  controlled uniformly.
+  order one, around \(\beta_W\simeq6\) for \(SU(3)\) with
+  \(\xi/a\simeq1.3\), are the same finite set for every \(a\).
+  Confinement is decided there once; refinement requires the growing
+  number of ultraviolet steps to be controlled uniformly. That is one of
+  two uniformities (Fable): in \(a\), which the halvings address, and in
+  the box \(L\) at fixed \(a\), which is a mixing statement.
 \item
   \textbf{Refinement exposes lattice artifacts.} Compact \(U(1)\) has a
   lattice gap that refinement at fixed coupling removes. A property that
@@ -100,14 +108,16 @@ dimensionful coupling.
 \hypertarget{the-exponential-ladder}{%
 \subsection{3. The exponential ladder}\label{the-exponential-ladder}}
 
-At one loop, \(e^{-c/t}=(a\Lambda)^{2b_0c}\), and \(2b_0c\) is the
-scaling dimension of the term (atlas §4, ``The exponential ladder''). A
-mass has dimension one, so a physical gap is the term that halves with
-the lattice: \(am\propto(a\Lambda)^1\), the member of the ladder with
-\(2b_0c=1\). The corrections a single step leaves sit far higher: the
-bridge image terms at \(2b_0c=11N/3\) (roots) and \(11N\) (the \(SU(3)\)
-centre images of a trisection, \href{sun-midpoint-centre.md}{centre
-note}), beyond the per-volume threshold \(2b_0c=4\) of the
+At one loop, \(e^{-\gamma/t}=(a\Lambda)^{2b_0\gamma}\), and
+\(2b_0\gamma\) is the scaling dimension of the term (atlas §4, ``The
+exponential ladder'', where \(\gamma\) is written \(c\)). A mass has
+dimension one, so a physical gap is the term that halves with the
+lattice: \(am\propto(a\Lambda)^1\), the member of the ladder with
+\(2b_0\gamma=1\). The corrections a single step leaves sit far higher:
+the bridge image terms at \(2b_0\gamma=11N/3\) (roots) and \(11N\) (the
+\(SU(3)\) centre images of a trisection,
+\href{sun-midpoint-centre.md}{centre note}), beyond the per-volume
+threshold \(2b_0\gamma=4\) of the
 \href{zero-spacing-any-action.md}{zero-spacing note}. So every
 ultraviolet step contains the infrared scale as a tiny non-perturbative
 term of exactly the size that survives, and nothing else of its kind
@@ -115,7 +125,8 @@ survives with it. This is dimensional transmutation read step by step.
 The term is invisible to perturbation theory, since
 \(e^{-1/(2b_0\hbar g^2)}\) has a vanishing Taylor series in \(g^2\); it
 is visible to the exact step, which is why the atlas insists on exact
-halvings.
+halvings. Suppressing the image terms is ultraviolet control; the gap
+and the area law are further, long-distance obligations (Astra).
 
 \hypertarget{a-growing-ultraviolet-end-and-a-fixed-infrared-end}{%
 \subsection{4. A growing ultraviolet end and a fixed infrared
@@ -146,10 +157,13 @@ removes it and the continuum limit is the free photon (Gross), while
 along the Göpfert--Mack trajectory the gap survives only with a
 diverging monopole density per physical volume (atlas §4; the
 \href{villain-monopole-refinement.md}{monopole note}). The ultraviolet
-step is where a lattice gap is exposed as a lattice artifact. In
-\(SU(3)\) the coupling must run to zero logarithmically (cell 4), and
-the gap is expected to survive because it is tied to \(\Lambda\), which
-the running holds fixed.
+step is where a lattice gap is exposed as a lattice artifact. In \(1+3\)
+the same monopole bound, of order \((L/a)^4e^{-\pi^2/(8\hbar g^2)}\), is
+useless, since \(t=\hbar g^2\) stays fixed: with the coupling standing
+still, the ultraviolet direction simplifies nothing (Fable). For
+\(SU(3)\) it helps only through asymptotic freedom: the coupling runs to
+zero logarithmically (cell 4), and the gap is expected to survive
+because it is tied to \(\Lambda\), which the running holds fixed.
 
 \hypertarget{newtons-parallel}{%
 \subsection{6. Newton's parallel}\label{newtons-parallel}}
@@ -164,8 +178,50 @@ stays fixed while every per-cell quantity goes to zero. What refinement
 cannot remove in either case is the supplied action floor \(\hbar\)
 (atlas §4, ``The action floor survives what removes the mass gap'').
 
+\hypertarget{what-the-explanation-leaves-open}{%
+\subsection{7. What the explanation leaves
+open}\label{what-the-explanation-leaves-open}}
+
+The two independent answers agree on what the paper must state plainly.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The ends have yet to meet} (Fable). The halvings can deliver,
+  at best, a running coupling from small \(t\) down to
+  \(t\simeq\frac12\). The steps across the meeting region lie outside a
+  small-field expansion, and the intermediate band needs a certified
+  mixing box of a few hundred to a few thousand links
+  (\href{confinement-scale-bands.md}{confinement-scale bands}), which no
+  method provides today. The gap is proved at the coarse end and would
+  be transported; the transport is the open part.
+\item
+  \textbf{The one-step objects are uncontrolled for \(SU(N)\)} (both).
+  Hypothesis P(\(\alpha\)), its stability under iteration, uniform
+  remainders and the matching term \(c_{\rm in}-c_{\rm out}\) are open;
+  the ladder exponents are formal.
+\item
+  \textbf{The fine measure is a construction} (Astra). The pushforward
+  preserves every coarse observable exactly, large Wilson loops
+  included, \(\langle F\rangle_{p_*\mu}=\langle F\circ p\rangle_\mu\); a
+  coarse measure alone leaves the fine conditional laws undetermined, so
+  the refinement family must be built.
+\item
+  \textbf{Coarse observables only} (Fable). Transport covers what coarse
+  loops see. A gap of the fine transfer matrix over all local operators
+  needs the lowest states to be visible to coarse loops, or a separate
+  argument per channel.
+\item
+  \textbf{Orders of limits and the rest of the problem} (both). The size
+  clause ties \(L/a\) to \(t\); the paper must say which order it takes
+  (for example the continuum first at fixed \(L\), then \(L\to\infty\)).
+  A complete argument also needs a nontrivial continuum theory,
+  reconstruction, volume-uniform spectral bounds and, for confinement,
+  its own area-law argument.
+\end{itemize}
+
 \hypertarget{consequence-for-state}{%
-\subsection{7. Consequence for STATE}\label{consequence-for-state}}
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
 
 None; this note explains the programme's logic for the joint paper and
 for readers of the atlas.
