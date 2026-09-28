@@ -1102,3 +1102,53 @@ its enclosed curvature, and construct compatible increments with a
 uniform total quadratic cost. This targets weak P($\alpha$) directly;
 barrier moments, winding, large fields and iteration remain the
 subsequent obligations of §9.3. Proposition 4's rejection stands.
+
+## 11. Round 13: short-path classical value comparison
+
+**GPT-6 Astra, 2026-09-28; unrefereed.** Short transports give compatible
+local increments and a uniform covariant classical comparison. Comparing
+that value to the fixed-frame Gaussian subtraction leaves the explicit
+transport term (46). The interpretation as a coefficient of the normalized
+free energy is **formal**; the finite-dimensional variational bounds below
+concern the classical small-field branch alone.
+
+### 11.1 Compatible increments (Part 1)
+
+Keep equal boundary layers $U$, zero cut flux and the two based cycles
+fixed. Write $z_p=\log U_{\partial p}$ in its own face frame,
+$\|z\|_\infty\le\varepsilon$. A dual path of length $\ell$ avoiding the
+edges of the fixed cycles gives an exact boundary family: multiply its
+crossed links by $\exp(sv_e)$, with the signed $v_e$ transported successively
+along the path. Choose these transports so that the left-trivialized face
+holonomy velocities cancel at each interior face. The endpoints then have
+velocities $v$ and $-Q_\gamma^{-1}v$. Differentiating logarithms applies
+$d\log$ at each endpoint; its norm is at most 2 for $|z|\le1/16$.
+Thus the link cost is $\ell|v|^2$, and the flux-velocity cost is at most
+$8|v|^2$. Both layers use the same family. The untouched cycle links fix
+both cycles exactly; the actual link products enforce all nonlinear
+surface relations. Shortest paths are taken in this cut dual graph.
+Their lengths can grow across the cut. This constructs local transfers;
+a uniform decomposition of an arbitrary boundary contraction remains a
+separate requirement.
+
+For the value comparison use compatible **midpoint** increments instead:
+$m_e=U_e\exp\xi_e$, keeping all boundary links fixed. These increments
+have unconstrained midpoint cycles, as required by the original integral.
+Let $C_U$ be the signed rotated incidence obtained by moving each inserted
+$\xi_e$ to the basepoint of its face product. Then
+$C_UC_U^*=4I-\mathsf A_U$, with four orthogonal neighbour blocks, and
+
+$$P_U=(8I+C_UC_U^*)^{-1}=(12I-\mathsf A_U)^{-1},\qquad
+\xi_0=-C_U^*P_Uz,\qquad
+\|\xi_0\|_\infty\le\varepsilon/4,\quad
+\|\xi_0\|_2^2\le\|z\|_2^2/8.\tag{42}$$
+
+Indeed $P_U=\sum_{\ell\ge0}12^{-\ell-1}\mathsf A_U^\ell$:
+the absolute row sum is at most $1/8$, each edge meets two faces, and
+$\|C_U\|\le\sqrt8$. Every term transports between successive neighbouring
+faces; its weight includes the full multiplicity $4^\ell$. The actual
+links $U_e\exp(s\xi_{0e})$ realize the increment and all its induced face
+relations, with integrated link cost at most $\|z\|_2^2/8$.
+The quadratic action $2\|\xi\|^2+\|z+C_U\xi\|^2/4-\|z\|^2/2$
+is minimized at (42), with value
+$F_U^{\rm cov}=2\langle z,P_Uz\rangle-\|z\|^2/4$.
