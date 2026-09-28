@@ -150,8 +150,9 @@ finite-dimensional quantum-mechanical system whose potential is the squared
 commutator of the constant gauge potentials. Its spectrum is purely discrete
 for every positive $\hbar$ and coupling, although the classical energy range
 is $[0,\infty)$ (Simon 1983; Lüscher 1983). The proof below is Simon's
-first argument with every constant explicit, extended to the SU(2) model
-with $D$ matrices and to its gauge-invariant sector.
+first argument with every constant explicit, completed below for compact
+semisimple matrix models (in particular $SU(3)$) and their gauge-invariant
+sectors.
 
 ### 3.1 The scalar model
 
@@ -234,126 +235,188 @@ from the quartic coupling, which is the squared commutator of the gauge
 potentials in Section 3.2. Removing either factor removes the gap, with the
 exponents $4/3$ and $2/3$ of Theorem 5(4).
 
-### 3.2 The SU(2) matrix model and its abelian valleys
+### 3.2 The $0+1$ matrix model, completed for $SU(3)$
 
-Let $T^a=\sigma^a/2$, so $\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}$ and
-$[T^a,T^b]=i\epsilon^{abc}T^c$; let $X_i=x_i^aT^a$ with
-$\vec x_i\in\mathbb R^3$, $i=1,\dots,D$. Then
-$[X_i,X_j]=i(\vec x_i\times\vec x_j)^cT^c$ and
-$-\operatorname{tr}[X_i,X_j]^2=\tfrac12|\vec x_i\times\vec x_j|^2$. The
-Yang--Mills quantum-mechanical Hamiltonian is
-$$H=-\frac{\hbar^2}{2m}\Delta_{\mathbb R^{3D}}
-+\frac{g^2}{2}\sum_{i<j}|\vec x_i\times\vec x_j|^2
-=-\frac{\hbar^2}{2m}\Delta_{\mathbb R^{3D}}-g^2\sum_{i<j}\operatorname{tr}[X_i,X_j]^2 ;$$
-other trace or sum conventions multiply $g^2$ by a fixed number and every
-energy by its cube root.
+**Closure, 2026-09-28.** Here $0+1$ means zero spatial dimensions and one
+Hamiltonian time. The finite-dimensional proof now covers every compact
+semisimple gauge algebra, hence the requested $SU(3)$ model, rather than only
+the $SU(2)$ cross-product realization. Section 3.3 applies it to the constant
+modes of a $3+1$ torus. That application is a completed statement about the
+truncation; it does not integrate the nonconstant modes and is therefore not
+a proof of the $3+1$ continuum theory.
 
-**Theorem 6.** For $D\ge2$:
+Let $\mathfrak g$ be a compact semisimple real Lie algebra with an
+$\operatorname{Ad}$-invariant Euclidean inner product, and let
+$D\ge2$. For $X\in\mathfrak g$, set
 
-1. For every ordered pair $i\neq j$, as forms,
-   $-\frac{\hbar^2}{2m}\Delta_{\vec x_j}+\frac{g^2}{2}|\vec x_i\times\vec x_j|^2
-   \ \ge\ \frac{\hbar g}{\sqrt m}|\vec x_i|$.
-2. As forms on $L^2(\mathbb R^{3D})$,
-   $$H\ \ge\ \tfrac12\Big[-\frac{\hbar^2}{2m}\Delta_{\mathbb R^{3D}}
-   +\frac{\hbar g}{\sqrt m}\sum_{i=1}^D|\vec x_i|\Big].$$
-3. $H$ has compact resolvent and a simple strictly positive ground state;
-   its gap is $\Delta=\delta_1^{(D)}\,\hbar^{4/3}g^{2/3}m^{-2/3}>0$, with
-   the same $\hbar\to0$ and $g\to0$ conclusions as Theorem 5.
-4. The $SO(3)$ action $(U(R)\psi)(\vec x_1,\dots)=\psi(R^{-1}\vec x_1,\dots)$
-   commutes with $H$; the invariant subspace, which Gauss's law selects in
-   the constant-mode truncation of the gauge theory, reduces $H$, contains
-   the ground state, and has gap $\Delta_{\rm inv}\ge\Delta>0$.
-5. The potential vanishes exactly on the commuting configurations
-   $\{\vec x_i=\lambda_i\hat n\}$, where all $X_i$ lie in one Cartan
-   subalgebra. For $D=1$ there is no pair, $V\equiv0$, and
-   $H=-\hbar^2\Delta_{\mathbb R^3}/2m$ has spectrum $[0,\infty)$.
+$$\rho_{\mathfrak g}(X):=\operatorname{Tr}_{\mathfrak g}
+\sqrt{-\operatorname{ad}_X^2},\qquad
+c_{\mathfrak g}:=\min_{\|X\|=1}\rho_{\mathfrak g}(X)>0. \tag{6}$$
 
-*Proof.* (1) For fixed $\vec x_i\neq0$ choose an orthonormal frame of
-$\mathbb R^3_{\vec x_j}$ with third axis along $\vec x_i$. Then
-$|\vec x_i\times\vec x_j|^2=|\vec x_i|^2(u_1^2+u_2^2)$; drop the kinetic
-term in $u_3$ and apply the oscillator bound in $u_1$ and in $u_2$ with
-$\nu=g^2|\vec x_i|^2/2$, each giving $\hbar g|\vec x_i|/(2\sqrt m)$; the
-complement $\vec x_i=0$ is a null set. Integrate over the remaining
-variables. (2) Sum the pair inequalities over all $D(D-1)$ ordered pairs
-with weight $w=1/(2(D-1))$: each kinetic term $T_j$ appears with total
-weight $w(D-1)=\tfrac12$ and each unordered pair potential with weight
-$2w=1/(D-1)\le1$. Then
-$H=\sum_{i\ne j}w(T_j+V_{ij})+\tfrac12\sum_jT_j+(1-\tfrac1{D-1})\sum_{i<j}V_{ij}$,
-where both remainders are nonnegative forms; dropping the potential
-remainder and using (1) gives (2). (3) The bracket in (2) has
-$W=\frac{\hbar g}{\sqrt m}\sum_i|\vec x_i|\ge\frac{\hbar g}{\sqrt m}|x|_{\mathbb R^{3D}}$,
-so the compact-resolvent, simplicity and scaling steps of Theorem 5 apply
-verbatim with $n=3D$, $k=4$. (4) $U(R)$ is unitary, preserves $C_0^\infty$,
-commutes with each $\Delta_{\vec x_i}$ and preserves
-$|\vec x_i\times\vec x_j|$; the Haar average $\int U(R)\,dR$ is the
-orthogonal projection onto the invariant subspace and commutes with
-$(H+1)^{-1}$, so the restriction is self-adjoint with compact resolvent. The
-strictly positive simple ground state $\psi_0$ satisfies
-$U(R)\psi_0=c(R)\psi_0$ with $c(R)>0$ and $|c(R)|=1$, hence is invariant, so
-$E_0^{\rm inv}=E_0$ and $E_1^{\rm inv}\ge E_1$. (5) $\vec x_i\times\vec x_j=0$
-for all pairs iff all nonzero vectors are parallel. $\square$
+The square root is the nonnegative one; zero eigenvalues from the
+centralizer contribute zero. Semisimplicity makes $\operatorname{ad}_X=0$
+only for $X=0$, so $\rho_{\mathfrak g}$ is positive on the compact unit sphere
+and homogeneous of degree one. In particular,
+$\rho_{\mathfrak g}(X)\ge c_{\mathfrak g}\|X\|$.
 
-**The abelian and the two-dimensional cases.** Along the commuting
-configurations the matrices commute and the potential is flat; writing
-$\vec x_i=\lambda_i\hat n+\vec\xi_i$ with $\vec\xi_i\perp\hat n$, the
-transverse curvature of the potential grows quadratically in $|\lambda|$,
-which is what (1) exploits. An abelian gauge group has *only* commuting
-configurations: its matrix model has $V\equiv0$ and the free spectrum
-$[0,\infty)$. This is the exact zero-dimensional form of the statement that
-commutative fields have no gap, and Section 4 gives the free-field form. The
-temporal-gauge constant modes of a gauge theory in $d$ spacetime dimensions
-are $D=d-1$ spatial components, so the zero-point mechanism needs $d\ge3$;
-for $d=2$ the single matrix has no partner, in agreement with Section 5,
-where two-dimensional Yang--Mills has no local excitations at all and its
-discrete flux spectrum comes from the compact holonomy, a different
-mechanism.
+For a coupling $g_B>0$, define on $L^2(\mathfrak g^D)$ the Friedrichs
+Hamiltonian
 
-### 3.3 The finite-volume origin and the uniformity problem
+$$H_{\mathfrak g,D}=-\frac{\hbar^2}{2m}\Delta_{\mathfrak g^D}
+ +\frac{g_B^2}{2}\sum_{i<j}\|[X_i,X_j]\|^2. \tag{7}$$
 
-**Proposition 7.** For SU(2) Yang--Mills on a spatial torus of side $L$
-with action $S=-\frac{\hbar}{4g^2}\int F^a_{\mu\nu}F^{a\mu\nu}\,d^3x\,c\,dt$
-($g$ dimensionless, $[A]=$ length$^{-1}$), temporal gauge and the
-constant-mode ansatz $A^a_i(x,t)=a^a_i(t)$, the Hamiltonian is
-$$H_0=\frac{g^2c}{2\hbar L^3}\sum_{i=1}^3|\vec p_i|^2
-+\frac{\hbar cL^3}{2g^2}\sum_{i<j}|\vec a_i\times\vec a_j|^2,\qquad
-[a^a_i,p^b_j]=i\hbar\delta_{ij}\delta^{ab},$$
-which is Theorem 6 with $D=3$, $m=\hbar L^3/(g^2c)$ and
-$g_B^2=\hbar cL^3/g^2$. Its energy unit is
-$$\varepsilon=\hbar^{4/3}g_B^{2/3}m^{-2/3}=\frac{g^{2/3}\,\hbar c}{L},$$
-so the zero-mode gap $\Delta_0(L)=\delta_1^{(3)}g^{2/3}\hbar c/L$ is positive
-for every $L$ and decays as $1/L$ at fixed coupling.
+This normalization keeps $g_B$ separate from the dimensionless four-dimensional
+coupling used below.
 
-*Proof.* With $F^a_{0i}=c^{-1}\dot a^a_i$ and $F^a_{ij}=(\vec a_i\times\vec
-a_j)^a$ the Lagrangian is $\frac{\hbar L^3}{2g^2c}\sum|\dot{\vec a}_i|^2
--\frac{\hbar cL^3}{4g^2}\sum_{i,j}|\vec a_i\times\vec a_j|^2$; the Legendre
-transform and $\tfrac14\sum_{i,j}=\tfrac12\sum_{i<j}$ give $H_0$, and the
-exponent bookkeeping is $\hbar^{4/3+1/3-2/3}c^{1/3+2/3}L^{1-2}g^{-2/3+4/3}$.
-$\square$
+**Theorem 6 ($0+1$ compact-semisimple gap).** For every compact semisimple
+$\mathfrak g$ and $D\ge2$:
+
+1. For each ordered pair $i\ne j$, the form inequality
+   $$-\frac{\hbar^2}{2m}\Delta_{X_j}
+   +\frac{g_B^2}{2}\|[X_i,X_j]\|^2
+   \ \ge\ \frac{\hbar g_B}{2\sqrt m}\rho_{\mathfrak g}(X_i) \tag{8}$$
+   holds after integration over all other variables.
+2. Writing $T=-\frac{\hbar^2}{2m}\Delta_{\mathfrak g^D}$, one has
+   $$H_{\mathfrak g,D}\ \ge\ \frac12K_{\mathfrak g,D},\qquad
+   K_{\mathfrak g,D}:=T+\frac{\hbar g_B}{2\sqrt m}
+   \sum_{i=1}^D\rho_{\mathfrak g}(X_i). \tag{9}$$
+   Thus $K_{\mathfrak g,D}$ has a linear coercive potential at least
+   $\frac{\hbar g_Bc_{\mathfrak g}}{2\sqrt m}
+   \sum_i\|X_i\|$.
+3. $H_{\mathfrak g,D}$ has compact resolvent and a simple strictly positive
+   ground state. Its gap is
+   $$\Delta_{\mathfrak g,D}=
+   \delta_{\mathfrak g,D}\,\hbar^{4/3}g_B^{2/3}m^{-2/3}>0, \tag{10}$$
+   with $\delta_{\mathfrak g,D}$ a finite positive pure number. The gap tends
+   to zero as $\hbar\downarrow0$ or $g_B\downarrow0$.
+4. Simultaneous adjoint conjugation by the compact group $G$ preserves the
+   Hamiltonian. Its $G$-invariant subspace is reducing, contains the ground
+   state, and has a gap at least $\Delta_{\mathfrak g,D}$.
+5. With the standard $SU(3)$ convention
+   $\|X\|^2=2\operatorname{tr}X^2$ for Hermitian traceless matrices and
+   Lie bracket $-i[X,Y]$, one has
+   $$c_{\mathfrak{su}(3)}=2\sqrt3. \tag{11}$$
+6. The potential in (7) vanishes precisely on mutually commuting tuples,
+   which lie in a common Cartan subalgebra. If $D=1$, or if
+   $\mathfrak g$ is abelian, the potential is absent and the free operator
+   has spectrum $[0,\infty)$.
+
+*Proof.* Fix $X_i$. The nonzero eigenvalues of
+$A_{X_i}:=-\operatorname{ad}_{X_i}^2$ are $\lambda_a>0$. Orthogonally
+diagonalizing $A_{X_i}$ turns the left side of (8), apart from its zero-mode
+kinetic terms, into the sum
+
+$$-\frac{\hbar^2}{2m}\partial_{y_a}^2
+ +\frac{g_B^2\lambda_a}{2}y_a^2
+ \ \ge\ \frac{\hbar g_B}{2\sqrt m}\sqrt{\lambda_a}.$$
+
+This is the oscillator completion-of-squares inequality used in Theorem 5.
+Summing the positive eigenvalue contributions gives (8), including at
+$X_i=0$ by continuity.
+
+Put $T_j=-\hbar^2\Delta_{X_j}/(2m)$ and
+$V_{ij}=g_B^2\|[X_i,X_j]\|^2/2$. With
+$w=1/[2(D-1)]$,
+
+$$H_{\mathfrak g,D}=
+ w\sum_{i\ne j}(T_j+V_{ij})+\frac12\sum_jT_j
+ +\left(1-\frac1{D-1}\right)\sum_{i<j}V_{ij}. \tag{12}$$
+
+The last two terms are nonnegative. In the first sum, (8) appears $D-1$
+times for each $i$, so (12) gives (9). The form ball of $K_{\mathfrak g,D}$
+has uniformly small mass outside a large ball by the linear lower bound in
+item 2 and is bounded in $H^1$ on each fixed ball. Rellich--Kondrachov
+therefore makes that form ball compact in $L^2$. Hence $K_{\mathfrak g,D}$,
+and by the min--max inequality (9) also $H_{\mathfrak g,D}$, has compact
+resolvent. The continuous finite potential makes the Feynman--Kac semigroup
+positivity improving, which gives the simple positive ground state.
+
+For scaling, let $\ell^6=\hbar^2/(m g_B^2)$. The unitary dilation of
+Theorem 3 gives
+
+$$U_\ell^{-1}H_{\mathfrak g,D}U_\ell
+ =\hbar^{4/3}g_B^{2/3}m^{-2/3}
+ \left[-\frac12\Delta+rac12\sum_{i<j}\|[X_i,X_j]\|^2\right]. \tag{13}$$
+
+Compact resolvent supplies a discrete first excited eigenvalue, proving
+item 3. Haar averaging commutes with the resolvent. Positivity and uniqueness
+make the full ground state $G$-invariant, so restriction to the invariant
+sector preserves its ground state and cannot lower its first excitation.
+
+For (11), diagonalize $X$ with eigenvalues
+$\lambda_1\ge\lambda_2\ge\lambda_3$, sum zero. Each root plane contributes
+twice its frequency, hence
+$\rho_{\mathfrak{su}(3)}(X)=2\sum_{p<q}|\lambda_p-\lambda_q|
+=4(\lambda_1-\lambda_3)$. If $r=\lambda_1-\lambda_3$, then
+$\|X\|^2=2\sum_p\lambda_p^2\le4r^2/3$, with equality at a Weyl-wall point
+proportional to $(1,1,-2)$. Thus $\rho/\|X\|\ge2\sqrt3$, sharply. Finally,
+a commuting family in a compact Lie algebra lies in a common maximal torus;
+the $D=1$ and abelian conclusions are immediate. $\square$
+
+For $SU(2)$ in the earlier convention, $\rho(X)=2|\vec x|$ and
+$c_{\mathfrak{su}(2)}=2$, so (8)--(9) recover exactly the cross-product
+bounds previously displayed here. This is also the compact-semisimple
+Lie-algebra extension in Simon 1983, Corollary 4 (passage level in B78);
+the calculation above records the constants needed for $SU(3)$.
+
+### 3.3 The $3+1$ zero-mode sector and the uniformity boundary
+
+**Proposition 7 ($SU(3)$ constant modes on $T^3_L$).** Take pure $SU(3)$
+Yang--Mills in a spatial cube of side $L$, use temporal gauge, and retain only
+spatially constant $a_i(t)\in\mathfrak{su}(3)$, $i=1,2,3$. With the same
+metric as in Theorem 6 and dimensionless four-dimensional coupling $g$, the
+truncated Hamiltonian is
+
+$$H_0=\frac{g^2c}{2\hbar L^3}\sum_{i=1}^3\|p_i\|^2
+ +\frac{\hbar cL^3}{2g^2}\sum_{i<j}\|[a_i,a_j]\|^2,
+ \qquad [a_i^A,p_j^B]=i\hbar\delta_{ij}\delta^{AB}. \tag{14}$$
+
+It is (7) with $D=3$,
+
+$$m=\frac{\hbar L^3}{g^2c},\qquad
+ g_B^2=\frac{\hbar cL^3}{g^2},\qquad
+ \varepsilon_0=\frac{g^{2/3}\hbar c}{L}. \tag{15}$$
+
+Consequently its residual-$SU(3)$-invariant sector has the strictly positive
+zero-mode gap
+
+$$\Delta_{0,\mathrm{inv}}(L)
+ =\delta^{\mathrm{inv}}_{\mathfrak{su}(3),3}
+   \frac{g^{2/3}\hbar c}{L},
+ \qquad 0<\delta^{\mathrm{inv}}_{\mathfrak{su}(3),3}<\infty. \tag{16}$$
+
+*Proof.* Substitution of a constant field into the Yang--Mills action gives
+$\frac{\hbar L^3}{2g^2c}\sum_i\|\dot a_i\|^2$
+minus $\frac{\hbar cL^3}{2g^2}\sum_{i<j}\|[a_i,a_j]\|^2$.
+The Legendre transform gives (14). Equations (15) identify it with Theorem
+6, and
+$\hbar^{4/3}g_B^{2/3}m^{-2/3}=g^{2/3}\hbar c/L$ gives (16). $\square$
+
+This completes the finite-dimensional $0+1$ proof and its $3+1$ constant-mode
+application. Its precise endpoint is important: at fixed $g$,
+$\inf_{L>0}\Delta_{0,\mathrm{inv}}(L)=0$. The nonconstant Fourier modes,
+their gauge constraints, and the $L\to\infty$, $a\to0$ limits are absent from
+(14). Thus (16) neither supplies a volume-uniform bound nor substitutes for
+the local refinement and reconstruction estimates required for the physical
+$3+1$ mass gap.
 
 Lüscher's small-volume expansion (Nucl. Phys. B219 (1983) 233; abstract)
 states that the torus spectrum is discrete and expands in powers of
-$g^{2/3}$ with $g$ the renormalized coupling; Proposition 7 is its leading
-term, and Lüscher--Münster (Nucl. Phys. B232 (1984) 445; abstract) carry
-it to one loop for SU(2) and locate the crossover to large-volume behaviour
-near $z=M(0^+)L\simeq2$. Jaffe and Witten write (p. 7 of the local PDF) that
-"no present ideas point the direction to establish the existence of a mass
-gap that is uniform in the volume". Proposition 7 shows the difficulty in
-the solved sector: $\Delta_0(L)>0$ for every $L$ with
-$\inf_L\Delta_0(L)=0$. Uniformity would need $g(L)^{2/3}/L$ bounded below,
-outside the weak-coupling regime where the truncation is justified; the
-compensation must come from the crossover regime, where the expansion no
-longer applies. In the language of Theorem 1, $L$ is a fixed apparatus
-length that enters the monomial and makes the finite-volume floor
-non-universal, and the uniformity requirement is exactly the demand that
-the floor be independent of it.
+$g^{2/3}$ with $g$ the renormalized coupling; Lüscher--Münster (Nucl. Phys.
+B232 (1984) 445; abstract) carry the SU(2) calculation to one loop and locate
+the crossover to large-volume behaviour near $z=M(0^+)L\simeq2$. Jaffe and
+Witten write (p. 7 of the local PDF) that "no present ideas point the
+direction to establish the existence of a mass gap that is uniform in the
+volume". Proposition 7 makes the same boundary explicit in the $SU(3)$
+zero-mode sector: a positive small-volume gap is a $1/L$ effect, while the
+full continuum target needs a mechanism that survives removal of that length.
 
 The supersymmetric contrast identifies the mechanism once more: de Wit,
 Lüscher and Nicolai (Nucl. Phys. B320 (1989) 135; abstract) prove that the
 supersymmetric matrix-model Hamiltonians have continuous spectrum starting
 at zero, through low-energy states along the same abelian valleys. The
 fermionic zero-point energy cancels the bosonic $\hbar\omega/2$ per
-transverse mode, so the confining term of Theorem 5 vanishes. The gap of
-Theorems 5--6 is exactly the uncancelled transverse zero-point energy.
+transverse mode, so the confining term of Theorem 6 vanishes.
 
 ## 4. Free and abelian fields have no gap; compact abelian gaps are supplied scales
 
@@ -553,7 +616,7 @@ consistency premises, with quantum nature as the phenomenon to be explained.
 The analogy is therefore exact for the second stage, from structure to
 scale, where it says three things with proofs behind them: a positive floor
 is a unit multiple and needs a unit (Theorem 1); the free or commutative
-theory generates none (Propositions 8, Theorem 6(5)); and a generated scale
+theory generates none (Propositions 8, Theorem 6(6)); and a generated scale
 needs two scale-free ingredients that fail to commute, with the gap
 vanishing when either is removed (Theorem 5). For the first stage, from
 consistency to structure, the mass-gap story contains one mechanism that
@@ -638,7 +701,8 @@ a sharpened target for N02: a consistency principle that makes the
 zero-scale composition of cut alternatives ill-defined, tested against C027
 and C028--C029. The dimensional table of Section 7.2 lists the units that a
 supplied-constant route would have to justify, of which only $k_e/c$ is
-mass-independent. No ledger claim is promoted; Theorems 5--6 and
-Propositions 7, 11--13 are written proofs of established results with
-explicit constants, and their sources are recorded with reading levels in
-B78.
+mass-independent. C133 records the completed compact-semisimple extension,
+including its $SU(3)$ specialization; no new claim ID is introduced. Theorems
+5--6 and Propositions 7, 11--13 are written proofs of established results
+with explicit constants, and their sources are recorded with reading levels
+in B78.

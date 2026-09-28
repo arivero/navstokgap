@@ -96,10 +96,11 @@ $M=2$.
 
 **Small volume** ([G07](low-dimensional-mass-gap.md) Proposition 7). The
 constant-mode sector has $D=3$ and gauge group $SU(3)$, so the matrix
-model runs over $\vec x_i\in\mathbb R^8$ with the structure constants of
-$SU(3)$ in place of the cross product; the gap keeps the form
-$\delta_1^{(3)}g^{2/3}\hbar c/L$ with a pure number $\delta_1^{(3)}$
-specific to the group.
+model runs over $\mathfrak{su}(3)^3\simeq\mathbb R^{24}$. The completed
+compact-semisimple form bound has coercive constant
+$c_{\mathfrak{su}(3)}=2\sqrt3$, and the invariant-sector gap is
+$\delta^{\rm inv}_{\mathfrak{su}(3),3}g^{2/3}\hbar c/L$ with a positive
+pure number specific to the group.
 
 ## 3. The step count
 

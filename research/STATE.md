@@ -41,6 +41,11 @@ fill its cells (open cells in its §5).
 - [The working note, §5](../notes/three-continuum-limits.md) states the
   elementary spectral criteria for retaining a positive or zero
   threshold, including the need for surviving observable weight.
+- [The completed $0+1$ proof](../notes/low-dimensional-mass-gap.md) now
+  covers compact semisimple matrix mechanics, including $SU(3)$, and its
+  $3+1$ constant-mode truncation has a gap proportional to
+  $g^{2/3}\hbar c/L$. Its $L^{-1}$ scaling marks the exact boundary before
+  the full volume-uniform continuum problem.
 - [The refinement note](../notes/refinement-composition-and-limit.md)
   constructs the arbitrary-partition constant-force limit, gives exact
   two-dimensional gauge subdivision and a sufficient summable-error

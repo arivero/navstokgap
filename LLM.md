@@ -130,7 +130,7 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | Conditional theorem | H1 (blocking clusters to $\xi\simeq a$) + H2 (certified mixing on one box) $\Rightarrow m\ge\hbar c\gamma'/a_*$ | conditional | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
 | Small volume (S) | Gap-transfer lemma proved; H1--H3 inequalities open; $\Delta=\delta_1g^{2/3}\hbar c/L[1+O(g^{2/3})]$ upper side proved | conditional | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md) |
 | Seven closed routes | Variational, free expansion, projection blocking, flow conjugation, flow before decimation, Agmon, Gibbs domination: each fails for a stated reason with constants | recorded failures | [mass-gap-position §3](notes/mass-gap-position.md) |
-| G07, G08 | Supplied vs generated gaps; YM quantum mechanics gap $\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ from an action floor on transverse area (C133) | exploratory, ledgered | [low-dimensional-mass-gap](notes/low-dimensional-mass-gap.md), [action-floor-yang-mills-gap](notes/action-floor-yang-mills-gap.md) |
+| G07, G08 | $0+1$ compact-semisimple YM matrix mechanics, including $SU(3)$, has a discrete $\delta_{\mathfrak g,D}\hbar^{4/3}g_B^{2/3}m^{-2/3}$ gap; its $3+1$ $SU(3)$ constant-mode sector has gap $\delta^{\rm inv}_{\mathfrak{su}(3),3}g^{2/3}\hbar c/L$. Both are finite-dimensional statements; the latter vanishes with $L^{-1}$. The transverse action-floor reading is G08 (C133) | proved, unrefereed extension; established source theorem, ledgered | [low-dimensional-mass-gap](notes/low-dimensional-mass-gap.md), [action-floor-yang-mills-gap](notes/action-floor-yang-mills-gap.md) |
 
 ## 3. Conventions a model must respect
 
