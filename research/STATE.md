@@ -64,7 +64,7 @@ fill its cells (open cells in its §5).
    [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
    are refereed (Round 5B A); its §5b displays the fundamental SU(3)
    trisection (5B B, written). Image-to-volume control remains open.
-   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 now has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). Next: its normalized estimate (18) with winding control, then iteration; higher-spin sum control remains an alternative route.
+   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). The [small-field referee](../notes/su2-midplane-small-field.md) corrects its proposed local comparison. Next: the normalized estimate (18), with covariant response, barrier and winding control, then iteration; higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
