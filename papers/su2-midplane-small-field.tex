@@ -925,16 +925,93 @@ their compatibility relations when extending to the full slab.
 
 To specify the second derivative as well as the frames, equip each
 fixed-\(H\) admissible slice with the metric induced by
-\(\sum_p|dz_p|^2\). Define \(K^T=\nabla_{\mathcal M,H}^2(h\circ U)\),
-the intrinsic Hessian for this metric, restricting to compatible slab
-variations. This is an explicit covariant response; its definition
-includes the derivative of the frames and the curvature of the
-constraint surface. Kernels are ambient face-block representatives of
-this bilinear form, as in §8.1, restricted to admissible tangent
-vectors. A weighted bound means existence of such a representative;
-eliminating a face changes the matrix norm being asked for. At nonzero
-fields all expansions below are finite-volume formal jets about
-\((z,H)=0\).
+\(\sum_p|dz_p|^2\). Use (29) in \(z\) as the Gaussian subtraction,
+summed over slabs, and express \(W_N\) through the same reconstruction,
+keeping its holonomy data. Define
+\(K^T=\nabla_{\mathcal M,H}^2(h\circ U)\), the intrinsic Hessian for
+this metric, restricting to compatible slab variations. This is an
+explicit covariant response; its definition includes the derivative of
+the frames and the curvature of the constraint surface. Kernels are
+ambient face-block representatives of this bilinear form, as in §8.1,
+restricted to admissible tangent vectors. A weighted bound means
+existence of such a representative; eliminating a face changes the
+matrix norm being asked for. At nonzero fields all expansions below are
+finite-volume formal jets about \((z,H)=0\).
+
+\hypertarget{gaussian-persistence-and-the-strip-term-part-2}{%
+\subsubsection{9.2 Gaussian persistence and the strip term (Part
+2)}\label{gaussian-persistence-and-the-strip-term-part-2}}
+
+\textbf{Exact Gaussian statement; formal interacting interpretation,
+unrefereed.} At zero field the tree frames are identity, the constraint
+linearizes to zero total flux, and (28)--(30) apply unchanged as ambient
+restricted forms: \(\gamma=\log(3/2)\), constant \(2/(3t)\) per slab,
+\(4/(3t)\) after assembly, and zero Gaussian remainder. A fixed change
+of face frames conjugates every kernel block by orthogonal matrices and
+preserves these bounds. Differentiating field-dependent frames needs
+another step.
+
+For an explicit diagnostic let \(Q_{pq}=\operatorname{Ad}_{U_{pq}}\)
+transport between neighbouring face basepoints along the single edge,
+and put
+\(\widehat Q_{pq}=\operatorname{Ad}_{T_p}Q_{pq} \operatorname{Ad}_{T_q}^{-1}\).
+Subscripts on \(T\) denote basepoints. Define \(\mathsf A_T\) by these
+four neighbour blocks and \(P_T=(12I-\mathsf A_T)^{-1}\). Its orthogonal
+walk weights give exactly the majorant in (30), for every connection,
+even when \(P_T-P_0\) is large. It is the transported massive-resolvent
+sector suggested by the flat test in §8.2; identifying the full
+interacting Hessian requires the other cubic terms as well.
+
+At \(U(s)=\exp(sa)\) write \(\theta_v=\sum_{e\in\tau_v}a_e\) with
+oriented signs. Then
+
+\[\left.\partial_s\widehat Q_{pq}\right|_0
+=\operatorname{ad}_{b_{pq}},\qquad
+b_{pq}=\theta_p+a_{pq}-\theta_q,
+\qquad \dot P_T=P_0\dot{\mathsf A}_T P_0.\tag{34}\]
+
+For a contractible comparison loop, discrete Stokes gives
+\(b_{pq}=\sum_{f\in\Sigma_{pq}}\pm z_f^{(1)}\); a wrapping loop also
+retains its period. Formula (34) absorbs a pure-gauge connection, since
+\(a_{pq}=\theta_q-\theta_p\) then gives zero. In the comb chart, the
+vertical comparison at \((i,j)\) instead encloses a strip:
+\(b_3(i,j)=\sum_{r=0}^{i-1}z_{rj}^{(1)}\) for nonseam rows. Thus the
+soft connection leg of (32) becomes a strip-flux sum.
+
+Here is a written size test with both based cycle holonomies fixed. Let
+\(n_2=n\) be even, \(n_3\ge3\), and set \(f_i=\varepsilon\) for
+\(0\le i<n/2\), \(f_i=-\varepsilon\) otherwise. Take \(a_2=0\),
+\(a_3(i,j)=b_iT_3\), \(b_i=\sum_{r<i}f_r\). All tree transports and both
+based cycles are identity, and the exact commuting face logs are
+\(sf_iT_3\), with zero total flux. A vertical neighbour block of
+\(\dot{\mathsf A}_T\) has norm \(|b_{n/2}|=n\varepsilon/2\), since
+\(\|\operatorname{ad}_{T_3}\|=1\). The identities \(\|P_0^{-1}\|\le16\)
+and (34) imply
+
+\[\|\dot P_T\|\ge\frac{\|\dot{\mathsf A}_T\|}{16^2}
+\ge\frac{n\varepsilon}{512}.\tag{35}\]
+
+This lower bound also applies to its maximal unweighted ambient row sum,
+by self-adjointness and the Schur bound. Conversely, writing
+\(\|K\|_\gamma=\sup_p\sum_q e^{\gamma d(p,q)}\|K_{pq}\|\), the same
+example has \(\|\dot{\mathsf A}_T\|_\gamma\le n\varepsilon e^\gamma\)
+and \(\|\dot P_T\|_\gamma\le n\varepsilon/24\) at the stated \(\gamma\).
+Only the two vertical neighbours contribute. The coefficient is a
+finite-volume derivative at \(s=0\); its growth persists however small
+the allowed interval in \(s\) becomes.
+
+\textbf{New obstruction term:} \(t^{-1}P_0\dot{\mathsf A}_T P_0\)
+carries strip area although its two outer resolvents have uniform
+exponential decay. The strips above are contractible and \(H=0\); a
+subtraction of wrapping paths alone leaves such comparisons. Equation
+(35) tests this ambient sector, while (27) concerns the full restricted
+Hessian of \(h\). Cancellation with the remaining cubic vertices and the
+admissible response, or a different response using short pairwise paths,
+remains to be established. Consequently this tree chart supplies the
+Gaussian constants and an explicit new term obstructing the proposed
+proof of \(C\varepsilon/t\); a plane-uniform first-order constant for
+\(h\) remains open. The calculation asserts no failure theorem for every
+covariant chart.
 
 \hypertarget{consequence-for-state}{%
 \subsection{10. Consequence for STATE}\label{consequence-for-state}}
