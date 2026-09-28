@@ -1290,6 +1290,106 @@ class="math inline">\(\nabla^2\mathcal D_s\)</span> after its Gaussian
 Hessian is removed, using intrinsic parallel identification of tangent
 spaces. This specifies the derivative independently of a chosen
 acceleration of a compatible path.</p>
+<h3 id="proposition-6-a-surviving-compatible-strip-coefficient">10.2
+Proposition 6: a surviving compatible strip coefficient</h3>
+<p><strong>Formal classical verdict.</strong> On the square strip family
+of §9.2 take <span class="math inline">\(n\in4\mathbb N\)</span>, <span
+class="math inline">\(n\ge8\)</span>, and <span
+class="math inline">\(m=n/2\)</span>. There are compatible charged
+tangents <span class="math inline">\(V\)</span> of unit norm in the
+two-boundary metric for which</p>
+<p><span
+class="math display">\[K_1(V,V)=-\frac{n\varepsilon}{t}D_n+\mathcal
+E_n,\qquad
+D_n=\frac1n\sum_{r=0}^{n-1}
+\frac{2-2\cos(2\pi r/n)}{(12-2\cos(2\pi r/n))^2},\qquad
+|\mathcal E_n|\le C_*\varepsilon/t,\tag{40}\]</span></p>
+<p>where <span class="math inline">\(1/98\le D_n\le1/50\)</span> and, as
+one deliberately loose explicit choice, <span
+class="math inline">\(C_*=10^6[\sum_{\ell\ge0}(\ell+1)^4
+3^{-\ell}]^3\)</span>. Thus a term of order <span
+class="math inline">\(n\varepsilon/t\)</span> survives in the complete
+intrinsic Hessian. The coefficient refers to differentiation at <span
+class="math inline">\(s=0\)</span> for each finite <span
+class="math inline">\(n\)</span>; the small logarithm chart may shrink
+with <span class="math inline">\(n\)</span>.</p>
+<p><em>Written proof.</em> Put <span
+class="math inline">\(e_j=T_1\cos(\pi j/2)+T_2\sin(\pi j/2)\)</span> and
+choose <span class="math inline">\(c_2=0\)</span>, <span
+class="math inline">\(c_3(i,j)=\delta_{i,m}e_j/\sqrt{2n}\)</span>, <span
+class="math inline">\(v=Cc\)</span>. Then <span
+class="math inline">\(\|c\|^2=1/2\)</span>, <span
+class="math inline">\(\|v\|^2=1\)</span>, and each row of <span
+class="math inline">\(v\)</span> sums to zero. Its tree lift is exactly
+<span class="math inline">\(c\)</span>. Varying the vertical boundary
+links by <span
+class="math inline">\(U_3(i,j;s,u)=\exp(uc_3(i,j))\exp(sb_iT_3)\)</span>
+and keeping horizontal links equal to one fixes the tree and both based
+cycles exactly. The induced face logs supply the nonlinear compatibility
+corrections. At zero, take <span
+class="math inline">\(V=(v,v)/\sqrt2\)</span>; intrinsic parallel
+continuation gives the coefficient (39), independently of the displayed
+path’s acceleration.</p>
+<p>Split the neutral link field into <span
+class="math inline">\(a=h+r\)</span>, with <span
+class="math inline">\(h_3=(n\varepsilon/2)T_3\)</span>, <span
+class="math inline">\(h_2=0\)</span> and <span
+class="math inline">\(r_3(i,j)=-\varepsilon d_{\mathbb
+Z_n}(i,m)T_3\)</span>. This is an algebraic splitting of the cubic (39);
+the comparison field <span class="math inline">\(h\)</span> supplies a
+flat symbol while the actual strip retains zero cycles. For a constant
+neutral link <span class="math inline">\(HT_3\)</span>, the full
+quadratic elimination in charged face variables replaces <span
+class="math inline">\(M(k,p)\)</span> by <span
+class="math inline">\(M(k,p+H)\)</span>, exactly as in §8.2: the
+covariant curl has face Laplacian symbol <span
+class="math inline">\(2-2\cos k+2-2\cos(p+H)\)</span>. Consequently</p>
+<p><span class="math display">\[\partial_H M(k,p+H)|_{H=0}
+=-\frac{8\sin p}{(12-2\cos k-2\cos p)^2}.\tag{41}\]</span></p>
+<p>For <span class="math inline">\(p=\pi/2\)</span>, the normalized
+<span class="math inline">\(v\)</span> has horizontal spectral weights
+<span class="math inline">\((2-2\cos k)/(2n)\)</span>. Equation (41)
+gives <span class="math inline">\(-4D_nH/t\)</span> per common-layer
+unit vector <span class="math inline">\(v\)</span>, and hence <span
+class="math inline">\(-2D_nH/t\)</span> on <span
+class="math inline">\(V\)</span>. Substituting <span
+class="math inline">\(H=n\varepsilon/2\)</span> proves the leading term
+in (40), including its sign.</p>
+<p>The remainder comes from inserting <span
+class="math inline">\(r\)</span> in (39). Its curl is <span
+class="math inline">\(f\)</span>, with <span
+class="math inline">\(\|Pf\|_\infty\le\varepsilon/8\)</span>. The other
+two terms contain one localized factor <span
+class="math inline">\(c\)</span> or <span
+class="math inline">\(Rc\)</span> and one factor growing at most as
+<span class="math inline">\(\varepsilon d(i,m)\)</span>. For an explicit
+summation bound use <span
+class="math inline">\(\|R_{ee&#39;}\|\le3^{-d(e,e&#39;)}\)</span>, <span
+class="math inline">\(|P_{pq}|\le3^{-d(p,q)}/8\)</span>, at most <span
+class="math inline">\(2(4\ell+3)^2\)</span> edges in a shell, and <span
+class="math inline">\(|q(c,d)_p|\le\frac14\sum_{r&lt;s}(|l_r(c)||l_s(d)|+|l_r(d)||l_s(c)|)\)</span>.
+Move the distance weight across each kernel using the triangle
+inequality, then apply Cauchy–Schwarz to the two localized factors. The
+resulting three kernel moments, four face incidences and the
+coefficients in (39) are bounded by <span
+class="math inline">\(C_*\)</span> above, uniformly in <span
+class="math inline">\(n\)</span>. Finally <span
+class="math inline">\(10\le12-2\cos k\le14\)</span> and the mean
+numerator is 2, which prove the stated bounds on <span
+class="math inline">\(D_n\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The contractible-walk part has the same limiting coefficient:
+wrapping terms have length at least <span
+class="math inline">\(n\)</span> and their differentiated massive walk
+tails are a polynomial in <span class="math inline">\(n\)</span> times
+<span class="math inline">\(3^{-n}\)</span>. Thus winding subtraction
+leaves this obstruction. Equation (40) rules out a plane-uniform <span
+class="math inline">\(C\varepsilon/t\)</span> bound for the formal
+first-order comb-tree Hessian, even on admissible vectors. Weak P(<span
+class="math inline">\(\alpha\)</span>) remains a value estimate; its
+truth on large planes requires another argument, since a growing Taylor
+coefficient alone gives neither a uniform finite-field remainder nor a
+counterexample to that value inequality.</p>
 <h2 id="consequence-for-state">11. Consequence for STATE</h2>
 <p>Atlas cell 2 now has the explicit tree response of §9. Its Gaussian
 bound persists; the next response task is cancellation of (34) in the

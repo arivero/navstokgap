@@ -1025,6 +1025,75 @@ Gaussian Hessian is removed, using intrinsic parallel identification
 of tangent spaces. This specifies the derivative independently of a
 chosen acceleration of a compatible path.
 
+### 10.2 Proposition 6: a surviving compatible strip coefficient
+
+**Formal classical verdict.** On the square strip family of §9.2 take
+$n\in4\mathbb N$, $n\ge8$, and $m=n/2$. There are compatible charged
+tangents $V$ of unit norm in the two-boundary metric for which
+
+$$K_1(V,V)=-\frac{n\varepsilon}{t}D_n+\mathcal E_n,\qquad
+D_n=\frac1n\sum_{r=0}^{n-1}
+\frac{2-2\cos(2\pi r/n)}{(12-2\cos(2\pi r/n))^2},\qquad
+|\mathcal E_n|\le C_*\varepsilon/t,\tag{40}$$
+
+where $1/98\le D_n\le1/50$ and, as one deliberately loose explicit choice,
+$C_*=10^6[\sum_{\ell\ge0}(\ell+1)^4 3^{-\ell}]^3$.
+Thus a term of order $n\varepsilon/t$ survives in the complete intrinsic
+Hessian. The coefficient refers to differentiation at $s=0$ for each
+finite $n$; the small logarithm chart may shrink with $n$.
+
+*Written proof.* Put $e_j=T_1\cos(\pi j/2)+T_2\sin(\pi j/2)$ and choose
+$c_2=0$, $c_3(i,j)=\delta_{i,m}e_j/\sqrt{2n}$, $v=Cc$.
+Then $\|c\|^2=1/2$, $\|v\|^2=1$, and each row of $v$ sums to zero.
+Its tree lift is exactly $c$. Varying the vertical boundary links by
+$U_3(i,j;s,u)=\exp(uc_3(i,j))\exp(sb_iT_3)$ and keeping horizontal
+links equal to one fixes the tree and both based cycles exactly.
+The induced face logs supply the nonlinear compatibility corrections.
+At zero, take $V=(v,v)/\sqrt2$; intrinsic parallel continuation gives
+the coefficient (39), independently of the displayed path's acceleration.
+
+Split the neutral link field into $a=h+r$, with
+$h_3=(n\varepsilon/2)T_3$, $h_2=0$ and
+$r_3(i,j)=-\varepsilon d_{\mathbb Z_n}(i,m)T_3$.
+This is an algebraic splitting of the cubic (39); the comparison field
+$h$ supplies a flat symbol while the actual strip retains zero cycles.
+For a constant neutral link $HT_3$, the full quadratic elimination in
+charged face variables replaces $M(k,p)$ by $M(k,p+H)$, exactly as in
+§8.2: the covariant curl has face Laplacian symbol
+$2-2\cos k+2-2\cos(p+H)$. Consequently
+
+$$\partial_H M(k,p+H)|_{H=0}
+=-\frac{8\sin p}{(12-2\cos k-2\cos p)^2}.\tag{41}$$
+
+For $p=\pi/2$, the normalized $v$ has horizontal spectral weights
+$(2-2\cos k)/(2n)$. Equation (41) gives $-4D_nH/t$ per common-layer
+unit vector $v$, and hence $-2D_nH/t$ on $V$. Substituting
+$H=n\varepsilon/2$ proves the leading term in (40), including its sign.
+
+The remainder comes from inserting $r$ in (39). Its curl is $f$, with
+$\|Pf\|_\infty\le\varepsilon/8$. The other two terms contain one
+localized factor $c$ or $Rc$ and one factor growing at most as
+$\varepsilon d(i,m)$. For an explicit summation bound use
+$\|R_{ee'}\|\le3^{-d(e,e')}$, $|P_{pq}|\le3^{-d(p,q)}/8$,
+at most $2(4\ell+3)^2$ edges in a shell, and
+$|q(c,d)_p|\le\frac14\sum_{r<s}(|l_r(c)||l_s(d)|+|l_r(d)||l_s(c)|)$.
+Move the distance weight across each kernel using the triangle
+inequality, then apply Cauchy--Schwarz to the two localized factors.
+The resulting three kernel moments, four face incidences and the
+coefficients in (39) are bounded by $C_*$ above, uniformly in $n$.
+Finally $10\le12-2\cos k\le14$ and the mean numerator is 2,
+which prove the stated bounds on $D_n$. $\square$
+
+The contractible-walk part has the same limiting coefficient: wrapping
+terms have length at least $n$ and their differentiated massive walk
+tails are a polynomial in $n$ times $3^{-n}$. Thus winding subtraction
+leaves this obstruction. Equation (40) rules out a plane-uniform
+$C\varepsilon/t$ bound for the formal first-order comb-tree Hessian,
+even on admissible vectors. Weak P($\alpha$) remains a value estimate;
+its truth on large planes requires another argument, since a growing
+Taylor coefficient alone gives neither a uniform finite-field remainder
+nor a counterexample to that value inequality.
+
 ## 11. Consequence for STATE
 
 Atlas cell 2 now has the explicit tree response of §9. Its Gaussian
