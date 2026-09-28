@@ -132,6 +132,30 @@ $$\int\pi(u-c)\,e^{-t|u|^2/2+i\langle u,Z\rangle}du=\Bigl(\frac{2\pi}t\Bigr)^{n/
 The constants $e^{t|\rho|^2/2}$, ${\rm vol}(\mathfrak t^*/P)^{-1}$ and $(2\pi/t)^{n/2}$ cancel. All
 sums converge absolutely. $\square$
 
+**Theorem 1$'$ (several cuts).** Cut the same bridge at
+$0<s_1<\dots<s_n<1$, with layer values $m_1,\dots,m_n$, and take irreducible
+representations $\lambda_1,\dots,\lambda_n$. With $\boldsymbol\kappa=(\kappa_1,\dots,\kappa_n)$ running over weights of
+$\lambda_1,\dots,\lambda_n$, $A(\boldsymbol\kappa)=\sum_j(1-s_j)\kappa_j$ and the bridge covariance form
+$Q(\boldsymbol\kappa)=\sum_{i,j}\min(s_i,s_j)\,(1-\max(s_i,s_j))\langle\kappa_i,\kappa_j\rangle$,
+
+$$E\prod_j\chi_{\lambda_j}(m_j)=\frac{\displaystyle\sum_{\boldsymbol\kappa}\prod_jm_{\lambda_j}(\kappa_j)\,
+e^{-tQ(\boldsymbol\kappa)/2}\,e^{i\langle\sum_js_j\kappa_j,X\rangle}\sum_{H\in Q^\vee}e^{2\pi i\langle A(\boldsymbol\kappa),H\rangle}\,
+\pi\!\Bigl(\tfrac it(X-2\pi H)-A(\boldsymbol\kappa)\Bigr)G_H}
+{\displaystyle\sum_{H\in Q^\vee}\pi\!\Bigl(\tfrac it(X-2\pi H)\Bigr)G_H}. \tag{1$'$}$$
+
+*Proof.* Integrate $m_1,\dots,m_n$ in turn. Each step applies the
+Brauer--Klimyk rule, which holds with the extended characters $\chi_\nu$ for
+every $\nu\in P$ (its proof uses only the Weyl invariance of the weight
+multiset), and orthogonality; this gives
+$k_t(g)E\prod\chi_{\lambda_j}(m_j)=\sum_\mu d_\mu\sum_{\boldsymbol\kappa}\prod m(\kappa_j)
+e^{-\frac t2[s_1C_2(\mu)+\sum_j(s_{j+1}-s_j)C_2(\mu+\kappa_1+\dots+\kappa_j)]}\chi_{\mu+\sum\kappa_j}(g)$, $s_{n+1}=1$.
+The unfolding of step (ii) holds because the multiset of tuples $\boldsymbol\kappa$ is
+invariant under the simultaneous Weyl action. Completing the square,
+$s_1|v|^2+\sum_j(s_{j+1}-s_j)|v+\kappa_1+\dots+\kappa_j|^2=|v+A|^2+Q$, where $Q$ is the covariance
+of the standard Brownian bridge at the times $s_j$, paired with the $\kappa_j$.
+Steps (iv)--(vi) are unchanged with $(1-s)\kappa$ replaced by $A$ and $s\kappa$ by
+$\sum_js_j\kappa_j$. $\square$
+
 The polynomial ratio for a single image is
 $\pi(\frac it Z-(1-s)\kappa)/\pi(\frac itZ)=\prod_{\alpha>0}\bigl(1+i(1-s)t\langle\kappa,\alpha\rangle/\langle Z,\alpha\rangle\bigr)$, the
 curvature correction; for $SU(2)$ at $s=\frac12$ it is the factor
@@ -208,8 +232,13 @@ the direct path, and the three fuse to $z^{-3}=1$. The $SU(2)$ halving is the
 two-piece case, where each half-face gains $-1$ and the two fuse to $1$,
 Dirac's belt. For $SU(3)$ it is three thin $\mathbb Z_3$ vortices in one cut face
 fusing to the identity, the same bookkeeping by which three quarks form
-a colour singlet (a parallel, not a derivation). The exact joint law of
-the two layers, with Jacobians, remains to be written.
+a colour singlet (a parallel, not a derivation). Theorem 1$'$ makes the
+placement exact at the level of character moments: for $s_1=\frac13$, $s_2=\frac23$ and
+a central image $H=3Y$ the phase is $e^{2\pi i(2\langle\kappa_1,Y\rangle+\langle\kappa_2,Y\rangle)}=\zeta_{\lambda_1}(z)^2\zeta_{\lambda_2}(z)$ with
+$\zeta_\lambda(z)=e^{2\pi i\langle\lambda,Y\rangle}$ the central character, which is the phase of the
+layers $z^{-1}$ and $z^{-2}$ since $\zeta^3=1$. Joint moments of class functions do not
+determine the full joint law of the two layers, whose relative
+orientation remains to be described.
 
 ## 6. What the result says, and what it leaves open
 

@@ -321,6 +321,48 @@ class="math inline">\({\rm vol}(\mathfrak t^*/P)^{-1}\)</span> and <span
 class="math inline">\((2\pi/t)^{n/2}\)</span> cancel. All sums converge
 absolutely. <span class="math inline">\(\square\)</span></li>
 </ol>
+<p><strong>Theorem 1<span class="math inline">\(&#39;\)</span> (several
+cuts).</strong> Cut the same bridge at <span
+class="math inline">\(0&lt;s_1&lt;\dots&lt;s_n&lt;1\)</span>, with layer
+values <span class="math inline">\(m_1,\dots,m_n\)</span>, and take
+irreducible representations <span
+class="math inline">\(\lambda_1,\dots,\lambda_n\)</span>. With <span
+class="math inline">\(\boldsymbol\kappa=(\kappa_1,\dots,\kappa_n)\)</span>
+running over weights of <span
+class="math inline">\(\lambda_1,\dots,\lambda_n\)</span>, <span
+class="math inline">\(A(\boldsymbol\kappa)=\sum_j(1-s_j)\kappa_j\)</span>
+and the bridge covariance form <span
+class="math inline">\(Q(\boldsymbol\kappa)=\sum_{i,j}\min(s_i,s_j)\,(1-\max(s_i,s_j))\langle\kappa_i,\kappa_j\rangle\)</span>,</p>
+<p><span
+class="math display">\[E\prod_j\chi_{\lambda_j}(m_j)=\frac{\displaystyle\sum_{\boldsymbol\kappa}\prod_jm_{\lambda_j}(\kappa_j)\,
+e^{-tQ(\boldsymbol\kappa)/2}\,e^{i\langle\sum_js_j\kappa_j,X\rangle}\sum_{H\in
+Q^\vee}e^{2\pi i\langle A(\boldsymbol\kappa),H\rangle}\,
+\pi\!\Bigl(\tfrac it(X-2\pi H)-A(\boldsymbol\kappa)\Bigr)G_H}
+{\displaystyle\sum_{H\in Q^\vee}\pi\!\Bigl(\tfrac it(X-2\pi
+H)\Bigr)G_H}. \tag{1$&#39;$}\]</span></p>
+<p><em>Proof.</em> Integrate <span
+class="math inline">\(m_1,\dots,m_n\)</span> in turn. Each step applies
+the Brauer–Klimyk rule, which holds with the extended characters <span
+class="math inline">\(\chi_\nu\)</span> for every <span
+class="math inline">\(\nu\in P\)</span> (its proof uses only the Weyl
+invariance of the weight multiset), and orthogonality; this gives <span
+class="math inline">\(k_t(g)E\prod\chi_{\lambda_j}(m_j)=\sum_\mu
+d_\mu\sum_{\boldsymbol\kappa}\prod m(\kappa_j) e^{-\frac
+t2[s_1C_2(\mu)+\sum_j(s_{j+1}-s_j)C_2(\mu+\kappa_1+\dots+\kappa_j)]}\chi_{\mu+\sum\kappa_j}(g)\)</span>,
+<span class="math inline">\(s_{n+1}=1\)</span>. The unfolding of step
+(ii) holds because the multiset of tuples <span
+class="math inline">\(\boldsymbol\kappa\)</span> is invariant under the
+simultaneous Weyl action. Completing the square, <span
+class="math inline">\(s_1|v|^2+\sum_j(s_{j+1}-s_j)|v+\kappa_1+\dots+\kappa_j|^2=|v+A|^2+Q\)</span>,
+where <span class="math inline">\(Q\)</span> is the covariance of the
+standard Brownian bridge at the times <span
+class="math inline">\(s_j\)</span>, paired with the <span
+class="math inline">\(\kappa_j\)</span>. Steps (iv)–(vi) are unchanged
+with <span class="math inline">\((1-s)\kappa\)</span> replaced by <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(s\kappa\)</span> by <span
+class="math inline">\(\sum_js_j\kappa_j\)</span>. <span
+class="math inline">\(\square\)</span></p>
 <p>The polynomial ratio for a single image is <span
 class="math inline">\(\pi(\frac it Z-(1-s)\kappa)/\pi(\frac
 itZ)=\prod_{\alpha&gt;0}\bigl(1+i(1-s)t\langle\kappa,\alpha\rangle/\langle
@@ -491,8 +533,21 @@ and the two fuse to <span class="math inline">\(1\)</span>, Dirac’s
 belt. For <span class="math inline">\(SU(3)\)</span> it is three thin
 <span class="math inline">\(\mathbb Z_3\)</span> vortices in one cut
 face fusing to the identity, the same bookkeeping by which three quarks
-form a colour singlet (a parallel, not a derivation). The exact joint
-law of the two layers, with Jacobians, remains to be written.</p>
+form a colour singlet (a parallel, not a derivation). Theorem 1<span
+class="math inline">\(&#39;\)</span> makes the placement exact at the
+level of character moments: for <span
+class="math inline">\(s_1=\frac13\)</span>, <span
+class="math inline">\(s_2=\frac23\)</span> and a central image <span
+class="math inline">\(H=3Y\)</span> the phase is <span
+class="math inline">\(e^{2\pi
+i(2\langle\kappa_1,Y\rangle+\langle\kappa_2,Y\rangle)}=\zeta_{\lambda_1}(z)^2\zeta_{\lambda_2}(z)\)</span>
+with <span class="math inline">\(\zeta_\lambda(z)=e^{2\pi
+i\langle\lambda,Y\rangle}\)</span> the central character, which is the
+phase of the layers <span class="math inline">\(z^{-1}\)</span> and
+<span class="math inline">\(z^{-2}\)</span> since <span
+class="math inline">\(\zeta^3=1\)</span>. Joint moments of class
+functions do not determine the full joint law of the two layers, whose
+relative orientation remains to be described.</p>
 <h2 id="what-the-result-says-and-what-it-leaves-open">6. What the result
 says, and what it leaves open</h2>
 <p>It is an exact statement about one bridge, the building block of the
