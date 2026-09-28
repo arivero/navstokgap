@@ -1522,3 +1522,72 @@ constant $C_D/2$. The coarser bound $6NK\varepsilon/4$ also follows
 from $\|\Delta_U\|\le K\varepsilon\le1/4$ and
 $|\log(1+x)|\le|x|/(1-|x|)$; it is admissible in the additive budget,
 while (54) additionally vanishes at zero curvature.
+
+### 13.2 Laplace remainder and the soft barrier (Part 2)
+
+Choose $2\varepsilon<c_0\le1/16$ still smaller if necessary so that
+$\kappa_r=8L_F(\varepsilon+4c_0)\le1/4$. Define $y=\xi-\xi_*$,
+$S_2=(E_U(\xi_*)+y^TA_Uy/2)/t$, $R=E_U/t-S_2$, and
+$V_\lambda=S_2+\lambda R+W_\eta$, $0\le\lambda\le1$.
+The partition function $Z_E=\int e^{-E_U/t-W_\eta}$ equals
+$e^{\|z\|^2/(4t)}Z_s^0$, where $Z_s^0$ is (2) with $J$ removed.
+Thus its normalization includes precisely the classical old-face ratio.
+On the whole chart, the unbarriered Hessians have diagonal blocks
+$\ge(5-\kappa_r)I/t$, off-diagonal block majorants summing to
+$(3+\kappa_r)/t$, and lower operator bound $(4-\kappa_r)I/t$.
+Indeed $H_U$ has diagonal $5I$ and six off-diagonal incidences of norm
+$1/2$; the eight local Hessian blocks per row give the stated error
+majorant. Convex interpolation preserves these bounds. The fixed convex
+barrier preserves the lower bound, hence (13), along the entire path.
+
+Here is the additional saddle-centering argument. Proposition 7 gives
+$|\xi_*|_\infty\le2\varepsilon/7<\eta$, so
+$y_e\cdot\nabla w_\eta(\xi_e)\ge0$. Integration by parts against
+$|y_e|^{k-2}y_e$, followed by Hölder at an edge maximizing
+$M_k=(\langle|y_e|^k\rangle_\lambda)^{1/k}$, gives
+$(2-2\kappa_r)M_k^k\le t(k+1)M_k^{k-2}$. Thus, for $k\ge2$,
+
+$$\sup_{\lambda,e}\langle|y_e|^k\rangle_\lambda
+\le C_k t^{k/2},\qquad C_k=[2(k+1)/3]^{k/2}.\tag{55}$$
+
+The barrier's boundary decay in (2) justifies these integrations;
+regularizing $|y_e|^{k-2}y_e$ at zero gives the same inequality.
+In particular the probability of $|\xi_e|\ge r>\varepsilon$ is at most
+$C_k t^{k/2}/(r-\varepsilon)^k$, including layers near $c_0$.
+This controls ordinary local moments; expectations of the unbounded
+barrier Hessian require separate hypotheses, and are unused here.
+
+Taylor's integral remainder gives
+$|R|\le L_F\sum_p(\sum_{e\in\partial p}|y_e|)
+(\sum_{e\in\partial p}|y_e|^2)/(6t)$.
+There are 16 products per face, each bounded in expectation by
+$C_3t^{3/2}$ from (55), where here $C_3=(8/3)^{3/2}$ denotes the
+moment constant, distinct from (8). Put $A_L=(8/3)L_F(8/3)^{3/2}$.
+Integrating $\partial_\lambda\log Z_\lambda=-\langle R\rangle_\lambda$
+yields $|\log Z_E-\log Z_{2,W}|\le A_LN\sqrt t$.
+Expansion about the actual Hessian absorbs the $\varepsilon$-quadratic
+term into (54); the remaining Taylor error starts cubically.
+
+Let $G_U=\int_{\mathbb R^{6N}}e^{-S_2}$ and
+$q=2e^{-\varepsilon^2/(2t)}\le1/2$.
+The centered Gaussian has scalar variances at most $t/3$.
+The rectangle $|y_{e,a}|\le\varepsilon/\sqrt3$ lies inside $W_\eta=0$.
+Šidák's Gaussian rectangle inequality gives
+$Z_{2,W}/G_U\ge(1-q)^{6N}$, while $Z_{2,W}/G_U\le1$.
+Input: [Šidák 1967](https://doi.org/10.1080/01621459.1967.10482935),
+Corollary 1, p. 628 (**passage**, original paper; Crossref metadata
+verified 2026-09-29). Consequently the identity-normalized remainder obeys
+
+$$\left|\log\frac{Z_E(U)}{G_U}-\log\frac{Z_E(1)}{G_1}\right|
+\le2A_LN\sqrt t+48Ne^{-t^{-2\delta}/2}.\tag{56}$$
+
+This includes the barrier cost for every barrier satisfying (2), regardless
+of its growth near $c_0$. Put $B_\delta=(\alpha/(\delta e))^{\alpha/(2\delta)}$;
+maximizing $x^{\alpha/(2\delta)}e^{-x/2}$ gives
+$e^{-t^{-2\delta}/2}\le B_\delta t^\alpha$.
+Combining (43), (54) and (56) proves the normalized, amplitude-free bound
+$| -\log[Z_E(U)/Z_E(1)]-\mathcal D_0^{\rm cov}(U)|
+\le C_0t^\alpha\sum_p(1+|z_p|^2/t)$, with
+$C_0=K+C_D/2+2A_L+48B_\delta$.
+The normalized field dependence is controlled by the allowed additive
+term; (56) permits a flat-holonomy remainder as well as curvature.
