@@ -655,8 +655,8 @@ the normalized expansion (18) of the mid-plane note remain conditional.
 
 ### 8.1 Exact Gaussian reference (GPT-6 Astra, 2026-09-28)
 
-Work first with the unrestricted abelian Gaussian, in one slab with
-boundary transverse links $a_0,a_1$. Retain their harmonic components
+Use the unrestricted abelian Gaussian in one slab with boundary links
+$a_0,a_1$. Retain their harmonic components
 $h_0,h_1$ and impose the linear compatibility relations on all cut and
 transverse fluxes. Put $x=Ca_0$, $y=Ca_1$, so $\sum x=\sum y=0$.
 Independent zero-mean Fourier components and harmonic data give actual
@@ -664,7 +664,6 @@ coordinates. The spatial kernels below represent bilinear forms on this
 constrained space, by restriction of an ambient kernel; eliminating one
 face or inserting a nonlocal orthogonal projector would change its row sums.
 The three colour copies in the linearization are identical.
-
 Set $L=CC^*$, $P=(8I+L)^{-1}$ and $G=H_0^{-1}$. The mean bridge link
 is $b=(a_0+a_1)/2$ up to a gradient from direction-1 links. In uncentred
 mid-links $m$ the normalized exponent and external old-face term are
@@ -672,8 +671,8 @@ mid-links $m$ the normalized exponent and external old-face term are
 $$S_0=\frac{2}{t}\|m-b\|^2+\frac1{4t}\|Cm\|^2,
 \qquad B_0=-\frac{\|x\|^2+\|y\|^2}{8t}.$$
 
-Here $B_0$ assigns half of each old-face ratio to each neighbouring slab.
-Since $\operatorname{Cov}_0(m)=tG$, differentiation in $b$ gives
+Assign half of each old-face ratio to each slab. Since
+$\operatorname{Cov}_0(m)=tG$, differentiation in $b$ gives
 
 $$E_0[S_{0,bb}]-\operatorname{Cov}_0(S_{0,b},S_{0,b})
 =\frac1t(4I-16G)=\frac4t C^*PC,
@@ -706,8 +705,8 @@ $$\sup_{\sigma,p}\sum_{\tau,q}e^{\gamma d}
 \le\frac1t\left(\frac{1+e^\gamma}{12-4e^\gamma}+\frac14\right)
 =\frac{2}{3t}.\tag{30}$$
 
-Assembly over slabs gives $4/(3t)$. All constants are independent of
-the periods. The Gaussian remainder $h$ has zero kernel, hence satisfies
+Assembly gives $4/(3t)$, independently of the periods. The Gaussian
+remainder $h$ has zero kernel, hence satisfies
 (27) with $C=0$; (30) bounds the reference response itself.
 
 **Mechanism.** The Gaussian score identity produces the Schur complement
@@ -728,8 +727,8 @@ compatibility relations. This is a finite-volume formal chart about zero.
 Its cubic response already contains an inverse-curl pole. The following
 test concerns equal adjacent layers, zero cut flux, and $H=0$.
 
-Here is the perturbation prescription, including the terms needed to
-avoid a spurious cancellation. Write the normalized action as
+Use the unrestricted zero-image expansion; barrier and image errors
+remain outside it. Write the normalized action as
 $S_0+V_3+V_4+J+\cdots$, with $V_j=\mathcal S_j/t$, and expand the BCH
 logarithm as $Z_1+Z_2+Z_3+\cdots$. Each squared mid-face contributes
 $\langle Z_1,Z_2\rangle/(2t)$ and
@@ -749,7 +748,6 @@ the classical terms $F_3/t,F_4/t$ in (15) of the
 [order-$t$ note](su2-midplane-order-t.md) (passage), including
 $-\langle\partial_\xi\mathcal S_3,G\partial_\xi\mathcal S_3\rangle/(2t)$.
 Thus a one-vertex quartic truncation alone would miss a necessary term.
-
 The complete classical cubic can be tested without listing its vertices.
 For equal layers, (29) has flux Hessian $M(p)/t$, where
 $M(p)=-\lambda(p)/(2(8+\lambda(p)))$ and
@@ -759,7 +757,6 @@ components have the exact classical quadratic symbol $M(p+H)/t$.
 Indeed replace $C$ by the flat covariant curl in (28); its face
 Laplacian has symbol $\lambda(p+H)$. This also fixes the sum of **all**
 cubic transport vertices at zero incoming connection momentum.
-
 Massive Gaussian elimination makes these link vertices analytic near
 that momentum. For a neutral soft flux at $k=(\kappa,0)$, the Coulomb
 lift has $a_3^3(k)=X^3(k)/(e^{i\kappa}-1)$ and $a_2^3(k)=0$;
@@ -796,6 +793,15 @@ another specified flux chart could change this conclusion. Such a
 replacement needs its own definition and bound; (32) identifies the
 term that prevents promoting the Gaussian proof in fixed site frames.
 
+### 8.3 Beyond first order
+
+To pursue (27), first replace the fixed-frame Hessian by a specified
+covariant response that absorbs (32), and prove the corresponding
+compatible-path estimate. Then control all connected insertions with
+plane-uniform weighted sums, the normalized interacting barrier moments,
+the full winding remainder and the large-field comparison. The Gaussian
+identity and formal expansion supply no such all-order remainder bound.
+
 ## 9. Consequence for STATE
 
 Atlas cell 2 keeps its formal order-$t$ calculation. Round 8 Part A
@@ -809,5 +815,5 @@ admissible-coordinate and cancellation requirements, as the unresolved
 step toward replacing Hypothesis I. Round 9 §8.1 establishes the exact
 Gaussian cancellation and its plane-uniform flux-kernel bound; §8.2
 finds a formal cubic transport obstruction in the fixed-frame Coulomb
-chart. A covariant replacement for (27) is the next response task. The large-field and iteration
-obligations remain.
+chart. A covariant replacement for (27) is the next response task.
+The large-field and iteration obligations remain.

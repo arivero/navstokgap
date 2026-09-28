@@ -199,7 +199,7 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
 ## 5. Open cells
 
 1. $SU(2)$ cube: *filled through $J=1$* ([Theorem 4](su2-midpoint-exact.md), exact diagonal entries, image bounds and cube sector); $J>1$ entries and control of the full spin sum remain open.
-2. $SU(2)$ full mid-plane in $1+2$: [formal order-$t$ calculation filled](su2-midplane-order-t.md), refereed as formal: cut shifts positive, transverse negative, remaining bulk terms of dimension six; the size clause $\min_jN_j\ge c_0/t$ absorbs the flat Gaussian winding term into the allowed remainder. The [small-field note](su2-midplane-small-field.md) is refereed (Astra Round 8 A): covariant decay accepted, bridge and convexity bounds refined, Proposition 4 rejected by a flat-holonomy path satisfying its hypothesis. Open: normalized estimate (18), including covariant response, barrier moments, winding and large fields.
+2. $SU(2)$ full mid-plane in $1+2$: [formal order-$t$ calculation](su2-midplane-order-t.md) refereed as formal, with its size clause for winding; [small-field note](su2-midplane-small-field.md), Round 9 §8: exact Gaussian flux cancellation and weighted kernel bound, formal cubic transport pole in fixed-frame Coulomb coordinates. Round 8's rejection of Proposition 4 stands; open: a covariant replacement for (27), normalized (18), barrier moments, winding and large fields.
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.

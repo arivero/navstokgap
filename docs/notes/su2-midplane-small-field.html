@@ -835,7 +835,188 @@ response nor the winding bound, and Part A’s barrier and large-field
 issues remain. This is the precise obstruction reached in Part B. All
 claims of P(<span class="math inline">\(\alpha\)</span>) and the
 normalized expansion (18) of the mid-plane note remain conditional.</p>
-<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<h2 id="round-9-cancellation-in-flux-response">8. Round 9: cancellation
+in flux response</h2>
+<h3 id="exact-gaussian-reference-gpt-6-astra-2026-09-28">8.1 Exact
+Gaussian reference (GPT-6 Astra, 2026-09-28)</h3>
+<p>Use the unrestricted abelian Gaussian in one slab with boundary links
+<span class="math inline">\(a_0,a_1\)</span>. Retain their harmonic
+components <span class="math inline">\(h_0,h_1\)</span> and impose the
+linear compatibility relations on all cut and transverse fluxes. Put
+<span class="math inline">\(x=Ca_0\)</span>, <span
+class="math inline">\(y=Ca_1\)</span>, so <span
+class="math inline">\(\sum x=\sum y=0\)</span>. Independent zero-mean
+Fourier components and harmonic data give actual coordinates. The
+spatial kernels below represent bilinear forms on this constrained
+space, by restriction of an ambient kernel; eliminating one face or
+inserting a nonlocal orthogonal projector would change its row sums. The
+three colour copies in the linearization are identical. Set <span
+class="math inline">\(L=CC^*\)</span>, <span
+class="math inline">\(P=(8I+L)^{-1}\)</span> and <span
+class="math inline">\(G=H_0^{-1}\)</span>. The mean bridge link is <span
+class="math inline">\(b=(a_0+a_1)/2\)</span> up to a gradient from
+direction-1 links. In uncentred mid-links <span
+class="math inline">\(m\)</span> the normalized exponent and external
+old-face term are</p>
+<p><span
+class="math display">\[S_0=\frac{2}{t}\|m-b\|^2+\frac1{4t}\|Cm\|^2,
+\qquad B_0=-\frac{\|x\|^2+\|y\|^2}{8t}.\]</span></p>
+<p>Assign half of each old-face ratio to each slab. Since <span
+class="math inline">\(\operatorname{Cov}_0(m)=tG\)</span>,
+differentiation in <span class="math inline">\(b\)</span> gives</p>
+<p><span
+class="math display">\[E_0[S_{0,bb}]-\operatorname{Cov}_0(S_{0,b},S_{0,b})
+=\frac1t(4I-16G)=\frac4t C^*PC,
+\qquad G=\frac14(I-C^*PC).\tag{28}\]</span></p>
+<p>For any lift <span class="math inline">\(\mathcal R\)</span> with
+<span class="math inline">\(C\mathcal R=I\)</span> on admissible fluxes,
+<span class="math inline">\((C\mathcal R)^*P(C\mathcal R)=P\)</span> as
+a restricted bilinear form. The large factors in (26) disappear.
+Gaussian integration consequently gives</p>
+<p><span class="math display">\[\begin{aligned}
+\mathcal D_{0,\mathrm{slab}}
+&amp;=\frac1{2t}\langle x+y,P(x+y)\rangle
+-\frac{\|x\|^2+\|y\|^2}{8t}+\mathrm{const},\\
+K^0_{\sigma p,\tau q}
+&amp;=\frac1t\left(P_{pq}-\frac14\delta_{\sigma\tau}\delta_{pq}\right)I_3,
+\qquad \sigma,\tau\in\{0,1\}.
+\end{aligned}\tag{29}\]</span></p>
+<p>Cut-flux directions at fixed <span class="math inline">\(x,y\)</span>
+and all harmonic directions have zero response. Summing slabs reproduces
+Proposition 2 of the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>
+(passage). On the square torus <span
+class="math inline">\(8I+L=12I-\mathsf A\)</span>, where <span
+class="math inline">\(\mathsf A\)</span> is nearest-neighbour adjacency.
+Its positive walk series yields <span class="math inline">\(\sup_p\sum_q
+e^{\gamma d(p,q)}P_{pq}\le(12-4e^\gamma)^{-1}\)</span>. For <span
+class="math inline">\(\gamma=\log(3/2)\)</span> and the pair distance
+<span
+class="math inline">\(d((\sigma,p),(\tau,q))=d(p,q)+|\sigma-\tau|\)</span>,
+(29) therefore gives</p>
+<p><span class="math display">\[\sup_{\sigma,p}\sum_{\tau,q}e^{\gamma d}
+\|K^0_{\sigma p,\tau q}\|
+\le\frac1t\left(\frac{1+e^\gamma}{12-4e^\gamma}+\frac14\right)
+=\frac{2}{3t}.\tag{30}\]</span></p>
+<p>Assembly gives <span class="math inline">\(4/(3t)\)</span>,
+independently of the periods. The Gaussian remainder <span
+class="math inline">\(h\)</span> has zero kernel, hence satisfies (27)
+with <span class="math inline">\(C=0\)</span>; (30) bounds the reference
+response itself.</p>
+<p><strong>Mechanism.</strong> The Gaussian score identity produces the
+Schur complement (28), equivalently the Woodbury identity for <span
+class="math inline">\(4I+C^*C/2\)</span>. Its two exterior curls
+annihilate gradients and harmonic shifts and turn every flux lift into
+the identity. Combining the direct Hessian and covariance before taking
+absolute values leaves a massive face resolvent. Normalized bridge
+denominators remove the cut-face response; the old-face normalization
+adds only the diagonal term in (29). This calculation uses the full
+Gaussian domain; a barrier requires its own correction.</p>
+<h3 id="formal-non-abelian-response-a-surviving-soft-transport-term">8.2
+Formal non-abelian response: a surviving soft transport term</h3>
+<p>Specify a chart before testing (27). Use face logarithms in fixed
+site frames, with the formal Coulomb lift <span
+class="math inline">\(a=\mathcal R X+H+O(X^2)\)</span>, <span
+class="math inline">\(\mathcal R=C^*L^{-1}\)</span> on zero-mean modes;
+retain <span class="math inline">\(H\)</span> and all nonlinear
+compatibility relations. This is a finite-volume formal chart about
+zero. Its cubic response already contains an inverse-curl pole. The
+following test concerns equal adjacent layers, zero cut flux, and <span
+class="math inline">\(H=0\)</span>.</p>
+<p>Use the unrestricted zero-image expansion; barrier and image errors
+remain outside it. Write the normalized action as <span
+class="math inline">\(S_0+V_3+V_4+J+\cdots\)</span>, with <span
+class="math inline">\(V_j=\mathcal S_j/t\)</span>, and expand the BCH
+logarithm as <span class="math inline">\(Z_1+Z_2+Z_3+\cdots\)</span>.
+Each squared mid-face contributes <span class="math inline">\(\langle
+Z_1,Z_2\rangle/(2t)\)</span> and <span
+class="math inline">\((|Z_2|^2+2\langle Z_1,Z_3\rangle)/(4t)\)</span> to
+<span class="math inline">\(V_3,V_4\)</span> respectively. The bridge
+curvature contributes <span
+class="math inline">\(-\sum_e|[X_e,\xi_e]|^2/(24t)\)</span> to <span
+class="math inline">\(V_4\)</span>; <span
+class="math inline">\(J\)</span> includes the normalized Haar and
+heat-kernel amplitudes. With <span class="math inline">\(E_0\)</span> at
+the shifted Gaussian saddle, the first insertions and the required
+connected cubic pair are</p>
+<p><span class="math display">\[\Delta\mathcal D=E_0V_3+E_0V_4
+-\tfrac12\operatorname{Cov}_0(V_3,V_3)+E_0J+\cdots.\tag{31}\]</span></p>
+<p>One vertex is first order in an insertion parameter; under <span
+class="math inline">\([\ ,\ ]\mapsto g[\ ,\ ]\)</span>, the cubic is
+order <span class="math inline">\(g\)</span>, while quartic and the
+connected pair are both order <span class="math inline">\(g^2\)</span>.
+Gaussian Wick contraction gives the classical terms <span
+class="math inline">\(F_3/t,F_4/t\)</span> in (15) of the <a
+href="su2-midplane-order-t.html">order-<span
+class="math inline">\(t\)</span> note</a> (passage), including <span
+class="math inline">\(-\langle\partial_\xi\mathcal
+S_3,G\partial_\xi\mathcal S_3\rangle/(2t)\)</span>. Thus a one-vertex
+quartic truncation alone would miss a necessary term. The complete
+classical cubic can be tested without listing its vertices. For equal
+layers, (29) has flux Hessian <span
+class="math inline">\(M(p)/t\)</span>, where <span
+class="math inline">\(M(p)=-\lambda(p)/(2(8+\lambda(p)))\)</span> and
+<span class="math inline">\(\lambda(p)=4-2\cos p_2-2\cos p_3\)</span>.
+At a constant flat neutral connection <span
+class="math inline">\(a_j=H_jT_3\)</span>, the charged components have
+the exact classical quadratic symbol <span
+class="math inline">\(M(p+H)/t\)</span>. Indeed replace <span
+class="math inline">\(C\)</span> by the flat covariant curl in (28); its
+face Laplacian has symbol <span
+class="math inline">\(\lambda(p+H)\)</span>. This also fixes the sum of
+<strong>all</strong> cubic transport vertices at zero incoming
+connection momentum. Massive Gaussian elimination makes these link
+vertices analytic near that momentum. For a neutral soft flux at <span
+class="math inline">\(k=(\kappa,0)\)</span>, the Coulomb lift has <span
+class="math inline">\(a_3^3(k)=X^3(k)/(e^{i\kappa}-1)\)</span> and <span
+class="math inline">\(a_2^3(k)=0\)</span>; here <span
+class="math inline">\(X(z)=\sum_k X(k)e^{ikz}\)</span> defines the
+Fourier amplitudes. The resulting first-order charged flux Hessian of
+<span class="math inline">\(h\)</span>, with outgoing momenta <span
+class="math inline">\(p+k,p\)</span>, consequently contains</p>
+<p><span class="math display">\[\begin{aligned}
+K^{(1)}_{+}(p+k,p)
+&amp;=\frac{X^3(k)}t
+\left[\frac{\partial_{p_3}M(p)}{e^{i\kappa}-1}+O(1)\right],\\
+\partial_{p_3}M(p)&amp;=-\frac{8\sin p_3}{(8+\lambda(p))^2}.
+\end{aligned}\tag{32}\]</span></p>
+<p>Choose <span class="math inline">\(p_3\notin\{0,\pi\}\)</span> and
+fixed nonzero <span class="math inline">\(p\)</span>. The bounded term
+includes the other placements of the neutral leg; their inverse curls
+have momenta near <span class="math inline">\(p\)</span>, and remain
+bounded. Reality pairs <span class="math inline">\(k\)</span> with <span
+class="math inline">\(-k\)</span>. Equation (32) has size <span
+class="math inline">\(|X^3(k)|/(t|\kappa|)\)</span> with a nonzero
+residue. A plane-uniform row-sum bound <span
+class="math inline">\(C\sup|X|/t\)</span> would bound every such Fourier
+matrix element and is incompatible with this coefficient as <span
+class="math inline">\(\kappa\to0\)</span>. This is a formal failure of
+(27) in this fixed-frame chart. It occurs in the classical cubic, before
+quartic terms: the latter and the cubic pair have classical boundary
+degree four, and bridge curvature vanishes on this equal-layer test.
+Loop contractions have higher powers of <span
+class="math inline">\(t\)</span> than the displayed <span
+class="math inline">\(1/t\)</span> residue. Winding subtraction removes
+wrapping paths; the nonwrapping massive resolvent has the same bulk
+momentum shift and residue. A flat-holonomy subtraction cannot remove
+it.</p>
+<p>The mechanism is parallel transport of charged curvature between
+distinct faces. The Gaussian Schur complement cancels the inverse curls
+on its two external legs; differentiating its transport introduces a
+third leg <span class="math inline">\(\mathcal R X\)</span>, retained by
+(32). Covariantly transported derivatives or another specified flux
+chart could change this conclusion. Such a replacement needs its own
+definition and bound; (32) identifies the term that prevents promoting
+the Gaussian proof in fixed site frames.</p>
+<h3 id="beyond-first-order">8.3 Beyond first order</h3>
+<p>To pursue (27), first replace the fixed-frame Hessian by a specified
+covariant response that absorbs (32), and prove the corresponding
+compatible-path estimate. Then control all connected insertions with
+plane-uniform weighted sums, the normalized interacting barrier moments,
+the full winding remainder and the large-field comparison. The Gaussian
+identity and formal expansion supply no such all-order remainder
+bound.</p>
+<h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>Atlas cell 2 keeps its formal order-<span
 class="math inline">\(t\)</span> calculation. Round 8 Part A accepts the
 covariant decay and corrected bridge/convexity bounds, rejects
@@ -845,8 +1026,11 @@ normalized, gauge-covariant response estimate with barrier and winding
 control. Part B proves locality for local-potential increments under
 Theorem 5’s analytic hypotheses and isolates (27), including its
 admissible-coordinate and cancellation requirements, as the unresolved
-step toward replacing Hypothesis I. The large-field and iteration
-obligations remain.</p>
+step toward replacing Hypothesis I. Round 9 §8.1 establishes the exact
+Gaussian cancellation and its plane-uniform flux-kernel bound; §8.2
+finds a formal cubic transport obstruction in the fixed-frame Coulomb
+chart. A covariant replacement for (27) is the next response task. The
+large-field and iteration obligations remain.</p>
 
 </main>
 <footer class="site"><div class="wrap">
