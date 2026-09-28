@@ -33,7 +33,7 @@ TRACKS = [
      what survives &mdash; Newton's action cost, the Yang&ndash;Mills gap, the
      pion's zero threshold. Series insertions close exactly; parallel
      insertions carry the renormalization.""", [
-        "halving-atlas", "newton-record-parallel-move",
+        "halving-atlas", "uv-halving-ir-confinement", "newton-record-parallel-move",
         "tangent-groupoid-trajectories",
         "three-continuum-limits",
         "refinement-composition-and-limit",

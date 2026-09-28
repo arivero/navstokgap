@@ -131,6 +131,9 @@ way; in mechanics refining makes each cell more quantum
 
 ## 4. What emerges, read across the atlas
 
+Why ultraviolet halvings bear on an infrared gap is explained, for the
+paper, in the [didactic note](uv-halving-ir-confinement.md).
+
 - **Series moves never produce anything new.** In every dimension they
   close exactly for heat-kernel weights, and in mechanics after one
   scalar counterterm. The one-dimensional Newton problem and the

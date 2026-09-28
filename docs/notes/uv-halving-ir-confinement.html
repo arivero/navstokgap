@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halving goes to the ultraviolet; confinement lives in the infrared</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Halving goes to the ultraviolet; confinement lives in the
+infrared</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/uv-halving-ir-confinement.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/uv-halving-ir-confinement.pdf">PDF</a></p><p><strong>Didactic note, 2026-09-28 (Claude, prompted by the user’s
+question).</strong> Confinement and the mass gap are infrared
+properties, while halving the lattice moves toward the ultraviolet. The
+refinement programme of the <a href="halving-atlas.html">atlas</a>
+nevertheless bears on the gap, for five reasons, each stated with its
+source:</p>
+<ol type="1">
+<li><strong>One map, two directions.</strong> A halving adds modes at
+the ultraviolet end; integrating them out again is one Wilson
+renormalization step toward the infrared. Refinement and coarse-graining
+are the same pushforward, Proposition 1 of the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>,
+read in opposite directions.</li>
+<li><strong>The infrared is the invariant of a refinement.</strong> A
+continuum limit holds the physical scales fixed. In lattice units every
+infrared quantity shrinks at each halving: <span
+class="math inline">\(am\)</span> and <span
+class="math inline">\(a\Lambda\)</span> halve, <span
+class="math inline">\(a^2\sigma\)</span> quarters. The question a
+halving asks about the infrared is whether these stay constant in
+physical units.</li>
+<li><strong>The exponential ladder selects what survives.</strong> Along
+the one-loop trajectory a non-perturbative term <span
+class="math inline">\(e^{-c/t}\)</span>, with <span
+class="math inline">\(t=\hbar g^2(a)\)</span>, equals <span
+class="math inline">\((a\Lambda)^{2b_0c}\)</span>, so a halving
+multiplies it by <span class="math inline">\(2^{-2b_0c}\)</span>. The
+generated gap, <span class="math inline">\(am\propto e^{-1/(2b_0\hbar
+g^2)}\)</span>, is the term with <span
+class="math inline">\(2b_0c=1\)</span>: it halves exactly when the
+lattice halves, and so survives in physical units. Every term with <span
+class="math inline">\(2b_0c&gt;1\)</span> dies.</li>
+<li><strong>A growing ultraviolet end and a fixed infrared end.</strong>
+From spacing <span class="math inline">\(a\)</span> to the correlation
+length <span class="math inline">\(\xi\)</span> there are <span
+class="math inline">\(\log_2(\xi/a)\)</span> halvings. Refining adds
+steps only at the ultraviolet end, where <span
+class="math inline">\(t\)</span> is small; the steps where <span
+class="math inline">\(t\)</span> is of order one, around <span
+class="math inline">\(\beta_W\simeq6\)</span> for <span
+class="math inline">\(SU(3)\)</span>, are the same finite set for every
+<span class="math inline">\(a\)</span>. Confinement is decided there
+once; refinement requires the growing number of ultraviolet steps to be
+controlled uniformly.</li>
+<li><strong>Refinement exposes lattice artifacts.</strong> Compact <span
+class="math inline">\(U(1)\)</span> has a lattice gap that refinement at
+fixed coupling removes. A property that survives every halving is a
+property of the continuum theory.</li>
+</ol>
+<h2 id="one-map-two-directions">1. One map, two directions</h2>
+<p>Proposition 1 of the series/parallel note writes the law of the
+coarse links as the pushforward of the fine heat-kernel measure under
+the product of half-links. Read from coarse to fine it is a refinement:
+the fine measure is a consistent extension of the coarse one, with new
+modes at the shortest scale. Read from fine to coarse it is a blocking
+step: the mid-plane integral <span class="math inline">\(\Psi\)</span>
+is the effective action generated by the modes of wavelength between
+<span class="math inline">\(a\)</span> and <span
+class="math inline">\(2a\)</span>. The same factor <span
+class="math inline">\(\Psi\)</span>, and the same parallel defect, carry
+the renormalization in both readings. What the atlas calls “what
+survives refinement” is, in the other reading, “what is left of the
+ultraviolet after coarse-graining down to the scale of interest”.</p>
+<h2 id="the-infrared-is-what-a-refinement-holds-fixed">2. The infrared
+is what a refinement holds fixed</h2>
+<p>A lattice at spacing <span class="math inline">\(a\)</span> has three
+scales: <span class="math inline">\(a\)</span>, the correlation length
+<span class="math inline">\(\xi=\hbar/(mc)\)</span> and the box <span
+class="math inline">\(L\)</span>. A continuum limit sends <span
+class="math inline">\(a/\xi\to0\)</span> at fixed <span
+class="math inline">\(\xi/L\)</span> (or with <span
+class="math inline">\(\xi/L\to0\)</span> afterwards). In <span
+class="math inline">\(1+3\)</span>, one-loop running ties the bare
+coupling to the spacing through <span
+class="math inline">\(a\Lambda=e^{-1/(2b_0t)}\)</span>, <span
+class="math inline">\(t=\hbar g^2(a)\)</span>, <span
+class="math inline">\(b_0=11N/(48\pi^2)\)</span>, so that <span
+class="math inline">\(\Lambda\)</span> does not move while <span
+class="math inline">\(a\)</span> does. The infrared quantities are
+ratios to <span class="math inline">\(\Lambda\)</span>: <span
+class="math inline">\(m/\Lambda\)</span>, <span
+class="math inline">\(\sigma/\Lambda^2\)</span>. A halving never
+computes them; it tests whether they remain what they were. This is the
+precise sense in which the programme’s gap statement (AGENTS.md: which
+operator, which limits in which order, what the gap is measured in) is a
+statement about all halvings at once.</p>
+<p>In <span class="math inline">\(1+2\)</span> the relation is simpler:
+the heat time <span class="math inline">\(t=\lambda_3a\)</span> itself
+halves at every step, the ultraviolet steps are close to Gaussian, and
+the infrared scale is <span class="math inline">\(\hbar
+c\lambda_3\)</span> (the cell-7 target <span
+class="math inline">\(E=C_3\hbar c\lambda_3\)</span> of the atlas),
+fixed by the dimensionful coupling.</p>
+<h2 id="the-exponential-ladder">3. The exponential ladder</h2>
+<p>At one loop, <span
+class="math inline">\(e^{-c/t}=(a\Lambda)^{2b_0c}\)</span>, and <span
+class="math inline">\(2b_0c\)</span> is the scaling dimension of the
+term (atlas §4, “The exponential ladder”). A mass has dimension one, so
+a physical gap is the term that halves with the lattice: <span
+class="math inline">\(am\propto(a\Lambda)^1\)</span>, the member of the
+ladder with <span class="math inline">\(2b_0c=1\)</span>. The
+corrections a single step leaves sit far higher: the bridge image terms
+at <span class="math inline">\(2b_0c=11N/3\)</span> (roots) and <span
+class="math inline">\(11N\)</span> (the <span
+class="math inline">\(SU(3)\)</span> centre images of a trisection, <a
+href="sun-midpoint-centre.html">centre note</a>), beyond the per-volume
+threshold <span class="math inline">\(2b_0c=4\)</span> of the <a
+href="zero-spacing-any-action.html">zero-spacing note</a>. So every
+ultraviolet step contains the infrared scale as a tiny non-perturbative
+term of exactly the size that survives, and nothing else of its kind
+survives with it. This is dimensional transmutation read step by step.
+The term is invisible to perturbation theory, since <span
+class="math inline">\(e^{-1/(2b_0\hbar g^2)}\)</span> has a vanishing
+Taylor series in <span class="math inline">\(g^2\)</span>; it is visible
+to the exact step, which is why the atlas insists on exact halvings.</p>
+<h2 id="a-growing-ultraviolet-end-and-a-fixed-infrared-end">4. A growing
+ultraviolet end and a fixed infrared end</h2>
+<p>The trajectory from spacing <span class="math inline">\(a\)</span> to
+the scale <span class="math inline">\(\xi\)</span> has <span
+class="math inline">\(\log_2(\xi/a)\)</span> halvings. As <span
+class="math inline">\(a\to0\)</span>, every new halving is added at the
+ultraviolet end, where <span class="math inline">\(t=\hbar
+g^2(a)\to0\)</span> and the atlas cells 1–6 give one-step control. The
+infrared end is the handful of order-one steps where <span
+class="math inline">\(t\)</span> is of order one; for <span
+class="math inline">\(SU(3)\)</span> with the Wilson action these sit
+around <span class="math inline">\(\beta_W\simeq6\)</span>, a few steps
+above the correlation length (the <a
+href="confinement-scale-bands.html">confinement-scale bands note</a>,
+with published numbers). That end is the same finite set for every <span
+class="math inline">\(a\)</span>. Its analysis is the <a
+href="intermediate-region-finite-verification.html">finite
+verification</a> of the intermediate region; the uniform control of an
+unbounded number of ultraviolet steps feeding it is what Jaffe and
+Witten name as the missing idea. The division of labour in the atlas
+follows: cells 1–6 are the ultraviolet steps, cell 7 is the infrared
+end.</p>
+<h2 id="where-confinement-can-be-lost">5. Where confinement can be
+lost</h2>
+<p>The compact <span class="math inline">\(U(1)\)</span> theory in <span
+class="math inline">\(1+2\)</span> is the proved example. Its lattice
+gap comes from monopoles; at fixed coupling the refinement removes it
+and the continuum limit is the free photon (Gross), while along the
+Göpfert–Mack trajectory the gap survives only with a diverging monopole
+density per physical volume (atlas §4; the <a
+href="villain-monopole-refinement.html">monopole note</a>). The
+ultraviolet step is where a lattice gap is exposed as a lattice
+artifact. In <span class="math inline">\(SU(3)\)</span> the coupling
+must run to zero logarithmically (cell 4), and the gap is expected to
+survive because it is tied to <span
+class="math inline">\(\Lambda\)</span>, which the running holds
+fixed.</p>
+<h2 id="newtons-parallel">6. Newton’s parallel</h2>
+<p>In Newton’s cell the sagitta and the Galileo action vanish under
+refinement, <span class="math inline">\(K_\tau\propto\tau^3\)</span> (<a
+href="cut-measure-newton.html">cut-measure note</a>), while the force
+survives as the ratio those vanishing quantities define. On the lattice
+<span class="math inline">\(am\to0\)</span> while <span
+class="math inline">\(m/\Lambda\)</span> survives. In both cases
+refinement never computes the surviving quantity directly: it certifies
+that a ratio stays fixed while every per-cell quantity goes to zero.
+What refinement cannot remove in either case is the supplied action
+floor <span class="math inline">\(\hbar\)</span> (atlas §4, “The action
+floor survives what removes the mass gap”).</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>None; this note explains the programme’s logic for the joint paper
+and for readers of the atlas.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

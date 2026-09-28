@@ -41,6 +41,8 @@ construction is in the queue. The mid-term goal (user, 2026-09-27) is a
 collective **atlas of halving**: what one lattice halving does, what it
 leaves, and what survives, for each dimension and group
 ([halving-atlas](notes/halving-atlas.md); its §5 lists the open cells).
+Why ultraviolet halvings can decide an infrared gap is explained in
+[uv-halving-ir-confinement](notes/uv-halving-ir-confinement.md).
 The user's thesis, first stated in Rivero 1998
 ([arXiv:quant-ph/9803035](https://arxiv.org/abs/quant-ph/9803035), the
 Feynman formula "as a consistency condition for the existence of certain
