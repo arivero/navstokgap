@@ -719,6 +719,83 @@ denominators remove the cut-face response; the old-face normalization
 adds only the diagonal term in (29). This calculation uses the full
 Gaussian domain; a barrier requires its own correction.
 
+### 8.2 Formal non-abelian response: a surviving soft transport term
+
+Specify a chart before testing (27). Use face logarithms in fixed site
+frames, with the formal Coulomb lift $a=\mathcal R X+H+O(X^2)$,
+$\mathcal R=C^*L^{-1}$ on zero-mean modes; retain $H$ and all nonlinear
+compatibility relations. This is a finite-volume formal chart about zero.
+Its cubic response already contains an inverse-curl pole. The following
+test concerns equal adjacent layers, zero cut flux, and $H=0$.
+
+Here is the perturbation prescription, including the terms needed to
+avoid a spurious cancellation. Write the normalized action as
+$S_0+V_3+V_4+J+\cdots$, with $V_j=\mathcal S_j/t$, and expand the BCH
+logarithm as $Z_1+Z_2+Z_3+\cdots$. Each squared mid-face contributes
+$\langle Z_1,Z_2\rangle/(2t)$ and
+$(|Z_2|^2+2\langle Z_1,Z_3\rangle)/(4t)$ to $V_3,V_4$ respectively.
+The bridge curvature contributes
+$-\sum_e|[X_e,\xi_e]|^2/(24t)$ to $V_4$; $J$ includes the normalized
+Haar and heat-kernel amplitudes. With $E_0$ at the shifted Gaussian saddle,
+the first insertions and the required connected cubic pair are
+
+$$\Delta\mathcal D=E_0V_3+E_0V_4
+-\tfrac12\operatorname{Cov}_0(V_3,V_3)+E_0J+\cdots.\tag{31}$$
+
+One vertex is first order in an insertion parameter; under
+$[\ ,\ ]\mapsto g[\ ,\ ]$, the cubic is order $g$, while quartic and
+the connected pair are both order $g^2$. Gaussian Wick contraction gives
+the classical terms $F_3/t,F_4/t$ in (15) of the
+[order-$t$ note](su2-midplane-order-t.md) (passage), including
+$-\langle\partial_\xi\mathcal S_3,G\partial_\xi\mathcal S_3\rangle/(2t)$.
+Thus a one-vertex quartic truncation alone would miss a necessary term.
+
+The complete classical cubic can be tested without listing its vertices.
+For equal layers, (29) has flux Hessian $M(p)/t$, where
+$M(p)=-\lambda(p)/(2(8+\lambda(p)))$ and
+$\lambda(p)=4-2\cos p_2-2\cos p_3$.
+At a constant flat neutral connection $a_j=H_jT_3$, the charged
+components have the exact classical quadratic symbol $M(p+H)/t$.
+Indeed replace $C$ by the flat covariant curl in (28); its face
+Laplacian has symbol $\lambda(p+H)$. This also fixes the sum of **all**
+cubic transport vertices at zero incoming connection momentum.
+
+Massive Gaussian elimination makes these link vertices analytic near
+that momentum. For a neutral soft flux at $k=(\kappa,0)$, the Coulomb
+lift has $a_3^3(k)=X^3(k)/(e^{i\kappa}-1)$ and $a_2^3(k)=0$;
+here $X(z)=\sum_k X(k)e^{ikz}$ defines the Fourier amplitudes.
+The resulting first-order charged flux Hessian of $h$, with outgoing
+momenta $p+k,p$, consequently contains
+
+$$\begin{aligned}
+K^{(1)}_{+}(p+k,p)
+&=\frac{X^3(k)}t
+ \left[\frac{\partial_{p_3}M(p)}{e^{i\kappa}-1}+O(1)\right],\\
+\partial_{p_3}M(p)&=-\frac{8\sin p_3}{(8+\lambda(p))^2}.
+\end{aligned}\tag{32}$$
+
+Choose $p_3\notin\{0,\pi\}$ and fixed nonzero $p$. The bounded term
+includes the other placements of the neutral leg; their inverse curls
+have momenta near $p$, and remain bounded. Reality pairs $k$ with $-k$.
+Equation (32) has size $|X^3(k)|/(t|\kappa|)$ with a nonzero residue.
+A plane-uniform row-sum bound $C\sup|X|/t$ would bound every such Fourier
+matrix element and is incompatible with this coefficient as
+$\kappa\to0$. This is a formal failure of (27) in this fixed-frame chart.
+It occurs in the classical cubic, before quartic terms: the latter and
+the cubic pair have classical boundary degree four, and bridge curvature
+vanishes on this equal-layer test. Loop contractions have higher powers
+of $t$ than the displayed $1/t$ residue. Winding subtraction removes
+wrapping paths; the nonwrapping massive resolvent has the same bulk
+momentum shift and residue. A flat-holonomy subtraction cannot remove it.
+
+The mechanism is parallel transport of charged curvature between distinct
+faces. The Gaussian Schur complement cancels the inverse curls on its two
+external legs; differentiating its transport introduces a third leg
+$\mathcal R X$, retained by (32). Covariantly transported derivatives or
+another specified flux chart could change this conclusion. Such a
+replacement needs its own definition and bound; (32) identifies the
+term that prevents promoting the Gaussian proof in fixed site frames.
+
 ## 9. Consequence for STATE
 
 Atlas cell 2 keeps its formal order-$t$ calculation. Round 8 Part A
@@ -730,5 +807,7 @@ winding control. Part B proves locality for local-potential increments
 under Theorem 5's analytic hypotheses and isolates (27), including its
 admissible-coordinate and cancellation requirements, as the unresolved
 step toward replacing Hypothesis I. Round 9 §8.1 establishes the exact
-Gaussian cancellation and its plane-uniform flux-kernel bound. The large-field and iteration
+Gaussian cancellation and its plane-uniform flux-kernel bound; §8.2
+finds a formal cubic transport obstruction in the fixed-frame Coulomb
+chart. A covariant replacement for (27) is the next response task. The large-field and iteration
 obligations remain.
