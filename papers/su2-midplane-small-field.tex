@@ -703,8 +703,83 @@ bound, and Part A's barrier and large-field issues remain. This is the
 precise obstruction reached in Part B. All claims of P(\(\alpha\)) and
 the normalized expansion (18) of the mid-plane note remain conditional.
 
+\hypertarget{round-9-cancellation-in-flux-response}{%
+\subsection{8. Round 9: cancellation in flux
+response}\label{round-9-cancellation-in-flux-response}}
+
+\hypertarget{exact-gaussian-reference-gpt-6-astra-2026-09-28}{%
+\subsubsection{8.1 Exact Gaussian reference (GPT-6 Astra,
+2026-09-28)}\label{exact-gaussian-reference-gpt-6-astra-2026-09-28}}
+
+Work first with the unrestricted abelian Gaussian, in one slab with
+boundary transverse links \(a_0,a_1\). Retain their harmonic components
+\(h_0,h_1\) and impose the linear compatibility relations on all cut and
+transverse fluxes. Put \(x=Ca_0\), \(y=Ca_1\), so \(\sum x=\sum y=0\).
+Independent zero-mean Fourier components and harmonic data give actual
+coordinates. The spatial kernels below represent bilinear forms on this
+constrained space, by restriction of an ambient kernel; eliminating one
+face or inserting a nonlocal orthogonal projector would change its row
+sums. The three colour copies in the linearization are identical.
+
+Set \(L=CC^*\), \(P=(8I+L)^{-1}\) and \(G=H_0^{-1}\). The mean bridge
+link is \(b=(a_0+a_1)/2\) up to a gradient from direction-1 links. In
+uncentred mid-links \(m\) the normalized exponent and external old-face
+term are
+
+\[S_0=\frac{2}{t}\|m-b\|^2+\frac1{4t}\|Cm\|^2,
+\qquad B_0=-\frac{\|x\|^2+\|y\|^2}{8t}.\]
+
+Here \(B_0\) assigns half of each old-face ratio to each neighbouring
+slab. Since \(\operatorname{Cov}_0(m)=tG\), differentiation in \(b\)
+gives
+
+\[E_0[S_{0,bb}]-\operatorname{Cov}_0(S_{0,b},S_{0,b})
+=\frac1t(4I-16G)=\frac4t C^*PC,
+\qquad G=\frac14(I-C^*PC).\tag{28}\]
+
+For any lift \(\mathcal R\) with \(C\mathcal R=I\) on admissible fluxes,
+\((C\mathcal R)^*P(C\mathcal R)=P\) as a restricted bilinear form. The
+large factors in (26) disappear. Gaussian integration consequently gives
+
+\[\begin{aligned}
+\mathcal D_{0,\mathrm{slab}}
+&=\frac1{2t}\langle x+y,P(x+y)\rangle
+ -\frac{\|x\|^2+\|y\|^2}{8t}+\mathrm{const},\\
+K^0_{\sigma p,\tau q}
+&=\frac1t\left(P_{pq}-\frac14\delta_{\sigma\tau}\delta_{pq}\right)I_3,
+\qquad \sigma,\tau\in\{0,1\}.
+\end{aligned}\tag{29}\]
+
+Cut-flux directions at fixed \(x,y\) and all harmonic directions have
+zero response. Summing slabs reproduces Proposition 2 of the
+\href{series-parallel-gauge-refinement.md}{series/parallel note}
+(passage). On the square torus \(8I+L=12I-\mathsf A\), where
+\(\mathsf A\) is nearest-neighbour adjacency. Its positive walk series
+yields \(\sup_p\sum_q e^{\gamma d(p,q)}P_{pq}\le(12-4e^\gamma)^{-1}\).
+For \(\gamma=\log(3/2)\) and the pair distance
+\(d((\sigma,p),(\tau,q))=d(p,q)+|\sigma-\tau|\), (29) therefore gives
+
+\[\sup_{\sigma,p}\sum_{\tau,q}e^{\gamma d}
+ \|K^0_{\sigma p,\tau q}\|
+\le\frac1t\left(\frac{1+e^\gamma}{12-4e^\gamma}+\frac14\right)
+=\frac{2}{3t}.\tag{30}\]
+
+Assembly over slabs gives \(4/(3t)\). All constants are independent of
+the periods. The Gaussian remainder \(h\) has zero kernel, hence
+satisfies (27) with \(C=0\); (30) bounds the reference response itself.
+
+\textbf{Mechanism.} The Gaussian score identity produces the Schur
+complement (28), equivalently the Woodbury identity for \(4I+C^*C/2\).
+Its two exterior curls annihilate gradients and harmonic shifts and turn
+every flux lift into the identity. Combining the direct Hessian and
+covariance before taking absolute values leaves a massive face
+resolvent. Normalized bridge denominators remove the cut-face response;
+the old-face normalization adds only the diagonal term in (29). This
+calculation uses the full Gaussian domain; a barrier requires its own
+correction.
+
 \hypertarget{consequence-for-state}{%
-\subsection{8. Consequence for STATE}\label{consequence-for-state}}
+\subsection{9. Consequence for STATE}\label{consequence-for-state}}
 
 Atlas cell 2 keeps its formal order-\(t\) calculation. Round 8 Part A
 accepts the covariant decay and corrected bridge/convexity bounds,
@@ -714,6 +789,7 @@ is the normalized, gauge-covariant response estimate with barrier and
 winding control. Part B proves locality for local-potential increments
 under Theorem 5's analytic hypotheses and isolates (27), including its
 admissible-coordinate and cancellation requirements, as the unresolved
-step toward replacing Hypothesis I. The large-field and iteration
-obligations remain.
+step toward replacing Hypothesis I. Round 9 §8.1 establishes the exact
+Gaussian cancellation and its plane-uniform flux-kernel bound. The
+large-field and iteration obligations remain.
 \end{document}
