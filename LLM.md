@@ -1,10 +1,13 @@
 # LLM.md: what this repository knows
 
-> navstokgap asks what survives refinement in Newton's action problem and
-> in pure SU(3) Yang--Mills: a positive action floor on recorded
-> comparisons (Newton), and a continuum mass gap (gauge theory). This file
-> maps what is proved, at what level, what is open, which errors were
-> caught, and where the evidence is. Human-facing site:
+> navstokgap asks what survives refinement in a quantum-foundations model
+> rooted in Newton's action problem and in pure SU(3) Yang--Mills: a
+> positive action floor together with explicit quantum kinematic and
+> record premises (Newton/foundations), and a continuum mass gap (gauge
+> theory). The two programmes share a possible calibration of $\hbar$ but
+> do not prove one another. This file maps what is proved, at what level,
+> what is open, which errors were caught, and where the evidence is.
+> Human-facing site:
 > https://arivero.github.io/navstokgap/ ; repository:
 > https://github.com/arivero/navstokgap ; working rules: AGENTS.md.
 
@@ -19,7 +22,7 @@ unrefereed**; **conditional** (a theorem whose hypothesis is itself open);
 **formal** (a derivation that assumes an unproved uniform estimate);
 **exact** (closed-form identity); **known** (literature, cited with DOI);
 **reading** (an identification or interpretation, labelled as such);
-**open**. Dates are 2026; the state described is that of 2026-09-27.
+**open**. Dates are 2026; the state described is that of 2026-09-28.
 
 ## 1. Orientation
 
@@ -29,13 +32,17 @@ variable at a time (a Newtonian instant, a lattice edge or cell) and
 asking what the old observations and dynamics recover
 ([three-continuum-limits](notes/three-continuum-limits.md),
 [refinement-composition-and-limit](notes/refinement-composition-and-limit.md)).
-Goal one is **Newton action necessity**: a logical argument, from
-independently justified physical premises, that the comparison Newton
-takes to zero in *Principia* Book I (inertial line against constant-force
-parabola, Lemmas X--XI, Proposition I) carries a positive action floor once
-it must be recorded. Goal two is the **continuum existence and mass gap of
-pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten sense
-([digest](notes/millennium-problem-definitions.md)). QCD pions are a
+Goal one, now the first priority, is a **classical-to-quantum foundations
+programme**: begin with C0 classical mechanics, derive one action constant
+from an independently justified nondegenerate free-motion/composition law,
+then state rather than hide the additional Weyl kinematics, positive-state,
+dynamical, record-closure and composition premises that reconstruct finite
+nonrelativistic quantum mechanics.  The Newton comparison is the test case:
+the inertial line against the constant-force parabola in *Principia* Book I
+(Lemmas X--XI, Proposition I).  The model is independent of, and does not
+solve, the Clay problem.  Goal two is the **continuum existence and mass
+gap of pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten
+sense ([digest](notes/millennium-problem-definitions.md)). QCD pions are a
 benchmark for which symmetries a mechanism preserves, and no fermionic
 construction is in the queue. The mid-term goal (user, 2026-09-27) is a
 collective **atlas of halving**: what one lattice halving does, what it
@@ -82,10 +89,12 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | Thm A (independence) | Moyal product $*_\hbar$ satisfies Newton's second law for every real $\hbar$; quadratic cases evolve classically | proved, refereed (Fable) | [principia-fifth-postulate §3](notes/principia-fifth-postulate.md) |
 | Thm B (one constant) | Under (H1) associativity, (H2) affine-symplectic covariance, (H3) conjugation: $*=*_\hbar$, unique real $\hbar$ (Gutt 1983) | proved, refereed; (H2) is a premise outside the *Principia* | [fifth-postulate §4](notes/principia-fifth-postulate.md) |
 | Thm B$'$ (state route) | Covariant, noise-closed Gaussian state restriction is $\sqrt{\det\Sigma}\ge\zeta$; $\zeta=\hbar/2$ in QM | proved, refereed | [fifth-postulate §4](notes/principia-fifth-postulate.md) |
+| Conditional finite QM model | F0--F5 (calibrated action, regular Weyl kinematics, normal positive states/effects, self-adjoint dynamics, CP instruments, interacting composition) yield the finite Schrödinger representation, Born rule, unitary dynamics, tensor composition and a Gaussian quantum-limit record; F0, F1 and physical F4 remain premises | conditional assembly, proved from the premises | [foundations model](notes/foundations-model-nonrelativistic-quantum-mechanics.md) |
 | Thm C (floor) | $\hbar\ne0$: $\Delta q\Delta p\ge|\hbar|/2$ and Thm 6 with $|\hbar|$; $\hbar=0$ with state completeness: no floor | proved, refereed (C(c) rewritten) | [fifth-postulate §5](notes/principia-fifth-postulate.md) |
 | Thm D (similarity) | $D_\lambda$ is an automorphism of $*_\hbar$ iff $\hbar=0$; two products up to isomorphism | proved, refereed | [fifth-postulate §6](notes/principia-fifth-postulate.md) |
 | Thm E (complementarity) | $\arccos\alpha+\arccos\beta\ge\arccos\sqrt{\lambda_0(ab/|\hbar|)}$ (Slepian--Pollak); windows need $ab\ge|\hbar|c_*(\epsilon)$ | proved, refereed (reviewer supplied the proof) | [fifth-postulate §6b](notes/principia-fifth-postulate.md) |
 | Thm U (unit) | Kirchhoff, Wien scaling, finite spectrum, Rayleigh--Jeans limit give $h_{\rm rad}=(8\pi k_B^4/c^3\sigma')^{1/3}$, enclosure-independent; $h_P=(\pi^4/15)^{1/3}h_{\rm rad}$ | proved, refereed (Astra) | [necessity-unit-and-indeterminacy §2](notes/necessity-unit-and-indeterminacy.md) |
+| Classical-to-$h$ ladder | Bare C0 classical mechanics cannot select a universal positive floor; C1--C4 nondegenerate continuous stationary free increments plus mass-only centre-of-mass composition yield $\kappa=mD>0$. C5 gives the Galileo Brownian-bridge record scale; N1--N3 and calibration are further stated bridges to $\hbar=h_P/(2\pi)$ | conditional assembly; each displayed implication proved from its premises | [classical-to-$h$ ladder](notes/classical-mechanics-to-h-ladder.md) |
 | Thm I (two pointers) | Liouville dynamics + product preparations with density ceiling + Bayesian readouts + two pulses with stored first reading give posteriors of arbitrarily small $\Delta q\Delta p$ | proved, refereed (four-part premise) | [necessity-unit §3](notes/necessity-unit-and-indeterminacy.md) |
 | Thm F (classical Thm 6) | Uniform statistical-speed bound with constant $h_*$ gives (Thm 6) classically; Gaussian covariance floor $\zeta$ gives $h_*=2\zeta$ | conditional, proved (Astra) | [newton-indeterminacy-routes](notes/newton-indeterminacy-routes.md) |
 | Thermodynamic no-floor | Records at temperature $T$: $\eta\ge A_0e^{-W/k_BT}$, a trade-off with no action floor | proved, unrefereed | [thermodynamic-records-no-floor](notes/thermodynamic-records-no-floor.md) |
@@ -127,10 +136,13 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | T1 | Finite lattice: unique ground state, $\delta>0$, every $a,N_s,g$, compact $G$ | proved | [mass-gap-obligations-lattice](notes/mass-gap-obligations-lattice.md) |
 | T2 | Volume-uniform strong-coupling gap: Wilson transfer matrix $\Delta_W\ge\frac{\hbar c}a4\log(g^2/176)$ for $g^2\ge176$ (rigorous 1056); Kogut--Susskind $\Delta_{\rm KS}\ge\frac43g^2\hbar c/a$ for $g^2\ge388$ | proved (from Kotecký--Preiss, Yarotsky) | [wilson-strong-coupling-explicit](notes/wilson-strong-coupling-explicit.md), [kogut-susskind-strong-coupling-explicit](notes/kogut-susskind-strong-coupling-explicit.md) |
 | T2$'$, T3, T4 | Gap at every coupling; scaling limit $\delta_\infty/(a\Lambda_{\rm lat})\to m/\hbar c\Lambda$; continuum theory with the axioms | open (T2$'$ false for $U(1)$ and for $SU(N\ge5)$ Wilson action) | [mass-gap-position](notes/mass-gap-position.md), [mass-gap-openings](notes/mass-gap-openings.md) |
-| Conditional theorem | H1 (blocking clusters to $\xi\simeq a$) + H2 (certified mixing on one box) $\Rightarrow m\ge\hbar c\gamma'/a_*$ | conditional | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
-| Small volume (S) | Gap-transfer lemma proved; H1--H3 inequalities open; $\Delta=\delta_1g^{2/3}\hbar c/L[1+O(g^{2/3})]$ upper side proved | conditional | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md) |
+| Conditional assembly theorem | Local H1$_{\rm gap}$ blocking transport + H2 one-box mixing give a cutoff spectral threshold; uniform H1$_{\rm OS}$ observable normalization and H3 OS convergence/nontriviality carry it to $m\ge\hbar c\min(\gamma_*,\gamma')/a_*$; persistent soft local spectral weight instead gives zero threshold | conditional implication proved; all $SU(3)$ hypotheses open | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
+| $3+1$ Gaussian B/D benchmark | Massive global-$U(1)$ scalar: positive finite-range covariance components give exact kernel H1$_{\rm gap}$; Weyl fluctuation seminorms give H1$_{\rm OS}$; the massive Gaussian continuum is OS-positive with gap $\hbar cm$ | proved from the finite-range covariance input; scalar mass supplied, not a gauge-theory result | [$U(1)$ Gaussian benchmark](notes/u1-gaussian-blocking-os-benchmark.md) |
+| $SU(3)$ C/H2 strong-coupling ball | Gauge-invariant Wilson-loop algebra obeys volume-uniform Dobrushin mixing, stable under an explicit plaquette-interaction mixed-oscillation ball | proved for $g^2>24/\log(19/18)$; no identification with the scaling crossover | [Dobrushin certificate](notes/gauge-invariant-dobrushin-certificate.md) |
+| $U(1)$ A1/A2 Maxwell fibre benchmark | Gauge-quotient Hodge split gives an exact nonconstant transverse-mode separation and zero Feshbach off-diagonal | proved for periodic Gaussian Maxwell regulator; an abelian interface benchmark, not non-abelian Yang--Mills | [$U(1)$ Maxwell fibre benchmark](notes/u1-maxwell-fibre-feshbach-benchmark.md) |
+| Small volume (S) | Gap-transfer lemma proved; fibre H1--H3 inequalities open.  The $SU(3)$ Cartan root sum fixes the local $O(g^{4/3}\hbar c/L)$ potential correction; the fixed-frame fibre-vacuum metric has $S_\Lambda\asymp L^3\Lambda$, requiring an explicit Gauss/frame/renormalization treatment before a uniform Schur/form estimate | conditional audit | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md), [torus valley](notes/torus-valley-potential.md) |
 | Seven closed routes | Variational, free expansion, projection blocking, flow conjugation, flow before decimation, Agmon, Gibbs domination: each fails for a stated reason with constants | recorded failures | [mass-gap-position §3](notes/mass-gap-position.md) |
-| G07, G08 | Supplied vs generated gaps; YM quantum mechanics gap $\delta_1\hbar^{4/3}g^{2/3}m^{-2/3}$ from an action floor on transverse area (C133) | exploratory, ledgered | [low-dimensional-mass-gap](notes/low-dimensional-mass-gap.md), [action-floor-yang-mills-gap](notes/action-floor-yang-mills-gap.md) |
+| G07, G08 | $0+1$ compact-semisimple YM matrix mechanics, including $SU(3)$, has a discrete $\delta_{\mathfrak g,D}\hbar^{4/3}g_B^{2/3}m^{-2/3}$ gap; its $3+1$ $SU(3)$ constant-mode sector has gap $\delta^{\rm inv}_{\mathfrak{su}(3),3}g^{2/3}\hbar c/L$. Both are finite-dimensional statements; the latter vanishes with $L^{-1}$. The transverse action-floor reading is G08 (C133) | proved, unrefereed extension; established source theorem, ledgered | [low-dimensional-mass-gap](notes/low-dimensional-mass-gap.md), [action-floor-yang-mills-gap](notes/action-floor-yang-mills-gap.md) |
 
 ## 3. Conventions a model must respect
 
@@ -327,10 +339,12 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
 6. **Time-only halving rate.** An operator-norm Trotter rate for
    $e^{-a_0(T+V)}$ versus $e^{-a_0T}e^{-a_0V}$ on $G^E$, which needs domain
    estimates for $[\Delta_G,V]$ ([halving-atlas §5.5](notes/halving-atlas.md)).
-7. **H1 and H2 of the conditional theorem** ([mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md)):
-   exponential clustering of integrated-out fluctuations per blocking step
-   down to $\xi\simeq a$, and certified mixing at one coupling on one box.
-   The Feshbach H3 small-volume estimate is the valley-lifting task
+7. **Conditional continuum assembly** ([mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md)):
+   prove local H1$_{\rm gap}$ transport of integrated-out fluctuations down
+   to $\xi\simeq a$, certified H2 mixing at one coupling, then uniform
+   H1$_{\rm OS}$ normalization and H3 OS convergence/nontriviality.  The
+   fibrewise relative-Schur and constant-mode-gap estimates are the
+   small-volume valley-lifting task
    ([weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md)).
 8. **Newton necessity: the readout law.** Every premise so far is either
    supplied (quantum kinematics, Thm C), circular ($\zeta$ from SED at

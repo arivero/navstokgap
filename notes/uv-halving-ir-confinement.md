@@ -145,6 +145,84 @@ answers (Claude, GPT-6 Astra and Claude Fable, 2026-09-28).
    massive: "transmutation supplies the scale and confinement supplies
    the gap" (G07, Proposition 12 and §6).
 
+## 3c. The positive-action/Planck bridge is a calibration condition, not a gap proof
+
+Three action constants must not be silently identified:
+
+- $h_*$ is the conditional record-cost constant.  The Gaussian route in
+  [the Newton note](newton-indeterminacy-routes.md) gives $h_*=2\zeta$
+  only if its all-record statistical-speed premise is imposed.
+- $h_P$ is Planck's experimentally normalized action constant; canonical
+  quantum notation sets $\hbar_{\rm can}=h_P/(2\pi)$.
+- $\hbar_{\rm YM}$ is the action constant in the gauge weight
+  $\exp(-S/\hbar_{\rm YM})$ and in the transfer matrix.
+
+The precise additional **calibration condition** which connects the two
+programmes is
+\[
+ \boxed{\qquad h_*=\hbar_{\rm YM}=\frac{h_P}{2\pi}.\qquad}  \tag{P}
+\]
+Within the SED discussion, the last equality would follow only
+conditionally from the disputed radiation/oscillator normalization together
+with $\zeta=h_P/(4\pi)$; the record-closure premise is still separate.
+Outside that model, (P) is simply the supplied empirical identification of
+the canonical quantum of action.  Neither the record theorem nor a positive
+radiation action scale derives (P) from pure Yang--Mills dynamics.
+
+What (P) does give is an exact accounting of the action dependence of the
+mechanisms already isolated.  With the classical four-dimensional
+coupling $g_{\rm cl}$ and
+\[
+ t(\mu)=\hbar_{\rm YM}g_{\rm cl}^{\,2}(\mu),
+\]
+(the dimensionless coupling $g$ of C133 has $g^2=t$), the one-loop RG
+relation and the completed $SU(3)$ constant-mode scale become
+\[
+ \Lambda=\mu\exp\!\left[-\frac{1}{2b_0t(\mu)}+\cdots\right]
+ =\mu\exp\!\left[-\frac{\pi}{b_0h_Pg_{\rm cl}^{\,2}(\mu)}+\cdots\right], \tag{P1}
+\]
+\[
+ \varepsilon_0(L)=\frac{\hbar_{\rm YM}c}{L}\,t(L)^{1/3}
+ =\frac{h_Pc}{2\pi L}
+   \left(\frac{h_Pg_{\rm cl}^{\,2}(L)}{2\pi}\right)^{1/3}. \tag{P2}
+\]
+Here (P2) is only the $0+1$ constant-mode/weak-small-box scale of
+[C133](low-dimensional-mass-gap.md), not a four-dimensional particle mass.
+The $SU(3)$ Cartan computation makes the same dependence visible directly:
+its zero-point valley term is
+\[
+ 2\hbar_{\rm YM}c\sum_{p<q}|\alpha_{pq}(a)|
+ =\frac{h_Pc}{\pi}\sum_{p<q}|\alpha_{pq}(a)|,               \tag{P3}
+\]
+under (P); see [the torus-valley note](torus-valley-potential.md) §3c.
+
+If, in addition, the uniform hypotheses of
+[the conditional assembly theorem](mass-gap-conditional-theorem.md) are
+proved and a nonzero continuum ratio exists, then one may write
+\[
+ E_{\rm gap}=C\,\hbar_{\rm YM}c\Lambda
+ =C\,\frac{h_Pc}{2\pi}\,\mu
+   \exp\!\left[-\frac{\pi}{b_0h_Pg_{\rm cl}^{\,2}(\mu)}+\cdots\right],
+ \qquad C>0.                                                 \tag{P4}
+\]
+The positive constant $C$ is precisely what nonconstant-mode control,
+volume-uniform mixing, and OS reconstruction must establish.  Formula
+(P4) is therefore a conditional dimensional/RG consequence, **not** a
+calculation of $C$ or a continuum mass-gap proof.
+
+A positive action scale alone cannot replace those hypotheses.  Compact
+$U(1)$ has the same canonical $\hbar$ but no charged-root valley potential
+and a weak-coupling Coulomb phase; a chirally broken theory can retain the
+same $\hbar$ and $\Lambda$ while a symmetry forces massless pions.  Thus
+the defensible chain is
+\[
+ \text{record/radiation premise}\ \Longrightarrow\ h_*>0,
+ \quad (P)\ \Longrightarrow\ \hbar_{\rm YM}>0,
+ \quad \text{non-abelian uniform spectral mechanism}
+ \ \Longrightarrow\ C>0,
+\]
+not ``$h>0$ implies a Yang--Mills mass gap.''
+
 ## 4. A growing ultraviolet end and a fixed infrared end
 
 The trajectory from spacing $a$ to the scale $\xi$ has $\log_2(\xi/a)$ halvings.

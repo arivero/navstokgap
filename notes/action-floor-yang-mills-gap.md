@@ -120,7 +120,7 @@ $y$ bound is symmetric. $\square$
 for $D=1$, the potential vanishes identically: there is no transverse
 oscillation, $\mathsf F(h)$ imposes no condition, the classical energy
 shells stay unbounded and the quantum spectrum is $[0,\infty)$ (G07,
-Theorem 6(5)). An action floor produces a gap only in the presence of the
+Theorem 6(6)). An action floor produces a gap only in the presence of the
 commutator potential, which is what supplies the transverse ellipses whose
 area the floor bounds.
 

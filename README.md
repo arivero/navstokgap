@@ -9,15 +9,18 @@ track, with the Markdown source and the typeset PDF for each. Rebuild it with
 status and proof, the caught errors, the open problems and the verified
 references.
 
-**Goal (2026-09-26).** One paper comparing what survives refinement in
-Newton's action problem, in pure $SU(3)$ Yang--Mills theory, and in QCD
-with zero and nonzero quark masses. The two proof goals are **the
-necessity of a positive action scale in Newton's Galileo comparison**,
-from independently justified premises, and **the continuum existence and
-mass gap of pure $SU(3)$ Yang--Mills** in four dimensions. The pion is a
-benchmark for which symmetries a mechanism preserves. The
-[working note](notes/three-continuum-limits.md) sets out the comparison;
-[STATE](research/STATE.md) is the live queue.
+**Goal (updated 2026-09-28).** One paper comparing what survives
+refinement in a quantum-foundations model rooted in Newton's action
+problem, in pure $SU(3)$ Yang--Mills theory, and in QCD with zero and
+nonzero quark masses. The two proof goals are **a conditional operational
+model of quantum mechanics with a positive action scale in Newton's
+Galileo comparison**, from independently justified premises, and **the
+continuum existence and mass gap of pure $SU(3)$ Yang--Mills** in four
+dimensions. The foundations model has current priority and is independent
+of the Clay problem; a calibrated $\hbar$ may be shared, but neither
+programme proves the other. The pion is a benchmark for which symmetries a
+mechanism preserves. The [working note](notes/three-continuum-limits.md)
+sets out the comparison; [STATE](research/STATE.md) is the live queue.
 
 ## The organizing idea: local insertion laws
 
@@ -84,6 +87,26 @@ differs from the parabola by the pure phase $F^2\sum_j\tau_j^3/(24m\hbar)$;
 and the *Opticks* holds a measured least length and a period-times-momentum
 invariant under refraction. The independent necessity of $\hbar>0$ is
 open problem 5.
+
+## The foundations model
+
+[The classical-to-$h$ ladder](notes/classical-mechanics-to-h-ladder.md)
+begins at C0 classical mechanics.  It proves that bare mechanics retains
+the zero branch, while nondegenerate continuous free fluctuations plus
+mass-only centre-of-mass composition derive one positive universal action
+$\kappa=mD$.  Further named stochastic, calibration, and operational
+premises are required to identify $\kappa=\hbar=h_P/(2\pi)$ and to obtain
+quantum mechanics.
+
+[The conditional operational model](notes/foundations-model-nonrelativistic-quantum-mechanics.md)
+is the complete finite nonrelativistic target after that action constant is
+supplied: its explicit F1--F5 premises are regular Weyl kinematics,
+positive normal states and effects, self-adjoint dynamics, CP record
+closure, and interacting composition.  It reconstructs the
+Schrödinger/Weyl representation, Born probabilities, unitary dynamics,
+tensor products and an explicit Gaussian quantum-limit record.  It does
+**not** derive Weyl noncommutativity or physical CP closure; those are now
+the first foundations obligations.
 
 ## The Yang--Mills map
 
