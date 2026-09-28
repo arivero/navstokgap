@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Superdeterminism lives below every resolution; a floor gives it a lifetime</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Superdeterminism lives below every resolution; a floor gives it a
+lifetime</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/superdeterminism-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/superdeterminism-floor.pdf">PDF</a></p><p><strong>Result, 2026-09-29 (Claude; written derivation, not yet
+refereed).</strong> Classical mechanics is deterministic, so the
+settings of a Bell test are functions of the initial data; the
+statistical independence of settings and hidden variables that Bell’s
+theorem needs is an assumption of typicality on those data, taken with
+the Liouville measure. Superdeterminism is the choice of atypical data.
+The proposition below shows where such data must hide when the setting
+device is chaotic: in structure of the initial ensemble finer than any
+fixed phase-space resolution. For a preparation ensemble resolved at
+scale <span class="math inline">\(\delta\)</span>, the covariance
+between a hidden variable and a setting chosen <span
+class="math inline">\(n\)</span> steps later obeys</p>
+<p><span class="math display">\[|{\rm Cov}_\rho(f,g\circ
+T^n)|\le2C_T\,K\,\|f\|_{\rm Lip}\|g\|_{\rm
+Lip}\,\delta^{-(d+1)}\theta^n,\]</span></p>
+<p>so the correlation is below <span class="math inline">\(\eta\)</span>
+after</p>
+<p><span
+class="math display">\[n_*(\delta)=\frac{(d+1)\ln(1/\delta)+\ln\bigl(2C_TK\|f\|_{\rm
+Lip}\|g\|_{\rm Lip}/\eta\bigr)}{\ln(1/\theta)}\]</span></p>
+<p>steps. Classical mechanics puts no lower bound on <span
+class="math inline">\(\delta\)</span>, and <span
+class="math inline">\(n_*\to\infty\)</span>: a conspiracy can be stored
+in ever finer structure for as long as needed. If a floor <span
+class="math inline">\(h\)</span> on phase-space area per canonical pair
+constrains the physical state, then <span
+class="math inline">\(\ln(1/\delta)=\frac12\ln(A_0/h)\)</span> with
+<span class="math inline">\(A_0\)</span> the action scale of the device,
+and the conspiracy has a finite lifetime <span
+class="math inline">\(n_*\approx\frac{d+1}{2\ln(1/\theta)}\ln(A_0/h)\)</span>,
+the logarithmic structure of the Ehrenfest time of quantum chaos (<a
+href="https://doi.org/10.1016/0378-4371(78)90190-5">Berman and Zaslavsky
+1978</a>; metadata). With the floor, measurement independence for
+chaotic setting devices is a theorem after <span
+class="math inline">\(n_*\)</span>; Bell’s inequalities then exclude
+local deterministic models that respect the floor. The limit <span
+class="math inline">\(h\to0\)</span> that Newton takes is exactly what
+reopens the loophole.</p>
+<p>The user’s remark that prompted this (2026-09-28/29): classical
+mechanics is accidentally superdeterministic too, and the programme
+holds that it has a mistake somewhere. The link is that typicality rests
+on the Liouville measure, whose unit is an action per degree of freedom,
+the same object whose unlimited refinement the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a>
+identifies as Newton’s joint determinacy.</p>
+<h2 id="setting-and-the-proposition">1. Setting and the proposition</h2>
+<p>Let <span class="math inline">\(M\)</span> be a compact <span
+class="math inline">\(d\)</span>-dimensional manifold with normalized
+volume <span class="math inline">\(\mu\)</span>, and <span
+class="math inline">\(T\)</span> a <span
+class="math inline">\(C^2\)</span> volume-preserving Anosov
+diffeomorphism, the setting device. Such maps are mixing with
+exponential decay of correlations for Hölder, hence Lipschitz,
+observables (<a href="https://doi.org/10.1007/BFb0081279">Bowen
+1975</a>; metadata): with <span class="math inline">\(\|F\|_{\rm
+Lip}=\sup|F|+{\rm Lip}(F)\)</span>,</p>
+<p><span class="math display">\[\Bigl|\int F\,(G\circ T^n)\,d\mu-\int
+F\,d\mu\int G\,d\mu\Bigr|\le C_T\|F\|_{\rm Lip}\|G\|_{\rm
+Lip}\,\theta^n,\qquad\theta&lt;1.\]</span></p>
+<p>A preparation ensemble is a probability density <span
+class="math inline">\(\rho\)</span> on <span
+class="math inline">\(M\)</span>; the hidden variable of the measured
+system is <span class="math inline">\(\lambda=f(x)\)</span> and the
+setting is <span class="math inline">\(s=g(T^nx)\)</span>, with <span
+class="math inline">\(f,g\)</span> Lipschitz. The ensemble is
+<strong>resolved at scale <span
+class="math inline">\(\delta\)</span></strong> if <span
+class="math inline">\(\|\rho\|_{\rm Lip}\le K\delta^{-(d+1)}\)</span>;
+for example any probability measure smoothed by a mollifier of width
+<span class="math inline">\(\delta\)</span>, whose density has height of
+order <span class="math inline">\(\delta^{-d}\)</span> and slope of
+order <span class="math inline">\(\delta^{-(d+1)}\)</span>.</p>
+<p><strong>Proposition.</strong> For an ensemble resolved at scale <span
+class="math inline">\(\delta\)</span>, <span class="math inline">\(|{\rm
+Cov}_\rho(f,g\circ T^n)|\le2C_TK\|f\|_{\rm Lip}\|g\|_{\rm
+Lip}\delta^{-(d+1)}\theta^n\)</span>.</p>
+<p><em>Proof.</em> Apply the decay estimate twice, with <span
+class="math inline">\(F=f\rho\)</span> and with <span
+class="math inline">\(F=\rho\)</span>, using <span
+class="math inline">\(\int\rho\,d\mu=1\)</span>: <span
+class="math inline">\(\int f\rho\,(g\circ T^n)=\int f\rho\int
+g+E_1\)</span> and <span class="math inline">\(\int\rho\,(g\circ
+T^n)=\int g+E_2\)</span>. Then <span class="math inline">\({\rm
+Cov}_\rho=E_1-E_2\int f\rho\)</span>, and <span
+class="math inline">\(\|f\rho\|_{\rm Lip}\le\|f\|_{\rm Lip}\|\rho\|_{\rm
+Lip}\)</span>, <span class="math inline">\(|\int f\rho|\le\|f\|_{\rm
+Lip}\)</span> give the bound. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="what-it-says-and-about-whom">2. What it says, and about
+whom</h2>
+<ul>
+<li><strong>Classical mechanics.</strong> Nothing in the laws fixes
+<span class="math inline">\(\delta\)</span>; an ensemble can be a point
+mass. Independence is therefore an assumption about the data, and the
+superdeterministic option is a choice of data with structure below every
+scale. This is the precise sense of “accidentally
+superdeterministic”.</li>
+<li><strong>A floor.</strong> The proposition needs the floor to
+constrain the physical state (its phase-space density), beyond
+constraining records. Under that premise, correlations of a chaotic
+setting device with a hidden variable decay after a time logarithmic in
+<span class="math inline">\(A_0/h\)</span>, the Ehrenfest-type scale at
+which classical and quantum chaos part.</li>
+<li><strong>’t Hooft’s automaton</strong> lies outside the proposition.
+Its ontic states are exact cells and its correlations are carried by
+exact labels, with no Lipschitz structure to smooth; a floor on
+phase-space density says nothing about them (<a
+href="discrete-substrate-actors.html">discrete-substrate note</a>).</li>
+<li><strong>Palmer’s invariant set postulate</strong> places states on a
+fractal invariant set and counterfactual settings off it (<a
+href="https://doi.org/10.1098/rspa.2009.0080">Palmer 2009</a>; read at
+the level of its title and our memory of the framework). A fractal
+support is structure at all scales, which a floor in the proposition’s
+sense smears out; the two premises are in direct conflict. The
+superdeterminist position is surveyed in <a
+href="https://doi.org/10.3389/fphy.2020.00139">Hossenfelder and Palmer
+(2020)</a> (metadata).</li>
+<li><strong>Quantum mechanics</strong> is untouched: its Bell violations
+come from entangled states, and it assumes independent settings,
+consistently with the proposition.</li>
+</ul>
+<h2 id="consequence-for-state">3. Consequence for STATE</h2>
+<p>A small addition to the Newton side: the floor turns Bell’s
+measurement independence into a theorem for chaotic setting devices
+after an Ehrenfest-type time, and the continuum limit <span
+class="math inline">\(h\to0\)</span> reopens the loophole. It is a
+statement about what the floor buys, with the floor assumed; the
+necessity question is unchanged. To be refereed.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

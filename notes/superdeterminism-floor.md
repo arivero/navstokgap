@@ -1,0 +1,101 @@
+# Superdeterminism lives below every resolution; a floor gives it a lifetime
+
+**Result, 2026-09-29 (Claude; written derivation, not yet refereed).**
+Classical mechanics is deterministic, so the settings of a Bell test are
+functions of the initial data; the statistical independence of settings
+and hidden variables that Bell's theorem needs is an assumption of
+typicality on those data, taken with the Liouville measure. Superdeterminism
+is the choice of atypical data. The proposition below shows where such
+data must hide when the setting device is chaotic: in structure of the
+initial ensemble finer than any fixed phase-space resolution. For a
+preparation ensemble resolved at scale $\delta$, the covariance between a
+hidden variable and a setting chosen $n$ steps later obeys
+
+$$|{\rm Cov}_\rho(f,g\circ T^n)|\le2C_T\,K\,\|f\|_{\rm Lip}\|g\|_{\rm Lip}\,\delta^{-(d+1)}\theta^n,$$
+
+so the correlation is below $\eta$ after
+
+$$n_*(\delta)=\frac{(d+1)\ln(1/\delta)+\ln\bigl(2C_TK\|f\|_{\rm Lip}\|g\|_{\rm Lip}/\eta\bigr)}{\ln(1/\theta)}$$
+
+steps. Classical mechanics puts no lower bound on $\delta$, and $n_*\to\infty$: a
+conspiracy can be stored in ever finer structure for as long as needed.
+If a floor $h$ on phase-space area per canonical pair constrains the
+physical state, then $\ln(1/\delta)=\frac12\ln(A_0/h)$ with $A_0$ the action scale of the
+device, and the conspiracy has a finite lifetime
+$n_*\approx\frac{d+1}{2\ln(1/\theta)}\ln(A_0/h)$, the logarithmic structure of the Ehrenfest time
+of quantum chaos ([Berman and Zaslavsky 1978](https://doi.org/10.1016/0378-4371(78)90190-5);
+metadata). With the floor, measurement independence for chaotic setting
+devices is a theorem after $n_*$; Bell's inequalities then exclude local
+deterministic models that respect the floor. The limit $h\to0$ that Newton
+takes is exactly what reopens the loophole.
+
+The user's remark that prompted this (2026-09-28/29): classical mechanics
+is accidentally superdeterministic too, and the programme holds that it
+has a mistake somewhere. The link is that typicality rests on the
+Liouville measure, whose unit is an action per degree of freedom, the
+same object whose unlimited refinement the
+[fifth-postulate note](principia-fifth-postulate.md) identifies as Newton's
+joint determinacy.
+
+## 1. Setting and the proposition
+
+Let $M$ be a compact $d$-dimensional manifold with normalized volume $\mu$,
+and $T$ a $C^2$ volume-preserving Anosov diffeomorphism, the setting device.
+Such maps are mixing with exponential decay of correlations for Hölder,
+hence Lipschitz, observables
+([Bowen 1975](https://doi.org/10.1007/BFb0081279); metadata): with
+$\|F\|_{\rm Lip}=\sup|F|+{\rm Lip}(F)$,
+
+$$\Bigl|\int F\,(G\circ T^n)\,d\mu-\int F\,d\mu\int G\,d\mu\Bigr|\le C_T\|F\|_{\rm Lip}\|G\|_{\rm Lip}\,\theta^n,\qquad\theta<1.$$
+
+A preparation ensemble is a probability density $\rho$ on $M$; the hidden
+variable of the measured system is $\lambda=f(x)$ and the setting is $s=g(T^nx)$,
+with $f,g$ Lipschitz. The ensemble is **resolved at scale $\delta$** if
+$\|\rho\|_{\rm Lip}\le K\delta^{-(d+1)}$; for example any probability measure smoothed by a
+mollifier of width $\delta$, whose density has height of order $\delta^{-d}$ and slope of
+order $\delta^{-(d+1)}$.
+
+**Proposition.** For an ensemble resolved at scale $\delta$,
+$|{\rm Cov}_\rho(f,g\circ T^n)|\le2C_TK\|f\|_{\rm Lip}\|g\|_{\rm Lip}\delta^{-(d+1)}\theta^n$.
+
+*Proof.* Apply the decay estimate twice, with $F=f\rho$ and with $F=\rho$, using
+$\int\rho\,d\mu=1$: $\int f\rho\,(g\circ T^n)=\int f\rho\int g+E_1$ and
+$\int\rho\,(g\circ T^n)=\int g+E_2$. Then ${\rm Cov}_\rho=E_1-E_2\int f\rho$, and
+$\|f\rho\|_{\rm Lip}\le\|f\|_{\rm Lip}\|\rho\|_{\rm Lip}$, $|\int f\rho|\le\|f\|_{\rm Lip}$ give the bound. $\square$
+
+## 2. What it says, and about whom
+
+- **Classical mechanics.** Nothing in the laws fixes $\delta$; an ensemble can
+  be a point mass. Independence is therefore an assumption about the
+  data, and the superdeterministic option is a choice of data with
+  structure below every scale. This is the precise sense of "accidentally
+  superdeterministic".
+- **A floor.** The proposition needs the floor to constrain the physical
+  state (its phase-space density), beyond constraining records. Under
+  that premise, correlations of a chaotic setting device with a hidden
+  variable decay after a time logarithmic in $A_0/h$, the Ehrenfest-type
+  scale at which classical and quantum chaos part.
+- **'t Hooft's automaton** lies outside the proposition. Its ontic states
+  are exact cells and its correlations are carried by exact labels, with
+  no Lipschitz structure to smooth; a floor on phase-space density says
+  nothing about them ([discrete-substrate note](discrete-substrate-actors.md)).
+- **Palmer's invariant set postulate** places states on a fractal
+  invariant set and counterfactual settings off it
+  ([Palmer 2009](https://doi.org/10.1098/rspa.2009.0080); read at the level
+  of its title and our memory of the framework). A fractal support is
+  structure at all scales, which a floor in the proposition's sense
+  smears out; the two premises are in direct conflict. The superdeterminist
+  position is surveyed in
+  [Hossenfelder and Palmer (2020)](https://doi.org/10.3389/fphy.2020.00139)
+  (metadata).
+- **Quantum mechanics** is untouched: its Bell violations come from
+  entangled states, and it assumes independent settings, consistently
+  with the proposition.
+
+## 3. Consequence for STATE
+
+A small addition to the Newton side: the floor turns Bell's measurement
+independence into a theorem for chaotic setting devices after an
+Ehrenfest-type time, and the continuum limit $h\to0$ reopens the loophole.
+It is a statement about what the floor buys, with the floor assumed; the
+necessity question is unchanged. To be refereed.
