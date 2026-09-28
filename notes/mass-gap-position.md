@@ -198,14 +198,16 @@ the small-field expansion reaches $g^2\sim1/2$
 Kogut--Susskind threshold from Yarotsky's theorem, made explicit, is
 $g_0^2\sim10^{101}$ and plays no role in the map.
 
-**The map as a theorem.**
-[The conditional theorem](mass-gap-conditional-theorem.md) states the
-whole map as two hypotheses, control of the blocking steps from the
-weak side to the coupling where $\xi\simeq a$ (H1) and certified mixing
-at that one coupling on one box (H2), with the conclusion
-$m\ge\hbar c\min(\gamma_*,\gamma')/a_*$, where $a_*\simeq0.1$ fm is the
-physical spacing at the verified coupling. Progress is progress on H1
-or H2.
+**The map as a conditional assembly.**
+[The conditional theorem](mass-gap-conditional-theorem.md) now separates
+the cutoff spectral core from the continuum construction.  Local
+scale-by-scale blocking transport (H1$_{\rm gap}$) and certified mixing at
+one physical crossover box (H2) yield the lower threshold
+$m\ge\hbar c\min(\gamma_*,\gamma')/a_*$ at each cutoff.  To make this a
+continuum theorem also requires uniform renormalized observable
+normalization (H1$_{\rm OS}$) and OS convergence with a nontrivial local
+sector (H3).  All four hypotheses remain open; progress is not exhausted
+by a finite-box fit.
 
 **The two reasons to stop, researched.** A Griffiths-type inequality
 would transfer control from weaker to stronger coupling only and would

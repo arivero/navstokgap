@@ -1,132 +1,244 @@
-# The map as one conditional theorem: two hypotheses, both finite in kind, and an explicit lower bound $m\ge\hbar c\,\gamma'/a_*$
+# A conditional $3+1$-dimensional assembly theorem: uniform blocking, one-box mixing, and OS reconstruction
 
-Everything this programme has established about the $SU(3)$ mass gap
-can be stated as a single conditional theorem. Its two hypotheses are
-the two things not proved here: control of the blocking steps from the
-weak side down to the coupling where the correlation length is one
-lattice unit, and a certified mixing statement at that one coupling on
-one finite box. Its conclusion is the Jaffe--Witten gap along the
-trajectory with an explicit lower bound,
-$$m\ \ge\ \frac{\hbar c\,\gamma'}{a_*},$$
-where $a_*$ is the physical lattice spacing at which the trajectory
-reaches the verified coupling, about $0.1$ to $0.17$ fm by the published
-scale, and $\gamma'$ is the certified decay rate per lattice unit there.
-Any positive $\gamma'$ gives a positive gap, and the data say the true
-rate is about $0.8$. Constants explicit; nothing promoted.
+**Status — conditional only, sharpened 2026-09-28.**  This note says
+exactly which uniform estimates would turn the finite-lattice theory into a
+volume- and cutoff-independent $SU(3)$ mass gap.  It does **not** establish
+any of them in the weak-to-intermediate-coupling region, and it does not
+claim a continuum $SU(3)$ construction.  In particular, the completed
+constant-mode result [C133](low-dimensional-mass-gap.md) is an input to one
+possible small-volume route to H1 below; it is not H1 itself.
 
-## 1. Setting
+The useful correction to the earlier two-hypothesis formulation is this:
+blocking estimates alone yield a lattice spectral lower bound, but a
+continuum theorem also requires a **uniform renormalized observable bound**
+and an **OS limit with a nontrivial local sector**.  Without the latter two,
+one has only a family of cutoff statements, not a Jaffe--Witten theory.
 
-Wilson measure $\mu_{\beta_0}$ on the links of $(a_0\mathbb Z)^4$ at bare
-coupling $\beta_0=6/g_0^2$, in a periodic box of any size. A block-spin
-map $\mathcal B$ of block size $2$: a gauge-covariant assignment of a
-coarse link variable to each block, measurable in the fine links, such
-that coarse Wilson loops are functions of fine Wilson loops. The
-renormalized measures $\mu^{(k)}=\mathcal B^k\mu_{\beta_0}$ live on the
-links of $(2^ka_0\mathbb Z)^4$ and, by construction, reproduce exactly
-the correlations of coarse observables. Write $\Phi^{(k)}$ for the
-renormalized interaction when it exists, and
-$\|\Phi\|_\kappa=\sup_\ell\sum_{X\ni\ell}e^{\kappa\operatorname{diam}X}\|\Phi_X\|_\infty$
-for the interaction norm with range weight $\kappa>0$.
+## 1. Setting and the three kinds of uniformity
 
-## 2. The hypotheses
+Let $\mu_{a_0}$ be a reflection-positive Wilson measure on a periodic
+$(a_0\mathbb Z)^4$ box along a proposed scaling trajectory.  Let
+$\mathcal B$ be a local gauge-covariant block map of scale $2$, and write
+$\mu^{(k)}=\mathcal B^k_\#\mu_{a_0}$, on spacing $a_k=2^ka_0$.  Conditional
+expectation onto the $k+1$-st links is denoted $\mathcal E_k$.  For a local
+observable set
+\[
+ F^{(0)}=F,\qquad F^{(k+1)}=\mathcal E_kF^{(k)},
+\]
+and similarly for $G$.  A local block map must have a fixed support buffer:
+there is a $b<\infty$, independent of $k,a_0$ and the volume, such that if
+the original supports have fine-lattice distance $d_0$, then
+\[
+ d_k\ge 2^{-k}d_0-b                                      \tag{1}
+\]
+is a separation of the supports of $F^{(k)},G^{(k)} at scale $k$.
+Conditional expectation is a contraction in the relevant observable
+seminorms.  These two elementary locality requirements must be part of a
+blocking claim; otherwise the word ``coarse observable'' is not enough for
+a correlation argument.
 
-**H1 (the weak side).** There is $K=K(a_0)$ with $2^Ka_0\to a_*$ as
-$a_0\to0$, a rate $\gamma_*>0$ and constants $C_k$ such that for each
-$k<K$ and all local observables $F,G$ of the $k$-th lattice with
-supports at distance $d$ in its units,
-$$\Big|\langle F;G\rangle_{\mu^{(k)}}-\langle\bar F;\bar G\rangle_{\mu^{(k+1)}}\Big|
-\ \le\ C_k\,\|F\|_\infty\|G\|_\infty\,e^{-\gamma_*d},$$
-where $\bar F$ is the conditional expectation of $F$ given the coarse
-links; and $\Phi^{(K)}$ exists, is finite in $\|\cdot\|_\kappa$, and
-satisfies $\|\Phi^{(K)}-\Phi_0\|_\kappa\le r$ for a reference
-interaction $\Phi_0$ and radius $r$ fixed in H2.
+The hypotheses below separate three logically different uniformities.
 
-In words: at every step before the last, the fluctuations integrated
-out cluster exponentially at the scale of the step, and the trajectory
-arrives within a fixed distance of a reference interaction. For the
-steps at which the effective coupling is small this is the content of
-the constructive programme, perturbative in kind and unavailable with
-constants; for the last three, in which $\xi/a$ passes from about $10$
-to about $1$, it is the open problem
-([bands note](confinement-scale-bands.md) §2b).
+**H1$_{\rm gap}$ (scale-by-scale fluctuation transport).**  There are
+$K=K(a_0)$, $\gamma_*>0$, and finite constants $C_k(a_0)$ such that
+$2^{K(a_0)}a_0\to a_*>0$, and, for every pair in a local gauge-invariant
+test algebra and every periodic volume,
+\[
+ \left|\langle F^{(k)};G^{(k)}\rangle_{\mu^{(k)}}
+       -\langle F^{(k+1)};G^{(k+1)}\rangle_{\mu^{(k+1)}}\right|
+ \le C_k(a_0)\,\|F^{(k)}\|\,\|G^{(k)}\|
+       e^{-\gamma_*d_k},\qquad 0\le k<K .                \tag{2}
+\]
+The test algebra must be closed under the conditional expectations used in
+(2).  This is an estimate on the **difference of successive connected
+correlations**, not merely an assertion that a formal effective action
+exists.  The constants may be used one cutoff at a time for the spectral
+bound, but they must not depend on the periodic volume.
 
-**H2 (one box).** The reference interaction $\Phi_0$ satisfies the
-strong-mixing condition on a box $V$ of side $R$: for every $W\subseteq V$,
-every boundary link $y$ and boundary conditions $\omega,\omega'$
-differing at $y$,
-$$\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega'}\big|_W\big\|_{\rm TV}\ \le\ C\,|W|\,e^{-\gamma\,d(W,y)},$$
-with a margin such that every $\Phi$ with $\|\Phi-\Phi_0\|_\kappa\le r$
-satisfies the same condition with some $C',\gamma'>0$. The natural
-$\Phi_0$ is the Wilson interaction at $\beta_W\simeq6$, where the
-published correlation length is about one lattice unit, or, better, a
-nearby interaction with a small negative adjoint term, which moves
-$\Phi_0$ away from the endpoint of the fundamental--adjoint first-order
-line where the scalar channel softens (precision of 2026-09-23,
-[openings note](mass-gap-openings.md) §1); $R$ is $3$
-to $5$; the condition is to be read on the gauge-invariant content of
-$W$, the small Wilson loops, since single-link marginals of interior
-links are Haar ([bands note](confinement-scale-bands.md)).
+**H1$_{\rm OS}$ (summable renormalized normalization).**  There is a
+separating, reflection-stable algebra $\mathcal A_R$ of renormalized local
+gauge-invariant observables, with lattice representatives, such that for
+each $F,G\in\mathcal A_R$
+\[
+ \sup_{a_0}\ \sum_{k<K(a_0)}
+ C_k(a_0)\,\|F^{(k)}\|\,\|G^{(k)}\| <\infty .            \tag{3}
+\]
+One may replace the displayed norms by specified OS-continuous seminorms
+for unbounded smeared fields.  Condition (3) is deliberately stronger than
+what is needed to locate a cutoff spectral threshold.  It prevents the
+prefactor accumulated through $K(a_0)\to\infty$ blockings from destroying
+the bounded pairings needed to take a continuum limit.
 
-## 3. The theorem
+**H2 (one-box mixing at the physical crossover scale).**  The effective
+interaction $\Phi^{(K)}$ exists in a local interaction norm and lies in a
+fixed open strong-mixing neighbourhood: there are $C',\gamma'>0$, all
+independent of $a_0$ and volume, for which
+\[
+ |\langle X;Y\rangle_{\mu^{(K)}}|
+ \le C'\|X\|\|Y\|e^{-\gamma' d_K} .                       \tag{4}
+\]
+It is enough to certify this by the usual Dobrushin--Shlosman one-box
+criterion with a margin, for all interactions in a fixed ball around a
+reference interaction $\Phi_0$.  The condition concerns gauge-invariant
+local content (small Wilson loops and their renormalized descendants), not
+single interior links, whose marginals are Haar.  At a conventional
+crossover choice $a_*$ is a physical spacing of order $0.1\,{\rm fm}$, but
+no numerical value is used in the theorem.
 
-**Theorem (conditional).** Assume H1 and H2. Then for every bare
-coupling on the trajectory and every periodic volume:
+**H3 (OS convergence and a nontrivial local sector).**  After the
+infinite-volume limit, the Schwinger functions of $\mathcal A_R$ converge,
+along the scaling trajectory, to Euclidean-invariant distributions
+satisfying the Osterwalder--Schrader axioms.  The corresponding OS Hilbert
+space is generated by $\mathcal A_R\Omega$, and contains a vector
+orthogonal to the vacuum.  For the spectral step used below, impose the
+corresponding operational convergence statement: the finite positive
+spectral measures of every vacuum-subtracted $F\in\mathcal A_R$ converge
+weakly to its OS spectral measure.  This is the continuum
+construction/nontriviality obligation (T4), not a consequence of
+finite-cutoff reflection positivity by itself.
 
-1. $\mu^{(K)}$ has a unique Gibbs state and truncated correlations of
-   all local observables decaying at rate at least $\gamma'$ per unit of
-   $2^Ka_0$ (Dobrushin--Shlosman; Martinelli--Olivieri);
-2. $\mu_{\beta_0}$ has truncated correlations of all local fine
-   observables decaying at rate at least
-   $\min\big(\gamma_*,\,\gamma'\big)/2^K$ per unit of $a_0$;
-3. the Wilson transfer matrix at spacing $a_0$ has a spectral gap
-   $$\Delta(a_0)\ \ge\ \frac{\hbar c}{a_0}\cdot\frac{\min(\gamma_*,\gamma')}{2^{K(a_0)}}$$
-   on the cyclic subspace of local observables, uniformly in the volume;
-4. in the continuum limit along the trajectory,
-   $$m\ \ge\ \frac{\hbar c\,\min(\gamma_*,\gamma')}{a_*}\ >\ 0 .$$
+H1$_{\rm gap}$ is the nonconstant-mode/blocking estimate; H2 is the
+intermediate-scale confinement/mixing estimate; H1$_{\rm OS}$ and H3 are
+what make the cutoff-independent statement meaningful.
 
-*Proof.* (1) is the mixing-to-decay theorem applied to $\Phi^{(K)}$,
-which lies in the verified neighbourhood by H1 and H2. For (2), write a
-fine observable as its coarse part plus fluctuation parts step by step,
-$F=\bar F^{(K)}+\sum_{k<K}(F^{(k)}-\bar F^{(k)})$; the coarse-part
-correlations decay by (1) at rate $\gamma'$ per coarse unit, that is
-$\gamma'/2^K$ per fine unit, and the fluctuation-part correlations at
-step $k$ decay by H1 at rate $\gamma_*$ per unit of $2^ka_0$, that is
-$\gamma_*/2^k\ge\gamma_*/2^K$ per fine unit; the cross terms are bounded
-by the same rates. (3) is link reflection positivity together with the
-spectral argument of [the Wilson note](wilson-strong-coupling-explicit.md)
-§3: decay at rate $\mu$ per fine unit for all local observables forces
-the spectral measure of every local vector orthogonal to the vacuum to
-vanish above $e^{-\mu}$. (4) follows from (3) as $a_0\to0$ with
-$2^{K(a_0)}a_0\to a_*$. $\square$
+## 2. The telescoping lemma (proved)
 
-The Jaffe--Witten clause $0<m<\infty$ is then (4) together with the
-upper side of [the moment-hierarchy note](moment-hierarchy-upper-bounds.md);
-T3, the ratio $m/(\hbar c\Lambda)$, is the statement that $a_*\Lambda$
-has a limit, which is the convergence of the trajectory to one curve as
-in [the finite-verification note](intermediate-region-finite-verification.md).
+**Lemma.**  Under the locality buffer (1), H1$_{\rm gap}$, and H2, fine
+connected correlations obey, at every fixed cutoff,
+\[
+ \begin{split}
+ |\langle F;G\rangle_{\mu_{a_0}}|
+ &\le \left[e^{\gamma_*b}\sum_{k<K}C_k(a_0)
+       \|F^{(k)}\|\|G^{(k)}\|+C'e^{\gamma'b}\|F^{(K)}\|\|G^{(K)}\|\right]\\
+ &\quad\times
+ \exp\!\left[-\frac{\min(\gamma_*,\gamma')}{2^K}\,d_0\right]. \tag{5}
+ \end{split}
+\]
+Thus the Wilson transfer matrix has, on the cyclic local sector,
+\[
+ \Delta(a_0)\ \ge\ \frac{\hbar c}{a_0}
+       \frac{\min(\gamma_*,\gamma')}{2^{K(a_0)}} .        \tag{6}
+\]
+No summability in $k$ is required for (6), because $K(a_0)$ is finite at
+every cutoff.  H1$_{\rm OS}$ is what makes the bracket in (5) uniform for
+renormalized observables as $a_0\downarrow0$.
 
-## 4. What the theorem makes visible
+*Proof.*  Exact push-forward of the blocked measure gives the telescoping
+identity
+\[
+ \langle F^{(0)};G^{(0)}\rangle_{\mu^{(0)}}
+ =\sum_{k=0}^{K-1}\left(
+ \langle F^{(k)};G^{(k)}\rangle_{\mu^{(k)}}-
+ \langle F^{(k+1)};G^{(k+1)}\rangle_{\mu^{(k+1)}}\right)
+ +\langle F^{(K)};G^{(K)}\rangle_{\mu^{(K)}} .             \tag{7}
+\]
+There are no unaccounted ``cross terms'': (7), rather than a formal
+fluctuation decomposition, is the relevant identity.  Substitute (2) and
+(4), use $d_k\ge2^{-k}d_0-b$ and $2^{-k}\ge2^{-K}$, and obtain (5).
+Reflection positivity identifies a time separation of $n$ fine units with
+powers of the positive transfer matrix.  A local spectral measure with
+correlations decaying as $e^{-\mu n}$ has no non-vacuum support below
+$\hbar c\mu/a_0$, which proves (6). $\square$
 
-*The bound is a ratio of a certified rate to a physical length.* With
-$a_*\simeq0.093$ fm at $\beta_W=6$ and the measured glueball mass
-$1.66\,\hbar c\,{\rm fm}^{-1}$, the true rate is $m a_*\simeq0.78$; a
-certified $\gamma'$ of any size gives a theorem, and one of order $0.1$
-would already be a physically meaningful bound.
+## 3. Conditional continuum theorem (proved from the hypotheses)
 
-*Both hypotheses are finite in kind.* H2 is one box at one coupling. H1
-is a sequence of steps, uniform in the perturbative regime, whose
-non-perturbative part is three steps. Neither is available today:
-H2 needs a certified computation, and H1's last three steps are the
-confinement-scale problem.
+**Theorem.**  Assume the locality requirements, H1$_{\rm gap}$,
+H1$_{\rm OS}$, H2, and H3.  Then the OS-reconstructed infinite-volume
+continuum theory has a nontrivial physical Hilbert space and a vacuum
+spectral gap satisfying
+\[
+ m\ \ge\ \frac{\hbar c}{a_*}\min(\gamma_*,\gamma')\ >0 . \tag{8}
+\]
+The bound is independent of the original lattice cutoff and of volume.
 
-*Nothing else is missing.* T1, T2, the strong-coupling side below the
-verified coupling, the transfer from decay to gap, the upper side of
-the gap, and the reduction of T3 are all in place with explicit
-constants. The theorem is the repository's formal endpoint: a proof of
-the mass gap for $SU(3)$ consists of H1 and H2.
+*Proof.*  Equation (6) gives the same positive physical support threshold
+at every cutoff up to $o(1)$, because $2^Ka_0\to a_*$.  For a fixed
+vacuum-subtracted $F\in\mathcal A_R$, write its positive finite lattice
+spectral measure as $\nu_{F,a_0}$.  It has no support in
+\([0,m_0)$ for every $m_0$ strictly below the right-hand side of (8).
+H1$_{\rm OS}$ supplies the uniform normalization needed to extract the
+weak measure limit required in H3.  Since $[m_0,\infty)$ is closed, the
+weak limit $\nu_F$ also has no support in $[0,m_0)$.  Letting
+$m_0\uparrow(\hbar c/a_*)\min(\gamma_*,\gamma')$ proves the assertion for
+every vector $F\Omega$ in the dense local sector.  Density extends it to
+the OS Hilbert space.  H3 supplies a non-vacuum vector, so the conclusion
+is not the empty theory. $\square$
 
-## 5. Consequence for STATE
+A finite upper mass in the usual $0<m<\infty$ formulation follows once a
+non-vacuum local spectral measure is nonzero: some finite interval has
+positive measure, since $\bigcup_{N<\infty}[0,N)=[0,\infty)$.  Quantitative
+upper bounds are a separate moment/variational task.  The theorem does
+not identify the dimensionless ratio $m/(\hbar c\Lambda)$; proving that it
+has a finite nonzero scaling limit is the distinct T3 obligation.
 
-The map is a theorem with two hypotheses and an explicit conclusion
-$m\ge\hbar c\min(\gamma_*,\gamma')/a_*$. Progress from here is progress
-on H1 or H2, and nothing else.
+## 4. A mutually exclusive observable-weight route to a zero threshold (proved)
+
+The hypotheses of the theorem are sufficient for a gapped limit.  The
+opposite conclusion needs a different kind of uniform information: not
+merely cutoff eigenvalues tending to zero, but positive spectral weight of
+renormalized local observables that survives the limit.
+
+**Proposition (soft-weight criterion).**  Assume the weak convergence of
+vacuum-subtracted local spectral measures in H3.  Suppose that for every
+$\epsilon>0$ there are $F_\epsilon\in\mathcal A_R$ and a nonnegative
+continuous $f_\epsilon$, supported in a compact interval
+\[
+ \operatorname{supp}f_\epsilon\subset(r_\epsilon,s_\epsilon)
+ \subset(0,\epsilon),
+\]
+such that
+\[
+ \liminf_{a_0\downarrow0}\int f_\epsilon(E)\,d\nu_{F_\epsilon,a_0}(E)>0.
+                                                                    \tag{9}
+\]
+Then the reconstructed continuum theory has zero excited spectral
+threshold.  In particular, it has no positive mass gap.
+
+*Proof.*  Along the convergent trajectory, weak convergence and continuity
+of $f_\epsilon$ identify the limit of the integral in (9) with
+$\int f_\epsilon\,d\nu_{F_\epsilon}$.  It is positive, so the limiting
+spectrum has non-vacuum support in $(0,\epsilon)$.  Since this holds for
+every $\epsilon$, the infimum of the positive spectrum is zero. $\square$
+
+The condition is intentionally phrased with a compact subinterval away
+from $E=0$: it neither mistakes a vacuum atom for an excitation nor loses
+weight at an endpoint under weak convergence.  It covers the expected
+massless-photon or Goldstone situation when a renormalized local channel
+has persistent soft weight.  Conversely, a sequence of finite-cutoff
+eigenvalues $E_{a_0}\to0$ establishes neither (9) nor a gap: their local
+observable residues may vanish.  The gapped theorem and this proposition
+therefore give operationally distinct tests for the two alternatives.
+
+## 5. What remains open, and what would count as progress
+
+1. **Nonconstant modes at weak coupling.**  The fibrewise Feshbach route
+   in [the weak-coupling reduction](weak-coupling-feshbach-reduction.md)
+   proposes estimates which could imply the first part of H1 for a
+   gauge-invariant regulator.  Its SU(2) fibre estimates and relative
+   Schur bound are open, and have not been promoted to SU(3).
+2. **The crossover blocks.**  H1$_{\rm gap}$ must cross the region where
+   $g(L)$ becomes order one without losing $\gamma_*>0$, and H2 must be
+   certified with a margin.  This is exactly the presently open
+   volume-uniform lattice-gap problem, not a finite-size numerical fit.
+3. **Observable normalization and reconstruction.**  H1$_{\rm OS}$ and
+   H3 rule out the common logical shortcut from a finite-cutoff transfer
+   matrix to a continuum QFT.  They require a concrete renormalized test
+   algebra, compactness/tightness of its Schwinger functions, OS symmetry,
+   and a proof that a non-vacuum state survives.
+4. **Universality.**  To state $m=C\hbar c\Lambda$ rather than only (8),
+   one also needs a controlled running coupling and convergence of the
+   scaling trajectory.  Dimensional transmutation provides a candidate
+   scale; it does not prove $C>0$.
+
+Thus this note turns the phrase ``uniform enough'' into checkable
+inequalities: locality (1), fluctuation transport (2), renormalized
+summability (3), one-box mixing (4), and OS convergence/nontriviality.
+
+## 6. Consequence for STATE
+
+The exact finite-dimensional $SU(3)$ result remains separate.  A full
+$3+1$ proof would require H1$_{\rm gap}$, H1$_{\rm OS}$, H2, and H3 above;
+none is discharged here.  The proved content of this note is the
+conditional transport from those hypotheses to the cutoff- and
+volume-independent lower bound (8), including the telescoping correction
+that avoids assuming unproved residual cross-term estimates.

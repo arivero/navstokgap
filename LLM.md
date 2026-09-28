@@ -127,8 +127,8 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | T1 | Finite lattice: unique ground state, $\delta>0$, every $a,N_s,g$, compact $G$ | proved | [mass-gap-obligations-lattice](notes/mass-gap-obligations-lattice.md) |
 | T2 | Volume-uniform strong-coupling gap: Wilson transfer matrix $\Delta_W\ge\frac{\hbar c}a4\log(g^2/176)$ for $g^2\ge176$ (rigorous 1056); Kogut--Susskind $\Delta_{\rm KS}\ge\frac43g^2\hbar c/a$ for $g^2\ge388$ | proved (from Kotecký--Preiss, Yarotsky) | [wilson-strong-coupling-explicit](notes/wilson-strong-coupling-explicit.md), [kogut-susskind-strong-coupling-explicit](notes/kogut-susskind-strong-coupling-explicit.md) |
 | T2$'$, T3, T4 | Gap at every coupling; scaling limit $\delta_\infty/(a\Lambda_{\rm lat})\to m/\hbar c\Lambda$; continuum theory with the axioms | open (T2$'$ false for $U(1)$ and for $SU(N\ge5)$ Wilson action) | [mass-gap-position](notes/mass-gap-position.md), [mass-gap-openings](notes/mass-gap-openings.md) |
-| Conditional theorem | H1 (blocking clusters to $\xi\simeq a$) + H2 (certified mixing on one box) $\Rightarrow m\ge\hbar c\gamma'/a_*$ | conditional | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
-| Small volume (S) | Gap-transfer lemma proved; H1--H3 inequalities open; $\Delta=\delta_1g^{2/3}\hbar c/L[1+O(g^{2/3})]$ upper side proved | conditional | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md) |
+| Conditional assembly theorem | Local H1$_{\rm gap}$ blocking transport + H2 one-box mixing give a cutoff spectral threshold; uniform H1$_{\rm OS}$ observable normalization and H3 OS convergence/nontriviality carry it to $m\ge\hbar c\min(\gamma_*,\gamma')/a_*$; persistent soft local spectral weight instead gives zero threshold | conditional implication proved; all $SU(3)$ hypotheses open | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
+| Small volume (S) | Gap-transfer lemma proved; fibre H1--H3 inequalities open.  The $SU(3)$ Cartan one-loop root sum fixes the local $O(g^{4/3}\hbar c/L)$ potential correction but not a global Schur/form estimate | conditional | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md), [torus valley](notes/torus-valley-potential.md) |
 | Seven closed routes | Variational, free expansion, projection blocking, flow conjugation, flow before decimation, Agmon, Gibbs domination: each fails for a stated reason with constants | recorded failures | [mass-gap-position §3](notes/mass-gap-position.md) |
 | G07, G08 | $0+1$ compact-semisimple YM matrix mechanics, including $SU(3)$, has a discrete $\delta_{\mathfrak g,D}\hbar^{4/3}g_B^{2/3}m^{-2/3}$ gap; its $3+1$ $SU(3)$ constant-mode sector has gap $\delta^{\rm inv}_{\mathfrak{su}(3),3}g^{2/3}\hbar c/L$. Both are finite-dimensional statements; the latter vanishes with $L^{-1}$. The transverse action-floor reading is G08 (C133) | proved, unrefereed extension; established source theorem, ledgered | [low-dimensional-mass-gap](notes/low-dimensional-mass-gap.md), [action-floor-yang-mills-gap](notes/action-floor-yang-mills-gap.md) |
 
@@ -327,10 +327,12 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
 6. **Time-only halving rate.** An operator-norm Trotter rate for
    $e^{-a_0(T+V)}$ versus $e^{-a_0T}e^{-a_0V}$ on $G^E$, which needs domain
    estimates for $[\Delta_G,V]$ ([halving-atlas §5.5](notes/halving-atlas.md)).
-7. **H1 and H2 of the conditional theorem** ([mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md)):
-   exponential clustering of integrated-out fluctuations per blocking step
-   down to $\xi\simeq a$, and certified mixing at one coupling on one box.
-   The Feshbach H3 small-volume estimate is the valley-lifting task
+7. **Conditional continuum assembly** ([mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md)):
+   prove local H1$_{\rm gap}$ transport of integrated-out fluctuations down
+   to $\xi\simeq a$, certified H2 mixing at one coupling, then uniform
+   H1$_{\rm OS}$ normalization and H3 OS convergence/nontriviality.  The
+   fibrewise relative-Schur and constant-mode-gap estimates are the
+   small-volume valley-lifting task
    ([weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md)).
 8. **Newton necessity: the readout law.** Every premise so far is either
    supplied (quantum kinematics, Thm C), circular ($\zeta$ from SED at

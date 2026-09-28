@@ -144,14 +144,16 @@ open requirement on the other side is $g_{\rm RG}^2\ge1$: the small-field
 renormalization must be carried three doublings past the point where
 $\xi/a\simeq10$.
 
-**The whole problem in one sentence.** The mass gap for $SU(3)$ is the
-control of about six consecutive blocking steps of the lattice theory
-at order-one coupling, uniformly in the volume: three from the weak
-side, where $\xi/a$ falls from $10$ to $1$, and three from the strong
-side, which are standard once mixing is certified at the coupling in
-between. [The conditional theorem](mass-gap-conditional-theorem.md)
-states this as two hypotheses and an explicit conclusion. Everything else on the map is either perturbative in kind or
-proved with explicit constants.
+**The blocking bottleneck in one sentence.** The unresolved lattice
+spectral step is control of about six consecutive blocking steps at
+order-one coupling, uniformly in volume: three from the weak side, where
+$\xi/a$ falls from $10$ to $1$, and three from the strong side, which are
+standard once mixing is certified at the coupling in between.  This is
+H1$_{\rm gap}$ plus H2 of [the conditional assembly theorem](mass-gap-conditional-theorem.md).
+It is necessary but not sufficient for a continuum mass gap:
+H1$_{\rm OS}$ and H3 retain the renormalized local sector through the
+continuum limit.  Nothing here makes those construction obligations
+perturbative or solved.
 
 ## 3. What this changes
 

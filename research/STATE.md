@@ -33,19 +33,27 @@ fill its cells (open cells in its §5).
   Positive quantum action is an input to those quantum results; the
   independent necessity argument remains open. All three September 23
   adversarial review batches are complete.
-- [The mass-gap position](../notes/mass-gap-position.md) and
-  [conditional theorem](../notes/mass-gap-conditional-theorem.md) hold
-  the pure-gauge map: finite-lattice and strong-coupling results,
-  with H1/H2 blocking and mixing estimates open. Continuum construction
-  and nontriviality (T4) remain explicit obligations.
+- [The mass-gap position](../notes/mass-gap-position.md) and the
+  sharpened [conditional assembly theorem](../notes/mass-gap-conditional-theorem.md)
+  hold the pure-gauge map.  Its proved implication now separates
+  scale-by-scale blocking transport (H1$_{\rm gap}$), uniform renormalized
+  observable normalization (H1$_{\rm OS}$), one-box mixing (H2), and OS
+  convergence/nontriviality (H3): together they imply a volume- and
+  cutoff-independent lower bound.  All four remain open in the required
+  weak/intermediate $SU(3)$ regime.  The same note gives the alternative
+  persistent-soft-observable-weight condition for a zero threshold.
 - [The working note, §5](../notes/three-continuum-limits.md) states the
   elementary spectral criteria for retaining a positive or zero
   threshold, including the need for surviving observable weight.
 - [The completed $0+1$ proof](../notes/low-dimensional-mass-gap.md) now
   covers compact semisimple matrix mechanics, including $SU(3)$, and its
   $3+1$ constant-mode truncation has a gap proportional to
-  $g^{2/3}\hbar c/L$. Its $L^{-1}$ scaling marks the exact boundary before
-  the full volume-uniform continuum problem.
+  $g^{2/3}\hbar c/L$.  The [torus-valley calculation](../notes/torus-valley-potential.md)
+  now derives the matching $SU(3)$ Cartan root-sum one-loop potential and
+  its $O(g^{4/3}\hbar c/L)$ nonzero-mode correction.  This is a small-box
+  input only; its fibrewise Schur estimate and its transport through
+  blocking remain open.  The $L^{-1}$ scaling marks the exact boundary
+  before the full volume-uniform continuum problem.
 - [The refinement note](../notes/refinement-composition-and-limit.md)
   constructs the arbitrary-partition constant-force limit, gives exact
   two-dimensional gauge subdivision and a sufficient summable-error
@@ -94,12 +102,17 @@ fill its cells (open cells in its §5).
    increments, mass composition and additive-noise testing give the
    conditional Planck mesh. Positivity and the physical noise law remain
    premises; Nelson supplies a separate mean-dynamics framework.
-3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
-   [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
-   the valley-lifting task to connect to the refinement construction.
-   Use the pion benchmark where it tests the symmetry of a proposed
-   mechanism; carry successful bounds toward reconstruction and the
-   joint paper.
+3. **Spectral bridge:** the fibrewise relative-Schur estimate needed by
+   the small-volume programme remains the valley-lifting task to connect
+   to refinement.  The new [SU(3) Cartan root sum](../notes/torus-valley-potential.md)
+   fixes the one-loop local coefficient but is not that estimate.  Its
+   output must feed H1$_{\rm gap}$ and H1$_{\rm OS}$ of the
+   [assembly theorem](../notes/mass-gap-conditional-theorem.md), then H2
+   and OS reconstruction.  The [action-calibration bridge](../notes/uv-halving-ir-confinement.md)
+   records exactly where $h_*=h_P/(2\pi)=\hbar_{\rm YM}$ is an added
+   physical input rather than a mass-gap inference.  Use the pion
+   benchmark where it tests the symmetry of a proposed mechanism; carry
+   successful bounds toward reconstruction and the joint paper.
 
 Attainment of the existing disturbance bounds and the Planck paper's
 §11 historical/submission obligations remain open. Other mass-gap

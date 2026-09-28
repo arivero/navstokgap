@@ -97,11 +97,13 @@ only a channel statement. Reflection positivity and reconstruction are
 part of the route from correlations to the physical Hamiltonian; a
 Langevin relaxation rate by itself is a different object.
 
-The existing H1/H2 route aims to deliver
-$E_-=(\hbar c/a_*)\min(\gamma_*,\gamma')$. It remains conditional on
-the blocking and mixing estimates. Construction and nontriviality,
-called T4 in the [obligations map](mass-gap-obligations-lattice.md), must
-remain explicit as well. We choose $L\to\infty$ at fixed $a$ followed
+The existing H1$_{\rm gap}$/H2 route aims to deliver the cutoff threshold
+$E_-=(\hbar c/a_*)\min(\gamma_*,\gamma')$.  It remains conditional on the
+blocking and mixing estimates.  Uniform renormalized normalization
+(H1$_{\rm OS}$), construction and nontriviality (H3/T4 in the
+[obligations map](mass-gap-obligations-lattice.md)) must remain explicit
+as well; together they are formalized in the
+[conditional assembly theorem](mass-gap-conditional-theorem.md). We choose $L\to\infty$ at fixed $a$ followed
 by $a\to0$ along the trajectory as the working order; interchanging
 these operations requires its own uniform estimates.
 
@@ -378,8 +380,9 @@ The research order is deliberately bounded.
    positive ground energy alone does not establish the excitation gap;
    the first excited energy and the ground energy need comparison.
    Stop at one proved estimate, or the precise uncontrolled term in
-   that estimate. Fixed-cutoff H3 would be a result, with its boundary
-   retained; it would not close H1/H2 or T4 of the full mass-gap map.
+   that estimate.  A fixed-cutoff Feshbach H3 would be a result, with its
+   boundary retained; it would not close H1$_{\rm gap}$, H1$_{\rm OS}$,
+   H2, or OS/T4 of the full mass-gap map.
 2. **Newton necessity: construct the missing physical premise.** Use
    one explicit model of records and their composition, with calibrated
    lengths, impulses and time. Seek a refinement-independent positive

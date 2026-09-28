@@ -125,8 +125,7 @@ With these sizes the three inequalities that Lemma 1 needs are:
 
 > **(H2)** $\eta=\sup_{E\le a_1}\|(D-E)^{-1/2}\bar PWP\|^2\ \le\ C_2\,g^{4/3}\hbar c/L$. > The leading contribution is the $W_2$ term linear in $a$ (order > $g^{2/3}\hbar c/L$, creating one or two nonzero quanta) squared and > divided by $2\pi\hbar c/L$; the $W_3$ term of order $g\hbar c/L$ > contributes $g^2\hbar c/L$.
 
-> **(H3)** $\operatorname{gap}(A)=\operatorname{gap}\big(H_0+U(a)\big)\ \ge\ \delta_1^{(3)}g^{2/3}(1-C_3g^{2/3})\,\hbar c/L$. > $U(a)$ is even in $a$ (charge conjugation), its linear term vanishes, > and its quadratic term is of order $g^{4/3}\hbar c/L$, a relatively bounded
-> perturbation of $h_3$ in the rescaled variables.
+> **(H3)** $\operatorname{gap}(A)=\operatorname{gap}\big(H_0+U(a)\big)\ \ge\ \delta_1^{(3)}g^{2/3}(1-C_3g^{2/3})\,\hbar c/L$. > $U(a)$ is even in $a$ (charge conjugation), and its local quadratic > term is of order $g^{4/3}\hbar c/L$.  To infer the displayed bound one > still needs a *global relative-form estimate* for the full periodic > potential and the non-adiabatic terms; the local power count alone does > not prove that estimate.
 
 Given (H1)--(H3), Lemma 1 with $\mu=E_\perp+\frac{2\pi\hbar c}{L}(1-C_1g^{2/3})$ and $a_1-\eta<\mu$ (true for small $g$ since $a_1-a_0=O(g^{2/3}\hbar c/L)$ and $a_0-E_\perp=O(g^{2/3}\hbar c/L)$) yields $$\Delta\ \ge\ \delta_1^{(3)}\,g^{2/3}\,\frac{\hbar c}{L}\,\big(1-Cg^{2/3}\big).$$ This is the lower side of the small-volume corner S,
 matching the upper side obtained in
@@ -175,18 +174,21 @@ U(a)=\tfrac12\sum_k\big[\omega_k(a)-\omega_k(0)\big]+\text{const},$$
 and $U(a)$ is the one-loop effective potential of the constant modes on
 the torus: even in $a$, with the finite quadratic Casimir term
 $c_2(La)^2/L$, a finite quartic term, and a quartic term
-$\propto|[a,a]|^2\log(\Lambda L)$ that renormalizes $1/g^2$. In rescaled
-variables the finite part of $U$ is $O(g^{4/3}/L)$ and the logarithm is
-$O(g^{4/3}\cdot g^{2}\log\Lambda L\,/L)$ relative to $H_0$'s $g^{2/3}/L$:
-(H3) holds with $g$ understood as the renormalized coupling at the scale
-$L$, which is Lüscher's statement. With a periodic cutoff the
-$a$-independent projection of Section 2 also works at the level of
-sizes, since its second-order Schur term is the same finite Casimir
-sum; the fibered projection is cleaner because it removes $W_2$ from the
-error altogether.
+$\propto|[a,a]|^2\log(\Lambda L)$ that renormalizes $1/g^2$.  In rescaled
+variables its local finite part has size $O(g^{4/3}/L)$ and the logarithmic
+term has the expected running-coupling size
+$O(g^{4/3}\cdot g^{2}\log\Lambda L\,/L)$ relative to $H_0$'s
+$g^{2/3}/L$.  This is power counting, not H3: a local expansion does not
+supply a global relative-form inequality for the periodic potential,
+especially along the compact valley.  A periodic cutoff removes the sharp
+cutoff's spurious quadratic divergence at the level of the one-loop
+potential, but it does not establish the fibrewise Schur or form bounds.
+The fibered projection is still the natural candidate because it absorbs
+$W_2$ from the off-diagonal error.
 The non-adiabatic terms come from $p_i$ acting on $\Omega_\perp(a)$
-(the Berry connection of the fibered vacuum) and are of relative order
-$g^{4/3}$.
+(the Berry connection of the fibered vacuum); their asserted relative
+$g^{4/3}$ control is likewise an estimate to be proved, not a conclusion
+of the displayed scaling.
 
 *Schur error.* With the fibered $P$, $\bar PWP$ contains only $W_3$,
 $W_4$ and the non-adiabatic terms. $W_3$ creates three quanta with
@@ -200,41 +202,51 @@ running of the coupling.
 
 *Relative form of the lemma.* The constant-mode coordinate $\xi$ is
 unbounded and the pair amplitudes grow with $|\xi|$, so $\eta$ cannot be
-a uniform operator bound; the usable hypothesis is relative to $A$:
+a uniform operator bound; the usable **hypothesis** is relative to $A$:
 $B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta$ with $0\le\epsilon<1$. Then
 $F(E)\ge(1-\epsilon)(A-a_0)+a_0-E-\eta$, the count of negative
 eigenvalues of $F(E)$ is at most $\#\{k:a_0+(1-\epsilon)(a_k-a_0)-\eta<E\}$,
-and the same argument gives $E_0\ge a_0-\eta$, $E_1\ge a_0+(1-\epsilon)(a_1-a_0)-\eta$,
-hence $\operatorname{gap}(H)\ge(1-\epsilon)(a_1-a_0)-\eta$. The confining
-potential of $h_3$ controls $\langle|\xi|^2\rangle$ in terms of
-$A-a_0$, which is what makes $\epsilon$ small, of order $g^{2/3}$.
+and the same argument gives $E_0\ge a_0-\eta$,
+$E_1\ge a_0+(1-\epsilon)(a_1-a_0)-\eta$, hence
+$\operatorname{gap}(H)\ge(1-\epsilon)(a_1-a_0)-\eta$.  C133 gives
+confinement/localization information for the unperturbed $h_3$, but that
+alone does not bound the global $|\xi|^2$ growth or the fibre derivatives
+by $A-a_0$ with the required small coefficient.  Producing this inequality
+on a periodic gauge-invariant regulator is the open relative-Schur task.
 
 The corrected list is: (H1) as before for $H_\perp(a)$; (H2) in the
 relative form for the fibered Schur error; (H3) for $h_3+U$ with $U$ the
-finite one-loop torus potential including its Casimir quadratic term.
+finite one-loop torus potential including its Casimir quadratic term.  All
+three remain hypotheses.  The $SU(3)$ Cartan root sum is now known at
+one loop in [the torus-valley note](torus-valley-potential.md) §3c, but it
+does not promote these $SU(2)$ fibre estimates to $SU(3)$.
 
 ## 4. What the reduction shows
 
 The smallness parameter is $g^{2/3}$ in every entry of the table, which
-is the reason the small-volume expansion is a series in $g^{2/3}$. The
-mechanism transferred is the zero-point confinement of C133: $A$ is that
-operator plus a small even potential, and the nonzero modes enter only
-through the price $\eta$ of leaving their vacuum. The reduction also
-shows where the small-volume regime ends: (H1) fails when $C_1g(L)^{2/3}$ reaches order one, that is when $\Delta_0(L)\sim2\pi\hbar c/L$,
-which is the crossover $z\simeq2$ of Lüscher--Münster in the variable
-$z=\Delta L$. Beyond it, leaving the nonzero-mode vacuum is no longer
-expensive compared with the constant-mode gap, no projection of the form
-$P$ separates scales, and the argument gives nothing, which is the
-statement of T2$'$'s difficulty in this language.
+is why a valid small-volume expansion would be a series in $g^{2/3}$.  The
+candidate mechanism is the zero-point confinement of C133: after the
+unproved fibre estimates, $A$ would be that operator plus a controlled
+even potential, and the nonzero modes would enter through the price
+$\eta$ of leaving their vacuum.  The reduction also identifies where this
+scale separation must fail: when $C_1g(L)^{2/3}$ reaches order one, or
+$\Delta_0(L)\sim2\pi\hbar c/L$, the crossover is the
+$z\simeq2$ regime of Lüscher--Münster in the variable $z=\Delta L$.
+Beyond it, leaving the nonzero-mode vacuum is no longer expensive compared
+with the constant-mode gap, no projection of the form $P$ separates
+scales, and this argument gives nothing.  That is T2$'$'s difficulty in
+this language.
 
 ## 5. Consequence for STATE
 
-The weak-coupling lower bound is now three inequalities on explicit
-polynomial operators, with a proved transfer lemma. The next step on
-the lower side is the fibered (H2): the non-adiabatic terms and the
-$W_3$ Schur error against the nonzero-mode gap, on a lattice cutoff, with
-the C133 ground state as weight; (H1) and (H3) are relatively bounded
-perturbation statements, (H3) requiring the finite one-loop torus
-potential. Their proof would close the small-volume corner
-S from both sides and make the crossover statement the whole remaining
-content of T2$'$ at fixed cutoff.
+The weak-coupling lower bound reduces **conditionally** to three
+inequalities on explicit polynomial/fibre operators, with a proved
+transfer lemma.  The next step is the fibrewise relative (H2): bound the
+non-adiabatic terms and the $W_3$ Schur error against the nonzero-mode gap,
+on a periodic gauge-invariant lattice cutoff, with the C133 ground state
+as an energy-localization input.  H1 and H3 require their own global
+relative-form estimates; the one-loop torus potential fixes a local
+coefficient but not either estimate.  Proving all three, first for a
+specified group and cutoff and then uniformly under blocking, would close
+the small-volume corner S.  It would still leave the crossover/mixing and
+OS obligations of the full $3+1$ programme.
