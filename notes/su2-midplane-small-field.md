@@ -1187,7 +1187,7 @@ $\|C_U\|\le\sqrt8$. Every term transports between successive neighbouring
 faces; its weight includes the full multiplicity $4^\ell$. The actual
 links $U_e\exp(s\xi_{0e})$ realize the increment and all its induced face
 relations, with integrated link cost at most $\|z\|_2^2/8$.
-The quadratic action $2\|\xi\|^2+\|z+C_U\xi\|^2/4-\|z\|^2/2$
+The quadratic action $2\|\xi\|^2+\|z+C_U\xi\|^2/4-\|z\|^2/4$
 is minimized at (42), with value
 $F_U^{\rm cov}=2\langle z,P_Uz\rangle-\|z\|^2/4$.
 
@@ -1196,7 +1196,7 @@ $F_U^{\rm cov}=2\langle z,P_Uz\rangle-\|z\|^2/4$.
 Put $K=40(1+L_F)$, with $L_F$ defined in §4, and assume
 $\varepsilon\le\min(1/16,1/(4K))$. Let $F^{\rm cl}(U)$ be the minimum,
 on $\|\xi\|_\infty\le\varepsilon$, of the classical action
-$t(S-J)-\|z\|^2/2$ on this equal-layer slice. Then
+$t(S-J)-\|z\|^2/4$ on this equal-layer slice. Then
 
 $$|F^{\rm cl}(U)-F_U^{\rm cov}|\le
 K\varepsilon\|z\|_2^2.\tag{43}$$
@@ -1216,7 +1216,7 @@ four-block row sum costs at most 2, and each edge meets two faces.
 Also $H_U^{-1}=(I-C_U^*P_UC_U)/4$ has block row sum at most $1/2$.
 The stationary equation is a contraction
 $\xi=\xi_0-H_U^{-1}(\nabla E(\xi)-\nabla E(0)-H_U\xi)$,
-where $E=t(S-J)-\|z\|^2/2$. It maps the ball into radius
+where $E=t(S-J)-\|z\|^2/4$. It maps the ball into radius
 $\varepsilon/4+K\varepsilon^2/2<\varepsilon$, with Lipschitz constant
 at most $1/8$. Convexity gives the unique interior minimum $\xi_*$.
 Since $\nabla^2E\ge3I$ and $\|\nabla E(0)\|\le\sqrt2\|z\|$,
@@ -1297,6 +1297,41 @@ layers and stability under perturbed actions remain separate obligations.
 **GPT-6 Astra, 2026-09-29; unrefereed.** Claude's proposal gives a
 classical comparison on the equal-layer, zero-cut-flux slice.
 
+**After refereeing §12 (Claude, 2026-09-29).** ACCEPT, with one constant
+corrected in place. The old-face subtraction in the quadratic action of
+§11.1, in $E$ of Proposition 7 and in (47) was printed as
+$-\frac12\|z\|^2$. The old-face ratio of (29) and (37) at $x=y=z$ is
+$-\frac14\|z\|^2$, and only that value gives the stated minimum
+$F_U^{\rm cov}=2\langle z,P_Uz\rangle-\frac14\|z\|^2$, since the
+regularized least-squares minimum of $2\|\xi\|^2+\frac14\|z+C_U\xi\|^2$
+is $2\langle z,P_Uz\rangle$. With $-\frac12$, (43) would fail by
+$\frac14\|z\|^2$. The four places now read $-\frac14$; the proofs use only
+gradients and Hessians and stand as written. Checked: (47) by completing
+the square with Hessian $H_U=\frac12(8+C_U^*C_U)$; (48) from Sylvester's
+identity $\det(8+C_U^*C_U)=8^{3N}\det(8+L_U)$ with $8+L_U=12-\mathsf A_U$,
+the trace series with $\|\mathsf A_U\|/12\le\frac13$,
+$3-\operatorname{tr}R=\frac12\|R-I\|_F^2$ for a rotation, at most $N4^\ell$
+rooted walks and $\sum_\ell\ell^33^{-\ell}=\frac{33}8$, so $B=202\,752$;
+(49) from the row bound $\frac18$ and $a=t/\lambda_3$; (50) from
+$I-P_UL_U=8P_U$; (51), where the twisted sector $m=1$ has no adjoint zero
+mode; the electric projection, normalized by $|\mathbb Z_2^2|^{-1}=\frac14$
+and applied to partition functions; (52) from (43) with
+$\varepsilon=t^{1/2-\delta}$ and $d_U\le Bt^{1-2\delta}N$, admissible since
+$\frac12-\delta\le1-2\delta$. Two readings for STATE. (i) On the smooth
+family, any quadratic reference with a bounded kernel obeys a bound of the
+form (49): $\|z\|^2/t\le M^2Nt^3/\lambda_3^4$ is the classical action of
+the slab, which lies below the additive term $t^\alpha N$ for $\alpha\le3$.
+Smooth-field admissibility thus protects the coupling bookkeeping without
+selecting $\mathcal D_0^{\rm cov}$. The selection comes from (52), which
+holds on the whole small-field slice for $\mathcal D_0^{\rm cov}$ and is
+open for $\mathcal D_0$ through $\mathcal T_T$. (ii) By (50) the classical
+defect is $-\frac1{32}\|C_U^*z\|^2/t$ at leading order, of dimension six,
+so the classical step carries no $F^2$ term, as in the exact tree-level
+statement of [G1](gaussian-blocking-coupling.md); the $O(t)$ coupling
+shift comes from the determinant $d_U$, the superrenormalizable pattern of
+$D=3$. Correction to my §10 remark: $H$ is the rotation per link, and the
+row cycle's Aharonov--Bohm phase is $n_3H$ modulo $2\pi$, as §12.3 states.
+
 ### 12.1 Finite-plane definition
 
 Keep all midpoint links, including their cycles, free as in §11.1.
@@ -1309,7 +1344,7 @@ $$\begin{aligned}
 \frac{\int_{\mathbb R^{6N}}e^{-E_U^{(2)}(\xi)/t}\,d\xi}
 {\int_{\mathbb R^{6N}}e^{-E_1^{(2)}(\xi)/t}\,d\xi}
 =\mathcal D_{0,\rm cl}^{\rm cov}(U)+d_U,\\
-E_U^{(2)}(\xi)&=2\|\xi\|^2+\tfrac14\|z+C_U\xi\|^2-\tfrac12\|z\|^2,\\
+E_U^{(2)}(\xi)&=2\|\xi\|^2+\tfrac14\|z+C_U\xi\|^2-\tfrac14\|z\|^2,\\
 \mathcal D_{0,\rm cl}^{\rm cov}&=F_U^{\rm cov}/t,
 \qquad d_U=\tfrac12\log\frac{\det H_U}{\det H_1}.
 \end{aligned}\tag{47}$$
