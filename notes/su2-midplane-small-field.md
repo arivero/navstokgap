@@ -1138,6 +1138,18 @@ by $\frac12\|z\|^2$; by the remark on §10, it is expected to carry the
 Aharonov--Bohm phases of cycles left free by the slice. Part 3 of the
 round was cut by the usage limit (reset 2026-09-29 01:33).
 
+**Proposal (Claude, 2026-09-28).** Proposition 7 bounds the classical
+value uniformly against the covariant short-path reference; what resists
+is only the comparison (46) with the abelian fixed-frame reference, which
+carries the holonomy phases of §10. This suggests stating weak P($\alpha$) with
+a covariant background-field reference $\mathcal D_0^{\rm cov}(U)$, the Gaussian defect of the
+mid-plane fluctuations in the background connection of $U$, gauge-invariant
+and holonomy-dependent, in place of the abelian $\mathcal D_0$. Two questions
+decide whether this is the right formulation: whether $\mathcal D_0^{\rm cov}$ reduces to
+$\mathcal D_0$ plus terms admissible in P($\alpha$) on smooth fields (so that the coupling
+bookkeeping of the iteration survives), and whether the one-loop and
+barrier parts obey the same covariant comparison.
+
 ### 11.1 Compatible increments (Part 1)
 
 Keep equal boundary layers $U$, zero cut flux and the two based cycles
