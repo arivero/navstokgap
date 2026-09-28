@@ -1,0 +1,283 @@
+# Continuum $SU(3)$ gap assault plan: proof interfaces, independent workstreams, and attribution
+
+**Status — execution plan, 2026-09-28.**  The completed $0+1$ theorem and
+the $SU(3)$ Cartan one-loop calculation do not prove a $3+1$ continuum
+mass gap.  The [conditional assembly theorem](../notes/mass-gap-conditional-theorem.md)
+now makes the remaining target precise.  This document turns its four
+hypotheses into bounded research workstreams, records the interface each
+must meet, and specifies how actual delegated contributions will be
+credited in commits.  It is not a claim that the outlined estimates are
+currently available.
+
+## 1. End product and common conventions
+
+Fix a reflection-positive, periodic, gauge-invariant lattice regulator for
+pure $SU(3)$, a scaling trajectory $a_0\downarrow0$, and a local
+reflection-stable algebra of gauge-invariant observables.  The desired
+conditional conclusion is an OS-reconstructed, nontrivial continuum
+Hilbert space in which
+\[
+ \operatorname{spec}(H)\cap(0,m_*)=\varnothing,
+ \qquad m_*\ge\frac{\hbar c}{a_*}\min(\gamma_*,\gamma')>0. \tag{1}
+\]
+The four proof interfaces are:
+
+| Interface | Required output | Failure it excludes |
+| --- | --- | --- |
+| H1$_{\rm gap}$ | local block map, support buffer, and the scale-by-scale connected-correlation difference bound (2) of the assembly theorem | an apparent finite-volume gap that is lost under ultraviolet refinement |
+| H1$_{\rm OS}$ | a specified renormalized local algebra with the uniform summability bound (3) | divergent correlator prefactors or vanishing observable residues |
+| H2 | a volume-uniform, gauge-invariant one-box strong-mixing neighbourhood at a physical crossover scale | an infrared correlation length that grows with the box |
+| H3 | tight/convergent Schwinger functions, OS axioms, spectral-measure convergence, and a surviving non-vacuum local vector | a cutoff theory with no constructed continuum sector |
+
+T3 is deliberately separate: after (1), a controlled running coupling and
+nonzero finite $a_*\Lambda$ are needed to identify a universal
+$m/(\hbar c\Lambda)=C$.  Dimensional transmutation alone does not establish
+$C>0$.
+
+All workstreams use explicit $\hbar,c$, take $L\to\infty$ before the
+continuum limit unless they prove a stronger interchange statement, and
+must distinguish a true spectral measure from a finite-lattice eigenvalue
+list.  The repository rule against numerical or symbolic verification
+scripts remains in force.
+
+## 2. Workstream A — nonconstant modes and the small-volume interface
+
+**Question.**  Can a gauge-invariant regulator control the nonzero-momentum
+sector uniformly enough that the C133 constant-mode mechanism is retained
+at weak small volume?
+
+**Precise target.**  For a fibrewise/Born--Oppenheimer projection $P(a)$,
+prove at fixed lattice cutoff, on a stated weak-coupling interval,
+\[
+ \bar P H\bar P\ge E_\perp+\frac{2\pi\hbar c}{L}(1-C_1g^{2/3}),\tag{A1}
+\]
+\[
+ B(D-E)^{-1}B^*\le\epsilon(A-a_0)+\eta,
+ \quad\epsilon<1,\quad
+ \eta\le C_2g^{4/3}\frac{\hbar c}{L},                       \tag{A2}
+\]
+and a global, not merely Taylor-local, bound giving
+\[
+ \operatorname{gap}(A)\ge d_3g^{2/3}(1-C_3g^{2/3})
+ \frac{\hbar c}{L}.                                         \tag{A3}
+\]
+The preceding root-sum calculation supplies only the Cartan one-loop
+coefficient in (A3); it proves none of (A1)--(A3).
+
+**Independent attack lines.**
+
+1. Derive the covariant lattice Hessian and its nonzero-mode lower bound
+   uniformly on a Cartan patch; treat Weyl walls and non-Cartan backgrounds
+   by a gauge-invariant partition of unity.
+2. Compute the fibre-vacuum quantum metric and Born--Huang term before
+   assuming it is $O(g^{4/3})$.  Establish which divergent pieces are
+   coupling/field renormalizations and which leave a relative Schur error.
+3. Combine a local root-potential estimate with a quantitative spectral
+   localization of the C133 Hamiltonian.  A local negative quadratic
+   coefficient may not be promoted to a global form bound without an
+   exterior barrier estimate.
+4. Seek a counterexample or an ultraviolet obstruction to (A2); a sharp
+   cutoff is already known to fail, so a periodic lattice cutoff must be
+   used from the start.
+
+**Acceptable deliverable.**  One stated regulator, one Hilbert/gauge
+sector, and either a complete proof of one of (A1)--(A3), or a proved
+obstruction identifying the counterterm/estimate still needed.  A
+fixed-cutoff result must retain its cutoff dependence and may not be called
+H1$_{\rm gap}$.
+
+## 3. Workstream B — exact blocking to H1$_{\rm gap}$
+
+**Question.**  How can the exact fine-to-coarse push-forward be shown to
+satisfy the successive-correlation estimate rather than merely reproduce
+selected Wilson loops?
+
+**Precise target.**  Construct a local gauge-covariant block map with a
+fixed support buffer $b$ and prove, for a closed local test algebra,
+\[
+ \left|\langle F^{(k)};G^{(k)}\rangle-
+ \langle F^{(k+1)};G^{(k+1)}\rangle\right|
+ \le C_k\|F^{(k)}\|\|G^{(k)}\|e^{-\gamma_*d_k},            \tag{B1}
+\]
+with $\gamma_*>0$ independent of refinement depth, periodic volume, and
+$k<K(a_0)$.  The exact telescoping lemma then transports this to the
+physical scale; it does not need invented residual cross-correlation
+bounds.
+
+**Independent attack lines.**
+
+1. Use the exact series/parallel and heat-kernel identities to isolate the
+   generated transverse interaction of one blocking step, then prove a
+   weighted polymer/small-field estimate for its *connected* effect.
+2. Compare raw decimation with a flowed, gauge-covariant block variable.
+   The latter may improve locality, but reflection positivity and the
+   support buffer must be retained explicitly.
+3. Work backwards from a Dobrushin--Shlosman norm: show that a generated
+   interaction stays in a local interaction ball whose norm gives (B1).
+4. Search for large-field/centre sectors whose density prevents a uniform
+   $\gamma_*$.  A negative finding is valuable only if it is expressed as a
+   failure of (B1), not as a heuristic phase diagram.
+
+**Milestone boundary.**  Weak-coupling steps and the final order-one
+crossover steps are different problems.  A uniform proof through the
+former plus an explicit finite list of unresolved latter steps is progress;
+calling that a continuum proof is not.
+
+## 4. Workstream C — analytic one-box mixing (H2)
+
+**Question.**  Can one certify a gauge-invariant mixing neighbourhood at
+one physical coupling without mistaking Haar single-link marginals for
+physical mixing?
+
+**Precise target.**  Choose a finite reference interaction and prove, for
+all interactions in a stated norm ball, a Dobrushin--Shlosman-type bound
+on gauge-invariant local observables,
+\[
+ |\langle X;Y\rangle|\le C'\|X\|\|Y\|e^{-\gamma'd(X,Y)},
+ \,\qquad \gamma'>0,                                      \tag{C1}
+\]
+with constants independent of periodic volume.
+
+**Independent attack lines.**
+
+1. Derive a hand-checkable local conditional-distribution contraction for
+   small Wilson-loop algebras, including an explicit gauge fixing or
+   gauge-invariant quotient.
+2. Investigate a nearby fundamental--adjoint interaction chosen to avoid
+   the scalar-softening endpoint, then prove that the desired Wilson
+   trajectory enters its certified open ball.
+3. Derive finite-volume boundary sensitivity bounds using character
+   expansions with analytic remainder estimates.  Numerical fits may guide
+   a conjecture but cannot serve as the certificate under this project's
+   rules.
+4. As an adversarial test, try to construct boundary data or centre-flux
+   sectors that violate (C1).  This prevents a channel-specific glueball
+   estimate from being mislabeled as strong mixing.
+
+## 5. Workstream D — H1$_{\rm OS}$, H3, and the spectral limit
+
+**Question.**  Which renormalized local objects survive both limits, and
+how is the lattice lower support bound carried to their OS spectral
+measures?
+
+**Precise target.**  Specify $\mathcal A_R$, prove
+\[
+ \sup_{a_0}\sum_{k<K(a_0)} C_k(a_0)
+ \|F^{(k)}\|\|G^{(k)}\|<\infty,                            \tag{D1}
+\]
+then establish tightness/convergence of its Schwinger functions,
+reflection positivity, Euclidean covariance, local generation of the OS
+space, and weak convergence of vacuum-subtracted spectral measures.
+
+**Independent attack lines.**
+
+1. Start with flowed Wilson-loop observables at positive physical flow
+   time, where a bounded test algebra and reflection-compatible smearing
+   may be tractable; only then study flow-time removal.
+2. Prove support preservation directly for Laplace transforms of positive
+   spectral measures.  This keeps the spectral statement separate from
+   field-coordinate convergence.
+3. Build the gapless control in parallel: if positive local spectral
+   weight remains in every interval $(0,\epsilon)$, the soft-weight
+   proposition proves zero threshold.  Eigenvalues whose residues vanish
+   decide neither alternative.
+4. Test each proposed compactness claim against free Maxwell and the
+   massless-pion channel, both of which have a positive action scale but
+   soft observable spectral weight.
+
+## 6. Workstream E — scale matching and the $h$ calibration audit
+
+**Question.**  Once a spectral theorem exists, what is needed to write it
+as $E=C\hbar c\Lambda$ and to relate its action unit to the QM/Planck
+programme?
+
+**Precise target.**  Prove a scheme-controlled step-scaling relation with
+finite nonzero physical $a_*\Lambda$, and separately state the empirical
+calibration
+\[
+ h_*=\hbar_{\rm YM}=h_P/(2\pi).                              \tag{E1}
+\]
+The record/radiation programme may conditionally supply $h_*>0$; it does
+not derive (E1), the Yang--Mills beta function, or $C>0$.
+
+**Adversarial checks.**  Compact weak-coupling $U(1)$ and massless
+Goldstone channels must continue to satisfy the positive-action premises
+while failing the spectral conclusion.  Any proposed proof that cannot
+make this distinction has identified a supplied scale, not a Yang--Mills
+gap mechanism.
+
+## 7. Dependency order and stop rules
+
+```text
+A (fixed-cutoff nonconstant modes) ─┐
+                                    ├─> B (H1_gap) ─┐
+C (one-box mixing H2) ─────────────┘                ├─> D (H1_OS + H3) ─> (1)
+E (scale/calibration) ──────────────────────────────┘                 └─> T3 / C
+```
+
+- A is not required to begin B, but it is the clearest weak-small-volume
+  test of the nonconstant-mode mechanism.
+- B and C must be attacked independently; a successful one-box proof does
+  not control the ultraviolet depth, while weak-step estimates do not
+  prove an infrared box gap.
+- D begins by fixing the observable algebra, not after declaring a gap.
+- E is an audit stream and must never be used to fill an analytic gap in
+  A--D.
+
+A workstream stops and reports rather than silently broadening its claim
+when it encounters: cutoff growth not absorbed by a stated renormalization;
+loss of support locality; a bound depending on $L$; a proof only for a
+single correlator; or an unproved positivity/compactness transfer.
+
+## 8. Delegation and commit attribution protocol
+
+The intended delegation uses **independent** analysts, not a chain that
+shares an assumed conclusion:
+
+| Workstream | Delegated role | Required report |
+| --- | --- | --- |
+| A | spectral/Feshbach analyst | derivation of one bound or a UV obstruction, with oscillator and regulator conventions |
+| B | lattice-RG analyst | exact block identity plus a norm in which the B1 remainder is estimated |
+| C | mixing/cluster-expansion analyst | gauge-invariant conditional measure and a volume-uniform contraction or counterexample |
+| D | constructive-QFT/spectral analyst | observable algebra, tightness route, and support-preservation proof |
+| E | adversarial dimensional analyst | calibration assumptions and $U(1)$/Goldstone counterchecks |
+
+For every actual contribution, the integrating commit will include the
+workstream identifier in its subject, a short `Contribution:` paragraph in
+its body, and truthful trailers:
+
+```text
+Co-authored-by: <selected subagent identity> <provided-address>
+Assisted-by: <selected subagent identity> (<workstream and report scope>)
+Reviewed-by: <selected subagent identity> (<what was checked>)
+```
+
+`Co-authored-by` is reserved for text/derivations incorporated from that
+agent.  `Assisted-by` is used for an idea, audit, or failed route that
+materially shaped the commit.  No trailer will be invented for an agent
+that was not actually run; the integrator's ordinary Arena trailer remains
+separate.  Each report will be retained in a named, lightweight research
+note or summarized in the commit body so that later authors can audit the
+attribution.  Since this Arena checkout is fixed to one branch, all such
+commits remain on `arena/01a0e7ac-navstokgap` rather than opening
+workstream branches.
+
+## 9. First concrete tasks
+
+1. **A1 audit:** calculate the finite-cutoff fibre-vacuum quantum metric
+   on the $SU(3)$ Cartan patch and compare its Born--Huang energy with
+   $g^{2/3}\hbar c/L$.  This tests a hidden assumption behind A2 before
+   attempting a relative-Schur estimate.
+2. **B1 formulation:** specify the smallest closed bounded Wilson-loop
+   algebra and a block-map support buffer for which the telescoping
+   hypothesis can even be stated.
+3. **C1 choice:** select one analytic mixing criterion and write its
+   gauge-invariant conditional distributions; do not start from an
+   unverified numerical correlation length.
+4. **D1 observable ledger:** list the flowed/local observables for which
+   OS positivity and uniform two-point normalization are to be proved,
+   together with their candidate gapless channels.
+
+The first task is pursued immediately in the Feshbach note.  The other
+three are suitable for independent delegated reports and should be merged
+only after their assumptions are reconciled.

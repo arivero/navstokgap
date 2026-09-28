@@ -221,6 +221,97 @@ three remain hypotheses.  The $SU(3)$ Cartan root sum is now known at
 one loop in [the torus-valley note](torus-valley-potential.md) §3c, but it
 does not promote these $SU(2)$ fibre estimates to $SU(3)$.
 
+## 3b. First attack on the fibre estimate: the vacuum quantum metric has a UV cost
+
+The fibre projection cannot be treated as a harmless change of basis.  At a
+finite cutoff its Born--Huang term can be calculated already on the Cartan
+patch, and this supplies a necessary ultraviolet check on (H2).
+
+For one real oscillator of frequency $\omega(\lambda)>0$, with normalized
+ground state
+\[
+ \psi_\omega(q)=\left(\frac{\omega}{\pi}\right)^{1/4}
+ e^{-\omega q^2/2},
+\]
+a direct Gaussian integral gives
+\[
+ \big\|(1-|\psi_\omega\rangle\langle\psi_\omega|)
+ \partial_\lambda\psi_\omega\big\|^2
+ =\frac18\big(\partial_\lambda\log\omega\big)^2.          \tag{18}
+\]
+For a product vacuum the corresponding quantum metric is the sum of
+(18).  This identity is exact; it does not use perturbation theory.
+
+Take the same physical-mode counting as the zero-point sum in
+[the torus-valley calculation](torus-valley-potential.md): two transverse
+polarizations, both charges for each positive root, and all nonzero
+$k\in(2\pi/L)\mathbb Z^3$ up to a cubic-symmetric cutoff $\Lambda$.  At a
+Cartan background $a_i=a_i^AT_A$, the charged frequencies are
+\[
+ \omega_{k,\pm\alpha}(a)=c|k\pm\alpha(a)|.
+\]
+Let $G_{iA,jB}^{\rm freq}$ denote the frequency-diagonal part obtained by
+holding a chosen physical polarization frame fixed while differentiating
+the oscillator frequencies.  At $a=0$, (18) gives
+\[
+ G_{iA,jB}^{\rm freq}(0)
+ =\frac12\sum_{\alpha>0}\alpha_A\alpha_B
+ \sum_{0<|k|\le\Lambda}\frac{k_i k_j}{|k|^4}.              \tag{19}
+\]
+The formula uses the standard full Fourier/charge labeling; pairing the
+reality-related labels instead gives the same real-oscillator sum.  In the
+full constrained fibre, derivatives of the transverse polarization frame
+and the Gauss-law implementation can mix with this frequency-diagonal
+piece.  They must therefore be treated before (19) is asserted as a lower
+bound on the physical quantum metric.
+
+In the C133 metric $\|X\|^2=2\operatorname{Tr}X^2$, the $SU(3)$ root
+identity derived in the torus note is
+\[
+ \sum_{\alpha>0}\alpha\otimes\alpha=\frac32\,1_{\mathfrak h}.
+\]
+Cubic symmetry of the cutoff then reduces (19) to the explicit expression
+\[
+ \boxed{\quad
+ G_{iA,jB}^{\rm freq}(0)=\frac14\,\delta_{ij}\delta_{AB}\,S_\Lambda,
+ \qquad
+ S_\Lambda=\sum_{0<|k|\le\Lambda}\frac1{|k|^2}
+ \asymp L^3\Lambda .\quad}                                 \tag{20}
+\]
+More precisely its continuum leading term is
+$S_\Lambda\sim L^3\Lambda/(2\pi^2)$.  Thus the metric itself is not
+uniform as the ultraviolet cutoff is removed.
+
+If this frequency-diagonal piece survives in the projected slow kinetic
+energy without cancellation, it gives the Born--Huang scale
+\[
+ V_{\rm BH}^{\rm freq}(0)
+ =\frac{g^2\hbar c}{2L^3}\sum_{i,A}G_{iA,iA}^{\rm freq}(0)
+ =\frac{3g^2\hbar c}{4L^3}S_\Lambda
+ \asymp g^2\hbar c\Lambda .                                \tag{21}
+\]
+Relative to the desired C133 small-volume scale
+$g^{2/3}\hbar c/L$, this is
+\[
+ \frac{V_{\rm BH}^{\rm freq}}{g^{2/3}\hbar c/L}
+ \asymp g^{4/3}\Lambda L.                                  \tag{22}
+\]
+At a fixed finite cutoff the displayed scale is small only in a
+correspondingly restricted weak-coupling window; it is not a
+cutoff-uniform $O(g^{4/3})$ quantity when $\Lambda L\to\infty$.
+
+This is a **necessary audit, not a no-go theorem or a lower bound on the
+full physical Born--Huang term**.  Frame and Gauss-law derivatives may
+have cross terms with the frequency-diagonal derivative, and a
+renormalized gauge-invariant construction could reorganize (21).  The
+calculation does show what must be addressed before non-adiabatic terms
+are declared relative $O(g^{4/3})$: identify a gauge-invariant
+counterterm/kinetic renormalization which absorbs the $S_\Lambda$ piece;
+integrate ultraviolet momentum shells before forming the fibre projection
+and bound the remaining metric; or prove the requisite cancellation after
+the physical constraint is imposed.  This places a concrete
+cutoff-uniform sub-obligation ahead of the relative Schur estimate (H2).
+
 ## 4. What the reduction shows
 
 The smallness parameter is $g^{2/3}$ in every entry of the table, which

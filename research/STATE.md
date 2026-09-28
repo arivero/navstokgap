@@ -50,14 +50,24 @@ fill its cells (open cells in its §5).
   $3+1$ constant-mode truncation has a gap proportional to
   $g^{2/3}\hbar c/L$.  The [torus-valley calculation](../notes/torus-valley-potential.md)
   now derives the matching $SU(3)$ Cartan root-sum one-loop potential and
-  its $O(g^{4/3}\hbar c/L)$ nonzero-mode correction.  This is a small-box
-  input only; its fibrewise Schur estimate and its transport through
-  blocking remain open.  The $L^{-1}$ scaling marks the exact boundary
-  before the full volume-uniform continuum problem.
+  its $O(g^{4/3}\hbar c/L)$ nonzero-mode correction.  A new finite-cutoff
+  fibre-vacuum audit finds a frequency-diagonal quantum metric of size
+  $S_\Lambda\asymp L^3\Lambda$; it is not yet a physical lower bound, but
+  forces an explicit Gauss/frame/counterterm treatment before a uniform
+  Schur claim.  This is a small-box input only; its fibrewise Schur
+  estimate and its transport through blocking remain open.  The $L^{-1}$
+  scaling marks the exact boundary before the full volume-uniform
+  continuum problem.
 - [The refinement note](../notes/refinement-composition-and-limit.md)
   constructs the arbitrary-partition constant-force limit, gives exact
   two-dimensional gauge subdivision and a sufficient summable-error
   criterion, and distinguishes these from a surviving physical gap.
+- [The continuum assault plan](continuum-proof-assault-plan.md) now
+  assigns independent spectral/Feshbach, blocking, mixing, constructive
+  OS, and adversarial scale-calibration workstreams.  It records the
+  required inequalities, stop rules, and truthful `Co-authored-by`,
+  `Assisted-by`, and `Reviewed-by` trailer protocol for actual delegated
+  reports; no subagent contribution is to be invented.
 
 ## Next
 
