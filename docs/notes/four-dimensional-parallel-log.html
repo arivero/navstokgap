@@ -78,7 +78,25 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>Four-dimensional parallel insertions: one-loop shifts and the
-logarithm</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/four-dimensional-parallel-log.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-parallel-log.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (formal calculation and precise
+logarithm</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/four-dimensional-parallel-log.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-parallel-log.pdf">PDF</a></p><p><strong>After refereeing (2026-09-28).</strong> Sections 1–4 and the
+summary were refereed by Fable (all seven items accepted: the
+normalization and bounds (2)–(3), the dictionary, Theorem 1(a),(b) with
+their <span class="math inline">\(D=3\)</span> reductions, and the
+infrared regularity of §4 were rederived by hand). Two wordings were
+changed: the test mid-connection is <em>trivial</em>, and one contrast
+sentence after Theorem 1(a) was rewritten. Sections 5–8 were checked by
+Claude: the traces <span class="math inline">\(4C_AF^2\)</span>, <span
+class="math inline">\(-4C_AF^2\)</span>, <span
+class="math inline">\(-C_AF^2\)</span>, the coefficient <span
+class="math inline">\(\frac{11C_A}{192\pi^2}\)</span> and <span
+class="math inline">\(\Delta u=-2b_0\log2\)</span>; the residue <span
+class="math inline">\(1/(8\pi^2)\)</span> of (16), the integrals (17)
+and the limit (18); the heat-time table of §5; and the identities
+(12)–(13). Theorem 2 is correctly labelled conditional. One remark was
+added after the telescoping paragraph of §6: over many steps the
+matching terms telescope, and bounded matching coefficients suffice for
+the average rate.</p>
+<p><strong>Result, 2026-09-28 (formal calculation and precise
 obstruction).</strong> One directional cut in four dimensions has the
 six coupling shifts (4) and (10) below, as explicit, convergent
 Brillouin-zone integrals. They extend the refereed <span
@@ -202,8 +220,11 @@ class="math inline">\(s=1/2\)</span> this becomes</p>
 +O(t^2).\tag{5}\]</span></p>
 <p><em>Proof.</em> Use a constant commuting cut flux <span
 class="math inline">\(X_{1j}=X\)</span>, all other cut fluxes zero, and
-choose the geodesically interpolated mid-connection flat. The classical
-defect vanishes on this test. Put</p>
+choose the geodesically interpolated mid-connection trivial (links <span
+class="math inline">\(e^{-sX}\)</span> and <span
+class="math inline">\(e^{(1-s)X}\)</span>; a constant twist is removed
+in the bulk and only feeds the winding term). The classical defect
+vanishes on this test. Put</p>
 <p><span
 class="math display">\[Q_Z=\frac{\operatorname{ad}Z}{2}\coth\frac{\operatorname{ad}Z}{2}.
 \]</span></p>
@@ -230,8 +251,8 @@ class="math inline">\(\square\)</span></p>
 <p>Suppressing direction 4 and taking <span
 class="math inline">\(C_A=2\)</span> gives exactly the cut coefficient
 <span class="math inline">\(t\int q/R\,/24\)</span> of the D=3 note. The
-full colour trace, rather than an isotropic average of the bridge
-covariance, fixes this normalization.</p>
+full colour trace fixes this normalization; the isotropic average of
+Proposition 6 would give a different constant.</p>
 <h2 id="n3-an-explicit-integral-for-each-transverse-plane">3. N3: an
 explicit integral for each transverse plane</h2>
 <p>Take identical adjacent layers with a covariantly constant Abelian
@@ -558,6 +579,24 @@ remaining endpoint difference requires <span
 class="math inline">\(\mathcal K\)</span> as well. Equation (12) changes
 <span class="math inline">\(\mathcal K\)</span> even when the table
 returns to row 0. <span class="math inline">\(\square\)</span></p>
+<p><em>Remark (many steps; Claude, 2026-09-28).</em> Coarsen a very fine
+lattice <span class="math inline">\(n\)</span> times, each step’s output
+being the next step’s input. Summing (15), the intermediate matching
+terms cancel as in the four-step telescoping:</p>
+<p><span class="math display">\[u_n-u_0=-2b_0\,n\log2+c(\zeta_0,\mathcal
+K_0)-c(\zeta_n,\mathcal K_n)+\sum_{k&lt;n}O(t_k).\]</span></p>
+<p>Along the coarsening the couplings grow from a small initial value,
+and if the final coupling is still small, <span
+class="math inline">\(t_k\approx1/(2b_0(n-k)\log2+1/t_n)\)</span> and
+<span class="math inline">\(\sum_kO(t_k)=O(\log n)\)</span>. The
+per-step average therefore tends to <span
+class="math inline">\(-2b_0\log2\)</span> as soon as <span
+class="math inline">\(c(\zeta_n,\mathcal K_n)=o(n)\)</span>, that is, as
+soon as the generated action shapes stay in a family on which the finite
+matching coefficient is bounded. A stationary family gives (1) at every
+step; boundedness along the iteration is enough for the universal rate
+on average. Proving it still requires control of the generated actions
+through (12).</p>
 <p>For the pristine heat-kernel family, matching two isotropic bare
 regularizations along a line of fixed renormalized coupling has the same
 endpoint <span class="math inline">\(c\)</span> and gives (1).

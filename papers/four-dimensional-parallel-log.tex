@@ -14,6 +14,21 @@
 \section{Four-dimensional parallel insertions: one-loop shifts and the
 logarithm}\label{four-dimensional-parallel-insertions-one-loop-shifts-and-the-logarithm}}
 
+\textbf{After refereeing (2026-09-28).} Sections 1--4 and the summary
+were refereed by Fable (all seven items accepted: the normalization and
+bounds (2)--(3), the dictionary, Theorem 1(a),(b) with their \(D=3\)
+reductions, and the infrared regularity of §4 were rederived by hand).
+Two wordings were changed: the test mid-connection is \emph{trivial},
+and one contrast sentence after Theorem 1(a) was rewritten. Sections
+5--8 were checked by Claude: the traces \(4C_AF^2\), \(-4C_AF^2\),
+\(-C_AF^2\), the coefficient \(\frac{11C_A}{192\pi^2}\) and
+\(\Delta u=-2b_0\log2\); the residue \(1/(8\pi^2)\) of (16), the
+integrals (17) and the limit (18); the heat-time table of §5; and the
+identities (12)--(13). Theorem 2 is correctly labelled conditional. One
+remark was added after the telescoping paragraph of §6: over many steps
+the matching terms telescope, and bounded matching coefficients suffice
+for the average rate.
+
 \textbf{Result, 2026-09-28 (formal calculation and precise
 obstruction).} One directional cut in four dimensions has the six
 coupling shifts (4) and (10) below, as explicit, convergent
@@ -135,7 +150,9 @@ weights. At isotropy and \(s=1/2\) this becomes
 
 \emph{Proof.} Use a constant commuting cut flux \(X_{1j}=X\), all other
 cut fluxes zero, and choose the geodesically interpolated mid-connection
-flat. The classical defect vanishes on this test. Put
+trivial (links \(e^{-sX}\) and \(e^{(1-s)X}\); a constant twist is
+removed in the bulk and only feeds the winding term). The classical
+defect vanishes on this test. Put
 
 \[Q_Z=\frac{\operatorname{ad}Z}{2}\coth\frac{\operatorname{ad}Z}{2}.
 \]
@@ -162,9 +179,9 @@ strict diagonal inequality on a set of positive momentum measure. For
 \(\square\)
 
 Suppressing direction 4 and taking \(C_A=2\) gives exactly the cut
-coefficient \(t\int q/R\,/24\) of the D=3 note. The full colour trace,
-rather than an isotropic average of the bridge covariance, fixes this
-normalization.
+coefficient \(t\int q/R\,/24\) of the D=3 note. The full colour trace
+fixes this normalization; the isotropic average of Proposition 6 would
+give a different constant.
 
 \hypertarget{n3-an-explicit-integral-for-each-transverse-plane}{%
 \subsection{3. N3: an explicit integral for each transverse
@@ -473,6 +490,23 @@ is a scheme choice. The anisotropy function cancels because
 \(\zeta_{\rm in}=\zeta_{\rm out}\); the remaining endpoint difference
 requires \(\mathcal K\) as well. Equation (12) changes \(\mathcal K\)
 even when the table returns to row 0. \(\square\)
+
+\emph{Remark (many steps; Claude, 2026-09-28).} Coarsen a very fine
+lattice \(n\) times, each step's output being the next step's input.
+Summing (15), the intermediate matching terms cancel as in the four-step
+telescoping:
+
+\[u_n-u_0=-2b_0\,n\log2+c(\zeta_0,\mathcal K_0)-c(\zeta_n,\mathcal K_n)+\sum_{k<n}O(t_k).\]
+
+Along the coarsening the couplings grow from a small initial value, and
+if the final coupling is still small,
+\(t_k\approx1/(2b_0(n-k)\log2+1/t_n)\) and \(\sum_kO(t_k)=O(\log n)\).
+The per-step average therefore tends to \(-2b_0\log2\) as soon as
+\(c(\zeta_n,\mathcal K_n)=o(n)\), that is, as soon as the generated
+action shapes stay in a family on which the finite matching coefficient
+is bounded. A stationary family gives (1) at every step; boundedness
+along the iteration is enough for the universal rate on average. Proving
+it still requires control of the generated actions through (12).
 
 For the pristine heat-kernel family, matching two isotropic bare
 regularizations along a line of fixed renormalized coupling has the same
