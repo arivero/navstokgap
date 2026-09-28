@@ -1655,9 +1655,9 @@ perturbed actions remain separate obligations.</p>
 14: a covariant reference and its flux sectors</h2>
 <p><strong>GPT-6 Astra, 2026-09-29; unrefereed.</strong> Claude’s
 proposal gives a classical comparison on the equal-layer, zero-cut-flux
-slice. <strong>In progress:</strong> the reference below is defined;
-smooth-field admissibility, flux sectors and the final consequence for
-STATE are the next parts.</p>
+slice. <strong>In progress:</strong> the reference and smooth-field
+bounds are written; flux sectors and the final consequence for STATE are
+the next parts.</p>
 <h3 id="finite-plane-definition">12.1 Finite-plane definition</h3>
 <p>Keep all midpoint links, including their cycles, free as in §11.1.
 For each background <span class="math inline">\(U\)</span> with
@@ -1691,6 +1691,74 @@ class="math inline">\(U\)</span> and <span
 class="math inline">\(z\)</span> together recovers its classical
 quadratic jet. The term <span class="math inline">\(d_U\)</span> is
 explicitly a Gaussian one-loop contribution.</p>
+<h3 id="smooth-fields-and-the-coupling-budget">12.2 Smooth fields and
+the coupling budget</h3>
+<p><strong>Finite bounds; continuum derivative interpretation
+formal.</strong> Set <span
+class="math inline">\(n=\min(n_2,n_3)\)</span> and compare to the full
+periodic fixed-frame kernel. For a smooth family assume explicitly <span
+class="math inline">\(\max_p|z_p|\le Ma^2\)</span>, with <span
+class="math inline">\(M\)</span> independent of <span
+class="math inline">\(a,N\)</span>, and <span
+class="math inline">\(t=\lambda_3a\le1\)</span>. The row bound <span
+class="math inline">\(1/8\)</span> gives <span
+class="math inline">\(|\mathcal D_{0,\rm cl}^{\rm cov}-\mathcal D_0|
+\le\|z\|^2/(2t)\le M^2Nt^3/(2\lambda_3^4)\)</span>, including tree
+seams. The determinant lemma and its absolutely convergent trace series
+give</p>
+<p><span class="math display">\[d_U=-\frac12\sum_{\ell\ge1}
+\frac{\operatorname{Tr}(\mathsf A_U^\ell-\mathsf
+A_1^\ell)}{\ell12^\ell},
+\qquad |d_U|\le B\varepsilon^2N+\tfrac92N3^{-n},\quad
+B=\frac{3\cdot256^2}{4}\sum_{\ell\ge1}\ell^3
+3^{-\ell}.\tag{48}\]</span></p>
+<p>Indeed a contractible closed walk has adjoint holonomy <span
+class="math inline">\(R\)</span> with <span
+class="math inline">\(\|R-I\|\le256\ell^2\varepsilon\)</span> by (44),
+and <span
+class="math inline">\(3-\operatorname{tr}R=\|R-I\|_F^2/2\le3\|R-I\|^2/2\)</span>.
+There are at most <span class="math inline">\(N4^\ell\)</span> rooted
+walks. Wrapping walks have <span class="math inline">\(\ell\ge
+n\)</span>; using <span
+class="math inline">\(|\operatorname{tr}(R-I)|\le6\)</span> gives the
+last term in (48). For the smooth family replace <span
+class="math inline">\(\varepsilon\)</span> by <span
+class="math inline">\(Ma^2\)</span>. Hence</p>
+<p><span class="math display">\[|\mathcal D_0^{\rm cov}-\mathcal D_0|
+\le\frac{M^2}{\lambda_3^4}(t^3/2+Bt^4)N+\tfrac92N3^{-n}.
+\tag{49}\]</span></p>
+<p>Under P(<span class="math inline">\(\alpha\)</span>)’s <span
+class="math inline">\(n\ge c_0/t\)</span>, (49) is an admissible
+additive <span class="math inline">\(C_{M,\lambda_3,c_0,\alpha}t^\alpha
+N\)</span> for <span class="math inline">\(0&lt;\alpha\le3\)</span>;
+<span class="math inline">\(3^{-n}\le[\alpha/(e c_0\log3)]^\alpha
+t^\alpha\)</span> makes the constant explicit. This proves smooth-family
+admissibility with its stated <span class="math inline">\(M\)</span>
+dependence. For coupling bookkeeping, spectral calculus also gives
+exactly</p>
+<p><span class="math display">\[F_U^{\rm cov}=-\tfrac14\langle
+z,L_U(8+L_U)^{-1}z\rangle
+=-\tfrac1{32}\|C_U^*z\|^2+r_U,\qquad
+0\le r_U\le\tfrac1{256}\|L_Uz\|^2.\tag{50}\]</span></p>
+<p>For a fixed smooth connection <span
+class="math inline">\(z=a^2F_{23}+O(a^3)\)</span> and <span
+class="math inline">\(C_U^*z=a^3(D_3F_{23},-D_2F_{23})+O(a^4)\)</span>
+up to orientations. Thus the classical bulk starts at dimension six,
+<span class="math inline">\(O(a^2)\)</span> relative to <span
+class="math inline">\(F^2/t\)</span>; (48)’s contractible determinant
+starts at curvature squared, allowing <span
+class="math inline">\(O(t)\)</span> relative coupling shifts. These
+formal local orders and <span
+class="math inline">\(\sum_jt_j^\alpha&lt;\infty\)</span> for <span
+class="math inline">\(t_j=2^{-j}t_0\)</span> preserve the proposed
+smooth ultraviolet bookkeeping. The full small-field class still leaves
+<span class="math inline">\(\mathcal T_T/t\)</span> in (46) outside the
+established remainder bound: (49) uses <span
+class="math inline">\(Ma^2\)</span>, while that class allows <span
+class="math inline">\(t^{1/2-\delta}\)</span>. Holonomy-dependent
+transport is the unresolved value term, rather than a proved value
+counterexample. Stability for perturbed actions remains an extra
+theorem.</p>
 
 </main>
 <footer class="site"><div class="wrap">
