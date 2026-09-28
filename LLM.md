@@ -339,6 +339,9 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
     $1/8$, $1/2$ of Thm 6 and the minimum of the one accounting (Thm M) are
     attained; the §11 historiography and edition obligations
     ([planck-gap-paper §11](notes/planck-gap-paper.md)).
+12. **A groupoid for the lattice.** The holonomy groupoid for series moves
+    and a double groupoid for parallel moves
+    ([tangent-groupoid-trajectories §5](notes/tangent-groupoid-trajectories.md)); a question, with no theorem yet.
 13. **$SU(3)$ centre and triadic refinement.** Only cuts with denominator
     divisible by 3 let bridge windings reach the $SU(3)$ centre
     ([sun-midpoint-centre](notes/sun-midpoint-centre.md), Corollary 3,
@@ -346,9 +349,6 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
     organize the large-field terms, or centre-vortex bookkeeping, better
     than dyadic refinement? *Smallest theorem:* the joint law of the two
     cut points of an $SU(3)$ trisection, with its central images.
-12. **A groupoid for the lattice.** The holonomy groupoid for series moves
-    and a double groupoid for parallel moves
-    ([tangent-groupoid-trajectories §5](notes/tangent-groupoid-trajectories.md)); a question, with no theorem yet.
 
 ## 6. Verified prior-art map
 
