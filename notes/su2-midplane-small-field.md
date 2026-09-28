@@ -1152,3 +1152,87 @@ relations, with integrated link cost at most $\|z\|_2^2/8$.
 The quadratic action $2\|\xi\|^2+\|z+C_U\xi\|^2/4-\|z\|^2/2$
 is minimized at (42), with value
 $F_U^{\rm cov}=2\langle z,P_Uz\rangle-\|z\|^2/4$.
+
+### 11.2 Proposition 7: value bound and the surviving transport (Part 2)
+
+Put $K=40(1+L_F)$, with $L_F$ defined in §4, and assume
+$\varepsilon\le\min(1/16,1/(4K))$. Let $F^{\rm cl}(U)$ be the minimum,
+on $\|\xi\|_\infty\le\varepsilon$, of the classical action
+$t(S-J)-\|z\|^2/2$ on this equal-layer slice. Then
+
+$$|F^{\rm cl}(U)-F_U^{\rm cov}|\le
+K\varepsilon\|z\|_2^2.\tag{43}$$
+
+This is a plane-uniform bound for an actual finite-dimensional minimum.
+Its $t^{-1}$ contribution to $\mathcal D_s$ remains a formal classical
+identification, with barrier and amplitude estimates separate.
+
+*Proof.* The bridge term is exactly $2\sum_e|\xi_e|^2$.
+Ad-invariance makes the face gradient at zero exactly $C_U^*z/2$.
+The local Hessian bound defining $L_F$, summed over the two faces at
+each edge, bounds the Hessian error from $4I+C_U^*C_U/2$ by
+$K\varepsilon$, both in operator norm and in block row-sum norm,
+throughout this ball. Indeed each face costs at most
+$L_F(\varepsilon+4\varepsilon)$ in operator norm; conversion to a
+four-block row sum costs at most 2, and each edge meets two faces.
+Also $H_U^{-1}=(I-C_U^*P_UC_U)/4$ has block row sum at most $1/2$.
+The stationary equation is a contraction
+$\xi=\xi_0-H_U^{-1}(\nabla E(\xi)-\nabla E(0)-H_U\xi)$,
+where $E=t(S-J)-\|z\|^2/2$. It maps the ball into radius
+$\varepsilon/4+K\varepsilon^2/2<\varepsilon$, with Lipschitz constant
+at most $1/8$. Convexity gives the unique interior minimum $\xi_*$.
+Since $\nabla^2E\ge3I$ and $\|\nabla E(0)\|\le\sqrt2\|z\|$,
+$\|\xi_*\|\le\sqrt2\|z\|/3$. Taylor's formula bounds the value error
+at either minimizer by $K\varepsilon\|\xi\|^2/2$; evaluating each
+functional at the other's minimizer proves (43). $\square$
+
+For each unordered face pair choose a shortest dual path $\sigma_{pq}$,
+with $\sigma_{qp}=\sigma_{pq}^{-1}$, and its transport $Q_{pq}$ from
+$C_U$. Retain walks $\gamma:p\to q$ with the same lifted displacement
+as $\sigma_{pq}$; their comparison loops are contractible. Denote their
+resolvent sums by $P_U^c$ and, with every rotation replaced by 1,
+$p^c_{pq}$. All remaining walks define $P_U^w=P_U-P_U^c$.
+Each incidence transport uses at most three physical edges, so a loop
+$\gamma\sigma_{pq}^{-1}$ for a length-$\ell$ walk has length at most
+$16\ell$. Cancelling backtracks and commuting perpendicular steps fills
+its lift with at most $256\ell^2$ plaquettes, counted with multiplicity.
+The exact ordered plaquette product and telescoping orthogonal matrices
+therefore give
+
+$$\|Q_\gamma-Q_{pq}\|\le256\ell^2\varepsilon,\qquad
+\sup_p\sum_q\|(P_U^c)_{pq}-p^c_{pq}Q_{pq}\|
+\le\frac{256\varepsilon}{12}\sum_{\ell\ge0}\ell^2 3^{-\ell}
+=32\varepsilon.\tag{44}$$
+
+This uses enclosed curvature, permits self-intersections, and includes
+walk multiplicity. Reverse paths give the same column bound. Consequently
+$F_{\rm short}=2\sum_{pq}p^c_{pq}\langle z_p,Q_{pq}z_q\rangle-\|z\|^2/4$
+satisfies the explicit quadratic-cost estimate
+
+$$|F^{\rm cl}-2\langle z,P_U^wz\rangle-F_{\rm short}|
+\le(K+64)\varepsilon\|z\|^2.\tag{45}$$
+
+To compare with §§9--10's Gaussian value, set
+$I^T_{pq}=\operatorname{Ad}_{T_p}^{-1}\operatorname{Ad}_{T_q}$ and define
+$$F_{0,T}^c=2\sum_{pq}p^c_{pq}\langle z_p,I^T_{pq}z_q\rangle-\|z\|^2/4.$$
+The precise surviving term is
+
+$$\begin{aligned}
+F^{\rm cl}-2\langle z,P_U^wz\rangle-F_{0,T}^c
+ &=\mathcal T_T+\mathcal R,\\
+\mathcal T_T&=2\sum_{pq}p^c_{pq}
+ \langle z_p,(Q_{pq}-I^T_{pq})z_q\rangle,\\
+|\mathcal R|&\le(K+64)\varepsilon\|z\|^2,\qquad
+|\mathcal T_T|\le\tfrac12\|z\|^2.
+\end{aligned}\tag{46}$$
+
+The last bound uses $\|Q-I\|\le2$ and row sum $\le1/8$.
+Short-path loops in (44) have area controlled by walk length; the tree
+comparison in (46) can enclose §9's long strips even for neighbours.
+Equation (46), divided by $t$, is the verdict for the classical value:
+the covariant short-path reference has a uniform $O(\varepsilon)$ cost,
+while the prescribed Gaussian reference retains $\mathcal T_T/t$.
+The subtraction here removes the explicitly defined quadratic winding
+walks; identifying it with the full normalized $W_N$ requires its separate
+estimate. An $O(\varepsilon\|z\|^2)$ bound on $\mathcal T_T$ for admissible
+fields, or a value counterexample, remains open; (40) alone decides neither.
