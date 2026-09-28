@@ -4,10 +4,12 @@ These manuscripts were prepared from the repository's maintained proof notes in 
 
 All five manuscripts remain internal drafts. In particular, the literature-positioning and independent theorem audits specified in [`publication-routes/04-gauge-benchmark-publication-plan.md`](../publication-routes/04-gauge-benchmark-publication-plan.md) are prerequisites to external submission. No author identity, affiliation, contribution, or journal approval has been invented.
 
-| Unit | Manuscript | Scope |
-|---|---|---|
-| A | [Periodic Maxwell fibre](A-maxwell-fibre.md) | Exact Hodge quotient, transverse threshold, and zero Feshbach off-diagonal. |
-| B | [Gaussian blocking](B-gaussian-blocking.md) | Finite-range covariance split, Markov kernel, and summable Weyl seminorm. |
-| C | [SU(3) mixing](C-su3-strong-coupling-mixing.md) | Dobrushin Wilson-loop certificate in an explicit strong-coupling region. |
-| D | [Gaussian OS reconstruction](D-gaussian-os-reconstruction.md) | Continuum massive scalar, reflection positivity, Fock space, and supplied-mass threshold. |
-| E | [Classical-to-quantum action ladder](E-classical-to-quantum-foundations.md) | Conditional action-scale derivation and finite operational QM model. |
+| Unit | Manuscript | Scope | Estimated pages* |
+|---|---|---|---:|
+| A | [Periodic Maxwell fibre](A-maxwell-fibre.md) | Exact Hodge quotient, transverse threshold, and zero Feshbach off-diagonal. | 4 |
+| B | [Gaussian blocking](B-gaussian-blocking.md) | Finite-range covariance split, Markov kernel, and summable Weyl seminorm. | 4 |
+| C | [SU(3) mixing](C-su3-strong-coupling-mixing.md) | Dobrushin Wilson-loop certificate in an explicit strong-coupling region. | 4 |
+| D | [Gaussian OS reconstruction](D-gaussian-os-reconstruction.md) | Continuum massive scalar, reflection positivity, Fock space, and supplied-mass threshold. | 3 |
+| E | [Classical-to-quantum action ladder](E-classical-to-quantum-foundations.md) | Conditional action-scale derivation and finite operational QM model. | 8 |
+
+\*Planning estimates for 11-point, single-column A4 manuscripts with displayed equations and title/abstract space included; reference lists excluded. These Markdown sources have not been typeset, so the counts are not compiled-PDF pagination.
