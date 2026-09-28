@@ -1548,12 +1548,12 @@ $M_k=(\langle|y_e|^k\rangle_\lambda)^{1/k}$, gives
 $(2-2\kappa_r)M_k^k\le t(k+1)M_k^{k-2}$. Thus, for $k\ge2$,
 
 $$\sup_{\lambda,e}\langle|y_e|^k\rangle_\lambda
-\le C_k t^{k/2},\qquad C_k=[2(k+1)/3]^{k/2}.\tag{55}$$
+\le M_k^{\rm bd}t^{k/2},\qquad M_k^{\rm bd}=[2(k+1)/3]^{k/2}.\tag{55}$$
 
 The barrier's boundary decay in (2) justifies these integrations;
 regularizing $|y_e|^{k-2}y_e$ at zero gives the same inequality.
 In particular the probability of $|\xi_e|\ge r>\varepsilon$ is at most
-$C_k t^{k/2}/(r-\varepsilon)^k$, including layers near $c_0$.
+$M_k^{\rm bd}t^{k/2}/(r-\varepsilon)^k$, including layers near $c_0$.
 This controls ordinary local moments; expectations of the unbounded
 barrier Hessian require separate hypotheses, and are unused here.
 
@@ -1561,8 +1561,8 @@ Taylor's integral remainder gives
 $|R|\le L_F\sum_p(\sum_{e\in\partial p}|y_e|)
 (\sum_{e\in\partial p}|y_e|^2)/(6t)$.
 There are 16 products per face, each bounded in expectation by
-$C_3t^{3/2}$ from (55), where here $C_3=(8/3)^{3/2}$ denotes the
-moment constant, distinct from (8). Put $A_L=(8/3)L_F(8/3)^{3/2}$.
+$M_3^{\rm bd}t^{3/2}$ from (55), with $M_3^{\rm bd}=(8/3)^{3/2}$.
+Put $A_L=(8/3)L_F(8/3)^{3/2}$.
 Integrating $\partial_\lambda\log Z_\lambda=-\langle R\rangle_\lambda$
 yields $|\log Z_E-\log Z_{2,W}|\le A_LN\sqrt t$.
 Expansion about the actual Hessian absorbs the $\varepsilon$-quadratic
@@ -1591,3 +1591,44 @@ $| -\log[Z_E(U)/Z_E(1)]-\mathcal D_0^{\rm cov}(U)|
 $C_0=K+C_D/2+2A_L+48B_\delta$.
 The normalized field dependence is controlled by the allowed additive
 term; (56) permits a flat-holonomy remainder as well as curvature.
+
+### 13.3 Haar/heat-kernel amplitudes (Part 3)
+
+Include the external old-face amplitude once: write $\mathcal J=J+B_{\rm amp}$
+as one local edge term, one mid-face term and one old-face term per cell,
+with background-independent constants removed. Define $D_J\ge1$ as the
+maximum of their first block derivatives (in $z,\xi_i$) and second
+$\xi$-block derivatives on §4's compact charts, uniformly for $0<t\le1/2$.
+Section 4's analytic amplitude/image argument makes this supremum finite.
+At $z=\xi=0$ all local values equal their identity-background values,
+regardless of the transports. Incidence counting and (53) give
+
+$$|\mathcal J(U,\xi_*)-\mathcal J(1,0)|
+\le D_J(2\sum_p|z_p|+3\|\xi_*\|_{1,b})
+\le\frac{38D_J}{7}\sum_p|z_p|.\tag{57}$$
+
+For interpolation by $s\mathcal J$, impose also $9tD_J\le1/4$.
+Its Hessian block row majorant is $9D_J$, and its saddle score is at
+most $3D_J$ per edge. The proof of (55), now with $k=2$, gives
+$M_2^2\le3t+3D_JtM_2$, hence
+$M_2\le(\sqrt3+3D_J)\sqrt t$ for $t\le1$.
+Thus the interpolated potential stays convex, and
+$|\langle\mathcal J-\mathcal J(U,\xi_*)\rangle_s|
+\le6D_J(\sqrt3+3D_J)N\sqrt t$.
+Integrating in $s$, identity-normalizing, and using (57) proves, with
+$Z_E^J=\int e^{-E_U/t-W_\eta-\mathcal J}$,
+
+$$\left|-\log\frac{Z_E^J(U)}{Z_E^J(1)}-\mathcal D_0^{\rm cov}(U)\right|
+\le C t^\alpha\sum_p(1+|z_p|^2/t),\qquad
+C=C_0+\frac{19D_J}{7}+12D_J(\sqrt3+3D_J).\tag{58}$$
+
+### Consequence for STATE
+
+Equation (58) proves normalized weak P($1/2-\delta$) **against (47)**
+for one barriered step on the equal-layer, zero-cut-flux slice, uniformly
+in plane size, with free-cycle holonomies retained and explicit chart
+smallness conditions. The bound allows zero additional coupling shifts.
+The next cell-2 task is general boundary layers; comparison to the full
+integral outside this chart (images/large fields), fixed-frame equivalence,
+electric projection, iteration and stability under perturbed actions remain.
+The present amplitude bound already includes images inside the compact chart.

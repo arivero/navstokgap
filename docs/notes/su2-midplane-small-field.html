@@ -2012,21 +2012,23 @@ t(k+1)M_k^{k-2}\)</span>. Thus, for <span
 class="math inline">\(k\ge2\)</span>,</p>
 <p><span
 class="math display">\[\sup_{\lambda,e}\langle|y_e|^k\rangle_\lambda
-\le C_k t^{k/2},\qquad C_k=[2(k+1)/3]^{k/2}.\tag{55}\]</span></p>
+\le M_k^{\rm bd}t^{k/2},\qquad M_k^{\rm
+bd}=[2(k+1)/3]^{k/2}.\tag{55}\]</span></p>
 <p>The barrier’s boundary decay in (2) justifies these integrations;
 regularizing <span class="math inline">\(|y_e|^{k-2}y_e\)</span> at zero
 gives the same inequality. In particular the probability of <span
 class="math inline">\(|\xi_e|\ge r&gt;\varepsilon\)</span> is at most
-<span class="math inline">\(C_k t^{k/2}/(r-\varepsilon)^k\)</span>,
-including layers near <span class="math inline">\(c_0\)</span>. This
-controls ordinary local moments; expectations of the unbounded barrier
-Hessian require separate hypotheses, and are unused here.</p>
+<span class="math inline">\(M_k^{\rm
+bd}t^{k/2}/(r-\varepsilon)^k\)</span>, including layers near <span
+class="math inline">\(c_0\)</span>. This controls ordinary local
+moments; expectations of the unbounded barrier Hessian require separate
+hypotheses, and are unused here.</p>
 <p>Taylor’s integral remainder gives <span class="math inline">\(|R|\le
 L_F\sum_p(\sum_{e\in\partial p}|y_e|) (\sum_{e\in\partial
 p}|y_e|^2)/(6t)\)</span>. There are 16 products per face, each bounded
-in expectation by <span class="math inline">\(C_3t^{3/2}\)</span> from
-(55), where here <span class="math inline">\(C_3=(8/3)^{3/2}\)</span>
-denotes the moment constant, distinct from (8). Put <span
+in expectation by <span class="math inline">\(M_3^{\rm
+bd}t^{3/2}\)</span> from (55), with <span class="math inline">\(M_3^{\rm
+bd}=(8/3)^{3/2}\)</span>. Put <span
 class="math inline">\(A_L=(8/3)L_F(8/3)^{3/2}\)</span>. Integrating
 <span class="math inline">\(\partial_\lambda\log Z_\lambda=-\langle
 R\rangle_\lambda\)</span> yields <span class="math inline">\(|\log
@@ -2063,6 +2065,55 @@ D_0^{\rm cov}(U)| \le C_0t^\alpha\sum_p(1+|z_p|^2/t)\)</span>, with
 <span class="math inline">\(C_0=K+C_D/2+2A_L+48B_\delta\)</span>. The
 normalized field dependence is controlled by the allowed additive term;
 (56) permits a flat-holonomy remainder as well as curvature.</p>
+<h3 id="haarheat-kernel-amplitudes-part-3">13.3 Haar/heat-kernel
+amplitudes (Part 3)</h3>
+<p>Include the external old-face amplitude once: write <span
+class="math inline">\(\mathcal J=J+B_{\rm amp}\)</span> as one local
+edge term, one mid-face term and one old-face term per cell, with
+background-independent constants removed. Define <span
+class="math inline">\(D_J\ge1\)</span> as the maximum of their first
+block derivatives (in <span class="math inline">\(z,\xi_i\)</span>) and
+second <span class="math inline">\(\xi\)</span>-block derivatives on
+§4’s compact charts, uniformly for <span
+class="math inline">\(0&lt;t\le1/2\)</span>. Section 4’s analytic
+amplitude/image argument makes this supremum finite. At <span
+class="math inline">\(z=\xi=0\)</span> all local values equal their
+identity-background values, regardless of the transports. Incidence
+counting and (53) give</p>
+<p><span class="math display">\[|\mathcal J(U,\xi_*)-\mathcal J(1,0)|
+\le D_J(2\sum_p|z_p|+3\|\xi_*\|_{1,b})
+\le\frac{38D_J}{7}\sum_p|z_p|.\tag{57}\]</span></p>
+<p>For interpolation by <span class="math inline">\(s\mathcal
+J\)</span>, impose also <span
+class="math inline">\(9tD_J\le1/4\)</span>. Its Hessian block row
+majorant is <span class="math inline">\(9D_J\)</span>, and its saddle
+score is at most <span class="math inline">\(3D_J\)</span> per edge. The
+proof of (55), now with <span class="math inline">\(k=2\)</span>, gives
+<span class="math inline">\(M_2^2\le3t+3D_JtM_2\)</span>, hence <span
+class="math inline">\(M_2\le(\sqrt3+3D_J)\sqrt t\)</span> for <span
+class="math inline">\(t\le1\)</span>. Thus the interpolated potential
+stays convex, and <span class="math inline">\(|\langle\mathcal
+J-\mathcal J(U,\xi_*)\rangle_s| \le6D_J(\sqrt3+3D_J)N\sqrt t\)</span>.
+Integrating in <span class="math inline">\(s\)</span>,
+identity-normalizing, and using (57) proves, with <span
+class="math inline">\(Z_E^J=\int e^{-E_U/t-W_\eta-\mathcal
+J}\)</span>,</p>
+<p><span
+class="math display">\[\left|-\log\frac{Z_E^J(U)}{Z_E^J(1)}-\mathcal
+D_0^{\rm cov}(U)\right|
+\le C t^\alpha\sum_p(1+|z_p|^2/t),\qquad
+C=C_0+\frac{19D_J}{7}+12D_J(\sqrt3+3D_J).\tag{58}\]</span></p>
+<h3 id="consequence-for-state">Consequence for STATE</h3>
+<p>Equation (58) proves normalized weak P(<span
+class="math inline">\(1/2-\delta\)</span>) <strong>against (47)</strong>
+for one barriered step on the equal-layer, zero-cut-flux slice,
+uniformly in plane size, with free-cycle holonomies retained and
+explicit chart smallness conditions. The bound allows zero additional
+coupling shifts. The next cell-2 task is general boundary layers;
+comparison to the full integral outside this chart (images/large
+fields), fixed-frame equivalence, electric projection, iteration and
+stability under perturbed actions remain. The present amplitude bound
+already includes images inside the compact chart.</p>
 
 </main>
 <footer class="site"><div class="wrap">
