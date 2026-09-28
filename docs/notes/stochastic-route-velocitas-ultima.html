@@ -115,6 +115,19 @@ class="math inline">\(1-\epsilon\)</span> needs <span
 class="math inline">\(K_\tau\ge2z_{1-\epsilon}^2\kappa\)</span>; with
 <span class="math inline">\(\kappa=\hbar\)</span> this is the mark mesh
 of the <a href="planck-gap-paper.html">Planck paper</a>, eq. (2).</li>
+<li><strong>Proposition S4 (jumps allowed: the leap).</strong> Dropping
+continuity, P2–P5 force the Lévy exponent of a body of mass <span
+class="math inline">\(m\)</span> to be <span
+class="math inline">\(m\,\Gamma(|k|/m)\)</span> for one universal
+function <span class="math inline">\(\Gamma\)</span>. If the only
+universal constant is an action <span
+class="math inline">\(\kappa\)</span>, dimensional analysis forces <span
+class="math inline">\(\Gamma(p)=C\kappa p^2\)</span>, and continuity
+follows. With a speed <span class="math inline">\(c\)</span> as well,
+the relativistic kinetic energy divided by <span
+class="math inline">\(\kappa\)</span>, <span
+class="math inline">\((\sqrt{m^2c^4+c^2\kappa^2k^2}-mc^2)/\kappa\)</span>,
+is of this form and generates a process with jumps.</li>
 <li><strong>Independence (Nelson).</strong> With diffusion coefficient
 <span class="math inline">\(\nu=\kappa/2m\)</span>, Nelson’s stochastic
 mechanics obeys Newton’s second law in a mean sense and is equivalent to
@@ -290,8 +303,67 @@ bodies (an equivalence principle for fluctuations and a centre-of-mass
 law), and S3 is proved for additive position noise, the law of S1 with a
 force added; in Nelson’s full dynamics the drift depends on the state,
 and the corresponding bound is not claimed here. Allowing jumps (the
-leap) replaces Brownian motion by a general Lévy process, and what P5
-then forces on the jump measure is open.</p>
+leap) is treated in §5b.</p>
+<h2 id="b.-jumps-allowed-proposition-s4">5b. Jumps allowed (Proposition
+S4)</h2>
+<p>Drop P1 and keep P2–P5. The free law of a body of mass <span
+class="math inline">\(m\)</span> is then an isotropic Lévy process; take
+it symmetric, so its exponent, <span
+class="math inline">\(E\,e^{ik\cdot(X_t-X_0)}=e^{-t\,\phi(m,|k|)}\)</span>,
+is real and nonnegative. The centre of mass of independent bodies has
+exponent <span class="math inline">\(\sum_i\phi(m_i,m_i|k|/M)\)</span>,
+and P5 requires <span
+class="math inline">\(\phi(M,|k|)=\sum_i\phi(m_i,m_i|k|/M)\)</span>. Put
+<span class="math inline">\(|k|=Mp\)</span> and <span
+class="math inline">\(G(m,p)=\phi(m,mp)\)</span>: then <span
+class="math inline">\(G(m_1+m_2,p)=G(m_1,p)+G(m_2,p)\)</span>, and <span
+class="math inline">\(G\ge0\)</span> gives <span
+class="math inline">\(G(m,p)=m\,\Gamma(p)\)</span> with <span
+class="math inline">\(\Gamma(p)=G(1,p)\)</span>. Hence</p>
+<p><span
+class="math display">\[\phi(m,|k|)=m\,\Gamma(|k|/m),\qquad\nu_m(A)=m\,\nu(mA),\]</span></p>
+<p>where <span class="math inline">\(\nu\)</span> is the Lévy measure of
+<span class="math inline">\(\Gamma\)</span>: a body of mass <span
+class="math inline">\(m\)</span> jumps with the universal jumps shrunk
+by <span class="math inline">\(1/m\)</span> and their rate multiplied by
+<span class="math inline">\(m\)</span>. Brownian motion is <span
+class="math inline">\(\Gamma(p)=\kappa p^2/2\)</span>, giving <span
+class="math inline">\(D=\kappa/m\)</span> as in S2, and the symmetric
+<span class="math inline">\(\alpha\)</span>-stable laws are <span
+class="math inline">\(\Gamma(p)=\kappa_\alpha p^\alpha\)</span>, with
+scale <span class="math inline">\(\kappa_\alpha m^{1-\alpha}\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p><em>Dimensional analysis.</em> <span
+class="math inline">\(\phi\)</span> is an inverse time and <span
+class="math inline">\(p=|k|/m\)</span> has dimension <span
+class="math inline">\(({\rm mass}\cdot{\rm length})^{-1}\)</span>, so
+<span class="math inline">\(\Gamma\)</span> has dimension <span
+class="math inline">\(({\rm mass}\cdot{\rm time})^{-1}\)</span>. If the
+only universal constant is one action <span
+class="math inline">\(\kappa\)</span>, the unique monomial of that
+dimension is <span class="math inline">\(\kappa p^2\)</span>, and no
+dimensionless combination of <span class="math inline">\(\kappa\)</span>
+and <span class="math inline">\(p\)</span> exists; so <span
+class="math inline">\(\Gamma(p)=C\kappa p^2\)</span> and the law is
+Brownian. Continuity is then a consequence: a jump needs a second
+constant. With a speed <span class="math inline">\(c\)</span> available,
+<span class="math inline">\(\kappa p/c\)</span> is dimensionless and
+<span class="math inline">\(\Gamma(p)=\kappa p^2f(\kappa p/c)\)</span>
+is allowed. The choice <span
+class="math inline">\(\Gamma(p)=(\sqrt{c^4+c^2\kappa^2p^2}-c^2)/\kappa\)</span>
+gives <span
+class="math inline">\(\phi=m\,\Gamma(|k|/m)=(\sqrt{m^2c^4+c^2\kappa^2k^2}-mc^2)/\kappa\)</span>,
+the relativistic kinetic energy divided by <span
+class="math inline">\(\kappa\)</span>, which reduces to <span
+class="math inline">\(\kappa k^2/2m\)</span> for <span
+class="math inline">\(\kappa|k|\ll mc\)</span>; it is a Bernstein
+function of <span class="math inline">\(k^2\)</span>, and its process
+has jumps (<a
+href="https://doi.org/10.1016/0022-1236(90)90049-Q">Carmona, Masters and
+Simon 1990</a>, metadata). So in this reading the leap is what a speed
+limit readmits, and Aristotle’s continuity is what a single action
+constant enforces. This is a structural remark: which constants the free
+law may contain is itself a premise.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Newton necessity gains a third route in which the negated postulate
 is Newton’s own sentence on the ultimate velocity: continuity,

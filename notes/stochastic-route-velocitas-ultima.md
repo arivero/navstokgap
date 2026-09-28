@@ -23,6 +23,12 @@ time and isotropic (premises P1--P3 of §1).
   where $K_\tau=F^2\tau^3/(24m)$ is the Galileo action of the cell. Confidence
   $1-\epsilon$ needs $K_\tau\ge2z_{1-\epsilon}^2\kappa$; with $\kappa=\hbar$ this is the mark mesh of the
   [Planck paper](planck-gap-paper.md), eq. (2).
+- **Proposition S4 (jumps allowed: the leap).** Dropping continuity,
+  P2--P5 force the Lévy exponent of a body of mass $m$ to be $m\,\Gamma(|k|/m)$ for
+  one universal function $\Gamma$. If the only universal constant is an action
+  $\kappa$, dimensional analysis forces $\Gamma(p)=C\kappa p^2$, and continuity follows. With
+  a speed $c$ as well, the relativistic kinetic energy divided by $\kappa$,
+  $(\sqrt{m^2c^4+c^2\kappa^2k^2}-mc^2)/\kappa$, is of this form and generates a process with jumps.
 - **Independence (Nelson).** With diffusion coefficient $\nu=\kappa/2m$,
   Nelson's stochastic mechanics obeys Newton's second law in a mean sense
   and is equivalent to the Schrödinger equation with $\hbar=\kappa$
@@ -128,8 +134,39 @@ bodies (an equivalence principle for fluctuations and a centre-of-mass
 law), and S3 is proved for additive position noise, the law of S1 with a
 force added; in Nelson's full dynamics the drift depends on the state,
 and the corresponding bound is not claimed here. Allowing jumps (the
-leap) replaces Brownian motion by a general Lévy process, and what P5
-then forces on the jump measure is open.
+leap) is treated in §5b.
+
+## 5b. Jumps allowed (Proposition S4)
+
+Drop P1 and keep P2--P5. The free law of a body of mass $m$ is then an
+isotropic Lévy process; take it symmetric, so its exponent,
+$E\,e^{ik\cdot(X_t-X_0)}=e^{-t\,\phi(m,|k|)}$, is real and nonnegative. The centre of mass of
+independent bodies has exponent $\sum_i\phi(m_i,m_i|k|/M)$, and P5 requires
+$\phi(M,|k|)=\sum_i\phi(m_i,m_i|k|/M)$. Put $|k|=Mp$ and $G(m,p)=\phi(m,mp)$: then
+$G(m_1+m_2,p)=G(m_1,p)+G(m_2,p)$, and $G\ge0$ gives $G(m,p)=m\,\Gamma(p)$ with
+$\Gamma(p)=G(1,p)$. Hence
+
+$$\phi(m,|k|)=m\,\Gamma(|k|/m),\qquad\nu_m(A)=m\,\nu(mA),$$
+
+where $\nu$ is the Lévy measure of $\Gamma$: a body of mass $m$ jumps with the
+universal jumps shrunk by $1/m$ and their rate multiplied by $m$. Brownian
+motion is $\Gamma(p)=\kappa p^2/2$, giving $D=\kappa/m$ as in S2, and the symmetric
+$\alpha$-stable laws are $\Gamma(p)=\kappa_\alpha p^\alpha$, with scale $\kappa_\alpha m^{1-\alpha}$. $\square$
+
+*Dimensional analysis.* $\phi$ is an inverse time and $p=|k|/m$ has
+dimension $({\rm mass}\cdot{\rm length})^{-1}$, so $\Gamma$ has dimension $({\rm mass}\cdot{\rm time})^{-1}$. If the
+only universal constant is one action $\kappa$, the unique monomial of that
+dimension is $\kappa p^2$, and no dimensionless combination of $\kappa$ and $p$ exists;
+so $\Gamma(p)=C\kappa p^2$ and the law is Brownian. Continuity is then a consequence:
+a jump needs a second constant. With a speed $c$ available, $\kappa p/c$ is
+dimensionless and $\Gamma(p)=\kappa p^2f(\kappa p/c)$ is allowed. The choice
+$\Gamma(p)=(\sqrt{c^4+c^2\kappa^2p^2}-c^2)/\kappa$ gives $\phi=m\,\Gamma(|k|/m)=(\sqrt{m^2c^4+c^2\kappa^2k^2}-mc^2)/\kappa$, the
+relativistic kinetic energy divided by $\kappa$, which reduces to $\kappa k^2/2m$ for
+$\kappa|k|\ll mc$; it is a Bernstein function of $k^2$, and its process has jumps ([Carmona, Masters and Simon 1990](https://doi.org/10.1016/0022-1236(90)90049-Q),
+metadata). So in this reading the leap is what a speed limit readmits,
+and Aristotle's continuity is what a single action constant enforces.
+This is a structural remark: which constants the free law may contain is
+itself a premise.
 
 ## 6. Consequence for STATE
 
