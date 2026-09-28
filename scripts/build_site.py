@@ -40,7 +40,7 @@ TRACKS = [
         "series-parallel-gauge-refinement", "zero-spacing-any-action",
         "cut-measure-newton",
         "dimension-ladder", "villain-monopole-refinement",
-        "su2-midpoint-exact", "su2-midplane-order-t",
+        "su2-midpoint-exact", "su2-midplane-order-t", "su2-midplane-small-field",
         "four-dimensional-parallel-log", "gaussian-blocking-coupling",
         "four-dimensional-composition",
         "sun-midpoint-centre",

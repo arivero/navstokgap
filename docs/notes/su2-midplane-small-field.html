@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The SU(2) mid-plane on its small-field set: the local half of estimate (18)</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The SU(2) mid-plane on its small-field set: the local half of
+estimate (18)</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (Claude; written derivation, to be
+refereed by Fable).</strong> Take one halving of direction 1 in <span
+class="math inline">\(1+2\)</span> dimensions with gauge group <span
+class="math inline">\(SU(2)\)</span> and isotropic heat time <span
+class="math inline">\(t=\lambda_3a=\hbar g_{\rm cl}^2a\)</span>, as in
+the <a href="su2-midplane-order-t.html">mid-plane note</a>. Restrict the
+mid-plane fluctuations to the small-field set <span
+class="math inline">\(\Omega_\eta=\{|\xi_e|\le\eta\ \text{for every
+mid-edge}\ e\}\)</span> with</p>
+<p><span class="math display">\[\varepsilon=t^{1/2-\delta},\qquad
+\eta=2\varepsilon,\qquad 0&lt;\delta&lt;\tfrac16,\]</span></p>
+<p>by the convex barrier of §1, and call <span
+class="math inline">\(\mathcal D_s\)</span> the resulting normalized
+defect (the definition of <span class="math inline">\(\mathcal
+D\)</span> in Hypothesis P(<span class="math inline">\(\alpha\)</span>)
+of the <a href="series-parallel-gauge-refinement.html">series/parallel
+note</a>, with the fluctuation integral restricted). Uniformly in the
+size of the mid-plane:</p>
+<ul>
+<li><p><strong>Lemma 1 (covariant decay).</strong> For every background
+mid-plane connection and every symmetric perturbation of range one and
+norm <span class="math inline">\(\kappa&lt;2\)</span> of the Gaussian
+Hessian, the inverse <span class="math inline">\(K\)</span> obeys <span
+class="math inline">\(|K^{-1}(e,e&#39;)|\le(4-\kappa)^{-1}\bigl((2+\kappa)/6\bigr)^{d(e,e&#39;)}\)</span>,
+where <span class="math inline">\(d\)</span> is the distance in the
+graph of edges sharing a face; at <span
+class="math inline">\(\kappa=0\)</span>, <span
+class="math inline">\(\frac14\,3^{-d}\)</span>.</p></li>
+<li><p><strong>Lemma 2 (bridge tail).</strong> The bridge midpoint law
+of a cut face with flux <span class="math inline">\(X\)</span> satisfies
+<span class="math inline">\(\beta(d(m,m_*)\ge r)\le
+C_2\,t^{-7/2}e^{-2r(r-|X|)/t}\)</span> for <span
+class="math inline">\(r\ge|X|/2\)</span>; at <span
+class="math inline">\(r=\eta\)</span> and <span
+class="math inline">\(|X|\le\varepsilon\)</span> this is at most <span
+class="math inline">\(C_2t^{-7/2}e^{-4t^{-2\delta}}\)</span>.</p></li>
+<li><p><strong>Lemma 3 (uniform convexity).</strong> For coarse fluxes
+<span class="math inline">\(|X_p|\le\varepsilon\)</span> and <span
+class="math inline">\(\xi\in\Omega_{c_0}\)</span>, <span
+class="math inline">\(c_0\)</span> a small absolute constant, the
+Hessian of the exponent in the fluctuation variables lies between <span
+class="math inline">\((H_A-\kappa_t)/t\)</span> and <span
+class="math inline">\((H_A+\kappa_t)/t\)</span>, with <span
+class="math inline">\(H_A=4I+\frac12C_A^*C_A\)</span> (<span
+class="math inline">\(C_A\)</span> the covariant curl of the background)
+and <span class="math inline">\(\kappa_t\le
+C_3(\varepsilon+|\xi|_\infty)\)</span>; on <span
+class="math inline">\(\Omega_\eta\)</span>, <span
+class="math inline">\(\kappa_t\le3C_3\varepsilon\)</span>.</p></li>
+<li><p><strong>Proposition 4 (local Laplace comparison).</strong> If the
+coarse data <span class="math inline">\(U\)</span> are joined to the
+trivial configuration by a small-field path with controlled flux
+velocities (Hypothesis I of §5), then</p>
+<p><span class="math display">\[\bigl|\mathcal D_s(U)-\mathcal
+D_s(1)-\mathcal D_0(U)\bigr|
+\le C_4\,t^{1/2-\delta}\sum_p\frac{|X_p|^2}t,\]</span></p>
+<p>with <span class="math inline">\(\mathcal D_0\)</span> the free-field
+defect and <span class="math inline">\(C_4\)</span> independent of the
+plane size. With <span class="math inline">\(c_{\rm vac}=\mathcal
+D_s(1)/N\)</span> this is the weak form of Hypothesis P(<span
+class="math inline">\(\alpha\)</span>), <span
+class="math inline">\(\alpha=\frac12-\delta\)</span>, for the
+small-field defect, with all coupling shifts set to zero (they are of
+order <span class="math inline">\(t\)</span> and fit inside the
+remainder).</p></li>
+</ul>
+<p>The proof uses no cluster expansion. Brascamp–Lieb bounds the
+fluctuation covariance from above and Cramér–Rao from below, both in
+operator norm, and global gauge invariance removes the linear term; all
+bounds are norms of local operators, so they are uniform in <span
+class="math inline">\(N\)</span>.</p>
+<p>Two items stay open for the weak (18) on the full integral (§6):
+Hypothesis I for non-abelian data on large planes, and the large-field
+comparison <span class="math inline">\(\mathcal D-\mathcal D_s\)</span>,
+where the naive Peierls bound fails for an explicit reason. Lemma 1 also
+suggests that a logarithmic size clause would replace <span
+class="math inline">\(\min_jN_j\ge c_0/t\)</span> for the torus windings
+(expected, not proved).</p>
+<h2 id="setting">1. Setting</h2>
+<p>The mid-plane at a layer is a periodic two-dimensional lattice of
+<span class="math inline">\(N\)</span> sites with <span
+class="math inline">\(2N\)</span> mid-edges (directions 2 and 3) and
+<span class="math inline">\(N\)</span> mid-faces; distinct mid-planes
+are independent given the coarse data, so <span
+class="math inline">\(\mathcal D\)</span> is a sum over mid-planes. In
+the mid-vertex gauge of Proposition 1 write <span
+class="math inline">\(m_e=m_{*e}e^{\xi_e}\)</span>, <span
+class="math inline">\(\xi_e\in\mathfrak{su}(2)\cong\mathbb R^3\)</span>,
+with <span class="math inline">\(m_{*e}\)</span> the geodesic midpoint
+between <span class="math inline">\(P_e\)</span> and <span
+class="math inline">\(Q_e^{-1}\)</span>, whose distance is the cut-face
+flux <span class="math inline">\(|X_e|\)</span>. The exponent is</p>
+<p><span
+class="math display">\[S(\xi;U)=\sum_e\frac{d(P_e,m_e)^2+d(m_e,Q_e^{-1})^2-\frac12|X_e|^2}{t}
++\sum_g\frac{d(m_{\partial g},e)^2}{4t}+J(\xi;U),\]</span></p>
+<p>the half faces at heat time <span class="math inline">\(t/2\)</span>,
+the bridge denominator at <span class="math inline">\(t\)</span>, the
+mid-faces at <span class="math inline">\(2t\)</span>, and <span
+class="math inline">\(J\)</span> collecting the heat-kernel and Haar
+amplitudes in exponential coordinates, smooth with derivatives bounded
+independently of <span class="math inline">\(t\)</span>. It vanishes at
+<span class="math inline">\(\xi=0\)</span> in its bridge part. Its
+linearization about the trivial configuration is the quadratic form of
+§1 of the mid-plane note, <span
+class="math inline">\(\frac1t(2\sum_e|\xi_e|^2+\frac14\sum_g|\bar\Phi_g+(C\xi)_g|^2)\)</span>,
+with Hessian <span class="math inline">\(H_0/t\)</span>, <span
+class="math inline">\(H_0=4I+\frac12C^*C\)</span>.</p>
+<p>The small-field restriction uses a convex barrier: <span
+class="math inline">\(W_\eta(\xi)=\sum_ew(|\xi_e|)\)</span> with <span
+class="math inline">\(w\)</span> convex, <span
+class="math inline">\(w=0\)</span> on <span
+class="math inline">\([0,\eta]\)</span> and <span
+class="math inline">\(w\to\infty\)</span> at <span
+class="math inline">\(c_0\)</span>. The measure <span
+class="math inline">\(\mu_U\propto e^{-S-W_\eta}d\xi\)</span> on <span
+class="math inline">\(\prod_eB(0,c_0)\)</span> is then log-concave by
+Lemma 3, its mass outside <span
+class="math inline">\(\Omega_\eta\)</span> is bounded by Lemma 2, and
+<span class="math inline">\(\mathcal D_s(U)\)</span> is <span
+class="math inline">\(-\log\)</span> of its normalizing integral plus
+the <span class="math inline">\(\xi\)</span>-independent normalizations
+of Hypothesis P(<span class="math inline">\(\alpha\)</span>) (bridge
+denominators and old-face ratios).</p>
+<h2 id="lemma-1">2. Lemma 1</h2>
+<p><em>Proof.</em> Each mid-edge lies in two mid-faces and <span
+class="math inline">\(|(C_A\xi)_g|^2\le4\sum_{e\in\partial
+g}|\xi_e|^2\)</span> for every background, because the covariant curl
+adds four adjoint-rotated vectors. Hence <span
+class="math inline">\(0\le C_A^*C_A\le8\)</span> and <span
+class="math inline">\(4\le H_A\le8\)</span>. Write <span
+class="math inline">\(K=6I+(K-6I)\)</span> with <span
+class="math inline">\(\|K-6I\|\le2+\kappa\)</span>. The operator <span
+class="math inline">\(K-6I\)</span> couples only edges that share a
+face, so <span class="math inline">\((K-6I)^n(e,e&#39;)=0\)</span> for
+<span class="math inline">\(n&lt;d(e,e&#39;)\)</span>, and every matrix
+block is bounded by the operator norm. The Neumann series gives <span
+class="math inline">\(|K^{-1}(e,e&#39;)|\le\frac16\sum_{n\ge
+d}\bigl(\frac{2+\kappa}6\bigr)^n=\frac{1}{4-\kappa}\bigl(\frac{2+\kappa}6\bigr)^d\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<h2 id="lemma-2">3. Lemma 2</h2>
+<p>With normalized Haar measure and <span
+class="math inline">\(\theta\in[0,2\pi]\)</span> the geodesic distance
+(the three-sphere of radius 2), the image formula of the <a
+href="su2-midpoint-exact.html">SU(2) midpoint note</a>, Theorem 1, reads
+<span
+class="math inline">\(k_t(\theta)=e^{t/8}\sqrt{8\pi}\,t^{-3/2}\,\Xi_+(\theta)/\sin(\theta/2)\)</span>.
+For <span class="math inline">\(0&lt;t\le1\)</span>:</p>
+<ul>
+<li><em>Upper bound.</em> <span class="math inline">\(k_t(\theta)\le
+C_+t^{-5/2}e^{-\theta^2/(2t)}\)</span>. On <span
+class="math inline">\([0,\pi]\)</span> use <span
+class="math inline">\(\theta/\sin(\theta/2)\le\pi\)</span> for the term
+<span class="math inline">\(w=0\)</span>; the other images are smaller
+by <span class="math inline">\(e^{-3\pi^2/t}\)</span> and odd pairs
+vanish at <span class="math inline">\(\theta=0\)</span>. On <span
+class="math inline">\([\pi,2\pi]\)</span> pair <span
+class="math inline">\(w=0\)</span> with <span
+class="math inline">\(w=1\)</span>: with <span
+class="math inline">\(\psi=2\pi-\theta\)</span> the pair equals <span
+class="math inline">\(e^{-(4\pi^2+\psi^2)/(2t)}[(2\pi-\psi)e^{2\pi\psi/t}-(2\pi+\psi)e^{-2\pi\psi/t}]\)</span>,
+which divided by <span class="math inline">\(\sin(\psi/2)\)</span> is at
+most <span class="math inline">\((16\pi^2/t)e^{-\theta^2/(2t)}\)</span>
+up to a constant.</li>
+<li><em>Lower bound.</em> For <span
+class="math inline">\(\theta\le1\)</span> the term <span
+class="math inline">\(w=0\)</span> dominates and <span
+class="math inline">\(\theta/\sin(\theta/2)\ge2\)</span>, so <span
+class="math inline">\(k_t(\theta)\ge
+c_-t^{-3/2}e^{-\theta^2/(2t)}\)</span>.</li>
+</ul>
+<p><em>Proof of Lemma 2.</em> The bridge density with respect to Haar
+measure is <span
+class="math inline">\(k_{t/2}(d(P,m))\,k_{t/2}(d(m,Q^{-1}))/k_t(|X|)\)</span>.
+By the triangle inequality through <span
+class="math inline">\(m_*\)</span>, <span
+class="math inline">\(d(P,m)\ge r-|X|/2\)</span> and <span
+class="math inline">\(d(m,Q^{-1})\ge r-|X|/2\)</span> when <span
+class="math inline">\(d(m,m_*)=r\)</span>. The bounds above give a
+density at most <span
+class="math inline">\((32C_+^2/c_-)\,t^{-7/2}\exp[-(2(r-|X|/2)^2-\frac12|X|^2)/t]=C_2t^{-7/2}e^{-2r(r-|X|)/t}\)</span>,
+and Haar measure has total mass one. At <span
+class="math inline">\(r=\eta=2\varepsilon\ge2|X|\)</span> the exponent
+is at least <span
+class="math inline">\(4\varepsilon^2/t=4t^{-2\delta}\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="lemma-3">4. Lemma 3</h2>
+<p><em>Proof sketch.</em> Each half-face term is <span
+class="math inline">\(|\log(Ae^{\pm\xi}B)|^2/t\)</span> with <span
+class="math inline">\(|\log A|,|\log B|\le\varepsilon\)</span> in the
+mid-vertex frame. On <span
+class="math inline">\(\mathfrak{su}(2)\)</span> with <span
+class="math inline">\([T_a,T_b]=\epsilon_{abc}T_c\)</span> and <span
+class="math inline">\(|T_a|=1\)</span>, <span
+class="math inline">\(|[x,y]|\le|x||y|\)</span>, and the
+Baker–Campbell–Hausdorff remainders give <span
+class="math inline">\(\log(Ae^{\zeta}B)=\log(AB)+{\rm
+Ad}(\zeta)+O(|\zeta|(|\zeta|+\varepsilon))\)</span> with derivatives of
+the same order. The Hessian of <span
+class="math inline">\(|\cdot|^2\)</span> is <span
+class="math inline">\(2I\)</span>, so each half-face contributes <span
+class="math inline">\(2I/t\)</span> up to <span
+class="math inline">\(O(\varepsilon+|\xi|)/t\)</span>, and the pair
+gives the <span class="math inline">\(4I/t\)</span> of <span
+class="math inline">\(H_A/t\)</span>. The mid-face term <span
+class="math inline">\(|\log m_{\partial g}|^2/(4t)\)</span> has Hessian
+<span class="math inline">\(\frac12C_A^*C_A/t\)</span> up to <span
+class="math inline">\(O(|\bar\Phi_g|+\sum_{e\in\partial
+g}|\xi_e|)/t\)</span>, and <span
+class="math inline">\(|\bar\Phi_g|\le\varepsilon\)</span>. The amplitude
+<span class="math inline">\(J\)</span> has bounded Hessian, which is
+<span class="math inline">\(O(t)/t\)</span> and <span
+class="math inline">\(t\le\varepsilon\)</span>. All corrections are
+local, so their operator norm is bounded by a row sum. This gives <span
+class="math inline">\(\kappa_t\le C_3(\varepsilon+|\xi|_\infty)\)</span>
+with an absolute <span class="math inline">\(C_3\)</span>, and convexity
+on <span class="math inline">\(\Omega_{c_0}\)</span> once <span
+class="math inline">\(C_3(\varepsilon+c_0)&lt;4\)</span>. The constant
+<span class="math inline">\(C_3\)</span> is computable from the BCH
+remainder bounds; it is not tracked here. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="proposition-4">5. Proposition 4</h2>
+<p><strong>Hypothesis I (small-field path).</strong> There is a <span
+class="math inline">\(C^2\)</span> path <span
+class="math inline">\(U(s)\)</span>, <span
+class="math inline">\(s\in[0,1]\)</span>, from the trivial configuration
+to <span class="math inline">\(U\)</span> through coarse data with <span
+class="math inline">\(|X_p(s)|\le2\varepsilon\)</span>, whose flux
+coordinates satisfy <span class="math inline">\(\sum_p|\dot X_p(s)|^2\le
+C_I\sum_p|X_p|^2\)</span> and <span class="math inline">\(|\ddot
+X_p(s)|\le C_I\sum_{p&#39;\sim p}|X_{p&#39;}|^2\)</span> (neighbouring
+plaquettes <span class="math inline">\(p&#39;\)</span>), where <span
+class="math inline">\(X_p=X_p(U)\)</span>. For an abelian group the
+linear path <span class="math inline">\(X(s)=sX\)</span> satisfies it
+with <span class="math inline">\(C_I=1\)</span>.</p>
+<p><em>Proof of Proposition 4.</em> Put <span
+class="math inline">\(g(s)=\mathcal D_s(U(s))\)</span>.</p>
+<ol type="a">
+<li><p><em>No linear term.</em> A constant gauge transformation rotates
+every flux by the adjoint action and leaves <span
+class="math inline">\(\Omega_\eta\)</span>, the barrier and the
+normalizations invariant, so <span
+class="math inline">\(\nabla_X\mathcal D_s\)</span> at the trivial
+configuration is an adjoint-invariant vector in <span
+class="math inline">\(\bigoplus_p\mathfrak{su}(2)^*\)</span>, hence
+zero. So <span class="math inline">\(g&#39;(0)=0\)</span>, and likewise
+for <span class="math inline">\(\mathcal D_0\)</span>.</p></li>
+<li><p><em>Second derivatives.</em> <span
+class="math inline">\(\partial_X^2\mathcal D_s=E_\mu[\partial_X^2S]-{\rm
+Cov}_\mu(\partial_XS)\)</span> (with the normalizations, whose Hessians
+differ from their Gaussian versions by <span
+class="math inline">\(O(1)=O(t)/t\)</span>), and for the Gaussian
+reference <span class="math inline">\(\partial_X^2\mathcal
+D_0=\partial_X^2S_2-{\rm Cov}_{G}(\partial_XS_2)\)</span>, with <span
+class="math inline">\(S_2\)</span> the linearized exponent and <span
+class="math inline">\(G\)</span> the Gaussian with covariance <span
+class="math inline">\(tH_0^{-1}\)</span>. Three comparisons, each as a
+quadratic form in the flux variation <span
+class="math inline">\(v\)</span>:</p></li>
+</ol>
+<ol type="1">
+<li><span class="math inline">\(\partial_X^2S-\partial_X^2S_2\)</span>
+is a local operator with entries <span
+class="math inline">\(O((\varepsilon+\eta)/t)\)</span> on the support of
+<span class="math inline">\(\mu\)</span>, so <span
+class="math inline">\(|\langle
+v,(E_\mu\partial_X^2S-\partial_X^2S_2)v\rangle|\le
+C(\varepsilon+\eta)\|v\|^2/t\)</span>.</li>
+<li>Write <span
+class="math inline">\(\partial_XS=\frac1t(M\xi+NX)+R\)</span> with <span
+class="math inline">\(M,N\)</span> the linear couplings and <span
+class="math inline">\(R=O((|X|+|\xi|)^2/t)\)</span>, local. By
+Brascamp–Lieb and Lemma 3, <span class="math inline">\({\rm
+Cov}_\mu(\xi)\le E_\mu[({\rm Hess}\,S)^{-1}]\le
+t(H_A-\kappa_t)^{-1}\)</span>, and by the Cramér–Rao inequality for
+location families, <span class="math inline">\({\rm
+Cov}_\mu(\xi)\ge(E_\mu{\rm Hess}\,S)^{-1}\ge
+t(H_A+\kappa_t)^{-1}\)</span>; the barrier adds only terms of the size
+of Lemma 2. Hence <span class="math inline">\(\|{\rm
+Cov}_\mu(\xi)-tH_A^{-1}\|\le t\kappa_t/(4(4-\kappa_t))\)</span>. The
+connection itself need not be small on a large plane, only its fluxes,
+so the comparison with the abelian reference is made gauge-invariantly:
+the flux response <span class="math inline">\(M_AH_A^{-1}M_A^T\)</span>
+of the covariant Gaussian differs from the abelian <span
+class="math inline">\(MH_0^{-1}M^T\)</span> by holonomy factors around
+closed paths, and by Lemma 1 a path of length <span
+class="math inline">\(L\)</span> carries weight <span
+class="math inline">\(3^{-L}\)</span> while enclosing at most <span
+class="math inline">\(L^2\)</span> plaquettes of flux <span
+class="math inline">\(\le\varepsilon\)</span>; the sum over paths gives
+a difference <span class="math inline">\(O(\varepsilon)\)</span> in
+operator norm (sketch). So <span class="math inline">\(|\langle
+v,(M_A{\rm Cov}_\mu(\xi)M_A^T-tMH_0^{-1}M^T)v\rangle|/t^2\le
+C\varepsilon\|v\|^2/t\)</span>.</li>
+<li>By Brascamp–Lieb, <span class="math inline">\({\rm Var}_\mu\langle
+v,R\rangle\le\frac t{4-\kappa_t}E|\nabla_\xi\langle v,R\rangle|^2\le
+C(\varepsilon+\eta)^2\|v\|^2/t\)</span>, and the cross covariance is
+bounded by the geometric mean of the two variances, <span
+class="math inline">\(C(\varepsilon+\eta)\|v\|^2/t\)</span>.</li>
+</ol>
+<p>So <span class="math inline">\(|\langle v,(\partial_X^2\mathcal
+D_s-\partial_X^2\mathcal D_0)v\rangle|\le
+C(\varepsilon+\eta)\|v\|^2/t\)</span> at every point of the path.</p>
+<ol start="3" type="a">
+<li><em>Taylor along the path.</em> <span
+class="math inline">\(g(1)-g(0)=\int_0^1(1-s)g&#39;&#39;(s)\,ds\)</span>
+with <span class="math inline">\(g&#39;&#39;=\langle\dot
+X,\partial_X^2\mathcal D_s\dot X\rangle+\langle\nabla_X\mathcal
+D_s,\ddot X\rangle\)</span>, and the same identity for <span
+class="math inline">\(\mathcal D_0\)</span>, which is quadratic. The
+first terms differ by <span
+class="math inline">\(C(\varepsilon+\eta)C_I\|X\|^2/t\)</span>. For the
+second, <span class="math inline">\(|\nabla_X\mathcal D_s|\le
+C(\varepsilon+\eta)/t\)</span> per plaquette and <span
+class="math inline">\(|\ddot X_p|\le C_I\sum_{p&#39;\sim
+p}|X_{p&#39;}|^2\)</span>, which is of the same order; <span
+class="math inline">\(\nabla\mathcal D_0\)</span> obeys the same bound.
+With <span class="math inline">\(\eta=2\varepsilon\)</span> and <span
+class="math inline">\(\varepsilon=t^{1/2-\delta}\)</span> the total is
+<span class="math inline">\(C_4t^{1/2-\delta}\|X\|^2/t\)</span>. No
+constant depends on <span class="math inline">\(N\)</span>: every bound
+is the norm of a local operator or a Brascamp–Lieb estimate with local
+gradients. <span class="math inline">\(\square\)</span></li>
+</ol>
+<p>References for the two inequalities: <a
+href="https://doi.org/10.1016/0022-1236(76)90004-5">Brascamp and Lieb
+(1976)</a> (metadata); the Cramér–Rao bound <span
+class="math inline">\({\rm Cov}\ge I^{-1}\)</span> with the Fisher
+information <span class="math inline">\(I=E[\nabla S\nabla S^T]=E[{\rm
+Hess}\,S]\)</span> holds after integration by parts, which the barrier
+permits.</p>
+<h2 id="what-stays-open-for-the-weak-18">6. What stays open for the weak
+(18)</h2>
+<ol type="a">
+<li><p><strong>Hypothesis I for non-abelian data on large
+planes.</strong> For <span class="math inline">\(SU(2)\)</span> the
+fluxes cannot be scaled independently: link variables accumulate flux
+along paths, the mid-plane background carries a covariant connection,
+and the global holonomies of the torus constrain the plaquette data. The
+natural route is quasi-locality: Lemma 1 gives exponential decay of the
+inverse Hessian for every background, and for uniformly convex
+finite-range measures the covariances decay as well (<a
+href="https://doi.org/10.1007/BF02186817">Helffer and Sjöstrand
+1994</a>, metadata). Local changes of the coarse data then change <span
+class="math inline">\(\mathcal D_s\)</span> by local amounts, and a
+telescoping over plaquettes replaces the global path. This is expected
+and not carried out here.</p></li>
+<li><p><strong>The large-field comparison <span
+class="math inline">\(\mathcal D-\mathcal D_s\)</span>.</strong> A
+Peierls bound <span class="math inline">\(Z(\Lambda\
+\text{large})/Z_s\le e^{-\kappa(t)|\Lambda|}\)</span> with <span
+class="math inline">\(\kappa(t)\to\infty\)</span> is needed for
+connected sets <span class="math inline">\(\Lambda\)</span> of
+large-field edges. The naive comparison fails. Lemma 2 gains <span
+class="math inline">\(e^{-4\varepsilon^2/t}\)</span> per large edge at
+<span class="math inline">\(r=\eta\)</span>. The small-field denominator
+bounds a face next to <span class="math inline">\(\Lambda\)</span> from
+below only by <span
+class="math inline">\(e^{-(|\bar\Phi_g|+\sum_{e\in\partial
+g}|\xi_e|)^2/(4t)}\)</span> with every <span
+class="math inline">\(|\xi_e|\)</span> up to <span
+class="math inline">\(\eta\)</span>, that is by <span
+class="math inline">\(e^{-81\varepsilon^2/(4t)}\)</span>, and each edge
+borders two faces: the loss exceeds the gain. Balaban’s large-field
+methods, with gauge-invariant small-field conditions and multiscale
+holes, are the known way around this (<a
+href="https://doi.org/10.1007/BF01257412">Balaban 1989 I</a>, <a
+href="https://doi.org/10.1007/BF01238433">II</a>; for the small-field
+side <a href="https://doi.org/10.1142/S0129055X13300100">Dimock
+2013</a>; metadata).</p></li>
+<li><p><strong>Torus windings.</strong> With Lemma 1 the torus
+corrections of the Gaussian part are bounded by <span
+class="math inline">\(CN((2+\kappa)/6)^{n_*}\)</span>, <span
+class="math inline">\(n_*=\min_jN_j\)</span>, so the weak form would
+need only <span
+class="math inline">\(n_*\ge\frac{\alpha}{\log3}\log(1/t)+C\)</span> in
+place of the clause <span class="math inline">\(n_*\ge c_0/t\)</span> of
+the mid-plane note. This rests on (a) and is recorded as
+expected.</p></li>
+</ol>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Atlas cell 2: the local, small-field half of the weak estimate (18)
+is proved for <span class="math inline">\(SU(2)\)</span> in <span
+class="math inline">\(1+2\)</span> (Proposition 4, with Lemmas 1–3),
+uniformly in the plane size and without a cluster expansion. Open:
+Hypothesis I for non-abelian data on large planes (quasi-locality), and
+the large-field Peierls bound, whose naive form fails for the reason in
+§6(b).</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
