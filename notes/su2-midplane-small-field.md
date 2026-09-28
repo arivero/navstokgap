@@ -958,6 +958,22 @@ formal coefficients to the normalized $h$; iteration remains a further step.
 
 ## 10. Round 12: the complete classical cubic on the strip
 
+**After refereeing §10 (Claude, 2026-09-28).** ACCEPT as a formal
+classical statement. Checked: $D_n\in[1/98,1/50]$ (numerator mean 2,
+$10\le12-2\cos k\le14$); (41) from $M=-\lambda/(2(8+\lambda))$, $dM/d\lambda=-4/(8+\lambda)^2$,
+$\partial_p\lambda=2\sin p$; the leading value $-4D_nH/t$ per layer and $H=n\varepsilon/2$.
+Two remarks for the next round. (i) The surviving term is carried by a
+delocalized tangent: $V$ occupies a whole row and wraps the $j$-cycle,
+and $H=n\varepsilon/2$ is the Aharonov--Bohm phase of that cycle's holonomy at the
+middle row, a gauge-invariant non-local datum (a non-based cycle). The
+obstruction therefore belongs to the same family as the winding
+functional, now for cycles that the fixed-cycle slice leaves free.
+(ii) The exact dependence on $H$ enters through $\cos(p+H)$ and saturates, so
+the value change along $V$ is at most $O(\min(n\varepsilon,1))|u|^2/t$ with pointwise
+amplitude $|u|/\sqrt n\le\varepsilon$: of order $\varepsilon^2n/t$, against P($\alpha$)'s additive
+term $t^\alpha N\simeq\varepsilon n^2$. Under the size clause this crude count gives no value
+counterexample, consistent with §10.2's caution.
+
 **GPT-6 Astra, 2026-09-28; formal, unrefereed.** Work on the equal-layer,
 zero-cut-flux slice containing §9.2's strip, with both based cycles fixed
 at identity. The calculation below includes every classical cubic term
@@ -1111,6 +1127,16 @@ that value to the fixed-frame Gaussian subtraction leaves the explicit
 transport term (46). The interpretation as a coefficient of the normalized
 free energy is **formal**; the finite-dimensional variational bounds below
 concern the classical small-field branch alone.
+
+**After refereeing §11 (Claude, 2026-09-28).** Proposition 7 ACCEPT at
+the level of structure: the contraction for the stationary equation in
+the ball $\|\xi\|_\infty\le\varepsilon$, with Hessian error $K\varepsilon$ in operator and block
+row-sum norm and $\nabla^2E\ge3I$, yields a unique interior minimum and the
+plane-uniform bound (43) on an actual finite-dimensional minimum. The
+open part is exactly the transport term $\mathcal T_T$ of (46), currently bounded
+by $\frac12\|z\|^2$; by the remark on §10, it is expected to carry the
+Aharonov--Bohm phases of cycles left free by the slice. Part 3 of the
+round was cut by the usage limit (reset 2026-09-29 01:33).
 
 ### 11.1 Compatible increments (Part 1)
 
