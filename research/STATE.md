@@ -69,6 +69,16 @@ fill its cells (open cells in its §5).
   reconstruction and gap $\hbar cm$.  Its scalar mass is supplied and its
   symmetry is global, so it is an interface benchmark rather than a
   Yang--Mills claim.
+- [The gauge-invariant Dobrushin certificate](../notes/gauge-invariant-dobrushin-certificate.md)
+  now gives C/H2 a positive, volume-uniform $3+1$ $SU(3)$ strong-coupling
+  Wilson-loop mixing ball, including its local interaction-norm openness.
+  It does not identify that ball with the weak/intermediate scaling
+  trajectory, where H2 remains to be constructed.
+- [The $U(1)$ Maxwell fibre benchmark](../notes/u1-maxwell-fibre-feshbach-benchmark.md)
+  now gives A1/A2 an exact periodic gauge-quotient split: nonconstant
+  transverse modes cost at least $\hbar c(2/a)\sin(\pi/N_s)$ and have
+  zero Feshbach off-diagonal.  This abelian Gaussian result isolates the
+  projection interface; it is not a non-abelian Schur estimate.
 - [The completed $0+1$ proof](../notes/low-dimensional-mass-gap.md) now
   covers compact semisimple matrix mechanics, including $SU(3)$, and its
   $3+1$ constant-mode truncation has a gap proportional to

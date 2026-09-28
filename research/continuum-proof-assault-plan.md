@@ -311,13 +311,19 @@ workstream branches.
    H1$_{\rm gap}$, summable Weyl H1$_{\rm OS}$ seminorms, and massive OS
    reconstruction.  The [benchmark note](../notes/u1-gaussian-blocking-os-benchmark.md)
    records the complete proof and its supplied-mass/global-symmetry scope.
-5. **C1 choice:** select one analytic mixing criterion and write its
-   gauge-invariant conditional distributions; do not start from an
-   unverified numerical correlation length.
-6. **A2 positive target:** on a periodic gauge-invariant regulator,
-   isolate a renormalized fibre projection or a controlled nonconstant-mode
-   sector whose relative Schur bound is finite before attempting the full
-   $SU(3)$ estimate.
+5. **C1 strong-coupling certificate — completed:** the
+   [gauge-invariant Dobrushin note](../notes/gauge-invariant-dobrushin-certificate.md)
+   gives the Wilson-loop conditional distributions, a volume-uniform
+   $SU(3)$ mixing estimate, and an explicit open plaquette-interaction
+   ball.  Reaching the weak/intermediate scaling trajectory remains the
+   next C task.
+6. **A2 abelian fibre benchmark — completed:** the
+   [periodic $U(1)$ Maxwell note](../notes/u1-maxwell-fibre-feshbach-benchmark.md)
+   constructs the physical gauge quotient, exact nonconstant-mode lower
+   bound, and zero relative Schur error.  A gauge-covariant dressed
+   non-abelian fibre with a cutoff-uniform relative estimate remains the
+   next A task.
 
-E2 remains the first delegated task.  C and A now follow the completed B/D
-benchmark and should be merged only after their assumptions are reconciled.
+E2 remains the first delegated task.  The B/D, C, and A benchmarks now
+have distinct scopes and should be merged only after their assumptions are
+reconciled.
