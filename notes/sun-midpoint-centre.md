@@ -488,7 +488,7 @@ magnetic flux sectors
 organize the cycle holonomies whose small-angle part is the non-based
 cycle phase of round 12 in the
 [small-field note](su2-midplane-small-field.md) §10; and the fractional
-topological charge $1/N mod 1$ of twisted configurations
+topological charge $1/N \bmod 1$ of twisted configurations
 (['t Hooft 1981](https://doi.org/10.1007/BF01208900); metadata; value
 recalled) is $rac13$ for $SU(3)$, the group whose centre only trisections
 reach. Pure $SU(3)$ has exact centre symmetry
