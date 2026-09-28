@@ -138,6 +138,18 @@ signal in one cut has Kullback–Leibler divergence exactly (spent
 share)<span class="math inline">\(/\hbar\)</span>. In real time the same
 share, divided by the action resolution, is the phase of the two-path
 comparison.</li>
+<li><strong>Proposition 6 (the mark mesh as a Cameron–Martin threshold;
+2026-09-28, not refereed).</strong> Under the same path measure, the
+optimal equal-prior test between force <span
+class="math inline">\(F\)</span> and no force in a cell, observing the
+whole path with pinned ends, errs with probability <span
+class="math inline">\(\Phi(-\sqrt{K_\tau/2\hbar})\)</span>. It reaches
+<span class="math inline">\(\epsilon\)</span> iff <span
+class="math inline">\(K_\tau\ge2z_{1-\epsilon}^2\hbar\)</span>, which is
+exactly the Planck paper’s mark mesh <span
+class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>,
+obtained there from real-time Gaussian marks with Robertson’s
+bound.</li>
 <li><strong>Corollary 5 (a floor counts the cuts).</strong> If every
 exhibited cut must spend at least an action <span
 class="math inline">\(\kappa&gt;0\)</span>, at most <span
@@ -371,6 +383,50 @@ class="math inline">\(K_\tau\ge\varepsilon d_{n,\eta}\)</span>, that is
 d_{n,\eta}\)</span> in cut-share form. Corollary 5 thus places a floor,
 when one is given, at a definite depth of the cut process; it supplies
 no floor.</p>
+<h2 id="b.-the-mark-mesh-from-the-path-measure-proposition-6">5b. The
+mark mesh from the path measure (Proposition 6)</h2>
+<p>Keep the measure of §4: Brownian motion with <span
+class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, the Euclidean
+free-particle measure, whose diffusion coefficient <span
+class="math inline">\(\hbar/2m\)</span> is the one of <a
+href="https://doi.org/10.1103/PhysRev.150.1079">Nelson (1966)</a>
+(metadata). For the whole cell, the laws with and without the force are
+Gaussian measures differing by the shift <span
+class="math inline">\(\delta x\)</span>, with Cameron–Martin norm <span
+class="math inline">\(\|\delta x\|^2=(m/\hbar)\int\dot{\delta
+x}^2=2K_\tau/\hbar\)</span>. The log-likelihood ratio is the affine
+function <span class="math inline">\(\langle\delta
+x,X\rangle-\frac12\|\delta x\|^2\)</span> of one Gaussian statistic of
+variance <span class="math inline">\(\|\delta x\|^2\)</span> whose mean
+moves by <span class="math inline">\(\|\delta x\|^2\)</span>, so the
+Neyman–Pearson test with equal priors thresholds that statistic halfway
+and errs with probability</p>
+<p><span class="math display">\[p_{\rm err}=\Phi\Bigl(-\tfrac12\|\delta
+x\|\Bigr)=\Phi\Bigl(-\sqrt{K_\tau/2\hbar}\Bigr).\]</span></p>
+<p>Hence <span class="math inline">\(p_{\rm err}\le\epsilon\)</span> iff
+<span class="math inline">\(K_\tau\ge2z_{1-\epsilon}^2\hbar\)</span>,
+that is <span class="math inline">\(\tau\Delta
+E=12K_\tau\ge24z_{1-\epsilon}^2\hbar\)</span> and <span
+class="math inline">\(\tau\ge\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>:
+eq. (2) of the <a href="planck-gap-paper.html">Planck paper</a>,
+including its “about <span class="math inline">\(65\hbar\)</span> at
+<span class="math inline">\(\epsilon=0.05\)</span>” (<span
+class="math inline">\(2z_{0.95}^2=5.41\)</span>). A single cut observed
+alone gives <span class="math inline">\(\Phi(-\sqrt{{\rm
+share}/2\hbar})\)</span> in the same way. <span
+class="math inline">\(\square\)</span></p>
+<p>The Planck paper reaches (2) from real-time Gaussian marks whose
+record and recoil obey Robertson’s bound <span
+class="math inline">\(\hbar/2\)</span>; here the same constant comes
+from the Euclidean path measure <span
+class="math inline">\(e^{-S/\hbar}\)</span> through the Cameron–Martin
+theorem alone. The agreement is exact, and both routes supply <span
+class="math inline">\(\hbar\)</span>: this is a second derivation of the
+mesh, with the necessity question of the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a>
+unchanged. What it adds is the reading of the floor on recording the
+inertial–parabola difference as the distinguishability threshold of the
+force in the free-particle path measure.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Atlas §1b: the Newton row of “cuts at any position” is proved here
 (Theorems 1–2, Corollary 3), with the Lévy–Ciesielski identification and

@@ -43,6 +43,13 @@ cutting the cell.
   force signal in one cut has Kullback--Leibler divergence exactly
   (spent share)$/\hbar$. In real time the same share, divided by the action
   resolution, is the phase of the two-path comparison.
+- **Proposition 6 (the mark mesh as a Cameron--Martin threshold;
+  2026-09-28, not refereed).** Under the same path measure, the optimal
+  equal-prior test between force $F$ and no force in a cell, observing the
+  whole path with pinned ends, errs with probability $\Phi(-\sqrt{K_\tau/2\hbar})$. It
+  reaches $\epsilon$ iff $K_\tau\ge2z_{1-\epsilon}^2\hbar$, which is exactly the Planck paper's mark
+  mesh $\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, obtained there from real-time Gaussian
+  marks with Robertson's bound.
 - **Corollary 5 (a floor counts the cuts).** If every exhibited cut must
   spend at least an action $\kappa>0$, at most $K_\tau/\kappa$ cuts can be exhibited,
   whatever the schedule. For halving refinement, level $n$ is exhibited
@@ -209,6 +216,36 @@ resolution threshold $\tau\ge(24m\varepsilon d_{n,\eta}/F^2)^{1/3}$ is $K_\tau\g
 $\kappa=\frac34\varepsilon d_{n,\eta}$ in cut-share form. Corollary 5 thus places a floor, when
 one is given, at a definite depth of the cut process; it supplies no
 floor.
+
+## 5b. The mark mesh from the path measure (Proposition 6)
+
+Keep the measure of §4: Brownian motion with $E[X_t^2]=\hbar t/m$, the
+Euclidean free-particle measure, whose diffusion coefficient $\hbar/2m$ is
+the one of [Nelson (1966)](https://doi.org/10.1103/PhysRev.150.1079)
+(metadata). For the whole cell, the laws with and without the force are
+Gaussian measures differing by the shift $\delta x$, with Cameron--Martin norm
+$\|\delta x\|^2=(m/\hbar)\int\dot{\delta x}^2=2K_\tau/\hbar$. The log-likelihood ratio is the affine
+function $\langle\delta x,X\rangle-\frac12\|\delta x\|^2$ of one Gaussian statistic of variance $\|\delta x\|^2$
+whose mean moves by $\|\delta x\|^2$, so the Neyman--Pearson test with equal priors
+thresholds that statistic halfway and errs with probability
+
+$$p_{\rm err}=\Phi\Bigl(-\tfrac12\|\delta x\|\Bigr)=\Phi\Bigl(-\sqrt{K_\tau/2\hbar}\Bigr).$$
+
+Hence $p_{\rm err}\le\epsilon$ iff $K_\tau\ge2z_{1-\epsilon}^2\hbar$, that is $\tau\Delta E=12K_\tau\ge24z_{1-\epsilon}^2\hbar$ and
+$\tau\ge\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$: eq. (2) of the
+[Planck paper](planck-gap-paper.md), including its "about $65\hbar$ at
+$\epsilon=0.05$" ($2z_{0.95}^2=5.41$). A single cut observed alone gives
+$\Phi(-\sqrt{{\rm share}/2\hbar})$ in the same way. $\square$
+
+The Planck paper reaches (2) from real-time Gaussian marks whose record
+and recoil obey Robertson's bound $\hbar/2$; here the same constant comes from
+the Euclidean path measure $e^{-S/\hbar}$ through the Cameron--Martin theorem
+alone. The agreement is exact, and both routes supply $\hbar$: this is a
+second derivation of the mesh, with the necessity question of the
+[fifth-postulate note](principia-fifth-postulate.md) unchanged. What it
+adds is the reading of the floor on recording the inertial--parabola
+difference as the distinguishability threshold of the force in the
+free-particle path measure.
 
 ## 6. Consequence for STATE
 
