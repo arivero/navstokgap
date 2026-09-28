@@ -273,6 +273,17 @@ correction is dated in the note. Do not reintroduce them.
     ([cut-measure-newton](notes/cut-measure-newton.md), commit `88344a9`).
 23. **At an $SU(2)$ halving a winding $n$ acts by $(-1)^n$**, not always by
     $-1$; even windings act trivially (atlas §1b, commit `7d8518a`).
+24. **Image terms are not windings for simply connected groups.** In the
+    exact midpoint formula the coroot images carry signed Weyl-polynomial
+    amplitudes; reading them as a probability mixture over topological
+    winding sectors holds for $U(1)$ only ($SU(N)$ is simply connected).
+    The thin-vortex placement at a trisection is a semiclassical reading
+    of exact central phases (Astra round 5B, commit `059d8be`).
+25. **Nelson's stochastic mechanics is not independence from the literal
+    Laws.** His mean dynamics needs further state and phase assumptions;
+    the stochastic route's S1--S3 stand without it, and the centre-of-mass
+    variance argument of S2 appears already in Demme--Caticha (round 5B).
+
 
 ## 5. Open problems, with the smallest next theorem
 
