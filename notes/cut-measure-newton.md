@@ -1,5 +1,16 @@
 # Newton's cell action as a measure on cuts
 
+**After refereeing (GPT-6 Astra, 2026-09-28).** A6: ACCEPT Proposition 6's
+Cameron--Martin norm, optimal equal-prior error and exact constant in the
+Planck mesh. REFINE the statement to two prescribed Gaussian bridge
+means with the same pinned endpoints and covariance, distinguish the
+variance rate from the diffusion coefficient, and identify the
+likelihood pairing as a Gaussian stochastic functional. The agreement
+with the mark model is structural: both have the sharp squared signal
+distance $2K_\tau/\hbar$ from the same Dirichlet energy. The bridge test
+attains its bound; the mark model approaches it by dense protocols.
+Both supply $\hbar>0$, leaving necessity unchanged.
+
 **After refereeing (Fable, 2026-09-28).** Theorems 1--2, Corollary 3's
 arithmetic and the quotations were re-derived and accepted. Corrections
 applied: Proposition 4 now names the Kullback--Leibler divergence, the
@@ -39,12 +50,12 @@ cutting the cell.
   front and back") spends $\frac{27}{28}K_\tau$. All three leave a definite share
   unspent forever, because they keep cut-off pieces of fixed length.
 - **Proposition 4 (weight of a cut).** Under the Euclidean path measure
-  of a free particle with diffusion constant $\hbar/m$ (Wiener measure), the
+  of a free particle with variance rate $\hbar/m$ (Wiener measure), the
   force signal in one cut has Kullback--Leibler divergence exactly
   (spent share)$/\hbar$. In real time the same share, divided by the action
   resolution, is the phase of the two-path comparison.
 - **Proposition 6 (the mark mesh as a Cameron--Martin threshold;
-  2026-09-28, not refereed).** Under the same path measure, the optimal
+  2026-09-28, refereed ACCEPT with the hypotheses of §5b).** Under the same path measure, the optimal
   equal-prior test between force $F$ and no force in a cell, observing the
   whole path with pinned ends, errs with probability $\Phi(-\sqrt{K_\tau/2\hbar})$. It
   reaches $\epsilon$ iff $K_\tau\ge2z_{1-\epsilon}^2\hbar$, which is exactly the Planck paper's mark
@@ -174,8 +185,9 @@ not have.
 
 ## 4. The weight of a cut
 
-Take the Euclidean path measure of a free particle with diffusion
-constant $\hbar/m$: Brownian motion $X$ with $E[X_t^2]=\hbar t/m$, pinned at the
+Take the Euclidean path measure of a free particle with variance
+rate $\hbar/m$: unconditioned centred Brownian motion $X$ with
+$E[X_t^2]=\hbar t/m$, then pin it at the
 cell's endpoints. Given the endpoints of a piece of length $L$, the value
 at fraction $s$ is Gaussian with variance $\hbar s(1-s)L/m$, independent of
 the finer hats and of the other pieces, by the Markov property of the
@@ -219,19 +231,32 @@ floor.
 
 ## 5b. The mark mesh from the path measure (Proposition 6)
 
-Keep the measure of §4: Brownian motion with $E[X_t^2]=\hbar t/m$, the
+Keep the measure of §4: unconditioned centred Brownian motion with
+$E[X_t^2]=\hbar t/m$, the
 Euclidean free-particle measure, whose diffusion coefficient $\hbar/2m$ is
 the one of [Nelson (1966)](https://doi.org/10.1103/PhysRev.150.1079)
-(metadata). For the whole cell, the laws with and without the force are
-Gaussian measures differing by the shift $\delta x$, with Cameron--Martin norm
-$\|\delta x\|^2=(m/\hbar)\int\dot{\delta x}^2=2K_\tau/\hbar$. The log-likelihood ratio is the affine
-function $\langle\delta x,X\rangle-\frac12\|\delta x\|^2$ of one Gaussian statistic of variance $\|\delta x\|^2$
-whose mean moves by $\|\delta x\|^2$, so the Neyman--Pearson test with equal priors
+(metadata). Assume $m,\tau,\hbar>0$, $F\in\mathbb R$, equal priors and
+$0<\epsilon<1/2$. Let $\ell$ be a fixed endpoint chord and let $B$ be
+the centred bridge with covariance
+$E[B_uB_v]=(\hbar/m)(\min(u,v)-uv/\tau)$. Compare
+$P_0=\mathcal L(\ell+B)$ and
+$P_1=\mathcal L(\ell-\delta x+B)$, where
+$\delta x(u)=Fu(\tau-u)/(2m)$. This specifies additive position noise
+around the two Newtonian comparison paths. Their Cameron--Martin norm is
+$d^2=\|\delta x\|_{\rm CM}^2=(m/\hbar)\int\dot{\delta x}^2=2K_\tau/\hbar$.
+Writing $h=-\delta x$, the log-likelihood ratio is
+$Y-d^2/2$, where $Y=\langle h,X-\ell\rangle_{\rm CM}$ denotes the
+Gaussian stochastic pairing, defined even though typical paths lie
+outside the Cameron--Martin space. Here integration by parts makes it
+the ordinary area statistic
+$Y=-(F/\hbar)\int_0^\tau(X_u-\ell_u)du$.
+Under $P_0$, $Y\sim N(0,d^2)$; under $P_1$, $Y\sim N(d^2,d^2)$.
+Thus the Neyman--Pearson test with equal priors
 thresholds that statistic halfway and errs with probability
 
 $$p_{\rm err}=\Phi\Bigl(-\tfrac12\|\delta x\|\Bigr)=\Phi\Bigl(-\sqrt{K_\tau/2\hbar}\Bigr).$$
 
-Hence $p_{\rm err}\le\epsilon$ iff $K_\tau\ge2z_{1-\epsilon}^2\hbar$, that is $\tau\Delta E=12K_\tau\ge24z_{1-\epsilon}^2\hbar$ and
+Hence $p_{\rm err}\le\epsilon$ iff $K_\tau\ge2z_{1-\epsilon}^2\hbar$, that is $\tau\Delta E=12K_\tau\ge24z_{1-\epsilon}^2\hbar$ and, for $F\ne0$,
 $\tau\ge\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$: eq. (2) of the
 [Planck paper](planck-gap-paper.md), including its "about $65\hbar$ at
 $\epsilon=0.05$" ($2z_{0.95}^2=5.41$). A single cut observed alone gives
@@ -240,8 +265,18 @@ $\Phi(-\sqrt{{\rm share}/2\hbar})$ in the same way. $\square$
 The Planck paper reaches (2) from real-time Gaussian marks whose record
 and recoil obey Robertson's bound $\hbar/2$; here the same constant comes from
 the Euclidean path measure $e^{-S/\hbar}$ through the Cameron--Martin theorem
-alone. The agreement is exact, and both routes supply $\hbar$: this is a
-second derivation of the mesh, with the necessity question of the
+alone. The agreement is exact and structural. In Theorem 2 of the
+Planck paper, the mark trade-off $\kappa_{\rm mark}=\hbar/2$ gives
+$\sup d_{\rm mark}^2=F^2\tau^3/(24m\kappa_{\rm mark})=2K_\tau/\hbar$.
+Its optimization uses the same Dirichlet inverse of $-d^2/du^2$
+with zero boundary values, hence the same parabolic extremizer and
+$\tau^3/12$. The full bridge attains this Gaussian information;
+the independent, uncorrelated, non-adaptive mark protocols approach
+it in the dense limit for tests invariant under initial position and
+velocity. This equality of sharp information retains the different
+experimental premises; it supplies no equivalence of all records or
+of Nelson's state-dependent dynamics. Both routes supply $\hbar>0$,
+giving a second conditional derivation of the mesh, with the necessity question of the
 [fifth-postulate note](principia-fifth-postulate.md) unchanged. What it
 adds is the reading of the floor on recording the inertial--parabola
 difference as the distinguishability threshold of the force in the
@@ -255,7 +290,9 @@ different quantities (a cell's Galileo action and a phase-space window).
 
 Atlas §1b: the Newton row of "cuts at any position" is proved here
 (Theorems 1--2, Corollary 3), with the Lévy--Ciesielski identification
-and the Euclidean weight of a cut (Proposition 4). The necessity question
+and the Euclidean weight of a cut (Proposition 4). Proposition 6 is now
+refereed: its Gaussian information equals the sharp mark information
+under the respective stated hypotheses. The necessity question
 is unchanged. On the gauge side of §1b the free-field defect of a cut at
 fraction $s$ is (5) scaled by $4s(1-s)$ in its size bound
 ([Corollary 2$_s$](series-parallel-gauge-refinement.md)); the $U(1)$ Theorem 5

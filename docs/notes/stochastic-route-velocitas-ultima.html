@@ -78,15 +78,31 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>Brownian free motion: the velocitas ultima denied, one action
-constant, and the floor</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/stochastic-route-velocitas-ultima.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/stochastic-route-velocitas-ultima.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (Claude; written derivation, to be
-refereed).</strong> A third route for the <a
+constant, and the floor</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/stochastic-route-velocitas-ultima.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/stochastic-route-velocitas-ultima.pdf">PDF</a></p><p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong> A7:
+ACCEPT S1’s continuous-Lévy classification and nowhere
+differentiability, S2’s nonnegative additive-function proof, and S3’s
+Cameron–Martin norm and optimal-test constant. REFINE the hypotheses:
+deterministic initial position, stationary independent increments,
+isotropy of centred noise, all positive masses, and additive
+force-independent position noise in S3. REJECT the unqualified claim
+that Nelson proves independence from the literal Newtonian Laws or
+equivalence under P1–P5 alone. His mean dynamics and its additional
+state and phase assumptions are now separated from this model. The §5
+table and scope are correspondingly qualified; <span
+class="math inline">\(\kappa&gt;0\)</span> remains assumed. The bounded
+prior-art search in §3 located the centre-of-mass variance calculation
+in Demme–Caticha, with the inverse-mass law supplied there. The
+ancillary jump discussion now names stochastic continuity and qualifies
+its dimensional argument.</p>
+<p><strong>Result, 2026-09-28 (Claude; refereed with corrections
+above).</strong> A third route for the <a
 href="principia-fifth-postulate.html">fifth-postulate programme</a>,
 beside the deformation route (Theorems A, B) and the Gaussian state
 route (Theorem B<span class="math inline">\(&#39;\)</span>): the
 stochastic one. Let the free motion of a body of mass <span
-class="math inline">\(m\)</span> be a Markov process with continuous
-paths, homogeneous in space and time and isotropic (premises P1–P3 of
-§1).</p>
+class="math inline">\(m&gt;0\)</span> start at a deterministic point and
+have continuous paths, stationary independent increments and isotropic
+centred noise (premises P1–P3 of §1).</p>
 <ul>
 <li><strong>Theorem S1 (the law and the denial).</strong> The free
 motion is Brownian motion with drift, with variance rate <span
@@ -102,11 +118,11 @@ the law of their total mass (P5), then <span
 class="math inline">\(\kappa=mD\)</span> is one universal constant, with
 the dimension of an action; <span
 class="math inline">\(\kappa=0\)</span> is admissible.</li>
-<li><strong>Theorem S3 (the floor).</strong> For <span
-class="math inline">\(\kappa&gt;0\)</span>, any record that decides from
-the path, with pinned ends, between the inertial chord and the
-constant-force parabola over a cell errs at equal priors with
-probability at least <span
+<li><strong>Theorem S3 (the floor, additive-noise hypothesis of
+§4).</strong> For <span class="math inline">\(\kappa&gt;0\)</span>, any
+record that decides from the path, with pinned ends, between the
+inertial chord and the constant-force parabola over a cell errs at equal
+priors with probability at least <span
 class="math inline">\(\Phi(-\sqrt{K_\tau/2\kappa})\)</span>, attained by
 the optimal test, where <span
 class="math inline">\(K_\tau=F^2\tau^3/(24m)\)</span> is the Galileo
@@ -128,59 +144,72 @@ the relativistic kinetic energy divided by <span
 class="math inline">\(\kappa\)</span>, <span
 class="math inline">\((\sqrt{m^2c^4+c^2\kappa^2k^2}-mc^2)/\kappa\)</span>,
 is of this form and generates a process with jumps.</li>
-<li><strong>Independence (Nelson).</strong> With diffusion coefficient
-<span class="math inline">\(\nu=\kappa/2m\)</span>, Nelson’s stochastic
-mechanics obeys Newton’s second law in a mean sense and is equivalent to
-the Schrödinger equation with <span
-class="math inline">\(\hbar=\kappa\)</span> (<a
-href="https://doi.org/10.1103/PhysRev.150.1079">Nelson 1966</a>,
+<li><strong>Mean-law compatibility (Nelson).</strong> With diffusion
+coefficient <span class="math inline">\(\nu=\kappa/2m\)</span>, Nelson’s
+stochastic mechanics imposes Newton’s second law on a symmetric mean
+acceleration and obtains Schrödinger dynamics with additional state and
+phase assumptions and <span class="math inline">\(\hbar=\kappa\)</span>
+(<a href="https://doi.org/10.1103/PhysRev.150.1079">Nelson 1966</a>,
 abstract; precursor <a href="https://doi.org/10.1007/BF01338578">Fényes
-1952</a>, metadata). So every <span
-class="math inline">\(\kappa\ge0\)</span> is consistent with the Laws,
-the analogue of Theorem A.</li>
+1952</a>, metadata). This supports a separate mean-law interpretation
+for <span class="math inline">\(\kappa&gt;0\)</span>; the deterministic
+<span class="math inline">\(\kappa=0\)</span> branch supplies ordinary
+free motion.</li>
 </ul>
-<p>The route carries the four parts of the fifth-postulate goal: the
-statement (the existence of the ultimate velocity), its independence,
-exactly one added action constant, and a floor on recording the
+<p>The route addresses the fifth-postulate goal through the statement
+(the existence of the ultimate velocity), compatibility with specified
+mean laws, one added action constant, and a floor on recording the
 inertial–parabola difference, an area Newton takes to zero. Its limit is
 the same as in the other routes: <span
 class="math inline">\(\kappa&gt;0\)</span> is the negated postulate,
 assumed, and the zero branch stays admissible. Theorems S1 and S2 are
-elementary; the centre-of-mass argument of S2 is likely known in
-stochastic mechanics, where <span
-class="math inline">\(\nu\propto1/m\)</span> is postulated, but it has
-not been located in print here.</p>
+elementary; §3 records prior art without a novelty claim.</p>
 <h2 id="premises">1. Premises</h2>
 <ul>
-<li><strong>P1 (continuity).</strong> The free motion is a Markov
-process with continuous paths. Continuity of motion is Aristotle’s
-(<em>Physics</em> VI, cited by book only); the leap of al-Nazzam,
-already in the Planck paper’s classics, would be a jump, which P1
-excludes.</li>
-<li><strong>P2 (homogeneity).</strong> Stationary independent
-increments: no preferred place or time. A Galilean boost adds a constant
-drift and preserves P2.</li>
-<li><strong>P3 (isotropy).</strong> No preferred direction.</li>
-<li><strong>P4 (mass alone).</strong> A body’s free law depends only on
-its mass, as all bodies fall alike.</li>
-<li><strong>P5 (composition).</strong> For independent bodies the centre
-of mass obeys the free law of the total mass.</li>
+<li><strong>P1 (continuity).</strong> The free motion starts at a
+deterministic position and has almost surely continuous paths.
+Continuity of motion is Aristotle’s (<em>Physics</em> VI, cited by book
+only); the leap of al-Nazzam, already in the Planck paper’s classics,
+would be a jump, which P1 excludes.</li>
+<li><strong>P2 (increments).</strong> Stationary independent increments.
+This explicitly includes the independence premise beyond space and time
+homogeneity. A Galilean boost adds a constant drift and preserves
+P2.</li>
+<li><strong>P3 (isotropy).</strong> The centred fluctuations have a
+rotation-invariant law; the specified constant drift may select a
+direction. Isotropy of the full law in a fixed frame would force that
+drift to vanish.</li>
+<li><strong>P4 (mass alone).</strong> The centred free law depends only
+on mass and is defined for every real <span
+class="math inline">\(m&gt;0\)</span>, with finite variance rate in
+S1–S2. Universality of free fall alone does not establish this noise
+premise.</li>
+<li><strong>P5 (composition).</strong> For independent bodies of any
+positive masses, their centre of mass has the centred free law of the
+total mass and the mass-weighted mean drift. Correlated noises require a
+new premise.</li>
 </ul>
-<h2 id="theorem-s1">2. Theorem S1</h2>
+<h2 id="theorem-s1-accept-with-the-stated-p1p3">2. Theorem S1 (ACCEPT
+with the stated P1–P3)</h2>
 <p>A process in <span class="math inline">\(\mathbb R^3\)</span> with
 stationary independent increments and continuous paths is a Brownian
 motion with drift, <span
 class="math inline">\(X_t=x_0+vt+\Sigma^{1/2}W_t\)</span> (the Lévy–Itô
-decomposition has no jump part when the paths are continuous; standard).
-Isotropy gives <span class="math inline">\(\Sigma=D\,I\)</span>, and
-<span class="math inline">\(D\ge0\)</span> can depend only on the body.
-For <span class="math inline">\(D&gt;0\)</span>, Brownian paths are
-almost surely nowhere differentiable (<a
+decomposition has no jump part when the paths are continuous; <a
+href="https://galton.uchicago.edu/~lalley/Courses/383/BrownianMotion.pdf">Lalley,
+<em>Introduction to Brownian Motion</em>, §1</a>, passage). Continuity
+supplies stochastic continuity, and stationary independent increments
+supply the Markov property. Isotropy of the centred law gives <span
+class="math inline">\(\Sigma=D\,I\)</span>, and <span
+class="math inline">\(D\ge0\)</span> can depend only on the body. For
+<span class="math inline">\(D&gt;0\)</span>, Brownian paths are almost
+surely nowhere differentiable (<a
 href="https://doi.org/10.1007/BF01474606">Paley, Wiener and Zygmund
-1933</a>, metadata), and they have Hausdorff dimension 2, the dimension
-found for quantum paths by <a
-href="https://doi.org/10.1119/1.12657">Abbott and Wise (1981)</a>
-(metadata). The difference quotient <span
+1933</a>, metadata), and their spatial range in <span
+class="math inline">\(\mathbb R^3\)</span> over any nontrivial time
+interval has Hausdorff dimension 2, the dimension compared for quantum
+paths by <a href="https://doi.org/10.1119/1.12657">Abbott and Wise
+(1981)</a> (metadata). The difference quotient <span
 class="math inline">\((X_{t+h}-X_t)/h\)</span> has no limit; its
 conditional mean does, <span
 class="math inline">\(\lim_{h\downarrow0}E[X_{t+h}-X_t\mid\mathcal
@@ -196,7 +225,8 @@ limit of the ratio exists for the mean and fails for the path. This is
 the denial of joint determinacy in the form Newton wrote it: the place
 at an instant is sharp, while the velocity at that instant has no
 pathwise value.</p>
-<h2 id="theorem-s2">3. Theorem S2</h2>
+<h2 id="theorem-s2-accept-under-p4p5">3. Theorem S2 (ACCEPT under
+P4–P5)</h2>
 <p><em>Proof.</em> Take independent bodies with masses <span
 class="math inline">\(m_i\)</span>, drifts <span
 class="math inline">\(v_i\)</span> and variance rates <span
@@ -218,20 +248,53 @@ class="math inline">\(mD=\kappa\)</span> is the same for every body. Its
 dimension is mass times length<span
 class="math inline">\(^2\)</span>/time, an action. <span
 class="math inline">\(\square\)</span></p>
+<p>For completeness, nonnegativity gives <span
+class="math inline">\(g(y)-g(x)=g(y-x)\ge0\)</span> for <span
+class="math inline">\(y&gt;x&gt;0\)</span>. Fix <span
+class="math inline">\(m_0&gt;0\)</span>. Additivity gives <span
+class="math inline">\(g(rm_0)=r g(m_0)\)</span> for positive rational
+<span class="math inline">\(r\)</span>; monotone rational approximations
+to <span class="math inline">\(m/m_0\)</span> give <span
+class="math inline">\(g(m)=m g(m_0)/m_0\)</span>. Thus no measurability
+assumption or empirical mass-continuity assumption is needed once P4–P5
+cover all positive real masses. A restricted list of species or
+correlated noises would need a separate argument.</p>
 <p>The argument is the stochastic counterpart of the <a
 href="rotation-composition-universality.html">rotation-composition
 note</a>, where interaction forces a common constant in the composition
-of rotations; P4 plays the role of the equivalence principle, and P5 the
-role of the centre-of-mass law. Neither argument excludes <span
+of rotations; P4 is an additional universality premise for fluctuations,
+and P5 specifies the centre-of-mass law. Neither argument excludes <span
 class="math inline">\(\kappa=0\)</span>.</p>
-<h2 id="theorem-s3">4. Theorem S3</h2>
-<p>Let a constant force <span class="math inline">\(F\)</span> act, so
-the body’s path is the Newtonian parabola plus <span
-class="math inline">\(\sqrt{D}\,W_t\)</span>. Pin the ends of a cell of
-duration <span class="math inline">\(\tau\)</span>. The two laws to be
-told apart, with and without the force, are Brownian bridges of variance
-rate <span class="math inline">\(D=\kappa/m\)</span> around the parabola
-and around the chord. Their difference is the shift <span
+<p><strong>Prior art (bounded search, 2026-09-28).</strong> <a
+href="https://doi.org/10.1103/PhysRev.150.1079">Nelson 1966</a>,
+abstract, explicitly supplies <span
+class="math inline">\(\nu=\hbar/(2m)\)</span>. <a
+href="https://doi.org/10.1063/1.4985370">Demme–Caticha, <em>The
+Classical Limit of Entropic Quantum Dynamics</em> (2017)</a>, <a
+href="https://arxiv.org/pdf/1612.01905">passage, §3, eqs. (18)–(28)</a>,
+computes the centre-of-mass covariance <span
+class="math inline">\(\langle\Delta W^a\Delta W^b\rangle=\eta\Delta
+t\,\delta^{ab}/M\)</span> from constituent covariances <span
+class="math inline">\(\eta\Delta t/m_i\)</span> given in its eq. (9).
+That is close prior art for the composition calculation; S2 reverses the
+implication under P4–P5 by the nonnegative Cauchy equation. Searches for
+stochastic mechanics, inverse mass and centre-of-mass consistency
+located no explicit version of that converse in the passages checked.
+This bounded search supports no priority claim. The Demme–Caticha DOI
+and title were verified through Crossref.</p>
+<h2 id="theorem-s3-accept-for-additive-noise">4. Theorem S3 (ACCEPT for
+additive noise)</h2>
+<p>In addition to S1–S2 assume explicitly that, under constant force
+<span class="math inline">\(F\)</span>, the body’s path is the
+deterministic Newtonian parabola plus the same additive noise <span
+class="math inline">\(\sqrt{D}\,W_t\)</span>. Take <span
+class="math inline">\(m,\tau,\kappa&gt;0\)</span>, equal priors and
+<span class="math inline">\(0&lt;\epsilon&lt;1/2\)</span>. Pin both laws
+to the same endpoints of a cell of duration <span
+class="math inline">\(\tau\)</span>. The two laws to be told apart, with
+and without the force, are Brownian bridges of variance rate <span
+class="math inline">\(D=\kappa/m\)</span> around the parabola and around
+the chord. Their difference is the shift <span
 class="math inline">\(\delta x\)</span> (chord minus parabola), with
 Cameron–Martin norm <span class="math inline">\(\|\delta
 x\|^2=D^{-1}\int_0^\tau\dot{\delta x}^2dt=(m/\kappa)\int\dot{\delta
@@ -246,6 +309,16 @@ evidence <span class="math inline">\(K_\tau/\kappa\)</span> over any
 sequence of cuts, each cut carrying the Kullback–Leibler share <span
 class="math inline">\(3s(1-s)K_L/\kappa\)</span>. <span
 class="math inline">\(\square\)</span></p>
+<p>The pinned covariance is <span
+class="math inline">\(D(\min(u,v)-uv/\tau)\)</span> and the shift is
+<span class="math inline">\(\delta x(u)=Fu(\tau-u)/(2m)\)</span>. Hence
+<span class="math inline">\(\int_0^\tau\dot{\delta
+x}^2du=F^2\tau^3/(12m^2)\)</span>, fixing the factor 2 in the norm. Any
+record obtained from the path by a common observation channel has no
+smaller Bayes error than the full-path test. For <span
+class="math inline">\(F=0\)</span> that error is <span
+class="math inline">\(1/2\)</span>; the displayed mesh assumes <span
+class="math inline">\(F\ne0\)</span>.</p>
 <p>With <span class="math inline">\(\kappa=\hbar\)</span>, which is the
 normalization of the Euclidean free measure <span
 class="math inline">\(e^{-S/\hbar}\)</span> and of Nelson’s <span
@@ -276,10 +349,10 @@ the Planck paper’s eq. (2).</p>
 <td><em>velocitas ultima</em> exists pathwise (S1)</td>
 </tr>
 <tr class="even">
-<td>independence from the Laws</td>
+<td>compatibility with specified dynamics</td>
 <td>Moyal (Thm A)</td>
 <td>Gaussian closure</td>
-<td>Nelson 1966</td>
+<td>mean laws; Nelson requires further assumptions</td>
 </tr>
 <tr class="odd">
 <td>exactly one constant</td>
@@ -291,22 +364,39 @@ the Planck paper’s eq. (2).</p>
 <td>floor on the comparison</td>
 <td>Thms C, E</td>
 <td>Thm C</td>
-<td>Cameron–Martin (S3)</td>
+<td>Cameron–Martin for additive position noise (S3)</td>
 </tr>
 </tbody>
 </table>
-<p>The premise that remains is the same in all three columns: why the
-constant is positive. In the stochastic route it has the plainest form,
-whether free paths have an instantaneous velocity, and Newton’s scholium
-asserts that they do. Two further limits: P4 and P5 are premises about
-bodies (an equivalence principle for fluctuations and a centre-of-mass
-law), and S3 is proved for additive position noise, the law of S1 with a
-force added; in Nelson’s full dynamics the drift depends on the state,
-and the corresponding bound is not claimed here. Allowing jumps (the
-leap) is treated in §5b.</p>
+<p><strong>Nelson claim: REFINE; unqualified independence/equivalence:
+REJECT.</strong> The <a
+href="https://doi.org/10.1103/PhysRev.150.1079">1966 abstract</a>
+reports a stochastic Newton law and an equivalence within a limited
+framework. Nelson uses forward and backward mean derivatives and a
+state-dependent drift; P1–P5 alone specify neither that dynamics nor a
+wave function. Global equivalence also requires phase/circulation
+conditions (<a href="https://doi.org/10.1103/PhysRevA.49.1613">Wallstrom
+1994</a>, abstract; DOI verified through Crossref). Thus the literal
+pathwise Laws, which use an instantaneous momentum, require a
+reformulation on Brownian paths. In the additive model of S3 one does
+have <span class="math inline">\(m\,d^2E[X_t]/dt^2=F\)</span> before
+endpoint conditioning. That elementary mean identity and Nelson’s
+symmetric mean acceleration are distinct compatibility statements. The
+table records their qualified role.</p>
+<p>The selection question in all three columns is why the constant is
+positive. In the stochastic route it has the plainest form, whether free
+paths have an instantaneous velocity, and Newton’s scholium asserts that
+they do. Two further limits: P4 and P5 are premises about bodies (an
+equivalence principle for fluctuations and a centre-of-mass law), and S3
+is proved for additive position noise, the law of S1 with a force added;
+in Nelson’s full dynamics the drift depends on the state, and the
+corresponding bound is not claimed here. Allowing jumps (the leap) is
+treated in §5b.</p>
 <h2 id="b.-jumps-allowed-proposition-s4">5b. Jumps allowed (Proposition
 S4)</h2>
-<p>Drop P1 and keep P2–P5. The free law of a body of mass <span
+<p>Replace P1 by stochastic continuity and a càdlàg version, retain the
+deterministic initial point, and keep P2–P5 without a finite-variance
+requirement. The free law of a body of mass <span
 class="math inline">\(m\)</span> is then an isotropic Lévy process; take
 it symmetric, so its exponent, <span
 class="math inline">\(E\,e^{ik\cdot(X_t-X_0)}=e^{-t\,\phi(m,|k|)}\)</span>,
@@ -360,18 +450,25 @@ class="math inline">\(\kappa|k|\ll mc\)</span>; it is a Bernstein
 function of <span class="math inline">\(k^2\)</span>, and its process
 has jumps (<a
 href="https://doi.org/10.1016/0022-1236(90)90049-Q">Carmona, Masters and
-Simon 1990</a>, metadata). So in this reading the leap is what a speed
-limit readmits, and Aristotle’s continuity is what a single action
-constant enforces. This is a structural remark: which constants the free
-law may contain is itself a premise.</p>
+Simon 1990</a>, metadata). Here <span class="math inline">\(c\)</span>
+is an additional speed scale in a Euclidean generator; its jump process
+allows instantaneous spatial jumps and supplies no causal speed bound on
+sample paths. The single-action dimensional conclusion is conditional on
+the absence of every other dimensional input or hidden scale and on
+dimensional covariance of the law. Those premises, including Aristotle’s
+proposed continuity comparison, are structural interpretations rather
+than consequences of composition alone.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Newton necessity gains a third route in which the negated postulate
-is Newton’s own sentence on the ultimate velocity: continuity,
-homogeneity and isotropy give Brownian free motion, composition gives
-one action constant, and the Cameron–Martin theorem gives the floor,
-equal to the Planck paper’s mark mesh at <span
-class="math inline">\(\kappa=\hbar\)</span>. Positivity of <span
-class="math inline">\(\kappa\)</span> remains a premise.</p>
+is Newton’s own sentence on the ultimate velocity: continuous stationary
+independent increments with isotropic centred noise give Brownian free
+motion, composition over all positive masses gives one action constant,
+and the Cameron–Martin theorem gives the floor, equal to the Planck
+paper’s mark mesh at <span class="math inline">\(\kappa=\hbar\)</span>,
+under additive-noise hypotheses. S1–S3 are refereed with these
+qualifications. Positivity of <span
+class="math inline">\(\kappa\)</span> and a physical justification of
+the path and record laws remain premises.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -61,6 +61,8 @@ fill its cells (open cells in its §5).
    TV distance $\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ in $D=3$; the route fails in
    $D=4$ (loop density per cell fixed by $g$). The $SU(2)$ midpoint character
    is exact for every spin ([closed form](../notes/su2-midpoint-exact.md)).
+   [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
+   are refereed (Round 5B A); image-to-volume control remains open.
    Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 now has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). Next: its normalized estimate (18) with winding control, then iteration; higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
@@ -81,7 +83,11 @@ fill its cells (open cells in its §5).
    [Rotation composition](../notes/rotation-composition-universality.md): mechanical generator closure forces one constant per connected class; the common zero branch remains admissible.
    [Galileo two-path interference](../notes/galileo-two-path-interference.md): exact cubic-action error law; contrasting limits require averaging or calibrated control, with positive scale still supplied.
    [Cut measure](../notes/cut-measure-newton.md) (refereed): any cut sequence spends $K_\tau$ additively (Cameron--Martin energy of Schauder hats; the rod of *Zhuangzi* 33 spends $\frac67$); a floor bounds the number of exhibited cuts and supplies none.
-   [Stochastic route](../notes/stochastic-route-velocitas-ultima.md) (not yet refereed): continuity, homogeneity and isotropy make free motion Brownian; for $\kappa=mD>0$ the *velocitas ultima* fails pathwise (Newton's own sentence negated); composition makes $\kappa$ one action constant; the floor is $K_\tau\ge2z^2\kappa$, the Planck mesh at $\kappa=\hbar$. Positivity of $\kappa$ remains the premise.
+   [Stochastic route](../notes/stochastic-route-velocitas-ultima.md) and
+   cut-measure Prop. 6 are refereed (Round 5B A): continuous independent
+   increments, mass composition and additive-noise testing give the
+   conditional Planck mesh. Positivity and the physical noise law remain
+   premises; Nelson supplies a separate mean-dynamics framework.
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.

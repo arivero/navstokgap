@@ -68,20 +68,25 @@ performs the same two moves, with $s$ as a parameter.
   mesh vanishes ([cut-measure note](cut-measure-newton.md)). The Galileo
   action is an additive measure on the cut process, with the nested
   additivity of the Lévy--Ciesielski construction of the Brownian bridge.
-- **Windings and the centre.** At a cut the bridge midpoint is a mixture
-  over windings. For $U(1)$ the weights are $s$-independent and the shifts
+- **Relative windings.** For $U(1)$ a cut's bridge law is a positive
+  winding mixture: its weights are $s$-independent and the shifts
   $2\pi(1-s)W$ form $\mathbb Z_2$ only at halving and $\mathbb Z_q$ at $s=p/q$. For every
   compact simply connected group the midpoint expectation of every
   character is exact, a sum over weights of coroot image sums
-  ([centre note](sun-midpoint-centre.md), Theorem 1), and a cut at $p/q$
+  ([centre note](sun-midpoint-centre.md), Theorems 1 and 1'). Its signed
+  Weyl-polynomial amplitudes describe relative Cartan images; positivity
+  of a mixture and homotopy winding sectors in the group are additional
+  interpretations unsupported by that expansion.
+- **Which part of the centre a cut reaches.** A cut at $p/q$
   reaches exactly the subgroup $\mathbb Z_{\gcd(q,N)}$ of the centre of $SU(N)$ (its
   Corollary 3). So the $SU(2)$ halving carries Dirac's belt trick, a
   winding $n$ acting by $(-1)^n$ on half-integer spins, while dyadic
-  refinement never reaches the $SU(3)$ centre and a trisection carries
-  the triality. Flipping one mid-edge by a central element is the
-  smallest thin centre vortex. Open: whether this ties refinement to
+  refinement reaches only its identity for $SU(3)$ and a trisection carries
+  the triality. Flipping one mid-edge by a central element inserts thin
+  centre flux into its incident faces. Open: whether this ties refinement to
   centre vortices, and whether triadic refinement suits $SU(3)$ better.
-  The centre note awaits Astra's referee.
+  Astra's Round 5B Part A referee is complete (2026-09-28): the exact
+  identities and torsion criterion are accepted, with scope corrections.
 - **The rod.** The stick of *Zhuangzi* 33, 一尺之捶，日取其半，萬世不竭, halved
   only in its remaining piece, spends $\frac67K_\tau$ and converges to a point,
   the Mohist 端 of Canon B; refinement, which spends all of $K_\tau$, cuts
@@ -152,8 +157,10 @@ way; in mechanics refining makes each cell more quantum
   scaling dimension of the correction. The generated gap is itself on the
   ladder: $am\propto e^{-1/(2b_0\hbar g^2)}$ is the member with $2b_0c=1$. The bridge
   windings sit far above the per-volume threshold $2b_0c=4$: $2b_0c=11N/3$ for
-  root images ($c=8\pi^2$) and $11N$ for the $SU(3)$ centre images of a
+  root images ($c=8\pi^2$) and $33$ for the $SU(3)$ centre images of a
   trisection ($c=24\pi^2$, [centre note](sun-midpoint-centre.md)) (2026-09-28).
+  These are formal powers from near-identity image exponents; normalized
+  bounds uniform in boundary data and under iteration remain to prove.
 - **What survives is trajectory-dependent.** Compact $U(1)$ in $1+2$ keeps
   a gap along $\lambda_3a\simeq c_0/(2\log(1/a))$, $c_0\approx4.99$ the monopole
   exponent, where the monopole density per physical volume diverges, and

@@ -77,7 +77,20 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Newton’s cell action as a measure on cuts</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-measure-newton.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-measure-newton.pdf">PDF</a></p><p><strong>After refereeing (Fable, 2026-09-28).</strong> Theorems 1–2,
+<h1>Newton’s cell action as a measure on cuts</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-measure-newton.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-measure-newton.pdf">PDF</a></p><p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong> A6:
+ACCEPT Proposition 6’s Cameron–Martin norm, optimal equal-prior error
+and exact constant in the Planck mesh. REFINE the statement to two
+prescribed Gaussian bridge means with the same pinned endpoints and
+covariance, distinguish the variance rate from the diffusion
+coefficient, and identify the likelihood pairing as a Gaussian
+stochastic functional. The agreement with the mark model is structural:
+both have the sharp squared signal distance <span
+class="math inline">\(2K_\tau/\hbar\)</span> from the same Dirichlet
+energy. The bridge test attains its bound; the mark model approaches it
+by dense protocols. Both supply <span
+class="math inline">\(\hbar&gt;0\)</span>, leaving necessity
+unchanged.</p>
+<p><strong>After refereeing (Fable, 2026-09-28).</strong> Theorems 1–2,
 Corollary 3’s arithmetic and the quotations were re-derived and
 accepted. Corrections applied: Proposition 4 now names the
 Kullback–Leibler divergence, the shift <span
@@ -132,15 +145,15 @@ class="math inline">\(\frac{27}{28}K_\tau\)</span>. All three leave a
 definite share unspent forever, because they keep cut-off pieces of
 fixed length.</li>
 <li><strong>Proposition 4 (weight of a cut).</strong> Under the
-Euclidean path measure of a free particle with diffusion constant <span
+Euclidean path measure of a free particle with variance rate <span
 class="math inline">\(\hbar/m\)</span> (Wiener measure), the force
 signal in one cut has Kullback–Leibler divergence exactly (spent
 share)<span class="math inline">\(/\hbar\)</span>. In real time the same
 share, divided by the action resolution, is the phase of the two-path
 comparison.</li>
 <li><strong>Proposition 6 (the mark mesh as a Cameron–Martin threshold;
-2026-09-28, not refereed).</strong> Under the same path measure, the
-optimal equal-prior test between force <span
+2026-09-28, refereed ACCEPT with the hypotheses of §5b).</strong> Under
+the same path measure, the optimal equal-prior test between force <span
 class="math inline">\(F\)</span> and no force in a cell, observing the
 whole path with pinned ends, errs with probability <span
 class="math inline">\(\Phi(-\sqrt{K_\tau/2\hbar})\)</span>. It reaches
@@ -315,11 +328,11 @@ cut again.</li>
 is recorded as convergence; transmission would need evidence this note
 does not have.</p>
 <h2 id="the-weight-of-a-cut">4. The weight of a cut</h2>
-<p>Take the Euclidean path measure of a free particle with diffusion
-constant <span class="math inline">\(\hbar/m\)</span>: Brownian motion
-<span class="math inline">\(X\)</span> with <span
-class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, pinned at the cell’s
-endpoints. Given the endpoints of a piece of length <span
+<p>Take the Euclidean path measure of a free particle with variance rate
+<span class="math inline">\(\hbar/m\)</span>: unconditioned centred
+Brownian motion <span class="math inline">\(X\)</span> with <span
+class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, then pin it at the
+cell’s endpoints. Given the endpoints of a piece of length <span
 class="math inline">\(L\)</span>, the value at fraction <span
 class="math inline">\(s\)</span> is Gaussian with variance <span
 class="math inline">\(\hbar s(1-s)L/m\)</span>, independent of the finer
@@ -385,28 +398,45 @@ when one is given, at a definite depth of the cut process; it supplies
 no floor.</p>
 <h2 id="b.-the-mark-mesh-from-the-path-measure-proposition-6">5b. The
 mark mesh from the path measure (Proposition 6)</h2>
-<p>Keep the measure of §4: Brownian motion with <span
-class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, the Euclidean
+<p>Keep the measure of §4: unconditioned centred Brownian motion with
+<span class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, the Euclidean
 free-particle measure, whose diffusion coefficient <span
 class="math inline">\(\hbar/2m\)</span> is the one of <a
 href="https://doi.org/10.1103/PhysRev.150.1079">Nelson (1966)</a>
-(metadata). For the whole cell, the laws with and without the force are
-Gaussian measures differing by the shift <span
-class="math inline">\(\delta x\)</span>, with Cameron–Martin norm <span
-class="math inline">\(\|\delta x\|^2=(m/\hbar)\int\dot{\delta
-x}^2=2K_\tau/\hbar\)</span>. The log-likelihood ratio is the affine
-function <span class="math inline">\(\langle\delta
-x,X\rangle-\frac12\|\delta x\|^2\)</span> of one Gaussian statistic of
-variance <span class="math inline">\(\|\delta x\|^2\)</span> whose mean
-moves by <span class="math inline">\(\|\delta x\|^2\)</span>, so the
-Neyman–Pearson test with equal priors thresholds that statistic halfway
-and errs with probability</p>
+(metadata). Assume <span
+class="math inline">\(m,\tau,\hbar&gt;0\)</span>, <span
+class="math inline">\(F\in\mathbb R\)</span>, equal priors and <span
+class="math inline">\(0&lt;\epsilon&lt;1/2\)</span>. Let <span
+class="math inline">\(\ell\)</span> be a fixed endpoint chord and let
+<span class="math inline">\(B\)</span> be the centred bridge with
+covariance <span
+class="math inline">\(E[B_uB_v]=(\hbar/m)(\min(u,v)-uv/\tau)\)</span>.
+Compare <span class="math inline">\(P_0=\mathcal L(\ell+B)\)</span> and
+<span class="math inline">\(P_1=\mathcal L(\ell-\delta x+B)\)</span>,
+where <span class="math inline">\(\delta x(u)=Fu(\tau-u)/(2m)\)</span>.
+This specifies additive position noise around the two Newtonian
+comparison paths. Their Cameron–Martin norm is <span
+class="math inline">\(d^2=\|\delta x\|_{\rm
+CM}^2=(m/\hbar)\int\dot{\delta x}^2=2K_\tau/\hbar\)</span>. Writing
+<span class="math inline">\(h=-\delta x\)</span>, the log-likelihood
+ratio is <span class="math inline">\(Y-d^2/2\)</span>, where <span
+class="math inline">\(Y=\langle h,X-\ell\rangle_{\rm CM}\)</span>
+denotes the Gaussian stochastic pairing, defined even though typical
+paths lie outside the Cameron–Martin space. Here integration by parts
+makes it the ordinary area statistic <span
+class="math inline">\(Y=-(F/\hbar)\int_0^\tau(X_u-\ell_u)du\)</span>.
+Under <span class="math inline">\(P_0\)</span>, <span
+class="math inline">\(Y\sim N(0,d^2)\)</span>; under <span
+class="math inline">\(P_1\)</span>, <span class="math inline">\(Y\sim
+N(d^2,d^2)\)</span>. Thus the Neyman–Pearson test with equal priors
+thresholds that statistic halfway and errs with probability</p>
 <p><span class="math display">\[p_{\rm err}=\Phi\Bigl(-\tfrac12\|\delta
 x\|\Bigr)=\Phi\Bigl(-\sqrt{K_\tau/2\hbar}\Bigr).\]</span></p>
 <p>Hence <span class="math inline">\(p_{\rm err}\le\epsilon\)</span> iff
 <span class="math inline">\(K_\tau\ge2z_{1-\epsilon}^2\hbar\)</span>,
 that is <span class="math inline">\(\tau\Delta
-E=12K_\tau\ge24z_{1-\epsilon}^2\hbar\)</span> and <span
+E=12K_\tau\ge24z_{1-\epsilon}^2\hbar\)</span> and, for <span
+class="math inline">\(F\ne0\)</span>, <span
 class="math inline">\(\tau\ge\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>:
 eq. (2) of the <a href="planck-gap-paper.html">Planck paper</a>,
 including its “about <span class="math inline">\(65\hbar\)</span> at
@@ -420,10 +450,22 @@ record and recoil obey Robertson’s bound <span
 class="math inline">\(\hbar/2\)</span>; here the same constant comes
 from the Euclidean path measure <span
 class="math inline">\(e^{-S/\hbar}\)</span> through the Cameron–Martin
-theorem alone. The agreement is exact, and both routes supply <span
-class="math inline">\(\hbar\)</span>: this is a second derivation of the
-mesh, with the necessity question of the <a
-href="principia-fifth-postulate.html">fifth-postulate note</a>
+theorem alone. The agreement is exact and structural. In Theorem 2 of
+the Planck paper, the mark trade-off <span
+class="math inline">\(\kappa_{\rm mark}=\hbar/2\)</span> gives <span
+class="math inline">\(\sup d_{\rm mark}^2=F^2\tau^3/(24m\kappa_{\rm
+mark})=2K_\tau/\hbar\)</span>. Its optimization uses the same Dirichlet
+inverse of <span class="math inline">\(-d^2/du^2\)</span> with zero
+boundary values, hence the same parabolic extremizer and <span
+class="math inline">\(\tau^3/12\)</span>. The full bridge attains this
+Gaussian information; the independent, uncorrelated, non-adaptive mark
+protocols approach it in the dense limit for tests invariant under
+initial position and velocity. This equality of sharp information
+retains the different experimental premises; it supplies no equivalence
+of all records or of Nelson’s state-dependent dynamics. Both routes
+supply <span class="math inline">\(\hbar&gt;0\)</span>, giving a second
+conditional derivation of the mesh, with the necessity question of the
+<a href="principia-fifth-postulate.html">fifth-postulate note</a>
 unchanged. What it adds is the reading of the floor on recording the
 inertial–parabola difference as the distinguishability threshold of the
 force in the free-particle path measure. At small <span
@@ -439,7 +481,9 @@ cell’s Galileo action and a phase-space window).</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Atlas §1b: the Newton row of “cuts at any position” is proved here
 (Theorems 1–2, Corollary 3), with the Lévy–Ciesielski identification and
-the Euclidean weight of a cut (Proposition 4). The necessity question is
+the Euclidean weight of a cut (Proposition 4). Proposition 6 is now
+refereed: its Gaussian information equals the sharp mark information
+under the respective stated hypotheses. The necessity question is
 unchanged. On the gauge side of §1b the free-field defect of a cut at
 fraction <span class="math inline">\(s\)</span> is (5) scaled by <span
 class="math inline">\(4s(1-s)\)</span> in its size bound (<a

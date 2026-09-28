@@ -78,12 +78,24 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>The bridge midpoint on a compact group at any cut: windings and the
-centre</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sun-midpoint-centre.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sun-midpoint-centre.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (Claude; written derivation, to be
-refereed by GPT-6 Astra).</strong> Let <span
-class="math inline">\(G\)</span> be a compact simply connected Lie group
-and take the heat-kernel bridge of total heat time <span
-class="math inline">\(t\)</span> from <span
-class="math inline">\(e\)</span> to <span
+centre</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sun-midpoint-centre.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sun-midpoint-centre.pdf">PDF</a></p><p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong> A1 and
+A1’: ACCEPT the single- and several-cut identities, with REFINE for
+metric identifications, regularity and the extended-character iteration
+spelled out below. A2: ACCEPT both reductions; correct the SU(2) theorem
+number and the bridge orientation. A3–A4: ACCEPT the centre criterion,
+torsion, phases and norms; REFINE the focal-point and relative-exponent
+qualifications. A5: ACCEPT the numerical threshold; REFINE its
+application and the screening discussion. The image expansion carries
+signed polynomial amplitudes; the probability-mixture and
+topological-winding readings for simply connected groups are REJECTED.
+The thin-vortex placement remains a semiclassical interpretation of
+exact central phases. All checks used written derivations.</p>
+<p><strong>Result, 2026-09-28 (Claude; refereed with corrections
+above).</strong> Let <span class="math inline">\(G\)</span> be a compact
+connected simply connected Lie group with a bi-invariant metric, let
+<span class="math inline">\(t&gt;0\)</span>, and take the heat-kernel
+bridge of total heat time <span class="math inline">\(t\)</span> from
+<span class="math inline">\(e\)</span> to <span
 class="math inline">\(g=e^{iX}\)</span>, cut at fraction <span
 class="math inline">\(s\in(0,1)\)</span>, so that the first piece has
 heat time <span class="math inline">\(st\)</span>. For every irreducible
@@ -92,15 +104,14 @@ expectation of its character is an exact finite sum, over the weights
 <span class="math inline">\(\kappa\)</span> of <span
 class="math inline">\(\lambda\)</span>, of image sums over the coroot
 lattice <span class="math inline">\(Q^\vee\)</span> (Theorem 1):</p>
-<p><span
-class="math display">\[E\,\chi_\lambda(m)=\frac{\displaystyle\sum_\kappa
-m_\lambda(\kappa)\,
-e^{-ts(1-s)|\kappa|^2/2}\,e^{is\langle\kappa,X\rangle}
-\sum_{H\in Q^\vee}e^{2\pi i(1-s)\langle\kappa,H\rangle}\,
-\pi\!\Bigl(\tfrac it(X-2\pi H)-(1-s)\kappa\Bigr)\,G_H}
-{\displaystyle\sum_{H\in Q^\vee}\pi\!\Bigl(\tfrac it(X-2\pi
-H)\Bigr)\,G_H},
-\qquad G_H=e^{-|X-2\pi H|^2/(2t)}, \tag{1}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+E\,\chi_\lambda(m)
+&amp;=D_t(X)^{-1}\sum_\kappa m_\lambda(\kappa)
+e^{-ts(1-s)|\kappa|^2/2}e^{is\langle\kappa,X\rangle}I_{(1-s)\kappa}(X),\\
+I_c(X)&amp;=\sum_{H\in Q^\vee}e^{2\pi i\langle c,H\rangle}
+\pi\!\Bigl(\tfrac it(X-2\pi H)-c\Bigr)G_H,\\
+D_t(X)&amp;=I_0(X),\qquad G_H=e^{-|X-2\pi H|^2/(2t)}.
+\end{aligned}\tag{1}\]</span></p>
 <p>with <span class="math inline">\(m_\lambda(\kappa)\)</span> the
 weight multiplicities and <span
 class="math inline">\(\pi(v)=\prod_{\alpha&gt;0}\langle
@@ -112,7 +123,7 @@ class="math inline">\(U(1)\)</span>, (1) is the winding mixture of <a
 href="series-parallel-gauge-refinement.html">Corollary 5<span
 class="math inline">\(_s\)</span></a>(a). For <span
 class="math inline">\(SU(2)\)</span> at <span
-class="math inline">\(s=\frac12\)</span> it is Theorems 1 and 3 of the
+class="math inline">\(s=\frac12\)</span> it is Theorems 1 and 2 of the
 <a href="su2-midpoint-exact.html"><span
 class="math inline">\(SU(2)\)</span> midpoint note</a>, image terms
 included.</li>
@@ -133,15 +144,16 @@ class="math inline">\(SU(3)\)</span>).</strong> At <span
 class="math inline">\(s=\frac13\)</span> the central images are <span
 class="math inline">\(H\in3P^\vee\)</span>; the smallest are the two
 Weyl triples of <span class="math inline">\(\pm(1,1,-2)\)</span>, of
-relative weight about <span
-class="math inline">\(e^{-24\pi^2/t}\)</span>, and they carry <span
+relative weight <span class="math inline">\(e^{-24\pi^2/t}\)</span> at
+<span class="math inline">\(X=0\)</span> before polynomial prefactors
+and the regular limit, and they carry <span
 class="math inline">\(\omega^2\)</span> and <span
 class="math inline">\(\omega\)</span> on the fundamental (<span
 class="math inline">\(\omega=e^{2\pi i/3}\)</span>), the conjugates on
 the antifundamental and <span class="math inline">\(1\)</span> on the
 adjoint. At <span class="math inline">\(s=\frac12\)</span> every image
-with a nontrivial phase has a weight-dependent one: no halving of <span
-class="math inline">\(SU(3)\)</span> reaches the centre.</li>
+with a nontrivial phase has a weight-dependent one: a halving reaches
+only the identity in the centre.</li>
 </ul>
 <p>For <span class="math inline">\(SU(2)\)</span> at <span
 class="math inline">\(s=\frac12\)</span> the phase is <span
@@ -149,17 +161,18 @@ class="math inline">\((-1)^w\)</span> for half-integer spin and <span
 class="math inline">\(1\)</span> for integer spin. This is Dirac’s belt
 trick, <span class="math inline">\(\pi_1(SO(3))=\mathbb Z_2\)</span> (<a
 href="https://doi.org/10.1112/jlms/s1-17.3.173">Newman 1942</a>,
-metadata), appearing in the exact midpoint law: a bridge winding <span
-class="math inline">\(w\)</span> times round the group makes <span
-class="math inline">\(w\)</span> extra <span
-class="math inline">\(720^\circ\)</span> turns, and its midpoint makes
-<span class="math inline">\(w\)</span> extra <span
-class="math inline">\(360^\circ\)</span> turns, which the spinor
-characters detect. In <span class="math inline">\(1+3\)</span> this
-internal <span class="math inline">\(\mathbb Z_2\)</span> meets the
-spatial one in “spin from isospin” (<a
-href="https://doi.org/10.1103/PhysRevLett.36.1116">Jackiw and Rebbi
-1976</a>; <a
+metadata), appearing algebraically in the exact midpoint law: the Cartan
+image label <span class="math inline">\(w\)</span> shifts a torus
+geodesic by <span class="math inline">\(4\pi w\)</span>, and its
+midpoint by <span class="math inline">\(2\pi w\)</span>, which spinor
+characters detect. Since <span
+class="math inline">\(\pi_1(SU(2))=0\)</span>, these labels describe
+relative torus geodesics, rather than homotopy sectors of paths in the
+group. The spatial belt trick is a comparison through <span
+class="math inline">\(SU(2)\to SO(3)\)</span>. In specific monopole
+backgrounds, internal and spatial rotations also meet in “spin from
+isospin” (<a href="https://doi.org/10.1103/PhysRevLett.36.1116">Jackiw
+and Rebbi 1976</a>; <a
 href="https://doi.org/10.1103/PhysRevLett.36.1119">Hasenfratz and ’t
 Hooft 1976</a>; metadata). For <span
 class="math inline">\(SU(3)\)</span> the same mechanism carries the
@@ -182,8 +195,15 @@ class="math inline">\(H=0\)</span> term of the denominator of (1) gives
 G/2}e^{t|\rho|^2/2}\)</span>, the same structure (<span
 class="math inline">\(R/6=|\rho|^2\)</span> in this metric; for <span
 class="math inline">\(SU(2)\)</span>, radius 2, <span
-class="math inline">\(R/6=\frac14\)</span>). No novelty is claimed for
-the method.</p>
+class="math inline">\(R/6=\frac14\)</span>). This describes the local
+asymptotic sector; nonzero images give exponentially small corrections
+at the identity. With generator <span
+class="math inline">\(\Delta/2\)</span>, the coefficients in powers of
+<span class="math inline">\(t\)</span> are <span
+class="math inline">\((R/12)^k/k!\)</span>; <span
+class="math inline">\((R/6)^k/k!\)</span> uses heat time for <span
+class="math inline">\(\Delta\)</span>. No novelty is claimed for the
+method.</p>
 <h2 id="conventions">1. Conventions</h2>
 <p>The group metric is that of the <a
 href="series-parallel-gauge-refinement.html">series/parallel note</a>
@@ -221,12 +241,31 @@ class="math inline">\(|X|=\theta\)</span> is the rotation angle of the
 <span class="math inline">\(SU(2)\)</span> note, and <span
 class="math inline">\(X-2\pi w\alpha^\vee\)</span> has length <span
 class="math inline">\(|\theta-4\pi w|\)</span>.</p>
+<p>Here <span class="math inline">\(iX/t\)</span> in the argument of
+<span class="math inline">\(\pi\)</span> means <span
+class="math inline">\(iX^\flat/t\)</span>, using the metric to identify
+<span class="math inline">\(\mathfrak t\)</span> with <span
+class="math inline">\(\mathfrak t^*\)</span>. In diagonal <span
+class="math inline">\(SU(N)\)</span> coordinates, covectors <span
+class="math inline">\(a\)</span> have norm <span
+class="math inline">\(|a|^2=\frac12\sum a_i^2\)</span>, Cartan vectors
+<span class="math inline">\(H\)</span> have norm <span
+class="math inline">\(|H|^2=2\sum H_i^2\)</span>, and their pairing is
+<span class="math inline">\(\sum a_iH_i\)</span>. Thus a root <span
+class="math inline">\(e_i-e_j\)</span> has squared norm 1, its coroot is
+the diagonal vector with entries <span
+class="math inline">\(1,-1\)</span>, of squared norm 4, and <span
+class="math inline">\(X^\flat=2X\)</span>. Pairings between two Cartan
+vectors below use <span class="math inline">\(2\sum X_iH_i\)</span>.</p>
 <p>Heat kernel <span class="math inline">\(k_t=\sum_\lambda d_\lambda
 e^{-tC_2(\lambda)/2}\chi_\lambda\)</span>. The bridge midpoint <span
-class="math inline">\(m\)</span> has density <span
-class="math inline">\(k_{st}(m)\,k_{(1-s)t}(m^{-1}g)/k_t(g)\)</span>
-with respect to Haar measure; the bridge law (4) of the series/parallel
-note becomes this one after a left translation, and Corollary 2<span
+class="math inline">\(m\)</span> has Haar density</p>
+<p><span
+class="math display">\[k_{st}(m)\,k_{(1-s)t}(m^{-1}g)/k_t(g).\]</span></p>
+<p>the bridge law (4) of the series/parallel note becomes this one under
+<span class="math inline">\(y=P_em^{-1}\)</span>, <span
+class="math inline">\(g=P_eQ_e\)</span> (with the two heat times
+assigned as there), and Corollary 2<span
 class="math inline">\(_s\)</span> there gives the cut faces heat times
 <span class="math inline">\(st\)</span> and <span
 class="math inline">\((1-s)t\)</span>.</p>
@@ -253,14 +292,19 @@ class="math inline">\(m_\lambda\)</span> invariant, gives <span
 class="math inline">\(\sum_\kappa
 m_\lambda(\kappa)A_{\mu+\kappa+\rho}\)</span>.</p>
 <h2 id="theorem-1-and-its-proof">2. Theorem 1 and its proof</h2>
-<p><strong>Theorem 1.</strong> For <span
-class="math inline">\(X\)</span> regular, (1) holds; for singular <span
-class="math inline">\(X\)</span> it holds by continuity.</p>
-<p><em>Proof.</em> (i) <em>Characters.</em> Expanding both heat kernels,
-<span class="math inline">\(k_t(g)E\chi_\lambda(m)=\sum_{\mu,\nu}d_\mu
-d_\nu e^{-stC_2(\mu)/2-(1-s)tC_2(\nu)/2}
-\int\chi_\lambda(m)\chi_\mu(m)\chi_\nu(m^{-1}g)\,dm\)</span>. The
-Brauer–Klimyk rule and <span
+<p><strong>Theorem 1 (A1: ACCEPT, conventions refined).</strong> For
+<span class="math inline">\(A_\rho(X)\ne0\)</span>, (1) holds; on the
+affine Weyl walls it means the continuous limit of the complete
+quotient. Individual image ratios can be singular there.</p>
+<p><em>Proof.</em> (i) <em>Characters.</em> Expanding both heat kernels
+gives</p>
+<p><span class="math display">\[\begin{aligned}
+k_t(g)E\chi_\lambda(m)
+&amp;=\sum_{\mu,\nu}d_\mu d_\nu
+e^{-stC_2(\mu)/2-(1-s)tC_2(\nu)/2}\\
+&amp;\quad\times\int\chi_\lambda(m)\chi_\mu(m)\chi_\nu(m^{-1}g)\,dm.
+\end{aligned}\]</span></p>
+<p>The Brauer–Klimyk rule and <span
 class="math inline">\(\int\chi_a(m)\chi_b(m^{-1}g)dm=\delta_{ab}\chi_a(g)/d_a\)</span>
 give</p>
 <p><span class="math display">\[k_t(g)\,E\chi_\lambda(m)=\sum_{\mu\ {\rm
@@ -287,6 +331,18 @@ class="math display">\[A_\rho(X)k_t(g)E\chi_\lambda(m)=e^{t|\rho|^2/2}\sum_\kapp
 m_\lambda(\kappa)
 \sum_{v\in P}\pi(v)\,e^{-\frac t2[s|v|^2+(1-s)|v+\kappa|^2]}e^{i\langle
 v+\kappa,X\rangle}.\]</span></p>
+<p>More explicitly, set <span class="math inline">\(v&#39;=wv\)</span>,
+<span class="math inline">\(\kappa&#39;=w\kappa\)</span> in each Weyl
+term. Then <span
+class="math inline">\(\varepsilon(w)\pi(v)=\pi(v&#39;)\)</span>.
+Strictly dominant integral weights are precisely <span
+class="math inline">\(\rho+P_+\)</span>, since their simple-coroot
+coordinates are positive integers. The disjoint open chambers therefore
+exhaust the regular part of <span class="math inline">\(P\)</span>
+exactly once, with no factor <span class="math inline">\(|W|\)</span>.
+The wall terms added to this unfolded sum vanish through <span
+class="math inline">\(\pi(v&#39;)\)</span>, even when <span
+class="math inline">\(v&#39;+\kappa&#39;\)</span> lies off a wall.</p>
 <ol start="3" type="i">
 <li><p><em>Square.</em> <span
 class="math inline">\(s|v|^2+(1-s)|v+\kappa|^2=|v+(1-s)\kappa|^2+s(1-s)|\kappa|^2\)</span>.</p></li>
@@ -335,7 +391,7 @@ class="math inline">\((2\pi/t)^{n/2}\)</span> cancel. All sums converge
 absolutely. <span class="math inline">\(\square\)</span></li>
 </ol>
 <p><strong>Theorem 1<span class="math inline">\(&#39;\)</span> (several
-cuts).</strong> Cut the same bridge at <span
+cuts; A1’: ACCEPT).</strong> Cut the same bridge at <span
 class="math inline">\(0&lt;s_1&lt;\dots&lt;s_n&lt;1\)</span>, with layer
 values <span class="math inline">\(m_1,\dots,m_n\)</span>, and take
 irreducible representations <span
@@ -346,13 +402,12 @@ class="math inline">\(\lambda_1,\dots,\lambda_n\)</span>, <span
 class="math inline">\(A(\boldsymbol\kappa)=\sum_j(1-s_j)\kappa_j\)</span>
 and the bridge covariance form <span
 class="math inline">\(Q(\boldsymbol\kappa)=\sum_{i,j}\min(s_i,s_j)\,(1-\max(s_i,s_j))\langle\kappa_i,\kappa_j\rangle\)</span>,</p>
-<p><span
-class="math display">\[E\prod_j\chi_{\lambda_j}(m_j)=\frac{\displaystyle\sum_{\boldsymbol\kappa}\prod_jm_{\lambda_j}(\kappa_j)\,
-e^{-tQ(\boldsymbol\kappa)/2}\,e^{i\langle\sum_js_j\kappa_j,X\rangle}\sum_{H\in
-Q^\vee}e^{2\pi i\langle A(\boldsymbol\kappa),H\rangle}\,
-\pi\!\Bigl(\tfrac it(X-2\pi H)-A(\boldsymbol\kappa)\Bigr)G_H}
-{\displaystyle\sum_{H\in Q^\vee}\pi\!\Bigl(\tfrac it(X-2\pi
-H)\Bigr)G_H}. \tag{1$&#39;$}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+E\prod_j\chi_{\lambda_j}(m_j)
+&amp;=D_t(X)^{-1}\sum_{\boldsymbol\kappa}\prod_jm_{\lambda_j}(\kappa_j)\\
+&amp;\quad\times e^{-tQ(\boldsymbol\kappa)/2}
+e^{i\langle\sum_js_j\kappa_j,X\rangle}I_{A(\boldsymbol\kappa)}(X).
+\end{aligned}\tag{1$&#39;$}\]</span></p>
 <p><em>Proof.</em> Integrate <span
 class="math inline">\(m_1,\dots,m_n\)</span> in turn. Each step applies
 the Brauer–Klimyk rule, which holds with the extended characters <span
@@ -376,6 +431,22 @@ class="math inline">\(A\)</span> and <span
 class="math inline">\(s\kappa\)</span> by <span
 class="math inline">\(\sum_js_j\kappa_j\)</span>. <span
 class="math inline">\(\square\)</span></p>
+<p>The iteration can be justified without dividing by dimensions of
+extended characters. Heat convolution sends every extended <span
+class="math inline">\(\chi_\nu\)</span> to <span
+class="math inline">\(e^{-uC_2(\nu)/2}\chi_\nu\)</span>; a wall
+character stays zero. Multiplication by the next character obeys
+Brauer–Klimyk even on a wall, where its signed terms cancel. Heat
+convolution preserves that zero sum because terms representing the same
+signed irreducible have the same Casimir. This proves the iterated
+formula before unfolding. For the square, put <span
+class="math inline">\(B(u)=\sum_{s_j\le u}\kappa_j\)</span>. Then <span
+class="math inline">\(\int_0^1B(u)du=A\)</span> and <span
+class="math inline">\(\int_0^1|B(u)|^2du-|A|^2
+=\sum_{i,j}[1-\max(s_i,s_j)-(1-s_i)(1-s_j)]
+\langle\kappa_i,\kappa_j\rangle=Q\)</span>. This also fixes every
+cross-term and sign in (1<span
+class="math inline">\(&#39;\)</span>).</p>
 <p>The polynomial ratio for a single image is <span
 class="math inline">\(\pi(\frac it Z-(1-s)\kappa)/\pi(\frac
 itZ)=\prod_{\alpha&gt;0}\bigl(1+i(1-s)t\langle\kappa,\alpha\rangle/\langle
@@ -385,22 +456,34 @@ class="math inline">\(s=\frac12\)</span> it is the factor <span
 class="math inline">\(1+ikt/(2\theta)\)</span> behind the <span
 class="math inline">\(-\frac t{2\theta}k\sin\frac{k\theta}2\)</span>
 term of the <span class="math inline">\(SU(2)\)</span> note.</p>
-<h2 id="reductions-corollary-2">3. Reductions (Corollary 2)</h2>
-<p><em><span class="math inline">\(U(1)\)</span>.</em> <span
-class="math inline">\(P=Q^\vee=\mathbb Z\)</span>, <span
-class="math inline">\(\pi\equiv1\)</span>, <span
+<h2
+id="reductions-corollary-2-a2-accept-with-orientation-and-numbering-corrections">3.
+Reductions (Corollary 2; A2: ACCEPT with orientation and numbering
+corrections)</h2>
+<p><em><span class="math inline">\(U(1)\)</span>.</em> The abelian
+calculation uses <span class="math inline">\(P=Q^\vee=\mathbb
+Z\)</span>, <span class="math inline">\(\pi\equiv1\)</span>, <span
 class="math inline">\(\rho=0\)</span>, <span
 class="math inline">\(\langle n,H\rangle=nH\)</span>, <span
-class="math inline">\(X=\theta\)</span>: <span
-class="math inline">\(E\,e^{inm}=e^{-ts(1-s)n^2/2}\sum_He^{in(s\theta+2\pi(1-s)H)}G_H/\sum_HG_H\)</span>,
-the characteristic function of the mixture over the winding <span
-class="math inline">\(H\)</span>, with weights <span
+class="math inline">\(X=\theta\)</span>:</p>
+<p><span class="math display">\[E\,e^{inm}=e^{-ts(1-s)n^2/2}
+\frac{\sum_He^{in(s\theta+2\pi(1-s)H)}G_H}{\sum_HG_H}.\]</span></p>
+<p>This is the characteristic function of the mixture over the winding
+<span class="math inline">\(H\)</span>, with weights <span
 class="math inline">\(\propto e^{-(\theta-2\pi H)^2/(2t)}\)</span>, of
 wrapped Gaussians of variance <span
 class="math inline">\(s(1-s)t\)</span> centred at <span
 class="math inline">\(s\theta+2\pi(1-s)H\)</span>. This is Corollary
 5<span class="math inline">\(_s\)</span>(a) of the series/parallel
 note.</p>
+<p>To match that note literally, use <span
+class="math inline">\(y=P_e-m\)</span>, <span
+class="math inline">\(\theta=\phi_e=P_e+Q_e\)</span> and <span
+class="math inline">\(H=-W\)</span>. Transforming back gives <span
+class="math inline">\(m=P_e-s\phi_e+2\pi sH\equiv\bar
+m_e+2\pi(1-s)W\)</span> modulo <span
+class="math inline">\(2\pi\)</span>, and the image weight is <span
+class="math inline">\(e^{-(\phi_e+2\pi W)^2/(2t_e)}\)</span>.</p>
 <p><em><span class="math inline">\(SU(2)\)</span>, <span
 class="math inline">\(s=\frac12\)</span>.</em> The weights of spin <span
 class="math inline">\(J\)</span> are <span
@@ -421,13 +504,25 @@ the <span class="math inline">\(SU(2)\)</span> note, the numerator of
 (1) is <span
 class="math inline">\(\sum_ke^{-tk^2/8}e^{ik\theta/2}\bigl[\frac
 it\Xi_{(\sigma)}-\frac k2\Theta_{(\sigma)}\bigr]\)</span> and the
-denominator is <span class="math inline">\(\frac it\Xi_+\)</span>.
-Symmetrizing in <span class="math inline">\(k\)</span> gives Theorem 3
+denominator is <span class="math inline">\(\frac it\Xi_+\)</span>. These
+numerator and denominator expressions have both been divided by the
+common factor 2 from <span class="math inline">\(\pi\)</span>.
+Symmetrizing in <span class="math inline">\(k\)</span> gives Theorem 2
 of that note, and <span class="math inline">\(J=\frac12\)</span> gives
 its Theorem 1, <span
 class="math inline">\(e^{-t/32}[2\cos\frac\theta4\,\Xi_--\frac
-t2\sin\frac\theta4\,\Theta_-]/\Xi_+\)</span>.</p>
-<h2 id="the-centre-corollary-3">4. The centre (Corollary 3)</h2>
+t2\sin\frac\theta4\,\Theta_-]/\Xi_+\)</span>. Its Theorem 3(a) then
+follows using the additional spin-<span
+class="math inline">\(\frac12\)</span> matrix symmetry established
+there: <span class="math inline">\(E D^{1/2}(m)=\lambda
+D^{1/2}(m_*)\)</span> and <span
+class="math inline">\(\lambda=E\chi_{1/2}(m)/(2\cos(\theta/4))\)</span>
+for <span class="math inline">\(0&lt;\theta&lt;2\pi\)</span>. The cube
+statement in Theorem 3 also uses independence of its four bridges. Thus
+every image agrees, while the character identity alone supplies no
+higher-spin diagonal entries.</p>
+<h2 id="the-centre-corollary-3-a3-accept-geometric-scope-refined">4. The
+centre (Corollary 3; A3: ACCEPT, geometric scope refined)</h2>
 <p><em>Proof.</em> Two weights of one representation differ by an
 element of the root lattice <span class="math inline">\(Q\)</span>, so
 <span class="math inline">\(e^{2\pi
@@ -459,6 +554,13 @@ class="math inline">\(Z(G)=\mathbb Z_N\)</span> and its <span
 class="math inline">\(q\)</span>-torsion is <span
 class="math inline">\(\mathbb Z_{\gcd(q,N)}\)</span>. <span
 class="math inline">\(\square\)</span></p>
+<p>For the necessity of the criterion, the adjoint representation of
+each simple factor contains zero and every root; constancy of its phases
+forces the root pairings to be integral. For the Bézout step, choose
+integers <span class="math inline">\(a,b\)</span> with <span
+class="math inline">\(a(q-p)+bq=1\)</span> and write <span
+class="math inline">\(H/q=a(q-p)H/q+bH\in P^\vee\)</span>. These give
+both directions explicitly.</p>
 <p>Consequences. Dyadic refinement (<span
 class="math inline">\(q=2^n\)</span>) reaches the <span
 class="math inline">\(2\)</span>-primary part of the centre: all of it
@@ -467,21 +569,29 @@ for <span class="math inline">\(SU(2)\)</span> at the first halving,
 class="math inline">\(\mathbb Z_4\)</span> at quarters for <span
 class="math inline">\(SU(4)\)</span>, nothing for <span
 class="math inline">\(SU(3)\)</span> or any odd <span
-class="math inline">\(N\)</span>. The image classes of a halving are all
-central only for <span class="math inline">\(SU(2)\)</span>, where <span
+class="math inline">\(N\)</span>. The image classes of a halving, among
+the groups <span class="math inline">\(SU(N)\)</span>, are all central
+only for <span class="math inline">\(SU(2)\)</span>, where <span
 class="math inline">\(\frac12Q^\vee=P^\vee\)</span>.</p>
-<p>Geometrically the central elements are focal points of <span
-class="math inline">\(e\)</span>: the shortest geodesics from <span
-class="math inline">\(e\)</span> to <span class="math inline">\(e^{2\pi
-iY}\)</span> (<span class="math inline">\(Y\in P^\vee\)</span> of
-minimal norm in its class) form the adjoint orbit of <span
-class="math inline">\(Y\)</span>, a sphere <span
-class="math inline">\(S^2\)</span> for <span class="math inline">\(-1\in
-SU(2)\)</span> and a <span class="math inline">\(\mathbb{CP}^2\)</span>
-for <span class="math inline">\(\omega\cdot1\in SU(3)\)</span>, because
-conjugation fixes both endpoints.</p>
-<h2 id="su3-corollary-4">5. <span class="math inline">\(SU(3)\)</span>
-(Corollary 4)</h2>
+<p>Geometrically the nonidentity central elements in these examples are
+conjugate cut points of <span class="math inline">\(e\)</span>: the
+shortest geodesics from <span class="math inline">\(e\)</span> to <span
+class="math inline">\(e^{2\pi iY}\)</span> (<span
+class="math inline">\(Y\in P^\vee\)</span> of minimal norm in its class)
+form the adjoint orbit of <span class="math inline">\(Y\)</span>, a
+sphere <span class="math inline">\(S^2\)</span> for <span
+class="math inline">\(-1\in SU(2)\)</span> and a <span
+class="math inline">\(\mathbb{CP}^2\)</span> for <span
+class="math inline">\(\omega\cdot1\in SU(3)\)</span>, because
+conjugation fixes both endpoints. The stabilizers are <span
+class="math inline">\(U(1)\subset SU(2)\)</span> and <span
+class="math inline">\(S(U(2)\times U(1))\subset SU(3)\)</span>. The
+identity has the unique constant minimizing geodesic. The word focal
+refers here to the degeneracy of the exponential map at the nontrivial
+central endpoints.</p>
+<h2 id="su3-corollary-4-a4-accept-image-size-qualification-refined">5.
+<span class="math inline">\(SU(3)\)</span> (Corollary 4; A4: ACCEPT,
+image-size qualification refined)</h2>
 <p>Use <span class="math inline">\(\mathfrak t=\{H\in\mathbb R^3:\sum
 H_i=0\}\)</span>, <span class="math inline">\(Q^\vee=\mathfrak
 t\cap\mathbb Z^3\)</span>, <span class="math inline">\(|H|^2=2\sum
@@ -520,11 +630,32 @@ class="math inline">\(\sum H_i=0\)</span> they are then all even, <span
 class="math inline">\(H\in2Q^\vee\)</span>, and the phase is <span
 class="math inline">\(1\)</span>.</li>
 </ul>
-<p>So an <span class="math inline">\(SU(3)\)</span> halving produces
-only weight-dependent phases (non-central shifts), and a trisection
-produces the triality character on the classes <span
-class="math inline">\(3P^\vee\)</span>, below the root images by the
-factor <span class="math inline">\(e^{-16\pi^2/t}\)</span>.</p>
+<p>An <span class="math inline">\(SU(3)\)</span> halving produces
+identity phases on <span class="math inline">\(2Q^\vee\)</span> and
+weight-dependent phases otherwise. For a root image <span
+class="math inline">\((1,-1,0)\)</span> at halving, the fundamental and
+antifundamental have phases <span
+class="math inline">\((-1,-1,1)\)</span>; the adjoint has phases <span
+class="math inline">\((-1)^{H_i-H_j}\)</span> on its six roots and 1 on
+its two zero weights. At trisection the antifundamental phases are the
+conjugates of the fundamental ones, and the adjoint root phases are
+<span class="math inline">\(e^{4\pi i(H_i-H_j)/3}\)</span>, with two
+additional 1’s. This confirms both cuts on <span
+class="math inline">\(\mathbf3,\overline{\mathbf3},\mathbf8\)</span>.</p>
+<p>The norms follow directly: <span
+class="math inline">\(2(1+1+4)=12\)</span> for <span
+class="math inline">\((1,1,-2)\)</span> and <span
+class="math inline">\(2(1+1)=4\)</span> for <span
+class="math inline">\((1,-1,0)\)</span>. The exact exponential ratio for
+any image is <span
+class="math inline">\(G_H/G_0=\exp[-(2\pi^2|H|^2-2\pi\langle
+X,H\rangle)/t]\)</span>. Consequently the difference <span
+class="math inline">\(16\pi^2\)</span> between the two displayed
+exponents is their value at <span class="math inline">\(X=0\)</span>; at
+general <span class="math inline">\(X\)</span> it includes the linear
+endpoint terms and the polynomial amplitudes. At singular <span
+class="math inline">\(X\)</span> one must first combine the images and
+take the regular limit.</p>
 <p><em>Remark (a trisection as three fusing vortices; semiclassical
 placement).</em> A trisection inserts two layers, at <span
 class="math inline">\(s=\frac13\)</span> and <span
@@ -543,12 +674,12 @@ the three fuse to <span class="math inline">\(z^{-3}=1\)</span>. The
 <span class="math inline">\(SU(2)\)</span> halving is the two-piece
 case, where each half-face gains <span class="math inline">\(-1\)</span>
 and the two fuse to <span class="math inline">\(1\)</span>, Dirac’s
-belt. For <span class="math inline">\(SU(3)\)</span> it is three thin
-<span class="math inline">\(\mathbb Z_3\)</span> vortices in one cut
-face fusing to the identity, the same bookkeeping by which three quarks
-form a colour singlet (a parallel, not a derivation). Theorem 1<span
-class="math inline">\(&#39;\)</span> makes the placement exact at the
-level of character moments: for <span
+belt. For <span class="math inline">\(SU(3)\)</span> these increments
+admit a thin-centre-flux interpretation on the three sub-faces, fusing
+to the identity. The trialities also add to zero for three quarks;
+selecting a colour singlet additionally requires an invariant tensor.
+Theorem 1<span class="math inline">\(&#39;\)</span> makes the placement
+exact at the level of character moments: for <span
 class="math inline">\(s_1=\frac13\)</span>, <span
 class="math inline">\(s_2=\frac23\)</span> and a central image <span
 class="math inline">\(H=3Y\)</span> the phase is <span
@@ -560,44 +691,68 @@ phase of the layers <span class="math inline">\(z^{-1}\)</span> and
 <span class="math inline">\(z^{-2}\)</span> since <span
 class="math inline">\(\zeta^3=1\)</span>. Joint moments of class
 functions do not determine the full joint law of the two layers, whose
-relative orientation remains to be described.</p>
+relative orientation remains to be described. The central phase in this
+remark is ACCEPT (A1’). Identifying an image with a physical vortex
+configuration or a positive path sector requires additional measure
+information: the amplitudes in (1) and (1<span
+class="math inline">\(&#39;\)</span>) include signed Weyl polynomials.
+In particular <span class="math inline">\(G_H\)</span> alone gives no
+probability for such a vortex.</p>
 <h2 id="what-the-result-says-and-what-it-leaves-open">6. What the result
 says, and what it leaves open</h2>
-<p>It is an exact statement about one bridge, the building block of the
-parallel insertion, for every compact simply connected group, every
-representation and every cut fraction. It concerns characters only: the
-diagonal entries of the midpoint matrix <span
-class="math inline">\(E\,D^\lambda(m)\)</span> differ from the weight
-terms of (1), since Theorem 4 of the <span
+<p><strong>A5: ACCEPT the threshold; REFINE the inference from
+it.</strong> The result is an exact statement about one bridge, the
+building block of the parallel insertion, for every compact simply
+connected group, every representation and every cut fraction. It
+concerns characters only: the diagonal entries of the midpoint matrix
+<span class="math inline">\(E\,D^\lambda(m)\)</span> differ from the
+weight terms of (1), since Theorem 4 of the <span
 class="math inline">\(SU(2)\)</span> note gives the spin-1 entries an
 additional Gaussian tail, so atlas cell 1 is unaffected. In the
-refinement it fixes which windings of a single step act through the
-centre. The weights are small per step: in <span
-class="math inline">\(1+3\)</span> the image exponents <span
+refinement it fixes which relative Cartan images of a single step have
+central phases. The exponents at the identity, <span
 class="math inline">\(8\pi^2\)</span> (roots) and <span
 class="math inline">\(24\pi^2\)</span> (central <span
-class="math inline">\(SU(3)\)</span> trisection images) lie far beyond
-the per-volume threshold <span
-class="math inline">\(c&gt;2/b_0=32\pi^2/11\)</span> of the <a
-href="zero-spacing-any-action.html">zero-spacing note</a> for <span
-class="math inline">\(SU(3)\)</span>. Centre-valued link configurations
-exist on any lattice whatever the blocking, and thick centre vortices
-(<a href="https://doi.org/10.1016/0003-4916(79)90346-4">Mack and Petkova
+class="math inline">\(SU(3)\)</span> trisection images), exceed the
+formal per-volume threshold of the <a
+href="zero-spacing-any-action.html">zero-spacing note</a>. Indeed, with
+<span class="math inline">\(t=g_{\rm lat}^2\)</span> and one-loop
+running <span
+class="math inline">\(t^{-1}=2b_0\log(1/(a\Lambda))\)</span>, <span
+class="math inline">\(b_0=11/(16\pi^2)\)</span>, a per-cell bound <span
+class="math inline">\(Ct^{-r}e^{-c/t}\)</span> would sum in a fixed
+four-volume to <span class="math inline">\(O((\log(1/a))^r
+a^{2b_0c-4})\)</span>. A strict positive power requires <span
+class="math inline">\(c&gt;2/b_0=32\pi^2/11\)</span>; the two displayed
+exponents give powers <span class="math inline">\(2b_0c=11\)</span> and
+<span class="math inline">\(33\)</span>. Logarithmic corrections matter
+at equality. The bridge formula supplies neither that normalized
+per-cell bound uniformly in boundary data nor its stability under
+repeated blocking. The endpoint term <span
+class="math inline">\(2\pi\langle X,H\rangle/t\)</span>, affine-wall
+limits and polynomial prefactors must be controlled first. Character
+moments also leave the relative orientations needed by <span
+class="math inline">\(\Psi\)</span> undetermined.</p>
+<p>Centre-valued link configurations exist on any lattice whatever the
+blocking, and thick centre vortices (<a
+href="https://doi.org/10.1016/0003-4916(79)90346-4">Mack and Petkova
 1979</a>; <a href="https://doi.org/10.1016/0550-3213(78)90153-0">’t
-Hooft 1978</a>; metadata) are a question about many steps. The centre
-matters because pure <span class="math inline">\(SU(3)\)</span> leaves
-it unscreened: by the complementarity of <a
+Hooft 1978</a>; metadata) are a question about many steps. Pure <span
+class="math inline">\(SU(3)\)</span> has exact centre symmetry and no
+dynamical fundamental matter to screen its triality charges; whether
+that symmetry is broken depends on the regime. <a
 href="https://doi.org/10.1103/PhysRevD.19.3682">Fradkin and Shenker
-(1979)</a> and <a
+(1979)</a> (abstract, checked 2026-09-28) establish an analytic
+connection between confinement and Higgs regions for fundamental lattice
+Higgs matter. <a
 href="https://doi.org/10.1016/0003-4916(78)90039-8">Osterwalder and
-Seiler (1978)</a> (metadata), matter in the fundamental representation
-screens every centre charge and joins the confinement and Higgs regimes
-without a transition, while in the pure gauge theory the unbroken <span
-class="math inline">\(\mathbb Z_3\)</span> stays an order parameter. The
-centre-reaching (triadic) windings are therefore a feature of the
-pure-gauge goal, screened in QCD with quarks, which is one more
-difference between the continuum limits compared in the <a
-href="three-continuum-limits.html">joint-paper plan</a>. Whether a
+Seiler (1978)</a> (metadata) supplies related gauge-field background.
+Applying Higgs complementarity directly to fermionic QCD would exceed
+these statements. Dynamical fundamental quarks can screen triality and
+explicitly break the corresponding centre symmetry; the algebraic phases
+of (1) remain properties of the pure heat-kernel bridge. These
+distinctions belong in the <a
+href="three-continuum-limits.html">joint-paper comparison</a>. Whether a
 triadic refinement, <span class="math inline">\(b=3\)</span>, organizes
 the <span class="math inline">\(SU(3)\)</span> large-field terms better
 than dyadic refinement is open; factor-2 decimation with the <span
@@ -609,10 +764,11 @@ class="math inline">\(SU(3)\)</span> has not been searched.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>Atlas §1b: the bullet on which part of the centre a cut reaches now
 rests on Corollary 3 of an exact formula, (1), which also carries the
-<span class="math inline">\(SU(2)\)</span> belt trick and the <span
-class="math inline">\(SU(3)\)</span> triality at thirds. Refereeing by
-Astra is pending; the exact trisection formula for the fundamental of
-<span class="math inline">\(SU(3)\)</span> is (1) with <span
+<span class="math inline">\(SU(2)\)</span> belt-trick phase and the
+<span class="math inline">\(SU(3)\)</span> triality at thirds. The Round
+5B Part A referee is complete, with verdicts and corrections above. The
+exact trisection formula for the fundamental of <span
+class="math inline">\(SU(3)\)</span> is (1) with <span
 class="math inline">\(s=\frac13\)</span> and the weights of §5.</p>
 
 </main>
