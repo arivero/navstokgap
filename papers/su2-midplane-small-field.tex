@@ -1413,8 +1413,9 @@ sectors}\label{round-14-a-covariant-reference-and-its-flux-sectors}}
 
 \textbf{GPT-6 Astra, 2026-09-29; unrefereed.} Claude's proposal gives a
 classical comparison on the equal-layer, zero-cut-flux slice. \textbf{In
-progress:} the reference and smooth-field bounds are written; flux
-sectors and the final consequence for STATE are the next parts.
+progress:} the reference and smooth-field bounds are written;
+flux-sector reading is complete; the final consequence for STATE follows
+next.
 
 \hypertarget{finite-plane-definition}{%
 \subsubsection{12.1 Finite-plane
@@ -1500,4 +1501,65 @@ remainder bound: (49) uses \(Ma^2\), while that class allows
 \(t^{1/2-\delta}\). Holonomy-dependent transport is the unresolved value
 term, rather than a proved value counterexample. Stability for perturbed
 actions remains an extra theorem.
+
+\hypertarget{t-hooft-sectors-and-the-free-cycle-phases-part-2b}{%
+\subsubsection{12.3 't Hooft sectors and the free-cycle phases (Part
+2b)}\label{t-hooft-sectors-and-the-free-cycle-phases-part-2b}}
+
+\textbf{Source reading and its finite-plane application.} 't Hooft,
+\href{https://doi.org/10.1016/0550-3213(79)90595-9}{\emph{A property of
+electric and magnetic flux in non-Abelian gauge theories}}, Nucl. Phys.
+B \textbf{153} (1979), 141--160 (\texttt{tHooft1979Flux}):
+\textbf{Crossref metadata verified 2026-09-29; passage}, §§2--5,
+pp.~143--148,
+\href{https://studyres.com/doc/2086823/a-property-of-electric-and-magnetic-flux-in-non}{original-paper
+text transcription}. His transition functions close up to centre
+elements; spatial twists label magnetic flux, while electric flux labels
+characters of the centre-periodic gauge transformations. Temporal twists
+select those characters by a finite Fourier transform of partition
+functions.
+
+Here is the resulting \(1+2\) formulation, with direction 1 interpreted
+as Euclidean time for this sector discussion. Write
+\(m=n_{23}\in\mathbb Z_2\), \(k=(n_{12},n_{13})\in\mathbb Z_2^2\).
+Spatial transition functions obey
+\(\Omega_2(x+L_3)\Omega_3(x)=(-1)^m\Omega_3(x+L_2)\Omega_2(x)\). For
+each fixed \(m\), construct \(C_{U,m}\) using the adjoint transition
+functions at seams, and use (47) with \(z\) in this adjoint bundle and
+\(H_U\) replaced by \(H_{U,m}\). Keep the common denominator
+\(\det H_1\): sector-dependent constants then remain in relative sector
+weights. Ordinary periodic SU(2) backgrounds here have \(m=0\); \(m=1\)
+requires an explicitly twisted boundary problem, or an external
+centre-flux insertion. Summing magnetic sectors would be a further
+choice of theory.
+
+For an explicit flat representative choose constant transitions
+\(\Gamma_2\Gamma_3=(-1)^m\Gamma_3\Gamma_2\). Their commuting adjoint
+rotations have joint phases \((\phi_2,\phi_3)\), and the eigenvalues are
+
+\[L_m(r,s;\phi)=4-2\cos\frac{2\pi r+\phi_2}{n_2}
+-2\cos\frac{2\pi s+\phi_3}{n_3},\qquad P_m=(8+L_m)^{-1}.\tag{51}\]
+
+For \(m=0\), commuting \(\Gamma_j=\exp(\theta_jT_3)\) give phases
+\((0,0)\) and \(\pm(\theta_2,\theta_3)\). For \(m=1\), take
+\(\Gamma_2=i\sigma_1\), \(\Gamma_3=i\sigma_2\) (Pauli matrices):
+conjugation fixes its own axis and reverses the other two, giving phase
+pairs \((0,\pi),(\pi,0),(\pi,\pi)\). Formula (51) follows by translating
+a plane wave once around each cycle. Curved backgrounds use \(C_{U,m}\)
+directly and retain their continuous Wilson-loop data within the sector.
+In §10's strip, \(H\) in \(\cos(p+H)\) is the rotation \textbf{per
+link}; the free row cycle is \(\exp(n_3HT_3)\), with adjoint phase
+\(n_3H\) modulo \(2\pi\). Fixing two based cycles, or fixing \(m=0\),
+leaves those row holonomies curvature-dependent. Discrete flux labels
+alone therefore leave the transport term of (46) present.
+
+With a temporal closure the electric-sector prescription is
+\(Z_{e,m}=\frac14\sum_{k\in\mathbb Z_2^2}(-1)^{e\cdot k}Z_{k,m}\),
+\(e\in\mathbb Z_2^2\). Apply it to the assembled reference weights with
+their temporal seam data retained, before taking a logarithm. Electric
+flux is a quantum sector of the assembled kernel; a single classical
+background \(U\) specifies neither \(e\) nor a Fourier transform of log
+references. The adjoint local bounds survive either spatial twist;
+relative electric-sector estimates additionally require control of
+cancellation in this signed projection.
 \end{document}

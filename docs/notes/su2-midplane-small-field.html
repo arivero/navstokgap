@@ -1656,8 +1656,8 @@ perturbed actions remain separate obligations.</p>
 <p><strong>GPT-6 Astra, 2026-09-29; unrefereed.</strong> Claude’s
 proposal gives a classical comparison on the equal-layer, zero-cut-flux
 slice. <strong>In progress:</strong> the reference and smooth-field
-bounds are written; flux sectors and the final consequence for STATE are
-the next parts.</p>
+bounds are written; flux-sector reading is complete; the final
+consequence for STATE follows next.</p>
 <h3 id="finite-plane-definition">12.1 Finite-plane definition</h3>
 <p>Keep all midpoint links, including their cycles, free as in §11.1.
 For each background <span class="math inline">\(U\)</span> with
@@ -1759,6 +1759,80 @@ class="math inline">\(t^{1/2-\delta}\)</span>. Holonomy-dependent
 transport is the unresolved value term, rather than a proved value
 counterexample. Stability for perturbed actions remains an extra
 theorem.</p>
+<h3 id="t-hooft-sectors-and-the-free-cycle-phases-part-2b">12.3 ’t Hooft
+sectors and the free-cycle phases (Part 2b)</h3>
+<p><strong>Source reading and its finite-plane application.</strong> ’t
+Hooft, <a href="https://doi.org/10.1016/0550-3213(79)90595-9"><em>A
+property of electric and magnetic flux in non-Abelian gauge
+theories</em></a>, Nucl. Phys. B <strong>153</strong> (1979), 141–160
+(<code>tHooft1979Flux</code>): <strong>Crossref metadata verified
+2026-09-29; passage</strong>, §§2–5, pp. 143–148, <a
+href="https://studyres.com/doc/2086823/a-property-of-electric-and-magnetic-flux-in-non">original-paper
+text transcription</a>. His transition functions close up to centre
+elements; spatial twists label magnetic flux, while electric flux labels
+characters of the centre-periodic gauge transformations. Temporal twists
+select those characters by a finite Fourier transform of partition
+functions.</p>
+<p>Here is the resulting <span class="math inline">\(1+2\)</span>
+formulation, with direction 1 interpreted as Euclidean time for this
+sector discussion. Write <span class="math inline">\(m=n_{23}\in\mathbb
+Z_2\)</span>, <span class="math inline">\(k=(n_{12},n_{13})\in\mathbb
+Z_2^2\)</span>. Spatial transition functions obey <span
+class="math inline">\(\Omega_2(x+L_3)\Omega_3(x)=(-1)^m\Omega_3(x+L_2)\Omega_2(x)\)</span>.
+For each fixed <span class="math inline">\(m\)</span>, construct <span
+class="math inline">\(C_{U,m}\)</span> using the adjoint transition
+functions at seams, and use (47) with <span
+class="math inline">\(z\)</span> in this adjoint bundle and <span
+class="math inline">\(H_U\)</span> replaced by <span
+class="math inline">\(H_{U,m}\)</span>. Keep the common denominator
+<span class="math inline">\(\det H_1\)</span>: sector-dependent
+constants then remain in relative sector weights. Ordinary periodic
+SU(2) backgrounds here have <span class="math inline">\(m=0\)</span>;
+<span class="math inline">\(m=1\)</span> requires an explicitly twisted
+boundary problem, or an external centre-flux insertion. Summing magnetic
+sectors would be a further choice of theory.</p>
+<p>For an explicit flat representative choose constant transitions <span
+class="math inline">\(\Gamma_2\Gamma_3=(-1)^m\Gamma_3\Gamma_2\)</span>.
+Their commuting adjoint rotations have joint phases <span
+class="math inline">\((\phi_2,\phi_3)\)</span>, and the eigenvalues
+are</p>
+<p><span class="math display">\[L_m(r,s;\phi)=4-2\cos\frac{2\pi
+r+\phi_2}{n_2}
+-2\cos\frac{2\pi s+\phi_3}{n_3},\qquad
+P_m=(8+L_m)^{-1}.\tag{51}\]</span></p>
+<p>For <span class="math inline">\(m=0\)</span>, commuting <span
+class="math inline">\(\Gamma_j=\exp(\theta_jT_3)\)</span> give phases
+<span class="math inline">\((0,0)\)</span> and <span
+class="math inline">\(\pm(\theta_2,\theta_3)\)</span>. For <span
+class="math inline">\(m=1\)</span>, take <span
+class="math inline">\(\Gamma_2=i\sigma_1\)</span>, <span
+class="math inline">\(\Gamma_3=i\sigma_2\)</span> (Pauli matrices):
+conjugation fixes its own axis and reverses the other two, giving phase
+pairs <span class="math inline">\((0,\pi),(\pi,0),(\pi,\pi)\)</span>.
+Formula (51) follows by translating a plane wave once around each cycle.
+Curved backgrounds use <span class="math inline">\(C_{U,m}\)</span>
+directly and retain their continuous Wilson-loop data within the sector.
+In §10’s strip, <span class="math inline">\(H\)</span> in <span
+class="math inline">\(\cos(p+H)\)</span> is the rotation <strong>per
+link</strong>; the free row cycle is <span
+class="math inline">\(\exp(n_3HT_3)\)</span>, with adjoint phase <span
+class="math inline">\(n_3H\)</span> modulo <span
+class="math inline">\(2\pi\)</span>. Fixing two based cycles, or fixing
+<span class="math inline">\(m=0\)</span>, leaves those row holonomies
+curvature-dependent. Discrete flux labels alone therefore leave the
+transport term of (46) present.</p>
+<p>With a temporal closure the electric-sector prescription is <span
+class="math inline">\(Z_{e,m}=\frac14\sum_{k\in\mathbb
+Z_2^2}(-1)^{e\cdot k}Z_{k,m}\)</span>, <span
+class="math inline">\(e\in\mathbb Z_2^2\)</span>. Apply it to the
+assembled reference weights with their temporal seam data retained,
+before taking a logarithm. Electric flux is a quantum sector of the
+assembled kernel; a single classical background <span
+class="math inline">\(U\)</span> specifies neither <span
+class="math inline">\(e\)</span> nor a Fourier transform of log
+references. The adjoint local bounds survive either spatial twist;
+relative electric-sector estimates additionally require control of
+cancellation in this signed projection.</p>
 
 </main>
 <footer class="site"><div class="wrap">
