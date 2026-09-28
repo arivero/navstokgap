@@ -24,10 +24,11 @@ physical state, then $\ln(1/\delta)=\frac12\ln(A_0/h)$ with $A_0$ the action sca
 device, and the conspiracy has a finite lifetime
 $n_*\approx\frac{d+1}{2\ln(1/\theta)}\ln(A_0/h)$, the logarithmic structure of the Ehrenfest time
 of quantum chaos ([Berman and Zaslavsky 1978](https://doi.org/10.1016/0378-4371(78)90190-5);
-metadata). With the floor, measurement independence for chaotic setting
-devices is a theorem after $n_*$; Bell's inequalities then exclude local
-deterministic models that respect the floor. The limit $h\to0$ that Newton
-takes is exactly what reopens the loophole.
+metadata). With the floor, the dependence between hidden variable and
+setting decays exponentially after an onset of order $n_*$, also for
+setting and hidden-variable events (Remark in §1), and relaxed Bell
+inequalities then bound local deterministic models that respect the floor.
+The limit $h\to0$ that Newton takes is exactly what reopens the loophole.
 
 The user's remark that prompted this (2026-09-28/29): classical mechanics
 is accidentally superdeterministic too, and the programme holds that it
@@ -63,6 +64,26 @@ $\int\rho\,d\mu=1$: $\int f\rho\,(g\circ T^n)=\int f\rho\int g+E_1$ and
 $\int\rho\,(g\circ T^n)=\int g+E_2$. Then ${\rm Cov}_\rho=E_1-E_2\int f\rho$, and
 $\|f\rho\|_{\rm Lip}\le\|f\|_{\rm Lip}\|\rho\|_{\rm Lip}$, $|\int f\rho|\le\|f\|_{\rm Lip}$ give the bound. $\square$
 
+**Remark (from covariances to measurement dependence).** Bell's theorem
+uses the laws of $\lambda$ conditional on the settings, and its relaxed forms
+measure their dependence in total variation
+([Hall 2010](https://doi.org/10.1103/PhysRevLett.105.250404);
+[Barrett and Gisin 2011](https://doi.org/10.1103/PhysRevLett.106.100406);
+Crossref metadata verified 2026-09-29). Hall's deterministic model of the
+singlet uses only a partial measurement dependence, so this conversion
+carries weight. Let the setting and hidden-variable events $A,B\subset M$
+have piecewise smooth boundaries whose $w$-neighbourhoods have
+$\mu$-measure at most $c_Aw$ and $c_Bw$. Replace $1_A,1_B$ by functions
+with values in $[0,1]$ and Lipschitz constant $1/w$ that differ from them
+only there, so $\|\cdot\|_{\rm Lip}\le2/w$ for $w\le1$. Since $T$ preserves $\mu$,
+each boundary layer costs at most $\sup\rho\,c\,w\le K\delta^{-(d+1)}c\,w$ under
+$\rho$, in $E_\rho[1_B\,1_A\circ T^n]$ and in the product of the means. Hence
+$$|{\rm Cov}_\rho(1_B,1_A\circ T^n)|\le K\delta^{-(d+1)}\bigl[8C_T\theta^nw^{-2}+2(c_A+c_B)w\bigr],$$
+and $w=\theta^{n/3}$ gives $K\delta^{-(d+1)}(8C_T+2c_A+2c_B)\theta^{n/3}$. For finitely many
+settings and a finite partition of hidden-variable events, summing gives
+a total-variation dependence with the same decay. The onset for events
+is three times the Lipschitz $n_*$, with the same logarithm of $A_0/h$.
+
 ## 2. What it says, and about whom
 
 - **Classical mechanics.** Nothing in the laws fixes $\delta$; an ensemble can
@@ -94,8 +115,8 @@ $\|f\rho\|_{\rm Lip}\le\|f\|_{\rm Lip}\|\rho\|_{\rm Lip}$, $|\int f\rho|\le\|f\|
 
 ## 3. Consequence for STATE
 
-A small addition to the Newton side: the floor turns Bell's measurement
-independence into a theorem for chaotic setting devices after an
-Ehrenfest-type time, and the continuum limit $h\to0$ reopens the loophole.
+A small addition to the Newton side: for chaotic setting devices the
+floor makes Bell's measurement dependence decay exponentially after an
+Ehrenfest-type onset, and the continuum limit $h\to0$ reopens the loophole.
 It is a statement about what the floor buys, with the floor assumed; the
 necessity question is unchanged. To be refereed.

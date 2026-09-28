@@ -110,10 +110,11 @@ and the conspiracy has a finite lifetime <span
 class="math inline">\(n_*\approx\frac{d+1}{2\ln(1/\theta)}\ln(A_0/h)\)</span>,
 the logarithmic structure of the Ehrenfest time of quantum chaos (<a
 href="https://doi.org/10.1016/0378-4371(78)90190-5">Berman and Zaslavsky
-1978</a>; metadata). With the floor, measurement independence for
-chaotic setting devices is a theorem after <span
-class="math inline">\(n_*\)</span>; Bell’s inequalities then exclude
-local deterministic models that respect the floor. The limit <span
+1978</a>; metadata). With the floor, the dependence between hidden
+variable and setting decays exponentially after an onset of order <span
+class="math inline">\(n_*\)</span>, also for setting and hidden-variable
+events (Remark in §1), and relaxed Bell inequalities then bound local
+deterministic models that respect the floor. The limit <span
 class="math inline">\(h\to0\)</span> that Newton takes is exactly what
 reopens the loophole.</p>
 <p>The user’s remark that prompted this (2026-09-28/29): classical
@@ -166,6 +167,41 @@ class="math inline">\(\|f\rho\|_{\rm Lip}\le\|f\|_{\rm Lip}\|\rho\|_{\rm
 Lip}\)</span>, <span class="math inline">\(|\int f\rho|\le\|f\|_{\rm
 Lip}\)</span> give the bound. <span
 class="math inline">\(\square\)</span></p>
+<p><strong>Remark (from covariances to measurement dependence).</strong>
+Bell’s theorem uses the laws of <span
+class="math inline">\(\lambda\)</span> conditional on the settings, and
+its relaxed forms measure their dependence in total variation (<a
+href="https://doi.org/10.1103/PhysRevLett.105.250404">Hall 2010</a>; <a
+href="https://doi.org/10.1103/PhysRevLett.106.100406">Barrett and Gisin
+2011</a>; Crossref metadata verified 2026-09-29). Hall’s deterministic
+model of the singlet uses only a partial measurement dependence, so this
+conversion carries weight. Let the setting and hidden-variable events
+<span class="math inline">\(A,B\subset M\)</span> have piecewise smooth
+boundaries whose <span class="math inline">\(w\)</span>-neighbourhoods
+have <span class="math inline">\(\mu\)</span>-measure at most <span
+class="math inline">\(c_Aw\)</span> and <span
+class="math inline">\(c_Bw\)</span>. Replace <span
+class="math inline">\(1_A,1_B\)</span> by functions with values in <span
+class="math inline">\([0,1]\)</span> and Lipschitz constant <span
+class="math inline">\(1/w\)</span> that differ from them only there, so
+<span class="math inline">\(\|\cdot\|_{\rm Lip}\le2/w\)</span> for <span
+class="math inline">\(w\le1\)</span>. Since <span
+class="math inline">\(T\)</span> preserves <span
+class="math inline">\(\mu\)</span>, each boundary layer costs at most
+<span class="math inline">\(\sup\rho\,c\,w\le
+K\delta^{-(d+1)}c\,w\)</span> under <span
+class="math inline">\(\rho\)</span>, in <span
+class="math inline">\(E_\rho[1_B\,1_A\circ T^n]\)</span> and in the
+product of the means. Hence <span class="math display">\[|{\rm
+Cov}_\rho(1_B,1_A\circ T^n)|\le
+K\delta^{-(d+1)}\bigl[8C_T\theta^nw^{-2}+2(c_A+c_B)w\bigr],\]</span> and
+<span class="math inline">\(w=\theta^{n/3}\)</span> gives <span
+class="math inline">\(K\delta^{-(d+1)}(8C_T+2c_A+2c_B)\theta^{n/3}\)</span>.
+For finitely many settings and a finite partition of hidden-variable
+events, summing gives a total-variation dependence with the same decay.
+The onset for events is three times the Lipschitz <span
+class="math inline">\(n_*\)</span>, with the same logarithm of <span
+class="math inline">\(A_0/h\)</span>.</p>
 <h2 id="what-it-says-and-about-whom">2. What it says, and about
 whom</h2>
 <ul>
@@ -200,9 +236,9 @@ come from entangled states, and it assumes independent settings,
 consistently with the proposition.</li>
 </ul>
 <h2 id="consequence-for-state">3. Consequence for STATE</h2>
-<p>A small addition to the Newton side: the floor turns Bell’s
-measurement independence into a theorem for chaotic setting devices
-after an Ehrenfest-type time, and the continuum limit <span
+<p>A small addition to the Newton side: for chaotic setting devices the
+floor makes Bell’s measurement dependence decay exponentially after an
+Ehrenfest-type onset, and the continuum limit <span
 class="math inline">\(h\to0\)</span> reopens the loophole. It is a
 statement about what the floor buys, with the floor assumed; the
 necessity question is unchanged. To be refereed.</p>
