@@ -306,15 +306,18 @@ workstream branches.
    and compare its Born--Huang energy with $g^{2/3}\hbar c/L$.  The
    $S_\Lambda\asymp L^3\Lambda$ frequency-diagonal cost is now in the
    Feshbach note; its physical Gauss/frame renormalization remains open.
-4. **B1 formulation:** specify the smallest closed bounded Wilson-loop
-   algebra and a block-map support buffer for which the telescoping
-   hypothesis can even be stated.
+4. **B/D benchmark — completed for a $3+1$ global-$U(1)$ scalar:** the
+   finite-range Gaussian covariance decomposition gives exact kernel
+   H1$_{\rm gap}$, summable Weyl H1$_{\rm OS}$ seminorms, and massive OS
+   reconstruction.  The [benchmark note](../notes/u1-gaussian-blocking-os-benchmark.md)
+   records the complete proof and its supplied-mass/global-symmetry scope.
 5. **C1 choice:** select one analytic mixing criterion and write its
    gauge-invariant conditional distributions; do not start from an
    unverified numerical correlation length.
-6. **D1 observable ledger:** list the flowed/local observables for which
-   OS positivity and uniform two-point normalization are to be proved,
-   together with their candidate gapless channels.
+6. **A2 positive target:** on a periodic gauge-invariant regulator,
+   isolate a renormalized fibre projection or a controlled nonconstant-mode
+   sector whose relative Schur bound is finite before attempting the full
+   $SU(3)$ estimate.
 
-E2 is the first delegated task.  B--D are suitable for independent later
-reports and should be merged only after their assumptions are reconciled.
+E2 remains the first delegated task.  C and A now follow the completed B/D
+benchmark and should be merged only after their assumptions are reconciled.

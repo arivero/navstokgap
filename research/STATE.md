@@ -62,6 +62,13 @@ fill its cells (open cells in its §5).
 - [The working note, §5](../notes/three-continuum-limits.md) states the
   elementary spectral criteria for retaining a positive or zero
   threshold, including the need for surviving observable weight.
+- [The $3+1$ global-$U(1)$ Gaussian benchmark](../notes/u1-gaussian-blocking-os-benchmark.md)
+  now realises B/D positively: finite-range Gaussian covariance components
+  give an exact Markov-kernel H1$_{\rm gap}$ estimate, Weyl seminorm
+  summability gives H1$_{\rm OS}$, and the massive continuum has OS
+  reconstruction and gap $\hbar cm$.  Its scalar mass is supplied and its
+  symmetry is global, so it is an interface benchmark rather than a
+  Yang--Mills claim.
 - [The completed $0+1$ proof](../notes/low-dimensional-mass-gap.md) now
   covers compact semisimple matrix mechanics, including $SU(3)$, and its
   $3+1$ constant-mode truncation has a gap proportional to
