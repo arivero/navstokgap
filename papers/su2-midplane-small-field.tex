@@ -881,8 +881,63 @@ plane-uniform weighted sums, the normalized interacting barrier moments,
 the full winding remainder and the large-field comparison. The Gaussian
 identity and formal expansion supply no such all-order remainder bound.
 
+\hypertarget{round-11-a-tree-transported-flux-response}{%
+\subsection{9. Round 11: a tree-transported flux
+response}\label{round-11-a-tree-transported-flux-response}}
+
+\textbf{Part 1, GPT-6 Astra, 2026-09-28; definition, unrefereed.} A
+fixed tree gives a gauge-covariant finite-volume chart. Its response
+retains the path dependence of comparisons between different faces.
+
+\hypertarget{chart-and-response-on-the-periodic-plane}{%
+\subsubsection{9.1 Chart and response on the periodic
+plane}\label{chart-and-response-on-the-periodic-plane}}
+
+Write the vertices as \((i,j)\in\mathbb Z_{n_2}\times\mathbb Z_{n_3}\),
+\(n_2,n_3\ge3\), with root \(o=(0,0)\). Choose the comb tree: all
+nonseam direction-2 edges in every row, and the nonseam direction-3
+edges in column zero. The path \(\tau_v\) goes up column zero and then
+along row \(j\) to \(v\). Let \(T_v=U(\tau_v)\), using the convention
+\(U_{vw}\mapsto g_vU_{vw}g_w^{-1}\). For a face based at \(v(p)\) put
+
+\[\widehat U_{vw}=T_vU_{vw}T_w^{-1},\qquad
+z_p=\operatorname{Ad}_{T_{v(p)}}\log U_{\partial p},\qquad
+\Omega_j=U(\ell_j),\quad j=2,3.\tag{33}\]
+
+Here \(\ell_2,\ell_3\) are the two oriented coordinate cycles through
+\(o\). Tree links become identity; every displayed variable transforms
+by the single rotation \(\operatorname{Ad}_{g_o}\). Keep both
+\(\Omega_j\) as variables. Near identity use \(H_j=\log\Omega_j\);
+together with the fluxes these determine the linear harmonic components
+(equal to \(H_j/n_j\) on flat data). Larger holonomies need separate
+patches. Winding subtraction is performed after this retention.
+
+The admissible set \(\mathcal M\) consists of \((z,H)\) produced by the
+\(N+1\) non-tree links. This explicitly retains the nonabelian surface
+relation between the based face products and the cycle commutator.
+Locally it is a smooth embedded manifold: at identity its tangent is
+\(\sum_p z_p=0\) with two arbitrary harmonic variables; curl plus the
+two periods is injective on tree-gauge links and has dimension
+\(3(N+1)\). The inverse function theorem supplies local reconstruction
+\(U(z,H)\). Use separate copies on the two slab boundaries, join their
+roots by the fixed direction-1 path, and retain the cut-face data and
+their compatibility relations when extending to the full slab.
+
+To specify the second derivative as well as the frames, equip each
+fixed-\(H\) admissible slice with the metric induced by
+\(\sum_p|dz_p|^2\). Define \(K^T=\nabla_{\mathcal M,H}^2(h\circ U)\),
+the intrinsic Hessian for this metric, restricting to compatible slab
+variations. This is an explicit covariant response; its definition
+includes the derivative of the frames and the curvature of the
+constraint surface. Kernels are ambient face-block representatives of
+this bilinear form, as in §8.1, restricted to admissible tangent
+vectors. A weighted bound means existence of such a representative;
+eliminating a face changes the matrix norm being asked for. At nonzero
+fields all expansions below are finite-volume formal jets about
+\((z,H)=0\).
+
 \hypertarget{consequence-for-state}{%
-\subsection{9. Consequence for STATE}\label{consequence-for-state}}
+\subsection{10. Consequence for STATE}\label{consequence-for-state}}
 
 Atlas cell 2 keeps its formal order-\(t\) calculation. Round 8 Part A
 accepts the covariant decay and corrected bridge/convexity bounds,
