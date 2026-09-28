@@ -1296,8 +1296,6 @@ layers and stability under perturbed actions remain separate obligations.
 
 **GPT-6 Astra, 2026-09-29; unrefereed.** Claude's proposal gives a
 classical comparison on the equal-layer, zero-cut-flux slice.
-**In progress:** the reference and smooth-field bounds are written;
-flux-sector reading is complete; the final consequence for STATE follows next.
 
 ### 12.1 Finite-plane definition
 
@@ -1373,8 +1371,8 @@ $\sum_jt_j^\alpha<\infty$ for $t_j=2^{-j}t_0$ preserve the proposed
 smooth ultraviolet bookkeeping. The full small-field class still leaves
 $\mathcal T_T/t$ in (46) outside the established remainder bound: (49)
 uses $Ma^2$, while that class allows $t^{1/2-\delta}$. Holonomy-dependent
-transport is the unresolved value term, rather than a proved value
-counterexample. Stability for perturbed actions remains an extra theorem.
+transport is the unresolved value term; a value counterexample remains
+unproved. Stability for perturbed actions remains an extra theorem.
 
 ### 12.3 't Hooft sectors and the free-cycle phases (Part 2b)
 
@@ -1393,8 +1391,9 @@ as Euclidean time for this sector discussion. Write $m=n_{23}\in\mathbb Z_2$,
 $k=(n_{12},n_{13})\in\mathbb Z_2^2$. Spatial transition functions obey
 $\Omega_2(x+L_3)\Omega_3(x)=(-1)^m\Omega_3(x+L_2)\Omega_2(x)$.
 For each fixed $m$, construct $C_{U,m}$ using the adjoint transition
-functions at seams, and use (47) with $z$ in this adjoint bundle and
-$H_U$ replaced by $H_{U,m}$. Keep the common denominator $\det H_1$:
+functions at seams, and use (47) with $H_U$ replaced by $H_{U,m}$.
+Take $z$ from near-identity plaquette lifts after removing the prescribed
+seam-centre factors. Keep the common denominator $\det H_1$:
 sector-dependent constants then remain in relative sector weights.
 Ordinary periodic SU(2) backgrounds here have $m=0$; $m=1$ requires
 an explicitly twisted boundary problem, or an external centre-flux
@@ -1429,3 +1428,22 @@ background $U$ specifies neither $e$ nor a Fourier transform of log
 references. The adjoint local bounds survive either spatial twist;
 relative electric-sector estimates additionally require control of
 cancellation in this signed projection.
+
+### 12.4 Classical verdict and consequence for STATE
+
+Proposition 7 gives, for $\alpha=1/2-\delta>2\delta$, $0<\delta<1/6$,
+$$|F^{\rm cl}/t-\mathcal D_{0,\rm cl}^{\rm cov}|
+\le Kt^\alpha\|z\|^2/t.\tag{52}$$
+This proves classical weak P($\alpha$) on the stated equal-layer slice,
+uniformly in plane size; (48) also permits the full reference (47) in
+(52) after adding $Bt^{1-2\delta}N+\frac92N3^{-n}$, admissible under the
+size clause. Classical coupling shifts may be zero. Identification with
+the normalized free energy remains **formal**. The Gaussian determinant
+bound settles only that frozen model's one-loop term; the actual saddle
+Hessian, Haar/heat-kernel amplitudes, normalized loop remainder, barrier
+moments, image/large-field comparison and general boundary layers remain.
+**Consequence for STATE:** retain this covariant reference and its sector
+weights; next prove the normalized covariant comparison, then stability
+under perturbed actions. Equivalence to the original fixed-frame
+P($\alpha$) on the full small-field set still requires the transport-value
+estimate, and electric-sector projection requires its own relative bound.
