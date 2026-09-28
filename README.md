@@ -90,15 +90,23 @@ open problem 5.
 
 ## The foundations model
 
+[The classical-to-$h$ ladder](notes/classical-mechanics-to-h-ladder.md)
+begins at C0 classical mechanics.  It proves that bare mechanics retains
+the zero branch, while nondegenerate continuous free fluctuations plus
+mass-only centre-of-mass composition derive one positive universal action
+$\kappa=mD$.  Further named stochastic, calibration, and operational
+premises are required to identify $\kappa=\hbar=h_P/(2\pi)$ and to obtain
+quantum mechanics.
+
 [The conditional operational model](notes/foundations-model-nonrelativistic-quantum-mechanics.md)
-sets out the complete finite nonrelativistic target under explicit F0--F5
-premises: a calibrated action constant, regular Weyl kinematics, positive
-normal states and effects, self-adjoint dynamics, CP record closure, and
-interacting composition.  It reconstructs the Schrödinger/Weyl
-representation, Born probabilities, unitary dynamics, tensor products and
-an explicit Gaussian quantum-limit record.  It does **not** derive the
-positive scale, Weyl noncommutativity, or physical CP closure; those are
-now the first foundations obligations.
+is the complete finite nonrelativistic target after that action constant is
+supplied: its explicit F1--F5 premises are regular Weyl kinematics,
+positive normal states and effects, self-adjoint dynamics, CP record
+closure, and interacting composition.  It reconstructs the
+Schrödinger/Weyl representation, Born probabilities, unitary dynamics,
+tensor products and an explicit Gaussian quantum-limit record.  It does
+**not** derive Weyl noncommutativity or physical CP closure; those are now
+the first foundations obligations.
 
 ## The Yang--Mills map
 

@@ -37,13 +37,19 @@ fill its cells (open cells in its §5).
   Positive quantum action is an input to those quantum results; the
   independent necessity argument remains open. All three September 23
   adversarial review batches are complete.
+- [The classical-to-$h$ ladder](../notes/classical-mechanics-to-h-ladder.md)
+  now starts the foundations programme at classical C0 mechanics.  Bare
+  mechanics admits the zero branch and unrestricted sharp records; adding
+  nondegenerate continuous free fluctuations plus mass composition derives
+  one positive universal action $\kappa=mD$.  The stochastic-to-Schrödinger
+  and Planck-calibration bridges retain their named extra premises.
 - [The finite operational foundations model](../notes/foundations-model-nonrelativistic-quantum-mechanics.md)
-  now makes the intended target explicit.  Under F0--F5 it reconstructs
-  finite Schrödinger/Weyl kinematics, normal-state Born probabilities,
-  unitary dynamics, CP records, composition, and a quantum-limited Gaussian
-  measurement.  It does not derive F0's scale, F1's Weyl cocycle, or F4's
-  physical CP closure; these are now the named first-priority foundations
-  obligations, rather than implicit quantum inputs.
+  is the completion target after $\kappa=\hbar$ is supplied.  Under F0--F5
+  it reconstructs finite Schrödinger/Weyl kinematics, normal-state Born
+  probabilities, unitary dynamics, CP records, composition, and a
+  quantum-limited Gaussian measurement.  It does not derive F1's Weyl
+  cocycle or F4's physical CP closure; these remain explicit obligations,
+  rather than implicit quantum inputs.
 - [The mass-gap position](../notes/mass-gap-position.md) and the
   sharpened [conditional assembly theorem](../notes/mass-gap-conditional-theorem.md)
   hold the pure-gauge map.  Its proved implication now separates
@@ -82,16 +88,18 @@ fill its cells (open cells in its §5).
 
 ## Next
 
-1. **Foundations before the gap programme.** The finite operational model
-   identifies the exact physical gaps: select a universal positive action
-   and calibration $h_*=\hbar=h_P/(2\pi)$; justify the noncommutative Weyl
-   kinematics rather than merely an affine record floor; and give a
-   composition-closed physical reason for CP record dynamics.  Start with
-   one retained-memory readout class and state precisely whether it yields
-   only the commutative Gaussian alternative or the full F1--F4 model.
-   The finite model must not be mislabeled as a derivation of those
-   premises, and its extension to relativistic fields is a later separate
-   obligation.
+1. **Foundations before the gap programme.** Begin at C0 classical
+   mechanics, not at a canonical commutator.  Test the physical status of
+   C1--C4 in the [classical-to-$h$ ladder](../notes/classical-mechanics-to-h-ladder.md):
+   nondegenerate continuous free fluctuations plus mass-only
+   centre-of-mass composition derive $\kappa=mD>0$, while the deterministic
+   branch remains an explicit alternative.  Then determine whether C5 and
+   N1--N3 are physically justified, calibrate
+   $\kappa=h_*=\hbar=h_P/(2\pi)$ without hiding an empirical input, and
+   justify F1 Weyl kinematics and F4 CP record closure rather than merely
+   an affine record floor.  The finite model must not be mislabeled as a
+   derivation of those premises, and its extension to relativistic fields
+   is a later separate obligation.
 2. **A local gauge refinement estimate.** The
    [series/parallel note](../notes/series-parallel-gauge-refinement.md)
    factors one directional halving exactly: series moves close in every

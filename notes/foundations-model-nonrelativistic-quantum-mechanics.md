@@ -1,14 +1,16 @@
 # A conditional operational model of finite-dimensional quantum mechanics from one universal action constant
 
 **Status — a complete model conditional on stated kinematic and operational
-premises, not a derivation of those premises.**  This note makes workstream
-E independent of the Yang--Mills programme.  It assembles a finite-degree-
-of-freedom, nonrelativistic quantum model with canonical kinematics,
-normal states, Born probabilities, unitary dynamics, composite systems and
-quantum-limited Gaussian records.  It also records exactly what the model
-does **not** derive: a positive action constant, the Weyl noncommutative
-kinematics, the universality of that constant, or a relativistic quantum
-field theory.
+premises, not a derivation of those premises.**  This note is the
+*operational completion* of a programme which now begins at classical
+mechanics in [the classical-to-$h$ ladder](classical-mechanics-to-h-ladder.md).
+It makes workstream E independent of the Yang--Mills programme and
+assembles a finite-degree-of-freedom, nonrelativistic quantum model with
+canonical kinematics, normal states, Born probabilities, unitary dynamics,
+composite systems and quantum-limited Gaussian records.  It also records
+exactly what the model does **not** derive: a positive action constant, the
+Weyl noncommutative kinematics, the universality of that constant, or a
+relativistic quantum field theory.
 
 The distinction matters.  The record-cost and Gaussian-state results of
 the repository can conditionally yield a positive record constant $h_*$.

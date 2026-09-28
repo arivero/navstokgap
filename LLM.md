@@ -32,11 +32,11 @@ variable at a time (a Newtonian instant, a lattice edge or cell) and
 asking what the old observations and dynamics recover
 ([three-continuum-limits](notes/three-continuum-limits.md),
 [refinement-composition-and-limit](notes/refinement-composition-and-limit.md)).
-Goal one, now the first priority, is a **conditional operational
-foundations model of quantum mechanics**: first identify a positive action
-scale from independently justified record premises, then state rather than
-hide the additional Weyl kinematics, positive-state, dynamical,
-record-closure and composition premises that reconstruct finite
+Goal one, now the first priority, is a **classical-to-quantum foundations
+programme**: begin with C0 classical mechanics, derive one action constant
+from an independently justified nondegenerate free-motion/composition law,
+then state rather than hide the additional Weyl kinematics, positive-state,
+dynamical, record-closure and composition premises that reconstruct finite
 nonrelativistic quantum mechanics.  The Newton comparison is the test case:
 the inertial line against the constant-force parabola in *Principia* Book I
 (Lemmas X--XI, Proposition I).  The model is independent of, and does not
@@ -94,6 +94,7 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | Thm D (similarity) | $D_\lambda$ is an automorphism of $*_\hbar$ iff $\hbar=0$; two products up to isomorphism | proved, refereed | [fifth-postulate §6](notes/principia-fifth-postulate.md) |
 | Thm E (complementarity) | $\arccos\alpha+\arccos\beta\ge\arccos\sqrt{\lambda_0(ab/|\hbar|)}$ (Slepian--Pollak); windows need $ab\ge|\hbar|c_*(\epsilon)$ | proved, refereed (reviewer supplied the proof) | [fifth-postulate §6b](notes/principia-fifth-postulate.md) |
 | Thm U (unit) | Kirchhoff, Wien scaling, finite spectrum, Rayleigh--Jeans limit give $h_{\rm rad}=(8\pi k_B^4/c^3\sigma')^{1/3}$, enclosure-independent; $h_P=(\pi^4/15)^{1/3}h_{\rm rad}$ | proved, refereed (Astra) | [necessity-unit-and-indeterminacy §2](notes/necessity-unit-and-indeterminacy.md) |
+| Classical-to-$h$ ladder | Bare C0 classical mechanics cannot select a universal positive floor; C1--C4 nondegenerate continuous stationary free increments plus mass-only centre-of-mass composition yield $\kappa=mD>0$. C5 gives the Galileo Brownian-bridge record scale; N1--N3 and calibration are further stated bridges to $\hbar=h_P/(2\pi)$ | conditional assembly; each displayed implication proved from its premises | [classical-to-$h$ ladder](notes/classical-mechanics-to-h-ladder.md) |
 | Thm I (two pointers) | Liouville dynamics + product preparations with density ceiling + Bayesian readouts + two pulses with stored first reading give posteriors of arbitrarily small $\Delta q\Delta p$ | proved, refereed (four-part premise) | [necessity-unit §3](notes/necessity-unit-and-indeterminacy.md) |
 | Thm F (classical Thm 6) | Uniform statistical-speed bound with constant $h_*$ gives (Thm 6) classically; Gaussian covariance floor $\zeta$ gives $h_*=2\zeta$ | conditional, proved (Astra) | [newton-indeterminacy-routes](notes/newton-indeterminacy-routes.md) |
 | Thermodynamic no-floor | Records at temperature $T$: $\eta\ge A_0e^{-W/k_BT}$, a trade-off with no action floor | proved, unrefereed | [thermodynamic-records-no-floor](notes/thermodynamic-records-no-floor.md) |

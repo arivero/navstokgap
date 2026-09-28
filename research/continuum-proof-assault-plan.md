@@ -192,20 +192,26 @@ constant once quantum kinematics and operational record closure are stated
 rather than smuggled in?  This is independent of the Yang--Mills gap and
 now takes priority.
 
-**Completed model target.**  The conditional finite nonrelativistic model
-in [the foundations note](../notes/foundations-model-nonrelativistic-quantum-mechanics.md)
-separates five premises: a positive calibrated action (F0), regular Weyl
-kinematics (F1), positive states/effects (F2), self-adjoint dynamics (F3),
-CP record closure (F4), and interacting composition (F5).  Under them it
-reconstructs the finite Schrödinger/Weyl representation, Born
+**Completed model target.**  The programme now begins with C0 classical
+mechanics in [the classical-to-$h$ ladder](../notes/classical-mechanics-to-h-ladder.md).
+Its C1--C4 stochastic augmentation derives one universal positive action
+$\kappa=mD$ from nondegenerate free fluctuations and mass composition, but
+does not derive those fluctuation premises or their numerical calibration.
+The conditional finite nonrelativistic model in
+[the foundations note](../notes/foundations-model-nonrelativistic-quantum-mechanics.md)
+is the next completion: it separates the supplied/calibrated action (F0),
+regular Weyl kinematics (F1), positive states/effects (F2), self-adjoint
+dynamics (F3), CP record closure (F4), and interacting composition (F5).
+Under them it reconstructs the finite Schrödinger/Weyl representation, Born
 probabilities, unitary dynamics, tensor composition, and an explicit
 quantum-limited Gaussian instrument.  It is a model, not a derivation of
-F0--F5.
+F1--F5.
 
 **Physical targets now open.**
 
-1. Derive a composition-closed physical readout restriction selecting
-   $h_*>0$, then justify the empirical calibration
+1. Establish or falsify C1--C4 as a physical law of free motion, then
+   derive a composition-closed physical readout restriction selecting the
+   same $h_*>0$ and justify the empirical calibration
    \[
    h_*=\hbar=\hbar_{\rm YM}=h_P/(2\pi).                      \tag{E1}
    \]
@@ -263,7 +269,7 @@ shares an assumed conclusion:
 | B | lattice-RG analyst | exact block identity plus a norm in which the B1 remainder is estimated |
 | C | mixing/cluster-expansion analyst | gauge-invariant conditional measure and a volume-uniform contraction or counterexample |
 | D | constructive-QFT/spectral analyst | observable algebra, tightness route, and support-preservation proof |
-| E | adversarial dimensional analyst | calibration assumptions and $U(1)$/Goldstone counterchecks |
+| E | classical/stochastic foundations analyst | C1--C4 physical-law audit, calibration assumptions, and a commutative-model countercheck |
 
 For every actual contribution, the integrating commit will include the
 workstream identifier in its subject, a short `Contribution:` paragraph in
@@ -287,20 +293,28 @@ workstream branches.
 
 ## 9. First concrete tasks
 
-1. **A1 audit:** calculate the finite-cutoff fibre-vacuum quantum metric
-   on the $SU(3)$ Cartan patch and compare its Born--Huang energy with
-   $g^{2/3}\hbar c/L$.  This tests a hidden assumption behind A2 before
-   attempting a relative-Schur estimate.
-2. **B1 formulation:** specify the smallest closed bounded Wilson-loop
+1. **E1 classical entry point — completed conditionally:** begin with C0,
+   prove the no-go boundary, and derive $\kappa=mD>0$ from C1--C4.  This is
+   now recorded in [the classical-to-$h$ ladder](../notes/classical-mechanics-to-h-ladder.md).
+2. **E2 physical audit — first live foundations task:** test whether a
+   specified retained-memory physical model justifies C1--C4 and the same
+   constant in the record/radiation sector, rather than assuming either
+   Brownian noise or Planck calibration.  Report separately whether it
+   supports only the commutative Gaussian alternative or F1.
+3. **A1 audit — completed at the fixed-cutoff level:** calculate the
+   finite-cutoff fibre-vacuum quantum metric on the $SU(3)$ Cartan patch
+   and compare its Born--Huang energy with $g^{2/3}\hbar c/L$.  The
+   $S_\Lambda\asymp L^3\Lambda$ frequency-diagonal cost is now in the
+   Feshbach note; its physical Gauss/frame renormalization remains open.
+4. **B1 formulation:** specify the smallest closed bounded Wilson-loop
    algebra and a block-map support buffer for which the telescoping
    hypothesis can even be stated.
-3. **C1 choice:** select one analytic mixing criterion and write its
+5. **C1 choice:** select one analytic mixing criterion and write its
    gauge-invariant conditional distributions; do not start from an
    unverified numerical correlation length.
-4. **D1 observable ledger:** list the flowed/local observables for which
+6. **D1 observable ledger:** list the flowed/local observables for which
    OS positivity and uniform two-point normalization are to be proved,
    together with their candidate gapless channels.
 
-The first task is pursued immediately in the Feshbach note.  The other
-three are suitable for independent delegated reports and should be merged
-only after their assumptions are reconciled.
+E2 is the first delegated task.  B--D are suitable for independent later
+reports and should be merged only after their assumptions are reconciled.
