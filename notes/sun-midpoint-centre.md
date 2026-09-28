@@ -51,8 +51,14 @@ divisible by $3$) produce it.
 The ingredients are character orthogonality, the Brauer--Klimyk rule and
 Poisson summation, as in the $SU(2)$ note; the denominator of (1) is the
 classical image formula for the heat kernel on a compact group
-([Fegan 1983](https://doi.org/10.4310/jdg/1214438176), metadata). No
-novelty is claimed for the method.
+([Fegan 1983](https://doi.org/10.4310/jdg/1214438176), metadata). The
+same unfolding and coroot Poisson summation give the heat trace at the
+identity and its exponential Seeley--DeWitt structure, $a_k=(R/6)^k/k!$, in the
+author's earlier project
+([physres1, Remark D9.1o$''$](https://github.com/arivero/physres1/blob/9e31f51/paper/main.md),
+2026-02, read); at $X\to0$ the $H=0$ term of the denominator of (1) gives
+$k_t(e)\propto t^{-\dim G/2}e^{t|\rho|^2/2}$, the same structure ($R/6=|\rho|^2$ in this metric;
+for $SU(2)$, radius 2, $R/6=\frac14$). No novelty is claimed for the method.
 
 ## 1. Conventions
 
@@ -256,7 +262,17 @@ $SU(3)$. Centre-valued link configurations exist on any lattice whatever
 the blocking, and thick centre vortices
 ([Mack and Petkova 1979](https://doi.org/10.1016/0003-4916(79)90346-4);
 ['t Hooft 1978](https://doi.org/10.1016/0550-3213(78)90153-0); metadata)
-are a question about many steps. Whether a triadic refinement, $b=3$,
+are a question about many steps. The centre matters because pure $SU(3)$
+leaves it unscreened: by the complementarity of
+[Fradkin and Shenker (1979)](https://doi.org/10.1103/PhysRevD.19.3682) and
+[Osterwalder and Seiler (1978)](https://doi.org/10.1016/0003-4916(78)90039-8)
+(metadata), matter in the fundamental representation screens every centre
+charge and joins the confinement and Higgs regimes without a transition,
+while in the pure gauge theory the unbroken $\mathbb Z_3$ stays an order
+parameter. The centre-reaching (triadic) windings are therefore a feature
+of the pure-gauge goal, screened in QCD with quarks, which is one more
+difference between the continuum limits compared in the
+[joint-paper plan](three-continuum-limits.md). Whether a triadic refinement, $b=3$,
 organizes the $SU(3)$ large-field terms better than dyadic refinement is
 open; factor-2 decimation with the $\mathbb Z_2$ factor kept explicit goes back to
 [Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata),
