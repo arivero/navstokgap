@@ -562,9 +562,120 @@ Tree lengths are subadditive when kernels are joined, proving (25)
 from (23). In particular each kernel is bounded by $v_r e^{-\alpha\mathsf T}$.
 These are deliberately loose constants; $t^{-1}$ restores action units.
 
+### 7.1. Part (2): one-loop contraction after common subtraction (formal)
+
+The contraction uses the **full** blocked tree action: add the old-face
+and electric terms to (23), including cross bubbles with their cubic
+vertices. Use the same gauge reduction, background and physical units
+on both sides of the cut. The following bounds concern one pristine
+step; all coefficients are bulk, zero-image perturbative coefficients.
+
+First take a bounded background $\mathcal B$, with
+$b=\sup_e|\mathcal B_e|$, and set $z=L\mathcal B$,
+$h=-GT_y[z,z]/2$. At its conditional saddle the eliminated Hessian is
+
+$$D(\epsilon)=H+\epsilon V_D+\epsilon^2W_D+O(\epsilon^3),\qquad
+ V_D=T_{yy}[z],\quad W_D=\tfrac12U_{yy}[z,z]+T_{yyy}[h]. \tag{26}$$
+
+The anchored bounds (25) and the Schur test give, with $d=3(N^2-1)$,
+
+$$\begin{gathered}
+ v=Kl b,\qquad w=\tfrac12(K+gK^2)l^2b^2,\\
+ \|D^{-1/2}V_DD^{-1/2}\|_{2,\tau}\le\sqrt d\,v/4,\qquad
+ \|D^{-1/2}W_DD^{-1/2}\|_{1,\tau}\le d w/4,\\
+ |\tau(E_D-A_D^2/2)|\le d(w/4+v^2/32). \tag{27}
+\end{gathered}$$
+
+Here $D=H$ at zero background and $\tau$ is per mid-space site
+(one mid-space per slab). These are precisely Theorem 3's norms,
+uniform in volume and in an added nonnegative mass regulator.
+The saddle term $T_{yyy}[h]$ retains the exchange term in (23).
+
+For clarity about the subtraction, let $\mathcal H$ be the pristine
+Hessian in retained/eliminated coordinates, evaluated on this saddle,
+and $S=\mathcal H/D$ the full blocked tree Hessian. Differentiation of
+the stationary action gives $S$ exactly, including its cubic/quartic
+jets. With $\mathcal C(H)=\tau(E_H-A_H^2/2)$, determinant factorization
+at fixed regulator gives
+
+$$\mathcal C(S)-\mathcal C(\mathcal H)=-\mathcal C(D). \tag{28}$$
+
+In the mid-vertex gauge the eliminated gauge volume has already been
+removed. A background-gauge implementation must include its ghost and
+constraint determinants in (28); their net contribution is the same
+reduced integral. Local heat-kernel and Haar amplitudes are kept in
+$m$, as in (10). Subtract the **same** continuum determinant from both
+massless sides of (28), before taking their difference. Thus (27)
+bounds the determinant part of the subtracted one-step change. The
+retained massless $A_S,E_S$ can separately have divergent norms;
+(28) controls their combined contraction and subtraction. Isolated
+diagrams built only from $\Gamma_3,\Gamma_4$ have no such assertion.
+
+To extract $F^2$ with explicit constants, use the constant commuting
+flux tests of [the one-step note, Theorem 1](four-dimensional-parallel-log.md)
+(full-read: §§1--5). They are stationary interpolated backgrounds, so
+(28) applies without a background field redefinition. Its magnetic
+symbol includes the orbital terms needed for this extraction; (27)
+alone, with a bounded potential, would leave that issue unresolved.
+Here is an explicit bound on that note's integral $\mathcal I_{jk}$.
+In its (6)--(8), at $M=4I,W=I/2$, put $a_*=64$, $r=(4+v)^{-1}$.
+The absolute trigonometric coefficient row sums bound $H_1,H_2$,
+the first two momentum derivatives of $H_0$, and the first momentum
+derivatives of $H_1$ by $a_*$. The inverse derivative identities give
+
+$$\begin{aligned}
+ \|\partial R_0\|&\le a_*r^2,&
+ \|\partial^2R_0\|&\le a_*r^2+2a_*^2r^3,\\
+ \|R_1\|&\le a_*r^2+a_*^2r^3,&
+ \|\partial R_1\|&\le a_*r^2+4a_*^2r^3+3a_*^3r^4,\\
+ \|R_2\|&\le a_*r^2+\tfrac72a_*^2r^3+6a_*^3r^4+3a_*^4r^5.
+\end{aligned} \tag{29}$$
+
+Each $\partial$ is either magnetic momentum derivative; mixed second
+derivatives obey the same bound. For example the two Poisson products
+cancel the factor $1/2$ in an absolute bound, while the four second
+derivative products give $4/8$ in the last term of (8).
+Integrating (29), using $|\operatorname{tr}_3R_2|\le3\|R_2\|$, gives
+
+$$|\mathcal I_{jk}|\le D_*:=3\left(
+ \frac{a_*}{4}+\frac{7a_*^2}{64}+\frac{a_*^3}{32}
+ +\frac{3a_*^4}{1024}\right). \tag{30}$$
+
+For a unit flux in any one plane the full normalized conditional
+one-loop coefficient $d_{\mu\nu}=2A_{\mu\nu}$ therefore satisfies
+
+$$|d_{1j}|\le N/48,\qquad
+ |d_{jk}|\le N(1/24+D_*)=:D_N. \tag{31}$$
+
+These constants include the bridge normalization and the transverse
+heat-kernel amplitude $-N/24$ in the inverse coupling. In a common
+scheme at the same physical scale, (28), with these local terms,
+says $c_{\rm blocked}^{\rm tree}=c_{\rm pristine}-d_{\mu\nu}$ for
+the selected plane coefficient. Thus its finite matching change is
+bounded by $D_N$ ($3(1/24+D_*)$ for $SU(3)$); in an arbitrary fixed
+scheme $|c_{\rm blocked}^{\rm tree}|\le|c_{\rm pristine}|+D_N$.
+One may fix the common finite subtraction by $c_{\rm pristine}=0$.
+The pristine continuum-subtracted coefficient and Ward extraction
+are understood in the formal matching scheme of the one-step note.
+Keeping the generated one-loop local term adds $d_{\mu\nu}$ back,
+as required by exact integration. Changing the physical matching scale
+also adds the universal logarithm; (31) uses equal scales throughout.
+
+**Infrared term.** The common massless $F^2$ logarithm has coefficient
+$2b_0=11N/(24\pi^2)$; it cancels in (28). The surviving transverse
+bridge density at $k=0$ is
+$-N/24-N\operatorname{Re}\int_0^\infty\operatorname{tr}_3R_2(0,v)\,dv$.
+It controls the leading small-ball contribution, bounded by
+$D_N\varepsilon^3/(6\pi^2)$ for $|k|<\varepsilon\le1$.
+The cut density vanishes quadratically and contributes at most
+$N\varepsilon^5/(2304\pi^2)$, since $Q\le|k|^2$ and $8+Q\ge8$.
+Equation (29) supplies domination through the infrared limit, including
+the orbital response. This proves finite one-step matching within the
+stated formal scheme; depth-uniform (14) remains the next estimate.
+
 ## 8. Consequence for STATE
 
-Cell 4 now also has explicit one-step cubic and quartic kernels with
-exponential decay, at formal tree level (Round 10, unrefereed).
-The next part is their subtracted one-loop contraction and its infrared
-limit; uniform depth control and interacting remainders remain open.
+Cell 4 has explicit one-step vertices and a finite commonly subtracted
+one-loop matching change with constants (Round 10, formal, unrefereed).
+Next: state the depth-uniform iteration hypotheses; proving (14) and
+controlling interacting remainders remain open.
