@@ -64,7 +64,7 @@ fill its cells (open cells in its §5).
    [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
    are refereed (Round 5B A); its §5b displays the fundamental SU(3)
    trisection (5B B, written). Image-to-volume control remains open.
-   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). The [small-field note, Round 11 §9](../notes/su2-midplane-small-field.md) defines a tree response with Gaussian bound and a strip-transport obstruction (formal interacting interpretation). Next: cancel that term in the full Hessian or construct a compatible short-path response, then normalized (18), barrier/winding control and iteration; higher-spin sum control remains an alternative route.
+   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); atlas cell 2 has a [formal full-plane order-$t$ calculation](../notes/su2-midplane-order-t.md). The [small-field note, Round 12 §10](../notes/su2-midplane-small-field.md) retains strip growth in the complete intrinsic classical cubic (formal, unrefereed). Next: short-path value comparison for weak P($\alpha$), then normalized (18), barrier/winding control and iteration; higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.

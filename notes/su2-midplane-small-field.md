@@ -1094,11 +1094,11 @@ its truth on large planes requires another argument, since a growing
 Taylor coefficient alone gives neither a uniform finite-field remainder
 nor a counterexample to that value inequality.
 
-## 11. Consequence for STATE
+### 10.3 Next step and consequence for STATE
 
-Atlas cell 2 now has the explicit tree response of §9. Its Gaussian
-bound persists; the next response task is cancellation of (34) in the
-full admissible Hessian, or a compatible response using short pairwise
-paths. Round 8's rejection of Proposition 4 and the conditional status
-of (18) stand. The remaining normalized and iteration estimates are
-listed in §9.3.
+Cell 2 now calls for a value comparison using short pairwise transports:
+retain the covariant massive kernel, bound each contractible loop by
+its enclosed curvature, and construct compatible increments with a
+uniform total quadratic cost. This targets weak P($\alpha$) directly;
+barrier moments, winding, large fields and iteration remain the
+subsequent obligations of §9.3. Proposition 4's rejection stands.

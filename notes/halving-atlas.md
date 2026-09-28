@@ -199,7 +199,7 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
 ## 5. Open cells
 
 1. $SU(2)$ cube: *filled through $J=1$* ([Theorem 4](su2-midpoint-exact.md), exact diagonal entries, image bounds and cube sector); $J>1$ entries and control of the full spin sum remain open.
-2. $SU(2)$ full mid-plane in $1+2$: [formal order-$t$ calculation](su2-midplane-order-t.md) refereed as formal, with its winding size clause; [small-field note](su2-midplane-small-field.md), Round 9 refereed Gaussian cancellation and formal fixed-frame pole; Round 11 §9 defines a tree flux response retaining (30), with strip transport (34)--(35) obstructing the resolvent comparison (unrefereed; interacting interpretation formal). Open: cancellation in the full Hessian or short-path response, normalized (18), barrier moments, winding and large fields; Proposition 4's rejection stands.
+2. $SU(2)$ full mid-plane in $1+2$: [formal order-$t$ calculation](su2-midplane-order-t.md) refereed as formal; [small-field note](su2-midplane-small-field.md), Round 12 §10: complete classical cubic retains $-n\varepsilon D_n/t+O(\varepsilon/t)$ on unit compatible tree-chart tangents, $1/98\le D_n\le1/50$ (formal, unrefereed). Next: short-path value comparison for weak P($\alpha$); normalized (18), barrier, winding, large fields and iteration remain open; Proposition 4's rejection stands.
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
