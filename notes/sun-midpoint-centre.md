@@ -40,7 +40,11 @@ for integer spin. This is Dirac's belt trick, $\pi_1(SO(3))=\mathbb Z_2$
 ([Newman 1942](https://doi.org/10.1112/jlms/s1-17.3.173), metadata),
 appearing in the exact midpoint law: a bridge winding $w$ times round the
 group makes $w$ extra $720^\circ$ turns, and its midpoint makes $w$ extra $360^\circ$
-turns, which the spinor characters detect. For $SU(3)$ the same mechanism
+turns, which the spinor characters detect. In $1+3$ this internal $\mathbb Z_2$
+meets the spatial one in "spin from isospin"
+([Jackiw and Rebbi 1976](https://doi.org/10.1103/PhysRevLett.36.1116);
+[Hasenfratz and 't Hooft 1976](https://doi.org/10.1103/PhysRevLett.36.1119);
+metadata). For $SU(3)$ the same mechanism
 carries the triality, and only cuts at thirds (or at denominators
 divisible by $3$) produce it.
 

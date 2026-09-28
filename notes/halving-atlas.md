@@ -47,119 +47,46 @@ analogue of a parallel insertion. Forgetting a Gaussian record is an
 exact parallel move with defect proportional to $\hbar^2$, the identity for
 $\hbar=0$ ([record as parallel move](newton-record-parallel-move.md)).
 
-### 1b. Cuts at any position (user remark, 2026-09-27)
+### 1b. Cuts at any position (user remarks, 2026-09-27/28)
 
-Halving is the easiest cut; any cut at fraction $s\in(0,1)$ of a cell
+Halving is the easiest cut; a cut at any fraction $s\in(0,1)$ of a cell
 performs the same two moves, with $s$ as a parameter.
 
 - **Series move.** The cut face splits into heat times $st$ and $(1-s)t$;
   the convolution returns $t$ exactly, for heat-kernel weights, in every
   dimension.
-- **Parallel move.** In $D=3$, with each transverse face weighted by
-  its dual length (trapezoid rule), every old and new transverse face
-  keeps heat time $2t$, as in halving. The inserted edges carry the bridge
-  law at fraction $s$, variance $s(1-s)t_e$ in place of $t_e/4$. The free-field
-  defect is (5) with $v\to v_s=4s(1-s)v$ and coefficient $s(1-s)/(2(2t+v_s))$
-  on the layer differences in place of $1/(8(2t+v))$, so the size bound (6) scales exactly by $4s(1-s)$
-  ([Corollary 2$_s$](series-parallel-gauge-refinement.md)): halving is the
-  largest single step, and an off-centre cut is gentler and shrinks the
-  mesh less. Theorem 5 holds for every $s$ (Corollary 5$_s$ there).
-- **Newton.** The cell action $K_\tau=F^2\tau^3/(24m)$
-  ([two-path note](galileo-two-path-interference.md)) obeys
-  $\tau^3=(s\tau)^3+((1-s)\tau)^3+3s(1-s)\tau^3$, so one cut removes exactly
-  $3s(1-s)K_\tau$, at most $\frac34K_\tau$ (halving). Along any sequence of cuts
-  whose mesh tends to zero the removed amounts sum to $K_\tau$, whatever
-  the positions and order (the remainder is $\sum_i C\tau_i^3\le C\tau\max_i\tau_i^2$).
-  Proved, with the Cameron--Martin reading (each share is the energy of
-  the Schauder hat the cut inserts), in the [cut-measure note](cut-measure-newton.md).
-  The Galileo action is therefore an additive measure on the cut
-  process: the refinement limit is cut-independent, and every cut
-  spends a definite share of the action that Newton sends to zero. This
-  is the Lévy–Ciesielski structure of the Brownian bridge (variance
-  $s(1-s)$ at each dyadic or non-dyadic insertion) seen in the action.
-- **Relative windings** (compact groups; 2026-09-28, refereed). On
-  $U(1)$ the bridge midpoint at fraction $s$ is a mixture over the total
-  winding $W\in\mathbb Z$, with $s$-independent weights $\propto e^{-(\phi_e+2\pi W)^2/(2t_e)}$, of
-  wrapped Gaussians of variance $s(1-s)t_e$ centred at the interpolation
-  shifted by $2\pi(1-s)W$; Theorem 5 holds for every $s$
-  ([Corollary 5$_s$](series-parallel-gauge-refinement.md)). Halving is the
-  only cut whose shifts form $\mathbb Z_2$, the parity mixture of Prop. 4; $s=p/q$ in
-  lowest terms gives $\mathbb Z_q$, an irrational $s$ a dense set. For a simply
-  connected group the heat kernel's image sum runs over the coroot
-  lattice $Q^\vee$, and the image midpoints sit at $e^{isX}e^{2\pi isH}$, $H\in Q^\vee$
-  (semiclassical placement; the exact weights carry Jacobians). These
-  shifts are all central iff $sQ^\vee\subset P^\vee$, the coweight lattice ($P^\vee/Q^\vee$ is
-  the centre). For $SU(2)$, $\frac12Q^\vee=P^\vee$: at a halving a relative winding $n$
-  acts by the centre element $(-1)^n$. Geometrically, $SU(2)=S^3$ and $-1$ is the
-  antipode of $e$, so every closed geodesic through $e$ passes through $-1$
-  at half length. For $SU(N)$, $N\ge3$, only integer $s$ satisfies the
-  condition ($H=(1,-1,0,\dots)$ forces $s\in\mathbb Z$); the shortest closed geodesics
-  pass at half length through ${\rm diag}(\dots,-1,\dots,-1,\dots)$, which is not
-  central, and at $s=1/N$ only $H\in NP^\vee$ give central shifts. Flipping one
-  mid-edge by $-1$ flips every plaquette containing it, the smallest thin
-  $\mathbb Z_2$ vortex in the sense of
-  [Mack and Petkova (1979)](https://doi.org/10.1016/0003-4916(79)90346-4);
-  centre vortices go back to
-  ['t Hooft (1978)](https://doi.org/10.1016/0550-3213(78)90153-0), and
-  factor-2 decimation with the $\mathbb Z_2$ factor kept explicit to
-  [Tomboulis (1981)](https://doi.org/10.1103/PhysRevD.23.2371) (metadata for
-  all three). Whether the bridge parity at a halving ties refinement to
-  centre vortices is a question; the observation itself is elementary.
-- **Which part of the centre a cut reaches** (2026-09-28, from the
-  user's question on Dirac's belt trick; now Corollary 3 of the exact
-  midpoint formula of the [centre note](sun-midpoint-centre.md), Astra
-  referee pending). *Lemma:* for
-  $SU(N)$ and a cut at $s=p/q$ in lowest terms, the relative windings land
-  on exactly the subgroup $\mathbb Z_{\gcd(q,N)}$ of the centre $\mathbb Z_N$. *Proof:* a winding
-  $H\in Q^\vee$ shifts the midpoint by $e^{2\pi ipH/q}$, central iff $pH/q\in P^\vee$, iff
-  $H/q\in P^\vee$ (Bézout, since $H\in Q^\vee\subset P^\vee$); so the central shifts are
-  $(P^\vee\cap q^{-1}Q^\vee)/Q^\vee$, the $q$-torsion of $P^\vee/Q^\vee\cong\mathbb Z_N$. $\square$ Dyadic
-  refinement therefore reaches the 2-primary part of the centre: all of it
-  for $SU(2)$ at the first halving, nothing for $SU(3)$ at any depth, while
-  one trisection reaches all of $\mathbb Z_3$. Centre elements are focal points:
-  the shortest geodesics from $e$ to $-1$ in $SU(2)$ form an $S^2$, those from $e$
-  to $\omega\cdot1$ in $SU(3)$ a $\mathbb{CP}^2$, and the closed geodesic along $(1,1,-2)$
-  passes $\omega\cdot1$ and $\omega^2\cdot1$ at its thirds. For $SU(2)$ this is Dirac's belt
-  trick, $\pi_1(SO(3))=\mathbb Z_2$
-  ([Newman 1942](https://doi.org/10.1112/jlms/s1-17.3.173), metadata): the
-  halving turns $w$ extra $720^\circ$ turns of a bridge into $w$ extra $360^\circ$ turns
-  at its midpoint, and the exact formula shows it, since in Theorem 3 of
-  the [$SU(2)$ midpoint note](su2-midpoint-exact.md) the image sums enter
-  with $(-1)^w$ for half-integer $J$ ($\Xi_-/\Xi_+$) and drop out of the ratio for
-  integer $J$. In $1+3$ the internal and the spatial $\mathbb Z_2$ meet in "spin
-  from isospin" ([Jackiw and Rebbi 1976](https://doi.org/10.1103/PhysRevLett.36.1116);
-  [Hasenfratz and 't Hooft 1976](https://doi.org/10.1103/PhysRevLett.36.1119);
-  metadata). For $SU(3)$ the phase a centre-landing winding leaves on a
-  character is its triality, so quark representations see $\omega$ and gluons do
-  not; the exact trisection formula is (1) of the centre note at $s=\frac13$. Per step,
-  the smallest centre-landing trisection winding costs $e^{-24\pi^2/t}$
-  against $e^{-8\pi^2/t}$ for root windings ($|H|^2=2\,{\rm tr}H^2=12$ and $4$), both
-  beyond the $1+3$ threshold $c>2/b_0$. The lemma concerns which classes the
-  windings of a step can reach; centre-valued link configurations exist
-  on any lattice, and thick vortices are a separate question.
-- **The rod** (user remark, 2026-09-27). The dialecticians' stick of
-  *Zhuangzi* 33, 一尺之捶，日取其半，萬世不竭 ("a one-foot stick, each day take
-  half, in ten thousand generations it is not exhausted";
-  [text](../docs/classics/Zhuangzi_33_Tianxia_zh_wikisource.md), attributed
-  to the 辯者, the debaters, and not to Hui Shi personally), is Zeno's
-  dichotomy as a cut schedule: every day one cut, at $s=\frac12$ of the
-  remaining piece only. The mesh stays at $\tau/2$, so this schedule is no
-  refinement, and the action identity above prices it exactly: day $k$
-  removes $\frac34K_\tau8^{-(k-1)}$, the total spent is
-  $\frac34\cdot\frac87K_\tau=\frac67K_\tau$, and $\frac17K_\tau$ stays in the cut-off pieces.
-  The stick is inexhaustible and so is the action: $\frac17$ of it is never
-  reached by this schedule. The remainder converges to a point, and the
-  Mohist Canon B names that point: 非半弗𣃈，則不動，說在端 ("without halving
-  there is no cutting and no moving; the explanation lies in the
-  端, the point"), with the explanation 前則中無爲半，猶端也。前後取，則端中也
-  ([text](../docs/classics/Mozi_Canons_B_Explanations_JingShuoXia_zh_wikisource.md);
-  working gloss: "taking from the front, the middle is never halved, and
-  one ends as at a point; taking from front and back, the point is in the
-  middle"). The two Mohist protocols, one-ended and two-ended, both
-  converge to a point and neither refines the whole stick. Refinement,
-  which spends all of $K_\tau$, needs every piece cut again. Resemblance
-  with Zeno is recorded as convergence; transmission to China would need
-  evidence this note does not have.
+- **Parallel move.** With trapezoid (dual-length) face weights every
+  transverse face keeps heat time $2t$, and the inserted edges carry the
+  bridge law at fraction $s$, variance $s(1-s)t_e$. The free-field defect
+  scales exactly by $4s(1-s)$ ([Corollary 2$_s$](series-parallel-gauge-refinement.md)),
+  and the $U(1)$ Theorem 5 holds for every $s$ (Corollary 5$_s$ there):
+  halving is the largest single step, and an off-centre cut is gentler
+  and shrinks the mesh less.
+- **Newton.** One cut spends exactly $3s(1-s)K_\tau$ of the cell action
+  $K_\tau=F^2\tau^3/(24m)$, the Cameron--Martin energy of the Schauder hat it
+  inserts; the shares add over any cut sequence and exhaust $K_\tau$ iff the
+  mesh vanishes ([cut-measure note](cut-measure-newton.md)). The Galileo
+  action is an additive measure on the cut process, with the nested
+  additivity of the Lévy--Ciesielski construction of the Brownian bridge.
+- **Windings and the centre.** At a cut the bridge midpoint is a mixture
+  over windings. For $U(1)$ the weights are $s$-independent and the shifts
+  $2\pi(1-s)W$ form $\mathbb Z_2$ only at halving and $\mathbb Z_q$ at $s=p/q$. For every
+  compact simply connected group the midpoint expectation of every
+  character is exact, a sum over weights of coroot image sums
+  ([centre note](sun-midpoint-centre.md), Theorem 1), and a cut at $p/q$
+  reaches exactly the subgroup $\mathbb Z_{\gcd(q,N)}$ of the centre of $SU(N)$ (its
+  Corollary 3). So the $SU(2)$ halving carries Dirac's belt trick, a
+  winding $n$ acting by $(-1)^n$ on half-integer spins, while dyadic
+  refinement never reaches the $SU(3)$ centre and a trisection carries
+  the triality. Flipping one mid-edge by a central element is the
+  smallest thin centre vortex. Open: whether this ties refinement to
+  centre vortices, and whether triadic refinement suits $SU(3)$ better.
+  The centre note awaits Astra's referee.
+- **The rod.** The stick of *Zhuangzi* 33, 一尺之捶，日取其半，萬世不竭, halved
+  only in its remaining piece, spends $\frac67K_\tau$ and converges to a point,
+  the Mohist 端 of Canon B; refinement, which spends all of $K_\tau$, cuts
+  every piece again ([cut-measure note](cut-measure-newton.md), §3). The
+  parallel with Zeno's dichotomy is recorded as convergence.
 - **The frame.** A cut at an arbitrary, even irrational, position is the
   geometers' cut of Book I's closing scholium. The questions for each
   cell become: does the limit depend on the cut sequence (for Newton, no,
@@ -205,23 +132,16 @@ way; in mechanics refining makes each cell more quantum
 - **Parallel moves carry everything that renormalizes.** Their number,
   $\binom{D-1}2$, is zero exactly where the theory is exactly soluble.
 - **Additivity is universal; locality is one-dimensional** (2026-09-28).
-  Integrating out the fine variables of a Gaussian step leaves the Schur
-  complement of the action, its minimum over the fine variables with the
-  coarse ones fixed (the Dirichlet principle), and successive Schur
-  complements compose exactly ((13) of the
-  [four-dimensional note](four-dimensional-parallel-log.md)). In Newton's
-  cell this additivity is Theorem 2 of the
-  [cut-measure note](cut-measure-newton.md): the hats of successive cuts
-  are orthogonal and their energies add up to $K_\tau$. What one dimension
-  alone grants is locality: the minimizer between two cut points is the
-  chord, so the blocked action is again nearest-neighbour and the series
-  move closes; $1+1$ gauge theory, with no transverse planes, shares it.
-  With transverse planes the minimizer is coupled across the mid-space,
-  the Schur complement is non-local, and its local truncation error is
-  the parallel defect: (5) and Corollary 2$_s$ of the
-  [series/parallel note](series-parallel-gauge-refinement.md) split it
-  into a displacement part, which at $v=0$ is the convexity gap of the
-  interpolated flux, and a noise part from relaxing the interpolant.
+  Integrating out a Gaussian step leaves the Schur complement of the
+  action (the Dirichlet principle), and successive Schur complements
+  compose exactly ((13) of the [four-dimensional note](four-dimensional-parallel-log.md));
+  in Newton's cell this is Theorem 2 of the [cut-measure note](cut-measure-newton.md).
+  Only one dimension grants locality: the minimizer between two cut
+  points is the chord, so the blocked action is again nearest-neighbour
+  and the series move closes, as in $1+1$. With transverse planes the
+  Schur complement is non-local, and its local truncation error is the
+  parallel defect ((5) and Corollary 2$_s$ of the
+  [series/parallel note](series-parallel-gauge-refinement.md)).
 - **The exponential ladder.** Each compact correction left by a step is
   $e^{-c/t}$ (vortices, monopoles, dislocations). In $D<4$ it is summable
   per physical volume at fixed coupling, so compact effects die; in $D=4$
@@ -238,29 +158,25 @@ way; in mechanics refining makes each cell more quantum
   exponent, where the monopole density per physical volume diverges, and
   loses it at fixed $\lambda_3$ (Göpfert--Mack versus Gross).
 - **The action floor survives what removes the mass gap** (user
-  observation, 2026-09-28). The heat time is $t=\lambda_3a=\hbar g_{\rm cl}^2a$, so the
-  compact corrections a step leaves, $e^{-c/t}=e^{-c/(\hbar g_{\rm cl}^2a)}$, vanish as
-  $a\to0$ at fixed coupling and as $\hbar\to0$ at fixed $g_{\rm cl}$ and $a$, while the
-  $w=0$ Gaussian term of (9) of the
-  [series/parallel note](series-parallel-gauge-refinement.md), whose width is
-  set by $\hbar$, is what remains. Both $U(1)$ continuum limits on record are
-  Gaussian: Gross's photon, with field-strength covariance $\lambda_3K_0=\hbar g_{\rm cl}^2K_0$
-  at fixed $g_{\rm cl}$, and Göpfert--Mack's free massive scalar, canonically
-  normalized along a trajectory on which $\lambda_3=\hbar g_{\rm cl}^2$ diverges. The
-  refinement at fixed coupling removes the lattice mass gap and keeps the
-  unit of action. And $h$ was first measured in this same gapless theory
-  in $1+3$, cavity radiation (Planck's talk of 14 December 1900, written
-  up as [Ann. Phys. 309, 553 (1901)](https://doi.org/10.1002/andp.19013090310),
+  observation, 2026-09-28). With $t=\lambda_3a=\hbar g_{\rm cl}^2a$ the compact corrections
+  of a step, $e^{-c/(\hbar g_{\rm cl}^2a)}$, vanish as $a\to0$ at fixed coupling and as $\hbar\to0$
+  at fixed $g_{\rm cl}$ and $a$, while the $w=0$ Gaussian term of (9) of the
+  series/parallel note, of width set by $\hbar$, remains. Both $U(1)$ continuum
+  limits on record are Gaussian: Gross's photon, with field-strength
+  covariance $\hbar g_{\rm cl}^2K_0$, and Göpfert--Mack's free massive scalar,
+  canonically normalized along a trajectory on which $\lambda_3$ diverges. The
+  refinement removes the lattice mass gap and keeps the unit of action,
+  and $h$ was first measured in this gapless theory in $1+3$, cavity
+  radiation (Planck's talk of 14 December 1900, written up as
+  [Ann. Phys. 309, 553 (1901)](https://doi.org/10.1002/andp.19013090310),
   through the resonators' energy elements; the field-mode reading is
-  [Debye 1910](https://doi.org/10.1002/andp.19103381617), metadata); in a
-  finite cavity the supplied box gap $2\pi\hbar c/L$ remains, and "gapless" is
-  the infinite-volume statement. The atlas thus carries two gaps of
-  different kinds: a mass gap, generated and trajectory-dependent, and an
-  action floor, a unit that every cell of every limit keeps (each cut
-  weighted by $e^{-{\rm share}/\hbar}$, [cut-measure note](cut-measure-newton.md),
-  Prop. 4). In the terms of [G07](low-dimensional-mass-gap.md) both are unit
-  multiples of the fixed constants (its Theorem 1); the action floor is
-  supplied, $\hbar$ written into $e^{-S/\hbar}$, while a generated gap needs two
+  [Debye 1910](https://doi.org/10.1002/andp.19103381617), metadata; a finite
+  cavity keeps the box gap $2\pi\hbar c/L$). Two gaps of different kinds: a
+  mass gap, generated and trajectory-dependent, and an action floor,
+  supplied in $e^{-S/\hbar}$, that every cell of every limit keeps (each cut
+  weighted by $e^{-{\rm share}/\hbar}$, cut-measure Prop. 4). In
+  [G07](low-dimensional-mass-gap.md)'s terms both are unit multiples of the
+  fixed constants; the floor is supplied, while a generated gap needs two
   scale-free structures that do not commute (G07 §1;
   [G08](action-floor-yang-mills-gap.md)).
 - **Constants that emerge.** Mechanics: one scalar counterterm per cell,

@@ -136,9 +136,9 @@ class="math inline">\(\hbar^2\)</span>, the identity for <span
 class="math inline">\(\hbar=0\)</span> (<a
 href="newton-record-parallel-move.html">record as parallel
 move</a>).</p>
-<h3 id="b.-cuts-at-any-position-user-remark-2026-09-27">1b. Cuts at any
-position (user remark, 2026-09-27)</h3>
-<p>Halving is the easiest cut; any cut at fraction <span
+<h3 id="b.-cuts-at-any-position-user-remarks-2026-09-2728">1b. Cuts at
+any position (user remarks, 2026-09-27/28)</h3>
+<p>Halving is the easiest cut; a cut at any fraction <span
 class="math inline">\(s\in(0,1)\)</span> of a cell performs the same two
 moves, with <span class="math inline">\(s\)</span> as a parameter.</p>
 <ul>
@@ -147,196 +147,58 @@ moves, with <span class="math inline">\(s\)</span> as a parameter.</p>
 class="math inline">\((1-s)t\)</span>; the convolution returns <span
 class="math inline">\(t\)</span> exactly, for heat-kernel weights, in
 every dimension.</li>
-<li><strong>Parallel move.</strong> In <span
-class="math inline">\(D=3\)</span>, with each transverse face weighted
-by its dual length (trapezoid rule), every old and new transverse face
-keeps heat time <span class="math inline">\(2t\)</span>, as in halving.
-The inserted edges carry the bridge law at fraction <span
-class="math inline">\(s\)</span>, variance <span
-class="math inline">\(s(1-s)t_e\)</span> in place of <span
-class="math inline">\(t_e/4\)</span>. The free-field defect is (5) with
-<span class="math inline">\(v\to v_s=4s(1-s)v\)</span> and coefficient
-<span class="math inline">\(s(1-s)/(2(2t+v_s))\)</span> on the layer
-differences in place of <span
-class="math inline">\(1/(8(2t+v))\)</span>, so the size bound (6) scales
-exactly by <span class="math inline">\(4s(1-s)\)</span> (<a
+<li><strong>Parallel move.</strong> With trapezoid (dual-length) face
+weights every transverse face keeps heat time <span
+class="math inline">\(2t\)</span>, and the inserted edges carry the
+bridge law at fraction <span class="math inline">\(s\)</span>, variance
+<span class="math inline">\(s(1-s)t_e\)</span>. The free-field defect
+scales exactly by <span class="math inline">\(4s(1-s)\)</span> (<a
 href="series-parallel-gauge-refinement.html">Corollary 2<span
-class="math inline">\(_s\)</span></a>): halving is the largest single
-step, and an off-centre cut is gentler and shrinks the mesh less.
-Theorem 5 holds for every <span class="math inline">\(s\)</span>
-(Corollary 5<span class="math inline">\(_s\)</span> there).</li>
-<li><strong>Newton.</strong> The cell action <span
-class="math inline">\(K_\tau=F^2\tau^3/(24m)\)</span> (<a
-href="galileo-two-path-interference.html">two-path note</a>) obeys <span
-class="math inline">\(\tau^3=(s\tau)^3+((1-s)\tau)^3+3s(1-s)\tau^3\)</span>,
-so one cut removes exactly <span
-class="math inline">\(3s(1-s)K_\tau\)</span>, at most <span
-class="math inline">\(\frac34K_\tau\)</span> (halving). Along any
-sequence of cuts whose mesh tends to zero the removed amounts sum to
-<span class="math inline">\(K_\tau\)</span>, whatever the positions and
-order (the remainder is <span class="math inline">\(\sum_i C\tau_i^3\le
-C\tau\max_i\tau_i^2\)</span>). Proved, with the Cameron–Martin reading
-(each share is the energy of the Schauder hat the cut inserts), in the
-<a href="cut-measure-newton.html">cut-measure note</a>. The Galileo
-action is therefore an additive measure on the cut process: the
-refinement limit is cut-independent, and every cut spends a definite
-share of the action that Newton sends to zero. This is the
-Lévy–Ciesielski structure of the Brownian bridge (variance <span
-class="math inline">\(s(1-s)\)</span> at each dyadic or non-dyadic
-insertion) seen in the action.</li>
-<li><strong>Relative windings</strong> (compact groups; 2026-09-28,
-refereed). On <span class="math inline">\(U(1)\)</span> the bridge
-midpoint at fraction <span class="math inline">\(s\)</span> is a mixture
-over the total winding <span class="math inline">\(W\in\mathbb
-Z\)</span>, with <span class="math inline">\(s\)</span>-independent
-weights <span class="math inline">\(\propto e^{-(\phi_e+2\pi
-W)^2/(2t_e)}\)</span>, of wrapped Gaussians of variance <span
-class="math inline">\(s(1-s)t_e\)</span> centred at the interpolation
-shifted by <span class="math inline">\(2\pi(1-s)W\)</span>; Theorem 5
-holds for every <span class="math inline">\(s\)</span> (<a
-href="series-parallel-gauge-refinement.html">Corollary 5<span
-class="math inline">\(_s\)</span></a>). Halving is the only cut whose
-shifts form <span class="math inline">\(\mathbb Z_2\)</span>, the parity
-mixture of Prop. 4; <span class="math inline">\(s=p/q\)</span> in lowest
-terms gives <span class="math inline">\(\mathbb Z_q\)</span>, an
-irrational <span class="math inline">\(s\)</span> a dense set. For a
-simply connected group the heat kernel’s image sum runs over the coroot
-lattice <span class="math inline">\(Q^\vee\)</span>, and the image
-midpoints sit at <span class="math inline">\(e^{isX}e^{2\pi
-isH}\)</span>, <span class="math inline">\(H\in Q^\vee\)</span>
-(semiclassical placement; the exact weights carry Jacobians). These
-shifts are all central iff <span class="math inline">\(sQ^\vee\subset
-P^\vee\)</span>, the coweight lattice (<span
-class="math inline">\(P^\vee/Q^\vee\)</span> is the centre). For <span
-class="math inline">\(SU(2)\)</span>, <span
-class="math inline">\(\frac12Q^\vee=P^\vee\)</span>: at a halving a
-relative winding <span class="math inline">\(n\)</span> acts by the
-centre element <span class="math inline">\((-1)^n\)</span>.
-Geometrically, <span class="math inline">\(SU(2)=S^3\)</span> and <span
-class="math inline">\(-1\)</span> is the antipode of <span
-class="math inline">\(e\)</span>, so every closed geodesic through <span
-class="math inline">\(e\)</span> passes through <span
-class="math inline">\(-1\)</span> at half length. For <span
-class="math inline">\(SU(N)\)</span>, <span
-class="math inline">\(N\ge3\)</span>, only integer <span
-class="math inline">\(s\)</span> satisfies the condition (<span
-class="math inline">\(H=(1,-1,0,\dots)\)</span> forces <span
-class="math inline">\(s\in\mathbb Z\)</span>); the shortest closed
-geodesics pass at half length through <span class="math inline">\({\rm
-diag}(\dots,-1,\dots,-1,\dots)\)</span>, which is not central, and at
-<span class="math inline">\(s=1/N\)</span> only <span
-class="math inline">\(H\in NP^\vee\)</span> give central shifts.
-Flipping one mid-edge by <span class="math inline">\(-1\)</span> flips
-every plaquette containing it, the smallest thin <span
-class="math inline">\(\mathbb Z_2\)</span> vortex in the sense of <a
-href="https://doi.org/10.1016/0003-4916(79)90346-4">Mack and Petkova
-(1979)</a>; centre vortices go back to <a
-href="https://doi.org/10.1016/0550-3213(78)90153-0">’t Hooft (1978)</a>,
-and factor-2 decimation with the <span class="math inline">\(\mathbb
-Z_2\)</span> factor kept explicit to <a
-href="https://doi.org/10.1103/PhysRevD.23.2371">Tomboulis (1981)</a>
-(metadata for all three). Whether the bridge parity at a halving ties
-refinement to centre vortices is a question; the observation itself is
-elementary.</li>
-<li><strong>Which part of the centre a cut reaches</strong> (2026-09-28,
-from the user’s question on Dirac’s belt trick; now Corollary 3 of the
-exact midpoint formula of the <a href="sun-midpoint-centre.html">centre
-note</a>, Astra referee pending). <em>Lemma:</em> for <span
-class="math inline">\(SU(N)\)</span> and a cut at <span
-class="math inline">\(s=p/q\)</span> in lowest terms, the relative
-windings land on exactly the subgroup <span
-class="math inline">\(\mathbb Z_{\gcd(q,N)}\)</span> of the centre <span
-class="math inline">\(\mathbb Z_N\)</span>. <em>Proof:</em> a winding
-<span class="math inline">\(H\in Q^\vee\)</span> shifts the midpoint by
-<span class="math inline">\(e^{2\pi ipH/q}\)</span>, central iff <span
-class="math inline">\(pH/q\in P^\vee\)</span>, iff <span
-class="math inline">\(H/q\in P^\vee\)</span> (Bézout, since <span
-class="math inline">\(H\in Q^\vee\subset P^\vee\)</span>); so the
-central shifts are <span class="math inline">\((P^\vee\cap
-q^{-1}Q^\vee)/Q^\vee\)</span>, the <span
-class="math inline">\(q\)</span>-torsion of <span
-class="math inline">\(P^\vee/Q^\vee\cong\mathbb Z_N\)</span>. <span
-class="math inline">\(\square\)</span> Dyadic refinement therefore
-reaches the 2-primary part of the centre: all of it for <span
-class="math inline">\(SU(2)\)</span> at the first halving, nothing for
-<span class="math inline">\(SU(3)\)</span> at any depth, while one
-trisection reaches all of <span class="math inline">\(\mathbb
-Z_3\)</span>. Centre elements are focal points: the shortest geodesics
-from <span class="math inline">\(e\)</span> to <span
-class="math inline">\(-1\)</span> in <span
-class="math inline">\(SU(2)\)</span> form an <span
-class="math inline">\(S^2\)</span>, those from <span
-class="math inline">\(e\)</span> to <span
-class="math inline">\(\omega\cdot1\)</span> in <span
-class="math inline">\(SU(3)\)</span> a <span
-class="math inline">\(\mathbb{CP}^2\)</span>, and the closed geodesic
-along <span class="math inline">\((1,1,-2)\)</span> passes <span
-class="math inline">\(\omega\cdot1\)</span> and <span
-class="math inline">\(\omega^2\cdot1\)</span> at its thirds. For <span
-class="math inline">\(SU(2)\)</span> this is Dirac’s belt trick, <span
-class="math inline">\(\pi_1(SO(3))=\mathbb Z_2\)</span> (<a
-href="https://doi.org/10.1112/jlms/s1-17.3.173">Newman 1942</a>,
-metadata): the halving turns <span class="math inline">\(w\)</span>
-extra <span class="math inline">\(720^\circ\)</span> turns of a bridge
-into <span class="math inline">\(w\)</span> extra <span
-class="math inline">\(360^\circ\)</span> turns at its midpoint, and the
-exact formula shows it, since in Theorem 3 of the <a
-href="su2-midpoint-exact.html"><span
-class="math inline">\(SU(2)\)</span> midpoint note</a> the image sums
-enter with <span class="math inline">\((-1)^w\)</span> for half-integer
-<span class="math inline">\(J\)</span> (<span
-class="math inline">\(\Xi_-/\Xi_+\)</span>) and drop out of the ratio
-for integer <span class="math inline">\(J\)</span>. In <span
-class="math inline">\(1+3\)</span> the internal and the spatial <span
-class="math inline">\(\mathbb Z_2\)</span> meet in “spin from isospin”
-(<a href="https://doi.org/10.1103/PhysRevLett.36.1116">Jackiw and Rebbi
-1976</a>; <a
-href="https://doi.org/10.1103/PhysRevLett.36.1119">Hasenfratz and ’t
-Hooft 1976</a>; metadata). For <span
-class="math inline">\(SU(3)\)</span> the phase a centre-landing winding
-leaves on a character is its triality, so quark representations see
-<span class="math inline">\(\omega\)</span> and gluons do not; the exact
-trisection formula is (1) of the centre note at <span
-class="math inline">\(s=\frac13\)</span>. Per step, the smallest
-centre-landing trisection winding costs <span
-class="math inline">\(e^{-24\pi^2/t}\)</span> against <span
-class="math inline">\(e^{-8\pi^2/t}\)</span> for root windings (<span
-class="math inline">\(|H|^2=2\,{\rm tr}H^2=12\)</span> and <span
-class="math inline">\(4\)</span>), both beyond the <span
-class="math inline">\(1+3\)</span> threshold <span
-class="math inline">\(c&gt;2/b_0\)</span>. The lemma concerns which
-classes the windings of a step can reach; centre-valued link
-configurations exist on any lattice, and thick vortices are a separate
-question.</li>
-<li><strong>The rod</strong> (user remark, 2026-09-27). The
-dialecticians’ stick of <em>Zhuangzi</em> 33,
-一尺之捶，日取其半，萬世不竭 (“a one-foot stick, each day take half, in
-ten thousand generations it is not exhausted”; <a
-href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Zhuangzi_33_Tianxia_zh_wikisource.md">text</a>,
-attributed to the 辯者, the debaters, and not to Hui Shi personally), is
-Zeno’s dichotomy as a cut schedule: every day one cut, at <span
-class="math inline">\(s=\frac12\)</span> of the remaining piece only.
-The mesh stays at <span class="math inline">\(\tau/2\)</span>, so this
-schedule is no refinement, and the action identity above prices it
-exactly: day <span class="math inline">\(k\)</span> removes <span
-class="math inline">\(\frac34K_\tau8^{-(k-1)}\)</span>, the total spent
-is <span
-class="math inline">\(\frac34\cdot\frac87K_\tau=\frac67K_\tau\)</span>,
-and <span class="math inline">\(\frac17K_\tau\)</span> stays in the
-cut-off pieces. The stick is inexhaustible and so is the action: <span
-class="math inline">\(\frac17\)</span> of it is never reached by this
-schedule. The remainder converges to a point, and the Mohist Canon B
-names that point: 非半弗𣃈，則不動，說在端 (“without halving there is no
-cutting and no moving; the explanation lies in the 端, the point”), with
-the explanation 前則中無爲半，猶端也。前後取，則端中也 (<a
-href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Mozi_Canons_B_Explanations_JingShuoXia_zh_wikisource.md">text</a>;
-working gloss: “taking from the front, the middle is never halved, and
-one ends as at a point; taking from front and back, the point is in the
-middle”). The two Mohist protocols, one-ended and two-ended, both
-converge to a point and neither refines the whole stick. Refinement,
-which spends all of <span class="math inline">\(K_\tau\)</span>, needs
-every piece cut again. Resemblance with Zeno is recorded as convergence;
-transmission to China would need evidence this note does not have.</li>
+class="math inline">\(_s\)</span></a>), and the <span
+class="math inline">\(U(1)\)</span> Theorem 5 holds for every <span
+class="math inline">\(s\)</span> (Corollary 5<span
+class="math inline">\(_s\)</span> there): halving is the largest single
+step, and an off-centre cut is gentler and shrinks the mesh less.</li>
+<li><strong>Newton.</strong> One cut spends exactly <span
+class="math inline">\(3s(1-s)K_\tau\)</span> of the cell action <span
+class="math inline">\(K_\tau=F^2\tau^3/(24m)\)</span>, the
+Cameron–Martin energy of the Schauder hat it inserts; the shares add
+over any cut sequence and exhaust <span
+class="math inline">\(K_\tau\)</span> iff the mesh vanishes (<a
+href="cut-measure-newton.html">cut-measure note</a>). The Galileo action
+is an additive measure on the cut process, with the nested additivity of
+the Lévy–Ciesielski construction of the Brownian bridge.</li>
+<li><strong>Windings and the centre.</strong> At a cut the bridge
+midpoint is a mixture over windings. For <span
+class="math inline">\(U(1)\)</span> the weights are <span
+class="math inline">\(s\)</span>-independent and the shifts <span
+class="math inline">\(2\pi(1-s)W\)</span> form <span
+class="math inline">\(\mathbb Z_2\)</span> only at halving and <span
+class="math inline">\(\mathbb Z_q\)</span> at <span
+class="math inline">\(s=p/q\)</span>. For every compact simply connected
+group the midpoint expectation of every character is exact, a sum over
+weights of coroot image sums (<a href="sun-midpoint-centre.html">centre
+note</a>, Theorem 1), and a cut at <span
+class="math inline">\(p/q\)</span> reaches exactly the subgroup <span
+class="math inline">\(\mathbb Z_{\gcd(q,N)}\)</span> of the centre of
+<span class="math inline">\(SU(N)\)</span> (its Corollary 3). So the
+<span class="math inline">\(SU(2)\)</span> halving carries Dirac’s belt
+trick, a winding <span class="math inline">\(n\)</span> acting by <span
+class="math inline">\((-1)^n\)</span> on half-integer spins, while
+dyadic refinement never reaches the <span
+class="math inline">\(SU(3)\)</span> centre and a trisection carries the
+triality. Flipping one mid-edge by a central element is the smallest
+thin centre vortex. Open: whether this ties refinement to centre
+vortices, and whether triadic refinement suits <span
+class="math inline">\(SU(3)\)</span> better. The centre note awaits
+Astra’s referee.</li>
+<li><strong>The rod.</strong> The stick of <em>Zhuangzi</em> 33,
+一尺之捶，日取其半，萬世不竭, halved only in its remaining piece, spends
+<span class="math inline">\(\frac67K_\tau\)</span> and converges to a
+point, the Mohist 端 of Canon B; refinement, which spends all of <span
+class="math inline">\(K_\tau\)</span>, cuts every piece again (<a
+href="cut-measure-newton.html">cut-measure note</a>, §3). The parallel
+with Zeno’s dichotomy is recorded as convergence.</li>
 <li><strong>The frame.</strong> A cut at an arbitrary, even irrational,
 position is the geometers’ cut of Book I’s closing scholium. The
 questions for each cell become: does the limit depend on the cut
@@ -541,27 +403,20 @@ two-dimensional gauge theory are all series.</li>
 Their number, <span class="math inline">\(\binom{D-1}2\)</span>, is zero
 exactly where the theory is exactly soluble.</li>
 <li><strong>Additivity is universal; locality is
-one-dimensional</strong> (2026-09-28). Integrating out the fine
-variables of a Gaussian step leaves the Schur complement of the action,
-its minimum over the fine variables with the coarse ones fixed (the
-Dirichlet principle), and successive Schur complements compose exactly
-((13) of the <a
-href="four-dimensional-parallel-log.html">four-dimensional note</a>). In
-Newton’s cell this additivity is Theorem 2 of the <a
-href="cut-measure-newton.html">cut-measure note</a>: the hats of
-successive cuts are orthogonal and their energies add up to <span
-class="math inline">\(K_\tau\)</span>. What one dimension alone grants
-is locality: the minimizer between two cut points is the chord, so the
-blocked action is again nearest-neighbour and the series move closes;
-<span class="math inline">\(1+1\)</span> gauge theory, with no
-transverse planes, shares it. With transverse planes the minimizer is
-coupled across the mid-space, the Schur complement is non-local, and its
-local truncation error is the parallel defect: (5) and Corollary 2<span
+one-dimensional</strong> (2026-09-28). Integrating out a Gaussian step
+leaves the Schur complement of the action (the Dirichlet principle), and
+successive Schur complements compose exactly ((13) of the <a
+href="four-dimensional-parallel-log.html">four-dimensional note</a>); in
+Newton’s cell this is Theorem 2 of the <a
+href="cut-measure-newton.html">cut-measure note</a>. Only one dimension
+grants locality: the minimizer between two cut points is the chord, so
+the blocked action is again nearest-neighbour and the series move
+closes, as in <span class="math inline">\(1+1\)</span>. With transverse
+planes the Schur complement is non-local, and its local truncation error
+is the parallel defect ((5) and Corollary 2<span
 class="math inline">\(_s\)</span> of the <a
-href="series-parallel-gauge-refinement.html">series/parallel note</a>
-split it into a displacement part, which at <span
-class="math inline">\(v=0\)</span> is the convexity gap of the
-interpolated flux, and a noise part from relaxing the interpolant.</li>
+href="series-parallel-gauge-refinement.html">series/parallel
+note</a>).</li>
 <li><strong>The exponential ladder.</strong> Each compact correction
 left by a step is <span class="math inline">\(e^{-c/t}\)</span>
 (vortices, monopoles, dislocations). In <span
@@ -596,45 +451,39 @@ where the monopole density per physical volume diverges, and loses it at
 fixed <span class="math inline">\(\lambda_3\)</span> (Göpfert–Mack
 versus Gross).</li>
 <li><strong>The action floor survives what removes the mass gap</strong>
-(user observation, 2026-09-28). The heat time is <span
-class="math inline">\(t=\lambda_3a=\hbar g_{\rm cl}^2a\)</span>, so the
-compact corrections a step leaves, <span
-class="math inline">\(e^{-c/t}=e^{-c/(\hbar g_{\rm cl}^2a)}\)</span>,
-vanish as <span class="math inline">\(a\to0\)</span> at fixed coupling
-and as <span class="math inline">\(\hbar\to0\)</span> at fixed <span
+(user observation, 2026-09-28). With <span
+class="math inline">\(t=\lambda_3a=\hbar g_{\rm cl}^2a\)</span> the
+compact corrections of a step, <span class="math inline">\(e^{-c/(\hbar
+g_{\rm cl}^2a)}\)</span>, vanish as <span
+class="math inline">\(a\to0\)</span> at fixed coupling and as <span
+class="math inline">\(\hbar\to0\)</span> at fixed <span
 class="math inline">\(g_{\rm cl}\)</span> and <span
 class="math inline">\(a\)</span>, while the <span
-class="math inline">\(w=0\)</span> Gaussian term of (9) of the <a
-href="series-parallel-gauge-refinement.html">series/parallel note</a>,
-whose width is set by <span class="math inline">\(\hbar\)</span>, is
-what remains. Both <span class="math inline">\(U(1)\)</span> continuum
-limits on record are Gaussian: Gross’s photon, with field-strength
-covariance <span class="math inline">\(\lambda_3K_0=\hbar g_{\rm
-cl}^2K_0\)</span> at fixed <span class="math inline">\(g_{\rm
-cl}\)</span>, and Göpfert–Mack’s free massive scalar, canonically
-normalized along a trajectory on which <span
-class="math inline">\(\lambda_3=\hbar g_{\rm cl}^2\)</span> diverges.
-The refinement at fixed coupling removes the lattice mass gap and keeps
-the unit of action. And <span class="math inline">\(h\)</span> was first
-measured in this same gapless theory in <span
-class="math inline">\(1+3\)</span>, cavity radiation (Planck’s talk of
-14 December 1900, written up as <a
+class="math inline">\(w=0\)</span> Gaussian term of (9) of the
+series/parallel note, of width set by <span
+class="math inline">\(\hbar\)</span>, remains. Both <span
+class="math inline">\(U(1)\)</span> continuum limits on record are
+Gaussian: Gross’s photon, with field-strength covariance <span
+class="math inline">\(\hbar g_{\rm cl}^2K_0\)</span>, and Göpfert–Mack’s
+free massive scalar, canonically normalized along a trajectory on which
+<span class="math inline">\(\lambda_3\)</span> diverges. The refinement
+removes the lattice mass gap and keeps the unit of action, and <span
+class="math inline">\(h\)</span> was first measured in this gapless
+theory in <span class="math inline">\(1+3\)</span>, cavity radiation
+(Planck’s talk of 14 December 1900, written up as <a
 href="https://doi.org/10.1002/andp.19013090310">Ann. Phys. 309, 553
 (1901)</a>, through the resonators’ energy elements; the field-mode
 reading is <a href="https://doi.org/10.1002/andp.19103381617">Debye
-1910</a>, metadata); in a finite cavity the supplied box gap <span
-class="math inline">\(2\pi\hbar c/L\)</span> remains, and “gapless” is
-the infinite-volume statement. The atlas thus carries two gaps of
-different kinds: a mass gap, generated and trajectory-dependent, and an
-action floor, a unit that every cell of every limit keeps (each cut
-weighted by <span class="math inline">\(e^{-{\rm share}/\hbar}\)</span>,
-<a href="cut-measure-newton.html">cut-measure note</a>, Prop. 4). In the
-terms of <a href="low-dimensional-mass-gap.html">G07</a> both are unit
-multiples of the fixed constants (its Theorem 1); the action floor is
-supplied, <span class="math inline">\(\hbar\)</span> written into <span
-class="math inline">\(e^{-S/\hbar}\)</span>, while a generated gap needs
-two scale-free structures that do not commute (G07 §1; <a
-href="action-floor-yang-mills-gap.html">G08</a>).</li>
+1910</a>, metadata; a finite cavity keeps the box gap <span
+class="math inline">\(2\pi\hbar c/L\)</span>). Two gaps of different
+kinds: a mass gap, generated and trajectory-dependent, and an action
+floor, supplied in <span class="math inline">\(e^{-S/\hbar}\)</span>,
+that every cell of every limit keeps (each cut weighted by <span
+class="math inline">\(e^{-{\rm share}/\hbar}\)</span>, cut-measure Prop.
+4). In <a href="low-dimensional-mass-gap.html">G07</a>’s terms both are
+unit multiples of the fixed constants; the floor is supplied, while a
+generated gap needs two scale-free structures that do not commute (G07
+§1; <a href="action-floor-yang-mills-gap.html">G08</a>).</li>
 <li><strong>Constants that emerge.</strong> Mechanics: one scalar
 counterterm per cell, and one action constant if joint determinacy is
 denied (Theorems B and B<span class="math inline">\(&#39;\)</span> of
