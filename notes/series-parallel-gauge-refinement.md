@@ -247,7 +247,15 @@ which is (5) at $s=\frac12$. Under the hypotheses of the Corollary,
 $|\mathcal D_s|\le4s(1-s)\bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}8\bigr)\sum_\ell\|\Phi_\ell\|^2/(2t)$: the
 bound (6) times $4s(1-s)$, so halving is the largest single step and an
 off-centre cut is gentler in both the noise and the displacement parts;
-it also shrinks the mesh less, to $\max(s,1-s)\,a_1$.
+it also shrinks the mesh less, to $\max(s,1-s)\,a_1$. The trapezoid weights
+are the diagonal Hodge star of discrete exterior calculus on a tensor
+grid (dual over primal volume), so the independence of the free-field
+limit from the cut sequence is a convergence question for that
+discretization; its proofs so far cover the Hodge--Laplace problem in two
+dimensions on shape-regular Delaunay meshes
+([Zhu, Christiansen, Hu and Hirani, arXiv:2505.08966](https://arxiv.org/abs/2505.08966),
+abstract), and for nested tensor grids in $D=3,4$, with bounded aspect
+ratios as the natural hypothesis, it remains expected.
 The statement covers one step from a uniform lattice; after it the
 layers have thicknesses $sa_1$ and $(1-s)a_1$, and the next cut starts from
 that non-uniform lattice. Theorem 5 for a general cut is Corollary 5$_s$

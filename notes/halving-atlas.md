@@ -91,7 +91,8 @@ performs the same two moves, with $s$ as a parameter.
   geometers' cut of Book I's closing scholium. The questions for each
   cell become: does the limit depend on the cut sequence (for Newton, no,
   proved in the [cut-measure note](cut-measure-newton.md); for the free
-  field, expected), and does the universal part survive when $s$ varies.
+  field, expected, a convergence question for the discrete-exterior-calculus
+  Hodge star that the trapezoid weights are, see Corollary 2$_s$), and does the universal part survive when $s$ varies.
   For cell 4 it does, conditionally: for shape-regular schedules under the
   matching hypotheses of the [four-dimensional note](four-dimensional-parallel-log.md)
   (its §7), the coefficient per logarithm of the physical scale is $2b_0$
