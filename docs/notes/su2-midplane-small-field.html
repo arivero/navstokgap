@@ -1917,6 +1917,61 @@ then stability under perturbed actions. Equivalence to the original
 fixed-frame P(<span class="math inline">\(\alpha\)</span>) on the full
 small-field set still requires the transport-value estimate, and
 electric-sector projection requires its own relative bound.</p>
+<h2 id="round-15-the-normalized-covariant-comparison">13. Round 15: the
+normalized covariant comparison</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; written bounds, unrefereed.</strong>
+Throughout this section the layers are equal, cut flux is zero, and all
+free-cycle holonomies remain in <span
+class="math inline">\(C_U\)</span>. Put <span
+class="math inline">\(\alpha=1/2-\delta\)</span>, <span
+class="math inline">\(0&lt;\delta&lt;1/6\)</span>, <span
+class="math inline">\(\varepsilon=t^\alpha\)</span>, and impose
+Proposition 7’s smallness conditions.</p>
+<h3 id="actual-saddle-determinant-part-1">13.1 Actual saddle determinant
+(Part 1)</h3>
+<p>Write <span class="math inline">\(A_U=\nabla^2E_U(\xi_*)\)</span>,
+<span class="math inline">\(\Delta_U=A_U-H_U\)</span> and <span
+class="math inline">\(\|\xi\|_{1,b}=\sum_e|\xi_e|\)</span>. The
+contraction proof of Proposition 7 also works in block <span
+class="math inline">\(\ell^1\)</span>: symmetry gives the column bounds
+from its row bounds, and <span
+class="math inline">\(\|C_U^*z/2\|_{1,b}\le2\sum_p|z_p|\)</span>.
+Hence</p>
+<p><span
+class="math display">\[\|\xi_*\|_{1,b}\le\frac{\sum_p|z_p|}{1-K\varepsilon/2}
+\le\frac87\sum_p|z_p|.\tag{53}\]</span></p>
+<p>Each face Hessian difference has rank at most 12 and operator norm at
+most <span class="math inline">\(L_F(|z_p|+\sum_{e\in\partial
+p}|\xi_{*e}|)\)</span>, by §4’s mean-value bound with the orthogonal
+incidence maps held fixed. The bridge Hessian is exactly <span
+class="math inline">\(4I\)</span>. Thus the trace norm satisfies <span
+class="math inline">\(\|\Delta_U\|_{\rm
+tr}\le12L_F(\sum_p|z_p|+2\|\xi_*\|_{1,b})\)</span>. Every <span
+class="math inline">\(H_U+s\Delta_U\ge3I\)</span>, <span
+class="math inline">\(0\le s\le1\)</span>, so integrating <span
+class="math inline">\(\frac12\operatorname{Tr}[(H_U+s\Delta_U)^{-1}\Delta_U]\)</span>
+proves</p>
+<p><span class="math display">\[\left|\frac12\log\frac{\det A_U}{\det
+A_1}-d_U\right|
+\le C_D\sum_p|z_p|,\qquad C_D=\frac{46}{7}L_F.\tag{54}\]</span></p>
+<p>Here <span class="math inline">\(A_1=H_1\)</span> exactly. More
+generally <span class="math inline">\(z=0\)</span> gives <span
+class="math inline">\(\xi_*=0\)</span> and <span
+class="math inline">\(A_U=H_U\)</span>, even with nontrivial flat
+holonomies. This is a local field-dependent bound; the trace norm
+replaces any need to discard transports in the resolvent. Both (53) and
+(54) are uniform in <span class="math inline">\(N\)</span>. For <span
+class="math inline">\(t\le1\)</span> and <span
+class="math inline">\(\alpha\le1/2\)</span>, <span
+class="math inline">\(|z_p|\le(t^\alpha+|z_p|^2/t^\alpha)/2 \le
+t^\alpha(1+|z_p|^2/t)/2\)</span>, giving weak P(<span
+class="math inline">\(\alpha\)</span>) with constant <span
+class="math inline">\(C_D/2\)</span>. The coarser bound <span
+class="math inline">\(6NK\varepsilon/4\)</span> also follows from <span
+class="math inline">\(\|\Delta_U\|\le K\varepsilon\le1/4\)</span> and
+<span class="math inline">\(|\log(1+x)|\le|x|/(1-|x|)\)</span>; it is
+admissible in the additive budget, while (54) additionally vanishes at
+zero curvature.</p>
 
 </main>
 <footer class="site"><div class="wrap">

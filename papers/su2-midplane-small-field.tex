@@ -1621,4 +1621,49 @@ then stability under perturbed actions. Equivalence to the original
 fixed-frame P(\(\alpha\)) on the full small-field set still requires the
 transport-value estimate, and electric-sector projection requires its
 own relative bound.
+
+\hypertarget{round-15-the-normalized-covariant-comparison}{%
+\subsection{13. Round 15: the normalized covariant
+comparison}\label{round-15-the-normalized-covariant-comparison}}
+
+\textbf{GPT-6 Astra, 2026-09-29; written bounds, unrefereed.} Throughout
+this section the layers are equal, cut flux is zero, and all free-cycle
+holonomies remain in \(C_U\). Put \(\alpha=1/2-\delta\),
+\(0<\delta<1/6\), \(\varepsilon=t^\alpha\), and impose Proposition 7's
+smallness conditions.
+
+\hypertarget{actual-saddle-determinant-part-1}{%
+\subsubsection{13.1 Actual saddle determinant (Part
+1)}\label{actual-saddle-determinant-part-1}}
+
+Write \(A_U=\nabla^2E_U(\xi_*)\), \(\Delta_U=A_U-H_U\) and
+\(\|\xi\|_{1,b}=\sum_e|\xi_e|\). The contraction proof of Proposition 7
+also works in block \(\ell^1\): symmetry gives the column bounds from
+its row bounds, and \(\|C_U^*z/2\|_{1,b}\le2\sum_p|z_p|\). Hence
+
+\[\|\xi_*\|_{1,b}\le\frac{\sum_p|z_p|}{1-K\varepsilon/2}
+\le\frac87\sum_p|z_p|.\tag{53}\]
+
+Each face Hessian difference has rank at most 12 and operator norm at
+most \(L_F(|z_p|+\sum_{e\in\partial p}|\xi_{*e}|)\), by §4's mean-value
+bound with the orthogonal incidence maps held fixed. The bridge Hessian
+is exactly \(4I\). Thus the trace norm satisfies
+\(\|\Delta_U\|_{\rm tr}\le12L_F(\sum_p|z_p|+2\|\xi_*\|_{1,b})\). Every
+\(H_U+s\Delta_U\ge3I\), \(0\le s\le1\), so integrating
+\(\frac12\operatorname{Tr}[(H_U+s\Delta_U)^{-1}\Delta_U]\) proves
+
+\[\left|\frac12\log\frac{\det A_U}{\det A_1}-d_U\right|
+\le C_D\sum_p|z_p|,\qquad C_D=\frac{46}{7}L_F.\tag{54}\]
+
+Here \(A_1=H_1\) exactly. More generally \(z=0\) gives \(\xi_*=0\) and
+\(A_U=H_U\), even with nontrivial flat holonomies. This is a local
+field-dependent bound; the trace norm replaces any need to discard
+transports in the resolvent. Both (53) and (54) are uniform in \(N\).
+For \(t\le1\) and \(\alpha\le1/2\),
+\(|z_p|\le(t^\alpha+|z_p|^2/t^\alpha)/2 \le t^\alpha(1+|z_p|^2/t)/2\),
+giving weak P(\(\alpha\)) with constant \(C_D/2\). The coarser bound
+\(6NK\varepsilon/4\) also follows from
+\(\|\Delta_U\|\le K\varepsilon\le1/4\) and
+\(|\log(1+x)|\le|x|/(1-|x|)\); it is admissible in the additive budget,
+while (54) additionally vanishes at zero curvature.
 \end{document}
