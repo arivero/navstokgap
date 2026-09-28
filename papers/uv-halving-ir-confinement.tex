@@ -15,11 +15,11 @@
 infrared}\label{halving-goes-to-the-ultraviolet-confinement-lives-in-the-infrared}}
 
 \textbf{Didactic note, 2026-09-28 (Claude, prompted by the user's
-question; §7 and several refinements come from independent answers to
-the same question by GPT-6 Astra and Claude Fable).} Confinement and the
-mass gap are infrared properties, and distinct ones: a spectral bound
-for the gap, an area law for confinement. Halving the lattice moves
-toward the ultraviolet. The refinement programme of the
+question; §7, §3b and several refinements come from independent answers
+to the same questions by GPT-6 Astra and Claude Fable).} Confinement and
+the mass gap are infrared properties, and distinct ones: a spectral
+bound for the gap, an area law for confinement. Halving the lattice
+moves toward the ultraviolet. The refinement programme of the
 \href{halving-atlas.md}{atlas} nevertheless bears on the gap, for five
 reasons, each stated with its source:
 
@@ -127,6 +127,80 @@ The term is invisible to perturbation theory, since
 is visible to the exact step, which is why the atlas insists on exact
 halvings. Suppressing the image terms is ultraviolet control; the gap
 and the area law are further, long-distance obligations (Astra).
+
+\hypertarget{b.-dimensional-transmutation-a-scale-then-a-gap}{%
+\subsection{3b. Dimensional transmutation: a scale, then a
+gap}\label{b.-dimensional-transmutation-a-scale-then-a-gap}}
+
+The user's follow-up question, answered by merging three independent
+answers (Claude, GPT-6 Astra and Claude Fable, 2026-09-28).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{The trade.} Classical Yang--Mills in \(1+3\) has one
+  dimensionless coupling and no dimensionful constant, so every
+  classical energy floor is \(0\) or \(\infty\)
+  (\href{low-dimensional-mass-gap.md}{G07}, Theorem 1). Quantization
+  supplies \(\hbar\) and the lattice supplies \(a\); the dimensionless
+  \(t=\hbar g^2\) builds no mass, so a mass must read
+  \(m=(\hbar/ac)\,f(t)\), and keeping it fixed as \(a\to0\) forces \(t\)
+  to run: \(\mu\,dt/d\mu=-2b_0t^2+O(t^3)\), whose integration constant
+  is \(\Lambda=\mu\,e^{-1/(2b_0t(\mu))}\). One measured coupling fixes
+  it; a change of scheme rescales \(\Lambda\) by a finite factor
+  (\href{zero-spacing-any-action.md}{zero-spacing note}) and the pure
+  numbers \(C_i\) inversely, so every physical energy
+  \(E_i=C_i\hbar c\Lambda\) is unchanged.
+\item
+  \textbf{Invisible to every order.} In lattice units
+  \(\delta(a)=aE/(\hbar c)=C\,e^{-1/(2b_0t)}\), whose Taylor
+  coefficients in \(t\) all vanish. Perturbation theory starts from
+  massless gluons and keeps them massless; its series is asymptotic,
+  with ambiguities of the size of powers of \(\Lambda\) (renormalons).
+  With \(\hbar\) in the exponent, \(\Lambda\to0\) faster than any power
+  as \(\hbar\to0\) at fixed \(g_{\rm cl}\): the classical limit removes
+  the gap.
+\item
+  \textbf{The ladder degenerates into the exponential.} Below four
+  dimensions \(\lambda_D=\hbar g_{\rm cl}^2\) has dimension
+  length\(^{D-4}\), and the only energy is
+  \(\hbar c\,\lambda_D^{1/(4-D)}\propto\hbar^{(5-D)/(4-D)}\):
+  \(\hbar^{3/2}\) in \(1+1\), \(\hbar^2\) in \(1+2\) (and \(\hbar^2\)
+  for the rotor, \(\hbar^{4/3}\) for the quartic matrix model; the
+  \href{dimension-ladder.md}{dimension ladder}). There
+  \(t_n=\lambda_Da_n^{4-D}\) falls geometrically and the shifts sum to a
+  finite renormalization. At \(D=4\) the exponent diverges, \(a^{4-D}\)
+  becomes a logarithm, and the power of \(\hbar\) becomes
+  \(e^{-1/(2b_0\hbar g^2)}\), as \((g^2)^{1/\varepsilon}\) with
+  \(\varepsilon=4-D\) becomes an exponential in dimensional
+  regularization. The renormalization group, beyond dimensional
+  analysis, supplies this step.
+\item
+  \textbf{Supplied floor, generated gap.} \(\hbar\) is supplied, written
+  into \(e^{-S/\hbar}\) and kept by every limit, including those that
+  lose the gap (Gross's photon; free Maxwell). The gap is generated,
+  from two scale-free structures that fail to commute (G07 §1;
+  \href{action-floor-yang-mills-gap.md}{G08}). Below four dimensions the
+  classical coupling carries the unit; in \(1+3\) transmutation
+  manufactures it from \(\hbar\) non-algebraically, which is why a
+  \(1+3\) gap together with \(c\) returns no action unit (G08's
+  action-critical case), unlike \(G\), \(c\) and \(l_P\).
+\item
+  \textbf{A scale is not yet a gap.} The gap needs \(\inf C_i>0\) over
+  the states above the vacuum that gauge-invariant observables see,
+  uniformly in \(L\) and \(a\), on a constructed continuum measure.
+  Theories with a scale and no gap show the difference: massless QCD has
+  \(\Lambda\) and, with spontaneous chiral symmetry breaking, massless
+  pions (the joint paper's benchmark); an asymptotically free theory
+  flowing to an infrared fixed point has a \(\Lambda\) and a
+  scale-invariant infrared. In mechanics, the two-dimensional delta
+  potential transmutes \(m\lambda/\hbar^2\) into a binding energy
+  \(E_B\) with the free continuum \([0,\infty)\) above it; a
+  field-theoretic gap needs in addition that the vacuum be the ground
+  state and every excitation be massive: ``transmutation supplies the
+  scale and confinement supplies the gap'' (G07, Proposition 12 and §6).
+\end{enumerate}
 
 \hypertarget{a-growing-ultraviolet-end-and-a-fixed-infrared-end}{%
 \subsection{4. A growing ultraviolet end and a fixed infrared

@@ -79,11 +79,11 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <main class="wrap">
 <h1>Halving goes to the ultraviolet; confinement lives in the
 infrared</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/uv-halving-ir-confinement.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/uv-halving-ir-confinement.pdf">PDF</a></p><p><strong>Didactic note, 2026-09-28 (Claude, prompted by the user’s
-question; §7 and several refinements come from independent answers to
-the same question by GPT-6 Astra and Claude Fable).</strong> Confinement
-and the mass gap are infrared properties, and distinct ones: a spectral
-bound for the gap, an area law for confinement. Halving the lattice
-moves toward the ultraviolet. The refinement programme of the <a
+question; §7, §3b and several refinements come from independent answers
+to the same questions by GPT-6 Astra and Claude Fable).</strong>
+Confinement and the mass gap are infrared properties, and distinct ones:
+a spectral bound for the gap, an area law for confinement. Halving the
+lattice moves toward the ultraviolet. The refinement programme of the <a
 href="halving-atlas.html">atlas</a> nevertheless bears on the gap, for
 five reasons, each stated with its source:</p>
 <ol type="1">
@@ -208,6 +208,98 @@ Taylor series in <span class="math inline">\(g^2\)</span>; it is visible
 to the exact step, which is why the atlas insists on exact halvings.
 Suppressing the image terms is ultraviolet control; the gap and the area
 law are further, long-distance obligations (Astra).</p>
+<h2 id="b.-dimensional-transmutation-a-scale-then-a-gap">3b. Dimensional
+transmutation: a scale, then a gap</h2>
+<p>The user’s follow-up question, answered by merging three independent
+answers (Claude, GPT-6 Astra and Claude Fable, 2026-09-28).</p>
+<ol type="1">
+<li><strong>The trade.</strong> Classical Yang–Mills in <span
+class="math inline">\(1+3\)</span> has one dimensionless coupling and no
+dimensionful constant, so every classical energy floor is <span
+class="math inline">\(0\)</span> or <span
+class="math inline">\(\infty\)</span> (<a
+href="low-dimensional-mass-gap.html">G07</a>, Theorem 1). Quantization
+supplies <span class="math inline">\(\hbar\)</span> and the lattice
+supplies <span class="math inline">\(a\)</span>; the dimensionless <span
+class="math inline">\(t=\hbar g^2\)</span> builds no mass, so a mass
+must read <span class="math inline">\(m=(\hbar/ac)\,f(t)\)</span>, and
+keeping it fixed as <span class="math inline">\(a\to0\)</span> forces
+<span class="math inline">\(t\)</span> to run: <span
+class="math inline">\(\mu\,dt/d\mu=-2b_0t^2+O(t^3)\)</span>, whose
+integration constant is <span
+class="math inline">\(\Lambda=\mu\,e^{-1/(2b_0t(\mu))}\)</span>. One
+measured coupling fixes it; a change of scheme rescales <span
+class="math inline">\(\Lambda\)</span> by a finite factor (<a
+href="zero-spacing-any-action.html">zero-spacing note</a>) and the pure
+numbers <span class="math inline">\(C_i\)</span> inversely, so every
+physical energy <span class="math inline">\(E_i=C_i\hbar
+c\Lambda\)</span> is unchanged.</li>
+<li><strong>Invisible to every order.</strong> In lattice units <span
+class="math inline">\(\delta(a)=aE/(\hbar c)=C\,e^{-1/(2b_0t)}\)</span>,
+whose Taylor coefficients in <span class="math inline">\(t\)</span> all
+vanish. Perturbation theory starts from massless gluons and keeps them
+massless; its series is asymptotic, with ambiguities of the size of
+powers of <span class="math inline">\(\Lambda\)</span> (renormalons).
+With <span class="math inline">\(\hbar\)</span> in the exponent, <span
+class="math inline">\(\Lambda\to0\)</span> faster than any power as
+<span class="math inline">\(\hbar\to0\)</span> at fixed <span
+class="math inline">\(g_{\rm cl}\)</span>: the classical limit removes
+the gap.</li>
+<li><strong>The ladder degenerates into the exponential.</strong> Below
+four dimensions <span class="math inline">\(\lambda_D=\hbar g_{\rm
+cl}^2\)</span> has dimension length<span
+class="math inline">\(^{D-4}\)</span>, and the only energy is <span
+class="math inline">\(\hbar
+c\,\lambda_D^{1/(4-D)}\propto\hbar^{(5-D)/(4-D)}\)</span>: <span
+class="math inline">\(\hbar^{3/2}\)</span> in <span
+class="math inline">\(1+1\)</span>, <span
+class="math inline">\(\hbar^2\)</span> in <span
+class="math inline">\(1+2\)</span> (and <span
+class="math inline">\(\hbar^2\)</span> for the rotor, <span
+class="math inline">\(\hbar^{4/3}\)</span> for the quartic matrix model;
+the <a href="dimension-ladder.html">dimension ladder</a>). There <span
+class="math inline">\(t_n=\lambda_Da_n^{4-D}\)</span> falls
+geometrically and the shifts sum to a finite renormalization. At <span
+class="math inline">\(D=4\)</span> the exponent diverges, <span
+class="math inline">\(a^{4-D}\)</span> becomes a logarithm, and the
+power of <span class="math inline">\(\hbar\)</span> becomes <span
+class="math inline">\(e^{-1/(2b_0\hbar g^2)}\)</span>, as <span
+class="math inline">\((g^2)^{1/\varepsilon}\)</span> with <span
+class="math inline">\(\varepsilon=4-D\)</span> becomes an exponential in
+dimensional regularization. The renormalization group, beyond
+dimensional analysis, supplies this step.</li>
+<li><strong>Supplied floor, generated gap.</strong> <span
+class="math inline">\(\hbar\)</span> is supplied, written into <span
+class="math inline">\(e^{-S/\hbar}\)</span> and kept by every limit,
+including those that lose the gap (Gross’s photon; free Maxwell). The
+gap is generated, from two scale-free structures that fail to commute
+(G07 §1; <a href="action-floor-yang-mills-gap.html">G08</a>). Below four
+dimensions the classical coupling carries the unit; in <span
+class="math inline">\(1+3\)</span> transmutation manufactures it from
+<span class="math inline">\(\hbar\)</span> non-algebraically, which is
+why a <span class="math inline">\(1+3\)</span> gap together with <span
+class="math inline">\(c\)</span> returns no action unit (G08’s
+action-critical case), unlike <span class="math inline">\(G\)</span>,
+<span class="math inline">\(c\)</span> and <span
+class="math inline">\(l_P\)</span>.</li>
+<li><strong>A scale is not yet a gap.</strong> The gap needs <span
+class="math inline">\(\inf C_i&gt;0\)</span> over the states above the
+vacuum that gauge-invariant observables see, uniformly in <span
+class="math inline">\(L\)</span> and <span
+class="math inline">\(a\)</span>, on a constructed continuum measure.
+Theories with a scale and no gap show the difference: massless QCD has
+<span class="math inline">\(\Lambda\)</span> and, with spontaneous
+chiral symmetry breaking, massless pions (the joint paper’s benchmark);
+an asymptotically free theory flowing to an infrared fixed point has a
+<span class="math inline">\(\Lambda\)</span> and a scale-invariant
+infrared. In mechanics, the two-dimensional delta potential transmutes
+<span class="math inline">\(m\lambda/\hbar^2\)</span> into a binding
+energy <span class="math inline">\(E_B\)</span> with the free continuum
+<span class="math inline">\([0,\infty)\)</span> above it; a
+field-theoretic gap needs in addition that the vacuum be the ground
+state and every excitation be massive: “transmutation supplies the scale
+and confinement supplies the gap” (G07, Proposition 12 and §6).</li>
+</ol>
 <h2 id="a-growing-ultraviolet-end-and-a-fixed-infrared-end">4. A growing
 ultraviolet end and a fixed infrared end</h2>
 <p>The trajectory from spacing <span class="math inline">\(a\)</span> to
