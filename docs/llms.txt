@@ -287,6 +287,13 @@ correction is dated in the note. Do not reintroduce them.
     Laws.** His mean dynamics needs further state and phase assumptions;
     the stochastic route's S1--S3 stand without it, and the centre-of-mass
     variance argument of S2 appears already in Demme--Caticha (round 5B).
+26. **Plaquette fluxes are not coordinates on a torus.** A Laplace
+    comparison bounded by $\sum_p|X_p|^2$ alone fails along flat-holonomy paths:
+    all fluxes vanish while the winding functional $\Omega_N(\theta)$ changes the
+    defect by order one at fixed plane size. Any small-field comparison must
+    carry the winding term (or P($\alpha$)'s additive $Ct^\alpha N$) and a size clause
+    (Claude's Proposition 4, rejected by Astra round 8, commit `6be9df4`;
+    the missing estimate is the gauge-cancellation bound (27) there).
 
 
 ## 5. Open problems, with the smallest next theorem
