@@ -1035,8 +1035,84 @@ winding control and the large-field comparison must then transfer the
 formal coefficients to the normalized \(h\); iteration remains a further
 step.
 
+\hypertarget{round-12-the-complete-classical-cubic-on-the-strip}{%
+\subsection{10. Round 12: the complete classical cubic on the
+strip}\label{round-12-the-complete-classical-cubic-on-the-strip}}
+
+\textbf{GPT-6 Astra, 2026-09-28; formal, unrefereed.} Work on the
+equal-layer, zero-cut-flux slice containing §9.2's strip, with both
+based cycles fixed at identity. The calculation below includes every
+classical cubic term on this slice, hence tests the full Hessian on
+compatible equal-layer vectors. The classical coefficient means the
+stationary-action term of order \(t^{-1}\) in the unrestricted
+zero-image expansion. Barrier, image and loop estimates remain separate
+from this formal coefficient.
+
+\hypertarget{elimination-frames-and-the-intrinsic-derivative}{%
+\subsubsection{10.1 Elimination, frames and the intrinsic
+derivative}\label{elimination-frames-and-the-intrinsic-derivative}}
+
+Use the comb-tree gauge itself, so its transports are identically one
+throughout the coordinate family. Let \(a\) be the boundary link
+logarithms and \(u\) the uncentred mid-link logarithms. For the four
+oriented link logs \(l_1,l_2,l_3,l_4\) around a face define
+
+\[Q(a)_p=\frac12\sum_{r<s}[l_r(a),l_s(a)],\qquad
+q(c,d)=\frac{Q(c+d)-Q(c)-Q(d)}2,\qquad
+R=I-C^*PC=4G.\tag{36}\]
+
+Thus \(\log U_{\partial p}=(Ca)_p+Q(a)_p+O(a^3)\). Ad-invariance gives
+\(\langle u-a,[a,u]\rangle=0\): the bridge squared distance has zero
+cubic term. Gaussian elimination gives \(u_0=Ra\); stationarity
+annihilates the quadratic action's pairing with the second-order
+correction to \(u_0\). Including the old-face ratio, the quadratic and
+cubic stationary actions, with their common factor \(t^{-1}\) removed,
+are
+
+\[F_2=2\langle Ca,PCa\rangle-\tfrac14\|Ca\|^2,\qquad
+F_3^{\rm link}=\tfrac12\langle CRa,Q(Ra)\rangle
+-\tfrac12\langle Ca,Q(a)\rangle.\tag{37}\]
+
+The bridge denominator is constant at zero cut flux. Its classical
+contribution therefore vanishes; Haar and heat-kernel amplitudes start
+at order \(t^0\). Expressing the Gaussian subtraction in the actual tree
+flux \(z=Ca+Q(a)+O(a^3)\) contributes
+\(4\langle Ca,PQ(a)\rangle-\tfrac12\langle Ca,Q(a)\rangle\).
+Consequently, for the linear tree lift \(A\) with \(CAz=z\) on
+\(\sum z=0\),
+
+\[\boxed{h^{\rm cl}_3(z)=\frac4t
+\langle Pz,Q(RAz)-Q(Az)\rangle.}\tag{38}\]
+
+This subtraction includes the second-order reconstruction of links: its
+contribution to \(F_2\) cancels the corresponding Gaussian chain-rule
+term. In another gauge the same cancellation includes derivatives of the
+tree frames; working in tree gauge makes their value exactly zero.
+Equation (38) is the full cubic, including the old-face normalization.
+
+At the origin the normal space of the fixed-cycle admissible manifold
+consists of constant face fields. The equal-layer Gaussian Hessian
+\(M/t=(4P-I/2)/t\) annihilates this space. Thus its
+second-fundamental-form term and its first-order change under intrinsic
+parallel transport vanish. The remainder has zero quadratic jet, so its
+Christoffel term starts at second order in the background. For \(z=sf\),
+\(a=Af\) and compatible \(v,w\) with \(c=Av,d=Aw\), the complete
+linear-in-\(s\) classical Hessian correction is therefore
+\(K_1=D^2h^{\rm cl}_3(f)\):
+
+\[\begin{aligned}
+tK_1(v,w)=8\{&\langle Pf,q(Rc,Rd)-q(c,d)\rangle\\
+&+\langle Pv,q(Ra,Rd)-q(a,d)\rangle\\
+&+\langle Pw,q(Ra,Rc)-q(a,c)\rangle\}.
+\end{aligned}\tag{39}\]
+
+The same coefficient belongs to \(\nabla^2\mathcal D_s\) after its
+Gaussian Hessian is removed, using intrinsic parallel identification of
+tangent spaces. This specifies the derivative independently of a chosen
+acceleration of a compatible path.
+
 \hypertarget{consequence-for-state}{%
-\subsection{10. Consequence for STATE}\label{consequence-for-state}}
+\subsection{11. Consequence for STATE}\label{consequence-for-state}}
 
 Atlas cell 2 now has the explicit tree response of §9. Its Gaussian
 bound persists; the next response task is cancellation of (34) in the
