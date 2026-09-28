@@ -198,6 +198,19 @@ So an $SU(3)$ halving produces only weight-dependent phases (non-central
 shifts), and a trisection produces the triality character on the classes
 $3P^\vee$, below the root images by the factor $e^{-16\pi^2/t}$.
 
+*Remark (a trisection as three fusing vortices; semiclassical placement).*
+A trisection inserts two layers, at $s=\frac13$ and $\frac23$; the marginal law of
+each is (1). For a central image $H=3Y$, $Y\in P^\vee$, $z=e^{2\pi iY}$, the image path
+$e^{iu(X-2\pi H)}$ passes the two layers at $e^{iX/3}z^{-1}$ and $e^{2iX/3}z^{-2}$, so each
+of the three sub-segments carries the increment $e^{iX/3}z^{-1}$: every
+sub-face of the cut face gains the same central flux $z^{-1}$ relative to
+the direct path, and the three fuse to $z^{-3}=1$. The $SU(2)$ halving is the
+two-piece case, where each half-face gains $-1$ and the two fuse to $1$,
+Dirac's belt. For $SU(3)$ it is three thin $\mathbb Z_3$ vortices in one cut face
+fusing to the identity, the same bookkeeping by which three quarks form
+a colour singlet (a parallel, not a derivation). The exact joint law of
+the two layers, with Jacobians, remains to be written.
+
 ## 6. What the result says, and what it leaves open
 
 It is an exact statement about one bridge, the building block of the

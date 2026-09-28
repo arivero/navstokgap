@@ -347,8 +347,10 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
     ([sun-midpoint-centre](notes/sun-midpoint-centre.md), Corollary 3,
     Astra referee pending). *Question:* does triadic refinement ($b=3$)
     organize the large-field terms, or centre-vortex bookkeeping, better
-    than dyadic refinement? *Smallest theorem:* the joint law of the two
-    cut points of an $SU(3)$ trisection, with its central images.
+    than dyadic refinement? *Smallest theorem:* the exact joint law of the
+    two cut points of an $SU(3)$ trisection; semiclassically its central
+    image is three thin $\mathbb Z_3$ vortices in one cut face fusing to the
+    identity (Remark in §5 there).
 
 ## 6. Verified prior-art map
 
