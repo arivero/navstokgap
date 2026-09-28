@@ -1213,7 +1213,84 @@ Hessian and path-cost construction. Uniform barrier moments,
 holonomy-dependent winding control and the large-field comparison must
 then transfer the formal coefficients to the normalized <span
 class="math inline">\(h\)</span>; iteration remains a further step.</p>
-<h2 id="consequence-for-state">10. Consequence for STATE</h2>
+<h2 id="round-12-the-complete-classical-cubic-on-the-strip">10. Round
+12: the complete classical cubic on the strip</h2>
+<p><strong>GPT-6 Astra, 2026-09-28; formal, unrefereed.</strong> Work on
+the equal-layer, zero-cut-flux slice containing §9.2’s strip, with both
+based cycles fixed at identity. The calculation below includes every
+classical cubic term on this slice, hence tests the full Hessian on
+compatible equal-layer vectors. The classical coefficient means the
+stationary-action term of order <span
+class="math inline">\(t^{-1}\)</span> in the unrestricted zero-image
+expansion. Barrier, image and loop estimates remain separate from this
+formal coefficient.</p>
+<h3 id="elimination-frames-and-the-intrinsic-derivative">10.1
+Elimination, frames and the intrinsic derivative</h3>
+<p>Use the comb-tree gauge itself, so its transports are identically one
+throughout the coordinate family. Let <span
+class="math inline">\(a\)</span> be the boundary link logarithms and
+<span class="math inline">\(u\)</span> the uncentred mid-link
+logarithms. For the four oriented link logs <span
+class="math inline">\(l_1,l_2,l_3,l_4\)</span> around a face define</p>
+<p><span
+class="math display">\[Q(a)_p=\frac12\sum_{r&lt;s}[l_r(a),l_s(a)],\qquad
+q(c,d)=\frac{Q(c+d)-Q(c)-Q(d)}2,\qquad
+R=I-C^*PC=4G.\tag{36}\]</span></p>
+<p>Thus <span class="math inline">\(\log U_{\partial
+p}=(Ca)_p+Q(a)_p+O(a^3)\)</span>. Ad-invariance gives <span
+class="math inline">\(\langle u-a,[a,u]\rangle=0\)</span>: the bridge
+squared distance has zero cubic term. Gaussian elimination gives <span
+class="math inline">\(u_0=Ra\)</span>; stationarity annihilates the
+quadratic action’s pairing with the second-order correction to <span
+class="math inline">\(u_0\)</span>. Including the old-face ratio, the
+quadratic and cubic stationary actions, with their common factor <span
+class="math inline">\(t^{-1}\)</span> removed, are</p>
+<p><span class="math display">\[F_2=2\langle
+Ca,PCa\rangle-\tfrac14\|Ca\|^2,\qquad
+F_3^{\rm link}=\tfrac12\langle CRa,Q(Ra)\rangle
+-\tfrac12\langle Ca,Q(a)\rangle.\tag{37}\]</span></p>
+<p>The bridge denominator is constant at zero cut flux. Its classical
+contribution therefore vanishes; Haar and heat-kernel amplitudes start
+at order <span class="math inline">\(t^0\)</span>. Expressing the
+Gaussian subtraction in the actual tree flux <span
+class="math inline">\(z=Ca+Q(a)+O(a^3)\)</span> contributes <span
+class="math inline">\(4\langle Ca,PQ(a)\rangle-\tfrac12\langle
+Ca,Q(a)\rangle\)</span>. Consequently, for the linear tree lift <span
+class="math inline">\(A\)</span> with <span
+class="math inline">\(CAz=z\)</span> on <span class="math inline">\(\sum
+z=0\)</span>,</p>
+<p><span class="math display">\[\boxed{h^{\rm cl}_3(z)=\frac4t
+\langle Pz,Q(RAz)-Q(Az)\rangle.}\tag{38}\]</span></p>
+<p>This subtraction includes the second-order reconstruction of links:
+its contribution to <span class="math inline">\(F_2\)</span> cancels the
+corresponding Gaussian chain-rule term. In another gauge the same
+cancellation includes derivatives of the tree frames; working in tree
+gauge makes their value exactly zero. Equation (38) is the full cubic,
+including the old-face normalization.</p>
+<p>At the origin the normal space of the fixed-cycle admissible manifold
+consists of constant face fields. The equal-layer Gaussian Hessian <span
+class="math inline">\(M/t=(4P-I/2)/t\)</span> annihilates this space.
+Thus its second-fundamental-form term and its first-order change under
+intrinsic parallel transport vanish. The remainder has zero quadratic
+jet, so its Christoffel term starts at second order in the background.
+For <span class="math inline">\(z=sf\)</span>, <span
+class="math inline">\(a=Af\)</span> and compatible <span
+class="math inline">\(v,w\)</span> with <span
+class="math inline">\(c=Av,d=Aw\)</span>, the complete linear-in-<span
+class="math inline">\(s\)</span> classical Hessian correction is
+therefore <span class="math inline">\(K_1=D^2h^{\rm
+cl}_3(f)\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+tK_1(v,w)=8\{&amp;\langle Pf,q(Rc,Rd)-q(c,d)\rangle\\
+&amp;+\langle Pv,q(Ra,Rd)-q(a,d)\rangle\\
+&amp;+\langle Pw,q(Ra,Rc)-q(a,c)\rangle\}.
+\end{aligned}\tag{39}\]</span></p>
+<p>The same coefficient belongs to <span
+class="math inline">\(\nabla^2\mathcal D_s\)</span> after its Gaussian
+Hessian is removed, using intrinsic parallel identification of tangent
+spaces. This specifies the derivative independently of a chosen
+acceleration of a compatible path.</p>
+<h2 id="consequence-for-state">11. Consequence for STATE</h2>
 <p>Atlas cell 2 now has the explicit tree response of §9. Its Gaussian
 bound persists; the next response task is cancellation of (34) in the
 full admissible Hessian, or a compatible response using short pairwise
