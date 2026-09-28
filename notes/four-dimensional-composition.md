@@ -673,9 +673,28 @@ Equation (29) supplies domination through the infrared limit, including
 the orbital response. This proves finite one-step matching within the
 stated formal scheme; depth-uniform (14) remains the next estimate.
 
+### 7.2. Part (3): the uniform iteration requirement (conditional)
+
+To iterate [recursion (12)](four-dimensional-parallel-log.md) uniformly,
+each **updated** action, in rescaled lattice units, must have a conditional
+Hessian $D_n\ge\gamma I$ and anchored bounds (25) with common positive
+$\gamma,\alpha$ and finite $g,K,l$, including the constraint's background
+jets; anisotropies must remain bounded above and away from zero. Ghosts,
+Jacobians and generated one-loop local terms must be carried in the same
+Ward-compatible scheme. These hypotheses give bounds of the form
+(27)--(31) with common constants. Uniform endpoint matching requires (14) for the
+full retained, continuum-subtracted integrand, with regulator limits
+justified, for example, by a common integrable envelope after the $F^2$
+derivatives. Bounded individual bridge contributions allow accumulation
+of order $n$; their scale-adjusted partial sums need separate control
+(sublinear control suffices for Theorem 4). Proving these bounds for the
+generated trajectory, and the interacting remainder bound (17), remains
+open; Theorem 2 excludes inferring them from a nondegenerate sharp
+Gaussian fixed point.
+
 ## 8. Consequence for STATE
 
 Cell 4 has explicit one-step vertices and a finite commonly subtracted
 one-loop matching change with constants (Round 10, formal, unrefereed).
-Next: state the depth-uniform iteration hypotheses; proving (14) and
-controlling interacting remainders remain open.
+The iteration hypotheses are explicit in §7.2; proving them, especially
+(14), and controlling interacting remainders remain open.

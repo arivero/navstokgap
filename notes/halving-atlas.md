@@ -203,7 +203,7 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
-4. $1+3$: [composition](four-dimensional-composition.md), Thms 1--4 refereed by Claude; §7 gives generated cubic/quartic kernels, decay and finite one-step subtracted matching with explicit constants (Round 10, formal, unrefereed); [G1](gaussian-blocking-coupling.md) refereed.
+4. $1+3$: [composition](four-dimensional-composition.md), Thms 1--4 refereed by Claude; §7 gives generated cubic/quartic kernels, decay, finite one-step subtracted matching with explicit constants and uniform iteration hypotheses (Round 10, formal, unrefereed); [G1](gaussian-blocking-coupling.md) refereed.
    Open: its (14), uniform subtracted cubic/quartic contractions; sublinear endpoint matching and remainder sum give the average $-2b_0\log2$ (conditional Theorem 4; [one-step shifts](four-dimensional-parallel-log.md) refereed).
 5. Time-only halving. *Structural reading, 2026-09-27, of known results.*
    At fixed spatial lattice the electric faces make the series moves:
