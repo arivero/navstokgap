@@ -157,7 +157,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
   the running turns it into a power of $a$, so survival is a threshold
   condition; in $D>4$ there is no small $t$. In $1+3$ at one loop,
   $a\Lambda=e^{-1/(2b_0t)}$ with $t=\hbar g^2(a)$, so $e^{-c/t}=(a\Lambda)^{2b_0c}$ and $2b_0c$ is the
-  scaling dimension of the correction. The generated gap is itself on the
+  scaling dimension of the correction. This is the bookkeeping of 't Hooft's infrared renormalons, whose
+  Borel-plane positions are fixed by $b_0$ and an operator dimension; the
+  per-volume threshold $2b_0c=4$ sits at the gluon-condensate renormalon
+  (['t Hooft, Erice 1977, publ. 1979](https://doi.org/10.1007/978-1-4684-0991-8_17);
+  metadata, renormalon positions quoted from memory). The generated gap is itself on the
   ladder: $am\propto e^{-1/(2b_0\hbar g^2)}$ is the member with $2b_0c=1$. The bridge
   image terms sit far above the per-volume threshold $2b_0c=4$: $2b_0c=11N/3$ for
   root images ($c=8\pi^2$) and $33$ for the $SU(3)$ centre images of a

@@ -19,6 +19,65 @@ Conversation with the user, 2026-09-28 night (not yet in any repo note; referenc
 
 Related: [STATE](../research/STATE.md), [fifth postulate](principia-fifth-postulate.md), [stochastic route](stochastic-route-velocitas-ultima.md), [thermodynamic records](thermodynamic-records-no-floor.md).
 
+## 't Hooft's automaton against Zeno, the atomists and Newton
+
+Added 2026-09-29 (Claude), at the user's request. The automaton papers
+are identified by DOI (Crossref-verified, metadata only): the
+[1988 equivalence relations](https://doi.org/10.1007/BF01011560), the
+[1999 dissipative deterministic system](https://doi.org/10.1088/0264-9381/16/10/316)
+and the [2016 book](https://doi.org/10.1007/978-3-319-41285-6). What follows
+is a reading of his position as Fable and Claude remember it, set against
+the classics entries of the [Planck paper](planck-gap-paper.md) §§7 and 9.
+
+**His commitments.** Reality is a deterministic automaton with a universal
+time step $\delta t$. A reversible automaton is a permutation of states, so its
+evolution operator has eigenvalues on the unit circle and energies defined
+only modulo $2\pi\hbar/\delta t$: $\hbar$ is the conversion between the step and an
+energy, and the spectrum has no ground state. Information loss, many
+states merging into one equivalence class, is what he invokes to obtain a
+Hamiltonian bounded below. Quantum mechanics is the description of the
+classes; Bell correlations are paid for by superdeterminism.
+
+- **Zeno and Diodorus.** At a tick the automaton holds a configuration and
+  motion exists only as the update between ticks: Diodorus's "a thing
+  never is moving, but it has moved", made into dynamics. The Planck paper
+  keeps Zeno's conclusion for local records only, below the window
+  $\tau_{\rm arrow}=8z^2\kappa/(mv^2)$, which depends on the body and the confidence.
+  The automaton makes the arrow exact at every scale below $\delta t$ and for
+  every body.
+- **Democritus and the kalam atom.** The automaton's cells and ticks are
+  atoms of place and time, the kalam position on time and a stepped cone
+  in Democritus's dilemma. The Planck paper denies the universal time
+  atom on the evidence of records: its mesh moves with $F$, $m$ and the
+  confidence, a dynamical resolution. The two are compatible: a universal
+  grain far below every mark mesh leaves Theorem 9 untouched. They differ
+  in status: the grain is ontological, the mesh is epistemic.
+- **Epicurus.** Continuity presented to sense, succession below it, and
+  a warning against extrapolating continuity downward: this is 't Hooft's
+  picture with the Planck time in place of the threshold of sense.
+  Epicurus is the closest ancient statement of it, as he is of ours; the
+  difference is where the boundary is drawn and whether it is derived.
+- **Newton.** The automaton removes the *velocitas ultima* by removing the
+  limit: velocities are finite differences and no instant carries one.
+  That is a third denial of joint determinacy, beside quantum
+  noncommutativity (Theorem A) and stochastic paths (the
+  [stochastic route](stochastic-route-velocitas-ultima.md)), and it keeps
+  determinism. Its $\hbar$ is a unit conversion, so the automaton alone supplies a
+  grain and no action floor on records: a reversible automaton is a
+  discrete Liouville dynamics, and Theorem I of the
+  [unit-and-indeterminacy note](necessity-unit-and-indeterminacy.md) gives
+  classical readouts no floor. The floor, in his construction, rides on
+  information loss, and the [thermodynamic-records note](thermodynamic-records-no-floor.md)
+  finds that loss yields a trade-off $\eta\ge A_0e^{-W/k_BT}$ and no floor.
+
+**The sharp question this leaves**, the candidate Newton premise above:
+does coarse-graining by equivalence classes, of the kind that gives his
+Hamiltonian a ground state, force a positive floor on the recorded
+inertial--parabola comparison, or only a trade-off? The repository's
+current results point to the second; a theorem either way would place
+the automaton exactly relative to the thesis that quantization is a
+consistency condition of the continuum limit.
+
 ## Consequence for STATE
 
 None yet. The candidate Newton premise (information loss as in 't Hooft's

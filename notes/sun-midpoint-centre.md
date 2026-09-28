@@ -477,7 +477,21 @@ Centre-valued link configurations exist on any lattice whatever
 the blocking, and thick centre vortices
 ([Mack and Petkova 1979](https://doi.org/10.1016/0003-4916(79)90346-4);
 ['t Hooft 1978](https://doi.org/10.1016/0550-3213(78)90153-0); metadata)
-are a question about many steps. Pure $SU(3)$ has exact centre symmetry
+are a question about many steps. In 't Hooft's language (2026-09-29,
+from memory, references Crossref-verified): multiplying one mid-edge by a
+central element inserts his disorder operator on the dual set of that
+edge's faces, so the open question of whether refinement ties to centre
+vortices asks whether image terms at a cut $p/q$ generate such insertions;
+on a finite torus his twisted boundary conditions and electric and
+magnetic flux sectors
+(['t Hooft 1979](https://doi.org/10.1016/0550-3213(79)90595-9); metadata)
+organize the cycle holonomies whose small-angle part is the non-based
+cycle phase of round 12 in the
+[small-field note](su2-midplane-small-field.md) §10; and the fractional
+topological charge $1/N mod 1$ of twisted configurations
+(['t Hooft 1981](https://doi.org/10.1007/BF01208900); metadata; value
+recalled) is $rac13$ for $SU(3)$, the group whose centre only trisections
+reach. Pure $SU(3)$ has exact centre symmetry
 and no dynamical fundamental matter to screen its triality charges;
 whether that symmetry is broken depends on the regime.
 [Fradkin and Shenker (1979)](https://doi.org/10.1103/PhysRevD.19.3682)
