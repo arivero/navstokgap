@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gaussian product blocking: the tree-level coupling never moves</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Gaussian product blocking: the tree-level coupling never moves</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/gaussian-blocking-coupling.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/gaussian-blocking-coupling.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (Claude; written derivation, to be
+refereed).</strong> For the free (Gaussian) lattice gauge field in <span
+class="math inline">\(D\)</span> dimensions with heat time <span
+class="math inline">\(t\)</span>, one isotropic product-blocking step
+<span class="math inline">\(a\mapsto2a\)</span> maps the law of the
+fluxes to a Gaussian law whose covariance at small coarse momentum <span
+class="math inline">\(K\)</span> is</p>
+<p><span class="math display">\[C&#39;(K)=2^{4-D}\,t\,\bigl[P_{\rm
+cont}(\hat K)+O(K)\bigr]\]</span></p>
+<p>on exact 2-forms, with <span class="math inline">\(O(K^2)\)</span> in
+plaquette-centred phase conventions (Theorem G1): the zero-momentum
+coefficient is exactly the heat time <span
+class="math inline">\(\lambda_D(2a)^{4-D}\)</span> of the coarse
+lattice. The statement holds for any input covariance supported on exact
+2-forms with the same small-momentum form, so it iterates: along any
+number of steps, and for the four directional halvings of one step in
+any order (Fubini), the tree-level coupling of the Gaussian part is
+preserved exactly. In <span class="math inline">\(1+3\)</span> it does
+not run at all.</p>
+<p><strong>Consequence for cell 4</strong> (the <a
+href="four-dimensional-parallel-log.html">four-dimensional note</a>,
+(15) and the Remark after its telescoping paragraph). The endpoint term
+<span class="math inline">\(c_{\rm in}-c_{\rm out}\)</span> receives
+nothing from the zero-momentum part of the Gaussian kernel. It arises
+only from the dependence of the one-loop determinant on the kernel’s
+shape (its <span class="math inline">\(O(K^2)\)</span> and higher terms)
+and from the generated cubic and quartic vertices. Along an iteration
+the shape may drift; the average rate <span
+class="math inline">\(-2b_0\log2\)</span> per step needs only <span
+class="math inline">\(c(\zeta_n,\mathcal K_n)=o(n)\)</span>, so even a
+logarithmic drift of shape parameters would be harmless.</p>
+<p><strong>Caution.</strong> Convergence of the full kernel under
+iterated sharp product blocking is not claimed. Product blocking makes
+coarse fluxes the fluxes of the fine field through sharp surfaces, whose
+variances in the continuum carry boundary (perimeter-type) divergences;
+the perfect-action literature smears the blocking to obtain a local
+fixed point (<a href="https://doi.org/10.1103/PhysRevB.11.3431">Bell and
+Wilson 1975</a>; for gauge fields <a
+href="https://doi.org/10.1016/0550-3213(95)00678-8">Bietenholz and Wiese
+1996</a>; metadata).</p>
+<h2 id="setting">1. Setting</h2>
+<p>Take <span class="math inline">\(G=\mathbb R\)</span> (colour
+components decouple in the Gaussian theory) on a periodic lattice of
+spacing <span class="math inline">\(a\)</span>, link variables <span
+class="math inline">\(A\)</span>, fluxes <span
+class="math inline">\(\phi=dA\)</span> and weight <span
+class="math inline">\(\prod_pe^{-\phi_p^2/(2t)}\)</span>. Modulo gauge,
+<span class="math inline">\(\phi\)</span> ranges over the exact 2-forms,
+with the flat Gaussian density there, so its covariance is <span
+class="math inline">\(tP\)</span>, where <span
+class="math inline">\(P(k)\)</span> is the orthogonal projector onto
+exact 2-forms at lattice momentum <span class="math inline">\(k\)</span>
+(<span class="math inline">\(k\ne0\)</span>; the harmonic sector at
+<span class="math inline">\(k=0\)</span> is set aside). Product blocking
+sets the coarse link to the sum of the two fine links along it; by
+Stokes the coarse flux through a coarse plaquette in the plane <span
+class="math inline">\((\mu\nu)\)</span> is the sum of the four fine
+fluxes inside it, <span
+class="math inline">\((B\phi)_{\mu\nu}(X)=\sum_{a,b\in\{0,1\}}\phi_{\mu\nu}(2X+ae_\mu+be_\nu)\)</span>.
+This is the Gaussian case of the pushforward of Proposition 1 of the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>,
+composed over the <span class="math inline">\(D\)</span> directions.</p>
+<h2 id="theorem-g1-and-its-proof">2. Theorem G1 and its proof</h2>
+<p><em>The alias sum.</em> With unitary Fourier transforms on the fine
+and coarse tori, the coarse momenta <span
+class="math inline">\(K\in(-\pi,\pi]^D\)</span> (units <span
+class="math inline">\(1/2a\)</span>) receive the <span
+class="math inline">\(2^D\)</span> fine momenta <span
+class="math inline">\(k_n=K/2+\pi n\)</span>, <span
+class="math inline">\(n\in\{0,1\}^D\)</span>, and</p>
+<p><span
+class="math display">\[(B\phi)^\wedge_{\mu\nu}(K)=2^{-D/2}\sum_nf_{\mu\nu}(k_n)\,\hat\phi_{\mu\nu}(k_n),\qquad
+f_{\mu\nu}(k)=(1+e^{ik_\mu})(1+e^{ik_\nu}).\]</span></p>
+<p>Hence the coarse covariance is <span
+class="math inline">\(C&#39;(K)_{\mu\nu,\rho\sigma}=2^{-D}\,t\sum_nf_{\mu\nu}(k_n)\overline{f_{\rho\sigma}(k_n)}\,P(k_n)_{\mu\nu,\rho\sigma}\)</span>.</p>
+<p><em>The term <span class="math inline">\(n=0\)</span>.</em> <span
+class="math inline">\(|f_{\mu\nu}(K/2)|^2=16\cos^2(K_\mu/4)\cos^2(K_\nu/4)=16(1+O(K^2))\)</span>,
+and the lattice projector satisfies <span
+class="math inline">\(P(k)=P_{\rm cont}(\hat k)+O(k)\)</span>,
+homogeneous of degree zero in the direction <span
+class="math inline">\(\hat k\)</span>; the <span
+class="math inline">\(O(k)\)</span> is a diagonal phase, and with
+plaquette-centred conventions (symbols <span
+class="math inline">\(2\sin(k_j/2)\)</span>) the error is <span
+class="math inline">\(O(k^2)\)</span>. So the <span
+class="math inline">\(n=0\)</span> term is <span
+class="math inline">\(2^{4-D}t\,[P_{\rm cont}(\hat
+K)+O(K)]\)</span>.</p>
+<p><em>The terms <span class="math inline">\(n\ne0\)</span>.</em> If
+<span class="math inline">\(n_\mu=1\)</span> or <span
+class="math inline">\(n_\nu=1\)</span>, then <span
+class="math inline">\(1+e^{i(\pi+K_\mu/2)}=1-e^{iK_\mu/2}=O(K)\)</span>,
+so <span class="math inline">\(f_{\mu\nu}(k_n)=O(K)\)</span>: a term
+whose two form factors are both <span
+class="math inline">\(O(K)\)</span> is <span
+class="math inline">\(O(K^2)\)</span>, and a mixed term with an <span
+class="math inline">\(O(1)\)</span> partner is covered by the closedness
+bound below. If <span class="math inline">\(n_\mu=n_\nu=0\)</span> but
+<span class="math inline">\(n_\lambda=1\)</span> for some <span
+class="math inline">\(\lambda\notin\{\mu,\nu\}\)</span>, use closedness:
+exact forms are closed, and the <span
+class="math inline">\((\mu\nu\lambda)\)</span> component of <span
+class="math inline">\(d\phi\)</span> at <span
+class="math inline">\(k_n\)</span> reads <span
+class="math inline">\(d_\mu\hat\phi_{\nu\lambda}-d_\nu\hat\phi_{\mu\lambda}+d_\lambda\hat\phi_{\mu\nu}=0\)</span>
+with <span class="math inline">\(d_j=e^{ik_j}-1\)</span>, where <span
+class="math inline">\(d_\mu,d_\nu=O(K)\)</span> and <span
+class="math inline">\(d_\lambda=-2+O(K)\)</span>. So on the range of
+<span class="math inline">\(P(k_n)\)</span> the component <span
+class="math inline">\(\hat\phi_{\mu\nu}\)</span> is <span
+class="math inline">\(O(K)\)</span> times the others. Since <span
+class="math inline">\(P\)</span> is an orthogonal projector, <span
+class="math inline">\(\|Pe_{\mu\nu}\|^2=(Pe_{\mu\nu})_{\mu\nu}=O(K)\|Pe_{\mu\nu}\|\)</span>,
+so <span class="math inline">\(\|P(k_n)e_{\mu\nu}\|=O(K)\)</span>. An
+entry <span class="math inline">\(P_{\mu\nu,\rho\sigma}=\langle
+Pe_{\mu\nu},Pe_{\rho\sigma}\rangle\)</span> is then <span
+class="math inline">\(O(K)\)</span> times <span
+class="math inline">\(\|Pe_{\rho\sigma}\|\)</span>, which is itself
+<span class="math inline">\(O(K)\)</span> when <span
+class="math inline">\(n_\rho=n_\sigma=0\)</span> (the same <span
+class="math inline">\(\lambda\)</span> serves), while otherwise <span
+class="math inline">\(f_{\rho\sigma}(k_n)=O(K)\)</span> supplies the
+second factor. Every term with <span
+class="math inline">\(n\ne0\)</span> is <span
+class="math inline">\(O(K^2)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><em>Iteration.</em> The proof used only that the input covariance is
+supported on exact 2-forms (for closedness at <span
+class="math inline">\(k_n\)</span>) and has the form <span
+class="math inline">\(t[P_{\rm cont}+O(k)]\)</span> at small <span
+class="math inline">\(k\)</span> (for the <span
+class="math inline">\(n=0\)</span> term). The output has both
+properties, so by induction every step multiplies the zero-momentum heat
+time by exactly <span class="math inline">\(2^{4-D}\)</span>. The four
+directional Gaussian integrations of one step compose, in any order, to
+the isotropic one (Fubini), so the exact directional defects of
+Proposition 2 and Corollary 2<span class="math inline">\(_s\)</span>
+compose to a kernel with the same zero-momentum coefficient; this is the
+free-field statement that their defects vanish at zero momentum and
+constant flux.</p>
+<h2 id="what-the-theorem-leaves-to-the-interacting-theory">3. What the
+theorem leaves to the interacting theory</h2>
+<p>In the abelian theory the coupling has no loop corrections, and G1 is
+the whole story at zero momentum. In the non-abelian theory the one-loop
+matching coefficient <span class="math inline">\(c(\zeta,\mathcal
+K)\)</span> of (15) depends on the full kernel, and G1 localizes the
+obstruction: the finite endpoint term comes from how the loop integrals
+feel the shape of the generated quadratic kernel and from the generated
+vertices, never from a drift of the tree-level coupling. Whether the
+shape parameters stay bounded, or drift slowly, under the iteration is
+the question that the Remark (many steps) of the four-dimensional note
+needs answered only in the weak form <span
+class="math inline">\(o(n)\)</span>.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>Atlas cell 4: the Gaussian half of the composition obstruction is
+closed at zero momentum (Theorem G1, iterated). The open half is the
+one-loop dependence on the kernel shape and on generated vertices, with
+the average rate requiring only <span
+class="math inline">\(c=o(n)\)</span> along the iteration.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

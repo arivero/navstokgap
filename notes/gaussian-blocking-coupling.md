@@ -1,0 +1,110 @@
+# Gaussian product blocking: the tree-level coupling never moves
+
+**Result, 2026-09-28 (Claude; written derivation, to be refereed).** For
+the free (Gaussian) lattice gauge field in $D$ dimensions with heat time $t$,
+one isotropic product-blocking step $a\mapsto2a$ maps the law of the fluxes to
+a Gaussian law whose covariance at small coarse momentum $K$ is
+
+$$C'(K)=2^{4-D}\,t\,\bigl[P_{\rm cont}(\hat K)+O(K)\bigr]$$
+
+on exact 2-forms, with $O(K^2)$ in plaquette-centred phase conventions
+(Theorem G1): the zero-momentum coefficient is exactly the
+heat time $\lambda_D(2a)^{4-D}$ of the coarse lattice. The statement holds for any
+input covariance supported on exact 2-forms with the same small-momentum
+form, so it iterates: along any number of steps, and for the four
+directional halvings of one step in any order (Fubini), the tree-level
+coupling of the Gaussian part is preserved exactly. In $1+3$ it does not
+run at all.
+
+**Consequence for cell 4** (the [four-dimensional note](four-dimensional-parallel-log.md),
+(15) and the Remark after its telescoping paragraph). The endpoint term
+$c_{\rm in}-c_{\rm out}$ receives nothing from the zero-momentum part of the Gaussian
+kernel. It arises only from the dependence of the one-loop determinant on
+the kernel's shape (its $O(K^2)$ and higher terms) and from the generated
+cubic and quartic vertices. Along an iteration the shape may drift; the
+average rate $-2b_0\log2$ per step needs only $c(\zeta_n,\mathcal K_n)=o(n)$, so even a
+logarithmic drift of shape parameters would be harmless.
+
+**Caution.** Convergence of the full kernel under iterated sharp product
+blocking is not claimed. Product blocking makes coarse fluxes the fluxes
+of the fine field through sharp surfaces, whose variances in the continuum
+carry boundary (perimeter-type) divergences; the perfect-action literature
+smears the blocking to obtain a local fixed point
+([Bell and Wilson 1975](https://doi.org/10.1103/PhysRevB.11.3431);
+for gauge fields [Bietenholz and Wiese 1996](https://doi.org/10.1016/0550-3213(95)00678-8);
+metadata).
+
+## 1. Setting
+
+Take $G=\mathbb R$ (colour components decouple in the Gaussian theory) on a
+periodic lattice of spacing $a$, link variables $A$, fluxes $\phi=dA$ and weight
+$\prod_pe^{-\phi_p^2/(2t)}$. Modulo gauge, $\phi$ ranges over the exact 2-forms, with
+the flat Gaussian density there, so its covariance is $tP$, where $P(k)$ is
+the orthogonal projector onto exact 2-forms at lattice momentum $k$
+($k\ne0$; the harmonic sector at $k=0$ is set aside). Product blocking sets
+the coarse link to the sum of the two fine links along it; by Stokes the
+coarse flux through a coarse plaquette in the plane $(\mu\nu)$ is the sum of the
+four fine fluxes inside it, $(B\phi)_{\mu\nu}(X)=\sum_{a,b\in\{0,1\}}\phi_{\mu\nu}(2X+ae_\mu+be_\nu)$. This is the
+Gaussian case of the pushforward of Proposition 1 of the
+[series/parallel note](series-parallel-gauge-refinement.md), composed over
+the $D$ directions.
+
+## 2. Theorem G1 and its proof
+
+*The alias sum.* With unitary Fourier transforms on the fine and coarse
+tori, the coarse momenta $K\in(-\pi,\pi]^D$ (units $1/2a$) receive the $2^D$ fine
+momenta $k_n=K/2+\pi n$, $n\in\{0,1\}^D$, and
+
+$$(B\phi)^\wedge_{\mu\nu}(K)=2^{-D/2}\sum_nf_{\mu\nu}(k_n)\,\hat\phi_{\mu\nu}(k_n),\qquad
+f_{\mu\nu}(k)=(1+e^{ik_\mu})(1+e^{ik_\nu}).$$
+
+Hence the coarse covariance is
+$C'(K)_{\mu\nu,\rho\sigma}=2^{-D}\,t\sum_nf_{\mu\nu}(k_n)\overline{f_{\rho\sigma}(k_n)}\,P(k_n)_{\mu\nu,\rho\sigma}$.
+
+*The term $n=0$.* $|f_{\mu\nu}(K/2)|^2=16\cos^2(K_\mu/4)\cos^2(K_\nu/4)=16(1+O(K^2))$, and the lattice
+projector satisfies $P(k)=P_{\rm cont}(\hat k)+O(k)$, homogeneous of degree zero in the
+direction $\hat k$; the $O(k)$ is a diagonal phase, and with plaquette-centred
+conventions (symbols $2\sin(k_j/2)$) the error is $O(k^2)$. So the $n=0$ term is
+$2^{4-D}t\,[P_{\rm cont}(\hat K)+O(K)]$.
+
+*The terms $n\ne0$.* If $n_\mu=1$ or $n_\nu=1$, then $1+e^{i(\pi+K_\mu/2)}=1-e^{iK_\mu/2}=O(K)$, so
+$f_{\mu\nu}(k_n)=O(K)$: a term whose two form factors are both $O(K)$ is $O(K^2)$, and
+a mixed term with an $O(1)$ partner is covered by the closedness bound below. If
+$n_\mu=n_\nu=0$ but $n_\lambda=1$ for some $\lambda\notin\{\mu,\nu\}$, use closedness: exact forms are
+closed, and the $(\mu\nu\lambda)$ component of $d\phi$ at $k_n$ reads
+$d_\mu\hat\phi_{\nu\lambda}-d_\nu\hat\phi_{\mu\lambda}+d_\lambda\hat\phi_{\mu\nu}=0$ with $d_j=e^{ik_j}-1$, where $d_\mu,d_\nu=O(K)$ and
+$d_\lambda=-2+O(K)$. So on the range of $P(k_n)$ the component $\hat\phi_{\mu\nu}$ is $O(K)$ times the
+others. Since $P$ is an orthogonal projector, $\|Pe_{\mu\nu}\|^2=(Pe_{\mu\nu})_{\mu\nu}=O(K)\|Pe_{\mu\nu}\|$,
+so $\|P(k_n)e_{\mu\nu}\|=O(K)$. An entry $P_{\mu\nu,\rho\sigma}=\langle Pe_{\mu\nu},Pe_{\rho\sigma}\rangle$ is then $O(K)$ times
+$\|Pe_{\rho\sigma}\|$, which is itself $O(K)$ when $n_\rho=n_\sigma=0$ (the same $\lambda$ serves), while
+otherwise $f_{\rho\sigma}(k_n)=O(K)$ supplies the second factor. Every term with
+$n\ne0$ is $O(K^2)$. $\square$
+
+*Iteration.* The proof used only that the input covariance is supported
+on exact 2-forms (for closedness at $k_n$) and has the form
+$t[P_{\rm cont}+O(k)]$ at small $k$ (for the $n=0$ term). The output has both
+properties, so by induction every step multiplies the zero-momentum heat
+time by exactly $2^{4-D}$. The four directional Gaussian integrations of one
+step compose, in any order, to the isotropic one (Fubini), so the exact
+directional defects of Proposition 2 and Corollary 2$_s$ compose to a
+kernel with the same zero-momentum coefficient; this is the free-field
+statement that their defects vanish at zero momentum and constant flux.
+
+## 3. What the theorem leaves to the interacting theory
+
+In the abelian theory the coupling has no loop corrections, and G1 is the
+whole story at zero momentum. In the non-abelian theory the one-loop
+matching coefficient $c(\zeta,\mathcal K)$ of (15) depends on the full kernel, and G1
+localizes the obstruction: the finite endpoint term comes from how the
+loop integrals feel the shape of the generated quadratic kernel and from
+the generated vertices, never from a drift of the tree-level coupling.
+Whether the shape parameters stay bounded, or drift slowly, under the
+iteration is the question that the Remark (many steps) of the
+four-dimensional note needs answered only in the weak form $o(n)$.
+
+## 4. Consequence for STATE
+
+Atlas cell 4: the Gaussian half of the composition obstruction is closed
+at zero momentum (Theorem G1, iterated). The open half is the one-loop
+dependence on the kernel shape and on generated vertices, with the
+average rate requiring only $c=o(n)$ along the iteration.
