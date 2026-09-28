@@ -109,6 +109,21 @@ order the mark mesh $\tau_*$. Dedekind's point is the completed limit of that
 sequence, which is Newton's side in the scholium closing Book I (Euclid X
 against least magnitudes); the recorded point is the unfinished one.
 
+**Connes** (user: "Connes more or less exits the dilemma by having
+$dx=[D,X]$"). From memory: in a spectral triple the differential of $f$ is
+$[D,f]$, infinitesimals are compact operators, the line element is $ds=D^{-1}$,
+and distance needs no paths, $d(p,q)=\sup\{|f(p)-f(q)|:\|[D,f]\|\le1\}$. The completed
+point is never formed, and the velocity is an operator relation, as in
+Heisenberg's $\dot x=(i/\hbar)[H,x]$. Two refinements: in the commutative case
+$[D,f]$ commutes with every function, so joint determinacy holds and Newton
+is recovered; noncommutativity remains the premise, the fork of Theorem A
+of the [fifth-postulate note](principia-fifth-postulate.md). With $p=\hbar D$ the
+line element $D^{-1}$ is $\hbar/p$, the de Broglie wavelength operator, so $\hbar$ is
+again a conversion constant. The [tangent-groupoid note](tangent-groupoid-trajectories.md)
+already holds the gluing of pairs at $\hbar>0$ (the segment) to tangent vectors
+at $\hbar=0$ (the point). A candidate Newton test: whether the repeated cutting
+of a Galileo cell extends continuously to the $\hbar=0$ fibre.
+
 ## Consequence for STATE
 
 None yet. The candidate Newton premise (information loss as in 't Hooft's
