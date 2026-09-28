@@ -68,7 +68,7 @@ performs the same two moves, with $s$ as a parameter.
   mesh vanishes ([cut-measure note](cut-measure-newton.md)). The Galileo
   action is an additive measure on the cut process, with the nested
   additivity of the Lévy--Ciesielski construction of the Brownian bridge.
-- **Relative windings.** For $U(1)$ a cut's bridge law is a positive
+- **Windings and images.** For $U(1)$ a cut's bridge law is a positive
   winding mixture: its weights are $s$-independent and the shifts
   $2\pi(1-s)W$ form $\mathbb Z_2$ only at halving and $\mathbb Z_q$ at $s=p/q$. For every
   compact simply connected group the midpoint expectation of every
@@ -79,8 +79,8 @@ performs the same two moves, with $s$ as a parameter.
   interpretations unsupported by that expansion.
 - **Which part of the centre a cut reaches.** A cut at $p/q$
   reaches exactly the subgroup $\mathbb Z_{\gcd(q,N)}$ of the centre of $SU(N)$ (its
-  Corollary 3). So the $SU(2)$ halving carries Dirac's belt trick, a
-  winding $n$ acting by $(-1)^n$ on half-integer spins, while dyadic
+  Corollary 3). So the $SU(2)$ halving carries Dirac's belt trick, the
+  image $n$ acting by $(-1)^n$ on half-integer spins, while dyadic
   refinement reaches only its identity for $SU(3)$ and a trisection carries
   the triality. Flipping one mid-edge by a central element inserts thin
   centre flux into its incident faces. Open: whether this ties refinement to
@@ -156,7 +156,7 @@ way; in mechanics refining makes each cell more quantum
   $a\Lambda=e^{-1/(2b_0t)}$ with $t=\hbar g^2(a)$, so $e^{-c/t}=(a\Lambda)^{2b_0c}$ and $2b_0c$ is the
   scaling dimension of the correction. The generated gap is itself on the
   ladder: $am\propto e^{-1/(2b_0\hbar g^2)}$ is the member with $2b_0c=1$. The bridge
-  windings sit far above the per-volume threshold $2b_0c=4$: $2b_0c=11N/3$ for
+  image terms sit far above the per-volume threshold $2b_0c=4$: $2b_0c=11N/3$ for
   root images ($c=8\pi^2$) and $33$ for the $SU(3)$ centre images of a
   trisection ($c=24\pi^2$, [centre note](sun-midpoint-centre.md)) (2026-09-28).
   These are formal powers from near-identity image exponents; normalized
@@ -227,7 +227,7 @@ way; in mechanics refining makes each cell more quantum
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the
    discrete-exterior-calculus Hodge star on nested tensor grids); for
-   $SU(3)$, whether triadic refinement, the only kind whose windings reach
+   $SU(3)$, whether triadic refinement, the only kind whose image terms reach
    the centre ([centre note](sun-midpoint-centre.md)), organizes the
    large-field terms better than dyadic refinement.
 
