@@ -68,7 +68,7 @@ fill its cells (open cells in its §5).
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
-   Atlas cell 4: [formal 4D shifts and conditional logarithm](../notes/four-dimensional-parallel-log.md); next, carry the generated action through the four eliminations and fix its finite endpoint matching.
+   Atlas cell 4: [round 6 composition](../notes/four-dimensional-composition.md) gives the exact Gaussian kernel and sharp-blocking growth (unrefereed); next, bound its (14), the subtracted generated-vertex contractions, for finite endpoint matching and the conditional average rate.
 2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
    [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; the premise that restores closure is a bound on every terminal readout, which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory (refereed).
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$

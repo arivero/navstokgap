@@ -110,7 +110,8 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | **$U(1)$ Theorem 5** | One unperturbed step in $D=3$ equals the free step up to extensive error of density $e^{-\pi^2/(8\lambda_3a)}$ on the small-field set | proved, refereed (Astra REFINE applied) | [series/parallel §4](notes/series-parallel-gauge-refinement.md) |
 | $U(1)$ cut at fraction $s$ (Cor. 5$_s$) | Theorem 5 holds for every cut fraction; the bridge midpoint is a winding mixture with $s$-independent weights and shifts $2\pi(1-s)W$ ($\mathbb Z_2$ only at halving, $\mathbb Z_q$ at $s=p/q$); for $SU(2)$ the halving shifts are central ($\frac12Q^\vee=P^\vee$), for $SU(N\ge3)$ no fraction makes all shifts central (semiclassical placement) | proved ($U(1)$), refereed; group statement elementary | [series/parallel §4](notes/series-parallel-gauge-refinement.md), [halving-atlas §1b](notes/halving-atlas.md) |
 | $1+3$ parallel shifts (Astra round 4) | Six formal anisotropic one-step coupling shifts for $SU(N)$, any cut fraction, as convergent Brillouin-zone integrals; one-step propagators infrared regular; $2b_0=11N/24\pi^2$ recovered under background-matching hypotheses; obstruction: matching the generated action; over many steps bounded matching gives the average rate | formal (Thm 1), conditional (Thm 2), refereed | [four-dimensional-parallel-log](notes/four-dimensional-parallel-log.md) |
-| Gaussian product blocking (G1) | One isotropic step multiplies the zero-momentum heat time by exactly $2^{4-D}$ (alias sum; closedness kills staggered aliases); iterates; so in $1+3$ the Gaussian tree-level coupling never runs and (15)'s endpoint term comes only from kernel shape and generated vertices; full-kernel convergence under sharp blocking not claimed | proved (written), not refereed | [gaussian-blocking-coupling](notes/gaussian-blocking-coupling.md) |
+| Gaussian product blocking (G1) | Exact factor $2^{4-D}$ at zero momentum; iteration requires bounded covariance near nonzero aliases, with remainder constants allowed to grow; harmonic background distinguished from the small-momentum limit | proved, refereed (GPT-6 Astra, REFINE applied, 2026-09-28) | [gaussian-blocking-coupling](notes/gaussian-blocking-coupling.md) |
+| Four-dimensional composition (round 6) | Exact sixteen-alias Schur kernel and preserved constant-flux coefficient; sharp covariance grows at least as $2^n$ at fixed nonzero momentum; background-jet norm controls regulated one-loop matching; average rate requires sublinear endpoint matching and remainder sum | Gaussian results proved, unrefereed; interacting rate conditional and formal | [four-dimensional-composition](notes/four-dimensional-composition.md) |
 | Bridge midpoint at any cut (compact connected simply connected $G$) | Exact single- and several-cut character moments as weight and coroot image sums; $U(1)$ Cor. 5$_s$ and $SU(2)$ Theorems 1--2 agree including images, with Thm 3 requiring its extra matrix symmetry. Central images iff $(1-s)H\in P^\vee$, reaching $\mathbb Z_{\gcd(q,N)}$ at reduced $s=p/q$; nontrivial $SU(3)$ centre needs $3\mid q$. Signed image amplitudes; per-volume control remains open | exact, proved and refereed (Astra Round 5B A, 2026-09-28; corrections applied) | [sun-midpoint-centre](notes/sun-midpoint-centre.md) |
 | Two gaps (reading) | Refinement at fixed coupling removes the $U(1)$ mass gap ($e^{-c/(\hbar g^2a)}$ corrections) and keeps the $\hbar$-width Gaussian: a generated mass gap versus a supplied action floor | reading, refereed | [halving-atlas §4](notes/halving-atlas.md) |
 | Monopole TV theorem (Thm 2) | $D=3$: $\|\mu_a-\mu_a^0\|_{\rm TV}\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})$; Cor. 2$'$: iteration reduces to exact Gaussian blocking; Thm 3: the same bound is useless in $D=4$ at fixed $g$ (route failure recorded) | proved, refereed (Fable) | [villain-monopole-refinement](notes/villain-monopole-refinement.md) |
@@ -312,11 +313,12 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
    formally for $SU(N)$ and any cut fraction, the one-step propagators are
    infrared regular, and $2b_0$ follows under background-matching
    hypotheses ([four-dimensional-parallel-log](notes/four-dimensional-parallel-log.md),
-   refereed). The obstruction is the composition with the generated action.
-   *Smallest theorem:* carry the Gaussian Schur complements through four
-   halvings (zero-momentum coefficient preserved exactly) and show that
-   the one-loop matching coefficient stays bounded along the iteration,
-   which gives $-2b_0\log2$ per isotropic step on average (Remark in §6 there).
+   refereed). [Round 6](notes/four-dimensional-composition.md) composes
+   the Gaussian Schur complements and proves sharp-flux covariance growth.
+   *Smallest theorem:* bound its (14), the continuum-subtracted generated
+   cubic/quartic background contractions, uniformly in depth and through
+   the infrared limit. Together with remainder control this gives the
+   average rate by its Theorem 4; bounded matching remains open.
 5. **From ultraviolet control to a gap in $1+2$.** Prove $E=C_3\hbar c\lambda_3$
    with $0<C_3<\infty$; the $U(1)$ comparison shows the mechanism must sit
    in the non-abelian terms N1--N3. *Smallest theorem:* a lower bound on the

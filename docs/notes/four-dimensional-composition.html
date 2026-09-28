@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Four-dimensional composition: exact Gaussian blocking and one-loop matching</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Four-dimensional composition: exact Gaussian blocking and one-loop
+matching</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/four-dimensional-composition.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-composition.pdf">PDF</a></p><p><strong>Result, 2026-09-28 (GPT-6 Astra, round 6; written
+derivations, unrefereed).</strong> The four directional Gaussian defects
+compose exactly to the sixteen-alias kernel (5), preserving the
+constant-flux action coefficient at every intermediate step. For sharp
+product blocking, after <span class="math inline">\(n\)</span> isotropic
+steps the flux covariance satisfies</p>
+<p><span class="math display">\[\frac{C_{2^n}(\kappa,0,0,0)_{12,12}}t
+\ge \frac{2^n}{12}|e^{i\kappa}-1|^2,
+\qquad 0&lt;|\kappa|\le\pi. \tag{1}\]</span></p>
+<p>Thus the proposed finite, nondegenerate Gaussian fixed point
+encounters an explicit ultraviolet obstruction for these sharp
+observables. The small-momentum coefficient stays <span
+class="math inline">\(t\)</span> at every finite depth; the two limits
+fail to commute. The spatial averaging in the cited perfect gauge action
+changes this conclusion’s hypotheses.</p>
+<p>At one loop, Theorem 3 proves continuity of the background
+determinant in a norm on its <strong>background Hessian jets</strong>,
+with explicit bounds. Tree-level normalization alone leaves these jets
+uncontrolled. Theorem 4 gives the average rate <span
+class="math inline">\(-11\log2/(8\pi^2)\)</span> for <span
+class="math inline">\(SU(3)\)</span> under sublinear endpoint matching
+and a sublinear accumulated remainder. The missing estimate is a uniform
+bound on the continuum-subtracted contraction of the generated cubic and
+quartic vertices, including its infrared limit. Even the stronger
+kernel-convergence route is obstructed by (1) for the prescribed sharp
+map. Bounded matching itself remains open.</p>
+<p><strong>Inputs and scope.</strong> <a
+href="gaussian-blocking-coupling.html">G1</a> was refereed first, with
+dated refinements in that note. We use the <a
+href="series-parallel-gauge-refinement.html">series/parallel note</a>,
+Prop. 2 and Cor. 2<span class="math inline">\(_s\)</span>; <a
+href="four-dimensional-parallel-log.html">round 4</a>, §§5–8, especially
+(12), (15) and the many-steps remark; and the finite <span
+class="math inline">\(\Lambda\)</span> matching in the <a
+href="zero-spacing-any-action.html">zero-spacing note</a> (full-read:
+these sections). Gaussian claims below are exact finite lattice algebra
+and bulk momentum estimates. Interacting matching is formal perturbation
+theory with its further hypotheses stated. Continuum construction and a
+physical spectral gap remain separate obligations. Throughout <span
+class="math inline">\(t=g^2=\hbar g_{\rm cl}^2\)</span> and <span
+class="math inline">\(b_0=11N/(48\pi^2)\)</span> for pure <span
+class="math inline">\(SU(N)\)</span>.</p>
+<h2 id="the-directional-defect-with-three-transverse-planes">1. The
+directional defect with three transverse planes</h2>
+<p>Fix a cut direction <span class="math inline">\(r\)</span> and write
+<span class="math inline">\(\Phi_\ell\)</span> for the column of the
+three transverse face fluxes. Let <span
+class="math inline">\(C_\perp(k)\)</span> be the transverse curl from
+three edges to these three faces, <span
+class="math inline">\((C_\perp\xi)_{jk}=d_j\xi_k-d_k\xi_j\)</span>,
+<span class="math inline">\(d_j=e^{ik_j}-1\)</span>. Use the geometric
+coarse heat times and put</p>
+<p><span class="math display">\[\begin{gathered}
+T=\operatorname{diag}_{j&lt;k,\ j,k\ne r}(t_{jk}),\quad
+E=\operatorname{diag}_{j\ne r}(t_{rj}),\quad \sigma=s(1-s),\\
+V_s=\sigma C_\perp E C_\perp^*,\quad R_s=2T+V_s,\quad
+\bar\Phi_\ell=(1-s)\Phi_\ell+s\Phi_{\ell+1}.
+\end{gathered}\]</span></p>
+<p>All matrices are per colour. For positive heat times <span
+class="math inline">\(R_s\ge2T&gt;0\)</span>, even though the curl has a
+kernel. The Gaussian bridge has covariance <span
+class="math inline">\(\sigma E\)</span>; convolution of its face curl
+with the mid-face weight replaces <span
+class="math inline">\(2T\)</span> by <span
+class="math inline">\(R_s\)</span>. Subtracting the reference coarse
+action gives, up to a flux-independent determinant,</p>
+<p><span class="math display">\[\begin{aligned}
+\mathcal D_r
+&amp;=\sum_{\ell,k}\left[
+\tfrac12\bar\Phi_\ell^*R_s^{-1}\bar\Phi_\ell
+       -\tfrac14\Phi_\ell^*T^{-1}\Phi_\ell\right]\\
+&amp;=-\tfrac12\sum_{\ell,k}\Phi_\ell^*
+       [(2T)^{-1}-R_s^{-1}]\Phi_\ell
+   -\tfrac\sigma2\sum_{\ell,k}(\Phi_{\ell+1}-\Phi_\ell)^*
+       R_s^{-1}(\Phi_{\ell+1}-\Phi_\ell)\le0.
+\end{aligned}\tag{2}\]</span></p>
+<p>The weighted parallelogram identity and periodicity prove the second
+line, without commuting <span class="math inline">\(T\)</span> and <span
+class="math inline">\(V_s\)</span>. For a single transverse plane this
+is precisely Prop. 2 / Cor. 2<span class="math inline">\(_s\)</span>. At
+constant flux, <span class="math inline">\(V_s(0)=0\)</span> and <span
+class="math inline">\(\Phi_{\ell+1}=\Phi_\ell\)</span>, so (2) vanishes
+exactly.</p>
+<p>Equation (2) gives each <em>reference</em> defect. The next
+elimination uses the whole effective quadratic form. This is implemented
+below by successive Schur complements, the Gaussian specialization of
+round 4’s (12).</p>
+<h2 id="the-composed-momentum-kernel">2. The composed momentum
+kernel</h2>
+<p>Use a periodic lattice whose side lengths are divisible by the total
+block factor; remove gauge and flat-link modes. Work at nonzero momentum
+on the exact flux subspace. Bulk limits below are taken first at each
+fixed block depth. With orthonormal oriented face components, define</p>
+<p><span class="math display">\[\begin{gathered}
+(d_1(k)A)_{\mu\nu}=d_\mu A_\nu-d_\nu A_\mu,
+\quad q(k)^2=\sum_\mu|d_\mu|^2,\\
+P(k)=\frac{d_1(k)d_1(k)^*}{q(k)^2},\qquad C_1(k)=tP(k).
+\end{gathered}\]</span></p>
+<p>The nonzero singular values of <span
+class="math inline">\(d_1\)</span> are <span
+class="math inline">\(q\)</span>, proving the projector formula. In
+particular <span
+class="math inline">\(P_{\mu\nu,\mu\nu}=(|d_\mu|^2+|d_\nu|^2)/q^2\)</span>.</p>
+<p><strong>Theorem 1 (four Schur complements, exact).</strong> Let <span
+class="math inline">\(\mathcal T_r\)</span> act on the current
+covariance by</p>
+<p><span class="math display">\[\begin{aligned}
+(\mathcal T_r C)(K)&amp;=\tfrac12\sum_{\epsilon=0}^1
+F_r(k^{\epsilon})C(k^{\epsilon})F_r(k^{\epsilon})^*,\\
+k^{\epsilon}_r&amp;=K_r/2+\pi\epsilon,\quad k^{\epsilon}_j=K_j\ (j\ne
+r),\\
+(F_r)_{\mu\nu,\mu\nu}(k)&amp;=
+\begin{cases}1+e^{ik_r},&amp;r\in\{\mu,\nu\},\\1,&amp;r\notin\{\mu,\nu\}.
+\end{cases}
+\end{aligned}\tag{3}\]</span></p>
+<p>At every stage the precision is the inverse covariance on its exact
+range. Equivalently, after writing the gauge-reduced action in retained
+variables <span class="math inline">\(x\)</span> and eliminated
+variables <span class="math inline">\(y\)</span>, its update is</p>
+<p><span class="math display">\[Q_{\rm
+next}=Q_{xx}-Q_{xy}Q_{yy}^{-1}Q_{yx}. \tag{4}\]</span></p>
+<p>After all four directions, in any order,</p>
+<p><span class="math display">\[\boxed{\begin{gathered}
+C_2(K)=\frac t{16}\sum_{\nu\in\{0,1\}^4}
+F(k_\nu)P(k_\nu)F(k_\nu)^*,\quad k_\nu=K/2+\pi\nu,\\
+F_{\mu\nu,\mu\nu}(k)=(1+e^{ik_\mu})(1+e^{ik_\nu}),\qquad
+Q_2(K)=\left.C_2(K)\right|_{\operatorname{im}d_1(K)}^{-1}.
+\end{gathered}} \tag{5}\]</span></p>
+<p>Here the alias multi-index in the sum is separate from face indices.
+If <span class="math inline">\(Q_2\)</span> is extended by zero off the
+exact range, the effective action is <span
+class="math inline">\(\tfrac12\sum_K\Phi(K)^*Q_2(K)\Phi(K)\)</span>, and
+the coarse link Hessian is <span
+class="math inline">\(d_1(K)^*Q_2(K)d_1(K)\)</span>. Formula (5) is an
+explicit lattice-momentum expression for the nested complements (4),
+retaining every generated quadratic interaction.</p>
+<p><em>Proof.</em> The factor <span class="math inline">\(1/2\)</span>
+in (3) is the squared unitary Fourier normalization for decimation in
+one direction. Stokes supplies its face factor. Gaussian pushforward
+gives <span class="math inline">\(BCB^*\)</span>; completing the square
+gives (4). The finite gauge-reduced integrals satisfy Fubini.
+Multiplying the directional factors and the four normalizations yields
+(5). All intermediate conditional precisions are positive on the
+integrated subspaces. <span class="math inline">\(\square\)</span></p>
+<p><strong>Constant-flux preservation at every intermediate
+step.</strong> Adjoin a harmonic background <span
+class="math inline">\(F_{\mu\nu}\)</span>, or use twisted affine
+boundary data, with its Maxwell action. On a lattice with side lengths
+<span class="math inline">\(a_\mu\)</span> the constant flux is <span
+class="math inline">\(\Phi_{\mu\nu}=a_\mu a_\nu F_{\mu\nu}\)</span> and
+<span class="math inline">\(t_{\mu\nu}=t a_\mu^2a_\nu^2/\prod_\rho
+a_\rho\)</span>. Consequently</p>
+<p><span
+class="math display">\[\frac12\sum_{x,\mu&lt;\nu}\frac{|\Phi_{\mu\nu}|^2}{t_{\mu\nu}}
+=\frac{V_{\rm phys}}{2t}\sum_{\mu&lt;\nu}|F_{\mu\nu}|^2.
+\tag{6}\]</span></p>
+<p>Constant fine flux is orthogonal in this action to every periodic
+exact fluctuation: the sum of a curl is zero. Blocking fixes its
+harmonic component. It is therefore the constrained minimizer for
+constant coarse data at every intermediate elimination, including those
+starting with a generated action. This proves (6) survives each of the
+four steps. For nonzero momenta, G1 gives the corresponding isotropic
+limit <span class="math inline">\(C_2(K)=t[P_{\rm cont}(\hat
+K)+O(K^2)]\)</span> in centred phases. Periodic exact forms alone have
+zero harmonic flux; (6) specifies the extension used to speak of a
+constant-flux coefficient.</p>
+<h2 id="iteration-an-explicit-sharp-blocking-obstruction">3. Iteration:
+an explicit sharp-blocking obstruction</h2>
+<p>After <span class="math inline">\(n\)</span> steps let <span
+class="math inline">\(b=2^n\)</span> and define</p>
+<p><span class="math display">\[\begin{gathered}
+s_b(z)=\sum_{j=0}^{b-1}e^{ijz},\quad
+F_b(k)_{\mu\nu,\mu\nu}=s_b(k_\mu)s_b(k_\nu),\\
+k_m=(K+2\pi m)/b,\quad m\in\{0,\ldots,b-1\}^4,\\
+C_b(K)=t b^{-4}\sum_m F_b(k_m)P(k_m)F_b(k_m)^*,\qquad
+Q_b=(C_b|_{\operatorname{im}d_1(K)})^{-1}. \tag{7}
+\end{gathered}\]</span></p>
+<p>Composition of sums along links proves (7) directly. Each finite
+<span class="math inline">\(b\)</span> has the same leading
+small-momentum coefficient <span class="math inline">\(t\)</span>, by
+G1.</p>
+<p><strong>Theorem 2 (growth with explicit constants).</strong> The
+covariance (7) satisfies (1). More generally, for <span
+class="math inline">\(K\in(-\pi,\pi]^4\)</span> with <span
+class="math inline">\(K_1\ne0\)</span>,</p>
+<p><span class="math display">\[C_b(K)_{12,12}/t\ \ge\
+\frac{b}{4\pi^2}|e^{iK_1}-1|^2. \tag{8}\]</span></p>
+<p>It therefore diverges on sets of positive momentum measure and in
+every <span class="math inline">\(L^p\)</span> operator norm, <span
+class="math inline">\(1\le p\le\infty\)</span>. No finite covariance
+limit exists in these norms. On the axis of (1), <span
+class="math inline">\(\|Q_b(K)\|\le12/[tb|e^{i\kappa}-1|^2]\)</span>, so
+uniform convergence to a nondegenerate precision also fails.</p>
+<p><em>Proof.</em> At <span
+class="math inline">\(K=(\kappa,0,0,0)\)</span> only <span
+class="math inline">\(m_2=0\)</span> survives in the 12 diagonal. Since
+<span class="math inline">\(s_b(0)=b\)</span> and <span
+class="math inline">\(|s_b(k_1)|^2|d_1(k_1)|^2=|e^{i\kappa}-1|^2\)</span>,</p>
+<p><span class="math display">\[C_b(K)_{12,12}/t
+=b^{-2}|e^{i\kappa}-1|^2
+\sum_{m_1,m_3,m_4}\frac1{q(k_m)^2}
+\ge b|e^{i\kappa}-1|^2/12.\]</span></p>
+<p>Here <span class="math inline">\(q^2\le12\)</span>, since <span
+class="math inline">\(k_2=0\)</span>. Off-diagonal entries among 12, 13,
+14 vanish: shared support forces the other two transverse momenta to
+zero, and their projector cross entry then vanishes. By transverse
+symmetry these three diagonal entries agree. They span the exact
+subspace on this axis, giving the precision bound.</p>
+<p>For (8), keep just the <span class="math inline">\(b^3\)</span>
+aliases with <span class="math inline">\(m_2=0\)</span> in the positive
+diagonal sum. Use <span class="math inline">\(P_{12,12}\ge
+|d_1|^2/q^2\)</span>, <span class="math inline">\(q^2\le16\)</span>,
+and</p>
+<p><span class="math display">\[|s_b(K_2/b)|
+=\frac{|\sin(K_2/2)|}{|\sin(K_2/(2b))|}\ge\frac{2b}{\pi},\]</span></p>
+<p>with its continuous value at <span
+class="math inline">\(K_2=0\)</span>. Cancellation of <span
+class="math inline">\(|d_1|^2\)</span> gives <span
+class="math inline">\(b^{-4}b^3|e^{iK_1}-1|^2(4b^2/\pi^2)/16\)</span>,
+which is (8). For example on <span class="math inline">\(\pi/2\le
+K_1\le\pi\)</span>, the bound is <span
+class="math inline">\(tb/(2\pi^2)\)</span>; this set has normalized
+Brillouin measure <span class="math inline">\(1/4\)</span>. Thus <span
+class="math inline">\(\|C_b\|_{L^p}\ge tb(1/4)^{1/p}/(2\pi^2)\)</span>,
+with exponent zero for <span class="math inline">\(p=\infty\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p>This calculation identifies the ultraviolet boundary fluctuations of
+a sharp plaquette surface. It also shows why G1’s remainder constants
+cannot be uniform in <span class="math inline">\(b\)</span>. Taking
+<span class="math inline">\(K\to0\)</span> first keeps the Maxwell
+coefficient; taking <span class="math inline">\(b\to\infty\)</span> at
+fixed nonzero axial <span class="math inline">\(K\)</span> sends the
+precision to zero. A topology which controls a finite nondegenerate
+propagator and its inverse cannot supply the proposed fixed point.
+Possible degenerate precision limits alone would be insufficient for
+one-loop determinant continuity.</p>
+<p><strong>Relation to the cited fixed points.</strong> Bell–Wilson’s <a
+href="https://doi.org/10.1103/PhysRevB.11.3431">finite-lattice Gaussian
+RG</a> (metadata and abstract checked) supplies the general framework.
+Bietenholz–Wiese’s <a href="https://arxiv.org/pdf/hep-lat/9510026">§3,
+equations (3.1)–(3.6)</a> (passage; DOI <a
+href="https://doi.org/10.1016/0550-3213(95)00678-8">verified</a>)
+averages the continuum gauge field over adjoining hypercubes, with form
+factor <span class="math inline">\(\Pi_\mu(p)=(\widehat
+p_\mu/p_\mu)\prod_\rho (\widehat p_\rho/p_\rho)\)</span>. Their delta
+constraint fixes this spatial average exactly. Sending the constraint’s
+Gaussian width to zero retains the transverse averaging. Our link
+product samples a sharp line, and (7) has no such transverse factors.
+The distinction explains why that delta limit supplies no convergence
+theorem for (7).</p>
+<h2 id="a-one-loop-continuity-theorem-with-the-necessary-norm">4. A
+one-loop continuity theorem with the necessary norm</h2>
+<p>Let <span class="math inline">\(\mathcal K_n\)</span> denote the full
+dimensionless action shape, including vertices and any one-loop local
+terms, and <span class="math inline">\(\zeta_n\)</span> its anisotropy.
+At isotropic endpoints <span class="math inline">\(\zeta_n=1\)</span>.
+Fix the common background scheme of round 4. In that scheme, the weakest
+scalar boundedness requirement is <span
+class="math inline">\(\sup_n|c(\zeta_n,\mathcal
+K_n)|&lt;\infty\)</span>; compactness of all action parameters is
+stronger than necessary. For the average rate even this can be relaxed
+to sublinear endpoint differences (Theorem 4).</p>
+<p>Here is a useful sufficient condition directly on the determinant.
+Introduce a common infrared regulator and finite volume, remove zero
+modes consistently, and normalize a smooth external background <span
+class="math inline">\(\epsilon\mathcal B\)</span> so its classical
+action per volume is <span class="math inline">\(u\epsilon^2/2\)</span>.
+All background differentiation below is at fixed regulator, boundary
+prescription and lattice. Write the positive vector and ghost Hessians
+as</p>
+<p><span class="math display">\[H_{j,n}(\epsilon)=H_{j,n}+\epsilon
+V_{j,n}
+                  +\epsilon^2 W_{j,n}+O(\epsilon^3),\quad
+j=1,0.\]</span></p>
+<p>These are full operators, allowing momentum transfer by the
+background. Define their relative jets</p>
+<p><span
+class="math display">\[A_{j,n}=H_{j,n}^{-1/2}V_{j,n}H_{j,n}^{-1/2},\qquad
+E_{j,n}=H_{j,n}^{-1/2}W_{j,n}H_{j,n}^{-1/2}. \tag{9}\]</span></p>
+<p>Use trace per lattice volume <span
+class="math inline">\(\tau\)</span>. Set <span
+class="math inline">\(\|X\|_{1,\tau}=\tau|X|\)</span> and <span
+class="math inline">\(\|X\|_{2,\tau}^2=\tau(X^*X)\)</span>; these
+include colour and vector indices. Let <span
+class="math inline">\(m_n\)</span> contain the measure, constraint
+Jacobian and explicitly supplied local contributions in this
+normalization.</p>
+<p><strong>Theorem 3 (regulated background determinant).</strong> Its
+inverse-coupling coefficient is</p>
+<p><span class="math display">\[c_n^{\rm
+reg}=\tau\left(E_{1,n}-\tfrac12A_{1,n}^2
+                       -2E_{0,n}+A_{0,n}^2\right)+m_n.
+\tag{10}\]</span></p>
+<p>If uniformly in <span class="math inline">\(n\)</span>, <span
+class="math inline">\(\|E_{j,n}\|_{1,\tau}\le M_{E,j}\)</span>, <span
+class="math inline">\(\|A_{j,n}\|_{2,\tau}\le M_{A,j}\)</span> and <span
+class="math inline">\(|m_n|\le M_m\)</span>, then</p>
+<p><span class="math display">\[|c_n^{\rm reg}|\le
+M_{E,1}+\tfrac12M_{A,1}^2
+                      +2M_{E,0}+M_{A,0}^2+M_m. \tag{11}\]</span></p>
+<p>Convergence of <span class="math inline">\(E_j\)</span> in trace
+norm, <span class="math inline">\(A_j\)</span> in this Hilbert–Schmidt
+norm, and <span class="math inline">\(m_n\)</span> implies convergence
+of <span class="math inline">\(c_n^{\rm reg}\)</span>. Explicitly, for
+two shapes <span class="math inline">\(n,l\)</span>,</p>
+<p><span class="math display">\[\begin{aligned}
+|c_n^{\rm reg}-c_l^{\rm reg}|\le{}&amp;
+\|E_{1,n}-E_{1,l}\|_{1,\tau}
++\tfrac12(\|A_{1,n}\|_{2,\tau}+\|A_{1,l}\|_{2,\tau})
+          \|A_{1,n}-A_{1,l}\|_{2,\tau}\\
+&amp;+2\|E_{0,n}-E_{0,l}\|_{1,\tau}
++(\|A_{0,n}\|_{2,\tau}+\|A_{0,l}\|_{2,\tau})
+          \|A_{0,n}-A_{0,l}\|_{2,\tau}+|m_n-m_l|.
+\end{aligned}\tag{12}\]</span></p>
+<p><em>Proof.</em> Expand <span
+class="math inline">\(\operatorname{Tr}\log H(\epsilon)\)</span>: its
+<span class="math inline">\(\epsilon^2\)</span> coefficient is <span
+class="math inline">\(\operatorname{Tr}(H^{-1}W-\tfrac12H^{-1}VH^{-1}V)\)</span>.
+Use <span class="math inline">\(\Gamma_1=\tfrac12\log\det H_1-\log\det
+H_0\)</span> and multiply by 2 to extract the coefficient of <span
+class="math inline">\(u\epsilon^2/2\)</span>. Cyclicity proves (10).
+Trace Hölder and <span
+class="math inline">\(|\tau(A^2-B^2)|\le(\|A\|_{2,\tau}+\|B\|_{2,\tau})
+\|A-B\|_{2,\tau}\)</span> prove (11)–(12). <span
+class="math inline">\(\square\)</span></p>
+<p>For example, a family of background quadratic operators with <span
+class="math inline">\(H_j\ge\gamma I\)</span>, <span
+class="math inline">\(\|V_j\|\le v_j\)</span>, <span
+class="math inline">\(\|W_j\|\le w_j\)</span>, and <span
+class="math inline">\(d_j\)</span> components per site obeys (11) with
+<span class="math inline">\(M_{E,j}=d_jw_j/\gamma\)</span> and <span
+class="math inline">\(M_{A,j}=\sqrt{d_j}v_j/\gamma\)</span>. In four
+dimensions <span class="math inline">\(d_1=4(N^2-1)\)</span> and <span
+class="math inline">\(d_0=N^2-1\)</span> (32 and 8 for <span
+class="math inline">\(SU(3)\)</span>). Operator-norm convergence of
+these three jets with the same positive <span
+class="math inline">\(\gamma\)</span> proves convergence at fixed
+regulator. This is an actual continuity theorem for a specified
+Gaussian-plus-background family. The positive bridge mass in a single
+pristine elimination provides such fixed-step control. Maintaining it
+and the jet bounds after arbitrarily many generated eliminations is a
+further requirement.</p>
+<p><strong>Removing regulators and extracting <span
+class="math inline">\(F^2\)</span>.</strong> In the massless problem the
+individual terms in (11) can diverge with the regulator. Let <span
+class="math inline">\(\mathcal J_n(k;\rho)\)</span> be the combined
+vector, ghost and measure integrand for the <span
+class="math inline">\(F^2\)</span> coefficient, with the same continuum
+infrared subtraction at every <span class="math inline">\(n\)</span>.
+Here <span class="math inline">\(\rho\)</span> collectively denotes the
+infrared and external-momentum regulators; the bulk limit is already
+taken. Assume the background Ward identities and the extraction of this
+integrand, including the external-momentum derivatives, are valid.
+Write</p>
+<p><span class="math display">\[c_n=c_{\rm ref}+\lim_{\rho\to0}
+       \int_{\mathcal B_4}\mathcal J_n(k;\rho)\,
+                         \frac{d^4k}{(2\pi)^4}. \tag{13}\]</span></p>
+<p>The concrete sufficient boundedness condition is</p>
+<p><span class="math display">\[\sup_{n,\rho}\int|\mathcal
+J_n(k;\rho)|\,
+             \frac{d^4k}{(2\pi)^4}\le M, \tag{14}\]</span></p>
+<p>together with existence of each limit in (13). It gives <span
+class="math inline">\(|c_n|\le |c_{\rm ref}|+M\)</span>. A common
+integrable envelope, pointwise regulator limits and convergence of <span
+class="math inline">\(\mathcal J_n\)</span> to a limit uniformly in
+<span class="math inline">\(\rho\)</span> in <span
+class="math inline">\(L^1\)</span> imply <span
+class="math inline">\(c_n\to c_*\)</span> by dominated convergence.
+Condition (14) permits cancellations within the combined integrand and
+is weaker than bounding every unrenormalized jet norm. Bounded scalar
+integrals can also occur without (14); we claim (14) as a sufficient
+analytic criterion, not a necessary one.</p>
+<p>At the background level, Schur complements give an additional exact
+finite-depth identity:</p>
+<p><span class="math display">\[\Gamma_1[H]=\Gamma_1[H_{yy}]
+                    +\Gamma_1[H/H_{yy}], \tag{15}\]</span></p>
+<p>separately for vectors and ghosts with their stated weights, and with
+any measure terms retained. Differentiate this determinant identity
+twice before removing regulators. All four updated Hessians compose
+exactly. Equation (15) controls bookkeeping through Gaussian background
+elimination; it supplies no depth-uniform estimate for (14). Sharp
+blocking’s Theorem 2 obstructs an argument based just on convergence to
+a uniformly invertible zero-background kernel.</p>
+<h2 id="the-generated-vertices-that-still-need-control">5. The generated
+vertices that still need control</h2>
+<p>In (9), <span class="math inline">\(V\)</span> contains the vertex
+with two quantum legs and one external background leg; <span
+class="math inline">\(W\)</span> contains two quantum and two background
+legs. Thus (10) contains the cubic bubble and quartic tadpole, as well
+as the ghost and measure terms. For a spatially varying background the
+products in (10) are operator products. Their momentum expansion
+includes the orbital terms that a pointwise matrix determinant would
+miss.</p>
+<p>At one loop higher tree vertices cannot enter the term with two
+external legs: the loop and leg counts force either two cubic vertices
+or one quartic vertex. Generated one-loop two-leg terms must be carried
+explicitly in <span class="math inline">\(m_n\)</span>. A sufficient
+missing estimate is control of (9) in the norms of Theorem 3 after the
+common subtraction, or directly (14), <strong>uniform in depth and
+volume and through the external-momentum/infrared limits</strong>. This
+includes bounds for the external derivatives selecting <span
+class="math inline">\(F^2\)</span>, the ghost vertices and the
+background dependence of the blocking constraint. Ward identities fix
+the allowed leading structure; the finite integrals need this additional
+quantitative estimate.</p>
+<p>The freedom left by the quadratic kernel is concrete. In local
+near-identity plaquette coordinates <span class="math inline">\(X_p=\log
+U_p\)</span>, the gauge-invariant term <span
+class="math inline">\(\eta\sum_p|X_p|^4\)</span> has zero quadratic and
+cubic part at the trivial field. Around <span
+class="math inline">\(X=\epsilon B+f\)</span>, its quadratic fluctuation
+part at order <span class="math inline">\(\epsilon^2\)</span> is</p>
+<p><span class="math display">\[\eta\epsilon^2\bigl(2|B|^2|f|^2+4\langle
+B,f\rangle^2\bigr). \tag{16}\]</span></p>
+<p>For <span class="math inline">\(\eta&gt;0\)</span> this gives a
+positive nonzero Gaussian tadpole. One can vary <span
+class="math inline">\(\eta\)</span> while preserving the zero-field
+quadratic kernel exactly. Smooth gauge-invariant continuations away from
+the identity have the same Taylor coefficients. This demonstrates why
+kernel convergence, even if supplied by a different blocking, needs a
+controlled background completion before it implies continuity of <span
+class="math inline">\(c\)</span>. Equation (16) describes allowed action
+shapes; it makes no claim that this particular <span
+class="math inline">\(\eta_n\)</span> is generated along our
+trajectory.</p>
+<p>Theorem 2 likewise establishes neither boundedness nor growth of
+<span class="math inline">\(c_n\)</span>: vector/ghost/vertex
+cancellations could still control (14) despite a divergent sharp-flux
+covariance. Estimating that combined quantity, or modifying the
+observables to a spatially averaged blocking and proving its vertex
+estimates, are the two concrete next routes.</p>
+<h2 id="average-running-and-finite-scale-matching">6. Average running
+and finite scale matching</h2>
+<p><strong>Theorem 4 (conditional average, with remainder).</strong>
+Consider <span class="math inline">\(n\)</span> isotropic coarsenings,
+retaining the full generated actions. Assume round 4’s
+background-matching hypotheses at each step, including no extra massless
+modes and the common definition of the coupling. Put <span
+class="math inline">\(c_k=c(\zeta_k,\mathcal K_k)\)</span> and
+assume</p>
+<p><span class="math display">\[u_{k+1}-u_k=-2b_0\log2+c_k-c_{k+1}+r_k,
+\qquad |r_k|\le A t_k \tag{17}\]</span></p>
+<p>with a common finite <span class="math inline">\(A\)</span>. Then</p>
+<p><span class="math display">\[\left|\frac{u_n-u_0}{n}+2b_0\log2\right|
+\le\frac{|c_0-c_n|}{n}+\frac A n\sum_{k&lt;n}t_k. \tag{18}\]</span></p>
+<p>In particular, <span class="math inline">\(|c_0-c_n|=o(n)\)</span>
+and <span class="math inline">\(\sum_{k&lt;n}t_k=o(n)\)</span> imply the
+universal average. Bounded <span class="math inline">\(|c_k|\le
+C\)</span> gives <span class="math inline">\(2C/n\)</span> for the first
+term; boundedness is sufficient and strictly stronger than sublinear
+growth. Formal one-loop truncation sets <span
+class="math inline">\(r_k=0\)</span>.</p>
+<p>For an explicit weak-coupling remainder bound, assume a family of
+trajectories with increasingly fine initial lattices and</p>
+<p><span class="math display">\[t_k\le\frac1{U+\alpha(n-k)},\qquad
+U&gt;0,\quad\alpha&gt;0,\quad 0\le k&lt;n, \tag{19}\]</span></p>
+<p>where <span class="math inline">\(U,\alpha,A\)</span> are independent
+of <span class="math inline">\(n\)</span>. Then</p>
+<p><span
+class="math display">\[\sum_{k&lt;n}t_k\le\frac1\alpha\log(1+\alpha
+n/U),\qquad
+\left|\frac{u_n-u_0}{n}+2b_0\log2\right|
+\le\frac{2C}{n}+\frac A{\alpha n}\log(1+\alpha n/U).
+\tag{20}\]</span></p>
+<p><em>Proof.</em> Sum (17); all intermediate <span
+class="math inline">\(c_k\)</span> cancel. For (20), bound the
+decreasing sum <span class="math inline">\(\sum_{j=1}^n(U+\alpha
+j)^{-1}\)</span> by its integral from 0 to <span
+class="math inline">\(n\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>For <span class="math inline">\(SU(3)\)</span>, <span
+class="math inline">\(2b_0=11/(8\pi^2)\)</span>, so the average is <span
+class="math inline">\(-11\log2/(8\pi^2)\)</span>. At leading matched
+one-loop order the expected value of <span
+class="math inline">\(\alpha\)</span> is <span
+class="math inline">\(2b_0\log2\)</span>; (19) is an explicit extra
+hypothesis for controlling the remainders. An infinite coarsening from a
+fixed initial coupling eventually leaves weak coupling. The limit in
+(20) uses trajectories with increasingly weak initial coupling and a
+weak final endpoint, as in the many-steps remark. If the initial shapes
+also vary, the requirement is the endpoint difference in (18), rather
+than a statement about <span class="math inline">\(c_n\)</span> alone.
+No running approximation is used to prove the bound that is supposed to
+justify it.</p>
+<p>Finally, <span class="math inline">\(u_B=u_A+d\)</span> at the same
+scale gives <span
+class="math inline">\(\Lambda_B/\Lambda_A=e^{-d/(2b_0)}\)</span> at one
+loop. For <span class="math inline">\(u_{\rm matched}=u+c_n\)</span>,
+this reads <span class="math inline">\(\Lambda_{\rm
+matched}/\Lambda_{\rm bare,n}=e^{-c_n/(2b_0)}\)</span>. Thus a bounded
+matching family has finite scale ratios in <span
+class="math inline">\([e^{-C/(2b_0)},e^{C/(2b_0)}]\)</span>. This is the
+action-shape version of the finite <span
+class="math inline">\(\Lambda\)</span> matching in the zero-spacing
+note. Defining the matched coupling absorbs the endpoint terms by
+definition; identifying the bare blocked coupling’s average still
+requires (18).</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Cell 4 now has exact four-direction Gaussian composition, preserved
+constant-flux normalization, and a quantified sharp-blocking shape
+obstruction. The next estimate is (14) for the generated background
+vertices, with the common subtraction and its limits controlled, or a
+replacement spatially averaged blocking with those estimates. The
+average rate follows conditionally from (18); the present calculation
+leaves endpoint matching and interacting remainder control open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

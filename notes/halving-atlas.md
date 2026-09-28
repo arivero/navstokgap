@@ -203,8 +203,8 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.
-4. $1+3$: [formal anisotropic one-step integrals and conditional logarithm](four-dimensional-parallel-log.md); the massive mid-space sums are infrared regular.
-   Open: composition with generated interactions and finite endpoint matching; equal endpoint schemes give $-2b_0\log2$ analytically (refereed; $c=o(n)$ suffices for the average rate). The Gaussian tree-level coupling is exactly preserved by every step ([G1](gaussian-blocking-coupling.md)).
+4. $1+3$: [round 6](four-dimensional-composition.md) composes the Gaussian kernel exactly with fixed constant-flux coefficient; sharp covariance grows at least as $2^n$ (proved, unrefereed; [G1](gaussian-blocking-coupling.md) refereed).
+   Open: its (14), uniform subtracted cubic/quartic contractions; sublinear endpoint matching and remainder sum give the average $-2b_0\log2$ (conditional Theorem 4; [one-step shifts](four-dimensional-parallel-log.md) refereed).
 5. Time-only halving. *Structural reading, 2026-09-27, of known results.*
    At fixed spatial lattice the electric faces make the series moves:
    heat-kernel electric weights are a semigroup in the time step, so they

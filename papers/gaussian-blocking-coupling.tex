@@ -14,137 +14,154 @@
 \section{Gaussian product blocking: the tree-level coupling never
 moves}\label{gaussian-product-blocking-the-tree-level-coupling-never-moves}}
 
-\textbf{Result, 2026-09-28 (Claude; written derivation, to be
-refereed).} For the free (Gaussian) lattice gauge field in \(D\)
-dimensions with heat time \(t\), one isotropic product-blocking step
-\(a\mapsto2a\) maps the law of the fluxes to a Gaussian law whose
-covariance at small coarse momentum \(K\) is
+\textbf{After refereeing (GPT-6 Astra), 2026-09-28.} G1:
+\textbf{REFINE}, with corrections applied below. The alias sum, its
+normalization, the \(n=0\) contribution and the closedness/projector
+argument are \textbf{ACCEPT}. Iteration is \textbf{REFINE}: the
+covariance must be bounded near nonzero aliases; the centred \(O(K^2)\)
+conclusion requires that order for the input. Constants may grow with
+iteration depth. Each unstaggered index pair uses a staggered index
+outside that pair; the witnesses may differ between pairs. The harmonic
+mode is separate from \(K\to0\). The sharp-blocking caution is
+\textbf{ACCEPT}: the \href{four-dimensional-composition.md}{composition
+note}, Theorem 2, proves an explicit divergent covariance bound. Its §3
+checks that the delta constraint in Bietenholz--Wiese retains spatial
+averaging.
 
-\[C'(K)=2^{4-D}\,t\,\bigl[P_{\rm cont}(\hat K)+O(K)\bigr]\]
+\textbf{Result, 2026-09-28 (Claude; G1 refereed with refinements
+above).} For the free lattice gauge field in \(D\) dimensions with heat
+time \(t\), one isotropic product-blocking step \(a\mapsto2a\) gives
 
-on exact 2-forms, with \(O(K^2)\) in plaquette-centred phase conventions
-(Theorem G1): the zero-momentum coefficient is exactly the heat time
-\(\lambda_D(2a)^{4-D}\) of the coarse lattice. The statement holds for
-any input covariance supported on exact 2-forms with the same
-small-momentum form, so it iterates: along any number of steps, and for
-the four directional halvings of one step in any order (Fubini), the
-tree-level coupling of the Gaussian part is preserved exactly. In
-\(1+3\) it does not run at all.
+\[C'(K)=2^{4-D}t\,[P_{\rm cont}(\hat K)+O(K)]\]
 
-\textbf{Consequence for cell 4} (the
-\href{four-dimensional-parallel-log.md}{four-dimensional note}, (15) and
-the Remark after its telescoping paragraph). The endpoint term
-\(c_{\rm in}-c_{\rm out}\) receives nothing from the zero-momentum part
-of the Gaussian kernel. It arises only from the dependence of the
-one-loop determinant on the kernel's shape (its \(O(K^2)\) and higher
-terms) and from the generated cubic and quartic vertices. Along an
-iteration the shape may drift; the average rate \(-2b_0\log2\) per step
-needs only \(c(\zeta_n,\mathcal K_n)=o(n)\), so even a logarithmic drift
-of shape parameters would be harmless.
+on exact 2-forms, with \(O(K^2)\) in plaquette-centred conventions for
+the nearest-plaquette input (Theorem G1). The coefficient is exactly
+\(\lambda_D(2a)^{4-D}\). The statement holds for positive input
+covariances supported on exact forms, bounded near nonzero aliases, with
+the same small-momentum expansion. It iterates at every finite depth.
+The four directional integrations compose by Fubini, preserving the
+tree-level coupling in the geometric heat-time normalization. In
+\(1+3\), \(t\) stays fixed.
 
-\textbf{Caution.} Convergence of the full kernel under iterated sharp
-product blocking is not claimed. Product blocking makes coarse fluxes
-the fluxes of the fine field through sharp surfaces, whose variances in
-the continuum carry boundary (perimeter-type) divergences; the
-perfect-action literature smears the blocking to obtain a local fixed
-point (\href{https://doi.org/10.1103/PhysRevB.11.3431}{Bell and Wilson
-1975}; for gauge fields
-\href{https://doi.org/10.1016/0550-3213(95)00678-8}{Bietenholz and Wiese
-1996}; metadata).
+\textbf{Consequence for cell 4.} In (15) and the many-steps remark of
+the \href{four-dimensional-parallel-log.md}{four-dimensional note}, the
+Gaussian zero-momentum normalization introduces no matching shift. The
+one-loop endpoint term depends on the full shape and its non-abelian
+background completion, including generated cubic and quartic vertices.
+The average rate needs \(c_n=o(n)\); logarithmic growth of \(c_n\)
+suffices. Growth of shape parameters needs a separate estimate relating
+it to \(c_n\).
+
+\textbf{Caution.} Sharp product blocking retains fluxes through sharp
+surfaces. Their ultraviolet boundary fluctuations obstruct a finite
+nondegenerate covariance fixed point (composition note, Theorem 2).
+\href{https://doi.org/10.1103/PhysRevB.11.3431}{Bell--Wilson 1975}
+(metadata and abstract) supplies the Gaussian fixed-point framework.
+\href{https://doi.org/10.1016/0550-3213(95)00678-8}{Bietenholz--Wiese
+1996} (§3, equations (3.1)--(3.6), passage) uses spatially averaged
+gauge variables even with an exact delta constraint. These are distinct
+choices of blocking map.
 
 \hypertarget{setting}{%
 \subsection{1. Setting}\label{setting}}
 
-Take \(G=\mathbb R\) (colour components decouple in the Gaussian theory)
-on a periodic lattice of spacing \(a\), link variables \(A\), fluxes
-\(\phi=dA\) and weight \(\prod_pe^{-\phi_p^2/(2t)}\). Modulo gauge,
-\(\phi\) ranges over the exact 2-forms, with the flat Gaussian density
-there, so its covariance is \(tP\), where \(P(k)\) is the orthogonal
-projector onto exact 2-forms at lattice momentum \(k\) (\(k\ne0\); the
-harmonic sector at \(k=0\) is set aside). Product blocking sets the
-coarse link to the sum of the two fine links along it; by Stokes the
-coarse flux through a coarse plaquette in the plane \((\mu\nu)\) is the
-sum of the four fine fluxes inside it,
-\((B\phi)_{\mu\nu}(X)=\sum_{a,b\in\{0,1\}}\phi_{\mu\nu}(2X+ae_\mu+be_\nu)\).
-This is the Gaussian case of the pushforward of Proposition 1 of the
-\href{series-parallel-gauge-refinement.md}{series/parallel note},
-composed over the \(D\) directions.
+Take \(G=\mathbb R\) (colour components decouple) on a periodic lattice
+of spacing \(a\), link variables \(A\), fluxes \(\phi=dA\) and weight
+\(\prod_p e^{-\phi_p^2/(2t)}\). After gauge reduction the flux
+covariance is \(tP(k)\), the orthogonal projector onto exact 2-forms for
+\(k\ne0\). The harmonic sector is set aside. Here zero-momentum
+coefficient means the limit through nonzero momenta after the bulk
+limit; one may also adjoin a constant harmonic background with its
+Maxwell action.
 
-\hypertarget{theorem-g1-and-its-proof}{%
-\subsection{2. Theorem G1 and its
-proof}\label{theorem-g1-and-its-proof}}
+Product blocking sums the two fine links along each coarse link. Stokes
+gives
 
-\emph{The alias sum.} With unitary Fourier transforms on the fine and
-coarse tori, the coarse momenta \(K\in(-\pi,\pi]^D\) (units \(1/2a\))
-receive the \(2^D\) fine momenta \(k_n=K/2+\pi n\), \(n\in\{0,1\}^D\),
-and
+\[(B\phi)_{\mu\nu}(X)=\sum_{a,b\in\{0,1\}}
+ \phi_{\mu\nu}(2X+ae_\mu+be_\nu).\]
 
-\[(B\phi)^\wedge_{\mu\nu}(K)=2^{-D/2}\sum_nf_{\mu\nu}(k_n)\,\hat\phi_{\mu\nu}(k_n),\qquad
-f_{\mu\nu}(k)=(1+e^{ik_\mu})(1+e^{ik_\nu}).\]
+This composes the Gaussian pushforwards of Proposition 1 of the
+\href{series-parallel-gauge-refinement.md}{series/parallel note}.
 
-Hence the coarse covariance is
-\(C'(K)_{\mu\nu,\rho\sigma}=2^{-D}\,t\sum_nf_{\mu\nu}(k_n)\overline{f_{\rho\sigma}(k_n)}\,P(k_n)_{\mu\nu,\rho\sigma}\).
+\hypertarget{theorem-g1-and-proof}{%
+\subsection{2. Theorem G1 and proof}\label{theorem-g1-and-proof}}
 
-\emph{The term \(n=0\).}
-\(|f_{\mu\nu}(K/2)|^2=16\cos^2(K_\mu/4)\cos^2(K_\nu/4)=16(1+O(K^2))\),
-and the lattice projector satisfies \(P(k)=P_{\rm cont}(\hat k)+O(k)\),
-homogeneous of degree zero in the direction \(\hat k\); the \(O(k)\) is
-a diagonal phase, and with plaquette-centred conventions (symbols
-\(2\sin(k_j/2)\)) the error is \(O(k^2)\). So the \(n=0\) term is
-\(2^{4-D}t\,[P_{\rm cont}(\hat K)+O(K)]\).
+\emph{Alias sum.} With unitary Fourier transforms, \(k_n=K/2+\pi n\),
+\(n\in\{0,1\}^D\), and
 
-\emph{The terms \(n\ne0\).} If \(n_\mu=1\) or \(n_\nu=1\), then
-\(1+e^{i(\pi+K_\mu/2)}=1-e^{iK_\mu/2}=O(K)\), so
-\(f_{\mu\nu}(k_n)=O(K)\): a term whose two form factors are both
-\(O(K)\) is \(O(K^2)\), and a mixed term with an \(O(1)\) partner is
-covered by the closedness bound below. If \(n_\mu=n_\nu=0\) but
-\(n_\lambda=1\) for some \(\lambda\notin\{\mu,\nu\}\), use closedness:
-exact forms are closed, and the \((\mu\nu\lambda)\) component of
-\(d\phi\) at \(k_n\) reads
-\(d_\mu\hat\phi_{\nu\lambda}-d_\nu\hat\phi_{\mu\lambda}+d_\lambda\hat\phi_{\mu\nu}=0\)
-with \(d_j=e^{ik_j}-1\), where \(d_\mu,d_\nu=O(K)\) and
-\(d_\lambda=-2+O(K)\). So on the range of \(P(k_n)\) the component
-\(\hat\phi_{\mu\nu}\) is \(O(K)\) times the others. Since \(P\) is an
-orthogonal projector,
-\(\|Pe_{\mu\nu}\|^2=(Pe_{\mu\nu})_{\mu\nu}=O(K)\|Pe_{\mu\nu}\|\), so
-\(\|P(k_n)e_{\mu\nu}\|=O(K)\). An entry
-\(P_{\mu\nu,\rho\sigma}=\langle Pe_{\mu\nu},Pe_{\rho\sigma}\rangle\) is
-then \(O(K)\) times \(\|Pe_{\rho\sigma}\|\), which is itself \(O(K)\)
-when \(n_\rho=n_\sigma=0\) (the same \(\lambda\) serves), while
-otherwise \(f_{\rho\sigma}(k_n)=O(K)\) supplies the second factor. Every
-term with \(n\ne0\) is \(O(K^2)\). \(\square\)
+\[\begin{aligned}
+ (B\phi)^\wedge_{\mu\nu}(K)
+ &=2^{-D/2}\sum_n f_{\mu\nu}(k_n)\hat\phi_{\mu\nu}(k_n),\\
+ f_{\mu\nu}(k)&=(1+e^{ik_\mu})(1+e^{ik_\nu}),\\
+ C'(K)&=2^{-D}t\sum_n F(k_n)P(k_n)F(k_n)^*,
+ \quad F=\operatorname{diag}f.
+\end{aligned}\]
 
-\emph{Iteration.} The proof used only that the input covariance is
-supported on exact 2-forms (for closedness at \(k_n\)) and has the form
-\(t[P_{\rm cont}+O(k)]\) at small \(k\) (for the \(n=0\) term). The
-output has both properties, so by induction every step multiplies the
-zero-momentum heat time by exactly \(2^{4-D}\). The four directional
-Gaussian integrations of one step compose, in any order, to the
-isotropic one (Fubini), so the exact directional defects of Proposition
-2 and Corollary 2\(_s\) compose to a kernel with the same zero-momentum
-coefficient; this is the free-field statement that their defects vanish
-at zero momentum and constant flux.
+\emph{The term \(n=0\).} Here
+\(|f_{\mu\nu}(K/2)|^2=16\cos^2(K_\mu/4)\cos^2(K_\nu/4)\). The lattice
+projector is \(P_{\rm cont}(\hat K)+O(K)\). With the phases at plaquette
+centres, the curl uses \(2\sin(k_j/2)\), the block factors become
+\(4\cos(K_\mu/4)\cos(K_\nu/4)\), and the error is \(O(K^2)\). The
+contribution is therefore \(2^{4-D}t[P_{\rm cont}(\hat K)+O(K^2)]\) in
+this convention.
+
+\emph{Staggered terms.} If either \(n_\mu\) or \(n_\nu\) is 1, the
+corresponding factor in \(f_{\mu\nu}\) is \(O(K)\). If both are zero,
+choose \(n_\lambda=1\) outside the pair. On the exact subspace,
+closedness gives
+
+\[d_\lambda\phi_{\mu\nu}
+ =d_\nu\phi_{\mu\lambda}-d_\mu\phi_{\nu\lambda},
+ \qquad d_j=e^{ik_j}-1.\]
+
+For \(|K|\le1\), its component functional has norm at most
+\(|K|/(4\cos(1/4))\le |K|/2\). Equivalently, applying the inequality to
+\(Pe_{\mu\nu}\) and using
+\(\langle e_{\mu\nu},Pe_{\mu\nu}\rangle=\|Pe_{\mu\nu}\|^2\) gives
+\(\|Pe_{\mu\nu}\|\le |K|/2\). When both form factors are unsuppressed,
+use this bound twice in
+\(P_{\mu\nu,\rho\sigma}=\langle Pe_{\mu\nu},Pe_{\rho\sigma}\rangle\);
+each pair may choose its own staggered witness. When a form factor is
+suppressed it supplies the corresponding power. Every contribution is
+\(O(K^2)\).
+
+More explicitly, put \(m=\binom D2\). The columns give
+\(\|PF^*\|\le2\sqrt m|K|\). For a general covariance \(C=PCP\) with
+\(\|C\|\le M\) near the nonzero aliases, their total contribution has
+operator norm at most
+
+\[2^{-D}(2^D-1)4mM|K|^2.\]
+
+\emph{Iteration.} Assume in addition
+\(C(k)=t[P_{\rm cont}(\hat k)+O(k)]\) at the origin (or the centred
+\(O(k^2)\) version for that stronger conclusion). The preceding bound
+handles the nonzero aliases, and the small-momentum hypothesis handles
+\(n=0\). The output retains exact support by Stokes and is bounded away
+from the origin. Hence induction multiplies \(t\) by \(2^{4-D}\) at each
+finite step. The nearest-plaquette input and all its finite iterates
+have the centred \(O(k^2)\) property. The remainder constants need no
+bound uniform in iteration depth for this conclusion.
+
+Fubini composes the directional integrations. Their constant-flux
+coefficient agrees with the reference geometric heat times; the matrix
+defect and the full composed kernel are given in Theorem 1 of the
+composition note. \(\square\)
 
 \hypertarget{what-the-theorem-leaves-to-the-interacting-theory}{%
 \subsection{3. What the theorem leaves to the interacting
 theory}\label{what-the-theorem-leaves-to-the-interacting-theory}}
 
-In the abelian theory the coupling has no loop corrections, and G1 is
-the whole story at zero momentum. In the non-abelian theory the one-loop
-matching coefficient \(c(\zeta,\mathcal K)\) of (15) depends on the full
-kernel, and G1 localizes the obstruction: the finite endpoint term comes
-from how the loop integrals feel the shape of the generated quadratic
-kernel and from the generated vertices, never from a drift of the
-tree-level coupling. Whether the shape parameters stay bounded, or drift
-slowly, under the iteration is the question that the Remark (many steps)
-of the four-dimensional note needs answered only in the weak form
-\(o(n)\).
+The abelian Gaussian has no loop correction to the coupling. In a
+non-abelian background the determinant depends on its background
+Hessian, so G1 fixes only the tree-level normalization. The full
+momentum dependence and the background vertices need separate bounds.
+The composition note gives an exact determinant continuity criterion and
+states the remaining vertex and infrared estimates explicitly.
 
 \hypertarget{consequence-for-state}{%
 \subsection{4. Consequence for STATE}\label{consequence-for-state}}
 
-Atlas cell 4: the Gaussian half of the composition obstruction is closed
-at zero momentum (Theorem G1, iterated). The open half is the one-loop
-dependence on the kernel shape and on generated vertices, with the
-average rate requiring only \(c=o(n)\) along the iteration.
+G1 closes the Gaussian zero-momentum part at every finite depth. Follow
+the composition note for sharp-blocking shape growth and the one-loop
+matching criterion; the average-rate condition is \(c_n=o(n)\).
 \end{document}

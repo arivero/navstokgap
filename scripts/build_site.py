@@ -42,6 +42,7 @@ TRACKS = [
         "dimension-ladder", "villain-monopole-refinement",
         "su2-midpoint-exact", "su2-midplane-order-t",
         "four-dimensional-parallel-log", "gaussian-blocking-coupling",
+        "four-dimensional-composition",
         "sun-midpoint-centre",
     ]),
     ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
