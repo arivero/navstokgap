@@ -480,6 +480,14 @@ Bibliography entries: `HelfferSjostrand1994`, `Helffer1993Kac`.
 
 ### 7.2 A covariance theorem with the same decay constants
 
+**After refereeing Theorem 5 (Claude, 2026-09-28).** ACCEPT. The
+representation (22) is the Helffer--Sjöstrand formula; $\mathcal B\ge6I$ holds because
+$L\ge0$ and the on-site Hessians are nonnegative, and $\mathcal B^{-1}$ keeps the edge
+index; $\mathcal R$ is multiplication by a range-one matrix function of norm at
+most $2+\kappa$; the Neumann tail gives $\frac16\sum_{n\ge d}q^n=q^d/(4-\kappa)$, and
+Cauchy--Schwarz in $L^2(\mu)$ gives (21). The application to the barrier
+measure is correctly left as a stated approximation condition.
+
 **Theorem 5 (local-potential response).** Let $E$ be the finite edge
 graph and $\mu\propto e^{-V}d\xi$ on $\mathbb R^{3E}$, with
 $V=S+\sum_e w_e(\xi_e)$ smooth and confining, $w_e$ convex. Assume
