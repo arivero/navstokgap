@@ -615,14 +615,238 @@ into a slightly smaller rate or a <span
 class="math inline">\(\log\log(1/t)\)</span> correction. Lemma 1 alone
 proves (4); a winding estimate for the normalized interacting free
 energy still requires a separate argument.</p>
-<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<h2
+id="part-b-quasi-local-response-and-the-obstruction-to-plaquette-telescoping">7.
+Part B: quasi-local response and the obstruction to plaquette
+telescoping</h2>
+<p><strong>Result, GPT-6 Astra, 2026-09-28.</strong> A covariance
+version of Lemma 1 gives a plane-uniform locality theorem for local
+perturbations of the potential, under the explicit analytic hypotheses
+below. Converting this to independent plaquette perturbations needs a
+further gauge estimate. The natural uniformly bounded local right
+inverse of curl already fails at the abelian linearization, as (26)
+proves. Thus this step leaves Hypothesis I unreplaced; it isolates the
+cancellation a successful replacement must establish.</p>
+<h3 id="source-check-and-scope">7.1 Source check and scope</h3>
+<p><a href="https://doi.org/10.1007/BF02186817">Helffer–Sjöstrand
+(1994)</a>, <em>On the correlation for Kac-like models in the convex
+case</em>, J. Stat. Phys. <strong>74</strong>, 349–409, treats
+dimension-dependent Gibbs measures that are controlled perturbations of
+harmonic potentials (reading label: <strong>publisher metadata and
+abstract</strong>; the full journal text was behind subscription access
+in this check). Helffer’s <a
+href="https://www.numdam.org/item/SEDP_1992-1993____A12_0/">1993 author
+report</a> explicitly presents their joint work (reading label:
+<strong>passage</strong>, §4, Theorem 4.2, and §5, printed
+pp. XII-13–17). It states exponential correlation decay for sufficiently
+small coupling in a nearest-neighbour harmonic model with a <span
+class="math inline">\(C^3\)</span> interaction having bounded
+derivatives through order three. Section 5 explains the elliptic vector
+equation and the additional weighted estimates needed for spatial decay.
+This checks a concrete source scope; the general finite-range statement
+needed here is proved below with its own hypotheses. The author report
+also addresses thermodynamic limits. No source passage checked here
+supplies gauge charts, barrier comparison or plaquette telescoping.
+Bibliography entries: <code>HelfferSjostrand1994</code>,
+<code>Helffer1993Kac</code>.</p>
+<h3 id="a-covariance-theorem-with-the-same-decay-constants">7.2 A
+covariance theorem with the same decay constants</h3>
+<p><strong>Theorem 5 (local-potential response).</strong> Let <span
+class="math inline">\(E\)</span> be the finite edge graph and <span
+class="math inline">\(\mu\propto e^{-V}d\xi\)</span> on <span
+class="math inline">\(\mathbb R^{3E}\)</span>, with <span
+class="math inline">\(V=S+\sum_e w_e(\xi_e)\)</span> smooth and
+confining, <span class="math inline">\(w_e\)</span> convex. Assume the
+usual closed weighted-gradient realization, so integration by parts and
+the differentiated Poisson equation hold; smooth potentials with bounded
+Hessians and a uniform positive lower bound suffice. Allow limits of
+such measures only when covariances and the gradient norms appearing
+below converge. Suppose, everywhere on the domain,</p>
+<p><span class="math display">\[\|t\nabla^2S-6I\|\le2+\kappa,
+\qquad 0\le\kappa&lt;4,\qquad
+(\nabla^2S)_{ee&#39;}=0\quad\hbox{if
+}d(e,e&#39;)&gt;1.\tag{20}\]</span></p>
+<p>For smooth <span class="math inline">\(f,g\)</span> with gradients
+supported in edge sets <span class="math inline">\(R,T\)</span>, define
+<span class="math inline">\(a_f=\|\nabla f\|_{L^2(\mu)}\)</span> and
+<span class="math inline">\(a_g=\|\nabla g\|_{L^2(\mu)}\)</span>. Then,
+uniformly in the graph size,</p>
+<p><span class="math display">\[|\operatorname{Cov}_\mu(f,g)|
+\le\frac{t}{4-\kappa}
+q^{d(R,T)}a_fa_g,
+\qquad q=\frac{2+\kappa}{6}&lt;1.\tag{21}\]</span></p>
+<p>The on-site convex Hessians can be large; the bound uses their sign,
+without treating them as a small perturbation.</p>
+<p><em>Proof.</em> Write <span class="math inline">\(L=-\Delta+\nabla
+V\cdot\nabla\)</span>, nonnegative in <span
+class="math inline">\(L^2(\mu)\)</span>. Uniform convexity gives a gap
+at least <span class="math inline">\((4-\kappa)/t\)</span> for this
+auxiliary diffusion. Solve <span class="math inline">\(Lu=g-Eg\)</span>
+on the orthogonal complement of constants. Differentiating gives</p>
+<p><span class="math display">\[(LI+\nabla^2V)\nabla u=\nabla g,\qquad
+\operatorname{Cov}(f,g)=
+\langle\nabla f,(LI+\nabla^2V)^{-1}\nabla
+g\rangle_{L^2(\mu)}.\tag{22}\]</span></p>
+<p>The first equality is the commutator identity <span
+class="math inline">\(\nabla Lu=(LI+\nabla^2V)\nabla u\)</span>; the
+second follows by integration by parts in <span
+class="math inline">\(\langle f-Ef,Lu\rangle\)</span>. This is the
+covariance representation motivating the Helffer–Sjöstrand method.</p>
+<p>On the vector Hilbert space set</p>
+<p><span class="math display">\[\mathcal
+B=tLI+6I+t\operatorname{diag}_e\nabla^2w_e,
+\qquad \mathcal R=t\nabla^2S-6I.\]</span></p>
+<p>The operator <span class="math inline">\(\mathcal B\)</span> is block
+diagonal in the edge <strong>index</strong>, although each scalar
+diffusion acts on all configuration variables. It satisfies <span
+class="math inline">\(\mathcal B\ge6I\)</span>; <span
+class="math inline">\(\mathcal R\)</span> has range one and norm at most
+<span class="math inline">\(2+\kappa\)</span>. Therefore</p>
+<p><span class="math display">\[t(LI+\nabla^2V)=\mathcal B+\mathcal R,
+\qquad
+(\mathcal B+\mathcal R)^{-1}
+=\sum_{n\ge0}(-\mathcal B^{-1}\mathcal R)^n\mathcal B^{-1}.\]</span></p>
+<p>Its block from <span class="math inline">\(T\)</span> to <span
+class="math inline">\(R\)</span> has zero contributions for <span
+class="math inline">\(n&lt;d(R,T)\)</span>. The remaining operator norm
+is bounded by <span class="math inline">\(\frac16\sum_{n\ge
+d}q^n=q^d/(4-\kappa)\)</span>. Insert this in (22), with the factor
+<span class="math inline">\(t\)</span> from the inverse scaling, to
+prove (21). Smooth approximation and convergence extend the inequality
+to the stated limits. <span class="math inline">\(\square\)</span></p>
+<p>For the local action in §4, (20) holds on its chart with <span
+class="math inline">\(\kappa=C_3(\varepsilon+c_0)\)</span>,
+independently of the background connection. Application to the singular
+soft-barrier measure (2) additionally needs a realization or
+approximation satisfying the analytic hypotheses of Theorem 5 with the
+same finite-range bounds. Lemma 3 is a chart estimate; constructing that
+approximation remains an explicit condition here. This avoids importing
+a whole-space theorem into a bounded chart without specifying its
+boundary domain. Taking <span class="math inline">\(\kappa\le1\)</span>
+gives the concrete constants <span class="math inline">\(t/3\)</span>
+and decay <span class="math inline">\(2^{-d}\)</span> as looser bounds
+in (21). These rates concern mid-plane fluctuations and their auxiliary
+diffusion.</p>
+<h3 id="what-locality-of-a-free-energy-increment-means">7.3 What
+locality of a free-energy increment means</h3>
+<p>Suppose <span class="math inline">\(V_{u,v}=V_0+u h_R+v k_T\)</span>,
+<span class="math inline">\((u,v)\in[0,1]^2\)</span>, satisfies Theorem
+5 uniformly with the same <span class="math inline">\(t,\kappa\)</span>.
+Here the gradients of <span class="math inline">\(h_R,k_T\)</span> have
+supports <span class="math inline">\(R,T\)</span>, and let <span
+class="math inline">\(a=\sup_{u,v}\|\nabla
+h_R\|_{L^2(\mu_{u,v})}\)</span>, <span
+class="math inline">\(b=\sup_{u,v}\|\nabla
+k_T\|_{L^2(\mu_{u,v})}\)</span>. For <span
+class="math inline">\(F(u,v)=-\log\int e^{-V_{u,v}}\)</span>,
+differentiating twice yields <span
+class="math inline">\(F_{uv}=-\operatorname{Cov}(h_R,k_T)\)</span>.
+Consequently</p>
+<p><span class="math display">\[\begin{aligned}
+|F(1,1)-F(0,1)-F(1,0)+F(0,0)|
+&amp;\le\frac{tab}{4-\kappa}\,q^{d(R,T)}.
+\end{aligned}\tag{23}\]</span></p>
+<p>Thus the increment caused in <span class="math inline">\(R\)</span>
+depends exponentially weakly on a remote change in <span
+class="math inline">\(T\)</span>. For a local observable <span
+class="math inline">\(f_T\)</span> independent of <span
+class="math inline">\(u\)</span>, the same argument gives</p>
+<p><span class="math display">\[|E_1f_T-E_0f_T|\le
+\frac{t}{4-\kappa}q^{d(R,T)}
+\sup_u\|\nabla f_T\|_{L^2(\mu_u)}
+\sup_u\|\nabla h_R\|_{L^2(\mu_u)}.\tag{24}\]</span></p>
+<p>These statements also hold for nonlinear parameter paths if the mixed
+potential derivative vanishes for disjoint supports, with <span
+class="math inline">\(h_R,k_T\)</span> replaced by the parameter scores.
+Local external normalizations have zero mixed derivative for disjoint
+supports. In a fixed local link chart, changing coarse links in a region
+changes only incident bridge and face potentials, after enlarging the
+region by a fixed number of cells. Subject to the analytic condition
+after Theorem 5, (23) is therefore the precise localized-increment
+statement for <span class="math inline">\(\mathcal D_s\)</span>.</p>
+<p>Tails are summable uniformly on these two-dimensional edge graphs. A
+crude bound on the number of edges at graph distance <span
+class="math inline">\(\ell\)</span> from one edge is <span
+class="math inline">\(2(4\ell+3)^2\)</span>. Thus</p>
+<p><span class="math display">\[\sum_{\ell\ge r}2(4\ell+3)^2q^\ell
+\le C(q)q^{r/2},\qquad
+C(q)=2\sum_{\ell\ge0}(4\ell+3)^2q^{\ell/2}&lt;\infty.\tag{25}\]</span></p>
+<p>Summing (23) over remote local scores with bounded gradient norms
+gives this tail, with their support-size and support-radius constants
+made explicit in <span class="math inline">\(a,b\)</span> and the
+distance. The unlocalized increment itself may have size proportional to
+the changed region; (23) controls its dependence on the distant
+environment.</p>
+<h3 id="the-estimate-that-fails-in-the-proposed-telescoping">7.4 The
+estimate that fails in the proposed telescoping</h3>
+<p>Plaquette variables obey compatibility relations. A single plaquette
+update at fixed surrounding data generally fails those relations. Even
+in the linearized embedded <span class="math inline">\(U(1)\)</span>
+sector on an <span class="math inline">\(n\times n\)</span> torus, with
+harmonic data fixed, infinitesimal link changes <span
+class="math inline">\(a\)</span> and flux changes <span
+class="math inline">\(x\)</span> satisfy <span
+class="math inline">\(Ca=x\)</span> and <span
+class="math inline">\(\sum_p x_p=0\)</span>. At momentum <span
+class="math inline">\(k=(2\pi/n,0)\)</span> the curl symbol of the
+mid-plane note is <span class="math inline">\(c(k)=(0,e^{2\pi
+i/n}-1)\)</span>. For a flux mode supported at this momentum, every
+solution satisfies</p>
+<p><span class="math display">\[\|a\|_2\ge\frac{\|x\|_2}{2\sin(\pi/n)}
+\ge\frac{n}{2\pi}\|x\|_2.\tag{26}\]</span></p>
+<p>Real sine/cosine modes give the same bound. Hence a right inverse
+<span class="math inline">\(a=\mathcal R x\)</span> on admissible
+zero-mean fluxes cannot have norm bounded independently of <span
+class="math inline">\(n\)</span>. An exponentially local kernel <span
+class="math inline">\(\|\mathcal R_{ep}\|\le C e^{-\gamma
+d(e,p)}\)</span> with <span class="math inline">\(C,\gamma\)</span>
+independent of <span class="math inline">\(n\)</span> would have bounded
+row and column sums by (25), and bounded <span
+class="math inline">\(\ell^2\)</span> norm by the Schur test,
+contradicting (26). Changing two separated opposite plaquette fluxes can
+instead use a long string of changed links or a spatially spread
+representative. The supports and score norms in (23) then track that
+representative.</p>
+<p>The precise missing step is a <strong>curvature response estimate
+after gauge cancellations</strong>, rather than a local right inverse.
+For example, in specified admissible flux coordinates with harmonic data
+retained and winding subtracted, one would need the normalized remainder
+<span class="math inline">\(h=\mathcal D_s-\mathcal D_0-W_N\)</span> to
+have a Hessian kernel <span class="math inline">\(K_{pq}\)</span>
+satisfying</p>
+<p><span class="math display">\[\sup_p\sum_q e^{\gamma d(p,q)}\|K_{pq}\|
+\le C\varepsilon/t,\tag{27}\]</span></p>
+<p>together with compatible paths or local replacements whose total
+quadratic cost is bounded by <span
+class="math inline">\(C\sum_p|X_p|^2\)</span>, and the required
+zero-flux/winding remainder. Equation (21) controls the link-score
+covariance. The cancellation of the large inverse-curl factors in the
+combined expression <span
+class="math inline">\(E[S_{ij}]-\operatorname{Cov}(S_i,S_j)+B_{ij}\)</span>
+remains to be proved. The Gaussian case exhibits such cancellations;
+(26) therefore diagnoses failure of the naive coordinate conversion,
+without ruling out (27).</p>
+<p>With those extra estimates, (18), or a compatible telescoping version
+of it, and (19) would give the weak P(<span
+class="math inline">\(\alpha\)</span>) bound on the selected large-plane
+regime. Theorem 5 and locality alone supply neither the <span
+class="math inline">\(O(\varepsilon)\)</span> comparison to the Gaussian
+response nor the winding bound, and Part A’s barrier and large-field
+issues remain. This is the precise obstruction reached in Part B. All
+claims of P(<span class="math inline">\(\alpha\)</span>) and the
+normalized expansion (18) of the mid-plane note remain conditional.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
 <p>Atlas cell 2 keeps its formal order-<span
 class="math inline">\(t\)</span> calculation. Round 8 Part A accepts the
 covariant decay and corrected bridge/convexity bounds, rejects
 Proposition 4 as stated, and replaces its Taylor step by the explicit
 conditional implication (17)–(18). The next small-field task is the
 normalized, gauge-covariant response estimate with barrier and winding
-control; the large-field and iteration obligations remain.</p>
+control. Part B proves locality for local-potential increments under
+Theorem 5’s analytic hypotheses and isolates (27), including its
+admissible-coordinate and cancellation requirements, as the unresolved
+step toward replacing Hypothesis I. The large-field and iteration
+obligations remain.</p>
 
 </main>
 <footer class="site"><div class="wrap">

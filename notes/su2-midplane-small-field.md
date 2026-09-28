@@ -446,11 +446,220 @@ need absorption into a slightly smaller rate or a $\log\log(1/t)$
 correction. Lemma 1 alone proves (4); a winding estimate for the
 normalized interacting free energy still requires a separate argument.
 
-## 7. Consequence for STATE
+## 7. Part B: quasi-local response and the obstruction to plaquette telescoping
+
+**Result, GPT-6 Astra, 2026-09-28.** A covariance version of Lemma 1
+gives a plane-uniform locality theorem for local perturbations of the
+potential, under the explicit analytic hypotheses below. Converting
+this to independent plaquette perturbations needs a further gauge
+estimate. The natural uniformly bounded local right inverse of curl
+already fails at the abelian linearization, as (26) proves. Thus this
+step leaves Hypothesis I unreplaced; it isolates the cancellation a
+successful replacement must establish.
+
+### 7.1 Source check and scope
+
+[Helffer--Sjöstrand (1994)](https://doi.org/10.1007/BF02186817),
+*On the correlation for Kac-like models in the convex case*,
+J. Stat. Phys. **74**, 349--409, treats dimension-dependent Gibbs
+measures that are controlled perturbations of harmonic potentials
+(reading label: **publisher metadata and abstract**; the full journal
+text was behind subscription access in this check).
+Helffer's [1993 author report](https://www.numdam.org/item/SEDP_1992-1993____A12_0/)
+explicitly presents their joint work (reading label: **passage**, §4,
+Theorem 4.2, and §5, printed pp. XII-13--17). It states exponential
+correlation decay for sufficiently small coupling in a nearest-neighbour
+harmonic model with a $C^3$ interaction having bounded derivatives
+through order three. Section 5 explains the elliptic vector equation
+and the additional weighted estimates needed for spatial decay. This
+checks a concrete source scope; the general finite-range statement
+needed here is proved below with its own hypotheses. The author report
+also addresses thermodynamic limits. No source passage checked here
+supplies gauge charts, barrier comparison or plaquette telescoping.
+Bibliography entries: `HelfferSjostrand1994`, `Helffer1993Kac`.
+
+### 7.2 A covariance theorem with the same decay constants
+
+**Theorem 5 (local-potential response).** Let $E$ be the finite edge
+graph and $\mu\propto e^{-V}d\xi$ on $\mathbb R^{3E}$, with
+$V=S+\sum_e w_e(\xi_e)$ smooth and confining, $w_e$ convex. Assume
+the usual closed weighted-gradient realization, so integration by
+parts and the differentiated Poisson equation hold; smooth potentials
+with bounded Hessians and a uniform positive lower bound suffice.
+Allow limits of such measures only when covariances and the gradient
+norms appearing below converge. Suppose, everywhere on the domain,
+
+$$\|t\nabla^2S-6I\|\le2+\kappa,
+\qquad 0\le\kappa<4,\qquad
+(\nabla^2S)_{ee'}=0\quad\hbox{if }d(e,e')>1.\tag{20}$$
+
+For smooth $f,g$ with gradients supported in edge sets $R,T$, define
+$a_f=\|\nabla f\|_{L^2(\mu)}$ and $a_g=\|\nabla g\|_{L^2(\mu)}$.
+Then, uniformly in the graph size,
+
+$$|\operatorname{Cov}_\mu(f,g)|
+\le\frac{t}{4-\kappa}
+q^{d(R,T)}a_fa_g,
+\qquad q=\frac{2+\kappa}{6}<1.\tag{21}$$
+
+The on-site convex Hessians can be large; the bound uses their sign,
+without treating them as a small perturbation.
+
+*Proof.* Write $L=-\Delta+\nabla V\cdot\nabla$, nonnegative in
+$L^2(\mu)$. Uniform convexity gives a gap at least $(4-\kappa)/t$
+for this auxiliary diffusion. Solve $Lu=g-Eg$ on the orthogonal
+complement of constants. Differentiating gives
+
+$$(LI+\nabla^2V)\nabla u=\nabla g,\qquad
+\operatorname{Cov}(f,g)=
+\langle\nabla f,(LI+\nabla^2V)^{-1}\nabla g\rangle_{L^2(\mu)}.\tag{22}$$
+
+The first equality is the commutator identity
+$\nabla Lu=(LI+\nabla^2V)\nabla u$; the second follows by integration
+by parts in $\langle f-Ef,Lu\rangle$. This is the covariance
+representation motivating the Helffer--Sjöstrand method.
+
+On the vector Hilbert space set
+
+$$\mathcal B=tLI+6I+t\operatorname{diag}_e\nabla^2w_e,
+\qquad \mathcal R=t\nabla^2S-6I.$$
+
+The operator $\mathcal B$ is block diagonal in the edge **index**,
+although each scalar diffusion acts on all configuration variables.
+It satisfies $\mathcal B\ge6I$; $\mathcal R$ has range one and norm
+at most $2+\kappa$. Therefore
+
+$$t(LI+\nabla^2V)=\mathcal B+\mathcal R,
+\qquad
+(\mathcal B+\mathcal R)^{-1}
+=\sum_{n\ge0}(-\mathcal B^{-1}\mathcal R)^n\mathcal B^{-1}.$$
+
+Its block from $T$ to $R$ has zero contributions for $n<d(R,T)$.
+The remaining operator norm is bounded by
+$\frac16\sum_{n\ge d}q^n=q^d/(4-\kappa)$.
+Insert this in (22), with the factor $t$ from the inverse scaling,
+to prove (21). Smooth approximation and convergence extend the
+inequality to the stated limits. $\square$
+
+For the local action in §4, (20) holds on its chart with
+$\kappa=C_3(\varepsilon+c_0)$, independently of the background
+connection. Application to the singular soft-barrier measure (2)
+additionally needs a realization or approximation satisfying the
+analytic hypotheses of Theorem 5 with the same finite-range bounds.
+Lemma 3 is a chart estimate; constructing that approximation remains
+an explicit condition here. This avoids importing a whole-space
+theorem into a bounded chart without specifying its boundary domain.
+Taking $\kappa\le1$ gives the concrete constants $t/3$ and decay
+$2^{-d}$ as looser bounds in (21). These rates concern mid-plane
+fluctuations and their auxiliary diffusion.
+
+### 7.3 What locality of a free-energy increment means
+
+Suppose $V_{u,v}=V_0+u h_R+v k_T$, $(u,v)\in[0,1]^2$, satisfies
+Theorem 5 uniformly with the same $t,\kappa$. Here the gradients of
+$h_R,k_T$ have supports $R,T$, and let
+$a=\sup_{u,v}\|\nabla h_R\|_{L^2(\mu_{u,v})}$,
+$b=\sup_{u,v}\|\nabla k_T\|_{L^2(\mu_{u,v})}$.
+For $F(u,v)=-\log\int e^{-V_{u,v}}$, differentiating twice yields
+$F_{uv}=-\operatorname{Cov}(h_R,k_T)$. Consequently
+
+$$\begin{aligned}
+|F(1,1)-F(0,1)-F(1,0)+F(0,0)|
+&\le\frac{tab}{4-\kappa}\,q^{d(R,T)}.
+\end{aligned}\tag{23}$$
+
+Thus the increment caused in $R$ depends exponentially weakly on
+a remote change in $T$. For a local observable $f_T$ independent of
+$u$, the same argument gives
+
+$$|E_1f_T-E_0f_T|\le
+\frac{t}{4-\kappa}q^{d(R,T)}
+\sup_u\|\nabla f_T\|_{L^2(\mu_u)}
+\sup_u\|\nabla h_R\|_{L^2(\mu_u)}.\tag{24}$$
+
+These statements also hold for nonlinear parameter paths if the mixed
+potential derivative vanishes for disjoint supports, with $h_R,k_T$
+replaced by the parameter scores. Local external normalizations have
+zero mixed derivative for disjoint supports. In a fixed local link
+chart, changing coarse links in a region changes only incident bridge
+and face potentials, after enlarging the region by a fixed number of
+cells. Subject to the analytic condition after Theorem 5, (23) is
+therefore the precise localized-increment statement for $\mathcal D_s$.
+
+Tails are summable uniformly on these two-dimensional edge graphs.
+A crude bound on the number of edges at graph distance $\ell$ from
+one edge is $2(4\ell+3)^2$. Thus
+
+$$\sum_{\ell\ge r}2(4\ell+3)^2q^\ell
+\le C(q)q^{r/2},\qquad
+C(q)=2\sum_{\ell\ge0}(4\ell+3)^2q^{\ell/2}<\infty.\tag{25}$$
+
+Summing (23) over remote local scores with bounded gradient norms gives
+this tail, with their support-size and support-radius constants made
+explicit in $a,b$ and the distance. The unlocalized increment itself
+may have size proportional to the changed region; (23) controls its
+dependence on the distant environment.
+
+### 7.4 The estimate that fails in the proposed telescoping
+
+Plaquette variables obey compatibility relations. A single plaquette
+update at fixed surrounding data generally fails those relations.
+Even in the linearized embedded $U(1)$ sector on an $n\times n$ torus,
+with harmonic data fixed, infinitesimal link changes $a$ and flux
+changes $x$ satisfy $Ca=x$ and $\sum_p x_p=0$. At momentum
+$k=(2\pi/n,0)$ the curl symbol of the mid-plane note is
+$c(k)=(0,e^{2\pi i/n}-1)$. For a flux mode supported at this momentum,
+every solution satisfies
+
+$$\|a\|_2\ge\frac{\|x\|_2}{2\sin(\pi/n)}
+\ge\frac{n}{2\pi}\|x\|_2.\tag{26}$$
+
+Real sine/cosine modes give the same bound. Hence a right inverse
+$a=\mathcal R x$ on admissible zero-mean fluxes cannot have norm
+bounded independently of $n$. An exponentially local kernel
+$\|\mathcal R_{ep}\|\le C e^{-\gamma d(e,p)}$ with $C,\gamma$
+independent of $n$ would have bounded row and column sums by (25),
+and bounded $\ell^2$ norm by the Schur test, contradicting (26).
+Changing two separated opposite plaquette fluxes can instead use a
+long string of changed links or a spatially spread representative.
+The supports and score norms in (23) then track that representative.
+
+The precise missing step is a **curvature response estimate after gauge
+cancellations**, rather than a local right inverse. For example, in
+specified admissible flux coordinates with harmonic data retained and
+winding subtracted, one would need the normalized remainder
+$h=\mathcal D_s-\mathcal D_0-W_N$ to have a Hessian kernel $K_{pq}$
+satisfying
+
+$$\sup_p\sum_q e^{\gamma d(p,q)}\|K_{pq}\|
+\le C\varepsilon/t,\tag{27}$$
+
+together with compatible paths or local replacements whose total
+quadratic cost is bounded by $C\sum_p|X_p|^2$, and the required
+zero-flux/winding remainder. Equation (21) controls the link-score
+covariance. The cancellation of the large inverse-curl factors in
+the combined expression $E[S_{ij}]-\operatorname{Cov}(S_i,S_j)+B_{ij}$
+remains to be proved. The Gaussian case exhibits such cancellations;
+(26) therefore diagnoses failure of the naive coordinate conversion,
+without ruling out (27).
+
+With those extra estimates, (18), or a compatible telescoping version
+of it, and (19) would give the weak P($\alpha$) bound on the selected
+large-plane regime. Theorem 5 and locality alone supply neither the
+$O(\varepsilon)$ comparison to the Gaussian response nor the winding
+bound, and Part A's barrier and large-field issues remain. This is the
+precise obstruction reached in Part B. All claims of P($\alpha$) and
+the normalized expansion (18) of the mid-plane note remain conditional.
+
+## 8. Consequence for STATE
 
 Atlas cell 2 keeps its formal order-$t$ calculation. Round 8 Part A
 accepts the covariant decay and corrected bridge/convexity bounds,
 rejects Proposition 4 as stated, and replaces its Taylor step by the
 explicit conditional implication (17)--(18). The next small-field task
 is the normalized, gauge-covariant response estimate with barrier and
-winding control; the large-field and iteration obligations remain.
+winding control. Part B proves locality for local-potential increments
+under Theorem 5's analytic hypotheses and isolates (27), including its
+admissible-coordinate and cancellation requirements, as the unresolved
+step toward replacing Hypothesis I. The large-field and iteration
+obligations remain.
