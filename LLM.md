@@ -290,13 +290,18 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
 3. **$SU(2)$ cube beyond spin 1.** Diagonal entries for $J>1$ and control of
    the full spin sum ([su2-midpoint-exact](notes/su2-midpoint-exact.md)).
    *Smallest theorem:* a uniform-in-$J$ bound on $\|\Lambda^J-\Lambda^J_{(1)}\|$
-   with $\Lambda^J_{(1)}$ the order-$t$ formula of Prop. 6.
-4. **The four-dimensional logarithm.** Extract $g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2$
-   from the three parallel insertions of each directional halving
-   ([series/parallel §5](notes/series-parallel-gauge-refinement.md)).
-   *Smallest theorem:* the $SU(2)$ analogue of the mid-plane order-$t$
-   calculation for one $D=4$ halving, showing the three shifts sum to a
-   step-independent constant.
+   with $\Lambda^J_{(1)}$ the order-$t$ formula of Prop. 6. The exact character
+   formula for every $J$ and every group ([sun-midpoint-centre](notes/sun-midpoint-centre.md))
+   gives traces only; the matrix entries carry extra Gaussian tails.
+4. **The four-dimensional logarithm.** The one-step shifts are done
+   formally for $SU(N)$ and any cut fraction, the one-step propagators are
+   infrared regular, and $2b_0$ follows under background-matching
+   hypotheses ([four-dimensional-parallel-log](notes/four-dimensional-parallel-log.md),
+   refereed). The obstruction is the composition with the generated action.
+   *Smallest theorem:* carry the Gaussian Schur complements through four
+   halvings (zero-momentum coefficient preserved exactly) and show that
+   the one-loop matching coefficient stays bounded along the iteration,
+   which gives $-2b_0\log2$ per isotropic step on average (Remark in §6 there).
 5. **From ultraviolet control to a gap in $1+2$.** Prove $E=C_3\hbar c\lambda_3$
    with $0<C_3<\infty$; the $U(1)$ comparison shows the mechanism must sit
    in the non-abelian terms N1--N3. *Smallest theorem:* a lower bound on the
@@ -334,6 +339,13 @@ Ordered as in [STATE](research/STATE.md) and [halving-atlas §5](notes/halving-a
     $1/8$, $1/2$ of Thm 6 and the minimum of the one accounting (Thm M) are
     attained; the §11 historiography and edition obligations
     ([planck-gap-paper §11](notes/planck-gap-paper.md)).
+13. **$SU(3)$ centre and triadic refinement.** Only cuts with denominator
+    divisible by 3 let bridge windings reach the $SU(3)$ centre
+    ([sun-midpoint-centre](notes/sun-midpoint-centre.md), Corollary 3,
+    Astra referee pending). *Question:* does triadic refinement ($b=3$)
+    organize the large-field terms, or centre-vortex bookkeeping, better
+    than dyadic refinement? *Smallest theorem:* the joint law of the two
+    cut points of an $SU(3)$ trisection, with its central images.
 12. **A groupoid for the lattice.** The holonomy groupoid for series moves
     and a double groupoid for parallel moves
     ([tangent-groupoid-trajectories §5](notes/tangent-groupoid-trajectories.md)); a question, with no theorem yet.
