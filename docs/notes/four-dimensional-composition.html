@@ -594,14 +594,121 @@ class="math inline">\(\Lambda\)</span> matching in the zero-spacing
 note. Defining the matched coupling absorbs the endpoint terms by
 definition; identifying the bare blocked coupling’s average still
 requires (18).</p>
-<h2 id="consequence-for-state">7. Consequence for STATE</h2>
-<p>Cell 4 now has exact four-direction Gaussian composition, preserved
-constant-flux normalization, and a quantified sharp-blocking shape
-obstruction. The next estimate is (14) for the generated background
-vertices, with the common subtraction and its limits controlled, or a
-replacement spatially averaged blocking with those estimates. The
-average rate follows conditionally from (18); the present calculation
-leaves endpoint matching and interacting remainder control open.</p>
+<h2 id="round-10-the-first-generated-vertices-formal-unrefereed">7.
+Round 10: the first generated vertices (formal, unrefereed)</h2>
+<p><strong>One pristine isotropic midpoint step, GPT-6 Astra,
+2026-09-28.</strong> The following are coefficients of the zero-image
+expansion in <span class="math inline">\(t\)</span>; the bounds concern
+those coefficients, uniformly in spatial volume. Use dimensionless
+links, periods at least three, and the mid-vertex gauge of <a
+href="series-parallel-gauge-refinement.html">Proposition 1</a>
+(passage). Write the transported bridge endpoints as <span
+class="math inline">\(e^{a_e},e^{b_e}\)</span> and the mid-link as <span
+class="math inline">\(e^{y_e}\)</span>. The dimensionless classical
+action for <span class="math inline">\(-\log\Psi\)</span> is the
+stationary value in <span class="math inline">\(y\)</span> of</p>
+<p><span class="math display">\[\begin{aligned}
+s(x,y)={}&amp;\sum_e\bigl(|\log(e^{-a_e}e^{y_e})|^2+
+|\log(e^{-y_e}e^{b_e})|^2-\tfrac12|\log(e^{-a_e}e^{b_e})|^2\bigr)
+&amp;+\tfrac14\sum_p|\log\prod_{e\in\partial p}e^{\epsilon_{pe}y_e}|^2,
+\qquad x=(a,b).
+\end{aligned}\tag{21}\]</span></p>
+<p>The contribution to the action is <span
+class="math inline">\(s_*/t\)</span>. Old transverse weights and the
+coarse electric action are added separately to obtain the full blocked
+action. For original coarse links, substitute the paths <span
+class="math inline">\(e^a=P\)</span>, <span
+class="math inline">\(e^b=Q^{-1}\)</span> from Proposition 1 before
+taking coefficients; this also retains the background dependence of the
+constraint.</p>
+<p>Here is an explicit finite-word prescription for every lattice
+kernel. For an ordered word with signed letters <span
+class="math inline">\(z_1,\ldots,z_m\)</span>, <span
+class="math inline">\(m\le4\)</span>, set</p>
+<p><span class="math display">\[\begin{gathered}
+E_r=\sum_{n_1+\cdots+n_m=r}\frac{z_1^{n_1}\cdots z_m^{n_m}}{n_1!\cdots
+n_m!},\quad
+F_1=E_1,\quad F_2=E_2-\tfrac12E_1^2,\\
+F_3=E_3-\tfrac12(E_1E_2+E_2E_1)+\tfrac13E_1^3,\\
+p_2=|F_1|^2,\quad p_3=2\langle F_1,F_2\rangle,\quad
+p_4=|F_2|^2+2\langle F_1,F_3\rangle. \tag{22}
+\end{gathered}\]</span></p>
+<p>Use the invariant metric <span
+class="math inline">\(|X|^2=-2\operatorname{tr}X^2\)</span> on <span
+class="math inline">\(\mathfrak{su}(N)\)</span>. In each term of (21)
+replace the squared logarithm by <span
+class="math inline">\(p_r\)</span>, with its displayed weight, obtaining
+<span class="math inline">\(s_r\)</span>. Define the symmetric kernels
+<span class="math inline">\(Q=\partial^2s_2\)</span>, <span
+class="math inline">\(T=\partial^3s_3\)</span>, <span
+class="math inline">\(U=\partial^4s_4\)</span> at zero. Thus (22),
+signed face incidences and finite sums specify all colour and position
+indices, without an implicit interacting expectation. Put <span
+class="math inline">\(H=Q_{yy}=4I+C^*C/2\)</span>, <span
+class="math inline">\(G=H^{-1}\)</span>, <span
+class="math inline">\(B=Q_{yx}\)</span> and <span
+class="math inline">\(Lx=(x,-GBx)\)</span>; in endpoint coordinates
+<span class="math inline">\(Bx=-2(a+b)\)</span>. The generated kernels
+are</p>
+<p><span class="math display">\[\begin{aligned}
+(\Gamma_3)_{ijk}&amp;=\sum_{ABC}T_{ABC}L_{Ai}L_{Bj}L_{Ck},\\
+Z_{e,ij}&amp;=\sum_{AB}T_{eAB}L_{Ai}L_{Bj},\\
+(\Gamma_4)_{ijkl}&amp;=\sum_{ABCD}U_{ABCD}L_{Ai}L_{Bj}L_{Ck}L_{Dl}
+-\sum_{ef}G_{ef}(Z_{e,ij}Z_{f,kl}+Z_{e,ik}Z_{f,jl}+Z_{e,il}Z_{f,jk}).
+\end{aligned}\tag{23}\]</span></p>
+<p>Here repeated mid-edge indices include the colour pairing. The
+vertices are <span class="math inline">\(\Gamma_3[x^3]/6\)</span> and
+<span class="math inline">\(\Gamma_4[x^4]/24\)</span>; their background
+Hessian jets are <span class="math inline">\(V=\Gamma_3[\mathcal
+B,\cdot,\cdot]\)</span> and <span
+class="math inline">\(W=\Gamma_4[\mathcal B,\mathcal
+B,\cdot,\cdot]/2\)</span>. Indeed <span
+class="math inline">\(y=-GBx-GZ[x,x]/2+O(x^3)\)</span>; substituting
+into <span class="math inline">\(s_2+s_3+s_4\)</span> gives the exchange
+contribution <span class="math inline">\(-\langle
+Z[x,x],GZ[x,x]\rangle/8\)</span>.</p>
+<p><strong>Explicit size and decay.</strong> Let <span
+class="math inline">\(d\)</span> be distance between edges in the graph
+joining edges of a common spatial face, attaching endpoint variables to
+their corresponding mid-edge. Since <span class="math inline">\(4I\le
+H\le10I\)</span>, the Neumann series about <span
+class="math inline">\(7I\)</span> gives <span
+class="math inline">\(\|G_{ef}\|\le(3/7)^{d(e,f)}/4\)</span>. This is
+the three-dimensional version of <a
+href="su2-midplane-small-field.html">Lemma 1</a> (passage). Put</p>
+<p><span class="math display">\[\alpha=\tfrac12\log(7/3),\quad
+q=\sqrt{3/7},\quad
+g=48\frac{1+4q+q^2}{(1-q)^4},\quad
+K=2^{40}(1+N)^4e^{6\alpha},\quad l=1+gK. \tag{24}\]</span></p>
+<p>Use the anchored kernel norm: fix any one argument, sum the operator
+norm over all other edge arguments, with weight <span
+class="math inline">\(e^{\alpha\mathsf T}\)</span>, where <span
+class="math inline">\(\mathsf T\)</span> is the shortest connecting tree
+length. The same definition for matrices includes both row and column
+sums. Then</p>
+<p><span class="math display">\[\|G\|_\alpha\le g,\quad
+\|B\|_\alpha,\|T\|_\alpha,\|U\|_\alpha\le K,
+\quad \|\Gamma_3\|_\alpha\le Kl^3=:v_3,\quad
+\|\Gamma_4\|_\alpha\le(K+3K^2g)l^4=:v_4. \tag{25}\]</span></p>
+<p>For the first bound, a radius-<span class="math inline">\(n\)</span>
+edge ball has at most <span class="math inline">\(3(4n+3)^3\)</span>
+members; sum <span class="math inline">\(\frac34\sum_n(4n+3)^3q^n\le
+g\)</span>. For the local bounds, the absolute word-coefficient sums in
+(22) are at most <span class="math inline">\(8^r\)</span> for <span
+class="math inline">\(r\le3\)</span>; multiplication, the derivative
+factor <span class="math inline">\(4!\)</span>, the weights in (21), and
+at most 24 incident words are covered by <span
+class="math inline">\(K\)</span>. The same constant covers the
+length-three endpoint paths after substitution. Tree lengths are
+subadditive when kernels are joined, proving (25) from (23). In
+particular each kernel is bounded by <span class="math inline">\(v_r
+e^{-\alpha\mathsf T}\)</span>. These are deliberately loose constants;
+<span class="math inline">\(t^{-1}\)</span> restores action units.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>Cell 4 now also has explicit one-step cubic and quartic kernels with
+exponential decay, at formal tree level (Round 10, unrefereed). The next
+part is their subtracted one-loop contraction and its infrared limit;
+uniform depth control and interacting remainders remain open.</p>
 
 </main>
 <footer class="site"><div class="wrap">

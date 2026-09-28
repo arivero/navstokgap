@@ -473,12 +473,98 @@ finite $\Lambda$ matching in the zero-spacing note. Defining the
 matched coupling absorbs the endpoint terms by definition; identifying
 the bare blocked coupling's average still requires (18).
 
-## 7. Consequence for STATE
+## 7. Round 10: the first generated vertices (formal, unrefereed)
 
-Cell 4 now has exact four-direction Gaussian composition, preserved
-constant-flux normalization, and a quantified sharp-blocking shape
-obstruction. The next estimate is (14) for the generated background
-vertices, with the common subtraction and its limits controlled, or a
-replacement spatially averaged blocking with those estimates. The
-average rate follows conditionally from (18); the present calculation
-leaves endpoint matching and interacting remainder control open.
+**One pristine isotropic midpoint step, GPT-6 Astra, 2026-09-28.**
+The following are coefficients of the zero-image expansion in $t$;
+the bounds concern those coefficients, uniformly in spatial volume.
+Use dimensionless links, periods at least three, and the mid-vertex
+gauge of [Proposition 1](series-parallel-gauge-refinement.md) (passage).
+Write the transported bridge endpoints as $e^{a_e},e^{b_e}$ and the
+mid-link as $e^{y_e}$. The dimensionless classical action for $-\log\Psi$
+is the stationary value in $y$ of
+
+$$\begin{aligned}
+s(x,y)={}&\sum_e\bigl(|\log(e^{-a_e}e^{y_e})|^2+
+ |\log(e^{-y_e}e^{b_e})|^2-\tfrac12|\log(e^{-a_e}e^{b_e})|^2\bigr)
+ &+\tfrac14\sum_p|\log\prod_{e\in\partial p}e^{\epsilon_{pe}y_e}|^2,
+ \qquad x=(a,b).
+\end{aligned}\tag{21}$$
+
+The contribution to the action is $s_*/t$. Old transverse weights and
+the coarse electric action are added separately to obtain the full
+blocked action. For original coarse links, substitute the paths
+$e^a=P$, $e^b=Q^{-1}$ from Proposition 1 before taking coefficients;
+this also retains the background dependence of the constraint.
+
+Here is an explicit finite-word prescription for every lattice kernel.
+For an ordered word with signed letters $z_1,\ldots,z_m$, $m\le4$, set
+
+$$\begin{gathered}
+ E_r=\sum_{n_1+\cdots+n_m=r}\frac{z_1^{n_1}\cdots z_m^{n_m}}{n_1!\cdots n_m!},\quad
+ F_1=E_1,\quad F_2=E_2-\tfrac12E_1^2,\\
+ F_3=E_3-\tfrac12(E_1E_2+E_2E_1)+\tfrac13E_1^3,\\
+ p_2=|F_1|^2,\quad p_3=2\langle F_1,F_2\rangle,\quad
+ p_4=|F_2|^2+2\langle F_1,F_3\rangle. \tag{22}
+\end{gathered}$$
+
+Use the invariant metric $|X|^2=-2\operatorname{tr}X^2$ on $\mathfrak{su}(N)$.
+In each term of (21) replace the squared logarithm by $p_r$, with its
+displayed weight, obtaining $s_r$. Define the symmetric kernels
+$Q=\partial^2s_2$, $T=\partial^3s_3$, $U=\partial^4s_4$ at zero.
+Thus (22), signed face incidences and finite sums specify all colour
+and position indices, without an implicit interacting expectation.
+Put $H=Q_{yy}=4I+C^*C/2$, $G=H^{-1}$, $B=Q_{yx}$ and
+$Lx=(x,-GBx)$; in endpoint coordinates $Bx=-2(a+b)$.
+The generated kernels are
+
+$$\begin{aligned}
+ (\Gamma_3)_{ijk}&=\sum_{ABC}T_{ABC}L_{Ai}L_{Bj}L_{Ck},\\
+ Z_{e,ij}&=\sum_{AB}T_{eAB}L_{Ai}L_{Bj},\\
+ (\Gamma_4)_{ijkl}&=\sum_{ABCD}U_{ABCD}L_{Ai}L_{Bj}L_{Ck}L_{Dl}
+ -\sum_{ef}G_{ef}(Z_{e,ij}Z_{f,kl}+Z_{e,ik}Z_{f,jl}+Z_{e,il}Z_{f,jk}).
+\end{aligned}\tag{23}$$
+
+Here repeated mid-edge indices include the colour pairing. The vertices
+are $\Gamma_3[x^3]/6$ and $\Gamma_4[x^4]/24$; their background Hessian
+jets are $V=\Gamma_3[\mathcal B,\cdot,\cdot]$ and
+$W=\Gamma_4[\mathcal B,\mathcal B,\cdot,\cdot]/2$.
+Indeed $y=-GBx-GZ[x,x]/2+O(x^3)$; substituting into $s_2+s_3+s_4$
+gives the exchange contribution $-\langle Z[x,x],GZ[x,x]\rangle/8$.
+
+**Explicit size and decay.** Let $d$ be distance between edges in the
+graph joining edges of a common spatial face, attaching endpoint
+variables to their corresponding mid-edge. Since $4I\le H\le10I$,
+the Neumann series about $7I$ gives
+$\|G_{ef}\|\le(3/7)^{d(e,f)}/4$. This is the three-dimensional version
+of [Lemma 1](su2-midplane-small-field.md) (passage). Put
+
+$$\alpha=\tfrac12\log(7/3),\quad q=\sqrt{3/7},\quad
+ g=48\frac{1+4q+q^2}{(1-q)^4},\quad
+ K=2^{40}(1+N)^4e^{6\alpha},\quad l=1+gK. \tag{24}$$
+
+Use the anchored kernel norm: fix any one argument, sum the operator
+norm over all other edge arguments, with weight $e^{\alpha\mathsf T}$,
+where $\mathsf T$ is the shortest connecting tree length. The same
+definition for matrices includes both row and column sums. Then
+
+$$\|G\|_\alpha\le g,\quad \|B\|_\alpha,\|T\|_\alpha,\|U\|_\alpha\le K,
+ \quad \|\Gamma_3\|_\alpha\le Kl^3=:v_3,\quad
+ \|\Gamma_4\|_\alpha\le(K+3K^2g)l^4=:v_4. \tag{25}$$
+
+For the first bound, a radius-$n$ edge ball has at most $3(4n+3)^3$
+members; sum $\frac34\sum_n(4n+3)^3q^n\le g$. For the local bounds,
+the absolute word-coefficient sums in (22) are at most $8^r$ for
+$r\le3$; multiplication, the derivative factor $4!$, the weights
+in (21), and at most 24 incident words are covered by $K$. The same
+constant covers the length-three endpoint paths after substitution.
+Tree lengths are subadditive when kernels are joined, proving (25)
+from (23). In particular each kernel is bounded by $v_r e^{-\alpha\mathsf T}$.
+These are deliberately loose constants; $t^{-1}$ restores action units.
+
+## 8. Consequence for STATE
+
+Cell 4 now also has explicit one-step cubic and quartic kernels with
+exponential decay, at formal tree level (Round 10, unrefereed).
+The next part is their subtracted one-loop contraction and its infrared
+limit; uniform depth control and interacting remainders remain open.
