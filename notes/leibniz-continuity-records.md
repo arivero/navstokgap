@@ -131,9 +131,11 @@ so the best verdict is continuous at $F=0$ whenever $\hbar>0$ and the aperture
 is bounded, while a classical apparatus with sharp preparations decides at
 every $F\ne0$. Yuen's protocol escapes only by letting $L$ or $P$ grow as $F$
 shrinks, an idealization of the same kind as the perfect instrument. For
-the preparation-ignorant observer, the hybrid argument extends Theorem 2's
-bound to adaptive protocols ([recoil note](record-costs-recoil.md), last
-section). The records reading of Leibniz's law therefore holds for both
+adaptive protocols the [recoil note](record-costs-recoil.md) gives, for any
+probe states, $s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$ with $s=F\tau^2/(2m)$ the sagitta and
+$\Delta_j$ the impulse spreads, so at a bounded total recoil the best verdict is
+again continuous at $F=0$; Theorem 2's mark-model value itself is proved for
+non-adaptive protocols. The records reading of Leibniz's law therefore holds for both
 observers exactly on the floor branch, at bounded apertures.
 
 ## 2. Leibniz, 1687: the law of continuity as a test of laws
