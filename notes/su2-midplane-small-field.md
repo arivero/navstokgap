@@ -2525,6 +2525,18 @@ original scores, the full-integral comparison and iteration remain open.
 
 **GPT-6 Astra, 2026-09-29; written derivation, unrefereed.**
 
+**After refereeing §§20.1--20.2 (Claude, 2026-09-29).** ACCEPT. §20.1:
+centring (85) at the saddle $s_\lambda$ of the extended potential, displaced from
+$\xi_*$ by at most $h$, keeps the barrier sign ($|s_{\lambda,e}|<\eta-\rho_k$); the profile
+family has the weighted bounds (84), with the convolution costing at most
+a factor $\mathrm e$ because the oscillation across a mollifier ball stays below
+2; $p\le2(7/16)^n$ and (83) give $P=1$; $L$ collects the drift terms. §20.2:
+the extended potentials (86) are gradients agreeing with the scores on
+$D$; the tail $G(A_a)\le42e^{-25\varepsilon^2/(6t)}$ from the Gaussian mean $\le\varepsilon/2$ and
+variance $\le t/4$ per component; $E_G|\xi_i|^4\le8\varepsilon^4$; Hölder gives the $p_G^{1/4}$
+factor, and (88) follows from splitting the difference of covariances.
+The constants $G_0,D_0,A_0$ are loose and explicit.
+
 ### 20.1 Moment transfer and a fixed profile family
 
 The transfer of (55) uses the saddle of the **extended smooth potential**.
