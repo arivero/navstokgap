@@ -1913,4 +1913,63 @@ unequal layers, the transverse-only target additionally needs control of
 the explicit midpoint term
 \([2\langle Y,PY\rangle-2\langle w,Pw\rangle]/t\) and the cut
 contributions in (60)--(61) by that smaller budget.
+
+\hypertarget{local-densities-and-the-remaining-decay-hypothesis-part-2}{%
+\subsubsection{14.2 Local densities and the remaining decay hypothesis
+(Part
+2)}\label{local-densities-and-the-remaining-decay-hypothesis-part-2}}
+
+\textbf{Exact decomposition; spatial response conditional.}
+Taylor-expand each face and bridge term at the actual saddle, assigning
+half of each edge remainder to each adjacent face. This gives
+\(R=\sum_pR_p\) exactly. With \(\mu_{\lambda,U}\) from §13.2 define
+
+\[\ell_p(U)=-\int_0^1[\langle R_p\rangle_{\lambda,U}
+-\langle R_p\rangle_{\lambda,1}]\,d\lambda,\qquad
+|\ell_p(U)|\le2A_u\sqrt t\le2A_ut^\alpha.\tag{63}\]
+
+Equation (55) proves this face by face with the same 16 cubic products
+as before; half-edge assignment adds \(\beta(8/3)^{3/2}/3\) to the
+constant. Consequently \(\sum_p\ell_p\) is precisely the
+identity-normalized \(\log(Z_E/Z_{2,W})\). Assign amplitudes to faces in
+the same way and put \(Q_p=\mathcal J_p(\xi)-\mathcal J_p(\xi_*)\).
+Integrating their expectations along the \(s\mathcal J\) interpolation
+gives densities \(a_p\) for the centered amplitude log-ratio, with
+\(|a_p|\le12D_J(\sqrt3+3D_J)\sqrt t\). These bounds imply the requested
+value bound with \(1+|z_p|^2/t\) on the equal-layer slice, even at
+\(z_p=0\). Their dependence on \(U\) still comes through the full
+measure and saddle.
+
+Here is the precise decay supplied by Theorem 5 \textbf{if its
+soft-barrier realization condition holds uniformly along these
+interpolations}. For a potential perturbation \(\theta k_T\) supported
+in \(T\), hold the local Taylor coefficients and saddle fixed, and
+retain the convexity bounds and, for \(R\), (55)'s fourth moments
+throughout the perturbation. Set \(b_T=\sup\|\nabla k_T\|_{L^2}\) and
+\(d=d(\partial p,T)\). The derivative Taylor bound and (55) with \(k=4\)
+give \(\|\nabla R_p\|_{L^2}\le A_R=(320/3)(L_F+\beta)\); incidence
+counting gives \(\|\nabla Q_p\|_{L^2}\le A_J=6D_J\). Using
+\(\kappa\le1/2\) (including amplitudes), (21) proves
+
+\[|\partial_\theta\langle f_p\rangle|
+=|\operatorname{Cov}(f_p,k_T)|
+\le\tfrac{2t}{7}A_f b_T e^{-\gamma d},\qquad
+\gamma=\log(12/5),\quad(f,A_f)=(R,A_R)\text{ or }(Q,A_J).\tag{64}\]
+
+The uniformity in \(\lambda,s\) permits integration; (25) sums remote
+scores. For actual boundary changes the exact response also contains
+\(\langle\partial_\theta f_p\rangle\) and the score
+\(\partial_\theta V\). Their quasi-local bounds require compatible
+boundary coordinates:
+\(\partial_\theta\xi_*=-A^{-1}\partial_\theta\nabla E(\xi_*)\) has Lemma
+1 decay for a local link score, whereas independent face-log variations
+require the additional transport control identified in §7.4. Finally
+(56) also contains \(b(U)-b(1)\), where \(b(U)=\log(Z_{2,W}/G_U)\). Its
+rectangle bound controls only the total cost. Completing the requested
+quasi-local remainder requires a uniform soft-barrier realization of
+(22), the boundary-score bounds just specified, and local densities for
+this Gaussian barrier cost with summable decay and size \(O(t^\alpha)\).
+Equations (63)--(64) establish the local small densities and the
+conditional response estimate; the full quasi-local assertion retains
+these premises.
 \end{document}
