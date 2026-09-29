@@ -564,6 +564,18 @@ passage, from the Wikisource transcription).
 
 ## 5. Consequence for STATE
 
+The premise can be stated as one sentence about topologies. On the floor
+branch the statistical distance between the recorded motions of a cell,
+$d(F,F')^2=(F-F')^2\tau^3/(24m\kappa)$ by Theorem 2 applied to the difference of forces, is
+a continuous function of the forces that vanishes only on the diagonal, so
+records and geometry induce the same topology on the motions. On the zero
+branch that distance is infinite between any two distinct forces, and
+records induce the discrete topology. Positivity of the floor is therefore
+equivalent, in the mark model, to the requirement that records and
+geometry order the motions alike, which is Leibniz's "Datis ordinatis
+etiam quaesita sunt ordinata" read with the records as the *quaesita*.
+
+
 For the Newton goal: for the observer ignorant of the preparation,
 positivity of the action floor is equivalent in the mark model to the
 records reading of Leibniz's 1687 law of continuity for laws of motion
