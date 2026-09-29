@@ -984,6 +984,17 @@ continuous thing it mimics. The [companion note](arrow-not-sling.md) sets this o
 - **Al-Nazzam.** The local record below the mesh is his leap. The
   interval stays divisible, and the crossing is exhibited only in
   finitely many steps.
+- **Galileo, Cavalieri and Guldin (1621--1647).** The Newton-age dispute
+  over indivisibles, the bowl and cone, the wheel's unquantified voids and
+  Cavalieri's aggregates, concerned static figures. Case (iii) puts no floor
+  there, and the scholium's limit doctrine is the right answer; the
+  entries are in the [continuity note](leibniz-continuity-records.md), §4.
+- **Leibniz (1687, 1704).** His law of continuity, stated in the year of
+  the *Principia* as a test of laws of motion, holds for Newton's comparison
+  exactly when $\kappa>0$ if outcomes are measured by discernibility, his own
+  "à peine distingué", and on both branches if they are measured
+  geometrically; his *petites perceptions* are the additive shares of the
+  cut measure ([continuity note](leibniz-continuity-records.md), §§1--3).
 - **The kalam time-atom.** Denied. The mesh depends on $F$, on $m$ and on
   the confidence demanded, so it is a dynamical resolution rather than a
   universal atom of time. A floor on action coexists with a continuum of

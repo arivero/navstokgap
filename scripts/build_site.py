@@ -54,7 +54,7 @@ TRACKS = [
         "rivero-1998-conjecture-central-forces",
         "rotation-composition-universality",
         "galileo-two-path-interference", "stochastic-route-velocitas-ultima",
-        "superdeterminism-floor",
+        "superdeterminism-floor", "leibniz-continuity-records",
         "necessity-unit-and-indeterminacy", "newton-indeterminacy-routes",
         "thermodynamic-records-no-floor", "sed-zeta-radiation-link",
         "sed-closure-under-recording",

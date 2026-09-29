@@ -34,6 +34,8 @@ supplies to the project. Retrieval date for all batches: 2026-09-08
 | [Lagrange, Mécanique analytique II.III](Lagrange_MecaniqueAnalytique_P2S3_Oeuvres_wikisource.md) | 1788/1811; Œuvres XI | HTML, transcription | Least-action property derived from the general formula, §VI |
 | [Helmholtz, physical meaning and history of least action](Helmholtz_LeastAction_1886-87_WA3_1895_OCR.md) | 1886–87; 1895 | OCR excerpt | Least action as the universal law of reversible physics |
 | [Hertz, Principles of Mechanics, Introduction](Hertz_PrinciplesOfMechanics_Introduction_1899_wikisource.md) | 1894; 1899 | HTML, transcription | Three images of mechanics; concealed masses |
+| [Leibniz, Lettre sur un principe général](Leibniz_PrincipeGeneral_1687_Gerhardt3_OCR.md) | 1687; 1887 | OCR excerpt, French | Law of continuity as a test of laws of motion; rest as infinitely small speed; the nearly equal case "à peine distingué" |
+| [Leibniz, Nouveaux essais, Préface](Leibniz_NouveauxEssais_Preface_Gerhardt5_OCR.md) | 1703–1705; 1882 | OCR excerpt, French | Petites perceptions: the roar of the sea, "cent mille riens"; no motion from rest but through a smaller one |
 | [Thomson and Tait, Treatise, §§318–330](ThomsonTait_TreatiseNaturalPhilosophy_Sec318-330_OCR.md) | 1867/1879 | OCR excerpt | Varying action and Maupertuis's principle in the standard textbook form |
 | [Planck, Energieverteilung im Normalspectrum](Planck_Energieverteilung_1901_de_wikisource.md) | Dec. 1900; 1901 | HTML, transcription | Energy elements hν and the first value of h |
 | [Archimedes, The Method, Heath 1912](Archimedes_Method_Heath1912_OCR.md) | c. 250 BCE; 1912 | OCR text | Democritus's cone dilemma read as sections; the mechanical method |
