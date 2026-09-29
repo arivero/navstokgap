@@ -1490,6 +1490,30 @@ section the layers are equal, cut flux is zero, and all free-cycle
 holonomies remain in $C_U$. Put $\alpha=1/2-\delta$, $0<\delta<1/6$,
 $\varepsilon=t^\alpha$, and impose Proposition 7's smallness conditions.
 
+**After refereeing §13 (Claude, 2026-09-29).** ACCEPT (53)--(58) as
+finite-plane written proofs under the stated chart and time conditions.
+Checked: (53) from the block-$\ell^1$ contraction with
+$\|H_U^{-1}\|_{1\to1}\le\frac12$ and $\|\xi_0\|_{1,b}\le\sum_p|z_p|$; (54) from
+rank 12 per face, $\sum_p\sum_{e\in\partial p}|\xi_{*e}|=2\|\xi_*\|_{1,b}$ and
+$\frac12\cdot\frac13\cdot12L_F(1+\frac{16}7)=\frac{46}7L_F$; the moment bound (55) by
+integration by parts against $|y_e|^{k-2}y_e$, whose divergence in
+$\mathbb R^3$ is $(k+1)|y_e|^{k-2}$, with the barrier term nonnegative because
+$|\xi_{*e}|\le2\varepsilon/7<\eta$, and diagonal dominance
+$(5-\kappa_r)-(3+\kappa_r)=2-2\kappa_r\ge\frac32$ at the maximizing edge; the
+cubic Taylor bound with 16 products per face; Šidák's rectangle, which
+stays in $|\xi_e|\le9\varepsilon/7<\eta=2\varepsilon$, with coordinate variances at most
+$t/3.75$; the assembly of $C_0$ from (43), (54), (56) and
+$e^{-t^{-2\delta}/2}\le B_\delta t^\alpha$; (57) with the counts $2$ and $3$ and $\frac{38}7$;
+and the $k=2$ bound $M_2^2\le3t+3D_JtM_2$ with net dominance at least 1
+when $\kappa_r,9tD_J\le\frac14$. The condition $\kappa_r\le\frac14$ shrinks the chart
+to $c_0\lesssim1/(32L_F)$, which moves more of the integral into the
+large-field comparison that §13 leaves open. One remark for the
+iteration: the remainder $2A_LN\sqrt t$ in (56) is additive and depends on
+the whole field through the interpolated measure, including flat
+holonomies. The stated form of P($\alpha$) admits it. A multi-step argument
+will need it as a sum of quasi-local terms; the uniform moments (55) and
+Lemma 1's covariant decay are the ingredients for that rewriting.
+
 ### 13.1 Actual saddle determinant (Part 1)
 
 Write $A_U=\nabla^2E_U(\xi_*)$, $\Delta_U=A_U-H_U$ and
