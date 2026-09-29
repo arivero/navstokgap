@@ -4038,7 +4038,7 @@ iteration remain open.
 \subsection{27. Three bad components: a tree bound from the two-set
 estimate}\label{three-bad-components-a-tree-bound-from-the-two-set-estimate}}
 
-\textbf{GPT-6 (Codex), 2026-09-29; written derivation, unrefereed.} The
+\textbf{GPT-6.1 Sol, 2026-09-29; written derivation, unrefereed.} The
 third truncated correlation satisfies (116) with the same rarity
 exponent \(c_*=1/64\) and decay rate \(\gamma_*=\frac12\log(12/5)\).
 This uses (115) for disjoint unions of components and needs no
@@ -4151,4 +4151,186 @@ followed by dressing and source control. Alternate next to the Newton
 complete-record mechanism test. Full-integral comparison, iteration and
 the continuum \(SU(3)\) spectral claim retain their existing
 obligations.
+
+\hypertarget{a-decoupling-family-with-the-barrier-retained}{%
+\subsection{28. A decoupling family with the barrier
+retained}\label{a-decoupling-family-with-the-barrier-retained}}
+
+\textbf{GPT-6.1 Sol, 2026-09-29; written derivation, unrefereed.}
+Freezing other blocks at the common smooth saddle gives a factorizing
+reference and a real interpolation family preserving the convexity,
+local moments, joint rarity (111) and pair decay (115). A single smooth
+connector has the explicit response bound (128), with gain \(t^\delta\).
+The barrier stays inside every interpolated measure. This supplies
+inputs for a connector expansion; the arbitrary-order tree estimate
+remains open.
+
+\hypertarget{freeze-at-the-saddle-before-removing-interactions}{%
+\subsubsection{28.1 Freeze at the saddle before removing
+interactions}\label{freeze-at-the-saddle-before-removing-interactions}}
+
+Fix the boundary background and \(\lambda\) and put \(s=s_\lambda\) from
+§20.1. Let \(\mathcal P\) be any partition of all insertion edges into
+nonempty blocks and let \(P_A\) denote coordinate projection onto block
+\(A\). Define \[S_{\mathcal P}(\xi)
+=S_\lambda(s)+\sum_{A\in\mathcal P}
+ \left[S_\lambda\bigl(s+P_A(\xi-s)\bigr)-S_\lambda(s)\right].
+\tag{124}\] The one-block partition recovers \(S_\lambda\). Every
+\(S_{\mathcal P}\) has the same value and zero gradient at \(s\). Its
+Hessian is the direct sum of principal blocks of \(S_\lambda''\), each
+evaluated at its own partially frozen configuration. With the on-site
+barriers added,
+\(\nu_{\mathcal P,J}\propto e^{-S_{\mathcal P}-\sum_{e\in J}w_k(\xi_e)}\)
+factorizes over \(A\in\mathcal P\). This exact factorization applies
+even when the blocks are disconnected. It is an auxiliary fixed-chart
+construction; it does not assert a new gauge-invariant group action.
+
+Take any convex combination
+\(S_\theta=\sum_{\mathcal P} \theta_{\mathcal P}S_{\mathcal P}\), with
+\(\theta_{\mathcal P}\ge0\) and \(\sum\theta_{\mathcal P}=1\). Under
+§25.2's conditions, uniformly in the partitions and coefficients,
+\[\begin{aligned}
+\|tS_\theta''-6I\|&\le5/2,\qquad
+(S_\theta'')_{ee'}=0\text{ if }d(e,e')>1,\\
+\nabla^2\left(S_\theta+\sum_{e\in J}w_k\right)&\succeq3I/(2t),\\
+\sup_e E_{\theta,J}|\xi_e-s_e|^q
+ &\le[2(q+1)t/3]^{q/2}\quad(q\ge2),\\
+\nu_{\theta,J}(b_e=1\ \forall e\in H)&\le p^{|H|/16}.
+\end{aligned}\tag{125}\] Consequently (115) and (120), with unchanged
+constants, hold throughout this family, including when
+\(J=\varnothing\).
+
+\emph{Proof.} A principal submatrix of \(tS_\lambda''-6I\) has operator
+norm at most \(5/2\) by (20). A direct sum of such matrices, even
+evaluated at different points, has the same bound; convex combinations
+preserve it. Freezing deletes Hessian entries between blocks and creates
+none, so range one remains. This proves the first line and an even
+stronger spectral lower bound than the second line.
+
+For the local moment estimate retain §20.1's deterministic entrywise
+envelope about \(5I\): fixed nonnegative \(K_{ee'}\) majorize
+\(\|(tS_\lambda''-5I)_{ee'}\|\), with row and column sums at most
+\(3+C_*\varepsilon\le7/2\). Within a block the envelope is restricted to
+its principal indices and outside it the entries vanish. The same
+envelope therefore applies to every \(S_\theta\), regardless of the
+frozen configurations. The block maximum argument and integration by
+parts proving (85) apply with exactly \(m=3/2\) and centre \(s\). The
+on-site barrier has nonnegative radial contribution about \(s_e\)
+because it is convex and vanishes at \(s_e\); the choice of \(s\) leaves
+its distance to the bad threshold unchanged. Linear tilts preserve the
+spectral bound, so (110) and the Chernoff proof of (111) apply without
+alteration. The gradient estimate for \(F_H\) and Theorem 5 then give
+(115); §27 gives (120). The common saddle and Hessian lower bound give
+Gaussian domination, allowing the same barrier limit at fixed volume.
+\(\square\)
+
+Freezing at arbitrary points would add gradients at the reference centre
+and require a new saddle displacement budget. Freezing at \(s_\lambda\)
+is the step that avoids that extra hypothesis. The real family (125)
+holds at each fixed background; differentiating its moving saddle in
+boundary-source directions still needs separate control.
+
+\hypertarget{an-explicit-local-connector-and-its-rarity-weighted-cost}{%
+\subsubsection{28.2 An explicit local connector and its rarity-weighted
+cost}\label{an-explicit-local-connector-and-its-rarity-weighted-cost}}
+
+For a two-block cut \(\mathcal E=A\sqcup B\), write the smooth potential
+as the local face sum \(S_\lambda=\sum_p\phi_p\), assigning half of
+every one-edge term to each incident face, as before. Put \(y=\xi-s\).
+The interaction removed at a face meeting both blocks is
+\[\begin{aligned}
+K_p(\xi)&=\phi_p(s+y)-\phi_p(s+P_Ay)
+                 -\phi_p(s+P_By)+\phi_p(s),\\
+S_\lambda-S_{\{A,B\}}&=\sum_{p\text{ crossing}}K_p.
+\end{aligned}
+\tag{126}\] Each \(K_p\) is supported on the four edges of that face.
+One-edge terms cancel identically. Let \(K_{\rm loc}\ge1\) bound its
+parent face's unscaled Hessian row,
+\(\sup_\xi\max_{e\in\partial p} \sum_{e'\in\partial p}t\|D_eD_{e'}\phi_p(\xi)\|\).
+This is a fixed-dimensional local derivative bound. The Gaussian face
+row is at most four (two from its half-bridges and two from its curl
+quadratic form); allowing its local saddle-Hessian perturbation by two,
+§15.1's product rule permits
+\[K_{\rm loc}=6+K_u\varepsilon+7000\Lambda c_0
+                         +385D_Jt/c_0\le7\tag{127}\] under (65). Convex
+interpolation with \(V_2\) preserves this choice. The background
+parameter \(\Lambda=L_F+\beta\) here is §15's local constant, not a
+momentum cutoff.
+
+For \(e\in A\cap\partial p\), differentiating (126) gives the difference
+of \(D_e\phi_p\) at the full and \(A\)-frozen configurations. Integrate
+its mixed Hessian along the \(B\) coordinates. The moment estimate in
+(125) and the triangle inequality in \(L^2\) give
+\(\|D_eK_p\|_2\le\sqrt2K_{\rm loc}/\sqrt t\); the same holds on \(B\).
+Since the four gradients occupy orthogonal coordinate blocks,
+\(\|\nabla K_p\|_2\le2\sqrt2K_{\rm loc}/\sqrt t\) uniformly throughout
+(125).
+
+Take the convex path \(S_u=S_{\{A,B\}}+u\sum_{p\text{ crossing}}K_p\),
+\(0\le u\le1\), leaving every \(w_k\) unchanged. For a nonempty bad set
+\(H\), \(h=|H|\), one local connector obeys \[\begin{aligned}
+|\operatorname{Cov}_{u,J}(F_H,K_p)|
+&\le C_{\rm conn}t^\delta p^{h/64}
+                 e^{-\gamma_{\rm bad}d(H,\partial p)},\\
+C_{\rm conn}&=\frac{32\Omega_{\rm app}K_{\rm loc}}
+                         {7\sqrt{\mathrm e\log2}}.
+\end{aligned}\tag{128}\] Indeed Theorem 5 and §25.2's gradient estimate
+first give \[\frac{4\sqrt2\Omega_{\rm app}K_{\rm loc}}7
+ \frac{\sqrt t}{\varepsilon}\sqrt h\,p^{h/32}
+ e^{-\gamma_{\rm bad}d(H,\partial p)}.\] Use
+\(\sqrt t/\varepsilon=t^\delta\) and
+\(\sup_{h>0}\sqrt h\,e^{-\log(1/p)h/64} =\sqrt{32/(\mathrm e\log(1/p))}\),
+with \(\log(1/p)\ge\log2\), to obtain (128). The connector grows at most
+quadratically in \(\xi-s\); its gradient grows at most linearly. Thus
+Gaussian domination justifies the covariance identity and its barrier
+limit without differentiating the barrier.
+
+Differentiating an expectation along this real path yields
+\[\left|\frac d{du}E_{u,J}F_H\right|
+\le C_{\rm conn}t^\delta p^{h/64}
+ \sum_{p\text{ crossing}}e^{-\gamma_{\rm bad}d(H,\partial p)}.
+\tag{129}\] There is no plane-size cost hidden in this sum. With
+\(q=5/12\) and \(C_{\rm edge}=2\sum_{d\ge0}(4d+3)^2q^d\) from §7.3's
+graph counting, the sum over even all faces is at most
+\(2hC_{\rm edge}\): each edge lies in two faces and
+\(e^{-\gamma_{\rm bad}\min_{e\in H,f\in\partial p}d(e,f)} \le\sum_{e\in H,f\in\partial p}q^{d(e,f)}\).
+For explicit constants, \[C_{\rm edge}=2\left[
+ \frac{16q(1+q)}{(1-q)^3}+\frac{24q}{(1-q)^2}+
+ \frac9{1-q}\right].\] This is a real, one-connector locality estimate
+with rarity retained. It controls the change of a component's bare
+activity, rather than a fully dressed activity in (112).
+
+\hypertarget{the-surviving-arbitrary-order-obligation}{%
+\subsubsection{28.3 The surviving arbitrary-order
+obligation}\label{the-surviving-arbitrary-order-obligation}}
+
+The tested interaction route preserves convexity and joint rarity, so
+those two conditions no longer obstruct this particular decoupling. It
+also prices one attachment by (128). The missing lemma must control
+\textbf{mixed connected responses to several \(K_p\)}, with one
+fixed-rate connector per tree edge and a geometric constant per
+attachment. Repeated differentiation of an expectation involves
+cumulants of \(F_{H_i}\) and the unbounded quadratic \(K_p\); (128)
+alone controls neither their growth with order nor the sum over
+decoupling choices. The real convex simplex of (124) is also smaller
+than the independent complex-source domain demanded by (113).
+
+Abandon a proposed expansion if it differentiates \(w_k\), requires a
+vanishing decay rate as the number of components grows, or leaves
+uncontrolled products of the \(K_p\). A useful next proof must supply a
+summable multiple-connector norm on the real decoupling family, before
+dressing (112) and boundary sources (113) are claimed. The
+group-independent freezing algebra transfers immediately, but the
+\(SU(2)\) tail and profile constants in (125)--(129) still require their
+explicit \(SU(3)\) verification.
+
+\hypertarget{consequence-for-state-12}{%
+\subsubsection{Consequence for STATE}\label{consequence-for-state-12}}
+
+This gauge checkpoint supplies an exact factorizing reference and
+uniformly admissible real decoupling paths, with the local connector
+cost (128). The next gauge lemma is the multiple-connector cumulant
+bound, followed by dressing and analytic sources. Alternate next to
+Newton's adaptive complete-record and refinement test. No continuum
+construction, nontriviality or physical spectral gap is inferred here.
 \end{document}
