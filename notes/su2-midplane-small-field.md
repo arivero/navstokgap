@@ -2647,3 +2647,57 @@ positive limit. Strong convexity of $S$ supplies an integrable Gaussian
 dominator for their products. Dominated convergence therefore proves
 convergence of their means and covariances to the barriered covariances;
 on $D$ these are exactly the original quadratic-score covariances.
+
+### 20.3 Assembly of the kernel estimate (Claude, after the quota stop)
+
+**Claude, 2026-09-29; written assembly of §§17--20, unrefereed.** Astra's
+round stopped after §20.2 (usage limit, reset 11:37). Use §19's weight,
+$\gamma=\frac12\log(10/7)$, $m=5-\frac72e^\gamma$, the unit-link normalization of §17, and the
+extended scores of (86) on the Gaussian side; on the barriered measure
+$\mu$ the extended and original scores coincide, since $\mu$ lives on $D$.
+Let $C_T$ be the chart supremum of $(t/\varepsilon^2)$ times the weighted marginal sums
+of $f_a-g_a=\nabla_\xi\partial_aT$, $T=S-V_2$. It is a local constant of the compact
+chart, of the order of $\Lambda$, $c_M$ and $K_u$ with the incidence counts of (87),
+because $T$ vanishes to second order in $\xi-s_\lambda$ up to the $B\varepsilon^2$ shift of §20.1 and a
+unit-link derivative costs one factor $\varepsilon$.
+
+**Covariant kernel estimate.** Under (83) and the hypotheses of §§17--20,
+for boundary links at link distance $d(a,b)\ge2$,
+$$\sup_a\sum_{b:\,d(a,b)\ge2}e^{\gamma d(a,b)}\bigl|\partial_a\partial_b(\mathcal D_s-\mathcal D^{\rm cov})\bigr|
+\le C_{27}\,{\varepsilon^3\over t},$$
+$$C_{27}={2C_TG_0\over m}+{e^\gamma C_*G_0^2\over m^2}
++{\mathrm eK_0G_0^2+2G_0D_0L\over m^2}+E_0p_G^{1/4}.\tag{89}$$
+
+*Proof.* Insert the extended scores in (68). The two score-difference
+terms cost $t\cdot(C_T\varepsilon^2/t)\cdot(G_0\varepsilon/t)/m$ each, by the pointwise resolvent bound
+(77) and its $R_\mu$ version with positive on-site killing (§19.2). The
+smooth insertion costs $t(G_0\varepsilon/t)^2e^\gamma C_*\varepsilon/m^2$, since $\Delta$ has range one and
+block row sum at most $C_*\varepsilon$, and each resolvent has weighted norm at most
+$m^{-1}$. The residuals (69) obey (80) with $P=1$ and $K_{\rm app}=\mathrm eK_0$ from
+§20.1. Returning from extended to original scores on the Gaussian side
+costs (88). Collect the four terms. $\square$
+
+In unscaled link derivatives the bound reads $C_{27}\varepsilon/t$, so the difference
+kernel is smaller than the Gaussian kernel scale $1/t$ of (29) by the
+factor $\varepsilon=t^\alpha$: this is (27), against the covariant reference, with decay
+rate $\frac12\log(10/7)$ and all constants explicit up to the local constant
+$C_T$, uniformly in plane size and in the barrier approximation.
+
+**What it gives, and what it does not yet give.** Together with the
+face-local sizes (63), (89) controls the pair dependence of the remainder
+$r=\mathcal D_s-\mathcal D^{\rm cov}$ on boundary data: a change at distance $d$ from a region
+moves that region's contribution by at most $C_{27}\varepsilon^3e^{-\gamma d}/t$ per unit
+change. A representation $r=\sum_Xr_X$ over connected sets with activities
+$|r_X|\le Ct^\alpha e^{-\gamma'|X|}$, which the iteration needs, follows by Möbius
+inversion over sets of boundary links once the higher mixed differences
+obey the same weighted bound; the Helffer--Sjöstrand machinery of
+§§17--20 extends to them with more score factors, and writing that
+extension is the next step.
+
+### Consequence for STATE
+
+The covariant kernel estimate (27) is proved, conditionally on the local
+constant $C_T$ being bounded as stated, for one barriered step on the
+small-field chart, uniformly in plane size (§20.3, with §20.1--20.2 by
+Astra). Cell 2 next: the higher mixed differences (polymer activities),
+then the large-field comparison and perturbed-action stability.

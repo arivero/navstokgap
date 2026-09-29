@@ -3690,6 +3690,93 @@ dominator for their products. Dominated convergence therefore proves
 convergence of their means and covariances to the barriered covariances;
 on <span class="math inline">\(D\)</span> these are exactly the original
 quadratic-score covariances.</p>
+<h3
+id="assembly-of-the-kernel-estimate-claude-after-the-quota-stop">20.3
+Assembly of the kernel estimate (Claude, after the quota stop)</h3>
+<p><strong>Claude, 2026-09-29; written assembly of §§17–20,
+unrefereed.</strong> Astra’s round stopped after §20.2 (usage limit,
+reset 11:37). Use §19’s weight, <span
+class="math inline">\(\gamma=\frac12\log(10/7)\)</span>, <span
+class="math inline">\(m=5-\frac72e^\gamma\)</span>, the unit-link
+normalization of §17, and the extended scores of (86) on the Gaussian
+side; on the barriered measure <span class="math inline">\(\mu\)</span>
+the extended and original scores coincide, since <span
+class="math inline">\(\mu\)</span> lives on <span
+class="math inline">\(D\)</span>. Let <span
+class="math inline">\(C_T\)</span> be the chart supremum of <span
+class="math inline">\((t/\varepsilon^2)\)</span> times the weighted
+marginal sums of <span
+class="math inline">\(f_a-g_a=\nabla_\xi\partial_aT\)</span>, <span
+class="math inline">\(T=S-V_2\)</span>. It is a local constant of the
+compact chart, of the order of <span
+class="math inline">\(\Lambda\)</span>, <span
+class="math inline">\(c_M\)</span> and <span
+class="math inline">\(K_u\)</span> with the incidence counts of (87),
+because <span class="math inline">\(T\)</span> vanishes to second order
+in <span class="math inline">\(\xi-s_\lambda\)</span> up to the <span
+class="math inline">\(B\varepsilon^2\)</span> shift of §20.1 and a
+unit-link derivative costs one factor <span
+class="math inline">\(\varepsilon\)</span>.</p>
+<p><strong>Covariant kernel estimate.</strong> Under (83) and the
+hypotheses of §§17–20, for boundary links at link distance <span
+class="math inline">\(d(a,b)\ge2\)</span>, <span
+class="math display">\[\sup_a\sum_{b:\,d(a,b)\ge2}e^{\gamma
+d(a,b)}\bigl|\partial_a\partial_b(\mathcal D_s-\mathcal D^{\rm
+cov})\bigr|
+\le C_{27}\,{\varepsilon^3\over t},\]</span> <span
+class="math display">\[C_{27}={2C_TG_0\over m}+{e^\gamma C_*G_0^2\over
+m^2}
++{\mathrm eK_0G_0^2+2G_0D_0L\over
+m^2}+E_0p_G^{1/4}.\tag{89}\]</span></p>
+<p><em>Proof.</em> Insert the extended scores in (68). The two
+score-difference terms cost <span
+class="math inline">\(t\cdot(C_T\varepsilon^2/t)\cdot(G_0\varepsilon/t)/m\)</span>
+each, by the pointwise resolvent bound (77) and its <span
+class="math inline">\(R_\mu\)</span> version with positive on-site
+killing (§19.2). The smooth insertion costs <span
+class="math inline">\(t(G_0\varepsilon/t)^2e^\gamma
+C_*\varepsilon/m^2\)</span>, since <span
+class="math inline">\(\Delta\)</span> has range one and block row sum at
+most <span class="math inline">\(C_*\varepsilon\)</span>, and each
+resolvent has weighted norm at most <span
+class="math inline">\(m^{-1}\)</span>. The residuals (69) obey (80) with
+<span class="math inline">\(P=1\)</span> and <span
+class="math inline">\(K_{\rm app}=\mathrm eK_0\)</span> from §20.1.
+Returning from extended to original scores on the Gaussian side costs
+(88). Collect the four terms. <span
+class="math inline">\(\square\)</span></p>
+<p>In unscaled link derivatives the bound reads <span
+class="math inline">\(C_{27}\varepsilon/t\)</span>, so the difference
+kernel is smaller than the Gaussian kernel scale <span
+class="math inline">\(1/t\)</span> of (29) by the factor <span
+class="math inline">\(\varepsilon=t^\alpha\)</span>: this is (27),
+against the covariant reference, with decay rate <span
+class="math inline">\(\frac12\log(10/7)\)</span> and all constants
+explicit up to the local constant <span
+class="math inline">\(C_T\)</span>, uniformly in plane size and in the
+barrier approximation.</p>
+<p><strong>What it gives, and what it does not yet give.</strong>
+Together with the face-local sizes (63), (89) controls the pair
+dependence of the remainder <span class="math inline">\(r=\mathcal
+D_s-\mathcal D^{\rm cov}\)</span> on boundary data: a change at distance
+<span class="math inline">\(d\)</span> from a region moves that region’s
+contribution by at most <span
+class="math inline">\(C_{27}\varepsilon^3e^{-\gamma d}/t\)</span> per
+unit change. A representation <span
+class="math inline">\(r=\sum_Xr_X\)</span> over connected sets with
+activities <span class="math inline">\(|r_X|\le Ct^\alpha
+e^{-\gamma&#39;|X|}\)</span>, which the iteration needs, follows by
+Möbius inversion over sets of boundary links once the higher mixed
+differences obey the same weighted bound; the Helffer–Sjöstrand
+machinery of §§17–20 extends to them with more score factors, and
+writing that extension is the next step.</p>
+<h3 id="consequence-for-state-5">Consequence for STATE</h3>
+<p>The covariant kernel estimate (27) is proved, conditionally on the
+local constant <span class="math inline">\(C_T\)</span> being bounded as
+stated, for one barriered step on the small-field chart, uniformly in
+plane size (§20.3, with §20.1–20.2 by Astra). Cell 2 next: the higher
+mixed differences (polymer activities), then the large-field comparison
+and perturbed-action stability.</p>
 
 </main>
 <footer class="site"><div class="wrap">
