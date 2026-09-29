@@ -3215,7 +3215,21 @@ perturbed-action stability and iteration remain the subsequent obligations.
 
 **GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** Uniform
 convexity upgrades the one-edge tail to a joint bound with $C=1$ and
-$c=1/16$. The resulting connected-set weights retain correlations
+$c=1/16$. 
+
+**After refereeing §24 (Claude, 2026-09-29).** ACCEPT (108)--(111), the
+counting behind (112), and (113) as a sufficient target. Checked: (110)
+from the Hessian bound $3/(2t)$, which survives linear tilts, so (13) bounds
+every tilted variance by $2t/3$ and the log moment-generating function by
+$t|v|^2/3$; the Chernoff step with $6^M$ sign choices; $d\ge\varepsilon$ from (83);
+and the conversion to $p^{|H|/16}$. An independent route gives the same
+joint bound with a slightly better constant: uniform log-concavity yields
+a logarithmic Sobolev inequality (Bakry--Émery), and Gaussian concentration
+of the 1-Lipschitz function $(\sum_{e\in H}|\xi_e-s_e|^2)^{1/2}$, whose mean is at most
+$\sqrt{2|H|t}$ by (85), gives $\exp\{-\frac3{4t}(d-\sqrt{2t})^2|H|\}$ with no factor $6^{|H|}$.
+The scale remark in §24.2 is right and worth keeping in view: the pair
+and triple constants certify $t^{\alpha-2\delta}$ for the bare remainder, and the
+missing $t^{2\delta}$ must come from cancellation or the energy-budget form of (62). The resulting connected-set weights retain correlations
 between components; their conversion into a convergent polymer expansion
 requires the additional estimates in Part 2.
 
