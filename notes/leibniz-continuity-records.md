@@ -21,7 +21,9 @@ $d^2=3s(1-s)K_\tau/\kappa$ ([cut-measure note](cut-measure-newton.md), Propositi
 differently: when the read coordinate has no dynamics in the window, the
 best verdict jumps at zero for every $\kappa$. The equivalence concerns the
 observer ignorant of the preparation; a protocol that knows it (Yuen's, in
-§3 of the paper) decides at every force for every $\kappa$.
+§3 of the paper) decides at every force for every $\kappa$ by letting its
+phase-space aperture grow. At a bounded aperture the conclusion returns
+for that observer too, with $\hbar$ in place of $\kappa$ (§1, last paragraph).
 
 Leibniz published the law of continuity in July 1687, the year of the
 *Principia*, as a test of laws of motion: when two cases approach and are
@@ -117,6 +119,22 @@ statement about the preparation-ignorant observer. That observer is
 Newton's in Book III, who reads forces from the phenomena, motions nobody
 prepared; §10 of the paper prices the preparation route by the body's
 spread along the way.
+
+**Both observers, at bounded aperture.** For the observer who knows the
+preparation, Theorem 2 of the
+[probabilistic note](planck-gap-probabilistic.md) covers every finite
+adaptive protocol of instruments, with any Kraus operators and apparatus
+memory, whose conditional states keep the body within an aperture $(L,P)$:
+deciding at error $\epsilon$ requires $F\tau L/\hbar+F\tau^2P/(2m\hbar)\ge1-2\epsilon$. Hence
+$$P_*(F)\ \ge\ \tfrac12\Bigl(1-\frac{F\tau L}\hbar-\frac{F\tau^2P}{2m\hbar}\Bigr)\ \longrightarrow\ \tfrac12\qquad(F\to0),$$
+so the best verdict is continuous at $F=0$ whenever $\hbar>0$ and the aperture
+is bounded, while a classical apparatus with sharp preparations decides at
+every $F\ne0$. Yuen's protocol escapes only by letting $L$ or $P$ grow as $F$
+shrinks, an idealization of the same kind as the perfect instrument. For
+the preparation-ignorant observer, the hybrid argument extends Theorem 2's
+bound to adaptive protocols ([recoil note](record-costs-recoil.md), last
+section). The records reading of Leibniz's law therefore holds for both
+observers exactly on the floor branch, at bounded apertures.
 
 ## 2. Leibniz, 1687: the law of continuity as a test of laws
 
@@ -544,10 +562,11 @@ passage, from the Wikisource transcription).
 
 ## 5. Consequence for STATE
 
-For the Newton goal: for the observer ignorant of the preparation, using
-non-adaptive protocols, positivity of the action floor is equivalent in the
-mark model to the records reading of Leibniz's 1687 law of continuity for
-laws of motion (Proposition L). The zero branch keeps
+For the Newton goal: for the observer ignorant of the preparation,
+positivity of the action floor is equivalent in the mark model to the
+records reading of Leibniz's 1687 law of continuity for laws of motion
+(Proposition L), and at bounded apertures the observer who knows the
+preparation reaches the same conclusion through the probabilistic note. The zero branch keeps
 the geometric reading, which Leibniz himself applied, so the fork stands;
 it now lies between a reading Leibniz made and one he did not, with his
 measure of the cases, "à peine distingué", and the "insensible alone" half
