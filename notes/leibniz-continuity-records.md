@@ -41,7 +41,8 @@ discernibility that the records reading needs (§3), and his *Pacidius* (1676)
 the proportion argument against leaps, which a floor on action meets
 (§2b). Newton's own Rule III (1713) separates division by reason, certain,
 from division by the powers of nature, "incertum", to be settled by one
-experiment (§4b). The Newton-age dispute
+experiment (§4b), and his *Opticks* posits the permanent least bodies that
+the *Pacidius* named, for the sake of lasting natures (§4c). The Newton-age dispute
 over indivisibles, Galileo, Cavalieri and Guldin between 1621 and 1647,
 concerned static figures, where the theorem imposes no floor and Newton's
 limit doctrine is the right answer (§4).
@@ -149,7 +150,11 @@ reconstructed letters are flagged).
   on both branches. His phrase measures the difference *in datis* by
   discernibility: the nearly equal collision can scarcely be told from the
   equal one. The records reading applies the same measure *in quaesitis*,
-  and that transfer is ours. Proposition L shows what the test then
+  and that transfer is ours. It has one textual support: Leibniz
+  individuates things by discernible difference, "deux choses individuelles
+  ne sauroient estre parfaitement semblables" (1704, §3), so results that
+  differ are, for him, results that can in principle be told apart.
+  Proposition L shows what the test then
   demands: for Newton's comparison and for Zeno's rung, continuity of the
   best verdict holds exactly when $\kappa>0$. The exemption marks the boundary
   of the argument. An instrument is a composite amplifier, and finite
@@ -398,6 +403,49 @@ passage, OCR normalized by hand).
   while Newton's stated physics, in Book III, leaves the physical limit open
   with an empirical criterion.
 
+## 4c. Newton, Query 31: permanent least bodies
+
+Newton, *Opticks*, fourth edition (London, 1730), Book III, Query 31,
+verbatim from the Project Gutenberg transcription
+([companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md);
+passage). The query goes back to the Latin *Optice* of 1706 (recalled, not
+read here).
+
+- **The text.** "God in the Beginning form'd Matter in solid, massy, hard,
+  impenetrable, moveable Particles, of such Sizes and Figures ... even so
+  very hard, as never to wear or break in pieces; no ordinary Power being
+  able to divide what God himself made one in the first Creation. While
+  the Particles continue entire, they may compose Bodies of one and the
+  same Nature and Texture in all Ages ... that Nature may be lasting, the
+  Changes of corporeal Things are to be placed only in the various
+  Separations and new Associations and Motions of these permanent
+  Particles."
+- **What it commits him to.** Least bodies of fixed sizes and figures,
+  indivisible by any ordinary power, as the ground of the sameness of
+  natures through time; all change is rearrangement and motion.
+- **What the theorem does with it.** These are the atoms that the
+  *Pacidius* names as the only reason to ascribe leaps to one grade of
+  bodies, and Newton holds them, so on Leibniz's own terms Newton could
+  place a floor at the atomic grade. The theorem needs no grade (§2b): a
+  floor on action fixes no length, and Newton's particles supply lengths,
+  one per species, with no universal action. His reason for them is
+  stability, sameness of natures in all ages, and that reason does ask for
+  a scale. In the mechanics of the *Principia* a body bound by an
+  inverse-square force has no preferred size (if $r(t)$ is an orbit, so is
+  $\lambda r(\lambda^{3/2}t)$), so identical sizes for bound systems of one kind need a
+  constant beyond Newton's. He supplies hardness by fiat. The
+  [relativistic Kepler note](relativistic-kepler-threshold.md) shows that
+  finite propagation speed, which Newton accepts (*Opticks* II.iii Prop.
+  XI), turns singular inverse-square binding into an action threshold
+  $|L|>k/c$, and an action constant of the quantum kind fixes sizes
+  dynamically, Bohr's radius $a_0=\hbar^2/(m_ee^2)$ in Gaussian units being the
+  standard case. Query 31 thus states, as a premise about matter, the need
+  for a scale that the Galileo comparison states as a premise about
+  records; the two premises are distinct, and neither text derives the
+  other. Its "no ordinary Power" agrees with Rule III's "per vires naturae
+  ... incertum": division by nature is bounded by the powers available,
+  the form the floor takes as a law about what nature can exhibit.
+
 ## 5. Consequence for STATE
 
 For the Newton goal: for the observer ignorant of the preparation, using
@@ -415,7 +463,7 @@ supplies, with the composition results, the rule that universalizes a
 floor found in one body, so the zero branch belongs to the default reading
 of Book I's geometry rather than to Newton's stated physics. For the
 scholion: three Leibniz entries (1676, 1687, 1704), Newton's Rule III and
-the Galileo--Cavalieri--Guldin layer are supplied with their three
-obligations;
+Query 31, and the Galileo--Cavalieri--Guldin layer are supplied with their
+three obligations;
 the paper's §9 carries a pointer. §§1--4 are refereed (Fable, REFINE,
-applied); §§2b and 4b await a referee.
+applied); §§2b, 4b and 4c await a referee.

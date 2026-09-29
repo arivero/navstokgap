@@ -2,7 +2,7 @@
 
 > Source: [Project Gutenberg eBook #33504](https://www.gutenberg.org/ebooks/33504), release date 23 August 2010, which prints the fourth edition; local verbatim excerpt [`.txt`](Newton_Opticks_1730_fits_and_queries_excerpt.txt); retrieved 2026-09-17.
 > Metadata: Isaac Newton, *Opticks: or, a Treatise of the Reflections, Refractions, Inflections and Colours of Light*, the fourth edition, corrected (London: William Innys, 1730).
-> Extraction: ten passages (three added 2026-09-22, one on 2026-09-23) copied verbatim from the plain-text file, with its line numbers recorded in each heading. Underscores mark the original italics, as in that file.
+> Extraction: eleven passages (three added 2026-09-22, one on 2026-09-23, one on 2026-09-29) copied verbatim from the plain-text file, with its line numbers recorded in each heading. Underscores mark the original italics, as in that file.
 > Rights: public domain text; Project Gutenberg transcription.
 > Limit: a transcription of the fourth edition, not a critical edition. The paper drafted from it must cite the 1730 printing itself, and Shapiro's edition and commentary for the textual history of the fits.
 
@@ -47,6 +47,11 @@ Newton's own quantities and with one of them measured.
   the rays by acting at a distance, most strongly at the least distance,
   which is the inflexion that limits a mark's resolution when the beam
   is narrowed.
+- **Permanent least bodies, for the sake of lasting natures.** Query 31
+  posits hard primitive particles that no ordinary power divides, so that
+  natures stay the same in all ages: the atoms that Leibniz's *Pacidius*
+  names as the only escape for leaps, used in
+  [the continuity note](../../notes/leibniz-continuity-records.md), §4c.
 
 ## Passage anchors
 
@@ -65,6 +70,7 @@ again in the excerpt.
 | Book II, Part III, Prop. XVIII | 6498–6506 | “the 1/89000th part of an Inch” |
 | Book III, Query 1 | 7717–7720 | Bodies act on light at a distance and bend its rays |
 | Book III, Query 29 | 8479–8533 | Rays are small bodies of different sizes, put into fits by vibrations they "stir up" that "overtake them" |
+| Book III, Query 31 | 9179–9197 | Primitive particles "so very hard, as never to wear or break in pieces; no ordinary Power being able to divide what God himself made one in the first Creation", so that bodies keep "one and the same Nature and Texture in all Ages" |
 
 ## Coverage and limits
 
