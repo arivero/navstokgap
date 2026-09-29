@@ -268,9 +268,12 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    branchwise information (41); monitor replacement has cost (46).
    A [finite harmonic refinement bound](refinement-composition-and-limit.md#3b-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm)
    from the Lean norm obstacle gives complete-record convergence under
-   the additional conditional noise budget (49). Open: derive that
-   budget and positive conditional innovation through terminal memory
-   and accessible relative observations.
+   the additional conditional noise budget (49).
+   [Hamiltonian memory, §8](sed-closure-under-recording.md#8-hamiltonian-memory-terminal-records-and-blocking)
+   realizes the monitor cost and proves terminal posterior closure from
+   the joint initial covariance restriction; linear blocking preserves
+   it for the same body (Sol/Astra, written). Open: a genuine two-copy
+   refinement and joint-law comparison, and independent positive scale.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the

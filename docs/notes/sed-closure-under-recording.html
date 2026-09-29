@@ -78,7 +78,17 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Adaptive result, 2026-09-29 (GPT-6.1 Sol; written,
+<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Hamiltonian memory result, 2026-09-29 (GPT-6.1 Sol and GPT-6
+Astra; written, internally checked).</strong> Section 8 constructs the
+kick monitor as a coupling to a physical memory. It changes the first
+stored imprecision, leaving the conditional noise determinant (52) at
+least <span class="math inline">\(\kappa^2\)</span>. For a general
+affine Hamiltonian apparatus, the complete terminal memory coordinates
+imply the Gaussian posterior floor from the initial joint covariance
+restriction (22). Linear blocking of those records preserves the floor.
+This derives the readout cost in the stated class; its initial positive
+phase-covariance scale remains a premise.</p>
+<p><strong>Adaptive result, 2026-09-29 (GPT-6.1 Sol; written,
 unrefereed).</strong> Section 7 gives the exact Hellinger affinity of a
 finite adaptive linear Gaussian record in terms of its branchwise
 information. It includes retained memory and indirect noise
@@ -1198,7 +1208,186 @@ the zero branch. Hence this checkpoint establishes adaptive composition
 and a finite refinement estimate under explicit assumptions, and
 quantifies the required innovation replacement. It does not derive
 positivity, universality or the radiation calibration in (23).</p>
-<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<h2 id="hamiltonian-memory-terminal-records-and-blocking">8. Hamiltonian
+memory, terminal records and blocking</h2>
+<p>This is a conditional finite body–apparatus–record construction.
+Assume the initial Gaussian canonical state satisfies (22) with <span
+class="math inline">\(\kappa&gt;0\)</span>, allow affine symplectic
+evolution, and realize the record as physical memory coordinates read at
+the terminal cut. These are independently stated model hypotheses,
+rather than a separately postulated measurement seed. Their general
+physical necessity and the initial positive scale are not established by
+this construction.</p>
+<h3 id="a-monitor-that-disturbs-the-physical-stored-reading">8.1 A
+monitor that disturbs the physical stored reading</h3>
+<p>Retain §6.2’s product resonant body–pointer preparation and first
+pulse. The body is <span class="math inline">\(X=(Q,P-G\Pi_1)\)</span>
+and pointer coordinate is <span
+class="math inline">\(Y_1&#39;=Y_1+GQ\)</span>. Introduce independent
+memory <span class="math inline">\(A=(Z_A,\Lambda_A)\)</span> with
+diagonal Gaussian variances <span
+class="math inline">\(a_0,b_0&gt;0\)</span> and <span
+class="math inline">\(a_0b_0=\kappa^2\)</span>. A unit pulse with
+integrated Hamiltonian generator <span
+class="math inline">\(Y_1&#39;\Lambda_A\)</span> copies the pointer into
+its coordinate: <span class="math display">\[R_1=Z_A+Y_1&#39;,\qquad
+K=\Pi_1-\Lambda_A.
+\tag{50}\]</span> All expressions here use the initial random variables.
+The body stays unchanged: <span
+class="math inline">\(\{P-G\Pi_1,Y_1&#39;\}=-G+G=0\)</span>. Thus the
+first imprecision and reusable-pointer kick are <span
+class="math inline">\(N=Z_A\)</span>, <span
+class="math inline">\(D=-\Lambda_A\)</span>, satisfying (20)
+mechanically from the memory’s prior. The copying pulse is a symplectic
+map, not a passive assignment of an externally stored number.</p>
+<p>Now introduce independent monitor memory <span
+class="math inline">\(B=(Z_B,\Lambda_B)\)</span> with diagonal variances
+<span class="math inline">\(r^2,d^2&gt;0\)</span> and <span
+class="math inline">\(r^2d^2\ge\kappa^2\)</span>. A unit pulse generated
+by <span class="math inline">\(\Lambda_A\Lambda_B\)</span> changes both
+memory coordinates. The complete terminal readings are <span
+class="math display">\[R_1&#39;=Z_A+Y_1&#39;+\Lambda_B,\qquad
+S=Z_B+\Lambda_A.\tag{51}\]</span> The pointer momentum <span
+class="math inline">\(K\)</span> is unchanged; grant the same exact
+second-pointer inference of <span class="math inline">\(K\)</span> as in
+Proposition 5. The effective noise is <span
+class="math inline">\(N&#39;=Z_A+\Lambda_B\)</span>, <span
+class="math inline">\(D=-\Lambda_A\)</span>. Conditional on <span
+class="math inline">\(S\)</span>, <span
+class="math display">\[\begin{aligned}
+a&amp;=a_0+d^2,\qquad b=\frac{b_0r^2}{b_0+r^2},\qquad c\!_{ND}=0,\\
+\det E_S&amp;=\kappa^2+
+          \frac{b_0(r^2d^2-\kappa^2)}{b_0+r^2}\ge\kappa^2.
+\end{aligned}\tag{52}\]</span> The diagonal product preparation makes
+<span class="math inline">\(N&#39;\)</span> independent of <span
+class="math inline">\(D,S\)</span>; the remaining variance is the scalar
+Gaussian conditioning formula. Equality holds when the monitor memory is
+also saturated, <span class="math inline">\(r^2d^2=\kappa^2\)</span>.
+Equation (32) then gives body posterior area exactly <span
+class="math inline">\(\kappa\)</span> for every first gain. Finite
+second-pointer precision increases it. A sharper monitor <span
+class="math inline">\(r\downarrow0\)</span> requires <span
+class="math inline">\(d^2\ge\kappa^2/r^2\)</span> and increasingly
+disturbs the stored first coordinate. At an uninformative monitor <span
+class="math inline">\(r\to\infty\)</span> with saturated <span
+class="math inline">\(d^2\)</span>, its extra disturbance tends to zero.
+These are finite-model limits; no cutoff removal is implied.</p>
+<p>The causal distinction from (34) is measurable in the Poisson
+brackets: <span class="math display">\[\{R_1&#39;,S\}=1-1=0,\qquad
+\{R_1,S\}=1,\qquad\{R_1&#39;,K\}=1-1=0.\tag{53}\]</span> The old
+numerical value <span class="math inline">\(R_1\)</span> and the later
+monitor reading are not the two terminal coordinates of this closed
+memory construction. If one grants a passive external read of <span
+class="math inline">\(R_1\)</span> before the monitor and retains that
+number without another physical memory coupling, the old escape of (34)
+returns. Copying it to another physical memory adds that memory’s
+variables and conjugate kick to the calculation. The monitor’s
+disturbance prices an observation of the earlier kick by changing the
+stored imprecision; it differs from §7.2’s prescribed fresh momentum
+kick but satisfies the same conditional determinant test. All variances
+in (52) have action units in the canonical scaling.</p>
+<h3
+id="a-general-posterior-theorem-for-complete-terminal-coordinates">8.2 A
+general posterior theorem for complete terminal coordinates</h3>
+<p>Let <span class="math inline">\(Z\)</span> be a centred finite
+jointly Gaussian canonical vector with covariance <span
+class="math inline">\(V\)</span> and Poisson matrix <span
+class="math inline">\(\Omega\)</span>, satisfying <span
+class="math inline">\(V+i\kappa\Omega\succeq0\)</span>. Write the
+remaining canonical body and complete record as <span
+class="math inline">\(X=LZ\)</span>, <span
+class="math inline">\(R=CZ\)</span>, omitting irrelevant affine means.
+Suppose <span class="math display">\[L\Omega L^{\sf T}=\Omega_X,\qquad
+L\Omega C^{\sf T}=0,\qquad C\Omega C^{\sf T}=0.
+\tag{54}\]</span> These conditions hold after any affine symplectic
+evolution when <span class="math inline">\(X\)</span> is a remaining
+subsystem and <span class="math inline">\(R\)</span> consists of
+coordinate readings of distinct terminal memory pairs. The last
+condition means their classical Poisson brackets vanish, also called an
+isotropic record. This statement uses Poisson geometry; it assumes no
+quantum operator commutator. General simultaneous classical records need
+not satisfy (54).</p>
+<p><strong>Proposition 7 (terminal-memory posterior closure).</strong>
+Under these hypotheses, <span class="math display">\[\Sigma_{X\mid R}
+=LVL^{\sf T}-LVC^{\sf T}(CVC^{\sf T})^\dagger CVL^{\sf T},
+\qquad\Sigma_{X\mid R}+i\kappa\Omega_X\succeq0.
+\tag{55}\]</span> For one body pair this gives <span
+class="math inline">\(\det\Sigma_{X\mid R}\ge\kappa^2\)</span>. No
+independent measurement seed or readout product law is assumed.</p>
+<p><em>Proof.</em> Push the initial positive Hermitian matrix through
+<span class="math inline">\((L,C)\)</span>. By (54) its blocks are <span
+class="math display">\[\begin{pmatrix}
+LVL^{\sf T}+i\kappa\Omega_X&amp;LVC^{\sf T}\\
+CVL^{\sf T}&amp;CVC^{\sf T}
+\end{pmatrix}\succeq0.\]</span> The Schur complement proves (55). For a
+singular record covariance, its null directions have zero cross
+covariance with <span class="math inline">\(X\)</span>; restrict to its
+range, or use the displayed pseudoinverse. The one-pair Hermitian
+determinant is <span class="math inline">\(\det\Sigma-\kappa^2\)</span>,
+so positivity gives the area bound. <span
+class="math inline">\(\square\)</span></p>
+<p>This is an explicit Hamiltonian realization of Proposition 3’s
+Gaussian restriction. It reduces the readout-law obligation to a joint
+preparation condition and physical storage geometry within this affine
+class. It does not prove that every physically admissible observation
+belongs to the class. In particular, treating a reading as an external
+classical number and subsequently probing its retained conjugate
+bypasses (54), exactly as (53) shows. Individual marginal phase-area
+floors do not imply the initial joint condition when apparatus and field
+are correlated; that full condition must be checked.</p>
+<p>At a fixed adaptive branch the same proof applies if the full
+conditional remaining state already satisfies (22), and the next map and
+added Gaussian ancillas obey the stated hypotheses. It gives a
+conditional induction for Hamiltonian copies and terminal reads with the
+measured pair removed from subsequent mechanical use. It does not prove
+closure for arbitrary nonlinear Hamiltonian feedback or for future
+observations of a discarded conjugate.</p>
+<h3
+id="what-survives-blocking-and-what-must-be-proved-across-depths">8.3
+What survives blocking, and what must be proved across depths</h3>
+<p>Fix the same terminal body variable <span
+class="math inline">\(X\)</span>. Let a coarse record be a deterministic
+linear block of a finer terminal record, <span
+class="math inline">\(R_c=BR\)</span>. Its pulled-back matrix is <span
+class="math inline">\(C_c=BC\)</span>, so (54) survives exactly. The
+coarse body posterior also satisfies (55), and <span
+class="math display">\[\operatorname{Cov}(X\mid R_c)
+\succeq\operatorname{Cov}(X\mid R).\tag{56}\]</span> To see the latter,
+condition the finer posterior mean on <span
+class="math inline">\(R_c\)</span>: the covariance of that mean is the
+nonnegative extra term in the Gaussian conditional-variance
+decomposition. Repeated linear blocking composes its <span
+class="math inline">\(B\)</span> matrices and preserves this conditional
+floor at each finite step. This is an explicit retained-observable
+statement, independent of whether a physical trajectory curve has been
+constructed.</p>
+<p>It still needs cross-depth consistency. First construct one genuine
+two-storage-cell refinement and its explicit coarse record projection,
+with both descriptions referring to the same terminal body. If finer
+dynamics adds new copies, compare its joint body–coarse-record law with
+the earlier one after that projection. The extra copy kick is part of
+the comparison; forgetting a new record can disturb the body, as the <a
+href="newton-record-parallel-move.html">parallel-record construction</a>
+(local full-read) already quantifies. A sufficient next lemma is a
+summable bound on that projected-law defect for a physically stated copy
+schedule, while retaining (55) and useful force sensitivity. Covariance
+monotonicity alone cannot compare different terminal bodies. Abandon the
+schedule if matching its body requires removing an unobserved physical
+kick, if its old record is preserved only by a passive external
+assignment, if its complete noise can be removed by an accessible
+relative or terminal-memory channel, or if its total conditional
+information loses the continuity in (42).</p>
+<p>The zero branch remains admissible: at <span
+class="math inline">\(\kappa=0\)</span> the covariance condition is
+ordinary positivity, and sharp preparation/copy limits carry no
+universal positive cost. Thus this construction discharges a separate
+seed law within the declared closed affine apparatus class, while
+retaining the positive joint preparation scale as an input. Establishing
+that preparation law from independent physical premises, universality
+across apparatus and the calibration <span
+class="math inline">\(h_*=\gamma h_{\rm rad}\)</span> remain distinct
+tasks.</p>
+<h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
 its cross correlations and radiation damping, allows the two-pointer
@@ -1217,10 +1406,14 @@ to conditional innovation (32)–(35), extend complete-record continuity
 and composition to adaptive Gaussian kernels (41)–(44), and calculate
 the innovation replacement cost (46). The sister formalization’s norm
 obstacle yields a finite harmonic refinement bound; (49) states its
-extra statistical budget. Next alternate to gauge multiple-connector
-control, then derive or defeat an actual monitor mechanism for (46),
-including terminal memory and relative observations. Positivity,
-universality and radiation calibration remain separate obligations.</p>
+extra statistical budget. Section 8 now supplies a Hamiltonian
+copy/monitor realization and terminal-memory closure from the initial
+joint phase-covariance restriction. Linear blocking preserves the
+posterior floor; the next Newton lemma is cross-depth consistency of the
+projected body–record law for a physical copy schedule, with its kick
+retained. Alternate next to the gauge anchored connector bound.
+Positivity, universality and radiation calibration remain separate
+obligations.</p>
 
 </main>
 <footer class="site"><div class="wrap">
