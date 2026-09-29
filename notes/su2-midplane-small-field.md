@@ -3090,11 +3090,11 @@ Both the score jets and $B_j$ may depend on $t$ and order. Uniformity is
 an explicit premise wherever these constants are used uniformly.
 
 For a nonnegative jet vector $h$, define recursively
-$$U_0(h)=h_0/m,\qquad
-U_r(h)={h_r+\sum_{j=2}^{r+1}\binom{r+1}{j}B_{j+1}U_{r+1-j}(h)
-\over(r+1)m},\qquad
-\mathcal B(v,h)_r=\sum_{l=0}^{r+1}\binom{r+1}{l}v_lU_{r+1-l}(h).
-\tag{105}$$
+$$\begin{aligned}U_0(h)&=h_0/m,\\
+U_r(h)&={h_r+\sum_{j=2}^{r+1}\binom{r+1}{j}B_{j+1}U_{r+1-j}(h)
+\over(r+1)m},\\
+\mathcal B(v,h)_r&=\sum_{l=0}^{r+1}\binom{r+1}{l}v_lU_{r+1-l}(h).
+\end{aligned}\tag{105}$$
 Start $h^{(0)}=v$ and take $h^{(s+1)}=\mathcal B(v,h^{(s)})$, losing
 one available jet each time. Write $H_n=(F/m)h^{(n-2)}_0$.
 The Gaussian quantity $H_n^G$ uses $B_j=0$, $v_0^G=\sqrt{4n}(G_0+A_0)$,
@@ -3130,7 +3130,7 @@ new singleton block. This generates every partition exactly once.
 
 For contact blocks of size $b$, include the local constants
 $M_{b,j}=(t/\varepsilon^b)\|D_\xi^jS_B\|_{\gamma,\mathrm{marg},4n}$
-for $1\le j\le n$, and the corresponding supremum norm $M_{b,0}$
+for $1\le j\le n$, and the corresponding $L^{4n}$ norm $M_{b,0}$
 for $j=0$, including Gaussian counterparts. The marginal includes all
 boundary labels of $B$. These are mixed jets of the same local action,
 cutoff and coordinate maps used in §22; locality bounds their support,
@@ -3182,3 +3182,13 @@ bound cannot be absorbed by fixed small $t$: $(n!c^n)^{1/n}\sim cn/e$.
 Connected expansion weights with compensating factorials or stronger
 cancellations are then required. Equations (103)--(107) therefore leave
 (94), its bare activity scale and geometric order growth open on this chart.
+
+### Consequence for STATE
+
+Cell 2 has the barriered one-step comparison, the accepted pair and
+separated-third responses, and the conditional polymer conversion (95).
+Round 23 adds exact all-order response identities, contact bookkeeping and
+a conditional jet majorant; geometric growth and the bare activity scale
+in (94) remain open, with the fifth barrier jet identifying a concrete
+repair target. Curvature conversion, large-field comparison,
+perturbed-action stability and iteration remain the subsequent obligations.
