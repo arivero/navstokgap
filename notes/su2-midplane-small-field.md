@@ -3405,9 +3405,73 @@ $\varepsilon^2/t=t^{-2\delta}$, larger than $t^{\alpha'}$ by $1/\varepsilon$.
 The revised (94) and (113) remain sufficient targets, with their original
 path and all-order hypotheses; the scale choice alone proves neither.
 
+### 25.2 Truncated correlations and the remaining dressing step (Part 2)
+
+Let $H_1,H_2$ be disjoint nonempty edge sets, $h_i=|H_i|$,
+$M=h_1+h_2$, $d=d(H_1,H_2)$ and $F_H=\prod_{e\in H}f_e$.
+Use §24.1's finite-$k$ measures $\nu_J$, including $J=\varnothing$
+as required in (109). Under (83) and $x\ge64\log6$, uniformly in
+$J,k,N,\lambda$ and the admissible real background, one has
+$$\begin{aligned}
+|E_{\nu_J}F_{H_1\cup H_2}-E_{\nu_J}F_{H_1}E_{\nu_J}F_{H_2}|
+&\le C_{\rm bad}p^{M/64}e^{-\gamma_{\rm bad}d},\\
+C_{\rm bad}&=\frac{64\Omega_{\rm app}^2}{7\mathrm e\log2},
+\qquad \gamma_{\rm bad}=\log(12/5).
+\end{aligned}\tag{115}$$
+The profile constant $\Omega_{\rm app}$ is exactly (84).
+
+*Proof.* Since $w_k$ vanishes on the good ball, (84) gives
+$|\nabla f_e|=e^{-w_k}|\nabla w_k|
+\le(\Omega_{\rm app}/\varepsilon)b_e$, while $|f_e|\le b_e$.
+Different edge derivatives occupy orthogonal coordinate blocks. Thus
+$$|\nabla F_H|^2\le
+\frac{\Omega_{\rm app}^2}{\varepsilon^2}|H|\prod_{e\in H}b_e,
+\qquad
+\|\nabla F_H\|_{L^2(\nu_J)}
+\le\frac{\Omega_{\rm app}}{\varepsilon}\sqrt{|H|}\,p^{|H|/32}.$$
+The last step is (111), applied to the whole set, including the
+differentiated edge. The smooth part satisfies (20) with $\kappa=1/2$;
+each retained barrier is on-site convex. Hence (21), on gradient
+supports $H_1,H_2$, bounds the covariance by
+$(2\Omega_{\rm app}^2/7)(t/\varepsilon^2)\sqrt{h_1h_2}
+p^{M/32}(5/12)^d$. Put $L=\log(1/p)\ge\log2$.
+The inequalities $\sqrt{h_1h_2}\le M/2$ and
+$\sup_{M>0}(M/2)e^{-LM/64}=32/(\mathrm eL)$ absorb the
+cardinality factor into $p^{M/64}$; $t/\varepsilon^2=t^{2\delta}\le1$
+proves (115). Bounded products and Gaussian domination give convergence
+of their expectations at fixed volume as $k\to\infty$, so the same
+uniform bound holds in the barrier limit. $\square$
+
+Equation (115) controls the second truncated correlation of bad
+components, with both rarity and distance decay. The exact
+moment--cumulant identity for $E\prod_iF_{H_i}$ also contains every
+$\kappa_{\nu_0}(F_{H_1},\ldots,F_{H_r})$, $r\ge3$.
+A concrete remaining estimate is the all-order tree bound
+$$|\kappa_{\nu_0}(F_{H_1},\ldots,F_{H_r})|
+\le B_*^r p^{c_*\sum_i|H_i|}
+\sum_{T\in\mathcal T_r}\prod_{ij\in T}e^{-\gamma_*d(H_i,H_j)}.
+\tag{116}$$
+Here $\mathcal T_r$ is the set of labelled spanning trees, and fixed
+$B_*\ge\max(1,\sqrt{C_{\rm bad}})$, $0<c_*\le1/64$,
+$0<\gamma_*\le\gamma_{\rm bad}$ must work uniformly in $r,k,N,t$
+for compatible families. Equation (115) proves its $r=2$ case only.
+Expanding the correlated family weights into such connected blocks,
+controlling the hard-core incompatibilities, and proving their summed
+norm (112) are the missing dressing step. A shortest connecting path
+of length $d$ receives only $e^{-\gamma_{\rm bad}d}$ from (115);
+rarity pays for $M$ bad edges, rather than the intervening good edges.
+Consequently the raw $p^{|H|/16}$ budget cannot simply be assigned to
+the enlarged connected supports. The source-domain version and the
+subtracted contact bounds in (113), now with $t^{\alpha'}$, remain
+additional obligations. Real convex covariance decay controls (115);
+it supplies neither complex-source control nor the higher connected
+bounds asserted as targets in (116). This is the stopping point.
+
 ### Consequence for STATE
 
-Part 1 fixes the cell-2 target exponent to $\alpha'=1/2-3\delta$ for
-$0<\delta<1/10$, retaining the original chart. The proved pair and triple
-bounds now have the target bare scale; dressed activities, contacts and
-all-order source control remain to be established.
+Round 25 absorbs the proved bare pair/triple scale by choosing
+$\alpha'=1/2-3\delta$, $0<\delta<1/10$, and proves (115) uniformly in
+volume and barrier approximation. Cell 2 next needs the higher connected
+bad-component bounds and dressing specified in (116), the contact and
+source control (113), and target-covering paths. Full-integral comparison,
+perturbed-action stability and iteration remain subsequent obligations.
