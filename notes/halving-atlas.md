@@ -206,7 +206,34 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
 ## 5. Open cells
 
 1. $SU(2)$ cube: *filled through $J=1$* ([Theorem 4](su2-midpoint-exact.md), exact diagonal entries, image bounds and cube sector); $J>1$ entries and control of the full spin sum remain open.
-2. $SU(2)$ full mid-plane in $1+2$: [order-$t$ calculation](su2-midplane-order-t.md) refereed as formal; [small-field note §§12--14](su2-midplane-small-field.md), Rounds 14--16, refereed by Claude: a covariant Gaussian reference with 't Hooft flux sectors, and normalized weak P($1/2-\delta$) against it for one barriered step, uniformly in plane size, for equal and unequal boundary layers with the cut faces budgeted (saddle determinant, Laplace remainder and amplitudes included; remainder densities face-local in size). Rounds 17--24 (§§17--24, refereed): the pair kernel (89), the link-coordinate form of (27), and the separated third response (93) hold on the barriered chart with explicit constants, uniformly in plane size; all-order response identities and a barrier-jet obstruction (§23); an undifferentiated small-field/large-field split with joint bad-set rarity $p^{|H|/16}$ (§24); the error exponent $\alpha'=\frac12-3\delta$, $\delta<\frac1{10}$, absorbing the proved bare scales (§25); the full response through third order, contacts included (§26, refereed). §27 gives the three-bad-component tree bound (120), with rarity $p^{M/64}$ and decay $\frac12\log(12/5)$; [§28](su2-midplane-small-field.md#28-a-decoupling-family-with-the-barrier-retained) gives a factorizing reference, uniform convexity and rarity along real decoupling paths, and the one-connector bound (128) (both written, unrefereed). Next: multiple-connector cumulants uniform in order, dressed activities (112) and analytic sources (113), yielding (94); then target-covering paths, curvature conversion, full-integral comparison, perturbed-action stability and iteration. The fixed-frame transport-value comparison remains open; Proposition 4's rejection stands.
+2. $SU(2)$ full mid-plane in $1+2$:
+   [order-$t$ calculation](su2-midplane-order-t.md) refereed as formal;
+   [small-field note §§12--14](su2-midplane-small-field.md), Rounds 14--16,
+   refereed by Claude: a covariant Gaussian reference with 't Hooft flux
+   sectors, and normalized weak P($1/2-\delta$) against it for one barriered
+   step, uniformly in plane size, for equal and unequal boundary layers
+   with the cut faces budgeted (saddle determinant, Laplace remainder and
+   amplitudes included; remainder densities face-local in size).
+   Rounds 17--24 (§§17--24, refereed): the pair kernel (89), the
+   link-coordinate form of (27), and the separated third response (93)
+   hold on the barriered chart with explicit constants, uniformly in
+   plane size; all-order response identities and a barrier-jet obstruction
+   (§23); an undifferentiated small-field/large-field split with joint
+   bad-set rarity $p^{|H|/16}$ (§24); the error exponent
+   $\alpha'=\frac12-3\delta$, $\delta<\frac1{10}$, absorbing the proved
+   bare scales (§25); the full response through third order, contacts
+   included (§26, refereed). §27 gives the three-bad-component tree
+   bound (120), with rarity $p^{M/64}$ and decay $\frac12\log(12/5)$;
+   §28 gives a factorizing reference, uniform convexity and rarity along
+   real decoupling paths, and the one-connector bound (128) (both written,
+   unrefereed). [§29](su2-midplane-small-field.md#29-all-order-connector-moments-and-a-uniform-analytic-source-ball)
+   controls arbitrary connector moments and connected growth, and gives
+   a uniform complex $\ell^1$ source ball (Sol/Astra, written). Next:
+   anchored two-connector tree decay (135), its order-uniform extension,
+   dressed activities (112) and boundary polydiscs (113), yielding (94);
+   then target-covering paths, curvature conversion, full-integral
+   comparison, perturbed-action stability and iteration. The fixed-frame
+   transport-value comparison remains open; Proposition 4's rejection stands.
 3. Stability of Hypothesis P($\alpha$) under iteration. *For $U(1)$ in $1+2$,
    reduced to exact Gaussian blocking* (Corollary 2$'$ of the
    [monopole note](villain-monopole-refinement.md)); open for $SU(N)$.

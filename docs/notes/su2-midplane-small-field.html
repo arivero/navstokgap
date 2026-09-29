@@ -5448,6 +5448,161 @@ bound, followed by dressing and analytic sources. Alternate next to
 Newton’s adaptive complete-record and refinement test. No continuum
 construction, nontriviality or physical spectral gap is inferred
 here.</p>
+<h2
+id="all-order-connector-moments-and-a-uniform-analytic-source-ball">29.
+All-order connector moments and a uniform analytic source ball</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-29; written derivation,
+internally checked.</strong> The quadratic connectors of §28 have
+exponential moments uniform over the real decoupling family. Their
+connected responses with one bad set satisfy (132) at every order, with
+the rarity exponent independent of that order. The normalized
+expectation is analytic on the complex <span
+class="math inline">\(\ell^1\)</span> source ball (134). This controls
+the previously unbounded connector products; a summable spatial tree and
+the boundary-source polydisc of (113) remain separate obligations.</p>
+<h3 id="the-quadratic-connector-norm">29.1 The quadratic connector
+norm</h3>
+<p>Fix any real measure <span
+class="math inline">\(\nu_{\theta,J}\)</span> in (125), and take a
+finite collection of §28.2 connectors with the common saddle <span
+class="math inline">\(s\)</span> and parent face Hessian row bound <span
+class="math inline">\(K_{\rm loc}\le7\)</span>. Repetitions of a
+connector label are allowed. No derivative acts on a barrier.
+Mixed-Hessian rectangle integration in (126) gives <span
+class="math display">\[|K_p(\xi)|\le\frac{K_{\rm loc}}{2t}
+                   \sum_{e\in\partial p}|\xi_e-s_e|^2.
+\tag{130}\]</span> Indeed integrate the parent face’s mixed Hessian at
+<span class="math inline">\(s+uP_A(\xi-s)+vP_B(\xi-s)\)</span>, <span
+class="math inline">\(0\le u,v\le1\)</span>. At this common
+configuration its symmetric block matrix has row and column majorants
+bounded by <span class="math inline">\(K_{\rm loc}/t\)</span>. Apply
+<span class="math inline">\(2|y_e||y_f|\le|y_e|^2+|y_f|^2\)</span> to
+the cross-block sum and integrate. This proves the factor <span
+class="math inline">\(1/2\)</span> in (130), also when one side has no
+edge of the face and <span class="math inline">\(K_p=0\)</span>.</p>
+<p>Put <span class="math inline">\(C_K=(8\mathrm e/3)K_{\rm
+loc}\le56\mathrm e/3\)</span>. For every integer <span
+class="math inline">\(n\ge1\)</span>, (125) and Minkowski give <span
+class="math display">\[\|K_p\|_{L^n(\nu_{\theta,J})}
+\le\frac{8K_{\rm loc}}3(n+\tfrac12),\qquad
+E|K_p|^n\le n!C_K^n.\tag{131}\]</span> For the first inequality, each of
+the four squared coordinate blocks has <span
+class="math inline">\(L^n\)</span> norm at most <span
+class="math inline">\(2(2n+1)t/3\)</span>. For the second use <span
+class="math display">\[\log(n!)\ge\int_{1/2}^{n+1/2}\log x\,dx
+=n\log(n+\tfrac12)-n+\tfrac12\log(2n+1).\]</span> The inequality follows
+by applying concavity of <span class="math inline">\(\log\)</span> on
+each unit interval centred at <span
+class="math inline">\(1,\ldots,n\)</span>. It implies <span
+class="math inline">\((n+\tfrac12)^n\le\mathrm e^n n!\)</span>. All
+constants are dimensionless, independent of plane size, barrier
+approximation, small heat time and real decoupling parameters.</p>
+<h3 id="connected-responses-at-arbitrary-order">29.2 Connected responses
+at arbitrary order</h3>
+<p>For <span class="math inline">\(F_H\)</span> of §25.2 put <span
+class="math inline">\(h=|H|\ge1\)</span> and <span
+class="math inline">\(a_H=p^{h/32}\)</span>. Joint rarity (111), <span
+class="math inline">\(|F_H|\le1_{B_H}\)</span> and Cauchy–Schwarz give
+<span class="math display">\[E\left|F_H\prod_{j=1}^n K_{p_j}\right|
+\le a_H C_K^n\sqrt{(2n)!}
+\le a_H(2C_K)^n n!.\]</span> Hölder and (131) supply the product’s
+second moment. The last inequality uses <span
+class="math inline">\(\binom{2n}{n}\le4^n\)</span>. With no <span
+class="math inline">\(F_H\)</span> insertion, the corresponding moment
+is at most <span class="math inline">\(C_K^n n!\)</span>. For <span
+class="math inline">\(n=0\)</span>, <span
+class="math inline">\(|EF_H|\le p^{h/16}\le a_H\)</span>.</p>
+<p>Moment–cumulant inversion now proves, at every <span
+class="math inline">\(n\ge1\)</span>, <span
+class="math display">\[\begin{aligned}
+|\kappa(F_H,K_{p_1},\ldots,K_{p_n})|
+&amp;\le a_H C_K^n n!(n+2)2^{n-1}\\
+&amp;\le a_H(4C_K)^n n!.
+\end{aligned}\tag{132}\]</span> For completeness, distinguish the
+partition block containing <span class="math inline">\(F_H\)</span>. If
+it contains <span class="math inline">\(k\)</span> connector labels, its
+moment costs <span class="math inline">\(a_H(2C_K)^k k!\)</span>. The
+other blocks of sizes <span class="math inline">\(m\)</span> cost <span
+class="math inline">\(C_K^m m!\)</span>. The cumulant coefficient is the
+factorial of the number of those other blocks. After selecting the <span
+class="math inline">\(k\)</span> labels, ordering the remaining blocks
+and choosing their positive sizes, the total coefficient of <span
+class="math inline">\(a_H C_K^n n!\)</span> is <span
+class="math display">\[2^n+\sum_{k=0}^{n-1}2^k2^{n-k-1}
+=(n+2)2^{n-1}.\]</span> Here <span
+class="math inline">\(2^{n-k-1}\)</span> counts the compositions of
+<span class="math inline">\(n-k\)</span>; the <span
+class="math inline">\(k=n\)</span> term is the single block. Thus rarity
+is spent once, without an exponent that deteriorates with response
+order. This is an all-order growth estimate, rather than a spatial tree
+estimate.</p>
+<h3 id="a-complex-source-domain-with-no-partition-function-zero">29.3 A
+complex source domain with no partition-function zero</h3>
+<p>For finitely supported complex <span
+class="math inline">\(z=(z_p)\)</span> write <span
+class="math display">\[r=\sum_p|z_p|,\qquad
+Z(z)=E e^{-\sum_pz_pK_p},\qquad
+G_H(z)=\frac{E[F_He^{-\sum_pz_pK_p}]}{Z(z)}.\tag{133}\]</span> Minkowski
+and (131) give <span class="math inline">\(E(\sum_p|z_p||K_p|)^n\le
+n!(C_Kr)^n\)</span>. Hence <span class="math inline">\(E
+e^{\sum_p|z_p||K_p|}\le(1-C_Kr)^{-1}\)</span> when <span
+class="math inline">\(C_Kr&lt;1\)</span>. In particular, throughout
+<span class="math inline">\(r&lt;1/(2C_K)\)</span>, <span
+class="math display">\[\begin{aligned}
+|Z(z)-1|&amp;\le\frac{C_Kr}{1-C_Kr},\qquad
+|Z(z)|\ge\frac{1-2C_Kr}{1-C_Kr}&gt;0,\\
+|G_H(z)|&amp;\le a_H\frac{1-C_Kr}{(1-2C_Kr)^{3/2}}.
+\end{aligned}\tag{134}\]</span> The numerator uses Cauchy–Schwarz
+against <span class="math inline">\(1_{B_H}\)</span> and the exponential
+bound at <span class="math inline">\(2r\)</span>. Uniform domination on
+smaller closed balls proves analyticity in each finite collection of
+sources. On <span class="math inline">\(r\le1/(4C_K)\)</span> the last
+bound is <span class="math inline">\(|G_H(z)|\le3a_H/\sqrt2\)</span>.
+Its derivatives at zero are <span
+class="math inline">\((-1)^n\kappa(F_H,K_{p_1},\ldots,K_{p_n})\)</span>.
+Higher moments and exponential integrability on a slightly larger ball
+give uniform integrability for passage to the existing barrier limit at
+fixed volume. Complex convexity and barrier jets are unused.</p>
+<p>This source ball has radius uniform in heat time and plane size. It
+concerns connector sources at a fixed real background and saddle, rather
+than the boundary-source variations in (113).</p>
+<h3 id="the-spatial-estimate-still-needed">29.4 The spatial estimate
+still needed</h3>
+<p>There is no connector-location dependence in (132). Summing it over
+face labels incurs a volume cost at each order. With <span
+class="math inline">\(m\)</span> active coordinates a common polydisc
+fits in (134) only with radius of order <span
+class="math inline">\(m^{-1}\)</span>, so it does not prove the
+volume-uniform polydisc in (113). Nor does it supply the dressed
+per-site budget (112) or a new tree factor for each bad component in
+(116). These are precise limitations of this norm calculation, not
+counterexamples to spatial clustering.</p>
+<p>The next bounded lemma is the anchored two-connector estimate <span
+class="math display">\[|\kappa(F_H,K_p,K_q)|
+\le D_2p^{h/64}
+\sum_{T\in\mathcal T_{\{H,p,q\}}}
+\prod_{ij\in T}e^{-\gamma_2d(S_i,S_j)},\qquad
+S_H=H,\quad S_p=\partial p,\quad S_q=\partial q.\tag{135}\]</span> It
+needs <span class="math inline">\(D_2,\gamma_2&gt;0\)</span> uniform
+over (125) and an explicit sum over both face labels. The moments (131)
+now control every quadratic insertion; Theorem 5 and the real
+factorizing family provide the locality inputs. Test whether the second
+attachment carries a fresh summable spatial factor. Stop after two
+distinct constructions fail to improve on a single cut factor; reject a
+construction that differentiates the barrier, leaves the admissible
+family, or makes the rate vanish with attachment order. A proof of (135)
+would remain finite-order and must identify its order-uniform recurrence
+before dressing is claimed.</p>
+<h3 id="consequence-for-state-13">Consequence for STATE</h3>
+<p>This gauge checkpoint controls arbitrary products of smooth
+connectors, their connected response growth and a nonvanishing complex
+<span class="math inline">\(\ell^1\)</span> source domain, uniformly in
+the real family. The next gauge lemma is the anchored spatial bound
+(135), then its order-uniform extension and dressing. Alternate next to
+a closed Hamiltonian memory and monitor construction on the Newton
+track. Boundary-source control, group-dependent <span
+class="math inline">\(SU(3)\)</span> verification and the continuum
+spectral obligations remain open.</p>
 
 </main>
 <footer class="site"><div class="wrap">
