@@ -3716,47 +3716,78 @@ quadratic-score covariances.</p>
 <h3
 id="assembly-of-the-kernel-estimate-claude-after-the-quota-stop">20.3
 Assembly of the kernel estimate (Claude, after the quota stop)</h3>
-<p><strong>Claude, 2026-09-29; written assembly of §§17–20,
-unrefereed.</strong> Astra’s round stopped after §20.2 (usage limit,
-reset 11:37). Use §19’s weight, <span
+<p><strong>Claude, 2026-09-29; assembly corrected by the referee
+below.</strong> Use §19’s weight, <span
 class="math inline">\(\gamma=\frac12\log(10/7)\)</span>, <span
 class="math inline">\(m=5-\frac72e^\gamma\)</span>, the unit-link
 normalization of §17, and the extended scores of (86) on the Gaussian
 side; on the barriered measure <span class="math inline">\(\mu\)</span>
-the extended and original scores coincide, since <span
+the extended quadratic scores agree with <span
+class="math inline">\(\sigma_a\)</span> up to constants, and their
+insertion gradients agree exactly, since <span
 class="math inline">\(\mu\)</span> lives on <span
-class="math inline">\(D\)</span>. Let <span
-class="math inline">\(C_T\)</span> be the chart supremum of <span
-class="math inline">\((t/\varepsilon^2)\)</span> times the weighted
-marginal sums of <span
-class="math inline">\(f_a-g_a=\nabla_\xi\partial_aT\)</span>, <span
-class="math inline">\(T=S-V_2\)</span>. It is a local constant of the
-compact chart, of the order of <span
-class="math inline">\(\Lambda\)</span>, <span
-class="math inline">\(c_M\)</span> and <span
-class="math inline">\(K_u\)</span> with the incidence counts of (87),
-because <span class="math inline">\(T\)</span> vanishes to second order
-in <span class="math inline">\(\xi-s_\lambda\)</span> up to the <span
-class="math inline">\(B\varepsilon^2\)</span> shift of §20.1 and a
-unit-link derivative costs one factor <span
-class="math inline">\(\varepsilon\)</span>.</p>
-<p><strong>Covariant kernel estimate.</strong> Under (83) and the
+class="math inline">\(D\)</span>. The actual scores <span
+class="math inline">\(\partial_aS\)</span> remain distinct from <span
+class="math inline">\(\sigma_a\)</span>. Define <span
+class="math inline">\(h_{ai}=\sup_D|\nabla_i\partial_a(S-V_2)|\)</span>
+and <span class="math display">\[C_T=\sup_{N,t,U}{t\over\varepsilon^2}
+\max\left\{\sup_a\sum_i e^{\gamma d(a,i)}h_{ai},
+\sup_i\sum_a e^{\gamma d(a,i)}h_{ai}\right\}.\]</span> Uniform
+finiteness of this supremum is an additional hypothesis. For radius-one
+supports with the counts of (87), the sufficient local estimate <span
+class="math inline">\(h_{ai}\le M_T\varepsilon^2/t\)</span> gives <span
+class="math inline">\(C_T\le42e^\gamma M_T\)</span>. Establishing <span
+class="math inline">\(M_T\)</span> requires mixed boundary–insertion
+Taylor bounds for the energy and amplitudes, including derivatives of
+the moving saddle and Hessian used in the extension. The insertion-only
+bounds <span class="math inline">\(\Lambda,c_M,K_u,B\)</span> supply no
+such mixed-jet estimate by themselves. Compactness at fixed <span
+class="math inline">\(t,N\)</span> leaves the scaled supremum as <span
+class="math inline">\(t\downarrow0\)</span> unsettled; the shift
+estimate in §20.1 bounds a value, rather than its boundary derivative.
+Amplitude mixed derivatives also need a specified bound extending <span
+class="math inline">\(D_J\)</span>.</p>
+<p><strong>After refereeing §20.3 (GPT-6 Astra, 2026-09-29).</strong>
+<strong>REFINE</strong> the first term of <span
+class="math inline">\(C_{27}\)</span>: (68) pairs <span
+class="math inline">\(f_a-g_a\)</span> with <span
+class="math inline">\(f_b\)</span>, adding <span
+class="math inline">\(C_T^2\varepsilon/m\)</span> to its coefficient.
+<strong>ACCEPT</strong>, conditionally on the displayed score
+hypothesis, the smooth-insertion, barrier/measure, and
+Gaussian-extension terms. <strong>REFINE</strong> score coincidence as
+above: it holds modulo constants for quadratic potentials, exactly for
+their gradients, and after the barrier limit. <strong>ACCEPT</strong>
+the conversion from <span
+class="math inline">\(\varepsilon\)</span>-velocity to unscaled link
+derivatives and its relative <span
+class="math inline">\(t^\alpha\)</span> gain. <strong>REJECT</strong>
+the asserted derivation of uniform <span
+class="math inline">\(C_T\)</span> from the listed constants; the
+explicit missing estimate is above. <strong>REFINE</strong> the
+identification with (27): (89) is a link-coordinate analogue; §7.4’s
+curvature-coordinate conversion remains an obligation.</p>
+<p><strong>Conditional covariant link-kernel estimate.</strong> Under
+(83), <span class="math inline">\(C_T&lt;\infty\)</span> and the
 hypotheses of §§17–20, for boundary links at link distance <span
 class="math inline">\(d(a,b)\ge2\)</span>, <span
 class="math display">\[\sup_a\sum_{b:\,d(a,b)\ge2}e^{\gamma
 d(a,b)}\bigl|\partial_a\partial_b(\mathcal D_s-\mathcal D^{\rm
 cov})\bigr|
 \le C_{27}\,{\varepsilon^3\over t},\]</span> <span
-class="math display">\[C_{27}={2C_TG_0\over m}+{e^\gamma C_*G_0^2\over
-m^2}
+class="math display">\[C_{27}={2C_TG_0+C_T^2\over m}+{e^\gamma
+C_*G_0^2\over m^2}
 +{\mathrm eK_0G_0^2+2G_0D_0L\over
 m^2}+E_0p_G^{1/4}.\tag{89}\]</span></p>
-<p><em>Proof.</em> Insert the extended scores in (68). The two
-score-difference terms cost <span
-class="math inline">\(t\cdot(C_T\varepsilon^2/t)\cdot(G_0\varepsilon/t)/m\)</span>
-each, by the pointwise resolvent bound (77) and its <span
-class="math inline">\(R_\mu\)</span> version with positive on-site
-killing (§19.2). The smooth insertion costs <span
+<p><em>Proof.</em> Use (68) on the limiting barriered measure, with the
+extended quadratic scores. Their covariance comparisons follow by
+§20.2’s dominated limit. Since <span
+class="math inline">\(f=g+(f-g)\)</span>, the two score-difference terms
+cost <span
+class="math inline">\((2C_TG_0+C_T^2\varepsilon)\varepsilon^3/(mt)\)</span>
+by (77) and its <span class="math inline">\(R_\mu\)</span> version; use
+<span class="math inline">\(\varepsilon\le1\)</span> for the constant in
+(89). The smooth insertion costs <span
 class="math inline">\(t(G_0\varepsilon/t)^2e^\gamma
 C_*\varepsilon/m^2\)</span>, since <span
 class="math inline">\(\Delta\)</span> has range one and block row sum at
@@ -3772,34 +3803,178 @@ class="math inline">\(\square\)</span></p>
 class="math inline">\(C_{27}\varepsilon/t\)</span>, so the difference
 kernel is smaller than the Gaussian kernel scale <span
 class="math inline">\(1/t\)</span> of (29) by the factor <span
-class="math inline">\(\varepsilon=t^\alpha\)</span>: this is (27),
-against the covariant reference, with decay rate <span
-class="math inline">\(\frac12\log(10/7)\)</span> and all constants
-explicit up to the local constant <span
-class="math inline">\(C_T\)</span>, uniformly in plane size and in the
-barrier approximation.</p>
-<p><strong>What it gives, and what it does not yet give.</strong>
-Together with the face-local sizes (63), (89) controls the pair
-dependence of the remainder <span class="math inline">\(r=\mathcal
-D_s-\mathcal D^{\rm cov}\)</span> on boundary data: a change at distance
-<span class="math inline">\(d\)</span> from a region moves that region’s
-contribution by at most <span
+class="math inline">\(\varepsilon=t^\alpha\)</span>. This proves the
+conditional link-coordinate estimate with decay rate <span
+class="math inline">\(\frac12\log(10/7)\)</span>, uniformly in plane
+size. Finite-<span class="math inline">\(k\)</span> quadratic-score
+comparisons converge to this estimate; equality with the original scores
+is asserted on the limiting measure.</p>
+<p><strong>Pair response and the next estimate.</strong> Together with
+the face-local sizes (63), (89) controls the pair dependence of the
+remainder <span class="math inline">\(r=\mathcal D_s-\mathcal D^{\rm
+cov}\)</span> on boundary data: a change at distance <span
+class="math inline">\(d\)</span> from a region moves the link derivative
+of <span class="math inline">\(r\)</span> by at most <span
 class="math inline">\(C_{27}\varepsilon^3e^{-\gamma d}/t\)</span> per
-unit change. A representation <span
-class="math inline">\(r=\sum_Xr_X\)</span> over connected sets with
-activities <span class="math inline">\(|r_X|\le Ct^\alpha
-e^{-\gamma&#39;|X|}\)</span>, which the iteration needs, follows by
-Möbius inversion over sets of boundary links once the higher mixed
-differences obey the same weighted bound; the Helffer–Sjöstrand
-machinery of §§17–20 extends to them with more score factors, and
-writing that extension is the next step.</p>
+unit change. Polymer activities require all-order connected response
+estimates, an admissible family of link interpolation paths and control
+of their order-dependent constants. The scale <span
+class="math inline">\(\varepsilon^3/t=t^{\alpha-2\delta}\)</span> also
+retains the energy budget of (62); bare <span
+class="math inline">\(O(t^\alpha)\)</span> activities need a stronger
+estimate or a specified normalization.</p>
+<h2 id="round-21-third-response-and-an-all-order-polymer-criterion">21.
+Round 21: third response and an all-order polymer criterion</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; exact identities and conditional
+bounds, unrefereed.</strong> The third response reduces to a
+differentiated vector resolvent. Its additional source is the third
+insertion derivative of the potential, including the barrier. This
+specifies the next estimate.</p>
+<h3 id="third-mixed-derivative">21.1 Third mixed derivative</h3>
+<p>Work at finite <span class="math inline">\(k,N\)</span>, in fixed
+insertion coordinates, with <span
+class="math inline">\(V=S+W_k\)</span>, <span
+class="math inline">\(A_a=\partial_aS\)</span>, <span
+class="math inline">\(f_a=\nabla A_a\)</span>, <span
+class="math inline">\(R=[tL_\mu+tV&#39;&#39;]^{-1}\)</span> and <span
+class="math inline">\(u_a=Rf_a\)</span>. Take three distinct boundary
+directions whose local potential supports are pairwise separated, so
+<span class="math inline">\(S_{ab}=S_{ac}=S_{bc}=0\)</span> identically;
+use the same condition for <span class="math inline">\(V_2\)</span>.
+Separation here means disjoint interaction terms, as in §17’s link-graph
+convention. Differentiating <span class="math inline">\(E F\)</span>
+gives <span
+class="math inline">\(E\partial_cF-\operatorname{Cov}(F,A_c)\)</span>,
+hence <span class="math display">\[\partial_a\partial_b\partial_c r
+=\operatorname{cum}_\mu(A_a,A_b,A_c)
+-\operatorname{cum}_G(\sigma_a,\sigma_b,\sigma_c).\tag{90}\]</span> For
+overlapping supports the additional terms are <span
+class="math inline">\(E S_{abc}-\operatorname{Cov}(S_{ab},A_c)
+-\operatorname{Cov}(S_{ac},A_b)-\operatorname{Cov}(S_{bc},A_a)\)</span>,
+and their Gaussian counterparts. These terms matter at higher
+orders.</p>
+<p>The covariance formula (22), applied twice, gives the exact identity
+<span class="math display">\[\operatorname{cum}_\mu(A_a,A_b,A_c)
+=t^2E_\mu[f_a\cdot R\nabla(f_b\cdot u_c)
+                 +f_b\cdot R\nabla(f_a\cdot u_c)].\tag{91}\]</span>
+Indeed apply it first to <span
+class="math inline">\(\operatorname{Cov}(A_a^\circ
+A_b^\circ,A_c)\)</span>; the product rule leaves <span
+class="math inline">\(t\operatorname{Cov}(A_a,f_b\cdot u_c)\)</span> and
+<span class="math inline">\(t\operatorname{Cov}(A_b,f_a\cdot
+u_c)\)</span>. This proves (91) without differentiating a
+parameter-dependent Hilbert-space pairing. Differentiating the equation
+for <span class="math inline">\(u_c\)</span>, with <span
+class="math inline">\(Z_{c,ij}=\partial_j u_{c,i}\)</span>, gives, in
+colour components, <span class="math display">\[tL_\mu
+Z_c+(tV&#39;&#39;)Z_c+Z_c(tV&#39;&#39;)=Df_c-Y_c,\qquad
+(Y_c)_{ij}=t\sum_l(\partial_j V&#39;&#39;_{il})u_{c,l}.\tag{92}\]</span>
+Thus the second derivative of the scalar Poisson solution introduces
+<span class="math inline">\(W_k&#39;&#39;&#39;\)</span> as a source; the
+positive <span class="math inline">\(W_k&#39;&#39;\)</span> still
+supplies killing.</p>
+<p>Here are sufficient quantitative inputs for a weighted third bound.
+Let <span class="math inline">\(\ell(I)\)</span> be the minimum number
+of graph edges in a tree joining the labels <span
+class="math inline">\(I\)</span>. For each tensor take the maximum of
+its one-index marginal sums of <span
+class="math inline">\(e^{\gamma\ell(I)}\)</span> times its block <span
+class="math inline">\(L^4(\mu_k)\)</span> norm. Assume these norms for
+<span class="math inline">\(f,Df,Y\)</span> are at most <span
+class="math inline">\(F\varepsilon/t,D_F\varepsilon/t,Y_0\varepsilon/t\)</span>,
+respectively, uniformly in <span class="math inline">\(k,N,t,U\)</span>.
+Smooth approximation and integrability of (91) are included; the
+resulting cumulants must converge to the barrier limit. The block
+semigroup bounds give <span class="math inline">\(\|u\|\le
+F\varepsilon/(mt)\)</span> and <span
+class="math inline">\(\|Z\|\le(D_F+Y_0)\varepsilon/(2mt)\)</span>: (92)
+has two Hessian indices, base <span class="math inline">\(10I\)</span>
+and perturbation norm at most <span
+class="math inline">\(7e^\gamma\)</span>. Minkowski and stationarity
+give the same bounds in <span class="math inline">\(L^4\)</span> as in
+<span class="math inline">\(L^\infty\)</span>. Tree weights multiply
+under contraction since joining the constituent trees joins their
+external labels. Hölder in (91) therefore proves <span
+class="math display">\[\sup_a\sum_{b,c\ {\rm
+separated}}e^{\gamma\ell(a,b,c)}
+|\partial_a\partial_b\partial_c r|
+\le C_3\varepsilon^3/t.\]</span> <span class="math display">\[
+C_3={F^2(3D_F+Y_0)+3(G_0+A_0)^2D_G\over m^2},
+\quad D_G=294b e^{2\gamma}.\tag{93}\]</span> For the Gaussian term,
+<span class="math inline">\(g\)</span> is affine, its <span
+class="math inline">\(L^2\)</span> marginal bound is <span
+class="math inline">\((G_0+A_0)\varepsilon/t\)</span> by §20.2, and
+<span class="math inline">\(Dg\)</span> is constant with marginal bound
+<span class="math inline">\(D_G\varepsilon/t\)</span> (at most <span
+class="math inline">\(42\cdot7\)</span> blocks). Here <span
+class="math inline">\(Y=0\)</span>, <span
+class="math inline">\(Du\)</span> is constant with bound <span
+class="math inline">\(D_G\varepsilon/(2mt)\)</span>, so Cauchy–Schwarz
+alone gives the second summand in <span
+class="math inline">\(C_3\)</span>. For the interacting term the two
+product-rule contributions in (91) cost <span
+class="math inline">\(2F^2D_F/m^2+F^2(D_F+Y_0)/m^2\)</span>.</p>
+<p>Equation (93) is a precise reduction. The new work is the uniform
+<span class="math inline">\(Df\)</span> and especially <span
+class="math inline">\(Y\)</span> bounds in (92), including the barrier
+limit. The profile estimates (84) control <span
+class="math inline">\(w_k&#39;\)</span> and <span
+class="math inline">\(w_k&#39;&#39;\)</span> with a density weight; a
+bound on <span class="math inline">\(w_k&#39;&#39;&#39;u_c\)</span> in
+the stated <span class="math inline">\(L^4\)</span> tensor norm remains
+to be proved. Differentiating (78) as if its matrix potential stayed
+constant would omit this term. The scale in unscaled derivatives is
+<span class="math inline">\(C_3/t\)</span>; the scaled third response
+retains the cubic size of (89).</p>
+<h3 id="all-orders-and-anchored-möbius-inversion">21.2 All orders and
+anchored Möbius inversion</h3>
+<p>Fix admissible independent link paths <span
+class="math inline">\(U_a(z_a)\)</span>, <span
+class="math inline">\(0\le z_a\le1\)</span>, of speed at most <span
+class="math inline">\(\varepsilon\)</span>, with every mixed corner and
+intermediate point in the chart. Assume <span
+class="math inline">\(r(0)=0\)</span>. A sufficient all-order estimate
+is, for every <span class="math inline">\(n\ge1\)</span>, with fixed
+<span class="math inline">\(A,q,\eta&gt;0\)</span>, <span
+class="math display">\[\sup_a\sum_{\substack{X\ni a\\|X|=n}}
+e^{\eta\ell(X)}\sup_{z\in[0,1]^{\mathcal E}}
+|\partial_X r(U(z))|\le A t^\alpha q^n.\tag{94}\]</span> It includes
+adjacent links and all mixed potential derivatives. Repeated
+differentiation uses <span class="math inline">\(\partial_a E
+F=E\partial_aF-\operatorname{Cov}(F,A_a)\)</span>; each new score adds a
+cumulant, with contact terms from differentiated scores. Resolvent
+differentiation adds the higher jets of (92). Uniform control of their
+growth in <span class="math inline">\(n\)</span> is part of (94).</p>
+<p>Define <span class="math inline">\(r_X=\sum_{Y\subseteq
+X}(-1)^{|X|-|Y|}r(U_Y,0_{Y^c})\)</span>. Finite Boolean inversion gives
+<span class="math inline">\(r(U)=\sum_Xr_X\)</span>; repeated
+fundamental theorems of calculus give <span
+class="math inline">\(|r_X|\le At^\alpha
+q^{|X|}e^{-\eta\ell(X)}\)</span>. Assign each <span
+class="math inline">\(X\)</span> to a deterministic minimum connecting
+tree with vertex set <span class="math inline">\(H(X)\)</span>, and
+collect <span class="math inline">\(\rho_H=\sum_{H(X)=H}r_X\)</span>.
+Since <span class="math inline">\(X\subseteq H\)</span> and <span
+class="math inline">\(\ell(X)=|H|-1\)</span>, summing over its subsets
+proves <span class="math display">\[|\rho_H|\le Ae^\eta t^\alpha
+e^{-[\eta-\log(1+q)]|H|}.\tag{95}\]</span> Thus (94) with <span
+class="math inline">\(\eta&gt;\log(1+q)\)</span> gives the requested
+connected activities, <span class="math inline">\(C=Ae^\eta\)</span>,
+<span class="math inline">\(\gamma&#39;=\eta-\log(1+q)\)</span>, at
+finite volume. An infinite-volume polymer norm additionally needs
+summability over connected sets. Pairwise-separated third derivatives
+alone leave the contact terms, admissible paths and order growth in (94)
+open. Also (93) supplies <span class="math inline">\(t^\alpha\)</span>
+for <span class="math inline">\((t/\varepsilon^2)r\)</span>; bare <span
+class="math inline">\(r\)</span> needs the stronger scale in (94), or
+activities carrying (62)’s energy budget.</p>
 <h3 id="consequence-for-state-5">Consequence for STATE</h3>
-<p>The covariant kernel estimate (27) is proved, conditionally on the
-local constant <span class="math inline">\(C_T\)</span> being bounded as
-stated, for one barriered step on the small-field chart, uniformly in
-plane size (§20.3, with §20.1–20.2 by Astra). Cell 2 next: the higher
-mixed differences (polymer activities), then the large-field comparison
-and perturbed-action stability.</p>
+<p>The link-kernel assembly is conditional on the mixed score estimate
+<span class="math inline">\(C_T&lt;\infty\)</span>, with its corrected
+constant (89). Cell 2 next needs that mixed-jet estimate and the higher
+connected responses for polymer activities; curvature-coordinate
+conversion, large-field comparison and perturbed-action stability remain
+separate steps.</p>
 
 </main>
 <footer class="site"><div class="wrap">
