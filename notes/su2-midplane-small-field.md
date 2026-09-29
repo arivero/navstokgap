@@ -2185,3 +2185,69 @@ control the barrier insertion and change of measure with weighted size
 $C\varepsilon^3/t$, uniformly in plane size and barrier approximation.
 Full-integral comparison and perturbed-action stability follow that task;
 the covariant kernel bound and iteration remain open.
+
+## 18. Round 18: the barrier insertion and the change of measure
+
+**GPT-6 Astra, 2026-09-29; written route tests, unrefereed.** The
+square-root route gives (70), with the remaining weighted moment
+specified in (72). The interpolation route is tested separately below.
+All operators and score normalizations are those of §17; $c_0=3\varepsilon$,
+$\eta=2\varepsilon$, $q=5/12$ and $p_t=(7/16)^{k_t}$.
+
+### 18.1 Part 1: the barrier's square root
+
+Put $u_a=R_\mu g_a$, $v_b=R_0g_b$ and $T_k=tW_k''\ge0$.
+The form inequality $T_k\le R_\mu^{-1}$ gives exactly
+$$|\mathcal B_{ab}|\le t\|R_\mu^{1/2}g_a\|_\mu Q_b^{1/2},\qquad
+Q_b=t\sum_e E_\mu[v_{b,e}^{T}w_k''v_{b,e}],\qquad
+\|R_\mu^{1/2}g_a\|_\mu\le\sqrt{2/7}\|g_a\|_\mu.\tag{70}$$
+This estimate retains the small-tail question in $Q_b$ and loses the
+separation from $a$; recovering spatial decay requires an edge-local
+version before the final Cauchy--Schwarz step.
+
+Here is the proposed integration by parts, including its derivative
+terms. Write $v=v_{b,e}$, $h=\nabla_e w_k$, $A=\nabla_eS$, and let
+$D_ev$ and $\operatorname{div}_ev$ differentiate only $\xi_e$.
+Integrating $\sum_{ij}\partial_j(v_iv_j\partial_iw_k)e^{-S-W_k}$ gives
+$$E_\mu[v^Tw_k''v]=E_\mu[(v\cdot h)^2+(v\cdot h)(v\cdot A)
+-h\cdot((D_ev)v+v\operatorname{div}_ev)].\tag{71}$$
+One may first cut off $v$ and then pass to the limit when these terms
+are integrable. Equation (71) exhibits the positive Fisher term
+$E[(v\cdot h)^2]$, together with barrier-weighted derivatives of $v$.
+Boundary decay removes the surface integral; bounding the surviving
+terms still requires weighted integrability of the resolvent solution.
+
+For a concrete profile choose $w_\eta(r)=x^4$, $x=(r-\eta)_+/(c_0-r)$
+inside the ball. This is convex and $C^2$, and has polynomial divergence.
+With $a_j=(j/(2\mathrm e))^{j/4}$, direct differentiation gives
+$\sup w_\eta'e^{-w_\eta/2}\le\Omega_0/\varepsilon$ and
+$\sup\|w_\eta''\|e^{-w_\eta/2}\le K_0/\varepsilon^2$, where
+$\Omega_0=4(a_3+2a_4+a_5)$ and
+$K_0=12a_2+58a_3+100a_4+74a_5+20a_6$.
+In particular $\omega_\eta\le\Omega_0/\varepsilon$.
+For approximants the needed additional profile hypothesis is the same
+weighted-Hessian bound, uniformly in $k$, with a specified constant
+$K_{\rm app}$ replacing $K_0$; local $C^1$ convergence alone supplies less.
+Mollification enlarges the active set to $r>\eta-\rho_k$, where $\rho_k$
+is its radius. Tail estimates must use this threshold before taking limits.
+
+The precise missing moment can also be seen without differentiating $v$.
+Let $\nu_{e,k}$ remove only the barrier on edge $e$ from $\mu_k$, and put
+$A_{e,k}=\{|\xi_e|>\eta-\rho_k\}$, $p_{e,k}=\nu_{e,k}(A_{e,k})$.
+Local reweighting and Cauchy--Schwarz give, under the profile hypothesis,
+$$E_{\mu_k}[v_{b,e}^Tw_k''v_{b,e}]
+\le {K_{\rm app}\over\varepsilon^2(1-p_{e,k})}
+ p_{e,k}^{1/2}\bigl(E_{\nu_{e,k}}|v_{b,e}|^4\bigr)^{1/2}.\tag{72}$$
+Even granting $p_{e,k}\le2p_t$ and $1-p_{e,k}\ge1/2$, this needs an
+$L^4(\nu_{e,k})$ bound on $v_{b,e}$, uniform in $e,k,N$, with spatial decay.
+For the partially barriered saddle Gaussian the tail follows from (55),
+with sufficiently small $\rho_k$; transferring it to the extended,
+amplitude-weighted $\nu_{e,k}$ also needs its moment argument.
+Theorem 5 bounds $\|v_{b,e}\|_{L^2(\mu_k)}\le(2/7)q^{d(e,T_b)}\|g_b\|_\mu$,
+where $T_b$ is the enlarged score support. Its norm and measure differ
+from the fourth moment in (72). The removal density is proportional to
+$e^{w_k}$, so this change of norm has no uniform bounded-density shortcut.
+Thus (71)--(72) identify the failing term of this route: the local
+barrier-weighted resolvent moment. Finite Fisher information for each
+fixed barrier and total-variation convergence in §15.1 leave its uniform
+$k\to\infty$ bound, and the weighted estimate for $\mathcal B$, open.
