@@ -557,7 +557,8 @@ $\frac12-\delta$ (weak) with $\delta<\frac16$, suffice for one step.
 
 ## 7b. The coefficients for $SU(N)$ and $SU(3)$
 
-**Result (Claude, 2026-09-29; written derivation, unrefereed).** With the
+**Result (Claude, 2026-09-29; written derivation, refereed by Fable,
+ACCEPT).** With the
 metric $\langle X,Y\rangle=-2\operatorname{tr}XY$ used throughout, the order-$t$ coefficients (1) for
 $G=SU(N)$ are those of $SU(2)$ multiplied by $N/2$:
 $$\delta_t^{12}=\delta_t^{13}=\frac{Nt}{48}\int_{\mathcal B}\frac qR+O(t^2),\qquad
@@ -596,7 +597,8 @@ $\sum_{\alpha>0}\alpha(Y)^2=\frac N2|Y|^2$ times the $SU(2)$ value per unit $B^2
 scales by $N/2$. $\square$
 
 For a general compact simple group the factor is the ratio of adjoint
-Casimirs in the same metric, the one-loop pattern that also gives
+Casimirs in the same metric (the referee notes that each root plane depends
+on $\alpha(Y)$ alone, so this holds for non-simply-laced groups too), the one-loop pattern that also gives
 $b_0=11N/(48\pi^2)$ in the [four-dimensional note](four-dimensional-parallel-log.md).
 The scaling covers the bulk coefficients only. The dimension-six content
 of $SU(3)$ adds the $d_{abc}$ cubic noted in §6, and the finite-torus winding

@@ -125,17 +125,20 @@ preparation, Theorem 2 of the
 [probabilistic note](planck-gap-probabilistic.md) covers every finite
 adaptive protocol of instruments, with any Kraus operators and apparatus
 memory, whose conditional states keep the body within an aperture $(L,P)$:
-deciding at error $\epsilon$ requires $F\tau L/\hbar+F\tau^2P/(2m\hbar)\ge1-2\epsilon$. Hence
+deciding at error $\epsilon$ requires $F\tau L/\hbar+F\tau^2P/(2m\hbar)\ge1-2\epsilon$. Hence, with $P_*$ now
+the infimum over protocols of aperture $(L,P)$ and any preparation,
 $$P_*(F)\ \ge\ \tfrac12\Bigl(1-\frac{F\tau L}\hbar-\frac{F\tau^2P}{2m\hbar}\Bigr)\ \longrightarrow\ \tfrac12\qquad(F\to0),$$
 so the best verdict is continuous at $F=0$ whenever $\hbar>0$ and the aperture
 is bounded, while a classical apparatus with sharp preparations decides at
 every $F\ne0$. Yuen's protocol escapes only by letting $L$ or $P$ grow as $F$
-shrinks, an idealization of the same kind as the perfect instrument. For
-adaptive protocols the [recoil note](record-costs-recoil.md) gives, for any
-probe states, $s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$ with $s=F\tau^2/(2m)$ the sagitta and
-$\Delta_j$ the impulse spreads, so at a bounded total recoil the best verdict is
-again continuous at $F=0$; Theorem 2's mark-model value itself is proved for
-non-adaptive protocols. The records reading of Leibniz's law therefore holds for both
+shrinks, an idealization of the same kind as the perfect instrument. For the preparation-ignorant observer, Theorem R of the
+[recoil note](record-costs-recoil.md), proved for non-adaptive protocols
+with any product probe states (constant $1-2\epsilon$, sharpened to $\arcsin(1-2\epsilon)$
+by the path-length note) and extended there to adaptive choices by the
+hybrid argument with each $\Delta_j$ taken as its supremum at step $j$, gives
+$s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)$, with $s=F\tau^2/(2m)$ the sagitta and $\Delta_j$ the impulse
+spreads; at bounded total recoil that observer's best verdict is again
+continuous at $F=0$. The records reading of Leibniz's law therefore holds for both
 observers exactly on the floor branch, at bounded apertures.
 
 ## 2. Leibniz, 1687: the law of continuity as a test of laws
@@ -564,14 +567,16 @@ passage, from the Wikisource transcription).
 
 ## 5. Consequence for STATE
 
-The premise can be stated as one sentence about topologies. On the floor
-branch the statistical distance between the recorded motions of a cell,
+The premise can be stated as one sentence about topologies. On the floor branch the best statistical distance between the recorded
+motions of a cell, supremal over the admissible protocols (non-adaptive,
+invariant tests, the preparation-ignorant observer),
 $d(F,F')^2=(F-F')^2\tau^3/(24m\kappa)$ by Theorem 2 applied to the difference of forces, is
 a continuous function of the forces that vanishes only on the diagonal, so
 records and geometry induce the same topology on the motions. On the zero
 branch that distance is infinite between any two distinct forces, and
 records induce the discrete topology. Positivity of the floor is therefore
-equivalent, in the mark model, to the requirement that records and
+equivalent, in the mark model and for the constant-force family under
+these hypotheses, to the requirement that records and
 geometry order the motions alike, which is Leibniz's "Datis ordinatis
 etiam quaesita sunt ordinata" read with the records as the *quaesita*.
 
