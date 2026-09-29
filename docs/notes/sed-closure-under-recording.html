@@ -78,7 +78,21 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Result, 2026-09-27 (GPT-6 Astra).</strong> A common Gaussian
+<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Further result, 2026-09-29 (GPT-6 Codex; written,
+unrefereed).</strong> In the two-pointer model, allow correlated
+Gaussian readout error and kick <span
+class="math inline">\((N,D)\)</span> and side records <span
+class="math inline">\(S\)</span> of that noise. The body’s conditional
+area remains at least <span class="math inline">\(\kappa\)</span>
+exactly when <span class="math inline">\(\det\operatorname{Cov}(N,D\mid
+S)\ge\kappa^2\)</span> (§6.2), under the independence assumptions stated
+there. Even a noisy side observation of the kick breaks a marginally
+saturated recording law. Uniform continuity of the complete Gaussian
+record is equivalent to bounded full-record Fisher information (§6.1);
+continuity of each apparatus separately does not give that bound. The
+finite Lean results suggest testing both common-mode cancellation and
+refinement error in the record’s noise norm (§6.3).</p>
+<p><strong>Result, 2026-09-27 (GPT-6 Astra).</strong> A common Gaussian
 radiation background permits arbitrarily small two-pointer posteriors in
 a linear classical model with the pulse couplings and retained
 coordinate records of Theorem I. This holds for <strong>every finite
@@ -640,7 +654,327 @@ under (23). Equation (20) requires this same cost when recording a
 pointer that will be reused. Forgetting a reading and preserving it for
 a later kick estimate impose different conditioning questions;
 Proposition 3 states a law that covers both.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<h2
+id="complete-records-the-continuity-and-noise-mechanisms-compared">6.
+Complete records: the continuity and noise mechanisms compared</h2>
+<p>This checkpoint uses the Gaussian instrument class of Proposition 3,
+the fixed-cutoff shared-bath model of Theorems 1–2, and <a
+href="leibniz-continuity-records.html#1-the-proposition">Proposition
+L</a> (local passage). Its new statements are exact finite-dimensional
+Gaussian calculations. Positivity, composition and radiation calibration
+are tested separately; no additional physical law is adopted.</p>
+<h3 id="continuity-must-concern-the-complete-apparatus-family">6.1
+Continuity must concern the complete apparatus family</h3>
+<p>Fix one body, <span class="math inline">\(m&gt;0\)</span>, a window
+<span class="math inline">\([0,\tau]\)</span> and a family <span
+class="math inline">\(\mathfrak A\)</span> of finite, non-adaptive
+affine apparatus protocols with Gaussian preparations and noises
+independent of the force hypothesis. Each protocol includes its entire
+retained memory, bath monitors, reused pointers and terminal readings in
+one record <span class="math inline">\(R_\pi\)</span>. Linear dynamics
+gives <span
+class="math display">\[R_\pi=\mu_\pi+B_\pi\theta+Fv_\pi+\xi_\pi,
+\qquad\xi_\pi\sim N(0,V_\pi),\tag{26}\]</span> where <span
+class="math inline">\(\theta\)</span> comprises the unknown initial
+position and velocity. For preparation-ignorant tests take a full
+maximal invariant <span class="math inline">\(Q_\pi R_\pi\)</span>, with
+<span class="math inline">\(Q_\pi B_\pi=0\)</span>. Put <span
+class="math inline">\(b_\pi=Q_\pi v_\pi\)</span>, <span
+class="math inline">\(W_\pi=Q_\pi V_\pi Q_\pi^{\sf T}\)</span> and <span
+class="math display">\[I_\pi=b_\pi^{\sf T}W_\pi^\dagger b_\pi
+\quad\text{if }b_\pi\in\operatorname{Ran}W_\pi;
+\qquad I_\pi=\infty\text{ otherwise}.\tag{27}\]</span> The finite value
+is the force Fisher information. The singular case has a noiseless
+force-sensitive direction. The projection retains all invariant
+information, including correlations with side records; it is not a
+choice to discard inconvenient memory. With known preparation take <span
+class="math inline">\(Q_\pi=I\)</span> instead.</p>
+<p><strong>Proposition 4 (exact uniform-continuity criterion).</strong>
+In this family, for equal prior probabilities the best invariant error
+is <span class="math display">\[P_\pi(F)=\Phi(-|F|\sqrt{I_\pi}/2).
+\tag{28}\]</span> For <span class="math inline">\(F\ne0\)</span> the
+<span class="math inline">\(I_\pi=\infty\)</span> value is zero; at
+<span class="math inline">\(F=0\)</span> it is <span
+class="math inline">\(1/2\)</span>. Writing <span
+class="math inline">\(I_*=\sup_{\pi\in\mathfrak A}I_\pi\)</span>, the
+complete-record maximal-invariant laws <span
+class="math inline">\(P_{\pi,F}\)</span> are uniformly continuous at
+zero in total variation exactly when <span
+class="math inline">\(I_*&lt;\infty\)</span>. The quantifier covers
+every admitted schedule, number of marks and retained memory: <span
+class="math display">\[\sup_{\pi\in\mathfrak
+A}\|P_{\pi,F}-P_{\pi,0}\|_{\rm TV}
+=2\Phi(|F|\sqrt{I_*}/2)-1.\tag{29}\]</span> For <span
+class="math inline">\(I_*=\infty\)</span> the right side is one at every
+<span class="math inline">\(F\ne0\)</span>.</p>
+<p><em>Proof.</em> On the supported subspace whiten the Gaussian noise.
+The likelihood ratio depends only on the projection along the whitened
+mean difference, whose length is <span
+class="math inline">\(|F|\sqrt{I_\pi}\)</span>. Thresholding at its
+midpoint gives (28) and the total variation in (29). Different affine
+supports in the singular case are disjoint. Monotonicity and continuity
+of <span class="math inline">\(\Phi\)</span> permit the supremum,
+whether or not attained. Consequently finite <span
+class="math inline">\(I_*\)</span> gives the common modulus <span
+class="math inline">\(|F|\sqrt{I_*}/\sqrt{2\pi}\)</span>, while infinite
+<span class="math inline">\(I_*\)</span> gives a jump. <span
+class="math inline">\(\square\)</span></p>
+<p>For the unrestricted independent-mark family of Proposition L, <span
+class="math inline">\(I_*=\tau^3/(24m\kappa)\)</span> at <span
+class="math inline">\(\kappa&gt;0\)</span>. Its zero branch has <span
+class="math inline">\(I_*=\infty\)</span>. Thus that proposition uses
+<strong>uniform continuity over the family</strong>, equivalently
+continuity of its optimal verdict, rather than pointwise continuity of
+finite noisy apparatus. A bounded classical family may have <span
+class="math inline">\(I_*&lt;\infty\)</span> at <span
+class="math inline">\(\kappa=0\)</span>. For example three passive,
+independent position readings of variance <span
+class="math inline">\(\sigma^2\)</span> at <span
+class="math inline">\(0,\tau/2,\tau\)</span>, with zero recoil, give the
+invariant statistic <span
+class="math inline">\(R_0-2R_{\tau/2}+R_\tau\)</span>, mean <span
+class="math inline">\(F\tau^2/(4m)\)</span> and variance <span
+class="math inline">\(6\sigma^2\)</span>. Its information is <span
+class="math display">\[I=\frac{\tau^4}{96m^2\sigma^2}.\]</span> More
+generally a finite total precision budget <span
+class="math inline">\(\sum_j\delta_j^{-2}\le C\)</span> gives <span
+class="math inline">\(I_*\le C\tau^4/(4m^2)\)</span> even with known
+preparation. Such budgets add under composition; maintaining the same
+<span class="math inline">\(C\)</span> requires a resource restriction.
+Unlimited repeats on the same zero-recoil trajectory make <span
+class="math inline">\(I_*\to\infty\)</span>.</p>
+<p>Therefore (29) proves the exact statistical requirement of the
+continuity route. Supplying it independently for a physically specified
+family closed under arbitrary finite composition remains necessary. It
+alone supplies neither a terminal imprecision–kick law nor an action
+constant common to different <span class="math inline">\(m,\tau\)</span>
+and apparatus classes. The quantity <span
+class="math inline">\(\tau^3/(24mI_*)\)</span> has action units when
+<span class="math inline">\(0&lt;I_*&lt;\infty\)</span>; identifying it
+with a universal mark scale uses the additional mark-model saturation
+and universality premises.</p>
+<h3 id="the-noise-law-must-survive-side-observations-of-the-kick">6.2
+The noise law must survive side observations of the kick</h3>
+<p>For any jointly Gaussian body <span class="math inline">\(X\)</span>
+and complete record <span class="math inline">\(\mathcal R\)</span>, the
+exact answer is the supported Schur complement <span
+class="math display">\[\operatorname{Cov}(X\mid\mathcal R)
+=K_{XX}-K_{X\mathcal R}K_{\mathcal R\mathcal R}^\dagger
+K_{\mathcal R X}.\tag{30}\]</span> Appending a record decreases this
+covariance in the positive-semidefinite order. A prior noise covariance
+therefore needs a conditioning estimate, including indirect
+observations, before it can enforce a floor.</p>
+<p>Here is an exact extension of (20)–(21). Start with the algebraic
+resonant example <span class="math inline">\(V=\kappa I_6\)</span>,
+<span class="math inline">\(\kappa&gt;0\)</span>, in canonical scaled
+coordinates. The first pulse still gives body <span
+class="math inline">\(X=(Q,P-G\Pi)\)</span> and pointer coordinate <span
+class="math inline">\(Y+GQ\)</span>. Storing the latter produces error
+<span class="math inline">\(N\)</span> and kicks the reusable pointer by
+<span class="math inline">\(D\)</span>. Grant exact inference of its
+later momentum <span class="math inline">\(K=\Pi+D\)</span> from the
+second pointer, as in §4’s limiting second readout. Let <span
+class="math inline">\((N,D,S)\)</span> be jointly Gaussian and
+independent of the six initial body–pointer variables; <span
+class="math inline">\(S\)</span> is any side record of the readout
+noise. It can be a monitor read earlier or later, or stored in a
+separate memory. The complete record is <span
+class="math display">\[\mathcal R=(Y+GQ+N,\ K,\ S).\]</span> Subtract
+conditional means given <span class="math inline">\(S\)</span> and put
+<span class="math display">\[\begin{aligned}
+E_S&amp;=\operatorname{Cov}\bigl((N,D)^{\sf T}\mid S\bigr)
+=\begin{pmatrix}a&amp;c\!_{ND}\\c\!_{ND}&amp;b\end{pmatrix}\succeq0,\\
+x&amp;=G^2,\quad u=\kappa+a,\quad v=\kappa+b,\\
+\mathcal D&amp;=(\kappa x+u)v-c\!_{ND}^{\,2}&gt;0.
+\end{aligned}\tag{31}\]</span> The symbol <span
+class="math inline">\(c\!_{ND}\)</span> is a covariance, distinct from
+the speed <span class="math inline">\(c\)</span>. All of <span
+class="math inline">\(a,b,c\!_{ND},u,v\)</span> have action units.</p>
+<p><strong>Proposition 5 (the conditional recording law, necessary and
+sufficient in this model).</strong> The exact posterior determinant is
+<span class="math display">\[\boxed{\det\operatorname{Cov}(X\mid\mathcal
+R)
+=\kappa^2\left[1+\frac{x\bigl(ab-c\!_{ND}^{\,2}-\kappa^2\bigr)}
+                         {\mathcal D}\right].}\tag{32}\]</span> For
+every nonzero gain <span class="math inline">\(G\)</span>, the posterior
+area is at least <span class="math inline">\(\kappa\)</span> if and only
+if <span class="math inline">\(\det E_S\ge\kappa^2\)</span>. A
+finite-precision second reading can only increase the posterior
+covariance; the exact-reading limit gives the sharp necessity test.</p>
+<p><em>Proof.</em> Condition first on <span
+class="math inline">\(S\)</span>. The remaining two readings have
+covariance <span
+class="math inline">\(B_R=\left(\begin{smallmatrix}\kappa
+x+u&amp;c\!_{ND}\\ c\!_{ND}&amp;v\end{smallmatrix}\right)\)</span>,
+while <span
+class="math inline">\(A_X=\operatorname{diag}(\kappa,\kappa(1+x))\)</span>
+and <span
+class="math inline">\(C_{XR}=\operatorname{diag}(G\kappa,-G\kappa)\)</span>.
+In particular (30) gives <span class="math display">\[\begin{aligned}
+\Sigma_{11}&amp;=\kappa(uv-c\!_{ND}^{\,2})/\mathcal D,\\
+\Sigma_{12}&amp;=-x\kappa^2c\!_{ND}/\mathcal D,\\
+\Sigma_{22}&amp;=\kappa(1+x)-x\kappa^2(\kappa x+u)/\mathcal D.
+\end{aligned}\tag{33}\]</span> For a compact determinant check, the
+covariance of the readings conditional on <span
+class="math inline">\(X\)</span> is <span
+class="math inline">\(\left(\begin{smallmatrix}u&amp;c\!_{ND}\\c\!_{ND}&amp;b+\kappa/(1+x)
+\end{smallmatrix}\right)\)</span>. Taking the joint determinant in both
+block orders yields <span class="math display">\[\det\Sigma
+=\kappa^2\frac{\kappa u+(1+x)(ub-c\!_{ND}^{\,2})}
+                    {(\kappa x+u)v-c\!_{ND}^{\,2}}.\]</span> The
+numerator minus the denominator is <span
+class="math inline">\(x(ab-c\!_{ND}^{\,2}-\kappa^2)\)</span>, proving
+(32). The initial strictly positive <span class="math inline">\(\kappa
+I_6\)</span> makes the reading covariance invertible, including singular
+<span class="math inline">\(E_S\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>A concrete indirect-monitor test.</strong> Let <span
+class="math inline">\(N,D\)</span> be independent with <span
+class="math inline">\(\operatorname{Var}N=a_0&gt;0\)</span>, <span
+class="math inline">\(\operatorname{Var}D=b_0&gt;0\)</span> and <span
+class="math inline">\(a_0b_0=\kappa^2\)</span>, so the marginal
+recording law (20) is saturated. Allow the side record <span
+class="math inline">\(S=D+M\)</span>, where <span
+class="math inline">\(M\)</span> is an independent Gaussian monitor
+error of variance <span class="math inline">\(r^2&gt;0\)</span>. Then
+<span class="math display">\[a=a_0,\qquad
+b=\frac{b_0r^2}{b_0+r^2},\qquad c\!_{ND}=0,
+\qquad\det E_S=\kappa^2\frac{r^2}{b_0+r^2}&lt;\kappa^2.\tag{34}\]</span>
+Every informative monitor, even a noisy one, makes (32) strictly smaller
+than <span class="math inline">\(\kappa^2\)</span> for <span
+class="math inline">\(G\ne0\)</span>. At <span
+class="math inline">\(r\downarrow0\)</span>, the kick is known and <span
+class="math inline">\(\det\Sigma=\kappa^2u/(u+\kappa G^2)\to0\)</span>
+as <span class="math inline">\(G\to\infty\)</span>. At <span
+class="math inline">\(r\to\infty\)</span> the original saturated repair
+is recovered. All limits keep their order and apparatus assumptions
+explicit. A realizable monitor may itself disturb the pointer; the
+passive monitor in this test is a granted operation whose physical
+admissibility is exactly what a closure mechanism must settle.</p>
+<p>For arbitrary correlated readout noise with covariance <span
+class="math inline">\(E_0\)</span> and side record covariance <span
+class="math inline">\(V_S\)</span>, the matrix to test is <span
+class="math display">\[E_S=E_0-\operatorname{Cov}((N,D),S)V_S^\dagger
+                 \operatorname{Cov}(S,(N,D)).\tag{35}\]</span> The
+common bath’s spectrum can set <span class="math inline">\(E_0\)</span>,
+but it leaves this conditional innovation to be controlled. In the
+general correlated prior of (8), use (30) on the full joint record;
+(32)’s iff is asserted for its stated product-prior example only.
+Theorems 1–2 already cover arbitrary finite body–pointer cross
+correlations. Proposition 3 supplies a sufficient composition law on
+every retained subsystem; (34) identifies a side observation that must
+be priced or excluded by that law.</p>
+<h3 id="ideas-supplied-by-the-current-lean-formalization">6.3 Ideas
+supplied by the current Lean formalization</h3>
+<p>The sister repository is read at commit <code>381d5e9</code>, keeping
+its historical theorems and modern diagnostics separate. Its <a
+href="https://github.com/arivero/newtonlean/blob/381d5e9/research/graphs.md">dependency
+graph</a> and <a
+href="https://github.com/arivero/newtonlean/blob/381d5e9/research/PROP_I_REALIZATION.md">Proposition
+I realization obligations</a> (local full-read) expose a specific
+missing bridge in both printed stages: the cited Lemma III Cor. 4
+concerns approximating a given curve, while the force-generated vertices
+move under refinement. The finite area law (P1) and refinement
+identities (P2) are checked; realization (P3) and force identification
+(P5) remain separate. The harmonic field has a mesh-uniform quadratic
+stability invariant. The pending norm inequality in its Fraction
+representation is a formalization obstacle; a weighted sum norm is a
+candidate for the finite stability/defect argument. It is not evidence
+that classical refinement requires an action floor.</p>
+<p>The graph suggests the same distinction for records: geometric
+control of the body and apparatus map needs an additional statistical
+control in the complete-record norm. The following finite declarations
+were read in their definitions and proofs (local full-read). Their
+algebra supplies two concrete tests for that statistical bridge. The
+Gaussian consequences here are written derivations, separate from the
+compiled finite theorems.</p>
+<p>First, <a
+href="https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Polygon/RelativeMotion.lean">RelativeMotion.corVI_relative
+and relative_deflection_difference</a> derive exact cancellation of an
+arbitrary common deflection history from both relative coordinates. A
+classical Gaussian consequence is immediate: if two observed motions
+receive the same acceleration history, differencing them removes that
+random history too. More generally if a retained signal is <span
+class="math inline">\(r+L\eta\)</span>, with bath covariance <span
+class="math inline">\(C_\eta\)</span>, a difference map <span
+class="math inline">\(D_r\)</span> leaves covariance <span
+class="math display">\[D_rL C_\eta L^{\sf T}D_r^{\sf
+T}.\tag{36}\]</span> If <span class="math inline">\(D_rL=0\)</span> it
+is zero regardless of the bath amplitude. This is a modern noise-model
+consequence of the finite cancellation identity, not a historical
+assertion about radiation. A noise floor must survive accessible
+relative observations as well as the conditional subtraction (35).
+Common driving alone does not guarantee that survival.</p>
+<p>Second, <a
+href="https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Polygon/PartitionComparison.lean">PartitionComparison.partition_gap
+and PartialCell.candidate_partial_residual</a> and <a
+href="https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Polygon/PartialCell.lean">the
+partial-cell proof</a> separate the actual end-kick polygon from its
+rational constant-force comparison map. At any rational sample time
+<span class="math inline">\(t\le\tau\)</span> the exact position
+residual is <span class="math inline">\(a_{\rm acc}c_\pi(t)\)</span>,
+where <span class="math display">\[c_\pi(t)=\tfrac12\left(\sum_{j\text{
+complete}}h_j^2+u^2\right),
+\qquad0\le c_\pi(t)\le\tfrac12t|\pi|,\qquad
+a_{\rm acc}=F/m.\tag{37}\]</span> Here <span
+class="math inline">\(u\)</span> is the partial final duration and <span
+class="math inline">\(|\pi|\)</span> bounds every complete and partial
+cell. The formal theorem uses represented fractions and
+cross-multiplication equivalence; (37) is its rational-value reading. It
+fixes the force signal’s geometric discrepancy uniformly over
+partitions. It supplies no measurement law.</p>
+<p>For a single Gaussian position record of width <span
+class="math inline">\(\sigma_\pi\)</span> the total variation between
+polygon and corrected-map records is exactly <span
+class="math display">\[2\Phi\left(\frac{|F|c_\pi(t)}{2m\sigma_\pi}\right)-1.\tag{38}\]</span>
+Thus the mechanically vanishing residual gives statistically convergent
+records only when its noise-normalized size vanishes. A width <span
+class="math inline">\(\sigma_\pi=F_0c_\pi(t)/m\)</span> with fixed force
+<span class="math inline">\(F_0&gt;0\)</span> leaves (38) constant for
+every nonzero <span class="math inline">\(F\)</span>, even as the mesh
+vanishes. A fixed positive width makes it tend to zero. For the complete
+multivariate record the corresponding condition is <span
+class="math inline">\(\|W_\pi^{-1/2}Q_\pi(v_\pi-v_{\rm
+cont})\|\to0\)</span> on its supported subspace; a noiseless residual
+direction again has total variation one. This distinguishes uniform
+mechanical refinement from uniform complete-record refinement by an
+explicit calculation.</p>
+<p>The same repository’s <a
+href="https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Diagnostic/PhaseArea.lean">PhaseArea.cells_area2</a>
+preserves every phase triangle under affine drift/kick schedules. It
+supports the action <em>kind</em> of a symplectic covariance
+restriction, while preserving triangles of every initial size. Its
+invariant gives no selected minimum. The end-kick convention of (37)
+differs from the symmetric half-kick construction of the <a
+href="refinement-composition-and-limit.html">insertion note</a>; each
+statement retains its own convention. These tests concern records and
+the polygon–trajectory discrepancy, rather than Kepler sectors.</p>
+<h3 id="mechanism-selected-and-the-next-lemma">6.4 Mechanism selected
+and the next lemma</h3>
+<p>The noise route now has a sharper constructive target: a
+body–apparatus model must retain a <strong>conditional innovation
+pair</strong> with determinant at least <span
+class="math inline">\(\kappa^2\)</span> after every admissible side
+record. Its readout dynamics must charge observations of the kick and of
+reusable memory, as (34) shows. The immediate lemma is a branchwise
+innovation estimate for finite adaptive linear recording, followed by
+independence from the refinement schedule. Reject a proposed common-bath
+mechanism if an admissible relative channel annihilates its noise as in
+(36), or if a terminal side record reduces its innovation determinant
+below <span class="math inline">\(\kappa^2\)</span> as in (34).</p>
+<p>The continuity route has been reduced to (29), but no independently
+derived uniform bound over a composition-closed physical family is
+available. Neither route has discharged positivity from independent
+physical premises. We therefore select the conditional-innovation
+calculation as this checkpoint’s advance, and the innovation law as the
+next mechanism to construct. No new physical premise has been installed.
+Within an admitted Gaussian closure law <span
+class="math inline">\(h_*=2\kappa&gt;0\)</span>; proving that law,
+proving its positive scale and identifying <span
+class="math inline">\(h_*=\gamma h_{\rm rad}\)</span> remain distinct.
+Formula (23)’s radiation calibration retains its existing conditional
+source status.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
 its cross correlations and radiation damping, allows the two-pointer
@@ -654,7 +988,11 @@ equivalent at <span class="math inline">\(\kappa=\hbar/2\)</span> to
 Gaussian quantum measurement theory; an electrodynamic instrument
 constraint would only relocate it. The conditional scale identification
 and the unregulated momentum problem retain the scope stated in the
-revised SED link.</p>
+revised SED link. The September 29 checkpoint sharpens the recording law
+to conditional innovation (32)–(35), quantifies uniform continuity by
+(29), and imports the Lean common-mode and noise-normalized refinement
+tests (36)–(38). Next alternate to the gauge connector expansion, then
+test adaptive innovation and complete retained memory in this model.</p>
 
 </main>
 <footer class="site"><div class="wrap">

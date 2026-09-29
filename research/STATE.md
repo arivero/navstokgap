@@ -70,6 +70,7 @@ fill its cells (open cells in its §5).
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
    Atlas cell 4: [composition, §7](../notes/four-dimensional-composition.md) gives explicit vertices, finite one-step subtracted matching bounds and iteration hypotheses (Round 10, formal, unrefereed); next, prove depth-uniform (14) and remainder control. Theorems 1--4 are refereed by Claude.
 2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
+   [Complete-record calculation, §6](../notes/sed-closure-under-recording.md#6-complete-records-the-continuity-and-noise-mechanisms-compared) (written, unrefereed): the two-pointer repair requires a conditional noise determinant after side records; uniform Gaussian-record continuity requires bounded information over the whole apparatus family. Current `newtonlean` results supply common-deflection cancellation and an exact mesh residual, sharpening the relative-noise and statistical-refinement tests. Next Newton lemma: branchwise innovation under adaptive linear recording and retained memory; reject a mechanism if an admissible side record or relative channel removes its claimed innovation. Positivity and radiation calibration remain separate.
    [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; the premise that restores closure is a bound on every terminal readout, which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory (refereed).
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
@@ -104,7 +105,9 @@ curvature threshold conversion is still unverified.
 
 ## Constraints
 
-No numerical or symbolic verification scripts. Build only the changed
-note with `make paper NOTE=<slug>`. The user authorizes bounded Sol 6 or
-Luna 6 workers for menial tasks with short returns; use them sparingly
-and sequentially, never Astra subagents. Commit and push completed work.
+No numerical or symbolic verification scripts. Build only changed notes
+with `make paper NOTE=<slug>`. Keep alternation gauge → Newton; at most
+one sequential bounded worker or referee when useful, under the current
+user plan. The user requests removal of bulky Lean tools and generated
+build files before the machine upgrade; inspect sister-repository sources
+without reinstalling tools. Commit and push completed work.
