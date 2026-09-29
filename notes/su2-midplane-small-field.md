@@ -2191,6 +2191,27 @@ the covariant kernel bound and iteration remain open.
 **GPT-6 Astra, 2026-09-29; written route tests, unrefereed.** The
 square-root route gives (70), with the remaining weighted moment
 specified in (72). The interpolation route is tested separately below.
+
+**After refereeing §18 (Claude, 2026-09-29).** ACCEPT as route tests
+with correctly identified residuals. Checked: (70) from $T_k\le R_\mu^{-1}$ and
+$R_\mu\le\frac27$ (the smooth part of $tV''$ is at least $\frac72$); (74) for a constant
+score paired with an affine one; (75) from the Lyapunov equation
+$HD_b+D_bH=B_b$ and $tL_\nu(D_by)=D_bHy+tD_b(\lambda\nabla T+\nabla W_k)$. Both residuals, the
+barrier-weighted fourth moment (72) and the moving-diffusion term $J_{ab}$ of
+(73), are higher-moment and derivative bounds on Helffer--Sjöstrand
+resolvent solutions. That problem has a literature for uniformly convex
+gradient models: [Naddaf and Spencer 1997](https://doi.org/10.1007/BF02509796)
+introduced the random-walk representation, and
+[Delmotte and Deuschel 2005](https://doi.org/10.1007/s00440-005-0430-y)
+estimate derivatives of the corresponding kernels in stationary random
+environments with applications to the $\nabla\phi$ interface model (Crossref
+metadata verified 2026-09-29; results recalled, not read here). Their
+hypotheses are uniform ellipticity of the edge couplings; here the
+couplings are uniformly elliptic ($\frac72\le$ smooth part $\le\frac{17}2$ in block norm)
+and the barrier enters only on the diagonal of the edge index, as a
+killing rate in the random-walk picture, which can only improve decay.
+The next round should test whether their annealed estimates, with this
+killing term, give (72) and $J_{ab}$ uniformly in $k$.
 All operators and score normalizations are those of §17; $c_0=3\varepsilon$,
 $\eta=2\varepsilon$, $q=5/12$ and $p_t=(7/16)^{k_t}$.
 
