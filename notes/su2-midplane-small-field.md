@@ -2489,3 +2489,10 @@ bound, and deterministic Hessian envelopes. The Gaussian tail (55)
 makes the scales plausible, while its transfer to the extended measure
 is an additional proof. The stop rule is met by this conditional lemma;
 (80) becomes applicable only after those local hypotheses are proved.
+
+### 19.3 Consequence for STATE
+
+Cell 2 advances to testing the local hypotheses (79) and the score-extension
+conditions of §19.2. The conditional comparison (80) includes the barrier
+endpoint, with decay exponent $\frac12\log(10/7)$; its application to the
+original scores, the full-integral comparison and iteration remain open.
