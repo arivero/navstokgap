@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What survives refinement: results on Newton&#x27;s vanishing sagitta and the halving of lattice gauge fields</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Results</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>What survives refinement: results on Newton’s vanishing sagitta and
+the halving of lattice gauge fields</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/refinement-results.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-results.pdf">PDF</a></p><p><strong>Abstract.</strong> We collect the theorems obtained in this
+repository on two refinement limits. In Newton’s comparison of free
+motion with motion under a constant force, the action of a cell of
+duration <span class="math inline">\(\tau\)</span> is spent additively
+by cuts, and a record of the comparison made by marks at those cuts
+reaches exactly the spent action divided by the mark floor <span
+class="math inline">\(\kappa\)</span>. The best verdict on the
+comparison is continuous in the force if and only if <span
+class="math inline">\(\kappa&gt;0\)</span>, which identifies a positive
+floor with Leibniz’s law of continuity read on records. For lattice
+gauge theories refined by halving, one directional halving factors into
+series moves and a mid-plane integral; for <span
+class="math inline">\(SU(2)\)</span> in <span
+class="math inline">\(1+2\)</span> dimensions one halving step is
+compared with a covariant Gaussian reference, uniformly in the size of
+the plane, with responses controlled through third order and large-field
+clusters shown to be jointly rare. The one-loop coefficients transfer to
+<span class="math inline">\(SU(N)\)</span> with the factor <span
+class="math inline">\(N/2\)</span>. Each statement lists its hypotheses;
+complete proofs are in the notes cited after each proof sketch. Planck’s
+constant <span class="math inline">\(\hbar\)</span> and all dimensional
+constants are kept explicit.</p>
+<h2 id="newtons-comparison-and-the-cut-measure">1. Newton’s comparison
+and the cut measure</h2>
+<p><strong>Definition 1.1 (Galileo cell).</strong> A body of mass <span
+class="math inline">\(m\)</span> moves on <span
+class="math inline">\([0,\tau]\)</span> either freely or under a
+constant force <span class="math inline">\(F\)</span>, from the same
+position and velocity. The two positions differ by <span
+class="math inline">\(P(t)=Ft^2/(2m)\)</span>. The <em>cell action</em>
+is <span
+class="math display">\[K_\tau=\frac{F^2\tau^3}{24\,m}.\]</span></p>
+<p><strong>Theorem 1.2 (cut measure).</strong> Cutting the cell at the
+fraction <span class="math inline">\(s\in(0,1)\)</span> of its duration
+spends the action <span class="math inline">\(3s(1-s)K_\tau\)</span>,
+that is <span
+class="math inline">\(K_\tau=3s(1-s)K_\tau+K_{s\tau}+K_{(1-s)\tau}\)</span>.
+For any finite set of cuts with pieces <span
+class="math inline">\(\tau_i\)</span>, <span
+class="math display">\[K_\tau=\sum_{\rm cuts}\frac m2\int\dot\phi_{\rm
+cut}^2+\sum_iK_{\tau_i},\]</span> where <span
+class="math inline">\(\phi_{\rm cut}\)</span> is the Schauder hat
+inserted by the cut. The spent action tends to <span
+class="math inline">\(K_\tau\)</span> if and only if <span
+class="math inline">\(\max_i\tau_i\to0\)</span>.</p>
+<p><em>Proof (sketch).</em> The hat of a cut at <span
+class="math inline">\(s\tau\)</span> has height <span
+class="math inline">\(h=F s(1-s)\tau^2/(2m)\)</span> and energy <span
+class="math inline">\(\frac
+m2h^2(\frac1{s\tau}+\frac1{(1-s)\tau})=3s(1-s)K_\tau\)</span>; later
+hats are orthogonal to earlier ones in the Cameron–Martin space <span
+class="math inline">\(H^1_0\)</span>, and <span
+class="math inline">\(\sum_iK_{\tau_i}\le
+K_\tau\max_i\tau_i^2/\tau^2\)</span>. <a
+href="cut-measure-newton.html">Cut-measure note</a>, Theorems 1–2 and
+Proposition 4. <span class="math inline">\(\square\)</span></p>
+<p><strong>Corollary 1.3.</strong> Halving every piece <span
+class="math inline">\(n\)</span> times spends <span
+class="math inline">\((1-4^{-n})K_\tau\)</span>. Halving only the
+remaining piece, day after day, spends <span
+class="math inline">\(\frac67(1-8^{-n})K_\tau\to\frac67K_\tau\)</span>;
+two quarter-cuts a day spend <span
+class="math inline">\(\frac{27}{28}K_\tau\)</span>.</p>
+<h2 id="records-and-the-floor">2. Records and the floor</h2>
+<p><strong>Definition 2.1 (mark model).</strong> A protocol places marks
+at times <span class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_N\)</span>
+fixed in advance. Mark <span class="math inline">\(j\)</span> returns
+the position with an independent centred Gaussian error of standard
+deviation <span class="math inline">\(\delta_j\)</span> and delivers an
+independent centred Gaussian impulse of standard deviation <span
+class="math inline">\(\Delta_j\)</span>, with <span
+class="math display">\[\delta_j\Delta_j\ \ge\ \kappa\ \ge0 .\]</span>
+The two hypotheses are read by tests invariant under the unknown initial
+position and velocity. The optimal such test errs with probability <span
+class="math inline">\(\Phi(-d/2)\)</span>, where <span
+class="math inline">\(d\)</span> is the statistical distance of the two
+hypotheses.</p>
+<p><strong>Theorem 2.2 (the floor).</strong> For every protocol of
+Definition 2.1, <span class="math inline">\(d^2\le
+K_\tau/\kappa\)</span>, independently of the number and times of the
+marks; the constant is sharp. Deciding at error <span
+class="math inline">\(\epsilon\)</span> therefore requires <span
+class="math inline">\(F^2\tau^3\ge96\,z_{1-\epsilon}^2\,m\kappa\)</span>,
+with <span
+class="math inline">\(z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)\)</span>.</p>
+<p><em>Proof (sketch).</em> Write the test weights as a piecewise-linear
+<span class="math inline">\(T\)</span> vanishing outside <span
+class="math inline">\((t_0,t_N)\)</span>; the signal is <span
+class="math inline">\(\frac Fm\int T\)</span> and the noise is at least
+<span class="math inline">\(\frac{2\kappa}m\int T&#39;^2\)</span> by the
+arithmetic–geometric mean; the sharp inequality <span
+class="math inline">\((\int T)^2\le\frac{\tau^3}{12}\int
+T&#39;^2\)</span> on <span class="math inline">\(H^1_0\)</span> closes
+the bound. <a href="planck-gap-paper.html">Planck paper</a>, Theorem 2.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Theorem 2.3 (records spend the cut measure).</strong> Assume
+marks with <span class="math inline">\(\delta\Delta=\kappa&gt;0\)</span>
+are available at every <span class="math inline">\(\delta&gt;0\)</span>.
+For marks at <span class="math inline">\(t_0&lt;\dots&lt;t_N\)</span>,
+with <span class="math inline">\(\tau=t_N-t_0\)</span> and pieces <span
+class="math inline">\(\tau_i\)</span>, <span class="math display">\[\sup
+d^2=\frac{K_\tau-\sum_iK_{\tau_i}}{\kappa},\]</span> approached with
+sharp end marks and balanced interior marks. A single cut at the
+fraction <span class="math inline">\(s\)</span> carries <span
+class="math inline">\(3s(1-s)K_\tau/\kappa\)</span>, and adding a mark
+inside a piece adds exactly the share of that cut.</p>
+<p><em>Proof (sketch).</em> The maximum of <span
+class="math inline">\((\int T)^2/\int T&#39;^2\)</span> over
+piecewise-linear <span class="math inline">\(T\)</span> on the grid is
+attained by the Galerkin solution of <span
+class="math inline">\(-T&#39;&#39;=1\)</span>, which is exact at the
+nodes; its integral is the trapezoid rule for <span
+class="math inline">\(\frac12(w-t_0)(t_N-w)\)</span>, whose error is
+<span class="math inline">\(\sum_i\tau_i^3/12\)</span>. <a
+href="cut-measure-newton.html">Cut-measure note</a>, Proposition 7.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Theorem 2.4 (any instrument, bounded aperture).</strong> Let
+instruments with any Kraus operators, any apparatus memory and arbitrary
+adaptivity act at times in <span
+class="math inline">\((0,\tau]\)</span>, identical under the two
+hypotheses, followed by any final measurement, and let every conditional
+state keep the body within position and momentum spreads <span
+class="math inline">\(L\)</span> and <span
+class="math inline">\(P\)</span>. If the record decides at error <span
+class="math inline">\(\epsilon\)</span>, then <span
+class="math display">\[\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\
+\ge\ 1-2\epsilon .\]</span> <a
+href="planck-gap-probabilistic.html">Probabilistic note</a>, Theorem 2
+(hybrid argument over displacement operators).</p>
+<p><strong>Theorem 2.5 (recoil).</strong> For every protocol of
+momentum-transfer marks with pointers read, with probes in arbitrary
+states, deciding at error <span class="math inline">\(\epsilon\)</span>
+requires <span
+class="math inline">\(s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)\)</span>,
+with <span class="math inline">\(s=F\tau^2/(2m)\)</span> the sagitta and
+<span class="math inline">\(\Delta_j\)</span> the spread of the impulse
+delivered by mark <span class="math inline">\(j\)</span>. <a
+href="record-costs-recoil.html">Recoil note</a>, Theorem R, with the
+constant of the path-length note.</p>
+<h2 id="continuity-of-the-verdict">3. Continuity of the verdict</h2>
+<p><strong>Theorem 3.1 (continuity).</strong> In the mark model, the
+best error with which the comparison is decided is <span
+class="math display">\[P_*(F)=\Phi\Bigl(-\tfrac12\sqrt{K_\tau/\kappa}\Bigr)\quad(\kappa&gt;0),\qquad
+P_*(F)=0\ \ (F\ne0),\ \ P_*(0)=\tfrac12\quad(\kappa=0).\]</span> Hence
+<span class="math inline">\(P_*\)</span> is continuous at <span
+class="math inline">\(F=0\)</span> if and only if <span
+class="math inline">\(\kappa&gt;0\)</span>. The same holds for rest
+against uniform motion with <span
+class="math inline">\(mv^2\tau/(8\kappa)\)</span> in place of <span
+class="math inline">\(K_\tau/(4\kappa)\)</span>. For a static taper,
+read without back-action, <span class="math inline">\(P_*\)</span> jumps
+at zero for every <span class="math inline">\(\kappa\ge0\)</span>.</p>
+<p><em>Proof (sketch).</em> Theorem 2.2 and its sharpness give the value
+for <span class="math inline">\(\kappa&gt;0\)</span>; for <span
+class="math inline">\(\kappa=0\)</span> three marks with zero impulse
+spread and vanishing resolution decide any <span
+class="math inline">\(F\ne0\)</span>. <a
+href="leibniz-continuity-records.html">Continuity note</a>, Proposition
+L. <span class="math inline">\(\square\)</span></p>
+<p><strong>Corollary 3.2 (topologies).</strong> The supremal statistical
+distance between the recorded motions of a cell under forces <span
+class="math inline">\(F,F&#39;\)</span> is <span
+class="math inline">\(d(F,F&#39;)^2=(F-F&#39;)^2\tau^3/(24m\kappa)\)</span>
+for <span class="math inline">\(\kappa&gt;0\)</span> and infinite off
+the diagonal for <span class="math inline">\(\kappa=0\)</span>. Thus
+<span class="math inline">\(\kappa&gt;0\)</span> if and only if records
+and the geometry of the motions induce the same topology on the
+constant-force family.</p>
+<p><strong>Corollary 3.3 (known preparations).</strong> Under the
+hypotheses of Theorem 2.4, <span
+class="math inline">\(P_*(F)\ge\frac12(1-F\tau
+L/\hbar-F\tau^2P/(2m\hbar))\)</span>, so at bounded aperture the best
+verdict is continuous at <span class="math inline">\(F=0\)</span>
+whenever <span class="math inline">\(\hbar&gt;0\)</span>.</p>
+<p><strong>Remark 3.4 (Leibniz, 1687).</strong> Leibniz’s law of
+continuity requires that when two cases approach, their outcomes
+approach (<em>Nouvelles de la République des Lettres</em>, July 1687;
+Gerhardt III, 52). Theorem 3.1 shows that, with outcomes measured by how
+well they can be told apart, the law holds for Newton’s comparison
+exactly when <span class="math inline">\(\kappa&gt;0\)</span>.</p>
+<p><strong>Proposition 3.5 (the floor as a path-measure
+threshold).</strong> For two Gaussian bridges of variance rate <span
+class="math inline">\(\hbar/m\)</span> around the chord and the
+parabola, the optimal equal-prior test errs with probability <span
+class="math inline">\(\Phi(-\sqrt{K_\tau/(2\hbar)})\)</span>, and
+decides at error <span class="math inline">\(\epsilon\)</span> iff <span
+class="math inline">\(K_\tau\ge2z_{1-\epsilon}^2\hbar\)</span>. <a
+href="cut-measure-newton.html">Cut-measure note</a>, Proposition 6.</p>
+<p><strong>Proposition 3.6 (one constant).</strong> Brownian free motion
+with continuous stationary independent increments and isotropic centred
+noise, mass-only laws and independent centre-of-mass composition for all
+positive masses force <span class="math inline">\(mD=\kappa\)</span>
+with a single constant <span class="math inline">\(\kappa\)</span> for
+all bodies. <a
+href="stochastic-route-velocitas-ultima.html">Stochastic-route note</a>,
+S1–S3.</p>
+<h2 id="halving-lattice-gauge-fields">4. Halving lattice gauge
+fields</h2>
+<p>Consider a heat-kernel lattice gauge theory in <span
+class="math inline">\(D\)</span> dimensions with compact gauge group
+<span class="math inline">\(G\)</span>, lattice spacing <span
+class="math inline">\(a\)</span> and heat time <span
+class="math inline">\(t=\lambda_Da\)</span> per plaquette.</p>
+<p><strong>Theorem 4.1 (series/parallel factorization).</strong> One
+halving of a lattice direction is exactly the product of series moves,
+heat-kernel convolutions that close in every dimension, and a parallel
+factor <span class="math inline">\(\Psi\)</span>, a <span
+class="math inline">\((D-1)\)</span>-dimensional gauge theory on the
+mid-plane whose edge laws are Brownian bridges. It has <span
+class="math inline">\(\binom{D-1}2\)</span> transverse planes. <a
+href="series-parallel-gauge-refinement.html">Series/parallel note</a>,
+Proposition 1.</p>
+<p><strong>Theorem 4.2 (free defect).</strong> For the free field the
+defect <span class="math inline">\(\mathcal D\)</span> of one halving is
+an exact nonpositive quadratic form of relative size at most <span
+class="math inline">\(a^2K^2/16+(Ga)^2/8\)</span>; for a cut at the
+fraction <span class="math inline">\(s\)</span> with trapezoid weights
+the bound scales exactly by <span
+class="math inline">\(4s(1-s)\)</span>. <a
+href="series-parallel-gauge-refinement.html">Series/parallel note</a>,
+Proposition 2 and Corollary 2<span
+class="math inline">\(_s\)</span>.</p>
+<p><strong>Theorem 4.3 (<span class="math inline">\(U(1)\)</span> in
+three dimensions).</strong> One unperturbed halving step equals the free
+step up to an extensive error of density <span
+class="math inline">\(e^{-\pi^2/(8\lambda_3a)}\)</span> on the
+small-field set, for every cut fraction. The whole measure lies within
+total variation <span
+class="math inline">\(2(L/a)^3e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})\)</span>
+of its monopole-free part. <a
+href="series-parallel-gauge-refinement.html">Series/parallel note</a>,
+Theorem 5 and Corollary 5<span class="math inline">\(_s\)</span>; <a
+href="villain-monopole-refinement.html">monopole note</a>, Theorem
+2.</p>
+<p><strong>Theorem 4.4 (bridge midpoints and the centre).</strong> For a
+compact connected simply connected group <span
+class="math inline">\(G\)</span>, the character moments of a
+Brownian-bridge point at any cut fraction, and at several cuts, are
+exact sums over weights and coroot images. At the reduced fraction <span
+class="math inline">\(s=p/q\)</span> the image terms are central iff
+<span class="math inline">\((1-s)H\in P^\vee\)</span>; for <span
+class="math inline">\(SU(N)\)</span> they reach the subgroup <span
+class="math inline">\(\mathbb Z_{\gcd(q,N)}\)</span> of the centre, so
+the centre of <span class="math inline">\(SU(3)\)</span> is reached only
+when <span class="math inline">\(3\mid q\)</span>. <a
+href="sun-midpoint-centre.html">Centre note</a>, Theorems 1 and 1<span
+class="math inline">\(&#39;\)</span>.</p>
+<h2 id="the-su2-mid-plane-in-12-dimensions">5. The <span
+class="math inline">\(SU(2)\)</span> mid-plane in <span
+class="math inline">\(1+2\)</span> dimensions</h2>
+<p><strong>Setting 5.1.</strong> Halve the time direction of the
+heat-kernel <span class="math inline">\(SU(2)\)</span> theory in <span
+class="math inline">\(1+2\)</span> dimensions with coarse heat time
+<span class="math inline">\(t=\lambda_3a\le t_0\)</span>, on a periodic
+mid-plane with sides at least three. In the mid-vertex gauge write <span
+class="math inline">\(m_e=m_{*e}e^{\xi_e}\)</span>. Fix <span
+class="math inline">\(\delta\in(0,1/10)\)</span> and put <span
+class="math inline">\(\varepsilon=t^{1/2-\delta}\)</span>, <span
+class="math inline">\(\alpha&#39;=\frac12-3\delta\)</span>. The boundary
+data are small: face logarithms <span
+class="math inline">\(|x_p|,|y_p|\le\varepsilon\)</span> in the two
+layers and cut data <span
+class="math inline">\(|X_e|\le\varepsilon\)</span>. The measure carries
+a convex radial barrier vanishing for <span
+class="math inline">\(|\xi_e|\le2\varepsilon\)</span> and diverging at
+the chart radius; the smallness conditions on <span
+class="math inline">\(t\)</span> and the chart are those of the <a
+href="su2-midplane-small-field.html">small-field note</a>, (65), (83),
+(98) and §22.3. Let <span class="math inline">\(C_{m_*}\)</span> be the
+incidence operator with adjoint transports of the midpoint connection,
+<span class="math inline">\(P=(8+C_{m_*}C_{m_*}^*)^{-1}\)</span> and
+<span class="math inline">\(H=4+\frac12C_{m_*}^*C_{m_*}\)</span>.</p>
+<p><strong>Definition 5.2 (covariant reference).</strong> <span
+class="math display">\[\mathcal D^{\rm cov}=\frac1{2t}\langle
+x+y,P(x+y)\rangle-\frac{\|x\|^2+\|y\|^2}{8t}
++\frac12\log\frac{\det H}{\det H_1}.\]</span></p>
+<p><strong>Theorem 5.3 (one step).</strong> Uniformly in the size of the
+plane, <span class="math display">\[\Bigl|\mathcal D_s-\mathcal D^{\rm
+cov}\Bigr|\le
+C\,t^{\alpha&#39;}\Bigl[\sum_p\Bigl(1+\frac{|x_p|^2+|y_p|^2}t\Bigr)
++\sum_e\Bigl(1+\frac{|X_e|^2}t\Bigr)\Bigr],\]</span> where <span
+class="math inline">\(\mathcal D_s\)</span> is the normalized log-ratio
+of the barriered mid-plane integral, including Haar and heat-kernel
+amplitudes, and <span class="math inline">\(C\)</span> depends only on
+local constants of the compact chart.</p>
+<p><em>Proof (sketch).</em> Classical comparison at the saddle, a local
+bound on the saddle determinant, uniform saddle-centred moments by
+integration by parts with diagonal dominance, the Laplace remainder by
+interpolation, and a Gaussian rectangle inequality for the barrier. <a
+href="su2-midplane-small-field.html">Small-field note</a>, (58) and
+(62). <span class="math inline">\(\square\)</span></p>
+<p><strong>Theorem 5.4 (responses through third order).</strong> Let
+<span class="math inline">\(r=\mathcal D_s-\mathcal D^{\rm
+cov}\)</span>, and let <span class="math inline">\(\partial_a\)</span>
+change the boundary link <span class="math inline">\(a\)</span> at
+velocity <span class="math inline">\(\varepsilon\)</span> along an
+admissible coordinate box. With <span
+class="math inline">\(\gamma=\frac12\log(10/7)\)</span> and the tree
+length <span class="math inline">\(\ell\)</span> of the labels, for
+<span class="math inline">\(n=1,2,3\)</span>, <span
+class="math display">\[\sup_{a_1}\sum_{a_2,\dots,a_n}e^{\gamma\ell(a_1,\dots,a_n)}\bigl|\partial_{a_1}\cdots\partial_{a_n}r\bigr|\le
+C_n\,t^{\alpha&#39;},\]</span> including adjacent and coincident links,
+uniformly in the plane and in the barrier approximation.</p>
+<p><em>Proof (sketch).</em> Helffer–Sjöstrand representations of the
+covariances, a Feynman–Kac representation of the resolvent with
+pointwise block bounds, the differentiated resolvent equation, the
+barrier removed one edge at a time, gradient extensions of the scores,
+and the cubic vanishing of the local energy difference <span
+class="math inline">\(S-V_2\)</span>. <a
+href="su2-midplane-small-field.html">Small-field note</a>, (89), (93),
+(119). <span class="math inline">\(\square\)</span></p>
+<p><strong>Theorem 5.5 (large-field clusters).</strong> With <span
+class="math inline">\(p=2(7/16)^{k_t}\)</span> and <span
+class="math inline">\(k_t=\lfloor3t^{-2\delta}/8\rfloor-1\)</span>, for
+every set <span class="math inline">\(H\)</span> of edges and every
+choice of the barriered edges, <span
+class="math display">\[\nu\bigl(|\xi_e|&gt;\eta\ \text{for all }e\in
+H\bigr)\le p^{|H|/16},\]</span> and for disjoint sets <span
+class="math inline">\(H_1,H_2\)</span> at graph distance <span
+class="math inline">\(d\)</span> the insertion products <span
+class="math inline">\(F_H=\prod_{e\in H}(e^{-w(\xi_e)}-1)\)</span>
+satisfy <span class="math display">\[\bigl|E\,F_{H_1\cup
+H_2}-E\,F_{H_1}E\,F_{H_2}\bigr|\le C\,p^{(|H_1|+|H_2|)/64}(5/12)^d
+.\]</span></p>
+<p><em>Proof (sketch).</em> Exponential moments of linear functionals
+under the uniformly convex measure, stable under linear tilts, and a
+Chernoff bound; the correlation by the Helffer–Sjöstrand covariance
+decay. <a href="su2-midplane-small-field.html">Small-field note</a>,
+(111) and (115). <span class="math inline">\(\square\)</span></p>
+<h2 id="from-su2-to-sun">6. From <span
+class="math inline">\(SU(2)\)</span> to <span
+class="math inline">\(SU(N)\)</span></h2>
+<p><strong>Theorem 6.1 (one-loop coefficients).</strong> With the metric
+<span class="math inline">\(\langle
+X,Y\rangle=-2\operatorname{tr}XY\)</span>, the relative-order-<span
+class="math inline">\(t\)</span> coupling coefficients of one halving
+for <span class="math inline">\(SU(N)\)</span> are those of <span
+class="math inline">\(SU(2)\)</span> multiplied by <span
+class="math inline">\(N/2\)</span>: <span
+class="math display">\[\delta_t^{12}=\delta_t^{13}=\frac{Nt}{48}\int_{\mathcal
+B}\frac qR,\qquad
+\delta_t^{23}=\frac N2\,t\Bigl(-\frac1{12}+2\mathcal I\Bigr),\]</span>
+with the group-independent integrals of the <a
+href="su2-midplane-order-t.html">order-<span
+class="math inline">\(t\)</span> note</a>. For <span
+class="math inline">\(SU(3)\)</span> the cut couplings shift by <span
+class="math inline">\(\frac t{16}\int q/R&gt;0\)</span> and the
+transverse coupling by <span class="math inline">\(t(-\frac18+3\mathcal
+I)&lt;0\)</span>.</p>
+<p><em>Proof (sketch).</em> Every group factor enters through the
+Killing form, <span class="math inline">\(\operatorname{tr}_{\rm
+adj}(\operatorname{ad}X)^2=-N|X|^2\)</span>; around a Cartan background
+the plaquette Hessian splits into root spaces, each an isometrically
+embedded <span class="math inline">\(SU(2)\)</span> of charge <span
+class="math inline">\(\alpha(Y)\)</span>, and <span
+class="math inline">\(\sum_{\alpha&gt;0}\alpha(Y)^2=\frac
+N2|Y|^2\)</span>. <a href="su2-midplane-order-t.html">Order-<span
+class="math inline">\(t\)</span> note</a>, §7b. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Proposition 6.2 (twisted <span
+class="math inline">\(SU(3)\)</span> sector).</strong> For the clock and
+shift matrices <span class="math inline">\(P,Q\in SU(3)\)</span>, <span
+class="math inline">\(PQ=\omega QP\)</span> with <span
+class="math inline">\(\omega=e^{2\pi i/3}\)</span>, the adjoint action
+has the eight joint phases <span class="math inline">\((2\pi a/3,-2\pi
+b/3)\)</span>, <span class="math inline">\((a,b)\in\mathbb
+Z_3^2\setminus\{0\}\)</span>. The twisted flat sector therefore has no
+adjoint zero mode, and its mid-plane Laplacian is bounded below by <span
+class="math inline">\(2-2\cos(2\pi/(3n_{\max}))\)</span>. <a
+href="su2-midplane-small-field.html">Small-field note</a>, §16.</p>
+<p><strong>Proposition 6.3 (bridge tails for any compact
+group).</strong> A bi-invariant metric has nonnegative Ricci curvature,
+so the Li–Yau bounds give, for the bridge midpoint of duration <span
+class="math inline">\(t\le1\)</span> and every <span
+class="math inline">\(\epsilon&#39;\in(0,1)\)</span>, <span
+class="math inline">\(\beta\{d(m,m_*)\ge r\}\le
+C_{\epsilon&#39;}t^{-n/2}\exp\{-[4(r-|X|/2)^2/(2+\epsilon&#39;)-|X|^2/(2-\epsilon&#39;)]/t\}\)</span>,
+with <span class="math inline">\(n=\dim G\)</span>. <a
+href="su2-midplane-small-field.html">Small-field note</a>, §16.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>This note is the formal compendium of the results above, written for
+readers who want the statements with their hypotheses in one place; the
+cited notes hold the proofs and remain the record. It is linked from the
+site’s index and tutorial.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

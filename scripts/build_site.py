@@ -33,6 +33,7 @@ TRACKS = [
      what survives &mdash; Newton's action cost, the Yang&ndash;Mills gap, the
      pion's zero threshold. Series insertions close exactly; parallel
      insertions carry the renormalization.""", [
+        "refinement-results",
         "halving-atlas", "uv-halving-ir-confinement", "newton-record-parallel-move",
         "tangent-groupoid-trajectories",
         "three-continuum-limits",
@@ -168,6 +169,13 @@ TRACKS = [
 ]
 
 HIGHLIGHTS = [
+    ("refinement-results",
+     "Formal results: what survives refinement",
+     "All the theorems in one place, stated with their hypotheses: the cut "
+     "measure and the record floor in Newton's comparison, continuity of the "
+     "verdict, lattice halving, the SU(2) mid-plane step and its responses, "
+     "and the SU(N) transfer. "
+     '<a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-results.pdf">PDF</a>'),
     ("planck-gap-paper",
      "A recorded trajectory has a floor of order &#8463;",
      "For every instrument, the sagitta times the momentum disturbance and "

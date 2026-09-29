@@ -1,0 +1,334 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={What survives refinement: results on Newton's vanishing sagitta and the halving of lattice},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\hypertarget{what-survives-refinement-results-on-newtons-vanishing-sagitta-and-the-halving-of-lattice-gauge-fields}{%
+\section{What survives refinement: results on Newton's vanishing sagitta
+and the halving of lattice gauge
+fields}\label{what-survives-refinement-results-on-newtons-vanishing-sagitta-and-the-halving-of-lattice-gauge-fields}}
+
+\textbf{Abstract.} We collect the theorems obtained in this repository
+on two refinement limits. In Newton's comparison of free motion with
+motion under a constant force, the action of a cell of duration \(\tau\)
+is spent additively by cuts, and a record of the comparison made by
+marks at those cuts reaches exactly the spent action divided by the mark
+floor \(\kappa\). The best verdict on the comparison is continuous in
+the force if and only if \(\kappa>0\), which identifies a positive floor
+with Leibniz's law of continuity read on records. For lattice gauge
+theories refined by halving, one directional halving factors into series
+moves and a mid-plane integral; for \(SU(2)\) in \(1+2\) dimensions one
+halving step is compared with a covariant Gaussian reference, uniformly
+in the size of the plane, with responses controlled through third order
+and large-field clusters shown to be jointly rare. The one-loop
+coefficients transfer to \(SU(N)\) with the factor \(N/2\). Each
+statement lists its hypotheses; complete proofs are in the notes cited
+after each proof sketch. Planck's constant \(\hbar\) and all dimensional
+constants are kept explicit.
+
+\hypertarget{newtons-comparison-and-the-cut-measure}{%
+\subsection{1. Newton's comparison and the cut
+measure}\label{newtons-comparison-and-the-cut-measure}}
+
+\textbf{Definition 1.1 (Galileo cell).} A body of mass \(m\) moves on
+\([0,\tau]\) either freely or under a constant force \(F\), from the
+same position and velocity. The two positions differ by
+\(P(t)=Ft^2/(2m)\). The \emph{cell action} is
+\[K_\tau=\frac{F^2\tau^3}{24\,m}.\]
+
+\textbf{Theorem 1.2 (cut measure).} Cutting the cell at the fraction
+\(s\in(0,1)\) of its duration spends the action \(3s(1-s)K_\tau\), that
+is \(K_\tau=3s(1-s)K_\tau+K_{s\tau}+K_{(1-s)\tau}\). For any finite set
+of cuts with pieces \(\tau_i\),
+\[K_\tau=\sum_{\rm cuts}\frac m2\int\dot\phi_{\rm cut}^2+\sum_iK_{\tau_i},\]
+where \(\phi_{\rm cut}\) is the Schauder hat inserted by the cut. The
+spent action tends to \(K_\tau\) if and only if \(\max_i\tau_i\to0\).
+
+\emph{Proof (sketch).} The hat of a cut at \(s\tau\) has height
+\(h=F s(1-s)\tau^2/(2m)\) and energy
+\(\frac m2h^2(\frac1{s\tau}+\frac1{(1-s)\tau})=3s(1-s)K_\tau\); later
+hats are orthogonal to earlier ones in the Cameron--Martin space
+\(H^1_0\), and \(\sum_iK_{\tau_i}\le K_\tau\max_i\tau_i^2/\tau^2\).
+\href{cut-measure-newton.md}{Cut-measure note}, Theorems 1--2 and
+Proposition 4. \(\square\)
+
+\textbf{Corollary 1.3.} Halving every piece \(n\) times spends
+\((1-4^{-n})K_\tau\). Halving only the remaining piece, day after day,
+spends \(\frac67(1-8^{-n})K_\tau\to\frac67K_\tau\); two quarter-cuts a
+day spend \(\frac{27}{28}K_\tau\).
+
+\hypertarget{records-and-the-floor}{%
+\subsection{2. Records and the floor}\label{records-and-the-floor}}
+
+\textbf{Definition 2.1 (mark model).} A protocol places marks at times
+\(t_0<t_1<\dots<t_N\) fixed in advance. Mark \(j\) returns the position
+with an independent centred Gaussian error of standard deviation
+\(\delta_j\) and delivers an independent centred Gaussian impulse of
+standard deviation \(\Delta_j\), with
+\[\delta_j\Delta_j\ \ge\ \kappa\ \ge0 .\] The two hypotheses are read by
+tests invariant under the unknown initial position and velocity. The
+optimal such test errs with probability \(\Phi(-d/2)\), where \(d\) is
+the statistical distance of the two hypotheses.
+
+\textbf{Theorem 2.2 (the floor).} For every protocol of Definition 2.1,
+\(d^2\le K_\tau/\kappa\), independently of the number and times of the
+marks; the constant is sharp. Deciding at error \(\epsilon\) therefore
+requires \(F^2\tau^3\ge96\,z_{1-\epsilon}^2\,m\kappa\), with
+\(z_{1-\epsilon}=\Phi^{-1}(1-\epsilon)\).
+
+\emph{Proof (sketch).} Write the test weights as a piecewise-linear
+\(T\) vanishing outside \((t_0,t_N)\); the signal is \(\frac Fm\int T\)
+and the noise is at least \(\frac{2\kappa}m\int T'^2\) by the
+arithmetic--geometric mean; the sharp inequality
+\((\int T)^2\le\frac{\tau^3}{12}\int T'^2\) on \(H^1_0\) closes the
+bound. \href{planck-gap-paper.md}{Planck paper}, Theorem 2. \(\square\)
+
+\textbf{Theorem 2.3 (records spend the cut measure).} Assume marks with
+\(\delta\Delta=\kappa>0\) are available at every \(\delta>0\). For marks
+at \(t_0<\dots<t_N\), with \(\tau=t_N-t_0\) and pieces \(\tau_i\),
+\[\sup d^2=\frac{K_\tau-\sum_iK_{\tau_i}}{\kappa},\] approached with
+sharp end marks and balanced interior marks. A single cut at the
+fraction \(s\) carries \(3s(1-s)K_\tau/\kappa\), and adding a mark
+inside a piece adds exactly the share of that cut.
+
+\emph{Proof (sketch).} The maximum of \((\int T)^2/\int T'^2\) over
+piecewise-linear \(T\) on the grid is attained by the Galerkin solution
+of \(-T''=1\), which is exact at the nodes; its integral is the
+trapezoid rule for \(\frac12(w-t_0)(t_N-w)\), whose error is
+\(\sum_i\tau_i^3/12\). \href{cut-measure-newton.md}{Cut-measure note},
+Proposition 7. \(\square\)
+
+\textbf{Theorem 2.4 (any instrument, bounded aperture).} Let instruments
+with any Kraus operators, any apparatus memory and arbitrary adaptivity
+act at times in \((0,\tau]\), identical under the two hypotheses,
+followed by any final measurement, and let every conditional state keep
+the body within position and momentum spreads \(L\) and \(P\). If the
+record decides at error \(\epsilon\), then
+\[\frac{F\tau L}{\hbar}+\frac{F\tau^2P}{2m\hbar}\ \ge\ 1-2\epsilon .\]
+\href{planck-gap-probabilistic.md}{Probabilistic note}, Theorem 2
+(hybrid argument over displacement operators).
+
+\textbf{Theorem 2.5 (recoil).} For every protocol of momentum-transfer
+marks with pointers read, with probes in arbitrary states, deciding at
+error \(\epsilon\) requires
+\(s\sum_j\Delta_j\ge8\hbar\arcsin(1-2\epsilon)\), with
+\(s=F\tau^2/(2m)\) the sagitta and \(\Delta_j\) the spread of the
+impulse delivered by mark \(j\). \href{record-costs-recoil.md}{Recoil
+note}, Theorem R, with the constant of the path-length note.
+
+\hypertarget{continuity-of-the-verdict}{%
+\subsection{3. Continuity of the
+verdict}\label{continuity-of-the-verdict}}
+
+\textbf{Theorem 3.1 (continuity).} In the mark model, the best error
+with which the comparison is decided is
+\[P_*(F)=\Phi\Bigl(-\tfrac12\sqrt{K_\tau/\kappa}\Bigr)\quad(\kappa>0),\qquad
+P_*(F)=0\ \ (F\ne0),\ \ P_*(0)=\tfrac12\quad(\kappa=0).\] Hence \(P_*\)
+is continuous at \(F=0\) if and only if \(\kappa>0\). The same holds for
+rest against uniform motion with \(mv^2\tau/(8\kappa)\) in place of
+\(K_\tau/(4\kappa)\). For a static taper, read without back-action,
+\(P_*\) jumps at zero for every \(\kappa\ge0\).
+
+\emph{Proof (sketch).} Theorem 2.2 and its sharpness give the value for
+\(\kappa>0\); for \(\kappa=0\) three marks with zero impulse spread and
+vanishing resolution decide any \(F\ne0\).
+\href{leibniz-continuity-records.md}{Continuity note}, Proposition L.
+\(\square\)
+
+\textbf{Corollary 3.2 (topologies).} The supremal statistical distance
+between the recorded motions of a cell under forces \(F,F'\) is
+\(d(F,F')^2=(F-F')^2\tau^3/(24m\kappa)\) for \(\kappa>0\) and infinite
+off the diagonal for \(\kappa=0\). Thus \(\kappa>0\) if and only if
+records and the geometry of the motions induce the same topology on the
+constant-force family.
+
+\textbf{Corollary 3.3 (known preparations).} Under the hypotheses of
+Theorem 2.4, \(P_*(F)\ge\frac12(1-F\tau L/\hbar-F\tau^2P/(2m\hbar))\),
+so at bounded aperture the best verdict is continuous at \(F=0\)
+whenever \(\hbar>0\).
+
+\textbf{Remark 3.4 (Leibniz, 1687).} Leibniz's law of continuity
+requires that when two cases approach, their outcomes approach
+(\emph{Nouvelles de la République des Lettres}, July 1687; Gerhardt III,
+52). Theorem 3.1 shows that, with outcomes measured by how well they can
+be told apart, the law holds for Newton's comparison exactly when
+\(\kappa>0\).
+
+\textbf{Proposition 3.5 (the floor as a path-measure threshold).} For
+two Gaussian bridges of variance rate \(\hbar/m\) around the chord and
+the parabola, the optimal equal-prior test errs with probability
+\(\Phi(-\sqrt{K_\tau/(2\hbar)})\), and decides at error \(\epsilon\) iff
+\(K_\tau\ge2z_{1-\epsilon}^2\hbar\).
+\href{cut-measure-newton.md}{Cut-measure note}, Proposition 6.
+
+\textbf{Proposition 3.6 (one constant).} Brownian free motion with
+continuous stationary independent increments and isotropic centred
+noise, mass-only laws and independent centre-of-mass composition for all
+positive masses force \(mD=\kappa\) with a single constant \(\kappa\)
+for all bodies.
+\href{stochastic-route-velocitas-ultima.md}{Stochastic-route note},
+S1--S3.
+
+\hypertarget{halving-lattice-gauge-fields}{%
+\subsection{4. Halving lattice gauge
+fields}\label{halving-lattice-gauge-fields}}
+
+Consider a heat-kernel lattice gauge theory in \(D\) dimensions with
+compact gauge group \(G\), lattice spacing \(a\) and heat time
+\(t=\lambda_Da\) per plaquette.
+
+\textbf{Theorem 4.1 (series/parallel factorization).} One halving of a
+lattice direction is exactly the product of series moves, heat-kernel
+convolutions that close in every dimension, and a parallel factor
+\(\Psi\), a \((D-1)\)-dimensional gauge theory on the mid-plane whose
+edge laws are Brownian bridges. It has \(\binom{D-1}2\) transverse
+planes. \href{series-parallel-gauge-refinement.md}{Series/parallel
+note}, Proposition 1.
+
+\textbf{Theorem 4.2 (free defect).} For the free field the defect
+\(\mathcal D\) of one halving is an exact nonpositive quadratic form of
+relative size at most \(a^2K^2/16+(Ga)^2/8\); for a cut at the fraction
+\(s\) with trapezoid weights the bound scales exactly by \(4s(1-s)\).
+\href{series-parallel-gauge-refinement.md}{Series/parallel note},
+Proposition 2 and Corollary 2\(_s\).
+
+\textbf{Theorem 4.3 (\(U(1)\) in three dimensions).} One unperturbed
+halving step equals the free step up to an extensive error of density
+\(e^{-\pi^2/(8\lambda_3a)}\) on the small-field set, for every cut
+fraction. The whole measure lies within total variation
+\(2(L/a)^3e^{-\pi^2/(6\lambda_3a)}/(1-e^{-\pi^2/(2\lambda_3a)})\) of its
+monopole-free part.
+\href{series-parallel-gauge-refinement.md}{Series/parallel note},
+Theorem 5 and Corollary 5\(_s\);
+\href{villain-monopole-refinement.md}{monopole note}, Theorem 2.
+
+\textbf{Theorem 4.4 (bridge midpoints and the centre).} For a compact
+connected simply connected group \(G\), the character moments of a
+Brownian-bridge point at any cut fraction, and at several cuts, are
+exact sums over weights and coroot images. At the reduced fraction
+\(s=p/q\) the image terms are central iff \((1-s)H\in P^\vee\); for
+\(SU(N)\) they reach the subgroup \(\mathbb Z_{\gcd(q,N)}\) of the
+centre, so the centre of \(SU(3)\) is reached only when \(3\mid q\).
+\href{sun-midpoint-centre.md}{Centre note}, Theorems 1 and 1\('\).
+
+\hypertarget{the-su2-mid-plane-in-12-dimensions}{%
+\subsection{\texorpdfstring{5. The \(SU(2)\) mid-plane in \(1+2\)
+dimensions}{5. The SU(2) mid-plane in 1+2 dimensions}}\label{the-su2-mid-plane-in-12-dimensions}}
+
+\textbf{Setting 5.1.} Halve the time direction of the heat-kernel
+\(SU(2)\) theory in \(1+2\) dimensions with coarse heat time
+\(t=\lambda_3a\le t_0\), on a periodic mid-plane with sides at least
+three. In the mid-vertex gauge write \(m_e=m_{*e}e^{\xi_e}\). Fix
+\(\delta\in(0,1/10)\) and put \(\varepsilon=t^{1/2-\delta}\),
+\(\alpha'=\frac12-3\delta\). The boundary data are small: face
+logarithms \(|x_p|,|y_p|\le\varepsilon\) in the two layers and cut data
+\(|X_e|\le\varepsilon\). The measure carries a convex radial barrier
+vanishing for \(|\xi_e|\le2\varepsilon\) and diverging at the chart
+radius; the smallness conditions on \(t\) and the chart are those of the
+\href{su2-midplane-small-field.md}{small-field note}, (65), (83), (98)
+and §22.3. Let \(C_{m_*}\) be the incidence operator with adjoint
+transports of the midpoint connection, \(P=(8+C_{m_*}C_{m_*}^*)^{-1}\)
+and \(H=4+\frac12C_{m_*}^*C_{m_*}\).
+
+\textbf{Definition 5.2 (covariant reference).}
+\[\mathcal D^{\rm cov}=\frac1{2t}\langle x+y,P(x+y)\rangle-\frac{\|x\|^2+\|y\|^2}{8t}
++\frac12\log\frac{\det H}{\det H_1}.\]
+
+\textbf{Theorem 5.3 (one step).} Uniformly in the size of the plane,
+\[\Bigl|\mathcal D_s-\mathcal D^{\rm cov}\Bigr|\le C\,t^{\alpha'}\Bigl[\sum_p\Bigl(1+\frac{|x_p|^2+|y_p|^2}t\Bigr)
++\sum_e\Bigl(1+\frac{|X_e|^2}t\Bigr)\Bigr],\] where \(\mathcal D_s\) is
+the normalized log-ratio of the barriered mid-plane integral, including
+Haar and heat-kernel amplitudes, and \(C\) depends only on local
+constants of the compact chart.
+
+\emph{Proof (sketch).} Classical comparison at the saddle, a local bound
+on the saddle determinant, uniform saddle-centred moments by integration
+by parts with diagonal dominance, the Laplace remainder by
+interpolation, and a Gaussian rectangle inequality for the barrier.
+\href{su2-midplane-small-field.md}{Small-field note}, (58) and (62).
+\(\square\)
+
+\textbf{Theorem 5.4 (responses through third order).} Let
+\(r=\mathcal D_s-\mathcal D^{\rm cov}\), and let \(\partial_a\) change
+the boundary link \(a\) at velocity \(\varepsilon\) along an admissible
+coordinate box. With \(\gamma=\frac12\log(10/7)\) and the tree length
+\(\ell\) of the labels, for \(n=1,2,3\),
+\[\sup_{a_1}\sum_{a_2,\dots,a_n}e^{\gamma\ell(a_1,\dots,a_n)}\bigl|\partial_{a_1}\cdots\partial_{a_n}r\bigr|\le C_n\,t^{\alpha'},\]
+including adjacent and coincident links, uniformly in the plane and in
+the barrier approximation.
+
+\emph{Proof (sketch).} Helffer--Sjöstrand representations of the
+covariances, a Feynman--Kac representation of the resolvent with
+pointwise block bounds, the differentiated resolvent equation, the
+barrier removed one edge at a time, gradient extensions of the scores,
+and the cubic vanishing of the local energy difference \(S-V_2\).
+\href{su2-midplane-small-field.md}{Small-field note}, (89), (93), (119).
+\(\square\)
+
+\textbf{Theorem 5.5 (large-field clusters).} With \(p=2(7/16)^{k_t}\)
+and \(k_t=\lfloor3t^{-2\delta}/8\rfloor-1\), for every set \(H\) of
+edges and every choice of the barriered edges,
+\[\nu\bigl(|\xi_e|>\eta\ \text{for all }e\in H\bigr)\le p^{|H|/16},\]
+and for disjoint sets \(H_1,H_2\) at graph distance \(d\) the insertion
+products \(F_H=\prod_{e\in H}(e^{-w(\xi_e)}-1)\) satisfy
+\[\bigl|E\,F_{H_1\cup H_2}-E\,F_{H_1}E\,F_{H_2}\bigr|\le C\,p^{(|H_1|+|H_2|)/64}(5/12)^d .\]
+
+\emph{Proof (sketch).} Exponential moments of linear functionals under
+the uniformly convex measure, stable under linear tilts, and a Chernoff
+bound; the correlation by the Helffer--Sjöstrand covariance decay.
+\href{su2-midplane-small-field.md}{Small-field note}, (111) and (115).
+\(\square\)
+
+\hypertarget{from-su2-to-sun}{%
+\subsection{\texorpdfstring{6. From \(SU(2)\) to
+\(SU(N)\)}{6. From SU(2) to SU(N)}}\label{from-su2-to-sun}}
+
+\textbf{Theorem 6.1 (one-loop coefficients).} With the metric
+\(\langle X,Y\rangle=-2\operatorname{tr}XY\), the relative-order-\(t\)
+coupling coefficients of one halving for \(SU(N)\) are those of
+\(SU(2)\) multiplied by \(N/2\):
+\[\delta_t^{12}=\delta_t^{13}=\frac{Nt}{48}\int_{\mathcal B}\frac qR,\qquad
+\delta_t^{23}=\frac N2\,t\Bigl(-\frac1{12}+2\mathcal I\Bigr),\] with the
+group-independent integrals of the
+\href{su2-midplane-order-t.md}{order-\(t\) note}. For \(SU(3)\) the cut
+couplings shift by \(\frac t{16}\int q/R>0\) and the transverse coupling
+by \(t(-\frac18+3\mathcal I)<0\).
+
+\emph{Proof (sketch).} Every group factor enters through the Killing
+form, \(\operatorname{tr}_{\rm adj}(\operatorname{ad}X)^2=-N|X|^2\);
+around a Cartan background the plaquette Hessian splits into root
+spaces, each an isometrically embedded \(SU(2)\) of charge
+\(\alpha(Y)\), and \(\sum_{\alpha>0}\alpha(Y)^2=\frac N2|Y|^2\).
+\href{su2-midplane-order-t.md}{Order-\(t\) note}, §7b. \(\square\)
+
+\textbf{Proposition 6.2 (twisted \(SU(3)\) sector).} For the clock and
+shift matrices \(P,Q\in SU(3)\), \(PQ=\omega QP\) with
+\(\omega=e^{2\pi i/3}\), the adjoint action has the eight joint phases
+\((2\pi a/3,-2\pi b/3)\), \((a,b)\in\mathbb Z_3^2\setminus\{0\}\). The
+twisted flat sector therefore has no adjoint zero mode, and its
+mid-plane Laplacian is bounded below by \(2-2\cos(2\pi/(3n_{\max}))\).
+\href{su2-midplane-small-field.md}{Small-field note}, §16.
+
+\textbf{Proposition 6.3 (bridge tails for any compact group).} A
+bi-invariant metric has nonnegative Ricci curvature, so the Li--Yau
+bounds give, for the bridge midpoint of duration \(t\le1\) and every
+\(\epsilon'\in(0,1)\),
+\(\beta\{d(m,m_*)\ge r\}\le C_{\epsilon'}t^{-n/2}\exp\{-[4(r-|X|/2)^2/(2+\epsilon')-|X|^2/(2-\epsilon')]/t\}\),
+with \(n=\dim G\). \href{su2-midplane-small-field.md}{Small-field note},
+§16.
+
+\hypertarget{consequence-for-state}{%
+\subsection{7. Consequence for STATE}\label{consequence-for-state}}
+
+This note is the formal compendium of the results above, written for
+readers who want the statements with their hypotheses in one place; the
+cited notes hold the proofs and remain the record. It is linked from the
+site's index and tutorial.
+\end{document}
