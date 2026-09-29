@@ -3616,6 +3616,80 @@ class="math inline">\(E_{\mu_k}|\nabla_ew_k|\le\Omega_{\rm
 app}p/[\varepsilon(1-p)]\)</span>. Consequently (79) holds with <span
 class="math inline">\(L=B+3D_J+3C_*+\Omega_{\rm app}\)</span>, uniformly
 in <span class="math inline">\(N,k,\lambda\)</span>.</p>
+<h3 id="gradient-extensions-and-their-gaussian-error">20.2 Gradient
+extensions and their Gaussian error</h3>
+<p>Use one scalar direction per boundary link (three directions and two
+layers cost a factor six in the incidence counts). A score has insertion
+support <span class="math inline">\(T_a\)</span> of at most seven edges,
+each at distance at most one from <span
+class="math inline">\(a\)</span>; each insertion edge belongs to at most
+42 such supports. Write <span
+class="math inline">\(\sigma_a=\partial_aV_2=\mathrm{const}+l_a\cdot\xi+q_a(\xi)\)</span>,
+<span class="math inline">\(q_a=\xi^TQ_a\xi/2\)</span>. Fix <span
+class="math inline">\(b\ge1\)</span> as the supremum of <span
+class="math inline">\((t/\varepsilon)|l_{a,i}|\)</span> and <span
+class="math inline">\((t/\varepsilon)\|(Q_a)_{ij}\|_F\)</span> over
+these local coefficients, all allowed backgrounds and <span
+class="math inline">\(t\)</span>; equivalently take the corresponding
+unit-link derivatives of <span class="math inline">\(E_w^{(2)}\)</span>.
+This is a fixed finite-dimensional compact-chart supremum, independent
+of <span class="math inline">\(N,t\)</span>. With §15.1’s cutoff set
+<span class="math display">\[\widehat\sigma_a=l_a\cdot\xi+\chi_a
+q_a,\qquad
+\chi_a=\prod_{i\in T_a}\chi(|\xi_i|),\qquad
+\widehat g_a=\nabla\widehat\sigma_a.\tag{86}\]</span> These smooth
+potentials retain the entire linear part globally and agree with <span
+class="math inline">\(\sigma_a\)</span> up to a constant on <span
+class="math inline">\(D\)</span>. On the cutoff support, <span
+class="math inline">\(|q_a|\le98b\varepsilon c_0^2/t\)</span> and <span
+class="math inline">\(|\nabla_iq_a|\le14b\varepsilon c_0/t\)</span>. The
+product rule, including the radial Hessian’s Frobenius norm, gives <span
+class="math inline">\(|\widehat g_{a,i}|\le1000b\varepsilon/t\)</span>
+and <span class="math inline">\(\|\partial_j\widehat
+g_{a,i}\|_F\le2000b\varepsilon/t\)</span>. Counting at most <span
+class="math inline">\(7^2\)</span> pairs per score and <span
+class="math inline">\(42\cdot7\)</span> per fixed insertion index proves
+every marginal in §19.2 with the explicit choices <span
+class="math display">\[G_0=50000b e^\gamma,\qquad D_0=600000b
+e^{2\gamma}.\tag{87}\]</span></p>
+<p>Here is the local polynomial-tail check against the Gaussian (59).
+Its mean has block norm at most <span
+class="math inline">\(\varepsilon/2\)</span>, and each scalar variance
+is at most <span class="math inline">\(t/4\)</span>. Thus <span
+class="math inline">\(E_G|\xi_i|^4\le8\varepsilon^4\)</span>. For <span
+class="math inline">\(A_a=\{\max_{i\in
+T_a}|\xi_i|&gt;3\varepsilon\}\)</span>, a union over seven edges and
+three components gives <span class="math inline">\(G(A_a)\le
+p_G:=\min\{1,42\exp[-25\varepsilon^2/(6t)]\}\)</span>. The error
+gradient vanishes off <span class="math inline">\(A_a\)</span>; on it
+the product rule gives <span
+class="math inline">\(|\nabla_i(\widehat\sigma_a-\sigma_a)|
+\le2000b\varepsilon t^{-1}\sum_{j\in T_a}|\xi_j|\)</span>. Hölder and
+the fourth moment give its <span class="math inline">\(L^2(G)\)</span>
+bound <span
+class="math inline">\(24000b\varepsilon^2p_G^{1/4}/t\)</span>. Its
+weighted marginal sums are therefore at most <span
+class="math inline">\(A_0\varepsilon^2p_G^{1/4}/t\)</span> with <span
+class="math inline">\(A_0=1100000b e^\gamma\)</span>. The original
+gradient’s <span class="math inline">\(L^2\)</span> marginals are at
+most <span class="math inline">\((G_0+A_0)\varepsilon/t\)</span>. Apply
+the Gaussian covariance representation to the two differences of
+products, using the weighted inverse bound <span
+class="math inline">\(m^{-1}\)</span>. This proves <span
+class="math display">\[\|\operatorname{Cov}_G(\widehat\sigma,\widehat\sigma)
+-\operatorname{Cov}_G(\sigma,\sigma)\|_\gamma
+\le E_0p_G^{1/4}\varepsilon^3/t,\qquad
+E_0=A_0(2G_0+A_0)/m.\tag{88}\]</span> At fixed <span
+class="math inline">\(N,t\)</span>, these extended potentials grow at
+most linearly. The densities are bounded by a fixed multiple of <span
+class="math inline">\(e^{-S}\)</span> for all sufficiently large <span
+class="math inline">\(k\)</span>, since their partition functions
+converge to a positive limit. Strong convexity of <span
+class="math inline">\(S\)</span> supplies an integrable Gaussian
+dominator for their products. Dominated convergence therefore proves
+convergence of their means and covariances to the barriered covariances;
+on <span class="math inline">\(D\)</span> these are exactly the original
+quadratic-score covariances.</p>
 
 </main>
 <footer class="site"><div class="wrap">

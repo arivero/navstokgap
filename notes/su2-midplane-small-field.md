@@ -2592,3 +2592,58 @@ Removing one barrier gives
 $E_{\mu_k}|\nabla_ew_k|\le\Omega_{\rm app}p/[\varepsilon(1-p)]$.
 Consequently (79) holds with
 $L=B+3D_J+3C_*+\Omega_{\rm app}$, uniformly in $N,k,\lambda$.
+
+### 20.2 Gradient extensions and their Gaussian error
+
+Use one scalar direction per boundary link (three directions and two layers
+cost a factor six in the incidence counts). A score has insertion support
+$T_a$ of at most seven edges, each at distance at most one from $a$;
+each insertion edge belongs to at most 42 such supports. Write
+$\sigma_a=\partial_aV_2=\mathrm{const}+l_a\cdot\xi+q_a(\xi)$,
+$q_a=\xi^TQ_a\xi/2$. Fix $b\ge1$ as the supremum of
+$(t/\varepsilon)|l_{a,i}|$ and
+$(t/\varepsilon)\|(Q_a)_{ij}\|_F$ over these local coefficients,
+all allowed backgrounds and $t$; equivalently take the corresponding
+unit-link derivatives of $E_w^{(2)}$. This is a fixed finite-dimensional
+compact-chart supremum, independent of $N,t$. With §15.1's cutoff set
+$$\widehat\sigma_a=l_a\cdot\xi+\chi_a q_a,\qquad
+\chi_a=\prod_{i\in T_a}\chi(|\xi_i|),\qquad
+\widehat g_a=\nabla\widehat\sigma_a.\tag{86}$$
+These smooth potentials retain the entire linear part globally and agree
+with $\sigma_a$ up to a constant on $D$. On the cutoff support,
+$|q_a|\le98b\varepsilon c_0^2/t$ and
+$|\nabla_iq_a|\le14b\varepsilon c_0/t$.
+The product rule, including the radial Hessian's Frobenius norm, gives
+$|\widehat g_{a,i}|\le1000b\varepsilon/t$ and
+$\|\partial_j\widehat g_{a,i}\|_F\le2000b\varepsilon/t$.
+Counting at most $7^2$ pairs per score and $42\cdot7$ per fixed insertion
+index proves every marginal in §19.2 with the explicit choices
+$$G_0=50000b e^\gamma,\qquad D_0=600000b e^{2\gamma}.\tag{87}$$
+
+Here is the local polynomial-tail check against the Gaussian (59).
+Its mean has block norm at most $\varepsilon/2$, and each scalar
+variance is at most $t/4$. Thus $E_G|\xi_i|^4\le8\varepsilon^4$.
+For $A_a=\{\max_{i\in T_a}|\xi_i|>3\varepsilon\}$, a union over seven
+edges and three components gives
+$G(A_a)\le p_G:=\min\{1,42\exp[-25\varepsilon^2/(6t)]\}$.
+The error gradient vanishes off $A_a$; on it the product rule gives
+$|\nabla_i(\widehat\sigma_a-\sigma_a)|
+\le2000b\varepsilon t^{-1}\sum_{j\in T_a}|\xi_j|$.
+Hölder and the fourth moment give its $L^2(G)$ bound
+$24000b\varepsilon^2p_G^{1/4}/t$. Its weighted marginal sums are
+therefore at most $A_0\varepsilon^2p_G^{1/4}/t$ with
+$A_0=1100000b e^\gamma$. The original gradient's $L^2$ marginals
+are at most $(G_0+A_0)\varepsilon/t$.
+Apply the Gaussian covariance representation to the two differences of
+products, using the weighted inverse bound $m^{-1}$. This proves
+$$\|\operatorname{Cov}_G(\widehat\sigma,\widehat\sigma)
+-\operatorname{Cov}_G(\sigma,\sigma)\|_\gamma
+\le E_0p_G^{1/4}\varepsilon^3/t,\qquad
+E_0=A_0(2G_0+A_0)/m.\tag{88}$$
+At fixed $N,t$, these extended potentials grow at most linearly.
+The densities are bounded by a fixed multiple of $e^{-S}$ for all
+sufficiently large $k$, since their partition functions converge to a
+positive limit. Strong convexity of $S$ supplies an integrable Gaussian
+dominator for their products. Dominated convergence therefore proves
+convergence of their means and covariances to the barriered covariances;
+on $D$ these are exactly the original quadratic-score covariances.
