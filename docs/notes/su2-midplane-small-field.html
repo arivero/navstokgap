@@ -5769,6 +5769,216 @@ next gauge lemma is the order-uniform anchored attachment bound of
 Dressing, boundary sources, explicit <span
 class="math inline">\(SU(3)\)</span> constants, iteration, continuum
 nontriviality and the physical spectral gap remain open.</p>
+<h2
+id="all-order-anchored-attachments-at-the-exact-gaussian-endpoint">31.
+All-order anchored attachments at the exact Gaussian endpoint</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-29; written derivation,
+internally checked.</strong> Under the additional exact-quadratic and
+unbarriered-measure assumptions below, the order-uniform anchored target
+of §30.3 holds with explicit constants (141) and the stronger sum (142).
+A volume-uniform complex source polydisc is also zero-free. This is a
+conditional reference construction, rather than a proof for all measures
+(125). Its mechanism is normalization of the marginal on <span
+class="math inline">\(H\)</span> before taking absolute coefficients:
+outside contributions disconnected from <span
+class="math inline">\(H\)</span> cancel exactly.</p>
+<h3 id="assumptions-and-constants">31.1 Assumptions and constants</h3>
+<p>Take <span class="math inline">\(J=\varnothing\)</span> and assume
+the smooth potential is exactly <span class="math inline">\(S(y)=y^{\sf
+T}Ay/(2t)\)</span>, <span class="math inline">\(y=\xi-s\)</span>, up to
+an irrelevant constant. The real symmetric matrix <span
+class="math inline">\(A\)</span> has three-dimensional coordinate
+blocks, range one, <span class="math inline">\(\|A-6I\|\le5/2\)</span>,
+and fixed block row and column sums at most <span
+class="math inline">\(17/2\)</span>. These hold at the covariant
+Gaussian endpoint and its quadratic real decouplings: the last bound
+follows from §20.1’s majorant about <span
+class="math inline">\(5I\)</span>. Retain the existing small-time
+assumptions giving <span class="math inline">\(\Pr(B_H)\le
+p^{h/16}\)</span>, <span class="math inline">\(p\le1/2\)</span>, for
+<span class="math inline">\(h=|H|\ge1\)</span>. The observable <span
+class="math inline">\(F_H\)</span> is measurable on <span
+class="math inline">\(y_H\)</span> and obeys <span
+class="math inline">\(|F_H|\le1_{B_H}\)</span>, as in §25.2. No
+derivative of it is needed.</p>
+<p>There is one fixed connector matrix per face: <span
+class="math inline">\(K_p=y^{\sf T}B_py/(2t)\)</span>, where <span
+class="math inline">\(B_p\)</span> is real symmetric, supported on <span
+class="math inline">\(\partial p\)</span> and has block row and column
+sums at most <span class="math inline">\(K_{\rm loc}\le7\)</span>.
+Equation (126) gives precisely this form when the parent potential is
+quadratic; constant and linear terms cancel. Additional independently
+sourced connector types would change the incidence constant below. Fix
+<span class="math inline">\(0&lt;\eta&lt;\log(12/5)\)</span>, put <span
+class="math inline">\(q=5/12\)</span>, and use <span
+class="math inline">\(C_E\)</span> from §30.2 to set <span
+class="math display">\[\begin{aligned}
+g&amp;=\frac27 C_E(qe^\eta),\qquad
+a=\frac{17}2e^\eta,\qquad b=2K_{\rm loc}e^\eta,\\
+D&amp;=1+6ag+2a^2g^2,\\
+d_0&amp;=\min\{(256g)^{-1},7/1024\},\qquad
+\rho_*=\frac{d_0}{bD}&gt;0.
+\end{aligned}\tag{141}\]</span> These constants are independent of <span
+class="math inline">\(h\)</span>, plane size, heat time and the profile
+approximation. The face-edge graph of §2 joins two edges when they share
+a face, so the diameter of a face is one.</p>
+<p><strong>Proposition 8 (Gaussian anchored attachment norm).</strong>
+Define <span class="math inline">\(\kappa(F_H)=EF_H\)</span> and the
+empty-label tree length as zero. With <span
+class="math inline">\(\ell(H,p_1,\ldots,p_n)\)</span> the minimum
+spanning-tree length on these supports, repetitions allowed, <span
+class="math display">\[\sum_{n\ge0}\frac{\rho_*^n}{n!}
+\sum_{p_1,\ldots,p_n}
+e^{\eta\ell(H,p_1,\ldots,p_n)}
+|\kappa(F_H,K_{p_1},\ldots,K_{p_n})|
+\le p^{h/64}.\tag{142}\]</span> In particular this proves the restricted
+version of §30.3’s target with <span
+class="math inline">\(a_*=1/64\)</span>, <span
+class="math inline">\(A_*=1\)</span> and <span
+class="math inline">\(\eta_*=\eta\)</span>.</p>
+<h3 id="a-schur-marginal-with-only-rooted-contributions">31.2 A Schur
+marginal with only rooted contributions</h3>
+<p>For every principal submatrix <span
+class="math inline">\(A_{OO}\)</span>, compression preserves the norm
+bound about <span class="math inline">\(6I\)</span>. The Neumann
+operator estimate gives <span
+class="math inline">\(\|(A_{OO}^{-1})_{ef}\|\le(2/7)q^{d(e,f)}\)</span>,
+using ambient graph distance. The weighted block row and column sums of
+this inverse are at most <span class="math inline">\(g\)</span>. Treat
+each inverse block as a single hop charged its endpoint distance; do not
+expand it into bare lattice paths and assign this operator bound to
+individual paths.</p>
+<p>For <span class="math inline">\(E(z)=\sum_pz_pB_p\)</span>, the
+summed absolute source coefficients at radius <span
+class="math inline">\(\rho\)</span> have weighted block row and column
+sums at most <span class="math inline">\(b\rho\)</span>: each edge is in
+two faces and a face has diameter one. The same weighted sums for <span
+class="math inline">\(A\)</span> are at most <span
+class="math inline">\(a\)</span>. Let <span
+class="math inline">\(O\)</span> be the complement of <span
+class="math inline">\(H\)</span>. The normalized marginal precision on
+<span class="math inline">\(H\)</span> is <span
+class="math display">\[M_z=(A+E)_{HH}-(A+E)_{HO}
+                      (A+E)_{OO}^{-1}(A+E)_{OH}.\]</span> Empty
+complementary blocks contribute zero. Put <span
+class="math inline">\(C_H=(A^{-1})_{HH}=M_0^{-1}\)</span> and <span
+class="math inline">\(\Delta=M_z-M_0\)</span>. Expand the outside
+inverse in <span class="math inline">\(E_{OO}\)</span> and cancel the
+source-free term <strong>before</strong> taking absolute coefficients.
+The remaining weighted row and column majorant is <span
+class="math display">\[d(\rho)=b\rho+
+g\left[\frac{(a+b\rho)^2}{1-gb\rho}-a^2\right].\tag{143}\]</span> The
+first term is <span class="math inline">\(E_{HH}\)</span>. Every other
+term contains at least one source insertion on a chain with both ends in
+<span class="math inline">\(H\)</span>. For <span
+class="math inline">\(v=b\rho\le a\)</span> and <span
+class="math inline">\(gv\le1/2\)</span>, <span
+class="math display">\[\frac{d(\rho)}v
+=1+g\frac{2a+v+a^2g}{1-gv}\le D.\]</span> The choice (141) satisfies
+both inequalities and gives <span class="math inline">\(d(\rho_*)\le
+d_0\)</span>.</p>
+<p>Each such chain visits every source face appearing in its
+coefficient. For geometric accounting, join the endpoints of an inverse
+hop by a shortest path. Collapsing each visited face to its support and
+the whole set <span class="math inline">\(H\)</span> to the root gives a
+connecting tour; a spanning tree has no greater total length. Its <span
+class="math inline">\(e^{\eta\ell}\)</span> weight is therefore bounded
+by the product of the hop weights already counted in (143). This use of
+paths concerns support geometry, not a pathwise bound on the inverse
+operator.</p>
+<h3 id="the-normalized-density-and-its-absolute-coefficients">31.3 The
+normalized density and its absolute coefficients</h3>
+<p>The exact Gaussian marginal density ratio, with its branch equal to
+one at zero, is <span
+class="math display">\[R_z(y_H)=\det(I+C_H\Delta)^{1/2}
+                 e^{-y_H^{\sf T}\Delta y_H/(2t)}.\]</span> Its logarithm
+is <span class="math display">\[\log R_z=
+\frac12\sum_{j\ge1}\frac{(-1)^{j+1}}j
+                    \operatorname{Tr}(C_H\Delta)^j
+-\frac1{2t}y_H^{\sf T}\Delta y_H.\]</span> The trace costs <span
+class="math inline">\(3h\)</span>, the number of scalar coordinates in
+<span class="math inline">\(H\)</span>; each <span
+class="math inline">\(C_H\)</span> contraction joins root coordinates.
+The symmetric quadratic majorant uses <span
+class="math inline">\(2|y_e||y_f|\le|y_e|^2+|y_f|^2\)</span>.
+Consequently its absolute diagram sum, including source powers at radius
+<span class="math inline">\(\rho_*\)</span> and all spatial weights, is
+at most <span class="math display">\[L(y_H)=\frac{3h}2\log\frac1{1-gd_0}
+              +\frac{d_0}{2t}\sum_{e\in H}|y_e|^2.\tag{144}\]</span>
+Every trace or quadratic term is attached to <span
+class="math inline">\(H\)</span>. Products in the exponential stay
+attached to that same root; the length of a tree for their union is at
+most the sum of their individual connecting tour lengths. Thus the
+weighted absolute Taylor sum of <span class="math inline">\(R_z\)</span>
+is bounded pointwise by <span
+class="math inline">\(e^{L(y_H)}\)</span>.</p>
+<p>Integrate against <span class="math inline">\(F_H\)</span> in the
+original Gaussian marginal. Its covariance satisfies <span
+class="math inline">\(tC_H\preceq(2t/7)I\)</span>. Cauchy–Schwarz
+against <span class="math inline">\(1_{B_H}\)</span> and the Gaussian
+quadratic exponential formula give <span
+class="math display">\[E[1_{B_H}e^{L(y_H)}]
+\le p^{h/32}
+\left[(1-gd_0)^{-3/2}(1-4d_0/7)^{-3/4}\right]^h.
+\tag{145}\]</span> For the exponential formula, diagonalize <span
+class="math inline">\(C_H\)</span> and integrate each scalar Gaussian:
+<span
+class="math display">\[E\exp[(d_0/t)|y_H|^2]\le(1-4d_0/7)^{-3h/2}.\]</span>
+Both quantities subtracted from one in (145) are at most <span
+class="math inline">\(1/256\)</span>. Since <span
+class="math inline">\(-\log(1-x)\le x/(1-x)\)</span>, <span
+class="math display">\[\log\left[(1-gd_0)^{-3/2}(1-4d_0/7)^{-3/4}\right]
+\le\frac3{340}&lt;\frac{\log2}{64}\le\frac{\log(1/p)}{64}.\]</span> The
+strict comparison follows, for example, from <span
+class="math inline">\(\log2\ge2/3\)</span>. Equation (145) is therefore
+at most <span class="math inline">\(p^{h/64}\)</span>.</p>
+<p>Finally <span class="math inline">\(G_H(z)=E[F_HR_z]\)</span> has
+derivatives <span
+class="math inline">\(\partial_{p_1}\cdots\partial_{p_n}G_H(0)
+=(-1)^n\kappa(F_H,K_{p_1},\ldots,K_{p_n})\)</span>. For multiplicities
+<span class="math inline">\(\alpha_p\)</span>, the ordered-label sum
+divided by <span class="math inline">\(n!\)</span> gives exactly <span
+class="math inline">\(1/\prod_p\alpha_p!\)</span>, its Taylor
+denominator. Repeated supports have zero connecting distance. The
+absolute majorant just proved therefore yields (142), including the
+zero-order term. Gaussian integrability in (145) justifies termwise
+integration. No factor depending on response order or plane size has
+been hidden.</p>
+<p>Throughout <span class="math inline">\(\sup_p|z_p|\le\rho_*\)</span>,
+<span class="math inline">\(\operatorname{Re}A_z\succeq(7/2-2K_{\rm
+loc}\rho_*)I\succ0\)</span>. The Gaussian partition function has its
+analytic nonvanishing determinant branch on this volume-uniform complex
+polydisc. Equation (142) supplies more than zero-freeness: it retains an
+anchored spatial reserve and bad-set rarity at every order. The
+matrices, source radius and weighted norm are dimensionless after the
+stated <span class="math inline">\(t\)</span> scaling.</p>
+<h3 id="the-next-nonlinear-test">31.4 The next nonlinear test</h3>
+<p>The result uses the exact Gaussian marginal formula. A retained
+barrier or nonlinear smooth interaction changes that marginal and its
+conditional outside partition function; real convexity and moments alone
+do not supply (144). The next bounded gauge lemma is an analogue of the
+<strong>rooted marginal logarithm estimate</strong> (144) with those
+terms retained inside the measure. It must cancel all source-free
+outside contributions and attach every surviving source to <span
+class="math inline">\(H\)</span>, before absolute summation. This
+identifies a concrete estimate to derive, rather than a premise that can
+be silently added. Test conditional block integration first, then an
+independent-attachment forest construction if that fails; stop after two
+distinct failures to improve this marginal norm. Reject barrier
+differentiation or an attachment rate tending to zero.</p>
+<p>Equation (142) proves neither the full-family version of §30.3 nor
+the multi-bad-component estimate (116). Bad-component dressing,
+boundary-source variations and comparison to the original group integral
+remain subsequent steps. A Gaussian endpoint polydisc is not the
+boundary-source polydisc of (113).</p>
+<h3 id="consequence-for-state-15">Consequence for STATE</h3>
+<p>The gauge checkpoint closes the all-order anchored attachment norm at
+the exact unbarriered Gaussian endpoint, with a fixed spatial reserve
+and a zero-free source polydisc. The next full-family estimate is the
+nonlinear rooted marginal logarithm bound specified in §31.4. Alternate
+next to Newton’s three-cell blocking test. No <span
+class="math inline">\(SU(3)\)</span> continuum construction or physical
+spectral gap is inferred.</p>
 
 </main>
 <footer class="site"><div class="wrap">
