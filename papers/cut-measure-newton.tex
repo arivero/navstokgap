@@ -370,26 +370,30 @@ phase-space window).
 7)}\label{c.-mark-protocols-spend-exactly-the-cut-measure-proposition-7}}
 
 \textbf{Proposition 7 (2026-09-29, Claude, generalizing a single-cut
-computation by Fable; written proof, unrefereed).} Take the mark model
-of the \href{planck-gap-paper.md}{Planck paper}, §3: mark \(j\) returns
-the position with Gaussian error \(\delta_j\) and delivers a Gaussian
-impulse \(\Delta_j\) with \(\delta_j\Delta_j\ge\kappa\); protocols are
-non-adaptive and tests invariant under the unknown initial position and
-velocity. Let the marks sit at \(t_0<t_1<\dots<t_N\), with
-\(\tau=t_N-t_0\) and pieces \(\tau_i=t_i-t_{i-1}\). Then the supremum
-over the marks' \(\delta_j,\Delta_j\) of the discernibility is
+computation by Fable; refereed by Fable, ACCEPT with wording fixes
+applied).} Take the mark model of the \href{planck-gap-paper.md}{Planck
+paper}, §3: mark \(j\) returns the position with Gaussian error
+\(\delta_j\) and delivers a Gaussian impulse \(\Delta_j\) with
+\(\delta_j\Delta_j\ge\kappa\); protocols are non-adaptive and tests
+invariant under the unknown initial position and velocity, and marks
+with \(\delta\Delta=\kappa\) are available at every \(\delta>0\) (as in
+the sharpness of Theorem 2; the upper bound needs only
+\(\delta\Delta\ge\kappa\)). Let the marks sit at \(t_0<t_1<\dots<t_N\),
+with \(\tau=t_N-t_0\) and pieces \(\tau_i=t_i-t_{i-1}\). Then the
+supremum over the marks' \(\delta_j,\Delta_j\) of the discernibility is
 
 \[\sup d^2=\frac{K_\tau-\sum_iK_{\tau_i}}{\kappa}=\frac1\kappa\sum_{\rm cuts}\frac m2\int\dot\phi_{\rm cut}^2,
 \qquad K_\tau=\frac{F^2\tau^3}{24\,m},\]
 
 the action that the interior cuts spend by Theorems 1--2. It is
-approached with sharp end marks and balanced interior marks. Special
-cases: a single cut at fraction \(s\) gives \(3s(1-s)K_\tau/\kappa\);
-\(N\) equal pieces give \((1-N^{-2})K_\tau/\kappa\), so \(n\) halvings
-give \((1-4^{-n})K_\tau/\kappa\); the dense limit gives
-\(K_\tau/\kappa\), the paper's Theorem 2. Adding a mark inside a piece
-adds exactly that cut's share, \(3s(1-s)K_{\tau_i}/\kappa\): the squared
-statistical distance is additive under refinement at every finite stage.
+approached, never attained, with sharp end marks and balanced interior
+marks. Special cases: a single cut at fraction \(s\) gives
+\(3s(1-s)K_\tau/\kappa\); \(N\) equal pieces give
+\((1-N^{-2})K_\tau/\kappa\), so \(n\) halvings give
+\((1-4^{-n})K_\tau/\kappa\); the dense limit gives \(K_\tau/\kappa\),
+the paper's Theorem 2. Adding a mark inside a piece adds exactly that
+cut's share, \(3s(1-s)K_{\tau_i}/\kappa\): the squared statistical
+distance is additive under refinement at every finite stage.
 
 \emph{Proof.} Write \(T(w)=\sum_{t_i>w}u_i(t_i-w)\) for the test weights
 \(u\). The invariance constraints \(\sum u_i=\sum u_it_i=0\) say exactly
@@ -412,15 +416,25 @@ the ratio is at most \(\int T_h\). In one dimension \(T_h\) interpolates
 \(p(w)=\frac12(w-t_0)(t_N-w)\) at the nodes, since the Dirichlet Green's
 function with its source at a node lies in \(V_h\) and the error
 \(p-T_h\) is Galerkin-orthogonal to \(V_h\). So \(\int T_h\) is the
-trapezoid rule for \(p\), whose error on a piece is
+trapezoid rule for \(p\) (nodal exactness of one-dimensional linear
+elements: Strang and Fix, \emph{An Analysis of the Finite Element
+Method}, 1973; recalled), whose error on a piece is
 \(-\tau_i^3p''/12=\tau_i^3/12\), and
 \(\int T_h=(\tau^3-\sum_i\tau_i^3)/12\). This gives the upper bound
-\(F^2(\tau^3-\sum\tau_i^3)/(24m\kappa)\). For attainment take \(T=T_h\),
-which is nonnegative and concave, so all \(u_jT(t_j)\) have one sign;
-choose \(\delta_j=\Delta_jT_h(t_j)/(m|u_j|)\) at interior marks, and let
-the end marks be sharp, \(\delta_0,\delta_N\to0\) with
-\(\Delta_0,\Delta_N\to\infty\), which costs nothing because \(T\)
-vanishes there and their impulses reach no later reading. \(\square\)
+\(F^2(\tau^3-\sum\tau_i^3)/(24m\kappa)\). For the supremum take
+\(T=T_h\), which is nonnegative and concave, so all \(u_jT(t_j)\) have
+one sign; choose \(\delta_j=\Delta_jT_h(t_j)/(m|u_j|)\) with
+\(\delta_j\Delta_j=\kappa\) at interior marks, and let the end marks be
+sharp, \(\delta_0,\delta_N\to0\) with \(\Delta_0,\Delta_N\to\infty\).
+Their impulses drop out of every invariant statistic, since
+\(S_0=S_N=0\): the one at \(t_N\) reaches no later reading, and the one
+at \(t_0\) acts as a shift of the unknown \(v_0\). The value is never
+attained, because \(u_0,u_N\ne0\) leave
+\(\delta_0^2u_0^2+\delta_N^2u_N^2>0\) at any finite end mark.
+Equivalently, \((F/m)T_h\) is the energy projection of the Galilean
+displacement onto the polygons on the grid, so
+\(\sup d^2=\frac1\kappa\frac m2\int(\Pi_h\delta x)'^2\), which is
+Theorems 1--2 by construction. \(\square\)
 
 The two constructions of this note and the paper's are therefore one:
 the Newton cell action spent by any finite set of cuts is, over
@@ -430,6 +444,15 @@ exponent, \(\frac12\sqrt{K_\tau/\kappa}=\sqrt{K_\tau/(2\hbar)}\), from
 the mark model instead of the path measure. The
 \href{leibniz-continuity-records.md}{continuity note} reads the
 additivity as Leibniz's \emph{petites perceptions}.
+
+The schedules of §3 acquire a records meaning. Marks placed at the cuts
+of Hui Shi's stick, however many, reach at most
+\(\frac67K_\tau/\kappa\), and the two quarter-cuts a day reach
+\(\frac{27}{28}K_\tau/\kappa\): the stick that is ``not exhausted in ten
+thousand generations'' leaves one seventh of the discernibility of the
+comparison permanently out of reach, because the pieces it takes away
+are never marked again. The deficit exists only on the floor branch;
+with \(\kappa=0\) any three marks decide.
 
 \hypertarget{consequence-for-state}{%
 \subsection{6. Consequence for STATE}\label{consequence-for-state}}

@@ -68,6 +68,9 @@ performs the same two moves, with $s$ as a parameter.
   mesh vanishes ([cut-measure note](cut-measure-newton.md)). The Galileo
   action is an additive measure on the cut process, with the nested
   additivity of the Lévy--Ciesielski construction of the Brownian bridge.
+  With a mark floor $\kappa$, marks at any finite set of cuts distinguish the
+  force with squared statistical distance exactly the spent action over $\kappa$
+  (Proposition 7 there), so the cut measure and the record measure coincide.
 - **Windings and images.** For $U(1)$ a cut's bridge law is a positive
   winding mixture: its weights are $s$-independent and the shifts
   $2\pi(1-s)W$ form $\mathbb Z_2$ only at halving and $\mathbb Z_q$ at $s=p/q$. For every
