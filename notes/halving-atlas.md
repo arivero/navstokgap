@@ -127,7 +127,7 @@ way; in mechanics refining makes each cell more quantum
 | free ($\mathbb R^n$) | exact | exact defect (Proposition 2 of the series/parallel note) | Gaussian, exact | blocked actions converge to a Gaussian fixed point (known, Bell--Wilson; for this blocking asserted) |
 | $U(1)$ | exact (Proposition 3) | exact charge form, vortex bound (Proposition 4, Corollary) | one step equals the free step up to density $e^{-\pi^2/(8t)}$ (Theorem 5, refereed); whole measure within TV $2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ of the monopole-free part ([monopole note](villain-monopole-refinement.md)) | free photon (Gross 1983, known) |
 | $SU(2)$ | midpoint characters exact for every spin; spin-$\frac12$ and spin-1 cube sectors exact, with matrix image bounds for spin 1 ([closed form](su2-midpoint-exact.md), Theorems 1--4) | [formal order-$t$ expansion](su2-midplane-order-t.md): cut shifts positive, transverse negative; other local operators have dimension at least six; explicit torus winding term | formal; one-step normalized small-field bound against a covariant reference proved (small-field §§13--14); iteration open | open |
-| $SU(3)$ | curvature term explicit, softening $t_j|X_j|^2/512$ (group-general form of Proposition 6) | open | formal | open; the gap $C_3\hbar c\lambda_3$ is the infrared obligation |
+| $SU(3)$ | curvature term explicit, softening $t_j|X_j|^2/512$ (group-general form of Proposition 6) | small-field one-step normalized bounds transcribed from $SU(2)$, $\mathbb Z_3$ sectors, bridge tail by Li--Yau ([small-field §16](su2-midplane-small-field.md), unrefereed); large fields open | formal | open; the gap $C_3\hbar c\lambda_3$ is the infrared obligation |
 
 ## 4. What emerges, read across the atlas
 
