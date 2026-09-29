@@ -2843,8 +2843,11 @@ the stronger scale in (94), or activities carrying (62)'s energy budget.
 
 ### Consequence for STATE
 
-The link-kernel assembly is conditional on the mixed score estimate
-$C_T<\infty$, with its corrected constant (89). Cell 2 next needs that
-mixed-jet estimate and the higher connected responses for polymer
-activities; curvature-coordinate conversion, large-field comparison
-and perturbed-action stability remain separate steps.
+Round 21 corrects the conditional link-kernel constant (89) and reduces
+the third response to the explicit tensor source (92), yielding (93)
+under its stated uniform norms. Cell 2 next needs the mixed score bound
+$C_T<\infty$ and the barrier-weighted $Y$ estimate, then the all-order
+growth and admissible paths of (94). Equation (95) proves the resulting
+conditional polymer conversion; its bare-activity scale, curvature
+conversion, large-field comparison and perturbed-action stability
+remain explicit obligations.

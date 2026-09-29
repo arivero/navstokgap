@@ -64,7 +64,7 @@ fill its cells (open cells in its §5).
    [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
    are refereed (Round 5B A); its §5b displays the fundamental SU(3)
    trisection (5B B, written). Image-to-volume control remains open.
-   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); §14 extends the barriered comparison to unequal layers (refereed by Claude). Cell 2: the covariant kernel estimate (27) is assembled in [§20.3](../notes/su2-midplane-small-field.md) from rounds 17–20 (unrefereed), up to a local chart constant. Next: higher mixed differences for polymer activities; then full-integral comparison and perturbed-action stability. Fixed-frame equivalence and iteration remain open; higher-spin sum control remains an alternative route.
+   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); §14 extends the barriered comparison to unequal layers (refereed by Claude). Cell 2: [§§20.3–21](../notes/su2-midplane-small-field.md) correct the conditional link-kernel assembly (Astra referee) and reduce third response to a tensor resolvent; the all-order polymer criterion is explicit (Round 21, unrefereed). Next: uniform mixed score bound C_T and barrier third-derivative source (92), then all-order growth and admissible paths. Curvature conversion, full-integral comparison, perturbed-action stability and iteration remain open; higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
