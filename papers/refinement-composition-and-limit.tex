@@ -35,6 +35,15 @@ comparison, and specify sufficient estimates for further limits. The
 positive action necessity and the four-dimensional \(SU(3)\) gap remain
 the two main goals; the pion remains a symmetry benchmark.
 
+\textbf{Further result, 2026-09-29 (GPT-6.1 Sol; written, §3b checked by
+GPT-6 Astra).} For the end-kick harmonic polygon, §3b proves a finite
+Cauchy estimate uniform over unequal partitions and observation times. A
+weighted absolute-value norm supplies stability and telescoping
+insertion bounds without assuming the limiting curve. A finite
+force-balance residual tends to zero with the same mesh. This develops
+the specific norm obstacle exposed by the sister Lean formalization; it
+supplies no action floor or measurement law.
+
 \hypertarget{what-an-insertion-has-to-preserve}{%
 \subsection{1. What an insertion has to
 preserve}\label{what-an-insertion-has-to-preserve}}
@@ -263,6 +272,157 @@ quantum composition structure and a common positive normalization.
 Refinement of unobserved intermediate variables already works at fixed
 \(\hbar\); an action floor concerns the physical records, not a failure
 of (6).
+
+\hypertarget{b.-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm}{%
+\subsection{3b. Harmonic polygons: a finite refinement bound from a
+different
+norm}\label{b.-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm}}
+
+The sister repository's
+\href{https://github.com/arivero/newtonlean/blob/381d5e9/research/PROP_I_REALIZATION.md}{Proposition
+I realization graph} and
+\href{https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Polygon/HarmonicStability.lean}{HarmonicStability}
+(local full-read at commit \texttt{381d5e9}) separate finite stability
+from convergence of force-generated polygons. The equal-cell quadratic
+invariant is proved there; a norm inequality in the represented-fraction
+arithmetic is a pending formalization step. The following written
+argument uses a weighted sum of absolute values instead. It has not been
+formalized in that repository and imports no trajectory or ODE existence
+theorem.
+
+Use its \textbf{end-kick} convention, distinct from §2's half-kicks. In
+one coordinate, acceleration is \(a(x)=-wx\), with \(w\ge0\), and a cell
+of duration \(h\) first drifts and then applies the force at the new
+position: \[A_h\binom{x}{v}
+=\begin{pmatrix}1&h\\-wh&1-wh^2\end{pmatrix}\binom{x}{v}.
+\tag{6a}\] For several coordinates apply the same map to each coordinate
+pair. Choose \(\rho>0\) with \(w\le\rho^2\) and define
+\(\|z\|_\rho=\rho\sum_i|x_i|+\sum_i|v_i|\). Let
+\(A_\pi=A_{h_n}\cdots A_{h_1}\) for a finite positive partition of
+\([0,\tau]\), and assume \(\rho|\pi|\le1\).
+
+\textbf{Proposition 3b (finite harmonic refinement control).} Put
+\(B_\tau=e^{\rho\tau}\). Every such partition satisfies
+\(\|A_\pi\|_\rho\le B_\tau\). If \(\pi'\) refines \(\pi\), then
+\[\|(A_{\pi'}-A_\pi)z\|_\rho
+\le wB_\tau\left(\sum_{I\in\pi}|I|^2
+                    -\sum_{J\in\pi'}|J|^2\right)\|z\|_\rho.
+\tag{6b}\] For any two admissible partitions of the same interval,
+\[\|(A_\pi-A_\sigma)z\|_\rho
+\le w\tau B_\tau(|\pi|+|\sigma|)\|z\|_\rho.
+\tag{6c}\] If \(\rho\tau<1\), each occurrence of \(B_\tau\) in these
+bounds may instead be replaced by the rational expression
+\((1-\rho\tau)^{-1}\). Thus on that window the proof uses only finite
+arithmetic, order and absolute-value inequalities when the data are
+rational.
+
+\emph{Proof.} In scaled coordinates \((\rho x,v)\) the absolute column
+sums of \(A_h\) are \(1+wh/\rho\) and \(\rho h+|1-wh^2|\). Since
+\(wh^2\le1\), both are at most \(1+\rho h\). The triangle inequality
+therefore proves \(\|A_h\|_\rho\le1+\rho h\). Multiplication gives
+\(\|A_\pi\|_\rho\le\prod_j(1+\rho h_j)\le e^{\rho\tau}\). For
+\(\rho\tau<1\), expand the finite product: its degree-\(r\) elementary
+symmetric coefficient is at most \((\rho\tau)^r\). The finite geometric
+sum is at most \((1-\rho\tau)^{-1}\). This alternative bound applies to
+every subproduct too.
+
+For a split \(h+k\), direct multiplication gives \[\begin{aligned}
+\Delta x&=-whk(x+hv),\\
+\Delta v&=whk\,v+w^2hk^2(x+hv),
+\qquad\Delta=(A_kA_h-A_{h+k})z.
+\end{aligned}\tag{6d}\] The absolute column sums of the scaled
+difference matrix are \[whk(1+wk/\rho),\qquad whk(1+\rho h+whk).\] They
+are at most \(2whk\): use \(w\le\rho^2\) and \(\rho h+\rho k\le1\),
+which also gives \(\rho h+whk\le\rho h+\rho^2hk\le1\). Thus
+\(\|A_kA_h-A_{h+k}\|_\rho\le2whk\) \(=w[(h+k)^2-h^2-k^2]\). Multiplying
+by all the earlier and later cell maps costs at most \(B_\tau\); their
+combined duration is at most \(\tau\). Successive insertions telescope
+the sum of squared cell lengths, proving (6b). For arbitrary
+\(\pi,\sigma\) use their finite union as a common refinement and
+\(\sum h_j^2\le\tau|\pi|\), proving (6c). \(\square\)
+
+The estimate also controls the actual polygon between vertices. At a
+time \(t\) inside a cell, let \(u\) be its elapsed duration and let
+\(\pi_t\) consist of the completed cells followed by \(u\) (omit a zero
+cell). The comparison state \(z_\pi^\dagger(t)=A_{\pi_t}z_0\) has
+exactly the polygon position; its velocity includes a partial kick that
+the actual polygon has not yet received. For the actual state
+\(z_\pi(t)\), take the outgoing velocity at a completed vertex. Then
+\[\|z_\pi^\dagger(t)-z_\pi(t)\|_\rho
+=wu\sum_i|x_{\pi,i}(t)|
+\le\frac{w}{\rho}|\pi|B_\tau\|z_0\|_\rho.
+\tag{6e}\] Apply (6c) to the two clipped partitions of \([0,t]\), then
+(6e) twice: \[\sup_{0\le t\le\tau}\|z_\pi(t)-z_\sigma(t)\|_\rho
+\le wB_\tau(\tau+\rho^{-1})(|\pi|+|\sigma|)\|z_0\|_\rho.
+\tag{6f}\] This is a finite uniform Cauchy estimate, including unequal
+schedules and retained velocity. Completing the state space would
+construct a limit; identifying its force law and its historical
+geometric enclosure remain additional steps. No curve was supplied to
+prove (6b)--(6f). The norm change supplies a concrete finite input to
+the graph's P3 obligation, rather than deducing P3 from an area
+invariant.
+
+There is also a finite input to force identification. Define the
+trapezoidal position sum, with no integral presumed,
+\[T_\pi(t)=\sum_{j\text{ complete}}\frac{h_j}{2}(x_{j-1}+x_j)
+             +\frac u2(x_{\rm last}+x_\pi(t)).\] The same end-kick
+construction gives the exact identity \[v_\pi^\dagger(t)-v_0+wT_\pi(t)
+=-\frac w2\left[\sum_{j\text{ complete}}h_j^2v_{j-1}
+                       +u^2v_{\rm last}\right].\tag{6g}\] Indeed
+\(x_j-x_{j-1}=h_jv_{j-1}\) and the kick is \(-wh_jx_j\); subtracting a
+trapezoid from \(h_jx_j\) leaves \(h_j^2v_{j-1}/2\). The partial kick
+supplies the identical calculation with \(u\). Each departure velocity
+has absolute sum at most \(B_\tau\|z_0\|_\rho\), and
+\(\sum h_j^2+u^2\le t|\pi|\). For the actual velocity add the missing
+partial kick \(wu x_\pi(t)\) from (6e), obtaining
+\[\|v_\pi(t)-v_0+wT_\pi(t)\|_1
+\le wB_\tau(t/2+\rho^{-1})|\pi|\|z_0\|_\rho.
+\tag{6h}\] The position balance
+\(x_\pi(t)-x_0=\sum_{j\text{ complete}}h_jv_{j-1}+uv_{\rm last}\) is
+exact. At \(t=0\) all sums are empty; at a completed vertex \(u=0\), so
+the identities retain the declared outgoing velocity. Thus the candidate
+curve family is paired with a vanishing finite force-balance residual,
+rather than only a stability estimate. Passing these sums to a
+continuous force law and proving the relevant geometric enclosure remain
+separate obligations.
+
+\textbf{Astra's graph check (2026-09-29).} The printed-stage edges from
+Lemma III Cor. 4 to Proposition I record a textual citation. They do not
+supply convergence of the generated polygon family: the lemma's
+given-curve approximation and the graph's P3 realization have different
+inputs. The graph's attached
+\href{https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Polygon/Enclosure.lean}{sector\_ratio\_reconstruction}
+(local full-read) explicitly assumes lower and upper limits and a
+geometric enclosure. Having that formal reference does not discharge
+those hypotheses. This check concerns graph metadata and code; the
+printed passages retain their existing repository attribution. Astra
+checked (6b)--(6h), including the single \(B_\tau\) factor and the
+partial-cell sign in (6g). The finite estimate supplies P3's Cauchy
+input and (6h) supplies force-consistency data; neither silently closes
+the graph's limiting geometric or force-identification nodes. This is an
+internal mathematical check, separate from Lean compilation.
+
+The user's alternative (2026-09-29) is to obtain surviving quantities by
+repeated block renormalization, without presupposing a limiting physical
+curve. In this fixed harmonic model the Cauchy bound forces a limit in
+the usual real-state completion. It does not establish that the full
+body--apparatus state has the same completion when refinement adds bath
+and memory variables. For that construction, specify the retained
+observables and their blocking maps; §7's consistency estimate is a
+distinct route to their limiting laws. A finite area identity alone
+establishes neither kind of limit.
+
+Here \(w\) has units of inverse time squared and \(\rho\) of inverse
+time; the norm has velocity units, and every coefficient multiplying it
+in (6b)--(6f) is dimensionless. At \(w=0\) the insertion defect and all
+partition discrepancies vanish exactly. For fixed \(\tau,w,\rho\) the
+bounds tend to zero with both meshes, independently of their nesting.
+Mass enters only through \(w\) if a spring force is written \(-mw x\).
+No action normalization appears. To use this mechanical bound for a
+record, its discrepancy must still vanish after whitening by the
+complete conditional record covariance, as tested in
+\href{sed-closure-under-recording.md\#63-ideas-supplied-by-the-current-lean-formalization}{the
+recording note, §6.3}.
 
 \hypertarget{gauge-refinement-geometry-marginalization-and-reflection}{%
 \subsection{4. Gauge refinement: geometry, marginalization and
@@ -596,13 +756,19 @@ the answer to a one-plaquette action. The small-volume H3 valley-lifting
 task remains the separate spectral mechanism to connect to this
 construction.
 
-For Newton, the next physical step is an explicit refinement rule for
-the \textbf{joint body and record}, deciding which old records are
-preserved and what happens when the new one is forgotten. Test whether
-its physical premises force a positive action cost and common scale,
-with the unobserved composition (2)--(3) serving as the exact reference.
-Assuming canonical quantum kinematics already puts it on the existing
-conditional branch. The two goals are advanced by finding and
-controlling these concrete maps, with the limit, the surviving scale and
-the physical interpretation proved separately.
+For Newton, §3b now supplies finite uniform Cauchy and force-balance
+bounds for harmonic end-kick polygons, using a norm that avoids the
+sister formalization's pending quadratic norm inequality. Its graph
+check separates that forward construction input from the cited
+given-curve lemma. The next mathematical step is a limit/enclosure
+construction carrying (6h); abandon a proposed identification if it
+assumes the curve whose existence is at issue. The physical step is an
+explicit refinement rule for the \textbf{joint body and record},
+deciding which old records are preserved and what happens when the new
+one is forgotten. Test whether its physical premises force a positive
+action cost and common scale, with the unobserved composition (2)--(3)
+serving as the exact reference. Assuming canonical quantum kinematics
+already puts it on the existing conditional branch. The two goals are
+advanced by finding and controlling these concrete maps, with the limit,
+the surviving scale and the physical interpretation proved separately.
 \end{document}

@@ -14,7 +14,18 @@
 \section{Shared radiation and closure under
 recording}\label{shared-radiation-and-closure-under-recording}}
 
-\textbf{Further result, 2026-09-29 (GPT-6 Codex; written, unrefereed).}
+\textbf{Adaptive result, 2026-09-29 (GPT-6.1 Sol; written, unrefereed).}
+Section 7 gives the exact Hellinger affinity of a finite adaptive linear
+Gaussian record in terms of its branchwise information. It includes
+retained memory and indirect noise observations. A uniform branchwise
+budget controls both force distinguishability and, with the stated
+matching covariance assumption, refinement of the complete record.
+Monitoring a saturated pointer kick requires fresh hidden variance
+\(b_0^2/(b_0+r^2)\) in the explicit repair (§7.2). This quantifies a
+possible innovation mechanism; the physical law and its positive scale
+remain to be derived.
+
+\textbf{Further result, 2026-09-29 (GPT-6.1 Sol; written, unrefereed).}
 In the two-pointer model, allow correlated Gaussian readout error and
 kick \((N,D)\) and side records \(S\) of that noise. The body's
 conditional area remains at least \(\kappa\) exactly when
@@ -750,9 +761,12 @@ under refinement. The finite area law (P1) and refinement identities
 (P2) are checked; realization (P3) and force identification (P5) remain
 separate. The harmonic field has a mesh-uniform quadratic stability
 invariant. The pending norm inequality in its Fraction representation is
-a formalization obstacle; a weighted sum norm is a candidate for the
-finite stability/defect argument. It is not evidence that classical
-refinement requires an action floor.
+a formalization obstacle.
+\href{refinement-composition-and-limit.md\#3b-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm}{The
+refinement note, §3b} now proves the finite stability/defect argument in
+a weighted sum norm, including unequal partitions and partial cells. It
+is a written result, separate from the sister repository's formalized
+statements, and supplies no action floor.
 
 The graph suggests the same distinction for records: geometric control
 of the body and apparatus map needs an additional statistical control in
@@ -843,8 +857,197 @@ law, proving its positive scale and identifying
 \(h_*=\gamma h_{\rm rad}\) remain distinct. Formula (23)'s radiation
 calibration retains its existing conditional source status.
 
+\hypertarget{adaptive-records-innovation-replacement-and-refinement}{%
+\subsection{7. Adaptive records, innovation replacement and
+refinement}\label{adaptive-records-innovation-replacement-and-refinement}}
+
+The exact Gaussian kernels below turn the complete-record requirement
+into a composition calculation. The harmonic estimate developed from the
+sister formalization supplies a finite mechanical input. All statements
+retain their declared apparatus and covariance assumptions; no
+electromagnetic readout law is inferred from them.
+
+\hypertarget{an-exact-likelihood-identity-for-adaptive-recording}{%
+\subsubsection{7.1 An exact likelihood identity for adaptive
+recording}\label{an-exact-likelihood-identity-for-adaptive-recording}}
+
+Fix a protocol with finitely many readings \(R_1,\ldots,R_n\), each a
+finite-dimensional real vector. Include all random seeds, retained
+memory, noise monitors and terminal readings. Conditional on the
+previous complete history \(r_{<j}\), suppose \[R_j\mid(r_{<j},F)\sim
+N\bigl(\mu_j(r_{<j})+F b_j(r_{<j}),\ W_j(r_{<j})\bigr),
+\qquad W_j\succ0.\tag{39}\] Independent randomized controls may use any
+force-independent law; retain their values in the initial history, so
+their common density cancels in (41). Count identical copies of an
+already stored reading once; deterministic memory functions remain
+recoverable from the complete history. The protocol may choose its next
+gains, time and apparatus from that history. At a fixed history those
+choices are the same under both force hypotheses, and \(W_j,\mu_j,b_j\)
+are independent of \(F\). For a linear Gaussian body--apparatus model
+with a declared Gaussian preparation, this follows by successive
+Gaussian conditioning: once the realized gains are fixed, the
+conditional mean is affine in \(F\) and the covariance is independent of
+\(F\). The complete joint record can be non-Gaussian because the gains
+depend on previous readings. Preparation-ignorant adaptive tests require
+their own justified invariant kernels; §6.1's non-adaptive projection
+alone does not establish (39) for them.
+
+Define the nonnegative information along a branch by
+\[I_j(r_{<j})=b_j^{\sf T}W_j^{-1}b_j,
+\qquad J(r)=\sum_{j=1}^n I_j(r_{<j}).\tag{40}\] Both \(J\) and its cap
+\(C\) have inverse force squared units, so \(F^2J\) is dimensionless.
+Let \(p_F(r)\) be the normalized complete-record density obtained by
+multiplying the conditional kernels. Its Hellinger affinity with \(p_0\)
+is \(\mathcal A(F,0)=\int\sqrt{p_Fp_0}\,dr\).
+
+\textbf{Proposition 6 (adaptive affinity and continuity).} Exactly,
+\[\sqrt{p_F(r)p_0(r)}
+=p_{F/2}(r)e^{-F^2J(r)/8},\qquad
+\mathcal A(F,0)=E_{F/2}e^{-F^2J(R)/8}.\tag{41}\] For a family of these
+protocols, uniform complete-record continuity at \(F=0\) is equivalent
+to \[\sup_{\pi}E_{\pi,F/2}
+       \left[1-e^{-F^2J_\pi(R)/8}\right]\longrightarrow0.
+\tag{42}\] A sufficient condition, uniform in every admitted schedule,
+history and retained memory, is \(J_\pi(r)\le C<\infty\). It gives
+\[\|P_{\pi,F}-P_{\pi,0}\|_{\rm TV}
+\le\sqrt{1-e^{-F^2C/4}}\le\tfrac12|F|\sqrt C.\tag{43}\] This
+deterministic budget is sufficient; rare high-information branches need
+only satisfy the exact averaged condition (42).
+
+\emph{Proof.} At the same history, completing the Gaussian square gives
+\[\sqrt{g_j(r_j;F)g_j(r_j;0)}
+=g_j(r_j;F/2)e^{-F^2 I_j(r_{<j})/8}.\] Multiply these identities, then
+integrate, proving (41). For any two normalized densities with affinity
+\(\mathcal A\), \[1-\mathcal A\le\|P-Q\|_{\rm TV}
+\le\sqrt{1-\mathcal A^2}.\] The lower bound follows from
+\(\min(p,q)\le\sqrt{pq}\). For the upper bound apply Cauchy--Schwarz to
+\(|p-q|=|\sqrt p-\sqrt q|(\sqrt p+\sqrt q)\) and divide its integral by
+two. These inequalities prove (42); (41) and \(J\le C\) prove (43),
+using \(1-e^{-u}\le u\). \(\square\)
+
+Information also composes exactly. The score is the sum of
+\(b_j^{\sf T}W_j^{-1}(R_j-\mu_j-Fb_j)\). Each summand has zero
+conditional mean and conditional variance \(I_j\). When \(E_FJ<\infty\),
+orthogonality of these martingale differences gives full-record Fisher
+information \[\mathcal I(F)=E_FJ(R).\tag{44}\] Joining two blocks of
+readings adds their branchwise \(J\) values, with the second block
+conditioned on the complete first history. Budgets therefore add; a
+fixed cap \(C\) is not preserved under unrestricted repetition merely
+because each apparatus has a finite cap. For a non-adaptive Gaussian
+record \(J\) is deterministic, recovering §6.1's criterion. A noiseless
+force-sensitive conditional direction violates the finite-budget
+hypothesis; it cannot be discarded as irrelevant memory.
+
+\hypertarget{a-side-record-spends-information-and-removes-innovation}{%
+\subsubsection{7.2 A side record spends information and removes
+innovation}\label{a-side-record-spends-information-and-removes-innovation}}
+
+An indirect observation can carry force information even when its
+marginal law is force-independent. For example let \(R=Fv+N\),
+\(S=N+M\), with independent centred Gaussian \(N,M\) of variances
+\(n^2,r^2>0\). In record order \(R,S\), the first kernel has
+\(I_1=v^2/n^2\), and \(S\mid(R,F)\sim N(R-Fv,r^2)\) has \(I_2=v^2/r^2\).
+Consequently \[J=v^2(n^{-2}+r^{-2}).\tag{45}\] This agrees with
+conditioning the noise on \(S\), whose variance is \(n^2r^2/(n^2+r^2)\).
+The raw fact that \(S\) has no force-dependent mean does not make it
+harmless after retaining \(R\).
+
+There is also a quantitative repair of §6.2's two-pointer monitor test.
+Start with its saturated independent error and kick,
+\(a_0b_0=\kappa^2\), and side reading \(S=D+M\) with independent monitor
+error \(M\) of variance \(r^2\). After this monitor, apply a fresh
+centred Gaussian kick \(E\) to the reusable pointer momentum,
+independent of the initial variables, \(N,D,S\) and of variance \(e^2\).
+The second pointer now infers \(K=\Pi+D+E\). By Proposition 5, for a
+nonzero first gain the body's conditional area remains at least
+\(\kappa\) precisely when
+\[a_0\left[\frac{b_0r^2}{b_0+r^2}+e^2\right]\ge\kappa^2,
+\quad\text{equivalently}\quad
+e^2\ge\frac{b_0^2}{b_0+r^2}.\tag{46}\] The required fresh variance is
+exactly the part of \(D\) learned by the monitor,
+\(\operatorname{Var}(E[D\mid S])\). At an uninformative monitor
+\(r\to\infty\) its cost tends to zero; at an exact monitor
+\(r\downarrow0\) it must replace all \(b_0\). Equality restores the
+determinant to \(\kappa^2\) for every gain in the stated product-prior
+model. All these variances have action units in the canonical scaling;
+(46)'s product has action squared units.
+
+This is a useful conditional construction, with the extra kick openly
+supplied. A later admissible side record of \(E\) must be included and
+would reduce its innovation again. A monitor dynamics that necessarily
+creates inaccessible fresh noise of at least (46), including its own
+retained memory, is the physical mechanism to derive. Adding noise by
+prescription proves neither that mechanism nor \(\kappa>0\).
+
+\hypertarget{mechanical-refinement-in-the-complete-conditional-record-norm}{%
+\subsubsection{7.3 Mechanical refinement in the complete conditional
+record
+norm}\label{mechanical-refinement-in-the-complete-conditional-record-norm}}
+
+For two record constructions at the same force, suppose their
+conditional kernels have the same \(W_j(r_{<j})\succ0\) and means
+\(m_{\pi,j}(r_{<j})\), \(m_{\sigma,j}(r_{<j})\). Put
+\(\delta_j=m_{\pi,j}-m_{\sigma,j}\) and
+\[D_{\pi\sigma}(r)=\sum_j\delta_j^{\sf T}W_j^{-1}\delta_j.
+\tag{47}\] Completing the same square as in (41) gives affinity
+\(E_{\rm mid}e^{-D_{\pi\sigma}/8}\), where the normalized midpoint law
+uses the average conditional means and the common conditional
+covariances. In particular, if every branch has
+\(D_{\pi\sigma}\le\epsilon_{\pi\sigma}^2\), then
+\[\|P_\pi-P_\sigma\|_{\rm TV}
+\le\sqrt{1-e^{-\epsilon_{\pi\sigma}^2/4}}
+\le\epsilon_{\pi\sigma}/2.\tag{48}\] This is an adaptive complete-record
+refinement criterion. Covariances that change under refinement need an
+additional comparison; equality of the kernels' covariance is a stated
+hypothesis here.
+
+For an explicit mechanical input use the harmonic end-kick result in
+\href{refinement-composition-and-limit.md\#3b-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm}{the
+refinement note, Proposition 3b} (local full-read). Fix
+\(z_0,w,\rho,\tau\) as there. Suppose at every common history the
+conditional mean discrepancy is
+\(\delta_j=H_j(r_{<j})[z_\pi(t_j)-z_\sigma(t_j)]\), with the same
+adaptive sampling time \(t_j\) under both constructions. Define
+\(\ell_j=\|W_j^{-1/2}H_j\|_{\rho\to2}\) and require the branchwise
+budget \(\sum_j\ell_j^2\le L^2\), uniform in schedules and memory.
+Equations (6f) there and (47)--(48) then prove
+\[\|P_\pi-P_\sigma\|_{\rm TV}
+\le\frac L2\,w e^{\rho\tau}(\tau+\rho^{-1})
+ (|\pi|+|\sigma|)\|z_0\|_\rho.\tag{49}\] Every constant is explicit. The
+estimate permits arbitrarily many readings when their total whitened
+sensitivity obeys the declared budget. If the noise widths shrink so
+fast that this budget diverges, the mechanical Cauchy bound supplies no
+statistical convergence, as the exact constant-force example (38)
+already demonstrates. The same-noise linear readout model gives a
+concrete instance; a general back-reacting body--apparatus model must
+prove the assumed conditional mean comparison and covariance control.
+
+\hypertarget{next-mechanism-and-abandonment-test}{%
+\subsubsection{7.4 Next mechanism and abandonment
+test}\label{next-mechanism-and-abandonment-test}}
+
+Adaptivity no longer prevents an exact finite likelihood calculation:
+(41) includes its realized gains and complete retained memory, and (49)
+supplies a sufficient schedule-independent record comparison. The
+missing physical input is now concrete. Construct a coupled
+body--pointer--monitor--memory dynamics in which observing the pointer
+kick necessarily replaces the learned variance by fresh conditional
+innovation, with (46) as the one-monitor test. It must survive a
+terminal read of that memory and the accessible relative channels in
+(36). Abandon the mechanism if either operation removes its innovation;
+a marginal bath spectrum cannot repair that failure.
+
+The budget in (43) can hold for a bounded classical apparatus at the
+zero-action branch, while unrestricted zero-recoil repeats make it
+diverge. The repair in (46) is proportional to a supplied \(\kappa^2\)
+through \(a_0b_0=\kappa^2\) and becomes vacuous on the zero branch.
+Hence this checkpoint establishes adaptive composition and a finite
+refinement estimate under explicit assumptions, and quantifies the
+required innovation replacement. It does not derive positivity,
+universality or the radiation calibration in (23).
+
 \hypertarget{consequence-for-state}{%
-\subsection{7. Consequence for STATE}\label{consequence-for-state}}
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
 
 The Newton task advances from testing stationary radiation to deriving
 an admissible recording law. Shared Gaussian driving, including its
@@ -859,9 +1062,13 @@ equivalent at \(\kappa=\hbar/2\) to Gaussian quantum measurement theory;
 an electrodynamic instrument constraint would only relocate it. The
 conditional scale identification and the unregulated momentum problem
 retain the scope stated in the revised SED link. The September 29
-checkpoint sharpens the recording law to conditional innovation
-(32)--(35), quantifies uniform continuity by (29), and imports the Lean
-common-mode and noise-normalized refinement tests (36)--(38). Next
-alternate to the gauge connector expansion, then test adaptive
-innovation and complete retained memory in this model.
+checkpoints sharpen the recording law to conditional innovation
+(32)--(35), extend complete-record continuity and composition to
+adaptive Gaussian kernels (41)--(44), and calculate the innovation
+replacement cost (46). The sister formalization's norm obstacle yields a
+finite harmonic refinement bound; (49) states its extra statistical
+budget. Next alternate to gauge multiple-connector control, then derive
+or defeat an actual monitor mechanism for (46), including terminal
+memory and relative observations. Positivity, universality and radiation
+calibration remain separate obligations.
 \end{document}

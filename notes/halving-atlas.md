@@ -233,15 +233,17 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    ([record as parallel move](newton-record-parallel-move.md)): forgetting a
    record convolves momentum with variance $\hbar^2/(4\sigma^2)$; precisions add in
    parallel; refinement converges iff $\sum\sigma_j^{-2}<\infty$; identity for $\hbar=0$.
-   [Complete-record test, §6](sed-closure-under-recording.md#6-complete-records-the-continuity-and-noise-mechanisms-compared)
+   [Complete-record tests, §§6--7](sed-closure-under-recording.md#7-adaptive-records-innovation-replacement-and-refinement)
    (2026-09-29, written, unrefereed): the repaired two-pointer model obeys
    the area floor iff its readout error/kick determinant remains at least
    $\kappa^2$ conditional on side records; a noisy kick monitor breaks a
-   marginally saturated repair. Uniform record continuity is equivalent
-   to bounded complete-record information. The Lean end-kick residual
-   gives statistical refinement only when it vanishes in the record's
-   noise norm. Open: a positive conditional innovation law under adaptive
-   reuse, retained memory and arbitrary schedules.
+   marginally saturated repair. Adaptive affinity is exact in the
+   branchwise information (41); monitor replacement has cost (46).
+   A [finite harmonic refinement bound](refinement-composition-and-limit.md#3b-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm)
+   from the Lean norm obstacle gives complete-record convergence under
+   the additional conditional noise budget (49). Open: derive that
+   budget and positive conditional innovation through terminal memory
+   and accessible relative observations.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the
