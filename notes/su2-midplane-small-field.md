@@ -2343,3 +2343,61 @@ and $k$, or a direct covariance comparison that controls these terms
 together. The covariant kernel estimate (27), its constant, and the
 quasi-local remainder required by §§14.2 and 15.3 remain open;
 full-integral comparison and perturbed-action stability follow that step.
+
+## 19. Round 19: semigroup representation and the applicability test
+
+**GPT-6 Astra, 2026-09-29; written proofs, unrefereed.** The finite-$k$
+representation gives uniform pointwise bounds for bounded local scores.
+A concrete replacement lemma below uses local drift moments and score
+extensions to close the comparison conditionally, including its barrier
+endpoint. These additional inputs remain to be established for §17.
+
+### 19.1 Part 1: the representation and its test
+
+Fix $k,N,t>0$, write $V=S+W_k$, and let
+$dX_s=-t\nabla V(X_s)\,ds+\sqrt{2t}\,dB_s$.
+Its generator is $-tL_\mu$. Since $H$ is configuration-independent,
+$$R_0g(x)=\int_0^\infty e^{-sH}E_x[g(X_s)]\,ds.\tag{76}$$
+Indeed the two generators commute; integrating their semigroup gives
+$(tL_\mu+H)^{-1}$. For a variable matrix potential $K(x)$ replace
+$e^{-sH}$ by the ordered multiplicative functional $U_s$, with
+$U_0=I$, $\dot U_s=-U_sK(X_s)$, inside the expectation.
+This is the matrix Feynman--Kac representation; bounded-Hessian finite-$k$
+approximants justify it by the product formula and differentiation.
+
+Put $C_{ij}=\|(H-6I)_{ij}\|$ (edge blocks), assuming the block-row
+bound $\sum_jC_{ij}\le5/2$ used in §17. Symmetry gives the column bound.
+The series for $e^{-sH}$ is dominated blockwise by $e^{-6s}e^{sC}$.
+It can be read as a continuous-time walk with nonnegative jump weights,
+including holding weights, and killing at least $7/2$. The original
+colour matrices carry signs and rotations; their spectral bounds alone
+supply no positive random-walk transition rates. In particular the
+barrier occurs in the **drift** of (76); the extra barrier killing belongs
+to $R_\mu$ and to the differentiated equation. The literature analogy
+in Claude's §18 paragraph therefore requires this distinction.
+
+Set $\gamma=\frac12\log(12/5)$ and $m=6-(5/2)e^\gamma>0$.
+For $K^H=(6I-C)^{-1}$, range one and the geometric series give
+$$\sup_i\sum_j e^{\gamma d(i,j)}K^H_{ij}\le m^{-1},\qquad
+\|(R_0g)_i\|_\infty\le\sum_jK^H_{ij}\|g_j\|_\infty.\tag{77}$$
+The second inequality bounds every $L^4(\nu_{e,k})$ norm as well,
+independently of its density relative to $\mu_k$. All $t$-dependence
+here is in the score size; the resolvent constants are dimensionless.
+
+For $u=(tL_\nu+H)^{-1}g$, let $Z_{ij}=\partial_j u_i$ in edge blocks.
+Differentiation gives the closed equation
+$$tL_\nu Z+HZ+Z(tV'')=Dg.\tag{78}$$
+Thus first configuration derivatives require $V''$, rather than $V'''$.
+If $tS''-6I$ has a deterministic range-one block majorant $C^S$ with
+row and column sums at most $5/2$, the two-index Neumann series has
+base $tL+12I+tW_k''$ on the differentiation index, and perturbation
+weighted norm at most $5e^\gamma$. Its inverse has weighted row and
+column sums at most $(2m)^{-1}$ on the product graph. The positive
+on-site matrices $t w_k''$ are contractions in each colour block.
+This proves summable derivative bounds from bounded, summable $Dg$,
+uniformly in $k,N$. A spectral norm bound alone would lose this block
+majorant information. The affine scores of (74) have bounded $Dg$ but
+unbounded $g$ on the approximating whole space. Hence (77) directly
+settles the bounded-score case; its application to those affine scores
+needs a score extension or a moment argument. Part 2 states the former
+as a precise replacement, rather than assuming an annealed theorem.
