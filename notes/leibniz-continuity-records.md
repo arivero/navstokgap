@@ -38,7 +38,9 @@ period form: Leibniz's "preuve ou examen" of laws of motion, applied to
 their records. His *petites perceptions* (1704) supply the graded, additive
 discernibility that the records reading needs (§3), and his *Pacidius* (1676)
 the proportion argument against leaps, which a floor on action meets
-(§2b). The Newton-age dispute
+(§2b). Newton's own Rule III (1713) separates division by reason, certain,
+from division by the powers of nature, "incertum", to be settled by one
+experiment (§4b). The Newton-age dispute
 over indivisibles, Galileo, Cavalieri and Guldin between 1621 and 1647,
 concerned static figures, where the theorem imposes no floor and Newton's
 limit doctrine is the right answer (§4).
@@ -360,6 +362,46 @@ there the theorem agrees with his answer and imposes nothing. The floor
 enters only where a record carries back-action, in the lemmas applied to
 motion, and the dispute about motion is the one he passed over.
 
+## 4b. Newton, Rule III (1713; 1726): division by reason and by nature
+
+Newton, *Principia*, third edition (London, 1726), Book III, Regula III,
+pp. 387--389; the commentary is already in the second edition (1713)
+([companion](../docs/classics/Newton_Principia_1726_RegulaIII_la_OCR.md);
+passage, OCR normalized by hand).
+
+- **The text.** "Qualitates corporum quae intendi & remitti nequeunt,
+  quaeque corporibus omnibus competunt in quibus experimenta instituere
+  licet, pro qualitatibus corporum universorum habendae sunt" (p. 387),
+  since "quae minui non possunt, non possunt auferri" and the analogy of
+  nature is "simplex ... & sibi semper consona" (pp. 387--388). Then: "partes
+  indivisas in partes minores ratione distingui posse ex mathematica certum
+  est. Utrum vero partes illae distinctae & nondum divisae per vires naturae
+  dividi & ab invicem separari possint, incertum est. At si vel unico
+  constaret experimento ..." (p. 388).
+- **What it commits him to.** Qualities that admit no degrees and are found
+  in every body within reach of experiment belong to all bodies, least
+  parts included, because what cannot be diminished cannot be taken away.
+  Division by reason is certain; division by the powers of nature is an
+  empirical question, and one experiment would settle it.
+- **What the theorem does with it.** The second commitment is the
+  theorem's own division of labour. Geometry stays divisible (the paper's
+  Proposition 1; the cut measure's shares for every schedule), and the mark
+  mesh concerns what nature's powers can exhibit, which Newton declares
+  uncertain and empirical. His single experiment has a counterpart here:
+  the exhibition of a force by marks confined to a window shorter than
+  $\tau_*$ (the paper's Corollary 3), which a floor forbids and the zero branch
+  allows. The first commitment meets the composition results. One constant
+  for all bodies ($\kappa=mD$ in the stochastic route; rotation composition)
+  makes the floor a quality that "intendi et remitti nequit", so Rule III
+  carries it from the bodies within reach of experiment to all bodies, and
+  "quae minui non possunt, non possunt auferri" forbids taking it to zero in
+  the least parts. Newton's rules thus make positivity empirical and
+  universalize it once it is found in one body; the settlement itself is
+  experimental. This changes an attribution in the paper: the zero branch
+  is the default reading of Book I's geometry, "diminuendas sine limite",
+  while Newton's stated physics, in Book III, leaves the physical limit open
+  with an empirical criterion.
+
 ## 5. Consequence for STATE
 
 For the Newton goal: for the observer ignorant of the preparation, using
@@ -372,7 +414,12 @@ measure of the cases, "à peine distingué", and the "insensible alone" half
 of his doctrine of small perceptions on the side of the floor, and statics
 showing why the reading must be confined to motions, by a physical choice
 of ours. A single cut carries exactly the cut measure's share of the
-discernibility, a result of the mark model worth citing on its own. For the scholion: three Leibniz entries (1676, 1687, 1704) and the
-Galileo--Cavalieri--Guldin layer are supplied with their three obligations;
+discernibility, a result of the mark model worth citing on its own. Newton's Rule III places the physical limit among empirical questions and
+supplies, with the composition results, the rule that universalizes a
+floor found in one body, so the zero branch belongs to the default reading
+of Book I's geometry rather than to Newton's stated physics. For the
+scholion: three Leibniz entries (1676, 1687, 1704), Newton's Rule III and
+the Galileo--Cavalieri--Guldin layer are supplied with their three
+obligations;
 the paper's §9 carries a pointer. §§1--4 are refereed (Fable, REFINE,
-applied); §2b awaits a referee.
+applied); §§2b and 4b await a referee.

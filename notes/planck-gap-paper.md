@@ -995,6 +995,10 @@ continuous thing it mimics. The [companion note](arrow-not-sling.md) sets this o
   "à peine distingué", and on both branches if they are measured
   geometrically; his *petites perceptions* are the additive shares of the
   cut measure ([continuity note](leibniz-continuity-records.md), §§1--3).
+- **Newton's Rule III (1713).** Book III separates division by reason,
+  "ex mathematica certum", from division "per vires naturae", "incertum",
+  to be settled by one experiment, so Newton's stated physics leaves the
+  physical limit open ([continuity note](leibniz-continuity-records.md), §4b).
 - **The kalam time-atom.** Denied. The mesh depends on $F$, on $m$ and on
   the confidence demanded, so it is a dynamical resolution rather than a
   universal atom of time. A floor on action coexists with a continuum of
