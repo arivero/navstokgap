@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Refinement Tutorial</title>
+<meta name="description" content="A slide tutorial on what survives refinement: Newton's vanishing sagitta, the cost of a record, and halving the Yang-Mills lattice.">
+<style>
+:root{
+  color-scheme:light;
+  --surface:#fcfcfb; --surface-2:#f1f0ec; --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#8a8984;
+  --rule:#d9d8d2; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --shade:rgba(42,120,214,.16);
+  --accent:#2a78d6;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --surface:#1a1a19; --surface-2:#252523; --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#8f8e86;
+    --rule:#3a3a37; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --shade:rgba(57,135,229,.22);
+    --accent:#3987e5;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --surface:#1a1a19; --surface-2:#252523; --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#8f8e86;
+  --rule:#3a3a37; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --shade:rgba(57,135,229,.22);
+  --accent:#3987e5;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--surface);color:var(--ink);
+  font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{scroll-snap-type:y mandatory}
+.slide{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;
+  justify-content:center;padding:48px 16px 64px;border-bottom:1px solid var(--rule)}
+.inner{max-width:980px;width:100%;margin:0 auto}
+h1{font-size:2.3rem;line-height:1.15;margin:0 0 .4em}
+h2{font-size:1.6rem;line-height:1.2;margin:0 0 .5em}
+.kicker{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.6em}
+p{margin:.5em 0;color:var(--ink)}
+.muted{color:var(--ink-2)}
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+@media (max-width:760px){.grid{grid-template-columns:1fr}h1{font-size:1.8rem}h2{font-size:1.35rem}}
+figure{margin:0}
+figcaption{font-size:.85rem;color:var(--ink-2);margin-top:6px}
+svg{width:100%;height:auto;display:block;overflow:visible}
+.formula{font-family:"STIX Two Math","Cambria Math",Georgia,serif;font-size:1.15rem;
+  background:var(--surface-2);border-radius:8px;padding:10px 14px;margin:.8em 0;display:inline-block}
+blockquote{margin:.8em 0;padding:.4em 0 .4em 14px;border-left:3px solid var(--accent);color:var(--ink-2);font-style:italic}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:1em}
+@media (max-width:760px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface-2);border-radius:10px;padding:14px}
+.card h3{margin:0 0 .3em;font-size:1rem}
+.card p{font-size:.92rem;margin:0}
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-2);margin-right:4px}
+a{color:var(--accent)}
+.nav{position:fixed;right:14px;bottom:12px;display:flex;gap:6px;align-items:center;z-index:5;
+  background:var(--surface-2);border:1px solid var(--rule);border-radius:999px;padding:4px 8px;font-size:.85rem;color:var(--ink-2)}
+.nav button{background:none;border:0;color:var(--ink);font-size:1rem;cursor:pointer;padding:2px 8px;border-radius:6px}
+.nav button:hover{background:var(--rule)}
+.home{position:fixed;left:14px;top:10px;font-size:.85rem;z-index:5}
+.axis{stroke:var(--ink-3);stroke-width:1}
+.grid-line{stroke:var(--rule);stroke-width:1}
+.tick{fill:var(--ink-2);font-size:12px}
+.lab{fill:var(--ink);font-size:13px}
+.lab2{fill:var(--ink-2);font-size:12px}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--surface);font-size:.8rem;
+  padding:4px 8px;border-radius:6px;opacity:0;transition:opacity .1s;z-index:9}
+table.status{border-collapse:collapse;width:100%;font-size:.92rem;margin-top:.6em}
+table.status td,table.status th{border-bottom:1px solid var(--rule);padding:7px 6px;text-align:left;vertical-align:top}
+table.status th{color:var(--ink-2);font-weight:600}
+</style>
+</head>
+<body>
+<a class="home" href="index.html">&larr; navstokgap</a>
+<div class="tip" id="tip"></div>
+
+<section class="slide" id="s1"><div class="inner">
+  <div class="kicker">Tutorial &middot; what survives refinement</div>
+  <h1>A minimum action, and a mass gap</h1>
+  <p class="muted">Two limits that refine a picture until nothing is left to see: Newton shrinking a cell of motion to a point, and a lattice gauge theory halving its spacing toward the continuum. This tutorial walks through what each keeps.</p>
+  <p class="muted">Use the arrow keys, Page Up and Page Down, or scroll. Every claim links to the note that holds its proof and states its status.</p>
+</div></section>
+
+<section class="slide" id="s2"><div class="inner grid">
+  <div>
+    <div class="kicker">1 &middot; Newton's comparison</div>
+    <h2>A force read off a vanishing sagitta</h2>
+    <p>Galileo compares a body moving freely with the same body under a constant force <em>F</em>. Over a cell of duration &tau; the two paths separate by the sagitta <em>F&tau;&sup2;/2m</em>, and Newton's Lemma X makes the force the limit of that separation as the cell shrinks.</p>
+    <p class="muted">The cell carries an action, the Galileo area in Newton's quantities:</p>
+    <div class="formula">K<sub>&tau;</sub> = F&sup2;&tau;&sup3; / (24&thinsp;m)</div>
+    <p class="muted">Newton takes &tau; &rarr; 0, and K<sub>&tau;</sub> goes to zero with it.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 420 300" role="img" aria-label="Straight inertial path and parabolic forced path over one cell, with the area between them shaded and the sagitta marked at the midpoint">
+      <line class="axis" x1="40" y1="260" x2="400" y2="260"/>
+      <line class="axis" x1="40" y1="260" x2="40" y2="20"/>
+      <text class="tick" x="396" y="280" text-anchor="end">time</text>
+      <text class="tick" x="46" y="30">position</text>
+      <!-- chord (inertial after the cut) and parabola: y = t^2 mapped -->
+      <path d="M40,260 Q220,260 400,40 L40,260 Z" fill="var(--shade)" stroke="none"/>
+      <line x1="40" y1="260" x2="400" y2="40" stroke="var(--s1)" stroke-width="2"/>
+      <path d="M40,260 Q220,260 400,40" fill="none" stroke="var(--s2)" stroke-width="2"/>
+      <line x1="220" y1="150" x2="220" y2="205" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="220" cy="150" r="4" fill="var(--s1)"/><circle cx="220" cy="205" r="4" fill="var(--s2)"/>
+      <text class="lab" x="228" y="182">sagitta F&tau;&sup2;/8m</text>
+      <text class="lab" x="250" y="112" fill="var(--s1)">chord</text>
+      <text class="lab" x="300" y="200">parabola</text>
+      <text class="lab2" x="120" y="236">Galileo area</text>
+    </svg>
+    <figcaption>One cell: the chord and the constant-force parabola. The shaded area is the cell's action in Newton's quantities.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s3"><div class="inner grid">
+  <div>
+    <div class="kicker">2 &middot; The cut measure</div>
+    <h2>Every cut spends a fixed share</h2>
+    <p>Cut a cell at the fraction <em>s</em> of its duration. The cut spends exactly <strong>3s(1&minus;s)K<sub>&tau;</sub></strong> of the cell action, and the shares add over any sequence of cuts. Halving spends &frac34;; <em>n</em> halvings spend 1&minus;4<sup>&minus;n</sup>.</p>
+    <p class="muted">The stick of <em>Zhuangzi</em> 33, halved every day from one end and "not exhausted in ten thousand generations", spends only <strong>6/7</strong>: the pieces it takes away are never cut again.</p>
+    <p class="muted"><a href="notes/cut-measure-newton.html">Cut-measure note</a>, Theorems 1&ndash;2 (refereed).</p>
+  </div>
+  <figure>
+    <svg id="chart-cuts" viewBox="0 0 440 300" role="img" aria-label="Spent fraction of the cell action against the number of cuts for dyadic halving and for Hui Shi's one-ended stick"></svg>
+    <figcaption>Spent share of K<sub>&tau;</sub> after <em>n</em> rounds of cutting. Hover a point for its value.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s4"><div class="inner grid">
+  <div>
+    <div class="kicker">3 &middot; The cost of a record</div>
+    <h2>A mark that locates also kicks</h2>
+    <p>To read the comparison, the body must be marked. Each mark locates it within &delta; and delivers an impulse spread &Delta;, with the trade-off</p>
+    <div class="formula">&delta;&thinsp;&Delta; &ge; &kappa;</div>
+    <p>Marks placed at the cuts of the cell distinguish the force with squared statistical distance equal to <strong>the action those cuts spend, divided by &kappa;</strong>. The cut measure and the record measure are one object.</p>
+    <p class="muted"><a href="notes/cut-measure-newton.html">Proposition 7</a> (refereed); the dense limit is Theorem 2 of the <a href="notes/planck-gap-paper.html">Planck paper</a>.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 420 260" role="img" aria-label="A timeline with mark positions; each mark shows a position bar of width delta and a kick arrow of size Delta">
+      <line class="axis" x1="30" y1="200" x2="400" y2="200"/>
+      <text class="tick" x="396" y="222" text-anchor="end">time within the cell</text>
+      <g id="marks"></g>
+      <text class="lab2" x="30" y="40">resolution &delta; (bar) and kick &Delta; (arrow) at each mark</text>
+    </svg>
+    <figcaption>Sharper marks kick harder. The two ends can be sharp at no cost; the interior marks balance &delta; against &Delta;.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s5"><div class="inner grid">
+  <div>
+    <div class="kicker">4 &middot; Leibniz's test, 1687</div>
+    <h2>Continuity of the best verdict</h2>
+    <p>The best error in deciding between free motion and a force <em>F</em> is</p>
+    <div class="formula">P<sub>*</sub>(F) = &Phi;(&minus;&frac12;&radic;(K<sub>&tau;</sub>/&kappa;))</div>
+    <p>With a floor &kappa; &gt; 0 it rises smoothly to &frac12; as <em>F</em> &rarr; 0. With &kappa; = 0 perfect marks decide any force at once, and the verdict jumps.</p>
+    <blockquote>"Lorsque la difference de deux cas peut estre diminuée au dessous de toute grandeur donnée in datis &hellip; il faut qu'elle se puisse trouver aussi diminuée &hellip; in quaesitis" &mdash; Leibniz, July 1687</blockquote>
+    <p class="muted"><a href="notes/leibniz-continuity-records.html">Continuity note</a>: read on records, Leibniz's law holds exactly when &kappa; &gt; 0 (refereed; the reading is the premise).</p>
+  </div>
+  <figure>
+    <svg id="chart-verdict" viewBox="0 0 440 300" role="img" aria-label="Best error probability against force: a smooth curve rising to one half at zero force for a positive floor, and a jump for zero floor"></svg>
+    <figcaption>Best error P<sub>*</sub> against the force, in units where K<sub>&tau;</sub>/&kappa; = F&sup2;. Hover the curve for values.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s6"><div class="inner">
+  <div class="kicker">5 &middot; Voices on division</div>
+  <h2>The scholium Newton did not write</h2>
+  <p class="muted">Book I of the <em>Principia</em> sets limits against indivisibles. The dispute about motion and its records runs through older and contemporary texts, each quoted in the notes from a named edition.</p>
+  <div class="cards">
+    <div class="card"><h3>Zeno, Hui Shi, the Mohists</h3><p>The arrow at rest in every now; the stick halved without end; halving that stops at a point. Paradoxes about division that set the problem.</p></div>
+    <div class="card"><h3>Galileo, 1638</h3><p>A weight dropped from the thickness of a sheet of paper makes an impression "del tutto impercettibile": the beginning of fall argued from its record.</p></div>
+    <div class="card"><h3>Leibniz, 1676&ndash;1704</h3><p>Leaps are pushed to ever smaller bodies unless atoms stop them; nature makes no leaps; a hundred thousand nothings cannot make something.</p></div>
+    <div class="card"><h3>Newton, Rule III (1713)</h3><p>Parts can be distinguished by reason, "ex mathematica certum est"; whether nature can divide them "incertum est", and one experiment would decide.</p></div>
+    <div class="card"><h3>Newton, Query 31</h3><p>Hard particles that never wear, so that natures stay the same in all ages: a stability premise that asks for a scale.</p></div>
+    <div class="card"><h3>What the theorem adds</h3><p>A floor on action fixes no length; it survives the similarity x &rarr; &lambda;x, t &rarr; &lambda;&sup2;t, the scaling of quantum paths.</p></div>
+  </div>
+</div></section>
+
+<section class="slide" id="s7"><div class="inner grid">
+  <div>
+    <div class="kicker">6 &middot; Halving a lattice</div>
+    <h2>Series moves and parallel moves</h2>
+    <p>A lattice gauge theory refines by halving its spacing. Halving one direction inserts a new layer of links. Moves along a line compose exactly; the new mid-plane, coupled to its neighbours through the plaquettes, carries the whole defect.</p>
+    <p class="muted">The <a href="notes/halving-atlas.html">atlas of halving</a> records what survives in each group and dimension: free fields, U(1), SU(2), SU(3), in 1+1, 1+2 and 1+3 dimensions.</p>
+  </div>
+  <figure>
+    <svg id="lattice" viewBox="0 0 420 300" role="img" aria-label="Two layers of a square lattice with a new mid-plane of links inserted between them"></svg>
+    <figcaption>Old layers (solid) and the inserted mid-plane (colour). The mid-plane integral is where the renormalization happens.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s8"><div class="inner grid">
+  <div>
+    <div class="kicker">7 &middot; One step, uniformly in the plane</div>
+    <h2>The mid-plane against a covariant Gaussian</h2>
+    <p>For SU(2) in 1+2 dimensions, one halving step is compared with a Gaussian built in the background connection. The comparison holds with error of relative order t<sup>&alpha;</sup> per face, uniformly in the size of the plane, and the dependence between distant links decays exponentially.</p>
+    <div class="formula">|K<sub>ab</sub>| &le; C&thinsp;t<sup>&alpha;&prime;</sup> e<sup>&minus;&gamma; d(a,b)</sup></div>
+    <p class="muted"><a href="notes/su2-midplane-small-field.html">Small-field note</a>, &sect;&sect;13&ndash;25, rounds refereed one by one.</p>
+  </div>
+  <figure>
+    <svg id="chart-decay" viewBox="0 0 440 300" role="img" aria-label="Kernel bound against link distance on a logarithmic scale, falling exponentially"></svg>
+    <figcaption>Pair kernel bound against link distance, relative to its value at distance 2 (&gamma; = &frac12;log(10/7)). Hover for values.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s9"><div class="inner grid">
+  <div>
+    <div class="kicker">8 &middot; Small fields and large fields</div>
+    <h2>Rare clusters of large fields</h2>
+    <p>Most links stay close to their classical values. A connected set <em>H</em> of links outside the small-field chart is rare jointly, with probability at most</p>
+    <div class="formula">p<sup>|H|/16</sup>, &nbsp; p = 2(7/16)<sup>k<sub>t</sub></sup></div>
+    <p class="muted">The barrier is never differentiated, and uniform convexity alone gives the joint bound. Two distant clusters decorrelate exponentially in their distance.</p>
+  </div>
+  <figure>
+    <svg id="clusters" viewBox="0 0 420 300" role="img" aria-label="A lattice of links with two small highlighted clusters of large-field links"></svg>
+    <figcaption>Large-field clusters (orange) inside a small-field sea. Their weights carry the rarity; the good links carry only the distance decay.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s10"><div class="inner grid">
+  <div>
+    <div class="kicker">9 &middot; From SU(2) to SU(3)</div>
+    <h2>The group enters through one invariant</h2>
+    <p>Every one-loop coefficient of the mid-plane step is quadratic in the background and enters through the Killing form. For SU(N) the coefficients are those of SU(2) times <strong>N/2</strong>: times 3/2 for SU(3).</p>
+    <p>Twisted boundary conditions carry the centre Z<sub>3</sub>. The clock and shift matrices give eight adjoint phase pairs, none of them trivial, so the twisted sector has no zero mode.</p>
+    <p class="muted"><a href="notes/su2-midplane-order-t.html">Order-t note</a>, &sect;7b; small-field note, &sect;16.</p>
+  </div>
+  <figure>
+    <svg id="z3" viewBox="0 0 360 300" role="img" aria-label="The eight nonzero phase pairs of Z3 squared on a three by three grid, with the origin excluded"></svg>
+    <figcaption>Adjoint phases (2&pi;a/3, &minus;2&pi;b/3) of the twisted SU(3) sector: eight points, origin empty.</figcaption>
+  </figure>
+</div></section>
+
+<section class="slide" id="s11"><div class="inner">
+  <div class="kicker">10 &middot; Ultraviolet halving, infrared gap</div>
+  <h2>Why halving toward the ultraviolet bears on confinement</h2>
+  <p>Halving the lattice walks toward short distances, while confinement and the mass gap live at long distances. The steps connect through the running coupling: each halving shifts the coupling by an amount fixed by b<sub>0</sub> = 11N/(48&pi;&sup2;) in four dimensions, and after many steps the lattice spacing, measured in physical units, is set by a scale that no step contains. Dimensional transmutation supplies that scale; whether the spectrum above the vacuum starts at a positive multiple of it is the gap question.</p>
+  <p class="muted"><a href="notes/uv-halving-ir-confinement.html">Didactic note</a>; in Newton's problem the analogous scale is an action, and &#8463; stays explicit throughout.</p>
+</div></section>
+
+<section class="slide" id="s12"><div class="inner">
+  <div class="kicker">11 &middot; Status on 29 September 2026</div>
+  <h2>What is proved, and at what level</h2>
+  <table class="status">
+    <tr><th>Result</th><th>Level</th></tr>
+    <tr><td>Cut measure: each cut spends 3s(1&minus;s)K<sub>&tau;</sub>; the rod spends 6/7</td><td><span class="tag">proved, refereed</span></td></tr>
+    <tr><td>Marks at any cuts reach exactly the spent action over &kappa;</td><td><span class="tag">proved, refereed</span></td></tr>
+    <tr><td>&kappa; &gt; 0 iff the best verdict is continuous (Leibniz on records)</td><td><span class="tag">proved in the mark model</span> <span class="tag">premise: the records reading</span></td></tr>
+    <tr><td>SU(2) mid-plane, one normalized small-field step, uniform in plane size</td><td><span class="tag">proved, refereed</span></td></tr>
+    <tr><td>Pair kernel and separated third response on the chart</td><td><span class="tag">proved, refereed</span></td></tr>
+    <tr><td>Joint large-field rarity and two-cluster decorrelation</td><td><span class="tag">proved, refereed</span></td></tr>
+    <tr><td>SU(3) one-loop coefficients, 3/2 times SU(2)'s</td><td><span class="tag">proved, refereed</span></td></tr>
+    <tr><td>All-order polymer expansion, iteration, continuum limit</td><td><span class="tag">open</span></td></tr>
+    <tr><td>Positive mass gap for SU(3); necessity of Newton's floor</td><td><span class="tag">open</span></td></tr>
+  </table>
+  <p class="muted">Full map: <a href="llms.txt">llms.txt</a> and the <a href="index.html">results index</a>. Comments are welcome as repository issues.</p>
+</div></section>
+
+<div class="nav" aria-label="Slide navigation"><button id="prev" aria-label="Previous slide">&uarr;</button><span id="count">1 / 12</span><button id="next" aria-label="Next slide">&darr;</button></div>
+
+<script>
+(function(){
+  const NS="http://www.w3.org/2000/svg";
+  const tip=document.getElementById("tip");
+  function el(name,attrs,parent){const e=document.createElementNS(NS,name);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+  function text(parent,x,y,s,cls,anchor){const t=el("text",{x:x,y:y,class:cls||"tick"},parent);if(anchor)t.setAttribute("text-anchor",anchor);t.textContent=s;return t;}
+  function hover(node,label){
+    node.addEventListener("mousemove",e=>{tip.textContent=label;tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY-28)+"px";tip.style.opacity=1;});
+    node.addEventListener("mouseleave",()=>{tip.style.opacity=0;});
+  }
+  // Frame helper: x in [x0,x1], y in [y0,y1].
+  function frame(svg,W,H,xr,yr,xt,yt,xl,yl){
+    const L=52,R=W-16,T=16,B=H-40;
+    const sx=v=>L+(v-xr[0])/(xr[1]-xr[0])*(R-L), sy=v=>B-(v-yr[0])/(yr[1]-yr[0])*(B-T);
+    yt.forEach(v=>{el("line",{x1:L,y1:sy(v),x2:R,y2:sy(v),class:"grid-line"},svg);text(svg,L-8,sy(v)+4,v.label||String(v),"tick","end");});
+    xt.forEach(v=>{text(svg,sx(v),B+18,String(v),"tick","middle");});
+    el("line",{x1:L,y1:B,x2:R,y2:B,class:"axis"},svg);
+    text(svg,(L+R)/2,H-4,xl,"tick","middle");
+    const yl2=text(svg,14,(T+B)/2,yl,"tick","middle");yl2.setAttribute("transform","rotate(-90 14 "+((T+B)/2)+")");
+    return {sx,sy,L,R,T,B};
+  }
+  // Chart 1: cut measure.
+  (function(){
+    const svg=document.getElementById("chart-cuts");
+    const f=frame(svg,440,300,[0,6],[0,1],[0,1,2,3,4,5,6],[0,0.25,0.5,0.75,1],"rounds of cutting n","spent share of K");
+    el("line",{x1:f.L,y1:f.sy(6/7),x2:f.R,y2:f.sy(6/7),stroke:"var(--s2)","stroke-width":1,"stroke-dasharray":"4 4"},svg);
+    text(svg,f.R,f.sy(6/7)+16,"6/7","lab2","end");
+    const series=[
+      {name:"halving every piece",color:"var(--s1)",fn:n=>1-Math.pow(4,-n)},
+      {name:"one-ended stick (Zhuangzi 33)",color:"var(--s2)",fn:n=>6/7*(1-Math.pow(8,-n))}
+    ];
+    series.forEach((s,i)=>{
+      let d="";for(let n=0;n<=6;n++){d+=(n?"L":"M")+f.sx(n)+","+f.sy(s.fn(n));}
+      el("path",{d:d,fill:"none",stroke:s.color,"stroke-width":2},svg);
+      for(let n=0;n<=6;n++){const c=el("circle",{cx:f.sx(n),cy:f.sy(s.fn(n)),r:4.5,fill:s.color,stroke:"var(--surface)","stroke-width":2},svg);
+        hover(c,s.name+": n="+n+", share "+s.fn(n).toFixed(4));
+        const hit=el("circle",{cx:f.sx(n),cy:f.sy(s.fn(n)),r:11,fill:"transparent"},svg);hover(hit,s.name+": n="+n+", share "+s.fn(n).toFixed(4));}
+      text(svg,f.sx(2.2),f.sy(s.fn(2.2))+(i?22:-10),s.name,"lab","start").setAttribute("fill","var(--ink)");
+    });
+  })();
+  // Marks drawing.
+  (function(){
+    const g=document.getElementById("marks");
+    const xs=[40,110,190,270,350,390];
+    xs.forEach((x,i)=>{
+      const end=(i===0||i===xs.length-1);
+      const d=end?2:12, k=end?0:34;
+      el("line",{x1:x,y1:200,x2:x,y2:180,stroke:"var(--ink-3)"},g);
+      el("rect",{x:x-d,y:172,width:2*d,height:6,rx:3,fill:"var(--s1)"},g);
+      if(k){el("line",{x1:x,y1:160,x2:x,y2:160-k*2.2,stroke:"var(--s2)","stroke-width":2},g);
+            el("path",{d:"M"+(x-5)+","+(160-k*2.2+8)+" L"+x+","+(160-k*2.2)+" L"+(x+5)+","+(160-k*2.2+8),fill:"none",stroke:"var(--s2)","stroke-width":2},g);}
+    });
+    text(g,40,244,"sharp end","lab2","middle");text(g,390,244,"sharp end","lab2","middle");
+    text(g,230,244,"balanced interior marks","lab2","middle");
+  })();
+  // Chart 2: best verdict.
+  (function(){
+    const svg=document.getElementById("chart-verdict");
+    const f=frame(svg,440,300,[-3,3],[0,0.55],[-3,-2,-1,0,1,2,3],[0,0.1,0.2,0.3,0.4,0.5],"force F","best error P*");
+    function erf(x){const s=Math.sign(x);x=Math.abs(x);const a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;const t=1/(1+p*x);return s*(1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x));}
+    const Phi=z=>0.5*(1+erf(z/Math.SQRT2));
+    let d="";const pts=[];
+    for(let i=0;i<=240;i++){const F=-3+6*i/240;const P=Phi(-0.5*Math.abs(F));pts.push([F,P]);d+=(i?"L":"M")+f.sx(F)+","+f.sy(P);}
+    el("path",{d:d,fill:"none",stroke:"var(--s1)","stroke-width":2},svg);
+    // kappa = 0: zero off the origin, one half at the origin
+    el("line",{x1:f.sx(-3),y1:f.sy(0)-1,x2:f.sx(-0.06),y2:f.sy(0)-1,stroke:"var(--s2)","stroke-width":2},svg);
+    el("line",{x1:f.sx(0.06),y1:f.sy(0)-1,x2:f.sx(3),y2:f.sy(0)-1,stroke:"var(--s2)","stroke-width":2},svg);
+    el("circle",{cx:f.sx(0),cy:f.sy(0)-1,r:4.5,fill:"var(--surface)",stroke:"var(--s2)","stroke-width":2},svg);
+    el("circle",{cx:f.sx(0),cy:f.sy(0.5),r:4.5,fill:"var(--s2)",stroke:"var(--surface)","stroke-width":2},svg);
+    text(svg,f.sx(1.05),f.sy(0.36),"κ > 0: continuous","lab","start");
+    text(svg,f.sx(1.05),f.sy(0.04),"κ = 0: jump at F = 0","lab","start");
+    const hit=el("rect",{x:f.L,y:f.T,width:f.R-f.L,height:f.B-f.T,fill:"transparent"},svg);
+    const cross=el("line",{x1:0,y1:f.T,x2:0,y2:f.B,stroke:"var(--ink-3)","stroke-dasharray":"3 3",opacity:0},svg);
+    hit.addEventListener("mousemove",e=>{const r=svg.getBoundingClientRect();const x=(e.clientX-r.left)*(440/r.width);const F=-3+(x-f.L)/(f.R-f.L)*6;const P=Phi(-0.5*Math.abs(F));cross.setAttribute("x1",x);cross.setAttribute("x2",x);cross.setAttribute("opacity",1);
+      tip.textContent="F = "+F.toFixed(2)+": κ>0 gives P* = "+P.toFixed(3)+"; κ=0 gives "+(Math.abs(F)<0.03?"0.5":"0");tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY-28)+"px";tip.style.opacity=1;});
+    hit.addEventListener("mouseleave",()=>{tip.style.opacity=0;cross.setAttribute("opacity",0);});
+  })();
+  // Lattice with mid-plane.
+  (function(){
+    const svg=document.getElementById("lattice");
+    const x0=60,dx=75,rows=[70,230],mid=150;
+    for(let i=0;i<5;i++){const x=x0+i*dx;
+      el("line",{x1:x,y1:rows[0],x2:x,y2:rows[1],stroke:"var(--ink-3)","stroke-width":1.5},svg);}
+    rows.forEach(y=>{el("line",{x1:x0,y1:y,x2:x0+4*dx,y2:y,stroke:"var(--ink)","stroke-width":2},svg);
+      for(let i=0;i<5;i++)el("circle",{cx:x0+i*dx,cy:y,r:4,fill:"var(--ink)"},svg);});
+    el("line",{x1:x0,y1:mid,x2:x0+4*dx,y2:mid,stroke:"var(--s2)","stroke-width":3},svg);
+    for(let i=0;i<5;i++)el("circle",{cx:x0+i*dx,cy:mid,r:5,fill:"var(--s2)",stroke:"var(--surface)","stroke-width":2},svg);
+    text(svg,x0+4*dx+8,rows[0]+4,"old layer","lab","start");
+    text(svg,x0+4*dx+8,mid+4,"new mid-plane","lab","start").setAttribute("fill","var(--ink)");
+    text(svg,x0+4*dx+8,rows[1]+4,"old layer","lab","start");
+    text(svg,x0,24,"halving the time direction: one new layer of links","lab2","start");
+    text(svg,x0+dx*0.5,mid-10,"bridge","lab2","middle");
+    text(svg,x0+dx*2.5,mid+26,"mid-face","lab2","middle");
+  })();
+  // Chart 3: kernel decay.
+  (function(){
+    const svg=document.getElementById("chart-decay");
+    const g=0.5*Math.log(10/7);
+    const f=frame(svg,440,300,[2,20],[-4,0],[2,5,8,11,14,17,20],[{valueOf:()=>-4,label:"1e-4"},{valueOf:()=>-3,label:"1e-3"},{valueOf:()=>-2,label:"1e-2"},{valueOf:()=>-1,label:"0.1"},{valueOf:()=>0,label:"1"}].map(o=>Object.assign(Number(o),{label:o.label})),"link distance d","relative bound (log scale)");
+    let d="";
+    for(let k=2;k<=20;k++){const v=Math.exp(-g*(k-2));d+=(k>2?"L":"M")+f.sx(k)+","+f.sy(Math.log10(v));}
+    el("path",{d:d,fill:"none",stroke:"var(--s3)","stroke-width":2},svg);
+    for(let k=2;k<=20;k+=2){const v=Math.exp(-g*(k-2));const c=el("circle",{cx:f.sx(k),cy:f.sy(Math.log10(v)),r:4.5,fill:"var(--s3)",stroke:"var(--surface)","stroke-width":2},svg);
+      const hit=el("circle",{cx:f.sx(k),cy:f.sy(Math.log10(v)),r:11,fill:"transparent"},svg);hover(hit,"d = "+k+": "+v.toExponential(2));hover(c,"d = "+k+": "+v.toExponential(2));}
+    text(svg,f.sx(8),f.sy(-0.4),"e^(−γ(d−2)), γ = ½ log(10/7)","lab","start");
+  })();
+  // Clusters.
+  (function(){
+    const svg=document.getElementById("clusters");
+    const n=8,x0=40,y0=30,s=45;
+    const bad=new Set(["h,1,1","v,2,1","h,1,2","h,5,4","v,6,4","v,6,5"]);
+    for(let i=0;i<n;i++)for(let j=0;j<n;j++){
+      const x=x0+i*s,y=y0+j*(240/(n-1));
+      if(i<n-1){const b=bad.has("h,"+i+","+j);el("line",{x1:x,y1:y,x2:x+s,y2:y,stroke:b?"var(--s2)":"var(--rule)","stroke-width":b?4:2,"stroke-linecap":"round"},svg);}
+      if(j<n-1){const b=bad.has("v,"+i+","+j);el("line",{x1:x,y1:y,x2:x,y2:y+240/(n-1),stroke:b?"var(--s2)":"var(--rule)","stroke-width":b?4:2,"stroke-linecap":"round"},svg);}
+    }
+    text(svg,x0,292,"orange: links outside the small-field chart","lab2","start");
+  })();
+  // Z3 phases.
+  (function(){
+    const svg=document.getElementById("z3");
+    const x0=90,y0=50,s=90;
+    for(let a=0;a<3;a++)for(let b=0;b<3;b++){
+      const x=x0+a*s,y=y0+b*s;
+      if(a===0&&b===0){el("circle",{cx:x,cy:y,r:8,fill:"none",stroke:"var(--ink-3)","stroke-dasharray":"3 3"},svg);continue;}
+      const c=el("circle",{cx:x,cy:y,r:9,fill:"var(--s1)",stroke:"var(--surface)","stroke-width":2},svg);
+      hover(c,"(a,b) = ("+a+","+b+"): phases (2π·"+a+"/3, −2π·"+b+"/3)");
+    }
+    text(svg,x0+s,y0+3*s-20,"a (first cycle)","lab2","middle");
+    const t=text(svg,40,y0+s,"b (second cycle)","lab2","middle");t.setAttribute("transform","rotate(-90 40 "+(y0+s)+")");
+    text(svg,x0,y0-20,"origin: no zero mode","lab2","middle");
+  })();
+  // Slide navigation.
+  const slides=[...document.querySelectorAll(".slide")];
+  const count=document.getElementById("count");
+  function current(){let best=0,bd=1e9;slides.forEach((s,i)=>{const d=Math.abs(s.getBoundingClientRect().top);if(d<bd){bd=d;best=i;}});return best;}
+  function go(i){i=Math.max(0,Math.min(slides.length-1,i));slides[i].scrollIntoView({behavior:"smooth"});}
+  document.getElementById("prev").onclick=()=>go(current()-1);
+  document.getElementById("next").onclick=()=>go(current()+1);
+  document.addEventListener("keydown",e=>{if(["ArrowDown","ArrowRight","PageDown"," "].includes(e.key)){e.preventDefault();go(current()+1);}
+    if(["ArrowUp","ArrowLeft","PageUp"].includes(e.key)){e.preventDefault();go(current()-1);}});
+  window.addEventListener("scroll",()=>{count.textContent=(current()+1)+" / "+slides.length;},{passive:true});
+})();
+</script>
+</body>
+</html>

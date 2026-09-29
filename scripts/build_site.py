@@ -282,6 +282,7 @@ NAV = """<header class="site"><div class="wrap">
 <a class="home" href="{root}index.html">navstokgap</a>
 <nav class="site">
 <a href="{root}index.html">Results</a>
+<a href="{root}tutorial.html">Tutorial</a>
 <a href="{root}papers.html">Papers</a>
 <a href="{root}ledger.html">Claim ledger</a>
 <a href="{root}sources.html">Sources</a>
@@ -594,6 +595,11 @@ def main():
         + pandoc(src)), encoding="utf-8")
 
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
+    # Slide tutorial: a hand-written page kept in scripts/site/, copied as is.
+    tut_src = ROOT / "scripts" / "site" / "tutorial.html"
+    if tut_src.exists():
+        (DOCS / "tutorial.html").write_text(
+            tut_src.read_text(encoding="utf-8"), encoding="utf-8")
 
     # Declare every generated file, so that check_repository.py can skip them
     # while keeping the source-companion and checksum rules for real sources.
@@ -601,7 +607,8 @@ def main():
         p.relative_to(ROOT).as_posix()
         for p in [DOCS / "index.html", DOCS / "papers.html",
                   DOCS / "ledger.html", DOCS / "sources.html",
-                  DOCS / ".nojekyll"] + list(OUT_NOTES.glob("*.html"))
+                  DOCS / ".nojekyll"]
+                  + ([DOCS / "tutorial.html"] if (DOCS / "tutorial.html").exists() else []) + list(OUT_NOTES.glob("*.html"))
                   + list(OUT_SOURCES.glob("*.html")))
     # llms.txt (llmstxt.org convention): LLM.md with absolute links, served at the site root.
     llm_src = ROOT / "LLM.md"
