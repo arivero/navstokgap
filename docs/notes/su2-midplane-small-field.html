@@ -3296,26 +3296,33 @@ U_s=-U_sK(X_s)\)</span>, inside the expectation. This is the matrix
 Feynman–Kac representation; bounded-Hessian finite-<span
 class="math inline">\(k\)</span> approximants justify it by the product
 formula and differentiation.</p>
-<p>Put <span class="math inline">\(C_{ij}=\|(H-6I)_{ij}\|\)</span> (edge
-blocks), assuming the block-row bound <span
-class="math inline">\(\sum_jC_{ij}\le5/2\)</span> used in §17. Symmetry
-gives the column bound. The series for <span
-class="math inline">\(e^{-sH}\)</span> is dominated blockwise by <span
-class="math inline">\(e^{-6s}e^{sC}\)</span>. It can be read as a
-continuous-time walk with nonnegative jump weights, including holding
-weights, and killing at least <span class="math inline">\(7/2\)</span>.
-The original colour matrices carry signs and rotations; their spectral
-bounds alone supply no positive random-walk transition rates. In
-particular the barrier occurs in the <strong>drift</strong> of (76); the
-extra barrier killing belongs to <span
-class="math inline">\(R_\mu\)</span> and to the differentiated equation.
-The literature analogy in Claude’s §18 paragraph therefore requires this
-distinction.</p>
-<p>Set <span class="math inline">\(\gamma=\frac12\log(12/5)\)</span> and
-<span class="math inline">\(m=6-(5/2)e^\gamma&gt;0\)</span>. For <span
-class="math inline">\(K^H=(6I-C)^{-1}\)</span>, range one and the
-geometric series give <span class="math display">\[\sup_i\sum_j
-e^{\gamma d(i,j)}K^H_{ij}\le m^{-1},\qquad
+<p>For plane side lengths at least three, (59) gives <span
+class="math inline">\(H_{ii}=5I\)</span> and off-diagonal block-row sum
+at most <span class="math inline">\(3\)</span> (six incidences of size
+<span class="math inline">\(1/2\)</span>). Thus <span
+class="math inline">\(C_{ij}=\|(H-5I)_{ij}\|\)</span> has row and column
+sums at most <span class="math inline">\(3\)</span>. The spectral <span
+class="math inline">\(5/2\)</span> bound about <span
+class="math inline">\(6I\)</span> in Theorem 5 concerns sums of signed
+products; absolute path counting requires this different bound. The
+series for <span class="math inline">\(e^{-sH}\)</span> is dominated
+blockwise by <span class="math inline">\(e^{-5s}e^{sC}\)</span>. It can
+be read as a continuous-time walk with nonnegative jump weights,
+including holding weights, and killing at least <span
+class="math inline">\(2\)</span>. The original colour matrices carry
+signs and rotations; their spectral bounds alone supply no positive
+random-walk transition rates. In particular the barrier occurs in the
+<strong>drift</strong> of (76); the extra barrier killing belongs to
+<span class="math inline">\(R_\mu\)</span> and to the differentiated
+equation. The literature analogy in Claude’s §18 paragraph therefore
+requires this distinction.</p>
+<p>For this section set <span
+class="math inline">\(\gamma=\frac12\log(10/7)\)</span> and <span
+class="math inline">\(m=5-(7/2)e^\gamma&gt;0\)</span>, a weaker weight
+than §17’s. For <span class="math inline">\(K^H=(5I-C)^{-1}\)</span>,
+range one and the geometric series give <span
+class="math display">\[\sup_i\sum_j e^{\gamma d(i,j)}K^H_{ij}\le
+m^{-1},\qquad
 \|(R_0g)_i\|_\infty\le\sum_jK^H_{ij}\|g_j\|_\infty.\tag{77}\]</span> The
 second inequality bounds every <span
 class="math inline">\(L^4(\nu_{e,k})\)</span> norm as well,
@@ -3330,13 +3337,13 @@ class="math display">\[tL_\nu Z+HZ+Z(tV&#39;&#39;)=Dg.\tag{78}\]</span>
 Thus first configuration derivatives require <span
 class="math inline">\(V&#39;&#39;\)</span>, rather than <span
 class="math inline">\(V&#39;&#39;&#39;\)</span>. If <span
-class="math inline">\(tS&#39;&#39;-6I\)</span> has a deterministic
+class="math inline">\(tS&#39;&#39;-5I\)</span> has a deterministic
 range-one block majorant <span class="math inline">\(C^S\)</span> with
-row and column sums at most <span class="math inline">\(5/2\)</span>,
+row and column sums at most <span class="math inline">\(7/2\)</span>,
 the two-index Neumann series has base <span
-class="math inline">\(tL+12I+tW_k&#39;&#39;\)</span> on the
+class="math inline">\(tL+10I+tW_k&#39;&#39;\)</span> on the
 differentiation index, and perturbation weighted norm at most <span
-class="math inline">\(5e^\gamma\)</span>. Its inverse has weighted row
+class="math inline">\(7e^\gamma\)</span>. Its inverse has weighted row
 and column sums at most <span class="math inline">\((2m)^{-1}\)</span>
 on the product graph. The positive on-site matrices <span
 class="math inline">\(t w_k&#39;&#39;\)</span> are contractions in each
@@ -3350,6 +3357,117 @@ class="math inline">\(g\)</span> on the approximating whole space. Hence
 affine scores needs a score extension or a moment argument. Part 2
 states the former as a precise replacement, rather than assuming an
 annealed theorem.</p>
+<h3 id="part-2-a-replacement-lemma-with-local-inputs">19.2 Part 2: a
+replacement lemma with local inputs</h3>
+<p><strong>Replacement lemma (conditional).</strong> Use smooth local
+score potentials with bounded gradients <span
+class="math inline">\(g_a\)</span>, agreeing with the quadratic scores
+on <span class="math inline">\(D\)</span>. For arrays <span
+class="math inline">\(A_{ai}=\|g_{a,i}\|_\infty\)</span> and <span
+class="math inline">\(D_{aij}=\|\partial_jg_{a,i}\|_\infty\)</span>
+(Euclidean and Frobenius norms), assume every one-index marginal sum is
+bounded by <span class="math inline">\(G=G_0\varepsilon/t\)</span> and
+<span class="math inline">\(D_*=D_0\varepsilon/t\)</span>, respectively,
+after weighting <span class="math inline">\(A\)</span> by <span
+class="math inline">\(e^{\gamma d(a,i)}\)</span> and <span
+class="math inline">\(D\)</span> by <span
+class="math inline">\(e^{\gamma[d(a,i)+d(a,j)]}\)</span>. Here a
+marginal fixes any one index and sums all the others. Assume the
+deterministic Hessian majorants of §19.1 for every <span
+class="math inline">\(V_2+\lambda T+W_k\)</span>, and the following
+local measure hypotheses: <span class="math display">\[\begin{gathered}
+\sup_{e,k,\lambda}E_{\nu_\lambda}|\nabla_eT|
++\sup_{e,k}E_{\mu_k}|\nabla_ew_k|\le L\varepsilon/t,\\
+\sup_{e,k}p_{e,k}\le p&lt;1,\qquad
+\sup_k\|w_k&#39;&#39;\|e^{-w_k/2}\le K_{\rm app}/\varepsilon^2,
+\qquad {p\over1-p}\le P\varepsilon^3/t.\tag{79}
+\end{gathered}\]</span> All constants <span
+class="math inline">\(G_0,D_0,L,K_{\rm app},P\)</span> are fixed,
+independent of <span class="math inline">\(k,N,t\)</span>; the last
+inequality specifies the allowed small-<span
+class="math inline">\(t\)</span> range explicitly. For <span
+class="math inline">\(\|Q\|_\gamma=\sup_a\sum_b e^{\gamma
+d(a,b)}|Q_{ab}|\)</span>, the residuals (69), formed with these scores,
+obey <span class="math display">\[\|\mathcal B+\mathcal M\|_\gamma
+\le {K_{\rm app}G_0^2P+2G_0D_0L\over m^2}
+{\varepsilon^3\over t}.\tag{80}\]</span></p>
+<p><em>Proof.</em> The Neumann bounds (77)–(78) propagate all the stated
+marginal norms: <span class="math inline">\(u\)</span> has norm at most
+<span class="math inline">\(G/m\)</span>, and <span
+class="math inline">\(Du\)</span> at most <span
+class="math inline">\(D_* /(2m)\)</span>. For <span
+class="math inline">\(R_\mu g\)</span> the same <span
+class="math inline">\(G/m\)</span> bound uses <span
+class="math inline">\(C^S\)</span> and positive on-site killing. In
+particular (77) supplies (72)’s fourth moment under the removed-edge
+measure, with spatially summable decay. Using the pointwise bound
+directly improves the tail power in (72): <span
+class="math display">\[E_\mu\|w_k&#39;&#39;(\xi_e)\|
+\le {K_{\rm app}p\over\varepsilon^2(1-p)},\qquad
+\|\mathcal B\|_\gamma
+\le {t^2G^2K_{\rm app}p\over m^2\varepsilon^2(1-p)}.\tag{81}\]</span>
+Both inequalities follow by removing that edge barrier; its normalizing
+denominator is at least <span class="math inline">\(1-p\)</span>. The
+weighted row bound then follows by inserting the two score envelopes on
+either side. Also (78) inserted into (73) gives, uniformly along its
+smooth path, <span class="math display">\[\|J\|_\gamma\le
+{t^2GD_*\over2m^2}
+\sup_eE_{\nu_\lambda}|\nabla_eT|.\tag{82}\]</span> Thus its
+configuration-index sum is controlled before summing boundary labels.
+The block norms already include the three colour components.</p>
+<p>To include the barrier endpoint in <span
+class="math inline">\(\mathcal M\)</span>, couple a stationary <span
+class="math inline">\(X\)</span> of potential <span
+class="math inline">\(S+W_k\)</span> to the stationary Gaussian
+diffusion <span class="math inline">\(Y\)</span> of potential <span
+class="math inline">\(V_2\)</span> with the same Brownian noise. Strong
+convexity gives this joint stationary coupling by starting in the remote
+past. Their difference satisfies <span class="math inline">\(\dot
+Z=-HZ-tF(X)\)</span>, where <span
+class="math inline">\(F=\nabla(T+W_k)\)</span>. Variation of constants
+and the block majorant give <span class="math inline">\(\sup_eE|Z_e|\le
+th/m\)</span>, with <span class="math inline">\(h=\sup_eE_\mu|F_e|\le
+L\varepsilon/t\)</span>. By (76), each resolvent pairing is the time
+integral of <span class="math inline">\(tE[g_a(X_0)\cdot
+e^{-sH}g_b(X_s)]\)</span> (and likewise for <span
+class="math inline">\(Y\)</span>). Subtract the two products, use the
+mean-value formula for each score, and integrate <span
+class="math inline">\(e^{-5s}e^{sC}\)</span>. The two terms each cost
+<span class="math inline">\(tGD_*\sup_eE|Z_e|/m\)</span> in weighted row
+norm. Therefore <span class="math inline">\(\|\mathcal
+M\|_\gamma\le2t^2GD_*h/m^2\)</span>. This compares directly to <span
+class="math inline">\(G\)</span>, including the entire barrier endpoint.
+Combining with (81) proves (80). All steps hold at finite <span
+class="math inline">\(k,N\)</span> with the displayed constants. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Applicability and cost.</strong> This is outcome
+<strong>(b)</strong>: its inputs concern local scores, tails and first
+drift moments, rather than a resolvent residual. A local quadratic score
+can retain its linear part globally and smoothly truncate its quadratic
+part outside <span class="math inline">\(D\)</span>; on the shrinking
+chart this plausibly gives <span class="math inline">\(G_0,D_0\)</span>
+independent of <span class="math inline">\(t\)</span>. Applying (80) to
+§17 requires constructing these extensions as gradients, checking their
+marginal constants and bounding their Gaussian covariance error by <span
+class="math inline">\(E_0\varepsilon^3/t\)</span> in weighted row norm.
+That explicit additional score-extension hypothesis adds <span
+class="math inline">\(E_0\)</span> to (80)’s constant when comparing to
+the original Gaussian scores; fixed-<span
+class="math inline">\(N\)</span> barrier limits also require convergence
+of the extended score covariances. The Gaussian extension error is a
+local polynomial-tail calculation. For (79), the cubic remainder
+suggests <span
+class="math inline">\(E|\nabla_eT|=O(\varepsilon^2/t)\)</span>; a
+uniform profile bound <span
+class="math inline">\(|w_k&#39;|e^{-w_k/2}\le\Omega_{\rm
+app}/\varepsilon\)</span> gives <span
+class="math inline">\(E_\mu|\nabla_ew_k|\le\Omega_{\rm
+app}p/[\varepsilon(1-p)]\)</span>. The work still owed is the
+interacting removed-edge tail, this profile bound, and deterministic
+Hessian envelopes. The Gaussian tail (55) makes the scales plausible,
+while its transfer to the extended measure is an additional proof. The
+stop rule is met by this conditional lemma; (80) becomes applicable only
+after those local hypotheses are proved.</p>
 
 </main>
 <footer class="site"><div class="wrap">

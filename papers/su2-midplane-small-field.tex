@@ -2640,20 +2640,24 @@ generators commute; integrating their semigroup gives
 matrix Feynman--Kac representation; bounded-Hessian finite-\(k\)
 approximants justify it by the product formula and differentiation.
 
-Put \(C_{ij}=\|(H-6I)_{ij}\|\) (edge blocks), assuming the block-row
-bound \(\sum_jC_{ij}\le5/2\) used in §17. Symmetry gives the column
-bound. The series for \(e^{-sH}\) is dominated blockwise by
-\(e^{-6s}e^{sC}\). It can be read as a continuous-time walk with
+For plane side lengths at least three, (59) gives \(H_{ii}=5I\) and
+off-diagonal block-row sum at most \(3\) (six incidences of size
+\(1/2\)). Thus \(C_{ij}=\|(H-5I)_{ij}\|\) has row and column sums at
+most \(3\). The spectral \(5/2\) bound about \(6I\) in Theorem 5
+concerns sums of signed products; absolute path counting requires this
+different bound. The series for \(e^{-sH}\) is dominated blockwise by
+\(e^{-5s}e^{sC}\). It can be read as a continuous-time walk with
 nonnegative jump weights, including holding weights, and killing at
-least \(7/2\). The original colour matrices carry signs and rotations;
+least \(2\). The original colour matrices carry signs and rotations;
 their spectral bounds alone supply no positive random-walk transition
 rates. In particular the barrier occurs in the \textbf{drift} of (76);
 the extra barrier killing belongs to \(R_\mu\) and to the differentiated
 equation. The literature analogy in Claude's §18 paragraph therefore
 requires this distinction.
 
-Set \(\gamma=\frac12\log(12/5)\) and \(m=6-(5/2)e^\gamma>0\). For
-\(K^H=(6I-C)^{-1}\), range one and the geometric series give
+For this section set \(\gamma=\frac12\log(10/7)\) and
+\(m=5-(7/2)e^\gamma>0\), a weaker weight than §17's. For
+\(K^H=(5I-C)^{-1}\), range one and the geometric series give
 \[\sup_i\sum_j e^{\gamma d(i,j)}K^H_{ij}\le m^{-1},\qquad
 \|(R_0g)_i\|_\infty\le\sum_jK^H_{ij}\|g_j\|_\infty.\tag{77}\] The second
 inequality bounds every \(L^4(\nu_{e,k})\) norm as well, independently
@@ -2663,11 +2667,11 @@ the score size; the resolvent constants are dimensionless.
 For \(u=(tL_\nu+H)^{-1}g\), let \(Z_{ij}=\partial_j u_i\) in edge
 blocks. Differentiation gives the closed equation
 \[tL_\nu Z+HZ+Z(tV'')=Dg.\tag{78}\] Thus first configuration derivatives
-require \(V''\), rather than \(V'''\). If \(tS''-6I\) has a
+require \(V''\), rather than \(V'''\). If \(tS''-5I\) has a
 deterministic range-one block majorant \(C^S\) with row and column sums
-at most \(5/2\), the two-index Neumann series has base \(tL+12I+tW_k''\)
+at most \(7/2\), the two-index Neumann series has base \(tL+10I+tW_k''\)
 on the differentiation index, and perturbation weighted norm at most
-\(5e^\gamma\). Its inverse has weighted row and column sums at most
+\(7e^\gamma\). Its inverse has weighted row and column sums at most
 \((2m)^{-1}\) on the product graph. The positive on-site matrices
 \(t w_k''\) are contractions in each colour block. This proves summable
 derivative bounds from bounded, summable \(Dg\), uniformly in \(k,N\). A
@@ -2677,4 +2681,90 @@ approximating whole space. Hence (77) directly settles the bounded-score
 case; its application to those affine scores needs a score extension or
 a moment argument. Part 2 states the former as a precise replacement,
 rather than assuming an annealed theorem.
+
+\hypertarget{part-2-a-replacement-lemma-with-local-inputs}{%
+\subsubsection{19.2 Part 2: a replacement lemma with local
+inputs}\label{part-2-a-replacement-lemma-with-local-inputs}}
+
+\textbf{Replacement lemma (conditional).} Use smooth local score
+potentials with bounded gradients \(g_a\), agreeing with the quadratic
+scores on \(D\). For arrays \(A_{ai}=\|g_{a,i}\|_\infty\) and
+\(D_{aij}=\|\partial_jg_{a,i}\|_\infty\) (Euclidean and Frobenius
+norms), assume every one-index marginal sum is bounded by
+\(G=G_0\varepsilon/t\) and \(D_*=D_0\varepsilon/t\), respectively, after
+weighting \(A\) by \(e^{\gamma d(a,i)}\) and \(D\) by
+\(e^{\gamma[d(a,i)+d(a,j)]}\). Here a marginal fixes any one index and
+sums all the others. Assume the deterministic Hessian majorants of §19.1
+for every \(V_2+\lambda T+W_k\), and the following local measure
+hypotheses: \[\begin{gathered}
+\sup_{e,k,\lambda}E_{\nu_\lambda}|\nabla_eT|
+ +\sup_{e,k}E_{\mu_k}|\nabla_ew_k|\le L\varepsilon/t,\\
+\sup_{e,k}p_{e,k}\le p<1,\qquad
+\sup_k\|w_k''\|e^{-w_k/2}\le K_{\rm app}/\varepsilon^2,
+\qquad {p\over1-p}\le P\varepsilon^3/t.\tag{79}
+\end{gathered}\] All constants \(G_0,D_0,L,K_{\rm app},P\) are fixed,
+independent of \(k,N,t\); the last inequality specifies the allowed
+small-\(t\) range explicitly. For
+\(\|Q\|_\gamma=\sup_a\sum_b e^{\gamma d(a,b)}|Q_{ab}|\), the residuals
+(69), formed with these scores, obey \[\|\mathcal B+\mathcal M\|_\gamma
+\le {K_{\rm app}G_0^2P+2G_0D_0L\over m^2}
+ {\varepsilon^3\over t}.\tag{80}\]
+
+\emph{Proof.} The Neumann bounds (77)--(78) propagate all the stated
+marginal norms: \(u\) has norm at most \(G/m\), and \(Du\) at most
+\(D_* /(2m)\). For \(R_\mu g\) the same \(G/m\) bound uses \(C^S\) and
+positive on-site killing. In particular (77) supplies (72)'s fourth
+moment under the removed-edge measure, with spatially summable decay.
+Using the pointwise bound directly improves the tail power in (72):
+\[E_\mu\|w_k''(\xi_e)\|
+ \le {K_{\rm app}p\over\varepsilon^2(1-p)},\qquad
+\|\mathcal B\|_\gamma
+ \le {t^2G^2K_{\rm app}p\over m^2\varepsilon^2(1-p)}.\tag{81}\] Both
+inequalities follow by removing that edge barrier; its normalizing
+denominator is at least \(1-p\). The weighted row bound then follows by
+inserting the two score envelopes on either side. Also (78) inserted
+into (73) gives, uniformly along its smooth path,
+\[\|J\|_\gamma\le {t^2GD_*\over2m^2}
+ \sup_eE_{\nu_\lambda}|\nabla_eT|.\tag{82}\] Thus its
+configuration-index sum is controlled before summing boundary labels.
+The block norms already include the three colour components.
+
+To include the barrier endpoint in \(\mathcal M\), couple a stationary
+\(X\) of potential \(S+W_k\) to the stationary Gaussian diffusion \(Y\)
+of potential \(V_2\) with the same Brownian noise. Strong convexity
+gives this joint stationary coupling by starting in the remote past.
+Their difference satisfies \(\dot Z=-HZ-tF(X)\), where
+\(F=\nabla(T+W_k)\). Variation of constants and the block majorant give
+\(\sup_eE|Z_e|\le th/m\), with \(h=\sup_eE_\mu|F_e|\le L\varepsilon/t\).
+By (76), each resolvent pairing is the time integral of
+\(tE[g_a(X_0)\cdot e^{-sH}g_b(X_s)]\) (and likewise for \(Y\)). Subtract
+the two products, use the mean-value formula for each score, and
+integrate \(e^{-5s}e^{sC}\). The two terms each cost
+\(tGD_*\sup_eE|Z_e|/m\) in weighted row norm. Therefore
+\(\|\mathcal M\|_\gamma\le2t^2GD_*h/m^2\). This compares directly to
+\(G\), including the entire barrier endpoint. Combining with (81) proves
+(80). All steps hold at finite \(k,N\) with the displayed constants.
+\(\square\)
+
+\textbf{Applicability and cost.} This is outcome \textbf{(b)}: its
+inputs concern local scores, tails and first drift moments, rather than
+a resolvent residual. A local quadratic score can retain its linear part
+globally and smoothly truncate its quadratic part outside \(D\); on the
+shrinking chart this plausibly gives \(G_0,D_0\) independent of \(t\).
+Applying (80) to §17 requires constructing these extensions as
+gradients, checking their marginal constants and bounding their Gaussian
+covariance error by \(E_0\varepsilon^3/t\) in weighted row norm. That
+explicit additional score-extension hypothesis adds \(E_0\) to (80)'s
+constant when comparing to the original Gaussian scores; fixed-\(N\)
+barrier limits also require convergence of the extended score
+covariances. The Gaussian extension error is a local polynomial-tail
+calculation. For (79), the cubic remainder suggests
+\(E|\nabla_eT|=O(\varepsilon^2/t)\); a uniform profile bound
+\(|w_k'|e^{-w_k/2}\le\Omega_{\rm app}/\varepsilon\) gives
+\(E_\mu|\nabla_ew_k|\le\Omega_{\rm app}p/[\varepsilon(1-p)]\). The work
+still owed is the interacting removed-edge tail, this profile bound, and
+deterministic Hessian envelopes. The Gaussian tail (55) makes the scales
+plausible, while its transfer to the extended measure is an additional
+proof. The stop rule is met by this conditional lemma; (80) becomes
+applicable only after those local hypotheses are proved.
 \end{document}
