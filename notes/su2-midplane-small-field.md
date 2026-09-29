@@ -1656,3 +1656,99 @@ The next cell-2 task is general boundary layers; comparison to the full
 integral outside this chart (images/large fields), fixed-frame equivalence,
 electric projection, iteration and stability under perturbed actions remain.
 The present amplitude bound already includes images inside the compact chart.
+
+## 14. Round 16: unequal layers and a quasi-local remainder
+
+**GPT-6 Astra, 2026-09-29; written bounds, unrefereed.** The cut-face
+identity is $P_eQ_e=U_{f_e}$ (series/parallel, Proposition 1, **passage**).
+Consequently zero cut flux means $P_e=Q_e^{-1}$: after transporting both
+layers to the mid-vertex frames, they coincide. Unequal layers in those
+frames require cut flux. We treat $|X_e|\le\varepsilon$ below, and recover
+the requested zero-cut-flux case by setting $X=0$.
+
+### 14.1 Unequal layers: reference and comparison (Part 1)
+
+Write the endpoints as $m_{*e}\exp(\pm b_e/2)$, $|b_e|=|X_e|$, and
+put $Y_p=\log m_{*\partial p}$, $w=(x+y)/2$, $a=Y-w$.
+Here $x,y$ are the two transverse face logs in their common basepoint
+frames; assume $|x_p|,|y_p|,|b_e|\le\varepsilon$. Keep all midpoint
+cycles free. With $C=C_{m_*}$, $P=(8+CC^*)^{-1}$, $H=4+C^*C/2$,
+the covariantization of (29), including its determinant, is
+
+$$\begin{aligned}
+E_w^{(2)}(\xi)&=2\|\xi\|^2+\tfrac14\|w+C\xi\|^2
+ -\tfrac18(\|x\|^2+\|y\|^2),\\
+\mathcal D_{xy}^{\rm cov}&=\tfrac1{2t}\langle x+y,P(x+y)\rangle
+ -\tfrac1{8t}(\|x\|^2+\|y\|^2)+\tfrac12\log(\det H/\det H_1).
+\end{aligned}\tag{59}$$
+
+The actual energy is $E=\sum_e B(b_e,\xi_e)+\sum_p F(Y_p,O_{pe}\xi_e)
+-(\|x\|^2+\|y\|^2)/8$, with the four signed rotations of §4.
+Define $\beta$ as half the maximum of the suprema of
+$\|D_b^2D_\xi^2B\|,\|D_b^2D_\xi^3B\|$ on §4's compact chart.
+Evenness in $b$ and $B(0,\xi)=2|\xi|^2$ give
+$\|D_\xi^2B-4I\|,\|D_\xi^3B\|\le\beta|b|^2$ there.
+At zero the exact Hessian is $4\Pi_b+4h_b\Pi_b^\perp$,
+$h_b=(|b|/4)\cot(|b|/4)$, with the continuous value at $b=0$;
+the bridge gradient vanishes. Thus $\nabla E(0)=C^*Y/2$ exactly.
+
+Let $M$ be the supremum of the second derivative of the local face-log
+map in its four insertion blocks, using their sum norm, on the same
+chart; set $c_M=M/2$. Taylor expansion of the two endpoint products
+at insertion $\pm b/2$ cancels the linear terms and gives
+$|a_p|\le c_M\sum_{e\in\partial p}|b_e|^2$.
+Consequently, writing $S=\|x\|^2+\|y\|^2$ and $T=\sum_e|b_e|^2$,
+$\|a\|^2\le8c_M^2\varepsilon^2T$ and
+$\|Y\|^2\le S+16c_M^2\varepsilon^2T$; also $|Y_p|\le3\varepsilon$.
+
+Put $K_u=\beta+56L_F+1$ and impose $3\varepsilon\le1/16$,
+$K_u\varepsilon\le1/4$, $2\varepsilon<c_0\le1/16$ and
+$\kappa_u=\beta\varepsilon^2+8L_F(3\varepsilon+4c_0)\le1/4$.
+The proof of (43), with $Y$ replacing $z$, has Hessian row error
+$\le K_u\varepsilon$ on the radius-$\varepsilon$ ball and initial
+iterate $\|\xi_0\|_\infty\le3\varepsilon/4$. Its contraction gives
+$\|\xi_*\|_\infty\le6\varepsilon/7$,
+$\|\xi_*\|_{1,b}\le(8/7)\sum_p|Y_p|$ and
+$\|\xi_*\|_2\le\sqrt2\|Y\|_2/3$. The classical comparison is
+
+$$|\min E-\min E_w^{(2)}|\le C_{\rm cl}\varepsilon(S+T),\qquad
+C_{\rm cl}=K_u(1+16c_M^2)+c_M+2c_M^2.\tag{60}$$
+
+Indeed comparison first to $E_Y^{(2)}$ costs $K_u\varepsilon\|Y\|^2$;
+the remaining difference is $2\langle Y,PY\rangle-2\langle w,Pw\rangle$,
+bounded by $\|w\|\|a\|/2+\|a\|^2/4$ since $\|P\|\le1/8$.
+For $A=\nabla^2E(\xi_*)$, (54)'s trace proof now gives
+
+$$\left|\tfrac12\log\frac{\det A}{\det A_1}
+-\tfrac12\log\frac{\det H}{\det H_1}\right|
+\le C_D\sum_p|Y_p|+\tfrac\beta2 T,\qquad C_D=46L_F/7.\tag{61}$$
+
+The bridge contributes trace norm $3\beta T$; all interpolating
+Hessians exceed $3I$. The moments (55) survive with $\kappa_u$.
+The Gaussian rectangle still lies in the barrier-free region because
+$6\varepsilon/7+\varepsilon<2\varepsilon$. Equation (56) holds with
+$A_L$ replaced by $A_u=A_L+(\beta/3)(8/3)^{3/2}$, accounting for
+the cubic bridge remainder on $2N$ edges.
+Enlarge $D_J\ge1$ to include the first derivatives in $b,Y,x,y$ and
+the same second insertion derivatives of the local amplitudes. Then
+(57)'s right side becomes
+$D_J[\sum_e|b_e|+\sum_p(|x_p|+|y_p|)+(31/7)\sum_p|Y_p|]$.
+With $9tD_J\le1/4$ the centered amplitude cost remains
+$12D_J(\sqrt3+3D_J)N\sqrt t$ after identity normalization.
+
+Thus, for $\alpha=1/2-\delta$, $0<\delta<1/6$, $t\le1/2$ and
+$2e^{-t^{-2\delta}/2}\le1/2$, the full barriered normalized bound is
+
+$$\left|-\log\frac{Z_E^J(U)}{Z_E^J(1)}-\mathcal D_{xy}^{\rm cov}\right|
+\le C_u t^\alpha\left[\sum_p\left(1+\frac{|x_p|^2+|y_p|^2}{t}\right)
++\sum_e\left(1+\frac{|X_e|^2}{t}\right)\right],\tag{62}$$
+
+where an explicit loose choice is
+$C_u=1000(1+C_{\rm cl}+C_D+\beta+c_M+c_M^2+A_u+B_\delta+D_J+D_J^2)(1+c_M)$.
+Use $\sum|Y|\le\frac12\sum(|x|+|y|)+2c_MT$ and §13's scalar
+Young bound to assemble it. This is weak P($\alpha$) including the cut
+faces, with zero extra coupling shifts. Setting $X=0$ gives $x=y=Y$
+and (58) (the extra $2N$ is absorbed in its constant). For genuinely
+unequal layers, the transverse-only target additionally needs control
+of the explicit midpoint term $[2\langle Y,PY\rangle-2\langle w,Pw\rangle]/t$
+and the cut contributions in (60)--(61) by that smaller budget.
