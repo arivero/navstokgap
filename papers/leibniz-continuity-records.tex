@@ -32,13 +32,15 @@ over these protocols is continuous in the force at \(F=0\) if and only
 if \(\kappa>0\)}; each single protocol gives a continuous verdict on
 both branches. The same holds on Zeno's rung, rest against uniform
 motion, with \(mv^2\tau/(8\kappa)\) in place of \(K_\tau/(4\kappa)\),
-attained by two marks. A single cut at fraction \(s\) carries exactly
-the discernibility \(d^2=3s(1-s)K_\tau/\kappa\), the cut measure's share
-(§3). Static shapes behave differently: when the read coordinate has no
-dynamics in the window, the best verdict jumps at zero for every
-\(\kappa\). The equivalence concerns the observer ignorant of the
-preparation; a protocol that knows it (Yuen's, in §3 of the paper)
-decides at every force for every \(\kappa\).
+attained by two marks. Any finite schedule of marks reaches exactly the
+cut measure's spent action over \(\kappa\), so a single cut at fraction
+\(s\) carries \(d^2=3s(1-s)K_\tau/\kappa\)
+(\href{cut-measure-newton.md}{cut-measure note}, Proposition 7). Static
+shapes behave differently: when the read coordinate has no dynamics in
+the window, the best verdict jumps at zero for every \(\kappa\). The
+equivalence concerns the observer ignorant of the preparation; a
+protocol that knows it (Yuen's, in §3 of the paper) decides at every
+force for every \(\kappa\).
 
 Leibniz published the law of continuity in July 1687, the year of the
 \emph{Principia}, as a test of laws of motion: when two cases approach
@@ -120,14 +122,9 @@ fixes only the exact value. Zeno's rung is Theorem 9(i) of the paper,
 whose bound \(d^2\le mv^2\tau/(2\kappa)\) two marks attain. The static
 case is Theorem 9(iii): with \(N\) marks of resolution \(\delta\) at
 each height, \(d^2=N\vartheta^2\Delta h^2/(2\delta^2)\), unbounded in
-\(N\) whatever \(\kappa\) is. For one cut, the constraints force
-\(u\propto(-(1-s),1,-s)\); then \(S_0=S_2=0\) and
-\(S_1=-s(1-s)\tau u_1\), so the noise is at least
-\(\delta_1^2u_1^2+\Delta_1^2S_1^2/m^2\ge(2\kappa/m)s(1-s)\tau u_1^2\) by
-the arithmetic--geometric mean, with equality for sharp end marks (their
-kicks do not propagate) and \(\delta_1=\Delta_1s(1-s)\tau/m\); the
-signal is \((F\tau^2/2m)^2s^2(1-s)^2u_1^2\), and the ratio is
-\(F^2\tau^3s(1-s)/(8m\kappa)=3s(1-s)K_\tau/\kappa\). \(\square\)
+\(N\) whatever \(\kappa\) is. The single cut is the case \(N=2\) of
+Proposition 7 of the cut-measure note, which treats every finite
+schedule. \(\square\)
 
 For \(\kappa>0\) the verdict is Lipschitz at \(F=0\) with constant
 \(\tau^{3/2}/(2\sqrt{2\pi}\sqrt{24m\kappa})\), which diverges as
@@ -347,13 +344,12 @@ passage, OCR normalized by hand).
   always differ, by differences that can be insensible.
 \item
   \textbf{What the theorem does with it.} The mark model makes the
-  addition exact. A single cut at fraction \(s\) carries the
-  discernibility \(3s(1-s)K_\tau/\kappa\) (Proposition L), which is the
-  share of Newton's cell action that the
-  \href{cut-measure-newton.md}{cut measure} assigns to that cut
-  (Theorems 1--2), and nested cuts add their shares toward
-  \(K_\tau/\kappa\) in the balanced dense limit (the orthogonal hats of
-  Theorem 2 there; Proposition 4 gives the same decomposition as
+  addition exact. The best discernibility of any finite schedule of
+  marks is the Newton cell action its cuts spend, over \(\kappa\), and
+  each added mark adds exactly its cut's share
+  \(3s(1-s)K_{\tau_i}/\kappa\), at every finite stage
+  (\href{cut-measure-newton.md}{cut measure}, Proposition 7, with
+  Theorems 1--2 there; Proposition 4 gives the same decomposition as
   Cameron--Martin energy). The doctrine has two halves, and they fall
   differently. ``Cent mille riens ne sauroient faire quelque chose''
   asks that every share be positive, which holds for every

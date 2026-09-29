@@ -286,6 +286,62 @@ Theorem E of the fifth-postulate note, $ab\ge\hbar c_*(\epsilon)$ with
 $c_*(\epsilon)\simeq\frac12\ln(1/\epsilon)$ in window half-widths; the constants refer to
 different quantities (a cell's Galileo action and a phase-space window).
 
+## 5c. Mark protocols spend exactly the cut measure (Proposition 7)
+
+**Proposition 7 (2026-09-29, Claude, generalizing a single-cut computation
+by Fable; written proof, unrefereed).** Take the mark model of the
+[Planck paper](planck-gap-paper.md), §3: mark $j$ returns the position with
+Gaussian error $\delta_j$ and delivers a Gaussian impulse $\Delta_j$ with
+$\delta_j\Delta_j\ge\kappa$; protocols are non-adaptive and tests invariant under the
+unknown initial position and velocity. Let the marks sit at
+$t_0<t_1<\dots<t_N$, with $\tau=t_N-t_0$ and pieces $\tau_i=t_i-t_{i-1}$. Then the
+supremum over the marks' $\delta_j,\Delta_j$ of the discernibility is
+
+$$\sup d^2=\frac{K_\tau-\sum_iK_{\tau_i}}{\kappa}=\frac1\kappa\sum_{\rm cuts}\frac m2\int\dot\phi_{\rm cut}^2,
+\qquad K_\tau=\frac{F^2\tau^3}{24\,m},$$
+
+the action that the interior cuts spend by Theorems 1--2. It is approached
+with sharp end marks and balanced interior marks. Special cases: a single
+cut at fraction $s$ gives $3s(1-s)K_\tau/\kappa$; $N$ equal pieces give
+$(1-N^{-2})K_\tau/\kappa$, so $n$ halvings give $(1-4^{-n})K_\tau/\kappa$; the dense limit gives
+$K_\tau/\kappa$, the paper's Theorem 2. Adding a mark inside a piece adds exactly
+that cut's share, $3s(1-s)K_{\tau_i}/\kappa$: the squared statistical distance is
+additive under refinement at every finite stage.
+
+*Proof.* Write $T(w)=\sum_{t_i>w}u_i(t_i-w)$ for the test weights $u$. The
+invariance constraints $\sum u_i=\sum u_it_i=0$ say exactly that $T$ is piecewise
+linear with kinks at the $t_j$ and vanishes outside $(t_0,t_N)$, and every such
+$T$ arises from one $u$, with $u_j$ the jump of $T'$ at $t_j$. The paper's §3
+gives the signal $\frac Fm\int T$ and the noise
+$\sum_j\delta_j^2u_j^2+\sum_j\Delta_j^2T(t_j)^2/m^2\ge\frac{2\kappa}m\sum_j|u_j|\,|T(t_j)|$, by the
+arithmetic--geometric mean. Summation by parts gives
+$\sum_ju_jT(t_j)=-\int T'^2$, hence
+
+$$d^2\le\frac{F^2}{2m\kappa}\,\frac{(\int T)^2}{\int T'^2}.$$
+
+Let $V_h$ be the piecewise-linear functions on the grid vanishing at $t_0,t_N$,
+and $T_h\in V_h$ the Galerkin solution of $-T''=1$: $\int T_h'\varphi'=\int\varphi$ for all
+$\varphi\in V_h$. Cauchy--Schwarz in the energy product gives
+$(\int T)^2\le\int T_h'^2\int T'^2$ with $\int T_h'^2=\int T_h$, so the ratio is at most
+$\int T_h$. In one dimension $T_h$ interpolates $p(w)=\frac12(w-t_0)(t_N-w)$ at the
+nodes, since the Dirichlet Green's function with its source at a node lies
+in $V_h$ and the error $p-T_h$ is Galerkin-orthogonal to $V_h$. So $\int T_h$ is the
+trapezoid rule for $p$, whose error on a piece is $-\tau_i^3p''/12=\tau_i^3/12$, and
+$\int T_h=(\tau^3-\sum_i\tau_i^3)/12$. This gives the upper bound
+$F^2(\tau^3-\sum\tau_i^3)/(24m\kappa)$. For attainment take $T=T_h$, which is
+nonnegative and concave, so all $u_jT(t_j)$ have one sign; choose
+$\delta_j=\Delta_jT_h(t_j)/(m|u_j|)$ at interior marks, and let the end marks be sharp,
+$\delta_0,\delta_N\to0$ with $\Delta_0,\Delta_N\to\infty$, which costs nothing because $T$ vanishes
+there and their impulses reach no later reading. $\square$
+
+The two constructions of this note and the paper's are therefore one: the
+Newton cell action spent by any finite set of cuts is, over $\kappa$, the best
+discernibility of a mark protocol placed at those cuts. With $\kappa=\hbar/2$ the
+dense value reproduces Proposition 6's exponent, $\frac12\sqrt{K_\tau/\kappa}=\sqrt{K_\tau/(2\hbar)}$,
+from the mark model instead of the path measure. The
+[continuity note](leibniz-continuity-records.md) reads the additivity as
+Leibniz's *petites perceptions*.
+
 ## 6. Consequence for STATE
 
 Atlas §1b: the Newton row of "cuts at any position" is proved here

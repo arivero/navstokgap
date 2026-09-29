@@ -478,6 +478,103 @@ class="math inline">\(ab\ge\hbar c_*(\epsilon)\)</span> with <span
 class="math inline">\(c_*(\epsilon)\simeq\frac12\ln(1/\epsilon)\)</span>
 in window half-widths; the constants refer to different quantities (a
 cell’s Galileo action and a phase-space window).</p>
+<h2
+id="c.-mark-protocols-spend-exactly-the-cut-measure-proposition-7">5c.
+Mark protocols spend exactly the cut measure (Proposition 7)</h2>
+<p><strong>Proposition 7 (2026-09-29, Claude, generalizing a single-cut
+computation by Fable; written proof, unrefereed).</strong> Take the mark
+model of the <a href="planck-gap-paper.html">Planck paper</a>, §3: mark
+<span class="math inline">\(j\)</span> returns the position with
+Gaussian error <span class="math inline">\(\delta_j\)</span> and
+delivers a Gaussian impulse <span
+class="math inline">\(\Delta_j\)</span> with <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>; protocols are
+non-adaptive and tests invariant under the unknown initial position and
+velocity. Let the marks sit at <span
+class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_N\)</span>, with <span
+class="math inline">\(\tau=t_N-t_0\)</span> and pieces <span
+class="math inline">\(\tau_i=t_i-t_{i-1}\)</span>. Then the supremum
+over the marks’ <span class="math inline">\(\delta_j,\Delta_j\)</span>
+of the discernibility is</p>
+<p><span class="math display">\[\sup
+d^2=\frac{K_\tau-\sum_iK_{\tau_i}}{\kappa}=\frac1\kappa\sum_{\rm
+cuts}\frac m2\int\dot\phi_{\rm cut}^2,
+\qquad K_\tau=\frac{F^2\tau^3}{24\,m},\]</span></p>
+<p>the action that the interior cuts spend by Theorems 1–2. It is
+approached with sharp end marks and balanced interior marks. Special
+cases: a single cut at fraction <span class="math inline">\(s\)</span>
+gives <span class="math inline">\(3s(1-s)K_\tau/\kappa\)</span>; <span
+class="math inline">\(N\)</span> equal pieces give <span
+class="math inline">\((1-N^{-2})K_\tau/\kappa\)</span>, so <span
+class="math inline">\(n\)</span> halvings give <span
+class="math inline">\((1-4^{-n})K_\tau/\kappa\)</span>; the dense limit
+gives <span class="math inline">\(K_\tau/\kappa\)</span>, the paper’s
+Theorem 2. Adding a mark inside a piece adds exactly that cut’s share,
+<span class="math inline">\(3s(1-s)K_{\tau_i}/\kappa\)</span>: the
+squared statistical distance is additive under refinement at every
+finite stage.</p>
+<p><em>Proof.</em> Write <span
+class="math inline">\(T(w)=\sum_{t_i&gt;w}u_i(t_i-w)\)</span> for the
+test weights <span class="math inline">\(u\)</span>. The invariance
+constraints <span class="math inline">\(\sum u_i=\sum u_it_i=0\)</span>
+say exactly that <span class="math inline">\(T\)</span> is piecewise
+linear with kinks at the <span class="math inline">\(t_j\)</span> and
+vanishes outside <span class="math inline">\((t_0,t_N)\)</span>, and
+every such <span class="math inline">\(T\)</span> arises from one <span
+class="math inline">\(u\)</span>, with <span
+class="math inline">\(u_j\)</span> the jump of <span
+class="math inline">\(T&#39;\)</span> at <span
+class="math inline">\(t_j\)</span>. The paper’s §3 gives the signal
+<span class="math inline">\(\frac Fm\int T\)</span> and the noise <span
+class="math inline">\(\sum_j\delta_j^2u_j^2+\sum_j\Delta_j^2T(t_j)^2/m^2\ge\frac{2\kappa}m\sum_j|u_j|\,|T(t_j)|\)</span>,
+by the arithmetic–geometric mean. Summation by parts gives <span
+class="math inline">\(\sum_ju_jT(t_j)=-\int T&#39;^2\)</span>, hence</p>
+<p><span class="math display">\[d^2\le\frac{F^2}{2m\kappa}\,\frac{(\int
+T)^2}{\int T&#39;^2}.\]</span></p>
+<p>Let <span class="math inline">\(V_h\)</span> be the piecewise-linear
+functions on the grid vanishing at <span
+class="math inline">\(t_0,t_N\)</span>, and <span
+class="math inline">\(T_h\in V_h\)</span> the Galerkin solution of <span
+class="math inline">\(-T&#39;&#39;=1\)</span>: <span
+class="math inline">\(\int T_h&#39;\varphi&#39;=\int\varphi\)</span> for
+all <span class="math inline">\(\varphi\in V_h\)</span>. Cauchy–Schwarz
+in the energy product gives <span class="math inline">\((\int
+T)^2\le\int T_h&#39;^2\int T&#39;^2\)</span> with <span
+class="math inline">\(\int T_h&#39;^2=\int T_h\)</span>, so the ratio is
+at most <span class="math inline">\(\int T_h\)</span>. In one dimension
+<span class="math inline">\(T_h\)</span> interpolates <span
+class="math inline">\(p(w)=\frac12(w-t_0)(t_N-w)\)</span> at the nodes,
+since the Dirichlet Green’s function with its source at a node lies in
+<span class="math inline">\(V_h\)</span> and the error <span
+class="math inline">\(p-T_h\)</span> is Galerkin-orthogonal to <span
+class="math inline">\(V_h\)</span>. So <span class="math inline">\(\int
+T_h\)</span> is the trapezoid rule for <span
+class="math inline">\(p\)</span>, whose error on a piece is <span
+class="math inline">\(-\tau_i^3p&#39;&#39;/12=\tau_i^3/12\)</span>, and
+<span class="math inline">\(\int
+T_h=(\tau^3-\sum_i\tau_i^3)/12\)</span>. This gives the upper bound
+<span
+class="math inline">\(F^2(\tau^3-\sum\tau_i^3)/(24m\kappa)\)</span>. For
+attainment take <span class="math inline">\(T=T_h\)</span>, which is
+nonnegative and concave, so all <span
+class="math inline">\(u_jT(t_j)\)</span> have one sign; choose <span
+class="math inline">\(\delta_j=\Delta_jT_h(t_j)/(m|u_j|)\)</span> at
+interior marks, and let the end marks be sharp, <span
+class="math inline">\(\delta_0,\delta_N\to0\)</span> with <span
+class="math inline">\(\Delta_0,\Delta_N\to\infty\)</span>, which costs
+nothing because <span class="math inline">\(T\)</span> vanishes there
+and their impulses reach no later reading. <span
+class="math inline">\(\square\)</span></p>
+<p>The two constructions of this note and the paper’s are therefore one:
+the Newton cell action spent by any finite set of cuts is, over <span
+class="math inline">\(\kappa\)</span>, the best discernibility of a mark
+protocol placed at those cuts. With <span
+class="math inline">\(\kappa=\hbar/2\)</span> the dense value reproduces
+Proposition 6’s exponent, <span
+class="math inline">\(\frac12\sqrt{K_\tau/\kappa}=\sqrt{K_\tau/(2\hbar)}\)</span>,
+from the mark model instead of the path measure. The <a
+href="leibniz-continuity-records.html">continuity note</a> reads the
+additivity as Leibniz’s <em>petites perceptions</em>.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Atlas §1b: the Newton row of “cuts at any position” is proved here
 (Theorems 1–2, Corollary 3), with the Lévy–Ciesielski identification and
