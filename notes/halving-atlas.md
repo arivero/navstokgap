@@ -274,8 +274,12 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    [Hamiltonian memory, §8](sed-closure-under-recording.md#8-hamiltonian-memory-terminal-records-and-blocking)
    realizes the monitor cost and proves terminal posterior closure from
    the joint initial covariance restriction; linear blocking preserves
-   it for the same body (Sol/Astra, written). Open: a genuine two-copy
-   refinement and joint-law comparison, and independent positive scale.
+   it for the same body. §§8.4--8.6 give a genuine two-time physical copy
+   refinement with an explicit relative kick and joint-law defect (62),
+   and a partition-uniform complete-record information bound (63), even
+   at zero action (Sol/Astra, written). Next: associative three-cell
+   blocking with the required timing/noise data; independent positive
+   scale remains open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the
