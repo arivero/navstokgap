@@ -124,7 +124,25 @@ already holds the gluing of pairs at $\hbar>0$ (the segment) to tangent vectors
 at $\hbar=0$ (the point). A candidate Newton test: whether the repeated cutting
 of a Galileo cell extends continuously to the $\hbar=0$ fibre.
 
+**The test, answered (Claude, 2026-09-29).** It reduces to an order of
+limits. Under the path measure of the
+[cut-measure note](cut-measure-newton.md), a Galileo cell of duration $\tau$
+distinguishes constant force from inertia with error at most $\epsilon$ iff
+$K_\tau=F^2\tau^3/(24m)\ge2z_{1-\epsilon}^2\hbar$ (Proposition 6). Recorded chords
+therefore have $\tau\ge\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, the mark mesh, and in
+the groupoid topology a sequence $(x,y,\tau)$ of such chords reaches the
+fibre $TM\times\{0\}$ only if $\hbar/K_\tau\to0$ along it. At fixed $\hbar>0$ the
+recorded arrows keep the distance $\tau_*$ from Newton's fibre; on the
+branch $\hbar=0$, and on every path with $\hbar=o(F^2\tau^3/m)$, they reach it
+continuously. Repeated cutting is consistent on both sides, so the test
+restates the fork of Theorem A and supplies no necessity. The decision
+round of 2026-09-29 (Astra) reached the same verdict without the
+computation and chose cell 2.
+
 ## Consequence for STATE
 
-None yet. The candidate Newton premise (information loss as in 't Hooft's
-equivalence classes) goes to an Astra decision round after round 14.
+None. The Astra decision round of 2026-09-29 weighed the information-loss
+premise of 't Hooft's equivalence classes, the tangent-groupoid test and
+cell 4, and chose cell 2: the equivalence classes still lack a stated
+link to a lower bound on recorded Galileo areas, and the groupoid test,
+answered above, restates the fork.
