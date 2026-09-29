@@ -64,7 +64,7 @@ fill its cells (open cells in its §5).
    [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
    are refereed (Round 5B A); its §5b displays the fundamental SU(3)
    trisection (5B B, written). Image-to-volume control remains open.
-   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); [Round 16 §14](../notes/su2-midplane-small-field.md#14-round-16-unequal-layers-and-a-quasi-local-remainder) extends the barriered comparison to unequal layers with cut-face logs (unrefereed). Cell 2 next: close §14.2's soft-barrier, boundary-score and local barrier-cost estimates, then full-integral comparison and perturbed-action stability; fixed-frame equivalence and iteration remain open. Higher-spin sum control remains an alternative route.
+   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); [Round 16 §14](../notes/su2-midplane-small-field.md#14-round-16-unequal-layers-and-a-quasi-local-remainder) extends the barriered comparison to unequal layers with cut-face logs (refereed by Claude). Cell 2 next: close §14.2's soft-barrier, boundary-score and local barrier-cost estimates, then full-integral comparison and perturbed-action stability; fixed-frame equivalence and iteration remain open. Higher-spin sum control remains an alternative route.
    The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
    to any action and dimension: all 2D limits (Lévy exponents), and the
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
