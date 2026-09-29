@@ -4249,6 +4249,110 @@ estimates. Cell 2 next needs the contact terms, admissible paths and
 all-order growth in (94), with its activity scale; curvature conversion,
 full-integral comparison, perturbed-action stability and iteration
 remain open.</p>
+<h2 id="round-23-the-n-th-response-and-its-growth">23. Round 23: the
+n-th response and its growth</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; written derivation,
+unrefereed.</strong> The exact response has an iterated covariance
+representation with <span class="math inline">\((n-1)!\)</span> ordered
+histories. Its unordered marginal bound below separates this count from
+higher-jet growth. Uniform higher barrier jets are additional
+hypotheses.</p>
+<h3 id="separated-responses-and-an-explicit-majorant-part-1">23.1
+Separated responses and an explicit majorant (Part 1)</h3>
+<p>Use §22’s scaled directions and scalar score extensions, fixed
+insertion coordinates and fixed barrier. For <span
+class="math inline">\(n\ge2\)</span> mutually separated labels, <span
+class="math inline">\(d\mu\propto e^{-S-W}d\xi\)</span> and <span
+class="math inline">\(dG\propto e^{-V_2}d\xi\)</span> give <span
+class="math display">\[\partial_{a_1}\cdots\partial_{a_n}r
+=(-1)^{n-1}\{\kappa_\mu(A_{a_1},\ldots,A_{a_n})
+-\kappa_G(\sigma_{a_1},\ldots,\sigma_{a_n})\}.\tag{103}\]</span> Here
+<span class="math inline">\(r\)</span> has the free-energy sign of (90);
+deterministic local terms vanish for separated labels. Define <span
+class="math inline">\(\Gamma(h,g)=\nabla h\cdot R\nabla g\)</span>. At
+finite <span class="math inline">\(k\)</span>, (22) applied to a
+product, followed by the moment–cumulant identity, gives <span
+class="math display">\[\kappa(h_1,\ldots,h_s,g)=t\sum_{i=1}^s
+\kappa(h_1,\ldots,\widehat h_i,\ldots,h_s,\Gamma(h_i,g)).\]</span> One
+verification is to apply (22) to <span class="math inline">\(e^{\sum z_i
+h_i}\)</span> and <span class="math inline">\(g\)</span>, divide by its
+expectation, and compare the coefficient of <span
+class="math inline">\(z_1\cdots z_s\)</span>; finite-order truncation
+and integrable cutoffs suffice for this identity. Iterating with the
+composite observable last proves the exact formula <span
+class="math display">\[\kappa(A_1,\ldots,A_n)=t^{n-1}\sum_{\pi\in\mathfrak
+S_{n-1}}
+E\Gamma(A_{\pi(n-1)},\Gamma(A_{\pi(n-2)},\ldots,
+\Gamma(A_{\pi(1)},A_n)\ldots)).\tag{104}\]</span> Each contraction
+attaches a fresh score to the existing connected expression. These are
+rooted contraction histories; expansion by the product rule gives
+decorated trees, with differentiated resolvents at internal vertices.
+Their multiplicities are retained in (105), rather than identifying the
+histories with the <span class="math inline">\(n^{n-2}\)</span> labelled
+simple trees.</p>
+<p>Here is a finite-order bound with every combinatorial coefficient
+explicit. Use §21’s tree-weighted one-index marginal norm, now with
+block <span class="math inline">\(L^{4n}\)</span> norms for elementary
+tensors. Set <span class="math inline">\(v_0=F\)</span>, <span
+class="math inline">\(v_1=D_F\)</span>, and <span
+class="math inline">\(v_r=J^{\rm sc}_{r+1}\)</span> for <span
+class="math inline">\(2\le r\le n-2\)</span>, where <span
+class="math inline">\(\|D_\xi^j\widehat A\|_{\gamma,\mathrm{marg},4n}
+\le J^{\rm sc}_j\varepsilon/t\)</span> defines the higher insertion
+score jets. Thus <span class="math inline">\(J^{\rm sc}_1=F,J^{\rm
+sc}_2=D_F\)</span>; these symbols are separate from §22’s local map
+constants. For <span class="math inline">\(3\le j\le n\)</span> put
+<span class="math display">\[B_j=t\|D^jS\|_{\gamma,\mathrm{marg},4n}
++t\varepsilon^{-j}K_{j,4n}\left({p\over1-p}\right)^{1/(4n)},\qquad
+K_{j,P}=\sup_{k,\xi}\varepsilon^j\|D^jw_k(\xi)\|_F
+e^{-w_k(\xi)/P}.\]</span> The edge-removal argument proves this majorant
+for <span class="math inline">\(tD^jV\)</span> whenever <span
+class="math inline">\(K_{j,4n}&lt;\infty\)</span>; finite-<span
+class="math inline">\(k\)</span> versions use the same supremum at that
+<span class="math inline">\(k\)</span>. Both the score jets and <span
+class="math inline">\(B_j\)</span> may depend on <span
+class="math inline">\(t\)</span> and order. Uniformity is an explicit
+premise wherever these constants are used uniformly.</p>
+<p>For a nonnegative jet vector <span class="math inline">\(h\)</span>,
+define recursively <span class="math display">\[U_0(h)=h_0/m,\qquad
+U_r(h)={h_r+\sum_{j=2}^{r+1}\binom{r+1}{j}B_{j+1}U_{r+1-j}(h)
+\over(r+1)m},\qquad
+\mathcal B(v,h)_r=\sum_{l=0}^{r+1}\binom{r+1}{l}v_lU_{r+1-l}(h).
+\tag{105}\]</span> Start <span class="math inline">\(h^{(0)}=v\)</span>
+and take <span class="math inline">\(h^{(s+1)}=\mathcal
+B(v,h^{(s)})\)</span>, losing one available jet each time. Write <span
+class="math inline">\(H_n=(F/m)h^{(n-2)}_0\)</span>. The Gaussian
+quantity <span class="math inline">\(H_n^G\)</span> uses <span
+class="math inline">\(B_j=0\)</span>, <span
+class="math inline">\(v_0^G=\sqrt{4n}(G_0+A_0)\)</span>, <span
+class="math inline">\(v_1^G=D_G\)</span> and <span
+class="math inline">\(v_r^G=0\)</span> for <span
+class="math inline">\(r\ge2\)</span>; Gaussian moment recursion bounds
+its affine gradient in <span class="math inline">\(L^{4n}\)</span> by
+this <span class="math inline">\(v_0^G\varepsilon/t\)</span>. Then the
+ordered separated marginal is bounded by <span
+class="math display">\[\sup_{a_1}\sum_{a_2,\ldots,a_n\ {\rm separated}}
+e^{\gamma\ell(a_1,\ldots,a_n)}|\partial_{a_1}\cdots\partial_{a_n}r|
+\le (n-1)!\,{\varepsilon^n\over t}(H_n+H_n^G).\tag{106}\]</span> To
+check (105), differentiate the scalar Poisson equation <span
+class="math inline">\(r+1\)</span> times. The rank-<span
+class="math inline">\((r+1)\)</span> resolvent has norm at most <span
+class="math inline">\(1/((r+1)m)\)</span>; the remaining commutators are
+<span
+class="math inline">\(\binom{r+1}{j}tD^{j+1}V\,D^{r+1-j}u\)</span>,
+<span class="math inline">\(j\ge2\)</span>. Leibniz gives <span
+class="math inline">\(\mathcal B\)</span>. Tree weights multiply under
+contraction. Every expanded term contains <span
+class="math inline">\(n\)</span> score factors and at most <span
+class="math inline">\(n-2\)</span> higher-potential factors, so Hölder
+with elementary <span class="math inline">\(L^{4n}\)</span> bounds and
+the <span class="math inline">\(L^p\)</span> semigroup estimates
+justifies each intervening product. Finally (104) supplies <span
+class="math inline">\((n-1)!\)</span>. Passage to the barrier limit
+requires these bounds uniformly in <span
+class="math inline">\(k\)</span> and convergence of the products in
+(104). This is a conditional all-order majorant; §22 already proves the
+sharper third-order estimate with its lower moment requirements.</p>
 
 </main>
 <footer class="site"><div class="wrap">
