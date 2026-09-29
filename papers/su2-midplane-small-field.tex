@@ -3253,4 +3253,71 @@ inequality of §21, proves
 Part 1 supplies the explicit barrier source (99) for bounded-gradient
 score extensions, with \(F\) to be fixed in Part 2 and smallness (98).
 The mixed score jets and final chart theorem are the remaining parts.
+
+\hypertarget{mixed-boundaryinsertion-jets}{%
+\subsubsection{22.2 Mixed boundary--insertion
+jets}\label{mixed-boundaryinsertion-jets}}
+
+Write \(\partial_a=\varepsilon D_a\), where \(D_a\) changes one boundary
+link at unit speed and holds the insertion coordinates fixed. Fix
+\(J_1\ge1\) bounding the local first derivatives of \(b,Y\), the four
+rotations \(O\), and the midpoint-coordinate and endpoint-displacement
+maps, using sum norms. These maps are analytic on the compact chart;
+compact group-valued midpoint links include arbitrary free-cycle
+holonomies. Let \(L_{F,3}\) bound all third derivatives of \(F\) in
+\((Y,z_1,\ldots,z_4)\), and \(L_{B,3}\) all third derivatives of \(B\)
+in \((b,\xi)\). Let \(M_3\) bound the mixed midpoint derivative of the
+second insertion derivative of the face-log map. Enlarge \(M\) to bound
+that second insertion derivative throughout the same chart. All are
+fixed local suprema, independent of \(t,N\). Enlarge \(D_J\) also to
+bound the composed amplitudes' \(D_a\nabla_i\) and
+\(D_a\nabla_i\nabla_j\) derivatives. Their uniformity as
+\(t\downarrow0\) follows from §4's analytic zero-image factors and
+polynomial-times-\(e^{-c/t}\) bounds for differentiated images.
+
+The second-difference formula for the endpoint face logs gives
+\[|Y-w|\le4c_M\varepsilon^2,\qquad
+|\partial_a(Y-w)|\le J_\Delta\varepsilon^2,
+\quad J_\Delta=8J_1(M+M_3).\tag{100}\] Indeed differentiate the integral
+second-order remainder at displacements \(\pm b/2\): their sum norm is
+at most \(2\varepsilon\), their unscaled first derivative is bounded by
+\(J_1\), and the differentiated Hessian costs \(M_3J_1\). Increasing the
+former \(M\) preserves \(c_M=M/2\) and all previous inequalities, with
+the correspondingly stronger smallness conditions.
+
+Put \(F_0=|Y+\sum z_i|^2/4\). The function \(F-F_0\) has zero two-jet at
+the origin. On \(D\), \(|Y|+\sum|z_i|\le15\varepsilon\); Taylor's
+formula bounds its Hessian by \(15L_{F,3}\varepsilon\) and its gradient
+by \(225L_{F,3}\varepsilon^2/2\). Differentiating \(z_i=O_i\xi_i\),
+including \(\partial_aO_i\), therefore costs at most
+\(1000J_1L_{F,3}\varepsilon^2\) per incident face in
+\(|\nabla_i\partial_a(E-E_w^{(2)})|\). The bridge costs at most
+\(4J_1L_{B,3}\varepsilon^2\), since \(D_bD_\xi(B-2|\xi|^2)\) vanishes at
+the origin. The difference between \(F_0(Y)\) and \(F_0(w)\) has
+insertion gradient \(C^*(Y-w)/2\); differentiating both factors and
+using (100) costs at most \((4c_MJ_1+J_\Delta)\varepsilon^2\) over two
+faces. This accounts for the background dependence of both \(w\) and
+\(C_{m_*}\). The old-face term \(-(\|x\|^2+\|y\|^2)/8\) has zero
+insertion derivative. On \(D\) the extension equals the original energy
+plus amplitudes, so moving-saddle and moving-Hessian contributions
+cancel in that equality. The three incident amplitude terms cost
+\(3D_J\varepsilon\). Since \(t\le\varepsilon\), we have proved
+\[h_{ai}\le M_T\varepsilon^2/t,\qquad
+M_T=J_1(2000L_{F,3}+4L_{B,3}+4c_M)+J_\Delta+3D_J,
+\quad C_T\le42e^\gamma M_T.\tag{101}\]
+
+Here are also explicit inputs for the extended scores of §22.1. Form
+\(A_c\) there from the original local action on the enlarged chart; its
+scalar extension serves as an observable for the measure with potential
+\(S+W_k\). Let \(J_2,J_3\ge1\) bound, per local energy or amplitude
+term, respectively \(D_a\nabla_i\) and \(D_a\nabla_i\nabla_j\) in
+colour-block norm on the enlarged chart; include the amplitude
+contribution with \(t\le1/2\). These are finite by the same local
+analytic argument. Before cutoff, \(|l_{c,i}|\le3J_2\varepsilon/t\) and
+\(|D_j\nabla_i A_c|\le3J_3\varepsilon/t\). Taylor's formula on seven
+blocks, with \(\sum|\xi_i|\le42\varepsilon\), and the cutoff product
+rule give gradient and Hessian bounds \(3000(J_2+J_3)\varepsilon/t\) and
+\(10000J_3\varepsilon/t\). Counting the seven-edge supports gives
+\[F=126000e^\gamma(J_2+J_3),\qquad
+D_F=2940000e^{2\gamma}J_3.\tag{102}\]
 \end{document}
