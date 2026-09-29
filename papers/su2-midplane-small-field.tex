@@ -3631,4 +3631,66 @@ measures. The linear-tilt argument supplies the missing joint step using
 the already proved convexity constant, with no barrier derivatives. Its
 scope is the extended chart model; comparison to the original group
 integral outside that chart still requires a separate estimate.
+
+\hypertarget{conditions-for-geometric-responses-and-the-bare-scale-part-2}{%
+\subsubsection{24.2 Conditions for geometric responses and the bare
+scale (Part
+2)}\label{conditions-for-geometric-responses-and-the-bare-scale-part-2}}
+
+The joint estimate permits continuing past the proposed stop rule. Three
+additional conditions would complete this route to (94).
+
+\textbf{Small-field expansion and component correlations.} On the sector
+\(g_e=1\) every barrier vanishes. A connected expansion of its
+interacting integral relative to the covariant Gaussian must control its
+boundary scores, its truncation surface, and the correlations in (109),
+uniformly in volume. Require dressed connected activities \(z_H\) (after
+these correlations have been expanded), with \(|z_H|\le b_*^{|H|}\) and
+the same bound in the source domain used below. A useful explicit
+summability budget on the degree-six graph is
+\[\sup_e\sum_{H\ni e}|z_H|e^{(1+\eta)|H|}\le\frac17,
+\qquad e^{1+\eta}b_*\le\frac1{43}.\tag{112}\] Indeed a canonical
+spanning-tree traversal bounds the number of size-\(j\) sets through an
+edge by \(6^{2(j-1)}=36^{j-1}\). The resulting geometric sum is
+\(e^{1+\eta}b_* /(1-36e^{1+\eta}b_*)\). Each polymer \(H\) has at most
+\(7|H|\) sites in its closed graph neighbourhood, so (112) bounds its
+incompatibility sum by \(|H|\), with an exponential spatial reserve
+\(\eta\). The raw activities satisfy this numerical budget if
+\(x\ge32(1+\eta+\log43)\), by (111). Passing that bound to the dressed
+activities, including clusters linking distant components, is additional
+work.
+
+\textbf{Contacts and scale.} Combine the interacting, Gaussian and
+deterministic local subtractions before taking absolute values in (107).
+Require this cancellation for singleton and adjacent-link contacts as
+well as separated responses, preserving \(t^\alpha\) for the bare
+remainder \(r\). The proved \(C_{27}\varepsilon^3/t\) and
+\(C_3\varepsilon^3/t\) equal \(C_{27}t^\alpha t^{-2\delta}\) and
+\(C_3t^\alpha t^{-2\delta}\). Thus those constants certify a weaker
+bound; recovering the missing \(t^{2\delta}\) requires further
+cancellation or the energy-budget variant of (62). Exponential bad-set
+rarity can absorb any fixed power of \(t^{-1}\); its derivative costs at
+unbounded order still need uniform control.
+
+\textbf{All-order source control.} One precise sufficient target is an
+absolutely convergent subtracted connected expansion \(r=\sum_C R_C\),
+with boundary support \(A_C\), analytic on complex polydiscs of radius
+\(R>0\) about every point of the admissible real path cube. Require
+constants \(A,u,R>0\), independent of \(t,N,k\), such that
+\[\sup_a\sum_{C:a\in A_C}e^{\eta\ell(A_C)}
+ \|R_C\|_R(1+u/R)^{|A_C|}\le At^\alpha,
+ \qquad q=u^{-1}<e^\eta-1.\tag{113}\] Cauchy's bound for distinct labels
+is \(\|R_C\|_R R^{-|X|}\), with no factorial. Expanding the binomial in
+(113) and using \(\ell(X)\le\ell(A_C)\) gives (94) at each order with
+precisely \(A,q,\eta\). This also specifies the source margin required
+in (112). The paths must satisfy §23.2's full product-cube condition and
+cover the target backgrounds.
+
+\textbf{Chart verdict.} Equations (108)--(111) and the raw summability
+budget hold with the stated extra smallness conditions. Sections 20--22
+give real convexity and the pair and separated-triple constants; they
+leave (112) for dressed activities, (113), low-order contact
+cancellation at the bare scale, and target-covering paths unproved. The
+split avoids the fifth-barrier-jet obstruction, while geometric growth
+in (94) remains open.
 \end{document}
