@@ -2251,3 +2251,63 @@ Thus (71)--(72) identify the failing term of this route: the local
 barrier-weighted resolvent moment. Finite Fisher information for each
 fixed barrier and total-variation convergence in §15.1 leave its uniform
 $k\to\infty$ bound, and the weighted estimate for $\mathcal B$, open.
+
+### 18.2 Part 2: interpolate the measure and the diffusion
+
+Fix the boundary parameters and $k$. Set $T=S-V_2$,
+$\nu_\lambda\propto e^{-V_2-\lambda T-W_k}$,
+$A_\lambda=tL_{\nu_\lambda}+H$, $u_{\lambda,b}=A_\lambda^{-1}g_b$ and
+$F_{ab}(\lambda)=tE_{\nu_\lambda}[g_a\cdot u_{\lambda,b}]$.
+Differentiating the density and $A_\lambda u_{\lambda,b}=g_b$, with
+$A_\lambda'=t\nabla T\cdot\nabla$, gives the exact finite-$k$ identity
+$$F_{ab}'=-t\operatorname{Cov}_{\nu_\lambda}(g_a\cdot u_{\lambda,b},T)
+-t^2E_{\nu_\lambda}[u_{\lambda,a}\cdot(\nabla T\cdot\nabla)u_{\lambda,b}].\tag{73}$$
+Smooth cutoffs justify differentiation first; passage to the polynomial
+scores requires the displayed integrability. The second term records
+how the inverse changes with the drift, even though $H$ is fixed.
+Adding the same barrier at both ends leaves the endpoint correction
+$F_{ab}(0)-t\langle g_a,R_Gg_b\rangle_G$ in $\mathcal M$.
+
+Write $y=\xi-m_0$, where $m_0=E_G\xi$, and $g_b=c_b+B_by$;
+$B_b=(\partial_bH)/t$ for the quadratic parameter score. For two
+constant gradients, $u_b=H^{-1}c_b$ pointwise and both terms in (73)
+vanish. For a constant $c_a$ paired with an affine $g_b$, integrating
+$A_\lambda u_b=g_b$ gives instead
+$$F_{ab}(\lambda)=t c_a^TH^{-1}(c_b+B_bE_{\nu_\lambda}y),\qquad
+F_{ab}'=-t c_a^TH^{-1}B_b\operatorname{Cov}_{\nu_\lambda}(y,T).\tag{74}$$
+Thus cancellation covers the constant--constant part exactly; the mixed
+parts require control of the moving mean. The centered second moment
+$\Sigma_{ij}=\operatorname{Cov}_{\nu_\lambda}(y_i,y_j)$ does satisfy
+$\Sigma_{ij}'=-\operatorname{cum}_{\nu_\lambda}(y_i,y_j,T)$, where the
+cumulant is $E[(y_i-Ey_i)(y_j-Ey_j)(T-ET)]$.
+
+A direct affine calculation locates the additional resolvent term.
+Let $HD_b+D_bH=B_b$, so
+$D_b=\int_0^\infty e^{-rH}B_be^{-rH}\,dr$ and
+$\|D_b\|\le\|B_b\|/7$ using $H\ge7I/2$.
+Then $v_b=H^{-1}c_b+D_by=R_Gg_b$ and, exactly,
+$$u_{\lambda,b}=v_b-tA_\lambda^{-1}D_b(\lambda\nabla T+\nabla W_k).
+\tag{75}$$
+Indeed $tL_{\nu_\lambda}(D_by)=D_bHy+
+ tD_b(\lambda\nabla T+\nabla W_k)$, which proves (75).
+Consequently a moment-only interpolation would omit the last term of
+(75). At $\lambda=0$ it already contains the barrier endpoint correction.
+The small edge costs (67) bound partition-function values; their second
+boundary derivatives require the response estimates sought here.
+
+For the smooth path, the precise extra term in (73) is
+$J_{ab}=t^2\sum_{ij}E[u_{\lambda,a,i}(\partial_jT)
+\partial_j u_{\lambda,b,i}]$, with scalar coordinate indices $i,j$.
+Hölder gives
+$$|J_{ab}|\le t^2\sum_{ij}\|u_{\lambda,a,i}\|_4\|\partial_jT\|_4
+\|\partial_j u_{\lambda,b,i}\|_2.$$
+The bounds (55) control local polynomial moments, and
+$\|tT''\|_{\infty,b}\le C_*\varepsilon$ controls smooth local coefficients.
+Theorem 5 supplies edge-index $L^2$ decay for $u$; closing this estimate
+requires spatially summable bounds also in its differentiation index $j$,
+with the displayed higher norms uniform in $k$. The first term of (73)
+likewise involves $u_b$, rather than just a quadratic polynomial.
+Equations (73)--(75) identify the failing terms of the proposed
+third-cumulant shortcut and retain the barrier endpoint explicitly.
+A bound $C\varepsilon^3/t$ on the weighted norm of $\mathcal M$ therefore
+remains an obligation, alongside the weighted moment (72).
