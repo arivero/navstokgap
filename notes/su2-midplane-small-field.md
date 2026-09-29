@@ -2866,3 +2866,77 @@ growth and admissible paths of (94). Equation (95) proves the resulting
 conditional polymer conversion; its bare-activity scale, curvature
 conversion, large-field comparison and perturbed-action stability
 remain explicit obligations.
+
+## 22. Round 22: the mixed score jets and the barrier source
+
+**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** The barrier
+source closes with an explicit third-profile constant and a strengthened
+small-time condition. All tensor norms below include colour Frobenius norms.
+
+### 22.1 The source $Y$
+
+Use scalar score extensions before taking the barrier limit. For a local
+score $A_c$ set $a_c=A_c(0)$, $l_c=\nabla A_c(0)$ and
+$\widehat A_c=a_c+l_c\cdot\xi+\chi_c(A_c-a_c-l_c\cdot\xi)$,
+with the product cutoff of (86). This agrees with $A_c$ on $D$ and has
+bounded gradient; the original finite-$k$ score can have an unbounded
+affine gradient outside $D$. Equations (91)--(92) hold for these scalar
+observables, with $f_c=\nabla\widehat A_c$. Write $F\varepsilon/t$ for
+their pointwise weighted gradient marginals; §22.2 supplies $F$.
+The $R_\mu$ version of (77) gives pointwise marginals $F\varepsilon/(mt)$.
+
+Put $b_j=(j/\mathrm e)^{j/4}$ and
+$$K_3=\mathrm e(24b_1+324b_2+1257b_3+2178b_4
+                    +1881b_5+780b_6+120b_7).\tag{96}$$
+Then the precise family of §20.1 satisfies
+$\|D^3w_k\|_F e^{-w_k/4}\le K_3/\varepsilon^3$ uniformly in $k$.
+Here is a direct check. On the active interval, $dx/dr=(1+x)^2/\varepsilon$,
+$\varepsilon w'=4x^3(1+x)^2$ and
+$\varepsilon^2w''=12x^2+56x^3+96x^4+72x^5+20x^6$.
+A further derivative gives coefficients $24,216,744,1296,1224,600,120$
+in degrees 1 through 7. The radial tensor formula bounds its Frobenius
+norm by $|w'''|+9(w''/r+w'/r^2)$. Since $r\ge2\varepsilon$, the larger
+polynomial $\varepsilon^3w'''+9\varepsilon^2w''+(9/4)\varepsilon w'$
+has exactly the coefficients in (96). Beyond $r_k$, write
+$A=w''(r_k)$ and $B=w'(r_k)$: the quadratic continuation has
+$D_r^3v_k=0$ and $v_k'/r^2\le B/(4\varepsilon^2)+A/(2\varepsilon)$.
+Its radial tensor is bounded by $9A/\varepsilon+9B/(4\varepsilon^2)$,
+while $v_k\ge k^4$. The bound follows from
+$\sup_{x\ge0}x^je^{-x^4/4}=b_j$. The continuation is $C^2$, so its
+weak third derivative has no interface measure. Near the interface
+§20.1's oscillation bound costs at most $\mathrm e^{1/2}$ under
+convolution; beyond $r_k+\rho_k$ use $v_k\ge k^4$ on the entire ball.
+The factor $\mathrm e$ in (96) covers both regions.
+
+For completeness fix the smooth cutoff once, and let $K_\chi\ge1$
+bound $c_0^r$ times the sum of all colour-block norms of $D^r\chi_p$
+for $0\le r\le3$. Enlarge $\Lambda_3\ge\Lambda$ to bound the local
+third insertion jets in these norms, and enlarge $D_J$ to bound all
+first through third insertion derivatives of each local amplitude.
+These constants are finite on the enlarged compact chart. The product
+rule in §15.1 gives the global third-jet marginal bound
+$$\|tS'''\|_{\gamma,\mathrm{marg},\infty}\le
+J_S:=e^{2\gamma}K_\chi(4000\Lambda_3+100D_J).\tag{97}$$
+Indeed the four differentiated cubic-remainder terms per face cost
+$(64+576+864+288)K_\chi\Lambda_3=1792K_\chi\Lambda_3$;
+each edge meets two faces. The amplitude terms cost at most
+$19K_\chi D_Jt/c_0^2$ per face, and $t/c_0^2\le1/9$.
+The quadratic extension has zero third insertion derivative.
+
+Removing edge $i$ exactly as in (81) gives
+$$\|D^3w_k(\xi_i)\|_{L^4(\mu_k)}
+\le {K_3\over\varepsilon^3}\left({p\over1-p}\right)^{1/4}.$$
+In addition to (83), impose
+$$4(7/16)^n\le(\varepsilon^3/t)^4.\tag{98}$$
+This holds for sufficiently small $t$ at each fixed $0<\delta<1/6$.
+The barrier tensor is diagonal in its three edge indices. Contracting
+its bound and (97) with the pointwise envelope of $u_c$, using the
+joining-tree inequality of §21, proves
+$$\|Y\|_{\gamma,\mathrm{marg},4}\le Y_0\varepsilon/t,
+\qquad Y_0={F\over m}(J_S+K_3).\tag{99}$$
+
+### Consequence for STATE
+
+Part 1 supplies the explicit barrier source (99) for bounded-gradient
+score extensions, with $F$ to be fixed in Part 2 and smallness (98).
+The mixed score jets and final chart theorem are the remaining parts.

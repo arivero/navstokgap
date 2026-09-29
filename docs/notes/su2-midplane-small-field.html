@@ -4005,6 +4005,107 @@ the all-order growth and admissible paths of (94). Equation (95) proves
 the resulting conditional polymer conversion; its bare-activity scale,
 curvature conversion, large-field comparison and perturbed-action
 stability remain explicit obligations.</p>
+<h2 id="round-22-the-mixed-score-jets-and-the-barrier-source">22. Round
+22: the mixed score jets and the barrier source</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; written derivation,
+unrefereed.</strong> The barrier source closes with an explicit
+third-profile constant and a strengthened small-time condition. All
+tensor norms below include colour Frobenius norms.</p>
+<h3 id="the-source-y">22.1 The source <span
+class="math inline">\(Y\)</span></h3>
+<p>Use scalar score extensions before taking the barrier limit. For a
+local score <span class="math inline">\(A_c\)</span> set <span
+class="math inline">\(a_c=A_c(0)\)</span>, <span
+class="math inline">\(l_c=\nabla A_c(0)\)</span> and <span
+class="math inline">\(\widehat
+A_c=a_c+l_c\cdot\xi+\chi_c(A_c-a_c-l_c\cdot\xi)\)</span>, with the
+product cutoff of (86). This agrees with <span
+class="math inline">\(A_c\)</span> on <span
+class="math inline">\(D\)</span> and has bounded gradient; the original
+finite-<span class="math inline">\(k\)</span> score can have an
+unbounded affine gradient outside <span
+class="math inline">\(D\)</span>. Equations (91)–(92) hold for these
+scalar observables, with <span class="math inline">\(f_c=\nabla\widehat
+A_c\)</span>. Write <span class="math inline">\(F\varepsilon/t\)</span>
+for their pointwise weighted gradient marginals; §22.2 supplies <span
+class="math inline">\(F\)</span>. The <span
+class="math inline">\(R_\mu\)</span> version of (77) gives pointwise
+marginals <span class="math inline">\(F\varepsilon/(mt)\)</span>.</p>
+<p>Put <span class="math inline">\(b_j=(j/\mathrm e)^{j/4}\)</span> and
+<span class="math display">\[K_3=\mathrm e(24b_1+324b_2+1257b_3+2178b_4
+                    +1881b_5+780b_6+120b_7).\tag{96}\]</span> Then the
+precise family of §20.1 satisfies <span
+class="math inline">\(\|D^3w_k\|_F e^{-w_k/4}\le
+K_3/\varepsilon^3\)</span> uniformly in <span
+class="math inline">\(k\)</span>. Here is a direct check. On the active
+interval, <span
+class="math inline">\(dx/dr=(1+x)^2/\varepsilon\)</span>, <span
+class="math inline">\(\varepsilon w&#39;=4x^3(1+x)^2\)</span> and <span
+class="math inline">\(\varepsilon^2w&#39;&#39;=12x^2+56x^3+96x^4+72x^5+20x^6\)</span>.
+A further derivative gives coefficients <span
+class="math inline">\(24,216,744,1296,1224,600,120\)</span> in degrees 1
+through 7. The radial tensor formula bounds its Frobenius norm by <span
+class="math inline">\(|w&#39;&#39;&#39;|+9(w&#39;&#39;/r+w&#39;/r^2)\)</span>.
+Since <span class="math inline">\(r\ge2\varepsilon\)</span>, the larger
+polynomial <span
+class="math inline">\(\varepsilon^3w&#39;&#39;&#39;+9\varepsilon^2w&#39;&#39;+(9/4)\varepsilon
+w&#39;\)</span> has exactly the coefficients in (96). Beyond <span
+class="math inline">\(r_k\)</span>, write <span
+class="math inline">\(A=w&#39;&#39;(r_k)\)</span> and <span
+class="math inline">\(B=w&#39;(r_k)\)</span>: the quadratic continuation
+has <span class="math inline">\(D_r^3v_k=0\)</span> and <span
+class="math inline">\(v_k&#39;/r^2\le
+B/(4\varepsilon^2)+A/(2\varepsilon)\)</span>. Its radial tensor is
+bounded by <span
+class="math inline">\(9A/\varepsilon+9B/(4\varepsilon^2)\)</span>, while
+<span class="math inline">\(v_k\ge k^4\)</span>. The bound follows from
+<span class="math inline">\(\sup_{x\ge0}x^je^{-x^4/4}=b_j\)</span>. The
+continuation is <span class="math inline">\(C^2\)</span>, so its weak
+third derivative has no interface measure. Near the interface §20.1’s
+oscillation bound costs at most <span class="math inline">\(\mathrm
+e^{1/2}\)</span> under convolution; beyond <span
+class="math inline">\(r_k+\rho_k\)</span> use <span
+class="math inline">\(v_k\ge k^4\)</span> on the entire ball. The factor
+<span class="math inline">\(\mathrm e\)</span> in (96) covers both
+regions.</p>
+<p>For completeness fix the smooth cutoff once, and let <span
+class="math inline">\(K_\chi\ge1\)</span> bound <span
+class="math inline">\(c_0^r\)</span> times the sum of all colour-block
+norms of <span class="math inline">\(D^r\chi_p\)</span> for <span
+class="math inline">\(0\le r\le3\)</span>. Enlarge <span
+class="math inline">\(\Lambda_3\ge\Lambda\)</span> to bound the local
+third insertion jets in these norms, and enlarge <span
+class="math inline">\(D_J\)</span> to bound all first through third
+insertion derivatives of each local amplitude. These constants are
+finite on the enlarged compact chart. The product rule in §15.1 gives
+the global third-jet marginal bound <span
+class="math display">\[\|tS&#39;&#39;&#39;\|_{\gamma,\mathrm{marg},\infty}\le
+J_S:=e^{2\gamma}K_\chi(4000\Lambda_3+100D_J).\tag{97}\]</span> Indeed
+the four differentiated cubic-remainder terms per face cost <span
+class="math inline">\((64+576+864+288)K_\chi\Lambda_3=1792K_\chi\Lambda_3\)</span>;
+each edge meets two faces. The amplitude terms cost at most <span
+class="math inline">\(19K_\chi D_Jt/c_0^2\)</span> per face, and <span
+class="math inline">\(t/c_0^2\le1/9\)</span>. The quadratic extension
+has zero third insertion derivative.</p>
+<p>Removing edge <span class="math inline">\(i\)</span> exactly as in
+(81) gives <span class="math display">\[\|D^3w_k(\xi_i)\|_{L^4(\mu_k)}
+\le {K_3\over\varepsilon^3}\left({p\over1-p}\right)^{1/4}.\]</span> In
+addition to (83), impose <span
+class="math display">\[4(7/16)^n\le(\varepsilon^3/t)^4.\tag{98}\]</span>
+This holds for sufficiently small <span class="math inline">\(t\)</span>
+at each fixed <span class="math inline">\(0&lt;\delta&lt;1/6\)</span>.
+The barrier tensor is diagonal in its three edge indices. Contracting
+its bound and (97) with the pointwise envelope of <span
+class="math inline">\(u_c\)</span>, using the joining-tree inequality of
+§21, proves <span
+class="math display">\[\|Y\|_{\gamma,\mathrm{marg},4}\le
+Y_0\varepsilon/t,
+\qquad Y_0={F\over m}(J_S+K_3).\tag{99}\]</span></p>
+<h3 id="consequence-for-state-6">Consequence for STATE</h3>
+<p>Part 1 supplies the explicit barrier source (99) for bounded-gradient
+score extensions, with <span class="math inline">\(F\)</span> to be
+fixed in Part 2 and smallness (98). The mixed score jets and final chart
+theorem are the remaining parts.</p>
 
 </main>
 <footer class="site"><div class="wrap">
