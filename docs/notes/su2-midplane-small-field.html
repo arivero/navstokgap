@@ -2424,6 +2424,20 @@ the localized-increment bounds (23)–(24) of §7.3 hold for the barriered
 measures themselves, which reduces the quasi-local remainder to one
 kernel comparison (§15.3). Notation and conditions are those of §§13–14;
 <span class="math inline">\(\Lambda=L_F+\beta\)</span>.</p>
+<p><strong>After refereeing §15 (GPT-6 Astra, 2026-09-29).</strong>
+<strong>REFINE</strong> the extension: block-row counting gives the
+sufficient constant 14000 in (65), replacing 13000; the amplitude
+constant 770 survives. <strong>REFINE</strong> the approximation:
+mollification preserves convexity and convergence, with equality to the
+barrier required only in the limit. <strong>ACCEPT</strong> (66), (55)
+for partially barriered Gaussians, and (67) with <span
+class="math inline">\(k_t\ge2\)</span>. <strong>REFINE</strong> the
+decay claim after (67): it requires boundary-score control for the
+saddle Gaussian and a specified barrier profile. <strong>REFINE</strong>
+§15.3: use enlarged score supports and the Gaussian of (59), whose
+parameter scores can be quadratic. Corrections are made below; premise
+(iii)’s small densities are proved, their full spatial response remains
+conditional.</p>
 <h3 id="premise-i-theorem-5-for-the-barriered-measures">15.1 Premise
 (i): Theorem 5 for the barriered measures</h3>
 <p><strong>Assumption (E1).</strong> §4’s local bounds, with the
@@ -2454,8 +2468,9 @@ class="math inline">\(|y_e|\le2c_0+6\varepsilon/7\le3c_0\)</span>, so
 <span class="math inline">\(\sigma_p=\sum_{e\in\partial
 p}|y_e|\le12c_0\)</span> and the cubic remainder obeys <span
 class="math inline">\(t|R_p|\le\Lambda\sigma_p^3/6\le288\Lambda
-c_0^3\)</span>, <span class="math inline">\(t\|\nabla R_p\|\le72\Lambda
-c_0^2\)</span>, <span class="math inline">\(t\|\nabla^2R_p\|\le12\Lambda
+c_0^3\)</span>, <span class="math inline">\(t|\nabla_eR_p|\le72\Lambda
+c_0^2\)</span> and <span
+class="math inline">\(t\sum_{e&#39;}\|(\nabla^2R_p)_{ee&#39;}\|\le48\Lambda
 c_0\)</span>. The cutoff has <span
 class="math inline">\(\|\nabla\chi_p\|\le8/c_0\)</span> and block row
 sum <span class="math inline">\(\|\nabla^2\chi_p\|\le20/c_0^2\)</span>
@@ -2464,16 +2479,18 @@ class="math inline">\(\chi&#39;&#39;\Pi_r+(\chi&#39;/r)\Pi_\perp\)</span>
 with <span class="math inline">\(r\ge c_0\)</span> where <span
 class="math inline">\(\chi&#39;\ne0\)</span>). The product rule gives
 the block row sum <span
-class="math inline">\(t\|\nabla^2(\chi_pR_p)\|\le (12+720+5760)\Lambda
-c_0\le6500\Lambda c_0\)</span>. For amplitudes, <span
-class="math inline">\(\|\nabla Q_p\|\le6D_J\)</span>, <span
+class="math inline">\(t\|\nabla^2(\chi_pR_p)\|\le (48+1152+5760)\Lambda
+c_0\le7000\Lambda c_0\)</span>. Here the two cross terms cost <span
+class="math inline">\(2\cdot288+8\cdot72=1152\)</span>. For amplitudes,
+<span class="math inline">\(|\nabla_eQ_p|\le3D_J/2\)</span>, <span
 class="math inline">\(|Q_p|\le18D_Jc_0\)</span> and Hessian row sum at
-most <span class="math inline">\(4.5D_J\)</span>, so <span
-class="math inline">\(t\|\nabla^2(\chi_pQ_p)\|\le385tD_J/c_0\)</span>
-for <span class="math inline">\(c_0\le1/16\)</span>. Each edge meets two
+most <span class="math inline">\(4.5D_J\)</span>: one face plus half an
+edge amplitude per incident edge. Thus the product rule gives <span
+class="math inline">\((4.5c_0+24+360)tD_J/c_0\le385tD_J/c_0\)</span> for
+<span class="math inline">\(c_0\le1/16\)</span>. Each edge meets two
 faces. Hence, if</p>
-<p><span class="math display">\[K_u\varepsilon+13000\,\Lambda
-c_0+770\,tD_J/c_0\le\tfrac12,\tag{65}\]</span></p>
+<p><span class="math display">\[K_u\varepsilon+14000\,\Lambda
+c_0+770\,tD_J/c_0\le\tfrac12.\tag{65}\]</span></p>
 <p>then <span class="math inline">\(\|t\nabla^2\tilde
 S-6I\|\le\frac52\)</span> on all of <span class="math inline">\(\mathbb
 R^{6N}\)</span>, uniformly in <span
@@ -2485,13 +2502,21 @@ class="math inline">\(\kappa=\frac12\)</span>. Since <span
 class="math inline">\(c_0&gt;2\varepsilon=2t^\alpha\)</span>, the last
 term of (65) is at most <span
 class="math inline">\(385D_Jt^{1/2+\delta}\)</span>.</p>
-<p><em>Approximation.</em> Let <span class="math inline">\(w_k\)</span>
-be smooth, convex and radial on <span class="math inline">\(\mathbb
-R^3\)</span> with bounded Hessian, equal to <span
-class="math inline">\(w_\eta\)</span> for <span
-class="math inline">\(|\xi|\le c_0-1/k\)</span>, and continued beyond by
-its tangent plus <span class="math inline">\(k(r-c_0+1/k)^2/2\)</span>,
-then mollified. Then <span class="math inline">\(\mu_k\propto e^{-\tilde
+<p><em>Approximation.</em> For integers <span
+class="math inline">\(k\)</span> with <span
+class="math inline">\(c_0-1/k&gt;\eta\)</span>, continue <span
+class="math inline">\(w_\eta\)</span> from <span
+class="math inline">\(r_k=c_0-1/k\)</span> by its tangent plus <span
+class="math inline">\(k(r-r_k)^2/2\)</span>. This is nonnegative,
+radial, convex and <span class="math inline">\(C^1\)</span>, with
+bounded Hessian for each <span class="math inline">\(k\)</span>.
+Convolve in <span class="math inline">\(\mathbb R^3\)</span> with a
+nonnegative radial smooth mollifier of radius <span
+class="math inline">\(o(1/k)\)</span>, chosen to give local <span
+class="math inline">\(C^1\)</span> convergence inside <span
+class="math inline">\(D\)</span>; call the result <span
+class="math inline">\(w_k\)</span>. Convexity and nonnegativity survive.
+Then <span class="math inline">\(\mu_k\propto e^{-\tilde
 S-\sum_ew_k(\xi_e)}\)</span> satisfies Theorem 5’s smooth hypotheses and
 (20) with <span class="math inline">\(\kappa=\frac12\)</span>, for every
 <span class="math inline">\(k,\lambda,s\)</span>. As <span
@@ -2502,13 +2527,19 @@ class="math inline">\(|\xi|=c_0\)</span> (where <span
 class="math inline">\(w_\eta\)</span> diverges), with domination by
 <span class="math inline">\(e^{-\tilde S}\)</span>, integrable by
 uniform convexity. So <span class="math inline">\(\mu_k\to\mu\)</span>
-in total variation (Scheffé). The functions used in (21), (23), (24),
-(64), namely <span class="math inline">\(\chi_pR_p\)</span>, <span
+in total variation (Scheffé). The functions needed here for (21), (23),
+(24), (64), namely <span class="math inline">\(\chi_pR_p\)</span>, <span
 class="math inline">\(\chi_pQ_p\)</span>, and cut-off local scores, are
 bounded with bounded gradients and agree with the original ones on <span
 class="math inline">\(D\)</span>. Their covariances and gradient norms
-therefore converge, and the bounds pass to the limit with the constants
-<span class="math inline">\(t/(4-\kappa)=2t/7\)</span> and <span
+therefore converge: apply total variation to <span
+class="math inline">\(f,g,fg\)</span> and <span
+class="math inline">\(|\nabla f|^2\)</span>, then take square roots for
+the gradient norms. Finite sums at fixed <span
+class="math inline">\(N\)</span> are allowed; general unbounded
+observables need uniform integrability. The bounds pass to the limit
+with the constants <span
+class="math inline">\(t/(4-\kappa)=2t/7\)</span> and <span
 class="math inline">\(q=5/12\)</span>.</p>
 <p><strong>Consequence.</strong> Under (E1) and (65), (21), (23), (24)
 and (64) hold for every barriered interpolated measure of §§13–14.
@@ -2543,32 +2574,46 @@ then <span class="math inline">\(2(k+1)/3\le t^{-2\delta}/4\)</span>, so
 and</p>
 <p><span class="math display">\[0\le\tau_j\le2p_j\le2(7/16)^{k_t},\qquad
 k_t=\lfloor3t^{-2\delta}/8\rfloor-1,\tag{67}\]</span></p>
-<p>once <span class="math inline">\(p_j\le\frac12\)</span>. Thus the
+<p>provided <span class="math inline">\(k_t\ge2\)</span> (equivalently
+<span class="math inline">\(t^{-2\delta}\ge8\)</span>), which also gives
+<span class="math inline">\(p_j\le(7/16)^2&lt;1/2\)</span>. Thus the
 barrier cost splits into edge densities that are super-polynomially
 small, below <span class="math inline">\(t^\alpha\)</span> for small
 <span class="math inline">\(t\)</span>, and the identity-normalized
 <span class="math inline">\(b(U)-b(1)\)</span> has densities <span
-class="math inline">\(\tau_j(1)-\tau_j(U)\)</span> of the same size.
-Their dependence on distant boundary data follows from (24) with the
-tilt <span class="math inline">\(e^{-w_\eta(\xi_{e_j})}\)</span>, whose
-gradient norm is at most <span class="math inline">\(\omega_\eta
-p_j^{1/2}\)</span> with <span class="math inline">\(\omega_\eta=\sup_r
-w_\eta&#39;(r)e^{-w_\eta(r)}\)</span>; this is finite for the barriers
-of (2) (for instance <span
-class="math inline">\(w\sim(c_0-r)^{-m}\)</span>), and the ordering
-enters only through which barriers are present, which (21) allows.</p>
+class="math inline">\(\tau_j(1)-\tau_j(U)\)</span> of the same size
+(both costs lie in <span class="math inline">\([0,2p_j^{\rm
+bd}]\)</span>). For a local potential perturbation <span
+class="math inline">\(h_R\)</span>, (24) bounds the derivative of <span
+class="math inline">\(\tau_j\)</span> by <span
+class="math inline">\((4t/7)q^{d(R,e_j)}\omega_\eta p_j^{1/2}\|\nabla
+h_R\|_2\)</span>; the factor two uses <span class="math inline">\(E
+e^{-w_\eta}\ge1/2\)</span>. Here <span
+class="math inline">\(\omega_\eta=\sup_r
+w_\eta&#39;(r)e^{-w_\eta(r)}\)</span> must be finite with controlled
+<span class="math inline">\(t\)</span> dependence; a fixed
+polynomial-divergence profile supplies this. For actual boundary
+changes, <span class="math inline">\(A(U)\)</span> and <span
+class="math inline">\(\xi_*(U)\)</span> in <span
+class="math inline">\(S_2\)</span> depend on the entire field. Their
+score needs a separate quasi-local bound. Equation (66) establishes
+small densities independently of that bound.</p>
 <h3 id="what-remains-for-the-quasi-local-remainder">15.3 What remains
 for the quasi-local remainder</h3>
 <p>With §15.1, §7.3’s (23) applies to the barriered, amplitude-weighted
 measure of <span class="math inline">\(\mathcal D_s\)</span> itself. In
 link coordinates a boundary change alters only incident bridge and face
-potentials, so its score is local, and the mixed second difference of
-<span class="math inline">\(\mathcal D_s\)</span> for changes in regions
-<span class="math inline">\(R,T\)</span> is at most <span
+potentials, so its score is local (distance below is between these
+enlarged supports), and the mixed second difference of <span
+class="math inline">\(\mathcal D_s\)</span> for changes in regions <span
+class="math inline">\(R,T\)</span> is at most <span
 class="math inline">\((2t/7)\,ab\,(5/12)^{d(R,T)}\)</span>. The Gaussian
 reference <span class="math inline">\(\mathcal D^{\rm cov}_{xy}\)</span>
-obeys the same bound through Lemma 1. Each bound separately is of order
-<span
+obeys (21) as a Gaussian measure with Hessian <span
+class="math inline">\(H/t\)</span>; differentiating its <span
+class="math inline">\(C(U)\)</span> gives quadratic as well as linear
+scores. Lemma 1 alone handles the linear-score part. Each bound
+separately is of order <span
 class="math inline">\(\varepsilon^2(5/12)^d/t=t^{-2\delta}(5/12)^d\)</span>
 for changes of size <span class="math inline">\(\varepsilon\)</span>,
 with no small factor. A quasi-local remainder needs the difference <span
@@ -2579,13 +2624,14 @@ kernel estimate (27) of §7, now against the covariant reference. Premise
 through (23) needs it for the actual measure, where scores are
 local.</p>
 <h3 id="consequence-for-state-2">Consequence for STATE</h3>
-<p>Premises (i) and (iii) of §14.2 are proved under (E1) and (65), so
-the Helffer–Sjöstrand bounds hold for the barriered measures and the
-barrier cost is a sum of small edge densities. The remaining cell-2 step
-toward iteration is the covariant kernel estimate: (27) for <span
-class="math inline">\(\mathcal D_s-\mathcal D^{\rm cov}_{xy}\)</span>
-with the factor <span class="math inline">\(t^\alpha\)</span>. To be
-refereed by Astra.</p>
+<p>Premise (i) and the small-density part of (iii) hold under (E1) and
+(65), so the Helffer–Sjöstrand bounds hold for the barriered measures
+and the barrier cost is a sum of small edge densities. The remaining
+cell-2 step toward iteration is the covariant kernel estimate: (27) for
+<span class="math inline">\(\mathcal D_s-\mathcal D^{\rm
+cov}_{xy}\)</span> with the factor <span
+class="math inline">\(t^\alpha\)</span>; the saddle-Gaussian barrier
+densities retain their boundary-score obligation.</p>
 <h2 id="transcription-of-1215-to-su3-claude">16. Transcription of
 §§12–15 to <span class="math inline">\(SU(3)\)</span> (Claude)</h2>
 <p><strong>Claude, 2026-09-29; written check, unrefereed.</strong> The
@@ -2611,6 +2657,22 @@ class="math inline">\(n=3\)</span> for <span
 class="math inline">\(SU(2)\)</span>, <span
 class="math inline">\(n=8\)</span> for <span
 class="math inline">\(SU(3)\)</span>.</p>
+<p><strong>After refereeing §16 (GPT-6 Astra, 2026-09-29).</strong>
+<strong>ACCEPT</strong> the root bound and the table’s dimension,
+Sylvester, <span class="math inline">\(B\)</span>, wrapping, <span
+class="math inline">\(C_D\)</span>, moment, <span
+class="math inline">\(M_2\)</span>, bridge-Hessian (with the spectral
+convention below), bridge-trace and <span
+class="math inline">\(k_t\)</span> rows. <strong>REFINE</strong> the
+Šidák row: the exponent is <span class="math inline">\(3/16\)</span> for
+eight components. <strong>REFINE</strong> the flux row by fixing the
+Fourier sign. <strong>ACCEPT</strong> the clock-and-shift spectrum and
+its lower bound, using the complexified adjoint basis.
+<strong>REJECT</strong> the identification of this two-dimensional
+magnetic twist with a four-dimensional fractional charge.
+<strong>REFINE</strong> the bridge-tail arithmetic to <span
+class="math inline">\(43/15\)</span> and propagate dimension changes
+into the remainder constants. Corrections are made in place.</p>
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -2677,8 +2739,9 @@ class="math inline">\(\mathbb R^n\)</span></td>
 <tr class="odd">
 <td>Šidák term in (56)</td>
 <td><span class="math inline">\(48Ne^{-t^{-2\delta}/2}\)</span></td>
-<td><span class="math inline">\(128Ne^{-t^{-2\delta}/2}\)</span></td>
-<td><span class="math inline">\(2nN\)</span> scalar coordinates</td>
+<td><span class="math inline">\(128Ne^{-3t^{-2\delta}/16}\)</span></td>
+<td>rectangle radius <span class="math inline">\(\varepsilon/\sqrt
+n\)</span>, variance <span class="math inline">\(\le t/3\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(k=2\)</span> bound in §13.3</td>
@@ -2716,19 +2779,34 @@ class="math inline">\(\lfloor3t^{-2\delta}/8\rfloor-6\)</span></td>
 <tr class="even">
 <td>centre and fluxes (§12.3)</td>
 <td><span class="math inline">\(\mathbb Z_2\)</span>; <span
-class="math inline">\(\frac14\sum_{k\in\mathbb Z_2^2}\)</span></td>
+class="math inline">\(\frac14\sum_k(-1)^{e\cdot k}Z_{k,m}\)</span></td>
 <td><span class="math inline">\(\mathbb Z_3\)</span>; <span
-class="math inline">\(\frac19\sum_{k\in\mathbb Z_3^2}\omega^{e\cdot
-k}\)</span></td>
-<td>’t Hooft’s projection with <span
-class="math inline">\(\omega=e^{2\pi i/3}\)</span></td>
+class="math inline">\(\frac19\sum_k\omega^{-e\cdot
+k}Z_{k,m}\)</span></td>
+<td>convention <span class="math inline">\(Z_{k,m}=\sum_e\omega^{e\cdot
+k}Z_{e,m}\)</span></td>
 </tr>
 </tbody>
 </table>
 <p>The constants <span class="math inline">\(L_F,\beta,M,D_J\)</span> of
 §4 and §14 are finite on the <span class="math inline">\(SU(3)\)</span>
 chart by the same analyticity; their values change and are left
-symbolic.</p>
+symbolic. The bridge function means <span
+class="math inline">\(f(i\theta)=(\theta/2)\cot(\theta/2)\)</span>. Use
+<span class="math inline">\(k_t\ge2\)</span>, <span
+class="math inline">\(2e^{-3t^{-2\delta}/16}\le1/2\)</span> for <span
+class="math inline">\(SU(3)\)</span>; replace <span
+class="math inline">\((8/3)^{3/2}\)</span> by <span
+class="math inline">\(6^{3/2}\)</span> in <span
+class="math inline">\(A_L,A_u\)</span>, and <span
+class="math inline">\(\sqrt3\)</span> by <span
+class="math inline">\(\sqrt8\)</span> in amplitude costs. In <span
+class="math inline">\(B_\delta\)</span> replace it by <span
+class="math inline">\([\alpha/(2\delta c
+e)]^{\alpha/(2\delta)}\)</span>, <span
+class="math inline">\(c=3/16\)</span>. These substitutions and the table
+apply when assembling <span
+class="math inline">\(C_0,C,C_u\)</span>.</p>
 <p><strong>Twisted flat sector.</strong> For <span
 class="math inline">\(m=1\in\mathbb Z_3\)</span> take the clock and
 shift matrices <span class="math inline">\(\Gamma_2=P={\rm
@@ -2754,12 +2832,10 @@ class="math inline">\(\pm2\pi/3\)</span> in at least one direction. For
 <span class="math inline">\(m=0\)</span>, commuting Cartan transitions
 give phases <span class="math inline">\(0\)</span> (twice) and <span
 class="math inline">\(\pm\alpha(\theta)\)</span> for the three positive
-roots. The fractional charge <span
-class="math inline">\(\frac13\)</span> of ’t Hooft’s twisted
-configurations is the trisection of the <a
-href="sun-midpoint-centre.html">centre note</a>, where the <span
-class="math inline">\(SU(3)\)</span> centre is reached only at cuts in
-thirds.</p>
+roots. The <a href="sun-midpoint-centre.html">centre note</a> separately
+identifies central images at trisections. A four-dimensional fractional
+topological charge requires four-dimensional twist data; this magnetic
+two-torus calculation supplies its adjoint spectrum only.</p>
 <p><strong>Lemma 2 for any compact group.</strong> Lemma 2’s explicit
 tail, <span class="math inline">\(k_t\le
 C_+t^{-5/2}e^{-\theta^2/(2t)}\)</span>, comes from the <span
@@ -2769,8 +2845,10 @@ metric has <span class="math inline">\({\rm
 Ric}(X,X)=\frac14\sum_i|[X,e_i]|^2\ge0\)</span>, so the Li–Yau bounds
 for <span class="math inline">\({\rm Ric}\ge0\)</span> apply (<a
 href="https://doi.org/10.1007/BF02399203">Li and Yau 1986</a>, Acta
-Math. 156, 153–201; Crossref metadata verified 2026-09-29, statement
-recalled): for every <span
+Math. 156, 153–201; Crossref metadata verified 2026-09-29;
+<strong>passage</strong>, Theorems 3.2 and 4.2 in the <a
+href="https://paperzz.com/doc/6929746/on-the-parabolic-kernel-of-the-schrodinger-operator---shing">original-paper
+transcription</a>, checked 2026-09-29): for every <span
 class="math inline">\(\epsilon&#39;\in(0,1)\)</span> and <span
 class="math inline">\(0&lt;t\le1\)</span>, in this note’s normalization
 (<span class="math inline">\(e^{t\Delta/2}\)</span>, small balls of
@@ -2788,12 +2866,11 @@ exponent <span class="math inline">\(2r(r-|X|)/t\)</span>. At <span
 class="math inline">\(r=2\varepsilon\)</span>, <span
 class="math inline">\(|X|\le\varepsilon\)</span>, <span
 class="math inline">\(\epsilon&#39;=\frac12\)</span>, the gain is <span
-class="math inline">\(e^{-2.9\varepsilon^2/t}\)</span> in place of <span
-class="math inline">\(e^{-4\varepsilon^2/t}\)</span>, uniformly for
-<span class="math inline">\(SU(3)\)</span> and every compact simple
-group, with non-explicit constants. The exact image formula of the <a
-href="sun-midpoint-centre.html">centre note</a> would give explicit
-constants and the sharper prefactor <span
+class="math inline">\(e^{-43\varepsilon^2/(15t)}\)</span> since <span
+class="math inline">\(9/(5/2)-1/(3/2)=43/15\)</span>, for each fixed
+compact simple group, with group-dependent non-explicit constants. The
+exact image formula of the <a href="sun-midpoint-centre.html">centre
+note</a> would give explicit constants and the sharper prefactor <span
 class="math inline">\(t^{-n/2-|\Delta_+|}\)</span> (<span
 class="math inline">\(t^{-7}\)</span> for <span
 class="math inline">\(SU(3)\)</span>, <span
