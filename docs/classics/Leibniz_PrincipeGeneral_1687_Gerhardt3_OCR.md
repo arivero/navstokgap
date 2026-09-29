@@ -7,7 +7,7 @@
 
 ## Source digest
 
-The letter in which Leibniz first states the law of continuity, in the year
+The letter in which Leibniz first publishes the law of continuity, in the year
 of the *Principia*, as a test of laws of motion: when two cases approach and
 are lost in one another, their outcomes must do the same. He applies it to
 rest as an infinitely small speed, to equality as an infinitely small
@@ -22,8 +22,8 @@ Newton-age form of a consistency condition on laws, used in
 
 - Printed p. 52: "On le peut enoncer ainsi: Lorsque la difference de deux cas peut estre diminuée au dessous de toute grandeur donnée *in datis* ou dans ce qui est posé, il faut qu'elle se puisse trouver aussi diminuée au dessous de toute grandeur donnée *in quaesitis* ou dans ce qui en resulte"; "*Datis ordinatis etiam quaesita sunt ordinata*".
 - Printed pp. 52–53: "le repos peut estre consideré comme une vistesse infinement petite, ou comme une tardité infinie"; the rule of rest as a particular case of the rule of motion, "autrement ... ce sera une marque asseurée, que les regles sont mal concertées"; "l'égalité peut estre considerée comme une inégalité infinement petite".
-- Printed p. 53: Descartes's first and second rules; "une augmentation aussi petite que l'on voudra du corps B ... fait une grandissime difference dans l'effect ... ce qui est un grand saut d'une extremité à l'autre", where B should reflect a little less and C a little more "qu'au cas de l'égalité dont à peine ce cas peut estre distingué".
-- Printed p. 54: "dans les choses composées quelques fois un petit changement peut faire un grand effect, comme par exemple une estincelle tombant dans une grande masse de la poudre à canon est capable de renverser toute une ville ... mais à l'égard des principes ou choses simples, rien de semblable ne sçauroit arriver".
+- Printed p. 53: Descartes's first and second rules; "une augmentation aussi petite que l'on voudra du corps B ... fait une grandissime difference dans l'effect ... ce qui est un grand saut d'une extremité à l'autre", where B should reflect a little less and C a little more "qu'au cas de l'égalité dont à peine ce cas peut estre distingué" (OCR "distinguo"; the final letter is reconstructed).
+- Printed p. 54: "dans les choses composées quelques fois un petit changement peut faire un grand effect, comme par exemple une estincelle tombant dans une grande masse de la poudre à canon est capable de renverser toute une ville ... mais à l'égard des principes ou choses simples, rien de semblable ne sçauroit arriver" (OCR "scauroit").
 
 ## Coverage and limits
 

@@ -89,7 +89,7 @@ fill its cells (open cells in its §5).
    increments, mass composition and additive-noise testing give the
    conditional Planck mesh. Positivity and the physical noise law remain
    premises; Nelson supplies a separate mean-dynamics framework.
-   [Leibniz continuity](../notes/leibniz-continuity-records.md) (unrefereed): the best verdict of Newton's comparison, $\Phi(-\frac12\sqrt{K_\tau/\kappa})$, is continuous in $F$ at zero iff $\kappa>0$, so Leibniz's 1687 law of continuity read on records selects the floor for motions; the geometric reading keeps the zero branch.
+   [Leibniz continuity](../notes/leibniz-continuity-records.md) (refereed by Fable, §2b pending): the best verdict of Newton's comparison, $\Phi(-\frac12\sqrt{K_\tau/\kappa})$, is continuous in $F$ at zero iff $\kappa>0$, so Leibniz's 1687 law of continuity read on records selects the floor for motions; the geometric reading keeps the zero branch.
 3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
    [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
    the valley-lifting task to connect to the refinement construction.
