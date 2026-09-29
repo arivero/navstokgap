@@ -2586,6 +2586,203 @@ toward iteration is the covariant kernel estimate: (27) for <span
 class="math inline">\(\mathcal D_s-\mathcal D^{\rm cov}_{xy}\)</span>
 with the factor <span class="math inline">\(t^\alpha\)</span>. To be
 refereed by Astra.</p>
+<h2 id="transcription-of-1215-to-su3-claude">16. Transcription of
+§§12–15 to <span class="math inline">\(SU(3)\)</span> (Claude)</h2>
+<p><strong>Claude, 2026-09-29; written check, unrefereed.</strong> The
+project’s gap goal is <span class="math inline">\(SU(3)\)</span>, and
+the one-step bounds of §§12–15 use the group only through the items
+below. With the normalization of this note, <span
+class="math inline">\(\langle X,Y\rangle=-2\operatorname{tr}XY\)</span>
+(for <span class="math inline">\(SU(2)\)</span> the norm of <span
+class="math inline">\(X\)</span> is its rotation angle, and <span
+class="math inline">\(SU(2)\cong S^3\)</span> has radius 2), every root
+obeys <span class="math inline">\(|\alpha(X)|\le|X|\)</span> on <span
+class="math inline">\(\mathfrak{su}(3)\)</span>: for <span
+class="math inline">\(X=i\,{\rm
+diag}(\lambda_1,\lambda_2,\lambda_3)\)</span>, <span
+class="math inline">\((\lambda_i-\lambda_j)^2\le2(\lambda_i^2+\lambda_j^2)\le|X|^2\)</span>.
+Hence <span class="math inline">\(\|{\rm Ad}_{e^X}-I\|\le\|{\rm
+ad}_X\|\le|X|\)</span>, as for <span
+class="math inline">\(SU(2)\)</span>, and the curvature-to-holonomy
+bounds of (44), the <span class="math inline">\(d\log\)</span> bound of
+§11.1 and Lemma 1 (orthogonal adjoint blocks) hold verbatim. Write <span
+class="math inline">\(n=\dim G\)</span>: <span
+class="math inline">\(n=3\)</span> for <span
+class="math inline">\(SU(2)\)</span>, <span
+class="math inline">\(n=8\)</span> for <span
+class="math inline">\(SU(3)\)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th><span class="math inline">\(SU(2)\)</span></th>
+<th><span class="math inline">\(SU(3)\)</span></th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mid-plane coordinates</td>
+<td><span class="math inline">\(\mathbb R^{6N}\)</span></td>
+<td><span class="math inline">\(\mathbb R^{16N}\)</span></td>
+<td><span class="math inline">\(2N\)</span> edges <span
+class="math inline">\(\times\,n\)</span></td>
+</tr>
+<tr class="even">
+<td>Sylvester factor in (48)</td>
+<td><span class="math inline">\(8^{3N}\)</span></td>
+<td><span class="math inline">\(8^{8N}\)</span></td>
+<td>edge minus face dimension, <span
+class="math inline">\(nN\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(B\)</span> in (48)</td>
+<td><span
+class="math inline">\(\frac34256^2\cdot\frac{33}8\)</span></td>
+<td><span
+class="math inline">\(2\cdot256^2\cdot\frac{33}8=540\,672\)</span></td>
+<td><span
+class="math inline">\(n-\operatorname{tr}R=\frac12\|R-I\|_F^2\le\frac
+n2\|R-I\|^2\)</span> for <span class="math inline">\(R\in
+SO(n)\)</span></td>
+</tr>
+<tr class="even">
+<td>wrapping term in (48)</td>
+<td><span class="math inline">\(\frac92N3^{-n_{\min}}\)</span></td>
+<td><span class="math inline">\(12N3^{-n_{\min}}\)</span></td>
+<td><span
+class="math inline">\(|\operatorname{tr}(R-I)|\le2n\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_D\)</span> in (54)</td>
+<td><span class="math inline">\(\frac{46}7L_F\)</span></td>
+<td><span class="math inline">\(\frac{368}{21}L_F\)</span></td>
+<td>face rank <span class="math inline">\(4n\)</span>; <span
+class="math inline">\(C_D=\frac{4n}6\cdot\frac{23}7L_F\)</span></td>
+</tr>
+<tr class="even">
+<td>moment bound (55)</td>
+<td><span class="math inline">\([2(k+1)/3]^{k/2}\)</span></td>
+<td><span class="math inline">\([2(k+6)/3]^{k/2}\)</span></td>
+<td><span class="math inline">\({\rm
+div}(|y|^{k-2}y)=(k+n-2)|y|^{k-2}\)</span> in <span
+class="math inline">\(\mathbb R^n\)</span></td>
+</tr>
+<tr class="odd">
+<td>Šidák term in (56)</td>
+<td><span class="math inline">\(48Ne^{-t^{-2\delta}/2}\)</span></td>
+<td><span class="math inline">\(128Ne^{-t^{-2\delta}/2}\)</span></td>
+<td><span class="math inline">\(2nN\)</span> scalar coordinates</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(k=2\)</span> bound in §13.3</td>
+<td><span class="math inline">\(M_2\le(\sqrt3+3D_J)\sqrt t\)</span></td>
+<td><span class="math inline">\(M_2\le(2\sqrt2+3D_J)\sqrt
+t\)</span></td>
+<td><span class="math inline">\(\langle y\cdot\nabla
+V\rangle=n\)</span></td>
+</tr>
+<tr class="odd">
+<td>bridge Hessian (§14)</td>
+<td><span class="math inline">\(4\Pi_b+4h_b\Pi_b^\perp\)</span></td>
+<td><span class="math inline">\(4f({\rm ad}_{b/2})\)</span></td>
+<td><span
+class="math inline">\(f(\theta)=\frac\theta2\cot\frac\theta2\)</span> on
+the pairs <span class="math inline">\(\pm i\theta\)</span> of <span
+class="math inline">\({\rm ad}_{b/2}\)</span>, <span
+class="math inline">\(f=1\)</span> on its kernel</td>
+</tr>
+<tr class="even">
+<td>bridge trace in (61)</td>
+<td><span class="math inline">\(\frac\beta2T\)</span></td>
+<td><span class="math inline">\(\frac43\beta T\)</span></td>
+<td>rank <span class="math inline">\(n\)</span> per edge: <span
+class="math inline">\(\frac n6\beta T\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(k_t\)</span> in (67)</td>
+<td><span
+class="math inline">\(\lfloor3t^{-2\delta}/8\rfloor-1\)</span></td>
+<td><span
+class="math inline">\(\lfloor3t^{-2\delta}/8\rfloor-6\)</span></td>
+<td>same choice with <span class="math inline">\(k+n-2\)</span></td>
+</tr>
+<tr class="even">
+<td>centre and fluxes (§12.3)</td>
+<td><span class="math inline">\(\mathbb Z_2\)</span>; <span
+class="math inline">\(\frac14\sum_{k\in\mathbb Z_2^2}\)</span></td>
+<td><span class="math inline">\(\mathbb Z_3\)</span>; <span
+class="math inline">\(\frac19\sum_{k\in\mathbb Z_3^2}\omega^{e\cdot
+k}\)</span></td>
+<td>’t Hooft’s projection with <span
+class="math inline">\(\omega=e^{2\pi i/3}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The constants <span class="math inline">\(L_F,\beta,M,D_J\)</span> of
+§4 and §14 are finite on the <span class="math inline">\(SU(3)\)</span>
+chart by the same analyticity; their values change and are left
+symbolic.</p>
+<p><strong>Twisted flat sector.</strong> For <span
+class="math inline">\(m=1\in\mathbb Z_3\)</span> take the clock and
+shift matrices <span class="math inline">\(\Gamma_2=P={\rm
+diag}(1,\omega,\omega^2)\)</span> and <span
+class="math inline">\(\Gamma_3=Q\)</span>, <span
+class="math inline">\(Qe_j=e_{j+1}\)</span>. Both lie in <span
+class="math inline">\(SU(3)\)</span> (a 3-cycle is even), and <span
+class="math inline">\(PQ=\omega QP\)</span>. The eight traceless
+matrices <span class="math inline">\(Q^aP^b\)</span>, <span
+class="math inline">\((a,b)\in\mathbb Z_3^2\setminus\{0\}\)</span>, span
+<span class="math inline">\(\mathfrak{sl}_3\)</span>, and <span
+class="math inline">\({\rm Ad}_P(Q^aP^b)=\omega^aQ^aP^b\)</span>, <span
+class="math inline">\({\rm Ad}_Q(Q^aP^b)=\omega^{-b}Q^aP^b\)</span>. The
+joint phases in (51) are therefore <span
+class="math inline">\((\phi_2,\phi_3)=(2\pi a/3,-2\pi b/3)\)</span> over
+all eight nonzero pairs: as for <span
+class="math inline">\(SU(2)\)</span> at <span
+class="math inline">\(m=1\)</span>, the twisted sector has no adjoint
+zero mode, and <span
+class="math inline">\(L_m\ge2-2\cos(2\pi/(3n_{\max}))&gt;0\)</span>
+there, since each mode has a phase <span
+class="math inline">\(\pm2\pi/3\)</span> in at least one direction. For
+<span class="math inline">\(m=0\)</span>, commuting Cartan transitions
+give phases <span class="math inline">\(0\)</span> (twice) and <span
+class="math inline">\(\pm\alpha(\theta)\)</span> for the three positive
+roots. The fractional charge <span
+class="math inline">\(\frac13\)</span> of ’t Hooft’s twisted
+configurations is the trisection of the <a
+href="sun-midpoint-centre.html">centre note</a>, where the <span
+class="math inline">\(SU(3)\)</span> centre is reached only at cuts in
+thirds.</p>
+<p><strong>What does not transfer verbatim.</strong> Lemma 2’s
+heat-kernel tail, <span class="math inline">\(k_t\le
+C_+t^{-5/2}e^{-\theta^2/(2t)}\)</span>, is specific to <span
+class="math inline">\(SU(2)\)</span>; the exact image formula of the
+centre note suggests <span
+class="math inline">\(t^{-n/2-|\Delta_+|}=t^{-7}\)</span> for <span
+class="math inline">\(SU(3)\)</span> (for <span
+class="math inline">\(SU(2)\)</span>, <span
+class="math inline">\(t^{-3/2-1}\)</span>), which is a conjecture here.
+§§13–15 do not use Lemma 2; the large-field comparison will. The
+order-<span class="math inline">\(t\)</span> coefficients of the <a
+href="su2-midplane-order-t.html">order-<span
+class="math inline">\(t\)</span> note</a> are group-dependent and have
+to be recomputed.</p>
+<p><strong>Consequence for STATE.</strong> The one-step normalized
+small-field bounds of §§13–15 hold for <span
+class="math inline">\(SU(3)\)</span> in the same <span
+class="math inline">\(1+2\)</span> mid-plane setting with the constants
+tabulated above; the <span class="math inline">\(\mathbb Z_3\)</span>
+flux sectors follow ’t Hooft’s projection with the clock-and-shift
+representative. Lemma 2’s <span class="math inline">\(SU(3)\)</span>
+tail is the group-dependent input still owed, for the large-field
+step.</p>
 
 </main>
 <footer class="site"><div class="wrap">

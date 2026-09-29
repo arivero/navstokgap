@@ -1956,3 +1956,63 @@ Helffer--Sjöstrand bounds hold for the barriered measures and the barrier
 cost is a sum of small edge densities. The remaining cell-2 step toward
 iteration is the covariant kernel estimate: (27) for
 $\mathcal D_s-\mathcal D^{\rm cov}_{xy}$ with the factor $t^\alpha$. To be refereed by Astra.
+
+## 16. Transcription of §§12--15 to $SU(3)$ (Claude)
+
+**Claude, 2026-09-29; written check, unrefereed.** The project's gap goal
+is $SU(3)$, and the one-step bounds of §§12--15 use the group only through
+the items below. With the normalization of this note,
+$\langle X,Y\rangle=-2\operatorname{tr}XY$ (for $SU(2)$ the norm of $X$ is its
+rotation angle, and $SU(2)\cong S^3$ has radius 2), every root obeys
+$|\alpha(X)|\le|X|$ on $\mathfrak{su}(3)$: for $X=i\,{\rm diag}(\lambda_1,\lambda_2,\lambda_3)$,
+$(\lambda_i-\lambda_j)^2\le2(\lambda_i^2+\lambda_j^2)\le|X|^2$. Hence $\|{\rm Ad}_{e^X}-I\|\le\|{\rm ad}_X\|\le|X|$, as for
+$SU(2)$, and the curvature-to-holonomy bounds of (44), the $d\log$ bound
+of §11.1 and Lemma 1 (orthogonal adjoint blocks) hold verbatim. Write
+$n=\dim G$: $n=3$ for $SU(2)$, $n=8$ for $SU(3)$.
+
+| Item | $SU(2)$ | $SU(3)$ | Reason |
+|---|---|---|---|
+| mid-plane coordinates | $\mathbb R^{6N}$ | $\mathbb R^{16N}$ | $2N$ edges $\times\,n$ |
+| Sylvester factor in (48) | $8^{3N}$ | $8^{8N}$ | edge minus face dimension, $nN$ |
+| $B$ in (48) | $\frac34256^2\cdot\frac{33}8$ | $2\cdot256^2\cdot\frac{33}8=540\,672$ | $n-\operatorname{tr}R=\frac12\|R-I\|_F^2\le\frac n2\|R-I\|^2$ for $R\in SO(n)$ |
+| wrapping term in (48) | $\frac92N3^{-n_{\min}}$ | $12N3^{-n_{\min}}$ | $|\operatorname{tr}(R-I)|\le2n$ |
+| $C_D$ in (54) | $\frac{46}7L_F$ | $\frac{368}{21}L_F$ | face rank $4n$; $C_D=\frac{4n}6\cdot\frac{23}7L_F$ |
+| moment bound (55) | $[2(k+1)/3]^{k/2}$ | $[2(k+6)/3]^{k/2}$ | ${\rm div}(|y|^{k-2}y)=(k+n-2)|y|^{k-2}$ in $\mathbb R^n$ |
+| Šidák term in (56) | $48Ne^{-t^{-2\delta}/2}$ | $128Ne^{-t^{-2\delta}/2}$ | $2nN$ scalar coordinates |
+| $k=2$ bound in §13.3 | $M_2\le(\sqrt3+3D_J)\sqrt t$ | $M_2\le(2\sqrt2+3D_J)\sqrt t$ | $\langle y\cdot\nabla V\rangle=n$ |
+| bridge Hessian (§14) | $4\Pi_b+4h_b\Pi_b^\perp$ | $4f({\rm ad}_{b/2})$ | $f(\theta)=\frac\theta2\cot\frac\theta2$ on the pairs $\pm i\theta$ of ${\rm ad}_{b/2}$, $f=1$ on its kernel |
+| bridge trace in (61) | $\frac\beta2T$ | $\frac43\beta T$ | rank $n$ per edge: $\frac n6\beta T$ |
+| $k_t$ in (67) | $\lfloor3t^{-2\delta}/8\rfloor-1$ | $\lfloor3t^{-2\delta}/8\rfloor-6$ | same choice with $k+n-2$ |
+| centre and fluxes (§12.3) | $\mathbb Z_2$; $\frac14\sum_{k\in\mathbb Z_2^2}$ | $\mathbb Z_3$; $\frac19\sum_{k\in\mathbb Z_3^2}\omega^{e\cdot k}$ | 't Hooft's projection with $\omega=e^{2\pi i/3}$ |
+
+The constants $L_F,\beta,M,D_J$ of §4 and §14 are finite on the $SU(3)$
+chart by the same analyticity; their values change and are left symbolic.
+
+**Twisted flat sector.** For $m=1\in\mathbb Z_3$ take the clock and shift
+matrices $\Gamma_2=P={\rm diag}(1,\omega,\omega^2)$ and $\Gamma_3=Q$, $Qe_j=e_{j+1}$. Both lie in
+$SU(3)$ (a 3-cycle is even), and $PQ=\omega QP$. The eight traceless
+matrices $Q^aP^b$, $(a,b)\in\mathbb Z_3^2\setminus\{0\}$, span $\mathfrak{sl}_3$, and
+${\rm Ad}_P(Q^aP^b)=\omega^aQ^aP^b$, ${\rm Ad}_Q(Q^aP^b)=\omega^{-b}Q^aP^b$. The joint phases in (51) are
+therefore $(\phi_2,\phi_3)=(2\pi a/3,-2\pi b/3)$ over all eight nonzero pairs:
+as for $SU(2)$ at $m=1$, the twisted sector has no adjoint zero mode, and
+$L_m\ge2-2\cos(2\pi/(3n_{\max}))>0$ there, since each mode has a phase
+$\pm2\pi/3$ in at least one direction. For $m=0$, commuting Cartan
+transitions give phases $0$ (twice) and $\pm\alpha(\theta)$ for the three
+positive roots. The fractional charge $\frac13$ of 't Hooft's twisted
+configurations is the trisection of the
+[centre note](sun-midpoint-centre.md), where the $SU(3)$ centre is reached
+only at cuts in thirds.
+
+**What does not transfer verbatim.** Lemma 2's heat-kernel tail,
+$k_t\le C_+t^{-5/2}e^{-\theta^2/(2t)}$, is specific to $SU(2)$; the exact image
+formula of the centre note suggests $t^{-n/2-|\Delta_+|}=t^{-7}$ for $SU(3)$
+(for $SU(2)$, $t^{-3/2-1}$), which is a conjecture here. §§13--15 do not
+use Lemma 2; the large-field comparison will. The order-$t$ coefficients of
+the [order-$t$ note](su2-midplane-order-t.md) are group-dependent and have
+to be recomputed.
+
+**Consequence for STATE.** The one-step normalized small-field bounds of
+§§13--15 hold for $SU(3)$ in the same $1+2$ mid-plane setting with the
+constants tabulated above; the $\mathbb Z_3$ flux sectors follow 't Hooft's
+projection with the clock-and-shift representative. Lemma 2's $SU(3)$ tail
+is the group-dependent input still owed, for the large-field step.
