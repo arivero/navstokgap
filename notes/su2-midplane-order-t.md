@@ -555,6 +555,54 @@ expansion supply local ingredients only; the uniform estimate is the
 open item. The remainder exponents, $\alpha=\frac32-3\delta$ (strong) and
 $\frac12-\delta$ (weak) with $\delta<\frac16$, suffice for one step.
 
+## 7b. The coefficients for $SU(N)$ and $SU(3)$
+
+**Result (Claude, 2026-09-29; written derivation, unrefereed).** With the
+metric $\langle X,Y\rangle=-2\operatorname{tr}XY$ used throughout, the order-$t$ coefficients (1) for
+$G=SU(N)$ are those of $SU(2)$ multiplied by $N/2$:
+$$\delta_t^{12}=\delta_t^{13}=\frac{Nt}{48}\int_{\mathcal B}\frac qR+O(t^2),\qquad
+\delta_t^{23}=\frac N2\,t\Bigl(-\frac1{12}+2\mathcal I\Bigr)+O(t^2).$$
+For $SU(3)$: $\delta_t^{12}=\delta_t^{13}=\frac t{16}\int_{\mathcal B}q/R>0$ and
+$\delta_t^{23}=t\bigl(-\frac18+3\mathcal I\bigr)<0$. The integrals $\int q/R$ and $\mathcal I$ of (2) are
+group-independent, so the signs of §§2--4 carry over.
+
+*Proof.* The coefficients are quadratic in the background and one-loop,
+and every group factor in §§1--4 enters through the adjoint action of the
+background on the fluctuations. Three facts make the count.
+
+(a) For $su(N)$ the Killing form is $2N$ times the trace form, so
+$\operatorname{tr}_{\rm adj}(\operatorname{ad}X)^2=2N\operatorname{tr}X^2=-N|X|^2$; for $SU(2)$ this is the $-2|X|^2$ used in
+(8). The cut shift (8) is linear in $\operatorname{tr}_{\rm colour}(\operatorname{ad}X)^2$, and (6) and the exact
+bridge Gaussian (7) hold for any compact group (the zero-image factors
+$\prod_{\alpha>0}\frac{\alpha(\xi)/2}{\sin(\alpha(\xi)/2)}$ of the heat kernel cancel the Haar Jacobian), so
+$\delta^{12},\delta^{13}$ scale by $N/2$.
+
+(b) The mid-face amplitude uses the Haar Jacobian
+$j(Y)=\prod_{\alpha>0}[\sin(\alpha(Y)/2)/(\alpha(Y)/2)]^2$, whose logarithm is
+$-\frac1{12}\sum_{\alpha>0}\alpha(Y)^2+O(Y^4)$, and
+$\sum_{\alpha>0}\alpha(Y)^2=-\frac12\operatorname{tr}_{\rm adj}(\operatorname{ad}Y)^2=\frac N2|Y|^2$. For $SU(2)$ the sum is $|Y|^2$,
+which gave $-t/12$; for $SU(N)$ it gives $-\frac N2\cdot\frac t{12}$.
+
+(c) The transverse coefficient is an $\operatorname{Ad}$-invariant quadratic form on the
+simple algebra $su(N)$, hence a multiple of the Killing form, and it may be
+computed on a constant Cartan background $Y$. There (10) splits by root
+spaces: $Q_Y$ acts on the root space of $\alpha$ as $h_{\alpha(Y)}$, commutators of
+different root spaces are orthogonal to $Y$, and the Cartan directions keep
+the free Hessian. Each root $SU(2)$ is embedded isometrically, with
+$T_3^{(\alpha)}=\frac i2(e_{ii}-e_{jj})$ of unit norm and charge 1 on its root space, so each
+positive root contributes one complex charged field with the Hessian (11)
+at $B=\alpha(Y)$. The $B^2$ coefficient of $\log\det(8+K)$ therefore adds up to
+$\sum_{\alpha>0}\alpha(Y)^2=\frac N2|Y|^2$ times the $SU(2)$ value per unit $B^2$. With (b), $\delta^{23}$
+scales by $N/2$. $\square$
+
+For a general compact simple group the factor is the ratio of adjoint
+Casimirs in the same metric, the one-loop pattern that also gives
+$b_0=11N/(48\pi^2)$ in the [four-dimensional note](four-dimensional-parallel-log.md).
+The scaling covers the bulk coefficients only. The dimension-six content
+of $SU(3)$ adds the $d_{abc}$ cubic noted in §6, and the finite-torus winding
+term (16) depends on flat holonomies and $\mathbb Z_3$ sectors, which the
+[small-field note](su2-midplane-small-field.md), §16, treats separately.
+
 ## 8. Consequence for STATE
 
 Atlas cell 2 now has a formal full-plane relative-order-$t$ calculation:
@@ -565,5 +613,6 @@ plane size $N$; in the refinement scaling it lies in the remainder, and
 P($\alpha$) gains the clause $\min_jN_j\ge c_0/t$.
 The next obligation for this cell is the normalized estimate (18),
 with winding control, followed by stability under iteration. The infrared
-spectral-gap obligation remains separate. STATE continues to route
+spectral-gap obligation remains separate. For $SU(3)$ the bulk coefficients are
+the $SU(2)$ ones times $\frac32$ (§7b). STATE continues to route
 work through the atlas; the coefficients and their derivation live here.

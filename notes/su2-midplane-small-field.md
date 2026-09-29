@@ -2074,9 +2074,9 @@ with group-dependent non-explicit constants. The
 exact image formula of the [centre note](sun-midpoint-centre.md) would
 give explicit constants and the sharper prefactor $t^{-n/2-|\Delta_+|}$ ($t^{-7}$
 for $SU(3)$, $t^{-5/2}$ for $SU(2)$ as in (5)); that refinement is conjectural
-here. The order-$t$ coefficients of the
-[order-$t$ note](su2-midplane-order-t.md) are group-dependent and have to
-be recomputed.
+here. The bulk order-$t$ coefficients of
+the [order-$t$ note](su2-midplane-order-t.md) scale by the adjoint-Casimir
+ratio, $\frac32$ for $SU(3)$ (§7b there).
 
 **Consequence for STATE.** The one-step normalized small-field bounds of
 §§13--15 hold for $SU(3)$ in the same $1+2$ mid-plane setting with the
