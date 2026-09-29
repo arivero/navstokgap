@@ -410,6 +410,22 @@ The research order is deliberately bounded.
    the Planck paper before submission. Keep the pion's role
    explanatory unless it actually changes one of the two proofs.
 
+**Status on 2026-09-29 (pointers only).** The active gauge route since
+2026-09-27 is the ultraviolet halving construction organized by the
+[halving atlas](halving-atlas.md), rather than item 1's small-volume
+bridge, which did not move this week. Its cell 2 now has one normalized
+small-field step for $SU(2)$ in $1+2$, uniform in plane size
+([small-field note](su2-midplane-small-field.md), §§13--14), the
+covariant link-kernel estimate conditional on two local jet bounds (§20.3),
+a reduction of the third response and an all-order polymer criterion
+(§21), and a transcription to $SU(3)$ (§16; order-$t$ coefficients in the
+[order-$t$ note](su2-midplane-order-t.md), §7b). For item 2, the missing
+premise has an equivalent Newton-age form, Leibniz's law of continuity read
+on records ([continuity note](leibniz-continuity-records.md)), and the cut
+measure coincides with the record measure at every finite stage
+([cut measure](cut-measure-newton.md), Proposition 7); the premise itself
+remains open.
+
 ## 8. Consequence for STATE
 
 The destination becomes a joint paper on survival under refinement,
