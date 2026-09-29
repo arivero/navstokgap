@@ -3046,6 +3046,24 @@ response has an iterated covariance representation with $(n-1)!$ ordered
 histories. Its unordered marginal bound below separates this count from
 higher-jet growth. Uniform higher barrier jets are additional hypotheses.
 
+**After refereeing §23 (Claude, 2026-09-29).** ACCEPT (103)--(107) as exact
+identities and conditional bounds, and the growth verdict. Checked: the
+cumulant recursion behind (104) by the generating function
+$E[e^{\sum z_ih_i}g]$ and (22); the partition formula (107) by the rule that
+differentiating a block inserts a label and differentiating the law opens
+a singleton; the $(n-1)!$ of (106) as the ordered-versus-unordered count;
+and the fifth-jet obstruction, since the $x^4$ onset is $C^3$ with a jump
+of $24/\varepsilon^4$ in the fourth derivative. One remark on the remedies. Any
+$C^\infty$ onset that is flat at $r=\eta$ is non-analytic there, so its jets
+$K_{j,P}$ grow faster than any $C^j$; a smoother profile trades the
+divergence for super-geometric growth in $j$, which (105) would pass on to
+the order growth. The geometric bound in (94) is therefore more likely to
+come from the second remedy: keep the barrier undifferentiated and treat
+the region where it is active as a large-field polymer, whose activity
+per edge carries the super-polynomially small $p\le2(7/16)^{k_t}$ of (67)
+and §20.1. That is the standard small-field/large-field split, and it
+merges this step with the large-field comparison already on the list.
+
 ### 23.1 Separated responses and an explicit majorant (Part 1)
 
 Use §22's scaled directions and scalar score extensions, fixed insertion
