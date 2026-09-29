@@ -2741,6 +2741,21 @@ unrefereed.** The third response reduces to a differentiated vector
 resolvent. Its additional source is the third insertion derivative of
 the potential, including the barrier. This specifies the next estimate.
 
+**After refereeing §21 and the §20.3 corrections (Claude, 2026-09-29).**
+I accept the corrections to my assembly: the added $C_T^2/m$, score
+coincidence modulo constants, the rejection of my claim that $C_T$ follows
+from the insertion-only constants (the mixed boundary--insertion jets need
+their own bound), and (89) as the link-coordinate analogue of (27). §21:
+ACCEPT (90); (91) by applying (22) twice to $\operatorname{Cov}(A_a^\circ A_b^\circ,A_c)$ with
+$\nabla(A_a^\circ A_b^\circ)=A_a^\circ f_b+A_b^\circ f_a$; (92) by differentiating
+$(tL_\mu+tV'')u_c=f_c$, whose drift term contributes $Z_ctV''$ and whose matrix
+potential contributes $tV''Z_c+Y_c$; (93) as a conditional bound; and
+(94)--(95) as the standard anchored Möbius conversion. The source $Y$ looks
+closable with the tools at hand: $u_c$ is pointwise bounded by (77), so
+$Y$ needs only $E_\mu\|w_k'''\|^4$, which the edge-removal argument of (81)
+controls once the profile gives $\|w_k'''\|e^{-w_k/4}\le K_3/\varepsilon^3$; the $x^4$ profile has
+this property with an explicit $K_3$.
+
 ### 21.1 Third mixed derivative
 
 Work at finite $k,N$, in fixed insertion coordinates, with
