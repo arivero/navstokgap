@@ -1,34 +1,36 @@
 # Superdeterminism lives below every resolution; a floor gives it a lifetime
 
-**Result, 2026-09-29 (Claude; written derivation, not yet refereed).**
+**Result, 2026-09-29 (Claude; written derivation, refereed by Fable with
+REFINE, corrections applied below).**
 Classical mechanics is deterministic, so the settings of a Bell test are
 functions of the initial data; the statistical independence of settings
 and hidden variables that Bell's theorem needs is an assumption of
 typicality on those data, taken with the Liouville measure. Superdeterminism
 is the choice of atypical data. The proposition below shows where such
 data must hide when the setting device is chaotic: in structure of the
-initial ensemble finer than any fixed phase-space resolution. For a
-preparation ensemble resolved at scale $\delta$, the covariance between a
-hidden variable and a setting chosen $n$ steps later obeys
+device's initial ensemble finer than any fixed phase-space resolution.
+For a preparation whose device part is resolved at scale $\delta$, the
+covariance between any bounded hidden variable $f$ and a setting chosen
+$n$ steps later obeys
 
-$$|{\rm Cov}_\rho(f,g\circ T^n)|\le2C_T\,K\,\|f\|_{\rm Lip}\|g\|_{\rm Lip}\,\delta^{-(d+1)}\theta^n,$$
+$$|{\rm Cov}_\rho(f,g\circ T^n)|\le2C_T\,K\,\sup|f|\,\|g\|_{\rm Lip}\,\delta^{-(d+1)}\theta^n,$$
 
-so the correlation is below $\eta$ after
+so the correlation is below $\epsilon$ after
 
-$$n_*(\delta)=\frac{(d+1)\ln(1/\delta)+\ln\bigl(2C_TK\|f\|_{\rm Lip}\|g\|_{\rm Lip}/\eta\bigr)}{\ln(1/\theta)}$$
+$$n_*(\delta)=\frac{(d+1)\ln(1/\delta)+\ln\bigl(2C_TK\sup|f|\,\|g\|_{\rm Lip}/\epsilon\bigr)}{\ln(1/\theta)}$$
 
-steps. Classical mechanics puts no lower bound on $\delta$, and $n_*\to\infty$: a
-conspiracy can be stored in ever finer structure for as long as needed.
-If a floor $h$ on phase-space area per canonical pair constrains the
-physical state, then $\ln(1/\delta)=\frac12\ln(A_0/h)$ with $A_0$ the action scale of the
-device, and the conspiracy has a finite lifetime
+steps. Classical mechanics allows every $\delta>0$, and $n_*\to\infty$ as
+$\delta\to0$: a conspiracy can be stored in ever finer structure for as long
+as needed. If a floor $h$ on phase-space area per canonical pair
+constrains the prepared state, then $\ln(1/\delta)=\frac12\ln(A_0/h)$ with $A_0$ the
+device's action scale per pair, and the conspiracy has a finite lifetime
 $n_*\approx\frac{d+1}{2\ln(1/\theta)}\ln(A_0/h)$, the logarithmic structure of the Ehrenfest time
 of quantum chaos ([Berman and Zaslavsky 1978](https://doi.org/10.1016/0378-4371(78)90190-5);
-metadata). With the floor, the dependence between hidden variable and
-setting decays exponentially after an onset of order $n_*$, also for
-setting and hidden-variable events (Remark in §1), and relaxed Bell
-inequalities then bound local deterministic models that respect the floor.
-The limit $h\to0$ that Newton takes is exactly what reopens the loophole.
+metadata). The dependence of hidden-variable events on setting events
+then decays exponentially after an onset of order $2n_*$ (Remark in §1),
+and relaxed Bell inequalities bound local deterministic models that respect
+the floor, under the hypotheses stated there. The limit $h\to0$ that Newton
+takes is exactly what reopens the loophole.
 
 The user's remark that prompted this (2026-09-28/29): classical mechanics
 is accidentally superdeterministic too, and the programme holds that it
@@ -40,73 +42,118 @@ joint determinacy.
 
 ## 1. Setting and the proposition
 
-Let $M$ be a compact $d$-dimensional manifold with normalized volume $\mu$,
-and $T$ a $C^2$ volume-preserving Anosov diffeomorphism, the setting device.
-Such maps are mixing with exponential decay of correlations for Hölder,
-hence Lipschitz, observables
-([Bowen 1975](https://doi.org/10.1007/BFb0081279); metadata): with
+The phase space is a product $M_{\rm sys}\times M$: the measured system,
+a probability space with reference measure $\nu$ and otherwise arbitrary,
+and the setting device, a compact **connected** $d$-dimensional manifold
+with normalized volume $\mu$. The dynamics is ${\rm id}\times T$, with $T$ a $C^2$
+volume-preserving Anosov diffeomorphism; only the device needs chaos.
+By Anosov's theorem such a $T$ is ergodic for $\mu$, hence transitive,
+hence topologically mixing because $M$ is connected, and $\mu$ is its
+equilibrium state. Bowen's theory then gives exponential decay of
+correlations for Hölder, hence Lipschitz, observables
+([Bowen 1975](https://doi.org/10.1007/BFb0081279); metadata, theorem
+numbers still to be checked at passage level): with
 $\|F\|_{\rm Lip}=\sup|F|+{\rm Lip}(F)$,
 
-$$\Bigl|\int F\,(G\circ T^n)\,d\mu-\int F\,d\mu\int G\,d\mu\Bigr|\le C_T\|F\|_{\rm Lip}\|G\|_{\rm Lip}\,\theta^n,\qquad\theta<1.$$
+$$\Bigl|\int F\,(G\circ T^n)\,d\mu-\int F\,d\mu\int G\,d\mu\Bigr|\le C_T\|F\|_{\rm Lip}\|G\|_{\rm Lip}\,\theta^n,\qquad\theta<1,$$
 
-A preparation ensemble is a probability density $\rho$ on $M$; the hidden
-variable of the measured system is $\lambda=f(x)$ and the setting is $s=g(T^nx)$,
-with $f,g$ Lipschitz. The ensemble is **resolved at scale $\delta$** if
-$\|\rho\|_{\rm Lip}\le K\delta^{-(d+1)}$; for example any probability measure smoothed by a
-mollifier of width $\delta$, whose density has height of order $\delta^{-d}$ and slope of
-order $\delta^{-(d+1)}$.
+where $\theta$ is the transfer-operator gap rather than a Lyapunov exponent.
 
-**Proposition.** For an ensemble resolved at scale $\delta$,
-$|{\rm Cov}_\rho(f,g\circ T^n)|\le2C_TK\|f\|_{\rm Lip}\|g\|_{\rm Lip}\delta^{-(d+1)}\theta^n$.
+A preparation is a probability density $\rho(x_1,x)$ on $M_{\rm sys}\times M$ with
+respect to $\nu\otimes\mu$. The hidden variable is $\lambda=f(x_1)$ with $f$ merely
+bounded and measurable, and the setting is $s=g(T^nx)$ with $g$ Lipschitz;
+$\lambda$ is fixed at time 0 and the setting is read $n$ steps later. The
+preparation is **resolved at scale $\delta$** in the device if
+$\int\|\rho(x_1,\cdot)\|_{\rm Lip}\,d\nu(x_1)\le K\delta^{-(d+1)}$, i.e. the device's density conditional
+on the system is Lipschitz at scale $\delta$ on average. For example, a
+conditional density smoothed by a mollifier $\phi_\delta$ of width $\delta\le1$ has
+height at most $\delta^{-d}\sup\phi$ and slope at most $\delta^{-(d+1)}{\rm Lip}\,\phi$, so $K=\|\phi\|_{\rm Lip}$.
 
-*Proof.* Apply the decay estimate twice, with $F=f\rho$ and with $F=\rho$, using
-$\int\rho\,d\mu=1$: $\int f\rho\,(g\circ T^n)=\int f\rho\int g+E_1$ and
-$\int\rho\,(g\circ T^n)=\int g+E_2$. Then ${\rm Cov}_\rho=E_1-E_2\int f\rho$, and
-$\|f\rho\|_{\rm Lip}\le\|f\|_{\rm Lip}\|\rho\|_{\rm Lip}$, $|\int f\rho|\le\|f\|_{\rm Lip}$ give the bound. $\square$
+**Proposition.** For a preparation resolved at scale $\delta$ in the device,
+$|{\rm Cov}_\rho(f,g\circ T^n)|\le2C_TK\sup|f|\,\|g\|_{\rm Lip}\delta^{-(d+1)}\theta^n$.
+
+*Proof.* For each $x_1$ apply the decay estimate with $F=\rho(x_1,\cdot)$:
+$\int\rho(x_1,x)g(T^nx)\,d\mu=\rho_1(x_1)\int g\,d\mu+E(x_1)$, with $\rho_1$ the system marginal and
+$|E(x_1)|\le C_T\|\rho(x_1,\cdot)\|_{\rm Lip}\|g\|_{\rm Lip}\theta^n$. Then
+$E_\rho[f\,g\circ T^n]=E_\rho[f]\int g+\int fE\,d\nu$ and $E_\rho[g\circ T^n]=\int g+\int E\,d\nu$, so
+${\rm Cov}_\rho=\int fE\,d\nu-E_\rho[f]\int E\,d\nu$, bounded by $2\sup|f|\int|E|\,d\nu$. $\square$
+
+The product form frees the hidden variable from any regularity: a
+superdeterminist may choose $f$ at will, and the conspiracy must then
+sit in the device's conditional density.
 
 **Remark (from covariances to measurement dependence).** Bell's theorem
-uses the laws of $\lambda$ conditional on the settings, and its relaxed forms
-measure their dependence in total variation
-([Hall 2010](https://doi.org/10.1103/PhysRevLett.105.250404);
-[Barrett and Gisin 2011](https://doi.org/10.1103/PhysRevLett.106.100406);
-Crossref metadata verified 2026-09-29). Hall's deterministic model of the
-singlet uses only a partial measurement dependence, so this conversion
-carries weight. Let the setting and hidden-variable events $A,B\subset M$
-have piecewise smooth boundaries whose $w$-neighbourhoods have
-$\mu$-measure at most $c_Aw$ and $c_Bw$. Replace $1_A,1_B$ by functions
-with values in $[0,1]$ and Lipschitz constant $1/w$ that differ from them
-only there, so $\|\cdot\|_{\rm Lip}\le2/w$ for $w\le1$. Since $T$ preserves $\mu$,
-each boundary layer costs at most $\sup\rho\,c\,w\le K\delta^{-(d+1)}c\,w$ under
-$\rho$, in $E_\rho[1_B\,1_A\circ T^n]$ and in the product of the means. Hence
-$$|{\rm Cov}_\rho(1_B,1_A\circ T^n)|\le K\delta^{-(d+1)}\bigl[8C_T\theta^nw^{-2}+2(c_A+c_B)w\bigr],$$
-and $w=\theta^{n/3}$ gives $K\delta^{-(d+1)}(8C_T+2c_A+2c_B)\theta^{n/3}$. For finitely many
-settings and a finite partition of hidden-variable events, summing gives
-a total-variation dependence with the same decay. The onset for events
-is three times the Lipschitz $n_*$, with the same logarithm of $A_0/h$.
+uses the laws of $\lambda$ conditional on the settings. Hall measures their
+dependence by the $L^1$ (total-variation) distance between these
+conditional laws and gives relaxed Bell inequalities in its terms,
+together with a deterministic model of the singlet that needs only a
+partial dependence ([Hall 2010](https://doi.org/10.1103/PhysRevLett.105.250404));
+Barrett and Gisin quantify the missing independence in
+information-theoretic form
+([Barrett and Gisin 2011](https://doi.org/10.1103/PhysRevLett.106.100406)).
+Both: Crossref metadata verified 2026-09-29, content from memory. Let a
+setting event $A\subset M$ have a piecewise smooth boundary whose
+$w$-neighbourhood has $\mu$-measure at most $c_Aw$, and let $B$ be any
+measurable hidden-variable event. Replace $1_A$ by a function with values
+in $[0,1]$ and Lipschitz constant $1/w$ that differs from it only in that
+neighbourhood, so its norm is at most $2/w$ for $w\le1$. The device
+marginal has $\sup\rho_{\rm dev}\le K\delta^{-(d+1)}$, and since $T$ preserves $\mu$ the layer costs
+at most $K\delta^{-(d+1)}c_Aw$ in $E_\rho[1_B\,1_A\circ T^n]$ and in the product of the means. Hence
+$$\sup_B|{\rm Cov}_\rho(1_B,1_A\circ T^n)|\le K\delta^{-(d+1)}\bigl[4C_T\theta^nw^{-1}+2c_Aw\bigr],$$
+and $w=\theta^{n/2}$ gives $\varepsilon_n=K\delta^{-(d+1)}(4C_T+2c_A)\theta^{n/2}$. For setting cells $A_j$ with
+probabilities $p_j=P_\rho(T^nx\in A_j)$, which tend to $\mu(A_j)$ at the same rate,
+the conditional laws of $\lambda$ satisfy
+$\sup_B|P(B\mid A_j)-P(B\mid A_k)|\le\varepsilon_n(1/p_j+1/p_k)$. The onset for events is
+twice the Lipschitz $n_*$, with the same logarithm of $A_0/h$. The
+conclusion that relaxed Bell inequalities then exclude the singlet
+correlations holds under three stated hypotheses: (a) the delay $n$ between
+fixing $\lambda$ and reading the settings exceeds this onset; (b) setting
+cells have regular boundaries (hidden-variable events need none);
+(c) both wings' settings come from one Anosov device, or from two, whose
+product is again Anosov on a connected manifold.
+
+**Scope of the floor.** The floor is imposed on the preparation; the
+dynamics is Newton's. The pushforward of $\rho$ stretches along unstable
+directions, so its Lipschitz norm grows like $\theta^{-n}$ and violates the
+floor at about the same $n_*$. A floor enforced at every step, by a
+coarse-graining map, could only add decorrelation; that is left unproved.
+Read quantum mechanically, Husimi functions are resolved at
+$\delta=(\hbar/A_0)^{1/2}$ in this sense, but classical evolution of observables tracks
+the quantum one only up to the Ehrenfest time, i.e. up to $n_*$. The floor
+meant here is the programme's classical floor, and the Ehrenfest match is
+formal. The translation $\ln(1/\delta)=\frac12\ln(A_0/h)$ assumes the cell is split
+isotropically between $q$ and $p$ after both are normalized by $A_0^{1/2}$,
+with $d=2N$ for $N$ canonical pairs.
 
 ## 2. What it says, and about whom
 
-- **Classical mechanics.** Nothing in the laws fixes $\delta$; an ensemble can
-  be a point mass. Independence is therefore an assumption about the
-  data, and the superdeterministic option is a choice of data with
-  structure below every scale. This is the precise sense of "accidentally
-  superdeterministic".
-- **A floor.** The proposition needs the floor to constrain the physical
-  state (its phase-space density), beyond constraining records. Under
-  that premise, correlations of a chaotic setting device with a hidden
-  variable decay after a time logarithmic in $A_0/h$, the Ehrenfest-type
-  scale at which classical and quantum chaos part.
+- **Classical mechanics.** The laws leave $\delta$ free. For a chaotic setting
+  device, independence is therefore an assumption about the data, and
+  the superdeterministic option is a device ensemble with structure at
+  the scale $\theta^n$ or finer along the stable directions, correlated with
+  $\lambda$. This is the precise sense of "accidentally superdeterministic";
+  for an integrable device, coarse data can carry a correlation forever,
+  and the statement is proved only in the chaotic case.
+- **A floor.** The proposition needs the floor to constrain the prepared
+  physical state (its phase-space density), beyond constraining records.
+  Under that premise, correlations of a chaotic setting device with a
+  hidden variable decay after a time logarithmic in $A_0/h$, the
+  Ehrenfest-type scale at which classical and quantum chaos part.
 - **'t Hooft's automaton** lies outside the proposition. Its ontic states
-  are exact cells and its correlations are carried by exact labels, with
-  no Lipschitz structure to smooth; a floor on phase-space density says
-  nothing about them ([discrete-substrate note](discrete-substrate-actors.md)).
-- **Palmer's invariant set postulate** places states on a fractal
-  invariant set and counterfactual settings off it
+  are exact cells and its correlations are carried by exact labels, which
+  carry no metric a floor could smooth; the automaton has its own floor,
+  the cell, and a permutation of a finite set is periodic and never
+  mixes, so a lifetime statement for it would need an infinite automaton
+  ([discrete-substrate note](discrete-substrate-actors.md)).
+- **Palmer's invariant set postulate** places states on a fractal,
+  measure-zero invariant set and counterfactual settings off it
   ([Palmer 2009](https://doi.org/10.1098/rspa.2009.0080); read at the level
-  of its title and our memory of the framework). A fractal support is
-  structure at all scales, which a floor in the proposition's sense
-  smears out; the two premises are in direct conflict. The superdeterminist
-  position is surveyed in
+  of its title and our memory of the framework). A Lipschitz density
+  cannot live on a measure-zero set, so for that formulation the two
+  premises are in direct conflict. Later versions of invariant set
+  theory, as we recall them, introduce a finest fractal scale; there the
+  comparison becomes quantitative, that scale against $A_0/h$. The
+  superdeterminist position is surveyed in
   [Hossenfelder and Palmer (2020)](https://doi.org/10.3389/fphy.2020.00139)
   (metadata).
 - **Quantum mechanics** is untouched: its Bell violations come from
@@ -115,8 +162,11 @@ is three times the Lipschitz $n_*$, with the same logarithm of $A_0/h$.
 
 ## 3. Consequence for STATE
 
-A small addition to the Newton side: for chaotic setting devices the
-floor makes Bell's measurement dependence decay exponentially after an
-Ehrenfest-type onset, and the continuum limit $h\to0$ reopens the loophole.
-It is a statement about what the floor buys, with the floor assumed; the
-necessity question is unchanged. To be refereed.
+A small addition to the Newton side: for chaotic setting devices a floor
+on the prepared state makes Bell's measurement dependence decay
+exponentially after an Ehrenfest-type onset, and the continuum limit
+$h\to0$ reopens the loophole. It is a statement about what the floor buys,
+with the floor assumed; the necessity question is unchanged. Refereed
+(Fable, REFINE; items applied: connectedness and mixing, product
+formulation, hypotheses (a)--(c), scope of the floor, citation roles,
+style).
