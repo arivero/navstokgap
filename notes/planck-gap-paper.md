@@ -643,6 +643,18 @@ construction on it. So a per-colour form of the quantum premise that
 squeezing cannot evade can be read into the *Opticks*; what it lacks is
 the universality of $\Lambda p$ across colours.
 
+A third junction is textual and of the same year as the *Principia*. In
+the mark model, M3 with $\kappa>0$ is equivalent to the continuity at $F=0$ of the
+best verdict on the comparison, $\Phi(-\frac12\sqrt{K_\tau/\kappa})$ for the observer ignorant
+of the preparation ([continuity note](leibniz-continuity-records.md),
+Proposition L), and that continuity is Leibniz's law of continuity,
+published in July 1687 as a test of laws of motion, read with outcomes
+measured by discernibility. Newton's deterministic corpuscle gives $\kappa=0$ and a
+best verdict that jumps from $\frac12$ to $0$ at $F=0$, a jump of the kind Leibniz's
+test condemns in Descartes's rules of collision; read geometrically, as
+Leibniz applied it, the same test passes Newton's laws. The records
+reading is that note's step and remains a premise.
+
 ## 9. Newton and the classics
 
 ### What Newton attempted
