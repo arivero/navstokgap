@@ -158,7 +158,11 @@ reconstructed letters are flagged).
   and that transfer is ours. It has one textual support: Leibniz
   individuates things by discernible difference, "deux choses individuelles
   ne sauroient estre parfaitement semblables" (1704, §3), so results that
-  differ are, for him, results that can in principle be told apart.
+  differ are, for him, results that can in principle be told apart. A
+  second support is an argument of ours from the law's general form,
+  "Datis ordinatis etiam quaesita sunt ordinata": data and results are
+  ordered alike, and measuring the data by discernibility while measuring
+  the results by position mixes two orders.
   Proposition L shows what the test then
   demands: for Newton's comparison and for Zeno's rung, continuity of the
   best verdict holds exactly when $\kappa>0$. The exemption marks the boundary
