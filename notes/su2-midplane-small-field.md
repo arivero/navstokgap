@@ -1805,3 +1805,13 @@ the boundary-score bounds just specified, and local densities for this
 Gaussian barrier cost with summable decay and size $O(t^\alpha)$.
 Equations (63)--(64) establish the local small densities and the conditional
 response estimate; the full quasi-local assertion retains these premises.
+
+### Consequence for STATE
+
+Round 16 extends the barriered covariant value comparison to unequal
+layers with their cut-face budget (62); zero cut flux recovers equal
+layers in common frames. The cubic and centered amplitude remainders
+have uniformly small face densities (63), with conditional decay (64).
+Cell 2 next needs the soft-barrier realization, boundary-score and local
+barrier-cost estimates specified in §14.2, followed by full-integral
+comparison and perturbed-action stability; iteration remains open.
