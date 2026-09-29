@@ -2662,27 +2662,54 @@ on $D$ these are exactly the original quadratic-score covariances.
 
 ### 20.3 Assembly of the kernel estimate (Claude, after the quota stop)
 
-**Claude, 2026-09-29; written assembly of §§17--20, unrefereed.** Astra's
-round stopped after §20.2 (usage limit, reset 11:37). Use §19's weight,
+**Claude, 2026-09-29; assembly corrected by the referee below.** Use §19's weight,
 $\gamma=\frac12\log(10/7)$, $m=5-\frac72e^\gamma$, the unit-link normalization of §17, and the
 extended scores of (86) on the Gaussian side; on the barriered measure
-$\mu$ the extended and original scores coincide, since $\mu$ lives on $D$.
-Let $C_T$ be the chart supremum of $(t/\varepsilon^2)$ times the weighted marginal sums
-of $f_a-g_a=\nabla_\xi\partial_aT$, $T=S-V_2$. It is a local constant of the compact
-chart, of the order of $\Lambda$, $c_M$ and $K_u$ with the incidence counts of (87),
-because $T$ vanishes to second order in $\xi-s_\lambda$ up to the $B\varepsilon^2$ shift of §20.1 and a
-unit-link derivative costs one factor $\varepsilon$.
+$\mu$ the extended quadratic scores agree with $\sigma_a$ up to constants,
+and their insertion gradients agree exactly, since $\mu$ lives on $D$.
+The actual scores $\partial_aS$ remain distinct from $\sigma_a$.
+Define $h_{ai}=\sup_D|\nabla_i\partial_a(S-V_2)|$ and
+$$C_T=\sup_{N,t,U}{t\over\varepsilon^2}
+\max\left\{\sup_a\sum_i e^{\gamma d(a,i)}h_{ai},
+\sup_i\sum_a e^{\gamma d(a,i)}h_{ai}\right\}.$$
+Uniform finiteness of this supremum is an additional hypothesis.
+For radius-one supports with the counts of (87), the sufficient local
+estimate $h_{ai}\le M_T\varepsilon^2/t$ gives $C_T\le42e^\gamma M_T$.
+Establishing $M_T$ requires mixed boundary--insertion Taylor bounds for
+the energy and amplitudes, including derivatives of the moving saddle
+and Hessian used in the extension. The insertion-only bounds
+$\Lambda,c_M,K_u,B$ supply no such mixed-jet estimate by themselves.
+Compactness at fixed $t,N$ leaves the scaled supremum as $t\downarrow0$
+unsettled; the shift estimate in §20.1 bounds a value, rather than its
+boundary derivative. Amplitude mixed derivatives also need a specified
+bound extending $D_J$.
 
-**Covariant kernel estimate.** Under (83) and the hypotheses of §§17--20,
+**After refereeing §20.3 (GPT-6 Astra, 2026-09-29).** **REFINE** the first
+term of $C_{27}$: (68) pairs $f_a-g_a$ with $f_b$, adding
+$C_T^2\varepsilon/m$ to its coefficient. **ACCEPT**, conditionally on
+the displayed score hypothesis, the smooth-insertion, barrier/measure,
+and Gaussian-extension terms. **REFINE** score coincidence as above:
+it holds modulo constants for quadratic potentials, exactly for their
+gradients, and after the barrier limit. **ACCEPT** the conversion from
+$\varepsilon$-velocity to unscaled link derivatives and its relative
+$t^\alpha$ gain. **REJECT** the asserted derivation of uniform $C_T$
+from the listed constants; the explicit missing estimate is above.
+**REFINE** the identification with (27): (89) is a link-coordinate
+analogue; §7.4's curvature-coordinate conversion remains an obligation.
+
+**Conditional covariant link-kernel estimate.** Under (83), $C_T<\infty$
+and the hypotheses of §§17--20,
 for boundary links at link distance $d(a,b)\ge2$,
 $$\sup_a\sum_{b:\,d(a,b)\ge2}e^{\gamma d(a,b)}\bigl|\partial_a\partial_b(\mathcal D_s-\mathcal D^{\rm cov})\bigr|
 \le C_{27}\,{\varepsilon^3\over t},$$
-$$C_{27}={2C_TG_0\over m}+{e^\gamma C_*G_0^2\over m^2}
+$$C_{27}={2C_TG_0+C_T^2\over m}+{e^\gamma C_*G_0^2\over m^2}
 +{\mathrm eK_0G_0^2+2G_0D_0L\over m^2}+E_0p_G^{1/4}.\tag{89}$$
 
-*Proof.* Insert the extended scores in (68). The two score-difference
-terms cost $t\cdot(C_T\varepsilon^2/t)\cdot(G_0\varepsilon/t)/m$ each, by the pointwise resolvent bound
-(77) and its $R_\mu$ version with positive on-site killing (§19.2). The
+*Proof.* Use (68) on the limiting barriered measure, with the extended
+quadratic scores. Their covariance comparisons follow by §20.2's
+dominated limit. Since $f=g+(f-g)$, the two score-difference terms cost
+$(2C_TG_0+C_T^2\varepsilon)\varepsilon^3/(mt)$ by (77) and its
+$R_\mu$ version; use $\varepsilon\le1$ for the constant in (89). The
 smooth insertion costs $t(G_0\varepsilon/t)^2e^\gamma C_*\varepsilon/m^2$, since $\Delta$ has range one and
 block row sum at most $C_*\varepsilon$, and each resolvent has weighted norm at most
 $m^{-1}$. The residuals (69) obey (80) with $P=1$ and $K_{\rm app}=\mathrm eK_0$ from
@@ -2691,25 +2718,26 @@ costs (88). Collect the four terms. $\square$
 
 In unscaled link derivatives the bound reads $C_{27}\varepsilon/t$, so the difference
 kernel is smaller than the Gaussian kernel scale $1/t$ of (29) by the
-factor $\varepsilon=t^\alpha$: this is (27), against the covariant reference, with decay
-rate $\frac12\log(10/7)$ and all constants explicit up to the local constant
-$C_T$, uniformly in plane size and in the barrier approximation.
+factor $\varepsilon=t^\alpha$. This proves the conditional link-coordinate
+estimate with decay rate $\frac12\log(10/7)$, uniformly in plane size.
+Finite-$k$ quadratic-score comparisons converge to this estimate;
+equality with the original scores is asserted on the limiting measure.
 
-**What it gives, and what it does not yet give.** Together with the
+**Pair response and the next estimate.** Together with the
 face-local sizes (63), (89) controls the pair dependence of the remainder
 $r=\mathcal D_s-\mathcal D^{\rm cov}$ on boundary data: a change at distance $d$ from a region
-moves that region's contribution by at most $C_{27}\varepsilon^3e^{-\gamma d}/t$ per unit
-change. A representation $r=\sum_Xr_X$ over connected sets with activities
-$|r_X|\le Ct^\alpha e^{-\gamma'|X|}$, which the iteration needs, follows by Möbius
-inversion over sets of boundary links once the higher mixed differences
-obey the same weighted bound; the Helffer--Sjöstrand machinery of
-§§17--20 extends to them with more score factors, and writing that
-extension is the next step.
+moves the link derivative of $r$ by at most
+$C_{27}\varepsilon^3e^{-\gamma d}/t$ per unit change. Polymer activities
+require all-order connected response estimates, an admissible family
+of link interpolation paths and control of their order-dependent
+constants. The scale $\varepsilon^3/t=t^{\alpha-2\delta}$ also retains
+the energy budget of (62); bare $O(t^\alpha)$ activities need a stronger
+estimate or a specified normalization.
 
 ### Consequence for STATE
 
-The covariant kernel estimate (27) is proved, conditionally on the local
-constant $C_T$ being bounded as stated, for one barriered step on the
-small-field chart, uniformly in plane size (§20.3, with §20.1--20.2 by
-Astra). Cell 2 next: the higher mixed differences (polymer activities),
-then the large-field comparison and perturbed-action stability.
+The link-kernel assembly is conditional on the mixed score estimate
+$C_T<\infty$, with its corrected constant (89). Cell 2 next needs that
+mixed-jet estimate and the higher connected responses for polymer
+activities; curvature-coordinate conversion, large-field comparison
+and perturbed-action stability remain separate steps.
