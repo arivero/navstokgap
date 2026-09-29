@@ -3513,6 +3513,109 @@ includes the barrier endpoint, with decay exponent <span
 class="math inline">\(\frac12\log(10/7)\)</span>; its application to the
 original scores, the full-integral comparison and iteration remain
 open.</p>
+<h2 id="round-20-the-score-extensions-and-the-kernel-estimate">20. Round
+20: the score extensions and the kernel estimate</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; written derivation,
+unrefereed.</strong></p>
+<h3 id="moment-transfer-and-a-fixed-profile-family">20.1 Moment transfer
+and a fixed profile family</h3>
+<p>The transfer of (55) uses the saddle of the <strong>extended smooth
+potential</strong>. Put <span
+class="math inline">\(B=4c_M+6K_u/7\)</span>, <span
+class="math inline">\(h=2B\varepsilon^2/3+2tD_J\)</span> and <span
+class="math inline">\(n=k_t=\lfloor3t^{-2\delta}/8\rfloor-1\)</span>. In
+addition to §17 impose <span
+class="math display">\[C_*\varepsilon\le\tfrac12,\quad n\ge2,\quad
+h\le {2\varepsilon\log2\over7n},\quad
+4(7/16)^n\le\varepsilon^3/t.\tag{83}\]</span> These hold for
+sufficiently small <span class="math inline">\(t\)</span> at each fixed
+<span class="math inline">\(0&lt;\delta&lt;1/6\)</span>. Indeed <span
+class="math inline">\(nh/\varepsilon=O(t^{1/2-3\delta}+t^{1/2-\delta})\)</span>.
+For <span class="math inline">\(S_\lambda=V_2+\lambda(S-V_2)\)</span>,
+let <span class="math inline">\(s_\lambda\)</span> be its unique
+whole-space saddle. At <span class="math inline">\(\xi_*\)</span>, the
+energy gradient vanishes, <span
+class="math inline">\(t|\nabla_eV_2(\xi_*)|\le B\varepsilon^2\)</span>
+and <span class="math inline">\(t|\nabla_eS(\xi_*)|\le3tD_J\)</span>:
+use <span class="math inline">\(|Y-w|\le4c_M\varepsilon^2\)</span>,
+<span class="math inline">\(\|C^*\|_{\infty,b}\le2\)</span>, and the
+radius-<span class="math inline">\(\varepsilon\)</span> Hessian error
+<span class="math inline">\(K_u\varepsilon\)</span>. Global diagonal
+dominance at least <span class="math inline">\(3/2\)</span> therefore
+gives <span class="math inline">\(\|s_\lambda-\xi_*\|_\infty\le
+h\)</span>, by the maximum-block argument on <span
+class="math inline">\(\int_0^1tS_\lambda&#39;&#39;(\xi_*+u(s_\lambda-\xi_*))\,du\)</span>.
+The majorants here are deterministic: apply §15.1’s product-rule bounds
+block by block, add <span
+class="math inline">\(\|(H-5I)_{ij}\|\)</span>, and use their row and
+column sums <span
+class="math inline">\(3+C_*\varepsilon\le7/2\)</span>.</p>
+<p>Here is one concrete family, indexed by integers <span
+class="math inline">\(k\ge1\)</span>. At <span
+class="math inline">\(r_k=3\varepsilon-\varepsilon/(k+1)\)</span>
+continue <span class="math inline">\(w=x^4\)</span> by <span
+class="math inline">\(w(r_k)+w&#39;(r_k)(r-r_k)+w&#39;&#39;(r_k)(r-r_k)^2/2\)</span>;
+denote the radial whole-space continuation by <span
+class="math inline">\(v_k\)</span>. Convolve it in three dimensions with
+the probability density proportional to <span
+class="math inline">\(\exp[-1/(1-|z|^2)]1_{|z|&lt;1}\)</span>, rescaled
+to radius <span
+class="math display">\[\rho_k=\min\left\{{\varepsilon\over1000(k+1)^6},
+{2\varepsilon\log2\over7n}\right\}.\]</span> The resulting <span
+class="math inline">\(w_k\)</span> is smooth, nonnegative and convex,
+vanishes on <span class="math inline">\(r\le\eta-\rho_k\)</span>, and
+has bounded Hessian for each <span class="math inline">\(k\)</span>. It
+converges locally in <span class="math inline">\(C^1\)</span> to <span
+class="math inline">\(w\)</span> inside <span
+class="math inline">\(D\)</span> and diverges outside. With §18’s
+constants one may take <span class="math display">\[K_{\rm app}=\mathrm
+eK_0,\qquad
+\Omega_{\rm app}=\mathrm e(\Omega_0+\sqrt{2K_0/\mathrm
+e}).\tag{84}\]</span> For verification, beyond <span
+class="math inline">\(r_k\)</span> the radial Hessian is at most <span
+class="math inline">\(w&#39;&#39;(r_k)\)</span>, and <span
+class="math inline">\(w&#39;\exp(-w/2)\le w&#39;(r_k)e^{-k^4/2}
++\sqrt{2w&#39;&#39;(r_k)/\mathrm e}\,e^{-k^4/2}\)</span>. Inside <span
+class="math inline">\(r_k+2\rho_k\)</span>, <span
+class="math inline">\(\sup|v_k&#39;|\le32(k+1)^5/\varepsilon\)</span>,
+so the oscillation across a mollifier ball is less than <span
+class="math inline">\(2\)</span>. Convolving the weighted bounds thus
+costs at most <span class="math inline">\(\mathrm e\)</span>. For <span
+class="math inline">\(r\ge r_k+\rho_k\)</span>, use <span
+class="math inline">\(v_k\ge k^4\)</span> on the convolution ball; the
+same quadratic bound controls the gradient there. This proves (84) for
+both <span class="math inline">\(\|w_k&#39;&#39;\|e^{-w_k/2}\)</span>
+and <span class="math inline">\(|w_k&#39;|e^{-w_k/2}\)</span>.</p>
+<p>For any subset of the edge barriers, integration by parts about <span
+class="math inline">\(s_\lambda\)</span> gives, for every real <span
+class="math inline">\(q\ge2\)</span>, <span
+class="math display">\[\sup_e E|\xi_e-s_{\lambda,e}|^q
+\le[2(q+1)t/3]^{q/2}.\tag{85}\]</span> The barrier term has the required
+sign since <span
+class="math inline">\(|s_{\lambda,e}|\le6\varepsilon/7+h&lt;\eta-\rho_k\)</span>.
+Whole-space Gaussian domination and bounded finite-<span
+class="math inline">\(k\)</span> Hessians justify integration by parts,
+including on the removed edge. Thus (85) applies to <span
+class="math inline">\(\nu_{e,k}\)</span>, <span
+class="math inline">\(\nu_\lambda\)</span> and <span
+class="math inline">\(\mu_k\)</span>. The active threshold is at
+distance at least <span
+class="math inline">\(8\varepsilon/7-h-\rho_k\)</span> from this saddle.
+Markov with <span class="math inline">\(q=n\)</span>, and <span
+class="math inline">\(-\log(1-u)\le2u\)</span> for <span
+class="math inline">\(u\le1/2\)</span>, gives <span
+class="math inline">\(p_{e,k}\le2(7/16)^n=:p&lt;1/2\)</span>. Equations
+(83) give <span
+class="math inline">\(p/(1-p)\le\varepsilon^3/t\)</span>, so choose
+<span class="math inline">\(P=1\)</span>. Finally the Hessian bound on
+<span class="math inline">\(T=S-V_2\)</span> and (85) with <span
+class="math inline">\(q=2\)</span> give <span
+class="math inline">\(E|\nabla_eT|\le B\varepsilon^2/t+3D_J+
+C_*\varepsilon(h+\sqrt{2t})/t\)</span>. Removing one barrier gives <span
+class="math inline">\(E_{\mu_k}|\nabla_ew_k|\le\Omega_{\rm
+app}p/[\varepsilon(1-p)]\)</span>. Consequently (79) holds with <span
+class="math inline">\(L=B+3D_J+3C_*+\Omega_{\rm app}\)</span>, uniformly
+in <span class="math inline">\(N,k,\lambda\)</span>.</p>
 
 </main>
 <footer class="site"><div class="wrap">

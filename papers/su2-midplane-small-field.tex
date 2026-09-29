@@ -2805,4 +2805,76 @@ score-extension conditions of §19.2. The conditional comparison (80)
 includes the barrier endpoint, with decay exponent
 \(\frac12\log(10/7)\); its application to the original scores, the
 full-integral comparison and iteration remain open.
+
+\hypertarget{round-20-the-score-extensions-and-the-kernel-estimate}{%
+\subsection{20. Round 20: the score extensions and the kernel
+estimate}\label{round-20-the-score-extensions-and-the-kernel-estimate}}
+
+\textbf{GPT-6 Astra, 2026-09-29; written derivation, unrefereed.}
+
+\hypertarget{moment-transfer-and-a-fixed-profile-family}{%
+\subsubsection{20.1 Moment transfer and a fixed profile
+family}\label{moment-transfer-and-a-fixed-profile-family}}
+
+The transfer of (55) uses the saddle of the \textbf{extended smooth
+potential}. Put \(B=4c_M+6K_u/7\), \(h=2B\varepsilon^2/3+2tD_J\) and
+\(n=k_t=\lfloor3t^{-2\delta}/8\rfloor-1\). In addition to §17 impose
+\[C_*\varepsilon\le\tfrac12,\quad n\ge2,\quad
+h\le {2\varepsilon\log2\over7n},\quad
+4(7/16)^n\le\varepsilon^3/t.\tag{83}\] These hold for sufficiently small
+\(t\) at each fixed \(0<\delta<1/6\). Indeed
+\(nh/\varepsilon=O(t^{1/2-3\delta}+t^{1/2-\delta})\). For
+\(S_\lambda=V_2+\lambda(S-V_2)\), let \(s_\lambda\) be its unique
+whole-space saddle. At \(\xi_*\), the energy gradient vanishes,
+\(t|\nabla_eV_2(\xi_*)|\le B\varepsilon^2\) and
+\(t|\nabla_eS(\xi_*)|\le3tD_J\): use \(|Y-w|\le4c_M\varepsilon^2\),
+\(\|C^*\|_{\infty,b}\le2\), and the radius-\(\varepsilon\) Hessian error
+\(K_u\varepsilon\). Global diagonal dominance at least \(3/2\) therefore
+gives \(\|s_\lambda-\xi_*\|_\infty\le h\), by the maximum-block argument
+on \(\int_0^1tS_\lambda''(\xi_*+u(s_\lambda-\xi_*))\,du\). The majorants
+here are deterministic: apply §15.1's product-rule bounds block by
+block, add \(\|(H-5I)_{ij}\|\), and use their row and column sums
+\(3+C_*\varepsilon\le7/2\).
+
+Here is one concrete family, indexed by integers \(k\ge1\). At
+\(r_k=3\varepsilon-\varepsilon/(k+1)\) continue \(w=x^4\) by
+\(w(r_k)+w'(r_k)(r-r_k)+w''(r_k)(r-r_k)^2/2\); denote the radial
+whole-space continuation by \(v_k\). Convolve it in three dimensions
+with the probability density proportional to
+\(\exp[-1/(1-|z|^2)]1_{|z|<1}\), rescaled to radius
+\[\rho_k=\min\left\{{\varepsilon\over1000(k+1)^6},
+ {2\varepsilon\log2\over7n}\right\}.\] The resulting \(w_k\) is smooth,
+nonnegative and convex, vanishes on \(r\le\eta-\rho_k\), and has bounded
+Hessian for each \(k\). It converges locally in \(C^1\) to \(w\) inside
+\(D\) and diverges outside. With §18's constants one may take
+\[K_{\rm app}=\mathrm eK_0,\qquad
+\Omega_{\rm app}=\mathrm e(\Omega_0+\sqrt{2K_0/\mathrm e}).\tag{84}\]
+For verification, beyond \(r_k\) the radial Hessian is at most
+\(w''(r_k)\), and
+\(w'\exp(-w/2)\le w'(r_k)e^{-k^4/2} +\sqrt{2w''(r_k)/\mathrm e}\,e^{-k^4/2}\).
+Inside \(r_k+2\rho_k\), \(\sup|v_k'|\le32(k+1)^5/\varepsilon\), so the
+oscillation across a mollifier ball is less than \(2\). Convolving the
+weighted bounds thus costs at most \(\mathrm e\). For
+\(r\ge r_k+\rho_k\), use \(v_k\ge k^4\) on the convolution ball; the
+same quadratic bound controls the gradient there. This proves (84) for
+both \(\|w_k''\|e^{-w_k/2}\) and \(|w_k'|e^{-w_k/2}\).
+
+For any subset of the edge barriers, integration by parts about
+\(s_\lambda\) gives, for every real \(q\ge2\),
+\[\sup_e E|\xi_e-s_{\lambda,e}|^q
+ \le[2(q+1)t/3]^{q/2}.\tag{85}\] The barrier term has the required sign
+since \(|s_{\lambda,e}|\le6\varepsilon/7+h<\eta-\rho_k\). Whole-space
+Gaussian domination and bounded finite-\(k\) Hessians justify
+integration by parts, including on the removed edge. Thus (85) applies
+to \(\nu_{e,k}\), \(\nu_\lambda\) and \(\mu_k\). The active threshold is
+at distance at least \(8\varepsilon/7-h-\rho_k\) from this saddle.
+Markov with \(q=n\), and \(-\log(1-u)\le2u\) for \(u\le1/2\), gives
+\(p_{e,k}\le2(7/16)^n=:p<1/2\). Equations (83) give
+\(p/(1-p)\le\varepsilon^3/t\), so choose \(P=1\). Finally the Hessian
+bound on \(T=S-V_2\) and (85) with \(q=2\) give
+\(E|\nabla_eT|\le B\varepsilon^2/t+3D_J+ C_*\varepsilon(h+\sqrt{2t})/t\).
+Removing one barrier gives
+\(E_{\mu_k}|\nabla_ew_k|\le\Omega_{\rm app}p/[\varepsilon(1-p)]\).
+Consequently (79) holds with \(L=B+3D_J+3C_*+\Omega_{\rm app}\),
+uniformly in \(N,k,\lambda\).
 \end{document}
