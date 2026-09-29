@@ -2331,4 +2331,78 @@ setting with the constants tabulated above, and the bridge tail needed
 for the large-field step holds for \(SU(3)\) by Li--Yau with
 non-explicit constants; the \(\mathbb Z_3\) flux sectors follow 't
 Hooft's projection with the clock-and-shift representative.
+
+\hypertarget{round-17b-shrinking-chart-and-the-remaining-resolvent-term}{%
+\subsection{17. Round 17b: shrinking chart and the remaining resolvent
+term}\label{round-17b-shrinking-chart-and-the-remaining-resolvent-term}}
+
+\textbf{GPT-6 Astra, 2026-09-29; written reduction.} The proposed chart
+\(c_0=3\varepsilon\) makes the smooth Hessian error small. The direct
+resolvent proof still requires the barrier insertion (69) below. Write
+\(V=S+W_\eta\), with \(S\) the extension in §15.1, and \(H\) from (59).
+For \(6\varepsilon\le1/16\), (E1) and the earlier smallness conditions,
+(65) becomes
+\((K_u+42000\Lambda)\varepsilon+(770/3)D_Jt/\varepsilon\le1/2\). Since
+\(t/\varepsilon\le\varepsilon\), set
+\(C_* =K_u+42000\Lambda+(770/3)D_J\). Then globally
+\(\|tS''-H\|_{\infty,b}\le C_*\varepsilon\); the norm is
+\(\sup_e\sum_{e'}\|M_{ee'}\|\). This includes \(A-H\) and the
+amplitudes. The full Hessian is \(tV''=tS''+tW_\eta''\), whose last term
+is unbounded.
+
+\textbf{Normalization and identity.} A unit parameter changes one
+boundary link at velocity \(\varepsilon UT\), \(|T|=1\) in the
+\(-2\operatorname{tr}\) metric. Let \(V_2=E_w^{(2)}/t\),
+\(G\propto e^{-V_2}\), and \(f_a=\nabla_\xi\partial_a S\),
+\(g_a=\nabla_\xi\partial_a V_2\). For \(d(a,b)\ge2\) in the link graph,
+the local mixed potential derivative vanishes; thus
+\(K_{ab}=\partial_a\partial_b(\mathcal D_s-\mathcal D^{\rm cov})\) is
+minus the difference of score covariances. Scores have support radius
+one. The requested remote bound is
+\(\sup_a\sum_{b:d(a,b)\ge2}e^{\gamma d(a,b)}|K_{ab}|\le C\varepsilon^3/t\);
+unscaled link derivatives divide this by \(\varepsilon^2\).
+
+Work first with the smooth barrier approximants, and write
+\(R_\mu=[tL_\mu+tS''+tW_k'']^{-1}\), \(R_0=[tL_\mu+H]^{-1}\),
+\(R_G=[tL_G+H]^{-1}\) and \(\Delta=tS''-H\). Both \(R_\mu,R_0\) act in
+the \textbf{same} \(L^2(\mu_k)\); Theorem 5's Neumann argument bounds
+each edge block by \((2/7)(5/12)^d\). With \(\gamma=\frac12\log(12/5)\)
+their weighted block-row norms are at most \(R_\gamma=(2/7)C(5/12)\),
+with the explicit series (25). The resolvent identity, followed by (22),
+gives exactly \[\begin{aligned}
+-K_{ab}={}&t\langle f_a-g_a,R_\mu f_b\rangle_\mu
++t\langle g_a,R_\mu(f_b-g_b)\rangle_\mu\\
+&-t\langle g_a,R_\mu\Delta R_0g_b\rangle_\mu
++\mathcal B_{ab}+\mathcal M_{ab}.\end{aligned}\tag{68}\]
+\[\begin{aligned}
+\mathcal B_{ab}&=-t^2\langle g_a,R_\mu W_k''R_0g_b\rangle_\mu,\\
+\mathcal M_{ab}&=t\langle g_a,R_0g_b\rangle_\mu
+-t\langle g_a,R_Gg_b\rangle_G.\end{aligned}\tag{69}\] Here at finite
+\(k\), \(-K\) denotes the score-covariance difference; bounded local
+score extensions recover the physical kernel in the limit. The smooth
+insertion has operator bound
+\(\|R_\mu\Delta R_0\|_{\infty,b,\gamma}\le R_\gamma^2 e^\gamma C_*\varepsilon\),
+since \(\Delta\) has range one. This supplies the desired small factor
+in that term. Even granting the score-gradient estimates from Taylor
+expansion and (55), (69) remains. Theorem 5 controls \(R_\mu\) by the
+\textbf{sign} of \(W_k''\); it supplies no vanishing bound on its
+sandwiched insertion, uniformly in \(k\). The multiplication norm of
+\(tW_\eta''\) is infinite at every \(t>0\). The term \(\mathcal M\)
+retains the change of measure and diffusion:
+\(L_\mu-L_G=\nabla(V-V_2)\cdot\nabla\). For constant \(g_a,g_b\) it
+vanishes because \(R_0g_b=H^{-1}g_b\); actual link scores also have
+linear gradients from \(\partial_aH\), so this simplification covers
+only their constant parts. A uniform weighted bound of size
+\(\varepsilon^3/t\) on \(\mathcal B+\mathcal M\) is the precise missing
+estimate in this route. Equation (68) records a proof obligation, rather
+than a counterexample to the requested kernel bound; changing Hilbert
+spaces silently would omit it.
+
+\textbf{Tail cost of the smaller chart.} For the partially barriered
+saddle Gaussian with the tested edge still free, (55) and §15.2's
+\(k_t\ge2\) give \(P(|\xi_e|\ge2\varepsilon)\le(7/16)^{k_t}\) and
+\(P(|\xi_e|\ge3\varepsilon)\le(7/30)^{k_t}\), using
+\(|\xi_*|\le6\varepsilon/7\). A union bound costs \(2N\). Thus the
+annulus above \(3\varepsilon\) joins the large-field problem; these
+reference tails leave comparison with the full group integral open.
 \end{document}
