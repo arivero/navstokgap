@@ -3362,3 +3362,52 @@ volume, and supplies an exact undifferentiated-barrier split. Cell 2 ends
 the day at the dressed connected expansion and bare-scale contact
 cancellation in §24.2; (94), full-integral comparison and iteration remain
 open. This is the final research result for the day, pending referee review.
+
+## 25. Round 25: the scale choice and truncated bad-set correlations
+
+**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** The weaker
+error exponent absorbs the proved bare pair and triple scales while
+preserving the small-field domain. Throughout this section retain all
+chart hypotheses of §22.3 and §24.1 and take $0<t\le1$.
+
+### 25.1 Scale choice (Part 1)
+
+Distinguish the chart exponent $\beta=1/2-\delta$ from the error exponent:
+$$\varepsilon=t^\beta,\qquad \alpha'=1/2-3\delta=\beta-2\delta,
+\qquad \varepsilon^3/t=t^{\alpha'},\qquad
+\alpha'>2\delta\ \Longleftrightarrow\ 0<\delta<1/10.\tag{114}$$
+Here the equivalence is within the standing range $\delta>0$.
+[Hypothesis P, §4](series-parallel-gauge-refinement.md) (**passage**)
+fixes the domain using $\beta$ and permits any error exponent exceeding
+$2\delta$. Thus fix $\delta<1/10$; all earlier $\delta<1/6$ conditions survive.
+For $t\le1$, $t^\beta\le t^{\alpha'}$. The complete exponent inventory in
+§§13–24 is as follows; earlier occurrences of $\alpha=\beta$ keep that meaning.
+
+| Location | Meaning and consistent weaker statement |
+|---|---|
+| §13, (53)–(58) | The chart uses $\varepsilon=t^\beta$. Determinant Young bounds require only an error exponent $\le1/2$; classical, amplitude and Laplace bounds weaken to $t^{\alpha'}$ with the same constants. If reoptimizing the exponential tail, use $B_{\delta,\alpha'}=[\alpha'/(\delta\mathrm e)]^{\alpha'/(2\delta)}$. |
+| §14, (62)–(64) | The energy-budget bound weakens with unchanged $C_u$; (63) gives $2A_u\sqrt t\le2A_ut^{\alpha'}$ per face. Conditional spatial decay keeps its original hypotheses. |
+| §15, (65)–(67) and §15.3 | The identity $2\varepsilon=2t^\alpha$ and the tail optimization use $\beta$; $t/c_0\le t^{1/2+\delta}/2$ stays unchanged. Small edge costs admit $t^{\alpha'}$; the requested relative kernel gain still has the stronger factor $t^\beta$. |
+| §16 | The tail constant becomes $[\alpha'/(2\delta c\mathrm e)]^{\alpha'/(2\delta)}$, $c=3/16$, if reoptimized; root notation $\alpha(X),\alpha(\theta)$ denotes a Lie root. |
+| §§17–19 | The shrinking chart, path velocity, scores and resolvents are expressed in $\varepsilon,t$; keep them fixed. Their implicit inherited exponent is $\beta$. |
+| §20, (83)–(89) | The condition $nh/\varepsilon=O(t^{1/2-3\delta}+t^{1/2-\delta})$ still tends to zero. The relative unscaled gain is $t^\beta$; the bare scaled pair bound is $C_{27}t^{\alpha'}$. |
+| §21, (93)–(95) | The separated triple bound is $C_3t^{\alpha'}$. State the sufficient all-order target (94) with $\alpha'$; its implication (95) then carries $Ae^\eta t^{\alpha'}$, with unchanged $q,\eta$. |
+| §22 | The constants closing (89), (93) are unchanged; both bare response bounds use (114). |
+| §23, (103)–(107) | For orders $j\ge3$, $\varepsilon^j/t=t^{\alpha'}\varepsilon^{j-3}\le t^{\alpha'}$; higher-jet growth and contacts remain separate obligations. |
+| §24, (108)–(113) | Joint rarity and (112) depend on $x=t^{-2\delta}$, unchanged. Replace the target prefactor in (113) by $At^{\alpha'}$, consistently with (94)–(95). |
+
+The exact chart identities and the stronger relative kernel statement
+genuinely use $\beta$; the error budget itself admits $\alpha'$ throughout.
+This resolves the extra $t^{2\delta}$ request for the proved separated
+pair and triple bounds. Singleton and adjacent-link cancellations still
+need proof at the cubic scale: separate terms in (107) can cost
+$\varepsilon^2/t=t^{-2\delta}$, larger than $t^{\alpha'}$ by $1/\varepsilon$.
+The revised (94) and (113) remain sufficient targets, with their original
+path and all-order hypotheses; the scale choice alone proves neither.
+
+### Consequence for STATE
+
+Part 1 fixes the cell-2 target exponent to $\alpha'=1/2-3\delta$ for
+$0<\delta<1/10$, retaining the original chart. The proved pair and triple
+bounds now have the target bare scale; dressed activities, contacts and
+all-order source control remain to be established.
