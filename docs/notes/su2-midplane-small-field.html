@@ -4684,6 +4684,262 @@ ends the day at the dressed connected expansion and bare-scale contact
 cancellation in §24.2; (94), full-integral comparison and iteration
 remain open. This is the final research result for the day, pending
 referee review.</p>
+<h2
+id="round-25-the-scale-choice-and-truncated-bad-set-correlations">25.
+Round 25: the scale choice and truncated bad-set correlations</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; written derivation,
+unrefereed.</strong> The weaker error exponent absorbs the proved bare
+pair and triple scales while preserving the small-field domain.</p>
+<p><strong>After refereeing §25 (Claude, 2026-09-29).</strong> ACCEPT.
+§25.1: with <span class="math inline">\(\varepsilon=t^\beta\)</span>,
+<span
+class="math inline">\(\varepsilon^3/t=t^{3\beta-1}=t^{1/2-3\delta}=t^{\alpha&#39;}\)</span>,
+and <span class="math inline">\(\alpha&#39;&gt;2\delta\)</span> iff
+<span class="math inline">\(\delta&lt;1/10\)</span>; the inventory is
+consistent, so Hypothesis P holds with the error exponent <span
+class="math inline">\(\alpha&#39;\)</span> on the domain fixed by <span
+class="math inline">\(\beta\)</span>, and the bare-scale request is met
+for the separated pair and triple bounds, with the singleton and
+adjacent contacts still owed. (115): checked <span
+class="math inline">\(|\nabla f_e|\le e^{-w_k/2}|\nabla
+w_k|b_e\le(\Omega_{\rm app}/\varepsilon)b_e\)</span>, the
+orthogonal-block gradient norm with (111), the covariance bound (21) at
+<span class="math inline">\(\kappa=\frac12\)</span>, and <span
+class="math inline">\(\sup_M(M/2)e^{-LM/64}=32/(\mathrm eL)\)</span>.
+One remark on the dressing step. The objection that distance decay <span
+class="math inline">\((5/12)^d\)</span> cannot pay for good edges along
+connecting paths applies to supports enlarged by those paths, whose
+number grows like <span class="math inline">\(36^n\)</span>. The
+tree-graph form (116) sums instead over the positions of the components:
+on the planar edge graph only <span class="math inline">\(O(d)\)</span>
+edges lie at graph distance <span class="math inline">\(d\)</span> from
+a given one, so <span
+class="math inline">\(\sum_dO(d)e^{-\gamma_*d}&lt;\infty\)</span> for
+every <span class="math inline">\(\gamma_*&gt;0\)</span>, and the rarity
+<span class="math inline">\(p^{c_*|H|}\)</span> of the components
+themselves pays for their own entropy. Once (116) holds, a standard
+cluster expansion for polymers with tree-decaying correlations should
+give the dressed bound (112) without enlarging supports. Throughout this
+section retain all chart hypotheses of §22.3 and §24.1 and take <span
+class="math inline">\(0&lt;t\le1\)</span>.</p>
+<h3 id="scale-choice-part-1">25.1 Scale choice (Part 1)</h3>
+<p>Distinguish the chart exponent <span
+class="math inline">\(\beta=1/2-\delta\)</span> from the error exponent:
+<span class="math display">\[\varepsilon=t^\beta,\qquad
+\alpha&#39;=1/2-3\delta=\beta-2\delta,
+\qquad \varepsilon^3/t=t^{\alpha&#39;},\qquad
+\alpha&#39;&gt;2\delta\ \Longleftrightarrow\
+0&lt;\delta&lt;1/10.\tag{114}\]</span> Here the equivalence is within
+the standing range <span class="math inline">\(\delta&gt;0\)</span>. <a
+href="series-parallel-gauge-refinement.html">Hypothesis P, §4</a>
+(<strong>passage</strong>) fixes the domain using <span
+class="math inline">\(\beta\)</span> and permits any error exponent
+exceeding <span class="math inline">\(2\delta\)</span>. Thus fix <span
+class="math inline">\(\delta&lt;1/10\)</span>; all earlier <span
+class="math inline">\(\delta&lt;1/6\)</span> conditions survive. For
+<span class="math inline">\(t\le1\)</span>, <span
+class="math inline">\(t^\beta\le t^{\alpha&#39;}\)</span>. The complete
+exponent inventory in §§13–24 is as follows; earlier occurrences of
+<span class="math inline">\(\alpha=\beta\)</span> keep that meaning.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Location</th>
+<th>Meaning and consistent weaker statement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>§13, (53)–(58)</td>
+<td>The chart uses <span
+class="math inline">\(\varepsilon=t^\beta\)</span>. Determinant Young
+bounds require only an error exponent <span
+class="math inline">\(\le1/2\)</span>; classical, amplitude and Laplace
+bounds weaken to <span class="math inline">\(t^{\alpha&#39;}\)</span>
+with the same constants. If reoptimizing the exponential tail, use <span
+class="math inline">\(B_{\delta,\alpha&#39;}=[\alpha&#39;/(\delta\mathrm
+e)]^{\alpha&#39;/(2\delta)}\)</span>.</td>
+</tr>
+<tr class="even">
+<td>§14, (62)–(64)</td>
+<td>The energy-budget bound weakens with unchanged <span
+class="math inline">\(C_u\)</span>; (63) gives <span
+class="math inline">\(2A_u\sqrt t\le2A_ut^{\alpha&#39;}\)</span> per
+face. Conditional spatial decay keeps its original hypotheses.</td>
+</tr>
+<tr class="odd">
+<td>§15, (65)–(67) and §15.3</td>
+<td>The identity <span
+class="math inline">\(2\varepsilon=2t^\alpha\)</span> and the tail
+optimization use <span class="math inline">\(\beta\)</span>; <span
+class="math inline">\(t/c_0\le t^{1/2+\delta}/2\)</span> stays
+unchanged. Small edge costs admit <span
+class="math inline">\(t^{\alpha&#39;}\)</span>; the requested relative
+kernel gain still has the stronger factor <span
+class="math inline">\(t^\beta\)</span>.</td>
+</tr>
+<tr class="even">
+<td>§16</td>
+<td>The tail constant becomes <span
+class="math inline">\([\alpha&#39;/(2\delta c\mathrm
+e)]^{\alpha&#39;/(2\delta)}\)</span>, <span
+class="math inline">\(c=3/16\)</span>, if reoptimized; root notation
+<span class="math inline">\(\alpha(X),\alpha(\theta)\)</span> denotes a
+Lie root.</td>
+</tr>
+<tr class="odd">
+<td>§§17–19</td>
+<td>The shrinking chart, path velocity, scores and resolvents are
+expressed in <span class="math inline">\(\varepsilon,t\)</span>; keep
+them fixed. Their implicit inherited exponent is <span
+class="math inline">\(\beta\)</span>.</td>
+</tr>
+<tr class="even">
+<td>§20, (83)–(89)</td>
+<td>The condition <span
+class="math inline">\(nh/\varepsilon=O(t^{1/2-3\delta}+t^{1/2-\delta})\)</span>
+still tends to zero. The relative unscaled gain is <span
+class="math inline">\(t^\beta\)</span>; the bare scaled pair bound is
+<span class="math inline">\(C_{27}t^{\alpha&#39;}\)</span>.</td>
+</tr>
+<tr class="odd">
+<td>§21, (93)–(95)</td>
+<td>The separated triple bound is <span
+class="math inline">\(C_3t^{\alpha&#39;}\)</span>. State the sufficient
+all-order target (94) with <span
+class="math inline">\(\alpha&#39;\)</span>; its implication (95) then
+carries <span class="math inline">\(Ae^\eta t^{\alpha&#39;}\)</span>,
+with unchanged <span class="math inline">\(q,\eta\)</span>.</td>
+</tr>
+<tr class="even">
+<td>§22</td>
+<td>The constants closing (89), (93) are unchanged; both bare response
+bounds use (114).</td>
+</tr>
+<tr class="odd">
+<td>§23, (103)–(107)</td>
+<td>For orders <span class="math inline">\(j\ge3\)</span>, <span
+class="math inline">\(\varepsilon^j/t=t^{\alpha&#39;}\varepsilon^{j-3}\le
+t^{\alpha&#39;}\)</span>; higher-jet growth and contacts remain separate
+obligations.</td>
+</tr>
+<tr class="even">
+<td>§24, (108)–(113)</td>
+<td>Joint rarity and (112) depend on <span
+class="math inline">\(x=t^{-2\delta}\)</span>, unchanged. Replace the
+target prefactor in (113) by <span
+class="math inline">\(At^{\alpha&#39;}\)</span>, consistently with
+(94)–(95).</td>
+</tr>
+</tbody>
+</table>
+<p>The exact chart identities and the stronger relative kernel statement
+genuinely use <span class="math inline">\(\beta\)</span>; the error
+budget itself admits <span class="math inline">\(\alpha&#39;\)</span>
+throughout. This resolves the extra <span
+class="math inline">\(t^{2\delta}\)</span> request for the proved
+separated pair and triple bounds. Singleton and adjacent-link
+cancellations still need proof at the cubic scale: separate terms in
+(107) can cost <span
+class="math inline">\(\varepsilon^2/t=t^{-2\delta}\)</span>, larger than
+<span class="math inline">\(t^{\alpha&#39;}\)</span> by <span
+class="math inline">\(1/\varepsilon\)</span>. The revised (94) and (113)
+remain sufficient targets, with their original path and all-order
+hypotheses; the scale choice alone proves neither.</p>
+<h3
+id="truncated-correlations-and-the-remaining-dressing-step-part-2">25.2
+Truncated correlations and the remaining dressing step (Part 2)</h3>
+<p>Let <span class="math inline">\(H_1,H_2\)</span> be disjoint nonempty
+edge sets, <span class="math inline">\(h_i=|H_i|\)</span>, <span
+class="math inline">\(M=h_1+h_2\)</span>, <span
+class="math inline">\(d=d(H_1,H_2)\)</span> and <span
+class="math inline">\(F_H=\prod_{e\in H}f_e\)</span>. Use §24.1’s
+finite-<span class="math inline">\(k\)</span> measures <span
+class="math inline">\(\nu_J\)</span>, including <span
+class="math inline">\(J=\varnothing\)</span> as required in (109). Under
+(83) and <span class="math inline">\(x\ge64\log6\)</span>, uniformly in
+<span class="math inline">\(J,k,N,\lambda\)</span> and the admissible
+real background, one has <span class="math display">\[\begin{aligned}
+|E_{\nu_J}F_{H_1\cup H_2}-E_{\nu_J}F_{H_1}E_{\nu_J}F_{H_2}|
+&amp;\le C_{\rm bad}p^{M/64}e^{-\gamma_{\rm bad}d},\\
+C_{\rm bad}&amp;=\frac{64\Omega_{\rm app}^2}{7\mathrm e\log2},
+\qquad \gamma_{\rm bad}=\log(12/5).
+\end{aligned}\tag{115}\]</span> The profile constant <span
+class="math inline">\(\Omega_{\rm app}\)</span> is exactly (84).</p>
+<p><em>Proof.</em> Since <span class="math inline">\(w_k\)</span>
+vanishes on the good ball, (84) gives <span
+class="math inline">\(|\nabla f_e|=e^{-w_k}|\nabla w_k| \le(\Omega_{\rm
+app}/\varepsilon)b_e\)</span>, while <span
+class="math inline">\(|f_e|\le b_e\)</span>. Different edge derivatives
+occupy orthogonal coordinate blocks. Thus <span
+class="math display">\[|\nabla F_H|^2\le
+\frac{\Omega_{\rm app}^2}{\varepsilon^2}|H|\prod_{e\in H}b_e,
+\qquad
+\|\nabla F_H\|_{L^2(\nu_J)}
+\le\frac{\Omega_{\rm app}}{\varepsilon}\sqrt{|H|}\,p^{|H|/32}.\]</span>
+The last step is (111), applied to the whole set, including the
+differentiated edge. The smooth part satisfies (20) with <span
+class="math inline">\(\kappa=1/2\)</span>; each retained barrier is
+on-site convex. Hence (21), on gradient supports <span
+class="math inline">\(H_1,H_2\)</span>, bounds the covariance by <span
+class="math inline">\((2\Omega_{\rm
+app}^2/7)(t/\varepsilon^2)\sqrt{h_1h_2} p^{M/32}(5/12)^d\)</span>. Put
+<span class="math inline">\(L=\log(1/p)\ge\log2\)</span>. The
+inequalities <span class="math inline">\(\sqrt{h_1h_2}\le M/2\)</span>
+and <span class="math inline">\(\sup_{M&gt;0}(M/2)e^{-LM/64}=32/(\mathrm
+eL)\)</span> absorb the cardinality factor into <span
+class="math inline">\(p^{M/64}\)</span>; <span
+class="math inline">\(t/\varepsilon^2=t^{2\delta}\le1\)</span> proves
+(115). Bounded products and Gaussian domination give convergence of
+their expectations at fixed volume as <span
+class="math inline">\(k\to\infty\)</span>, so the same uniform bound
+holds in the barrier limit. <span
+class="math inline">\(\square\)</span></p>
+<p>Equation (115) controls the second truncated correlation of bad
+components, with both rarity and distance decay. The exact
+moment–cumulant identity for <span
+class="math inline">\(E\prod_iF_{H_i}\)</span> also contains every <span
+class="math inline">\(\kappa_{\nu_0}(F_{H_1},\ldots,F_{H_r})\)</span>,
+<span class="math inline">\(r\ge3\)</span>. A concrete remaining
+estimate is the all-order tree bound <span
+class="math display">\[|\kappa_{\nu_0}(F_{H_1},\ldots,F_{H_r})|
+\le B_*^r p^{c_*\sum_i|H_i|}
+\sum_{T\in\mathcal T_r}\prod_{ij\in T}e^{-\gamma_*d(H_i,H_j)}.
+\tag{116}\]</span> Here <span class="math inline">\(\mathcal
+T_r\)</span> is the set of labelled spanning trees, and fixed <span
+class="math inline">\(B_*\ge\max(1,\sqrt{C_{\rm bad}})\)</span>, <span
+class="math inline">\(0&lt;c_*\le1/64\)</span>, <span
+class="math inline">\(0&lt;\gamma_*\le\gamma_{\rm bad}\)</span> must
+work uniformly in <span class="math inline">\(r,k,N,t\)</span> for
+compatible families. Equation (115) proves its <span
+class="math inline">\(r=2\)</span> case only. Expanding the correlated
+family weights into such connected blocks, controlling the hard-core
+incompatibilities, and proving their summed norm (112) are the missing
+dressing step. A shortest connecting path of length <span
+class="math inline">\(d\)</span> receives only <span
+class="math inline">\(e^{-\gamma_{\rm bad}d}\)</span> from (115); rarity
+pays for <span class="math inline">\(M\)</span> bad edges, rather than
+the intervening good edges. Consequently the raw <span
+class="math inline">\(p^{|H|/16}\)</span> budget cannot simply be
+assigned to the enlarged connected supports. The source-domain version
+and the subtracted contact bounds in (113), now with <span
+class="math inline">\(t^{\alpha&#39;}\)</span>, remain additional
+obligations. Real convex covariance decay controls (115); it supplies
+neither complex-source control nor the higher connected bounds asserted
+as targets in (116). This is the stopping point.</p>
+<h3 id="consequence-for-state-9">Consequence for STATE</h3>
+<p>Round 25 absorbs the proved bare pair/triple scale by choosing <span
+class="math inline">\(\alpha&#39;=1/2-3\delta\)</span>, <span
+class="math inline">\(0&lt;\delta&lt;1/10\)</span>, and proves (115)
+uniformly in volume and barrier approximation. Cell 2 next needs the
+higher connected bad-component bounds and dressing specified in (116),
+the contact and source control (113), and target-covering paths.
+Full-integral comparison, perturbed-action stability and iteration
+remain subsequent obligations.</p>
 
 </main>
 <footer class="site"><div class="wrap">
