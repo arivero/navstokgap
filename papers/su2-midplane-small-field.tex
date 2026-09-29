@@ -2013,4 +2013,146 @@ have uniformly small face densities (63), with conditional decay (64).
 Cell 2 next needs the soft-barrier realization, boundary-score and local
 barrier-cost estimates specified in §14.2, followed by full-integral
 comparison and perturbed-action stability; iteration remains open.
+
+\hypertarget{round-17-claude-the-barrier-realization-and-local-barrier-cost}{%
+\subsection{15. Round 17 (Claude): the barrier realization and local
+barrier
+cost}\label{round-17-claude-the-barrier-realization-and-local-barrier-cost}}
+
+\textbf{Claude, 2026-09-29; written proofs, unrefereed.} Astra's round
+17 was stopped by the usage limit before writing (reset 06:35); Claude
+supplies §14.2's premises (i) and (iii) here. With (i), the
+localized-increment bounds (23)--(24) of §7.3 hold for the barriered
+measures themselves, which reduces the quasi-local remainder to one
+kernel comparison (§15.3). Notation and conditions are those of
+§§13--14; \(\Lambda=L_F+\beta\).
+
+\hypertarget{premise-i-theorem-5-for-the-barriered-measures}{%
+\subsubsection{15.1 Premise (i): Theorem 5 for the barriered
+measures}\label{premise-i-theorem-5-for-the-barriered-measures}}
+
+\textbf{Assumption (E1).} §4's local bounds, with the constants
+\(L_F,\beta,D_J\), hold on the enlarged chart \(|\xi_e|\le2c_0\). Since
+\(c_0\le1/16\), this chart stays far from the cut locus.
+
+\emph{Extension.} Split the potential of §§13--14 into face densities,
+\(S_{\lambda,s}=S_2+\sum_p(\lambda R_p+sQ_p)\), with half of each edge
+term assigned to each adjacent face as in §14.2 and
+\(Q_p=\mathcal J_p(\xi)-\mathcal J_p(\xi_*)\). Fix a smooth radial
+\(\chi\) with \(\chi=1\) for \(|\xi|\le c_0\), \(\chi=0\) for
+\(|\xi|\ge2c_0\), \(|\chi'|\le2/c_0\), \(|\chi''|\le8/c_0^2\), put
+\(\chi_p=\prod_{e\in\partial p}\chi(|\xi_e|)\) and
+\(\tilde S=S_2+\sum_p\chi_p(\lambda R_p+sQ_p)\) on \(\mathbb R^{6N}\).
+On the chart \(D=\prod_eB(0,c_0)\), \(\tilde S=S_{\lambda,s}\) up to a
+constant. On \({\rm supp}\,\chi_p\),
+\(|y_e|\le2c_0+6\varepsilon/7\le3c_0\), so
+\(\sigma_p=\sum_{e\in\partial p}|y_e|\le12c_0\) and the cubic remainder
+obeys \(t|R_p|\le\Lambda\sigma_p^3/6\le288\Lambda c_0^3\),
+\(t\|\nabla R_p\|\le72\Lambda c_0^2\),
+\(t\|\nabla^2R_p\|\le12\Lambda c_0\). The cutoff has
+\(\|\nabla\chi_p\|\le8/c_0\) and block row sum
+\(\|\nabla^2\chi_p\|\le20/c_0^2\) (a radial Hessian is
+\(\chi''\Pi_r+(\chi'/r)\Pi_\perp\) with \(r\ge c_0\) where
+\(\chi'\ne0\)). The product rule gives the block row sum
+\(t\|\nabla^2(\chi_pR_p)\|\le (12+720+5760)\Lambda c_0\le6500\Lambda c_0\).
+For amplitudes, \(\|\nabla Q_p\|\le6D_J\), \(|Q_p|\le18D_Jc_0\) and
+Hessian row sum at most \(4.5D_J\), so
+\(t\|\nabla^2(\chi_pQ_p)\|\le385tD_J/c_0\) for \(c_0\le1/16\). Each edge
+meets two faces. Hence, if
+
+\[K_u\varepsilon+13000\,\Lambda c_0+770\,tD_J/c_0\le\tfrac12,\tag{65}\]
+
+then \(\|t\nabla^2\tilde S-6I\|\le\frac52\) on all of
+\(\mathbb R^{6N}\), uniformly in \(\lambda,s\in[0,1]\), with range one
+because \(S_2\) and each \(\chi_pR_p,\chi_pQ_p\) couple only edges of
+one face. This is (20) with \(\kappa=\frac12\). Since
+\(c_0>2\varepsilon=2t^\alpha\), the last term of (65) is at most
+\(385D_Jt^{1/2+\delta}\).
+
+\emph{Approximation.} Let \(w_k\) be smooth, convex and radial on
+\(\mathbb R^3\) with bounded Hessian, equal to \(w_\eta\) for
+\(|\xi|\le c_0-1/k\), and continued beyond by its tangent plus
+\(k(r-c_0+1/k)^2/2\), then mollified. Then
+\(\mu_k\propto e^{-\tilde S-\sum_ew_k(\xi_e)}\) satisfies Theorem 5's
+smooth hypotheses and (20) with \(\kappa=\frac12\), for every
+\(k,\lambda,s\). As \(k\to\infty\),
+\(e^{-w_k(\xi)}\to e^{-w_\eta(\xi)}1_{|\xi|<c_0}\) off the sphere
+\(|\xi|=c_0\) (where \(w_\eta\) diverges), with domination by
+\(e^{-\tilde S}\), integrable by uniform convexity. So \(\mu_k\to\mu\)
+in total variation (Scheffé). The functions used in (21), (23), (24),
+(64), namely \(\chi_pR_p\), \(\chi_pQ_p\), and cut-off local scores, are
+bounded with bounded gradients and agree with the original ones on
+\(D\). Their covariances and gradient norms therefore converge, and the
+bounds pass to the limit with the constants \(t/(4-\kappa)=2t/7\) and
+\(q=5/12\).
+
+\textbf{Consequence.} Under (E1) and (65), (21), (23), (24) and (64)
+hold for every barriered interpolated measure of §§13--14. Premise (i)
+of §14.2 is proved.
+
+\hypertarget{premise-iii-local-densities-of-the-barrier-cost}{%
+\subsubsection{15.2 Premise (iii): local densities of the barrier
+cost}\label{premise-iii-local-densities-of-the-barrier-cost}}
+
+Order the edges \(e_1,\dots,e_{2N}\) and let \(\mu_{<j}\) be the
+Gaussian of §13.2 at the saddle, restricted by the barriers of
+\(e_1,\dots,e_{j-1}\). Then exactly
+
+\[b(U)=\log\frac{Z_{2,W}}{G_U}=-\sum_{j=1}^{2N}\tau_j(U),\qquad
+\tau_j=-\log E_{\mu_{<j}}\bigl[e^{-w_\eta(\xi_{e_j})}\bigr]\ge0.\tag{66}\]
+
+The proof of (55) applies to each \(\mu_{<j}\): \(S_2\) has the diagonal
+dominance of \(A\), and edges carrying a barrier contribute the
+nonnegative term \(y_e\cdot\nabla w_\eta(\xi_e)\). Since \(w_\eta=0\)
+for \(|\xi|\le\eta=2\varepsilon\) and \(|\xi_*|\le6\varepsilon/7\),
+\(E_{\mu_{<j}}[e^{-w_\eta}]\ge1-p_j\) with
+\(p_j\le P(|y_{e_j}|>8\varepsilon/7)\le M_k^{\rm bd}t^{k/2}(7/8\varepsilon)^k\).
+With \(\varepsilon=t^{1/2-\delta}\) this is
+\(M_k^{\rm bd}(7/8)^kt^{k\delta}\). Take
+\(k+1=\lfloor3t^{-2\delta}/8\rfloor\); then
+\(2(k+1)/3\le t^{-2\delta}/4\), so \(M_k^{\rm bd}\le2^{-k}t^{-k\delta}\)
+and
+
+\[0\le\tau_j\le2p_j\le2(7/16)^{k_t},\qquad
+k_t=\lfloor3t^{-2\delta}/8\rfloor-1,\tag{67}\]
+
+once \(p_j\le\frac12\). Thus the barrier cost splits into edge densities
+that are super-polynomially small, below \(t^\alpha\) for small \(t\),
+and the identity-normalized \(b(U)-b(1)\) has densities
+\(\tau_j(1)-\tau_j(U)\) of the same size. Their dependence on distant
+boundary data follows from (24) with the tilt
+\(e^{-w_\eta(\xi_{e_j})}\), whose gradient norm is at most
+\(\omega_\eta p_j^{1/2}\) with
+\(\omega_\eta=\sup_r w_\eta'(r)e^{-w_\eta(r)}\); this is finite for the
+barriers of (2) (for instance \(w\sim(c_0-r)^{-m}\)), and the ordering
+enters only through which barriers are present, which (21) allows.
+
+\hypertarget{what-remains-for-the-quasi-local-remainder}{%
+\subsubsection{15.3 What remains for the quasi-local
+remainder}\label{what-remains-for-the-quasi-local-remainder}}
+
+With §15.1, §7.3's (23) applies to the barriered, amplitude-weighted
+measure of \(\mathcal D_s\) itself. In link coordinates a boundary
+change alters only incident bridge and face potentials, so its score is
+local, and the mixed second difference of \(\mathcal D_s\) for changes
+in regions \(R,T\) is at most \((2t/7)\,ab\,(5/12)^{d(R,T)}\). The
+Gaussian reference \(\mathcal D^{\rm cov}_{xy}\) obeys the same bound
+through Lemma 1. Each bound separately is of order
+\(\varepsilon^2(5/12)^d/t=t^{-2\delta}(5/12)^d\) for changes of size
+\(\varepsilon\), with no small factor. A quasi-local remainder needs the
+difference \(\mathcal D_s-\mathcal D^{\rm cov}_{xy}\) to gain
+\(t^\alpha\) there: this is the kernel estimate (27) of §7, now against
+the covariant reference. Premise (ii) of §14.2 is used in the
+interpolation form only; the direct route through (23) needs it for the
+actual measure, where scores are local.
+
+\hypertarget{consequence-for-state-2}{%
+\subsubsection{Consequence for STATE}\label{consequence-for-state-2}}
+
+Premises (i) and (iii) of §14.2 are proved under (E1) and (65), so the
+Helffer--Sjöstrand bounds hold for the barriered measures and the
+barrier cost is a sum of small edge densities. The remaining cell-2 step
+toward iteration is the covariant kernel estimate: (27) for
+\(\mathcal D_s-\mathcal D^{\rm cov}_{xy}\) with the factor \(t^\alpha\).
+To be refereed by Astra.
 \end{document}
