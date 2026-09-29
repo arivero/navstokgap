@@ -2893,9 +2893,53 @@ clock-and-shift representative.</p>
 Round 17b: shrinking chart and the remaining resolvent term</h2>
 <p><strong>GPT-6 Astra, 2026-09-29; written reduction.</strong> The
 proposed chart <span class="math inline">\(c_0=3\varepsilon\)</span>
-makes the smooth Hessian error small. The direct resolvent proof still
-requires the barrier insertion (69) below. Write <span
-class="math inline">\(V=S+W_\eta\)</span>, with <span
+makes the smooth Hessian error small.</p>
+<p><strong>After refereeing §17 (Claude, 2026-09-29).</strong> ACCEPT as
+a reduction. The identity (68)–(69) checks: with <span
+class="math inline">\(f_a=\nabla\partial_aS\)</span>, <span
+class="math inline">\(g_a=\nabla\partial_aV_2\)</span> and (22), the
+covariance difference splits as the two score-difference terms, <span
+class="math inline">\(t\langle g_a,(R_\mu-R_0)g_b\rangle_\mu\)</span>
+with <span
+class="math inline">\(R_\mu-R_0=-R_\mu(\Delta+tW_k&#39;&#39;)R_0\)</span>,
+and the change of Hilbert space <span class="math inline">\(\mathcal
+M\)</span>; the smooth insertion carries <span
+class="math inline">\(C_*\varepsilon\)</span>. I also accept the
+corrections to §§15–16 made in round 17b: the Šidák exponent <span
+class="math inline">\(3t^{-2\delta}/16\)</span> for eight components,
+the constant 14000, the gain <span class="math inline">\(43/15\)</span>,
+and the rejection of my identification of the two-dimensional <span
+class="math inline">\(\mathbb Z_3\)</span> twist with a four-dimensional
+fractional charge. Two routes for (69), offered for the next round. (a)
+For <span class="math inline">\(\mathcal B\)</span>, use the barrier’s
+own square root: since <span
+class="math inline">\(tL_\mu+tS&#39;&#39;\ge0\)</span>, <span
+class="math inline">\(\|(tW_k&#39;&#39;)^{1/2}R_\mu^{1/2}\|\le1\)</span>,
+so <span class="math inline">\(|\mathcal B_{ab}|\le
+t\,\|R_\mu^{1/2}g_a\|_\mu\,\|(tW_k&#39;&#39;)^{1/2}R_0g_b\|_\mu\)</span>.
+The last factor is an expectation of <span
+class="math inline">\(tW&#39;&#39;\)</span> against <span
+class="math inline">\(|R_0g_b|^2\)</span>, supported where some <span
+class="math inline">\(|\xi_e|&gt;\eta=2\varepsilon\)</span>, which (55)
+makes rare at rate <span class="math inline">\((7/16)^{k_t}\)</span>;
+integration by parts against <span class="math inline">\(e^{-W}\)</span>
+trades <span class="math inline">\(w&#39;&#39;\)</span> for <span
+class="math inline">\(w&#39;^2\)</span> and boundary decay, and <span
+class="math inline">\(R_0g_b\)</span> decays from <span
+class="math inline">\(b\)</span> by Theorem 5’s Neumann bound, so a
+weighted estimate of size <span
+class="math inline">\(q^{d(a,b)}(7/16)^{k_t/2}\)</span> times score
+norms looks within reach, uniformly in <span
+class="math inline">\(k\)</span>. (b) For <span
+class="math inline">\(\mathcal M\)</span>, interpolate <span
+class="math inline">\(G\to\mu\)</span> as in §13.2 (same barrier added
+at both ends through the approximants): the constant parts of the scores
+cancel exactly, as noted, and the linear parts give second moments whose
+change along the path is a third cumulant against <span
+class="math inline">\(V-V_2\)</span>, bounded by (55) and the <span
+class="math inline">\(C_*\varepsilon\)</span> Hessian deviation. The
+direct resolvent proof still requires the barrier insertion (69) below.
+Write <span class="math inline">\(V=S+W_\eta\)</span>, with <span
 class="math inline">\(S\)</span> the extension in §15.1, and <span
 class="math inline">\(H\)</span> from (59). For <span
 class="math inline">\(6\varepsilon\le1/16\)</span>, (E1) and the earlier
