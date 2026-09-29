@@ -652,8 +652,10 @@ published in July 1687 as a test of laws of motion, read with outcomes
 measured by discernibility. Newton's deterministic corpuscle gives $\kappa=0$ and a
 best verdict that jumps from $\frac12$ to $0$ at $F=0$, a jump of the kind Leibniz's
 test condemns in Descartes's rules of collision; read geometrically, as
-Leibniz applied it, the same test passes Newton's laws. The records
-reading is that note's step and remains a premise.
+Leibniz applied it, the same test passes Newton's laws. At a bounded preparation aperture the observer who knows the
+preparation reaches the same continuity through the probabilistic note's
+Theorem 2, with $\hbar$ in place of $\kappa$. The records reading is that note's
+step and remains a premise.
 
 ## 9. Newton and the classics
 
