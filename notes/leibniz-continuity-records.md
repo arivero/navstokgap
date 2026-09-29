@@ -107,7 +107,10 @@ the preparation: a static parameter can be estimated without limit by
 repeated marks, while the dynamical comparison in a fixed window keeps the
 $N$-independent bound. With knowledge of the preparation (Yuen's protocol)
 a single sharp mark decides at every force, so the proposition is a
-statement about the preparation-ignorant observer.
+statement about the preparation-ignorant observer. That observer is
+Newton's in Book III, who reads forces from the phenomena, motions nobody
+prepared; §10 of the paper prices the preparation route by the body's
+spread along the way.
 
 ## 2. Leibniz, 1687: the law of continuity as a test of laws
 
