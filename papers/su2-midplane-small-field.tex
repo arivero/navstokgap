@@ -3903,4 +3903,119 @@ connected bad-component bounds and dressing specified in (116), the
 contact and source control (113), and target-covering paths.
 Full-integral comparison, perturbed-action stability and iteration
 remain subsequent obligations.
+
+\hypertarget{round-26-low-order-contact-cancellation}{%
+\subsection{26. Round 26: low-order contact
+cancellation}\label{round-26-low-order-contact-cancellation}}
+
+\textbf{GPT-6 Astra, 2026-09-29; written derivation, unrefereed.} On the
+barriered chart, the complete responses of orders one through three obey
+(94) with exponent \(\alpha'\) and explicit constants below. Retain
+§22.3, (114), and \(20\varepsilon\le r_0=1/16\). Derivatives use fixed
+insertion coordinates and straight boundary-coordinate segments with
+velocity \(\varepsilon\); repeated labels mean commuting coordinate
+derivatives on one link. The assertion is uniform on any admissible
+product box of §23.2.
+
+\hypertarget{local-blocks-including-their-constant-parts}{%
+\subsubsection{26.1 Local blocks, including their constant
+parts}\label{local-blocks-including-their-constant-parts}}
+
+Use the physical local potential on \(D\), restoring all boundary-only
+constants to \(S\) and \(V_2\) before applying (107). Such constants
+leave all insertion estimates unchanged. Write
+\(T_B=\partial_B(S-V_2)\). The common old-face energy in (59) cancels
+identically, including every boundary derivative. The remaining local
+energy difference is cubic in small variables: per face use
+\(z=(Y,b_1,\ldots,b_4,\xi_1,\ldots,\xi_4)\), \(|z|_1\le19\varepsilon\),
+and compact transport parameters \(v\). Indeed \(F-F_0\) has zero
+two-jet, \(B(b,\xi)-2|\xi|^2\) has zero two-jet, and \(w-Y=O(b^2)\)
+makes \([|Y+C\xi|^2-|w+C\xi|^2]/4\) cubic. These statements hold for
+every \(v\), so transport derivatives preserve their vanishing jets.
+Assign half of each bridge to each incident face as in §14.2.
+
+Here are fixed local supremum definitions for the additional constants.
+Let \(J\ge1\) bound the sum norms of boundary-coordinate derivatives
+through order three of \((v,z)\), with insertion variables held fixed.
+Let \(K_E\ge1\) bound the sum of all joint derivative norms through
+order six of these local energy differences and of the original and
+Gaussian local energies, on the fixed enlarged chart. Let \(K_J\ge1\)
+bound the corresponding local log-amplitude jets through order six,
+including boundary-only amplitudes. Their uniformity follows from the
+analytic zero-image factors and differentiated image bounds used in
+§22.2. These are unscaled, fixed-dimensional suprema, rather than
+suprema of the desired response. Compact transport charts retain
+free-cycle holonomies. Set \(D_c=100^4e^{6\gamma}\),
+\(\gamma=\frac12\log(10/7)\), and \[C_L=D_cJ^3(2000K_E+5K_J),\qquad
+H_2=3000D_cJ^3(K_E+K_J).\] Taylor's formula gives
+\(\|D^j(T_{\rm energy})\|\le K_E(20\varepsilon)^{3-j}\) for \(j\le3\),
+before division by \(t\). The chain rule then bounds each
+\(\partial_BT_{\rm energy}\) by \(2000J^3K_E\varepsilon^3/t\) for
+\(1\le|B|\le3\). Amplitude derivatives cost at most
+\(5J^3K_J\varepsilon^{|B|}\); \(\varepsilon\le\varepsilon^3/t\) absorbs
+them. Therefore
+\[\|E_\mu T_B\|_{\gamma,\mathrm{marg}}\le C_L\varepsilon^3/t,
+\qquad 1\le |B|\le3.\tag{117}\] Here and below the marginal fixes any
+one boundary label and sums the others, allowing repetitions. A local
+term has at most 48 directional boundary labels and seven insertion
+blocks; a fixed label meets fewer than 100 terms. Through order three
+their incidence sums are below \(100^4\), and the joining trees have at
+most six edges. This proves the count used in \(D_c\). The scalar
+extensions of §22.1 and their product rule also give gradient marginals
+\(H_2\varepsilon^2/t\) for both \(S_{ab}\) and \(\sigma_{ab}\). The
+six-jet suprema cover the needed mixed boundary jets, extending the
+one-boundary jets \(J_2,J_3,M_T\) of §22.
+
+\hypertarget{change-of-measure-and-assembly}{%
+\subsubsection{26.2 Change of measure and
+assembly}\label{change-of-measure-and-assembly}}
+
+Equation (85) and the drift estimate after it sharpen (79) to
+\[\sup_e E_\mu|\nabla_e(T+W_k)|\le L_2\varepsilon^2/t,\qquad
+L_2=B+3D_J+(1+\sqrt2)C_*+\Omega_{\rm app}.\] Use \(h\le\varepsilon\),
+\(\sqrt t\le\varepsilon\), \(t\le\varepsilon^2\) and
+\(p/(1-p)\le\varepsilon^3/t\). In particular the saddle displacement
+\(B\varepsilon^2\) is retained. The stationary coupling in §19.2, which
+includes the barrier endpoint of §18.2, now gives
+\(\sup_e E|X_e-Y_e|\le L_2\varepsilon^2/m\). Let \(b_c\ge b\) bound the
+linear and quadratic coefficients of every
+\(\varepsilon^{-|B|}t\sigma_B\), \(1\le|B|\le3\), on the fixed chart.
+Put \(G_c=1000D_cb_c\) and \(E_c=1000D_cb_c\). The extensions (86) have
+gradient marginals \(G_c\varepsilon^{|B|}/t\). Their Gaussian mean
+errors are at most \(E_c\varepsilon^{|B|+2}p_G^{1/2}/t\): apply
+Cauchy--Schwarz to the quadratic cutoff error and
+\(E_G|\xi_i|^4\le8\varepsilon^4\). Constants in \(\sigma_B\) agree
+exactly at both ends. Consequently
+\[\|E_\mu S_B-E_G\sigma_B\|_{\gamma,\mathrm{marg}}
+\le C_M\varepsilon^3/t,\qquad
+C_M=C_L+G_cL_2/m+E_c.\tag{118}\] This proves the expectation-block
+cancellation before absolute values. All comparisons can first use
+finite \(k\) and the scalar extensions; (85) supplies domination, and
+the barrier limit restores the physical blocks.
+
+The proof of (89) bounds the covariance difference for \textbf{all}
+label pairs; its separation restriction only removed the expectation
+block from the derivative of \(r\). Likewise (91)--(99) bound the third
+cumulant difference for all triples, including repeated labels. Use
+\(C_{27}\) with \(p_G^{1/4}\) replaced by \(1\), and \(C_3\) of §22.3.
+Each order-three contact covariance costs at most
+\(H_2[F+G_0+A_0]\varepsilon^3/(mt)\) by (22), for the interacting and
+Gaussian terms together. The three partitions of type \((2,1)\) thus
+give \[\|\partial^n r\|_{\gamma,\mathrm{marg}}\le C_n^*t^{\alpha'},\quad
+C_1^*=C_M,\quad C_2^*=C_M+C_{27},\quad
+C_3^*=C_M+C_3+3H_2(F+G_0+A_0)/m.\tag{119}\] The one-block, two-block and
+three-block terms in (107) exhaust these orders. Taking \(\eta=\gamma\),
+any fixed \(q>0\), and \(A=\max_{1\le n\le3}C_n^*/q^n\) proves (94)
+through order three: its unordered distinct-link sums are bounded by the
+ordered marginals.
+
+\hypertarget{consequence-for-state-10}{%
+\subsubsection{Consequence for STATE}\label{consequence-for-state-10}}
+
+Round 26 closes singleton, adjacent and coincident contact responses
+through order three on admissible chart boxes, with constants (119).
+Cell 2 next needs higher-order contact/source control in (113),
+connected bad-component bounds and dressing (116), and target-covering
+paths; full-integral comparison, perturbed-action stability and
+iteration remain open.
 \end{document}

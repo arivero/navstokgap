@@ -70,6 +70,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a class="home" href="../index.html">navstokgap</a>
 <nav class="site">
 <a href="../index.html">Results</a>
+<a href="../tutorial.html">Tutorial</a>
 <a href="../papers.html">Papers</a>
 <a href="../ledger.html">Claim ledger</a>
 <a href="../sources.html">Sources</a>
@@ -4940,6 +4941,147 @@ higher connected bad-component bounds and dressing specified in (116),
 the contact and source control (113), and target-covering paths.
 Full-integral comparison, perturbed-action stability and iteration
 remain subsequent obligations.</p>
+<h2 id="round-26-low-order-contact-cancellation">26. Round 26: low-order
+contact cancellation</h2>
+<p><strong>GPT-6 Astra, 2026-09-29; written derivation,
+unrefereed.</strong> On the barriered chart, the complete responses of
+orders one through three obey (94) with exponent <span
+class="math inline">\(\alpha&#39;\)</span> and explicit constants below.
+Retain §22.3, (114), and <span class="math inline">\(20\varepsilon\le
+r_0=1/16\)</span>. Derivatives use fixed insertion coordinates and
+straight boundary-coordinate segments with velocity <span
+class="math inline">\(\varepsilon\)</span>; repeated labels mean
+commuting coordinate derivatives on one link. The assertion is uniform
+on any admissible product box of §23.2.</p>
+<h3 id="local-blocks-including-their-constant-parts">26.1 Local blocks,
+including their constant parts</h3>
+<p>Use the physical local potential on <span
+class="math inline">\(D\)</span>, restoring all boundary-only constants
+to <span class="math inline">\(S\)</span> and <span
+class="math inline">\(V_2\)</span> before applying (107). Such constants
+leave all insertion estimates unchanged. Write <span
+class="math inline">\(T_B=\partial_B(S-V_2)\)</span>. The common
+old-face energy in (59) cancels identically, including every boundary
+derivative. The remaining local energy difference is cubic in small
+variables: per face use <span
+class="math inline">\(z=(Y,b_1,\ldots,b_4,\xi_1,\ldots,\xi_4)\)</span>,
+<span class="math inline">\(|z|_1\le19\varepsilon\)</span>, and compact
+transport parameters <span class="math inline">\(v\)</span>. Indeed
+<span class="math inline">\(F-F_0\)</span> has zero two-jet, <span
+class="math inline">\(B(b,\xi)-2|\xi|^2\)</span> has zero two-jet, and
+<span class="math inline">\(w-Y=O(b^2)\)</span> makes <span
+class="math inline">\([|Y+C\xi|^2-|w+C\xi|^2]/4\)</span> cubic. These
+statements hold for every <span class="math inline">\(v\)</span>, so
+transport derivatives preserve their vanishing jets. Assign half of each
+bridge to each incident face as in §14.2.</p>
+<p>Here are fixed local supremum definitions for the additional
+constants. Let <span class="math inline">\(J\ge1\)</span> bound the sum
+norms of boundary-coordinate derivatives through order three of <span
+class="math inline">\((v,z)\)</span>, with insertion variables held
+fixed. Let <span class="math inline">\(K_E\ge1\)</span> bound the sum of
+all joint derivative norms through order six of these local energy
+differences and of the original and Gaussian local energies, on the
+fixed enlarged chart. Let <span class="math inline">\(K_J\ge1\)</span>
+bound the corresponding local log-amplitude jets through order six,
+including boundary-only amplitudes. Their uniformity follows from the
+analytic zero-image factors and differentiated image bounds used in
+§22.2. These are unscaled, fixed-dimensional suprema, rather than
+suprema of the desired response. Compact transport charts retain
+free-cycle holonomies. Set <span
+class="math inline">\(D_c=100^4e^{6\gamma}\)</span>, <span
+class="math inline">\(\gamma=\frac12\log(10/7)\)</span>, and <span
+class="math display">\[C_L=D_cJ^3(2000K_E+5K_J),\qquad
+H_2=3000D_cJ^3(K_E+K_J).\]</span> Taylor’s formula gives <span
+class="math inline">\(\|D^j(T_{\rm energy})\|\le
+K_E(20\varepsilon)^{3-j}\)</span> for <span
+class="math inline">\(j\le3\)</span>, before division by <span
+class="math inline">\(t\)</span>. The chain rule then bounds each <span
+class="math inline">\(\partial_BT_{\rm energy}\)</span> by <span
+class="math inline">\(2000J^3K_E\varepsilon^3/t\)</span> for <span
+class="math inline">\(1\le|B|\le3\)</span>. Amplitude derivatives cost
+at most <span class="math inline">\(5J^3K_J\varepsilon^{|B|}\)</span>;
+<span class="math inline">\(\varepsilon\le\varepsilon^3/t\)</span>
+absorbs them. Therefore <span class="math display">\[\|E_\mu
+T_B\|_{\gamma,\mathrm{marg}}\le C_L\varepsilon^3/t,
+\qquad 1\le |B|\le3.\tag{117}\]</span> Here and below the marginal fixes
+any one boundary label and sums the others, allowing repetitions. A
+local term has at most 48 directional boundary labels and seven
+insertion blocks; a fixed label meets fewer than 100 terms. Through
+order three their incidence sums are below <span
+class="math inline">\(100^4\)</span>, and the joining trees have at most
+six edges. This proves the count used in <span
+class="math inline">\(D_c\)</span>. The scalar extensions of §22.1 and
+their product rule also give gradient marginals <span
+class="math inline">\(H_2\varepsilon^2/t\)</span> for both <span
+class="math inline">\(S_{ab}\)</span> and <span
+class="math inline">\(\sigma_{ab}\)</span>. The six-jet suprema cover
+the needed mixed boundary jets, extending the one-boundary jets <span
+class="math inline">\(J_2,J_3,M_T\)</span> of §22.</p>
+<h3 id="change-of-measure-and-assembly">26.2 Change of measure and
+assembly</h3>
+<p>Equation (85) and the drift estimate after it sharpen (79) to <span
+class="math display">\[\sup_e E_\mu|\nabla_e(T+W_k)|\le
+L_2\varepsilon^2/t,\qquad
+L_2=B+3D_J+(1+\sqrt2)C_*+\Omega_{\rm app}.\]</span> Use <span
+class="math inline">\(h\le\varepsilon\)</span>, <span
+class="math inline">\(\sqrt t\le\varepsilon\)</span>, <span
+class="math inline">\(t\le\varepsilon^2\)</span> and <span
+class="math inline">\(p/(1-p)\le\varepsilon^3/t\)</span>. In particular
+the saddle displacement <span
+class="math inline">\(B\varepsilon^2\)</span> is retained. The
+stationary coupling in §19.2, which includes the barrier endpoint of
+§18.2, now gives <span class="math inline">\(\sup_e E|X_e-Y_e|\le
+L_2\varepsilon^2/m\)</span>. Let <span class="math inline">\(b_c\ge
+b\)</span> bound the linear and quadratic coefficients of every <span
+class="math inline">\(\varepsilon^{-|B|}t\sigma_B\)</span>, <span
+class="math inline">\(1\le|B|\le3\)</span>, on the fixed chart. Put
+<span class="math inline">\(G_c=1000D_cb_c\)</span> and <span
+class="math inline">\(E_c=1000D_cb_c\)</span>. The extensions (86) have
+gradient marginals <span
+class="math inline">\(G_c\varepsilon^{|B|}/t\)</span>. Their Gaussian
+mean errors are at most <span
+class="math inline">\(E_c\varepsilon^{|B|+2}p_G^{1/2}/t\)</span>: apply
+Cauchy–Schwarz to the quadratic cutoff error and <span
+class="math inline">\(E_G|\xi_i|^4\le8\varepsilon^4\)</span>. Constants
+in <span class="math inline">\(\sigma_B\)</span> agree exactly at both
+ends. Consequently <span class="math display">\[\|E_\mu
+S_B-E_G\sigma_B\|_{\gamma,\mathrm{marg}}
+\le C_M\varepsilon^3/t,\qquad
+C_M=C_L+G_cL_2/m+E_c.\tag{118}\]</span> This proves the
+expectation-block cancellation before absolute values. All comparisons
+can first use finite <span class="math inline">\(k\)</span> and the
+scalar extensions; (85) supplies domination, and the barrier limit
+restores the physical blocks.</p>
+<p>The proof of (89) bounds the covariance difference for
+<strong>all</strong> label pairs; its separation restriction only
+removed the expectation block from the derivative of <span
+class="math inline">\(r\)</span>. Likewise (91)–(99) bound the third
+cumulant difference for all triples, including repeated labels. Use
+<span class="math inline">\(C_{27}\)</span> with <span
+class="math inline">\(p_G^{1/4}\)</span> replaced by <span
+class="math inline">\(1\)</span>, and <span
+class="math inline">\(C_3\)</span> of §22.3. Each order-three contact
+covariance costs at most <span
+class="math inline">\(H_2[F+G_0+A_0]\varepsilon^3/(mt)\)</span> by (22),
+for the interacting and Gaussian terms together. The three partitions of
+type <span class="math inline">\((2,1)\)</span> thus give <span
+class="math display">\[\|\partial^n r\|_{\gamma,\mathrm{marg}}\le
+C_n^*t^{\alpha&#39;},\quad
+C_1^*=C_M,\quad C_2^*=C_M+C_{27},\quad
+C_3^*=C_M+C_3+3H_2(F+G_0+A_0)/m.\tag{119}\]</span> The one-block,
+two-block and three-block terms in (107) exhaust these orders. Taking
+<span class="math inline">\(\eta=\gamma\)</span>, any fixed <span
+class="math inline">\(q&gt;0\)</span>, and <span
+class="math inline">\(A=\max_{1\le n\le3}C_n^*/q^n\)</span> proves (94)
+through order three: its unordered distinct-link sums are bounded by the
+ordered marginals.</p>
+<h3 id="consequence-for-state-10">Consequence for STATE</h3>
+<p>Round 26 closes singleton, adjacent and coincident contact responses
+through order three on admissible chart boxes, with constants (119).
+Cell 2 next needs higher-order contact/source control in (113),
+connected bad-component bounds and dressing (116), and target-covering
+paths; full-integral comparison, perturbed-action stability and
+iteration remain open.</p>
 
 </main>
 <footer class="site"><div class="wrap">
