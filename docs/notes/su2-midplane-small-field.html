@@ -5362,18 +5362,29 @@ Convex interpolation with <span class="math inline">\(V_2\)</span>
 preserves this choice. The background parameter <span
 class="math inline">\(\Lambda=L_F+\beta\)</span> here is §15’s local
 constant, not a momentum cutoff.</p>
-<p>For <span class="math inline">\(e\in A\cap\partial p\)</span>,
-differentiating (126) gives the difference of <span
-class="math inline">\(D_e\phi_p\)</span> at the full and <span
-class="math inline">\(A\)</span>-frozen configurations. Integrate its
-mixed Hessian along the <span class="math inline">\(B\)</span>
-coordinates. The moment estimate in (125) and the triangle inequality in
-<span class="math inline">\(L^2\)</span> give <span
-class="math inline">\(\|D_eK_p\|_2\le\sqrt2K_{\rm loc}/\sqrt t\)</span>;
-the same holds on <span class="math inline">\(B\)</span>. Since the four
-gradients occupy orthogonal coordinate blocks, <span
-class="math inline">\(\|\nabla K_p\|_2\le2\sqrt2K_{\rm loc}/\sqrt
-t\)</span> uniformly throughout (125).</p>
+<p>Group the coordinates of each side of the cut. Differentiating (126)
+gives <span class="math display">\[D_AK_p=\int_0^1 H_{AB}(s+y_A+v
+y_B)y_B\,dv,\]</span> where <span class="math inline">\(H_{AB}\)</span>
+is the mixed block of the parent face Hessian; the <span
+class="math inline">\(D_BK_p\)</span> formula integrates along <span
+class="math inline">\(s+u y_A+y_B\)</span>. At each common
+configuration, symmetry and (127) bound both block row and column sums
+of <span class="math inline">\(H_{AB}\)</span> by <span
+class="math inline">\(K_{\rm loc}/t\)</span>, so <span
+class="math inline">\(\|H_{AB}\|_{\rm op}\le K_{\rm loc}/t\)</span>.
+Consequently <span class="math display">\[|\nabla K_p|\le\frac{K_{\rm
+loc}}t
+\left(\sum_{e\in\partial p}|\xi_e-s_e|^2\right)^{1/2},
+\qquad
+\|\nabla K_p\|_q\le\frac{G_q}{\sqrt t},\quad
+G_q=2K_{\rm loc}\sqrt{2(q+1)/3}\quad(q\ge2).\]</span> The last step uses
+(125) and Minkowski on the sum of squared block norms. In particular
+<span class="math inline">\(G_2=2\sqrt2K_{\rm loc}\)</span>, preserving
+the constant used below. This corrects the earlier individual-coordinate
+argument: a configuration-dependent row bound cannot be pulled outside
+an <span class="math inline">\(L^2\)</span> sum as fixed coefficients.
+The grouped operator estimate requires no new deterministic-envelope
+hypothesis.</p>
 <p>Take the convex path <span
 class="math inline">\(S_u=S_{\{A,B\}}+u\sum_{p\text{
 crossing}}K_p\)</span>, <span class="math inline">\(0\le u\le1\)</span>,
@@ -5577,32 +5588,187 @@ volume-uniform polydisc in (113). Nor does it supply the dressed
 per-site budget (112) or a new tree factor for each bad component in
 (116). These are precise limitations of this norm calculation, not
 counterexamples to spatial clustering.</p>
-<p>The next bounded lemma is the anchored two-connector estimate <span
+<p>The anchored two-connector estimate, proved in §30, is <span
 class="math display">\[|\kappa(F_H,K_p,K_q)|
 \le D_2p^{h/64}
 \sum_{T\in\mathcal T_{\{H,p,q\}}}
 \prod_{ij\in T}e^{-\gamma_2d(S_i,S_j)},\qquad
-S_H=H,\quad S_p=\partial p,\quad S_q=\partial q.\tag{135}\]</span> It
-needs <span class="math inline">\(D_2,\gamma_2&gt;0\)</span> uniform
-over (125) and an explicit sum over both face labels. The moments (131)
-now control every quadratic insertion; Theorem 5 and the real
-factorizing family provide the locality inputs. Test whether the second
-attachment carries a fresh summable spatial factor. Stop after two
-distinct constructions fail to improve on a single cut factor; reject a
-construction that differentiates the barrier, leaves the admissible
-family, or makes the rate vanish with attachment order. A proof of (135)
-would remain finite-order and must identify its order-uniform recurrence
-before dressing is claimed.</p>
+S_H=H,\quad S_p=\partial p,\quad S_q=\partial q.\tag{135}\]</span> Its
+constants and the sum over both face labels are explicit there. The
+moments (131) control the quadratic insertions; Theorem 5 supplies the
+locality input. This finite-order result still needs an order-uniform
+attachment construction before dressing is claimed.</p>
 <h3 id="consequence-for-state-13">Consequence for STATE</h3>
 <p>This gauge checkpoint controls arbitrary products of smooth
 connectors, their connected response growth and a nonvanishing complex
 <span class="math inline">\(\ell^1\)</span> source domain, uniformly in
-the real family. The next gauge lemma is the anchored spatial bound
-(135), then its order-uniform extension and dressing. Alternate next to
-a closed Hamiltonian memory and monitor construction on the Newton
-track. Boundary-source control, group-dependent <span
-class="math inline">\(SU(3)\)</span> verification and the continuum
-spectral obligations remain open.</p>
+the real family. Section 30 supplies the next spatial checkpoint; the
+order-uniform extension, dressing, boundary sources and group-dependent
+<span class="math inline">\(SU(3)\)</span> verification remain open.</p>
+<h2 id="an-anchored-two-connector-tree-and-its-spatial-sum">30. An
+anchored two-connector tree and its spatial sum</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-29; written derivation,
+internally checked.</strong> Equation (135) holds throughout (125), with
+<span class="math inline">\(\gamma_2=\gamma_{\rm bad}/2\)</span> and the
+explicit <span class="math inline">\(D_2\)</span> in (139). The sum over
+both connector locations retains rarity and a positive spatial reserve,
+as (140) states. No barrier is differentiated and no additional chart or
+physical hypothesis is introduced. The result is finite-order;
+arbitrary-order spatial clustering remains open.</p>
+<h3 id="three-cuts-with-enough-rarity-left">30.1 Three cuts with enough
+rarity left</h3>
+<p>Fix <span class="math inline">\(0&lt;t\le1\)</span> under the
+existing small-time conditions, a nonempty bad set <span
+class="math inline">\(H\)</span>, <span
+class="math inline">\(h=|H|\)</span>, and any two §28.2 connectors,
+including repeated or overlapping labels. Put <span
+class="math inline">\(K=K_{\rm loc}\)</span>, <span
+class="math inline">\(\Omega=\Omega_{\rm app}\)</span>, <span
+class="math inline">\(P=p^{h/16}\)</span> and <span
+class="math inline">\(\gamma=\log(12/5)\)</span>. All expectations below
+use the same real measure from (125). For <span
+class="math inline">\(\bar K_p=K_p-EK_p\)</span>, (131) and <span
+class="math inline">\(|EK_p|\le4K\)</span> give <span
+class="math display">\[\|\bar K_p\|_4\le M_4=16K,\qquad
+\|\bar K_p\|_6\le M_6=64K/3.\tag{136}\]</span> Section 28.2 gives <span
+class="math inline">\(\|\nabla K_p\|_q\le G_q/\sqrt t\)</span>, with
+<span class="math inline">\(G_q=2K\sqrt{2(q+1)/3}\)</span>. Section 25.2
+gives the pointwise estimate <span class="math inline">\(|\nabla
+F_H|\le(\Omega\sqrt h/\varepsilon)1_{B_H}\)</span>, and <span
+class="math inline">\(|F_H|\le1_{B_H}\)</span>, <span
+class="math inline">\(\Pr(B_H)\le P\)</span>.</p>
+<p>The exact centred identities are <span
+class="math display">\[\kappa(F_H,K_p,K_q)
+=\operatorname{Cov}(F_H,\bar K_p\bar K_q)
+=\operatorname{Cov}(K_p,(F_H-EF_H)\bar K_q),\]</span> and the identity
+with <span class="math inline">\(p,q\)</span> interchanged. For the
+first cut, <span class="math inline">\(\|\nabla(\bar K_p\bar
+K_q)\|_2\le2M_4G_4/\sqrt t\)</span> by Hölder. Theorem 5, with <span
+class="math inline">\(\kappa=1/2\)</span>, therefore gives <span
+class="math display">\[|\kappa(F_H,K_p,K_q)|
+\le\frac47\Omega M_4G_4t^\delta\sqrt h\,p^{h/32}
+e^{-\gamma\min(d(H,\partial p),d(H,\partial q))}.
+\tag{137}\]</span></p>
+<p>For the connector singleton cut, use sixth moments to obtain <span
+class="math display">\[\|\nabla[(F_H-EF_H)\bar K_q]\|_2
+\le P^{1/3}\left[\frac{\Omega M_6\sqrt h}{\varepsilon}
+                              +\frac{2G_6}{\sqrt t}\right].\]</span>
+Indeed <span class="math inline">\(\|1_{B_H}\bar K_q\|_2\le
+P^{1/3}M_6\)</span> and <span class="math inline">\(\|1_{B_H}\nabla
+K_q\|_2\le P^{1/3}G_6/\sqrt t\)</span>; the centring term costs at most
+<span class="math inline">\(P G_2/\sqrt t\)</span>, bounded by the same
+<span class="math inline">\(P^{1/3}G_6/\sqrt t\)</span>. Theorem 5 now
+yields <span class="math display">\[|\kappa(F_H,K_p,K_q)|
+\le\frac27G_2[\Omega M_6t^\delta\sqrt h+2G_6]p^{h/48}
+e^{-\gamma\min(d(\partial p,H),d(\partial p,\partial q))}.
+\tag{138}\]</span> The third cut has the same constant. Fourth moments
+in (138) would leave only <span class="math inline">\(p^{h/64}\)</span>
+before absorbing <span class="math inline">\(\sqrt h\)</span>. Sixth
+moments provide exactly the extra rarity this absorption needs.</p>
+<p>Put <span class="math display">\[\begin{aligned}
+D_H&amp;=\frac47\Omega M_4G_4\sqrt{32/(\mathrm e\log2)},\\
+D_K&amp;=\frac27G_2\left[
+\Omega M_6\sqrt{96/(\mathrm e\log2)}+2G_6\right],\\
+D_2&amp;=\max(D_H,D_K).
+\end{aligned}\tag{139}\]</span> Since <span
+class="math inline">\(t^\delta\le1\)</span> and <span
+class="math inline">\(L=\log(1/p)\ge\log2\)</span>, <span
+class="math inline">\(\sup_{h&gt;0}\sqrt h\,e^{-Lh/64}=\sqrt{32/(\mathrm
+eL)}\)</span> absorbs (137)’s cardinality factor. For (138), the reserve
+is <span class="math inline">\(1/48-1/64=1/192\)</span>, giving <span
+class="math inline">\(\sup_{h&gt;0}\sqrt
+h\,e^{-Lh/192}=\sqrt{96/(\mathrm eL)}\)</span>. Every singleton cut thus
+costs at most <span class="math inline">\(D_2p^{h/64}\)</span> times its
+distance factor.</p>
+<h3 id="tree-conversion-and-the-sum-over-locations">30.2 Tree conversion
+and the sum over locations</h3>
+<p>Order the three pair distances as <span class="math inline">\(a\le
+b\le c\)</span>. The strongest singleton cut has nearest-support
+distance <span class="math inline">\(b\)</span>. The pairs realizing
+<span class="math inline">\(a,b\)</span> form a spanning tree on the
+three labels, and <span class="math inline">\(b\ge(a+b)/2\)</span>.
+Therefore (137)–(139) prove (135), with <span
+class="math inline">\(\gamma_2=\gamma/2\)</span>. This uses no triangle
+inequality for distances between sets and permits repeated face
+labels.</p>
+<p>There is also a useful weighted spatial sum. Let <span
+class="math inline">\(\ell(H,p,q)\)</span> be the minimum spanning-tree
+length on the three supports. For <span
+class="math inline">\(0\le\eta&lt;\gamma/2\)</span> put <span
+class="math inline">\(r=e^{-(\gamma/2-\eta)}\)</span> and define <span
+class="math display">\[C_E(r)=2\left[
+\frac{16r(1+r)}{(1-r)^3}+\frac{24r}{(1-r)^2}+
+\frac9{1-r}\right].\]</span> The graph count in §28.2 gives <span
+class="math inline">\(\sum_p r^{d(H,\partial p)}\le2hC_E(r)\)</span> and
+<span class="math inline">\(\sup_p\sum_q r^{d(\partial p,\partial
+q)}\le8C_E(r)\)</span>. For any tree <span
+class="math inline">\(T\)</span>, <span
+class="math inline">\(\ell\le\sum_{ij\in T}d(S_i,S_j)\)</span>;
+multiplying its term in (135) by <span
+class="math inline">\(e^{\eta\ell}\)</span> therefore leaves rate <span
+class="math inline">\(\gamma/2-\eta\)</span> on each edge. The root-star
+tree costs <span class="math inline">\(4h^2C_E^2\)</span>, and the two
+root-path trees together cost <span
+class="math inline">\(32hC_E^2\)</span>. Hence <span
+class="math display">\[\begin{aligned}
+\sum_{p,q}e^{\eta\ell(H,p,q)}
+|\kappa(F_H,K_p,K_q)|
+&amp;\le4D_2C_E(r)^2(h^2+8h)p^{h/64}\\
+&amp;\le4D_2C_E(r)^2
+\left[\frac{128}{\mathrm e\log2}+8\right]h\,p^{h/128}.
+\end{aligned}\tag{140}\]</span> The second line spends additional rarity
+using <span class="math inline">\(\sup_{h&gt;0}h
+e^{-Lh/128}=128/(\mathrm eL)\)</span>. All faces of a finite plane may
+be summed; restricting to crossing faces improves the bound. The choice
+<span class="math inline">\(\eta=\gamma/4\)</span> leaves a fixed
+positive spatial reserve. Constants are independent of plane size,
+barrier approximation, real decoupling parameters and small heat
+time.</p>
+<p>The observables have polynomial growth, so (125)’s higher moments
+justify covariance truncation and uniform integrability in the existing
+fixed-volume barrier limit. These arguments use the convex barriers only
+inside the measures. All constants are dimensionless: <span
+class="math inline">\(t\|\nabla K\|\|\nabla F_H\|\)</span> scales as
+<span class="math inline">\(\sqrt t/\varepsilon=t^\delta\)</span>, while
+two connector gradients have scale <span
+class="math inline">\(t^{-1}\)</span>, cancelling the covariance factor
+<span class="math inline">\(t\)</span>. At fixed <span
+class="math inline">\(h\)</span>, rarity still vanishes as <span
+class="math inline">\(t\downarrow0\)</span>.</p>
+<h3 id="the-next-attachment-must-retain-a-fixed-spatial-reserve">30.3
+The next attachment must retain a fixed spatial reserve</h3>
+<p>The sum (140) closes the anchored second connected response and
+allows the second-order term of a real response expansion to be summed
+without plane-size cost. It does not give a radius for a uniform source
+polydisc or a fully dressed activity.</p>
+<p>The next lemma must control the anchored sum of <span
+class="math inline">\(\kappa(F_H,K_{p_1},\ldots,K_{p_n})\)</span> for
+arbitrary <span class="math inline">\(n\)</span>, with one fixed
+positive spatial reserve and a geometric constant per attachment after
+the response factorial is divided out. A sufficient target is a fixed
+<span class="math inline">\(\eta_*,a_*,\rho_*&gt;0\)</span> and <span
+class="math inline">\(A_*&lt;\infty\)</span> such that <span
+class="math display">\[\sum_{n\ge1}\frac{\rho_*^n}{n!}
+\sum_{p_1,\ldots,p_n}
+e^{\eta_*\ell(H,p_1,\ldots,p_n)}
+|\kappa(F_H,K_{p_1},\ldots,K_{p_n})|
+\le A_*|H|p^{a_*|H|}.\]</span> This is a target, not an inference from
+(132) and (140). An independent-attachment forest interpolation
+retaining the measures in (125) is one possible construction. Stop a
+cut-only recurrence when its decay rate decreases with order; reject a
+forest interpolation if its differentiation reaches a barrier, leaves
+the admissible real family or cannot price its unbounded insertions.
+Test at most two mathematically distinct constructions before changing
+this research decision. Bad-component dressing and boundary-source
+variation still require their own bounds after this anchored lemma.</p>
+<h3 id="consequence-for-state-14">Consequence for STATE</h3>
+<p>The gauge checkpoint proves (135) and its rarity-weighted spatial sum
+(140), and repairs §28.2’s gradient proof without changing (128). The
+next gauge lemma is the order-uniform anchored attachment bound of
+§30.3. Alternate now to a genuine Newton two-storage-cell refinement.
+Dressing, boundary sources, explicit <span
+class="math inline">\(SU(3)\)</span> constants, iteration, continuum
+nontriviality and the physical spectral gap remain open.</p>
 
 </main>
 <footer class="site"><div class="wrap">

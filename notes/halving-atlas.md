@@ -228,9 +228,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    real decoupling paths, and the one-connector bound (128) (both written,
    unrefereed). [§29](su2-midplane-small-field.md#29-all-order-connector-moments-and-a-uniform-analytic-source-ball)
    controls arbitrary connector moments and connected growth, and gives
-   a uniform complex $\ell^1$ source ball (Sol/Astra, written). Next:
-   anchored two-connector tree decay (135), its order-uniform extension,
-   dressed activities (112) and boundary polydiscs (113), yielding (94);
+   a uniform complex $\ell^1$ source ball. [§30](su2-midplane-small-field.md#30-an-anchored-two-connector-tree-and-its-spatial-sum)
+   proves the anchored two-connector tree (135) and its summed spatial
+   reserve (140), with the earlier gradient bound retained after a proof
+   repair (Sol/Astra, written). Next: an order-uniform anchored attachment
+   expansion, dressed activities (112) and boundary polydiscs (113), yielding (94);
    then target-covering paths, curvature conversion, full-integral
    comparison, perturbed-action stability and iteration. The fixed-frame
    transport-value comparison remains open; Proposition 4's rejection stands.
