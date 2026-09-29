@@ -2153,3 +2153,11 @@ $P(|\xi_e|\ge3\varepsilon)\le(7/30)^{k_t}$, using
 $|\xi_*|\le6\varepsilon/7$. A union bound costs $2N$.
 Thus the annulus above $3\varepsilon$ joins the large-field problem;
 these reference tails leave comparison with the full group integral open.
+
+### Consequence for STATE
+
+Round 17b refines §§15--16 and isolates (69) as the next cell-2 estimate:
+control the barrier insertion and change of measure with weighted size
+$C\varepsilon^3/t$, uniformly in plane size and barrier approximation.
+Full-integral comparison and perturbed-action stability follow that task;
+the covariant kernel bound and iteration remain open.
