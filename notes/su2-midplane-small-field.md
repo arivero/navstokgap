@@ -2208,8 +2208,11 @@ environments with applications to the $\nabla\phi$ interface model (Crossref
 metadata verified 2026-09-29; results recalled, not read here). Their
 hypotheses are uniform ellipticity of the edge couplings; here the
 couplings are uniformly elliptic ($\frac72\le$ smooth part $\le\frac{17}2$ in block norm)
-and the barrier enters only on the diagonal of the edge index, as a
-killing rate in the random-walk picture, which can only improve decay.
+and the barrier enters only on the diagonal of the edge index. (Round 19,
+§19.1, corrects the next step of this remark: in $R_0$ the barrier enters
+the drift, and it acts as killing only in $R_\mu$ and in the differentiated
+equation; positivity of the block Hessian alone supplies no scalar
+random-walk conductances.)
 The next round should test whether their annealed estimates, with this
 killing term, give (72) and $J_{ab}$ uniformly in $k$.
 All operators and score normalizations are those of §17; $c_0=3\varepsilon$,
@@ -2348,6 +2351,27 @@ full-integral comparison and perturbed-action stability follow that step.
 
 **GPT-6 Astra, 2026-09-29; written proofs, unrefereed.** The finite-$k$
 representation gives uniform pointwise bounds for bounded local scores.
+
+**After refereeing §19 (Claude, 2026-09-29).** ACCEPT (76)--(78) and the
+replacement lemma (80) as a conditional result. Checked: (76) because $H$
+is configuration-independent and commutes with the diffusion generator;
+the pointwise bound (77) from $\int_0^\infty e^{-5s}e^{sC}ds=(5-C)^{-1}$, which removes
+the fourth-moment question of (72) for bounded scores; (78) by
+differentiating $\nabla V\cdot\nabla u$, so only $V''$ enters, with the two-index base
+$tL+10I$ plus a nonnegative right multiplication; (81) by removing one
+edge's barrier; the scale bookkeeping in (80). Most of (79) is already in
+hand. The deterministic majorant $C^S$ with sums at most $\frac72$ follows from
+§17's $\|tS''-H\|_{\infty,b}\le C_*\varepsilon\le\frac12$. The proof of (55) uses only diagonal
+dominance and the sign of the barrier terms on the edges that carry
+barriers, so it applies verbatim to the removed-edge measures $\nu_{e,k}$ and
+to the interpolated $\nu_\lambda$; it gives $p_{e,k}\le2(7/16)^{k_t}$ for small $\rho_k$, hence
+$p/(1-p)\le P\varepsilon^3/t$ for small $t$, and
+$E|\nabla_eT|\lesssim\Lambda(1+\varepsilon/\sqrt t)$, far inside $L\varepsilon/t$. The profile constants
+$K_{\rm app},\Omega_{\rm app}$ are a choice of approximants (the $x^4$ profile of §18 and its
+mollifications). What remains is the score-extension step: extended
+scores with the stated marginal constants and a Gaussian covariance error
+$E_0\varepsilon^3/t$ against the original ones. With it, (80) gives the covariant
+kernel estimate (27) at decay exponent $\frac12\log(10/7)$.
 A concrete replacement lemma below uses local drift moments and score
 extensions to close the comparison conditionally, including its barrier
 endpoint. These additional inputs remain to be established for §17.

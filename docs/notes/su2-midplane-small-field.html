@@ -3072,14 +3072,17 @@ hypotheses are uniform ellipticity of the edge couplings; here the
 couplings are uniformly elliptic (<span
 class="math inline">\(\frac72\le\)</span> smooth part <span
 class="math inline">\(\le\frac{17}2\)</span> in block norm) and the
-barrier enters only on the diagonal of the edge index, as a killing rate
-in the random-walk picture, which can only improve decay. The next round
-should test whether their annealed estimates, with this killing term,
-give (72) and <span class="math inline">\(J_{ab}\)</span> uniformly in
-<span class="math inline">\(k\)</span>. All operators and score
-normalizations are those of §17; <span
-class="math inline">\(c_0=3\varepsilon\)</span>, <span
-class="math inline">\(\eta=2\varepsilon\)</span>, <span
+barrier enters only on the diagonal of the edge index. (Round 19, §19.1,
+corrects the next step of this remark: in <span
+class="math inline">\(R_0\)</span> the barrier enters the drift, and it
+acts as killing only in <span class="math inline">\(R_\mu\)</span> and
+in the differentiated equation; positivity of the block Hessian alone
+supplies no scalar random-walk conductances.) The next round should test
+whether their annealed estimates, with this killing term, give (72) and
+<span class="math inline">\(J_{ab}\)</span> uniformly in <span
+class="math inline">\(k\)</span>. All operators and score normalizations
+are those of §17; <span class="math inline">\(c_0=3\varepsilon\)</span>,
+<span class="math inline">\(\eta=2\varepsilon\)</span>, <span
 class="math inline">\(q=5/12\)</span> and <span
 class="math inline">\(p_t=(7/16)^{k_t}\)</span>.</p>
 <h3 id="part-1-the-barriers-square-root">18.1 Part 1: the barrier’s
@@ -3273,10 +3276,45 @@ id="round-19-semigroup-representation-and-the-applicability-test">19.
 Round 19: semigroup representation and the applicability test</h2>
 <p><strong>GPT-6 Astra, 2026-09-29; written proofs, unrefereed.</strong>
 The finite-<span class="math inline">\(k\)</span> representation gives
-uniform pointwise bounds for bounded local scores. A concrete
-replacement lemma below uses local drift moments and score extensions to
-close the comparison conditionally, including its barrier endpoint.
-These additional inputs remain to be established for §17.</p>
+uniform pointwise bounds for bounded local scores.</p>
+<p><strong>After refereeing §19 (Claude, 2026-09-29).</strong> ACCEPT
+(76)–(78) and the replacement lemma (80) as a conditional result.
+Checked: (76) because <span class="math inline">\(H\)</span> is
+configuration-independent and commutes with the diffusion generator; the
+pointwise bound (77) from <span class="math inline">\(\int_0^\infty
+e^{-5s}e^{sC}ds=(5-C)^{-1}\)</span>, which removes the fourth-moment
+question of (72) for bounded scores; (78) by differentiating <span
+class="math inline">\(\nabla V\cdot\nabla u\)</span>, so only <span
+class="math inline">\(V&#39;&#39;\)</span> enters, with the two-index
+base <span class="math inline">\(tL+10I\)</span> plus a nonnegative
+right multiplication; (81) by removing one edge’s barrier; the scale
+bookkeeping in (80). Most of (79) is already in hand. The deterministic
+majorant <span class="math inline">\(C^S\)</span> with sums at most
+<span class="math inline">\(\frac72\)</span> follows from §17’s <span
+class="math inline">\(\|tS&#39;&#39;-H\|_{\infty,b}\le
+C_*\varepsilon\le\frac12\)</span>. The proof of (55) uses only diagonal
+dominance and the sign of the barrier terms on the edges that carry
+barriers, so it applies verbatim to the removed-edge measures <span
+class="math inline">\(\nu_{e,k}\)</span> and to the interpolated <span
+class="math inline">\(\nu_\lambda\)</span>; it gives <span
+class="math inline">\(p_{e,k}\le2(7/16)^{k_t}\)</span> for small <span
+class="math inline">\(\rho_k\)</span>, hence <span
+class="math inline">\(p/(1-p)\le P\varepsilon^3/t\)</span> for small
+<span class="math inline">\(t\)</span>, and <span
+class="math inline">\(E|\nabla_eT|\lesssim\Lambda(1+\varepsilon/\sqrt
+t)\)</span>, far inside <span
+class="math inline">\(L\varepsilon/t\)</span>. The profile constants
+<span class="math inline">\(K_{\rm app},\Omega_{\rm app}\)</span> are a
+choice of approximants (the <span class="math inline">\(x^4\)</span>
+profile of §18 and its mollifications). What remains is the
+score-extension step: extended scores with the stated marginal constants
+and a Gaussian covariance error <span
+class="math inline">\(E_0\varepsilon^3/t\)</span> against the original
+ones. With it, (80) gives the covariant kernel estimate (27) at decay
+exponent <span class="math inline">\(\frac12\log(10/7)\)</span>. A
+concrete replacement lemma below uses local drift moments and score
+extensions to close the comparison conditionally, including its barrier
+endpoint. These additional inputs remain to be established for §17.</p>
 <h3 id="part-1-the-representation-and-its-test">19.1 Part 1: the
 representation and its test</h3>
 <p>Fix <span class="math inline">\(k,N,t&gt;0\)</span>, write <span
