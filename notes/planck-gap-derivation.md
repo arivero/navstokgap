@@ -334,9 +334,11 @@ it fits this framework and why its value of $\kappa$ is a heuristic
 analogy rather than a quantum result. The logical structure established
 here is therefore:
 
-$$\text{floor of the classically recorded comparison}\;>0
-\quad\Longleftrightarrow\quad\kappa>0,\qquad
-\text{deterministic probes}\;\Longrightarrow\;\kappa=0,$$
+$$\begin{gathered}
+\text{floor of the classically recorded comparison}\;>0
+\quad\Longleftrightarrow\quad\kappa>0,\\
+\text{deterministic probes}\;\Longrightarrow\;\kappa=0,
+\end{gathered}$$
 
 proved here for all finite mark protocols with explicit constants. No
 step assumes a path-integral phase rule, a fixed measurement budget, or a
