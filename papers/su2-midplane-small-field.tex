@@ -3443,4 +3443,80 @@ Finally (104) supplies \((n-1)!\). Passage to the barrier limit requires
 these bounds uniformly in \(k\) and convergence of the products in
 (104). This is a conditional all-order majorant; §22 already proves the
 sharper third-order estimate with its lower moment requirements.
+
+\hypertarget{contacts-paths-and-the-growth-verdict-part-2}{%
+\subsubsection{23.2 Contacts, paths and the growth verdict (Part
+2)}\label{contacts-paths-and-the-growth-verdict-part-2}}
+
+For arbitrary distinct links let \(S_B=\partial_BS\),
+\(\sigma_B=\partial_BV_2\). The exact contact formula, with
+\(\kappa(h)=Eh\), is
+\[\partial_Xr=\sum_{\pi\in\mathcal P(X)}(-1)^{|\pi|-1}
+ \{\kappa_\mu(S_B:B\in\pi)-\kappa_G(\sigma_B:B\in\pi)\}.\tag{107}\] Thus
+order two adds \(ES_{ab}\), and order three adds \(ES_{abc}\) and the
+three negative covariances displayed after (90). Induction uses
+\(\partial_a EF=E\partial_aF-\operatorname{Cov}(F,A_a)\):
+differentiating a block inserts \(a\) into it, while differentiating the
+law creates a new singleton block. This generates every partition
+exactly once.
+
+For contact blocks of size \(b\), include the local constants
+\(M_{b,j}=(t/\varepsilon^b)\|D_\xi^jS_B\|_{\gamma,\mathrm{marg},4n}\)
+for \(1\le j\le n\), and the corresponding supremum norm \(M_{b,0}\) for
+\(j=0\), including Gaussian counterparts. The marginal includes all
+boundary labels of \(B\). These are mixed jets of the same local action,
+cutoff and coordinate maps used in §22; locality bounds their support,
+and compact-chart smoothness makes each fixed-order constant finite.
+Their order growth and powers of \(\varepsilon\) remain in \(M_{b,j}\).
+Apply (105) with these jets at each vertex of (104). A partition with
+\(s\) blocks contributes at most \((s-1)!\varepsilon^n/t\) times its
+contraction majorant; for \(s=1\) use \(M_{n,0}\). Summing these bounds
+over partitions proves a contact bound with explicit multiplicities:
+there are \({n\brace s}\) partitions with \(s\) blocks, each carrying
+\((s-1)!\) histories. This bounds every contact by local mixed jets and
+the same \(B_j,m\); a cubic remainder scale needs the cancellations
+between interacting and Gaussian contact terms, especially at orders one
+and two. Separate absolute bounds can retain the larger
+\(\varepsilon^2/t\).
+
+Admissibility in (94) means one fixed product of link paths, each
+depending only on its own parameter, of speed \(\le\varepsilon\), such
+that the entire parameter cube, including all corners, stays inside the
+same chart with all §§14, 17--22 inequalities uniform and insertion
+coordinates fixed. The barrier and its domain stay independent of these
+parameters. A sufficient local construction is a product coordinate box
+contained in the open chart, with straight coordinate segments rescaled
+to this speed. Its existence near an interior background follows by
+continuity at finite volume; a box of the required size for every target
+configuration is an additional geometric requirement. The based-cycle
+data remain included.
+
+\textbf{Growth verdict.} For distinct labels the ordered marginal in
+(106) is exactly \((n-1)!\) times the unordered marginal in (94).
+Accordingly its separated bound is \(\varepsilon^n(H_n+H_n^G)/t\):
+permutation counting alone supplies a factorial upper bound in the
+ordered convention, and cancels in the required convention. Remaining
+jet and contact growth decides whether a fixed \(q\) works. The present
+profile already obstructs this particular all-order majorant: near
+\(r=2\varepsilon\),
+\(w=(r-2\varepsilon)_+^4/ \varepsilon^4+O((r-2\varepsilon)_+^5/\varepsilon^5)\),
+so its fourth radial derivative jumps by \(24/\varepsilon^4\).
+Mollification makes the fifth jet of size proportional to
+\(\varepsilon^{-4}\rho_k^{-1}\) on a shell of width \(\rho_k\). Hence
+\(K_{5,P}=\infty\) for every finite \(P\), and its \(L^P\) norm diverges
+for \(P>1\) at fixed \(t\) as \(k\to\infty\). The density is positive at
+this inner shell; the barrier weight tends to one there. This is an
+obstruction to differentiated-resolvent estimates, while finite-order
+boundary cumulants themselves remain well defined.
+
+A constructive remedy is a smoother flat onset with quantified jets, or
+a connected expansion controlling the barrier without differentiating
+it. Such a route must bound the \emph{unordered} contact majorant
+geometrically, retain the small remainder activity (including orders one
+and two), and prove \(q<e^\eta-1\) for some \(0<\eta\le\gamma\). A
+residual \(n!c^n\) upper bound cannot be absorbed by fixed small \(t\):
+\((n!c^n)^{1/n}\sim cn/e\). Connected expansion weights with
+compensating factorials or stronger cancellations are then required.
+Equations (103)--(107) therefore leave (94), its bare activity scale and
+geometric order growth open on this chart.
 \end{document}
