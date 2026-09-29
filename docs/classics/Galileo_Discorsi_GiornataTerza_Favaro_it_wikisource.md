@@ -12,8 +12,8 @@ must pass through every degree of slowness, "grado alcuno non sia di
 velocità così piccolo, o vogliamo dir di tardità così grande", so near the
 first instant it would not cross a palm in a thousand years, while sense
 shows a falling weight fast at once. Salviati answers with a record: a
-weight dropped on a stake in yielding ground drives it less as the height
-shrinks, "pochissimo" from a finger's height and "del tutto impercettibile"
+weight dropped onto yielding ground sinks into it less as the height
+shrinks ("lo ficca in terra, v. g., quattro dita" from four braccia), "pochissimo" from a finger's height and "del tutto impercettibile"
 from the thickness of a sheet of paper, and since "l'effetto della percossa
 si regola dalla velocità", where the effect is imperceptible the velocity is
 "più che minima". For this project it is the beginning of motion argued
@@ -23,7 +23,7 @@ from the graded vanishing of its record, used in
 ## Passage anchors
 
 - Printed pp. 198–199: Sagredo, "grado alcuno non sia di velocità così piccolo, o vogliamo dir di tardità così grande, nel quale non si sia trovato costituito l'istesso mobile dopo la partita dall'infinita tardità, cioè dalla quiete"; "accidente al quale pare che assai mal agevolmente s'accomodi l'immaginazione, mentre che il senso ci mostra, un grave cadente venir subito con gran velocità".
-- Printed pp. 199–200: Salviati, "i primi impeti del cadente, benché gravissimo, esser lentissimi e tardissimi"; the stake, "sollevandolo un dito, che farà di più che se, senza percossa, vi fusse posto sopra? certo pochissimo: ed operazione del tutto impercettibile sarebbe, se si elevasse quanto è grosso un foglio. E perché l'effetto della percossa si regola dalla velocità del medesimo percuziente, chi vorrà dubitare che lentissimo sia 'l moto e più che minima la velocità, dove l'operazione sua sia impercettibile?"
+- Printed pp. 199–200: Salviati, "i primi impeti del cadente, benché gravissimo, esser lentissimi e tardissimi"; the weight sinking into yielding ground, "sollevandolo un dito, che farà di più che se, senza percossa, vi fusse posto sopra? certo pochissimo: ed operazione del tutto impercettibile sarebbe, se si elevasse quanto è grosso un foglio. E perché l'effetto della percossa si regola dalla velocità del medesimo percuziente, chi vorrà dubitare che lentissimo sia 'l moto e più che minima la velocità, dove l'operazione sua sia impercettibile?"
 - Printed p. 200: the argument from reason, "essendo che la velocità è augumentabile e menomabile in infinito, qual ragione mi persuaderà che tal mobile, partendosi da una tardità infinita (ché tal è la quiete), entri immediatamente in dieci gradi di velocità più che in una di quattro ... ed in somma in tutte le minori in infinito?"
 
 ## Coverage and limits

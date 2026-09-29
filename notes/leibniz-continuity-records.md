@@ -42,9 +42,9 @@ the proportion argument against leaps, which a floor on action meets
 (§2b). Newton's own Rule III (1713) separates division by reason, certain,
 from division by the powers of nature, "incertum", to be settled by one
 experiment (§4b), and his *Opticks* posits the permanent least bodies that
-the *Pacidius* named, for the sake of lasting natures (§4c). Galileo in 1638
-already argues the beginning of fall from the graded vanishing of its
-record, the records reading in practice (§4d). The Newton-age dispute
+the *Pacidius* named, for the sake of lasting natures (§4c). Galileo in 1638 already argues the beginning of fall from the graded
+vanishing of its record, the records reading's measure of outcomes in
+practice (§4d). The Newton-age dispute
 over indivisibles, Galileo, Cavalieri and Guldin between 1621 and 1647,
 concerned static figures, where the theorem imposes no floor and Newton's
 limit doctrine is the right answer (§4).
@@ -502,7 +502,9 @@ passage, from the Wikisource transcription).
   mobile dopo la partita dall'infinita tardità, cioè dalla quiete", which
   the imagination resists "mentre che il senso ci mostra, un grave cadente
   venir subito con gran velocità" (pp. 198--199). Salviati answers with a
-  stake driven into yielding ground: from a finger's height, "che farà di
+  weight dropped onto yielding ground, which sinks four fingers from four
+  braccia ("lo ficca in terra, v. g., quattro dita") and less from each
+  lower height: from a finger's height, "che farà di
   più che se, senza percossa, vi fusse posto sopra? certo pochissimo: ed
   operazione del tutto impercettibile sarebbe, se si elevasse quanto è
   grosso un foglio. E perché l'effetto della percossa si regola dalla
@@ -517,24 +519,28 @@ passage, from the Wikisource transcription).
   imperceptible effect one may infer a minimal velocity; and sufficient
   reason forbids a jump into any finite degree.
 - **What the theorem does with it.** Galileo argues the continuity of the
-  motion from the graded vanishing of its record, outcomes measured by how
-  perceptible they are, which is the records reading of §2 practised
-  forty-nine years before Leibniz published the law. The fall from rest is
-  Newton's comparison with the initial velocity zero, $F=mg$ and
-  $\tau=\sqrt{2h/g}$, so $K_\tau=m\,g^{1/2}(2h)^{3/2}/24$, and Corollary 3 of the paper gives,
-  on the floor branch and for an observer ignorant of the initial state, a
-  least height below which no record decides at confidence $1-\epsilon$ that the
-  weight fell rather than was set down:
+  motion from the graded vanishing of its record, measuring outcomes by
+  how perceptible they are: the records reading's measure of outcomes,
+  used forty-nine years before Leibniz published the law, in the service of
+  the geometric reading's conclusion about the velocity. The fall from rest
+  is Newton's comparison with $F=mg$ and $\tau=\sqrt{2h/g}$, so
+  $K_\tau=m\,g^{1/2}(2h)^{3/2}/24$, and Theorem 2 of the paper (Corollary 3 with the window
+  equal to the whole fall) gives, on the floor branch, a least height below
+  which no record of the fall itself decides at confidence $1-\epsilon$ that the
+  weight was accelerated during the drop rather than moved freely, whatever
+  its unknown initial velocity:
   $$h_*=\tfrac12\bigl(96\,z_{1-\epsilon}^2\,\kappa/(m\,g^{1/2})\bigr)^{2/3},$$
-  about $2\times10^{-22}$ m for a kilogram with $\kappa=\hbar/2$ and $z\approx2$. Galileo's sheet of
-  paper is therefore a threshold of sense, some eighteen orders of
-  magnitude above the threshold of law, and his inference from
-  imperceptible to minimal holds on both branches. What the floor adds is
-  that the imperceptibility of the smallest drops becomes a law for the
-  preparation-ignorant observer; Galileo's release from rest is a known
-  preparation, which §10 of the paper prices separately. His argument from
+  about $1.7\times10^{-22}$ m for a kilogram with $\kappa=\hbar/2$ and $z=2$ ($\epsilon\approx2.3\%$). Galileo's
+  sheet of paper is a threshold of sense, some eighteen orders of magnitude
+  above this threshold of law for the preparation-blind monitoring of the
+  same fall, and his inference from imperceptible to minimal holds on both
+  branches. His own record, the sinking of the weight, is one terminal
+  reading against a known release; the invariance of Theorem 2 removes
+  exactly such a reading, so his protocol is the preparation-knowing one of
+  §10 of the paper, whose floor is $\theta^2\hbar^2/(4LP)$ at the balanced aperture. His argument from
   reason is the one the *Pacidius* repeats (§2b), and it rules out a jump
-  into a finite degree of speed, which a floor on records does not assert.
+  into a finite degree of speed; a floor on records leaves that question
+  open.
 
 ## 5. Consequence for STATE
 
@@ -554,7 +560,7 @@ floor found in every body tested, so the zero branch is the default reading
 of Book I's geometry; Newton's stated physics in Book III leaves the
 division of material parts to experiment. For the
 scholion: three Leibniz entries (1676, 1687, 1704), Newton's Rule III and
-Query 31, Galileo's stake (1638), and the Galileo--Cavalieri--Guldin layer
+Query 31, Galileo's weight on yielding ground (1638), and the Galileo--Cavalieri--Guldin layer
 are supplied with their three obligations;
 the paper's §9 carries a pointer. §§1--4 are refereed (Fable, REFINE,
-applied), and §§2b, 4b and 4c by a second Fable pass (REFINE, applied); §4d awaits a referee.
+applied), and §§2b, 4b and 4c by a second Fable pass (REFINE, applied), and §4d by a third (REFINE, applied: Galileo's weight itself sinks into the ground, and his protocol is the paper's §10).
