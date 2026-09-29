@@ -58,7 +58,12 @@ exemption (with its counter-reading) and the confinement to motions are
 marked as ours; "distingué" and "sçauroit" are flagged as reconstructed
 from the OCR; the Epicurus, al-Nazzam and Galileo wordings of §4 are
 softened to what the texts say; prior art on statistical distance and on
-continuity axioms is added.
+continuity axioms is added. A second pass on §§2b, 4b and 4c (same day):
+REFINE, applied; page and speaker corrections in the *Pacidius*, the Kepler
+scaling corrected to $\lambda r(\lambda^{-3/2}t)$, the "convention" of the floor's value
+qualified against a fourth constant ($e^2/(\kappa c)$), Corollary 3 read as a
+confidence bound, the transfer of Rule III from parts of bodies to records
+marked as ours, and Quaestio 23 of the 1706 *Optice* named.
 
 ## 1. The proposition
 
@@ -214,14 +219,17 @@ passage, OCR normalized by hand).
   tempusculis atque lineolis foret" (p. 606), and a rotating radius gives
   unequal speeds without any rest. A leap is transcreation: the body is
   "extingui et annihilari, et in B momento post iterum emergere ac recreari"
-  (p. 617). Against it, "cùm enim magnitudo aut parvitas nihil ad rem
-  faciat", animalcula as much smaller than us as a head is than the earth
-  would find the same absurdity in their leaps, "omnia proportione sibi
-  respondent", so the leaps are "semper ad minora ac minora propelli et
-  nusquam consistere posse in natura rerum ... nulla autem ratio est, cur
-  huic potius quàm illi corpusculorum gradui saltus illi miraculosi
-  ascribantur, nisi atomos scilicet admittamus" (pp. 617--618). Leibniz
-  denies such atoms by the same argument.
+  (p. 617). Against it Charinus: "cùm enim magnitudo aut parvitas nihil ad
+  rem faciat", animalcula as much smaller than us as a head is than the
+  earth would find the same absurdity in their leaps, "omnia proportione
+  sibi respondent" (p. 617); and Pacidius: the leaps are "semper ad minora
+  ac minora propelli et nusquam consistere posse in natura rerum ... nulla
+  autem ratio est, cur huic potius quàm illi corpusculorum gradui saltus
+  illi miraculosi ascribantur, nisi atomos scilicet admittamus" (p. 618).
+  Leibniz denies such atoms by the same argument. (Couturat's angle
+  brackets for Leibniz's additions are dropped; the heading "Scripta in
+  navi", p. 594, lies outside the local excerpt and is taken from the
+  companion's metadata.)
 - **What it commits him to.** Speed differences need no rests; rests mixed
   with motions either concede continuous motion or require leaps; a leap of
   any size needs a privileged grade of bodies, which sufficient reason
@@ -231,7 +239,10 @@ passage, OCR normalized by hand).
   and [checkerboard](checkerboard-dynamics.md) notes: motion at one speed
   whose state switches at a rate $\omega=mc^2/K$ (there between the two
   directions; between motion and rest the structure is the same), with the
-  mean speed set by the mixture.
+  mean speed set by the mixture; with one rate and symmetric switching the
+  mean speed is fixed, so speed differences need state-dependent weights,
+  the signed amplitudes of the checkerboard, which is where Leibniz's
+  "capere non potuerunt" bites.
   Charinus's regress, rests made indefinitely small among little motions, is
   the limit $K\to0$, which converges to continuous motion at the mean speed;
   the regress is a limit, and its end is the zero branch. The radius answers
@@ -240,8 +251,9 @@ passage, OCR normalized by hand).
   is sound against a leap of fixed size: Newton's mechanics has the
   two-parameter similarity $x\to\lambda x$, $t\to\mu t$ (the dilations of the
   [fifth-postulate note](principia-fifth-postulate.md), the zoom of the
-  [tangent-groupoid note](tangent-groupoid-trajectories.md)), and a length
-  breaks it. A floor on action fixes no length. Under $x\to\lambda x$, $t\to\lambda^2t$ at
+  [tangent-groupoid note](tangent-groupoid-trajectories.md)), and a length breaks it. A floor on action fixes no length of its own; a
+  length appears only with a force and a mass, as the mesh $\tau_*$ and its
+  sagitta do. Under $x\to\lambda x$, $t\to\lambda^2t$ at
   fixed mass, $F\to F/\lambda^3$ and $K_\tau=F^2\tau^3/(24m)$ is invariant, as is $mv^2\tau$, so
   animalcula scaled this way reach the same verdicts in the corresponding
   cases: "omnia proportione sibi respondent" survives on a one-parameter
@@ -250,8 +262,12 @@ passage, OCR normalized by hand).
   for is a reason for an action scale. The composition results give one
   constant for all bodies ([rotation composition](rotation-composition-universality.md);
   $\kappa=mD$ in the [stochastic route](stochastic-route-velocitas-ultima.md)),
-  so that scale converts units of mass, length and time and its value is a
-  convention. The question sufficient reason leaves is zero or positive,
+  so that scale converts units of mass, length and time, and its value is a
+  convention of units so long as no second dimensionful constant forms a
+  pure number with it: Newton's $G$ and $c$ do not, and the charge $e$ of §4c
+  does, through $e^2/(\kappa c)$. The composition results rest on stated premises
+  (interaction between bodies in the rotation note, the composition
+  premises of the stochastic route), and both admit zero. The question sufficient reason leaves is zero or positive,
   which §1 settles for motions under the records reading of the 1687 law.
   Leibniz between 1676 and 1704 thus supplies the objection and the reply:
   proportion forbids a privileged size, which a floor on action does not
@@ -374,7 +390,7 @@ passage, OCR normalized by hand).
   quaeque corporibus omnibus competunt in quibus experimenta instituere
   licet, pro qualitatibus corporum universorum habendae sunt" (p. 387),
   since "quae minui non possunt, non possunt auferri" and the analogy of
-  nature is "simplex ... & sibi semper consona" (pp. 387--388). Then: "partes
+  nature is "simplex ... & sibi semper consona" (p. 388). Then: "partes
   indivisas in partes minores ratione distingui posse ex mathematica certum
   est. Utrum vero partes illae distinctae & nondum divisae per vires naturae
   dividi & ab invicem separari possint, incertum est. At si vel unico
@@ -388,28 +404,50 @@ passage, OCR normalized by hand).
   theorem's own division of labour. Geometry stays divisible (the paper's
   Proposition 1; the cut measure's shares for every schedule), and the mark
   mesh concerns what nature's powers can exhibit, which Newton declares
-  uncertain and empirical. His single experiment has a counterpart here:
-  the exhibition of a force by marks confined to a window shorter than
-  $\tau_*$ (the paper's Corollary 3), which a floor forbids and the zero branch
-  allows. The first commitment meets the composition results. One constant
+  uncertain and empirical. His single experiment has a counterpart here: the exhibition of a force by
+  marks confined to a window shorter than $\tau_*$ (the paper's Corollary 3).
+  Corollary 3 is a confidence bound, so one such exhibition at confidence
+  $1-\epsilon$ refutes the floor at that $\kappa$ and lowers it; the passage to $\kappa=0$
+  is the same rule-based step Newton takes to "in infinitum". Rule III
+  speaks of the parts of bodies, and carrying division by nature's powers
+  from parts of bodies to the division of a motion's record is our transfer. The first commitment meets the composition results. One constant
   for all bodies ($\kappa=mD$ in the stochastic route; rotation composition)
-  makes the floor a quality that "intendi et remitti nequit", so Rule III
-  carries it from the bodies within reach of experiment to all bodies, and
+  makes the floor a quality without degrees in Rule III's sense ("quae
+  intendi & remitti nequeunt"), so Rule III carries it from the bodies
+  within reach of experiment to all bodies, and
   "quae minui non possunt, non possunt auferri" forbids taking it to zero in
-  the least parts. Newton's rules thus make positivity empirical and
-  universalize it once it is found in one body; the settlement itself is
-  experimental. This changes an attribution in the paper: the zero branch
-  is the default reading of Book I's geometry, "diminuendas sine limite",
-  while Newton's stated physics, in Book III, leaves the physical limit open
-  with an empirical criterion.
+  the least parts. Newton's rules thus make positivity empirical and universalize it once it
+  is found in every body tested, which composition reduces to one body and
+  its interactions; the settlement itself is experimental. This changes an
+  attribution in the paper: the zero branch is the default reading of Book
+  I's geometry, whose scholium (1687) treats vanishing quantities,
+  "diminuendas sine limite", while Rule III (1713) leaves the division of
+  material parts to experiment; its extension from matter to motion is ours.
+
+**Newton on distinguishing motions.** The Scholium to the Definitions
+(1726, pp. 9--11, same companion; the passage stands in the first edition,
+recalled) sorts true from relative motion by what distinguishes them:
+"Causae, quibus motus veri & relativi distinguuntur ab invicem, sunt vires
+in corpora impressae ad motum generandum. Motus verus nec generatur nec
+mutatur, nisi per vires in ipsum corpus motum impressas" (p. 9);
+"Effectus, quibus motus absoluti & relativi distinguuntur ab invicem, sunt
+vires recedendi ab axe motus circularis ... majores vel minores pro
+quantitate motus" (p. 10); "Motus quidem veros corporum singulorum
+cognoscere, & ab apparentibus actu discriminare, difficillimum est ...
+Causa tamen non est prorsus desperata" (p. 11). Newton compares motions by
+the effects that distinguish them, graded by the quantity of motion, which
+is the Galileo comparison's question in his words: whether an impressed
+force acts is decided by its effects. On the zero branch his
+"difficillimum" is a practical difficulty; on the floor branch it becomes a
+bound, the mesh below which no record decides at a given confidence.
 
 ## 4c. Newton, Query 31: permanent least bodies
 
 Newton, *Opticks*, fourth edition (London, 1730), Book III, Query 31,
 verbatim from the Project Gutenberg transcription
 ([companion](../docs/classics/Newton_Opticks_1730_fits_and_queries.md);
-passage). The query goes back to the Latin *Optice* of 1706 (recalled, not
-read here).
+passage). The query goes back to Quaestio 23 of the Latin *Optice* (1706),
+renumbered 31 in the English edition of 1717 (recalled, not read here).
 
 - **The text.** "God in the Beginning form'd Matter in solid, massy, hard,
   impenetrable, moveable Particles, of such Sizes and Figures ... even so
@@ -431,18 +469,18 @@ read here).
   one per species, with no universal action. His reason for them is
   stability, sameness of natures in all ages, and that reason does ask for
   a scale. In the mechanics of the *Principia* a body bound by an
-  inverse-square force has no preferred size (if $r(t)$ is an orbit, so is
-  $\lambda r(\lambda^{3/2}t)$), so identical sizes for bound systems of one kind need a
+  inverse-square force has no preferred size (if $r(t)$ is an orbit, so is $\lambda r(\lambda^{-3/2}t)$, Kepler's third law), so identical sizes for bound systems of one kind need a
   constant beyond Newton's. He supplies hardness by fiat. The
   [relativistic Kepler note](relativistic-kepler-threshold.md) shows that
   finite propagation speed, which Newton accepts (*Opticks* II.iii Prop.
-  XI), turns singular inverse-square binding into an action threshold
-  $|L|>k/c$, and an action constant of the quantum kind fixes sizes
-  dynamically, Bohr's radius $a_0=\hbar^2/(m_ee^2)$ in Gaussian units being the
+  XI), turns singular inverse-square binding into an action threshold $|L|>k/c$;
+  the threshold fixes no size, since circular radii still range over
+  $(0,\infty)$ for $|L|>k/c$, and an action constant of the quantum kind fixes
+  sizes dynamically, Bohr's radius $a_0=\hbar^2/(m_ee^2)$ in Gaussian units being the
   standard case. Query 31 thus states, as a premise about matter, the need
   for a scale that the Galileo comparison states as a premise about
-  records; the two premises are distinct, and neither text derives the
-  other. Its "no ordinary Power" agrees with Rule III's "per vires naturae
+  records. The two premises are independent: Query 31 posits lengths, the
+  Galileo comparison an action, and each text stops at its own. Its "no ordinary Power" agrees with Rule III's "per vires naturae
   ... incertum": division by nature is bounded by the powers available,
   the form the floor takes as a law about what nature can exhibit.
 
@@ -460,10 +498,11 @@ showing why the reading must be confined to motions, by a physical choice
 of ours. A single cut carries exactly the cut measure's share of the
 discernibility, a result of the mark model worth citing on its own. Newton's Rule III places the physical limit among empirical questions and
 supplies, with the composition results, the rule that universalizes a
-floor found in one body, so the zero branch belongs to the default reading
-of Book I's geometry rather than to Newton's stated physics. For the
+floor found in every body tested, so the zero branch is the default reading
+of Book I's geometry; Newton's stated physics in Book III leaves the
+division of material parts to experiment. For the
 scholion: three Leibniz entries (1676, 1687, 1704), Newton's Rule III and
 Query 31, and the Galileo--Cavalieri--Guldin layer are supplied with their
 three obligations;
 the paper's §9 carries a pointer. §§1--4 are refereed (Fable, REFINE,
-applied); §§2b, 4b and 4c await a referee.
+applied), and §§2b, 4b and 4c by a second Fable pass (REFINE, applied).
