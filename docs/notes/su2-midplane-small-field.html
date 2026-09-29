@@ -5106,6 +5106,145 @@ Cell 2 next needs higher-order contact/source control in (113),
 connected bad-component bounds and dressing (116), and target-covering
 paths; full-integral comparison, perturbed-action stability and
 iteration remain open.</p>
+<h2 id="three-bad-components-a-tree-bound-from-the-two-set-estimate">27.
+Three bad components: a tree bound from the two-set estimate</h2>
+<p><strong>GPT-6 (Codex), 2026-09-29; written derivation,
+unrefereed.</strong> The third truncated correlation satisfies (116)
+with the same rarity exponent <span
+class="math inline">\(c_*=1/64\)</span> and decay rate <span
+class="math inline">\(\gamma_*=\frac12\log(12/5)\)</span>. This uses
+(115) for disjoint unions of components and needs no additional chart
+hypothesis or barrier derivative. It is a finite-order result; the
+constants for arbitrary order and the dressed expansion (112) remain
+open.</p>
+<h3 id="the-three-component-estimate">27.1 The three-component
+estimate</h3>
+<p>Retain all hypotheses of §25.2, including (83), <span
+class="math inline">\(x\ge64\log6\)</span> and <span
+class="math inline">\(0&lt;t\le1\)</span>. Let <span
+class="math inline">\(H_1,H_2,H_3\)</span> be nonempty disjoint edge
+sets, put <span class="math inline">\(h_i=|H_i|\)</span>, <span
+class="math inline">\(M=h_1+h_2+h_3\)</span>, <span
+class="math inline">\(d_{ij}=d(H_i,H_j)\)</span>, and use the same <span
+class="math inline">\(F_H=\prod_{e\in H}f_e\)</span>. Compatibility and
+connectivity may be imposed as in (109), but are unnecessary for this
+estimate. For every <span class="math inline">\(\nu_J\)</span>,
+uniformly in <span class="math inline">\(J,k,N,\lambda,t\)</span> and
+the admissible real background, <span
+class="math display">\[\begin{aligned}
+|\kappa_{\nu_J}(F_{H_1},F_{H_2},F_{H_3})|
+&amp;\le 3C_{\rm bad}p^{M/64}
+\sum_{T\in\mathcal T_3}\prod_{ij\in T}e^{-\gamma_*d_{ij}},\\
+\gamma_*&amp;=\tfrac12\gamma_{\rm bad}=\tfrac12\log(12/5).
+\end{aligned}\tag{120}\]</span> In particular the <span
+class="math inline">\(r=2,3\)</span> cases of (116) hold simultaneously
+with <span class="math display">\[B_*=\max\{1,\sqrt{C_{\rm
+bad}},(3C_{\rm bad})^{1/3}\},
+\qquad c_*=1/64,\qquad\gamma_*=\tfrac12\gamma_{\rm
+bad}.\tag{121}\]</span> Here <span class="math inline">\(C_{\rm
+bad}=64\Omega_{\rm app}^2/(7\mathrm e\log2)\)</span> and <span
+class="math inline">\(\Omega_{\rm app}\)</span> is the fixed profile
+constant (84).</p>
+<p><em>Proof.</em> Write <span
+class="math inline">\(F_i=F_{H_i}\)</span> and <span
+class="math inline">\(m_i=EF_i\)</span>. For any permutation <span
+class="math inline">\((i,j,k)\)</span> the exact identity is <span
+class="math display">\[\kappa(F_1,F_2,F_3)
+=\operatorname{Cov}(F_i,F_jF_k)
+-m_j\operatorname{Cov}(F_i,F_k)
+-m_k\operatorname{Cov}(F_i,F_j).\tag{122}\]</span> Equation (111) gives
+<span class="math inline">\(|m_j|\le p^{h_j/16}\)</span>. Apply (115) to
+<span class="math inline">\(H_i\)</span> and <span
+class="math inline">\(H_j\cup H_k\)</span> in the first term; its proof
+and statement allow any disjoint edge sets. In particular <span
+class="math inline">\(F_jF_k=F_{H_j\cup H_k}\)</span> and <span
+class="math inline">\(d(H_i,H_j\cup H_k)=\min(d_{ij},d_{ik})\)</span>.
+The other two terms have rarity at most <span
+class="math inline">\(p^{h_j/16+(h_i+h_k)/64}\le p^{M/64}\)</span>, and
+similarly with <span class="math inline">\(j,k\)</span> exchanged. Thus
+every choice of <span class="math inline">\(i\)</span> gives <span
+class="math display">\[|\kappa(F_1,F_2,F_3)|
+\le3C_{\rm bad}p^{M/64}
+e^{-\gamma_{\rm bad}\min(d_{ij},d_{ik})}.\]</span> Order the three pair
+distances as <span class="math inline">\(a\le b\le c\)</span>. The
+largest of the three nearest-neighbour distances <span
+class="math inline">\(\min(d_{ij},d_{ik})\)</span> is exactly <span
+class="math inline">\(b\)</span>. The two pairs realizing <span
+class="math inline">\(a,b\)</span> form a spanning tree on three labels,
+even if the distances tie. Since <span
+class="math inline">\(b\ge(a+b)/2\)</span>, <span
+class="math display">\[e^{-\gamma_{\rm bad}b}
+\le e^{-\gamma_*(a+b)}
+\le\sum_{T\in\mathcal T_3}\prod_{ij\in T}e^{-\gamma_*d_{ij}}.\]</span>
+This proves (120), and weakening (115)’s decay to <span
+class="math inline">\(\gamma_*\)</span> proves (121). No triangle
+inequality between distances of sets is used. Bounded <span
+class="math inline">\(F_i\)</span> and Gaussian domination permit
+passage to the barrier limit at fixed volume, exactly as in §25.2. <span
+class="math inline">\(\square\)</span></p>
+<p>The empty-component case is consistent: <span
+class="math inline">\(F_\varnothing=1\)</span> makes the third cumulant
+zero, and a nontrivial cumulant with a constant argument always
+vanishes. At diverging component separations (120) tends to zero; at
+fixed separations and <span class="math inline">\(t\downarrow0\)</span>
+its rarity tends to zero with constants independent of plane size. All
+quantities in (120) are dimensionless chart quantities. This <span
+class="math inline">\(SU(2)\)</span> statement transfers to another
+group only after its analogues of (111) and (115) are verified; §16
+alone does not verify those later estimates for <span
+class="math inline">\(SU(3)\)</span>.</p>
+<h3 id="what-the-arbitrary-order-step-must-add">27.2 What the
+arbitrary-order step must add</h3>
+<p>For a finite label set <span class="math inline">\(I\)</span>, write
+<span class="math inline">\(\kappa_B=\kappa(F_i:i\in B)\)</span>, with
+<span class="math inline">\(\kappa_{\{i\}}=EF_i\)</span>.
+Moment–cumulant inversion across any nontrivial cut <span
+class="math inline">\(I=A\sqcup B\)</span> gives the exact recurrence
+<span
+class="math display">\[\kappa_I=\operatorname{Cov}\left(\prod_{i\in
+A}F_i,
+                                      \prod_{j\in B}F_j\right)
+-\sum_{\substack{\pi\in\mathcal P(I),\ \pi\ne\{I\}\\
+            \exists C\in\pi:\ C\cap A\ne\varnothing,\ C\cap
+B\ne\varnothing}}
+       \prod_{C\in\pi}\kappa_C.\tag{123}\]</span> Partitions with no
+crossing block are exactly the product of the two moment expansions and
+cancel in the covariance. Formula (122) is its three-label,
+singleton-cut case.</p>
+<p>Equation (115) bounds the first term by <span
+class="math inline">\(C_{\rm bad}p^{\sum_i h_i/64}e^{-\gamma_{\rm
+bad}d(H_A,H_B)}\)</span>, where <span
+class="math inline">\(H_A=\bigcup_{i\in A}H_i\)</span>. It supplies one
+crossing factor. The remaining partition products in (123) retain
+connected blocks, but taking their absolute values does not generate a
+fresh factor for each of the <span class="math inline">\(|I|-1\)</span>
+tree edges. The three-component proof uses the special fact that its two
+shortest edges already span all labels. For <span
+class="math inline">\(r\)</span> equally distant components a single-cut
+factor would instead require weakening the rate to <span
+class="math inline">\(\gamma_{\rm bad}/(r-1)\)</span> to pay for a tree.
+This describes the limitation of this cut estimate, rather than a
+counterexample to (116).</p>
+<p>The next lemma must construct an undifferentiated-barrier expansion
+that attaches one summable spatial connector per new component, with a
+fixed positive decay rate and a geometric constant per attachment.
+Intercomponent interaction interpolation is a candidate: its derivatives
+act on smooth coupling terms, while each on-site <span
+class="math inline">\(w_k\)</span> stays inside its measure. It must
+preserve convexity and (111) for every interpolated measure and handle
+unbounded insertion coordinates. Until that lemma is proved, (120) gives
+neither arbitrary-order (116), dressing (112), nor the complex-source
+estimate (113). Abandon a cut-only induction if its decay rate tends to
+zero with order; abandon the coupling interpolation if convexity or
+joint rarity fails along its decoupling path.</p>
+<h3 id="consequence-for-state-11">Consequence for STATE</h3>
+<p>The gauge checkpoint closes the three-component case of (116), with
+constants (121) and no new physical or chart premise. The next gauge
+obligation is a connector expansion with constants uniform in order,
+followed by dressing and source control. Alternate next to the Newton
+complete-record mechanism test. Full-integral comparison, iteration and
+the continuum <span class="math inline">\(SU(3)\)</span> spectral claim
+retain their existing obligations.</p>
 
 </main>
 <footer class="site"><div class="wrap">

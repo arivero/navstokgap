@@ -4033,4 +4033,122 @@ Cell 2 next needs higher-order contact/source control in (113),
 connected bad-component bounds and dressing (116), and target-covering
 paths; full-integral comparison, perturbed-action stability and
 iteration remain open.
+
+\hypertarget{three-bad-components-a-tree-bound-from-the-two-set-estimate}{%
+\subsection{27. Three bad components: a tree bound from the two-set
+estimate}\label{three-bad-components-a-tree-bound-from-the-two-set-estimate}}
+
+\textbf{GPT-6 (Codex), 2026-09-29; written derivation, unrefereed.} The
+third truncated correlation satisfies (116) with the same rarity
+exponent \(c_*=1/64\) and decay rate \(\gamma_*=\frac12\log(12/5)\).
+This uses (115) for disjoint unions of components and needs no
+additional chart hypothesis or barrier derivative. It is a finite-order
+result; the constants for arbitrary order and the dressed expansion
+(112) remain open.
+
+\hypertarget{the-three-component-estimate}{%
+\subsubsection{27.1 The three-component
+estimate}\label{the-three-component-estimate}}
+
+Retain all hypotheses of §25.2, including (83), \(x\ge64\log6\) and
+\(0<t\le1\). Let \(H_1,H_2,H_3\) be nonempty disjoint edge sets, put
+\(h_i=|H_i|\), \(M=h_1+h_2+h_3\), \(d_{ij}=d(H_i,H_j)\), and use the
+same \(F_H=\prod_{e\in H}f_e\). Compatibility and connectivity may be
+imposed as in (109), but are unnecessary for this estimate. For every
+\(\nu_J\), uniformly in \(J,k,N,\lambda,t\) and the admissible real
+background, \[\begin{aligned}
+|\kappa_{\nu_J}(F_{H_1},F_{H_2},F_{H_3})|
+&\le 3C_{\rm bad}p^{M/64}
+ \sum_{T\in\mathcal T_3}\prod_{ij\in T}e^{-\gamma_*d_{ij}},\\
+\gamma_*&=\tfrac12\gamma_{\rm bad}=\tfrac12\log(12/5).
+\end{aligned}\tag{120}\] In particular the \(r=2,3\) cases of (116) hold
+simultaneously with
+\[B_*=\max\{1,\sqrt{C_{\rm bad}},(3C_{\rm bad})^{1/3}\},
+\qquad c_*=1/64,\qquad\gamma_*=\tfrac12\gamma_{\rm bad}.\tag{121}\] Here
+\(C_{\rm bad}=64\Omega_{\rm app}^2/(7\mathrm e\log2)\) and
+\(\Omega_{\rm app}\) is the fixed profile constant (84).
+
+\emph{Proof.} Write \(F_i=F_{H_i}\) and \(m_i=EF_i\). For any
+permutation \((i,j,k)\) the exact identity is \[\kappa(F_1,F_2,F_3)
+=\operatorname{Cov}(F_i,F_jF_k)
+ -m_j\operatorname{Cov}(F_i,F_k)
+ -m_k\operatorname{Cov}(F_i,F_j).\tag{122}\] Equation (111) gives
+\(|m_j|\le p^{h_j/16}\). Apply (115) to \(H_i\) and \(H_j\cup H_k\) in
+the first term; its proof and statement allow any disjoint edge sets. In
+particular \(F_jF_k=F_{H_j\cup H_k}\) and
+\(d(H_i,H_j\cup H_k)=\min(d_{ij},d_{ik})\). The other two terms have
+rarity at most \(p^{h_j/16+(h_i+h_k)/64}\le p^{M/64}\), and similarly
+with \(j,k\) exchanged. Thus every choice of \(i\) gives
+\[|\kappa(F_1,F_2,F_3)|
+\le3C_{\rm bad}p^{M/64}
+ e^{-\gamma_{\rm bad}\min(d_{ij},d_{ik})}.\] Order the three pair
+distances as \(a\le b\le c\). The largest of the three nearest-neighbour
+distances \(\min(d_{ij},d_{ik})\) is exactly \(b\). The two pairs
+realizing \(a,b\) form a spanning tree on three labels, even if the
+distances tie. Since \(b\ge(a+b)/2\), \[e^{-\gamma_{\rm bad}b}
+\le e^{-\gamma_*(a+b)}
+\le\sum_{T\in\mathcal T_3}\prod_{ij\in T}e^{-\gamma_*d_{ij}}.\] This
+proves (120), and weakening (115)'s decay to \(\gamma_*\) proves (121).
+No triangle inequality between distances of sets is used. Bounded
+\(F_i\) and Gaussian domination permit passage to the barrier limit at
+fixed volume, exactly as in §25.2. \(\square\)
+
+The empty-component case is consistent: \(F_\varnothing=1\) makes the
+third cumulant zero, and a nontrivial cumulant with a constant argument
+always vanishes. At diverging component separations (120) tends to zero;
+at fixed separations and \(t\downarrow0\) its rarity tends to zero with
+constants independent of plane size. All quantities in (120) are
+dimensionless chart quantities. This \(SU(2)\) statement transfers to
+another group only after its analogues of (111) and (115) are verified;
+§16 alone does not verify those later estimates for \(SU(3)\).
+
+\hypertarget{what-the-arbitrary-order-step-must-add}{%
+\subsubsection{27.2 What the arbitrary-order step must
+add}\label{what-the-arbitrary-order-step-must-add}}
+
+For a finite label set \(I\), write \(\kappa_B=\kappa(F_i:i\in B)\),
+with \(\kappa_{\{i\}}=EF_i\). Moment--cumulant inversion across any
+nontrivial cut \(I=A\sqcup B\) gives the exact recurrence
+\[\kappa_I=\operatorname{Cov}\left(\prod_{i\in A}F_i,
+                                      \prod_{j\in B}F_j\right)
+ -\sum_{\substack{\pi\in\mathcal P(I),\ \pi\ne\{I\}\\
+            \exists C\in\pi:\ C\cap A\ne\varnothing,\ C\cap B\ne\varnothing}}
+       \prod_{C\in\pi}\kappa_C.\tag{123}\] Partitions with no crossing
+block are exactly the product of the two moment expansions and cancel in
+the covariance. Formula (122) is its three-label, singleton-cut case.
+
+Equation (115) bounds the first term by
+\(C_{\rm bad}p^{\sum_i h_i/64}e^{-\gamma_{\rm bad}d(H_A,H_B)}\), where
+\(H_A=\bigcup_{i\in A}H_i\). It supplies one crossing factor. The
+remaining partition products in (123) retain connected blocks, but
+taking their absolute values does not generate a fresh factor for each
+of the \(|I|-1\) tree edges. The three-component proof uses the special
+fact that its two shortest edges already span all labels. For \(r\)
+equally distant components a single-cut factor would instead require
+weakening the rate to \(\gamma_{\rm bad}/(r-1)\) to pay for a tree. This
+describes the limitation of this cut estimate, rather than a
+counterexample to (116).
+
+The next lemma must construct an undifferentiated-barrier expansion that
+attaches one summable spatial connector per new component, with a fixed
+positive decay rate and a geometric constant per attachment.
+Intercomponent interaction interpolation is a candidate: its derivatives
+act on smooth coupling terms, while each on-site \(w_k\) stays inside
+its measure. It must preserve convexity and (111) for every interpolated
+measure and handle unbounded insertion coordinates. Until that lemma is
+proved, (120) gives neither arbitrary-order (116), dressing (112), nor
+the complex-source estimate (113). Abandon a cut-only induction if its
+decay rate tends to zero with order; abandon the coupling interpolation
+if convexity or joint rarity fails along its decoupling path.
+
+\hypertarget{consequence-for-state-11}{%
+\subsubsection{Consequence for STATE}\label{consequence-for-state-11}}
+
+The gauge checkpoint closes the three-component case of (116), with
+constants (121) and no new physical or chart premise. The next gauge
+obligation is a connector expansion with constants uniform in order,
+followed by dressing and source control. Alternate next to the Newton
+complete-record mechanism test. Full-integral comparison, iteration and
+the continuum \(SU(3)\) spectral claim retain their existing
+obligations.
 \end{document}
