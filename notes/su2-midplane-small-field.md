@@ -3210,3 +3210,77 @@ a conditional jet majorant; geometric growth and the bare activity scale
 in (94) remain open, with the fifth barrier jet identifying a concrete
 repair target. Curvature conversion, large-field comparison,
 perturbed-action stability and iteration remain the subsequent obligations.
+
+## 24. Round 24: small-field and large-field polymers
+
+**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** Uniform
+convexity upgrades the one-edge tail to a joint bound with $C=1$ and
+$c=1/16$. The resulting connected-set weights retain correlations
+between components; their conversion into a convergent polymer expansion
+requires the additional estimates in Part 2.
+
+### 24.1 Exact split and a joint bad-set estimate (Part 1)
+
+Work with §20's extended $S_\lambda$ and finite-$k$ profile. For any
+$J\subseteq\mathcal E$, write $\nu_J\propto e^{-S_\lambda-\sum_{e\in J}w_k}$,
+$Z_J$ for its integral, and $\nu_\varnothing=\nu_0$. Fix insertion
+coordinates and set $b_e=1_{\{|\xi_e|>\eta-\rho_k\}}$, $g_e=1-b_e$.
+Then the exact indicator decomposition, with every barrier undifferentiated, is
+$$Z_{\mathcal E}=\sum_{B\subseteq\mathcal E}Z(B),\qquad
+Z(B)=\int e^{-S_\lambda-\sum_e w_k}
+ \prod_{e\in B}b_e\prod_{e\notin B}g_e\,d\xi.\tag{108}$$
+Join two edges when they border the same mid-face. This graph has degree
+at most $\Delta=6$. A bad polymer is a nonempty connected component $H$
+of $B$. Compatible polymers are disjoint and have no joining graph edge.
+Define the exact sector activity of a compatible family $\mathcal H$ by
+$a_{\rm sec}(\mathcal H)=Z(\bigcup\mathcal H)/Z_{\mathcal E}$, including
+the empty family; (108) says their sum is one.
+
+A useful insertion version puts $f_e=e^{-w_k}-1$, so $|f_e|\le b_e$, and
+$$\frac{Z_{\mathcal E}}{Z_0}
+=\sum_{\mathcal H\ {\rm compatible}}a_{\rm ins}(\mathcal H),\qquad
+ a_{\rm ins}(\mathcal H)=E_{\nu_0}\prod_{e\in\bigcup\mathcal H}f_e,
+ \quad a_{\rm ins}(\varnothing)=1.\tag{109}$$
+In particular $a_{\rm ins}(\{H\})$ defines a connected insertion activity.
+Both family activities generally differ from products of single-polymer
+activities: the background measure couples the components. Equation (109)
+is an exact expansion with correlated weights, prior to any factorization.
+
+Here is a joint estimate uniform in $J,k,\lambda,N$ and in the admissible
+boundary chart. Retain §§20--22's conditions and impose, with
+$x=\varepsilon^2/t=t^{-2\delta}$, the explicit additional smallness condition
+$x\ge64\log6$. Then $n=\lfloor3x/8\rfloor-1\ge4$, and (83) gives
+$h+\rho_k\le4\varepsilon\log2/(7n)\le\varepsilon/7$.
+Thus every bad edge satisfies $|\xi_e-s_{\lambda,e}|>d$, where
+$d=8\varepsilon/7-h-\rho_k\ge\varepsilon$.
+
+*Proof by linear exponential moments.* Diagonal dominance in §20 gives
+$\nabla^2(S_\lambda+\sum_{e\in J}w_k)\ge3I/(2t)$. A linear tilt preserves
+this bound. Applying (13) to that tilted measure and integrating the
+second derivative of its log moment-generating function twice yields
+$$E_{\nu_J}e^{v\cdot(\xi-E\xi)}\le e^{t|v|^2/3}.
+\tag{110}$$
+The finite-$k$ convex Gaussian tails justify the tilts. Equation (85) at
+$q=2$ gives $|E\xi_e-s_{\lambda,e}|\le\sqrt{2t}$. For each bad edge one
+of its six signed coordinate projections exceeds $d/\sqrt3$. For a fixed
+choice on each of $M$ edges, their sum exceeds $Md/\sqrt3$, its mean is
+at most $M\sqrt{2t}$, and its coefficient vector has squared norm $M$.
+Chernoff optimization of (110), followed by the $6^M$ choices, proves
+$$\nu_J(b_e=1\ \forall e\in H)
+\le\left[6\exp\left\{-\frac3{4t}
+ (d/\sqrt3-\sqrt{2t})^2\right\}\right]^{|H|}
+\le e^{-x|H|/32}\le p^{|H|/16},\quad p=2(7/16)^n.\tag{111}$$
+Indeed $x\ge24$ gives $d/\sqrt3-\sqrt{2t}\ge\varepsilon/(2\sqrt3)$;
+$x\ge32\log6$ absorbs the factor 6. Finally
+$\log(1/p)\le n\log(16/7)\le3x/8$, so the last inequality follows.
+This proof holds for every set $H$, including connected sets, and passes
+to the barrier limit by dominated convergence. Consequently
+$|a_{\rm ins}(\mathcal H)|,a_{\rm sec}(\mathcal H)
+\le p^{|\bigcup\mathcal H|/16}$ for nonempty families.
+
+Successive edge removal using (85) alone supplies marginal probabilities;
+conditioning on earlier bad events changes that class of measures. The
+linear-tilt argument supplies the missing joint step using the already
+proved convexity constant, with no barrier derivatives. Its scope is the
+extended chart model; comparison to the original group integral outside
+that chart still requires a separate estimate.
