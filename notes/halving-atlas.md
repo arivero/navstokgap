@@ -280,9 +280,15 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    it for the same body. §§8.4--8.6 give a genuine two-time physical copy
    refinement with an explicit relative kick and joint-law defect (62),
    and a partition-uniform complete-record information bound (63), even
-   at zero action (Sol/Astra, written). Next: associative three-cell
-   blocking with the required timing/noise data; independent positive
-   scale remains open.
+   at zero action (Sol/Astra, written). [§§8.7--8.9](sed-closure-under-recording.md#87-an-associative-descriptor-with-the-physical-kicks-retained)
+   retain every copy kick in associative Gaussian descriptors and prove
+   a partition-independent projected terminal law with the explicit mesh
+   rate (73). The three-cell residue (69) has rank two; the prescribed
+   pair plus one independent additive scalar cannot reproduce it
+   (2026-09-30, Sol/Astra, refereed). Next: a physically realized adaptive
+   controller including all side records and a uniform information budget.
+   The limit of the full growing record and the independent positive
+   scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the

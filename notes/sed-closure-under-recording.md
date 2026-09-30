@@ -1,5 +1,17 @@
 # Shared radiation and closure under recording
 
+**Associative terminal-channel result, 2026-09-30 (GPT-6.1 Sol and
+GPT-6 Astra; written, internally checked).** Sections 8.7--8.9 retain
+every physical copy kick in an associative Gaussian body--record
+descriptor. Three equal cells have the rank-two relative residue (69).
+For any fixed duration and precision density, the projected terminal law
+converges at the explicit mesh rate (73) as the mesh tends to zero,
+independently of the partition schedule. The retained record is one weighted terminal projection; a
+mechanical trajectory and the limit of the entire growing record are
+separate constructions. The posterior floor survives this projection
+and its limit when the joint preparation scale is positive. The same
+channel convergence holds on the zero-action branch.
+
 **Two-time blocking result, 2026-09-29 (GPT-6.1 Sol and GPT-6 Astra;
 written, internally checked).** Sections 8.4--8.6 construct two physical
 memory copies at distinct times and compare their projected joint
@@ -7,8 +19,9 @@ body--record law to one effective copy at the same terminal cut. The
 relative kick survives as an explicit rank-one noise, with the
 split-uniform statistical defect (62). A fixed precision density gives
 the complete terminal record a partition-uniform force-information
-bound (63), even on the zero-action branch. The next test is associative
-three-cell blocking; the positive preparation scale remains an input.
+bound (63), even on the zero-action branch. Sections 8.7--8.9 develop
+associative three-cell blocking; the positive preparation scale remains
+an input.
 
 **Hamiltonian memory result, 2026-09-29 (GPT-6.1 Sol and GPT-6 Astra;
 written, internally checked).** Section 8 constructs the kick monitor
@@ -1379,16 +1392,274 @@ the same imprecision law. Thus continuity in this resource class does
 not force positive action. Letting $r$ grow without bound leaves the
 uniform class and is a separate physical-resource question.
 
-The next lemma is the three-cell blocking test in both parenthesizations.
-The weighted record projection itself associates; the effective pulse
-times, shears and relative-mode residues must also be compared.
-Carry every relative mode until the final projection and compare joint
-laws at the same terminal cut. A successful construction must identify
-the timing and noise data a coarse cell retains. Abandon a proposed
-one-pair rule if agreement requires deleting a kick, passively retaining
-an earlier numerical read, or substituting a different terminal body.
-This tests consistent recorded observables without assuming a limiting
-mechanical curve.
+The following calculation tests three-cell blocking in both
+parenthesizations, carrying relative modes to the terminal projection.
+It identifies the timing and noise data the coarse channel retains.
+
+### 8.7 An associative descriptor with the physical kicks retained
+
+Keep §8.6's fixed, force-independent partition and jointly Gaussian
+product preparation. The body is centred initially, with $A,B>0$ and
+$AB\ge\kappa^2$. Allow $\kappa=0$ in the classical formulas. Define
+$Y=\sum_i h_iR_i$ at the terminal cut. Partial sums of this expression
+are bookkeeping for projections of the physical memory coordinates;
+every copy pulse is still part of the dynamics. This definition grants
+no extra apparatus for passively storing an earlier numerical read.
+
+During one cell of duration $h$, drift under the deterministic force,
+apply its right-endpoint copy, and add that memory coordinate with
+weight $h$. For $X=(Q,P,Y)^{\sf T}$ the exact update is
+$$\begin{aligned}
+X'&=M_hX+Ff_h+\zeta_h,\\
+M_h&=\begin{pmatrix}1&h/m&0\\0&1&0\\h&h^2/m&1\end{pmatrix},
+&f_h&=\begin{pmatrix}h^2/(2m)\\h\\h^3/(2m)\end{pmatrix},\\
+\zeta_h&=(0,-\Lambda,hZ)^{\sf T},
+&N_h&=\operatorname{Cov}\zeta_h
+       =\operatorname{diag}(0,\kappa^2rh,h/r).
+\end{aligned}\tag{65}$$
+The new pair is independent of all earlier variables. Thus a block's
+Gaussian channel is described by $(M,f,N)$, and successive blocks obey
+$$\begin{aligned}
+(M_2,f_2,N_2)\circ(M_1,f_1,N_1)
+={}&(M_2M_1,\ M_2f_1+f_2,\ M_2N_1M_2^{\sf T}+N_2),\\
+N_{321}={}&M_3M_2N_1M_2^{\sf T}M_3^{\sf T}
+             +M_3N_2M_3^{\sf T}+N_3.
+\end{aligned}\tag{66}$$
+Multiplication and the displayed noise sum give exactly the same
+$M,f,N$ in both three-cell parenthesizations. In particular, each
+earlier momentum kick propagates through the later position and
+record updates. The accumulated record of any subblock has weight
+equal to its duration when converted to an average, so its terminal
+projection also associates. These descriptors specify the projected
+law of the declared physical copy schedule. Their composite generally
+differs from the single-cell descriptor $(M_H,f_H,N_H)$ at the total
+duration: the composite retains the daughter timing and noise data.
+Arbitrary triples are not
+asserted to have a one-memory Hamiltonian realization.
+
+### 8.8 The three-cell relative residue and the necessary coarse data
+
+For a block of duration $H$, put $\omega_i=h_i/H$ and define
+$$\begin{aligned}
+s&=\sum_i\omega_it_i,& k_i&=H-t_i,\\
+b_j&=\sum_{i>j}\omega_i(t_i-t_j),&
+\Gamma&=\sum_j\omega_jb_j,\\
+\sigma_t^2&=\sum_i\omega_it_i^2-s^2,&
+Z_c&=\sum_i\omega_iZ_i,\qquad L_c=\sum_i\Lambda_i.
+\end{aligned}$$
+The pair $(Z_c,L_c)$ is canonical, saturated and Gaussian, with
+variances $((rH)^{-1},\kappa^2rH)$. Resolve every initial momentum as
+$\Lambda_i=\omega_iL_c+\Lambda_i^\perp$. Then
+$$\operatorname{Cov}(\Lambda_i^\perp,\Lambda_j^\perp)
+=\kappa^2rH(\omega_i\delta_{ij}-\omega_i\omega_j).
+\tag{67}$$
+Its covariance with $L_c$ vanishes, and all memory momenta are
+independent of $Z_c$ and the initial body. Joint Gaussianity therefore
+makes the relative vector independent of the entire coarse vector.
+It is degenerate in the direction $\sum_i\Lambda_i^\perp=0$; no
+inverse on that null direction is used.
+
+As in §8.5, shear the effective memory to $Z_c-\Gamma L_c/m$,
+copy at $s$, and drift to $H$. These controls depend only on the
+partition. Let $(Q_c,P_c,R_{\rm co})$ be this physical comparator.
+Summing (63) gives the exact coupling
+$$\begin{aligned}
+(Q_f,P_f,Y/H)
+ &=(Q_c,P_c,R_{\rm co})-(U/m,0,V/m)
+                         +(0,0,F\sigma_t^2/(2m)),\\
+U&=\sum_i k_i\Lambda_i^\perp,\qquad
+V=\sum_i b_i\Lambda_i^\perp,\\
+\operatorname{Cov}(U,V)
+ &=\kappa^2rH
+ \begin{pmatrix}
+ \operatorname{Var}_\omega k&\operatorname{Cov}_\omega(k,b)\\
+ \operatorname{Cov}_\omega(k,b)&\operatorname{Var}_\omega b
+ \end{pmatrix}.
+\end{aligned}\tag{68}$$
+Here $\operatorname{Var}_\omega$ denotes the finite weighted variance
+with weights $\omega_i$. The deterministic difference is the force
+response of the physical schedule, not a force-dependent correction
+which the unknown-force apparatus is assumed able to apply.
+
+For three equal cells of length $\ell$,
+$$\begin{aligned}
+k&=(2\ell,\ell,0),&b&=(\ell,\ell/3,0),\\
+s&=2\ell,&\Gamma&=4\ell/9,\qquad\sigma_t^2=2\ell^2/3,\\
+\operatorname{Cov}(U,V)
+ &=\kappa^2r\ell^3
+       \begin{pmatrix}2&1\\1&14/27\end{pmatrix},&
+\det\operatorname{Cov}(U,V)&=\kappa^4r^2\ell^6/27.
+\end{aligned}\tag{69}$$
+For example $\operatorname{Var}_\omega k=2\ell^2/3$,
+$\operatorname{Cov}_\omega(k,b)=\ell^2/3$, and
+$\operatorname{Var}_\omega b=14\ell^2/81$. Multiplication by
+$\kappa^2rH=3\kappa^2r\ell$ yields (69).
+
+At $\kappa>0$ this independent residue has rank two in the
+$(Q,Y/H)$ plane. Even if the deterministic means are matched, the
+prescribed saturated effective pair plus one independent scalar
+entering additively along a fixed vector supplies a covariance increment
+of rank at most one.
+It cannot reproduce (69). This excludes that specific truncated rule;
+correlated re-preparations and other physical coarse apparatus have
+not been excluded. A nonlinear vector-valued function of one random
+scalar can have covariance rank two and is also outside this exclusion.
+Equations (65)--(66) retain the full necessary
+timing, force-response and noise data. At $\kappa=0$ the residue
+vanishes and the timing-dependent mean difference remains.
+
+### 8.9 A partition-independent limit of the projected terminal channel
+
+Fix $\tau,m,r,A,B,\kappa$ and the deterministic force $F$. The
+partition may be arbitrary; set $\delta=\max_i h_i$. Put
+$s_j=\tau-t_j$ and
+$$\begin{aligned}
+S_1&=\sum_i h_it_i
+       =\frac{\tau^2}2+\frac12\sum_i h_i^2,\\
+S_2&=\sum_i h_it_i^2,\qquad
+0\le S_2-\frac{\tau^3}3\le\tau^2\delta,\\
+B_j&=\sum_{i>j}h_i(t_i-t_j)
+       =\frac{s_j^2}2+e_j,\qquad
+e_j=\frac12\sum_{i>j}h_i^2\le\frac{\delta s_j}2.
+\end{aligned}\tag{70}$$
+For the last identity apply the $S_1$ identity to the subpartition
+after $t_j$. For $S_2$, the right-endpoint sum exceeds the polynomial
+area $\tau^3/3$; on each cell its excess is at most $\tau h_i^2$,
+since the slope of $t^2$ is at most $2\tau$. Summing gives the bound.
+These are finite partition identities and elementary polynomial
+estimates.
+
+Repeated composition in (66), starting with $Y=0$, is consequently
+$$\begin{aligned}
+M_\pi&=\begin{pmatrix}1&\tau/m&0\\0&1&0\\
+                       \tau&S_1/m&1\end{pmatrix},&
+f_\pi&=(\tau^2/(2m),\tau,S_2/(2m))^{\sf T},\\
+N_\pi&=\kappa^2r\sum_jh_jv_jv_j^{\sf T}
+                    +\operatorname{diag}(0,0,\tau/r),&
+v_j&=(-s_j/m,-1,-B_j/m)^{\sf T}.
+\end{aligned}\tag{71}$$
+Define a candidate three-dimensional Gaussian law $P_*$ by replacing
+$S_1,S_2$ in $M_\pi,f_\pi$ by $\tau^2/2,\tau^3/3$, and setting
+$$N_*=\kappa^2r
+\begin{pmatrix}
+\tau^3/(3m^2)&\tau^2/(2m)&\tau^4/(8m^2)\\
+\tau^2/(2m)&\tau&\tau^3/(6m)\\
+\tau^4/(8m^2)&\tau^3/(6m)&\tau^5/(20m^2)
+\end{pmatrix}
++\operatorname{diag}(0,0,\tau/r).\tag{72}$$
+The first matrix is the polynomial Gram matrix of
+$(-s/m,-1,-s^2/(2m))$ over $0\le s\le\tau$. Thus it is
+nonnegative. Together with the independent initial body covariance
+and the last term, it gives a positive definite terminal covariance.
+This defines a finite terminal Gaussian channel without assuming a
+limiting mechanical curve or a stochastic process at all times.
+
+**Proposition 8 (projected terminal-channel refinement).** Let
+$P_\pi=\mathcal L(Q_f,P_f,Y)$ for the physical schedule. Define
+$$\begin{aligned}
+a&=\frac{\tau}{m\sqrt A},&b&=\frac1{\sqrt B},&
+c&=\sqrt{\frac r\tau}\frac{\tau^2}{2m},\\
+L&=\sqrt{a^2+b^2+c^2},&J&=\sqrt{a^2+4c^2},\\
+\beta&=\sqrt{\frac{rB}\tau}\frac{\tau\delta}{2m},&
+d&=c\delta/\tau,\\
+\varepsilon(\delta)
+ &=2\beta+\beta^2+
+    \kappa^2r\left[LJ\delta+\tau(2Ld+d^2)\right],&
+z(\delta)&=|F|c\delta.
+\end{aligned}$$
+Whenever $\varepsilon(\delta)\le1/2$,
+$$\|P_\pi-P_*\|_{\rm TV}
+\le\left[\frac34\varepsilon(\delta)^2+
+                       \frac13z(\delta)^2\right]^{1/2}.
+\tag{73}$$
+All constants are independent of the number of cells and their relative
+lengths. The bound is $O(\delta)$ at fixed parameters, uniformly over
+bounded $F$. Two partitions are Cauchy by the triangle inequality,
+with the sum of their bounds (73). This proves refinement independence
+of the body and the single weighted terminal projection in this
+apparatus family.
+
+*Proof.* Apply the invertible, dimensionless coordinate change
+$$W=\left(\frac{Q-\tau P/m}{\sqrt A},\frac P{\sqrt B},
+ \sqrt{\frac r\tau}\left[Y-\tau Q+\frac{\tau^2P}{2m}\right]
+ \right)^{\sf T}.$$
+For the candidate, the initial body and summed coordinate noise give
+covariance $I$, and the memory momenta add a nonnegative matrix.
+Thus $\widehat V_*\succeq I$. For a finite partition, the former
+contribution is $(I+\beta_\pi E_{32})(I+\beta_\pi E_{32})^{\sf T}$,
+where
+$\beta_\pi=\sqrt{rB/\tau}(S_1-\tau^2/2)/m\le\beta$.
+Its difference from $I$ has norm at most $2\beta+\beta^2$.
+
+A kick at $t_j$ transforms to
+$$w(t_j)+(0,0,-\sqrt{r/\tau}\,e_j/m)^{\sf T},\qquad
+w(t)=\left(\frac t{m\sqrt A},-\frac1{\sqrt B},
+                 -\sqrt{\frac r\tau}\frac{t^2}{2m}\right)^{\sf T}.$$
+On $[0,\tau]$, $\|w\|\le L$, $\|w'\|\le J/\tau$,
+and the error vector has norm at most $d$. The norm of the derivative
+of $ww^{\sf T}$ is at most $2LJ/\tau$. Its right-endpoint
+quadrature error on cell $i$ is therefore at most
+$LJh_i^2/\tau$. Summing gives at most $LJ\delta$.
+The error vector changes each outer product by at most $2Ld+d^2$.
+Equation (71) now proves
+$\|\widehat V_\pi-\widehat V_*\|\le\varepsilon(\delta)$.
+The only mean difference in these coordinates is
+$F\sqrt{r/\tau}(S_2-\tau^3/3)/(2m)$ in the third component;
+(70) bounds its norm by $z(\delta)$.
+
+Whiten further by $\widehat V_*^{-1/2}$. Its norm is at most one.
+The relative covariance eigenvalues are $1+x_j$,
+$|x_j|\le\varepsilon\le1/2$, and the mean difference has norm at
+most $z$. The squared Gaussian affinity is
+$$\mathcal A^2=\prod_{j=1}^3
+ \frac{\sqrt{1+x_j}}{1+x_j/2}
+ \exp\left[-\frac14\mu^{\sf T}
+                         (I+E/2)^{-1}\mu\right].$$
+For $|x|\le1/2$, rationalizing the square root gives
+$$1-\frac{\sqrt{1+x}}{1+x/2}
+=\frac{x^2}{4(1+x/2)(1+x/2+\sqrt{1+x})}\le x^2/4.$$
+The denominator is at least $17/4>4$, using
+$1+x/2\ge3/4$ and $\sqrt{1+x}\ge2/3$. Also
+$I+E/2\succeq(3/4)I$, so the exponential's deficit is at most
+$z^2/3$. The deficit of a product of factors in $[0,1]$ is bounded
+by the sum of their deficits. Hence
+$1-\mathcal A^2\le3\varepsilon^2/4+z^2/3$.
+The affinity inequality of §7 gives (73). $\square$
+
+Here $[r]=(\text{length}^2\text{time})^{-1}$, $[\kappa]$ is
+action, and $Y$ has length-times-time units. The constants $a,b,c,L,J,d$
+have inverse-momentum units; $\beta,\varepsilon,z$ are dimensionless.
+Every term in (71)--(72) has the covariance units of its coordinate
+pair. The transformed variables and the statistical bound are
+dimensionless.
+
+For $\kappa>0$, each finite $P_\pi$ satisfies terminal posterior
+closure (55), since $Y$ is a linear projection of commuting physical
+terminal coordinates. Its record variance is at least $\tau/r$;
+the conditional covariance is therefore continuous at $P_*$, and
+the limit retains $\det\Sigma_{(Q,P)\mid Y}\ge\kappa^2$.
+At $\kappa=0$, (65)--(73) still hold with all momentum kicks zero;
+convergence and continuity in this fixed-precision family select no
+positive action scale.
+
+The next Newton lemma must test the retained-channel construction
+under a physically realized adaptive copy schedule, with every
+controller memory and side record included. Dependencies are the
+conditional terminal-storage geometry of §8.2 and a preparation/resource
+law bounding the complete-record information, as in (41)--(44).
+Abandon a proposed rule if a controller reads a discarded conjugate,
+stores an old number passively, or loses a mesh-uniform information
+budget. Equation (73) controls one projected channel; extending it
+to the full growing record requires compatible record spaces and
+conditional comparison estimates.
+
+**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT at this finite
+Gaussian level.** The descriptor, kick signs, rank-two covariance and
+constants in (73) were re-derived. The exclusion in §8.8 is restricted
+to an independent additive scalar along a fixed vector, and the mean
+bound retains the centred initial-body assumption. The posterior limit
+uses covariance convergence and a positive record variance, rather than
+TV convergence alone.
 
 ## 9. Consequence for STATE
 
@@ -1412,9 +1683,12 @@ replacement cost (46). The sister formalization's norm obstacle yields
 a finite harmonic refinement bound; (49) states its extra statistical
 budget. Section 8 supplies a Hamiltonian copy/monitor realization and
 terminal closure from the initial joint phase-covariance restriction.
-Sections 8.4--8.6 give a genuine two-time copy refinement, its projected
-joint-law defect (62), and the complete-record information budget (63).
-The next Newton lemma is associative three-cell blocking with all
-relative kicks retained. Alternate next to the gauge order-uniform
-anchored attachment test. Positivity, universality and radiation
+Sections 8.4--8.9 give physical copy refinement, the complete-record
+information budget (63), associative projected-channel composition
+(66), and the partition-independent terminal Gaussian law at rate (73).
+The three-cell residue (69) determines why the coarse channel retains
+more noise data than the prescribed one-pair/scalar rule. The next Newton
+lemma tests a physically realized adaptive controller with its full
+record and a uniform resource budget. Alternate next to the retained-barrier
+gauge marginal estimate. Positivity, universality and radiation
 calibration remain separate obligations.

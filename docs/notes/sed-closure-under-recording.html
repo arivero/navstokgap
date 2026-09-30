@@ -78,16 +78,28 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Two-time blocking result, 2026-09-29 (GPT-6.1 Sol and GPT-6
+<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Associative terminal-channel result, 2026-09-30 (GPT-6.1 Sol
+and GPT-6 Astra; written, internally checked).</strong> Sections 8.7–8.9
+retain every physical copy kick in an associative Gaussian body–record
+descriptor. Three equal cells have the rank-two relative residue (69).
+For any fixed duration and precision density, the projected terminal law
+converges at the explicit mesh rate (73) as the mesh tends to zero,
+independently of the partition schedule. The retained record is one
+weighted terminal projection; a mechanical trajectory and the limit of
+the entire growing record are separate constructions. The posterior
+floor survives this projection and its limit when the joint preparation
+scale is positive. The same channel convergence holds on the zero-action
+branch.</p>
+<p><strong>Two-time blocking result, 2026-09-29 (GPT-6.1 Sol and GPT-6
 Astra; written, internally checked).</strong> Sections 8.4–8.6 construct
 two physical memory copies at distinct times and compare their projected
 joint body–record law to one effective copy at the same terminal cut.
 The relative kick survives as an explicit rank-one noise, with the
 split-uniform statistical defect (62). A fixed precision density gives
 the complete terminal record a partition-uniform force-information bound
-(63), even on the zero-action branch. The next test is associative
-three-cell blocking; the positive preparation scale remains an
-input.</p>
+(63), even on the zero-action branch. Sections 8.7–8.9 develop
+associative three-cell blocking; the positive preparation scale remains
+an input.</p>
 <p><strong>Hamiltonian memory result, 2026-09-29 (GPT-6.1 Sol and GPT-6
 Astra; written, internally checked).</strong> Section 8 constructs the
 kick monitor as a coupling to a physical memory. It changes the first
@@ -1599,16 +1611,310 @@ class="math inline">\(\kappa=0\)</span> with the same imprecision law.
 Thus continuity in this resource class does not force positive action.
 Letting <span class="math inline">\(r\)</span> grow without bound leaves
 the uniform class and is a separate physical-resource question.</p>
-<p>The next lemma is the three-cell blocking test in both
-parenthesizations. The weighted record projection itself associates; the
-effective pulse times, shears and relative-mode residues must also be
-compared. Carry every relative mode until the final projection and
-compare joint laws at the same terminal cut. A successful construction
-must identify the timing and noise data a coarse cell retains. Abandon a
-proposed one-pair rule if agreement requires deleting a kick, passively
-retaining an earlier numerical read, or substituting a different
-terminal body. This tests consistent recorded observables without
-assuming a limiting mechanical curve.</p>
+<p>The following calculation tests three-cell blocking in both
+parenthesizations, carrying relative modes to the terminal projection.
+It identifies the timing and noise data the coarse channel retains.</p>
+<h3 id="an-associative-descriptor-with-the-physical-kicks-retained">8.7
+An associative descriptor with the physical kicks retained</h3>
+<p>Keep §8.6’s fixed, force-independent partition and jointly Gaussian
+product preparation. The body is centred initially, with <span
+class="math inline">\(A,B&gt;0\)</span> and <span
+class="math inline">\(AB\ge\kappa^2\)</span>. Allow <span
+class="math inline">\(\kappa=0\)</span> in the classical formulas.
+Define <span class="math inline">\(Y=\sum_i h_iR_i\)</span> at the
+terminal cut. Partial sums of this expression are bookkeeping for
+projections of the physical memory coordinates; every copy pulse is
+still part of the dynamics. This definition grants no extra apparatus
+for passively storing an earlier numerical read.</p>
+<p>During one cell of duration <span class="math inline">\(h\)</span>,
+drift under the deterministic force, apply its right-endpoint copy, and
+add that memory coordinate with weight <span
+class="math inline">\(h\)</span>. For <span
+class="math inline">\(X=(Q,P,Y)^{\sf T}\)</span> the exact update is
+<span class="math display">\[\begin{aligned}
+X&#39;&amp;=M_hX+Ff_h+\zeta_h,\\
+M_h&amp;=\begin{pmatrix}1&amp;h/m&amp;0\\0&amp;1&amp;0\\h&amp;h^2/m&amp;1\end{pmatrix},
+&amp;f_h&amp;=\begin{pmatrix}h^2/(2m)\\h\\h^3/(2m)\end{pmatrix},\\
+\zeta_h&amp;=(0,-\Lambda,hZ)^{\sf T},
+&amp;N_h&amp;=\operatorname{Cov}\zeta_h
+       =\operatorname{diag}(0,\kappa^2rh,h/r).
+\end{aligned}\tag{65}\]</span> The new pair is independent of all
+earlier variables. Thus a block’s Gaussian channel is described by <span
+class="math inline">\((M,f,N)\)</span>, and successive blocks obey <span
+class="math display">\[\begin{aligned}
+(M_2,f_2,N_2)\circ(M_1,f_1,N_1)
+={}&amp;(M_2M_1,\ M_2f_1+f_2,\ M_2N_1M_2^{\sf T}+N_2),\\
+N_{321}={}&amp;M_3M_2N_1M_2^{\sf T}M_3^{\sf T}
+             +M_3N_2M_3^{\sf T}+N_3.
+\end{aligned}\tag{66}\]</span> Multiplication and the displayed noise
+sum give exactly the same <span class="math inline">\(M,f,N\)</span> in
+both three-cell parenthesizations. In particular, each earlier momentum
+kick propagates through the later position and record updates. The
+accumulated record of any subblock has weight equal to its duration when
+converted to an average, so its terminal projection also associates.
+These descriptors specify the projected law of the declared physical
+copy schedule. Their composite generally differs from the single-cell
+descriptor <span class="math inline">\((M_H,f_H,N_H)\)</span> at the
+total duration: the composite retains the daughter timing and noise
+data. Arbitrary triples are not asserted to have a one-memory
+Hamiltonian realization.</p>
+<h3
+id="the-three-cell-relative-residue-and-the-necessary-coarse-data">8.8
+The three-cell relative residue and the necessary coarse data</h3>
+<p>For a block of duration <span class="math inline">\(H\)</span>, put
+<span class="math inline">\(\omega_i=h_i/H\)</span> and define <span
+class="math display">\[\begin{aligned}
+s&amp;=\sum_i\omega_it_i,&amp; k_i&amp;=H-t_i,\\
+b_j&amp;=\sum_{i&gt;j}\omega_i(t_i-t_j),&amp;
+\Gamma&amp;=\sum_j\omega_jb_j,\\
+\sigma_t^2&amp;=\sum_i\omega_it_i^2-s^2,&amp;
+Z_c&amp;=\sum_i\omega_iZ_i,\qquad L_c=\sum_i\Lambda_i.
+\end{aligned}\]</span> The pair <span
+class="math inline">\((Z_c,L_c)\)</span> is canonical, saturated and
+Gaussian, with variances <span
+class="math inline">\(((rH)^{-1},\kappa^2rH)\)</span>. Resolve every
+initial momentum as <span
+class="math inline">\(\Lambda_i=\omega_iL_c+\Lambda_i^\perp\)</span>.
+Then <span
+class="math display">\[\operatorname{Cov}(\Lambda_i^\perp,\Lambda_j^\perp)
+=\kappa^2rH(\omega_i\delta_{ij}-\omega_i\omega_j).
+\tag{67}\]</span> Its covariance with <span
+class="math inline">\(L_c\)</span> vanishes, and all memory momenta are
+independent of <span class="math inline">\(Z_c\)</span> and the initial
+body. Joint Gaussianity therefore makes the relative vector independent
+of the entire coarse vector. It is degenerate in the direction <span
+class="math inline">\(\sum_i\Lambda_i^\perp=0\)</span>; no inverse on
+that null direction is used.</p>
+<p>As in §8.5, shear the effective memory to <span
+class="math inline">\(Z_c-\Gamma L_c/m\)</span>, copy at <span
+class="math inline">\(s\)</span>, and drift to <span
+class="math inline">\(H\)</span>. These controls depend only on the
+partition. Let <span class="math inline">\((Q_c,P_c,R_{\rm co})\)</span>
+be this physical comparator. Summing (63) gives the exact coupling <span
+class="math display">\[\begin{aligned}
+(Q_f,P_f,Y/H)
+&amp;=(Q_c,P_c,R_{\rm co})-(U/m,0,V/m)
+                         +(0,0,F\sigma_t^2/(2m)),\\
+U&amp;=\sum_i k_i\Lambda_i^\perp,\qquad
+V=\sum_i b_i\Lambda_i^\perp,\\
+\operatorname{Cov}(U,V)
+&amp;=\kappa^2rH
+\begin{pmatrix}
+\operatorname{Var}_\omega k&amp;\operatorname{Cov}_\omega(k,b)\\
+\operatorname{Cov}_\omega(k,b)&amp;\operatorname{Var}_\omega b
+\end{pmatrix}.
+\end{aligned}\tag{68}\]</span> Here <span
+class="math inline">\(\operatorname{Var}_\omega\)</span> denotes the
+finite weighted variance with weights <span
+class="math inline">\(\omega_i\)</span>. The deterministic difference is
+the force response of the physical schedule, not a force-dependent
+correction which the unknown-force apparatus is assumed able to
+apply.</p>
+<p>For three equal cells of length <span
+class="math inline">\(\ell\)</span>, <span
+class="math display">\[\begin{aligned}
+k&amp;=(2\ell,\ell,0),&amp;b&amp;=(\ell,\ell/3,0),\\
+s&amp;=2\ell,&amp;\Gamma&amp;=4\ell/9,\qquad\sigma_t^2=2\ell^2/3,\\
+\operatorname{Cov}(U,V)
+&amp;=\kappa^2r\ell^3
+       \begin{pmatrix}2&amp;1\\1&amp;14/27\end{pmatrix},&amp;
+\det\operatorname{Cov}(U,V)&amp;=\kappa^4r^2\ell^6/27.
+\end{aligned}\tag{69}\]</span> For example <span
+class="math inline">\(\operatorname{Var}_\omega k=2\ell^2/3\)</span>,
+<span
+class="math inline">\(\operatorname{Cov}_\omega(k,b)=\ell^2/3\)</span>,
+and <span class="math inline">\(\operatorname{Var}_\omega
+b=14\ell^2/81\)</span>. Multiplication by <span
+class="math inline">\(\kappa^2rH=3\kappa^2r\ell\)</span> yields
+(69).</p>
+<p>At <span class="math inline">\(\kappa&gt;0\)</span> this independent
+residue has rank two in the <span class="math inline">\((Q,Y/H)\)</span>
+plane. Even if the deterministic means are matched, the prescribed
+saturated effective pair plus one independent scalar entering additively
+along a fixed vector supplies a covariance increment of rank at most
+one. It cannot reproduce (69). This excludes that specific truncated
+rule; correlated re-preparations and other physical coarse apparatus
+have not been excluded. A nonlinear vector-valued function of one random
+scalar can have covariance rank two and is also outside this exclusion.
+Equations (65)–(66) retain the full necessary timing, force-response and
+noise data. At <span class="math inline">\(\kappa=0\)</span> the residue
+vanishes and the timing-dependent mean difference remains.</p>
+<h3
+id="a-partition-independent-limit-of-the-projected-terminal-channel">8.9
+A partition-independent limit of the projected terminal channel</h3>
+<p>Fix <span class="math inline">\(\tau,m,r,A,B,\kappa\)</span> and the
+deterministic force <span class="math inline">\(F\)</span>. The
+partition may be arbitrary; set <span
+class="math inline">\(\delta=\max_i h_i\)</span>. Put <span
+class="math inline">\(s_j=\tau-t_j\)</span> and <span
+class="math display">\[\begin{aligned}
+S_1&amp;=\sum_i h_it_i
+       =\frac{\tau^2}2+\frac12\sum_i h_i^2,\\
+S_2&amp;=\sum_i h_it_i^2,\qquad
+0\le S_2-\frac{\tau^3}3\le\tau^2\delta,\\
+B_j&amp;=\sum_{i&gt;j}h_i(t_i-t_j)
+       =\frac{s_j^2}2+e_j,\qquad
+e_j=\frac12\sum_{i&gt;j}h_i^2\le\frac{\delta s_j}2.
+\end{aligned}\tag{70}\]</span> For the last identity apply the <span
+class="math inline">\(S_1\)</span> identity to the subpartition after
+<span class="math inline">\(t_j\)</span>. For <span
+class="math inline">\(S_2\)</span>, the right-endpoint sum exceeds the
+polynomial area <span class="math inline">\(\tau^3/3\)</span>; on each
+cell its excess is at most <span class="math inline">\(\tau
+h_i^2\)</span>, since the slope of <span
+class="math inline">\(t^2\)</span> is at most <span
+class="math inline">\(2\tau\)</span>. Summing gives the bound. These are
+finite partition identities and elementary polynomial estimates.</p>
+<p>Repeated composition in (66), starting with <span
+class="math inline">\(Y=0\)</span>, is consequently <span
+class="math display">\[\begin{aligned}
+M_\pi&amp;=\begin{pmatrix}1&amp;\tau/m&amp;0\\0&amp;1&amp;0\\
+                       \tau&amp;S_1/m&amp;1\end{pmatrix},&amp;
+f_\pi&amp;=(\tau^2/(2m),\tau,S_2/(2m))^{\sf T},\\
+N_\pi&amp;=\kappa^2r\sum_jh_jv_jv_j^{\sf T}
+                    +\operatorname{diag}(0,0,\tau/r),&amp;
+v_j&amp;=(-s_j/m,-1,-B_j/m)^{\sf T}.
+\end{aligned}\tag{71}\]</span> Define a candidate three-dimensional
+Gaussian law <span class="math inline">\(P_*\)</span> by replacing <span
+class="math inline">\(S_1,S_2\)</span> in <span
+class="math inline">\(M_\pi,f_\pi\)</span> by <span
+class="math inline">\(\tau^2/2,\tau^3/3\)</span>, and setting <span
+class="math display">\[N_*=\kappa^2r
+\begin{pmatrix}
+\tau^3/(3m^2)&amp;\tau^2/(2m)&amp;\tau^4/(8m^2)\\
+\tau^2/(2m)&amp;\tau&amp;\tau^3/(6m)\\
+\tau^4/(8m^2)&amp;\tau^3/(6m)&amp;\tau^5/(20m^2)
+\end{pmatrix}
++\operatorname{diag}(0,0,\tau/r).\tag{72}\]</span> The first matrix is
+the polynomial Gram matrix of <span
+class="math inline">\((-s/m,-1,-s^2/(2m))\)</span> over <span
+class="math inline">\(0\le s\le\tau\)</span>. Thus it is nonnegative.
+Together with the independent initial body covariance and the last term,
+it gives a positive definite terminal covariance. This defines a finite
+terminal Gaussian channel without assuming a limiting mechanical curve
+or a stochastic process at all times.</p>
+<p><strong>Proposition 8 (projected terminal-channel
+refinement).</strong> Let <span class="math inline">\(P_\pi=\mathcal
+L(Q_f,P_f,Y)\)</span> for the physical schedule. Define <span
+class="math display">\[\begin{aligned}
+a&amp;=\frac{\tau}{m\sqrt A},&amp;b&amp;=\frac1{\sqrt B},&amp;
+c&amp;=\sqrt{\frac r\tau}\frac{\tau^2}{2m},\\
+L&amp;=\sqrt{a^2+b^2+c^2},&amp;J&amp;=\sqrt{a^2+4c^2},\\
+\beta&amp;=\sqrt{\frac{rB}\tau}\frac{\tau\delta}{2m},&amp;
+d&amp;=c\delta/\tau,\\
+\varepsilon(\delta)
+&amp;=2\beta+\beta^2+
+    \kappa^2r\left[LJ\delta+\tau(2Ld+d^2)\right],&amp;
+z(\delta)&amp;=|F|c\delta.
+\end{aligned}\]</span> Whenever <span
+class="math inline">\(\varepsilon(\delta)\le1/2\)</span>, <span
+class="math display">\[\|P_\pi-P_*\|_{\rm TV}
+\le\left[\frac34\varepsilon(\delta)^2+
+                       \frac13z(\delta)^2\right]^{1/2}.
+\tag{73}\]</span> All constants are independent of the number of cells
+and their relative lengths. The bound is <span
+class="math inline">\(O(\delta)\)</span> at fixed parameters, uniformly
+over bounded <span class="math inline">\(F\)</span>. Two partitions are
+Cauchy by the triangle inequality, with the sum of their bounds (73).
+This proves refinement independence of the body and the single weighted
+terminal projection in this apparatus family.</p>
+<p><em>Proof.</em> Apply the invertible, dimensionless coordinate change
+<span class="math display">\[W=\left(\frac{Q-\tau P/m}{\sqrt A},\frac
+P{\sqrt B},
+\sqrt{\frac r\tau}\left[Y-\tau Q+\frac{\tau^2P}{2m}\right]
+\right)^{\sf T}.\]</span> For the candidate, the initial body and summed
+coordinate noise give covariance <span class="math inline">\(I\)</span>,
+and the memory momenta add a nonnegative matrix. Thus <span
+class="math inline">\(\widehat V_*\succeq I\)</span>. For a finite
+partition, the former contribution is <span
+class="math inline">\((I+\beta_\pi E_{32})(I+\beta_\pi E_{32})^{\sf
+T}\)</span>, where <span
+class="math inline">\(\beta_\pi=\sqrt{rB/\tau}(S_1-\tau^2/2)/m\le\beta\)</span>.
+Its difference from <span class="math inline">\(I\)</span> has norm at
+most <span class="math inline">\(2\beta+\beta^2\)</span>.</p>
+<p>A kick at <span class="math inline">\(t_j\)</span> transforms to
+<span class="math display">\[w(t_j)+(0,0,-\sqrt{r/\tau}\,e_j/m)^{\sf
+T},\qquad
+w(t)=\left(\frac t{m\sqrt A},-\frac1{\sqrt B},
+                 -\sqrt{\frac r\tau}\frac{t^2}{2m}\right)^{\sf
+T}.\]</span> On <span class="math inline">\([0,\tau]\)</span>, <span
+class="math inline">\(\|w\|\le L\)</span>, <span
+class="math inline">\(\|w&#39;\|\le J/\tau\)</span>, and the error
+vector has norm at most <span class="math inline">\(d\)</span>. The norm
+of the derivative of <span class="math inline">\(ww^{\sf T}\)</span> is
+at most <span class="math inline">\(2LJ/\tau\)</span>. Its
+right-endpoint quadrature error on cell <span
+class="math inline">\(i\)</span> is therefore at most <span
+class="math inline">\(LJh_i^2/\tau\)</span>. Summing gives at most <span
+class="math inline">\(LJ\delta\)</span>. The error vector changes each
+outer product by at most <span class="math inline">\(2Ld+d^2\)</span>.
+Equation (71) now proves <span class="math inline">\(\|\widehat
+V_\pi-\widehat V_*\|\le\varepsilon(\delta)\)</span>. The only mean
+difference in these coordinates is <span
+class="math inline">\(F\sqrt{r/\tau}(S_2-\tau^3/3)/(2m)\)</span> in the
+third component; (70) bounds its norm by <span
+class="math inline">\(z(\delta)\)</span>.</p>
+<p>Whiten further by <span class="math inline">\(\widehat
+V_*^{-1/2}\)</span>. Its norm is at most one. The relative covariance
+eigenvalues are <span class="math inline">\(1+x_j\)</span>, <span
+class="math inline">\(|x_j|\le\varepsilon\le1/2\)</span>, and the mean
+difference has norm at most <span class="math inline">\(z\)</span>. The
+squared Gaussian affinity is <span class="math display">\[\mathcal
+A^2=\prod_{j=1}^3
+\frac{\sqrt{1+x_j}}{1+x_j/2}
+\exp\left[-\frac14\mu^{\sf T}
+                         (I+E/2)^{-1}\mu\right].\]</span> For <span
+class="math inline">\(|x|\le1/2\)</span>, rationalizing the square root
+gives <span class="math display">\[1-\frac{\sqrt{1+x}}{1+x/2}
+=\frac{x^2}{4(1+x/2)(1+x/2+\sqrt{1+x})}\le x^2/4.\]</span> The
+denominator is at least <span class="math inline">\(17/4&gt;4\)</span>,
+using <span class="math inline">\(1+x/2\ge3/4\)</span> and <span
+class="math inline">\(\sqrt{1+x}\ge2/3\)</span>. Also <span
+class="math inline">\(I+E/2\succeq(3/4)I\)</span>, so the exponential’s
+deficit is at most <span class="math inline">\(z^2/3\)</span>. The
+deficit of a product of factors in <span
+class="math inline">\([0,1]\)</span> is bounded by the sum of their
+deficits. Hence <span class="math inline">\(1-\mathcal
+A^2\le3\varepsilon^2/4+z^2/3\)</span>. The affinity inequality of §7
+gives (73). <span class="math inline">\(\square\)</span></p>
+<p>Here <span
+class="math inline">\([r]=(\text{length}^2\text{time})^{-1}\)</span>,
+<span class="math inline">\([\kappa]\)</span> is action, and <span
+class="math inline">\(Y\)</span> has length-times-time units. The
+constants <span class="math inline">\(a,b,c,L,J,d\)</span> have
+inverse-momentum units; <span
+class="math inline">\(\beta,\varepsilon,z\)</span> are dimensionless.
+Every term in (71)–(72) has the covariance units of its coordinate pair.
+The transformed variables and the statistical bound are
+dimensionless.</p>
+<p>For <span class="math inline">\(\kappa&gt;0\)</span>, each finite
+<span class="math inline">\(P_\pi\)</span> satisfies terminal posterior
+closure (55), since <span class="math inline">\(Y\)</span> is a linear
+projection of commuting physical terminal coordinates. Its record
+variance is at least <span class="math inline">\(\tau/r\)</span>; the
+conditional covariance is therefore continuous at <span
+class="math inline">\(P_*\)</span>, and the limit retains <span
+class="math inline">\(\det\Sigma_{(Q,P)\mid Y}\ge\kappa^2\)</span>. At
+<span class="math inline">\(\kappa=0\)</span>, (65)–(73) still hold with
+all momentum kicks zero; convergence and continuity in this
+fixed-precision family select no positive action scale.</p>
+<p>The next Newton lemma must test the retained-channel construction
+under a physically realized adaptive copy schedule, with every
+controller memory and side record included. Dependencies are the
+conditional terminal-storage geometry of §8.2 and a preparation/resource
+law bounding the complete-record information, as in (41)–(44). Abandon a
+proposed rule if a controller reads a discarded conjugate, stores an old
+number passively, or loses a mesh-uniform information budget. Equation
+(73) controls one projected channel; extending it to the full growing
+record requires compatible record spaces and conditional comparison
+estimates.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT at this
+finite Gaussian level.</strong> The descriptor, kick signs, rank-two
+covariance and constants in (73) were re-derived. The exclusion in §8.8
+is restricted to an independent additive scalar along a fixed vector,
+and the mean bound retains the centred initial-body assumption. The
+posterior limit uses covariance convergence and a positive record
+variance, rather than TV convergence alone.</p>
 <h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
@@ -1630,11 +1936,14 @@ the innovation replacement cost (46). The sister formalization’s norm
 obstacle yields a finite harmonic refinement bound; (49) states its
 extra statistical budget. Section 8 supplies a Hamiltonian copy/monitor
 realization and terminal closure from the initial joint phase-covariance
-restriction. Sections 8.4–8.6 give a genuine two-time copy refinement,
-its projected joint-law defect (62), and the complete-record information
-budget (63). The next Newton lemma is associative three-cell blocking
-with all relative kicks retained. Alternate next to the gauge
-order-uniform anchored attachment test. Positivity, universality and
+restriction. Sections 8.4–8.9 give physical copy refinement, the
+complete-record information budget (63), associative projected-channel
+composition (66), and the partition-independent terminal Gaussian law at
+rate (73). The three-cell residue (69) determines why the coarse channel
+retains more noise data than the prescribed one-pair/scalar rule. The
+next Newton lemma tests a physically realized adaptive controller with
+its full record and a uniform resource budget. Alternate next to the
+retained-barrier gauge marginal estimate. Positivity, universality and
 radiation calibration remain separate obligations.</p>
 
 </main>
