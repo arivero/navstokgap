@@ -14,15 +14,15 @@
 \section{Shared radiation and closure under
 recording}\label{shared-radiation-and-closure-under-recording}}
 
-\textbf{Physical feedback refinement, 2026-09-30 (GPT-6.1 Sol and GPT-6
-Astra; refereed).} Section 8.11 compares one physical cell with two
-daughters for a fixed policy depending on the weighted past memory
-coordinates. It retains the relative pointer modes and controller
-recoils, gives exact conditional defects, and proves partition-uniform
-fourth moments. The centred momentum defect and record bias have
-summable local budgets. Propagation of these defects through later
-feedback is the next estimate; no adaptive continuum curve or positive
-action scale is inferred from the local bounds.
+\textbf{Adaptive continuum result, 2026-09-30 (GPT-6.1 Sol and GPT-6
+Astra; refereed).} Sections 8.11--8.13 construct a partition-independent
+continuous body--record law for the supplied Gaussian pointer family and
+a fixed bounded smooth physical feedback policy. Finite kicks and
+controller recoils are retained. The explicit path-Cauchy estimate (89)
+removes localization, and posterior closure (92) survives conditioning
+on the entire declared limiting record. Complete-record force continuity
+also survives at zero action. The construction supplies no independent
+positivity or scale calibration.
 
 \textbf{Physical adaptive-gain result, 2026-09-30 (GPT-6.1 Sol and GPT-6
 Astra; refereed).} Section 8.10 realizes feedback by a Hamiltonian
@@ -1960,6 +1960,283 @@ with cell count, a discarded relative kick, or an assumed limiting
 noise-driven curve. Adaptive timing, positivity, universality and scale
 calibration remain separate.
 
+\hypertarget{a-continuous-bodyrecord-limit-from-finite-physical-refinements}{%
+\subsubsection{8.12 A continuous body--record limit from finite physical
+refinements}\label{a-continuous-bodyrecord-limit-from-finite-physical-refinements}}
+
+Retain the fixed apparatus family of §8.11, including one prescribed
+\(g\), a fixed duration, and force-independent deterministic partitions.
+For each partition \(\pi\), keep the actual continuous body position
+\(Q_\pi(t)\). Linearly interpolate the post-copy momenta at its cuts to
+give \(\overline P_\pi\), and the weighted memory coordinates at its
+cuts to give \(\overline Y_\pi\). Include initial values \(p,0\). These
+interpolations are retrospective functions of the finite experiment;
+they do not give the controller an extra stored reading. Write
+\(\mathsf X_\pi=(Q_\pi,\overline P_\pi,\overline Y_\pi)\).
+
+\textbf{Proposition 11 (adaptive path refinement).} The laws of these
+continuous paths have a unique limit as \(|\pi|\to0\), independent of
+deterministic partition schedules. On a countable nested family they can
+be coupled to converge in probability in the uniform path metric. The
+constants below are independent of cell count. The limit follows from
+finite Gaussian refinements; no limiting noise process or mechanical
+curve is assumed.
+
+For two partitions take their finite common refinement \(\varrho\), with
+atomic durations \(\epsilon_e\). Prepare independent variables
+\(\Lambda_e,\xi_e\) of variances \(\kappa^2r\epsilon_e, \epsilon_e/r\)
+and bracket \(\{\xi_e,\Lambda_f\}=\epsilon_e\delta_{ef}\). For a parent
+cell \(I\) of length \(H\), its apparatus pair is
+\[Z_I=H^{-1}\sum_{e\subset I}\xi_e,\qquad
+\Lambda_I=\sum_{e\subset I}\Lambda_e.\tag{84}\] It has exactly the
+original independent saturated Gaussian preparation within each
+partition. Canonical completion supplies the relative modes as in §8.11.
+They remain in the finer experiment. Equation (84) couples experiments;
+it grants no simultaneous readout of their different apparatus.
+
+For a proof localization, clip the position appearing in the record
+drift to \([-R,R]\), keeping the body kick unchanged. This auxiliary
+recursion is not asserted a mechanical Hamiltonian outside the clipped
+region. Coupled to the original experiment, it agrees until an original
+copy position leaves the region. Equation (82) bounds that probability
+by \(K_Q^4/R^4\). Its body moment bound \(K_P\) is unchanged, since it
+uses only the bounded predictable gains.
+
+Distribute each clipped parent kick over its atoms with the same
+parent-left gain, and drift an auxiliary position under these atomized
+kicks. Distribute its record increment as
+\(\epsilon_e g(Y_{I,\rm left})\operatorname{clip}_R(Q_{I,\rm right}) +\xi_e\).
+The right position before the parent kick is predicted by
+\(Q_{I,\rm left}+HP_{I,\rm left}/m+FH^2/(2m)\), determined entirely at
+parent left. All these coefficients are predictable in the atomic
+filtration. The auxiliary momentum and record match the clipped parent
+recursion at parent endpoints; its position differs by the kick timing.
+The prediction is analytical and assumes no force-aware apparatus
+control.
+
+Normalize by \(q_0=\sqrt A\), \(p_0=\sqrt B\), \(y_0=\sqrt{\tau/r}\),
+and put \[\alpha=\frac{p_0}{mq_0},\quad \theta=\frac{q_0}{y_0},\quad
+\ell=Ly_0,\quad b_0=\frac{\kappa^2r}{B},\quad \overline R=R/q_0.\] Here
+\(\alpha,\theta,b_0\) have inverse-time units, and \(\ell,\overline R\)
+are dimensionless. Let \(x,v,z\) denote the normalized auxiliary
+coordinates. At an atomic left endpoint, their lags from the
+parent-right position predictor and parent-left record have squared mean
+bounds, respectively, \[\begin{aligned}
+B_x(\delta)&=\frac4{m^2A}
+ [\kappa^2rG^2\tau\delta^2+K_P^2\delta^2
+                      +F^2\delta^4/4+\kappa^2rG^2\delta^3],\\
+B_z(\delta)&=(rG^2R^2\delta^2+\delta)/\tau,
+\qquad \delta=|\pi|.
+\end{aligned}\tag{85}\]
+
+The first lag is the sum of four terms: completed-parent timing
+discrepancy; remaining parent drift; remaining force drift; and the
+current distributed-kick area. Orthogonality of the centred parent
+increments bounds the first variance by
+\(\kappa^2rG^2\tau\delta^2/m^2\). The other squared bounds are
+\(K_P^2\delta^2/m^2\), \(F^2\delta^4/(4m^2)\) and
+\(\kappa^2rG^2\delta^3/m^2\). Squaring their sum costs four. For the
+record lag, its bounded parent drift and fresh coordinate noise have
+zero cross term, giving \(B_z\) directly.
+
+For the two partitions define \[\begin{aligned}
+\mathcal B_x&=B_x(\delta)+B_x(\delta'),\qquad
+\mathcal B_z=B_z(\delta)+B_z(\delta'),\\
+c_R&=\tau\alpha^2+12b_0\ell^2
+                   +6\tau\theta^2(G^2+\overline R^2\ell^2),\\
+E_R&=12b_0\ell^2\tau\mathcal B_z
+ +6\tau^2\theta^2(G^2\mathcal B_x
+                         +\overline R^2\ell^2\mathcal B_z).
+\end{aligned}\tag{86}\] \(c_R\) has inverse-time units and \(E_R\) is
+dimensionless. Let \(D_k\) be the expectation of the sum of the three
+componentwise maxima squared of auxiliary differences up to atomic
+endpoint \(k\). Common coordinate noise cancels in the record
+difference. Momentum differences are martingale sums. The gain
+difference has squared expectation at most
+\(3\ell^2(E|\Delta z|^2+\mathcal B_z)\). The normalized record drift
+difference has squared expectation at most \[6\theta^2[G^2E|\Delta x|^2
+ +\overline R^2\ell^2E|\Delta z|^2
+ +G^2\mathcal B_x+\overline R^2\ell^2\mathcal B_z].\] These follow by
+inserting the two auxiliary states between the parent predictors;
+clipping is one-Lipschitz. The martingale maximal inequality gives a
+factor four for momentum; Cauchy--Schwarz over duration at most \(\tau\)
+bounds both drift sums. Thus the finite recurrence and its elementary
+product bound are \[D_k\le E_R+c_R\sum_{e\le k}\epsilon_eD_{e-1},\qquad
+D_n\le E_R\prod_e(1+c_R\epsilon_e)
+                    \le E_Re^{c_R\tau}.\tag{87}\] No stability constant
+depends on the number of atoms or parents.
+
+It remains to compare auxiliary paths with the displayed physical paths.
+At completed parent cuts their position timing errors form a martingale
+with maximal second moment at most \(4\kappa^2rG^2\sum_I H_I^3/m^2\).
+The unfinished parent's kick area has maximal second moment, summed over
+parents, at most the same bound. Squaring their sum costs two for each
+term. This gives the position contribution sixteen in
+\[\mathcal H(\delta)=
+\frac{16\kappa^2rG^2\tau\delta^2}{m^2A}
++\frac{49}{\sqrt{27}}
+       \left[\frac{\kappa^2rG^2}{B}+\frac1\tau\right]
+                                  \sqrt{\tau\delta}.\tag{88}\] For
+momentum and record the differences are finite Gaussian bridges between
+a parent increment and its linear interpolation. A partial increment's
+maximal \(L^4\) norm is at most \((4/3)3^{1/4}\) times the square root
+of its parent variance. Adding the terminal linear term gives
+\((7/3)3^{1/4}\) times that root. Its fourth power is \(2401/27\) times
+the variance squared. Sum over parents and use
+\(\sum_IH_I^2\le\tau\delta\) to obtain \(49/\sqrt{27}\) in (88). This
+bounds the expectation of the sum of componentwise squared uniform
+errors by \(\mathcal H\).
+
+Between atomic endpoints, auxiliary record noise jumps cancel in the
+difference, and body force terms cancel. Its componentwise maxima are
+consequently controlled by the endpoint maxima in (87). Minkowski,
+Markov and removal of clipping give, for normalized paths
+\(\widehat{\mathsf X}=(Q/q_0,\overline P/p_0,\overline Y/y_0)\),
+\[\begin{aligned}
+\Pr\left(\sup_{t\le\tau}
+ |\widehat{\mathsf X}_\pi(t)-\widehat{\mathsf X}_{\pi'}(t)|
+                    >\varepsilon\right)
+&\le\frac{2K_Q^4}{R^4}
+ +\frac{\left[\sqrt{E_Re^{c_R\tau}}
+       +\sqrt{\mathcal H(\delta)}
+       +\sqrt{\mathcal H(\delta')}\right]^2}{\varepsilon^2}.
+\end{aligned}\tag{89}\] First fix \(R\) and refine both meshes; then let
+\(R\to\infty\). The clipping tail vanishes in this stated order. A
+rapidly growing \(c_R\) therefore causes no missing cell-count
+uniformity.
+
+For a countable nested family, adjoin independent Gaussian relative
+pairs at each refinement. This gives a consistent coupling of every
+finite apparatus preparation. The continuous displayed paths are Cauchy
+in probability by (89). Completeness of continuous path space in its
+uniform metric gives a limit: choose a subsequence with summable
+probability bounds, obtain an almost surely uniformly Cauchy
+subsequence, and then use the probability-Cauchy bound for the full
+sequence. No infinite physical readout is postulated in this argument.
+For arbitrary deterministic partition sequences, the finite common
+refinement comparison gives convergence to this same \textbf{law}. A
+single universal coupling of all real cut schedules is not required.
+
+The displayed momentum differs from the actual impulsive momentum by at
+most the largest parent kick. Its fourth-moment sum is at most
+\(3(\kappa^2rG^2)^2\tau\delta\), so this difference tends to zero in
+probability. The finite mechanical identity therefore passes to the
+uniform limit: \[Q_*(t)=q+\frac1m\int_0^tP_*(s)\,ds,
+\qquad Q_*\in C^1,\quad P_*\in C.\tag{90}\] The finite identity uses
+ordinary integrals of piecewise polynomials; the limiting integral
+follows from uniform convergence. Separate evolution laws for \(P_*\)
+and \(Y_*\) have not yet been identified here. At \(\kappa=0\), the body
+is the constant-force parabola conditional on \(q,p\); the stated
+Gaussian preparation keeps those initial variables random in its
+unconditional law.
+
+Each finite displayed \(\overline Y_\pi\) encodes its own complete
+coordinate record, since
+\(R_i=[\overline Y_\pi(t_i)-\overline Y_\pi(t_{i-1})]/h_i\). The
+limiting path does not thereby encode the readings generated by every
+earlier finite protocol: their kicks and gains change under refinement.
+Equation (89) is a path-law construction, rather than complete-record TV
+convergence between those different experiments. Conditioning on the
+declared limiting record is addressed in §8.13.
+
+Nevertheless (77) applies to every finite displayed record path. Weak
+convergence on this Polish space and lower semicontinuity of total
+variation yield for the limiting record laws
+\[\|P_F^{Y_*}-P_{F'}^{Y_*}\|_{\rm TV}
+\le\sqrt{1-e^{-(F-F')^2rG^2\tau^5/(16m^2)}}
+\le\frac{|F-F'|G\sqrt r\,\tau^{5/2}}{4m}.\tag{91}\] Thus uniform
+complete-record force continuity survives both the weighted-record path
+limit and the zero-action branch in this fixed resource family.
+
+\textbf{Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT with the
+record-retention and random-initial-body qualifications above.}
+Predictability, all lag and bridge constants, the clipping limit order
+and the construction in probability were checked. This establishes a
+continuous body--record law from the supplied pointer preparations, with
+physical kicks retained at every finite level.
+
+\hypertarget{posterior-closure-under-the-entire-limiting-record}{%
+\subsubsection{8.13 Posterior closure under the entire limiting
+record}\label{posterior-closure-under-the-entire-limiting-record}}
+
+The limiting posterior need not be Gaussian for its floor to survive.
+The following covariance statement supplies the needed closure.
+
+\textbf{Proposition 12 (conditional covariance under a weak limit).} Let
+\((X_n,Y_n)\) converge weakly to \((X,Y)\), with \(X_n\in\mathbb R^2\)
+and \(Y_n\) in one Polish record space. Suppose \(|X_n|^2\) is uniformly
+integrable and, for one fixed \(\kappa\ge0\),
+\[\operatorname{Cov}(X_n\mid Y_n)+i\kappa\Omega\succeq0
+\quad\text{almost surely},\qquad
+\Omega=\begin{pmatrix}0&1\\-1&0\end{pmatrix}.\] Then
+\[\operatorname{Cov}(X\mid Y)+i\kappa\Omega\succeq0
+\quad\text{almost surely},\qquad
+\det\operatorname{Cov}(X\mid Y)\ge\kappa^2.\tag{92}\] The moment
+hypothesis is in any fixed coordinate units. The fourth moments (82)
+provide it for the body variables used here.
+
+\emph{Proof.} Fix \(a\in\mathbb C^2\), a bounded continuous complex
+function \(f\) of the record and a bounded nonnegative continuous
+function \(w\). Conditional decomposition of prediction error gives
+\[E[w(Y_n)|a^*X_n-f(Y_n)|^2]
+ +i\kappa a^*\Omega a\,Ew(Y_n)\ge0.\tag{93}\] Indeed its conditional
+squared error is \(a^*\Sigma_na+|a^*\mu_n-f|^2\). The first term
+together with the real number \(i\kappa a^*\Omega a\) is nonnegative by
+hypothesis. The test in (93) is continuous with quadratic growth in
+\(X_n\). Uniform integrability passes its expectation through weak
+convergence, giving the same inequality for \((X,Y)\).
+
+For fixed \(w\), approximate \(a^*E[X\mid Y]\) in \(L^2(w\,dP_Y)\) by
+bounded continuous complex functions; these are dense for a finite Borel
+measure on a Polish space. Minimizing the prediction error in this way
+gives \[E[w(Y)\{a^*\operatorname{Cov}(X\mid Y)a
+                              +i\kappa a^*\Omega a\}]\ge0.\] Testing
+against all such nonnegative \(w\) proves that the integrable quantity
+in braces is nonnegative almost surely. Equivalently its associated
+finite signed Borel measure is positive. Use a countable dense set of
+complex vectors with rational components, then continuity of the
+quadratic form, to obtain one null set outside which the matrix is
+positive. Its determinant is
+\(\det\operatorname{Cov}(X\mid Y)-\kappa^2\), proving (92). \(\square\)
+
+The integrability requirement has content. With dimensionless
+\(\kappa=1\) and a constant record, let \(X_n=0\) with probability
+\(1-1/n\), and give each of \(\pm\sqrt{2n}\,e_1, \pm\sqrt{2n}\,e_2\)
+probability \(1/(4n)\). Its covariance is \(I\), but its weak limit is
+zero. Its fourth moment is \(4n\) and its squared norm is not uniformly
+integrable. Equation (82) prevents this escape of covariance into rare
+tails in the mechanical construction.
+
+Apply the proposition with terminal body variables
+\(X_n=(Q_{\pi_n}(\tau),P_{\pi_n}(\tau))\) and
+\(Y_n=\overline Y_{\pi_n}\). Each finite displayed record generates
+exactly the same sigma-field as that protocol's full coordinate record.
+Equation (76) supplies the finite posterior floor; (82) supplies
+integrability; Proposition 11 supplies joint weak convergence. Thus (92)
+holds conditional on the \textbf{entire declared limiting
+weighted-record path}. Neither convergence of conditional Gaussian means
+nor a Gaussian limiting posterior is required.
+
+This closes observation by the stipulated retained coordinates at the
+supplied scale. Additional conjugate readouts or measuring channels
+require their own dynamics and record law. At \(\kappa=0\) the theorem
+gives ordinary covariance positivity. Equations (89)--(93) derive
+continuum and posterior closure within the supplied preparation family;
+none selects its positive branch.
+
+\textbf{Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.} The proof
+uses continuous prediction-error tests to avoid an assumption of
+conditional-law convergence. Uniform integrability of second moments is
+sufficient; the established fourth moments imply it.
+
+Next Newton lemma: identify the limiting momentum and record evolution
+from the finite predictable increments, including their quadratic
+covariation and the role of controller recoil. Dependencies are
+(84)--(90) and the bounded policy. Reject a limit requiring new
+unrecorded noise or inconsistent coarse increments. Adaptive timing, an
+independent exclusion of \(\kappa=0\), universality and calibration
+remain separate physical obligations.
+
 \hypertarget{consequence-for-state}{%
 \subsection{9. Consequence for STATE}\label{consequence-for-state}}
 
@@ -1990,13 +2267,15 @@ three-cell residue (69) determines why the coarse channel retains more
 noise data than the prescribed one-pair/scalar rule. A physical
 adaptive-gain controller retains its conjugate recoil and gives
 posterior closure (76) and a global complete-record continuity bound
-(77). Section 8.11 closes the inserted-cell comparison for a fixed
-physical weighted-record feedback policy: (79)--(81) retain all kicks
-and recoils, (82) supplies partition-uniform moments, and (83) gives
-summable local error budgets. Next Newton lemma: propagate those defects
-to a finite Cauchy estimate under arbitrary refinements, including
-removal of any body-position localization. Reject a cell-count-dependent
-stability constant or an assumed limiting curve. Newton remains the
-current research emphasis. Adaptive timing, positivity, universality and
-radiation calibration remain separate.
+(77). Sections 8.11--8.13 construct a continuous body--record law for
+the fixed physical weighted-record policy. The finite path-Cauchy
+estimate (89) removes localization and gives partition-independent law;
+(90) realizes the body curve; (92) retains posterior closure under the
+entire declared limiting record. Force continuity (91) survives at zero
+action. Next Newton lemma: identify the limiting momentum and record
+equations from the finite predictable increments and quadratic
+covariation, rejecting new unrecorded noise or inconsistent coarse
+increments. Newton remains the current research emphasis. Adaptive
+timing, independent positivity, universality and radiation calibration
+remain separate.
 \end{document}

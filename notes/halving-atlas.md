@@ -296,13 +296,14 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    (2026-09-30, Sol/Astra, refereed). [§8.10](sed-closure-under-recording.md#810-a-physical-adaptive-gain-controller-with-complete-record-closure)
    includes physical adaptive gains and their conjugate recoil, with
    complete-record posterior closure (76) and uniform continuity (77).
-   [§8.11](sed-closure-under-recording.md#811-inserting-a-cell-into-a-physical-weighted-record-controller)
-   gives exact inserted-cell defects for a fixed physical weighted-record
-   policy, uniform fourth moments (82) and summable local budgets (83)
-   (Sol/Astra, refereed). Next: propagate these through later gains to
-   a finite Cauchy estimate and remove localization. Adaptive timing remains separate.
-   The limit of the full growing record and the independent positive
-   scale remain open.
+   [§§8.11--8.13](sed-closure-under-recording.md#812-a-continuous-body--record-limit-from-finite-physical-refinements)
+   construct a continuous body--record law for the fixed physical
+   weighted-record policy, with path-Cauchy estimate (89), partition
+   independence, body curve (90) and posterior closure under the entire
+   declared limiting record (92) (Sol/Astra, refereed). Continuity (91)
+   also survives zero action. Next: limiting momentum/record equations
+   and quadratic covariation. Adaptive timing, extra readouts and the
+   independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the
