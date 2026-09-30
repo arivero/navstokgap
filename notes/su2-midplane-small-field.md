@@ -1,9 +1,10 @@
 # The SU(2) mid-plane on its small-field set: bounds and the missing comparison
 
-**Latest result, §36 (2026-09-30):** exact dressed hard-core activities
-satisfy both numerical bounds in (112) in a weak recoupling strip, with
-an explicit stronger heat condition and connector-source norm. Physical
-recoupling and moving-background sources remain open.
+**Latest results, §§36--37 (2026-09-30):** exact dressed hard-core
+activities satisfy (112) in a weak recoupling strip. A centered quadratic
+reference also has a fixed moving-mean source radius and the subtracted
+barrier bound (177), of the form (113). Its nonlinear transfer, the
+other subtractions and physical recoupling remain open.
 
 **After refereeing (GPT-6 Astra, 2026-09-28).** Claim-by-claim review of
 Claude's derivation: **A1 ACCEPT** (with the inverse notation corrected);
@@ -5286,3 +5287,168 @@ Physical recoupling to one, small-field boundary scores and truncation
 control, target-covering paths, group-integral comparison, $SU(3)$
 estimates and iteration remain open. Alternate to Newton's physical
 preparation-and-record history rule.
+
+## 37. Moving means with a fixed barrier: an exact quadratic source test
+
+**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed with the source-tree geometry corrected.** The subtracted
+log barrier ratio satisfies (113)'s analytic source norm in the exact
+model below. Imaginary mean displacement is charged only to bad edges;
+good connecting edges have unchanged Gaussian moments. This supplies
+a mechanism for moving-background control, with explicit hypotheses
+that the nonlinear gauge extension has not yet supplied.
+
+### 37.1 Model, source locality and the fixed integration coordinates
+
+Use §36's plane, barriers, $p$, $x=\varepsilon^2/t$ and connector strip.
+Replace its singleton reference by independent three-component Gaussians
+$$G_{\mu_e}(\xi_e)=\left(\frac3{\pi t}\right)^{3/2}
+ e^{-3(\xi_e-\mu_e)\cdot(\xi_e-\mu_e)/t},\qquad
+\mu_e(z)=\mu_e(z_0)+\varepsilon\sum_a M_{ea}(z_a-z_{0a}).
+\tag{173}$$
+The dot product in this analytic density is bilinear. Sources $z_a$ are
+dimensionless. At every admitted real background $z_0$ require
+$|\mu_e(z_0)|\le6\varepsilon/7$, and fixed real matrices satisfying
+$\sup_e\sum_a\|M_{ea}\|\le D_\mu$, $D_\mu\ge1$.
+Each edge depends on at most $J$ labels, each label on at most $I$
+edges. Source positions are at edge-graph distance at most one from
+every incident edge; distances use the projected plane, allowing several
+directions at one position. These are additional locality hypotheses.
+
+Take source-independent real centered quadratic connectors $K_p(\xi-\mu)$
+between distinct edges of a face, with
+$|K_p(y)|\le K\sum_{e\in\partial p}|y_e|^2/t$, $K\le7$,
+also for complex $y$ with the Euclidean Hermitian norm.
+The real parent at common weak coefficient $u$ is
+$3\sum_e|\xi_e-\mu_e|^2/t+u\sum_pK_p$.
+Its saddle is exactly $\mu$; its quadratic form is positive in the
+stated small strip. No nonlinear cutoff or group conclusion is assumed.
+Keep $f_e(\xi_e)=e^{-w_k(\xi_e)}-1$ fixed in physical $\xi_e$, with
+$|f_e|\le1_{\{|\xi_e|\ge2\varepsilon-\rho_k\}}$ and
+$\rho_k\le\varepsilon/7$. Define $\mathcal R(v,z)$ by §36.2 using
+this reference and these connectors. The barrier is never sourced or
+differentiated.
+
+The background polydisc radius is $R=1/(7D_\mu)$. On it write
+$\mu=a+ib$; then $|a|\le\varepsilon$, $|b|\le\varepsilon/7$.
+In each mixed activity let $B$ be its selected bad edges. Keep their
+integration contours real, and shift every other contour to
+$\xi_e=\mu_e+y_e$, $y_e\in\mathbb R^3$.
+The connector factors are entire and their quadratic growth is dominated
+by the Gaussian at §36's radius, so the contour shifts and their vanishing
+end integrals are justified. No $f_e$ lies on a shifted contour.
+Every good edge now has exactly the centered real Gaussian law.
+
+### 37.2 A source cost only on the bad edges
+
+On a bad edge put $Y=\xi-a$ and $\zeta=|\xi-\mu|^2/t$.
+Then $|Y|\ge6\varepsilon/7$,
+$\zeta=(|Y|^2+|b|^2)/t$, and
+$|G_\mu|=e^{3|b|^2/t}G_a$.
+For $x\ge16$, exponential domination of the bad indicator gives
+$$\int_{\rm bad}|G_\mu|e^{\zeta/2}d\xi
+ \le2\sqrt2\exp[-65x/98]\le e^{-x/2}.\tag{174}$$
+Indeed use $1_{\rm bad}\le e^{|Y|^2/t-36x/49}$;
+the remaining centered Gaussian exponential moment at coefficient $3/2$
+is $2\sqrt2$, while the imaginary displacement costs at most $x/14$.
+Since $\zeta^n\le n!2^n e^{\zeta/2}$, the bad-edge moments obey
+$\int_{\rm bad}|G_\mu|\zeta^n\le p\,n!C^n$, with
+$C=4\mathrm e/3$: $\log(1/p)\le3x/8$ gives $e^{-x/2}\le p$.
+Good moments are at most $n!(1/2)^n\le n!C^n$.
+Expanding the exponential therefore proves (152) on each contour,
+with an extra factor $p$ on each bad edge.
+
+For $m$ distinct faces and $M=|B|$, §33.2's same assignments yield
+$$\sup_{|z-z_0|_\infty\le R}
+ \|w_{\Gamma,B}(z,\cdot)\|_{\rho_d}
+ \le a^m p^M,\qquad a=256KC\rho_d.\tag{175}$$
+Here the norm is the absolute connector Taylor norm; background sources
+use an analytic supremum norm. Bad edges outside the face support use
+zero exponential coefficient and cost only $p$, avoiding an extra
+factor per such edge. The coefficient bound remains uniform in $k$.
+All background dependence is through means on $B$: after shifting,
+good-edge means disappear from the integrand.
+
+### 37.3 Keep the bad-source support while grouping the logarithm
+
+Retain both connected physical support $C$ and union $B\subseteq C$
+of bad edges in the logarithm, writing
+$\log\mathcal R=\sum_{C,B\ne\varnothing}D_{C,B}$.
+Its source set $A_B$ is the union of labels incident on $B$, so
+$|A_B|\le J|B|$. Grouping only by $C$ would enlarge source sets across
+different bad placements and discard this useful bound.
+The connected edge support and its distance-one source attachments
+give a network of length at most $|C|-1+|A_B|$.
+Doubling this network gives the safe source-MST estimate
+$\ell(A_B)\le2|C|+2J|B|$; it also bounds a minimum connecting-tree
+convention for $\ell$.
+
+Set $\tau=J[2+\log(1+7D_\mu)]$ and strengthen the heat condition to
+$L=\log(1/p)\ge\max\{640,4(10+\tau)\}$.
+Repeat §36's mixed-gas proof, now retaining
+$e^{32m+(8+\tau)M}p^{-M/2}$ before its KP size $m+M$.
+The bad elementary weight is $p^{h/2}e^{(9+\tau)h}$.
+The same supersolution $q^h=p^{h/64}$ works because
+$(31/64)L\ge9+\tau+2b$; the face supersolution and all
+incompatibility bounds are unchanged. Pointing at an edge gives
+$$\sup_e\sum_{\substack{C\ni e\\B\ne\varnothing}}
+ \|D_{C,B}\|_{R,\rho_d}
+ e^{8|C|+\tau|B|}p^{-|B|/2}\le\delta_d<1/1000.
+\tag{176}$$
+For cluster occurrences $|C|\le4N_f+M_b$ and $|B|\le M_b$,
+so the retained occurrence weights dominate those in (176).
+The norm includes both the background supremum and the connector
+coefficient norm. Holomorphic dominated integrals and this locally
+uniform expansion justify analyticity at all orders.
+
+### 37.4 The subtracted barrier part of the source target
+
+For an admitted real reference $z_{\rm ref}$ define
+$r_{\rm bad}(z)=-\log\mathcal R(v,z)+\log\mathcal R(v,z_{\rm ref})$
+and $R_{C,B}=-D_{C,B}(z)+D_{C,B}(z_{\rm ref})$.
+Use the uniform rooted bound (176) separately at $z$ and at the
+reference; the reference need not belong to the particular local
+polydisc. Root a source at one of its at most $I$ incident bad edges.
+Since $B$ is nonempty, (176) and the spatial estimate imply
+$$\begin{aligned}
+\sup_a\sum_{(C,B):a\in A_B}
+ e^{\ell(A_B)}\|R_{C,B}\|_{R,\rho_d}
+ (1+1/R)^{|A_B|}
+ &\le2I\delta_d p^{1/2}\\
+ &\le\frac{2I}{1000}e^{-x/16}
+ \le A t^{\alpha'},\\
+A&=\frac{2I}{1000}
+ \left[\frac{8\alpha'}{\delta\mathrm e}\right]^{\alpha'/(2\delta)},
+ \qquad \alpha'=1/2-3\delta>0.
+\end{aligned}\tag{177}$$
+The inequality $p^{1/2}\le e^{-x/16}$ uses its actual definition:
+$n\ge3x/8-2$ gives $L\ge x/4-7/3\ge x/8$ for $x\ge24$.
+The final bound maximizes $x^{\alpha'/(2\delta)}e^{-x/16}$.
+Thus (113) holds for this part with $u=1$, $\eta=1$ and
+$q=u^{-1}=1<\mathrm e-1$. Translate the connector radius to the
+real weak base as in §36; the background radius is independent of
+$t$, plane size and barrier approximation. Fixed-volume dominated
+convergence also admits the barrier limit.
+
+**Referee verdict (GPT-6 Astra, 2026-09-30): REFINE, incorporated.**
+The bad moments, strengthened KP budget, source rooting, subtraction
+and heat-power conversion were checked. A constructed source network
+must be doubled for the labeled-terminal MST convention.
+
+### Consequence for STATE
+
+The centered quadratic test supplies an all-order moving-mean source
+bound for the subtracted log barrier ratio, with a fixed radius and no
+amplification on good connecting edges. It does not establish full
+(113): its Gaussian reference, source-independent coefficients and
+finite local mean dependence are explicit model premises.
+Next gauge lemma: replace those premises by a complex centered estimate
+for the actual nonlinear local factors and a source expansion of the
+moving saddle, allowing its decaying nonlocal dependence. The real
+convexity and moment bounds alone do not supply this; the smooth
+cutoff in §15 cannot itself be shifted holomorphically. Abandon a
+transfer that differentiates the barrier, charges $e^{cx}$ to every
+good connector, or assumes contact cancellation. The deterministic
+and Gaussian subtractions, target-covering paths, physical recoupling,
+group-integral comparison, $SU(3)$ constants and iteration stay open.
+Alternate to Newton's physical coherence-history test.
