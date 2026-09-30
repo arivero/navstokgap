@@ -79,10 +79,10 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>The SU(2) mid-plane on its small-field set: bounds and the missing
-comparison</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>Latest result, §34 (2026-09-30):</strong> an all-order marked
-bad-observable norm in the retained-barrier weak recoupling strip, with
-explicit rarity and a fixed spatial reserve. The physical recoupling
-value remains open.</p>
+comparison</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>Latest result, §35 (2026-09-30):</strong> an all-order
+connected bad-component tree bound in the retained-barrier weak
+recoupling strip, with explicit rarity and a decay rate independent of
+order. The physical recoupling value remains open.</p>
 <p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong>
 Claim-by-claim review of Claude’s derivation: <strong>A1 ACCEPT</strong>
 (with the inverse notation corrected); <strong>A2 REFINE</strong>
@@ -6591,6 +6591,226 @@ order. Physical recoupling to one, dressing (112), boundary sources
 class="math inline">\(SU(3)\)</span> estimates and iteration remain
 open. Alternate to Newton’s nonlinear physical recording law; no
 continuum theory or physical spectral gap follows from this strip.</p>
+<h2 id="separately-marked-bad-components-at-arbitrary-order">35.
+Separately marked bad components at arbitrary order</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed by Astra with the spatial conversion corrected.</strong>
+Composite polymers made of ordinary faces and separately marked bad
+supports give (116) at every order in a narrower weak recoupling strip.
+The constant per component, rarity exponent and spatial rate are fixed.
+Compatibility supplies the incidence bound that prevents growth with the
+number of marks. This result supplies neither <span
+class="math inline">\(u=1\)</span> nor the activity sum (112).</p>
+<h3 id="joint-sources-and-constants">35.1 Joint sources and
+constants</h3>
+<p>Retain §33’s reference and connectors. Fix any finite compatible
+family <span class="math inline">\(H_1,\ldots,H_r\)</span> of nonempty
+connected edge supports: they are disjoint and no edge in one shares a
+face with an edge in another, as in §24.1. Put <span
+class="math inline">\(h_i=|H_i|\)</span>, <span
+class="math inline">\(M_I=\sum_{i\in I}h_i\)</span> and take measurable
+<span class="math inline">\(F_i\)</span> on <span
+class="math inline">\(y_{H_i}\)</span> with <span
+class="math inline">\(|F_i|\le1_{B_{H_i}}\)</span>. Equation (125)
+supplies joint rarity on every union of these supports. No observable
+derivative is needed.</p>
+<p>Fix <span class="math inline">\(0&lt;\eta\le\gamma_{\rm
+bad}=\log(12/5)\)</span> and set <span
+class="math display">\[\begin{aligned}
+\rho_2&amp;=\rho_0/256,&amp;r_2&amp;=\rho_2/2,\\
+L&amp;=\log(1/p),&amp;\alpha&amp;=L/128,\\
+R_i&amp;=p^{-h_i/64}/1024,&amp;d_i&amp;=p^{h_i/256}/1024.
+\end{aligned}\tag{162}\]</span> Here <span
+class="math inline">\(\rho_0\)</span> is (154). Face sources <span
+class="math inline">\(v_p\)</span> have radius <span
+class="math inline">\(\rho_2\)</span>; marked sources <span
+class="math inline">\(t_i\)</span> have radii <span
+class="math inline">\(R_i\)</span>. Only the latter depend on component
+size and rarity. The common real base is <span
+class="math inline">\(0\le u\le r_2\)</span>. Translation <span
+class="math inline">\(v_p=u+z_p\)</span>, <span
+class="math inline">\(|z_p|\le r_2\)</span>, uses this polydisc without
+asserting convexity at arbitrary independent real face coefficients.</p>
+<h3 id="an-exact-composite-polymer-gas">35.2 An exact composite polymer
+gas</h3>
+<p>Expand <span class="math display">\[\mathcal Z(v,t)=E_0\left[
+\prod_p(1+f_p(v_p))\prod_i(1+t_iF_i)\right].\]</span> The elementary
+entities are faces with support <span class="math inline">\(\partial
+p\)</span> and marks with support <span
+class="math inline">\(H_i\)</span>. Join entities with overlapping
+coordinate supports. A face has at most four face neighbors and at most
+<strong>one</strong> marked neighbor, because compatibility forbids two
+marks on the same face. Mark <span class="math inline">\(i\)</span> has
+at most <span class="math inline">\(2h_i\)</span> face neighbors and no
+marked neighbors.</p>
+<p>A composite polymer <span
+class="math inline">\(\gamma=(\Gamma,I)\)</span> is a nonempty connected
+set of entities. Its activity is <span
+class="math display">\[w_\gamma(v,t)=E_0\left[
+\prod_{p\in\Gamma}f_p(v_p)\prod_{i\in I}t_iF_i\right].\]</span>
+Different elementary components have disjoint coordinate supports, so
+their expectations factor under <span
+class="math inline">\(E_0\)</span>. This is exactly the hard-core gas of
+composite polymers, incompatible when supports overlap. Each mark occurs
+once in the finite product; cluster expansions may repeat polymers, with
+marker multiplicities kept in their source powers.</p>
+<p>With <span class="math inline">\(m=|\Gamma|\)</span>, <span
+class="math inline">\(a=256KC\rho_2\)</span>, one Cauchy step on the
+joint bad event and (158) give <span
+class="math display">\[\|w_\gamma\|_{\rho_2,R}
+\le a^m\prod_{i\in I}(R_i p^{h_i/32}).\tag{163}\]</span> For <span
+class="math inline">\(I=\varnothing\)</span> use (153); for <span
+class="math inline">\(m=0\)</span> use joint rarity directly. Thus the
+bound covers every polymer without repeatedly spending rarity. All
+on-site barriers remain inside <span
+class="math inline">\(E_0\)</span>.</p>
+<h3 id="a-weighted-animal-sum-without-order-loss">35.3 A weighted animal
+sum without order loss</h3>
+<p>Use size function <span class="math inline">\(A(\gamma)=m+\alpha
+M_I\)</span> and retain <span class="math inline">\(e^{\eta m}\)</span>
+in the activities. The resulting elementary positive weights are <span
+class="math display">\[s=a e^{1+\eta}=\frac1{256(10+8\mathrm e)},\qquad
+v_i=R_i p^{h_i/32}e^{\alpha h_i}=p^{h_i/128}/1024.\]</span> Let <span
+class="math inline">\(\mathcal A_x\)</span> sum the product weights over
+all connected elementary sets containing entity <span
+class="math inline">\(x\)</span>. Then <span
+class="math display">\[\mathcal A_p\le b=2s,\qquad \mathcal A_i\le
+d_i.\tag{164}\]</span></p>
+<p>Choose one rooted spanning tree for each connected set through <span
+class="math inline">\(x\)</span>. In the exponential rooted-tree
+recursion <span class="math display">\[T_x^{(0)}=v_x,\qquad
+T_x^{(n+1)}=v_x\exp\left(\sum_{y\sim x}T_y^{(n)}\right),\]</span> each
+tree with distinct entity labels contributes its full product weight:
+child permutations cancel the factorial in the exponential. Repeated
+labels add positive terms and overcount. A finite supersolution
+therefore bounds the animal sums. Choose <span
+class="math inline">\(b\)</span> at faces and <span
+class="math inline">\(d_i\)</span> at marks. Since <span
+class="math inline">\(L\ge\log2\ge2/3\)</span>, <span
+class="math display">\[b&lt;1/3328,\quad 2b&lt;L/256,\quad
+d_i\le1/1024,\]</span> and consequently <span class="math display">\[s
+e^{4b+1/1024}\le2s=b,\qquad
+v_i e^{2h_i b}\le p^{h_i/256}/1024=d_i.\]</span> The first inequality
+uses <span class="math inline">\(4b+1/1024&lt;\log2\)</span>; the second
+uses <span class="math inline">\(2b\le L/256\)</span>. They prove (164)
+at every depth and then in the limit. No tree factorial or size factor
+has been discarded.</p>
+<p>An incompatible polymer contains an entity overlapping an original
+constituent. For a face, these are its at most five closed face
+neighbors and its at most one marked neighbor, with rooted sum <span
+class="math inline">\(5b+1/1024&lt;1\)</span>. For <span
+class="math inline">\(H_i\)</span>, they are that mark and at most <span
+class="math inline">\(2h_i\)</span> incident faces, costing <span
+class="math inline">\(d_i+2h_i b\le\alpha h_i\)</span>: <span
+class="math inline">\(d_i\le1/1024\le Lh_i/256\)</span> and <span
+class="math inline">\(2b\le L/256\)</span>. Union over constituents
+gives the KP hypothesis <span
+class="math display">\[\sum_{\gamma&#39;\not\sim\gamma}
+\|w_{\gamma&#39;}\|_{\rho_2,R}
+e^{A(\gamma&#39;)+\eta|\Gamma&#39;|}
+\le m+\alpha M_I=A(\gamma).\tag{165}\]</span> The KP theorem of §34.3
+supplies connected convergence, pointed bounds and zero-freeness on the
+joint polydisc, uniformly in marks and volume. Its size function depends
+on <span class="math inline">\(L\)</span>; the face radius and resulting
+bounds do not deteriorate as <span class="math inline">\(p\)</span>
+decreases.</p>
+<h3 id="squarefree-extraction-and-fixed-geometric-decay">35.4 Squarefree
+extraction and fixed geometric decay</h3>
+<p>Fix mark <span class="math inline">\(i\)</span>. The absolute cluster
+sum containing a polymer carrying <span class="math inline">\(i\)</span>
+is bounded by <span class="math display">\[\sum_{\gamma:\ i\in
+I}\|w_\gamma\|_{\rho_2,R}
+e^{A(\gamma)+\eta|\Gamma|}\le\mathcal A_i\le d_i.\]</span> This sums the
+pointed bound of §34.3 over possible pinned polymers; multiple pinning
+only overcounts. The coefficient of <span
+class="math inline">\(t_1\cdots t_r\)</span> in <span
+class="math inline">\(\log\mathcal Z(v,t)-\log\mathcal Z(v,0)\)</span>
+is exactly <span
+class="math inline">\(\kappa_v(F_1,\ldots,F_r)\)</span>. The squarefree
+coefficients of <span class="math inline">\(\prod_i(1+t_iF_i)\)</span>
+give the ordinary moment–cumulant identity. There is no <span
+class="math inline">\(r!\)</span> for these distinct labeled sources.
+Extraction costs <span
+class="math display">\[d_i\prod_jR_j^{-1}\le1024^r
+p^{\sum_jh_j/64}.\]</span></p>
+<p>Each contributing cluster connects all the marks geometrically. Let
+<span class="math inline">\(m&#39;\)</span> count distinct faces in its
+union, and <span class="math inline">\(N\ge m&#39;\)</span> all face
+occurrences, including repetitions of polymers. For <span
+class="math inline">\(r\ge2\)</span>, choose an elementary spanning tree
+with <span class="math inline">\(E_{FF}\)</span> face–face and <span
+class="math inline">\(E_{FM}\)</span> face–mark edges. Replace each face
+node of degree <span class="math inline">\(d\)</span> by a tree on its
+incident interface edges, costing at most <span
+class="math inline">\(d-1\)</span> unit steps, since a face has diameter
+one. Contract each <span class="math inline">\(H_i\)</span>
+<strong>separately</strong>. The resulting metric network has length at
+most <span class="math display">\[2E_{FF}+E_{FM}-m&#39;
+=m&#39;+2r-2-E_{FM}\le m&#39;+r-2\le2m&#39;.\]</span> Here <span
+class="math inline">\(E_{FM}\ge r\)</span> and compatibility gives <span
+class="math inline">\(E_{FM}\le m&#39;\)</span>, hence <span
+class="math inline">\(r\le m&#39;\)</span>. Doubling the network and
+recording successive marked-support visits produces a connected labeled
+graph of total distance at most <span
+class="math inline">\(4m&#39;\)</span>. Choose a spanning tree inside
+it. Thus the minimum labeled-tree length obeys <span
+class="math inline">\(\ell(H_1,\ldots,H_r)\le4N\)</span>, without
+assuming a triangle inequality for distances between sets. A single mark
+has length zero.</p>
+<p>The reserve <span class="math inline">\(e^{\eta N}\)</span> pays
+<span class="math inline">\(e^{(\eta/4)\ell}\)</span>, giving <span
+class="math display">\[\begin{aligned}
+|\kappa_u(F_1,\ldots,F_r)|
+&amp;\le1024^r p^{\sum_i h_i/64}
+       e^{-(\eta/4)\ell(H_1,\ldots,H_r)}\\
+&amp;\le B_*^r p^{\sum_i h_i/64}
+       \sum_{T\in\mathcal T_r}\prod_{ij\in T}
+                   e^{-\gamma_*d(H_i,H_j)},\\
+B_*&amp;=\max\{1024,\sqrt{C_{\rm bad}}\},\qquad\gamma_*=\eta/4.
+\end{aligned}\tag{166}\]</span> A minimizing labeled tree supplies a
+term of the last sum. These are the constants of (116), with <span
+class="math inline">\(c_*=1/64\)</span>. The inherited <span
+class="math inline">\(C_{\rm bad}\)</span> condition is a normalization
+convention; this construction itself costs only <span
+class="math inline">\(1024\)</span> per mark.</p>
+<p>Translation <span class="math inline">\(v_p=u+z_p\)</span>, <span
+class="math inline">\(u\le r_2\)</span>, <span
+class="math inline">\(|z_p|\le r_2\)</span>, is dominated
+coefficientwise by radius <span class="math inline">\(\rho_2\)</span>.
+Hidden <span class="math inline">\(u\)</span>-faces stay in the network.
+The same argument bounds the ordered connector-cumulant sum, divided by
+its response factorial, at radius <span
+class="math inline">\(r_2\)</span> with weight <span
+class="math inline">\(e^{(\eta/4)\ell(H_1,\ldots,H_r,p_1,\ldots,p_n)}\)</span>.
+Each sourced face can be represented by an interface edge in its
+support; repeated labels add no distance. This is a connector-source
+extension, not the moving boundary-background source estimate (113).</p>
+<p>Joint moments dominate the barrier limits at fixed volume, as in
+§§33–34. Constants are dimensionless after the <span
+class="math inline">\(t\)</span> scaling and uniform in the admitted
+small heat times. Transferring to <span
+class="math inline">\(SU(3)\)</span> requires its own analogues of (125)
+and the face Hessian majorant.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): REFINE,
+incorporated.</strong> The composite gas, animal recursion, KP constants
+and squarefree extraction were accepted. Extending §34’s single-root
+traversal did not justify the proposed <span
+class="math inline">\(\eta/2\)</span> rate for several roots. The
+explicit interface-network calculation proves the sufficient fixed rate
+<span class="math inline">\(\eta/4\)</span> without an additional
+geometric hypothesis.</p>
+<h3 id="consequence-for-state-19">Consequence for STATE</h3>
+<p>The all-order target (116) holds in the weak recoupling strip with
+constants (162), (166), retained barriers and order-independent decay.
+Next gauge lemma: dress the correlated insertion family and prove a
+summed rarity–connector norm in this strip. It depends on (166) and
+hard-core compatibility; good connecting edges must be paid by decay,
+not charged bad-edge rarity. Abandon a dressing that retains volume cost
+or assumes physical recoupling. The full activity budget (112), boundary
+sources (113), recoupling to one, target-covering paths, group-integral
+comparison, <span class="math inline">\(SU(3)\)</span> estimates and
+iteration remain open. Alternate to Newton’s independent nonlinear
+conditioning mechanism.</p>
 
 </main>
 <footer class="site"><div class="wrap">

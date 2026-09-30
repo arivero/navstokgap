@@ -249,9 +249,13 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    reserve (Sol/Astra, refereed).
    [§34](su2-midplane-small-field.md#34-a-marked-bad-observable-in-the-retained-barrier-weak-strip)
    proves the marked norm (157) with rarity and fixed spatial reserve
-   (Sol/Astra, refereed). Next: connected correlations of separately
-   marked bad components, preserving root separation; recoupling to one
-   remains separate. Then dressed activities (112) and boundary polydiscs (113), yielding (94);
+   (Sol/Astra, refereed).
+   [§35](su2-midplane-small-field.md#35-separately-marked-bad-components-at-arbitrary-order)
+   proves the all-order connected target (116) in the weak strip, with
+   constants (166) and fixed decay independent of order (Sol/Astra,
+   refereed). Next: dress the correlated insertion family in this strip,
+   paying good connectors by decay; recoupling to one remains separate.
+   Then dressed activities (112) and boundary polydiscs (113), yielding (94);
    then target-covering paths, curvature conversion, full-integral
    comparison, perturbed-action stability and iteration. The fixed-frame
    transport-value comparison remains open; Proposition 4's rejection stands.
