@@ -24,7 +24,9 @@ supplies a curvature contribution to conditional momentum variance and
 an explicit Wigner-negativity witness. This changes the next mechanism
 test: covariance restriction and classical canonical motion alone are
 insufficient for unrestricted recording. The positive scale in the
-quantum reference remains supplied.
+quantum reference remains supplied. Section 8.16 derives the exact
+generator correction and its obstruction to positive classical
+transition kernels on the full canonical phase space.
 
 \textbf{Adaptive continuum result, 2026-09-30 (GPT-6.1 Sol and GPT-6
 Astra; refereed).} Sections 8.11--8.14 construct a partition-independent
@@ -2533,14 +2535,105 @@ even extension, curvature sign and Fourier fourth-moment witness were
 checked. This is an informative failure of the proposed nonlinear
 classical extension, with an exact conditional quantum comparison.
 
-Next lemma: derive the finite nonlinear-copy evolution from its kernel
-and isolate the curvature term in its generator. Dependencies are (101),
-the reference amplitude and the supplied action denominator. Abandon a
-classical-noise representation if it cannot preserve the same canonical
-conditional observables; deriving positive action from that quantum
-reference would be circular. An independently justified physical rule
-selecting its conditioning structure remains the needed mechanism,
-beyond the affine noise law.
+Section 8.16 derives the exact finite correction and tests its classical
+transition-kernel interpretation. Deriving positive action from the
+supplied quantum reference would remain circular.
+
+\hypertarget{the-finite-generator-changes-conditional-momentum-not-the-record}{%
+\subsubsection{8.16 The finite generator changes conditional momentum,
+not the
+record}\label{the-finite-generator-changes-conditional-momentum-not-the-record}}
+
+Retain the quadratic copy and supplied \(\hbar=2\kappa>0\) of §8.15. Let
+\(s\) be a dimensionless pulse strength and
+\(U_s=e^{-isf(Q)\Lambda/\hbar}\). In the coordinate density kernel,
+\[\rho_s(q_+,z_+;q_-,z_-)
+ =\rho_0(q_+,z_+-sf(q_+);q_-,z_--sf(q_-)).\] Use \(q_\pm=q\pm u/2\),
+\(z_\pm=z\pm v/2\). The exact quadratic identity
+\(f(q\pm u/2)=f(q)\pm f'(q)u/2+f''u^2/8\) changes pointer centre and
+relative variables to \[z'=z-sf(q)-sf''u^2/8,\qquad v'=v-sf'(q)u.\] The
+Fourier phase then contains \((p+sf'(q)\lambda)u+\lambda v'\). Since
+multiplication by \(u^2\) corresponds to \(-\hbar^2\partial_p^2\), the
+full Wigner evolution is exactly \[\begin{aligned}
+W_s&=e^{s c_3\partial_p^2\partial_z}W_{{\rm cl},s},\qquad
+c_3=\frac{\hbar^2}{8q_0}=\frac{\kappa^2}{2q_0},\\
+W_{{\rm cl},s}(q,p,z,\lambda)
+ &=W_0(q,p+sf'(q)\lambda,z-sf(q),\lambda),\\
+\partial_sW_s
+ &=\left[f'(q)\lambda\partial_p-f(q)\partial_z
+                  +c_3\partial_p^2\partial_z\right]W_s.
+\end{aligned}\tag{106}\] Define the exponential by its Fourier
+multiplier \(e^{-is c_3 k_p^2k_z}\); no convergence of a derivative
+Taylor series is asserted. It preserves Schwartz regularity. The
+classical transport and the correction commute because their
+coefficients depend only on \(q,\lambda\). Thus (106) is an exact finite
+kernel identity, not an asymptotic expansion. There are no further terms
+for this quadratic copy. All three generator terms are dimensionless per
+unit pulse strength.
+
+\textbf{The correction is visible after conditioning.} Write
+\(n_s(a)=\int W_s(q,p,a,\lambda)\,dq\,dp\,d\lambda\) for the ordinary
+terminal record density. At \(k_p=0\) the correction multiplier is one
+and its first \(k_p\) derivative is zero. Consequently record density,
+conditional position law, first momentum moment and symmetrized \(QP\)
+moment agree with the classical pushforward. The second derivative gives
+instead \[\operatorname{Var}_{\rm qm}(P\mid R=a)
+ -\operatorname{Var}_{\rm cl}(P'\mid R=a)
+ =2s c_3\frac{n_s'(a)}{n_s(a)}.\tag{107}\] Equivalently, integration by
+parts of the correction gives \(\int p^2\partial_p^2W\,dp=2\int W\,dp\);
+higher \(p\) derivatives contribute nothing to this second moment. The
+Fourier calculation justifies this statement without a series
+assumption. First momentum means agree, so the same formula holds for
+variances.
+
+For the Gaussian pointer, \(n_s(a)=E_Q[\varphi_E(a-sf(Q))]>0\) and
+differentiation gives \[\frac{n_s'(a)}{n_s(a)}
+ =-E_a[a-sf(Q)]/E.\] At \(s=1\), (107) is exactly
+\(-\kappa^2E_a[(a-f)f'']/E\) in (104). At zero reading it equals
+\(\kappa^2v/(2Eq_0^2)\). Thus the finite kernel derives the missing
+curvature contribution while leaving the measured record law unchanged.
+Matching that law alone would miss the distinction.
+
+\textbf{A positive classical transition family cannot have this
+generator on the full canonical phase space.} The adjoint observable
+generator is \[\mathcal A=-f'(q)\lambda\partial_p+f(q)\partial_z
+                         -c_3\partial_p^2\partial_z.\tag{108}\] Any
+positive transition kernels \(K_s\), starting at the identity and
+possessing this pointwise generator on smooth compactly supported tests,
+satisfy the positive-minimum principle: if \(u\ge0\) and \(u(x_*)=0\),
+then \(K_su(x_*)\ge0\) implies \(\mathcal Au(x_*)\ge0\).
+
+Take a nonnegative smooth compact cutoff equal to one near a point with
+\(p=z=0\). Multiply it by \(u=(p/p_*)^2e^{\beta z/z_*}+(z/z_*)^2\), with
+\(p_*,z_*,\beta>0\) in momentum, length and dimensionless units. At that
+point \(u\) and its first derivatives vanish, while
+\(\partial_p^2\partial_z u=2\beta/(p_*^2z_*)\). Therefore
+\[\mathcal Au(x_*)=-\frac{2c_3\beta}{p_*^2z_*}<0,\tag{109}\] a
+contradiction. This excludes a positive classical transition family with
+(108) on the full canonical phase space. Restricted initial-state
+models, contextual encodings and matching selected moments are not
+excluded. There is no contradiction with quantum positivity: a pointwise
+nonnegative phase-space symbol need not represent a positive operator.
+
+The algebraically continued generator loses this correction at
+\(\kappa=0\) and becomes classical transport. The Wigner-transform
+definition itself requires \(\hbar>0\). Neither the obstruction nor the
+conditional compensation selects the positive action branch from
+independent physical premises.
+
+\textbf{Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT at the
+supplied finite quantum-reference level.} The centre/relative shifts,
+positive correction sign, Fourier interpretation, conditional second
+moment and positive-minimum countertest were checked.
+
+The next Newton mechanism must select the conditioning structure from a
+physical recording rule independently of the quantum reference. Its
+concrete test is whether that rule both preserves the nonlinear terminal
+observables and determines the correction coefficient under composition.
+Abandon an argument if it imports the quantum kernel it is meant to
+derive, or if a zero-coefficient classical branch satisfies the same
+premises. This replaces the proposed universal Gaussian classical noise
+law, rather than weakening the affine result.
 
 \hypertarget{consequence-for-state}{%
 \subsection{9. Consequence for STATE}\label{consequence-for-state}}
@@ -2581,11 +2674,13 @@ momentum, record and all smeared controller recoil from the same
 preparations; (100) isolates the finite determinant mechanism. Force
 continuity (91) survives at zero action. Section 8.15 gives the
 decision-changing nonlinear-copy failure (103), its quantum curvature
-compensation (104) and the explicit Wigner witness (105). The Gaussian
-preparation restriction cannot be promoted to a universal classical
-recording law by canonical motion alone. Next lemma: isolate the
-nonlinear-copy generator term from the finite kernel, then seek an
-independent physical rule selecting its conditioning structure. Newton
+compensation (104) and the explicit Wigner witness (105). Section 8.16
+derives the finite generator term (106), unchanged record law and
+conditional variance correction (107), and the positive-transition
+obstruction (109). The Gaussian preparation restriction cannot be
+promoted to a universal classical recording law by canonical motion
+alone. The next Newton mechanism needs an independent physical rule
+selecting conditioning and its correction under composition. Newton
 remains the current research emphasis. Adaptive timing, independent
 positivity, universality and radiation calibration remain separate.
 \end{document}

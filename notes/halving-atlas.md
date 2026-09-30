@@ -316,7 +316,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    pointer increments. [§8.15](sed-closure-under-recording.md#815-a-nonlinear-copy-isolates-the-missing-curvature-contribution)
    disproves extension to unrestricted nonlinear classical body copies
    (103); the quantum reference supplies a curvature term (104) and an
-   explicit Wigner-negativity witness (105). Continuity (91)
+   explicit Wigner-negativity witness (105). Its exact finite generator
+   [§8.16](sed-closure-under-recording.md#816-the-finite-generator-changes-conditional-momentum-not-the-record)
+   preserves record statistics while changing conditional momentum
+   variance (107); a positive classical transition family on the full
+   canonical phase space cannot realize it (109). Continuity (91)
    also survives zero action. Next: limiting momentum/record equations
    and quadratic covariation. Adaptive timing, extra readouts and the
    independent positive scale remain open.

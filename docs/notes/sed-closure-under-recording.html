@@ -89,7 +89,9 @@ contribution to conditional momentum variance and an explicit
 Wigner-negativity witness. This changes the next mechanism test:
 covariance restriction and classical canonical motion alone are
 insufficient for unrestricted recording. The positive scale in the
-quantum reference remains supplied.</p>
+quantum reference remains supplied. Section 8.16 derives the exact
+generator correction and its obstruction to positive classical
+transition kernels on the full canonical phase space.</p>
 <p><strong>Adaptive continuum result, 2026-09-30 (GPT-6.1 Sol and GPT-6
 Astra; refereed).</strong> Sections 8.11–8.14 construct a
 partition-independent continuous body–record law for the supplied
@@ -2898,14 +2900,124 @@ The canonical pulse, complete-record scope, rational gamma bound,
 bounded even extension, curvature sign and Fourier fourth-moment witness
 were checked. This is an informative failure of the proposed nonlinear
 classical extension, with an exact conditional quantum comparison.</p>
-<p>Next lemma: derive the finite nonlinear-copy evolution from its
-kernel and isolate the curvature term in its generator. Dependencies are
-(101), the reference amplitude and the supplied action denominator.
-Abandon a classical-noise representation if it cannot preserve the same
-canonical conditional observables; deriving positive action from that
-quantum reference would be circular. An independently justified physical
-rule selecting its conditioning structure remains the needed mechanism,
-beyond the affine noise law.</p>
+<p>Section 8.16 derives the exact finite correction and tests its
+classical transition-kernel interpretation. Deriving positive action
+from the supplied quantum reference would remain circular.</p>
+<h3
+id="the-finite-generator-changes-conditional-momentum-not-the-record">8.16
+The finite generator changes conditional momentum, not the record</h3>
+<p>Retain the quadratic copy and supplied <span
+class="math inline">\(\hbar=2\kappa&gt;0\)</span> of §8.15. Let <span
+class="math inline">\(s\)</span> be a dimensionless pulse strength and
+<span class="math inline">\(U_s=e^{-isf(Q)\Lambda/\hbar}\)</span>. In
+the coordinate density kernel, <span
+class="math display">\[\rho_s(q_+,z_+;q_-,z_-)
+=\rho_0(q_+,z_+-sf(q_+);q_-,z_--sf(q_-)).\]</span> Use <span
+class="math inline">\(q_\pm=q\pm u/2\)</span>, <span
+class="math inline">\(z_\pm=z\pm v/2\)</span>. The exact quadratic
+identity <span class="math inline">\(f(q\pm u/2)=f(q)\pm
+f&#39;(q)u/2+f&#39;&#39;u^2/8\)</span> changes pointer centre and
+relative variables to <span
+class="math display">\[z&#39;=z-sf(q)-sf&#39;&#39;u^2/8,\qquad
+v&#39;=v-sf&#39;(q)u.\]</span> The Fourier phase then contains <span
+class="math inline">\((p+sf&#39;(q)\lambda)u+\lambda v&#39;\)</span>.
+Since multiplication by <span class="math inline">\(u^2\)</span>
+corresponds to <span
+class="math inline">\(-\hbar^2\partial_p^2\)</span>, the full Wigner
+evolution is exactly <span class="math display">\[\begin{aligned}
+W_s&amp;=e^{s c_3\partial_p^2\partial_z}W_{{\rm cl},s},\qquad
+c_3=\frac{\hbar^2}{8q_0}=\frac{\kappa^2}{2q_0},\\
+W_{{\rm cl},s}(q,p,z,\lambda)
+&amp;=W_0(q,p+sf&#39;(q)\lambda,z-sf(q),\lambda),\\
+\partial_sW_s
+&amp;=\left[f&#39;(q)\lambda\partial_p-f(q)\partial_z
+                  +c_3\partial_p^2\partial_z\right]W_s.
+\end{aligned}\tag{106}\]</span> Define the exponential by its Fourier
+multiplier <span class="math inline">\(e^{-is c_3 k_p^2k_z}\)</span>; no
+convergence of a derivative Taylor series is asserted. It preserves
+Schwartz regularity. The classical transport and the correction commute
+because their coefficients depend only on <span
+class="math inline">\(q,\lambda\)</span>. Thus (106) is an exact finite
+kernel identity, not an asymptotic expansion. There are no further terms
+for this quadratic copy. All three generator terms are dimensionless per
+unit pulse strength.</p>
+<p><strong>The correction is visible after conditioning.</strong> Write
+<span class="math inline">\(n_s(a)=\int
+W_s(q,p,a,\lambda)\,dq\,dp\,d\lambda\)</span> for the ordinary terminal
+record density. At <span class="math inline">\(k_p=0\)</span> the
+correction multiplier is one and its first <span
+class="math inline">\(k_p\)</span> derivative is zero. Consequently
+record density, conditional position law, first momentum moment and
+symmetrized <span class="math inline">\(QP\)</span> moment agree with
+the classical pushforward. The second derivative gives instead <span
+class="math display">\[\operatorname{Var}_{\rm qm}(P\mid R=a)
+-\operatorname{Var}_{\rm cl}(P&#39;\mid R=a)
+=2s c_3\frac{n_s&#39;(a)}{n_s(a)}.\tag{107}\]</span> Equivalently,
+integration by parts of the correction gives <span
+class="math inline">\(\int p^2\partial_p^2W\,dp=2\int W\,dp\)</span>;
+higher <span class="math inline">\(p\)</span> derivatives contribute
+nothing to this second moment. The Fourier calculation justifies this
+statement without a series assumption. First momentum means agree, so
+the same formula holds for variances.</p>
+<p>For the Gaussian pointer, <span
+class="math inline">\(n_s(a)=E_Q[\varphi_E(a-sf(Q))]&gt;0\)</span> and
+differentiation gives <span
+class="math display">\[\frac{n_s&#39;(a)}{n_s(a)}
+=-E_a[a-sf(Q)]/E.\]</span> At <span class="math inline">\(s=1\)</span>,
+(107) is exactly <span
+class="math inline">\(-\kappa^2E_a[(a-f)f&#39;&#39;]/E\)</span> in
+(104). At zero reading it equals <span
+class="math inline">\(\kappa^2v/(2Eq_0^2)\)</span>. Thus the finite
+kernel derives the missing curvature contribution while leaving the
+measured record law unchanged. Matching that law alone would miss the
+distinction.</p>
+<p><strong>A positive classical transition family cannot have this
+generator on the full canonical phase space.</strong> The adjoint
+observable generator is <span class="math display">\[\mathcal
+A=-f&#39;(q)\lambda\partial_p+f(q)\partial_z
+                         -c_3\partial_p^2\partial_z.\tag{108}\]</span>
+Any positive transition kernels <span
+class="math inline">\(K_s\)</span>, starting at the identity and
+possessing this pointwise generator on smooth compactly supported tests,
+satisfy the positive-minimum principle: if <span
+class="math inline">\(u\ge0\)</span> and <span
+class="math inline">\(u(x_*)=0\)</span>, then <span
+class="math inline">\(K_su(x_*)\ge0\)</span> implies <span
+class="math inline">\(\mathcal Au(x_*)\ge0\)</span>.</p>
+<p>Take a nonnegative smooth compact cutoff equal to one near a point
+with <span class="math inline">\(p=z=0\)</span>. Multiply it by <span
+class="math inline">\(u=(p/p_*)^2e^{\beta z/z_*}+(z/z_*)^2\)</span>,
+with <span class="math inline">\(p_*,z_*,\beta&gt;0\)</span> in
+momentum, length and dimensionless units. At that point <span
+class="math inline">\(u\)</span> and its first derivatives vanish, while
+<span class="math inline">\(\partial_p^2\partial_z
+u=2\beta/(p_*^2z_*)\)</span>. Therefore <span
+class="math display">\[\mathcal
+Au(x_*)=-\frac{2c_3\beta}{p_*^2z_*}&lt;0,\tag{109}\]</span> a
+contradiction. This excludes a positive classical transition family with
+(108) on the full canonical phase space. Restricted initial-state
+models, contextual encodings and matching selected moments are not
+excluded. There is no contradiction with quantum positivity: a pointwise
+nonnegative phase-space symbol need not represent a positive
+operator.</p>
+<p>The algebraically continued generator loses this correction at <span
+class="math inline">\(\kappa=0\)</span> and becomes classical transport.
+The Wigner-transform definition itself requires <span
+class="math inline">\(\hbar&gt;0\)</span>. Neither the obstruction nor
+the conditional compensation selects the positive action branch from
+independent physical premises.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT at the
+supplied finite quantum-reference level.</strong> The centre/relative
+shifts, positive correction sign, Fourier interpretation, conditional
+second moment and positive-minimum countertest were checked.</p>
+<p>The next Newton mechanism must select the conditioning structure from
+a physical recording rule independently of the quantum reference. Its
+concrete test is whether that rule both preserves the nonlinear terminal
+observables and determines the correction coefficient under composition.
+Abandon an argument if it imports the quantum kernel it is meant to
+derive, or if a zero-coefficient classical branch satisfies the same
+premises. This replaces the proposed universal Gaussian classical noise
+law, rather than weakening the affine result.</p>
 <h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
@@ -2943,13 +3055,15 @@ record and all smeared controller recoil from the same preparations;
 (100) isolates the finite determinant mechanism. Force continuity (91)
 survives at zero action. Section 8.15 gives the decision-changing
 nonlinear-copy failure (103), its quantum curvature compensation (104)
-and the explicit Wigner witness (105). The Gaussian preparation
-restriction cannot be promoted to a universal classical recording law by
-canonical motion alone. Next lemma: isolate the nonlinear-copy generator
-term from the finite kernel, then seek an independent physical rule
-selecting its conditioning structure. Newton remains the current
-research emphasis. Adaptive timing, independent positivity, universality
-and radiation calibration remain separate.</p>
+and the explicit Wigner witness (105). Section 8.16 derives the finite
+generator term (106), unchanged record law and conditional variance
+correction (107), and the positive-transition obstruction (109). The
+Gaussian preparation restriction cannot be promoted to a universal
+classical recording law by canonical motion alone. The next Newton
+mechanism needs an independent physical rule selecting conditioning and
+its correction under composition. Newton remains the current research
+emphasis. Adaptive timing, independent positivity, universality and
+radiation calibration remain separate.</p>
 
 </main>
 <footer class="site"><div class="wrap">
