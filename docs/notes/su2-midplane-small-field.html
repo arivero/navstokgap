@@ -79,7 +79,11 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>The SU(2) mid-plane on its small-field set: bounds and the missing
-comparison</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong>
+comparison</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>Latest result, §34 (2026-09-30):</strong> an all-order marked
+bad-observable norm in the retained-barrier weak recoupling strip, with
+explicit rarity and a fixed spatial reserve. The physical recoupling
+value remains open.</p>
+<p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong>
 Claim-by-claim review of Claude’s derivation: <strong>A1 ACCEPT</strong>
 (with the inverse notation corrected); <strong>A2 REFINE</strong>
 (complete image pairing, explicit constants, endpoint range, and the
@@ -2005,8 +2009,8 @@ replaces any need to discard transports in the resolvent. Both (53) and
 (54) are uniform in <span class="math inline">\(N\)</span>. For <span
 class="math inline">\(t\le1\)</span> and <span
 class="math inline">\(\alpha\le1/2\)</span>, <span
-class="math inline">\(|z_p|\le(t^\alpha+|z_p|^2/t^\alpha)/2 \le
-t^\alpha(1+|z_p|^2/t)/2\)</span>, giving weak P(<span
+class="math inline">\(|z_p|\le(t^\alpha+|z_p|^2/t^\alpha)/2
+\le t^\alpha(1+|z_p|^2/t)/2\)</span>, giving weak P(<span
 class="math inline">\(\alpha\)</span>) with constant <span
 class="math inline">\(C_D/2\)</span>. The coarser bound <span
 class="math inline">\(6NK\varepsilon/4\)</span> also follows from <span
@@ -2066,11 +2070,11 @@ class="math inline">\(c_0\)</span>. This controls ordinary local
 moments; expectations of the unbounded barrier Hessian require separate
 hypotheses, and are unused here.</p>
 <p>Taylor’s integral remainder gives <span class="math inline">\(|R|\le
-L_F\sum_p(\sum_{e\in\partial p}|y_e|) (\sum_{e\in\partial
-p}|y_e|^2)/(6t)\)</span>. There are 16 products per face, each bounded
-in expectation by <span class="math inline">\(M_3^{\rm
-bd}t^{3/2}\)</span> from (55), with <span class="math inline">\(M_3^{\rm
-bd}=(8/3)^{3/2}\)</span>. Put <span
+L_F\sum_p(\sum_{e\in\partial p}|y_e|)
+(\sum_{e\in\partial p}|y_e|^2)/(6t)\)</span>. There are 16 products per
+face, each bounded in expectation by <span
+class="math inline">\(M_3^{\rm bd}t^{3/2}\)</span> from (55), with <span
+class="math inline">\(M_3^{\rm bd}=(8/3)^{3/2}\)</span>. Put <span
 class="math inline">\(A_L=(8/3)L_F(8/3)^{3/2}\)</span>. Integrating
 <span class="math inline">\(\partial_\lambda\log Z_\lambda=-\langle
 R\rangle_\lambda\)</span> yields <span class="math inline">\(|\log
@@ -2103,8 +2107,9 @@ class="math inline">\(x^{\alpha/(2\delta)}e^{-x/2}\)</span> gives <span
 class="math inline">\(e^{-t^{-2\delta}/2}\le B_\delta t^\alpha\)</span>.
 Combining (43), (54) and (56) proves the normalized, amplitude-free
 bound <span class="math inline">\(| -\log[Z_E(U)/Z_E(1)]-\mathcal
-D_0^{\rm cov}(U)| \le C_0t^\alpha\sum_p(1+|z_p|^2/t)\)</span>, with
-<span class="math inline">\(C_0=K+C_D/2+2A_L+48B_\delta\)</span>. The
+D_0^{\rm cov}(U)|
+\le C_0t^\alpha\sum_p(1+|z_p|^2/t)\)</span>, with <span
+class="math inline">\(C_0=K+C_D/2+2A_L+48B_\delta\)</span>. The
 normalized field dependence is controlled by the allowed additive term;
 (56) permits a flat-holonomy remainder as well as curvature.</p>
 <h3 id="haarheat-kernel-amplitudes-part-3">13.3 Haar/heat-kernel
@@ -2135,11 +2140,11 @@ proof of (55), now with <span class="math inline">\(k=2\)</span>, gives
 class="math inline">\(M_2\le(\sqrt3+3D_J)\sqrt t\)</span> for <span
 class="math inline">\(t\le1\)</span>. Thus the interpolated potential
 stays convex, and <span class="math inline">\(|\langle\mathcal
-J-\mathcal J(U,\xi_*)\rangle_s| \le6D_J(\sqrt3+3D_J)N\sqrt t\)</span>.
-Integrating in <span class="math inline">\(s\)</span>,
-identity-normalizing, and using (57) proves, with <span
-class="math inline">\(Z_E^J=\int e^{-E_U/t-W_\eta-\mathcal
-J}\)</span>,</p>
+J-\mathcal J(U,\xi_*)\rangle_s|
+\le6D_J(\sqrt3+3D_J)N\sqrt t\)</span>. Integrating in <span
+class="math inline">\(s\)</span>, identity-normalizing, and using (57)
+proves, with <span class="math inline">\(Z_E^J=\int
+e^{-E_U/t-W_\eta-\mathcal J}\)</span>,</p>
 <p><span
 class="math display">\[\left|-\log\frac{Z_E^J(U)}{Z_E^J(1)}-\mathcal
 D_0^{\rm cov}(U)\right|
@@ -2234,10 +2239,10 @@ E_w^{(2)}(\xi)&amp;=2\|\xi\|^2+\tfrac14\|w+C\xi\|^2
 -\tfrac1{8t}(\|x\|^2+\|y\|^2)+\tfrac12\log(\det H/\det H_1).
 \end{aligned}\tag{59}\]</span></p>
 <p>The actual energy is <span class="math inline">\(E=\sum_e
-B(b_e,\xi_e)+\sum_p F(Y_p,O_{pe}\xi_e) -(\|x\|^2+\|y\|^2)/8\)</span>,
-with the four signed rotations of §4. Define <span
-class="math inline">\(\beta\)</span> as half the maximum of the suprema
-of <span
+B(b_e,\xi_e)+\sum_p F(Y_p,O_{pe}\xi_e)
+-(\|x\|^2+\|y\|^2)/8\)</span>, with the four signed rotations of §4.
+Define <span class="math inline">\(\beta\)</span> as half the maximum of
+the suprema of <span
 class="math inline">\(\|D_b^2D_\xi^2B\|,\|D_b^2D_\xi^3B\|\)</span> on
 §4’s compact chart. Evenness in <span class="math inline">\(b\)</span>
 and <span class="math inline">\(B(0,\xi)=2|\xi|^2\)</span> give <span
@@ -2480,10 +2485,11 @@ class="math inline">\(\chi&#39;&#39;\Pi_r+(\chi&#39;/r)\Pi_\perp\)</span>
 with <span class="math inline">\(r\ge c_0\)</span> where <span
 class="math inline">\(\chi&#39;\ne0\)</span>). The product rule gives
 the block row sum <span
-class="math inline">\(t\|\nabla^2(\chi_pR_p)\|\le (48+1152+5760)\Lambda
-c_0\le7000\Lambda c_0\)</span>. Here the two cross terms cost <span
-class="math inline">\(2\cdot288+8\cdot72=1152\)</span>. For amplitudes,
-<span class="math inline">\(|\nabla_eQ_p|\le3D_J/2\)</span>, <span
+class="math inline">\(t\|\nabla^2(\chi_pR_p)\|\le
+(48+1152+5760)\Lambda c_0\le7000\Lambda c_0\)</span>. Here the two cross
+terms cost <span class="math inline">\(2\cdot288+8\cdot72=1152\)</span>.
+For amplitudes, <span
+class="math inline">\(|\nabla_eQ_p|\le3D_J/2\)</span>, <span
 class="math inline">\(|Q_p|\le18D_Jc_0\)</span> and Hessian row sum at
 most <span class="math inline">\(4.5D_J\)</span>: one face plus half an
 edge amplitude per incident edge. Thus the product rule gives <span
@@ -2682,7 +2688,7 @@ into the remainder constants. Corrections are made in place.</p>
 <col style="width: 25%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>Item</th>
 <th><span class="math inline">\(SU(2)\)</span></th>
 <th><span class="math inline">\(SU(3)\)</span></th>
@@ -2690,21 +2696,21 @@ into the remainder constants. Corrections are made in place.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>mid-plane coordinates</td>
 <td><span class="math inline">\(\mathbb R^{6N}\)</span></td>
 <td><span class="math inline">\(\mathbb R^{16N}\)</span></td>
 <td><span class="math inline">\(2N\)</span> edges <span
 class="math inline">\(\times\,n\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Sylvester factor in (48)</td>
 <td><span class="math inline">\(8^{3N}\)</span></td>
 <td><span class="math inline">\(8^{8N}\)</span></td>
 <td>edge minus face dimension, <span
 class="math inline">\(nN\)</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><span class="math inline">\(B\)</span> in (48)</td>
 <td><span
 class="math inline">\(\frac34256^2\cdot\frac{33}8\)</span></td>
@@ -2715,21 +2721,21 @@ class="math inline">\(n-\operatorname{tr}R=\frac12\|R-I\|_F^2\le\frac
 n2\|R-I\|^2\)</span> for <span class="math inline">\(R\in
 SO(n)\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>wrapping term in (48)</td>
 <td><span class="math inline">\(\frac92N3^{-n_{\min}}\)</span></td>
 <td><span class="math inline">\(12N3^{-n_{\min}}\)</span></td>
 <td><span
 class="math inline">\(|\operatorname{tr}(R-I)|\le2n\)</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><span class="math inline">\(C_D\)</span> in (54)</td>
 <td><span class="math inline">\(\frac{46}7L_F\)</span></td>
 <td><span class="math inline">\(\frac{368}{21}L_F\)</span></td>
 <td>face rank <span class="math inline">\(4n\)</span>; <span
 class="math inline">\(C_D=\frac{4n}6\cdot\frac{23}7L_F\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>moment bound (55)</td>
 <td><span class="math inline">\([2(k+1)/3]^{k/2}\)</span></td>
 <td><span class="math inline">\([2(k+6)/3]^{k/2}\)</span></td>
@@ -2737,14 +2743,14 @@ class="math inline">\(C_D=\frac{4n}6\cdot\frac{23}7L_F\)</span></td>
 div}(|y|^{k-2}y)=(k+n-2)|y|^{k-2}\)</span> in <span
 class="math inline">\(\mathbb R^n\)</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Šidák term in (56)</td>
 <td><span class="math inline">\(48Ne^{-t^{-2\delta}/2}\)</span></td>
 <td><span class="math inline">\(128Ne^{-3t^{-2\delta}/16}\)</span></td>
 <td>rectangle radius <span class="math inline">\(\varepsilon/\sqrt
 n\)</span>, variance <span class="math inline">\(\le t/3\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">\(k=2\)</span> bound in §13.3</td>
 <td><span class="math inline">\(M_2\le(\sqrt3+3D_J)\sqrt t\)</span></td>
 <td><span class="math inline">\(M_2\le(2\sqrt2+3D_J)\sqrt
@@ -2752,7 +2758,7 @@ t\)</span></td>
 <td><span class="math inline">\(\langle y\cdot\nabla
 V\rangle=n\)</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>bridge Hessian (§14)</td>
 <td><span class="math inline">\(4\Pi_b+4h_b\Pi_b^\perp\)</span></td>
 <td><span class="math inline">\(4f({\rm ad}_{b/2})\)</span></td>
@@ -2762,14 +2768,14 @@ the pairs <span class="math inline">\(\pm i\theta\)</span> of <span
 class="math inline">\({\rm ad}_{b/2}\)</span>, <span
 class="math inline">\(f=1\)</span> on its kernel</td>
 </tr>
-<tr class="even">
+<tr>
 <td>bridge trace in (61)</td>
 <td><span class="math inline">\(\frac\beta2T\)</span></td>
 <td><span class="math inline">\(\frac43\beta T\)</span></td>
 <td>rank <span class="math inline">\(n\)</span> per edge: <span
 class="math inline">\(\frac n6\beta T\)</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><span class="math inline">\(k_t\)</span> in (67)</td>
 <td><span
 class="math inline">\(\lfloor3t^{-2\delta}/8\rfloor-1\)</span></td>
@@ -2777,7 +2783,7 @@ class="math inline">\(\lfloor3t^{-2\delta}/8\rfloor-1\)</span></td>
 class="math inline">\(\lfloor3t^{-2\delta}/8\rfloor-6\)</span></td>
 <td>same choice with <span class="math inline">\(k+n-2\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>centre and fluxes (§12.3)</td>
 <td><span class="math inline">\(\mathbb Z_2\)</span>; <span
 class="math inline">\(\frac14\sum_k(-1)^{e\cdot k}Z_{k,m}\)</span></td>
@@ -3233,13 +3239,13 @@ class="math inline">\(v_b=H^{-1}c_b+D_by=R_Gg_b\)</span> and, exactly,
 class="math display">\[u_{\lambda,b}=v_b-tA_\lambda^{-1}D_b(\lambda\nabla
 T+\nabla W_k).
 \tag{75}\]</span> Indeed <span
-class="math inline">\(tL_{\nu_\lambda}(D_by)=D_bHy+  tD_b(\lambda\nabla
-T+\nabla W_k)\)</span>, which proves (75). Consequently a moment-only
-interpolation would omit the last term of (75). At <span
-class="math inline">\(\lambda=0\)</span> it already contains the barrier
-endpoint correction. The small edge costs (67) bound partition-function
-values; their second boundary derivatives require the response estimates
-sought here.</p>
+class="math inline">\(tL_{\nu_\lambda}(D_by)=D_bHy+
+tD_b(\lambda\nabla T+\nabla W_k)\)</span>, which proves (75).
+Consequently a moment-only interpolation would omit the last term of
+(75). At <span class="math inline">\(\lambda=0\)</span> it already
+contains the barrier endpoint correction. The small edge costs (67)
+bound partition-function values; their second boundary derivatives
+require the response estimates sought here.</p>
 <p>For the smooth path, the precise extra term in (73) is <span
 class="math inline">\(J_{ab}=t^2\sum_{ij}E[u_{\lambda,a,i}(\partial_jT)
 \partial_j u_{\lambda,b,i}]\)</span>, with scalar coordinate indices
@@ -4599,8 +4605,8 @@ n\log(16/7)\le3x/8\)</span>, so the last inequality follows. This proof
 holds for every set <span class="math inline">\(H\)</span>, including
 connected sets, and passes to the barrier limit by dominated
 convergence. Consequently <span class="math inline">\(|a_{\rm
-ins}(\mathcal H)|,a_{\rm sec}(\mathcal H) \le p^{|\bigcup\mathcal
-H|/16}\)</span> for nonempty families.</p>
+ins}(\mathcal H)|,a_{\rm sec}(\mathcal H)
+\le p^{|\bigcup\mathcal H|/16}\)</span> for nonempty families.</p>
 <p>Successive edge removal using (85) alone supplies marginal
 probabilities; conditioning on earlier bad events changes that class of
 measures. The linear-tilt argument supplies the missing joint step using
@@ -4748,13 +4754,13 @@ exponent inventory in §§13–24 is as follows; earlier occurrences of
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>Location</th>
 <th>Meaning and consistent weaker statement</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>§13, (53)–(58)</td>
 <td>The chart uses <span
 class="math inline">\(\varepsilon=t^\beta\)</span>. Determinant Young
@@ -4765,14 +4771,14 @@ with the same constants. If reoptimizing the exponential tail, use <span
 class="math inline">\(B_{\delta,\alpha&#39;}=[\alpha&#39;/(\delta\mathrm
 e)]^{\alpha&#39;/(2\delta)}\)</span>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>§14, (62)–(64)</td>
 <td>The energy-budget bound weakens with unchanged <span
 class="math inline">\(C_u\)</span>; (63) gives <span
 class="math inline">\(2A_u\sqrt t\le2A_ut^{\alpha&#39;}\)</span> per
 face. Conditional spatial decay keeps its original hypotheses.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>§15, (65)–(67) and §15.3</td>
 <td>The identity <span
 class="math inline">\(2\varepsilon=2t^\alpha\)</span> and the tail
@@ -4783,7 +4789,7 @@ class="math inline">\(t^{\alpha&#39;}\)</span>; the requested relative
 kernel gain still has the stronger factor <span
 class="math inline">\(t^\beta\)</span>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>§16</td>
 <td>The tail constant becomes <span
 class="math inline">\([\alpha&#39;/(2\delta c\mathrm
@@ -4792,14 +4798,14 @@ class="math inline">\(c=3/16\)</span>, if reoptimized; root notation
 <span class="math inline">\(\alpha(X),\alpha(\theta)\)</span> denotes a
 Lie root.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>§§17–19</td>
 <td>The shrinking chart, path velocity, scores and resolvents are
 expressed in <span class="math inline">\(\varepsilon,t\)</span>; keep
 them fixed. Their implicit inherited exponent is <span
 class="math inline">\(\beta\)</span>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>§20, (83)–(89)</td>
 <td>The condition <span
 class="math inline">\(nh/\varepsilon=O(t^{1/2-3\delta}+t^{1/2-\delta})\)</span>
@@ -4807,7 +4813,7 @@ still tends to zero. The relative unscaled gain is <span
 class="math inline">\(t^\beta\)</span>; the bare scaled pair bound is
 <span class="math inline">\(C_{27}t^{\alpha&#39;}\)</span>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>§21, (93)–(95)</td>
 <td>The separated triple bound is <span
 class="math inline">\(C_3t^{\alpha&#39;}\)</span>. State the sufficient
@@ -4816,19 +4822,19 @@ class="math inline">\(\alpha&#39;\)</span>; its implication (95) then
 carries <span class="math inline">\(Ae^\eta t^{\alpha&#39;}\)</span>,
 with unchanged <span class="math inline">\(q,\eta\)</span>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>§22</td>
 <td>The constants closing (89), (93) are unchanged; both bare response
 bounds use (114).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>§23, (103)–(107)</td>
 <td>For orders <span class="math inline">\(j\ge3\)</span>, <span
 class="math inline">\(\varepsilon^j/t=t^{\alpha&#39;}\varepsilon^{j-3}\le
 t^{\alpha&#39;}\)</span>; higher-jet growth and contacts remain separate
 obligations.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>§24, (108)–(113)</td>
 <td>Joint rarity and (112) depend on <span
 class="math inline">\(x=t^{-2\delta}\)</span>, unchanged. Replace the
@@ -4873,8 +4879,8 @@ C_{\rm bad}&amp;=\frac{64\Omega_{\rm app}^2}{7\mathrm e\log2},
 class="math inline">\(\Omega_{\rm app}\)</span> is exactly (84).</p>
 <p><em>Proof.</em> Since <span class="math inline">\(w_k\)</span>
 vanishes on the good ball, (84) gives <span
-class="math inline">\(|\nabla f_e|=e^{-w_k}|\nabla w_k| \le(\Omega_{\rm
-app}/\varepsilon)b_e\)</span>, while <span
+class="math inline">\(|\nabla f_e|=e^{-w_k}|\nabla w_k|
+\le(\Omega_{\rm app}/\varepsilon)b_e\)</span>, while <span
 class="math inline">\(|f_e|\le b_e\)</span>. Different edge derivatives
 occupy orthogonal coordinate blocks. Thus <span
 class="math display">\[|\nabla F_H|^2\le
@@ -4888,10 +4894,11 @@ class="math inline">\(\kappa=1/2\)</span>; each retained barrier is
 on-site convex. Hence (21), on gradient supports <span
 class="math inline">\(H_1,H_2\)</span>, bounds the covariance by <span
 class="math inline">\((2\Omega_{\rm
-app}^2/7)(t/\varepsilon^2)\sqrt{h_1h_2} p^{M/32}(5/12)^d\)</span>. Put
-<span class="math inline">\(L=\log(1/p)\ge\log2\)</span>. The
-inequalities <span class="math inline">\(\sqrt{h_1h_2}\le M/2\)</span>
-and <span class="math inline">\(\sup_{M&gt;0}(M/2)e^{-LM/64}=32/(\mathrm
+app}^2/7)(t/\varepsilon^2)\sqrt{h_1h_2}
+p^{M/32}(5/12)^d\)</span>. Put <span
+class="math inline">\(L=\log(1/p)\ge\log2\)</span>. The inequalities
+<span class="math inline">\(\sqrt{h_1h_2}\le M/2\)</span> and <span
+class="math inline">\(\sup_{M&gt;0}(M/2)e^{-LM/64}=32/(\mathrm
 eL)\)</span> absorb the cardinality factor into <span
 class="math inline">\(p^{M/64}\)</span>; <span
 class="math inline">\(t/\varepsilon^2=t^{2\delta}\le1\)</span> proves
@@ -5274,15 +5281,15 @@ zero gradient at <span class="math inline">\(s\)</span>. Its Hessian is
 the direct sum of principal blocks of <span
 class="math inline">\(S_\lambda&#39;&#39;\)</span>, each evaluated at
 its own partially frozen configuration. With the on-site barriers added,
-<span class="math inline">\(\nu_{\mathcal P,J}\propto e^{-S_{\mathcal
-P}-\sum_{e\in J}w_k(\xi_e)}\)</span> factorizes over <span
-class="math inline">\(A\in\mathcal P\)</span>. This exact factorization
-applies even when the blocks are disconnected. It is an auxiliary
-fixed-chart construction; it does not assert a new gauge-invariant group
-action.</p>
+<span class="math inline">\(\nu_{\mathcal P,J}\propto
+e^{-S_{\mathcal P}-\sum_{e\in J}w_k(\xi_e)}\)</span> factorizes over
+<span class="math inline">\(A\in\mathcal P\)</span>. This exact
+factorization applies even when the blocks are disconnected. It is an
+auxiliary fixed-chart construction; it does not assert a new
+gauge-invariant group action.</p>
 <p>Take any convex combination <span
-class="math inline">\(S_\theta=\sum_{\mathcal P} \theta_{\mathcal
-P}S_{\mathcal P}\)</span>, with <span
+class="math inline">\(S_\theta=\sum_{\mathcal P}
+\theta_{\mathcal P}S_{\mathcal P}\)</span>, with <span
 class="math inline">\(\theta_{\mathcal P}\ge0\)</span> and <span
 class="math inline">\(\sum\theta_{\mathcal P}=1\)</span>. Under §25.2’s
 conditions, uniformly in the partitions and coefficients, <span
@@ -5420,9 +5427,9 @@ class="math inline">\(C_{\rm edge}=2\sum_{d\ge0}(4d+3)^2q^d\)</span>
 from §7.3’s graph counting, the sum over even all faces is at most <span
 class="math inline">\(2hC_{\rm edge}\)</span>: each edge lies in two
 faces and <span class="math inline">\(e^{-\gamma_{\rm bad}\min_{e\in
-H,f\in\partial p}d(e,f)} \le\sum_{e\in H,f\in\partial
-p}q^{d(e,f)}\)</span>. For explicit constants, <span
-class="math display">\[C_{\rm edge}=2\left[
+H,f\in\partial p}d(e,f)}
+\le\sum_{e\in H,f\in\partial p}q^{d(e,f)}\)</span>. For explicit
+constants, <span class="math display">\[C_{\rm edge}=2\left[
 \frac{16q(1+q)}{(1-q)^3}+\frac{24q}{(1-q)^2}+
 \frac9{1-q}\right].\]</span> This is a real, one-connector locality
 estimate with rarity retained. It controls the change of a component’s
@@ -6350,6 +6357,240 @@ live research emphasis now returns to Newton’s adaptive refinement and
 continuum existence; this weak strip supplies no <span
 class="math inline">\(SU(3)\)</span> continuum theory or physical
 gap.</p>
+<h2 id="a-marked-bad-observable-in-the-retained-barrier-weak-strip">34.
+A marked bad observable in the retained-barrier weak strip</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed by Astra.</strong> The normalized expansion of §33 admits one
+marked bad observable with the all-order rarity and spatial norm (157).
+The root is normalized before absolute summation: outside components
+disconnected from it cancel. Every barrier remains undifferentiated.
+This proves the weak-strip version of (142), rather than recoupling to
+one or the connected bound for several distinct bad components.</p>
+<h3 id="assumptions-and-the-marked-norm">34.1 Assumptions and the marked
+norm</h3>
+<p>Retain exactly the singleton reference, nonlinear connectors,
+incidence counts and uniform moment assumptions of §33. Let <span
+class="math inline">\(H\)</span> be a nonempty edge set, <span
+class="math inline">\(h=|H|\)</span>, and let <span
+class="math inline">\(F_H\)</span> be measurable on <span
+class="math inline">\(y_H\)</span>, with <span
+class="math inline">\(|F_H|\le1_{B_H}\)</span>. Equation (125) supplies
+<span class="math inline">\(P_0(B_H)\le p^{h/16}\)</span>, <span
+class="math inline">\(0&lt;p\le1/2\)</span>. This joint rarity is an
+input already established in the real frozen-block family; it is not an
+independence assumption about the individual bad edges.</p>
+<p>With <span class="math inline">\(K=K_{\rm loc}&gt;0\)</span>, <span
+class="math inline">\(C=4\mathrm e/3\)</span>, <span
+class="math inline">\(\eta&gt;0\)</span> and <span
+class="math inline">\(\rho_0\)</span> from (154), set <span
+class="math display">\[\rho_1=\rho_0/16,\qquad r_*=\rho_1/2,
+\qquad \eta_*=\eta/2.\tag{156}\]</span> Let <span
+class="math inline">\(E_u\)</span> be the normalized measure
+proportional to <span
+class="math inline">\(e^{-u\sum_pK_p}dP_0\)</span>, for a <strong>common
+scalar real</strong> <span class="math inline">\(0\le u\le r_*\)</span>.
+This base action is in (125). Independent complex sources below are used
+for analyticity; no convexity claim is made for arbitrary nonuniform
+real face coefficients.</p>
+<p>The tree length <span
+class="math inline">\(\ell(H,p_1,\ldots,p_n)\)</span> uses the face-edge
+metric of §31.1 and treats the entire support <span
+class="math inline">\(H\)</span> as <strong>one root vertex</strong>. If
+<span class="math inline">\(H\)</span> is disconnected, all its pieces
+are contracted to that root. Different marked bad components are not
+contracted to a common root in their future connected-correlation
+problem. Repeated face labels are allowed, and the empty-label length is
+zero.</p>
+<p><strong>Proposition 10 (marked weak-strip attachment norm).</strong>
+Uniformly in plane size, barrier approximation and the admitted small
+heat times, <span
+class="math display">\[\sum_{n\ge0}\frac{r_*^n}{n!}\sum_{p_1,\ldots,p_n}
+e^{\eta_*\ell(H,p_1,\ldots,p_n)}
+|\kappa_u(F_H,K_{p_1},\ldots,K_{p_n})|
+\le p^{h/64}.\tag{157}\]</span> The zero-order term is <span
+class="math inline">\(|E_uF_H|\)</span>. The source polydisc is
+zero-free by §33. No derivative of <span
+class="math inline">\(F_H\)</span> or of a barrier occurs in this
+result.</p>
+<h3 id="one-cauchy-step-prices-the-marked-integral">34.2 One Cauchy step
+prices the marked integral</h3>
+<p>For any set <span class="math inline">\(\Gamma\)</span> of distinct
+faces, connected or not, put <span
+class="math inline">\(m=|\Gamma|\)</span> and <span
+class="math inline">\(r_{H,\Gamma}=E_0[F_H\prod_{p\in\Gamma}f_p]\)</span>.
+Use the absolute coefficient norm of §33, now at <span
+class="math inline">\(\rho\le(8KC)^{-1}\)</span>. The pointwise Mayer
+majorant, (151), and Cauchy–Schwarz give the rarity factor <span
+class="math inline">\(P_0(B_H)^{1/2}\le p^{h/32}\)</span>.</p>
+<p>Expand the product of the four-term edge sums as in §33.2. There are
+at most <span class="math inline">\(4^m\)</span> assignments, with <span
+class="math inline">\(d_e\le2\)</span>, <span
+class="math inline">\(\sum_ed_e=m\)</span> and at most <span
+class="math inline">\(4m\)</span> edges. Squaring the integrand gives an
+exponential <span class="math inline">\(e^{4\rho
+K\sum_e\zeta_e}\)</span>. Write <span
+class="math inline">\(D_2=(1-4C\rho K)^{-1}\le2\)</span>. Equation (152)
+and product integration give <span
+class="math display">\[\begin{aligned}
+\|r_{H,\Gamma}\|_\rho
+&amp;\le p^{h/32}
+       (4\rho KC\,24^{1/4}D_2^3)^m\\
+&amp;\le p^{h/32}a_\rho^m,\qquad a_\rho=256KC\rho.
+\end{aligned}\tag{158}\]</span> Indeed <span
+class="math inline">\(\prod_e(2d_e)!\le24^{m/2}\)</span>, and the square
+root of the moment bound costs <span
+class="math inline">\(C^m24^{m/4}D_2^{(2m+4m)/2}\)</span>. The last
+inequality uses <span
+class="math inline">\(4\cdot24^{1/4}\cdot8&lt;256\)</span>. For <span
+class="math inline">\(\Gamma=\varnothing\)</span>, <span
+class="math inline">\(|E_0F_H|\le p^{h/16}\le p^{h/32}\)</span> gives
+the same bound. This step spends rarity only once, independently of
+connector order.</p>
+<h3 id="the-exact-root-quotient-cancels-the-outside-volume">34.3 The
+exact root quotient cancels the outside volume</h3>
+<p>Call a face set <span class="math inline">\(\Gamma\)</span> a root
+configuration if every one of its face-connected components has edge
+support meeting <span class="math inline">\(H\)</span>; the empty set is
+allowed. Set <span
+class="math inline">\(S_\Gamma=H\cup\operatorname{supp}\Gamma\)</span>.
+Let <span class="math inline">\(Z_{\rm avoid}(S)\)</span> be the
+ordinary polymer partition function with only polymers whose edge
+supports avoid <span class="math inline">\(S\)</span>. Expansion of the
+finite numerator gives exactly <span
+class="math display">\[\begin{aligned}
+G_H(v)&amp;=\frac{E_0[F_H e^{-\sum_pv_pK_p}]}{Z(v)}\\
+&amp;=\sum_{\Gamma\ {\rm root}}
+       r_{H,\Gamma}(v)
+       \frac{Z_{\rm avoid}(S_\Gamma;v)}{Z(v)}.
+\end{aligned}\tag{159}\]</span> To check the identity, collect all
+selected face components touching <span class="math inline">\(H\)</span>
+into <span class="math inline">\(\Gamma\)</span>. Every remaining
+component avoids both <span class="math inline">\(H\)</span> and <span
+class="math inline">\(\operatorname{supp}\Gamma\)</span>, and is
+independent of the root integral under <span
+class="math inline">\(E_0\)</span>. Conversely each allowed outside
+configuration reconstructs one term of the numerator. This uses no
+pointwise logarithm of a conditional marginal, so §32’s numerator zeros
+present no obstruction.</p>
+<p>In the logarithm of the quotient in (159), clusters whose polymers
+all avoid <span class="math inline">\(S_\Gamma\)</span> cancel
+<strong>before</strong> absolute coefficients are taken. Use a diagram
+norm that weights every polymer face occurrence by <span
+class="math inline">\(e^\eta\)</span>, as in §33.3. Occurrences count
+with multiplicity, including all polymers in all quotient clusters; root
+faces will also be counted. Set <span
+class="math display">\[s_\rho=a_\rho e^{1+\eta},\qquad
+\sigma_\rho=\frac{s_\rho}{1-4\mathrm e s_\rho}.\]</span> The
+Kotecký–Preiss pointed-cluster bound implies <span
+class="math display">\[\left\|\log\frac{Z_{\rm avoid}(S_\Gamma)}Z
+\right\|_{\rho,\eta}^{\rm diagram}
+\le(2h+5m)\sigma_\rho.\tag{160}\]</span> Here at most <span
+class="math inline">\(2h\)</span> faces touch <span
+class="math inline">\(H\)</span>, and the closed face neighborhood of
+<span class="math inline">\(\Gamma\)</span> has at most <span
+class="math inline">\(5m\)</span> faces. Any forbidden polymer contains
+one of these faces. For each specified face the rooted animal count and
+the pointed bound give <span class="math inline">\(\sum_{n\ge1}(4\mathrm
+e)^{n-1}s_\rho^n=\sigma_\rho\)</span>. Counting a cluster at each
+forbidden polymer overcounts it and is therefore a valid absolute upper
+bound.</p>
+<p>The borrowed pointed result is the absolute cluster sum containing a
+specified polymer <span class="math inline">\(\gamma\)</span> bounded by
+<span class="math inline">\(\|w_\gamma\|_\rho
+e^{(1+\eta)|\gamma|}\)</span> under (155). Its precise source is <a
+href="https://arxiv.org/pdf/math-ph/0605041">Fernández–Procacci, §2,
+(2.5)–(2.15)</a> <span class="citation"
+data-cites="FernandezProcacci2007">[@FernandezProcacci2007]</span>
+(passage read, arXiv v2, pages 3–4). Their pinned log-ratio series and
+positive derivative series give this bound with size function <span
+class="math inline">\(a(\gamma)=|\gamma|\)</span>. We borrow that
+theorem; the application and incidence constants in (160) are derived
+here.</p>
+<p>Exponentiating (160) costs at most <span
+class="math inline">\(e^{(2h+5m)\sigma_\rho}\)</span>. Every surviving
+quotient cluster touches <span class="math inline">\(S_\Gamma\)</span>
+and is connected in the incompatibility graph, hence is geometrically
+attached to the marked root configuration. No outside volume factor
+remains.</p>
+<h3 id="root-summation-leaves-both-rarity-and-spatial-reserve">34.4 Root
+summation leaves both rarity and spatial reserve</h3>
+<p>Multiplying (158), the quotient bound and the root face weight <span
+class="math inline">\(e^{\eta m}\)</span> gives <span
+class="math inline">\(p^{h/32}e^{2h\sigma_\rho}b_\rho^m\)</span>, where
+<span class="math display">\[b_\rho=a_\rho e^{\eta+5\sigma_\rho}
+          =s_\rho e^{-1+5\sigma_\rho}.\]</span> Choose a fixed ordering
+of the at most <span class="math inline">\(2h\)</span> faces incident to
+<span class="math inline">\(H\)</span>. Encode each component of <span
+class="math inline">\(\Gamma\)</span> by its least such face and its
+rooted connected animal. Distinct components have distinct chosen faces.
+Allowing an optional arbitrary animal at each incident face overcounts
+these encodings, so <span class="math display">\[\sum_{\Gamma\ {\rm
+root}}b_\rho^{|\Gamma|}
+\le\left(1+\frac{b_\rho}{1-4\mathrm e b_\rho}\right)^{2h}.\]</span> At
+<span class="math inline">\(\rho=\rho_1\)</span>, the constants in
+(154), (156) give <span class="math display">\[4\mathrm e
+s_{\rho_1}&lt;\frac1{32},\qquad
+\sigma_{\rho_1}\le\frac2{31(10+8\mathrm e)}&lt;\frac1{403}.\]</span>
+Thus <span class="math inline">\(5\sigma_{\rho_1}&lt;1\)</span>, <span
+class="math inline">\(b_{\rho_1}\le s_{\rho_1}\)</span>, and the
+complete marked diagram sum obeys <span
+class="math display">\[\begin{aligned}
+\|G_H\|_{\rho_1,\eta}^{\rm diagram}
+&amp;\le p^{h/32}e^{4h\sigma_{\rho_1}}\\
+&amp;\le p^{h/64}.
+\end{aligned}\tag{161}\]</span> The last step uses <span
+class="math inline">\(4\sigma_{\rho_1}&lt;4/403&lt;1/96\le\log(1/p)/64\)</span>;
+<span class="math inline">\(\log2\ge2/3\)</span> supplies the final
+comparison. All bounds apply also to the empty root configuration.</p>
+<p>To obtain (157) about the real base, translate every source as <span
+class="math inline">\(v_p=u+z_p\)</span>, with <span
+class="math inline">\(u\le r_*\)</span> and <span
+class="math inline">\(|z_p|\le r_*\)</span>. Absolute Taylor
+coefficients after translation are dominated by the original radius
+<span class="math inline">\(u+r_*\le\rho_1\)</span>. Keep the hidden
+<span class="math inline">\(u\)</span>-faces in their diagrams. After
+contracting <span class="math inline">\(H\)</span>, the union of root
+components and quotient clusters is a connected network attaching every
+retained <span class="math inline">\(z\)</span>-face support to <span
+class="math inline">\(H\)</span>. If <span
+class="math inline">\(N\)</span> is its total number of face
+<strong>occurrences</strong>, a closed traversal has metric length at
+most <span class="math inline">\(2N\)</span>: each face has diameter
+one, and shared-edge incidences join its pieces. Consequently <span
+class="math inline">\(\ell\le2N\)</span> and <span
+class="math inline">\(e^{\eta_*\ell}\le e^{\eta N}\)</span>. The fixed
+reserve in (161) therefore pays the spatial weight in (157) at every
+response order.</p>
+<p>Finally <span
+class="math inline">\(\partial_{p_1}\cdots\partial_{p_n}G_H(u)
+=(-1)^n\kappa_u(F_H,K_{p_1},\ldots,K_{p_n})\)</span>. For a multiplicity
+multi-index <span class="math inline">\(\alpha\)</span>, the
+ordered-label sum divided by <span class="math inline">\(n!\)</span> is
+exactly the coefficient denominator <span
+class="math inline">\(\prod_p\alpha_p!\)</span>. This converts (161)
+into (157), including repeated labels and the zero-order term. Moment
+domination (152) justifies the expansions and the admitted
+barrier-approximation limits at fixed volume. Constants are uniform in
+volume and dimensionless after the <span
+class="math inline">\(t\)</span> scaling. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.</strong>
+The root quotient, pointed cluster sum, moment constants and rarity
+absorption were checked. Contracting <span
+class="math inline">\(H\)</span> as one support and counting polymer
+occurrences are essential conventions in the stated spatial bound.</p>
+<h3 id="consequence-for-state-18">Consequence for STATE</h3>
+<p>The weak recoupling strip now has a marked all-order attachment norm
+with rarity, retained barriers and fixed spatial reserve. Next gauge
+lemma: connected correlations of several separately marked bad
+components in this strip, preserving their separation and joint rarity.
+It depends on (157) and the normalized connected expansion; abandon a
+construction that merges the distinct roots or loses the reserve with
+order. Physical recoupling to one, dressing (112), boundary sources
+(113), the full target (116), explicit <span
+class="math inline">\(SU(3)\)</span> estimates and iteration remain
+open. Alternate to Newton’s nonlinear physical recording law; no
+continuum theory or physical spectral gap follows from this strip.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -246,8 +246,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    [§33](su2-midplane-small-field.md#33-retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip)
    gives a convergent nonlinear interaction expansion with retained
    barriers, uniform weak-recoupling polydisc (154) and fixed spatial
-   reserve (Sol/Astra, refereed). Next: mark the bad observable and
-   retain rarity in its integrated density norm; recoupling to one
+   reserve (Sol/Astra, refereed).
+   [§34](su2-midplane-small-field.md#34-a-marked-bad-observable-in-the-retained-barrier-weak-strip)
+   proves the marked norm (157) with rarity and fixed spatial reserve
+   (Sol/Astra, refereed). Next: connected correlations of separately
+   marked bad components, preserving root separation; recoupling to one
    remains separate. Then dressed activities (112) and boundary polydiscs (113), yielding (94);
    then target-covering paths, curvature conversion, full-integral
    comparison, perturbed-action stability and iteration. The fixed-frame

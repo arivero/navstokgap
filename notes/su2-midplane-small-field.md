@@ -1,5 +1,9 @@
 # The SU(2) mid-plane on its small-field set: bounds and the missing comparison
 
+**Latest result, §34 (2026-09-30):** an all-order marked bad-observable
+norm in the retained-barrier weak recoupling strip, with explicit rarity
+and a fixed spatial reserve. The physical recoupling value remains open.
+
 **After refereeing (GPT-6 Astra, 2026-09-28).** Claim-by-claim review of
 Claude's derivation: **A1 ACCEPT** (with the inverse notation corrected);
 **A2 REFINE** (complete image pairing, explicit constants, endpoint range,
@@ -4723,3 +4727,205 @@ $u=1$ needs a further construction. Dressing (112), sources (113) and
 the full target (116) remain open. The live research emphasis now
 returns to Newton's adaptive refinement and continuum existence;
 this weak strip supplies no $SU(3)$ continuum theory or physical gap.
+
+## 34. A marked bad observable in the retained-barrier weak strip
+
+**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed by Astra.** The normalized expansion of §33 admits one marked
+bad observable with the all-order rarity and spatial norm (157). The
+root is normalized before absolute summation: outside components
+disconnected from it cancel. Every barrier remains undifferentiated.
+This proves the weak-strip version of (142), rather than recoupling to
+one or the connected bound for several distinct bad components.
+
+### 34.1 Assumptions and the marked norm
+
+Retain exactly the singleton reference, nonlinear connectors, incidence
+counts and uniform moment assumptions of §33. Let $H$ be a nonempty
+edge set, $h=|H|$, and let $F_H$ be measurable on $y_H$, with
+$|F_H|\le1_{B_H}$. Equation (125) supplies
+$P_0(B_H)\le p^{h/16}$, $0<p\le1/2$. This joint rarity is an input
+already established in the real frozen-block family; it is not an
+independence assumption about the individual bad edges.
+
+With $K=K_{\rm loc}>0$, $C=4\mathrm e/3$, $\eta>0$ and $\rho_0$
+from (154), set
+$$\rho_1=\rho_0/16,\qquad r_*=\rho_1/2,
+\qquad \eta_*=\eta/2.\tag{156}$$
+Let $E_u$ be the normalized measure proportional to
+$e^{-u\sum_pK_p}dP_0$, for a **common scalar real**
+$0\le u\le r_*$. This base action is in (125). Independent complex
+sources below are used for analyticity; no convexity claim is made
+for arbitrary nonuniform real face coefficients.
+
+The tree length $\ell(H,p_1,\ldots,p_n)$ uses the face-edge metric
+of §31.1 and treats the entire support $H$ as **one root vertex**.
+If $H$ is disconnected, all its pieces are contracted to that root.
+Different marked bad components are not contracted to a common root
+in their future connected-correlation problem. Repeated face labels
+are allowed, and the empty-label length is zero.
+
+**Proposition 10 (marked weak-strip attachment norm).** Uniformly in
+plane size, barrier approximation and the admitted small heat times,
+$$\sum_{n\ge0}\frac{r_*^n}{n!}\sum_{p_1,\ldots,p_n}
+ e^{\eta_*\ell(H,p_1,\ldots,p_n)}
+ |\kappa_u(F_H,K_{p_1},\ldots,K_{p_n})|
+ \le p^{h/64}.\tag{157}$$
+The zero-order term is $|E_uF_H|$. The source polydisc is zero-free
+by §33. No derivative of $F_H$ or of a barrier occurs in this result.
+
+### 34.2 One Cauchy step prices the marked integral
+
+For any set $\Gamma$ of distinct faces, connected or not, put
+$m=|\Gamma|$ and
+$r_{H,\Gamma}=E_0[F_H\prod_{p\in\Gamma}f_p]$. Use the absolute
+coefficient norm of §33, now at $\rho\le(8KC)^{-1}$.
+The pointwise Mayer majorant, (151), and Cauchy--Schwarz give the
+rarity factor $P_0(B_H)^{1/2}\le p^{h/32}$.
+
+Expand the product of the four-term edge sums as in §33.2. There are
+at most $4^m$ assignments, with $d_e\le2$, $\sum_ed_e=m$ and
+at most $4m$ edges. Squaring the integrand gives an exponential
+$e^{4\rho K\sum_e\zeta_e}$. Write
+$D_2=(1-4C\rho K)^{-1}\le2$. Equation (152) and product integration
+give
+$$\begin{aligned}
+\|r_{H,\Gamma}\|_\rho
+ &\le p^{h/32}
+       (4\rho KC\,24^{1/4}D_2^3)^m\\
+ &\le p^{h/32}a_\rho^m,\qquad a_\rho=256KC\rho.
+\end{aligned}\tag{158}$$
+Indeed $\prod_e(2d_e)!\le24^{m/2}$, and the square root of the
+moment bound costs $C^m24^{m/4}D_2^{(2m+4m)/2}$.
+The last inequality uses $4\cdot24^{1/4}\cdot8<256$.
+For $\Gamma=\varnothing$, $|E_0F_H|\le p^{h/16}\le p^{h/32}$
+gives the same bound. This step spends rarity only once, independently
+of connector order.
+
+### 34.3 The exact root quotient cancels the outside volume
+
+Call a face set $\Gamma$ a root configuration if every one of its
+face-connected components has edge support meeting $H$; the empty
+set is allowed. Set $S_\Gamma=H\cup\operatorname{supp}\Gamma$.
+Let $Z_{\rm avoid}(S)$ be the ordinary polymer partition function
+with only polymers whose edge supports avoid $S$. Expansion of the
+finite numerator gives exactly
+$$\begin{aligned}
+G_H(v)&=\frac{E_0[F_H e^{-\sum_pv_pK_p}]}{Z(v)}\\
+ &=\sum_{\Gamma\ {\rm root}}
+       r_{H,\Gamma}(v)
+       \frac{Z_{\rm avoid}(S_\Gamma;v)}{Z(v)}.
+\end{aligned}\tag{159}$$
+To check the identity, collect all selected face components touching
+$H$ into $\Gamma$. Every remaining component avoids both $H$ and
+$\operatorname{supp}\Gamma$, and is independent of the root integral
+under $E_0$. Conversely each allowed outside configuration reconstructs
+one term of the numerator. This uses no pointwise logarithm of a
+conditional marginal, so §32's numerator zeros present no obstruction.
+
+In the logarithm of the quotient in (159), clusters whose polymers all
+avoid $S_\Gamma$ cancel **before** absolute coefficients are taken.
+Use a diagram norm that weights every polymer face occurrence by
+$e^\eta$, as in §33.3. Occurrences count with multiplicity, including
+all polymers in all quotient clusters; root faces will also be counted.
+Set
+$$s_\rho=a_\rho e^{1+\eta},\qquad
+\sigma_\rho=\frac{s_\rho}{1-4\mathrm e s_\rho}.$$
+The Kotecký--Preiss pointed-cluster bound implies
+$$\left\|\log\frac{Z_{\rm avoid}(S_\Gamma)}Z
+ \right\|_{\rho,\eta}^{\rm diagram}
+ \le(2h+5m)\sigma_\rho.\tag{160}$$
+Here at most $2h$ faces touch $H$, and the closed face neighborhood
+of $\Gamma$ has at most $5m$ faces. Any forbidden polymer contains
+one of these faces. For each specified face the rooted animal count
+and the pointed bound give
+$\sum_{n\ge1}(4\mathrm e)^{n-1}s_\rho^n=\sigma_\rho$.
+Counting a cluster at each forbidden polymer overcounts it and is
+therefore a valid absolute upper bound.
+
+The borrowed pointed result is the absolute cluster sum containing
+a specified polymer $\gamma$ bounded by
+$\|w_\gamma\|_\rho e^{(1+\eta)|\gamma|}$ under (155).
+Its precise source is
+[Fernández--Procacci, §2, (2.5)--(2.15)](https://arxiv.org/pdf/math-ph/0605041)
+[@FernandezProcacci2007] (passage read, arXiv v2, pages 3--4).
+Their pinned log-ratio series and positive derivative series give this
+bound with size function $a(\gamma)=|\gamma|$. We borrow that theorem;
+the application and incidence constants in (160) are derived here.
+
+Exponentiating (160) costs at most
+$e^{(2h+5m)\sigma_\rho}$. Every surviving quotient cluster touches
+$S_\Gamma$ and is connected in the incompatibility graph, hence is
+geometrically attached to the marked root configuration. No outside
+volume factor remains.
+
+### 34.4 Root summation leaves both rarity and spatial reserve
+
+Multiplying (158), the quotient bound and the root face weight
+$e^{\eta m}$ gives
+$p^{h/32}e^{2h\sigma_\rho}b_\rho^m$, where
+$$b_\rho=a_\rho e^{\eta+5\sigma_\rho}
+          =s_\rho e^{-1+5\sigma_\rho}.$$
+Choose a fixed ordering of the at most $2h$ faces incident to $H$.
+Encode each component of $\Gamma$ by its least such face and its
+rooted connected animal. Distinct components have distinct chosen
+faces. Allowing an optional arbitrary animal at each incident face
+overcounts these encodings, so
+$$\sum_{\Gamma\ {\rm root}}b_\rho^{|\Gamma|}
+ \le\left(1+\frac{b_\rho}{1-4\mathrm e b_\rho}\right)^{2h}.$$
+At $\rho=\rho_1$, the constants in (154), (156) give
+$$4\mathrm e s_{\rho_1}<\frac1{32},\qquad
+\sigma_{\rho_1}\le\frac2{31(10+8\mathrm e)}<\frac1{403}.$$
+Thus $5\sigma_{\rho_1}<1$, $b_{\rho_1}\le s_{\rho_1}$, and
+the complete marked diagram sum obeys
+$$\begin{aligned}
+\|G_H\|_{\rho_1,\eta}^{\rm diagram}
+ &\le p^{h/32}e^{4h\sigma_{\rho_1}}\\
+ &\le p^{h/64}.
+\end{aligned}\tag{161}$$
+The last step uses
+$4\sigma_{\rho_1}<4/403<1/96\le\log(1/p)/64$;
+$\log2\ge2/3$ supplies the final comparison. All bounds apply also
+to the empty root configuration.
+
+To obtain (157) about the real base, translate every source as
+$v_p=u+z_p$, with $u\le r_*$ and $|z_p|\le r_*$. Absolute Taylor
+coefficients after translation are dominated by the original radius
+$u+r_*\le\rho_1$. Keep the hidden $u$-faces in their diagrams.
+After contracting $H$, the union of root components and quotient
+clusters is a connected network attaching every retained $z$-face
+support to $H$. If $N$ is its total number of face **occurrences**,
+a closed traversal has metric length at most $2N$: each face has
+diameter one, and shared-edge incidences join its pieces. Consequently
+$\ell\le2N$ and $e^{\eta_*\ell}\le e^{\eta N}$.
+The fixed reserve in (161) therefore pays the spatial weight in (157)
+at every response order.
+
+Finally
+$\partial_{p_1}\cdots\partial_{p_n}G_H(u)
+=(-1)^n\kappa_u(F_H,K_{p_1},\ldots,K_{p_n})$.
+For a multiplicity multi-index $\alpha$, the ordered-label sum divided
+by $n!$ is exactly the coefficient denominator $\prod_p\alpha_p!$.
+This converts (161) into (157), including repeated labels and the
+zero-order term. Moment domination (152) justifies the expansions and
+the admitted barrier-approximation limits at fixed volume. Constants
+are uniform in volume and dimensionless after the $t$ scaling.
+$\square$
+
+**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.** The root quotient,
+pointed cluster sum, moment constants and rarity absorption were checked.
+Contracting $H$ as one support and counting polymer occurrences are
+essential conventions in the stated spatial bound.
+
+### Consequence for STATE
+
+The weak recoupling strip now has a marked all-order attachment norm
+with rarity, retained barriers and fixed spatial reserve. Next gauge
+lemma: connected correlations of several separately marked bad
+components in this strip, preserving their separation and joint rarity.
+It depends on (157) and the normalized connected expansion; abandon a
+construction that merges the distinct roots or loses the reserve with
+order. Physical recoupling to one, dressing (112), boundary sources
+(113), the full target (116), explicit $SU(3)$ estimates and iteration
+remain open. Alternate to Newton's nonlinear physical recording law;
+no continuum theory or physical spectral gap follows from this strip.
