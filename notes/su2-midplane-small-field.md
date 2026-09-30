@@ -4394,3 +4394,179 @@ and a zero-free source polydisc. The next full-family estimate is the
 nonlinear rooted marginal logarithm bound specified in §31.4.
 Alternate next to Newton's three-cell blocking test. No $SU(3)$
 continuum construction or physical spectral gap is inferred.
+
+## 32. A retained barrier: pointwise logarithms and a direct density norm
+
+**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed by Astra at the stated reference-model level.** A compact
+radial outside barrier can make the conditional marginal vanish at
+complex sources arbitrarily near zero somewhere on an unbounded root.
+The pointwise analytic logarithm used in (144) therefore need not
+survive a retained barrier. The direct density norm (148) does survive,
+with fixed source radius, bad-set rarity and no barrier derivatives.
+This conditional integration test changes the next forest's target;
+the full nonlinear plane still requires rooted normalization.
+
+### 32.1 Conditional integration exposes the numerator zero
+
+Take two three-dimensional blocks $x,y$, with $y$ the unbarriered
+root, and set
+$$S_0(x,y)=3(|x|^2+|y|^2)/t,\qquad K=-x\cdot y/t,\qquad t>0.$$
+Put the hard radial barrier $|x|\le R$, $0<R<\infty$, on the
+outside block. Its extended-valued penalty is convex. The parent
+$S_0+K$ has scaled Hessian
+$\left(\begin{smallmatrix}6I&-I\\-I&6I\end{smallmatrix}\right)$,
+with eigenvalues five and seven. Its norm difference from $6I$ is
+one, and its block row bound is seven. Freezing removes precisely
+$K$, as in (126); the real segment $S_0+uK$, $0\le u\le1$,
+preserves these convexity bounds. This model tests the analytical
+Hessian, moment and barrier inputs. It is an additional test profile,
+rather than the entire $SU(2)$ plane or its particular $w_\eta$.
+
+Let $E_x$ denote the truncated density proportional to
+$e^{-3|x|^2/t}1_{|x|\le R}$, independently of
+$y\sim N(0,tI/6)$. With the source convention $e^{-zK}$,
+the exact conditional integral and its normalization are
+$$\begin{aligned}
+M_z(y)&=E_xe^{z x\cdot y/t},\\
+Z(z)&=E_yM_z(y)=E_xe^{z^2|x|^2/(12t)},\qquad
+R_z(y)=M_z(y)/Z(z).
+\end{aligned}\tag{146}$$
+Write the unnormalized radial Fourier transform as
+$$\phi(k)=\int_{|x|\le R}e^{-3|x|^2/t}e^{ikx_1}\,dx
+=\frac{4\pi}k\int_0^Rr e^{-3r^2/t}\sin(kr)\,dr.$$
+Twice integrating by parts gives, for fixed $R,t$,
+$$\phi(k)=-\frac{4\pi R e^{-3R^2/t}}{k^2}\cos(kR)
+                      +O_{R,t}(k^{-3}).$$
+The first integration gives the endpoint cosine; integrating the
+remaining smooth derivative once more bounds its contribution by
+$O(k^{-3})$. At $k_n=n\pi/R$ the signs alternate for all large
+$n$, because the endpoint coefficient is positive. Continuity gives
+a finite positive zero $k_*$. For any $a>0$, choose $z=ia$ and
+$y=(tk_*/a,0,0)$. Then
+$$M_{ia}(y)=\phi(k_*)/\phi(0)=0,\qquad
+Z(ia)=E_xe^{-a^2|x|^2/(12t)}>0.\tag{147}$$
+Every positive source disc thus contains a zero of the normalized
+marginal at some root coordinate. Each fixed root has a neighborhood
+of zero where its logarithm exists; (147) excludes a common
+neighborhood over the unbounded root. It defeats a general pointwise
+analogue of (144), while leaving the integrated anchored target (142)
+open.
+
+The endpoint term is nonzero at every finite $R$, even when
+$R/\sqrt t$ is large. At $R=\infty$ the Gaussian Fourier transform
+is positive and this obstruction disappears. At fixed $R,t$, it
+also persists for sufficiently close radial smooth convex barrier
+approximations. For example, radially mollify
+$k(|x|-R)_+^2/2$ and let $k\to\infty$. Normalized densities
+converge in $L^1$ to the hard-ball density, so their Fourier transforms
+converge uniformly. Radial symmetry keeps them real: two fixed
+opposite-sign frequencies, and hence an intervening zero, survive.
+This proves persistence for that approximation, rather than for
+every soft barrier or the fixed profile $w_\eta$.
+
+### 32.2 An all-order density norm with the barrier retained
+
+For $f(z)=\sum_n f_nz^n$ set $\|f\|_\rho=\sum_n|f_n|\rho^n$;
+this coefficient norm is submultiplicative. Assume a measurable root
+observable obeys $|F_H(y)|\le1_B(y)$ and
+$\Pr_y(B)\le p^{1/16}$, $0<p\le1/2$. This is the additional
+one-root rarity hypothesis; no observable derivative is used.
+
+**Proposition 9 (retained-barrier reference density norm).** At
+$\rho=1/16$, uniformly in $R$ and $t>0$,
+$$\sum_{n\ge0}\frac{\rho^n}{n!}
+ |\kappa(F_H,\underbrace{K,\ldots,K}_{n\text{ labels}})|
+\le p^{1/64}.\tag{148}$$
+The cumulants use the barriered product endpoint, and the zero-label
+term is $|EF_H|$. The same bound holds for a soft radial barrier with
+nondecreasing radial penalty. The partition function is zero-free on
+$|z|\le\rho$.
+
+*Proof.* The radius and uniform direction of $G\sim N(0,tI/6)$
+are independent. Truncation decreases every increasing radial moment,
+so $E_x(x\cdot y)^{2n}\le E(G\cdot y)^{2n}$.
+Odd moments vanish by symmetry. Consequently, without a factor two,
+$$\|M_\bullet(y)\|_\rho=M_\rho(y)
+\le e^{\rho^2|y|^2/(12t)}.$$
+For a soft penalty, the reweighting factor $e^{-w(r)}$ is
+nonincreasing. Its covariance with an increasing function of the
+Gaussian radius is nonpositive: use two independent radii and expand
+the product of their differences. Division by the mean weight proves
+the same radial moment domination.
+
+$Z$ in (146) has nonnegative even Taylor coefficients. Radial
+domination and the Gaussian quadratic integral give
+$$\|Z-1\|_\rho\le q(\rho)
+=(1-\rho^2/36)^{-3/2}-1.$$
+For $q<1$, the geometric inverse series yields
+$$\|Z^{-1}\|_\rho\le(1-q)^{-1},\qquad
+\|R_\bullet(y)\|_\rho
+\le(1-q)^{-1}e^{\rho^2|y|^2/(12t)}.$$
+Also $|Z(z)|\ge1-q>0$ on the disc. Coefficientwise integration
+and Cauchy--Schwarz against $1_B$ give
+$$\|E_y[F_HR_\bullet]\|_\rho
+\le p^{1/32}\frac{(1-\rho^2/18)^{-3/4}}{1-q(\rho)}.
+\tag{149}$$
+The finite dominating quadratic exponential justifies the interchange
+of coefficient summation and integration.
+
+At $\rho=1/16$, put $u=1/9216$. The derivative of
+$(1-u)^{-3/2}$ is at most two for $0\le u\le1/16$; hence
+$q\le2u=1/4608$. The prefactor in (149) is at most
+$(1-1/4608)^{-7/4}\le(1-1/4608)^{-2}$.
+Its logarithm is at most $2/4607<1/96\le\log2/64$,
+using $-\log(1-v)\le v/(1-v)$ and $\log2\ge2/3$.
+Thus that prefactor is at most $2^{1/64}\le p^{-1/64}$.
+The derivatives of $E_y[F_HR_z]$ are
+$(-1)^n\kappa(F_H,K,\ldots,K)$, which proves (148).
+$\square$
+
+This tensors to any finite number of independent pairs with independent
+connector sources. For an observable on $h$ root blocks bounded by
+a joint bad event of probability at most $p^{h/16}$, the product
+density majorant and one Cauchy--Schwarz step give $p^{h/32}$ times
+the prefactor in (149) to power $h$, hence $p^{h/64}$.
+Sources on pairs disjoint from the root cancel exactly in the
+normalized expectation. Ordered-label sums divided by $n!$ give the
+multivariate Taylor denominators, as in §31.3. All surviving
+connectors already touch the root, so their tree length is zero.
+The tensor reference therefore has an all-order anchored density
+norm and a zero-free source polydisc independent of its number of
+pairs; this construction prices no chains between pairs.
+
+The variables are dimensionless chart coordinates; $t$ is heat time,
+and $K,z,\rho$ and the constants are dimensionless. The density bound
+survives both radial barrier approximation and $R\to\infty$.
+The numerator-zero statement has the more restricted limit order
+specified in §32.1.
+
+### 32.3 The next forest must normalize before taking absolute coefficients
+
+Conditional integration has given a precise failure of the pointwise
+logarithm route and a useful retained-barrier density construction.
+The next distinct attempt is an interaction forest on (125), targeting
+the normalized marginal density after cancellation of every outside
+component disconnected from $H$. Available inputs are (148), the
+full-family moments (131), and convexity along frozen partitions.
+
+Taking a separate absolute norm of the global inverse partition function
+introduces a factor for each outside component, including disconnected
+ones. The needed lemma instead attaches every surviving source support
+to $H$ before summation, with a fixed spatial reserve and a geometric
+cost per attachment. Marginal numerator zeros are compatible with this
+density norm. Stop this second construction if it retains a volume
+cost, loses the fixed reserve with order, or differentiates a barrier.
+Dressing (112), boundary sources (113) and the multi-component target
+(116) continue to depend on that rooted forest lemma.
+
+### Consequence for STATE
+
+This checkpoint replaces the pointwise complex-logarithm test with a
+direct normalized marginal density norm. Equation (147) isolates the
+failure term; (148)--(149) prove the retained-barrier building block
+with explicit constants and rarity. The full nonlinear plane now needs
+a rooted normalized interaction forest, the second construction in the
+two-attempt test. Alternate next to a physical adaptive Newton
+controller. This reference model supplies no $SU(3)$ continuum
+construction or physical mass gap.
