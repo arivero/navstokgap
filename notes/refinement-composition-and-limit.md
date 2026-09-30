@@ -997,11 +997,13 @@ obstruction and an explicit truncated running law: curve consistency,
 dimensional scale and action normalization require different proofs.
 Exact retained weights explain the appearance of RG as a change of
 resolution; useful continuum and spectral estimates remain its test.
-The [physical recording construction, §§8.11--8.13](sed-closure-under-recording.md#812-a-continuous-body--record-limit-from-finite-physical-refinements)
-also gives an adaptive body--record continuum law and limiting-record
-posterior closure at its supplied scale. Next Newton lemma: identify
-that law's momentum and record evolution from finite increments,
-then test the noise law under further physical recording operations.
-Reject new unrecorded noise, an assumed limiting curve or a claim of
-positivity from classical normalization alone. The gauge frontier
+The [physical recording construction, §§8.11--8.14](sed-closure-under-recording.md#814-the-limiting-momentum-record-and-retained-controller-recoil)
+also identifies an adaptive body--record continuum law and smeared
+recoil from finite pointers, with limiting-record closure at its supplied
+scale. [The nonlinear-copy test, §8.15](sed-closure-under-recording.md#815-a-nonlinear-copy-isolates-the-missing-curvature-contribution)
+shows that the same Gaussian classical preparation fails beyond affine
+body copies, and isolates the conditional quantum curvature term.
+Next Newton lemma: derive that correction from the finite copy kernel,
+then seek an independent physical rule selecting its conditioning law.
+Reject positivity inferred from supplied quantum kinematics. The gauge frontier
 remains the [weak-strip marked density norm](su2-midplane-small-field.md#33-retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip).

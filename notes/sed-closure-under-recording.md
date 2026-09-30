@@ -1,14 +1,28 @@
 # Shared radiation and closure under recording
 
+**Nonlinear terminal-copy test, 2026-09-30 (GPT-6.1 Sol and
+GPT-6 Astra; refereed).** Section 8.15 disproves extension of the
+classical Gaussian-preparation floor to arbitrary smooth nonlinear
+body copies. A quadratic copy, with its full recoil and complete
+coordinate record, violates the floor on a positive-probability interval
+of readings; an even bounded $C^2$ version also exists. The exact
+quantum reference supplies a curvature contribution to conditional
+momentum variance and an explicit Wigner-negativity witness. This
+changes the next mechanism test: covariance restriction and classical
+canonical motion alone are insufficient for unrestricted recording.
+The positive scale in the quantum reference remains supplied.
+
 **Adaptive continuum result, 2026-09-30 (GPT-6.1 Sol and
-GPT-6 Astra; refereed).** Sections 8.11--8.13 construct a
+GPT-6 Astra; refereed).** Sections 8.11--8.14 construct a
 partition-independent continuous body--record law for the supplied
 Gaussian pointer family and a fixed bounded smooth physical feedback
 policy. Finite kicks and controller recoils are retained. The explicit
 path-Cauchy estimate (89) removes localization, and posterior closure
 (92) survives conditioning on the entire declared limiting record.
 Complete-record force continuity also survives at zero action. The
-construction supplies no independent positivity or scale calibration.
+limiting momentum, record and smeared controller recoil are identified
+from the same finite pointer increments in §8.14. The construction
+supplies no independent positivity or scale calibration.
 
 **Physical adaptive-gain result, 2026-09-30 (GPT-6.1 Sol and
 GPT-6 Astra; refereed).** Section 8.10 realizes feedback by a Hamiltonian
@@ -2253,13 +2267,315 @@ uses continuous prediction-error tests to avoid an assumption of
 conditional-law convergence. Uniform integrability of second moments
 is sufficient; the established fourth moments imply it.
 
-Next Newton lemma: identify the limiting momentum and record evolution
-from the finite predictable increments, including their quadratic
-covariation and the role of controller recoil. Dependencies are
-(84)--(90) and the bounded policy. Reject a limit requiring new
-unrecorded noise or inconsistent coarse increments. Adaptive timing,
-an independent exclusion of $\kappa=0$, universality and calibration
-remain separate physical obligations.
+Section 8.14 identifies the limiting evolution and controller recoil
+from these finite preparations. Adaptive timing, an independent
+exclusion of $\kappa=0$, universality and calibration remain separate
+physical obligations.
+
+### 8.14 The limiting momentum, record and retained controller recoil
+
+The sources in the limiting evolution can be constructed from (84),
+rather than postulating an extra bath. Retain the same fixed policy,
+preparations and deterministic duration. On a countable nested
+refinement family, let $L_\pi,N_\pi$ linearly interpolate the cumulative
+fresh increments $\Lambda_i,h_iZ_i$. These are retrospective source
+descriptions. Their adapted left-step versions have the same limit.
+
+**Proposition 13 (evolution from the physical increments).** On this
+coupling there are independent continuous centred Gaussian sources
+$L,N$, independent of the initial body, such that
+$$\begin{aligned}
+E[L_sL_t]&=\kappa^2r\min(s,t),&
+E[N_sN_t]&=r^{-1}\min(s,t),\\
+E\sup_{t\le\tau}|L_\pi(t)-L_t|^2
+ &\le\frac{49}{\sqrt{27}}\kappa^2r\sqrt{\tau|\pi|},&
+E\sup_{t\le\tau}|N_\pi(t)-N_t|^2
+ &\le\frac{49}{\sqrt{27}r}\sqrt{\tau|\pi|}.
+\end{aligned}\tag{94}$$
+At $\kappa=0$, $L$ is identically zero. No division by $\kappa$
+or additional source is needed.
+
+*Source construction.* Cumulative increments agree at existing cuts
+by (84). Between two parent cuts, the difference from their linear
+interpolation is the finite Gaussian bridge estimated in (88).
+Its fourth moment is at most $2401/27$ times the squared parent
+variance. Sum over parents, use $\sum h_i^2\le\tau|\pi|$ and
+take a square root to obtain (94), initially against a finer partition.
+Completion and Fatou give the displayed limits. Gaussian
+finite-dimensional laws, covariances and independence pass to them.
+In particular their disjoint increments are independent. Continuous
+path space was completed here, not supplied with a new physical noise.
+
+Use the completed natural filtration of $q,p$ and the histories of
+$L,N$ through time $t$. Future apparatus increments are excluded.
+The interpolations in (94) and §8.12 are generally not adapted inside
+their cells. Past-step versions and the vanishing bridge errors show
+that their continuous limits $L,N,Q_*,P_*,Y_*$ are adapted.
+
+For predictable step integrands $f$, independence of fresh increments
+gives the isometry and finite maximal bound
+$$E\left|\int_0^\tau f_s\,dL_s\right|^2
+ =\kappa^2r E\int_0^\tau|f_s|^2ds,\qquad
+E\sup_{t\le\tau}\left|\int_0^t f_s\,dL_s\right|^2
+ \le4\kappa^2r E\int_0^\tau|f_s|^2ds.\tag{95}$$
+Completion in this norm defines the integral for the integrands below.
+The integrals of simple predictable integrands against continuous $L$
+have continuous paths; the maximal bound preserves that property in
+the uniform limit in probability.
+
+Suppress stars on the constructed limit. Its exact evolution is
+$$\begin{aligned}
+Q_t&=q+\frac1m\int_0^tP_s\,ds,\\
+P_t&=p+Ft-\int_0^t g(Y_s)\,dL_s,\\
+Y_t&=N_t+\int_0^t g(Y_s)Q_s\,ds.
+\end{aligned}\tag{96}$$
+To pass the finite sums to these equations, on a parent cell use its
+left record and the pre-copy position predictor
+$Q_i=Q_{i-1}+h_iP_{i-1}/m+Fh_i^2/(2m)$. Both are measurable
+before its fresh pair is consumed. Uniform path convergence in
+probability, bounded continuous $g,g'$ and (82) give convergence of
+$g(Y_{i-1})$ and $g'(Y_{i-1})Q_i$ in
+$L^2(ds\,dP)$ to their limiting integrands. The fourth moments supply
+uniform integrability for the products involving $Q_i$.
+Equation (95) upgrades convergence of the momentum sums to uniform
+$L^2$ convergence. Ordinary drift quadratures give the other two
+equations; the actual impulsive momentum and its interpolation have
+the same limit by §8.12.
+
+Two adapted solutions with the same sources and initial body agree:
+stop where either position exceeds $R$, use the no-lag difference
+estimate behind (87), and apply Gronwall with zero incoming difference.
+Bounded gains give the same body moment bounds (82) for such solutions,
+so letting $R\to\infty$ removes the stopping. This proves uniqueness
+within this supplied source family. The arbitrary-partition law of
+§8.12 is therefore the law of (96).
+
+Here square brackets denote stochastic quadratic covariation,
+distinct from a canonical bracket. From (94)--(96),
+$$\begin{aligned}
+\relax[L]_t&=\kappa^2rt,&[N]_t&=t/r,&[L,N]_t&=0,\\
+[P]_t&=\kappa^2r\int_0^t g(Y_s)^2ds,&
+[Y]_t&=t/r,&[P,Y]_t&=0.
+\end{aligned}\tag{97}$$
+$Q$ has finite variation. Also $Y-N$ has finite variation and
+$[g(Y),L]=\int g'(Y)\,d[Y,L]=0$. Thus Itô and Stratonovich
+give the same momentum integral **in this model**. Other apparatus
+couplings require their own calculation. Zero instantaneous
+covariation does not remove the correlations used by the posterior.
+
+**The isolated conjugates remain in the limit.** Every old memory
+conjugate has the exact terminal value
+$$\Pi_j^{\rm term}=\Lambda_j-
+ h_j\sum_{i>j}g'(Y_{i-1})Q_i\Lambda_i.$$
+For a fixed continuous dimensionless deterministic test $\phi$,
+reorder the finite sum to obtain
+$$\begin{aligned}
+\sum_j\phi(t_j)\Pi_j^{\rm term}
+ &=\sum_i\left[\phi(t_i)-
+ \left(\sum_{j<i}h_j\phi(t_j)\right)g'(Y_{i-1})Q_i\right]\Lambda_i,\\
+\Gamma(\phi)&=\int_0^\tau
+ [\phi(s)-H_\phi(s)g'(Y_s)Q_s],dL_s,
+ \qquad H_\phi(s)=\int_0^s\phi(t)dt.
+\end{aligned}\tag{98}$$
+The first line converges in $L^2$ to the second by (95): the inner
+deterministic Riemann sums converge uniformly, and the remaining
+predictable factors have the integrability already proved. This is an
+$L^2$-valued linear functional on continuous tests, with explicit bound
+$$\|\Gamma(\phi)\|_2\le|\kappa|\sqrt r\,\|\phi\|_\infty
+ \left[\sqrt\tau+LK_Q\sqrt{\tau^3/3}\right].$$
+It retains every recoil without asserting a samplewise finite signed
+measure or a pointwise conjugate density. Indeed
+$\operatorname{Var}(\Lambda_j/h_j)=\kappa^2r/h_j$ diverges
+under refinement when $\kappa>0$. The future recoil sum is orthogonal
+to this consumed increment by the martingale property, so the variance
+of $\Pi_j^{\rm term}/h_j$ is at least as large. At $\kappa=0$,
+$L$ and $\Gamma$ both vanish. None of these latent conjugates is
+added to the declared coordinate record.
+
+**Finite filtering mechanism.** At a copy, condition on the preceding
+coordinate record, so its gain is numerical. Let the pre-copy Gaussian
+body covariance be $\left(\begin{smallmatrix}a&c\\c&b\end{smallmatrix}\right)$,
+$D=ab-c^2$, and put $k=rg^2h$. Fresh independent pointer variances
+$1/(rh),\kappa^2rh$ give the exact posterior update
+$$a^+=\frac a{1+ka},\qquad c^+=\frac c{1+ka},\qquad
+b^+=b+\kappa^2k-\frac{kc^2}{1+ka}.\tag{99}$$
+This is the conditional Gaussian covariance formula for
+$R=Z+gQ$, $P^+=P-g\Lambda$. Direct multiplication gives
+$$D^+=\frac{D+\kappa^2ka}{1+ka}
+       =\kappa^2+\frac{D-\kappa^2}{1+ka}.\tag{100}$$
+Free drift preserves $D$. Thus every finite copy preserves saturation
+or contracts the excess determinant toward $\kappa^2$. This identifies
+the mechanism inside the admitted affine body-copy family. It does not
+assume a continuous Gaussian posterior filter.
+
+For each fixed deterministic $t$, choose refinements containing that
+cut and apply §8.13 to the protocol truncated there. Partition
+independence gives $\det\operatorname{Cov}((Q_t,P_t)\mid
+Y_{[0,t]})\ge\kappa^2$. Conditioning a past body on future records
+is a different question. The momentum source has units of momentum,
+the record source of length times time, and (95)--(100) preserve these
+units. With $\kappa=\hbar/2$ the positive scale is still supplied.
+
+**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT with the
+filtration and generalized-field qualifications above.** The source
+completion, evolution, quadratic covariation, recoil functional and
+finite determinant update were checked.
+
+Section 8.15 tests that mechanism under one smooth nonlinear body
+copy. The affine-body-copy theorem above keeps its stated scope.
+
+### 8.15 A nonlinear copy isolates the missing curvature contribution
+
+The preceding closure theorem permits nonlinear feedback from old
+records but copies the current body **linearly**. Test an extension
+with one nonlinear terminal body copy. This is a conditional test of
+an enlarged apparatus family, not a new physical premise selecting
+$\kappa$. Its finite pointer precision and coupling parameters are
+specified below; it makes no claim for arbitrary preassigned resource
+caps that exclude them.
+
+Prepare independent centred Gaussians
+$$Q\sim N(0,A),\quad P\sim N(0,\kappa^2/A),\quad
+Z\sim N(0,E),\quad\Lambda\sim N(0,\kappa^2/E),
+\qquad A,E,\kappa,q_0>0.$$
+Both canonical pairs saturate the initial phase-covariance restriction.
+Here $q_0$ is an apparatus length, and $A,E$ have length-squared
+units. Supply the integrated classical pulse
+$\mathcal G=f(Q)\Lambda$, $f(q)=q^2/(2q_0)$. Its exact global
+canonical flow, including all recoil, is
+$$Q'=Q,\qquad P'=P-\frac{Q\Lambda}{q_0},\qquad
+R=Z+\frac{Q^2}{2q_0},\qquad\Lambda'=\Lambda.\tag{101}$$
+The declared complete terminal coordinate record is the single $R$;
+its conjugate is retained and isolated. Both terminal body variables
+Poisson-commute with $R$. There is no omitted side record or discarded
+body impulse.
+
+**Proposition 14 (failure of the nonlinear classical extension).**
+If $E\le A^2/(20000q_0^2)$, then on an open interval of terminal
+readings with positive probability,
+$\det\operatorname{Cov}((Q',P')\mid R)<\kappa^2$.
+
+*Proof.* At $R=0$, the position posterior density is proportional to
+$$\exp\left[-\frac{q^2}{2A}-\frac{q^4}{8Eq_0^2}\right].$$
+Initial $P,\Lambda$ remain independent of this position and of each
+other. Symmetry gives zero means and zero body cross covariance. With
+$v=E[Q^2\mid R=0]$, the conditional determinant is therefore
+$$\frac{D_{\rm cl}}{\kappa^2}
+ =\frac vA+\frac{v^2}{Eq_0^2}
+ =2\lambda\mu_2(\lambda)+8\mu_2(\lambda)^2,\tag{102}$$
+where $\ell^4=8Eq_0^2$, $\lambda=\ell^2/(2A)$ and
+$\mu_2(\lambda)$ is the second moment of the density proportional
+to $e^{-x^4-\lambda x^2}$. Differentiation under its integrals gives
+$\mu_2'(\lambda)=-\operatorname{Var}_\lambda(x^2)<0$.
+At zero,
+$\mu_2(0)=r_\Gamma=\Gamma(3/4)/\Gamma(1/4)$.
+
+The needed constant can be bounded without numerical evaluation.
+Gamma recurrence and strict Cauchy--Schwarz give
+$$\frac{\Gamma(15/4)}{\Gamma(13/4)}
+ =\frac{77}{15}r_\Gamma,\qquad
+\Gamma(15/4)^2<\Gamma(13/4)\Gamma(17/4)
+ =\frac{13}{4}\Gamma(13/4)^2.$$
+Thus $r_\Gamma^2<2925/23716<1/8$ and
+$2r_\Gamma<3/4$. The assumed precision gives
+$\lambda=\sqrt{2E}q_0/A\le1/100$. Equation (102) now implies
+$$\frac{D_{\rm cl}}{\kappa^2}
+ <\frac{5850}{5929}+\frac3{400}
+ =1-\frac{13813}{2371600}<1.\tag{103}$$
+The record density is strictly positive near zero. Its conditional
+moments are continuous there by Gaussian domination, so strict failure
+persists on an open interval of positive probability. The result does
+not depend on choosing a conditional version at one null event.
+$\square$
+
+**A bounded $C^2$ copy also fails.** Define a $C^1$ cutoff
+$\chi(s)=1$ for $s\le1$, $\chi(s)=0$ for $s\ge2$, and
+$\chi(s)=1-3(s-1)^2+2(s-1)^3$ between them. Put
+$$f_K(q)=\frac1{q_0}\int_0^{|q|}s\chi(s/K)ds.$$
+This is even and $C^2$, agrees with the quadratic on $|q|\le K$,
+and is constant $23K^2/(20q_0)$ beyond $2K$. It satisfies
+$|f_K'|\le\min(|q|,2K)/q_0$ and $|f_K''|\le4/q_0$.
+The conditional normalizing integral, $Q^2$ moment and
+$(f_K')^2$ moment at $R=0$ converge to those of the quadratic by
+dominated convergence against the initial Gaussian. Evenness preserves
+zero conditional position mean. Hence the corresponding determinant
+converges to the strict bound (103), and some sufficiently large finite
+$K$ also violates the floor on an interval. This establishes existence
+of a bounded copy; it supplies no quantitative threshold for $K$.
+
+**Exact quantum reference and curvature.** Now supply
+$\hbar=2\kappa$ and normalized real pure Gaussian body and pointer
+wavefunctions with position variances $A,E$. The unitary copy
+$e^{-if(Q)\Lambda/\hbar}$ followed by its coordinate readout gives
+$$\psi_a(q)\propto
+ \exp\left[-\frac{q^2}{4A}-\frac{(a-f(q))^2}{4E}\right].$$
+Its position density is exactly the classical posterior above.
+Its conditional momentum statistics are obtained with
+$P=-i\hbar\partial_q$. Define the score
+$$s_a(q)=-\partial_q\log|\psi_a(q)|^2
+ =\frac qA-\frac{(a-f(q))f'(q)}E.$$
+The amplitude is real, so momentum mean and symmetrized body cross
+covariance vanish. Integration by parts, with vanishing tails, gives
+$$\begin{aligned}
+\operatorname{Var}_{\rm qm}P
+ &=\kappa^2E_a[s_a^2]=\kappa^2E_a[s_a'],\\
+\operatorname{Var}_{\rm qm}P-\operatorname{Var}_{\rm cl}P'
+ &=-\frac{\kappa^2}{E}E_a[(a-f)f''],\\
+\operatorname{Var}_{\rm qm}(P\mid R=0)
+ &=\kappa^2\left[\frac1A+\frac{3v}{2Eq_0^2}\right].
+\end{aligned}\tag{104}$$
+The last line exceeds the classical value by
+$\kappa^2v/(2Eq_0^2)$. Also $E_0[Qs_0]=1$, so
+$vE_0[s_0^2]\ge1$ by Cauchy--Schwarz and the quantum determinant
+is at least $\kappa^2$. For a nonsymmetric copy use
+$E_a[(Q-E_aQ)s_a]=1$ instead.
+
+This is the curvature compensation supplied by the specified quantum
+model. Classical mechanics does not uniquely force that compensation.
+The Heisenberg recoil formulas agree with (101), while operator-state
+conditioning and classical probability conditioning give different
+momentum statistics. Recoil bookkeeping alone cannot decide between
+them.
+
+**A finite witness beyond the covariance.** The full conditional
+quantum state also leaves the positive canonical phase-space class.
+Use its Wigner representation
+$$W(q,p)=\frac1{2\pi\hbar}\int e^{-ipu/\hbar}
+ \psi_0(q+u/2)\psi_0(q-u/2)du.$$
+At $q=0$, the normalized Fourier data of the momentum slice are
+$$\frac{\psi_0(u/2)\psi_0(-u/2)}{|\psi_0(0)|^2}
+ =e^{-u^2/(8A)-u^4/(128Eq_0^2)}.$$
+Differentiation at zero yields the absolutely convergent slice moment
+$$\frac{\int p^4W(0,p)dp}{\int W(0,p)dp}
+ =3\kappa^4\left[\frac1{A^2}-\frac1{Eq_0^2}\right]<0
+ \quad\text{if }Eq_0^2<A^2.\tag{105}$$
+The denominator is $|\psi_0(0)|^2>0$. The state and its Wigner
+function are Schwartz, so these moments are ordinary integrals.
+A nonnegative slice cannot have a negative fourth moment. Consequently
+$W(0,p_*)<0$ at some $p_*$; continuity gives an open negative
+phase-space region. The stricter preparation bound (103) satisfies
+this condition as well.
+
+Thus this full conditional state's canonical Wigner representation
+cannot be a positive classical pushforward density. Positive models
+of record statistics alone, separate marginal distributions or the
+corrected covariance are not excluded. Other representations and
+contextual encodings have not been tested here.
+
+**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.** The canonical
+pulse, complete-record scope, rational gamma bound, bounded even
+extension, curvature sign and Fourier fourth-moment witness were
+checked. This is an informative failure of the proposed nonlinear
+classical extension, with an exact conditional quantum comparison.
+
+Next lemma: derive the finite nonlinear-copy evolution from its kernel
+and isolate the curvature term in its generator. Dependencies are
+(101), the reference amplitude and the supplied action denominator.
+Abandon a classical-noise representation if it cannot preserve the
+same canonical conditional observables; deriving positive action from
+that quantum reference would be circular. An independently justified
+physical rule selecting its conditioning structure remains the needed
+mechanism, beyond the affine noise law.
 
 ## 9. Consequence for STATE
 
@@ -2290,14 +2606,20 @@ The three-cell residue (69) determines why the coarse channel retains
 more noise data than the prescribed one-pair/scalar rule. A physical
 adaptive-gain controller retains its conjugate recoil and gives posterior
 closure (76) and a global complete-record continuity bound (77).
-Sections 8.11--8.13 construct a continuous body--record law for the
+Sections 8.11--8.14 construct a continuous body--record law for the
 fixed physical weighted-record policy. The finite path-Cauchy estimate
 (89) removes localization and gives partition-independent law;
 (90) realizes the body curve; (92) retains posterior closure under
-the entire declared limiting record. Force continuity (91) survives
-at zero action. Next Newton lemma: identify the limiting momentum
-and record equations from the finite predictable increments and
-quadratic covariation, rejecting new unrecorded noise or inconsistent
-coarse increments. Newton remains the current research emphasis.
+the entire declared limiting record. Equations (94)--(98) identify its
+momentum, record and all smeared controller recoil from the same
+preparations; (100) isolates the finite determinant mechanism.
+Force continuity (91) survives at zero action. Section 8.15 gives the
+decision-changing nonlinear-copy failure (103), its quantum curvature
+compensation (104) and the explicit Wigner witness (105). The Gaussian
+preparation restriction cannot be promoted to a universal classical
+recording law by canonical motion alone. Next lemma: isolate the
+nonlinear-copy generator term from the finite kernel, then seek an
+independent physical rule selecting its conditioning structure.
+Newton remains the current research emphasis.
 Adaptive timing, independent positivity, universality and radiation
 calibration remain separate.
