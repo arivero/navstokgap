@@ -6178,6 +6178,178 @@ two-attempt test. Alternate next to a physical adaptive Newton
 controller. This reference model supplies no <span
 class="math inline">\(SU(3)\)</span> continuum construction or physical
 mass gap.</p>
+<h2
+id="retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip">33.
+Retained barriers and nonlinear connectors in a weak recoupling
+strip</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed by Astra with the singleton connector constant
+corrected.</strong> The interaction expansion converges in a
+volume-uniform source polydisc around the singleton product endpoint of
+(125). It retains every on-site barrier and the nonlinear face
+interactions. Connected support has a fixed exponential reserve. This
+closes a weak recoupling case; the rarity-weighted marginal density
+estimate (142) and recoupling to the physical value one remain separate
+obligations.</p>
+<h3 id="the-singleton-subtraction-and-its-quadratic-majorant">33.1 The
+singleton subtraction and its quadratic majorant</h3>
+<p>Use the fixed-chart family of §28.1, with smooth saddle <span
+class="math inline">\(s\)</span> and <span
+class="math inline">\(y=\xi-s\)</span>. The plane has periods at least
+three, so each face has four distinct edges, each edge belongs to two
+faces, and the face graph under shared-edge adjacency has degree at most
+four. Take the singleton edge partition, keep all the on-site barriers,
+and denote its product probability by <span
+class="math inline">\(E_0\)</span>. Assume the local moment bound (125)
+and the parent face Hessian row bound (127), <span
+class="math inline">\(K=K_{\rm loc}\le7\)</span>, throughout the
+fixed-chart extension. These are the inputs from the real family; no
+complex convexity or barrier derivative is assumed.</p>
+<p>For each face define the singleton connector <span
+class="math display">\[K_p(y)=\phi_p(s+y)-\phi_p(s)
+-\sum_{e\in\partial p}
+     [\phi_p(s+P_ey)-\phi_p(s)].\tag{150}\]</span> Here every argument
+varies only the coordinates on that face. Summing (150) gives exactly
+<span class="math inline">\(S_{\rm parent}-S_{\rm
+singleton}=\sum_pK_p\)</span>. Every one-edge term cancels. The constant
+and linear Taylor terms also cancel face by face; the individual faces
+need not be critical at <span class="math inline">\(s\)</span>. Taylor’s
+integral remainder and the symmetric Hessian row and column bound give
+<span class="math display">\[|K_p(y)|\le K\sum_{e\in\partial p}\zeta_e,
+\qquad \zeta_e=|y_e|^2/t.\tag{151}\]</span> Indeed the full-face
+remainder is at most <span
+class="math inline">\((K/2t)\sum_e|y_e|^2\)</span>, and the sum of the
+singleton remainders has the same bound. Their difference costs both.
+The sharper two-block rectangle coefficient in (130) cannot be used for
+this simultaneous singleton subtraction.</p>
+<p>Put <span class="math inline">\(C=4\mathrm e/3\)</span>. Equation
+(125) and the factorial estimate used in (131) imply, for integers <span
+class="math inline">\(n\ge0\)</span>, <span
+class="math display">\[E_0\zeta_e^n\le n!C^n,\qquad
+E_0[\zeta_e^d e^{\beta\zeta_e}]
+\le C^d d!(1-C\beta)^{-d-1}\quad(C\beta&lt;1).\tag{152}\]</span> The
+second estimate follows by expanding the exponential and using <span
+class="math inline">\(\sum_{j\ge0}(d+j)!x^j/j!=d!(1-x)^{-d-1}\)</span>.
+Independence in the following step is supplied by the singleton
+reference, rather than assumed for the interacting family.</p>
+<h3 id="an-exact-polymer-gas-with-an-absolute-coefficient-bound">33.2 An
+exact polymer gas with an absolute coefficient bound</h3>
+<p>Give each face an independent complex source <span
+class="math inline">\(u_p\)</span> and put <span
+class="math display">\[f_p=e^{-u_pK_p}-1,\qquad
+Z(u)=E_0\prod_p(1+f_p),\qquad
+w_\Gamma(u)=E_0\prod_{p\in\Gamma}f_p.\]</span> For a multivariate series
+use the sum of absolute Taylor coefficients weighted by <span
+class="math inline">\(\rho^{|\alpha|}\)</span>. This norm is
+submultiplicative and <span
+class="math inline">\(\|f_p\|_\rho\le\rho|K_p|e^{\rho|K_p|}\)</span>.
+Let <span class="math inline">\(\Gamma\)</span> be a set of distinct
+faces, <span class="math inline">\(m=|\Gamma|\)</span>, and set <span
+class="math display">\[\beta=2\rho K,\qquad D=(1-2C\rho
+K)^{-1}.\]</span> The factor two counts the faces incident to an edge.
+Equations (151)–(152) give <span
+class="math display">\[\|w_\Gamma\|_\rho\le(8\rho KC D^5)^m
+\le(256KC\rho)^m\quad\text{if }\rho\le(4KC)^{-1}.
+\tag{153}\]</span></p>
+<p>To see every factor, before integration the majorant is <span
+class="math display">\[ (\rho K)^m\prod_{p\in\Gamma}
+\left(\sum_{e\in\partial p}\zeta_e\right)
+\exp\left[2\rho
+K\sum_{e\in\operatorname{supp}\Gamma}\zeta_e\right].\]</span> Expanding
+the product gives at most <span class="math inline">\(4^m\)</span>
+assignments. Their selected edge multiplicities satisfy <span
+class="math inline">\(d_e\le2\)</span>, <span
+class="math inline">\(\sum_ed_e=m\)</span>, <span
+class="math inline">\(|\operatorname{supp}\Gamma|\le4m\)</span>, and
+<span class="math inline">\(\prod_ed_e!\le2^m\)</span>. Product
+integration and (152) therefore cost at most <span
+class="math inline">\(C^m2^mD^{m+4m}\)</span>. If <span
+class="math inline">\(\rho\le(4KC)^{-1}\)</span>, then <span
+class="math inline">\(D\le2\)</span>, which proves the last bound in
+(153). Repeated powers of a source are already included in its Mayer
+factor; no order-dependent response factorial is suppressed.</p>
+<p>The connected components of a face set have disjoint edge supports.
+Their expectations factor exactly under <span
+class="math inline">\(E_0\)</span>. Thus <span
+class="math inline">\(Z\)</span> is the abstract polymer partition
+function whose polymers are nonempty connected face sets, whose
+activities are <span class="math inline">\(w_\Gamma\)</span>, and whose
+incompatibility means overlapping edge supports. This representation
+keeps the nonlinear connectors and barriers in their original
+positions.</p>
+<h3 id="uniform-convergence-with-a-fixed-support-reserve">33.3 Uniform
+convergence with a fixed support reserve</h3>
+<p>Fix <span class="math inline">\(\eta&gt;0\)</span> and define <span
+class="math display">\[\rho_0=
+[256KC\,e^{1+\eta}(10+8\mathrm e)]^{-1}&gt;0.\tag{154}\]</span> For a
+face graph of degree at most four, the usual rooted connected-set count
+is at most <span class="math inline">\((4\mathrm e)^{n-1}\)</span> for
+size <span class="math inline">\(n\)</span>. The closed face
+neighborhood of an <span class="math inline">\(m\)</span>-face polymer
+has at most <span class="math inline">\(5m\)</span> members.
+Consequently there are at most <span class="math inline">\(5m(4\mathrm
+e)^{n-1}\)</span> incompatible <span
+class="math inline">\(n\)</span>-face polymers. Writing <span
+class="math inline">\(s_\rho=256KC\rho e^{1+\eta}\)</span>, (153) gives
+<span class="math display">\[\sum_{\Gamma&#39;\not\sim\Gamma}
+\|w_{\Gamma&#39;}\|_\rho e^{(1+\eta)|\Gamma&#39;|}
+\le\frac{5m s_\rho}{1-4\mathrm e s_\rho}
+\le\frac{5m}{10+4\mathrm e}&lt;\frac m2
+\quad(\rho\le\rho_0).\tag{155}\]</span> Also <span
+class="math inline">\(\rho_0&lt;(4KC)^{-1}\)</span>, as required by
+(153).</p>
+<p>Apply the Kotecký–Preiss theorem with size function <span
+class="math inline">\(a(\Gamma)=|\Gamma|\)</span> to the absolute
+coefficient majorants, retaining the weight <span
+class="math inline">\(e^{\eta|\Gamma|}\)</span> in the activities. The
+required hypothesis is the sum in (155) bounded by <span
+class="math inline">\(a(\Gamma)\)</span>. The theorem supplies absolute
+convergence of the connected expansion, local cluster bounds uniform in
+plane size, and <span class="math inline">\(Z(u)\ne0\)</span> throughout
+<span class="math inline">\(\sup_p|u_p|\le\rho_0\)</span>. The reference
+is <a href="https://doi.org/10.1007/BF01211762">Kotecký–Preiss 1986</a>
+<span class="citation"
+data-cites="KoteckyPreiss1986">[@KoteckyPreiss1986]</span> (publisher
+metadata and abstract read; the convergence criterion is recalled
+explicitly here and in <a
+href="wilson-strong-coupling-explicit.html#2-convergence-the-kotecky--preiss-criterion-with-numbers">the
+Wilson note, §2</a>). The theorem’s scalar positive majorants dominate
+the Taylor series coefficientwise, so the same convergence applies to
+the stated coefficient norm. Its proof is borrowed, rather than
+re-audited.</p>
+<p>A connected cluster’s face union is connected. Its geometric distance
+is at most its total face count, so <span
+class="math inline">\(\eta\)</span> supplies a fixed geometric reserve
+as well as a support-size reserve. The radius and rooted local sums are
+uniform; the total logarithm of the partition function remains
+extensive. Disconnected outside components cancel in the connected
+expansion before absolute summation. A marked bad observable still
+requires its own integrated marginal estimate.</p>
+<p>For real <span class="math inline">\(0\le u\le\rho_0/2\)</span> and
+<span class="math inline">\(u_p=u+z_p\)</span> with <span
+class="math inline">\(\sup_p|z_p|\le\rho_0/2\)</span>, the same polydisc
+supplies a complex neighborhood of the real weak recoupling strip. Its
+real base action is the convex combination of the parent and singleton
+actions in (125). All constants are independent of heat time and barrier
+approximation whenever (125), (127) hold uniformly. They are
+dimensionless after the <span class="math inline">\(t\)</span> scaling.
+No <span class="math inline">\(SU(3)\)</span> group estimate has been
+transferred from this <span class="math inline">\(SU(2)\)</span> chart
+construction.</p>
+<h3 id="consequence-for-state-17">Consequence for STATE</h3>
+<p>The normalized interaction expansion has made a useful advance:
+(153)–(155) give a convergent, retained-barrier nonlinear forest near
+the product endpoint, with explicit volume-uniform radius and fixed
+spatial reserve. Next gauge lemma: mark <span
+class="math inline">\(F_H\)</span> in this expansion and prove the
+integrated density norm with its bad-set rarity in the weak strip;
+reject a volume factor or loss of reserve with order. Reaching <span
+class="math inline">\(u=1\)</span> needs a further construction.
+Dressing (112), sources (113) and the full target (116) remain open. The
+live research emphasis now returns to Newton’s adaptive refinement and
+continuum existence; this weak strip supplies no <span
+class="math inline">\(SU(3)\)</span> continuum theory or physical
+gap.</p>
 
 </main>
 <footer class="site"><div class="wrap">

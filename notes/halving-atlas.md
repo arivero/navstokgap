@@ -237,9 +237,13 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    written). [§32](su2-midplane-small-field.md#32-a-retained-barrier-pointwise-logarithms-and-a-direct-density-norm)
    isolates a pointwise complex-logarithm failure and proves the direct
    all-order density norm (148) with radial barriers in a factorized
-   reference (2026-09-30, Sol/Astra, refereed). Next: a normalized
-   interaction forest cancelling disconnected outside components before
-   absolute summation; then dressed activities (112) and boundary polydiscs (113), yielding (94);
+   reference (2026-09-30, Sol/Astra, refereed).
+   [§33](su2-midplane-small-field.md#33-retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip)
+   gives a convergent nonlinear interaction expansion with retained
+   barriers, uniform weak-recoupling polydisc (154) and fixed spatial
+   reserve (Sol/Astra, refereed). Next: mark the bad observable and
+   retain rarity in its integrated density norm; recoupling to one
+   remains separate. Then dressed activities (112) and boundary polydiscs (113), yielding (94);
    then target-covering paths, curvature conversion, full-integral
    comparison, perturbed-action stability and iteration. The fixed-frame
    transport-value comparison remains open; Proposition 4's rejection stands.
