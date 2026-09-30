@@ -323,10 +323,15 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    [§8.16](sed-closure-under-recording.md#816-the-finite-generator-changes-conditional-momentum-not-the-record)
    preserves record statistics while changing conditional momentum
    variance (107); a positive classical transition family on the full
-   canonical phase space cannot realize it (109). Continuity (91)
-   also survives zero action. Next: limiting momentum/record equations
-   and quadratic covariation. Adaptive timing, extra readouts and the
-   independent positive scale remain open.
+   canonical phase space cannot realize it (109).
+   [§§8.17--8.18](sed-closure-under-recording.md#817-weak-nonlinear-recording-fails-under-every-subdivision)
+   show that weak nonlinear copies fail under every subdivision and the
+   full coordinate-record path, with uniform small-exposure probability
+   (114) and a bounded curvature test (116) (Sol/Astra, refereed).
+   Next: a physical conditioning law producing (117)'s signed score
+   correction and retaining (119)'s excess when labels become unread.
+   Continuity (91) also survives zero action. Adaptive timing, extra
+   readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
 8. Cuts at any position (§1b), open rows: the free-field independence of
    the limit from the cut sequence (a convergence question for the

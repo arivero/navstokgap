@@ -10,9 +10,18 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{shared-radiation-and-closure-under-recording}{%
 \section{Shared radiation and closure under
-recording}\label{shared-radiation-and-closure-under-recording}}
+recording}\label{shared-radiation-and-closure-under-recording}
+
+\textbf{Weak nonlinear recording, 2026-09-30 (GPT-6.1 Sol and GPT-6
+Astra; refereed).} Section 8.17 removes the sharp-pointer restriction
+from the nonlinear counterexample: the failure is exact under every
+subdivision, survives the full coordinate-record path and has a fixed
+positive probability at arbitrarily small exposure. A bounded-copy
+calculation isolates the signed first-order curvature term. Section 8.18
+gives its score identity and the excess variance that a proposed score
+law must retain when records become unread. These calculations select no
+positive action scale.
 
 \textbf{Nonlinear terminal-copy test, 2026-09-30 (GPT-6.1 Sol and GPT-6
 Astra; refereed).} Section 8.15 disproves extension of the classical
@@ -159,9 +168,8 @@ classical readouts are explicitly granted model operations; an
 electrodynamic construction of a complete measuring device would have to
 justify or exclude them.
 
-\hypertarget{the-common-field-its-damping-and-its-correlations}{%
 \subsection{1. The common field, its damping and its
-correlations}\label{the-common-field-its-damping-and-its-correlations}}
+correlations}\label{the-common-field-its-damping-and-its-correlations}
 
 Use SI units, \(\kappa>0\), speed \(c\), and three harmonically bound
 dipole coordinates \(q_i,p_i\), \(i=0,1,2\), with masses \(m_i>0\),
@@ -200,11 +208,10 @@ covariances. Define its matrix spectral density by
  =\frac{2\kappa}{\pi}\int_0^\Lambda J(\omega)
        \cos[\omega(t-s)]\,d\omega. \tag{3}\]
 
-For example
-\(C_{F,ii}(0)=e_i^2\kappa\int_0^\Lambda \omega^3f_\Lambda^2d\omega/(3\pi^2\epsilon_0c^3)\).
-The normalization follows directly from
-\(u_0=\epsilon_0\langle |\mathbf E|^2\rangle\) per frequency, isotropy,
-and \(F_i=e_i E_i\).
+For example \(C_{F,ii}(0)=e_i^2\kappa\int_0^\Lambda
+\omega^3f_\Lambda^2d\omega/(3\pi^2\epsilon_0c^3)\). The normalization
+follows directly from \(u_0=\epsilon_0\langle
+|\mathbf E|^2\rangle\) per frequency, isotropy, and \(F_i=e_i E_i\).
 
 Keep radiation damping through a passive oscillator bath with the same
 \(J\), including the cross damping. Its causal friction kernel is
@@ -282,10 +289,9 @@ variable also requires a recording prescription; the instantaneous pulse
 proof is applied to canonical cutoff variables, or to canonical
 oscillator amplitudes in the stated resonant model.
 
-\hypertarget{theorem-1-two-correlated-pointers-permit-arbitrarily-small-area}{%
 \subsection{2. Theorem 1: two correlated pointers permit arbitrarily
 small
-area}\label{theorem-1-two-correlated-pointers-permit-arbitrarily-small-area}}
+area}\label{theorem-1-two-correlated-pointers-permit-arbitrarily-small-area}
 
 Assume \(Z\) has a centered Gaussian law with finite covariance \(V\);
 known means can be subtracted. Grant two quadratic Hamiltonian pulses,
@@ -362,9 +368,8 @@ The covariance of the error vector in (12) has off-diagonal entry
 cross entry of \(V\). Equation (11) bounds their most unfavourable
 possible effect.
 
-\textbf{Explicit constants.} If
-\(\sigma_Y^2,\sigma_P^2, \sigma_{Z_2}^2\le K\kappa\), put \(B=G^2\).
-Then
+\textbf{Explicit constants.} If \(\sigma_Y^2,\sigma_P^2,
+\sigma_{Z_2}^2\le K\kappa\), put \(B=G^2\). Then
 
 \[\sqrt{\det\Sigma_{\rm post}}
  \le K\kappa(G^{-1}+G^{-2}). \tag{14}\]
@@ -386,9 +391,8 @@ grows with \(G\); the completed record estimates its kick. The theorem
 concerns posterior concentration and leaves the unconditional
 disturbance cost to its own accounting.
 
-\hypertarget{theorem-2-a-finite-duration-version-with-radiation-damping}{%
 \subsection{3. Theorem 2: a finite-duration version with radiation
-damping}\label{theorem-2-a-finite-duration-version-with-radiation-damping}}
+damping}\label{theorem-2-a-finite-duration-version-with-radiation-damping}
 
 Fix \(\Lambda\), the initial finite Gaussian covariances, and finite
 gains \(G,B\). Apply the two pulses over successive intervals of total
@@ -396,7 +400,8 @@ length \(T\), using smooth fixed pulse shapes rescaled by \(1/T\). Keep
 (5) active throughout and retain the first reading at the interval
 boundary. Let \(X_T,R_T\) denote the resulting final body and records.
 Write their deviations from the ideal expressions (10) as
-\(\Delta Q,\Delta P, \Delta R_1,\Delta R_2\), and set
+\(\Delta Q,\Delta P,
+\Delta R_1,\Delta R_2\), and set
 
 \[d_Q(T)=\|\Delta Q-\Delta R_1/G\|_2,\qquad
 d_P(T)=\|\Delta P+G\Delta R_2/B\|_2. \tag{16}\]
@@ -494,9 +499,8 @@ estimates with \(c\). Heavy or detuned pointers are unnecessary for the
 theorem. Increasing mass can reduce coordinate noise or slow damping,
 but leaves the equilibrium resonant area \(\kappa\) unchanged.
 
-\hypertarget{a-recording-law-that-restores-closure}{%
 \subsection{4. A recording law that restores
-closure}\label{a-recording-law-that-restores-closure}}
+closure}\label{a-recording-law-that-restores-closure}
 
 There is a precise point where the two-pulse protocol can be blocked.
 After the first pulse, reading \(Y+GQ\) and keeping pointer 1 available
@@ -571,9 +575,8 @@ separate premises. Law (20) is the uncorrelated case; the dilation gives
 in general \(\det{\rm Cov}(N,D)\ge\kappa^2\). Even separate one-pair
 bounds on every prior leave the joint condition (22) to be established.
 
-\hypertarget{constants-complementarity-and-the-newton-comparison}{%
 \subsection{5. Constants, complementarity and the Newton
-comparison}\label{constants-complementarity-and-the-newton-comparison}}
+comparison}\label{constants-complementarity-and-the-newton-comparison}
 
 The positive constant that a closure law would preserve is the resonant
 \(\zeta=\kappa\). Under the additional SED/Planck identification in the
@@ -607,13 +610,13 @@ charged in (24) in place. The unrestricted, non-Gaussian comparison
 requires the further operator/statistical-speed premises of Theorem C
 and Theorem F respectively.
 
-\textbf{Theorem E's window bound.} Write
-\(z_\epsilon= \Phi^{-1}(1-\epsilon/2)\) for \(0<\epsilon<1/2\), where
-\(\Phi\) is the standard normal distribution function. For any
-conditional Gaussian, windows centred at its conditional means with
-half-widths \(a=z_\epsilon\sigma_q\) and \(b=z_\epsilon\sigma_p\)
-contain the respective variables with probability \(1-\epsilon\). The
-diagonal estimates in Theorem 1 give
+\textbf{Theorem E's window bound.} Write \(z_\epsilon=
+\Phi^{-1}(1-\epsilon/2)\) for \(0<\epsilon<1/2\), where \(\Phi\) is the
+standard normal distribution function. For any conditional Gaussian,
+windows centred at its conditional means with half-widths
+\(a=z_\epsilon\sigma_q\) and \(b=z_\epsilon\sigma_p\) contain the
+respective variables with probability \(1-\epsilon\). The diagonal
+estimates in Theorem 1 give
 
 \[ab\le z_\epsilon^2\left(
 \frac{\sigma_Y\sigma_P}{G}
@@ -646,9 +649,8 @@ pointer that will be reused. Forgetting a reading and preserving it for
 a later kick estimate impose different conditioning questions;
 Proposition 3 states a law that covers both.
 
-\hypertarget{complete-records-the-continuity-and-noise-mechanisms-compared}{%
 \subsection{6. Complete records: the continuity and noise mechanisms
-compared}\label{complete-records-the-continuity-and-noise-mechanisms-compared}}
+compared}\label{complete-records-the-continuity-and-noise-mechanisms-compared}
 
 This checkpoint uses the Gaussian instrument class of Proposition 3, the
 fixed-cutoff shared-bath model of Theorems 1--2, and
@@ -657,9 +659,8 @@ fixed-cutoff shared-bath model of Theorems 1--2, and
 Gaussian calculations. Positivity, composition and radiation calibration
 are tested separately; no additional physical law is adopted.
 
-\hypertarget{continuity-must-concern-the-complete-apparatus-family}{%
 \subsubsection{6.1 Continuity must concern the complete apparatus
-family}\label{continuity-must-concern-the-complete-apparatus-family}}
+family}\label{continuity-must-concern-the-complete-apparatus-family}
 
 Fix one body, \(m>0\), a window \([0,\tau]\) and a family
 \(\mathfrak A\) of finite, non-adaptive affine apparatus protocols with
@@ -726,9 +727,8 @@ quantity \(\tau^3/(24mI_*)\) has action units when \(0<I_*<\infty\);
 identifying it with a universal mark scale uses the additional
 mark-model saturation and universality premises.
 
-\hypertarget{the-noise-law-must-survive-side-observations-of-the-kick}{%
 \subsubsection{6.2 The noise law must survive side observations of the
-kick}\label{the-noise-law-must-survive-side-observations-of-the-kick}}
+kick}\label{the-noise-law-must-survive-side-observations-of-the-kick}
 
 For any jointly Gaussian body \(X\) and complete record \(\mathcal R\),
 the exact answer is the supported Schur complement
@@ -769,9 +769,9 @@ only increase the posterior covariance; the exact-reading limit gives
 the sharp necessity test.
 
 \emph{Proof.} Condition first on \(S\). The remaining two readings have
-covariance
-\(B_R=\left(\begin{smallmatrix}\kappa x+u&c\!_{ND}\\ c\!_{ND}&v\end{smallmatrix}\right)\),
-while \(A_X=\operatorname{diag}(\kappa,\kappa(1+x))\) and
+covariance \(B_R=\left(\begin{smallmatrix}\kappa x+u&c\!_{ND}\\
+c\!_{ND}&v\end{smallmatrix}\right)\), while
+\(A_X=\operatorname{diag}(\kappa,\kappa(1+x))\) and
 \(C_{XR}=\operatorname{diag}(G\kappa,-G\kappa)\). In particular (30)
 gives \[\begin{aligned}
 \Sigma_{11}&=\kappa(uv-c\!_{ND}^{\,2})/\mathcal D,\\
@@ -779,8 +779,9 @@ gives \[\begin{aligned}
 \Sigma_{22}&=\kappa(1+x)-x\kappa^2(\kappa x+u)/\mathcal D.
 \end{aligned}\tag{33}\] For a compact determinant check, the covariance
 of the readings conditional on \(X\) is
-\(\left(\begin{smallmatrix}u&c\!_{ND}\\c\!_{ND}&b+\kappa/(1+x) \end{smallmatrix}\right)\).
-Taking the joint determinant in both block orders yields \[\det\Sigma
+\(\left(\begin{smallmatrix}u&c\!_{ND}\\c\!_{ND}&b+\kappa/(1+x)
+\end{smallmatrix}\right)\). Taking the joint determinant in both block
+orders yields \[\det\Sigma
 =\kappa^2\frac{\kappa u+(1+x)(ub-c\!_{ND}^{\,2})}
                     {(\kappa x+u)v-c\!_{ND}^{\,2}}.\] The numerator
 minus the denominator is \(x(ab-c\!_{ND}^{\,2}-\kappa^2)\), proving
@@ -815,9 +816,8 @@ body--pointer cross correlations. Proposition 3 supplies a sufficient
 composition law on every retained subsystem; (34) identifies a side
 observation that must be priced or excluded by that law.
 
-\hypertarget{ideas-supplied-by-the-current-lean-formalization}{%
 \subsubsection{6.3 Ideas supplied by the current Lean
-formalization}\label{ideas-supplied-by-the-current-lean-formalization}}
+formalization}\label{ideas-supplied-by-the-current-lean-formalization}
 
 The sister repository is read at commit \texttt{381d5e9}, keeping its
 historical theorems and modern diagnostics separate. Its
@@ -901,9 +901,8 @@ symmetric half-kick construction of the
 statement retains its own convention. These tests concern records and
 the polygon--trajectory discrepancy, rather than Kepler sectors.
 
-\hypertarget{mechanism-selected-and-the-next-lemma}{%
 \subsubsection{6.4 Mechanism selected and the next
-lemma}\label{mechanism-selected-and-the-next-lemma}}
+lemma}\label{mechanism-selected-and-the-next-lemma}
 
 The noise route now has a sharper constructive target: a body--apparatus
 model must retain a \textbf{conditional innovation pair} with
@@ -927,9 +926,8 @@ law, proving its positive scale and identifying
 \(h_*=\gamma h_{\rm rad}\) remain distinct. Formula (23)'s radiation
 calibration retains its existing conditional source status.
 
-\hypertarget{adaptive-records-innovation-replacement-and-refinement}{%
 \subsection{7. Adaptive records, innovation replacement and
-refinement}\label{adaptive-records-innovation-replacement-and-refinement}}
+refinement}\label{adaptive-records-innovation-replacement-and-refinement}
 
 The exact Gaussian kernels below turn the complete-record requirement
 into a composition calculation. The harmonic estimate developed from the
@@ -937,9 +935,8 @@ sister formalization supplies a finite mechanical input. All statements
 retain their declared apparatus and covariance assumptions; no
 electromagnetic readout law is inferred from them.
 
-\hypertarget{an-exact-likelihood-identity-for-adaptive-recording}{%
 \subsubsection{7.1 An exact likelihood identity for adaptive
-recording}\label{an-exact-likelihood-identity-for-adaptive-recording}}
+recording}\label{an-exact-likelihood-identity-for-adaptive-recording}
 
 Fix a protocol with finitely many readings \(R_1,\ldots,R_n\), each a
 finite-dimensional real vector. Include all random seeds, retained
@@ -1008,9 +1005,8 @@ record \(J\) is deterministic, recovering §6.1's criterion. A noiseless
 force-sensitive conditional direction violates the finite-budget
 hypothesis; it cannot be discarded as irrelevant memory.
 
-\hypertarget{a-side-record-spends-information-and-removes-innovation}{%
 \subsubsection{7.2 A side record spends information and removes
-innovation}\label{a-side-record-spends-information-and-removes-innovation}}
+innovation}\label{a-side-record-spends-information-and-removes-innovation}
 
 An indirect observation can carry force information even when its
 marginal law is force-independent. For example let \(R=Fv+N\),
@@ -1049,10 +1045,9 @@ creates inaccessible fresh noise of at least (46), including its own
 retained memory, is the physical mechanism to derive. Adding noise by
 prescription proves neither that mechanism nor \(\kappa>0\).
 
-\hypertarget{mechanical-refinement-in-the-complete-conditional-record-norm}{%
 \subsubsection{7.3 Mechanical refinement in the complete conditional
 record
-norm}\label{mechanical-refinement-in-the-complete-conditional-record-norm}}
+norm}\label{mechanical-refinement-in-the-complete-conditional-record-norm}
 
 For two record constructions at the same force, suppose their
 conditional kernels have the same \(W_j(r_{<j})\succ0\) and means
@@ -1092,9 +1087,8 @@ already demonstrates. The same-noise linear readout model gives a
 concrete instance; a general back-reacting body--apparatus model must
 prove the assumed conditional mean comparison and covariance control.
 
-\hypertarget{next-mechanism-and-abandonment-test}{%
 \subsubsection{7.4 Next mechanism and abandonment
-test}\label{next-mechanism-and-abandonment-test}}
+test}\label{next-mechanism-and-abandonment-test}
 
 Adaptivity no longer prevents an exact finite likelihood calculation:
 (41) includes its realized gains and complete retained memory, and (49)
@@ -1116,9 +1110,8 @@ refinement estimate under explicit assumptions, and quantifies the
 required innovation replacement. It does not derive positivity,
 universality or the radiation calibration in (23).
 
-\hypertarget{hamiltonian-memory-terminal-records-and-blocking}{%
 \subsection{8. Hamiltonian memory, terminal records and
-blocking}\label{hamiltonian-memory-terminal-records-and-blocking}}
+blocking}\label{hamiltonian-memory-terminal-records-and-blocking}
 
 This is a conditional finite body--apparatus--record construction.
 Assume the initial Gaussian canonical state satisfies (22) with
@@ -1128,9 +1121,8 @@ independently stated model hypotheses, rather than a separately
 postulated measurement seed. Their general physical necessity and the
 initial positive scale are not established by this construction.
 
-\hypertarget{a-monitor-that-disturbs-the-physical-stored-reading}{%
 \subsubsection{8.1 A monitor that disturbs the physical stored
-reading}\label{a-monitor-that-disturbs-the-physical-stored-reading}}
+reading}\label{a-monitor-that-disturbs-the-physical-stored-reading}
 
 Retain §6.2's product resonant body--pointer preparation and first
 pulse. The body is \(X=(Q,P-G\Pi_1)\) and pointer coordinate is
@@ -1182,9 +1174,8 @@ stored imprecision; it differs from §7.2's prescribed fresh momentum
 kick but satisfies the same conditional determinant test. All variances
 in (52) have action units in the canonical scaling.
 
-\hypertarget{a-general-posterior-theorem-for-complete-terminal-coordinates}{%
 \subsubsection{8.2 A general posterior theorem for complete terminal
-coordinates}\label{a-general-posterior-theorem-for-complete-terminal-coordinates}}
+coordinates}\label{a-general-posterior-theorem-for-complete-terminal-coordinates}
 
 Let \(Z\) be a centred finite jointly Gaussian canonical vector with
 covariance \(V\) and Poisson matrix \(\Omega\), satisfying
@@ -1236,10 +1227,9 @@ measured pair removed from subsequent mechanical use. It does not prove
 closure for arbitrary nonlinear Hamiltonian feedback or for future
 observations of a discarded conjugate.
 
-\hypertarget{what-survives-blocking-and-what-must-be-proved-across-depths}{%
 \subsubsection{8.3 What survives blocking, and what must be proved
 across
-depths}\label{what-survives-blocking-and-what-must-be-proved-across-depths}}
+depths}\label{what-survives-blocking-and-what-must-be-proved-across-depths}
 
 Fix the same terminal body variable \(X\). Let a coarse record be a
 deterministic linear block of a finer terminal record, \(R_c=BR\). Its
@@ -1279,9 +1269,8 @@ Establishing that preparation law from independent physical premises,
 universality across apparatus and the calibration
 \(h_*=\gamma h_{\rm rad}\) remain distinct tasks.
 
-\hypertarget{two-physical-copies-at-distinct-times}{%
 \subsubsection{8.4 Two physical copies at distinct
-times}\label{two-physical-copies-at-distinct-times}}
+times}\label{two-physical-copies-at-distinct-times}
 
 Fix one body of mass \(m>0\) with canonical position and momentum
 \((q,p)\), drifting under \(H=p^2/(2m)-Fq\) for a deterministic force
@@ -1329,9 +1318,8 @@ particular \(\Lambda_1=\alpha L_c+L_{\rm rel}\). At one copy time the
 relative mode would decouple; the distinct times in (57) leave a real
 residue.
 
-\hypertarget{one-effective-coarse-copy-and-the-joint-law-defect}{%
 \subsubsection{8.5 One effective coarse copy and the joint-law
-defect}\label{one-effective-coarse-copy-and-the-joint-law-defect}}
+defect}\label{one-effective-coarse-copy-and-the-joint-law-defect}
 
 Set \(s=h-\alpha v\in(u,h)\) and \(c=\alpha\beta v/m\). The coarse
 comparator prepares the effective pair \((Z_c,L_c)\), applies the
@@ -1406,9 +1394,8 @@ not yet define an associative apparatus rule over many depths. Summing
 it over cells would also require a uniform local preparation bound and a
 valid conditional comparison after earlier records.
 
-\hypertarget{a-complete-record-information-budget-for-arbitrary-partitions}{%
 \subsubsection{8.6 A complete-record information budget for arbitrary
-partitions}\label{a-complete-record-information-budget-for-arbitrary-partitions}}
+partitions}\label{a-complete-record-information-budget-for-arbitrary-partitions}
 
 For any fixed, force-independent partition \(0=t_0<\cdots<t_n=\tau\),
 \(h_i=t_i-t_{i-1}\), use independent fresh memories with variances
@@ -1451,9 +1438,8 @@ The following calculation tests three-cell blocking in both
 parenthesizations, carrying relative modes to the terminal projection.
 It identifies the timing and noise data the coarse channel retains.
 
-\hypertarget{an-associative-descriptor-with-the-physical-kicks-retained}{%
 \subsubsection{8.7 An associative descriptor with the physical kicks
-retained}\label{an-associative-descriptor-with-the-physical-kicks-retained}}
+retained}\label{an-associative-descriptor-with-the-physical-kicks-retained}
 
 Keep §8.6's fixed, force-independent partition and jointly Gaussian
 product preparation. The body is centred initially, with \(A,B>0\) and
@@ -1492,10 +1478,9 @@ the total duration: the composite retains the daughter timing and noise
 data. Arbitrary triples are not asserted to have a one-memory
 Hamiltonian realization.
 
-\hypertarget{the-three-cell-relative-residue-and-the-necessary-coarse-data}{%
 \subsubsection{8.8 The three-cell relative residue and the necessary
 coarse
-data}\label{the-three-cell-relative-residue-and-the-necessary-coarse-data}}
+data}\label{the-three-cell-relative-residue-and-the-necessary-coarse-data}
 
 For a block of duration \(H\), put \(\omega_i=h_i/H\) and define
 \[\begin{aligned}
@@ -1561,10 +1546,9 @@ Equations (65)--(66) retain the full necessary timing, force-response
 and noise data. At \(\kappa=0\) the residue vanishes and the
 timing-dependent mean difference remains.
 
-\hypertarget{a-partition-independent-limit-of-the-projected-terminal-channel}{%
 \subsubsection{8.9 A partition-independent limit of the projected
 terminal
-channel}\label{a-partition-independent-limit-of-the-projected-terminal-channel}}
+channel}\label{a-partition-independent-limit-of-the-projected-terminal-channel}
 
 Fix \(\tau,m,r,A,B,\kappa\) and the deterministic force \(F\). The
 partition may be arbitrary; set \(\delta=\max_i h_i\). Put
@@ -1701,10 +1685,9 @@ bound retains the centred initial-body assumption. The posterior limit
 uses covariance convergence and a positive record variance, rather than
 TV convergence alone.
 
-\hypertarget{a-physical-adaptive-gain-controller-with-complete-record-closure}{%
 \subsubsection{8.10 A physical adaptive-gain controller with
 complete-record
-closure}\label{a-physical-adaptive-gain-controller-with-complete-record-closure}}
+closure}\label{a-physical-adaptive-gain-controller-with-complete-record-closure}
 
 Retain §8.6's force-independent partition and product Gaussian
 preparation, including the centred initial body. For each pulse choose a
@@ -1828,9 +1811,8 @@ and global propagation under refinement remain open. The initial
 positive preparation law, universality and radiation calibration remain
 separate obligations.
 
-\hypertarget{inserting-a-cell-into-a-physical-weighted-record-controller}{%
 \subsubsection{8.11 Inserting a cell into a physical weighted-record
-controller}\label{inserting-a-cell-into-a-physical-weighted-record-controller}}
+controller}\label{inserting-a-cell-into-a-physical-weighted-record-controller}
 
 Prescribe one force-independent function \(g:\mathbb R\to\mathbb R\) for
 every partition, with \(g\in C^2\), \(|g|\le G\), \(|g'|\le L\),
@@ -1976,9 +1958,8 @@ with cell count, a discarded relative kick, or an assumed limiting
 noise-driven curve. Adaptive timing, positivity, universality and scale
 calibration remain separate.
 
-\hypertarget{a-continuous-bodyrecord-limit-from-finite-physical-refinements}{%
 \subsubsection{8.12 A continuous body--record limit from finite physical
-refinements}\label{a-continuous-bodyrecord-limit-from-finite-physical-refinements}}
+refinements}\label{a-continuous-bodyrecord-limit-from-finite-physical-refinements}
 
 Retain the fixed apparatus family of §8.11, including one prescribed
 \(g\), a fixed duration, and force-independent deterministic partitions.
@@ -2000,9 +1981,10 @@ curve is assumed.
 
 For two partitions take their finite common refinement \(\varrho\), with
 atomic durations \(\epsilon_e\). Prepare independent variables
-\(\Lambda_e,\xi_e\) of variances \(\kappa^2r\epsilon_e, \epsilon_e/r\)
-and bracket \(\{\xi_e,\Lambda_f\}=\epsilon_e\delta_{ef}\). For a parent
-cell \(I\) of length \(H\), its apparatus pair is
+\(\Lambda_e,\xi_e\) of variances \(\kappa^2r\epsilon_e,
+\epsilon_e/r\) and bracket
+\(\{\xi_e,\Lambda_f\}=\epsilon_e\delta_{ef}\). For a parent cell \(I\)
+of length \(H\), its apparatus pair is
 \[Z_I=H^{-1}\sum_{e\subset I}\xi_e,\qquad
 \Lambda_I=\sum_{e\subset I}\Lambda_e.\tag{84}\] It has exactly the
 original independent saturated Gaussian preparation within each
@@ -2021,8 +2003,8 @@ uses only the bounded predictable gains.
 Distribute each clipped parent kick over its atoms with the same
 parent-left gain, and drift an auxiliary position under these atomized
 kicks. Distribute its record increment as
-\(\epsilon_e g(Y_{I,\rm left})\operatorname{clip}_R(Q_{I,\rm right}) +\xi_e\).
-The right position before the parent kick is predicted by
+\(\epsilon_e g(Y_{I,\rm left})\operatorname{clip}_R(Q_{I,\rm right})
++\xi_e\). The right position before the parent kick is predicted by
 \(Q_{I,\rm left}+HP_{I,\rm left}/m+FH^2/(2m)\), determined entirely at
 parent left. All these coefficients are predictable in the atomic
 filtration. The auxiliary momentum and record match the clipped parent
@@ -2171,9 +2153,8 @@ and the construction in probability were checked. This establishes a
 continuous body--record law from the supplied pointer preparations, with
 physical kicks retained at every finite level.
 
-\hypertarget{posterior-closure-under-the-entire-limiting-record}{%
 \subsubsection{8.13 Posterior closure under the entire limiting
-record}\label{posterior-closure-under-the-entire-limiting-record}}
+record}\label{posterior-closure-under-the-entire-limiting-record}
 
 The limiting posterior need not be Gaussian for its floor to survive.
 The following covariance statement supplies the needed closure.
@@ -2217,11 +2198,11 @@ positive. Its determinant is
 
 The integrability requirement has content. With dimensionless
 \(\kappa=1\) and a constant record, let \(X_n=0\) with probability
-\(1-1/n\), and give each of \(\pm\sqrt{2n}\,e_1, \pm\sqrt{2n}\,e_2\)
-probability \(1/(4n)\). Its covariance is \(I\), but its weak limit is
-zero. Its fourth moment is \(4n\) and its squared norm is not uniformly
-integrable. Equation (82) prevents this escape of covariance into rare
-tails in the mechanical construction.
+\(1-1/n\), and give each of \(\pm\sqrt{2n}\,e_1,
+\pm\sqrt{2n}\,e_2\) probability \(1/(4n)\). Its covariance is \(I\), but
+its weak limit is zero. Its fourth moment is \(4n\) and its squared norm
+is not uniformly integrable. Equation (82) prevents this escape of
+covariance into rare tails in the mechanical construction.
 
 Apply the proposition with terminal body variables
 \(X_n=(Q_{\pi_n}(\tau),P_{\pi_n}(\tau))\) and
@@ -2250,10 +2231,9 @@ from these finite preparations. Adaptive timing, an independent
 exclusion of \(\kappa=0\), universality and calibration remain separate
 physical obligations.
 
-\hypertarget{the-limiting-momentum-record-and-retained-controller-recoil}{%
 \subsubsection{8.14 The limiting momentum, record and retained
 controller
-recoil}\label{the-limiting-momentum-record-and-retained-controller-recoil}}
+recoil}\label{the-limiting-momentum-record-and-retained-controller-recoil}
 
 The sources in the limiting evolution can be constructed from (84),
 rather than postulating an extra bath. Retain the same fixed policy,
@@ -2385,12 +2365,11 @@ assume a continuous Gaussian posterior filter.
 
 For each fixed deterministic \(t\), choose refinements containing that
 cut and apply §8.13 to the protocol truncated there. Partition
-independence gives
-\(\det\operatorname{Cov}((Q_t,P_t)\mid Y_{[0,t]})\ge\kappa^2\).
-Conditioning a past body on future records is a different question. The
-momentum source has units of momentum, the record source of length times
-time, and (95)--(100) preserve these units. With \(\kappa=\hbar/2\) the
-positive scale is still supplied.
+independence gives \(\det\operatorname{Cov}((Q_t,P_t)\mid
+Y_{[0,t]})\ge\kappa^2\). Conditioning a past body on future records is a
+different question. The momentum source has units of momentum, the
+record source of length times time, and (95)--(100) preserve these
+units. With \(\kappa=\hbar/2\) the positive scale is still supplied.
 
 \textbf{Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT with the
 filtration and generalized-field qualifications above.} The source
@@ -2400,9 +2379,8 @@ finite determinant update were checked.
 Section 8.15 tests that mechanism under one smooth nonlinear body copy.
 The affine-body-copy theorem above keeps its stated scope.
 
-\hypertarget{a-nonlinear-copy-isolates-the-missing-curvature-contribution}{%
 \subsubsection{8.15 A nonlinear copy isolates the missing curvature
-contribution}\label{a-nonlinear-copy-isolates-the-missing-curvature-contribution}}
+contribution}\label{a-nonlinear-copy-isolates-the-missing-curvature-contribution}
 
 The preceding closure theorem permits nonlinear feedback from old
 records but copies the current body \textbf{linearly}. Test an extension
@@ -2539,10 +2517,9 @@ Section 8.16 derives the exact finite correction and tests its classical
 transition-kernel interpretation. Deriving positive action from the
 supplied quantum reference would remain circular.
 
-\hypertarget{the-finite-generator-changes-conditional-momentum-not-the-record}{%
 \subsubsection{8.16 The finite generator changes conditional momentum,
 not the
-record}\label{the-finite-generator-changes-conditional-momentum-not-the-record}}
+record}\label{the-finite-generator-changes-conditional-momentum-not-the-record}
 
 Retain the quadratic copy and supplied \(\hbar=2\kappa>0\) of §8.15. Let
 \(s\) be a dimensionless pulse strength and
@@ -2635,8 +2612,237 @@ derive, or if a zero-coefficient classical branch satisfies the same
 premises. This replaces the proposed universal Gaussian classical noise
 law, rather than weakening the affine result.
 
-\hypertarget{consequence-for-state}{%
-\subsection{9. Consequence for STATE}\label{consequence-for-state}}
+\subsubsection{8.17 Weak nonlinear recording fails under every
+subdivision}\label{weak-nonlinear-recording-fails-under-every-subdivision}
+
+Sharp terminal precision was inessential to §8.15's failure. The
+following canonical pulse family has exact composition at every
+measurement exposure, including arbitrarily weak copies. There is
+\textbf{no free body drift between the copies}. The parameter \(T\) is
+cumulative measurement exposure in the pointer preparation below; this
+is a controlled recording model, not a finite-mass free-flight limit. It
+tests the nonlinear recording extension already proposed.
+
+Fix \(A,r,q_0,\kappa>0\) and a finite partition with \(h_i>0\),
+\(\sum_i h_i=T\). Prepare independent Gaussians \[\begin{aligned}
+Q&\sim N(0,A),&P&\sim N(0,\kappa^2/A),\\
+Z_i&\sim N(0,(rh_i)^{-1}),&
+\Lambda_i&\sim N(0,\kappa^2rh_i).
+\end{aligned}\] Every pointer pair separately saturates the supplied
+covariance floor. Its coordinate variance diverges as
+\(h_i\downarrow0\), so the fine copies are weak. Apply the exact
+canonical pulse \(\mathcal G_i=f(Q)\Lambda_i\), \(f(q)=q^2/(2q_0)\), and
+retain every coordinate reading \(R_i=Z_i+f(Q)\). All conjugates remain
+isolated. The terminal body and coarse pointer variables are
+\[\begin{aligned}
+P_T&=P-f'(Q)L_T,&L_T&=\sum_i\Lambda_i,\\
+Y_T&=\sum_i h_iR_i=T f(Q)+T\bar Z,&
+\bar Z&=T^{-1}\sum_i h_iZ_i,\\
+\operatorname{Var}\bar Z&=(rT)^{-1},&
+\operatorname{Var}L_T&=\kappa^2rT,\qquad \{\bar Z,L_T\}=1.
+\end{aligned}\tag{110}\] The coarse pair is independent of the initial
+body and has independent coordinate and conjugate. Its variance product
+is again \(\kappa^2\). The body momentum includes every impulse; it
+Poisson-commutes with each retained \(R_i\).
+
+\textbf{Exact complete-record sufficiency.} At a fixed record vector,
+\[\prod_i p(R_i\mid Q)\ \propto\
+ \exp\left[rY_Tf(Q)-\frac{rT}{2}f(Q)^2\right].\tag{111}\] The omitted
+factor is independent of \(Q\). Every residual coordinate
+\(R_i-Y_T/T=Z_i-\bar Z\) is independent of \((Q,P,L_T,\bar Z)\): its
+covariance with \(\bar Z\) is \(1/(rT)-1/(rT)=0\), and the pointer
+coordinate law is Gaussian. Thus the entire vector and its sufficient
+statistic \(Y_T\) give exactly the same conditional body law. This is
+sufficient-statistic compression of a declared complete record, rather
+than discarding informative data.
+
+The independent source completion of §8.14 gives continuous \(L,N\) with
+variances \(\kappa^2rt,t/r\). Here the limiting law is simply
+\[Y_t=t f(Q)+N_t,\qquad P_t=P-f'(Q)L_t.\tag{112}\] At a fixed \(T>0\),
+the bridge \(Y_t-(t/T)Y_T=N_t-(t/T)N_T\) is independent of
+\((Q,P,L_T,Y_T)\). Zero Gaussian covariance proves this first for
+finitely many bridge times; continuity and a countable dense set extend
+it to the full path. Consequently the entire limiting coordinate record
+\(Y_{[0,T]}\) gives the same posterior as \(Y_T\). Arbitrary partitions,
+nested or not, have the same terminal law by (110)--(111).
+
+\textbf{Proposition 15 (refinement-invariant weak-copy obstruction).}
+Put \[s=\frac{A\sqrt{rT}}{q_0},\qquad
+z=\sqrt{r/T}\,Y_T,\qquad x=Q/\sqrt A.\] If \(m=E[x^2\mid z]\), then
+\[\begin{aligned}
+\rho_z(x)&\ \propto\
+ e^{-(1-sz)x^2/2-s^2x^4/8},\\
+\frac{\det\operatorname{Cov}((Q,P_T)\mid Y_{[0,T]})}{\kappa^2}
+ &=m+s^2m^2
+ \le1-\frac{s}{(1+s)^2}<1\quad(z\le-1).
+\end{aligned}\tag{113}\] The inequality holds for every \(T>0\). For
+\(0<s\le1\) its failure event has probability at least
+\[c_0=[2\Phi(1)-1]\Phi(-3/2)
+ \ge\frac{e^{-5/2}}{2\pi}>0,\tag{114}\] uniformly in exposure and
+subdivision. Here \(\Phi\) is the standard normal distribution function.
+
+\emph{Proof.} The posterior in (113) is (111) times the initial
+Gaussian. It is even. Initial \(P\) and \(L_T\) are independent of that
+posterior, so conditional momentum mean and cross covariance vanish,
+while \[\operatorname{Var}(P_T\mid z)
+=\kappa^2/A+\kappa^2rT A m/q_0^2.\] Multiplication by
+\(\operatorname{Var}(Q\mid z)=Am\) proves the determinant identity. For
+\(z\le-1\), compare the posterior with the Gaussian of precision
+\(1-sz\ge1+s\). Reweighting by \(e^{-s^2x^4/8}\) decreases its second
+moment: the covariance of \(x^2\) with this decreasing function of
+\(x^2\) is nonpositive. Thus \(m\le(1-sz)^{-1}\le(1+s)^{-1}\).
+Substitute into the increasing function \(m+s^2m^2\) to obtain (113).
+
+The actual record is \(z=\xi+(s/2)X^2\), with independent standard
+normal \(\xi,X\). If \(s\le1\), the event \(\{|X|\le1,\ \xi\le-3/2\}\)
+implies \(z\le-1\) and has probability \(c_0\). Finally
+\(2\Phi(1)-1\ge2\varphi(1)\) and \(\Phi(-3/2)\ge\frac12\varphi(2)\), by
+integrating the standard normal density \(\varphi\) on \([-1,1]\) and
+\([-2,-3/2]\). Their product gives the explicit lower bound in (114).
+\(\square\)
+
+The failure approaches the saturated boundary as \(T\downarrow0\); its
+probability does not approach zero in this model. The determinant
+deficit is of order \(\sqrt T\) on a fixed negative-innovation interval,
+while independent momentum recoil variance is of order \(T\). The next
+calculation establishes that this mechanism also occurs for bounded
+copies, without relying on the quadratic tail.
+
+\textbf{Proposition 16 (bounded curvature test, with constants).} Let
+\(f\in C^2(\mathbb R)\) be bounded, with bounded \(f',f''\). Replace the
+quadratic above by this copy and use \(Q\sim N(\mu,A)\),
+\(P\sim N(0,\kappa^2/A)\). Write \[\begin{aligned}
+g&=f-Ef(Q),& |g|&\le M,\qquad M>0,\\
+U&=(Q-\mu)/\sqrt A,& t&=M\sqrt{rT},\\
+z&=\sqrt{r/T}\,[Y_T-T Ef(Q)],&
+H&=\frac{\operatorname{Cov}(U^2,f(Q))}{M}
+   =\frac{A Ef''(Q)}M,\\
+C_D&=80+\frac{16A E[f'(Q)^2]}{M^2}.&&
+\end{aligned}\tag{115}\] Prior expectations in these constants use the
+stated Gaussian. Uniformly for \(t\le1/4\) and \(|z|\le2\),
+\[\left|\frac{D_T(z)}{\kappa^2}-1-tzH\right|
+ \le C_Dt^2.\tag{116}\] If \(H\ne0\) and
+\(0<t\le\min\{1/4,|H|/(2C_D)\}\), there is a complete-record event of
+probability at least \[c_1=\Phi(7/4)-\Phi(5/4)
+ \ge\frac{e^{-49/32}}{2\sqrt{2\pi}}>0\] on which
+\(D_T/\kappa^2\le1-t|H|/2<1\).
+
+\emph{Proof.} Put \(G=g/M\). The posterior relative to the prior
+Gaussian has weight \(w=e^{tzG-t^2G^2/2}\). For the stated range,
+\[|w-1-tzG|\le6t^2,\qquad Ew\ge1-6t^2\ge5/8,
+\qquad w\le2.\] For the remainder, set \(v=tzG-t^2G^2/2\). Then
+\(|v|\le17t/8\le17/32\), \(e^{|v|}<2\), and
+\(|e^v-1-tzG|\le t^2/2+v^2e^{|v|}/2
+\le(321/64)t^2<6t^2\). Also \(EG=0\) and \(|H|\le1\). Dividing the first
+and second moment numerators by \(Ew\) gives \[|E_zU|\le7t,\qquad
+|E_zU^2-1-tzH|\le30t^2.\] For the second bound, each remainder is at
+most \(6t^2\); the normalization's product with \(tzH\) costs at most
+\(12t^3\), and \((Ew)^{-1}\le2\). Therefore
+\(|\operatorname{Var}_zU-1-tzH|\le79t^2\).
+
+Independence of \(P,L_T\) from the coordinate record still gives zero
+body cross covariance and \[\frac{D_T(z)}{\kappa^2}
+=\operatorname{Var}_zU
+ +\frac{At^2}{M^2}\operatorname{Var}_zU\,E_z[f'(Q)^2].\] The weight
+bounds imply \(\operatorname{Var}_zU\le4\) and \(E_z[f'^2]\le4E[f'^2]\),
+proving (116). Two Gaussian integrations by parts give
+\(\operatorname{Cov}(U^2,f)=A Ef''\), proving (115).
+
+Choose \(z\) of sign opposite to \(H\), with \(1\le|z|\le2\). Equation
+(116) then gives the asserted deficit. Since the actual record is
+\(z=\xi+tG(Q)\), \(|tG|\le1/4\), noise \(\xi\in[5/4,7/4]\) guarantees
+\(z\in[1,2]\); its negative interval guarantees \(z\in[-2,-1]\). Either
+event has probability \(c_1\), independently of \(Q\). Integrating
+\(\varphi\) over the positive interval gives its explicit lower bound.
+\(\square\)
+
+Thus preserving the supplied floor for \textbf{every} Gaussian mean and
+width in this bounded-copy class requires \(Ef''(Q)=0\) for all
+\(\mu,A\). Letting \(A\downarrow0\), boundedness and continuity of
+\(f''\) give \(f''(\mu)=0\) everywhere. Such a bounded affine function
+is constant. Ordinary nonconstant affine copies in the unbounded
+Gaussian family preserve saturation by (99)--(100). The result is a
+local curvature obstruction to extending that mechanism, not an
+assumption that the nonlinear posterior can be restarted as a Gaussian.
+
+\textbf{Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.} Astra
+developed the exact weak-copy witness and complete-history calculation;
+Sol derived the bounded-copy constants, separately checked by Astra.
+Frozen-coordinate exposure and Gaussian ancillary compression are
+essential qualifications.
+
+At \(\kappa=0\), \(P\) and every \(\Lambda_i\) are identically zero in
+this continuation. The record law persists, the determinant is zero, and
+the ordinary positivity restriction is satisfied. Divisions by
+\(\kappa\) in (113), (116) apply only to the supplied positive branch.
+The weak-copy failure selects neither that branch nor its calibration.
+
+\subsubsection{8.18 The score correction and the cost of an unread
+record}\label{the-score-correction-and-the-cost-of-an-unread-record}
+
+Bayes' rule isolates a candidate correction without a quantum operator.
+It does not identify that correction with physical momentum. In the
+frozen-copy family, with \(Q\sim N(\mu,A)\), the posterior score is
+\[\sigma_y(q)=-\partial_q\log\rho_y(q)
+ =\frac{q-\mu}{A}-r[y-Tf(q)]f'(q).\] Gaussian tails in the bounded and
+quadratic cases justify integration by parts. If
+\(I(\rho)=\int\rho(\partial_q\log\rho)^2dq\), then \[\begin{aligned}
+I(\rho_y)&=E_y[\sigma_y^2]=E_y[\sigma_y']\\
+ &=\frac1A+rT E_y[f'^2]-rE_y[(y-Tf)f''],\\
+\kappa^2 I(\rho_y)-\operatorname{Var}_{\rm cl}(P_T\mid y)
+ &=-\kappa^2rE_y[(y-Tf)f''].
+\end{aligned}\tag{117}\] For the quadratic, relative to the prior
+momentum variance \(\kappa^2/A\), this correction is \(-sz+s^2m/2\). Its
+leading term cancels the signed fluctuation in (113). The same
+expression is the quantum-reference compensation in (104), now displayed
+as a posterior score identity. Assigning momentum variance
+\(\kappa^2I(\rho_y)\) is an additional state rule; the covariance floor
+alone does not uniquely select it.
+
+For a smooth positive prior with the requisite finite score and tail
+integrability, the likelihood score has conditional mean zero at fixed
+\(Q\). Expanding the square therefore gives the exact record average
+\[E_Y I(\rho_Y)=I(\rho_0)+rT E_{\rho_0}[f'^2].\tag{118}\] In the
+Gaussian case this equals the average classical momentum variance
+divided by \(\kappa^2\). The curvature correction in (117) has mean zero
+because \(Y_T-Tf(Q)=N_T\) is independent of \(Q\). It has both signs
+when the averaged curvature in (115) is nonzero. Adding another
+independent centred kick to each existing classical posterior can only
+increase its variance and cannot implement this signed redistribution on
+every record.
+
+\textbf{Composition test.} For successive conditionally normalized
+likelihoods, posterior scores add. Their cross terms vanish on record
+averaging, giving the corresponding sum of conditional likelihood Fisher
+informations in (118). This probability identity also holds for an
+adaptive likelihood after its earlier records are fixed; it makes no
+assertion about the adaptive apparatus's unobserved conjugates.
+
+Unread records impose an additional exact obligation. Let a finite
+retained label \(J\) select smooth positive densities \(\rho_j\) with
+probabilities \(w_j\), and put \(\rho=\sum_jw_j\rho_j\). Then
+\(\sigma_\rho(q)=E[\sigma_J(q)\mid Q=q]\), so
+\[\sum_jw_j I(\rho_j)-I(\rho)
+ =\int\rho(q)\operatorname{Var}(\sigma_J(q)\mid Q=q)dq
+ \ge0.\tag{119}\] If each branch has zero momentum mean and assigned
+variance \(\kappa^2 I(\rho_j)\), passive removal of the label retains
+their mixture variance. Resetting it to \(\kappa^2 I(\rho)\) erases
+\(\kappa^2\) times (119). A physical score-based law must carry this
+excess when records become unread. Equations (118)--(119) are written
+score calculations, not a derived recording dynamics or quantum state
+space. Positive distributions can reproduce these selected covariance
+data; the full-state obstruction of §8.16 remains distinct.
+
+The next constructive Newton lemma is a body--apparatus conditioning
+rule that generates (117)'s signed correction and retains (119)'s
+unread-label excess under composition. It depends on a justified rule
+for the terminal readout and conjugate correlations, rather than on
+another independent Gaussian bath. Abandon a proposal that resets the
+excess on forgetting a label, imports the quantum kernel as a premise,
+or leaves the same physical requirements satisfied at zero action. No
+new physical premise has been accepted by the calculations here.
+
+\subsection{9. Consequence for STATE}\label{consequence-for-state}
 
 The Newton task advances from testing stationary radiation to deriving
 an admissible recording law. Shared Gaussian driving, including its
@@ -2677,10 +2883,18 @@ decision-changing nonlinear-copy failure (103), its quantum curvature
 compensation (104) and the explicit Wigner witness (105). Section 8.16
 derives the finite generator term (106), unchanged record law and
 conditional variance correction (107), and the positive-transition
-obstruction (109). The Gaussian preparation restriction cannot be
-promoted to a universal classical recording law by canonical motion
-alone. The next Newton mechanism needs an independent physical rule
-selecting conditioning and its correction under composition. Newton
-remains the current research emphasis. Adaptive timing, independent
-positivity, universality and radiation calibration remain separate.
+obstruction (109). Section 8.17 removes sharp terminal precision as a
+possible repair: the weak nonlinear failure (113)--(114) is exact under
+every subdivision and the complete coordinate-record path. The bounded
+curvature test (115)--(116) identifies its signed \(\sqrt T\) term.
+Section 8.18 isolates the candidate score correction (117) and the
+unread-label excess (119). The Gaussian preparation restriction cannot
+be promoted to a universal classical recording law by canonical motion
+alone. Next Newton lemma: a physical conditioning rule producing that
+signed correction and preserving the excess under composition; reject an
+imported quantum kernel, erasure on forgetting, or an unexcluded zero
+branch. Alternate to separately marked connected gauge components.
+Newton remains the current research emphasis. Adaptive timing,
+independent positivity, universality and radiation calibration remain
+separate.
 \end{document}

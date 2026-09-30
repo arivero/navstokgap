@@ -78,7 +78,16 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Nonlinear terminal-copy test, 2026-09-30 (GPT-6.1 Sol and
+<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Weak nonlinear recording, 2026-09-30 (GPT-6.1 Sol and GPT-6
+Astra; refereed).</strong> Section 8.17 removes the sharp-pointer
+restriction from the nonlinear counterexample: the failure is exact
+under every subdivision, survives the full coordinate-record path and
+has a fixed positive probability at arbitrarily small exposure. A
+bounded-copy calculation isolates the signed first-order curvature term.
+Section 8.18 gives its score identity and the excess variance that a
+proposed score law must retain when records become unread. These
+calculations select no positive action scale.</p>
+<p><strong>Nonlinear terminal-copy test, 2026-09-30 (GPT-6.1 Sol and
 GPT-6 Astra; refereed).</strong> Section 8.15 disproves extension of the
 classical Gaussian-preparation floor to arbitrary smooth nonlinear body
 copies. A quadratic copy, with its full recoil and complete coordinate
@@ -3020,6 +3029,293 @@ Abandon an argument if it imports the quantum kernel it is meant to
 derive, or if a zero-coefficient classical branch satisfies the same
 premises. This replaces the proposed universal Gaussian classical noise
 law, rather than weakening the affine result.</p>
+<h3 id="weak-nonlinear-recording-fails-under-every-subdivision">8.17
+Weak nonlinear recording fails under every subdivision</h3>
+<p>Sharp terminal precision was inessential to §8.15’s failure. The
+following canonical pulse family has exact composition at every
+measurement exposure, including arbitrarily weak copies. There is
+<strong>no free body drift between the copies</strong>. The parameter
+<span class="math inline">\(T\)</span> is cumulative measurement
+exposure in the pointer preparation below; this is a controlled
+recording model, not a finite-mass free-flight limit. It tests the
+nonlinear recording extension already proposed.</p>
+<p>Fix <span class="math inline">\(A,r,q_0,\kappa&gt;0\)</span> and a
+finite partition with <span class="math inline">\(h_i&gt;0\)</span>,
+<span class="math inline">\(\sum_i h_i=T\)</span>. Prepare independent
+Gaussians <span class="math display">\[\begin{aligned}
+Q&amp;\sim N(0,A),&amp;P&amp;\sim N(0,\kappa^2/A),\\
+Z_i&amp;\sim N(0,(rh_i)^{-1}),&amp;
+\Lambda_i&amp;\sim N(0,\kappa^2rh_i).
+\end{aligned}\]</span> Every pointer pair separately saturates the
+supplied covariance floor. Its coordinate variance diverges as <span
+class="math inline">\(h_i\downarrow0\)</span>, so the fine copies are
+weak. Apply the exact canonical pulse <span
+class="math inline">\(\mathcal G_i=f(Q)\Lambda_i\)</span>, <span
+class="math inline">\(f(q)=q^2/(2q_0)\)</span>, and retain every
+coordinate reading <span class="math inline">\(R_i=Z_i+f(Q)\)</span>.
+All conjugates remain isolated. The terminal body and coarse pointer
+variables are <span class="math display">\[\begin{aligned}
+P_T&amp;=P-f&#39;(Q)L_T,&amp;L_T&amp;=\sum_i\Lambda_i,\\
+Y_T&amp;=\sum_i h_iR_i=T f(Q)+T\bar Z,&amp;
+\bar Z&amp;=T^{-1}\sum_i h_iZ_i,\\
+\operatorname{Var}\bar Z&amp;=(rT)^{-1},&amp;
+\operatorname{Var}L_T&amp;=\kappa^2rT,\qquad \{\bar Z,L_T\}=1.
+\end{aligned}\tag{110}\]</span> The coarse pair is independent of the
+initial body and has independent coordinate and conjugate. Its variance
+product is again <span class="math inline">\(\kappa^2\)</span>. The body
+momentum includes every impulse; it Poisson-commutes with each retained
+<span class="math inline">\(R_i\)</span>.</p>
+<p><strong>Exact complete-record sufficiency.</strong> At a fixed record
+vector, <span class="math display">\[\prod_i p(R_i\mid Q)\ \propto\
+\exp\left[rY_Tf(Q)-\frac{rT}{2}f(Q)^2\right].\tag{111}\]</span> The
+omitted factor is independent of <span class="math inline">\(Q\)</span>.
+Every residual coordinate <span class="math inline">\(R_i-Y_T/T=Z_i-\bar
+Z\)</span> is independent of <span class="math inline">\((Q,P,L_T,\bar
+Z)\)</span>: its covariance with <span class="math inline">\(\bar
+Z\)</span> is <span class="math inline">\(1/(rT)-1/(rT)=0\)</span>, and
+the pointer coordinate law is Gaussian. Thus the entire vector and its
+sufficient statistic <span class="math inline">\(Y_T\)</span> give
+exactly the same conditional body law. This is sufficient-statistic
+compression of a declared complete record, rather than discarding
+informative data.</p>
+<p>The independent source completion of §8.14 gives continuous <span
+class="math inline">\(L,N\)</span> with variances <span
+class="math inline">\(\kappa^2rt,t/r\)</span>. Here the limiting law is
+simply <span class="math display">\[Y_t=t f(Q)+N_t,\qquad
+P_t=P-f&#39;(Q)L_t.\tag{112}\]</span> At a fixed <span
+class="math inline">\(T&gt;0\)</span>, the bridge <span
+class="math inline">\(Y_t-(t/T)Y_T=N_t-(t/T)N_T\)</span> is independent
+of <span class="math inline">\((Q,P,L_T,Y_T)\)</span>. Zero Gaussian
+covariance proves this first for finitely many bridge times; continuity
+and a countable dense set extend it to the full path. Consequently the
+entire limiting coordinate record <span
+class="math inline">\(Y_{[0,T]}\)</span> gives the same posterior as
+<span class="math inline">\(Y_T\)</span>. Arbitrary partitions, nested
+or not, have the same terminal law by (110)–(111).</p>
+<p><strong>Proposition 15 (refinement-invariant weak-copy
+obstruction).</strong> Put <span
+class="math display">\[s=\frac{A\sqrt{rT}}{q_0},\qquad
+z=\sqrt{r/T}\,Y_T,\qquad x=Q/\sqrt A.\]</span> If <span
+class="math inline">\(m=E[x^2\mid z]\)</span>, then <span
+class="math display">\[\begin{aligned}
+\rho_z(x)&amp;\ \propto\
+e^{-(1-sz)x^2/2-s^2x^4/8},\\
+\frac{\det\operatorname{Cov}((Q,P_T)\mid Y_{[0,T]})}{\kappa^2}
+&amp;=m+s^2m^2
+\le1-\frac{s}{(1+s)^2}&lt;1\quad(z\le-1).
+\end{aligned}\tag{113}\]</span> The inequality holds for every <span
+class="math inline">\(T&gt;0\)</span>. For <span
+class="math inline">\(0&lt;s\le1\)</span> its failure event has
+probability at least <span
+class="math display">\[c_0=[2\Phi(1)-1]\Phi(-3/2)
+\ge\frac{e^{-5/2}}{2\pi}&gt;0,\tag{114}\]</span> uniformly in exposure
+and subdivision. Here <span class="math inline">\(\Phi\)</span> is the
+standard normal distribution function.</p>
+<p><em>Proof.</em> The posterior in (113) is (111) times the initial
+Gaussian. It is even. Initial <span class="math inline">\(P\)</span> and
+<span class="math inline">\(L_T\)</span> are independent of that
+posterior, so conditional momentum mean and cross covariance vanish,
+while <span class="math display">\[\operatorname{Var}(P_T\mid z)
+=\kappa^2/A+\kappa^2rT A m/q_0^2.\]</span> Multiplication by <span
+class="math inline">\(\operatorname{Var}(Q\mid z)=Am\)</span> proves the
+determinant identity. For <span class="math inline">\(z\le-1\)</span>,
+compare the posterior with the Gaussian of precision <span
+class="math inline">\(1-sz\ge1+s\)</span>. Reweighting by <span
+class="math inline">\(e^{-s^2x^4/8}\)</span> decreases its second
+moment: the covariance of <span class="math inline">\(x^2\)</span> with
+this decreasing function of <span class="math inline">\(x^2\)</span> is
+nonpositive. Thus <span
+class="math inline">\(m\le(1-sz)^{-1}\le(1+s)^{-1}\)</span>. Substitute
+into the increasing function <span
+class="math inline">\(m+s^2m^2\)</span> to obtain (113).</p>
+<p>The actual record is <span
+class="math inline">\(z=\xi+(s/2)X^2\)</span>, with independent standard
+normal <span class="math inline">\(\xi,X\)</span>. If <span
+class="math inline">\(s\le1\)</span>, the event <span
+class="math inline">\(\{|X|\le1,\ \xi\le-3/2\}\)</span> implies <span
+class="math inline">\(z\le-1\)</span> and has probability <span
+class="math inline">\(c_0\)</span>. Finally <span
+class="math inline">\(2\Phi(1)-1\ge2\varphi(1)\)</span> and <span
+class="math inline">\(\Phi(-3/2)\ge\frac12\varphi(2)\)</span>, by
+integrating the standard normal density <span
+class="math inline">\(\varphi\)</span> on <span
+class="math inline">\([-1,1]\)</span> and <span
+class="math inline">\([-2,-3/2]\)</span>. Their product gives the
+explicit lower bound in (114). <span
+class="math inline">\(\square\)</span></p>
+<p>The failure approaches the saturated boundary as <span
+class="math inline">\(T\downarrow0\)</span>; its probability does not
+approach zero in this model. The determinant deficit is of order <span
+class="math inline">\(\sqrt T\)</span> on a fixed negative-innovation
+interval, while independent momentum recoil variance is of order <span
+class="math inline">\(T\)</span>. The next calculation establishes that
+this mechanism also occurs for bounded copies, without relying on the
+quadratic tail.</p>
+<p><strong>Proposition 16 (bounded curvature test, with
+constants).</strong> Let <span class="math inline">\(f\in C^2(\mathbb
+R)\)</span> be bounded, with bounded <span
+class="math inline">\(f&#39;,f&#39;&#39;\)</span>. Replace the quadratic
+above by this copy and use <span class="math inline">\(Q\sim
+N(\mu,A)\)</span>, <span class="math inline">\(P\sim
+N(0,\kappa^2/A)\)</span>. Write <span
+class="math display">\[\begin{aligned}
+g&amp;=f-Ef(Q),&amp; |g|&amp;\le M,\qquad M&gt;0,\\
+U&amp;=(Q-\mu)/\sqrt A,&amp; t&amp;=M\sqrt{rT},\\
+z&amp;=\sqrt{r/T}\,[Y_T-T Ef(Q)],&amp;
+H&amp;=\frac{\operatorname{Cov}(U^2,f(Q))}{M}
+   =\frac{A Ef&#39;&#39;(Q)}M,\\
+C_D&amp;=80+\frac{16A E[f&#39;(Q)^2]}{M^2}.&amp;&amp;
+\end{aligned}\tag{115}\]</span> Prior expectations in these constants
+use the stated Gaussian. Uniformly for <span
+class="math inline">\(t\le1/4\)</span> and <span
+class="math inline">\(|z|\le2\)</span>, <span
+class="math display">\[\left|\frac{D_T(z)}{\kappa^2}-1-tzH\right|
+\le C_Dt^2.\tag{116}\]</span> If <span
+class="math inline">\(H\ne0\)</span> and <span
+class="math inline">\(0&lt;t\le\min\{1/4,|H|/(2C_D)\}\)</span>, there is
+a complete-record event of probability at least <span
+class="math display">\[c_1=\Phi(7/4)-\Phi(5/4)
+\ge\frac{e^{-49/32}}{2\sqrt{2\pi}}&gt;0\]</span> on which <span
+class="math inline">\(D_T/\kappa^2\le1-t|H|/2&lt;1\)</span>.</p>
+<p><em>Proof.</em> Put <span class="math inline">\(G=g/M\)</span>. The
+posterior relative to the prior Gaussian has weight <span
+class="math inline">\(w=e^{tzG-t^2G^2/2}\)</span>. For the stated range,
+<span class="math display">\[|w-1-tzG|\le6t^2,\qquad Ew\ge1-6t^2\ge5/8,
+\qquad w\le2.\]</span> For the remainder, set <span
+class="math inline">\(v=tzG-t^2G^2/2\)</span>. Then <span
+class="math inline">\(|v|\le17t/8\le17/32\)</span>, <span
+class="math inline">\(e^{|v|}&lt;2\)</span>, and <span
+class="math inline">\(|e^v-1-tzG|\le t^2/2+v^2e^{|v|}/2
+\le(321/64)t^2&lt;6t^2\)</span>. Also <span
+class="math inline">\(EG=0\)</span> and <span
+class="math inline">\(|H|\le1\)</span>. Dividing the first and second
+moment numerators by <span class="math inline">\(Ew\)</span> gives <span
+class="math display">\[|E_zU|\le7t,\qquad
+|E_zU^2-1-tzH|\le30t^2.\]</span> For the second bound, each remainder is
+at most <span class="math inline">\(6t^2\)</span>; the normalization’s
+product with <span class="math inline">\(tzH\)</span> costs at most
+<span class="math inline">\(12t^3\)</span>, and <span
+class="math inline">\((Ew)^{-1}\le2\)</span>. Therefore <span
+class="math inline">\(|\operatorname{Var}_zU-1-tzH|\le79t^2\)</span>.</p>
+<p>Independence of <span class="math inline">\(P,L_T\)</span> from the
+coordinate record still gives zero body cross covariance and <span
+class="math display">\[\frac{D_T(z)}{\kappa^2}
+=\operatorname{Var}_zU
++\frac{At^2}{M^2}\operatorname{Var}_zU\,E_z[f&#39;(Q)^2].\]</span> The
+weight bounds imply <span
+class="math inline">\(\operatorname{Var}_zU\le4\)</span> and <span
+class="math inline">\(E_z[f&#39;^2]\le4E[f&#39;^2]\)</span>, proving
+(116). Two Gaussian integrations by parts give <span
+class="math inline">\(\operatorname{Cov}(U^2,f)=A Ef&#39;&#39;\)</span>,
+proving (115).</p>
+<p>Choose <span class="math inline">\(z\)</span> of sign opposite to
+<span class="math inline">\(H\)</span>, with <span
+class="math inline">\(1\le|z|\le2\)</span>. Equation (116) then gives
+the asserted deficit. Since the actual record is <span
+class="math inline">\(z=\xi+tG(Q)\)</span>, <span
+class="math inline">\(|tG|\le1/4\)</span>, noise <span
+class="math inline">\(\xi\in[5/4,7/4]\)</span> guarantees <span
+class="math inline">\(z\in[1,2]\)</span>; its negative interval
+guarantees <span class="math inline">\(z\in[-2,-1]\)</span>. Either
+event has probability <span class="math inline">\(c_1\)</span>,
+independently of <span class="math inline">\(Q\)</span>. Integrating
+<span class="math inline">\(\varphi\)</span> over the positive interval
+gives its explicit lower bound. <span
+class="math inline">\(\square\)</span></p>
+<p>Thus preserving the supplied floor for <strong>every</strong>
+Gaussian mean and width in this bounded-copy class requires <span
+class="math inline">\(Ef&#39;&#39;(Q)=0\)</span> for all <span
+class="math inline">\(\mu,A\)</span>. Letting <span
+class="math inline">\(A\downarrow0\)</span>, boundedness and continuity
+of <span class="math inline">\(f&#39;&#39;\)</span> give <span
+class="math inline">\(f&#39;&#39;(\mu)=0\)</span> everywhere. Such a
+bounded affine function is constant. Ordinary nonconstant affine copies
+in the unbounded Gaussian family preserve saturation by (99)–(100). The
+result is a local curvature obstruction to extending that mechanism, not
+an assumption that the nonlinear posterior can be restarted as a
+Gaussian.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.</strong>
+Astra developed the exact weak-copy witness and complete-history
+calculation; Sol derived the bounded-copy constants, separately checked
+by Astra. Frozen-coordinate exposure and Gaussian ancillary compression
+are essential qualifications.</p>
+<p>At <span class="math inline">\(\kappa=0\)</span>, <span
+class="math inline">\(P\)</span> and every <span
+class="math inline">\(\Lambda_i\)</span> are identically zero in this
+continuation. The record law persists, the determinant is zero, and the
+ordinary positivity restriction is satisfied. Divisions by <span
+class="math inline">\(\kappa\)</span> in (113), (116) apply only to the
+supplied positive branch. The weak-copy failure selects neither that
+branch nor its calibration.</p>
+<h3 id="the-score-correction-and-the-cost-of-an-unread-record">8.18 The
+score correction and the cost of an unread record</h3>
+<p>Bayes’ rule isolates a candidate correction without a quantum
+operator. It does not identify that correction with physical momentum.
+In the frozen-copy family, with <span class="math inline">\(Q\sim
+N(\mu,A)\)</span>, the posterior score is <span
+class="math display">\[\sigma_y(q)=-\partial_q\log\rho_y(q)
+=\frac{q-\mu}{A}-r[y-Tf(q)]f&#39;(q).\]</span> Gaussian tails in the
+bounded and quadratic cases justify integration by parts. If <span
+class="math inline">\(I(\rho)=\int\rho(\partial_q\log\rho)^2dq\)</span>,
+then <span class="math display">\[\begin{aligned}
+I(\rho_y)&amp;=E_y[\sigma_y^2]=E_y[\sigma_y&#39;]\\
+&amp;=\frac1A+rT E_y[f&#39;^2]-rE_y[(y-Tf)f&#39;&#39;],\\
+\kappa^2 I(\rho_y)-\operatorname{Var}_{\rm cl}(P_T\mid y)
+&amp;=-\kappa^2rE_y[(y-Tf)f&#39;&#39;].
+\end{aligned}\tag{117}\]</span> For the quadratic, relative to the prior
+momentum variance <span class="math inline">\(\kappa^2/A\)</span>, this
+correction is <span class="math inline">\(-sz+s^2m/2\)</span>. Its
+leading term cancels the signed fluctuation in (113). The same
+expression is the quantum-reference compensation in (104), now displayed
+as a posterior score identity. Assigning momentum variance <span
+class="math inline">\(\kappa^2I(\rho_y)\)</span> is an additional state
+rule; the covariance floor alone does not uniquely select it.</p>
+<p>For a smooth positive prior with the requisite finite score and tail
+integrability, the likelihood score has conditional mean zero at fixed
+<span class="math inline">\(Q\)</span>. Expanding the square therefore
+gives the exact record average <span class="math display">\[E_Y
+I(\rho_Y)=I(\rho_0)+rT E_{\rho_0}[f&#39;^2].\tag{118}\]</span> In the
+Gaussian case this equals the average classical momentum variance
+divided by <span class="math inline">\(\kappa^2\)</span>. The curvature
+correction in (117) has mean zero because <span
+class="math inline">\(Y_T-Tf(Q)=N_T\)</span> is independent of <span
+class="math inline">\(Q\)</span>. It has both signs when the averaged
+curvature in (115) is nonzero. Adding another independent centred kick
+to each existing classical posterior can only increase its variance and
+cannot implement this signed redistribution on every record.</p>
+<p><strong>Composition test.</strong> For successive conditionally
+normalized likelihoods, posterior scores add. Their cross terms vanish
+on record averaging, giving the corresponding sum of conditional
+likelihood Fisher informations in (118). This probability identity also
+holds for an adaptive likelihood after its earlier records are fixed; it
+makes no assertion about the adaptive apparatus’s unobserved
+conjugates.</p>
+<p>Unread records impose an additional exact obligation. Let a finite
+retained label <span class="math inline">\(J\)</span> select smooth
+positive densities <span class="math inline">\(\rho_j\)</span> with
+probabilities <span class="math inline">\(w_j\)</span>, and put <span
+class="math inline">\(\rho=\sum_jw_j\rho_j\)</span>. Then <span
+class="math inline">\(\sigma_\rho(q)=E[\sigma_J(q)\mid Q=q]\)</span>, so
+<span class="math display">\[\sum_jw_j I(\rho_j)-I(\rho)
+=\int\rho(q)\operatorname{Var}(\sigma_J(q)\mid Q=q)dq
+\ge0.\tag{119}\]</span> If each branch has zero momentum mean and
+assigned variance <span class="math inline">\(\kappa^2
+I(\rho_j)\)</span>, passive removal of the label retains their mixture
+variance. Resetting it to <span class="math inline">\(\kappa^2
+I(\rho)\)</span> erases <span class="math inline">\(\kappa^2\)</span>
+times (119). A physical score-based law must carry this excess when
+records become unread. Equations (118)–(119) are written score
+calculations, not a derived recording dynamics or quantum state space.
+Positive distributions can reproduce these selected covariance data; the
+full-state obstruction of §8.16 remains distinct.</p>
+<p>The next constructive Newton lemma is a body–apparatus conditioning
+rule that generates (117)’s signed correction and retains (119)’s
+unread-label excess under composition. It depends on a justified rule
+for the terminal readout and conjugate correlations, rather than on
+another independent Gaussian bath. Abandon a proposal that resets the
+excess on forgetting a label, imports the quantum kernel as a premise,
+or leaves the same physical requirements satisfied at zero action. No
+new physical premise has been accepted by the calculations here.</p>
 <h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
@@ -3059,13 +3355,21 @@ survives at zero action. Section 8.15 gives the decision-changing
 nonlinear-copy failure (103), its quantum curvature compensation (104)
 and the explicit Wigner witness (105). Section 8.16 derives the finite
 generator term (106), unchanged record law and conditional variance
-correction (107), and the positive-transition obstruction (109). The
-Gaussian preparation restriction cannot be promoted to a universal
-classical recording law by canonical motion alone. The next Newton
-mechanism needs an independent physical rule selecting conditioning and
-its correction under composition. Newton remains the current research
-emphasis. Adaptive timing, independent positivity, universality and
-radiation calibration remain separate.</p>
+correction (107), and the positive-transition obstruction (109). Section
+8.17 removes sharp terminal precision as a possible repair: the weak
+nonlinear failure (113)–(114) is exact under every subdivision and the
+complete coordinate-record path. The bounded curvature test (115)–(116)
+identifies its signed <span class="math inline">\(\sqrt T\)</span> term.
+Section 8.18 isolates the candidate score correction (117) and the
+unread-label excess (119). The Gaussian preparation restriction cannot
+be promoted to a universal classical recording law by canonical motion
+alone. Next Newton lemma: a physical conditioning rule producing that
+signed correction and preserving the excess under composition; reject an
+imported quantum kernel, erasure on forgetting, or an unexcluded zero
+branch. Alternate to separately marked connected gauge components.
+Newton remains the current research emphasis. Adaptive timing,
+independent positivity, universality and radiation calibration remain
+separate.</p>
 
 </main>
 <footer class="site"><div class="wrap">
