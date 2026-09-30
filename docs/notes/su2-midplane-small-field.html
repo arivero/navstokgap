@@ -79,10 +79,11 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>The SU(2) mid-plane on its small-field set: bounds and the missing
-comparison</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>Latest result, §35 (2026-09-30):</strong> an all-order
-connected bad-component tree bound in the retained-barrier weak
-recoupling strip, with explicit rarity and a decay rate independent of
-order. The physical recoupling value remains open.</p>
+comparison</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su2-midplane-small-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">PDF</a></p><p><strong>Latest result, §36 (2026-09-30):</strong> exact dressed
+hard-core activities satisfy both numerical bounds in (112) in a weak
+recoupling strip, with an explicit stronger heat condition and
+connector-source norm. Physical recoupling and moving-background sources
+remain open.</p>
 <p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong>
 Claim-by-claim review of Claude’s derivation: <strong>A1 ACCEPT</strong>
 (with the inverse notation corrected); <strong>A2 REFINE</strong>
@@ -6811,6 +6812,206 @@ sources (113), recoupling to one, target-covering paths, group-integral
 comparison, <span class="math inline">\(SU(3)\)</span> estimates and
 iteration remain open. Alternate to Newton’s independent nonlinear
 conditioning mechanism.</p>
+<h2 id="exact-dressed-activities-in-the-weak-recoupling-strip">36. Exact
+dressed activities in the weak recoupling strip</h2>
+<p><strong>GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
+refereed by Astra.</strong> The correlated insertion family (109) has an
+exact dressed hard-core representation in the strip below. Its
+activities satisfy both numerical parts of (112), with a uniform
+connector-source norm. Good connecting edges are paid by the face
+reserve, while bad edges carry rarity. This closes a weak-strip dressing
+construction; the physical recoupling and background-source obligations
+persist.</p>
+<h3 id="reference-additional-heat-condition-and-sources">36.1 Reference,
+additional heat condition and sources</h3>
+<p>Use the <span class="math inline">\(J=\varnothing\)</span> singleton
+reference in (125), with <strong>no</strong> on-site barriers already in
+its density. Their insertion factors are <span
+class="math inline">\(f_e=e^{-w_k}-1\)</span>, <span
+class="math inline">\(F_H=\prod_{e\in H}f_e\)</span>, as in (109). They
+remain undifferentiated. Keep §33’s nonlinear face connectors and moment
+assumptions. Let <span class="math inline">\(H\)</span> now range over
+all nonempty connected edge sets in the degree-six graph; selected bad
+families must be compatible.</p>
+<p>Impose the additional condition <span
+class="math inline">\(L=\log(1/p)\ge640\)</span>. It holds, for example,
+if <span class="math inline">\(x=\varepsilon^2/t\ge2736\)</span>: then
+<span class="math inline">\(n=\lfloor3x/8\rfloor-1\ge1025\)</span> and
+<span
+class="math inline">\(L=n\log(16/7)-\log2\ge1024\log2&gt;640\)</span>.
+Fix the face reserve <span class="math inline">\(\eta_f=32\)</span> and
+put <span class="math display">\[\begin{aligned}
+\rho_d&amp;=\rho_0(32)/256,&amp; r_d&amp;=\rho_d/2,\\
+s&amp;=\frac1{256(10+8\mathrm e)},&amp; b&amp;=2s,\\
+q&amp;=p^{1/64},&amp;\zeta&amp;=\frac{q}{1-36q},\\
+\delta_d&amp;=2b+\zeta,&amp;\delta_d&#39;&amp;=e^{\delta_d}\delta_d.
+\end{aligned}\tag{167}\]</span> Here <span
+class="math inline">\(\rho_0(32)\)</span> is (154) with that reserve.
+The constants obey <span class="math display">\[q\le
+e^{-10}&lt;1/16384,\quad \zeta&lt;1/16348,\quad
+b&lt;1/3328,\quad\delta_d&lt;1/1000,\quad\delta_d&#39;&lt;1/999.\]</span>
+The last bound uses <span
+class="math inline">\(e^x\le(1-x)^{-1}\)</span> for <span
+class="math inline">\(0\le x&lt;1\)</span>. The common real strip is
+<span class="math inline">\(0\le u\le r_d\)</span>; complex connector
+sources translate as <span class="math inline">\(v_p=u+z_p\)</span>,
+<span class="math inline">\(|z_p|\le r_d\)</span>. No moving boundary
+background is sourced in this statement.</p>
+<h3 id="all-possible-bad-supports-in-an-exact-mixed-gas">36.2 All
+possible bad supports in an exact mixed gas</h3>
+<p>The ratio being dressed is exactly <span
+class="math display">\[\mathcal R(v)=
+\frac{E_0[e^{-\sum_pv_pK_p}\prod_e(1+f_e)]}
+      {E_0[e^{-\sum_pv_pK_p}]}.
+\]</span> Decomposing each selected bad-edge set into its connected
+components turns the numerator into a sum over compatible families <span
+class="math inline">\(\mathcal H\)</span>, with factors <span
+class="math inline">\(F_H\)</span>. Also expand the ordinary face Mayer
+factors. Group the selected faces and bad supports by coordinate-support
+overlap. Each resulting composite polymer contains internally compatible
+bad supports. Its external incompatibilities are coordinate overlap
+<strong>or</strong> exclusion between bad supports at graph distance at
+most one. These external exclusions enforce precisely the global
+compatibility that was not part of the overlap-component decomposition.
+Product independence of <span class="math inline">\(E_0\)</span> makes
+this mixed gas exact.</p>
+<p>For <span class="math inline">\(m\)</span> faces and total bad size
+<span class="math inline">\(M=\sum_{H\in\mathcal H}|H|\)</span>, joint
+rarity and (158) give the coefficient majorant <span
+class="math display">\[\|w_\gamma\|_{\rho_d}\le a^m p^{M/32},
+\qquad a=256KC\rho_d.\tag{168}\]</span> The joint rarity applies only to
+internally compatible, hence disjoint, bad families. The tree counts
+below may ignore this compatibility to overcount; no rarity estimate is
+applied to overlapping families.</p>
+<p>Retain <span class="math inline">\(e^{32m+8M}\)</span> in the
+activities and use KP size <span class="math inline">\(A=m+M\)</span>.
+The elementary weighted nodes are a face with weight <span
+class="math inline">\(s=ae^{33}\)</span> and a bad support of size <span
+class="math inline">\(h\)</span> with weight <span
+class="math inline">\(v_H=p^{h/32}e^{9h}\)</span>. The rooted-tree proof
+of §35.3 now has the supersolution <span
+class="math inline">\(b\)</span> at faces and <span
+class="math inline">\(q^h\)</span> at bad supports. Indeed the number of
+size-<span class="math inline">\(h\)</span> connected bad sets through
+an edge is at most <span class="math inline">\(36^{h-1}\)</span>, by
+(112)’s traversal count. Therefore the sum of <span
+class="math inline">\(q^h\)</span> through an edge is at most <span
+class="math inline">\(\zeta\)</span>; through a face it is at most <span
+class="math inline">\(4\zeta\)</span>. The recursion inequalities are
+<span class="math display">\[s e^{4b+4\zeta}\le2s=b,\qquad
+v_H e^{2hb}\le q^h.\tag{169}\]</span> They use <span
+class="math inline">\(4b+4\zeta&lt;\log2\)</span> and <span
+class="math inline">\(9+2b&lt;L/64\)</span>.</p>
+<p>A face constituent’s incompatibility sum is at most <span
+class="math inline">\(5b+4\zeta&lt;1\)</span>. A bad <span
+class="math inline">\(H\)</span> has at most <span
+class="math inline">\(2h\)</span> incident faces and at most <span
+class="math inline">\(7h\)</span> edge sites in its closed neighborhood,
+so its sum is at most <span
+class="math inline">\(2hb+7h\zeta&lt;h\)</span>. Union over constituents
+gives the KP inequality with size <span
+class="math inline">\(m+M\)</span>. This proves uniform mixed-gas
+convergence with the stated reserves. Marked fugacities of modulus at
+most one can be included in the same majorant; their physical value one
+is admitted under this heat condition. This is distinct from the face
+recoupling coefficient <span class="math inline">\(u\)</span>, whose
+value one is still outside the strip.</p>
+<h3
+id="connected-logarithms-retain-both-good-and-bad-support-costs">36.3
+Connected logarithms retain both good and bad support costs</h3>
+<p>Subtract the pure-face logarithm from the mixed-gas logarithm.
+Clusters containing no bad support cancel exactly. Group the remaining
+clusters by physical edge support <span class="math inline">\(C\)</span>
+and write <span class="math display">\[\log\mathcal R(v)=\sum_C
+D_C(v).\]</span> Each <span class="math inline">\(C\)</span> is
+connected: coordinate overlap connects constituent supports, and a
+bad-hard-core exclusion joins them at edge-graph distance at most one.
+If <span class="math inline">\(N_f\)</span> counts all face occurrences
+and <span class="math inline">\(M_b\)</span> all bad-support edge
+occurrences, including repeated polymers, then <span
+class="math inline">\(|C|\le4N_f+M_b\)</span>. Thus <span
+class="math inline">\(e^{8|C|}\le e^{32N_f+8M_b}\)</span>.</p>
+<p>Pinning a cluster at a constituent covering an edge <span
+class="math inline">\(e\)</span> and using the KP pointed bound of §34.3
+gives <span class="math display">\[\sup_e\sum_{C\ni
+e}\|D_C\|_{\rho_d}e^{8|C|}
+\le2b+\zeta=\delta_d&lt;1/1000.\tag{170}\]</span> There are two faces
+through <span class="math inline">\(e\)</span> and bad-support rooted
+sums at most <span class="math inline">\(\zeta\)</span>. Multiple
+pinning overcounts, as required for the absolute bound. Restricting to
+clusters containing bad supports only decreases it. In particular <span
+class="math inline">\(\|D_C\|_{\rho_d}\le\delta_d\)</span>. The norm
+retains physical support, including good connecting edges; it has not
+assigned them bad-edge rarity.</p>
+<h3 id="exponentiation-produces-actual-hard-core-activities">36.4
+Exponentiation produces actual hard-core activities</h3>
+<p>At finite volume there are finitely many connected supports <span
+class="math inline">\(C\)</span>. Absolute convergence in (170) gives
+exactly <span class="math display">\[\mathcal R=\prod_C(1+g_C),\qquad
+g_C=e^{D_C}-1.\]</span> In each selected <span
+class="math inline">\(C\)</span>-family, join supports that overlap or
+are adjacent in the edge graph, and take the connected unions <span
+class="math inline">\(H\)</span>. Define <span
+class="math display">\[z_H=\sum_{\substack{\mathcal C\ {\rm connected}\\
+                         \cup_{C\in\mathcal C}C=H}}
+             \prod_{C\in\mathcal C}g_C.\]</span> Each support <span
+class="math inline">\(C\)</span> is selected at most once. Connected
+components are unique and their unions are compatible, so this gives the
+exact hard-core representation <span class="math display">\[\mathcal
+R=\sum_{\mathcal H\ {\rm compatible}}
+                    \prod_{H\in\mathcal H}z_H.\tag{171}\]</span> It is
+not merely a representation of the connected logarithm.</p>
+<p>For the norm bound, <span
+class="math inline">\(\|g_C\|\le\|D_C\|e^{\|D_C\|}\)</span> and (170)
+imply <span class="math display">\[\sup_e\sum_{C\ni
+e}\|g_C\|_{\rho_d}e^{7.5|C|}
+\le e^{\delta_d}\delta_d=\delta_d&#39;.\]</span> Apply the rooted-tree
+recursion to support objects <span class="math inline">\(C\)</span>,
+with base weights <span class="math inline">\(\|g_C\|e^{7|C|}\)</span>
+and supersolution <span
+class="math inline">\(T_C=\|g_C\|e^{7.5|C|}\)</span>. Its neighboring
+sums cost at most <span
+class="math inline">\(7|C|\delta_d&#39;&lt;|C|/2\)</span>, since
+adjacency is covered by the closed edge neighborhood. This proves the
+supersolution inequality. Root each selected connected family at a
+member containing <span class="math inline">\(e\)</span> and use <span
+class="math inline">\(e^{7|\cup C|}\le\prod_C e^{7|C|}\)</span>. The
+animal sum then gives <span class="math display">\[\sup_e\sum_{H\ni
+e}\|z_H\|_{\rho_d}e^{7|H|}
+\le\delta_d&#39;&lt;1/999.\tag{172}\]</span> No size factor, factorial
+or volume factor has been suppressed.</p>
+<p>Consequently <span class="math inline">\(\|z_H\|_{\rho_d}\le
+e^{-7|H|}\)</span>, and (112) holds in this strip with <span
+class="math inline">\(\eta=1\)</span>, <span
+class="math inline">\(b_*=e^{-7}\)</span>: <span
+class="math display">\[\sup_e\sum_{H\ni
+e}\|z_H\|_{\rho_d}e^{2|H|}&lt;1/7,
+\qquad e^2b_*=e^{-5}&lt;1/43.\]</span> Translation to the real base
+costs half the connector radius, as above. The bounds are uniform in
+volume, the admitted heat times and barrier approximation. Moment
+domination and bounded insertions justify the barrier limit at fixed
+volume. Constants are dimensionless after the <span
+class="math inline">\(t\)</span> scaling; no group-dependent premise has
+been transferred to <span class="math inline">\(SU(3)\)</span>.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.</strong>
+Both exact gas representations, the new exclusion costs, connected
+support grouping, weighted tree supersolutions and both numerical parts
+of (112) were checked. Connector sources must be distinguished from
+background sources.</p>
+<h3 id="consequence-for-state-20">Consequence for STATE</h3>
+<p>Weak-strip dressing is complete under <span
+class="math inline">\(L\ge640\)</span>: (171)–(172) give actual
+hard-core activities and both numerical bounds in (112), with good and
+bad support costs explicit. Next gauge lemma: source the fixed boundary
+background and control the subtracted terms in (113), first in this
+strip. It depends on the dressed norm and a moving-saddle/source budget
+absent from the present proof; abandon a source construction that
+differentiates a barrier or assumes the missing contact cancellation.
+Physical recoupling to one, small-field boundary scores and truncation
+control, target-covering paths, group-integral comparison, <span
+class="math inline">\(SU(3)\)</span> estimates and iteration remain
+open. Alternate to Newton’s physical preparation-and-record history
+rule.</p>
 
 </main>
 <footer class="site"><div class="wrap">
