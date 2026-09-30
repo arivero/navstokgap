@@ -90,7 +90,10 @@ calculations select no positive action scale. Section 8.19 tests the
 proposed local state data against free evolution: an explicit two-packet
 witness has identical local jets and scores but different terminal
 coordinate laws. A finite coherence completion closes that supplied
-reference family; its physical origin remains open.</p>
+reference family; its physical origin remains open. Section 8.20 removes
+exact vacuum as a possible repair: positive tails restore exact phase
+reconstruction but leave it nonuniform in a stated local-data metric. An
+additive bridge-phase memory retains the datum.</p>
 <p><strong>Nonlinear terminal-copy test, 2026-09-30 (GPT-6.1 Sol and
 GPT-6 Astra; refereed).</strong> Section 8.15 disproves extension of the
 classical Gaussian-preparation floor to arbitrary smooth nonlinear body
@@ -3457,6 +3460,135 @@ descriptor that identifies (120), or a history rule that simply imports
 propagation used in this test remain supplied; the <span
 class="math inline">\(\kappa=0\)</span> branch has not been
 excluded.</p>
+<h3
+id="positive-tails-restore-reconstruction-not-uniform-stability">8.20
+Positive tails restore reconstruction, not uniform stability</h3>
+<p>The vacuum interval in §8.19 is not essential to loss of uniform
+stability. Retain its supplied <span
+class="math inline">\(\hbar=2\kappa&gt;0\)</span> free reference. Put
+<span class="math inline">\(u=\psi_+\)</span> and choose a normalized
+smooth strictly positive Gaussian <span
+class="math inline">\(g\)</span>. Let <span
+class="math inline">\(\chi\)</span> be smooth, equal to one on the left
+packet and zero on the right, with <span
+class="math inline">\(\operatorname{supp}\chi&#39;\)</span> compactly
+inside their gap. Set <span
+class="math inline">\(M_\chi=\|\chi&#39;\|_\infty\)</span> and <span
+class="math display">\[\begin{aligned}
+n_\epsilon&amp;=\|u+\epsilon g\|_2,&amp;
+r_\epsilon&amp;=(u+\epsilon g)/n_\epsilon,\\
+\psi_{+,\epsilon}&amp;=r_\epsilon,&amp;
+\psi_{-,\epsilon}&amp;=r_\epsilon e^{i\pi\chi},\qquad\epsilon&gt;0.
+\end{aligned}\tag{125}\]</span> Here <span class="math inline">\(1\le
+n_\epsilon\le1+\epsilon\)</span>, since <span
+class="math inline">\(u,g\)</span> are nonnegative. The two densities
+are identical and strictly positive. Their position scores and Fisher
+information are exactly identical and finite.</p>
+<p>The currents and kinetic energies instead satisfy the exact
+identities <span class="math display">\[\begin{aligned}
+j_{-,\epsilon}-j_{+,\epsilon}
+&amp;=\frac{\pi\hbar\epsilon^2}{mn_\epsilon^2}g^2\chi&#39;,\\
+\|j_{-,\epsilon}-j_{+,\epsilon}\|_1
+&amp;\le\frac{\pi\hbar M_\chi}{m}\epsilon^2,\\
+E_{{\rm kin},-,\epsilon}-E_{{\rm kin},+,\epsilon}
+&amp;=\frac{\pi^2\hbar^2\epsilon^2}{2mn_\epsilon^2}
+                  \int g^2(\chi&#39;)^2dq
+\le\frac{\pi^2\hbar^2M_\chi^2}{2m}\epsilon^2.
+\end{aligned}\tag{126}\]</span> Indeed phase derivatives occur only
+where <span class="math inline">\(u\)</span> and all its derivatives
+vanish. Every fixed diagonal kernel jet also differs by <span
+class="math inline">\(O(\epsilon^2)\)</span>. Explicitly, write <span
+class="math inline">\(J_{mn}(\psi)=\psi^{(m)}\overline{\psi}^{(n)}\)</span>
+and let <span class="math inline">\(B_\chi\)</span> contain the compact
+transition region. Then <span
+class="math display">\[\|J_{mn}(\psi_{-,\epsilon})-J_{mn}(\psi_{+,\epsilon})\|_1
+\le\epsilon^2 C_{mn},\]</span> where the finite constant is <span
+class="math display">\[C_{mn}=\left\|1_{B_\chi}\left[
+\partial^m(ge^{i\pi\chi})\partial^n(ge^{-i\pi\chi})
+                 -g^{(m)}g^{(n)}\right]\right\|_1.\]</span> Outside this
+region the phase is constant and cancels in each jet. The same argument
+bounds every fixed finite-order local differential expectation with
+smooth coefficients on that compact region.</p>
+<p><strong>Proposition 18 (failure of uniform local-data
+stability).</strong> On these states use the following bounded metric on
+their local data, with the fixed length <span
+class="math inline">\(d\)</span> from §8.19 supplying units: <span
+class="math display">\[d_{\rm loc}(D,\widetilde D)
+=\min\{1,d^2|I-\widetilde I|\}
++\sum_{m,n\ge0}2^{-m-n-2}
+   \min\{1,d^{m+n}\|J_{mn}-\widetilde J_{mn}\|_1\}.
+\tag{127}\]</span> Density is <span
+class="math inline">\(J_{00}\)</span> and current is determined by <span
+class="math inline">\(J_{10}\)</span>. The paired input distance tends
+to zero as <span class="math inline">\(\epsilon\downarrow0\)</span>. For
+fixed <span class="math inline">\(T\)</span> satisfying §8.19’s time
+bound, put <span
+class="math inline">\(\Delta_T=2dmB^2\cos(1/2)/(\pi\hbar
+T)&gt;0\)</span>, with <span class="math inline">\(B=\int\phi\)</span>.
+Their terminal coordinate laws obey <span
+class="math display">\[\|\rho_{+,\epsilon,T}-\rho_{-,\epsilon,T}\|_{\rm
+TV}
+\ge\Delta_T-4\epsilon\ge\Delta_T/2
+\quad(\epsilon\le\Delta_T/8).\tag{128}\]</span> No uniformly continuous
+decoder from the metric (127) to terminal coordinate laws can reproduce
+the supplied free evolution on this positive-density family.</p>
+<p><em>Proof.</em> Each fixed jet difference tends to zero and the
+summable weights in (127) dominate all terms; the Fisher difference is
+zero. Also <span
+class="math inline">\(\|r_\epsilon-u\|_2\le2\epsilon\)</span> and <span
+class="math inline">\(e^{i\pi\chi}u=\psi_-\)</span>, so <span
+class="math inline">\(\|\psi_{\pm,\epsilon}-\psi_\pm\|_2\le2\epsilon\)</span>.
+Free unitarity preserves this bound. For normalized amplitudes <span
+class="math inline">\(v,w\)</span>, Cauchy–Schwarz gives <span
+class="math display">\[\operatorname{TV}(|v|^2,|w|^2)
+\le\tfrac12\|v-w\|_2\|v+w\|_2\le\|v-w\|_2.\]</span> Triangle
+inequalities with (122) prove (128). The paired distances then
+contradict uniform continuity. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Exact reconstruction is still possible at every positive
+tail.</strong> On a connected strictly positive density, the phase
+difference is <span class="math display">\[\Theta(q_L,q_R)=\frac
+m\hbar\int_{q_L}^{q_R}\frac j\rho\,dq
+=\theta(q_R)-\theta(q_L)\pmod{2\pi}.\tag{129}\]</span> For (125), across
+the gap this remains <span class="math inline">\(-\pi\)</span> in the
+minus state, even though (126)’s unweighted current norm vanishes. Thus
+the result is a failure of uniform stability in the specified metric,
+not exact nonclosure at <span
+class="math inline">\(\epsilon&gt;0\)</span> or discontinuity of
+amplitude evolution. A topology controlling <span
+class="math inline">\(j/\rho\)</span> directly would retain the missing
+information and would distinguish this pair.</p>
+<p>Metric (127) measures a proposed local retained descriptor. It does
+not equal complete-record operational distinguishability over all
+apparatus: a full momentum readout can already distinguish the separated
+packet phases. The result therefore tests the descriptor and its
+uniformity, not a law of continuity stated for complete physical
+records.</p>
+<p>Bridge-phase memory has an exact local insertion law: <span
+class="math display">\[\Theta(a,c)=\Theta(a,b)+\Theta(b,c)\pmod{2\pi}.\]</span>
+Any partition of the bridge gives the same total. Retaining that total
+as preparation memory through the vanishing-tail limit distinguishes the
+two packets after their density and all fixed local jets coalesce. In
+the supplied pure two-packet reference it specifies <span
+class="math inline">\(c=\tfrac12e^{i\Theta(q_L,q_R)}\)</span> in (123).
+This is a concrete refinement-compatible augmentation, not a derived
+physical phase law. The factor <span
+class="math inline">\(m/\hbar\)</span> converts the bridge’s
+velocity–length integral to a dimensionless phase; its scale has not
+been selected independently.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): REFINE,
+incorporated.</strong> The positive-tail bounds were accepted. Exact
+reconstruction at positive density must be kept distinct from uniform
+stability, and a bounded metric, rather than product topology alone,
+must specify uniformity.</p>
+<p>The next physical history model must prepare and carry this additive
+phase datum without extracting it from an arbitrarily small density by
+an assumed exact readout. It must account for its effect at reunion,
+alongside (117)’s curvature and (119)’s unread-label excess. Reject a
+model that forgets the datum during a low-density separation, or merely
+assumes the supplied quantum prediction. This test establishes no
+positive action necessity and changes none of the zero-branch
+obligations.</p>
 <h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
@@ -3505,14 +3637,18 @@ Section 8.18 isolates the candidate score correction (117) and the
 unread-label excess (119). Section 8.19 gives a quantitative free-record
 witness (122) showing that even all local jets and Fisher data omit
 predictive coherence, and closes the two-packet reference with (123).
-The Gaussian preparation restriction cannot be promoted to a universal
-classical recording law by canonical motion alone. Next Newton lemma: a
-physical preparation-and-record history rule carrying this coherence
-through separation and reunion while accounting for (117), (119); reject
-a local-only descriptor, imported quantum dynamics or an unexcluded zero
-branch. Alternate to weak-strip gauge dressing. Newton remains the
-current research emphasis. Adaptive timing, independent positivity,
-universality and radiation calibration remain separate.</p>
+Section 8.20 shows that positive tails restore exact reconstruction but
+not uniform local-data stability (128); (129) supplies an additive
+bridge-phase memory with exact insertion composition. The Gaussian
+preparation restriction cannot be promoted to a universal classical
+recording law by canonical motion alone. Next Newton lemma: a physical
+preparation-and-record history rule carrying this coherence through
+separation and reunion, including vanishing-tail limits, while
+accounting for (117), (119); reject a local-only descriptor, imported
+quantum dynamics or an unexcluded zero branch. Alternate to weak-strip
+gauge background sources. Newton remains the current research emphasis.
+Adaptive timing, independent positivity, universality and radiation
+calibration remain separate.</p>
 
 </main>
 <footer class="site"><div class="wrap">

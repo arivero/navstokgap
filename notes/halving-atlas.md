@@ -339,8 +339,12 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    [§8.19](sed-closure-under-recording.md#819-local-score-data-do-not-close-free-evolution)
    gives a finite free-record witness (122) against a local-score-only
    state and its exact two-packet coherence completion (123) (Sol/Astra,
-   refereed). Next: a physical preparation-and-record history rule
-   carrying coherence through separation and reunion, alongside (117)'s
+   refereed). [§8.20](sed-closure-under-recording.md#820-positive-tails-restore-reconstruction-not-uniform-stability)
+   restores exact phase reconstruction with positive tails, but proves
+   failure of uniform stability (128) in the specified local-data metric;
+   additive bridge-phase memory (129) retains the datum (Sol/Astra,
+   refereed). Next: a physical history rule carrying it through vanishing
+   tails, separation and reunion, alongside (117)'s
    signed correction and (119)'s excess when labels become unread.
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
