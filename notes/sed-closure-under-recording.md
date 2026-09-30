@@ -1,5 +1,15 @@
 # Shared radiation and closure under recording
 
+**Physical feedback refinement, 2026-09-30 (GPT-6.1 Sol and
+GPT-6 Astra; refereed).** Section 8.11 compares one physical cell
+with two daughters for a fixed policy depending on the weighted
+past memory coordinates. It retains the relative pointer modes and
+controller recoils, gives exact conditional defects, and proves
+partition-uniform fourth moments. The centred momentum defect and
+record bias have summable local budgets. Propagation of these defects
+through later feedback is the next estimate; no adaptive continuum
+curve or positive action scale is inferred from the local bounds.
+
 **Physical adaptive-gain result, 2026-09-30 (GPT-6.1 Sol and
 GPT-6 Astra; refereed).** Section 8.10 realizes feedback by a Hamiltonian
 coupling directly to stored physical memory coordinates, retaining the
@@ -1796,15 +1806,173 @@ and constant were re-derived. The zero branch and the conditional
 composition scope are retained.
 
 Fixed $r,G$ are supplied resource parameters; (77) selects no positive
-action. Adaptive timing and compatibility of different gain rules under
-refinement remain open. The next Newton lemma is an inserted-cell
-comparison for a prescribed smooth policy depending on the physical
-weighted past record, with both terminal-body dynamics and controller
-recoil retained. Dependencies are (74)--(78), a common physical coarse
-projection, and a conditional noise/moment bound. Abandon a rule if its
-feedback uses passive numerical storage or if its projected-law error
-loses a mesh-uniform bound. The initial positive preparation law,
-universality and radiation calibration remain separate obligations.
+action. Section 8.11 gives the inserted-cell comparison for a prescribed
+policy depending on the physical weighted past record. Adaptive timing
+and global propagation under refinement remain open. The initial
+positive preparation law, universality and radiation calibration remain
+separate obligations.
+
+### 8.11 Inserting a cell into a physical weighted-record controller
+
+Prescribe one force-independent function $g:\mathbb R\to\mathbb R$
+for every partition, with $g\in C^2$, $|g|\le G$, $|g'|\le L$,
+$|g''|\le D_2$. The argument has the units of $Y$, length times
+time; $L,D_2$ have its inverse and inverse-square units. At the
+right endpoint of cell $i$ use gain
+$$g_i=g(Y_{i-1}),\qquad Y_{i-1}=\sum_{j<i}h_jR_j.$$
+This is a function of the physical frozen coordinates, not a numerical
+record supplied to an external controller. The pulse is (74);
+each old conjugate receives
+$-h_jg'(Y_{i-1})Q_i\Lambda_i$. The new first daughter's conjugate
+also recoils during the second pulse. All are retained and isolated
+as specified in §8.10. Preparation and times remain force-independent.
+
+**Proposition 10 (physical inserted-cell defect).** Condition
+analytically on an incoming mechanical state with body $(q,p)$ and
+weighted memory projection $y$. Compare a parent cell $h=a+b$ to
+two daughter cells $a,b>0$, using the same incoming state and force.
+Prepare the daughter pairs independently as before and couple the
+coarse pair by
+$$Z_c=(aZ_1+bZ_2)/h,\qquad \Lambda_c=\Lambda_1+\Lambda_2.$$
+It is canonical and saturated, with variances
+$((rh)^{-1},\kappa^2rh)$. It has a canonical independent relative
+pair
+$$Z_{\rm rel}=Z_1-Z_2,\qquad
+\Lambda_{\rm rel}=(b\Lambda_1-a\Lambda_2)/h.$$
+Their cross brackets and covariances vanish. The fine apparatus
+retains both pairs; the coarse experiment may leave the relative pair
+as a spectator. This coupling does not delete any fine kick.
+
+Put
+$$\begin{aligned}
+q_1&=q+ap/m+Fa^2/(2m),&q_h&=q+hp/m+Fh^2/(2m),\\
+g_0&=g(y),&\eta&=ag_0q_1+aZ_1,\\
+g_1&=g(y+\eta),&d_g&=g_1-g_0.
+\end{aligned}$$
+Fine minus coarse terminal values satisfy exactly
+$$\begin{aligned}
+\Delta Q&=-bg_0\Lambda_1/m,\\
+\Delta P&=-d_g\Lambda_2,\\
+\Delta Y&=-\frac{abg_0}{m}\left[p+\frac{F(a+h)}2\right]
+              +bq_hd_g-\frac{b^2g_0g_1\Lambda_1}{m}.
+\end{aligned}\tag{79}$$
+Here the common terminal record projection is $Y$: a weight $h$ on
+the coarse reading, and weights $a,b$ on the daughters. Conditioning
+on $q,p,y$ grants the physical controller no readout of $q$ or $p$.
+Its only argument remains the stored coordinate projection.
+
+Write $E_s$ for the conditional expectation over fresh pairs and set
+$$V_s=L^2(a^2G^2q_1^2+a/r).$$
+Then
+$$\begin{aligned}
+E_s\Delta Q&=E_s\Delta P=0,\qquad E_s d_g^2\le V_s,\\
+E_s(\Delta Q)^2&\le\kappa^2ra b^2G^2/m^2,\\
+E_s(\Delta P)^2&\le\kappa^2rbV_s,\\
+\operatorname{Var}_s\Delta Y
+&\le b^2q_h^2V_s+\kappa^2ra b^4G^4/m^2.
+\end{aligned}\tag{80}$$
+Its only bias obeys
+$$|E_s\Delta Y|\le
+\frac{abG}{m}(|p|+|F|h)
++b|q_h|\left[LaG|q_1|
+       +\frac{D_2}2(a^2G^2q_1^2+a/r)\right].\tag{81}$$
+There is no singular factor in either daughter duration.
+
+*Proof.* In the fine experiment the first position is $q_1$ and
+the second is $q_h-bg_0\Lambda_1/m$. The second gain is $g_1$,
+because the first physical reading increments $y$ by $\eta$.
+The two readings are $Z_1+g_0q_1$ and
+$Z_2+g_1(q_h-bg_0\Lambda_1/m)$. Subtract the coarse reading
+$Z_c+g_0q_h$ and use
+$q_1-q_h=-b[p+F(a+h)/2]/m$ to obtain (79).
+
+$\eta$ depends only on the fresh coordinate $Z_1$ and is independent
+of both fresh momenta. Its second moment is
+$a^2g_0^2q_1^2+a/r$. The Lipschitz bound gives $E_sd_g^2\le V_s$,
+and independence gives the first two variances. The two random terms
+in $\Delta Y$ have zero covariance: condition on $Z_1$ and use
+$E_s\Lambda_1=0$. In fact its variance is
+$$b^2q_h^2\operatorname{Var}_sd_g
+ +b^4g_0^2E_sg_1^2\,\kappa^2ra/m^2.$$
+This proves (80). Taylor expansion gives
+$|E_sd_g|\le LaG|q_1|+(D_2/2)(a^2G^2q_1^2+a/r)$;
+the momentum term in $\Delta Y$ has mean zero. Equation (81) follows.
+$\square$
+
+These are state-dependent conditional bounds. A usable uniform
+averaging bound follows from the physical protocol itself. Let
+$$M_i=\sum_{j\le i}g(Y_{j-1})\Lambda_j.$$
+In the filtration generated by the initial body and consumed pointer
+pairs, this is a martingale. Old conjugates depend only on these
+variables; retaining their recoil does not reveal a future pointer.
+For $v_i=\kappa^2rG^2\sum_{j\le i}h_j$, conditional Gaussian
+moments give $EM_i^2\le v_i$ and $EM_i^4\le3v_i^2$.
+For the latter, the fourth-moment recursion has increments at most
+$6(v_i-v_{i-1})v_{i-1}+3(v_i-v_{i-1})^2$.
+The finite-martingale $L^4$ maximal inequality therefore yields
+$\|\max_i|M_i|\|_4\le(4/3)3^{1/4}|\kappa|G\sqrt{r\tau}$.
+
+The position impulse sum is a finite sum of interval durations times
+past $M_i$, bounded by $\tau\max_i|M_i|/m$. Minkowski and the
+centred initial Gaussian moments consequently give
+$$\begin{aligned}
+K_Q&=3^{1/4}\left[\sqrt A+\frac{\tau\sqrt B}m
+ +\frac{4|\kappa|G\tau\sqrt{r\tau}}{3m}\right]
+                 +\frac{|F|\tau^2}{2m},\\
+K_P&=3^{1/4}\left[\sqrt B
+ +\frac{4|\kappa|G\sqrt{r\tau}}3\right]+|F|\tau,\\
+\|\sup_{t\le\tau}|Q(t)|\|_4&\le K_Q,\qquad
+\|\sup_{t\le\tau}|P(t)|\|_4\le K_P,\\
+\|\max_i|Y_i|\|_4&\le G\tau K_Q
+                       +\frac43\,3^{1/4}\sqrt{\tau/r}.
+\end{aligned}\tag{82}$$
+The suprema here are of each finite physical piecewise trajectory;
+both momentum values at a pulse are included. The last estimate uses
+the Gaussian martingale $\sum_{j\le i}h_jZ_j$ of variance at most
+$\tau/r$. All constants are independent of partition size and schedule.
+The initial preparation assumption is the one in §8.7.
+
+For local defects evaluated along an admitted parent schedule, its
+unsplit drift continuations $q_1,q_h$ also satisfy this fourth-moment
+bound. In particular $E(q_h^2q_1^2)\le K_Q^4$.
+For disjoint parent cells with $h_i\le\delta$, $\sum_ih_i=\tau$,
+one has $\sum_i a_ib_i\le\tau\delta/4$. Averaging (80)--(81) gives
+the local budgets
+$$\begin{aligned}
+\sum_iE(\Delta P_i)^2
+&\le\frac{\tau\delta}4
+ [\kappa^2L^2+\kappa^2rL^2G^2K_Q^2\delta],\\
+\sum_iE|E_s\Delta Y_i|
+&\le\frac{\tau\delta}4 C_Y(\delta),\\
+C_Y(\delta)&=
+\frac Gm(K_P+|F|\delta)+LGK_Q^2
+ +\frac{D_2}2(G^2K_Q^3\delta+K_Q/r).
+\end{aligned}\tag{83}$$
+These quantify centred local noise and accumulated local bias, before
+propagation. They are not bounds on the difference of two full
+feedback protocols: later gains also respond to incoming discrepancies.
+
+Every term in (79)--(83) has its coordinate's units. At constant gain
+$d_g=0$, the extra momentum defect vanishes. At $\kappa=0$,
+$\Delta Q=\Delta P=0$ but $\Delta Y$ generally remains random,
+because the first coordinate noise changes the second gain. At
+$g\equiv0$ all defects vanish. The bounds survive very unequal splits
+and select no positive action scale.
+
+**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.** The exact
+defects, canonical coarse and relative pairs, sharpened conditional
+variance, filtration and fourth-moment constants were checked. The
+scope of (83) is explicitly local.
+
+Next lemma: propagate these defects to a finite Cauchy bound for
+the same weighted-record policy under arbitrary deterministic
+refinements. Dependencies are (79)--(83), a common Gaussian refinement
+coupling and stability of the state-dependent gains. Localizing to a
+body-position bound is permitted only with the uniform tails in (82)
+and an explicit removal of that localization. Reject a stability
+constant that diverges with cell count, a discarded relative kick,
+or an assumed limiting noise-driven curve. Adaptive timing, positivity,
+universality and scale calibration remain separate.
 
 ## 9. Consequence for STATE
 
@@ -1835,7 +2003,12 @@ The three-cell residue (69) determines why the coarse channel retains
 more noise data than the prescribed one-pair/scalar rule. A physical
 adaptive-gain controller retains its conjugate recoil and gives posterior
 closure (76) and a global complete-record continuity bound (77).
-Next Newton: the inserted-cell comparison of a prescribed physical
-feedback policy. Alternate next to the gauge normalized interaction
-forest. Positivity, universality and radiation calibration remain
-separate obligations.
+Section 8.11 closes the inserted-cell comparison for a fixed physical
+weighted-record feedback policy: (79)--(81) retain all kicks and
+recoils, (82) supplies partition-uniform moments, and (83) gives
+summable local error budgets. Next Newton lemma: propagate those
+defects to a finite Cauchy estimate under arbitrary refinements,
+including removal of any body-position localization. Reject a
+cell-count-dependent stability constant or an assumed limiting curve.
+Newton remains the current research emphasis. Adaptive timing,
+positivity, universality and radiation calibration remain separate.
