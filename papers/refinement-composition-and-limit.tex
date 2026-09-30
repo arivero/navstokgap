@@ -35,6 +35,24 @@ comparison, and specify sufficient estimates for further limits. The
 positive action necessity and the four-dimensional \(SU(3)\) gap remain
 the two main goals; the pion remains a symmetry benchmark.
 
+\textbf{Foundational purpose (user, 2026-09-30).} A reconstruction of
+quantum theory from the limits of classical mechanics is judged here by
+the constructions and estimates it enables, especially for continuum
+existence and the physical gap. Explaining why a change of resolution
+introduces an RG transformation would already be useful. The exact
+blocking identities below provide that structural explanation; the
+quantum weighting and its positive action scale remain stated premises.
+
+\textbf{All refinements and scale normalization, 2026-09-30 (GPT-6.1
+Sol; mathematical bounds in §§3c--3d checked by GPT-6 Astra).} The
+harmonic curve is constructed without assuming it, uniformly over all
+admitted partitions and arbitrary mixtures of start and end kicks. The
+two finite conventions differ, while their limits agree. This gives a
+precise comparison with the user's RG/'t Hooft thread. Mass cancellation
+in classical motion, classical gauge scale invariance and quantum
+dimensional transmutation are separated in §3d: refinement independence
+of a curve leaves its action normalization undetermined.
+
 \textbf{Further result, 2026-09-29 (GPT-6.1 Sol; written, §3b checked by
 GPT-6 Astra).} For the end-kick harmonic polygon, §3b proves a finite
 Cauchy estimate uniform over unequal partitions and observation times. A
@@ -424,6 +442,263 @@ complete conditional record covariance, as tested in
 \href{sed-closure-under-recording.md\#63-ideas-supplied-by-the-current-lean-formalization}{the
 recording note, §6.3}.
 
+\hypertarget{c.-all-refinement-sequences-and-two-microscopic-kick-orders}{%
+\subsection{3c. All refinement sequences and two microscopic kick
+orders}\label{c.-all-refinement-sequences-and-two-microscopic-kick-orders}}
+
+The user's proposed criterion is independence from \textbf{every
+admitted scaling sequence}, including unequal and nonnested partitions.
+The local dynamics and physical initial data must be specified
+throughout. One repeated dyadic sequence alone would not establish that
+criterion. Here the finite estimate also permits a change of kick order
+in every cell, and constructs the harmonic curve and its force law.
+
+Retain \(w\ge0\), \(\rho>0\), \(w\le\rho^2\) and the norm of §3b. Let
+\(D_h(x,v)=(x+hv,v)\) and \(K_h(x,v)=(x,v-whx)\). The end-kick and
+start-kick cell maps are respectively
+\[A_h=K_hD_h=\begin{pmatrix}1&h\\-wh&1-wh^2\end{pmatrix},
+\qquad C_h=D_hK_h=\begin{pmatrix}1-wh^2&h\\-wh&1\end{pmatrix}.
+\tag{6i}\] For each cell choose either map, independently of the choices
+in other cells. Write \(T_\pi\) for their chronological product. Require
+\(\rho|\pi|\le1\), which every vanishing-mesh sequence eventually
+satisfies. Initial position and velocity \(z_0\) and \(w\) stay fixed.
+
+\textbf{Proposition 3c (harmonic scheme universality).} With
+\(B_\tau=e^{\rho\tau}\), \[\begin{aligned}
+\|T_\pi\|_\rho&\le B_\tau,\\
+\|(T_\pi-A_\pi)z_0\|_\rho
+ &\le wB_\tau\sum_i h_i^2\|z_0\|_\rho,\\
+\|(T_\pi-T_\sigma)z_0\|_\rho
+ &\le2w\tau B_\tau(|\pi|+|\sigma|)\|z_0\|_\rho.
+\end{aligned}\tag{6j}\] No nesting or common kick choices are required.
+Linearly interpolate both vertex state components to obtain a continuous
+displayed path \(\overline z_\pi\). Then
+\[\sup_{t\le\tau}\|\overline z_\pi(t)-\overline z_\sigma(t)\|_\rho
+\le2wB_\tau(\tau+\rho^{-1})(|\pi|+|\sigma|)\|z_0\|_\rho.
+\tag{6k}\]
+
+\emph{Proof.} In scaled coordinates the absolute column sums of \(C_h\)
+are \(|1-wh^2|+wh/\rho\) and \(1+\rho h\). Under the stated mesh bound
+they are at most \(1+\rho h\), as are those of \(A_h\). Every mixed
+product consequently has norm at most \(B_\tau\). Moreover
+\[A_h-C_h=wh^2\operatorname{diag}(1,-1),\qquad
+\|A_h-C_h\|_\rho=wh^2.\] Replace one factor at a time. Its prefix and
+suffix have disjoint durations whose sum is at most \(\tau\), so their
+combined amplification is at most one \(B_\tau\). This proves the second
+line of (6j). Combine it for both partitions with (6c) to prove the
+third.
+
+Interpolation between corresponding vertices preserves the
+same-partition mixed-versus-end bound. The displayed velocity of an
+end-kick polygon differs from its actual velocity by at most the cell
+kick, hence by \((w/\rho)B_\tau|\pi|\|z_0\|_\rho\). Use these two
+interpolation corrections and (6f), then the two mixed-versus-end
+comparisons, to obtain (6k). \(\square\)
+
+The vertex state is the output of the preceding cell and the input to
+the next. A next-cell start kick occurs immediately after that state. At
+an end-kick/start-kick interface there are two impulses; the vertex
+state is between them. Each adjacent velocity differs from the displayed
+vertex velocity by at most one cell-kick bound. At \(t=0\), the
+displayed initial velocity is \(v_0\); a first start kick changes the
+outgoing velocity by a quantity vanishing with the mesh. On either kind
+of cell the actual position equals its displayed linear interpolation,
+and the actual velocity differs by at most
+\((w/\rho)B_\tau|\pi|\|z_0\|_\rho\).
+
+Completeness of real continuous path space constructs a limit from (6k),
+initially on any one vanishing-mesh sequence. The same bound then gives
+that identical limit for every admitted partition sequence and every
+sequence of kick choices. Actual velocity representatives converge
+uniformly too. No limiting curve was used in these estimates.
+
+To identify its force law, first choose an all-end-kick sequence. Its
+finite position balance and (6h) pass through uniform convergence to
+\[x(t)=x_0+\int_0^t v(s)\,ds,\qquad
+v(t)=v_0-w\int_0^t x(s)\,ds.\tag{6l}\] The trapezoidal sum in (6h) is
+exactly the integral of the finite polygon position. The position
+balance is its finite drift integral. Uniform convergence passes these
+ordinary integrals to the limit. Thus \(x'=v\) and \(v'=-wx\). Every
+mixed construction has this same limit by (6k). This proves trajectory
+existence for the specified harmonic model; the printed Newton enclosure
+and the sister Lean formalization of P3 remain separate. At \(w=0\),
+every discrepancy vanishes exactly. The estimates have the units and
+norm of §3b.
+
+The RG comparison concerns universality of retained descriptions. The
+finite block map is the full product of its daughter matrices;
+regrouping that product associates exactly. Replacing it by one bare
+cell map has a defect, which the estimates control. Thus the curve is
+obtained from the whole compatible refinement family. Its existence does
+not require exact equality of the two finite conventions.
+
+The source connection is explicit but has additional hypotheses. In
+\href{https://arxiv.org/pdf/1405.1548v3}{'t Hooft's automaton book,
+§§5.4 and 20.8} {[}@tHooft2015CAI{]} (passages read), he postulates an
+ontological basis and invokes RG to connect microscopic automaton
+Hamiltonians to large-scale field theory. Our inference is the
+universality question: which structures survive a change of finite
+description? His deterministic ontology is an additional premise. His
+own
+\href{https://webspace.science.uu.nl/~hooft101/gthpub.html}{publication
+list} (author metadata read) dates the renormalization papers to
+1971--73 and deterministic-QM papers to 1988--90; an immediate causal
+transition is not established by those dates.
+
+\textbf{Mathematical review (GPT-6 Astra, 2026-09-30): ACCEPT.} The
+single \(B_\tau\) amplification, interpolation and endpoint convention,
+completion and force-law passage were checked. The 't Hooft source
+attribution is a separate passage check by Sol. The result concerns
+fixed harmonic dynamics, not arbitrary microscopic laws or an action
+floor.
+
+\hypertarget{d.-scale-invariance-cancelled-masses-and-the-action-that-remains}{%
+\subsection{3d. Scale invariance, cancelled masses and the action that
+remains}\label{d.-scale-invariance-cancelled-masses-and-the-action-that-remains}}
+
+The user's scale comparison adds an exact obstruction to identifying an
+action unit from curve compatibility alone. An overall action
+normalization can disappear from every classical trajectory equation and
+remain in canonical momentum, energy and recorded phase.
+
+\textbf{Proposition 3d (classical normalization under blocking).} For a
+discrete action \(S_\pi\) and any dimensionless constant \(c_*>0\),
+stationary configurations of \(c_*S_\pi\) are unchanged, and
+\[\inf_z c_*S_\pi(x,z,y)=c_*\inf_zS_\pi(x,z,y).\tag{6m}\] The minimizing
+configurations, when attained, are the same. This follows directly by
+multiplying the first variation and the order inequalities by \(c_*\).
+Consequently any classical insertion or blocking law built from these
+configurations commutes with this rescaling. Refinement independence of
+their curve fixes no overall action normalization.
+
+For a free body, \(S=m\int|\dot q|^2dt/2\), \(m>0\); fixed initial
+position and \textbf{velocity} give a trajectory independent of \(m\).
+Momentum \(p=m\dot q\) and action retain it. For uniform acceleration,
+put \(F=ma\) in §2's corrected cell action: \[\ell_h(x,y)=m\left[
+\frac{(y-x)^2}{2h}+\frac{ah}2(x+y)-\frac{a^2h^3}{24}\right].
+\tag{6n}\] The curve and point elimination are independent of the
+overall \(m\); the cubic action correction is \(ma^2h^3/24\). Mass
+cancellation in the motion therefore leaves the phase-space action
+question intact.
+
+For a test body in a prescribed external gravitational potential, assume
+equality of its passive gravitational and inertial masses. On a
+collision-free interval,
+\[S=m\int\left[\frac{|\dot q|^2}2+\frac{GM}{|q|}\right]dt,
+\qquad \ddot q=-GM\frac q{|q|^3}.\tag{6o}\] The test mass cancels; the
+prescribed source's \(GM\) remains. For two moving gravitating bodies
+the relative equation contains \(G(M+m)\), so the test-body
+qualification matters. Cancellation from these equations is not a
+classification as an RG-irrelevant coupling.
+
+Under \(q_\lambda(t)=\lambda q(t/\theta)\) and a correspondingly
+rescaled interval, free action scales by \(\lambda^2/\theta\) at fixed
+\(m\). Gravity with fixed \(GM\) requires \(\theta=\lambda^{3/2}\) and
+its action scales by \(\lambda^{1/2}\). Harmonic covariance sends \(w\)
+to \(w/\theta^2\). These parameter transformations are different from
+taking the partition mesh to zero at fixed physical \(w\), \(GM\) and
+initial data.
+
+In four-dimensional pure Yang--Mills, use the connection convention
+\(F=dA+A\wedge A\). Give all four coordinates length units, with
+\(x_4=ct_E\), and write
+\[\frac{S_E}{\hbar}=\frac1{4g^2}\int F^a_{\mu\nu}F^a_{\mu\nu}
+\,d^4x.\] The classical dilation
+\(A_\lambda(x)=\lambda^{-1}A(x/\lambda)\) gives
+\(F_\lambda(x)=\lambda^{-2}F(x/\lambda)\); its fourth-power factor
+cancels the volume factor. The coupling is dimensionless, and its
+overall \(g^{-2}\) factor also cancels from the classical vacuum
+equations. Quantum running makes this normalization relevant to
+fluctuations. The gauge comparison already supplies \(\hbar>0\); it does
+not derive that assumption from Newton's trajectory.
+
+With inverse-length renormalization scale \(\mu\), the standard
+weak-coupling beta function for pure \(SU(3)\) is
+\[\mu\frac{dg}{d\mu}=-b_0g^3+O(g^5),\qquad
+b_0=\frac{11}{16\pi^2}.\] The normalization is checked in
+\href{https://arxiv.org/pdf/1006.4518v3}{Lüscher, equation (2.31)}
+{[}@Luscher2010WilsonFlow{]} (passage read, \(N=3,N_f=0\); §3.3 also
+describes quantum breaking of classical scale invariance). In the
+\textbf{one-loop truncated flow}, dimensional transmutation gives
+\[\Lambda_1=\mu e^{-1/(2b_0g^2(\mu))},\qquad
+g^{-2}(a_n)=g^{-2}(a_0)+2b_0\log(a_0/a_n),\quad\mu=1/a.
+\tag{6p}\] Differentiating \(g^{-2}\) gives \(2b_0\) with respect to
+\(\log\mu\), so \(\Lambda_1\) is invariant and consecutive logarithmic
+increments telescope. Equation (6p) holds along every scaling sequence
+in the positive-coupling domain \(a\Lambda_1<1\); every sequence
+\(a_n\to0\) eventually enters it. Monotonicity and fixed scaling ratios
+are unnecessary within that domain. Higher-loop running and scheme
+normalization are separate from this explicit truncated formula.
+
+\textbf{The overall factor in a retained weight.} For a dimensionless
+fixed reference measure \(\nu\) and a finite positive integral, define
+Euclidean or Gibbs elimination by \[\mathcal B_\hbar(S)(x)
+ =-\hbar\log\int e^{-S(x,z)/\hbar}\,d\nu(z),\qquad \hbar>0.\] Then the
+user's denominator observation remains exact under blocking:
+\[e^{ic_*S/\hbar}=e^{iS/(\hbar/c_*)},\qquad
+\mathcal B_\hbar(c_*S)=c_*\mathcal B_{\hbar/c_*}(S).
+\tag{6q}\] The first identity concerns real-time phase; the second
+concerns a positive Euclidean weight. Its proof is substitution into the
+logarithm. Fixed normalizations independent of \(x\) change only an
+additive action constant. Compatible product measures make successive
+eliminations associate by Fubini. A reference measure that also changes
+with \(c_*\) must be compared separately.
+
+Once the blocking maps and measures are specified, marginalization
+therefore determines the retained weight at each resolution.
+Reexpressing these actions at a common cutoff defines an RG
+transformation. It can generate interactions absent from the starting
+action, remain at a fixed point, or change only by normalization.
+Neither a differentiable flow nor closure in finitely many couplings
+follows from the identity. The higher-dimensional gauge interactions in
+§6 give its concrete use. Interpreting a positive weight as quantum
+theory also requires the supplied reconstruction hypotheses; the
+identity alone is not a derivation of quantum mechanics.
+
+At fixed \(\hbar\), multiplying \(S\) changes fluctuation weights
+exactly as replacing its action denominator by \(\hbar/c_*\). Classical
+stationarity cannot distinguish those weights. In the pure-gauge
+connection convention, put \(I[A]=\frac14\int F^2d^4x\) and
+\(S_E=A_*I[A]\), with \(A_*\) in action units. Then \(g^2=\hbar/A_*\).
+Changing \(A_*\) to \(c_*A_*\) at the same reference \(\mu\) gives,
+within the one-loop truncated flow, \[g_{c_*}^2=\frac{g^2}{c_*},\qquad
+\Lambda_{1,c_*}=\mu e^{-c_*/(2b_0g^2)}
+              =\mu(\Lambda_1/\mu)^{c_*}.\tag{6r}\] Thus an overall
+action factor can change a generated inverse length exponentially, even
+though it cancels from the classical vacuum equations. It is not a
+linear change of units for \(\Lambda_1\).
+
+Keeping constants explicit gives a parallel mechanical calculation. For
+\(L,T,m,GM>0\), write \(q=Ly\), \(t=Ts\) in (6o). Then
+\[\frac{S}{\hbar}=\frac{mL^2}{\hbar T}
+ \int\left[\frac{|y'|^2}2+
+                  \frac{GMT^2/L^3}{|y|}\right]ds.\] The dimensionless
+motion parameter \(GMT^2/L^3\) and action prefactor \(mL^2/(\hbar T)\)
+have different roles. Choosing \(T=\sqrt{L^3/(GM)}\) sets the first to
+one and leaves \(m\sqrt{GML}/\hbar\) in the action. At the conversion
+length \(r_g=GM/c^2\), that prefactor is \(\alpha_G=GMm/(\hbar c)\).
+This choice introduces no relativistic dynamics into the Newtonian
+model. For a free body only the kinetic term and its action prefactor
+remain. Use \(h_P=2\pi\hbar\) for Planck's constant; the time-cell
+duration \(h\) in (6n) is a different quantity.
+
+This shows consistency of running along arbitrary admitted scale
+sequences. It supplies no bound on the full blocked action, continuum
+axioms or physical spectrum. The remaining spectral requirement is
+\[0<\frac{E_{\rm gap}}{\hbar c\Lambda}<\infty,\] with surviving
+finite-energy spectral weight, as in
+\href{three-continuum-limits.md}{the continuum comparison}. Thus the
+project tracks three distinct survivors: a motion or observable law
+independent of refinement, a physical dimensional scale, and action
+normalization. The harmonic curve construction proves the first in its
+model. Neither it nor mass cancellation selects a positive action unit,
+and dimensional transmutation alone proves no mass gap.
+
+\textbf{Scaling check (GPT-6 Astra, 2026-09-30): ACCEPT at the stated
+classical and one-loop levels.} The passive-mass scope, dilation
+exponents, running sign, positive-coupling domain, retained-weight
+identity and explicit \(c,\hbar,G\) dimensions were checked.
+
 \hypertarget{gauge-refinement-geometry-marginalization-and-reflection}{%
 \subsection{4. Gauge refinement: geometry, marginalization and
 reflection}\label{gauge-refinement-geometry-marginalization-and-reflection}}
@@ -756,19 +1031,24 @@ the answer to a one-plaquette action. The small-volume H3 valley-lifting
 task remains the separate spectral mechanism to connect to this
 construction.
 
-For Newton, §3b now supplies finite uniform Cauchy and force-balance
-bounds for harmonic end-kick polygons, using a norm that avoids the
-sister formalization's pending quadratic norm inequality. Its graph
-check separates that forward construction input from the cited
-given-curve lemma. The next mathematical step is a limit/enclosure
-construction carrying (6h); abandon a proposed identification if it
-assumes the curve whose existence is at issue. The physical step is an
-explicit refinement rule for the \textbf{joint body and record},
-deciding which old records are preserved and what happens when the new
-one is forgotten. Test whether its physical premises force a positive
-action cost and common scale, with the unobserved composition (2)--(3)
-serving as the exact reference. Assuming canonical quantum kinematics
-already puts it on the existing conditional branch. The two goals are
-advanced by finding and controlling these concrete maps, with the limit,
-the surviving scale and the physical interpretation proved separately.
+For Newton, §§3b--3c now construct the harmonic curve and its force law,
+uniformly over unequal, nonnested refinements and arbitrary mixtures of
+the two force-consistent kick orders. The norm avoids the sister
+formalization's pending quadratic inequality; its printed enclosure and
+formal P3 remain separate. Section 3d fits the user's RG/'t Hooft and
+scale-invariance threads through a normalization obstruction and an
+explicit truncated running law: curve consistency, dimensional scale and
+action normalization require different proofs. Exact retained weights
+explain the appearance of RG as a change of resolution; useful continuum
+and spectral estimates remain its test. The
+\href{sed-closure-under-recording.md\#812-a-continuous-body--record-limit-from-finite-physical-refinements}{physical
+recording construction, §§8.11--8.13} also gives an adaptive
+body--record continuum law and limiting-record posterior closure at its
+supplied scale. Next Newton lemma: identify that law's momentum and
+record evolution from finite increments, then test the noise law under
+further physical recording operations. Reject new unrecorded noise, an
+assumed limiting curve or a claim of positivity from classical
+normalization alone. The gauge frontier remains the
+\href{su2-midplane-small-field.md\#33-retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip}{weak-strip
+marked density norm}.
 \end{document}

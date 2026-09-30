@@ -444,36 +444,39 @@ class="math inline">\(_s\)</span> of the <a
 href="series-parallel-gauge-refinement.html">series/parallel
 note</a>).</li>
 <li><strong>The exponential ladder.</strong> Each compact correction
-left by a step is <span class="math inline">\(e^{-c/t}\)</span>
-(vortices, monopoles, dislocations). In <span
-class="math inline">\(D&lt;4\)</span> it is summable per physical volume
-at fixed coupling, so compact effects die; in <span
-class="math inline">\(D=4\)</span> the running turns it into a power of
-<span class="math inline">\(a\)</span>, so survival is a threshold
-condition; in <span class="math inline">\(D&gt;4\)</span> there is no
-small <span class="math inline">\(t\)</span>. In <span
+left by a step is <span class="math inline">\(e^{-\chi/t}\)</span>, with
+dimensionless <span class="math inline">\(\chi&gt;0\)</span> (vortices,
+monopoles, dislocations). In <span class="math inline">\(D&lt;4\)</span>
+it is summable per physical volume at fixed coupling, so compact effects
+die; in <span class="math inline">\(D=4\)</span> the running turns it
+into a power of <span class="math inline">\(a\)</span>, so survival is a
+threshold condition; in <span class="math inline">\(D&gt;4\)</span>
+there is no small <span class="math inline">\(t\)</span>. In <span
 class="math inline">\(1+3\)</span> at one loop, <span
 class="math inline">\(a\Lambda=e^{-1/(2b_0t)}\)</span> with <span
-class="math inline">\(t=\hbar g^2(a)\)</span>, so <span
-class="math inline">\(e^{-c/t}=(a\Lambda)^{2b_0c}\)</span> and <span
-class="math inline">\(2b_0c\)</span> is the scaling dimension of the
-correction. This is the bookkeeping of ’t Hooft’s infrared renormalons,
-whose Borel-plane positions are fixed by <span
+class="math inline">\(t=g^2(a)=\hbar g_{\rm cl}^2(a)\)</span>, so <span
+class="math inline">\(e^{-\chi/t}=(a\Lambda)^{2b_0\chi}\)</span> and
+<span class="math inline">\(2b_0\chi\)</span> is the scaling dimension
+of the correction. This is the bookkeeping of ’t Hooft’s infrared
+renormalons, whose Borel-plane positions are fixed by <span
 class="math inline">\(b_0\)</span> and an operator dimension; the
-per-volume threshold <span class="math inline">\(2b_0c=4\)</span> sits
-at the gluon-condensate renormalon (<a
+per-volume threshold <span class="math inline">\(2b_0\chi=4\)</span>
+sits at the gluon-condensate renormalon (<a
 href="https://doi.org/10.1007/978-1-4684-0991-8_17">’t Hooft, Erice
 1977, publ. 1979</a>; metadata, renormalon positions quoted from
-memory). The generated gap is itself on the ladder: <span
-class="math inline">\(am\propto e^{-1/(2b_0\hbar g^2)}\)</span> is the
-member with <span class="math inline">\(2b_0c=1\)</span>. The bridge
-image terms sit far above the per-volume threshold <span
-class="math inline">\(2b_0c=4\)</span>: <span
-class="math inline">\(2b_0c=11N/3\)</span> for root images (<span
-class="math inline">\(c=8\pi^2\)</span>) and <span
+memory). The generated gap is itself on the ladder conditionally: if
+<span class="math inline">\(E_{\rm gap}\)</span> is of order <span
+class="math inline">\(\hbar c\Lambda\)</span>, its dimensionless lattice
+gap <span class="math inline">\(aE_{\rm gap}/(\hbar c)\)</span> is of
+order <span class="math inline">\(e^{-1/(2b_0g^2)}\)</span>, the member
+with <span class="math inline">\(2b_0\chi=1\)</span>. The bridge image
+terms sit far above the per-volume threshold <span
+class="math inline">\(2b_0\chi=4\)</span>: <span
+class="math inline">\(2b_0\chi=11N/3\)</span> for root images (<span
+class="math inline">\(\chi=8\pi^2\)</span>) and <span
 class="math inline">\(33\)</span> for the <span
 class="math inline">\(SU(3)\)</span> centre images of a trisection
-(<span class="math inline">\(c=24\pi^2\)</span>, <a
+(<span class="math inline">\(\chi=24\pi^2\)</span>, <a
 href="sun-midpoint-centre.html">centre note</a>) (2026-09-28). These are
 formal powers from near-identity image exponents; normalized bounds
 uniform in boundary data and under iteration remain to prove.</li>
@@ -647,11 +650,16 @@ determinant remains at least <span
 class="math inline">\(\kappa^2\)</span> conditional on side records; a
 noisy kick monitor breaks a marginally saturated repair. Adaptive
 affinity is exact in the branchwise information (41); monitor
-replacement has cost (46). A <a
-href="refinement-composition-and-limit.html#3b-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm">finite
-harmonic refinement bound</a> from the Lean norm obstacle gives
-complete-record convergence under the additional conditional noise
-budget (49). <a
+replacement has cost (46). <a
+href="refinement-composition-and-limit.html#3c-all-refinement-sequences-and-two-microscopic-kick-orders">All
+refinements, §§3b–3d</a> construct the harmonic curve across unequal,
+nonnested partitions and arbitrary start/end kick mixtures, following
+the Lean norm obstacle (Sol/Astra, checked). The RG/’t Hooft comparison
+separates curve universality, dimensional scale and action
+normalization. Exact retained weights define the RG transformation;
+their overall action factor rescales the quantum denominator as in (6q),
+with <span class="math inline">\(c,\hbar,G\)</span> kept explicit.
+Complete-record comparisons retain the conditional noise budget (49). <a
 href="sed-closure-under-recording.html#8-hamiltonian-memory-terminal-records-and-blocking">Hamiltonian
 memory, §8</a> realizes the monitor cost and proves terminal posterior
 closure from the joint initial covariance restriction; linear blocking

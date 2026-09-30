@@ -314,23 +314,26 @@ paper, in the \href{uv-halving-ir-confinement.md}{didactic note}.
   \href{series-parallel-gauge-refinement.md}{series/parallel note}).
 \item
   \textbf{The exponential ladder.} Each compact correction left by a
-  step is \(e^{-c/t}\) (vortices, monopoles, dislocations). In \(D<4\)
-  it is summable per physical volume at fixed coupling, so compact
-  effects die; in \(D=4\) the running turns it into a power of \(a\), so
-  survival is a threshold condition; in \(D>4\) there is no small \(t\).
-  In \(1+3\) at one loop, \(a\Lambda=e^{-1/(2b_0t)}\) with
-  \(t=\hbar g^2(a)\), so \(e^{-c/t}=(a\Lambda)^{2b_0c}\) and \(2b_0c\)
-  is the scaling dimension of the correction. This is the bookkeeping of
-  't Hooft's infrared renormalons, whose Borel-plane positions are fixed
-  by \(b_0\) and an operator dimension; the per-volume threshold
-  \(2b_0c=4\) sits at the gluon-condensate renormalon
+  step is \(e^{-\chi/t}\), with dimensionless \(\chi>0\) (vortices,
+  monopoles, dislocations). In \(D<4\) it is summable per physical
+  volume at fixed coupling, so compact effects die; in \(D=4\) the
+  running turns it into a power of \(a\), so survival is a threshold
+  condition; in \(D>4\) there is no small \(t\). In \(1+3\) at one loop,
+  \(a\Lambda=e^{-1/(2b_0t)}\) with \(t=g^2(a)=\hbar g_{\rm cl}^2(a)\),
+  so \(e^{-\chi/t}=(a\Lambda)^{2b_0\chi}\) and \(2b_0\chi\) is the
+  scaling dimension of the correction. This is the bookkeeping of 't
+  Hooft's infrared renormalons, whose Borel-plane positions are fixed by
+  \(b_0\) and an operator dimension; the per-volume threshold
+  \(2b_0\chi=4\) sits at the gluon-condensate renormalon
   (\href{https://doi.org/10.1007/978-1-4684-0991-8_17}{'t Hooft, Erice
   1977, publ. 1979}; metadata, renormalon positions quoted from memory).
-  The generated gap is itself on the ladder:
-  \(am\propto e^{-1/(2b_0\hbar g^2)}\) is the member with \(2b_0c=1\).
-  The bridge image terms sit far above the per-volume threshold
-  \(2b_0c=4\): \(2b_0c=11N/3\) for root images (\(c=8\pi^2\)) and \(33\)
-  for the \(SU(3)\) centre images of a trisection (\(c=24\pi^2\),
+  The generated gap is itself on the ladder conditionally: if
+  \(E_{\rm gap}\) is of order \(\hbar c\Lambda\), its dimensionless
+  lattice gap \(aE_{\rm gap}/(\hbar c)\) is of order
+  \(e^{-1/(2b_0g^2)}\), the member with \(2b_0\chi=1\). The bridge image
+  terms sit far above the per-volume threshold \(2b_0\chi=4\):
+  \(2b_0\chi=11N/3\) for root images (\(\chi=8\pi^2\)) and \(33\) for
+  the \(SU(3)\) centre images of a trisection (\(\chi=24\pi^2\),
   \href{sun-midpoint-centre.md}{centre note}) (2026-09-28). These are
   formal powers from near-identity image exponents; normalized bounds
   uniform in boundary data and under iteration remain to prove.
@@ -479,11 +482,16 @@ paper, in the \href{uv-halving-ir-confinement.md}{didactic note}.
   determinant remains at least \(\kappa^2\) conditional on side records;
   a noisy kick monitor breaks a marginally saturated repair. Adaptive
   affinity is exact in the branchwise information (41); monitor
-  replacement has cost (46). A
-  \href{refinement-composition-and-limit.md\#3b-harmonic-polygons-a-finite-refinement-bound-from-a-different-norm}{finite
-  harmonic refinement bound} from the Lean norm obstacle gives
-  complete-record convergence under the additional conditional noise
-  budget (49).
+  replacement has cost (46).
+  \href{refinement-composition-and-limit.md\#3c-all-refinement-sequences-and-two-microscopic-kick-orders}{All
+  refinements, §§3b--3d} construct the harmonic curve across unequal,
+  nonnested partitions and arbitrary start/end kick mixtures, following
+  the Lean norm obstacle (Sol/Astra, checked). The RG/'t Hooft
+  comparison separates curve universality, dimensional scale and action
+  normalization. Exact retained weights define the RG transformation;
+  their overall action factor rescales the quantum denominator as in
+  (6q), with \(c,\hbar,G\) kept explicit. Complete-record comparisons
+  retain the conditional noise budget (49).
   \href{sed-closure-under-recording.md\#8-hamiltonian-memory-terminal-records-and-blocking}{Hamiltonian
   memory, §8} realizes the monitor cost and proves terminal posterior
   closure from the joint initial covariance restriction; linear blocking
