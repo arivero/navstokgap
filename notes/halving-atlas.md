@@ -289,8 +289,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    a partition-independent projected terminal law with the explicit mesh
    rate (73). The three-cell residue (69) has rank two; the prescribed
    pair plus one independent additive scalar cannot reproduce it
-   (2026-09-30, Sol/Astra, refereed). Next: a physically realized adaptive
-   controller including all side records and a uniform information budget.
+   (2026-09-30, Sol/Astra, refereed). [§8.10](sed-closure-under-recording.md#810-a-physical-adaptive-gain-controller-with-complete-record-closure)
+   includes physical adaptive gains and their conjugate recoil, with
+   complete-record posterior closure (76) and uniform continuity (77).
+   Next: an inserted-cell comparison for a prescribed physical feedback
+   policy. Adaptive timing remains separate.
    The limit of the full growing record and the independent positive
    scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.

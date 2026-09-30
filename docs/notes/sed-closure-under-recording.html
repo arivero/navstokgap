@@ -78,7 +78,17 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Associative terminal-channel result, 2026-09-30 (GPT-6.1 Sol
+<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Physical adaptive-gain result, 2026-09-30 (GPT-6.1 Sol and
+GPT-6 Astra; refereed).</strong> Section 8.10 realizes feedback by a
+Hamiltonian coupling directly to stored physical memory coordinates,
+retaining the controller recoil on their conjugates. Its conditional
+body posterior is exactly the Gaussian posterior of the gain sequence
+frozen at the observed record. Closure and the complete-record
+continuity bound (77) hold uniformly over fixed partitions and bounded
+smooth gains. The same continuity holds at zero action. Adaptive timing
+and refinement compatibility between different gain rules remain
+subsequent tests.</p>
+<p><strong>Associative terminal-channel result, 2026-09-30 (GPT-6.1 Sol
 and GPT-6 Astra; written, internally checked).</strong> Sections 8.7–8.9
 retain every physical copy kick in an associative Gaussian body–record
 descriptor. Three equal cells have the rank-two relative residue (69).
@@ -1898,16 +1908,11 @@ class="math inline">\(\det\Sigma_{(Q,P)\mid Y}\ge\kappa^2\)</span>. At
 <span class="math inline">\(\kappa=0\)</span>, (65)–(73) still hold with
 all momentum kicks zero; convergence and continuity in this
 fixed-precision family select no positive action scale.</p>
-<p>The next Newton lemma must test the retained-channel construction
-under a physically realized adaptive copy schedule, with every
-controller memory and side record included. Dependencies are the
-conditional terminal-storage geometry of §8.2 and a preparation/resource
-law bounding the complete-record information, as in (41)–(44). Abandon a
-proposed rule if a controller reads a discarded conjugate, stores an old
-number passively, or loses a mesh-uniform information budget. Equation
-(73) controls one projected channel; extending it to the full growing
-record requires compatible record spaces and conditional comparison
-estimates.</p>
+<p>Section 8.10 tests the retained storage geometry under a physically
+realized adaptive-gain controller, including its conjugate recoil.
+Equation (73) controls one projected channel; extending it to the full
+growing record requires compatible record spaces and conditional
+comparison estimates.</p>
 <p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT at this
 finite Gaussian level.</strong> The descriptor, kick signs, rank-two
 covariance and constants in (73) were re-derived. The exclusion in §8.8
@@ -1915,6 +1920,155 @@ is restricted to an independent additive scalar along a fixed vector,
 and the mean bound retains the centred initial-body assumption. The
 posterior limit uses covariance convergence and a positive record
 variance, rather than TV convergence alone.</p>
+<h3
+id="a-physical-adaptive-gain-controller-with-complete-record-closure">8.10
+A physical adaptive-gain controller with complete-record closure</h3>
+<p>Retain §8.6’s force-independent partition and product Gaussian
+preparation, including the centred initial body. For each pulse choose a
+force-independent <span class="math inline">\(C^2\)</span> function
+<span class="math inline">\(g_i(R_1,\ldots,R_{i-1})\)</span>, with <span
+class="math inline">\(|g_i|\le G&lt;\infty\)</span> and bounded first
+derivatives for each finite protocol. The gains are dimensionless. At
+<span class="math inline">\(t_i\)</span> use the integrated Hamiltonian
+generator <span class="math inline">\(\mathcal
+G_i=g_i(R_{&lt;i})Q_i\Lambda_i\)</span>. The arguments are the actual
+stored coordinates of earlier memories, which commute with the current
+body. This is a supplied nonlinear mechanical coupling, with its full
+canonical recoil included.</p>
+<p>During this pulse <span class="math inline">\(Q_i\)</span>, <span
+class="math inline">\(R_{&lt;i}\)</span> and the fresh momentum <span
+class="math inline">\(\Lambda_i\)</span> stay fixed. Its exact flow is
+<span class="math display">\[\begin{aligned}
+P&amp;\longmapsto P-g_i\Lambda_i,\qquad
+Z_i\longmapsto R_i=Z_i+g_iQ_i,\\
+\Pi_j&amp;\longmapsto\Pi_j-(\partial_jg_i)Q_i\Lambda_i
+                         \quad(j&lt;i).
+\end{aligned}\tag{74}\]</span> Here <span
+class="math inline">\(\Pi_j\)</span> denotes the current conjugate of
+stored coordinate <span class="math inline">\(R_j\)</span>. The symbol
+<span class="math inline">\(\Lambda_j\)</span> in all subsequent
+terminal formulas denotes its initial, fresh pre-copy momentum, rather
+than its later recoiled conjugate. Old memories are otherwise frozen;
+their conjugates remain in the full mechanical state, and are isolated
+from later body couplings and readouts. Later generators use their
+coordinates directly. Thus the controller uses physical storage
+throughout. The <span class="math inline">\(C^2\)</span> regularity
+makes the recoil-inclusive flow a differentiable canonical map; bounded
+first derivatives and gains keep its finite-protocol moments finite. No
+implementation resource bound for such couplings is derived here.</p>
+<p>Summing the body impulses gives exactly <span
+class="math display">\[\begin{aligned}
+R_i&amp;=Z_i+g_i(R_{&lt;i})\left[q+t_ip/m+Ft_i^2/(2m)
+-\frac1m\sum_{j&lt;i}(t_i-t_j)g_j(R_{&lt;j})\Lambda_j\right],\\
+Q_\tau&amp;=q+\tau p/m+F\tau^2/(2m)
+-\frac1m\sum_j(\tau-t_j)g_j(R_{&lt;j})\Lambda_j,\\
+P_\tau&amp;=p+F\tau-\sum_jg_j(R_{&lt;j})\Lambda_j.
+\end{aligned}\tag{75}\]</span> Every delivered kick survives. The
+complete declared coordinate record is <span
+class="math inline">\(R=(R_1,\ldots,R_n)\)</span>; old conjugate
+readouts and terminal-body readouts would require additional measuring
+couplings and a new law.</p>
+<p><strong>Proposition 9 (physical adaptive-gain closure).</strong>
+Under these apparatus assumptions, conditionally on each complete
+terminal value <span class="math inline">\(R=a\)</span>, the body law is
+Gaussian and satisfies <span
+class="math display">\[\Sigma_{(Q_\tau,P_\tau)\mid R=a}
+             +i\kappa\Omega_{\rm body}\succeq0.\tag{76}\]</span> In
+particular its determinant is at least <span
+class="math inline">\(\kappa^2\)</span> at <span
+class="math inline">\(\kappa&gt;0\)</span>. Let <span
+class="math inline">\(P_F^R\)</span> be the adaptive coordinate-record
+law. Then <span class="math display">\[\begin{aligned}
+J(a)&amp;\le C=\frac{rG^2\tau^5}{4m^2},\\
+\mathcal A(F,F&#39;)&amp;=E_{(F+F&#39;)/2}
+                    e^{-(F-F&#39;)^2J(R)/8},\\
+\|P_F^R-P_{F&#39;}^R\|_{\rm TV}
+&amp;\le\sqrt{1-e^{-(F-F&#39;)^2C/4}}
+\le\frac{|F-F&#39;|G\sqrt r\,\tau^{5/2}}{4m}.
+\end{aligned}\tag{77}\]</span> The cap is uniform in the finite
+partition and all controllers in the bounded-gain class. The continuity
+calculation remains valid at <span
+class="math inline">\(\kappa=0\)</span>.</p>
+<p><em>Proof.</em> At fixed <span class="math inline">\(a\)</span>,
+freeze the numerical gains at <span
+class="math inline">\(g_i=g_i(a_{&lt;i})\)</span>. Write <span
+class="math inline">\(C_g,L_g\)</span> for the ordinary linear record
+and terminal-body matrices of that predetermined-gain copy protocol, and
+put <span class="math inline">\(c_{g,i}=g_it_i^2/(2m)\)</span>, <span
+class="math inline">\(V_g=\operatorname{Cov}(C_gZ_{\rm init})\)</span>.
+Each record has its own independent <span
+class="math inline">\(Z_i\)</span> with coefficient one, so <span
+class="math inline">\(V_g\succeq
+D=\operatorname{diag}((rh_i)^{-1})\succ0\)</span>.</p>
+<p>To check the adaptive density rather than assume Gaussianity, fix the
+latent variables <span
+class="math inline">\(U=(q,p,\Lambda_1,\ldots,\Lambda_n)\)</span>. The
+map <span class="math inline">\((Z_i)\mapsto(R_i)\)</span> in (75) is
+triangular with diagonal derivatives one. Its inverse is <span
+class="math inline">\(Z_i=a_i-g_i(a_{&lt;i})Q_i(U;g_{&lt;i}(a),F)\)</span>.
+If <span class="math inline">\(\varphi_i\)</span> is the initial density
+of <span class="math inline">\(Z_i\)</span>, integrate against the
+Gaussian latent law <span class="math inline">\(\mu_U\)</span>: <span
+class="math display">\[p_F(a)=\int\prod_i
+\varphi_i\bigl(a_i-g_i(a_{&lt;i})Q_i(U;g_{&lt;i}(a),F)\bigr)
+\,d\mu_U(U)
+=\varphi_{Fc_g,V_g}(a)\big|_{g=g(a)}.\tag{78}\]</span> This is the
+frozen-gain Gaussian density evaluated at the adaptive path. Its
+derivation establishes normalization and includes all gain dependence;
+no gain-derivative Jacobian is present. The full adaptive law is
+generally non-Gaussian.</p>
+<p>The same integral before integrating <span
+class="math inline">\(U\)</span> identifies its conditional law at <span
+class="math inline">\(a\)</span> as precisely the frozen protocol’s
+Gaussian posterior. At that fixed record the terminal body in (75) is
+the same affine function <span class="math inline">\(L_gZ_{\rm
+init}\)</span>, with its force mean. For the auxiliary frozen linear
+protocol, copies and drifts give (54) for <span
+class="math inline">\(L_g,C_g\)</span>. Proposition 7 therefore proves
+(76). This applies its covariance theorem to the frozen protocol; the
+full nonlinear terminal state need not satisfy a Gaussian covariance
+closure claim.</p>
+<p>At the same path <span class="math inline">\(a\)</span>, <span
+class="math inline">\(g(a)\)</span> and <span
+class="math inline">\(V_g\)</span> are identical under both force
+hypotheses. Completing the Gaussian square in (78) gives <span
+class="math display">\[\sqrt{p_F(a)p_{F&#39;}(a)}
+=p_{(F+F&#39;)/2}(a)
+           e^{-(F-F&#39;)^2J(a)/8},\qquad
+J(a)=c_g^{\sf T}V_g^{-1}c_g.\]</span> Inverse ordering and the gain
+bound imply <span class="math display">\[J(a)\le c_g^{\sf T}D^{-1}c_g
+=\frac r{4m^2}\sum_i h_ig_i(a_{&lt;i})^2t_i^4
+\le C.\]</span> Integration proves the affinity identity and lower bound
+<span class="math inline">\(\mathcal A\ge e^{-(F-F&#39;)^2C/8}\)</span>.
+The affinity inequality and <span class="math inline">\(1-e^{-x}\le
+x\)</span> give (77). <span class="math inline">\(\square\)</span></p>
+<p>Frozen-protocol Gaussian innovations along the observed path are also
+the actual adaptive conditional kernels along that path. Their
+information sums to <span class="math inline">\(J(a)\)</span>,
+consistent with (41)–(44). Conditional kernels compose and their
+branchwise information budgets add. When composing blocks, retain the
+body’s conditional mean, covariance and inherited force sensitivity:
+applying a fresh local-duration <span class="math inline">\(\tau_{\rm
+block}^5\)</span> cap would drop force information already in the
+incoming body. Equation (77) is the valid global-duration bound. It also
+controls every measurable function of the declared full record.</p>
+<p><strong>Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT with the
+<span class="math inline">\(C^2\)</span> and momentum-notation
+qualifications stated above.</strong> The pulse recoil, triangular
+Jacobian, posterior substitution, affinity identity and constant were
+re-derived. The zero branch and the conditional composition scope are
+retained.</p>
+<p>Fixed <span class="math inline">\(r,G\)</span> are supplied resource
+parameters; (77) selects no positive action. Adaptive timing and
+compatibility of different gain rules under refinement remain open. The
+next Newton lemma is an inserted-cell comparison for a prescribed smooth
+policy depending on the physical weighted past record, with both
+terminal-body dynamics and controller recoil retained. Dependencies are
+(74)–(78), a common physical coarse projection, and a conditional
+noise/moment bound. Abandon a rule if its feedback uses passive
+numerical storage or if its projected-law error loses a mesh-uniform
+bound. The initial positive preparation law, universality and radiation
+calibration remain separate obligations.</p>
 <h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
@@ -1936,15 +2090,17 @@ the innovation replacement cost (46). The sister formalization’s norm
 obstacle yields a finite harmonic refinement bound; (49) states its
 extra statistical budget. Section 8 supplies a Hamiltonian copy/monitor
 realization and terminal closure from the initial joint phase-covariance
-restriction. Sections 8.4–8.9 give physical copy refinement, the
+restriction. Sections 8.4–8.10 give physical copy refinement, the
 complete-record information budget (63), associative projected-channel
 composition (66), and the partition-independent terminal Gaussian law at
 rate (73). The three-cell residue (69) determines why the coarse channel
-retains more noise data than the prescribed one-pair/scalar rule. The
-next Newton lemma tests a physically realized adaptive controller with
-its full record and a uniform resource budget. Alternate next to the
-retained-barrier gauge marginal estimate. Positivity, universality and
-radiation calibration remain separate obligations.</p>
+retains more noise data than the prescribed one-pair/scalar rule. A
+physical adaptive-gain controller retains its conjugate recoil and gives
+posterior closure (76) and a global complete-record continuity bound
+(77). Next Newton: the inserted-cell comparison of a prescribed physical
+feedback policy. Alternate next to the gauge normalized interaction
+forest. Positivity, universality and radiation calibration remain
+separate obligations.</p>
 
 </main>
 <footer class="site"><div class="wrap">
