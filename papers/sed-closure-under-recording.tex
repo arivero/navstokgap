@@ -21,7 +21,11 @@ positive probability at arbitrarily small exposure. A bounded-copy
 calculation isolates the signed first-order curvature term. Section 8.18
 gives its score identity and the excess variance that a proposed score
 law must retain when records become unread. These calculations select no
-positive action scale.
+positive action scale. Section 8.19 tests the proposed local state data
+against free evolution: an explicit two-packet witness has identical
+local jets and scores but different terminal coordinate laws. A finite
+coherence completion closes that supplied reference family; its physical
+origin remains open.
 
 \textbf{Nonlinear terminal-copy test, 2026-09-30 (GPT-6.1 Sol and GPT-6
 Astra; refereed).} Section 8.15 disproves extension of the classical
@@ -2842,6 +2846,124 @@ excess on forgetting a label, imports the quantum kernel as a premise,
 or leaves the same physical requirements satisfied at zero action. No
 new physical premise has been accepted by the calculations here.
 
+\subsubsection{8.19 Local score data do not close free
+evolution}\label{local-score-data-do-not-close-free-evolution}
+
+The score budget and unread-label excess in §8.18 are necessary data for
+that candidate rule. They do not specify the evolving body state. The
+following finite construction tests this claim in the \textbf{supplied
+quantum reference} with \(\hbar=2\kappa>0\), rather than deriving that
+reference or its positive scale. Its mechanism is separation and reunion
+of two packets, with a quantitative terminal-record bound.
+
+Choose a nonnegative even \(\phi\in C_c^\infty(-d,d)\),
+\(\|\phi\|_2=1\), where \(d>0\) is a length, and fix a length \(a>d\).
+For example normalize \(e^{-1/(1-(q/d)^2)}1_{|q|<d}\). Put
+\[\phi_R(q)=\phi(q-a),\qquad \phi_L(q)=\phi(q+a),\qquad
+\psi_\pm=(\phi_R\pm\phi_L)/\sqrt2.\tag{120}\] Their supports are
+disjoint. Both preparations have the same density
+\(\rho=(\phi_R^2+\phi_L^2)/2\). Use the finite-Fisher definition
+\[I(\rho)=4\int|\partial_q\sqrt\rho|^2dq
+ =4\|\phi'\|_2^2.\tag{121}\] The score is required only \(\rho\)-almost
+everywhere. This definition does not divide by the zero density between
+the packets or at their smooth boundaries.
+
+\textbf{Proposition 17 (local-state obstruction).} The two preparations
+in (120) have identical density-kernel jets at every diagonal point and
+identical expectations of every finite-order local differential
+observable for which they are defined. In particular all symmetrized
+polynomial \(Q,P\) moments agree. Nevertheless, for the supplied free
+Hamiltonian \(P^2/(2m)\) and
+\[T\ge m(a+2d)^2/\hbar,\qquad B=\int\phi(q)dq>0,\] their terminal
+coordinate laws satisfy \[\|\rho_{+,T}-\rho_{-,T}\|_{\rm TV}
+ \ge\frac{2dmB^2\cos(1/2)}{\pi\hbar T}>0.\tag{122}\] Here total
+variation is the supremum of event-probability differences. Consequently
+an evolution rule on the equivalence classes defined by these local data
+cannot reproduce this reference's coordinate records.
+
+\emph{Proof.} The difference of the density kernels is
+\(\phi_R(q)\phi_L(q')+\phi_L(q)\phi_R(q')\). It is supported in two
+rectangles a positive distance from the diagonal. Every diagonal
+derivative therefore vanishes. Also a finite-order local differential
+operator preserves the support of each smooth packet, so its
+cross-packet matrix elements vanish. This proves all the stated
+expectation equalities, including finite polynomial moments with
+\(P=-i\hbar\partial_q\). These equalities do not assert equality of the
+full momentum distributions; finite local moments need not determine
+those distributions in this family.
+
+For \(T>0\) the free propagator is
+\[U_T(x,q)=\sqrt{\frac{m}{2\pi i\hbar T}}
+       e^{im(x-q)^2/(2\hbar T)}.\] Write \(R_T=U_T\phi_R\),
+\(L_T=U_T\phi_L\). Direct expansion gives
+\(\rho_{+,T}-\rho_{-,T}=2\operatorname{Re}(R_T\overline{L_T})\). For
+\(|x|\le d\) and either packet's integration variable,
+\(|x-q|\le a+2d\). The stated time bound puts each kernel phase in
+\([0,1/2]\), so the cross-phase difference is in \([-1/2,1/2]\). Since
+\(\phi\) is nonnegative, the double integral gives
+\[\rho_{+,T}(x)-\rho_{-,T}(x)
+ \ge\frac{mB^2\cos(1/2)}{\pi\hbar T}\quad(|x|\le d).\] Integration over
+this coordinate-record event proves (122), without an extra factor
+\(1/2\). Parity also gives \(\rho_{-,T}(0)=0\). The bound makes
+\(\rho_{+,T}(0)>0\). \(\square\)
+
+The spatial mixture has no Fisher excess:
+\[I\!\left(\frac{\phi_R^2+\phi_L^2}{2}\right)
+ =\frac{I(\phi_R^2)+I(\phi_L^2)}2.\] This is a \textbf{decomposition of
+the position density}, not an unread which-packet instrument applied to
+the coherent preparations. Such an instrument would remove their
+cross-packet kernel entries. The zero mixture excess shows that
+position-score bookkeeping alone does not detect those entries; it does
+not identify coherent preparations with an incoherent mixture.
+
+\textbf{The missing data in a Fisher kinetic description.} Consider the
+conditional state functional \[H[\rho,S]=\int\left[\frac{\rho(S')^2}{2m}
+ +\frac{\kappa^2}{2m}\frac{(\rho')^2}{\rho}+V\rho\right]dq,\] with the
+Fisher term defined by (121) at zero-density boundaries. Encoding
+\(\psi=\sqrt\rho\,e^{iS/\hbar}\) distinguishes (120) by \(S=0\) on both
+packets or by a relative constant \(\pi\hbar\). Their \(S'\) and all
+local Hamiltonian densities agree initially. A smooth change between the
+two constants can lie wholly in the vacuum interval, with zero
+density-weighted kinetic cost. Local gradient data cannot recover this
+integration constant. Supplying \((\rho,S)\) with its relative constants
+retains it; quotienting out independent constants on separated supports
+loses it. Only the common global phase can be discarded throughout this
+reference family. Neither this functional nor its local equations
+provide a continuation through the vacuum that independently selects the
+missing constant.
+
+\textbf{An exact two-packet completion.} Retain the populations
+\(1/2,1/2\) and one coherence datum
+\[C=\begin{pmatrix}1/2&c\\\bar c&1/2\end{pmatrix},
+\qquad |c|\le1/2.\tag{123}\] The eigenvalues \(1/2\pm|c|\) make this a
+positive trace-one matrix. In the freely transported orthonormal basis
+\((R_T,L_T)\), keep \(C\) fixed. Then the complete family of coordinate
+laws is \[\rho_{C,T}(x)=\tfrac12(|R_T(x)|^2+|L_T(x)|^2)
+ +2\operatorname{Re}[cR_T(x)\overline{L_T(x)}].\tag{124}\] Positivity
+and normalization follow from the matrix and orthonormality. The free
+semigroup composes this description under every time subdivision.
+Initially every \(c\) has the same diagonal jets and Fisher data,
+because the packet supports are disjoint. The values \(c=\pm1/2\) give
+(120); \(c=0\) gives the unread which-packet mixture. This supplies the
+missing descriptor for this finite reference construction, not a
+physical derivation of complex coherence or a universal recording law.
+
+\textbf{Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT with the
+Fisher and spatial-mixture qualifications above.} The initial moment
+equalities, phase bound, total-variation constant and finite completion
+were checked.
+
+The next constructive physical test is a preparation-and-record history
+rule carrying the datum \(c\) through separation and reunion, together
+with (117)'s conditional curvature and (119)'s unread-label excess. It
+must predict a terminal coordinate law from independently stated
+apparatus dynamics. A retained classical preparation label could encode
+this datum; these results do not themselves force a quantum ontology.
+Abandon a local-score-only descriptor that identifies (120), or a
+history rule that simply imports (124) as its physical premise. The
+positive scale and the free quantum propagation used in this test remain
+supplied; the \(\kappa=0\) branch has not been excluded.
+
 \subsection{9. Consequence for STATE}\label{consequence-for-state}
 
 The Newton task advances from testing stationary radiation to deriving
@@ -2888,13 +3010,15 @@ possible repair: the weak nonlinear failure (113)--(114) is exact under
 every subdivision and the complete coordinate-record path. The bounded
 curvature test (115)--(116) identifies its signed \(\sqrt T\) term.
 Section 8.18 isolates the candidate score correction (117) and the
-unread-label excess (119). The Gaussian preparation restriction cannot
-be promoted to a universal classical recording law by canonical motion
-alone. Next Newton lemma: a physical conditioning rule producing that
-signed correction and preserving the excess under composition; reject an
-imported quantum kernel, erasure on forgetting, or an unexcluded zero
-branch. Alternate to separately marked connected gauge components.
-Newton remains the current research emphasis. Adaptive timing,
-independent positivity, universality and radiation calibration remain
-separate.
+unread-label excess (119). Section 8.19 gives a quantitative free-record
+witness (122) showing that even all local jets and Fisher data omit
+predictive coherence, and closes the two-packet reference with (123).
+The Gaussian preparation restriction cannot be promoted to a universal
+classical recording law by canonical motion alone. Next Newton lemma: a
+physical preparation-and-record history rule carrying this coherence
+through separation and reunion while accounting for (117), (119); reject
+a local-only descriptor, imported quantum dynamics or an unexcluded zero
+branch. Alternate to weak-strip gauge dressing. Newton remains the
+current research emphasis. Adaptive timing, independent positivity,
+universality and radiation calibration remain separate.
 \end{document}

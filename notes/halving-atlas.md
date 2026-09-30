@@ -332,8 +332,12 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    show that weak nonlinear copies fail under every subdivision and the
    full coordinate-record path, with uniform small-exposure probability
    (114) and a bounded curvature test (116) (Sol/Astra, refereed).
-   Next: a physical conditioning law producing (117)'s signed score
-   correction and retaining (119)'s excess when labels become unread.
+   [§8.19](sed-closure-under-recording.md#819-local-score-data-do-not-close-free-evolution)
+   gives a finite free-record witness (122) against a local-score-only
+   state and its exact two-packet coherence completion (123) (Sol/Astra,
+   refereed). Next: a physical preparation-and-record history rule
+   carrying coherence through separation and reunion, alongside (117)'s
+   signed correction and (119)'s excess when labels become unread.
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
