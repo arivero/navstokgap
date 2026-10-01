@@ -269,6 +269,58 @@ $h=0$. That is the gap: a contrast rather than a scale, discontinuous at
 zero, and invisible at any fixed resolution once $h$ falls below
 $\delta\Delta p$.
 
+## 3c. Imprecision actions at both ends
+
+The record is one end of the comparison; the preparation is the other.
+A determinate swarm attached to the $h>0$ theory as one state (5) has
+no momentum thickness; a real swarm has one, and so does the same
+classical swarm attached as a mixture of localized states, whose
+thickness is of order $\sqrt h$. The following proposition says what a
+thickness does, in the exact free setting of §4, and the general case
+follows by the same envelope identity.
+
+**Proposition (preparation thickness).** Shift the initial curve by a
+momentum $\eta$, $\psi_0^\eta=a\,e^{i(S_0+\eta q)/h}$, and average the
+record over $\eta$ with a density $w$ of mean zero and width $\Delta$.
+Let $x$ be a record point with two arrivals $q_1\neq q_2$, write
+$\Delta q_0=|q_1-q_2|$ for their launch separation, and let $\Delta$ be
+small enough that the branch densities and launch points are constant
+across the thickness up to $o(1)$ and $\Delta^2|\partial_\eta(q_1-q_2)|\ll h$.
+Then the averaged record has visibility
+$$V_\Delta=V\,|\hat w(\Delta q_0/h)|+O(h)+o(1),\qquad
+\hat w(\xi)=\int w(\eta)e^{i\xi\eta}d\eta,\tag{V3}$$
+so a Gaussian thickness gives $V_\Delta=V\exp[-(\Delta\,\Delta q_0/h)^2/2]$.
+
+*Proof.* The arrivals solve $q+(p_0(q)+\eta)t/m=x$ and the stationary
+actions are $\Phi^\eta_a=m(x-q_a)^2/2t+S_0(q_a)+\eta q_a$. By the
+envelope identity, $d\Phi^\eta_a/d\eta=q_a(\eta)$, so
+$\Phi^\eta_1-\Phi^\eta_2=\psi(0)+\eta(q_1-q_2)+O(\eta^2|\partial_\eta(q_1-q_2)|)$.
+Averaging the cross term of (3) against $w$ under the stated
+hypotheses gives
+$2\sqrt{\rho_1\rho_2}\,\mathrm{Re}[e^{i\psi(0)/h+i\theta}\hat w((q_1-q_2)/h)]$,
+and the diagonal terms change by $o(1)$. $\square$
+
+With both imprecisions present and independent, the contrast is
+$V\,|\hat\varphi(\delta\Delta p/h)|\,|\hat w(\Delta\,\Delta q_0/h)|$. Each
+argument is an action divided by $h$: the record imprecision
+$\delta\,\Delta p$, position resolution times the arrival momentum
+difference, and the preparation imprecision $\Delta\,\Delta q_0$,
+momentum thickness times the launch separation. The gap is seen iff
+both imprecision actions lie below $h$. This is the floor the thesis
+asserts, and it runs opposite to the uncertainty relation: there $h$
+bounds imprecisions from below; here imprecisions must be pushed below
+$h$ for the $h>0$ record to differ from Newton's. Newton's construction
+has exact preparations and exact records, both imprecision actions
+zero, so for every $h>0$ it sees the full contrast $V$, and at $h=0$ it
+sees none. The two attachments of the same classical swarm are now
+separated by a number: the mixture of localized states has
+$\Delta\sim\sqrt h$, so $\Delta\,\Delta q_0/h\to\infty$ and its contrast
+vanishes, while the state (5) has $\Delta=0$. Determinacy at each
+$h$, momentum thickness of order $h$ at fixed position (the sheet
+separation $2\kappa\,\partial_q\log\rho$ of the
+[score note](score-constrained-ensemble.md)) rather than $\sqrt h$,
+is the premise that selects the first attachment.
+
 ## 4. Theorem 3: inertial motion with a graded velocity
 
 Newton's simplest motion already shows the gap when the preparation
@@ -486,6 +538,12 @@ the thesis only through folding, which is already Theorem 3.
   streams cross is fixed by Newton's branch densities, independent of
   $h$ for every $h>0$, and zero at $h=0$ (§3b). The dilation symmetry
   makes the invariant dimensionless where the mass gap is a scale.
+- **Both ends must be exact.** The contrast is damped by
+  $|\hat\varphi(\delta\Delta p/h)|$ at the record and by
+  $|\hat w(\Delta\,\Delta q_0/h)|$ at the preparation (§3c): the gap is
+  seen iff both imprecision actions lie below $h$. Newton's construction
+  has both zero; a classical swarm attached as a mixture of localized
+  states has thickness $\sqrt h$ and shows no gap.
 
 The thesis is therefore exactly as strong as two premises: that
 records are complete, the densities themselves rather than their
@@ -531,7 +589,9 @@ and for refinement with records; a record of resolution $\delta$
 reaches Newton iff $h/(\delta\Delta p)\to0$. The gap has a number: the
 fringe visibility $2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)$ of a complete record
 where two streams cross, fixed by Newton's branch densities, independent
-of $h$ for every $h>0$ and zero at $h=0$ (§3b). Consequences: the Planck
+of $h$ for every $h>0$ and zero at $h=0$ (§3b), seen iff the record and
+preparation imprecision actions $\delta\Delta p$ and $\Delta\,\Delta q_0$
+both lie below $h$ (§3c). Consequences: the Planck
 paper's Gaussian parabola cannot carry the gap argument, which belongs
 to the Kepler swarm; the two premises, complete records as the
 record-limit-first order and determinate preparations as Newton's
