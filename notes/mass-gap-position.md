@@ -31,7 +31,7 @@ Later corrections: [the critical-coupling note](gapped-set-critical-coupling.md)
 >    note keeps kernel-tail budgets and leaves their conversion into a
 >    Hamiltonian error open.
 > 4. *Thresholds.* For the $SU(3)$ Wilson transfer matrix the rigorous
->    thresholds are $g^2>444$ (Dobrushin) and $g^2\ge1056$ (polymer
+>    thresholds are $g^2>444$ (Dobrushin) and $g^2\ge1059$ (polymer
 >    expansion, all representations; $1059$ without the source's
 >    linearization, §6); $176$ is the leading-activity figure only.
 >    Their gap rates are now printed exactly, and the former
@@ -296,7 +296,7 @@ show that every Hamiltonian route fails.
 
 | region | statement | source |
 | --- | --- | --- |
-| strong, Wilson transfer matrix: $g^2>444$ (Dobrushin) or $g^2\ge1056$ (polymer, all representations), both rigorous; $176$ is the leading-activity figure only | $\Delta_W\ge(\hbar c/a)\log[1/(18(e^{24/g^2}-1))]\simeq(\hbar c/a)\log(g^2/432)$, resp. $\Delta_W\ge(\hbar c/a)\,4\log[1/(176(e^{6/g^2}-1))]\simeq(\hbar c/a)\,4\log(g^2/1056)$, uniform in volume | [Dobrushin note](dobrushin-uniqueness-wilson.md), [polymer note](wilson-strong-coupling-explicit.md) |
+| strong, Wilson transfer matrix: $g^2>444$ (Dobrushin) or $g^2\ge1059$ (polymer, all representations), both rigorous; $176$ is the leading-activity figure only | $\Delta_W\ge(\hbar c/a)\log[1/(18(e^{24/g^2}-1))]\simeq(\hbar c/a)\log(g^2/432)$, resp. $\Delta_W\ge(\hbar c/a)\,4\log[1/(176(e^{6/g^2}-1))]\simeq(\hbar c/a)\,4\log(g^2/1056)$, uniform in volume | [Dobrushin note](dobrushin-uniqueness-wilson.md), [polymer note](wilson-strong-coupling-explicit.md) |
 | strong, Kogut--Susskind: explicit threshold withdrawn 2026-10-02 (formerly $g^2\ge388$, $79$ adjacent) | finite-volume bound $\frac83g^2-12|P|/g^2$ only; the volume-uniform KS gap rests on Yarotsky's existential threshold | [continuous-time note](kogut-susskind-strong-coupling-explicit.md) |
 | weak: no coupling at which a step is proved with explicit constants | necessary window $C_1g\le\eta\le C_2$ for the Hamiltonian large-field inequality, nonempty only for $1/g^2\gtrsim10^2$ (crude constants); one explicit small-field blocking step has remainder threshold $g^2\sim10^{-12}$ if the propagator decay rate is of order one, which is unproved, and $g^2\sim10^{-35}$ at the proved rate (scaling estimates) | [operator-inequality note](large-field-operator-inequality.md) §4, [part 1b](small-field-step-decay-and-threshold.md) |
 | intermediate, from the weak side's reach ($g^2\sim10^{-2}$ at best, on the crude window) to $g^2=444$ | no expansion applies; a finite-volume mixing condition (Dobrushin--Shlosman) would give the gap coupling by coupling | [finite-verification note](intermediate-region-finite-verification.md) |
@@ -425,7 +425,7 @@ explicit constants (§6), a quantitative deficit on the same trajectory.
 
 Correction of 2026-10-02. STATE and other notes citing this map should
 use the labelled thresholds of §6: $g^2>444$ (Dobrushin) and
-$g^2\ge1056$ (polymer, all representations) for the $SU(3)$ Wilson
+$g^2\ge1059$ (polymer, all representations) for the $SU(3)$ Wilson
 transfer matrix; Yarotsky's existential threshold, $g_0^2\simeq10^{101}$
 when made explicit, for the Kogut--Susskind Hamiltonian; and estimates
 only on the weak side. This map no longer supports a phase-transition

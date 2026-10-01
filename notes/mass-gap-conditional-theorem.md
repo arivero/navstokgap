@@ -60,7 +60,7 @@ Later corrections: [reasons to stop](reasons-to-stop-as-research.md) rejects cer
 >    constants" is corrected: the volume-uniform Kogut--Susskind gap rests
 >    on Yarotsky's existential threshold, and the explicit rigorous
 >    thresholds belong to the Wilson transfer matrix, $g^2>444$
->    (Dobrushin) and $g^2\ge1056$ (polymer expansion, all
+>    (Dobrushin) and $g^2\ge1059$ (polymer expansion, all
 >    representations), with $176$ the leading-activity figure only. The
 >    theorem uses none of them.
 
@@ -468,7 +468,7 @@ lattice ([obligations map](mass-gap-obligations-lattice.md) §2); the
 decay-to-gap transfer (item 3; [the Wilson
 note](wilson-strong-coupling-explicit.md) §3); volume-uniform
 strong-coupling gaps for the Wilson transfer matrix at $g^2>444$
-(Dobrushin) and $g^2\ge1056$ (polymer expansion, all representations),
+(Dobrushin) and $g^2\ge1059$ (polymer expansion, all representations),
 with $176$ the leading-activity figure only; T2 for the Kogut--Susskind
 Hamiltonian from Yarotsky's existential threshold, which his proof
 makes $g_0^2\simeq10^{101}$; and the upper side of the gap given

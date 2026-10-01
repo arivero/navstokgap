@@ -23,7 +23,7 @@ truncated correlations at rate $\log(1/\alpha)$ per lattice unit, and
 link reflection positivity turns the rate into a gap:
 $$\Delta_W\ \ge\ \frac{\hbar c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\ \simeq\ \frac{\hbar c}{a}\log\frac{g^2}{432}\qquad(g^2>444),$$
 uniformly in the volume. This is a better threshold than the polymer
-expansion's $1056$ and a smaller rate than its $4\log(g^2/1056)$. The
+expansion's $1059$ (exact; $1056$ linearized) and a smaller rate than its $4\log(g^2/1056)$. The
 block version of the same condition, the Dobrushin--Shlosman
 constructive criterion (in *Statistical Physics and Dynamical Systems*,
 Birkhäuser 1985, 347), replaces the single link by a box $V$ of links
@@ -93,7 +93,7 @@ $$\Delta_W=-\frac{\hbar c}{a}\log\|\mathcal T|_{\Omega^\perp}\|\ \ge\ \frac{\hba
 
 | route | rigorous threshold ($SU(3)$) | gap bound |
 | --- | --- | --- |
-| polymer expansion, all representations | $g^2\ge1056$ | $(\hbar c/a)\,4\log(g^2/1056)$ |
+| polymer expansion, all representations | $g^2\ge1059$ | $(\hbar c/a)\,4\log(g^2/1056)$ |
 | Dobrushin single-site condition | $g^2>444$ | $(\hbar c/a)\,\log(g^2/432)$ |
 
 The two are complementary: the Dobrushin route enters earlier, the
