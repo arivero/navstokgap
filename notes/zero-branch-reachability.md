@@ -989,7 +989,16 @@ Hamiltonians are self-adjoint and their dynamics global
 singularities and the classical-first construction needs a branch
 rule (1998-conjecture note, Theorems 1 and 2(b)); the theory with
 $h>0$ is self-sufficient where Newton's axioms leave motion
-undefined. Theorem 5 proves that the gap requires the coherence premise: the
+undefined. Two theories must be kept apart here. Theorem 5 concerns
+nineteenth-century classical mechanics, the Liouville transport of a
+swarm along a smooth complete flow, and shows it is reached from the
+$h>0$ theory along recorded or imprecise preparations. The thesis in
+its strong form concerns Newton's mechanics itself, the theory of
+motion from his axioms, which is incomplete where the classical flow
+fails; that it requires $h>0$ to exist as a theory, with the
+large-action regime as its only completion, is not decided by Theorem
+5 and is the claim the self-sufficiency contrast begins to test.
+Theorem 5 proves that the gap requires the coherence premise: the
 incoherent attachment of the same swarm, with widths vanishing with
 $h$, reaches Newton's density at every fixed time, exactly for
 quadratic forces. The referee's scope verdict stands: no

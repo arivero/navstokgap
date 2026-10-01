@@ -33,9 +33,18 @@ has global dynamics where Newton's axioms leave motion undefined
 2(b) of the 1998-conjecture note against its Theorem 1). Newton
 therefore needs $h$, not as a parameter his mechanics contains, but as
 the scale that defines the regime in which it holds and the theory
-whose regime it is. The earlier strong form, that classical mechanics
-requires $h>0$ to exist as a theory, is closed by Theorem 5: a
-classical limit exists along recorded or imprecise preparations. Proof
+whose regime it is. Two theories must be kept apart (user, 2026-10-01 night).
+Theorem 5 shows that nineteenth-century classical mechanics, the
+Liouville transport of swarms along smooth complete flows, is reached
+from the $h>0$ theory along recorded or imprecise preparations. The
+strong form of the thesis concerns Newton's mechanics itself, the
+theory of motion from his axioms with determinate bodies and exact
+ultimate ratios, which is known to be incomplete (collisions,
+non-unique continuations, the branch rule of the classical-first
+construction): that Newton's mechanics requires $h>0$ to exist as a
+theory, its only completion being the large-action regime of the
+$h>0$ theory. This strong form is open, and the self-sufficiency
+contrast is its first evidence. Proof
 obligations: (i) extend the necessity of the conditions beyond
 quadratic forces, where it is exact, to the smooth and Kepler cases now
 only cited; (ii) show that no condition statable within classical
