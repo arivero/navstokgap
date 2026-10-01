@@ -1,0 +1,1964 @@
+{
+ "generated": "2026-10-02",
+ "method": "Fable 5.1 referee subagents, one batch at a time, rubric in note-scores.md",
+ "first_pass": {
+  "mass-gap-obligations-lattice": {
+   "slug": "mass-gap-obligations-lattice",
+   "kind": "synthesis",
+   "main_claim": "The Jaffe--Witten gap on the Hamiltonian lattice route splits into T1 (finite-lattice gap, proved), T2 (strong coupling), T2' (no Coulomb phase), T3 (scaling limit) and T4 (existence).",
+   "novelty": 2,
+   "novelty_reason": "Theorem 1 is the standard finite-lattice Kogut--Susskind result (compact resolvent, positivity improving, gauge-invariant ground state); the T1--T4 decomposition is a digest of the known programme structure.",
+   "correctness": 8,
+   "correctness_reason": "Theorem 1 is correct with explicit hypotheses; status statements match the cited literature. Small slips: the magnetic norm bound is off by a factor 2 and the unperturbed gap is not uniform for very small lattices.",
+   "issues": [
+    {
+     "where": "§2 proof (1) and §3 Kato bound",
+     "what": "With V = 2 sum_p (N - Re tr U_p), the bound is V <= 4N|P|, not 2N|P|; the Kato conclusion is unchanged.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3 unperturbed gap",
+     "what": "For lattices of side 2 or 3 a winding loop has fewer than four links, so gamma_phys = 2 C_2 g^2 is not uniform in N; a factor 2 is lost.",
+     "severity": "minor"
+    },
+    {
+     "where": "Abstract (T4)",
+     "what": "'Known in finite volume with the cutoff removed' overstates: Balaban gives UV stability bounds, not a finite-volume theory with the axioms; §6 states it correctly.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3 vs §7--8",
+     "what": "§3 says a Hamiltonian T2 proof must truncate or use relative boundedness; §8 reports it closed via Yarotsky; the earlier text was not reconciled.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "strong-coupling-uniform-gap",
+    "low-dimensional-mass-gap",
+    "action-floor-yang-mills-gap"
+   ],
+   "related": [
+    "mass-gap-openings",
+    "strong-coupling-uniform-gap",
+    "low-dimensional-mass-gap"
+   ]
+  },
+  "mass-gap-conditional-theorem": {
+   "slug": "mass-gap-conditional-theorem",
+   "kind": "synthesis",
+   "main_claim": "Assuming blocking control to the verified coupling (H1) and one-box strong mixing there (H2), the SU(3) continuum gap obeys m >= hbar c min(gamma_*,gamma')/a_*.",
+   "novelty": 2,
+   "novelty_reason": "Packages the standard Balaban-style outline (block to strong-mixing region, then Dobrushin--Shlosman decay, then transfer-matrix gap) as one conditional statement; the hypotheses are the open problems.",
+   "correctness": 5,
+   "correctness_reason": "Items 1--3 follow from the cited theorems modulo gauge and boundary-condition details, but item 4 and 'nothing else is missing' presuppose a continuum limit with OS axioms that H1 and H2 do not supply.",
+   "issues": [
+    {
+     "where": "§3 (4), §4 'Nothing else is missing'",
+     "what": "H1 and H2 give no convergence of Schwinger functions or OS axioms; existence of the continuum theory is a separate obligation, so the completeness claim overstates.",
+     "severity": "major"
+    },
+    {
+     "where": "§3 (2)-(4)",
+     "what": "Prefactors sum_k C_k may diverge as K(a_0) -> infinity; passing the rate to the continuum needs uniform control not in H1.",
+     "severity": "major"
+    },
+    {
+     "where": "§2 H2, §3 (1)",
+     "what": "Dobrushin--Shlosman theory is for site spins with external boundary conditions; its application to gauge-invariant content on links and to periodic volumes is asserted, not derived.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3 (3)",
+     "what": "Uniformity in the volume is claimed from a finite-box mixing condition without stating how periodic boundary conditions enter.",
+     "severity": "minor"
+    },
+    {
+     "where": "§4 first paragraph",
+     "what": "Glueball mass written as 1.66 hbar c/fm; 1.66 GeV is about 8.4 hbar c/fm, which is what the quoted m a_* = 0.78 uses.",
+     "severity": "minor"
+    },
+    {
+     "where": "Abstract vs §4",
+     "what": "a_* given as 0.1--0.17 fm in the abstract and 0.093 fm in §4.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "confinement-scale-bands",
+    "mass-gap-openings",
+    "wilson-strong-coupling-explicit",
+    "moment-hierarchy-upper-bounds",
+    "intermediate-region-finite-verification"
+   ],
+   "related": [
+    "confinement-scale-bands",
+    "intermediate-region-finite-verification",
+    "mass-gap-openings"
+   ]
+  },
+  "magnetic-energy-identities": {
+   "slug": "magnetic-energy-identities",
+   "kind": "obstruction",
+   "main_claim": "Exact Laplacian and gradient identities for the Wilson magnetic energy, a ground-state sum rule, and a comparison-function attempt at pointwise Gibbs domination that bites only above an extensive threshold.",
+   "novelty": 3,
+   "novelty_reason": "Identities are direct Peter--Weyl and completeness consequences; the sum rule is a virial-type identity. Value lies in closing the comparison-principle route for the repository's Gibbs-domination question.",
+   "correctness": 8,
+   "correctness_reason": "Propositions 1--4 check line by line, including the SU(N) completeness step and the sum-rule algebra. The negative conclusion is argued structurally, not proved, and the threshold is described loosely.",
+   "issues": [
+    {
+     "where": "Abstract, §6",
+     "what": "'Answered in the negative' overstates: Proposition 4 shows one comparison function fails; no theorem excludes every argument from the eigenvalue equation.",
+     "severity": "minor"
+    },
+    {
+     "where": "§4 'Where it stops'",
+     "what": "V_* ~ N|P| uses only e_0 <= B'N|P|; the actual threshold is e_0/B' >= <V> + A'K/B', still extensive, so the conclusion stands with a sharper statement.",
+     "severity": "minor"
+    },
+    {
+     "where": "Proposition 4 proof",
+     "what": "Maximum lies in {L phi <= 0}, which is contained in {V <= V_*}, not strictly {V < V_*}; harmless.",
+     "severity": "minor"
+    },
+    {
+     "where": "Proposition 2 general case",
+     "what": "The SU(N) bound 16NV is loose; the same argument gives 16V since the completeness expression is at most V_p.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3",
+     "what": "Normalisation of Delta relative to C_2 and positivity/smoothness of Omega on the compact manifold are used without statement.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "lattice-gap-upper-bounds",
+    "agmon-global-not-local"
+   ],
+   "related": [
+    "typical-field-strength-window",
+    "ground-state-measure-transfer",
+    "agmon-global-not-local"
+   ]
+  },
+  "low-dimensional-mass-gap": {
+   "slug": "low-dimensional-mass-gap",
+   "kind": "synthesis",
+   "main_claim": "Mass gaps and action floors are unit multiples of fixed constants; solved low-dimensional gaps split into supplied and generated, the latter needing two non-commuting scale-free structures.",
+   "novelty": 3,
+   "novelty_reason": "Proofs are Simon 1983, Luescher 1983, 2D Yang--Mills, delta and inverse-square potentials, all standard; the supplied/generated dictionary and the action-floor analogy are a modest new framing.",
+   "correctness": 8,
+   "correctness_reason": "Theorems 1, 3, 5, 6 and Propositions 7, 11, 12 check line by line with explicit constants; only small hypothesis slips and one internal inconsistency, none touching a conclusion.",
+   "issues": [
+    {
+     "where": "Theorem 3 and its readings",
+     "what": "Hypotheses (V>=0 continuous on R^n) exclude the k=-1 and k=-2 special cases that are then discussed under it.",
+     "severity": "minor"
+    },
+    {
+     "where": "Corollary 9",
+     "what": "States box gap 2 pi hbar c/L, then notes non-compact zero modes have spectrum [0,inf) at finite L, so the full theory has no gap.",
+     "severity": "minor"
+    },
+    {
+     "where": "Proposition 13",
+     "what": "Threshold 1/4 is the Hardy/semiboundedness threshold; failure of essential self-adjointness on C_0^inf(R^3 minus 0) holds for every attractive coupling.",
+     "severity": "minor"
+    },
+    {
+     "where": "Theorem 1",
+     "what": "Hypothesis 'attained set defined by dimensionally homogeneous relations' is informal; the scaling covariance is assumed rather than derived.",
+     "severity": "minor"
+    },
+    {
+     "where": "§4 compact abelian",
+     "what": "Goepfert--Mack Debye-mass formula quoted without derivation or normalisation check; reading level deferred to a batch file.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "action-unit-dimensional-selection",
+    "millennium-problem-definitions",
+    "newton-insertion-action"
+   ],
+   "related": [
+    "comparison-and-bridges",
+    "refinement-composition-and-limit"
+   ]
+  },
+  "lieb-robinson-kogut-susskind": {
+   "slug": "lieb-robinson-kogut-susskind",
+   "kind": "theorem",
+   "main_claim": "Kogut--Susskind Hamiltonian obeys a volume-uniform Lieb--Robinson bound with velocity bounded by 32eNc/g^2, giving a strong-coupling correlation length of order aN/g^4.",
+   "novelty": 3,
+   "novelty_reason": "Standard reduction (commuting unbounded on-site part plus bounded finite-range interaction) as in oscillator-lattice LR bounds; application to lattice gauge theory is routine for specialists, constants modestly explicit.",
+   "correctness": 7,
+   "correctness_reason": "Proposition 1 reduction is sound. Corollary 2 misstates the clustering bound at large g, and the causality reading treats an upper bound on velocity as the actual light cone.",
+   "issues": [
+    {
+     "where": "Abstract, §4, §6",
+     "what": "A divergent upper bound on v does not show the lattice light cone opens faster than c; stated as a consequence.",
+     "severity": "major"
+    },
+    {
+     "where": "Corollary 2",
+     "what": "Clustering theorems give decay rate at most mu=1/a; xi <= C a + v hbar/Delta, so the pure g^{-4} bound fails for large g.",
+     "severity": "minor"
+    },
+    {
+     "where": "§2 proof",
+     "what": "Lattice distance on links and the constant e in v undefined; constant depends on plaquette diameter in the chosen metric.",
+     "severity": "minor"
+    },
+    {
+     "where": "§2 proof",
+     "what": "Time-dependent interaction is only strongly continuous; LR theorem's continuity hypothesis and infinite-dimensional on-site spaces asserted at metadata level.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3",
+     "what": "Extension of Hastings--Koma/Nachtergaele--Sims clustering to an unbounded Hamiltonian is asserted, not checked.",
+     "severity": "minor"
+    },
+    {
+     "where": "§4",
+     "what": "Box-crossing time L/v uses the bound as the actual velocity; the consistency claim is heuristic.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "mass-gap-obligations-lattice",
+    "strong-coupling-uniform-gap"
+   ],
+   "related": [
+    "gapped-set-critical-coupling",
+    "torus-valley-potential"
+   ]
+  },
+  "lattice-truncation-uniform": {
+   "slug": "lattice-truncation-uniform",
+   "kind": "derivation",
+   "main_claim": "Within one lattice doubling the Wilson flow is coupling-free, t/a^2=1/2 and plaquette angles are bounded by pi, so flow-conjugation truncation error is a pure number Ce^{-cK}; decimation is the obstruction.",
+   "novelty": 2,
+   "novelty_reason": "Coupling independence of the Wilson flow and compactness of the plaquette angle are elementary; the note mainly corrects the repository's own earlier reading.",
+   "correctness": 7,
+   "correctness_reason": "Core observations are right and the correction is sound; the Proposition is a sketch with C, c unquantified despite 'constants explicit', and 'K of order three suffices' is not backed by a number.",
+   "issues": [
+    {
+     "where": "Section 3, Proposition and proof",
+     "what": "C and c are never computed; the Schur-type form bound turning kernel decay into a relative operator error is only outlined.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, Coefficients",
+     "what": "Exponential kernel bound for the time-dependent linearized flow is invoked as 'standard' without stating the Lieb-Robinson or Dyson argument.",
+     "severity": "minor"
+    },
+    {
+     "where": "Lead",
+     "what": "'Truncating ... costs Ce^{-cK} ... K of order three suffices' overstates the unquantified result; the headline 'settled' depends on unknown c.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, Curvature",
+     "what": "Casimir factor c_A for the adjoint action is said to be of order one but not given for SU(3).",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "flow-jacobian-truncation-error",
+    "flow-conjugation-truncation",
+    "blocking-criterion-monotone",
+    "blocking-step-obstruction"
+   ],
+   "related": [
+    "typical-field-strength-window",
+    "flow-jacobian-truncation-error"
+   ]
+  },
+  "lattice-gap-upper-bounds": {
+   "slug": "lattice-gap-upper-bounds",
+   "kind": "theorem",
+   "main_claim": "Feynman-Bijl bounds on the Kogut-Susskind gap: plaquette bound g^2 N hbar c/(a Var), abelian gap bounded by a plaquette-sine structure factor, no gauge-invariant operator linear in E for non-abelian G.",
+   "novelty": 4,
+   "novelty_reason": "Single-mode and uncertainty-principle bounds are standard tools; their explicit application to compact U(1) structure factor and the non-abelian dressing obstruction is a modest, clean recombination.",
+   "correctness": 8,
+   "correctness_reason": "Propositions 1, 6, Corollaries 2-3 and Theorem 5 check out with correct constants; the non-abelian string term is heuristic and the T_fin target misstates its scaling.",
+   "issues": [
+    {
+     "where": "Section 5, T_fin",
+     "what": "Scaling O(a^3 t^{-3/2}) is inconsistent with the concluded bound C hbar c/sqrt(8t); dimensional counting gives O(a t^{-1/2}). Target only, but misstated.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, after Proposition 6",
+     "what": "The dressed-operator double commutator is estimated by the function-of-links formula of Section 2, which does not apply to operators containing E; order-of-magnitude only.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, Hamiltonian",
+     "what": "U(1) magnetic coefficient 1/g^2 differs by a factor 2 from the Section 2 normalization with N=1; flagged but constants in Theorem 5 are convention-dependent.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, Corollary 3",
+     "what": "Volume-uniform continuity of Var at g=infinity rests on Yarotsky's Theorem 1 quoted at metadata level; g_1(N) is not made explicit.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "mass-gap-obligations-lattice",
+    "strong-coupling-uniform-gap"
+   ],
+   "related": [
+    "gapped-set-critical-coupling",
+    "flow-jacobian-truncation-error",
+    "su3-constants"
+   ]
+  },
+  "large-field-operator-inequality": {
+   "slug": "large-field-operator-inequality",
+   "kind": "obstruction",
+   "main_claim": "A Hamiltonian chain of operator lower bounds needs a local energy-excess inequality on the large-field region; measure smallness cannot replace it because negative rare perturbations bind.",
+   "novelty": 3,
+   "novelty_reason": "That Euclidean polymer expansions consume measure statements while operator chains cannot is constructive-QFT folklore; the IMS cost and binding propositions are standard tools applied here.",
+   "correctness": 6,
+   "correctness_reason": "Propositions 1-2 and the IMS computation are correct; the surface-loss inequality of Section 4 is heuristic with unspecified constants, and 'every route loses' is asserted, not proved.",
+   "issues": [
+    {
+     "where": "Lead and Section 4",
+     "what": "Claims every Hamiltonian route to the energy-excess inequality loses a surface term; only one splitting is analysed, so the no-go is overstated.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 4, window",
+     "what": "Constants C_V, c_1, C_2 unspecified; C_1^2 ~ 160 and 1/g^2 >~ 10^2 are not reproducible from the text (C_2 = 1 gives 1/g^2 ~ 10).",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, first fact",
+     "what": "V_N >= (2c_1 eta^2/g^2) hbar c/a on Q via 3d flow monotonicity is asserted by analogy with the Euclidean case, not derived.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2",
+     "what": "Bound |B_t| <= 2c_0 eta/l^2 on the transition region and the heat-kernel response a K_t are stated without derivation; c_0 undefined.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, after Proposition 2",
+     "what": "'Reorganizes the low spectrum' overreads Proposition 2, which only bounds the new ground energy; the gap of H-W is not computed.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "ground-state-measure-transfer",
+    "weak-coupling-feshbach-reduction",
+    "large-field-action-lower-bound",
+    "strong-coupling-threshold-explicit"
+   ],
+   "related": [
+    "large-field-entropy-count",
+    "flow-jacobian-truncation-error",
+    "mass-gap-position"
+   ]
+  },
+  "large-field-entropy-count": {
+   "slug": "large-field-entropy-count",
+   "kind": "derivation",
+   "main_claim": "Nielsen-Olesen unstable modes in a block of constant field gB=eta/l^2 number eta^2/(8 pi^2), scale-free; action cost over count is 2 pi^2/g^2, so the large-field sum converges at weak coupling.",
+   "novelty": 2,
+   "novelty_reason": "Nielsen-Olesen mode counting is textbook; the scale-invariant ratio to the classical action cost is a one-line observation.",
+   "correctness": 5,
+   "correctness_reason": "Mode count and ratio are right for one unit-charge complex field, but 'settles the entropy question' and 'converges for g^2<2pi^2' rest on a heuristic bounded-factor-per-mode assumption.",
+   "issues": [
+    {
+     "where": "Section 3 and Section 4 'Settles'",
+     "what": "Weight bound e^{-S} e^{CN} assumes each unstable direction contributes a bounded factor; no argument, and the regions' entropy is not the saddle's mode count.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 2, count",
+     "what": "Counts one complex unit-charge field; real directions double it and SU(3) has extra charged components with charge 1/2. Note labels it a model estimate.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3",
+     "what": "Action cost eta^2/(4g^2) imported from the transfer note is itself only a classical estimate, not a measure bound.",
+     "severity": "minor"
+    },
+    {
+     "where": "Lead",
+     "what": "'Expansion is not divergent' follows from compactness alone (Proposition 1) and says nothing about the size of the Gaussian order.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "flow-instability-large-field",
+    "ground-state-measure-transfer",
+    "mass-gap-position"
+   ],
+   "related": [
+    "large-field-action-lower-bound",
+    "large-field-operator-inequality"
+   ]
+  },
+  "large-field-action-lower-bound": {
+   "slug": "large-field-action-lower-bound",
+   "kind": "derivation",
+   "main_claim": "If the flowed field-strength block average exceeds eta^2/l^4 then S_E/hbar >= eta^2/(4g^2), uniformly in scale; claimed sharp, with the constant field as constrained minimizer.",
+   "novelty": 1,
+   "novelty_reason": "The bound is positivity plus flow monotonicity applied to a constraint defined by the same density; essentially definitional.",
+   "correctness": 4,
+   "correctness_reason": "Proposition 1 is correct but tautological; sharpness and the constrained-minimizer claim rest on a non sequitur and a non-existent block-supported field strength.",
+   "issues": [
+    {
+     "where": "Section 2, Proposition 2",
+     "what": "A field strength constant on a block and zero outside violates the Bianchi identity; also flow at radius l smears it by O(1), not O(a/l). Sharpness unproved.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 3",
+     "what": "Lowering S_E does not imply lowering the flowed block average; 'every descent direction leaves K_eta' and 'constant field minimizes on K_eta' do not follow.",
+     "severity": "major"
+    },
+    {
+     "where": "Lead and Section 4",
+     "what": "'Closes the large-field corner as an estimate problem' overstates: the net-weight row is admittedly conditional and the count is heuristic.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, remark on uniformity",
+     "what": "Uniformity 'in the gauge group' is a normalization convention, not a result.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "large-field-entropy-count",
+    "flow-instability-large-field",
+    "flow-jacobian-truncation-error",
+    "comparison-and-bridges"
+   ],
+   "related": [
+    "large-field-operator-inequality",
+    "ground-state-measure-transfer"
+   ]
+  },
+  "kogut-susskind-strong-coupling-explicit": {
+   "slug": "kogut-susskind-strong-coupling-explicit",
+   "kind": "theorem",
+   "main_claim": "Continuous-time Duhamel polymer expansion with Kotecky-Preiss gives the SU(3) Kogut-Susskind gap >= (4/3)g^2 hbar c/a for g^2 >= 388, approaching (8/3)g^2 as g grows.",
+   "novelty": 4,
+   "novelty_reason": "Continuous-time cluster expansions for quantum lattice Hamiltonians are known; applying one to Kogut-Susskind SU(3) with explicit thresholds and Gauss-law loop energy is a modest new application.",
+   "correctness": 6,
+   "correctness_reason": "Framework and numbers are consistent, but the overlap bound, the extra n(gamma) term, and the gap read-off from the strong-coupling vacuum are sketched; adjacent-class count admittedly incomplete.",
+   "issues": [
+    {
+     "where": "Section 3, adjacent growth",
+     "what": "Counts only shapes whose first plaquette contains l_0; shapes reaching l_0 later are missed. Note concedes this class is not rigorous.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 2, overlap",
+     "what": "Shift measure bound T_l(gamma)+Delta tau ignores multiple excitation intervals of l in gamma; summing over links gives 4n(gamma), not n(gamma), so second condition loses a factor 4.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, general shapes",
+     "what": "Overlap second condition under the tree count is asserted (Q <= eps-lambda) without redoing the shift-measure argument for non-consecutive tree edges.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, gap read-off",
+     "what": "Decay of Omega_0-expanded correlators to a bound on the true-vacuum gap is sketched by reference; cyclicity of local observables asserted.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, numbers",
+     "what": "u_gen constant 37584 is slightly off (13824e = 37578); thresholds unaffected.",
+     "severity": "minor"
+    },
+    {
+     "where": "Lead and Section 5",
+     "what": "Yarotsky threshold 10^101 and e^{64 t_0} cost are quoted without derivation; comparison not checkable from the note.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "wilson-strong-coupling-explicit",
+    "mass-gap-obligations-lattice",
+    "strong-coupling-uniform-gap",
+    "su3-constants"
+   ],
+   "related": [
+    "wilson-strong-coupling-explicit",
+    "strong-coupling-uniform-gap",
+    "su3-constants"
+   ]
+  },
+  "ground-state-measure-transfer": {
+   "slug": "ground-state-measure-transfer",
+   "kind": "derivation",
+   "main_claim": "Kogut-Susskind ground-state measure equals the time-slice marginal of the Euclidean Wilson measure, importing scale-invariant large-field suppression exp(-c eta^2/g^2).",
+   "novelty": 2,
+   "novelty_reason": "Time-slice marginal via transfer matrix is standard Euclidean reconstruction; scale-invariant action cost of a coherent block field is classical dimensional analysis.",
+   "correctness": 5,
+   "correctness_reason": "Identification uses the a_t->0 anisotropic limit yet claims isotropic-measure estimates transfer verbatim; the large-field bound with running coupling is asserted, not proved; Section 4 partly withdrawn.",
+   "issues": [
+    {
+     "where": "Lead paragraph and Section 2",
+     "what": "Estimates for the isotropic Wilson measure are said to hold for |Omega|^2 verbatim, but Omega is the ground state of the a_t->0 anisotropic limit; no transfer argument.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 3, block estimate",
+     "what": "P(|F|_block >= eta/l^2) <~ exp(-c eta^2/g(l)^2) with running coupling is stated as 'available in standard form' without proof or citation.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 1, Proposition 1",
+     "what": "Limits T->infinity and a_t->0 are not interchanged rigorously; Perron vector of T at fixed a_t is not the H_KS ground state.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, bold sentence",
+     "what": "'Good region is almost everything' as eta_*->0 contradicts the next sentence that the bad set's measure bound tends to one.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, consistency check",
+     "what": "Fixing c=8 pi^2 from a Gaussian-smeared free-field tail does not fix the constant for a sharp block average.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "magnetic-energy-identities",
+    "typical-field-strength-window",
+    "mass-gap-obligations-lattice",
+    "flow-jacobian-truncation-error",
+    "mass-gap-position"
+   ],
+   "related": [
+    "large-field-operator-inequality"
+   ]
+  },
+  "gaussian-blocking-coupling": {
+   "slug": "gaussian-blocking-coupling",
+   "kind": "derivation",
+   "main_claim": "One isotropic product-blocking step of the free lattice gauge field multiplies the flux heat time by 2^{4-D} at zero momentum; aliases contribute O(K^2).",
+   "novelty": 2,
+   "novelty_reason": "Gaussian blocking of a free field preserving the dimensionally scaled tree-level coupling is textbook (Bell-Wilson); the alias-sum bookkeeping is routine.",
+   "correctness": 8,
+   "correctness_reason": "Alias sum, n=0 term, closedness bound and alias norm bound check out; remainder constants and harmonic sector are honestly caveated; some symbols undefined locally.",
+   "issues": [
+    {
+     "where": "Result paragraph",
+     "what": "lambda_D and the 'geometric heat-time normalization' are used without definition in this note; reader must fetch the composition note.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, Iteration",
+     "what": "Remainder constants grow with depth; the note says so, but gives no rate, so finite-depth statement cannot feed a uniform estimate.",
+     "severity": "minor"
+    },
+    {
+     "where": "Consequence for cell 4 paragraph",
+     "what": "Claims about c_n=o(n) and shape growth refer to results outside this note and are not derived here.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "series-parallel-gauge-refinement",
+    "four-dimensional-composition"
+   ],
+   "related": [
+    "four-dimensional-parallel-log"
+   ]
+  },
+  "gapped-set-critical-coupling": {
+   "slug": "gapped-set-critical-coupling",
+   "kind": "derivation",
+   "main_claim": "Gap at all couplings (T2') is equivalent to absence of a zero-temperature bulk transition; gapped set is open near infinity, closedness is the missing input.",
+   "novelty": 3,
+   "novelty_reason": "Reformulates folklore (gap closes only at a bulk transition; U(1) Coulomb phase as counterexample) in open/closed-set language; modest recombination, no new estimate.",
+   "correctness": 5,
+   "correctness_reason": "Prop 2 links liminf of finite-volume gaps to infinite-volume correlator decay without defining the limit theory or proving the link; headline says 'proved'.",
+   "issues": [
+    {
+     "where": "Section 2, Proposition 2 proof",
+     "what": "Finite-volume gap vanishing along a subsequence is equated with infinite-volume spectral data; no convergence of correlators or limit theory is established.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 2, definition of xi",
+     "what": "Correlation length defined via 'some' observable; dichotomy needs the slowest decay over all local gauge-invariant observables.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4",
+     "what": "Asserts U(1) transition is second order with continuously vanishing mass; Wilson-action numerics indicate weakly first order; Guth and Frohlich-Spencer do not fix the order.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1, Proposition 1 proof",
+     "what": "Infimum over subspaces of continuous functions is only upper semicontinuous; continuity follows from Kato analytic perturbation, not the min-max phrasing.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, after Proposition 2",
+     "what": "Ground-state degeneracy may persist over an interval (symmetry-broken phase), not only at an isolated first-order point.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "mass-gap-obligations-lattice",
+    "strong-coupling-uniform-gap",
+    "lattice-gap-upper-bounds",
+    "low-dimensional-mass-gap",
+    "torus-valley-potential"
+   ],
+   "related": [
+    "mass-gap-openings"
+   ]
+  },
+  "four-dimensional-parallel-log": {
+   "slug": "four-dimensional-parallel-log",
+   "kind": "derivation",
+   "main_claim": "One directional cut in 4D gives six explicit one-loop coupling shifts as regular Brillouin-zone integrals; the universal -2b_0 log 2 appears only after matched endpoint schemes, and unperturbed one-step coefficients do not compose to it.",
+   "novelty": 3,
+   "novelty_reason": "One-loop shifts for a programme-specific heat-kernel blocking scheme; the b_0 heat-kernel derivation and Lambda-matching logic (Theorem 2) are textbook. The composition obstruction is standard RG wisdom made explicit.",
+   "correctness": 8,
+   "correctness_reason": "All standard pieces check: b_0 traces, residues (16)-(18), bounds (3), (5), winding bound (11), the heat-time table and the Moyal resolvent recursion. Theorem 1 is formal with remainders open and honestly labelled.",
+   "issues": [
+    {
+     "where": "Status paragraph vs. 'After refereeing' header",
+     "what": "Status says the 3D determinant had no independent review; the header says Fable rederived Theorem 1(a),(b). One statement is stale.",
+     "severity": "minor"
+    },
+    {
+     "where": "Theorem 2",
+     "what": "Hypotheses assume matching to the continuum operators up to integrable differences, so the theorem is a dictionary for the universal term rather than a result about the blocking.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, equation (6)",
+     "what": "Weyl-symbol shift sign (f(z-B/2) vs f(z+B/2)) and the asymmetric signs in the jj and kk entries are stated without derivation; affects the unevaluated finite value only.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2 proof",
+     "what": "The step from the bridge Hessian ratio to the amplitude with the factor (M_j G_jj - 1) is asserted in one sentence; the conditional-determinant mechanism is not spelled out.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1",
+     "what": "Theorem 1 is a zero-image bulk Laplace expansion; uniform remainder, saddle and image controls are explicitly deferred to the mid-plane note's section 7.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "series-parallel-gauge-refinement",
+    "su2-midplane-order-t",
+    "su2-midpoint-exact",
+    "zero-spacing-any-action"
+   ],
+   "related": [
+    "four-dimensional-composition",
+    "gaussian-blocking-coupling",
+    "su2-midplane-small-field"
+   ]
+  },
+  "four-dimensional-composition": {
+   "slug": "four-dimensional-composition",
+   "kind": "derivation",
+   "main_claim": "Four directional Gaussian decimations compose to a sixteen-alias kernel; sharp blocking makes the flux covariance grow like 2^n at fixed momentum; one-loop matching continuity holds under explicit jet-norm bounds.",
+   "novelty": 3,
+   "novelty_reason": "Gaussian decimation algebra is Bell-Wilson; the sharp-blocking growth is a perimeter-law fact made explicit; Theorems 3-4 are bookkeeping. The one-step vertex constants are programme-internal.",
+   "correctness": 7,
+   "correctness_reason": "Theorems 1-4 check (Theorem 2 rederived here). Section 7 is labelled formal; its Schur-test bounds (27)-(31) are taken on trust by the in-note referee and not verifiable from the text alone.",
+   "issues": [
+    {
+     "where": "Section 7.1, (27)-(31)",
+     "what": "The anchored-norm and Schur-test bounds, and the derivative chain (29), are asserted with loose constants; the claim 'proves finite one-step matching' rests on them unverified.",
+     "severity": "major"
+    },
+    {
+     "where": "Theorem 2, after (8)",
+     "what": "'Diverges in every L^p operator norm' bounds the L^p norm of the symbol; the operator norm of a Fourier multiplier is its sup norm. Conclusion unaffected.",
+     "severity": "minor"
+    },
+    {
+     "where": "Theorem 1 proof",
+     "what": "The link between the heat-time bridge defect (2) of section 1 and the sharp link-sum update (3) is asserted ('Stokes supplies its face factor'), not derived.",
+     "severity": "minor"
+    },
+    {
+     "where": "Theorem 3",
+     "what": "Continuity holds by definition of the jet norms; the theorem's force depends entirely on depth-uniform jet bounds, which section 7.2 leaves open.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, obstruction paragraph",
+     "what": "Standard RG rescales fields; the obstruction concerns the unrescaled sharp flux at fixed coarse momentum, as the non-commuting limits remark concedes.",
+     "severity": "minor"
+    },
+    {
+     "where": "Equation (31)",
+     "what": "D_N is about 5e5 for SU(3); finite but numerically vacuous, acknowledged as loose.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "gaussian-blocking-coupling",
+    "series-parallel-gauge-refinement",
+    "four-dimensional-parallel-log",
+    "zero-spacing-any-action",
+    "su2-midplane-small-field"
+   ],
+   "related": [
+    "gaussian-blocking-coupling",
+    "four-dimensional-parallel-log",
+    "blocking-step-obstruction",
+    "blocking-criterion-monotone"
+   ]
+  },
+  "flowed-bound-free-field": {
+   "slug": "flowed-bound-free-field",
+   "kind": "derivation",
+   "main_claim": "In the free abelian theory the flowed-susceptibility gap bound evaluates to m <= 4.26 hbar c/sqrt(8t), coupling cancels, and the bound is informative only at the confinement scale.",
+   "novelty": 2,
+   "novelty_reason": "Gaussian flowed-correlator computations are standard (Luscher's <E(t)>); the sum-rule bound is Feynman-Bijl. Content is a correction of an internal note plus a scale observation.",
+   "correctness": 9,
+   "correctness_reason": "All integrals, projector identities, Wick factors and dimensions check; the two-photon sum-rule value agrees. Minor typos and an overstated claim of independence between the two routes.",
+   "issues": [
+    {
+     "where": "Section 6, last sentence",
+     "what": "The spectral reading and the double-commutator ratio are the same f-sum identity evaluated twice; 'share no step' overstates independence, though the arithmetic check is valid.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 7, weak-coupling paragraph",
+     "what": "Regime written as sqrt(8t) << hbar c/(hbar c Lambda); should read 1/Lambda.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 7, 'which susceptibility'",
+     "what": "A lattice lower bound chi >= c t^{-5/2} closes the finiteness half only together with an upper bound on <|D|^2>; the note says so only via hypothesis (F1) in section 8.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "finiteness-half-flowed-susceptibility"
+   ],
+   "related": [
+    "schur-error-ultraviolet",
+    "flow-conjugation-truncation",
+    "flow-jacobian-truncation-error",
+    "flow-before-decimation"
+   ]
+  },
+  "flow-jacobian-truncation-error": {
+   "slug": "flow-jacobian-truncation-error",
+   "kind": "derivation",
+   "main_claim": "The linearised gradient-flow kernel is bounded by exp(2t|G|) times the free heat kernel, so a flow-truncation step is small exactly when t|G|_inf is at most order one.",
+   "novelty": 3,
+   "novelty_reason": "Diamagnetic inequality plus Duhamel for a covariant heat equation with bounded curvature term is standard; new only in reading the small-field condition of Balaban off the flow.",
+   "correctness": 6,
+   "correctness_reason": "Propositions 1-2 are essentially right. The 'relative error' is heuristic (kernel tail, not operator norm of the quadratic pull-back), the 'exactly' direction rests on a flawed sharpness claim, and one remark is reversed.",
+   "issues": [
+    {
+     "where": "Section 3 and Corollary 3",
+     "what": "Relative error of the conjugated kinetic operator is identified with the kernel's Gaussian tail; the operator is quadratic in DPhi_t and no operator-norm or relative-bound statement is proved.",
+     "severity": "major"
+    },
+    {
+     "where": "Title, Sharpness box",
+     "what": "'Small exactly on small fields' needs the growth factor to be attained; the cited instability note's mode grows at rate |G|, not 2|G|, so the only-if direction is unproved.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 5, free-case remark",
+     "what": "t^{-3/4}|G_0|_2 beats 1/t for small t and fails for large t; the note states the reverse.",
+     "severity": "minor"
+    },
+    {
+     "where": "Proposition 1 proof",
+     "what": "Variation of the gauge term D_mu d_nu B_nu is D_mu d_nu dB_nu plus a commutator, equal to D_mu D_nu dB_nu only in background gauge; 'to the same order' is not justified.",
+     "severity": "minor"
+    },
+    {
+     "where": "Proposition 2",
+     "what": "|G|_inf is defined as an adjoint operator norm; the bound on M needs the norm of u_nu -> [G_{mu nu},u_nu] on vector fields, which can carry an extra index factor.",
+     "severity": "minor"
+    },
+    {
+     "where": "Corrected-in-part box",
+     "what": "With a^2|G| up to pi and t=a^2/2 the exponent 2t|G|-2 is about 1.1, so the per-step error is not small at R=sqrt(8t); only kappa>1 rescues it, as the box's citation presumably says.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "flow-conjugation-truncation",
+    "flowed-bound-free-field",
+    "comparison-and-bridges",
+    "mass-gap-obligations-lattice"
+   ],
+   "related": [
+    "flow-instability-large-field",
+    "lattice-truncation-uniform",
+    "ground-state-measure-transfer",
+    "flow-before-decimation"
+   ]
+  },
+  "flow-instability-large-field": {
+   "slug": "flow-instability-large-field",
+   "kind": "obstruction",
+   "main_claim": "The growth factor exp(2t|G|) in the flow-Jacobian bound is attained by the Nielsen-Olesen mode, so the large-field region must be excluded rather than flowed.",
+   "novelty": 3,
+   "novelty_reason": "Linearised gradient flow equals minus the background-field Hessian, whose negative direction in a constant field is the Nielsen-Olesen mode; standard facts, newly tied to a programme-specific bound.",
+   "correctness": 4,
+   "correctness_reason": "Symmetry of M is right, but the saturation claim fails by the note's own formula: the full linearised flow grows at rate gB=|G|, since the Landau zero-point of D^2 costs gB. Sharpness unproved.",
+   "issues": [
+    {
+     "where": "Abstract and Section 2, last paragraph",
+     "what": "Growth rate claimed +2gB; the stated spectrum gives -omega^2 = gB - k^2 <= gB, so the full linearised flow grows like exp(gB s), half the exponent of the bound.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 1, after Proposition 1",
+     "what": "A symmetric operator of norm N has an eigenvalue of modulus N, not necessarily +N; positivity is only shown in the constant-field example.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, first bullet",
+     "what": "Sharpness of a global growth factor does not show the kernel tail beyond the truncation radius is large; the truncation error could still be small for a localised Landau mode.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 4, first bullet",
+     "what": "With sqrt(8t)=l and |G|=eta/l^2 one gets 2t|G|=eta/4, not 2eta; the exp(2eta) figure inherits the transfer note's t ~ l^2 convention.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, second and third bullets",
+     "what": "The fixed-range competition and crossover eta_* are later marked 'superseded in part' in the transfer note; this note does not carry that correction.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2",
+     "what": "Nielsen-Olesen cited at metadata level only, with the numerical factor left to normalisation; the sharpness claim rests on that factor.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "flow-jacobian-truncation-error",
+    "ground-state-measure-transfer",
+    "flow-conjugation-truncation"
+   ],
+   "related": [
+    "torus-valley-potential",
+    "lattice-truncation-uniform",
+    "flow-before-decimation"
+   ]
+  },
+  "flow-conjugation-truncation": {
+   "slug": "flow-conjugation-truncation",
+   "kind": "obstruction",
+   "main_claim": "The Wilson flow is a unitary change of variables preserving the Kogut-Susskind spectrum; any gain in a local gap criterion is charged to truncating the nonlocal conjugated kinetic term.",
+   "novelty": 3,
+   "novelty_reason": "Flow-as-change-of-variables with Jacobian cost is Luscher's trivializing-map idea; free-case cancellation is a textbook canonical transformation. New only as a route closure inside this programme.",
+   "correctness": 8,
+   "correctness_reason": "Proposition 1, the free-case cancellation and the loss of locality are correct. Conjugated kinetic formula omits the drift term it mentions in prose; Corollary 2 and section 6 are heuristic requirements, not theorems.",
+   "issues": [
+    {
+     "where": "Section 2, electric term formula",
+     "what": "Displayed W_tKW_t^* = -Delta_{Phi^*g}+Q_t drops the first-order term; correct operator is a weighted Laplacian (metric Phi^*g, Haar measure) plus potential.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, Corollary 2",
+     "what": "'Improved without limit' is shown only mode-by-mode in the free case, and after conjugation the criterion's hypotheses fail, so the corollary is a methodological remark, not a theorem.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 5",
+     "what": "Heading says three closed routes; the table lists four rows (the fourth is an upper-bound route, not a way to reach m>0).",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 6",
+     "what": "The requirement on the truncation error uses a relative norm and a step count from one-loop running without stating conventions for b_0; no theorem is proved here.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1",
+     "what": "Luscher's existence statement is for t>=0; backward existence on the compact manifold follows from smoothness of the vector field, which the note does not say.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "strong-coupling-uniform-gap",
+    "flowed-bound-free-field",
+    "schur-error-ultraviolet"
+   ],
+   "related": [
+    "blocking-criterion-monotone",
+    "moment-hierarchy-upper-bounds",
+    "flow-jacobian-truncation-error",
+    "flow-instability-large-field",
+    "flow-before-decimation"
+   ]
+  },
+  "flow-before-decimation": {
+   "slug": "flow-before-decimation",
+   "kind": "obstruction",
+   "main_claim": "Conjugating by the gradient flow before blocking leaves every norm/spectrum-based criterion unchanged, since the flow map is a bijection and its implementation is unitary.",
+   "novelty": 1,
+   "novelty_reason": "Sup-norm invariance under a bijection and spectral invariance under conjugation are immediate; the note closes an internal route the literature would not have opened.",
+   "correctness": 7,
+   "correctness_reason": "The invariance argument is correct and complete. The addendum restates the Agmon note's local suppression as proved, which the later global/local note retracts; no correction box here.",
+   "issues": [
+    {
+     "where": "Section 4, Addendum",
+     "what": "Claims a proved suppression e^{-lambda n} of n excess plaquettes; only a global excess bound survives after the global/local correction. Addendum is stale.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 1 (ii)-(iii)",
+     "what": "Only the magnetic straddling term is tracked; the conjugated kinetic term becomes non-local and also straddles blocks, which strengthens the negative conclusion but is not mentioned.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, Proposition",
+     "what": "Assumes the split H_0+phi is conjugated as a whole; a differently chosen split after conjugation is not excluded by the stated argument, though no gain is plausible.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1 (ii)",
+     "what": "That the lattice flow time-t map is onto (a diffeomorphism of a compact manifold) is used without being stated.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "blocking-criterion-monotone",
+    "flow-conjugation-truncation",
+    "schur-error-ultraviolet",
+    "weak-coupling-feshbach-reduction",
+    "strong-coupling-uniform-gap"
+   ],
+   "related": [
+    "agmon-ground-state-suppression",
+    "lattice-truncation-uniform",
+    "flow-conjugation-truncation",
+    "blocking-criterion-monotone"
+   ]
+  },
+  "finiteness-half-flowed-susceptibility": {
+   "slug": "finiteness-half-flowed-susceptibility",
+   "kind": "derivation",
+   "main_claim": "Single-mode (Feynman-Bijl) bound at zero momentum gives m <= (g^2 hbar c/2) <|D|^2>/chi for any flowed gauge-invariant scalar; m<inf reduces to chi>0 under hypothesis (F1).",
+   "novelty": 3,
+   "novelty_reason": "The single-mode bound and smeared glueball interpolators are standard; the intensive zero-momentum form with gradient-flow smearing is a modest recombination, and 'm<inf iff nontrivial' is near-tautological.",
+   "correctness": 8,
+   "correctness_reason": "Proposition 1, Corollary 2, dimensions and the f-sum reading check; the g^2 cancellation is correctly self-corrected. Continuum form is formal, hypotheses are stated; table and next steps are stale.",
+   "issues": [
+    {
+     "where": "Section 1, Proposition 1",
+     "what": "Continuum temporal-gauge Hamiltonian with functional derivatives is formal; only the lattice version is actually a theorem, as Proposition 3's hypotheses implicitly concede.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, (F1)",
+     "what": "Equal-time products of operators smeared only in space may not exist in 4d; 'expected to be renormalized by Luscher's result' understates the gap between 4d flow and 3d flow at sharp time.",
+     "severity": "minor"
+    },
+    {
+     "where": "Sections 6-7",
+     "what": "Status table says k_1,k_2 'not computed' and next steps ask to compute them, but Section 5 already imports them from the free-field note.",
+     "severity": "minor"
+    },
+    {
+     "where": "Intro and Section 4, 'finiteness half'",
+     "what": "m=inf is equivalent to a one-dimensional physical Hilbert space; the reduction to chi>0 restates nontriviality, so its significance is overstated.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 5, interacting theory",
+     "what": "A flow-scheme running coupling g^2(t) is introduced without definition; the breakdown scale is heuristic.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "low-dimensional-mass-gap",
+    "flowed-bound-free-field",
+    "lattice-gap-upper-bounds"
+   ],
+   "related": [
+    "action-floor-yang-mills-gap",
+    "torus-valley-potential",
+    "schur-error-ultraviolet",
+    "lattice-gap-upper-bounds",
+    "flowed-bound-free-field"
+   ]
+  },
+  "dobrushin-uniqueness-wilson": {
+   "slug": "dobrushin-uniqueness-wilson",
+   "kind": "theorem",
+   "main_claim": "Dobrushin's single-link uniqueness condition holds for the SU(3) Wilson action at g^2>444, giving a volume-uniform transfer-matrix gap of at least (hbar c/a) log(g^2/432).",
+   "novelty": 4,
+   "novelty_reason": "Dobrushin uniqueness plus Kunsch/Follmer decay is standard; its application to the Wilson action with an explicit threshold and a two-lemma proof is a modest but real new setting.",
+   "correctness": 8,
+   "correctness_reason": "Lemmas 1-2, the neighbour count and the threshold check. The decay-to-gap step is sketched (prefactors, time-zero algebra, density); the rate comparison with the polymer route is slightly off.",
+   "issues": [
+    {
+     "where": "Section 3, from decay to gap",
+     "what": "Passage from Follmer covariance bound to spectral support of the transfer matrix omits support-size prefactors and the time-zero-algebra and density argument; correct in outline.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, table remark",
+     "what": "Polymer rate 4 log(g^2/1056) exceeds log(g^2/432) only from g^2 about 1420, not 'once both apply' at 1056.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, 'about 3R^4 links'",
+     "what": "A four-dimensional box of side R has about 4R^4 links.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, single-link block form",
+     "what": "Emptied by Elitzur's theorem for interior links; corrected by the boxed note pointing to the bands note.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, 'per lattice unit'",
+     "what": "Plaquette-adjacency steps are identified with lattice units of time separation without stating the link-distance convention.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "intermediate-region-finite-verification"
+   ],
+   "related": [
+    "confinement-scale-bands",
+    "intermediate-region-finite-verification"
+   ]
+  },
+  "confinement-scale-bands": {
+   "slug": "confinement-scale-bands",
+   "kind": "synthesis",
+   "main_claim": "Elitzur trivialises the single-link block Dobrushin form; published r_0 and glueball data place the needed mixing verification at beta_W near 5.7 on boxes of side 3-5; six order-one blocking steps remain.",
+   "novelty": 3,
+   "novelty_reason": "Elitzur emptying the single-link Dobrushin-Shlosman form is a neat but expected observation; the bands and numbers are literature; the six-step picture is a heuristic map.",
+   "correctness": 5,
+   "correctness_reason": "Elitzur argument and the table check. But 'three strong-side steps are standard once mixing is certified' is unjustified, the glueball mass unit is wrong, and band B is wrongly called more mixing than band A.",
+   "issues": [
+    {
+     "where": "Section 2b, Band B and 'whole problem in one sentence'",
+     "what": "Gibbsianness of a block-spin image (van Enter-Fernandez-Sokal) does not make three iterated steps with constants 'standard'; the blocked interaction is not Wilson form and re-mixing is not shown.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 2b, activity threshold",
+     "what": "Identifying a coarse Wilson-loop expectation with the activity of a band-A Wilson theory is heuristic; '2e-3' threshold is unsourced.",
+     "severity": "major"
+    },
+    {
+     "where": "Section 3, glueball mass",
+     "what": "4.21/r_0 with r_0=0.5 fm is 8.42 hbar c/fm, about 1.66 GeV; '1.66 hbar c fm^-1' is off by a factor five.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1, Band B paragraph",
+     "what": "Band B is said to be more strongly mixing than band A; strong-coupling correlation lengths in band A are smaller still. Statement is false as written.",
+     "severity": "minor"
+    },
+    {
+     "where": "Intro and Section 2, box sizes",
+     "what": "'216 to 2000 links' for sides 3-5 does not match any link count (about 54-375 free-boundary links); later 'few hundred links' is the consistent figure.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1, Band B",
+     "what": "Strong-coupling series singularities near beta_W 3.5-4 asserted without a source.",
+     "severity": "minor"
+    },
+    {
+     "where": "Intro, flux-tube channel",
+     "what": "Using sigma a^2 as a per-unit decay rate of boundary influence is heuristic; the rate is set by the lightest state in the channel.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "dobrushin-uniqueness-wilson",
+    "intermediate-region-finite-verification",
+    "wilson-strong-coupling-explicit"
+   ],
+   "related": [
+    "mass-gap-conditional-theorem",
+    "mass-gap-openings",
+    "dobrushin-uniqueness-wilson",
+    "intermediate-region-finite-verification"
+   ]
+  },
+  "blocking-step-obstruction": {
+   "slug": "blocking-step-obstruction",
+   "kind": "exploratory",
+   "main_claim": "In one real-space blocking step the Schur error is dominated by boundary energy, an identity shift; a connected estimate would give a one-step threshold (induction later superseded).",
+   "novelty": 2,
+   "novelty_reason": "Block-spin plus Feshbach reduction and 'constant shifts do not move gaps' are standard; the RG-step count is a textbook one-loop estimate. Route-closing content lives in the follow-up note.",
+   "correctness": 7,
+   "correctness_reason": "Surviving parts (counting, naive estimate, identity-shift observation, doubling count) check. Straddling count is off by about 2, and one-loop running is pushed to g^2=20 where it is meaningless.",
+   "issues": [
+    {
+     "where": "Section 1, Counting",
+     "what": "Plaquettes crossing a face number about 2M^2, not M^2; 6M^2 undercounts by a factor 2 unless half-attributed. Conclusion direction unaffected.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 5, Reaching the threshold",
+     "what": "One-loop running applied down to g_thr^2 about 20, far outside its validity; the 'thirty doublings' is a heuristic count only.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, Proposition",
+     "what": "Even under the hypothesis the threshold grows linearly in M, so 'fixed once M is fixed' already shows no gain over M=1; the correction box makes this explicit.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2",
+     "what": "Norm of the global coupling operator B=PH(1-P) is treated per block without a locality argument.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "schur-error-ultraviolet",
+    "weak-coupling-feshbach-reduction",
+    "strong-coupling-uniform-gap",
+    "lieb-robinson-kogut-susskind"
+   ],
+   "related": [
+    "blocking-criterion-monotone",
+    "mass-gap-obligations-lattice",
+    "weak-coupling-feshbach-reduction"
+   ]
+  },
+  "blocking-criterion-monotone": {
+   "slug": "blocking-criterion-monotone",
+   "kind": "obstruction",
+   "main_claim": "A Yarotsky-type norm criterion on a lattice of M^3-site blocks scales as M^2/gap and the block gap does not grow, so projection blocking never improves on M=1.",
+   "novelty": 2,
+   "novelty_reason": "That norm-based perturbation criteria cannot gain from blocking without re-expanding the coupling is standard RG lore; the note quantifies it for the Kogut-Susskind case and closes an internal route.",
+   "correctness": 8,
+   "correctness_reason": "Arithmetic of beta_block, the 3M^2/8 ratio and the small-volume scaling check. The block gap is taken in the gauge-invariant sector without defining boundary Gauss law; this only strengthens the conclusion.",
+   "issues": [
+    {
+     "where": "Section 3, strong coupling",
+     "what": "Block Hamiltonian gap uses the closed flux loop 2C_2g^2; with open boundary links the block gap may be a single-link C_2g^2/2, making beta_block larger still.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3, Proposition",
+     "what": "'Follows in general' from Polyakov upper bounds needs a lower bound on delta(g;1); for small M it is asserted, not shown.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, straddling count",
+     "what": "6M^2 plaquettes per block is a half-attribution of shared plaquettes; attribution rule not stated, constant could differ by O(1).",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1, Lemma 3 transcription",
+     "what": "Yarotsky's weight bound is quoted at passage level with an unexplained |Lambda_0|^3 factor; not independently checkable here.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "blocking-step-obstruction",
+    "strong-coupling-uniform-gap",
+    "mass-gap-obligations-lattice",
+    "low-dimensional-mass-gap",
+    "polyakov-average-gap-bound"
+   ],
+   "related": [
+    "blocking-step-obstruction",
+    "lieb-robinson-kogut-susskind",
+    "schur-error-ultraviolet",
+    "strong-coupling-uniform-gap"
+   ]
+  },
+  "agmon-ground-state-suppression": {
+   "slug": "agmon-ground-state-suppression",
+   "kind": "derivation",
+   "main_claim": "Agmon identity and estimate hold for the Kogut-Susskind ground state on G^E; corrected reading: exponential suppression of a global magnetic-energy excess at rate ~1/g^2 per plaquette.",
+   "novelty": 3,
+   "novelty_reason": "Standard Agmon technique transplanted to the lattice Hamiltonian; the identity is textbook, the application is new in setting but its corrected output is a global bound of limited use.",
+   "correctness": 6,
+   "correctness_reason": "Lemma 1 and Corollary 2 are correct. Section 2 evaluates one path, an upper bound on an infimum, not the needed lower bound; sections 3-5 local reading retracted by the correction box.",
+   "issues": [
+    {
+     "where": "Section 2, distance estimate",
+     "what": "A single relaxation path bounds the Agmon distance from above; a decay estimate needs a lower bound over all paths. Superseded by the global/local note.",
+     "severity": "major"
+    },
+    {
+     "where": "Sections 3-5 and title",
+     "what": "Local large-field suppression and 'supplies the Hamiltonian counterpart' are retracted by the correction box but the text still asserts them.",
+     "severity": "major"
+    },
+    {
+     "where": "Corollary 2 and rho=(1-delta)d",
+     "what": "Constant C depends on epsilon, delta and is extensive (contains e_0 and sup|grad rho|^2); admissibility of (1-delta)d on Sigma_epsilon needs delta not too small.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 4, low-energy subspace",
+     "what": "Extension from ground state to low-lying eigenfunctions is asserted with e_1 in place of e_0 without noting those eigenfunctions change sign.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "mass-gap-obligations-lattice",
+    "flow-before-decimation",
+    "lattice-truncation-uniform"
+   ],
+   "related": [
+    "agmon-global-not-local",
+    "typical-field-strength-window",
+    "mass-gap-position",
+    "strong-coupling-uniform-gap",
+    "magnetic-energy-identities"
+   ]
+  },
+  "agmon-global-not-local": {
+   "slug": "agmon-global-not-local",
+   "kind": "obstruction",
+   "main_claim": "Agmon distance bound for the Kogut-Susskind ground state is extensive only for a global energy excess; a local excess gives a bound vanishing with volume.",
+   "novelty": 3,
+   "novelty_reason": "Limitation of Agmon estimates to the global classically forbidden region in extensive systems is known in spirit; explicit constants and the self-correction are internal.",
+   "correctness": 8,
+   "correctness_reason": "Proposition 1 and Lemma 2 check with the stated normalisation; the structural argument in section 3 is sound. Minor overstatement of the identities-note verdict.",
+   "issues": [
+    {
+     "where": "Section 5",
+     "what": "'Answered in the negative' overstates: Proposition 4 of the identities note shows the comparison route fails, not that Gibbs domination is false.",
+     "severity": "minor"
+    },
+    {
+     "where": "Lemma 2",
+     "what": "Per-link gradient bound sqrt(N/2) and four plaquettes per link are borrowed and assume a 3d spatial lattice; normalisation not restated.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, local excess",
+     "what": "Degradation of a lower bound is shown; the structural reason in section 3 is what actually carries the negative conclusion.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "agmon-ground-state-suppression",
+    "lattice-gap-upper-bounds",
+    "mass-gap-obligations-lattice",
+    "magnetic-energy-identities"
+   ],
+   "related": [
+    "agmon-ground-state-suppression",
+    "typical-field-strength-window",
+    "magnetic-energy-identities"
+   ]
+  },
+  "abelian-misses-the-box": {
+   "slug": "abelian-misses-the-box",
+   "kind": "synthesis",
+   "main_claim": "Strong-coupling gap is group-blind (compact U(1) and SU(3) both gapped in the box); U(1) has b_0=0 so its weak-coupling flow never reaches the box.",
+   "novelty": 2,
+   "novelty_reason": "Standard folklore: compact U(1) confines at strong coupling, Coulomb phase at weak coupling (Guth, Frohlich-Spencer), SU(3) runs. Only the box language is internal.",
+   "correctness": 7,
+   "correctness_reason": "Running coefficient and U(1) adaptation of the expansion are right; gapped set stated as an interval (g_c,inf) though only large-g gap and small-g masslessness are rigorous.",
+   "issues": [
+    {
+     "where": "Intro and section 2, gapped set (g_c,inf)",
+     "what": "Single transition and interval shape of the gapped set are not rigorous; monotonicity of the gap in g is unproved.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, U(1) paragraph",
+     "what": "Coulomb-phase theorems are equated with 'coupling does not run'; they prove power-law Wilson loops, a related but different statement.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 2, definition of g(a)",
+     "what": "'Any renormalization scheme that is an exact low-energy reduction' is undefined; nonperturbative monopole renormalisation in compact U(1) ignored.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 3",
+     "what": "Identification of the three non-abelian isolations with b_0 is heuristic, not argued.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "kogut-susskind-strong-coupling-explicit",
+    "strong-coupling-target-box",
+    "gapped-set-critical-coupling",
+    "mass-gap-position"
+   ],
+   "related": [
+    "mass-gap-position",
+    "gapped-set-critical-coupling",
+    "strong-coupling-target-box"
+   ]
+  }
+ },
+ "rescore_after_correction": {
+  "flow-jacobian-truncation-error": {
+   "slug": "flow-jacobian-truncation-error",
+   "kind": "derivation",
+   "main_claim": "A background-covariant linearized flow has a Gaussian kernel majorant e^{A_t} K_free via Kato domination and Duhamel, giving an explicit absolute kernel-tail budget; Hamiltonian relative bounds and Jacobian identification withdrawn.",
+   "novelty": 2,
+   "novelty_reason": "Kato domination plus Duhamel for covariant heat equations with a bounded zeroth-order term is standard; the erfc budget and index-factor bookkeeping are explicit but routine.",
+   "correctness": 9,
+   "correctness_reason": "Proposition 1 variation, the Kato domination argument, the Duhamel series, Corollary 3's erfc integral and the heat-kernel L^2 norm all check; scope statements are honest after correction.",
+   "issues": [
+    {
+     "where": "§2 hypotheses",
+     "what": "Regularity 'sufficient for the covariant parabolic propagators and kernels' is a placeholder hypothesis; scalar comparison on R^3 needs stated growth conditions.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3 Schur test",
+     "what": "Operator-valued kernel Schur bound is invoked without stating the measurability and symmetric row/column bound it needs; standard.",
+     "severity": "minor"
+    },
+    {
+     "where": "Lead and §1",
+     "what": "The evolution J is auxiliary; no result about Luescher's actual Jacobian survives, so the note's usefulness for the flow route rests on an open gauge comparison, as stated.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "flow-instability-large-field"
+   ],
+   "related": [
+    "flow-conjugation-truncation",
+    "lattice-truncation-uniform",
+    "large-field-operator-inequality",
+    "ground-state-measure-transfer"
+   ]
+  },
+  "flow-instability-large-field": {
+   "slug": "flow-instability-large-field",
+   "kind": "derivation",
+   "main_claim": "The curvature term of the linearized Yang--Mills flow is symmetric, and a constant chromomagnetic saddle has a growing mode at rate gB - k_par^2, below the Duhamel majorant 2gB; sharpness claims withdrawn.",
+   "novelty": 2,
+   "novelty_reason": "The surviving content is the Nielsen--Olesen 1978 unstable-mode spectrum with explicit factors, read as non-contraction of the gradient flow; the symmetry of M is elementary.",
+   "correctness": 9,
+   "correctness_reason": "Landau-level algebra, the explicit lowest mode, the M eigenvector and the growth rate check exactly; the correction box is complete and the remaining claims are stated at the right level.",
+   "issues": [
+    {
+     "where": "§1 Duhamel majorant",
+     "what": "Kernel domination of covariant by scalar diffusion (Kato/diamagnetic inequality) is asserted, not stated with hypotheses; standard but load-bearing for the e^{2 t Gamma} bound.",
+     "severity": "minor"
+    },
+    {
+     "where": "§2--3",
+     "what": "Constant-field background has infinite action; instability statements are for the local linearized equation only, as acknowledged.",
+     "severity": "minor"
+    },
+    {
+     "where": "§4 second bullet",
+     "what": "Schematic exponent -c eta^2/g^2 + eta/4 mixes an assumed probability bound with a kernel bound; the note labels it bookkeeping, so no conclusion rests on it.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "flow-jacobian-truncation-error",
+    "flow-conjugation-truncation"
+   ],
+   "related": [
+    "large-field-operator-inequality",
+    "lattice-truncation-uniform",
+    "ground-state-measure-transfer",
+    "torus-valley-potential"
+   ]
+  },
+  "agmon-ground-state-suppression": {
+   "slug": "agmon-ground-state-suppression",
+   "kind": "theorem",
+   "main_claim": "Agmon's weighted identity gives a finite-lattice tail bound on the total magnetic excess of the Kogut--Susskind ground state; all local, pointwise and volume-uniform claims are withdrawn.",
+   "novelty": 3,
+   "novelty_reason": "Agmon's method applied to a lattice gauge ground state; what survives after correction is a weak global large-deviation bound with volume-dependent constants, not a new mechanism.",
+   "correctness": 9,
+   "correctness_reason": "Lemma 1, Corollary 2 and Proposition 3 check line by line, including the all-path lower bound, the gradient constant M and the P-scaling of exponent and prefactor; the correction box is honest and complete.",
+   "issues": [
+    {
+     "where": "§2, constant M",
+     "what": "Using the pointwise identity |grad V|^2 <= 16V from the identities note instead of M ~ sqrt(P) would give an Agmon distance linear in the excess; a missed sharpening, not an error.",
+     "severity": "minor"
+    },
+    {
+     "where": "§2 tail bound",
+     "what": "Prefactor O(P) and exponent s^{3/2}/sqrt(P) make the bound informative only for extensive excess; stated, but the lead could say so more directly.",
+     "severity": "minor"
+    },
+    {
+     "where": "§3",
+     "what": "Comparison of the s^{3/2}/(g^2 M) exponent with the Wilson action cost is heuristic and does not identify g_E with g; labelled as such.",
+     "severity": "minor"
+    },
+    {
+     "where": "§1 Agmon distance",
+     "what": "Lipschitz property and a.e. gradient bound for d are asserted with a sketch; standard but not written out.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "mass-gap-obligations-lattice",
+    "lattice-gap-upper-bounds",
+    "agmon-global-not-local"
+   ],
+   "related": [
+    "magnetic-energy-identities",
+    "typical-field-strength-window",
+    "flow-before-decimation",
+    "ground-state-measure-transfer",
+    "agmon-global-not-local"
+   ]
+  },
+  "confinement-scale-bands": {
+   "slug": "confinement-scale-bands",
+   "kind": "synthesis",
+   "main_claim": "Interior single-link boundary influence vanishes by gauge symmetry (Haar marginal); published r_0/a scales give an orientation table of three coupling bands, with earlier blocking claims withdrawn.",
+   "novelty": 2,
+   "novelty_reason": "The Haar-marginal observation is a direct Elitzur-type fact; the scale table is literature numbers; the rest is withdrawn or labelled heuristic.",
+   "correctness": 8,
+   "correctness_reason": "All quoted numbers, thresholds, link counts and conversions check; the Haar-marginal argument is correct and its limits are stated; heuristics and withdrawn claims are clearly labelled.",
+   "issues": [
+    {
+     "where": "Correction block",
+     "what": "Dated 2026-10-02 while citing an October 1 audit; date inconsistency only.",
+     "severity": "minor"
+    },
+    {
+     "where": "Band A row and threshold",
+     "what": "The g^2>444 margin against beta_W<(1/4)log(19/18) is razor-thin (6/444 = 1/74); valid but worth stating as such.",
+     "severity": "minor"
+    },
+    {
+     "where": "Section 1, band table",
+     "what": "Band boundaries 0.0135 and 5.7 mix a proved sufficient condition with a numerical orientation; the note says so but the table reads like a phase map.",
+     "severity": "minor"
+    }
+   ],
+   "depends_on": [
+    "dobrushin-uniqueness-wilson",
+    "wilson-strong-coupling-explicit",
+    "intermediate-region-finite-verification"
+   ],
+   "related": [
+    "reasons-to-stop-as-research",
+    "mass-gap-openings",
+    "corpus-audit-2026-10-01",
+    "mass-gap-conditional-theorem"
+   ]
+  }
+ },
+ "correction_queue": {
+  "confinement-scale-bands": {
+   "status": "rescored",
+   "first_correctness": 5,
+   "first_novelty": 3,
+   "commit": "2dd68dd",
+   "second_correctness": 8,
+   "second_novelty": 2
+  },
+  "agmon-ground-state-suppression": {
+   "status": "corrected-awaiting-rescore",
+   "first_correctness": 6,
+   "first_novelty": 3,
+   "commit": "0620f95",
+   "retitled": true
+  },
+  "flow-instability-large-field": {
+   "status": "corrected-awaiting-rescore",
+   "first_correctness": 4,
+   "first_novelty": 3,
+   "commit": "74f10cb",
+   "retitled": true
+  },
+  "flow-jacobian-truncation-error": {
+   "status": "corrected-awaiting-rescore",
+   "first_correctness": 6,
+   "first_novelty": 3
+  },
+  "gapped-set-critical-coupling": {
+   "status": "corrected-awaiting-rescore",
+   "first_correctness": 5,
+   "first_novelty": 3
+  },
+  "ground-state-measure-transfer": {
+   "status": "running",
+   "first_correctness": 5,
+   "first_novelty": 2
+  },
+  "large-field-action-lower-bound": {
+   "status": "pending",
+   "first_correctness": 4,
+   "first_novelty": 1
+  },
+  "large-field-entropy-count": {
+   "status": "pending",
+   "first_correctness": 5,
+   "first_novelty": 2
+  },
+  "kogut-susskind-strong-coupling-explicit": {
+   "status": "pending",
+   "first_correctness": 6,
+   "first_novelty": 4
+  },
+  "large-field-operator-inequality": {
+   "status": "pending",
+   "first_correctness": 6,
+   "first_novelty": 3
+  }
+ },
+ "batches": [
+  {
+   "id": 1,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "abelian-misses-the-box",
+    "agmon-global-not-local",
+    "agmon-ground-state-suppression",
+    "blocking-criterion-monotone",
+    "blocking-step-obstruction",
+    "confinement-scale-bands",
+    "dobrushin-uniqueness-wilson",
+    "finiteness-half-flowed-susceptibility",
+    "flow-before-decimation"
+   ],
+   "words": 11165
+  },
+  {
+   "id": 2,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "flow-conjugation-truncation",
+    "flow-instability-large-field",
+    "flow-jacobian-truncation-error",
+    "flowed-bound-free-field",
+    "four-dimensional-composition",
+    "four-dimensional-parallel-log"
+   ],
+   "words": 11609
+  },
+  {
+   "id": 3,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "gapped-set-critical-coupling",
+    "gaussian-blocking-coupling",
+    "ground-state-measure-transfer",
+    "kogut-susskind-strong-coupling-explicit",
+    "large-field-action-lower-bound",
+    "large-field-entropy-count",
+    "large-field-operator-inequality",
+    "lattice-gap-upper-bounds",
+    "lattice-truncation-uniform"
+   ],
+   "words": 11381
+  },
+  {
+   "id": 4,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "lieb-robinson-kogut-susskind",
+    "low-dimensional-mass-gap",
+    "magnetic-energy-identities",
+    "mass-gap-conditional-theorem",
+    "mass-gap-obligations-lattice"
+   ],
+   "words": 10736
+  },
+  {
+   "id": 5,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "mass-gap-openings",
+    "mass-gap-position",
+    "moment-hierarchy-upper-bounds",
+    "polyakov-average-gap-bound",
+    "reasons-to-stop-as-research",
+    "schur-error-ultraviolet"
+   ],
+   "words": 9423
+  },
+  {
+   "id": 6,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "series-parallel-gauge-refinement",
+    "small-field-step-decay-and-threshold",
+    "small-field-step-gaussian",
+    "strong-coupling-target-box",
+    "strong-coupling-threshold-explicit"
+   ],
+   "words": 11568
+  },
+  {
+   "id": 7,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "strong-coupling-uniform-gap",
+    "su2-midplane-order-t"
+   ],
+   "words": 4774
+  },
+  {
+   "id": 8,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "su2-midplane-small-field"
+   ],
+   "words": 36128
+  },
+  {
+   "id": 9,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "su2-midpoint-exact",
+    "sun-midpoint-centre",
+    "three-dimensional-gap-one-function",
+    "torus-valley-potential",
+    "typical-field-strength-window"
+   ],
+   "words": 10779
+  },
+  {
+   "id": 10,
+   "area": "Yang–Mills/gauge",
+   "slugs": [
+    "uv-halving-ir-confinement",
+    "villain-monopole-refinement",
+    "weak-coupling-feshbach-reduction",
+    "what-would-unblock",
+    "wilson-strong-coupling-explicit"
+   ],
+   "words": 8401
+  },
+  {
+   "id": 11,
+   "area": "Newton/action",
+   "slugs": [
+    "action-floor-yang-mills-gap",
+    "action-scale-dilation",
+    "action-scale-obstructions",
+    "action-unit-dimensional-selection",
+    "additive-noise-marks",
+    "bound-orbit-action-observable",
+    "bounded-acceleration-return",
+    "causal-force-information",
+    "classical-orientation-closure",
+    "closed-orbit-force-action"
+   ],
+   "words": 11790
+  },
+  {
+   "id": 12,
+   "area": "Newton/action",
+   "slugs": [
+    "composition-universality",
+    "cut-measure-newton",
+    "energy-depot-action-selection",
+    "finite-horizon-minimax",
+    "fixed-force-small-circles",
+    "galileo-two-path-interference",
+    "hamiltonian-finite-closure",
+    "hamiltonian-moment-descent",
+    "i003-double-limit-rigidity",
+    "indistinguishable-phase-bound"
+   ],
+   "words": 11779
+  },
+  {
+   "id": 13,
+   "area": "Newton/action",
+   "slugs": [
+    "intermediate-region-finite-verification",
+    "leibniz-continuity-records",
+    "local-detector-coincidences"
+   ],
+   "words": 9497
+  },
+  {
+   "id": 14,
+   "area": "Newton/action",
+   "slugs": [
+    "mark-cost-and-statistical-floor",
+    "mechanical-interference-action",
+    "minimax-composition",
+    "necessity-unit-and-indeterminacy",
+    "newton-indeterminacy-routes",
+    "newton-insertion-action"
+   ],
+   "words": 11548
+  },
+  {
+   "id": 15,
+   "area": "Newton/action",
+   "slugs": [
+    "newton-mark-floor",
+    "newton-record-parallel-move",
+    "ordered-beam-preparation",
+    "passive-threshold-events",
+    "planck-gap-derivation"
+   ],
+   "words": 7698
+  },
+  {
+   "id": 16,
+   "area": "Newton/action",
+   "slugs": [
+    "planck-gap-paper"
+   ],
+   "words": 10516
+  },
+  {
+   "id": 17,
+   "area": "Newton/action",
+   "slugs": [
+    "planck-gap-probabilistic",
+    "polygon-lift-phase",
+    "principia-constant-force-action"
+   ],
+   "words": 7859
+  },
+  {
+   "id": 18,
+   "area": "Newton/action",
+   "slugs": [
+    "principia-fifth-postulate",
+    "radiation-noise-action-selection",
+    "receding-centre-area-audit",
+    "reciprocal-coupling-normalization",
+    "record-costs-disturbance",
+    "record-costs-recoil"
+   ],
+   "words": 11316
+  },
+  {
+   "id": 19,
+   "area": "Newton/action",
+   "slugs": [
+    "record-distance-path-length",
+    "relativistic-kepler-threshold",
+    "rivero-1998-conjecture-central-forces",
+    "rotation-composition-universality"
+   ],
+   "words": 9130
+  },
+  {
+   "id": 20,
+   "area": "Newton/action",
+   "slugs": [
+    "score-constrained-ensemble"
+   ],
+   "words": 5460
+  },
+  {
+   "id": 21,
+   "area": "Newton/action",
+   "slugs": [
+    "sed-closure-under-recording"
+   ],
+   "words": 23245
+  },
+  {
+   "id": 22,
+   "area": "Newton/action",
+   "slugs": [
+    "sed-zeta-radiation-link",
+    "self-sufficiency-contrast",
+    "shared-readiness-chsh",
+    "spin-action-patching",
+    "stabilized-topology-action-scale",
+    "stochastic-route-velocitas-ultima",
+    "superdeterminism-floor",
+    "thermodynamic-records-no-floor"
+   ],
+   "words": 11140
+  },
+  {
+   "id": 23,
+   "area": "Newton/action",
+   "slugs": [
+    "topological-sector-action-selection",
+    "zero-branch-reachability"
+   ],
+   "words": 9284
+  },
+  {
+   "id": 24,
+   "area": "apparatus/reconstruction",
+   "slugs": [
+    "autonomous-finite-readout",
+    "block-apparatus-composition",
+    "calibrated-canonical-ambiguity",
+    "calibrated-displacement-ambiguity",
+    "calibration-tolerance-recovery",
+    "classical-readout-refinement",
+    "clock-position-local-recovery"
+   ],
+   "words": 8240
+  },
+  {
+   "id": 25,
+   "area": "apparatus/reconstruction",
+   "slugs": [
+    "conservative-harmonic-receiver",
+    "correlated-calibration-response",
+    "energy-constrained-apparatus-ambiguity",
+    "final-clock-momentum-recovery"
+   ],
+   "words": 11340
+  },
+  {
+   "id": 26,
+   "area": "apparatus/reconstruction",
+   "slugs": [
+    "fixed-coupling-calibration",
+    "fixed-preparation-ambiguity",
+    "full-apparatus-preparation-ambiguity",
+    "full-clock-phase-recovery",
+    "full-pointer-recovery",
+    "global-clock-speed-ambiguity",
+    "hidden-clock-ambiguity",
+    "position-preparation-ambiguity",
+    "reachable-cut-composition",
+    "reversible-interaction-premise",
+    "shared-record-budget",
+    "shared-resource-events"
+   ],
+   "words": 10641
+  },
+  {
+   "id": 27,
+   "area": "apparatus/reconstruction",
+   "slugs": [
+    "single-calibration-fibres",
+    "thermal-receiver-reliability",
+    "three-body-cut-memory",
+    "three-calibration-global-recovery",
+    "two-calibration-branches",
+    "two-position-recovery"
+   ],
+   "words": 6565
+  },
+  {
+   "id": 28,
+   "area": "refinement/comparison",
+   "slugs": [
+    "bridge-crossover",
+    "checkerboard-dynamics",
+    "classical-cut-state",
+    "comparison-and-bridges",
+    "cone-time-refinement",
+    "cut-paradox-two-faces",
+    "cut-point-consistency",
+    "dimension-ladder",
+    "finite-depth-spin-gap",
+    "finite-precision-cut"
+   ],
+   "words": 9995
+  },
+  {
+   "id": 29,
+   "area": "refinement/comparison",
+   "slugs": [
+    "halving-atlas",
+    "holography-lowest-dimensions",
+    "interacting-ising-gap",
+    "ising-foundational-value",
+    "ising-hermitian-transfer",
+    "physical-cut-speed"
+   ],
+   "words": 9296
+  },
+  {
+   "id": 30,
+   "area": "refinement/comparison",
+   "slugs": [
+    "refinement-composition-and-limit",
+    "refinement-results",
+    "susceptibility-gap",
+    "tangent-groupoid-trajectories"
+   ],
+   "words": 11112
+  },
+  {
+   "id": 31,
+   "area": "refinement/comparison",
+   "slugs": [
+    "telegraph-return-bridge",
+    "three-continuum-limits",
+    "two-regulator-audit",
+    "zero-spacing-any-action"
+   ],
+   "words": 8348
+  },
+  {
+   "id": 32,
+   "area": "historical/sources",
+   "slugs": [
+    "ancient-cuts-provenance",
+    "arrow-not-sling",
+    "discrete-substrate-actors",
+    "newton-NATP00385-audit",
+    "quantum-exclusion-premises",
+    "static-composition-classics"
+   ],
+   "words": 6416
+  },
+  {
+   "id": 33,
+   "area": "infrastructure",
+   "slugs": [
+    "composition-crossover-gap-checks",
+    "corpus-audit-2026-10-01",
+    "jacobi-kernels-distinguishability",
+    "millennium-problem-definitions",
+    "reversible-generator-constraints",
+    "su3-constants"
+   ],
+   "words": 8352
+  },
+  {
+   "id": 34,
+   "area": "papers",
+   "slugs": [
+    "action-gap-foundations",
+    "classical-action-field",
+    "classical-spins-operational-closure",
+    "collision-action-relaxation"
+   ],
+   "words": 0
+  },
+  {
+   "id": 35,
+   "area": "papers",
+   "slugs": [
+    "regulator-limits",
+    "same-collisions-different-transport",
+    "spectral-gap-laboratory",
+    "time-refinement"
+   ],
+   "words": 0
+  }
+ ],
+ "batches_done": [
+  1,
+  2,
+  3,
+  4
+ ]
+}
