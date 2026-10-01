@@ -11,58 +11,102 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{the-confinement-scale-in-three-bands-with-published-numbers-and-the-verification-restated-gauge-invariantly}{%
 \section{The confinement scale in three bands, with published numbers,
 and the verification restated
-gauge-invariantly}\label{the-confinement-scale-in-three-bands-with-published-numbers-and-the-verification-restated-gauge-invariantly}}
+gauge-invariantly}\label{the-confinement-scale-in-three-bands-with-published-numbers-and-the-verification-restated-gauge-invariantly}
 
-Two corrections to the finite-verification statement of
+Later qualifications: \href{reasons-to-stop-as-research.md}{reasons to
+stop} rejects the proposed crossover certificate as a currently
+available route; \href{mass-gap-openings.md}{mass-gap openings} §1 warns
+of scalar softening; \href{corpus-audit-2026-10-01.md}{the October 1
+audit} §3 identifies the unsupported blocking and continuum claims.
+
+\begin{quote}
+\textbf{Correction (2026-10-02).} The earlier claim that three
+strong-side blocking steps are standard once mixing is certified is
+withdrawn. Gibbsianness does not bound the generated interaction,
+preserve Wilson form, or establish mixing at successive scales. The
+identification of a coarse Wilson-loop expectation with polymer activity
+is heuristic; the unsourced activity threshold \(2\times10^{-3}\) is
+withdrawn. So are the claim that six steps constitute the whole
+continuum problem, the comparison making band B more strongly mixing
+than band A, and the unsourced series singularities at
+\(\beta_W=3.5\)--\(4\). The table below gives continuum-scaled
+estimates, not measured lattice masses or uniform boundary-mixing
+bounds. Box sides \(3\)--\(5\) are trial sizes, not certified sufficient
+sizes; \(\sigma a^2\) is an area coefficient, not a boundary-influence
+decay rate. The physical energy conversion is corrected to
+\(8.42\,\hbar c\,{\rm fm}^{-1}\simeq1.66\) GeV. The original
+\(216\)--\(2000\) link count is retained with its explicit
+four-dimensional, free-boundary convention; the earlier description as
+merely a few hundred links was inconsistent with that convention.
+\end{quote}
+
+This note gives an exact gauge-symmetry observation and a numerical
+orientation map for pure \(SU(3)\) Wilson theory in four Euclidean
+dimensions. It corrects the proposed single-link block test in
 \href{dobrushin-uniqueness-wilson.md}{the Dobrushin note} §4 and
 \href{intermediate-region-finite-verification.md}{the
-finite-verification note}, and a map of the region with numbers taken
-from the literature.
+finite-verification note}. The scale estimates motivate possible
+sub-block mixing tests; they supply neither such a certificate nor a
+quantitative blocking bridge nor a continuum existence or mass-gap
+theorem.
 
-\textbf{Elitzur empties the single-link form of the block criterion.}
-Let \(V\) be a box of links and \(s\) a site all of whose links lie in
-\(V\). The gauge transformation at \(s\) is a measure-preserving
-bijection of the Gibbs measure \(\mu_V^\omega\) for every boundary
-condition \(\omega\), so the marginal of any link with an endpoint at
-\(s\) is invariant under all left (or right) translations of \(SU(3)\)
-and is therefore the Haar measure, whatever \(\omega\) is. The
-single-link influence \(\rho_V(x,y)\) vanishes for every link \(x\) with
-an interior endpoint, and the sum
-\(\sum_{x\in V}\sum_{y\notin V}\rho_V(x,y)\) receives contributions only
-from links with both endpoints on the boundary layer. That form of the
-criterion yields uniqueness and carries no information about the
-interior; the verification must use the \textbf{mixing form on
-sub-blocks}, which is the form equivalent to complete analyticity and
-the one that yields exponential decay: for every \(W\subseteq V\) and
-every \(y\notin V\),
-\[\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega'}\big|_W\big\|_{\rm TV}\ \le\ C\,|W|\,e^{-\gamma\,d(W,y)}
-\qquad(\omega,\omega'\text{ differing at }y).\] Since the gauge-variant
-part of the marginal on \(W\) is uniform over the gauge orbit at the
-interior sites of \(W\), the content of this condition is the
-conditional distribution of the gauge-invariant functions of the links
-in \(W\), the traces of small Wilson loops, and that is how a
-verification should be organized. The single-link Dobrushin condition of
-\href{dobrushin-uniqueness-wilson.md}{the Dobrushin note} §2 is
-unaffected, because it conditions on all other links and no gauge
-symmetry survives the conditioning.
+\textbf{Elitzur empties the interior single-link test.} Let \(V\) be a
+set of links and \(s\) a site all of whose incident links lie in \(V\).
+A gauge transformation at \(s\) preserves the Wilson conditional Gibbs
+measure \(\mu_V^\omega\) for every fixed external boundary condition
+\(\omega\). It acts on any incident link by arbitrary left or right
+multiplication in \(SU(3)\). Its marginal is consequently Haar,
+independently of \(\omega\). Thus the single-link boundary influence
+\(\rho_V(x,y)\) vanishes for every link \(x\) with such an endpoint. A
+sum of these single-link influences sees only the remaining boundary
+layer. This observation alone proves no uniqueness or decay of joint
+interior observables: identical one-link marginals need not give
+identical joint distributions.
 
-\textbf{The boxes are small where the verification is needed.} With the
-scale \(r_0/a\) of Necco and Sommer (Nucl. Phys. B 622 (2002) 328) and
-the scalar glueball mass \(r_0m_{0^{++}}=4.21\) of Morningstar and
-Peardon (Phys. Rev.~D 60 (1999) 034509), both at metadata level and used
-for orientation only, the glueball correlation length in lattice units
-is
+A useful \textbf{target} is instead a sub-block estimate, with \(d\)
+measured in the link interaction graph,
+\[\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega'}\big|_W\big\|_{\rm TV}
+\ \le\ C\,|W|\,e^{-\gamma d(W,y)},
+\qquad W\subseteq V,
+\] for boundary conditions differing at the external link \(y\). Gauge
+symmetry removes the orbit variables at sites whose incident links all
+lie in \(W\). Closed-loop observables then provide nontrivial tests of
+the invariant content. A selected set of small Wilson-loop traces is not
+asserted to determine the full marginal; boundary-attached observables
+and the full joint invariant distribution may also be needed. The
+single-link Dobrushin test of the Dobrushin note §2 is unaffected:
+conditioning on all other links removes the free gauge transformation
+used above.
+
+The displayed inequality is a target decay form, not by itself a
+finite-size certificate. On one fixed box an arbitrarily large \(C\) can
+make it vacuous. A theorem would require an applicable quantitative
+finite-size criterion, a verified contraction margin and control of the
+resulting constants across volumes. No equivalence to complete
+analyticity for this gauge specification is proved here.
+
+\textbf{Published scales give orientation, not certified box sizes.} Use
+\(r_0/a\) from Necco and Sommer (Nucl. Phys. B 622 (2002) 328; metadata
+level) and the continuum estimate \(r_0\mu_{0^{++}}=4.21\) from
+\href{https://arxiv.org/abs/hep-lat/9901004}{Morningstar and Peardon}
+(Phys. Rev.~D 60 (1999) 034509; abstract read, numerical input retained
+at metadata level). Here \(\mu_{0^{++}}\) is an inverse length and the
+rest energy is \(E_{0^{++}}=\hbar c\mu_{0^{++}}\). The continuum-scaled
+columns use \[\mu_{0^{++}}a=\frac{4.21}{r_0/a},\qquad
+\frac{\xi}{a}=\frac{r_0/a}{4.21},\qquad
+\sigma a^2=\frac{1.35}{(r_0/a)^2},\] where \(r_0^2\sigma\simeq1.35\) is
+an orienting string-tension input; \(\sigma\) has units of inverse area,
+with physical tension \(\hbar c\sigma\).
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \(\beta_W\)
@@ -71,11 +115,11 @@ is
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \(r_0/a\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\(m_{0^{++}}a\)
+scaled \(\mu_{0^{++}}a\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\(\xi/a\)
+scaled \(\xi/a\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\(\sigma a^2\)
+scaled \(\sigma a^2\)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -87,32 +131,36 @@ is
 \(6.4\) & \(0.94\) & \(9.74\) & \(0.43\) & \(2.31\) & \(0.014\) \\
 \end{longtable}
 
-using \(r_0^2\sigma\simeq1.35\) for the string tension. At
-\(\beta_W=5.7\) the glueball correlation length is below one lattice
-spacing, and a mixing verification would concern boxes of side \(3\) to
-\(5\), that is \(216\) to \(2000\) links, in place of the \(10^4\) to
-\(10^6\) links estimated earlier from a correlation length of \(1\) to
-\(10\). The slowest influence is carried by the flux-tube channel,
-\(\sigma a^2\simeq0.16\) per lattice unit at \(\beta_W=5.7\), which sets
-the box side rather than the glueball mass. Constants explicit where
-they are ours; nothing promoted.
+\emph{Caveat, 2026-09-23, retained.} Near \(\beta_W\simeq5.7\) the
+Wilson axis passes beside the endpoint of the fundamental--adjoint
+first-order line, where the scalar glueball softens (Heller 1995;
+metadata level, \href{mass-gap-openings.md}{openings note} §1). The
+measured lattice \(\xi/a\) can therefore exceed the scaled value
+\(0.70\). Even a measured vacuum correlation length would not certify
+mixing uniformly over all boundary conditions.
 
-\emph{Caveat, 2026-09-23.} The \(m_{0^{++}}a\) column scales the
-continuum ratio to each coupling. Near \(\beta_W\simeq5.7\) the Wilson
-axis passes beside the endpoint of the fundamental--adjoint first-order
-line, where the scalar glueball softens (Heller 1995), so the lattice
-\(\xi/a\) there is likely larger than \(0.70\) and should be taken from
-the measured lattice mass (\href{mass-gap-openings.md}{openings note},
-§1).
+A trial box with \(R=3\)--\(5\) \textbf{sites per axis in four
+dimensions}, with only internal nearest-neighbour links integrated, has
+\[|V|=4(R-1)R^3=216,\ 768,\ 2000\qquad(R=3,4,5).\] There are \(R^3\)
+choices of transverse coordinates and \(R-1\) links in each of four
+directions. This is hundreds to two thousand links; three-dimensional
+spatial slices have a different count. Neither the scalar estimate nor
+\(\sigma a^2\simeq0.16\) fixes a sufficient \(R\). An area law concerns
+large loop areas. Temporal decay in a given channel is governed by its
+lowest energy with nonzero overlap; a flux-tube energy depends on its
+length and receives corrections. Replacing any of these by a
+boundary-influence rate \(\sigma a^2\) is an unproved heuristic.
 
-\hypertarget{three-bands-of-the-coupling}{%
 \subsection{1. Three bands of the
-coupling}\label{three-bands-of-the-coupling}}
+coupling}\label{three-bands-of-the-coupling}
+
+The boundaries below label the original comparison, not proven phase
+boundaries or the optimal reach of every method.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 band
@@ -125,134 +173,161 @@ status
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-A & \(<0.0135\) & gapped, proved by hand: Dobrushin single-link
-condition, \(g^2>444\) \\
-B & \(0.0135\) to about \(5.7\) & mixing with \(\xi/a<1\) by the
-published data; no rigorous method reaches it \\
-C & above about \(5.7\) & \(\xi/a\) grows, asymptotic scaling sets in
-near \(6\) to \(6.5\); the renormalization group's domain \\
+A & \(<0.0135\) & single-link Dobrushin condition holds; fixed-cutoff
+Wilson transfer gap in the local-observable sector, uniformly in
+volume \\
+B & \(0.0135\) to about \(5.7\) & outside that sufficient condition;
+confinement is physically expected, but no mixing certificate is
+supplied here \\
+C & above about \(5.7\) & scaled \(\xi/a\) grows in the table;
+weak-coupling RG control toward the continuum remains an open
+obligation \\
 \end{longtable}
 
-\emph{Band B is a sharpness problem.} The theory there is, by the data,
-more strongly mixing than anything band A contains, yet no expansion
-converges with rigorous constants: the polymer expansion of
-\href{wilson-strong-coupling-explicit.md}{the Wilson note} reaches
-\(\beta_W\simeq0.0057\), the Dobrushin condition \(0.0135\), and an
-ideal entropy constant for plaquette surfaces, of order \(10\) to \(15\)
-in place of \(20e\), would bring the expansion to \(\beta_W\sim0.1\).
-The strong-coupling series itself has singularities near
-\(\beta_W\simeq3.5\) to \(4\), so even the true radius of convergence
-ends inside band B. The gap between \(0.1\) and \(5.7\) is a factor of
-\(50\) in \(\beta_W\) with no small parameter, in a regime where the
-correlation length is less than one lattice unit. This is the band the
-finite verification addresses, and Section 2 says what it costs.
+For band A the exact sufficient threshold from the one-link estimate is
+\(\beta_W<\tfrac14\log(19/18)\). The convenient \(g^2>444\) implies it:
+\(\log(19/18)=\int_{18}^{19}dt/t>1/(18.5)=2/37=24/444\), by strict
+convexity of \(1/t\) and the midpoint integral bound. The normalized
+positive Wilson transfer operator \(\mathcal T\) then has an energy-gap
+bound on the cyclic local-observable sector
+\[\Delta_W\ge\frac{\hbar c}{a}
+\log\frac{1}{18(e^{24/g^2}-1)}>0,\] as explained in
+\href{dobrushin-uniqueness-wilson.md}{the Dobrushin note} §§2--3
+(written derivation read). The volume uniformity is at fixed \(a,g^2\);
+this is not a continuum limit.
 
-\emph{Band C is the renormalization group's.} From \(g^2=1/2\)
-(\(\beta_W=12\)) to \(\beta_W=6\) (\(g^2=1\)) is \(1/0.0966\simeq10\)
-one-loop doublings, over which \(\xi/a\) falls from its
-asymptotic-scaling value to about one. The stretch where \(\xi/a\)
-passes from about \(10\) to about \(1\) is three doublings wide at one
-loop. The physically nontrivial part of the problem, the place where the
-gap forms, is this stretch; everything in band B is, physically, already
-gapped with a gap of order \(\hbar c/a\).
+\emph{Band B is a proposed sharpness problem.} The crude sufficient
+criterion leaves a wide interval. It does not follow that band B is more
+mixing than band A: as \(\beta_W\to0\) the measure approaches a product
+of independent Haar links, and the Dobrushin decay bound improves
+without limit. Nor does the table establish \(\xi/a<1\) throughout band
+B. The all-representation activity estimate in
+\href{wilson-strong-coupling-explicit.md}{the Wilson note} is of order
+\(\beta_W\) with a quoted sufficient activity scale of order \(0.0057\);
+the leading fundamental activity is a different normalization. Changing
+surface entropy counts alone is not a proved extension to
+\(\beta_W\sim0.1\). The earlier assertion of series singularities at
+\(3.5\)--\(4\) is withdrawn for lack of a source or specified series.
 
-\hypertarget{what-the-verification-costs-restated}{%
+\emph{Band C is an RG target.} For orientation only, the one-loop
+pure-\(SU(3)\) running has \(b_0=11/(16\pi^2)\) and
+\[\frac{1}{g^2(2a)}-\frac{1}{g^2(a)}=-2b_0\log2
+\simeq-0.0966.\] Going from \(g^2=1/2\) to \(g^2=1\) therefore takes
+\(1/0.0966\simeq10.4\) doublings in this approximation. At fixed
+physical correlation length, a decrease of \(\xi/a\) from \(10\) to
+\(1\) takes \(\log_2 10\simeq3.32\) doublings kinematically. Neither
+count establishes constructive control, locates gap formation, or proves
+a gap of order \(\hbar c/a\) throughout band B.
+
 \subsection{2. What the verification costs,
-restated}\label{what-the-verification-costs-restated}}
+restated}\label{what-the-verification-costs-restated}
 
-A mixing verification at \(\beta_W\simeq5.7\) with boxes of side \(R=3\)
-to \(5\) involves rigorous bounds on the conditional distribution of
-small Wilson loops inside \(V\), with \(216\) to \(2000\) link
-variables, uniformly over the boundary condition, with the bound
-decaying in the distance from the boundary change at a rate consistent
-with \(\sigma a^2\simeq0.16\). The uniformity over boundary conditions
-is a supremum over a compact set of dimension \(8|\partial V|\), of
-order \(10^3\) to \(10^4\), of a function defined by an integral over
-\(8|V|\) dimensions. No rigorous numerical method known to the author
-evaluates such a quantity with certified bounds today; the problem is
-nevertheless three to four orders of magnitude smaller in the number of
-variables than the earlier estimate, and it sits at a coupling where the
-theory's correlation length is below the lattice spacing, so that a
-certified bound on a single small box would settle band B at that
-coupling.
+For the trial boxes just defined, the un-gauge-fixed bulk integral has
+\(8|V|=1728,6144,16000\) real dimensions, since \(\dim SU(3)=8\).
+External links entering plaquettes meeting \(V\) give an additional
+boundary supremum over \(8|\partial V|\) variables, once that boundary
+link set is specified. Gauge reduction may decrease the number of
+independent coordinates, but does not provide a certified marginal
+bound.
 
-\hypertarget{b.-the-meeting-point-located-five-order-one-steps-around-beta_wsimeq6}{%
-\subsection{\texorpdfstring{2b. The meeting point located: five
-order-one steps around
-\(\beta_W\simeq6\)}{2b. The meeting point located: five order-one steps around \textbackslash beta\_W\textbackslash simeq6}}\label{b.-the-meeting-point-located-five-order-one-steps-around-beta_wsimeq6}}
+A verification would have to control joint sub-block distributions
+uniformly over those boundary conditions, satisfy a quantitative
+finite-size criterion with margin, and state its channel and decay rate.
+No such verification is performed here. The proposed small boxes are
+exploratory sizes; the earlier claim of a three-to-four order reduction
+in the required problem size is withdrawn because no sufficient size is
+known. The later \href{reasons-to-stop-as-research.md}{reasons-to-stop
+note} (relevant passages read) rejects physical-crossover certification
+as a currently supplied route and redirects effort toward weak-side RG.
+Its historical box counts do not replace the explicit four-dimensional
+count above.
 
-The two unknown numbers of
-\href{intermediate-region-finite-verification.md}{the
-finite-verification note} §4 can be placed on the map. Read the three
-bands as blocking steps, one doubling of the lattice spacing each.
+\subsection{2b. A heuristic meeting scale, not a six-step
+theorem}\label{b.-a-heuristic-meeting-scale-not-a-six-step-theorem}
 
-\emph{Band C, from the weak side.} From \(g^2=1/2\) to
-\(\beta_W\simeq6\) is ten one-loop doublings, and only the last three,
-in which \(\xi/a\) passes from about \(10\) to about \(1\), are outside
-the reach of a small-field expansion in principle; the first seven are
-the regime of the constructive programme, unavailable with constants but
-perturbative in kind.
+\emph{From the weak side.} The one-loop count suggests about ten
+doublings from \(g^2=1/2\) to \(g^2\simeq1\). It does not establish that
+the first seven steps are controlled or that only three steps are open.
+Uniform fluctuation bounds, generated-interaction bounds and iteration
+remain required even in the weak-coupling part of the proposed
+trajectory.
 
-\emph{Band B, crossed by three steps.} The coarse plaquette at scale
-\(2^ka\) is a \(2^k\times2^k\) Wilson loop of the fine lattice, whose
-expectation by the area law with \(\sigma a^2\simeq0.16\) at
-\(\beta_W=5.7\) is about \(e^{-0.16\cdot4^k}\): \(0.53\), \(0.077\),
-\(3.6\times10^{-5}\) for \(k=1,2,3\). Band A needs an activity below
-about \(2\times10^{-3}\), so three doublings cross band B. The
-Migdal--Kadanoff recursion (Kadanoff, Ann. Phys. 100 (1976) 359;
-metadata level, a heuristic in four dimensions), which sends the
-activity to its fourth power per doubling, gives two and overestimates
-the decrease; the area-law count is the one to use. Rigorously, a
-block-spin step is well defined and its image is Gibbsian with a
-summable interaction in the strong-mixing regime (van Enter, Fernández
-and Sokal, J. Stat. Phys. 72 (1993) 879; metadata level), so once mixing
-is known at the top of band B the three steps that cross it are
-standard, and band A is proved by hand.
+\emph{From the strong side: the area-law illustration.} Choose coarse
+links as ordered products of straight fine links. Then a coarse
+plaquette is exactly the holonomy of a \(2^k\times2^k\) fine loop after
+\(k\) doublings. If one models its normalized expectation by the pure
+area term \(e^{-\sigma a^2 4^k}\) with \(\sigma a^2=0.16\), the
+estimates are \(0.53\), \(0.077\), \(3.6\times10^{-5}\) for \(k=1,2,3\).
+These are values of that heuristic model: perimeter terms, prefactors,
+finite-loop effects and lattice artifacts are omitted. In particular,
+the asymptotic area law need not approximate a \(2\times2\) loop.
 
-\emph{The meeting point.} The verification is therefore needed at
-\textbf{one coupling}, \(\beta_W\simeq5.7\) to \(6\), that is
-\(g^2\simeq1\), where \(\xi/a\simeq1\), on boxes of side \(3\) to \(5\);
-its openness radius is the tolerance the renormalization group must
-meet, and everything below it follows. In the notation of the
-finite-verification note, \(g_{\rm DS}^2\simeq1\) conditional on that
-single certified box, and the open requirement on the other side is
-\(g_{\rm RG}^2\ge1\): the small-field renormalization must be carried
-three doublings past the point where \(\xi/a\simeq10\).
+An expectation is not a polymer activity or a bound on the norm of an
+interaction. The blocked measure generally contains interactions beyond
+Wilson plaquettes. The former \(2\times10^{-3}\) threshold had no
+specified activity norm or source and is withdrawn; no conclusion that
+three doublings reach band A follows. A Migdal--Kadanoff fourth-power
+recursion (Kadanoff, Ann. Phys. 100 (1976) 359; metadata level) is
+likewise a heuristic in four dimensions and supplies no certified step
+count or error comparison here.
 
-\textbf{The whole problem in one sentence.} The mass gap for \(SU(3)\)
-is the control of about six consecutive blocking steps of the lattice
-theory at order-one coupling, uniformly in the volume: three from the
-weak side, where \(\xi/a\) falls from \(10\) to \(1\), and three from
-the strong side, which are standard once mixing is certified at the
-coupling in between. \href{mass-gap-conditional-theorem.md}{The
-conditional theorem} states this as two hypotheses and an explicit
-conclusion. Everything else on the map is either perturbative in kind or
-proved with explicit constants.
+A measurable block map has a well-defined pushforward probability
+measure. Representing it by a summable Gibbs interaction requires
+additional hypotheses on that map and measure. The abstract of
+\href{https://arxiv.org/abs/hep-lat/9210032}{van Enter, Fernández and
+Sokal} (J. Stat. Phys. 72 (1993) 879; abstract read) explicitly
+distinguishes regularity on the RG map's domain from examples of
+non-Gibbsian images. This reference is not a quantitative theorem for
+the present \(SU(3)\) map. Even if a suitable Gibbs representation were
+established, three steps would still require explicit bounds on every
+generated interaction, stability or renewed mixing estimates, and a
+justified comparison with a strong-coupling criterion. None is supplied
+here.
 
-\hypertarget{what-this-changes}{%
-\subsection{3. What this changes}\label{what-this-changes}}
+\emph{The meeting point is a proposed target.} A reference interaction
+near \(\beta_W=5.7\)--\(6\) is suggested by the numerical scales. A
+certified box there would concern that interaction and its proven
+stability neighbourhood; it would not automatically certify all smaller
+\(\beta_W\) or all its blocked images. The earlier identifications
+\(g_{\rm DS}^2\simeq1\) and \(g_{\rm RG}^2\ge1\) are conjectural
+targets, not thresholds established by this note.
 
-The finite verification is restated gauge-invariantly and at its true
-size. The decision it asks for is unchanged in kind and smaller in
-scale. Bands A and C are as before; band B is where a certified
-computation on a box of a few hundred links would connect the
-hand-proved region to the physical crossover, and band C remains the
-renormalization group's, ten doublings from \(g^2=1/2\) to the crossover
-at one loop. The glueball gap along the trajectory is then, in physical
-units, \(m_{0^{++}}=4.21/r_0\simeq1.66\,\hbar c\,{\rm fm}^{-1}\) by the
-same data, which is what a proof would have to reproduce as a positive
-number.
+\textbf{The former ``whole problem in one sentence'' claim is
+withdrawn.} The map motivates studying a few physical scales around
+order-one coupling, but does not reduce the continuum mass-gap problem
+to six blocking steps. \href{mass-gap-conditional-theorem.md}{The
+conditional-theorem note} organizes proposed mixing and RG hypotheses;
+invoking it here does not discharge them. Continuum existence,
+Osterwalder--Schrader or Wightman axioms, nontriviality, and a finite
+positive physical spectral gap remain separate obligations, as the
+October 1 audit §3 emphasizes.
 
-\hypertarget{consequence-for-state}{%
-\subsection{4. Consequence for STATE}\label{consequence-for-state}}
+\subsection{3. What this changes}\label{what-this-changes}
 
-The Dobrushin note's specification is corrected: the block criterion in
-its single-link form is emptied by Elitzur and the mixing form on
-sub-blocks, organized around the conditional distribution of small
-Wilson loops, is the one to verify. The verification's size is corrected
-downward to boxes of side \(3\) to \(5\) at \(\beta_W\simeq5.7\), where
-\(\xi/a<1\) by the published data. The three bands separate the
-sharpness problem (B, a factor \(50\) in \(\beta_W\) with \(\xi/a<1\))
-from the physical problem (C, three doublings where \(\xi/a\) passes
-from \(10\) to \(1\)).
+The exact correction is the Haar-marginal obstruction to an interior
+single-link test. A joint sub-block criterion is a research target; its
+constants, applicability and sufficient box size remain open. The three
+bands and blocking counts are orientation, not an established connection
+between the explicit strong-coupling region and the physical crossover.
+
+For the conventional scale choice \(r_0=0.5\) fm, the retained continuum
+ratio gives \[\mu_{0^{++}}=\frac{4.21}{r_0}=8.42\,{\rm fm}^{-1},\qquad
+E_{0^{++}}=8.42\,\hbar c\,{\rm fm}^{-1}\simeq1.66\,{\rm GeV},\] using
+\(\hbar c\simeq0.1973\) GeV fm. If mass is expressed as a mass rather
+than an energy, \(M_{0^{++}}=E_{0^{++}}/c^2\simeq1.66\) GeV\(/c^2\).
+This is a lattice-literature benchmark with a chosen physical scale, not
+a proved continuum gap or a requirement that a lower-bound proof recover
+that central numerical value.
+
+\subsection{4. Consequence for STATE}\label{consequence-for-state}
+
+Retain the exact interior Haar-marginal obstruction and the explicit
+fixed-cutoff strong-coupling criterion. Treat the scale table,
+\(R=3\)--\(5\) trial boxes, area-law blocking illustration and proposed
+crossover meeting point as orientation only. Withdraw the claims that
+one such box certifies band B, that three subsequent strong-side steps
+are standard, or that six steps settle the continuum theory. The later
+reasons-to-stop correction points toward quantitative weak-side RG and
+control of generated interactions; this note supplies no new
+certificate, blocking theorem or continuum construction.
 \end{document}
