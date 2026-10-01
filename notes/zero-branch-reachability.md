@@ -36,6 +36,11 @@ resolution and thickness corollaries, the Airy constant and the
 Kepler times refined; the universal late-time claims first made in
 Theorems 3(b) and 4(b) rejected by counterexample and replaced by the
 local statements now printed. The corrections are applied below.
+Theorem 5 (§4c) was refereed separately by GPT-6.1 Sol (Codex) in
+three bounded passes on 2026-10-01: REFINE (critical values,
+uniformity, part (c), units), REFINE (one modulus), then ACCEPT on the
+statement and proof as printed; the reports are kept in
+[`reviews/2026-10-01-theorem5-coherence-necessity-referee.md`](../reviews/2026-10-01-theorem5-coherence-necessity-referee.md).
 
 Throughout, $h$ denotes the reduced phase constant, as in the
 [1998-conjecture note](rivero-1998-conjecture-central-forces.md);
