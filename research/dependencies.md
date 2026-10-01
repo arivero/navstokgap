@@ -120,19 +120,22 @@ Read in this order:
    separating a radiation action unit from a complete-record restriction.
 4. [Indeterminacy routes](../notes/newton-indeterminacy-routes.md), for the
    conditional statistical-speed bound and its affine Gaussian instance.
-5. [Recording notebook](../notes/sed-closure-under-recording.md), §§8.11–8.20:
+5. [Recording notebook](../notes/sed-closure-under-recording.md), §§8.11–8.22:
    physical feedback, complete records and nonlinear countertests. In the
    supplied quantum free-evolution reference, the packet tests retain phase
    memory and distinguish positive-tail reconstruction from uniform stability
    in the stated local-data metric.
 
-The next mechanism is a physical history rule that prepares and transports
-the coherence datum through separation and reunion, with retained memory
-and complete terminal records. It must account for the notebook's (117),
-(119), phase datum (129), and §8.21's static bridge and unread-energy tests
-(132)--(135), without assuming exact low-density readout or
-importing the quantum evolution being explained. A rule that still admits
-an unexcluded zero-action branch does not establish necessity.
+Section 8.22 realizes (117)'s score correction by a shared-sign classical
+preparation and canonical copies. Its terminal-conjugate recovery and
+free-motion fourth-moment failure (140), (144) isolate the next mechanism:
+a physical rule evolving the retained score label while preserving its
+conditional allocation and complete energy accounting. It must also pass
+full terminal access before claiming a universal floor. The earlier
+phase-memory and unread-energy tests (119), (129), (132)--(135) still apply
+at separation and reunion. Assuming Fisher ensemble dynamics or an exact
+low-density phase readout does not supply this rule; an unexcluded zero
+branch does not establish necessity.
 
 Durable support: [cut measure](../notes/cut-measure-newton.md),
 [recoil](../notes/record-costs-recoil.md),
