@@ -4,8 +4,10 @@ Updated 2026-10-01. Read this page and the
 [refinement note](../notes/refinement-composition-and-limit.md);
 AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
 gives the wider comparison.
-The [September 23 handout](handoffs/HANDOFF-2026-09-23.md) records the
-earlier results and reviews; this page carries the current direction.
+The [October 1 Claude handout](handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md)
+gives the Newton/quantisation restart; the
+[September 23 handout](handoffs/HANDOFF-2026-09-23.md) records earlier
+reviews. This page carries the current direction.
 
 ## Goal
 
@@ -77,7 +79,7 @@ fill its cells (open cells in its §5).
    conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
    Atlas cell 4: [composition, §7](../notes/four-dimensional-composition.md) gives explicit vertices, finite one-step subtracted matching bounds and iteration hypotheses (Round 10, formal, unrefereed); next, prove depth-uniform (14) and remainder control. Theorems 1--4 are refereed by Claude.
 2. **Newton necessity.** [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
-   [Recording notebook](../notes/sed-closure-under-recording.md): Gaussian body--record limits and nonlinear/coherence countertests; §§8.22--8.23 realize score correction and Gaussian switching transport, with full-pointer and preparation-dependent-force obstructions. [Score-constrained ensembles](../notes/score-constrained-ensemble.md) derives the restricted field action and reservoir-aware population momentum, but disproves fixed compact shape closure even with Gaussian width (Sol/Astra, written, internally checked). Next Newton lemma: paired density/phase modes on the expanding Gaussian, then a positive nonlinear completion; reject projected residuals treated as exact. Closed apparatus, two unread widths, terminal access, phase reunion, positivity, universality and radiation calibration remain completion tests. [All zooming schedules, §§3c--3d](../notes/refinement-composition-and-limit.md#3c-all-refinement-sequences-and-two-microscopic-kick-orders) constructs the harmonic curve; refinement and complete-record continuity still admit zero action.
+   [Recording notebook](../notes/sed-closure-under-recording.md): Gaussian body--record limits and nonlinear/coherence countertests; §§8.22--8.23 realize score correction and Gaussian switching transport, with full-pointer and preparation-dependent-force obstructions. [Score-constrained ensembles](../notes/score-constrained-ensemble.md) gives the restricted action and reservoir-aware population momentum, a fixed-shape obstruction, and an exact positive non-Gaussian forward completion. Nonlinear recording generates a quartic tail outside its finite modes, with unread recoil energy retained (Sol/Astra, written, internally checked). Next Newton lemma: a dynamical constraint realization on that non-Gaussian orbit, keeping the full fields, labels and force/switch energy; reject finite-mode projection or marginal-score resets. Closed apparatus, two unread widths, terminal access, phase reunion, positivity, universality and radiation calibration remain completion tests. [All zooming schedules, §§3c--3d](../notes/refinement-composition-and-limit.md#3c-all-refinement-sequences-and-two-microscopic-kick-orders) constructs the harmonic curve; refinement and complete-record continuity still admit zero action.
    [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; the premise that restores closure is a bound on every terminal readout, which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory (refereed).
    Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
    ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to

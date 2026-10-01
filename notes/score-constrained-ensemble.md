@@ -1,5 +1,15 @@
 # Score-constrained ensembles and population transport
 
+**Restart, 2026-10-01.** Sections 1–5 are written and internally checked:
+the constrained action, compact-shape obstruction, positive non-Gaussian
+forward orbit and nonlinear-copy recoil/tail test are established within
+their stated models. The unfinished calculation is a dynamical
+two-sheet realization on (18), retaining actual velocities and all
+force/switch energy. Start with the proposed balance equations in the
+[Claude handout](../research/handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md),
+which are candidate calculations, then test unread labels. Physical
+constraint enforcement and positive action selection have not been derived.
+
 Restricting the ordinary action of two classical phase sheets to the
 shared-score preparations gives the canonical Fisher field action
 exactly. The restriction is not preserved by free Newtonian transport.
@@ -7,8 +17,13 @@ A separate population-transfer construction identifies its full
 transport-conjugate action; bridge phase alone omits reservoir costs.
 The resulting two-coordinate model satisfies continuity, but its shape
 family fails the full field equation, even after adding Gaussian width.
+An evolving Gaussian-polynomial construction instead gives an exact
+positive, non-Gaussian solution for every forward time. A nonlinear
+coordinate copy generates a shape outside every finite Hermite--Gaussian
+family, with an exactly retained recoil-energy cost.
 
-These are variational identities and a stated closure obstruction,
+These are variational identities, an explicit field construction and
+stated closure obstructions,
 developed by GPT-6.1 Sol and GPT-6 Astra on 2026-10-01. They do not derive
 a physical constraint mechanism, quantum recording, or positive action
 necessity. The supplied parameter is $\kappa\ge0$; the field obstruction
@@ -232,18 +247,194 @@ It specifically rules out treating a fixed compact transfer bump plus
 Gaussian width as an exact free Fisher evolution. Generated shape
 information cannot be hidden inside that projection.
 
-## 4. Consequence for STATE
+## 4. An exact positive nonlinear shape evolution
+
+The compact-shape obstruction permits evolving tails. The following
+construction solves (4) exactly within its supplied dynamics. It also
+identifies a limitation of the first mode test: the linearized mode is
+a width/phase tangent, although its finite-amplitude completion is not
+Gaussian.
+
+For $\kappa>0$, introduce the auxiliary algebraic variable
+$$\psi=\sqrt\rho\,e^{iS/(2\kappa)},\qquad
+\psi_t=\frac{i\kappa}{m}\psi_{qq}.\tag{15}$$
+The second equation is equivalent to (4) on positive density: its real
+part gives $\rho_t=-\partial_q(\rho S_q/m)$ and its imaginary part
+gives (4)'s second equation after differentiating the displayed product.
+It is a change of variables in the adopted field equations, not an
+independent physical propagation premise.
+
+Fix $A>0$ with length-squared units and put
+$$\begin{aligned}
+u&=\frac{\kappa t}{mA},&B&=A(1+u^2),&s&=\arctan u,&z&=q/\sqrt B,\\
+\psi&=B^{-1/4}e^{iuq^2/(4B)}\chi(z,s),&&
+i\chi_s&=\left(-\partial_z^2+\frac{z^2}{4}\right)\chi.
+\end{aligned}\tag{16}$$
+For completeness, $a=\dot B/(2B)=\kappa u/(mB)$ and
+$b=\dot s=\kappa/(mB)$ obey $\dot a+a^2=b^2$.
+Differentiating the second line cancels the terms
+$-a\chi/2$ and $-az\chi_z$ on both sides of (15). The remaining
+quadratic phase coefficient is $bz^2/4$, giving the last equation
+in (16). Thus no propagator formula is assumed.
+
+Let
+$$\begin{aligned}
+\phi_0(z)&=(2\pi)^{-1/4}e^{-z^2/4},&
+H_2(z)&=(z^2-1)/\sqrt2,&\phi_2&=H_2\phi_0,\\
+\psi_n(q,t)&=B^{-1/4}e^{iuq^2/(4B)}
+ e^{-i(n+1/2)s}\phi_n(z),&&n\in\{0,2\}.
+\end{aligned}\tag{17}$$
+Direct differentiation gives the oscillator eigenvalues $1/2$ and
+$5/2$ for $\phi_0$ and $\phi_2$. Gaussian moments give unit norms
+and orthogonality. Hence both displayed functions solve (15).
+
+**Proposition 4 (positive forward completion).** For
+$0<\epsilon<\sqrt2$, the normalized combination
+$\psi_\epsilon=(\psi_0+i\epsilon\psi_2)/\sqrt{1+\epsilon^2}$
+gives a smooth solution of (4) on the whole line for every $t\ge0$:
+$$\begin{aligned}
+\rho_\epsilon(q,t)&=\rho_G(q,t)
+ \frac{1+2\epsilon\sin(2s)H_2(z)+\epsilon^2H_2(z)^2}
+      {1+\epsilon^2},\qquad \rho_G=N(0,B),\\
+S_\epsilon(q,t)&=\kappa\left(\frac{uq^2}{2B}-s\right)
+ +2\kappa\arctan\frac{\epsilon\cos(2s)H_2(z)}
+                          {1+\epsilon\sin(2s)H_2(z)},\\
+\frac{\rho_\epsilon}{\rho_G}&\ge
+ \frac{(1-\epsilon/\sqrt2)^2}{1+\epsilon^2}>0.
+\end{aligned}\tag{18}$$
+The lower bound is relative to the Gaussian envelope; it supplies no
+absolute density floor at infinity. All displayed energies and moments
+are finite. The density is non-Gaussian for every $\epsilon>0$.
+
+*Proof.* Factoring out $\psi_0$ leaves
+$F=1+\epsilon[\sin(2s)+i\cos(2s)]H_2$.
+For forward time, $0\le s<\pi/2$, so $\sin(2s)\ge0$;
+$H_2\ge-1/\sqrt2$ gives
+$\Re F\ge1-\epsilon/\sqrt2>0$. Thus the arctangent in (18)
+is one globally smooth phase, and $|F|^2$ gives its density and bound.
+Orthogonality gives exact normalization. Gaussian decay times a
+polynomial, with this strictly positive denominator, justifies the
+derivatives, moments and integrations by parts. The nonconstant quartic
+factor cannot be absorbed into a different Gaussian width. Equations
+(15)--(17) prove the field equations. $\square$
+
+The conserved energy and first two even moments are explicitly
+$$\begin{aligned}
+E&=\frac{\kappa^2(1+5\epsilon^2)}{2mA(1+\epsilon^2)},&E Q&=0,\\
+E Q^2&=B\frac{1+2\sqrt2\epsilon\sin(2s)+5\epsilon^2}
+                  {1+\epsilon^2},\\
+E Q^4&=B^2\frac{3+12\sqrt2\epsilon\sin(2s)+39\epsilon^2}
+                    {1+\epsilon^2}.
+\end{aligned}\tag{19}$$
+Indeed (3)'s energy equals $2\kappa^2\int|\psi_q|^2/m$.
+Integration by parts in (15) makes its time derivative zero. At time
+zero the imaginary coefficient cancels the derivative cross term, and
+$\int|\phi_0'|^2=1/4$, $\int|\phi_2'|^2=5/4$, giving $E$.
+For the moments use $E_0z^2=1$, $E_0z^2H_2=\sqrt2$,
+$E_0z^2H_2^2=5$, and $E_0z^4=3$,
+$E_0z^4H_2=6\sqrt2$, $E_0z^4H_2^2=39$.
+Here $E_0$ integrates against $\phi_0^2$.
+The variance has second derivative $4E/m$, as required by the
+free field virial identity; the linear-in-time term records the initial
+position/current correlation.
+
+At first order in $\epsilon$ the paired tangents are
+$$\delta\rho=2\rho_G\sin(2s)H_2,\qquad
+\delta S=2\kappa\cos(2s)H_2.\tag{20}$$
+They are width and quadratic-phase tangents, not an independent linear
+population-transfer mode. The result is their exact non-Gaussian
+nonlinear completion. It carries evolving tails rather than a fixed
+compact transfer bump. Restricting this one solution to any time
+partition is exactly consistent; no general continuum existence theorem
+or separated-packet apparatus has been constructed.
+
+Forward time matters: at $s=-\pi/4$ the factor is
+$1-\epsilon H_2$ and has real zeros. Thus (18) does not define a
+globally positive real-field family under all backward evolution.
+For fixed $t$, $\kappa\downarrow0$ gives a stationary non-Gaussian
+density, $S\to0$, and $E\to0$. The construction leaves the zero
+branch admissible.
+
+## 5. Recording generates a shape outside the finite mode family
+
+Free completion must survive an actual intervention. Couple a body
+state $(\rho,S)$ from (18), or any positive state with the following
+finite integrals, to a pointer configuration $Z\sim N(0,C)$, $C>0$,
+with zero pointer action. Prepare the joint momenta with the shared
+score sign (2), so the full phase-space law need not factor. Apply
+the canonical copy (137) in [the recording note](sed-closure-under-recording.md#822-a-shared-score-sign-realizes-copying-but-fails-two-completion-tests),
+with smooth length-valued $f(q)$. In the algebraic variables its
+pullback is exactly
+$$\Psi'(q,z)=\psi(q)\eta_C(z-f(q)),\qquad
+\eta_C(y)=(2\pi C)^{-1/4}e^{-y^2/(4C)}.\tag{21}$$
+The complete pointer-coordinate record $R=r$ gives
+$$\rho_r(q)=\frac{\rho(q)e^{-(r-f(q))^2/(2C)}}
+ {\int\rho(y)e^{-(r-f(y))^2/(2C)}dy},\qquad
+S_r(q)=S(q),\tag{22}$$
+up to a record-dependent constant action. These are the exact
+conditional fields; the sign stays fair and independent of coordinates.
+
+**Proposition 5 (generated shape and retained recoil).** For
+$f(q)=q^2/\ell$ with fixed length $\ell>0$, every posterior (22)
+from (18) lies outside every finite Hermite--Gaussian expansion,
+even allowing a different Gaussian mean, width and quadratic phase.
+The mean body-energy increase is nevertheless exact:
+$$\begin{aligned}
+\Delta E_{\rm body}
+ &=\frac{\kappa^2}{2mC}E_\rho[f'(Q)^2]
+ =\frac{2\kappa^2}{mC\ell^2}E_\rho Q^2,\\
+E_R I(\rho_R)-I(\rho)&=\frac1C E_\rho[f'(Q)^2].
+\end{aligned}\tag{23}$$
+All these posterior densities are smooth and positive, with finite
+Fisher information and body energy. The finite-mode failure is a
+failure of shape closure, not a violation of the conditional covariance
+bound (138).
+
+*Proof.* The logarithmic posterior tail obeys
+$\lim_{|q|\to\infty}q^{-4}\log\rho_r(q)
+=-1/(2C\ell^2)$. A nonzero finite Hermite expansion over any Gaussian
+envelope has polynomial-times-Gaussian density and the same limit is
+zero. This proves the stated closure failure, without ruling out
+other finite models. For the energy differentiate (21):
+$\partial_q\Psi'=\psi_q\eta_C-f'\psi\eta_C'$.
+Integration in $z$ kills the cross term since
+$\int\eta_C\eta_C'=0$, and
+$\int|\eta_C'|^2=1/(4C)$. Multiplication by $2\kappa^2/m$
+gives (23)'s first line, which is also the actual canonical recoil
+energy under (2). For its second line, the conditional score is
+$\partial_q\log\rho+(r-f)f'/C$; conditional on $q$,
+$r-f$ has mean zero and variance $C$. Expanding its square proves
+the identity. Quartic decay proves the stated posterior integrability.
+$\square$
+
+If the coordinate record becomes unread, the marginal position density
+and mean current return to the original $\rho$ and $\rho S_q/m$.
+The actual body energy keeps the increment (23). Resetting its momenta
+to that marginal density's two score sheets would erase precisely
+this energy. Here every conditional phase gradient is the same, so
+there is no additional current-variance excess; for general branches
+both excesses in recording (135) must be retained. The pointer energy
+is unchanged by this impulsive shear. The extra body energy therefore
+requires work from its actuator; a closed energy-supplying apparatus
+has not been derived. Full conjugate access remains the distinct
+terminal escape (140). None of these formulas selects $\kappa>0$.
+
+## 6. Consequence for STATE
 
 The canonical Fisher structure follows from a specified restriction of
 ordinary classical sheet action; physical preservation of that restriction
 remains open. Population memory must carry its full transport-conjugate
 action, including reservoirs, before taking a weak-bridge limit.
-The continuity-compatible two-coordinate family fails the full field
-equation, and adding Gaussian width does not repair its fixed compact
-transfer shape. Next lemma: a paired density/phase shape mode on the
-expanding Gaussian, first with exact linearized field evolution and then
-a positive nonlinear completion. Its tail variation must be retained;
-linear mode closure alone is not a physical population-history model.
+The fixed compact-transfer family fails even with Gaussian width.
+Equations (18)--(20) instead complete a width/phase tangent to an exact
+positive non-Gaussian forward orbit. A nonlinear record immediately
+generates a quartic exponential tail outside the finite mode family,
+with its unread energy fixed by (23). Next lemma: carry the full
+generated density/phase and retained record labels through a dynamical
+constraint realization, first on this non-Gaussian orbit. It must keep
+the actual velocities and force/switch energy exchange, rather than
+project back to finite modes or reset an unread marginal. Physical
+apparatus closure and the two-unread-width test remain obligations.
 Reject a projected residual counted as exact closure, bridge phase used
 as population momentum without reservoir costs, or an unexcluded zero
 branch presented as positive action necessity.

@@ -3,8 +3,9 @@
 **Geometric follow-up, 2026-10-01.** The distinct construction in
 [score-constrained ensembles](score-constrained-ensemble.md) derives the
 restricted field action, includes reservoir costs in population memory,
-and tests its shape closure. The next shape calculation is maintained
-there; apparatus and complete-record closure remain obligations here.
+and tests evolving shape and recording closure. Those field calculations
+are maintained there; apparatus and complete-record closure remain
+obligations here.
 
 **Gaussian dynamical repair, 2026-10-01 (GPT-6.1 Sol and
 GPT-6 Astra; written, internally checked).** Section 8.23 carries the
@@ -3775,8 +3776,9 @@ stationary switching process under a finite rescaled clock. Its force and
 impulses preserve mean kinetic energy, but (151) requires preparation or
 apparatus state beyond the body pair and sign. The
 [score-constrained construction](score-constrained-ensemble.md) supplies
-the field-action and population-transport tests; its paired shape mode is
-the next mathematical lemma. A closed body--apparatus implementation
+the field-action, population-transport and evolving-shape tests; its
+full-field constraint realization is the next mathematical lemma.
+A closed body--apparatus implementation
 still needs the two-unread-width test with every controller readout retained. Full
 terminal access, relative-phase memory and independent positivity remain
 mandatory completion tests. Reject hidden preparation parameters,

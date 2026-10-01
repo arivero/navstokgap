@@ -7,10 +7,12 @@ verified prior art. This file says how to work here.
 
 Read `research/STATE.md` (one page: what is being worked on and why) and
 the note it points to. Then read the latest handout,
-[`research/handoffs/HANDOFF-2026-09-23.md`](research/handoffs/HANDOFF-2026-09-23.md),
-written at the user's request after the session of 2026-09-22/23: what
-changed, what an adversarial review checked, what is open, and how the
-user works. Nothing else is required reading. Older governance
+[`research/handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md`](research/handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md),
+requested for a fresh Claude view of Newton and quantisation: current
+construction, proof scope and exact next calculation. The
+[September 23 handout](research/handoffs/HANDOFF-2026-09-23.md) is the
+earlier proof-review and source snapshot. Nothing else is required
+reading. Older governance
 files (PROGRAMME, STRATEGY, TASKS, PROTOCOL, the skill, old handoffs) are
 context, and where they demand more bookkeeping than this file, this file
 wins. Explicit user instructions take precedence over everything here.
