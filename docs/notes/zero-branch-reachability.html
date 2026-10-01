@@ -586,6 +586,62 @@ class="math inline">\(2\kappa\,\partial_q\log\rho\)</span> of the <a
 href="score-constrained-ensemble.html">score note</a>) rather than <span
 class="math inline">\(\sqrt h\)</span>. The classical swarm alone does
 not make that selection.</p>
+<p><strong>Proposition (coherence length).</strong> Attach the same
+swarm as a mixture over centres <span class="math inline">\(c\)</span>
+of components <span
+class="math inline">\(a_\sigma(q-c)e^{iS_0(q)/h}\)</span> with <span
+class="math inline">\(a_\sigma(u)=(2\pi\sigma^2)^{-1/4}e^{-u^2/(4\sigma^2)}\)</span>,
+the centres weighted by a smooth density <span
+class="math inline">\(w\)</span> on the swarm, with <span
+class="math inline">\(\sigma\)</span> independent of <span
+class="math inline">\(h\)</span>. At a record point with two arrivals
+<span class="math inline">\(q_1\neq q_2\)</span>, launch separation
+<span class="math inline">\(\Delta q_0\)</span>, the leading cross term
+is the common fringe <span
+class="math inline">\(2\sqrt{\rho_1\rho_2}\cos(\psi(x)/h+\theta)\)</span>
+multiplied by <span class="math display">\[\int
+a_\sigma(q_1-c)\,a_\sigma(q_2-c)\,w(c)\,dc
+=e^{-\Delta q_0^2/(8\sigma^2)}\,\bar
+w+O(\sigma|w&#39;|),\tag{V4}\]</span> <span class="math inline">\(\bar
+w\)</span> the weight at the midpoint, while the diagonal terms are
+<span class="math inline">\(\rho_a\,w(q_a)+O(\sigma|w&#39;|)\)</span>.
+So the leading contrast is <span class="math inline">\(V_0\,e^{-\Delta
+q_0^2/(8\sigma^2)}\)</span> up to the weight ratio: partial, the same
+for every <span class="math inline">\(h&gt;0\)</span>, and zero at <span
+class="math inline">\(h=0\)</span>. This is (V3) with the minimal
+thickness <span class="math inline">\(\Delta=h/(2\sigma)\)</span> of
+such components, since then <span class="math inline">\(\Delta\,\Delta
+q_0/h=\Delta q_0/(2\sigma)\)</span> and <span
+class="math inline">\(\exp[-(\Delta\,\Delta q_0/h)^2/2]=e^{-\Delta
+q_0^2/(8\sigma^2)}\)</span>.</p>
+<p><em>Proof.</em> Every component shares the phase <span
+class="math inline">\(S_0\)</span>, so its arrivals and stationary
+actions at <span class="math inline">\(x\)</span> are those of Theorem 3
+and its fringe phase <span class="math inline">\(\psi(x)/h\)</span> is
+common; only the amplitudes <span
+class="math inline">\(a_\sigma(q_a-c)\)</span> depend on the centre. The
+components are mixed incoherently, so the record is the <span
+class="math inline">\(w\)</span>-average of the component records. With
+<span class="math inline">\((q_1-c)^2+(q_2-c)^2=2(c-m)^2+\Delta
+q_0^2/2\)</span>, <span class="math inline">\(m\)</span> the midpoint,
+the Gaussian integral over <span class="math inline">\(c\)</span> gives
+(V4), and <span class="math inline">\(\int a_\sigma(q_a-c)^2w(c)dc
+=w(q_a)+O(\sigma|w&#39;|)\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The premise therefore has a sharper form than “one coherent state”:
+an <span class="math inline">\(h\)</span>-independent coherence length
+<span class="math inline">\(\sigma\)</span> comparable to the launch
+separation of the crossing streams. Full contrast as <span
+class="math inline">\(\sigma/\Delta q_0\to\infty\)</span>, none when
+<span class="math inline">\(\sigma\to0\)</span> with <span
+class="math inline">\(h\)</span> (the <span class="math inline">\(\sqrt
+h\)</span> mixture), and an <span
+class="math inline">\(h\)</span>-independent partial contrast, hence the
+same discontinuity at zero, for any fixed <span
+class="math inline">\(\sigma&gt;0\)</span>. In the optical language this
+is mutual coherence between the launch points of the two streams. It is
+this quantity, not purity of the whole swarm, that the second premise
+must assert at each <span class="math inline">\(h\)</span>.</p>
 <h2 id="theorem-3-inertial-motion-with-a-graded-velocity">4. Theorem 3:
 inertial motion with a graded velocity</h2>
 <p>Newton’s simplest motion already shows the gap when the preparation
@@ -1001,7 +1057,14 @@ class="math inline">\(h\)</span>, Gaussian contrast vanishes when either
 ratio grows without bound, and finite ratios give partial contrast.
 Newton’s construction has both imprecisions zero; a classical swarm
 attached as a mixture of localized states has thickness <span
-class="math inline">\(\sqrt h\)</span> and no Gaussian contrast.</li>
+class="math inline">\(\sqrt h\)</span> and no Gaussian contrast, while
+components of any <span class="math inline">\(h\)</span>-independent
+coherence length <span class="math inline">\(\sigma\)</span> keep the
+<span class="math inline">\(h\)</span>-independent partial contrast
+<span class="math inline">\(e^{-\Delta q_0^2/(8\sigma^2)}\)</span>
+(coherence-length proposition, §3c): the second premise is mutual
+coherence between the launch points of crossing streams at each <span
+class="math inline">\(h\)</span>.</li>
 </ul>
 <p>The thesis is therefore exactly as strong as two premises: that
 records are complete, the densities themselves rather than their
@@ -1038,9 +1101,10 @@ there) and, wherever its streams cross, is not the limit of the <span
 class="math inline">\(h&gt;0\)</span> records (Theorems 2–4 here). With
 either premise dropped, the zero branch is reached. The determinate
 classical swarm does not by itself select the coherent attachment (5)
-over the mixture of localized states; that selection, determinacy at
-each <span class="math inline">\(h\)</span> (§3c), is the quantum half
-of the second premise and remains a premise.</p>
+over the mixture of localized states; that selection, an <span
+class="math inline">\(h\)</span>-independent coherence length between
+the launch points of crossing streams (§3c), is the quantum half of the
+second premise and remains a premise.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>The gap thesis is located, refereed, and has its central-force case.
 It holds for complete records of determinate preparations wherever their
@@ -1067,9 +1131,10 @@ contrast, not a spectral gap, and generates no scale. Consequences: the
 Planck paper’s Gaussian parabola cannot carry the gap argument, which
 belongs to the Kepler swarm; the two premises, complete records as the
 record-limit-first order and determinate preparations as Newton’s
-default together with the coherent attachment at each <span
-class="math inline">\(h\)</span>, are the gap’s hypotheses and the next
-things to defend, the first with the Leibniz records reading. The
+default together with an <span
+class="math inline">\(h\)</span>-independent coherence length between
+the launch points of crossing streams, are the gap’s hypotheses and the
+next things to defend, the first with the Leibniz records reading. The
 referee’s scope verdict stands: no universal persistence after folds or
 lapping, no necessary resolution threshold, and no positive Newtonian
 action scale are proved here. Further exact cases available: the radial

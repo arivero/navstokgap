@@ -390,8 +390,14 @@ breaking; physical spectral limits and reconstruction; the established
 Newton record bounds; the valley-lifting bridge; and the two remaining
 proof obligations. Historical claims stay tied to the held source
 companions and the sibling `newtonlean` work. The present Planck paper
-becomes a component of this synthesis. This working architecture does
-not designate either open goal as solved.
+becomes a component of this synthesis. Since 2026-10-01 the Newton
+component is organized around the gap thesis of §4: the Kepler swarm as
+the carrier, the Gaussian parabola as the immune case in which the
+Planck paper's record bounds live, and the two premises, complete
+records and an $h$-independent coherence length between the launch
+points of crossing streams, stated beside coercivity and the soft
+channel. This working architecture does not designate either open goal
+as solved.
 
 The research order is deliberately bounded.
 
