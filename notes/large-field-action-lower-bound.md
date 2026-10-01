@@ -1,132 +1,236 @@
-# The large-field action lower bound is immediate in the natural variable, and the constant field saturates it
+# The flowed block constraint gives a continuum action lower bound; sharpness remains open
 
-The bound asked for at the end of
-[the entropy note](large-field-entropy-count.md) holds with the optimal
-constant, once the large-field condition is written in the variable the
-action already measures. Define the region as
-$$K_\eta=\Big\{A:\ \frac1{\ell^4}\int_{\rm block}\big|G_t(x)\big|^2d^4x\ \ge\ \Big(\frac{\eta}{\ell^2}\Big)^2\Big\},
-\qquad \sqrt{8t}=\ell,$$
-with $G_t$ the field strength at flow time $t$. Then
-$$\inf_{K_\eta}\frac{S_E}{\hbar}\ \ge\ \frac{\eta^2}{4g^2},$$
-by two steps only: the gradient flow decreases the Euclidean action, so
-$S_E[A]\ge S_E[\text{flowed }A]$, and the flowed action is at least its
-restriction to the block, which the constraint bounds below. The bound
-is **uniform in the block size, in the lattice spacing, in the volume
-and in the gauge group** in the normalization used here, and it is
-**saturated**: a field of magnitude $\eta/\ell^2$ supported on the block
-attains it, so the constant $1/4$ is optimal. The Nielsen--Olesen
-instability is no obstruction, because every deformation that lowers the
-action also lowers the flowed block average and therefore leaves
-$K_\eta$: the constant field is a saddle of the unconstrained action and
-a minimizer of the constrained one. Together with
-[the entropy count](large-field-entropy-count.md) this closes the
-large-field corner as an estimate problem: cost $\eta^2/(4g^2)$, count
-$\eta^2/(8\pi^2)$, net exponent
-$-\frac{\eta^2}{4g^2}\big(1-Cg^2/2\pi^2\big)$. Constants explicit;
-nothing promoted.
+Later corrections: [ground-state measure transfer, §3](ground-state-measure-transfer.md#3-action-cost-at-a-block-scale-not-a-probability-theorem) separates continuum action cost from lattice and probability estimates; [flow instability](flow-instability-large-field.md) corrects the growth exponent and withdraws truncation sharpness; [the operator-inequality note](large-field-operator-inequality.md) distinguishes measure control from the Hamiltonian comparison (relevant passages read).
 
-## 1. The constraint in the right variable
+> **Correction (2026-10-02, GPT-6 Astra).** Proposition 1 survives as a
+> continuum action inequality under the flow and boundary assumptions
+> below. The former Proposition 2 used a non-admissible field strength
+> constant on a block and zero outside, and incorrectly assigned its
+> flow boundary correction the size $O(a/\ell)$. Its saturation and
+> optimality claims are **withdrawn**, replaced by equality conditions.
+> The Section 3 inference that decreasing total action decreases the
+> flowed block average, and hence that every descent direction leaves
+> $K_\eta$ and the constant field is a constrained minimizer, is
+> **withdrawn**. The former exact mode count is only a constant-background
+> phase-space model; the claimed sharp $e^{2\eta}$ truncation factor is
+> withdrawn in accordance with the later instability correction.
+> Uniform lattice control, normalized rarity, polymer convergence and
+> closure of the large-field corner are not proved here. Gauge-group
+> independence refers only to the chosen action normalization.
 
-The Euclidean action is the $L^2$ norm of the field strength,
-$$\frac{S_E}{\hbar}=\frac1{4g^2}\int\big|F^a_{\mu\nu}(x)\big|^2d^4x ,$$
-so the natural measure of "how large the field is in a block" is the
-same quantity restricted to the block, and the natural smoothing is the
-gradient flow at the radius of the block. Take $\sqrt{8t}=\ell$ and
-$$\mathcal F_\ell(A)=\frac1{\ell^4}\int_{\rm block}\big|G_t(x)\big|^2d^4x,
-\qquad K_\eta=\Big\{A:\ \mathcal F_\ell(A)\ge\eta^2/\ell^4\Big\}.$$
-This is gauge invariant, because $|G_t|^2$ is, and it is the quantity
-that the truncation estimate of
-[the Jacobian note](flow-jacobian-truncation-error.md) is sensitive to,
-up to replacing a supremum by a block average.
+**Abstract / result.** Let a smooth finite-action continuum connection
+admit Yang--Mills gradient flow through $t=\ell^2/8$, with no boundary
+term in the action dissipation identity. Fix a four-dimensional block
+$B$ of volume $\ell^4$ and the action normalization
+$$s(A):=\frac{S_E[A]}{\hbar}=\frac1{4g^2}\int_\Omega|F|^2d^4x,\qquad g>0.$$
+Here $|F|^2$ sums colour and **ordered** spacetime indices, with a fixed
+positive invariant colour inner product. If
+$$K_\eta=\left\{A:\int_B|G_t|^2d^4x\ge\eta^2\right\},\qquad\eta\ge0,$$
+then
+$$\inf_{A\in K_\eta}s(A)\ge\frac{\eta^2}{4g^2}.$$
+This is a direct consequence of global action monotonicity and positivity
+outside $B$, not a constrained minimization construction. The numerical
+bound has no block-size or volume factor. Sharpness for admissible
+connections at this positive flow time remains open here. There is no
+lattice-spacing parameter in the theorem, and no normalized probability
+or Hamiltonian gap estimate follows from it alone.
 
-## 2. The bound
+## 1. The constraint in the action variable
 
-**Proposition 1.** For every $\ell>0$, every lattice spacing $a<\ell$ and
-every volume,
-$$\inf_{A\in K_\eta}\ \frac{S_E[A]}{\hbar}\ \ge\ \frac{\eta^2}{4g^2}.$$
+Take $\Omega=\mathbb R^4$ with sufficient decay for the identities below,
+or a finite periodic four-dimensional domain, and $B\subset\Omega$ a
+cube of side $\ell$. Other boundary conditions are allowed only if they
+justify the same dissipation identity without a boundary flux. All
+connections under consideration have smooth flow $B_s$ on $0\le s\le t$
+and finite action; its curvature is $G_s$, with $G_0=F$.
 
-*Proof.* Two steps.
+At $\sqrt{8t}=\ell$, define
+$$\mathcal F_\ell(A)=\ell^{-4}\int_B|G_t|^2d^4x,
+\qquad K_\eta=\{A:\mathcal F_\ell(A)\ge\eta^2/\ell^4\}.$$
+The constraint is gauge invariant. It measures a flowed block $L^2$
+norm. It does **not** give a supremum or an adjoint-curvature operator
+norm bound. In particular, it cannot be substituted for the curvature
+upper bound used in the Jacobian estimates of
+[the Jacobian note](flow-jacobian-truncation-error.md) or the corrected
+[instability note, §1](flow-instability-large-field.md#1-the-curvature-term-is-symmetric)
+(relevant passages read). The original phrase “up to replacing a
+supremum by a block average” concealed an additional estimate; that
+identification is withdrawn.
 
-*(i) The flow decreases the action.* Along the gradient flow
-$\partial_sB=-D^*G$ one has
-$\frac{d}{ds}S_E(B_s)=-\|D^*G\|_2^2\le0$
-([comparison note](comparison-and-bridges.md) §4; Lüscher,
-arXiv:1006.4518v3, after equation (1.4), passage level), so
-$S_E[A]=S_E[B_0]\ge S_E[B_t]=\frac{\hbar}{4g^2}\int|G_t|^2d^4x$.
+## 2. The bound and the conditions for equality
 
-*(ii) Positivity outside the block.* The integrand is nonnegative, so
-$$\frac1{4g^2}\int\big|G_t\big|^2\ \ge\ \frac1{4g^2}\int_{\rm block}\big|G_t\big|^2
-\ \ge\ \frac1{4g^2}\,\ell^4\cdot\frac{\eta^2}{\ell^4}=\frac{\eta^2}{4g^2},$$
-the middle inequality being the definition of $K_\eta$. $\square$
+**Proposition 1 (continuum action cost).** Under the assumptions of
+Section 1, for every $\ell>0$ and $\eta\ge0$,
+$$s(A)\ge\frac{\eta^2}{4g^2}\qquad(A\in K_\eta).$$
+The infimum has the same lower bound; if the set is empty its infimum
+is understood as $+\infty$.
 
-No property of the gauge group beyond the normalization of the trace
-enters, and no property of the lattice beyond $a<\ell$, which is needed
-only so that the flow at radius $\ell$ is meaningful.
+*Proof.* Use the ungauged flow
+$$\partial_s(B_s)_\nu=D_\mu(G_s)_{\mu\nu}=:J_{s,\nu}.$$
+Variation of $s=(4g^2)^{-1}\int\sum_{a,\mu,\nu}(G^a_{\mu\nu})^2$
+and integration by parts give
+$$\delta s=-\frac1{g^2}\int\sum_\nu\langle J_{s,\nu},\delta B_\nu\rangle d^4x,
+\qquad \frac{d}{ds}s(B_s)=-\frac1{g^2}\|J_s\|_2^2\le0.$$
+The norm in the last display sums the colour and one-form indices.
+The factor $1/g^2$ is explicit for this flow-time convention; the old
+formula $dS_E/ds=-\|D^*G\|_2^2$ omitted the action prefactor.
+The continuum flow convention is the one recorded in
+[Lüscher's local companion](../docs/Luscher_WilsonFlow_1006.4518v3.md)
+(introductory flow equations, passage read); the displayed variation
+checks the normalization directly.
 
-**Proposition 2 (sharpness).** The constant $1/4$ cannot be improved. A
-configuration whose field strength equals $\eta/\ell^2$ on the block and
-vanishes outside has $S_E/\hbar=\eta^2/(4g^2)$ and lies in $K_\eta$ up
-to the smoothing at the boundary of the block, which contributes a
-relative correction of order $a/\ell$.
+Consequently
+$$s(A)\ge s(B_t)=\frac1{4g^2}\int_\Omega|G_t|^2
+\ge\frac1{4g^2}\int_B|G_t|^2
+\ge\frac{\eta^2}{4g^2}.$$
+The second inequality is positivity outside $B$; the last is the
+constraint. $\square$
 
-## 3. Why the instability does not obstruct the bound
+**Scope of uniformity.** The same algebraic bound applies at each
+admissible $\ell$ and domain volume; it does not assert flow existence
+or regularity uniformly through any limit. It uses a fixed invariant
+inner product and action coefficient. Writing the action in this form
+for different compact gauge groups gives the same coefficient by
+**normalization convention**, not a comparison theorem for their
+measures, mode counts or operators. Rescaling the inner product also
+rescales the field norm and the threshold. The former claim for every
+lattice spacing $a<\ell$ is withdrawn: an exact Wilson-lattice analogue
+requires a specified lattice observable, its action comparison and its
+flow monotonicity, none of which is proved by this continuum integral.
 
-[The instability note](flow-instability-large-field.md) shows that a
-constant chromomagnetic field is a saddle of the unconstrained action,
-with $\mathcal N(\eta)=\eta^2/(8\pi^2)$ descent directions. Each of those
-directions lowers $S_E$, and by step (i) of Proposition 1 it therefore
-lowers $\int|G_t|^2$ as well, so it lowers $\mathcal F_\ell$ and moves the
-configuration out of $K_\eta$. The two statements are consistent and say
-different things:
+**Proposition 2 (equality accounting; replacement for withdrawn
+sharpness).** For every $A\in K_\eta$ in Proposition 1,
+$$\begin{aligned}
+s(A)-\frac{\eta^2}{4g^2}
+={}&\frac1{g^2}\int_0^t\|J_s\|_2^2ds
++\frac1{4g^2}\int_{\Omega\setminus B}|G_t|^2d^4x\\
+&+\frac1{4g^2}\left(\int_B|G_t|^2d^4x-\eta^2\right).
+\end{aligned}$$
+Each term is nonnegative. Equality therefore holds if and only if all
+three vanish: zero flow dissipation, zero flowed curvature outside $B$,
+and exact saturation of the block threshold.
 
-- *unconstrained*: the constant field is not a local minimum, and the
-  flow runs away from it at rate $2\|G\|$;
-- *constrained*: on $K_\eta$ the constant field attains the infimum,
-  because every descent direction violates the constraint.
+*Proof.* Integrate the dissipation identity, split the final action
+integral into $B$ and its complement, and subtract the threshold.
+Nonnegativity gives the equivalence. For a smooth flow, zero
+dissipation entails $J_s=0$ throughout the interval. $\square$
 
-The instability therefore affects the **treatment** of the region, which
-must expand around an inhomogeneous configuration if one insists on
-staying inside $K_\eta$ while following the flow, and not the **cost**
-of the region, which Proposition 1 fixes.
+This is an identity and necessary-and-sufficient equality test, **not**
+an existence assertion. For $\eta=0$ a flat connection gives equality
+when admitted by the domain. For $\eta>0$, neither an equality example
+nor a sequence approaching equality is constructed here, so the
+optimality of $1/4$ remains unproved. Strict inequality for particular
+fields would not itself give a uniform improvement of the infimum.
 
-## 4. The corner, assembled
+**Why the old example fails.** Prescribing a nonzero constant abelian
+curvature on $B$ and zero outside does not produce a smooth admissible
+connection. In that sector the Bianchi identity is $dF=0$, whereas
+$d(\mathbf1_B F_{\rm const})$ has nonzero face-supported terms for a
+nonzero constant two-form on a bounded cube. A smooth cutoff of the
+connection can give an admissible localized field, but then its
+curvature includes transition terms whose cost and flow must be
+controlled. No such control is supplied by the former example.
 
-Collecting the three statements about a large-field region of strength
-$\eta$ at scale $\ell$:
+Nor does $a/\ell$ control flow at the radius of the block. Already in
+the abelian heat-flow model, rescaling $x=\ell y$ leaves the smoothing
+time $t/\ell^2=1/8$ fixed. The heat kernel samples a boundary layer of
+width comparable with $\ell$, so a relative effect of order one is
+possible as $a/\ell\to0$. There is no vanishing cutoff correction
+justified by that limit. These observations invalidate the old
+sharpness proof without claiming that no other sharpness proof exists.
 
-| quantity | value | source |
+## 3. Instability and the block constraint are separate questions
+
+The corrected [instability note, §§2--3](flow-instability-large-field.md)
+(full note read) derives, in a stationary abelian chromomagnetic
+background with charged curvature $b=gB>0$, the linear growth rate
+$$b-k_\parallel^2\qquad(k_\parallel^2<b).$$
+The full covariant Laplacian is included. The maximal model rate is
+$b$, not $2b$. This is a background spectral calculation, not an
+admissible block-supported saturation example for Proposition 1.
+
+**Correction to the descent argument.** Monotonicity says
+$s(\Phi_t A)\le s(A)$ for each initial connection $A$; it does not compare
+the flowed block functionals of two different initial connections.
+From $s(A')<s(A)$ one cannot conclude
+$\mathcal F_\ell(A')<\mathcal F_\ell(A)$. The action can also change
+outside the block and during the flow. Even decreasing
+$\mathcal F_\ell$ would not force exit from $K_\eta$ for an interior
+point with threshold slack. The claims that every descent direction
+exits $K_\eta$ and that a constant field minimizes on it are withdrawn.
+
+Proposition 1 holds for every admissible field in the constraint set,
+regardless of its stability. It supplies a floor on the constrained
+action, not a minimizer or its Hessian. Neither homogeneity nor
+inhomogeneity of a constrained minimizer is established here. No
+Gaussian expansion about such a minimizer is justified by this note.
+
+## 4. What the ingredients do and do not estimate
+
+| quantity | corrected value or status | support and limitation |
 | --- | --- | --- |
-| minimal action cost | $\eta^2/(4g^2)$, sharp | Propositions 1--2 here |
-| unstable directions | $\eta^2/(8\pi^2)$ | [entropy note](large-field-entropy-count.md) §2 |
-| flow-truncation error inside | $e^{2\eta}$, sharp | [instability note](flow-instability-large-field.md) |
-| net weight | $\exp\big[-\frac{\eta^2}{4g^2}\big(1-\frac{Cg^2}{2\pi^2}\big)\big]$ | combining the first two |
+| continuum action cost | $s(A)\ge\eta^2/(4g^2)$ | Proposition 1; sharpness open |
+| unstable-mode phase-space count | model $b^2\ell^4/(8\pi^2)$ | Constant charged-background Landau density times longitudinal momentum-disc density; not an exact finite-block count or general entropy bound |
+| linearized-flow growth | model $e^{(b-k_\parallel^2)t}$; majorant $e^{2t\Gamma}$ | Corrected instability note; $\Gamma=\tfrac12\sup_{s,x}\|M(s,x)\|_{\rm op}$, $M u=2[G,u]$; no sharp truncation-tail claim |
+| normalized large-field weight | not proved | Needs a constrained/full partition-function comparison; a mode count alone supplies none |
 
-All four are independent of $\ell$ and of the lattice spacing, which is
-the scale invariance that makes an induction over scales possible at
-all. The first three are proved or sharp; the fourth needs the standard
-conditional argument comparing the constrained partition function with
-the full one, in which the entropy of the block is exactly the count in
-the second row.
+The count in [the entropy note, §2](large-field-entropy-count.md)
+(passage read) multiplies the densities $b/(2\pi)$ and $b/(4\pi)$
+by the transverse and longitudinal areas. It is a **phase-space model**
+for one charged branch with its stated multiplicity convention.
+Finite-domain boundary conditions, flux compatibility, discrete
+momenta and colour multiplicities matter. The parameter $b\ell^2$
+is not automatically the threshold $\eta$ of our colour and
+ordered-index $L^2$ norm. Thus neither an exact count
+$\eta^2/(8\pi^2)$ nor a general cost/count ratio $2\pi^2/g^2$ is proved
+here. A convergent polymer sum requires additional estimates beyond
+this model.
 
-**What is closed.** The large-field region is no longer an unquantified
-obstacle. Its cost, its entropy and the failure mode of the flow inside
-it are all explicit, scale-invariant, and consistent with each other.
+Likewise $\Gamma$ is an upper bound on a different norm, not the block
+threshold. If separately $\Gamma\le\eta_\infty/\ell^2$, then at
+$t=\ell^2/8$ the corrected kernel growth majorant is
+$e^{2t\Gamma}\le e^{\eta_\infty/4}$. This is conditional on the
+heat-equation hypotheses of the corrected instability note; it is not
+an error lower bound or a Hamiltonian truncation theorem. No such
+upper bound follows from membership in $K_\eta$.
 
-**What is not.** How the effective Hamiltonian is defined inside the
-region. Proposition 1 bounds the weight of the region; it does not say
-what replaces the flow-and-truncate step there, and the constructive
-answer, an expansion around the constrained minimizer with its
-$\eta^2/(8\pi^2)$ soft directions treated separately, is a construction
-rather than an estimate.
+**Missing normalization.** In a finite regulator with reference
+probability measure $\nu$, write $d\mathbb P=Z^{-1}e^{-s}d\nu$.
+If an action bound $s\ge q$ holds on an event $K$, then only
+$$\mathbb P(K)\le Z^{-1}e^{-q}\nu(K)$$
+follows immediately. This elementary inequality does not establish a
+uniform local tail: the partition-function denominator still needs
+control. This is the correction in
+[ground-state measure transfer, §3](ground-state-measure-transfer.md#3-action-cost-at-a-block-scale-not-a-probability-theorem)
+(passage read). The continuum action calculation itself defines no
+quantum probability measure.
+
+The former net exponent
+$$-\frac{\eta^2}{4g^2}\left(1-\frac{Cg^2}{2\pi^2}\right)$$
+is retained only as **heuristic bookkeeping**, obtained by multiplying
+an assumed suppression $e^{-\eta^2/(4g^2)}$ by an assumed entropy factor
+$e^{C\eta^2/(8\pi^2)}$. Neither factor as a normalized interacting
+measure estimate, nor a uniform $C$, is established here. Negativity of
+that expression would not by itself prove summability over blocks or
+polymers. The earlier statement that the first three rows were proved
+or sharp and that the large-field corner was closed is withdrawn.
+
+Finally, a measure estimate, even if subsequently proved, does not
+supply a signed Hamiltonian operator comparison. That distinction is
+explained in [the operator-inequality note, §3](large-field-operator-inequality.md#3-the-sign-of-a-rare-perturbation)
+(passage read); its additional localization estimates are not used
+here. This note proves no spectral or physical mass gap.
 
 ## 5. Consequence for STATE
 
-The lower bound asked for is proved with the optimal constant and
-uniformly in every parameter, by flow monotonicity and positivity, once
-the constraint is written as a block average of the flowed action
-density. The large-field corner is closed at the level of estimates. The
-remaining content of the decimation step is the construction inside the
-region, which is the same constructive problem the programme has
-reached from three directions now: after the small-field truncation is
-controlled, the large-field regions are rare and expensive but must
-still be given an effective description.
+Retain the continuum action floor $\eta^2/(4g^2)$ for the flowed block
+$L^2$ constraint, subject to the stated flow and boundary assumptions.
+Sharpness, constrained minimizers, an exact lattice analogue,
+normalized probability control and large-field polymer convergence
+remain unproved here. The constant-background mode count and the net
+exponent are model/heuristic inputs only; the sharp $e^{2\eta}$ claim
+is withdrawn in line with the later instability correction. The
+large-field corner remains an estimate and construction problem, not
+an estimate closure. No continuum $SU(3)$ construction or mass gap is
+obtained. This correction specifies the scope for the caller's STATE
+and catalog updates; those files are unchanged in this task.
