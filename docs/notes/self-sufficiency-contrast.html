@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The self-sufficiency contrast: where Newton&#x27;s axioms leave motion undefined, the theory with h &gt; 0 defines it</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The self-sufficiency contrast: where Newton’s axioms leave motion
+undefined, the theory with <span class="math inline">\(h&gt;0\)</span>
+defines it</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/self-sufficiency-contrast.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/self-sufficiency-contrast.pdf">PDF</a></p><p>The thesis in STATE says that Newton’s mechanics is the large-action
+regime of a theory with <span class="math inline">\(h&gt;0\)</span>, and
+that it needs <span class="math inline">\(h\)</span> because its own
+axioms do not make a complete theory of motion. This note proves the
+first piece of evidence for that claim as one theorem with four parts,
+for Kepler’s force. The classical flow of <span
+class="math inline">\(V=-k/r\)</span> is incomplete: every
+zero-angular-momentum datum that moves inward, or is bound, reaches the
+centre in finite time, with the explicit collision time <span
+class="math inline">\(t_c=\tfrac\pi2\sqrt{mr_0^3/2k}\)</span> for fall
+from rest, and Newton’s axioms give no continuation there. The quantum
+Hamiltonian <span
+class="math inline">\(-\tfrac{h^2}{2m}\Delta-k/r\)</span> is
+self-adjoint on the domain of the Laplacian and generates a global
+unitary group for every state and every <span
+class="math inline">\(h&gt;0\)</span>, by Kato’s theorem, cited with its
+hypotheses. The same contrast holds for the quartic between the
+fixed-<span class="math inline">\(h\)</span> unitary limit and the
+classical-first construction that needs a branch rule. And the classical
+trajectory is a derived object of the <span
+class="math inline">\(h&gt;0\)</span> theory: for quadratic forces the
+centroid of any state obeys Newton’s equation exactly at every <span
+class="math inline">\(h\)</span>, and for Kepler’s force a coherent
+state follows the orbit in the large-action regime for finite times away
+from the collision set, by Hepp’s theorem, cited with its hypotheses and
+with the one further localization hypothesis the singular potential
+needs. Parts (a), (c) and the quadratic half of (d) are proved here; (b)
+and the Kepler half of (d) rest on the cited theorems. Proposition 2
+then gives the gap the exercise is for: with finite <span
+class="math inline">\(c\)</span>, the theories of Kepler’s force that
+define motion without an added rule are exactly those with <span
+class="math inline">\(h\ge k/(\alpha_cc)\)</span>, by the
+self-adjointness thresholds of the relativistic Coulomb problem, cited;
+Newton’s theory at <span class="math inline">\(h=0\)</span> and every
+theory with <span class="math inline">\(0&lt;h&lt;k/(\alpha_cc)\)</span>
+are not self-sufficient. Written by Claude Fable, 2026-10-01; proof
+status recorded in the final section.</p>
+<p>Notation: <span class="math inline">\(h\)</span> is the reduced phase
+constant, <span class="math inline">\(m&gt;0\)</span> the mass, <span
+class="math inline">\(k&gt;0\)</span> the force constant, <span
+class="math inline">\(r=|x|\)</span> in <span
+class="math inline">\(\mathbb R^3\)</span>; the planar case is a
+remark.</p>
+<h2 id="statement">1. Statement</h2>
+<p><strong>Theorem 1 (self-sufficiency contrast for Kepler’s
+force).</strong></p>
+<ol type="a">
+<li><p><em>Classical incompleteness.</em> Let <span
+class="math inline">\(L=x\times p\)</span> be the angular momentum.
+Every initial datum with <span class="math inline">\(L=0\)</span> whose
+radial velocity is inward or zero, and every datum with <span
+class="math inline">\(L=0\)</span> and negative energy, reaches <span
+class="math inline">\(r=0\)</span> at a finite time. For a body released
+from rest at distance <span class="math inline">\(r_0\)</span> the
+collision time is <span
+class="math display">\[t_c=\frac\pi2\sqrt{\frac{m\,r_0^3}{2k}},\tag{1}\]</span>
+and in general <span class="math inline">\(t_c\le\tfrac\pi2\sqrt{m
+r_{\max}^3/2k}\)</span> with <span
+class="math inline">\(r_{\max}\)</span> the largest distance reached.
+The collision set <span class="math inline">\(\mathcal C=\{L=0,\ \dot
+r\le0\ \text{or}\ E&lt;0\}\)</span> is nonempty, invariant under the
+flow while it exists, and of measure zero in phase space. On <span
+class="math inline">\(\mathcal C\)</span> the vector field is unbounded
+at the endpoint and Newton’s axioms, the Laws together with the force
+law, define no continuation: the flow of Kepler’s force is not
+complete.</p></li>
+<li><p><em>Quantum completeness.</em> For every <span
+class="math inline">\(h&gt;0\)</span>, <span
+class="math inline">\(m&gt;0\)</span> and real <span
+class="math inline">\(k\)</span>, the operator <span
+class="math display">\[H_h=-\frac{h^2}{2m}\Delta-\frac kr\qquad\text{on
+}L^2(\mathbb R^3)\tag{2}\]</span> is self-adjoint on the domain <span
+class="math inline">\(H^2(\mathbb R^3)\)</span> of the Laplacian and
+bounded below, and <span
+class="math inline">\(U_h(t)=e^{-itH_h/h}\)</span> is a strongly
+continuous unitary group defined for every <span
+class="math inline">\(t\in\mathbb R\)</span> and every initial state in
+<span class="math inline">\(L^2(\mathbb R^3)\)</span>. This is Kato’s
+theorem [<span class="citation" data-cites="Kato1951">@Kato1951</span>;
+metadata], whose hypothesis, that the potential is the sum of an <span
+class="math inline">\(L^2(\mathbb R^3)\)</span> and a bounded function,
+is verified in §3.</p></li>
+<li><p><em>The quartic contrast.</em> For <span
+class="math inline">\(V=\lambda q^4\)</span> on the line, Theorem 2(b)
+of the <a
+href="rivero-1998-conjecture-central-forces.html">1998-conjecture
+note</a> gives, for every <span class="math inline">\(h&gt;0\)</span>,
+the strong convergence of the time-sliced operators to the unitary
+evolution <span class="math inline">\(e^{-iTH_h/h}\)</span> along every
+sequence of partitions, with no extra datum; Theorem 1 there shows that
+the halved classical-first construction at zero resolution has no limit
+on a two-cell partition with three stationary paths, and Theorem 2(a)
+there repairs it only by a branch rule chosen by hand. The fixed-<span
+class="math inline">\(h\)</span> construction exists for all data; the
+construction at zero needs a rule the action does not supply.</p></li>
+<li><p><em>The classical trajectory as a derived object.</em> (d1) For
+<span class="math inline">\(H=p^2/2m+V\)</span> with <span
+class="math inline">\(\deg V\le2\)</span>, the expectations <span
+class="math inline">\(\langle q\rangle_t\)</span>, <span
+class="math inline">\(\langle p\rangle_t\)</span> of every state with
+finite second moments obey Newton’s equations exactly for every <span
+class="math inline">\(h&gt;0\)</span>, <span
+class="math display">\[\frac{d}{dt}\langle q\rangle_t=\frac{\langle
+p\rangle_t}m,\qquad
+\frac{d}{dt}\langle p\rangle_t=-V&#39;(\langle
+q\rangle_t),\tag{3}\]</span> and a coherent state stays a Gaussian whose
+centroid is the classical trajectory. (d2) For Kepler’s force, let <span
+class="math inline">\(z_0=(x_0,p_0)\)</span> lie on a classical orbit
+whose distance from the centre stays at least <span
+class="math inline">\(\rho_{\min}&gt;0\)</span> on <span
+class="math inline">\([0,T]\)</span>. Under Hepp’s theorem, stated in §5
+with its hypotheses, applied to a smooth potential <span
+class="math inline">\(V_\delta\)</span> equal to <span
+class="math inline">\(-k/r\)</span> for <span
+class="math inline">\(r\ge\delta\)</span> with <span
+class="math inline">\(0&lt;\delta&lt;\rho_{\min}\)</span>, the coherent
+state <span class="math inline">\(\varphi^h_{z_0}\)</span> with <span
+class="math inline">\(\sigma_h^2\propto h\)</span> evolves under <span
+class="math inline">\(H^{(\delta)}_h\)</span> into a Gaussian centred on
+the Kepler orbit <span class="math inline">\(z_t\)</span> up to an <span
+class="math inline">\(L^2\)</span> error tending to zero as <span
+class="math inline">\(h\to0\)</span>, uniformly on <span
+class="math inline">\([0,T]\)</span>; and under the localization
+hypothesis (L) of §5 the same holds for the Coulomb evolution <span
+class="math inline">\(U_h(t)\)</span> itself.</p></li>
+</ol>
+<p><em>Conclusion.</em> The theory with <span
+class="math inline">\(h&gt;0\)</span> defines motion for all data and
+all times, by (b), and yields Newton’s trajectories where they exist, by
+(d), while Newton’s axioms leave motion undefined on the collision set,
+by (a), and the construction at zero needs a rule the axioms do not
+contain, by (c).</p>
+<h2 id="proof-of-a">2. Proof of (a)</h2>
+<p>Conservation of <span class="math inline">\(L\)</span> under a
+central force is Proposition I of Book I; for <span
+class="math inline">\(L=0\)</span> the motion is on a line through the
+centre and <span class="math inline">\(E=\tfrac m2\dot r^2-k/r\)</span>
+is conserved. Released from rest at <span
+class="math inline">\(r_0\)</span>, <span
+class="math inline">\(E=-k/r_0\)</span> and <span
+class="math display">\[\dot
+r^2=\frac{2k}m\Big(\frac1r-\frac1{r_0}\Big)=\frac{2k}{m}\,\frac{r_0-r}{r\,r_0},\]</span>
+with <span class="math inline">\(\dot r&lt;0\)</span> for <span
+class="math inline">\(t&gt;0\)</span> because the force points inward.
+Hence <span class="math display">\[t_c=\int_0^{r_0}\frac{dr}{|\dot r|}
+=\sqrt{\frac{m r_0}{2k}}\int_0^{r_0}\sqrt{\frac{r}{r_0-r}}\,dr.\]</span>
+With <span class="math inline">\(r=r_0\sin^2\theta\)</span>, <span
+class="math inline">\(dr=2r_0\sin\theta\cos\theta\,d\theta\)</span> and
+<span class="math inline">\(\sqrt{r/(r_0-r)}=\tan\theta\)</span>, the
+integral is <span
+class="math inline">\(2r_0\int_0^{\pi/2}\sin^2\theta\,d\theta=\pi
+r_0/2\)</span>, which gives (1).</p>
+<p>For a general datum with <span class="math inline">\(L=0\)</span> and
+<span class="math inline">\(\dot r\le0\)</span>: if <span
+class="math inline">\(E&lt;0\)</span> then <span
+class="math inline">\(r\le r_{\max}=-k/E\)</span> throughout, <span
+class="math inline">\(|\dot r|^2=\tfrac{2k}m(1/r-1/r_{\max})\)</span>,
+and the time to the centre is at most the fall time from rest at <span
+class="math inline">\(r_{\max}\)</span>, which is (1) with <span
+class="math inline">\(r_{\max}\)</span>; if <span
+class="math inline">\(E\ge0\)</span> then <span
+class="math inline">\(|\dot r|\ge\sqrt{2k/(mr)}\)</span> and the time is
+at most <span
+class="math inline">\(\int_0^{r_0}\sqrt{mr/2k}\,dr=\tfrac23\sqrt{m/2k}\,r_0^{3/2}\)</span>.
+If <span class="math inline">\(L=0\)</span>, <span
+class="math inline">\(E&lt;0\)</span> and <span
+class="math inline">\(\dot r&gt;0\)</span>, the body reaches <span
+class="math inline">\(r_{\max}\)</span> at a finite time and then falls
+as before. Invariance of <span class="math inline">\(\mathcal C\)</span>
+follows from the conservation of <span class="math inline">\(L\)</span>
+and <span class="math inline">\(E\)</span>; <span
+class="math inline">\(L=0\)</span> is the condition that <span
+class="math inline">\(p\)</span> be parallel to <span
+class="math inline">\(x\)</span>, two independent equations on the
+six-dimensional phase space, so <span class="math inline">\(\mathcal
+C\)</span> has measure zero. At <span class="math inline">\(r=0\)</span>
+the force <span class="math inline">\(-kx/r^3\)</span> is unbounded; no
+existence or uniqueness theorem applies there, and the Laws, which
+presuppose a defined force, assign no motion. A continuation through the
+centre (Levi-Civita or Kustaanheimo–Stiefel regularization) is an added
+rule, in the same position as the branch rule of (c). <span
+class="math inline">\(\square\)</span></p>
+<h2 id="proof-of-b-with-katos-hypothesis-verified">3. Proof of (b), with
+Kato’s hypothesis verified</h2>
+<p>Kato’s theorem [<span class="citation"
+data-cites="Kato1951">@Kato1951</span>; metadata; the statement used is
+the one standardly quoted from it, the primary text was not read in this
+session]: let <span class="math inline">\(V=V_1+V_2\)</span> be real
+with <span class="math inline">\(V_1\in L^2(\mathbb R^3)\)</span> and
+<span class="math inline">\(V_2\in L^\infty(\mathbb R^3)\)</span>. Then
+for every <span class="math inline">\(a&gt;0\)</span> the operator <span
+class="math inline">\(-a\Delta+V\)</span> is self-adjoint on <span
+class="math inline">\(H^2(\mathbb R^3)\)</span> and bounded below. The
+mechanism is the Sobolev bound <span
+class="math inline">\(\|u\|_\infty\le\epsilon\|\Delta
+u\|+C_\epsilon\|u\|\)</span> for <span class="math inline">\(u\in
+H^2(\mathbb R^3)\)</span>, which makes <span
+class="math inline">\(V_1\)</span> relatively bounded with respect to
+<span class="math inline">\(\Delta\)</span> with relative bound zero, so
+that the Kato–Rellich theorem applies for every value of <span
+class="math inline">\(a=h^2/2m\)</span>.</p>
+<p>Verification for <span class="math inline">\(V=-k/r\)</span>: put
+<span class="math inline">\(V_1=-\tfrac kr\mathbf 1_{r&lt;1}\)</span>
+and <span class="math inline">\(V_2=-\tfrac kr\mathbf
+1_{r\ge1}\)</span>. Then <span
+class="math inline">\(|V_2|\le|k|\)</span>, and <span
+class="math display">\[\int_{\mathbb
+R^3}|V_1|^2d^3x=k^2\int_0^1\frac{4\pi r^2}{r^2}\,dr=4\pi
+k^2&lt;\infty.\]</span> So the hypothesis holds for every real <span
+class="math inline">\(k\)</span>, and <span
+class="math inline">\(H_h\)</span> in (2) is self-adjoint on <span
+class="math inline">\(H^2(\mathbb R^3)\)</span> for every <span
+class="math inline">\(h&gt;0\)</span>, <span
+class="math inline">\(m&gt;0\)</span>. Stone’s theorem then gives the
+unitary group <span class="math inline">\(U_h(t)\)</span> for all <span
+class="math inline">\(t\in\mathbb R\)</span>, strongly continuous,
+defined on every <span class="math inline">\(\psi\in L^2\)</span>, with
+<span class="math inline">\(U_h(t)\psi\in H^2\)</span> for <span
+class="math inline">\(\psi\in H^2\)</span>. No initial datum and no time
+is excluded; the states supported near <span
+class="math inline">\(r=0\)</span> evolve like all others. <span
+class="math inline">\(\square\)</span></p>
+<p><em>Planar remark.</em> In <span class="math inline">\(\mathbb
+R^2\)</span> the function <span class="math inline">\(1/r\)</span> is
+not square integrable near the origin, and the operator-sense theorem
+does not apply; the planar Coulomb Hamiltonian is defined in the form
+sense by the KLMN theorem, since <span class="math inline">\(1/r\in
+L^p_{\rm loc}(\mathbb R^2)\)</span> for <span
+class="math inline">\(p&lt;2\)</span> is form-bounded relative to <span
+class="math inline">\(-\Delta\)</span> with relative bound zero. The
+planar Kepler problem used elsewhere in this repository therefore also
+has a global unitary dynamics, by that standard route, which is not
+reproved here.</p>
+<h2 id="proof-of-c">4. Proof of (c)</h2>
+<p>The statements are Theorems 1, 2(a) and 2(b) of the <a
+href="rivero-1998-conjecture-central-forces.html">1998-conjecture
+note</a>, accepted on refereeing there (status line of that note).
+Theorem 2(b) proves the product formula for <span
+class="math inline">\(H_h=-\tfrac{h^2}{2m}d^2/dq^2+\lambda q^4\)</span>
+at every <span class="math inline">\(h&gt;0\)</span>: essential
+self-adjointness, the strong limit of the symmetric time slicing along
+any partition sequence, and the composition <span
+class="math inline">\(\|U_h(T)\|=1\)</span>. Theorem 1 proves that the
+halved classical-first functional on the two-cell partition has, as the
+resolution tends to zero, the oscillating value (4) there with no limit,
+because the three stationary paths interfere; Theorem 2(a) restores a
+limit only by restricting to a neighbourhood of one path, a datum the
+action does not contain. Hence for the quartic the <span
+class="math inline">\(h&gt;0\)</span> theory exists for all data without
+extra rules and the construction at zero does not. <span
+class="math inline">\(\square\)</span></p>
+<h2 id="proof-of-d">5. Proof of (d)</h2>
+<p><em>(d1), quadratic forces.</em> By Theorem A(a) of the <a
+href="principia-fifth-postulate.html">fifth-postulate note</a>, the
+Heisenberg equations are Newton’s second law as operator identities for
+every real <span class="math inline">\(h\)</span>: <span
+class="math inline">\(\dot q=p/m\)</span> and <span
+class="math inline">\(\dot p=-V&#39;(q)\)</span>. Taking expectations in
+a state with finite second moments gives <span
+class="math inline">\(\tfrac{d}{dt}\langle q\rangle=\langle
+p\rangle/m\)</span> and <span class="math inline">\(\tfrac{d}{dt}\langle
+p\rangle=-\langle V&#39;(q)\rangle\)</span>; for <span
+class="math inline">\(\deg V\le2\)</span> the function <span
+class="math inline">\(V&#39;\)</span> is affine, so <span
+class="math inline">\(\langle V&#39;(q)\rangle=V&#39;(\langle
+q\rangle)\)</span>, which is (3). The centroid therefore follows the
+classical trajectory through <span class="math inline">\((\langle
+q\rangle_0,
+\langle p\rangle_0)\)</span> for every <span
+class="math inline">\(h&gt;0\)</span> and every such state, with no
+approximation. For a coherent state the Wigner function is the Gaussian
+transported by the affine flow (proof of Theorem 5 of the <a
+href="zero-branch-reachability.html">reachability note</a>), so the
+state stays Gaussian with the classical trajectory as its centroid and
+covariance <span class="math inline">\(M_t\Sigma_hM_t^{\sf T}\)</span>;
+in the large-action regime of §3c there, masses scaled by <span
+class="math inline">\(\lambda\)</span> at fixed <span
+class="math inline">\(h\)</span> and widths, the position width <span
+class="math inline">\(s_t(h)\)</span> tends to the initial <span
+class="math inline">\(\sigma\)</span> and the state is as localized on
+its trajectory as it was prepared. <span
+class="math inline">\(\square\)</span></p>
+<p><em>(d2), Kepler’s force.</em> Hepp’s theorem [<span class="citation"
+data-cites="Hepp1974">@Hepp1974</span>; metadata; the statement used is
+the one standardly quoted from it, the primary text was not read in this
+session], in the form used here: let <span
+class="math inline">\(W\)</span> be a real <span
+class="math inline">\(C^\infty\)</span> potential on <span
+class="math inline">\(\mathbb R^3\)</span> with bounded derivatives of
+every order <span class="math inline">\(\ge2\)</span>, so that <span
+class="math inline">\(-\tfrac{h^2}{2m}\Delta+W\)</span> is self-adjoint
+and the classical flow <span class="math inline">\(\Phi_t\)</span> of
+<span class="math inline">\(p^2/2m+W\)</span> is complete; let <span
+class="math inline">\(\varphi^h_{z}\)</span> be the coherent state at
+<span class="math inline">\(z=(x,p)\)</span> with position width <span
+class="math inline">\(\sigma_h\)</span>, <span
+class="math inline">\(\sigma_h^2=hL_*/P_*\)</span> for fixed <span
+class="math inline">\(L_*,P_*\)</span>; and let <span
+class="math inline">\(\varphi^h_{z_t,M_t}\)</span> be the Gaussian
+centred at <span class="math inline">\(z_t=\Phi_t(z_0)\)</span> with
+covariance transported by the linearized flow <span
+class="math inline">\(M_t=D\Phi_t(z_0)\)</span>. Then for every <span
+class="math inline">\(T&gt;0\)</span>, <span
+class="math display">\[\sup_{|t|\le
+T}\big\|e^{-itH^{W}_h/h}\varphi^h_{z_0}
+-e^{i\theta_t/h}\varphi^h_{z_t,M_t}\big\|_{L^2}\longrightarrow0
+\qquad(h\to0),\tag{4}\]</span> with <span
+class="math inline">\(\theta_t\)</span> the classical action along the
+trajectory. Apply this with <span
+class="math inline">\(W=V_\delta\)</span>, a <span
+class="math inline">\(C^\infty\)</span> function equal to <span
+class="math inline">\(-k/r\)</span> for <span
+class="math inline">\(r\ge\delta\)</span> and bounded with bounded
+derivatives inside the ball: for <span
+class="math inline">\(r\ge\delta\)</span> all derivatives of <span
+class="math inline">\(-k/r\)</span> of order <span
+class="math inline">\(\ge1\)</span> are bounded by constants times <span
+class="math inline">\(\delta^{-2},\delta^{-3},\ldots\)</span>, so <span
+class="math inline">\(V_\delta\)</span> satisfies the hypothesis. Since
+the Kepler orbit through <span class="math inline">\(z_0\)</span> stays
+at distance <span
+class="math inline">\(\ge\rho_{\min}&gt;\delta\)</span> on <span
+class="math inline">\([0,T]\)</span>, it is also the orbit of <span
+class="math inline">\(V_\delta\)</span>, and (4) gives the first claim
+of (d2): under <span class="math inline">\(H^{(\delta)}_h\)</span> the
+coherent state follows the Kepler orbit.</p>
+<p>For the Coulomb evolution itself, Duhamel’s formula on the common
+domain gives <span
+class="math display">\[U_h(t)\varphi-U^{(\delta)}_h(t)\varphi
+=-\frac
+ih\int_0^tU_h(t-s)\,(V-V_\delta)\,U^{(\delta)}_h(s)\varphi\,ds,\]</span>
+so that <span
+class="math inline">\(\|U_h(t)\varphi-U^{(\delta)}_h(t)\varphi\|\le\tfrac
+Th\sup_{s\le T}
+\|(V-V_\delta)U^{(\delta)}_h(s)\varphi\|\)</span>, where <span
+class="math inline">\(V-V_\delta\)</span> is supported in the ball <span
+class="math inline">\(r&lt;\delta\)</span>. <strong>Hypothesis
+(L):</strong> <span class="math inline">\(\sup_{s\le
+T}\|(V-V_\delta)U^{(\delta)}_h(s)\varphi^h_{z_0}\|=o(h)\)</span> as
+<span class="math inline">\(h\to0\)</span>. Under (L) the Coulomb and
+regularized evolutions of the coherent state coincide in the limit and
+(4) transfers to <span class="math inline">\(U_h\)</span>. The
+hypothesis says that the evolved state carries negligible mass and
+energy inside the ball the orbit never visits; for the Gaussian <span
+class="math inline">\(\varphi^h_{z_t,M_t}\)</span> alone it holds with
+an exponentially small bound, by Hardy’s inequality <span
+class="math inline">\(\|f/r\|\le2\|\nabla f\|\)</span> in <span
+class="math inline">\(\mathbb R^3\)</span> and the Gaussian tails, but
+the <span class="math inline">\(o(1)\)</span> remainder in (4) is an
+<span class="math inline">\(L^2\)</span> statement, and (L) requires its
+energy-norm counterpart, which is not proved here. <span
+class="math inline">\(\square\)</span></p>
+<h2
+id="b.-proposition-2-with-finite-c-self-sufficiency-has-a-smallest-h">5b.
+Proposition 2: with finite <span class="math inline">\(c\)</span>,
+self-sufficiency has a smallest <span
+class="math inline">\(h\)</span></h2>
+<p>The point of the exercise is a gap in the admissible values of <span
+class="math inline">\(h\)</span>, the elementary analogue of a spectrum
+<span class="math inline">\(\{0\}\cup[m,\infty)\)</span>. Theorem 1
+alone gives none: by (b) every <span
+class="math inline">\(h&gt;0\)</span> makes the non-relativistic Coulomb
+theory complete, and the ground-state energy <span
+class="math inline">\(-mk^2/2h^2\)</span> tends to <span
+class="math inline">\(-\infty\)</span> as <span
+class="math inline">\(h\to0\)</span> without any threshold. The
+threshold appears when the speed of light is finite, through the known
+self-adjointness limits of the relativistic Coulomb problem.</p>
+<p><strong>Proposition 2 (smallest <span
+class="math inline">\(h\)</span> at finite <span
+class="math inline">\(c\)</span>).</strong> Let <span
+class="math inline">\(c&lt;\infty\)</span> and <span
+class="math inline">\(\nu=k/(hc)\)</span>, the Coulomb coupling in units
+of <span class="math inline">\(hc\)</span>. (i) <em>Spin one half.</em>
+The Dirac–Coulomb operator <span class="math inline">\(c\,\alpha\cdot
+p+\beta mc^2-k/r\)</span> on <span class="math inline">\(L^2(\mathbb
+R^3)^4\)</span> has a distinguished self-adjoint extension, selected by
+finiteness of the potential energy on its domain, for <span
+class="math inline">\(\nu&lt;1\)</span> [<span class="citation"
+data-cites="Schmincke1972">@Schmincke1972</span>; <span class="citation"
+data-cites="Wuest1975">@Wuest1975</span>; <span class="citation"
+data-cites="Nenciu1976">@Nenciu1976</span>; metadata], and is
+essentially self-adjoint on <span
+class="math inline">\(C_c^\infty(\mathbb R^3\setminus\{0\})^4\)</span>
+for <span class="math inline">\(\nu\le\sqrt3/2\)</span>; for <span
+class="math inline">\(\nu&gt;1\)</span> every self-adjoint realization
+requires a boundary condition at the centre, an added rule in the sense
+of Theorem 1(a) and (c). (ii) <em>Spin zero.</em> For the Klein–Gordon
+equation with the Coulomb potential the <span
+class="math inline">\(s\)</span>-wave radial problem is regular at the
+origin iff <span class="math inline">\(\nu\le\tfrac12\)</span> [<span
+class="citation" data-cites="Case1950">@Case1950</span>; metadata];
+beyond it the solutions oscillate without limit at the centre and a
+boundary condition must be imposed. (iii) Hence the theories of Kepler’s
+force at finite <span class="math inline">\(c\)</span> that define the
+motion without an added rule are exactly those with <span
+class="math display">\[h\ \ge\ h_{\min}=\frac{k}{\alpha_c\,c},\qquad
+\alpha_c=1\ (\text{spin }\tfrac12),\quad\alpha_c=\tfrac12\ (\text{spin
+}0),\tag{5}\]</span> with the strict inequality in the spin-one-half
+case. Together with Theorem 1(a), the set of values of <span
+class="math inline">\(h\)</span> at which a theory of Kepler’s force is
+self-sufficient is <span
+class="math inline">\([h_{\min},\infty)\)</span>: Newton’s theory at
+<span class="math inline">\(h=0\)</span> is incomplete, no theory with
+<span class="math inline">\(0&lt;h&lt;h_{\min}\)</span> is
+self-sufficient, and every theory with <span class="math inline">\(h\ge
+h_{\min}\)</span> is. This is the gap. In the non-relativistic limit
+<span class="math inline">\(c\to\infty\)</span>, <span
+class="math inline">\(h_{\min}\to0\)</span> and the gap closes, in
+agreement with Theorem 1(b).</p>
+<p><em>Proof.</em> (i) and (ii) are the cited theorems, read at the
+metadata level and in their standard statements; the thresholds are
+stated as they are standardly quoted, with the essential
+self-adjointness bound <span class="math inline">\(\sqrt3/2\)</span> due
+to Weidmann, not separately cited here. (iii) is the translation <span
+class="math inline">\(\nu&lt;\alpha_c\iff h&gt;k/(\alpha_cc)\)</span>,
+together with Theorem 1(a) at <span class="math inline">\(h=0\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p>The unit <span class="math inline">\(k/c\)</span> is the one the <a
+href="necessity-unit-and-indeterminacy.html">necessity-unit note</a>
+isolated as the unique mass-independent action built from <span
+class="math inline">\(k_e\)</span> and <span
+class="math inline">\(c\)</span>, and the <a
+href="relativistic-kepler-threshold.html">relativistic Kepler note</a>
+found the same threshold classically as <span
+class="math inline">\(\ell&gt;k/c\)</span> for regular bound motion.
+Proposition 2 places it where the thesis needs it: as the lower edge of
+the set of self-sufficient theories. What it does not do is fix <span
+class="math inline">\(h\)</span>: any <span class="math inline">\(h\ge
+h_{\min}\)</span> is admissible, and the physical value exceeds <span
+class="math inline">\(h_{\min}\)</span> by the inverse fine-structure
+ratio, which is the separate calibration obligation.</p>
+<h2 id="what-the-theorem-establishes-and-what-it-does-not">6. What the
+theorem establishes and what it does not</h2>
+<p>The contrast is between two theories of the same force law. Newton’s,
+the Laws with <span class="math inline">\(F=-kx/r^3\)</span>, assigns no
+motion to the collision set and, for the quartic, cannot even be
+constructed at zero resolution without a rule the action does not
+supply. The theory with <span class="math inline">\(h&gt;0\)</span>
+assigns a motion to every state for all time, by self-adjointness, and
+recovers Newton’s trajectories as the centroids of localized states,
+exactly for quadratic forces and, in the large-action regime and away
+from collisions, for Kepler’s force under the cited theorem. The thesis
+in STATE reads this as the sense in which Newton’s mechanics needs <span
+class="math inline">\(h\)</span>: its only completion is the
+large-action regime of a theory that contains <span
+class="math inline">\(h\)</span>.</p>
+<p>Not established here: the energy-norm localization (L) for the
+Coulomb evolution; the planar operator beyond the standard form
+construction; any statement that no completion of Newton’s mechanics
+without <span class="math inline">\(h\)</span> exists, which is the open
+obligation (ii) of STATE; and anything about long times, where the
+Ehrenfest-type breakdown of (4) is a separate matter. The theorem is
+evidence for the thesis, in the form the thesis now has, and no
+more.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Proposition 2 supplies the gap: the self-sufficient theories of
+Kepler’s force at finite <span class="math inline">\(c\)</span> have
+<span class="math inline">\(h\ge k/(\alpha_cc)\)</span>, with Newton at
+<span class="math inline">\(h=0\)</span> outside; it rests on cited
+thresholds and fixes no value of <span class="math inline">\(h\)</span>.
+Theorem 1 supplies the self-sufficiency contrast required by STATE’s
+obligation (iii): classical incompleteness with the explicit collision
+time and collision set (proved), quantum completeness by Kato’s theorem
+(cited, hypothesis verified), the quartic contrast (proved in the
+1998-conjecture note), and the classical trajectory as the derived
+centroid, exact for quadratic forces (proved) and for Kepler’s force
+under Hepp’s theorem and hypothesis (L) (cited). Next: prove (L) for the
+Coulomb evolution of a coherent state, or replace Hepp’s <span
+class="math inline">\(L^2\)</span> statement by an energy-norm one; then
+the open obligation (ii), that no completion without <span
+class="math inline">\(h\)</span> exists. Proof status: written by Claude
+Fable, 2026-10-01; parts (a), (c), (d1) proved, (b) and (d2) cited with
+hypotheses; refereeing recorded in the status line when done.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
