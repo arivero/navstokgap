@@ -6,109 +6,375 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={The target box: the strong-coupling gap survives local perturbations, so the renormalizati},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={The target box: the strong-coupling gap survives local perturbations with an existential t},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{the-target-box-the-strong-coupling-gap-survives-local-perturbations-so-the-renormalization-group-has-an-explicit-finish-line}{%
 \section{The target box: the strong-coupling gap survives local
-perturbations, so the renormalization group has an explicit finish
-line}\label{the-target-box-the-strong-coupling-gap-survives-local-perturbations-so-the-renormalization-group-has-an-explicit-finish-line}}
+perturbations with an existential tolerance; its explicit location is
+open}\label{the-target-box-the-strong-coupling-gap-survives-local-perturbations-with-an-existential-tolerance-its-explicit-location-is-open}
 
-The continuous-time expansion of
-\href{kogut-susskind-strong-coupling-explicit.md}{the Kogut--Susskind
-note} tolerates a bounded, gauge-invariant, few-link perturbation of the
-Hamiltonian and a mild deformation of the electric term. That turns the
-strong-coupling result into a \textbf{target}: any renormalization
-scheme that steers the effective Hamiltonian into the class
-\[\mathcal C(g,\eta,\eta_E,q)=\Big\{H_E'-\tfrac1{g^2}\textstyle\sum_pw_p-\sum_jd_j\Big\},\]
-where \(E'(\sigma)\ge(1-\eta_E)\,\varepsilon|S(\sigma)|\), each \(d_j\)
-is gauge invariant and acts on at most \(q\) links, and
-\(\sum_{j\ni\ell}\|d_j\|\le\eta\,\hbar c/a\) for every link \(\ell\), at
-some scale \(a\) with \(g^2\) and \(\eta\) in the region below has a gap
-of at least \(4\lambda=\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a\)
-there, and the gap of the original Hamiltonian follows if the scheme is
-an exact low-energy reduction. The tolerance for \(SU(3)\), at
-\(\theta=1/2\), \(\eta_E=0.1\):
+\textbf{Correction (2026-10-02).} This note inherits the 2026-10-02
+correction of \href{kogut-susskind-strong-coupling-explicit.md}{the
+Kogut--Susskind note}, which withdrew that note's volume-uniform
+thresholds. The changes here:
 
-\begin{longtable}[]{@{}lll@{}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The former Proposition, ``for \(\lambda=(1-\theta)\varepsilon'\),
+  \(u'\le\frac12\) and \(4Fu'\le\lambda\), every
+  \(H\in\mathcal C(g,\eta,\eta_E,q)\) has a unique ground state and a
+  gap of at least \(\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a\),
+  uniformly in the volume'', is \textbf{withdrawn}. Its criterion was
+  the Kogut--Susskind one, whose adjacent count misses histories that
+  reach the test link after their first insertion and whose general
+  count is withdrawn. That criterion addressed decay on a cyclic
+  subspace of local observables at best, and no true-vacuum correlation
+  bound was supplied. §1 replaces the Proposition by an existential one,
+  proved by a hypothesis check of Yarotsky's theorem for
+  translation-invariant perturbations; §§2--3 keep the explicit count as
+  a formal estimate.
+\item
+  The former lead table was offered as a tolerance table. Its \(q=4\)
+  column contradicted the note's own criterion
+  \(e\,\eta\,2^q\le0.15g^2-384e/g^2\): the printed \(0.29\) and \(0.62\)
+  at \(g^2=100,200\) should read \(0.104\) and \(0.569\) (the printed
+  \(1.3\) at \(400\) agrees). The \(q=8\) entries \(0.0066\) and
+  \(0.036\) were rounded up from \(0.00655\) and \(0.0356\). For \(q>4\)
+  the corrected overlap multiplicity adds a condition that binds for
+  \(q=8\) at \(g^2\ge200\) (§3). The first-step factor
+  \(F=8Ne/g^2+e\eta\) omitted the \(2^q\) support outcomes of a first
+  \(d\)-insertion. §3 gives the corrected values, as formal estimates.
+\item
+  The remark ``the rigorous general count multiplies the per-step factor
+  by \(24\), so the same table holds at \(24\) times the coupling,
+  \(g^2=2400,4800,9600\), or at the listed couplings with tolerances
+  divided by \(24\)'' is withdrawn with that count. Its second reading
+  was also false as algebra (§3).
+\item
+  The finish line ``\(g^2\) of order \(10^2\) with few-link corrections
+  of local norm below a few per cent of \(\hbar c/a\)'' is a formal
+  estimate. The proved box of §1 has an existential location.
+\end{enumerate}
+
+The strong-coupling gap of the \(SU(3)\) Kogut--Susskind Hamiltonian
+survives bounded, gauge-invariant, translation-invariant few-link
+perturbations and a link-local deformation of the electric term,
+uniformly in the volume. Precisely (§1), let
+\(\mathcal C_{\rm TI}(g,\eta,\eta_E,q)\) be the class of Hamiltonians
+\[H=H_E'-\frac1{g^2}\sum_pw_p-\sum_jd_j\] on a periodic cubic lattice of
+side \(N_s\ge2q+1\), in units \(\hbar c/a\). Here \(H_E'\) is link-local
+and diagonal in the Peter--Weyl basis, and every nontrivial link
+representation costs at least \((1-\eta_E)\varepsilon\) with
+\(\varepsilon=2g^2/3\) and \(0\le\eta_E<1\). Each \(d_j\) is bounded,
+self-adjoint, gauge invariant and supported on a connected set of at
+most \(q\) links, the family \(\{d_j\}\) is translation covariant, and
+\(\sum_{j\ni\ell}\|d_j\|\le\eta\) for every link \(\ell\). If
+\[\eta\ \le\ \frac{2(1-\eta_E)\beta^*_q}{9}\,g^2-\frac6{g^2},\] then
+\(H\) has a non-degenerate, gauge-invariant ground state, and its full
+and physical gaps are at least
+\[\gamma_q\,(1-\eta_E)\,\frac{2g^2}3\,\frac{\hbar c}a\] for every such
+\(N_s\). The constants \(\beta^*_q,\gamma_q>0\) are those of Yarotsky's
+Theorem 1 for the range \(\{-q,\dots,q\}^3\); they exist and are not
+known as numbers. The tolerance grows linearly in \(g^2\) with an
+existential slope, and the box opens at
+\(g^4\ge27/[(1-\eta_E)\beta^*_q]\).
+
+That turns the strong-coupling result into a \textbf{target}: a
+renormalization scheme that is an exact low-energy reduction and steers
+the effective Hamiltonian into \(\mathcal C_{\rm TI}\) inside this
+region gives a volume-uniform lattice gap of the original Hamiltonian,
+with the bound of §4. On the lattice, a volume-uniform gap along a
+weak-coupling trajectory therefore follows once a scheme carries the
+flow into the box; the continuum statements T3 and T4 of
+\href{mass-gap-obligations-lattice.md}{the obligations map} are
+separate.
+
+Explicit numbers come only from the continuous-time count of the
+Kogut--Susskind note restricted to adjacent growth (§§2--3). Corrected,
+that count gives formal values such as \(\eta\le0.104\) for
+plaquette-like terms (\(q=4\)) and \(\eta\le0.00655\) for two-plaquette
+terms (\(q=8\)) at \(g^2=100\), linear in \(g^2\) and decreasing in
+\(q\) like \(2^{-q}/\max(4,q)\). They inherit the missing root estimate,
+the missing general count and the missing true-vacuum correlation bound
+of that note's correction, so \textbf{no gap follows from them}.
+Constants explicit; reading labels at each use.
+
+\subsection{1. The existential box: a hypothesis check of Yarotsky's
+theorem}\label{the-existential-box-a-hypothesis-check-of-yarotskys-theorem}
+
+Notation as in \href{strong-coupling-uniform-gap.md}{the T2 note} §1:
+the periodic lattice \(\Lambda=(\mathbb Z/N_s\mathbb Z)^3\), each link
+based at its lower endpoint, \(\mathcal H_x=L^2(SU(3))^{\otimes3}\) for
+the three links based at \(x\), \(\Omega_x\) the constant function, and
+units \(\hbar c/a=1\) until restored. Set
+\(\varepsilon=\frac{g^2}2\cdot\frac43=\frac{2g^2}3\),
+\(\varepsilon'=(1-\eta_E)\varepsilon\),
+\(w_p=\operatorname{tr}U_p+\operatorname{tr}U_p^\dagger\), so
+\(\|w_p\|\le6\). Write \(\Lambda_q=\{-q,\dots,q\}^3\).
+
+Hypotheses of the class \(\mathcal C_{\rm TI}(g,\eta,\eta_E,q)\),
+\(q\ge1\):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{(E)} \(H_E'=\sum_\ell\sum_Re'(R)P^\ell_R\), where \(P^\ell_R\)
+  is the Peter--Weyl isotypic projection of link \(\ell\),
+  \(e'({\rm triv})=0\) and \(e'(R)\ge\varepsilon'\) for every nontrivial
+  \(R\). The choice \(e'(R)=(1-\eta_E)\frac{g^2}2C_2(R)\) is an example.
+\item
+  \textbf{(D)} \(D=\sum_jd_j\) with each \(d_j\) bounded, self-adjoint,
+  gauge invariant, and acting on a connected set \({\rm supp}\,d_j\) of
+  at most \(q\) links; the family is invariant under lattice
+  translations; and \(\sum_{j\ni\ell}\|d_j\|\le\eta\) for every link
+  \(\ell\). The family may depend on \(N_s\).
+\item
+  \textbf{(V)} \(N_s\ge2q+1\), so every translate \(x+\Lambda_q\) embeds
+  in the torus.
+\end{itemize}
+
+\emph{Grouping into site terms.} Let \(n_x(j)\) be the number of links
+of \({\rm supp}\,d_j\) based at \(x\), and put
+\[\delta_x=\sum_j\frac{n_x(j)}{|{\rm supp}\,d_j|}\,d_j.\] Then
+\(\sum_x\delta_x=D\), because \(\sum_xn_x(j)=|{\rm supp}\,d_j|\). The
+\(\delta_x\) are translates of \(\delta_0\), because the family and the
+weights are translation covariant. Each \(j\) with \(n_x(j)>0\) contains
+a link based at \(x\), so
+\[\|\delta_x\|\le\sum_{i=1}^3\ \sum_{j\ni(x,x+e_i)}\|d_j\|\le3\eta .\] A
+connected set of at most \(q\) links containing a link based at \(x\)
+has all its vertices within graph distance \(q\) of \(x\), hence in
+\(x+\Lambda_q\); so \(\delta_x\) acts on \(\mathcal H_{x+\Lambda_q}\).
+Under (V), \(\delta_0\) lifts to a local term on \(\mathbb Z^3\) and the
+interaction is the periodic restriction of a translation-invariant
+interaction of range \(\Lambda_q\). Assign each plaquette \(p(x,i,j)\),
+\(i<j\), to its corner \(x\), as in the T2 note; its links are based in
+\(x+\{0,1\}^3\subseteq x+\Lambda_q\).
+
+\emph{Normalized form.} Dividing by \(\varepsilon'\),
+\[\frac H{\varepsilon'}=\sum_xh'_x+\sum_x\phi_x,\qquad
+h'_x=\frac1{\varepsilon'}\sum_{i=1}^3\sum_Re'(R)P_R^{(x,x+e_i)},\qquad
+\phi_x=-\frac1{\varepsilon'g^2}\sum_{i<j}w_{p(x,i,j)}-\frac{\delta_x}{\varepsilon'} .\]
+Every link is based at exactly one site, every plaquette has one
+assigned corner, and every \(d_j\) is shared out with total weight one,
+so the sums reproduce \(H/\varepsilon'\). The hypotheses of Yarotsky's
+Theorem 1, as recorded in the T2 note §2 (repository hypothesis check
+read; Yarotsky, Commun. Math. Phys. 261, 799, Section 1 and Theorem 1 at
+passage level recorded there), are met:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(h'_x\) is a function of the product Peter--Weyl partition of unity
+  on \(\mathcal H_x\), which contains the projection onto \(\Omega_x\);
+  \(h'_x\Omega_x=0\) since \(e'({\rm triv})=0\); on the orthogonal
+  complement of \(\Omega_x\) some link carries a nontrivial
+  representation, and all terms are nonnegative, so
+  \(h'_x\ge\varepsilon'/\varepsilon'=1\).
+\item
+  \(\phi_x\) is a bounded symmetric form on \(\mathcal H_{x+\Lambda_q}\)
+  with \(|\phi_x(v,v)|\le\beta\|v\|^2\) and \(\alpha=0\), where
+  \[\beta=\frac{3\cdot6/g^2+3\eta}{\varepsilon'}
+  =\frac1{1-\eta_E}\left(\frac{27}{g^4}+\frac{9\eta}{2g^2}\right).\]
+\item
+  Translation invariance, finite range \(\Lambda_q\) and the periodic
+  cubic volume are as in item 5 of the T2 note.
+\end{enumerate}
+
+\textbf{Proposition (existential target box).} Let
+\(\beta^*_q=\beta_*(3,\Lambda_q)\) and \(\gamma_q=\gamma(3,\Lambda_q)\)
+be the constants of Yarotsky's Theorem 1 for \(\nu=3\) and range
+\(\Lambda_q\). If \(H\in\mathcal C_{\rm TI}(g,\eta,\eta_E,q)\) and
+\[\frac{27}{g^4}+\frac{9\eta}{2g^2}\ \le\ (1-\eta_E)\,\beta^*_q,
+\qquad\text{equivalently}\qquad
+\eta\ \le\ \frac{2(1-\eta_E)\beta^*_q}9\,g^2-\frac6{g^2},\] then for
+every \(N_s\ge2q+1\) the operator \(H\) on \(L^2(SU(3)^{\mathcal E})\)
+has a non-degenerate ground state \(\psi_0\), \(\psi_0\) is gauge
+invariant, and
+\[\Delta^{\rm phys}_{a,L}\ \ge\ \Delta_{a,L}\ \ge\ \gamma_q\,(1-\eta_E)\,\frac{2g^2}3\,\frac{\hbar c}a,\]
+with \(\eta\) in units \(\hbar c/a\). The bound is uniform in \(N_s\).
+
+\emph{Proof.} By items 1--3, Theorem 1 applies to \(H/\varepsilon'\)
+with \(\alpha=0\) and \(\beta\le\beta^*_q\), volume by volume with the
+same constants: it gives a non-degenerate ground state and a gap at
+least \(\gamma_q\) for \(H/\varepsilon'\), hence at least
+\(\gamma_q\varepsilon'\) for \(H\). Gauge transformations
+\(\mathcal V_\gamma\), \(\gamma\in SU(3)^\Lambda\), commute with \(H\):
+\(P_R^\ell\) commutes with left and right translations of \(U_\ell\),
+\(w_p\) is the trace of a closed holonomy, and each \(d_j\) is gauge
+invariant by (D). Thus \(\mathcal V_\gamma\psi_0=c(\gamma)\psi_0\) with
+\(c\) a continuous homomorphism \(SU(3)^\Lambda\to U(1)\). Its
+differential is a Lie-algebra homomorphism into the abelian
+\(i\mathbb R\), so it vanishes on commutators; \(\mathfrak{su}(3)\) is
+semisimple and equals its commutator algebra, so the differential is
+zero, and \(c\equiv1\) on the connected group. The Haar average
+\(P=\int\mathcal V_\gamma\,d\gamma\) projects onto the physical subspace
+and commutes with the resolvent of \(H\), so that subspace reduces
+\(H\), contains \(\psi_0\), and carries a spectrum contained in that of
+\(H\). Hence \(\Delta^{\rm phys}_{a,L}\ge\Delta_{a,L}\). Restoring units
+gives the display. \(\square\)
+
+The same theorem gives a thermodynamic limit of the ground states with
+exponentially decaying correlations of local observables (T2 note §2,
+passage level). The positivity argument of T1 is not used, since a
+general \(d_j\) need not preserve positivity.
+
+\emph{Scope.} The Proposition covers the qualitative content of the
+original class \(\mathcal C(g,\eta,\eta_E,q)\) under three added
+hypotheses: translation covariance, connected supports (or any support
+in a fixed translate of a finite set), and a link-local electric term. A
+general diagonal \(E'(\sigma)\ge\varepsilon'|S(\sigma)|\), or
+perturbations without translation invariance, would need either a
+version of Yarotsky's theorem for such interactions or the explicit
+expansion of §2. The dependence of \(\beta^*_q\) and \(\gamma_q\) on
+\(q\) is not recorded in the statement; a decrease with the range is a
+heuristic expectation, and the \(2^{-q}\) law of §3 is a property of the
+formal count only.
+
+\subsection{2. The perturbed continuous-time expansion
+(formal)}\label{the-perturbed-continuous-time-expansion-formal}
+
+This section keeps the original class \(\mathcal C(g,\eta,\eta_E,q)\):
+units \(\hbar c/a=1\), physical sector, \(N_s\ge4\); \(H_E'\) gauge
+invariant, diagonal in a Peter--Weyl basis of the physical subspace,
+commuting with every support projection \(P_S\), with
+\(E'(\emptyset)=0\) and \(E'(\sigma)\ge\varepsilon'|S(\sigma)|\); each
+\(d_j\) bounded, self-adjoint, gauge invariant, on at most \(q\) links,
+with local norm \(\sum_{j\ni\ell}\|d_j\|\le\eta\). Assume each \(d_j\)
+centered, \(\langle\Omega_0,d_j\Omega_0\rangle=0\). Subtracting these
+constants shifts \(H\) by a scalar and at most doubles \(\eta\). Without
+it, a term acting away from the excited set contributes an insertion
+with no energy damping.
+
+Insert the projections \(P_S\) of the Kogut--Susskind note §1 between
+the factors of the Duhamel series for \(e^{-t(H_E'-W-D)}\). A history is
+a sequence of supports \(S_0=\emptyset,S_1,\dots,S_n=\emptyset\) with
+insertions \(X_k\), each a plaquette term \(w_p/g^2\) or a term \(d_j\).
+Since \(H_E'\ge\varepsilon'|S|\) on the range of \(P_S\) and
+\(\|P_{S'}XP_S\|\le\|X\|\),
+\[|w(\gamma)|\le\prod_{k=1}^n\|X_k\|\;e^{-\varepsilon'A(\gamma)},\qquad
+A(\gamma)=\sum_{k=1}^{n-1}|S_k|x_k .\] Each \(P_S\) contains every
+representation label with support \(S\), so the labels are summed inside
+the operator norm and need no separate count. Gauge invariance of every
+insertion keeps the history in the physical sector, so \(|S_k|\ge4\) for
+\(0<k<n\) (Kogut--Susskind note, §1 correction, \(N_s\ge4\)). A
+\(d\)-insertion changes the support only on its own links, so given
+\(S_{k-1}\) there are at most \(2^q\) outcomes \(S_k\). By centering, a
+\(d\)-insertion either touches \(S_{k-1}\) or excites a link of its
+support. The hard-core polymer organization of these histories is
+assumed as in that note §1; it is proposed there and not established.
+
+\emph{Restricted count.} Root at a link \(\ell_0\), and keep the
+histories whose first insertion contains \(\ell_0\) and whose later
+insertions touch the current excited set. Write \(h=6e/g^2\), where the
+factor \(e\) per insertion comes from the term \(e^{n}\) in the
+Kotecký--Preiss weight \(e^{a(\gamma)}\), and
+\(\delta'=\varepsilon'-\lambda=\theta\varepsilon'\) with
+\(\lambda=(1-\theta)\varepsilon'\). A later step has at most
+\(4|S_{k-1}|\) plaquettes touching \(S_{k-1}\), each with \(16\)
+outcomes, and the \(d\)-terms containing a link of \(S_{k-1}\), with
+weighted sum at most \(|S_{k-1}|\eta\) and \(2^q\) outcomes each.
+Repeated use of the same plaquette or term is included in these sums.
+The preceding interval integral is \(1/(\delta'|S_{k-1}|)\), so the
+per-step factor is
+\[u'=\frac{64h+e\,\eta\,2^q}{\delta'}=\frac{384e/g^2+e\,\eta\,2^q}{\delta'} .\]
+The first step has the four plaquettes containing \(\ell_0\), for which
+\(S_1\) is forced, and the \(d\)-terms containing \(\ell_0\), each with
+up to \(2^q\) outcomes:
+\[F'=4h+e\,\eta\,2^q=\frac{24e}{g^2}+e\,\eta\,2^q .\] With \(n\)
+insertions the restricted sum is at most \(F'u'^{\,n-1}\), so the
+majorant with marked-interval multiplier \(n-1\) obeys
+\[B'_\lambda\ \le\ F'\sum_{m\ge1}m\,u'^{\,m}=\frac{F'u'}{(1-u')^2}\ \le\ 4F'u'
+\qquad(u'\le\tfrac12).\]
+
+\emph{Overlap conditions.} In the Kogut--Susskind note §2, each maximal
+excitation interval begins at an insertion. A \(d\)-insertion touches up
+to \(q\) links, so \(\sum_\ell r_\ell\le\max(4,q)\,n\), and the overlap
+bound becomes \(Q'A(\gamma)+\frac{Q'}{4\delta'}\max(4,q)\,n(\gamma)\).
+Comparing with \(a(\gamma)=n+\lambda A\), the sufficient conditions read
+\[Q'\le\lambda,\qquad Q'\le\frac{4\delta'}{\max(4,q)},\] where \(Q'\) is
+the all-roots majorant of that section with \(d\)-insertions included.
+
+\textbf{Correction (2026-10-02), status of this section.} \(B'_\lambda\)
+bounds only the restricted class. \(Q'\) also contains histories that
+reach \(\ell_0\) after their first insertion (the missing roots of the
+Kogut--Susskind note §3), and histories in which a plaquette or a
+\(d\)-term starts a disjoint piece that is later bridged; the marked
+general count for these is withdrawn there. Even with \(Q'\) controlled,
+the spectral lemma of that note §4 needs a normalized true-vacuum
+correlation bound for every bounded gauge-invariant observable, and none
+is supplied. The former sentence ``then the gap is at least \(4\lambda\)
+on the cyclic subspace of local observables'' is withdrawn: the
+restricted count proves neither decay on that subspace nor a spectral
+gap. The rate \(4\lambda=\frac83g^2(1-\eta_E)(1-\theta)\) is a candidate
+rate.
+
+\subsection{3. The formal numbers}\label{the-formal-numbers}
+
+For \(SU(3)\) take \(\theta=\frac12\) and \(\eta_E=0.1\): then
+\(\varepsilon'=0.6g^2\) and \(\lambda=\delta'=0.3g^2\). Under
+\(u'\le\frac12\), \(B'_\lambda\le4F'u'\le2F'\), and since
+\(\max(4,q)\ge4\) the binding requirement is
+\(2F'\le4\delta'/\max(4,q)\). The formal restricted conditions are
+therefore
+\[\text{(R1)}\quad e\,\eta\,2^q\ \le\ 0.15\,g^2-\frac{384e}{g^2},\qquad
+\text{(R2)}\quad e\,\eta\,2^q\ \le\ \frac{0.6\,g^2}{\max(4,q)}-\frac{24e}{g^2}.\]
+(R1) is \(u'\le\frac12\). For \(q\le4\), (R2) reads
+\(e\eta2^q\le0.15g^2-24e/g^2\) and follows from (R1). For \(q=8\) it
+reads \(e\eta2^q\le0.075g^2-24e/g^2\). With \(384e=1043.82\),
+\(24e=65.239\), \(16e=43.4925\) and \(256e=695.880\), the largest
+\(\eta\) satisfying both, rounded down, in units \(\hbar c/a\):
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
-\(g^2\) & \(q=4\) (plaquette-like terms) & \(q=8\) (two-plaquette
-terms) \\
+\begin{minipage}[b]{\linewidth}\raggedright
+\(g^2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(q=4\) (plaquette-like terms)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(q=8\) (two-plaquette terms)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+binding for \(q=8\)
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(100\) & \(\eta\le0.29\) & \(\eta\le0.0066\) \\
-\(200\) & \(\eta\le0.62\) & \(\eta\le0.036\) \\
-\(400\) & \(\eta\le1.3\) & \(\eta\le0.082\) \\
+\(100\) & \(0.104\) & \(0.00655\) & (R1) \\
+\(200\) & \(0.569\) & \(0.0210\) & (R2) \\
+\(400\) & \(1.31\) & \(0.0428\) & (R2) \\
 \end{longtable}
 
-in units \(\hbar c/a\) for the adjacent-growth count; the rigorous
-general count multiplies the per-step factor by \(24\), so the same
-table holds at \(24\) times the coupling, \(g^2=2400,4800,9600\), or at
-the listed couplings with tolerances divided by \(24\). The tolerance
-grows linearly in \(g^2\) as
-\(\eta_*\simeq g^2/(2e\,2^q)\cdot\frac{1-\eta_E}{3}\). The mass-gap
-problem for \(SU(3)\) is therefore the statement that the flow from a
-weak bare coupling enters this box. The intermediate region is where
-that has to be shown, and the box says exactly what ``enters'' means:
-\(g^2\) of order \(10^2\) with few-link corrections of local norm below
-a few per cent of \(\hbar c/a\). Constants explicit; the adjacent-growth
-count and the quoted tree-graph step are as in the Kogut--Susskind note;
-nothing promoted.
+For example, at \(g^2=100\) (R1) gives \((15-10.438)/43.4925=0.1049\)
+for \(q=4\) and \(4.562/695.880=0.006555\) for \(q=8\); at \(g^2=200\),
+(R2) for \(q=8\) gives \((15-0.326)/695.880=0.02109\), below the (R1)
+value \(0.03561\). For \(\theta\le\frac12\) and large \(g^2\) the two
+conditions together give
+\[\eta\ \simeq\ \frac{4\theta(1-\eta_E)\,g^2}{3\max(4,q)\,e\,2^q},\]
+which at \(\theta=\frac12\), \(q\le4\) is the former
+\(g^2(1-\eta_E)/(6e\,2^q)\). \textbf{These numbers are formal}: they
+solve sufficient inequalities for the restricted majorant
+\(B'_\lambda\), which does not bound \(Q'\), and no gap follows from
+them (§2).
 
-\hypertarget{the-perturbed-expansion}{%
-\subsection{1. The perturbed expansion}\label{the-perturbed-expansion}}
+The general factor \(24u\) of the former Kogut--Susskind count is
+withdrawn in that note §3, and with it the remark that the table holds
+at \(24\) times the coupling. As algebra, \(24u'\le\frac12\) reads
+\(e\eta2^q\le0.00625g^2-384e/g^2\), which has no solution \(\eta\ge0\)
+unless \(g^4\ge61440e\simeq1.670\times10^5\), that is \(g^2\ge408.7\).
+Tolerances ``divided by \(24\) at the listed couplings'' therefore never
+existed.
 
-Take \(H=H_E'-W-D\) with \(W=\frac1{g^2}\sum_pw_p\) as before and
-\(D=\sum_jd_j\), each \(d_j\) bounded, gauge invariant, acting on at
-most \(q\) links, with the local norm \(\sum_{j\ni\ell}\|d_j\|\le\eta\)
-for every link \(\ell\); units \(\hbar c/a=1\). Suppose \(H_E'\) is
-diagonal in the character basis with
-\(E'(\sigma)\ge\varepsilon'|S(\sigma)|\),
-\(\varepsilon'=(1-\eta_E)\varepsilon\).
-
-The Duhamel expansion now has insertions of two kinds. Gauge invariance
-of every \(d_j\) keeps all intermediate configurations gauge invariant,
-so Gauss's law still forces \(|S_k|\ge4\). The factorization over
-disjoint supports holds because each \(d_j\) acts on finitely many
-links. A \(d\)-insertion at step \(k\) that touches the current excited
-set \(S_{k-1}\) contributes, summed with weights over the terms touching
-a given link and over the at most \(2^q\) choices of \(S_k\), at most
-\(|S_{k-1}|\,\eta\,2^q\); the energy denominator
-\(1/((\varepsilon'-\lambda)|S_{k-1}|)\) cancels the \(|S_{k-1}|\) as
-before. The per-step factor of the adjacent-growth count becomes
-\[u'=\frac{128Ne/g^2+e\,\eta\,2^q}{\varepsilon'-\lambda},\] and the
-first-step factor \(F=8Ne/g^2+e\eta\). The criterion of the
-Kogut--Susskind note, Section 2, holds when
-\[u'\le\tfrac12\qquad\text{and}\qquad4F\,u'\le\lambda ,\] and then the
-gap is at least \(4\lambda\) on the cyclic subspace of local
-observables.
-
-\textbf{Proposition.} For \(\lambda=(1-\theta)\varepsilon'\) and
-\(u'\le\frac12\), \(4Fu'\le\lambda\), every
-\(H\in\mathcal C(g,\eta,\eta_E,q)\) has a unique ground state and a gap
-of at least \(\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a\), uniformly in
-the volume.
-
-\hypertarget{the-numbers}{%
-\subsection{2. The numbers}\label{the-numbers}}
-
-For \(SU(3)\), \(\varepsilon=2g^2/3\). With \(\theta=\frac12\) and
-\(\eta_E=0.1\), \(\varepsilon'-\lambda=0.3g^2\), so \(u'\le\frac12\)
-reads \[e\,\eta\,2^q\ \le\ 0.15\,g^2-\frac{384e}{g^2},\] which is the
-table above, and \(4Fu'\le\lambda=0.3g^2\) is far from binding at these
-values (\(4Fu'\le2(0.65+2.7\eta)\) at \(g^2=100\)). The tolerance is
-linear in \(g^2\) and exponentially small in the locality \(q\) of the
-corrections: \textbf{the box is wide for plaquette-like corrections and
-narrow for longer-range ones}, which is the quantitative form of
-``irrelevant operators must stay small''.
-
-\hypertarget{what-the-box-asks-of-the-intermediate-region}{%
-\subsection{3. What the box asks of the intermediate
-region}\label{what-the-box-asks-of-the-intermediate-region}}
+\subsection{4. What the box asks of the intermediate
+region}\label{what-the-box-asks-of-the-intermediate-region}
 
 A renormalization step at scale \(a\) produces an effective Hamiltonian
 at \(2a\). Suppose a scheme exists such that
@@ -117,41 +383,72 @@ at \(2a\). Suppose a scheme exists such that
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  each step is an exact low-energy reduction: the spectrum of \(H(a)\)
-  below some \(E_c(a)\) coincides with that of \(H_{\rm eff}(2a)\);
+  each step is an exact low-energy reduction: \(E_0(a)<E_c(a)\), and
+  below \(E_c(a)\) the spectrum of \(H(a)\), with multiplicities and
+  after a common constant shift, coincides with that of
+  \(H_{\rm eff}(2a)\);
 \item
   the effective Hamiltonian stays in the class
-  \(\mathcal C(g(a),\eta(a),\eta_E(a),q)\) with \(q\) fixed;
+  \(\mathcal C_{\rm TI}(g(a),\eta(a),\eta_E(a),q)\) with \(q\) fixed;
 \item
-  the coupling runs, \(g(2a)>g(a)\), and reaches \(g^2\ge10^2\) after
-  finitely many steps with \(\eta,\eta_E\) inside the table.
+  the coupling runs, \(g(2a)>g(a)\), and after finitely many steps, at a
+  scale \(a_s\), reaches the region of the Proposition:
+  \(27/g_s^4+9\eta_s/(2g_s^2)\le(1-\eta_{E,s})\beta^*_q\).
 \end{enumerate}
 
-Then the gap of \(H(a_{\rm UV})\) equals the gap of the effective
-Hamiltonian at the final scale, which the Proposition bounds below by
-\(\frac83g_s^2(1-\eta_E)(1-\theta)\,\hbar c/a_s\), a positive number in
-physical units, uniformly in the volume, and T2\('\) holds along the
-trajectory. Items 1--3 in the weak region are the content of the
-constructive programme (the Euclidean form of item 2 is Balaban's
-small-field effective action); in the intermediate region they are the
-open problem. The box makes the finish line explicit: the flow has to
-arrive at \(g^2\sim10^2\) with corrections of local norm a few per cent
-of \(\hbar c/a\) if they extend over two plaquettes, or of order one if
-they are single-plaquette terms.
+Here \(\Delta\) is the gap in the sector on which the reduction acts
+(full or physical; the Proposition bounds both). Item 1 gives
+\(\Delta(H(a))\ge\min\{\Delta(H_{\rm eff}(2a)),\,E_c(a)-E_0(a)\}\): if
+\(E_1(a)<E_c(a)\) the two lowest levels are shared and the gaps agree;
+otherwise the gap is at least \(E_c(a)-E_0(a)\). Iterating from
+\(a_0=a_{\rm UV}\) through \(a_k=2^ka_0\),
+\[\Delta(H(a_{\rm UV}))\ \ge\ \min\Big\{\gamma_q(1-\eta_{E,s})\frac{2g_s^2}3\frac{\hbar c}{a_s},\
+\min_{k<s}\big(E_c(a_k)-E_0(a_k)\big)\Big\},\] uniformly in the volume
+over lattices whose final side is at least \(2q+1\). This is positive in
+physical units when, as \(a_{\rm UV}\to0\), \(a_s\) stays bounded above
+and the margins \(E_c-E_0\) stay bounded below in physical units; that
+requirement is part of T3. Under items 1--3 at every scale of a
+trajectory, the bare couplings on it have positive volume-uniform gaps,
+the content of T2\('\) there. Items 1--3 in the weak region have
+analogues in the constructive programme (Balaban's small-field effective
+actions are the Euclidean analogue of item 2); in the intermediate
+region they are the open problem.
+
+The box makes the finish line definite and existential: the flow has to
+arrive at couplings and correction sizes satisfying item 3. The formal
+count of §3 suggests, without proof, \(g^2\sim10^2\) with corrections of
+local norm about \(10^{-1}\,\hbar c/a\) for single-plaquette terms and
+below \(10^{-2}\,\hbar c/a\) for two-plaquette terms. The repository's
+only extracted value of Yarotsky's constant, \(\beta_*\simeq e^{-465}\)
+for the range \(\{0,1\}^3\), is a heuristic proof extraction
+(\href{strong-coupling-threshold-explicit.md}{strong-coupling-threshold-explicit},
+labelled in the Kogut--Susskind note §5); \(\beta^*_q\) for the larger
+range \(\Lambda_q\) has not been extracted.
 
 The one-loop distance from \(g^2=1/2\) to \(g^2=100\) is
-\((2-0.01)/0.0966\simeq21\) doublings; the running is perturbative only
-at the start of that stretch, and how the corrections behave over the
-rest of it is precisely the question.
+\((2-0.01)/0.0966\simeq21\) doublings, using
+\(1/g^2(2a)\simeq1/g^2(a)-2b_0\log2\) with \(2b_0\log2=0.0966\) for
+\(SU(3)\) (heuristic count). The running is perturbative only at the
+start of that stretch, \(g^2\sim10^2\) is the formal target of §3, and
+how the corrections behave over the rest of it is the open question.
 
-\hypertarget{consequence-for-state}{%
-\subsection{4. Consequence for STATE}\label{consequence-for-state}}
+\subsection{5. Consequence for STATE}\label{consequence-for-state}
 
-The strong-coupling side is now a forgiving explicit region rather than
-a point at infinity, and the mass-gap problem for \(SU(3)\) is the
-statement that a renormalization scheme satisfying items 1--3 exists
-through the intermediate region. Every quantity in the target is a
-number: \(g^2\sim10^2\), corrections of locality \(q\) with local norm
-below \(\eta_*(g,q)\) from Section 2, and the resulting gap
-\(\frac83g^2(1-\eta_E)(1-\theta)\,\hbar c/a\).
+The note's proved output is the existential target box of §1, a
+hypothesis check of Yarotsky's theorem: translation-invariant,
+connected, gauge-invariant terms on at most \(q\) links with local norm
+\(\eta\le\frac{2(1-\eta_E)\beta^*_q}9g^2-\frac6{g^2}\) (units
+\(\hbar c/a\)), with a link-local electric term, leave a non-degenerate
+gauge-invariant ground state and a volume-uniform full and physical gap
+of at least \(\gamma_q(1-\eta_E)\frac23g^2\,\hbar c/a\), with
+\(\beta^*_q,\gamma_q\) existential. The location of the box is not
+explicit. The explicit table of §3 and the target \(g^2\sim10^2\) are
+formal restricted estimates that inherit the gaps named in the
+Kogut--Susskind correction; downstream uses of the box location,
+including \href{abelian-misses-the-box.md}{abelian-misses-the-box} and
+\href{intermediate-region-finite-verification.md}{intermediate-region-finite-verification},
+should read it existentially. An explicit box needs a complete marked
+general-history count with \(q\)-link insertions and a normalized
+true-vacuum correlation bound, or explicit Yarotsky constants for range
+\(\Lambda_q\). This correction changes no other note and no STATE file.
 \end{document}
