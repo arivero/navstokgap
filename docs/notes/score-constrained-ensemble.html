@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Score-constrained ensembles and population transport</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Score-constrained ensembles and population transport</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/score-constrained-ensemble.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/score-constrained-ensemble.pdf">PDF</a></p><p>Restricting the ordinary action of two classical phase sheets to the
+shared-score preparations gives the canonical Fisher field action
+exactly. The restriction is not preserved by free Newtonian transport. A
+separate population-transfer construction identifies its full
+transport-conjugate action; bridge phase alone omits reservoir costs.
+The resulting two-coordinate model satisfies continuity, but its shape
+family fails the full field equation, even after adding Gaussian
+width.</p>
+<p>These are variational identities and a stated closure obstruction,
+developed by GPT-6.1 Sol and GPT-6 Astra on 2026-10-01. They do not
+derive a physical constraint mechanism, quantum recording, or positive
+action necessity. The supplied parameter is <span
+class="math inline">\(\kappa\ge0\)</span>; the field obstruction below
+concerns <span class="math inline">\(\kappa&gt;0\)</span>. Proof status:
+written, internally checked.</p>
+<h2 id="what-the-classical-sheet-action-supplies">1. What the classical
+sheet action supplies</h2>
+<p>Work on a connected position interval or the line. Require smooth
+positive densities, finite displayed energies, and vanishing boundary
+terms for the variations used below. A classical phase sheet has
+position density <span class="math inline">\(r\)</span> and momentum
+<span class="math inline">\(W_q\)</span>. Its canonical one-form and
+free Hamiltonian are <span class="math inline">\(\int W\,\delta
+r\,dq\)</span> and <span class="math inline">\(\int
+rW_q^2/(2m)dq\)</span>, respectively, with <span
+class="math inline">\(m&gt;0\)</span>.</p>
+<p>This one-form follows from the ordinary particle form. If material
+coordinates <span class="math inline">\(a\)</span> carry fixed
+probability mass, <span class="math inline">\(q=X(a)\)</span>, <span
+class="math inline">\(r\,dq=da\)</span>, and <span
+class="math inline">\(v=\delta X\circ X^{-1}\)</span> is a virtual
+displacement, then <span class="math inline">\(\delta
+r=-\partial_q(rv)\)</span>. Integration by parts gives <span
+class="math display">\[\int W_q(X(a))\delta X(a)da
+=\int rW_qv\,dq=\int W\,\delta r\,dq.\tag{1}\]</span> Fixed total mass
+makes a spatially constant shift of <span
+class="math inline">\(W\)</span> a gauge. This is a smooth variational
+identity; no infinite-dimensional well-posedness theorem is being
+assumed.</p>
+<p>For two sheets of probability mass <span
+class="math inline">\(1/2\)</span>, introduce the constraint <span
+class="math display">\[r_\sigma=\rho/2,\qquad
+W_\sigma=S+\kappa\sigma\log(\rho/\rho_{\rm ref}),\qquad
+\sigma\in\{+1,-1\}.\tag{2}\]</span> Here <span
+class="math inline">\(\rho\)</span> is normalized, <span
+class="math inline">\(S\)</span> has action units, and the positive
+constant <span class="math inline">\(\rho_{\rm ref}\)</span> only makes
+the logarithm dimensionless. Changing it adds sheetwise constants and
+changes no momentum. Formula (2) is the field version of the supplied
+positive classical preparation in <a
+href="sed-closure-under-recording.html#a-shared-score-sign-realizes-copying-but-fails-two-completion-tests">the
+recording note, §8.22</a>.</p>
+<p><strong>Proposition 1 (exact constrained action).</strong> Pulling
+the two-sheet one-form and energy back to (2) gives <span
+class="math display">\[\begin{aligned}
+\Theta&amp;=\sum_\sigma\int W_\sigma\delta r_\sigma\,dq
+       =\int S\delta\rho\,dq,\\
+\mathcal H&amp;=\sum_\sigma\int\frac{r_\sigma W_{\sigma,q}^2}{2m}dq
+=\int\frac{\rho S_q^2}{2m}dq+\frac{\kappa^2}{2m}I(\rho),\\
+I(\rho)&amp;=\int\frac{\rho_q^2}{\rho}dq.
+\end{aligned}\tag{3}\]</span> The first identity cancels the two score
+signs; the second expands the two squares. Thus variation of the
+<em>restricted</em> action <span class="math inline">\(\int[\int
+S\rho_t\,dq-\mathcal H]dt\)</span> yields <span
+class="math display">\[\rho_t=-\partial_q(\rho S_q/m),\qquad
+S_t=-\frac{S_q^2}{2m}
++\frac{2\kappa^2}{m}\frac{(\sqrt\rho)_{qq}}{\sqrt\rho}.\tag{4}\]</span>
+No further canonical-field bracket is needed after adopting the
+constraint and restricted variation. The Fisher modification is
+established prior art [<span class="citation"
+data-cites="HallReginatto2002">@HallReginatto2002</span>; reading:
+passages pp. 3–8, especially the classical action (4) and modified
+action/equations (17)–(18); <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B09/Hall_Reginatto_2002.md">source
+companion</a>]. The calculation here identifies which correlated sheet
+restriction produces that action and tests its invariance.</p>
+<p><strong>Why this is not an invariant reduction.</strong> Unrestricted
+classical sheet continuity gives, on (2), <span
+class="math display">\[\partial_t(r_+-r_-)
+=-\frac\kappa m\partial_q^2\rho.\tag{5}\]</span> For <span
+class="math inline">\(\kappa&gt;0\)</span>, no strictly positive
+normalized density on the whole line has <span
+class="math inline">\(\rho_{qq}\equiv0\)</span>: an affine function
+cannot have those properties. Consequently every such constrained
+preparation departs from equal sheet densities immediately somewhere.
+Restricted variation and ordinary free sheet transport are different
+dynamics. Additional constraint reactions or state changes are required,
+as the exact Gaussian switching test in <a
+href="sed-closure-under-recording.html#a-stationary-switching-process-repairs-the-gaussian-marginal">§8.23</a>
+also demonstrates. In particular (4)’s current uses the mean momentum
+<span class="math inline">\(S_q\)</span>; it does not give both physical
+sheet velocities <span class="math inline">\(W_{\sigma,q}/m\)</span>
+without further dynamics.</p>
+<p>On connected positive support the labeled sheet momenta determine
+<span class="math inline">\(S_q\)</span> and hence <span
+class="math inline">\(S\)</span> up to a common constant. At exact
+vacuum, separate constants on disconnected components become invisible
+to the ordinary physical phase-space measure. This construction cannot
+carry them into a vacuum limit merely by declaring them canonical
+data.</p>
+<h2 id="population-transport-includes-the-reservoirs">2. Population
+transport includes the reservoirs</h2>
+<p>Let <span class="math inline">\(h_L,h_R\)</span> be nonnegative
+smooth normalized bumps with compact, ordered, disjoint supports.
+Between them fix a bridge <span
+class="math inline">\(B=[q_L,q_R]\)</span>. Choose a smooth positive
+normalized density <span class="math inline">\(\rho_0\)</span> with
+finite Fisher information. Put <span
+class="math display">\[\begin{aligned}
+h&amp;=h_R-h_L,&amp;\rho_w&amp;=\rho_0+wh,\\
+G(q)&amp;=\int_{-\infty}^{q}(h_L-h_R)(y)dy,&amp;
+M(w)&amp;=\int\frac{G(q)^2}{\rho_w(q)}dq,\\
+R_B&amp;=\int_B\frac{dq}{\rho_0(q)}.&amp;&amp;
+\end{aligned}\tag{6}\]</span> Here <span
+class="math inline">\(w\)</span> is probability mass transferred from
+left to right, <span class="math inline">\(0\le G\le1\)</span>, <span
+class="math inline">\(G=1\)</span> on <span
+class="math inline">\(B\)</span>, and <span
+class="math inline">\(G\)</span> vanishes outside the reservoirs and
+their connector. If <span class="math inline">\(K\)</span> is their
+compact enclosing interval, <span
+class="math inline">\(c=\min_K\rho_0&gt;0\)</span> and <span
+class="math inline">\(H=\|h\|_\infty&gt;0\)</span>, then <span
+class="math inline">\(|w|&lt;c/(2H)\)</span> ensures <span
+class="math inline">\(\rho_w\ge c/2\)</span> on <span
+class="math inline">\(K\)</span>. Thus all terms in (6) are finite, with
+<span class="math inline">\(M(w)\le2|K|/c\)</span>, and smooth in this
+<span class="math inline">\(w\)</span> range.</p>
+<p>Vanishing exterior flux and continuity uniquely require <span
+class="math inline">\(j(q)=\dot w\,G(q)\)</span>, because <span
+class="math inline">\(\partial_qj=-\partial_t\rho_w\)</span>. The
+corresponding total transport kinetic energy is <span
+class="math inline">\(mM(w)\dot w^2/2\)</span>. Both <span
+class="math inline">\(M\)</span> and <span
+class="math inline">\(R_B\)</span> have length-squared units. Smooth
+reservoir transport contributes positively, so <span
+class="math inline">\(M(w)&gt;R_B\)</span>.</p>
+<p><strong>Proposition 2 (continuity-compatible canonical
+family).</strong> Define an action field, up to a common constant, by
+<span class="math display">\[S_q(q;w,P)=\frac{P
+G(q)}{M(w)\rho_w(q)}.\tag{7}\]</span> The variable <span
+class="math inline">\(P\)</span> has action units; it is not a
+point-particle momentum. Then <span
+class="math display">\[\begin{aligned}
+\Theta&amp;=\int S\delta\rho_w\,dq=P\,dw,\\
+H(w,P)&amp;=\frac{P^2}{2mM(w)}+\frac{\kappa^2}{2m}I(\rho_w),\\
+\dot w&amp;=\frac{P}{mM(w)},&amp;
+\dot P&amp;=\frac{P^2M&#39;(w)}{2mM(w)^2}
+       -\frac{\kappa^2}{2m}\frac{dI(\rho_w)}{dw}.
+\end{aligned}\tag{8}\]</span> These local reduced Hamilton equations
+preserve <span class="math inline">\(H\)</span> while <span
+class="math inline">\(w\)</span> remains in the positive-density range
+and satisfy the ambient continuity equation exactly.</p>
+<p><em>Proof.</em> Since <span class="math inline">\(h=-G_q\)</span>,
+integration by parts yields <span class="math inline">\(\int S
+h\,dq=\int S_qG\,dq=P\)</span>. The phase energy in (3) is <span
+class="math inline">\(P^2/(2mM)\)</span>, proving the Hamiltonian and
+its equations. Their first equation gives <span
+class="math inline">\(\rho_wS_q/m=\dot wG\)</span>, the required
+current. <span class="math inline">\(\square\)</span></p>
+<p>In this family the actual bridge action difference is <span
+class="math display">\[\Phi_B=S(q_R)-S(q_L)=\frac{R_B}{M(w)}P.\tag{9}\]</span>
+Thus <span class="math inline">\(\Phi_B\)</span> generally differs from
+the population-conjugate action <span class="math inline">\(P=\int S
+h_Rdq-\int S h_Ldq\)</span>. The latter is a reservoir-weighted
+phase-action difference. Replacing it by bridge endpoint phases omits
+the reservoir motion. In coordinates <span
+class="math inline">\((w,\Phi_B)\)</span> the canonical two-form has
+coefficient <span class="math inline">\(M(w)/R_B\)</span>, rather than
+one.</p>
+<p>For a fixed bridge density the exact dual identities are <span
+class="math display">\[E_{{\rm transport},B}=\frac{mJ^2R_B}{2},\qquad
+\inf E_{{\rm phase},B}=\frac{\Phi_B^2}{2mR_B},\qquad
+J=\frac{\Phi_B}{mR_B}.\tag{10}\]</span> The phase infimum is <a
+href="sed-closure-under-recording.html#the-exact-energy-of-a-phase-bridge-and-its-cut-law">the
+bridge lemma, (131)</a>, written with <span
+class="math inline">\(S\)</span> instead of <span
+class="math inline">\(\hbar\theta\)</span>; it is attained in the stated
+weighted <span class="math inline">\(H^1\)</span> class. The last
+identity makes the two energies equal. A low-density connector makes a
+fixed phase difference cheap and a fixed population flux expensive. It
+selects no absolute action scale.</p>
+<p>The costs add over arbitrary spatial cuts, because both integrals of
+<span class="math inline">\(1/\rho\)</span> and of <span
+class="math inline">\(G^2/\rho\)</span> add. This is an exact spatial
+transport identity, not Newton’s temporal cell action. In the
+positive-tail family of recording (133), <span
+class="math inline">\(R_B\)</span> grows as <span
+class="math inline">\(\epsilon^{-2}\)</span>. If reservoir costs
+additionally obey <span class="math inline">\(M-R_B\le C\)</span>
+uniformly, then <span class="math inline">\(|P-\Phi_B|\le
+|P|C/R_B\)</span> and the bridge becomes asymptotically dominant. That
+extra bound must be checked; exact vacuum is not such a check.</p>
+<h2 id="continuity-does-not-close-the-full-field-equation">3. Continuity
+does not close the full field equation</h2>
+<p>Equations (8) are exact for the restricted model. They do not imply
+that its fixed density family is invariant under (4)’s Hamilton–Jacobi
+equation. For a Gaussian base <span
+class="math inline">\(\rho_A=N(0,A)\)</span> and initial <span
+class="math inline">\(w=P=0\)</span>, the full equation gives <span
+class="math display">\[\partial_tS_q=\frac{\kappa^2
+q}{mA^2}.\tag{11}\]</span> The family (7) instead permits only a
+multiple of <span class="math inline">\(G/\rho_A\)</span> at that
+initial time. It vanishes outside a compact interval, whereas (11) does
+not. This is an immediate nonzero transverse term for <span
+class="math inline">\(\kappa&gt;0\)</span>. It cannot be removed by a
+spatially constant action gauge.</p>
+<p>Adding Gaussian width supplies the missing global quadratic phase at
+<span class="math inline">\(w=0\)</span>. The next calculation tests
+whether that repairs closure for nonzero population transfer.</p>
+<p><strong>Proposition 3 (a fixed compact transfer shape cannot
+close).</strong> Fix <span
+class="math inline">\(m,\kappa,A&gt;0\)</span> and a nonzero <span
+class="math inline">\(h\in C_c^\infty(\mathbb R)\)</span> with <span
+class="math inline">\(\int h=0\)</span>. The density family <span
+class="math inline">\(\rho_{A,w}=\rho_A+wh\)</span>, allowing width
+variation and sufficiently small positive and negative <span
+class="math inline">\(w\)</span>, cannot be locally invariant under (4)
+while including zero-phase-gradient states for every such <span
+class="math inline">\(w\)</span>, satisfying continuity with vanishing
+exterior flux, and having twice differentiable parameter trajectories.
+The same obstruction persists with Gaussian mean motion allowed. The
+claim concerns an open family of preparations, not all
+finite-dimensional models.</p>
+<p><em>Proof.</em> Set <span class="math inline">\(r=\rho_A\)</span> and
+<span class="math inline">\(G=-\int_{-\infty}^q h\)</span>, so <span
+class="math inline">\(G\)</span> is smooth and compactly supported. The
+integrated density tangents for width and transfer are <span
+class="math inline">\(G_A=qr/(2A)\)</span> and <span
+class="math inline">\(G\)</span>. At an initially zero phase gradient,
+continuity first gives <span class="math inline">\(\dot A=\dot
+w=0\)</span>. Differentiating it and using (4) requires <span
+class="math display">\[\begin{aligned}
+\rho_wF_w&amp;=c_A(w)G_A+c_w(w)G,\\
+F_w&amp;=\frac{2\kappa^2}{m}\partial_q
+      \frac{(\sqrt{\rho_w})_{qq}}{\sqrt{\rho_w}},
+\qquad c_A=m\ddot A,\quad c_w=m\ddot w.
+\end{aligned}\tag{12}\]</span> Outside the compact supports, <span
+class="math inline">\(\rho_w=r\)</span> and <span
+class="math inline">\(F_w=\kappa^2q/(mA^2)\)</span>; hence <span
+class="math inline">\(c_A(w)=2\kappa^2/(mA)\)</span> for every small
+<span class="math inline">\(w\)</span>. At <span
+class="math inline">\(w=0\)</span> this already matches the full
+expression, giving <span class="math inline">\(c_w(0)=0\)</span>.
+Evaluation at any point with <span class="math inline">\(G\ne0\)</span>
+makes <span class="math inline">\(c_w(w)\)</span> smooth, since the left
+side is smooth while <span
+class="math inline">\(\rho_w&gt;0\)</span>.</p>
+<p>Put <span class="math inline">\(u=h/r\)</span>. Differentiating the
+square-root ratio gives <span
+class="math inline">\(\delta[(\sqrt\rho)_{qq}/\sqrt\rho]
+=(u&#39;&#39;-qu&#39;/A)/2\)</span>. Retaining the variation of the
+density multiplier in (12), the necessary linearized identity is <span
+class="math display">\[u&#39;&#39;&#39;-\frac qA
+u&#39;&#39;-\frac{u&#39;}A+\frac q{A^2}u=cg,
+\qquad g=G/r,\qquad c=mc_w&#39;(0)/\kappa^2.\tag{13}\]</span> Since
+<span class="math inline">\(G&#39;=-h\)</span>, one has <span
+class="math inline">\(u=qg/A-g&#39;\)</span>. Substitution yields <span
+class="math display">\[\begin{aligned}
+-g&#39;&#39;&#39;&#39;+\frac{2q}{A}g&#39;&#39;&#39;
++\left(\frac4A-\frac{q^2}{A^2}\right)g&#39;&#39;
+-\frac{4q}{A^2}g&#39;\\
++\left(\frac{q^2}{A^3}-\frac1{A^2}\right)g&amp;=cg.
+\end{aligned}\tag{14}\]</span> The function <span
+class="math inline">\(g\)</span> is smooth and compactly supported
+because <span class="math inline">\(r&gt;0\)</span>. All four initial
+data vanish at a point outside its support. Uniqueness for this regular
+fourth-order linear ODE forces <span
+class="math inline">\(g\equiv0\)</span>, hence <span
+class="math inline">\(h=-G&#39;\equiv0\)</span>, a contradiction.
+Allowing the Gaussian mean adds a term proportional to <span
+class="math inline">\(r\)</span> in (12); tail matching forces its
+coefficient to zero and leaves the same contradiction. <span
+class="math inline">\(\square\)</span></p>
+<p>The zero-phase-gradient and continuity assumptions are essential to
+the initial tangency test. The theorem permits isolated states, shapes
+depending on parameters or time, and other finite-dimensional families.
+It specifically rules out treating a fixed compact transfer bump plus
+Gaussian width as an exact free Fisher evolution. Generated shape
+information cannot be hidden inside that projection.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>The canonical Fisher structure follows from a specified restriction
+of ordinary classical sheet action; physical preservation of that
+restriction remains open. Population memory must carry its full
+transport-conjugate action, including reservoirs, before taking a
+weak-bridge limit. The continuity-compatible two-coordinate family fails
+the full field equation, and adding Gaussian width does not repair its
+fixed compact transfer shape. Next lemma: a paired density/phase shape
+mode on the expanding Gaussian, first with exact linearized field
+evolution and then a positive nonlinear completion. Its tail variation
+must be retained; linear mode closure alone is not a physical
+population-history model. Reject a projected residual counted as exact
+closure, bridge phase used as population momentum without reservoir
+costs, or an unexcluded zero branch presented as positive action
+necessity.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

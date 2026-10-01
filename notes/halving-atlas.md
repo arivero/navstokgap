@@ -359,9 +359,13 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    internally checked). [§8.23](sed-closure-under-recording.md#823-a-stationary-switching-process-repairs-the-gaussian-marginal)
    repairs the Gaussian target by a stationary switching process and
    balances mean kinetic energy; its force needs preparation information
-   in (151) (Sol/Astra, written, internally checked). Next: a closed
-   body--apparatus implementation tested on two unread widths, with all
-   controller records and energy retained before phase reunion.
+   in (151) (Sol/Astra, written, internally checked).
+   [Score-constrained ensembles](score-constrained-ensemble.md) gives the
+   restricted field action and full transport-conjugate action, including
+   reservoirs. Fixed compact transfer shapes fail even with Gaussian
+   width (Sol/Astra, written, internally checked). Next: paired evolving
+   density/phase modes and a positive completion; the two-unread-width
+   apparatus test and complete controller energy/records remain open.
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.

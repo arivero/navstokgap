@@ -120,19 +120,26 @@ Read in this order:
    separating a radiation action unit from a complete-record restriction.
 4. [Indeterminacy routes](../notes/newton-indeterminacy-routes.md), for the
    conditional statistical-speed bound and its affine Gaussian instance.
-5. [Recording notebook](../notes/sed-closure-under-recording.md), §§8.11–8.22:
+5. [Recording notebook](../notes/sed-closure-under-recording.md), §§8.11–8.23:
    physical feedback, complete records and nonlinear countertests. In the
    supplied quantum free-evolution reference, the packet tests retain phase
    memory and distinguish positive-tail reconstruction from uniform stability
    in the stated local-data metric.
+6. [Score-constrained ensembles](../notes/score-constrained-ensemble.md):
+   the canonical field action is a restricted classical action, not an
+   invariant Newtonian reduction. Full population-conjugate action
+   includes reservoir transport; fixed compact transfer shapes do not
+   close even after adding Gaussian width.
 
 Section 8.22 realizes (117)'s score correction by a shared-sign classical
 preparation and canonical copies. Section 8.23 repairs its free-motion
 fourth-moment failure by a stationary switching process with a prescribed
 force. The preparation-dependent force obstruction (151) identifies the
-next mechanism: a closed body--apparatus implementation retaining that
-state and energy exchange, first tested on two unread widths with complete
-controller records. Terminal-conjugate recovery (140) remains a test
+apparatus obligation: a closed implementation retaining that state and
+energy exchange, tested on two unread widths with complete controller
+records. The score-constrained note's next mathematical mechanism is an
+evolving paired density/phase mode, followed by a positive nonlinear
+completion. Terminal-conjugate recovery (140) remains a test
 before claiming a universal floor. The earlier
 phase-memory and unread-energy tests (119), (129), (132)--(135) still apply
 at separation and reunion. Assuming Fisher ensemble dynamics or an exact
