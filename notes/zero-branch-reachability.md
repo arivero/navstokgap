@@ -640,6 +640,16 @@ $p_0$ meets within a half period; an affine $p_0$ meets it only at a
 focal instant, where all bodies pass one point and no second branch
 forms.
 
+One more scope remark. A single body prepared as one packet of angular
+width $\sigma_\phi$ has action spread $\Delta I\sim h/(2\sigma_\phi)$, so its
+lapping time (11) grows like $1/h$, as does the fold time of a single
+packet in Theorem 3 whose velocity gradient is set by its own width.
+At any fixed time, then, a single body's complete record reaches the
+zero branch; this is the familiar power-law Ehrenfest time of an
+integrable system. The thesis concerns swarms of $h$-independent
+extent, which is what the complete record of an ensemble describes,
+and Newton's single trajectory is immune at fixed time.
+
 ## 5. All-time invariants
 
 Two quantities already in the corpus show the other non-commuting
@@ -677,6 +687,9 @@ the thesis only through crossing streams, which is already Theorems
   $T^2/\Delta T$ for a narrow swarm spanning more than half a turn
   (Theorem 4(b), (c)). The gap is a property of the force law and of
   the swarm.
+- **Single bodies are immune at fixed time.** A single packet has
+  action spread of order $h$, so its lapping and fold times grow like
+  $1/h$ (§4b); the gap concerns swarms of $h$-independent extent.
 - **Smeared records and statistical preparations reach zero.** This is
   the content of the weak-limit theorems named in §1, and of (4).
 - **Refinement with records reverses the roles.** The zero theory is
