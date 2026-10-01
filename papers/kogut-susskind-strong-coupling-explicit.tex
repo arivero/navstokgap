@@ -6,274 +6,407 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={Continuous-time expansion for Kogut--Susskind: $SU(3)$ gapped for $g^2\ge388$, gap approac},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Continuous-time Kogut--Susskind expansion: corrected overlap bounds and an open explicit u},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{continuous-time-expansion-for-kogutsusskind-su3-gapped-for-g2ge388-gap-approaching-83g2hbar-ca}{%
-\section{\texorpdfstring{Continuous-time expansion for Kogut--Susskind:
-\(SU(3)\) gapped for \(g^2\ge388\), gap approaching
-\((8/3)g^2\,\hbar c/a\)}{Continuous-time expansion for Kogut--Susskind: SU(3) gapped for g\^{}2\textbackslash ge388, gap approaching (8/3)g\^{}2\textbackslash,\textbackslash hbar c/a}}\label{continuous-time-expansion-for-kogutsusskind-su3-gapped-for-g2ge388-gap-approaching-83g2hbar-ca}}
+\section{Continuous-time Kogut--Susskind expansion: corrected overlap
+bounds and an open explicit uniform
+threshold}\label{continuous-time-kogutsusskind-expansion-corrected-overlap-bounds-and-an-open-explicit-uniform-threshold}
 
-Yarotsky's theorem gives the Kogut--Susskind gap for \(SU(3)\) only
-beyond \(g^2\sim10^{101}\), because its time discretization pays
-\(e^{64t_0}\) per perturbed site. The same statement with usable numbers
-comes from the Duhamel expansion of \(e^{-tH}\) in the plaquette term
-with the electric evolution kept exact between insertions: a polymer gas
-in continuous time whose weights carry the exact decay
-\(e^{-E\,\Delta\tau}\) of every excited link, so no neighbourhood is
-ever left unpenalized. Three structural facts do the work. The electric
-term is diagonal in the character basis with eigenvalue
-\(\varepsilon\sum_\ell C_2(r_\ell)/C_2(f)\),
-\(\varepsilon=(g^2/2)C_2(f)=2g^2/3\). The plaquette operator
-\(w_p=\operatorname{tr}U_p+\operatorname{tr}U_p^\dagger\) acts on four
-links with \(\|w_p\|\le2N=6\), and
-\(V=(2/g^2)\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\) is
-\(-(1/g^2)\sum_pw_p\) up to a constant. And Gauss's law forces every
-intermediate excited set to be a closed flux loop, so at least four
-links are excited whenever any are, \(E\ge4\varepsilon\) on the
-orthogonal complement of the vacuum. The Kotecký--Preiss criterion, in
-its measure-space form, with the weight
-\(a(\gamma)=n(\gamma)+\lambda|\operatorname{supp}\gamma|\) and
-\(\lambda=\varepsilon(1-\theta)\), then gives a gap of at least
-\(4\lambda=(8/3)g^2(1-\theta)\) in units \(\hbar c/a\) whenever
-\[g^4\ \ge\ \max\Big(\frac{3132}{\theta},\ \frac{783}{\sqrt{\theta(1-\theta)}}\Big),\]
-for the class of polymers in which each insertion touches the current
-excited set; so \(\Delta_{\rm KS}\ge\frac43g^2\,\hbar c/a\) for
-\(g^2\ge79\), \(\Delta_{\rm KS}\ge2.4\,g^2\,\hbar c/a\) for
-\(g^2\ge177\), and the bound approaches the flux-loop energy as
-\(g\to\infty\), which fixes the constant \(\gamma\) of the T2 theorem at
-\(4\). The general polymers, in which a later insertion may start a
-separate piece that is bridged afterwards, are counted explicitly by a
-spanning tree of consecutive touchings, at a factor \(24\) per
-insertion, which makes the rigorous threshold \(g^2\ge388\) for the same
-\(\frac43g^2\) gap. Constants explicit; nothing promoted.
+\textbf{Correction (2026-10-02):} The former volume-uniform physical-gap
+claim \(\Delta_{\rm KS}\ge\frac43g^2\hbar c/a\) for \(g^2\ge388\) is
+\textbf{withdrawn as a conclusion of this note}. The adjacent count
+roots the first plaquette at the test link and misses histories reaching
+that link later. The proposed general-tree count does not bound the
+required marked overlap integrals, and incorrectly excludes repeated
+plaquettes. The shift measure must include every excitation interval;
+its endpoint term costs up to \(4n\), not \(n\). The claimed true-vacuum
+correlation bound was also not established. Sections 2--4 correct these
+steps and label the remaining numerical estimates. The earlier
+identification of T2's constant with \(4(1-\theta)\), its volume-uniform
+limit \(4\), and relative error \(O(g^{-4})\) is withdrawn here. The
+existing existential strong-coupling theorem is unaffected.
 
-\hypertarget{the-expansion}{%
-\subsection{1. The expansion}\label{the-expansion}}
+Later-note scope pointer: \href{mass-gap-openings.md}{mass-gap-openings}
+§1 replaces the all-coupling requirement by the weak scaling-region
+requirement; its §2, Opening 1 curvature comparison concerns Wilson
+Euclidean measures and does not repair this Hamiltonian expansion.
 
-Units \(\hbar c/a=1\). Write \(H=H_E-W+{\rm const}\) with
-\(H_E=(g^2/2)\sum_\ell(-\Delta_\ell)\) and \(W=(1/g^2)\sum_pw_p\). In
-the Peter--Weyl basis \(H_E\) is diagonal, its eigenvalue on a link
-configuration \(\sigma=(r_\ell)\) being
-\(E(\sigma)=(g^2/2)\sum_\ell C_2(r_\ell)\ge\varepsilon\,|S(\sigma)|\),
-with \(S(\sigma)\) the set of links carrying a nontrivial representation
-and \(\varepsilon=(g^2/2)C_2(f)\), since \(C_2(f)=4/3\) is the least
-nonzero Casimir of \(SU(3)\). Duhamel's formula gives
-\[e^{-tH}=\sum_{n\ge0}\int_{0<\tau_1<\dots<\tau_n<t}
-e^{-(t-\tau_n)H_E}\,W\,e^{-(\tau_n-\tau_{n-1})H_E}\cdots W\,e^{-\tau_1H_E},\]
-all terms positive. Insert, between consecutive factors, the resolution
-\(1=\sum_SP_S\) with \(P_S\) the projection onto configurations whose
-excited set is exactly \(S\); each \(P_S\) is a product over links. A
-\textbf{history} is then a sequence \((p_k,\tau_k,S_k)_{k=1}^n\) with
-\(S_0=\emptyset\), and its weight is
-\[\Big\langle\Omega_0,\prod_{k}\big(P_{S_k}\tfrac1{g^2}w_{p_k}P_{S_{k-1}}\big)e^{-\Delta\tau_kH_E}\ \Omega_0\Big\rangle,
-\qquad\Big|\cdot\Big|\ \le\ \Big(\frac{2N}{g^2}\Big)^n\prod_{k=1}^{n-1}e^{-\varepsilon|S_k|\Delta\tau_k},\]
-because \(\|w_p\|\le2N\) and \(e^{-\Delta\tau H_E}P_S\) has norm at most
-\(e^{-\varepsilon|S|\Delta\tau}\).
+The results established here are the electric-history norm bound, the
+corrected overlap estimate conditional on a factorizing history gas, and
+a finite-volume physical-gap bound. For \(SU(3)\) on a periodic cubic
+spatial lattice with \(N_s\ge4\), writing \(P=|\mathcal P|=3N_s^3\),
+\[\Delta^{\rm phys}_{a,L}\ \ge\ \left(\frac83g^2-\frac{12P}{g^2}\right)\frac{\hbar c}{a},
+\qquad L=N_sa.\] In particular \(g^4\ge9P\) gives
+\(\Delta^{\rm phys}_{a,L}\ge\frac43g^2\hbar c/a\). This bound is
+extensive and supplies \textbf{no volume-uniform threshold}. At each
+fixed volume the physical electric-loop gap is recovered as
+\(g\to\infty\). The continuous-time construction below is a candidate
+route to uniformity, not a completed gap theorem. The older numerical
+thresholds are retained with their corrected status in §4; no continuum
+limit is taken.
 
-Two constraints on the \(S_k\). First,
-\(\operatorname{links}(p_k)\subseteq S_{k-1}\cup S_k\): acting on a
-trivial link, \(w_p\) makes it nontrivial (\(f\otimes1=f\)), so a link
-of \(p_k\) can be trivial afterwards only if it was nontrivial before.
-Second, \textbf{Gauss's law}: \(\Omega_0\) and every \(w_p\) are gauge
-invariant, so every intermediate configuration is, and the
-representations on the links at a vertex fuse to the trivial one; a
-nonempty excited set is therefore a union of closed flux loops and
-\(|S_k|\ge4\) whenever \(S_k\ne\emptyset\). This is where the
-non-abelian theory pays nothing extra: the same constraint holds for
-\(U(1)\).
+\subsection{1. The expansion and the finite-volume
+result}\label{the-expansion-and-the-finite-volume-result}
 
-\textbf{Factorization.} The support of a history is
-\(\operatorname{supp}\gamma=\bigcup_k S_k\times[\tau_k,\tau_{k+1}]\subset\mathcal E\times[0,t]\).
-If a history splits into pieces with disjoint supports, its weight is
-the product of the pieces' weights, because \(P_S\),
-\(e^{-\Delta\tau H_E}\) and \(\Omega_0\) factor over links and each
-\(w_p\) acts on four links; and the ordered time integral over the whole
-history is the product of the ordered integrals over the pieces. So
-\[Z(t)=\langle\Omega_0,e^{-tH}\Omega_0\rangle=\sum_{\{\gamma_i\}\ \text{compatible}}\prod_iw(\gamma_i),\]
-a gas of \textbf{polymers}, the connected histories, two polymers being
-compatible when their supports are disjoint. Between consecutive
-insertions of a connected polymer the excited set is nonempty, or the
-support would split in time; hence \(|S_k|\ge4\) for \(1\le k\le n-1\).
+Units \(\hbar c/a=1\). Work on the gauge-invariant subspace of
+\(L^2(SU(3)^{\mathcal E})\). Write \(H=H_E-W+C\) with
+\[H_E=\frac{g^2}{2}\sum_\ell(-\Delta_\ell),\qquad
+W=\frac1{g^2}\sum_pw_p,\qquad
+w_p=\operatorname{tr}U_p+\operatorname{tr}U_p^\dagger,\qquad C=\frac{6P}{g^2}.\]
+Thus the magnetic potential is
+\((2/g^2)\sum_p(3-\operatorname{Re}\operatorname{tr}U_p)\). In a
+Peter--Weyl basis, including matrix indices and invariant vertex
+intertwiners, the electric eigenvalue is
+\[E(\sigma)=\frac{g^2}{2}\sum_\ell C_2(r_\ell)
+\ge\varepsilon|S(\sigma)|,\qquad \varepsilon=\frac{2g^2}{3},\] where
+\(S(\sigma)\) consists of nontrivial link representations and \(4/3\) is
+the least nonzero \(SU(3)\) Casimir. Also \(\|w_p\|\le6\).
 
-\hypertarget{the-convergence-criterion}{%
-\subsection{2. The convergence
-criterion}\label{the-convergence-criterion}}
+\textbf{Correction (2026-10-02), topology and sector:} Gauss's law
+excludes a vertex incident to exactly one excited link. Nonabelian
+invariant networks can branch, so describing every support as a union of
+flux loops was too strong. A nonempty finite graph with minimum degree
+at least two contains a cycle. For the cubic lattice with \(N_s\ge4\),
+its shortest cycle has four edges; hence \(|S|\ge4\). Short periodic
+lattices require a separate treatment: winding cycles at \(N_s=2,3\) can
+be shorter. The four-link bound concerns the \textbf{physical sector};
+the electric gap on the unrestricted Hilbert space is \(\varepsilon\).
 
-The Kotecký--Preiss criterion (Commun. Math. Phys. 103 (1986) 491) in
-its form for polymers indexed by a measure space (Poghosyan and
-Ueltschi, J. Math. Phys. 50 (2009) 053509; metadata level) is: if for
-every \(\gamma\)
-\[\int_{\gamma'\not\sim\gamma}|w(\gamma')|\,e^{a(\gamma')}\,d\gamma'\ \le\ a(\gamma),\]
-then the cluster expansion of \(\log Z\) converges absolutely and
-uniformly in the volume, and truncated correlations obey the standard
-bounds. Here \(d\gamma'\) is the sum over shapes \((p_k,S_k)_{k=1}^{n}\)
-times \(d\tau_1\prod_{k=1}^{n-1}d\Delta\tau_k\).
+The constant function \(\Omega_0\) is the unique electric vacuum. The
+plaquette character \(\operatorname{tr}U_p\) is gauge invariant,
+nonzero, orthogonal to \(\Omega_0\), and an eigenvector with energy
+\(4\varepsilon\). Therefore the physical electric gap is exactly
+\(4\varepsilon\). Since \(\|W\|\le6P/g^2\), the min--max principle
+bounds the shifts of the lowest two eigenvalues of \(H_E-W\) by
+\(6P/g^2\) each. Consequently
+\[4\varepsilon-\frac{12P}{g^2}\ \le\ \Delta^{\rm phys}_{a,L}\frac{a}{\hbar c}
+\ \le\ 4\varepsilon+\frac{12P}{g^2}.\] The scalar \(C\) cancels from the
+gap. This proves the lead's bound and
+\(\Delta^{\rm phys}_{a,L}/(g^2\hbar c/a)\to8/3\) at fixed \(N_s\). A
+nonpositive lower bound is simply uninformative. Finite-volume
+compactness and positivity improvement supply the unique physical true
+ground state as proved in \href{mass-gap-obligations-lattice.md}{T1} §2
+(repository proof read); this assertion alone is not uniform in volume.
 
-Take \[a(\gamma)=n(\gamma)+\lambda\,|\operatorname{supp}\gamma|,\qquad
-|\operatorname{supp}\gamma|=\sum_{k=1}^{n-1}|S_k|\Delta\tau_k,\qquad 0<\lambda<\varepsilon .\]
-Then
-\(e^{a(\gamma')}|w(\gamma')|\le(2Ne/g^2)^{n'}\prod_ke^{-(\varepsilon-\lambda)|S_k'|\Delta\tau_k'}\).
+After removing \(C\), Duhamel's formula is
+\[e^{-t(H_E-W)}=\sum_{n\ge0}\int_{0<\tau_1<\cdots<\tau_n<t}
+e^{-(t-\tau_n)H_E}W e^{-(\tau_n-\tau_{n-1})H_E}\cdots W e^{-\tau_1H_E}\,d\tau_1\cdots d\tau_n.\]
+\textbf{Correction (2026-10-02):} These operator summands and the
+resolved history amplitudes are not asserted to be positive. The
+interaction \(w_p\) takes both signs; the bounds use absolute values.
 
-\emph{Overlap.} \(\gamma'\not\sim\gamma\) means some link \(\ell\) is
-excited in both at a common time. For a fixed shape and internal times
-of \(\gamma'\), the set of \(\tau_1'\) producing an overlap through link
-\(\ell\in S_k'\) during the interval in which \(\gamma\) excites
-\(\ell\) has measure at most \(T_\ell(\gamma)+\Delta\tau_k'\), where
-\(T_\ell(\gamma)\) is the total time \(\gamma\) keeps \(\ell\) excited,
-and \(\sum_\ell T_\ell(\gamma)=|\operatorname{supp}\gamma|\).
+Insert \(1=\sum_SP_S\) between factors, where \(P_S\) projects onto the
+exact excited link set. These projections factor over links and commute
+with gauge transformations. For a vacuum-to-vacuum history let
+\(S_0=S_n=\emptyset\), \(x_k=\tau_{k+1}-\tau_k\) for \(1\le k<n\), and
+\[A(\gamma)=\sum_{k=1}^{n-1}|S_k|x_k.\] The history amplitude satisfies
+\[|w(\gamma)|\le\left(\frac6{g^2}\right)^n e^{-\varepsilon A(\gamma)}.\]
+Outside the plaquette links \(S_k\) cannot change, and
+\(\operatorname{links}(p_k)\subseteq S_{k-1}\cup S_k\): multiplication
+on a trivial link produces a fundamental or antifundamental excitation.
+There are at most \(16\) possible next excited sets per insertion. An
+irreducible history with no intervening vacuum has \(|S_k|\ge4\).
 
-\emph{Integrals.}
-\(\int_0^\infty e^{-(\varepsilon-\lambda)|S|\Delta\tau}d\Delta\tau=\frac1{(\varepsilon-\lambda)|S|}\)
-and
-\(\int_0^\infty\Delta\tau\,e^{-(\varepsilon-\lambda)|S|\Delta\tau}d\Delta\tau=\frac1{((\varepsilon-\lambda)|S|)^2}\le\frac1{4(\varepsilon-\lambda)}\cdot\frac1{(\varepsilon-\lambda)|S|}\).
+The intended polymer support consists of the excited link intervals,
+with insertion vertices recording which plaquette couples their ends.
+Independent histories on disjoint link factors have factorizing
+amplitudes; summing their chronological interleavings gives the product
+of their internal ordered integrals. A complete polymer construction
+must specify components and endpoint compatibility consistently with
+these insertion vertices. The hard-core representation
+\[Z(t)=\langle\Omega_0,e^{-t(H_E-W)}\Omega_0\rangle
+=\sum_{\{\gamma_i\}\ {m compatible}}\prod_iw(\gamma_i)\] is the proposed
+organization. The finite-volume bound above does not require it. For
+§§2--3 assume such an organization with the history majorant,
+\(|S_k|\ge4\) inside each polymer, and changes only on the four links of
+each insertion; the missing general count remains necessary even under
+these assumptions.
 
-Collecting, with
-\[Q_\lambda\ :=\ \sum_{\text{shapes}\ni\ell_0}(n-1)\Big(\frac{2Ne}{g^2}\Big)^n\prod_{k=1}^{n-1}\frac{1}{(\varepsilon-\lambda)|S_k|}\]
-the weighted number of polymer shapes through a fixed link, the left
-side of the criterion is at most
-\(Q_\lambda|\operatorname{supp}\gamma|+\frac{Q_\lambda}{4(\varepsilon-\lambda)}\,n(\gamma)\),
-and the criterion holds whenever
-\[Q_\lambda\ \le\ \lambda\qquad\text{and}\qquad Q_\lambda\le4(\varepsilon-\lambda).\]
+\subsection{2. The corrected convergence
+criterion}\label{the-corrected-convergence-criterion}
 
-\hypertarget{counting-shapes}{%
-\subsection{3. Counting shapes}\label{counting-shapes}}
+For an established hard-core polymer gas on a measure space, a
+sufficient Kotecký--Preiss condition is
+\[\int_{\gamma'\not\sim\gamma}|w(\gamma')|e^{a(\gamma')}\,d\gamma'\le a(\gamma).\]
+The measure-space statement follows from Poghosyan--Ueltschi,
+\href{https://arxiv.org/pdf/0811.4281}{§2, Assumptions 1--2 and Theorem
+2.1} (passage read): hard-core interactions have stability function
+zero. For finite volume and time one also needs the integrability
+assumption of that theorem. Uniform local bounds, when proved, control
+the corresponding rooted cluster sums. This abstract criterion does not
+itself identify a Hamiltonian spectral gap.
 
-\textbf{Adjacent growth.} Consider first the shapes in which every
-insertion \(p_k\), \(k\ge2\), shares a link with the current excited set
-\(S_{k-1}\). The first plaquette contains \(\ell_0\): in three
-dimensions a link lies in four plaquettes, so \(4\) choices, and
-\(S_1=\operatorname{links}(p_1)\) is forced. At step \(k\ge2\) there are
-at most \(4|S_{k-1}|\) plaquettes touching \(S_{k-1}\) and at most
-\(2^4=16\) choices of \(S_k\). Each step therefore contributes at most
-\[\frac{2Ne}{g^2}\cdot\frac{1}{(\varepsilon-\lambda)|S_{k-1}|}\cdot64|S_{k-1}|
-=\frac{128Ne}{g^2(\varepsilon-\lambda)}\ =:\ u,\] the size \(|S_{k-1}|\)
-cancelling between the entropy and the energy denominator, which is the
-mechanism that keeps the count geometric. So
-\[Q_\lambda^{\rm adj}\ \le\ 4\,\frac{2Ne}{g^2}\sum_{m\ge1}m\,u^m=\frac{8Ne}{g^2}\,\frac{u}{(1-u)^2}.\]
+Set \[a(\gamma)=n(\gamma)+\lambda A(\gamma),\qquad
+\delta=\varepsilon-\lambda>0,\qquad h=\frac{6e}{g^2}.\] The tilted
+majorant at fixed shape and internal times is
+\(b(\gamma)=h^n\exp(-\delta\sum_k|S_k|x_k)\). Let \(r_\ell(\gamma)\)
+count maximal excitation intervals of link \(\ell\), and
+\(T_\ell(\gamma)\) be their total length. Then
+\[\sum_\ell T_\ell=A(\gamma),\qquad \sum_\ell r_\ell\le4n(\gamma),\]
+because each interval begins at an insertion and an insertion touches
+four links.
 
-\textbf{General shapes, counted by a tree.} A later insertion may start
-a piece disjoint from the current support that is bridged afterwards. To
-count all connected shapes, build the graph \(G'\) on the insertions in
-which, for every link \(\ell\) and every maximal interval during which
-\(\ell\) is excited, consecutive insertions touching \(\ell\) are joined
-by an edge. Connectedness of the support is connectedness of \(G'\), and
-the edges attached to a given link tile its excitation intervals without
-overlap, so for any spanning tree \(T\subseteq G'\)
-\[\sum_{e\in T}|\Delta\tau_e|\ \le\ |\operatorname{supp}\gamma|,\qquad\text{hence}\qquad
-e^{-(\varepsilon-\lambda)|\operatorname{supp}\gamma|}\le\prod_{e\in T}e^{-(\varepsilon-\lambda)|\Delta\tau_e|}.\]
-Each insertion has at most eight slots for \(G'\)-edges, the previous
-and next toucher of each of its four links, so \(T\) is a rooted tree
-with children in labelled slots: at most \(4^n\) plane shapes times
-\(8^{n-1}\) slot assignments. Given the parent and the slot, the child
-plaquette contains the slot's link and differs from the parent, at most
-\(3\) choices; the excited set after it, at most \(16\); the insertion
-factor \(2Ne/g^2\); and the edge time integral
-\(\int_0^\infty e^{-(\varepsilon-\lambda)\Delta\tau}d\Delta\tau=1/(\varepsilon-\lambda)\),
-the time direction being fixed by the slot. The per-vertex factor is
-\[u_{\rm gen}=32\cdot3\cdot16\cdot\frac{2Ne}{g^2}\cdot\frac1{\varepsilon-\lambda}
-=\frac{3072Ne}{g^2(\varepsilon-\lambda)}=24\,u ,\] and the sum over all
-connected shapes through a fixed link is bounded by the adjacent-growth
-sum with \(u\) replaced by \(24u\); the overlap factor of Section 2
-loses its \(1/4\) because only one link's decay is used per edge, so the
-second condition reads \(Q\le\varepsilon-\lambda\). The loss against
-adjacent growth is the factor \(24\), coming from the tree entropy
-\(32\), the \(3\) plaquettes per slot and the single-link decay in place
-of \(1/(4(\varepsilon-\lambda))\). Both counts are given below; the
-general one is rigorous as written, the adjacent one is what a careful
-count of the same shapes should approach.
+\textbf{Correction (2026-10-02), shift measure:} For one interval of
+length \(x'_k\) on link \(\ell\) in \(\gamma'\), the allowed
+translations overlapping \(\gamma\) have measure at most
+\[T_\ell(\gamma)+r_\ell(\gamma)x'_k.\] Indeed, an interval of length
+\(L_i\) in \(\gamma\) gives a translation interval of length
+\(L_i+x'_k\); take the union bound over all \(r_\ell\) intervals. The
+former \(T_\ell+x'_k\) expression omitted this multiplicity.
 
-\hypertarget{numbers-for-su3}{%
-\subsection{\texorpdfstring{4. Numbers for
-\(SU(3)\)}{4. Numbers for SU(3)}}\label{numbers-for-su3}}
+Define the majorant over \textbf{all} connected shapes reaching a test
+link, without requiring their first plaquette to contain it:
+\[Q_\lambda=\sup_{\ell_0}\sum_{\substack{\text{shapes}\ \exists k:\ell_0\in S_k}}
+(n-1)h^n\prod_{k=1}^{n-1}\frac1{\delta|S_k|}.\] It bounds the same
+integral summed over marked intervals \(k\) containing \(\ell_0\). Its
+length-marked version is at most \(Q_\lambda/(4\delta)\), since, term by
+term, \[\int_0^\infty e^{-\delta|S|x}\,dx=\frac1{\delta|S|},\qquad
+\int_0^\infty x e^{-\delta|S|x}\,dx
+=\frac1{(\delta|S|)^2}\le\frac1{4\delta}\frac1{\delta|S|}.\] The
+chronological internal-time domain has been enlarged to the full
+positive orthant. Summing the overlap union bound over links gives
+\[\int_{\gamma'\not\sim\gamma}|w(\gamma')|e^{a(\gamma')}\,d\gamma'
+\le Q_\lambda A(\gamma)+\frac{Q_\lambda}{4\delta}\sum_\ell r_\ell(\gamma)
+\le Q_\lambda A(\gamma)+\frac{Q_\lambda}{\delta}n(\gamma).\] Thus the
+corrected sufficient conditions are
+\[Q_\lambda\le\lambda,\qquad Q_\lambda\le\delta.\] The former second
+condition \(Q_\lambda\le4\delta\) lost a factor four. These are
+conditional sufficient inequalities, not a proof that the actual
+\(Q_\lambda\) is finite or small.
 
-With \(N=3\), \(\varepsilon=2g^2/3\) and
-\(\lambda=\varepsilon(1-\theta)\),
-\[u=\frac{128\cdot3e}{g^2\cdot\theta\cdot2g^2/3}=\frac{576e}{\theta g^4}=\frac{1566}{\theta g^4}.\]
-Impose \(u\le\frac12\) and, for the first condition of Section 2,
-\(\frac{8Ne}{g^2}\cdot4u\le\lambda\), that is
-\(96e\cdot\frac{1566}{\theta g^4}\le\frac23g^2(1-\theta)\cdot g^2/g^2\);
-cleaning up,
-\[g^4\ \ge\ \frac{3132}{\theta}\qquad\text{and}\qquad g^8\ \ge\ \frac{6.13\times10^5}{\theta(1-\theta)},\]
-the second condition of Section 2 being weaker. Hence:
+\subsection{3. What the shape counts actually
+establish}\label{what-the-shape-counts-actually-establish}
 
-\begin{longtable}[]{@{}lll@{}}
+\textbf{Adjacent growth with the first plaquette anchored.} Fix a link
+\(\ell_0\) and restrict to histories whose first plaquette contains it
+and whose later insertions touch the current excited set. There are four
+initial plaquettes; \(S_1\) is forced. Each later insertion has at most
+\(4|S_{k-1}|\) plaquette choices and \(16\) support choices. The
+preceding interval integral cancels \(|S_{k-1}|\), giving
+\[u=\frac{64h}{\delta}=\frac{384e}{g^2\delta}.\] For this restricted
+class the weighted sum with multiplier \(n-1\), denoted \(B_\lambda\)
+rather than \(Q_\lambda\), obeys \[B_\lambda\le4h\sum_{m\ge1}mu^m
+=\frac{24e}{g^2}\frac{u}{(1-u)^2},\qquad u<1.\] This is a valid
+overcount of the restricted class.
+
+\textbf{Correction (2026-10-02), missing roots:} Even within adjacent
+growth, a polymer can start away from \(\ell_0\) and reach it later.
+Thus \(B_\lambda\) does not bound \(Q_\lambda\). Rooting at the first
+insertion that touches \(\ell_0\) requires controlling both the earlier
+and later history. No such estimate is supplied here. Even a gas
+restricted to adjacent growth still needs this additional root estimate
+for KP.
+
+\textbf{General shapes and the proposed tree count.} A later insertion
+can start a disjoint piece that is subsequently bridged. Join
+consecutive insertions touching each link during a maximal excitation
+interval. For a connected insertion graph and any spanning tree \(T\),
+distinct edges assigned to a link cover nonoverlapping subintervals, so
+\[\sum_{e\in T}|\tau_{i(e)}-\tau_{j(e)}|\le A(\gamma),\qquad
+e^{-\delta A(\gamma)}\le\prod_{e\in T}e^{-\delta|\tau_{i(e)}-\tau_{j(e)}|}.\]
+This energy inequality is valid with a specified link assignment. Each
+insertion has at most eight predecessor/successor link slots. It does
+not establish the originally quoted complete tree majorant.
+
+\textbf{Correction (2026-10-02), general count withdrawn:} The old
+expression \[u_{\rm gen}=32\cdot3\cdot16\,\frac{h}{\delta}
+=\frac{9216e}{g^2\delta}=24u\] was presented as rigorous. A child
+insertion may use the \textbf{same} plaquette as its parent: creating
+and then annihilating a single plaquette loop is already an example. A
+fixed parent link therefore allows four plaquettes, not three. More
+substantially, the rooted link/interval multiplicities and time-length
+marks in §2 were not counted. A tree edge need not be a consecutive
+\emph{global} time gap, so replacing every chronological denominator by
+a tree-edge integral \(1/\delta\) does not justify the length-marked
+bound. The assertion that the overlap criterion follows with
+\(Q\le\delta\) under this tree count is withdrawn. Changing three to
+four alone would give \(32u\) in this formal expression, but is not a
+repair of the missing proof. A usable general estimate must bound both
+the interval-marked integral and its length-marked counterpart, or give
+another proved overlap majorant. Neither \(24u\) nor \(32u\) is a
+certified general counting factor.
+
+\subsection{4. Numerical estimates and the spectral
+implication}\label{numerical-estimates-and-the-spectral-implication}
+
+Write \(\lambda=\varepsilon(1-\theta)\), \(\delta=\varepsilon\theta\),
+\(0<\theta<1\). The exact restricted factor is
+\[u=\frac{576e}{\theta g^4}.\] For \(u\le1/2\), the proved restricted
+bound is \(B_\lambda\le96e\,u/g^2\). Requiring this bound to be at most
+both \(\lambda\) and \(\delta\) is implied by
+\[g^4\ge\frac{1152e}{\theta},\qquad
+g^8\ge\frac{82944e^2}{\theta\min(\theta,1-\theta)}.\] The old
+\(3132/\theta\) is a rounded upper approximation to \(1152e/\theta\),
+and \(6.13\times10^5\) approximates \(82944e^2\). The second condition
+is not universally weaker as \(\theta\to1\). These inequalities control
+\(B_\lambda\) only. They do not certify KP or a gap.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
-\(\theta\) & threshold \(g^2\) & gap
-\(\ge4\lambda=\frac83g^2(1-\theta)\) \\
+\begin{minipage}[b]{\linewidth}\raggedright
+\(\theta\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+former adjacent threshold \(g^2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+sufficient integer \(g^2\) for the displayed restricted inequalities
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+candidate decay rate \(4\lambda\) (unproved for \(H\))
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(1/2\) & \(79\) & \(\frac43g^2\) \\
-\(1/4\) & \(112\) & \(2g^2\) \\
-\(1/10\) & \(177\) & \(2.4\,g^2\) \\
-\(\theta\to0\) & \(g^2\gtrsim\sqrt{3132/\theta}\) & \(\to\frac83g^2\) \\
+\(1/2\) & \(79\) & \(80\) & \(\frac43g^2\) \\
+\(1/4\) & \(112\) & \(112\) & \(2g^2\) \\
+\(1/10\) & \(177\) & \(177\) & \(2.4g^2\) \\
 \end{longtable}
 
-With the general count, \(u_{\rm gen}=37584/(\theta g^4)\), the
-conditions \(u_{\rm gen}\le\frac12\) and \(4Fu_{\rm gen}\le\lambda\)
-give \(g^4\ge75168/\theta\) and
-\(g^8\ge1.47\times10^7/(\theta(1-\theta))\):
+\textbf{Correction (2026-10-02), constants and table status:}
+\(79^2=6241\) is below \(2304e\), so \(79\) was rounded down even for
+the restricted sufficient condition. The old formal general factor is
+exactly \[24u=\frac{13824e}{\theta g^4},\qquad 13824e\simeq37578.17,\]
+not \(37584\). Its half-factor condition alone is
+\(g^4\ge27648e/\theta\). The following records the old table and the
+correct rounding of that \textbf{formal condition alone}, not thresholds
+for the actual general gas or Hamiltonian:
 
-\begin{longtable}[]{@{}lll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
-\(\theta\) & rigorous threshold \(g^2\) & gap
-\(\ge\frac83g^2(1-\theta)\) \\
+\begin{minipage}[b]{\linewidth}\raggedright
+\(\theta\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+former ``rigorous'' threshold \(g^2\) (withdrawn)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+integer satisfying \(24u\le1/2\) only
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(1/2\) & \(388\) & \(\frac43g^2\) \\
-\(1/4\) & \(548\) & \(2g^2\) \\
-\(1/10\) & \(867\) & \(2.4\,g^2\) \\
+\(1/2\) & \(388\) & \(388\) \\
+\(1/4\) & \(548\) & \(549\) \\
+\(1/10\) & \(867\) & \(867\) \\
 \end{longtable}
 
-The gap here is read off as in
-\href{wilson-strong-coupling-explicit.md}{the Wilson note} §3: running
-the criterion with \(a(\gamma)=n+\lambda|\operatorname{supp}\gamma|\)
-puts a factor \(e^{-\lambda|\operatorname{supp}X|}\) on every cluster, a
-cluster spanning a time interval of length \(t\) has
-\(|\operatorname{supp}|\ge4t\) by Gauss's law, so vacuum-subtracted
-correlations in Euclidean time decay at rate at least \(4\lambda\), and
-for a positive semigroup that is a lower bound on the gap on the cyclic
-subspace of local observables, which in finite volume is everything by
-T1.
+The old accompanying \(g^8\ge1.47\times10^7/[\theta(1-\theta)]\) was
+likewise a formal algebraic estimate from the unproved count; it is not
+retained as a convergence condition. Neither table is a physical-gap
+table. Rates in its last column would be in units \(\hbar c/a\) if
+independently established.
 
-\textbf{Consequence for T2.} The T2 theorem's constant \(\gamma\),
-defined by \(\Delta\ge\gamma(g^2/2)C_2\), is \(4(1-\theta)\) in this
-expansion and tends to \(4\): the gap is the energy of one flux loop,
-four links in the fundamental, up to corrections of relative order
-\(1/g^4\). This agrees with the two-sided strong-coupling statement of
-\href{su3-constants.md}{the SU(3) constants} §2, whose upper side is
-\(12g^2\), and closes the ratio \(18/\gamma\) there to \(4.5\).
+\textbf{True-vacuum spectral lemma (finite volume).} Let \(\psi_0\) be
+the normalized true ground state, \(E_0\) its energy, and \(A\) a
+bounded gauge-invariant multiplication observable. Put
+\(f_A=(A-\langle\psi_0,A\psi_0\rangle)\psi_0\). Suppose for every such
+observable (including ones supported on the whole finite lattice)
+\[0\le\langle f_A,e^{-t(H-E_0)}f_A\rangle\le C_Ae^{-mt},\qquad t\ge0.\]
+Then \(\Delta^{\rm phys}_{a,L}\ge m\hbar c/a\) in the present
+dimensionless time convention.
 
-\hypertarget{why-this-beats-the-time-discretized-argument}{%
-\subsection{5. Why this beats the time-discretized
-argument}\label{why-this-beats-the-time-discretized-argument}}
+\emph{Proof.} The spectral measure \(\mu_A\) of \(f_A\) is positive. If
+it had positive mass on \([0,m-\eta]\) for some \(\eta>0\), its Laplace
+transform would be at least \(\mu_A([0,m-\eta])e^{-(m-\eta)t}\),
+contradicting the assumed bound. Thus every \(f_A\) has zero spectral
+weight below \(m\). These vectors are dense in the physical ground-state
+complement: \(\psi_0>0\) almost everywhere, and any physical \(f\) can
+be approximated by \(A_M\psi_0\) with
+\(A_M=(f/\psi_0)\mathbf1_{\{|f/\psi_0|\le M\}}\), which is bounded and
+gauge invariant. Centering gives the asserted density. Boundedness of
+spectral projections extends their vanishing to that complement. This
+proves the lemma. In infinite volume the same implication needs the
+specified vacuum GNS representation and a dense observable domain.
 
-Yarotsky's Lemma 3 gives up the decay of every link in the range of a
-perturbed site for a whole step \(t_0\), and \(t_0\ge7\) is forced by
-the entropy of the space-time lattice; the product is
-\(e^{64t_0}\sim e^{450}\) per insertion. In continuous time each excited
-link decays exactly for exactly as long as it is excited, the insertion
-carries no step, and the only entropy is the choice of the next
-plaquette and excited set, which the energy denominator
-\(1/((\varepsilon-\lambda)|S_k|)\) pays for link by link. The threshold
-drops from \(10^{101}\) to \(10^2\) for the same model and the same
-conclusion.
+\textbf{Correction (2026-10-02), missing correlation estimate:} The
+lemma's hypothesis has not been established by this expansion.
+Correlations with external \(\Omega_0\) are not automatically
+true-vacuum correlations. For each finite volume one can obtain the
+latter by placing observables in the interior of a long time slab,
+dividing by \(Z(2T+t)\), and sending \(T\to\infty\). Explicitly, for
+\(A\) centered in the true vacuum,
+\[\frac{\langle\Omega_0,e^{-TH}A^*e^{-tH}Ae^{-TH}\Omega_0\rangle}
+{\langle\Omega_0,e^{-(2T+t)H}\Omega_0\rangle}
+\longrightarrow\langle\psi_0,A^*e^{-t(H-E_0)}A\psi_0\rangle.\] This
+follows from the rank-one ground-state spectral projection and
+\(\langle\psi_0,\Omega_0\rangle>0\); it gives no quantitative decay
+rate. A polymer proof must control the normalized, connected insertion
+expansion uniformly in the boundary distance \(T\) and volume. Also, the
+four-link energy bound for individual physical histories does not by
+itself prove that the union of every correlation cluster has area at
+least \(4t\). The required spanning-cluster estimate and observable
+prefactors must be proved. Consequently \(m=4\lambda\) remains a
+candidate rate, and no volume-uniform \(\gamma\to4\) or ratio
+\(18/\gamma=4.5\) follows here. Only the fixed-volume limit in §1 is
+proved.
 
-\hypertarget{consequence-for-state}{%
-\subsection{6. Consequence for STATE}\label{consequence-for-state}}
+\subsection{5. What remains of the time-discretized
+comparison}\label{what-remains-of-the-time-discretized-comparison}
 
-The T2 theorem for the Kogut--Susskind Hamiltonian now has an explicit
-threshold, \(g^2\ge388\) for \(SU(3)\) rigorously and \(g^2\ge79\) in
-the adjacent-growth class, and an explicit gap approaching the flux-loop
-energy \((8/3)g^2\,\hbar c/a\). Together with the Wilson transfer-matrix
-result, the strong-coupling boundary of the intermediate region is of
-order \(g^2\sim10^2\) for both standard regularizations. The weak side
-remains the crude \(1/g^2\gtrsim10^2\), and the intermediate region
-between them is unchanged.
+\textbf{Correction (2026-10-02):} ``Yarotsky's theorem gives a threshold
+\(10^{101}\)'' and ``this beats it by giving \(10^2\)'' were too strong.
+Yarotsky's theorem provides an existential smallness threshold, not that
+number; the latter is the repository's crude proof-extraction estimate
+in
+\href{strong-coupling-threshold-explicit.md}{strong-coupling-threshold-explicit}
+§§1--2 (repository derivation read). Its assumptions are reproduced
+below so the comparison is checkable, but the estimate is
+\textbf{heuristic}, not a certified sufficient threshold of this note.
+
+Normalize by \(\varepsilon=2g^2/3\). Group the three plaquette
+potentials based at one site: their total norm is at most \(54/g^4\). If
+one assumes a space-time support entropy \(c^n\) with \(c=80e\), a
+per-support-site activity bound \(\rho^n\), and the sufficient condition
+\(\sum_{n\ge1}(ce\rho)^n\le1\), then \(\rho\le1/(2ec)=1/(160e^2)\).
+Assume further the site activity estimates \[\rho_J=e^{-t_0},\qquad
+\rho_I=2e\,t_0\beta\,e^{64t_0}.\] The \(64\) comes from the proposed
+shadow-volume estimate \(|\Lambda_0|^2\) with \(\Lambda_0=\{0,1\}^3\),
+\(|\Lambda_0|=8\). The insertion prefactor follows by minimizing
+\(2\alpha e^{t_0\beta/\alpha}\) over \(\alpha>0\), at
+\(\alpha=t_0\beta\). Thus \(t_0\ge\log(160)+2\) controls \(\rho_J\), and
+choosing \(t_0=7.1\) would require
+\[\beta\le\frac{e^{-454.4}}{160e^2\,2e\cdot7.1},\qquad
+\log\beta\lesssim-465,\qquad
+\log g_0^2=\tfrac12(\log54-\log\beta)\simeq234.5.\] This is roughly
+\(10^{102}\); the former \(10^{101}\) quotation was only an
+order-of-magnitude description. The extraction still needs a proved
+conversion of the full configuration weights and their multiplicities
+into the assumed support-site activity bound; it is not a quantitative
+application of Yarotsky's theorem proved here. In particular
+\(e^{64t_0}\) is the cost in this assumed shadow estimate, not an
+unavoidable cost of every time-discretized method.
+
+The established result used instead is the local-perturbation theorem as
+applied in
+\href{strong-coupling-uniform-gap.md}{strong-coupling-uniform-gap}
+§§1--2 (repository hypothesis check read; Yarotsky's Theorem 1 at the
+passage level recorded there): for sufficiently small \(54/g^4\) there
+is a positive volume-uniform gap, with unspecified constants. Retaining
+exact link decay in continuous time is a plausible way to improve
+constants, but the counts and boundary estimates missing above prevent
+any proved numerical improvement in this note.
+
+\subsection{6. Consequence for STATE}\label{consequence-for-state}
+
+This note no longer supplies an explicit volume-uniform KS threshold
+\(g^2\ge388\), the adjacent value \(79\), or a uniform gap coefficient
+approaching \(8/3\). Its proved outputs are the fixed-volume bound of
+§1, the conditional overlap criterion of §2, and the restricted count of
+§3. The numerical tables are restricted or formal estimates, with their
+status stated at each use. T2 remains supported by the separate
+existential strong-coupling theorem. Any catalog or downstream use of
+this note's old uniform thresholds, including the target-box tolerances,
+needs to inherit this correction. An explicit continuous-time uniform
+threshold requires a complete marked general-history count and a
+normalized true-vacuum correlation bound. This correction changes no
+other note, no STATE file, and makes no weak-coupling or continuum
+claim.
 \end{document}
