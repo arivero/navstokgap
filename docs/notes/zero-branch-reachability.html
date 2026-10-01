@@ -94,20 +94,26 @@ limit different from Newton’s where they cross with equal actions, while
 every smeared record converges to Newton’s branch-weighted density
 (Theorem 2, any finite partition; Theorem 3, exactly, for inertial
 motion with a graded velocity inside its fold interval; Theorem 4, for a
-Kepler swarm whose windings overlap). The gap thesis therefore holds in
-the topology of complete records of determinate preparations wherever
-streams cross, and fails in the topology of smeared records or for
-statistical preparations. Refinement with records is the one Newtonian
-limit in which the zero theory is the regular side. Proofs are written
-derivations by Claude Fable (2026-10-01); the stationary phase, Poisson
-summation and almost-periodicity facts used are standard and named.
-Refereed by GPT-6.1 Sol (Codex) on 2026-10-01: Theorem 1, the Lemma,
-Theorem 2’s expansion and smeared limit, Theorem 3(a), the Poisson step
-and Theorem 4(a) accepted; the frequency condition of Theorem 2(i), the
-resolution and thickness corollaries, the Airy constant and the Kepler
-times refined; the universal late-time claims first made in Theorems
-3(b) and 4(b) rejected by counterexample and replaced by the local
-statements now printed. The corrections are applied below.</p>
+Kepler swarm whose windings overlap). The same swarm attached as an
+incoherent mixture of coherent states whose widths vanish with <span
+class="math inline">\(h\)</span> has a complete record that converges to
+Newton’s branch-weighted density at every fixed time (Theorem 5, exact
+for quadratic forces), so the gap requires coherence between the launch
+points of the crossing streams. The gap thesis therefore holds in the
+topology of complete records of determinate preparations wherever
+streams cross and the preparation is coherent, and fails in the topology
+of smeared records, for statistical preparations, and for incoherent
+attachments. Refinement with records is the one Newtonian limit in which
+the zero theory is the regular side. Proofs are written derivations by
+Claude Fable (2026-10-01); the stationary phase, Poisson summation and
+almost-periodicity facts used are standard and named. Refereed by
+GPT-6.1 Sol (Codex) on 2026-10-01: Theorem 1, the Lemma, Theorem 2’s
+expansion and smeared limit, Theorem 3(a), the Poisson step and Theorem
+4(a) accepted; the frequency condition of Theorem 2(i), the resolution
+and thickness corollaries, the Airy constant and the Kepler times
+refined; the universal late-time claims first made in Theorems 3(b) and
+4(b) rejected by counterexample and replaced by the local statements now
+printed. The corrections are applied below.</p>
 <p>Throughout, <span class="math inline">\(h\)</span> denotes the
 reduced phase constant, as in the <a
 href="rivero-1998-conjecture-central-forces.html">1998-conjecture
@@ -996,6 +1002,176 @@ system. The thesis concerns swarms of <span
 class="math inline">\(h\)</span>-independent extent, which is what the
 complete record of an ensemble describes, and Newton’s single trajectory
 is immune at fixed time.</p>
+<h2 id="c.-theorem-5-the-incoherent-attachment-reaches-zero">4c. Theorem
+5: the incoherent attachment reaches zero</h2>
+<p>The coherence-length proposition of §3c says what a fixed coherence
+length does. This section removes the premise entirely and proves that
+without it the gap is absent: a determinate swarm attached to the <span
+class="math inline">\(h&gt;0\)</span> theory as an incoherent mixture of
+coherent states whose widths vanish with <span
+class="math inline">\(h\)</span> has a complete coordinate record that
+converges to Newton’s branch-weighted density at every fixed time. The
+theorem is exact for quadratic forces, the setting of Theorem 3, where
+the coherent attachment (5) has no limit inside its fold interval. The
+gap of this note therefore requires the coherence premise.</p>
+<p><em>Setting.</em> Let <span class="math inline">\(H=p^2/2m+V\)</span>
+with <span class="math inline">\(\deg V\le2\)</span>, so the classical
+flow <span class="math inline">\(\Phi_t\)</span> is affine with linear
+part <span
+class="math inline">\(M_t=\begin{pmatrix}M_{11}&amp;M_{12}\\M_{21}&amp;M_{22}\end{pmatrix}\)</span>
+independent of the phase point. The swarm is the curve <span
+class="math inline">\(\Lambda=\{(c,p_0(c))\}\)</span>, <span
+class="math inline">\(p_0=S_0&#39;\)</span> smooth, carrying the launch
+density <span class="math inline">\(w\in C_c(\mathbb R)\)</span>, <span
+class="math inline">\(w\ge0\)</span>, <span class="math inline">\(\int
+w=1\)</span>; its classical measure is <span
+class="math inline">\(\mu_\Lambda=w(c)\,\delta(p-p_0(c))\,dc\,dp\)</span>.
+Its arrival map at time <span class="math inline">\(t\)</span> is <span
+class="math display">\[\begin{aligned}
+F_t(c)&amp;=\pi_x\Phi_t(c,p_0(c)),\\
+F_t(c)&amp;=c+\frac{p_0(c)\,t}{m}\ \text{(inertia)},\qquad
+F_t(c)=c\cos\omega t+\frac{p_0(c)\sin\omega t}{m\omega}\ \text{(Hooke)}.
+\end{aligned}\tag{14}\]</span> Newton’s record of the swarm is the
+pushforward <span class="math inline">\((F_t)_*(w\,dc)\)</span>: at a
+regular value <span class="math inline">\(x\)</span> of <span
+class="math inline">\(F_t\)</span>, with preimages <span
+class="math inline">\(q_a\)</span> in the support and <span
+class="math inline">\(F_t&#39;(q_a)\neq0\)</span>, it has the density
+<span class="math inline">\(\sum_aw(q_a)/|F_t&#39;(q_a)|\)</span>, and
+at a critical value it is singular.</p>
+<p>For <span class="math inline">\(h&gt;0\)</span> attach the swarm as
+the mixture <span class="math display">\[\varrho_h=\int
+w(c)\,|\varphi^h_c\rangle\langle\varphi^h_c|\,dc,\qquad
+\varphi^h_c(q)=(2\pi\sigma_h^2)^{-1/4}
+\exp\Big[-\frac{(q-c)^2}{4\sigma_h^2}+\frac{i\,p_0(c)(q-c)}{h}\Big],\tag{15}\]</span>
+coherent states centred at the swarm’s phase points with position width
+<span class="math inline">\(\sigma_h\)</span> and momentum width <span
+class="math inline">\(h/(2\sigma_h)\)</span>, both vanishing with <span
+class="math inline">\(h\)</span>: <span
+class="math inline">\(\sigma_h\to0\)</span> and <span
+class="math inline">\(h/\sigma_h\to0\)</span>, for instance <span
+class="math inline">\(\sigma_h^2=h\ell\)</span> with a fixed length
+<span class="math inline">\(\ell\)</span>. The Wigner function of <span
+class="math inline">\(\varphi^h_c\)</span> is the Gaussian with mean
+<span class="math inline">\((c,p_0(c))\)</span> and covariance <span
+class="math inline">\(\Sigma_h=\mathrm{diag}(\sigma_h^2,\,h^2/4\sigma_h^2)\)</span>;
+the Wigner function of <span class="math inline">\(\varrho_h\)</span> is
+its <span class="math inline">\(w\)</span>-average, a positive density
+that converges weakly to <span
+class="math inline">\(\mu_\Lambda\)</span>. So (15) is the same
+determinate swarm, attached without coherence between centres.</p>
+<p><strong>Theorem 5 (coherence necessity).</strong> Under the setting
+above, at every fixed <span class="math inline">\(t\)</span> put <span
+class="math inline">\(s_t(h)^2=M_{11}^2\sigma_h^2+M_{12}^2h^2/(4\sigma_h^2)\)</span>,
+so that <span class="math inline">\(s_t(h)\to0\)</span>. Then: (a) the
+complete coordinate record of (15) is exactly <span
+class="math display">\[\rho_h(x,t)=\int
+w(c)\,N\big(x;\,F_t(c),\,s_t(h)^2\big)\,dc,\tag{16}\]</span> a positive
+density with no oscillatory term; (b) <span
+class="math inline">\(\rho_h(\cdot,t)\to(F_t)_*(w\,dc)\)</span> weakly
+as <span class="math inline">\(h\to0\)</span>, and at every regular
+value <span class="math inline">\(x\)</span> of <span
+class="math inline">\(F_t\)</span>, with <span
+class="math inline">\(w\)</span> continuous, <span
+class="math display">\[\rho_h(x,t)\longrightarrow\sum_a\frac{w(q_a)}{|F_t&#39;(q_a)|}
+\qquad(h\to0),\tag{17}\]</span> Newton’s branch-weighted density, the
+convergence being uniform on compact sets of regular values; at a
+critical value both <span class="math inline">\(\rho_h\)</span> and the
+classical density diverge; (c) in the setting of Theorem 3, inertia with
+<span class="math inline">\(w=a^2\)</span> inside the fold interval, the
+incoherent attachment converges on the three-stream interval to <span
+class="math inline">\(\sum_aa(q_a)^2/|1+p_0&#39;(q_a)t/m|\)</span>,
+where the coherent attachment (5) has no limit unless cross amplitudes
+cancel. The two attachments have the same classical limit on smeared
+records, by Theorem 2(ii), and differ only in the complete record. The
+gap of Theorems 2–4 therefore requires coherence between the launch
+points of the crossing streams, and the coherence-length factor <span
+class="math inline">\(e^{-\Delta q_0^2/(8\sigma_h^2)}\)</span> of §3c
+tends to zero along (15).</p>
+<p><em>Proof.</em> (a) For <span class="math inline">\(\deg
+V\le2\)</span> the Wigner function of every state is transported by the
+classical affine flow (<a
+href="principia-fifth-postulate.html">fifth-postulate note, Theorem
+A(b)</a>), so the Wigner function of <span
+class="math inline">\(U_h(t)\varphi^h_c\)</span> is the Gaussian with
+mean <span class="math inline">\(\Phi_t(c,p_0(c))\)</span> and
+covariance <span class="math inline">\(M_t\Sigma_hM_t^{\sf T}\)</span>,
+whose position marginal is the Gaussian <span
+class="math inline">\(N(x;F_t(c),s_t(h)^2)\)</span> with <span
+class="math inline">\(s_t(h)^2=(M_t\Sigma_hM_t^{\sf T})_{11}\)</span>,
+the displayed expression. Densities of a mixture add with the mixture’s
+weights, which gives (16). Since <span
+class="math inline">\(M_t\)</span> does not depend on the phase point,
+<span class="math inline">\(s_t(h)\)</span> does not depend on <span
+class="math inline">\(c\)</span>, and <span
+class="math inline">\(s_t(h)\to0\)</span> because <span
+class="math inline">\(\sigma_h\to0\)</span> and <span
+class="math inline">\(h/\sigma_h\to0\)</span>. (b) <em>Weak
+convergence.</em> For bounded continuous <span
+class="math inline">\(g\)</span>, <span class="math inline">\(\int
+g\rho_h\,dx=\int w(c)\big[\int g(x)N(x;F_t(c),s_t^2)dx\big]dc\)</span>;
+the inner integral tends to <span
+class="math inline">\(g(F_t(c))\)</span> for every <span
+class="math inline">\(c\)</span> and is bounded by <span
+class="math inline">\(\sup|g|\)</span>, so dominated convergence gives
+<span class="math inline">\(\int w(c)g(F_t(c))dc=\int
+g\,d(F_t)_*(w\,dc)\)</span>. <em>Pointwise convergence.</em> Let <span
+class="math inline">\(x\)</span> be a regular value and <span
+class="math inline">\(q_1,\ldots,q_K\)</span> its preimages in <span
+class="math inline">\(\operatorname{supp}w\)</span>, finitely many
+because they are isolated in a compact set. Choose disjoint
+neighbourhoods <span class="math inline">\(U_a\)</span> of the <span
+class="math inline">\(q_a\)</span> on which <span
+class="math inline">\(F_t\)</span> is a diffeomorphism onto a
+neighbourhood of <span class="math inline">\(x\)</span>, and <span
+class="math inline">\(\eta&gt;0\)</span> with <span
+class="math inline">\(|F_t(c)-x|\ge\eta\)</span> for <span
+class="math inline">\(c\in\operatorname{supp}w\setminus\bigcup_aU_a\)</span>,
+which exists because that set is compact and contains no preimage. The
+contribution of that set to (16) is at most <span
+class="math inline">\(\|w\|_\infty|\operatorname{supp}w|\,(2\pi
+s_t^2)^{-1/2}e^{-\eta^2/2s_t^2}\to0\)</span>. On <span
+class="math inline">\(U_a\)</span> substitute <span
+class="math inline">\(u=F_t(c)\)</span>: <span
+class="math inline">\(\int_{U_a}w(c)N(x;F_t(c),s_t^2)dc=\int
+w(F_t^{-1}(u))\,N(x;u,s_t^2)\,
+\frac{du}{|F_t&#39;(F_t^{-1}(u))|}\to\frac{w(q_a)}{|F_t&#39;(q_a)|}\)</span>
+by continuity of the integrand at <span
+class="math inline">\(u=x\)</span>. Summing over <span
+class="math inline">\(a\)</span> gives (17). The estimates are uniform
+for <span class="math inline">\(x\)</span> in a compact set of regular
+values, on which <span class="math inline">\(\eta\)</span> and the
+neighbourhoods can be chosen uniformly. At a critical value the
+substitution fails and the Gaussian mass near the fold scales like <span
+class="math inline">\(s_t^{-1/2}\)</span>, while the classical density
+is infinite there. (c) For inertia <span
+class="math inline">\(M_t=\begin{pmatrix}1&amp;t/m\\0&amp;1\end{pmatrix}\)</span>,
+so <span
+class="math inline">\(s_t(h)^2=\sigma_h^2+t^2h^2/(4m^2\sigma_h^2)\to0\)</span>
+and <span class="math inline">\(F_t&#39;(c)=1+p_0&#39;(c)t/m\)</span>;
+the regular values are the points off the two fold values, and (17) is
+the stated three-branch density. Theorem 3(b) gives the coherent
+attachment’s behaviour, Theorem 2(ii) the common smeared limit, and the
+coherence-length proposition the factor <span
+class="math inline">\(e^{-\Delta q_0^2/(8\sigma_h^2)}\)</span>, which
+tends to zero as <span class="math inline">\(\sigma_h\to0\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p><em>Scope.</em> The theorem is exact for quadratic forces, which
+include the free fold of Theorem 3 and Hooke’s laboratory record. For a
+general smooth force the same conclusion, in the weak form of (b),
+follows at fixed time from the semiclassical propagation of coherent
+states along classical trajectories [<span class="citation"
+data-cites="Hepp1974">@Hepp1974</span>; metadata] or from the transport
+of Wigner measures [<span class="citation"
+data-cites="LionsPaul1993">@LionsPaul1993</span>; metadata], under the
+hypotheses those theorems place on the potential; Kepler’s <span
+class="math inline">\(1/r\)</span> lies outside the usual symbol
+classes, and the angle-record model of Theorem 4 with a polynomially
+controlled <span class="math inline">\(E\)</span> lies inside them.
+Those extensions are cited, not proved here. What is proved is the
+statement the thesis needs: in the very setting where the coherent
+attachment shows the gap, the incoherent attachment of the same
+determinate swarm does not.</p>
 <h2 id="all-time-invariants">5. All-time invariants</h2>
 <p>Two quantities already in the corpus show the other non-commuting
 pair of limits, <span class="math inline">\(h\to0\)</span> against <span
@@ -1080,9 +1256,11 @@ components of any <span class="math inline">\(h\)</span>-independent
 coherence length <span class="math inline">\(\sigma\)</span> keep the
 <span class="math inline">\(h\)</span>-independent partial contrast
 <span class="math inline">\(e^{-\Delta q_0^2/(8\sigma^2)}\)</span>
-(coherence-length proposition, §3c): the second premise is mutual
-coherence between the launch points of crossing streams at each <span
-class="math inline">\(h\)</span>.</li>
+(coherence-length proposition, §3c), and the incoherent attachment with
+vanishing widths converges to Newton’s density at every fixed time
+(Theorem 5): the second premise is mutual coherence between the launch
+points of crossing streams at each <span
+class="math inline">\(h\)</span>, and it is necessary.</li>
 </ul>
 <p>The thesis is therefore exactly as strong as two premises: that
 records are complete, the densities themselves rather than their
@@ -1152,18 +1330,21 @@ record-limit-first order and determinate preparations as Newton’s
 default together with an <span
 class="math inline">\(h\)</span>-independent coherence length between
 the launch points of crossing streams, are the gap’s hypotheses and the
-next things to defend, the first with the Leibniz records reading. The
-referee’s scope verdict stands: no universal persistence after folds or
-lapping, no necessary resolution threshold, and no positive Newtonian
-action scale are proved here. Further exact cases available: the radial
-record of a Hooke swarm at a turning passage, and the classical-first
-route read with <span class="math inline">\(\varepsilon\)</span> in
-place of <span class="math inline">\(h\)</span>, where Theorem 2(i) says
-the unselected construction at zero exists only for single-path
-problems. Reject a gap argument run inside a deformation family, on
-Gaussian preparations of the parabola, or on smeared records, and reject
-presenting the non-commutation of <span
-class="math inline">\(h\to0\)</span> with <span
+next things to defend, the first with the Leibniz records reading.
+Theorem 5 proves that the gap requires the coherence premise: the
+incoherent attachment of the same swarm, with widths vanishing with
+<span class="math inline">\(h\)</span>, reaches Newton’s density at
+every fixed time, exactly for quadratic forces. The referee’s scope
+verdict stands: no universal persistence after folds or lapping, no
+necessary resolution threshold, and no positive Newtonian action scale
+are proved here. Further exact cases available: the radial record of a
+Hooke swarm at a turning passage, and the classical-first route read
+with <span class="math inline">\(\varepsilon\)</span> in place of <span
+class="math inline">\(h\)</span>, where Theorem 2(i) says the unselected
+construction at zero exists only for single-path problems. Reject a gap
+argument run inside a deformation family, on Gaussian preparations of
+the parabola, or on smeared records, and reject presenting the
+non-commutation of <span class="math inline">\(h\to0\)</span> with <span
 class="math inline">\(t\to\infty\)</span> as a record without an
 observable.</p>
 
