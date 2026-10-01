@@ -366,9 +366,14 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    width; an evolving mode instead has an exact positive non-Gaussian
    forward completion. A nonlinear copy generates a quartic tail outside
    finite modes and an exact unread recoil cost (Sol/Astra, written,
-   internally checked). Next: full-field constraint dynamics on that
-   orbit, with force/switch energy and record labels retained; the
-   two-unread-width apparatus test remains open.
+   internally checked). Its §§6--8 (Fable, written, unrefereed) realize
+   the two-sheet dynamics on every positive solution and for all forward
+   time on that orbit, with exact mean cancellation of force and switch
+   power; the controller is the field pair and the record history, branch
+   controllers pass the two-unread-width test against a variance witness,
+   and closure under coordinate copies holds at every $\kappa\ge0$. The
+   apparatus-closure route to positivity is closed; the zero branch is
+   the autonomous branch.
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.

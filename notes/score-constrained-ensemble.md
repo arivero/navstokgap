@@ -1,14 +1,20 @@
 # Score-constrained ensembles and population transport
 
-**Restart, 2026-10-01.** Sections 1–5 are written and internally checked:
-the constrained action, compact-shape obstruction, positive non-Gaussian
-forward orbit and nonlinear-copy recoil/tail test are established within
-their stated models. The unfinished calculation is a dynamical
-two-sheet realization on (18), retaining actual velocities and all
-force/switch energy. Start with the proposed balance equations in the
-[Claude handout](../research/handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md),
-which are candidate calculations, then test unread labels. Physical
-constraint enforcement and positive action selection have not been derived.
+**Status, 2026-10-01 (evening).** Sections 1–5 (Sol/Astra) give the
+constrained action, compact-shape obstruction, positive non-Gaussian
+forward orbit and nonlinear-copy recoil/tail test. Sections 6–8 (Claude
+Fable) derive the two-sheet dynamical realization on any positive
+solution and on (18): balance, force, impulses, exact mean energy
+cancellation and all-time nonexplosion (Propositions 7–8), then prove
+that its controller is the field pair and the record history
+(Proposition 9, Corollary 10), pass the two-unread-width test with
+branch controllers and give a coordinate witness against a marginal-score
+controller (Proposition 11), and show closure at every $\kappa\ge0$
+(Proposition 12). Verdict (§8): the realization is a stochastic
+pilot-wave representation of the supplied law; the route from apparatus
+closure to positive action is closed, and the zero branch is exactly
+the autonomous branch. Physical constraint enforcement and positive
+action selection have not been derived.
 
 Restricting the ordinary action of two classical phase sheets to the
 shared-score preparations gives the canonical Fisher field action
@@ -419,22 +425,374 @@ requires work from its actuator; a closed energy-supplying apparatus
 has not been derived. Full conjugate access remains the distinct
 terminal escape (140). None of these formulas selects $\kappa>0$.
 
-## 6. Consequence for STATE
+## 6. The two-sheet realization on any positive solution
+
+The handout's candidate balance equations are now derived and checked
+on every smooth positive solution of (4), with the explicit orbit (18)
+as the test case. From here on $v=S_q/m$ is the mean velocity and
+$$d=\frac{\kappa}{m}\partial_q\log\rho,\qquad
+p_\sigma=m(v+\sigma d),\qquad\sigma\in\{+1,-1\},\tag{24}$$
+so that $p_\sigma=W_{\sigma,q}$ in (2). A smooth external potential
+$U(q,t)$ is allowed: it adds $-U$ to the right side of (4)'s second
+equation and $\int\rho U\,dq$ to $\mathcal H$. The two sheet velocities
+$v\pm d$ are the forward and backward mean velocities of Nelson's
+stochastic mechanics with diffusion coefficient $\kappa/m$
+[@Nelson1966; reading: abstract, as in the
+[stochastic route](stochastic-route-velocitas-ultima.md)]. The
+realization below replaces his Brownian motion by one sign that switches
+at a finite rate, as §8.23 of the recording note did for the Gaussian.
+The proofs are written derivations by Claude Fable (2026-10-01),
+checked against (146)--(149); they are unrefereed.
+
+**Proposition 6 (sheet field equations).** On a smooth positive
+solution of (4) with potential $U$,
+$$\begin{aligned}
+v_t+vv_q&=-\frac{U_q}{m}+\frac\kappa m\,d_{qq}+d\,d_q,\\
+d_t+v\,d_q+d\,v_q&=-\frac\kappa m\,v_{qq}.
+\end{aligned}\tag{25}$$
+
+*Proof.* Put $L=\log\rho$, so $(\sqrt\rho)_{qq}/\sqrt\rho
+=\tfrac12L_{qq}+\tfrac14L_q^2$. Differentiating (4)'s second equation
+in $q$ and dividing by $m$ gives
+$v_t=-vv_q-U_q/m+(\kappa^2/m^2)(L_{qqq}+L_qL_{qq})$, which is the
+first line because $(\kappa/m)d_{qq}=(\kappa^2/m^2)L_{qqq}$ and
+$dd_q=(\kappa^2/m^2)L_qL_{qq}$. Continuity gives $L_t=-v_q-vL_q$;
+its $q$-derivative times $\kappa/m$ is the second line. $\square$
+
+**Proposition 7 (two-sheet realization: balance, force, energy).** Let
+$(Q_t,\Sigma_t)$ be a process on $\mathbb R\times\{\pm1\}$ with
+velocity $\dot Q=v+\Sigma d$ between sign jumps, rate
+$\lambda_\sigma(q,t)$ from $\sigma$ to $-\sigma$, and carried momentum
+$P_t=p_{\Sigma_t}(Q_t,t)$.
+
+(i) *Balance.* The joint law is $\rho(q,t)/2$ for each sign at every
+time iff
+$$\lambda_--\lambda_+=\frac\kappa m\frac{\rho_{qq}}{\rho};\qquad
+\lambda_\sigma=\frac\kappa m\Big(-\sigma\frac{\rho_{qq}}{\rho}\Big)_+
+\ \text{is the minimal nonnegative choice.}\tag{26}$$
+
+(ii) *Force and impulse.* Between jumps $P$ changes by
+$$F_\sigma=-U_q+\kappa d_{qq}+2m\,d\,d_q-\sigma\kappa v_{qq}
+=-\partial_qV_\sigma,\qquad
+V_\sigma=U-\frac{\kappa^2}{m}\frac{\rho_{qq}}{\rho}
++\sigma\frac\kappa m S_{qq},\tag{27}$$
+and at a jump $\sigma\to-\sigma$ by
+$\Delta p=-2\sigma md=-2\sigma\kappa\,\partial_q\log\rho$. The symmetric
+part of the sheet potential is the rate difference in action units:
+$\tfrac12(V_++V_-)-U=-\kappa(\lambda_--\lambda_+)$.
+
+(iii) *Energy.* With $K_\sigma=p_\sigma^2/(2m)$, pathwise
+$dK/dt=F_\Sigma\dot Q$ between jumps and $\Delta K=-2\Sigma\,mvd$ at a
+jump. In the mean, the $\kappa$-dependent part of the force and the
+jumps have powers
+$$\begin{aligned}
+W_F^{\kappa}&=\int\rho\,[\kappa v d_{qq}+2mv d d_q-\kappa d v_{qq}]\,dq,\\
+W_J&=\sum_\sigma\int\frac\rho2\lambda_\sigma(K_{-\sigma}-K_\sigma)\,dq
+ =\kappa\int v\,d\,\rho_{qq}\,dq,\qquad W_F^{\kappa}+W_J=0,
+\end{aligned}\tag{28}$$
+at every time, so that $\frac{d}{dt}E[K]=-\int\rho vU_q\,dq
+=d\mathcal H_{\rm kin}/dt$. Individual trajectories exchange energy
+with the actuator and at jumps; the ensemble mean does not.
+
+*Proof.* (i) The forward equation for the density $n_\sigma$ of
+$(Q,\Sigma=\sigma)$ is
+$\partial_tn_\sigma+\partial_q(n_\sigma(v+\sigma d))
+=-\lambda_\sigma n_\sigma+\lambda_{-\sigma}n_{-\sigma}$. With
+$n_\sigma=\rho/2$ and continuity, the left side is
+$\tfrac\sigma2\partial_q(\rho d)=\tfrac{\sigma\kappa}{2m}\rho_{qq}$
+and the right side is $\tfrac\rho2(\lambda_{-\sigma}-\lambda_\sigma)$.
+The two signs give one equation and its negative. Given a difference,
+the nonnegative solutions are the displayed pair plus a common
+nonnegative rate.
+(ii) Along the sheet flow,
+$dP/dt=m\,[\partial_t+(v+\sigma d)\partial_q]\,(v+\sigma d)
+=m[(v_t+vv_q)+\sigma(d_t+vd_q+dv_q)+dd_q]$; insert (25). For the
+potential, $\kappa d_q+md^2=(\kappa^2/m)(L_{qq}+L_q^2)
+=(\kappa^2/m)\rho_{qq}/\rho$ and $\kappa v_q=(\kappa/m)S_{qq}$.
+The jump changes $\sigma d$ to $-\sigma d$.
+(iii) The pathwise statements restate (ii). For the mean, apply the
+generator to $g=K_\sigma(q,t)$: $\partial_tg+(v+\sigma d)\partial_qg
+=(v+\sigma d)F_\sigma$, and
+$K_{-\sigma}-K_\sigma=-2\sigma mvd$, so
+$W_J=\int\rho\,mvd(\lambda_--\lambda_+)\,dq=\kappa\int vd\rho_{qq}\,dq$.
+The identity $W_F^\kappa+W_J=0$ is verified directly: with
+$\rho d=(\kappa/m)\rho_q$, $\rho_{qq}=\rho(L_{qq}+L_q^2)$ and
+$\rho_{qqq}=\rho(L_{qqq}+3L_qL_{qq}+L_q^3)$,
+$$W_F^\kappa+W_J=\frac{\kappa^2}{m}\int\big[
+ v\rho_{qqq}-\rho_qv_{qq}\big]dq=0$$
+after two integrations by parts with vanishing boundary terms. Since
+$E[K]=\int\rho\,\tfrac m2(v^2+d^2)\,dq=\mathcal H_{\rm kin}$, the last
+statement is the energy balance of (4) with potential. $\square$
+
+On the Gaussian (145) one has $v=ax$, $d=-bx$, $d_{qq}=v_{qq}=0$ and
+$\rho_{qq}/\rho=(z^2-1)/B$, so (26)--(28) reduce to (146), (148) and
+(149): $F_\sigma=2mb^2x=2\kappa^2x/(mB^2)$,
+$\lambda_+=b(1-z^2)_+$ and $W_J=-2mab^2B$. Three independent
+features are worth stating. The force is sign-dependent exactly through
+$-\sigma\kappa v_{qq}$, so it is sign-independent iff the mean velocity
+is affine; the Gaussian hid this. The force is a gradient of a potential
+that contains $\rho_{qq}/\rho$ rather than the quantum potential
+$-(2\kappa^2/m)(\sqrt\rho)_{qq}/\sqrt\rho$; the two differ by
+$-\tfrac m2d^2$, the sheet kinetic excess. And every trajectory of a
+state with zero mean current ($v\equiv0$, for instance a trapped ground
+state) exchanges no energy at all, since both powers in (28) carry the
+factor $v$.
+
+**Proposition 8 (nonexplosion on the explicit orbit, all forward
+time).** For (18) write $z=q/\sqrt B$, $s=\arctan u$, and
+$P(z,s)=1+2\epsilon\sin(2s)H_2+\epsilon^2H_2^2=|F|^2$, the factor of
+Proposition 4, so $\rho=\rho_GP/(1+\epsilon^2)$. Then
+$$\partial_z\log P=\frac{2\sqrt2\,\epsilon z\,(\sin2s+\epsilon H_2)}{P},
+\qquad
+\partial_z\operatorname{Arg}F=\frac{\sqrt2\,\epsilon z\cos2s}{P},\tag{29}$$
+and in the clock $s$ the sheet motion and rates read
+$$\frac{dz}{ds}=-\sigma z+r_\sigma(z,s),\quad
+r_\sigma=2\partial_z\operatorname{Arg}F+\sigma\partial_z\log P,\quad
+\frac{\lambda_\sigma}{b}=\Big(-\sigma B\frac{\rho_{qq}}{\rho}\Big)_+
+\le c_\epsilon(1+z^2),\tag{30}$$
+with $|r_\sigma|\le r_\epsilon$ and $c_\epsilon$ finite constants
+depending only on $\epsilon$; explicitly
+$|\partial_z\log P|\le\max\{4\sqrt2\epsilon/(1-\epsilon/\sqrt2),8/3\}$.
+Hence $|z(s)|\le(|z_0|+\tfrac\pi2r_\epsilon)e^{\pi/2}$ for all
+$t\ge0$, the hazard integrated over the entire forward half-line is at
+most $\tfrac\pi2c_\epsilon(1+\sup z^2)<\infty$ given $Z_0$, the sign
+jumps are almost surely finitely many on $[0,\infty)$, and the process
+of Proposition 7 exists for all forward time with law (18). The orbit is
+even in $q$, so $v(0,t)=d(0,t)=0$: the origin is invariant for both
+sheets and no trajectory crosses it.
+
+*Proof.* With $H_2'=\sqrt2z$, $P_z=2\epsilon H_2'(\sin2s+\epsilon H_2)$
+gives the first formula of (29). For the phase,
+$\partial_z\operatorname{Arg}F=(\operatorname{Re}F\,\partial_z\operatorname{Im}F
+-\operatorname{Im}F\,\partial_z\operatorname{Re}F)/P$ with
+$\operatorname{Re}F=1+\epsilon\sin(2s)H_2$,
+$\operatorname{Im}F=\epsilon\cos(2s)H_2$; the products of $H_2H_2'$
+cancel and leave $\epsilon\cos(2s)H_2'/P$. For the bound, note
+$P=(\sin2s+\epsilon H_2)^2+\cos^22s$, so
+$|\sin2s+\epsilon H_2|\le\sqrt P$ and
+$|\partial_z\log P|\le2\sqrt2\epsilon|z|/\sqrt P$. For $|z|\le2$ use
+$P\ge(1-\epsilon/\sqrt2)^2$ from (18). For $|z|\ge2$, $H_2\ge0$ and
+$\sin2s\ge0$ give $P\ge\epsilon^2H_2^2$ with
+$H_2\ge3z^2/(4\sqrt2)$, so $|\partial_z\log P|\le16/(3|z|)\le8/3$.
+The same two regions bound $\partial_z\operatorname{Arg}F$ and
+$\partial_z^2\log P=P_{zz}/P-(P_z/P)^2$, where
+$P_{zz}=2\sqrt2\epsilon(\sin2s+\epsilon H_2+\sqrt2\epsilon z^2)$.
+Now $S_q=\kappa uq/B+2\kappa B^{-1/2}\partial_z\operatorname{Arg}F$
+and $\partial_q\log\rho=B^{-1/2}(-z+\partial_z\log P)$, so with
+$a=ub$,
+$v=\sqrt B\,(az+2b\,\partial_z\operatorname{Arg}F)$ and
+$d=\sqrt B\,b\,(-z+\partial_z\log P)$. Then
+$\dot z=(v+\sigma d)/\sqrt B-az
+=b[-\sigma z+2\partial_z\operatorname{Arg}F+\sigma\partial_z\log P]$,
+and $ds=b\,dt$ gives (30). Also
+$B\rho_{qq}/\rho=(-1+\partial_z^2\log P)+(-z+\partial_z\log P)^2$,
+which is bounded by $c_\epsilon(1+z^2)$. Grönwall on
+$(|z|)'\le|z|+r_\epsilon$ gives the growth bound; the clock runs only
+to $s=\pi/2$ over the whole physical half-line. Conditional on $Z_0$,
+successive hazard clocks are dominated by one Poisson clock of finite
+rate, as in the proof of Proposition 21 of the recording note, which
+proves existence and nonexplosion; uniqueness of the forward solution
+with locally bounded rates identifies the law as $\rho/2$ per sign.
+Evenness of (18) in $q$ gives the invariance of the origin. $\square$
+
+Two limits of this realization are explicit. It needs $\rho>0$:
+at a node, $d$ and the rates diverge, and (18) is positive only
+forward in time. And it supplies no crossing, exactly as (145)--(148)
+did: packet crossing or relative-phase reunion cannot be tested on an
+even orbit. The posterior states (22) with the quadratic copy have
+$d\sim-(2\kappa/mC\ell^2)q^3$ at $t=0$, so the $-$ sheet moves outward
+with cubic speed and would escape in finite time; its rate
+$\lambda_-\sim(m/\kappa)(2\kappa/mC\ell^2)^2q^6$ has infinite integrated
+hazard before escape, so a switch to the inward $+$ sheet occurs almost
+surely first. Nonexplosion over an interval for these tails needs the
+evolved fields and is not claimed here.
+
+## 7. The controller is the field pair
+
+The realization needs four controller functions, $F_\pm(q,t)$ and
+$\lambda_\pm(q,t)$. Proposition 22 showed that they cannot be a
+preparation-independent law on $(t,q,p,\sigma)$. The following
+identification says exactly what they are.
+
+**Proposition 9 (controller identification).** Work in the class of
+smooth positive $\rho$ with $\rho,\rho_q\to0$ at infinity and known
+$U$.
+(a) At one time, the rate difference determines $\rho$: with
+$W=(m/\kappa)(\lambda_--\lambda_+)$, two positive decaying solutions of
+$\rho_{qq}=W\rho$ have a constant Wronskian that tends to zero, hence
+are proportional, and normalization fixes the factor.
+(b) Over any open time interval, the rates determine $\rho(\cdot,t)$,
+hence $\rho_t$, hence by continuity and decay
+$\rho v=-\int_{-\infty}^q\rho_t\,dq'$; so they determine $v$ and $S$ up
+to a constant. The forces are then fixed by (27) and add no data.
+(c) The forces alone also determine the field pair over an interval:
+$F_+-F_-=-2\kappa v_{qq}$ gives $v$ modulo affine functions;
+$\tfrac12(F_++F_-)+U_q=(\kappa^2/m)\partial_q(\rho_{qq}/\rho)$ gives
+$\rho_{qq}/\rho$ up to a constant $c$, and two positive decaying
+solutions of $\rho''=(W_0+c_i)\rho$ with $c_1\neq c_2$ would have
+Wronskian increment $(c_2-c_1)\int\rho_1\rho_2\,dq\neq0$ between
+$-\infty$ and $+\infty$, contradicting decay; continuity then fixes
+the affine part of $v$.
+(d) At $\kappa=0$ the rates vanish and $F_\sigma=-U_q$ for every
+preparation. The zero branch is exactly the branch on which the particle
+dynamics is autonomous.
+
+*Proof.* (a) If $\rho_1,\rho_2>0$ solve $\rho''=W\rho$ then
+$w=\rho_1\rho_2'-\rho_1'\rho_2$ has $w'=0$, and $w\to0$ at infinity by
+decay, so $(\rho_2/\rho_1)'=w/\rho_1^2=0$. (b) Continuity
+$\rho_t=-\partial_q(\rho v)$ with $\rho v\to0$ at $-\infty$. (c) The
+displayed combinations follow from (27); the Wronskian computation is
+$w'=\rho_1\rho_2''-\rho_1''\rho_2=(c_2-c_1)\rho_1\rho_2$. (d) Insert
+$d=0$ in (26)--(27). $\square$
+
+So either half of the controller is informationally the field pair. An
+apparatus implementing Proposition 7 stores $(\rho,S)$, or something
+from which $(\rho,S)$ is computed, and updates it by (4). That is the
+pilot-wave structure: the field is a dynamical variable of the single
+system, carried alongside the particle. The known finite closed
+realization of the same law is the interacting-ensemble one, in which
+finitely many classical copies interact through a force built from the
+Fisher information of their empirical density and the field is recovered
+only as the copy number grows [@HallDeckertWiseman2014; reading:
+metadata via Crossref and arXiv abstract]. There the controller datum
+is the configuration of the other copies and $\kappa$ is the
+interworld coupling constant. In both realizations $\kappa$ is a
+coupling that nothing in the construction fixes.
+
+**Corollary 10 (no finite controller survives one nonlinear record).**
+Let $\mathcal C$ be a finite-dimensional family of field pairs
+containing (18), for instance Gaussian-polynomial states of bounded
+degree. A controller whose state ranges over $\mathcal C$ cannot realize
+the sheet dynamics after one quadratic coordinate copy of (18) with
+record $r$: the post-record pair $(\rho_r,S)$ of Proposition 5 lies
+outside $\mathcal C$, and by Proposition 9 the controller functions on
+any interval after the copy determine that pair. The controller must
+therefore carry $r$; after $n$ copies it carries $(r_1,\ldots,r_n)$,
+read or unread.
+
+**Proposition 11 (two unread widths, with a coordinate witness).** Let
+a label $J\in\{1,2\}$ with weights $\tfrac12$ select preparations
+$N(0,A_j)$, $S=0$, $A_1\neq A_2$, and let $J$ be unread.
+(a) *Branch realization.* Two controllers (145)--(148), one per
+$A_j$, give the mixture process; the sign stays fair given $(Q,J)$,
+the mean kinetic energy is $\tfrac{\kappa^2}{4m}(A_1^{-1}+A_2^{-1})$
+for all time, and
+$$EQ_t^2=\frac{A_1+A_2}2+\frac{\kappa^2t^2}{2m^2}
+ \Big(\frac1{A_1}+\frac1{A_2}\Big).\tag{31}$$
+(b) *Single marginal-score controller.* Starting one controller from
+$\bar\rho=\tfrac12(\rho_1+\rho_2)$ and $\bar S=0$ gives kinetic energy
+$\tfrac{\kappa^2}{2m}I(\bar\rho)$ and, by the free virial identity
+$\tfrac{d^2}{dt^2}EQ^2=4\mathcal H_{\rm kin}/m$,
+$EQ_t^2=\tfrac12(A_1+A_2)+\kappa^2I(\bar\rho)t^2/m^2$. The two differ
+by
+$$\frac{\kappa^2t^2}{m^2}\Delta,\qquad
+\Delta=\frac12\Big(\frac1{A_1}+\frac1{A_2}\Big)-I(\bar\rho)
+=\Big(\frac1{A_1}-\frac1{A_2}\Big)^2\int\frac{q^2\rho_1\rho_2}{4\bar\rho}\,dq>0,\tag{32}$$
+which is (119) for this mixture. The single controller loses energy
+$\kappa^2\Delta/(2m)$ and underpredicts the variance by
+$\kappa^2\Delta t^2/m^2$ at every $t>0$: a difference visible in
+coordinate records alone.
+
+*Proof.* (a) Each branch is Proposition 21 with its own $A_j$; the
+energies and variances are (143)'s, averaged. (b) The virial identity
+is the time derivative of (19)'s structure for any free solution of
+(4): $\tfrac{d}{dt}\int\rho q^2=2\int\rho qv$ and
+$\tfrac{d^2}{dt^2}\int\rho q^2=2\int\rho(v^2+d^2)\,dq$ by (25) and two
+integrations by parts, which is $4\mathcal H_{\rm kin}/m$. For
+$\Delta$, the conditional label law is $\pi_j(q)=\rho_j/(2\bar\rho)$
+and the branch scores are $-q/A_j$, so
+$\operatorname{Var}(\sigma_J(q)\mid q)=q^2\pi_1\pi_2(A_1^{-1}-A_2^{-1})^2$;
+insert in (119). $\square$
+
+Within this model, the rule against replacing a discarded label by a
+fresh marginal score is therefore a theorem with a coordinate witness,
+and closure under unread records holds only for branch controllers.
+Combined with Corollary 10: the controller of a closed realization is
+the complete record history together with the initial field pair.
+
+**Proposition 12 (closure within the theory, at every $\kappa$).**
+Coordinate shears $f(q)\pi$ preserve the class (2)/(136) with its fair
+sign (Proposition 20 of the recording note), and the sheet dynamics of
+Proposition 7, applied to body and pointers alike with their own
+potentials, preserves it by construction wherever $\rho>0$. (For
+several configuration coordinates with one shared sign, Propositions
+6--7 hold with $\nabla$ and the mass-weighted Laplacian
+$\kappa\sum_a\partial_a^2\rho/(m_a\rho)$ in place of $\partial_q$ and
+$(\kappa/m)\rho_{qq}/\rho$: because $v$ and $d$ are gradients, the
+cross terms $\sigma[(d\cdot\nabla)v-(\nabla v)d]$ in the force cancel by
+symmetry of $\partial_a\partial_bS$.) Hence every
+finite composition of coordinate copies, sheet evolution and
+conditioning on coordinate records stays in the class, and the floor
+(138) holds for every complete coordinate record. The escape (140) reads
+a canonical momentum directly; within the theory a momentum is accessed
+only through coordinate copies after sheet evolution, which keeps the
+floor. The same closure holds trivially at $\kappa=0$, where the sheets
+coincide and (138) reads $\det\ge0$. Closure under composition and
+complete coordinate records therefore holds for every $\kappa\ge0$ and
+selects no scale. Neither branch is unconditionally closed: the
+$\kappa=0$ single-sheet class leaves itself at caustics of the classical
+flow, and the $\kappa>0$ realization needs $\rho>0$ and is not continued
+through nodes here.
+
+## 8. Assessment: a representation, not an apparatus
+
+The proposed dynamical constraint realization exists and is exact:
+Propositions 7--8 give its balance, force, impulses, energy exchange
+and all-time nonexplosion on the positive non-Gaussian orbit, and
+Proposition 12 gives its closure under coordinate copies. It is a
+stochastic pilot-wave representation of the supplied field law, with a
+switching sign in place of Nelson's diffusion. Proposition 9 then
+answers the handout's question: the extra state that controls the force
+and the rates is the field pair itself, in either half of the
+controller, and after records it is the complete record history. The
+construction simulates (4); it does not supply a physical rule that
+would make the particle dynamics autonomous, and Proposition 9(d) shows
+that autonomy is exactly the zero branch.
+
+Consequently the route "close the apparatus and read off a positive
+scale" ends here. Every closed realization of the field law carries
+$\kappa$ as a coupling, between particle and field or between copies,
+and closure is available at every $\kappa\ge0$ (Proposition 12). What
+a positive scale requires is a premise that fails at $\kappa=0$, and
+Proposition 9(d) states its physical content without quantum language:
+*the motion of an individual body depends on the statistical state of
+its preparation, not only on its own position, momentum and the
+material parts of the apparatus.* Newton's inflexion Observation 8
+records dependence on apparatus geometry, which admits a local-force
+countermodel ([routes, Proposition 3](newton-indeterminacy-routes.md));
+it is not evidence for dependence on the ensemble. The two live forms
+of the missing premise remain the terminal readout bound and
+[Leibniz continuity on records](leibniz-continuity-records.md); the
+present note adds that no further realization of the field law can
+replace them.
+
+Retained from this unit for later use: the exact particle picture that
+is consistent with every time partition (Proposition 8), the explicit
+sheet potential and powers (27)--(28), and the coordinate witness (32)
+for the unread-label excess.
+
+## 9. Consequence for STATE
 
 The canonical Fisher structure follows from a specified restriction of
-ordinary classical sheet action; physical preservation of that restriction
-remains open. Population memory must carry its full transport-conjugate
-action, including reservoirs, before taking a weak-bridge limit.
-The fixed compact-transfer family fails even with Gaussian width.
-Equations (18)--(20) instead complete a width/phase tangent to an exact
-positive non-Gaussian forward orbit. A nonlinear record immediately
-generates a quartic exponential tail outside the finite mode family,
-with its unread energy fixed by (23). Next lemma: carry the full
-generated density/phase and retained record labels through a dynamical
-constraint realization, first on this non-Gaussian orbit. It must keep
-the actual velocities and force/switch energy exchange, rather than
-project back to finite modes or reset an unread marginal. Physical
-apparatus closure and the two-unread-width test remain obligations.
-Reject a projected residual counted as exact closure, bridge phase used
-as population momentum without reservoir costs, or an unexcluded zero
+ordinary classical sheet action; a fixed compact-transfer family fails
+even with Gaussian width; (18)--(20) complete a width/phase tangent to
+an exact positive non-Gaussian forward orbit; a nonlinear record
+generates a quartic tail outside the finite mode family with unread
+energy (23). The two-sheet dynamical realization on that orbit is now a
+theorem (Propositions 7--8), with closure under coordinate copies
+(Proposition 12) and the two-unread-width test passed by branch
+controllers and failed, with a coordinate witness, by any marginal-score
+controller (Proposition 11). Its controller is the field pair and the
+record history (Proposition 9, Corollary 10): the realization is a
+stochastic pilot-wave representation of the supplied law, and closure
+holds at every $\kappa\ge0$. Decision: the realization route is closed
+as a source of positive action necessity; its results are kept as the
+partition-consistent particle picture. The next Newton lemma must
+attack the premise that fails at $\kappa=0$, dependence of individual
+motion on the preparation's statistical state, through the terminal
+readout bound or the record reading of Leibniz continuity, with
+positivity, universality and radiation calibration still separate.
+Reject a further realization of (4) offered as apparatus closure, a
+projected residual counted as exact closure, bridge phase used as
+population momentum without reservoir costs, or an unexcluded zero
 branch presented as positive action necessity.
