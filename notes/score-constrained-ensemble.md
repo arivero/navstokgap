@@ -1,19 +1,24 @@
 # Score-constrained ensembles and population transport
 
-**Status, 2026-10-01 (evening).** Sections 1–5 (Sol/Astra) give the
+**Status, 2026-10-01 (night).** Sections 1–5 (Sol/Astra) give the
 constrained action, compact-shape obstruction, positive non-Gaussian
 forward orbit and nonlinear-copy recoil/tail test. Sections 6–8 (Claude
 Fable) derive the two-sheet dynamical realization on any positive
 solution and on (18): balance, force, impulses, exact mean energy
-cancellation and all-time nonexplosion (Propositions 7–8), then prove
-that its controller is the field pair and the record history
-(Proposition 9, Corollary 10), pass the two-unread-width test with
-branch controllers and give a coordinate witness against a marginal-score
-controller (Proposition 11), and show closure at every $\kappa\ge0$
-(Proposition 12). Verdict (§8): the realization is a stochastic
-pilot-wave representation of the supplied law; the route from apparatus
-closure to positive action is closed, and the zero branch is exactly
-the autonomous branch. Physical constraint enforcement and positive
+cancellation and all-time nonexplosion (Propositions 7–8), identify its
+controller with the field pair within this sheet architecture
+(Proposition 9), pass the two-unread-width test with branch controllers
+against a marginal-score controller (Proposition 11), and state closure
+under coordinate copies at every $\kappa\ge0$ with its protocol
+hypothesis (Proposition 12). Refereed by GPT-6.1 Sol (Codex) on
+2026-10-01: Propositions 6 and 8 accepted; 7, 9, 11 and 12 refined; the
+former Corollary 10 (no finite controller) rejected by a
+finite-parameter counterexample and replaced; corrections applied.
+Verdict (§8): the realization is a stochastic pilot-wave representation
+of the supplied law; composition closure cannot select $\kappa$, so the
+route from apparatus closure to positive action is closed, while the
+impossibility of every other realization and literal full-history
+storage are not claimed. Physical constraint enforcement and positive
 action selection have not been derived.
 
 Restricting the ordinary action of two classical phase sheets to the
@@ -465,11 +470,14 @@ velocity $\dot Q=v+\Sigma d$ between sign jumps, rate
 $\lambda_\sigma(q,t)$ from $\sigma$ to $-\sigma$, and carried momentum
 $P_t=p_{\Sigma_t}(Q_t,t)$.
 
-(i) *Balance.* The joint law is $\rho(q,t)/2$ for each sign at every
-time iff
+(i) *Balance.* With initial law $\rho(q,0)/2$ for each sign, a
+conservative forward evolution with unique paths preserves the law
+$\rho(q,t)/2$ at every time iff
 $$\lambda_--\lambda_+=\frac\kappa m\frac{\rho_{qq}}{\rho};\qquad
 \lambda_\sigma=\frac\kappa m\Big(-\sigma\frac{\rho_{qq}}{\rho}\Big)_+
 \ \text{is the minimal nonnegative choice.}\tag{26}$$
+The balance identity alone establishes neither existence nor
+nonexplosion; Proposition 8 does so for the explicit orbit.
 
 (ii) *Force and impulse.* Between jumps $P$ changes by
 $$F_\sigma=-U_q+\kappa d_{qq}+2m\,d\,d_q-\sigma\kappa v_{qq}
@@ -533,10 +541,15 @@ $-\sigma\kappa v_{qq}$, so it is sign-independent iff the mean velocity
 is affine; the Gaussian hid this. The force is a gradient of a potential
 that contains $\rho_{qq}/\rho$ rather than the quantum potential
 $-(2\kappa^2/m)(\sqrt\rho)_{qq}/\sqrt\rho$; the two differ by
-$-\tfrac m2d^2$, the sheet kinetic excess. And every trajectory of a
-state with zero mean current ($v\equiv0$, for instance a trapped ground
-state) exchanges no energy at all, since both powers in (28) carry the
-factor $v$.
+$-\tfrac m2d^2$, the sheet kinetic excess. And for a state with zero
+mean current ($v\equiv0$, for instance a trapped ground state) both
+mean powers in (28) vanish and every jump has $\Delta K=0$, although
+individual trajectories still exchange energy with the actuator: for
+$\rho=N(0,A)$ held by $U=\kappa^2q^2/(2mA^2)$, with $S_t=-\kappa^2/(mA)$,
+one has $F_\sigma=\kappa^2q/(mA^2)$ and velocity $-\sigma\kappa q/(mA)$,
+so $F_\sigma\dot Q=-\sigma\kappa^3q^2/(m^2A^3)\neq0$ for $q\neq0$. With a
+time-dependent $U$ the total energy obeys
+$d\mathcal H/dt=\int\rho U_t\,dq$.
 
 **Proposition 8 (nonexplosion on the explicit orbit, all forward
 time).** For (18) write $z=q/\sqrt B$, $s=\arctan u$, and
@@ -622,9 +635,13 @@ $W=(m/\kappa)(\lambda_--\lambda_+)$, two positive decaying solutions of
 $\rho_{qq}=W\rho$ have a constant Wronskian that tends to zero, hence
 are proportional, and normalization fixes the factor.
 (b) Over any open time interval, the rates determine $\rho(\cdot,t)$,
-hence $\rho_t$, hence by continuity and decay
-$\rho v=-\int_{-\infty}^q\rho_t\,dq'$; so they determine $v$ and $S$ up
-to a constant. The forces are then fixed by (27) and add no data.
+hence $\rho_t$; with the flux hypothesis $\rho v\to0$ at $-\infty$ and
+the displayed integral finite, continuity gives
+$\rho v=-\int_{-\infty}^q\rho_t\,dq'$, and finite kinetic energy fixes
+the constant in any case, since two currents differing by $C$ would
+need $C^2\int dq/\rho<\infty$. So they determine $v$, and $S$ modulo a
+spatial constant whose time dependence (4) fixes. The forces are then
+fixed by (27) and add no data.
 (c) The forces alone also determine the field pair over an interval:
 $F_+-F_-=-2\kappa v_{qq}$ gives $v$ modulo affine functions;
 $\tfrac12(F_++F_-)+U_q=(\kappa^2/m)\partial_q(\rho_{qq}/\rho)$ gives
@@ -633,19 +650,25 @@ solutions of $\rho''=(W_0+c_i)\rho$ with $c_1\neq c_2$ would have
 Wronskian increment $(c_2-c_1)\int\rho_1\rho_2\,dq\neq0$ between
 $-\infty$ and $+\infty$, contradicting decay; continuity then fixes
 the affine part of $v$.
-(d) At $\kappa=0$ the rates vanish and $F_\sigma=-U_q$ for every
-preparation. The zero branch is exactly the branch on which the particle
-dynamics is autonomous.
+(d) At $\kappa=0$ the minimal rates vanish, common flips remain
+allowed, and $F_\sigma=-U_q$ for every preparation: the zero branch
+admits a preparation-independent body law. For $\kappa>0$ no such law
+exists for all Gaussian preparations under the assumptions of
+Proposition 22 of the recording note; that obstruction leaves open a
+fixed preparation, extra apparatus variables, or a different
+realization of the field law.
 
 *Proof.* (a) If $\rho_1,\rho_2>0$ solve $\rho''=W\rho$ then
 $w=\rho_1\rho_2'-\rho_1'\rho_2$ has $w'=0$, and $w\to0$ at infinity by
 decay, so $(\rho_2/\rho_1)'=w/\rho_1^2=0$. (b) Continuity
-$\rho_t=-\partial_q(\rho v)$ with $\rho v\to0$ at $-\infty$. (c) The
+$\rho_t=-\partial_q(\rho v)$ with the flux hypothesis, or the
+kinetic-energy argument. (c) The
 displayed combinations follow from (27); the Wronskian computation is
 $w'=\rho_1\rho_2''-\rho_1''\rho_2=(c_2-c_1)\rho_1\rho_2$. (d) Insert
 $d=0$ in (26)--(27). $\square$
 
-So either half of the controller is informationally the field pair. An
+So either half of the controller is informationally the field pair,
+within this sheet architecture. An
 apparatus implementing Proposition 7 stores $(\rho,S)$, or something
 from which $(\rho,S)$ is computed, and updates it by (4). That is the
 pilot-wave structure: the field is a dynamical variable of the single
@@ -659,16 +682,20 @@ is the configuration of the other copies and $\kappa$ is the
 interworld coupling constant. In both realizations $\kappa$ is a
 coupling that nothing in the construction fixes.
 
-**Corollary 10 (no finite controller survives one nonlinear record).**
-Let $\mathcal C$ be a finite-dimensional family of field pairs
-containing (18), for instance Gaussian-polynomial states of bounded
-degree. A controller whose state ranges over $\mathcal C$ cannot realize
-the sheet dynamics after one quadratic coordinate copy of (18) with
-record $r$: the post-record pair $(\rho_r,S)$ of Proposition 5 lies
-outside $\mathcal C$, and by Proposition 9 the controller functions on
-any interval after the copy determine that pair. The controller must
-therefore carry $r$; after $n$ copies it carries $(r_1,\ldots,r_n)$,
-read or unread.
+**Corollary 10 (one record leaves the bounded-degree family).** Let
+$\mathcal C$ be the family of Gaussian-polynomial field pairs of bounded
+degree containing (18). One quadratic coordinate copy of (18) with
+record $r$ produces, by Proposition 5, a pair $(\rho_r,S)$ outside
+$\mathcal C$, and by Proposition 9 the controller functions on any
+interval after the copy determine that pair; so a controller confined to
+$\mathcal C$ cannot continue. This does not exclude finite-parameter
+controllers: the family of normalized pairs
+$(\rho_\epsilon(t)e^{-(r-q^2/\ell)^2/(2C)},S_\epsilon(t))$ with parameters
+$(t,\epsilon,A,r,C,\ell)$ contains every one-copy posterior, and $n$
+identical quadratic copies at one time enter only through the
+sufficient statistics $(n,\sum_ir_i)$, the normalization absorbing
+$\sum_ir_i^2$. The controller must carry the record-dependent data of
+its family, not the literal history.
 
 **Proposition 11 (two unread widths, with a coordinate witness).** Let
 a label $J\in\{1,2\}$ with weights $\tfrac12$ select preparations
@@ -706,70 +733,90 @@ insert in (119). $\square$
 
 Within this model, the rule against replacing a discarded label by a
 fresh marginal score is therefore a theorem with a coordinate witness,
-and closure under unread records holds only for branch controllers.
-Combined with Corollary 10: the controller of a closed realization is
-the complete record history together with the initial field pair.
+under one qualification: the single-controller comparison uses the
+algebraic evolution (15) of $\sqrt{\bar\rho}$, whose positivity and
+nonexplosion as a sheet path law through possible nodes are not proved
+here, while the virial comparison needs only (15). It rules out this
+marginal-score replacement, not compressed descriptions of the
+branches. Closure under unread records holds for branch controllers,
+which carry the record-dependent data of Corollary 10.
 
 **Proposition 12 (closure within the theory, at every $\kappa$).**
 Coordinate shears $f(q)\pi$ preserve the class (2)/(136) with its fair
 sign (Proposition 20 of the recording note), and the sheet dynamics of
 Proposition 7, applied to body and pointers alike with their own
 potentials, preserves it by construction wherever $\rho>0$. (For
-several configuration coordinates with one shared sign, Propositions
-6--7 hold with $\nabla$ and the mass-weighted Laplacian
-$\kappa\sum_a\partial_a^2\rho/(m_a\rho)$ in place of $\partial_q$ and
-$(\kappa/m)\rho_{qq}/\rho$: because $v$ and $d$ are gradients, the
-cross terms $\sigma[(d\cdot\nabla)v-(\nabla v)d]$ in the force cancel by
-symmetry of $\partial_a\partial_bS$.) Hence every
-finite composition of coordinate copies, sheet evolution and
-conditioning on coordinate records stays in the class, and the floor
-(138) holds for every complete coordinate record. The escape (140) reads
-a canonical momentum directly; within the theory a momentum is accessed
+several configuration coordinates with one shared sign and masses
+$m_b$, Propositions 6--7 hold with
+$\lambda_--\lambda_+=\kappa\sum_b\rho_{bb}/(m_b\rho)$ and
+$F_{\sigma,a}=-\partial_a[U-\kappa^2\sum_b\rho_{bb}/(m_b\rho)
++\sigma\kappa\sum_bS_{bb}/m_b]$: the cross terms cancel by
+$m_b\partial_av_b=m_a\partial_bv_a$ and its analogue for $d$, which hold
+because $v_b=S_b/m_b$ and $d_b=\kappa L_b/m_b$.) Hence every finite
+composition of coordinate copies, sheet evolution and conditioning on
+coordinate records stays in the class, provided the positive
+conservative path evolutions it requires exist, which Proposition 8
+establishes for its orbit and not for all posteriors, and provided the
+protocol evolves each conditioned branch with the controller of its own
+posterior field pair: conditioning an already running process on past
+records does not by itself replace its drift and rates, since (22)
+changes the score by $(r-f)f'/C$ while a preassigned controller is
+unchanged. Under that branch-dependent protocol the floor (138) holds
+for every complete coordinate record. The escape (140) reads a
+canonical momentum directly; within the theory a momentum is accessed
 only through coordinate copies after sheet evolution, which keeps the
-floor. The same closure holds trivially at $\kappa=0$, where the sheets
-coincide and (138) reads $\det\ge0$. Closure under composition and
-complete coordinate records therefore holds for every $\kappa\ge0$ and
-selects no scale. Neither branch is unconditionally closed: the
+floor, and the exclusion of direct conjugate access is a stipulated
+measurement rule. At $\kappa=0$ the minimal-switch single-sheet
+construction closes before caustics, where (138) reads $\det\ge0$.
+Closure under composition and complete coordinate records, where it
+holds, holds for every $\kappa\ge0$ and selects no scale. Neither branch is unconditionally closed: the
 $\kappa=0$ single-sheet class leaves itself at caustics of the classical
 flow, and the $\kappa>0$ realization needs $\rho>0$ and is not continued
 through nodes here.
 
 ## 8. Assessment: a representation, not an apparatus
 
-The proposed dynamical constraint realization exists and is exact:
-Propositions 7--8 give its balance, force, impulses, energy exchange
-and all-time nonexplosion on the positive non-Gaussian orbit, and
-Proposition 12 gives its closure under coordinate copies. It is a
-stochastic pilot-wave representation of the supplied field law, with a
-switching sign in place of Nelson's diffusion. Proposition 9 then
-answers the handout's question: the extra state that controls the force
-and the rates is the field pair itself, in either half of the
-controller, and after records it is the complete record history. The
-construction simulates (4); it does not supply a physical rule that
-would make the particle dynamics autonomous, and Proposition 9(d) shows
-that autonomy is exactly the zero branch.
+The proposed dynamical constraint realization exists and is exact on
+the explicit orbit: Propositions 7--8 give its balance, force,
+impulses, energy exchange and all-time nonexplosion there, and
+Proposition 12 gives its closure under coordinate copies when the
+branch-dependent protocol and the required positive path evolutions
+are supplied. It is a stochastic pilot-wave representation of the
+supplied field law, with a switching sign in place of Nelson's
+diffusion. Proposition 9 answers the handout's question within this
+architecture: the extra state that controls the force and the rates is
+the field pair, recoverable from either half of the controller, and
+after records it is the record-dependent data of Corollary 10. The
+construction simulates (4); it supplies no physical rule making the
+body law preparation-independent, and Proposition 9(d) states the
+dichotomy with its scope: $\kappa=0$ admits a preparation-independent
+body law, while $\kappa>0$ admits none for all Gaussian preparations
+under Proposition 22's assumptions.
 
-Consequently the route "close the apparatus and read off a positive
-scale" ends here. Every closed realization of the field law carries
-$\kappa$ as a coupling, between particle and field or between copies,
-and closure is available at every $\kappa\ge0$ (Proposition 12). What
-a positive scale requires is a premise that fails at $\kappa=0$, and
-Proposition 9(d) states its physical content without quantum language:
-*the motion of an individual body depends on the statistical state of
-its preparation, not only on its own position, momentum and the
-material parts of the apparatus.* Newton's inflexion Observation 8
-records dependence on apparatus geometry, which admits a local-force
+Consequently the route "close the apparatus by composition and read
+off a positive scale" ends here: closure, where it holds, holds for
+every $\kappa\ge0$ (Proposition 12), and every realization of the
+field law examined carries $\kappa$ as a coupling, between particle and
+field or between copies. Not claimed: that every realization must
+store the field, that a controller must store the literal record
+history, or that no physical apparatus closure exists; the referee's
+scope verdict is recorded with the corrections. What a positive scale
+requires is a premise that fails at $\kappa=0$; Proposition 9(d) gives
+its physical content without quantum language, as dependence of an
+individual body's motion on the statistical state of its preparation,
+with the scope just stated. Newton's inflexion Observation 8 records
+dependence on apparatus geometry, which admits a local-force
 countermodel ([routes, Proposition 3](newton-indeterminacy-routes.md));
 it is not evidence for dependence on the ensemble. The two live forms
 of the missing premise remain the terminal readout bound and
-[Leibniz continuity on records](leibniz-continuity-records.md); the
-present note adds that no further realization of the field law can
-replace them.
+[Leibniz continuity on records](leibniz-continuity-records.md), and
+the [reachability note](zero-branch-reachability.md) now carries the
+gap thesis itself.
 
-Retained from this unit for later use: the exact particle picture that
-is consistent with every time partition (Proposition 8), the explicit
-sheet potential and powers (27)--(28), and the coordinate witness (32)
-for the unread-label excess.
+Retained from this unit for later use: the exact particle picture
+consistent with every time partition on the orbit (Proposition 8), the
+explicit sheet potential and powers (27)--(28), and the coordinate
+witness (32) for the unread-label excess.
 
 ## 9. Consequence for STATE
 
@@ -778,21 +825,23 @@ ordinary classical sheet action; a fixed compact-transfer family fails
 even with Gaussian width; (18)--(20) complete a width/phase tangent to
 an exact positive non-Gaussian forward orbit; a nonlinear record
 generates a quartic tail outside the finite mode family with unread
-energy (23). The two-sheet dynamical realization on that orbit is now a
-theorem (Propositions 7--8), with closure under coordinate copies
-(Proposition 12) and the two-unread-width test passed by branch
-controllers and failed, with a coordinate witness, by any marginal-score
-controller (Proposition 11). Its controller is the field pair and the
-record history (Proposition 9, Corollary 10): the realization is a
-stochastic pilot-wave representation of the supplied law, and closure
-holds at every $\kappa\ge0$. Decision: the realization route is closed
-as a source of positive action necessity; its results are kept as the
-partition-consistent particle picture. The next Newton lemma must
-attack the premise that fails at $\kappa=0$, dependence of individual
-motion on the preparation's statistical state, through the terminal
-readout bound or the record reading of Leibniz continuity, with
-positivity, universality and radiation calibration still separate.
-Reject a further realization of (4) offered as apparatus closure, a
-projected residual counted as exact closure, bridge phase used as
-population momentum without reservoir costs, or an unexcluded zero
-branch presented as positive action necessity.
+energy (23). The two-sheet dynamical realization on that orbit is a
+theorem (Propositions 7--8, refereed), with closure under coordinate
+copies under a branch-dependent protocol (Proposition 12) and the
+two-unread-width test passed by branch controllers and failed, with a
+coordinate witness, by the marginal-score replacement (Proposition
+11). Its controller is the field pair within this architecture, and
+after records the record-dependent data of its family (Proposition 9,
+Corollary 10): the realization is a stochastic pilot-wave
+representation of the supplied law, and composition closure selects no
+$\kappa$. Decision: the realization route is closed as a source of
+positive action necessity; its results are kept as the
+partition-consistent particle picture. The Newton work continues in
+the [reachability note](zero-branch-reachability.md) under the gap
+thesis, with the premises that fail at $\kappa=0$, complete records and
+the coherent attachment of determinate preparations, as the hypotheses
+to defend, and positivity, universality and radiation calibration
+still separate. Reject a further realization of (4) offered as
+apparatus closure, a projected residual counted as exact closure,
+bridge phase used as population momentum without reservoir costs, or
+an unexcluded zero branch presented as positive action necessity.
