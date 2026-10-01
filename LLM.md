@@ -21,6 +21,14 @@ unrefereed**; **conditional** (a theorem whose hypothesis is itself open);
 **reading** (an identification or interpretation, labelled as such);
 **open**. Dates are 2026; the state described is that of 2026-09-27.
 
+For complete note coverage use the [retrieval catalog](notes/index.md)
+(maintained from 2026-10-01): compact full-read summaries, retrieval
+priorities, proof status, roles and explicit route closures. The claim
+map below remains the established-result guide at its stated date; later
+results and corrections live in the linked notes and current STATE.
+Before each research unit, follow AGENTS.md's keyword-retrieval rule
+across notes, ideas, references and the other source directories.
+
 ## 1. Orientation
 
 A formal compendium of the proved statements, each with its hypotheses and
@@ -541,7 +549,7 @@ response to difficulty is a smaller theorem with explicit hypotheses.
 - **No multi-agent workflows and no parallel subagents.** They inherit
   the main model and multiply usage without gain; work sequentially.
 - **Pipeline for a result:** write `notes/<slug>.md`; `make paper
-  NOTE=<slug>`; add the slug to a track in `scripts/build_site.py` and run
+  NOTE=<slug>`; update the Markdown/JSON catalog entry and run
   `make site`; `python3 scripts/check_repository.py`; update the atlas
   cell and STATE (short); commit with the trailer; push.
 - **What the user considers drift:** reframing results in the parked

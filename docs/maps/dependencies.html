@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Current research dependency graph</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="current-research-dependency-graph">Current research dependency
+graph</h1>
+<p>Navigation map, 2026-10-01. <a
+href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>
+selects work; this map does not change that queue. <a
+href="../notes/index.html">The catalog</a> covers every note. Solid
+arrows below indicate recommended reading order; the accompanying text
+identifies actual mathematical inputs and required corrections. Dashed
+arrows mark proposed extensions or supporting transfers, not established
+inputs to a completed continuum construction.</p>
+<pre class="mermaid"><code>flowchart TD
+  R[Exact insertion and arbitrary partitions] --&gt; S[Gauge series / parallel factorization]
+  R --&gt; C[Newton cut measure and polygon phase]
+  S --&gt; M[Compact-group midpoint identities]
+  M --&gt; O[Mid-plane order-t calculation]
+  O --&gt; B[Retained-barrier small-field estimates]
+  B --&gt; D[All-order weak-strip dressing]
+  D --&gt; Q[Quadratic moving-mean source test]
+  Q -.-&gt; N[Complex nonlinear saddle and full normalized comparison]
+  N -.-&gt; I[Stability, SU3 transfer, iteration]
+  S --&gt; G[4D Gaussian composition]
+  G -.-&gt; U[Depth-uniform generated-action matching]
+  I -.-&gt; V[Continuum construction and physical spectral weight]
+  U -.-&gt; V
+  T[Strong-coupling target box] -.-&gt; V
+  F[Renormalized small-volume Feshbach bridge] -.-&gt; V
+  C --&gt; P[Gaussian and general record costs]
+  P --&gt; A[Unit separate from indeterminacy]
+  A --&gt; Z[Statistical-speed conditional theorem]
+  Z --&gt; H[Complete-record and nonlinear recording tests]
+  H --&gt; E[Coherence memory and positive-tail stability]
+  E -.-&gt; X[Physical history rule with retained memory]
+  X -.-&gt; Y[Positive universal action necessity]</code></pre>
+<h2 id="gauge-the-next-calculation">Gauge: the next calculation</h2>
+<p>Read in this order:</p>
+<ol type="1">
+<li><a href="../notes/refinement-composition-and-limit.html">Refinement
+composition</a>, exact insertion identities and the summable-error
+criterion.</li>
+<li><a
+href="../notes/series-parallel-gauge-refinement.html">Series/parallel
+refinement</a>, Prop. 1: directional halving isolates the interacting
+mid-plane integral.</li>
+<li><a href="../notes/su2-midpoint-exact.html">SU(2) midpoint</a> and,
+when changing group or cut fraction, <a
+href="../notes/sun-midpoint-centre.html">centre-sensitive cuts</a>.
+Exact character traces do not supply all matrix entries or volume
+control.</li>
+<li><a href="../notes/su2-midplane-order-t.html">Order-t mid-plane
+calculation</a>, including torus holonomy and the normalized remainder
+obligation.</li>
+<li><a href="../notes/su2-midplane-small-field.html">Small-field
+notebook</a>, §§24–25 for targets (112), (113), (116), then §§33–37 for
+the actual current inputs.</li>
+</ol>
+<p>Durable inputs: uniform convexity and joint bad-set rarity, decaying
+response kernels with contacts accounted for, an undifferentiated
+barrier, and a convergent weak-recoupling gas. Section 35 supplies
+all-order connected bad-component control <strong>in its weak
+strip</strong>. Section 36 constructs exact dressed activities
+satisfying (112). Section 37 supplies a fixed source radius and the
+subtracted log-barrier bound (177) in a centered quadratic model. It is
+a test of part of (113), not the complete nonlinear integral.</p>
+<p>The next mathematical step is complex centered nonlinear control with
+decaying dependence of the moving saddle on boundary sources.
+Dependencies are the fixed-barrier contour/source accounting of §37 and
+the locality and connected-support reserves of §§33–36. Abandon a
+proposed estimate if it differentiates the barrier, charges moving-mean
+amplification to every good connector, assumes contact cancellation, or
+loses volume-uniform constants. Physical recoupling, target-covering
+paths, curvature conversion, group integral comparison, perturbed-action
+stability and iteration remain later obligations. Check group constants
+before transferring SU(2) results to SU(3).</p>
+<p>Keep these constraints within reach: <a
+href="../notes/agmon-global-not-local.html">local/global Agmon</a>, <a
+href="../notes/blocking-criterion-monotone.html">blocking criterion</a>,
+<a href="../notes/flow-conjugation-truncation.html">flow versus coarse
+graining</a>, <a
+href="../notes/small-field-step-decay-and-threshold.html">explicit
+weak-side thresholds</a>, and <a
+href="../notes/reasons-to-stop-as-research.html">failed crossover
+bridges</a>. The <a href="obstructions.html">obstruction map</a> gives
+the scope of each failure.</p>
+<h2 id="gauge-four-dimensional-matching-and-the-spectral-exit">Gauge:
+four-dimensional matching and the spectral exit</h2>
+<p>For atlas cell 4 read <a
+href="../notes/gaussian-blocking-coupling.html">Gaussian blocking</a> →
+<a href="../notes/four-dimensional-parallel-log.html">parallel
+logarithm</a> → <a href="../notes/four-dimensional-composition.html">4D
+composition</a>, especially its (14) and §7. Exact Gaussian Schur
+composition and finite one-step subtractions are inputs; depth-uniform
+nonlinear contraction and remainder control remain open. A formal
+one-loop coefficient is not iteration.</p>
+<p>For a physical gap exit read <a
+href="../notes/mass-gap-obligations-lattice.html">lattice
+obligations</a>, with the <a
+href="../notes/mass-gap-openings.html">scaling-region correction</a>,
+then <a href="../notes/strong-coupling-target-box.html">strong-coupling
+target</a> and <a href="../notes/uv-halving-ir-confinement.html">UV
+halving/IR confinement</a>. Strong-coupling volume uniformity is
+durable. Reaching that box with controlled generated interactions from a
+weak-coupling scaling trajectory is open. T2′ at every bare coupling is
+stronger than the continuum argument needs. Construction, nontriviality,
+volume uniformity, physical time and surviving gauge-invariant spectral
+weight must each be supplied.</p>
+<p>For STATE’s supporting small-volume bridge read <a
+href="../notes/weak-coupling-feshbach-reduction.html">Feshbach
+reduction</a> → <a href="../notes/torus-valley-potential.html">torus
+valley</a>, together with the <a
+href="../notes/schur-error-ultraviolet.html">UV Schur correction</a>. H3
+is the effective zero-mode valley-gap estimate. The full transfer also
+needs H1’s nonzero-mode separation and a renormalized/fibered H2 Schur
+bound; the bare-vacuum error is not uniform as the cutoff is removed.
+Spectral moment or trial-state upper bounds do not replace a positive
+lower bound. The displayed cutoff torus calculation uses SU(2); applying
+this supporting bridge to the main SU(3) goal also requires the
+corresponding group-dependent operator estimates.</p>
+<h2 id="newton-the-next-mechanism">Newton: the next mechanism</h2>
+<p>Read in this order:</p>
+<ol type="1">
+<li><a href="../notes/principia-fifth-postulate.html">Fifth
+postulate</a>: joint determinacy is the statement under examination; the
+deformation and state-restriction alternatives both leave positivity as
+an additional obligation.</li>
+<li><a href="../notes/planck-gap-paper.html">Planck paper</a>, for the
+geometric observable and the resource-scoped Gaussian, recoil and
+general disturbance theorems.</li>
+<li><a href="../notes/necessity-unit-and-indeterminacy.html">Unit and
+indeterminacy</a>, separating a radiation action unit from a
+complete-record restriction.</li>
+<li><a href="../notes/newton-indeterminacy-routes.html">Indeterminacy
+routes</a>, for the conditional statistical-speed bound and its affine
+Gaussian instance.</li>
+<li><a href="../notes/sed-closure-under-recording.html">Recording
+notebook</a>, §§8.11–8.20: physical feedback, complete records and
+nonlinear countertests. In the supplied quantum free-evolution
+reference, the packet tests retain phase memory and distinguish
+positive-tail reconstruction from uniform stability in the stated
+local-data metric.</li>
+</ol>
+<p>The next mechanism is a physical history rule that prepares and
+transports the coherence datum through separation and reunion, with
+retained memory and complete terminal records. It must account for the
+notebook’s (117), (119) and phase datum (129), without assuming exact
+low-density readout or importing the quantum evolution being explained.
+A rule that still admits an unexcluded zero-action branch does not
+establish necessity.</p>
+<p>Durable support: <a href="../notes/cut-measure-newton.html">cut
+measure</a>, <a href="../notes/record-costs-recoil.html">recoil</a>, <a
+href="../notes/record-costs-disturbance.html">disturbance</a>, and <a
+href="../notes/record-distance-path-length.html">path length</a>. The
+Gaussian action floor uses non-adaptive independent marks and
+preparation-invariant tests. General instrument bounds allow wider
+protocols but account for body/apparatus resources on the specified
+comparison states.</p>
+<p>Retrieve <a href="../notes/leibniz-continuity-records.html">Leibniz
+continuity</a> only with its admissible Gaussian family and optimized
+invariant-test verdict. Every fixed finite protocol can be continuous
+even at zero mark cost; the positive-cost equivalence is a statement
+about that optimized family. Uniformity over arbitrary adaptive
+complete-record apparatus is an additional physical premise. The <a
+href="../notes/stochastic-route-velocitas-ultima.html">stochastic
+route</a> supplies composition of a common coefficient, not its nonzero
+value. The <a href="../notes/sed-zeta-radiation-link.html">SED
+calibration</a> retains its disputed Planck-spectrum and
+resonant-variable hypotheses.</p>
+<p>Avoid restarting prior-only covariance restrictions, thermodynamic
+record costs, or phase/prequantization consistency as positivity proofs.
+Their precise surviving statements are in <a
+href="obstructions.html">obstructions</a>.</p>
+<h2 id="orientation-and-supporting-branches">Orientation and supporting
+branches</h2>
+<p>The principal proof inputs can be read separately from the diagram’s
+routing:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Established input</th>
+<th>Obligation it supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact series pushforward and compact-group midpoint identities</td>
+<td>Defines the interacting mid-plane comparison; does not bound its
+normalized remainder</td>
+</tr>
+<tr>
+<td>Convex reference, undifferentiated barrier, rarity and local
+connector majorants</td>
+<td>Hypotheses for the weak-strip connected and dressed estimates
+(116)/(112)</td>
+</tr>
+<tr>
+<td>Exact dressed gas and local affine moving means</td>
+<td>Quadratic subtracted source bound (177), a limited test of
+(113)</td>
+</tr>
+<tr>
+<td>Gaussian block Schur maps and generated one-step vertices</td>
+<td>Formulation of the open depth-uniform subtracted matching estimate
+(14)</td>
+</tr>
+<tr>
+<td>Dirichlet action/cut hats and invariant Gaussian mark
+constraints</td>
+<td>Finite-grid distinguishability supremum; independent quantum
+instrument bounds use their own comparison-state hypotheses</td>
+</tr>
+<tr>
+<td>Gaussian covariance/statistical-speed premise</td>
+<td>Conditional classical disturbance theorem; neither a radiation unit
+nor prior covariance alone supplies complete-record closure</td>
+</tr>
+<tr>
+<td>Compressed zero-mode gap, complementary-sector bound and relative
+Schur estimate</td>
+<td>Conditional spectral gap transfer; the required physical bounds and
+SU(3) estimates remain open</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../notes/three-continuum-limits.html">Three continuum
+limits</a> keeps the pion comparison as a symmetry/spectral benchmark
+rather than a third construction programme. <a
+href="../notes/halving-atlas.html">Halving atlas</a> locates open cells;
+<a href="../notes/refinement-results.html">refinement results</a> is a
+compact theorem entry point, with later notebook sections needed for the
+current frontier. Historical proof architecture in
+<code>../newtonlean</code> is source/formalization context, not a
+Lean-build dependency of these modern calculations.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

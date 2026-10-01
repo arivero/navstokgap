@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Obstruction retrieval map</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="obstruction-retrieval-map">Obstruction retrieval map</h1>
+<p>2026-10-01. Search the route name before restarting an argument. Each
+entry records a failure in a stated class, not a universal impossibility
+theorem. The <a href="../notes/index.html">catalog</a> distinguishes
+retrieval value from proof status; <a
+href="dependencies.html">dependencies</a> identifies the current
+replacement.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Route; why it looked promising</th>
+<th>Exact failure and scope</th>
+<th>What survives; replacement</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local Agmon suppression; magnetic energy is expensive</td>
+<td>The available Agmon comparison controls an extensive global excess,
+with a volume-dependent threshold; it does not uniformly suppress one
+local patch</td>
+<td>Global large deviations survive. Prove normalized Euclidean local
+probabilities and clusters separately</td>
+<td><a href="../notes/agmon-global-not-local.html">Correction</a>, <a
+href="../notes/agmon-ground-state-suppression.html">original</a>, <a
+href="../notes/magnetic-energy-identities.html">identities</a></td>
+</tr>
+<tr>
+<td>Blocking into a strong-coupling box; larger blocks might improve the
+mixing criterion</td>
+<td>Under the stated bounds, applying the same criterion to a naive
+block worsens its size factor unless coupling/effective action genuinely
+changes</td>
+<td>Exact elimination is useful when generated interactions and flow are
+controlled; the monotonic comparison includes its explicit δ
+hypothesis</td>
+<td><a href="../notes/blocking-criterion-monotone.html">Monotone
+criterion</a>, which supersedes <a
+href="../notes/blocking-step-obstruction.html">earlier test</a></td>
+</tr>
+<tr>
+<td>Gradient flow as RG; smoothing appears to remove dangerous
+fields</td>
+<td>Exact invertible flow is a conjugation/change of variables.
+Operator-norm criteria do not improve; discarding generated nonlocal
+terms is the actual coarse graining and needs an error bound</td>
+<td>One compact-lattice step is uniformly bounded, but generated
+couplings still need measure-weighted control</td>
+<td><a href="../notes/flow-conjugation-truncation.html">Conjugation</a>,
+<a href="../notes/flow-before-decimation.html">before decimation</a>, <a
+href="../notes/lattice-truncation-uniform.html">compactness
+correction</a></td>
+</tr>
+<tr>
+<td>Flow instability sharpness; an unstable mode might explain the
+entire truncation exponent</td>
+<td>The note’s qualitative unstable mode survives, but its displayed
+lowest Landau rate gB does not support its headline exact 2gB saturation
+claim</td>
+<td>Use qualitative instability only until the factor and generic
+spectral inference are corrected; do not cite exact saturation</td>
+<td><a href="../notes/flow-instability-large-field.html">Instability
+note</a></td>
+</tr>
+<tr>
+<td>Moment/Feynman–Bijl positivity; finite inverse moments look like a
+lower edge</td>
+<td>Consecutive spectral moment ratios and trial states upper-bound an
+edge. A gapless measure can have every inverse moment finite</td>
+<td>Upper finiteness is useful with a nonzero admissible observable. A
+complete observable-frame susceptibility estimate can lower-bound the
+appropriate relaxation operator under its own hypotheses</td>
+<td><a href="../notes/moment-hierarchy-upper-bounds.html">Moments</a>,
+<a
+href="../notes/finiteness-half-flowed-susceptibility.html">finiteness</a>,
+<a href="../notes/susceptibility-gap.html">frame theorem</a></td>
+</tr>
+<tr>
+<td>Finite certified crossover verification; all unknowns might fit in
+one finite box</td>
+<td>Existing block criteria at physical crossover demand infeasible
+certificates; enlarging the box does not supply weak-side RG
+control</td>
+<td>The abstract finite certificate remains sufficient if supplied.
+Current construction moves to local weak-side insertion and normalized
+interaction control</td>
+<td><a href="../notes/reasons-to-stop-as-research.html">Reasons to
+stop</a>, correcting <a
+href="../notes/intermediate-region-finite-verification.html">finite
+verification</a> and <a
+href="../notes/confinement-scale-bands.html">bands</a></td>
+</tr>
+<tr>
+<td>Correlation inequalities; monotonicity might extend the known strong
+side</td>
+<td>A monotone estimate from strong coupling does not give the needed
+weak-trajectory lower bound or generated-action control; the tested
+nonabelian inequalities do not discharge H1</td>
+<td>A correctly stated inequality may constrain its own observables. Use
+constructive weak-side RG rather than treating monotonicity as arrival
+in the box</td>
+<td><a href="../notes/reasons-to-stop-as-research.html">Reasons to
+stop</a>, <a href="../notes/what-would-unblock.html">earlier
+openings</a></td>
+</tr>
+<tr>
+<td>Explicit weak-side threshold chasing; better constants might meet
+the physical window</td>
+<td>The displayed Balaban-style estimates miss the relevant weak
+coupling by many orders of magnitude; this derivation’s constants do not
+produce the crossover bridge</td>
+<td>Gaussian anatomy and ultraviolet bounds survive. A different
+normalized local estimate is needed, not merely arithmetic
+optimization</td>
+<td><a
+href="../notes/small-field-step-decay-and-threshold.html">Threshold
+failure</a>, <a href="../notes/small-field-step-gaussian.html">Gaussian
+step</a></td>
+</tr>
+<tr>
+<td>Bare-vacuum Feshbach; integrate out nonzero modes
+perturbatively</td>
+<td>The proposed bare-vacuum Schur error is not uniform in the UV
+cutoff. The note does not complete a rigorous fixed-lattice gap proof
+either</td>
+<td>Refined transfer lemma and torus valley calculation remain inputs.
+Seek renormalized dressing and the open H1–H3 estimates</td>
+<td><a href="../notes/schur-error-ultraviolet.html">UV correction</a>,
+<a href="../notes/weak-coupling-feshbach-reduction.html">reduction</a>,
+<a href="../notes/torus-valley-potential.html">valley</a></td>
+</tr>
+<tr>
+<td>Action cost plus entropy as normalized rarity; local large fields
+cost Euclidean action</td>
+<td>An action lower bound is not a probability under the normalized
+measure; constant-background mode counts do not establish arbitrary
+polymer convergence or a Hamiltonian operator inequality</td>
+<td>Keep action cost and model entropy as scoped inputs. Current
+retained-barrier gas controls actual ratios in its weak strip</td>
+<td><a href="../notes/large-field-action-lower-bound.html">Action
+cost</a>, <a href="../notes/large-field-entropy-count.html">entropy</a>,
+<a href="../notes/large-field-operator-inequality.html">operator
+distinction</a>, <a
+href="../notes/su2-midplane-small-field.html">small-field
+§§33–37</a></td>
+</tr>
+<tr>
+<td>Differentiate the barrier or reuse a finite-order response
+theorem</td>
+<td>The differentiated-resolvent route reaches a fifth-derivative
+obstruction; pointwise conditional log densities may have zeros, and
+finite-order estimates do not sum all clusters</td>
+<td>Retain the barrier undifferentiated; normalize before taking
+absolute coefficients. All-order weak-strip marked/dressed estimates now
+supply a replacement with a narrower domain</td>
+<td><a href="../notes/su2-midplane-small-field.html">Small-field
+§§23,27–37</a></td>
+</tr>
+<tr>
+<td>Thermodynamic record cost; reliable recording needs work</td>
+<td>W≥kBT log(A0/η) permits arbitrary η&gt;0 with increasing finite work
+and supplies no universal positive action floor</td>
+<td>It is a conditional resource tradeoff. Seek a composition-stable
+physical record restriction independent of chosen work budget</td>
+<td><a href="../notes/thermodynamic-records-no-floor.html">Thermodynamic
+records</a></td>
+</tr>
+<tr>
+<td>Topology selects an absolute action; a nontrivial sector has
+positive energy</td>
+<td>Sector energy, stabilization and a quantized phase ratio do not fix
+the common normalization; shrinking crossing times or rescaling the
+action leaves the selector open</td>
+<td>Topology can stabilize or quantize a ratio once a phase unit is
+supplied</td>
+<td><a href="../notes/topological-sector-action-selection.html">Sector
+test</a>, <a
+href="../notes/stabilized-topology-action-scale.html">stabilization</a>,
+<a href="../notes/spin-action-patching.html">spin patching</a></td>
+</tr>
+<tr>
+<td>Relativistic Kepler threshold; collision-free bound motion requires
+L&gt;k/c</td>
+<td>The positive infimum depends on the singular −k/r core and admitted
+collision-free orbits; smoothing restores arbitrarily small bound-orbit
+action</td>
+<td>The singular-model threshold is exact. A universal selector must
+justify its short-distance admissibility premise</td>
+<td><a href="../notes/relativistic-kepler-threshold.html">Kepler</a>, <a
+href="../notes/fixed-force-small-circles.html">smooth small
+circles</a></td>
+</tr>
+<tr>
+<td>Phase/EBK consistency; single-valued phases might force h&gt;0</td>
+<td>The tested consistency laws hold at arbitrary supplied h and admit
+h→0 families; interference alone survives arbitrarily small classical
+action</td>
+<td>Exact phase/insertion laws and fixed-h convergence are useful.
+Selection needs a separate physical premise</td>
+<td><a href="../notes/rivero-1998-conjecture-central-forces.html">Rivero
+test</a>, <a href="../notes/spin-action-patching.html">spin
+patching</a>, <a
+href="../notes/mechanical-interference-action.html">mechanical
+fringes</a></td>
+</tr>
+<tr>
+<td>Preparation-independent cell floor; all instruments obey information
+bounds</td>
+<td>Arbitrarily wide/separated prepared packets, correlations or
+squeezing evade a universal Galileo-action threshold. Compact-support
+error and recoil assumptions have no nonvacuous quantum instance</td>
+<td>General resource-scoped disturbance/Bures bounds survive; Gaussian
+invariant tests have a sharp conditional floor</td>
+<td><a href="../notes/planck-gap-probabilistic.html">Probabilistic
+escape</a>, <a
+href="../notes/record-costs-disturbance.html">disturbance</a>, <a
+href="../notes/planck-gap-derivation.html">early correction</a></td>
+</tr>
+<tr>
+<td>Prior covariance or a shared bath closes recording</td>
+<td>Indirect observations, stored first readings and the two-pointer
+protocol sharpen the completed posterior. The nonlinear generator can
+defeat a covariance-only statistical-speed ceiling</td>
+<td>Linear Gaussian feedback can close under an imposed terminal readout
+law; nonlinear weak copies preserve the countertest. Seek an
+independently physical law for all retained records and memory</td>
+<td><a href="../notes/necessity-unit-and-indeterminacy.html">Unit/two
+pointers</a>, <a
+href="../notes/newton-indeterminacy-routes.html">routes</a>, <a
+href="../notes/sed-closure-under-recording.html">recording
+§§1–8.20</a></td>
+</tr>
+<tr>
+<td>Positive tails cure phase loss completely</td>
+<td>In the supplied quantum free-evolution reference, positive density
+gives exact phase reconstruction from density/current, but the stated
+local-data metric loses uniform stability as the bridge density
+vanishes</td>
+<td>Additive bridge-phase memory remains. The live Newton step is a
+physical rule preparing and carrying it through separation and
+reunion</td>
+<td><a href="../notes/sed-closure-under-recording.html">Recording
+§8.20</a></td>
+</tr>
+<tr>
+<td>Continuity by itself selects positivity</td>
+<td>Fixed protocols can be continuous at κ=0; the iff theorem optimizes
+a specified non-adaptive Gaussian, preparation-invariant family</td>
+<td>Defend a physical uniform complete-record continuity premise before
+extending the model theorem</td>
+<td><a href="../notes/leibniz-continuity-records.html">Leibniz
+records</a></td>
+</tr>
+</tbody>
+</table>
+<p>All-coupling T2′ belongs to a separate optional strengthening: the
+continuum problem requires an appropriate weak-coupling scaling
+trajectory, construction and a surviving positive physical edge. See <a
+href="../notes/mass-gap-openings.html">the correction</a>. None of these
+closures is a reason to abandon either main research goal.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

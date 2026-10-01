@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notation and scale roles</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="notation-and-scale-roles">Notation and scale roles</h1>
+<p>Reference map, 2026-10-01. Definitions are local to the linked notes;
+matching letters do not imply matching physical quantities. Keep c, ℏ
+and dimensional couplings explicit when converting rates or cutoffs to
+physics.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Newton quantity</th>
+<th>Definition / units</th>
+<th>Conceptual role and caution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>τ, partition mesh</td>
+<td>Cell duration; time</td>
+<td>Time regulator/refinement parameter; different from preparation
+width or observation horizon</td>
+</tr>
+<tr>
+<td>F, m, v</td>
+<td>Force, mass, horizontal velocity</td>
+<td>Physical model parameters; m cancels from some scaled relations but
+controls the mechanical action at fixed force</td>
+</tr>
+<tr>
+<td>A=vFτ³/(6m)</td>
+<td>Inertial–parabola spatial area</td>
+<td>Observable geometric area, not action; (3F/v)A=τΔE</td>
+</tr>
+<tr>
+<td>ΔE=F²τ²/(2m)</td>
+<td>Kinetic-energy gain from rest in the forced direction</td>
+<td>Deterministic energy gain, not energy uncertainty</td>
+</tr>
+<tr>
+<td>τΔE=F²τ³/(2m)</td>
+<td>Action</td>
+<td>Galileo comparison observable; equals 12Kτ in the constant-force
+convention</td>
+</tr>
+<tr>
+<td>Kτ=F²τ³/(24m)</td>
+<td>Action; Dirichlet chord-defect functional</td>
+<td>Matched-endpoint cell action; cut s spends 3s(1−s)Kτ. The inertial
+area and chord lens differ by endpoint convention</td>
+</tr>
+<tr>
+<td>s, J</td>
+<td>s=Fτ²/(2m), J=Fτ in the record-cost trilogy</td>
+<td>Inertial sag/displacement and impulse; midpoint chord sagitta is
+Fτ²/(8m), four times smaller. Elsewhere s is a dimensionless cut
+fraction</td>
+</tr>
+<tr>
+<td>κ</td>
+<td>Action in δΔ≥κ</td>
+<td>Supplied mark error/recoil constant. Quantum position probes give
+κ≥ℏ/2. A Brownian diffusion convention also calls mD κ, with different
+factors</td>
+</tr>
+<tr>
+<td>ζ</td>
+<td>√detΣ; action for a canonical pair</td>
+<td>Covariance-area ceiling/floor parameter; affine Gaussian
+statistical-speed result gives h*=2ζ. A prior restriction is not
+automatically posterior closure</td>
+</tr>
+<tr>
+<td>h, ℏ=h/(2π), h*</td>
+<td>Action</td>
+<td>Planck phase unit, reduced phase unit, and classical
+statistical-speed coefficient respectively; equality requires a
+calibration theorem</td>
+</tr>
+<tr>
+<td>h_rad, γ</td>
+<td>Action and dimensionless matching coefficient</td>
+<td>Radiation unit from thermodynamic scaling; conditional SED matching
+gives h*=γ h_rad. Positivity of the radiation unit does not prove
+apparatus closure</td>
+</tr>
+<tr>
+<td>δ, σ; Δ</td>
+<td>Position resolution and impulse spread</td>
+<td>Apparatus/preparation resources. σ may be a Gaussian pointer width,
+not a cutoff; δ also denotes other errors in gauge notes</td>
+</tr>
+<tr>
+<td>L, P; LP</td>
+<td>Position/momentum aperture; action product</td>
+<td>Bounds on body states used by a protocol; a balanced aspect ratio is
+extra input, so area alone is insufficient</td>
+</tr>
+<tr>
+<td>Statistical/Bures angle θ</td>
+<td>Dimensionless distance between laws/states</td>
+<td>Record distinguishability or information path length, not an action
+scale. Multiplication by a supplied h* or ℏ enters a speed bound</td>
+</tr>
+<tr>
+<td>ε</td>
+<td>Error probability, action resolution, or small perturbation
+depending on note</td>
+<td>Never substitute one role for another; ε→0 may change preparation
+and resources</td>
+</tr>
+</tbody>
+</table>
+<p>Newton sources: <a
+href="../notes/newton-insertion-action.html">insertion action</a>, <a
+href="../notes/cut-measure-newton.html">cut measure</a>, <a
+href="../notes/mark-cost-and-statistical-floor.html">mark cost</a>, <a
+href="../notes/record-distance-path-length.html">path length</a>, <a
+href="../notes/newton-indeterminacy-routes.html">routes</a>, <a
+href="../notes/necessity-unit-and-indeterminacy.html">radiation
+unit</a>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Gauge quantity</th>
+<th>Definition / units</th>
+<th>Conceptual role and caution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a, a0; L</td>
+<td>Spatial/temporal lattice spacing and physical box length</td>
+<td>UV regulators versus IR volume; limits and anisotropy must be
+stated</td>
+</tr>
+<tr>
+<td>t</td>
+<td>Heat-kernel plaquette time, dimensionless</td>
+<td>Gauge weight parameter, not physical time; in the repository
+convention t=λD a^(4−D), up to explicitly stated action
+normalizations</td>
+</tr>
+<tr>
+<td>λD=ℏ g_cl²</td>
+<td>Length^(D−4)</td>
+<td>Supplied dimensionful gauge coupling in D dimensions; D=4 gives g²
+containing ℏ</td>
+</tr>
+<tr>
+<td>g², β</td>
+<td>Dimensionless bare coupling and Wilson coefficient</td>
+<td>Wilson convention β=2N/g², hence 6/g² for SU(3); heat-kernel and
+Wilson actions need explicit matching</td>
+</tr>
+<tr>
+<td>n, b, a_n=b^n a</td>
+<td>Block depth, factor, coarse spacing</td>
+<td>RG schedule/regulator labels; a physical scale is held fixed through
+matching, not by keeping every bare coefficient fixed</td>
+</tr>
+<tr>
+<td>ξ_lat, ξ_phys=aξ_lat</td>
+<td>Correlation length in lattice cells / length</td>
+<td>An exponential clustering scale; relation to a physical Hamiltonian
+gap needs reconstruction and admissible observables</td>
+</tr>
+<tr>
+<td>δ_lat, Δ_phys</td>
+<td>Dimensionless spectral gap / energy</td>
+<td>Δ_phys=(ℏc/a)δ_lat when that transfer/Hamiltonian normalization
+applies. A relaxation clock or a physical inverse length has different
+units</td>
+</tr>
+<tr>
+<td>m, m_gap</td>
+<td>Mass, energy, or inverse correlation length by local convention</td>
+<td>Translate explicitly: energy E, mass E/c², inverse length E/(ℏc).
+“m&gt;0” alone does not specify units</td>
+</tr>
+<tr>
+<td>Λ</td>
+<td>Inverse length from dimensional transmutation</td>
+<td>Dynamically generated scale relative to a calibrated trajectory;
+existence of Λ does not prove positive spectral weight or
+m_gap/Λ&gt;0</td>
+</tr>
+<tr>
+<td>Strong-coupling target</td>
+<td>Region of coupling plus bounds on generated local interactions</td>
+<td>Sufficient finish-line criterion for its transfer/Hamiltonian; an
+effective action must actually arrive there</td>
+</tr>
+<tr>
+<td>ε_sf, t^α; k_t, p</td>
+<td>Chart size / heat-dependent small-field scale; moment order and
+rarity</td>
+<td>Technical control parameters; p is a probability majorant, not
+momentum</td>
+</tr>
+<tr>
+<td>u, q=u^−1, r</td>
+<td>Source/response or recoupling parameters</td>
+<td>Their domains differ: (113)’s u and a weak-recoupling strip are not
+the physical coupling g²</td>
+</tr>
+<tr>
+<td>c_C, b_H, a_H</td>
+<td>Good polymers, bad supports, dressed activities</td>
+<td>Expansion coefficients with specified support norms; activity bounds
+are not yet the full physical nonlinear integral</td>
+</tr>
+<tr>
+<td>β_eff, generated vertices</td>
+<td>Coefficients after elimination</td>
+<td>Effective couplings, often including nonlocal or higher-order
+interactions. Keeping only one coefficient requires a controlled
+truncation</td>
+</tr>
+<tr>
+<td>b0=11N/(48π²)</td>
+<td>Dimensionless one-loop coefficient</td>
+<td>Perturbative matching input in four dimensions; for SU(3),
+11/(16π²); not itself a mass-gap lower bound</td>
+</tr>
+</tbody>
+</table>
+<p>Gauge sources: <a
+href="../notes/series-parallel-gauge-refinement.html">series/parallel</a>,
+<a href="../notes/mass-gap-obligations-lattice.html">lattice
+obligations</a>, <a
+href="../notes/strong-coupling-target-box.html">target box</a>, <a
+href="../notes/su2-midplane-small-field.html">small-field notebook</a>,
+<a href="../notes/four-dimensional-composition.html">4D
+composition</a>.</p>
+<p>For new explanatory prose use τ for mechanical time, t_hk when gauge
+heat time might be confused with it, s_cut versus s_sag for the two s
+conventions, and Δ_phys for energy gaps. Retain existing source notation
+and give its local definition. In particular, uv-halving-ir-confinement
+writes t=ℏg² in passages where g is the classical coupling; the
+lattice/LLM convention usually absorbs ℏ into g² and writes t=g². Do not
+add a second ℏ when transferring those formulas. Its exponent
+coefficient γ is called c in the atlas, where c also denotes the speed
+of light elsewhere. No source-wide normalization change is warranted by
+this audit. An overall classical action factor rescales the ratio S/ℏ in
+a path integral only once that quantum representation and the held ℏ are
+specified; classical equations alone can be unchanged by a common
+factor.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

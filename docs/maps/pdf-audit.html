@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDF and manuscript audit</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="pdf-and-manuscript-audit">PDF and manuscript audit</h1>
+<p>2026-10-01. All <strong>123 PDFs</strong> are retained, with a
+machine-readable <a
+href="https://github.com/arivero/navstokgap/blob/main/research/pdf-catalog.json">catalog</a>.
+The grouped <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/papers.html">Papers
+page</a> is generated from it. No PDF was deleted or rebuilt for this
+navigation task.</p>
+<p>All PDF text extracted successfully. The 115 corresponding TeX bodies
+match current maintained notes after normalizing Pandoc anchor wrappers,
+line wrapping and table-width macros. PDF prefixes and TeX headings were
+screened for gross mismatches; the eight named no-note manuscripts were
+read in full in both extracted PDF and TeX form. This is
+document/version screening, not a fresh proof audit or a claim of
+byte-identical rendering after recompilation.</p>
+<h2 id="classification-by-role">Classification by role</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Count</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current synthesis</td>
+<td>7</td>
+<td>A maintained broad entry point; later live sections still govern
+frontier details.</td>
+</tr>
+<tr>
+<td>current technical manuscript</td>
+<td>66</td>
+<td>Current scoped result or obstruction; relevance and proof status
+remain separate.</td>
+</tr>
+<tr>
+<td>working manuscript</td>
+<td>30</td>
+<td>Contains useful results while a central comparison, transfer or
+mechanism remains conditional/open.</td>
+</tr>
+<tr>
+<td>older version</td>
+<td>9</td>
+<td>Earlier route better framed by a correcting or stronger note;
+artifact age alone does not determine this label.</td>
+</tr>
+<tr>
+<td>historical research snapshot</td>
+<td>4</td>
+<td>Source/provenance or superseded programme context, outside the live
+task queue.</td>
+</tr>
+<tr>
+<td>orphan manuscript</td>
+<td>7</td>
+<td>No matching notes filename; may retain unique proofs or a valuable
+standalone exposition.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="eight-manuscripts-without-a-matching-note">Eight manuscripts
+without a matching note</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Manuscript</th>
+<th>Retained value and placement</th>
+<th>Current route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-gap-foundations.pdf">action-gap-foundations</a></td>
+<td>Exact matched-endpoint constant-force chord excess F^2 T^3/(24m),
+its tangent-area relation, and the zero-infimum distinction between
+finite variations and their quadratic cost. The conditional finite-copy
+two-arm discrimination threshold and its collapse as the copy count
+grows when visibility is below one; its supplied quantum states, phase
+rule, and measurement model remain assumptions. The explicit separation
+of Jacobi stability, free-kernel short-time behavior, and relativistic
+speed-margin examples from any universal action-floor claim. Placement:
+technical appendix.</td>
+<td><a
+href="../notes/action-scale-obstructions.html">action-scale-obstructions</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-action-field.pdf">classical-action-field</a></td>
+<td>Bounded-speed displacement variance gives a short-window coefficient
+at most mu^2 Delta and hence zero as the window shrinks. For a finite
+irreducible reversible velocity chain, the exact positive Green–Kubo
+plateau is 2m⟨v,(-Q)^{-1}v⟩, with spectral bounds; the two-speed case
+gives mu^2/lambda. The iterated rate/duration limits differ under the
+formal scaling u_lambda^2=a lambda, while a fixed speed ceiling prevents
+this scaling from supplying a physical universal constant. Placement:
+technical appendix.</td>
+<td><a
+href="../notes/composition-universality.html">composition-universality</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-spins-operational-closure.pdf">classical-spins-operational-closure</a></td>
+<td>C125: affine orientation effects give the Bloch ball and capacity
+two, while the specified classical composites have capacity 2^n and
+dimension 4^n but product-only pure states, so purification and the
+stated subspace requirement fail. C127: the reversible H=J u_z v_z
+interaction evolves identical retained first/cross moments into
+different product-test probabilities. C128: for all Borel preparations
+the interaction has no finite-dimensional exact observable closure,
+including nonlinear updates of finitely many expectation coordinates.
+Placement: teaching standalone.</td>
+<td><a
+href="../notes/classical-orientation-closure.html">classical-orientation-closure</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/collision-action-relaxation.pdf">collision-action-relaxation</a></td>
+<td>The refreshed elastic bath has exact covariance plateau (m+M)s^2/nu
+and physical-time exponential relaxation; rescaling the refreshed
+velocity amplitude makes the plateau arbitrarily small. C050: the
+equal-mass Poisson hard-point gas gives an infinite-gas plateau mu/rho
+at collision rate rho u. C051: ordered counterpropagating lattice
+streams with the same m,u,rho and mean collision rate have periodic
+tagged motion and zero long-window response; the difference is the joint
+position–velocity preparation. Placement: technical appendix.</td>
+<td><a
+href="../notes/ordered-beam-preparation.html">ordered-beam-preparation</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/regulator-limits.pdf">regulator-limits</a></td>
+<td>For arbitrary partitions, the normalized Gaussian bridge has exact
+determinant and covariance formulas and its polygonal paths converge
+uniformly under a common Brownian-bridge coupling as the mesh
+fluctuation scale vanishes. With (N−1)kappa tending to a positive
+constant, the paths converge to the straight path while the excess
+action converges in L2 to half that constant; the finite-dimensional
+action distribution still has values arbitrarily close to zero. The
+bounded-speed sine example, fixed-dimensional
+stationary-phase/delta-weight calculation, and two-regulator parameter
+map preserve the distinction between a residual limit and a hard
+finite-path floor. Placement: technical appendix.</td>
+<td><a
+href="../notes/two-regulator-audit.html">two-regulator-audit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/research-programme.pdf">research-programme</a></td>
+<td>A dated record of the programme map and research priorities as of
+2026-09-16, including the provenance and then-current organization of
+action-selection, operational-closure, and mass-gap routes. Historical
+context for claims and publications assembled at that date; it
+contributes no independent theorem and explicitly labels itself
+superseded by AGENTS.md. Placement: history.</td>
+<td><a href="programme-evolution.html">programme evolution</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/same-collisions-different-transport.pdf">same-collisions-different-transport</a></td>
+<td>An accessible derivation of the C050 Poisson-gas plateau and C051
+ordered-stream vanishing response under matched mass, speed, density,
+and mean collision rate. The Palm residual-time distinction: the ordered
+preparation has a uniform residual wait even though its long-run
+collision rate is the same; the manuscript explains the full-period
+cancellation and includes teaching questions. Placement: teaching
+standalone.</td>
+<td><a
+href="../notes/ordered-beam-preparation.html">ordered-beam-preparation</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/time-refinement.pdf">time-refinement</a></td>
+<td>Exact Gaussian convolution under arbitrary insertion of time points
+leaves every positive action parameter free, with the deterministic
+zero-width member also allowed. The bridge mean and variance concentrate
+on the straight path as the scale vanishes, without selecting the scale;
+the free unitary Fourier multiplier has generator
+H_kappa=kappa<sup>2(-d</sup>2/dx^2)/(2m) on the stated domain. The
+analytic continuation from the positive Gaussian family to oscillatory
+unitary evolution is identified as a model choice, not a consequence of
+refinement. Placement: technical appendix.</td>
+<td><a
+href="../notes/refinement-composition-and-limit.html">refinement-composition-and-limit</a></td>
+</tr>
+</tbody>
+</table>
+<p>These files are not disposable duplicates. classical-action-field,
+collision-action-relaxation, regulator-limits and time-refinement retain
+detailed derivations only summarized or routed by their notes. The spin
+and matched-collision manuscripts retain coherent teaching/publication
+presentations of results now split across notes. action-gap-foundations
+retains its finite-copy operational benchmark. research-programme is a
+generated historical research document with a source under research/,
+not an orphan theorem.</p>
+<p>The TeX-only spectral-gap-laboratory draft remains outside the
+accepted PDF set and build integration; the programme/research-note
+templates are infrastructure, not manuscripts.</p>
+<h2 id="every-pdf-classified">Every PDF, classified</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>PDF</th>
+<th>Category</th>
+<th>Current source / redirect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/abelian-misses-the-box.pdf">abelian-misses-the-box</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/abelian-misses-the-box.html">abelian-misses-the-box</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-floor-yang-mills-gap.pdf">action-floor-yang-mills-gap</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/action-floor-yang-mills-gap.html">action-floor-yang-mills-gap</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-gap-foundations.pdf">action-gap-foundations</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/action-scale-obstructions.html">action-scale-obstructions</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-scale-obstructions.pdf">action-scale-obstructions</a></td>
+<td>current synthesis</td>
+<td><a
+href="../notes/action-scale-obstructions.html">action-scale-obstructions</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-unit-dimensional-selection.pdf">action-unit-dimensional-selection</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/action-unit-dimensional-selection.html">action-unit-dimensional-selection</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/additive-noise-marks.pdf">additive-noise-marks</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/additive-noise-marks.html">additive-noise-marks</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/agmon-global-not-local.pdf">agmon-global-not-local</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/agmon-global-not-local.html">agmon-global-not-local</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/agmon-ground-state-suppression.pdf">agmon-ground-state-suppression</a></td>
+<td>older version</td>
+<td><a
+href="../notes/agmon-ground-state-suppression.html">agmon-ground-state-suppression</a>
+→ <a
+href="../notes/agmon-global-not-local.html">agmon-global-not-local</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/arrow-not-sling.pdf">arrow-not-sling</a></td>
+<td>historical research snapshot</td>
+<td><a href="../notes/arrow-not-sling.html">arrow-not-sling</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/blocking-criterion-monotone.pdf">blocking-criterion-monotone</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/blocking-criterion-monotone.html">blocking-criterion-monotone</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/blocking-step-obstruction.pdf">blocking-step-obstruction</a></td>
+<td>older version</td>
+<td><a
+href="../notes/blocking-step-obstruction.html">blocking-step-obstruction</a>
+→ <a
+href="../notes/blocking-criterion-monotone.html">blocking-criterion-monotone</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/bounded-acceleration-return.pdf">bounded-acceleration-return</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/bounded-acceleration-return.html">bounded-acceleration-return</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/checkerboard-dynamics.pdf">checkerboard-dynamics</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/checkerboard-dynamics.html">checkerboard-dynamics</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-action-field.pdf">classical-action-field</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/composition-universality.html">composition-universality</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-spins-operational-closure.pdf">classical-spins-operational-closure</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/classical-orientation-closure.html">classical-orientation-closure</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/collision-action-relaxation.pdf">collision-action-relaxation</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/ordered-beam-preparation.html">ordered-beam-preparation</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/composition-universality.pdf">composition-universality</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/composition-universality.html">composition-universality</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/confinement-scale-bands.pdf">confinement-scale-bands</a></td>
+<td>older version</td>
+<td><a
+href="../notes/confinement-scale-bands.html">confinement-scale-bands</a>
+→ <a
+href="../notes/reasons-to-stop-as-research.html">reasons-to-stop-as-research</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/conservative-harmonic-receiver.pdf">conservative-harmonic-receiver</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/conservative-harmonic-receiver.html">conservative-harmonic-receiver</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-measure-newton.pdf">cut-measure-newton</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/cut-measure-newton.html">cut-measure-newton</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-point-consistency.pdf">cut-point-consistency</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/cut-point-consistency.html">cut-point-consistency</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/dimension-ladder.pdf">dimension-ladder</a></td>
+<td>current technical manuscript</td>
+<td><a href="../notes/dimension-ladder.html">dimension-ladder</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/discrete-substrate-actors.pdf">discrete-substrate-actors</a></td>
+<td>historical research snapshot</td>
+<td><a
+href="../notes/discrete-substrate-actors.html">discrete-substrate-actors</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/dobrushin-uniqueness-wilson.pdf">dobrushin-uniqueness-wilson</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/dobrushin-uniqueness-wilson.html">dobrushin-uniqueness-wilson</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/energy-depot-action-selection.pdf">energy-depot-action-selection</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/energy-depot-action-selection.html">energy-depot-action-selection</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/finite-depth-spin-gap.pdf">finite-depth-spin-gap</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/finite-depth-spin-gap.html">finite-depth-spin-gap</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/finiteness-half-flowed-susceptibility.pdf">finiteness-half-flowed-susceptibility</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/finiteness-half-flowed-susceptibility.html">finiteness-half-flowed-susceptibility</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-before-decimation.pdf">flow-before-decimation</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/flow-before-decimation.html">flow-before-decimation</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-conjugation-truncation.pdf">flow-conjugation-truncation</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/flow-conjugation-truncation.html">flow-conjugation-truncation</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-instability-large-field.pdf">flow-instability-large-field</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/flow-instability-large-field.html">flow-instability-large-field</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-jacobian-truncation-error.pdf">flow-jacobian-truncation-error</a></td>
+<td>older version</td>
+<td><a
+href="../notes/flow-jacobian-truncation-error.html">flow-jacobian-truncation-error</a>
+→ <a
+href="../notes/lattice-truncation-uniform.html">lattice-truncation-uniform</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/flowed-bound-free-field.pdf">flowed-bound-free-field</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/flowed-bound-free-field.html">flowed-bound-free-field</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-composition.pdf">four-dimensional-composition</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/four-dimensional-composition.html">four-dimensional-composition</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-parallel-log.pdf">four-dimensional-parallel-log</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/four-dimensional-parallel-log.html">four-dimensional-parallel-log</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/galileo-two-path-interference.pdf">galileo-two-path-interference</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/galileo-two-path-interference.html">galileo-two-path-interference</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/gapped-set-critical-coupling.pdf">gapped-set-critical-coupling</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/gapped-set-critical-coupling.html">gapped-set-critical-coupling</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/gaussian-blocking-coupling.pdf">gaussian-blocking-coupling</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/gaussian-blocking-coupling.html">gaussian-blocking-coupling</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/ground-state-measure-transfer.pdf">ground-state-measure-transfer</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/ground-state-measure-transfer.html">ground-state-measure-transfer</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/halving-atlas.pdf">halving-atlas</a></td>
+<td>current synthesis</td>
+<td><a href="../notes/halving-atlas.html">halving-atlas</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/holography-lowest-dimensions.pdf">holography-lowest-dimensions</a></td>
+<td>historical research snapshot</td>
+<td><a
+href="../notes/holography-lowest-dimensions.html">holography-lowest-dimensions</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/interacting-ising-gap.pdf">interacting-ising-gap</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/interacting-ising-gap.html">interacting-ising-gap</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/intermediate-region-finite-verification.pdf">intermediate-region-finite-verification</a></td>
+<td>older version</td>
+<td><a
+href="../notes/intermediate-region-finite-verification.html">intermediate-region-finite-verification</a>
+→ <a
+href="../notes/reasons-to-stop-as-research.html">reasons-to-stop-as-research</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/ising-hermitian-transfer.pdf">ising-hermitian-transfer</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/ising-hermitian-transfer.html">ising-hermitian-transfer</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/kogut-susskind-strong-coupling-explicit.pdf">kogut-susskind-strong-coupling-explicit</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/kogut-susskind-strong-coupling-explicit.html">kogut-susskind-strong-coupling-explicit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/large-field-action-lower-bound.pdf">large-field-action-lower-bound</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/large-field-action-lower-bound.html">large-field-action-lower-bound</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/large-field-entropy-count.pdf">large-field-entropy-count</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/large-field-entropy-count.html">large-field-entropy-count</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/large-field-operator-inequality.pdf">large-field-operator-inequality</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/large-field-operator-inequality.html">large-field-operator-inequality</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/lattice-gap-upper-bounds.pdf">lattice-gap-upper-bounds</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/lattice-gap-upper-bounds.html">lattice-gap-upper-bounds</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/lattice-truncation-uniform.pdf">lattice-truncation-uniform</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/lattice-truncation-uniform.html">lattice-truncation-uniform</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/leibniz-continuity-records.pdf">leibniz-continuity-records</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/leibniz-continuity-records.html">leibniz-continuity-records</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/lieb-robinson-kogut-susskind.pdf">lieb-robinson-kogut-susskind</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/lieb-robinson-kogut-susskind.html">lieb-robinson-kogut-susskind</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/local-detector-coincidences.pdf">local-detector-coincidences</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/local-detector-coincidences.html">local-detector-coincidences</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/low-dimensional-mass-gap.pdf">low-dimensional-mass-gap</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/low-dimensional-mass-gap.html">low-dimensional-mass-gap</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/magnetic-energy-identities.pdf">magnetic-energy-identities</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/magnetic-energy-identities.html">magnetic-energy-identities</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/mark-cost-and-statistical-floor.pdf">mark-cost-and-statistical-floor</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/mark-cost-and-statistical-floor.html">mark-cost-and-statistical-floor</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-conditional-theorem.pdf">mass-gap-conditional-theorem</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/mass-gap-conditional-theorem.html">mass-gap-conditional-theorem</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-obligations-lattice.pdf">mass-gap-obligations-lattice</a></td>
+<td>current synthesis</td>
+<td><a
+href="../notes/mass-gap-obligations-lattice.html">mass-gap-obligations-lattice</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-openings.pdf">mass-gap-openings</a></td>
+<td>working manuscript</td>
+<td><a href="../notes/mass-gap-openings.html">mass-gap-openings</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-position.pdf">mass-gap-position</a></td>
+<td>current synthesis</td>
+<td><a href="../notes/mass-gap-position.html">mass-gap-position</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/mechanical-interference-action.pdf">mechanical-interference-action</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/mechanical-interference-action.html">mechanical-interference-action</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/moment-hierarchy-upper-bounds.pdf">moment-hierarchy-upper-bounds</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/moment-hierarchy-upper-bounds.html">moment-hierarchy-upper-bounds</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/necessity-unit-and-indeterminacy.pdf">necessity-unit-and-indeterminacy</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/necessity-unit-and-indeterminacy.html">necessity-unit-and-indeterminacy</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-indeterminacy-routes.pdf">newton-indeterminacy-routes</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/newton-indeterminacy-routes.html">newton-indeterminacy-routes</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-insertion-action.pdf">newton-insertion-action</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/newton-insertion-action.html">newton-insertion-action</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-mark-floor.pdf">newton-mark-floor</a></td>
+<td>older version</td>
+<td><a href="../notes/newton-mark-floor.html">newton-mark-floor</a> → <a
+href="../notes/mark-cost-and-statistical-floor.html">mark-cost-and-statistical-floor</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-record-parallel-move.pdf">newton-record-parallel-move</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/newton-record-parallel-move.html">newton-record-parallel-move</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/passive-threshold-events.pdf">passive-threshold-events</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/passive-threshold-events.html">passive-threshold-events</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/physical-cut-speed.pdf">physical-cut-speed</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/physical-cut-speed.html">physical-cut-speed</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-derivation.pdf">planck-gap-derivation</a></td>
+<td>older version</td>
+<td><a
+href="../notes/planck-gap-derivation.html">planck-gap-derivation</a> →
+<a
+href="../notes/planck-gap-probabilistic.html">planck-gap-probabilistic</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-paper.pdf">planck-gap-paper</a></td>
+<td>current synthesis</td>
+<td><a href="../notes/planck-gap-paper.html">planck-gap-paper</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/planck-gap-probabilistic.pdf">planck-gap-probabilistic</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/planck-gap-probabilistic.html">planck-gap-probabilistic</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/polyakov-average-gap-bound.pdf">polyakov-average-gap-bound</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/polyakov-average-gap-bound.html">polyakov-average-gap-bound</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/polygon-lift-phase.pdf">polygon-lift-phase</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/polygon-lift-phase.html">polygon-lift-phase</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/principia-fifth-postulate.pdf">principia-fifth-postulate</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/principia-fifth-postulate.html">principia-fifth-postulate</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/reasons-to-stop-as-research.pdf">reasons-to-stop-as-research</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/reasons-to-stop-as-research.html">reasons-to-stop-as-research</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/reciprocal-coupling-normalization.pdf">reciprocal-coupling-normalization</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/reciprocal-coupling-normalization.html">reciprocal-coupling-normalization</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-costs-disturbance.pdf">record-costs-disturbance</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/record-costs-disturbance.html">record-costs-disturbance</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-costs-recoil.pdf">record-costs-recoil</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/record-costs-recoil.html">record-costs-recoil</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-distance-path-length.pdf">record-distance-path-length</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/record-distance-path-length.html">record-distance-path-length</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-composition-and-limit.pdf">refinement-composition-and-limit</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/refinement-composition-and-limit.html">refinement-composition-and-limit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-results.pdf">refinement-results</a></td>
+<td>current synthesis</td>
+<td><a
+href="../notes/refinement-results.html">refinement-results</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/regulator-limits.pdf">regulator-limits</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/two-regulator-audit.html">two-regulator-audit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/research-programme.pdf">research-programme</a></td>
+<td>historical research snapshot</td>
+<td>No matching note; assessed above</td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/rivero-1998-conjecture-central-forces.pdf">rivero-1998-conjecture-central-forces</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/rivero-1998-conjecture-central-forces.html">rivero-1998-conjecture-central-forces</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/rotation-composition-universality.pdf">rotation-composition-universality</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/rotation-composition-universality.html">rotation-composition-universality</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/same-collisions-different-transport.pdf">same-collisions-different-transport</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/ordered-beam-preparation.html">ordered-beam-preparation</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/schur-error-ultraviolet.pdf">schur-error-ultraviolet</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/schur-error-ultraviolet.html">schur-error-ultraviolet</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">sed-closure-under-recording</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/sed-closure-under-recording.html">sed-closure-under-recording</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-zeta-radiation-link.pdf">sed-zeta-radiation-link</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/sed-zeta-radiation-link.html">sed-zeta-radiation-link</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/series-parallel-gauge-refinement.pdf">series-parallel-gauge-refinement</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/series-parallel-gauge-refinement.html">series-parallel-gauge-refinement</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/shared-readiness-chsh.pdf">shared-readiness-chsh</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/shared-readiness-chsh.html">shared-readiness-chsh</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/shared-resource-events.pdf">shared-resource-events</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/shared-resource-events.html">shared-resource-events</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/small-field-step-decay-and-threshold.pdf">small-field-step-decay-and-threshold</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/small-field-step-decay-and-threshold.html">small-field-step-decay-and-threshold</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/small-field-step-gaussian.pdf">small-field-step-gaussian</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/small-field-step-gaussian.html">small-field-step-gaussian</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/spin-action-patching.pdf">spin-action-patching</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/spin-action-patching.html">spin-action-patching</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/stabilized-topology-action-scale.pdf">stabilized-topology-action-scale</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/stabilized-topology-action-scale.html">stabilized-topology-action-scale</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/stochastic-route-velocitas-ultima.pdf">stochastic-route-velocitas-ultima</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/stochastic-route-velocitas-ultima.html">stochastic-route-velocitas-ultima</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-target-box.pdf">strong-coupling-target-box</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/strong-coupling-target-box.html">strong-coupling-target-box</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-threshold-explicit.pdf">strong-coupling-threshold-explicit</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/strong-coupling-threshold-explicit.html">strong-coupling-threshold-explicit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-uniform-gap.pdf">strong-coupling-uniform-gap</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/strong-coupling-uniform-gap.html">strong-coupling-uniform-gap</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-order-t.pdf">su2-midplane-order-t</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/su2-midplane-order-t.html">su2-midplane-order-t</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midplane-small-field.pdf">su2-midplane-small-field</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/su2-midplane-small-field.html">su2-midplane-small-field</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/su2-midpoint-exact.pdf">su2-midpoint-exact</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/su2-midpoint-exact.html">su2-midpoint-exact</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/su3-constants.pdf">su3-constants</a></td>
+<td>current technical manuscript</td>
+<td><a href="../notes/su3-constants.html">su3-constants</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/sun-midpoint-centre.pdf">sun-midpoint-centre</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/sun-midpoint-centre.html">sun-midpoint-centre</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/superdeterminism-floor.pdf">superdeterminism-floor</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/superdeterminism-floor.html">superdeterminism-floor</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/susceptibility-gap.pdf">susceptibility-gap</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/susceptibility-gap.html">susceptibility-gap</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/tangent-groupoid-trajectories.pdf">tangent-groupoid-trajectories</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/tangent-groupoid-trajectories.html">tangent-groupoid-trajectories</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/telegraph-return-bridge.pdf">telegraph-return-bridge</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/telegraph-return-bridge.html">telegraph-return-bridge</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/thermal-receiver-reliability.pdf">thermal-receiver-reliability</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/thermal-receiver-reliability.html">thermal-receiver-reliability</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/thermodynamic-records-no-floor.pdf">thermodynamic-records-no-floor</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/thermodynamic-records-no-floor.html">thermodynamic-records-no-floor</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-continuum-limits.pdf">three-continuum-limits</a></td>
+<td>current synthesis</td>
+<td><a
+href="../notes/three-continuum-limits.html">three-continuum-limits</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-dimensional-gap-one-function.pdf">three-dimensional-gap-one-function</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/three-dimensional-gap-one-function.html">three-dimensional-gap-one-function</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/time-refinement.pdf">time-refinement</a></td>
+<td>orphan manuscript</td>
+<td>No matching note; assessed above → <a
+href="../notes/refinement-composition-and-limit.html">refinement-composition-and-limit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/topological-sector-action-selection.pdf">topological-sector-action-selection</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/topological-sector-action-selection.html">topological-sector-action-selection</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/torus-valley-potential.pdf">torus-valley-potential</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/torus-valley-potential.html">torus-valley-potential</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/typical-field-strength-window.pdf">typical-field-strength-window</a></td>
+<td>older version</td>
+<td><a
+href="../notes/typical-field-strength-window.html">typical-field-strength-window</a>
+→ <a
+href="../notes/lattice-truncation-uniform.html">lattice-truncation-uniform</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/uv-halving-ir-confinement.pdf">uv-halving-ir-confinement</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/uv-halving-ir-confinement.html">uv-halving-ir-confinement</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/villain-monopole-refinement.pdf">villain-monopole-refinement</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/villain-monopole-refinement.html">villain-monopole-refinement</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/weak-coupling-feshbach-reduction.pdf">weak-coupling-feshbach-reduction</a></td>
+<td>working manuscript</td>
+<td><a
+href="../notes/weak-coupling-feshbach-reduction.html">weak-coupling-feshbach-reduction</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/what-would-unblock.pdf">what-would-unblock</a></td>
+<td>older version</td>
+<td><a href="../notes/what-would-unblock.html">what-would-unblock</a> →
+<a
+href="../notes/reasons-to-stop-as-research.html">reasons-to-stop-as-research</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/wilson-strong-coupling-explicit.pdf">wilson-strong-coupling-explicit</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/wilson-strong-coupling-explicit.html">wilson-strong-coupling-explicit</a></td>
+</tr>
+<tr>
+<td><a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/zero-spacing-any-action.pdf">zero-spacing-any-action</a></td>
+<td>current technical manuscript</td>
+<td><a
+href="../notes/zero-spacing-any-action.html">zero-spacing-any-action</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-page-changes">Public page changes</h2>
+<p>Major syntheses appear first, followed by current technical and
+working manuscripts, then older/historical and unique orphan documents.
+Every entry links its PDF and current source or correcting treatment and
+carries an assessment. The page no longer implies all notes have PDFs or
+all PDFs have equal scientific/publication status. Sensitive titles are
+qualified by their assessments: Wilson leading versus all-representation
+activity, the incomplete fixed-lattice Schur proof, preparation-relative
+record floors, family-dependent Leibniz continuity and the still-open
+full nonlinear mid-plane comparison.</p>
+<p>Regenerate this catalog entry when a PDF or its source materially
+changes; build only the changed note. The artifact comparison here does
+not authorize a routine full rebuild.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

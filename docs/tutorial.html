@@ -77,7 +77,7 @@ table.status th{color:var(--ink-2);font-weight:600}
 <section class="slide" id="s1"><div class="inner">
   <div class="kicker">Tutorial &middot; what survives refinement</div>
   <h1>A minimum action, and a mass gap</h1>
-  <p class="muted">Two limits that refine a picture until nothing is left to see: Newton shrinking a cell of motion to a point, and a lattice gauge theory halving its spacing toward the continuum. This tutorial walks through what each keeps.</p>
+  <p class="muted">Newton’s shrinking cell and a gauge lattice’s shrinking spacing both require compatible refinement laws. This tutorial follows their exact constructions, the resources needed to record them, and the still-open survival of a positive physical scale.</p>
   <p class="muted">Use the arrow keys, Page Up and Page Down, or scroll. Every claim links to the note that holds its proof and states its status.</p>
 </div></section>
 
@@ -85,8 +85,8 @@ table.status th{color:var(--ink-2);font-weight:600}
   <div>
     <div class="kicker">1 &middot; Newton's comparison</div>
     <h2>A force read off a vanishing sagitta</h2>
-    <p>Galileo compares a body moving freely with the same body under a constant force <em>F</em>. Over a cell of duration &tau; the two paths separate by the sagitta <em>F&tau;&sup2;/2m</em>, and Newton's Lemma X makes the force the limit of that separation as the cell shrinks.</p>
-    <p class="muted">The cell carries an action, the Galileo area in Newton's quantities:</p>
+    <p>Galileo compares a body moving freely with the same body under a constant force <em>F</em>. Over a cell of duration &tau; the forced path separates from the inertial path by <em>F&tau;&sup2;/2m</em>. The midpoint sagitta relative to an endpoint-matched chord is <em>F&tau;&sup2;/8m</em>. The normalized limiting ratio recovers the force.</p>
+    <p class="muted">The matched-endpoint chord defect has action K; the inertial–parabola Galileo comparison has &tau;&Delta;E = 12K:</p>
     <div class="formula">K<sub>&tau;</sub> = F&sup2;&tau;&sup3; / (24&thinsp;m)</div>
     <p class="muted">Newton takes &tau; &rarr; 0, and K<sub>&tau;</sub> goes to zero with it.</p>
   </div>
@@ -105,9 +105,9 @@ table.status th{color:var(--ink-2);font-weight:600}
       <text class="lab" x="228" y="182">sagitta F&tau;&sup2;/8m</text>
       <text class="lab" x="250" y="112" fill="var(--s1)">chord</text>
       <text class="lab" x="300" y="200">parabola</text>
-      <text class="lab2" x="120" y="236">Galileo area</text>
+      <text class="lab2" x="120" y="236">chord lens</text>
     </svg>
-    <figcaption>One cell: the chord and the constant-force parabola. The shaded area is the cell's action in Newton's quantities.</figcaption>
+    <figcaption>Endpoint-matched chord and parabola. The shaded lens is a geometric area; its action conversion gives K. The inertial–parabola area uses a different endpoint convention.</figcaption>
   </figure>
 </div></section>
 
@@ -129,10 +129,13 @@ table.status th{color:var(--ink-2);font-weight:600}
   <div>
     <div class="kicker">3 &middot; The cost of a record</div>
     <h2>A mark that locates also kicks</h2>
-    <p>To read the comparison, the body must be marked. Each mark locates it within &delta; and delivers an impulse spread &Delta;, with the trade-off</p>
+    <p>In the independent Gaussian mark model, each position error &delta; and impulse spread &Delta; obey a supplied tradeoff:</p>
     <div class="formula">&delta;&thinsp;&Delta; &ge; &kappa;</div>
-    <p>Marks placed at the cuts of the cell distinguish the force with squared statistical distance equal to <strong>the action those cuts spend, divided by &kappa;</strong>. The cut measure and the record measure are one object.</p>
-    <p class="muted"><a href="notes/cut-measure-newton.html">Proposition 7</a> (refereed); the dense limit is Theorem 2 of the <a href="notes/planck-gap-paper.html">Planck paper</a>.</p>
+    <p>For non-adaptive marks and tests invariant under unknown initial position and velocity, the <em>supremum</em> of squared distinguishability on a finite cut grid is the spent action divided by &kappa;. Finite positive endpoint widths approach this value; they never attain it.</p>
+    <p>For arbitrary quantum instruments, the wider result prices momentum and position disturbance:</p>
+    <div class="formula">(s/8)&Sigma;&Delta;D + (J/2)&Sigma;&Delta;X &ge; &#8463; arcsin(1&minus;2&epsilon;)</div>
+    <p class="muted">Here s = F&tau;&sup2;/2m and J = F&tau;. These coefficients apply when initial states under the two hypotheses are unknown. Each spread is bounded uniformly over the interpolating comparison states; a known common preparation requires a different bound. Prepared packets can evade a universal cell-action threshold; &#8463; is supplied.</p>
+    <p class="muted"><a href="notes/cut-measure-newton.html">Cut measure, Prop. 7</a> · <a href="notes/record-costs-disturbance.html">general disturbance</a> · <a href="notes/planck-gap-probabilistic.html">preparation dependence</a>.</p>
   </div>
   <figure>
     <svg viewBox="0 0 420 260" role="img" aria-label="A timeline with mark positions; each mark shows a position bar of width delta and a kick arrow of size Delta">
@@ -141,7 +144,7 @@ table.status th{color:var(--ink-2);font-weight:600}
       <g id="marks"></g>
       <text class="lab2" x="30" y="40">resolution &delta; (bar) and kick &Delta; (arrow) at each mark</text>
     </svg>
-    <figcaption>Sharper marks kick harder. The two ends can be sharp at no cost; the interior marks balance &delta; against &Delta;.</figcaption>
+    <figcaption>Gaussian benchmark: endpoint widths tend to zero in the supremum; interior errors and kicks balance. The finite schedule does not attain the endpoint limit.</figcaption>
   </figure>
 </div></section>
 
@@ -149,11 +152,11 @@ table.status th{color:var(--ink-2);font-weight:600}
   <div>
     <div class="kicker">4 &middot; Leibniz's test, 1687</div>
     <h2>Continuity of the best verdict</h2>
-    <p>The best error in deciding between free motion and a force <em>F</em> is</p>
+    <p>Within that non-adaptive independent Gaussian family, optimizing preparation-invariant tests gives the infimum error</p>
     <div class="formula">P<sub>*</sub>(F) = &Phi;(&minus;&frac12;&radic;(K<sub>&tau;</sub>/&kappa;))</div>
-    <p>With a floor &kappa; &gt; 0 it rises smoothly to &frac12; as <em>F</em> &rarr; 0. With &kappa; = 0 perfect marks decide any force at once, and the verdict jumps.</p>
+    <p>For &kappa; &gt; 0 this optimized verdict tends continuously to &frac12; as <em>F</em> &rarr; 0. For &kappa; = 0 arbitrarily precise admissible marks drive the error to zero for every nonzero force. Each fixed finite protocol can still be continuous; the singularity concerns optimization over the family.</p>
     <blockquote>"Lorsque la difference de deux cas peut estre diminuée au dessous de toute grandeur donnée in datis &hellip; il faut qu'elle se puisse trouver aussi diminuée &hellip; in quaesitis" &mdash; Leibniz, July 1687</blockquote>
-    <p class="muted"><a href="notes/leibniz-continuity-records.html">Continuity note</a>: read on records, Leibniz's law holds exactly when &kappa; &gt; 0 (refereed; the reading is the premise).</p>
+    <p class="muted"><a href="notes/leibniz-continuity-records.html">Continuity note</a>: the iff theorem holds for the stated mark family. Extending a uniform continuity principle to arbitrary adaptive apparatus, retained memory and complete records requires a physical premise; fresh repeated preparations are a different resource.</p>
   </div>
   <figure>
     <svg id="chart-verdict" viewBox="0 0 440 300" role="img" aria-label="Best error probability against force: a smooth curve rising to one half at zero force for a positive floor, and a jump for zero floor"></svg>
@@ -192,9 +195,9 @@ table.status th{color:var(--ink-2);font-weight:600}
   <div>
     <div class="kicker">7 &middot; One step, uniformly in the plane</div>
     <h2>The mid-plane against a covariant Gaussian</h2>
-    <p>For SU(2) in 1+2 dimensions, one halving step is compared with a Gaussian built in the background connection. The comparison holds with error of relative order t<sup>&alpha;</sup> per face, uniformly in the size of the plane, and the dependence between distant links decays exponentially.</p>
+    <p>For SU(2) in 1+2 dimensions, the target is a normalized comparison of the interacting mid-plane with a covariant Gaussian. On the controlled chart, response kernels decay uniformly in plane size. This input does not yet prove the full nonlinear group-integral comparison.</p>
     <div class="formula">|K<sub>ab</sub>| &le; C&thinsp;t<sup>&alpha;&prime;</sup> e<sup>&minus;&gamma; d(a,b)</sup></div>
-    <p class="muted"><a href="notes/su2-midplane-small-field.html">Small-field note</a>, &sect;&sect;13&ndash;25, rounds refereed one by one.</p>
+    <p class="muted"><a href="notes/su2-midplane-small-field.html">Small-field note</a>: &sect;&sect;26&ndash;36 construct contact, connected-set and dressed-activity control in a weak-recoupling strip. &sect;37 tests moving sources in an exact quadratic model; nonlinear centered control remains open.</p>
   </div>
   <figure>
     <svg id="chart-decay" viewBox="0 0 440 300" role="img" aria-label="Kernel bound against link distance on a logarithmic scale, falling exponentially"></svg>
@@ -208,7 +211,7 @@ table.status th{color:var(--ink-2);font-weight:600}
     <h2>Rare clusters of large fields</h2>
     <p>Most links stay close to their classical values. A connected set <em>H</em> of links outside the small-field chart is rare jointly, with probability at most</p>
     <div class="formula">p<sup>|H|/16</sup>, &nbsp; p = 2(7/16)<sup>k<sub>t</sub></sup></div>
-    <p class="muted">The barrier is never differentiated, and uniform convexity alone gives the joint bound. Two distant clusters decorrelate exponentially in their distance.</p>
+    <p class="muted">Joint rarity uses the stated convexity and moment hypotheses. With the barrier undifferentiated, &sect;35 now controls compatible connected bad components at every order in its weak strip, retaining rarity and tree decay; &sect;36 constructs exact dressed activities. Physical recoupling and complete source bound (113) remain open.</p>
   </div>
   <figure>
     <svg id="clusters" viewBox="0 0 420 300" role="img" aria-label="A lattice of links with two small highlighted clusters of large-field links"></svg>
@@ -220,8 +223,8 @@ table.status th{color:var(--ink-2);font-weight:600}
   <div>
     <div class="kicker">9 &middot; From SU(2) to SU(3)</div>
     <h2>The group enters through one invariant</h2>
-    <p>Every one-loop coefficient of the mid-plane step is quadratic in the background and enters through the Killing form. For SU(N) the coefficients are those of SU(2) times <strong>N/2</strong>: times 3/2 for SU(3).</p>
-    <p>Twisted boundary conditions carry the centre Z<sub>3</sub>. The clock and shift matrices give eight adjoint phase pairs, none of them trivial, so the twisted sector has no zero mode.</p>
+    <p>The quadratic background one-loop coefficients enter through the Killing form. Under the order-t calculation’s hypotheses their group factor scales by <strong>N/2</strong>, hence 3/2 for SU(3). This coefficient transfer does not transfer the full nonlinear estimates or iteration.</p>
+    <p>In the stated twisted SU(3) finite-sector test, clock and shift matrices give eight nontrivial adjoint phase pairs and remove that zero mode. Centre-sensitive exact bridge cuts occur at thirds; ordinary halving does not access a nontrivial SU(3) centre element.</p>
     <p class="muted"><a href="notes/su2-midplane-order-t.html">Order-t note</a>, &sect;7b; small-field note, &sect;16.</p>
   </div>
   <figure>
@@ -233,26 +236,26 @@ table.status th{color:var(--ink-2);font-weight:600}
 <section class="slide" id="s11"><div class="inner">
   <div class="kicker">10 &middot; Ultraviolet halving, infrared gap</div>
   <h2>Why halving toward the ultraviolet bears on confinement</h2>
-  <p>Halving the lattice walks toward short distances, while confinement and the mass gap live at long distances. The steps connect through the running coupling: each halving shifts the coupling by an amount fixed by b<sub>0</sub> = 11N/(48&pi;&sup2;) in four dimensions, and after many steps the lattice spacing, measured in physical units, is set by a scale that no step contains. Dimensional transmutation supplies that scale; whether the spectrum above the vacuum starts at a positive multiple of it is the gap question.</p>
+  <p>Halving the lattice walks toward short distances, while confinement and the mass gap live at long distances. The steps connect through the running coupling: the conditional one-loop matching gives a shift governed by b<sub>0</sub> = 11N/(48&pi;&sup2;) in four dimensions, and after many steps the lattice spacing, measured in physical units, is set by a scale that no step contains. Dimensional transmutation identifies a scale on a matched trajectory. Depth-uniform generated-action and remainder control are still open; so are continuum construction, nontriviality and a positive spectral edge with physical observable weight.</p>
   <p class="muted"><a href="notes/uv-halving-ir-confinement.html">Didactic note</a>; in Newton's problem the analogous scale is an action, and &#8463; stays explicit throughout.</p>
 </div></section>
 
 <section class="slide" id="s12"><div class="inner">
-  <div class="kicker">11 &middot; Status on 29 September 2026</div>
-  <h2>What is proved, and at what level</h2>
+  <div class="kicker">11 &middot; Source-derived status, 1 October 2026</div>
+  <h2>What is proved, and what remains conditional</h2>
   <table class="status">
-    <tr><th>Result</th><th>Level</th></tr>
-    <tr><td>Cut measure: each cut spends 3s(1&minus;s)K<sub>&tau;</sub>; the rod spends 6/7</td><td><span class="tag">proved, refereed</span></td></tr>
-    <tr><td>Marks at any cuts reach exactly the spent action over &kappa;</td><td><span class="tag">proved, refereed</span></td></tr>
-    <tr><td>&kappa; &gt; 0 iff the best verdict is continuous (Leibniz on records)</td><td><span class="tag">proved in the mark model</span> <span class="tag">premise: the records reading</span></td></tr>
-    <tr><td>SU(2) mid-plane, one normalized small-field step, uniform in plane size</td><td><span class="tag">proved, refereed</span></td></tr>
-    <tr><td>Full response of the remainder through third order, contacts included, on the chart</td><td><span class="tag">proved, refereed</span></td></tr>
-    <tr><td>Joint large-field rarity and two-cluster decorrelation</td><td><span class="tag">proved, refereed</span></td></tr>
-    <tr><td>SU(3) one-loop coefficients, 3/2 times SU(2)'s</td><td><span class="tag">proved, refereed</span></td></tr>
-    <tr><td>All-order polymer expansion, iteration, continuum limit</td><td><span class="tag">open</span></td></tr>
-    <tr><td>Positive mass gap for SU(3); necessity of Newton's floor</td><td><span class="tag">open</span></td></tr>
+    <tr><th>Result and source</th><th>Level / remaining obligation</th></tr>
+    <tr><td><a href="notes/cut-measure-newton.html">Additive cut action; mark supremum</a></td><td>Exact/refereed; Gaussian invariant mark hypotheses; finite optimum not attained</td></tr>
+    <tr><td><a href="notes/record-costs-disturbance.html">General instrument disturbance</a></td><td>Refereed quantum bound, supplied &#8463; and explicit resources; independent positivity open</td></tr>
+    <tr><td><a href="notes/leibniz-continuity-records.html">Positive cost iff optimized verdict continuous</a></td><td>Proved in the declared Gaussian family; physical uniform complete-record premise open</td></tr>
+    <tr><td><a href="notes/sed-closure-under-recording.html">Physical copies, nonlinear countertests, phase memory</a></td><td>Scoped results; packet stability uses supplied quantum free evolution. Physical history rule and nonzero scale selection open</td></tr>
+    <tr><td><a href="notes/series-parallel-gauge-refinement.html">Series/parallel factorization</a>; <a href="notes/sun-midpoint-centre.html">compact-group cuts</a></td><td>Exact identities; full interacting comparison is separate</td></tr>
+    <tr><td><a href="notes/su2-midplane-small-field.html">All-order connected bad sets and dressing, &sect;&sect;35–36</a></td><td>Refereed weak-strip results; physical recoupling and full nonlinear comparison open</td></tr>
+    <tr><td><a href="notes/su2-midplane-small-field.html">Moving-mean sources, &sect;37</a></td><td>Exact centered quadratic test for the subtracted barrier part of (113); nonlinear extension open</td></tr>
+    <tr><td><a href="notes/four-dimensional-composition.html">Four-dimensional generated action</a></td><td>Gaussian composition and finite one-step inputs; depth-uniform nonlinear matching open</td></tr>
+    <tr><td><a href="notes/mass-gap-obligations-lattice.html">SU(3) continuum existence and physical gap</a></td><td>Open; strong-coupling lattice regimes proved under their criteria, T2′ at all couplings is stronger than required</td></tr>
   </table>
-  <p class="muted">All statements with their hypotheses: <a href="notes/refinement-results.html">formal results</a> (<a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-results.pdf">PDF</a>). Full map: <a href="llms.txt">llms.txt</a> and the <a href="index.html">results index</a>. Comments are welcome as repository issues.</p>
+  <p class="muted">Read the <a href="maps/dependencies.html">current dependency paths</a>, <a href="archive.html">complete archive</a> and <a href="maps/obstructions.html">obstruction map</a>. The <a href="notes/refinement-results.html">theorem compendium</a> is an entry point; latest notebook sections govern subsequent progress.</p>
 </div></section>
 
 <div class="nav" aria-label="Slide navigation"><button id="prev" aria-label="Previous slide">&uarr;</button><span id="count">1 / 12</span><button id="next" aria-label="Next slide">&darr;</button></div>

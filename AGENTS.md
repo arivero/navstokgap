@@ -15,6 +15,13 @@ files (PROGRAMME, STRATEGY, TASKS, PROTOCOL, the skill, old handoffs) are
 context, and where they demand more bookkeeping than this file, this file
 wins. Explicit user instructions take precedence over everything here.
 
+[`notes/index.md`](notes/index.md) is the compact full-read retrieval
+catalog. Its priorities measure relevance to the present programme;
+proof status, research value and route closures are separate fields.
+Use `LLM.md` for the established-result map and the maintained notes for
+later results and corrections. The catalog is repository infrastructure;
+`docs/` follows the website and source-archive rules.
+
 # The goal
 
 User direction, 2026-09-26: the eventual paper compares what survives
@@ -122,6 +129,25 @@ borrowed proofs unless a concrete error is suspected in a result in use.
 Literature is for ingredients and honest prior-art labels, never a
 deliverable by itself. A session may end with "nothing worth recording"
 and no artifact.
+
+**Retrieval before every research step (user, 2026-10-01).** Before each
+bounded proof unit, perform keyword retrieval across the whole repository
+corpus, following the repository-local
+[`poormanrag` skill](skills/poormanrag/SKILL.md) (read it on first use).
+Use STATE, `LLM.md` and `notes/index.md`, then search full texts across
+notes, ideas, references, research, claims, source companions and
+manuscripts. Read relevant proofs and correcting/superseding notes;
+carry their hypotheses and failed routes into the calculation. Repeat
+when changing mechanism or track. Every worker advancing a proof
+follows this rule; keep retrieval brief and create no search reports.
+
+Maintain both the Markdown and JSON catalog entries whenever a note is added or materially
+changed, after reading all its changed content and enough surrounding
+argument to preserve scope. A new entry requires a full read. Keep its
+summary greppable, its limitations explicit, and links to route-closing
+corrections intact. Retrieval priority and a `surprising` flag express
+research judgment and confer no literature novelty. Do not create a PDF
+for the catalog.
 
 Write results into `notes/<slug>.md`: lead with the result, state each
 assumption where it is used, keep constants explicit, keep negations that

@@ -11,6 +11,7 @@ Usage: python3 scripts/build_site.py   (or: make site)
 
 import datetime
 import html
+import json
 import re
 import subprocess
 import sys
@@ -22,204 +23,6 @@ OUT_NOTES = DOCS / "notes"
 OUT_SOURCES = DOCS / "sources"
 REPO = "https://github.com/arivero/navstokgap"
 BLOB = f"{REPO}/blob/main"
-
-# --------------------------------------------------------------------------
-# Track definitions. Any note not listed here lands in "Further results".
-# --------------------------------------------------------------------------
-
-TRACKS = [
-    ("refinement", "What survives refinement", """The joint frame since
-     2026-09-26: build each limit by inserting one variable at a time, and ask
-     what survives &mdash; Newton's action cost, the Yang&ndash;Mills gap, the
-     pion's zero threshold. Series insertions close exactly; parallel
-     insertions carry the renormalization.""", [
-        "refinement-results",
-        "halving-atlas", "uv-halving-ir-confinement", "newton-record-parallel-move",
-        "tangent-groupoid-trajectories",
-        "three-continuum-limits",
-        "refinement-composition-and-limit",
-        "series-parallel-gauge-refinement", "zero-spacing-any-action",
-        "cut-measure-newton",
-        "dimension-ladder", "villain-monopole-refinement",
-        "su2-midpoint-exact", "su2-midplane-order-t", "su2-midplane-small-field",
-        "four-dimensional-parallel-log", "gaussian-blocking-coupling",
-        "four-dimensional-composition",
-        "sun-midpoint-centre",
-    ]),
-    ("planck-gap", "The Planck gap", """Newton reads a force off a trajectory by
-     letting the sagitta and the enclosed area go to zero. Once the comparison
-     must be <em>recorded</em>, it has a floor of order &#8463;. These notes
-     carry the theorems, the Newton-age premises and the ancient dispute about
-     the cut.""", [
-        "planck-gap-paper", "principia-fifth-postulate",
-        "rivero-1998-conjecture-central-forces",
-        "rotation-composition-universality",
-        "galileo-two-path-interference", "stochastic-route-velocitas-ultima",
-        "superdeterminism-floor", "leibniz-continuity-records",
-        "necessity-unit-and-indeterminacy", "newton-indeterminacy-routes",
-        "thermodynamic-records-no-floor", "sed-zeta-radiation-link",
-        "sed-closure-under-recording",
-        "newton-indeterminacy-routes",
-        "polygon-lift-phase", "record-costs-recoil",
-        "additive-noise-marks", "record-costs-disturbance",
-        "record-distance-path-length",
-        "mark-cost-and-statistical-floor",
-        "planck-gap-derivation", "planck-gap-probabilistic",
-        "newton-mark-floor", "newton-insertion-action",
-        "principia-constant-force-action", "receding-centre-area-audit",
-        "newton-NATP00385-audit", "cut-paradox-two-faces",
-        "static-composition-classics", "ancient-cuts-provenance",
-        "cone-time-refinement", "i003-double-limit-rigidity",
-        "arrow-not-sling",
-    ]),
-    ("mass-gap", "The Yang&ndash;Mills mass gap for SU(3)", """The conjecture
-     turned into a finite list of named theorems, with explicit dependence on
-     the box size, the lattice spacing and the coupling. The strong side is
-     proved; the weak side and the region between are where the work stands.""", [
-        "mass-gap-position", "mass-gap-obligations-lattice",
-        "mass-gap-conditional-theorem", "su3-constants",
-        "strong-coupling-uniform-gap", "wilson-strong-coupling-explicit",
-        "kogut-susskind-strong-coupling-explicit",
-        "strong-coupling-threshold-explicit", "strong-coupling-target-box",
-        "lattice-gap-upper-bounds", "polyakov-average-gap-bound",
-        "weak-coupling-feshbach-reduction", "torus-valley-potential",
-        "schur-error-ultraviolet", "finiteness-half-flowed-susceptibility",
-        "flowed-bound-free-field", "three-dimensional-gap-one-function",
-        "gapped-set-critical-coupling", "abelian-misses-the-box",
-        "dobrushin-uniqueness-wilson", "lieb-robinson-kogut-susskind",
-        "intermediate-region-finite-verification", "confinement-scale-bands",
-        "what-would-unblock", "reasons-to-stop-as-research",
-        "mass-gap-openings",
-        "comparison-and-bridges", "millennium-problem-definitions",
-    ]),
-    ("renormalization", "Blocking, flow and the large-field obstruction", """What
-     happens to a renormalization step on the lattice, why the obstruction is
-     the large-field tail rather than the block size, and how much the weak side
-     is short by.""", [
-        "blocking-criterion-monotone", "blocking-step-obstruction",
-        "small-field-step-gaussian", "small-field-step-decay-and-threshold",
-        "flow-before-decimation", "flow-conjugation-truncation",
-        "flow-instability-large-field", "flow-jacobian-truncation-error",
-        "lattice-truncation-uniform", "typical-field-strength-window",
-        "large-field-action-lower-bound", "large-field-entropy-count",
-        "large-field-operator-inequality", "agmon-global-not-local",
-        "agmon-ground-state-suppression", "magnetic-energy-identities",
-        "ground-state-measure-transfer", "moment-hierarchy-upper-bounds",
-    ]),
-    ("gap-analogy", "Gaps that are solved, and what a gap costs", """Solved
-     low-dimensional gaps, the spin-chain gaps, and the exact sense in which a
-     positive action floor and a mass gap are the same kind of statement.""", [
-        "low-dimensional-mass-gap", "action-floor-yang-mills-gap",
-        "holography-lowest-dimensions", "interacting-ising-gap",
-        "ising-foundational-value", "ising-hermitian-transfer",
-        "finite-depth-spin-gap", "susceptibility-gap",
-    ]),
-    ("action-selection", "Does classical physics select an action scale?", """A
-     map of the premises a selection principle must add and the counterexamples
-     it must exclude. The short answer is that the tested classical classes
-     permit action-valued observables arbitrarily close to zero.""", [
-        "action-scale-obstructions", "action-unit-dimensional-selection",
-        "action-scale-dilation", "relativistic-kepler-threshold",
-        "composition-universality", "checkerboard-dynamics",
-        "energy-depot-action-selection", "radiation-noise-action-selection",
-        "topological-sector-action-selection", "stabilized-topology-action-scale",
-        "spin-action-patching", "thermal-receiver-reliability",
-        "passive-threshold-events", "mechanical-interference-action",
-        "closed-orbit-force-action", "fixed-force-small-circles",
-        "bound-orbit-action-observable", "bounded-acceleration-return",
-        "reciprocal-coupling-normalization",
-    ]),
-    ("cuts", "Cuts, refinement and what survives insertion", """Insert a cut into
-     a motion and eliminate it again: which data survive, and what a classical
-     cut has to retain.""", [
-        "cut-point-consistency", "classical-cut-state", "physical-cut-speed",
-        "telegraph-return-bridge", "bridge-crossover",
-        "classical-readout-refinement", "reachable-cut-composition",
-        "finite-precision-cut", "three-body-cut-memory", "two-regulator-audit",
-        "composition-crossover-gap-checks", "minimax-composition",
-        "jacobi-kernels-distinguishability", "indistinguishable-phase-bound",
-        "causal-force-information", "finite-horizon-minimax",
-    ]),
-    ("apparatus", "Apparatus, records and reconstruction", """Finite clocks,
-     probes and pointers, with every preparation and record made explicit. The
-     recurring outcome is that a canonical error product closes as the record
-     precision improves, so no apparatus of this kind supplies a floor.""", [
-        "conservative-harmonic-receiver", "autonomous-finite-readout",
-        "full-pointer-recovery", "full-clock-phase-recovery",
-        "two-position-recovery", "two-calibration-branches",
-        "three-calibration-global-recovery", "fixed-coupling-calibration",
-        "calibration-tolerance-recovery", "calibrated-canonical-ambiguity",
-        "calibrated-displacement-ambiguity", "correlated-calibration-response",
-        "single-calibration-fibres", "clock-position-local-recovery",
-        "final-clock-momentum-recovery", "global-clock-speed-ambiguity",
-        "hidden-clock-ambiguity", "energy-constrained-apparatus-ambiguity",
-        "full-apparatus-preparation-ambiguity", "fixed-preparation-ambiguity",
-        "position-preparation-ambiguity", "block-apparatus-composition",
-        "shared-record-budget", "ordered-beam-preparation",
-    ]),
-    ("operational", "Excluding classical operational models", """What it takes to
-     rule out a classical account of a quantum experiment, and which premises do
-     the work.""", [
-        "quantum-exclusion-premises", "classical-orientation-closure",
-        "reversible-generator-constraints", "reversible-interaction-premise",
-        "hamiltonian-finite-closure", "hamiltonian-moment-descent",
-        "local-detector-coincidences", "shared-readiness-chsh",
-        "shared-resource-events",
-    ]),
-]
-
-HIGHLIGHTS = [
-    ("refinement-results",
-     "Formal results: what survives refinement",
-     "All the theorems in one place, stated with their hypotheses: the cut "
-     "measure and the record floor in Newton's comparison, continuity of the "
-     "verdict, lattice halving, the SU(2) mid-plane step and its responses, "
-     "and the SU(N) transfer. "
-     '<a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-results.pdf">PDF</a>'),
-    ("planck-gap-paper",
-     "A recorded trajectory has a floor of order &#8463;",
-     "For every instrument, the sagitta times the momentum disturbance and "
-     "the impulse times the position disturbance of the marks must add up to "
-     "(1&minus;2&epsilon;)&#8463;: a record costs disturbance. For uncorrelated "
-     "Gaussian marks the floor is &tau;&Delta;E &ge; 24z&sup2;&#8463;, sharply. "
-     "Newton's inscribed polygon differs from the parabola by a pure phase, "
-     "the parabolic segments of the chords over &#8463;."),
-    ("wilson-strong-coupling-explicit",
-     "SU(3) is gapped at strong coupling, with an explicit threshold",
-     "For the Wilson transfer matrix the gap is explicit for g&sup2; &ge; 176, "
-     "and the Kogut&ndash;Susskind Hamiltonian is gapped for g&sup2; &ge; 388 "
-     "uniformly in the volume."),
-    ("mass-gap-obligations-lattice",
-     "The conjecture is six named statements",
-     "T1 finite-lattice gap, proved; T2 strong-coupling gap uniform in volume; "
-     "T2&prime; no Coulomb phase; T3 the scaling limit; T4 existence with the "
-     "axioms; S the small-volume corner. The conjecture is T2&prime; with T3, "
-     "given T4."),
-    ("action-unit-dimensional-selection",
-     "A universal action floor needs a fixed action unit",
-     "Two elementary criteria decide the recorded countertests before any "
-     "calculation, and they identify k<sub>e</sub>/c = &alpha;&#8463; as the "
-     "only mass-independent action unit classical electrodynamics admits."),
-    ("action-scale-obstructions",
-     "Classical mechanics permits action arbitrarily close to zero",
-     "Across the tested classes, positive bounds appear only when the class "
-     "supplies an excitation floor, a fluctuating reference or restricted "
-     "measurement information. None of them is a universal quantum phase "
-     "parameter."),
-    ("arrow-not-sling",
-     "Why the ancients argued about the arrow and not the sling",
-     "Newton defines centripetal force with a stone whirled in a sling, and "
-     "the ancient debate is almost entirely rectilinear. The two sit on "
-     "different rungs of one ladder, and the second rung cannot be stated "
-     "until straight-line motion is held to need no account. Part of a "
-     "collection of 50 primary sources, Greek, Chinese, Sanskrit and Latin, "
-     "each with a companion recording its dating and what is contested."),
-    ("relativistic-kepler-threshold",
-     "The relativistic Kepler problem has an excluded action infimum",
-     "Regular bound orbits exist exactly for |L| &gt; k/c, a mass-independent "
-     "threshold equal to &alpha;&#8463; for two elementary charges, and the "
-     "Sommerfeld&ndash;Dirac collapse condition is the same inequality."),
-]
 
 CSS = """
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
@@ -289,7 +92,8 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>"""
 NAV = """<header class="site"><div class="wrap">
 <a class="home" href="{root}index.html">navstokgap</a>
 <nav class="site">
-<a href="{root}index.html">Results</a>
+<a href="{root}index.html">Research map</a>
+<a href="{root}archive.html">Note archive</a>
 <a href="{root}tutorial.html">Tutorial</a>
 <a href="{root}papers.html">Papers</a>
 <a href="{root}ledger.html">Claim ledger</a>
@@ -306,7 +110,8 @@ quoted source, a dating or a proof are especially wanted: every note names the
 premises it uses, so a disputed premise can be pointed at directly.</p>
 <p>Research repository <a href="{repo}">arivero/navstokgap</a>. Pages generated
 by <code>scripts/build_site.py</code>; every note is also the Markdown source
-in <code>notes/</code> and a typeset PDF in <code>out/papers/</code>. Notes are
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
 working research, not peer-reviewed publications, and each states its own
 status.</p>
 </div></footer>""".replace("{repo}", REPO)
@@ -457,79 +262,130 @@ def main():
         (OUT_NOTES / f"{p.stem}.html").write_text(
             page(plain, head + body, root="../"), encoding="utf-8")
 
-    # 2. Landing page.
-    used, parts = set(), []
-    parts.append("<h1>A minimum action, and a mass gap</h1>")
-    parts.append(f'<p class="meta">Last edited: {last_edited_date()}</p>')
-    parts.append(
-        '<p class="lede">A research repository on two questions that turn out '
-        "to share a shape. Does anything in physics force a positive unit of "
-        "action, and does SU(3) Yang&ndash;Mills in four dimensions have a mass "
-        "gap? Every note below states its result first, keeps its constants "
-        "explicit, and says which premises it uses.</p>"
-        '<p class="lede">The <a href="sources.html">primary sources</a> are '
-        "collected and annotated alongside the mathematics, from Newton's "
-        "<em>Opticks</em> and Berkeley's <em>Analyst</em> to the "
-        "Vai\u015be\u1e63ikas\u016btra, the Abhidharmako\u015babh\u0101\u1e63ya, "
-        "the Tattv\u0101rthas\u016btra, the Mohist Canons and the Laozi. "
-        "<strong>Comments and corrections go to "
-        f'<a href="{REPO}/issues">the repository issues</a></strong>, which '
-        "is the right place to dispute a dating, a reading or a proof.</p>")
-    parts.append("<h2>Where to start</h2>")
-    for slug, head, blurb in HIGHLIGHTS:
-        parts.append(
-            f'<div class="hl"><h3><a href="notes/{slug}.html">{head}</a></h3>'
-            f"<p>{blurb}</p></div>")
-    for key, name, blurb, members in TRACKS:
-        rows = []
-        for slug in members:
-            if slug not in slugs:
-                continue
-            used.add(slug)
-            pdf = (f'<a class="pdf" href="{BLOB}/out/papers/{slug}.pdf">PDF</a>'
-                   if slug in pdfs else "")
-            rows.append(f'<li>{pdf}<a href="notes/{slug}.html">'
-                        f"{html.escape(strip_math(titles[slug]))}</a></li>")
-        parts.append(f'<section class="track" id="{key}"><h2>{name}</h2>'
-                     f'<p class="blurb">{" ".join(blurb.split())}</p>'
-                     f'<ul class="notes">{"".join(rows)}</ul></section>')
-    rest = sorted(slugs - used)
-    if rest:
-        rows = []
-        for slug in rest:
-            pdf = (f'<a class="pdf" href="{BLOB}/out/papers/{slug}.pdf">PDF</a>'
-                   if slug in pdfs else "")
-            rows.append(f'<li>{pdf}<a href="notes/{slug}.html">'
-                        f"{html.escape(strip_math(titles[slug]))}</a></li>")
-        parts.append('<section class="track" id="further"><h2>Further results'
-                     '</h2><p class="blurb">Notes outside the tracks above.</p>'
-                     f'<ul class="notes">{"".join(rows)}</ul></section>')
-    (DOCS / "index.html").write_text(
-        page("navstokgap — a minimum action, and a mass gap", "".join(parts)),
-        encoding="utf-8")
+    # 2. Curated research map; complete coverage belongs to the archive.
+    home = (ROOT / "scripts/site/home.html").read_text(encoding="utf-8")
+    (DOCS / "index.html").write_text(page(
+        "navstokgap — what survives refinement?", home), encoding="utf-8")
 
-    # 3. Paper index.
-    rows = []
-    for slug in sorted(pdfs):
-        t = html.escape(strip_math(titles.get(slug, slug)))
-        note = (f'<a href="notes/{slug}.html">note</a>' if slug in slugs
-                else "&mdash;")
-        rows.append(f'<tr><td><a href="{BLOB}/out/papers/{slug}.pdf">{t}</a>'
-                    f"</td><td>{note}</td></tr>")
+    catalog = json.loads((ROOT / "research/note-index.json").read_text())["notes"]
+    groups = {}
+    for entry in catalog:
+        groups.setdefault(entry["thematic_area"], []).append(entry)
+    parts = ["<h1>Complete note archive</h1>",
+             '<p class="lede">Every maintained scientific note appears once. '
+             'Priority measures current retrieval importance, not proof quality '
+             'or novelty. Source notes govern later corrections.</p>',
+             '<p><a href="notes/index.html">Greppable catalog</a> · '
+             '<a href="maps/dependencies.html">Dependency paths</a> · '
+             '<a href="maps/obstructions.html">Obstruction map</a></p>',
+             '<label for="note-search">Filter titles, summaries, keywords and status</label> '
+             '<input id="note-search" type="search" style="width:100%;padding:.5rem" '
+             'placeholder="e.g. covariance, moving saddle, obstruction">']
+    for area, entries in sorted(groups.items()):
+        parts.append(f'<section class="track"><h2>{html.escape(area)}</h2><ul class="notes">')
+        for e in sorted(entries, key=lambda x: (-x["retrieval_priority"], x["path"])):
+            slug = Path(e["path"]).stem
+            correction = ""
+            for rel in e["relations"]:
+                if rel["type"] in {"is_superseded_by", "corrects", "supersedes"}:
+                    target = Path(rel["target"]).stem
+                    correction += (f' <a href="notes/{target}.html">'
+                                   f'{html.escape(rel["type"].replace("_", " "))}: '
+                                   f'{html.escape(target)}</a>.')
+            pdf = (f'<a class="pdf" href="{BLOB}/out/papers/{slug}.pdf">PDF</a>'
+                   if slug in pdfs else "")
+            keys = html.escape("; ".join(e["keys"]))
+            parts.append(f'<li data-note="{slug}" data-keys="{keys}">{pdf}'
+                         f'<a href="notes/{slug}.html">{html.escape(strip_math(e["title"]))}</a>'
+                         f'<p class="meta">Priority {e["retrieval_priority"]} · '
+                         f'{html.escape(e["status"])} · {html.escape(e["proof_status"])}</p>'
+                         f'<p>{html.escape(e["summary"])}{correction}</p>'
+                         f'<p class="meta">Scope: {html.escape(e["limitations"])}</p></li>')
+        parts.append('</ul></section>')
+    parts.append(r"""<script>
+const search = document.getElementById('note-search');
+search.addEventListener('input', () => {
+  const q = search.value.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
+  document.querySelectorAll('[data-note]').forEach(row => {
+    const text = (row.textContent + ' ' + row.dataset.keys).toLocaleLowerCase();
+    row.hidden = !q.every(word => text.includes(word));
+  });
+});
+</script>""")
+    (DOCS / "archive.html").write_text(page(
+        "Complete note archive — navstokgap", "".join(parts)), encoding="utf-8")
+
+    # Human-facing infrastructure maps; source notes are unchanged.
+    out_maps = DOCS / "maps"
+    out_maps.mkdir(parents=True, exist_ok=True)
+    maps = ["dependencies", "book-map", "obstructions", "notation-and-scales",
+            "refinement-correspondences", "programme-evolution", "site-audit",
+            "synthesis-opportunities", "navigation-test", "pdf-audit"]
+    for slug in maps:
+        source = ROOT / "research" / f"{slug}.md"
+        def map_link(m):
+            target, frag = m.group(1), m.group(2) or ""
+            if target.startswith(("http://", "https://", "mailto:", "#")):
+                return m.group(0)
+            resolved = (source.parent / target).resolve()
+            try:
+                rel = resolved.relative_to(ROOT)
+            except ValueError:
+                return f"]({BLOB}/{target}{frag})"
+            if rel.parent == Path("notes"):
+                return f"](../notes/{rel.stem}.html{frag})"
+            if rel.parent == Path("research") and rel.stem in maps:
+                return f"]({rel.stem}.html{frag})"
+            return f"]({BLOB}/{rel.as_posix()}{frag})"
+        title = note_title(source)
+        body = pandoc(LINK.sub(map_link, source.read_text()))
+        (out_maps / f"{slug}.html").write_text(
+            page(strip_math(title), body, root="../"), encoding="utf-8")
+
+    # 3. PDF manuscripts grouped by role, retaining every file.
+    manuscripts = json.loads((ROOT / "research/pdf-catalog.json").read_text())["manuscripts"]
+    parts = ["<h1>Manuscripts and PDFs</h1>",
+             '<p class="lede">Major syntheses, technical notes, working drafts '
+             'and historical snapshots have different roles. These are research '
+             'manuscripts; a PDF does not imply peer-reviewed publication.</p>',
+             '<p>Source notes govern current assumptions and corrections. '
+             '<a href="maps/pdf-audit.html">Version and orphan audit</a> · '
+             '<a href="archive.html">Complete note archive</a></p>']
+    categories = ["current synthesis", "current technical manuscript", "working manuscript",
+                  "older version", "historical research snapshot", "orphan manuscript"]
+    for category in categories:
+        entries = [e for e in manuscripts if e["classification"] == category]
+        if not entries:
+            continue
+        parts.append(f'<h2>{html.escape(category.capitalize())}</h2><ul class="notes">')
+        for e in sorted(entries, key=lambda x: x["slug"]):
+            slug = e["slug"]
+            note = (f' <a href="notes/{slug}.html">Current source note</a>.'
+                    if slug in slugs else "")
+            redirect = (f' <a href="notes/{e["current_replacement"]}.html">Later treatment</a>.'
+                        if e.get("current_replacement") else "")
+            parts.append(f'<li><a href="{BLOB}/out/papers/{slug}.pdf">'
+                         f'{html.escape(strip_math(e["title"]))}</a>'
+                         f' <a href="{BLOB}/{e["tex"]}">TeX source</a>.{note}{redirect}'
+                         f'<p>{html.escape(e["assessment"])}</p></li>')
+        parts.append('</ul>')
     (DOCS / "papers.html").write_text(page(
-        "Papers — navstokgap",
-        f"<h1>Typeset papers</h1><p class=\"lede\">Every note is also built as "
-        f"a PDF by <code>make paper NOTE=&lt;slug&gt;</code>. These {len(pdfs)} "
-        f"files live in <code>out/papers/</code> in the repository and open "
-        f"there.</p><table><thead><tr><th>Paper</th><th>Web</th></tr></thead>"
-        f"<tbody>{''.join(rows)}</tbody></table>"), encoding="utf-8")
+        "Manuscripts and PDFs — navstokgap", "".join(parts)), encoding="utf-8")
 
     # 4. Claim ledger and source index.
     led = (ROOT / "claims/LEDGER.md").read_text(encoding="utf-8")
     led = led.split("\n", 1)[1] if led.startswith("# ") else led
     (DOCS / "ledger.html").write_text(page(
         "Claim ledger — navstokgap",
-        "<h1>Claim ledger</h1>" + pandoc(rewrite_links(led, slugs, "notes/"))),
+        "<h1>Claim ledger</h1>"
+        '<p class="lede">Stable older claim IDs, chiefly through September 16. '
+        'Later results and corrections live in the source notes. Use the '
+        '<a href="maps/dependencies.html">current dependency graph</a> and '
+        '<a href="archive.html">catalog</a> to continue research. The '
+        '<a href="notes/record-costs-disturbance.html">general disturbance bounds</a> '
+        'retain resource hypotheses; the '
+        '<a href="notes/planck-gap-probabilistic.html">prepared-packet counterexample</a> '
+        'limits preparation-independent floor claims.</p>' + pandoc(rewrite_links(led, slugs, "notes/"))),
         encoding="utf-8")
 
     # 5. One page per source companion, then the source index.
@@ -613,11 +469,11 @@ def main():
     # while keeping the source-companion and checksum rules for real sources.
     generated = sorted(
         p.relative_to(ROOT).as_posix()
-        for p in [DOCS / "index.html", DOCS / "papers.html",
+        for p in [DOCS / "index.html", DOCS / "archive.html", DOCS / "papers.html",
                   DOCS / "ledger.html", DOCS / "sources.html",
                   DOCS / ".nojekyll"]
                   + ([DOCS / "tutorial.html"] if (DOCS / "tutorial.html").exists() else []) + list(OUT_NOTES.glob("*.html"))
-                  + list(OUT_SOURCES.glob("*.html")))
+                  + list(OUT_SOURCES.glob("*.html")) + list(out_maps.glob("*.html")))
     # llms.txt (llmstxt.org convention): LLM.md with absolute links, served at the site root.
     llm_src = ROOT / "LLM.md"
     if llm_src.exists():
@@ -635,7 +491,7 @@ def main():
         q.unlink()
 
     print(f"site: {len(notes)} notes, {len(comps)} sources, {len(pdfs)} papers, "
-          f"{len(TRACKS)} tracks, {len(rest)} unfiled, "
+          f"{len(catalog)} catalog entries, {len(maps)} maps, "
           f"{len(stale)} stale removed -> docs/")
 
 

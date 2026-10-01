@@ -1,8 +1,10 @@
 # Papers
 
-Start with [the consolidated action-scale argument](../notes/action-scale-obstructions.md)
-([PDF](../out/papers/action-scale-obstructions.pdf)). The detailed manuscripts
-below retain the proofs; their local follow-ups do not select the next task.
+Use the [current dependency paths](../research/dependencies.md) and
+[classified PDF audit](../research/pdf-audit.md) to choose a manuscript.
+The [public Papers page](../docs/papers.html) separates syntheses, technical
+notes, working drafts and historical snapshots. The detailed manuscripts
+below retain their proofs; their local follow-ups do not select the next task.
 
 - [action-scale-obstructions.tex](action-scale-obstructions.tex): generated
   from the synthesis; premise map, key arguments, receiver/calibration
@@ -82,8 +84,9 @@ below retain the proofs; their local follow-ups do not select the next task.
 - [bounded-acceleration-return.tex](bounded-acceleration-return.tex): sharp
   turn cost and polygon error; [PDF](../out/papers/bounded-acceleration-return.pdf).
 
-Run `make papers` from the root to regenerate the programme and build the maintained
-PDFs in `out/papers/`. Bibliographic metadata lives in
+Build only a changed scientific note with `make paper NOTE=<slug>`.
+The full `make papers` target is disabled as a routine gate; historical
+programme PDFs are retained snapshots. Bibliographic metadata lives in
 `references/library.bib`; build intermediates live in `.build/`.
 The tracked TeX/PDF pairs provide readable outputs and editable source.
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Navigation test</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="navigation-test">Navigation test</h1>
+<p>2026-10-01. Count scientific notes, not the short routing page
+itself. The aim is relevant reading, not minimizing the corpus. All 174
+notes and 123 PDFs remain accessible through the archive and grouped
+manuscript page.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Reader</th>
+<th>First page and shortest useful path</th>
+<th>Files to the frontier</th>
+<th>Risk and correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent continuing the gauge local calculation</td>
+<td>STATE → dependencies, gauge section →
+refinement-composition-and-limit → series-parallel-gauge-refinement →
+su2-midpoint-exact → su2-midplane-order-t → su2-midplane-small-field
+§§24–25,33–37</td>
+<td>Five scientific notes after STATE/map; add sun-midpoint-centre only
+for group/cut transfer</td>
+<td>A theorem compendium or old tutorial can sound like full nonlinear
+comparison. The map says exactly which weak-strip/quadratic inputs are
+established and what the moving saddle must supply</td>
+</tr>
+<tr>
+<td>Agent continuing Newton action necessity</td>
+<td>STATE → dependencies, Newton section → principia-fifth-postulate →
+planck-gap-paper → necessity-unit-and-indeterminacy →
+newton-indeterminacy-routes → sed-closure-under-recording
+§§8.11–8.20</td>
+<td>Five scientific notes after STATE/map; direct section link for an
+already oriented researcher</td>
+<td>Gaussian continuity can be mistaken for uniform complete-record
+continuity; local-data instability for operational distinguishability.
+Maps and tutorial name the families, metrics and physical premise</td>
+</tr>
+<tr>
+<td>Mathematical physicist arriving cold</td>
+<td>Homepage → tutorial → three-continuum-limits →
+refinement-composition-and-limit → chosen case-study
+synthesis/frontier</td>
+<td>Two shared notes before choosing a branch; then two or three branch
+notes for orientation</td>
+<td>The old homepage’s full list made calibration and historical
+branches look compulsory. Curated cards/paths now separate the default
+argument from the searchable archive</td>
+</tr>
+</tbody>
+</table>
+<p>The four-dimensional matching path takes Gaussian-blocking-coupling,
+four-dimensional-parallel-log and four-dimensional-composition after the
+series/parallel introduction. The supporting spectral path takes
+weak-coupling-feshbach-reduction, torus-valley-potential and
+schur-error-ultraviolet. Neither detour is compulsory for the next local
+mid-plane lemma.</p>
+<h2 id="changes-tested-by-the-new-navigation">Changes tested by the new
+navigation</h2>
+<ul>
+<li>The homepage is a research map with results, open fronts,
+corrections and two short branches. The complete archive is a separate
+filterable page.</li>
+<li>Each scientific note has one archive entry, with retrieval priority,
+status, keywords and explicit correction redirects where relevant.</li>
+<li>Every PDF has a classified entry, including eight manuscripts
+without a matching note. PDF titles do not override the linked
+version/scope caveat.</li>
+<li>Dependency, obstruction, notation, analogy, book and programme maps
+are readable as generated HTML and linked from the public map.</li>
+<li>The mandatory local retrieval skill searches full notes, ideas,
+sources, references and historical manuscripts as well as the compact
+catalog. A high-value negative note stays retrievable even when its
+title says failure.</li>
+<li>The catalog has a coverage/metadata check in make check; adding a
+maintained note without updating the catalog fails the integrity
+gate.</li>
+</ul>
+<p>The current large gauge and recording notebooks remain long.
+Section-level frontier links and dependency instructions reduce
+irrelevant reading while preserving their derivations. The old ledger
+and apparatus compilation are valuable specialist resources, but too
+broad or too old to serve as the default current-status entry point. No
+new scientific synthesis is required to reach either current frontier;
+the refinement synthesis described in <a
+href="synthesis-opportunities.html">synthesis opportunities</a> remains
+a useful future book chapter rather than an additional research
+task.</p>
+<p>Machine checks establish complete membership, valid links and
+generated-page access. The reader paths above are a reasoned navigation
+test, not a claim that three independent human readers have tested the
+site.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

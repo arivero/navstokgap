@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chains that would benefit from synthesis</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="chains-that-would-benefit-from-synthesis">Chains that would
+benefit from synthesis</h1>
+<p>2026-10-01. These are writing opportunities, not new research
+priorities. No source note is merged or replaced. The catalog and
+dependency map already provide routing; a future synthesis earns a place
+by stating the strongest common conclusion and its remaining
+premise.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Common question</th>
+<th>Existing chain and what to summarize</th>
+<th>Strongest supported conclusion</th>
+<th>Remaining question / recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What does a usable record cost?</td>
+<td>newton-mark-floor → planck-gap-derivation →
+mark-cost-and-statistical-floor / planck-gap-probabilistic →
+record-costs-recoil → record-costs-disturbance →
+record-distance-path-length</td>
+<td>Exact quantum error/recoil conjugacy; sharp Gaussian invariant-test
+benchmark; arbitrary instrument and Bures/path bounds with explicit
+body/apparatus resources</td>
+<td>Independent positive action necessity and attainment remain open.
+The existing planck-gap-paper is already the synthesis; add a concise
+scope diagram when writing the book rather than another duplicate
+note</td>
+</tr>
+<tr>
+<td>Which classical data permit reconstruction?</td>
+<td>classical-readout-refinement → hidden-clock / preparation / energy
+ambiguities → one/two/three calibrations →
+full-pointer/full-clock/three-calibration recovery → fixed-coupling and
+calibration-tolerance</td>
+<td>Fixed preparation and incomplete records create exact fibres; richer
+records and shrinking preparation errors can recover the body, with
+conditioning costs. No universal floor follows from the tested finite
+Hamiltonian designs</td>
+<td>A composition-stable physical admissibility restriction remains
+missing. conservative-harmonic-receiver already consolidates R03–R33;
+build a short design/known-data/fibre/recovery table, not a second long
+apparatus notebook</td>
+</tr>
+<tr>
+<td>Why did the old bridges fail?</td>
+<td>blocking-step → blocking-criterion-monotone; flow-jacobian →
+flow-conjugation → lattice-truncation-uniform; large-field
+action/entropy → Agmon correction;
+finite-verification/what-would-unblock → reasons-to-stop</td>
+<td>Strong-side criteria, exact smoothing, action costs and finite
+certificates supply different inputs; none of the tested bridges
+supplies controlled weak-side arrival with generated interactions</td>
+<td>The present weak-side normalized insertion programme is the
+replacement. mass-gap-position and reasons-to-stop already synthesize
+diagnosis; the new obstruction map supplies missing retrieval, not
+another theorem</td>
+</tr>
+<tr>
+<td>What exactly survives one insertion and many?</td>
+<td>refinement-composition-and-limit → halving-atlas → series-parallel →
+compact-group midpoint/centre → order-t/small-field → Gaussian 4D
+composition/parallel log</td>
+<td>Exact local identities, selected arbitrary-partition limits, and
+all-order weak-strip cluster/dressing results; perturbative logarithms
+conditional on matching</td>
+<td>Stable nonlinear iteration and physical continuum/gap reconstruction
+remain open. A future “local law to iterated effective action” synthesis
+would materially improve understanding, because the atlas and theorem
+compendium still mix logical depths</td>
+</tr>
+<tr>
+<td>What can a physical background preserve after recording?</td>
+<td>necessity-unit-and-indeterminacy → newton-indeterminacy-routes →
+sed-zeta-radiation-link / sed-closure-under-recording</td>
+<td>Radiation supplies a conditional calibration route; affine copies
+close at supplied cost, while complete records and nonlinear copies
+expose escapes; phase memory survives local-data collapse</td>
+<td>A physical history rule and independently selected nonzero
+normalization remain open. Keep this as a mechanism chapter after a
+successful new result, rather than freezing another premise inventory
+now</td>
+</tr>
+</tbody>
+</table>
+<p>Any synthesis should link the earlier negative versions to their
+correcting notes and preserve design-specific assumptions. The current
+<a href="book-map.html">book map</a> uses these chains without claiming
+the missing statements have been proved.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Provisional book architecture</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="provisional-book-architecture">Provisional book
+architecture</h1>
+<p>Based on the maintained notes, 2026-10-01; chapters are proposed, not
+written. The test question is: <strong>what survives refinement, and
+under what conditions can a positive physical scale survive with
+it?</strong> The repository establishes several exact insertion laws,
+conditional scale bounds and informative closures. It has not
+established either main necessity/existence-and-gap goal. The <a
+href="dependencies.html">reading paths</a> organize the established
+inputs and their open extensions.</p>
+<h2 id="choosing-a-spine">Choosing a spine</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Organization</th>
+<th>Strength</th>
+<th>Cost</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refinement first</td>
+<td>Exact local composition gives a shared mathematical entry; makes
+loss of state and generated interactions visible</td>
+<td>Can conceal the different Newton and gauge premises</td>
+<td>Preferred, with separate case-study parts and an explicit analogy
+audit</td>
+</tr>
+<tr>
+<td>Supplied versus generated scales</td>
+<td>Cleanly separates action calibration from dimensional
+transmutation</td>
+<td>Pushes the local constructions too far back</td>
+<td>Use as the recurring chapter question</td>
+</tr>
+<tr>
+<td>Two independent case studies</td>
+<td>Most honest about distinct mathematics</td>
+<td>Duplicates cuts, composition and limiting-order discussions</td>
+<td>Retain separate technical parts after common foundations</td>
+</tr>
+<tr>
+<td>The recurring zero branch</td>
+<td>Organizes decisive countermodels</td>
+<td>Makes the book read as a collection of failures</td>
+<td>Use as a diagnostic, not the narrative spine</td>
+</tr>
+</tbody>
+</table>
+<p>The preferred reading is foundations → Newton records → gauge
+refinement → physical scales and unfinished exits. An exact identity on
+one side is never promoted to a proof on the other. <a
+href="refinement-correspondences.html">Correspondences</a> explains
+where a common equation exists and where the comparison is
+structural.</p>
+<h2 id="part-i.-what-a-refinement-must-preserve">Part I. What a
+refinement must preserve</h2>
+<h3 id="two-questions-and-one-discipline-of-limits">1. Two questions and
+one discipline of limits</h3>
+<p>Introduce Newton’s positive action necessity and the pure SU(3)
+continuum existence/gap target, with physical time, cutoff, volume,
+preparation and observable weight kept separate. The pion illustrates
+protection of a zero threshold by symmetry. Sources: <a
+href="../notes/three-continuum-limits.html">three continuum limits</a>,
+<a href="../notes/millennium-problem-definitions.html">official
+targets</a>, <a
+href="../notes/mass-gap-obligations-lattice.html">lattice
+obligations</a>. Purpose: formulate the actual endpoints without
+identifying a sampling gap, a finite-box gap or a supplied action
+constant with either endpoint.</p>
+<h3 id="insert-a-variable-then-eliminate-it">2. Insert a variable, then
+eliminate it</h3>
+<p>Start with the exact constant-force cut and gauge heat-kernel
+convolution. Explain compatibility under every admissible partition, the
+sufficient summable-defect criterion, and the harmonic construction
+beyond a finite Cauchy estimate. Sources: <a
+href="../notes/refinement-composition-and-limit.html">refinement
+composition</a>, <a href="../notes/cut-point-consistency.html">cut
+consistency</a>, <a href="../notes/zero-spacing-any-action.html">zero
+spacing</a>. Purpose: exact local composition and stated limiting
+hypotheses, without a positive scale being inferred from consistency
+alone.</p>
+<h3 id="the-state-at-a-cut">3. The state at a cut</h3>
+<p>Position alone generally loses momentum; eliminating another body can
+leave memory even after position and momentum are retained. Telegraph
+bridges give a constructive alternative to scalar convolution rigidity.
+Sources: <a href="../notes/classical-cut-state.html">classical cut
+state</a>, <a href="../notes/reachable-cut-composition.html">reachable
+composition</a>, <a
+href="../notes/three-body-cut-memory.html">three-body memory</a>, <a
+href="../notes/telegraph-return-bridge.html">telegraph bridge</a>.
+Purpose: identify the closure data before taking a continuum limit.</p>
+<h2 id="part-ii.-newtons-cell-and-the-price-of-its-record">Part II.
+Newton’s cell, and the price of its record</h2>
+<h3 id="a-shrinking-area-with-an-exact-action">4. A shrinking area with
+an exact action</h3>
+<p>Derive the inertial–parabola area, distinguish its matched-endpoint
+chord lens, and show how the cut measure decomposes the Dirichlet action
+into orthogonal hats. The polygon’s scalar phase uses the same
+functional with a supplied phase unit. Sources: <a
+href="../notes/newton-insertion-action.html">insertion action</a>, <a
+href="../notes/cut-measure-newton.html">cut measure</a>, <a
+href="../notes/polygon-lift-phase.html">polygon phase</a>. Purpose:
+additive finite action bookkeeping; the geometry itself reaches
+zero.</p>
+<h3 id="from-gaussian-marks-to-general-disturbance">5. From Gaussian
+marks to general disturbance</h3>
+<p>Present the sharp invariant Gaussian benchmark first, then arbitrary
+pointer recoil and arbitrary-instrument disturbance/Bures bounds.
+Explain which resources belong to the body, apparatus and comparison
+states, and why a known preparation can escape a preparation-independent
+cell floor. Sources: <a
+href="../notes/mark-cost-and-statistical-floor.html">mark cost</a>, <a
+href="../notes/planck-gap-probabilistic.html">probabilistic bound</a>,
+<a href="../notes/record-costs-recoil.html">recoil</a>, <a
+href="../notes/record-costs-disturbance.html">disturbance</a>, <a
+href="../notes/record-distance-path-length.html">path length</a>.
+Purpose: strongest current information/disturbance theorem, with its
+quantum input and preparation dependence visible. The early
+bounded-support model belongs in a correction box.</p>
+<h3 id="a-unit-a-floor-and-the-zero-branch">6. A unit, a floor, and the
+zero branch</h3>
+<p>Separate dimensional availability, radiation calibration, composition
+universality, quantum role and positivity. Newton-compatible
+deformations and covariant state restrictions expose alternatives to
+joint determinacy; Leibniz continuity becomes a precise but
+family-dependent record criterion. Sources: <a
+href="../notes/principia-fifth-postulate.html">fifth postulate</a>, <a
+href="../notes/necessity-unit-and-indeterminacy.html">unit and
+indeterminacy</a>, <a
+href="../notes/action-unit-dimensional-selection.html">dimensional
+selection</a>, <a
+href="../notes/rotation-composition-universality.html">rotation
+composition</a>, <a
+href="../notes/leibniz-continuity-records.html">Leibniz records</a>.
+Purpose: universality and consistency can retain the common zero
+branch.</p>
+<h3 id="can-a-physical-apparatus-keep-the-restriction">7. Can a physical
+apparatus keep the restriction?</h3>
+<p>Use the two-pointer escape and exact Gaussian posteriors as reference
+cases, then physical feedback, adaptive records, nonlinear generators
+and weak copies. Finish at coherence memory in the supplied quantum
+free-evolution reference: positive tails permit phase reconstruction but
+fail uniform stability in the stated local-data metric. Sources: <a
+href="../notes/newton-indeterminacy-routes.html">indeterminacy
+routes</a>, <a
+href="../notes/sed-closure-under-recording.html">recording closure</a>,
+<a href="../notes/sed-zeta-radiation-link.html">SED calibration</a>.
+Purpose: a concrete physical history law remains missing; a covariance
+ceiling or a stationary bath alone does not discharge it.</p>
+<h2 id="part-iii.-gauge-refinement-and-the-generated-action">Part III.
+Gauge refinement and the generated action</h2>
+<h3 id="solved-lower-dimensional-tests">8. Solved lower-dimensional
+tests</h3>
+<p>Explain exact two-dimensional subdivision, compact-group Lévy
+alternatives, and why three-dimensional U(1) monopole suppression
+disappears under its fixed-coupling continuum trajectory while the same
+total-variation budget fails in four dimensions. Sources: <a
+href="../notes/zero-spacing-any-action.html">zero spacing</a>, <a
+href="../notes/villain-monopole-refinement.html">Villain refinement</a>,
+<a href="../notes/halving-atlas.html">halving atlas</a>. Purpose:
+dimension and group change what survives; a solved regulator limit does
+not automatically produce a nontrivial physical spectrum.</p>
+<h3 id="series-closes-parallel-creates-interactions">9. Series closes;
+parallel creates interactions</h3>
+<p>Factor directional halving into exact series moves and an interacting
+mid-plane integral. Develop the exact SU(2) midpoint character and
+general group/cut identities, including centre torsion at thirds for
+SU(3). Sources: <a
+href="../notes/series-parallel-gauge-refinement.html">series/parallel</a>,
+<a href="../notes/su2-midpoint-exact.html">SU(2) midpoint</a>, <a
+href="../notes/sun-midpoint-centre.html">centre cuts</a>, <a
+href="../notes/su2-midplane-order-t.html">order-t calculation</a>.
+Purpose: isolate the nonlinear RG obligation; traces and one-loop
+coefficients are not the full normalized matrix or group-integral
+comparison.</p>
+<h3 id="retain-the-barrier-and-normalize-the-clusters">10. Retain the
+barrier and normalize the clusters</h3>
+<p>Organize the large small-field notebook by logical dependency:
+convexity and rarity, response contacts, weak recoupling, marked
+connected sets, exact dressing, and moving Gaussian sources. Sources: <a
+href="../notes/su2-midplane-small-field.html">small-field notebook</a>,
+especially §§24–37; <a
+href="../notes/large-field-action-lower-bound.html">large-field action
+cost</a> as a scoped supporting input. Purpose: (116) and (112) in their
+weak strip, then the quadratic source test for part of (113). Full
+nonlinear comparison, physical recoupling and stable iteration remain
+the chapter’s explicit open exit.</p>
+<h3 id="the-four-dimensional-logarithm">11. The four-dimensional
+logarithm</h3>
+<p>Compose Gaussian block maps before contracting generated vertices.
+Explain tree-level scale invariance, the conditional one-loop logarithm
+and the continuum-subtracted matching problem at arbitrary block depth.
+Sources: <a href="../notes/gaussian-blocking-coupling.html">Gaussian
+blocking</a>, <a
+href="../notes/four-dimensional-parallel-log.html">parallel
+logarithm</a>, <a href="../notes/four-dimensional-composition.html">4D
+composition</a>, <a href="../notes/uv-halving-ir-confinement.html">UV/IR
+ladder</a>. Purpose: depth-uniform nonlinear matching and remainder
+control, rather than an assumption that a formal running coupling is
+already a constructive RG.</p>
+<h2 id="part-iv.-which-scales-can-survive">Part IV. Which scales can
+survive?</h2>
+<h3 id="a-rigorous-strong-side-and-a-difficult-arrival">12. A rigorous
+strong side and a difficult arrival</h3>
+<p>State the Wilson and continuous-time Hamiltonian strong-coupling
+results with their own normalizations, then the robust target box.
+Explain why blocking without coupling flow, global Agmon suppression,
+conjugate flow and physical crossover certification do not bridge the
+weak trajectory. Sources: <a
+href="../notes/wilson-strong-coupling-explicit.html">Wilson gap</a>, <a
+href="../notes/kogut-susskind-strong-coupling-explicit.html">KS gap</a>,
+<a href="../notes/strong-coupling-target-box.html">target box</a>, <a
+href="../notes/reasons-to-stop-as-research.html">reasons to stop</a>, <a
+href="../notes/mass-gap-position.html">mass-gap position</a>. Purpose: a
+physical positive gap needs controlled arrival and construction;
+all-bare-coupling T2′ is an optional stronger statement.</p>
+<h3 id="spectral-weight-valleys-and-the-ultraviolet-bridge">13. Spectral
+weight, valleys and the ultraviolet bridge</h3>
+<p>Contrast trial-state/moment upper bounds with lower-gap criteria from
+a complete observable frame. Develop the matrix-model valley mechanism
+and the torus/Feshbach test, retaining the UV dressing obstruction. The
+displayed cutoff calculation uses SU(2); corresponding SU(3) operator
+estimates remain an additional transfer obligation. Sources: <a
+href="../notes/moment-hierarchy-upper-bounds.html">moments</a>, <a
+href="../notes/susceptibility-gap.html">susceptibility</a>, <a
+href="../notes/low-dimensional-mass-gap.html">low-dimensional gap</a>,
+<a href="../notes/weak-coupling-feshbach-reduction.html">Feshbach</a>,
+<a href="../notes/torus-valley-potential.html">torus valley</a>, <a
+href="../notes/schur-error-ultraviolet.html">UV Schur error</a>.
+Purpose: distinguish finite positive spectral weight and an upper energy
+scale from a volume/cutoff-uniform positive lower edge.</p>
+<h3 id="what-the-comparison-has-earned">14. What the comparison has
+earned</h3>
+<p>Return to the two independent proof goals. Tabulate exact
+correspondences, structural analogies and the still-open physical
+premises, using <a href="../notes/three-continuum-limits.html">three
+continuum limits</a>, <a
+href="../notes/newton-record-parallel-move.html">Newton record/parallel
+move</a>, <a href="../notes/action-floor-yang-mills-gap.html">action
+floor and matrix gap</a>, <a
+href="../notes/tangent-groupoid-trajectories.html">tangent groupoid</a>.
+Purpose: explain why RG appears through elimination without claiming
+that its appearance selects positive action or proves a continuum mass
+gap.</p>
+<h2 id="material-outside-the-main-spine">Material outside the main
+spine</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Placement</th>
+<th>Material and reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Historical excursus accompanying chapters 4–6</td>
+<td>Edition-local Newton, Galileo and ancient division passages; the
+Book I scholion is part of the argument’s premises, not proof of a
+modern theorem</td>
+</tr>
+<tr>
+<td>Apparatus appendix</td>
+<td>Calibration/clock/preparation/recovery sequence, routed through
+conservative-harmonic-receiver; preserve individual designs and
+counterexamples</td>
+</tr>
+<tr>
+<td>Technical appendix</td>
+<td>SU(3) constants, exact character expansions, explicit threshold
+calculations, reachable-set and minimax formulas</td>
+</tr>
+<tr>
+<td>Correction boxes</td>
+<td>Bounded-support quantum mark failure; local/global Agmon; sharp-flux
+Gaussian nonclosure; torus holonomy; bare Feshbach UV</td>
+</tr>
+<tr>
+<td>Supporting model boxes</td>
+<td>Ising Hermitian transfer, finite-depth spin gap, checkerboard
+composition, classical mechanical interference</td>
+</tr>
+<tr>
+<td>Research-history appendix</td>
+<td>Old operational reconstruction, collision transport,
+discrete-substrate conversations, old programme branches and orphan
+snapshots</td>
+</tr>
+<tr>
+<td>Forward-looking side note</td>
+<td>Pion symmetry benchmark and speculative groupoid construction;
+neither adds a third active proof goal</td>
+</tr>
+</tbody>
+</table>
+<p>No source note is merged or replaced. <a
+href="synthesis-opportunities.html">Synthesis opportunities</a>
+identifies where a future chapter-sized synthesis would genuinely
+improve retrieval rather than duplicate an existing compilation.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

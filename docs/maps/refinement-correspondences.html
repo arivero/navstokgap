@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton–Yang–Mills correspondence test</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1 id="newtonyangmills-correspondence-test">Newton–Yang–Mills
+correspondence test</h1>
+<p>2026-10-01. An exact formula in each theory is not automatically an
+exact identification between the theories. The classifications below
+keep the objects and the map explicit. Sources retain their stated
+reading levels; this document introduces no new physical premise.</p>
+<h2 id="exact-common-composition-at-the-gaussiansemigroup-level">1.
+Exact common composition at the Gaussian/semigroup level</h2>
+<p>The Newton free kernel and a group heat kernel each obey
+Chapman–Kolmogorov: K_(t1+t2)(x,z)=∫K_t1(x,y)K_t2(y,z)dy. For gauge
+variables the integral is normalized Haar convolution,
+k_t1*k_t2=k_(t1+t2). In a linear Gaussian model, integrating an inserted
+variable gives a Schur complement; variances in series add and
+precisions in parallel add. These are exact common composition laws,
+with different state spaces and normalizations.</p>
+<p>Sources: <a
+href="../notes/refinement-composition-and-limit.html">refinement
+composition</a>, <a
+href="../notes/series-parallel-gauge-refinement.html">series/parallel</a>,
+<a href="../notes/gaussian-blocking-coupling.html">Gaussian
+blocking</a>. Boundary: Newton’s deterministic trajectory insertion is
+not itself a heat semigroup or a measure on gauge connections.
+Compact-group series closure does not close the interacting
+transverse-plane integral in D&gt;2.</p>
+<h2
+id="gaussian-records-versus-parallel-gauge-faces-exact-algebra-structural-transfer">2.
+Gaussian records versus parallel gauge faces: exact algebra, structural
+transfer</h2>
+<p>For a Gaussian quantum position instrument, forgetting y gives
+ρ(x,x′)↦ρ(x,x′)exp[−(x−x′)²/(8σ²)]. Its Wigner transform is exactly
+momentum convolution with v=ℏ²/(4σ²). Two simultaneous records satisfy
+σ_eff<sup>−2=σ1</sup>−2+σ2^−2 and v_eff=v1+v2. Abelian Gaussian
+parallel-face weights multiply, so their inverse heat times add. Thus
+the precision algebra is exactly the same algebra, after naming the
+covariance/precision variables.</p>
+<p>Source: <a href="../notes/newton-record-parallel-move.html">Newton
+record move</a>, §1–2, and the gauge Gaussian calculation in <a
+href="../notes/series-parallel-gauge-refinement.html">series/parallel</a>.
+Boundary: a trace over a quantum pointer is a completely positive
+channel; a gauge mid-plane marginal is a Euclidean integral with
+nonabelian generated interactions. No constructed functor identifies
+these full objects. The Wigner representation may be signed, and ℏ is
+already supplied. Call the physical comparison a structural analogy, not
+a derivation of either goal.</p>
+<h2
+id="additive-cut-action-versus-generated-interactions-structural-only">3.
+Additive cut action versus generated interactions: structural only</h2>
+<p>For constant force, Kτ=F²τ³/(24m) and insertion at fraction s gives
+Kτ−Ksτ−K(1−s)τ=3s(1−s)Kτ. The general Dirichlet action decomposes into
+orthogonal Schauder-hat costs. This is an exact nonnegative additive
+measure on cuts of the specified classical path.</p>
+<p>Eliminating gauge variables gives S_eff(U)=−log∫exp[−S(U,V)]dV, up to
+normalization. Connected cumulants generate terms supported on multiple
+plaquettes; they need not be nonnegative or a finitely additive cut
+measure. Sources: <a href="../notes/cut-measure-newton.html">cut
+measure</a>, <a href="../notes/four-dimensional-composition.html">4D
+composition</a>, <a
+href="../notes/su2-midplane-small-field.html">small-field dressing</a>,
+§36. The common question is the price of eliminating variables. There is
+no proved identification of the cut measure with all generated gauge
+couplings.</p>
+<h2
+id="universality-versus-dimensional-transmutation-distinct-mechanisms">4.
+Universality versus dimensional transmutation: distinct mechanisms</h2>
+<p>Independent mass composition in the Brownian model yields mD=κ;
+compatible interacting rotation generators give a common action
+coefficient. Neither argument forces κ&gt;0. Four-dimensional
+perturbative running instead has d(1/g²)/d log μ=2b0+… and supplies a
+matched scale of the form Λ≈a^−1 exp[−1/(2b0g²)], with further matching
+corrections.</p>
+<p>Sources: <a
+href="../notes/stochastic-route-velocitas-ultima.html">stochastic
+route</a>, <a
+href="../notes/rotation-composition-universality.html">rotation
+composition</a>, <a
+href="../notes/four-dimensional-parallel-log.html">parallel
+logarithm</a>, <a
+href="../notes/uv-halving-ir-confinement.html">UV/IR</a>. The Newton
+coefficient has action units and may be zero. Λ has inverse-length
+units, and a physical positive gap needs a surviving positive
+coefficient and observable weight as well as a continuum construction.
+These are structurally useful scale questions, not the same selection
+theorem.</p>
+<h2 id="zero-action-versus-zero-gap-structural-diagnostic">5. Zero
+action versus zero gap: structural diagnostic</h2>
+<p>The classical zero-action branch is an admissible law under several
+Newton consistency premises. A gauge zero gap is a statement about a
+reconstructed Hamiltonian’s spectral edge after volume/cutoff limits; a
+vanishing lattice gap can also be the correct scaling of a positive
+physical gap. Sources: <a
+href="../notes/principia-fifth-postulate.html">fifth postulate</a>, <a
+href="../notes/three-continuum-limits.html">three continuum limits</a>,
+<a href="../notes/mass-gap-obligations-lattice.html">lattice
+obligations</a>. The common diagnostic is “which hypothesis excludes
+zero?” The zero objects and their limits differ. Goldstone protection in
+the pion comparison supplies an additional symmetry mechanism, not an
+action-normalization statement.</p>
+<h2 id="valley-lifting-a-conditional-mechanical-implication">6. Valley
+lifting: a conditional mechanical implication</h2>
+<p>In the x²y² matrix-mechanical model a supplied transverse
+phase-space-area floor bounds excursions along the valley at fixed
+energy. The operator uncertainty argument supplies quantum confinement
+in the corresponding Schrödinger model. Sources: <a
+href="../notes/low-dimensional-mass-gap.html">low-dimensional gap</a>,
+<a href="../notes/action-floor-yang-mills-gap.html">action-floor
+model</a>. This is a useful model-level conditional connection.
+Semiclassical phase-space counting does not prove a four-dimensional
+gauge gap. In D=4 a mass/energy gap and c alone do not reconstruct an
+action unit.</p>
+<h2
+id="tangent-groupoid-and-all-zoomings-exact-ingredients-open-synthesis">7.
+Tangent groupoid and “all zoomings”: exact ingredients, open
+synthesis</h2>
+<p>The tangent groupoid relates pair-groupoid arrows at nonzero scale to
+tangent vectors at zero. Time-graded trajectory refinement and the
+harmonic arbitrary-partition construction have their own exact
+composition laws. Quantum diffusive paths and Newton’s ballistic
+ultimate-velocity fibre have different scaling. Sources: <a
+href="../notes/tangent-groupoid-trajectories.html">groupoid
+trajectories</a>, <a
+href="../notes/refinement-composition-and-limit.html">refinement
+§§3c–3d</a>. A gauge double-groupoid organizing parallel moves is
+proposed, not proved. Use the language when it names state, composition
+and topology. The rhetorical claim that all these limits are one
+mechanism adds no theorem and should be omitted from the main
+narrative.</p>
+<h2 id="consequence-for-the-book">Consequence for the book</h2>
+<p>Keep exact insertion and state retention in the common opening part.
+Give Newton recording and gauge effective-action construction separate
+technical parts. Reunite them through explicitly scoped scale and
+spectral questions in the final part. This is the structure adopted in
+<a href="book-map.html">the book map</a>.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
