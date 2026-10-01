@@ -377,7 +377,7 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    locates the gap thesis: Galileo's Gaussian comparison has a record
    family constant in $h$; determinate preparations lose the $h\to0$ limit
    of their complete record after the first fold (exact for inertia with
-   graded velocity, fold time $m/\max(-p_0')$), smeared records never do.
+   graded velocity, fold time $m/\max(-p_0')$), smeared records never do. Its Thm 4 separates the force laws in the anomaly record (Hooke rigid for every $h$, a Kepler swarm loses the zero branch once its windings overlap, at the lapping time of order $T^2/\Delta T$), and §§3b--3c identify the invariant discontinuous at zero, the leading fringe visibility $2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)$, full when the record and preparation imprecision actions are small compared with $h$ (refereed by GPT-6.1 Sol (Codex), corrections applied).
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.
