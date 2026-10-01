@@ -59,7 +59,25 @@ Selected for the digests (interest 6 or more): `mark-cost-and-statistical-floor`
 - `su3-constants` (I 3, C 6): b_0=11/(16 pi^2), 51/121, 54/g^4, the 8/3 g^2 flux loop, v<=96e c/g^2, Haar variance 1/2, the Delta V identity and the doubling table check. The blocking paragraph writes beta_direct=24/g^4; the cited note's 32N/(C_2 g^4) gives 72/g^4, which is needed for 3M^2/8. 'Equivalence of T2' with no zero-temperature transition' is asserted as standing without proof.
 - `what-would-unblock` (I 4, C 6): Most citations and characterizations are accurate at metadata level. The infrared-bound paragraph gives the wrong reason: Froehlich--Simon--Spencer cover O(N) spins, so failure stems from the non-quadratic plaquette interaction. Section 6 states as fact that coarse effective interactions enter the completely analytical set. Item 1 is half-retracted in place while the opening still says 'exactly two things'.
 
-### 3c. Where the drift sits
+### 3c. Smaller slips reported in notes scoring 7 or above
+
+The scorers' closing reports name slips that leave each note's main result standing. All are reported, unverified here, except where marked.
+
+- `three-dimensional-gap-one-function` and `low-dimensional-mass-gap` (§7, the Göpfert--Mack quotation): the Debye-mass formula $m_D^2=(2\beta/a^3)e^{-\beta v(0)/2}$ with dimensionless $\beta$ carries the wrong power of $a$; $a^{-2}$ is right (verified here by dimensions: with dimensionless $\beta$ the right-hand side has dimension length$^{-3}$ and a Debye mass squared needs length$^{-2}$).
+- `newton-mark-floor`: the three-mark side remark should give $F^2\tau^3>64\,m\Lambda p$, stated as $128$.
+- `planck-gap-probabilistic`: Proposition 4 uses a Helstrom constant $x^2/4$ where the bound is $x^2/2$ (constant only); the aperture hypothesis should be stated on the hybrid states.
+- `rotation-composition-universality`: the middle expression of eq. (8) has $+i$ for $-i$; the final expression and conclusion stand.
+- `weak-coupling-feshbach-reduction`: in the order table the $[a,a]\cdot[\tilde A,\tilde A]$ part of $W_3$ is quadratic in the fluctuations and of order $g^{4/3}$, stated as $g^{7/3}$.
+- `wilson-strong-coupling-explicit`: the all-representation weight bound needs $|\int\prod\chi_r|\le\prod d_r$, giving $\sum d_r^2c_r=e^{\beta_W}$; the threshold 1056 stands.
+- `finiteness-half-flowed-susceptibility`: an inline correction removes the $g^2$ prefactor, but the summary and status table were not updated.
+- `dimension-ladder`: one sentence states the Layer 1 conjecture as settled.
+- `lieb-robinson-kogut-susskind`: the §4 condition should read $g^{8/3}<N$.
+- `holography-lowest-dimensions`: the entanglement asymptotics should carry $+1$ in place of $\log(1/d_1)$.
+- `sun-midpoint-centre` §6: a broken `\frac` renders as "rac13"; `su2-midplane-small-field`: §9 is unrefereed and §§27--31 are internally checked only (status, recorded in the note).
+
+Two items the scorers could not check: the Newton Project paragraphs cited by `newton-NATP00385-audit`, and the proof behind the routing stub `ordered-beam-preparation`, which sits in `papers/collision-action-relaxation.tex`.
+
+### 3d. Where the drift sits
 
 Of the 24 notes above, 20 are mass-gap route notes written before 17 September (Hamiltonian flow, large-field region, Agmon, blocking, truncation, Schur and threshold notes); [mass-gap-position](mass-gap-position.md) §3 closes their routes and `LLM.md` §4 records the traps, but the notes themselves still state their conclusions in the lead and keep inconsistent thresholds (176, 444 and 1056 for the Wilson strong-coupling gap appear with different labels across `mass-gap-position`, `su3-constants` and `strong-coupling-threshold-explicit`). The other four are `planck-gap-derivation` (item (a)), `action-floor-yang-mills-gap` (a $d=4$ row that drops $1/g^2$), `abelian-misses-the-box` (a gapped set stated without monotonicity) and `what-would-unblock` (a wrong reason for the failure of infrared bounds). The repository's own convention for a withdrawn claim is a dated correction box at the top of the note; applying it to the 24 notes, with the unified thresholds, would remove the drift without deleting the record.
 
@@ -247,4 +265,4 @@ Interest (I) and correctness (C) from 1 to 10; status and kind as read by the sc
 
 ## 5. Consequence for STATE
 
-The two proof goals are unaffected: the Newton recording spine and the refinement and gauge spine are the notes the scorer could follow to the end. The pending work this audit creates is corrective: dated correction boxes in the 24 notes of §3, the factor-2 fix in `planck-gap-derivation`, the $q=4$ column in `strong-coupling-target-box`, the abstract of `small-field-step-decay-and-threshold`, and one set of strong-coupling thresholds with their labels in `mass-gap-position` and `su3-constants`. STATE gains one line pointing here.
+The two proof goals are unaffected: the Newton recording spine and the refinement and gauge spine are the notes the scorer could follow to the end. The pending work this audit creates is corrective: dated correction boxes in the 24 notes of §3b, the slips of §3c, the factor-2 fix in `planck-gap-derivation`, the $q=4$ column in `strong-coupling-target-box`, the abstract of `small-field-step-decay-and-threshold`, and one set of strong-coupling thresholds with their labels in `mass-gap-position` and `su3-constants`. STATE gains one line pointing here.
