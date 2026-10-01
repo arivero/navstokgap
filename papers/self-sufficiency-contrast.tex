@@ -35,14 +35,21 @@ in the large-action regime for finite times away from the collision set,
 by Hepp's theorem, cited with its hypotheses and with the one further
 localization hypothesis the singular potential needs. Parts (a), (c) and
 the quadratic half of (d) are proved here; (b) and the Kepler half of
-(d) rest on the cited theorems. Proposition 2 then gives the gap the
-exercise is for, in two relativistic models: with finite \(c\), the
-theories of Kepler's force that define motion without an added rule are
-those with \(h>k/(\alpha_cc)\), by the self-adjointness thresholds of
-the Dirac and Klein--Gordon Coulomb problems, cited; Newton's theory at
-\(h=0\) and every theory with \(h\) below \(k/(\alpha_cc)\) are not
-self-sufficient. Written by Claude Fable, 2026-10-01; proof status
-recorded in the final section.
+(d) rest on the cited theorems. Theorem 1 was refereed by GPT-6.1 Sol
+(Codex) in two bounded passes on 2026-10-01, REFINE then ACCEPT on its
+statement and proof as printed; the reports are in
+\href{../reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md}{\texttt{reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md}}.
+Proposition 2 was assessed separately and not endorsed: its spin-zero
+threshold is the real-indicial one with the branch selection an
+additional premise, and its endpoints are not settled; the wording below
+records that. Proposition 2 then gives the gap the exercise is for, in
+two relativistic models: with finite \(c\), the theories of Kepler's
+force that define motion without an added rule are those with
+\(h>k/(\alpha_cc)\), by the self-adjointness thresholds of the Dirac and
+Klein--Gordon Coulomb problems, cited; Newton's theory at \(h=0\) and
+every theory with \(h\) below \(k/(\alpha_cc)\) are not self-sufficient.
+Written by Claude Fable, 2026-10-01; proof status recorded in the final
+section.
 
 Notation: \(h\) is the reduced phase constant, \(m>0\) the mass, \(k>0\)
 the force constant, \(r=|x|\) in \(\mathbb R^3\); the planar case is a
@@ -327,24 +334,32 @@ potential energy on its domain, for \(\nu<1\) {[}@Schmincke1972;
 \(\nu>1\) every self-adjoint realization requires a boundary condition
 at the centre, an added rule in the sense of Theorem 1(a) and (c). (ii)
 \emph{Spin zero.} For the Klein--Gordon equation with the Coulomb
-potential the \(s\)-wave radial solutions behave at the origin like
-\(r^{1/2\pm\sqrt{1/4-\nu^2}}\) {[}@Case1950; metadata{]}: for
-\(\nu<\tfrac12\) the indicial exponents are real and distinct and the
-regular solution is selected by its finiteness, at \(\nu=\tfrac12\) the
-second solution carries a logarithm, and for \(\nu>\tfrac12\) both
-solutions oscillate without limit at the centre and a boundary condition
-must be imposed. (iii) Hence, within these two relativistic models and
-with the stated selection criteria (a distinguished extension for Dirac,
-a finite regular solution for Klein--Gordon), the theories of Kepler's
+potential the reduced \(s\)-wave radial function \(u=rR\) behaves at the
+origin like \(r^{1/2\pm\sqrt{1/4-\nu^2}}\) {[}@Case1950; metadata{]}:
+for \(\nu<\tfrac12\) the indicial exponents are real and distinct, at
+\(\nu=\tfrac12\) the second solution carries a logarithm, and for
+\(\nu>\tfrac12\) the exponents are complex and the solutions
+\(r^{1/2}e^{\pm i\beta\log r}\) oscillate in phase without limit at the
+centre. Below \(\nu=\tfrac12\) both branches of \(u\) are finite at the
+origin, so finiteness alone selects neither; the choice of the
+larger-exponent branch is the usual selection in this limit-circle
+regime and is an additional premise, not supplied by the equation. The
+threshold \(\nu=\tfrac12\) is therefore the real-indicial threshold, and
+the spin-zero line of (5) holds under that selection premise. (iii)
+Hence, within these two relativistic models and with the stated
+selection criteria (a distinguished extension for Dirac, the
+larger-exponent branch for Klein--Gordon), the theories of Kepler's
 force at finite \(c\) that define the motion without an added rule are
 those with \[h\ >\ h_{\min}=\frac{k}{\alpha_c\,c},\qquad
 \alpha_c=1\ (\text{spin }\tfrac12),\quad\alpha_c=\tfrac12\ (\text{spin }0),\tag{5}\]
-and none with \(0<h\le h_{\min}\) in the spin-zero case or
-\(0<h<h_{\min}\) in the spin-one-half case. Together with Theorem 1(a),
-the set of values of \(h\) at which a theory of Kepler's force is
-self-sufficient, in this sense, is an interval \((h_{\min},\infty)\) or
-\([h_{\min},\infty)\) bounded away from zero: Newton's theory at \(h=0\)
-is incomplete, no theory with \(h\) below \(h_{\min}\) is
+and none with \(0<h<h_{\min}\); the endpoint \(h=h_{\min}\) needs its
+own extension criterion in the spin-one-half case (\(\nu=1\) is not
+settled by the cited subcritical results) and its own selection in the
+spin-zero case, so \(h_{\min}\) is the infimum of the self-sufficient
+values, attained or not. Together with Theorem 1(a), the set of values
+of \(h\) at which a theory of Kepler's force is self-sufficient, in this
+sense, is an interval with left endpoint \(h_{\min}>0\): Newton's theory
+at \(h=0\) is incomplete, no theory with \(h\) below \(h_{\min}\) is
 self-sufficient, and every theory above it is. This is the gap, in the
 two models considered; whether it is universal over all admissible
 relativistic completions requires further model and selection premises
@@ -413,6 +428,10 @@ and hypothesis (L) (cited). Next: prove (L) for the Coulomb evolution of
 a coherent state, or replace Hepp's \(L^2\) statement by an energy-norm
 one; then the open obligation (ii), that no completion without \(h\)
 exists. Proof status: written by Claude Fable, 2026-10-01; parts (a),
-(c), (d1) proved, (b) and (d2) cited with hypotheses; refereeing
-recorded in the status line when done.
+(c), (d1) proved, (b) and (d2) cited with hypotheses; Theorem 1 refereed
+ACCEPT (second pass, GPT-6.1 Sol via Codex), Proposition 2 assessed
+separately with its selection premises recorded and not endorsed; the
+referee also notes that (4) with (L) gives norm approximation and
+bounded-observable localization, so the centroid language for Kepler's
+force is shorthand pending moment bounds.
 \end{document}
