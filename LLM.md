@@ -45,13 +45,16 @@ Goal one is **Newton action necessity**: a logical argument, from
 independently justified physical premises, that the comparison Newton
 takes to zero in *Principia* Book I (inertial line against constant-force
 parabola, Lemmas X--XI, Proposition I) carries a positive action floor once
-it must be recorded. Since 2026-10-01 the goal is stated as a gap
-thesis: Newton's mechanics exists only with a positive scale and no zero
-branch is continuously reachable; its located form is the discontinuity
-of the record family at zero in the complete-record topology of
-determinate preparations whose streams cross
-([zero-branch-reachability](notes/zero-branch-reachability.md)),
-with no scale derived. Goal two is the **continuum existence and mass gap of
+it must be recorded. Since 2026-10-01 (night) the goal is
+restated as the consistency problem of classical mechanics: the quantum
+theory reduces to Newton's mechanics only under extra conditions (a
+record of the preparation, an imprecision action above $h$ at one end,
+or no crossing streams), so classical mechanics is the limit of the
+world's mechanics only on a domain bounded by a constant it does not
+contain ([zero-branch-reachability](notes/zero-branch-reachability.md),
+Theorems 1, 2(ii), 5). The strong form, that classical mechanics
+requires $h>0$ to exist, is closed: a classical limit exists along
+recorded or imprecise preparations. Goal two is the **continuum existence and mass gap of
 pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten sense
 ([digest](notes/millennium-problem-definitions.md)). QCD pions are a
 benchmark for which symmetries a mechanism preserves, and no fermionic
