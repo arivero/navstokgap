@@ -5,199 +5,311 @@
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={The ground-state measure is the time-slice marginal of the Euclidean measure, and that imp},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Ground-state measure transfer: the slice identity is exact, the large-field estimate remai},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{the-ground-state-measure-is-the-time-slice-marginal-of-the-euclidean-measure-and-that-imports-the-local-large-field-estimate}{%
-\section{The ground-state measure is the time-slice marginal of the
-Euclidean measure, and that imports the local large-field
-estimate}\label{the-ground-state-measure-is-the-time-slice-marginal-of-the-euclidean-measure-and-that-imports-the-local-large-field-estimate}}
+\section{Ground-state measure transfer: the slice identity is exact, the
+large-field estimate remains
+open}\label{ground-state-measure-transfer-the-slice-identity-is-exact-the-large-field-estimate-remains-open}
 
-The obstruction recorded in \href{magnetic-energy-identities.md}{the
-identities note} is removed by an identification rather than by an
-estimate. For the Kogut--Susskind Hamiltonian obtained as the
-\(a_t\to0\) limit of the anisotropic Wilson transfer matrix,
-\[\big|\Omega(U)\big|^2\,d\mu(U)\ =\ \lim_{T\to\infty}\
-\text{marginal at time }0\text{ of }\ \frac{e^{-S_E[\mathcal U]/\hbar}\,\prod d\mu}{Z_T},\]
-so the ground-state measure of the Hamiltonian theory is the
-distribution of one time slice under the four-dimensional Euclidean
-Wilson measure. Every estimate proved for that measure therefore holds
-for \(|\Omega|^2\) verbatim, including the local ones that the
-eigenvalue equation cannot reach, because the Euclidean weight
-\(e^{-S_E/\hbar}=\prod_Pe^{-\beta_P/\hbar}\) factorizes over
-four-dimensional plaquettes while the eigenvalue equation carries the
-extensive \(E_0\). The estimate the route needs is then available in its
-standard form: a configuration whose field strength averaged over a
-block of side \(\ell\) reaches \(\eta/\ell^2\) costs Euclidean action
-\[\frac{S_E}{\hbar}\ \simeq\ \frac{1}{4g^2}\!\int_{\text{block}}\!\big|F\big|^2\,d^4x
-\ \simeq\ \frac{\eta^2}{4g^2},\] \textbf{independent of \(\ell\) and of
-the lattice spacing}, so the suppression is \(e^{-c\eta^2/g(\ell)^2}\)
-at every scale, with the running coupling. This matches, with the same
-exponent structure, the free-field Gaussian tail
-\(\exp[-8\pi^2\eta^2/g^2]\) computed in
-\href{typical-field-strength-window.md}{the typical-field note} §3,
-which is a check on both. With the identification, the decimation step
-of the route controls its truncation error off a set of measure
-\(e^{-c\eta^2/g^2}\), and what remains is the treatment of that set: the
-large-field problem in its usual form, now reached honestly rather than
-assumed. Constants explicit; the identification is standard and cited;
-nothing promoted.
-
-\hypertarget{the-transfer-matrix-and-the-limit}{%
-\subsection{1. The transfer matrix and the
-limit}\label{the-transfer-matrix-and-the-limit}}
-
-On an anisotropic lattice with spatial spacing \(a\) and temporal
-spacing \(a_t\), the Wilson action separates into temporal and spatial
-plaquettes,
-\[\frac{S_E}{\hbar}=\frac{1}{g^2}\Big[\frac{a}{a_t}\sum_{P\ \rm temporal}
-\big(N-\operatorname{Re}\operatorname{tr}U_P\big)
-+\frac{a_t}{a}\sum_{P\ \rm spatial}
-\big(N-\operatorname{Re}\operatorname{tr}U_P\big)\Big]\cdot\frac{2}{1},\]
-in the normalization of \href{mass-gap-obligations-lattice.md}{the
-obligations map} with \(g\) dimensionless. The transfer matrix
-\(\mathcal T\) of this action is self-adjoint and strictly positive
-(Lüscher, Commun. Math. Phys. 54 (1977) 283; Creutz, Phys. Rev.~D 15
-(1977) 1128; both metadata level), and as \(a_t\to0\)
-\[\mathcal T=\exp\Big[-\frac{a_t}{\hbar}\,H_{\rm KS}\Big]\big(1+O(a_t)\big),
-\qquad
-H_{\rm KS}=\frac{\hbar c}{a}\Big[\frac{g^2}2\sum_\ell(-\Delta_\ell)
-+\frac2{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big],\]
-the temporal plaquettes producing the electric term through the
-character expansion and the spatial ones passing directly to the
-magnetic term.
-
-\textbf{Proposition 1.} Let \(\Omega\) be the Perron vector of
-\(\mathcal T\), which by T1 of
-\href{mass-gap-obligations-lattice.md}{the obligations map} is the
-positive ground state of \(H_{\rm KS}\) in the limit. Then for any
-bounded \(F\) of a single time slice,
-\[\big\langle\Omega,F\,\Omega\big\rangle
-=\lim_{T\to\infty}\frac{\big\langle\chi,\mathcal T^{T}F\,\mathcal T^{T}\chi\big\rangle}
-{\big\langle\chi,\mathcal T^{2T}\chi\big\rangle}
-=\lim_{T\to\infty}\big\langle F\big\rangle_{S_E,\,[-T,T]},\] for any
-\(\chi\) with \(\langle\chi,\Omega\rangle\neq0\); that is,
-\(|\Omega|^2d\mu\) is the time-slice marginal of the Euclidean measure.
-
-\emph{Proof.} Spectral decomposition of \(\mathcal T\) with the gap of
-T1 gives the first equality; the middle expression is by construction
-the Euclidean expectation of \(F\) inserted at time \(0\) in a slab of
-height \(2T\) with boundary state \(\chi\), which is the second.
-\(\square\)
-
-Nothing here is new; the point is what it licenses.
-
-\hypertarget{what-transfers}{%
-\subsection{2. What transfers}\label{what-transfers}}
-
-Any statement of the form ``the Euclidean measure assigns probability at
-most \(p\) to the set of configurations whose restriction to a time
-slice has property \(\mathcal A\)'' is, by Proposition 1, a statement
-about \(|\Omega|^2\). In particular the local statements do, and the
-reason the Hamiltonian formulation could not produce them itself is now
-visible as a feature of the representation rather than of the physics:
-the eigenvalue equation \(-A'\Delta\Omega+(B'V-e_0)\Omega=0\) carries
-the extensive \(e_0\) and compares totals, while \(e^{-S_E/\hbar}\) is a
-product over plaquettes and compares locally. Both describe the same
-measure.
-
-This closes the gap left open in
-\href{magnetic-energy-identities.md}{the identities note} §5 and in
-\href{typical-field-strength-window.md}{the typical-field note} §3, in
-the only way those notes left available.
-
-\hypertarget{the-large-field-estimate-at-a-block-scale}{%
-\subsection{3. The large-field estimate at a block
-scale}\label{the-large-field-estimate-at-a-block-scale}}
-
-\textbf{The action cost is scale-invariant.} Let a configuration have
-field strength of magnitude \(\eta/\ell^2\) coherently over a
-four-dimensional block of side \(\ell\). Its Euclidean action is
-\[\frac{S_E}{\hbar}=\frac1{4g^2}\int\big|F^a_{\mu\nu}\big|^2d^4x
-\ \simeq\ \frac{1}{4g^2}\Big(\frac{\eta}{\ell^2}\Big)^2\ell^4=\frac{\eta^2}{4g^2},\]
-independent of \(\ell\) and of \(a\). This is the reason large-field
-estimates take the same form at every scale, with only the coupling
-running: the suppression is
-\[\mathbb P\Big(\big|F\big|_{\rm block}\ \ge\ \frac{\eta}{\ell^2}\Big)
-\ \lesssim\ \exp\Big[-\frac{c\,\eta^2}{g(\ell)^2}\Big],\] with \(c\) a
-pure number and \(g(\ell)\) the coupling at the block scale.
-
-\textbf{Consistency check.} The free-field computation of
-\href{typical-field-strength-window.md}{the typical-field note} §3 gave,
-for the flowed magnetic field at radius \(\sqrt{8t}=\ell\),
-\[\mathbb P\Big(|b_t|>\frac{\eta}{t}\Big)\simeq\exp\Big[-\frac{8\pi^2\eta^2}{g^2}\Big],\]
-the same \(\eta^2/g^2\) in the exponent, obtained by an independent
-route from the Gaussian ground state. The two agree in structure and fix
-\(c=8\pi^2\) in the free limit.
-
-\textbf{Why the lattice-scale version is empty.} At \(\ell=a\) the
-plaquette angles are of order one, the action per plaquette is bounded
-by \(4N/g^2\), and the Chebyshev bound
-\(\mathbb P(S_R\ge s)\le\exp[-s+4N|R|/g^2]\) is vacuous, as noted in
-\href{typical-field-strength-window.md}{the typical-field note}. The
-estimate has content only for the block-averaged field at \(\ell\gg a\),
-where the individual plaquette angles are small, of order
-\(a^2\eta/\ell^2\), and the cost accumulates over \((\ell/a)^4\) of them
-to the scale-invariant total above. The large-field condition is a
-statement about coherence across a block, not about any single
-plaquette.
+Later corrections: \href{large-field-operator-inequality.md}{the
+operator-inequality note} separates measure from operator control;
+\href{flow-jacobian-truncation-error.md}{the corrected Jacobian note}
+and \href{flow-instability-large-field.md}{instability note} withdraw
+the Hamiltonian truncation and sharp-crossover claims;
+\href{lattice-truncation-uniform.md}{the lattice note} treats a
+different, single-step regime (relevant passages read).
 
 \begin{quote}
-\textbf{Superseded in part.} The competition below between
-\(e^{-c\eta^2/g^2}\) and \(e^{2\eta}\) holds at fixed truncation range;
-letting the range grow like \(\eta\) removes it, and the real
-obstruction in the large-field region is the sign of the error, see
-\href{large-field-operator-inequality.md}{the operator-inequality note}.
+\textbf{Correction (2026-10-02).} The original title and lead claimed
+that isotropic Wilson-measure estimates transfer verbatim to the
+Kogut--Susskind ground state and that a normalized large-field bound
+with running coupling is thereby available. Those claims are
+\textbf{withdrawn}. The fixed-temporal-spacing slice identity is proved
+below; its Wilson-to-Hamiltonian limit is conditional on ground-state
+projector convergence, with no interchange of limits asserted. Section 3
+retains a continuum action lower bound, not a probability bound. The
+asserted universal constant \(c=8\pi^2\), the sharp crossover
+\(\eta_*=2g^2/c\), and the claim that the good region is almost
+everything at that crossover are withdrawn. The stray \(\cdot2/1\) in
+the action display is replaced by its explicit coefficient \(2/g^2\).
+Section 4 also incorporates the later corrections to the flow
+normalization and to the distinction between kernel tails and
+Hamiltonian errors.
 \end{quote}
 
-\hypertarget{where-this-leaves-the-route}{%
+On a \textbf{fixed finite spatial lattice}, the square of the normalized
+Perron vector of a positive transfer matrix is its infinite-time
+Euclidean slice marginal. For the Kogut--Susskind Hamiltonian the
+analogous identity holds directly for its heat semigroup. Identifying
+these two marginals as the temporal spacing tends to zero requires a
+separate convergence result. Neither identity transfers an estimate
+proved only for an isotropic Wilson measure without control of that
+limit. Neither identity proves a large-field estimate.
+
+The available calculation here is instead the following: with the
+continuum normalization \(S_E/\hbar=(4g^2)^{-1}\int|F|^2\), a
+four-dimensional block of side \(\ell\) with root-mean-square field at
+least \(\eta/\ell^2\) forces action at least \(\eta^2/(4g^2)\). This
+scale cancellation does not control a normalized partition-function
+ratio. The proposed suppression \(C\exp[-c\eta^2/g(\ell)^2]\) remains a
+\textbf{heuristic target} for the interacting theory. No local
+large-field closure, Hamiltonian decimation bound, or continuum mass gap
+is proved.
+
+\subsection{1. The transfer matrix and the two
+limits}\label{the-transfer-matrix-and-the-two-limits}
+
+Fix \(G=SU(N)\), \(g>0\), spatial spacing \(a>0\), and a finite periodic
+spatial box. Let \(d\mu\) be normalized product Haar measure on its
+spatial links. Write \(a_t\) for the temporal spacing \textbf{in length
+units} (the physical time step is \(a_t/c\)), and \(\epsilon=a_t/a\). In
+the convention of \href{mass-gap-obligations-lattice.md}{the obligations
+map}, §1 (passage read), the anisotropic Wilson action is
+\[\frac{S_E}{\hbar}=\frac{2}{g^2}\left[
+\epsilon^{-1}\sum_{P\ \mathrm{temporal}}
+\big(N-\operatorname{Re}\operatorname{tr}U_P\big)
++\epsilon\sum_{P\ \mathrm{spatial}}
+\big(N-\operatorname{Re}\operatorname{tr}U_P\big)\right].\] The target
+Hamiltonian, on the gauge-invariant subspace, is
+\[H_{\rm KS}=\frac{\hbar c}{a}\left[
+\frac{g^2}{2}\sum_e(-\Delta_e)
++\frac{2}{g^2}\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big)
+\right].\] The transfer-matrix references are Lüscher, \emph{Commun.
+Math. Phys.} \textbf{54} (1977) 283--292, and Creutz, \emph{Phys.
+Rev.~D} \textbf{15} (1977) 1128--1136 (both metadata level; not used
+here as a checked proof of temporal-limit uniformity). A
+character-expansion motivation of this Hamiltonian limit is not a
+ground-state convergence theorem. The former formula
+\(\mathcal T=\exp[-a_tH_{\rm KS}/\hbar]\big(1+O(a_t)\big)\) is
+withdrawn: it omitted \(c\) with the length convention, specified no
+operator topology, and supplied no spectral convergence control.
+
+\textbf{Proposition 1 (fixed temporal spacing).} Fix \(a_t>0\). Assume
+the physical transfer matrix \(\mathcal T_{a_t}\) is compact,
+self-adjoint, nonnegative, and has a simple largest eigenvalue
+\(\lambda_{a_t}>0\) with normalized positive eigenvector
+\(\Omega_{a_t}\). These are the transfer-matrix hypotheses used below;
+they are distinct from T1 for \(H_{\rm KS}\). For bounded multiplication
+\(F\) and any boundary vector \(\chi\) with
+\(\langle\Omega_{a_t},\chi\rangle\ne0\),
+\[\langle\Omega_{a_t},F\Omega_{a_t}\rangle
+=\lim_{n\to\infty}
+\frac{\langle\mathcal T_{a_t}^{n}\chi,
+F\mathcal T_{a_t}^{n}\chi\rangle}
+{\|\mathcal T_{a_t}^{n}\chi\|^2}.\] For nonnegative \(\chi\) and the
+Wilson transfer-kernel representation, the ratio is the expectation in
+the anisotropic Euclidean slab of \(2n\) steps, with boundary weights
+\(\chi\) and \(F\) inserted at the middle slice. Thus its limit is the
+marginal \(|\Omega_{a_t}|^2d\mu\). For a general signed or complex
+\(\chi\) the spectral formula still holds, but its boundary functional
+need not be a positive Euclidean probability measure.
+
+\emph{Proof.} Let \(P_{a_t}\) project onto \(\Omega_{a_t}\). Compactness
+and simplicity give
+\[r_{a_t}=\|\mathcal T_{a_t}(1-P_{a_t})\|/\lambda_{a_t}<1,
+\qquad
+\lambda_{a_t}^{-n}\mathcal T_{a_t}^n\chi
+=P_{a_t}\chi+O(r_{a_t}^n\|\chi\|)\] in Hilbert norm. Since
+\(P_{a_t}\chi\ne0\), the normalized ratio converges to the displayed
+expectation. Integrating successive transfer kernels is the slab
+functional by its construction. \(\square\)
+
+\textbf{Hamiltonian identity and conditional Wilson limit.} The
+finite-lattice \(H_{\rm KS}\) has a unique positive ground state
+\(\Omega\) and a gap by T1 of \href{mass-gap-obligations-lattice.md}{the
+obligations map}, §2 (passage read). Spectral projection therefore
+gives, directly, \[\langle\Omega,F\Omega\rangle
+=\lim_{\tau\to\infty}
+\frac{\langle e^{-\tau H_{\rm KS}/\hbar}\chi,
+F e^{-\tau H_{\rm KS}/\hbar}\chi\rangle}
+{\|e^{-\tau H_{\rm KS}/\hbar}\chi\|^2},\] where \(\tau\) is physical
+time and \(\langle\Omega,\chi\rangle\ne0\). This is an exact semigroup
+identity, without invoking a Wilson limit.
+
+To identify it with the preceding anisotropic Wilson marginal, a
+sufficient additional hypothesis is
+\[\|P_{a_t}-P_0\|\longrightarrow0\quad(a_t\downarrow0),
+\qquad P_0=|\Omega\rangle\langle\Omega|.\] Under this hypothesis the
+positive normalized vectors converge in \(L^2(d\mu)\), and their
+densities converge in \(L^1(d\mu)\), since
+\[\big\||\Omega_{a_t}|^2-|\Omega|^2\big\|_1
+\le2\|\Omega_{a_t}-\Omega\|_2.\] Consequently the \textbf{iterated}
+limit, first \(n\to\infty\) at fixed \(a_t\), then \(a_t\downarrow0\),
+equals \(\langle\Omega,F\Omega\rangle\) for every fixed bounded \(F\).
+Projector convergence is not proved here. No interchange with the
+reverse order, no joint limit, and no estimate uniform in spatial volume
+or spacing is asserted.
+
+\subsection{2. What transfers, and what does
+not}\label{what-transfers-and-what-does-not}
+
+At fixed \(a_t\), a probability bound for a property of a single slice
+under the infinite-time \textbf{anisotropic} Wilson measure is exactly a
+bound under \(|\Omega_{a_t}|^2d\mu\). Under the additional projector
+convergence hypothesis, any bound
+\[\int_A|\Omega_{a_t}|^2d\mu\le p\qquad(0<a_t<a_{t,0})\] for a fixed
+measurable slice event \(A\), with the same \(p\), passes to
+\(\int_A|\Omega|^2d\mu\le p\). One may also start with slab bounds
+uniform in \(n\) and \(a_t\) and then take the indicated iterated
+limits. If the event or the coupling varies in the limit, its
+convergence must be controlled separately.
+
+An isotropic estimate has \(a_t=a\), whereas the Hamiltonian limit takes
+\(a_t/a\to0\) at fixed \(a\). It is not a bound for that family. Nor is
+a four-dimensional block event automatically a property of its middle
+slice: temporal coherence and a spatial-slice field constraint are
+different events. A comparison of ensembles and observables is required.
+
+Plaquette factorization of the unnormalized Wilson weight does not make
+plaquettes independent: they share links, and normalization involves all
+links. It does not supply local probability control. The
+\href{magnetic-energy-identities.md}{identities note}, §§4--5 (passages
+read), shows why one particular eigenvalue-equation comparison loses
+local control through an extensive energy threshold. The present
+identity provides another representation; it \textbf{does not close}
+that missing local estimate or prove that Hamiltonian methods cannot
+obtain one.
+
+\subsection{3. Action cost at a block scale, not a probability
+theorem}\label{action-cost-at-a-block-scale-not-a-probability-theorem}
+
+\textbf{Proved continuum action bound.} For a smooth field with finite
+Euclidean action in the stated normalization, let \(B\) be a
+four-dimensional cube of volume \(\ell^4\) and define the
+gauge-invariant root-mean-square field
+\[\mathcal F_B=\left(\ell^{-4}\int_B|F|^2d^4x\right)^{1/2}.\] On
+\(\mathcal F_B\ge\eta/\ell^2\), positivity gives
+\[\frac{S_E}{\hbar}=\frac1{4g^2}\int|F|^2d^4x
+\ge\frac1{4g^2}\int_B|F|^2d^4x
+\ge\frac{\eta^2}{4g^2}.\] The norm sums the colour and ordered spacetime
+indices in the action. The same argument applies to a flowed block
+\(L^2\) constraint if the flow exists and decreases this action. It is
+the lower-bound argument of \href{large-field-action-lower-bound.md}{the
+action note}, §2 (passage read); its further sharpness and probability
+claims are not used. There is no \(\ell\) in this bound. There is also
+no lattice-spacing parameter in this continuum calculation: an exact
+Wilson-lattice bound requires an explicit lattice field definition and
+its action comparison. No supported constant-field sharpness or uniform
+lattice result is inferred from the continuum display.
+
+\textbf{Missing normalization.} For any finite regulated probability
+measure \(d\nu\) and dimensionless action \(s\), the interacting law is
+\(d\mathbb P=Z^{-1}e^{-s}d\nu\). An action bound \(s\ge q\) on \(A\)
+gives only \[\mathbb P(A)=\frac{\int_Ae^{-s}d\nu}{Z}
+\le\frac{e^{-q}\nu(A)}{Z}.\] A useful local estimate needs a lower bound
+on the denominator relative to the constrained numerator, with
+controlled boundary, entropy, volume and cutoff dependence. The action
+bound alone supplies none. Accordingly
+\[\mathbb P\left(\mathcal F_B\ge\frac{\eta}{\ell^2}\right)
+\le C\exp\left[-\frac{c\eta^2}{g(\ell)^2}\right]\] is a
+\textbf{heuristic target, not an available theorem in this note}.
+Replacing bare \(g\) by running \(g(\ell)\) requires a renormalized
+measure and observable comparison as well; it is not licensed by scale
+cancellation. No citation checked here establishes this interacting
+bound with the needed constants and limit uniformity.
+
+\textbf{Free-field comparison, with its own observable.} Gaussian tails
+do have quadratic exponents, but their constants depend on the
+covariance, smearing and threshold. For a scalar Gaussian \(X\) of
+variance \(\sigma^2\), \(\mathbb P(|X|\ge u)\le2e^{-u^2/(2\sigma^2)}\)
+by the exponential-moment bound. For the three-component, single-colour
+abelian magnetic field with Gaussian heat smearing used in
+\href{flowed-bound-free-field.md}{the free-field note}, §§1--3 (passages
+read), \[\widetilde G_{ij}(k)=\frac{g^2|k|}{2}e^{-2t|k|^2}
+(\delta_{ij}-\hat k_i\hat k_j).\] Taking its trace and radial integral
+gives \[\langle|b_t|^2\rangle
+=\frac{g^2}{2\pi^2}\int_0^\infty k^3e^{-2tk^2}dk
+=\frac{g^2}{16\pi^2t^2}.\] Rotational invariance makes each component's
+variance \(\sigma^2=g^2/(48\pi^2t^2)\), one third of this trace. Their
+joint Gaussian law is \(\sigma^2 I_3\). Its radial density is
+proportional to \(r^2e^{-r^2/(2\sigma^2)}\), so in the large-threshold
+regime \[\log\mathbb P\left(|b_t|>\frac{\eta_t}{t}\right)
+=-\frac{24\pi^2\eta_t^2}{g^2}
++O\big(\log(\eta_t/g)\big),\qquad \eta_t/g\to\infty.\] The polynomial
+radial prefactor is not a constant uniform in threshold. The former
+\(8\pi^2\) comparison from \href{typical-field-strength-window.md}{the
+typical-field note}, §3 (passage read), treated the trace variance as a
+scalar variance for the vector norm and cannot fix a constant here.
+Moreover, with \(\ell^2=8t\), a threshold \(\eta_\ell/\ell^2\) means
+\(\eta_t=\eta_\ell/8\); even this particular free-field logarithmic
+exponent becomes \(-3\pi^2\eta_\ell^2/(8g^2)\). Neither value is a
+sharp-block or an interacting constant. A sharp average uses a different
+covariance; nonabelian field averaging also requires a gauge convention
+or an invariant observable such as \(\mathcal F_B\).
+
+At the cutoff scale compact Wilson plaquettes have bounded action. That
+fact gives no useful normalized block-coherence estimate, and
+\(\ell\gg a\) alone does not prove one either.
+
 \subsection{4. Where this leaves the
-route}\label{where-this-leaves-the-route}}
+route}\label{where-this-leaves-the-route}
 
-With Proposition 1 and Section 3, the decimation step of
-\href{mass-gap-position.md}{the position note} §6 has its error
-controlled outside a set of ground-state measure
-\(e^{-c\eta^2/g(\ell)^2}\), which at weak coupling is small, and inside
-that set the flow-truncation bound of
-\href{flow-jacobian-truncation-error.md}{the Jacobian note} degrades
-like \(e^{2t\|G\|_\infty}\). The two exponents compete:
-\[\text{gain }e^{-c\eta^2/g^2}\qquad\text{against}\qquad\text{loss }e^{2\eta},\]
-since \(t\|G\|_\infty\simeq\eta\) when the field reaches \(\eta/\ell^2\)
-at the flow radius. The gain wins for \[\eta\ \gtrsim\ \frac{2g^2}{c},\]
-so the large-field region can be defined as
-\(\{\,|F|_{\rm block}\ge\eta_*/\ell^2\,\}\) with \(\eta_*=2g^2/c\), on
-which the measure is at most \(e^{-4g^2/c}\) and outside which the
-truncation is accurate. \textbf{At weak coupling \(\eta_*\to0\), so the
-good region is almost everything}; the residual set carries measure
-\(e^{-4g^2/c}\), which tends to one as \(g\to0\), and there the estimate
-fails to be useful.
+\textbf{Correction to the former competition.} Neither Proposition 1 nor
+Section 3 controls the decimation error outside a proved rare set. The
+assertion that a crossover \(\eta_*=2g^2/c\) makes the good region
+almost everything is withdrawn. Even assuming the old bound with unit
+prefactor, its value there was \(e^{-4g^2/c}\to1\): an upper bound
+tending to one establishes no rarity. It also does not prove that the
+actual bad-set probability tends to one.
 
-That last sentence is the honest statement of where the difficulty now
-sits: the competition is between an exponential gain in \(\eta^2/g^2\)
-and an exponential loss in \(\eta\), and at small \(g\) the crossover
-\(\eta_*\) is small, so the excluded set is defined by a weak condition
-and its measure bound \(e^{-4g^2/c}\) is close to one. Improving it
-requires a sharper treatment of the truncation inside the large-field
-region, which is the large-field expansion of the constructive
-programme, or a truncation whose error grows more slowly than
-\(e^{2t\|G\|_\infty}\).
+The corrected \href{flow-jacobian-truncation-error.md}{Jacobian note},
+§§2--3 (full-read), gives an \textbf{absolute kernel-tail bound for a
+specified auxiliary covariant linear evolution}, under smoothness and
+bounded curvature hypotheses. With its full curvature block norm
+\(\Gamma(s)\), its budget is \[A_t=2\int_0^t\Gamma(s)ds,\qquad
+\delta(R,t)\le e^{A_t}\left[
+\operatorname{erfc}(\sqrt2\kappa)
++\frac{2\sqrt2\kappa}{\sqrt\pi}e^{-2\kappa^2}\right],
+\qquad R=\kappa\sqrt{8t}.\] If \(\Gamma(s)\le\eta/\ell^2\) throughout
+\(0\le s\le t\) and \(\ell^2=8t\), then \(A_t\le\eta/4\), not \(2\eta\).
+A lower bound on a block RMS field does not give this curvature supremum
+upper bound. Even a proved probability bound for \(\mathcal F_B\)
+therefore would not supply this kernel budget without an additional
+comparison.
 
-\hypertarget{consequence-for-state}{%
-\subsection{5. Consequence for STATE}\label{consequence-for-state}}
+Under the further hypothetical bound \(\mathbb P(A_\eta)\le
+C e^{-c\eta^2/g^2}\) and a controlled corresponding growth factor
+\(e^{\eta/4}\), the product has schematic exponent
+\(-c\eta^2/g^2+\eta/4\), whose algebraic zero is \(g^2/(4c)\). This is
+bookkeeping of additional assumptions, \textbf{not a sharp crossover or
+a probability-weighted Hamiltonian error theorem}. A tail bound for
+\(\mathcal F_B\) alone does not justify that product, particularly when
+curvature is unbounded on the event.
 
-The identification of \(|\Omega|^2\) with the Euclidean time-slice
-marginal is recorded, with the transfer-matrix references, and it
-imports the local estimates that the Hamiltonian eigenvalue equation
-could not produce. The large-field estimate itself has the
-scale-invariant form \(e^{-c\eta^2/g^2}\), confirmed against the
-independent free-field computation. The route's decimation step now has
-a quantitative structure: good region with accurate truncation, bad
-region of measure \(e^{-c\eta_*^2/g^2}\), and a crossover \(\eta_*\)
-fixed by the competition between the two exponentials. The next question
-is the first one that is genuinely about the large-field region rather
-than around it: can the flow-truncation error inside it be bounded by
-something weaker than \(e^{2t\|G\|_\infty}\), for instance by using that
-the flow contracts the action monotonically even there?
+For finite \(A_t\), increasing the range \(\kappa\) controls the
+displayed kernel majorant. This is the surviving range observation
+behind \href{large-field-operator-inequality.md}{the operator-inequality
+note}, §1 (passage read), which supersedes the fixed-range competition.
+It does not prove a relative form bound for a conjugated Hamiltonian.
+Measure rarity also does not alone control a perturbation of
+unrestricted sign: that note's min-max and localized trial-state
+arguments, §3 (full-read), distinguish positive errors from negative
+wells. The later \href{flow-instability-large-field.md}{instability
+correction}, §§2 and 4 (passages read), supplies no sharp lower bound on
+truncation tails. The separate single-lattice-step discussion in
+\href{lattice-truncation-uniform.md}{the lattice note}, §§1--2 (passages
+read), must not be read as a fixed-physical-scale continuum estimate or
+as a repair of these missing operator comparisons.
+
+\subsection{5. Consequence for STATE}\label{consequence-for-state}
+
+The usable result is the fixed-temporal-spacing spectral slice identity
+and its exact Hamiltonian-semigroup counterpart. Passing from the
+anisotropic Wilson family to the Kogut--Susskind marginal remains
+conditional here on projector convergence. Transferring a local bound
+then requires that bound for the same slice observable, uniformly in
+that family and in every further limit claimed.
+
+The scale-invariant continuum action lower bound survives. The
+normalized interacting large-field estimate with running coupling, the
+import of isotropic estimates verbatim, and the claimed Hamiltonian
+decimation closure are withdrawn; the probability estimate is retained
+only as a heuristic target. The next required estimates are the
+normalized anisotropic slice bound with controlled limits and, for a
+Hamiltonian comparison, a signed operator or relative form bound. No
+advance on the continuum existence or physical mass gap follows from the
+marginal identity alone.
 \end{document}
