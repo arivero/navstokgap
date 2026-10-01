@@ -735,7 +735,7 @@ initial kernel of (15) obeys
 $|\varrho_h(q,q')|\le\|w\|_\infty e^{-(q-q')^2/(8\sigma_h^2)}$, so the
 coherence between any two fixed distinct launch points vanishes as
 $\sigma_h\to0$, while the state (5) has $|\psi_0(q)\psi_0(q')|
-=a(q)a(q')$. The gap of Theorems 2--4 therefore requires coherence
+=|a(q)a(q')|$. The gap of Theorems 2--4 therefore requires coherence
 between the launch points of the crossing streams.
 
 *Proof.* (a) For real quadratic $V$ the Moyal corrections to the
