@@ -127,15 +127,18 @@ Read in this order:
    in the stated local-data metric.
 
 Section 8.22 realizes (117)'s score correction by a shared-sign classical
-preparation and canonical copies. Its terminal-conjugate recovery and
-free-motion fourth-moment failure (140), (144) isolate the next mechanism:
-a physical rule evolving the retained score label while preserving its
-conditional allocation and complete energy accounting. It must also pass
-full terminal access before claiming a universal floor. The earlier
+preparation and canonical copies. Section 8.23 repairs its free-motion
+fourth-moment failure by a stationary switching process with a prescribed
+force. The preparation-dependent force obstruction (151) identifies the
+next mechanism: a closed body--apparatus implementation retaining that
+state and energy exchange, first tested on two unread widths with complete
+controller records. Terminal-conjugate recovery (140) remains a test
+before claiming a universal floor. The earlier
 phase-memory and unread-energy tests (119), (129), (132)--(135) still apply
 at separation and reunion. Assuming Fisher ensemble dynamics or an exact
 low-density phase readout does not supply this rule; an unexcluded zero
-branch does not establish necessity.
+branch does not establish necessity. The Gaussian repair supplies neither
+the apparatus nor phase reunion; read its assumptions before reuse.
 
 Durable support: [cut measure](../notes/cut-measure-newton.md),
 [recoil](../notes/record-costs-recoil.md),

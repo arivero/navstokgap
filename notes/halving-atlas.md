@@ -356,9 +356,12 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    realizes the score correction by correlated classical preparation and
    canonical copies; terminal conjugate access recovers the body (140),
    and free Newtonian transport fails (144) (Sol/Astra, written,
-   internally checked). Next: a physical evolution of the retained score
-   label, with free fourth moments, complete terminal access and unread
-   energy tested before phase reunion.
+   internally checked). [§8.23](sed-closure-under-recording.md#823-a-stationary-switching-process-repairs-the-gaussian-marginal)
+   repairs the Gaussian target by a stationary switching process and
+   balances mean kinetic energy; its force needs preparation information
+   in (151) (Sol/Astra, written, internally checked). Next: a closed
+   body--apparatus implementation tested on two unread widths, with all
+   controller records and energy retained before phase reunion.
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.

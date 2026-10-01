@@ -79,7 +79,19 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Correlated-preparation test, 2026-10-01 (GPT-6.1 Sol and
+<h1>Shared radiation and closure under recording</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sed-closure-under-recording.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sed-closure-under-recording.pdf">PDF</a></p><p><strong>Gaussian dynamical repair, 2026-10-01 (GPT-6.1 Sol and GPT-6
+Astra; written, internally checked).</strong> Section 8.23 carries the
+fair score sign through the prescribed Gaussian Fisher evolution by a
+positive switching process. Rescaling reveals a stationary process on a
+finite clock interval. Explicit continuous forces and impulses preserve
+mean kinetic energy and have a sharp finite expected switch count. The
+force depends on preparation data: no continuous force on the body’s
+<span class="math inline">\((q,p,\xi)\)</span> alone realizes all
+Gaussian means and widths. This is an engineered Gaussian repair, not
+independently physical free dynamics or an energetically closed
+apparatus. It leaves the terminal-readout escape, phase-reunion
+mechanism and zero branch open.</p>
+<p><strong>Correlated-preparation test, 2026-10-01 (GPT-6.1 Sol and
 GPT-6 Astra; written, internally checked).</strong> Section 8.22
 realizes the signed score correction by ordinary nonlinear canonical
 copies of a positive classical preparation with one shared momentum
@@ -4003,6 +4015,187 @@ monokinetic ensemble and (142) reduces to its classical equations; the
 divided formulas in (140) concern only <span
 class="math inline">\(\kappa&gt;0\)</span>. Neither this construction
 nor the Fisher variational premise excludes the zero branch.</p>
+<h3
+id="a-stationary-switching-process-repairs-the-gaussian-marginal">8.23 A
+stationary switching process repairs the Gaussian marginal</h3>
+<p>The free failure (144) can be repaired mathematically without a
+negative transition rate. It requires both sign switches and a
+continuous force, and that force cannot be a preparation-independent law
+on the presently retained microscopic state. The following exact
+construction quantifies these requirements. It treats (143)’s Gaussian
+evolution as a target; it does not derive the Fisher Hamiltonian as
+physical free mechanics.</p>
+<p>Fix <span class="math inline">\(m,A,\kappa&gt;0\)</span> and a
+constant mean <span class="math inline">\(\mu\)</span>. Write <span
+class="math inline">\(x=q-\mu\)</span> and <span
+class="math display">\[\begin{aligned}
+u_t&amp;=\kappa t/(mA),&amp;B(t)&amp;=A(1+u_t^2),\\
+a(t)&amp;=\dot B/(2B),&amp;b(t)&amp;=\kappa/(mB),\\
+p_\sigma(q,t)&amp;=m(a-\sigma b)x,&amp;\sigma&amp;\in\{+1,-1\}.
+\end{aligned}\tag{145}\]</span> This is (136) with <span
+class="math inline">\(\rho_t=N(\mu,B(t))\)</span> and <span
+class="math inline">\(S_q=ma(t)x\)</span>. Require ordinary position
+velocity <span class="math inline">\(\dot q=p_\sigma/m\)</span> between
+locally finite sign jumps, with continuous position at a jump. The
+target joint configuration/sign density is <span
+class="math inline">\(\rho_t(q)/2\)</span> for each sign. If <span
+class="math inline">\(\lambda_\sigma(q,t)\)</span> is the rate from
+<span class="math inline">\(\sigma\)</span> to <span
+class="math inline">\(-\sigma\)</span>, its two forward equations
+require <span class="math display">\[\begin{aligned}
+\lambda_--\lambda_+&amp;=b(z^2-1),&amp;z&amp;=x/\sqrt B,\\
+\lambda_+&amp;=b(1-z^2)_+,&amp;\lambda_-&amp;=b(z^2-1)_+.
+\end{aligned}\tag{146}\]</span> The second line is the minimal
+nonnegative choice; all other nonnegative choices satisfying the first
+add a common nonnegative rate to both. In particular a constant
+symmetric flip rate cannot repair the Gaussian score law.</p>
+<p><em>Balance derivation.</em> Since <span
+class="math inline">\(\partial_t\rho=-\partial_q(a x\rho)\)</span>, the
+<span class="math inline">\(+\)</span> equation’s left side is <span
+class="math inline">\(-b\partial_q(x\rho)/2=b\rho(z^2-1)/2\)</span>. Its
+incoming minus outgoing mass is <span
+class="math inline">\((\lambda_--\lambda_+)\rho/2\)</span>. The other
+sign gives the negative equation. Nonnegativity then proves minimality
+in (146).</p>
+<p><strong>Proposition 21 (exact positive path law).</strong> Put <span
+class="math display">\[s(t)=\int_0^t b(r)dr=\arctan u_t,\qquad
+\frac{dz}{ds}=-\sigma z,\qquad
+\ell_+=(1-z^2)_+,\quad\ell_-=(z^2-1)_+.\tag{147}\]</span> Start with
+<span class="math inline">\(Z_0\sim N(0,1)\)</span> and an independent
+fair sign. Between switches follow the displayed linear flow. Draw each
+next switch by its integrated hazard <span
+class="math inline">\(\ell_\sigma\)</span> along that flow, retaining
+the state at every observation. The process is nonexplosive, and the
+joint stationary density is <span
+class="math inline">\(\varphi(z)/2\)</span> for each sign, where <span
+class="math inline">\(\varphi\)</span> is the standard normal density.
+Consequently <span
+class="math inline">\(Q_t=\mu+\sqrt{B(t)}Z_{s(t)}\)</span> has exactly
+the target density and independent fair sign for every <span
+class="math inline">\(t\ge0\)</span>. Sampling this one path at any time
+partition gives exact restriction consistency; refreshing signs at the
+cuts would be a different process.</p>
+<p><em>Proof.</em> The clock and coordinate change in (147) transform
+(145)’s velocity and (146)’s rates exactly. Along every path, <span
+class="math inline">\(|Z_s|\le |Z_0|e^s\)</span>; its rate is bounded by
+<span class="math inline">\(1+|Z_0|^2e^{2s}\)</span>. This bound is
+finite through <span class="math inline">\(s=\pi/2\)</span>. Successive
+hazard clocks can therefore be dominated by a finite-rate Poisson clock
+conditional on <span class="math inline">\(Z_0\)</span>, proving
+existence and nonexplosion, even over the entire physical half-line. The
+stationary forward equation for the <span
+class="math inline">\(+\)</span> sign reads <span
+class="math inline">\(\partial_z(-z\varphi/2)=(z^2-1)\varphi/2
+=(\ell_--\ell_+)\varphi/2\)</span>; the other equation is its negative.
+Uniqueness of the locally bounded-rate path construction, or its
+finite-jump forward expansion, identifies this stationary law. The
+inverse coordinate change proves the Gaussian marginal. <span
+class="math inline">\(\square\)</span></p>
+<p>The switching mechanism has established sampling prior art. On either
+fixed sign of <span class="math inline">\(z\)</span>, put <span
+class="math inline">\(r=\log|z|\)</span> and velocity <span
+class="math inline">\(v=-\sigma\)</span>. Then <span
+class="math inline">\(\dot r=v\)</span> in clock <span
+class="math inline">\(s\)</span>, the position density is proportional
+to <span class="math inline">\(e^{r-e^{2r}/2}\)</span>, and the rate is
+<span class="math inline">\((v\Psi&#39;(r))_+\)</span> with <span
+class="math inline">\(\Psi(r)=e^{2r}/2-r\)</span>. This is the
+one-dimensional canonical Zig-Zag process [<span class="citation"
+data-cites="BierkensFearnheadRoberts2019">@BierkensFearnheadRoberts2019</span>;
+reading: passages §2.1 and §2.2, printed pp. 1291–1294, including
+Assumption 2.1, Theorem 2.2 and Proposition 2.3; <a
+href="https://diamhomes.ewi.tudelft.nl/~jorisbierkens/pubs/AOS1715.pdf">author-hosted
+paper</a>]. No sampling algorithm is being run here; the mechanical
+mapping and its scope follow from the written calculation above.</p>
+<p><strong>Required force, impulses and energy.</strong> The identities
+<span class="math inline">\(\dot a=b^2-a^2\)</span>, <span
+class="math inline">\(\dot b=-2ab\)</span> show that preserving the
+branch momentum between jumps requires <span
+class="math display">\[\begin{aligned}
+F_\sigma(q,t)&amp;=m[\partial_t(a-\sigma b)+(a-\sigma b)^2]x
+=\frac{2\kappa^2 x}{mB^2},\\
+\Delta p_\sigma&amp;=p_{-\sigma}-p_\sigma
+=2m\sigma bx=\frac{2\kappa\sigma x}{B}.
+\end{aligned}\tag{148}\]</span> The force is independent of sign but not
+of preparation. It is generated by the prescribed time-dependent
+potential <span
+class="math inline">\(V(q,t)=-\kappa^2x^2/(mB(t)^2)\)</span>. For a
+fixed pre-jump sign, the impulse is a canonical momentum translation
+generated by <span class="math inline">\(G_\sigma(q,t)=-\kappa\sigma
+x^2/B(t)\)</span>. These prescribed actuators do not themselves supply a
+Hamiltonian apparatus implementing the sign switch, its state-dependent
+clock or the required memory.</p>
+<p>Under the stationary preparation, <span class="math inline">\(E
+x^2=B\)</span>, <span class="math inline">\(E x^4=3B^2\)</span> and the
+sign is independent of position. The mean continuous power and jump
+power are <span class="math display">\[\begin{aligned}
+E[F_\sigma\dot Q]&amp;=2mab^2B,\\
+E[\lambda_\sigma\Delta(p_\sigma^2/(2m))]
+&amp;=mab E[x^2(\lambda_+-\lambda_-)]
+=-2mab^2B.
+\end{aligned}\tag{149}\]</span> Here <span
+class="math inline">\(\Delta(p_\sigma^2/(2m))=2m\sigma abx^2\)</span>
+and <span class="math inline">\(E[x^2(z^2-1)]=2B\)</span>. Their
+cancellation keeps the <em>ensemble mean</em> kinetic energy <span
+class="math inline">\(\kappa^2/(2mA)\)</span> fixed. Individual
+trajectories exchange energy with the prescribed actuator. No bounded
+reservoir, pathwise total-energy closure or apparatus record law has
+been established.</p>
+<p>The minimal rate has the sharp expected total switch count <span
+class="math display">\[E N_T=2\varphi(1)\arctan\frac{\kappa
+T}{mA},\qquad
+E N_\infty=\pi\varphi(1)&lt;1.\tag{150}\]</span> Indeed <span
+class="math inline">\(E|Z^2-1|=4\varphi(1)\)</span>: integration by
+parts gives <span class="math inline">\(E(Z^2-1)_+=2\varphi(1)\)</span>,
+and its zero mean makes the negative part equal. The expected rate is
+therefore <span class="math inline">\(2b\varphi(1)\)</span>; integrate
+using (147). Both (150) and the pathwise bound concern the actual
+retained switch history, not a fresh noise allocation per
+observation.</p>
+<p><strong>Proposition 22 (microscopic force alone cannot supply this
+repair).</strong> Assume locally finite sign jumps, differentiable
+motion between jumps, ordinary velocity <span
+class="math inline">\(p/m\)</span>, no other momentum changes between
+jumps, and a continuous force <span
+class="math inline">\(F(t,q,p,\sigma)\)</span> independent of the
+preparation. It cannot realize (145)’s branch law for all Gaussian means
+and widths.</p>
+<p><em>Proof.</em> Fix a common initial time and microscopic state <span
+class="math inline">\((q_0,p_0,+)\)</span> with <span
+class="math inline">\(p_0\ne0\)</span>. For any <span
+class="math inline">\(A&gt;0\)</span>, choose <span
+class="math inline">\(\mu_A=q_0+p_0A/\kappa\)</span>. This same state
+lies on the initial positive branch <span
+class="math inline">\(p=-\kappa(q-\mu_A)/A\)</span>. Formula (148)
+requires <span class="math display">\[F(0,q_0,p_0,+)=-\frac{2\kappa
+p_0}{mA}.\tag{151}\]</span> Different widths give different forces. Each
+branch has a strictly positive position density. Continuity extends the
+required force from almost-everywhere agreement on that branch to the
+selected point, so the single microscopic force cannot satisfy both
+preparations. Explicit time dependence does not remove the common-time
+contradiction. <span class="math inline">\(\square\)</span></p>
+<p>This obstruction permits forces depending on retained width, mean,
+density or additional apparatus state. It closes only the proposal that
+the body pair and one sign already form the autonomous state. Unread
+preparations must retain their distinct controller labels and mean
+energy; replacing them by one marginal-score controller would again
+erase (119)’s excess. Also <span class="math inline">\(Q_t-\mu\)</span>
+never changes sign in this realization: matching a Gaussian marginal
+does not supply packet crossing or relative-phase reunion. The complete
+ideal pointer-readout escape (140) is unchanged.</p>
+<p><strong>Next lemma and abandonment criterion.</strong> Determine
+whether a closed body–apparatus model can retain the preparation
+information demanded by (151) and implement the force and switching
+exchange (148)–(149), with every controller readout included. Its first
+test is a mixture of two widths with the label unread: complete energy
+and record closure must survive without replacing branch laws by the
+marginal score. Reject a claim of autonomous microscopic closure that
+hides <span class="math inline">\((\mu,A)\)</span>, or a claim of
+physical free dynamics that assumes the prescribed actuator as its
+premise. At fixed finite <span class="math inline">\(T\)</span>, the
+force, impulses and switch activity all vanish as <span
+class="math inline">\(\kappa\downarrow0\)</span>; the zero branch
+remains admissible.</p>
 <h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The Newton task advances from testing stationary radiation to
 deriving an admissible recording law. Shared Gaussian driving, including
@@ -4063,15 +4256,19 @@ correlated classical preparation and canonical copies. It retains the
 coordinate-history floor and unread excesses but fails complete pointer
 readout (140) and ordinary free transport (144). The Gaussian
 preparation restriction cannot be promoted to a universal classical
-recording law by canonical motion alone. Next Newton lemma: determine
-the dynamical rule needed to keep the score label independent of
-configuration through free transport, tested against (144), before
-packet reunion. Full terminal access, relative-phase memory and an
-independently selected positive scale remain mandatory completion tests.
-Reject passive sign retention, resetting unread mixtures or assuming
-(142) as derived physics. Newton remains the current research emphasis
-under the user’s October 1 direction. Adaptive timing, independent
-positivity, universality and radiation calibration remain separate.</p>
+recording law by canonical motion alone. Section 8.23 repairs the
+Gaussian target by a stationary switching process under a finite
+rescaled clock. Its force and impulses preserve mean kinetic energy, but
+(151) requires preparation or apparatus state beyond the body pair and
+sign. Next Newton lemma: a closed body–apparatus implementation of that
+state and energy exchange, tested first on two unread widths with every
+controller readout retained. Full terminal access, relative-phase memory
+and independent positivity remain mandatory completion tests. Reject
+hidden preparation parameters, resetting unread mixtures or assuming the
+prescribed force as physical free dynamics. Newton remains the current
+research emphasis under the user’s October 1 direction. Adaptive timing,
+independent positivity, universality and radiation calibration remain
+separate.</p>
 
 </main>
 <footer class="site"><div class="wrap">
