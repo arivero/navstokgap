@@ -1,177 +1,276 @@
-# An Agmon bound for the Kogut--Susskind ground state: large fields are suppressed at rate $1/g^2$ per plaquette
+# An Agmon bound for the Kogut--Susskind ground state: finite-volume global magnetic-energy tails
 
-The estimate that
-[the flow-before-decimation note](flow-before-decimation.md) identified as
-the missing ingredient exists and is standard: Agmon's method applies to
-the Kogut--Susskind Hamiltonian because its configuration space is a
-compact Riemannian manifold, its magnetic term is a bounded potential
-and its ground state is positive. Writing
-$$H=\frac{\hbar c}{a}\Big[\underbrace{\frac{g^2}{2}}_{A'}\,(-\Delta)
-+\underbrace{\frac{2}{g^2}}_{B'}\,V\Big],\qquad
-V(U)=\sum_p\big(N-\operatorname{Re}\operatorname{tr}U_p\big),$$
-the identity
-$$A'\!\int\!\big|\nabla(e^{\rho}\Omega)\big|^2
-+\int\!\big(B'V-e_0-A'|\nabla\rho|^2\big)e^{2\rho}\Omega^2=0,
-\qquad e_0=\frac{aE_0}{\hbar c},$$
-holds for every Lipschitz $\rho$ and gives exponential decay of the
-ground state into the region where the magnetic energy exceeds its mean.
-The Agmon metric is $\sqrt{(B'V-e_0)/A'}\;|dU|$, with
-$B'/A'=4/g^4$, and a configuration carrying an excess of $n$ excited
-plaquettes sits at Agmon distance of order $2n\sqrt v/g^2$ from the
-allowed region, where $v$ is the excess per plaquette. Hence
-$$\big|\Omega(U)\big|^2\ \lesssim\ \exp\Big[-\frac{c\,n\sqrt N}{g^2}\Big],$$
-the ground-state measure suppressing large-field regions at a rate
-$\propto1/g^2$ per plaquette, **the same coupling dependence as the
-Euclidean Wilson weight** $e^{-S_w}$ with $\beta=2N/g^2$. The suppression
-is strong exactly at weak coupling, which is where the renormalization
-steps of the route live, and weak at strong coupling, where the cluster
-expansion already works. This supplies the Hamiltonian counterpart of the
-large-field estimate whose absence
-[the typical-field note](typical-field-strength-window.md) recorded, and
-it does so by a standard technique rather than a new one. Constants
-explicit; the distance estimate is a scaling argument and is labelled as
-such; nothing promoted.
+Later correction: [the global/local note](agmon-global-not-local.md) supersedes the original local-suppression interpretation; [the magnetic-energy identities note](magnetic-energy-identities.md), §4, records the limitation of the proposed Gibbs-comparison repair (both full-read).
 
-> **Corrected.** The distance estimate of Section 2 is carried out with
-> constants in [the global/local note](agmon-global-not-local.md), and it
-> controls the **global** excess of magnetic energy, not a local region:
-> the gradient norm $\|\nabla V\|_\infty\le2\sqrt{2N|\mathcal E|}$ is
-> extensive, so a fixed local excess in a large volume gives a bound that
-> degrades like $|\mathcal P|^{-1/2}$. Read "$n$ excess plaquettes" below as
-> a global excess. The identity of Lemma 1 and the estimate of Corollary 2
-> are unaffected.
+> **Correction (2026-10-02).** The original title and lead claimed
+> suppression at rate $1/g^2$ per locally excited plaquette and said this
+> supplied the Hamiltonian large-field input for decimation. Those claims
+> are **withdrawn**. Section 2 estimated one relaxation path, which can
+> give only an upper bound on an infimum, whereas decay requires a lower
+> bound for every path. It is replaced below by the global-excess bound
+> of [the global/local note](agmon-global-not-local.md), with its volume
+> dependence retained. The original pointwise estimate for $|\Omega(U)|^2$
+> is replaced by an integrated probability estimate. Sections 3--5 no
+> longer assert local exponential-moment control or a successful match
+> to the flow Jacobian. Lemma 1 and Corollary 2 survive; their application
+> now states the weight margin and prefactor explicitly. The threshold
+> $e_0/B'$ is not the mean magnetic energy. Excited-state extensions use
+> $|\psi|^2$ and do not assume positivity. This paragraph records the
+> correction rather than silently removing the earlier claims.
 
-## 1. Setting and the ground-state identity
+On a fixed finite spatial lattice, Agmon's weighted eigenfunction
+identity gives a tail bound for the **total** magnetic potential of the
+Kogut--Susskind ground state. With
+$$H=\frac{\hbar c}{a}\left[A'(-\Delta)+B'V\right],\qquad
+A'=\frac{g^2}{2},\quad B'=\frac{2}{g^2},\quad
+V=\sum_p\left(N-\operatorname{Re}\operatorname{tr}U_p\right),$$
+write $e_0=aE_0/(\hbar c)$ and $\bar v=e_0/B'$. If
+$M\ge\|\nabla V\|_\infty$ and $M>0$, every path to $\{V\le\bar v\}$ has
+Agmon length at least
+$$\frac{4}{3g^2M}\,(V-\bar v)_+^{3/2}.$$
+Consequently, for $0<\delta<1$ and $s>0$,
+$$\mathbb P_\Omega(V-\bar v\ge s)
+\le C_{\epsilon,\delta}\exp\left[-\frac{8(1-\delta)}{3g^2M}s^{3/2}\right],$$
+with a finite-volume prefactor specified in §2. On a periodic
+three-dimensional spatial lattice one may take
+$M=2\sqrt{2N|\mathcal E|}$ and $|\mathcal E|=|\mathcal P|$. A total
+excess proportional to volume then has an extensive exponent; a fixed
+total excess has an exponent that vanishes as the volume grows. No
+volume-uniform local large-field estimate, spectral gap or continuum
+claim follows. The written proofs below establish these finite-lattice
+statements without the original relaxation-path heuristic.
 
-The configuration space $\mathcal M=G^{\mathcal E}$ is a compact
-Riemannian manifold with the product bi-invariant metric, of dimension
-$|\mathcal E|\dim G$, and $-\Delta$ is its Laplace--Beltrami operator.
-By T1 of [the obligations map](mass-gap-obligations-lattice.md) the
-ground state $\Omega$ is strictly positive and satisfies
-$$-A'\Delta\Omega+\big(B'V-e_0\big)\Omega=0,\qquad
-A'=\frac{g^2}{2},\quad B'=\frac{2}{g^2},\quad e_0=\frac{aE_0}{\hbar c},$$
-after dividing by $\hbar c/a$.
+## 1. Setting and the weighted identity
 
-**Lemma 1 (Agmon identity).** For every Lipschitz $\rho:\mathcal M\to\mathbb R$,
-$$A'\!\int_{\mathcal M}\big|\nabla(e^{\rho}\Omega)\big|^2\,d\mu
-+\int_{\mathcal M}\big(B'V-e_0-A'|\nabla\rho|^2\big)\,e^{2\rho}\,\Omega^2\,d\mu=0 .$$
+Let $G=SU(N)$, $N\ge2$, $g>0$, $a>0$, and let
+$\mathcal M=G^{\mathcal E}$ carry the product bi-invariant metric with
+Lie algebra normalization $\operatorname{tr}(T^aT^b)=\delta_{ab}/2$.
+Use a finite spatial lattice whose elementary plaquettes have four
+distinct links; the periodic cubic examples have at least three sites
+in each direction. Haar measure $d\mu$ is normalized. The operator
+$-\Delta$ is nonnegative. Its smooth bounded potential $V\ge0$ gives a
+smooth normalized positive ground state $\Omega$ on this connected
+closed manifold, as in T1 of
+[the obligations map](mass-gap-obligations-lattice.md) (setting passage).
+The unique positive ground state is gauge invariant. In dimensionless
+units its equation is
+$$-A'\Delta\Omega+(B'V-e_0)\Omega=0,\qquad
+\int\Omega^2d\mu=1.$$
+
+**Lemma 1 (Agmon identity).** For every real Lipschitz weight $\rho$,
+$$A'\int_{\mathcal M}|\nabla(e^\rho\Omega)|^2d\mu
++\int_{\mathcal M}(B'V-e_0-A'|\nabla\rho|^2)e^{2\rho}\Omega^2d\mu=0.$$
 
 *Proof.* Multiply the eigenvalue equation by $e^{2\rho}\Omega$ and
-integrate; there is no boundary term because $\mathcal M$ is closed.
-Using $\int(-\Delta\Omega)e^{2\rho}\Omega=\int\nabla\Omega\cdot\nabla(e^{2\rho}\Omega)$
-and the pointwise identity
-$$\big|\nabla(e^\rho\Omega)\big|^2=e^{2\rho}\big|\nabla\Omega\big|^2
-+2e^{2\rho}\Omega\,\nabla\rho\cdot\nabla\Omega+e^{2\rho}\Omega^2|\nabla\rho|^2
-=\nabla\Omega\cdot\nabla(e^{2\rho}\Omega)+e^{2\rho}\Omega^2|\nabla\rho|^2,$$
-the first term becomes
-$\int|\nabla(e^\rho\Omega)|^2-\int e^{2\rho}\Omega^2|\nabla\rho|^2$.
-Adding $\int(B'V-e_0)e^{2\rho}\Omega^2$ gives the identity. $\square$
+integrate by parts on the closed manifold. Almost everywhere,
+$$|\nabla(e^\rho\Omega)|^2
+=\nabla\Omega\cdot\nabla(e^{2\rho}\Omega)
++e^{2\rho}\Omega^2|\nabla\rho|^2.$$
+Substitution gives the identity; Lipschitz weights are valid weak test
+functions on this compact manifold. $\square$
 
-**Corollary 2 (Agmon estimate).** Let
-$\Sigma_\epsilon=\{U:B'V(U)-e_0\ge\epsilon\}$ and let $\rho$ be Lipschitz
-with $A'|\nabla\rho|^2\le B'V-e_0-\epsilon/2$ on $\Sigma_\epsilon$ and
-$\rho\le\rho_{\max}$ on $\mathcal M\setminus\Sigma_\epsilon$. Then
-$$\frac\epsilon2\int_{\Sigma_\epsilon}e^{2\rho}\,\Omega^2\,d\mu
-\ \le\ \big(e_0+A'\|\nabla\rho\|_\infty^2\big)\,e^{2\rho_{\max}}\!\!\int_{\mathcal M\setminus\Sigma_\epsilon}\!\!\Omega^2\,d\mu
-\ \le\ C\,e^{2\rho_{\max}} .$$
+**Corollary 2 (forbidden-region estimate).** Put
+$q=B'V-e_0$, $\Sigma_\epsilon=\{q\ge\epsilon\}$, $\epsilon>0$.
+If $\rho$ is Lipschitz,
+$$A'|\nabla\rho|^2\le q-\epsilon/2\quad\hbox{on }\Sigma_\epsilon,
+\qquad \rho\le R\quad\hbox{on }\mathcal M\setminus\Sigma_\epsilon,$$
+then
+$$\frac\epsilon2\int_{\Sigma_\epsilon}e^{2\rho}\Omega^2d\mu
+\le K_\rho e^{2R}\int_{\mathcal M\setminus\Sigma_\epsilon}\Omega^2d\mu,
+\qquad K_\rho=e_0+A'\|\nabla\rho\|_\infty^2.$$
+More generally, replacing $\epsilon/2$ in the admissibility inequality
+by any $\eta>0$ replaces the left coefficient by $\eta$. Thus
+$$\int_{\mathcal M}e^{2\rho}\Omega^2d\mu
+\le e^{2R}\left(1+\frac{K_\rho}{\eta}\right).$$
 
-*Proof.* Drop the nonnegative gradient term in Lemma 1 and split the
-integral over $\Sigma_\epsilon$ and its complement, where the integrand
-is bounded below by $-(e_0+A'\|\nabla\rho\|_\infty^2)$. $\square$
+*Proof.* Drop the nonnegative gradient integral in Lemma 1. On the
+forbidden set the remaining coefficient is at least $\eta$; on its
+complement it is at least $-K_\rho$ because $V\ge0$. Split the integral
+and use normalization. The complementary weighted mass is at most
+$e^{2R}$. $\square$
 
-The admissible weights are exactly the functions with
-$|\nabla\rho|\le\sqrt{(B'V-e_0)/A'}$, so the largest is the **Agmon
-distance**
-$$d(U)=\inf_{\gamma:\,U\to\{B'V\le e_0\}}\int_\gamma\sqrt{\frac{B'V-e_0}{A'}}\;|d\gamma| ,$$
-and Corollary 2 with $\rho=(1-\delta)d$ gives
-$\int e^{2(1-\delta)d}\Omega^2\le C(\delta)$.
+The Agmon distance to $\mathcal A=\{q\le0\}$ is
+$$d(U)=\inf_{\gamma:\,U\to\mathcal A}
+\int_\gamma\sqrt{q_+/A'}\,|d\gamma|.$$
+The positive part is essential: the metric vanishes in the allowed
+region. This distance is Lipschitz, vanishes on $\mathcal A$, and
+satisfies $A'|\nabla d|^2\le q_+$ almost everywhere. Indeed appending a
+short segment bounds its increment by the local weighted length; the
+bounded weight also bounds its ordinary Lipschitz constant. Among
+weights vanishing on $\mathcal A$ with this gradient constraint, $d$
+is maximal, by integrating the constraint along every path. This
+zero-set and gradient constraint is distinct from Corollary 2's strict
+margin condition.
 
-## 2. The Agmon distance of a large-field region
+For $\rho=(1-\delta)d$, define
+$\theta_\delta=1-(1-\delta)^2=2\delta-\delta^2>0$. On
+$\Sigma_\epsilon$,
+$$q-A'|\nabla\rho|^2\ge\theta_\delta q\ge\theta_\delta\epsilon.$$
+The original $\epsilon/2$ margin is therefore guaranteed by this
+argument only if $\delta\ge1-1/\sqrt2$. For arbitrary $0<\delta<1$,
+use the generalized margin $\eta=\theta_\delta\epsilon$ instead.
+Let $q_{\max}=\max_{\mathcal M}q_+$ and
+$R_{\epsilon,\delta}=(1-\delta)\sup_{\{q<\epsilon\}}d$. Then
+$$\int e^{2(1-\delta)d}\Omega^2d\mu
+\le e^{2R_{\epsilon,\delta}}
+\left(1+\frac{e_0+(1-\delta)^2q_{\max}}
+{\theta_\delta\epsilon}\right).$$
+All constants are finite at fixed lattice and coupling. In particular,
+$$R_{\epsilon,\delta}\le(1-\delta)\operatorname{diam}(\mathcal M)
+\sqrt{q_{\max}/A'},$$
+since $\mathcal A$ is nonempty ($V=0$ is attainable
+and $e_0\ge0$). This is not a uniform constant in volume or coupling.
+No pointwise bound on $\Omega$ follows just by dropping the gradient
+term in this identity.
 
-Write $\bar v=e_0/B'$ for the mean magnetic energy, which satisfies
-$\bar v\le\langle V\rangle_{\rm Haar}=N|\mathcal P|$ because
-$E_0\le\langle1,H1\rangle$ and $\langle\operatorname{Re}\operatorname{tr}U_p\rangle_{\rm Haar}=0$.
-Consider a configuration $U$ whose magnetic energy exceeds $\bar v$ by an
-amount carried on $n$ plaquettes, each in excess by $v=O(N)$, so
-$V(U)-\bar v\simeq nv$.
+## 2. A lower bound over all paths and a global tail
 
-*Flat length.* Relaxing those $n$ plaquettes requires moving of order
-$n$ link variables by an angle of order one. In the product metric the
-flat distance is of order $\sqrt n$, since $n$ coordinates each move
-$O(1)$.
+The threshold $\bar v=e_0/B'$ satisfies
+$$\bar v=\langle V\rangle_\Omega+
+\frac{A'}{B'}\int|\nabla\Omega|^2d\mu\ge\langle V\rangle_\Omega.$$
+It is an energy threshold, not the ground-state mean magnetic energy.
+The constant trial function gives
+$e_0\le B'\langle V\rangle_{\rm Haar}=B'N|\mathcal P|$, since each
+plaquette has a Haar-distributed holonomy. Also $V\le2N|\mathcal P|$,
+so $q_{\max}\le2B'N|\mathcal P|$.
 
-*Agmon weight.* Along such a path the excess decreases from $nv$ to $0$,
-with mean of order $nv/2$, so the weight
-$\sqrt{(B'V-e_0)/A'}=\sqrt{(B'/A')(V-\bar v)}$ is of order
-$\sqrt{(4/g^4)\,nv/2}=\sqrt{2nv}/g^2$.
+**Proposition 3 (global excess, corrected).** For any
+$M\ge\|\nabla V\|_\infty$, $M>0$, set
+$$f=V-\bar v,\qquad F(U)=\frac{4}{3g^2M}f(U)_+^{3/2}.$$
+Then $d\ge F$. For any $\epsilon>0$ and $0<\delta<1$ set
+$$R_F=(1-\delta)\frac{4}{3g^2M}
+\left(\frac\epsilon{B'}\right)^{3/2},\qquad
+C_{\epsilon,\delta}=e^{2R_F}
+\left(1+\frac{e_0+(1-\delta)^2q_{\max}}
+{\theta_\delta\epsilon}\right).$$
+For $\mathbb P_\Omega(B)=\int_B\Omega^2d\mu$,
+$$\mathbb P_\Omega(f\ge s)
+\le\min\left\{1,\ C_{\epsilon,\delta}
+\exp\left[-\frac{8(1-\delta)}{3g^2M}s^{3/2}\right]\right\},
+\qquad s>0.$$
 
-*Distance.* Multiplying, and keeping only the order,
-$$d(U)\ \simeq\ \frac{\sqrt{2nv}}{g^2}\cdot\sqrt n\ =\ \frac{n\sqrt{2v}}{g^2}.$$
+*Proof.* On any path from $U$ with $f(U)>0$ to $\{f\le0\}$, stop at its
+first zero of $f$. With arclength parameter $r$, $|f'(r)|\le M$.
+The total variation of $\frac23 f^{3/2}$ along this segment is at least
+its endpoint difference, even if $f$ is not monotone. Hence
+$$\int_\gamma\sqrt{(B'/A')f_+}\,dr
+\ge\frac{\sqrt{B'/A'}}{M}\int\sqrt f\,|f'|\,dr
+\ge\frac{2\sqrt{B'/A'}}{3M}f(U)^{3/2}=F(U).$$
+Taking the infimum proves the all-path lower bound. For an explicit
+prefactor, apply Corollary 2 directly to $\rho=(1-\delta)F$, rather than
+estimating $d$ on the complementary set. Differentiation gives
+$$A'|\nabla F|^2
+=\frac{B'f_+}{M^2}|\nabla V|^2\le q_+.$$
+Thus the margin on $\Sigma_\epsilon$ is $\theta_\delta\epsilon$,
+$\rho\le R_F$ on its complement, and
+$K_\rho\le e_0+(1-\delta)^2q_{\max}$. The full weighted mass is bounded
+by $C_{\epsilon,\delta}$. On $\{f\ge s\}$ the weight is at least
+$\exp[8(1-\delta)s^{3/2}/(3g^2M)]$, proving the tail. $\square$
 
-**Proposition 3 (scaling form).** With the distance estimate above,
-Corollary 2 gives, for the ground-state measure,
-$$\int_{\{n\ \rm excess\ plaquettes\}}\Omega^2\,d\mu
-\ \lesssim\ C\exp\Big[-\frac{2(1-\delta)\sqrt{2v}}{g^2}\,n\Big],$$
-exponential in the number of excited plaquettes with rate
-$\lambda=2\sqrt{2v}/g^2$ per plaquette, $v=O(N)$.
+For the periodic three-dimensional spatial cubic lattice each link is
+in four plaquettes. The completeness relation yields
+$|\nabla_\ell\operatorname{Re}\operatorname{tr}U_p|\le\sqrt{N/2}$
+([the upper-bound note](lattice-gap-upper-bounds.md), Corollary 2,
+proof passage). The triangle inequality and sum of squared link
+components give
+$$\|\nabla V\|_\infty\le4\sqrt{N/2}\sqrt{|\mathcal E|}
+=2\sqrt{2N|\mathcal E|}=:M.$$
+In other spatial dimensions or geometries the plaquette incidence must
+be changed; this constant is specifically for three spatial dimensions.
+With $P=|\mathcal P|=|\mathcal E|$ and $s=wP$, Proposition 3 becomes
+$$\mathbb P_\Omega(f\ge wP)
+\le\min\left\{1,\ C_{\epsilon,\delta}
+\exp\left[-\frac{2\sqrt2(1-\delta)}{3}
+\frac{w^{3/2}}{g^2\sqrt N}P\right]\right\}.$$
+At fixed $g,N,\epsilon,\delta$, $R_F=O(P^{-1/2})$ and the displayed
+prefactor is at most $O(P)$. Thus this is a genuine global extensive-tail
+bound for fixed $w>0$. When $w$ is a fixed positive multiple of $N$,
+the exponent per plaquette is of order $N/g^2$, correcting the earlier
+$\sqrt N/g^2$ scaling. Coupling dependence of the prefactor must still
+be retained in any weak-coupling limit.
 
-The flat-length and mean-excess steps are scaling estimates; the identity
-of Lemma 1 and the estimate of Corollary 2 are exact.
+For a fixed *total* excess $s=nv$ the exponent instead scales as
+$$(nv)^{3/2}/(g^2\sqrt{NP}),$$
+which vanishes as $P\to\infty$. A local event need not imply even this
+total excess, since the complementary plaquettes can lower $V$.
+The argument supplies no volume-uniform local estimate.
 
 ## 3. Comparison with the Euclidean weight
 
-The Euclidean Wilson measure is $e^{-S_w}\,d\mu$ with
-$$S_w=\frac{2N}{g_E^2}\sum_p\Big(1-\frac1N\operatorname{Re}\operatorname{tr}U_p\Big)
-=\frac{2}{g_E^2}\,V,$$
-suppressing a configuration with $n$ excited plaquettes by
-$e^{-2nv/g_E^2}$. Proposition 3 gives $e^{-2n\sqrt{2v}/g^2}$ for the
-Hamiltonian ground-state measure. The two agree in their dependence on
-the coupling, $1/g^2$ per excited plaquette, and differ in the power of
-the excess per plaquette, linear against square-root, which is the usual
-difference between a Boltzmann weight and a WKB weight: the Agmon bound
-is a tunnelling estimate and the Wilson weight is a direct cost.
+The Wilson action is
+$$S_w=\frac{2N}{g_E^2}\sum_p\left(1-\frac1N
+\operatorname{Re}\operatorname{tr}U_p\right)=\frac{2}{g_E^2}V.$$
+An increase $\Delta V=nv$ multiplies its **unnormalized density** by
+$e^{-2nv/g_E^2}$. This is an exact action-cost statement. Proposition 3
+instead bounds an integrated ground-state probability of a global
+excess with exponent proportional to $s^{3/2}/(g^2M)$ and the displayed
+prefactor. Both expressions contain an inverse-square coupling factor;
+this comparison neither identifies $g_E$ with $g$ in a continuum limit
+nor proves equal local probabilities. Plaquettes share links, so a
+product of plaquette action factors is not a product measure of
+independent plaquette variables. Normalization and integration require
+additional estimates even on the Euclidean side.
 
-**The direction is the useful one.** The suppression rate grows as
-$g\to0$, so the large-field regions that
-[the typical-field note](typical-field-strength-window.md) could not
-control in the Hamiltonian framework are exponentially rare in the
-ground-state measure precisely at weak coupling, which is where the
-renormalization steps of
-[the position note](mass-gap-position.md) §6 are needed. At strong
-coupling the rate degrades, and there the cluster expansion of
-[the T2 note](strong-coupling-uniform-gap.md) already applies.
+The original assertion that local large-field regions are exponentially
+rare at the required rate in the Hamiltonian ground state is withdrawn.
+The global estimate does not supply the local input sought in
+[the typical-field note](typical-field-strength-window.md) or
+[the flow-before-decimation note](flow-before-decimation.md).
 
-## 4. What this supplies and what it still lacks
+## 4. Scope, excited states and the missing local input
 
-*Supplies.* A Hamiltonian counterpart of the large-field estimate, by a
-standard technique, with an explicit rate. It converts the
-state-relative criterion demanded by
-[the flow-before-decimation note](flow-before-decimation.md) §3 into a
-computable statement: expectations of quantities that grow exponentially
-in the local field strength are finite in the ground state as long as
-their growth rate stays below $\lambda=2\sqrt{2v}/g^2$.
+The surviving statements are the weighted identity, the forbidden-set
+estimate and the global integrated tail. At finite volume all
+exponential moments of a bounded local plaquette potential are already
+finite by compactness, for every finite rate. That fact supplies no
+uniform control as the volume, cutoff or observable changes; the
+original claim of useful local moments below a rate
+$\lambda=2\sqrt{2v}/g^2$ is withdrawn.
 
-*Lacks.* Three things. The estimate is for the ground state, and the
-route needs it for the whole low-energy subspace, which requires either
-the same argument for low-lying eigenfunctions, available with $e_0$
-replaced by $e_1$ at the cost of a smaller forbidden region, or a
-spectral-projection version. The distance estimate of Section 2 is a
-scaling argument and needs a proof with constants, which is a geometric
-computation on $G^{\mathcal E}$. And the resulting suppression must be
-matched against the growth $e^{2t\|G\|_\infty}$ of the flow Jacobian: by
-[the lattice-truncation note](lattice-truncation-uniform.md) that factor
-is a pure number per doubling, so the match is comfortable within one
-step and the question is again the composition of steps.
+For a normalized excited eigenfunction $\psi_j$ with dimensionless
+energy $e_j$, positivity is unavailable: real excited eigenfunctions
+orthogonal to $\Omega$ change sign. Nevertheless the identity holds as
+$$A'\int|\nabla(e^\rho\psi_j)|^2d\mu
++\int(B'V-e_j-A'|\nabla\rho|^2)e^{2\rho}|\psi_j|^2d\mu=0.$$
+For real eigenfunctions the proof is unchanged; for complex ones test
+with $e^{2\rho}\overline{\psi_j}$ and take the real part. Corollary 2
+then applies with $e_j$ and $|\psi_j|^2$, with its corresponding global
+threshold and constants. It does not require taking $\log\psi_j$ or
+assuming a positive excited state.
+
+A superposition of eigenfunctions is not itself an eigenfunction.
+For a whole finite-volume spectral subspace below $e_*$ one can choose
+a common admissible weight relative to $B'V-e_*$ and bound its weighted
+norm by summing the individual estimates: if its rank is $m$ and each
+weighted eigenfunction norm squared is at most $C_*$, pointwise
+Cauchy--Schwarz gives a bound $mC_*$ for any normalized superposition.
+Compactness gives finite rank at fixed $e_*$. Neither the rank nor the
+constants have been controlled uniformly in volume or cutoff here.
+Merely replacing $e_0$ by the first excited energy $e_1$ does not prove
+a uniform low-energy-subspace estimate.
+
+No successful comparison with $e^{2t\|G\|_\infty}$, the flow-Jacobian
+growth factor, follows from these global bounds. A local state-relative
+estimate with the required uniformity remains a separate obligation.
+The Gibbs-comparison attempt in
+[the magnetic-energy identities note](magnetic-energy-identities.md),
+§4 (full-read), has a threshold and prefactor determined by global
+energy data; its failure to supply uniform local control is not a
+proof that every possible local estimate is impossible. The
+[transfer-measure note](ground-state-measure-transfer.md), §§1--2
+(passages), describes a different route: any Euclidean estimate used
+there must survive the temporal-continuum and vacuum limits with its
+constants controlled. No such local estimate is established here.
 
 ## 5. Consequence for STATE
 
-The missing ingredient of the previous note has a standard source. The
-Kogut--Susskind ground state obeys an Agmon bound whose rate,
-$\lambda\simeq2\sqrt{2v}/g^2$ per excess plaquette, reproduces the
-coupling dependence of the Euclidean Wilson weight and is strong exactly
-at weak coupling. The next items, in order of tractability: prove the
-distance estimate of Section 2 with constants; extend the bound from the
-ground state to the spectral subspace below the gap; then assemble the
-state-relative decimation criterion that these two make possible, which
-is the first version of the renormalization step in which the difficulty
-is located in the composition of steps rather than in any single one.
+Keep this note as a finite-lattice global-energy result: Lemma 1,
+Corollary 2 with explicit margins and prefactors, and Proposition 3's
+all-path lower bound and integrated tail. The original local
+per-plaquette rate, pointwise decay claim, local moment criterion and
+claim to supply the Hamiltonian decimation input are withdrawn. The
+[global/local correction](agmon-global-not-local.md) controls reuse;
+a local energy or measure estimate uniform in volume and cutoff remains
+an independent requirement. Excited-state identities survive with
+$|\psi_j|^2$, but uniform spectral-subspace and refinement estimates do
+not follow from them. No mass gap or continuum construction is claimed.
