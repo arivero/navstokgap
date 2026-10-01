@@ -20,31 +20,34 @@ and inspiration; constructing fermionic QCD is outside the active queue.
 The foundational reconstruction from classical limits is judged by its
 use for those two goals; explaining the RG transformation itself is a
 useful intermediate result (user, 2026-09-30).
-**Thesis (user, 2026-10-01, restated at night).** The quantum theory
-reduces to Newton's mechanics only under extra conditions: a record of
-the preparation, or an imprecision action exceeding $h$ at one end of
-the comparison, or the absence of crossing streams
-([reachability note](../notes/zero-branch-reachability.md), Theorems 1,
-2(ii), 5 and §§3b--3c). Newton's own construction, determinate bodies
-with exact ultimate ratios, is the case these conditions exclude once
-streams cross. The goal is to establish this as the consistency problem
-of classical mechanics: it is the limit of the world's mechanics only
-on a domain whose boundary is set by a constant, $h$, that the theory
-does not contain, so it cannot state the conditions of its own
-validity. The earlier strong form, that classical mechanics requires
-$h>0$ to exist, is closed: a classical limit exists along recorded or
-imprecise preparations. Proof obligations: (i) extend the necessity of
-the conditions beyond quadratic forces, where it is exact, to the
-smooth and Kepler cases now only cited; (ii) show that no condition
-statable within classical mechanics replaces them, the coherence of
-unrecorded launch points being non-classical (Theorem 5); (iii) carry
-the threshold form, imprecision action compared with $h$, as the
-surviving positive-scale statement into the paper; (iv) keep the
-readout-law and Leibniz-continuity routes for the physical origin of
-coherence. Deformation families (Moyal, Fisher, sheet realizations)
-are continuous in the constant by construction and are admissible only
-as checks, after stating which premise a calculation would establish
-or exclude.
+**Thesis (user, 2026-10-01, restated at night).** Newton's mechanics
+is the large-action regime of a theory with $h>0$. It is recovered
+where every imprecision action exceeds $h$ (a record of the
+preparation, a record resolution or preparation thickness above $h$ in
+action, or no crossing streams: [reachability note](../notes/zero-branch-reachability.md),
+Theorems 1, 2(ii), 5 and the large-action proposition of §3c); it is
+not the $h\to0$ limit of that theory with exact preparations and
+records where streams cross (Theorems 2--4); and the theory with $h>0$
+has global dynamics where Newton's axioms leave motion undefined
+(Kato's self-adjointness for Coulomb and Kepler; the quartic Theorem
+2(b) of the 1998-conjecture note against its Theorem 1). Newton
+therefore needs $h$, not as a parameter his mechanics contains, but as
+the scale that defines the regime in which it holds and the theory
+whose regime it is. The earlier strong form, that classical mechanics
+requires $h>0$ to exist as a theory, is closed by Theorem 5: a
+classical limit exists along recorded or imprecise preparations. Proof
+obligations: (i) extend the necessity of the conditions beyond
+quadratic forces, where it is exact, to the smooth and Kepler cases now
+only cited; (ii) show that no condition statable within classical
+mechanics replaces them, the coherence of unrecorded launch points
+being non-classical (Theorem 5); (iii) make the self-sufficiency
+contrast a theorem in the paper, global quantum dynamics against
+classical singularities and branch rules; (iv) keep the readout-law
+and Leibniz-continuity routes for the physical origin of coherence.
+Deformation families (Moyal, Fisher, sheet realizations) are
+continuous in the constant by construction and are admissible only as
+checks, after stating which premise a calculation would establish or
+exclude.
 The latest direction is to build the limit from local insertion laws:
 an intermediate Newtonian time, an edge or cell in gauge theory, and
 their lower-dimensional counterparts. The modern leg remains primary; formal and textual

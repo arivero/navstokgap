@@ -420,6 +420,30 @@ language this is mutual coherence between the launch points of the two
 streams. It is this quantity, not purity of the whole swarm, that the
 second premise must assert at each $h$.
 
+**Proposition (large-action regime).** Fix $h>0$ and the geometry of
+the comparison, and scale the masses by $\lambda$ at fixed velocities,
+fixed record resolution $\delta$ and fixed velocity imprecision
+$\Delta v$ of the preparation. Then momenta, actions, the arrival
+momentum difference $\Delta p$ and the momentum thickness
+$\Delta=\lambda m\Delta v$ all scale by $\lambda$, the arrival points,
+branch densities and $V_0$ are unchanged, and the two imprecision
+actions $\delta\Delta p$ and $\Delta\,\Delta q_0$ grow like $\lambda$.
+For Gaussian kernels the leading contrast is
+$V_0\exp[-\lambda^2(\delta\Delta p_1/h)^2/2]\exp[-\lambda^2(m\Delta v\,\Delta q_0/h)^2/2]$,
+with $\Delta p_1$ the difference at $\lambda=1$, and tends to zero as
+$\lambda\to\infty$; the record converges to Newton's branch-weighted
+density by Theorem 2(ii) and (4$'$). The large-action regime at fixed
+$h$ is therefore the regime in which Newton's mechanics is recovered,
+and it is defined by comparison with $h$: the same family read as
+$h\to0$ with exact preparations and records, Theorems 2--4, has no
+limit.
+
+*Proof.* Under the scaling the classical trajectories are unchanged,
+$S\mapsto\lambda S$, and the arguments of $\hat\varphi$ and $\hat w_0$ in
+(V2) and (V3) are multiplied by $\lambda$; the branch densities are
+ratios of launch weights to Jacobians of the unchanged arrival map.
+$\square$
+
 ## 4. Theorem 3: inertial motion with a graded velocity
 
 Newton's simplest motion already shows the gap when the preparation
@@ -857,6 +881,13 @@ the thesis only through crossing streams, which is already Theorems
 - **Single bodies are immune at fixed time.** A single packet has
   action spread of order $h$, so its lapping and fold times grow like
   $1/h$ (§4b); the gap concerns swarms of $h$-independent extent.
+- **Two limits of one family.** Read as $h\to0$ at fixed classical
+  data with exact preparations and records, the family has no limit
+  where coherent streams cross (Theorems 2--4). Read as the
+  large-action regime at fixed $h$, with physical imprecisions held
+  fixed, every imprecision action exceeds $h$ and Newton is recovered
+  (large-action proposition, §3c). Newton's mechanics is the second
+  limit, and that limit is defined by comparison with $h$.
 - **Smeared records and statistical preparations reach zero.** This is
   the content of the weak-limit theorems named in §1, and of (4).
 - **Refinement with records reverses the roles.** The zero theory is
@@ -949,7 +980,16 @@ which belongs to the Kepler swarm; the two premises, complete records
 as the record-limit-first order and determinate preparations as
 Newton's default together with an $h$-independent coherence length
 between the launch points of crossing streams, are the gap's hypotheses and the next things to defend, the first with
-the Leibniz records reading. Theorem 5 proves that the gap requires the coherence premise: the
+the Leibniz records reading. The large-action proposition of §3c separates the two readings of
+the family: Newton's mechanics is the large-action regime of the
+theory with $h>0$, defined by comparison with $h$, and not the
+$h\to0$ limit with exact data. At $h>0$ the Coulomb and Kepler
+Hamiltonians are self-adjoint and their dynamics global
+[@Kato1951; metadata], where the classical problem has collision
+singularities and the classical-first construction needs a branch
+rule (1998-conjecture note, Theorems 1 and 2(b)); the theory with
+$h>0$ is self-sufficient where Newton's axioms leave motion
+undefined. Theorem 5 proves that the gap requires the coherence premise: the
 incoherent attachment of the same swarm, with widths vanishing with
 $h$, reaches Newton's density at every fixed time, exactly for
 quadratic forces. The referee's scope verdict stands: no
