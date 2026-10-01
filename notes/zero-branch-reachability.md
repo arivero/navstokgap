@@ -186,6 +186,25 @@ $\int g\,e^{i\psi/h}dy=ih\int (g/\psi')'\,e^{i\psi/h}dy$ for
 $g\in C_c^\infty(Y)$, bounds the term by $O(h)$. The diagonal terms
 and the uniform remainder give (4). $\square$
 
+**Corollary (finite resolution).** Let $\varphi\ge0$ be smooth with
+compact support and $\int\varphi=1$, and let
+$\varphi_\delta(y)=\delta^{-1}\varphi((y-y_0)/\delta)$ be a record of
+resolution $\delta$ at $y_0\in Y$. With $\Delta p>0$ the minimum of
+$|p_a-p_b|$ over pairs $a\ne b$ on the support,
+$$\int\varphi_\delta|A_h|^2dy=\sum_a\int\varphi_\delta
+\frac{|O(z_a)|^2}{|\det S''_\pi(z_a)|}dy
++O\Big(\frac{h}{\delta\,\Delta p}\Big)+O(h).\tag{4'}$$
+A record of resolution $\delta$ reaches Newton's density iff
+$h/(\delta\Delta p)\to0$: the fringes, of spacing $h/\Delta p$, must be
+unresolved. The complete-record topology of (i) is the order of limits
+in which $\delta\to0$ before $h\to0$; the smeared topology of (ii) is
+the opposite order.
+
+*Proof.* In the integration by parts of (ii), the derivative of
+$\varphi_\delta$ carries a factor $\delta^{-1}$ relative to
+$\varphi_\delta$ itself, and $\int\varphi_\delta=1$; the remaining terms
+are as before. $\square$
+
 Thus the complete record of a determinate preparation with several
 paths does not reach Newton's density as $h\downarrow0$, by
 non-convergence in the generic case of distinct actions and by a
@@ -283,6 +302,10 @@ the thesis only through folding, which is already Theorem 3.
   the content of the weak-limit theorems named in §1, and of (4).
 - **Refinement with records reverses the roles.** The zero theory is
   the regular side of that limit.
+- **The thesis is an order of limits.** By the Corollary to Theorem 2,
+  a record of resolution $\delta$ reaches Newton iff $h/(\delta\Delta p)\to0$.
+  "Complete records" means $\delta\to0$ before $h\to0$: the record limit
+  is taken first, as the continuum limit is taken first in the mass gap.
 
 The thesis is therefore exactly as strong as two premises: that
 records are complete, the densities themselves rather than their
