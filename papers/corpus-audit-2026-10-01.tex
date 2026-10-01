@@ -1,0 +1,577 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Corpus audit of 1 October 2026: two-axis scores for all 175 notes, the uncorrected errors },pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\section{Corpus audit of 1 October 2026: two-axis scores for all 175
+notes, the uncorrected errors they expose, and where the drift
+sits}\label{corpus-audit-of-1-october-2026-two-axis-scores-for-all-175-notes-the-uncorrected-errors-they-expose-and-where-the-drift-sits}
+
+\textbf{Result.} Every maintained note was read in full and scored from
+1 to 10 for interestingness and for correctness of its own derivations
+by Claude Opus 5.5 under one fixed rubric; Claude Fable 5.1 then
+reviewed the condensed statements of the 26 notes scored 6 or more for
+interest against their sources and the trap list of \texttt{LLM.md} §4.
+Three findings matter for the programme.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{The spine is sound.} The Newton recording results, the
+  refinement and gauge insertion results and the strong-coupling
+  constants score 8 or 9 for correctness; the reviewer found one false
+  claim among the 26 selected statements (item (a) below) and no
+  reintroduced trap.
+\item
+  \textbf{Twenty-four notes carry uncorrected overclaims or inconsistent
+  numbers} (correctness 6 or below, four of them at 4). Twenty of the
+  twenty-four belong to the Hamiltonian, flow and large-field mass-gap
+  attack that preceded the 17 September change of direction, routes that
+  \href{mass-gap-position.md}{the position note} §3 lists as closed. The
+  closure is recorded in the map; the route notes' own texts keep the
+  claims that the closure withdrew. That is the drift: supersession
+  lives in the map and in \texttt{LLM.md}, while the superseded notes
+  still read as live results.
+\item
+  \textbf{Interest is concentrated.} The scorer put 26 notes at 6 or
+  above and none above 7; 70 of 175 notes are maps or calculations (kind
+  counts below). The distributions are a calibration of what an outside
+  expert would take from the corpus, under the rubric stated in §1, and
+  settle nothing about novelty.
+\end{enumerate}
+
+The two digests built from the scores, \emph{The most interesting
+results} (26 notes) and \emph{Interesting and correct results} (the 22
+of them scored 8 or more for correctness), are published on the
+director's personal site as phone-format PDFs with a landing page that
+tabulates every score:
+\url{https://lxbifi11.bifi.unizar.es/navstokgap/}. The repository keeps
+the scores here, in §4, and the corrections to make, in §3.
+
+\subsection{1. Method and reading
+labels}\label{method-and-reading-labels}
+
+Six Opus readers worked in parallel on alphabetical batches of about
+62,000 words each, each note read line by line, with no scripts for
+mathematics (project rule). The rubric's anchors: interest 9 or 10 for a
+theorem with a surprising conclusion or a precise closure of a natural
+route, 7 or 8 for a solid nontrivial theorem, construction or decisive
+obstruction with explicit constants, 5 or 6 for useful supporting work,
+below that for bookkeeping; correctness 9 or 10 for complete proofs at
+the stated level with every hypothesis stated where used, 7 or 8 for
+essentially correct with minor gaps, 5 or 6 where a step is unjustified
+or claims outrun proofs, 4 or below for a substantive error or an
+unmarked superseded claim. Correctness was scored on the current text,
+so a note that was wrong and now carries a dated correction is scored on
+the corrected text. Each reader also wrote a 60 to 260 word condensed
+statement per note and a one-line reason for each score; the reasons are
+quoted in §3 for the low scores.
+
+The reviewer (Fable) read the 26 selected statements against the notes'
+lead sections and theorem statements, checked the arithmetic of the
+constants that appear in them, and checked them against the 26 traps of
+\texttt{LLM.md} §4. Items marked \emph{verified} below were checked by
+the reviewer from the note's own formulas; items marked \emph{reported}
+are the scorer's reasons, quoted and unverified here. Reading label for
+this note: scorer full-read of every note; reviewer passage-level reads
+of the 26 selected notes and grep-level checks of the notes in §3.
+
+Scores are a model's reading with reasons on file. They are not
+refereeing, and a high correctness score means a complete derivation at
+the level the note states, which may be conditional, formal or a
+reading.
+
+\subsection{2. Distributions}\label{distributions}
+
+Interest: 1: 3, 2: 8, 3: 41, 4: 58, 5: 39, 6: 21, 7: 5. Correctness: 4:
+4, 5: 6, 6: 14, 7: 27, 8: 59, 9: 65. Kind: calculation: 44,
+construction: 13, exploratory: 5, map: 26, obstruction: 24, reading: 12,
+theorem: 51. Status as read by the scorer: conditional: 18, conjectural:
+4, mixed: 39, none: 16, proved: 96, superseded: 2.
+
+Selected for the digests (interest 6 or more):
+\texttt{mark-cost-and-statistical-floor}, \texttt{planck-gap-paper} and
+\texttt{planck-gap-probabilistic} at 7; the other 23 at 6. Of the 26,
+the four below 8 for correctness are \texttt{planck-gap-paper} (7),
+\texttt{four-dimensional-composition} (7),
+\texttt{su2-midplane-small-field} (7) and \texttt{planck-gap-derivation}
+(6).
+
+\subsection{3. Errors and overclaims
+found}\label{errors-and-overclaims-found}
+
+\subsubsection{3a. Verified by the
+reviewer}\label{a.-verified-by-the-reviewer}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  \textbf{\texttt{planck-gap-derivation}, boxed area forms off by a
+  factor 2.} The note's theorem \(F^2\tau^3>9m\kappa\) with
+  \(\tau\Delta E=F^2\tau^3/(2m)=(3F/v)A\) and \(A=vF\tau^3/(6m)\) gives
+  \(A>3v\kappa/(2F)\); the box states \(A>3v\kappa/F\). Corollary 3's
+  two-mark upper value is likewise \(6v\kappa/F\), stated as
+  \(12v\kappa/F\). The theorems themselves (constants 9 and 36) hold.
+  The digest on the site carries the corrected values and a reviewer's
+  note. The interval model is in any case superseded by the Gaussian
+  mark model of
+  \href{mark-cost-and-statistical-floor.md}{mark-cost-and-statistical-floor}
+  and \href{planck-gap-paper.md}{the Planck paper}, where
+  \(\kappa\ge\hbar/2\) holds for every probe state, and the note should
+  open by saying so.
+\item
+  \textbf{\texttt{strong-coupling-target-box}, the \(q=4\) tolerance
+  column disagrees with the note's own criterion.} From
+  \(e\,\eta\,2^q\le0.15g^2-384e/g^2\) (the note's own criterion) one
+  gets \(\eta\le0.105\) at \(g^2=100\) and \(\eta\le0.570\) at
+  \(g^2=200\); the table prints \(0.29\) and \(0.62\). The \(q=8\)
+  column checks.
+\item
+  \textbf{\texttt{small-field-step-decay-and-threshold}, abstract and
+  body disagree on constants.} The abstract quotes an error density
+  \(10^{-12}\); §3 derives \(1.1\times10^4\) and \(10^{-13}\). The
+  scorer also reports that §3 sums an \(\ell^\infty\) decay with the
+  \(\ell^1\) product formula, undercounting by about 24; that step is
+  reported, unverified here.
+\end{enumerate}
+
+\subsubsection{3b. Reported by the scorer, with the scorer's
+reason}\label{b.-reported-by-the-scorer-with-the-scorers-reason}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{flow-instability-large-field} (I 5, C 4): Proposition 1
+  (symmetry of \(M\)) is correct. The sharpness claim fails on the
+  note's own formula: with the Landau level \(gB\) included,
+  \(\omega^2=k_\parallel^2-gB\), so the growth rate is \(gB\), half the
+  Duhamel exponent \(2\|G\|\). A symmetric operator of norm \(\|M\|\)
+  need not attain \(+\|M\|\). Section 4's `sharp' crossover inherits
+  this; the text carries no correction.
+\item
+  \texttt{large-field-action-lower-bound} (I 3, C 4): Proposition 1 is
+  correct in the continuum. Proposition 2 fails: a field constant on the
+  block and zero outside violates the Bianchi identity, and flowing at
+  radius equal to the block size changes the block integral by order
+  one, not \(O(a/\ell)\). Section 3's descent argument is a non
+  sequitur. Section 4 imports the unsupported `sharp \(e^{2\eta}\)'
+  claim.
+\item
+  \texttt{mass-gap-conditional-theorem} (I 4, C 4): The decay-to-gap
+  transfer and rate bookkeeping in §3 are fine. But §4's `nothing else
+  is missing' and `a proof consists of H1 and H2' overclaim: continuum
+  existence, OS axioms and nontriviality are not implied. Existence of
+  the renormalized interaction and gauge-theory strong mixing are
+  glossed. The later rejection of physical-coupling H2 certification is
+  not marked.
+\item
+  \texttt{schur-error-ultraviolet} (I 5, C 4): Lemma 1' and the
+  oscillator derivative check. Section 4's own sum gives theta
+  \textasciitilde{} g\^{}2 (Lambda L)\^{}3, an extensive vacuum-shift
+  slope, not the stated g\^{}2 (Lambda L)\^{}2, so the regime g
+  \textless\textless{} 1/N\_s in Section 5 appears wrong (g
+  \textless\textless{} N\_s\^{}\{-3/2\}). The Berry coefficient seems to
+  drop the four charge/polarization copies. The fixed-lattice theorem is
+  asserted but unproved.
+\item
+  \texttt{gapped-set-critical-coupling} (I 4, C 5): Proposition 1 is
+  fine. Proposition 2's proof is heuristic: it equates finite-volume gap
+  closing with infinite-volume degeneracy or diverging length, and
+  ignores massless phases that fill intervals of coupling. Section 4
+  calls the compact \(U(1)\) transition second order with a Maxwell
+  limit at \(g_c\), against lattice evidence of weak first order. The
+  dated Wilson \(SU(N\ge5)\) precision is present.
+\item
+  \texttt{ground-state-measure-transfer} (I 4, C 5): Proposition 1 is
+  standard and correct. The claim that isotropic Wilson-measure
+  estimates hold `verbatim' ignores that the Hamiltonian limit is the
+  anisotropic \(a_t\to0\) measure. The bound
+  \(\mathbb P\lesssim e^{-c\eta^2/g(\ell)^2}\) in section 3 is a
+  heuristic presented as available. The section 4 competition is marked
+  superseded in part; the action display carries a stray factor.
+\item
+  \texttt{large-field-entropy-count} (I 4, C 5): The Landau degeneracy,
+  the longitudinal disc count, \(\mathcal N=\eta^2/(8\pi^2)\) and the
+  ratio \(2\pi^2/g^2\) are arithmetically correct. The convergence
+  claims in §§3--4 (`settles', sum converges for \(g^2<2\pi^2\)) rest on
+  an unproved bounded-factor-per-mode premise and on counting only
+  constant-background modes. Proposition 1 is trivial.
+\item
+  \texttt{mass-gap-position} (I 4, C 5): Internal numbers disagree: the
+  strong threshold appears as g\^{}2\textgreater=176, \textgreater444
+  and \textgreater=1056; the weak side as
+  1/g\textsuperscript{2\textgreater\textasciitilde10}2 and as
+  g\textsuperscript{2\textasciitilde10}-12. `Large-field region closed
+  in measure' exceeds the cost and entropy ingredients cited. `Exhaust
+  the methods built from operator norms' generalizes from five specific
+  closures.
+\item
+  \texttt{strong-coupling-target-box} (I 5, C 5): The criterion e eta
+  2\^{}q \textless= 0.15 g\^{}2 - 384e/g\^{}2 and the q=8 column check.
+  The q=4 column does not: at g\^{}2=100 the criterion gives 0.105, the
+  table 0.29; at 200 it gives 0.57, the table 0.62. Tolerances `divided
+  by 24 at the listed couplings' fail, since 24*384e/g\^{}2 exceeds
+  0.15g\^{}2 there. The Proposition claims more than the cyclic-subspace
+  criterion.
+\item
+  \texttt{typical-field-strength-window} (I 4, C 5): The free-field
+  integral, the range condition \(\kappa^2\ge g/4\pi+1/2\) and the
+  Gaussian tail estimate check, with \(\hbar\) absorbed into \(g^2\).
+  The claims that the Hamiltonian route terminates and that no measure
+  exists ignore the vacuum state's configuration distribution. A top box
+  flags the lattice correction, but the title, section 4 and section 5
+  still state the superseded conclusion.
+\item
+  \texttt{abelian-misses-the-box} (I 4, C 6): b\_0=11/(16 pi\^{}2) and 2
+  b\_0 log 2=0.0966 check. The U(1) rerun of the expansion is asserted
+  `verbatim' without the threshold computed. `Gapped set is
+  (g\_c,infinity)' (intro, §2) overclaims: no monotonicity or single
+  transition is proved. `All three isolations are b\_0 statements' (§3)
+  is an unlabelled reading.
+\item
+  \texttt{action-floor-yang-mills-gap} (I 5, C 6): Prop. 1, Thm 2, Prop.
+  4 and the Bohr-Sommerfeld levels check. Remark 3 counts only the
+  x-valley (both valleys double the constant; growth law unaffected).
+  Prop. 5's d=4 row drops 1/g\^{}2, which by the table's own convention
+  has action dimension, so `no constant at all' in d=4 is inconsistent.
+\item
+  \texttt{agmon-ground-state-suppression} (I 3, C 6): Lemma 1 and
+  Corollary 2 are correct; Corollary 2 with rho=(1-delta)d needs epsilon
+  tied to delta, left implicit. The distance step (§2) is a labelled
+  scaling argument. The correction box flags that only the global excess
+  is controlled, yet §3-§4 still state local consequences (finite
+  exponential local moments) that do not follow.
+\item
+  \texttt{confinement-scale-bands} (I 5, C 6): Table entries (r\_0/a, m
+  a=4.21/(r\_0/a), sigma a\textsuperscript{2=1.35/(r\_0/a)}2),
+  g\^{}2=6/beta, the 444 threshold and the area-law values check; a
+  dated caveat flags the softened glueball near beta=5.7. Treating a
+  coarse Wilson loop as polymer activity (§2b) is heuristic. `Six
+  blocking steps is the whole problem' overstates: the weak side's
+  `perturbative in kind' doublings are unproved.
+\item
+  \texttt{flow-before-decimation} (I 4, C 6): The invariance proposition
+  is correct as stated. The sweeping claim that every norm-based
+  criterion is exhausted outruns it, since a conjugated Hamiltonian can
+  be split differently. The addendum's local \(e^{-\lambda n}\)
+  ground-state suppression is superseded by the later Agmon-global
+  correction and is not marked as such here.
+\item
+  \texttt{flow-jacobian-truncation-error} (I 5, C 6): Proposition 2's
+  Kato-Duhamel bound is correct. Proposition 1 handles the gauge-fixing
+  term loosely (`to the same order'). The truncation error is a
+  kernel-tail heuristic, not an operator relative bound. The Sharpness
+  box repeats the instability note's unsupported claim of growth rate
+  exactly \(2\|G\|\). The lattice-step pessimism is correctly flagged as
+  corrected.
+\item
+  \texttt{intermediate-region-finite-verification} (I 5, C 6): The
+  decay-to-gap step via reflection positivity is sound. The lead's claim
+  that the problem `reduces to' two numbers is weakened only in §4b. The
+  lead says gauge invariance is no obstruction, while §5 admits Elitzur
+  empties the single-link form; the tension is left unresolved. Box
+  sizes are corrected in a later note, flagged here. Literature is at
+  metadata level.
+\item
+  \texttt{large-field-operator-inequality} (I 5, C 6): Propositions 1
+  and 2 (min-max and the ground-state-transform trial state) are
+  correct, and the IMS arithmetic giving \(C_L=32\pi^2c_0^2/3\) checks.
+  The link-derivative bound behind \(|\nabla f_B|^2\) is heuristic. The
+  claim that every Hamiltonian route loses a surface term is shown for
+  one crude trial construction only; window constants are crude.
+\item
+  \texttt{lattice-truncation-uniform} (I 5, C 6): Coupling cancellation
+  in the lattice flow and the compactness bound are correct, and
+  exponential locality of the linearized flow over unit time is
+  standard. The Proposition's proof is a sketch: a kernel tail is
+  equated with a relative operator error, the Jacobian potential from
+  \(\rho_t\) is not treated, and `K=3 suffices' is asserted without
+  values for \(C,c\).
+\item
+  \texttt{planck-gap-derivation} (I 6, C 6): Lemmas 1-3, Theorem 1
+  (constant 9) and Theorem 2 (36) check. The area forms are off by a
+  factor 2: since (3F/v)A = tau Delta E, the bound is A \textgreater{}
+  3v kappa/(2F), and Corollary 3's upper value is 6v kappa/F. The note
+  omits the later reinstatement of a quantum kappa = hbar/2.
+\item
+  \texttt{small-field-step-decay-and-threshold} (I 5, C 6): The
+  soft-constraint gap 2/9 at a\textgreater=130 and the rate 1.7e-3
+  check, as do the strip facts (a),(b) of §2 for a one-direction shift.
+  §3 sums an l-infinity decay with the l1 product coth\^{}4,
+  undercounting by about 24. The abstract quotes 2e4 and 1e-12, while §3
+  and its table give 1.1e4 and 1e-13. `Closed' outruns a heuristic
+  estimate.
+\item
+  \texttt{strong-coupling-threshold-explicit} (I 5, C 6): The
+  Kotecky--Preiss chain checks: degree 80, c\textasciitilde220,
+  rho\textless=8e-4, t\_0\textgreater=7.1, e\^{}\{64 t\_0\},
+  beta\_*\textasciitilde e\^{}\{-465\}, g\_0\^{}2\textasciitilde1e101.
+  §3's 40--70 is an estimate that multiplies the per-site
+  beta=54/g\^{}4, which already sums three plaquettes, by a further
+  coordination 12. The text does not point to the later rigorous 388/79.
+  The weak-side figure 1/g\^{}2\textasciitilde1e2 predates the
+  small-field note's 1e-12.
+\item
+  \texttt{su3-constants} (I 3, C 6): b\_0=11/(16 pi\^{}2), 51/121,
+  54/g\^{}4, the 8/3 g\^{}2 flux loop, v\textless=96e c/g\^{}2, Haar
+  variance 1/2, the Delta V identity and the doubling table check. The
+  blocking paragraph writes beta\_direct=24/g\^{}4; the cited note's
+  32N/(C\_2 g\^{}4) gives 72/g\^{}4, which is needed for 3M\^{}2/8.
+  `Equivalence of T2' with no zero-temperature transition' is asserted
+  as standing without proof.
+\item
+  \texttt{what-would-unblock} (I 4, C 6): Most citations and
+  characterizations are accurate at metadata level. The infrared-bound
+  paragraph gives the wrong reason: Froehlich--Simon--Spencer cover O(N)
+  spins, so failure stems from the non-quadratic plaquette interaction.
+  Section 6 states as fact that coarse effective interactions enter the
+  completely analytical set. Item 1 is half-retracted in place while the
+  opening still says `exactly two things'.
+\end{itemize}
+
+\subsubsection{3c. Where the drift sits}\label{c.-where-the-drift-sits}
+
+Of the 24 notes above, 20 are mass-gap route notes written before 17
+September (Hamiltonian flow, large-field region, Agmon, blocking,
+truncation, Schur and threshold notes);
+\href{mass-gap-position.md}{mass-gap-position} §3 closes their routes
+and \texttt{LLM.md} §4 records the traps, but the notes themselves still
+state their conclusions in the lead and keep inconsistent thresholds
+(176, 444 and 1056 for the Wilson strong-coupling gap appear with
+different labels across \texttt{mass-gap-position},
+\texttt{su3-constants} and \texttt{strong-coupling-threshold-explicit}).
+The other four are \texttt{planck-gap-derivation} (item (a)),
+\texttt{action-floor-yang-mills-gap} (a \(d=4\) row that drops
+\(1/g^2\)), \texttt{abelian-misses-the-box} (a gapped set stated without
+monotonicity) and \texttt{what-would-unblock} (a wrong reason for the
+failure of infrared bounds). The repository's own convention for a
+withdrawn claim is a dated correction box at the top of the note;
+applying it to the 24 notes, with the unified thresholds, would remove
+the drift without deleting the record.
+
+\subsection{4. Scores for every note}\label{scores-for-every-note}
+
+Interest (I) and correctness (C) from 1 to 10; status and kind as read
+by the scorer.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Note
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+I
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+C
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Kind
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+abelian-misses-the-box & 4 & 6 & mixed & map \\
+action-floor-yang-mills-gap & 5 & 6 & mixed & theorem \\
+action-scale-dilation & 4 & 9 & proved & obstruction \\
+action-scale-obstructions & 4 & 8 & mixed & map \\
+action-unit-dimensional-selection & 5 & 9 & proved & theorem \\
+additive-noise-marks & 5 & 9 & proved & theorem \\
+agmon-global-not-local & 5 & 8 & proved & obstruction \\
+agmon-ground-state-suppression & 3 & 6 & mixed & calculation \\
+ancient-cuts-provenance & 2 & 8 & none & reading \\
+arrow-not-sling & 4 & 7 & none & reading \\
+autonomous-finite-readout & 5 & 9 & proved & construction \\
+block-apparatus-composition & 3 & 8 & proved & calculation \\
+blocking-criterion-monotone & 5 & 7 & proved & obstruction \\
+blocking-step-obstruction & 3 & 7 & superseded & exploratory \\
+bound-orbit-action-observable & 3 & 9 & proved & calculation \\
+bounded-acceleration-return & 3 & 9 & proved & calculation \\
+bridge-crossover & 1 & 8 & none & map \\
+calibrated-canonical-ambiguity & 3 & 8 & proved & construction \\
+calibrated-displacement-ambiguity & 4 & 9 & proved & obstruction \\
+calibration-tolerance-recovery & 4 & 9 & proved & theorem \\
+causal-force-information & 3 & 9 & proved & calculation \\
+checkerboard-dynamics & 4 & 9 & proved & calculation \\
+classical-cut-state & 4 & 9 & proved & calculation \\
+classical-orientation-closure & 4 & 9 & proved & obstruction \\
+classical-readout-refinement & 3 & 9 & proved & construction \\
+clock-position-local-recovery & 3 & 9 & proved & theorem \\
+closed-orbit-force-action & 4 & 9 & proved & theorem \\
+comparison-and-bridges & 3 & 9 & none & map \\
+composition-crossover-gap-checks & 3 & 7 & mixed & calculation \\
+composition-universality & 4 & 9 & conditional & theorem \\
+cone-time-refinement & 2 & 8 & none & map \\
+confinement-scale-bands & 5 & 6 & mixed & map \\
+conservative-harmonic-receiver & 4 & 8 & mixed & calculation \\
+correlated-calibration-response & 3 & 8 & conditional & calculation \\
+cut-measure-newton & 6 & 9 & proved & theorem \\
+cut-paradox-two-faces & 5 & 8 & proved & theorem \\
+cut-point-consistency & 4 & 9 & proved & calculation \\
+dimension-ladder & 5 & 7 & conjectural & map \\
+discrete-substrate-actors & 3 & 7 & none & exploratory \\
+dobrushin-uniqueness-wilson & 5 & 9 & proved & theorem \\
+energy-constrained-apparatus-ambiguity & 3 & 9 & proved & obstruction \\
+energy-depot-action-selection & 4 & 9 & proved & calculation \\
+final-clock-momentum-recovery & 3 & 9 & proved & theorem \\
+finite-depth-spin-gap & 2 & 9 & proved & calculation \\
+finite-horizon-minimax & 4 & 9 & proved & theorem \\
+finite-precision-cut & 3 & 9 & proved & calculation \\
+finiteness-half-flowed-susceptibility & 5 & 7 & conditional & theorem \\
+fixed-coupling-calibration & 4 & 8 & proved & calculation \\
+fixed-force-small-circles & 5 & 9 & proved & obstruction \\
+fixed-preparation-ambiguity & 5 & 9 & proved & theorem \\
+flow-before-decimation & 4 & 6 & mixed & obstruction \\
+flow-conjugation-truncation & 5 & 7 & mixed & obstruction \\
+flow-instability-large-field & 5 & 4 & mixed & obstruction \\
+flow-jacobian-truncation-error & 5 & 6 & mixed & calculation \\
+flowed-bound-free-field & 4 & 9 & proved & calculation \\
+four-dimensional-composition & 6 & 7 & mixed & theorem \\
+four-dimensional-parallel-log & 6 & 8 & conditional & calculation \\
+full-apparatus-preparation-ambiguity & 5 & 9 & proved & theorem \\
+full-clock-phase-recovery & 4 & 8 & proved & calculation \\
+full-pointer-recovery & 4 & 8 & proved & calculation \\
+galileo-two-path-interference & 6 & 9 & conditional & theorem \\
+gapped-set-critical-coupling & 4 & 5 & mixed & map \\
+gaussian-blocking-coupling & 4 & 8 & proved & calculation \\
+global-clock-speed-ambiguity & 4 & 8 & proved & construction \\
+ground-state-measure-transfer & 4 & 5 & mixed & exploratory \\
+halving-atlas & 4 & 8 & mixed & map \\
+hamiltonian-finite-closure & 4 & 9 & proved & obstruction \\
+hamiltonian-moment-descent & 4 & 9 & proved & construction \\
+hidden-clock-ambiguity & 4 & 9 & proved & construction \\
+holography-lowest-dimensions & 3 & 7 & none & reading \\
+i003-double-limit-rigidity & 3 & 7 & conjectural & exploratory \\
+indistinguishable-phase-bound & 4 & 9 & proved & theorem \\
+interacting-ising-gap & 3 & 9 & proved & theorem \\
+intermediate-region-finite-verification & 5 & 6 & conjectural & map \\
+ising-foundational-value & 2 & 8 & none & map \\
+ising-hermitian-transfer & 3 & 9 & proved & construction \\
+jacobi-kernels-distinguishability & 1 & 8 & none & map \\
+kogut-susskind-strong-coupling-explicit & 6 & 8 & proved & theorem \\
+large-field-action-lower-bound & 3 & 4 & mixed & calculation \\
+large-field-entropy-count & 4 & 5 & conjectural & exploratory \\
+large-field-operator-inequality & 5 & 6 & mixed & obstruction \\
+lattice-gap-upper-bounds & 6 & 8 & mixed & theorem \\
+lattice-truncation-uniform & 5 & 6 & mixed & obstruction \\
+leibniz-continuity-records & 6 & 8 & conditional & reading \\
+lieb-robinson-kogut-susskind & 5 & 7 & proved & theorem \\
+local-detector-coincidences & 4 & 9 & proved & theorem \\
+low-dimensional-mass-gap & 6 & 8 & mixed & theorem \\
+magnetic-energy-identities & 4 & 8 & proved & obstruction \\
+mark-cost-and-statistical-floor & 7 & 8 & proved & theorem \\
+mass-gap-conditional-theorem & 4 & 4 & conditional & map \\
+mass-gap-obligations-lattice & 4 & 7 & mixed & map \\
+mass-gap-openings & 5 & 7 & mixed & map \\
+mass-gap-position & 4 & 5 & mixed & map \\
+mechanical-interference-action & 4 & 9 & proved & obstruction \\
+millennium-problem-definitions & 2 & 8 & none & reading \\
+minimax-composition & 4 & 8 & proved & calculation \\
+moment-hierarchy-upper-bounds & 4 & 9 & conditional & theorem \\
+necessity-unit-and-indeterminacy & 5 & 8 & proved & theorem \\
+newton-NATP00385-audit & 3 & 7 & none & reading \\
+newton-indeterminacy-routes & 6 & 8 & conditional & theorem \\
+newton-insertion-action & 5 & 9 & proved & calculation \\
+newton-mark-floor & 5 & 7 & mixed & theorem \\
+newton-record-parallel-move & 3 & 8 & proved & calculation \\
+ordered-beam-preparation & 1 & 7 & none & map \\
+passive-threshold-events & 3 & 9 & proved & obstruction \\
+physical-cut-speed & 3 & 9 & proved & obstruction \\
+planck-gap-derivation & 6 & 6 & mixed & theorem \\
+planck-gap-paper & 7 & 7 & mixed & theorem \\
+planck-gap-probabilistic & 7 & 8 & proved & theorem \\
+polyakov-average-gap-bound & 4 & 8 & proved & theorem \\
+polygon-lift-phase & 6 & 9 & proved & theorem \\
+position-preparation-ambiguity & 3 & 7 & proved & construction \\
+principia-constant-force-action & 3 & 9 & proved & calculation \\
+principia-fifth-postulate & 6 & 8 & proved & theorem \\
+quantum-exclusion-premises & 3 & 8 & none & reading \\
+radiation-noise-action-selection & 4 & 9 & proved & obstruction \\
+reachable-cut-composition & 3 & 9 & proved & calculation \\
+reasons-to-stop-as-research & 4 & 8 & mixed & map \\
+receding-centre-area-audit & 3 & 9 & proved & calculation \\
+reciprocal-coupling-normalization & 2 & 9 & proved & calculation \\
+record-costs-disturbance & 6 & 8 & proved & theorem \\
+record-costs-recoil & 6 & 8 & proved & theorem \\
+record-distance-path-length & 6 & 8 & proved & theorem \\
+refinement-composition-and-limit & 5 & 8 & proved & construction \\
+refinement-results & 4 & 8 & mixed & map \\
+relativistic-kepler-threshold & 4 & 9 & proved & calculation \\
+reversible-generator-constraints & 3 & 9 & proved & reading \\
+reversible-interaction-premise & 3 & 8 & conditional & reading \\
+rivero-1998-conjecture-central-forces & 5 & 9 & proved & theorem \\
+rotation-composition-universality & 4 & 8 & conditional & theorem \\
+schur-error-ultraviolet & 5 & 4 & mixed & obstruction \\
+score-constrained-ensemble & 5 & 8 & proved & construction \\
+sed-closure-under-recording & 7 & 8 & mixed & obstruction \\
+sed-zeta-radiation-link & 4 & 8 & conditional & reading \\
+series-parallel-gauge-refinement & 7 & 8 & mixed & theorem \\
+shared-readiness-chsh & 2 & 9 & proved & reading \\
+shared-record-budget & 3 & 8 & proved & calculation \\
+shared-resource-events & 2 & 9 & proved & calculation \\
+single-calibration-fibres & 3 & 8 & proved & construction \\
+small-field-step-decay-and-threshold & 5 & 6 & mixed & obstruction \\
+small-field-step-gaussian & 4 & 7 & mixed & calculation \\
+spin-action-patching & 3 & 9 & proved & calculation \\
+stabilized-topology-action-scale & 3 & 9 & proved & calculation \\
+static-composition-classics & 3 & 7 & none & map \\
+stochastic-route-velocitas-ultima & 5 & 9 & conditional & theorem \\
+strong-coupling-target-box & 5 & 5 & conditional & theorem \\
+strong-coupling-threshold-explicit & 5 & 6 & mixed & calculation \\
+strong-coupling-uniform-gap & 4 & 8 & proved & theorem \\
+su2-midplane-order-t & 6 & 8 & conditional & calculation \\
+su2-midplane-small-field & 6 & 7 & mixed & construction \\
+su2-midpoint-exact & 5 & 9 & proved & calculation \\
+su3-constants & 3 & 6 & mixed & map \\
+sun-midpoint-centre & 6 & 8 & proved & theorem \\
+superdeterminism-floor & 5 & 8 & conditional & theorem \\
+susceptibility-gap & 3 & 9 & proved & theorem \\
+tangent-groupoid-trajectories & 5 & 7 & mixed & reading \\
+telegraph-return-bridge & 6 & 9 & proved & calculation \\
+thermal-receiver-reliability & 4 & 9 & proved & calculation \\
+thermodynamic-records-no-floor & 4 & 8 & proved & obstruction \\
+three-body-cut-memory & 4 & 9 & proved & calculation \\
+three-calibration-global-recovery & 4 & 7 & proved & theorem \\
+three-continuum-limits & 4 & 8 & mixed & map \\
+three-dimensional-gap-one-function & 4 & 7 & conditional & map \\
+topological-sector-action-selection & 4 & 9 & proved & obstruction \\
+torus-valley-potential & 5 & 8 & proved & calculation \\
+two-calibration-branches & 4 & 8 & proved & construction \\
+two-position-recovery & 3 & 9 & proved & calculation \\
+two-regulator-audit & 3 & 8 & proved & map \\
+typical-field-strength-window & 4 & 5 & superseded & obstruction \\
+uv-halving-ir-confinement & 4 & 7 & none & map \\
+villain-monopole-refinement & 6 & 9 & proved & theorem \\
+weak-coupling-feshbach-reduction & 5 & 7 & conditional & theorem \\
+what-would-unblock & 4 & 6 & none & map \\
+wilson-strong-coupling-explicit & 5 & 8 & proved & calculation \\
+zero-spacing-any-action & 6 & 8 & mixed & theorem \\
+\end{longtable}
+
+\subsection{5. Consequence for STATE}\label{consequence-for-state}
+
+The two proof goals are unaffected: the Newton recording spine and the
+refinement and gauge spine are the notes the scorer could follow to the
+end. The pending work this audit creates is corrective: dated correction
+boxes in the 24 notes of §3, the factor-2 fix in
+\texttt{planck-gap-derivation}, the \(q=4\) column in
+\texttt{strong-coupling-target-box}, the abstract of
+\texttt{small-field-step-decay-and-threshold}, and one set of
+strong-coupling thresholds with their labels in
+\texttt{mass-gap-position} and \texttt{su3-constants}. STATE gains one
+line pointing here.
+\end{document}

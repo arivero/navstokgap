@@ -1154,6 +1154,50 @@
       "content_coverage": "full read including later corrections and appendices"
     },
     {
+      "path": "notes/corpus-audit-2026-10-01.md",
+      "title": "Corpus audit of 1 October 2026: two-axis scores for all 175 notes, the uncorrected errors they expose, and where the drift sits",
+      "summary": "Claude Opus 5.5 scored every note from 1 to 10 for interest and for correctness under one rubric, and Claude Fable 5.1 reviewed the 26 selected digests against the notes. The Newton, refinement and gauge spine scores 8 or 9 for correctness; 24 notes keep uncorrected overclaims or inconsistent numbers, 20 of them closed mass-gap routes. Verified errors: planck-gap-derivation area forms off by a factor 2, strong-coupling-target-box q=4 column, small-field-step-decay abstract constants.",
+      "thematic_area": "infrastructure",
+      "strongest_result": "Claude Opus 5.5 scored every note from 1 to 10 for interest and for correctness under one rubric, and Claude Fable 5.1 reviewed the 26 selected digests against the notes. The Newton, refinement and gauge spine scores 8 or 9 for correctness; 24 notes keep uncorrected overclaims or inconsistent numbers, 20 of them closed mass-gap routes. Verified errors: planck-gap-derivation area forms off by a factor 2, strong-coupling-target-box q=4 column, small-field-step-decay abstract constants. Scope: Scores are a model reading with reasons on file, not refereeing; §3b items are the scorer's reports, unverified; interest anchors measure what an outside expert would take, not novelty. The two digest PDFs and the score table are published on the director's personal site, not here.",
+      "status": "result",
+      "proof_status": "reading",
+      "retrieval_priority": 2,
+      "current_relevance": "Durable constraint: lists the 24 notes whose current text still states withdrawn or inconsistent claims, with the three verified errors and the unified-threshold task.",
+      "relations": [
+        {
+          "type": "corrects",
+          "target": "notes/planck-gap-derivation.md",
+          "reason": "Verifies the factor-2 error in its boxed area forms; the digest carries the corrected values."
+        },
+        {
+          "type": "uses",
+          "target": "notes/mass-gap-position.md",
+          "reason": "Its §3 route closures locate the drift; its strong-coupling thresholds need one labelled set."
+        },
+        {
+          "type": "uses",
+          "target": "notes/strong-coupling-target-box.md",
+          "reason": "Its q=4 tolerance column disagrees with its own criterion."
+        }
+      ],
+      "surprising": false,
+      "route_closure": true,
+      "keys": [
+        "Opus scores",
+        "interest and correctness",
+        "digest PDFs",
+        "factor 2 area form",
+        "q=4 tolerance column",
+        "uncorrected overclaims",
+        "closed-route drift",
+        "correction boxes"
+      ],
+      "limitations": "Scores are a model reading with reasons on file, not refereeing; §3b items are the scorer's reports, unverified; interest anchors measure what an outside expert would take, not novelty. The two digest PDFs and the score table are published on the director's personal site, not here.",
+      "role": "infrastructure,synthesis",
+      "value": "infrastructure,source-guardrail",
+      "content_coverage": "scorer full read of every note; reviewer passage-level reads of the 26 selected notes and grep-level checks of the 24 low-scoring notes"
+    },
+    {
       "path": "notes/cut-measure-newton.md",
       "title": "Newton's cell action as a measure on cuts",
       "summary": "Any cut spends 3s(1−s)K_τ in orthogonal hat energy; shares add and exhaust K_τ exactly when mesh vanishes. Gaussian bridge information and finite-grid optimal mark discernibility equal corresponding action/scale ratios.",

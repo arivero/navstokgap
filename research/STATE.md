@@ -48,6 +48,10 @@ fill its cells (open cells in its §5).
   constructs the arbitrary-partition constant-force limit, gives exact
   two-dimensional gauge subdivision and a sufficient summable-error
   criterion, and distinguishes these from a surviving physical gap.
+- [The corpus audit of 2026-10-01](../notes/corpus-audit-2026-10-01.md) scores every
+  note for interest and correctness (Opus, reviewed by Fable): the spine
+  holds; 24 notes, mostly closed mass-gap routes, still state withdrawn
+  or inconsistent claims and await dated correction boxes.
 
 ## Next
 
