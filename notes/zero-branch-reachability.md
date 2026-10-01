@@ -498,7 +498,18 @@ postulate's joint determinacy
 ([fifth-postulate note](principia-fifth-postulate.md)) read as a
 preparation, Newton's *velocitas ultima* assigned to every particle of
 the ensemble. The first is the records reading already required by
-[Leibniz continuity](leibniz-continuity-records.md). The gap claim and
+[Leibniz continuity](leibniz-continuity-records.md). It is also
+Newton's own topology. His limits are exact: the Section I scholium
+asks the reader to think of the vanishing quantities "semper
+diminuendas sine limite", always diminishing without limit, and the
+geometry of the comparison has no floor at any resolution
+([Planck paper, §2, Proposition 1](planck-gap-paper.md)). Newton's
+construction contains no apparatus resolution; the ultimate ratio is
+the exact record, and the resolution limit is taken inside the
+geometry before any constant enters. Read in that topology, the
+$h>0$ family is Theorem 2(i)'s complete record. The smeared topology
+adds a resolution $\delta$ that the construction does not contain; the
+Planck paper's marks are that modern addition. The gap claim and
 the Leibniz claim rest on the same reading of records, and the gap
 claim adds determinacy of the preparation. Under those two premises
 the statement "Newton exists only with a positive scale" has the

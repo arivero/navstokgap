@@ -251,6 +251,30 @@ marks much denser than that window. A positive action cost is compatible
 with continuous time and with convergence of the polygon. It is also
 compatible with zero energy gap, as the quantum free particle illustrates.
 
+**Gap thesis (user, 2026-10-01).** The Newton goal is now stated as a
+gap in the space of theories: Newton's mechanics exists only with a
+positive scale and no zero branch is continuously reachable. The
+[reachability note](zero-branch-reachability.md) locates it. The
+Gaussian comparison above is immune: with Gaussian preparations and
+marks the record family is the classical Gaussian process plus kicks
+of variance $\hbar^2/(4\sigma_j^2)$ for every $\hbar$ (its Theorem 1).
+The gap lives in complete records of determinate swarms that fold:
+there the record has no $\hbar\to0$ limit, while smeared records
+converge to the classical branch sum (Theorems 2--3), and in the
+anomaly record Hooke keeps the zero branch for all time while a Kepler
+swarm loses it after $T^2/\Delta T$ (Theorem 4). The surviving object,
+the analogue of the mass in §2, is the fringe visibility
+$2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)$ of crossing streams, fixed by the
+classical branch densities, independent of $\hbar$ for $\hbar>0$ and
+zero at $\hbar=0$; the dilation $\hbar\mapsto\mu\hbar$ makes it a
+contrast where the Yang--Mills gap is a scale. The order of limits is
+the same as in §2: the record limit, resolution to zero, is taken
+before the constant's, as the continuum limit is taken before the
+coupling's. For the paper this moves Newton's gap argument from the
+Gaussian parabola to the Kepler swarm and makes its two premises,
+complete records and determinate preparations, the hypotheses to state
+beside coercivity in §2 and the soft channel in §3.
+
 ## 5. Two elementary criteria for carrying spectral information to a limit
 
 These statements are standard consequences of the spectral theorem and
