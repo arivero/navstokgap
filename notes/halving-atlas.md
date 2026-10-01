@@ -373,7 +373,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    controllers pass the two-unread-width test against a variance witness,
    and closure under coordinate copies holds at every $\kappa\ge0$. The
    apparatus-closure route to positivity is closed; the zero branch is
-   the autonomous branch.
+   the autonomous branch. [Zero-branch reachability](zero-branch-reachability.md)
+   locates the gap thesis: Galileo's Gaussian comparison has a record
+   family constant in $h$; determinate preparations lose the $h\to0$ limit
+   of their complete record after the first fold (exact for inertia with
+   graded velocity, fold time $m/\max(-p_0')$), smeared records never do.
    Continuity (91) also survives zero action. Adaptive timing, extra
    readouts and the independent positive scale remain open.
 7. The infrared: from ultraviolet control in $1+2$ to $C_3>0$.

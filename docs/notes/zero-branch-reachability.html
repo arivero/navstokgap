@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Which limits of Newton&#x27;s construction reach the zero branch</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Which limits of Newton’s construction reach the zero branch</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/zero-branch-reachability.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/zero-branch-reachability.pdf">PDF</a></p><p>The thesis under test (user, 2026-10-01): Newton’s mechanics exists
+only with a positive action scale, no zero branch is continuously
+reachable, and the family of theories has a gap in the sense of the mass
+gap. This note states the thesis as a claim about limits and proves, in
+the simplest cases, which of Newton’s own limits reach the zero theory
+and which do not. Result: with Gaussian preparations and Gaussian marks,
+Galileo’s comparison has a record family that is the same for every
+value of the constant (Theorem 1), so there is no gap there. For a
+determinate preparation, one definite velocity at each place, the
+complete coordinate record has no limit as the constant tends to zero
+once the preparation has folded, or a limit different from Newton’s,
+while every smeared record converges to Newton’s branch-weighted density
+(Theorem 2, any finite partition; Theorem 3, exactly, for inertial
+motion with a graded velocity after its fold time). The gap thesis
+therefore holds in the topology of complete records of determinate
+preparations, beyond their first fold, and fails in the topology of
+smeared records or for statistical preparations. Refinement with records
+is the one Newtonian limit in which the zero theory is the regular side.
+Proofs are written derivations by Claude Fable (2026-10-01), unrefereed;
+the stationary phase and almost-periodicity facts used are standard and
+named.</p>
+<p>Throughout, <span class="math inline">\(h\)</span> denotes the
+reduced phase constant, as in the <a
+href="rivero-1998-conjecture-central-forces.html">1998-conjecture
+note</a>; the recording notes write <span
+class="math inline">\(\kappa=h/2\)</span>.</p>
+<h2 id="the-thesis-as-a-statement-about-limits">1. The thesis as a
+statement about limits</h2>
+<p>For each <span class="math inline">\(h&gt;0\)</span> let <span
+class="math inline">\(T_h\)</span> be the theory with phase constant
+<span class="math inline">\(h\)</span>: its dynamics and its record law.
+The dilation <span class="math inline">\(h\mapsto\mu h\)</span> is an
+isomorphism (<a href="principia-fifth-postulate.html">fifth-postulate
+note, Theorem B and §7</a>; <a
+href="https://arxiv.org/abs/quant-ph/9803035">Rivero 1998, eq. (10)</a>,
+full read), so <span class="math inline">\(\{T_h:h&gt;0\}\)</span> is
+one theory in different units. The zero theory <span
+class="math inline">\(T_0\)</span> is Newton’s. The thesis says that
+<span class="math inline">\(T_0\)</span> is not the limit of <span
+class="math inline">\(T_h\)</span> as <span
+class="math inline">\(h\to0\)</span> in any topology intrinsic to
+Newton’s construction: the scale is generated by the construction, and
+zero is isolated. This is the mechanical form of a mass gap, where the
+continuum limit generates the scale and the massless theory is not
+reached by the coupling.</p>
+<p>Known results fix what the thesis can mean. The limit <span
+class="math inline">\(h\to0\)</span> is singular, with phases <span
+class="math inline">\(e^{iS/h}\)</span> that have no pointwise limit
+[<span class="citation" data-cites="Berry2002">@Berry2002</span>;
+metadata]. Yet in weak topologies and for finite times the classical
+theory is reached: coherent states follow classical trajectories for
+finite times [<span class="citation"
+data-cites="Hepp1974">@Hepp1974</span>; metadata], Egorov’s theorem
+transports smooth observables classically up to <span
+class="math inline">\(O(h)\)</span> for finite times, and Wigner
+measures give the weak limits of densities [<span class="citation"
+data-cites="LionsPaul1993">@LionsPaul1993</span>; metadata]. So the
+thesis is false for smeared records at finite time, and can be true only
+in stronger topologies. Newton’s construction supplies three candidates:
+complete records, the densities themselves rather than their smearings;
+the all-time limit; and refinement, with or without records at the
+inserted times. The rest of the note tests each.</p>
+<p>Deformation families cannot see a gap. The Moyal family, the Fisher
+field law and its sheet realizations (<a
+href="score-constrained-ensemble.html">score-constrained note</a>,
+§§6–8) are continuous in the constant by construction and contain the
+zero branch. The tangent groupoid glues the <span
+class="math inline">\(\varepsilon=0\)</span> fibre continuously to the
+<span class="math inline">\(\varepsilon&gt;0\)</span> fibres (<a
+href="principia-fifth-postulate.html">fifth-postulate note, §7</a>), so
+the kinematics is continuous at zero as well. A gap, if it exists, lives
+in the dynamics and the records.</p>
+<h2 id="theorem-1-galileos-comparison-has-no-gap">2. Theorem 1:
+Galileo’s comparison has no gap</h2>
+<p><strong>Theorem 1 (Gaussian preparations, quadratic forces, Gaussian
+marks).</strong> Let <span class="math inline">\(H=p^2/2m+V\)</span>
+with <span class="math inline">\(\deg V\le2\)</span> (inertia, uniform
+gravity, Hooke’s force). For each admissible <span
+class="math inline">\(h\ge0\)</span> prepare the body with the Gaussian
+phase-space law <span class="math inline">\(N(z_0,\Sigma)\)</span>,
+<span class="math inline">\(\Sigma&gt;0\)</span> fixed; for <span
+class="math inline">\(h&gt;0\)</span> this is the Gaussian state with
+that Wigner function, which exists iff <span
+class="math inline">\(\det\Sigma\ge h^2/4\)</span>. Mark the body at
+times <span class="math inline">\(t_j\)</span> by Gaussian coordinate
+copies of widths <span class="math inline">\(\sigma_j\)</span>, each
+read or forgotten. Then the joint law of all read records and of the
+final coordinate is, for every admissible <span
+class="math inline">\(h\)</span>, the classical Gaussian process of
+<span class="math inline">\(T_0\)</span> with one addition: each mark,
+read or not, adds to the body momentum an independent centred Gaussian
+kick of variance <span class="math inline">\(h^2/(4\sigma_j^2)\)</span>.
+The family is continuous in <span class="math inline">\(h\)</span> and
+equals <span class="math inline">\(T_0\)</span> at <span
+class="math inline">\(h=0\)</span>.</p>
+<p><em>Proof.</em> For <span class="math inline">\(\deg V\le2\)</span>
+every Moyal flow is the classical affine symplectic flow, and the Wigner
+function is transported classically (<a
+href="principia-fifth-postulate.html">fifth-postulate note, Theorem
+A(b)</a>). A coordinate copy is generated by <span
+class="math inline">\(q\pi\)</span>, quadratic in the joint canonical
+variables, so the same holds for the body–pointer shear. A Gaussian
+Wigner function of a product state is a positive density, and reading
+the pointer coordinate is classical conditioning of that density. The
+pointer’s momentum <span class="math inline">\(\pi\)</span> has variance
+<span class="math inline">\(h^2/(4\sigma_j^2)\)</span> and is
+independent of its coordinate for a minimal Gaussian pointer, so the
+shear transfers to the body a kick of that variance whether or not the
+coordinate is read; this is Proposition 1 of the <a
+href="newton-record-parallel-move.html">parallel-move note</a> for the
+forgotten case, and the read case adds the classical Gaussian
+conditioning on <span class="math inline">\(r=q+z\)</span>. Composition
+in time is the classical flow between marks. The variance <span
+class="math inline">\(h^2/(4\sigma_j^2)\)</span> is continuous in <span
+class="math inline">\(h\)</span> and zero at <span
+class="math inline">\(h=0\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>So on the comparison as the Planck paper sets it, the record family
+is constant in <span class="math inline">\(h\)</span> up to continuous
+kicks. The zero branch is reached in every topology: there is no gap in
+Galileo’s parabola with statistical preparations. The same holds for
+refinement with records at every inserted time: the fixed-<span
+class="math inline">\(h\)</span> limit exists iff <span
+class="math inline">\(\sum_j\sigma_j^{-2}&lt;\infty\)</span> (<a
+href="newton-record-parallel-move.html">parallel-move note</a>), the
+<span class="math inline">\(h=0\)</span> limit always exists, and the
+<span class="math inline">\(h\to0\)</span> limit at any fixed partition
+is continuous. In this limit the zero theory is the regular side and
+<span class="math inline">\(h&gt;0\)</span> the singular one.</p>
+<h2 id="theorem-2-determinate-preparations-with-several-paths">3.
+Theorem 2: determinate preparations with several paths</h2>
+<p>Take the symmetric discrete action of the 1998-conjecture note, (1)
+there, on a partition with <span class="math inline">\(N\)</span> cells
+of lengths <span class="math inline">\(\tau_j\)</span>, smooth <span
+class="math inline">\(V\)</span>, fixed initial point <span
+class="math inline">\(q_0=x\)</span>, record variable <span
+class="math inline">\(y=q_N\)</span>, and internal vertices <span
+class="math inline">\(z=(q_1,\ldots,q_{N-1})\in\mathbb R^d\)</span>,
+<span class="math inline">\(d=N-1\)</span>. With a cutoff <span
+class="math inline">\(\chi\in C_c^\infty(\mathbb R^d)\)</span> and a
+smooth amplitude <span class="math inline">\(O\)</span>, the halved
+functional with the record variable kept free is <span
+class="math display">\[A_h(y)=(2\pi
+h)^{-d/2}\int\chi(z)O(z)\,e^{iS_\pi(x,z,y)/h}\,dz.\tag{1}\]</span> Its
+modulus squared <span class="math inline">\(|A_h(y)|^2\)</span> is the
+complete coordinate record at the final time; <span
+class="math inline">\(\int\varphi(y)|A_h(y)|^2dy\)</span> with <span
+class="math inline">\(\varphi\in C_c^\infty\)</span> is a smeared
+record.</p>
+<p><strong>Hypothesis (several nondegenerate paths).</strong> On an open
+interval <span class="math inline">\(Y\)</span> of record values, <span
+class="math inline">\(S_\pi(x,\cdot,y)\)</span> has exactly <span
+class="math inline">\(K\ge2\)</span> critical points <span
+class="math inline">\(z_a(y)\)</span> in <span
+class="math inline">\(\operatorname{supp}\chi\)</span>, all
+nondegenerate, with <span class="math inline">\(\chi=1\)</span> near
+each. By the implicit function theorem they depend smoothly on <span
+class="math inline">\(y\)</span>. Write <span
+class="math display">\[S_a(y)=S_\pi(x,z_a(y),y),\qquad
+c_a(y)=\frac{O(z_a(y))\,e^{i\pi\sigma_a/4}}{|\det
+S_\pi&#39;&#39;(z_a(y))|^{1/2}},\tag{2}\]</span> with <span
+class="math inline">\(\sigma_a\)</span> the Hessian signature.</p>
+<p><strong>Lemma (final momenta are distinct).</strong> <span
+class="math inline">\(p_a(y):=S_a&#39;(y)\)</span> equals <span
+class="math inline">\(m(y-q^{(a)}_{N-1}(y))/\tau_{N-1}-\tfrac12\tau_{N-1}V&#39;(y)\)</span>,
+and <span class="math inline">\(p_a(y)\neq p_b(y)\)</span> for <span
+class="math inline">\(a\neq b\)</span>.</p>
+<p><em>Proof.</em> The envelope formula gives <span
+class="math inline">\(S_a&#39;(y)=\partial_yS_\pi\)</span> at the
+critical point, which is the displayed expression. The discrete
+Euler–Lagrange equation at vertex <span
+class="math inline">\(j\)</span>, <span
+class="math inline">\(m(q_{j+1}-q_j)/\tau_j-m(q_j-q_{j-1})/\tau_{j-1}
++\tfrac12(\tau_{j-1}+\tau_j)V&#39;(q_j)=0\)</span>, is linear in <span
+class="math inline">\(q_{j-1}\)</span> with coefficient <span
+class="math inline">\(m/\tau_{j-1}\ne0\)</span>. So a critical point is
+determined by <span class="math inline">\((q_{N-1},q_N)\)</span> by
+backward recursion, two distinct critical points have distinct <span
+class="math inline">\(q_{N-1}\)</span>, and the momenta differ. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Theorem 2.</strong> Under the hypothesis, uniformly for <span
+class="math inline">\(y\)</span> in compact subsets of <span
+class="math inline">\(Y\)</span>, <span
+class="math display">\[|A_h(y)|^2=\sum_a|c_a(y)|^2
++\sum_{a&lt;b}2|c_a(y)c_b(y)|\cos\!\Big(\frac{S_a(y)-S_b(y)}{h}+\theta_{ab}(y)\Big)
++O(h).\tag{3}\]</span> (i) <em>Complete record.</em> Fix <span
+class="math inline">\(y\in Y\)</span>. The limit of <span
+class="math inline">\(|A_h(y)|^2\)</span> as <span
+class="math inline">\(h\downarrow0\)</span> exists only if, for every
+nonzero value <span class="math inline">\(\omega\)</span> of <span
+class="math inline">\(S_a(y)-S_b(y)\)</span>, the amplitudes <span
+class="math inline">\(|c_ac_b|e^{i\theta_{ab}}\)</span> of the pairs
+with that action difference sum to zero. For <span
+class="math inline">\(K=2\)</span> with <span
+class="math inline">\(S_1(y)\neq S_2(y)\)</span> this means <span
+class="math inline">\(c_1(y)c_2(y)=0\)</span>. When the limit exists it
+equals <span class="math inline">\(\sum_a|c_a|^2\)</span> plus the cross
+terms of pairs with equal actions, which is Newton’s branch-weighted
+density <span
+class="math inline">\(D_{0,\pi}(|O|^2)=\sum_a|O(z_a)|^2/|\det
+S&#39;&#39;_\pi(z_a)|\)</span> only if those cross terms vanish too.
+(ii) <em>Smeared record.</em> For every <span
+class="math inline">\(\varphi\in C_c^\infty(Y)\)</span>, <span
+class="math display">\[\int\varphi(y)|A_h(y)|^2dy\longrightarrow
+\sum_a\int\varphi(y)\frac{|O(z_a(y))|^2}{|\det
+S&#39;&#39;_\pi(z_a(y))|}dy
+\qquad(h\downarrow0).\tag{4}\]</span></p>
+<p><em>Proof.</em> Equation (3) is the stationary phase expansion of (1)
+with nondegenerate critical points, (3) of the 1998-conjecture note,
+whose remainder is uniform in the parameter <span
+class="math inline">\(y\)</span> on compact sets where the critical
+points stay nondegenerate (Hörmander’s stationary phase theorem with
+parameters; standard). Expanding the modulus squared gives (3) with
+<span class="math inline">\(\theta_{ab}=\pi(\sigma_a-\sigma_b)/4+\arg
+O_a-\arg O_b\)</span>.</p>
+<ol type="i">
+<li><p>Put <span class="math inline">\(s=1/h\)</span>. The cross sum in
+(3) is an almost periodic function <span
+class="math inline">\(f(s)\)</span> in Bohr’s sense, a finite
+trigonometric sum. If <span class="math inline">\(|A_h(y)|^2\)</span>
+converges as <span class="math inline">\(h\downarrow0\)</span> then
+<span class="math inline">\(f(s)\)</span> converges as <span
+class="math inline">\(s\to\infty\)</span>. An almost periodic function
+with a limit at infinity is constant: for any <span
+class="math inline">\(s_0\)</span> and <span
+class="math inline">\(\delta&gt;0\)</span> the set of <span
+class="math inline">\(\delta\)</span>-almost periods is relatively
+dense, so there are <span class="math inline">\(T_n\to\infty\)</span>
+with <span class="math inline">\(|f(s_0+T_n)-f(s_0)|&lt;\delta\)</span>,
+and the limit forces <span class="math inline">\(f(s_0)=\lim f\)</span>.
+A constant trigonometric sum has zero coefficient at every nonzero
+frequency: the Bohr mean of <span class="math inline">\(f(s)e^{-i\omega
+s}\)</span> is that coefficient. This proves the condition, and the
+value of the limit when it exists.</p></li>
+<li><p>In the cross term with indices <span class="math inline">\(a\neq
+b\)</span> the phase <span
+class="math inline">\(\psi_{ab}=S_a-S_b\)</span> has <span
+class="math inline">\(\psi_{ab}&#39;=p_a-p_b\neq0\)</span> on <span
+class="math inline">\(Y\)</span> by the Lemma. One integration by parts,
+<span class="math inline">\(\int g\,e^{i\psi/h}dy=ih\int
+(g/\psi&#39;)&#39;\,e^{i\psi/h}dy\)</span> for <span
+class="math inline">\(g\in C_c^\infty(Y)\)</span>, bounds the term by
+<span class="math inline">\(O(h)\)</span>. The diagonal terms and the
+uniform remainder give (4). <span
+class="math inline">\(\square\)</span></p></li>
+</ol>
+<p>Thus the complete record of a determinate preparation with several
+paths does not reach Newton’s density as <span
+class="math inline">\(h\downarrow0\)</span>, by non-convergence in the
+generic case of distinct actions and by a wrong limit in the symmetric
+case of equal actions, while its smearing always does. Theorem 1 of the
+1998-conjecture note is the case <span
+class="math inline">\(d=1\)</span>, <span
+class="math inline">\(K=3\)</span>, <span
+class="math inline">\(y=0\)</span> of (i), including the retained cross
+term of the two mirror paths; smearing in <span
+class="math inline">\(y\)</span> removes that term by (ii), because the
+mirror paths arrive at <span class="math inline">\(y=0\)</span> with
+opposite momenta.</p>
+<h2 id="theorem-3-inertial-motion-with-a-graded-velocity">4. Theorem 3:
+inertial motion with a graded velocity</h2>
+<p>Newton’s simplest motion already shows the gap when the preparation
+is determinate and its velocity varies along it. Let <span
+class="math inline">\(h&gt;0\)</span>, <span
+class="math inline">\(V=0\)</span>, and prepare <span
+class="math display">\[\psi_0(q)=a(q)e^{iS_0(q)/h},\qquad a\in
+C_c^\infty(\mathbb R)\ \text{real},
+\qquad p_0=S_0&#39;.\tag{5}\]</span> Each particle at <span
+class="math inline">\(q\)</span> has the definite velocity <span
+class="math inline">\(p_0(q)/m\)</span>. The free propagator is exact,
+so <span class="math display">\[\psi_t(x)=\Big(\frac{m}{2\pi
+iht}\Big)^{1/2}\int a(q)\,
+e^{i\Phi_x(q)/h}dq,\qquad
+\Phi_x(q)=\frac{m(x-q)^2}{2t}+S_0(q).\tag{6}\]</span> Critical points of
+<span class="math inline">\(\Phi_x\)</span> are the arrivals <span
+class="math inline">\(q+p_0(q)t/m=x\)</span>, and <span
+class="math inline">\(\Phi_x&#39;&#39;(q)=m/t+p_0&#39;(q)\)</span>.
+Define the fold time <span
+class="math display">\[t_*=\frac{m}{\max(-p_0&#39;)}\in(0,\infty],\tag{7}\]</span>
+with <span class="math inline">\(t_*=\infty\)</span> when <span
+class="math inline">\(p_0&#39;\ge0\)</span> everywhere.</p>
+<p><strong>Theorem 3.</strong> (a) For <span
+class="math inline">\(0&lt;t&lt;t_*\)</span> the arrival map <span
+class="math inline">\(q\mapsto q+p_0(q)t/m\)</span> is a diffeomorphism,
+every <span class="math inline">\(x\)</span> has one arrival <span
+class="math inline">\(q_*(x)\)</span>, and <span
+class="math inline">\(|\psi_t(x)|^2\to
+a(q_*(x))^2/(1+p_0&#39;(q_*(x))t/m)\)</span> pointwise, the classical
+transported density: the complete record reaches the zero branch before
+the fold. (b) For <span class="math inline">\(t&gt;t_*\)</span> there is
+an open interval of <span class="math inline">\(x\)</span> with three
+nondegenerate arrivals <span
+class="math inline">\(q_1&lt;q_2&lt;q_3\)</span>. Where <span
+class="math inline">\(a\)</span> is nonzero at two or more of them,
+Theorem 2 applies with <span class="math inline">\(d=1\)</span>, <span
+class="math inline">\(K=3\)</span>: <span
+class="math inline">\(|\psi_t(x)|^2\)</span> has no limit as <span
+class="math inline">\(h\downarrow0\)</span> unless the cross amplitudes
+cancel, and every smearing in <span class="math inline">\(x\)</span>
+converges to the classical three-branch density <span
+class="math inline">\(\sum_a a(q_a)^2/|1+p_0&#39;(q_a)t/m|\)</span>. (c)
+At a fold point <span class="math inline">\(x_c(t)\)</span>, where <span
+class="math inline">\(\Phi_x&#39;&#39;(q_c)=0\)</span> and <span
+class="math inline">\(\Phi_x&#39;&#39;&#39;(q_c)\neq0\)</span>, <span
+class="math inline">\(|\psi_t(x_c)|^2\)</span> grows like <span
+class="math inline">\(h^{-1/3}\)</span>: the record diverges with the
+classical caustic density.</p>
+<p><em>Proof.</em> (a) The derivative <span
+class="math inline">\(1+p_0&#39;(q)t/m\)</span> is positive for <span
+class="math inline">\(t&lt;t_*\)</span>, so the arrival map is strictly
+increasing and onto, and the single critical point is nondegenerate;
+one-dimensional stationary phase in (6) gives <span
+class="math inline">\(|\psi_t|^2\to
+a^2/|\Phi_x&#39;&#39;|\cdot(m/t)\)</span>, which is the stated ratio.
+(b) For <span class="math inline">\(t&gt;t_*\)</span> the derivative is
+negative on an open set, so the arrival map is not monotone; by the
+intermediate value theorem the preimage of each <span
+class="math inline">\(x\)</span> in an open interval has three points,
+nondegenerate away from the two fold values. The amplitudes <span
+class="math inline">\(c_a=a(q_a)e^{i\pi\sigma_a/4}/|\Phi_x&#39;&#39;(q_a)|^{1/2}\)</span>
+and the actions <span class="math inline">\(\Phi_x(q_a)\)</span> play
+the roles of (2); the final momenta <span
+class="math inline">\(\partial_x\Phi_x(q_a)=m(x-q_a)/t=p_0(q_a)\)</span>
+are distinct because the <span class="math inline">\(q_a\)</span> are
+distinct and <span class="math inline">\(x=q_a+p_0(q_a)t/m\)</span>.
+Theorem 2 applies. (c) At a degenerate critical point of order three the
+stationary phase integral scales as <span
+class="math inline">\(h^{1/3}\)</span> against the prefactor <span
+class="math inline">\(h^{-1/2}\)</span>, giving <span
+class="math inline">\(|\psi|^2\sim h^{-1/3}\)</span> (Airy scaling;
+standard). <span class="math inline">\(\square\)</span></p>
+<p>Newton’s inertial motion, with a preparation in which faster
+particles start behind slower ones, folds at <span
+class="math inline">\(t_*\)</span>. Before the fold the zero branch is
+reached by complete records; after it, never. The fringe spacing in
+<span class="math inline">\(x\)</span> is <span
+class="math inline">\(h/|p_a-p_b|\)</span>, which tends to zero without
+the record ever settling. The classical multi-stream density is
+recovered only by smearing, an operation external to the determinate
+construction.</p>
+<h2 id="all-time-invariants">5. All-time invariants</h2>
+<p>Two quantities already in the corpus show the other non-commuting
+pair of limits, <span class="math inline">\(h\to0\)</span> against <span
+class="math inline">\(t\to\infty\)</span>. For the free Gaussian, the
+expected number of sign reversals of the two-sheet realization over all
+time is <span class="math inline">\(\pi\varphi(1)\)</span> for every
+<span class="math inline">\(h&gt;0\)</span> and zero at <span
+class="math inline">\(h=0\)</span> (<a
+href="sed-closure-under-recording.html#a-stationary-switching-process-repairs-the-gaussian-marginal">recording
+note, (150)</a>); the total phase <span class="math inline">\(\arctan
+u\)</span> of (143) there reaches <span
+class="math inline">\(\pi/2\)</span> for every <span
+class="math inline">\(h&gt;0\)</span> and is zero at <span
+class="math inline">\(h=0\)</span>. Both are limits taken at infinite
+time first; at fixed finite time both vanish continuously as <span
+class="math inline">\(h\to0\)</span>. The first is a hidden count and
+the second a phase, so neither is a record; their observable counterpart
+is the breakdown of the classical limit after the Ehrenfest time, which
+Theorem 3 exhibits at the fold time <span
+class="math inline">\(t_*\)</span> for inertial motion. The all-time
+limit therefore supports the thesis only through folding, which is
+already Theorem 3.</p>
+<h2 id="what-the-thesis-is-and-what-it-needs">6. What the thesis is, and
+what it needs</h2>
+<ul>
+<li><strong>Galileo’s comparison with statistical preparations has no
+gap.</strong> Theorem 1 makes the record family constant in <span
+class="math inline">\(h\)</span>. Any gap argument run on the parabola
+with Gaussian preparations and marks will fail, for the same reason the
+deformation families fail.</li>
+<li><strong>Determinate preparations that fold have the gap, in complete
+records.</strong> Theorems 2 and 3 prove it on every finite partition
+and exactly for inertia with graded velocity. Newton’s general forces
+fold localized determinate preparations in finite time, since the period
+depends on the amplitude; central forces (Book I, Proposition I) are the
+natural next case. Beyond Galileo the thesis holds in this
+topology.</li>
+<li><strong>Smeared records and statistical preparations reach
+zero.</strong> This is the content of the weak-limit theorems named in
+§1, and of (4).</li>
+<li><strong>Refinement with records reverses the roles.</strong> The
+zero theory is the regular side of that limit.</li>
+</ul>
+<p>The thesis is therefore exactly as strong as two premises: that
+records are complete, the densities themselves rather than their
+smearings, and that preparations are determinate, one velocity at each
+place. The second is the fifth postulate’s joint determinacy (<a
+href="principia-fifth-postulate.html">fifth-postulate note</a>) read as
+a preparation, Newton’s <em>velocitas ultima</em> assigned to every
+particle of the ensemble. The first is the records reading already
+required by <a href="leibniz-continuity-records.html">Leibniz
+continuity</a>. The gap claim and the Leibniz claim rest on the same
+reading of records, and the gap claim adds determinacy of the
+preparation. Under those two premises the statement “Newton exists only
+with a positive scale” has the precise form: the construction without
+branch data exists for every <span class="math inline">\(h&gt;0\)</span>
+and refines without extra data (1998-conjecture note, Theorem 2(b)),
+while at <span class="math inline">\(h=0\)</span> it needs a branch rule
+(Theorem 1 there) and, after a fold, is not the limit of the <span
+class="math inline">\(h&gt;0\)</span> records (Theorems 2–3 here). With
+either premise dropped, the zero branch is reached.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The gap thesis is located: it holds for complete records of
+determinate preparations beyond their first fold, and fails for
+Galileo’s comparison with Gaussian preparations and marks, for smeared
+records, and for refinement with records. Next gap lemma: the first fold
+of a determinate preparation under a central force on Newton’s polygon
+(Book I, Proposition I), its fold time, and the non-convergence of its
+complete record by Theorem 2. The two premises, complete records and
+determinate preparation, become the stated hypotheses of the gap, to be
+defended with the Leibniz records reading. Reject a gap argument run
+inside a deformation family, on Gaussian preparations of the parabola,
+or on smeared records, and reject presenting the non-commutation of
+<span class="math inline">\(h\to0\)</span> with <span
+class="math inline">\(t\to\infty\)</span> as a record without an
+observable.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
