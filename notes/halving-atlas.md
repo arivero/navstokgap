@@ -348,7 +348,11 @@ paper, in the [didactic note](uv-halving-ir-confinement.md).
    restores exact phase reconstruction with positive tails, but proves
    failure of uniform stability (128) in the specified local-data metric;
    additive bridge-phase memory (129) retains the datum (Sol/Astra,
-   refereed). Next: a physical history rule carrying it through vanishing
+   refereed). [§8.21](sed-closure-under-recording.md#821-the-exact-energy-of-a-phase-bridge-and-its-cut-law)
+   gives the exact fixed-density bridge reduction and unread score/current
+   energy excesses (Sol, written, unrefereed); these are static spatial
+   identities, with physical phase transport open.
+   Next: a physical history rule carrying it through vanishing
    tails, separation and reunion, alongside (117)'s
    signed correction and (119)'s excess when labels become unread.
    Continuity (91) also survives zero action. Adaptive timing, extra

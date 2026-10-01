@@ -129,7 +129,8 @@ Read in this order:
 The next mechanism is a physical history rule that prepares and transports
 the coherence datum through separation and reunion, with retained memory
 and complete terminal records. It must account for the notebook's (117),
-(119) and phase datum (129), without assuming exact low-density readout or
+(119), phase datum (129), and §8.21's static bridge and unread-energy tests
+(132)--(135), without assuming exact low-density readout or
 importing the quantum evolution being explained. A rule that still admits
 an unexcluded zero-action branch does not establish necessity.
 

@@ -13,6 +13,17 @@
 \section{Shared radiation and closure under
 recording}\label{shared-radiation-and-closure-under-recording}
 
+\textbf{Bridge calculation, 2026-10-01 (GPT-6.1 Sol; written,
+unrefereed).} Section 8.21 gives the exact least phase-gradient energy
+at fixed positive density. Its coefficient is the reciprocal of
+\(\int dq/\rho\) and composes under every spatial cut. In the
+positive-tail family this coefficient vanishes quadratically while the
+relative phase and its terminal reference witness survive. An
+unread-label identity also retains both score and phase-gradient
+excesses. These are static variational and mixture identities; physical
+preparation and transport of the memory, and independent positivity,
+remain open.
+
 \textbf{Weak nonlinear recording, 2026-09-30 (GPT-6.1 Sol and GPT-6
 Astra; refereed).} Section 8.17 removes the sharp-pointer restriction
 from the nonlinear counterexample: the failure is exact under every
@@ -3080,6 +3091,140 @@ assumes the supplied quantum prediction. This test establishes no
 positive action necessity and changes none of the zero-branch
 obligations.
 
+\subsubsection{8.21 The exact energy of a phase bridge and its cut
+law}\label{the-exact-energy-of-a-phase-bridge-and-its-cut-law}
+
+The phase-gradient term in §8.19's conditional Hamiltonian supplies a
+sharper test than the particular interpolation in (125). Fix a spatial
+interval \(B=[q_L,q_R]\), mass \(m>0\) and the supplied reference
+\(\hbar>0\). Let \(\rho\) be continuous and strictly positive on \(B\),
+with position-density units. Hold this density and \(\theta(q_L)\)
+fixed. Write \(S=\hbar\theta\) and prescribe a real lifted phase change
+\(\eta=\theta(q_R)-\theta(q_L)\); retaining this lift is part of the
+boundary data. The phase-gradient energy on the bridge is
+\[E_B[\theta]=\frac{\hbar^2}{2m}\int_B\rho(\theta')^2dq,
+\qquad R_B=\int_B\frac{dq}{\rho(q)}.\tag{130}\] Here \(R_B\) has
+length-squared units. It is a coefficient of a spatial variational
+problem, not the elapsed time or the Galileo cell action.
+
+\textbf{Proposition 19 (fixed-density bridge reduction).} Among
+absolutely continuous phases with square-integrable derivative and the
+prescribed endpoint lift, \[\begin{aligned}
+\inf E_B&=\frac{\hbar^2\eta^2}{2mR_B},\\
+\theta_*(q)&=\theta(q_L)+\frac{\eta}{R_B}
+                  \int_{q_L}^{q}\frac{ds}{\rho(s)},\\
+j_*(q)&=\frac{\hbar}{m}\rho(q)\theta_*'(q)
+                   =\frac{\hbar\eta}{mR_B}.
+\end{aligned}\tag{131}\] The minimum is attained and the phase is unique
+with these endpoints. If only the endpoint phases modulo \(2\pi\) are
+prescribed, minimize \((\eta+2\pi k)^2\) over \(k\in\mathbb Z\);
+opposite half-turns can then give distinct minimizing lifts.
+
+\emph{Proof.} Weighted Cauchy--Schwarz gives
+\(\eta^2\le(\int_B\rho\theta'^2)(\int_B\rho^{-1})\). Equality requires
+\(\theta'\) proportional to \(\rho^{-1}\), yielding (131). Strict
+positivity and compactness make this derivative bounded and admissible;
+strict convexity with fixed endpoints proves uniqueness. The current
+formula uses the reference definition from (126), rather than a newly
+justified physical momentum readout. \(\square\)
+
+For a finite partition of \(B\) into intervals \(B_i\), put
+\(R_i=\int_{B_i}\rho^{-1}dq\). Eliminating the interior phases is
+exactly \[\inf_{\sum_i\eta_i=\eta}\sum_i\frac{\hbar^2\eta_i^2}{2mR_i}
+ =\frac{\hbar^2\eta^2}{2m\sum_iR_i},\qquad
+\eta_i=\eta\frac{R_i}{\sum_jR_j}.\tag{132}\] The same weighted
+inequality proves this formula, and \(R_B=\sum_iR_i\) makes its repeated
+elimination associative under every cut. No limiting curve or
+shape-regular partition is assumed in this fixed-density reduction. Its
+connection with the cut action is the Dirichlet minimization mechanism;
+the spatial density weight and energy units differ from Newton's
+temporal functional \(K_\tau\).
+
+\textbf{Positive-tail limit with its sharp coefficient.} Choose \(B\)
+strictly inside the vacuum interval of (120), between the packets, and
+use \(\rho_\epsilon=r_\epsilon^2\) from (125). On this bridge \(u=0\),
+so \[R_{B,\epsilon}=\frac{n_\epsilon^2}{\epsilon^2}R_{B,g},
+\qquad R_{B,g}=\int_Bg^{-2}dq,
+\qquad \inf E_{B,\epsilon}
+ =\frac{\hbar^2\eta^2\epsilon^2}{2mn_\epsilon^2R_{B,g}}.
+\tag{133}\] The fixed Gaussian \(g\) is strictly positive on the compact
+bridge, so \(R_{B,g}\) is finite. At \(\eta=-\pi\), take phase \(\pi\)
+to the left of \(B\) and zero to its right. This preserves the two
+opposite packet phases. The minimizing derivative on \(B\) is
+independent of \(\epsilon\). Extending it by zero outside gives an
+\(H^1\) amplitude; if globally smooth phases flat at the bridge
+endpoints are required, the same value is the infimum. Indeed replace
+\(g^{-2}\) in the derivative by \(\chi_\delta g^{-2}\), where
+\(0\le\chi_\delta\le1\) is smooth, vanishes near the endpoints and tends
+to one in the interior, and normalize its integral to \(\eta\).
+Dominated convergence gives (133) as \(\delta\downarrow0\). At fixed
+\(\delta\), all phase derivatives are fixed and finite, as required for
+§8.20's local-jet comparison.
+
+For every such interpolation, not just the original \(\chi\) in (125),
+its multiplication by \(u\) still gives \(\psi_-\). Consequently the
+same \(2\epsilon\) amplitude bound and (128)'s
+\(\operatorname{TV}\ge\Delta_T-4\epsilon\) hold in the supplied free
+reference. Thus making the bridge optimally cheap preserves the
+predictive phase witness. A history cannot infer the missing datum from
+its bridge energy alone. The constant current in (131) is a static
+minimizing profile; outside the connector it supplies neither a
+continuity equation for the whole body nor apparatus dynamics.
+
+The exact reconstruction estimate also identifies its conditioning. At
+fixed \(\rho\) an error \(\delta j\) in the current gives
+\[|\delta\eta|\le\frac m\hbar\sqrt{R_B}
+       \left(\int_B\frac{|\delta j|^2}{\rho}dq\right)^{1/2}.
+\tag{134}\] Equality occurs for a constant current error. For (133) this
+sharp factor grows as \(n_\epsilon\sqrt{R_{B,g}}/\epsilon\). The bound
+defines a weighted data norm, not an operational instrument cost. If an
+additional premise supplied \(\rho\ge\rho_*>0\) on a bridge of length
+\(\ell\), (131) would instead give
+\(E_B\ge\hbar^2\rho_*\eta^2/(2m\ell)\). The positive-density family
+alone supplies no uniform \(\rho_*\). Even such a conditional energy
+bound would not select a universal action unit or its positivity.
+
+\textbf{What an unread label must retain when currents are present.}
+Extend (119) to a finite ensemble of smooth positive densities and real
+smooth phases \((\rho_j,\theta_j)\) with weights \(w_j\) and finite
+kinetic energies. Put \(\rho=\sum_jw_j\rho_j\), \(a_j=\theta_j'\), and
+\(\bar a(q)=\sum_jw_j\rho_j(q)a_j(q)/\rho(q)\). On the line, where
+\(\bar a\) is locally integrable, integrate it to obtain a phase for the
+descriptor with this density and averaged current. With
+\(\sigma_j=-\partial_q\log\rho_j\), \[\begin{aligned}
+\sum_jw_jE_{\rm kin}[\rho_j,\theta_j]
+ -E_{\rm kin}[\rho,\bar\theta]
+ &=\frac{\hbar^2}{8m}\int\rho\,
+        \operatorname{Var}(\sigma_J\mid Q=q)dq\\
+ &\quad+\frac{\hbar^2}{2m}\int\rho\,
+        \operatorname{Var}(a_J\mid Q=q)dq\ge0,
+\qquad\bar\theta'=\bar a.
+\end{aligned}\tag{135}\] Here
+\(E_{\rm kin}[\rho,\theta]=\hbar^2 I(\rho)/(8m)
++\hbar^2\int\rho\theta'^2/(2m)\). The first term in (135) is exactly
+(119), with \(\hbar=2\kappa\); the second is the conditional-variance
+identity for phase gradients. Passive forgetting retains
+\(\sum_jw_jE_{\rm kin}[\rho_j,\theta_j]\). Replacing the ensemble by its
+density/current descriptor resets both displayed excesses. Equation
+(135) supplies their amounts, without identifying that descriptor as the
+correct physical state after forgetting.
+
+These excesses still omit relative constants between separated packets:
+in (120) all local gradients and densities coincide, while averaging the
+two preparations erases the off-diagonal coherence in (123). For fixed
+smooth positive-tail interpolations their local excesses are only
+\(O(\epsilon^2)\) on the bridge. The conditional energy accounting and
+the retained phase history therefore impose different obligations.
+
+The next physical mechanism must carry phase together with population or
+apparatus data through the weakening connector, then give a rule for
+reunion and for unread labels. Equations (132)--(135) supply exact cut
+and energy tests for that rule. Abandon a proposal that reconstructs
+phase uniformly from energy alone, silently assumes a density lower
+bound, or resets unread ensemble energy. A model that merely assumes the
+supplied free evolution has not discharged the physical history
+obligation. Positivity and calibration remain open.
+
 \subsection{9. Consequence for STATE}\label{consequence-for-state}
 
 The Newton task advances from testing stationary radiation to deriving
@@ -3131,11 +3276,15 @@ witness (122) showing that even all local jets and Fisher data omit
 predictive coherence, and closes the two-packet reference with (123).
 Section 8.20 shows that positive tails restore exact reconstruction but
 not uniform local-data stability (128); (129) supplies an additive
-bridge-phase memory with exact insertion composition. The Gaussian
-preparation restriction cannot be promoted to a universal classical
-recording law by canonical motion alone. Next Newton lemma: a physical
-preparation-and-record history rule carrying this coherence through
-separation and reunion, including vanishing-tail limits, while
+bridge-phase memory with exact insertion composition. Section 8.21
+computes its least phase-gradient energy (133), exact spatial reduction
+(132) and sharp current conditioning (134). Unread histories retain both
+score and phase-gradient kinetic excesses (135). The small bridge
+coefficient supplies no physical rule for phase transport or reunion.
+The Gaussian preparation restriction cannot be promoted to a universal
+classical recording law by canonical motion alone. Next Newton lemma: a
+physical preparation-and-record history rule carrying this coherence
+through separation and reunion, including vanishing-tail limits, while
 accounting for (117), (119); reject a local-only descriptor, imported
 quantum dynamics or an unexcluded zero branch. Alternate to weak-strip
 gauge background sources. Newton remains the current research emphasis.

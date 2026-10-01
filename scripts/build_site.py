@@ -205,16 +205,19 @@ def rewrite_links(md, slug_set, note_prefix=""):
         target, frag = m.group(1), m.group(2) or ""
         if target.startswith(("http://", "https://", "mailto:", "#")):
             return m.group(0)
+        # GitHub retains a heading's initial section number; Pandoc's default
+        # HTML identifier drops it. Preserve external/source fragments above.
+        note_frag = re.sub(r"^#\d+-", "#", frag)
         if target.startswith("../"):
             rel = target[3:]
             if rel.startswith("notes/"):
                 stem = Path(rel).stem
                 if stem in slug_set:
-                    return f"]({note_prefix}{stem}.html{frag})"
+                    return f"]({note_prefix}{stem}.html{note_frag})"
             return f"]({BLOB}/{rel})"
         stem = Path(target).stem
         if target.endswith(".md") and stem in slug_set:
-            return f"]({note_prefix}{stem}.html{frag})"
+            return f"]({note_prefix}{stem}.html{note_frag})"
         return f"]({BLOB}/notes/{target})"
     return LINK.sub(sub, md)
 
