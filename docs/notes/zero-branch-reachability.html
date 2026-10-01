@@ -1037,21 +1037,25 @@ regular value <span class="math inline">\(x\)</span> of <span
 class="math inline">\(F_t\)</span>, with preimages <span
 class="math inline">\(q_a\)</span> in the support and <span
 class="math inline">\(F_t&#39;(q_a)\neq0\)</span>, it has the density
-<span class="math inline">\(\sum_aw(q_a)/|F_t&#39;(q_a)|\)</span>, and
-at a critical value it is singular.</p>
+<span class="math inline">\(\sum_aw(q_a)/|F_t&#39;(q_a)|\)</span>; at an
+isolated nondegenerate fold with positive launch weight it has a
+one-sided inverse-square-root singularity, and at other critical values
+its behaviour depends on the degeneracy and on the weight.</p>
 <p>For <span class="math inline">\(h&gt;0\)</span> attach the swarm as
 the mixture <span class="math display">\[\varrho_h=\int
 w(c)\,|\varphi^h_c\rangle\langle\varphi^h_c|\,dc,\qquad
 \varphi^h_c(q)=(2\pi\sigma_h^2)^{-1/4}
 \exp\Big[-\frac{(q-c)^2}{4\sigma_h^2}+\frac{i\,p_0(c)(q-c)}{h}\Big],\tag{15}\]</span>
-coherent states centred at the swarm’s phase points with position width
-<span class="math inline">\(\sigma_h\)</span> and momentum width <span
-class="math inline">\(h/(2\sigma_h)\)</span>, both vanishing with <span
-class="math inline">\(h\)</span>: <span
+coherent states in the sense of minimum-uncertainty Gaussian packets,
+squeezed relative to any fixed oscillator, centred at the swarm’s phase
+points with position width <span class="math inline">\(\sigma_h\)</span>
+and momentum width <span class="math inline">\(h/(2\sigma_h)\)</span>,
+both vanishing with <span class="math inline">\(h\)</span>: <span
 class="math inline">\(\sigma_h\to0\)</span> and <span
 class="math inline">\(h/\sigma_h\to0\)</span>, for instance <span
-class="math inline">\(\sigma_h^2=h\ell\)</span> with a fixed length
-<span class="math inline">\(\ell\)</span>. The Wigner function of <span
+class="math inline">\(\sigma_h^2=hL_*/P_*\)</span> with a fixed length
+<span class="math inline">\(L_*\)</span> and a fixed momentum <span
+class="math inline">\(P_*\)</span>. The Wigner function of <span
 class="math inline">\(\varphi^h_c\)</span> is the Gaussian with mean
 <span class="math inline">\((c,p_0(c))\)</span> and covariance <span
 class="math inline">\(\Sigma_h=\mathrm{diag}(\sigma_h^2,\,h^2/4\sigma_h^2)\)</span>;
@@ -1062,10 +1066,13 @@ class="math inline">\(\mu_\Lambda\)</span>. So (15) is the same
 determinate swarm, attached without coherence between centres.</p>
 <p><strong>Theorem 5 (coherence necessity).</strong> Under the setting
 above, at every fixed <span class="math inline">\(t\)</span> put <span
-class="math inline">\(s_t(h)^2=M_{11}^2\sigma_h^2+M_{12}^2h^2/(4\sigma_h^2)\)</span>,
-so that <span class="math inline">\(s_t(h)\to0\)</span>. Then: (a) the
-complete coordinate record of (15) is exactly <span
-class="math display">\[\rho_h(x,t)=\int
+class="math inline">\(s_t(h)^2=M_{11}^2\sigma_h^2+M_{12}^2h^2/(4\sigma_h^2)\)</span>;
+then <span class="math inline">\(s_t(h)&gt;0\)</span>, since the first
+row of the symplectic <span class="math inline">\(M_t\)</span> cannot
+vanish, and <span class="math inline">\(s_t(h)\to0\)</span> as <span
+class="math inline">\(h\to0\)</span> at each fixed <span
+class="math inline">\(t\)</span>. Then: (a) the complete coordinate
+record of (15) is exactly <span class="math display">\[\rho_h(x,t)=\int
 w(c)\,N\big(x;\,F_t(c),\,s_t(h)^2\big)\,dc,\tag{16}\]</span> a positive
 density with no oscillatory term; (b) <span
 class="math inline">\(\rho_h(\cdot,t)\to(F_t)_*(w\,dc)\)</span> weakly
@@ -1076,25 +1083,46 @@ class="math inline">\(w\)</span> continuous, <span
 class="math display">\[\rho_h(x,t)\longrightarrow\sum_a\frac{w(q_a)}{|F_t&#39;(q_a)|}
 \qquad(h\to0),\tag{17}\]</span> Newton’s branch-weighted density, the
 convergence being uniform on compact sets of regular values; at a
-critical value both <span class="math inline">\(\rho_h\)</span> and the
-classical density diverge; (c) in the setting of Theorem 3, inertia with
-<span class="math inline">\(w=a^2\)</span> inside the fold interval, the
-incoherent attachment converges on the three-stream interval to <span
+critical value the weak convergence still holds, while the pointwise
+behaviour depends on the degeneracy and the launch weight: at an
+isolated nondegenerate fold <span
+class="math inline">\(F_t&#39;&#39;(q_c)\neq0\)</span> with <span
+class="math inline">\(w(q_c)&gt;0\)</span> the local contribution to
+<span class="math inline">\(\rho_h\)</span> scales as a positive
+constant times <span class="math inline">\(s_t(h)^{-1/2}\)</span> and
+the classical density has a one-sided <span
+class="math inline">\(|x-x_c|^{-1/2}\)</span> singularity, whereas a
+weight vanishing at the fold can make both finite; (c) in the setting of
+Theorem 3, inertia with <span class="math inline">\(w=a^2\)</span>,
+<span class="math inline">\(\int a^2=1\)</span>, on any regular record
+interval inside the fold interval carrying exactly <span
+class="math inline">\(K\ge2\)</span> illuminated arrivals, the
+incoherent attachment converges to <span
 class="math inline">\(\sum_aa(q_a)^2/|1+p_0&#39;(q_a)t/m|\)</span>,
-where the coherent attachment (5) has no limit unless cross amplitudes
-cancel. The two attachments have the same classical limit on smeared
-records, by Theorem 2(ii), and differ only in the complete record. The
-gap of Theorems 2–4 therefore requires coherence between the launch
-points of the crossing streams, and the coherence-length factor <span
-class="math inline">\(e^{-\Delta q_0^2/(8\sigma_h^2)}\)</span> of §3c
-tends to zero along (15).</p>
-<p><em>Proof.</em> (a) For <span class="math inline">\(\deg
-V\le2\)</span> the Wigner function of every state is transported by the
-classical affine flow (<a
-href="principia-fifth-postulate.html">fifth-postulate note, Theorem
-A(b)</a>), so the Wigner function of <span
-class="math inline">\(U_h(t)\varphi^h_c\)</span> is the Gaussian with
-mean <span class="math inline">\(\Phi_t(c,p_0(c))\)</span> and
+where the coherent attachment (5) converges only under the frequency
+condition of Theorem 2(i), with the equal-action value <span
+class="math inline">\(B_0\)</span> when it does. The two attachments are
+different states at finite <span class="math inline">\(h\)</span>, with
+the same classical limit on smeared records by Theorem 2(ii); they
+differ in the complete record. Their difference in coherence is exact:
+the initial kernel of (15) obeys <span
+class="math inline">\(|\varrho_h(q,q&#39;)|\le\|w\|_\infty
+e^{-(q-q&#39;)^2/(8\sigma_h^2)}\)</span>, so the coherence between any
+two fixed distinct launch points vanishes as <span
+class="math inline">\(\sigma_h\to0\)</span>, while the state (5) has
+<span class="math inline">\(|\psi_0(q)\psi_0(q&#39;)|
+=a(q)a(q&#39;)\)</span>. The gap of Theorems 2–4 therefore requires
+coherence between the launch points of the crossing streams.</p>
+<p><em>Proof.</em> (a) For real quadratic <span
+class="math inline">\(V\)</span> the Moyal corrections to the Wigner
+equation vanish identically, so every Wigner function obeys <span
+class="math inline">\(\partial_tW+(p/m)\partial_qW-V&#39;(q)\partial_pW=0\)</span>
+and is transported by the classical affine flow, <span
+class="math inline">\(W_t=W_0\circ\Phi_{-t}\)</span>; this is the
+content of <a href="principia-fifth-postulate.html">Theorem A(b) of the
+fifth-postulate note</a> read on states. Hence the Wigner function of
+<span class="math inline">\(U_h(t)\varphi^h_c\)</span> is the Gaussian
+with mean <span class="math inline">\(\Phi_t(c,p_0(c))\)</span> and
 covariance <span class="math inline">\(M_t\Sigma_hM_t^{\sf T}\)</span>,
 whose position marginal is the Gaussian <span
 class="math inline">\(N(x;F_t(c),s_t(h)^2)\)</span> with <span
@@ -1138,24 +1166,58 @@ w(F_t^{-1}(u))\,N(x;u,s_t^2)\,
 \frac{du}{|F_t&#39;(F_t^{-1}(u))|}\to\frac{w(q_a)}{|F_t&#39;(q_a)|}\)</span>
 by continuity of the integrand at <span
 class="math inline">\(u=x\)</span>. Summing over <span
-class="math inline">\(a\)</span> gives (17). The estimates are uniform
-for <span class="math inline">\(x\)</span> in a compact set of regular
-values, on which <span class="math inline">\(\eta\)</span> and the
-neighbourhoods can be chosen uniformly. At a critical value the
-substitution fails and the Gaussian mass near the fold scales like <span
-class="math inline">\(s_t^{-1/2}\)</span>, while the classical density
-is infinite there. (c) For inertia <span
+class="math inline">\(a\)</span> gives (17). For uniformity on a compact
+set <span class="math inline">\(R\)</span> of regular values, cover the
+compact set <span
+class="math inline">\(F_t^{-1}(R)\cap\operatorname{supp}w\)</span> by
+finitely many inverse charts of <span
+class="math inline">\(F_t\)</span>, on which the local densities <span
+class="math inline">\(w\circ F_t^{-1}/|F_t&#39;\circ F_t^{-1}|\)</span>
+are uniformly continuous, and choose one <span
+class="math inline">\(\eta&gt;0\)</span> separating <span
+class="math inline">\(R\)</span> from the images of the remaining
+compact part of the support, which contains no preimage of <span
+class="math inline">\(R\)</span>; the tail bound is then uniform and the
+approximate identity converges uniformly on <span
+class="math inline">\(R\)</span>. At a critical value the substitution
+fails; the weak convergence of (b) is unaffected. At an isolated
+nondegenerate fold with <span
+class="math inline">\(w(q_c)&gt;0\)</span>, <span
+class="math inline">\(F_t(c)-x_c\simeq\tfrac12F_t&#39;&#39;(q_c)(c-q_c)^2\)</span>,
+and the substitution <span
+class="math inline">\(c-q_c=s_t^{1/2}u\)</span> in (16) gives a local
+contribution <span
+class="math inline">\(w(q_c)\,s_t^{-1/2}\int(2\pi)^{-1/2}e^{-F_t&#39;&#39;(q_c)^2u^4/8}du+o(s_t^{-1/2})\)</span>,
+while the classical density near <span
+class="math inline">\(x_c\)</span> is <span
+class="math inline">\(w(q_c)|2/(F_t&#39;&#39;(q_c)(x-x_c))|^{1/2}\)</span>
+on the covered side. If instead <span class="math inline">\(w\)</span>
+vanishes at the fold, both can stay finite: for free motion with <span
+class="math inline">\(p_0(c)=(c^2-c)m/t\)</span>, so that <span
+class="math inline">\(F_t(c)=c^2\)</span>, and <span
+class="math inline">\(w(c)=Cc^2\chi(c)\)</span> with a bump <span
+class="math inline">\(\chi\)</span>, the classical density near <span
+class="math inline">\(x_c=0\)</span> is <span
+class="math inline">\(C\sqrt x\)</span> and <span
+class="math inline">\(\rho_h(0,t)=O(s_t^{1/2})\to0\)</span>. (c) For
+inertia <span
 class="math inline">\(M_t=\begin{pmatrix}1&amp;t/m\\0&amp;1\end{pmatrix}\)</span>,
 so <span
 class="math inline">\(s_t(h)^2=\sigma_h^2+t^2h^2/(4m^2\sigma_h^2)\to0\)</span>
 and <span class="math inline">\(F_t&#39;(c)=1+p_0&#39;(c)t/m\)</span>;
-the regular values are the points off the two fold values, and (17) is
-the stated three-branch density. Theorem 3(b) gives the coherent
-attachment’s behaviour, Theorem 2(ii) the common smeared limit, and the
-coherence-length proposition the factor <span
-class="math inline">\(e^{-\Delta q_0^2/(8\sigma_h^2)}\)</span>, which
-tends to zero as <span class="math inline">\(\sigma_h\to0\)</span>.
-<span class="math inline">\(\square\)</span></p>
+on a regular interval with <span class="math inline">\(K\)</span>
+illuminated arrivals, (17) is the stated <span
+class="math inline">\(K\)</span>-branch density. Theorem 3(b) and
+Theorem 2(i) give the coherent attachment’s behaviour and Theorem 2(ii)
+the common smeared limit. For the kernel bound, (15) gives <span
+class="math inline">\(|\varphi^h_c(q)\varphi^h_c(q&#39;)|=(2\pi\sigma_h^2)^{-1/2}
+e^{-[(q-c)^2+(q&#39;-c)^2]/4\sigma_h^2}\)</span>, and <span
+class="math inline">\((q-c)^2+(q&#39;-c)^2=2(c-\bar
+q)^2+\tfrac12(q-q&#39;)^2\)</span> with <span class="math inline">\(\bar
+q\)</span> the midpoint; integrating the Gaussian in <span
+class="math inline">\(c\)</span> against <span
+class="math inline">\(w\le\|w\|_\infty\)</span> gives the bound. <span
+class="math inline">\(\square\)</span></p>
 <p><em>Scope.</em> The theorem is exact for quadratic forces, which
 include the free fold of Theorem 3 and Hooke’s laboratory record. For a
 general smooth force the same conclusion, in the weak form of (b),
@@ -1164,13 +1226,14 @@ states along classical trajectories [<span class="citation"
 data-cites="Hepp1974">@Hepp1974</span>; metadata] or from the transport
 of Wigner measures [<span class="citation"
 data-cites="LionsPaul1993">@LionsPaul1993</span>; metadata], under the
-hypotheses those theorems place on the potential; Kepler’s <span
-class="math inline">\(1/r\)</span> lies outside the usual symbol
-classes, and the angle-record model of Theorem 4 with a polynomially
-controlled <span class="math inline">\(E\)</span> lies inside them.
-Those extensions are cited, not proved here. What is proved is the
-statement the thesis needs: in the very setting where the coherent
-attachment shows the gap, the incoherent attachment of the same
+hypotheses those theorems place on the potential, the flow and the
+admissible squeezing of <span class="math inline">\(\sigma_h\)</span>;
+Kepler’s <span class="math inline">\(1/r\)</span> lies outside the usual
+symbol classes, and the angle-record model of Theorem 4 with a
+polynomially controlled <span class="math inline">\(E\)</span> lies
+inside them. Those extensions are cited, not proved here. What is proved
+is the statement the thesis needs: in the very setting where the
+coherent attachment shows the gap, the incoherent attachment of the same
 determinate swarm does not.</p>
 <h2 id="all-time-invariants">5. All-time invariants</h2>
 <p>Two quantities already in the corpus show the other non-commuting
