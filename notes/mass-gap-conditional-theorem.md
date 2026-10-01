@@ -1,132 +1,493 @@
-# The map as one conditional theorem: two hypotheses, both finite in kind, and an explicit lower bound $m\ge\hbar c\,\gamma'/a_*$
+# The map as one conditional theorem: H1 and H2 give a volume-uniform lattice gap bound, and continuum existence stays a separate obligation
 
-Everything this programme has established about the $SU(3)$ mass gap
-can be stated as a single conditional theorem. Its two hypotheses are
-the two things not proved here: control of the blocking steps from the
-weak side down to the coupling where the correlation length is one
-lattice unit, and a certified mixing statement at that one coupling on
-one finite box. Its conclusion is the Jaffe--Witten gap along the
-trajectory with an explicit lower bound,
-$$m\ \ge\ \frac{\hbar c\,\gamma'}{a_*},$$
-where $a_*$ is the physical lattice spacing at which the trajectory
-reaches the verified coupling, about $0.1$ to $0.17$ fm by the published
-scale, and $\gamma'$ is the certified decay rate per lattice unit there.
-Any positive $\gamma'$ gives a positive gap, and the data say the true
-rate is about $0.8$. Constants explicit; nothing promoted.
+Later corrections: [reasons to stop](reasons-to-stop-as-research.md) rejects certification of H2 at $\beta_W\simeq6$ by any certified method known here; [the bands note](confinement-scale-bands.md) (correction of 2026-10-02) makes box sides $3$--$5$ trial sizes, withdraws the reduction to three open blocking steps and corrects the energy conversion; [the position note](mass-gap-position.md) (correction of 2026-10-02) fixes the strong-coupling threshold set; [the October 1 audit](corpus-audit-2026-10-01.md) §3 lists this note's overclaims (relevant passages read).
+
+> **Correction (2026-10-02).** A referee report and the October 1 audit
+> found that the conclusion outran the hypotheses. The changes, made in
+> place below:
+>
+> 1. *Scope.* "Nothing else is missing", "a proof of the mass gap for
+>    $SU(3)$ consists of H1 and H2", "the repository's formal endpoint"
+>    and "progress ... on H1 or H2, and nothing else" are **withdrawn**.
+>    H1 and H2 yield lattice statements: decay of correlations and a
+>    volume-uniform gap of the Wilson transfer matrix at each spacing of
+>    the trajectory, and the limit of that bound. Convergence of
+>    Schwinger functions, the Osterwalder--Schrader axioms, the
+>    infinite-volume continuum theory, nontriviality and T3 are separate
+>    obligations. The former item 4 is split into a lattice statement
+>    (item 4) and a continuum statement conditional on a separately
+>    constructed limit (item 5, hypothesis (E)).
+> 2. *Prefactors.* The constants $C_k$ may grow with $K(a_0)$. The proof
+>    now shows why that is harmless: at fixed $a_0$ the spectral theorem
+>    turns decay with any finite prefactor into a gap whose prefactor is
+>    $\|\psi\|^2$, and that prefactor survives a continuum limit.
+> 3. *H1.* The former H1 bounded fluctuation covariances only for
+>    observables local on the $k$-th lattice. The proof applied it to
+>    conditional expectations of fine observables, which are only
+>    quasi-local there, and its coarse remainder needed a locality
+>    property that was never assumed. H1 now states (a) the fluctuation
+>    bound for those projections, (b) quasi-locality of the coarse
+>    projection, and (c) a gauge-invariant Gibbs representation on
+>    periodic boxes. The cross terms of the proof vanish exactly
+>    (Lemma 2), replacing "bounded by the same rates".
+> 4. *H2 and periodic boxes.* Strong mixing of $\Phi_0$ on one box with
+>    a robustness margin gives no decay in other volumes without a
+>    further theorem. H2 now assumes strong mixing for every
+>    gauge-invariant interaction of the $r$-ball on every coarse periodic
+>    box of side at least $L_0$, and Lemma 1 derives decay there. The
+>    reduction to one finite box is a finite-size criterion
+>    (Dobrushin--Shlosman; Martinelli--Olivieri) whose transfer to link
+>    variables with $SU(3)$ spins, exponentially decaying interactions
+>    and periodic boxes is **assumed, not derived**. The reading "on the
+>    gauge-invariant content of $W$, the small Wilson loops" is replaced
+>    by an exact statement, Lemma 0, whose invariant $\sigma$-algebra
+>    includes boundary-attached open lines. Box sides $3$--$5$ are trial
+>    sizes, and certification at $\beta_W\simeq6$ is out of reach of
+>    every certified method known here. Item 1 no longer claims a unique
+>    infinite-volume Gibbs state.
+> 5. *Numbers.* The glueball energy, printed as
+>    $1.66\,\hbar c\,{\rm fm}^{-1}$, is
+>    $8.42\,\hbar c\,{\rm fm}^{-1}\simeq1.66$ GeV, the value behind
+>    $\mu_{0^{++}}a\simeq0.78$. The spacing $a_*$ is $0.093$ fm at
+>    $\beta_W=6.0$ and $0.17$ fm at $\beta_W=5.7$ with $r_0=0.5$ fm; the
+>    former lead's "$0.1$ to $0.17$ fm" rounds the first figure and §4's
+>    $0.093$ fm is the same endpoint. These spacings and the rate $0.78$
+>    are continuum-scaled estimates, and identifying $a_*$ with a
+>    published spacing is heuristic.
+> 6. *What is in place.* "Both hypotheses are finite in kind" and H1's
+>    "non-perturbative part is three steps" are **withdrawn**,
+>    following the bands note. "T1, T2 ... all in place with explicit
+>    constants" is corrected: the volume-uniform Kogut--Susskind gap rests
+>    on Yarotsky's existential threshold, and the explicit rigorous
+>    thresholds belong to the Wilson transfer matrix, $g^2>444$
+>    (Dobrushin) and $g^2\ge1056$ (polymer expansion, all
+>    representations), with $176$ the leading-activity figure only. The
+>    theorem uses none of them.
+
+The programme's pure-$SU(3)$ map can be stated as one conditional
+theorem about the Wilson lattice theory. Hypothesis H1 controls the
+blocking steps from the bare spacing $a_0$ up to a spacing $a_*$, where
+the effective interaction lies within a radius $r$ of a reference
+interaction $\Phi_0$. Hypothesis H2 asks every gauge-invariant
+interaction of that neighbourhood to be strongly mixing, uniformly over
+periodic boxes. The conclusion is a volume-uniform lower bound on the
+gap of the Wilson transfer matrix at each spacing of the trajectory,
+$$\Delta(a_0)\ \ge\ \frac{\hbar c}{a_0}\cdot\frac{\min(\gamma_*,\gamma')}{2^{K(a_0)}},
+\qquad
+\liminf_{a_0\to0}\Delta(a_0)\ \ge\ \frac{\hbar c\,\min(\gamma_*,\gamma')}{a_*},$$
+where $\gamma_*$ is the decay rate of H1, $\gamma'$ the mixing rate of
+H2, both per coarse lattice unit, and $2^{K(a_0)}a_0\to a_*$. If
+$\Phi_0$ is the Wilson interaction at $\beta_W$ between $5.7$ and $6.0$,
+then $a_*$ is, heuristically, the published spacing there: from
+$0.17$ fm down to $0.093$ fm with $r_0=0.5$ fm.
+
+H1 and H2 leave the continuum construction open. They give no
+convergence of Schwinger functions as $a_0\to0$, no
+Osterwalder--Schrader axioms (Euclidean invariance in particular), no
+infinite-volume continuum theory and no nontriviality. The same number
+bounds the gap of a continuum Hamiltonian only for a continuum limit
+constructed separately, with the axioms, in the sense of hypothesis (E)
+of §3. The upper side $m<\infty$ needs nontriviality, and T3 is not
+implied. Neither hypothesis is available today: no blocking step of H1
+is controlled with explicit constants, and H2 has no feasible certified
+route at $\beta_W\simeq6$. Constants explicit; nothing promoted.
 
 ## 1. Setting
 
-Wilson measure $\mu_{\beta_0}$ on the links of $(a_0\mathbb Z)^4$ at bare
-coupling $\beta_0=6/g_0^2$, in a periodic box of any size. A block-spin
-map $\mathcal B$ of block size $2$: a gauge-covariant assignment of a
-coarse link variable to each block, measurable in the fine links, such
-that coarse Wilson loops are functions of fine Wilson loops. The
-renormalized measures $\mu^{(k)}=\mathcal B^k\mu_{\beta_0}$ live on the
-links of $(2^ka_0\mathbb Z)^4$ and, by construction, reproduce exactly
-the correlations of coarse observables. Write $\Phi^{(k)}$ for the
-renormalized interaction when it exists, and
-$\|\Phi\|_\kappa=\sup_\ell\sum_{X\ni\ell}e^{\kappa\operatorname{diam}X}\|\Phi_X\|_\infty$
-for the interaction norm with range weight $\kappa>0$.
+*Measures.* The Wilson measure $\mu_{\beta_0}$ lives on the links of a
+periodic box in $(a_0\mathbb Z)^4$ at bare coupling
+$\beta_0=6/g_0^2$. A block-spin map $\mathcal B$ of block size $2$ is a
+gauge-covariant assignment of a coarse link variable to each link of
+the coarse lattice, measurable in the fine links, such that coarse
+Wilson loops are functions of fine Wilson loops. The renormalized
+measures $\mu^{(k)}=\mathcal B^k\mu_{\beta_0}$ live on the links of the
+periodic coarse lattices of spacing $2^ka_0$ and reproduce exactly the
+correlations of coarse observables. Box sides are multiples of
+$2^Ka_0$, so that every level tiles.
+
+*Conditional expectations.* Let $\mathcal G_k$ be the $\sigma$-algebra
+generated by the level-$k$ links. Then $\mathcal G_0$ is generated by
+all fine links, and $\mathcal G_{k+1}\subseteq\mathcal G_k$ because
+level-$(k+1)$ links are functions of level-$k$ links. Write
+$E_k=\mathbb E_{\mu_{\beta_0}}[\,\cdot\,|\,\mathcal G_k]$ and
+$D_k=E_k-E_{k+1}$. For a function $F$ of level-$k$ links, $E_{k+1}F$ is
+the conditional expectation given the coarse links, written $\bar F$ in
+the earlier version.
+
+*Distances and supports.* Distances are $\ell^\infty$ distances between
+link midpoints, measured on the torus in units of the lattice
+concerned. A local observable is a bounded measurable function of the
+links in a finite set, its support $S_F$. For a set $S$ of fine links,
+$S^{(K)}$ is the set of level-$K$ links within level-$K$ distance
+$c_{\mathcal B}$ of the rescaled set $2^{-K}S$, where $c_{\mathcal B}$ is
+a constant of the block map. Fine sets at fine distance $d$ therefore
+have images at level-$K$ distance at least $d/2^K-2c_{\mathcal B}$.
+
+*Interactions.* An interaction $\Phi=(\Phi_X)$ assigns a bounded
+function of the links of $X$ to each finite set $X$ of links; it is
+gauge-invariant if every $\Phi_X$ is. Its conditional Gibbs measure on
+a set $\Lambda$ of links, given a configuration $\omega$ outside
+$\Lambda$, is
+$$\mu^{\Phi,\omega}_\Lambda(dU)\ \propto\ \exp\Big[-\sum_{X\cap\Lambda\ne\emptyset}\Phi_X(U\vee\omega)\Big]\prod_{\ell\in\Lambda}dU_\ell ,$$
+with Haar measure $dU_\ell$. With range weight $\kappa>0$ the
+interaction norm is
+$\|\Phi\|_\kappa=\sup_\ell\sum_{X\ni\ell}e^{\kappa\operatorname{diam}X}\|\Phi_X\|_\infty$,
+using the torus diameter on a periodic box. Total variation is
+$\|\mu-\nu\|_{\rm TV}=\sup_A|\mu(A)-\nu(A)|$, so that
+$|\mu(f)-\nu(f)|\le2\|f\|_\infty\|\mu-\nu\|_{\rm TV}$ for bounded $f$.
 
 ## 2. The hypotheses
 
-**H1 (the weak side).** There is $K=K(a_0)$ with $2^Ka_0\to a_*$ as
-$a_0\to0$, a rate $\gamma_*>0$ and constants $C_k$ such that for each
-$k<K$ and all local observables $F,G$ of the $k$-th lattice with
-supports at distance $d$ in its units,
-$$\Big|\langle F;G\rangle_{\mu^{(k)}}-\langle\bar F;\bar G\rangle_{\mu^{(k+1)}}\Big|
-\ \le\ C_k\,\|F\|_\infty\|G\|_\infty\,e^{-\gamma_*d},$$
-where $\bar F$ is the conditional expectation of $F$ given the coarse
-links; and $\Phi^{(K)}$ exists, is finite in $\|\cdot\|_\kappa$, and
-satisfies $\|\Phi^{(K)}-\Phi_0\|_\kappa\le r$ for a reference
-interaction $\Phi_0$ and radius $r$ fixed in H2.
+**H2 (uniform strong mixing near $\Phi_0$).** There are a
+gauge-invariant reference interaction $\Phi_0$ of finite range on the
+coarse links, numbers $\kappa>0$, $r>0$, $C'<\infty$, $\gamma'>0$ and an
+integer $L_0$ with the following property. Let $T$ be a coarse periodic
+box whose sides are at least $L_0$, and $\Phi$ a gauge-invariant
+interaction on $T$ with $\|\Phi-\Phi_0\|_\kappa\le r$ ($\Phi_0$
+periodized). Then for every set $\Lambda$ of links of $T$, every
+$W\subseteq\Lambda$, and every pair of configurations $\omega,\omega'$
+on $T\setminus\Lambda$ that differ only at one link $y$,
+$$\big\|\mu_\Lambda^{\Phi,\omega}\big|_W-\mu_\Lambda^{\Phi,\omega'}\big|_W\big\|_{\rm TV}\ \le\ C'\,|W|\,e^{-\gamma'\,d(W,y)} .$$
+The proof below uses this only for $\Lambda$ the complement in $T$ of a
+finite set.
 
-In words: at every step before the last, the fluctuations integrated
-out cluster exponentially at the scale of the step, and the trajectory
-arrives within a fixed distance of a reference interaction. For the
-steps at which the effective coupling is small this is the content of
-the constructive programme, perturbative in kind and unavailable with
-constants; for the last three, in which $\xi/a$ passes from about $10$
-to about $1$, it is the open problem
-([bands note](confinement-scale-bands.md) §2b).
+**H1 (the weak side).** Along a family of bare couplings with spacings
+$a_0\to0$ (the trajectory) there are integers $K=K(a_0)$ with
+$2^Ka_0\to a_*$ and a number $\gamma_*>0$, with
+the following properties on every fine periodic box whose sides are
+multiples of $2^Ka_0$ and at least $2^KL_0a_0$ ($\Phi_0$, $\kappa$, $r$,
+$L_0$ as in H2). The constants $C_k(F,G)$ and $B(F)$ may depend on
+$a_0$, $k$ and the observables, but not on the box.
 
-**H2 (one box).** The reference interaction $\Phi_0$ satisfies the
-strong-mixing condition on a box $V$ of side $R$: for every $W\subseteq V$,
-every boundary link $y$ and boundary conditions $\omega,\omega'$
-differing at $y$,
-$$\big\|\mu_V^{\omega}\big|_W-\mu_V^{\omega'}\big|_W\big\|_{\rm TV}\ \le\ C\,|W|\,e^{-\gamma\,d(W,y)},$$
-with a margin such that every $\Phi$ with $\|\Phi-\Phi_0\|_\kappa\le r$
-satisfies the same condition with some $C',\gamma'>0$. The natural
-$\Phi_0$ is the Wilson interaction at $\beta_W\simeq6$, where the
-published correlation length is about one lattice unit, or, better, a
-nearby interaction with a small negative adjoint term, which moves
-$\Phi_0$ away from the endpoint of the fundamental--adjoint first-order
-line where the scalar channel softens (precision of 2026-09-23,
-[openings note](mass-gap-openings.md) §1); $R$ is $3$
-to $5$; the condition is to be read on the gauge-invariant content of
-$W$, the small Wilson loops, since single-link marginals of interior
-links are Haar ([bands note](confinement-scale-bands.md)).
+- (a) *Fluctuations.* For $k<K$ and local fine $F,G$ at fine distance
+  $d$,
+  $$\big|\mathbb E_{\mu_{\beta_0}}\big[(D_kF)(D_kG)\big]\big|\ \le\ C_k(F,G)\,e^{-\gamma_*d/2^k}.$$
+- (b) *Quasi-locality of the coarse projection.* For local fine $F$ and
+  every integer $\ell\ge0$ there is a function $F_\ell$ of the level-$K$
+  links within level-$K$ distance $\ell$ of $S_F^{(K)}$ with
+  $\|E_KF-F_\ell\|_\infty\le B(F)\,e^{-\gamma_*\ell}$.
+- (c) *Gibbs representation.* $\mu^{(K)}$ has density proportional to
+  $\exp[-\sum_X\Phi^{(K)}_X]$ with respect to Haar measure on the
+  coarse box, for a gauge-invariant interaction $\Phi^{(K)}$ with
+  $\|\Phi^{(K)}-\Phi_0\|_\kappa\le r$.
+
+For $F,G$ functions of level-$k$ links, the left side of (a) equals
+$\langle F;G\rangle_{\mu^{(k)}}-\langle\bar F;\bar G\rangle_{\mu^{(k+1)}}$,
+the quantity of the earlier H1. That version stopped at such $F,G$; the
+proof applies (a) to $E_kF$ for fine $F$, which is a function of
+level-$k$ links but only quasi-local on that lattice. In words: the
+fluctuation added at each step clusters exponentially at the scale of
+that step, the coarse projection of a local observable is
+exponentially well localized at the final scale, and the trajectory
+arrives within distance $r$ of $\Phi_0$.
+
+*What is known about H1.* At small effective coupling, rigorous
+small-field renormalization (Balaban and others, metadata level, as
+listed in [reasons to stop](reasons-to-stop-as-research.md)) controls
+effective actions in finite volume with unspecified constants; no
+source read here derives (a)--(c) from it. For the repository's one
+explicit small-field step, a scaling estimate with crude constants puts
+the remainder threshold at $g^2\sim10^{-12}$ if an unproved order-one
+propagator decay rate holds, and at $g^2\sim10^{-35}$ at the proved
+rate ([position note](mass-gap-position.md)). The final steps, in which
+the continuum-scaled $\xi/a$ passes from about $10$ to about $1$, are
+the confinement-scale problem; $\log_210\simeq3.3$ doublings is a
+kinematic count and does not show that only these steps are open
+([bands note](confinement-scale-bands.md) §§1, 2b). Part (c) can fail
+for block maps in general: [van Enter, Fernández and
+Sokal](https://arxiv.org/abs/hep-lat/9210032) (J. Stat. Phys. 72 (1993)
+879; abstract read, as recorded in the bands note §2b) give non-Gibbsian
+images.
+
+**Lemma 0 (gauge reduction).** Let $\Phi$ be gauge-invariant, $\Lambda$
+a set of links, and $\mathsf G_\Lambda$ the group of gauge
+transformations at the sites all of whose incident links lie in
+$\Lambda$. For configurations $\omega,\omega'$ outside $\Lambda$ and
+$W\subseteq\Lambda$, the total-variation distance between the marginals
+of $\mu_\Lambda^{\Phi,\omega}$ and $\mu_\Lambda^{\Phi,\omega'}$ on $W$
+equals the supremum of
+$|\mu_\Lambda^{\Phi,\omega}(A)-\mu_\Lambda^{\Phi,\omega'}(A)|$ over
+$\mathsf G_\Lambda$-invariant events $A$ of the links of $W$.
+
+*Proof.* An element of $\mathsf G_\Lambda$ moves only links of
+$\Lambda$, leaves $\omega$ fixed, preserves Haar measure and every
+$\Phi_X$, and so preserves $\mu_\Lambda^{\Phi,\omega}$; it maps
+configurations of $W$ to configurations of $W$. For $|f|\le1$ on $W$,
+the Haar average $Pf$ of $f$ over $\mathsf G_\Lambda$ is invariant,
+satisfies $|Pf|\le1$, and has the same expectation as $f$ under both
+measures. Since the total-variation distance is half the supremum of
+$|\mu(f)-\nu(f)|$ over $|f|\le1$, the supremum may be taken over
+invariant $f$. $\square$
+
+The invariant $\sigma$-algebra contains the traces of closed loops in
+$W$ and the matrix entries of open paths in $W$ whose endpoints are
+sites with an incident link outside $\Lambda$. A selection of small
+Wilson loops is not known to generate it. So H2 is to be read on this
+whole $\sigma$-algebra, boundary-attached lines included; interior
+single-link marginals are Haar and contribute nothing
+([bands note](confinement-scale-bands.md)).
+
+*From one box to H2.* The earlier H2 asked for the mixing bound for
+$\Phi_0$ on one box $V$ of side $R$, with a margin covering the
+$r$-ball. Statements of that kind are the input of finite-size
+criteria: the Dobrushin--Shlosman constructive criterion and complete
+analyticity (*Statistical Physics and Dynamical Systems*, Birkhäuser
+1985, 347 and 371; J. Stat. Phys. 46 (1987) 983) and the strong-mixing
+theory of Martinelli and Olivieri (Commun. Math. Phys. 161 (1994) 447
+and 487), all at metadata level. They pass from a quantitative
+condition on one finite box to mixing in every volume of a class. The
+proof needs H2 as stated, in every periodic box. Applying those
+criteria here requires their transfer to link variables with $SU(3)$
+spins, to interactions with exponential tails such as $\Phi^{(K)}$, and
+to periodic boxes; this note assumes that transfer and does not derive
+it. The robustness margin itself is elementary: replacing $\Phi_0$ by
+$\Phi$ with $\|\Phi-\Phi_0\|_\kappa\le r$ changes the energy of a box
+$V$ by at most $|V|\,r$ in sup norm, hence each conditional measure on
+$V$ by at most $e^{2|V|r}-1$ in total variation
+([Dobrushin note](dobrushin-uniqueness-wilson.md), Lemma 1).
+
+*The reference interaction.* A natural $\Phi_0$ is the Wilson
+interaction at $\beta_W$ between $5.7$ and $6.0$, where the
+continuum-scaled $\xi/a$ runs from $0.70$ to $1.28$
+([bands note](confinement-scale-bands.md), table). A nearby interaction
+with a small negative adjoint term moves $\Phi_0$ away from the
+endpoint of the fundamental--adjoint first-order line, where the scalar
+channel softens (precision of 2026-09-23,
+[openings note](mass-gap-openings.md) §1). Boxes of side $R=3$ to $5$
+are trial sizes, and no sufficient size is known. For them a certified
+bound is an integral over $1728$ to $16000$ real dimensions with a
+supremum over boundary conditions (bands note §2).
+[Reasons to stop](reasons-to-stop-as-research.md) records that no
+certified method known here reaches $\beta_W\simeq6$; certified polymer
+enumeration is proved only for $\beta_W\lesssim10^{-2}$
+([position note](mass-gap-position.md), correction of 2026-10-02).
 
 ## 3. The theorem
 
-**Theorem (conditional).** Assume H1 and H2. Then for every bare
-coupling on the trajectory and every periodic volume:
+Write $\gamma_m=\min(\gamma_*,\gamma')$. A periodic box is admissible
+for $a_0$ if its sides are multiples of $2^{K(a_0)}a_0$ and at least
+$2^{K(a_0)}L_0a_0$.
 
-1. $\mu^{(K)}$ has a unique Gibbs state and truncated correlations of
-   all local observables decaying at rate at least $\gamma'$ per unit of
-   $2^Ka_0$ (Dobrushin--Shlosman; Martinelli--Olivieri);
-2. $\mu_{\beta_0}$ has truncated correlations of all local fine
-   observables decaying at rate at least
-   $\min\big(\gamma_*,\,\gamma'\big)/2^K$ per unit of $a_0$;
-3. the Wilson transfer matrix at spacing $a_0$ has a spectral gap
-   $$\Delta(a_0)\ \ge\ \frac{\hbar c}{a_0}\cdot\frac{\min(\gamma_*,\gamma')}{2^{K(a_0)}}$$
-   on the cyclic subspace of local observables, uniformly in the volume;
-4. in the continuum limit along the trajectory,
-   $$m\ \ge\ \frac{\hbar c\,\min(\gamma_*,\gamma')}{a_*}\ >\ 0 .$$
+**Theorem (conditional).** Assume H1 and H2. For every $a_0$ on the
+trajectory:
 
-*Proof.* (1) is the mixing-to-decay theorem applied to $\Phi^{(K)}$,
-which lies in the verified neighbourhood by H1 and H2. For (2), write a
-fine observable as its coarse part plus fluctuation parts step by step,
-$F=\bar F^{(K)}+\sum_{k<K}(F^{(k)}-\bar F^{(k)})$; the coarse-part
-correlations decay by (1) at rate $\gamma'$ per coarse unit, that is
-$\gamma'/2^K$ per fine unit, and the fluctuation-part correlations at
-step $k$ decay by H1 at rate $\gamma_*$ per unit of $2^ka_0$, that is
-$\gamma_*/2^k\ge\gamma_*/2^K$ per fine unit; the cross terms are bounded
-by the same rates. (3) is link reflection positivity together with the
-spectral argument of [the Wilson note](wilson-strong-coupling-explicit.md)
-§3: decay at rate $\mu$ per fine unit for all local observables forces
-the spectral measure of every local vector orthogonal to the vacuum to
-vanish above $e^{-\mu}$. (4) follows from (3) as $a_0\to0$ with
-$2^{K(a_0)}a_0\to a_*$. $\square$
+1. *Coarse decay.* On the coarse lattice of every admissible box, local
+   observables $X,Y$ at level-$K$ distance $D\ge1$ satisfy
+   $$|\langle X;Y\rangle_{\mu^{(K)}}|\ \le\ 2C'\,|S_X|\,|S_Y|\,\|X\|_\infty\|Y\|_\infty\,e^{-\gamma'D}.$$
+2. *Fine decay.* On every admissible box, local fine observables $F,G$
+   at fine distance $d$ satisfy, for every $\varepsilon\in(0,\gamma_m)$,
+   $$|\langle F;G\rangle_{\mu_{\beta_0}}|\ \le\ A_\varepsilon(F,G)\,e^{-(\gamma_m-\varepsilon)\,d/2^K},$$
+   with $A_\varepsilon(F,G)$ finite and independent of the box.
+3. *Lattice gap.* For every periodic spatial box whose side is a
+   multiple of $2^Ka_0$ and at least $2^KL_0a_0$, the Wilson transfer
+   matrix $\mathcal T=e^{-a_0H_W/\hbar c}$ satisfies, on the
+   gauge-invariant vectors orthogonal to its vacuum,
+   $$\Delta(a_0)\ \ge\ \frac{\hbar c}{a_0}\cdot\frac{\gamma_m}{2^{K(a_0)}} .$$
+4. *Along the trajectory.*
+   $\liminf_{a_0\to0}\Delta(a_0)\ge\hbar c\,\gamma_m/a_*$, uniformly over
+   the boxes of item 3.
+5. *Continuum, conditionally.* If (E) below also holds, the continuum
+   Hamiltonian satisfies $H\ge\hbar c\,\gamma_m/a_*$ on the vectors
+   orthogonal to the vacuum.
 
-The Jaffe--Witten clause $0<m<\infty$ is then (4) together with the
-upper side of [the moment-hierarchy note](moment-hierarchy-upper-bounds.md);
-T3, the ratio $m/(\hbar c\Lambda)$, is the statement that $a_*\Lambda$
-has a limit, which is the convergence of the trajectory to one curve as
-in [the finite-verification note](intermediate-region-finite-verification.md).
+**(E) Continuum existence along the trajectory.** There are a sequence
+of pairs ($a_0$, spatial box as in item 3) with $a_0\to0$, a continuum
+theory satisfying the Osterwalder--Schrader axioms with vacuum $\Omega$
+and Hamiltonian $H\ge0$, and a family $\mathcal F$ of gauge-invariant
+observables supported at positive Euclidean times, each $F$ with
+lattice approximants $F_{a_0}$, such that: with $\psi_{F,a_0}$ the
+lattice vector of $F_{a_0}$ minus its vacuum component and
+$n=\lfloor\tau/a_0\rfloor$, the inner products
+$\langle\psi_{F,a_0},\mathcal T^n\psi_{F,a_0}\rangle$ converge for every
+$\tau\ge0$ to $\langle\psi_F,e^{-\tau H/\hbar c}\psi_F\rangle$; and the
+vectors $\psi_F$, $F\in\mathcal F$, are dense in $\Omega^\perp$.
+
+H1 and H2 alone give items 1--4. Item 5 is the only continuum
+statement, and its hypothesis (E) belongs to the construction problem
+T4 of [the obligations map](mass-gap-obligations-lattice.md).
+
+**Lemma 1 (decay on a periodic box).** Let $\Phi$ satisfy the bound of
+H2 on a coarse periodic box $T$, and let $\mu$ be its Gibbs measure on
+$T$. Local $X,Y$ at distance $D\ge1$ satisfy
+$|\langle X;Y\rangle_\mu|\le2C'|S_X||S_Y|\,\|X\|_\infty\|Y\|_\infty e^{-\gamma'D}$.
+
+*Proof.* Put $\Lambda=T\setminus S_X$. Given the configuration $\omega$
+on $S_X$, the links of $\Lambda$ have law $\mu_\Lambda^{\Phi,\omega}$,
+the conditional property of a finite-volume Gibbs measure. Hence
+$\langle X;Y\rangle=\mathbb E_\mu\big[X\big(\mu_\Lambda^{\Phi,\omega}(Y)-\mathbb E_\mu Y\big)\big]$,
+and since $\mathbb E_\mu Y$ is an average of
+$\mu_\Lambda^{\Phi,\omega'}(Y)$ over $\omega'$,
+$|\langle X;Y\rangle|\le\|X\|_\infty\sup_{\omega,\omega'}|\mu_\Lambda^{\Phi,\omega}(Y)-\mu_\Lambda^{\Phi,\omega'}(Y)|$.
+Change $\omega$ into $\omega'$ one link of $S_X$ at a time. Each step
+changes the boundary condition at one link $y\in S_X$, at distance at
+least $D$ from $W=S_Y\subseteq\Lambda$, and by H2 moves
+$\mu_\Lambda^{\Phi}(Y)$ by at most
+$2\|Y\|_\infty C'|S_Y|e^{-\gamma'D}$. There are $|S_X|$ steps.
+$\square$
+
+**Lemma 2 (exact decomposition).** For bounded $F,G$,
+$$\operatorname{Cov}_{\mu_{\beta_0}}(F,G)=\operatorname{Cov}(E_KF,E_KG)+\sum_{k=0}^{K-1}\mathbb E\big[(D_kF)(D_kG)\big].$$
+
+*Proof.* Telescoping gives $F=E_KF+\sum_{k<K}D_kF$, since $E_0F=F$. For
+$j>k$, $D_jG$ is $\mathcal G_{k+1}$-measurable and
+$\mathbb E[D_kF\,|\,\mathcal G_{k+1}]=0$, so
+$\mathbb E[(D_kF)(D_jG)]=0$; likewise $\mathbb E[(D_kF)\,E_KG]=0$ and
+$\mathbb E[D_kF]=0$. Expand $\mathbb E[FG]$ and use
+$\mathbb E F=\mathbb E\,E_KF$. $\square$
+
+The earlier proof bounded the cross terms by the decay rates; they
+vanish identically.
+
+**Lemma 3 (the coarse term).** Assume H1(b), H1(c) and H2. Let local
+fine $F,G$ have images $S_F^{(K)},S_G^{(K)}$ at level-$K$ distance
+$D\ge1$, and put $b_F=(1+e^{\gamma_*})(\|F\|_\infty+B(F))$. Then
+$$|\operatorname{Cov}(E_KF,E_KG)|\ \le\ b_Fb_G\Big[32\,C'\,|S_F^{(K)}|\,|S_G^{(K)}|\,(2D+1)^{10}+\frac{D+1}{(1-e^{-\gamma_*})^2}\Big]e^{-\gamma_mD}.$$
+
+*Proof.* Let $X_i=F_i$ from H1(b) for $i<N$ and $X_N=E_KF$, with $N$
+larger than the diameter of the coarse box; put $\Delta X_0=X_0$ and
+$\Delta X_i=X_i-X_{i-1}$. Then $E_KF=\sum_{i\le N}\Delta X_i$,
+$\|\Delta X_i\|_\infty\le b_Fe^{-\gamma_*i}$, and $\Delta X_i$ depends on
+the set $A_i$ of level-$K$ links within distance $i$ of $S_F^{(K)}$. A
+point has at most $4(2i+1)^4$ link midpoints within $\ell^\infty$
+distance $i$, so $|A_i|\le4(2i+1)^4|S_F^{(K)}|$. Define $\Delta Y_j$
+and $B_j$ likewise. Then
+$\operatorname{Cov}(E_KF,E_KG)=\sum_{i,j}\operatorname{Cov}(\Delta X_i,\Delta Y_j)$.
+For $i+j<D$ the sets $A_i,B_j$ are at distance at least $D-i-j\ge1$.
+By H1(c) and H2, Lemma 1 applies to $\mu^{(K)}$, and the term is at
+most
+$2C'\cdot16(2i+1)^4(2j+1)^4|S_F^{(K)}||S_G^{(K)}|\,b_Fb_G\,e^{-\gamma_*(i+j)-\gamma'(D-i-j)}$.
+Since $\gamma_*(i+j)+\gamma'(D-i-j)\ge\gamma_mD$, and since there are at
+most $(2D+1)^2$ such pairs, each with $i,j<D$, these terms sum to at
+most the first bracket. For $i+j\ge D$ use
+$|\operatorname{Cov}(U,V)|\le\|U\|_\infty\|V\|_\infty$: the
+$s+1$ pairs with $i+j=s$ give at most
+$b_Fb_G\sum_{s\ge D}(s+1)e^{-\gamma_*s}\le b_Fb_G(D+1)e^{-\gamma_*D}/(1-e^{-\gamma_*})^2$.
+$\square$
+
+**Proof of the theorem.** *Item 1* is Lemma 1 applied to
+$\Phi^{(K)}$, which H1(c) places in the $r$-ball of H2.
+
+*Item 2.* By Lemma 2 the covariance is the coarse term plus the
+fluctuation terms. By H1(a), and since $2^k\le2^{K-1}$ for $k<K$, the
+fluctuation terms total at most
+$\big(\sum_{k<K}C_k(F,G)\big)e^{-2\gamma_*d/2^K}$. The images are at
+level-$K$ distance $D\ge d/2^K-2c_{\mathcal B}$. For $D\ge1$, Lemma 3
+bounds the coarse term by a polynomial in $D$ times $e^{-\gamma_mD}$,
+which is at most $c_\varepsilon(F,G)\,e^{-(\gamma_m-\varepsilon)D}$
+with $c_\varepsilon(F,G)$ finite; for $D<1$ use
+$|\operatorname{Cov}|\le\|F\|_\infty\|G\|_\infty$. Both bounds become
+$e^{-(\gamma_m-\varepsilon)d/2^K}$ times a finite constant. The constant
+$A_\varepsilon(F,G)$ so obtained may grow with $K(a_0)$; it does not
+depend on the box.
+
+*Item 3.* Fix an admissible spatial box and normalize $\mathcal T$ so
+that its top eigenvalue on gauge-invariant vectors is $1$, with
+eigenvector $\Omega$. $\mathcal T$ is self-adjoint and positive
+(Lüscher, Commun. Math. Phys. 54 (1977) 283; Osterwalder and Seiler,
+Ann. Phys. 110 (1978) 440; metadata level, as in
+[the Wilson note](wilson-strong-coupling-explicit.md) §3). On
+gauge-invariant functions its kernel is continuous and strictly
+positive on a compact configuration space, so by Jentzsch's theorem the
+top eigenvalue is simple and isolated and $\Omega>0$. For a bounded
+gauge-invariant $F$ of the spatial links of one time slice put
+$\psi=(F-\langle\Omega,F\Omega\rangle)\Omega$. On the periodic box of
+time extent $L_t$, the truncated Euclidean correlation
+$\langle F^*;\theta_nF\rangle_{L_t}$ converges to
+$\langle\psi,\mathcal T^n\psi\rangle$ as $L_t\to\infty$ through
+admissible values. Item 2, with the supports at fine distance $n$,
+bounds it by $A_\varepsilon e^{-(\gamma_m-\varepsilon)n/2^K}$ uniformly
+in $L_t$. If the spectral measure of $\psi$ gave mass $c>0$ to
+$(e^{-\lambda},1]$ with $\lambda<(\gamma_m-\varepsilon)/2^K$, then
+$\langle\psi,\mathcal T^n\psi\rangle\ge c\,e^{-\lambda n}$ would
+contradict that bound for large $n$. Since $\varepsilon$ is arbitrary,
+the spectral measure of every such $\psi$ lives on
+$[0,e^{-\gamma_m/2^K}]$. These vectors are dense in the gauge-invariant
+vectors orthogonal to $\Omega$, because $\Omega>0$ almost everywhere.
+Hence $\|\mathcal T|_{\Omega^\perp}\|\le e^{-\gamma_m/2^K}$, and item 3
+follows with $\Delta=-(\hbar c/a_0)\log\|\mathcal T|_{\Omega^\perp}\|$.
+The constant $A_\varepsilon$ entered only through its finiteness.
+
+*Item 4.* $\hbar c\,\gamma_m/(2^{K(a_0)}a_0)\to\hbar c\,\gamma_m/a_*$ by
+H1.
+
+*Item 5.* For $F\in\mathcal F$ the vector $\psi_{F,a_0}$ is orthogonal
+to the lattice vacuum, so item 3 and the positivity of $\mathcal T$
+give
+$\langle\psi_{F,a_0},\mathcal T^n\psi_{F,a_0}\rangle\le\|\psi_{F,a_0}\|^2e^{-na_0\Delta(a_0)/\hbar c}$,
+and $na_0\Delta(a_0)/\hbar c\ge\lfloor\tau/a_0\rfloor a_0\gamma_m/(2^Ka_0)\to\tau\gamma_m/a_*$.
+The case $\tau=0$ of (E) gives
+$\|\psi_{F,a_0}\|^2\to\|\psi_F\|^2$. Hence
+$\langle\psi_F,e^{-\tau H/\hbar c}\psi_F\rangle\le\|\psi_F\|^2e^{-\tau\gamma_m/a_*}$
+for all $\tau\ge0$. The spectral measure of $H$ in $\psi_F$ therefore
+lives on $[\hbar c\gamma_m/a_*,\infty)$, by the argument of item 3, and
+density of the $\psi_F$ gives the claim. $\square$
+
+The constants $C_k$, $B(F)$ and $A_\varepsilon$, which may grow with
+$K(a_0)$, never reach item 5: the passage to the continuum needs (E)
+and no uniformity in those constants.
+
+**Jaffe--Witten and T3.** Item 5 supplies the lower half of the
+Jaffe--Witten clause $0<m<\infty$ for a continuum theory constructed by
+other means. The upper half is the bound $m\le M_0/M_{-1}$ of
+[the moment-hierarchy note](moment-hierarchy-upper-bounds.md), which
+assumes the Osterwalder--Schrader axioms and a flowed correlator
+$C_0\not\equiv0$, that is, nontriviality. T3 asks the scaled gap
+$\Delta(a_0)/(\hbar c\Lambda)$ to converge. Item 4 bounds its lower
+limit by $\gamma_m/(a_*\Lambda)$ and is silent on convergence.
+[The finite-verification note](intermediate-region-finite-verification.md)
+§4 relates T3 to the convergence of blocking trajectories under its
+assumption of exact low-energy reductions; that relation is heuristic.
 
 ## 4. What the theorem makes visible
 
-*The bound is a ratio of a certified rate to a physical length.* With
-$a_*\simeq0.093$ fm at $\beta_W=6$ and the measured glueball mass
-$1.66\,\hbar c\,{\rm fm}^{-1}$, the true rate is $m a_*\simeq0.78$; a
-certified $\gamma'$ of any size gives a theorem, and one of order $0.1$
-would already be a physically meaningful bound.
+*The bound is a ratio of a rate to a physical length.* Suppose $\Phi_0$
+is the Wilson interaction at $\beta_W=6.0$ and $\Phi^{(K)}$ lies close
+to it. Heuristically $a_*$ is then the published spacing at that
+coupling, $a_*\simeq0.093$ fm ($r_0/a=5.37$, $r_0=0.5$ fm). The
+continuum-scaled glueball estimate
+$E_{0^{++}}=8.42\,\hbar c\,{\rm fm}^{-1}\simeq1.66$ GeV gives
+$\mu_{0^{++}}a_*\simeq0.78$ ([bands note](confinement-scale-bands.md),
+table; a continuum-scaled value, not a measured lattice mass). A proved
+$\gamma_m$ of any positive size gives item 4. A rate $\gamma_m=0.1$
+would give
+$\hbar c\,\gamma_m/a_*\simeq1.07\,\hbar c\,{\rm fm}^{-1}\simeq0.21$ GeV,
+about one eighth of that estimate. At $\beta_W=5.7$ the same figures
+are $a_*\simeq0.17$ fm and $\mu_{0^{++}}a\simeq1.44$.
 
-*Both hypotheses are finite in kind.* H2 is one box at one coupling. H1
-is a sequence of steps, uniform in the perturbative regime, whose
-non-perturbative part is three steps. Neither is available today:
-H2 needs a certified computation, and H1's last three steps are the
-confinement-scale problem.
+*What the hypotheses cost.* H1 has $K(a_0)\simeq\log_2(a_*/a_0)$ steps,
+unbounded as $a_0\to0$, so it is an infinite family of statements with
+order-one coupling only at its end; no step is controlled here with
+explicit constants (§2). H2 is uniform strong mixing in every periodic
+box for a whole neighbourhood of interactions. It reduces to one finite
+box only through the assumed transfer of a finite-size criterion, and
+the certification of that box at $\beta_W\simeq6$ is out of reach of
+the certified methods known here.
 
-*Nothing else is missing.* T1, T2, the strong-coupling side below the
-verified coupling, the transfer from decay to gap, the upper side of
-the gap, and the reduction of T3 are all in place with explicit
-constants. The theorem is the repository's formal endpoint: a proof of
-the mass gap for $SU(3)$ consists of H1 and H2.
+*What is in place, and what is left.* In place: T1 for every finite
+lattice ([obligations map](mass-gap-obligations-lattice.md) §2); the
+decay-to-gap transfer (item 3; [the Wilson
+note](wilson-strong-coupling-explicit.md) §3); volume-uniform
+strong-coupling gaps for the Wilson transfer matrix at $g^2>444$
+(Dobrushin) and $g^2\ge1056$ (polymer expansion, all representations),
+with $176$ the leading-activity figure only; T2 for the Kogut--Susskind
+Hamiltonian from Yarotsky's existential threshold, which his proof
+makes $g_0^2\simeq10^{101}$; and the upper side of the gap given
+existence and nontriviality. The theorem uses none of the
+strong-coupling results, since its trajectory comes from weak coupling.
+Left: H1 and H2, and outside the theorem the construction (E) with the
+axioms and the infinite-volume limit, nontriviality, and T3.
 
 ## 5. Consequence for STATE
 
-The map is a theorem with two hypotheses and an explicit conclusion
-$m\ge\hbar c\min(\gamma_*,\gamma')/a_*$. Progress from here is progress
-on H1 or H2, and nothing else.
+The pure-gauge map is a conditional lattice theorem. H1 and H2 give a
+volume-uniform gap of the Wilson transfer matrix at each spacing of the
+trajectory, at least $\hbar c\min(\gamma_*,\gamma')/(2^Ka_0)$, whose
+lower limit is at least $\hbar c\min(\gamma_*,\gamma')/a_*$. In a
+continuum limit constructed separately with the Osterwalder--Schrader
+axioms, the same number bounds the Hamiltonian's gap from below. H2 now
+means uniform strong mixing in every periodic box; it reduces to one
+box only through an assumed transfer of a finite-size criterion, and it
+has no feasible certified route at $\beta_W\simeq6$. The STATE line,
+with H1/H2 open and continuum construction and nontriviality explicit
+obligations, stands as written; the catalogs need this note's new title
+and scope.
