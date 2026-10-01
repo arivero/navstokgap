@@ -214,6 +214,61 @@ case $d=1$, $K=3$, $y=0$ of (i), including the retained cross term of
 the two mirror paths; smearing in $y$ removes that term by (ii),
 because the mirror paths arrive at $y=0$ with opposite momenta.
 
+## 3b. The gap as a number: fringe visibility
+
+A mass gap is a number that is positive for every value of the coupling
+and zero for the free theory. The dilation $h\mapsto\mu h$ forbids any
+scale from playing that role here, so the invariant must be
+dimensionless. It is the contrast of the fringes in (3).
+
+**Proposition (visibility invariant).** Let $y_0\in Y$ be a record point
+with two branches, $K=2$, and write
+$\rho_a=|c_a(y_0)|^2=|O(z_a)|^2/|\det S''_\pi(z_a)|$ for Newton's branch
+densities there, $\Delta p=|p_1-p_2|(y_0)$.
+(i) For every $h>0$ the complete record near $y_0$ oscillates with
+fringe spacing $2\pi h/\Delta p+O(h^2)$ and visibility
+$$V=\frac{\max|A_h|^2-\min|A_h|^2}{\max|A_h|^2+\min|A_h|^2}
+=\frac{2\sqrt{\rho_1\rho_2}}{\rho_1+\rho_2}+O(h),\tag{V1}$$
+the maximum and minimum taken over one fringe. The leading term is
+fixed by Newton's branch densities and is independent of $h$. At
+$h=0$ the record is $\rho_1+\rho_2$ and the visibility is zero.
+(ii) The limit set of $|A_h(y_0)|^2$ as $h\downarrow0$ is the interval
+$(\rho_1+\rho_2)\,[1-V,\,1+V]$.
+(iii) For a record of resolution $\delta$ with kernel $\varphi$, and
+$\delta$ small enough that the fringe phase is affine across the window
+($\delta^2|p_1'-p_2'|\ll h$), the visibility is
+$$V_\delta=V\,|\hat\varphi(\delta\Delta p/h)|+O(h),\qquad
+\hat\varphi(\xi)=\int\varphi(u)e^{i\xi u}du,\tag{V2}$$
+so a Gaussian kernel gives $V_\delta=V\exp[-(\delta\Delta p/h)^2/2]$.
+The contrast is seen iff $h\gg\delta\Delta p$, and the two orders of
+limits of the Corollary give $V$ and $0$.
+
+*Proof.* (i) By (3) with $K=2$,
+$|A_h(y)|^2=\rho_1+\rho_2+2\sqrt{\rho_1\rho_2}\cos(\psi(y)/h+\theta)+O(h)$
+with $\psi=S_1-S_2$ and $\psi'=p_1-p_2\neq0$, uniformly near $y_0$.
+Over one fringe the cosine runs through $\pm1$, which gives the
+spacing, the extremes $\rho_1+\rho_2\pm2\sqrt{\rho_1\rho_2}$ and (V1).
+(ii) $\psi(y_0)\neq0$ generically, and $\psi(y_0)/h$ is continuous and
+unbounded in $h$, so its residue mod $2\pi$ takes every value along
+sequences $h\downarrow0$; the cosine takes every value in $[-1,1]$.
+If $\psi(y_0)=0$ the cross term is constant and the limit is the top of
+the interval. (iii) Integrate the cross term against $\varphi_\delta$:
+with $\psi(y)=\psi(y_0)+\Delta p\,(y-y_0)+O(\delta^2|\psi''|)$ on the
+window, the integral is
+$2\sqrt{\rho_1\rho_2}\,\mathrm{Re}[e^{i\psi(y_0)/h+i\theta}\hat\varphi(\delta\Delta p/h)]$
+up to the stated error; the diagonal terms are unchanged. $\square$
+
+With $K\ge3$ branches, as after a fold, each pair carries its own
+contrast $2\sqrt{\rho_a\rho_b}/\sum_c\rho_c$ at its own spacing
+$2\pi h/|p_a-p_b|$. For inertia with graded velocity (Theorem 3) the
+branch densities are $a(q_a)^2/|1+p_0'(q_a)t/m|$; for the Kepler swarm
+(Theorem 4) they are $a(\phi'_a)^2/|1+I_0'\Omega't|_a$. In every
+case the invariant is computed from Newton's multi-stream density and
+is positive wherever two streams cross, for every $h>0$, and zero at
+$h=0$. That is the gap: a contrast rather than a scale, discontinuous at
+zero, and invisible at any fixed resolution once $h$ falls below
+$\delta\Delta p$.
+
 ## 4. Theorem 3: inertial motion with a graded velocity
 
 Newton's simplest motion already shows the gap when the preparation
@@ -426,6 +481,11 @@ the thesis only through folding, which is already Theorem 3.
   a record of resolution $\delta$ reaches Newton iff $h/(\delta\Delta p)\to0$.
   "Complete records" means $\delta\to0$ before $h\to0$: the record limit
   is taken first, as the continuum limit is taken first in the mass gap.
+- **The gap is a contrast, not a scale.** The fringe visibility
+  $2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)$ of a complete record where two
+  streams cross is fixed by Newton's branch densities, independent of
+  $h$ for every $h>0$, and zero at $h=0$ (§3b). The dilation symmetry
+  makes the invariant dimensionless where the mass gap is a scale.
 
 The thesis is therefore exactly as strong as two premises: that
 records are complete, the densities themselves rather than their
@@ -457,7 +517,10 @@ force laws: Hooke keeps the zero branch for all time, Kepler loses it
 after $T^2/\Delta T$ (Theorem 4). It fails for Galileo's comparison
 with Gaussian preparations and marks (Theorem 1), for smeared records,
 and for refinement with records; a record of resolution $\delta$
-reaches Newton iff $h/(\delta\Delta p)\to0$. Consequences: the Planck
+reaches Newton iff $h/(\delta\Delta p)\to0$. The gap has a number: the
+fringe visibility $2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)$ of a complete record
+where two streams cross, fixed by Newton's branch densities, independent
+of $h$ for every $h>0$ and zero at $h=0$ (§3b). Consequences: the Planck
 paper's Gaussian parabola cannot carry the gap argument, which belongs
 to the Kepler swarm; the two premises, complete records as the
 record-limit-first order and determinate preparations as Newton's
