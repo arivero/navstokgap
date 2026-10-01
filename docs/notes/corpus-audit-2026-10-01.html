@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corpus audit of 1 October 2026: two-axis scores for all 175 notes, the uncorrected errors they expose, and where the drift sits</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Corpus audit of 1 October 2026: two-axis scores for all 175 notes,
+the uncorrected errors they expose, and where the drift sits</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/corpus-audit-2026-10-01.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/corpus-audit-2026-10-01.pdf">PDF</a></p><p><strong>Result.</strong> Every maintained note was read in full and
+scored from 1 to 10 for interestingness and for correctness of its own
+derivations by Claude Opus 5.5 under one fixed rubric; Claude Fable 5.1
+then reviewed the condensed statements of the 26 notes scored 6 or more
+for interest against their sources and the trap list of
+<code>LLM.md</code> §4. Three findings matter for the programme.</p>
+<ol type="1">
+<li><strong>The spine is sound.</strong> The Newton recording results,
+the refinement and gauge insertion results and the strong-coupling
+constants score 8 or 9 for correctness; the reviewer found one false
+claim among the 26 selected statements (item (a) below) and no
+reintroduced trap.</li>
+<li><strong>Twenty-four notes carry uncorrected overclaims or
+inconsistent numbers</strong> (correctness 6 or below, four of them at
+4). Twenty of the twenty-four belong to the Hamiltonian, flow and
+large-field mass-gap attack that preceded the 17 September change of
+direction, routes that <a href="mass-gap-position.html">the position
+note</a> §3 lists as closed. The closure is recorded in the map; the
+route notes’ own texts keep the claims that the closure withdrew. That
+is the drift: supersession lives in the map and in <code>LLM.md</code>,
+while the superseded notes still read as live results.</li>
+<li><strong>Interest is concentrated.</strong> The scorer put 26 notes
+at 6 or above and none above 7; 70 of 175 notes are maps or calculations
+(kind counts below). The distributions are a calibration of what an
+outside expert would take from the corpus, under the rubric stated in
+§1, and settle nothing about novelty.</li>
+</ol>
+<p>The two digests built from the scores, <em>The most interesting
+results</em> (26 notes) and <em>Interesting and correct results</em>
+(the 22 of them scored 8 or more for correctness), are published on the
+director’s personal site as phone-format PDFs with a landing page that
+tabulates every score: <a
+href="https://lxbifi11.bifi.unizar.es/navstokgap/"
+class="uri">https://lxbifi11.bifi.unizar.es/navstokgap/</a>. The
+repository keeps the scores here, in §4, and the corrections to make, in
+§3.</p>
+<h2 id="method-and-reading-labels">1. Method and reading labels</h2>
+<p>Six Opus readers worked in parallel on alphabetical batches of about
+62,000 words each, each note read line by line, with no scripts for
+mathematics (project rule). The rubric’s anchors: interest 9 or 10 for a
+theorem with a surprising conclusion or a precise closure of a natural
+route, 7 or 8 for a solid nontrivial theorem, construction or decisive
+obstruction with explicit constants, 5 or 6 for useful supporting work,
+below that for bookkeeping; correctness 9 or 10 for complete proofs at
+the stated level with every hypothesis stated where used, 7 or 8 for
+essentially correct with minor gaps, 5 or 6 where a step is unjustified
+or claims outrun proofs, 4 or below for a substantive error or an
+unmarked superseded claim. Correctness was scored on the current text,
+so a note that was wrong and now carries a dated correction is scored on
+the corrected text. Each reader also wrote a 60 to 260 word condensed
+statement per note and a one-line reason for each score; the reasons are
+quoted in §3 for the low scores.</p>
+<p>The reviewer (Fable) read the 26 selected statements against the
+notes’ lead sections and theorem statements, checked the arithmetic of
+the constants that appear in them, and checked them against the 26 traps
+of <code>LLM.md</code> §4. Items marked <em>verified</em> below were
+checked by the reviewer from the note’s own formulas; items marked
+<em>reported</em> are the scorer’s reasons, quoted and unverified here.
+Reading label for this note: scorer full-read of every note; reviewer
+passage-level reads of the 26 selected notes and grep-level checks of
+the notes in §3.</p>
+<p>Scores are a model’s reading with reasons on file. They are not
+refereeing, and a high correctness score means a complete derivation at
+the level the note states, which may be conditional, formal or a
+reading.</p>
+<h2 id="distributions">2. Distributions</h2>
+<p>Interest: 1: 3, 2: 8, 3: 41, 4: 58, 5: 39, 6: 21, 7: 5. Correctness:
+4: 4, 5: 6, 6: 14, 7: 27, 8: 59, 9: 65. Kind: calculation: 44,
+construction: 13, exploratory: 5, map: 26, obstruction: 24, reading: 12,
+theorem: 51. Status as read by the scorer: conditional: 18, conjectural:
+4, mixed: 39, none: 16, proved: 96, superseded: 2.</p>
+<p>Selected for the digests (interest 6 or more):
+<code>mark-cost-and-statistical-floor</code>,
+<code>planck-gap-paper</code> and <code>planck-gap-probabilistic</code>
+at 7; the other 23 at 6. Of the 26, the four below 8 for correctness are
+<code>planck-gap-paper</code> (7),
+<code>four-dimensional-composition</code> (7),
+<code>su2-midplane-small-field</code> (7) and
+<code>planck-gap-derivation</code> (6).</p>
+<h2 id="errors-and-overclaims-found">3. Errors and overclaims found</h2>
+<h3 id="a.-verified-by-the-reviewer">3a. Verified by the reviewer</h3>
+<ol type="a">
+<li><p><strong><code>planck-gap-derivation</code>, boxed area forms off
+by a factor 2.</strong> The note’s theorem <span
+class="math inline">\(F^2\tau^3&gt;9m\kappa\)</span> with <span
+class="math inline">\(\tau\Delta E=F^2\tau^3/(2m)=(3F/v)A\)</span> and
+<span class="math inline">\(A=vF\tau^3/(6m)\)</span> gives <span
+class="math inline">\(A&gt;3v\kappa/(2F)\)</span>; the box states <span
+class="math inline">\(A&gt;3v\kappa/F\)</span>. Corollary 3’s two-mark
+upper value is likewise <span class="math inline">\(6v\kappa/F\)</span>,
+stated as <span class="math inline">\(12v\kappa/F\)</span>. The theorems
+themselves (constants 9 and 36) hold. The digest on the site carries the
+corrected values and a reviewer’s note. The interval model is in any
+case superseded by the Gaussian mark model of <a
+href="mark-cost-and-statistical-floor.html">mark-cost-and-statistical-floor</a>
+and <a href="planck-gap-paper.html">the Planck paper</a>, where <span
+class="math inline">\(\kappa\ge\hbar/2\)</span> holds for every probe
+state, and the note should open by saying so.</p></li>
+<li><p><strong><code>strong-coupling-target-box</code>, the <span
+class="math inline">\(q=4\)</span> tolerance column disagrees with the
+note’s own criterion.</strong> From <span
+class="math inline">\(e\,\eta\,2^q\le0.15g^2-384e/g^2\)</span> (the
+note’s own criterion) one gets <span
+class="math inline">\(\eta\le0.105\)</span> at <span
+class="math inline">\(g^2=100\)</span> and <span
+class="math inline">\(\eta\le0.570\)</span> at <span
+class="math inline">\(g^2=200\)</span>; the table prints <span
+class="math inline">\(0.29\)</span> and <span
+class="math inline">\(0.62\)</span>. The <span
+class="math inline">\(q=8\)</span> column checks.</p></li>
+<li><p><strong><code>small-field-step-decay-and-threshold</code>,
+abstract and body disagree on constants.</strong> The abstract quotes an
+error density <span class="math inline">\(10^{-12}\)</span>; §3 derives
+<span class="math inline">\(1.1\times10^4\)</span> and <span
+class="math inline">\(10^{-13}\)</span>. The scorer also reports that §3
+sums an <span class="math inline">\(\ell^\infty\)</span> decay with the
+<span class="math inline">\(\ell^1\)</span> product formula,
+undercounting by about 24; that step is reported, unverified
+here.</p></li>
+</ol>
+<h3 id="b.-reported-by-the-scorer-with-the-scorers-reason">3b. Reported
+by the scorer, with the scorer’s reason</h3>
+<ul>
+<li><code>flow-instability-large-field</code> (I 5, C 4): Proposition 1
+(symmetry of <span class="math inline">\(M\)</span>) is correct. The
+sharpness claim fails on the note’s own formula: with the Landau level
+<span class="math inline">\(gB\)</span> included, <span
+class="math inline">\(\omega^2=k_\parallel^2-gB\)</span>, so the growth
+rate is <span class="math inline">\(gB\)</span>, half the Duhamel
+exponent <span class="math inline">\(2\|G\|\)</span>. A symmetric
+operator of norm <span class="math inline">\(\|M\|\)</span> need not
+attain <span class="math inline">\(+\|M\|\)</span>. Section 4’s ‘sharp’
+crossover inherits this; the text carries no correction.</li>
+<li><code>large-field-action-lower-bound</code> (I 3, C 4): Proposition
+1 is correct in the continuum. Proposition 2 fails: a field constant on
+the block and zero outside violates the Bianchi identity, and flowing at
+radius equal to the block size changes the block integral by order one,
+not <span class="math inline">\(O(a/\ell)\)</span>. Section 3’s descent
+argument is a non sequitur. Section 4 imports the unsupported ‘sharp
+<span class="math inline">\(e^{2\eta}\)</span>’ claim.</li>
+<li><code>mass-gap-conditional-theorem</code> (I 4, C 4): The
+decay-to-gap transfer and rate bookkeeping in §3 are fine. But §4’s
+‘nothing else is missing’ and ‘a proof consists of H1 and H2’ overclaim:
+continuum existence, OS axioms and nontriviality are not implied.
+Existence of the renormalized interaction and gauge-theory strong mixing
+are glossed. The later rejection of physical-coupling H2 certification
+is not marked.</li>
+<li><code>schur-error-ultraviolet</code> (I 5, C 4): Lemma 1’ and the
+oscillator derivative check. Section 4’s own sum gives theta ~ g^2
+(Lambda L)^3, an extensive vacuum-shift slope, not the stated g^2
+(Lambda L)^2, so the regime g &lt;&lt; 1/N_s in Section 5 appears wrong
+(g &lt;&lt; N_s^{-3/2}). The Berry coefficient seems to drop the four
+charge/polarization copies. The fixed-lattice theorem is asserted but
+unproved.</li>
+<li><code>gapped-set-critical-coupling</code> (I 4, C 5): Proposition 1
+is fine. Proposition 2’s proof is heuristic: it equates finite-volume
+gap closing with infinite-volume degeneracy or diverging length, and
+ignores massless phases that fill intervals of coupling. Section 4 calls
+the compact <span class="math inline">\(U(1)\)</span> transition second
+order with a Maxwell limit at <span class="math inline">\(g_c\)</span>,
+against lattice evidence of weak first order. The dated Wilson <span
+class="math inline">\(SU(N\ge5)\)</span> precision is present.</li>
+<li><code>ground-state-measure-transfer</code> (I 4, C 5): Proposition 1
+is standard and correct. The claim that isotropic Wilson-measure
+estimates hold ‘verbatim’ ignores that the Hamiltonian limit is the
+anisotropic <span class="math inline">\(a_t\to0\)</span> measure. The
+bound <span class="math inline">\(\mathbb P\lesssim
+e^{-c\eta^2/g(\ell)^2}\)</span> in section 3 is a heuristic presented as
+available. The section 4 competition is marked superseded in part; the
+action display carries a stray factor.</li>
+<li><code>large-field-entropy-count</code> (I 4, C 5): The Landau
+degeneracy, the longitudinal disc count, <span
+class="math inline">\(\mathcal N=\eta^2/(8\pi^2)\)</span> and the ratio
+<span class="math inline">\(2\pi^2/g^2\)</span> are arithmetically
+correct. The convergence claims in §§3–4 (‘settles’, sum converges for
+<span class="math inline">\(g^2&lt;2\pi^2\)</span>) rest on an unproved
+bounded-factor-per-mode premise and on counting only constant-background
+modes. Proposition 1 is trivial.</li>
+<li><code>mass-gap-position</code> (I 4, C 5): Internal numbers
+disagree: the strong threshold appears as g^2&gt;=176, &gt;444 and
+&gt;=1056; the weak side as 1/g<sup>2&gt;~10</sup>2 and as
+g<sup>2~10</sup>-12. ‘Large-field region closed in measure’ exceeds the
+cost and entropy ingredients cited. ‘Exhaust the methods built from
+operator norms’ generalizes from five specific closures.</li>
+<li><code>strong-coupling-target-box</code> (I 5, C 5): The criterion e
+eta 2^q &lt;= 0.15 g^2 - 384e/g^2 and the q=8 column check. The q=4
+column does not: at g^2=100 the criterion gives 0.105, the table 0.29;
+at 200 it gives 0.57, the table 0.62. Tolerances ‘divided by 24 at the
+listed couplings’ fail, since 24*384e/g^2 exceeds 0.15g^2 there. The
+Proposition claims more than the cyclic-subspace criterion.</li>
+<li><code>typical-field-strength-window</code> (I 4, C 5): The
+free-field integral, the range condition <span
+class="math inline">\(\kappa^2\ge g/4\pi+1/2\)</span> and the Gaussian
+tail estimate check, with <span class="math inline">\(\hbar\)</span>
+absorbed into <span class="math inline">\(g^2\)</span>. The claims that
+the Hamiltonian route terminates and that no measure exists ignore the
+vacuum state’s configuration distribution. A top box flags the lattice
+correction, but the title, section 4 and section 5 still state the
+superseded conclusion.</li>
+<li><code>abelian-misses-the-box</code> (I 4, C 6): b_0=11/(16 pi^2) and
+2 b_0 log 2=0.0966 check. The U(1) rerun of the expansion is asserted
+‘verbatim’ without the threshold computed. ‘Gapped set is
+(g_c,infinity)’ (intro, §2) overclaims: no monotonicity or single
+transition is proved. ‘All three isolations are b_0 statements’ (§3) is
+an unlabelled reading.</li>
+<li><code>action-floor-yang-mills-gap</code> (I 5, C 6): Prop. 1, Thm 2,
+Prop. 4 and the Bohr-Sommerfeld levels check. Remark 3 counts only the
+x-valley (both valleys double the constant; growth law unaffected).
+Prop. 5’s d=4 row drops 1/g^2, which by the table’s own convention has
+action dimension, so ‘no constant at all’ in d=4 is inconsistent.</li>
+<li><code>agmon-ground-state-suppression</code> (I 3, C 6): Lemma 1 and
+Corollary 2 are correct; Corollary 2 with rho=(1-delta)d needs epsilon
+tied to delta, left implicit. The distance step (§2) is a labelled
+scaling argument. The correction box flags that only the global excess
+is controlled, yet §3-§4 still state local consequences (finite
+exponential local moments) that do not follow.</li>
+<li><code>confinement-scale-bands</code> (I 5, C 6): Table entries
+(r_0/a, m a=4.21/(r_0/a), sigma a<sup>2=1.35/(r_0/a)</sup>2),
+g^2=6/beta, the 444 threshold and the area-law values check; a dated
+caveat flags the softened glueball near beta=5.7. Treating a coarse
+Wilson loop as polymer activity (§2b) is heuristic. ‘Six blocking steps
+is the whole problem’ overstates: the weak side’s ‘perturbative in kind’
+doublings are unproved.</li>
+<li><code>flow-before-decimation</code> (I 4, C 6): The invariance
+proposition is correct as stated. The sweeping claim that every
+norm-based criterion is exhausted outruns it, since a conjugated
+Hamiltonian can be split differently. The addendum’s local <span
+class="math inline">\(e^{-\lambda n}\)</span> ground-state suppression
+is superseded by the later Agmon-global correction and is not marked as
+such here.</li>
+<li><code>flow-jacobian-truncation-error</code> (I 5, C 6): Proposition
+2’s Kato-Duhamel bound is correct. Proposition 1 handles the
+gauge-fixing term loosely (‘to the same order’). The truncation error is
+a kernel-tail heuristic, not an operator relative bound. The Sharpness
+box repeats the instability note’s unsupported claim of growth rate
+exactly <span class="math inline">\(2\|G\|\)</span>. The lattice-step
+pessimism is correctly flagged as corrected.</li>
+<li><code>intermediate-region-finite-verification</code> (I 5, C 6): The
+decay-to-gap step via reflection positivity is sound. The lead’s claim
+that the problem ‘reduces to’ two numbers is weakened only in §4b. The
+lead says gauge invariance is no obstruction, while §5 admits Elitzur
+empties the single-link form; the tension is left unresolved. Box sizes
+are corrected in a later note, flagged here. Literature is at metadata
+level.</li>
+<li><code>large-field-operator-inequality</code> (I 5, C 6):
+Propositions 1 and 2 (min-max and the ground-state-transform trial
+state) are correct, and the IMS arithmetic giving <span
+class="math inline">\(C_L=32\pi^2c_0^2/3\)</span> checks. The
+link-derivative bound behind <span class="math inline">\(|\nabla
+f_B|^2\)</span> is heuristic. The claim that every Hamiltonian route
+loses a surface term is shown for one crude trial construction only;
+window constants are crude.</li>
+<li><code>lattice-truncation-uniform</code> (I 5, C 6): Coupling
+cancellation in the lattice flow and the compactness bound are correct,
+and exponential locality of the linearized flow over unit time is
+standard. The Proposition’s proof is a sketch: a kernel tail is equated
+with a relative operator error, the Jacobian potential from <span
+class="math inline">\(\rho_t\)</span> is not treated, and ‘K=3 suffices’
+is asserted without values for <span
+class="math inline">\(C,c\)</span>.</li>
+<li><code>planck-gap-derivation</code> (I 6, C 6): Lemmas 1-3, Theorem 1
+(constant 9) and Theorem 2 (36) check. The area forms are off by a
+factor 2: since (3F/v)A = tau Delta E, the bound is A &gt; 3v
+kappa/(2F), and Corollary 3’s upper value is 6v kappa/F. The note omits
+the later reinstatement of a quantum kappa = hbar/2.</li>
+<li><code>small-field-step-decay-and-threshold</code> (I 5, C 6): The
+soft-constraint gap 2/9 at a&gt;=130 and the rate 1.7e-3 check, as do
+the strip facts (a),(b) of §2 for a one-direction shift. §3 sums an
+l-infinity decay with the l1 product coth^4, undercounting by about 24.
+The abstract quotes 2e4 and 1e-12, while §3 and its table give 1.1e4 and
+1e-13. ‘Closed’ outruns a heuristic estimate.</li>
+<li><code>strong-coupling-threshold-explicit</code> (I 5, C 6): The
+Kotecky–Preiss chain checks: degree 80, c~220, rho&lt;=8e-4,
+t_0&gt;=7.1, e^{64 t_0}, beta_*~e^{-465}, g_0^2~1e101. §3’s 40–70 is an
+estimate that multiplies the per-site beta=54/g^4, which already sums
+three plaquettes, by a further coordination 12. The text does not point
+to the later rigorous 388/79. The weak-side figure 1/g^2~1e2 predates
+the small-field note’s 1e-12.</li>
+<li><code>su3-constants</code> (I 3, C 6): b_0=11/(16 pi^2), 51/121,
+54/g^4, the 8/3 g^2 flux loop, v&lt;=96e c/g^2, Haar variance 1/2, the
+Delta V identity and the doubling table check. The blocking paragraph
+writes beta_direct=24/g^4; the cited note’s 32N/(C_2 g^4) gives 72/g^4,
+which is needed for 3M^2/8. ‘Equivalence of T2’ with no zero-temperature
+transition’ is asserted as standing without proof.</li>
+<li><code>what-would-unblock</code> (I 4, C 6): Most citations and
+characterizations are accurate at metadata level. The infrared-bound
+paragraph gives the wrong reason: Froehlich–Simon–Spencer cover O(N)
+spins, so failure stems from the non-quadratic plaquette interaction.
+Section 6 states as fact that coarse effective interactions enter the
+completely analytical set. Item 1 is half-retracted in place while the
+opening still says ‘exactly two things’.</li>
+</ul>
+<h3 id="c.-where-the-drift-sits">3c. Where the drift sits</h3>
+<p>Of the 24 notes above, 20 are mass-gap route notes written before 17
+September (Hamiltonian flow, large-field region, Agmon, blocking,
+truncation, Schur and threshold notes); <a
+href="mass-gap-position.html">mass-gap-position</a> §3 closes their
+routes and <code>LLM.md</code> §4 records the traps, but the notes
+themselves still state their conclusions in the lead and keep
+inconsistent thresholds (176, 444 and 1056 for the Wilson
+strong-coupling gap appear with different labels across
+<code>mass-gap-position</code>, <code>su3-constants</code> and
+<code>strong-coupling-threshold-explicit</code>). The other four are
+<code>planck-gap-derivation</code> (item (a)),
+<code>action-floor-yang-mills-gap</code> (a <span
+class="math inline">\(d=4\)</span> row that drops <span
+class="math inline">\(1/g^2\)</span>),
+<code>abelian-misses-the-box</code> (a gapped set stated without
+monotonicity) and <code>what-would-unblock</code> (a wrong reason for
+the failure of infrared bounds). The repository’s own convention for a
+withdrawn claim is a dated correction box at the top of the note;
+applying it to the 24 notes, with the unified thresholds, would remove
+the drift without deleting the record.</p>
+<h2 id="scores-for-every-note">4. Scores for every note</h2>
+<p>Interest (I) and correctness (C) from 1 to 10; status and kind as
+read by the scorer.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Note</th>
+<th style="text-align: right;">I</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Kind</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">abelian-misses-the-box</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">action-floor-yang-mills-gap</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">action-scale-dilation</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">action-scale-obstructions</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">action-unit-dimensional-selection</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">additive-noise-marks</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">agmon-global-not-local</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">agmon-ground-state-suppression</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">ancient-cuts-provenance</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">arrow-not-sling</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">autonomous-finite-readout</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">block-apparatus-composition</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">blocking-criterion-monotone</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">blocking-step-obstruction</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">superseded</td>
+<td style="text-align: left;">exploratory</td>
+</tr>
+<tr>
+<td style="text-align: left;">bound-orbit-action-observable</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">bounded-acceleration-return</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">bridge-crossover</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">calibrated-canonical-ambiguity</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">calibrated-displacement-ambiguity</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">calibration-tolerance-recovery</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">causal-force-information</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">checkerboard-dynamics</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">classical-cut-state</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">classical-orientation-closure</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">classical-readout-refinement</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">clock-position-local-recovery</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">closed-orbit-force-action</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">comparison-and-bridges</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">composition-crossover-gap-checks</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">composition-universality</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">cone-time-refinement</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">confinement-scale-bands</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">conservative-harmonic-receiver</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">correlated-calibration-response</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">cut-measure-newton</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">cut-paradox-two-faces</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">cut-point-consistency</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">dimension-ladder</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conjectural</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">discrete-substrate-actors</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">exploratory</td>
+</tr>
+<tr>
+<td style="text-align: left;">dobrushin-uniqueness-wilson</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">energy-constrained-apparatus-ambiguity</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">energy-depot-action-selection</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">final-clock-momentum-recovery</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">finite-depth-spin-gap</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">finite-horizon-minimax</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">finite-precision-cut</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">finiteness-half-flowed-susceptibility</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">fixed-coupling-calibration</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">fixed-force-small-circles</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">fixed-preparation-ambiguity</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">flow-before-decimation</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">flow-conjugation-truncation</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">flow-instability-large-field</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">flow-jacobian-truncation-error</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">flowed-bound-free-field</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">four-dimensional-composition</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">four-dimensional-parallel-log</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">full-apparatus-preparation-ambiguity</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">full-clock-phase-recovery</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">full-pointer-recovery</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">galileo-two-path-interference</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">gapped-set-critical-coupling</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">gaussian-blocking-coupling</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">global-clock-speed-ambiguity</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">ground-state-measure-transfer</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">exploratory</td>
+</tr>
+<tr>
+<td style="text-align: left;">halving-atlas</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">hamiltonian-finite-closure</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">hamiltonian-moment-descent</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">hidden-clock-ambiguity</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">holography-lowest-dimensions</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">i003-double-limit-rigidity</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conjectural</td>
+<td style="text-align: left;">exploratory</td>
+</tr>
+<tr>
+<td style="text-align: left;">indistinguishable-phase-bound</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">interacting-ising-gap</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">intermediate-region-finite-verification</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">conjectural</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">ising-foundational-value</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">ising-hermitian-transfer</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">jacobi-kernels-distinguishability</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">kogut-susskind-strong-coupling-explicit</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">large-field-action-lower-bound</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">large-field-entropy-count</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">conjectural</td>
+<td style="text-align: left;">exploratory</td>
+</tr>
+<tr>
+<td style="text-align: left;">large-field-operator-inequality</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">lattice-gap-upper-bounds</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">lattice-truncation-uniform</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">leibniz-continuity-records</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">lieb-robinson-kogut-susskind</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">local-detector-coincidences</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">low-dimensional-mass-gap</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">magnetic-energy-identities</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">mark-cost-and-statistical-floor</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">mass-gap-conditional-theorem</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">mass-gap-obligations-lattice</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">mass-gap-openings</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">mass-gap-position</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">mechanical-interference-action</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">millennium-problem-definitions</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">minimax-composition</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">moment-hierarchy-upper-bounds</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">necessity-unit-and-indeterminacy</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">newton-NATP00385-audit</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">newton-indeterminacy-routes</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">newton-insertion-action</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">newton-mark-floor</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">newton-record-parallel-move</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">ordered-beam-preparation</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">passive-threshold-events</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">physical-cut-speed</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">planck-gap-derivation</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">planck-gap-paper</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">planck-gap-probabilistic</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">polyakov-average-gap-bound</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">polygon-lift-phase</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">position-preparation-ambiguity</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">principia-constant-force-action</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">principia-fifth-postulate</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantum-exclusion-premises</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">radiation-noise-action-selection</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">reachable-cut-composition</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">reasons-to-stop-as-research</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">receding-centre-area-audit</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">reciprocal-coupling-normalization</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">record-costs-disturbance</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">record-costs-recoil</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">record-distance-path-length</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">refinement-composition-and-limit</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">refinement-results</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">relativistic-kepler-threshold</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">reversible-generator-constraints</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">reversible-interaction-premise</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">rivero-1998-conjecture-central-forces</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">rotation-composition-universality</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">schur-error-ultraviolet</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">score-constrained-ensemble</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">sed-closure-under-recording</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">sed-zeta-radiation-link</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">series-parallel-gauge-refinement</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">shared-readiness-chsh</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">shared-record-budget</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">shared-resource-events</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">single-calibration-fibres</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">small-field-step-decay-and-threshold</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">small-field-step-gaussian</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">spin-action-patching</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">stabilized-topology-action-scale</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">static-composition-classics</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">stochastic-route-velocitas-ultima</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">strong-coupling-target-box</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">strong-coupling-threshold-explicit</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">strong-coupling-uniform-gap</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">su2-midplane-order-t</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">su2-midplane-small-field</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">su2-midpoint-exact</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">su3-constants</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">sun-midpoint-centre</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">superdeterminism-floor</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">susceptibility-gap</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">tangent-groupoid-trajectories</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">reading</td>
+</tr>
+<tr>
+<td style="text-align: left;">telegraph-return-bridge</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">thermal-receiver-reliability</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">thermodynamic-records-no-floor</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">three-body-cut-memory</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">three-calibration-global-recovery</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">three-continuum-limits</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">three-dimensional-gap-one-function</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">topological-sector-action-selection</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">torus-valley-potential</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">two-calibration-branches</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">construction</td>
+</tr>
+<tr>
+<td style="text-align: left;">two-position-recovery</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">two-regulator-audit</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">typical-field-strength-window</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">superseded</td>
+<td style="text-align: left;">obstruction</td>
+</tr>
+<tr>
+<td style="text-align: left;">uv-halving-ir-confinement</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">villain-monopole-refinement</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">weak-coupling-feshbach-reduction</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+<tr>
+<td style="text-align: left;">what-would-unblock</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">map</td>
+</tr>
+<tr>
+<td style="text-align: left;">wilson-strong-coupling-explicit</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">proved</td>
+<td style="text-align: left;">calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">zero-spacing-any-action</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mixed</td>
+<td style="text-align: left;">theorem</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The two proof goals are unaffected: the Newton recording spine and
+the refinement and gauge spine are the notes the scorer could follow to
+the end. The pending work this audit creates is corrective: dated
+correction boxes in the 24 notes of §3, the factor-2 fix in
+<code>planck-gap-derivation</code>, the <span
+class="math inline">\(q=4\)</span> column in
+<code>strong-coupling-target-box</code>, the abstract of
+<code>small-field-step-decay-and-threshold</code>, and one set of
+strong-coupling thresholds with their labels in
+<code>mass-gap-position</code> and <code>su3-constants</code>. STATE
+gains one line pointing here.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
