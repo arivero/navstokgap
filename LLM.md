@@ -159,7 +159,7 @@ $t=\lambda_Da^{4-D}$ per plaquette; in $D=4$, $t=g^2$ contains $\hbar$.
 | Error budget by dimension | Perturbative $O(t_n)$, large-field $a_n^{-D}e^{-c/t_n}$, jump $\nu$; summable for $D<4$, running for $D=4$, no small-field regime for $D>4$ | organizing table; universality inference REJECTED by referee | [zero-spacing §3](notes/zero-spacing-any-action.md) |
 | Time-only halving | Electric faces are series (semigroup), magnetic faces parallel (exponential family); defect is Trotter non-commutation; heat-kernel anisotropy formula (1) fails there | reading of known results | [halving-atlas §5.5](notes/halving-atlas.md), [zero-spacing §1](notes/zero-spacing-any-action.md) |
 | T1 | Finite lattice: unique ground state, $\delta>0$, every $a,N_s,g$, compact $G$ | proved | [mass-gap-obligations-lattice](notes/mass-gap-obligations-lattice.md) |
-| T2 | Volume-uniform strong-coupling gap: Wilson transfer matrix $\Delta_W\ge\frac{\hbar c}a4\log(g^2/176)$ for $g^2\ge176$ (rigorous 1056); Kogut--Susskind $\Delta_{\rm KS}\ge\frac43g^2\hbar c/a$ for $g^2\ge388$ | proved (from Kotecký--Preiss, Yarotsky) | [wilson-strong-coupling-explicit](notes/wilson-strong-coupling-explicit.md), [kogut-susskind-strong-coupling-explicit](notes/kogut-susskind-strong-coupling-explicit.md) |
+| T2 | Volume-uniform strong-coupling gap: Wilson transfer matrix $\Delta_W\ge\frac{\hbar c}a4\log(g^2/176)$ for $g^2\ge176$ (rigorous 1056); the Kogut--Susskind explicit threshold $g^2\ge388$ (and $79$ adjacent) was withdrawn on 2026-10-02 after a referee found its overlap count incomplete; KS keeps Yarotsky's existential threshold and a finite-volume bound $\frac83g^2-12|P|/g^2$ only | Wilson: proved (Kotecký--Preiss); KS explicit number: withdrawn 2026-10-02 | [wilson-strong-coupling-explicit](notes/wilson-strong-coupling-explicit.md), [kogut-susskind-strong-coupling-explicit](notes/kogut-susskind-strong-coupling-explicit.md) |
 | T2$'$, T3, T4 | Gap at every coupling; scaling limit $\delta_\infty/(a\Lambda_{\rm lat})\to m/\hbar c\Lambda$; continuum theory with the axioms | open (T2$'$ false for $U(1)$ and for $SU(N\ge5)$ Wilson action) | [mass-gap-position](notes/mass-gap-position.md), [mass-gap-openings](notes/mass-gap-openings.md) |
 | Conditional theorem | H1 (blocking clusters to $\xi\simeq a$) + H2 (certified mixing on one box) $\Rightarrow m\ge\hbar c\gamma'/a_*$ | conditional | [mass-gap-conditional-theorem](notes/mass-gap-conditional-theorem.md) |
 | Small volume (S) | Gap-transfer lemma proved; H1--H3 inequalities open; $\Delta=\delta_1g^{2/3}\hbar c/L[1+O(g^{2/3})]$ upper side proved | conditional | [weak-coupling-feshbach-reduction](notes/weak-coupling-feshbach-reduction.md) |
@@ -287,8 +287,10 @@ correction is dated in the note. Do not reintroduce them.
     transition); the conjecture needs a gap on $(0,g_1)$ along the scaling
     curve ([mass-gap-openings](notes/mass-gap-openings.md)).
 17. **Yarotsky's threshold for Kogut--Susskind is $g^2\sim10^{101}$.** Usable
-    numbers ($176$ Wilson, $388$ KS) come from the Euclidean polymer gas and
-    the Duhamel expansion respectively.
+    numbers: $176$ Wilson from the Euclidean polymer gas. The $388$ KS figure
+    from the Duhamel expansion was withdrawn on 2026-10-02 (the adjacent-shape
+    count anchored at the test link misses histories reaching it later; the
+    overlap shift measure lacked its multiplicity), so no usable KS number stands.
 18. **Thm 2 of the zero-spacing note needs finite exponents and a simple
     group** (or an isotropy assumption); $U(1)^2$ admits anisotropic
     diffusion. **Thm 5's** lifts use coarse-cube Bianchi identities and
