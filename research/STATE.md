@@ -1,6 +1,6 @@
 # State
 
-Updated 2026-10-01 (evening). Read this page and the
+Updated 2026-10-02 (Galilei comparison added). Read this page and the
 [refinement note](../notes/refinement-composition-and-limit.md);
 AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
 gives the wider comparison.
@@ -91,6 +91,11 @@ fill its cells (open cells in its §5).
   note for interest and correctness (Opus, reviewed by Fable): the spine
   holds; 24 notes, mostly closed mass-gap routes, still state withdrawn
   or inconsistent claims and await dated correction boxes.
+
+- The user-directed [Galilei continuous-spin comparison](../notes/galilei-continuous-spin-classical.md)
+  records the mechanical meaning of the label and a conditional spectral-gap
+  uncertainty bound; use it before proposing zero central mass as a necessity
+  mechanism. It supplies no new premise for the two main proof goals.
 
 ## Next
 

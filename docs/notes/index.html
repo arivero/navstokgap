@@ -263,11 +263,11 @@ status=obstruction | proof_status=mixed | value=known-boundary |
 keys=Agmon identity;Kogut–Susskind ground state;weighted
 eigenfunction;global large deviation;local suppression correction |
 area=Yang–Mills/gauge Title: An Agmon bound for the Kogut–Susskind
-ground state: large fields are suppressed at rate <span
-class="math inline">\(1/g^2\)</span> per plaquette Summary: Establishes
-the exact weighted ground-state Agmon identity and forbidden-region
-estimate on compact gauge configuration space. Limit/reuse: Its original
-n-plaquette/local-suppression interpretation is corrected by <a
+ground state: finite-volume global magnetic-energy tails Summary:
+Establishes the exact weighted ground-state Agmon identity and
+forbidden-region estimate on compact gauge configuration space.
+Limit/reuse: Its original n-plaquette/local-suppression interpretation
+is corrected by <a
 href="agmon-global-not-local.html">agmon-global-not-local</a>; only
 global magnetic-energy excess control survives. Sections proposing local
 decimation control must be read through that correction.</p></li>
@@ -940,16 +940,16 @@ href="flow-instability-large-field.html">flow-instability-large-field.md</a>
 | status=obstruction | proof_status=mixed | value=known-boundary |
 keys=Nielsen–Olesen;chromomagnetic saddle;curvature operator
 symmetric;Landau level;flow growth;large-field split;sharpness caveat |
-area=Yang–Mills/gauge Title: The flow Jacobian’s growth factor is sharp:
-it is the Nielsen–Olesen mode, so the large-field region cannot be
-flowed Summary: Symmetry of the curvature operator and the
-Nielsen–Olesen unstable chromomagnetic mode show that gradient descent
-can amplify perturbations near large-field saddles while lowering
-action. Limit/reuse: The note’s exact saturation claim needs care: its
-displayed Landau spectrum includes the positive covariant-Laplacian
-contribution, so it does not by itself establish growth equal to the
-curvature-only norm exponent. Lattice-step uniformity is separately
-corrected in <a
+area=Yang–Mills/gauge Title: A chromomagnetic saddle amplifies the
+linearized flow at rate <span class="math inline">\(gB\)</span>:
+sharpness of the truncation bound remains unproved Summary: Symmetry of
+the curvature operator and the Nielsen–Olesen unstable chromomagnetic
+mode show that gradient descent can amplify perturbations near
+large-field saddles while lowering action. Limit/reuse: The note’s exact
+saturation claim needs care: its displayed Landau spectrum includes the
+positive covariant-Laplacian contribution, so it does not by itself
+establish growth equal to the curvature-only norm exponent. Lattice-step
+uniformity is separately corrected in <a
 href="lattice-truncation-uniform.html">lattice-truncation-uniform</a>.</p></li>
 <li><p><a
 href="flow-jacobian-truncation-error.html">flow-jacobian-truncation-error.md</a>
@@ -957,14 +957,12 @@ href="flow-jacobian-truncation-error.html">flow-jacobian-truncation-error.md</a>
 status=obstruction | proof_status=mixed | value=known-boundary |
 keys=linearized gauge flow;covariant heat kernel;Duhamel;Gaussian
 tail;curvature norm;continuum physical scale;lattice compactness |
-area=Yang–Mills/gauge Title: The truncation error of a flow step is
-Gaussian times <span class="math inline">\(e^{2t\|G\|_\infty}\)</span>,
-so the renormalization step is small exactly on small-field
-configurations Summary: Derives a covariant-flow Jacobian bound with
-Gaussian spatial decay multiplied by a curvature-growth factor,
-motivating small/large-field splitting and a range/flow-radius
-truncation budget. Limit/reuse: Its inference that one lattice step
-lacks uniform control is explicitly corrected by <a
+area=Yang–Mills/gauge Title: Gaussian tails for a covariant linearized
+flow; Hamiltonian truncation remains open Summary: Derives a
+covariant-flow Jacobian bound with Gaussian spatial decay multiplied by
+a curvature-growth factor, motivating small/large-field splitting and a
+range/flow-radius truncation budget. Limit/reuse: Its inference that one
+lattice step lacks uniform control is explicitly corrected by <a
 href="lattice-truncation-uniform.html">lattice-truncation-uniform</a>.
 Kernel-tail estimates require further operator/relative-form
 justification; the linked instability note’s exact sharpness claim needs
@@ -1062,6 +1060,29 @@ momenta are supplied, and joint classical record access is assumed. <a
 href="hidden-clock-ambiguity.html">Hidden clock</a> removes that
 calibration premise.</p></li>
 <li><p><a
+href="galilei-continuous-spin-classical.html">galilei-continuous-spin-classical.md</a>
+| priority=1 | flags=surprising | role=result,synthesis | status=result
+| proof_status=mixed | value=surprising-result,known-boundary |
+keys=continuous spin;Bargmann group;zero central mass;transverse boost
+moment;mass dipole;signed masses;coadjoint orbit;fixed physical
+time;internal cylinder;Planck gap;mass gap;boost momentum
+uncertainty;hbar M | area=Newton/action Title: Continuous spin in
+Galilei mechanics: a transverse boost moment Summary: Identifies the
+zero-mass continuous-spin label as a transverse boost moment, realizes
+it with a free signed-mass pair, and derives fixed-time elementary orbit
+curves and the failure of an energy lower bound at nonzero momentum. A
+supplied Poincaré energy gap gives a boost–momentum uncertainty floor
+proportional to ℏΔ/c², while a positive Poincaré continuous-spin label
+still permits energy approaching zero. Limit/reuse: signed masses are an
+extension of ordinary positive-mass mechanics; the pair realizes a
+family of charges, not one elementary orbit. Both quantum action and the
+spectral gap are supplied in the uncertainty result; no Newton action
+necessity or continuum construction follows. Retains the scale
+distinction in <a href="rotation-composition-universality.html">rotation
+composition</a> and the corrected <a
+href="action-floor-yang-mills-gap.html">action-floor/gap
+note</a>.</p></li>
+<li><p><a
 href="galileo-two-path-interference.html">galileo-two-path-interference.md</a>
 | priority=2 | flags=surprising | role=result | status=result |
 proof_status=proved-refereed | value=surprising-result,known-boundary |
@@ -1082,17 +1103,15 @@ href="gapped-set-critical-coupling.html">gapped-set-critical-coupling.md</a>
 proof_status=mixed | value=synthesis,known-boundary | keys=T2
 prime;gapped set;bulk transition;finite-lattice
 continuity;volume-uniform stability;closedness;scaling region;T3 |
-area=Yang–Mills/gauge Title: T2<span
-class="math inline">\(&#39;\)</span> is the absence of a
-zero-temperature phase transition, and the missing input is closedness
-of the gapped set Summary: Separates finite-lattice continuity from
-infinite-volume gap closure and organizes possible obstructions using
-the gapped coupling set. Strong coupling supplies a nonempty region;
-global openness and closedness remain unproved. Limit/reuse: appended
-correction recognizes bulk transitions compatible with a continuum gap:
-only the weak-coupling trajectory and T3 are needed. <a
-href="mass-gap-openings.html">Openings</a> supersedes the all-coupling
-requirement.</p></li>
+area=Yang–Mills/gauge Title: The gapped coupling set: finite-volume
+continuity and conditional spectral limits Summary: Separates
+finite-lattice continuity from infinite-volume gap closure and organizes
+possible obstructions using the gapped coupling set. Strong coupling
+supplies a nonempty region; global openness and closedness remain
+unproved. Limit/reuse: appended correction recognizes bulk transitions
+compatible with a continuum gap: only the weak-coupling trajectory and
+T3 are needed. <a href="mass-gap-openings.html">Openings</a> supersedes
+the all-coupling requirement.</p></li>
 <li><p><a
 href="gaussian-blocking-coupling.html">gaussian-blocking-coupling.md</a>
 | priority=3 | flags=none | role=result,live | status=result |
@@ -1129,16 +1148,15 @@ href="ground-state-measure-transfer.html">ground-state-measure-transfer.md</a>
 proof_status=mixed | value=infrastructure,known-boundary | keys=Kogut
 Susskind;anisotropic Wilson;Perron vector;Euclidean time-slice
 marginal;ground-state density;large-field action cost;probability
-transfer | area=Yang–Mills/gauge Title: The ground-state measure is the
-time-slice marginal of the Euclidean measure, and that imports the local
-large-field estimate Summary: Standard transfer-matrix spectral
-projection identifies the finite-lattice ground-state density with the
-infinite-time Euclidean slice marginal, transferring estimates actually
-proved for that marginal. It explains the scale-invariant
-four-dimensional large-field action cost. Limit/reuse: action cost alone
-supplies no normalized nonperturbative probability estimate or
-Hamiltonian operator inequality. The truncation-exponent competition is
-partly superseded by <a
+transfer | area=Yang–Mills/gauge Title: Ground-state measure transfer:
+the slice identity is exact, the large-field estimate remains open
+Summary: Standard transfer-matrix spectral projection identifies the
+finite-lattice ground-state density with the infinite-time Euclidean
+slice marginal, transferring estimates actually proved for that
+marginal. It explains the scale-invariant four-dimensional large-field
+action cost. Limit/reuse: action cost alone supplies no normalized
+nonperturbative probability estimate or Hamiltonian operator inequality.
+The truncation-exponent competition is partly superseded by <a
 href="large-field-operator-inequality.html">operator
 inequality</a>.</p></li>
 <li><p><a href="halving-atlas.html">halving-atlas.md</a> | priority=3 |
@@ -1327,38 +1345,38 @@ href="galileo-two-path-interference.html">Galileo
 interference</a>.</p></li>
 <li><p><a
 href="kogut-susskind-strong-coupling-explicit.html">kogut-susskind-strong-coupling-explicit.md</a>
-| priority=2 | flags=none | role=result,infrastructure | status=result |
-proof_status=proved-unrefereed | value=infrastructure | keys=T2;Kogut
-Susskind;continuous-time Duhamel;closed flux loops;Kotecky
-Preiss;general polymer tree;g2 388;hbar c over a | area=Yang–Mills/gauge
-Title: Continuous-time expansion for Kogut–Susskind: <span
-class="math inline">\(SU(3)\)</span> gapped for <span
-class="math inline">\(g^2\ge388\)</span>, gap approaching <span
-class="math inline">\((8/3)g^2\,\hbar c/a\)</span> Summary: A
-continuous-time electric-basis polymer expansion gives an explicit SU(3)
-volume-uniform KS lower gap (4/3)g² ℏc/a at g²≥388, retaining exact
-excited-link decay. The general connected-history tree count
-distinguishes this threshold from the adjacent-growth estimate g²≥79.
-Limit/reuse: this is a strong-coupling lattice finish line, not
-weak-side RG or continuum construction; compare <a
-href="wilson-strong-coupling-explicit.html">Wilson
-expansion</a>.</p></li>
+| priority=2 | flags=route-closure | role=result,infrastructure |
+status=conditional | proof_status=mixed | value=infrastructure |
+keys=T2;Kogut Susskind;continuous-time Duhamel;closed flux loops;Kotecky
+Preiss;general polymer tree;withdrawn 388 threshold;hbar c over a |
+area=Yang–Mills/gauge Title: Continuous-time Kogut–Susskind expansion:
+corrected overlap bounds and an open explicit uniform threshold Summary:
+A continuous-time electric-basis polymer expansion for SU(3)
+Kogut–Susskind; its former volume-uniform gap (4/3)g² ℏc/a at g²≥388 (79
+adjacent) was withdrawn on 2026-10-02: the anchored adjacent count
+misses later histories, the overlap shift measure lacked its
+multiplicity, and true-vacuum decay was unproved. Surviving: corrected
+overlap bounds, a finite-volume gap bound (8/3)g²−12|P|/g², a proved
+spectral lemma; the explicit uniform threshold is open. Limit/reuse:
+Strong-coupling lattice finish line only; no explicit volume-uniform KS
+threshold stands; compare <a
+href="wilson-strong-coupling-explicit.html">Wilson expansion</a>, whose
+176/1056 thresholds are unaffected.</p></li>
 <li><p><a
 href="large-field-action-lower-bound.html">large-field-action-lower-bound.md</a>
 | priority=2 | flags=none | role=result,infrastructure | status=result |
 proof_status=mixed | value=infrastructure,known-boundary | keys=flow
 monotonicity;flowed L2 block;eta2 over 4g2;four-dimensional action;scale
 invariant;constrained sharpness;normalized probability;large fields |
-area=Yang–Mills/gauge Title: The large-field action lower bound is
-immediate in the natural variable, and the constant field saturates it
-Summary: Flow monotonicity and positivity give the Euclidean action
-lower bound η²/(4g²) when the flowed block L² field exceeds η². The
-dimensional cancellation is independent of block scale. Limit/reuse:
-this is an action cost; claimed sharpness needs admissible boundary/flow
-control, and a normalized probability bound still needs
-partition-function estimates. See <a
-href="large-field-entropy-count.html">entropy model</a> and <a
-href="large-field-operator-inequality.html">operator
+area=Yang–Mills/gauge Title: The flowed block constraint gives a
+continuum action lower bound; sharpness remains open Summary: Flow
+monotonicity and positivity give the Euclidean action lower bound
+η²/(4g²) when the flowed block L² field exceeds η². The dimensional
+cancellation is independent of block scale. Limit/reuse: this is an
+action cost; claimed sharpness needs admissible boundary/flow control,
+and a normalized probability bound still needs partition-function
+estimates. See <a href="large-field-entropy-count.html">entropy
+model</a> and <a href="large-field-operator-inequality.html">operator
 obstruction</a>.</p></li>
 <li><p><a
 href="large-field-entropy-count.html">large-field-entropy-count.md</a> |
@@ -1367,15 +1385,14 @@ status=exploratory | proof_status=formal |
 value=infrastructure,known-boundary | keys=Nielsen Olesen;Landau
 degeneracy;longitudinal disk;eta2 over 8pi2;action entropy
 ratio;constrained minimizer;large-field measure;bounded factor premise |
-area=Yang–Mills/gauge Title: The large-field region costs more action
-than it has unstable directions, by the factor <span
-class="math inline">\(2\pi^2/g^2\)</span> Summary: Constant-background
-Landau counting estimates η²/(8π²) unstable modes per four-dimensional
-block, giving action-cost/count ratio 2π²/g². Limit/reuse: this is a
-model estimate, not a general entropy or convergent polymer theorem;
-bounded weight per mode and normalized measure control are additional
-premises. Compactness gives a constrained minimizer but does not itself
-supply a Gaussian expansion. The action bound is in <a
+area=Yang–Mills/gauge Title: Constant-background unstable-mode counting
+does not bound large-field entropy Summary: Constant-background Landau
+counting estimates η²/(8π²) unstable modes per four-dimensional block,
+giving action-cost/count ratio 2π²/g². Limit/reuse: this is a model
+estimate, not a general entropy or convergent polymer theorem; bounded
+weight per mode and normalized measure control are additional premises.
+Compactness gives a constrained minimizer but does not itself supply a
+Gaussian expansion. The action bound is in <a
 href="large-field-action-lower-bound.html">lower bound</a>.</p></li>
 <li><p><a
 href="large-field-operator-inequality.html">large-field-operator-inequality.md</a>
@@ -1530,14 +1547,14 @@ href="mass-gap-conditional-theorem.html">mass-gap-conditional-theorem.md</a>
 proof_status=conditional | value=synthesis,open-mechanism |
 keys=H1;H2;weak-side blocking;certified finite box;mixing
 neighbourhood;physical a star;minimum decay rate;continuum construction
-| area=Yang–Mills/gauge Title: The map as one conditional theorem: two
-hypotheses, both finite in kind, and an explicit lower bound <span
-class="math inline">\(m\ge\hbar c\,\gamma&#39;/a_*\)</span> Summary:
-Packages an RG fluctuation-decay hypothesis and robust finite-box mixing
-certificate into a proposed lattice decay/gap transfer, with physical
-lower scale ℏc min(γ<em>,γ′)/a</em>. Limit/reuse: both hypotheses remain
-unproved; continuum existence, nontriviality and observable/limit
-control are separate obligations despite the note’s endpoint rhetoric.
+| area=Yang–Mills/gauge Title: The map as one conditional theorem: H1
+and H2 give a volume-uniform lattice gap bound, and continuum existence
+stays a separate obligation Summary: Packages an RG fluctuation-decay
+hypothesis and robust finite-box mixing certificate into a proposed
+lattice decay/gap transfer, with physical lower scale ℏc
+min(γ<em>,γ′)/a</em>. Limit/reuse: both hypotheses remain unproved;
+continuum existence, nontriviality and observable/limit control are
+separate obligations despite the note’s endpoint rhetoric.
 Physical-coupling H2 certification is later rejected in <a
 href="reasons-to-stop-as-research.html">reasons to stop</a>; current
 progress follows the refinement spine.</p></li>
@@ -2459,14 +2476,15 @@ proof_status=conditional | value=synthesis,infrastructure | keys=SU(3);
 target box; bounded local perturbations; electric deformation; locality
 q; exact low-energy reduction; physical gap | area=Yang–Mills/gauge
 Title: The target box: the strong-coupling gap survives local
-perturbations, so the renormalization group has an explicit finish line
-Summary: The continuous-time strong-coupling expansion admits explicit
-few-link perturbation tolerances and electric-energy deformation, giving
-a volume-uniform gap proportional to g²ℏc/a inside a target class.
-Limit/reuse: Tables separate adjacent-growth estimates from conservative
-general counts and retain the quoted expansion premises. Reaching the
-box by exact low-energy RG with controlled generated terms remains open;
-uses <a href="kogut-susskind-strong-coupling-explicit.html">KS
+perturbations with an existential tolerance; its explicit location is
+open Summary: The continuous-time strong-coupling expansion admits
+explicit few-link perturbation tolerances and electric-energy
+deformation, giving a volume-uniform gap proportional to g²ℏc/a inside a
+target class. Limit/reuse: Tables separate adjacent-growth estimates
+from conservative general counts and retain the quoted expansion
+premises. Reaching the box by exact low-energy RG with controlled
+generated terms remains open; uses <a
+href="kogut-susskind-strong-coupling-explicit.html">KS
 expansion</a>.</p></li>
 <li><p><a
 href="strong-coupling-threshold-explicit.html">strong-coupling-threshold-explicit.md</a>
@@ -2876,14 +2894,15 @@ keys=Wilson transfer;SU3;KP;rho;176 leading;1056 conservative;volume
 uniform;cyclic observables | area=Yang–Mills/gauge Title: An explicit
 strong-coupling gap for the Wilson transfer matrix: <span
 class="math inline">\(SU(3)\)</span> is gapped for <span
-class="math inline">\(g^2\ge176\)</span>, with <span
-class="math inline">\(\Delta\ge(\hbar c/a)\,4\log(g^2/176)\)</span>
-Summary: A closed-surface polymer criterion 20e²ρ≤0.84 yields
-volume-uniform local-observable decay and a Wilson-transfer gap lower
-bound in units ℏc/a. Limit/reuse: ρ=1/g² is a leading activity estimate;
-the conservative all-representation bound uses ρ=e^(6/g²)−1. Quoted
-176/1056 thresholds use these different readings; positive gap needs a
-strict margin. Wilson and KS are distinct operators.</p></li>
+class="math inline">\(g^2\ge1059\)</span>, with <span
+class="math inline">\(\Delta\ge(\hbar
+c/a)\,4\log[1/(176(e^{6/g^2}-1))]\)</span> Summary: A closed-surface
+polymer criterion 20e²ρ≤0.84 yields volume-uniform local-observable
+decay and a Wilson-transfer gap lower bound in units ℏc/a. Limit/reuse:
+ρ=1/g² is a leading activity estimate; the conservative
+all-representation bound uses ρ=e^(6/g²)−1. Quoted 176/1056 thresholds
+use these different readings; positive gap needs a strict margin. Wilson
+and KS are distinct operators.</p></li>
 <li><p><a
 href="zero-branch-reachability.html">zero-branch-reachability.md</a> |
 priority=3 | flags=surprising | role=result,live | status=result |

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Continuous spin in Galilei mechanics: a transverse boost moment</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Continuous spin in Galilei mechanics: a transverse boost moment</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/galilei-continuous-spin-classical.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/galilei-continuous-spin-classical.pdf">PDF</a></p><p><strong>Result, 2026-10-02.</strong> The Galilei continuous-spin
+analogue has a classical interpretation as a fixed transverse
+<strong>boost moment</strong>. At zero central mass and nonzero
+momentum, its dimensionful parameter is</p>
+<p><span class="math display">\[
+\beta=\left|\mathbf K-\frac{\mathbf K\cdot\mathbf P}{|\mathbf P|^2}
+\mathbf P\right|
+=\frac{|\mathbf P\times\mathbf K|}{|\mathbf P|}&gt;0. \tag{1}
+\]</span></p>
+<p>For Newtonian constituents, the boost charge comes from the
+mass-weighted position, <span class="math inline">\(\sum_i m_i\mathbf
+x_i-t\mathbf P\)</span>. A nonempty system of positive masses cannot
+have zero total mass. Allowing masses <span
+class="math inline">\(+\mu\)</span> and <span
+class="math inline">\(-\mu\)</span> gives an explicit classical
+realization in which <span class="math inline">\(\beta=\mu|\mathbf
+d_\perp|\)</span>, with <span class="math inline">\(\mathbf d\)</span>
+their relative separation (§4). Its energy is unbounded below. The
+elementary orbit’s usual spacetime action also imposes fixed physical
+time (§5); the signed pair realizes charges, not an ordinary one-body
+trajectory on that orbit.</p>
+<p>The orbit and representation classification is established
+literature. The calculations below explain its mechanical meaning; they
+make no novelty claim and have not been independently refereed. This is
+a modern Galilei-group interpretation, not a premise attributed to
+Newton. Section 7 tests the proposed connection between a Planck gap and
+a mass gap: a supplied action constant and a supplied spectral gap enter
+through their product in a boost uncertainty bound. A positive
+continuous-spin label alone gives neither gap.</p>
+<h2 id="charges-conventions-and-the-invariant">1. Charges, conventions
+and the invariant</h2>
+<p>Work in three spatial dimensions with a Hamiltonian action of the
+Bargmann central extension on a free or isolated system. Applied
+external forces require including their sources before asserting these
+symmetries. Write <span class="math inline">\(M\)</span> for central
+mass, <span class="math inline">\(H\)</span> for energy, <span
+class="math inline">\(\mathbf P\)</span> for momentum, <span
+class="math inline">\(\mathbf J\)</span> for angular momentum and <span
+class="math inline">\(\mathbf K\)</span> for the boost generator at
+reference time <span class="math inline">\(t=0\)</span>. Use the
+classical Poisson conventions</p>
+<p><span class="math display">\[
+\begin{aligned}
+\{J_i,J_j\}&amp;=\epsilon_{ijk}J_k,&amp;
+\{J_i,P_j\}&amp;=\epsilon_{ijk}P_k,&amp;
+\{J_i,K_j\}&amp;=\epsilon_{ijk}K_k,\\
+\{K_i,P_j\}&amp;=M\delta_{ij},&amp;
+\{K_i,H\}&amp;=P_i,&amp;
+\{K_i,K_j\}&amp;=0.
+\end{aligned} \tag{2}
+\]</span></p>
+<p><span class="math inline">\(M\)</span> is central, <span
+class="math inline">\(\{P_i,P_j\}=\{P_i,H\}=\{J_i,H\}=0\)</span>, and
+evolution is <span class="math inline">\(\dot A=\{A,H\}\)</span>. Along
+a trajectory, <span class="math inline">\(\mathbf K-t\mathbf P\)</span>
+is the conserved boost charge. Subtracting <span
+class="math inline">\(t\mathbf P\)</span> leaves (1) unchanged. These
+brackets specify our signs rather than importing signs from a
+coadjoint-coordinate convention.</p>
+<p>Define</p>
+<p><span class="math display">\[
+\mathbf W=M\mathbf J-\mathbf K\times\mathbf P,
+\qquad C=|\mathbf W|^2. \tag{3}
+\]</span></p>
+<p><strong>Proposition 1.</strong> <span
+class="math inline">\(C\)</span> is invariant under the connected
+Bargmann group. On the stratum <span class="math inline">\(M=0\)</span>,
+<span class="math inline">\(|\mathbf P|^2\)</span> is invariant as well.
+Thus (1) is invariant when <span class="math inline">\(M=0\)</span> and
+<span class="math inline">\(|\mathbf P|=p_0&gt;0\)</span>.</p>
+<p><em>Proof.</em> A spatial translation generated by <span
+class="math inline">\(\mathbf a\cdot\mathbf P\)</span> changes <span
+class="math inline">\(\mathbf K\)</span> by <span
+class="math inline">\(M\mathbf a\)</span> and <span
+class="math inline">\(\mathbf J\)</span> by <span
+class="math inline">\(\mathbf a\times\mathbf P\)</span>, so both changes
+cancel in (3). A passive boost generated by <span
+class="math inline">\(\mathbf v\cdot\mathbf K\)</span> gives</p>
+<p><span class="math display">\[
+\mathbf P&#39;=\mathbf P-M\mathbf v,\qquad
+\mathbf K&#39;=\mathbf K,\qquad
+\mathbf J&#39;=\mathbf J+\mathbf v\times\mathbf K. \tag{4}
+\]</span></p>
+<p>The two boost contributions to <span class="math inline">\(\mathbf
+W&#39;\)</span> cancel since <span class="math inline">\(\mathbf
+v\times\mathbf K=-\mathbf K\times\mathbf v\)</span>. Time evolution adds
+<span class="math inline">\(t\mathbf P\)</span> to <span
+class="math inline">\(\mathbf K\)</span> and preserves <span
+class="math inline">\(\mathbf P,\mathbf J\)</span>; rotations rotate
+<span class="math inline">\(\mathbf W\)</span>. Hence its norm is
+invariant. At <span class="math inline">\(M=0\)</span>, boosts also
+preserve <span class="math inline">\(\mathbf P\)</span>, while rotations
+preserve its norm. Finally, <span
+class="math inline">\(C=p_0^2\beta^2\)</span> on this stratum. <span
+class="math inline">\(\square\)</span></p>
+<p>The massless orbit with labels <span
+class="math inline">\(p_0&gt;0,\beta&gt;0\)</span> is orbit #7 in <a
+href="https://arxiv.org/pdf/2401.03241v1">Figueroa-O’Farrill et al.</a>
+(passage-read: arXiv v1, §7.2.2 and Table 1, p. 8). Its corresponding
+representation families are <span
+class="math inline">\(V_\pm(p_0,\beta)\)</span> in units <span
+class="math inline">\(\hbar=1\)</span> (§11.4.5 and Table 6). At <span
+class="math inline">\(\beta=0\)</span> the little-group boosts act
+trivially; that is a different representation class.</p>
+<h2 id="what-ordinary-newtonian-spin-measures">2. What ordinary
+Newtonian spin measures</h2>
+<p>For canonical Newtonian constituents at the reference time,
+assume</p>
+<p><span class="math display">\[
+\{x_{ia},p_{jb}\}=\delta_{ij}\delta_{ab},\qquad
+M=\sum_i m_i&gt;0,\qquad
+\mathbf P=\sum_i\mathbf p_i,\qquad
+\mathbf K=\sum_i m_i\mathbf x_i.
+\]</span></p>
+<p>Put <span class="math inline">\(\mathbf X=\mathbf K/M\)</span>. If
+the constituents carry internal angular momenta <span
+class="math inline">\(\mathbf s_i\)</span>, the mechanical total is</p>
+<p><span class="math display">\[
+\mathbf J=\sum_i\mathbf x_i\times\mathbf p_i+\sum_i\mathbf s_i.
+\]</span></p>
+<p>Equation (3) then becomes</p>
+<p><span class="math display">\[
+\mathbf W=M\mathbf S,\qquad
+\mathbf S=\mathbf J-\mathbf X\times\mathbf P
+=\sum_i(\mathbf x_i-\mathbf X)\times\mathbf p_i+\sum_i\mathbf s_i.
+\tag{5}
+\]</span></p>
+<p><span class="math inline">\(\mathbf S\)</span> is angular momentum
+about the centre of mass, including internal spin. A structureless
+single point has <span class="math inline">\(\mathbf S=0\)</span>; a
+rotating composite can have nonzero <span class="math inline">\(\mathbf
+S\)</span>. Its <strong>classical</strong> magnitude can vary
+continuously. Discrete integer or half-integer spin labels enter when
+one chooses unitary representations of the massive little group <span
+class="math inline">\(SU(2)\)</span>; they are not a restriction on
+classical initial angular momentum.</p>
+<p>The zero-mass parameter in (1) measures a different charge. At <span
+class="math inline">\(M=0\)</span>, <span class="math inline">\(\mathbf
+J\)</span> drops out of (3), and there is no division by <span
+class="math inline">\(M\)</span> defining a centre of mass. In
+particular, <span class="math inline">\(\beta\)</span> is not the spin
+magnitude of a massive Newtonian body.</p>
+<h2 id="the-internal-cylinder-and-the-continuous-label">3. The internal
+cylinder and the continuous label</h2>
+<p>Choose reference energy <span class="math inline">\(E=0\)</span> and
+momentum <span class="math inline">\(\mathbf P=p_0\mathbf e_3\)</span>.
+The boost laws (4) and (13) show that transverse boosts preserve this
+pair when <span class="math inline">\(M=0\)</span> and <span
+class="math inline">\(v_3=0\)</span>. Together with rotations about
+<span class="math inline">\(\mathbf e_3\)</span>, their little-group
+algebra is <span class="math inline">\(\mathfrak{iso}(2)\)</span>.</p>
+<p>A classical realization of its nontrivial internal orbit uses an
+angle <span class="math inline">\(\theta\in\mathbb R/2\pi\mathbb
+Z\)</span> and its conjugate angular momentum <span
+class="math inline">\(\ell\in\mathbb R\)</span>, with <span
+class="math inline">\(\{\theta,\ell\}=1\)</span>:</p>
+<p><span class="math display">\[
+K_1=\beta\cos\theta,\qquad K_2=\beta\sin\theta,
+\qquad J_3=\ell. \tag{6}
+\]</span></p>
+<p>Direct differentiation gives <span
+class="math inline">\(\{J_3,K_1\}=K_2\)</span>, <span
+class="math inline">\(\{J_3,K_2\}=-K_1\)</span> and <span
+class="math inline">\(\{K_1,K_2\}=0\)</span>. The phase space is a
+cylinder; <span class="math inline">\(\beta\)</span> fixes the radius of
+the boost moment, while <span class="math inline">\(\ell\)</span>
+remains an unrestricted classical coordinate. This is the internal
+little-group orbit, not the full Galilei particle phase space.</p>
+<p>With a <strong>supplied</strong> quantum action constant, one can
+represent <span
+class="math inline">\(J_3=-i\hbar\partial_\theta\)</span> and <span
+class="math inline">\(K_1,K_2\)</span> by multiplication by (6).
+Periodic and antiperiodic wave functions give respectively <span
+class="math inline">\(\ell=\hbar n\)</span> and <span
+class="math inline">\(\ell=\hbar(n+\tfrac12)\)</span>, <span
+class="math inline">\(n\in\mathbb Z\)</span>. Multiplication by <span
+class="math inline">\(K_1\pm iK_2=\beta e^{\pm i\theta}\)</span> shifts
+this angular-momentum label. Thus the tower is discrete although <span
+class="math inline">\(\beta\)</span> is continuous. This construction
+also explains the two families listed in <a
+href="https://arxiv.org/pdf/2401.03241v1">Figueroa-O’Farrill et al.</a>
+(passage-read: §11.3 and Table 6, p. 21).</p>
+<p>Restoring units, a boost acts through phases involving <span
+class="math inline">\(\mathbf v_\perp\cdot\mathbf
+K_\perp/\hbar\)</span>. Consequently</p>
+<p><span class="math display">\[
+[\beta]=\text{mass}\times\text{length},\qquad
+[p_0\beta]=\text{mass}\times\text{action},\qquad
+[\beta/p_0]=\text{time}. \tag{7}
+\]</span></p>
+<p>In the phase convention <span class="math inline">\(\exp(i\mathbf
+v\cdot\mathbf k)\)</span>, the generator is <span
+class="math inline">\(\mathbf k=\mathbf K/\hbar\)</span>, and the radius
+<span class="math inline">\(\beta/\hbar\)</span> has units of inverse
+velocity. Neither the angle’s periodicity nor the positivity of this
+particular orbit label fixes <span class="math inline">\(\hbar\)</span>,
+a universal action floor, or a dynamical period. No Hamiltonian for the
+internal cylinder has been assumed.</p>
+<h2 id="an-explicit-signed-mass-realization">4. An explicit signed-mass
+realization</h2>
+<p><strong>Proposition 2.</strong> Two free Newtonian coordinates with
+inertial masses <span class="math inline">\(+\mu\)</span> and <span
+class="math inline">\(-\mu\)</span>, <span
+class="math inline">\(\mu&gt;0\)</span>, realize (2) at <span
+class="math inline">\(M=0\)</span> and admit arbitrary <span
+class="math inline">\(p_0&gt;0,\beta&gt;0\)</span> in (1). Their
+Hamiltonian has no lower bound.</p>
+<p><em>Proof.</em> Allow the signed kinetic Lagrangian</p>
+<p><span class="math display">\[
+L=\frac\mu2|\dot{\mathbf x}_+|^2
+-\frac\mu2|\dot{\mathbf x}_-|^2.
+\]</span></p>
+<p>Define <span class="math inline">\(\mathbf R=(\mathbf x_++\mathbf
+x_-)/2\)</span> and <span class="math inline">\(\mathbf d=\mathbf
+x_+-\mathbf x_-\)</span>. Then</p>
+<p><span class="math display">\[
+L=\mu\dot{\mathbf R}\cdot\dot{\mathbf d},\qquad
+\mathbf P=\mu\dot{\mathbf d},\qquad
+\boldsymbol\pi=\mu\dot{\mathbf R},\qquad
+H=\frac{\mathbf P\cdot\boldsymbol\pi}{\mu}. \tag{8}
+\]</span></p>
+<p>Use canonical pairs <span class="math inline">\((\mathbf R,\mathbf
+P)\)</span> and <span class="math inline">\((\mathbf
+d,\boldsymbol\pi)\)</span>. At reference time the charges are</p>
+<p><span class="math display">\[
+\mathbf K=\mu\mathbf d,\qquad
+\mathbf J=\mathbf R\times\mathbf P+\mathbf d\times\boldsymbol\pi,
+\qquad M=0. \tag{9}
+\]</span></p>
+<p>The canonical brackets give <span
+class="math inline">\(\{K_i,P_j\}=0\)</span>, <span
+class="math inline">\(\{K_i,H\}=P_i\)</span>, <span
+class="math inline">\(\{K_i,K_j\}=0\)</span>; the two orbital angular
+momenta in (9) generate the required rotations. Also <span
+class="math inline">\(\{\mathbf J,H\}=0\)</span> and <span
+class="math inline">\(\{\mathbf P,H\}=0\)</span>. Thus all of (2) holds.
+Along the free motion,</p>
+<p><span class="math display">\[
+\mathbf d(t)=\mathbf d(0)+\frac{t}{\mu}\mathbf P,
+\qquad \mathbf K_{\rm conserved}=\mu\mathbf d(t)-t\mathbf P,
+\qquad \beta=\mu|\mathbf d_\perp(0)|. \tag{10}
+\]</span></p>
+<p>For example, <span class="math inline">\(\mathbf P=p_0\mathbf
+e_3\)</span> and <span class="math inline">\(\mathbf
+d(0)=(\beta/\mu)\mathbf e_1\)</span> give any desired positive labels.
+Keeping these fixed while varying <span
+class="math inline">\(\pi_3\)</span> makes <span
+class="math inline">\(H=p_0\pi_3/\mu\)</span> range over <span
+class="math inline">\(\mathbb R\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The vector <span class="math inline">\(\mu\mathbf d\)</span> is a
+mass dipole: translating both bodies leaves it unchanged because their
+masses sum to zero. Its transverse part also survives a shift of the
+time origin, which adds only a multiple of <span
+class="math inline">\(\mathbf P\)</span>. This gives (1) a concrete
+mechanical meaning. For nonnegative constituent masses, zero total mass
+would instead force every mass to vanish; ordinary positive-mass matter
+cannot supply this dipole.</p>
+<p>The signed pair’s twelve-dimensional phase space contains a family of
+charge orbits. Equations (8)–(10) are a realization of the algebra and
+its labels, not an identification of that phase space with one
+eight-dimensional coadjoint orbit. Its ordinary time evolution must not
+be transferred to the elementary particle interpretation below.</p>
+<h2 id="the-elementary-spacetime-orbit-has-fixed-time">5. The elementary
+spacetime orbit has fixed time</h2>
+<p>For the elementary orbit, take fixed perpendicular vectors <span
+class="math inline">\(\mathbf p_*,\mathbf b_*\)</span> of lengths <span
+class="math inline">\(p_0,\beta\)</span> and put <span
+class="math inline">\(\mathbf P=R\mathbf p_*\)</span>, <span
+class="math inline">\(\mathbf B=R\mathbf b_*\)</span>, <span
+class="math inline">\(R\in SO(3)\)</span>. The standard spacetime orbit
+action is</p>
+<p><span class="math display">\[
+S=\int\left[\mathbf P\cdot\mathbf x&#39;
++\mathbf B\cdot\mathbf v&#39;+(\mathbf P\cdot\mathbf
+v)t&#39;\right]d\tau,
+\qquad \mathbf P\cdot\mathbf B=0. \tag{11}
+\]</span></p>
+<p>Primes denote the arbitrary curve parameter <span
+class="math inline">\(\tau\)</span>; <span
+class="math inline">\(t\)</span> is physical time and <span
+class="math inline">\(\mathbf v\)</span> is an auxiliary boost
+coordinate. We reproduce <a
+href="https://arxiv.org/pdf/2401.03241v1">Figueroa-O’Farrill et al.</a>
+(passage-read: arXiv v1, §8.3.5, equations (8.51)–(8.60), p. 15). The
+coefficient <span class="math inline">\(\mathbf B\)</span> is conjugate
+to this velocity coordinate, not a canonical momentum conjugate to <span
+class="math inline">\(\mathbf x\)</span>.</p>
+<p>Varying <span class="math inline">\(\mathbf x\)</span> and <span
+class="math inline">\(\mathbf v\)</span> yields <span
+class="math inline">\(\mathbf P&#39;=0\)</span> and <span
+class="math inline">\(\mathbf B&#39;=\mathbf P t&#39;\)</span>.
+Differentiating the identity <span class="math inline">\(\mathbf
+P\cdot\mathbf B=0\)</span> then gives</p>
+<p><span class="math display">\[
+0=\mathbf P\cdot\mathbf B&#39;=p_0^2t&#39;,\qquad t&#39;=0. \tag{12}
+\]</span></p>
+<p>Thus these curves relate simultaneous events. They are not worldlines
+<span class="math inline">\(\mathbf x(t)\)</span> of a freely moving
+massive Newtonian body. Time translations still act on the orbit and its
+representations; (12) does not say that their generator is zero.</p>
+<p>Another obstruction to an ordinary point-particle phase space follows
+without using (11). On a fixed orbit <span
+class="math inline">\(|\mathbf P|^2=p_0^2\)</span> is a constant
+function. Three position observables with <span
+class="math inline">\(\{x_i,P_j\}=\delta_{ij}\)</span> would imply <span
+class="math inline">\(0=\{x_i,|\mathbf P|^2\}=2P_i\)</span>,
+contradicting <span class="math inline">\(p_0&gt;0\)</span>. The
+elementary orbit therefore cannot retain all three canonical positions
+from the unreduced signed pair.</p>
+<h2 id="energy-positivity-excludes-the-whole-moving-momentum-sector">6.
+Energy positivity excludes the whole moving-momentum sector</h2>
+<p>The passive boost law follows by integrating (2):</p>
+<p><span class="math display">\[
+H&#39;=H-\mathbf v\cdot\mathbf P+\frac M2|\mathbf v|^2. \tag{13}
+\]</span></p>
+<p>At <span class="math inline">\(M=0\)</span>, choosing <span
+class="math inline">\(\mathbf v=\lambda\mathbf P\)</span> gives <span
+class="math inline">\(H&#39;=H-\lambda p_0^2\)</span>. Hence the
+classical energy takes all real values on every orbit with <span
+class="math inline">\(p_0&gt;0\)</span>. In the induced unitary
+representation the energy-momentum support is likewise <span
+class="math inline">\(\mathbb R\times S^2_{p_0}\)</span>, so the energy
+operator has spectrum <span class="math inline">\(\mathbb R\)</span> (<a
+href="https://arxiv.org/pdf/2401.03241v1">Figueroa-O’Farrill et al.</a>,
+passage-read: §11.1, Table 5, p. 20). The conclusion applies at <span
+class="math inline">\(\beta=0\)</span> as well: the obstruction is zero
+central mass with nonzero momentum, not the nontrivial internal tower
+alone. It makes no statement about the distinct <span
+class="math inline">\(M=0,\mathbf P=0\)</span> sectors.</p>
+<p>Matching little groups also does not specify a nonrelativistic limit
+of a Poincaré continuous-spin particle. With fixed nonzero relativistic
+momentum, its massless energy <span class="math inline">\(E=c|\mathbf
+p|\)</span> diverges as <span class="math inline">\(c\to\infty\)</span>.
+A proposed contraction must state its changing labels and energy
+subtraction. No such contraction is constructed here.</p>
+<h2 id="does-zero-mass-connect-a-planck-gap-and-a-mass-gap">7. Does zero
+mass connect a Planck gap and a mass gap?</h2>
+<p>The quantum Galilei algebra exposes one connection:</p>
+<p><span class="math display">\[
+[\widehat K_i,\widehat P_j]=i\hbar M\delta_{ij}I,
+\qquad
+\Delta_\psi K_i\,\Delta_\psi P_i\ge\frac{\hbar|M|}{2}. \tag{14}
+\]</span></p>
+<p>The inequality assumes a supplied <span
+class="math inline">\(\hbar&gt;0\)</span>, a fixed central-mass sector
+and a normalized vector for which the variances and commutator
+expectation exist. The unscaled commutator vanishes if either factor
+vanishes. This does not identify their classical limits: for a massive
+body the rescaled bracket <span
+class="math inline">\([K_i,P_j]/(i\hbar)\)</span> tends to the nonzero
+Poisson bracket <span class="math inline">\(M\delta_{ij}\)</span> as
+<span class="math inline">\(\hbar\to0\)</span>.</p>
+<p>Neither factor in (14) is fixed by the other. Positive central mass
+also does not force a positive energy threshold: the free massive
+Galilei Hamiltonian <span class="math inline">\(\mathbf
+P^2/(2M)\)</span> on <span class="math inline">\(L^2(\mathbb
+R^3)\)</span> has spectrum <span
+class="math inline">\([0,\infty)\)</span> for every <span
+class="math inline">\(M&gt;0\)</span>. Excluding the exact zero-mass
+sector also leaves arbitrarily small positive mass labels available;
+exclusion of a point is weaker than a gap above that point.</p>
+<p>At finite <span class="math inline">\(c\)</span>, the corresponding
+Poincaré boost bracket uses energy:</p>
+<p><span class="math display">\[
+[\widehat K_i,\widehat P_j]
+=\frac{i\hbar}{c^2}\delta_{ij}\widehat H. \tag{15}
+\]</span></p>
+<p><span class="math inline">\(K_i\)</span> is normalized as the
+generator conjugate to infinitesimal velocity, with the same dimensions
+as the Galilei boost moment. Equation (15) is the usual
+Lorentz-translation bracket with physical units restored; see <a
+href="https://arxiv.org/pdf/hep-th/0205145v1">Brink et al.</a>
+(passage-read: §2, p. 2, in units <span
+class="math inline">\(c=\hbar=1\)</span>).</p>
+<p>On a massive branch, writing <span
+class="math inline">\(H=Mc^2+H_{\rm nr}\)</span> gives <span
+class="math inline">\(H/c^2=M+H_{\rm nr}/c^2\)</span>. On state families
+with bounded residual-energy matrix elements, this coefficient tends to
+<span class="math inline">\(M\)</span> as <span
+class="math inline">\(c\to\infty\)</span> and recovers (14). This
+specifies why a massive nonrelativistic sector has central mass; it does
+not equate that label with a gap of the full theory.</p>
+<p><strong>Proposition 3 (a supplied spectral gap gives a boost
+uncertainty floor).</strong> Suppose an already constructed
+Poincaré-covariant quantum theory has a normalized invariant vacuum
+<span class="math inline">\(\Omega\)</span>, physical Hamiltonian <span
+class="math inline">\(H\Omega=0\)</span>, and <span
+class="math inline">\(H\ge\Delta I\)</span> on <span
+class="math inline">\(\Omega^\perp\)</span>, with <span
+class="math inline">\(\Delta&gt;0\)</span> in energy units. Assume
+self-adjoint boost and momentum generators satisfying (15) on a common
+invariant domain where the commutator expectation is defined. Every
+normalized <span class="math inline">\(\psi\perp\Omega\)</span> in that
+domain with finite variances satisfies</p>
+<p><span class="math display">\[
+\Delta_\psi K_i\,\Delta_\psi P_i
+\ge\frac{\hbar\langle H\rangle_\psi}{2c^2}
+\ge\frac{\hbar\Delta}{2c^2}. \tag{16}
+\]</span></p>
+<p><em>Proof.</em> Cauchy–Schwarz applied to the centred vectors <span
+class="math inline">\((K_i-\langle K_i\rangle)\psi\)</span> and <span
+class="math inline">\((P_i-\langle P_i\rangle)\psi\)</span> bounds the
+modulus of their inner product by <span
+class="math inline">\(\Delta_\psi K_i\Delta_\psi P_i\)</span>. Its
+imaginary part has modulus <span
+class="math inline">\(\tfrac12|\langle[K_i,P_i]\rangle|\)</span>. Use
+(15) and the assumed spectral bound. <span
+class="math inline">\(\square\)</span></p>
+<p>The mass-equivalent threshold is <span
+class="math inline">\(\Delta/c^2\)</span>, so the right side is half the
+product of that threshold and the supplied action constant. Its units
+are <strong>mass times action</strong>. It is a floor for a
+boost–momentum uncertainty product, not for Newton’s inertial–parabola
+comparison. The proposition assumes the physical spectral gap after the
+required volume and continuum limits; it constructs neither that theory
+nor those limits, and imposes no lower bound on which positive value of
+<span class="math inline">\(\hbar\)</span> may be supplied. The converse
+cannot be obtained by reversing (16): a lower bound on an uncertainty
+product does not, through this inequality, give a lower bound on
+energy.</p>
+<p>A positive continuous-spin parameter gives a direct counterexample to
+identifying every positive representation scale with a mass gap.
+Poincaré continuous-spin representations are massless despite their
+nonzero Pauli–Lubanski invariant (<a
+href="https://arxiv.org/pdf/hep-th/0205145v1">Brink et al.</a>,
+passage-read: §§2–2.1, pp. 3–4). On their positive-energy light cone, a
+longitudinal boost changes <span class="math inline">\(E\)</span> to
+<span class="math inline">\(e^{-\eta}E\)</span> without changing the
+continuous-spin label. As <span
+class="math inline">\(\eta\to\infty\)</span>, <span
+class="math inline">\(E\to0\)</span>. Such a nonvacuum sector therefore
+has no positive energy gap, even with <span
+class="math inline">\(\hbar&gt;0\)</span> and the internal label fixed
+away from zero.</p>
+<p>Zero mass is thus a useful test of which positivity premise a
+comparison needs. A mechanism generating a physical gap must also
+control access to arbitrarily small nonvacuum energies. In the solved
+matrix model, transverse zero-point confinement provides such a
+dynamical mechanism; the group classification alone provides none. See
+the <a href="action-floor-yang-mills-gap.html">action-floor/gap note</a>
+(passage-read: §§3–5 and the 2026-10-02 correction): in four-dimensional
+Yang–Mills an action unit is already available from the classical
+coupling, while a generated energy scale remains a separate
+requirement.</p>
+<h2 id="references">References</h2>
+<p>Figueroa-O’Farrill, José Miguel; Pekar, Simon; Pérez, Alfredo; and
+Prohazka, Stefan. <em>Galilei particles revisited</em>. SciPost Physics
+Lecture Notes <strong>93</strong> (2025), DOI <a
+href="https://doi.org/10.21468/SciPostPhysLectNotes.93">10.21468/SciPostPhysLectNotes.93</a>.
+Text read: <a
+href="https://arxiv.org/pdf/2401.03241v1">arXiv:2401.03241v1</a> (2024),
+selected passages specified above; not a full-paper proof audit.
+Bibliographic metadata checked against arXiv, INSPIRE and Crossref on
+2026-10-02. The published article and the read preprint have different
+pagination; all page and equation locators here refer to the
+preprint.</p>
+<p>Brink, Lars; Khan, Abu M.; Ramond, Pierre; and Xiong, Xiaozhen.
+<em>Continuous spin representations of the Poincaré and super-Poincaré
+groups</em>. Journal of Mathematical Physics <strong>43</strong> (12),
+6279–6295 (2002), DOI <a
+href="https://doi.org/10.1063/1.1518138">10.1063/1.1518138</a>. Text
+read: <a
+href="https://arxiv.org/pdf/hep-th/0205145v1">arXiv:hep-th/0205145v1</a>,
+§§2–2.1, especially preprint pp. 2–4. Bibliographic metadata checked
+against arXiv, INSPIRE and Crossref on 2026-10-02.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>Use this comparison when interpreting group labels as mechanical
+quantities: classical massive spin, a massless transverse boost moment,
+and a supplied quantum action constant are separate inputs. Equation
+(16) records a conditional connection to a physical energy gap; it
+supplies no positive-mass completion of Newton’s mechanics, no selection
+of universal action, and no Yang–Mills construction. Continue the Newton
+necessity queue in <a
+href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>,
+retaining the common-scale versus positive-scale distinction in <a
+href="rotation-composition-universality.html">rotation composition</a>
+(passage-read: opening correction and §§1–2). Any use of zero mass as a
+new mechanism must specify the surviving observables and the physical
+Hamiltonian instead of transferring a positive orbit label into a
+spectral claim.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
