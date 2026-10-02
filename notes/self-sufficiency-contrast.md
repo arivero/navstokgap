@@ -18,25 +18,43 @@ classical trajectory is a derived object of the $h>0$ theory: for
 quadratic forces the centroid of any state obeys Newton's equation
 exactly at every $h$, and for Kepler's force a coherent state follows
 the orbit in the large-action regime for finite times away from the
-collision set, by Hepp's theorem, cited with its hypotheses and with
-the one further localization hypothesis the singular potential needs.
-Parts (a), (c) and the quadratic half of (d) are proved here; (b) and
-the Kepler half of (d) rest on the cited theorems. Theorem 1 was
+collision set. Section 5a recovers Hepp's hypotheses and supplies the
+weighted localization and first-moment bounds needed for Coulomb.
+Parts (a), (c) and the quadratic half of (d) were proved in the first
+version; (b) rests on a cited theorem. Theorem 1 was
 refereed by GPT-6.1 Sol (Codex) in two bounded passes on 2026-10-01,
 REFINE then ACCEPT on its statement and proof as printed; the reports
 are in
 [`reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md`](../reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md).
-Proposition 2 was assessed separately and not endorsed: its spin-zero
-threshold is the real-indicial one with the branch selection an
-additional premise, and its endpoints are not settled; the wording
-below records that. Proposition 2 then
-gives the gap the exercise is for, in two relativistic models: with
-finite $c$, the theories of Kepler's force that define motion without
-an added rule are those with $h>k/(\alpha_cc)$, by the self-adjointness
-thresholds of the Dirac and Klein--Gordon Coulomb problems, cited;
-Newton's theory at $h=0$ and every theory with $h$ below $k/(\alpha_cc)$
-are not self-sufficient. Written by Claude
-Fable, 2026-10-01; proof status recorded in the final section.
+The October 1 assessment did not endorse Proposition 2. Its replacement
+in §5b gives the admissible $h$-sets under explicit selection premises.
+Dirac's finite-potential-energy selection excludes its critical endpoint;
+the critical Schur-form and specified cutoff limits include it. The
+Klein--Gordon strict-energy construction has an open endpoint, whereas
+its radial principal Friedrichs operator includes that endpoint. A
+radial branch is not a theorem about the full Klein--Gordon evolution.
+These are conditional action thresholds, not a proof that every
+completion of Newton's mechanics needs $h$. Original note by Claude
+Fable, 2026-10-01; revision and proof status recorded below.
+
+**Dated revision, 2026-10-02 (Kepler localization).** The October 1
+version left (L) as an assumption and used centroid language without
+moment bounds. Section 5 now proves (L) for a fixed smooth bounded
+regularization and the stated Gaussian preparations, using centered
+weighted Sobolev estimates and Hardy's inequality. It also proves
+position and momentum centroid convergence separately. The primary
+Hepp statement is identified below; its norm approximation alone is
+not used to control a singular multiplier. These additions are written
+derivations, not an independent verification or a new referee acceptance.
+
+**Dated correction, 2026-10-02 (selection and endpoints).** The original
+Proposition 2 used $h>h_{\min}$, left equality unsettled, and nevertheless
+concluded that any $h\ge h_{\min}$ was admissible. It also described a
+chosen Klein--Gordon branch as defining motion without an added rule.
+The replacement below withdraws those unqualified conclusions. It
+separates the domains and selection criteria that decide equality;
+the original October 1 text remains in Git history and its referee
+assessment remains linked above.
 
 Notation: $h$ is the reduced phase constant, $m>0$ the mass, $k>0$ the
 force constant, $r=|x|$ in $\mathbb R^3$; the planar case is a remark.
@@ -99,22 +117,24 @@ $$\frac{d}{dt}\langle q\rangle_t=\frac{\langle p\rangle_t}m,\qquad
 and a coherent state stays a Gaussian whose centroid is the classical
 trajectory. (d2) For Kepler's force, let $z_0=(x_0,p_0)$ lie on a
 classical orbit whose distance from the centre stays at least
-$\rho_{\min}>0$ on $[0,T]$. Under Hepp's theorem, stated in §5 with its
-hypotheses, applied to a smooth potential $V_\delta$ equal to $-k/r$
-for $r\ge\delta$ with $0<\delta<\rho_{\min}$, the coherent state
-$\varphi^h_{z_0}$ with $\sigma_h^2\propto h$ evolves under $H^{(\delta)}_h$
-into a Gaussian centred on the Kepler orbit $z_t$, with the phase
-fixed as in (4), up to an $L^2$ error tending to zero as $h\to0$ at
-fixed $T$ and $\delta$, uniformly on $[0,T]$; and under the
-localization hypothesis (L) of §5 the same holds for the Coulomb
-evolution $U_h(t)$ itself. Here "large action" means this fixed-scale
-limit $h\to0$ at fixed orbit, and nothing uniform in $\delta$ or in
-$T$ is claimed.
+$\rho_{\min}>0$ on $[0,T]$. Fix $0<\delta<\rho_{\min}$ and a real
+$V_\delta\in C_b^\infty$ equal to $-k/r$ for $r\ge\delta$. For the
+normalized coherent preparations of §5a, with width
+$\ell_h=\sqrt{hL_*/P_*}$ and fixed $L_*,P_*>0$, the regularized and
+Coulomb evolutions both satisfy the Gaussian norm approximation (4)
+with error $O(\sqrt h)$, uniformly on $[0,T]$. Section 5a proves
+$$\sup_{[0,T]}\|(V-V_\delta)U_h^{(\delta)}(t)\varphi_h\|_2
+=O(h^{3/2})=o(h),\qquad\text{(L)}$$
+and separately proves that the Coulomb position and momentum centroids
+are $q_t+O(\sqrt h)$ and $p_t+O(\sqrt h)$. Here "large action" means
+this fixed-scale limit $h\to0$ at fixed orbit. All constants depend on
+the fixed interval, regularization and preparation; no uniformity in
+$T$ or $\delta$ is claimed.
 
 *Conclusion.* The theory with $h>0$ defines motion for all data and
 all times, by (b), and yields Newton's trajectories where they exist,
-exactly for quadratic forces and, under the cited theorem and (L),
-for Kepler's force away from collisions, by (d), while Newton's axioms
+exactly for quadratic forces and, under the fixed-data hypotheses of
+§5a, for Kepler's force away from collisions, by (d), while Newton's axioms
 leave motion undefined on the collision set, by (a), and the
 unrestricted classical-first construction at zero needs a datum the
 action does not supply, by (c).
@@ -234,178 +254,466 @@ $s_t^2=\sigma^2\cos^2\omega t+h^2\sin^2\omega t/(4m^2\omega^2\sigma^2)$
 tends to $\sigma^2\cos^2\omega t$; the centroid transport is exact in
 every case. $\square$
 
-*(d2), Kepler's force.* Hepp's theorem [@Hepp1974; metadata; the
-statement used is the one standardly quoted from it, the primary text
-was not read in this session], in the form used here: let $W$ be a
-real $C^\infty$ potential on $\mathbb R^3$ with bounded derivatives of
-every order $\ge2$, so that $-\tfrac{h^2}{2m}\Delta+W$ is self-adjoint
-and the classical flow $\Phi_t$ of $p^2/2m+W$ is complete; let
-$\varphi^h_{z}$ be the coherent state at $z=(x,p)$ with position width
-$\sigma_h$, $\sigma_h^2=hL_*/P_*$ for fixed $L_*,P_*$; and let
-$\varphi^h_{z_t,M_t}$ be the Gaussian obtained by propagating the
-centred initial Gaussian with the continuously lifted metaplectic
-representation of the linearized flow $M_t=D\Phi_t(z_0)$, which fixes
-its phase as well as its covariance, and then translating it in phase
-space to $z_t=\Phi_t(z_0)$. Then for every $T>0$,
-$$\sup_{|t|\le T}\big\|e^{-itH^{W}_h/h}\varphi^h_{z_0}
--e^{iS_t/h}\varphi^h_{z_t,M_t}\big\|_{L^2}\longrightarrow0
-\qquad(h\to0),\tag{4}$$
-with $S_t=\int_0^t(p\cdot\dot x-H_{\rm cl})\,ds$ the classical action
-along the trajectory in the translation convention matching the
-metaplectic lift. The phase convention is part of the statement: the
-covariance alone leaves an order-one phase undetermined, and a free
-centred Gaussian already acquires the dispersive phase
-$-\tfrac32\arctan(ht/2m\sigma_h^2)$ while its centroid action vanishes.
-The constants in (4) may depend on $\delta$ and $T$. Apply this
-with $W=V_\delta$, a $C^\infty$ function equal to $-k/r$ for
-$r\ge\delta$ and bounded with bounded derivatives inside the ball: for
-$r\ge\delta$ all derivatives of $-k/r$ of order $\ge1$ are bounded by
-constants times $\delta^{-2},\delta^{-3},\ldots$, so $V_\delta$
-satisfies the hypothesis. Since the Kepler orbit through $z_0$ stays
-at distance $\ge\rho_{\min}>\delta$ on $[0,T]$, it is also the orbit of
-$V_\delta$, and (4) gives the first claim of (d2): under
-$H^{(\delta)}_h$ the coherent state follows the Kepler orbit.
+### 5a. Kepler localization and moments (2026-10-02)
 
-For the Coulomb evolution itself, Duhamel's formula on the common
-domain gives
-$$U_h(t)\varphi-U^{(\delta)}_h(t)\varphi
-=-\frac ih\int_0^tU_h(t-s)\,(V-V_\delta)\,U^{(\delta)}_h(s)\varphi\,ds,$$
-so that
-$\|U_h(t)\varphi-U^{(\delta)}_h(t)\varphi\|\le\tfrac Th\sup_{0\le s\le T}
-\|(V-V_\delta)U^{(\delta)}_h(s)\varphi\|$ on the common domain $H^2$,
-where $V-V_\delta$ is supported in the ball $r<\delta$.
-**Hypothesis (L):**
-$\sup_{0\le s\le T}\|(V-V_\delta)U^{(\delta)}_h(s)\varphi^h_{z_0}\|=o(h)$ as
-$h\to0$. Under (L) the Coulomb and regularized evolutions of the
-coherent state coincide in the limit and (4) transfers to $U_h$. The
-hypothesis says that the evolved state carries negligible mass and
-energy inside the ball the orbit never visits; for the Gaussian
-$\varphi^h_{z_t,M_t}$ alone it holds with an exponentially small bound,
-by a smooth cutoff to the ball followed by Hardy's inequality
-$\|f/r\|\le2\|\nabla f\|$ in $\mathbb R^3$ and the Gaussian tails, but the
-$o(1)$ remainder in (4) is an $L^2$ statement, and (L) requires its
-energy-norm counterpart, which is not proved here. $\square$
+**Target and assumptions.** Fix $m,k,L_*,P_*>0$, an initial phase point
+$z_0=(q_0,p_0)$, and $T<\infty$ such that its Kepler orbit
+$z_t=(q_t,p_t)$ exists on $[0,T]$ and
+$\rho_{\min}:=\min_{[0,T]}|q_t|>0$. Fix $0<\delta<\rho_{\min}$ and a real
+$V_\delta\in C_b^\infty(\mathbb R^3)$ equal to $-k/r$ on $r\ge\delta$.
+All these choices are independent of $h$. Put $\ell_h=\sqrt{hL_*/P_*}$,
+choose $h_0>0$, and consider $0<h\le h_0$ with the normalized preparations
+$$\varphi_h(x)=(2\pi\ell_h^2)^{-3/4}
+\exp\left[-\frac{|x-q_0|^2}{4\ell_h^2}
+          +\frac{i p_0\cdot(x-q_0)}h\right].$$
+Both Hamiltonians have domain $H^2(\mathbb R^3)$. The conclusions to
+prove are (L), its Duhamel transfer, and convergence of the two first
+moments. Neither singular-multiplier control from an $L^2$ approximation
+nor convergence of an unbounded observable is an assumption.
 
-## 5b. Proposition 2: with finite $c$, self-sufficiency has a smallest $h$
+*Primary Hepp statement.* The published paper [@Hepp1974; passage,
+§2, Theorem 2.1, p. 268; equations (2.15)--(2.20), pp. 269--270;
+Theorem 2.3 and condition (R), p. 271] states Theorem 2.1 for one
+degree of freedom: a real potential, $C^{2+\epsilon}$ near the classical
+orbit, $\epsilon>0$, with $\int |V(x)|^2e^{-\eta x^2}dx<\infty$ for
+some $0<\eta<\infty$, and any self-adjoint realization of the scaled
+Hamiltonian. The limits are strong limits of Weyl operators, uniformly
+on compact time intervals inside the orbit's existence interval.
+Equation (2.20) gives the corresponding norm approximation on Gaussian
+packets. For finitely many coordinates, Theorem 2.3 replaces the
+integrability assumption by (R): a strongly continuous unitary
+propagator $U_h(t,s)$ for all real $t,s$, with
+$U_h(t,s)U_h(s,r)=U_h(t,r)$, $U_h(t,s)^*=U_h(s,t)$,
+$U_h(t,t)=I$, and the strong derivative
+$$\partial_s U_h(t,s)\psi=\frac ih U_h(t,s)H_h(s)\psi$$
+on the sufficiently decaying Gaussian packets specified in (2.27),
+with $H_h(s)\psi$ defined as a differential operator. Theorem 2.3
+allows finitely many particles with vector and scalar potentials
+locally $C^{2+\epsilon}$ along the orbit; here the vector potential is zero.
 
-The point of the exercise is a gap in the admissible values of $h$,
-the elementary analogue of a spectrum $\{0\}\cup[m,\infty)$. Theorem 1
-alone gives none: by (b) every $h>0$ makes the non-relativistic
-Coulomb theory complete, and the ground-state energy $-mk^2/2h^2$
-tends to $-\infty$ as $h\to0$ without any threshold. The threshold
-appears when the speed of light is finite, through the known
-self-adjointness limits of the relativistic Coulomb problem.
+The three-dimensional $V_\delta$ satisfies (R) because it is bounded
+and its Gaussian packets belong to $H^2$. The approximation is
+$$\sup_{0\le t\le T}\|U_h^{(\delta)}(t)\varphi_h
+-e^{iS_t/h}\varphi^h_{z_t,M_t}\|_2=O(\sqrt h),\tag{4}$$
+where $S_t=\int_0^t(p_s\cdot\dot q_s-H_{\rm cl}(z_s))ds$ and the Gaussian
+is obtained with the continuously lifted quadratic propagator of the
+linearized flow $M_t$. Its translation convention uses
+$p_t\cdot(x-q_t)$ in the phase. To see the rate in this smooth case,
+expand $V_\delta$ through second order at $q_t$: the cubic remainder
+has norm at most $B_3\ell_h^3\||y|^3g_t\|_2/6$ on the centered
+quadratic Gaussian $g_t$. Duhamel divides this by $h$ and integrates
+over $[0,T]$; the Gaussian moment is bounded on that fixed interval.
+This is a direct specialization of Hepp's proof, not an estimate of
+the singular multiplier on the unknown norm remainder.
 
-**Proposition 2 (smallest $h$ at finite $c$).** Let $c<\infty$ and
-$\nu=k/(hc)$, the Coulomb coupling in units of $hc$.
-(i) *Spin one half.* The Dirac--Coulomb operator
-$c\,\alpha\cdot p+\beta mc^2-k/r$ on $L^2(\mathbb R^3)^4$ has a
-distinguished self-adjoint extension, selected by finiteness of the
-potential energy on its domain, for $\nu<1$ [@Schmincke1972;
-@Wuest1975; @Nenciu1976; metadata], and is essentially self-adjoint
-on $C_c^\infty(\mathbb R^3\setminus\{0\})^4$ for $\nu\le\sqrt3/2$;
-for $\nu>1$ every self-adjoint realization requires a boundary
-condition at the centre, an added rule in the sense of Theorem 1(a)
-and (c).
-(ii) *Spin zero.* For the Klein--Gordon equation with the Coulomb
-potential the reduced $s$-wave radial function $u=rR$ behaves at the
-origin like $r^{1/2\pm\sqrt{1/4-\nu^2}}$ [@Case1950; metadata]: for
-$\nu<\tfrac12$ the indicial exponents are real and distinct, at
-$\nu=\tfrac12$ the second solution carries a logarithm, and for
-$\nu>\tfrac12$ the exponents are complex and the solutions
-$r^{1/2}e^{\pm i\beta\log r}$ oscillate in phase without limit at the
-centre. Below $\nu=\tfrac12$ both branches of $u$ are finite at the
-origin, so finiteness alone selects neither; the choice of the
-larger-exponent branch is the usual selection in this limit-circle
-regime and is an additional premise, not supplied by the equation.
-The threshold $\nu=\tfrac12$ is therefore the real-indicial threshold,
-and the spin-zero line of (5) holds under that selection premise.
-(iii) Hence, within these two relativistic models and with the stated
-selection criteria (a distinguished extension for Dirac, the
-larger-exponent branch for Klein--Gordon), the theories of Kepler's
-force at finite $c$ that define the motion without an added rule are
-those with
-$$h\ >\ h_{\min}=\frac{k}{\alpha_c\,c},\qquad
-\alpha_c=1\ (\text{spin }\tfrac12),\quad\alpha_c=\tfrac12\ (\text{spin }0),\tag{5}$$
-and none with $0<h<h_{\min}$; the endpoint $h=h_{\min}$ needs its own
-extension criterion in the spin-one-half case ($\nu=1$ is not settled
-by the cited subcritical results) and its own selection in the
-spin-zero case, so $h_{\min}$ is the infimum of the self-sufficient
-values, attained or not. Together with Theorem 1(a), the set of values
-of $h$ at which a theory of Kepler's force is self-sufficient, in this
-sense, is an interval with left endpoint $h_{\min}>0$: Newton's theory
-at $h=0$ is incomplete, no theory with $h$ below $h_{\min}$ is
-self-sufficient, and every theory above it is. This is the gap, in the two models considered; whether it
-is universal over all admissible relativistic completions requires
-further model and selection premises that are not supplied here. In
-the non-relativistic limit $c\to\infty$, $h_{\min}\to0$ and the gap
-closes, in agreement with Theorem 1(b).
+**Centered Sobolev bound.** Let $u_h(t)=U_h^{(\delta)}(t)\varphi_h$ and
+write exactly
+$$u_h(t,x)=\ell_h^{-3/2}e^{i[S_t+p_t\cdot(x-q_t)]/h}a_h(t,y),
+\qquad y=(x-q_t)/\ell_h.$$
+Hamilton's equations cancel the constant and linear terms, so
+$$i\partial_ta_h=G_h(t)a_h,\quad
+G_h=-a_*\Delta_y+W_h(t,y),\quad a_*=\frac{P_*}{2mL_*},$$
+$$W_h=\frac{V_\delta(q_t+\ell_h y)-V_\delta(q_t)
+-\ell_h\nabla V_\delta(q_t)\cdot y}{h}.$$
+Set $B_j=\sup_x\|\nabla^jV_\delta(x)\|$ (the Euclidean tensor norm),
+$\ell_0=\sqrt{h_0L_*/P_*}$, and, for integer $s\ge1$,
+$$b_s=\frac{L_*}{P_*}
+\max_{2\le j\le\max(2,s)}\ell_0^{\,j-2}B_j.$$
+Taylor's integral formula gives
+$|\nabla_yW_h|\le b_s|y|$, and
+$|\partial_y^\gamma W_h|\le b_s$ for $2\le|\gamma|\le s$.
+All these constants are uniform for $0<h\le h_0$ and $0\le t\le T$.
 
-*Proof.* (i) and (ii) are the cited theorems, read at the metadata
-level and in their standard statements; the thresholds are stated as
-they are standardly quoted, with the essential self-adjointness bound
-$\sqrt3/2$ due to Weidmann, not separately cited here. (iii) is the
-translation $\nu<\alpha_c\iff h>k/(\alpha_cc)$ in each model, with the
-endpoint assigned by the model's selection criterion, together with
-Theorem 1(a) at $h=0$. $\square$
+With $D_y=-i\nabla_y$, define
+$$E_s(a)=\sum_{|\alpha|+|\beta|\le s}\|y^\alpha D_y^\beta a\|_2^2,
+\quad N_s=\binom{s+6}{6},\quad
+c_s=a_*s(s+1)+b_s(2^s-1+2s).$$
+The commutator of $y^\alpha D_y^\beta$ with the kinetic term has
+norm bounded by $a_*s(s+1)\sqrt{E_s}$. For the potential term use
+$$[D_y^\beta,W_h]=
+\sum_{0<\gamma\le\beta}\binom{\beta}{\gamma}
+(-i)^{|\gamma|}(\partial^\gamma W_h)D_y^{\beta-\gamma}.$$
+When $|\gamma|=1$, the bound $b_s|y|$ increases the position degree
+by one and decreases the derivative degree by one. Bounding
+$|y|$ by $\sum_j|y_j|$ gives $3s b_s\sqrt{E_s}$.
+The remaining binomial coefficients sum to at most $2^s-1-s$.
+No term has degree larger than $s$. Thus
+$$\frac{d}{dt}E_s(a_h)\le2c_s\sqrt{N_s}\,E_s(a_h),\qquad
+E_s(a_h(t))\le E_s(a_0)e^{2c_s\sqrt{N_s}T},\tag{4a}$$
+where $a_0=(2\pi)^{-3/4}e^{-|y|^2/4}$. For fixed $h$ the calculation
+is justified on Schwartz packets: the integral equation for a bounded
+smooth potential, with position and derivative cutoffs, gives the same
+finite-seminorm energy estimates and propagation of Schwartz
+regularity; letting the cutoffs tend to infinity proves (4a).
+Equivalently, one first obtains these estimates for smooth truncated
+data and passes by the $L^2$ evolution and lower semicontinuity.
+The centered estimates, unlike the preliminary fixed-$h$ ones, have
+the uniform constants displayed above.
 
-The unit $k/c$ is the one the
-[necessity-unit note](necessity-unit-and-indeterminacy.md) isolated as
-the unique mass-independent action built from $k_e$ and $c$, and the
-[relativistic Kepler note](relativistic-kepler-threshold.md) found the
-same threshold classically as $\ell>k/c$ for regular bound motion.
-Proposition 2 places it where the thesis needs it: as the lower edge
-of the set of self-sufficient theories. What it does not do is fix
-$h$: any $h\ge h_{\min}$ is admissible, and the physical value exceeds
-$h_{\min}$ by the inverse fine-structure ratio, which is the separate
-calibration obligation.
+For use below define
+$$A_s(T)=3^{s/2}\sqrt{E_s(a_0)}e^{c_s\sqrt{N_s}T}.$$
+Expanding $|y|^{2n}=(y_1^2+y_2^2+y_3^2)^n$ shows that both
+$\||y|^na_h(t)\|_2$ and $\||y|^n\nabla_ya_h(t)\|_2$
+are at most $A_{n+1}(T)$.
+
+**Proof of (L).** Put
+$r_c=(\delta+\rho_{\min})/2$ and $d=\rho_{\min}-r_c>0$.
+Choose a smooth radial cutoff $\chi$ equal to one for $r\le\delta$,
+zero for $r\ge r_c$, with $0\le\chi\le1$ and
+$\|\nabla\chi\|_\infty\le2/(r_c-\delta)=2/d$.
+On its support $|x-q_t|\ge d$, hence $|y|\ge d/\ell_h$.
+The centered bounds imply, for every integer $n\ge1$,
+$$\|\chi u_h(t)\|_2\le A_{n+1}(T)(\ell_h/d)^n,\qquad
+\|\chi(\nabla-ip_t/h)u_h(t)\|_2
+\le A_{n+1}(T)\ell_h^{n-1}/d^n.$$
+Apply the three-dimensional Hardy inequality
+$\|f/r\|_2\le2\|\nabla f\|_2$ to
+$f=e^{-ip_t\cdot x/h}\chi u_h(t)$; the phase removes the potentially
+large carrier momentum from the estimate. Since $V-V_\delta$ vanishes
+outside $r<\delta$, this gives
+$$\sup_{0\le t\le T}\|(V-V_\delta)u_h(t)\|_2
+\le\frac{A_{n+1}(T)}{d^n}
+\left[(4k/d+B_0)\ell_h^n+2k\ell_h^{n-1}\right].\tag{4b}$$
+For $n=4$ the right side is $O(h^{3/2})=o(h)$, proving (L).
+Choosing larger $n$ gives any prescribed power of $h$.
+The dependence is explicit through $T$, $m$, $L_*/P_*$,
+the preparation seminorms, $B_j(V_\delta)$, and the separation
+$d=(\rho_{\min}-\delta)/2$. No uniformity as $T\to\infty$,
+$\delta\to0$, or $\rho_{\min}-\delta\to0$ is claimed. A bounded family
+of centered Schwartz preparations satisfies the same estimate with
+its uniform $E_s(a_0)$ in place of the Gaussian value.
+For the usual scaled regularization
+$V_\delta(x)=-(k/\delta)v(x/\delta)$, with fixed smooth bounded $v$
+equal to $1/|x|$ for $|x|\ge1$, the derivative dependence is
+$B_j\le k\delta^{-j-1}\|\nabla^jv\|_\infty$. A radius $\delta$
+alone cannot bound these constants for arbitrary regularizations.
+
+On the common domain $H^2$, Duhamel now gives
+$$U_h(t)\varphi_h-U_h^{(\delta)}(t)\varphi_h
+=-\frac ih\int_0^tU_h(t-s)(V-V_\delta)u_h(s)\,ds.$$
+Consequently the supremum of this norm is $O(h^{(n-3)/2})$ for every
+$n\ge4$. In particular the two evolutions differ by $O(h^M)$ for
+every fixed $M>0$, with an $M$-dependent constant. Equation (4)
+therefore transfers to the Coulomb evolution.
+
+**First moments.** Write $\psi_h=U_h\varphi_h$
+and $p=-ih\nabla$. Its conserved form energy $e_h$ is bounded
+independently of $h$: the initial kinetic energy is
+$|p_0|^2/(2m)+3hP_*/(8mL_*)$, and the elementary spherical Gaussian
+integral gives
+$\langle\varphi_h,r^{-1}\varphi_h\rangle
+=\operatorname{erf}(|q_0|/(\sqrt2\ell_h))/|q_0|\le1/|q_0|$.
+Let $e_*=\sup_{0<h\le h_0}|e_h|<\infty$. Hardy and Young's inequality
+give, with $X_h(t)=\|p\psi_h(t)\|_2$,
+$$e_h\ge\frac{X_h(t)^2}{2m}-\frac{2k}{h}X_h(t)
+\ge\frac{X_h(t)^2}{4m}-\frac{4mk^2}{h^2},\qquad
+X_h(t)\le2\sqrt{m e_*}+\frac{4mk}{h}.\tag{4c}$$
+The continuity equation, first with bounded position cutoffs and
+then by passage to the limit, gives
+$$\|x\psi_h(t)\|_2
+\le\|x\varphi_h\|_2+\frac1m\int_0^tX_h(s)\,ds=O(1+h^{-1}).\tag{4d}$$
+This also proves preservation of the position-moment domain on the
+fixed interval. Energy conservation preserves the Coulomb form domain
+$H^1$, so the momentum norm is finite as well.
+For $u_h$ the centered bounds give
+$\|(x-q_t)u_h(t)\|_2\le\ell_h A_1(T)$ and
+$\|(p-p_t)u_h(t)\|_2\le(h/\ell_h)A_1(T)$.
+
+For each self-adjoint coordinate or momentum component $B$ and the
+two normalized states, symmetry on its domain yields
+$$|\langle\psi_h,B\psi_h\rangle-\langle u_h,Bu_h\rangle|
+\le\|\psi_h-u_h\|_2(\|B\psi_h\|_2+\|Bu_h\|_2).$$
+Use (4b) with $n=6$: the norm difference is $O(h^{3/2})$, while
+(4c)--(4d) bound the second factor by $O(h^{-1})$. Thus, uniformly
+on $[0,T]$,
+$$\langle x\rangle_{\psi_h(t)}=q_t+O(\sqrt h),\qquad
+\langle p\rangle_{\psi_h(t)}=p_t+O(\sqrt h).\tag{4e}$$
+These first-moment statements use derivatives of $V_\delta$ through
+order seven via (4a). They establish the centroid assertion without
+assuming moment convergence from a norm approximation. They give
+neither long-time control nor convergence of higher moments. $\square$
+
+## 5b. Proposition 2: action thresholds under specified selections
+
+Theorem 1(b) gives no positive lower threshold: the non-relativistic
+Coulomb evolution exists for every $h>0$. At finite $c$ a threshold
+depends on which relativistic model, domain and selection premise are
+required. Fix $m,k,c>0$ and $\nu=k/(hc)>0$. All statements concern an
+ideal point Coulomb source. Rescale length by $\lambda_h=h/(mc)$ and
+energy by $mc^2$; in the formulas for domains below, $x$ and $r$ denote
+these dimensionless coordinates. This unitary rescaling leaves $\nu$
+unchanged.
+
+**Primary sources and their scope.** Schmincke's original example,
+p. 348, applies his Theorems 2--3 to the strict range $|\nu|<1$ and
+identifies the selected domain by finite potential energy
+[@Schmincke1972; passage, pp. 345--348, GDZ text]. Wüst's theorem and
+corollary require a real $C^1$ potential dominated by $\mu/r$ with
+$\mu<1$, together with the specified bounded cutoff and convergence
+conditions; the selected domain is
+$D(D_{\min}^*)\cap D(r^{-1/2})$ [@Wuest1975; passage, pp. 93--95,
+GDZ text]. Those results do not settle $\nu=1$. Nenciu constructs the
+finite-kinetic-form-domain extension for a strict subcritical
+Coulomb bound [@Nenciu1976; passage, introduction and Theorem 5.1,
+pp. 246--247, author-posted text]; its poorly extracted formulas are
+not used here to infer an endpoint.
+
+The precise subcritical domain statement used below is Theorem 1.1
+of Esteban--Lewin--Séré: for real $V=V_1+V_2+V_3$ with
+$|V_1|\le\nu/r$, $0\le\nu<1$, $V_2\in L^3$ and $V_3\in L^\infty$,
+there is a unique extension with
+$H^1\subset D(D_V)\subset H^{1/2}$, also uniquely characterized by
+$\int|\Psi|^2/r<\infty$ for every domain vector
+[@EstebanLewinSere2019; passage, arXiv v7, Theorem 1.1, pp. 9--10].
+Their §1.2 and Appendix A include essential self-adjointness at
+$\nu=\sqrt3/2$. Their Theorem 1.11, building on Esteban--Loss
+[@EstebanLoss2007; passage, Definition 3 and Theorem 4, pp. 3--4],
+supplies a different critical domain and norm-resolvent cutoff limit.
+
+For Klein--Gordon, Case's bibliographic identity is verified as
+*Physical Review* **80**, 797--806 (1950), DOI
+[10.1103/PhysRev.80.797](https://doi.org/10.1103/PhysRev.80.797)
+[@Case1950; metadata/abstract]. Its original body was not accessible
+in this revision, so it is not a proof input. We derive the radial
+indices below directly and use separate read sources for the domains
+and the evolution. Domain and spectral facts for the inverse-square
+principal operator come from Dereziński--Richard
+[@DerezinskiRichard2017; passage, §§2.2--2.3, equations (2.3)--(2.6),
+Corollary 2.4 and Theorem 5.5]. The actual global Klein--Gordon
+construction used here is Langer--Najman--Tretter
+[@LangerNajmanTretter2008; passage, Example 8.3 and Theorems 8.5--8.6,
+pp. 744--747]. These are distinct results.
+
+**Proposition 2 (selection-dependent admissible sets).** The following
+sets, including their endpoints, correspond to the premises in the
+first column. An admissible set in one row is not an exclusion theorem
+for other rows or other completions.
+
+| Selection premise | Admissible $h$-set | Result supplied |
+|---|---|---|
+| Dirac minimal operator on $C_c^\infty(\mathbb R^3\setminus\{0\})^4$: require essential self-adjointness | $[2k/(\sqrt3c),\infty)$ | Unique closure, global unitary evolution |
+| Dirac: require every operator-domain vector to have finite separate Coulomb potential energy | $(k/c,\infty)$ | Unique distinguished extension, global unitary evolution |
+| Dirac: use that extension below critical coupling and the critical Schur-domain or specified cutoff-limit prescription at equality | $[k/c,\infty)$ | Global unitary evolution, including $h=k/c$ |
+| Dirac: permit additional self-adjoint boundary conditions in singular channels | $(0,\infty)$ | Extensions exist; uniqueness is lost where the minimal operator is not essentially self-adjoint |
+| Klein--Gordon: require strict coercivity of the conserved energy in the usual $H^1\oplus L^2$ topology, and use the charge-space generator below | $(2k/c,\infty)$ | A global charge-space evolution is constructed; the strict criterion excludes equality |
+| Klein--Gordon $s$-wave principal radial operator: choose its Friedrichs extension | $[2k/c,\infty)$ | Principal radial operator and branch, including the no-log branch at equality; full critical evolution is not concluded |
+
+*Dirac proof and domains.* In the scaled coordinates the expression is
+$D_\nu=-i\alpha\cdot\nabla+\beta-\nu/r$. In a channel
+$\kappa\in\mathbb Z\setminus\{0\}$ its reduced two-component radial
+operator acts in $L^2((0,\infty),dr)^2$ as
+$$d_{\nu,\kappa}=\begin{pmatrix}
+1-\nu/r&-\partial_r+\kappa/r\\
+\partial_r+\kappa/r&-1-\nu/r
+\end{pmatrix}.$$
+Its origin modes have exponents $\pm s_\kappa$,
+$s_\kappa=\sqrt{\kappa^2-\nu^2}$. For real $s_\kappa>0$, the less
+regular mode is locally square integrable precisely when
+$s_\kappa<1/2$; for imaginary $s_\kappa$ both modes are locally
+square integrable. At $s_\kappa=1/2$
+its squared norm contains $\int dr/r$ and diverges. Infinity is
+limit point. Taking $|\kappa|=1$ gives the inclusive essential
+self-adjointness threshold $\nu\le\sqrt3/2$. The closure has domain
+$H^1$ for strict inequality; at equality its domain is larger than
+$H^1$ (Appendix A, Proposition A.1 of the cited source).
+
+For $\sqrt3/2<\nu<1$, both modes are in radial $L^2$. A full spinor
+contains the additional factor $1/r$, so its potential integral is
+$\int_0^\epsilon(|u|^2+|v|^2)dr/r$. Finite potential energy excludes
+the $r^{-s_1}$ coefficient and retains $r^{s_1}$, giving the unique
+domain $D(D_{\min}^*)\cap D(r^{-1/2})$. At $\nu=1$ the modes are
+constant and logarithmic. Both have divergent separate potential
+energy. An extension domain must contain a nonzero boundary mode:
+setting both coefficients to zero leaves the minimal, non-self-adjoint
+domain. Thus no self-adjoint extension at equality has all domain
+vectors of finite separate potential energy. For $\nu>1$ the lowest
+channel has imaginary $s_1$ and the same integral diverges for every
+nonzero boundary mode. This proves the open set in the second row.
+
+The critical prescription instead uses the closed Schur form of
+Esteban--Loss. For $0<\gamma<1$, define on
+$C_c^\infty(\mathbb R^3,\mathbb C^2)$
+$$b_\gamma[\phi]=\int_{\mathbb R^3}\left[
+\frac{r}{1+\gamma r}|\sigma\cdot\nabla\phi|^2
++(2-\gamma-r^{-1})|\phi|^2\right]dx.$$
+Their critical Hardy--Dirac inequality (7) verifies Assumption (A)
+with $c(V)=0$ and $\Gamma=\sup V=0$. Let $\mathcal H_+$ be the
+form domain of its closure, equivalently the completion in
+$(b_\gamma[\phi]+\|\phi\|_2^2)^{1/2}$. Proposition 2 makes this domain
+independent of $\gamma$ in the stated range. The closure defines the
+combined form; its two integrals need not exist separately for a
+completed vector. Definition 3 and Theorem 4 give the operator domain
+$$\mathcal D_C=\{\Psi=(\phi,\chi)\in L^2(\mathbb R^3)^4:
+\phi\in\mathcal H_+,\ D_1\Psi\in L^2\text{ in distributions}\}.$$
+They prove self-adjointness and uniqueness under that form-domain
+premise. The angular-channel formulation in Esteban--Lewin--Séré,
+equations (1.28)--(1.31), admits $1/r$ spinor singularities and
+excludes $(\log r)/r$ in both lowest channels.
+Its combined operator energy is finite; its separate potential and
+kinetic form energies need not be. Their Theorem 1.11, for
+$V\ge-1/r$ and $\sup V<1$, reports
+norm-resolvent convergence for $V_\epsilon=\max(V,-1/\epsilon)$ or
+$V_\epsilon=(1-\epsilon)V$, as $\epsilon\downarrow0$. This establishes
+the included endpoint under this changed selection premise.
+
+**Source-formula clarification, 2026-10-02.** The literal compact
+weighted-gradient formula printed in (1.32) of arXiv v7 is not used
+as a domain definition here: it conflicts with the angular form
+description just cited. For a nonzero constant spinor $\xi$, put
+$$\phi(x)=\frac{e^{-r}}r\sigma\cdot\omega_x\xi,
+\qquad \omega_x=x/r.$$
+Its critical radial profile $\phi_1=e^{-r}\xi/r$ satisfies
+$r\phi_1'+\phi_1=-e^{-r}\xi$, so the angular form norm in (1.29)
+is finite. Logarithmic cutoffs of $r\phi_1$ have cost
+$\int r|\eta_\epsilon'|^2dr=1/\log(1/\epsilon)$ on
+$[\epsilon^2,\epsilon]$ and place it in the Schur-form closure.
+But
+$$\sigma\cdot\nabla(r\phi)=e^{-r}(2/r-1)\xi,$$
+whose squared norm with weight $1/[r(1+r)]$ diverges like
+$\int_0 dr/r$. Thus that compact rewrite cannot be taken literally
+as equivalent to the angular norm. The source TeX and HTML confirm
+that this is not a PDF extraction change. We use the original
+Esteban--Loss form closure and the explicit angular conditions;
+this calculation checks the problematic rewrite, not the full borrowed
+theorems independently.
+
+For arbitrary $\nu>0$, conjugation of the real radial system makes
+its two deficiency indices equal. Every limit-circle channel therefore
+admits self-adjoint boundary conditions; only finitely many channels
+require them for a fixed $\nu$. Their direct sum gives a global
+self-adjoint Dirac realization. Above critical coupling an origin
+phase is additional data. Self-adjointness alone consequently gives
+no positive lower bound on $h$.
+
+*Klein--Gordon construction and domains.* In the scaled variables the
+equation is $[(i\partial_t-V)^2+\Delta-1]\psi=0$, $V=-\nu/r$.
+Hardy's inequality gives $\|Vf\|_2\le2\nu\|\nabla f\|_2$ for
+$f\in H^1$. Langer--Najman--Tretter's Theorem 8.5 assumes
+$H^1\subset D(V)$ and a decomposition $V=V_0+V_1$ with
+$$\|V_0f\|_2\le a\|f\|_2+b\|(-\Delta+1)^{1/2}f\|_2,
+\quad a+b<1,$$
+and $V_1$ relatively compact. Pure Coulomb satisfies it with
+$a=0$, $b=2\nu<1$, $V_1=0$. The theorem constructs the generator
+$$A\binom{x}{y}=\binom{Vx+y}{(-\Delta+1)x+Vy}$$
+in the charge space $\mathcal K=H^{1/2}\oplus H^{-1/2}$, with domain
+$$D(A)=\{(x,y)\in\mathcal K:x\in H^1,\ y\in L^2,
+\ Vx+y\in H^{1/2},\ (-\Delta+1)x+Vy\in H^{-1/2}\}.$$
+The charge pairing is $[X,X']=\langle x,y'\rangle+\langle y,x'\rangle$,
+using Sobolev duality. The group is strongly continuous and unitary
+for this indefinite pairing. It gives global mild evolution on
+$\mathcal K$ and classical evolution on $D(A)$. It is not a
+probability-unitary group on scalar $L^2$. Theorem 8.6 gives the
+corresponding strong Klein--Gordon solutions for
+$\psi_0\in H^1$, $\psi_1\in H^{1/2}$ and
+$(-\Delta-V^2)\psi_0\in H^{-1/2}$.
+For the sign convention of the equation above use
+$i\partial_tX=AX$, $y=(i\partial_t-V)\psi$, and $e^{-itA}$;
+the source's group $e^{itA}$ also gives this evolution after reversing
+the time parameter.
+
+In physical units the conserved energy has spatial part
+$$Q_\nu[f]=h^2c^2\|\nabla f\|_2^2+m^2c^4\|f\|_2^2
+-k^2\|f/r\|_2^2
+\ge(1-4\nu^2)h^2c^2\|\nabla f\|_2^2+m^2c^4\|f\|_2^2.$$
+Sharpness of Hardy's constant, with dilations of its near-extremizers
+to remove the mass term relative to the gradient, shows that strict
+coercivity in the usual $H^1$ norm holds exactly for $\nu<1/2$.
+At equality the combined form is nonnegative but loses that
+coercivity; above it the spatial form is unbounded below. This
+settles the fifth row's criterion, not the existence of all possible
+Klein--Gordon completions.
+
+For a stationary $s$-wave $\psi=e^{-iEt/h}u(r)/r$, direct substitution
+gives the pencil
+$$-h^2c^2u''+(m^2c^4-E^2)u-\frac{2Ek}{r}u-\frac{k^2}{r^2}u=0.$$
+The indices are $1/2\pm s$, $s=\sqrt{1/4-\nu^2}$. The principal
+operator $B_\nu=-\partial_r^2-\nu^2/r^2$ starts on
+$C_c^\infty(0,\infty)$ in $L^2(dr)$, with maximal domain consisting
+of $u,u'$ locally absolutely continuous and $B_\nu u\in L^2$.
+For $0<\nu<1/2$ its Friedrichs domain sets the coefficient of
+$r^{1/2-s}$ to zero. Both branches have finite $u(0)$ and are locally
+$L^2$; those properties alone do not select it. At $\nu=1/2$ the
+modes are $\sqrt r$ and $\sqrt r\log r$. The Friedrichs domain sets
+the logarithmic coefficient to zero, admitting the endpoint for this
+principal operator. It permits a nonzero $\sqrt r$ coefficient whose
+separate kinetic integral diverges; the critical combined form is
+finite: writing $u=\sqrt r\,v$ on $C_c^\infty(0,\infty)$ gives
+$\int(|u'|^2-|u|^2/(4r^2))dr=\int r|v'|^2dr$. A logarithmic cutoff
+near zero approximates a constant $v$ with vanishing form cost.
+For $\nu>1/2$, $s=i\beta$, self-adjoint extensions require an
+origin phase and all have a negative spectrum unbounded below
+(Dereziński--Richard, Theorem 5.5(ii)). No semibounded Friedrichs
+extension exists there. The lower-order $1/r$ term of the stationary
+pencil does not change the indicial classification.
+
+**Uncontrolled critical dynamical term.** The no-log radial selection
+does not prove a global Klein--Gordon group at $\nu=1/2$. The critical
+combined form does not bound $\|f/r\|_2$: a cutoff of $\sqrt r$ in
+the radial form domain already has infinite separate kinetic and
+inverse-square integrals. Thus the multiplier bound with relative
+constant strictly below one fails. On the enlarged critical form
+space, the mixed dynamical term $V\partial_t\psi$, or equivalently
+the required control of $VQ_{1/2}^{-1/2}$, remains unbounded by the
+estimates used here. A compatible phase space and generator domain
+are still needed for a critical full evolution theorem. No such
+theorem is asserted by the sixth row. $\square$
+
+**Physical selection premises.** Dirac self-adjointness
+ensures probability conservation, independently of the action-threshold
+argument. It does not select among its extensions. Requiring each
+separate energy to be finite is an additional regularity premise;
+finite total energy does not entail it, as the critical domain shows.
+The specified bounded-source and subcritical-coupling limits give
+independent mathematical support for the critical Dirac prescription
+once those preparations are chosen. They do not prove that all source
+regularizations have that limit or that the ideal point source is
+mandatory. Klein--Gordon energy stability supports semibounded
+principal forms; Friedrichs closure and a particular topology are
+additional choices, and charge conservation is not positive
+probability conservation. A finite-size source introduces further
+data and is outside these point-source thresholds.
+
+The unit $k/c$ agrees with the
+[necessity-unit note](necessity-unit-and-indeterminacy.md) and the
+[relativistic Kepler threshold](relativistic-kepler-threshold.md).
+That dimensional agreement supplies neither a selection principle
+nor the measured value of $h$. In particular there is no single
+unqualified set $[h_{\min},\infty)$ shared by these models.
 
 ## 6. What the theorem establishes and what it does not
 
-The contrast is between two theories of the same force law. Newton's,
-the Laws with $F=-kx/r^3$, assigns no motion to the collision set, and
-for the quartic its unrestricted halved classical-first construction
-has no limit at zero resolution without a datum the action does not
-supply. The theory with $h>0$ assigns a motion to every state for all
-time, by self-adjointness, and recovers Newton's trajectories as the
-centroids of localized states, exactly for quadratic forces and, in
-the fixed-scale limit $h\to0$ away from collisions, for Kepler's force
-under the cited theorem and hypothesis (L). The thesis in
-STATE reads this as the sense in which Newton's mechanics needs $h$:
-its only completion is the large-action regime of a theory that
-contains $h$.
+Theorem 1 compares an incomplete classical point-force flow with a
+global non-relativistic Coulomb unitary evolution. Section 5a proves
+the fixed-interval Kepler localization and both first-moment limits
+under its stated regularization and coherent-preparation hypotheses.
+Proposition 2 assigns endpoints to explicit selection criteria; it
+does not derive those criteria from Newton's axioms.
 
-Not established here: the energy-norm localization (L) for the
-Coulomb evolution; the planar operator beyond the standard form
-construction; any statement that no completion of Newton's mechanics
-without $h$ exists, which is the open obligation (ii) of STATE, and in
-particular nothing against the quartic Newtonian initial-value
-problem, which is globally well posed; the universality of
-Proposition 2's gap beyond its two models; and anything about long
-times or uniformity in $\delta$, where the Ehrenfest-type breakdown of
-(4) is a separate matter. The theorem is evidence for the thesis, in the
-form the thesis now has, and no more.
+Still open: the planar operator beyond the cited form construction;
+critical full Klein--Gordon dynamics under the no-log prescription;
+long-time or shrinking-regularization estimates; and the necessity
+claim that every completion of Newton's mechanics requires positive
+$h$. Classical regularizations remain possible added prescriptions,
+and Dirac self-adjoint extensions exist at every $h>0$ if boundary
+data are allowed. Excluding those routes requires an independently
+justified premise. The quartic Newtonian initial-value problem is
+globally well posed; its contrast concerns the particular classical-first
+time-slicing construction. These limitations are part of the statement,
+not consequences to be inferred from a threshold formula.
 
 ## 7. Consequence for STATE
 
-Proposition 2 supplies the gap in its two models: the self-sufficient
-theories of Kepler's force at finite $c$ have $h>k/(\alpha_cc)$, with
-Newton at $h=0$ outside; it rests on cited thresholds, is not shown
-universal, and fixes no value of $h$.
-Theorem 1 supplies the self-sufficiency contrast required by STATE's
-obligation (iii): classical incompleteness with the explicit collision
-time and collision set (proved), quantum completeness by Kato's theorem
-(cited, hypothesis verified), the quartic contrast (proved in the
-1998-conjecture note), and the classical trajectory as the derived
-centroid, exact for quadratic forces (proved) and for Kepler's force
-under Hepp's theorem and hypothesis (L) (cited). Next: prove (L) for
-the Coulomb evolution of a coherent state, or replace Hepp's $L^2$
-statement by an energy-norm one; then the open obligation (ii), that
-no completion without $h$ exists. Proof status: written by Claude
-Fable, 2026-10-01; parts (a), (c), (d1) proved, (b) and (d2) cited
-with hypotheses; Theorem 1 refereed ACCEPT (second pass, GPT-6.1 Sol
-via Codex), Proposition 2 assessed separately with its selection
-premises recorded and not endorsed; the referee also notes that (4)
-with (L) gives norm approximation and bounded-observable localization,
-so the centroid language for Kepler's force is shorthand pending
-moment bounds.
+The fixed-$T$, fixed-$\delta$ localization obligation (L) and the
+Kepler centroid obligation are closed by the written derivation in
+§5a. Replace the former unqualified action interval by Proposition 2's
+selection-dependent sets: Dirac finite-potential selection $(k/c,\infty)$,
+Dirac critical-form/cutoff selection $[k/c,\infty)$, and Klein--Gordon
+strict-energy construction $(2k/c,\infty)$; its radial principal
+Friedrichs endpoint is included, with full critical dynamics still open.
+Next: decide which selection premises can be required independently
+of the desired action gap, then address the exclusion of completions
+without $h$. The October 1 referee acceptance applies to the original
+Theorem 1 as then printed. The October 2 localization, moment proof
+and replacement Proposition 2 are written, source-supported additions
+by Codex and have not received independent verification or referee
+acceptance.

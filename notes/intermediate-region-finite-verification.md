@@ -116,11 +116,18 @@ the intermediate region and only for it.
 renormalization group of the weak-coupling side no longer has to reach
 the strong-coupling threshold; it has to deliver an effective
 interaction within the openness radius of the Wilson interaction at
-some $\beta_W\in[\beta_1,\beta_2]$. The openness radius is the tolerance
-that [the target-box note](strong-coupling-target-box.md) supplied by
-hand, and the effective interaction is allowed to contain any
+some $\beta_W\in[\beta_1,\beta_2]$. The openness radius is a tolerance
+that must be established for the verified Wilson interaction; it is
+not supplied by the former explicit Kogut--Susskind box estimate.
+The effective interaction may contain
 finite-range bounded terms, since the criteria are stated for general
 finite-range interactions.
+
+**Correction, 2026-10-02.** The maintained
+[target-box note](strong-coupling-target-box.md) proves an existential
+Hamiltonian tolerance and withdraws its explicit continuous-time values.
+That theorem and a Wilson finite-size mixing margin concern different
+operators. Neither supplies the other's numerical openness radius.
 
 ## 4. The two numbers
 
@@ -249,3 +256,6 @@ group's reach $g_{\rm RG}^2$ meets the verified reach $g_{\rm DS}^2$.
 Both are numbers, neither is known, and the second is the one that a
 computation, outside this repository's rules, could in principle
 produce.
+The October 2 correction distinguishes the required Wilson mixing
+margin from the existential Hamiltonian target-box tolerance; no
+numerical radius is transferred between those operators.

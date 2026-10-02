@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dobrushin&#x27;s uniqueness condition for the Wilson action: a two-line strong-coupling gap at g² &gt; 444, and the block criterion that is the finite verification</title>
+<title>Dobrushin&#x27;s Wilson criterion: an explicit strong-coupling gap at g² &gt; 444 and an open block test</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,15 +79,17 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Dobrushin’s uniqueness condition for the Wilson action: a two-line
-strong-coupling gap at <span class="math inline">\(g^2&gt;444\)</span>,
-and the block criterion that is the finite verification</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/dobrushin-uniqueness-wilson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/dobrushin-uniqueness-wilson.pdf">PDF</a></p><p>The finite-volume criteria of <a
+<h1>Dobrushin’s Wilson criterion: an explicit strong-coupling gap at
+<span class="math inline">\(g^2&gt;444\)</span> and an open block
+test</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/dobrushin-uniqueness-wilson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/dobrushin-uniqueness-wilson.pdf">PDF</a></p><p>The finite-volume criteria of <a
 href="intermediate-region-finite-verification.html">the
 finite-verification note</a> have a single-site ancestor, Dobrushin’s
 uniqueness condition (Theory Probab. Appl. 13 (1968) 197), and for the
-Wilson action it can be checked by hand. The conditional distribution of
-one link given all the others is <span
-class="math display">\[d\mu_\ell(U\,|\,\omega)\ \propto\
+Wilson action it can be checked by hand. The comparison below uses
+four-dimensional lattices and spatial tori with sides at least four, as
+in the polymer note. The conditional distribution of one link given all
+the others is <span class="math display">\[d\mu_\ell(U\,|\,\omega)\
+\propto\
 \exp\Big[\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}\big(U\,M_\ell(\omega)\big)\Big]d\mu(U),
 \qquad M_\ell=\sum_{p\ni\ell}S_p ,\]</span> the sum of the six staples
 of <span class="math inline">\(\ell\)</span> in four dimensions.
@@ -100,20 +102,26 @@ it, so Dobrushin’s coefficient is <span
 class="math display">\[\alpha=\sup_\ell\sum_{\ell&#39;}\rho_{\ell\ell&#39;}\
 \le\ 18\big(e^{4\beta_W}-1\big),\]</span> and the condition <span
 class="math inline">\(\alpha&lt;1\)</span> holds for <span
-class="math inline">\(\beta_W&lt;\tfrac14\log\tfrac{19}{18}=0.01352\)</span>,
-that is <span class="math display">\[g^2\ &gt;\ 148\,N\ =\
-444\quad(SU(3)).\]</span> Dobrushin’s theorem gives a unique Gibbs
-state, Künsch’s theorem (Commun. Math. Phys. 84 (1982) 207) gives
-exponential decay of all truncated correlations at rate <span
+class="math inline">\(\beta_W&lt;\tfrac14\log\tfrac{19}{18}\simeq0.01352\)</span>,
+that is <span
+class="math display">\[g^2&gt;\frac{8N}{\log(19/18)};\qquad
+g^2&gt;148N=444\quad(SU(3))\ \text{is a sufficient rounded
+bound}.\]</span> Dobrushin’s theorem gives a unique Gibbs state,
+Künsch’s theorem (Commun. Math. Phys. 84 (1982) 207) gives exponential
+decay of all truncated correlations at rate <span
 class="math inline">\(\log(1/\alpha)\)</span> per lattice unit, and link
 reflection positivity turns the rate into a gap: <span
 class="math display">\[\Delta_W\ \ge\ \frac{\hbar
 c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\ \simeq\ \frac{\hbar
 c}{a}\log\frac{g^2}{432}\qquad(g^2&gt;444),\]</span> uniformly in the
-volume. This is a better threshold than the polymer expansion’s <span
-class="math inline">\(1056\)</span> and a smaller rate than its <span
-class="math inline">\(4\log(g^2/1056)\)</span>. The block version of the
-same condition, the Dobrushin–Shlosman constructive criterion (in
+volume. This is a better threshold than the polymer expansion’s
+sufficient integer bound <span class="math inline">\(1059\)</span>
+(<span class="math inline">\(1056\)</span> is linearized). Its rate
+grows like <span class="math inline">\(\log(g^2/432)\)</span>, whereas
+the polymer rate grows like <span
+class="math inline">\(4\log(g^2/1056)\)</span> at large <span
+class="math inline">\(g^2\)</span>. The block version of the same
+condition, the Dobrushin–Shlosman constructive criterion (in
 <em>Statistical Physics and Dynamical Systems</em>, Birkhäuser 1985,
 347), replaces the single link by a box <span
 class="math inline">\(V\)</span> of links and is expected to hold deeper
@@ -121,6 +129,11 @@ into the intermediate region as <span class="math inline">\(V\)</span>
 grows; it is the quantity a finite verification would compute, and
 Section 4 states it as a specification. All references at metadata
 level; constants explicit; nothing promoted.</p>
+<p><strong>Correction, 2026-10-02 (comparison rates).</strong> The
+earlier table printed the leading logarithms as rigorous lower bounds.
+The exact exponential-activity rates are given in the corrected table in
+§3; the logarithms are asymptotic estimates. This also distinguishes the
+exact single-link condition from its rounded sufficient threshold.</p>
 <h2 id="the-one-link-conditional-distribution">1. The one-link
 conditional distribution</h2>
 <p>Fix all links except <span class="math inline">\(\ell\)</span>. The
@@ -176,9 +189,13 @@ class="math inline">\(18\)</span> links <span
 class="math inline">\(\ell&#39;\)</span> with <span
 class="math inline">\(\rho_{\ell\ell&#39;}\ne0\)</span>. Hence <span
 class="math display">\[\alpha=\sup_\ell\sum_{\ell&#39;}\rho_{\ell\ell&#39;}\le18\big(e^{4\beta_W}-1\big),\]</span>
-and <span class="math inline">\(\alpha&lt;1\)</span> for <span
-class="math inline">\(\beta_W&lt;0.01352\)</span>, i.e. <span
-class="math inline">\(g^2&gt;2N/0.01352=148N\)</span>.</p>
+and the upper bound on <span class="math inline">\(\alpha\)</span> is
+strictly below one precisely when <span
+class="math inline">\(\beta_W&lt;\tfrac14\log(19/18)\)</span>. The
+reported <span class="math inline">\(0.01352\)</span> and <span
+class="math inline">\(148N\)</span> are rounded figures; <span
+class="math inline">\(g^2&gt;148N\)</span> is sufficient since <span
+class="math inline">\(\log(19/18)&gt;2/37\)</span>.</p>
 <h2 id="from-the-condition-to-the-gap">3. From the condition to the
 gap</h2>
 <p>Dobrushin’s theorem: <span class="math inline">\(\alpha&lt;1\)</span>
@@ -228,19 +245,23 @@ c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\qquad(SU(3)).\]</span></p>
 <tbody>
 <tr>
 <td>polymer expansion, all representations</td>
-<td><span class="math inline">\(g^2\ge1056\)</span></td>
+<td><span class="math inline">\(g^2\ge1059\)</span> (sufficient integer
+bound)</td>
 <td><span class="math inline">\((\hbar
-c/a)\,4\log(g^2/1056)\)</span></td>
+c/a)\,4\log[1/(176(e^{6/g^2}-1))]\)</span></td>
 </tr>
 <tr>
 <td>Dobrushin single-site condition</td>
-<td><span class="math inline">\(g^2&gt;444\)</span></td>
-<td><span class="math inline">\((\hbar c/a)\,\log(g^2/432)\)</span></td>
+<td><span class="math inline">\(g^2&gt;24/\log(19/18)\)</span>; <span
+class="math inline">\(g^2&gt;444\)</span> suffices</td>
+<td><span class="math inline">\((\hbar
+c/a)\,\log[1/(18(e^{24/g^2}-1))]\)</span></td>
 </tr>
 </tbody>
 </table>
 <p>The two are complementary: the Dobrushin route enters earlier, the
-polymer route’s rate is larger once both apply. For <span
+polymer route’s rate is larger at sufficiently large coupling, rather
+than throughout their overlap. For <span
 class="math inline">\(U(1)\)</span> the same computation gives <span
 class="math inline">\(g^2&gt;148\)</span> with <span
 class="math inline">\(N=1\)</span>.</p>
@@ -332,7 +353,10 @@ proved here. The two numbers of the finite-verification note are
 unchanged, and the second of them, <span class="math inline">\(g_{\rm
 DS}^2\)</span>, is exactly the smallest coupling at which the block
 criterion has been verified for some <span
-class="math inline">\(V\)</span>.</p>
+class="math inline">\(V\)</span>. The October 2 comparison uses the
+exact rates in §3; their leading logarithms remain estimates. All of
+these are fixed-cutoff Wilson transfer statements, distinct from
+Kogut–Susskind and a continuum gap.</p>
 
 </main>
 <footer class="site"><div class="wrap">

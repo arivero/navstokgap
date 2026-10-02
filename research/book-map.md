@@ -163,8 +163,11 @@ an assumption that a formal running coupling is already a constructive RG.
 
 ### 12. A rigorous strong side and a difficult arrival
 
-State the Wilson and continuous-time Hamiltonian strong-coupling results with
-their own normalizations, then the robust target box. Explain why blocking
+State the Wilson transfer bound, the continuous-time finite-volume
+Hamiltonian bound and Yarotsky's existential volume-uniform theorem
+with their own normalizations, then the existential target box.
+The October 2 KS numerical uniform threshold is withdrawn.
+Explain why blocking
 without coupling flow, global Agmon suppression, conjugate flow and physical
 crossover certification do not bridge the weak trajectory. Sources:
 [Wilson gap](../notes/wilson-strong-coupling-explicit.md),

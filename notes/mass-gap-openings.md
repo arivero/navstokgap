@@ -6,6 +6,12 @@ possibly the fourth, which is the link from the Planck-gap work. The note
 answers two questions the user asked and corrects one statement of the
 map.
 
+**Correction, 2026-10-02 (strong-side comparison).** Opening 1's
+comparison now follows the maintained Wilson exponential-activity
+bound and the withdrawn Kogut--Susskind numerical threshold. Its own
+curvature normalization is still unchecked. This changes the cited
+strong-side baseline, not the status of the proposed curvature route.
+
 **The gap is expected for every compact simple non-abelian group.**
 Lattice evidence shows gapped glueball spectra for $SU(N)$ from $N=2$ to
 large $N$, with masses smooth in $1/N^2$, and for the other classical
@@ -243,10 +249,16 @@ $$g^2>32 .$$
 
 That conversion is ours and must be checked against their definitions.
 If it stands, the curvature method already beats this repository's
-strong-coupling thresholds, $g^2\ge176$ for the Wilson transfer matrix
-([note](wilson-strong-coupling-explicit.md)), $g^2\ge388$ for
-Kogut--Susskind ([note](kogut-susskind-strong-coupling-explicit.md)) and
-$g^2>444$ by Dobrushin ([note](dobrushin-uniqueness-wilson.md)), and
+strong-coupling sufficient Wilson thresholds, $g^2\ge1059$ for the
+all-representation polymer bound
+([note](wilson-strong-coupling-explicit.md)) and $g^2>444$ by Dobrushin
+([note](dobrushin-uniqueness-wilson.md)). The former Wilson figure $176$
+was a leading-activity estimate; the former Kogut--Susskind figure $388$
+was withdrawn on October 2
+([note](kogut-susskind-strong-coupling-explicit.md)). The latter keeps
+an existential volume-uniform strong-coupling theorem and an explicit
+finite-volume bound, not a certified numerical uniform threshold.
+If the curvature conversion and physical transfer stand, the comparison
 narrows band B of the [bands note](confinement-scale-bands.md) from
 $\beta_W\in(0.0135,5.7)$ to $\beta_W\in(0.19,5.7)$.
 
@@ -335,7 +347,9 @@ stays within reach of the Planck-gap methods.
 
 ## 3. Consequence for STATE
 
-The mass-gap track stays paused. This note records the four openings
+The September 23 record left the mass-gap track paused; the subsequent
+September 26 user direction in STATE restored it as a main goal.
+This note records the four openings
 and the answer on groups: the gap is expected for every compact simple
 non-abelian group, and $SU(3)$ is the group that fixes the constants. The
 map's statement that the conjecture is T2$'$ with T3 is too strong:
@@ -344,3 +358,7 @@ is needed, and T2$'$ fails for $SU(N\ge5)$ with the Wilson action. If one
 opening is taken up next, it is the fourth, which uses the Planck-gap
 methods directly; the first carries the most promise, and its first
 check is the conversion of Shen, Zhu and Zhu's threshold to $g^2>32$.
+The October 2 comparison uses the current Wilson sufficient bounds
+and records the withdrawn KS explicit threshold. It establishes no
+new curvature normalization, numerical uniform KS threshold or
+continuum gap.

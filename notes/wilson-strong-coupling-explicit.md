@@ -9,7 +9,7 @@
 >   leading fundamental coefficient $1/g^2$, and no argument here bounds
 >   every polymer weight by that activity. It is kept only as the
 >   leading-activity figure. The rigorous threshold of the same chain is
->   $g^2\ge1059$ (exactly $1058.6$); the former rigorous figure
+>   $g^2\ge1059$ (a sufficient integer bound); the former rigorous figure
 >   $1056=6\times176$ linearized $e^{6/g^2}-1\simeq6/g^2$.
 > - §1 bounded $\sum_{r\ne0}d_rc_r/c_0$, a sum of Fourier coefficients.
 >   Polymer weights need the sup norm of $f/c_0-1$, which by positivity
@@ -34,9 +34,9 @@
 >   matrix now reads $e^{-a_tH_{\rm KS}/\hbar c}$.
 
 **Later-note pointers.** [The Dobrushin note](dobrushin-uniqueness-wilson.md)
-proves the lower rigorous threshold $g^2>444$ for the same operator,
-with rate $\log(g^2/432)$; its comparison table quotes this note's former
-$1056$. [Openings](mass-gap-openings.md) §2, Opening 1, reports a
+proves the lower sufficient threshold $g^2>444$ for the same operator,
+with exact rate $\log[1/(18(e^{24/g^2}-1))]$ and leading estimate
+$\log(g^2/432)$. [Openings](mass-gap-openings.md) §2, Opening 1, reports a
 curvature criterion that would give $g^2>32$ if its normalization
 conversion, unchecked there, stands. The Kogut--Susskind explicit
 threshold contrasted in §4 was withdrawn on 2026-10-02
@@ -61,8 +61,9 @@ links at least twice, with no time discretization to pay for. Every
 polymer weight is bounded by $\rho^{|\gamma|}$ with
 $\rho=e^{\beta_W}-1=e^{6/g^2}-1$, a bound on the sup norm of the
 normalized plaquette weight minus one. The Kotecký--Preiss criterion
-holds for $20e^2\rho\le0.84$, that is $\rho\le5.684\times10^{-3}$, which
-for this $\rho$ means $g^2\ge6/\log(1+0.84/20e^2)=1058.6$. Truncated
+holds for $20e^2\rho\le0.84$, that is $\rho\le21/(500e^2)$, whose
+endpoint is approximately $5.684\times10^{-3}$. For this $\rho$ the condition
+means $g^2\ge6/\log(1+0.84/20e^2)\simeq1058.6$. Truncated
 correlations in the time direction then decay at rate at least
 $4\log(1/(176\rho))$ per lattice unit, because every time slab between
 two observables holds at least four plaquettes of one polymer. Through
@@ -195,12 +196,15 @@ With $a(\gamma)=|\gamma|$ and $|w(\gamma')|\le\rho^{|\gamma'|}$ the
 condition follows from
 $$\frac{24}{20e}\sum_{n\ge6}\big(20e^2\rho\big)^n\ \le\ 1
 \qquad\Longleftarrow\qquad x\equiv20e^2\rho\le0.84 ,$$
-since $24/(20e)=0.4415$ and $0.4415\,x^6/(1-x)$ is increasing, equal to
-$0.969$ at $x=0.84$. So the expansion converges, uniformly in the
+because $x^6/(1-x)$ is increasing on $[0,1)$ and
+$e>\sum_{j=0}^5 1/j!=163/60$ gives, at $x=21/25$,
+$$\frac{24}{20e}\frac{x^6}{1-x}
+<\frac{18\cdot21^6}{163\cdot25^5}<\frac{97}{100}<1.$$
+The expansion therefore converges, uniformly in the
 volume, for
-$$\rho\ \le\ \rho_*=\frac{0.84}{20e^2}=5.684\times10^{-3}=\frac1{175.93},$$
+$$\rho\ \le\ \rho_*=\frac{21}{500e^2}\simeq5.684\times10^{-3},$$
 which for the rigorous $\rho=e^{6/g^2}-1$ of $SU(3)$ reads
-$g^2\ge6/\log(1+\rho_*)=1058.6$.
+$g^2\ge G_{\rm KP}:=6/\log(1+\rho_*)\simeq1058.6$.
 
 ## 3. Decay of correlations and the gap
 
@@ -213,7 +217,8 @@ $$\sum_{\gamma'\not\sim\gamma}|w(\gamma')|e^{a(\gamma')+d(\gamma')}\le a(\gamma)
 with $d(X)=\sum_{\gamma'\in X}d(\gamma')$. With $a(\gamma)=|\gamma|$ and
 $d(\gamma)=\delta|\gamma|$ the count of §2 goes through whenever
 $xe^\delta\le0.84$, that is for
-$$\delta\ \le\ \delta_*=\log\frac{0.84}{20e^2\rho}=\log\frac{1}{175.93\,\rho}.$$
+$$\delta\ \le\ \delta_*=\log\frac{\rho_*}{\rho}
+=\log\frac{21}{500e^2\rho}.$$
 
 *Observables as decorations.* Let $A$ and $B$ be bounded gauge-invariant
 functions of the spatial links of the time slices $0$ and $T\ge1$, with
@@ -231,9 +236,9 @@ twice, and $|\lambda\int A\prod \phi_p|\le|\lambda|\,\|A\|_\infty\rho^{|\gamma|}
 Give a decorated polymer $a=|\gamma|+|S_A|/4+1$ (with $|S_A|+|S_B|$ for
 $(AB,\gamma)$) and $d=\delta|\gamma|$. At $xe^\delta\le0.84$ the
 undecorated polymers incompatible with an undecorated centre $\gamma$
-contribute at most $0.969\,|\gamma|$ to its sum, by §2, and those
+contribute at most $0.97\,|\gamma|$ to its sum, by §2, and those
 incompatible with a decorated centre at most
-$0.969\,(|S_A|/4+|\gamma|)$, counting the $6|S_A|$ extra plaquettes
+$0.97\,(|S_A|/4+|\gamma|)$, counting the $6|S_A|$ extra plaquettes
 through the support. The decorated polymers contribute at most the
 total $D$ of $|w|e^{a+d}$ over all of them. $D$ is finite, because their
 plaquette sets are unions of connected sets touching a support, counted
@@ -241,7 +246,7 @@ by §2 with ratio $20e\cdot\rho e^{1+\delta}=xe^\delta\le0.84<1$, and $D$
 is proportional to $|\lambda|$ or $|\mu|$. Take $|\lambda|\le r_A$ and
 $|\mu|\le r_B$ small enough, depending on $A$ and $B$, that $D\le0.18$.
 Undecorated polymers of nonzero weight have $|\gamma|\ge6$, so
-$0.969\,|\gamma|+0.18\le|\gamma|$, and the criterion holds for the
+$0.97\,|\gamma|+0.18\le|\gamma|$, and the criterion holds for the
 enlarged gas with the same $\delta$. Every cluster that
 depends on both $\lambda$ and $\mu$ is incompatible with the polymer
 $(A,\emptyset)$, so the conclusion of the criterion and Cauchy's
@@ -271,7 +276,7 @@ and whether or not they carry $A$ or $B$. With periodic time of period
 $L_t$ the same argument on both arcs gives $4\min(T,L_t-T)$.
 
 Hence $|\langle A;B\rangle|\le C_{A,B}\,e^{-4\delta_*T}$, and
-$$m\,a\ \ge\ 4\delta_*\ =\ 4\log\frac{1}{175.93\,\rho}\ \ge\ 4\log\frac{1}{176\rho}.$$
+$$m\,a\ \ge\ 4\delta_*\ =\ 4\log\frac{21}{500e^2\rho}\ \ge\ 4\log\frac{1}{176\rho}.$$
 
 **Transfer.** The Wilson action is link-reflection positive, so the
 transfer matrix $\mathcal T$ is self-adjoint and positive (Lüscher,
@@ -296,11 +301,25 @@ uniformly in the volume.
 
 | per-plaquette activity | status | threshold | gap bound, units $\hbar c/a$ |
 | --- | --- | --- | --- |
-| sup norm, all representations, $\rho=e^{6/g^2}-1$ | rigorous (§§1--3) | $g^2\ge1059$ (exactly $1058.6$) | $4\log[1/(176(e^{6/g^2}-1))]$, about $4\log(g^2/1056)$ |
+| sup norm, all representations, $\rho=e^{6/g^2}-1$ | rigorous (§§1--3) | $g^2\ge1059$ (sufficient integer bound) | $4\log[1/(176(e^{6/g^2}-1))]$, with leading estimate $4\log(g^2/1056)$ |
 | leading fundamental coefficient, $\rho=1/g^2$ | leading-activity figure, unproved for general polymers | $g^2\ge176$ | $4\log(g^2/176)$ |
 
-At $g^2=1059$, $176(e^{6/g^2}-1)=0.999997<1$, so the first gap bound
-is positive from the threshold on, and it grows as $4\log(g^2/1056)$.
+**Threshold clarification, 2026-10-02.** The exact sufficient KP
+convergence condition is $g^2\ge G_{\rm KP}$. Its unrounded rate
+$4\log(\rho_*/\rho)$ is positive for $g^2>G_{\rm KP}$ and zero at
+equality. The weaker displayed rate with $176$ is positive only for
+$g^2>G_{176}:=6/\log(177/176)$; it is zero at $G_{176}$. Thus $1058.6$
+is a rounded KP value, not the exact endpoint of the $176$ rate, and
+$1059$ is a sufficient integer bound for a positive displayed gap.
+This refines the earlier October 2 correction without changing its
+headline. Indeed $\log(1+x)>2x/(2+x)$ for $x>0$ (differentiate their
+difference); at $x=1/176$ this gives
+$G_{176}<6\cdot353/2=1059$. The number $1056=6\cdot176$ is only the
+linearization of that displayed condition. No equality of the rounded
+numbers with these exact thresholds is used.
+Section 2 also replaces the rounded cluster sum $0.969$ by the proved
+upper bound $0.97$; the decoration margin $0.18$ in §3 still satisfies
+the criterion since every undecorated polymer has at least six faces.
 The rigorous $\rho$ exceeds the coefficient $1/g^2$ by $2d_f=6$: a
 factor $2$ for the fundamental and its conjugate, and $d_f$ from
 $\sup|\chi_f|$. It exceeds the tube activity $u\simeq1/(3g^2)$ by
@@ -356,6 +375,9 @@ constants; the necessary window of
 [the operator-inequality note](large-field-operator-inequality.md) is
 nonempty only for $1/g^2\gtrsim10^2$ (crude constants). The
 intermediate region, from $g^2\sim10^{-2}$ to the rigorous strong edge
-($444$ by Dobrushin, $1059$ here), is where the gap forms. LLM.md row T2
-and trap 17, and [the position note](mass-gap-position.md), should quote
-$1059$ for this route where they quote $1056$ or $176$.
+($444$ by Dobrushin, $1059$ here), is where the gap forms. Those integer
+figures are sufficient bounds: the exact KP condition and the stricter
+condition for positivity of the rounded $176$ rate are distinguished
+in §3. LLM.md and [the position note](mass-gap-position.md) already
+carry the October 2 headline correction; their leading estimates
+must retain their approximation signs.

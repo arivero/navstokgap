@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>An explicit strong-coupling gap for the Wilson transfer matrix: SU(3) is gapped for g² ≥ 176, with Δ ≥ (ℏ c/a) 4log(g²/176)</title>
+<title>An explicit strong-coupling gap for the Wilson transfer matrix: SU(3) is gapped for g² ≥ 1059, with Δ ≥ (ℏ c/a) 4log[1/(176(e6/g2-1))]</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -81,206 +81,582 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <main class="wrap">
 <h1>An explicit strong-coupling gap for the Wilson transfer matrix: <span
 class="math inline">\(SU(3)\)</span> is gapped for <span
-class="math inline">\(g^2\ge176\)</span>, with <span
-class="math inline">\(\Delta\ge(\hbar c/a)\,4\log(g^2/176)\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/wilson-strong-coupling-explicit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/wilson-strong-coupling-explicit.pdf">PDF</a></p><p>The threshold that Yarotsky’s theorem supplies for the Kogut–Susskind
-Hamiltonian is <span class="math inline">\(g_0^2\sim10^{101}\)</span>
-(<a href="strong-coupling-threshold-explicit.html">threshold note</a>).
-The same statement for the other standard lattice Hamiltonian, the
-logarithm of the Wilson transfer matrix, has an explicit and usable
-threshold, because the Euclidean character expansion is a polymer gas of
-closed plaquette surfaces with no time discretization to pay for. With
-the plaquette activity <span class="math inline">\(\rho\)</span> of the
-fundamental representation, which is <span
-class="math inline">\(1/g^2\)</span> for <span
-class="math inline">\(SU(3)\)</span> to leading order, the
-Kotecký–Preiss criterion holds for <span
-class="math display">\[20e^2\rho\ \le\ 0.84,\qquad\text{that is}\qquad
-\rho\le5.7\times10^{-3},\]</span> and the truncated correlations of
-local observables then decay with rate at least <span
-class="math inline">\(4\log(1/(176\rho))\)</span> per lattice unit,
-because the smallest closed surface joining two distant plaquettes is a
-tube with four plaquettes per unit length. Through the transfer matrix
-<span class="math inline">\(\mathcal T=e^{-aH_W/\hbar c}\)</span>,
-self-adjoint and positive by link reflection positivity, the decay rate
-is a lower bound on the gap of <span class="math inline">\(H_W\)</span>
-on the cyclic subspace of local observables, so for <span
-class="math inline">\(SU(3)\)</span> <span
-class="math display">\[\Delta_W\ \ge\ \frac{\hbar
-c}{a}\,4\log\frac{g^2}{176}\qquad(g^2\ge176),\]</span> uniformly in the
-volume. The fully rigorous version, which sums all representations and
-both orientations with the bound <span
-class="math inline">\(e^{\beta_W}-1\simeq6/g^2\)</span>, gives the same
-form with <span class="math inline">\(1056\)</span> in place of <span
-class="math inline">\(176\)</span>. The entropy constant <span
-class="math inline">\(20e\)</span> for plaquette animals is the only
-place with room, and a careful count would lower <span
+class="math inline">\(g^2\ge1059\)</span>, with <span
+class="math inline">\(\Delta\ge(\hbar
+c/a)\,4\log[1/(176(e^{6/g^2}-1))]\)</span></h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/wilson-strong-coupling-explicit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/wilson-strong-coupling-explicit.pdf">PDF</a></p><blockquote>
+<p><strong>Correction (2026-10-02).</strong> A referee report and the <a
+href="corpus-audit-2026-10-01.html">corpus audit</a> §3c found the
+errors below; the text is corrected in place.</p>
+<ul>
+<li>The former headline, <span class="math inline">\(g^2\ge176\)</span>
+with <span class="math inline">\(\Delta_W\ge(\hbar
+c/a)\,4\log(g^2/176)\)</span>, charged each plaquette its leading
+fundamental coefficient <span class="math inline">\(1/g^2\)</span>, and
+no argument here bounds every polymer weight by that activity. It is
+kept only as the leading-activity figure. The rigorous threshold of the
+same chain is <span class="math inline">\(g^2\ge1059\)</span> (a
+sufficient integer bound); the former rigorous figure <span
+class="math inline">\(1056=6\times176\)</span> linearized <span
+class="math inline">\(e^{6/g^2}-1\simeq6/g^2\)</span>.</li>
+<li>§1 bounded <span
+class="math inline">\(\sum_{r\ne0}d_rc_r/c_0\)</span>, a sum of Fourier
+coefficients. Polymer weights need the sup norm of <span
+class="math inline">\(f/c_0-1\)</span>, which by positivity of the <span
+class="math inline">\(c_r\)</span> equals <span
+class="math inline">\(\sum_{r\ne0}d_r^2c_r/c_0=e^{\beta_W}/c_0-1\)</span>.
+The bound <span class="math inline">\(e^{\beta_W}-1\)</span> survives
+with the new derivation.</li>
+<li>§1 called <span class="math inline">\(d_fc_f/c_0\simeq1/g^2\)</span>
+the tube activity. Its own Euler-characteristic formula gives <span
+class="math inline">\(u=c_f/c_0\simeq1/(3g^2)=\beta_W/18\)</span>. The
+factor <span class="math inline">\(6\)</span> between the two readings
+of the old table is <span class="math inline">\(2d_f\)</span> (the
+fundamental and its conjugate, and <span
+class="math inline">\(|\chi_f|\le d_f\)</span>); the former account of
+it is withdrawn. The <span class="math inline">\(SU(N)\)</span> formula
+holds for <span class="math inline">\(N\ge3\)</span>.</li>
+<li>The cluster size <span class="math inline">\(4T\)</span> was
+inferred from a single tube. §3 now proves it for chains of polymers and
+for polymers carrying the observables, on spatial tori with sides of at
+least <span class="math inline">\(4\)</span>. The plaquette-animal bound
+and the minimal polymer size <span class="math inline">\(6\)</span> now
+carry proofs (§2), and the decay weight is written <span
+class="math inline">\(d(\gamma)=\delta|\gamma|\)</span> where the text
+had <span
+class="math inline">\(a(\gamma)=(1+\delta)|\gamma|\)</span>.</li>
+<li>Withdrawn as unsupported: “<span class="math inline">\(20e\)</span>
+is the only constant with room” and “a careful count would lower <span
 class="math inline">\(176\)</span> to about <span
-class="math inline">\(10^2\)</span>. The gap of <span
-class="math inline">\(H_W\)</span> grows like <span
-class="math inline">\(\log g^2\)</span> where that of <span
-class="math inline">\(H_{\rm KS}\)</span> grows like <span
+class="math inline">\(10^2\)</span>”. The weight <span
+class="math inline">\(a(\gamma)\)</span> and the sup norm also have room
+(§3).</li>
+<li>§5 placed the strong edge of the intermediate region at the
+heuristic <span class="math inline">\(176\)</span>; it now uses the
+rigorous figures. §4’s anisotropic transfer matrix now reads <span
+class="math inline">\(e^{-a_tH_{\rm KS}/\hbar c}\)</span>.</li>
+</ul>
+</blockquote>
+<p><strong>Later-note pointers.</strong> <a
+href="dobrushin-uniqueness-wilson.html">The Dobrushin note</a> proves
+the lower sufficient threshold <span
+class="math inline">\(g^2&gt;444\)</span> for the same operator, with
+exact rate <span
+class="math inline">\(\log[1/(18(e^{24/g^2}-1))]\)</span> and leading
+estimate <span class="math inline">\(\log(g^2/432)\)</span>. <a
+href="mass-gap-openings.html">Openings</a> §2, Opening 1, reports a
+curvature criterion that would give <span
+class="math inline">\(g^2&gt;32\)</span> if its normalization
+conversion, unchecked there, stands. The Kogut–Susskind explicit
+threshold contrasted in §4 was withdrawn on 2026-10-02 (<a
+href="kogut-susskind-strong-coupling-explicit.html">KS note</a>). <a
+href="confinement-scale-bands.html">The bands note</a> §1 separates the
+all-representation activity from the fundamental normalization, as the
+correction above now does.</p>
+<p>For the Wilson action of <span class="math inline">\(SU(3)\)</span>,
+on every spatial torus whose sides are at least <span
+class="math inline">\(4\)</span> lattice units, the Hamiltonian <span
+class="math inline">\(H_W=-(\hbar c/a)\log\mathcal T\)</span> of the
+normalized transfer matrix has a gap <span
+class="math display">\[\Delta_W\ \ge\ \frac{\hbar
+c}{a}\,4\log\frac{1}{176\,(e^{6/g^2}-1)}
+\ =\ \frac{\hbar
+c}{a}\Big(4\log\frac{g^2}{1056}-\frac{12}{g^2}+O(g^{-4})\Big)
+\qquad(g^2\ge1059),\]</span> uniformly in the volume. The threshold that
+Yarotsky’s theorem supplies for the Kogut–Susskind Hamiltonian is <span
+class="math inline">\(g_0^2\sim10^{101}\)</span> (<a
+href="strong-coupling-threshold-explicit.html">threshold note</a>). The
+Wilson statement has an explicit threshold because the Euclidean
+character expansion is a polymer gas of plaquette sets covering each of
+their links at least twice, with no time discretization to pay for.
+Every polymer weight is bounded by <span
+class="math inline">\(\rho^{|\gamma|}\)</span> with <span
+class="math inline">\(\rho=e^{\beta_W}-1=e^{6/g^2}-1\)</span>, a bound
+on the sup norm of the normalized plaquette weight minus one. The
+Kotecký–Preiss criterion holds for <span
+class="math inline">\(20e^2\rho\le0.84\)</span>, that is <span
+class="math inline">\(\rho\le21/(500e^2)\)</span>, whose endpoint is
+approximately <span class="math inline">\(5.684\times10^{-3}\)</span>.
+For this <span class="math inline">\(\rho\)</span> the condition means
+<span
+class="math inline">\(g^2\ge6/\log(1+0.84/20e^2)\simeq1058.6\)</span>.
+Truncated correlations in the time direction then decay at rate at least
+<span class="math inline">\(4\log(1/(176\rho))\)</span> per lattice
+unit, because every time slab between two observables holds at least
+four plaquettes of one polymer. Through the transfer matrix <span
+class="math inline">\(\mathcal T=e^{-aH_W/\hbar c}\)</span>,
+self-adjoint and positive by link reflection positivity, the rate bounds
+the gap.</p>
+<p>The former headline <span class="math inline">\(g^2\ge176\)</span>,
+with <span class="math inline">\(\Delta_W\ge(\hbar
+c/a)\,4\log(g^2/176)\)</span>, is what the same chain gives when each
+plaquette is charged its leading fundamental coefficient <span
+class="math inline">\(d_fc_f/c_0\simeq1/g^2\)</span>. Nothing here
+bounds every polymer by that activity, so <span
+class="math inline">\(176\)</span> is a leading-activity figure. The
+rigorous <span class="math inline">\(\rho\)</span> exceeds the
+leading-order tube activity <span
+class="math inline">\(u=c_f/c_0\simeq1/(3g^2)\)</span> by the factor
+<span class="math inline">\(2d_f^2=18\)</span>. That factor, the
+plaquette-animal entropy <span class="math inline">\(20e\)</span> and
+the weight <span class="math inline">\(a(\gamma)=|\gamma|\)</span> in
+the criterion all have room. For the same operator <a
+href="dobrushin-uniqueness-wilson.html">the Dobrushin note</a> gives the
+lower rigorous threshold <span
+class="math inline">\(g^2&gt;444\)</span>; the rate here is the larger
+one for <span class="math inline">\(g^2\gtrsim1.4\times10^3\)</span>. To
+leading order the gap of <span class="math inline">\(H_W\)</span> grows
+like <span class="math inline">\(\log g^2\)</span> and that of <span
+class="math inline">\(H_{\rm KS}\)</span> like <span
 class="math inline">\(g^2\)</span>, the two Hamiltonians being different
 regularizations that agree only in the continuum limit. Constants
 explicit; nothing promoted.</p>
 <h2 id="the-polymer-gas">1. The polymer gas</h2>
 <p>Write the Wilson weight of a plaquette in characters, <span
-class="math display">\[e^{\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}U_p}
+class="math display">\[f(U_p)=e^{\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}U_p}
 =c_0(\beta_W)\Big[1+\sum_{r\ne0}d_r\frac{c_r}{c_0}\chi_r(U_p)\Big],
-\qquad c_r=\frac1{d_r}\int
-e^{\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}U}\,\overline{\chi_r(U)}\,dU
-,\]</span> with <span class="math inline">\(\beta_W=2N/g^2\)</span>.
-Expanding the product over plaquettes and integrating over links, a set
-of plaquettes with nontrivial representations contributes only if the
-representations at every link fuse to the trivial one, so every link is
-covered by at least two plaquettes of the set: the surviving sets are
-<strong>closed surfaces</strong>, the smallest being the six faces of a
-cube. On a closed surface carrying the fundamental on every plaquette,
-the link integrals <span
-class="math inline">\(\int\chi_f(U_1g)\chi_f(g^{-1}U_2)dg=\chi_f(U_1U_2)/d_f\)</span>
-and the vertex closures combine to <span
-class="math inline">\(d_f^{\chi(P)}(c_f/c_0)^{|P|}\)</span> with <span
-class="math inline">\(\chi(P)\)</span> the Euler characteristic, so the
-activity per plaquette along a tube, where the vertex and link factors
-balance, is <span class="math display">\[\rho\ =\ d_f\,\frac{c_f}{c_0}\
-=\
-\frac{\beta_W}{2N}\big(1+O(\beta_W)\big)=\frac1{g^2}\big(1+O(g^{-2})\big)\qquad(SU(N)),\]</span>
-the textbook strong-coupling parameter. The polymers of the gas are the
-connected closed surfaces, two polymers being incompatible when they
-share a link, and <span class="math inline">\(Z=c_0^{|\mathcal
-P|}\sum_{\text{compatible}}\prod w(\gamma)\)</span>.</p>
-<p><strong>All representations, rigorously.</strong> Expand <span
-class="math inline">\(e^{x\operatorname{Re}\operatorname{tr}U}=\sum_kx^k(\operatorname{Re}\operatorname{tr}U)^k/k!\)</span>
-with <span class="math inline">\(x=\beta_W/N\)</span>, and <span
-class="math inline">\((\operatorname{Re}\operatorname{tr}U)^k=2^{-k}\sum_j\binom
-kj(\operatorname{tr}U)^j(\operatorname{tr}U^\dagger)^{k-j}\)</span>. The
-integral <span
-class="math inline">\(\int(\operatorname{tr}U)^j(\operatorname{tr}U^\dagger)^{k-j}\overline{\chi_r}\,dU\)</span>
-is the multiplicity <span class="math inline">\(m_r(j,k-j)\)</span> of
-<span class="math inline">\(r\)</span> in <span
+\qquad c_r=\frac1{d_r}\int f(U)\,\overline{\chi_r(U)}\,dU ,\]</span>
+with <span class="math inline">\(\beta_W=2N/g^2\)</span>, and put <span
+class="math inline">\(\phi(U)=f(U)/c_0-1\)</span>, <span
+class="math inline">\(\phi_p=\phi(U_p)\)</span>. Expanding <span
+class="math inline">\(\prod_p(1+\phi_p)\)</span> over sets <span
+class="math inline">\(X\)</span> of plaquettes and integrating over
+links, a link lying in exactly one plaquette <span
+class="math inline">\(p\)</span> of <span
+class="math inline">\(X\)</span> integrates <span
+class="math inline">\(\phi_p\)</span> against Haar measure and gives
+<span class="math inline">\(\int\phi\,dU=0\)</span>. Only sets covering
+each of their links at least twice contribute: closed surfaces, possibly
+branched (for <span class="math inline">\(SU(3)\)</span> three
+fundamentals can meet at a link, since <span
+class="math inline">\(f^{\otimes3}\ni1\)</span>), the smallest being the
+six faces of a cube (§2). The polymers are the link-connected such sets,
+two polymers being incompatible when they share a link, and <span
+class="math display">\[Z=c_0^{|\mathcal P|}\sum_{\text{compatible
+families}}\ \prod_\gamma w(\gamma),
+\qquad w(\gamma)=\int\prod_{p\in\gamma}\phi_p\,dU .\]</span></p>
+<p><em>Surfaces and the tube activity.</em> Take a closed surface <span
+class="math inline">\(S\)</span> that is a manifold (each link in
+exactly two of its plaquettes) and carries the fundamental with a
+consistent orientation. The link integrals <span
+class="math inline">\(\int\chi_f(U_1h)\chi_f(h^{-1}U_2)\,dh=\chi_f(U_1U_2)/d_f\)</span>
+give <span class="math inline">\(d_f^{-1}\)</span> per link, each vertex
+closes one index loop worth <span class="math inline">\(d_f\)</span>,
+and each plaquette brings <span
+class="math inline">\(d_fc_f/c_0\)</span> from the expansion, so the
+term is <span
+class="math display">\[d_f^{V-L+|S|}\Big(\frac{c_f}{c_0}\Big)^{|S|}=d_f^{\chi(S)}\,u^{|S|},
+\qquad u=\frac{c_f}{c_0},\]</span> with <span
+class="math inline">\(\chi(S)\)</span> the Euler characteristic. The
+dimensions enter only through <span
+class="math inline">\(\chi(S)\)</span>, and the activity per plaquette
+along a tube is <span class="math inline">\(u\)</span>. For <span
+class="math inline">\(SU(N)\)</span> with <span
+class="math inline">\(N\ge3\)</span>, the order-<span
+class="math inline">\(\beta_W\)</span> term of the expansion below gives
+<span class="math inline">\(d_fc_f=\beta_W/(2N)+O(\beta_W^2)\)</span>,
+and <span class="math inline">\(c_0=1+O(\beta_W^2)\)</span>, so <span
+class="math display">\[u=\frac{\beta_W}{2N^2}\big(1+O(\beta_W)\big)=\frac{1}{Ng^2}\big(1+O(g^{-2})\big),
+\qquad
+u=\frac{\beta_W}{18}+O(\beta_W^2)=\frac1{3g^2}+O(g^{-4})\quad(SU(3)),\]</span>
+the textbook strong-coupling parameter. The fundamental coefficient
+<span class="math inline">\(d_fc_f/c_0=1/g^2+O(g^{-4})\)</span> is <span
+class="math inline">\(d_f\)</span> times larger.</p>
+<p><strong>All representations, rigorously.</strong> Put <span
+class="math inline">\(x=\beta_W/N\)</span> and expand <span
+class="math display">\[e^{x\operatorname{Re}\operatorname{tr}U}=\sum_{k\ge0}\frac{x^k}{k!}\,2^{-k}\sum_{j=0}^k\binom
+kj(\operatorname{tr}U)^j(\overline{\operatorname{tr}U})^{k-j}.\]</span>
+The integral <span
+class="math inline">\(\int(\operatorname{tr}U)^j(\overline{\operatorname{tr}U})^{k-j}\overline{\chi_r(U)}\,dU\)</span>
+is the multiplicity <span class="math inline">\(m_r(j,k-j)\ge0\)</span>
+of <span class="math inline">\(r\)</span> in <span
 class="math inline">\(f^{\otimes j}\otimes\bar
-f^{\otimes(k-j)}\)</span>, so <span
-class="math inline">\(d_rc_r=\sum_k\frac{x^k}{k!}2^{-k}\sum_j\binom
-kjm_r(j,k-j)\ge0\)</span>, and <span
-class="math inline">\(\sum_rm_r(j,k-j)\le\dim\big(f^{\otimes
-j}\otimes\bar f^{\otimes(k-j)}\big)=N^k\)</span>. Hence <span
-class="math display">\[\sum_{r\ne0}d_rc_r\ \le\
-\sum_{k\ge1}\frac{x^k}{k!}2^{-k}\cdot2^kN^k=e^{Nx}-1=e^{\beta_W}-1
-,\]</span> and Jensen’s inequality with <span
+f^{\otimes(k-j)}\)</span>, and counting dimensions, <span
+class="math inline">\(\sum_rd_r\,m_r(j,k-j)=N^k\)</span>. Hence <span
+class="math inline">\(c_r\ge0\)</span> for every <span
+class="math inline">\(r\)</span>, and, every term being nonnegative,
+<span
+class="math display">\[\sum_rd_r^2c_r=\sum_{k\ge0}\frac{x^k}{k!}\,2^{-k}\sum_{j=0}^k\binom
+kjN^k=e^{Nx}=e^{\beta_W}.\]</span> Since <span
+class="math inline">\(|\chi_r|\le d_r\)</span>, the character series of
+<span class="math inline">\(f\)</span> converges absolutely and
+uniformly, to <span class="math inline">\(f\)</span> by Peter–Weyl, and
+<span class="math display">\[\sup_U|\phi(U)|\ \le\
+\sum_{r\ne0}d_r\frac{c_r}{c_0}\,\sup_U|\chi_r(U)|
+=\sum_{r\ne0}d_r^2\frac{c_r}{c_0}=\frac{e^{\beta_W}}{c_0}-1,\]</span>
+with equality at <span class="math inline">\(U=\mathbb 1\)</span>.
+Jensen’s inequality with <span
 class="math inline">\(\int\operatorname{Re}\operatorname{tr}U\,dU=0\)</span>
-gives <span class="math inline">\(c_0=\int
-e^{x\operatorname{Re}\operatorname{tr}U}dU\ge1\)</span>. Therefore <span
-class="math display">\[\sum_{r\ne0}d_r\frac{c_r}{c_0}\ \le\
-e^{\beta_W}-1=e^{2N/g^2}-1\ \simeq\
-\frac{2N}{g^2}=\frac{6}{g^2}\quad(SU(3)),\]</span> which is the leading
-activity <span class="math inline">\(1/g^2\)</span> of the fundamental,
-its conjugate, and the higher representations together, with no spurious
-factor. The sum over representations also covers the branch lines where
-three fundamentals meet at a link, allowed for <span
-class="math inline">\(SU(3)\)</span> since <span
-class="math inline">\(f^{\otimes3}\ni1\)</span>. Everything below is
-stated for a per-plaquette activity <span
-class="math inline">\(\rho\)</span>; the two readings differ only in
-what <span class="math inline">\(\rho\)</span> is.</p>
+gives <span class="math inline">\(c_0\ge1\)</span>. Therefore every
+polymer weight obeys <span class="math display">\[|w(\gamma)|\ \le\
+\int\prod_{p\in\gamma}|\phi_p|\,dU\ \le\ \rho^{|\gamma|},
+\qquad\rho=e^{\beta_W}-1=e^{2N/g^2}-1\ \simeq\
+\frac{6}{g^2}\quad(SU(3)).\]</span> This one bound covers every
+representation, both orientations and the branched polymers. Its leading
+term <span class="math inline">\(2N/g^2\)</span> is the sup norm <span
+class="math inline">\(2d_f\cdot d_fc_f/c_0\)</span> of the fundamental
+and antifundamental terms.</p>
 <h2 id="convergence-the-koteckýpreiss-criterion-with-numbers">2.
 Convergence: the Kotecký–Preiss criterion with numbers</h2>
 <p><em>Adjacency.</em> In four dimensions a link lies in six plaquettes,
-so a plaquette shares a link with <span
-class="math inline">\(4\times5=20\)</span> others, and the number of
-connected sets of <span class="math inline">\(n\)</span> plaquettes
-containing a given one is at most <span
-class="math inline">\((20e)^{n-1}\)</span>.</p>
+and two distinct plaquettes share at most one link, so a plaquette
+shares a link with exactly <span
+class="math inline">\(4\times5=20\)</span> others (on <span
+class="math inline">\(\mathbb Z^4\)</span>, or on a torus with sides of
+at least <span class="math inline">\(3\)</span>).</p>
+<p><em>Animals.</em> In a graph of maximal degree <span
+class="math inline">\(D\)</span>, the connected sets of <span
+class="math inline">\(n\)</span> vertices containing a given vertex
+number at most <span
+class="math inline">\(\binom{Dn}{n-1}\le(eD)^{n-1}\)</span>. Order the
+neighbours of each vertex. Breadth-first search inside a set <span
+class="math inline">\(S\)</span> from the given vertex, in that order,
+assigns to each vertex of <span class="math inline">\(S\)</span> the
+subset of its <span class="math inline">\(D\)</span> neighbour slots
+through which it discovers new vertices. The sequence of these <span
+class="math inline">\(n\)</span> subsets in search order determines
+<span class="math inline">\(S\)</span>, by replaying the search, and
+their sizes add to <span class="math inline">\(n-1\)</span>; such
+sequences correspond to <span
+class="math inline">\((n-1)\)</span>-element subsets of the <span
+class="math inline">\(Dn\)</span> slots. Then <span
+class="math inline">\(\binom{Dn}{n-1}\le(Dn)^{n-1}/(n-1)!\le(eD)^{n-1}\big(\tfrac{n}{n-1}\big)^{n-1}e^{-1}\le(eD)^{n-1}\)</span>,
+using <span class="math inline">\(m!\ge e(m/e)^m\)</span> (from <span
+class="math inline">\(\log m!\ge\int_1^m\log t\,dt\)</span>) and <span
+class="math inline">\((1+\tfrac1{n-1})^{n-1}\le e\)</span>. For
+plaquettes <span class="math inline">\(D=20\)</span>: at most <span
+class="math inline">\((20e)^{n-1}\)</span> connected sets of <span
+class="math inline">\(n\)</span> plaquettes contain a given one.</p>
+<p><em>Minimal size.</em> A nonempty set <span
+class="math inline">\(X\)</span> of plaquettes covering each of its
+links at least twice has <span class="math inline">\(|X|\ge6\)</span>.
+Let <span class="math inline">\(p\in X\)</span> lie in the <span
+class="math inline">\((\mu,\nu)\)</span> plane with corner at the
+origin, with sides <span class="math inline">\(\ell_1\)</span> and <span
+class="math inline">\(\ell_3\)</span> in direction <span
+class="math inline">\(\mu\)</span> at <span
+class="math inline">\(x_\nu=0\)</span> and <span
+class="math inline">\(x_\nu=1\)</span>, and <span
+class="math inline">\(\ell_2\)</span>, <span
+class="math inline">\(\ell_4\)</span> in direction <span
+class="math inline">\(\nu\)</span>. Since two distinct plaquettes share
+at most one link, the four sides are covered by four distinct plaquettes
+<span class="math inline">\(q_i\in X\setminus\{p\}\)</span>, <span
+class="math inline">\(\ell_i\in q_i\)</span>, so <span
+class="math inline">\(|X|\ge5\)</span>. Suppose <span
+class="math inline">\(|X|=5\)</span>. The side <span
+class="math inline">\(f_1\)</span> of <span
+class="math inline">\(q_1\)</span> opposite <span
+class="math inline">\(\ell_1\)</span> is a <span
+class="math inline">\(\mu\)</span>-link displaced from <span
+class="math inline">\(\ell_1\)</span> by <span class="math inline">\(\pm
+e_\lambda\)</span>; it lies at <span
+class="math inline">\(x_\nu=-1\)</span> if <span
+class="math inline">\(\lambda=\nu\)</span> (the sign is fixed by <span
+class="math inline">\(q_1\ne p\)</span>), and at <span
+class="math inline">\(x_\nu=0\)</span> with a nonzero <span
+class="math inline">\(\lambda\)</span>-coordinate otherwise. A <span
+class="math inline">\(\mu\)</span>-link of <span
+class="math inline">\(q_2\)</span> or <span
+class="math inline">\(q_4\)</span> requires the plaquette to lie in the
+<span class="math inline">\((\mu,\nu)\)</span> plane through <span
+class="math inline">\(\ell_2\)</span> or <span
+class="math inline">\(\ell_4\)</span>, where all <span
+class="math inline">\(\mu\)</span>-links have <span
+class="math inline">\(x_\nu\in\{0,1\}\)</span> and zero <span
+class="math inline">\(\lambda\)</span>-coordinate; every vertex of <span
+class="math inline">\(q_3\ne p\)</span> has <span
+class="math inline">\(x_\nu\in\{1,2\}\)</span>; and the <span
+class="math inline">\(\mu\)</span>-links of <span
+class="math inline">\(p\)</span> are <span
+class="math inline">\(\ell_1,\ell_3\)</span>. So <span
+class="math inline">\(f_1\)</span> lies in <span
+class="math inline">\(q_1\)</span> alone, a contradiction. On a torus,
+sides of at least <span class="math inline">\(4\)</span> keep the
+coordinates <span class="math inline">\(-1,0,1,2\)</span> distinct.</p>
 <p><em>Incompatible polymers.</em> A polymer <span
 class="math inline">\(\gamma&#39;\)</span> incompatible with <span
-class="math inline">\(\gamma\)</span> shares a link with it; <span
-class="math inline">\(\gamma\)</span> has at most <span
-class="math inline">\(4|\gamma|\)</span> links, each in six plaquettes,
-so the number of <span class="math inline">\(\gamma&#39;\)</span> of
-size <span class="math inline">\(n\)</span> is at most <span
-class="math inline">\(24|\gamma|(20e)^{n-1}\)</span>, and <span
+class="math inline">\(\gamma\)</span> contains one of the at most <span
+class="math inline">\(4|\gamma|\times6=24|\gamma|\)</span> plaquettes
+through a link of <span class="math inline">\(\gamma\)</span>, so the
+number of such <span class="math inline">\(\gamma&#39;\)</span> of size
+<span class="math inline">\(n\)</span> is at most <span
+class="math inline">\(24|\gamma|(20e)^{n-1}\)</span>, with <span
 class="math inline">\(n\ge6\)</span>.</p>
-<p><em>Criterion.</em> With <span
-class="math inline">\(a(\gamma)=|\gamma|\)</span> and <span
-class="math inline">\(|w(\gamma&#39;)|\le\rho^{|\gamma&#39;|}\)</span>,
-the Kotecký–Preiss condition <span
+<p><em>Criterion.</em> Kotecký and Preiss (Commun. Math. Phys. 103
+(1986) 491; metadata level): if <span
+class="math inline">\(a\ge0\)</span> satisfies <span
 class="math inline">\(\sum_{\gamma&#39;\not\sim\gamma}|w(\gamma&#39;)|e^{a(\gamma&#39;)}\le
-a(\gamma)\)</span> follows from <span
+a(\gamma)\)</span> for every <span
+class="math inline">\(\gamma\)</span>, with <span
+class="math inline">\(\gamma&#39;=\gamma\)</span> included, then the
+cluster expansion of <span class="math inline">\(\log Z\)</span>
+converges absolutely and the clusters <span
+class="math inline">\(X\)</span> containing a polymer incompatible with
+<span class="math inline">\(\gamma\)</span> obey <span
+class="math inline">\(\sum_{X\not\sim\gamma}|\Phi^T(X)|\prod_{\gamma&#39;\in
+X}|w(\gamma&#39;)|\le a(\gamma)\)</span>. With <span
+class="math inline">\(a(\gamma)=|\gamma|\)</span> and <span
+class="math inline">\(|w(\gamma&#39;)|\le\rho^{|\gamma&#39;|}\)</span>
+the condition follows from <span
 class="math display">\[\frac{24}{20e}\sum_{n\ge6}\big(20e^2\rho\big)^n\
 \le\ 1
-\qquad\Longleftarrow\qquad x\equiv20e^2\rho\le0.84 ,\]</span> since
-<span class="math inline">\(0.4415\,x^6/(1-x)\le1\)</span> there. So the
-expansion converges, uniformly in the volume, for <span
+\qquad\Longleftarrow\qquad x\equiv20e^2\rho\le0.84 ,\]</span> because
+<span class="math inline">\(x^6/(1-x)\)</span> is increasing on <span
+class="math inline">\([0,1)\)</span> and <span
+class="math inline">\(e&gt;\sum_{j=0}^5 1/j!=163/60\)</span> gives, at
+<span class="math inline">\(x=21/25\)</span>, <span
+class="math display">\[\frac{24}{20e}\frac{x^6}{1-x}
+&lt;\frac{18\cdot21^6}{163\cdot25^5}&lt;\frac{97}{100}&lt;1.\]</span>
+The expansion therefore converges, uniformly in the volume, for <span
 class="math display">\[\rho\ \le\
-\frac{0.84}{20e^2}=5.7\times10^{-3}.\]</span></p>
+\rho_*=\frac{21}{500e^2}\simeq5.684\times10^{-3},\]</span> which for the
+rigorous <span class="math inline">\(\rho=e^{6/g^2}-1\)</span> of <span
+class="math inline">\(SU(3)\)</span> reads <span
+class="math inline">\(g^2\ge G_{\rm
+KP}:=6/\log(1+\rho_*)\simeq1058.6\)</span>.</p>
 <h2 id="decay-of-correlations-and-the-gap">3. Decay of correlations and
 the gap</h2>
-<p>Running the criterion with <span
-class="math inline">\(a(\gamma)=(1+\delta)|\gamma|\)</span> instead, it
-holds as long as <span
-class="math inline">\(xe^{\delta}\le0.84\)</span>, that is for <span
-class="math inline">\(\delta\le\log(0.84/x)=\log(1/(176\rho))\)</span>,
-and then the cluster sums carry a factor <span
-class="math inline">\(e^{-\delta|X|}\)</span>. A cluster connecting two
-plaquettes at distance <span class="math inline">\(T\)</span> contains a
-closed connected surface through both, whose size is at least that of a
-tube, <span class="math inline">\(4T\)</span> plaquettes, so the
-truncated two-point function of any two local observables at separation
-<span class="math inline">\(T\)</span> is bounded by <span
-class="math inline">\(C\,e^{-4\delta T}\)</span>: <span
-class="math display">\[m\,a\ \ge\ 4\log\frac{1}{176\rho}.\]</span></p>
+<p><em>Decay weights.</em> Applying the criterion to the weights <span
+class="math inline">\(|w(\gamma)|e^{d(\gamma)}\)</span>, whose clusters
+carry the same coefficients <span class="math inline">\(\Phi^T\)</span>,
+gives: if <span
+class="math display">\[\sum_{\gamma&#39;\not\sim\gamma}|w(\gamma&#39;)|e^{a(\gamma&#39;)+d(\gamma&#39;)}\le
+a(\gamma)\ \text{for every }\gamma,
+\quad\text{then}\quad
+\sum_{X\not\sim\gamma}|\Phi^T(X)|\prod_{\gamma&#39;\in
+X}|w(\gamma&#39;)|\,e^{d(X)}\le a(\gamma),\]</span> with <span
+class="math inline">\(d(X)=\sum_{\gamma&#39;\in
+X}d(\gamma&#39;)\)</span>. With <span
+class="math inline">\(a(\gamma)=|\gamma|\)</span> and <span
+class="math inline">\(d(\gamma)=\delta|\gamma|\)</span> the count of §2
+goes through whenever <span
+class="math inline">\(xe^\delta\le0.84\)</span>, that is for <span
+class="math display">\[\delta\ \le\ \delta_*=\log\frac{\rho_*}{\rho}
+=\log\frac{21}{500e^2\rho}.\]</span></p>
+<p><em>Observables as decorations.</em> Let <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> be bounded gauge-invariant functions of
+the spatial links of the time slices <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(T\ge1\)</span>, with supports <span
+class="math inline">\(S_A\)</span>, <span
+class="math inline">\(S_B\)</span>, and set <span
+class="math display">\[Z(\lambda,\mu)=\int(1+\lambda A)(1+\mu
+B)\prod_p(1+\phi_p)\,dU,\qquad
+\langle A;B\rangle=\partial_\lambda\partial_\mu\log
+Z\big|_{\lambda=\mu=0}.\]</span> Expanding as in §1, <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> join the polymers that share a link
+with their supports. Besides the polymers <span
+class="math inline">\(\gamma\)</span> there are decorated polymers <span
+class="math inline">\((A,\gamma)\)</span>, <span
+class="math inline">\((B,\gamma)\)</span> and <span
+class="math inline">\((AB,\gamma)\)</span>, with <span
+class="math inline">\(\gamma\)</span> possibly empty or disconnected but
+<span class="math inline">\(S_A\cup\gamma\)</span> (and so on)
+link-connected, weights such as <span class="math inline">\(\lambda\int
+A\prod_{p\in\gamma}\phi_p\,dU\)</span>, and incompatibility again
+meaning a shared link. A link of <span
+class="math inline">\(\gamma\)</span> outside the supports still
+integrates to zero unless <span class="math inline">\(\gamma\)</span>
+covers it twice, and <span class="math inline">\(|\lambda\int A\prod
+\phi_p|\le|\lambda|\,\|A\|_\infty\rho^{|\gamma|}\)</span>. Give a
+decorated polymer <span
+class="math inline">\(a=|\gamma|+|S_A|/4+1\)</span> (with <span
+class="math inline">\(|S_A|+|S_B|\)</span> for <span
+class="math inline">\((AB,\gamma)\)</span>) and <span
+class="math inline">\(d=\delta|\gamma|\)</span>. At <span
+class="math inline">\(xe^\delta\le0.84\)</span> the undecorated polymers
+incompatible with an undecorated centre <span
+class="math inline">\(\gamma\)</span> contribute at most <span
+class="math inline">\(0.97\,|\gamma|\)</span> to its sum, by §2, and
+those incompatible with a decorated centre at most <span
+class="math inline">\(0.97\,(|S_A|/4+|\gamma|)\)</span>, counting the
+<span class="math inline">\(6|S_A|\)</span> extra plaquettes through the
+support. The decorated polymers contribute at most the total <span
+class="math inline">\(D\)</span> of <span
+class="math inline">\(|w|e^{a+d}\)</span> over all of them. <span
+class="math inline">\(D\)</span> is finite, because their plaquette sets
+are unions of connected sets touching a support, counted by §2 with
+ratio <span class="math inline">\(20e\cdot\rho
+e^{1+\delta}=xe^\delta\le0.84&lt;1\)</span>, and <span
+class="math inline">\(D\)</span> is proportional to <span
+class="math inline">\(|\lambda|\)</span> or <span
+class="math inline">\(|\mu|\)</span>. Take <span
+class="math inline">\(|\lambda|\le r_A\)</span> and <span
+class="math inline">\(|\mu|\le r_B\)</span> small enough, depending on
+<span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>, that <span
+class="math inline">\(D\le0.18\)</span>. Undecorated polymers of nonzero
+weight have <span class="math inline">\(|\gamma|\ge6\)</span>, so <span
+class="math inline">\(0.97\,|\gamma|+0.18\le|\gamma|\)</span>, and the
+criterion holds for the enlarged gas with the same <span
+class="math inline">\(\delta\)</span>. Every cluster that depends on
+both <span class="math inline">\(\lambda\)</span> and <span
+class="math inline">\(\mu\)</span> is incompatible with the polymer
+<span class="math inline">\((A,\emptyset)\)</span>, so the conclusion of
+the criterion and Cauchy’s estimate give <span
+class="math display">\[|\langle A;B\rangle|\ \le\
+\frac{|S_A|/4+1}{r_Ar_B}\,e^{-\delta L_{AB}},\]</span> with <span
+class="math inline">\(L_{AB}\)</span> the least value of <span
+class="math inline">\(\sum_{\gamma\in X}|\gamma|\)</span> over such
+clusters <span class="math inline">\(X\)</span> of polymers of nonzero
+weight.</p>
+<p><em>Size of a connecting cluster: <span
+class="math inline">\(L_{AB}\ge4T\)</span>.</em> For <span
+class="math inline">\(0\le t&lt;T\)</span> call the temporal plaquettes
+between times <span class="math inline">\(t\)</span> and <span
+class="math inline">\(t+1\)</span> slab <span
+class="math inline">\(t\)</span>. The objects of such a cluster (its
+plaquettes and the two supports) are connected through shared links, so
+they contain a chain from <span class="math inline">\(S_A\)</span> to
+<span class="math inline">\(S_B\)</span> in which consecutive objects
+share a link, hence a vertex. Every object other than a plaquette of
+slab <span class="math inline">\(t\)</span> has all its vertices at
+times <span class="math inline">\(\le t\)</span> or all at times <span
+class="math inline">\(\ge t+1\)</span>, so the chain contains a
+plaquette of slab <span class="math inline">\(t\)</span>, belonging to
+some polymer <span class="math inline">\(\pi\)</span> of the cluster.
+The temporal links of slab <span class="math inline">\(t\)</span> lie
+outside <span class="math inline">\(S_A\cup S_B\)</span>, so each one
+that <span class="math inline">\(\pi\)</span> uses lies in at least two
+plaquettes of <span class="math inline">\(\pi\)</span>, all in slab
+<span class="math inline">\(t\)</span>. Project slab <span
+class="math inline">\(t\)</span> to the spatial lattice: its plaquettes
+go to distinct spatial links and its temporal links to sites. The
+plaquettes of <span class="math inline">\(\pi\)</span> in slab <span
+class="math inline">\(t\)</span> become a finite graph in which every
+occurring site has degree at least two, which therefore contains a
+cycle, and a cycle of the cubic lattice, or of a spatial torus with
+sides of at least <span class="math inline">\(4\)</span>, has at least
+four links. Each of the <span class="math inline">\(T\)</span> slabs
+thus holds at least four plaquettes of the cluster, whatever the number
+of polymers in the chain and whether or not they carry <span
+class="math inline">\(A\)</span> or <span
+class="math inline">\(B\)</span>. With periodic time of period <span
+class="math inline">\(L_t\)</span> the same argument on both arcs gives
+<span class="math inline">\(4\min(T,L_t-T)\)</span>.</p>
+<p>Hence <span class="math inline">\(|\langle A;B\rangle|\le
+C_{A,B}\,e^{-4\delta_*T}\)</span>, and <span
+class="math display">\[m\,a\ \ge\ 4\delta_*\ =\
+4\log\frac{21}{500e^2\rho}\ \ge\ 4\log\frac{1}{176\rho}.\]</span></p>
 <p><strong>Transfer.</strong> The Wilson action is link-reflection
 positive, so the transfer matrix <span class="math inline">\(\mathcal
 T\)</span> is self-adjoint and positive (Lüscher, Commun. Math. Phys. 54
 (1977) 283; Osterwalder and Seiler, Ann. Phys. 110 (1978) 440; metadata
 level), and <span class="math inline">\(H_W=-(\hbar c/a)\log\mathcal
-T\)</span>. For a local observable <span
-class="math inline">\(A\)</span> orthogonal to the vacuum, <span
-class="math inline">\(\langle A,\mathcal T^nA\rangle\le
-C_Ae^{-man}\)</span> for all <span class="math inline">\(n\)</span>
-forces the spectral measure of <span class="math inline">\(A\)</span> to
-vanish above <span class="math inline">\(e^{-ma}\)</span>, so on the
-cyclic subspace generated by local observables, which is the whole space
-of the reconstructed theory, <span class="math display">\[\Delta_W\ \ge\
-\hbar c\,m\ \ge\ \frac{\hbar c}{a}\,4\log\frac{1}{176\rho}.\]</span></p>
+T\)</span> with <span class="math inline">\(\mathcal T\)</span>
+normalized to top eigenvalue <span class="math inline">\(1\)</span> on
+gauge-invariant vectors. On a spatial torus that eigenvalue is simple,
+with eigenvector <span class="math inline">\(\Omega&gt;0\)</span>, by
+Jentzsch’s theorem (<a
+href="mass-gap-conditional-theorem.html">conditional theorem</a> §3,
+item 3, which runs the same argument). For bounded gauge-invariant <span
+class="math inline">\(B\)</span> on one time slice and <span
+class="math inline">\(\psi=(B-\langle\Omega,B\Omega\rangle)\Omega\)</span>,
+<span class="math inline">\(\langle\psi,\mathcal T^n\psi\rangle\)</span>
+is the <span class="math inline">\(L_t\to\infty\)</span> limit of <span
+class="math inline">\(\langle B^*;\theta_nB\rangle_{L_t}\)</span>, so it
+is at most <span class="math inline">\(C_Be^{-4\delta_*n}\)</span> for
+all <span class="math inline">\(n\)</span>. This forces the spectral
+measure of <span class="math inline">\(\psi\)</span> to vanish above
+<span class="math inline">\(e^{-4\delta_*}\)</span>. Because <span
+class="math inline">\(\Omega&gt;0\)</span>, these <span
+class="math inline">\(\psi\)</span> are dense in <span
+class="math inline">\(\Omega^\perp\)</span>, and on every spatial torus
+with sides of at least <span class="math inline">\(4\)</span> <span
+class="math display">\[\Delta_W\ =\ -\frac{\hbar c}{a}\log\big\|\mathcal
+T|_{\Omega^\perp}\big\|\ \ge\ \hbar c\,m\ \ge\ \frac{\hbar
+c}{a}\,4\log\frac{1}{176\rho},\]</span> uniformly in the volume.</p>
 <p><strong>Numbers for <span
 class="math inline">\(SU(3)\)</span>.</strong></p>
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
 <thead>
 <tr>
-<th>reading of <span class="math inline">\(\rho\)</span></th>
-<th>threshold <span
-class="math inline">\(\rho\le5.7\times10^{-3}\)</span></th>
-<th>gap</th>
+<th>per-plaquette activity</th>
+<th>status</th>
+<th>threshold</th>
+<th>gap bound, units <span class="math inline">\(\hbar c/a\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>leading, <span class="math inline">\(\rho=1/g^2\)</span></td>
-<td><span class="math inline">\(g^2\ge176\)</span></td>
-<td><span class="math inline">\(\Delta_W\ge(\hbar
-c/a)\,4\log(g^2/176)\)</span></td>
+<td>sup norm, all representations, <span
+class="math inline">\(\rho=e^{6/g^2}-1\)</span></td>
+<td>rigorous (§§1–3)</td>
+<td><span class="math inline">\(g^2\ge1059\)</span> (sufficient integer
+bound)</td>
+<td><span class="math inline">\(4\log[1/(176(e^{6/g^2}-1))]\)</span>,
+with leading estimate <span
+class="math inline">\(4\log(g^2/1056)\)</span></td>
 </tr>
 <tr>
-<td>all representations, <span
-class="math inline">\(\rho=e^{6/g^2}-1\)</span></td>
-<td><span class="math inline">\(g^2\ge1056\)</span></td>
-<td><span class="math inline">\(\Delta_W\ge(\hbar
-c/a)\,4\log(g^2/1056)\)</span></td>
+<td>leading fundamental coefficient, <span
+class="math inline">\(\rho=1/g^2\)</span></td>
+<td>leading-activity figure, unproved for general polymers</td>
+<td><span class="math inline">\(g^2\ge176\)</span></td>
+<td><span class="math inline">\(4\log(g^2/176)\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>The first line uses the fundamental alone; the second sums every
-representation and both orientations and is rigorous as written. The
-factor <span class="math inline">\(6\)</span> between them is the two
-orientations, each with activity <span
-class="math inline">\(1/g^2\)</span>, and the higher representations, so
-the rigorous line is close to the truth for a surface that may carry
-either orientation on each plaquette; a surface with a fixed global
-orientation would be counted by the first line.</p>
+<p><strong>Threshold clarification, 2026-10-02.</strong> The exact
+sufficient KP convergence condition is <span
+class="math inline">\(g^2\ge G_{\rm KP}\)</span>. Its unrounded rate
+<span class="math inline">\(4\log(\rho_*/\rho)\)</span> is positive for
+<span class="math inline">\(g^2&gt;G_{\rm KP}\)</span> and zero at
+equality. The weaker displayed rate with <span
+class="math inline">\(176\)</span> is positive only for <span
+class="math inline">\(g^2&gt;G_{176}:=6/\log(177/176)\)</span>; it is
+zero at <span class="math inline">\(G_{176}\)</span>. Thus <span
+class="math inline">\(1058.6\)</span> is a rounded KP value, not the
+exact endpoint of the <span class="math inline">\(176\)</span> rate, and
+<span class="math inline">\(1059\)</span> is a sufficient integer bound
+for a positive displayed gap. This refines the earlier October 2
+correction without changing its headline. Indeed <span
+class="math inline">\(\log(1+x)&gt;2x/(2+x)\)</span> for <span
+class="math inline">\(x&gt;0\)</span> (differentiate their difference);
+at <span class="math inline">\(x=1/176\)</span> this gives <span
+class="math inline">\(G_{176}&lt;6\cdot353/2=1059\)</span>. The number
+<span class="math inline">\(1056=6\cdot176\)</span> is only the
+linearization of that displayed condition. No equality of the rounded
+numbers with these exact thresholds is used. Section 2 also replaces the
+rounded cluster sum <span class="math inline">\(0.969\)</span> by the
+proved upper bound <span class="math inline">\(0.97\)</span>; the
+decoration margin <span class="math inline">\(0.18\)</span> in §3 still
+satisfies the criterion since every undecorated polymer has at least six
+faces. The rigorous <span class="math inline">\(\rho\)</span> exceeds
+the coefficient <span class="math inline">\(1/g^2\)</span> by <span
+class="math inline">\(2d_f=6\)</span>: a factor <span
+class="math inline">\(2\)</span> for the fundamental and its conjugate,
+and <span class="math inline">\(d_f\)</span> from <span
+class="math inline">\(\sup|\chi_f|\)</span>. It exceeds the tube
+activity <span class="math inline">\(u\simeq1/(3g^2)\)</span> by <span
+class="math inline">\(2d_f^2=18\)</span>. On an orientable fundamental
+surface the weight is <span
+class="math inline">\(2d_f^{\chi}u^{|S|}\)</span>, with one global
+orientation choice, so both factors are costs of the sup norm on large
+surfaces. Recovering them would require bounding the link integrals of
+branched and multiply covered polymers by their Euler-characteristic
+value, which is not done here.</p>
+<p><em>Room.</em> Three constants are unoptimized: the factor <span
+class="math inline">\(18\)</span> above; the animal entropy <span
+class="math inline">\(20e\)</span>, where the search count is crude for
+plaquettes; and the weight <span
+class="math inline">\(a(\gamma)=|\gamma|\)</span>. With <span
+class="math inline">\(a(\gamma)=|\gamma|/10\)</span> the condition
+becomes <span class="math inline">\(0.4415\,v^6/(1-v)\le0.1\)</span> for
+<span class="math inline">\(v=20e\rho e^{\delta+0.1}\)</span>, which
+allows <span class="math inline">\(20e\rho e^{\delta}\)</span> up to
+<span class="math inline">\(0.59\)</span> in place of <span
+class="math inline">\(0.84/e=0.31\)</span>, nearly halving the
+thresholds in <span class="math inline">\(g^2\)</span>. This is not
+carried through.</p>
 <h2 id="relation-to-the-kogutsusskind-statement">4. Relation to the
 Kogut–Susskind statement</h2>
 <p><span class="math inline">\(H_W\)</span> and <span
@@ -288,36 +664,61 @@ class="math inline">\(H_{\rm KS}\)</span> are different regularizations
 of the same continuum Hamiltonian. At strong coupling their gaps differ
 in kind: <span class="math inline">\(H_{\rm KS}\)</span> has an electric
 term of order <span class="math inline">\(g^2\hbar c/a\)</span> and the
-flux loop costs <span class="math inline">\((8/3)g^2\hbar c/a\)</span>
-for <span class="math inline">\(SU(3)\)</span>; <span
+flux loop around one plaquette costs <span
+class="math inline">\((8/3)g^2\hbar c/a\)</span> for <span
+class="math inline">\(SU(3)\)</span>; <span
 class="math inline">\(H_W\)</span> has both electric and magnetic
-content in <span class="math inline">\(-\log\mathcal T\)</span>, and the
-flux loop costs <span class="math inline">\(4\log(g^2/\cdot)\,\hbar
-c/a\)</span>, the logarithm of the tube activity. The Jaffe–Witten
-statement asks for the continuum theory and is indifferent to the
-regularization, so either Hamiltonian serves for T2, and the one with
-the explicit threshold is <span class="math inline">\(H_W\)</span>. The
-anisotropic limit <span class="math inline">\(a_t\to0\)</span> that
-turns <span class="math inline">\(\mathcal T\)</span> into <span
-class="math inline">\(e^{-a_tH_{\rm KS}/\hbar}\)</span> sends the
+content in <span class="math inline">\(-\log\mathcal T\)</span>, and to
+leading order a plaquette excitation propagates as a tube of four
+plaquettes per time step, with energy about <span
+class="math inline">\((\hbar c/a)(-4\log u)\simeq(\hbar
+c/a)\,4\log(3g^2)\)</span> (a leading-order estimate). The rigorous
+bound of §3 has the same form with <span
+class="math inline">\(u\)</span> replaced by <span
+class="math inline">\(176\rho\)</span>. The Jaffe–Witten statement asks
+for the continuum theory and is indifferent to the regularization, so
+either Hamiltonian serves for T2. The one with an explicit
+volume-uniform threshold is <span class="math inline">\(H_W\)</span>:
+the Kogut–Susskind explicit threshold was withdrawn on 2026-10-02 (<a
+href="kogut-susskind-strong-coupling-explicit.html">KS note</a>), which
+keeps Yarotsky’s existential threshold. The anisotropic limit <span
+class="math inline">\(a_t\to0\)</span> that turns <span
+class="math inline">\(\mathcal T\)</span> into <span
+class="math inline">\(e^{-a_tH_{\rm KS}/\hbar c}\)</span> sends the
 temporal plaquette activity to one, outside the expansion, which is why
 the Kogut–Susskind threshold needs a genuinely Hamiltonian expansion and
 why Yarotsky’s time discretization pays what it pays.</p>
 <h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>The strong-coupling boundary of the intermediate region is now a
-number: for the Wilson transfer matrix and <span
-class="math inline">\(SU(3)\)</span>, the theory is gapped uniformly in
-the volume for <span class="math inline">\(g^2\ge176\)</span> (leading
-activity) or <span class="math inline">\(g^2\ge1056\)</span> (all
-representations, rigorous), with the gap explicit. The only constant
-with room is the plaquette-animal entropy <span
-class="math inline">\(20e\)</span>. On the weak side the boundary is
-<span class="math inline">\(1/g^2\gtrsim10^2\)</span> with the crude
-window of <a href="large-field-operator-inequality.html">the
-operator-inequality note</a>, and the intermediate region between <span
-class="math inline">\(g^2\sim10^{-2}\)</span> and <span
-class="math inline">\(g^2\sim2\times10^2\)</span> is where the gap
-forms.</p>
+<p>The rigorous strong-coupling edge of this route is <span
+class="math inline">\(g^2\ge1059\)</span>: for the Wilson transfer
+matrix and <span class="math inline">\(SU(3)\)</span> the theory is
+gapped uniformly in the volume (spatial tori with sides of at least
+<span class="math inline">\(4\)</span>), with <span
+class="math inline">\(\Delta_W\ge(\hbar
+c/a)\,4\log[1/(176(e^{6/g^2}-1))]\)</span>. The figure <span
+class="math inline">\(176\)</span> is the leading-activity reading only.
+For the same operator the Dobrushin note’s <span
+class="math inline">\(g^2&gt;444\)</span> is the lower rigorous edge,
+and this note’s rate is the larger one for <span
+class="math inline">\(g^2\gtrsim1.4\times10^3\)</span>. The unoptimized
+constants are the sup-norm factor <span
+class="math inline">\(18\)</span>, the animal entropy <span
+class="math inline">\(20e\)</span> and the weight <span
+class="math inline">\(a(\gamma)\)</span>. On the weak side no step is
+proved with explicit constants; the necessary window of <a
+href="large-field-operator-inequality.html">the operator-inequality
+note</a> is nonempty only for <span
+class="math inline">\(1/g^2\gtrsim10^2\)</span> (crude constants). The
+intermediate region, from <span
+class="math inline">\(g^2\sim10^{-2}\)</span> to the rigorous strong
+edge (<span class="math inline">\(444\)</span> by Dobrushin, <span
+class="math inline">\(1059\)</span> here), is where the gap forms. Those
+integer figures are sufficient bounds: the exact KP condition and the
+stricter condition for positivity of the rounded <span
+class="math inline">\(176\)</span> rate are distinguished in §3. LLM.md
+and <a href="mass-gap-position.html">the position note</a> already carry
+the October 2 headline correction; their leading estimates must retain
+their approximation signs.</p>
 
 </main>
 <footer class="site"><div class="wrap">

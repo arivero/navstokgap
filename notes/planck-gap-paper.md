@@ -36,9 +36,12 @@ length, the $1/89000$th part of an inch, corpuscles that carry an
 impulse, and a disposition whose period times the corpuscle's momentum is
 invariant under refraction. The proposition that would join them to a
 floor is that a record leaves an undetermined impulse, and what Newton
-printed entails its negation.
+printed entails its negation. The modern disturbance bounds assume
+quantum states, instruments and a positive canonical commutator scale;
+they do not derive that scale from Newton's axioms. The Kepler
+completion and relativistic selection questions are separated below.
 
-Draft, 2026-09-17; revised 2026-09-23. Synthesis of the
+Draft, 2026-09-17; revised 2026-09-23 and 2026-10-02. Synthesis of the
 [mark-floor](newton-mark-floor.md),
 [derivation](planck-gap-derivation.md),
 [probabilistic](planck-gap-probabilistic.md),
@@ -53,8 +56,10 @@ those notes and this paper, found no false result; its proof gaps,
 overclaims, historical corrections and missing prior art are repaired
 here and in the notes. The revision of 2026-09-22 restated two floors:
 the Gaussian floor needs uncorrelated Gaussian probes, and the aperture
-floor takes its area form only at the balanced aperture. Two obligations remain before
-submission and are stated in §11. Exploratory; no ledger promotion.
+floor takes its area form only at the balanced aperture. The October 2
+revision adds the Kepler result and selection-dependent endpoints in
+§10a, without treating them as a necessity proof. The historical
+submission obligations remain in §11. Exploratory; no ledger promotion.
 
 ## 1. The question
 
@@ -1140,10 +1145,77 @@ Theorem 2 is standard (Lehmann and Romano). A referee from either community
 will ask why these go unmentioned, and the honest answer is that the
 theorems were derived without them.
 
+## 10a. Kepler completion and the action-selection premise
+
+**Dated revision, 2026-10-02.** The marked-comparison theorems assume a
+positive action scale. To investigate whether motion itself requires
+one, the maintained
+[self-sufficiency proof](self-sufficiency-contrast.md) compares
+classical and quantum point-Coulomb dynamics. Classical radial inward
+or bound data collide in finite time and have no continuation under the
+original force field. The non-relativistic Coulomb Hamiltonian is
+self-adjoint on $H^2(\mathbb R^3)$ for every $h>0$, and its evolution
+exists for all times. That comparison establishes an incomplete
+classical flow and one global completion. It does not exclude classical
+regularizations or other completions.
+
+The same proof now establishes the classical comparison on a fixed
+collision-free interval. For a fixed orbit with minimum radius
+$\rho_{\min}>0$, fix $0<\delta<\rho_{\min}$ and a real
+$V_\delta\in C_b^\infty$ equal to $-k/r$ outside $r<\delta$.
+For the normalized coherent preparations with width
+$\ell_h=\sqrt{hL_*/P_*}$, fixed $L_*,P_*>0$, centered weighted Sobolev
+estimates and Hardy's inequality give
+$$\sup_{0\le t\le T}\|(V-V_\delta)U_h^{(\delta)}(t)\varphi_h\|_2
+=O(h^{3/2})=o(h).$$
+Duhamel transfers the smooth-potential Gaussian approximation to the
+Coulomb evolution. Separate energy and position estimates give
+$\langle x\rangle=q_t+O(\sqrt h)$ and
+$\langle p\rangle=p_t+O(\sqrt h)$, uniformly on the fixed interval.
+The constants depend on $T$, the preparation, derivatives of
+$V_\delta$ and $(\rho_{\min}-\delta)/2$. No collision, long-time or
+shrinking-$\delta$ limit follows. Hepp's theorem supplies the
+smooth-potential limit [@Hepp1974; passage, §2]; the singular-multiplier
+and moment estimates are the October 2 written derivation in §5a of
+the maintained proof, which has not received independent verification.
+
+At finite $c$, Proposition 2 of that proof distinguishes the selection
+premises. For Dirac--Coulomb, essential self-adjointness gives
+$h\in[2k/(\sqrt3c),\infty)$; requiring finite separate potential energy
+gives $(k/c,\infty)$; a critical Schur-domain or the specified cutoff
+limit extends the latter to $[k/c,\infty)$
+[@EstebanLewinSere2019; passage, Theorems 1.1 and 1.11, arXiv v7].
+The critical domain is defined by the original Esteban--Loss closed
+Schur form [@EstebanLoss2007; passage, Definition 3 and Theorem 4].
+The maintained proof records an angular-channel counterexample to
+the literal compact domain formula printed in arXiv v7, equation
+(1.32); that rewrite is not a proof premise.
+If extra boundary conditions are allowed, self-adjoint Dirac
+realizations exist at every $h>0$. For Klein--Gordon, strict coercivity
+in the usual energy topology and the cited charge-space construction
+give $(2k/c,\infty)$ [@LangerNajmanTretter2008; passage, Example 8.3,
+Theorems 8.5--8.6]. Its principal radial Friedrichs operator includes
+$h=2k/c$ with a no-log branch
+[@DerezinskiRichard2017; passage, §2.3 and Theorem 5.5]. That radial
+selection is not a proof of full critical Klein--Gordon dynamics:
+the critical combined form does not control the singular multiplier
+needed in that construction.
+
+Probability conservation justifies Dirac self-adjointness; it does not
+choose an extension. Finite separate energies, a particular point-source
+limit, Friedrichs closure and an energy topology are further premises.
+Before a selection-dependent threshold can establish action necessity,
+those premises must be justified independently of the desired gap.
+There is consequently no single unqualified admissible interval
+$[h_{\min},\infty)$ here, and no continuum Yang--Mills mass-gap result
+follows from this mechanical comparison. The action threshold concerns
+a family of selected theories; a spectral gap concerns a fixed operator.
+
 ## 11. Obligations before submission
 
-Two, both on the history side, and both stated so that a reader can see
-what the present draft rests on.
+The historical obligations and the scope of the new mathematical
+material are stated separately so that a reader can see what the
+present draft rests on.
 
 1. **Historiography, to be read rather than cited.** On the *Opticks*
    side, Shapiro's *Fits, Passions, and Paroxysms* (1993) on the theory of
@@ -1173,6 +1245,14 @@ what the present draft rests on.
    the *Abhidharmakośabhāṣya* are to be added to that companion, and
    whether the Classical Scholia cite *De facie* 923 itself is to be
    checked in McGuire and Rattansi and in Casini.
+3. **October 2 mathematical additions.** The localization, moment
+   estimates and replacement selection proposition are written
+   derivations supported by the cited source passages. The September 23
+   and October 1 reviews predate them and supply no independent
+   verification of these additions. Their stated domains and fixed-data
+   limits must be retained in submission. Any stronger action-necessity
+   claim requires an independent physical justification of the selection
+   premise; full critical Klein--Gordon dynamics remains open.
 
 Three mathematical items remain open and are not obligations of the
 paper: the worst-case interval $9\le F^2\tau_*^3/(m\kappa)\le36$ of §3,
@@ -1195,4 +1275,9 @@ companions. The junction is §8: M3 is Robertson's inequality for
 Newton's corpuscle, its universal form is that a record costs
 disturbance, what Newton printed entails its negation, and Newton's fits
 carry a phase whose rate is proportional to momentum and whose unit
-$\Lambda p$ is a refraction invariant. STATE's queue reduces to §11.
+$\Lambda p$ is a refraction invariant. Section 11 records this draft's
+historical obligations and the proof status of the mathematical additions.
+The October 2 §10a separates the
+closed fixed-interval Kepler localization and moment problem from the
+open action-selection and necessity problem; the research queue is
+maintained in STATE and includes the continuum Yang--Mills obligations.

@@ -304,9 +304,12 @@ show that every Hamiltonian route fails.
 The strong boundary is rigorous and explicit; the weak one is an
 estimate. The polymer note's $1056=6\times176$ linearizes
 $e^{6/g^2}-1\simeq6/g^2$; solving its criterion
-$e^{6/g^2}-1\le0.84/(20e^2)=5.684\times10^{-3}$ exactly gives
-$6/g^2\le\log(1.005684)=5.668\times10^{-3}$, that is $g^2\ge1059$,
-from which the displayed rate is positive.
+$e^{6/g^2}-1\le21/(500e^2)$ gives the exact sufficient KP condition
+$g^2\ge6/\log(1+21/(500e^2))$. The sufficient integer bound $1059$
+also makes the displayed rate with $176$ positive; that rate itself
+requires $g^2>6/\log(177/176)$. **Precision, 2026-10-02:** the rounded
+KP value $1058.6$, the integer $1059$ and the linearization $1056$
+are different statements, as distinguished in the maintained polymer note.
 
 The width of the intermediate region in one-loop doublings,
 $n=(1/g_{\rm weak}^2-1/g_{\rm strong}^2)/0.0966$ with

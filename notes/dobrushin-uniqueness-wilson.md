@@ -1,10 +1,12 @@
-# Dobrushin's uniqueness condition for the Wilson action: a two-line strong-coupling gap at $g^2>444$, and the block criterion that is the finite verification
+# Dobrushin's Wilson criterion: an explicit strong-coupling gap at $g^2>444$ and an open block test
 
 The finite-volume criteria of
 [the finite-verification note](intermediate-region-finite-verification.md)
 have a single-site ancestor, Dobrushin's uniqueness condition (Theory
 Probab. Appl. 13 (1968) 197), and for the Wilson action it can be
-checked by hand. The conditional distribution of one link given all the
+checked by hand. The comparison below uses four-dimensional lattices
+and spatial tori with sides at least four, as in the polymer note.
+The conditional distribution of one link given all the
 others is
 $$d\mu_\ell(U\,|\,\omega)\ \propto\ \exp\Big[\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}\big(U\,M_\ell(\omega)\big)\Big]d\mu(U),
 \qquad M_\ell=\sum_{p\ni\ell}S_p ,$$
@@ -14,16 +16,19 @@ distance between the two conditional distributions is at most
 $e^{4\beta_W}-1$, independently of $N$. Each link has $18$ neighbours
 that share a plaquette with it, so Dobrushin's coefficient is
 $$\alpha=\sup_\ell\sum_{\ell'}\rho_{\ell\ell'}\ \le\ 18\big(e^{4\beta_W}-1\big),$$
-and the condition $\alpha<1$ holds for $\beta_W<\tfrac14\log\tfrac{19}{18}=0.01352$,
+and the condition $\alpha<1$ holds for $\beta_W<\tfrac14\log\tfrac{19}{18}\simeq0.01352$,
 that is
-$$g^2\ >\ 148\,N\ =\ 444\quad(SU(3)).$$
+$$g^2>\frac{8N}{\log(19/18)};\qquad
+g^2>148N=444\quad(SU(3))\ \text{is a sufficient rounded bound}.$$
 Dobrushin's theorem gives a unique Gibbs state, Künsch's theorem
 (Commun. Math. Phys. 84 (1982) 207) gives exponential decay of all
 truncated correlations at rate $\log(1/\alpha)$ per lattice unit, and
 link reflection positivity turns the rate into a gap:
 $$\Delta_W\ \ge\ \frac{\hbar c}{a}\log\frac{1}{18(e^{24/g^2}-1)}\ \simeq\ \frac{\hbar c}{a}\log\frac{g^2}{432}\qquad(g^2>444),$$
 uniformly in the volume. This is a better threshold than the polymer
-expansion's $1059$ (exact; $1056$ linearized) and a smaller rate than its $4\log(g^2/1056)$. The
+expansion's sufficient integer bound $1059$ ($1056$ is linearized).
+Its rate grows like $\log(g^2/432)$, whereas the polymer rate grows
+like $4\log(g^2/1056)$ at large $g^2$. The
 block version of the same condition, the Dobrushin--Shlosman
 constructive criterion (in *Statistical Physics and Dynamical Systems*,
 Birkhäuser 1985, 347), replaces the single link by a box $V$ of links
@@ -31,6 +36,12 @@ and is expected to hold deeper into the intermediate region as $V$
 grows; it is the quantity a finite verification would compute, and
 Section 4 states it as a specification. All references at metadata
 level; constants explicit; nothing promoted.
+
+**Correction, 2026-10-02 (comparison rates).** The earlier table
+printed the leading logarithms as rigorous lower bounds. The exact
+exponential-activity rates are given in the corrected table in §3;
+the logarithms are asymptotic estimates. This also distinguishes the
+exact single-link condition from its rounded sufficient threshold.
 
 ## 1. The one-link conditional distribution
 
@@ -70,7 +81,10 @@ three further links each, and the six plaquettes share no link besides
 $\ell$, so there are exactly $18$ links $\ell'$ with
 $\rho_{\ell\ell'}\ne0$. Hence
 $$\alpha=\sup_\ell\sum_{\ell'}\rho_{\ell\ell'}\le18\big(e^{4\beta_W}-1\big),$$
-and $\alpha<1$ for $\beta_W<0.01352$, i.e. $g^2>2N/0.01352=148N$.
+and the upper bound on $\alpha$ is strictly below one precisely when
+$\beta_W<\tfrac14\log(19/18)$. The reported $0.01352$ and $148N$ are
+rounded figures; $g^2>148N$ is sufficient since
+$\log(19/18)>2/37$.
 
 ## 3. From the condition to the gap
 
@@ -93,11 +107,12 @@ $$\Delta_W=-\frac{\hbar c}{a}\log\|\mathcal T|_{\Omega^\perp}\|\ \ge\ \frac{\hba
 
 | route | rigorous threshold ($SU(3)$) | gap bound |
 | --- | --- | --- |
-| polymer expansion, all representations | $g^2\ge1059$ | $(\hbar c/a)\,4\log(g^2/1056)$ |
-| Dobrushin single-site condition | $g^2>444$ | $(\hbar c/a)\,\log(g^2/432)$ |
+| polymer expansion, all representations | $g^2\ge1059$ (sufficient integer bound) | $(\hbar c/a)\,4\log[1/(176(e^{6/g^2}-1))]$ |
+| Dobrushin single-site condition | $g^2>24/\log(19/18)$; $g^2>444$ suffices | $(\hbar c/a)\,\log[1/(18(e^{24/g^2}-1))]$ |
 
 The two are complementary: the Dobrushin route enters earlier, the
-polymer route's rate is larger once both apply. For $U(1)$ the same
+polymer route's rate is larger at sufficiently large coupling, rather
+than throughout their overlap. For $U(1)$ the same
 computation gives $g^2>148$ with $N=1$.
 
 ## 4. The block criterion, as a specification
@@ -160,3 +175,6 @@ Wilson interaction, whose single-link case is proved here. The two
 numbers of the finite-verification note are unchanged, and the second
 of them, $g_{\rm DS}^2$, is exactly the smallest coupling at which the
 block criterion has been verified for some $V$.
+The October 2 comparison uses the exact rates in §3; their leading
+logarithms remain estimates. All of these are fixed-cutoff Wilson
+transfer statements, distinct from Kogut--Susskind and a continuum gap.
