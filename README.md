@@ -1,8 +1,22 @@
 # navstokgap: what survives refinement, from Newton's action to the $SU(3)$ mass gap
 
-**Website:** <https://arivero.github.io/navstokgap/> links every maintained
-scientific note by track; selected notes also have a typeset PDF. Rebuild it with
-`make site`.
+**Website:** <https://arivero.github.io/navstokgap/> opens with interactive
+refinement sketches and a short introduction to the two questions.
+The [research map](https://arivero.github.io/navstokgap/research.html) and
+archive lead to every maintained scientific note; selected notes have a PDF.
+Use `make opening` to rebuild the introduction, research map, assets and
+sitemap; `make site` regenerates all website pages. The diagrams illustrate
+refinement and do not supply a simulation or a proof.
+
+The generated [sitemap](https://arivero.github.io/navstokgap/sitemap.xml)
+lists the maintained website pages without invented update dates.
+For [IndexNow](https://www.indexnow.org/documentation), use the public key
+in `scripts/site/indexnow-key.txt` and its deployed file at
+`https://arivero.github.io/navstokgap/<key>.txt` as `keyLocation`; submit
+changed URLs only after their deployment. One participating endpoint
+shares notifications with the others. Building the site sends no notifications.
+Google sitemap submission uses a verified Search Console property; its
+[former ping endpoint is retired](https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping).
 
 **For language models:** [`LLM.md`](LLM.md), also served at
 <https://arivero.github.io/navstokgap/llms.txt>, maps established results,

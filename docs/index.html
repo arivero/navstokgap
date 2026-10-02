@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>navstokgap — what survives refinement?</title>
+<title>What survives refinement? — navstokgap</title><meta name="description" content="A visual introduction to two open questions: whether physics requires a positive action scale, and how a Yang–Mills mass gap could survive the continuum limit.">
+<meta name="theme-color" content="#f7f5ef">
+<link rel="canonical" href="https://arivero.github.io/navstokgap/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What survives refinement? — navstokgap">
+<meta property="og:description" content="Explore Newton’s action question and the Yang–Mills mass gap through interactive refinement sketches.">
+<meta property="og:url" content="https://arivero.github.io/navstokgap/">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<link rel="stylesheet" href="assets/opening.css">
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -60,79 +68,110 @@ mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
 @media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
 ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
 </style>
-<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
-displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
-options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
-<script id="MathJax-script" async
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-</head><body>
+
+</head><body class="landing">
+<a class="skip-link" href="#introduction">Skip to introduction</a>
 <header class="site"><div class="wrap">
-<a class="home" href="index.html">navstokgap</a>
-<nav class="site">
-<a href="index.html">Research map</a>
-<a href="archive.html">Note archive</a>
-<a href="tutorial.html">Tutorial</a>
-<a href="papers.html">Papers</a>
-<a href="ledger.html">Claim ledger</a>
-<a href="sources.html">Sources</a>
-<a href="https://github.com/arivero/navstokgap">Repository</a>
-<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+<a class="home" href="index.html" aria-label="navstokgap home">navstokgap<span aria-hidden="true"> /</span></a>
+<nav class="site" aria-label="Main navigation">
+<a href="research.html">Research map</a><a href="archive.html">Notes</a>
+<a href="https://github.com/arivero/navstokgap">GitHub ↗</a>
 </nav></div></header>
 <main class="wrap">
-<h1>What survives refinement?</h1>
-<p class="lede">Two proof goals guide this repository: derive a positive universal action scale from independently justified physical premises in Newton’s Galileo comparison, and construct pure SU(3) Yang–Mills in four dimensions with a positive finite physical mass gap.</p>
-<p>Exact insertion laws, conditional record bounds and controlled lattice estimates are in hand. Both main goals remain open. The pion is a symmetry benchmark for the comparison.</p>
+<section class="intro" id="introduction" aria-labelledby="intro-title">
+  <p class="eyebrow">An open research project in mathematical physics</p>
+  <h1 id="intro-title">What survives<br><em>when we look closer?</em></h1>
+  <p class="intro-copy">Draw a motion with shorter and shorter steps. Describe a field with smaller and smaller cells. Can a physical scale survive when those divisions disappear?</p>
+  <div class="intro-links"><a class="button primary" href="#questions">Explore the two questions <span aria-hidden="true">↓</span></a><a class="text-link" href="tutorial.html">Read the illustrated introduction <span aria-hidden="true">↗</span></a></div>
+</section>
 
-<h2>Strong results to start with</h2>
-<div class="hl"><h3><a href="notes/cut-measure-newton.html">Newton’s action decomposes under every cut</a></h3><p>The cut measure gives exact additive refinement costs. Constant-force and harmonic curves can be constructed under the stated laws for arbitrary shrinking partitions: <a href="notes/refinement-composition-and-limit.html">construction and limit</a>. Consistency alone leaves zero action admissible.</p></div>
-<div class="hl"><h3><a href="notes/record-costs-disturbance.html">A record costs disturbance</a></h3><p>General quantum instruments obey a sagitta/impulse disturbance bound with supplied ℏ and explicit comparison-state resources. The <a href="notes/mark-cost-and-statistical-floor.html">sharp Gaussian floor</a> has narrower mark and preparation-invariance hypotheses; <a href="notes/planck-gap-probabilistic.html">prepared packets</a> show why a universal cell-action floor needs more.</p></div>
-<div class="hl"><h3><a href="notes/self-sufficiency-contrast.html">Kepler completion and a controlled classical limit</a></h3><p>Coulomb quantum evolution exists at every positive phase constant. The October 2 written derivation controls the singular multiplier and both centroids on fixed collision-free intervals with a fixed smooth regularization. Relativistic action thresholds depend on the chosen point-source domain; full critical Klein–Gordon evolution remains open. These additions are unrefereed.</p></div>
-<div class="hl"><h3><a href="notes/series-parallel-gauge-refinement.html">Series closes; parallel carries the generated action</a></h3><p>Directional gauge halving factors exactly. <a href="notes/su2-midpoint-exact.html">SU(2) midpoint traces</a> and <a href="notes/sun-midpoint-centre.html">general compact-group cuts</a> are exact; interacting mid-plane comparison remains a separate estimate.</p></div>
-<div class="hl"><h3><a href="notes/su2-midplane-small-field.html#separately-marked-bad-components-at-arbitrary-order">Connected bad sets and exact dressing in a weak strip</a></h3><p>All-order marked estimates (116) and dressed activities (112) are proved in their retained-barrier weak-recoupling domain. Section 37 gives a quadratic moving-source test for part of (113). These results do not yet give the full nonlinear group integral or stable physical iteration.</p></div>
-<div class="hl"><h3><a href="notes/strong-coupling-target-box.html">Lattice gaps at strong coupling</a></h3><p>The <a href="notes/wilson-strong-coupling-explicit.html">Wilson transfer bounds</a> are explicit and volume-uniform. The <a href="notes/kogut-susskind-strong-coupling-explicit.html">KS numerical uniform threshold</a> was withdrawn on October 2; its corrected explicit bound depends on volume. The <a href="notes/strong-coupling-uniform-gap.html">Yarotsky application</a> and perturbed target region retain existential uniform statements. Controlled arrival from the continuum scaling trajectory and continuum reconstruction remain open.</p></div>
+<section class="refinement" aria-label="Interactive illustration of refinement">
+  <div class="diagram-grid">
+    <figure class="motion-panel">
+      <figcaption><span class="figure-number">01</span><strong class="graph-title">Newton De Motu</strong><span class="figure-tag">MOTION</span></figcaption>
+      <svg class="refinement-svg" viewBox="0 0 540 320" role="img" aria-labelledby="motion-title motion-description">
+        <title id="motion-title">A curved path and its straight-step approximation</title>
+        <desc id="motion-description">Orange line segments join points on a curved path. Refining adds more points and shorter segments. This illustrates a geometric limit, not a minimum physical action.</desc>
+        <defs><pattern id="motion-paper" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#dbd6ca"/></pattern></defs>
+        <rect x="18" y="22" width="506" height="264" fill="url(#motion-paper)"/>
+        <path d="M42 28V282H505" fill="none" stroke="#c7c1b4" stroke-width="1"/>
+        <text x="44" y="305" class="svg-label">start</text><text x="480" y="305" class="svg-label">time →</text>
+        <path id="motion-defect" d="M42 42L262 98L482 266Q262 42 42 42Z" class="motion-defect"/>
+        <path d="M42 42Q262 42 482 266" class="reference-curve"/>
+        <polyline id="motion-steps" points="42,42 262,98 482,266" class="motion-steps"/>
+        <g id="motion-marks" class="motion-marks"><circle cx="42" cy="42" r="4"/><circle cx="262" cy="98" r="4"/><circle cx="482" cy="266" r="4"/></g>
+        <path d="M168 164L253 104" fill="none" stroke="#a34425" stroke-width="1"/>
+        <text x="71" y="183" class="svg-annotation warm">shorter steps, same interval</text>
+      </svg>
+      <p class="diagram-caption"><span class="legend-line warm-line"></span> straight steps <span class="legend-line curve-line"></span> smooth path</p>
+    </figure>
+    <figure class="field-panel">
+      <figcaption><span class="figure-number">02</span><strong class="graph-title">Yang Mills LQFT</strong><span class="figure-tag">FIELD THEORY</span></figcaption>
+      <svg class="refinement-svg" viewBox="0 0 540 320" role="img" aria-labelledby="field-title field-description">
+        <title id="field-title">A lattice covering a fixed region of space</title>
+        <desc id="field-description">A square grid covers the same region as its cells become smaller. One cell is highlighted. This two-dimensional sketch illustrates refinement; the research target is a four-dimensional theory.</desc>
+        <defs><radialGradient id="field-wash"><stop stop-color="#cee4d9"/><stop offset="1" stop-color="#edf3eb"/></radialGradient></defs>
+        <rect x="70" y="36" width="400" height="224" rx="2" fill="url(#field-wash)"/>
+        <g id="field-grid" class="field-grid"><path d="M70 36V260M270 36V260M470 36V260M70 36H470M70 148H470M70 260H470"/></g>
+        <rect id="field-cell" x="270" y="148" width="200" height="112" class="field-cell"/>
+        <path id="field-callout" d="M370 204L326 284" fill="none" stroke="#18675e" stroke-width="1"/>
+        <text x="256" y="305" class="svg-annotation cool">smaller cells, same region</text>
+        <circle cx="70" cy="36" r="3" fill="#18675e"/><circle cx="470" cy="260" r="3" fill="#18675e"/>
+      </svg>
+      <p class="diagram-caption"><span class="legend-square"></span> one cell <span class="caption-note">lattice quantum field theory</span></p>
+    </figure>
+  </div>
+  <div class="refinement-controls" id="refinement-controls" hidden>
+    <div><label for="refinement-level">Try refining the picture</label><span id="slider-help">More divisions. The same path and region.</span></div>
+    <div class="slider-wrap"><span aria-hidden="true">coarse</span><input id="refinement-level" type="range" min="0" max="4" value="0" step="1" aria-describedby="slider-help" aria-valuetext="2 divisions"><span aria-hidden="true">fine</span></div>
+    <output id="division-count" for="refinement-level">2 divisions</output>
+    <button id="refine-step" type="button">Refine once <span aria-hidden="true">+</span></button>
+  </div>
+  <noscript><p class="static-caption">The drawings show one level of refinement. With finer divisions, the orange steps follow the curve more closely and the grid cells become smaller.</p></noscript>
+</section>
+<p class="figure-footnote">Illustrations of refinement, not simulations or proofs. Drawing finer divisions is the beginning; controlling the physical limit is the research problem.</p>
 
-<h2>Current open fronts</h2>
-<ul>
-<li><strong>Newton:</strong> independently justified physical premises for coherence through complete records, and for any singular-domain selection used to infer an action threshold. The <a href="notes/zero-branch-reachability.html#c.-theorem-5-the-incoherent-attachment-reaches-zero">incoherent-packet countercase</a> reaches the classical branch for quadratic forces. The <a href="notes/sed-closure-under-recording.html#positive-tails-restore-reconstruction-not-uniform-stability">current packet/stability test</a> uses supplied quantum free evolution as its reference.</li>
-<li><strong>Gauge local step:</strong> complex nonlinear centered bounds and decaying source dependence of the moving saddle, with the barrier retained. <a href="notes/su2-midplane-small-field.html#moving-means-with-a-fixed-barrier-an-exact-quadratic-source-test">Current quadratic input</a>.</li>
-<li><strong>Four dimensions and spectrum:</strong> <a href="notes/four-dimensional-composition.html">depth-uniform generated-action matching</a>, stable iteration, and the <a href="notes/weak-coupling-feshbach-reduction.html">renormalized small-volume bridge</a>. Continuum axioms, nontriviality, volume uniformity and physical spectral weight remain explicit.</li>
-</ul>
-<p><a href="maps/dependencies.html">Dependencies and exact next obligations</a> · <a href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">Live STATE</a>. A gap at every bare lattice coupling (T2′) is an optional stronger statement; the continuum argument needs control along the appropriate weak-coupling scaling trajectory: <a href="notes/mass-gap-openings.html">correction</a>.</p>
+<section class="questions" id="questions" aria-labelledby="questions-title">
+  <div class="section-heading"><p class="eyebrow">Two questions, still open</p><h2 id="questions-title">Where could a positive scale come from?</h2></div>
+  <div class="question-grid">
+    <article class="question-card newton">
+      <p class="card-kicker"><span>01 / NEWTON &amp; QUANTUM ACTION</span><span class="status">Open goal</span></p>
+      <h3>Must recording motion carry a minimum action cost?</h3>
+      <p>An action scale has units of energy × time. We ask which physical assumptions could make a positive quantum action scale unavoidable.</p>
+      <div class="action-illustration" aria-label="The units of action are energy times time"><span>energy</span><b aria-hidden="true">×</b><span>time</span><b aria-hidden="true">→</b><strong>action</strong></div>
+      <dl class="progress-pair"><div><dt>In hand</dt><dd>Recording and disturbance bounds within quantum mechanics, with a positive action scale supplied.</dd></div><div><dt>Still needed</dt><dd>An independent physical reason that forces that scale to be positive.</dd></div></dl>
+      <a class="card-link" href="notes/planck-gap-paper.html">Follow the Newton question <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="question-card gauge">
+      <p class="card-kicker"><span>02 / YANG–MILLS &amp; THE MASS GAP</span><span class="status">Open goal</span></p>
+      <h3>Can a field have a smallest excitation energy?</h3>
+      <p>Pure SU(3) Yang–Mills describes interacting gauge fields. The target is a rigorous four-dimensional theory with a positive energy gap above its vacuum.</p>
+      <svg class="gap-illustration" viewBox="0 0 440 104" role="img" aria-labelledby="gap-title gap-desc">
+        <title id="gap-title">The target energy spectrum, shown schematically</title><desc id="gap-desc">The vacuum is at zero energy. A positive gap separates it from a continuous band of excitations. This is the research goal, not a result established here.</desc>
+        <rect x="115" y="9" width="280" height="29" fill="#d6e7de"/><path d="M115 38H395M115 88H395" stroke="#24675b" stroke-width="2"/>
+        <path d="M101 44V81M97 48L101 43L105 48M97 77L101 82L105 77" fill="none" stroke="#24675b" stroke-width="1.5"/>
+        <text x="20" y="68" class="svg-label cool">gap</text><text x="124" y="28" class="svg-label cool">excitations</text><text x="124" y="79" class="svg-label">vacuum · zero energy</text>
+      </svg>
+      <dl class="progress-pair"><div><dt>In hand</dt><dd>Exact refinement identities and controlled lattice results in stated regimes.</dd></div><div><dt>Still needed</dt><dd>The continuum construction and a physical gap that survives the required limits.</dd></div></dl>
+      <a class="card-link" href="notes/mass-gap-position.html">Follow the mass-gap question <span aria-hidden="true">↗</span></a>
+    </article>
+  </div>
+</section>
 
-<h2>Decisive corrections to retrieve</h2>
-<ul>
-<li>Local Agmon suppression: <a href="notes/agmon-ground-state-suppression.html">original route</a> → <a href="notes/agmon-global-not-local.html">global-only correction</a>.</li>
-<li>Finite crossover certification and monotonicity: <a href="notes/what-would-unblock.html">earlier bridge</a> → <a href="notes/reasons-to-stop-as-research.html">weak-side diagnosis</a>.</li>
-<li>Naive blocking, invertible flow and bare Feshbach UV control: <a href="maps/obstructions.html">scoped failures and surviving alternatives</a>.</li>
-<li>A prior covariance restriction is vulnerable to complete and nonlinear records: <a href="notes/sed-closure-under-recording.html">exact tests</a>. Thermodynamic costs and phase consistency supply conditional trades or ratios, while positivity remains separate.</li>
-</ul>
+<section class="method" aria-labelledby="method-title">
+  <p class="eyebrow">The common method</p><h2 id="method-title">Add detail. Compare. Control the limit.</h2>
+  <ol class="method-steps"><li><span class="step-symbol" aria-hidden="true">＋</span><h3>Insert a new piece</h3><p>Add an intermediate time to a motion, or an edge to a lattice.</p></li><li><span class="step-symbol" aria-hidden="true">⇄</span><h3>Compare descriptions</h3><p>Find which observations and interactions survive removing the added variable.</p></li><li><span class="step-symbol" aria-hidden="true">∞</span><h3>Prove what survives</h3><p>Control the errors through unlimited refinement and test whether a physical scale remains.</p></li></ol>
+  <a class="text-link" href="notes/refinement-composition-and-limit.html">Read the mathematical comparison <span aria-hidden="true">↗</span></a>
+</section>
 
-<h2>A short reading path</h2>
-<ol>
-<li><a href="tutorial.html">The illustrated argument</a>, then <a href="notes/three-continuum-limits.html">the two goals and the spectral benchmark</a>.</li>
-<li><a href="notes/refinement-composition-and-limit.html">Exact insertion and what a limit requires</a>.</li>
-<li>Newton: <a href="notes/planck-gap-paper.html">record/disturbance synthesis</a> → <a href="notes/zero-branch-reachability.html">classical limits and coherence</a> → <a href="notes/self-sufficiency-contrast.html">Kepler completion and selection</a> → <a href="notes/necessity-unit-and-indeterminacy.html">physical premise and calibration</a>.</li>
-<li>Gauge: <a href="notes/series-parallel-gauge-refinement.html">series/parallel split</a> → <a href="notes/su2-midplane-order-t.html">order-t input</a> → <a href="notes/su2-midplane-small-field.html">current normalized-control notebook</a>.</li>
-</ol>
-<p>For a specific calculation use the <a href="maps/dependencies.html">dependency paths</a> and <a href="maps/notation-and-scales.html">notation/scale map</a>. The <a href="maps/book-map.html">provisional book</a> gives a longer reading architecture; the <a href="maps/refinement-correspondences.html">correspondence test</a> states where the analogy is exact.</p>
-
-<h2>Complete archive and evidence</h2>
-<p><a href="archive.html">Every maintained note</a>, with summary, status and retrieval priority · <a href="notes/index.html">greppable catalog</a> · <a href="papers.html">syntheses, technical manuscripts and historical PDFs</a> · <a href="sources.html">primary sources and reading coverage</a> · <a href="ledger.html">stable older claim IDs</a> · <a href="llms.txt">dated established-result map</a>.</p>
-<p>The <a href="maps/programme-evolution.html">programme history</a>, <a href="maps/site-audit.html">site audit</a> and <a href="maps/navigation-test.html">navigation test</a> explain the reading architecture.</p>
-<p>Retrieval priority measures usefulness to the current questions, not novelty or mathematical quality. Full notes govern their hypotheses and later corrections. Comments and corrections are welcome as <a href="https://github.com/arivero/navstokgap/issues">repository issues</a>.</p>
+<section class="reading" aria-labelledby="reading-title"><div><p class="eyebrow">Choose a way in</p><h2 id="reading-title">Pictures first, proofs when you’re ready.</h2><p>Each working note names its assumptions and what remains open. The detailed map connects the results, corrections and next steps.</p></div><div class="reading-links"><a href="tutorial.html"><span><small>START HERE</small>The illustrated introduction</span><span aria-hidden="true">↗</span></a><a href="research.html"><span><small>GO DEEPER</small>Results and open questions</span><span aria-hidden="true">↗</span></a><a href="papers.html"><span><small>READ THE ARGUMENT</small>Paper drafts and PDFs</span><span aria-hidden="true">↗</span></a></div></section>
+<script src="assets/opening.js" defer></script>
 
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>Comments, corrections and questions are welcome as repository
-issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
-straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
-quoted source, a dating or a proof are especially wanted: every note names the
-premises it uses, so a disputed premise can be pointed at directly.</p>
-<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
-by <code>scripts/build_site.py</code>; every note is also the Markdown source
-in <code>notes/</code>; selected manuscripts have a typeset PDF in
-<code>out/papers/</code>. Notes are
-working research, not peer-reviewed publications, and each states its own
-status.</p>
+<p>navstokgap · An open mathematical-physics research project.</p>
+<p>Working notes state their assumptions and proof status.
+<a href="https://github.com/arivero/navstokgap/issues">Questions and corrections welcome ↗</a>
+· <a href="sitemap.xml">Site map</a></p>
 </div></footer>
 </body></html>

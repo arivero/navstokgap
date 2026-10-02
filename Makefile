@@ -12,7 +12,7 @@ endif
 endif
 PAPER_ENGINE ?= pdflatex
 
-.PHONY: check paper papers figures programme publication site
+.PHONY: check paper papers figures programme publication site opening
 
 check:
 	$(PYTHON) scripts/check_repository.py
@@ -46,3 +46,6 @@ publication: papers
 
 site:
 	$(PYTHON) scripts/build_site.py
+
+opening:
+	$(PYTHON) scripts/build_site.py --opening-only

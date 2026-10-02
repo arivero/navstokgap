@@ -151,7 +151,7 @@ def main():
                      if line.strip() and not line.startswith("#")}
     # Check the public routing pages, including their section-level frontier links.
     navigation = [ROOT / "docs" / name for name in
-                  ("index.html", "archive.html", "tutorial.html", "papers.html", "ledger.html")]
+                  ("index.html", "research.html", "archive.html", "tutorial.html", "papers.html", "ledger.html")]
     navigation += [ROOT / name for name in sorted(generated)
                    if name.startswith("docs/maps/") and name.endswith(".html")]
     pages = {}

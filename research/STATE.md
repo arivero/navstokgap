@@ -99,6 +99,13 @@ fill its cells (open cells in its §5).
 
 ## Next
 
+**Diagnostic from the visual comparison (2026-10-02).** Geometric
+convergence and survival of a physical scale require separate estimates.
+Use the quadratic coherent/incoherent countercase as a control: fix the
+classical smeared limit, specify the finer physical record, and ask which
+independently justified law selects its required coherence. This is a
+proposed test, with the preparation and record premises retained.
+
 1. **A local gauge refinement estimate.** The
    [series/parallel note](../notes/series-parallel-gauge-refinement.md)
    factors one directional halving exactly: series moves close in every
