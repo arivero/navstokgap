@@ -1,10 +1,16 @@
 # Provisional book architecture
 
-Based on the maintained notes, 2026-10-01; chapters are proposed, not written.
+Proposed 2026-10-01; updated from the maintained notes, 2026-10-02.
+The chapters below remain a reading and writing plan.
 The test question is: **what survives refinement, and under what conditions
 can a positive physical scale survive with it?** The repository establishes
 several exact insertion laws, conditional scale bounds and informative
 closures. It has not established either main necessity/existence-and-gap goal.
+The Newton record bounds supply positive quantum action. The Kepler
+completion and classical-limit results leave physical coherence and
+domain selection as additional premises. The strong-coupling gauge
+inputs keep Wilson transfer bounds, KS finite-volume bounds and
+existential volume-uniform theorems separate.
 The [reading paths](dependencies.md) organize the established inputs and
 their open extensions.
 
@@ -12,9 +18,9 @@ their open extensions.
 
 | Organization | Strength | Cost | Decision |
 | --- | --- | --- | --- |
-| Refinement first | Exact local composition gives a shared mathematical entry; makes loss of state and generated interactions visible | Can conceal the different Newton and gauge premises | Preferred, with separate case-study parts and an explicit analogy audit |
+| Refinement first | Exact local composition gives a shared mathematical entry; makes loss of state and generated interactions visible | Can conceal the different Newton and gauge premises | Preferred, with separate case-study parts and an explicit comparison of scope |
 | Supplied versus generated scales | Cleanly separates action calibration from dimensional transmutation | Pushes the local constructions too far back | Use as the recurring chapter question |
-| Two independent case studies | Most honest about distinct mathematics | Duplicates cuts, composition and limiting-order discussions | Retain separate technical parts after common foundations |
+| Two independent case studies | Keeps the distinct mathematics and physical premises visible | Duplicates cuts, composition and limiting-order discussions | Retain separate technical parts after common foundations |
 | The recurring zero branch | Organizes decisive countermodels | Makes the book read as a collection of failures | Use as a diagnostic, not the narrative spine |
 
 The preferred reading is foundations → Newton records → gauge refinement
@@ -84,18 +90,29 @@ Purpose: strongest current information/disturbance theorem, with its quantum
 input and preparation dependence visible. The early bounded-support model
 belongs in a correction box.
 
-### 6. A unit, a floor, and the zero branch
+### 6. A unit, a classical limit, and a selection rule
 
 Separate dimensional availability, radiation calibration, composition
 universality, quantum role and positivity. Newton-compatible deformations
 and covariant state restrictions expose alternatives to joint determinacy;
 Leibniz continuity becomes a precise but family-dependent record criterion.
+Compare complete coherent records with smeared records and the incoherent
+packet mixture that recovers the same classical swarm for quadratic forces.
+Then distinguish Kepler's classical collision from its global quantum
+completion and fixed-interval centroid limit. Use the Dirac/Klein--Gordon
+selection table to show how point-source domains decide action thresholds;
+keep a radial critical operator separate from a full evolution theorem.
 Sources: [fifth postulate](../notes/principia-fifth-postulate.md),
 [unit and indeterminacy](../notes/necessity-unit-and-indeterminacy.md),
 [dimensional selection](../notes/action-unit-dimensional-selection.md),
 [rotation composition](../notes/rotation-composition-universality.md),
-[Leibniz records](../notes/leibniz-continuity-records.md).
-Purpose: universality and consistency can retain the common zero branch.
+[Leibniz records](../notes/leibniz-continuity-records.md),
+[coherence and classical limits](../notes/zero-branch-reachability.md),
+[Kepler completion and domains](../notes/self-sufficiency-contrast.md),
+[Newton synthesis, §10a](../notes/planck-gap-paper.md).
+Purpose: state which preparation and domain choices determine the claim.
+The October 2 additions are unrefereed written derivations; an independent
+physical necessity argument and universal calibration remain open.
 
 ### 7. Can a physical apparatus keep the restriction?
 
@@ -166,9 +183,8 @@ an assumption that a formal running coupling is already a constructive RG.
 State the Wilson transfer bound, the continuous-time finite-volume
 Hamiltonian bound and Yarotsky's existential volume-uniform theorem
 with their own normalizations, then the existential target box.
-The October 2 KS numerical uniform threshold is withdrawn.
-Explain why blocking
-without coupling flow, global Agmon suppression, conjugate flow and physical
+The October 2 KS numerical uniform threshold is withdrawn. Explain why
+blocking without coupling flow, global Agmon suppression, conjugate flow and physical
 crossover certification do not bridge the weak trajectory. Sources:
 [Wilson gap](../notes/wilson-strong-coupling-explicit.md),
 [KS gap](../notes/kogut-susskind-strong-coupling-explicit.md),
@@ -204,6 +220,9 @@ structural analogies and the still-open physical premises, using
 [tangent groupoid](../notes/tangent-groupoid-trajectories.md).
 Purpose: explain why RG appears through elimination without claiming that
 its appearance selects positive action or proves a continuum mass gap.
+The comparison must distinguish a coherent-record contrast, an admissible
+interval in a selected point-source model, and a spectral gap of one
+Hamiltonian. None supplies the missing premise of another chapter.
 
 ## Material outside the main spine
 
@@ -217,6 +236,6 @@ its appearance selects positive action or proves a continuum mass gap.
 | Research-history appendix | Old operational reconstruction, collision transport, discrete-substrate conversations, old programme branches and orphan snapshots |
 | Forward-looking side note | Pion symmetry benchmark and speculative groupoid construction; neither adds a third active proof goal |
 
-No source note is merged or replaced. [Synthesis opportunities](synthesis-opportunities.md)
-identifies where a future chapter-sized synthesis would genuinely improve
-retrieval rather than duplicate an existing compilation.
+Maintained proof notes remain the sources for chapter claims.
+[Synthesis opportunities](synthesis-opportunities.md) identifies candidate
+chapters that would connect those proofs and their assumptions.

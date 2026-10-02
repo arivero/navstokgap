@@ -80,9 +80,9 @@ fill its cells (open cells in its §5).
   the pure-gauge map: finite-lattice and strong-coupling results,
   with H1/H2 blocking and mixing estimates open. Continuum construction
   and nontriviality (T4) remain explicit obligations.
-- [The working note, §5](../notes/three-continuum-limits.md) states the
-  elementary spectral criteria for retaining a positive or zero
-  threshold, including the need for surviving observable weight.
+- [The joint synthesis](../notes/three-continuum-limits.md) now integrates
+  the Kepler and selection results, coherence countercase and corrected
+  lattice inputs; §5 retains the spectral criteria and surviving-weight premise.
 - [The refinement note](../notes/refinement-composition-and-limit.md)
   constructs the arbitrary-partition constant-force limit, gives exact
   two-dimensional gauge subdivision and a sufficient summable-error

@@ -1,15 +1,25 @@
 # What survives refinement: the pion, the Yang--Mills gap and Newton's action
 
-**Working conclusion, 2026-09-26.** The common problem is to construct a
-limit while preserving a specified physical structure. In pure $SU(3)$
-Yang--Mills it is a positive energy threshold. In chiral QCD it is the
-broken global symmetry and observable spectral weight that require a
-zero threshold. In Newton's comparison it is a positive action cost of
-physical records while the time partition becomes arbitrarily fine.
-All three require control independent of the regulator. The quantities
-controlled, and the reasons for their survival, differ.
+**Working conclusion, updated 2026-10-02.** The common problem is to
+construct a limit while preserving a specified physical structure.
+Pure $SU(3)$ Yang--Mills asks for a positive energy threshold in a
+constructed continuum theory. Chiral QCD tests a zero threshold,
+conditional on broken global symmetry and surviving spectral weight.
+Newton's comparison asks which independently justified physical
+premises would force a universal positive action cost of records.
+The existing record bounds supply quantum kinematics and positive
+$\hbar$; they establish conditional costs, not the necessity of that input.
+The quantities, hypotheses and regulators differ in these comparisons.
 
-User direction of this date makes this comparison the intended frame of
+Two further Newton results sharpen the scope. Fixed-interval Kepler
+localization and first-moment estimates recover classical trajectories
+from Coulomb quantum evolution. Relativistic point-Coulomb action
+thresholds depend on the selected operator domain, including at equality.
+A coherent-stream record contrast additionally depends on coherence
+between launch points and the record topology. Neither a chosen domain
+nor a chosen coherent preparation supplies universal action necessity.
+
+User direction of 2026-09-26 makes this comparison the intended frame of
 the eventual paper. **The two main proof goals remain the pure $SU(3)$
 mass gap and the necessity of a positive action scale in Newton's
 comparison.** QCD with massless and with nonzero quark masses is an
@@ -21,7 +31,16 @@ The [Planck paper](planck-gap-paper.md) remains the developed Newton
 component; the [Yang--Mills position](mass-gap-position.md) and
 [conditional theorem](mass-gap-conditional-theorem.md) remain the
 technical map for pure gauge theory. Their results retain their stated
-hypotheses. The present note changes the destination of the synthesis.
+hypotheses. The October 2 localization, moment and selection additions
+are written derivations and read source results, without independent
+verification. This synthesis makes no literature novelty claim.
+
+**Dated correction, 2026-10-02.** The October 1 description of the
+complete-record contrast omitted its coherence premise, despite the
+incoherent countercase in the maintained reachability proof. Section 4a
+now states that premise and its scope. Sections 2 and 4b integrate the
+lattice corrections and the Kepler/selection results. Earlier routing
+and review dates remain historical records; STATE governs the live queue.
 
 ## 1. Compare physical quantities, with the regulators separate
 
@@ -104,6 +123,32 @@ called T4 in the [obligations map](mass-gap-obligations-lattice.md), must
 remain explicit as well. We choose $L\to\infty$ at fixed $a$ followed
 by $a\to0$ along the trajectory as the working order; interchanging
 these operations requires its own uniform estimates.
+
+**Strong-coupling inputs, corrected 2026-10-02.** The Wilson transfer
+matrix and the Kogut--Susskind Hamiltonian are distinct operators.
+For Wilson, the [polymer proof](wilson-strong-coupling-explicit.md)
+gives a volume-uniform rate
+$4\log[1/(176(e^{6/g^2}-1))]$ in units $\hbar c/a$ at the sufficient
+integer bound $g^2\ge1059$, on spatial tori with sides at least four.
+Its exact sufficient KP condition, the strict margin for a positive
+rate, and the linearized figure $1056$ are distinguished in that proof.
+The [Dobrushin proof](dobrushin-uniqueness-wilson.md) gives another
+Wilson criterion, $g^2>24/\log(19/18)$, with $g^2>444$ sufficient.
+Neither sufficient criterion is a phase-transition threshold.
+
+The former explicit KS volume-uniform threshold was withdrawn. Its
+[corrected bound](kogut-susskind-strong-coupling-explicit.md) is
+$$\Delta_{a,L}^{\rm KS}\ge
+\left(\frac83g^2-\frac{12P}{g^2}\right)\frac{\hbar c}{a},
+\qquad P=3(L/a)^3,$$
+on the stated periodic cubic lattices, with $L/a\ge4$. Its volume
+dependence prevents a uniform numerical threshold. The
+[Yarotsky application](strong-coupling-uniform-gap.md) and
+[perturbed target region](strong-coupling-target-box.md) retain
+existential volume-uniform statements. Their constants and perturbation
+tolerances do not transfer automatically to Wilson. These fixed-cutoff
+inputs leave arrival from the weak scaling trajectory and continuum
+reconstruction open.
 
 ## 3. The pion: preserve the symmetry that requires a soft channel
 
@@ -251,33 +296,100 @@ marks much denser than that window. A positive action cost is compatible
 with continuous time and with convergence of the polygon. It is also
 compatible with zero energy gap, as the quantum free particle illustrates.
 
-**Gap thesis (user, 2026-10-01).** The Newton goal is now stated as a
-gap in the space of theories: Newton's mechanics exists only with a
-positive scale and no zero branch is continuously reachable. The
-[reachability note](zero-branch-reachability.md) locates it. The
-Gaussian comparison above is immune: with Gaussian preparations and
-marks the record family is the classical Gaussian process plus kicks
-of variance $\hbar^2/(4\sigma_j^2)$ for every $\hbar$ (its Theorem 1).
-The gap lives in complete records of determinate swarms that fold:
-there, wherever streams cross, the record has an $\hbar\to0$ limit
-only if signed cross amplitudes cancel, while smeared records converge
-to the classical branch sum (Theorems 2--3), and in the anomaly record
-Hooke keeps the zero branch for all time while a Kepler swarm loses it
-once its windings overlap, at the lapping time of order $T^2/\Delta T$
-for a narrow swarm spanning more than half a turn (Theorem 4). The
-object discontinuous at zero, in the place the mass holds in §2, is
-the leading fringe visibility $2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)$ of
-crossing streams, fixed by the classical branch densities, the same
-along the family $\hbar>0$ and zero at $\hbar=0$; the dilation
-$\hbar\mapsto\mu\hbar$ makes it a contrast, not a spectral gap, and it
-generates no scale, where the Yang--Mills gap is a scale (refereed by
-GPT-6.1 Sol (Codex), 2026-10-01, corrections applied). The order of limits is
-the same as in §2: the record limit, resolution to zero, is taken
-before the constant's, as the continuum limit is taken before the
-coupling's. For the paper this moves Newton's gap argument from the
-Gaussian parabola to the Kepler swarm and makes its two premises,
-complete records and determinate preparations, the hypotheses to state
-beside coercivity in §2 and the soft channel in §3.
+### 4a. Coherence and the topology of the classical limit
+
+**Gap thesis (user, 2026-10-01).** The proposed necessity claim is
+that no classical zero branch is continuously reachable. The
+[reachability proof](zero-branch-reachability.md) establishes scoped
+tests of that claim. Its Theorem 1 gives a classical limit for Gaussian
+preparations and marks. For coherent preparations, Theorem 2's
+finite-path, nondegenerate stationary-phase setting gives a limit of
+complete records only when the signed cross amplitudes at every
+nonzero action difference cancel. Smeared records recover the classical
+branch sum. The inertial fold and Kepler anomaly examples retain the
+local crossing and winding hypotheses of Theorems 3--4; they establish
+no universal persistence at all later times.
+
+An independent coherence premise matters. Theorem 5 proves exactly
+for quadratic forces that an incoherent mixture of coherent packets,
+with both position and momentum widths tending to zero, recovers the
+same classical swarm's branch-weighted coordinate density at every
+fixed time and regular record value. Weak convergence also holds at
+critical values. Determinate classical launch data alone therefore
+do not select the coherent attachment. The fixed coherence-length
+construction of §3c supplies a nonvanishing crossing-stream contrast
+when coherence between the distinct launch points is retained as
+$\hbar\to0$; that retention is a preparation premise.
+
+The leading fringe visibility is a dimensionless contrast, not an
+energy threshold or a generated action unit. Complete-record,
+smearing, preparation and phase-constant limits must be specified
+separately. Their noncommutation does not identify those limits with
+the volume, cutoff and coupling limits in §2. A physical law that
+selects and preserves the required coherence, and calibration of a
+universal positive action scale, remain obligations.
+
+### 4b. Kepler completion and selection-dependent thresholds
+
+The [self-sufficiency proof](self-sufficiency-contrast.md) compares
+classical point-force incompleteness with a global non-relativistic
+Coulomb evolution at every $\hbar>0$. The proof writes the reduced
+phase constant as $h$; here it is $\hbar$, with the full Planck constant
+$h=2\pi\hbar$ as above. Classical collision does not exclude classical
+regularizations or establish that this quantum completion is necessary.
+
+For a fixed collision-free Kepler orbit on $[0,T]$ with minimum radius
+$\rho_{\min}>0$, fixed $0<\delta<\rho_{\min}$, and a real
+$V_\delta\in C_b^\infty(\mathbb R^3)$ equal to $-k/r$ outside
+$r<\delta$, its normalized Gaussian preparations have width
+$\ell_\hbar=\sqrt{\hbar L_*/P_*}$ for fixed $L_*,P_*>0$.
+The written localization proof gives
+$$\sup_{0\le t\le T}\|(V-V_\delta)U_\hbar^{(\delta)}(t)
+\varphi_\hbar\|_2=O(\hbar^{3/2})=o(\hbar).$$
+This estimate uses centered weighted Sobolev control and Hardy's
+inequality, rather than transferring a singular multiplier through
+an $L^2$ approximation. Separate moment estimates give position and
+momentum centroid errors $O(\sqrt\hbar)$. Constants depend on the
+preparation, $T$, derivative norms of $V_\delta$, and
+$(\rho_{\min}-\delta)/2$; no collision, growing-time or shrinking-core
+limit is established. Hepp supplies the smooth-potential comparison
+[@Hepp1974; passage, §2]; the additional estimates are in §5a of the
+maintained proof and are unrefereed.
+
+At finite $c$, the same proof's Proposition 2 gives the following
+point-source selections, for fixed $k,m,c>0$.
+The Dirac minimal operator starts on
+$C_c^\infty(\mathbb R^3\setminus\{0\},\mathbb C^4)$; the
+Klein--Gordon principal radial operator acts in $L^2((0,\infty),dr)$.
+
+| Model and premise | Admissible reduced phase constant |
+| --- | --- |
+| Dirac minimal operator: essential self-adjointness | $\hbar\in[2k/(\sqrt3c),\infty)$ |
+| Dirac: finite separate Coulomb potential energy on every domain vector | $\hbar\in(k/c,\infty)$ |
+| Dirac: distinguished extension with critical Schur-form/cutoff selection included | $\hbar\in[k/c,\infty)$ |
+| Dirac: additional self-adjoint boundary data permitted | Every $\hbar>0$ |
+| Klein--Gordon: strict usual energy coercivity and the cited charge-space evolution | $\hbar\in(2k/c,\infty)$ |
+| Klein--Gordon: principal radial Friedrichs selection | $\hbar\in[2k/c,\infty)$ for that operator; full critical evolution remains open |
+
+The read primary domain and evolution statements are identified in
+Proposition 2 [@EstebanLoss2007; passage, Definition 3 and Theorem 4;
+@EstebanLewinSere2019; passage, Theorems 1.1 and 1.11;
+@LangerNajmanTretter2008; passage, Example 8.3 and Theorems 8.5--8.6;
+@DerezinskiRichard2017; passage, §§2.2--2.3]. The critical Dirac
+domain uses the original closed Schur form; the maintained proof
+documents why the literal compact rewrite in arXiv v7, (1.32), is
+not used. Separate potential energy, form closure, a point-source
+limit and a boundary condition are different selection premises.
+Probability conservation motivates self-adjointness within Dirac's
+model but does not select one extension. At critical Klein--Gordon
+coupling the combined form still does not bound the multiplier needed
+for $V\partial_t\psi$ or $VQ_{1/2}^{-1/2}$.
+
+These intervals concern families of selected point-source theories.
+They are not the energy spectrum of one Hamiltonian, and their
+endpoints supply no universal measured value of $\hbar$. A necessity
+argument must justify its selection premises independently and exclude
+the alternative completions that those premises actually rule out.
 
 ## 5. Two elementary criteria for carrying spectral information to a limit
 
@@ -394,12 +506,17 @@ becomes a component of this synthesis. Since 2026-10-01 the Newton
 component is organized around the gap thesis of §4: the Kepler swarm as
 the carrier, the Gaussian parabola as the immune case in which the
 Planck paper's record bounds live, and the two premises, complete
-records and an $h$-independent coherence length between the launch
+records and an $\hbar$-independent coherence length between the launch
 points of crossing streams, stated beside coercivity and the soft
 channel. This working architecture does not designate either open goal
-as solved.
+as solved. The October 2 revision also integrates fixed-interval Kepler
+localization, separate first-moment control and selection-dependent
+relativistic domains. The opening states which positive-action and
+coherence premises are supplied, and distinguishes them from a
+necessary universal scale.
 
-The research order is deliberately bounded.
+The following bounded research order records the September 26 plan.
+Later status paragraphs qualify it; STATE supplies the current next unit.
 
 1. **Next constructive step: the $SU(3)$ small-volume bridge.** Develop
    the H3 estimate for the zero-mode Hamiltonian plus the even torus
@@ -462,13 +579,13 @@ remains open.
 
 ## 8. Consequence for STATE
 
-The destination becomes a joint paper on survival under refinement,
-with the Newton action necessity and pure $SU(3)$ continuum mass gap as
-the two main goals. Pion physics, at zero and nonzero quark mass, is the
-symmetry and limit-order benchmark requested by the user. The next
-bounded constructive task is the H3 small-volume bridge; the Newton
-necessity task retains the independent-premise requirement. The three
-review batches of the existing Planck paper are complete; attainment
-and its submission obligations remain open. This note is the live
-plan, and adds no claim of a four-dimensional construction or an
-independent derivation of $h>0$.
+The joint synthesis now incorporates the October 2 Kepler and selection
+results, the coherence countercase, and the corrected Wilson/KS scope.
+Both main goals remain open. Use STATE for the next proof unit rather
+than the dated H3-first plan: the live obligations are independent
+physical selection/coherence premises and the nonlinear gauge refinement
+and continuum estimates. Full critical Klein--Gordon evolution remains
+open at the singular-multiplier term identified in §4b. Earlier referee
+acceptances do not cover these new synthesis additions; this revision
+is source-based integration and self-review, without a new independent
+verification or a novelty claim.

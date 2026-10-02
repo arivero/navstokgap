@@ -1,13 +1,14 @@
 # navstokgap: what survives refinement, from Newton's action to the $SU(3)$ mass gap
 
-**Website:** <https://arivero.github.io/navstokgap/> lists every result by
-track, with the Markdown source and the typeset PDF for each. Rebuild it with
+**Website:** <https://arivero.github.io/navstokgap/> links every maintained
+scientific note by track; selected notes also have a typeset PDF. Rebuild it with
 `make site`.
 
 **For language models:** [`LLM.md`](LLM.md), also served at
-<https://arivero.github.io/navstokgap/llms.txt>, maps every claim to its
-status and proof, the caught errors, the open problems and the verified
-references.
+<https://arivero.github.io/navstokgap/llms.txt>, maps established results,
+their scope, known errors and verified prior art. The maintained notes
+carry later corrections; [the retrieval catalog](notes/index.md) helps
+find the relevant proof.
 
 **Goal (2026-09-26).** One paper comparing what survives refinement in
 Newton's action problem, in pure $SU(3)$ Yang--Mills theory, and in QCD
@@ -18,11 +19,15 @@ mass gap of pure $SU(3)$ Yang--Mills** in four dimensions. The pion is a
 benchmark for which symmetries a mechanism preserves. The
 [working note](notes/three-continuum-limits.md) sets out the comparison;
 [STATE](research/STATE.md) is the live queue.
+Both main proof goals remain open. Current Newton record bounds assume
+positive quantum action; classical-limit and completion results do not
+derive its necessity. The [provisional book](research/book-map.md) organizes
+the proofs and physical premises into proposed chapters.
 
 ## The organizing idea: local insertion laws
 
-A limit is built by inserting one new variable at a time and asking how
-the old observations and the dynamics are recovered.
+We compare laws for inserting one variable and eliminating it, then ask
+which estimates let those local laws be iterated into a physical limit.
 
 - [Inserting a point, subdividing a cell](notes/refinement-composition-and-limit.md)
   ([PDF](out/papers/refinement-composition-and-limit.pdf)): eliminating an
@@ -43,34 +48,27 @@ the old observations and the dynamics are recovered.
   why its lattice gap (Göpfert--Mack) disappears in the fixed-coupling
   continuum limit (Gross). The $SU(2)$ midpoint's curvature term is explicit.
 
-## Open problems, stated for the next agents
+## Current proof obligations
 
-Each item is a theorem-sized step with its hypotheses written in the
-linked note.
+STATE chooses the next bounded unit. The current obligations are:
 
-1. **The $SU(2)$ cube at order $t$.** Show that the $O(\lambda_3a)$
-   curvature and commutator terms of one parallel insertion reduce to a
-   coupling shift plus operators irrelevant on smooth fields (Hypothesis
-   P($\alpha$) of the series/parallel note, §4), then do $SU(3)$.
-2. **A full mid-plane and iteration.** Prove P($\alpha$) for a whole
-   non-abelian mid-plane by a small-field cluster expansion, stable under
-   iteration, giving three-dimensional ultraviolet control in the
-   insertion language; compare Balaban's 1985 ultraviolet stability.
-3. **The four-dimensional logarithm.** Extract the one-loop running
-   $g_0^{-2}(2a)=g_0^{-2}(a)-2b_0\log2$ from the three parallel insertions
-   of each directional halving.
-4. **From ultraviolet control to a gap.** On the fixed-$\lambda_3$
-   trajectory, prove $E=C_3\hbar c\lambda_3$ with $0<C_3<\infty$. The
-   compact $U(1)$ comparison shows the mechanism must come from the
-   non-abelian terms.
-5. **Newton's record.** A universal action unit already follows from
-   classical radiation thermodynamics, and back-action indeterminacy is
-   impossible with Liouville dynamics, product preparations and Bayesian
-   records ([unit and indeterminacy](notes/necessity-unit-and-indeterminacy.md)).
-   Find a physically justified premise that denies one of those three and
-   makes the unit a floor on records
-   ([the Planck paper](notes/planck-gap-paper.md) holds the conditional
-   bounds).
+1. **Newton's physical premise.** Justify the coherence or model-selection
+   premise used by a necessity argument independently of its desired
+   positive-action conclusion. Radiation, readout and continuity routes
+   have distinct hypotheses ([unit and indeterminacy](notes/necessity-unit-and-indeterminacy.md),
+   [reachability](notes/zero-branch-reachability.md),
+   [Kepler selections](notes/self-sufficiency-contrast.md)).
+2. **Nonlinear gauge refinement.** Extend the retained-barrier quadratic
+   moving-source input to the nonlinear centered estimates, physical
+   recoupling and stable iteration required by the
+   [mid-plane proof](notes/su2-midplane-small-field.md). Its SU(2) results
+   do not by themselves supply the SU(3) comparison.
+3. **Uniform matching and the physical spectrum.** Prove the depth-uniform
+   matching and remainder bounds in
+   [four-dimensional composition](notes/four-dimensional-composition.md),
+   and the blocking, mixing and reconstruction obligations in the
+   [mass-gap map](notes/mass-gap-position.md). Formal running, a fixed-box
+   bound and a continuum physical gap require different estimates.
 
 ## The Newton component
 
@@ -82,8 +80,17 @@ pairing Newton's sagitta $s$ with the impulse a record leaves undetermined
 and his impulse $J$ with the displacement; Newton's inscribed polygon
 differs from the parabola by the pure phase $F^2\sum_j\tau_j^3/(24m\hbar)$;
 and the *Opticks* holds a measured least length and a period-times-momentum
-invariant under refraction. The independent necessity of $\hbar>0$ is
-open problem 5.
+invariant under refraction.
+
+The [Kepler proof](notes/self-sufficiency-contrast.md) now controls the
+singular multiplier and both centroids on fixed collision-free intervals.
+Its relativistic thresholds depend on a selected point-source domain;
+the critical Klein--Gordon radial branch does not establish full evolution.
+The [coherence countercase](notes/zero-branch-reachability.md#4c-theorem-5-the-incoherent-attachment-reaches-zero)
+recovers classical swarm records from incoherent packets for quadratic
+forces. The paper and [joint synthesis](notes/three-continuum-limits.md)
+state these boundaries in their openings. The new October 2 derivations
+are unrefereed; independent positive-action necessity remains open.
 
 ## The Yang--Mills map
 
@@ -93,6 +100,14 @@ open problem 5.
 proved (finite-lattice and volume-uniform strong-coupling gaps), what is
 imported, and the open blocking and mixing estimates (H1, H2), with
 construction and nontriviality explicit.
+Wilson has explicit volume-uniform transfer bounds. The October 2
+[KS correction](notes/kogut-susskind-strong-coupling-explicit.md)
+withdraws its numerical uniform threshold; its surviving explicit bound
+depends on volume. The
+[existential uniform theorem](notes/strong-coupling-uniform-gap.md) and
+[perturbed target region](notes/strong-coupling-target-box.md) retain their
+own hypotheses. None of these fixed-cutoff results completes the continuum
+construction or transfers a threshold between the two operators.
 
 ## Earlier consolidated result
 
@@ -137,8 +152,8 @@ preserve earlier milestones; their old next-task wording is historical.
 
 ## Work and reproduce
 
-Start with [AGENTS.md](AGENTS.md) and [STATE](research/STATE.md); that is
-the whole required reading. Results are notes in `notes/`, built one at a
+Start with [AGENTS.md](AGENTS.md), which names the required reading;
+[STATE](research/STATE.md) gives the live queue. Results are notes in `notes/`, built one at a
 time with `make paper NOTE=<slug>`; `make check` verifies links, source
 companions, citation keys and checksums. Written proofs are the
 mathematical check; the repository prohibits numerical or symbolic

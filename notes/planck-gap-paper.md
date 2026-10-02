@@ -2,8 +2,9 @@
 
 **Abstract.** Newton reads a force off a trajectory by letting the
 sagitta and the area between the inertial tangent and the curve go to
-zero, keeping their ratio to the time. Once the comparison must be
-*recorded*, it has a floor. For every protocol of marks, made by any
+zero, keeping their ratio to the time. In the quantum instrument model
+with a supplied $\hbar>0$, a preparation-independent test of the two
+motions obeys a disturbance bound. For every protocol of marks, made by any
 instruments at any times, a test that decides at error probability
 $\epsilon$ between free motion and a constant force $F$ over a duration
 $\tau$, and must do so whatever the body's initial state, the state under
@@ -38,8 +39,13 @@ invariant under refraction. The proposition that would join them to a
 floor is that a record leaves an undetermined impulse, and what Newton
 printed entails its negation. The modern disturbance bounds assume
 quantum states, instruments and a positive canonical commutator scale;
-they do not derive that scale from Newton's axioms. The Kepler
-completion and relativistic selection questions are separated below.
+they do not derive that scale from Newton's axioms. On fixed
+collision-free intervals, the Kepler comparison recovers classical
+centroids from Coulomb evolution.
+The coherent-record argument requires coherence between launch points
+and a specified record topology; relativistic action thresholds require
+a selected point-source domain. These premises leave the independent
+necessity and universal calibration of the scale open.
 
 Draft, 2026-09-17; revised 2026-09-23 and 2026-10-02. Synthesis of the
 [mark-floor](newton-mark-floor.md),
@@ -96,8 +102,9 @@ Recording supplies one: in a Gaussian model of marks it is set by a
 single number $\kappa$ with the dimensions of action, sharply, in the
 combination $F^2\tau^3/m$ (§3), and quantum kinematics fixes
 $\kappa\ge\hbar/2$ because a mark's error and its recoil are conjugate
-(§4). For probes and instruments of every kind the floor survives as a
-bound on disturbance, paired with Newton's sagitta and impulse (§5), and
+(§4). Within that quantum model, a preparation-independent test with
+probes and instruments of every kind obeys a bound on disturbance,
+paired with Newton's sagitta and impulse (§5), and
 a phase that no preparation of the body can move carries the same quantity through
 Newton's inscribed polygon (§6). Newton's optics supplies both factors of
 $\kappa$, a phase whose rate is proportional to momentum, and the
@@ -1128,12 +1135,11 @@ Bures-angle speed limits for processes (Taddei et al. 2013), the
 position-spread form of force sensitivity (Tsang, Wiseman and Caves 2011),
 symmetry-based information--disturbance bounds of Wigner--Araki--Yanase
 type, and the Strang splitting behind Theorem 7. All these are cited at
-metadata level. The contribution here is universality over protocols and
-instruments with explicit constants, the sharp constant of the Gaussian
-form, the disturbance form of Theorem 6, the split accounting of §10, the
-phase identities of §6 read in Newton's and Archimedes' areas, and the
-identification of the premise. The inequality $F^2\tau^3\gtrsim m\hbar$
-itself is standard.
+metadata level. This paper collects the quantified protocol and instrument
+bounds, their explicit constants, the split accounting of §10, the phase
+identities of §6 read in Newton's and Archimedes' areas, and the stated
+physical premises. Literature priority for that combination has not been
+established. The inequality $F^2\tau^3\gtrsim m\hbar$ itself is standard.
 
 **The classical theorem belongs to a literature it does not cite.**
 Worst-case recovery of a linear functional from noisy linear data is optimal
@@ -1148,13 +1154,15 @@ theorems were derived without them.
 ## 10a. Kepler completion and the action-selection premise
 
 **Dated revision, 2026-10-02.** The marked-comparison theorems assume a
-positive action scale. To investigate whether motion itself requires
-one, the maintained
+positive action scale. Here $\hbar$ denotes the reduced phase constant,
+written $h$ in the self-sufficiency and reachability notes; the full
+Planck constant in this paper remains $h=2\pi\hbar$.
+To investigate whether motion itself requires a positive scale, the maintained
 [self-sufficiency proof](self-sufficiency-contrast.md) compares
 classical and quantum point-Coulomb dynamics. Classical radial inward
 or bound data collide in finite time and have no continuation under the
 original force field. The non-relativistic Coulomb Hamiltonian is
-self-adjoint on $H^2(\mathbb R^3)$ for every $h>0$, and its evolution
+self-adjoint on $H^2(\mathbb R^3)$ for every $\hbar>0$, and its evolution
 exists for all times. That comparison establishes an incomplete
 classical flow and one global completion. It does not exclude classical
 regularizations or other completions.
@@ -1164,14 +1172,14 @@ collision-free interval. For a fixed orbit with minimum radius
 $\rho_{\min}>0$, fix $0<\delta<\rho_{\min}$ and a real
 $V_\delta\in C_b^\infty$ equal to $-k/r$ outside $r<\delta$.
 For the normalized coherent preparations with width
-$\ell_h=\sqrt{hL_*/P_*}$, fixed $L_*,P_*>0$, centered weighted Sobolev
+$\ell_\hbar=\sqrt{\hbar L_*/P_*}$, fixed $L_*,P_*>0$, centered weighted Sobolev
 estimates and Hardy's inequality give
-$$\sup_{0\le t\le T}\|(V-V_\delta)U_h^{(\delta)}(t)\varphi_h\|_2
-=O(h^{3/2})=o(h).$$
+$$\sup_{0\le t\le T}\|(V-V_\delta)U_\hbar^{(\delta)}(t)\varphi_\hbar\|_2
+=O(\hbar^{3/2})=o(\hbar).$$
 Duhamel transfers the smooth-potential Gaussian approximation to the
 Coulomb evolution. Separate energy and position estimates give
-$\langle x\rangle=q_t+O(\sqrt h)$ and
-$\langle p\rangle=p_t+O(\sqrt h)$, uniformly on the fixed interval.
+$\langle x\rangle=q_t+O(\sqrt\hbar)$ and
+$\langle p\rangle=p_t+O(\sqrt\hbar)$, uniformly on the fixed interval.
 The constants depend on $T$, the preparation, derivatives of
 $V_\delta$ and $(\rho_{\min}-\delta)/2$. No collision, long-time or
 shrinking-$\delta$ limit follows. Hepp's theorem supplies the
@@ -1179,9 +1187,20 @@ smooth-potential limit [@Hepp1974; passage, §2]; the singular-multiplier
 and moment estimates are the October 2 written derivation in §5a of
 the maintained proof, which has not received independent verification.
 
-At finite $c$, Proposition 2 of that proof distinguishes the selection
-premises. For Dirac--Coulomb, essential self-adjointness gives
-$h\in[2k/(\sqrt3c),\infty)$; requiring finite separate potential energy
+The packet limit and the complete record of a coherent swarm test
+different preparations and observables. The
+[reachability proof](zero-branch-reachability.md), Theorem 5, shows
+exactly for quadratic forces that an incoherent mixture of shrinking
+coherent packets recovers Newton's branch-weighted coordinate density
+at each fixed time and regular record value. Its coherent-stream
+contrast instead requires coherence across launch points and a record
+that resolves the interference. The same classical swarm does not choose
+between those attachments. A physical rule that selects and preserves
+the required coherence remains an additional obligation.
+
+At finite $c$, Proposition 2 of the self-sufficiency proof distinguishes
+the selection premises. For Dirac--Coulomb, essential self-adjointness gives
+$\hbar\in[2k/(\sqrt3c),\infty)$; requiring finite separate potential energy
 gives $(k/c,\infty)$; a critical Schur-domain or the specified cutoff
 limit extends the latter to $[k/c,\infty)$
 [@EstebanLewinSere2019; passage, Theorems 1.1 and 1.11, arXiv v7].
@@ -1191,11 +1210,11 @@ The maintained proof records an angular-channel counterexample to
 the literal compact domain formula printed in arXiv v7, equation
 (1.32); that rewrite is not a proof premise.
 If extra boundary conditions are allowed, self-adjoint Dirac
-realizations exist at every $h>0$. For Klein--Gordon, strict coercivity
+realizations exist at every $\hbar>0$. For Klein--Gordon, strict coercivity
 in the usual energy topology and the cited charge-space construction
 give $(2k/c,\infty)$ [@LangerNajmanTretter2008; passage, Example 8.3,
 Theorems 8.5--8.6]. Its principal radial Friedrichs operator includes
-$h=2k/c$ with a no-log branch
+$\hbar=2k/c$ with a no-log branch
 [@DerezinskiRichard2017; passage, §2.3 and Theorem 5.5]. That radial
 selection is not a proof of full critical Klein--Gordon dynamics:
 the critical combined form does not control the singular multiplier
@@ -1207,7 +1226,7 @@ limit, Friedrichs closure and an energy topology are further premises.
 Before a selection-dependent threshold can establish action necessity,
 those premises must be justified independently of the desired gap.
 There is consequently no single unqualified admissible interval
-$[h_{\min},\infty)$ here, and no continuum Yang--Mills mass-gap result
+$[\hbar_{\min},\infty)$ here, and no continuum Yang--Mills mass-gap result
 follows from this mechanical comparison. The action threshold concerns
 a family of selected theories; a spectral gap concerns a fixed operator.
 
@@ -1264,10 +1283,10 @@ being optimal for the momentum term alone.
 
 ## 12. Consequence for STATE
 
-This is the synthesis the goal asked for: a floor on marked comparisons
-established with Newton-age arguments and their modern equivalents, with
-its evasions priced, in one document whose historical and technical
-halves are load-bearing for each other.
+This synthesis collects the conditional mark bounds, disturbance
+estimates and polygon phases together with Newton's source materials.
+The quantum results supply a positive canonical scale; their record
+costs do not derive that scale from Newton's axioms.
 The foundations content is §§3--6: the sharp Gaussian floor, the mark
 cost, the disturbance floor for every instrument and the phase that no
 preparation of the body moves. The history content is §§7--9, resting on the source
@@ -1277,7 +1296,7 @@ disturbance, what Newton printed entails its negation, and Newton's fits
 carry a phase whose rate is proportional to momentum and whose unit
 $\Lambda p$ is a refraction invariant. Section 11 records this draft's
 historical obligations and the proof status of the mathematical additions.
-The October 2 §10a separates the
-closed fixed-interval Kepler localization and moment problem from the
-open action-selection and necessity problem; the research queue is
-maintained in STATE and includes the continuum Yang--Mills obligations.
+The October 2 §10a separates the closed fixed-interval Kepler
+localization and first-moment problem from the open physical selection,
+coherence and action-necessity obligations. STATE maintains the research
+queue, including the continuum Yang--Mills obligations.
