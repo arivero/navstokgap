@@ -1,0 +1,87 @@
+# A massive Gaussian scalar benchmark for continuum OS reconstruction
+
+**Manuscript D — full working draft.** Author and affiliation details are intentionally omitted pending approval. This article isolates the continuum free-field and reconstruction end of the Gaussian benchmark. Its relationship to standard free-field literature requires a result-specific review before submission.
+
+## Abstract
+
+We present the continuum reconstruction associated with a massive complex Gaussian scalar field obtained as the scaling limit of a four-dimensional lattice resolvent. For Schwartz test functions, the lattice covariance converges to \(\hbar(-\Delta+m^2)^{-1}\), and Wick's rule gives convergence of all Schwinger functions. The limiting covariance is reflection positive; its Osterwalder–Schrader Hilbert space is the symmetric Fock space over two scalar components, with Hamiltonian \(d\Gamma(\hbar c\sqrt{-\Delta+m^2})\). The one-particle threshold is \(\hbar c m\). We record the test-function scaling and distinguish this supplied-mass free-field benchmark from an interaction-generated mass mechanism.
+
+**Keywords:** Gaussian field; reflection positivity; Osterwalder–Schrader reconstruction; massive scalar field; continuum limit.
+
+## 1. Introduction
+
+The massive free scalar field is an exactly controlled test for continuum limits and spectral reconstruction. The lattice covariance, reflection-positive continuum kernel, Fock-space reconstruction, and spectral threshold can be written explicitly. The purpose of this article is to provide a self-contained normalization map that can be paired with a separate finite-range blocking estimate.
+
+The mass parameter \(m>0\) is part of the covariance. The theorem consequently tests the reconstruction interface with a known scale. It does not derive the value of \(m\). Established OS and free-field results are the mathematical background; the article's useful role is to keep the lattice scaling, complex-field normalization, and threshold in one explicit statement.
+
+## 2. Lattice model and continuum covariance
+
+Let \(\varphi^1,\varphi^2\) be independent centered real Gaussian fields on \(a\mathbb Z^4\), each with covariance
+\[
+C_a=\hbar(-\Delta_{\rm lat}+(am)^2)^{-1}.
+\tag{1}
+\]
+Set \(\Phi=(\varphi^1+i\varphi^2)/\sqrt2\). The global symmetry \(\Phi\mapsto e^{i\alpha}\Phi\) is induced by rotations of the pair of real fields. For \(f\in\mathcal S(\mathbb R^4)\), use the scaled pairing
+\[
+\Phi_a(f)=a^3\sum_{n\in\mathbb Z^4}f(an)\Phi(n),
+\tag{2}
+\]
+with lattice normalization chosen so its smeared covariance has a finite continuum limit. For fixed Schwartz tests, the Fourier multiplier converges to
+\[
+C_m(f,g)=\hbar\int_{\mathbb R^4}
+\frac{\overline{\widehat f(p)}\widehat g(p)}{p_0^2+|\mathbf p|^2+m^2}
+\frac{d^4p}{(2\pi)^4}.
+\tag{3}
+\]
+The one-particle energy is
+\[
+E(\mathbf p)=\hbar c\sqrt{|\mathbf p|^2+m^2}.
+\tag{4}
+\]
+
+## 3. Reflection positivity
+
+Let \(\theta\) reflect Euclidean time and let \(f\) be supported at strictly positive times. With \(\omega_{\mathbf p}=\sqrt{|\mathbf p|^2+m^2}\), Fourier transform in space and integrate the Euclidean energy variable to obtain
+\[
+C_m(\theta f,f)=\hbar\int_{\mathbb R^3}\frac1{2\omega_{\mathbf p}}
+\left|\int_0^\infty e^{-\omega_{\mathbf p}t}
+\widehat f(t,\mathbf p)\,dt\right|^2
+\frac{d^3\mathbf p}{(2\pi)^3}\ge0.
+\tag{5}
+\]
+Gaussian positivity extends the positive form from linear fields to their polynomial and Weyl algebras. Translation and Euclidean rotation invariance follow from the rotationally invariant multiplier in (3).
+
+## 4. Reconstruction and spectrum
+
+The one-particle space is
+\[
+\mathcal H_1=L^2\!\left(\mathbb R^3,
+\frac{d^3\mathbf p}{(2\pi)^3 2\omega_{\mathbf p}}\right)\otimes\mathbb C^2,
+\tag{6}
+\]
+and the reconstructed Hilbert space is the symmetric Fock space \(\mathcal F_s(\mathcal H_1)\). Euclidean time translations reconstruct the Hamiltonian
+\[
+H=d\Gamma(\hbar c\,\omega_{\mathbf p}).
+\tag{7}
+\]
+
+**Theorem 1 (massive Gaussian reconstruction).** The lattice Schwinger functions converge on Schwartz tests to those of the Gaussian field (3). The limiting functional is reflection positive and reconstructs to the Fock representation (6)–(7). Its local field vectors are dense, and
+\[
+\operatorname{spec}(H)\cap(0,\hbar cm)=\varnothing,
+\qquad \inf(\operatorname{spec}(H)\setminus\{0\})=\hbar cm.
+\tag{8}
+\]
+
+*Proof.* Dominated convergence for the smeared covariance gives (3); Wick's rule yields convergence of every finite Gaussian moment. Reflection positivity is (5). OS completion gives the Fock space with the one-particle representation (6); second quantization gives (7). Every non-vacuum Fock sector contains at least one particle, whose energy is at least \(\hbar cm\). Conversely, one-particle wave packets with momentum supported in shrinking neighbourhoods of zero have energies tending to \(\hbar cm\). The local one-particle vectors generated by positive-time test functions are dense by the Laplace-transform representation in (5), and Wick products generate the symmetric Fock space. \(\square\)
+
+## 5. Place in multiscale arguments
+
+The theorem provides a continuum reference for a separate finite-range Gaussian blocking calculation. The continuum result supplies OS positivity, nontriviality, and a known threshold; the blocking result supplies an explicit scale decomposition and summability estimate. Their conjunction tests whether a proposed multiscale interface is compatible with an exactly solvable model.
+
+The model has global scalar \(U(1)\) symmetry, rather than local gauge symmetry, and its mass is supplied. Those choices are part of the benchmark definition. The theorem applies to the massive free field and should be compared with the standard OS reconstruction literature before any claim about the novelty of this presentation.
+
+## References for the submission pass
+
+- Osterwalder, K. and Schrader, R. (1973). “Axioms for Euclidean Green's functions.” *Communications in Mathematical Physics* 31, 83–112. DOI: 10.1007/BF01645738.
+- Osterwalder, K. and Schrader, R. (1975). “Axioms for Euclidean Green's functions II.” *Communications in Mathematical Physics* 42, 281–305.
+- Repository normalization/proof map: `notes/u1-gaussian-blocking-os-benchmark.md`, §§1 and 5.
