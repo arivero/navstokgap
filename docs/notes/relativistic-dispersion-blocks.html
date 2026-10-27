@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From quantum time slices to relativistic and Newtonian motion</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>From quantum time slices to relativistic and Newtonian motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/relativistic-dispersion-blocks.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/relativistic-dispersion-blocks.pdf">PDF</a></p><p><strong>Result, 2026-10-27.</strong> The finite-slice construction of
+<a href="quantum-blocks-construct-newton.html">Newton motion</a> extends
+to a nonquadratic kinetic energy <span
+class="math inline">\(T(P)\)</span> whenever <span
+class="math inline">\(T&#39;\)</span> and <span
+class="math inline">\(V&#39;\)</span> are globally Lipschitz. For the
+positive-energy relativistic dispersion <span
+class="math display">\[T_c(p)=\sqrt{m^2c^4+c^2p^2}-mc^2,\qquad
+m,c&gt;0,\tag{1}\]</span> the constants in the packet estimates can be
+chosen independently of <span class="math inline">\(c\)</span>. For
+fixed initial data and finite time, the finite-product coherent-state
+means obey <span class="math display">\[
+\sup_{0\le t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
+\le C_T\left(\sqrt\hbar+|\pi|+\frac1{c^2}\right).\tag{2}
+\]</span> Here <span class="math inline">\(z_{\rm N}\)</span> is the
+Newton solution for the same <span class="math inline">\(V\)</span>,
+<span class="math inline">\(\pi\)</span> is an arbitrary positive time
+partition and <span class="math inline">\(\gamma&gt;0\)</span> fixes a
+phase-space norm. Thus <span
+class="math inline">\(\hbar\downarrow0\)</span>, time refinement and
+<span class="math inline">\(c\to\infty\)</span> may be taken jointly at
+the level of these means. Explicit constants and a proof are given
+below.</p>
+<p>The exact Hamiltonians are self-adjoint and, at each fixed <span
+class="math inline">\(\hbar\)</span>, their nonrelativistic limit is
+strong resolvent, hence strong unitary, convergence. A separate
+spectral-Dirichlet calculation gives uniform position convergence
+through a free hard-wall bounce, even when <span
+class="math inline">\(\hbar\downarrow0\)</span> and <span
+class="math inline">\(c\to\infty\)</span> together. These are
+one-particle, positive-energy constructions with an external potential;
+they do not construct a Lorentz-covariant interacting field theory or
+supply a positive universal action constant.</p>
+<p>The coherent-state classical limit and relativistic Feynman–Kac
+representations have established precedents; this note assembles a
+specific joint bound and makes no claim of priority. In particular, <a
+href="https://doi.org/10.1016/0022-1236(90)90049-Q">Carmona–Masters–Simon</a>
+(abstract) treat relativistic Schrödinger operators through processes
+with stationary independent increments, and <a
+href="https://arxiv.org/abs/1109.5829">Hiroshima–Ichinose–Lőrinczi</a>
+(abstract) give a subordinate-process Feynman–Kac formula in a more
+general spin and magnetic setting.</p>
+<p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27).</strong>
+The written packet, domain, strong-resolvent and spectral-wall arguments
+were checked with corrections applied. This is not independent peer
+review of the result or of the imported operator and probability
+theorems.</p>
+<h2 id="a-general-dispersion-and-its-quantum-realization">1. A general
+dispersion and its quantum realization</h2>
+<p>Work on <span class="math inline">\(L^2(\mathbb R)\)</span> with
+<span class="math inline">\(Qx=x\)</span>, <span
+class="math inline">\(P=-i\hbar\,d/dx\)</span>, and <span
+class="math inline">\([Q,P]=i\hbar\)</span>. Assume for the full
+operator argument that real <span class="math inline">\(T,V\in
+C^\infty(\mathbb R)\)</span> are bounded below and that all derivatives
+of order at least two are bounded. Add constants so that <span
+class="math inline">\(T,V\ge0\)</span>, which affects only a phase.
+Write <span class="math display">\[L=\|V&#39;&#39;\|_\infty,\qquad
+M=\|T&#39;&#39;\|_\infty.\tag{3}\]</span> The finite-product estimates
+alone need only <span class="math inline">\(C^1\)</span> functions with
+globally Lipschitz derivatives; the smoother class makes the domain
+argument explicit. Define on Schwartz space <span
+class="math display">\[H_\hbar=T(P)+V(Q),\qquad
+U_\hbar(t)=e^{-itH_\hbar/\hbar}.\tag{4}\]</span></p>
+<p>To specify the domain, fix units for <span
+class="math inline">\(Q,P\)</span> and put <span
+class="math inline">\(N=1+Q^2+P^2\)</span>. Since <span
+class="math inline">\(T,V\)</span> grow at most quadratically, <span
+class="math inline">\(\|H_\hbar f\|\le C_\hbar\|Nf\|\)</span> on <span
+class="math inline">\(\mathcal S\)</span>. Moreover <span
+class="math display">\[
+[H_\hbar,N]
+=-i\hbar\{T&#39;(P)Q+QT&#39;(P)\}
+  +i\hbar\{V&#39;(Q)P+PV&#39;(Q)\},\tag{5}
+\]</span> and the linear growth of <span
+class="math inline">\(T&#39;,V&#39;\)</span> and boundedness of their
+derivatives give <span class="math inline">\(\|[H_\hbar,N]f\|\le
+C_\hbar\|Nf\|\)</span>. Therefore <span class="math display">\[
+|\langle H_\hbar f,N^2f\rangle
+      -\langle N^2f,H_\hbar f\rangle|
+\le2C_\hbar\langle f,N^2f\rangle.\tag{6}
+\]</span> Schwartz space is a core for <span
+class="math inline">\(N^2\)</span>. Nelson’s commutator theorem gives
+essential self-adjointness; the <span class="math inline">\(N^2\)</span>
+form estimate also makes the unitary group leave <span
+class="math inline">\(D(N)\)</span> invariant and act strongly
+continuously in its graph norm. For the cited energy-limited theorem use
+<span class="math inline">\(G=N^2-\inf\sigma(N^2)\ge0\)</span> and <span
+class="math inline">\(E_0=\inf\sigma(N^2)\)</span>; the relevant form
+domain remains <span class="math inline">\(D(N)\)</span> and (6) bounds
+<span class="math inline">\(G+E_0\)</span>. These are standard imported
+operator results: see <a
+href="https://link.springer.com/article/10.1007/s00220-025-05282-w">Energy-Limited
+Quantum Dynamics, Theorems 3.7–3.8 and Corollary B.2</a> (statements and
+hypotheses read). No nonlocal analogue of the local integration-by-parts
+graph identity from the earlier proof is assumed.</p>
+<p>For <span class="math inline">\(s\ge0\)</span> put <span
+class="math display">\[K_s=e^{-isV(Q)/\hbar},\quad
+D_s=e^{-isT(P)/\hbar},
+\quad S_s=D_sK_s.\tag{7}\]</span> On <span
+class="math inline">\(D(N)\)</span>, <span
+class="math inline">\((S_s-I)f/s\to-iH_\hbar f/\hbar\)</span> and the
+difference quotients are bounded from the <span
+class="math inline">\(N\)</span> graph domain to <span
+class="math inline">\(L^2\)</span>. The exact orbit of <span
+class="math inline">\(f\in D(N)\)</span> is compact in that graph norm
+on <span class="math inline">\([0,T]\)</span>; a telescoping sum
+therefore proves that products of <span
+class="math inline">\(S_s\)</span> over arbitrary positive partitions
+converge strongly to <span class="math inline">\(U_\hbar(t)\)</span> as
+the mesh vanishes. Density and unitarity extend the result to every
+<span class="math inline">\(L^2\)</span> state. This is a fixed-<span
+class="math inline">\(\hbar\)</span> assertion, not uniform
+operator-norm control as <span
+class="math inline">\(\hbar\downarrow0\)</span> or <span
+class="math inline">\(c\to\infty\)</span>.</p>
+<h2 id="the-finite-slice-spread-and-mean-bounds">2. The finite-slice
+spread and mean bounds</h2>
+<p>Choose <span class="math inline">\(\gamma&gt;0\)</span>, <span
+class="math inline">\(h_0&gt;0\)</span>, <span
+class="math inline">\(0&lt;\hbar\le h_0\)</span>, and a coherent
+Gaussian with means <span class="math inline">\((q_0,p_0)\)</span> and
+initial standard deviations <span
+class="math display">\[\operatorname{sd}Q=\sqrt{\gamma\hbar/2},\qquad
+\operatorname{sd}P=\sqrt{\hbar/(2\gamma)}.\tag{8}\]</span> These are the
+usual coherent widths for <span
+class="math inline">\(\gamma=1/(m\omega)\)</span>. Use <span
+class="math display">\[
+\|(q,p)\|_\gamma=|q|+\gamma|p|,\quad
+C=\sqrt{2\gamma},\quad
+\beta=M/\gamma+\gamma L,\quad
+a=\max(M/\gamma,\gamma L).\tag{9}
+\]</span> When <span class="math inline">\(a=0\)</span>, interpret <span
+class="math inline">\((e^{aT}-1)/a\)</span> below as <span
+class="math inline">\(T\)</span>.</p>
+<p>For the state after each complete cell define <span
+class="math inline">\(W_j=\operatorname{sd}Q_j+\gamma\operatorname{sd}P_j\)</span>.
+The exact finite-factor identities on Schwartz space are <span
+class="math display">\[K_s^*PK_s=P-sV&#39;(Q),\qquad
+D_s^*QD_s=Q+sT&#39;(P).\tag{10}\]</span> Since the standard deviation of
+a Lipschitz function is at most its Lipschitz constant times the
+original standard deviation, <span class="math display">\[
+W_{j+1}\le(1+sM/\gamma)(1+s\gamma L)W_j,\qquad
+W_j\le C\sqrt\hbar\,e^{\beta T}.\tag{11}
+\]</span> The same uniform bound covers the intermediate post-kick
+state. The state need not remain Gaussian.</p>
+<p>Let <span class="math inline">\(q_j,p_j\)</span> be the packet means.
+The exact update reads <span class="math display">\[
+p_{j+1}=p_j-s\langle V&#39;(Q)\rangle_j,\qquad
+q_{j+1}=q_j+s\langle T&#39;(P)\rangle_{j,\mathrm{kick}}.\tag{12}
+\]</span> Introduce constants independent of the partition and of <span
+class="math inline">\(0&lt;\hbar\le h_0\)</span>: <span
+class="math display">\[
+\begin{gathered}
+S=C\sqrt{h_0}\,e^{\beta T},\qquad
+\bar f=|V&#39;(0)|+LS,\qquad
+\bar u=|T&#39;(0)|+(M/\gamma)S,\\
+B=\gamma\bar f+\bar u,\qquad
+R=e^{\beta T}(\|(q_0,p_0)\|_\gamma+TB),\\
+F_T=|V&#39;(0)|+L(R+S),\qquad
+U_T=|T&#39;(0)|+(M/\gamma)(R+S).
+\end{gathered}\tag{13}
+\]</span> Equation (12) and (11) give <span class="math display">\[
+\|(q_{j+1},p_{j+1})\|_\gamma
+\le e^{\beta s}\|(q_j,p_j)\|_\gamma+sBe^{\beta s};
+\tag{14}
+\]</span> hence all vertex means have norm at most <span
+class="math inline">\(R\)</span>, <span class="math inline">\(|\langle
+V&#39;(Q)\rangle_j|\le F_T\)</span>, and <span
+class="math inline">\(|\langle T&#39;(P)\rangle_{j,\mathrm{kick}}|\le
+U_T\)</span>.</p>
+<p>Linearly interpolate the means and define <span
+class="math inline">\(\mathcal F_T(q,p)=(T&#39;(p),-V&#39;(q))\)</span>.
+Its Lipschitz constant in <span
+class="math inline">\(\|\cdot\|_\gamma\)</span> is at most <span
+class="math inline">\(a\)</span>. On every cell, <span
+class="math display">\[
+\|\dot z_{\hbar,\pi}-\mathcal F_T(z_{\hbar,\pi})\|_\gamma
+\le C_\delta|\pi|+C_h\sqrt\hbar,\qquad
+C_\delta=MF_T+\gamma LU_T,\quad
+C_h=\beta C e^{\beta T}.\tag{15}
+\]</span> For example, the position residual is bounded by <span
+class="math inline">\(M\operatorname{sd}P_{\rm
+kick}+M|p_{j+1}-p(t)|\)</span>; the momentum residual is bounded by
+<span
+class="math inline">\(L\operatorname{sd}Q_j+L|q_j-q(t)|\)</span>.</p>
+<p>Comparing two meshes and two positive values <span
+class="math inline">\(\hbar,k\)</span>, integration and Gronwall give
+<span class="math display">\[
+\sup_{t\le T}\|z_{\hbar,\pi}(t)-z_{k,\sigma}(t)\|_\gamma
+\le G_T\{C_\delta(|\pi|+|\sigma|)
+           +C_h(\sqrt\hbar+\sqrt k)\},\quad
+G_T=\frac{e^{aT}-1}{a}.\tag{16}
+\]</span> The interpolants are therefore Cauchy as both scales tend to
+zero, and their limit solves uniquely <span class="math display">\[\dot
+q=T&#39;(p),\qquad \dot p=-V&#39;(q).\tag{17}\]</span> No solution is
+assumed in defining that limit. At fixed <span
+class="math inline">\(\hbar\)</span> the strong product limit plus the
+uniform second-moment bounds recovers the exact unitary first moments:
+bounded spectral truncations pass by strong convergence and the tails
+are bounded by the second moments. Thus (15)–(16) also control the exact
+quantum means after the mesh is removed.</p>
+<h2 id="relativistic-dispersion-and-the-newton-limit">3. Relativistic
+dispersion and the Newton limit</h2>
+<p>For (1), <span class="math display">\[
+T_c&#39;(p)=\frac{p}{m\sqrt{1+p^2/(m^2c^2)}},\qquad
+0&lt;T_c&#39;&#39;(p)=\frac1m
+              \left(1+\frac{p^2}{m^2c^2}\right)^{-3/2}
+             \le\frac1m.\tag{18}
+\]</span> All hypotheses above hold for every <span
+class="math inline">\(c&gt;0\)</span>, with common <span
+class="math inline">\(M=1/m\)</span> and <span
+class="math inline">\(T_c&#39;(0)=0\)</span>. In particular, (11)–(16)
+have constants independent of <span class="math inline">\(c\)</span>.
+The finite-<span class="math inline">\(c\)</span> classical solution
+<span class="math inline">\(z_c\)</span> from (17) is the
+positive-energy relativistic particle with <span
+class="math display">\[\dot q=\frac{pc^2}{\sqrt{m^2c^4+c^2p^2}},\qquad
+\dot p=-V&#39;(q),\qquad |\dot q|&lt;c.\tag{19}\]</span> The external
+potential is specified in a chosen frame; (19) does not assert full
+interacting Poincaré covariance.</p>
+<p>The elementary inequality <span
+class="math inline">\(1-(1+x)^{-1/2}\le x/2\)</span> for <span
+class="math inline">\(x\ge0\)</span> gives <span
+class="math display">\[|T_c&#39;(p)-p/m|\le\frac{|p|^3}{2m^3c^2}.\tag{20}\]</span>
+The Newton trajectory is already constructed by (17) with <span
+class="math inline">\(T_\infty(p)=p^2/(2m)\)</span>. The common bound
+(13) gives <span class="math inline">\(|p_{\rm N}(t)|\le
+R/\gamma\)</span>. Comparing its vector field with (19) and applying
+Gronwall, <span class="math display">\[
+\sup_{t\le T}\|z_c(t)-z_{\rm N}(t)\|_\gamma
+\le G_T\frac{(R/\gamma)^3}{2m^3c^2}.\tag{21}
+\]</span> Together with (15)–(16), <span class="math display">\[
+\sup_{t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
+\le G_T\!\left[
+C_\delta|\pi|+C_h\sqrt\hbar
++\frac{(R/\gamma)^3}{2m^3c^2}\right].\tag{22}
+\]</span> This proves (2). The bound is for fixed initial phase-space
+data and finite <span class="math inline">\(T\)</span>; it is not
+uniform in momenta of order <span class="math inline">\(mc\)</span>.</p>
+<p>For any compactly supported smooth phase-space symbol <span
+class="math inline">\(b\)</span>, the Weyl Fourier argument in the <a
+href="groupoid-quantum-newton-states.html">groupoid companion</a>
+converts the spread and mean bounds into <span class="math display">\[
+|\langle\operatorname{Op}_\hbar^W(b)\rangle_j-b(z_{\rm N}(t_j))|
+\le I_{b,\gamma}\!\left[
+Ce^{\beta T}\sqrt\hbar+G_T\!\left(
+C_\delta|\pi|+C_h\sqrt\hbar
++\frac{(R/\gamma)^3}{2m^3c^2}\right)\right],\tag{23}
+\]</span> where <span
+class="math display">\[I_{b,\gamma}=(2\pi)^{-2}\int|\widehat
+b(\xi,\eta)|
+            (|\xi|+|\eta|/\gamma)\,d\xi d\eta.\tag{24}\]</span> Thus a
+chosen diagonal schedule <span
+class="math inline">\(\hbar=S_*\epsilon\)</span>, <span
+class="math inline">\(|\pi|\le T_*\epsilon^\alpha\)</span> and <span
+class="math inline">\(c\ge c_*\epsilon^{-\kappa}\)</span>, with <span
+class="math inline">\(\alpha,\kappa&gt;0\)</span>, gives <span
+class="math inline">\(O(\epsilon^{1/2}+\epsilon^\alpha+\epsilon^{2\kappa})\)</span>
+for those observables at partition vertices. The groupoid deformation,
+mesh and <span class="math inline">\(c\)</span> remain distinct until
+this schedule is chosen.</p>
+<h2 id="fixed-quantum-action-and-the-nonrelativistic-limit">4. Fixed
+quantum action and the nonrelativistic limit</h2>
+<p>For fixed <span class="math inline">\(\hbar&gt;0\)</span>, define the
+nonnegative closed forms <span class="math display">\[
+q_c[\psi]=\|T_c(P)^{1/2}\psi\|^2
+            +\|V(Q)^{1/2}\psi\|^2,\qquad
+D(q_c)=D(T_c(P)^{1/2})\cap D(V(Q)^{1/2}).\tag{25}
+\]</span> The functional calculus expression <span
+class="math display">\[T_c(p)=\frac{p^2/m}{1+\sqrt{1+p^2/(m^2c^2)}}\tag{26}\]</span>
+shows that <span class="math inline">\(T_c(p)\)</span> increases
+pointwise to <span class="math inline">\(p^2/(2m)\)</span> as <span
+class="math inline">\(c\to\infty\)</span>. The increasing limit of the
+forms has domain <span class="math inline">\(D(P)\cap D(\sqrt
+V)\)</span> and equals the nonrelativistic form. The monotone
+convergence theorem for closed forms therefore yields <span
+class="math display">\[H_{\hbar,c}\xrightarrow[c\to\infty]{\rm strong\
+resolvent}
+H_{\hbar,\infty}=P^2/(2m)+V(Q).\tag{27}\]</span> See <a
+href="https://link.springer.com/article/10.1007/s13373-018-0118-0">Simon,
+“Tosio Kato’s work,” Theorem 10.12</a> (theorem statement read).
+Standard spectral convergence then gives strong convergence of the
+corresponding unitary groups, uniformly for <span
+class="math inline">\(t\)</span> in compact intervals, for each fixed
+<span class="math inline">\(\hbar\)</span>. This is not an operator-norm
+or uniform-in-<span class="math inline">\(\hbar\)</span> claim.</p>
+<p>In Euclidean time the relativistic kinetic semigroup is positive, but
+its reference process is no longer Brownian in physical time. Indeed,
+for <span class="math inline">\(a,b&gt;0\)</span> the subordination
+identity is <span class="math display">\[e^{-a\sqrt b}=\frac
+a{2\sqrt\pi}\int_0^\infty
+s^{-3/2}e^{-a^2/(4s)}e^{-bs}\,ds.\tag{28}\]</span> With <span
+class="math inline">\(a=tc/\hbar\)</span> and <span
+class="math inline">\(b=p^2+m^2c^2\)</span>, multiply the right side of
+(28) by <span class="math inline">\(e^{tmc^2/\hbar}\)</span> to obtain
+<span class="math inline">\(e^{-tT_c(P)/\hbar}\)</span> as a positive
+mixture of Gaussian heat operators. Setting <span
+class="math inline">\(p=0\)</span> shows that the mixing measure has
+unit mass. The associated subordinate-Brownian process has jumps.
+Feynman–Kac with <span class="math inline">\(V\)</span> is an additional
+standard construction, not a claim that the Gaussian midpoint variance
+or its large-field bound from the preceding note remains unchanged. For
+a general <span class="math inline">\(T\)</span> with bounded <span
+class="math inline">\(T&#39;&#39;\)</span>, positivity of the Euclidean
+semigroup need not hold.</p>
+<h2 id="a-relativistic-spectral-wall">5. A relativistic spectral
+wall</h2>
+<p>The hard-wall model has to be specified again because <span
+class="math inline">\(T_c(P)\)</span> is nonlocal. Let <span
+class="math inline">\(\Delta_D\)</span> be the Dirichlet Laplacian on
+<span class="math inline">\((0,\infty)\)</span> and define the
+<strong>spectral</strong> operator <span
+class="math display">\[H_{\hbar,c}^{D}
+=T_c\!\left(\sqrt{-\hbar^2\Delta_D}\right).\tag{29}\]</span> It is
+self-adjoint. Under odd extension it is unitarily equivalent to <span
+class="math inline">\(T_c(P)\)</span> restricted to the odd subspace,
+since <span class="math inline">\(T_c\)</span> is even.</p>
+<p>Use the odd coherent state of <a
+href="newton-dimock-balaban-guide.html">the didactic guide, equation
+(20)</a>. Write its overlap as <span
+class="math inline">\(\gamma_\hbar\)</span>, its initial full-line
+widths as <span class="math inline">\(\sigma_q,\sigma_p\)</span>, and
+put <span class="math display">\[a_c(t)=q_0+tT_c&#39;(p_0),\qquad
+q_0&gt;0,\quad p_0&lt;0.\tag{30}\]</span> The full-line Heisenberg
+identity is <span class="math inline">\(Q(t)=Q+tT_c&#39;(P)\)</span>.
+For the evolved Gaussian <span
+class="math inline">\(g_{\hbar,t}\)</span>, <span
+class="math display">\[
+\|(Q-a_c(t))g_{\hbar,t}\|
+\le\sigma_q+|t|\,\|[T_c&#39;(P)-T_c&#39;(p_0)]g_\hbar\|
+\le\sigma_q+\frac{|t|}{m}\sigma_p.\tag{31}
+\]</span> No preservation of Gaussian shape is needed. Apply <span
+class="math inline">\(||x|-|a_c||\le|x-a_c|\)</span> to each of the two
+terms in the odd state. The half-line position expectation then
+satisfies <span class="math display">\[
+\left|\langle Q\rangle_{\hbar,c}^{D}(t)-|a_c(t)|\right|
+\le\sqrt{\frac2{1-\gamma_\hbar}}
+             \left(\sigma_q+\frac{|t|}{m}\sigma_p\right).\tag{32}
+\]</span> Equation (20) also gives, uniformly for <span
+class="math inline">\(|t|\le T\)</span>, <span class="math display">\[
+\left|\langle Q\rangle_{\hbar,c}^{D}(t)
+          -\left|q_0+\frac{p_0t}{m}\right|\right|
+\le\sqrt{\frac2{1-\gamma_\hbar}}
+             \left(\sigma_q+\frac{T}{m}\sigma_p\right)
+      +\frac{T|p_0|^3}{2m^3c^2}.\tag{33}
+\]</span> The two classical impact times generally differ, but (33) is
+uniform through both. At fixed <span class="math inline">\(c\)</span>,
+(32) gives the corresponding classical relativistic elastic bounce; at
+fixed <span class="math inline">\(q_0,p_0,T\)</span>, (33) is <span
+class="math inline">\(O(\sqrt\hbar+c^{-2})\)</span> as the two limits
+are taken in any order.</p>
+<p>The spectral operator in (29) subordinates the <strong>killed
+Brownian</strong> semigroup. It is distinct from first subordinating
+full-line Brownian motion and then killing the jump process when it
+exits the half-line. The latter gives a different nonlocal boundary
+problem; the odd extension above does not prove its hard-wall limit. See
+<a href="https://arxiv.org/abs/1610.00872">Kim–Song–Vondraček</a>
+(introduction read) for this order-of-operations distinction. Nor is the
+local Schrödinger current in the guide automatically the probability
+current for this nonlocal Hamiltonian.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>For the positive-energy one-particle dispersion, bounded curvature
+closes the quantum packet Cauchy argument with constants uniform in
+<span class="math inline">\(c\)</span>. The fixed-<span
+class="math inline">\(\hbar\)</span> form limit and the joint observable
+limit now connect relativistic and nonrelativistic mechanics in the same
+framework, with a separate spectral hard-wall example. The action unit
+is supplied, and no new Yang–Mills or positive-action-necessity
+conclusion follows.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

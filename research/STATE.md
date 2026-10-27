@@ -14,8 +14,8 @@ reviews. This page carries the current direction.
 standard quartic vacuum, reflection-positive bounded-cylinder process,
 non-Gaussianity and continuum refinement, and connects the existing
 $SU(2)$ matrix gap to its gauge-singlet sector. The Newton action
-constant is supplied. The central-limit calculation in **Next** remains
-unstarted; the four-dimensional gauge construction remains deferred.
+constant is supplied. The central-limit calculation is addressed
+conditionally in **Next**; the four-dimensional gauge construction remains deferred.
 
 **User-directed quantum-to-Newton construction, 2026-10-27.** The
 [multiscale proof](../notes/quantum-blocks-construct-newton.md) builds
@@ -34,6 +34,9 @@ now gives source-specific pedagogy, classical magnetic continuation,
 and a Dirichlet hard-wall packet limit through an elastic bounce. Its
 momentum-current estimate excludes an impact layer. The wall calculation
 is separate from the whole-line groupoid and scalar-potential theorem.
+The [relativistic extension](../notes/relativistic-dispersion-blocks.md)
+adds a joint positive-energy and Newton limit, plus a separate spectral
+Dirichlet hard-wall construction.
 
 The [classical-to-quantum existence conjecture](../notes/classical-quantum-existence-conjecture.md)
 now distinguishes the universal claim from the established common-hypothesis
@@ -146,8 +149,10 @@ gives a uniform positive action bound conditional on a calibrated response
 ceiling and the stated branch law, with classical memory and thermal
 countermodels explicit. The [bounded-cusp test](../notes/newton-cusp-preparation-floor.md)
 turns a full point-state merger into a positive covariance action floor
-under weak preparation closure, canonical covariance and reversible Newton
-compatibility; a classical density-ceiling completion meets these premises.
+under weak preparation closure, canonical covariance and reversible
+point-trajectory compatibility; this premise constrains point states
+only if admitted. A classical density-ceiling completion meets these
+premises using the actual almost-everywhere flow.
 The [continuity calculation](../notes/newton-continuity-time-scales.md)
 sharpens the force criterion: logarithmic unbounded slopes retain unique
 motion through exponent two; zero-energy annulus times, not slope alone,
@@ -157,12 +162,15 @@ open. The new positive floor is conditional on preparation closure and
 force compatibility; its quantum identification, universality and
 preservation by physical records have not been proved. Targeted Terra
 checks cover the stated written calculations, not those physical premises.
-**Next bounded calculation (not yet established):** test whether independent
-copies, joint canonical averaging, forgetting unused copies and weak
-closure force a Gaussian sector by a central-limit argument. Then compare
-its recording restrictions with [Theorem F and its nonlinear-generator
-counterexample](../notes/newton-indeterminacy-routes.md#4-a-constructive-replacement-a-statistical-speed-theorem).
-Composition alone must not be represented as an identification with $\hbar$.
+The [central-limit calculation](../notes/central-limit-canonical-gaussian-sector.md)
+shows that independent copies, canonical copy-index mixers, discarding
+outputs and either weak or $W_2$ closure force an admissible Gaussian
+with each admissible covariance; with a positive infimum they determine
+the entire Gaussian sector. The earlier density-ceiling witness fails
+even a two-copy mixer. A supplied entropy floor instead gives a classical
+model with actual cusp transport, copy-index mixing and $W_2$ closure,
+but not ordinary weak closure. Record closure, an independently selected
+scale and identification with $\hbar$ remain open.
 The user subsequently authorized a bounded [Alpoge--Sussman peek](../notes/alpoge-balaban-newton-peek.md)
 after the checkpoint push. Its finite fourth-response calculation and
 zero-action reflection-positivity control are recorded; no YM proof was

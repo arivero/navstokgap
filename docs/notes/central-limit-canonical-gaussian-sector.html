@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canonical averaging and the Gaussian sector of Newton preparations</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Canonical averaging and the Gaussian sector of Newton
+preparations</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/central-limit-canonical-gaussian-sector.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/central-limit-canonical-gaussian-sector.pdf">PDF</a></p><p><strong>Result, 2026-10-27; conditional construction.</strong>
+Independent copies, canonical mixing, forgetting unused copies and
+either weak or <span class="math inline">\(W_2\)</span>-closure do force
+Gaussian preparations: every admissible finite-covariance state has an
+admissible Gaussian with the same mean and covariance. If, in addition,
+the hypotheses of the existing <a
+href="newton-cusp-preparation-floor.html">cusp preparation theorem</a>
+hold, the one-pair Gaussian sector is exactly <span
+class="math display">\[
+\mathcal G_{\kappa_*}
+=\{\mathcal N(\mu,\Sigma):\ \det\Sigma\ge\kappa_*^2\},
+\qquad \kappa_*&gt;0. \tag{1}
+\]</span> The infimum <span class="math inline">\(\kappa_*\)</span> of
+covariance actions is attained by a Gaussian. Every Gaussian above the
+floor can be built from two independently prepared squeezed copies of a
+floor state and a canonical mixer.</p>
+<p>These conclusions are conditional on the preparation and copying
+premises stated below. The mathematical Gaussian covariance condition is
+the same shape as a quantum uncertainty condition, but its
+identification with <span class="math inline">\(\hbar/2\)</span> is
+<strong>not</strong> proved. The existing bounded-density cusp model
+fails even the two-copy mixer test. An entropy-floor class below
+realizes actual nonlinear cusp transport and the mixer rules with <span
+class="math inline">\(W_2\)</span>-closure, but it is not weakly closed.
+Without cusp compatibility, copy/mixing closure allows a zero-floor
+Gaussian theory. Selective recordings are a separate closure
+question.</p>
+<p>The central limit theorem and Gaussian symplectic covariance are
+standard. In quantum optics, the known Cushen–Hudson central limit has
+precisely an <span class="math inline">\(n\)</span>-splitter
+interpretation; see <a
+href="https://arxiv.org/abs/1912.06129">Becker–Datta–Lami–Rouzé</a>
+(abstract and introduction). The present calculation is a classical
+probability argument, not that quantum theorem. The restricted
+Liouville/Gaussian comparison is also established in <a
+href="https://arxiv.org/abs/1111.5057">Bartlett–Rudolph–Spekkens</a>
+(abstract). The purpose here is to resolve the conditional preparation
+question posed in <a
+href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>,
+without claiming literature priority.</p>
+<h2 id="the-premises-and-the-action-units">1. The premises and the
+action units</h2>
+<p>A one-pair preparation is a probability measure on <span
+class="math inline">\((q,p)\in\mathbb R^2\)</span>. Let <span
+class="math inline">\(\mathcal S_1\)</span> be nonempty and contain at
+least one state with finite covariance. Assume:</p>
+<ol type="1">
+<li><strong>Affine canonical covariance.</strong> Every affine
+symplectic image of a member of <span class="math inline">\(\mathcal
+S_1\)</span> belongs to <span class="math inline">\(\mathcal
+S_1\)</span>.</li>
+<li><strong>A closure rule.</strong> Either every probability-valued
+weak limit of members belongs to <span class="math inline">\(\mathcal
+S_1\)</span>, or every <span class="math inline">\(W_2\)</span> limit in
+the finite-second-moment space <span class="math inline">\(\mathcal
+P_2\)</span> of members of <span class="math inline">\(\mathcal
+S_1\cap\mathcal P_2\)</span> belongs to <span
+class="math inline">\(\mathcal S_1\)</span>. The second condition is
+weaker: <span class="math inline">\(W_2\)</span> convergence implies
+weak convergence, but not conversely.</li>
+<li><strong>Independent copies and canonical mixing.</strong> For every
+finite collection of admissible one-pair states, independent product
+preparation, a joint canonical transformation of the form described
+below, and forgetting all but one output pair produce a member of <span
+class="math inline">\(\mathcal S_1\)</span>. In particular this holds
+for arbitrarily many identical copies and for the two-copy <span
+class="math inline">\(50{:}50\)</span> mixer.</li>
+</ol>
+<p>No selective measurement or conditioning is included in item 3. The
+unretained output pairs may be kept as a full record before taking the
+marginal; the joint transformation is invertible.</p>
+<p>Choose fixed units <span class="math inline">\(L_0,P_0&gt;0\)</span>
+and let <span class="math display">\[x=q/L_0,\quad y=p/P_0,\quad
+S_0=L_0P_0.\tag{2}\]</span> Write <span
+class="math inline">\(z=(x,y)\)</span>, <span
+class="math inline">\(C=\operatorname{Cov}(z)\)</span>, and <span
+class="math inline">\(\Omega=\begin{pmatrix}0&amp;1\\-1&amp;0\end{pmatrix}\)</span>.
+A real <span class="math inline">\(2\times2\)</span> map in the
+calibrated coordinates is canonical when its determinant is one. The
+physical covariance action is <span
+class="math display">\[\kappa(\mu)=\sqrt{\det\operatorname{Cov}(q,p)}
+             =S_0\sqrt{\det C}.\tag{3}\]</span> Translations and
+determinant-one maps do not change <span
+class="math inline">\(\kappa\)</span>.</p>
+<h2 id="a-central-limit-implemented-by-canonical-transformations">2. A
+central limit implemented by canonical transformations</h2>
+<p>Let <span class="math inline">\(\mu\in\mathcal S_1\)</span> have mean
+<span class="math inline">\(m\)</span> and finite covariance <span
+class="math inline">\(C\)</span>. Prepare <span
+class="math inline">\(n\)</span> independent copies <span
+class="math inline">\(Z_i=(x_i,y_i)\)</span> with this law. Choose a
+real orthogonal matrix <span class="math inline">\(O_n\)</span> whose
+first row is <span class="math inline">\((1,\ldots,1)/\sqrt n\)</span>
+and transform <span class="math display">\[x&#39;=O_n x,\qquad
+y&#39;=O_n y.\tag{4}\]</span> This is canonical: it preserves the
+symplectic form because <span class="math inline">\(O_nO_n^T=I\)</span>.
+The first output pair is <span
+class="math display">\[Z&#39;_1=\frac1{\sqrt n}\sum_{j=1}^n
+Z_j.\tag{5}\]</span> Translate this pair by <span
+class="math inline">\((1-\sqrt n)m\)</span>, and forget the others. By
+the premises its law belongs to <span class="math inline">\(\mathcal
+S_1\)</span>. Its characteristic function is <span
+class="math display">\[
+\left[e^{-ik\cdot m/\sqrt n}\,
+       \widehat\mu(k/\sqrt n)\right]^n e^{ik\cdot m}.\tag{6}
+\]</span> Finite covariance gives the expansion <span
+class="math inline">\(e^{-ik\cdot m/\sqrt n}\widehat\mu(k/\sqrt
+n)  =1-\frac1{2n}k^TCk+o(n^{-1})\)</span>. Thus (6) tends to <span
+class="math inline">\(\exp(ik\cdot m-\frac12k^TCk)\)</span>. Lévy’s
+continuity theorem and weak closure show <span
+class="math display">\[\boxed{\mathcal N(m,C)\in\mathcal
+S_1.}\tag{7}\]</span> This includes a degenerate Gaussian if <span
+class="math inline">\(C\)</span> is singular. The output means and
+covariance are independent of <span class="math inline">\(n\)</span>, so
+the second moments also converge to those of the Gaussian. Thus the
+convergence holds in <span class="math inline">\(W_2\)</span> as well:
+<span class="math inline">\(W_2\)</span> metrizes weak convergence plus
+convergence of second moments; see <a
+href="https://webee.technion.ac.il/people/sason/Raginsky_Sason.pdf">Raginsky–Sason,
+Lemma 3.4.3</a> (statement read). Either closure rule therefore admits
+(7). The covariance is the covariance of the original state: the theorem
+creates a Gaussian sector, not an action scale.</p>
+<p>The normalization in (5) is essential. If instead one forms the
+arithmetic averages <span class="math inline">\(\bar x=n^{-1}\sum
+x_i\)</span> and <span class="math inline">\(\bar y=n^{-1}\sum
+y_i\)</span>, then <span class="math inline">\(\{\bar x,\bar
+y\}=1/n\)</span> in normalized canonical brackets. The canonically
+conjugate variable to <span class="math inline">\(\bar x\)</span> is
+<span class="math inline">\(\sum_i y_i\)</span>, not <span
+class="math inline">\(\bar y\)</span>. For independent identical copies
+their variances scale as <span class="math inline">\(1/n\)</span> and
+<span class="math inline">\(n\)</span>, respectively, so their
+covariance action is not reduced merely by renaming both averages as a
+canonical pair.</p>
+<h2 id="a-floor-state-and-every-gaussian-above-it">3. A floor state and
+every Gaussian above it</h2>
+<p>Define <span class="math display">\[
+\kappa_*=\inf_{\mu\in\mathcal S_1,\ \operatorname{Cov}\mu&lt;\infty}
+          \sqrt{\det\operatorname{Cov}(q,p)}.\tag{8}
+\]</span> Suppose <strong>in addition</strong> that <span
+class="math inline">\(\kappa_*&gt;0\)</span>. Let <span
+class="math inline">\(\zeta_*=\kappa_*/S_0\)</span>. For every sequence
+<span class="math inline">\(\mu_j\)</span> with covariance actions
+decreasing to <span class="math inline">\(\kappa_*\)</span>, (7) makes
+its corresponding Gaussians admissible. Their calibrated covariances
+<span class="math inline">\(C_j\)</span> are positive definite. The
+canonical matrix <span class="math display">\[A_j=(\det
+C_j)^{1/4}C_j^{-1/2},\qquad \det A_j=1,\tag{9}\]</span> takes <span
+class="math inline">\(C_j\)</span> to <span
+class="math inline">\(\sqrt{\det C_j}\,I\)</span>. Translate the means
+to zero. The resulting admissible Gaussian laws converge both weakly and
+in <span class="math inline">\(W_2\)</span> to <span
+class="math display">\[G_*=\mathcal N(0,\zeta_* I).\tag{10}\]</span>
+Either closure rule admits <span class="math inline">\(G_*\)</span>,
+which attains the floor.</p>
+<p>Now squeeze two <strong>independent</strong> copies of <span
+class="math inline">\(G_*\)</span> in opposite directions: <span
+class="math display">\[
+C_1=\zeta_*\begin{pmatrix}e^{2r}&amp;0\\0&amp;e^{-2r}\end{pmatrix},
+\qquad
+C_2=\zeta_*\begin{pmatrix}e^{-2r}&amp;0\\0&amp;e^{2r}\end{pmatrix}.
+\tag{11}
+\]</span> Each squeeze is symplectic. Mix the two copies canonically by
+<span class="math display">\[
+(x_+,y_+)=\frac{(x_1,y_1)+(x_2,y_2)}{\sqrt2},\quad
+(x_-,y_-)=\frac{(x_1,y_1)-(x_2,y_2)}{\sqrt2},\tag{12}
+\]</span> and keep the plus pair. Its covariance is <span
+class="math display">\[C_+=\frac{C_1+C_2}{2}=\zeta_*\cosh(2r)\,I.\tag{13}\]</span>
+Every isotropic covariance <span class="math inline">\(\nu I\)</span>,
+<span class="math inline">\(\nu\ge\zeta_*\)</span>, is obtained by a
+choice of <span class="math inline">\(r\)</span>. If <span
+class="math inline">\(C&gt;0\)</span> and <span
+class="math inline">\(\sqrt{\det C}=\nu\)</span>, then <span
+class="math inline">\(C=\nu BB^T\)</span> for <span
+class="math inline">\(B=C^{1/2}/\sqrt\nu\)</span> with <span
+class="math inline">\(\det B=1\)</span>. A further canonical
+transformation and translation therefore produce every Gaussian with
+<span class="math inline">\(\det C\ge\zeta_*^2\)</span>. Conversely no
+finite-covariance admissible state can have a smaller determinant by
+(8). Consequently <span class="math display">\[
+\{\hbox{Gaussian laws in }\mathcal S_1\}
+=\{\mathcal N(m,C):\det C\ge\zeta_*^2\}. \tag{14}
+\]</span></p>
+<p>The copy and mixer assumptions do real work in (11)–(13): canonical
+squeezing alone preserves determinant and would only produce the
+boundary <span class="math inline">\(\det C=\zeta_*^2\)</span>. This
+gives the full Gaussian sector without assuming closure under arbitrary
+additive noise. It does not show that all non-Gaussian states above the
+same floor are admissible.</p>
+<h2 id="what-the-cusp-adds-and-what-remains-unproved">4. What the cusp
+adds, and what remains unproved</h2>
+<p>The earlier cusp theorem supplies <span
+class="math inline">\(\kappa_*&gt;0\)</span> if, in addition to affine
+canonical covariance and weak closure, preparation evolution is
+reversible and agrees with both incoming trajectories at its specified
+non-Lipschitz merger. Its proof also works under the weaker <span
+class="math inline">\(W_2\)</span> closure. Indeed, if <span
+class="math inline">\(\kappa_*=0\)</span>, the centered, canonically
+squeezed states constructed in equations (9)–(11) of the cusp note have
+second moments tending to zero, so their <span
+class="math inline">\(W_2\)</span> distance to <span
+class="math inline">\(\delta_0\)</span> tends to zero. Closure admits
+<span class="math inline">\(\delta_0\)</span>, and the existing merger
+argument contradicts reversibility. Substitution in §3 proves (1), and
+strengthens that theorem’s previous conclusion in this <strong>enlarged
+premise set</strong>: the positive infimum is attained and the whole
+one-pair Gaussian sector is known.</p>
+<p>This does not prove that the premises are jointly physically
+realized. Indeed the earlier bounded-density classical cusp model <span
+class="math inline">\(\mathcal S_M=\{0\le f\le M,\ \int f=1\}\)</span>
+<strong>fails</strong> the two-copy premise. Let <span
+class="math inline">\(E\)</span> be a centrally symmetric disk of
+canonical area <span class="math inline">\(1/M\)</span> and let <span
+class="math inline">\(f=M1_E\)</span>. For two independent copies, the
+retained <span class="math inline">\(z_+=(z_1+z_2)/\sqrt2\)</span> has
+continuous density <span
+class="math display">\[f_+(z)=2(f*f)(\sqrt2z),\qquad
+f_+(0)=2\int f(w)f(-w)\,dw=2M.\tag{14a}\]</span> It exceeds <span
+class="math inline">\(M\)</span> on a neighbourhood of zero. Thus an
+explicit cusp-compatible witness for the earlier theorem is not a
+witness for the stronger premise set here. Its disk has the earlier
+sharp action <span class="math inline">\(1/(4\pi M)\)</span>, unchanged
+by this identical-copy averaging, so the failure is the pointwise
+density ceiling, not a change in covariance.</p>
+<p>The earlier cusp premise, literally stated, constrains Newtonian
+evolution only <strong>if point preparations are admitted</strong>. A
+positive-floor Gaussian family admits no points, so identity evolution
+on that family satisfies the point-compatibility clause vacuously while
+also satisfying the copying assumptions. The abstract combined
+assumptions are therefore consistent, but that example does not
+transport nonpoint states by Newton’s cusp flow. Section 6 gives a class
+with actual cusp transport and the copy rules under <span
+class="math inline">\(W_2\)</span>-closure; its ordinary weak closure
+fails. A nonlinear cusp flow does not generally preserve Gaussian shape;
+the theorem does not assume that it does. Under the literal earlier
+premises the cusp argument supplies positivity; the central limit and
+mixing supply the Gaussian sector. Identifying the resulting <span
+class="math inline">\(\kappa_*\)</span> with the real-time quantum phase
+constant remains a further physical question.</p>
+<p>This loss of Gaussian shape can be seen directly. For an initial
+centered product Gaussian with variances <span
+class="math inline">\(\sigma_q^2,\sigma_p^2\)</span>, and a Newton force
+<span class="math inline">\(F(q)=-V&#39;(q)\)</span>, the Liouville
+equation gives, at almost every point, <span class="math display">\[
+\left.\partial_t\log\rho_t(q,p)\right|_{t=0}
+=\frac{qp}{m\sigma_q^2}+\frac{pF(q)}{\sigma_p^2}.\tag{14b}
+\]</span> For the non-affine cusp force this is not a quadratic
+polynomial in <span class="math inline">\((q,p)\)</span>, while the
+tangent to a differentiable Gaussian family has quadratic logarithmic
+derivative. Thus Gaussian preparations alone are not invariant under the
+actual cusp transport.</p>
+<p>For comparison, the <a
+href="newton-indeterminacy-routes.html">statistical-speed theorem</a>
+obtains its affine-generator bound on a restricted Gaussian sector with
+supplied <span class="math inline">\(h_*=2\zeta\)</span>. Equation (14)
+gives that Gaussian covariance family under the additional cusp and
+copying assumptions, with <span
+class="math inline">\(\zeta=\kappa_*\)</span> in physical action units.
+It does not supply the recorded-instrument closure required by that
+theorem, nor does it extend the affine-generator estimate to every
+nonlinear generator.</p>
+<h2 id="two-closure-tests">5. Two closure tests</h2>
+<p><strong>Zero branch.</strong> For every <span
+class="math inline">\(\zeta\ge0\)</span> and every number <span
+class="math inline">\(n\)</span> of canonical pairs, let <span
+class="math inline">\(\mathcal G_\zeta^{(n)}\)</span> be all Gaussian
+probability measures whose covariance satisfies <span
+class="math display">\[\Sigma+i\zeta\Omega_n\succeq0,\qquad
+\Omega_n=\Omega\oplus\cdots\oplus\Omega.\tag{15}\]</span> These are
+classical probability measures, including degenerate ones when <span
+class="math inline">\(\zeta=0\)</span>. Here <span
+class="math inline">\(\Sigma\)</span> and <span
+class="math inline">\(\zeta\)</span> refer to the calibrated coordinates
+of (2); the physical covariance action is <span
+class="math inline">\(S_0\zeta\)</span>. Independent products give
+block-diagonal covariance; affine symplectic transformations preserve
+(15); and a marginal is a principal submatrix, so it also satisfies
+(15). Probability-valued weak limits remain Gaussian: tightness bounds
+the means and covariance matrices of a Gaussian sequence, and
+subsequential parameter limits preserve (15). Thus all the operations of
+§§1–2 are available for every <span
+class="math inline">\(\zeta\ge0\)</span>. In particular <span
+class="math inline">\(\zeta=0\)</span> includes point measures and has
+no positive floor. This family does not establish compatibility with the
+cusp flow, and it does not show that copying selects any particular
+positive value. The zero-floor example is not a classification of every
+possible zero-floor class: all Dirac measures alone also satisfy the
+stated copying and weak-closure rules without containing nondegenerate
+Gaussians.</p>
+<p><strong>Selective records.</strong> For <span
+class="math inline">\(\zeta&gt;0\)</span>, take the classical Gaussian
+<span class="math inline">\(G_*=\mathcal N(0,\zeta I)\)</span>. An
+ideal, non-disturbing exact <span
+class="math inline">\(q\)</span>-measurement yields a conditional state
+supported on a fixed <span class="math inline">\(q\)</span>-line, with
+zero covariance determinant. It is outside <span
+class="math inline">\(\mathcal G_\zeta^{(1)}\)</span>. Forgetting unused
+canonical output pairs is therefore much weaker than closure under
+arbitrary selective records. An instrument preserving a positive floor
+must restrict the record, introduce appropriate back-action, or impose
+another physical rule.</p>
+<p><strong>A covariance floor alone is not weakly closed.</strong> With
+<span class="math inline">\(\zeta&gt;0\)</span>, <span
+class="math display">\[
+\mu_n=(1-1/n)\delta_0+(1/n)\,\mathcal N(0,n\zeta I)
+\;\Longrightarrow\;\delta_0,\qquad
+\operatorname{Cov}(\mu_n)=\zeta I.\tag{16}
+\]</span> A vanishing fraction of mass can carry all of the variance.
+Thus bounding the covariance determinant for each member does not by
+itself make the class weakly closed; even uniformly bounded second
+moments do not give the uniform integrability needed for covariance
+convergence. The Gaussian class in the zero-branch test has extra
+structure.</p>
+<h2 id="an-entropy-floor-with-actual-cusp-transport">6. An entropy floor
+with actual cusp transport</h2>
+<p>There is a classical realization of the combined preparation, copy
+and actual cusp-transport rules if the closure rule is <span
+class="math inline">\(W_2\)</span> rather than unrestricted weak
+closure. In the calibrated coordinates of (2), fix any
+<strong>supplied</strong> <span
+class="math inline">\(\zeta&gt;0\)</span> and consider <span
+class="math display">\[
+\mathcal E_\zeta
+=\left\{\rho(z)\,dz\in\mathcal P_2(\mathbb R^2):
+h(\rho):=-\int\rho\log\rho\,dz\ge\log(2\pi e\zeta)\right\}.\tag{17}
+\]</span> The entropy threshold uses dimensionless coordinates. A finite
+second moment bounds differential entropy from above; the displayed
+lower bound makes it finite. The Gaussian <span
+class="math inline">\(\mathcal N(0,\zeta I)\)</span> belongs, so the
+class is nonempty. Affine canonical transformations preserve area and
+hence entropy and membership in <span class="math inline">\(\mathcal
+P_2\)</span>.</p>
+<p>For the bounded cusp force of the <a
+href="newton-cusp-preparation-floor.html">earlier theorem</a>, the point
+flow is an invertible, area-preserving group outside an invariant null
+set. It transports every density in (17), preserving its entropy; the
+bounded force and finite time also preserve its second moment. Coupling
+the transported state to the same initial point and using dominated
+convergence gives continuity in <span class="math inline">\(W_2\)</span>
+with time. This is actual Liouville transport of the nonpoint states,
+not the vacuous identity evolution discussed in §4.</p>
+<p>For independent <span class="math inline">\(Z_i\sim\rho_i\in\mathcal
+E_\zeta\)</span> and real coefficients <span
+class="math inline">\(a_i\)</span> with <span
+class="math inline">\(\sum_i a_i^2=1\)</span>, the two-dimensional
+entropy power inequality gives <span class="math display">\[
+N\!\left(\sum_i a_iZ_i\right)
+\ge\sum_i a_i^2 N(Z_i)\ge\zeta,\qquad
+N(Z):=\frac{e^{h(Z)}}{2\pi e}.\tag{18}
+\]</span> See <a
+href="https://mate.unipv.it/toscani/publi/Convolution.pdf">Toscani,
+§6</a> (entropy-power inequality statement read). In particular the
+output of every copy-index orthogonal mixer and marginal in §2 remains
+in <span class="math inline">\(\mathcal E_\zeta\)</span>. This
+establishes those mixers; arbitrary nonlinear joint canonical maps are
+not asserted.</p>
+<p>The class is <span class="math inline">\(W_2\)</span>-closed. Let
+<span class="math inline">\(g(z)=(2\pi)^{-1}e^{-|z|^2/2}\)</span>. For
+any absolutely continuous <span class="math inline">\(\mu=\rho
+dz\)</span>, <span class="math display">\[
+D(\mu\Vert g\,dz)
+=-h(\rho)+\log(2\pi)+\frac12\int |z|^2\,d\mu(z).\tag{19}
+\]</span> If <span class="math inline">\(\mu_n\in\mathcal
+E_\zeta\)</span> tends to <span class="math inline">\(\mu\)</span> in
+<span class="math inline">\(W_2\)</span>, their second moments converge
+and relative entropy is weakly lower semicontinuous. The right side of
+(19) is uniformly bounded, so <span class="math inline">\(\mu\)</span>
+is absolutely continuous and (19) gives <span
+class="math inline">\(h(\mu)\ge\log(2\pi e\zeta)\)</span>. The Gaussian
+maximum-entropy inequality then gives <span class="math display">\[
+\sqrt{\det\operatorname{Cov}(Z)}
+\ge \frac{e^{h(Z)}}{2\pi e}\ge\zeta.\tag{20}
+\]</span> Its Gaussian sector is exactly <span
+class="math inline">\(\det C\ge\zeta^2\)</span>, and its physical floor
+is <span class="math inline">\(S_0\zeta\)</span>.</p>
+<p>Ordinary weak closure is stronger and fails here. Put <span
+class="math display">\[
+\mu_n=(1-1/n)\mathcal N(0,\zeta e^{-2n}I)
+       +(1/n)\mathcal N(0,\zeta e^{2n^2}I).\tag{21}
+\]</span> Entropy concavity gives <span
+class="math inline">\(h(\mu_n)\ge\log(2\pi e\zeta)+2\)</span>.
+Nevertheless <span class="math inline">\(\mu_n\)</span> converges weakly
+to <span class="math inline">\(\delta_0\)</span>, which is not in <span
+class="math inline">\(\mathcal E_\zeta\)</span>; the second moments
+diverge, so this is not a <span
+class="math inline">\(W_2\)</span>-convergent sequence. The entropy
+floor, like the earlier density ceiling, is an explicitly supplied
+classical preparation constraint. It does not identify the floor with
+quantum <span class="math inline">\(\hbar/2\)</span> or establish
+closure under arbitrary selective records.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The proposed central-limit step is settled under explicit copy/mixer,
+discard and either weak- or <span
+class="math inline">\(W_2\)</span>-closure premises. Together with the
+earlier point-trajectory compatibility hypotheses, it gives an attained
+positive covariance floor and exactly the one-pair Gaussian sector above
+it. The entropy model realizes actual nonlinear cusp transport and the
+specified mixers under <span class="math inline">\(W_2\)</span> closure,
+while demonstrating that ordinary weak closure is a separate, stronger
+condition. The supplied entropy floor does not derive <span
+class="math inline">\(\hbar\)</span> or establish selective record
+closure or independent action necessity.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

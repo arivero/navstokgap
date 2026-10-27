@@ -1,0 +1,342 @@
+# From quantum time slices to relativistic and Newtonian motion
+
+**Result, 2026-10-27.** The finite-slice construction of
+[Newton motion](quantum-blocks-construct-newton.md) extends to a
+nonquadratic kinetic energy $T(P)$ whenever $T'$ and $V'$ are globally
+Lipschitz. For the positive-energy relativistic dispersion
+$$T_c(p)=\sqrt{m^2c^4+c^2p^2}-mc^2,\qquad m,c>0,\tag{1}$$
+the constants in the packet estimates can be chosen independently of
+$c$. For fixed initial data and finite time, the finite-product
+coherent-state means obey
+$$
+ \sup_{0\le t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
+ \le C_T\left(\sqrt\hbar+|\pi|+\frac1{c^2}\right).\tag{2}
+$$
+Here $z_{\rm N}$ is the Newton solution for the same $V$, $\pi$ is an
+arbitrary positive time partition and $\gamma>0$ fixes a phase-space
+norm. Thus $\hbar\downarrow0$, time refinement and $c\to\infty$ may
+be taken jointly at the level of these means. Explicit constants and
+a proof are given below.
+
+The exact Hamiltonians are self-adjoint and, at each fixed $\hbar$,
+their nonrelativistic limit is strong resolvent, hence strong unitary,
+convergence. A separate spectral-Dirichlet calculation gives uniform
+position convergence through a free hard-wall bounce, even when
+$\hbar\downarrow0$ and $c\to\infty$ together. These are one-particle,
+positive-energy constructions with an external potential; they do not
+construct a Lorentz-covariant interacting field theory or supply a
+positive universal action constant.
+
+The coherent-state classical limit and relativistic Feynman--Kac
+representations have established precedents; this note assembles a
+specific joint bound and makes no claim of priority. In particular,
+[Carmona--Masters--Simon](https://doi.org/10.1016/0022-1236(90)90049-Q)
+(abstract) treat relativistic Schrödinger operators through processes
+with stationary independent increments, and
+[Hiroshima--Ichinose--Lőrinczi](https://arxiv.org/abs/1109.5829)
+(abstract) give a subordinate-process Feynman--Kac formula in a more
+general spin and magnetic setting.
+
+**Targeted advisor check (GPT-6.1 Sol, 2026-10-27).** The written
+packet, domain, strong-resolvent and spectral-wall arguments were
+checked with corrections applied. This is not independent peer review
+of the result or of the imported operator and probability theorems.
+
+## 1. A general dispersion and its quantum realization
+
+Work on $L^2(\mathbb R)$ with $Qx=x$, $P=-i\hbar\,d/dx$, and
+$[Q,P]=i\hbar$. Assume for the full operator argument that real
+$T,V\in C^\infty(\mathbb R)$ are bounded below and that all derivatives
+of order at least two are bounded. Add constants so that $T,V\ge0$,
+which affects only a phase. Write
+$$L=\|V''\|_\infty,\qquad M=\|T''\|_\infty.\tag{3}$$
+The finite-product estimates alone need only $C^1$ functions with
+globally Lipschitz derivatives; the smoother class makes the domain
+argument explicit. Define on Schwartz space
+$$H_\hbar=T(P)+V(Q),\qquad U_\hbar(t)=e^{-itH_\hbar/\hbar}.\tag{4}$$
+
+To specify the domain, fix units for $Q,P$ and put
+$N=1+Q^2+P^2$. Since $T,V$ grow at most quadratically,
+$\|H_\hbar f\|\le C_\hbar\|Nf\|$ on $\mathcal S$. Moreover
+$$
+ [H_\hbar,N]
+ =-i\hbar\{T'(P)Q+QT'(P)\}
+  +i\hbar\{V'(Q)P+PV'(Q)\},\tag{5}
+$$
+and the linear growth of $T',V'$ and boundedness of their derivatives
+give $\|[H_\hbar,N]f\|\le C_\hbar\|Nf\|$. Therefore
+$$
+ |\langle H_\hbar f,N^2f\rangle
+      -\langle N^2f,H_\hbar f\rangle|
+ \le2C_\hbar\langle f,N^2f\rangle.\tag{6}
+$$
+Schwartz space is a core for $N^2$. Nelson's commutator theorem gives
+essential self-adjointness; the $N^2$ form estimate also makes the
+unitary group leave $D(N)$ invariant and act strongly continuously in
+its graph norm. For the cited energy-limited theorem use
+$G=N^2-\inf\sigma(N^2)\ge0$ and $E_0=\inf\sigma(N^2)$; the relevant
+form domain remains $D(N)$ and (6) bounds $G+E_0$. These are standard
+imported operator results: see
+[Energy-Limited Quantum Dynamics, Theorems 3.7--3.8 and Corollary B.2](https://link.springer.com/article/10.1007/s00220-025-05282-w)
+(statements and hypotheses read). No nonlocal analogue of the local
+integration-by-parts graph identity from the earlier proof is assumed.
+
+For $s\ge0$ put
+$$K_s=e^{-isV(Q)/\hbar},\quad D_s=e^{-isT(P)/\hbar},
+ \quad S_s=D_sK_s.\tag{7}$$
+On $D(N)$, $(S_s-I)f/s\to-iH_\hbar f/\hbar$ and the difference
+quotients are bounded from the $N$ graph domain to $L^2$. The exact orbit
+of $f\in D(N)$ is compact in that graph norm on $[0,T]$; a telescoping
+sum therefore proves that products of $S_s$ over arbitrary positive
+partitions converge strongly to $U_\hbar(t)$ as the mesh vanishes.
+Density and unitarity extend the result to every $L^2$ state. This is
+a fixed-$\hbar$ assertion, not uniform operator-norm control as
+$\hbar\downarrow0$ or $c\to\infty$.
+
+## 2. The finite-slice spread and mean bounds
+
+Choose $\gamma>0$, $h_0>0$, $0<\hbar\le h_0$, and a coherent Gaussian
+with means $(q_0,p_0)$ and initial standard deviations
+$$\operatorname{sd}Q=\sqrt{\gamma\hbar/2},\qquad
+ \operatorname{sd}P=\sqrt{\hbar/(2\gamma)}.\tag{8}$$
+These are the usual coherent widths for $\gamma=1/(m\omega)$.
+Use
+$$
+ \|(q,p)\|_\gamma=|q|+\gamma|p|,\quad
+ C=\sqrt{2\gamma},\quad
+ \beta=M/\gamma+\gamma L,\quad
+ a=\max(M/\gamma,\gamma L).\tag{9}
+$$
+When $a=0$, interpret $(e^{aT}-1)/a$ below as $T$.
+
+For the state after each complete cell define
+$W_j=\operatorname{sd}Q_j+\gamma\operatorname{sd}P_j$. The exact
+finite-factor identities on Schwartz space are
+$$K_s^*PK_s=P-sV'(Q),\qquad
+ D_s^*QD_s=Q+sT'(P).\tag{10}$$
+Since the standard deviation of a Lipschitz function is at most its
+Lipschitz constant times the original standard deviation,
+$$
+ W_{j+1}\le(1+sM/\gamma)(1+s\gamma L)W_j,\qquad
+ W_j\le C\sqrt\hbar\,e^{\beta T}.\tag{11}
+$$
+The same uniform bound covers the intermediate post-kick state.
+The state need not remain Gaussian.
+
+Let $q_j,p_j$ be the packet means. The exact update reads
+$$
+ p_{j+1}=p_j-s\langle V'(Q)\rangle_j,\qquad
+ q_{j+1}=q_j+s\langle T'(P)\rangle_{j,\mathrm{kick}}.\tag{12}
+$$
+Introduce constants independent of the partition and of
+$0<\hbar\le h_0$:
+$$
+ \begin{gathered}
+ S=C\sqrt{h_0}\,e^{\beta T},\qquad
+ \bar f=|V'(0)|+LS,\qquad
+ \bar u=|T'(0)|+(M/\gamma)S,\\
+ B=\gamma\bar f+\bar u,\qquad
+ R=e^{\beta T}(\|(q_0,p_0)\|_\gamma+TB),\\
+ F_T=|V'(0)|+L(R+S),\qquad
+ U_T=|T'(0)|+(M/\gamma)(R+S).
+ \end{gathered}\tag{13}
+$$
+Equation (12) and (11) give
+$$
+ \|(q_{j+1},p_{j+1})\|_\gamma
+ \le e^{\beta s}\|(q_j,p_j)\|_\gamma+sBe^{\beta s};
+ \tag{14}
+$$
+hence all vertex means have norm at most $R$,
+$|\langle V'(Q)\rangle_j|\le F_T$, and
+$|\langle T'(P)\rangle_{j,\mathrm{kick}}|\le U_T$.
+
+Linearly interpolate the means and define
+$\mathcal F_T(q,p)=(T'(p),-V'(q))$. Its Lipschitz constant in
+$\|\cdot\|_\gamma$ is at most $a$. On every cell,
+$$
+ \|\dot z_{\hbar,\pi}-\mathcal F_T(z_{\hbar,\pi})\|_\gamma
+ \le C_\delta|\pi|+C_h\sqrt\hbar,\qquad
+ C_\delta=MF_T+\gamma LU_T,\quad
+ C_h=\beta C e^{\beta T}.\tag{15}
+$$
+For example, the position residual is bounded by
+$M\operatorname{sd}P_{\rm kick}+M|p_{j+1}-p(t)|$; the momentum
+residual is bounded by
+$L\operatorname{sd}Q_j+L|q_j-q(t)|$.
+
+Comparing two meshes and two positive values $\hbar,k$, integration and
+Gronwall give
+$$
+ \sup_{t\le T}\|z_{\hbar,\pi}(t)-z_{k,\sigma}(t)\|_\gamma
+ \le G_T\{C_\delta(|\pi|+|\sigma|)
+           +C_h(\sqrt\hbar+\sqrt k)\},\quad
+ G_T=\frac{e^{aT}-1}{a}.\tag{16}
+$$
+The interpolants are therefore Cauchy as both scales tend to zero, and
+their limit solves uniquely
+$$\dot q=T'(p),\qquad \dot p=-V'(q).\tag{17}$$
+No solution is assumed in defining that limit. At fixed $\hbar$ the
+strong product limit plus the uniform second-moment bounds recovers the
+exact unitary first moments: bounded spectral truncations pass by strong
+convergence and the tails are bounded by the second moments. Thus
+(15)--(16) also control the exact quantum means after the mesh is removed.
+
+## 3. Relativistic dispersion and the Newton limit
+
+For (1),
+$$
+ T_c'(p)=\frac{p}{m\sqrt{1+p^2/(m^2c^2)}},\qquad
+ 0<T_c''(p)=\frac1m
+              \left(1+\frac{p^2}{m^2c^2}\right)^{-3/2}
+             \le\frac1m.\tag{18}
+$$
+All hypotheses above hold for every $c>0$, with common
+$M=1/m$ and $T_c'(0)=0$. In particular, (11)--(16) have constants
+independent of $c$. The finite-$c$ classical solution $z_c$ from
+(17) is the positive-energy relativistic particle with
+$$\dot q=\frac{pc^2}{\sqrt{m^2c^4+c^2p^2}},\qquad
+ \dot p=-V'(q),\qquad |\dot q|<c.\tag{19}$$
+The external potential is specified in a chosen frame; (19) does not
+assert full interacting Poincaré covariance.
+
+The elementary inequality $1-(1+x)^{-1/2}\le x/2$ for $x\ge0$
+gives
+$$|T_c'(p)-p/m|\le\frac{|p|^3}{2m^3c^2}.\tag{20}$$
+The Newton trajectory is already constructed by (17) with
+$T_\infty(p)=p^2/(2m)$. The common bound (13) gives
+$|p_{\rm N}(t)|\le R/\gamma$. Comparing its vector field with (19)
+and applying Gronwall,
+$$
+ \sup_{t\le T}\|z_c(t)-z_{\rm N}(t)\|_\gamma
+ \le G_T\frac{(R/\gamma)^3}{2m^3c^2}.\tag{21}
+$$
+Together with (15)--(16),
+$$
+ \sup_{t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
+ \le G_T\!\left[
+ C_\delta|\pi|+C_h\sqrt\hbar
+ +\frac{(R/\gamma)^3}{2m^3c^2}\right].\tag{22}
+$$
+This proves (2). The bound is for fixed initial phase-space data and
+finite $T$; it is not uniform in momenta of order $mc$.
+
+For any compactly supported smooth phase-space symbol $b$, the Weyl
+Fourier argument in the
+[groupoid companion](groupoid-quantum-newton-states.md) converts the
+spread and mean bounds into
+$$
+ |\langle\operatorname{Op}_\hbar^W(b)\rangle_j-b(z_{\rm N}(t_j))|
+ \le I_{b,\gamma}\!\left[
+ Ce^{\beta T}\sqrt\hbar+G_T\!\left(
+ C_\delta|\pi|+C_h\sqrt\hbar
+ +\frac{(R/\gamma)^3}{2m^3c^2}\right)\right],\tag{23}
+$$
+where
+$$I_{b,\gamma}=(2\pi)^{-2}\int|\widehat b(\xi,\eta)|
+            (|\xi|+|\eta|/\gamma)\,d\xi d\eta.\tag{24}$$
+Thus a chosen diagonal schedule
+$\hbar=S_*\epsilon$, $|\pi|\le T_*\epsilon^\alpha$ and
+$c\ge c_*\epsilon^{-\kappa}$, with $\alpha,\kappa>0$, gives
+$O(\epsilon^{1/2}+\epsilon^\alpha+\epsilon^{2\kappa})$ for those
+observables at partition vertices. The groupoid deformation, mesh and
+$c$ remain distinct until this schedule is chosen.
+
+## 4. Fixed quantum action and the nonrelativistic limit
+
+For fixed $\hbar>0$, define the nonnegative closed forms
+$$
+ q_c[\psi]=\|T_c(P)^{1/2}\psi\|^2
+            +\|V(Q)^{1/2}\psi\|^2,\qquad
+ D(q_c)=D(T_c(P)^{1/2})\cap D(V(Q)^{1/2}).\tag{25}
+$$
+The functional calculus expression
+$$T_c(p)=\frac{p^2/m}{1+\sqrt{1+p^2/(m^2c^2)}}\tag{26}$$
+shows that $T_c(p)$ increases pointwise to $p^2/(2m)$ as $c\to\infty$.
+The increasing limit of the forms has domain
+$D(P)\cap D(\sqrt V)$ and equals the nonrelativistic form.
+The monotone convergence theorem for closed forms therefore yields
+$$H_{\hbar,c}\xrightarrow[c\to\infty]{\rm strong\ resolvent}
+ H_{\hbar,\infty}=P^2/(2m)+V(Q).\tag{27}$$
+See [Simon, “Tosio Kato's work,” Theorem 10.12](https://link.springer.com/article/10.1007/s13373-018-0118-0)
+(theorem statement read). Standard spectral convergence then gives
+strong convergence of the corresponding unitary groups, uniformly
+for $t$ in compact intervals, for each fixed $\hbar$. This is not an
+operator-norm or uniform-in-$\hbar$ claim.
+
+In Euclidean time the relativistic kinetic semigroup is positive, but
+its reference process is no longer Brownian in physical time. Indeed,
+for $a,b>0$ the subordination identity is
+$$e^{-a\sqrt b}=\frac a{2\sqrt\pi}\int_0^\infty
+ s^{-3/2}e^{-a^2/(4s)}e^{-bs}\,ds.\tag{28}$$
+With $a=tc/\hbar$ and $b=p^2+m^2c^2$, multiply the right side of (28)
+by $e^{tmc^2/\hbar}$ to obtain $e^{-tT_c(P)/\hbar}$ as a positive
+mixture of Gaussian heat operators. Setting $p=0$ shows that the mixing
+measure has unit mass. The associated subordinate-Brownian process has jumps.
+Feynman--Kac with $V$ is an additional standard construction, not a
+claim that the Gaussian midpoint variance or its large-field bound
+from the preceding note remains unchanged. For a general $T$ with
+bounded $T''$, positivity of the Euclidean semigroup need not hold.
+
+## 5. A relativistic spectral wall
+
+The hard-wall model has to be specified again because $T_c(P)$ is
+nonlocal. Let $\Delta_D$ be the Dirichlet Laplacian on $(0,\infty)$ and
+define the **spectral** operator
+$$H_{\hbar,c}^{D}
+ =T_c\!\left(\sqrt{-\hbar^2\Delta_D}\right).\tag{29}$$
+It is self-adjoint. Under odd extension it is unitarily equivalent to
+$T_c(P)$ restricted to the odd subspace, since $T_c$ is even.
+
+Use the odd coherent state of
+[the didactic guide, equation (20)](newton-dimock-balaban-guide.md).
+Write its overlap as $\gamma_\hbar$, its initial full-line widths as
+$\sigma_q,\sigma_p$, and put
+$$a_c(t)=q_0+tT_c'(p_0),\qquad q_0>0,\quad p_0<0.\tag{30}$$
+The full-line Heisenberg identity is
+$Q(t)=Q+tT_c'(P)$. For the evolved Gaussian $g_{\hbar,t}$,
+$$
+ \|(Q-a_c(t))g_{\hbar,t}\|
+ \le\sigma_q+|t|\,\|[T_c'(P)-T_c'(p_0)]g_\hbar\|
+ \le\sigma_q+\frac{|t|}{m}\sigma_p.\tag{31}
+$$
+No preservation of Gaussian shape is needed. Apply
+$||x|-|a_c||\le|x-a_c|$ to each of the two terms in the odd state.
+The half-line position expectation then satisfies
+$$
+ \left|\langle Q\rangle_{\hbar,c}^{D}(t)-|a_c(t)|\right|
+ \le\sqrt{\frac2{1-\gamma_\hbar}}
+             \left(\sigma_q+\frac{|t|}{m}\sigma_p\right).\tag{32}
+$$
+Equation (20) also gives, uniformly for $|t|\le T$,
+$$
+ \left|\langle Q\rangle_{\hbar,c}^{D}(t)
+          -\left|q_0+\frac{p_0t}{m}\right|\right|
+ \le\sqrt{\frac2{1-\gamma_\hbar}}
+             \left(\sigma_q+\frac{T}{m}\sigma_p\right)
+      +\frac{T|p_0|^3}{2m^3c^2}.\tag{33}
+$$
+The two classical impact times generally differ, but (33) is uniform
+through both. At fixed $c$, (32) gives the corresponding classical
+relativistic elastic bounce; at fixed $q_0,p_0,T$, (33) is
+$O(\sqrt\hbar+c^{-2})$ as the two limits are taken in any order.
+
+The spectral operator in (29) subordinates the **killed Brownian**
+semigroup. It is distinct from first subordinating full-line Brownian
+motion and then killing the jump process when it exits the half-line.
+The latter gives a different nonlocal boundary problem; the odd
+extension above does not prove its hard-wall limit. See
+[Kim--Song--Vondraček](https://arxiv.org/abs/1610.00872)
+(introduction read) for this order-of-operations distinction. Nor is
+the local Schrödinger current in the guide automatically the probability
+current for this nonlocal Hamiltonian.
+
+## 6. Consequence for STATE
+
+For the positive-energy one-particle dispersion, bounded curvature
+closes the quantum packet Cauchy argument with constants uniform in
+$c$. The fixed-$\hbar$ form limit and the joint observable limit now
+connect relativistic and nonrelativistic mechanics in the same
+framework, with a separate spectral hard-wall example. The action unit
+is supplied, and no new Yang--Mills or positive-action-necessity
+conclusion follows.

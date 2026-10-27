@@ -344,6 +344,11 @@ integrates over intermediate variables. Choosing a joint schedule ties
 their parameters, but does not make geometric zoom identical to
 Wilsonian integration or prove that the physical action unit runs.
 
+The subsequent [dispersion construction](relativistic-dispersion-blocks.md)
+extends the packet argument to the positive-energy relativistic
+Hamiltonian and controls its nonrelativistic limit. Its free spectral
+Dirichlet wall is a separate nonlocal boundary model.
+
 ## 8. A quantum packet through the elastic bounce
 
 The wall example can be related to quantum theory without applying the
@@ -414,7 +419,11 @@ continuation, nonuniqueness, magnetic forces and an imposed hard-wall
 impact. The wall packet calculation gives a separate rigorous example
 of a classical limit through an impact. The supplied action parameter,
 the independent action-necessity problem and the higher-dimensional
-field-theory estimates remain open in their respective scopes.
+field-theory estimates remain open in their respective scopes. The
+later [canonical central-limit calculation](central-limit-canonical-gaussian-sector.md)
+identifies a Gaussian preparation sector under additional copying and
+cusp-compatibility assumptions; its floor is not identified with the
+quantum phase constant.
 
 **Targeted advisor check (GPT-6.1 Sol, 2026-10-27).** The impact
 packet estimates and their convergence domains, the magnetic

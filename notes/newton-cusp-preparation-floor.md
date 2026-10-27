@@ -10,6 +10,18 @@ these incoming Newton trajectories, then its finite-covariance
 preparations have a strictly positive covariance action floor. No
 numerical floor is assumed in this implication.
 
+**Scope clarification, 2026-10-27.** The evolution premise in §2
+requires agreement with the displayed Newton trajectories only for
+point preparations *if they are admitted*; it does not require
+Liouville transport of nonpoint preparations. In particular, a
+positive-floor Gaussian class admits no point states, and identity
+evolution on that class satisfies the stated point-compatibility clause
+vacuously. That is not physical cusp transport. The density-ceiling
+example in §4 does implement the almost-everywhere Newton flow, but
+the later composition test shows it fails an independent-copy mixer.
+The result remains a conditional statement about the literal premises,
+not a derivation that nonpoint states must follow this force.
+
 The closure and state-covariance premises are substantive physical
 assumptions. An explicit classical density-ceiling model satisfies them
 and has a sharp floor. Thus the result selects a positive preparation
@@ -126,7 +138,7 @@ Assume the following three properties.
    particular potential (1) is invariant under all these maps.
 2. **Weak closure.** A probability-valued weak limit of a sequence in
    $\mathcal S$ belongs to $\mathcal S$.
-3. **Reversible Newton compatibility.** The force (1) admits bijective
+3. **Reversible point-trajectory compatibility.** The force (1) admits bijective
    preparation evolutions $\mathcal E_t$ on $\mathcal S$, with weakly
    continuous state curves. Whenever a point preparation is admitted,
    its evolution follows its unique Newton trajectory before arrival
@@ -302,6 +314,18 @@ model. Unrestricted classical conditioning can violate its ceiling,
 as the necessity note's two-pointer construction proves. Claiming an
 operational completion would also require a physical law of instruments
 and records preserving its allowed states.
+
+**Composition test, 2026-10-27.** The witness $\mathcal S_M$ is not
+closed under the independent-copy canonical mixer and marginalization
+used in the subsequent
+[central-limit calculation](central-limit-canonical-gaussian-sector.md).
+Indeed, for $f=M1_E$ with $E=-E$ and area $1/M$, the law of
+$(Z_1+Z_2)/\sqrt2$ from independent copies has density
+$f_+(0)=2\int f(z)f(-z)\,dz=2M$, and is continuous near zero.
+The covariance and its action are unchanged for identical copies,
+but the pointwise density ceiling is violated. The theorem above and
+this classical single-system witness remain valid at their stated
+scope; they do not establish the added multi-copy closure.
 
 ## 5. A supplied positive $\hbar$ gives a complete quantum comparison
 

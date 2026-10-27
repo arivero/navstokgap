@@ -5,6 +5,50 @@
  "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
  "notes": [
   {
+   "path": "notes/central-limit-canonical-gaussian-sector.md",
+   "title": "Canonical averaging and the Gaussian sector of Newton preparations",
+   "summary": "Copy-index symplectic mixers and weak or W2 closure admit a Gaussian with each admissible covariance; a positive infimum determines the entire Gaussian sector. The older density ceiling fails a two-copy mixer. A supplied entropy floor supports actual cusp transport and mixing with W2 closure but fails weak closure.",
+   "thematic_area": "Newton/action",
+   "strongest_result": "The central limit and two-copy squeezing generate the full one-pair Gaussian sector above an attained positive floor. An entropy-floor classical model realizes actual cusp transport and copy-index mixing with W2 closure, while an explicit weakly convergent sequence rules out ordinary weak closure.",
+   "status": "conditional",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Resolves the previously proposed conditional Gaussian-sector calculation and tests whether the prior cusp witness composes.",
+   "relations": [
+    {"type": "continues", "target": "notes/newton-cusp-preparation-floor.md", "reason": "Uses its point-state merger and corrects the scope of its density-ceiling witness under canonical copying."},
+    {"type": "uses", "target": "notes/newton-indeterminacy-routes.md", "reason": "Compares the Gaussian sector with the restricted statistical-speed theorem while retaining record closure as a separate premise."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["canonical mixing", "independent copies", "central limit", "Gaussian covariance sector", "cusp flow", "entropy power", "Wasserstein closure", "density ceiling counterexample", "selective records"],
+   "role": "result,live",
+   "value": "open-mechanism,infrastructure",
+   "limitations": "Copy, mixing and closure are explicit hypotheses; the entropy model supplies its floor and is not weakly closed. Selective records, physical scale selection and identification with quantum hbar remain open.",
+   "content_coverage": "Full note and derivations read, with cited central-limit and entropy-power theorem statements checked; targeted model review is not independent peer review."
+  },
+  {
+   "path": "notes/relativistic-dispersion-blocks.md",
+   "title": "From quantum time slices to relativistic and Newtonian motion",
+   "summary": "Bounded dispersion curvature extends the packet construction and gives O(sqrt(h)+mesh+c^-2) joint convergence to Newton for the positive-energy relativistic particle; fixed h has strong-resolvent convergence, and a separate spectral Dirichlet wall has uniform position convergence through impact.",
+   "thematic_area": "refinement/comparison",
+   "strongest_result": "Finite products converge in their packet means as the action, mesh and inverse light speed vanish jointly; the spectral wall estimate is uniform through both relativistic and Newtonian impact times.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Extends the user-directed 0+1 and tangent-groupoid construction to positive-energy relativistic dispersion.",
+   "relations": [
+    {"type": "continues", "target": "notes/quantum-blocks-construct-newton.md", "reason": "Generalizes the finite-step packet and fixed-action product argument to nonquadratic dispersion."},
+    {"type": "uses", "target": "notes/newton-dimock-balaban-guide.md", "reason": "Adapts its odd-state hard-wall construction to a specified spectral nonlocal operator."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["relativistic dispersion", "positive energy", "quantum time slices", "joint h mesh c limit", "strong resolvent", "subordinate Brownian", "spectral Dirichlet wall"],
+   "role": "result,live",
+   "value": "infrastructure,open-mechanism",
+   "limitations": "One-particle external potential in a fixed frame; action is supplied, time and initial momentum are fixed, and the spectral wall differs from killing the jump process. No interacting relativistic QFT or independent positive-action necessity is established.",
+   "content_coverage": "Full note and argument read; targeted advisor check and cited operator, subordination and boundary theorem statements checked, 2026-10-27. No independent peer review."
+  },
+  {
    "path": "notes/classical-quantum-existence-conjecture.md",
    "title": "The classical-to-quantum existence conjecture",
    "summary": "Records the universal classical-to-quantum existence conjecture and a uniform constructive lift from predefined classical certificates to a noncommutative quantum family at positive action values accumulating at zero; excludes classical Koopman representations from the quantum target.",
@@ -39,11 +83,13 @@
    "status": "result",
    "proof_status": "proved-unrefereed",
    "retrieval_priority": 3,
-   "current_relevance": "User-directed didactic introduction to Newton existence, 0+1 construction and Dimock–Balaban methods.",
+   "current_relevance": "User-directed didactic introduction to Newton existence, 0+1 construction and Dimock–Balaban methods, with links to relativistic dispersion and Gaussian-preparation follow-ups.",
    "relations": [
     {"type": "uses", "target": "notes/quantum-blocks-construct-newton.md", "reason": "Explains its density tower and joint quantum-packet construction."},
     {"type": "uses", "target": "notes/groupoid-quantum-newton-states.md", "reason": "Presents its continuous-field state limit and distinct scales."},
-    {"type": "uses", "target": "notes/newton-nonlinear-time-cell.md", "reason": "Uses the nonlinear one-cell action and generated quartic stiffness."}
+    {"type": "uses", "target": "notes/newton-nonlinear-time-cell.md", "reason": "Uses the nonlinear one-cell action and generated quartic stiffness."},
+    {"type": "continues", "target": "notes/relativistic-dispersion-blocks.md", "reason": "Points to the separate relativistic-dispersion and spectral-wall extension."},
+    {"type": "continues", "target": "notes/central-limit-canonical-gaussian-sector.md", "reason": "Points to the separate conditional preparation and entropy-floor follow-up."}
    ],
    "surprising": false,
    "route_closure": false,
@@ -3819,9 +3865,9 @@
   {
    "path": "notes/newton-cusp-preparation-floor.md",
    "title": "A bounded Newton force, reversible preparations and a conditional action floor",
-   "summary": "A continuous bounded cusp force merges two distinct full point states. Weakly closed, affine-canonical preparation classes with reversible Newton compatibility therefore have a strictly positive covariance action infimum. A bounded-density classical a.e. flow realizes every premise and has sharp floor 1/(4 pi M).",
+   "summary": "A continuous bounded cusp force merges two distinct full point states. Weakly closed affine-canonical preparations with reversible point-trajectory compatibility have a positive covariance action infimum; a bounded-density a.e. cusp flow realizes the literal premises with sharp floor 1/(4 pi M). Its pointwise ceiling fails a two-copy canonical mixer.",
    "thematic_area": "Newton/action",
-   "strongest_result": "A continuous bounded cusp force merges two distinct full point states. Weakly closed, affine-canonical preparation classes with reversible Newton compatibility therefore have a strictly positive covariance action infimum. A bounded-density classical a.e. flow realizes every premise and has sharp floor 1/(4 pi M). Scope: Weak preparation closure, unrestricted affine canonical covariance and exact cusp compatibility are extra physical premises. The result concerns a fixed state class and covariance action, not all action differences. Density-ceiling states are an unread classical completion; records, enlarged-state alternatives, universal calibration and quantum identification remain open.",
+   "strongest_result": "A continuous bounded cusp force merges two distinct full point states. Weakly closed affine-canonical preparations with reversible point-trajectory compatibility have a positive covariance action infimum; a bounded-density a.e. cusp flow realizes the literal premises with sharp floor 1/(4 pi M), but fails a two-copy canonical mixer. Point-trajectory compatibility constrains points only when admitted and does not require nonpoint Liouville transport.",
    "status": "conditional",
    "proof_status": "proved-unrefereed",
    "retrieval_priority": 3,
@@ -3859,12 +3905,13 @@
     "positive covariance action",
     "singular covariance",
     "classical density ceiling",
+    "two-copy mixer counterexample",
     "almost everywhere reversible flow",
     "bounded-potential quantum completeness"
    ],
    "role": "result,live",
    "value": "open-mechanism,infrastructure",
-   "limitations": "Weak preparation closure, unrestricted affine canonical covariance and exact cusp compatibility are extra physical premises. The result concerns a fixed state class and covariance action, not all action differences. Density-ceiling states are an unread classical completion; records, enlarged-state alternatives, universal calibration and quantum identification remain open.",
+   "limitations": "Weak preparation closure, affine canonical covariance and point-trajectory compatibility are extra premises. The point condition is vacuous if no points are admitted; the density ceiling fails two-copy mixer closure. Records, universal calibration and quantum identification remain open.",
    "content_coverage": "Full note and proofs read. Targeted Terra written check of sections 1–4, including the singular-covariance argument and sharp classical witness. Held Teschl passages read for section 5; no numerical verification or physical premise validation."
   },
   {

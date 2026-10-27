@@ -10,9 +10,10 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
+\hypertarget{a-bounded-newton-force-reversible-preparations-and-a-conditional-action-floor}{%
 \section{A bounded Newton force, reversible preparations and a
 conditional action
-floor}\label{a-bounded-newton-force-reversible-preparations-and-a-conditional-action-floor}
+floor}\label{a-bounded-newton-force-reversible-preparations-and-a-conditional-action-floor}}
 
 \textbf{Result, 2026-10-27; written derivation, unrefereed.} A
 continuous bounded Newton force can send two different exact
@@ -23,6 +24,18 @@ affine canonical maps, closed under weak limits, and has a reversible
 evolution agreeing with these incoming Newton trajectories, then its
 finite-covariance preparations have a strictly positive covariance
 action floor. No numerical floor is assumed in this implication.
+
+\textbf{Scope clarification, 2026-10-27.} The evolution premise in §2
+requires agreement with the displayed Newton trajectories only for point
+preparations \emph{if they are admitted}; it does not require Liouville
+transport of nonpoint preparations. In particular, a positive-floor
+Gaussian class admits no point states, and identity evolution on that
+class satisfies the stated point-compatibility clause vacuously. That is
+not physical cusp transport. The density-ceiling example in §4 does
+implement the almost-everywhere Newton flow, but the later composition
+test shows it fails an independent-copy mixer. The result remains a
+conditional statement about the literal premises, not a derivation that
+nonpoint states must follow this force.
 
 The closure and state-covariance premises are substantive physical
 assumptions. An explicit classical density-ceiling model satisfies them
@@ -50,8 +63,9 @@ automatic restriction on recorded posteriors. The present argument adds
 a different conditional selector: weak closure together with an actual
 point-state merger. No literature priority is claimed.
 
+\hypertarget{existence-without-uniqueness-with-no-unbounded-force}{%
 \subsection{1. Existence without uniqueness, with no unbounded
-force}\label{existence-without-uniqueness-with-no-unbounded-force}
+force}\label{existence-without-uniqueness-with-no-unbounded-force}}
 
 Fix \(m,\gamma,R>0\), \(0<\alpha<1\), and a smooth even cutoff \(\chi\)
 with \(0\le\chi\le1\), \(\chi=1\) on \([-1,1]\) and \(\chi=0\) outside
@@ -130,8 +144,9 @@ their arrival. A later choice of departure cannot undo the earlier
 merger. An extra arrival or branch label can retain the information, but
 is an enlargement of this state space.
 
+\hypertarget{a-precise-preparation-theorem}{%
 \subsection{2. A precise preparation
-theorem}\label{a-precise-preparation-theorem}
+theorem}\label{a-precise-preparation-theorem}}
 
 Let \(\mathcal S\) be a nonempty subset of probability measures on the
 canonical plane, containing at least one measure with finite covariance.
@@ -150,12 +165,12 @@ Assume the following three properties.
   \textbf{Weak closure.} A probability-valued weak limit of a sequence
   in \(\mathcal S\) belongs to \(\mathcal S\).
 \item
-  \textbf{Reversible Newton compatibility.} The force (1) admits
-  bijective preparation evolutions \(\mathcal E_t\) on \(\mathcal S\),
-  with weakly continuous state curves. Whenever a point preparation is
-  admitted, its evolution follows its unique Newton trajectory before
-  arrival at the cusp. No affineness assumption on \(\mathcal E_t\) is
-  needed for the conclusion below.
+  \textbf{Reversible point-trajectory compatibility.} The force (1)
+  admits bijective preparation evolutions \(\mathcal E_t\) on
+  \(\mathcal S\), with weakly continuous state curves. Whenever a point
+  preparation is admitted, its evolution follows its unique Newton
+  trajectory before arrival at the cusp. No affineness assumption on
+  \(\mathcal E_t\) is needed for the conclusion below.
 \end{enumerate}
 
 For a finite-covariance preparation write
@@ -243,8 +258,9 @@ Robertson--Schrödinger form is
 proves no identification. The full Planck constant would be
 \(h=2\pi\hbar\), not \(\hbar\).
 
+\hypertarget{which-assumptions-do-the-work}{%
 \subsection{3. Which assumptions do the
-work?}\label{which-assumptions-do-the-work}
+work?}\label{which-assumptions-do-the-work}}
 
 Without weak closure, excluding exact points leaves preparations with
 arbitrarily small covariance. For example, the class of all absolutely
@@ -269,8 +285,9 @@ the full canonical preparation class, and the exact cusp force is open.
 Restricting all forces to smooth Lipschitz laws removes this particular
 selector.
 
+\hypertarget{a-classical-model-satisfies-all-three-premises}{%
 \subsection{4. A classical model satisfies all three
-premises}\label{a-classical-model-satisfies-all-three-premises}
+premises}\label{a-classical-model-satisfies-all-three-premises}}
 
 Fix a finite density ceiling \(M>0\), of reciprocal-action units, and
 let
@@ -333,9 +350,22 @@ the necessity note's two-pointer construction proves. Claiming an
 operational completion would also require a physical law of instruments
 and records preserving its allowed states.
 
+\textbf{Composition test, 2026-10-27.} The witness \(\mathcal S_M\) is
+not closed under the independent-copy canonical mixer and
+marginalization used in the subsequent
+\href{central-limit-canonical-gaussian-sector.md}{central-limit
+calculation}. Indeed, for \(f=M1_E\) with \(E=-E\) and area \(1/M\), the
+law of \((Z_1+Z_2)/\sqrt2\) from independent copies has density
+\(f_+(0)=2\int f(z)f(-z)\,dz=2M\), and is continuous near zero. The
+covariance and its action are unchanged for identical copies, but the
+pointwise density ceiling is violated. The theorem above and this
+classical single-system witness remain valid at their stated scope; they
+do not establish the added multi-copy closure.
+
+\hypertarget{a-supplied-positive-hbar-gives-a-complete-quantum-comparison}{%
 \subsection{\texorpdfstring{5. A supplied positive \(\hbar\) gives a
 complete quantum
-comparison}{5. A supplied positive \textbackslash hbar gives a complete quantum comparison}}\label{a-supplied-positive-hbar-gives-a-complete-quantum-comparison}
+comparison}{5. A supplied positive \textbackslash hbar gives a complete quantum comparison}}\label{a-supplied-positive-hbar-gives-a-complete-quantum-comparison}}
 
 For every \(\hbar>0\), the same bounded real potential has
 
@@ -363,7 +393,8 @@ joint canonical probabilities with unrestricted classical conditioning.
 No such identification was used in section 2. No relativistic premise
 enters, so no \(c\) is needed.
 
-\subsection{6. Consequence for STATE}\label{consequence-for-state}
+\hypertarget{consequence-for-state}{%
+\subsection{6. Consequence for STATE}\label{consequence-for-state}}
 
 The link from Lipschitz control to Newton's polygons now has a
 complement: continuous bounded forces suffice for polygon existence but
