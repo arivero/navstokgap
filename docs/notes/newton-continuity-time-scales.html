@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton without a Lipschitz bound: time scales, uniqueness and explicit hbar</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Newton without a Lipschitz bound: time scales, uniqueness and
+explicit hbar</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/newton-continuity-time-scales.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-continuity-time-scales.pdf">PDF</a></p><p><strong>Result, 2026-10-27; written derivation, unrefereed.</strong>
+For a scalar conservative repelling force, the time to reach its
+zero-force point decides whether rest is unique. A logarithmic family
+has an exact threshold: forces behaving as <span
+class="math inline">\(q[\log(\ell/|q|)]^\beta\)</span> have unique
+motion at rest for <span class="math inline">\(0&lt;\beta\le2\)</span>,
+despite an unbounded force derivative; for <span
+class="math inline">\(\beta&gt;2\)</span> they admit arbitrary waiting
+and full point-state mergers. On logarithmic spatial annuli the crossing
+times scale as <span class="math inline">\(n^{-\beta/2}\)</span>. Their
+sum, rather than a uniform Lipschitz constant, decides the threshold.
+The action of the shrinking annuli tends to zero on both sides. A local
+quantum residual becomes large at action comparable with a supplied
+<span class="math inline">\(\hbar\)</span>, but does not select its
+value.</p>
+<p><strong>Targeted check (GPT-6.1 Terra, 2026-10-27).</strong> Terra
+checked the arrival criterion, uniqueness and polygon limits, and
+equations (3)–(14). Its correction restricting the infinite-arrival-time
+statement to zero-energy trajectories is incorporated below. This
+written check does not validate the physical preparation premises.</p>
+<p>This is a refinement of the <a href="balaban-ode-lesson.html">ODE
+lesson</a>, not a claim that Lipschitz regularity is necessary. The <a
+href="newton-cusp-preparation-floor.html">bounded-cusp preparation
+theorem</a> uses an actual merger; unbounded slope alone does not
+trigger it. The energy separation below is an elementary
+continuous-force special case of the subject studied by López Pouso
+[<span class="citation"
+data-cites="LopezPouso2005">@LopezPouso2005</span>; publisher metadata
+and abstract read, article body not obtained]. Its general <span
+class="math inline">\(W^{2,1}\)</span> theorem is not used as an
+unexamined premise here. Teschl [<span class="citation"
+data-cites="TeschlODE2012">@TeschlODE2012</span>, section 2.7, pp.54–56
+and Problem 2.25, p.58; passages read] supplies the Euler compactness
+construction and the different, general first-order Osgood criterion.
+See the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Teschl_ODE_2012.md">source
+companion</a>. No novelty is claimed.</p>
+<h2 id="the-conservative-second-order-arrival-test">1. The conservative
+second-order arrival test</h2>
+<p>Near zero let <span class="math inline">\(a\)</span> be continuous,
+odd, positive on <span class="math inline">\((0,r_0)\)</span>, zero at
+zero and smooth away from zero. Consider</p>
+<p><span class="math display">\[
+\ddot q=a(q),\qquad W(q)=\int_0^q a(s)\,ds\quad(q\ge0),
+\qquad V(q)=-mW(|q|),\quad m&gt;0.
+\tag{1}
+\]</span></p>
+<p>Assume a bounded continuous global extension of the force, smooth
+away from zero, by cutting off the potential outside a neighborhood of
+zero. The <a href="newton-cusp-preparation-floor.html">bounded-cusp
+argument</a>, section 1, then gives global existence and bounds
+preventing escape. The issue remaining here is uniqueness, not
+existence.</p>
+<p>Conservation of <span class="math inline">\(E=m\dot
+q^2/2+V(q)\)</span> follows by the chain rule since <span
+class="math inline">\(V\in C^1\)</span>. Any solution starting at rest
+at zero has <span class="math inline">\(E=0\)</span>. On a positive
+departing segment its velocity must be</p>
+<p><span class="math display">\[
+\dot q=\sqrt{2W(q)},\qquad
+\mathcal T(q)=\int_0^q\frac{ds}{\sqrt{2W(s)}}.
+\tag{2}
+\]</span></p>
+<p><strong>Arrival criterion.</strong> If <span
+class="math inline">\(\mathcal T(q)=\infty\)</span> for one, hence every
+small <span class="math inline">\(q&gt;0\)</span>, rest is the unique
+local solution from <span class="math inline">\((0,0)\)</span>. If <span
+class="math inline">\(\mathcal T(q)&lt;\infty\)</span>, the inverse
+<span class="math inline">\(Q=\mathcal T^{-1}\)</span> constructs
+departures <span class="math inline">\(q(t)=\pm Q(t-t_0)\)</span> after
+every waiting time <span class="math inline">\(t_0\)</span>.</p>
+<p>For the first implication, a nonconstant solution has an excursion of
+one sign starting from zero. Its velocity cannot vanish inside that
+excursion because <span class="math inline">\(W&gt;0\)</span>, and
+separation of variables would give a finite value for the divergent
+integral (2). For the converse, <span
+class="math inline">\(Q&#39;=\sqrt{2W(Q)}\)</span> and <span
+class="math inline">\(Q&#39;&#39;=a(Q)\)</span>. Both tend to zero at
+departure, so adjoining rest gives a <span
+class="math inline">\(C^2\)</span> Newton trajectory. Reversing the two
+departures supplies two different incoming full states that merge at
+zero in finite time, exactly as in the cusp note.</p>
+<p>For <span class="math inline">\(a(q)=c q^\alpha\)</span> this test
+reproduces the familiar <span class="math inline">\(\alpha&lt;1\)</span>
+nonuniqueness threshold: its integrand is proportional to <span
+class="math inline">\(q^{-(1+\alpha)/2}\)</span>. The logarithmic family
+below tests the more delicate border where no power-law Lipschitz
+constant exists.</p>
+<h2 id="an-exact-logarithmic-family">2. An exact logarithmic family</h2>
+<p>Fix <span class="math inline">\(\Omega,\ell&gt;0\)</span>, <span
+class="math inline">\(\beta&gt;0\)</span> and put <span
+class="math inline">\(r=\beta/2\)</span>. For sufficiently small <span
+class="math inline">\(q&gt;0\)</span>, with <span
+class="math inline">\(L=\log(\ell/q)&gt;\max\{1,r\}\)</span>, set</p>
+<p><span class="math display">\[
+W(q)=\frac{\Omega^2}{2}q^2 L^\beta,\qquad
+a(q)=\Omega^2q\bigl(L^\beta-rL^{\beta-1}\bigr).
+\tag{3}
+\]</span></p>
+<p>Extend <span class="math inline">\(a\)</span> oddly near zero and the
+potential with a smooth cutoff farther out. This gives a bounded <span
+class="math inline">\(C^1\)</span> potential and continuous bounded
+force; <span class="math inline">\(a(0)=0\)</span> since <span
+class="math inline">\(q L^\beta\to0\)</span>. Its derivative on the
+positive side is</p>
+<p><span class="math display">\[
+a&#39;(q)=\Omega^2\left[L^\beta-\frac{3\beta}{2}L^{\beta-1}
+              +\frac{\beta(\beta-1)}2L^{\beta-2}\right],
+\tag{4}
+\]</span></p>
+<p>which diverges for every <span
+class="math inline">\(\beta&gt;0\)</span>. Thus none of these forces is
+locally Lipschitz at zero.</p>
+<p>Nevertheless the energy-zero speed and arrival integral are
+exact:</p>
+<p><span class="math display">\[
+\dot q=\Omega qL^r,\qquad
+\mathcal T(q)=\frac1\Omega\int_L^\infty u^{-r}\,du.
+\tag{5}
+\]</span></p>
+<p>Consequently rest is unique for <span
+class="math inline">\(\beta\le2\)</span>. For <span
+class="math inline">\(\beta&gt;2\)</span>,</p>
+<p><span class="math display">\[
+\mathcal T(q)=\frac{L^{1-r}}{\Omega(r-1)},\qquad
+Q(t)=\ell\exp\left(-[\Omega(r-1)t]^{-1/(r-1)}\right).
+\tag{6}
+\]</span></p>
+<p>The formula for <span class="math inline">\(Q\)</span> is valid until
+the departure leaves the region where (3) is used. It is flat to every
+order at <span class="math inline">\(t=0\)</span>, so an exactly resting
+body and one that leaves after a delay satisfy the same Newton equation
+and initial data.</p>
+<p>For <span class="math inline">\(\beta\le2\)</span> the <em>whole</em>
+extended IVP is unique. Away from zero this is ordinary local Lipschitz
+uniqueness. At zero with nonzero initial velocity, the conserved-energy
+first-order equation has a nonzero square root and a <span
+class="math inline">\(C^1\)</span> right-hand side near the crossing, so
+it gives unique passage. At zero velocity the arrival criterion applies.
+Bounded force then gives a global reversible point flow. Its dependence
+on initial state is continuous: common finite-time bounds give
+compactness for any converging initial sequence; every subsequential
+limit solves the same unique IVP. Thus all subsequences have the same
+limit. A divergent local slope has not destroyed reversible
+mechanics.</p>
+<p>At the borderline <span class="math inline">\(\beta=2\)</span>, the
+outgoing energy-zero solution from <span
+class="math inline">\(q_0&gt;0\)</span> is particularly informative:</p>
+<p><span class="math display">\[
+q(t)=\ell\left(\frac{q_0}{\ell}\right)^{e^{-\Omega t}},
+\qquad \dot q(0)=\Omega q_0\log(\ell/q_0).
+\tag{7}
+\]</span></p>
+<p>While it remains in the logarithmic region, it stays continuous as
+<span class="math inline">\(q_0\downarrow0\)</span> at every fixed
+finite time, although its position sensitivity diverges. This is a
+genuine example of unique stable motion without a Lipschitz dependence
+bound at rest.</p>
+<p>The general first-order Osgood sufficient test applied directly to a
+modulus of size <span class="math inline">\(s[\log(1/s)]^\beta\)</span>
+reaches only <span class="math inline">\(\beta\le1\)</span>. The
+stronger range <span class="math inline">\(1&lt;\beta\le2\)</span> above
+uses the conservative Newton structure and energy; failure of that
+first-order sufficient test is not a proof of nonuniqueness.</p>
+<h2 id="the-scale-by-scale-meaning-for-newton-polygons">3. The
+scale-by-scale meaning for Newton polygons</h2>
+<p>Let <span class="math inline">\(q_n=\ell e^{-n}\)</span> with <span
+class="math inline">\(n\)</span> sufficiently large. Along the
+zero-energy trajectory, the time for the annulus <span
+class="math inline">\(q_{n+1}&lt;q&lt;q_n\)</span> is</p>
+<p><span class="math display">\[
+\tau_n=\frac1\Omega\int_n^{n+1}u^{-r}\,du,
+\qquad \tau_n\sim\frac1{\Omega n^r}.
+\tag{8}
+\]</span></p>
+<p>On this annulus the local acceleration slope bound is of order <span
+class="math inline">\(\Lambda_n=\Omega^2n^\beta\)</span>. The short-cell
+scale <span class="math inline">\(\Lambda_n^{-1/2}\)</span> is therefore
+of the same order as <span class="math inline">\(\tau_n\)</span>. One
+can subdivide an annulus crossing into a fixed number of shorter steps
+to obtain a small local Lipschitz amplification parameter. There is no
+uniform slope bound across all annuli.</p>
+<p>The issue is whether infinitely many controlled annulus crossings can
+fit into finite physical time:</p>
+<p><span class="math display">\[
+\sum_{n\ge N}\tau_n
+\begin{cases}
+=\infty,&amp;\beta\le2,\\
+&lt;\infty,&amp;\beta&gt;2.
+\end{cases}
+\tag{9}
+\]</span></p>
+<p>For <span class="math inline">\(\beta\le2\)</span>, a zero-energy
+trajectory cannot reach the infinite-depth boundary at zero in finite
+time. For <span class="math inline">\(\beta&gt;2\)</span>, perfectly
+regular motion on each finite collection of annuli reaches that boundary
+in finite time, and the branch datum is missing there. Local estimates
+at every finite scale do not by themselves control their infinite
+composition. This is the useful multiscale connection with the Balaban
+lesson; it is not a transfer of his field-theory proof.</p>
+<p>For the unique regime, arbitrary-mesh Euler polygons, and the
+lesson’s mixed kick–drift polygons, converge uniformly on every fixed
+finite time interval. Bounded force gives common position and momentum
+bounds; uniform continuity gives a vanishing integral residual;
+compactness supplies solution subsequences; uniqueness makes the whole
+family converge. No <span class="math inline">\(O(\text{mesh})\)</span>
+rate is asserted here.</p>
+<p>In the nonunique regime, exact zero initial data make these
+deterministic polygons remain at rest on every partition. However,
+preparations <span class="math inline">\(q_0\downarrow0\)</span>, <span
+class="math inline">\(\dot q_0=\Omega q_0L_0^r\downarrow0\)</span>
+have</p>
+<p><span class="math display">\[
+L(t)=\left[L_0^{1-r}+\Omega(r-1)t\right]^{-1/(r-1)}
+       \longrightarrow [\Omega(r-1)t]^{-1/(r-1)}.
+\tag{10}
+\]</span></p>
+<p>Thus they converge to the nonzero departure (6) at fixed small <span
+class="math inline">\(t&gt;0\)</span>. For each positive <span
+class="math inline">\(q_0\)</span>, choose a fine enough polygon to
+approximate that regular trajectory; a diagonal sequence then has
+vanishing mesh and vanishing initial error but a departing limit.
+Refinement is not jointly stable with preparation refinement at zero.
+This is a stronger failure than an unbounded numerical error estimate,
+while keeping the exact-zero polygon’s resting limit explicit.</p>
+<h2 id="what-happens-to-action-with-hbar-kept-explicit">4. What happens
+to action, with hbar kept explicit?</h2>
+<p>The positive outgoing momentum is <span
+class="math inline">\(p(q)=m\Omega qL^r\)</span>. Its canonical action
+from zero to <span class="math inline">\(q\)</span> is</p>
+<p><span class="math display">\[
+\mathcal J(q)=\int_0^q p(s)\,ds
+       =m\Omega\ell^2\int_L^\infty e^{-2u}u^r\,du.
+\tag{11}
+\]</span></p>
+<p>For <span class="math inline">\(L&gt;r/2\)</span>, elementary bounds
+give</p>
+<p><span class="math display">\[
+\frac{m\Omega}2q^2L^r
+\le\mathcal J(q)
+\le\frac{m\Omega q^2L^r}{2-r/L}.
+\tag{12}
+\]</span></p>
+<p>The lower bound uses <span class="math inline">\(u^r\ge L^r\)</span>;
+the upper bound uses <span class="math inline">\((L+v)^r\le L^r
+e^{rv/L}\)</span> after writing <span
+class="math inline">\(u=L+v\)</span>. Therefore <span
+class="math inline">\(\mathcal J(q)\sim(m\Omega/2)q^2L^r\to0\)</span>
+for every <span class="math inline">\(\beta&gt;0\)</span>. The temporal
+threshold (9) creates no positive action threshold.</p>
+<p>There is still a concrete quantum comparison. In the local region
+<span class="math inline">\(V=-p(q)^2/(2m)\)</span>, take the stationary
+energy-zero test functions</p>
+<p><span class="math display">\[
+\psi_\pm(q)=p(q)^{-1/2}
+          \exp\left(\pm\frac{i}{\hbar}\mathcal J(q)\right),
+\qquad H_\hbar=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2}+V(q).
+\tag{13}
+\]</span></p>
+<p>Their eikonal and first-derivative transport terms cancel exactly.
+Writing <span class="math inline">\(b(q)=p(q)^{-1/2}\)</span> gives
+<span class="math inline">\(H_\hbar\psi_\pm
+=-(\hbar^2/2m)b&#39;&#39;e^{\pm i\mathcal J/\hbar}\)</span> and the
+exact local ratio</p>
+<p><span class="math display">\[
+\frac{|H_\hbar\psi_\pm|}{|V\psi_\pm|}
+=\left[\frac{\hbar}{m\Omega q^2L^r}\right]^2
+       \left|\frac34-\frac rL+\frac{r(r+2)}{4L^2}\right|
+\sim\frac{3\hbar^2}{16\mathcal J(q)^2}.
+\tag{14}
+\]</span></p>
+<p>For example, the differentiation behind this identity is <span
+class="math inline">\(p&#39;/p=(1-r/L)/q\)</span> and <span
+class="math inline">\(p&#39;&#39;/p=-r[1-(r-1)/L]/(q^2L)\)</span>; then
+<span
+class="math inline">\(b&#39;&#39;/b=3(p&#39;/p)^2/4-p&#39;&#39;/(2p)\)</span>.
+Equation (14) is a local residual identity, not an error bound for a
+normalized state or the full propagator.</p>
+<p>At fixed <span class="math inline">\(\hbar&gt;0\)</span>, action
+comparable with <span class="math inline">\(\hbar\)</span> makes the
+local residual of this trajectory ansatz order one even in the
+classically unique regime. Every sufficiently small positive <span
+class="math inline">\(\hbar\)</span> defines a radius <span
+class="math inline">\(q_\hbar\)</span> by <span
+class="math inline">\(\mathcal J(q_\hbar)=\hbar\)</span>, and that
+radius tends to zero as <span class="math inline">\(\hbar\to0\)</span>.
+The bounded-potential Hamiltonian has global unitary dynamics at each
+positive <span class="math inline">\(\hbar\)</span> by the cusp note’s
+held Kato–Rellich input. These facts neither require <span
+class="math inline">\(\hbar=0\)</span> to be a member of the same state
+theory nor select a positive numerical lower bound across the family. No
+relativistic ingredient or <span class="math inline">\(c\)</span> is
+used.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The ODE lesson’s Lipschitz proof is sufficient, not necessary. A
+sharper conservative criterion identifies exactly when this logarithmic
+force family has full point-state mergers, so the preparation-floor
+theorem must invoke genuine finite-time accessibility rather than
+unbounded slope. Scale-by-scale time control and action control are
+different: the crossing-time sum changes at <span
+class="math inline">\(\beta=2\)</span> while the local action tends to
+zero throughout. The open physical step remains selection of admissible
+preparations, records and a common positive phase scale.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

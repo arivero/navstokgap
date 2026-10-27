@@ -117,6 +117,10 @@ countermodels explicit. The [bounded-cusp test](../notes/newton-cusp-preparation
 turns a full point-state merger into a positive covariance action floor
 under weak preparation closure, canonical covariance and reversible Newton
 compatibility; a classical density-ceiling completion meets these premises.
+The [continuity calculation](../notes/newton-continuity-time-scales.md)
+sharpens the force criterion: logarithmic unbounded slopes retain unique
+motion through exponent two; zero-energy annulus times, not slope alone,
+decide finite-time mergers. Their action still tends to zero.
 Next test independent physical justification of preparation/record closure
 and whether composition identifies the scale with $\hbar$.
 Alpoge and Yang--Mills are deferred;

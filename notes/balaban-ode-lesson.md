@@ -189,6 +189,19 @@ bounds and escape solution appear in the time-blocking note, section 6.
 Continuity alone can give local existence; the Lipschitz assumption above
 also supplies the uniqueness and quantitative stability used in (10).
 
+A bounded slope is sufficient, not necessary. The
+[continuity calculation](newton-continuity-time-scales.md) gives bounded
+forces locally behaving as $q[\log(\ell/|q|)]^\beta$, with unbounded
+slope but unique global motion for $0<\beta\le2$. For $\beta>2$,
+zero-energy trajectories reach the origin in finite time and admit
+waiting and branch choices. The exact criterion is a conservative
+arrival-time integral. It also explains how controlled crossings of
+individual spatial annuli can accumulate at a missing state rule.
+The [bounded-cusp test](newton-cusp-preparation-floor.md) separately
+converts a full point-state merger into a positive covariance action
+floor under weak preparation closure and canonical covariance, with an
+explicit classical density-ceiling completion as a control.
+
 An endpoint problem fixes $q(0)$ and $q(T)$ rather than initial velocity.
 It has a separate possible singularity. For the harmonic oscillator the
 full phase-space derivative is
@@ -330,8 +343,8 @@ partitions, allowing mixed kick orders. It complements the endpoint
 Green-function calculation and explains the normalized nonlinear cell.
 The research question is now sharper: which independent physical law
 selects the weight and its action multiplier, beyond the regularity
-already available from classical motion? The next candidate test is
-branch competition in a nonlinear retained interaction, keeping the
-full initial-value description as its classical control. These are
-written derivations and a pedagogical comparison, not an independent
-proof of action necessity.
+already available from classical motion? The
+[branch-response test](newton-branch-response-action.md), cusp test and
+continuity calculation develop that question further. Their physical
+selectors remain explicit premises. These are written derivations and
+a pedagogical comparison, not an independent proof of action necessity.

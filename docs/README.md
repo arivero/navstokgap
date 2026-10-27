@@ -132,6 +132,9 @@ history in which Newton carries interference from optics into mechanics.
   spectral draft, earlier foundations and current refinement paper.
 - [Teschl 2009](Teschl_QuantumMechanics_2009.md) and
   [Pitman–Yor 2018](batches/B06/PitmanYor2018.md): verified operator and bridge anchors.
+- [Teschl 2012](Teschl_ODE_2012.md): Euler compactness, Peano existence
+  and the Osgood uniqueness criterion; selected passages read for the
+  Newton continuity lesson. The personal-copy PDF is kept locally.
 - [B08](../references/batches/B08.md): four-source audit of the regulator-limit
   results, including [Rindler's oscillations](batches/B08/Rindler2017.md) and
   [Guillemin–Sternberg stationary phase](batches/B08/GuilleminSternberg2010.md).

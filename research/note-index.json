@@ -446,9 +446,9 @@
   {
    "path": "notes/balaban-ode-lesson.md",
    "title": "Balaban through Newton's polygons: a 0+1 lesson",
-   "summary": "Pedagogical 0+1 comparison constructs nonlinear Newton initial-value motion from arbitrary unequal force polygons with mixed kick orders, using explicit stability/residual/Cauchy bounds. Connects this ODE construction with endpoint actions, Schur integration, normalized nonlinear laws and explicit hbar.",
+   "summary": "Pedagogical 0+1 comparison constructs nonlinear Newton initial-value motion from arbitrary unequal force polygons with mixed kick orders, using explicit stability/residual/Cauchy bounds. Connects this ODE construction with endpoint actions, Schur integration, normalized nonlinear laws and explicit hbar. The continuity sequel sharpens uniqueness beyond Lipschitz slopes and separates genuine cusp mergers from projection caustics.",
    "thematic_area": "Newton/action",
-   "strongest_result": "Pedagogical 0+1 comparison constructs nonlinear Newton initial-value motion from arbitrary unequal force polygons with mixed kick orders, using explicit stability/residual/Cauchy bounds. Connects this ODE construction with endpoint actions, Schur integration, normalized nonlinear laws and explicit hbar. Scope: Global ODE construction assumes a globally Lipschitz acceleration; local forces require continuation control. Weighted-law and Euclidean/real-time identification remain separate physical premises. This lesson supplies no independent positivity argument for hbar.",
+   "strongest_result": "Pedagogical 0+1 comparison constructs nonlinear Newton initial-value motion from arbitrary unequal force polygons with mixed kick orders, using explicit stability/residual/Cauchy bounds. Connects this ODE construction with endpoint actions, Schur integration, normalized nonlinear laws and explicit hbar. Scope: Global ODE construction assumes a globally Lipschitz acceleration; local forces require continuation control. Weighted-law and Euclidean/real-time identification remain separate physical premises. This lesson supplies no independent positivity argument for hbar. Section 4 now points to the conservative logarithmic threshold and conditional cusp preparation floor; Lipschitz regularity is sufficient, not necessary.",
    "status": "result",
    "proof_status": "proved-unrefereed",
    "retrieval_priority": 3,
@@ -468,6 +468,11 @@
      "type": "uses",
      "target": "notes/newton-nonlinear-time-cell.md",
      "reason": "Uses its full normalized convex insertion and generated quartic-centre curvature as the nonlinear weighted example."
+    },
+    {
+     "type": "continues",
+     "target": "notes/newton-continuity-time-scales.md",
+     "reason": "Uses the maintained non-Lipschitz sequel to qualify sufficient regularity and explain annulus-time accumulation."
     }
    ],
    "surprising": false,
@@ -487,7 +492,7 @@
    "role": "result,synthesis",
    "value": "infrastructure,open-mechanism",
    "limitations": "Global ODE construction assumes a globally Lipschitz acceleration; local forces require continuation control. Weighted-law and Euclidean/real-time identification remain separate physical premises. This lesson supplies no independent positivity argument for hbar.",
-   "content_coverage": "Full lesson read after writing; Terra targeted written check of the causal proof and conceptual boundaries. Source nonlinear-cell statements retain their own proof scope. No numerical/symbolic verification or claim of complete proof review."
+   "content_coverage": "Full lesson read after writing; Terra targeted written check of the causal proof and conceptual boundaries. Source nonlinear-cell statements retain their own proof scope. No numerical/symbolic verification or claim of complete proof review. October 27 update: new section-4 links and changed STATE consequence read with surrounding uniqueness/continuation argument; new sequel has its own targeted check."
   },
   {
    "path": "notes/block-apparatus-composition.md",
@@ -3597,6 +3602,46 @@
    "value": "open-mechanism,infrastructure",
    "limitations": "Euclidean positive-weight family at fixed cell parameters with d>0. The response ceiling and physical branch law are independent premises; alternate zero-action extensions are not excluded. No universal quantum identification or Planck value is proved.",
    "content_coverage": "Full note and proofs read. Targeted Terra written check of variance, action bounds, source scaling and branch/spinodal formulas; its zero-extension and endpoint refinements applied. No numerical/symbolic verification or independent validation of the physical premises."
+  },
+  {
+   "path": "notes/newton-continuity-time-scales.md",
+   "title": "Newton without a Lipschitz bound: time scales, uniqueness and explicit hbar",
+   "summary": "A conservative arrival integral gives an exact logarithmic-force uniqueness threshold beta=2 despite unbounded local slopes. Zero-energy annulus times sum as n^(-beta/2); arbitrary mixed-order Newton polygons converge in the unique regime, while vanishing preparation error reaches a departing branch above threshold. Local actions vanish on both sides; an exact stationary WKB residual scales as 3 hbar^2/(16 J^2).",
+   "thematic_area": "Newton/action",
+   "strongest_result": "A conservative arrival integral gives an exact logarithmic-force uniqueness threshold beta=2 despite unbounded local slopes. Zero-energy annulus times sum as n^(-beta/2); arbitrary mixed-order Newton polygons converge in the unique regime, while vanishing preparation error reaches a departing branch above threshold. Local actions vanish on both sides; an exact stationary WKB residual scales as 3 hbar^2/(16 J^2). Scope: Scalar conservative bounded-force extension, smooth away from zero. Infinite arrival times refer to zero-energy trajectories; positive-energy crossings remain possible. Polygon convergence has no asserted mesh rate. WKB result is a local residual identity, not a normalized-state or propagator error bound. Positive hbar and the physical preparation/record selectors are not derived.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Sharpens the ODE analogy and the force premise for the conditional preparation-floor mechanism; separates time-scale completeness from local action and supplied quantum phase.",
+   "relations": [
+    {
+     "type": "continues",
+     "target": "notes/balaban-ode-lesson.md",
+     "reason": "Extends polygon convergence beyond a bounded local slope using compactness and a conservative uniqueness test."
+    },
+    {
+     "type": "continues",
+     "target": "notes/newton-cusp-preparation-floor.md",
+     "reason": "Identifies when an unbounded slope really gives a full point merger; retains the independent preparation closure premise."
+    }
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": [
+    "non-Lipschitz Newton force",
+    "conservative arrival criterion",
+    "logarithmic uniqueness threshold",
+    "beta equals two",
+    "annulus time sum",
+    "mixed polygon compactness",
+    "preparation instability",
+    "vanishing canonical action",
+    "explicit hbar WKB residual"
+   ],
+   "role": "result,live",
+   "value": "open-mechanism,infrastructure",
+   "limitations": "Scalar conservative bounded-force extension, smooth away from zero. Infinite arrival times refer to zero-energy trajectories; positive-energy crossings remain possible. Polygon convergence has no asserted mesh rate. WKB result is a local residual identity, not a normalized-state or propagator error bound. Positive hbar and the physical preparation/record selectors are not derived.",
+   "content_coverage": "Full note and derivations read. Targeted Terra written check of threshold, IVP uniqueness, polygon convergence, action bounds and WKB residual; zero-energy scope correction applied. Selected Teschl passages read; Lopez Pouso publisher abstract and metadata only. No numerical verification or physical premise validation."
   },
   {
    "path": "notes/newton-cusp-preparation-floor.md",
