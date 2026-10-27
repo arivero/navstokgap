@@ -1,15 +1,15 @@
 {
  "schema_version": 1,
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "coverage": "Initial 175-note corpus read in full, including appendices and corrections; later additions have entry-specific coverage. notes/index.md is the catalog, not a scientific entry.",
  "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
  "notes": [
   {
    "path": "notes/lean-verification-quantum-newton.md",
    "title": "Quantum-to-Newton results: literature and Lean verification targets",
-   "summary": "Precise classical, operator, packet, sharpness, wall, cusp, relativistic and Euclidean Lean targets with close prior art and a finite rational drift-kick versus kick-drift comparison for newtonlean.",
+   "summary": "Precise classical, operator, packet, sharpness, wall, cusp, relativistic and Euclidean Lean targets with close prior art and a finite rational drift-kick versus kick-drift comparison for newtonlean; exact constant-force overlap exposes joint-limit ray separation and a variable-mass example shows factor-ordering ambiguity.",
    "thematic_area": "refinement/comparison",
-   "strongest_result": "An explicit weighted finite-partition bound compares newtonlean's drift-then-kick cell with the quantum note's kick-then-drift cell; exact quantified verification targets preserve model, domain and limit scope.",
+   "strongest_result": "An explicit weighted finite-partition bound compares newtonlean's two cell orders. At fixed h, arbitrary mixed orders converge to the same unitary; an exact constant-force Gaussian overlap shows joint-limit ray separation despite the common classical point. Two self-adjoint variable-mass orderings share a classical symbol and differ by a nonconstant h-squared potential.",
    "status": "result",
    "proof_status": "mixed",
    "retrieval_priority": 3,
@@ -23,11 +23,11 @@
    ],
    "surprising": false,
    "route_closure": false,
-   "keys": ["Lean 4", "newtonlean", "constructive lifting", "C1,1", "Trotter", "boundary impulse", "cusp selection", "relativistic", "drift kick", "literature priority"],
+   "keys": ["Lean 4", "newtonlean", "constructive lifting", "C1,1", "Trotter", "boundary impulse", "cusp selection", "relativistic", "drift kick", "ordering ambiguity", "Gaussian overlap", "literature priority"],
    "role": "synthesis,infrastructure",
    "value": "synthesis,known-boundary",
    "limitations": "Specifications are not compiled Lean proofs; mathematical claims retain the linked notes' unrefereed status. New-to-repository does not establish literature priority. Newtonlean remains core-only and requires an explicit model and completion bridge.",
-   "content_coverage": "Full new note and relevant maintained derivations read; Belloni et al., Borns-Weil and Fang, Fang and Qu, Athanassoulis-Paul and Chabu passages, plus selected newtonlean sources and current mathlib documentation, checked."
+   "content_coverage": "Full note and relevant maintained derivations read; Belloni et al., Borns-Weil and Fang, Fang and Qu, Athanassoulis-Paul and Chabu passages, selected newtonlean sources, and ordering references checked. The mixed-order and exact-overlap additions are written derivations without independent review."
   },
   {
    "path": "notes/dirichlet-wall-impulse.md",

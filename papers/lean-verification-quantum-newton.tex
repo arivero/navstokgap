@@ -487,13 +487,190 @@ expansion requires separate user direction. In either route, check the
 actual compiled theorem types and axiom dependencies at the pinned
 toolchain.
 
+\hypertarget{ordering-at-finite-mesh-and-in-the-joint-limit}{%
+\subsection{11. Ordering at finite mesh and in the joint
+limit}\label{ordering-at-finite-mesh-and-in-the-joint-limit}}
+
+\textbf{Result, written derivation, 2026-10-28; no priority claim.} The
+ordering difference has three distinct levels: the two finite maps are
+different; either order, even mixed cell by cell, reaches the same
+\emph{specified} quantum Hamiltonian when the mesh goes to zero at fixed
+\(\hbar\); yet their quantum vectors need not approach the same ray
+along every joint \(\hbar\), mesh limit. The common classical limit of
+the two schemes was already established in the
+\href{balaban-ode-lesson.md}{ODE lesson}, including mixed orders.
+
+\hypertarget{fixed-action-and-finite-products}{%
+\subsubsection{11.1 Fixed action and finite
+products}\label{fixed-action-and-finite-products}}
+
+For each \(\hbar>0\), use the quantum operators of §2. With
+\(V\in C^{1,1}\) and \(V'\) globally Lipschitz, allow \textbf{either}
+\(D_sK_s\) or \(K_sD_s\) in each cell. For every fixed \(\hbar,T>0\)
+there is a finite \(C_{\hbar,T}\) such that every such mixed product
+obeys \[
+ \|S_{\hbar,\pi}^{\rm mixed}(T)f-U_\hbar(T)f\|_2
+ \le C_{\hbar,T}|\pi|\,\|N_\hbar f\|_2,\quad f\in D(N_\hbar). \tag{I1}
+\] The proof swaps the kinetic and potential factors in the
+\href{lipschitz-certificate-quantum-lift.md}{lift}, equations
+(11a)--(13). The commutator changes sign but not norm; the same
+graph-growth exponents bound both orders. Apply either local bound on
+each cell and telescope along the exact orbit. Density and unitarity
+extend strong convergence to all \(L^2\) states. Neither (I1) nor its
+constant asserts uniformity as \(\hbar\to0\).
+
+At finite \(s\) the products generally differ. For a smooth subquadratic
+\(V\) and \(f\in\mathcal S\), their second-order strong expansion is \[
+ (D_sK_s-K_sD_s)f
+ =-\frac{s^2}{\hbar^2}[T_\hbar,V(Q)]f+o(s^2)
+ =\frac{is^2}{2m\hbar}
+       \big(P_\hbar V'(Q)+V'(Q)P_\hbar\big)f+o(s^2). \tag{I1a}
+\] The remainder is for a fixed \(\hbar\) and vector; no operator-norm
+Baker--Campbell--Hausdorff expansion for these unbounded operators is
+asserted.
+
+For the coherent Gaussian (1), the spread and comparison estimates (A2)
+also hold with the corresponding mixed classical polygon. In a
+drift-first cell, apply the kick after the drift: the force deviation is
+bounded by \(L\) times the position spread \emph{after} that drift, at
+most \((1+s\omega)W_j\). This gives the same upper recurrence as in the
+lift: \[
+ \begin{aligned}
+ W_{j+1}&\le(1+s_j\omega)
+          \left(1+\frac{s_jL}{m\omega}\right)W_j,\\
+ e_{j+1}&\le(1+s_j\omega)
+          \left(1+\frac{s_jL}{m\omega}\right)e_j+
+          \frac{s_jL}{m\omega}(1+s_j\omega)W_j.
+ \end{aligned} \tag{I2}
+\] Here \(e_j\) is the weighted distance between quantum means and the
+classical vertices using the \textbf{same} cell orders. Thus the bounds
+(A2) are valid for every mixed order. The ODE lesson gives the
+independent \(O(|\pi|)\) classical polygon error. Both time-order
+schemes therefore recover the same classical means and smooth Weyl
+observable values for every joint \(\hbar,|\pi|\to0\).
+
+For a uniform step \(s\) the finite classical maps are conjugate:
+\[\operatorname{DK}_s
+ =K_s^{\rm cl}\operatorname{KD}_s(K_s^{\rm cl})^{-1},\qquad
+ (\operatorname{DK}_s)^n
+ =K_s^{\rm cl}(\operatorname{KD}_s)^n(K_s^{\rm cl})^{-1}. \tag{I3}
+\] Exactly the same algebra holds for the quantum unitaries:
+\((K_sD_s)^n=K_s(D_sK_s)^nK_s^{-1}\). This is not equality on the same
+initial state: the conjugacy changes the endpoint identification. It
+gives no single conjugator for general unequal steps. The two
+first-order symplectic Euler choices and their adjoint relation are
+established in the
+\href{https://escholarship.org/uc/item/9wm0q93j}{variational-integrator
+literature} (symplectic Euler example read).
+
+\hypertarget{exact-distinguishability-under-a-constant-force}{%
+\subsubsection{11.2 Exact distinguishability under a constant
+force}\label{exact-distinguishability-under-a-constant-force}}
+
+Fix \(m,\omega,T>0\), \(F\ne0\), \(q_0,p_0\in\mathbb R\) and
+\(V(q)=Fq\). On \(\mathcal H=L^2(\mathbb R)\), start both products from
+the same Gaussian (1). For any positive partition write \[
+ A_\pi=\sum_js_j^2,\quad
+ \Delta q_\pi=\frac{F}{m}A_\pi,\quad
+ C_\pi=\frac{F^2}{2m}\sum_js_j^2(2T-t_j-t_{j+1}). \tag{I4}
+\] Let \(\psi_{KD}\) use kick first in every cell and \(\psi_{DK}\) use
+drift first in every cell. With the \(\hbar\)-scaled momentum transform
+\(\widehat\psi(p)=(2\pi\hbar)^{-1/2}\int e^{-ipq/\hbar}\psi(q)dq\), the
+\textbf{exact} relation is \[
+ \widehat\psi_{DK}(p)
+ =e^{-i(C_\pi+\Delta q_\pi p)/\hbar}
+   \widehat\psi_{KD}(p). \tag{I5}
+\] Consequently \[
+ \left|\langle\psi_{KD},\psi_{DK}\rangle\right|
+ =\exp\!\left[-\frac{\omega F^2}{4m\hbar}A_\pi^2\right],\quad
+ \inf_{\theta\in\mathbb R}
+   \|\psi_{KD}-e^{i\theta}\psi_{DK}\|_2^2
+ =2\!\left(1-e^{-\omega F^2A_\pi^2/(4m\hbar)}\right). \tag{I6}
+\] Indeed, in momentum space a kick sends \(\widehat\psi(p)\) to
+\(\widehat\psi(p+Fs)\) and a drift multiplies it by
+\(e^{-isp^2/(2m\hbar)}\). At cell \(j\), the drift momentum in the
+kick-first product is \(p+F(T-t_{j+1})\) and in the drift-first product
+it is \(p+F(T-t_j)\). Subtracting the accumulated quadratic phases gives
+(I5). Both final momentum densities are Gaussian with variance
+\(\hbar m\omega/2\); their characteristic function gives (I6).
+
+For the uniform partition \(s=T/n\), take \(\hbar_n=\kappa s^2\) with
+any fixed \(\kappa>0\). Then \(A_\pi=Ts\) and \[
+ \inf_\theta\|\psi_{KD}-e^{i\theta}\psi_{DK}\|_2^2
+ =2\!\left(1-e^{-\omega F^2T^2/(4m\kappa)}\right)>0
+ \quad\text{for every }n. \tag{I7}
+\] Nevertheless, both momentum means are \(p_0-FT\); their position
+means are \(q_{\rm cl}(T)\mp F A_\pi/(2m)\), and their position and
+momentum standard deviations are \(O(\sqrt\hbar)\) on \([0,T]\). Thus
+both families converge to the \textbf{same} classical point for every
+joint schedule, while their rays can remain separated, or even become
+orthogonal when \(A_\pi^2/\hbar\to\infty\).
+
+The distinction between semiclassically uniform observable accuracy and
+wavefunction accuracy is itself established; see
+\href{https://doi.org/10.1137/25M1777098}{Fang--Qu} (abstract read). The
+calculation here compares the two specified first-order products
+directly and gives their exact overlap.
+
+For \(F\ne0\), (I6) says ray distance tends to zero exactly when
+\(A_\pi/\sqrt\hbar\to0\). A ray test ignores the scalar factor in (I5):
+convergence of rays does not by itself control relative phase or
+interference. At fixed \(\hbar\), \(A_\pi\le T|\pi|\to0\), and the phase
+in (I5) also vanishes on the relevant state. This is a real
+finite-resolution ordering effect, not a different fixed-action
+continuum Hamiltonian. It complements the
+\href{polygon-lift-phase.md}{polygon phase note}, which treats different
+histories with matching classical endpoints and a residual scalar phase.
+The present endpoints differ at finite mesh. No literature priority is
+claimed for (I5)--(I7).
+
+\hypertarget{operator-ordering-is-a-further-question}{%
+\subsubsection{11.3 Operator ordering is a further
+question}\label{operator-ordering-is-a-further-question}}
+
+The previous result assumes the \textbf{same} operator
+\(H_\hbar=P_\hbar^2/(2m)+V(Q)\). It does not settle factor-ordering
+ambiguities when a classical Hamiltonian contains mixed functions of
+position and momentum. For a concrete target, take \(f(q)=2+\cos q\),
+and on Schwartz space define \[
+ H_\hbar^{(1)}=\frac1{2m}P_\hbar f(Q)P_\hbar,\qquad
+ H_\hbar^{(2)}
+ =\frac1{4m}\big(f(Q)P_\hbar^2+P_\hbar^2f(Q)\big). \tag{I8}
+\] Both are symmetric and have the same classical symbol
+\(f(q)p^2/(2m)\), but the exact operator identity on Schwartz space is
+\[
+ H_\hbar^{(1)}-H_\hbar^{(2)}
+ =\frac{\hbar^2}{4m}f''(Q)
+ =-\frac{\hbar^2}{4m}\cos Q. \tag{I9}
+\] The first operator has its standard nonnegative uniformly elliptic
+self-adjoint realization on \(H^2(\mathbb R)\); the second is its
+bounded self-adjoint perturbation by \(+\hbar^2\cos Q/(4m)\). For any
+Schwartz initial state the difference of their initial momentum
+derivatives is \(-\hbar^2\langle\sin Q\rangle/(4m)\), which need not
+vanish. Thus a common classical symbol alone does not determine a unique
+finite-\(\hbar\) dynamics. In more general path integrals, time-slicing
+and factor ordering can interact: see
+\href{https://doi.org/10.1103/PhysRevA.42.32}{Dewey (1990)} and
+\href{https://doi.org/10.1103/PhysRevD.58.044002}{Bastianelli--Schalm--van
+Nieuwenhuizen (1998)} (abstracts read). No general uniqueness of the
+quantum lift follows.
+
+Targets (I1)--(I9) are written proof/verification targets, not compiled
+Lean theorems. Formalizing (I5)--(I7) also requires the scaled Fourier
+transform, Gaussian normalization and characteristic function, and the
+phase-space/ray norm conventions to be defined rather than assumed as
+the conclusion.
+
 \hypertarget{consequence-for-state}{%
-\subsection{11. Consequence for STATE}\label{consequence-for-state}}
+\subsection{12. Consequence for STATE}\label{consequence-for-state}}
 
 These targets distinguish standard inputs, repository-specific
 statements and unknown publication priority. They expose a finite
 classical comparison that can be attempted under newtonlean's present
 rules, and the substantial analytic foundations needed for an end-to-end
-quantum verification. The universal lifting conjecture, positive-action
-necessity and the four-dimensional gauge construction remain open.
+quantum verification. The constant-force calculation separates
+fixed-action slice independence from joint-limit distinguishability and
+from operator-ordering ambiguity. The universal lifting conjecture,
+positive-action necessity and the four-dimensional gauge construction
+remain open.
 \end{document}

@@ -1,6 +1,6 @@
 # State
 
-Updated 2026-10-27 (Newton first; Balaban techniques in $0+1$). Read this page and the
+Updated 2026-10-28 (Newton first; Balaban techniques in $0+1$). Read this page and the
 [time-blocking note](../notes/balaban-newton-time-blocking.md);
 AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
 gives the wider comparison.
@@ -54,7 +54,9 @@ but distinct outgoing branches and explicit mixtures.
 The [Lean verification targets](../notes/lean-verification-quantum-newton.md)
 give exact specifications, close prior art and a finite comparison to
 newtonlean's oppositely ordered polygon cells; no quantum Lean proof is
-claimed.
+claimed. Its constant-force calculation separates fixed-action ordering
+independence from possible joint-limit quantum ray separation; a
+variable-mass example exhibits a separate factor-ordering ambiguity.
 
 ## Goal
 
