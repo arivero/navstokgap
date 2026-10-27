@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Constructing a 0+1 field theory: the quartic oscillator and the Yang–Mills matrix model</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Constructing a 0+1 field theory: the quartic oscillator and the
+Yang–Mills matrix model</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/constructive-qft-one-time.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/constructive-qft-one-time.pdf">PDF</a></p><p><strong>Result, 2026-10-27; standard construction assembled here, not
+a novel existence theorem.</strong> For any supplied <span
+class="math inline">\(m,\lambda,\hbar&gt;0\)</span>, the one-component
+<span class="math inline">\(\phi^4_1\)</span> theory has a continuous,
+stationary Euclidean field on the full time line, a reflection-positive
+bounded-cylinder algebra, a non-Gaussian vacuum, and a reconstructed
+positive-energy quantum system with a unique vacuum and a positive
+spectral gap. The finite-time lattice measures with ground-state
+boundary weights converge under arbitrary time refinement. Their
+real-time counterpart is the nonrelativistic quartic oscillator. The
+same construction applies to the existing <span
+class="math inline">\(SU(2)\)</span> bosonic matrix Hamiltonian,
+including its gauge-singlet sector, using the compact-resolvent result
+already proved in <a
+href="low-dimensional-mass-gap.html">low-dimensional mass gap, Theorem
+6</a>.</p>
+<p>The one-dimensional Euclidean field has only time as a base-space
+coordinate, so spacelike locality and Lorentz boosts impose no
+nontrivial condition. A relativistic particle may instead be described
+by a one-dimensional worldline theory with a spatial target and a
+different Hamiltonian. Neither construction derives <span
+class="math inline">\(\hbar&gt;0\)</span>, proves the original 1998
+consistency conjecture, or constructs four-dimensional Yang–Mills. The
+statements below use established Feynman–Kac, semigroup and spectral
+theorems; the assembly is written here, without a separate referee
+check.</p>
+<h2 id="model-and-prior-work">1. Model and prior work</h2>
+<p>Put <span class="math display">\[
+V(q)=\frac{\lambda}{4}q^4,\qquad
+S_E[q]=\int\left(\frac m2\dot q^{\,2}+V(q)\right)d\tau.
+\tag{1}
+\]</span> The symbolic <span
+class="math inline">\(e^{-S_E/\hbar}\mathcal Dq\)</span> below means an
+actual Brownian-bridge tilt or its stationary extension, not a Lebesgue
+measure on path space. Brownian paths are almost surely nowhere
+differentiable; the kinetic integral in (1) is therefore a mnemonic for
+the reference measure, not an ordinary pathwise integral.</p>
+<p>The <a href="rivero-1998-conjecture-central-forces.html">Rivero 1998
+test</a>, Theorems 2(b) and 3, already proves the fixed-<span
+class="math inline">\(\hbar\)</span> real-time product limit and the
+zero-endpoint Euclidean bridge limit for the potential <span
+class="math inline">\(\lambda_{\rm old}q^4\)</span>; here <span
+class="math inline">\(\lambda_{\rm old}=\lambda/4\)</span>. Its
+zero-endpoint bound also permits <span
+class="math inline">\(\hbar\downarrow0\)</span>, so it does not select a
+quantum action unit. The <a
+href="newton-nonlinear-time-cell.html">nonlinear cell</a> is one exact
+elimination step for (1), with its full normalized interaction retained.
+Its one-step estimates alone were not a stationary continuum
+construction.</p>
+<p>Feynman–Kac and the <span class="math inline">\(P(\phi)_1\)</span>
+process are established literature: <a
+href="https://arxiv.org/abs/math-ph/9907022">Simon 1999</a> (the
+bounded-below case cited and its theorem passage read in the 1998 test),
+and <a href="https://math.caltech.edu/simon/biblio.html">Rosen–Simon
+1976</a> (bibliographic record). The real-time quartic oscillator also
+has an oscillatory-integral treatment by <a
+href="https://archive.numdam.org/articles/10.1016/j.crma.2005.09.024/">Albeverio–Mazzucchi
+2005</a> (abstract). None of these references is a novelty claim.</p>
+<h2 id="a-vacuum-and-a-gap-from-the-hamiltonian">2. A vacuum and a gap
+from the Hamiltonian</h2>
+<p>Define on <span class="math inline">\(L^2(\mathbb R,dq)\)</span> the
+Friedrichs operator <span class="math display">\[
+H=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2}+\frac{\lambda}{4}q^4.\tag{2}\]</span>
+The form domain is <span class="math inline">\(H^1(\mathbb R)\cap
+L^2(\mathbb R,q^4dq)\)</span>. The form is closed and nonnegative. It
+has compact embedding into <span class="math inline">\(L^2\)</span>:
+Rellich compactness holds on every bounded interval, while its unit ball
+satisfies <span class="math display">\[\int_{|q|&gt;R}|\psi(q)|^2dq\le
+R^{-4}\int q^4|\psi(q)|^2dq.\tag{3}\]</span> Thus <span
+class="math inline">\(H\)</span> has compact resolvent. Feynman–Kac
+makes <span class="math inline">\(e^{-tH/\hbar}\)</span> positivity
+improving for <span class="math inline">\(t&gt;0\)</span>: the free heat
+kernel is strictly positive and every finite bridge has a strictly
+positive potential weight. By the positivity-improving ground-state
+theorem, the bottom eigenvalue <span class="math inline">\(E_0\)</span>
+is simple and its normalized eigenfunction <span
+class="math inline">\(\Omega\)</span> is strictly positive. Discreteness
+implies <span class="math inline">\(E_1&gt;E_0\)</span> and <span
+class="math display">\[\Delta=E_1-E_0&gt;0.\tag{4}\]</span></p>
+<p>Writing <span
+class="math inline">\(\ell=(\hbar^2/(m\lambda))^{1/6}\)</span> and <span
+class="math inline">\(q=\ell x\)</span>, unitary rescaling gives <span
+class="math display">\[H=\hbar^{4/3}\lambda^{1/3}m^{-2/3}
+\left(-\tfrac12\frac{d^2}{dx^2}+\tfrac14x^4\right)\tag{5}\]</span> up to
+that unitary conjugation. Thus the gap is a positive dimensionless
+eigenvalue difference times <span
+class="math inline">\(\hbar^{4/3}\lambda^{1/3}m^{-2/3}\)</span>; it
+vanishes in the indicated small-<span
+class="math inline">\(\hbar\)</span> or small-<span
+class="math inline">\(\lambda\)</span> limits. This does not imply
+positivity of <span class="math inline">\(\hbar\)</span> from classical
+premises.</p>
+<h2 id="arbitrary-time-refinement">3. Arbitrary time refinement</h2>
+<p>For <span class="math inline">\(s&gt;0\)</span>, let <span
+class="math display">\[p_s(x,y)=\left(\frac{m}{2\pi\hbar s}\right)^{1/2}
+e^{-m(x-y)^2/(2\hbar s)}\]</span> and define the symmetric single-step
+transfer kernel <span class="math display">\[K_s^{\rm lat}(x,y)=p_s(x,y)
+e^{-s[V(x)+V(y)]/(2\hbar)}.\tag{6}\]</span> For a partition <span
+class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,T]\)</span>, their product and integration over
+internal nodes equal <span class="math inline">\(p_T(x,y)\)</span> times
+the expectation, under a Brownian bridge of variance parameter <span
+class="math inline">\(\hbar/m\)</span> from <span
+class="math inline">\(x\)</span> to <span
+class="math inline">\(y\)</span>, of <span
+class="math inline">\(\exp[-W_\pi/\hbar]\)</span>, where <span
+class="math display">\[W_\pi=\sum_j\frac{t_{j+1}-t_j}{2}
+       [V(q(t_j))+V(q(t_{j+1}))].\tag{7}\]</span> The bridge is
+continuous almost surely, so its polygonal interpolation converges
+uniformly and <span class="math inline">\(W_\pi\to\int_0^T
+V(q(t))dt\)</span> for every sequence with <span
+class="math inline">\(|\pi|\to0\)</span>. Since <span
+class="math inline">\(0\le e^{-W_\pi/\hbar}\le1\)</span>, dominated
+convergence gives the Feynman–Kac bridge, including bounded continuous
+path observables. This is the argument of the 1998 test, extended from
+zero to arbitrary fixed endpoints; no change of <span
+class="math inline">\(\hbar\)</span> accompanies the refinement.</p>
+<p>To obtain vacuum rather than fixed-endpoint data, weight the two ends
+by <span class="math inline">\(\Omega(x)\Omega(y)\,dx\,dy\)</span> and
+normalize. The free heat kernel bounds the tilted kernels, and the <span
+class="math inline">\(L^2\)</span> contraction of the free semigroup
+gives an integrable bound against <span
+class="math inline">\(\Omega(x)\Omega(y)\)</span>. Dominated convergence
+therefore applies to these finite-interval distributions. Their
+continuum normalizer is <span
+class="math inline">\(\langle\Omega,e^{-TH/\hbar}\Omega\rangle=e^{-TE_0/\hbar}\)</span>.
+Ground-state boundary weights make the continuum restrictions consistent
+as the interval grows. Kolmogorov consistency and the locally continuous
+bridge laws give a stationary process <span
+class="math inline">\(q(\tau)\)</span> on the full time line. This
+construction uses the continuum ground state at the boundary; it does
+not assert uniform interchange of lattice-spacing and infinite-time
+limits for arbitrary lattice boundary states.</p>
+<p>Equivalently, with <span class="math inline">\(A=H-E_0\)</span> and
+kernel <span class="math inline">\(K_t\)</span> of <span
+class="math inline">\(e^{-tH/\hbar}\)</span>, the stationary one-time
+law and transition are <span
+class="math display">\[\mu(dq)=\Omega(q)^2dq,\qquad
+P_t(x,dy)=e^{tE_0/\hbar}\frac{\Omega(y)}{\Omega(x)}K_t(x,y)dy.\tag{8}\]</span>
+The eigenvalue equation makes <span class="math inline">\(P_t\)</span>
+Markov; symmetry of <span class="math inline">\(K_t\)</span> makes it
+reversible for <span class="math inline">\(\mu\)</span>. Times <span
+class="math inline">\(\tau_1\le\cdots\le\tau_n\)</span> and bounded
+functions <span class="math inline">\(f_j\)</span> give <span
+class="math display">\[\mathbb E\!\left[\prod_{j=1}^n
+f_j(q(\tau_j))\right]
+=\langle\Omega,f_1(Q)e^{-(\tau_2-\tau_1)A/\hbar}f_2(Q)
+\cdots f_n(Q)\Omega\rangle.\tag{9}\]</span></p>
+<h2 id="reflection-positivity-and-non-gaussianity">4. Reflection
+positivity and non-Gaussianity</h2>
+<p>Let <span class="math inline">\(F\)</span> be a finite linear
+combination of products of bounded functions of <span
+class="math inline">\(q(t)\)</span> at nonnegative times, and let <span
+class="math inline">\(\Theta\)</span> reflect time and complex-conjugate
+the observable. From (9), <span class="math display">\[\mathbb E[(\Theta
+F)F]=\|v_F\|^2\ge0,\tag{10}\]</span> where for a single term with <span
+class="math inline">\(0\le t_1\le\cdots\le t_n\)</span>, <span
+class="math display">\[v_F=e^{-t_1A/\hbar}f_1(Q)e^{-(t_2-t_1)A/\hbar}
+       \cdots f_n(Q)\Omega,\]</span> and <span
+class="math inline">\(v_F\)</span> is extended linearly. This is
+reflection positivity for the bounded cylinder algebra. The associated
+reconstruction gives the semigroup <span
+class="math inline">\(e^{-tA/\hbar}\)</span> and Hilbert space <span
+class="math inline">\(L^2(\mathbb R)\)</span>: the vectors <span
+class="math inline">\(f(Q)\Omega\)</span>, for bounded <span
+class="math inline">\(f\)</span>, are dense because <span
+class="math inline">\(\Omega&gt;0\)</span> almost everywhere. The
+coordinate <span class="math inline">\(Q\)</span> is self-adjoint as
+multiplication by <span class="math inline">\(q\)</span> and <span
+class="math inline">\(e^{-itA/\hbar}\)</span> gives real-time unitary
+dynamics.</p>
+<p>The potential is even, so uniqueness and positivity make <span
+class="math inline">\(\Omega\)</span> even. The field is not Gaussian.
+If the one-time density <span class="math inline">\(\Omega^2\)</span>
+were Gaussian, positivity would make <span
+class="math inline">\(\Omega=C e^{-\alpha q^2/2}\)</span>, <span
+class="math inline">\(\alpha&gt;0\)</span>. But substituting this into
+<span class="math inline">\(H\Omega=E_0\Omega\)</span> leaves the
+nonzero quartic term <span class="math inline">\(\lambda q^4/4\)</span>,
+which cannot be cancelled by the constant and quadratic terms from the
+derivative. Thus even the one-time marginal is non-Gaussian. This is a
+continuum witness, unlike the unscaled shrinking cell cumulant in <a
+href="alpoge-balaban-newton-peek.html">the Alpoge–Balaban peek</a>.</p>
+<p>For bounded real <span class="math inline">\(f,g\)</span>, spectral
+projection also gives <span
+class="math display">\[|\operatorname{Cov}_\mu(f(q(0)),g(q(t)))|
+\le e^{-t\Delta/\hbar}\,\|f\Omega\|\,\|g\Omega\|.\tag{11}\]</span> The
+gap is an energy gap of this explicitly constructed quantum mechanical
+Hamiltonian, not a four-dimensional field-theory mass gap. The claim
+here is the bounded-cylinder reconstruction; it does not separately
+verify a chosen full hierarchy of unbounded-field growth axioms.</p>
+<h2 id="the-gauge-theory-rung-and-relativity">5. The gauge-theory rung
+and relativity</h2>
+<p>A literal pure gauge connection on a one-dimensional base has no
+two-form curvature: <span class="math inline">\(F_{00}=0\)</span>. A
+time circle can retain a global holonomy. The nontrivial model connected
+to higher-dimensional Yang–Mills is instead its dimensional reduction:
+spatial gauge components survive as adjoint matrices <span
+class="math inline">\(X_i(t)\)</span> and the temporal gauge field
+imposes Gauss’s law. For <span class="math inline">\(SU(2)\)</span> and
+<span class="math inline">\(D\ge2\)</span> matrices, the <a
+href="low-dimensional-mass-gap.html#the-su2-matrix-model-and-its-abelian-valleys">matrix
+theorem</a> proves compact resolvent, a simple positive vacuum, and a
+gap on the full configuration space and its gauge-invariant subspace.
+Its potential is a sum of squared commutators and has unbounded
+commuting valleys, so the scalar argument <span
+class="math inline">\(V\to\infty\)</span> cannot be reused. The
+multicomponent version of (6)–(10), restricted to bounded invariant
+functions, supplies the stationary reflection-positive gauge-singlet
+construction; positivity and simplicity make the ground state invariant.
+This finite-dimensional matrix model keeps only spatially constant
+modes; it does not justify discarding the other modes of the full theory
+or construct Yang–Mills on <span class="math inline">\(\mathbb
+R^4\)</span>. No <span class="math inline">\(SU(3)\)</span> matrix gap
+is asserted here.</p>
+<p>The field theory (1) is a scalar theory on a one-dimensional
+spacetime, and is ordinary nonrelativistic quantum mechanics when <span
+class="math inline">\(q\)</span> is read as the coordinate of a
+particle. There are no nontrivial boosts in <span
+class="math inline">\(0+1\)</span> spacetime dimensions. A relativistic
+particle in <span class="math inline">\(d\)</span> target-space
+dimensions instead can use the positive-energy Hamiltonian <span
+class="math display">\[H_{\rm
+rel}=\sqrt{c^2P^2+m^2c^4}-mc^2+V(Q).\tag{12}\]</span> Self-adjointness
+gives a unitary time evolution when the operator is well-defined, and
+the positive semigroup can have a subordinate-Brownian, jump-process
+representation under suitable potential assumptions. See <a
+href="https://arxiv.org/abs/1109.5829">Hiroshima–Ichinose–Lorinczi</a>
+(abstract and introduction) and <a
+href="https://arxiv.org/abs/1605.01791">Gheryan et al.</a> (abstract),
+which treats both relativistic and nonrelativistic Nelson models. Their
+theorems have their own assumptions. A confining external <span
+class="math inline">\(V\)</span> selects a frame; it does not establish
+full Poincare covariance. For <span class="math inline">\(V=0\)</span>
+on <span class="math inline">\(\mathbb R^d\)</span>, the bottom of (12)
+is not a normalizable vacuum, so the stationary ground-state
+construction above cannot be applied without additional structure. A
+proper-time worldline and the Klein–Gordon/Feynman propagator require
+their own constraint and normalization conventions.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The preliminary <span class="math inline">\(0+1\)</span> existence
+statement is a standard theorem for specified quantum weights and is now
+assembled with vacuum, reflection positivity, non-Gaussianity and the
+continuum limit. The same architecture connects to the existing <span
+class="math inline">\(SU(2)\)</span> matrix-model gap. The open Newton
+question remains whether independently justified premises require a
+positive universal action scale; the <span
+class="math inline">\(\hbar=0\)</span> alternatives and the
+real-time/classical distinction remain essential.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

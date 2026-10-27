@@ -9,8 +9,13 @@ gives the Newton/quantisation restart; the
 [September 23 handout](handoffs/HANDOFF-2026-09-23.md) records earlier
 reviews. This page carries the current direction.
 
-**Session paused at the user's request, 2026-10-27.** Resume from the
-unstarted bounded calculation in **Next** when the user resumes research.
+**User-directed 0+1 existence check, 2026-10-27.** The
+[construction](../notes/constructive-qft-one-time.md) assembles the
+standard quartic vacuum, reflection-positive bounded-cylinder process,
+non-Gaussianity and continuum refinement, and connects the existing
+$SU(2)$ matrix gap to its gauge-singlet sector. The Newton action
+constant is supplied. The central-limit calculation in **Next** remains
+unstarted; the four-dimensional gauge construction remains deferred.
 
 ## Goal
 

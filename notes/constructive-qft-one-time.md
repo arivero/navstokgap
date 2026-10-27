@@ -1,0 +1,213 @@
+# Constructing a 0+1 field theory: the quartic oscillator and the Yang--Mills matrix model
+
+**Result, 2026-10-27; standard construction assembled here, not a
+novel existence theorem.** For any supplied $m,\lambda,\hbar>0$, the
+one-component $\phi^4_1$ theory has a continuous, stationary Euclidean
+field on the full time line, a reflection-positive bounded-cylinder
+algebra, a non-Gaussian vacuum, and a reconstructed positive-energy
+quantum system with a unique vacuum and a positive spectral gap. The
+finite-time lattice measures with ground-state boundary weights converge
+under arbitrary time refinement. Their real-time counterpart is the
+nonrelativistic quartic oscillator. The same construction applies to the
+existing $SU(2)$ bosonic matrix Hamiltonian, including its gauge-singlet
+sector, using the compact-resolvent result already proved in
+[low-dimensional mass gap, Theorem 6](low-dimensional-mass-gap.md).
+
+The one-dimensional Euclidean field has only time as a base-space
+coordinate, so spacelike locality and Lorentz boosts impose no nontrivial
+condition. A relativistic particle may instead be described by a
+one-dimensional worldline theory with a spatial target and a different
+Hamiltonian. Neither construction derives $\hbar>0$, proves the original
+1998 consistency conjecture, or constructs four-dimensional Yang--Mills.
+The statements below use established Feynman--Kac, semigroup and spectral
+theorems; the assembly is written here, without a separate referee check.
+
+## 1. Model and prior work
+
+Put
+$$
+ V(q)=\frac{\lambda}{4}q^4,\qquad
+ S_E[q]=\int\left(\frac m2\dot q^{\,2}+V(q)\right)d\tau.
+ \tag{1}
+$$
+The symbolic $e^{-S_E/\hbar}\mathcal Dq$ below means an actual
+Brownian-bridge tilt or its stationary extension, not a Lebesgue measure
+on path space. Brownian paths are almost surely nowhere differentiable;
+the kinetic integral in (1) is therefore a mnemonic for the reference
+measure, not an ordinary pathwise integral.
+
+The [Rivero 1998 test](rivero-1998-conjecture-central-forces.md),
+Theorems 2(b) and 3, already proves the fixed-$\hbar$ real-time product
+limit and the zero-endpoint Euclidean bridge limit for the potential
+$\lambda_{\rm old}q^4$; here $\lambda_{\rm old}=\lambda/4$. Its
+zero-endpoint bound also permits $\hbar\downarrow0$, so it does not
+select a quantum action unit. The
+[nonlinear cell](newton-nonlinear-time-cell.md) is one exact elimination
+step for (1), with its full normalized interaction retained. Its
+one-step estimates alone were not a stationary continuum construction.
+
+Feynman--Kac and the $P(\phi)_1$ process are established literature:
+[Simon 1999](https://arxiv.org/abs/math-ph/9907022) (the bounded-below
+case cited and its theorem passage read in the 1998 test), and
+[Rosen--Simon 1976](https://math.caltech.edu/simon/biblio.html)
+(bibliographic record). The real-time quartic oscillator also has an
+oscillatory-integral treatment by [Albeverio--Mazzucchi 2005](https://archive.numdam.org/articles/10.1016/j.crma.2005.09.024/)
+(abstract). None of these references is a novelty claim.
+
+## 2. A vacuum and a gap from the Hamiltonian
+
+Define on $L^2(\mathbb R,dq)$ the Friedrichs operator
+$$ H=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2}+\frac{\lambda}{4}q^4.\tag{2}$$
+The form domain is $H^1(\mathbb R)\cap L^2(\mathbb R,q^4dq)$.
+The form is closed and nonnegative. It has compact embedding into
+$L^2$: Rellich compactness holds on every bounded interval, while its
+unit ball satisfies
+$$\int_{|q|>R}|\psi(q)|^2dq\le R^{-4}\int q^4|\psi(q)|^2dq.\tag{3}$$
+Thus $H$ has compact resolvent. Feynman--Kac makes $e^{-tH/\hbar}$
+positivity improving for $t>0$: the free heat kernel is strictly
+positive and every finite bridge has a strictly positive potential
+weight. By the positivity-improving ground-state theorem, the bottom
+eigenvalue $E_0$ is simple and its normalized eigenfunction $\Omega$
+is strictly positive. Discreteness implies $E_1>E_0$ and
+$$\Delta=E_1-E_0>0.\tag{4}$$
+
+Writing $\ell=(\hbar^2/(m\lambda))^{1/6}$ and $q=\ell x$, unitary
+rescaling gives
+$$H=\hbar^{4/3}\lambda^{1/3}m^{-2/3}
+\left(-\tfrac12\frac{d^2}{dx^2}+\tfrac14x^4\right)\tag{5}$$
+up to that unitary conjugation. Thus the gap is a positive dimensionless
+eigenvalue difference times $\hbar^{4/3}\lambda^{1/3}m^{-2/3}$; it
+vanishes in the indicated small-$\hbar$ or small-$\lambda$ limits.
+This does not imply positivity of $\hbar$ from classical premises.
+
+## 3. Arbitrary time refinement
+
+For $s>0$, let
+$$p_s(x,y)=\left(\frac{m}{2\pi\hbar s}\right)^{1/2}
+e^{-m(x-y)^2/(2\hbar s)}$$
+and define the symmetric single-step transfer kernel
+$$K_s^{\rm lat}(x,y)=p_s(x,y)
+e^{-s[V(x)+V(y)]/(2\hbar)}.\tag{6}$$
+For a partition $\pi$ of $[0,T]$, their product and integration over
+internal nodes equal $p_T(x,y)$ times the expectation, under a Brownian
+bridge of variance parameter $\hbar/m$ from $x$ to $y$, of
+$\exp[-W_\pi/\hbar]$, where
+$$W_\pi=\sum_j\frac{t_{j+1}-t_j}{2}
+       [V(q(t_j))+V(q(t_{j+1}))].\tag{7}$$
+The bridge is continuous almost surely, so its polygonal interpolation
+converges uniformly and $W_\pi\to\int_0^T V(q(t))dt$ for every sequence
+with $|\pi|\to0$. Since $0\le e^{-W_\pi/\hbar}\le1$, dominated
+convergence gives the Feynman--Kac bridge, including bounded continuous
+path observables. This is the argument of the 1998 test, extended from
+zero to arbitrary fixed endpoints; no change of $\hbar$ accompanies the
+refinement.
+
+To obtain vacuum rather than fixed-endpoint data, weight the two ends by
+$\Omega(x)\Omega(y)\,dx\,dy$ and normalize. The free heat kernel bounds
+the tilted kernels, and the $L^2$ contraction of the free semigroup
+gives an integrable bound against $\Omega(x)\Omega(y)$. Dominated
+convergence therefore applies to these finite-interval distributions.
+Their continuum normalizer is
+$\langle\Omega,e^{-TH/\hbar}\Omega\rangle=e^{-TE_0/\hbar}$.
+Ground-state boundary weights make the continuum restrictions consistent
+as the interval grows. Kolmogorov consistency and the locally continuous
+bridge laws give a stationary process $q(\tau)$ on the full time line.
+This construction uses the continuum ground state at the boundary; it
+does not assert uniform interchange of lattice-spacing and infinite-time
+limits for arbitrary lattice boundary states.
+
+Equivalently, with $A=H-E_0$ and kernel $K_t$ of $e^{-tH/\hbar}$,
+the stationary one-time law and transition are
+$$\mu(dq)=\Omega(q)^2dq,\qquad
+ P_t(x,dy)=e^{tE_0/\hbar}\frac{\Omega(y)}{\Omega(x)}K_t(x,y)dy.\tag{8}$$
+The eigenvalue equation makes $P_t$ Markov; symmetry of $K_t$ makes it
+reversible for $\mu$. Times $\tau_1\le\cdots\le\tau_n$ and bounded
+functions $f_j$ give
+$$\mathbb E\!\left[\prod_{j=1}^n f_j(q(\tau_j))\right]
+=\langle\Omega,f_1(Q)e^{-(\tau_2-\tau_1)A/\hbar}f_2(Q)
+ \cdots f_n(Q)\Omega\rangle.\tag{9}$$
+
+## 4. Reflection positivity and non-Gaussianity
+
+Let $F$ be a finite linear combination of products of bounded functions
+of $q(t)$ at nonnegative times, and let $\Theta$ reflect time and
+complex-conjugate the observable. From (9),
+$$\mathbb E[(\Theta F)F]=\|v_F\|^2\ge0,\tag{10}$$
+where for a single term with $0\le t_1\le\cdots\le t_n$,
+$$v_F=e^{-t_1A/\hbar}f_1(Q)e^{-(t_2-t_1)A/\hbar}
+       \cdots f_n(Q)\Omega,$$
+and $v_F$ is extended linearly. This is reflection positivity for the
+bounded cylinder algebra. The associated reconstruction gives the
+semigroup $e^{-tA/\hbar}$ and Hilbert space $L^2(\mathbb R)$: the
+vectors $f(Q)\Omega$, for bounded $f$, are dense because $\Omega>0$
+almost everywhere. The coordinate $Q$ is self-adjoint as multiplication
+by $q$ and $e^{-itA/\hbar}$ gives real-time unitary dynamics.
+
+The potential is even, so uniqueness and positivity make $\Omega$ even.
+The field is not Gaussian. If the one-time density $\Omega^2$ were
+Gaussian, positivity would make $\Omega=C e^{-\alpha q^2/2}$, $\alpha>0$.
+But substituting this into $H\Omega=E_0\Omega$ leaves the nonzero quartic
+term $\lambda q^4/4$, which cannot be cancelled by the constant and
+quadratic terms from the derivative. Thus even the one-time marginal is
+non-Gaussian. This is a continuum witness, unlike the unscaled shrinking
+cell cumulant in [the Alpoge--Balaban peek](alpoge-balaban-newton-peek.md).
+
+For bounded real $f,g$, spectral projection also gives
+$$|\operatorname{Cov}_\mu(f(q(0)),g(q(t)))|
+\le e^{-t\Delta/\hbar}\,\|f\Omega\|\,\|g\Omega\|.\tag{11}$$
+The gap is an energy gap of this explicitly constructed quantum
+mechanical Hamiltonian, not a four-dimensional field-theory mass gap.
+The claim here is the bounded-cylinder reconstruction; it does not
+separately verify a chosen full hierarchy of unbounded-field growth axioms.
+
+## 5. The gauge-theory rung and relativity
+
+A literal pure gauge connection on a one-dimensional base has no
+two-form curvature: $F_{00}=0$. A time circle can retain a global
+holonomy. The nontrivial model connected to higher-dimensional
+Yang--Mills is instead its dimensional reduction: spatial gauge
+components survive as adjoint matrices $X_i(t)$ and the temporal gauge
+field imposes Gauss's law. For $SU(2)$ and $D\ge2$ matrices, the
+[matrix theorem](low-dimensional-mass-gap.md#32-the-su2-matrix-model-and-its-abelian-valleys)
+proves compact resolvent, a simple positive vacuum, and a gap on the
+full configuration space and its gauge-invariant subspace. Its
+potential is a sum of squared commutators and has unbounded commuting
+valleys, so the scalar argument $V\to\infty$ cannot be reused. The
+multicomponent version of (6)--(10), restricted to bounded invariant
+functions, supplies the stationary reflection-positive gauge-singlet
+construction; positivity and simplicity make the ground state invariant.
+This finite-dimensional matrix model keeps only spatially constant
+modes; it does not justify discarding the other modes of the full theory
+or construct Yang--Mills on $\mathbb R^4$. No $SU(3)$ matrix gap is
+asserted here.
+
+The field theory (1) is a scalar theory on a one-dimensional spacetime,
+and is ordinary nonrelativistic quantum mechanics when $q$ is read as
+the coordinate of a particle. There are no nontrivial boosts in
+$0+1$ spacetime dimensions. A relativistic particle in $d$ target-space
+dimensions instead can use the positive-energy Hamiltonian
+$$H_{\rm rel}=\sqrt{c^2P^2+m^2c^4}-mc^2+V(Q).\tag{12}$$
+Self-adjointness gives a unitary time evolution when the operator is
+well-defined, and the positive semigroup can have a subordinate-Brownian,
+jump-process representation under suitable potential assumptions. See
+[Hiroshima--Ichinose--Lorinczi](https://arxiv.org/abs/1109.5829)
+(abstract and introduction) and
+[Gheryan et al.](https://arxiv.org/abs/1605.01791)
+(abstract), which treats both relativistic and nonrelativistic Nelson
+models. Their theorems have their own assumptions. A confining external
+$V$ selects a frame; it does not establish full Poincare covariance.
+For $V=0$ on $\mathbb R^d$, the bottom of (12) is not a normalizable
+vacuum, so the stationary ground-state construction above cannot be
+applied without additional structure. A proper-time worldline and the
+Klein--Gordon/Feynman propagator require their own constraint and
+normalization conventions.
+
+## 6. Consequence for STATE
+
+The preliminary $0+1$ existence statement is a standard theorem for
+specified quantum weights and is now assembled with vacuum, reflection
+positivity, non-Gaussianity and the continuum limit. The same architecture
+connects to the existing $SU(2)$ matrix-model gap. The open Newton
+question remains whether independently justified premises require a
+positive universal action scale; the $\hbar=0$ alternatives and the
+real-time/classical distinction remain essential.
