@@ -121,8 +121,17 @@ The [continuity calculation](../notes/newton-continuity-time-scales.md)
 sharpens the force criterion: logarithmic unbounded slopes retain unique
 motion through exponent two; zero-energy annulus times, not slope alone,
 decide finite-time mergers. Their action still tends to zero.
-Next test independent physical justification of preparation/record closure
-and whether composition identifies the scale with $\hbar$.
+**Checkpoint, 2026-10-27:** independent Newton action necessity is still
+open. The new positive floor is conditional on preparation closure and
+force compatibility; its quantum identification, universality and
+preservation by physical records have not been proved. Targeted Terra
+checks cover the stated written calculations, not those physical premises.
+**Next bounded calculation (not yet established):** test whether independent
+copies, joint canonical averaging, forgetting unused copies and weak
+closure force a Gaussian sector by a central-limit argument. Then compare
+its recording restrictions with [Theorem F and its nonlinear-generator
+counterexample](../notes/newton-indeterminacy-routes.md#4-a-constructive-replacement-a-statistical-speed-theorem).
+Composition alone must not be represented as an identification with $\hbar$.
 Alpoge and Yang--Mills are deferred;
 this direction supersedes the ordering of the earlier queue below.
 
