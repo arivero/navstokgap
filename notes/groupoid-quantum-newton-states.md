@@ -21,6 +21,12 @@ superposition a single classical trajectory. The groupoid parameter is a
 geometric deformation parameter until the identification $h=\epsilon
 S_*$ is chosen. The time mesh is an additional scale.
 
+The [didactic guide](newton-dimock-balaban-guide.md) introduces the
+Dimock--Balaban comparison and the point-particle examples. Its
+Dirichlet hard-wall calculation is a separate construction; the
+whole-line groupoid and state theorem below do not automatically cover
+that boundary problem.
+
 The groupoid and strict quantization are established: in particular,
 Cariñena, Clemente-Gallardo, Follana, Gracia-Bondía, Rivero and Várilly,
 [Connes' Tangent Groupoid and Strict Quantization](https://arxiv.org/abs/math/9802102)

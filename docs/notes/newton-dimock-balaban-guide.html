@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton, quantum mechanics and Dimock–Balaban: a guide through one time dimension</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Newton, quantum mechanics and Dimock–Balaban: a guide through one
+time dimension</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/newton-dimock-balaban-guide.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-dimock-balaban-guide.pdf">PDF</a></p><p><strong>Scope and result, 2026-10-27.</strong> A point particle
+already displays several different questions hidden in the phrase
+“existence of motion”: does a trajectory exist, is it unique, does it
+continue for all time, and what rule applies at a wall or singularity?
+This guide connects those questions to a constructive <span
+class="math inline">\(0+1\)</span> quantum theory and to the multiscale
+organization of Dimock’s exposition of Bałaban’s renormalization group.
+The simple model is not a solution of the four-dimensional Yang–Mills
+problem.</p>
+<p>The detailed <a
+href="quantum-blocks-construct-newton.html">quantum-to-Newton proof</a>
+constructs a family of one-dimensional quantum Hamiltonians with a
+supplied <span class="math inline">\(\hbar&gt;0\)</span>. For smooth
+<span class="math inline">\(V\ge0\)</span> with bounded derivatives of
+order two and higher, coherent packet means on finite time partitions
+form a Cauchy family as <span class="math inline">\(\hbar\)</span> and
+the mesh vanish jointly. The limit is the unique Newton solution; no
+solution is assumed before the limit. The <a
+href="groupoid-quantum-newton-states.html">companion groupoid
+formulation</a> places the corresponding observable states on the
+quantum and classical fibers of the tangent groupoid. Here we explain
+why these constructions work, how they relate to the original sources,
+and where additional classical examples need new assumptions.</p>
+<p>Reading labels below distinguish the actual statements in the cited
+papers from an analogy or a calculation made here. No priority claim is
+made for standard ODE, Gaussian, semigroup or semiclassical methods.</p>
+<h2 id="what-must-exist-and-in-what-sense">1. What must exist, and in
+what sense?</h2>
+<p>For a particle in <span class="math inline">\(\mathbb R^d\)</span>,
+mass <span class="math inline">\(m&gt;0\)</span> and conservative
+potential <span class="math inline">\(V\)</span>, Newton’s initial-value
+problem is <span class="math display">\[
+\dot q=v,\qquad m\dot v=-\nabla V(q),\qquad
+(q(0),v(0))=(q_0,v_0). \tag{1}
+\]</span> It asks for a <strong>trajectory</strong> from initial
+position and velocity. The endpoints of a path integral ask a different
+question: prescribe <span class="math inline">\(q(0)\)</span> and <span
+class="math inline">\(q(T)\)</span> and integrate over intermediate
+configurations. Even for the harmonic oscillator an endpoint map can
+become singular at a conjugate time while the initial-value trajectory
+remains unique.</p>
+<p>For <span class="math inline">\(V\in C^1\)</span> with locally
+Lipschitz <span class="math inline">\(\nabla V\)</span>, (1) has a
+unique local solution, by the usual Cauchy–Lipschitz theorem. Along it,
+<span class="math display">\[E(q,v)=\tfrac12m|v|^2+V(q),\qquad \frac
+d{dt}E=0.\tag{2}\]</span> If <span class="math inline">\(V\)</span> is
+bounded below, (2) bounds <span class="math inline">\(|v|\)</span>. On
+any finite interval <span class="math inline">\(|q(t)|\le
+|q_0|+|t|\sup|v|\)</span>, so <span class="math inline">\((q,v)\)</span>
+remains in a compact set. The local continuation theorem then gives a
+unique solution for all positive and negative times. Coercivity of <span
+class="math inline">\(V\)</span> is a stronger condition than is needed
+for this finite-time argument.</p>
+<p>Smoothness alone does not guarantee global existence. For <span
+class="math inline">\(m=1\)</span>, <span
+class="math inline">\(V(q)=-q^4/4\)</span>, <span
+class="math inline">\(q_0&gt;0\)</span> and <span
+class="math inline">\(v_0=q_0^2/\sqrt2\)</span>, the zero-energy
+solution <span
+class="math display">\[q(t)=\frac{q_0}{1-q_0t/\sqrt2}\tag{3}\]</span>
+escapes to infinity at <span
+class="math inline">\(t=\sqrt2/q_0\)</span>. A force singularity can
+also stop a classical solution: for example, a radial attractive Kepler
+trajectory can reach <span class="math inline">\(r=0\)</span> in finite
+time. A rule for continuing through the singular point is further
+data.</p>
+<p>Regularity also matters for <strong>uniqueness</strong>. For <span
+class="math inline">\(m=1\)</span> and <span
+class="math inline">\(V(q)=-\frac23|q|^{3/2}\)</span> near zero, <span
+class="math inline">\(-V&#39;(q)=\operatorname{sgn}(q)\sqrt{|q|}\)</span>.
+With <span class="math inline">\((q_0,v_0)=(0,0)\)</span> there is the
+stationary solution and, for every <span
+class="math inline">\(t_0\ge0\)</span>, the solution that waits at zero
+until <span class="math inline">\(t_0\)</span> and then follows <span
+class="math inline">\(q(t)=(t-t_0)^4/144\)</span>, as long as it stays
+in the displayed neighbourhood. The potential can be cut off smoothly
+away from zero and shifted by a constant to be nonnegative and bounded.
+Its quantum Hamiltonian is then a bounded perturbation of the free
+self-adjoint Hamiltonian, while its classical initial-value problem is
+nonunique. Quantum existence by itself therefore does not supply a
+unique classical branch.</p>
+<h2 id="a-velocity-dependent-force-magnetism">2. A velocity-dependent
+force: magnetism</h2>
+<p>In three dimensions the Lorentz force, with a static scalar potential
+and a static magnetic field, gives <span class="math display">\[
+\dot q=v,\qquad m\dot v=-\nabla V(q)+e\,v\times B(q). \tag{4}
+\]</span> It is not a force depending on position alone. If <span
+class="math inline">\(\nabla V\)</span> and <span
+class="math inline">\(B\)</span> are defined and locally Lipschitz on
+all of <span class="math inline">\(\mathbb R^3\)</span>, the full
+phase-space vector field is locally Lipschitz, so local existence and
+uniqueness still hold. Moreover <span
+class="math inline">\(v\cdot(v\times B)=0\)</span>, hence the energy (2)
+is conserved. If <span class="math inline">\(V\)</span> is bounded
+below, the same speed and position bounds as above prove global
+existence and uniqueness, even if <span class="math inline">\(B\)</span>
+is not globally bounded.</p>
+<p>For instance, a constant field <span class="math inline">\(B=B_0\hat
+z\)</span> rotates the transverse velocity with cyclotron frequency
+<span class="math inline">\(eB_0/m\)</span> and leaves the longitudinal
+velocity constant. A velocity-dependent force is thus not an exception
+to the ODE theory; its dependence must be included in the phase-space
+vector field being estimated.</p>
+<p>If <span class="math inline">\(B=\nabla\times A\)</span> on <span
+class="math inline">\(\mathbb R^3\)</span>, the quantum Hamiltonian is
+<span
+class="math display">\[H_{\hbar,A}=\frac1{2m}(-i\hbar\nabla-eA(q))^2+V(q).\tag{5}\]</span>
+The kinetic momenta generally do not commute: <span
+class="math inline">\([\pi_i,\pi_j]=i\hbar
+e(\partial_iA_j-\partial_jA_i)\)</span>. The positive Brownian-bridge
+density below does not directly cover this magnetic problem: a magnetic
+Euclidean representation contains a phase. The present coherent-packet
+theorem is proved for the scalar Hamiltonian in (11), not for (5).</p>
+<h2 id="a-wall-is-an-impact-rule-not-a-smooth-force">3. A wall is an
+impact rule, not a smooth force</h2>
+<p>Take the half-line <span class="math inline">\(q\ge0\)</span> and a
+free particle starting at <span class="math inline">\(q_0&gt;0\)</span>
+with <span class="math inline">\(p_0&lt;0\)</span>. For an ideal
+<strong>elastic</strong> wall, the prescribed impact law is <span
+class="math inline">\(p(t_*+)=-p(t_* -)\)</span> at <span
+class="math inline">\(t_*=-mq_0/p_0\)</span>. The motion is <span
+class="math display">\[q(t)=|q_0+p_0t/m|,\qquad
+p(t)=p_0\operatorname{sgn}(q_0+p_0t/m)\quad(t\ne t_*).\tag{6}\]</span>
+Position is continuous; momentum has a jump. Equation (1) with a finite
+smooth force does not describe that jump. Nonpenetration alone does not
+select the elastic law: a restitution coefficient or another contact
+rule would be additional data.</p>
+<p>For a smooth wall in several dimensions, the elastic specular rule
+reverses the normal component and retains the tangential component:
+<span class="math inline">\(v_+=v_--2(v_-\cdot n)n\)</span>. This
+requires a specified unit normal and a well-defined collision. Corners,
+grazing contacts and an accumulation of impacts require separate
+analysis; one should not infer their uniqueness merely from the local
+smooth-force theorem.</p>
+<p>A mathematically defined quantum impenetrable wall can be represented
+by the Dirichlet Laplacian <span
+class="math display">\[H_{\hbar,D}=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2},
+\qquad D(H_{\hbar,D})=H^2(0,\infty)\cap H^1_0(0,\infty).\tag{7}\]</span>
+It is self-adjoint and gives a unitary group. Its Euclidean kernel is
+<span class="math display">\[
+K_D(T;x,y)=k_{\hbar,T}(x-y)-k_{\hbar,T}(x+y),
+\quad
+k_{\hbar,T}(r)=\sqrt{\frac m{2\pi\hbar T}}
+             e^{-mr^2/(2\hbar T)},\quad x,y&gt;0.\tag{8}
+\]</span> This is the method of images: the Euclidean reference process
+is Brownian motion killed at the boundary. The quantum real-time wall
+reflects, but killed Euclidean paths should not themselves be read as
+real-time bouncing trajectories. Section 8 proves a quantitative
+coherent-packet position limit through the bounce.</p>
+<p>A subtle domain issue is important: the symmetric differential
+operator <span class="math inline">\(-i\hbar\,d/dq\)</span> on the
+half-line with Dirichlet boundary has unequal deficiency indices and no
+self-adjoint extension on <span
+class="math inline">\(L^2(0,\infty)\)</span>. The Hamiltonian (7) is
+nevertheless self-adjoint. A current or a quadratic-form expectation
+involving <span class="math inline">\(-i\hbar d/dq\)</span> can be
+studied, but it should not be presented as the expectation of a
+self-adjoint half-line momentum operator. See <a
+href="https://arxiv.org/abs/2103.01715">Al-Hashimi and Wiese,
+arXiv:2103.01715</a> (abstract) for the boundary momentum problem.</p>
+<h2 id="a-finite-euclidean-lattice-and-one-exact-block">4. A finite
+Euclidean lattice and one exact block</h2>
+<p>Return to the whole line and choose endpoints <span
+class="math inline">\(x,y\)</span>, duration <span
+class="math inline">\(T=u+v\)</span>, and action unit <span
+class="math inline">\(\hbar&gt;0\)</span>. The free Euclidean kernel is
+<span class="math inline">\(k_{\hbar,T}\)</span> from (8). Its semigroup
+identity, refined at time <span class="math inline">\(u\)</span>, is
+<span class="math display">\[k_{\hbar,T}(y-x)=\int_{\mathbb R}
+       k_{\hbar,u}(z-x)k_{\hbar,v}(y-z)\,dz.\tag{9}\]</span> Completing
+the square gives the <strong>conditional</strong> law of the
+intermediate coordinate: <span class="math display">\[
+k_{\hbar,u}(z-x)k_{\hbar,v}(y-z)
+=k_{\hbar,T}(y-x)\sqrt{\frac a{2\pi\hbar}}\,
+   e^{-a(z-\mu)^2/(2\hbar)},\quad
+a=\frac{mT}{uv},\quad\mu=\frac{vx+uy}{T}. \tag{10}
+\]</span> The normalization in (10) matters: an action penalty is not
+yet a probability bound until the full conditional integral is divided
+out. The inserted point has mean <span
+class="math inline">\(\mu\)</span> and variance <span
+class="math inline">\(\hbar/a=\hbar uv/(mT)\)</span>.</p>
+<p>For a nonnegative potential, the finite-time weight adds <span
+class="math inline">\(\exp[-\sum_j
+\delta_j(V(q_j)+V(q_{j+1}))/(2\hbar)]\)</span>. As the mesh tends to
+zero, the Brownian-bridge expectation converges by dominated
+convergence. With <span class="math inline">\(Z_\hbar(x,y)\)</span>
+denoting that expectation, the kernel of the Euclidean semigroup is
+<span
+class="math display">\[K_\hbar(T;x,y)=k_{\hbar,T}(y-x)Z_\hbar(x,y),\qquad
+H_\hbar=P^2/(2m)+V(Q).\tag{11}\]</span> Feynman–Kac and the spectral
+theorem then provide the real-time <span
+class="math inline">\(U_\hbar(t)=e^{-itH_\hbar/\hbar}\)</span>. The
+Brownian measure and these standard operator theorems are inputs; the
+construction is not a lattice-only derivation of Wiener measure.</p>
+<p>There is also a sign distinction. The Euclidean stationary equation
+for <span class="math inline">\(\int(\tfrac12m\dot q^2+V)\,dt\)</span>
+is <span class="math inline">\(m\ddot q=+V&#39;(q)\)</span>. The
+real-time equation for <span class="math inline">\(\int(\tfrac12m\dot
+q^2-V)\,dt\)</span> is <span class="math inline">\(m\ddot
+q=-V&#39;(q)\)</span>. The positive-weight minimizer cannot be
+relabelled as a Newton trajectory without another argument.</p>
+<h2 id="reading-dimock-and-bałaban-from-this-example">5. Reading Dimock
+and Bałaban from this example</h2>
+<p>Dimock’s two papers develop Bałaban’s method for a
+<strong>three-dimensional lattice scalar <span
+class="math inline">\(\phi^4\)</span> theory</strong>, with ultraviolet
+stability of its partition function as the illustrative problem. Their
+scalar results do not by themselves establish the Yang–Mills mass gap.
+The following references are to specific statements and passages, not a
+claim that their full proofs have been audited.</p>
+<ol type="1">
+<li><p><strong>Keep the complete density.</strong> In <a
+href="https://arxiv.org/html/1108.1335v2">Dimock I, §2.1, equations
+(15), (26)–(28)</a>, <span class="math inline">\(Q\)</span> averages a
+fine field over a block; the next density is obtained by integrating the
+previous density against a normalized Gaussian kernel, then rescaling.
+Equation (28) preserves the total integral. The <span
+class="math inline">\(0+1\)</span> operation (10) instead eliminates a
+time coordinate conditional on retained coordinates. Our density <span
+class="math inline">\(\rho_n=\mathbb E_0[\rho\mid\mathcal F_n]\)</span>
+is relative to a Brownian-bridge reference and satisfies <span
+class="math inline">\(\rho_n=\mathbb E_0[\rho_{n+1}\mid\mathcal
+F_n]\)</span>. This is an exact tower, but it is not literally Dimock’s
+noisy block-average map, nor does it contain his rescaling.</p></li>
+<li><p><strong>A minimizer is only the center of an integral.</strong>
+Completing the free square in (10) produces a background point <span
+class="math inline">\(\mu\)</span> <em>and</em> its covariance <span
+class="math inline">\(\hbar/a\)</span> and normalization. Dimock I,
+§§2.2–2.3, likewise separates a background and Gaussian fluctuation in
+its free flow. With interactions, the analogue is a full conditional law
+around a generally nonlinear minimizer, not merely the minimizer
+itself.</p></li>
+<li><p><strong>Generated interactions must travel to the next
+scale.</strong> For one inserted vertex, with <span
+class="math inline">\(w=T/2\)</span>, define <span
+class="math display">\[
+A_\hbar(\mu)=-\hbar\log\left[
+\sqrt{\frac a{2\pi\hbar}}\int
+    e^{-[a(z-\mu)^2/2+wV(z)]/\hbar}dz\right].\tag{12}
+\]</span> This entire function enters the retained kernel. If <span
+class="math inline">\(V(z)=\lambda z^4/4\)</span>, differentiating at
+<span class="math inline">\(\lambda=0+\)</span> gives <span
+class="math display">\[
+\left.\partial_\lambda A_\hbar(\mu)\right|_{0+}
+=\frac w4\left[\mu^4+6\mu^2\frac{\hbar}{a}
+                      +3\left(\frac{\hbar}{a}\right)^2\right].\tag{13}
+\]</span> Even one integration generates a quadratic term and a constant
+in addition to the quartic term. The derivative is not a claim of
+convergence of the whole perturbation series. Dimock I, §4.1, equations
+(176)–(180), and Theorem 14 propagate a much richer representation: a
+normalization, mass and energy terms, a quartic term and a controlled
+polymer remainder, under the theorem’s small-coupling and
+sufficiently-large-block hypotheses. The <a
+href="newton-nonlinear-time-cell.html">nonlinear-cell calculation</a>
+gives nonperturbative bounds for (12).</p></li>
+<li><p><strong>Small fields are not the whole integral.</strong> Dimock
+I, equations (172)–(175), introduces characteristic functions for the
+small-field analysis. Dimock II, introduction and §3.3, restores the
+full expansion by summing over histories of regions; its Theorem 3.1
+includes large-field and boundary terms and normalization, under its
+stated block-size, mass and running-coupling conditions and with the
+energy and mass counterterms selected in Part I. The elementary identity
+<span class="math inline">\(\prod_b[\chi_b+(1-\chi_b)]=1\)</span>
+illustrates why every pattern of good and bad blocks is retained.
+Dimock’s good-region tests involve fields, derivatives and nested
+regions; they are not identical to a bound on one midpoint fluctuation.
+In the one-cell law, strong convexity yields the normalized bound <span
+class="math display">\[
+\mathbb P(|Z-z_*|\ge r\mid\hbox{retained endpoints})
+    \le 2e^{-\kappa r^2/(2\hbar)},\tag{14}
+\]</span> provided the conditional potential has second derivative at
+least <span class="math inline">\(\kappa&gt;0\)</span>. The integration
+over its complement is controlled, not deleted.</p></li>
+<li><p><strong>Locality of correlated fluctuations must be
+earned.</strong> Dimock I, §2.4 and Lemma 6, constructs a Green function
+using local inverses and a convergent random-walk expansion; §4.5
+introduces weakening parameters before the cluster expansion. Dimock II,
+§3.13 and Lemmas 3.15–3.17, localizes the interaction, remainder and
+existing boundary terms; §3.14 and Lemma 3.18 then perform a cluster
+expansion with holes. Locality in a correlated fluctuation field is not
+automatically locality in independent Gaussian variables. In the
+nearest-neighbour time chain, nonadjacent eliminated vertices are
+conditionally independent <strong>for one halving</strong>. That
+elementary fact does not prove a multi-scale polymer estimate in three
+or four dimensions.</p></li>
+</ol>
+<p>The continuity of the normalized <span
+class="math inline">\(0+1\)</span> density tower follows here from
+conditional expectation and an already constructed Brownian bridge. The
+difficult field-theory task is to retain useful <strong>uniform, local
+bounds</strong> on effective interactions, large-field regions and
+boundaries as the cutoff is removed. An exact composition identity alone
+is not that estimate.</p>
+<h2 id="from-the-quantum-blocks-to-a-newton-path">6. From the quantum
+blocks to a Newton path</h2>
+<p>Fix a Gaussian coherent packet centered at <span
+class="math inline">\((q_0,p_0)\)</span> with position and momentum
+standard deviations of order <span
+class="math inline">\(\sqrt\hbar\)</span>. At each time slice first kick
+by the potential and then drift freely: <span
+class="math display">\[K_{\hbar,s}=e^{-isV(Q)/\hbar},\qquad
+D_{\hbar,s}=e^{-isP^2/(2m\hbar)},\qquad
+T_{\hbar,s}=D_{\hbar,s}K_{\hbar,s}.\tag{15}\]</span> For finite products
+the exact conjugations are <span
+class="math display">\[K_{\hbar,s}^*PK_{\hbar,s}=P-sV&#39;(Q),\qquad
+D_{\hbar,s}^*QD_{\hbar,s}=Q+sP/m.\tag{16}\]</span> If <span
+class="math inline">\(|V&#39;&#39;|\le L\)</span>, the standard
+deviation of <span class="math inline">\(V&#39;(Q)\)</span> is at most
+<span class="math inline">\(L\,\operatorname{sd}(Q)\)</span>. A discrete
+Gronwall estimate consequently bounds both position and momentum spreads
+by <span class="math inline">\(C_T\sqrt\hbar\)</span>, uniformly over
+partitions of <span class="math inline">\([0,T]\)</span>.</p>
+<p>Let <span class="math inline">\(z_{\hbar,\pi}(t)\)</span> interpolate
+the means after the finite cells. The spread bound and (16) imply the
+force-balance residual <span class="math display">\[
+\|\dot z_{\hbar,\pi}-\mathcal F(z_{\hbar,\pi})\|
+       \le C_T(\sqrt\hbar+|\pi|),
+\qquad \mathcal F(q,p)=(p/m,-V&#39;(q)).\tag{17}
+\]</span> Comparing two independently chosen <span
+class="math inline">\(\hbar\)</span>’s and meshes, and applying
+Gronwall, shows that these interpolants form a Cauchy family. Its limit
+is the unique solution of (1), with <span
+class="math display">\[\sup_{t\le T}\|z_{\hbar,\pi}(t)-z(t)\|
+        \le C_T(\sqrt\hbar+|\pi|).\tag{18}\]</span> The <a
+href="quantum-blocks-construct-newton.html">detailed proof</a> gives the
+weighted phase-space norm, constants, arbitrary-partition product limit
+and domains. The statement is about means; it does not assert that
+finite-product propagators converge uniformly in operator norm along
+arbitrary joint schedules.</p>
+<p>Cauchy–Lipschitz constructs the integral equation directly, usually
+by a contraction on a short interval. The route above constructs quantum
+operators first and their classical limit afterward. Both use the same
+Lipschitz stability of the force and Gronwall uniqueness. The extra
+quantum structure relates the solution to a family of states; it does
+not weaken the regularity needed here or derive <span
+class="math inline">\(\hbar&gt;0\)</span> from Newton’s law. Hepp’s <a
+href="https://doi.org/10.1007/BF01646348">1974 coherent-state
+theorem</a> is established prior work on quantum correlation functions
+and classical orbits (abstract and introduction read).</p>
+<h2 id="the-tangent-groupoid-and-the-separate-scales">7. The tangent
+groupoid and the separate scales</h2>
+<p>For <span class="math inline">\(M=\mathbb R\)</span>, the tangent
+groupoid has positive fibers <span class="math inline">\(M\times
+M\)</span> and a zero fiber <span class="math inline">\(TM\)</span>. Its
+observable <span class="math inline">\(C^*\)</span>-algebra is a
+continuous field, with <span class="math display">\[
+\mathcal A_{\epsilon&gt;0}\simeq\mathcal K(L^2(\mathbb R)),\qquad
+\mathcal A_0\simeq C_0(T^*\mathbb R).\tag{19}
+\]</span> After choosing an action unit <span
+class="math inline">\(S_*\)</span> and identifying <span
+class="math inline">\(\hbar=\epsilon S_*\)</span>, the state estimate in
+the <a href="groupoid-quantum-newton-states.html">groupoid companion</a>
+connects the coherent quantum states to evaluation on the constructed
+classical trajectory. This uses the established continuous-field and
+strict quantization framework of <a
+href="https://arxiv.org/abs/math/9802102">Cariñena et al.</a> and <a
+href="https://arxiv.org/abs/math-ph/0001005">Landsman–Ramazan</a>
+(abstracts read).</p>
+<p>Three operations remain distinguishable: <span
+class="math inline">\(\epsilon\)</span> labels a geometric deformation;
+the time mesh controls a finite product; and blocking integrates over
+intermediate variables. Choosing a joint schedule ties their parameters,
+but does not make geometric zoom identical to Wilsonian integration or
+prove that the physical action unit runs.</p>
+<h2 id="a-quantum-packet-through-the-elastic-bounce">8. A quantum packet
+through the elastic bounce</h2>
+<p>The wall example can be related to quantum theory without applying
+the smooth-force theorem at <span class="math inline">\(q=0\)</span>.
+Let <span class="math inline">\(q_0&gt;0\)</span>, <span
+class="math inline">\(p_0&lt;0\)</span>, <span
+class="math inline">\(\omega&gt;0\)</span>, and let <span
+class="math inline">\(g_\hbar\)</span> be the normalized full-line
+Gaussian of position mean <span class="math inline">\(q_0\)</span>,
+momentum mean <span class="math inline">\(p_0\)</span>, and variances
+<span class="math inline">\(\hbar/(2m\omega)\)</span> and <span
+class="math inline">\(\hbar m\omega/2\)</span>. If <span
+class="math inline">\(R\)</span> is reflection, <span
+class="math inline">\((Rg)(x)=g(-x)\)</span>, define the normalized odd
+state <span
+class="math display">\[\phi_\hbar=\frac{g_\hbar-Rg_\hbar}{\sqrt{2(1-\gamma_\hbar)}},
+\qquad
+\gamma_\hbar=\langle g_\hbar,Rg_\hbar\rangle
+=\exp\left[-\frac{m\omega q_0^2+p_0^2/(m\omega)}{\hbar}\right].
+\tag{20}
+\]</span> The corresponding Dirichlet half-line state is <span
+class="math inline">\(\psi_\hbar(q)=\sqrt2\,\phi_\hbar(q)\)</span> for
+<span class="math inline">\(q&gt;0\)</span>. Odd extension intertwines
+its evolution with free evolution on the full line.</p>
+<p>Write <span class="math inline">\(a(t)=q_0+p_0t/m\)</span>, and let
+<span class="math inline">\(g_{\hbar,t}\)</span> be the freely evolved
+Gaussian. Its position variance is <span
+class="math display">\[\sigma_q(t)^2=\frac{\hbar}{2m\omega}(1+\omega^2t^2).\tag{21}\]</span>
+Because <span class="math inline">\(||x|-|a||\le|x-a|\)</span> and
+reflection commutes with the free evolution, <span
+class="math display">\[
+\left|\langle Q\rangle_{\psi_\hbar(t)}-|a(t)|\right|
+\le\sqrt{\frac{2}{1-\gamma_\hbar}}\,\sigma_q(t).\tag{22}
+\]</span> Indeed the half-line position expectation equals the full-line
+expectation of <span class="math inline">\(|X|\)</span> in the odd
+state; apply the triangle inequality to the two Gaussian terms. Thus
+position converges uniformly on every bounded time interval,
+<strong>including the impact time</strong>, to the elastic classical
+trajectory (6).</p>
+<p>Away from the impact, the corresponding probability-current momentum
+also converges to the incoming or reflected value. More precisely, if
+<span class="math inline">\(|a(t)|\ge\eta&gt;0\)</span>, with <span
+class="math inline">\(\sigma_p=\sqrt{\hbar m\omega/2}\)</span>, <span
+class="math display">\[
+\left|\int_0^\infty\overline{\psi_\hbar}
+             (-i\hbar\partial_q)\psi_\hbar\,dq
+       -p_0\operatorname{sgn}a(t)\right|
+\le\sqrt{\frac2{1-\gamma_\hbar}}
+      \left(\sigma_p+\frac{2|p_0|\sigma_q(t)}{\eta}\right).\tag{23}
+\]</span> For the proof, the half-line integral is the full-line
+expectation of <span
+class="math inline">\(\operatorname{sgn}(X)P\)</span> in the odd state.
+On the Gaussian, <span
+class="math inline">\(\|(\operatorname{sgn}X\,P-\operatorname{sgn}a\,p_0)g_t\|\)</span>
+is at most <span class="math inline">\(\sigma_p+2|p_0|\mathbb
+P(aX&lt;0)^{1/2}\)</span>; Chebyshev bounds the last probability by
+<span class="math inline">\(\sigma_q(t)^2/a(t)^2\)</span>. The reflected
+Gaussian obeys the same estimate. For each fixed <span
+class="math inline">\(T,\eta&gt;0\)</span> independent of <span
+class="math inline">\(\hbar\)</span>, (23) proves uniform convergence
+over <span class="math inline">\(|t|\le T\)</span> with <span
+class="math inline">\(|a(t)|\ge\eta\)</span>. It gives no uniform bound
+in an <span class="math inline">\(\hbar\)</span>-dependent impact layer
+<span class="math inline">\(|a(t)|\sim\sqrt\hbar\)</span> or momentum
+value at <span class="math inline">\(t_*\)</span>. The expression in
+(23) is a real current form on this domain, not an expectation of a
+self-adjoint half-line momentum.</p>
+<p>The bound deliberately excludes <span
+class="math inline">\(t_*\)</span>. A family of continuous quantum
+current expectations cannot converge uniformly across <span
+class="math inline">\(t_*\)</span> to the discontinuous classical
+momentum in (6). Position convergence and momentum convergence therefore
+have different valid topologies.</p>
+<h2 id="consequence-for-state">9. Consequence for STATE</h2>
+<p>The requested didactic bridge now includes explicit source locations,
+the normalized one-cell operation, generated terms and the limitation of
+the analogy. It distinguishes classical smooth-force existence,
+continuation, nonuniqueness, magnetic forces and an imposed hard-wall
+impact. The wall packet calculation gives a separate rigorous example of
+a classical limit through an impact. The supplied action parameter, the
+independent action-necessity problem and the higher-dimensional
+field-theory estimates remain open in their respective scopes.</p>
+<p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27).</strong>
+The impact packet estimates and their convergence domains, the magnetic
+continuation argument, and the cited Dimock source locations were
+checked against the written calculation and selected source passages.
+This is an internal model check, not independent peer review of the
+imported ODE, operator, probability or field-theory theorems.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

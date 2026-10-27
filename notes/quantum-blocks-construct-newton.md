@@ -19,6 +19,13 @@ so the construction is a different route, not a weakening of that
 theorem. Smooth confining potentials with locally Lipschitz force,
 including the positive quartic, follow by a cutoff and energy conservation.
 
+For a didactic entry point, see
+[Newton, quantum mechanics and Dimock--Balaban](newton-dimock-balaban-guide.md):
+it traces the steps to specific source passages and introduces existence,
+uniqueness, continuation, magnetic forces and a separate hard-wall
+example. The theorem of this note remains the smooth scalar-potential
+construction stated above.
+
 This note is a new assembly of standard Feynman--Kac, conditional
 expectation and unitary-conjugation ingredients; no priority claim is made.
 The normalized-density architecture is inspired by Dimock--Balaban,

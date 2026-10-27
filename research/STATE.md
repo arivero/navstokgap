@@ -29,6 +29,12 @@ deformation, time mesh and blocking. The positive action scale remains
 supplied; neither document proves its necessity. The model-advisor
 checks recorded there are not independent peer review.
 
+The [Newton–Dimock guide](../notes/newton-dimock-balaban-guide.md)
+now gives source-specific pedagogy, classical magnetic continuation,
+and a Dirichlet hard-wall packet limit through an elastic bounce. Its
+momentum-current estimate excludes an impact layer. The wall calculation
+is separate from the whole-line groupoid and scalar-potential theorem.
+
 ## Goal
 
 User direction, 2026-09-26: one eventual paper on what survives
