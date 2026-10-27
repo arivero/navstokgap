@@ -108,8 +108,10 @@ continuation, and develop further useful links. The
 with a targeted Terra check. The [nonlinear cell](../notes/newton-nonlinear-time-cell.md)
 now controls a full convex insertion law and its one-halving large-field
 events, and distinguishes positive-$\hbar$ quartic stiffness from the
-regular classical envelope. Next test branch competition and physical
-real-time/record reconstruction, and develop the $0+1$/ODE lesson.
+regular classical envelope. The [ODE lesson](../notes/balaban-ode-lesson.md)
+constructs the nonlinear causal polygon limit and explains the weighted-law
+comparison. Next test branch competition and physical real-time/record
+reconstruction.
 Alpoge and Yang--Mills are deferred;
 this direction supersedes the ordering of the earlier queue below.
 

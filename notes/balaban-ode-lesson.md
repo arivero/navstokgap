@@ -1,0 +1,337 @@
+# Balaban through Newton's polygons: a 0+1 lesson
+
+**Lesson and written construction, 2026-10-27.** A useful way to approach
+Balaban's method is to start with a familiar existence problem: construct
+motion from finitely many force impulses, prove estimates that survive
+arbitrary insertion of intermediate times, and take a limit. Then ask
+what additional description must survive when an intermediate position is
+integrated rather than solved for. The answer includes its fluctuation
+law, normalization and generated interactions.
+
+We work with one mechanical coordinate and time, keeping $\hbar$ explicit.
+The finite construction is a modern use of Newton's polygon idea; it is
+not a proof about every historical edition or force polygon. The Galileo
+inertial-line / falling-parabola comparison supplies our action observable.
+No relativistic assumption or $c$ is needed.
+
+The ODE proof below is standard in method and claims no novelty. Its purpose
+is to make the comparison concrete, including arbitrary unequal time steps
+and either force-kick convention. The two retained-weight calculations
+are in the [time-blocking note](balaban-newton-time-blocking.md) and the
+[nonlinear cell](newton-nonlinear-time-cell.md). They specify their
+proof status and source reading. Balaban's
+[ICM overview](../docs/balaban/Balaban_UltravioletStability_ICM1986_1987.md),
+printed pages 1260--1262 (text read), and
+[Dimock I](../docs/balaban/Dimock_BalabanI_1108.1335v2.md), sections 2.1,
+2.4, 4.5 and Theorem 14 (selected passages read), motivate the comparison.
+
+**Targeted check (GPT-6.1 Terra, 2026-10-27).** Terra read the lesson and
+checked the causal stability, residual, Cauchy and limit arguments in
+sections 1--3 without finding a mathematical error under their global
+Lipschitz hypothesis. The lesson's distinction between a trajectory and
+a weighted law was also checked. This was a targeted written review;
+the physical origin of the weighting is still open.
+
+## 1. Start with a finite Newton polygon
+
+Let $m>0$ be the mass and $f(q)=F(q)/m$ the acceleration. The desired
+motion would satisfy
+
+$$\dot q=v,\qquad\dot v=f(q),\qquad(q(0),v(0))=(q_0,v_0).\tag{1}$$
+
+For now we do not assume that a solution exists. Given a positive time
+step $\tau$, define a drift and a force kick by
+
+$$
+ D_\tau(q,v)=(q+\tau v,v),\qquad
+ K_\tau(q,v)=(q,v+\tau f(q)).
+ \tag{2}
+$$
+
+A step can kick first, $D_\tau K_\tau$, or drift first,
+$K_\tau D_\tau$. The first choice uses the force at the old position;
+the second uses the force at the new position. Both give a finite
+piecewise straight trajectory with impulses. Neither is assumed to
+agree exactly with the unknown continuous motion.
+
+Fix $T>0$, take any finite positive partition of $[0,T]$, choose either ordering in
+each cell, and compose the maps chronologically. There is no equal-step
+or nesting requirement. When a time is inserted, recompute the later
+states from the fixed initial state and the prescribed force rule.
+
+Existence of the limit requires two kinds of estimates. Stability bounds
+how differences grow. Consistency bounds the error in the finite force
+balance. The two together will construct the ODE solution.
+
+## 2. Lipschitz control supplies stability
+
+Assume for this construction that
+
+$$|f(q)-f(Q)|\le\Lambda|q-Q|\quad(q,Q\in\mathbb R),\qquad\Lambda\ge0.
+\tag{3}$$
+
+The quantity $\Lambda$ has units of inverse time squared. Choose a
+reference frequency $\rho>0$ and use the length-valued phase-space norm
+
+$$
+ \|(q,v)\|_\rho=|q|+\frac{|v|}{\rho},\qquad
+ \alpha=\max(\rho,\Lambda/\rho),\quad
+ \beta=\rho+\Lambda/\rho,\quad b=|f(0)|/\rho.
+ \tag{4}
+$$
+
+There is no action constant in these definitions. Directly from (2),
+
+$$
+ \operatorname{Lip}(D_\tau)\le1+\rho\tau,\qquad
+ \operatorname{Lip}(K_\tau)\le1+\Lambda\tau/\rho.
+ \tag{5}
+$$
+
+Thus either cell map has Lipschitz constant at most $e^{\beta\tau}$.
+The constants multiply under composition, and their exponents add.
+Every finite polygon therefore has the same upper amplification
+$e^{\beta T}$, independently of the number and placement of vertices.
+
+We also need a bound on the states themselves, because consistency
+involves the force along the polygon. For either cell map $M_\tau$,
+
+$$
+ \|M_\tau z\|_\rho\le e^{\beta\tau}\|z\|_\rho
+                         +\tau e^{\beta\tau}b.
+ \tag{6}
+$$
+
+For a kick-first cell, the inhomogeneous term is actually at most
+$\tau(1+\rho\tau)b$; for a drift-first cell it is $\tau b$.
+Iterating (6) gives the common vertex bound
+
+$$R=e^{\beta T}(\|z_0\|_\rho+Tb).\tag{7}$$
+
+In particular $|q_j|\le R$, $|v_j|\le\rho R$, and
+$|f(q_j)|\le A:=|f(0)|+\Lambda R$. A very irregular partition has not
+created a new force or stability constant.
+
+## 3. The polygons construct the ODE solution
+
+Linearly interpolate both vertex coordinates to obtain
+$z_\pi(t)=(q_\pi(t),v_\pi(t))$. The displayed velocity is continuous;
+it differs from the physical constant velocity along each straight
+polygon segment by at most that cell's kick. This distinction disappears
+with the mesh.
+
+Let $\delta=|\pi|$ be the maximum cell duration. In a kick-first cell,
+with elapsed time $s\in[0,\tau]$,
+
+$$
+ \dot q_\pi-v_\pi=(\tau-s)f(q_j),\qquad
+ \dot v_\pi-f(q_\pi)=f(q_j)-f(q_\pi).
+ \tag{8}
+$$
+
+In a drift-first cell the analogous expressions are
+$-sf(q_{j+1})$ and $f(q_{j+1})-f(q_\pi)$. The bounds in (7) give, for
+almost every time,
+
+$$
+ \|\dot z_\pi-\mathcal F(z_\pi)\|_\rho\le C\delta,
+ \quad\mathcal F(q,v)=(v,f(q)),\quad C=|f(0)|+2\Lambda R.
+ \tag{9}
+$$
+
+The vector field $\mathcal F$ is Lipschitz with constant $\alpha$ in
+the norm (4). Two polygons with the same initial state consequently
+satisfy
+
+$$
+ \sup_{t\le T}\|z_\pi(t)-z_\sigma(t)\|_\rho
+ \le C\frac{e^{\alpha T}-1}{\alpha}
+                        (|\pi|+|\sigma|).
+ \tag{10}
+$$
+
+To verify this estimate, integrate the two residual equations (9),
+subtract, and apply the elementary integral Gronwall inequality. That
+inequality follows by integrating the differential inequality for an
+upper bound after multiplying by $e^{-\alpha t}$.
+
+Completeness of continuous path space now constructs a uniform limit
+$z(t)$. The residual integral tends to zero; the Lipschitz bound passes
+$\mathcal F(z_\pi)$ to $\mathcal F(z)$ under the time integral. Hence
+
+$$z(t)=z_0+\int_0^t\mathcal F(z(s))\,ds.\tag{11}$$
+
+The limit is differentiable and solves (1). Applying the same difference
+estimate with zero residual proves uniqueness. Letting one mesh tend to
+zero in (10) gives a quantitative error for any other partition.
+Both kick orders, mixed arbitrarily, lead to the same solution.
+Since $T$ was arbitrary, the global Lipschitz hypothesis constructs
+forward motion for every finite time.
+
+This is the first analogy with Balaban: one proves bounds for each
+finite description before appealing to a limiting object. The limit
+follows from estimates uniform in the refinement. Nothing in this
+argument requires choosing $\hbar>0$.
+
+## 4. Local existence, continuation and endpoint caustics are different
+
+For a locally Lipschitz force one first works inside a bounded region.
+A Lipschitz extension permits the construction above; a short-time bound
+ensuring that the trajectory remains in the region makes the extension
+irrelevant. Continuation requires additional control against escape
+from all bounded phase-space regions.
+
+For example, $V(q)=\lambda q^4/4$, $\lambda>0$, has unbounded force
+derivative globally. A fixed energy bounds both $q$ and $p=mv$, so its
+initial-value solution continues. The inverted quartic has a smooth,
+locally Lipschitz force too, yet admits finite-time escape. The explicit
+bounds and escape solution appear in the time-blocking note, section 6.
+Continuity alone can give local existence; the Lipschitz assumption above
+also supplies the uniqueness and quantitative stability used in (10).
+
+An endpoint problem fixes $q(0)$ and $q(T)$ rather than initial velocity.
+It has a separate possible singularity. For the harmonic oscillator the
+full phase-space derivative is
+
+$$
+ \begin{pmatrix}
+ \cos\omega T&\sin(\omega T)/\omega\\
+ -\omega\sin(\omega T)&\cos\omega T
+ \end{pmatrix},\qquad \det=1.
+ \tag{12}
+$$
+
+The position response to initial velocity is
+$\sin(\omega T)/\omega$. It vanishes at a conjugate time while the full
+phase-space map stays invertible. The corresponding endpoint action
+Hessian can fail to invert even though the initial-value motion remains
+unique. The time-blocking note gives a finite-polygon determinant that
+approaches this singularity under refinement.
+
+Therefore a failure of one position-only generating function is not,
+by itself, a failure of Newton's dynamics. A physical completion argument
+has to establish which extra information the complete theory needs and
+why it cannot be retained classically.
+
+## 5. Retain an intermediate time as a fluctuating variable
+
+The ODE polygon solves for its intermediate states. A different
+construction assigns weights and integrates an unobserved intermediate
+position. For the positive free kernel,
+
+$$
+ k_{T,\hbar}(y,x)=\sqrt{\frac{m}{2\pi\hbar T}}
+       \exp\left[-\frac{m(y-x)^2}{2\hbar T}\right],\qquad\hbar>0,
+ \tag{13}
+$$
+
+splitting $T=u+v$ gives a conditional inserted position with
+
+$$
+ \mu=\frac{vx+uy}{T},\qquad
+ \operatorname{Var}(Z\mid x,y)=\frac{\hbar uv}{mT}.
+ \tag{14}
+$$
+
+A constant-force Newton parabola shifts this vertex from its chord by
+$-Fuv/(2m)$. The associated hat deformation has action
+$F^2uvT/(8m)$. For equal-noise Gaussian bridge laws the relative entropy
+between the shifted and unshifted vertex laws is that action divided by
+$\hbar$. The precise normalization and physical premises are recorded in
+the time-blocking note, equations (15a)--(15b).
+
+The positive Gaussian kernel is a Euclidean construction. The real-time
+weight uses $e^{iS^R/\hbar}$ and Fresnel integration; its quadratic second
+moment is not a probability covariance. Changing between them requires
+more than replacing a symbol in a fluctuation estimate.
+
+Here the role of the action constant is visible: it sets the fluctuation
+width and the strength of action differences in the weight. Ordinary
+ODE convergence controls the mean path construction; it does not fix
+that extra law.
+
+## 6. What a nonlinear time block actually produces
+
+For a symmetric two-cell Euclidean action, put
+$a=mT/(uv)$ and $w=T/2$. Retain
+
+$$
+ A_\hbar(\mu)=-\hbar\log\left[
+ \sqrt{\frac{a}{2\pi\hbar}}\int
+ e^{-[a(z-\mu)^2/2+wV(z)]/\hbar}dz\right].
+ \tag{15}
+$$
+
+This whole function accompanies the coarse kinetic term and the endpoint
+potential terms. Its derivatives have a useful interpretation:
+
+$$
+ A_\hbar'=a(\mu-\mathbb EZ),\qquad
+ A_\hbar''=a-\frac{a^2}{\hbar}\operatorname{Var}(Z).
+ \tag{16}
+$$
+
+Thus an eliminated fluctuation changes the retained response. For convex
+$V$, the nonlinear-cell note proves $0\le A_\hbar''\le a$ and an explicit
+normalized tail bound about the conditional minimizing position. It also
+proves a simultaneous bound for large fluctuations at nonadjacent sites
+in one halving. No bad region is dropped from the integral.
+
+Classical minimization gives the envelope
+$A_0(\mu)=\min_z[a(z-\mu)^2/2+wV(z)]$. It too has curvature between
+zero and $a$. Coarse regularity alone therefore does not distinguish the
+two operations.
+
+The quartic centre does distinguish them quantitatively. For
+$V(z)=\lambda z^4/4$, $\lambda>0$, $A_0''(0)=0$ while
+
+$$
+ A_\hbar''(0)>0\quad(\hbar>0),\qquad
+ A_\hbar''(0)\sim\frac{3w\lambda\hbar}{a}
+        \quad\left(\frac{w\lambda\hbar}{a^2}\downarrow0\right).
+ \tag{17}
+$$
+
+The nonlinear-cell note gives finite inequalities, not just the
+asymptotic formula, and inverts them to a model-conditional action
+interval. This is an example of a generated interaction: a purely
+quartic bare potential acquires quadratic curvature after fluctuation
+integration. The action multiplier remains supplied in (15).
+
+## 7. The part of Balaban's method visible here
+
+The correspondence can now be stated concretely.
+
+| Mechanical construction | Controlled quantity | What is retained |
+| --- | --- | --- |
+| Force polygon on a time partition | Lipschitz amplification and force-balance residual | Initial state, force rule, and a uniform error estimate |
+| Endpoint stationary elimination | Inverse action Hessian on a specified branch | Effective action and its source response |
+| Gaussian integration | Covariance and determinant | Schur-complement action together with normalization and explicit $\hbar$ |
+| Nonlinear integration | Full conditional law and large-field probabilities | Generated interactions, normalization and the regions outside the local approximation |
+
+Balaban organizes successive effective densities so that such information
+can be estimated at the next scale. The analogous task for ODE existence
+is to preserve enough stability and consistency information to pass from
+all finite polygons to one motion. The objects of the two existence
+problems differ: an ODE solution is a trajectory; a weighted continuum
+construction includes a law or propagator over trajectories.
+
+The one-dimensional chain makes an elementary first step possible:
+conditioned on retained times, distinct missing intervals are independent.
+Their interactions can nevertheless change functional form at each
+elimination. Closure of a finite list of polynomial coefficients is an
+additional assertion that must be checked.
+
+## 8. Consequence for STATE
+
+The requested $0+1$/ODE lesson is developed together with a causal
+construction of nonlinear initial-value motion on arbitrary unequal
+partitions, allowing mixed kick orders. It complements the endpoint
+Green-function calculation and explains the normalized nonlinear cell.
+The research question is now sharper: which independent physical law
+selects the weight and its action multiplier, beyond the regularity
+already available from classical motion? The next candidate test is
+branch competition in a nonlinear retained interaction, keeping the
+full initial-value description as its classical control. These are
+written derivations and a pedagogical comparison, not an independent
+proof of action necessity.

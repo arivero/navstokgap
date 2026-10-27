@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Balaban through Newton&#x27;s polygons: a 0+1 lesson</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Balaban through Newton’s polygons: a 0+1 lesson</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/balaban-ode-lesson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/balaban-ode-lesson.pdf">PDF</a></p><p><strong>Lesson and written construction, 2026-10-27.</strong> A
+useful way to approach Balaban’s method is to start with a familiar
+existence problem: construct motion from finitely many force impulses,
+prove estimates that survive arbitrary insertion of intermediate times,
+and take a limit. Then ask what additional description must survive when
+an intermediate position is integrated rather than solved for. The
+answer includes its fluctuation law, normalization and generated
+interactions.</p>
+<p>We work with one mechanical coordinate and time, keeping <span
+class="math inline">\(\hbar\)</span> explicit. The finite construction
+is a modern use of Newton’s polygon idea; it is not a proof about every
+historical edition or force polygon. The Galileo inertial-line /
+falling-parabola comparison supplies our action observable. No
+relativistic assumption or <span class="math inline">\(c\)</span> is
+needed.</p>
+<p>The ODE proof below is standard in method and claims no novelty. Its
+purpose is to make the comparison concrete, including arbitrary unequal
+time steps and either force-kick convention. The two retained-weight
+calculations are in the <a
+href="balaban-newton-time-blocking.html">time-blocking note</a> and the
+<a href="newton-nonlinear-time-cell.html">nonlinear cell</a>. They
+specify their proof status and source reading. Balaban’s <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/balaban/Balaban_UltravioletStability_ICM1986_1987.md">ICM
+overview</a>, printed pages 1260–1262 (text read), and <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/balaban/Dimock_BalabanI_1108.1335v2.md">Dimock
+I</a>, sections 2.1, 2.4, 4.5 and Theorem 14 (selected passages read),
+motivate the comparison.</p>
+<p><strong>Targeted check (GPT-6.1 Terra, 2026-10-27).</strong> Terra
+read the lesson and checked the causal stability, residual, Cauchy and
+limit arguments in sections 1–3 without finding a mathematical error
+under their global Lipschitz hypothesis. The lesson’s distinction
+between a trajectory and a weighted law was also checked. This was a
+targeted written review; the physical origin of the weighting is still
+open.</p>
+<h2 id="start-with-a-finite-newton-polygon">1. Start with a finite
+Newton polygon</h2>
+<p>Let <span class="math inline">\(m&gt;0\)</span> be the mass and <span
+class="math inline">\(f(q)=F(q)/m\)</span> the acceleration. The desired
+motion would satisfy</p>
+<p><span class="math display">\[\dot q=v,\qquad\dot
+v=f(q),\qquad(q(0),v(0))=(q_0,v_0).\tag{1}\]</span></p>
+<p>For now we do not assume that a solution exists. Given a positive
+time step <span class="math inline">\(\tau\)</span>, define a drift and
+a force kick by</p>
+<p><span class="math display">\[
+D_\tau(q,v)=(q+\tau v,v),\qquad
+K_\tau(q,v)=(q,v+\tau f(q)).
+\tag{2}
+\]</span></p>
+<p>A step can kick first, <span class="math inline">\(D_\tau
+K_\tau\)</span>, or drift first, <span class="math inline">\(K_\tau
+D_\tau\)</span>. The first choice uses the force at the old position;
+the second uses the force at the new position. Both give a finite
+piecewise straight trajectory with impulses. Neither is assumed to agree
+exactly with the unknown continuous motion.</p>
+<p>Fix <span class="math inline">\(T&gt;0\)</span>, take any finite
+positive partition of <span class="math inline">\([0,T]\)</span>, choose
+either ordering in each cell, and compose the maps chronologically.
+There is no equal-step or nesting requirement. When a time is inserted,
+recompute the later states from the fixed initial state and the
+prescribed force rule.</p>
+<p>Existence of the limit requires two kinds of estimates. Stability
+bounds how differences grow. Consistency bounds the error in the finite
+force balance. The two together will construct the ODE solution.</p>
+<h2 id="lipschitz-control-supplies-stability">2. Lipschitz control
+supplies stability</h2>
+<p>Assume for this construction that</p>
+<p><span
+class="math display">\[|f(q)-f(Q)|\le\Lambda|q-Q|\quad(q,Q\in\mathbb
+R),\qquad\Lambda\ge0.
+\tag{3}\]</span></p>
+<p>The quantity <span class="math inline">\(\Lambda\)</span> has units
+of inverse time squared. Choose a reference frequency <span
+class="math inline">\(\rho&gt;0\)</span> and use the length-valued
+phase-space norm</p>
+<p><span class="math display">\[
+\|(q,v)\|_\rho=|q|+\frac{|v|}{\rho},\qquad
+\alpha=\max(\rho,\Lambda/\rho),\quad
+\beta=\rho+\Lambda/\rho,\quad b=|f(0)|/\rho.
+\tag{4}
+\]</span></p>
+<p>There is no action constant in these definitions. Directly from
+(2),</p>
+<p><span class="math display">\[
+\operatorname{Lip}(D_\tau)\le1+\rho\tau,\qquad
+\operatorname{Lip}(K_\tau)\le1+\Lambda\tau/\rho.
+\tag{5}
+\]</span></p>
+<p>Thus either cell map has Lipschitz constant at most <span
+class="math inline">\(e^{\beta\tau}\)</span>. The constants multiply
+under composition, and their exponents add. Every finite polygon
+therefore has the same upper amplification <span
+class="math inline">\(e^{\beta T}\)</span>, independently of the number
+and placement of vertices.</p>
+<p>We also need a bound on the states themselves, because consistency
+involves the force along the polygon. For either cell map <span
+class="math inline">\(M_\tau\)</span>,</p>
+<p><span class="math display">\[
+\|M_\tau z\|_\rho\le e^{\beta\tau}\|z\|_\rho
+                         +\tau e^{\beta\tau}b.
+\tag{6}
+\]</span></p>
+<p>For a kick-first cell, the inhomogeneous term is actually at most
+<span class="math inline">\(\tau(1+\rho\tau)b\)</span>; for a
+drift-first cell it is <span class="math inline">\(\tau b\)</span>.
+Iterating (6) gives the common vertex bound</p>
+<p><span class="math display">\[R=e^{\beta
+T}(\|z_0\|_\rho+Tb).\tag{7}\]</span></p>
+<p>In particular <span class="math inline">\(|q_j|\le R\)</span>, <span
+class="math inline">\(|v_j|\le\rho R\)</span>, and <span
+class="math inline">\(|f(q_j)|\le A:=|f(0)|+\Lambda R\)</span>. A very
+irregular partition has not created a new force or stability
+constant.</p>
+<h2 id="the-polygons-construct-the-ode-solution">3. The polygons
+construct the ODE solution</h2>
+<p>Linearly interpolate both vertex coordinates to obtain <span
+class="math inline">\(z_\pi(t)=(q_\pi(t),v_\pi(t))\)</span>. The
+displayed velocity is continuous; it differs from the physical constant
+velocity along each straight polygon segment by at most that cell’s
+kick. This distinction disappears with the mesh.</p>
+<p>Let <span class="math inline">\(\delta=|\pi|\)</span> be the maximum
+cell duration. In a kick-first cell, with elapsed time <span
+class="math inline">\(s\in[0,\tau]\)</span>,</p>
+<p><span class="math display">\[
+\dot q_\pi-v_\pi=(\tau-s)f(q_j),\qquad
+\dot v_\pi-f(q_\pi)=f(q_j)-f(q_\pi).
+\tag{8}
+\]</span></p>
+<p>In a drift-first cell the analogous expressions are <span
+class="math inline">\(-sf(q_{j+1})\)</span> and <span
+class="math inline">\(f(q_{j+1})-f(q_\pi)\)</span>. The bounds in (7)
+give, for almost every time,</p>
+<p><span class="math display">\[
+\|\dot z_\pi-\mathcal F(z_\pi)\|_\rho\le C\delta,
+\quad\mathcal F(q,v)=(v,f(q)),\quad C=|f(0)|+2\Lambda R.
+\tag{9}
+\]</span></p>
+<p>The vector field <span class="math inline">\(\mathcal F\)</span> is
+Lipschitz with constant <span class="math inline">\(\alpha\)</span> in
+the norm (4). Two polygons with the same initial state consequently
+satisfy</p>
+<p><span class="math display">\[
+\sup_{t\le T}\|z_\pi(t)-z_\sigma(t)\|_\rho
+\le C\frac{e^{\alpha T}-1}{\alpha}
+                        (|\pi|+|\sigma|).
+\tag{10}
+\]</span></p>
+<p>To verify this estimate, integrate the two residual equations (9),
+subtract, and apply the elementary integral Gronwall inequality. That
+inequality follows by integrating the differential inequality for an
+upper bound after multiplying by <span class="math inline">\(e^{-\alpha
+t}\)</span>.</p>
+<p>Completeness of continuous path space now constructs a uniform limit
+<span class="math inline">\(z(t)\)</span>. The residual integral tends
+to zero; the Lipschitz bound passes <span class="math inline">\(\mathcal
+F(z_\pi)\)</span> to <span class="math inline">\(\mathcal F(z)\)</span>
+under the time integral. Hence</p>
+<p><span class="math display">\[z(t)=z_0+\int_0^t\mathcal
+F(z(s))\,ds.\tag{11}\]</span></p>
+<p>The limit is differentiable and solves (1). Applying the same
+difference estimate with zero residual proves uniqueness. Letting one
+mesh tend to zero in (10) gives a quantitative error for any other
+partition. Both kick orders, mixed arbitrarily, lead to the same
+solution. Since <span class="math inline">\(T\)</span> was arbitrary,
+the global Lipschitz hypothesis constructs forward motion for every
+finite time.</p>
+<p>This is the first analogy with Balaban: one proves bounds for each
+finite description before appealing to a limiting object. The limit
+follows from estimates uniform in the refinement. Nothing in this
+argument requires choosing <span
+class="math inline">\(\hbar&gt;0\)</span>.</p>
+<h2
+id="local-existence-continuation-and-endpoint-caustics-are-different">4.
+Local existence, continuation and endpoint caustics are different</h2>
+<p>For a locally Lipschitz force one first works inside a bounded
+region. A Lipschitz extension permits the construction above; a
+short-time bound ensuring that the trajectory remains in the region
+makes the extension irrelevant. Continuation requires additional control
+against escape from all bounded phase-space regions.</p>
+<p>For example, <span class="math inline">\(V(q)=\lambda q^4/4\)</span>,
+<span class="math inline">\(\lambda&gt;0\)</span>, has unbounded force
+derivative globally. A fixed energy bounds both <span
+class="math inline">\(q\)</span> and <span
+class="math inline">\(p=mv\)</span>, so its initial-value solution
+continues. The inverted quartic has a smooth, locally Lipschitz force
+too, yet admits finite-time escape. The explicit bounds and escape
+solution appear in the time-blocking note, section 6. Continuity alone
+can give local existence; the Lipschitz assumption above also supplies
+the uniqueness and quantitative stability used in (10).</p>
+<p>An endpoint problem fixes <span class="math inline">\(q(0)\)</span>
+and <span class="math inline">\(q(T)\)</span> rather than initial
+velocity. It has a separate possible singularity. For the harmonic
+oscillator the full phase-space derivative is</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+\cos\omega T&amp;\sin(\omega T)/\omega\\
+-\omega\sin(\omega T)&amp;\cos\omega T
+\end{pmatrix},\qquad \det=1.
+\tag{12}
+\]</span></p>
+<p>The position response to initial velocity is <span
+class="math inline">\(\sin(\omega T)/\omega\)</span>. It vanishes at a
+conjugate time while the full phase-space map stays invertible. The
+corresponding endpoint action Hessian can fail to invert even though the
+initial-value motion remains unique. The time-blocking note gives a
+finite-polygon determinant that approaches this singularity under
+refinement.</p>
+<p>Therefore a failure of one position-only generating function is not,
+by itself, a failure of Newton’s dynamics. A physical completion
+argument has to establish which extra information the complete theory
+needs and why it cannot be retained classically.</p>
+<h2 id="retain-an-intermediate-time-as-a-fluctuating-variable">5. Retain
+an intermediate time as a fluctuating variable</h2>
+<p>The ODE polygon solves for its intermediate states. A different
+construction assigns weights and integrates an unobserved intermediate
+position. For the positive free kernel,</p>
+<p><span class="math display">\[
+k_{T,\hbar}(y,x)=\sqrt{\frac{m}{2\pi\hbar T}}
+       \exp\left[-\frac{m(y-x)^2}{2\hbar T}\right],\qquad\hbar&gt;0,
+\tag{13}
+\]</span></p>
+<p>splitting <span class="math inline">\(T=u+v\)</span> gives a
+conditional inserted position with</p>
+<p><span class="math display">\[
+\mu=\frac{vx+uy}{T},\qquad
+\operatorname{Var}(Z\mid x,y)=\frac{\hbar uv}{mT}.
+\tag{14}
+\]</span></p>
+<p>A constant-force Newton parabola shifts this vertex from its chord by
+<span class="math inline">\(-Fuv/(2m)\)</span>. The associated hat
+deformation has action <span class="math inline">\(F^2uvT/(8m)\)</span>.
+For equal-noise Gaussian bridge laws the relative entropy between the
+shifted and unshifted vertex laws is that action divided by <span
+class="math inline">\(\hbar\)</span>. The precise normalization and
+physical premises are recorded in the time-blocking note, equations
+(15a)–(15b).</p>
+<p>The positive Gaussian kernel is a Euclidean construction. The
+real-time weight uses <span
+class="math inline">\(e^{iS^R/\hbar}\)</span> and Fresnel integration;
+its quadratic second moment is not a probability covariance. Changing
+between them requires more than replacing a symbol in a fluctuation
+estimate.</p>
+<p>Here the role of the action constant is visible: it sets the
+fluctuation width and the strength of action differences in the weight.
+Ordinary ODE convergence controls the mean path construction; it does
+not fix that extra law.</p>
+<h2 id="what-a-nonlinear-time-block-actually-produces">6. What a
+nonlinear time block actually produces</h2>
+<p>For a symmetric two-cell Euclidean action, put <span
+class="math inline">\(a=mT/(uv)\)</span> and <span
+class="math inline">\(w=T/2\)</span>. Retain</p>
+<p><span class="math display">\[
+A_\hbar(\mu)=-\hbar\log\left[
+\sqrt{\frac{a}{2\pi\hbar}}\int
+e^{-[a(z-\mu)^2/2+wV(z)]/\hbar}dz\right].
+\tag{15}
+\]</span></p>
+<p>This whole function accompanies the coarse kinetic term and the
+endpoint potential terms. Its derivatives have a useful
+interpretation:</p>
+<p><span class="math display">\[
+A_\hbar&#39;=a(\mu-\mathbb EZ),\qquad
+A_\hbar&#39;&#39;=a-\frac{a^2}{\hbar}\operatorname{Var}(Z).
+\tag{16}
+\]</span></p>
+<p>Thus an eliminated fluctuation changes the retained response. For
+convex <span class="math inline">\(V\)</span>, the nonlinear-cell note
+proves <span class="math inline">\(0\le A_\hbar&#39;&#39;\le a\)</span>
+and an explicit normalized tail bound about the conditional minimizing
+position. It also proves a simultaneous bound for large fluctuations at
+nonadjacent sites in one halving. No bad region is dropped from the
+integral.</p>
+<p>Classical minimization gives the envelope <span
+class="math inline">\(A_0(\mu)=\min_z[a(z-\mu)^2/2+wV(z)]\)</span>. It
+too has curvature between zero and <span
+class="math inline">\(a\)</span>. Coarse regularity alone therefore does
+not distinguish the two operations.</p>
+<p>The quartic centre does distinguish them quantitatively. For <span
+class="math inline">\(V(z)=\lambda z^4/4\)</span>, <span
+class="math inline">\(\lambda&gt;0\)</span>, <span
+class="math inline">\(A_0&#39;&#39;(0)=0\)</span> while</p>
+<p><span class="math display">\[
+A_\hbar&#39;&#39;(0)&gt;0\quad(\hbar&gt;0),\qquad
+A_\hbar&#39;&#39;(0)\sim\frac{3w\lambda\hbar}{a}
+        \quad\left(\frac{w\lambda\hbar}{a^2}\downarrow0\right).
+\tag{17}
+\]</span></p>
+<p>The nonlinear-cell note gives finite inequalities, not just the
+asymptotic formula, and inverts them to a model-conditional action
+interval. This is an example of a generated interaction: a purely
+quartic bare potential acquires quadratic curvature after fluctuation
+integration. The action multiplier remains supplied in (15).</p>
+<h2 id="the-part-of-balabans-method-visible-here">7. The part of
+Balaban’s method visible here</h2>
+<p>The correspondence can now be stated concretely.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Mechanical construction</th>
+<th>Controlled quantity</th>
+<th>What is retained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Force polygon on a time partition</td>
+<td>Lipschitz amplification and force-balance residual</td>
+<td>Initial state, force rule, and a uniform error estimate</td>
+</tr>
+<tr>
+<td>Endpoint stationary elimination</td>
+<td>Inverse action Hessian on a specified branch</td>
+<td>Effective action and its source response</td>
+</tr>
+<tr>
+<td>Gaussian integration</td>
+<td>Covariance and determinant</td>
+<td>Schur-complement action together with normalization and explicit
+<span class="math inline">\(\hbar\)</span></td>
+</tr>
+<tr>
+<td>Nonlinear integration</td>
+<td>Full conditional law and large-field probabilities</td>
+<td>Generated interactions, normalization and the regions outside the
+local approximation</td>
+</tr>
+</tbody>
+</table>
+<p>Balaban organizes successive effective densities so that such
+information can be estimated at the next scale. The analogous task for
+ODE existence is to preserve enough stability and consistency
+information to pass from all finite polygons to one motion. The objects
+of the two existence problems differ: an ODE solution is a trajectory; a
+weighted continuum construction includes a law or propagator over
+trajectories.</p>
+<p>The one-dimensional chain makes an elementary first step possible:
+conditioned on retained times, distinct missing intervals are
+independent. Their interactions can nevertheless change functional form
+at each elimination. Closure of a finite list of polynomial coefficients
+is an additional assertion that must be checked.</p>
+<h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>The requested <span class="math inline">\(0+1\)</span>/ODE lesson is
+developed together with a causal construction of nonlinear initial-value
+motion on arbitrary unequal partitions, allowing mixed kick orders. It
+complements the endpoint Green-function calculation and explains the
+normalized nonlinear cell. The research question is now sharper: which
+independent physical law selects the weight and its action multiplier,
+beyond the regularity already available from classical motion? The next
+candidate test is branch competition in a nonlinear retained
+interaction, keeping the full initial-value description as its classical
+control. These are written derivations and a pedagogical comparison, not
+an independent proof of action necessity.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
