@@ -1,0 +1,402 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A nonlinear Newton time cell: controlled fluctuations and induced stiffness},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\section{A nonlinear Newton time cell: controlled fluctuations and
+induced
+stiffness}\label{a-nonlinear-newton-time-cell-controlled-fluctuations-and-induced-stiffness}
+
+\textbf{Result, 2026-10-27; written derivation, unrefereed.} An
+arbitrary intermediate time can be eliminated exactly from a positive
+Euclidean mechanical weight. For a convex potential, the normalized
+nonlinear conditional law has an explicit fluctuation bound, and the
+retained interaction has bounded curvature even when the original force
+derivative is unbounded. Both integration and classical minimization
+soften the curvature. They differ at a quartic flat centre: positive
+supplied \(\hbar\) generates strictly positive quadratic curvature,
+while classical elimination retains zero quadratic curvature.
+
+This is a concrete \(0+1\) use of Balaban's instruction to retain the
+full normalized interaction and its large-field contribution. It
+supplies a nonlinear calculation beyond the Gaussian reference of the
+\href{balaban-newton-time-blocking.md}{time-blocking note}. The positive
+weight and its action multiplier are premises. An experimentally
+inferred positive curvature would need additional arguments before being
+identified with a necessary universal quantum action.
+
+\textbf{Targeted check (GPT-6.1 Terra, 2026-10-27).} Terra read this
+note and checked the normalized moments/tails, variance and curvature
+identities, quartic comparison and curvature constants, and one-halving
+conditional independence without finding a mathematical error under the
+stated hypotheses. This is a targeted written check; no independent
+validation of the physical weighting is claimed.
+
+The Gaussian-convolution and quadratic-infimum constructions are
+standard; we prove the cell statements below and claim no literature
+novelty. Source motivation:
+\href{../docs/balaban/Dimock_BalabanI_1108.1335v2.md}{Dimock I},
+sections 2.1, 4.5 and Theorem 14, and
+\href{../docs/balaban/Dimock_BalabanII_1212.5562v2.md}{Dimock II},
+Theorem 3.1 and sections 3.13--3.14 (selected passages read). The old
+\href{rivero-1998-conjecture-central-forces.md}{quartic limit theorem},
+section 3, uses \(V=\lambda q^4\); here the convention is
+\(V=\lambda q^4/4\). The two normalizations must not be mixed.
+
+\subsection{1. The complete one-vertex
+weight}\label{the-complete-one-vertex-weight}
+
+Let \(m,u,v,\hbar>0\), \(T=u+v\), and fix positions \(x,y\). Put
+
+\[
+ \mu=\frac{vx+uy}{T},\qquad
+ a=\frac{mT}{uv},\qquad w=\frac T2.
+ \tag{1}
+\]
+
+Here \(a\) has units of action per length squared and \(w\) is a time.
+Completing the kinetic square gives
+
+\[
+ \frac{m(z-x)^2}{2u}+\frac{m(y-z)^2}{2v}
+ =\frac{m(y-x)^2}{2T}+\frac a2(z-\mu)^2.
+ \tag{2}
+\]
+
+The symmetric Euclidean action also includes \(uV(x)/2+wV(z)+vV(y)/2\).
+Define
+
+\[
+ I_\hbar(\mu)=\sqrt{\frac{a}{2\pi\hbar}}
+ \int_{\mathbb R}\exp\left[-\frac{F_\mu(z)}{\hbar}\right]dz,
+ \quad F_\mu(z)=\frac a2(z-\mu)^2+wV(z),\quad
+ A_\hbar=-\hbar\log I_\hbar.
+ \tag{3}
+\]
+
+Then the integrated two-cell kernel, with the free normalization at each
+cell, is exactly
+
+\[
+ \sqrt{\frac{m}{2\pi\hbar T}}
+ \exp\left[-\frac1\hbar\left\{
+ \frac{m(y-x)^2}{2T}+\frac u2V(x)+\frac v2V(y)
+       +A_\hbar(\mu)\right\}\right].
+ \tag{4}
+\]
+
+We retain the whole function \(A_\hbar\); it is not generally a quartic
+polynomial. The normalized conditional law \(\nu_{\hbar,\mu}\) of \(Z\)
+is \(e^{-F_\mu/\hbar}dz\) divided by its integral. No unnormalized
+action cost is used as a probability estimate.
+
+For comparison define
+
+\[A_0(\mu)=\min_z F_\mu(z).\tag{5}\]
+
+This is a classical Euclidean stationary elimination. It is not the
+real-time Newton action: for real time the potential sign in (2)--(4)
+changes and an oscillatory integral replaces the positive weight. In
+particular, these probability bounds cannot simply be continued to real
+time. No \(c\) or relativistic premise is used here.
+
+\subsection{2. Convexity gives normalized
+control}\label{convexity-gives-normalized-control}
+
+Assume \(V\in C^2(\mathbb R)\) is convex, with sufficient growth
+regularity for the following integrations by parts. Polynomials with
+nonnegative second derivative satisfy the hypotheses. The Gaussian
+kinetic term makes \(F_\mu\) strongly convex, so it has one minimizer
+\(z_*(\mu)\) and \(F_\mu''\ge a\). All moments needed below are finite.
+
+\textbf{Proposition 1.} For \(n=1,2,\ldots\) and \(r>0\),
+
+\[
+ \mathbb E_{\nu_{\hbar,\mu}}(Z-z_*)^{2n}
+       \le(2n-1)!!\left(\frac\hbar a\right)^n,
+ \qquad
+ \nu_{\hbar,\mu}(|Z-z_*|\ge r)
+       \le2\exp\left[-\frac{ar^2}{2\hbar}\right].
+ \tag{6}
+\]
+
+Also
+
+\[
+ \operatorname{Var}(Z)\le\frac\hbar a,\qquad
+ A_\hbar'=a(\mu-\mathbb EZ),\qquad
+ A_\hbar''=a-\frac{a^2}{\hbar}\operatorname{Var}(Z),\qquad
+ 0\le A_\hbar''\le a.
+ \tag{7}
+\]
+
+\emph{Proof.} Write \(Y=Z-z_*\). Strong convexity and \(F_\mu'(z_*)=0\)
+imply \(YF_\mu'(z_*+Y)\ge aY^2\). Integration by parts gives
+
+\[
+ \mathbb E[Y^{2n-1}F_\mu'(Z)]
+       =(2n-1)\hbar\mathbb EY^{2n-2}.
+ \tag{8}
+\]
+
+The left side is at least \(a\mathbb EY^{2n}\). Induction proves the
+moment bound. Expanding \(\cosh(tY)\) in its nonnegative even powers
+gives \(\mathbb E\cosh(tY)\le e^{\hbar t^2/(2a)}\). Since
+\(e^{t|Y|}\le e^{tY}+e^{-tY}\), exponential Markov inequality with
+\(t=ar/\hbar\) gives the tail bound.
+
+For variance, take independent copies \(Z,Z'\). Integration by parts
+also gives \(\mathbb EF_\mu'=0\) and
+\(\operatorname{Cov}(Z,F_\mu'(Z))=\hbar\). Consequently
+
+\[
+ \hbar=\frac12\mathbb E[(Z-Z')(F_\mu'(Z)-F_\mu'(Z'))]
+       \ge a\operatorname{Var}(Z).
+ \tag{9}
+\]
+
+Differentiating the normalized integral (3) gives the two derivative
+identities in (7); in particular
+\(\partial_\mu\mathbb EZ=a\operatorname{Var}(Z)/\hbar\). This proves the
+curvature bounds. \(\square\)
+
+If additionally \(0\le V''\le K\), the same two-copy identity with the
+upper slope bound gives
+
+\[
+ \frac\hbar{a+wK}\le\operatorname{Var}(Z)\le\frac\hbar a,
+ \qquad
+ 0\le A_\hbar''\le\frac{awK}{a+wK}.
+ \tag{10}
+\]
+
+These are bounds for the full normalized nonlinear conditional law. They
+require neither a quadratic approximation nor a small quartic coupling.
+
+The function \(A_\hbar/w\), viewed as a potential of the coordinate
+\(\mu\), has force derivative bounded by \(a/(mw)=2/(uv)\). This is a
+mathematically well-defined coarse potential. Identifying its gradient
+with the force of a physical Newtonian body is a further modeling
+choice: (4) is an endpoint kernel, not an autonomous Newton equation
+derived from it.
+
+\subsection{3. Classical elimination has the same curvature
+bound}\label{classical-elimination-has-the-same-curvature-bound}
+
+The minimizer satisfies
+
+\[a(z_*-\mu)+wV'(z_*)=0,\qquad
+ z_*'=\frac a{a+wV''(z_*)}.
+ \tag{11}
+\]
+
+The implicit function theorem and direct differentiation yield
+
+\[
+ A_0'=a(\mu-z_*),\qquad
+ A_0''=\frac{awV''(z_*)}{a+wV''(z_*)},\qquad
+ 0\le A_0''\le a.
+ \tag{12}
+\]
+
+Thus bounded coarse curvature is already possible in classical
+elimination. For the convex quartic \(V=\lambda z^4/4\), \(\lambda>0\),
+the positive-\(\hbar\) interaction approaches this classical envelope
+with an explicit bound:
+
+\[
+ 0\le A_\hbar-A_0
+ \le\frac{3w\lambda z_*^2\hbar}{2a}
+        +\frac{3w\lambda\hbar^2}{4a^2}.
+ \tag{13}
+\]
+
+\emph{Proof.} After centering the integral at \(z_*\), let
+\(Y\sim N(0,\hbar/a)\) and \(R_V=V(z_*+Y)-V(z_*)-V'(z_*)Y\ge0\).
+Cancellation of the linear terms in \(F_\mu\) gives
+
+\[
+ A_\hbar=A_0-\hbar\log\mathbb E
+                   e^{-wR_V/\hbar}.
+ \tag{14}
+\]
+
+The expectation is at most one, and Jensen's inequality bounds the
+additional action by \(w\mathbb ER_V\). For the quartic, the Gaussian
+second and fourth moments give exactly the right side of (13). This
+proves local uniform convergence as \(\hbar\downarrow0\). \(\square\)
+
+Classical minimization and positive integration therefore share one
+regularity mechanism. A criterion requiring only a finite ODE Lipschitz
+constant would not distinguish them in this convex cell.
+
+\subsection{4. The quartic flat centre does distinguish the two
+weights}\label{the-quartic-flat-centre-does-distinguish-the-two-weights}
+
+For \(V=\lambda z^4/4\) and \(\mu=0\), symmetry gives \(\mathbb EZ=0\)
+and \(z_*=0\). Write
+
+\[g=\frac{w\lambda\hbar}{a^2},\qquad
+ \chi_\hbar=A_\hbar''(0).\tag{15}\]
+
+The classical curvature is \(A_0''(0)=0\). For every supplied
+\(\hbar>0\), however,
+
+\[
+ 0<a\frac{\sqrt{1+4g}-1}{\sqrt{1+4g}+1}
+       \le\chi_\hbar\le a\min(1,3g).
+ \tag{16}
+\]
+
+Moreover \(\chi_\hbar/(ag)\to3\) as \(g\downarrow0\).
+
+\emph{Proof.} Integration of \((ze^{-F_0/\hbar})'\) gives
+
+\[a\mathbb EZ^2+w\lambda\mathbb EZ^4=\hbar,\qquad
+ \chi_\hbar=\frac{aw\lambda}{\hbar}\mathbb EZ^4.\tag{17}\]
+
+Let \(r=a\mathbb EZ^2/\hbar\). Jensen's inequality
+\(\mathbb EZ^4\ge(\mathbb EZ^2)^2\) gives \(r+gr^2\le1\), hence
+\(r\le2/(1+\sqrt{1+4g})\). Equation (7) gives \(\chi_\hbar=a(1-r)\),
+proving the lower bound. Equation (6) at \(n=2\) gives
+\(\mathbb EZ^4\le3(\hbar/a)^2\), proving the upper bound together with
+\(\chi_\hbar\le a\).
+
+Under \(Z=\sqrt{\hbar/a}\,X\), the normalized density of \(X\) is
+proportional to \(e^{-X^2/2-gX^4/4}\). Its fourth moment tends to the
+Gaussian value 3 as \(g\downarrow0\) by dominated convergence. Equation
+(17) gives the stated limit. \(\square\)
+
+This is a finite nonlinear example in which integrating fluctuations
+generates a restoring quadratic term at a classically flat point. The
+local frequency associated with the defined coarse potential is
+\(\omega_{\mathrm{cell}}^2=\chi_\hbar/(mw)\), so
+
+\[
+ \omega_{\mathrm{cell}}^2
+       \sim\frac{3\lambda\hbar}{ma}\quad(g\downarrow0).
+ \tag{18}
+\]
+
+The word frequency here describes this coarse-potential diagnostic; it
+is not an asserted spectral gap or a real-time oscillation frequency
+without a reconstruction argument.
+
+A direct insertion calculation verifies the generated term. At fixed
+\(a,w,\hbar,\mu\), the right derivative at \(\lambda=0\) is
+
+\[
+ \left.\partial_\lambda A_\hbar(\mu)\right|_{0+}
+ =\frac w4\left[\mu^4+6\mu^2\frac\hbar a
+                         +3\left(\frac\hbar a\right)^2\right].
+ \tag{19}
+\]
+
+This follows by differentiating (3) under the Gaussian integral. It is a
+statement about a derivative, not a claim that the full perturbation
+series converges. It agrees with the coefficient 3 in (18).
+
+\subsection{5. One nonlinear halving and its large-field
+events}\label{one-nonlinear-halving-and-its-large-field-events}
+
+In a finite nearest-neighbour Euclidean time chain with fixed endpoint
+positions, use the normalized joint law and choose a set \(\mathcal I\)
+of interior vertices with no two adjacent, retaining all other vertices.
+Conditioned on the retained values, the variables \(Z_j\),
+\(j\in\mathcal I\), are independent, each with a density of the form
+(3), with its own \(a_j,w_j,\mu_j\). The exact retained kernel remains a
+product of nearest-neighbour kernels, although their actions need not
+have the original kinetic-plus-potential form.
+
+Define a bad event relative to each cell's conditional minimizing value:
+
+\[
+ B_j=\left\{|Z_j-z_{*,j}|>b\sqrt{\hbar/a_j}\right\},\qquad
+ p_b=2e^{-b^2/2}.
+ \tag{20}
+\]
+
+For any \(H\subset\mathcal I\), Proposition 1 and conditional
+independence give, including after averaging the retained variables,
+
+\[\mathbb P\left(\bigcap_{j\in H}B_j\right)\le p_b^{|H|}.
+ \tag{21}\]
+
+For \(b>\sqrt{2\log2}\) this is a decaying bound. It controls the
+normalized nonlinear measure, including configurations outside the
+chosen tubes. It is one halving statement for this convex local action.
+After further halvings the generated interactions must be controlled; we
+have not proved that the same original-potential formula closes.
+
+\subsection{6. Written controls and physical
+meaning}\label{written-controls-and-physical-meaning}
+
+For \(V=0\), (3) gives \(A_\hbar=0\) and variance \(\hbar/a\),
+saturating (7). For \(V=kz^2/2\), \(k\ge0\), completing the square gives
+
+\[
+ A_\hbar(\mu)=\frac{awk}{2(a+wk)}\mu^2
+                 +\frac\hbar2\log\left(1+\frac{wk}{a}\right).
+ \tag{22}
+\]
+
+Its curvature agrees exactly with (10) and (12); the fluctuation term is
+independent of \(\mu\) and leaves that curvature unchanged. This
+quadratic control distinguishes a force-curvature effect from the
+quartic fluctuation-generated curvature in section 4.
+
+For \(V=-Fz\), (3) gives
+
+\[
+ A_\hbar=-wF\mu-\frac{w^2F^2}{2a},\qquad
+ \frac{w^2F^2}{2a}=\frac{F^2uvT}{8m}.
+ \tag{23}
+\]
+
+This recovers the arbitrary-cut Galileo correction in the time-blocking
+note, with its normalization explicit.
+
+The cell curvature in (16) is a possible scale diagnostic, conditional
+on the entire weighting model. If \(a,w,\lambda\) are independently
+fixed and \(0<\chi<a\) is the measured value of the defined cell
+curvature, inverting (16) gives the model-conditional action interval
+
+\[
+ \frac{a\chi}{3w\lambda}\le\hbar
+       \le\frac{a\chi}{w\lambda(1-\chi/a)^2}.
+ \tag{24}
+\]
+
+Indeed, with \(q=\chi/a\), (16) gives \(q/3\le g\) and
+\(\sqrt{1+4g}\le(1+q)/(1-q)\), so \(g\le q/(1-q)^2\). The lower endpoint
+is asymptotically sharp in the small-\(g\) limit. This inference
+presupposes that the measured response is the response of (3), rather
+than an unmodeled apparatus effect.
+
+A nonzero measured value could also come from a classical statistical
+weight with an independently supplied action-like noise parameter. ODE
+regularity or this positive Euclidean integral alone cannot identify
+that parameter with the real-time phase constant, a universal apparatus
+restriction, or Planck's measured value. Those are separate physical
+tests. The bounded full-cell result is useful because it makes the
+alternatives quantitatively testable.
+
+\subsection{7. Consequence for STATE}\label{consequence-for-state}
+
+The first nonlinear time-elimination step is now controlled without
+replacing its law by a Gaussian: normalized tails, endpoint response,
+coarse curvature and a simultaneous one-halving bad-event bound are
+explicit. The convex quartic generates positive flat-centre curvature at
+supplied \(\hbar>0\), whereas classical elimination remains regular with
+zero flat-centre curvature. Next investigate branch competition or
+real-time/record reconstruction of this diagnostic. The Newton necessity
+question remains active; no positivity of \(\hbar\) is derived from the
+choice of a positive weight. These are written, unrefereed calculations.
+\end{document}

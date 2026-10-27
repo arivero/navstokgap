@@ -105,9 +105,12 @@ use $c$ only with a stated relativistic premise. Connect arbitrary
 intermediate-time polygons to ODE existence, uniqueness, stability and
 continuation, and develop further useful links. The
 [first calculation](../notes/balaban-newton-time-blocking.md) is written,
-unrefereed. Next retain normalized fluctuation and large-field terms
-through time insertion and test their physical weighting independently
-of a supplied positive action. Alpoge and Yang--Mills are deferred;
+with a targeted Terra check. The [nonlinear cell](../notes/newton-nonlinear-time-cell.md)
+now controls a full convex insertion law and its one-halving large-field
+events, and distinguishes positive-$\hbar$ quartic stiffness from the
+regular classical envelope. Next test branch competition and physical
+real-time/record reconstruction, and develop the $0+1$/ODE lesson.
+Alpoge and Yang--Mills are deferred;
 this direction supersedes the ordering of the earlier queue below.
 
 **Diagnostic from the visual comparison (2026-10-02).** Geometric
