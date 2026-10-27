@@ -30,6 +30,11 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Bibliography and tooling
 
+- [Balaban constructions](balaban/README.md): eight locally downloaded PDFs,
+  passage-level reading notes, useful RG mechanisms and thirteen older
+  journal originals still awaiting full text. Distinguishes ultraviolet
+  stability, continuum existence and the physical mass gap.
+
 - [Lubetzky–Sly: Ising cutoff](LubetzkySly_IsingCutoff_0909.4320v1.md):
   established gap, clock convention and global mixing-time comparison;
   [B73](../references/batches/B73.md) and
