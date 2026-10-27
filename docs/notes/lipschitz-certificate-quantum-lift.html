@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lifting a Lipschitz Newton certificate to quantum mechanics</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Lifting a Lipschitz Newton certificate to quantum mechanics</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/lipschitz-certificate-quantum-lift.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/lipschitz-certificate-quantum-lift.pdf">PDF</a></p><p><strong>Result, 2026-10-27; written derivation, unrefereed.</strong>
+A classical kick–drift existence certificate for a one-dimensional
+conservative force with a global Lipschitz constant supplies the
+model-dependent estimates for a specified noncommutative quantum
+construction. For every supplied <span
+class="math inline">\(\hbar&gt;0\)</span> it gives the Schrödinger
+representation, an essentially self-adjoint Hamiltonian, a strongly
+continuous unitary group, and arbitrary-partition convergence of the
+quantum kick–drift products. On coherent preparations the same classical
+polygons and quantum products agree at their vertices to <span
+class="math inline">\(O(\sqrt\hbar)\)</span>, uniformly in the mesh on a
+fixed time interval. Together with the classical certificate this gives
+the requested joint observable limit.</p>
+<p>This is a <strong>bounded instance</strong>, not a proof of the
+universal <a
+href="classical-quantum-existence-conjecture.html">constructive lifting
+conjecture</a>. The input includes the conservative action and a
+globally Lipschitz force; the background analytic toolkit includes
+Nelson’s commutator theorem and the graph-domain propagation result
+cited below. No lower bound on <span class="math inline">\(V\)</span> or
+derivatives beyond the Lipschitz force are assumed. This real-time
+theorem does not construct a Euclidean probability measure for a
+potential unbounded below.</p>
+<p>The loss of the earlier <span class="math inline">\(O(\hbar)\)</span>
+rate is necessary at this level of regularity: <span
+class="math inline">\(V(q)=q|q|/2\)</span> has globally Lipschitz force,
+but a centered coherent packet has a momentum error of exact order <span
+class="math inline">\(\sqrt\hbar\)</span> at small fixed positive times.
+No claim of literature priority is made.</p>
+<h2 id="the-input-certificate-and-quantum-target">1. The input
+certificate and quantum target</h2>
+<p>Let <span class="math inline">\(m&gt;0\)</span>, <span
+class="math inline">\(V\in C^1(\mathbb R;\mathbb R)\)</span>, and
+suppose <span class="math display">\[|V&#39;(x)-V&#39;(y)|\le
+L|x-y|,\qquad L\ge0.\tag{1}\]</span> Thus <span
+class="math inline">\(V\in C^{1,1}\)</span> and <span
+class="math inline">\(V&#39;&#39;\)</span> exists almost everywhere with
+<span class="math inline">\(|V&#39;&#39;|\le L\)</span>. The input is
+the mechanical action with kinetic term <span
+class="math inline">\(p^2/(2m)\)</span> and potential <span
+class="math inline">\(V\)</span>, the initial point <span
+class="math inline">\(z_0=(q_0,p_0)\)</span>, and the classical
+kick–drift polygons <span class="math display">\[
+p_{j+1}^{\rm cl}=p_j^{\rm cl}-s_jV&#39;(q_j^{\rm cl}),\qquad
+q_{j+1}^{\rm cl}=q_j^{\rm cl}+s_jp_{j+1}^{\rm cl}/m.\tag{2}
+\]</span> Take their linear interpolation for a partition <span
+class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,T]\)</span>. The usual Lipschitz certificate
+supplies a unique limit <span class="math inline">\(z(t)\)</span> and
+<span class="math display">\[\sup_{t\le T}\|z_\pi^{\rm
+cl}(t)-z(t)\|_\omega
+\le R_T^{\rm cl}|\pi|,\qquad
+\|(q,p)\|_\omega=|q|+\frac{|p|}{m\omega}.\tag{3}\]</span> For example,
+the proof in the <a href="balaban-ode-lesson.html">ODE lesson</a> uses a
+common bounded region, force-balance residual and Gronwall stability.
+Here <span class="math inline">\(\omega&gt;0\)</span> is a fixed
+auxiliary unit; <span class="math inline">\(R_T^{\rm cl}\)</span>
+depends only on the classical data and <span
+class="math inline">\(T\)</span>. No quantum convergence is included in
+the certificate.</p>
+<p>For each <span class="math inline">\(\hbar&gt;0\)</span> set, on
+<span class="math inline">\(L^2(\mathbb R)\)</span>, <span
+class="math display">\[
+\begin{gathered}
+Qf(q)=qf(q),\quad P=-i\hbar\partial_q,\quad
+H_\hbar=P^2/(2m)+V(Q),\\
+K_{\hbar,s}=e^{-isV(Q)/\hbar},\quad
+D_{\hbar,s}=e^{-isP^2/(2m\hbar)}.
+\end{gathered}\tag{4}
+\]</span> The self-adjoint <span class="math inline">\(Q,P\)</span> obey
+the Weyl relations and <span class="math inline">\([Q,P]=i\hbar
+I\)</span> on Schwartz space. Unlike the Koopman construction, these
+observables are noncommutative.</p>
+<h2 id="the-same-force-bound-controls-the-operator-domains">2. The same
+force bound controls the operator domains</h2>
+<p>Fix <span class="math inline">\(\hbar&gt;0\)</span> and calibrated
+units and put <span class="math inline">\(N=1+Q^2+P^2\)</span>. The
+input (1) implies <span class="math display">\[
+|V&#39;(q)|\le |V&#39;(0)|+L|q|,\qquad
+|V(q)|\le |V(0)|+|V&#39;(0)||q|+\tfrac L2q^2.\tag{5}
+\]</span> Using the harmonic-oscillator graph bounds for <span
+class="math inline">\(Q^2,P^2,QP,PQ\)</span>, these estimates and the
+almost-everywhere bound on <span
+class="math inline">\(V&#39;&#39;\)</span> imply on <span
+class="math inline">\(\mathcal S(\mathbb R)\)</span> <span
+class="math display">\[
+\|H_\hbar f\|\le C_\hbar\|Nf\|,\qquad
+\|[H_\hbar,N]f\|\le C_\hbar\|Nf\|.\tag{6}
+\]</span> The commutator is a weak-derivative identity: <span
+class="math display">\[
+[H_\hbar,N]
+=-\frac{i\hbar}{m}(PQ+QP)
+    +i\hbar\big(V&#39;(Q)P+PV&#39;(Q)\big).\tag{7}
+\]</span> Products with <span class="math inline">\(V&#39;\)</span> have
+the weak derivative <span class="math inline">\(V&#39;&#39;\)</span>; no
+third derivative is used. For <span class="math inline">\(f\in\mathcal
+S\)</span>, <span class="math inline">\(H_\hbar f\in D(N)\)</span>, so
+(6) gives <span class="math display">\[
+|\langle H_\hbar f,N^2f\rangle-\langle N^2f,H_\hbar f\rangle|
+\le2C_\hbar\langle f,N^2f\rangle.\tag{8}
+\]</span> Schwartz space is a core for <span
+class="math inline">\(N^2\)</span>. Nelson’s commutator theorem
+therefore makes <span class="math inline">\(H_\hbar\)</span> essentially
+self-adjoint on <span class="math inline">\(\mathcal S\)</span>. With
+<span class="math inline">\(G=N^2-\inf\sigma(N^2)\)</span>, the same
+estimate and <a
+href="https://link.springer.com/article/10.1007/s00220-025-05282-w">Energy-Limited
+Quantum Dynamics, Theorems 3.7–3.8</a> (statements and hypotheses read)
+show that <span
+class="math inline">\(U_\hbar(t)=e^{-itH_\hbar/\hbar}\)</span> preserves
+<span class="math inline">\(D(N)\)</span> and is strongly continuous in
+its <span class="math inline">\(N\)</span>-graph norm. The constants in
+(6)–(8) follow from <span
+class="math inline">\(m,\hbar,L,V(0),V&#39;(0)\)</span>; they are not
+additional assumptions on the mechanical model.</p>
+<h2 id="a-fixed-action-quantum-product-estimate">3. A fixed-action
+quantum product estimate</h2>
+<p>The force certificate also controls the commutator of the two
+factors. Write <span class="math inline">\(T_\hbar=P^2/(2m)\)</span>
+and, initially on Schwartz space, <span
+class="math display">\[[T_\hbar,V(Q)]
+=-\frac{i\hbar}{2m}\big(PV&#39;(Q)+V&#39;(Q)P\big).\tag{9}\]</span> It
+extends as a bounded map <span class="math inline">\(D(N)\to
+L^2\)</span>. To justify the product argument without assuming higher
+derivatives, mollify <span class="math inline">\(V\)</span> with an even
+compactly supported unit-mass mollifier. The smooth <span
+class="math inline">\(V_n\)</span> satisfy <span
+class="math inline">\(\|V_n&#39;&#39;\|_\infty\le L\)</span> and have
+uniformly linearly growing first derivatives. Moreover, Taylor’s
+inequality gives <span class="math display">\[\|V_n-V\|_\infty
+\le \tfrac12L\,\varepsilon_n^2
+          \int y^2\rho(y)\,dy\longrightarrow0.\tag{10}\]</span> This
+uniform bound holds even when <span class="math inline">\(V\)</span> is
+unbounded below.</p>
+<p>For these <span class="math inline">\(V_n\)</span>, define the finite
+constants <span class="math display">\[
+\eta_T=\hbar^{-1}\|[T_\hbar,N]N^{-1}\|,\quad
+\eta_V=\sup_n\hbar^{-1}\|[V_n(Q),N]N^{-1}\|,\quad
+B=\sup_n\|[T_\hbar,V_n(Q)]N^{-1}\|.\tag{11}
+\]</span> They are finite by (5) and the graph bounds above; their
+values can be bounded from the classical data <span
+class="math inline">\(m,L,V&#39;(0)\)</span> and the chosen <span
+class="math inline">\(\hbar\)</span> and units. The <span
+class="math inline">\(N\)</span>-graph norms of the kinetic, potential
+and full groups are bounded by <span
+class="math inline">\(e^{\eta_T|t|}\)</span>, <span
+class="math inline">\(e^{\eta_V|t|}\)</span>, and <span
+class="math inline">\(e^{(\eta_T+\eta_V)|t|}\)</span>, respectively.</p>
+<p>For smooth <span class="math inline">\(V_n\)</span>, differentiation
+of <span class="math inline">\(U_n(s-r)D_rK_{n,r}\)</span> and a second
+Duhamel integration yield, on Schwartz vectors, <span
+class="math display">\[
+\|(D_sK_{n,s}-U_n(s))f\|
+\le\frac{Bs^2}{2\hbar^2}
+       e^{(\eta_T+\eta_V)s}\|Nf\|.\tag{12}
+\]</span> The left factors in the integral are unitary; the commutator
+(9) acts on <span class="math inline">\(D_uK_{n,r}f\)</span>. Density
+extends (12) to <span class="math inline">\(D(N)\)</span>. Telescoping
+along the exact <span class="math inline">\(U_n\)</span> orbit and using
+the graph bound gives <span class="math display">\[
+\|U_{n,\pi}(T)f-U_n(T)f\|
+\le\frac{BT\,e^{(\eta_T+\eta_V)T}}{2\hbar^2}
+      |\pi|\,\|Nf\|,\qquad f\in D(N).\tag{13}
+\]</span> Equation (10) makes <span class="math inline">\(U_n(t)\to
+U_\hbar(t)\)</span> and each finite product <span
+class="math inline">\(U_{n,\pi}(T)\to U_{\hbar,\pi}(T)\)</span> in
+operator norm for fixed <span
+class="math inline">\(\hbar,T,\pi\)</span>, by the bounded-perturbation
+Duhamel estimate. The constants in (13) are uniform in <span
+class="math inline">\(n\)</span>, so (13) passes to <span
+class="math inline">\(V\)</span>. It proves arbitrary-partition strong
+convergence for <span class="math inline">\(f\in D(N)\)</span>; density
+and unitarity extend convergence to all <span
+class="math inline">\(L^2\)</span> vectors. In particular, the
+conjecture note’s fixed-<span class="math inline">\(\hbar\)</span>
+Cauchy criterion holds, with the explicit graph-domain rate in (13). The
+factor <span class="math inline">\(\hbar^{-2}B\)</span> need not remain
+bounded as <span class="math inline">\(\hbar\downarrow0\)</span>.</p>
+<h2 id="the-classical-and-quantum-polygons">4. The classical and quantum
+polygons</h2>
+<p>Use the coherent packet of the <a
+href="quantum-blocks-construct-newton.html">quantum-blocks note</a>,
+equation (16), and let <span class="math inline">\((q_j,p_j)\)</span> be
+the means after the first <span class="math inline">\(j\)</span> quantum
+cells. The exact identities <span class="math display">\[
+K_s^*PK_s=P-sV&#39;(Q),\qquad D_s^*QD_s=Q+sP/m\tag{14}
+\]</span> hold on the propagated states; the <span
+class="math inline">\(C^{1,1}\)</span> potential preserves the needed
+graph domain. Define <span class="math display">\[
+W_j=\operatorname{sd}Q_j+\frac{\operatorname{sd}P_j}{m\omega},
+\quad C=\sqrt{\frac2{m\omega}},\quad
+\beta=\omega+\frac{L}{m\omega}.\tag{15}
+\]</span> As in the earlier note, (1) and (14) give <span
+class="math display">\[W_j\le C\sqrt\hbar\,e^{\beta
+t_j}.\tag{16}\]</span> No higher potential derivative or assumption of
+Gaussian shape after the first step is used.</p>
+<p>Put <span class="math inline">\(e_j=\|(q_j,p_j)-(q_j^{\rm
+cl},p_j^{\rm cl})\|_\omega\)</span>. For each kick, <span
+class="math inline">\(|\langle V&#39;(Q)\rangle-V&#39;(q_j^{\rm
+cl})|  \le L(\operatorname{sd}Q_j+|q_j-q_j^{\rm cl}|)\)</span>. The
+subsequent drift yields <span class="math display">\[
+e_{j+1}\le
+(1+s_j\omega)\!\left(1+\frac{s_jL}{m\omega}\right)e_j
++\frac{s_jL}{m\omega}(1+s_j\omega)W_j.\tag{17}
+\]</span> Since <span class="math inline">\(e_0=0\)</span>, (16) and
+<span class="math inline">\(1+x\le e^x\)</span> imply the
+<strong>mesh-uniform</strong> bound <span class="math display">\[
+e_j\le \frac{LC}{m\omega}\,t_j e^{\beta t_j}\sqrt\hbar.
+\tag{18}
+\]</span> Combining this with the classical certificate (3) gives <span
+class="math display">\[
+\|(q_j,p_j)-z(t_j)\|_\omega
+\le \frac{LC}{m\omega}T e^{\beta T}\sqrt\hbar
+       +R_T^{\rm cl}|\pi|.\tag{19}
+\]</span> For <span class="math inline">\(b\in C_c^\infty(\mathbb
+R^2)\)</span>, the Fourier/Weyl argument in <a
+href="groupoid-quantum-newton-states.html">the groupoid note</a>, before
+its second-order refinement, bounds the expectation error by a
+symbol-dependent constant times the sum of <span
+class="math inline">\(W_j\)</span> and (19). Therefore the observable
+limit required by the conjecture holds at all partition vertices and
+along every joint schedule <span
+class="math inline">\(\hbar,|\pi|\to0\)</span>.</p>
+<p>The proof uses the classical <strong>input bound</strong> (1) for
+both the graph and packet estimates, while the certificate’s polygon
+error (3) controls recovery of the classical flow. The graph estimate
+(13) is a separate fixed-<span class="math inline">\(\hbar\)</span>
+quantum estimate derived using the declared operator toolkit; it is not
+assumed in (3).</p>
+<h2 id="why-the-square-root-rate-cannot-generally-be-improved">5. Why
+the square-root rate cannot generally be improved</h2>
+<p>Set <span class="math inline">\(m=1\)</span> and <span
+class="math display">\[V(q)=\tfrac12q|q|,\qquad
+V&#39;(q)=|q|.\tag{20}\]</span> The force is globally Lipschitz, and the
+classical solution from <span class="math inline">\((0,0)\)</span> is
+uniquely stationary. Define the unitary dilation <span
+class="math inline">\((D_\hbar
+f)(q)=\hbar^{-1/4}f(q/\sqrt\hbar)\)</span>. Homogeneity gives <span
+class="math display">\[D_\hbar^{-1}H_\hbar D_\hbar=\hbar H_1,\qquad
+D_\hbar^{-1}P_\hbar D_\hbar=\sqrt\hbar\,P_1.\tag{21}\]</span> For the
+centered Gaussian <span class="math inline">\(D_\hbar g_1\)</span>, the
+exact quantum momentum is therefore <span class="math inline">\(\langle
+P_\hbar\rangle_t=\sqrt\hbar\,f(t)\)</span>, where <span
+class="math inline">\(f(t)=\langle P_1\rangle_t\)</span>. Ehrenfest’s
+identity gives <span class="math display">\[f&#39;(0)=-\langle
+|Q|\rangle_{g_1}=-1/\sqrt\pi.\tag{22}\]</span> Thus <span
+class="math inline">\(f(t)\ne0\)</span> for every sufficiently small
+fixed <span class="math inline">\(t&gt;0\)</span>. The mean error is
+exactly a nonzero multiple of <span
+class="math inline">\(\sqrt\hbar\)</span> there. This counterexample
+does not contradict the <span class="math inline">\(O(\hbar)\)</span>
+theorem for bounded <span
+class="math inline">\(V&#39;&#39;&#39;\)</span>: <span
+class="math inline">\(V&#39;\)</span> here has a corner at the
+origin.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The bounded certificate-to-quantum test is affirmative for the
+specified one-dimensional conservative <span
+class="math inline">\(C^{1,1}\)</span> action class. It constructs the
+noncommutative target and a quantum product estimate from the classical
+force data and the named analytic toolkit, and uses the classical
+polygon certificate in the observable limit. The universal conjecture,
+singular classical actions, quantum completion uniqueness and
+independent positive-action necessity remain open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

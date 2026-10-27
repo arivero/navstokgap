@@ -1,0 +1,241 @@
+# Lifting a Lipschitz Newton certificate to quantum mechanics
+
+**Result, 2026-10-27; written derivation, unrefereed.** A classical
+kick--drift existence certificate for a one-dimensional conservative
+force with a global Lipschitz constant supplies the model-dependent
+estimates for a specified noncommutative quantum construction. For
+every supplied $\hbar>0$ it gives the Schrödinger representation, an
+essentially self-adjoint Hamiltonian, a strongly continuous unitary
+group, and arbitrary-partition convergence of the quantum kick--drift
+products. On coherent preparations the same classical polygons and
+quantum products agree at their vertices to $O(\sqrt\hbar)$,
+uniformly in the mesh on a fixed time interval. Together with the
+classical certificate this gives the requested joint observable limit.
+
+This is a **bounded instance**, not a proof of the universal
+[constructive lifting conjecture](classical-quantum-existence-conjecture.md).
+The input includes the conservative action and a globally Lipschitz
+force; the background analytic toolkit includes Nelson's commutator
+theorem and the graph-domain propagation result cited below. No
+lower bound on $V$ or derivatives beyond the Lipschitz force are
+assumed. This real-time theorem does not construct a Euclidean
+probability measure for a potential unbounded below.
+
+The loss of the earlier $O(\hbar)$ rate is necessary at this level of
+regularity: $V(q)=q|q|/2$ has globally Lipschitz force, but a centered
+coherent packet has a momentum error of exact order $\sqrt\hbar$ at
+small fixed positive times. No claim of literature priority is made.
+
+## 1. The input certificate and quantum target
+
+Let $m>0$, $V\in C^1(\mathbb R;\mathbb R)$, and suppose
+$$|V'(x)-V'(y)|\le L|x-y|,\qquad L\ge0.\tag{1}$$
+Thus $V\in C^{1,1}$ and $V''$ exists almost everywhere with
+$|V''|\le L$. The input is the mechanical action with kinetic term
+$p^2/(2m)$ and potential $V$, the initial point $z_0=(q_0,p_0)$, and
+the classical kick--drift polygons
+$$
+ p_{j+1}^{\rm cl}=p_j^{\rm cl}-s_jV'(q_j^{\rm cl}),\qquad
+ q_{j+1}^{\rm cl}=q_j^{\rm cl}+s_jp_{j+1}^{\rm cl}/m.\tag{2}
+$$
+Take their linear interpolation for a partition $\pi$ of $[0,T]$.
+The usual Lipschitz certificate supplies a unique limit $z(t)$ and
+$$\sup_{t\le T}\|z_\pi^{\rm cl}(t)-z(t)\|_\omega
+ \le R_T^{\rm cl}|\pi|,\qquad
+ \|(q,p)\|_\omega=|q|+\frac{|p|}{m\omega}.\tag{3}$$
+For example, the proof in the
+[ODE lesson](balaban-ode-lesson.md) uses a common bounded region,
+force-balance residual and Gronwall stability. Here $\omega>0$ is a
+fixed auxiliary unit; $R_T^{\rm cl}$ depends only on the classical
+data and $T$. No quantum convergence is included in the certificate.
+
+For each $\hbar>0$ set, on $L^2(\mathbb R)$,
+$$
+ \begin{gathered}
+ Qf(q)=qf(q),\quad P=-i\hbar\partial_q,\quad
+ H_\hbar=P^2/(2m)+V(Q),\\
+ K_{\hbar,s}=e^{-isV(Q)/\hbar},\quad
+ D_{\hbar,s}=e^{-isP^2/(2m\hbar)}.
+ \end{gathered}\tag{4}
+$$
+The self-adjoint $Q,P$ obey the Weyl relations and
+$[Q,P]=i\hbar I$ on Schwartz space. Unlike the Koopman construction,
+these observables are noncommutative.
+
+## 2. The same force bound controls the operator domains
+
+Fix $\hbar>0$ and calibrated units and put $N=1+Q^2+P^2$.
+The input (1) implies
+$$
+ |V'(q)|\le |V'(0)|+L|q|,\qquad
+ |V(q)|\le |V(0)|+|V'(0)||q|+\tfrac L2q^2.\tag{5}
+$$
+Using the harmonic-oscillator graph bounds for $Q^2,P^2,QP,PQ$,
+these estimates and the almost-everywhere bound on $V''$ imply on
+$\mathcal S(\mathbb R)$
+$$
+ \|H_\hbar f\|\le C_\hbar\|Nf\|,\qquad
+ \|[H_\hbar,N]f\|\le C_\hbar\|Nf\|.\tag{6}
+$$
+The commutator is a weak-derivative identity:
+$$
+ [H_\hbar,N]
+ =-\frac{i\hbar}{m}(PQ+QP)
+    +i\hbar\big(V'(Q)P+PV'(Q)\big).\tag{7}
+$$
+Products with $V'$ have the weak derivative $V''$; no third
+derivative is used. For $f\in\mathcal S$, $H_\hbar f\in D(N)$,
+so (6) gives
+$$
+ |\langle H_\hbar f,N^2f\rangle-\langle N^2f,H_\hbar f\rangle|
+ \le2C_\hbar\langle f,N^2f\rangle.\tag{8}
+$$
+Schwartz space is a core for $N^2$. Nelson's commutator theorem
+therefore makes $H_\hbar$ essentially self-adjoint on $\mathcal S$.
+With $G=N^2-\inf\sigma(N^2)$, the same estimate and
+[Energy-Limited Quantum Dynamics, Theorems 3.7--3.8](https://link.springer.com/article/10.1007/s00220-025-05282-w)
+(statements and hypotheses read) show that
+$U_\hbar(t)=e^{-itH_\hbar/\hbar}$ preserves $D(N)$ and is strongly
+continuous in its $N$-graph norm. The constants in (6)--(8) follow
+from $m,\hbar,L,V(0),V'(0)$; they are not additional assumptions on
+the mechanical model.
+
+## 3. A fixed-action quantum product estimate
+
+The force certificate also controls the commutator of the two
+factors. Write $T_\hbar=P^2/(2m)$ and, initially on Schwartz space,
+$$[T_\hbar,V(Q)]
+ =-\frac{i\hbar}{2m}\big(PV'(Q)+V'(Q)P\big).\tag{9}$$
+It extends as a bounded map $D(N)\to L^2$. To justify the product
+argument without assuming higher derivatives, mollify $V$ with an even
+compactly supported unit-mass mollifier. The smooth $V_n$ satisfy
+$\|V_n''\|_\infty\le L$ and have uniformly linearly growing first
+derivatives. Moreover, Taylor's inequality gives
+$$\|V_n-V\|_\infty
+ \le \tfrac12L\,\varepsilon_n^2
+          \int y^2\rho(y)\,dy\longrightarrow0.\tag{10}$$
+This uniform bound holds even when $V$ is unbounded below.
+
+For these $V_n$, define the finite constants
+$$
+ \eta_T=\hbar^{-1}\|[T_\hbar,N]N^{-1}\|,\quad
+ \eta_V=\sup_n\hbar^{-1}\|[V_n(Q),N]N^{-1}\|,\quad
+ B=\sup_n\|[T_\hbar,V_n(Q)]N^{-1}\|.\tag{11}
+$$
+They are finite by (5) and the graph bounds above; their values can be
+bounded from the classical data $m,L,V'(0)$ and the chosen
+$\hbar$ and units. The $N$-graph norms of the kinetic, potential
+and full groups are bounded by $e^{\eta_T|t|}$,
+$e^{\eta_V|t|}$, and $e^{(\eta_T+\eta_V)|t|}$, respectively.
+
+For smooth $V_n$, differentiation of
+$U_n(s-r)D_rK_{n,r}$ and a second Duhamel integration yield, on
+Schwartz vectors,
+$$
+ \|(D_sK_{n,s}-U_n(s))f\|
+ \le\frac{Bs^2}{2\hbar^2}
+       e^{(\eta_T+\eta_V)s}\|Nf\|.\tag{12}
+$$
+The left factors in the integral are unitary; the commutator (9)
+acts on $D_uK_{n,r}f$. Density extends (12) to $D(N)$.
+Telescoping along the exact $U_n$ orbit and using the graph bound gives
+$$
+ \|U_{n,\pi}(T)f-U_n(T)f\|
+ \le\frac{BT\,e^{(\eta_T+\eta_V)T}}{2\hbar^2}
+      |\pi|\,\|Nf\|,\qquad f\in D(N).\tag{13}
+$$
+Equation (10) makes $U_n(t)\to U_\hbar(t)$ and each finite product
+$U_{n,\pi}(T)\to U_{\hbar,\pi}(T)$ in operator norm for fixed
+$\hbar,T,\pi$, by the bounded-perturbation Duhamel estimate.
+The constants in (13) are uniform in $n$, so (13) passes to $V$.
+It proves arbitrary-partition strong convergence for $f\in D(N)$;
+density and unitarity extend convergence to all $L^2$ vectors.
+In particular, the conjecture note's fixed-$\hbar$ Cauchy criterion
+holds, with the explicit graph-domain rate in (13). The factor
+$\hbar^{-2}B$ need not remain bounded as $\hbar\downarrow0$.
+
+## 4. The classical and quantum polygons
+
+Use the coherent packet of the
+[quantum-blocks note](quantum-blocks-construct-newton.md), equation
+(16), and let $(q_j,p_j)$ be the means after the first $j$ quantum
+cells. The exact identities
+$$
+ K_s^*PK_s=P-sV'(Q),\qquad D_s^*QD_s=Q+sP/m\tag{14}
+$$
+hold on the propagated states; the $C^{1,1}$ potential preserves the
+needed graph domain. Define
+$$
+ W_j=\operatorname{sd}Q_j+\frac{\operatorname{sd}P_j}{m\omega},
+ \quad C=\sqrt{\frac2{m\omega}},\quad
+ \beta=\omega+\frac{L}{m\omega}.\tag{15}
+$$
+As in the earlier note, (1) and (14) give
+$$W_j\le C\sqrt\hbar\,e^{\beta t_j}.\tag{16}$$
+No higher potential derivative or assumption of Gaussian shape after
+the first step is used.
+
+Put $e_j=\|(q_j,p_j)-(q_j^{\rm cl},p_j^{\rm cl})\|_\omega$.
+For each kick,
+$|\langle V'(Q)\rangle-V'(q_j^{\rm cl})|
+ \le L(\operatorname{sd}Q_j+|q_j-q_j^{\rm cl}|)$.
+The subsequent drift yields
+$$
+ e_{j+1}\le
+ (1+s_j\omega)\!\left(1+\frac{s_jL}{m\omega}\right)e_j
+ +\frac{s_jL}{m\omega}(1+s_j\omega)W_j.\tag{17}
+$$
+Since $e_0=0$, (16) and $1+x\le e^x$ imply the **mesh-uniform**
+bound
+$$
+ e_j\le \frac{LC}{m\omega}\,t_j e^{\beta t_j}\sqrt\hbar.
+ \tag{18}
+$$
+Combining this with the classical certificate (3) gives
+$$
+ \|(q_j,p_j)-z(t_j)\|_\omega
+ \le \frac{LC}{m\omega}T e^{\beta T}\sqrt\hbar
+       +R_T^{\rm cl}|\pi|.\tag{19}
+$$
+For $b\in C_c^\infty(\mathbb R^2)$, the Fourier/Weyl argument in
+[the groupoid note](groupoid-quantum-newton-states.md), before its
+second-order refinement, bounds the expectation error by a
+symbol-dependent constant times the sum of $W_j$ and (19).
+Therefore the observable limit required by the conjecture holds at
+all partition vertices and along every joint schedule
+$\hbar,|\pi|\to0$.
+
+The proof uses the classical **input bound** (1) for both the graph
+and packet estimates, while the certificate's polygon error (3)
+controls recovery of the classical flow. The graph estimate (13) is a
+separate fixed-$\hbar$ quantum estimate derived using the declared
+operator toolkit; it is not assumed in (3).
+
+## 5. Why the square-root rate cannot generally be improved
+
+Set $m=1$ and
+$$V(q)=\tfrac12q|q|,\qquad V'(q)=|q|.\tag{20}$$
+The force is globally Lipschitz, and the classical solution from
+$(0,0)$ is uniquely stationary. Define the unitary dilation
+$(D_\hbar f)(q)=\hbar^{-1/4}f(q/\sqrt\hbar)$. Homogeneity gives
+$$D_\hbar^{-1}H_\hbar D_\hbar=\hbar H_1,\qquad
+ D_\hbar^{-1}P_\hbar D_\hbar=\sqrt\hbar\,P_1.\tag{21}$$
+For the centered Gaussian $D_\hbar g_1$, the exact quantum momentum
+is therefore $\langle P_\hbar\rangle_t=\sqrt\hbar\,f(t)$, where
+$f(t)=\langle P_1\rangle_t$. Ehrenfest's identity gives
+$$f'(0)=-\langle |Q|\rangle_{g_1}=-1/\sqrt\pi.\tag{22}$$
+Thus $f(t)\ne0$ for every sufficiently small fixed $t>0$. The mean
+error is exactly a nonzero multiple of $\sqrt\hbar$ there. This
+counterexample does not contradict the $O(\hbar)$ theorem for bounded
+$V'''$: $V'$ here has a corner at the origin.
+
+## 6. Consequence for STATE
+
+The bounded certificate-to-quantum test is affirmative for the
+specified one-dimensional conservative $C^{1,1}$ action class. It
+constructs the noncommutative target and a quantum product estimate
+from the classical force data and the named analytic toolkit, and
+uses the classical polygon certificate in the observable limit.
+The universal conjecture, singular classical actions, quantum
+completion uniqueness and independent positive-action necessity
+remain open.

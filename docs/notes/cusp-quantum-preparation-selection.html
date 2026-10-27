@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quantum preparations select continuations at a bounded Newton cusp</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Quantum preparations select continuations at a bounded Newton
+cusp</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cusp-quantum-preparation-selection.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/cusp-quantum-preparation-selection.pdf">PDF</a></p><p><strong>Result, 2026-10-27; written derivation, unrefereed.</strong>
+For the bounded <span class="math inline">\(C^1\)</span> cusp potential
+already used in the <a
+href="newton-cusp-preparation-floor.html">preparation-floor note</a>,
+there are two explicit coherent-state families with the <strong>same
+position density</strong> at <span class="math inline">\(t=0\)</span>,
+the same limiting phase-space point <span
+class="math inline">\((0,0)\)</span>, and the same limiting incoming
+trajectory for <span class="math inline">\(t&lt;0\)</span>. Their unique
+Schrödinger evolutions have different outgoing semiclassical limits for
+<span class="math inline">\(t&gt;0\)</span>: one rebounds on the
+positive side and the other crosses to the negative side. The
+preparations differ by a momentum shift tending to zero. Their
+normalized superpositions yield any prescribed mixture of the two
+outgoing point measures.</p>
+<p>The result is local in time and uses the specified logarithmically
+shrinking preparation. It neither classifies every possible preparation
+nor selects a waiting-time distribution. It shows explicitly that the
+limiting incoming phase-space history alone does not determine the
+outgoing limit of these quantum families. The positive value of <span
+class="math inline">\(\hbar\)</span> is supplied, not derived.</p>
+<p>This phenomenon has substantial prior art. <a
+href="https://arxiv.org/pdf/1011.1651">Athanassoulis–Paul, Theorem 2.1
+and Lemma 5.3</a> (theorem statements and relevant passages read) treat
+splitting and one-dimensional cutoff <span
+class="math inline">\(-|q|^{1+\theta}\)</span> potentials, including
+<span class="math inline">\(\theta=1/2\)</span>, with detailed
+assumptions on phase-space preparations. <a
+href="https://arxiv.org/pdf/1608.03716">Chabu, Theorem 1.12 and
+Proposition 3.1</a> (statements and surrounding discussion read) exhibit
+the same incoming semiclassical history with distinct outgoing
+histories, and mixtures, for the conical potential <span
+class="math inline">\(-|q|\)</span>. The present calculation uses the
+repository’s smoother <span class="math inline">\(C^1\)</span> cusp and
+explicit Gaussian preparations; no literature priority is claimed.</p>
+<h2 id="potential-initial-data-and-target-trajectories">1. Potential,
+initial data and target trajectories</h2>
+<p>Use dimensionless calibrated units, <span
+class="math inline">\(m=1\)</span>, and choose <span
+class="math inline">\(R&gt;0\)</span> and a smooth even cutoff <span
+class="math inline">\(\chi\)</span> equal to one on <span
+class="math inline">\([-R,R]\)</span> and zero outside <span
+class="math inline">\([-2R,2R]\)</span>. Put <span
+class="math display">\[
+V(q)=-\frac23|q|^{3/2}\chi(q),\qquad
+F(q)=-V&#39;(q),\qquad
+H_\hbar=-\frac{\hbar^2}{2}\partial_q^2+V(Q).\tag{1}
+\]</span> <span class="math inline">\(V\)</span> and <span
+class="math inline">\(F\)</span> are bounded, <span
+class="math inline">\(V\in C^1\)</span>, and on <span
+class="math inline">\(|q|\le R\)</span>, <span
+class="math inline">\(F(q)=\operatorname{sgn}(q)\sqrt{|q|}\)</span>. The
+bounded-perturbation theorem gives a self-adjoint <span
+class="math inline">\(H_\hbar\)</span> on <span
+class="math inline">\(H^2(\mathbb R)\)</span> for every <span
+class="math inline">\(\hbar&gt;0\)</span>. Write <span
+class="math inline">\(F_*=\|F\|_\infty\)</span>, and fix <span
+class="math inline">\(T&gt;0\)</span> so small that <span
+class="math inline">\(F_*T^2/2&lt;R/4\)</span>. All mean trajectories
+considered below remain in <span
+class="math inline">\(|q|&lt;R/2\)</span> for small <span
+class="math inline">\(\hbar\)</span>.</p>
+<p>There are constants <span
+class="math inline">\(C_0,C_1&gt;0\)</span>, depending on the fixed
+cutoff, such that for all <span class="math inline">\(x\)</span> and all
+<span class="math inline">\(q\ne0\)</span>, <span
+class="math display">\[
+|F(x)|\le C_0\sqrt{|x|},\qquad
+|F(x)-F(q)|
+   \le C_1(1+|q|^{-1/2})\,|x-q|.\tag{2}
+\]</span> For <span class="math inline">\(|x-q|\le |q|/2\)</span>, the
+second bound follows from the derivative of the square-root force and
+the smooth cutoff. Otherwise use the first bound and <span
+class="math inline">\(|x-q|\ge |q|/2\)</span>. This is a Lipschitz bound
+anchored at <span class="math inline">\(q\ne0\)</span>,
+<strong>not</strong> a global Lipschitz bound at the cusp.</p>
+<p>For <span class="math inline">\(0&lt;\hbar&lt;e^{-1}\)</span> set
+<span class="math display">\[
+a_\hbar=\frac1{\log(1/\hbar)},\qquad
+g_{\hbar,k}(q)=(\pi\hbar)^{-1/4}
+\exp\!\left[-\frac{(q-a_\hbar)^2}{2\hbar}
+     -\frac{i k a_\hbar^{3/4}(q-a_\hbar)}{\hbar}\right].\tag{3}
+\]</span> Choose a fixed <span class="math inline">\(K&gt;0\)</span>
+with <span
+class="math display">\[K^2&gt;\max\{16\sqrt2\,C_0,\;16/3\}.\tag{4}\]</span>
+The two preparations are <span
+class="math inline">\(g_{\hbar,0}\)</span> and <span
+class="math inline">\(g_{\hbar,K}\)</span>. Both have exactly the same
+Gaussian position density and <span
+class="math inline">\(\operatorname{sd}Q=\operatorname{sd}P=\sqrt{\hbar/2}\)</span>.
+Their means are <span class="math display">\[
+(q,p)=(a_\hbar,0),\qquad
+(q,p)=(a_\hbar,-K a_\hbar^{3/4}),\tag{5}
+\]</span> both converging to <span class="math inline">\((0,0)\)</span>.
+The classical energies of these <strong>centres</strong> are
+respectively <span class="math inline">\(-\frac23a_\hbar^{3/2}\)</span>
+and <span class="math inline">\((K^2/2-2/3)a_\hbar^{3/2}\)</span>: both
+vanish, but their signs differ.</p>
+<p>Let <span class="math inline">\(z_+(t)=(t^4/144,t^3/36)\)</span> for
+<span class="math inline">\(-T\le t\le T\)</span>, and let <span
+class="math display">\[
+z_\times(t)=
+\begin{cases}
+  (t^4/144,t^3/36),&amp;t\le0,\\
+  (-t^4/144,-t^3/36),&amp;t\ge0.
+\end{cases}\tag{6}
+\]</span> The first trajectory returns to the positive side, while the
+second crosses to the negative side. Both follow the same incoming path,
+arrive at <span class="math inline">\((0,0)\)</span> at <span
+class="math inline">\(t=0\)</span>, and satisfy the cusp Newton
+equation.</p>
+<p><strong>Theorem.</strong> Let <span
+class="math inline">\(\psi_{\hbar,k}(t)=e^{-itH_\hbar/\hbar}g_{\hbar,k}\)</span>.
+For <span class="math inline">\(k=0,K\)</span>, the packet means and the
+position and momentum standard deviations converge uniformly on <span
+class="math inline">\([-T,T]\)</span>: <span class="math display">\[
+\begin{aligned}
+(\langle Q\rangle_{\hbar,0},\langle P\rangle_{\hbar,0})
+       &amp;\longrightarrow z_+(t),\\
+(\langle Q\rangle_{\hbar,K},\langle P\rangle_{\hbar,K})
+       &amp;\longrightarrow z_\times(t),\\
+\operatorname{sd}Q_{\hbar,k}(t)+\operatorname{sd}P_{\hbar,k}(t)
+       &amp;\longrightarrow0.
+\end{aligned}\tag{7}
+\]</span> In particular, the Weyl expectations of every <span
+class="math inline">\(b\in C_c^\infty(\mathbb R^2)\)</span> converge
+uniformly to <span class="math inline">\(b(z_+(t))\)</span> and <span
+class="math inline">\(b(z_\times(t))\)</span>, respectively.</p>
+<h2 id="a-mean-and-spread-estimate-with-an-anchored-force">2. A mean and
+spread estimate with an anchored force</h2>
+<p>Suppress the subscripts, let <span class="math inline">\(q(t)=\langle
+Q\rangle\)</span>, <span class="math inline">\(p(t)=\langle
+P\rangle\)</span>, and write <span
+class="math inline">\(W(t)=\operatorname{sd}Q(t)+\operatorname{sd}P(t)\)</span>.
+The standard Ehrenfest identities and Cauchy–Schwarz give <span
+class="math display">\[
+\dot q=p,\qquad \dot p=\langle F(Q)\rangle,\qquad
+D^+W\le\operatorname{sd}P+\operatorname{sd}F(Q).\tag{8}
+\]</span> These identities hold as quadratic-form identities for the
+present <span class="math inline">\(H_\hbar\)</span>: <span
+class="math inline">\(V\in W^{1,\infty}\)</span>, the Gaussian lies in
+<span class="math inline">\(D(Q)\cap H^2\)</span>, and the required
+weighted and <span class="math inline">\(H^1\)</span> domains are
+preserved by the bounded-force evolution. They can be obtained by
+regularizing <span class="math inline">\(Q,P\)</span> and removing the
+cutoffs.</p>
+<p>For <span class="math inline">\(q(t)\ne0\)</span>, (2) gives <span
+class="math display">\[
+\operatorname{sd}F(Q)
+\le\|[F(Q)-F(q)]\psi\|
+\le L(q)\operatorname{sd}Q,\quad
+L(q):=C_1(1+|q|^{-1/2}),\tag{9}
+\]</span> and also <span class="math inline">\(|\langle
+F(Q)\rangle-F(q)|\le L(q)W\)</span>. Consequently <span
+class="math display">\[
+D^+W\le[1+L(q)]W,\qquad W(0)=\sqrt{2\hbar}.\tag{10}
+\]</span> On an interval reached from the initial time without a cusp
+crossing, if <span class="math inline">\(|q|\ge a_\hbar/2\)</span> and
+its length is at most <span class="math inline">\(2T\)</span>, (10)
+gives <span class="math display">\[
+W(t)\le\sqrt{2\hbar}\,e^{C_T/\sqrt{a_\hbar}},\qquad
+\int L(q(t))W(t)\,dt
+    \le C_Ta_\hbar^{-1/2}\sqrt\hbar\,
+                  e^{C_T/\sqrt{a_\hbar}}
+    =o(a_\hbar^N)\tag{11}
+\]</span> for every fixed <span class="math inline">\(N&gt;0\)</span>.
+Here and below <span class="math inline">\(C_T\)</span> may change from
+line to line but is independent of <span
+class="math inline">\(\hbar\)</span>. This super-polynomial smallness in
+<span class="math inline">\(a_\hbar\)</span> is why the logarithmic
+separation in (3) is convenient. After the controlled passage in §3, its
+additional factor <span
+class="math inline">\(e^{Ca_\hbar^{-1/4}}\)</span> can be absorbed into
+<span class="math inline">\(e^{C_T/\sqrt{a_\hbar}}\)</span>, so the same
+form of bound applies on the outgoing interval.</p>
+<p>On the positive side, <span class="math inline">\(F(q)\ge0\)</span>
+within the chosen core. For <span
+class="math inline">\(g_{\hbar,0}\)</span> at positive times, or either
+preparation at negative times, (11) and (8) bootstrap <span
+class="math inline">\(q(t)\ge a_\hbar/2\)</span>: the total force-bias
+error is <span class="math inline">\(o(a_\hbar)\)</span>, whereas the
+force itself pushes away from the cusp in the appropriate time
+direction. On those intervals compare <span
+class="math inline">\((q,p)\)</span> with the classical solution from
+(5). The field is Lipschitz on <span class="math inline">\(q\ge
+a_\hbar/2\)</span> with constant <span
+class="math inline">\(O(a_\hbar^{-1/2})\)</span>. Gronwall and (11) show
+that their phase-space distance is <span
+class="math display">\[O\!\left(a_\hbar^{-1/2}\sqrt\hbar\,
+              e^{C_T/\sqrt{a_\hbar}}\right)=o(a_\hbar^N)
+\quad\text{for every fixed }N.\tag{12}\]</span> The displayed constant
+<span class="math inline">\(C_T\)</span> absorbs the additional Gronwall
+factor.</p>
+<h2 id="the-transmitted-packet-crosses-the-cusp">3. The transmitted
+packet crosses the cusp</h2>
+<p>It remains to control the <span class="math inline">\(k=K\)</span>
+preparation while its mean passes through <span
+class="math inline">\(q=0\)</span>, where (11) cannot be used with a
+fixed cutoff. Start at <span class="math inline">\(q=a_\hbar\)</span>
+and <span class="math inline">\(p=-Ka_\hbar^{3/4}\)</span>. Bootstrap,
+until the first arrival at <span
+class="math inline">\(q=-a_\hbar\)</span>, the two inequalities <span
+class="math display">\[W\le a_\hbar,\qquad p\le-\frac
+K2a_\hbar^{3/4}.\tag{13}\]</span> While <span
+class="math inline">\(|q|\le a_\hbar\)</span>, the first inequality and
+(2) imply <span class="math display">\[
+|\langle F(Q)\rangle|\le C_0\sqrt{\mathbb E|Q|}
+\le C_0\sqrt{2a_\hbar}.\tag{14}
+\]</span> The second inequality bounds the passage time by <span
+class="math inline">\(4a_\hbar^{1/4}/K\)</span>. In that time the total
+change in <span class="math inline">\(p\)</span> is at most <span
+class="math inline">\((4\sqrt2 C_0/K)a_\hbar^{3/4}\)</span>, which is
+strictly below <span class="math inline">\((K/2)a_\hbar^{3/4}\)</span>
+by (4).</p>
+<p>The same velocity bound makes the singular coefficient integrable:
+<span class="math display">\[
+\int_{\rm passage}|q(t)|^{-1/2}\,dt
+\le \frac{2}{K a_\hbar^{3/4}}
+        \int_{-a_\hbar}^{a_\hbar}|q|^{-1/2}\,dq
+=\frac8K a_\hbar^{-1/4}.\tag{15}
+\]</span> The mean crosses zero at most once, so (10) holds away from
+that single time; apply it on the two sides and use continuity at the
+crossing. It follows that <span
+class="math display">\[W\le\sqrt{2\hbar}\,e^{C
+a_\hbar^{-1/4}}=o(a_\hbar).\tag{16}\]</span> The inequalities (13)
+therefore close by continuity. The exit time <span
+class="math inline">\(\tau_\hbar\)</span> satisfies <span
+class="math inline">\(\tau_\hbar=O(a_\hbar^{1/4})\)</span>, and at exit
+<span class="math display">\[q(\tau_\hbar)=-a_\hbar,\qquad
+-\tfrac{3K}{2}a_\hbar^{3/4}
+\le p(\tau_\hbar)\le-\tfrac K2a_\hbar^{3/4}.\tag{17}\]</span></p>
+<p>After this exit the force is negative in the chosen core. The same
+bootstrap as in §2 keeps <span
+class="math inline">\(q\le-a_\hbar/2\)</span> and makes (11)–(12) valid
+against the classical solution started at the <strong>actual</strong>
+exit mean (17). No self-adjoint Hamiltonian with a regularized potential
+is substituted for (1).</p>
+<h2 id="the-classical-limits-and-the-mixtures">4. The classical limits
+and the mixtures</h2>
+<p>The zero-energy positive-side arrival solves <span
+class="math inline">\(\dot q=-\sqrt{\frac43q^{3/2}}\)</span>.
+Integration gives <span class="math display">\[
+|t|=\int_0^{q(t)}
+\frac{ds}{\sqrt{\frac43s^{3/2}}}
+=2\sqrt3\,q(t)^{1/4},\qquad
+q(t)=\frac{t^4}{144}.\tag{18}
+\]</span> For the <span class="math inline">\(k=0\)</span> centre,
+energy conservation gives on either side of <span
+class="math inline">\(t=0\)</span> <span class="math display">\[
+|t|=\int_{a_\hbar}^{q_a(t)}
+\frac{ds}{\sqrt{\frac43(s^{3/2}-a_\hbar^{3/2})}}.\tag{19}
+\]</span> The part from <span class="math inline">\(a_\hbar\)</span> to
+<span class="math inline">\(2a_\hbar\)</span> is <span
+class="math inline">\(O(a_\hbar^{1/4})\)</span>; on the remainder the
+integrand is bounded by <span class="math inline">\(Cs^{-3/4}\)</span>
+and tends to the integrand in (18). Thus (19) tends to (18).</p>
+<p>For <span class="math inline">\(k=K\)</span> at negative times, and
+for its outgoing classical comparison after (17), the analogous integral
+has denominator <span class="math display">\[
+\sqrt{u_\hbar^2+\frac43(s^{3/2}-a_\hbar^{3/2})},
+\qquad u_\hbar\asymp a_\hbar^{3/4}.\tag{20}
+\]</span> Condition (4) ensures <span
+class="math inline">\(u_\hbar^2\ge(4/3)a_\hbar^{3/2}\)</span> in the
+outgoing case, so the integrand is dominated by <span
+class="math inline">\(Cs^{-3/4}\)</span>; it tends to the one in (18).
+At the entrance for negative times, <span
+class="math inline">\(u_\hbar\)</span> is exactly <span
+class="math inline">\(Ka_\hbar^{3/4}\)</span> and the same argument
+applies. The exit-time shift tends to zero. Energy conservation gives
+the corresponding momentum limits, and the bounds in §§2–3 supply (7),
+including a uniform estimate on the shrinking passage interval.</p>
+<p>The overlap of the two initial Gaussians is <span
+class="math display">\[\langle g_{\hbar,0},g_{\hbar,K}\rangle
+=\exp\!\left[-\frac{K^2a_\hbar^{3/2}}{4\hbar}\right]
+\longrightarrow0.\tag{21}\]</span> It remains unchanged by unitary
+evolution. For <span class="math inline">\(0\le\lambda\le1\)</span> and
+fixed <span class="math inline">\(\theta\)</span>, normalize <span
+class="math display">\[
+\Psi_{\hbar,\lambda,\theta}(0)
+\propto\sqrt\lambda\,g_{\hbar,0}
+       +e^{i\theta}\sqrt{1-\lambda}\,g_{\hbar,K}.\tag{22}
+\]</span> For any <span class="math inline">\(b\in C_c^\infty(\mathbb
+R^2)\)</span>, the Fourier representation of Weyl quantization and <span
+class="math inline">\(\|(e^{iA}-1)\psi\|\le\|A\psi\|\)</span> show that
+<span class="math display">\[
+\|[\operatorname{Op}^W_\hbar(b)-b(z_k(t))]
+                         \psi_{\hbar,k}(t)\|\longrightarrow0
+\quad\text{uniformly for }|t|\le T,\tag{23}
+\]</span> using (7). Thus the cross term in a Weyl expectation equals
+<span
+class="math inline">\(b(z_k(t))\langle\psi_{\hbar,0},\psi_{\hbar,K}\rangle+o(1)\)</span>
+and vanishes uniformly. The pure states (22) have the semiclassical
+limit <span class="math display">\[
+\lambda\delta_{z_+(t)}+(1-\lambda)\delta_{z_\times(t)}.\tag{24}
+\]</span> For <span class="math inline">\(t\le0\)</span> this is a
+single point on the common incoming path; for <span
+class="math inline">\(t&gt;0\)</span> it has the prescribed two branch
+weights. The result does not assert that the finite-<span
+class="math inline">\(\hbar\)</span> Wigner function is nonnegative.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The cusp’s unique quantum evolution need not choose one classical
+continuation from the limiting incoming phase-space history. Even
+identical initial position densities admit distinct continuations
+through vanishing momentum offsets, and coherent superpositions can
+produce any mixture of the two demonstrated branches. These explicit
+preparations supplement the earlier point-merger obstruction and align
+with established rough-potential selection results; they do not derive a
+physical preparation rule, a waiting-time selection, or a necessary
+positive action constant.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A wall impulse from a quantum boundary stress</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A wall impulse from a quantum boundary stress</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/dirichlet-wall-impulse.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/dirichlet-wall-impulse.pdf">PDF</a></p><p><strong>Result, 2026-10-27.</strong> For the incident Gaussian and
+the free Dirichlet half-line dynamics of the <a
+href="newton-dimock-balaban-guide.html">Newton–Dimock guide</a>, the
+nonnegative boundary-force measures converge weakly on the whole time
+axis: <span class="math display">\[
+\frac{\hbar^2}{2m}\,|\partial_q\psi_{\hbar,D}(0,t)|^2\,dt
+\;\Longrightarrow\;2|p_0|\,\delta_{t_*},
+\qquad t_*=-\frac{mq_0}{p_0}&gt;0.\tag{1}
+\]</span> This includes the impact layer omitted from the guide’s
+off-impact momentum-current bound. In fact, on the <span
+class="math inline">\(\sqrt\hbar\)</span> time scale the force has an
+explicit Gaussian profile and the momentum current tends to an
+error-function transition.</p>
+<p>For the corresponding <strong>Neumann</strong> half-line packet, the
+derivative in (1) vanishes identically. The complete boundary stress has
+another term; it has the same limiting impulse and the same leading
+impact-layer profile. The particle’s classical bounce therefore does not
+determine whether the quantum wave satisfies Dirichlet or Neumann
+boundary conditions. General Robin conditions are discussed through
+their scattering phases; no wavepacket limit is claimed here for
+arbitrary Robin parameters.</p>
+<p>The boundary contribution to Ehrenfest’s theorem is established
+literature: see <a
+href="https://www.scielo.org.mx/scielo.php?pid=S1870-35422013000200001&amp;script=sci_arttext">De
+Vincenzo (2013)</a>, equations (38)–(39) for a wall on the opposite
+half-line (passage read), and <a
+href="https://arxiv.org/abs/2206.07531">Albrecht et al. (2023)</a>
+(abstract) on boundary momentum and bouncing packets. The computation
+below gives a particular explicit semiclassical measure and does not
+claim priority for boundary forces.</p>
+<h2 id="the-packet-and-its-boundary-value">1. The packet and its
+boundary value</h2>
+<p>Fix <span class="math inline">\(m,\omega,q_0&gt;0\)</span> and <span
+class="math inline">\(p_0&lt;0\)</span>, with <span
+class="math inline">\(v=p_0/m\)</span>. On the full line take the
+normalized coherent state <span class="math display">\[
+g_{\hbar,0}(q)=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+  \exp\!\left[-\frac{m\omega(q-q_0)^2}{2\hbar}
+       +\frac{i p_0(q-q_0)}{\hbar}\right].
+\]</span> Let <span
+class="math inline">\(g_{\hbar,t}=e^{-itP^2/(2m\hbar)}g_{\hbar,0}\)</span>,
+<span class="math inline">\(a(t)=q_0+vt\)</span>, <span
+class="math inline">\(A(t)=1+\omega^2t^2\)</span>, and <span
+class="math display">\[
+\gamma_\hbar=\langle g_{\hbar,0},Rg_{\hbar,0}\rangle
+=\exp\!\left[-\frac{m\omega q_0^2+p_0^2/(m\omega)}{\hbar}\right],
+\qquad (Rg)(q)=g(-q).\tag{2}
+\]</span> The odd and even extensions restrict to the normalized
+half-line states <span class="math display">\[
+\psi_{\hbar,D}(q,t)
+   =\frac{g_{\hbar,t}(q)-g_{\hbar,t}(-q)}{\sqrt{1-\gamma_\hbar}},
+\qquad
+\psi_{\hbar,N}(q,t)
+   =\frac{g_{\hbar,t}(q)+g_{\hbar,t}(-q)}{\sqrt{1+\gamma_\hbar}},
+\quad q&gt;0.\tag{3}
+\]</span> They solve the free Schrödinger equation with Dirichlet and
+Neumann conditions, respectively. Their regularity and decay justify the
+boundary calculations below.</p>
+<p>The free Gaussian formula gives <span class="math display">\[
+|g_{\hbar,t}(0)|^2
+=\sqrt{\frac{m\omega}{\pi\hbar A(t)}}
+    \exp\!\left[-\frac{m\omega a(t)^2}{\hbar A(t)}\right],\qquad
+\hbar\,\frac{g&#39;_{\hbar,t}(0)}{g_{\hbar,t}(0)}
+=D(t):=\frac{m\omega q_0+i p_0}{1+i\omega t}.\tag{4}
+\]</span> The simplification in <span class="math inline">\(D\)</span>
+follows from <span class="math inline">\(a=q_0+p_0t/m\)</span>; <span
+class="math inline">\(g_{\hbar,t}(0)\)</span> is never zero. Define
+<span class="math inline">\(B=(m\omega q_0)^2+p_0^2\)</span>. Since
+<span
+class="math inline">\(\psi&#39;_{\hbar,D}(0,t)=2g&#39;_{\hbar,t}(0)/\sqrt{1-\gamma_\hbar}\)</span>,
+the boundary-force density is exactly <span class="math display">\[
+F_{\hbar,D}(t)
+=\frac{2B}{m(1-\gamma_\hbar)A(t)}
+    \sqrt{\frac{m\omega}{\pi\hbar A(t)}}
+    \exp\!\left[-\frac{m\omega a(t)^2}{\hbar A(t)}\right].\tag{5}
+\]</span></p>
+<h2 id="the-pulse-and-the-limiting-impulse">2. The pulse and the
+limiting impulse</h2>
+<p>Put <span class="math inline">\(A_*=A(t_*)\)</span> and <span
+class="math display">\[\Lambda=|v|\sqrt{\frac{m\omega}{A_*}}&gt;0.\tag{6}\]</span>
+Because <span class="math inline">\(m\omega q_0=-p_0\omega t_*\)</span>,
+one has <span class="math inline">\(B=p_0^2A_*\)</span>. At every fixed
+<span class="math inline">\(s\in\mathbb R\)</span>, (5) gives <span
+class="math display">\[
+\sqrt\hbar\,F_{\hbar,D}(t_*+\sqrt\hbar\,s)
+\longrightarrow
+\frac{2p_0^2}{m}\sqrt{\frac{m\omega}{\pi A_*}}\,
+          e^{-\Lambda^2s^2}.\tag{7}
+\]</span> The integral of the right side is <span
+class="math inline">\(2|p_0|\)</span>.</p>
+<p>This pointwise calculation proves (1) with the following tail
+control. For any fixed <span class="math inline">\(\delta&gt;0\)</span>,
+<span class="math display">\[
+c_\delta:=\inf_{|t-t_*|\ge\delta}\frac{m\omega a(t)^2}{A(t)}&gt;0:
+\]</span> the expression is continuous, has only the one zero <span
+class="math inline">\(t_*\)</span>, and tends to <span
+class="math inline">\(mv^2/\omega&gt;0\)</span> at both infinities.
+Equation (5) bounds the total force outside this neighbourhood by <span
+class="math inline">\(C_\delta\hbar^{-1/2}e^{-c_\delta/\hbar}\)</span>,
+since <span class="math inline">\(A(t)^{-3/2}\)</span> is integrable.
+Inside the neighbourhood, after <span
+class="math inline">\(t=t_*+\sqrt\hbar s\)</span>, the profiles have a
+common integrable Gaussian majorant. Dominated convergence proves
+convergence against every bounded continuous test function and gives the
+total mass <span class="math inline">\(2|p_0|\)</span>. This is weak
+convergence of measures, not total-variation convergence to an atom.</p>
+<p>The real current-momentum form is <span
+class="math display">\[J_\hbar(t)=\hbar\operatorname{Im}
+\int_0^\infty\overline{\psi_\hbar}\,\partial_q\psi_\hbar\,dq.\tag{8}\]</span>
+The differential operator <span
+class="math inline">\(-i\hbar\partial_q\)</span> on a half-line is not a
+self-adjoint momentum operator; (8) is a real current form. For a
+sufficiently regular free half-line wave, <span class="math display">\[
+\frac{dJ_\hbar}{dt}
+=\frac{\hbar^2}{2m}\left(
+     |\psi_\hbar&#39;(0,t)|^2
+    -\operatorname{Re}[\overline{\psi_\hbar(0,t)}
+                                  \psi_\hbar&#39;&#39;(0,t)]\right).\tag{9}
+\]</span> To see this, differentiate (8), insert <span
+class="math inline">\(\partial_t\psi=i\hbar\psi&#39;&#39;/(2m)\)</span>,
+and integrate by parts. For Dirichlet the second term vanishes, so <span
+class="math inline">\(dJ_{\hbar,D}/dt=F_{\hbar,D}\)</span>. Using the
+off-impact current limit from the guide together with (7), <span
+class="math display">\[
+J_{\hbar,D}(t_*+\sqrt\hbar\,s)
+\longrightarrow |p_0|\,\operatorname{erf}(\Lambda s).\tag{10}
+\]</span> The incoming value is <span
+class="math inline">\(p_0=-|p_0|\)</span>, the outgoing value is <span
+class="math inline">\(|p_0|\)</span>, and their difference is the mass
+in (1). The transition is continuous for each <span
+class="math inline">\(\hbar&gt;0\)</span> and becomes discontinuous only
+in the limit.</p>
+<h2 id="neumann-and-robin-boundary-information">3. Neumann and Robin
+boundary information</h2>
+<p>For <span class="math inline">\(\psi_{\hbar,N}&#39;(0,t)=0\)</span>,
+the expression in (1) is identically zero. Equation (9), rather than the
+Dirichlet-only term, is the appropriate boundary stress. Since <span
+class="math display">\[
+\frac{g_{\hbar,t}&#39;&#39;(0)}{g_{\hbar,t}(0)}
+=\frac{D(t)^2}{\hbar^2}
+   -\frac{m\omega}{\hbar(1+i\omega t)},
+\]</span> it is explicitly <span class="math display">\[
+F_{\hbar,N}(t)=\frac{2|g_{\hbar,t}(0)|^2}{m(1+\gamma_\hbar)}
+\left[-\operatorname{Re}D(t)^2+\frac{\hbar m\omega}{A(t)}\right].
+\tag{11}
+\]</span> This density need not be pointwise nonnegative. At the impact,
+<span class="math inline">\(D(t_*)=ip_0\)</span>, and therefore the
+rescaled Neumann density has the same limit (7). Moreover <span
+class="math display">\[
+|F_{\hbar,N}(t)|
+\le\frac{2|g_{\hbar,t}(0)|^2}{m(1+\gamma_\hbar)}
+      \left[\frac{B}{A(t)}+\frac{\hbar m\omega}{A(t)}\right],
+\]</span> so the same argument after (7) controls the total variation
+outside every impact neighbourhood. Consequently the finite signed
+measures <span class="math inline">\(F_{\hbar,N}(t)dt\)</span> converge
+weakly to the same <span
+class="math inline">\(2|p_0|\delta_{t_*}\)</span>. Their impact-layer
+current has the same limit as (10). The even-reflection argument also
+gives the same folded classical position <span
+class="math inline">\(|a(t)|\)</span>. Thus the limiting position and
+impulse do not recover the Dirichlet/Neumann reflection phase.</p>
+<p>All self-adjoint realizations of the free half-line Laplacian use
+Dirichlet or a real Robin condition <span
+class="math inline">\(\psi&#39;(0)=\kappa\psi(0)\)</span>, including
+Neumann at <span class="math inline">\(\kappa=0\)</span>. For an
+incoming stationary wave <span
+class="math inline">\(e^{-ikq}+r_\kappa(k)e^{ikq}\)</span>, <span
+class="math display">\[
+r_\kappa(k)=\frac{ik+\kappa}{ik-\kappa},\qquad
+|r_\kappa(k)|=1,\quad
+r_0=1,\quad r_D=-1.\tag{12}
+\]</span> At fixed real <span class="math inline">\(\kappa\)</span> and
+fixed nonzero physical momentum, <span
+class="math inline">\(k=|p|/\hbar\to\infty\)</span> and <span
+class="math inline">\(r_\kappa(k)\to1\)</span>. This is a stationary
+scattering comparison, not a proof of the impulse limit for every Robin
+packet. For <span class="math inline">\(\kappa&lt;0\)</span> there is
+additionally a bound state <span
+class="math inline">\(\sqrt{-2\kappa}e^{\kappa q}\)</span> of energy
+<span class="math inline">\(-\hbar^2\kappa^2/(2m)\)</span>, showing
+another quantum distinction that the free incoming bounce does not
+encode.</p>
+<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<p>For a specified coherent packet, the Dirichlet force is a positive
+boundary measure converging to Newton’s impulsive momentum jump; the
+full Neumann boundary stress has the same limit. A classical bounce does
+not identify the boundary condition or reflection phase. This constructs
+neither a general boundary-groupoid theorem nor a
+positive-action-necessity result.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

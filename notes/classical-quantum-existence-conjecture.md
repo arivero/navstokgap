@@ -19,6 +19,10 @@ and uniqueness of a quantum completion are separate claims. No general
 lifting theorem or independently necessary positive action scale is
 proved here. The following formulation and comparison use the maintained
 proofs cited below; they make no literature novelty claim.
+The subsequent [Lipschitz-certificate lift](lipschitz-certificate-quantum-lift.md)
+proves the bounded test in §6 for a specified one-dimensional action
+class, using a named operator-theorem toolkit. The universal claim
+remains open.
 
 ## 1. The meaning of containment
 
@@ -292,8 +296,8 @@ are decided.
 
 ## 6. A bounded test
 
-The next test should compare the direct polygon certificate with the
-quantum product argument for the same regular action class. Fix
+The test compares the direct polygon certificate with the quantum
+product argument for a specified action class. Initially fix
 $m>0$, $V\ge0$, the derivative bounds of section 3, the initial data and
 a finite duration $T$. Specify the certificate fields as the classical
 drift and kick rules, their common bounded region, stability and residual
@@ -309,39 +313,34 @@ $$
  \le r_{h,T,\psi}(|\pi|)+r_{h,T,\psi}(|\sigma|),
  \qquad r_{h,T,\psi}(s)\longrightarrow0. \tag{7}
 $$
-The existing graph-domain argument already proves the required product
-limit in this regular class. The proposed work is to give one
-construction from the mechanical data and classical certificates and
-derive its model-dependent operator hypotheses from those inputs. It
-must identify how the certificate estimates imply the domain and
-convergence bounds, including any information not present in trajectory
-convergence alone. Afterward, the packet-spread bounds must justify an
-observable limit such as (1). Fixed-$h$ product convergence and the joint
-classical limit are different estimates; (7) need not be uniform as
-$h\to0$.
+The subsequent [bounded lifting theorem](lipschitz-certificate-quantum-lift.md)
+derives the operator-domain and product estimates from the supplied
+conservative action and its global Lipschitz force bound, using the
+named Nelson and graph-domain theorems. It actually allows $V\in
+C^{1,1}$ without a lower bound. For graph-domain vectors it gives an
+explicit $O(|\pi|)$ fixed-$h$ product estimate, and it uses the
+classical polygon certificate together with packet-spread bounds to
+prove an observable limit such as (1). Fixed-$h$ product convergence
+and the joint classical limit remain different estimates; (7) need
+not be uniform as $h\to0$.
 
-A successful test would prove a theorem for an explicitly delimited
-class of certificates and identify every analytic input. An informative
-failure would identify an operator-domain or oscillatory estimate not
-implied by the chosen classical estimates. Failure of one proposed
-procedure would not refute existence of every possible lift. Likewise,
-nonuniqueness of a quantum boundary condition would not refute a
-conjecture asking only for existence of a compatible quantum theory.
+That theorem concerns the delimited certificate class, rather than
+every proof of classical existence. Likewise, nonuniqueness of a
+quantum boundary condition does not refute a conjecture asking only
+for existence of a compatible quantum theory.
 
-For singular forces, a later test can compare preparations with the same
-limiting classical point and different shrinking asymmetries, asking
-whether their outgoing quantum limits select different branches or
-mixtures. Such dependence would reveal preparation information lost by
-the point-state limit. It would refine the completion question without
-establishing a universal positive action scale.
+For singular forces, the
+[cusp-selection calculation](cusp-quantum-preparation-selection.md)
+gives explicit Gaussian families with the same limiting incoming
+trajectory and different outgoing branches; their superpositions give
+mixtures. This reveals preparation information lost by the point-state
+limit without establishing a universal positive action scale.
 
 ## 7. Consequence for STATE
 
-The universal classical-to-quantum existence conjecture is now recorded
-with its proposed constructive meaning, the established smooth-potential
-common-hypothesis construction and its limits. The next test is to derive
-a specified noncommutative quantum family from classical refinement
-certificates using one construction procedure and a fixed background
-toolkit. This is a formulation of an open proof obligation; it neither
-completes that test nor changes the independent action-necessity and
-Yang--Mills goals.
+The universal classical-to-quantum existence conjecture remains open.
+The subsequent bounded theorem supplies one noncommutative construction
+from the conservative global-Lipschitz certificate and the named
+operator toolkit; the cusp examples show why singular continuations
+require more information. Neither result changes the independent
+action-necessity and Yang--Mills goals.

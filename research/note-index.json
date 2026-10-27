@@ -5,6 +5,71 @@
  "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
  "notes": [
   {
+   "path": "notes/dirichlet-wall-impulse.md",
+   "title": "A wall impulse from a quantum boundary stress",
+   "summary": "An exact odd-Gaussian Dirichlet boundary force converges to 2|p0| delta at impact, with an explicit Gaussian force and error-function current profile. The even Neumann packet has the same limit via the full boundary stress while its boundary derivative vanishes.",
+   "thematic_area": "refinement/comparison",
+   "strongest_result": "The boundary-force measures converge weakly on the full time axis to Newton's elastic momentum impulse; the impact layer has an explicit Gaussian profile for both Dirichlet and Neumann dynamics.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Resolves the impact layer in the Newton–Dimock guide and compares self-adjoint wall boundary conditions.",
+   "relations": [
+    {"type": "continues", "target": "notes/newton-dimock-balaban-guide.md", "reason": "Extends its odd-Gaussian position and off-impact current estimates to a boundary impulse and Neumann comparison."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["Dirichlet boundary force", "impulse measure", "elastic bounce", "Neumann stress", "Gaussian impact layer", "error function", "Robin reflection phase"],
+   "role": "result,live",
+   "value": "infrastructure,open-mechanism",
+   "limitations": "Specified free half-line coherent packets; general Robin wavepacket impulse and nonlocal boundary Hamiltonians are not proved. The full Neumann boundary stress is signed.",
+   "content_coverage": "Full note and derivation read; De Vincenzo boundary-force passage and Albrecht et al. abstract checked. Written derivation without independent peer review."
+  },
+  {
+   "path": "notes/cusp-quantum-preparation-selection.md",
+   "title": "Quantum preparations select continuations at a bounded Newton cusp",
+   "summary": "Two Gaussian families have identical position densities and the same limiting incoming trajectory, yet converge to reflection or transmission through the C1 cusp; their superpositions yield any mixture of the two outgoing branches.",
+   "thematic_area": "Newton/action",
+   "strongest_result": "For the specified bounded C1 cusp and logarithmic preparations, the exact Schrödinger states share one incoming semiclassical phase-space history while different vanishing momentum shifts select opposite outgoing branches.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Directly tests quantum completion at a classical point-state merger and identifies information lost by the limiting phase-space history.",
+   "relations": [
+    {"type": "continues", "target": "notes/newton-cusp-preparation-floor.md", "reason": "Studies the same bounded cusp via explicit semiclassical preparations and outgoing branch selection."},
+    {"type": "continues", "target": "notes/classical-quantum-existence-conjecture.md", "reason": "Carries out its suggested singular-continuation test."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["bounded C1 cusp", "same incoming trajectory", "coherent Gaussian", "vanishing momentum shift", "branch selection", "pure superposition", "Wigner mixture", "Athanassoulis Paul", "Chabu"],
+   "role": "result,live",
+   "value": "open-mechanism,infrastructure",
+   "limitations": "Specified logarithmically shrinking preparations and a finite local time interval; the result does not classify all preparations or waiting times or derive a positive action scale.",
+   "content_coverage": "Full note and derivation read; Athanassoulis–Paul Theorem 2.1 and Lemma 5.3 and Chabu Theorem 1.12 and Proposition 3.1 checked at statement level. Written derivation without independent peer review."
+  },
+  {
+   "path": "notes/lipschitz-certificate-quantum-lift.md",
+   "title": "Lifting a Lipschitz Newton certificate to quantum mechanics",
+   "summary": "A conservative C1,1 action and its Lipschitz polygon certificate imply a self-adjoint noncommutative quantum family, fixed-h graph-domain product rate and joint observable limit, using specified operator theorems. V=q|q|/2 shows the mean rate can be exactly O(sqrt(h)).",
+   "thematic_area": "Newton/action",
+   "strongest_result": "For the stated one-dimensional global-Lipschitz certificate class, the classical force bound controls a noncommutative quantum Hamiltonian, an O(mesh) fixed-h product estimate on D(N), and a mesh-uniform O(sqrt(h)) comparison of quantum and classical polygons.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Carries out a bounded version of the constructive lifting conjecture using the explicitly declared analytic toolkit.",
+   "relations": [
+    {"type": "continues", "target": "notes/classical-quantum-existence-conjecture.md", "reason": "Proves its bounded certificate-to-quantum test for a specified action class."},
+    {"type": "uses", "target": "notes/quantum-blocks-construct-newton.md", "reason": "Extends its finite-cell packet comparison to C1,1 potentials, with the sharp weaker rate."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["constructive lifting conjecture", "classical polygon certificate", "globally Lipschitz force", "C1,1 potential", "Nelson commutator", "arbitrary partition", "noncommutative Weyl observables", "sqrt h sharpness"],
+   "role": "result,live",
+   "value": "infrastructure,open-mechanism",
+   "limitations": "One-dimensional conservative globally Lipschitz class and supplied h; fixed-h product bounds need the stated operator toolkit. No universal lift, action necessity or Euclidean measure for arbitrary unbounded-below potentials is claimed.",
+   "content_coverage": "Full note and derivation read; the cited energy-limited graph-domain theorem statements and hypotheses checked. Written derivation without independent peer review."
+  },
+  {
    "path": "notes/central-limit-canonical-gaussian-sector.md",
    "title": "Canonical averaging and the Gaussian sector of Newton preparations",
    "summary": "Copy-index symplectic mixers and weak or W2 closure admit a Gaussian with each admissible covariance; a positive infimum determines the entire Gaussian sector. The older density ceiling fails a two-copy mixer. A supplied entropy floor supports actual cusp transport and mixing with W2 closure but fails weak closure.",
@@ -57,21 +122,23 @@
    "status": "open",
    "proof_status": "mixed",
    "retrieval_priority": 3,
-   "current_relevance": "User-requested statement of the general consistency/existence conjecture and the next bounded certificate-to-quantum comparison.",
+   "current_relevance": "User-requested statement of the general consistency/existence conjecture, linked to the completed bounded certificate lift and singular cusp selection test.",
    "relations": [
     {"type": "uses", "target": "notes/quantum-blocks-construct-newton.md", "reason": "Uses the existing common-hypothesis construction and the fixed-action domain/product proof."},
     {"type": "uses", "target": "notes/balaban-ode-lesson.md", "reason": "Compares the direct classical polygon certificate with the quantum construction."},
     {"type": "uses", "target": "notes/rivero-1998-conjecture-central-forces.md", "reason": "Preserves the regulator-control gap, stationary-phase assumptions and multi-branch correction."},
     {"type": "uses", "target": "notes/groupoid-quantum-newton-states.md", "reason": "Uses the observable-state limit and corrected scale and composition distinctions."},
     {"type": "uses", "target": "notes/self-sufficiency-contrast.md", "reason": "Separates Kepler quantum completeness from exclusion of classical completions."},
-    {"type": "uses", "target": "notes/newton-cusp-preparation-floor.md", "reason": "Retains the conditional floor's classical density-ceiling countermodel to quantum identification."}
+    {"type": "uses", "target": "notes/newton-cusp-preparation-floor.md", "reason": "Retains the conditional floor's classical density-ceiling countermodel to quantum identification."},
+    {"type": "continues", "target": "notes/lipschitz-certificate-quantum-lift.md", "reason": "The bounded test now derives the quantum product and observable estimates from a conservative Lipschitz certificate."},
+    {"type": "continues", "target": "notes/cusp-quantum-preparation-selection.md", "reason": "The singular test constructs two quantum preparations with the same limiting incoming history and different outgoing branches."}
    ],
    "surprising": false,
    "route_closure": false,
    "keys": ["classical quantum existence conjecture", "constructive lifting", "proof containment", "classical refinement certificate", "noncommutative target", "Koopman representation", "operator domains", "oscillatory normalization", "1998 consistency", "positive action necessity"],
    "role": "synthesis,live",
    "value": "open-mechanism,synthesis",
-   "limitations": "The universal conjecture and the proposed certificate-to-quantum extraction remain open. No proof of quantum uniqueness, universal positive action, uncut quartic joint packet convergence or four-dimensional Yang–Mills is asserted. The note is a formulation and synthesis of maintained arguments, without independent peer review.",
+   "limitations": "The universal conjecture remains open; the completed certificate extraction is limited to a one-dimensional conservative global-Lipschitz class. No universal positive action, uncut quartic joint packet convergence or four-dimensional Yang–Mills is asserted.",
    "content_coverage": "full new note read, cited maintained arguments and original 1998 passages checked; separate GPT-6 Astra and GPT-6.1 Terra draft reviews, with findings integrated, 2026-10-27"
   },
   {
@@ -83,20 +150,22 @@
    "status": "result",
    "proof_status": "proved-unrefereed",
    "retrieval_priority": 3,
-   "current_relevance": "User-directed didactic introduction to Newton existence, 0+1 construction and Dimock–Balaban methods, with links to relativistic dispersion and Gaussian-preparation follow-ups.",
+   "current_relevance": "User-directed didactic introduction to Newton existence, 0+1 construction and Dimock–Balaban methods, with links to wall impulse, cusp selection and other follow-ups.",
    "relations": [
     {"type": "uses", "target": "notes/quantum-blocks-construct-newton.md", "reason": "Explains its density tower and joint quantum-packet construction."},
     {"type": "uses", "target": "notes/groupoid-quantum-newton-states.md", "reason": "Presents its continuous-field state limit and distinct scales."},
     {"type": "uses", "target": "notes/newton-nonlinear-time-cell.md", "reason": "Uses the nonlinear one-cell action and generated quartic stiffness."},
     {"type": "continues", "target": "notes/relativistic-dispersion-blocks.md", "reason": "Points to the separate relativistic-dispersion and spectral-wall extension."},
-    {"type": "continues", "target": "notes/central-limit-canonical-gaussian-sector.md", "reason": "Points to the separate conditional preparation and entropy-floor follow-up."}
+    {"type": "continues", "target": "notes/central-limit-canonical-gaussian-sector.md", "reason": "Points to the separate conditional preparation and entropy-floor follow-up."},
+    {"type": "continues", "target": "notes/dirichlet-wall-impulse.md", "reason": "Points to the boundary-force and Neumann impact-layer calculation."},
+    {"type": "continues", "target": "notes/cusp-quantum-preparation-selection.md", "reason": "Points to the quantum selection test at the same bounded cusp."}
    ],
    "surprising": false,
    "route_closure": false,
    "keys": ["Dimock Balaban source guide", "Newton existence uniqueness", "magnetic force", "hard wall", "Dirichlet reflection", "coherent bounce", "normalized blocking", "generated interaction", "tangent groupoid"],
    "role": "synthesis,result",
    "value": "synthesis,infrastructure",
-   "limitations": "Impact requires a boundary law; half-line momentum is a current form rather than a self-adjoint operator and convergence excludes the impact layer. Magnetic quantum evolution and a boundary groupoid are not proved. The targeted model-advisor review is not independent peer review.",
+   "limitations": "Impact requires a boundary law; half-line momentum is a current form rather than a self-adjoint operator, and the guide's original current bound excludes the impact layer. The linked wall note treats that layer separately. Magnetic quantum evolution and a boundary groupoid are not proved.",
    "content_coverage": "full read, selected Dimock source passages checked, targeted advisor check, 2026-10-27"
   },
   {

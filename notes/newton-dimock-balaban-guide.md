@@ -66,6 +66,9 @@ constant to be nonnegative and bounded. Its quantum Hamiltonian is then
 a bounded perturbation of the free self-adjoint Hamiltonian, while its
 classical initial-value problem is nonunique. Quantum existence by
 itself therefore does not supply a unique classical branch.
+The later [cusp-selection calculation](cusp-quantum-preparation-selection.md)
+constructs two quantum preparations with the same limiting incoming
+phase-space history but different outgoing limits.
 
 ## 2. A velocity-dependent force: magnetism
 
@@ -414,6 +417,10 @@ The bound deliberately excludes $t_*$. A family of continuous quantum
 current expectations cannot converge uniformly across $t_*$ to the
 discontinuous classical momentum in (6). Position convergence and
 momentum convergence therefore have different valid topologies.
+The separate [wall-impulse calculation](dirichlet-wall-impulse.md)
+resolves this impact layer: the Dirichlet boundary-force measures
+converge to $2|p_0|\delta_{t_*}$, while the full Neumann boundary
+stress has the same limit even though its boundary derivative vanishes.
 
 ## 9. Consequence for STATE
 
@@ -435,4 +442,6 @@ packet estimates and their convergence domains, the magnetic
 continuation argument, and the cited Dimock source locations were
 checked against the written calculation and selected source passages.
 This is an internal model check, not independent peer review of the
-imported ODE, operator, probability or field-theory theorems.
+imported ODE, operator, probability or field-theory theorems. The
+linked later cusp-selection and wall-impulse notes are separate
+written derivations and were not part of that check.

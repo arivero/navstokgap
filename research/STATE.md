@@ -32,8 +32,10 @@ checks recorded there are not independent peer review.
 
 The [Newton–Dimock guide](../notes/newton-dimock-balaban-guide.md)
 now gives source-specific pedagogy, classical magnetic continuation,
-and a Dirichlet hard-wall packet limit through an elastic bounce. Its
-momentum-current estimate excludes an impact layer. The wall calculation
+and a Dirichlet hard-wall packet limit through an elastic bounce. The
+[wall-force calculation](../notes/dirichlet-wall-impulse.md) resolves the
+impact layer and gives the impulse $2|p_0|$; the Neumann stress has the
+same limit although its boundary derivative vanishes. The wall calculation
 is separate from the whole-line groupoid and scalar-potential theorem.
 The [relativistic extension](../notes/relativistic-dispersion-blocks.md)
 adds a joint positive-energy and Newton limit, plus a separate spectral
@@ -41,8 +43,13 @@ Dirichlet hard-wall construction.
 
 The [classical-to-quantum existence conjecture](../notes/classical-quantum-existence-conjecture.md)
 now distinguishes the universal claim from the established common-hypothesis
-construction. Its proposed test is to extract quantum product convergence
-from an explicit classical refinement certificate; that test remains open.
+construction. The [bounded lifting theorem](../notes/lipschitz-certificate-quantum-lift.md)
+derives product convergence and the observable limit from a specified
+conservative global-Lipschitz certificate and a named operator toolkit;
+the universal conjecture remains open. The
+[cusp-selection calculation](../notes/cusp-quantum-preparation-selection.md)
+gives two quantum families with identical limiting incoming histories
+but distinct outgoing branches and explicit mixtures.
 
 ## Goal
 

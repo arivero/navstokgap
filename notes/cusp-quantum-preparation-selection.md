@@ -1,0 +1,285 @@
+# Quantum preparations select continuations at a bounded Newton cusp
+
+**Result, 2026-10-27; written derivation, unrefereed.** For the bounded
+$C^1$ cusp potential already used in the
+[preparation-floor note](newton-cusp-preparation-floor.md), there are
+two explicit coherent-state families with the **same position density**
+at $t=0$, the same limiting phase-space point $(0,0)$, and the same
+limiting incoming trajectory for $t<0$. Their unique Schrödinger
+evolutions have different outgoing semiclassical limits for $t>0$:
+one rebounds on the positive side and the other crosses to the negative
+side. The preparations differ by a momentum shift tending to zero.
+Their normalized superpositions yield any prescribed mixture of the
+two outgoing point measures.
+
+The result is local in time and uses the specified logarithmically
+shrinking preparation. It neither classifies every possible
+preparation nor selects a waiting-time distribution. It shows
+explicitly that the limiting incoming phase-space history alone does
+not determine the outgoing limit of these quantum families. The
+positive value of $\hbar$ is supplied, not derived.
+
+This phenomenon has substantial prior art. [Athanassoulis--Paul,
+Theorem 2.1 and Lemma 5.3](https://arxiv.org/pdf/1011.1651)
+(theorem statements and relevant passages read) treat splitting and
+one-dimensional cutoff $-|q|^{1+\theta}$ potentials, including
+$\theta=1/2$, with detailed assumptions on phase-space preparations.
+[Chabu, Theorem 1.12 and Proposition 3.1](https://arxiv.org/pdf/1608.03716)
+(statements and surrounding discussion read) exhibit the same
+incoming semiclassical history with distinct outgoing histories, and
+mixtures, for the conical potential $-|q|$. The present calculation
+uses the repository's smoother $C^1$ cusp and explicit Gaussian
+preparations; no literature priority is claimed.
+
+## 1. Potential, initial data and target trajectories
+
+Use dimensionless calibrated units, $m=1$, and choose $R>0$ and a
+smooth even cutoff $\chi$ equal to one on $[-R,R]$ and zero outside
+$[-2R,2R]$. Put
+$$
+ V(q)=-\frac23|q|^{3/2}\chi(q),\qquad
+ F(q)=-V'(q),\qquad
+ H_\hbar=-\frac{\hbar^2}{2}\partial_q^2+V(Q).\tag{1}
+$$
+$V$ and $F$ are bounded, $V\in C^1$, and on $|q|\le R$,
+$F(q)=\operatorname{sgn}(q)\sqrt{|q|}$. The bounded-perturbation
+theorem gives a self-adjoint $H_\hbar$ on $H^2(\mathbb R)$ for every
+$\hbar>0$. Write $F_*=\|F\|_\infty$, and fix $T>0$ so small that
+$F_*T^2/2<R/4$. All mean trajectories considered below remain in
+$|q|<R/2$ for small $\hbar$.
+
+There are constants $C_0,C_1>0$, depending on the fixed cutoff, such
+that for all $x$ and all $q\ne0$,
+$$
+ |F(x)|\le C_0\sqrt{|x|},\qquad
+ |F(x)-F(q)|
+   \le C_1(1+|q|^{-1/2})\,|x-q|.\tag{2}
+$$
+For $|x-q|\le |q|/2$, the second bound follows from the derivative
+of the square-root force and the smooth cutoff. Otherwise use the
+first bound and $|x-q|\ge |q|/2$. This is a Lipschitz bound anchored
+at $q\ne0$, **not** a global Lipschitz bound at the cusp.
+
+For $0<\hbar<e^{-1}$ set
+$$
+ a_\hbar=\frac1{\log(1/\hbar)},\qquad
+ g_{\hbar,k}(q)=(\pi\hbar)^{-1/4}
+ \exp\!\left[-\frac{(q-a_\hbar)^2}{2\hbar}
+     -\frac{i k a_\hbar^{3/4}(q-a_\hbar)}{\hbar}\right].\tag{3}
+$$
+Choose a fixed $K>0$ with
+$$K^2>\max\{16\sqrt2\,C_0,\;16/3\}.\tag{4}$$
+The two preparations are $g_{\hbar,0}$ and $g_{\hbar,K}$.
+Both have exactly the same Gaussian position density and
+$\operatorname{sd}Q=\operatorname{sd}P=\sqrt{\hbar/2}$.
+Their means are
+$$
+ (q,p)=(a_\hbar,0),\qquad
+ (q,p)=(a_\hbar,-K a_\hbar^{3/4}),\tag{5}
+$$
+both converging to $(0,0)$. The classical energies of these
+**centres** are respectively
+$-\frac23a_\hbar^{3/2}$ and
+$(K^2/2-2/3)a_\hbar^{3/2}$: both vanish, but their signs differ.
+
+Let $z_+(t)=(t^4/144,t^3/36)$ for $-T\le t\le T$, and let
+$$
+ z_\times(t)=
+ \begin{cases}
+  (t^4/144,t^3/36),&t\le0,\\
+  (-t^4/144,-t^3/36),&t\ge0.
+ \end{cases}\tag{6}
+$$
+The first trajectory returns to the positive side, while the second
+crosses to the negative side. Both follow the same incoming path,
+arrive at $(0,0)$ at $t=0$, and satisfy the cusp Newton equation.
+
+**Theorem.** Let $\psi_{\hbar,k}(t)=e^{-itH_\hbar/\hbar}g_{\hbar,k}$.
+For $k=0,K$, the packet means and the position and momentum standard
+deviations converge uniformly on $[-T,T]$:
+$$
+ \begin{aligned}
+ (\langle Q\rangle_{\hbar,0},\langle P\rangle_{\hbar,0})
+       &\longrightarrow z_+(t),\\
+ (\langle Q\rangle_{\hbar,K},\langle P\rangle_{\hbar,K})
+       &\longrightarrow z_\times(t),\\
+ \operatorname{sd}Q_{\hbar,k}(t)+\operatorname{sd}P_{\hbar,k}(t)
+       &\longrightarrow0.
+ \end{aligned}\tag{7}
+$$
+In particular, the Weyl expectations of every
+$b\in C_c^\infty(\mathbb R^2)$ converge uniformly to $b(z_+(t))$ and
+$b(z_\times(t))$, respectively.
+
+## 2. A mean and spread estimate with an anchored force
+
+Suppress the subscripts, let $q(t)=\langle Q\rangle$,
+$p(t)=\langle P\rangle$, and write
+$W(t)=\operatorname{sd}Q(t)+\operatorname{sd}P(t)$.
+The standard Ehrenfest identities and Cauchy--Schwarz give
+$$
+ \dot q=p,\qquad \dot p=\langle F(Q)\rangle,\qquad
+ D^+W\le\operatorname{sd}P+\operatorname{sd}F(Q).\tag{8}
+$$
+These identities hold as quadratic-form identities for the present
+$H_\hbar$: $V\in W^{1,\infty}$, the Gaussian lies in
+$D(Q)\cap H^2$, and the required weighted and $H^1$ domains are
+preserved by the bounded-force evolution. They can be obtained by
+regularizing $Q,P$ and removing the cutoffs.
+
+For $q(t)\ne0$, (2) gives
+$$
+ \operatorname{sd}F(Q)
+ \le\|[F(Q)-F(q)]\psi\|
+ \le L(q)\operatorname{sd}Q,\quad
+ L(q):=C_1(1+|q|^{-1/2}),\tag{9}
+$$
+and also $|\langle F(Q)\rangle-F(q)|\le L(q)W$.
+Consequently
+$$
+ D^+W\le[1+L(q)]W,\qquad W(0)=\sqrt{2\hbar}.\tag{10}
+$$
+On an interval reached from the initial time without a cusp crossing,
+if $|q|\ge a_\hbar/2$ and its length is at most $2T$, (10) gives
+$$
+ W(t)\le\sqrt{2\hbar}\,e^{C_T/\sqrt{a_\hbar}},\qquad
+ \int L(q(t))W(t)\,dt
+    \le C_Ta_\hbar^{-1/2}\sqrt\hbar\,
+                  e^{C_T/\sqrt{a_\hbar}}
+    =o(a_\hbar^N)\tag{11}
+$$
+for every fixed $N>0$. Here and below $C_T$ may change from line to
+line but is independent of $\hbar$. This super-polynomial smallness
+in $a_\hbar$ is why the logarithmic separation in (3) is convenient.
+After the controlled passage in §3, its additional factor
+$e^{Ca_\hbar^{-1/4}}$ can be absorbed into $e^{C_T/\sqrt{a_\hbar}}$,
+so the same form of bound applies on the outgoing interval.
+
+On the positive side, $F(q)\ge0$ within the chosen core. For
+$g_{\hbar,0}$ at positive times, or either preparation at negative
+times, (11) and (8) bootstrap $q(t)\ge a_\hbar/2$: the total
+force-bias error is $o(a_\hbar)$, whereas the force itself pushes
+away from the cusp in the appropriate time direction. On those
+intervals compare $(q,p)$ with the classical solution from (5).
+The field is Lipschitz on $q\ge a_\hbar/2$ with constant
+$O(a_\hbar^{-1/2})$. Gronwall and (11) show that their phase-space
+distance is
+$$O\!\left(a_\hbar^{-1/2}\sqrt\hbar\,
+              e^{C_T/\sqrt{a_\hbar}}\right)=o(a_\hbar^N)
+ \quad\text{for every fixed }N.\tag{12}$$
+The displayed constant $C_T$ absorbs the additional Gronwall factor.
+
+## 3. The transmitted packet crosses the cusp
+
+It remains to control the $k=K$ preparation while its mean passes
+through $q=0$, where (11) cannot be used with a fixed cutoff.
+Start at $q=a_\hbar$ and $p=-Ka_\hbar^{3/4}$. Bootstrap, until the
+first arrival at $q=-a_\hbar$, the two inequalities
+$$W\le a_\hbar,\qquad p\le-\frac K2a_\hbar^{3/4}.\tag{13}$$
+While $|q|\le a_\hbar$, the first inequality and (2) imply
+$$
+ |\langle F(Q)\rangle|\le C_0\sqrt{\mathbb E|Q|}
+ \le C_0\sqrt{2a_\hbar}.\tag{14}
+$$
+The second inequality bounds the passage time by
+$4a_\hbar^{1/4}/K$. In that time the total change in $p$ is at most
+$(4\sqrt2 C_0/K)a_\hbar^{3/4}$, which is strictly below
+$(K/2)a_\hbar^{3/4}$ by (4).
+
+The same velocity bound makes the singular coefficient integrable:
+$$
+ \int_{\rm passage}|q(t)|^{-1/2}\,dt
+ \le \frac{2}{K a_\hbar^{3/4}}
+        \int_{-a_\hbar}^{a_\hbar}|q|^{-1/2}\,dq
+ =\frac8K a_\hbar^{-1/4}.\tag{15}
+$$
+The mean crosses zero at most once, so (10) holds away from that
+single time; apply it on the two sides and use continuity at the
+crossing. It follows that
+$$W\le\sqrt{2\hbar}\,e^{C a_\hbar^{-1/4}}=o(a_\hbar).\tag{16}$$
+The inequalities (13) therefore close by continuity. The exit time
+$\tau_\hbar$ satisfies $\tau_\hbar=O(a_\hbar^{1/4})$, and at exit
+$$q(\tau_\hbar)=-a_\hbar,\qquad
+ -\tfrac{3K}{2}a_\hbar^{3/4}
+ \le p(\tau_\hbar)\le-\tfrac K2a_\hbar^{3/4}.\tag{17}$$
+
+After this exit the force is negative in the chosen core. The same
+bootstrap as in §2 keeps $q\le-a_\hbar/2$ and makes (11)--(12) valid
+against the classical solution started at the **actual** exit mean
+(17). No self-adjoint Hamiltonian with a regularized potential is
+substituted for (1).
+
+## 4. The classical limits and the mixtures
+
+The zero-energy positive-side arrival solves
+$\dot q=-\sqrt{\frac43q^{3/2}}$. Integration gives
+$$
+ |t|=\int_0^{q(t)}
+ \frac{ds}{\sqrt{\frac43s^{3/2}}}
+ =2\sqrt3\,q(t)^{1/4},\qquad
+ q(t)=\frac{t^4}{144}.\tag{18}
+$$
+For the $k=0$ centre, energy conservation gives on either side of
+$t=0$
+$$
+ |t|=\int_{a_\hbar}^{q_a(t)}
+ \frac{ds}{\sqrt{\frac43(s^{3/2}-a_\hbar^{3/2})}}.\tag{19}
+$$
+The part from $a_\hbar$ to $2a_\hbar$ is $O(a_\hbar^{1/4})$;
+on the remainder the integrand is bounded by $Cs^{-3/4}$ and tends
+to the integrand in (18). Thus (19) tends to (18).
+
+For $k=K$ at negative times, and for its outgoing classical comparison
+after (17), the analogous integral has denominator
+$$
+ \sqrt{u_\hbar^2+\frac43(s^{3/2}-a_\hbar^{3/2})},
+ \qquad u_\hbar\asymp a_\hbar^{3/4}.\tag{20}
+$$
+Condition (4) ensures $u_\hbar^2\ge(4/3)a_\hbar^{3/2}$ in the
+outgoing case, so the integrand is dominated by $Cs^{-3/4}$; it tends
+to the one in (18). At the entrance for negative times, $u_\hbar$ is
+exactly $Ka_\hbar^{3/4}$ and the same argument applies. The exit-time
+shift tends to zero. Energy conservation gives the corresponding
+momentum limits, and the bounds in §§2--3 supply (7), including a
+uniform estimate on the shrinking passage interval.
+
+The overlap of the two initial Gaussians is
+$$\langle g_{\hbar,0},g_{\hbar,K}\rangle
+ =\exp\!\left[-\frac{K^2a_\hbar^{3/2}}{4\hbar}\right]
+ \longrightarrow0.\tag{21}$$
+It remains unchanged by unitary evolution. For $0\le\lambda\le1$ and
+fixed $\theta$, normalize
+$$
+ \Psi_{\hbar,\lambda,\theta}(0)
+ \propto\sqrt\lambda\,g_{\hbar,0}
+       +e^{i\theta}\sqrt{1-\lambda}\,g_{\hbar,K}.\tag{22}
+$$
+For any $b\in C_c^\infty(\mathbb R^2)$, the Fourier representation of
+Weyl quantization and
+$\|(e^{iA}-1)\psi\|\le\|A\psi\|$ show that
+$$
+ \|[\operatorname{Op}^W_\hbar(b)-b(z_k(t))]
+                         \psi_{\hbar,k}(t)\|\longrightarrow0
+ \quad\text{uniformly for }|t|\le T,\tag{23}
+$$
+using (7). Thus the cross term in a Weyl expectation equals
+$b(z_k(t))\langle\psi_{\hbar,0},\psi_{\hbar,K}\rangle+o(1)$ and
+vanishes uniformly. The pure states (22) have the semiclassical limit
+$$
+ \lambda\delta_{z_+(t)}+(1-\lambda)\delta_{z_\times(t)}.\tag{24}
+$$
+For $t\le0$ this is a single point on the common incoming path; for
+$t>0$ it has the prescribed two branch weights. The result does not
+assert that the finite-$\hbar$ Wigner function is nonnegative.
+
+## 5. Consequence for STATE
+
+The cusp's unique quantum evolution need not choose one classical
+continuation from the limiting incoming phase-space history. Even
+identical initial position densities admit distinct continuations
+through vanishing momentum offsets, and coherent superpositions can
+produce any mixture of the two demonstrated branches. These explicit
+preparations supplement the earlier point-merger obstruction and
+align with established rough-potential selection results; they do
+not derive a physical preparation rule, a waiting-time selection,
+or a necessary positive action constant.
