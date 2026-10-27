@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The classical-to-quantum existence conjecture</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>The classical-to-quantum existence conjecture</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/classical-quantum-existence-conjecture.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-quantum-existence-conjecture.pdf">PDF</a></p><p><strong>Conjecture and scope, 2026-10-27.</strong> Every proof of
+consistency or existence of classical mechanics contains a proof of
+consistency or existence of quantum mechanics. We interpret this claim
+constructively: the mechanical data and estimates that establish the
+classical theory should suffice to construct a compatible quantum
+theory. The universal claim remains open. For a specified class of
+smooth scalar potentials, the <a
+href="quantum-blocks-construct-newton.html">quantum-to-Newton
+construction</a> already constructs both dynamics and a quantitative
+classical limit. Its quantum existence argument uses additional operator
+theorems; we have not shown that every classical existence argument
+supplies their required hypotheses.</p>
+<p>The immediate question is which classical refinement and stability
+estimates permit such a construction. Existence of a quantum family for
+arbitrary supplied positive action, physical necessity of positive
+action, and uniqueness of a quantum completion are separate claims. No
+general lifting theorem or independently necessary positive action scale
+is proved here. The following formulation and comparison use the
+maintained proofs cited below; they make no literature novelty
+claim.</p>
+<h2 id="the-meaning-of-containment">1. The meaning of containment</h2>
+<p>A proof may contain mathematical information that its author never
+expresses in quantum terminology. Under the conjecture, a construction
+of classical motion would also give enough control to construct quantum
+evolution from the same mechanical data. A direct classical proof that
+never mentions a Hilbert space therefore does not by itself refute this
+interpretation. One must determine whether its assumptions and estimates
+permit the quantum construction.</p>
+<p>Literal textual inclusion would be a much stronger requirement on how
+people write proofs. Conversely, appending an unrelated quantum
+existence theorem to any classical proof would make containment
+uninformative. The intended requirement is an explicit construction
+whose convergence uses the classical data and estimates. Fix a named
+background analytic toolkit before the test. Every model-dependent
+hypothesis needed to apply those theorems must be supplied by the
+classical inputs or proved from them; adding a new dynamical restriction
+would weaken the containment claim.</p>
+<p>The word consistency also needs an identified object. Logical
+consistency concerns the absence of contradictions in specified axioms.
+Existence of a mathematical model can establish relative consistency
+within the mathematical foundation used to construct it. Existence of
+motion, uniqueness from initial data, continuous dependence, and
+continuation for all time are different analytic properties. The present
+programme addresses these analytic constructions and their relation to
+quantum dynamics. It has not formulated a reduction between formal
+arithmetical consistency statements for two axiomatic theories.</p>
+<p>The quantum target requires a specified noncommutative quantization
+of the mechanical observables, a self-adjoint Hamiltonian, a strongly
+continuous unitary evolution, and a relation between that Hamiltonian
+and the classical action. For the scalar example, the target uses the
+Schrödinger position and momentum representation, with <span
+class="math inline">\(Q=q\)</span>, <span
+class="math inline">\(P=-ih\,\partial_q\)</span>, the canonical relation
+<span class="math inline">\([Q,P]=ihI\)</span> on Schwartz space and its
+associated Weyl relations, and the Hamiltonian in (2). Other action
+classes must specify the corresponding quantum structure and
+correspondence conditions before the lifting test. These are
+requirements on the constructed output; assuming them as additional
+physical input would leave the conjecture unproved.</p>
+<p>A Hilbert-space representation alone would admit a classical example.
+For a complete Hamiltonian flow preserving phase volume, the operators
+<span class="math inline">\((U(t)f)(z)=f(\Phi_{-t}(z))\)</span> form a
+strongly continuous unitary group on <span
+class="math inline">\(L^2\)</span> of phase space. Stone’s theorem gives
+a self-adjoint generator; multiplying it by any <span
+class="math inline">\(h&gt;0\)</span> writes the same group as <span
+class="math inline">\(e^{-itH_h/h}\)</span>. Multiplication observables
+commute, and concentrating probability packets recover the classical
+trajectory. This Koopman representation would satisfy the weaker target
+without constructing the required noncommutative quantum
+observables.</p>
+<p>A normalizable vacuum, a spectral gap and relativistic field-theory
+axioms are additional requirements. Free motion on the line has a
+quantum Hamiltonian and unitary group, although its spectral bottom is
+not a normalizable vacuum. A mechanical lifting result would not
+establish the continuum existence or mass gap of four-dimensional
+Yang–Mills.</p>
+<p>Throughout, <span class="math inline">\(h\)</span> has action units
+and denotes the reduced phase constant. Identification with physical
+quantum mechanics would set <span
+class="math inline">\(h=\hbar\)</span>; ordinary Planck action is <span
+class="math inline">\(h_P=2\pi\hbar\)</span>. The time mesh <span
+class="math inline">\(|\pi|\)</span> is an independent parameter.</p>
+<h2 id="a-testable-lifting-statement">2. A testable lifting
+statement</h2>
+<p>Fix a class <span class="math inline">\(\mathcal A\)</span> of
+mechanical actions, their state spaces, initial or boundary data, and
+finite refinement rules. A classical existence certificate means
+explicit estimates sufficient to construct the classical dynamics. For a
+polygon proof these may include a common bounded region on each finite
+time interval, a stability estimate and a force-balance residual tending
+to zero with the mesh. The admissible certificates must be specified
+before testing a proposed lift; defining them to include quantum
+convergence would assume the conclusion.</p>
+<p><strong>Constructive lifting conjecture.</strong> Fix the action
+class, certificate schema, quantum target and named background analytic
+toolkit. One construction procedure for that class takes any admissible
+mechanical data and classical certificate as input and constructs a
+compatible quantum family <span class="math inline">\(Q_h\)</span> for
+<span class="math inline">\(h\in E\subset(0,\infty)\)</span> with <span
+class="math inline">\(0\in\overline E\)</span>. Every model-dependent
+hypothesis used in the quantum construction must be supplied by those
+inputs or proved from them. The procedure must identify which
+certificate estimates control quantum refinement and the recovery of the
+classical dynamics on the stated preparations and observables.
+Additional dynamical restrictions cannot be introduced to complete the
+proof.</p>
+<p>The proposed interpretation requires a single construction procedure
+for the chosen class, rather than a separate unexplained choice for each
+certificate. A certificate schema must not exclude a counterexample
+after the test begins. A theorem for one class would establish a bounded
+lifting result; extending it to every classical existence proof remains
+the universal conjecture.</p>
+<p>Existence at one isolated <span class="math inline">\(h&gt;0\)</span>
+cannot itself formulate an <span class="math inline">\(h\to0\)</span>
+limit. The lifting statement therefore requires a family indexed by
+positive values accumulating at zero. Requiring every sufficiently small
+positive <span class="math inline">\(h\)</span>, or every <span
+class="math inline">\(h&gt;0\)</span>, strengthens that requirement. The
+current smooth-potential example constructs the quantum theory for every
+<span class="math inline">\(h&gt;0\)</span>. This family requirement
+makes the proposed lifting statement more specific than a bare assertion
+that some quantum theory exists.</p>
+<p>The word compatible requires an observable statement. In the current
+example, fix <span class="math inline">\(z_0\)</span>, a finite <span
+class="math inline">\(T&gt;0\)</span>, a time <span
+class="math inline">\(t\in[0,T]\)</span> and <span
+class="math inline">\(a\in C_c^\infty(T^*\mathbb R)\)</span>. For the
+specified coherent preparations and partition vertices <span
+class="math inline">\(t_j\to t\)</span>, the required limit is <span
+class="math display">\[
+\left\langle\psi_{h,\pi}(t_j),
+       \operatorname{Op}_h^W(a)\psi_{h,\pi}(t_j)\right\rangle
+\longrightarrow a(\Phi_t(z_0)),
+\qquad h,|\pi|\longrightarrow0. \tag{1}
+\]</span> Here <span class="math inline">\(z_0\)</span> is the initial
+canonical state, <span class="math inline">\(\Phi_t\)</span> the
+constructed classical flow, <span
+class="math inline">\(\psi_{h,\pi}(t_j)\)</span> the state after the
+first <span class="math inline">\(j\)</span> quantum cells, and <span
+class="math inline">\(\operatorname{Op}_h^W\)</span> Weyl quantization.
+Partitions containing <span class="math inline">\(t\)</span> permit
+<span class="math inline">\(t_j=t\)</span>. The limit holds along every
+joint schedule with <span class="math inline">\(h,|\pi|\to0\)</span>. A
+different action class may require different preparations, observables
+and topologies while retaining its specified noncommutative quantum
+target. Equation (1) does not require convergence of every quantum state
+to a single classical point.</p>
+<h2 id="the-smooth-potential-instance">3. The smooth-potential
+instance</h2>
+<p>The <a href="quantum-blocks-construct-newton.html">multiscale
+construction</a>, sections 1–5 (maintained proof read), assumes <span
+class="math inline">\(m&gt;0\)</span> and <span
+class="math inline">\(V\in C^\infty(\mathbb R)\)</span>, with <span
+class="math inline">\(V\ge0\)</span> and bounded derivatives of every
+order at least two. Set <span
+class="math inline">\(L=\|V&#39;&#39;\|_\infty\)</span>. Those
+hypotheses give a globally Lipschitz classical force and define <span
+class="math display">\[
+H_h=-\frac{h^2}{2m}\frac{d^2}{dq^2}+V(q),\qquad h&gt;0. \tag{2}
+\]</span> The construction establishes a normalized Euclidean bridge
+law, the self-adjoint Hamiltonian (2), and arbitrary-partition
+convergence of real-time kick–drift products at each fixed <span
+class="math inline">\(h\)</span>. Coherent packet means form a Cauchy
+family as <span class="math inline">\(h\)</span> and the mesh vanish
+jointly, without assuming the classical trajectory in advance. Their
+limit is the unique Newton initial-value solution. The stated
+quantitative bound is <span class="math display">\[
+\sup_{0\le t\le T}\|z_{h,\pi}(t)-\Phi_t(z_0)\|_\omega
+\le G_T\big(C_\delta|\pi|+C_h\sqrt h\big), \tag{3}
+\]</span> with the weighted phase-space norm and constants defined in
+that proof, equations (17) and (21). They are independent of the number
+of slices and of <span class="math inline">\(h\in(0,h_0]\)</span> for
+fixed <span class="math inline">\(h_0,T\)</span>. The <a
+href="groupoid-quantum-newton-states.html">groupoid formulation</a>,
+sections 1–3 (maintained proof read), extends the comparison to smooth
+Weyl observables and continuous sections of the established
+quantum/classical field.</p>
+<p>The common-hypothesis result has the logical form <span
+class="math display">\[
+\mathcal H\ \Longrightarrow\
+\big[C\ \text{and}\ (\forall h&gt;0)\,Q_h\
+                   \text{ and the stated classical limit}\big]. \tag{4}
+\]</span> <span class="math inline">\(\mathcal H\)</span> denotes the
+hypotheses just listed, <span class="math inline">\(C\)</span> the
+classical existence and uniqueness conclusion, and <span
+class="math inline">\(Q_h\)</span> the specified quantum existence
+conclusion. Equation (4) records a construction of both theories from
+common data. It does not establish that the bare assertion <span
+class="math inline">\(C\)</span>, or every certificate proving <span
+class="math inline">\(C\)</span>, supplies all information required for
+<span class="math inline">\(Q_h\)</span>.</p>
+<p>The <a href="balaban-ode-lesson.html">direct polygon proof</a>,
+sections 1–3 (maintained proof read), constructs classical motion using
+stability, residual bounds and Gronwall. Its hypotheses admit an
+arbitrary globally Lipschitz acceleration. The quantum proof
+additionally specifies a potential, a Hilbert-space realization and
+operator domains, and uses self-adjointness and product convergence. In
+particular, positivity of the potential is not needed for the direct
+classical polygon argument. The quantum-to-classical comparison then
+uses the same Lipschitz stability to control the packet means. The task
+is to determine which of these quantum requirements follow from an
+appropriately specified classical certificate and which require stronger
+assumptions.</p>
+<p>The quartic extension of the packet construction also has a precise
+boundary. It constructs the classical quartic trajectory from quantum
+Hamiltonians whose potentials agree with the quartic on a sufficiently
+large compact interval. Classical energy conservation prevents escape
+from that interval. It does not prove the joint packet estimate for the
+uncut quartic quantum Hamiltonian. The separate <a
+href="constructive-qft-one-time.html">quartic vacuum construction</a>,
+sections 2–4 (maintained proof read), establishes its quantum existence
+and bounded-cylinder reconstruction.</p>
+<h2 id="the-1998-proposal-and-phase-information">4. The 1998 proposal
+and phase information</h2>
+<p>Rivero’s <a href="https://arxiv.org/html/quant-ph/9803035v1">1998
+working draft</a> (full-read, sections 1–4, equations (1)–(10)) proposes
+representing a classical variational distribution through oscillatory
+functionals. It asks whether convergence of a controlled Feynman
+functional is equivalent to existence of the proposed classical
+functional-space distribution. The draft leaves its regulator-control
+transformation unspecified and permits an arbitrary positive control
+constant. This is a particular proposed convergence equivalence; the
+claim about every classical existence proof is broader.</p>
+<p>The <a href="rivero-1998-conjecture-central-forces.html">quartic and
+central-force tests</a>, section 1 and Theorems 1–3 (maintained proof
+and corrections read), identify the information that a lifting argument
+must preserve. At a fixed finite partition, isolated nondegenerate
+stationary points <span class="math inline">\(z_a\)</span> of <span
+class="math inline">\(S_\pi\)</span> give, under the cutoffs and
+normalization stated there, <span class="math display">\[
+A_{h,\pi}(O)=\sum_a
+\frac{O(z_a)}{\sqrt{|\det S_\pi&#39;&#39;(z_a)|}}
+e^{iS_\pi(z_a)/h+i\pi\sigma_a/4}+O_\pi(h). \tag{5}
+\]</span> The signature <span class="math inline">\(\sigma_a\)</span>
+and the action differences determine relative phases. The classical
+critical-point distribution, with weights <span
+class="math inline">\(1/|\det S_\pi&#39;&#39;(z_a)|\)</span>, retains
+neither those phases nor a rule for summing amplitudes. The action
+supplies candidate phases, but convergence of trajectories alone does
+not bound the oscillatory sum. With several branches, the squared
+amplitude retains interference terms. The quartic test shows that the
+unqualified classical-first halved functional can fail to converge even
+when the ordinary classical initial-value problem is well posed. The
+draft’s single-extremum restriction must be preserved when applying its
+elementary argument.</p>
+<p>The local determinant identity <span class="math display">\[
+\det S_\pi&#39;&#39;=\det S_{yy}\,\det S_{\mathrm{eff}}&#39;&#39;
+\tag{6}
+\]</span> holds when a stationary insertion <span
+class="math inline">\(y=y_*(z)\)</span> has invertible <span
+class="math inline">\(S_{yy}\)</span>. It relates the classical
+elimination weight to the square-root weight in stationary phase. A
+possible lifting mechanism would transport these weights, phases and
+remainders through refinement. Formula (6) by itself does not control
+their infinite composition. The <span
+class="math inline">\(O_\pi(h)\)</span> remainder in (5) is a
+fixed-partition statement and supplies no uniform mesh limit.</p>
+<p>Classical endpoint composition also requires care. Hamilton’s
+principal action composes by stationary elimination on a chosen
+noncaustic branch. A global minimum requires separate minimizing
+hypotheses. Quantum propagators compose by integration over intermediate
+coordinates. These kernel composition laws do not establish that the
+action is an ordinary groupoid morphism. The <a
+href="groupoid-quantum-newton-states.html">corrected groupoid
+formulation</a>, section 5 (maintained argument read), keeps geometric
+deformation, time refinement and integration of fluctuations
+distinct.</p>
+<h2 id="completeness-and-positive-action">5. Completeness and positive
+action</h2>
+<p>Classical incompleteness motivates a stronger physical question. For
+attractive Kepler motion, some initial data reach a collision where the
+original vector field gives no continuation, whereas the specified
+Coulomb quantum Hamiltonian has global unitary dynamics for every <span
+class="math inline">\(h&gt;0\)</span>. The <a
+href="self-sufficiency-contrast.html">self-sufficiency theorem</a>,
+Theorem 1(a)–(b) and its dated scope corrections (maintained argument
+read), establishes this contrast. It establishes neither a contradiction
+in classical mechanics nor exclusion of all classical completions.</p>
+<p>The <a href="newton-cusp-preparation-floor.html">bounded-cusp
+theorem</a>, sections 1–4 (maintained proof read), goes further under
+explicit assumptions. Canonical covariance, weak closure of preparations
+and reversible compatibility with a force that merges full point states
+imply a positive covariance action floor. A classical model with a
+phase-space density ceiling satisfies those same assumptions through an
+almost-everywhere area-preserving flow. Its preparations give no weight
+to the exceptional merging trajectories, and it admits no point
+preparations, so the point-compatibility condition is vacuous in that
+model. The floor therefore remains insufficient to identify quantum
+mechanics; record closure and the identification with the phase constant
+require further arguments.</p>
+<p>Existence of a compatible family <span
+class="math inline">\(Q_h\)</span> for every <span
+class="math inline">\(h&gt;0\)</span> leaves all those positive values
+available and says nothing by itself about the physical admissibility of
+the zero-action theory. Requiring positive action in nature would need
+an independently justified condition that excludes the classical
+alternative. Universality across systems and calibration of one physical
+value are additional obligations. The constructive lifting conjecture
+can be investigated before those stronger claims are decided.</p>
+<h2 id="a-bounded-test">6. A bounded test</h2>
+<p>The next test should compare the direct polygon certificate with the
+quantum product argument for the same regular action class. Fix <span
+class="math inline">\(m&gt;0\)</span>, <span
+class="math inline">\(V\ge0\)</span>, the derivative bounds of section
+3, the initial data and a finite duration <span
+class="math inline">\(T\)</span>. Specify the certificate fields as the
+classical drift and kick rules, their common bounded region, stability
+and residual estimates, with their domains of validity. Fix the allowed
+background theorems on closed forms, self-adjoint generators and product
+limits. Record explicitly which assumptions on <span
+class="math inline">\(V\)</span> the classical proof uses and which it
+leaves unused.</p>
+<p>Define the quantum finite factors from the same kinetic energy and
+potential. For fixed <span class="math inline">\(h&gt;0\)</span>, a
+quantum Cauchy criterion is <span class="math display">\[
+\|U_{h,\pi}(T)\psi-U_{h,\sigma}(T)\psi\|_2
+\le r_{h,T,\psi}(|\pi|)+r_{h,T,\psi}(|\sigma|),
+\qquad r_{h,T,\psi}(s)\longrightarrow0. \tag{7}
+\]</span> The existing graph-domain argument already proves the required
+product limit in this regular class. The proposed work is to give one
+construction from the mechanical data and classical certificates and
+derive its model-dependent operator hypotheses from those inputs. It
+must identify how the certificate estimates imply the domain and
+convergence bounds, including any information not present in trajectory
+convergence alone. Afterward, the packet-spread bounds must justify an
+observable limit such as (1). Fixed-<span
+class="math inline">\(h\)</span> product convergence and the joint
+classical limit are different estimates; (7) need not be uniform as
+<span class="math inline">\(h\to0\)</span>.</p>
+<p>A successful test would prove a theorem for an explicitly delimited
+class of certificates and identify every analytic input. An informative
+failure would identify an operator-domain or oscillatory estimate not
+implied by the chosen classical estimates. Failure of one proposed
+procedure would not refute existence of every possible lift. Likewise,
+nonuniqueness of a quantum boundary condition would not refute a
+conjecture asking only for existence of a compatible quantum theory.</p>
+<p>For singular forces, a later test can compare preparations with the
+same limiting classical point and different shrinking asymmetries,
+asking whether their outgoing quantum limits select different branches
+or mixtures. Such dependence would reveal preparation information lost
+by the point-state limit. It would refine the completion question
+without establishing a universal positive action scale.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>The universal classical-to-quantum existence conjecture is now
+recorded with its proposed constructive meaning, the established
+smooth-potential common-hypothesis construction and its limits. The next
+test is to derive a specified noncommutative quantum family from
+classical refinement certificates using one construction procedure and a
+fixed background toolkit. This is a formulation of an open proof
+obligation; it neither completes that test nor changes the independent
+action-necessity and Yang–Mills goals.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

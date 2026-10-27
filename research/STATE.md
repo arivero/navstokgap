@@ -35,6 +35,11 @@ and a Dirichlet hard-wall packet limit through an elastic bounce. Its
 momentum-current estimate excludes an impact layer. The wall calculation
 is separate from the whole-line groupoid and scalar-potential theorem.
 
+The [classical-to-quantum existence conjecture](../notes/classical-quantum-existence-conjecture.md)
+now distinguishes the universal claim from the established common-hypothesis
+construction. Its proposed test is to extract quantum product convergence
+from an explicit classical refinement certificate; that test remains open.
+
 ## Goal
 
 User direction, 2026-09-26: one eventual paper on what survives
