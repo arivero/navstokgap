@@ -27,9 +27,13 @@ The boundary contribution to Ehrenfest's theorem is established
 literature: see [De Vincenzo (2013)](https://www.scielo.org.mx/scielo.php?pid=S1870-35422013000200001&script=sci_arttext),
 equations (38)--(39) for a wall on the opposite half-line (passage
 read), and [Albrecht et al. (2023)](https://arxiv.org/abs/2206.07531)
-(abstract) on boundary momentum and bouncing packets. The computation
-below gives a particular explicit semiclassical measure and does not
-claim priority for boundary forces.
+(abstract) on boundary momentum and bouncing packets. A particularly
+close precedent is [Belloni--Doncheski--Robinett (2004)](https://arxiv.org/pdf/quant-ph/0408182),
+equations (8)--(11), (16)--(19): they normalize the same odd-image
+Gaussian on the opposite half-line and analyze its near-collision
+position and force (relevant passages read). The computation below
+gives a particular weak impulse measure and compares the Neumann stress;
+it does not claim priority for the reflected Gaussian or wall forces.
 
 ## 1. The packet and its boundary value
 

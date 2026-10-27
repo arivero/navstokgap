@@ -5,6 +5,31 @@
  "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
  "notes": [
   {
+   "path": "notes/lean-verification-quantum-newton.md",
+   "title": "Quantum-to-Newton results: literature and Lean verification targets",
+   "summary": "Precise classical, operator, packet, sharpness, wall, cusp, relativistic and Euclidean Lean targets with close prior art and a finite rational drift-kick versus kick-drift comparison for newtonlean.",
+   "thematic_area": "refinement/comparison",
+   "strongest_result": "An explicit weighted finite-partition bound compares newtonlean's drift-then-kick cell with the quantum note's kick-then-drift cell; exact quantified verification targets preserve model, domain and limit scope.",
+   "status": "result",
+   "proof_status": "mixed",
+   "retrieval_priority": 3,
+   "current_relevance": "Answers the user's request for literature context, exact Lean targets and an explicit connection to newtonlean.",
+   "relations": [
+    {"type": "uses", "target": "notes/lipschitz-certificate-quantum-lift.md", "reason": "States its exact C1,1 product, packet and sharpness targets."},
+    {"type": "uses", "target": "notes/quantum-blocks-construct-newton.md", "reason": "States its smooth finite-packet and Euclidean-density targets."},
+    {"type": "uses", "target": "notes/dirichlet-wall-impulse.md", "reason": "States the Dirichlet and Neumann impulse and scaled-profile targets."},
+    {"type": "uses", "target": "notes/cusp-quantum-preparation-selection.md", "reason": "States the exact bounded-cusp Gaussian and mixture targets."},
+    {"type": "uses", "target": "notes/relativistic-dispersion-blocks.md", "reason": "States the joint nonrelativistic and spectral-wall targets."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["Lean 4", "newtonlean", "constructive lifting", "C1,1", "Trotter", "boundary impulse", "cusp selection", "relativistic", "drift kick", "literature priority"],
+   "role": "synthesis,infrastructure",
+   "value": "synthesis,known-boundary",
+   "limitations": "Specifications are not compiled Lean proofs; mathematical claims retain the linked notes' unrefereed status. New-to-repository does not establish literature priority. Newtonlean remains core-only and requires an explicit model and completion bridge.",
+   "content_coverage": "Full new note and relevant maintained derivations read; Belloni et al., Borns-Weil and Fang, Fang and Qu, Athanassoulis-Paul and Chabu passages, plus selected newtonlean sources and current mathlib documentation, checked."
+  },
+  {
    "path": "notes/dirichlet-wall-impulse.md",
    "title": "A wall impulse from a quantum boundary stress",
    "summary": "An exact odd-Gaussian Dirichlet boundary force converges to 2|p0| delta at impact, with an explicit Gaussian force and error-function current profile. The even Neumann packet has the same limit via the full boundary stress while its boundary derivative vanishes.",
@@ -23,7 +48,7 @@
    "role": "result,live",
    "value": "infrastructure,open-mechanism",
    "limitations": "Specified free half-line coherent packets; general Robin wavepacket impulse and nonlocal boundary Hamiltonians are not proved. The full Neumann boundary stress is signed.",
-   "content_coverage": "Full note and derivation read; De Vincenzo boundary-force passage and Albrecht et al. abstract checked. Written derivation without independent peer review."
+   "content_coverage": "Full note and derivation read; De Vincenzo boundary-force and Belloni-Doncheski-Robinett reflected-Gaussian collision passages, plus Albrecht et al. abstract, checked. Written derivation without independent peer review."
   },
   {
    "path": "notes/cusp-quantum-preparation-selection.md",
@@ -45,7 +70,7 @@
    "role": "result,live",
    "value": "open-mechanism,infrastructure",
    "limitations": "Specified logarithmically shrinking preparations and a finite local time interval; the result does not classify all preparations or waiting times or derive a positive action scale.",
-   "content_coverage": "Full note and derivation read; Athanassoulis–Paul Theorem 2.1 and Lemma 5.3 and Chabu Theorem 1.12 and Proposition 3.1 checked at statement level. Written derivation without independent peer review."
+   "content_coverage": "Full note and derivation read; Athanassoulis–Paul Theorem 2.1 and Lemma 5.3 and Chabu Theorem 1.12 and Proposition 3.1 checked at statement level; Chabu permits equal position profiles in the conical example. Written derivation without independent peer review."
   },
   {
    "path": "notes/lipschitz-certificate-quantum-lift.md",
@@ -188,7 +213,7 @@
    "role": "result,synthesis",
    "value": "infrastructure,synthesis",
    "limitations": "Positive action scale is supplied; the O(h) bound uses the bounded third derivative in the standing smoothness hypotheses and does not show quantum-propagator norm convergence along all joint schedules. Widths remain O(sqrt(h)).",
-   "content_coverage": "Full read and targeted advisor check of the earlier bound, 2026-10-27; the sharper centered rate is a subsequent written derivation, not part of that check."
+   "content_coverage": "Full read and targeted advisor check of the earlier bound, 2026-10-27; Borns-Weil and Fang uniform observable splitting passages checked. The sharper centered rate is a subsequent written derivation, not part of the earlier advisor check."
   },
   {
    "path": "notes/quantum-blocks-construct-newton.md",

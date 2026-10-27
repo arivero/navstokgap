@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quantum-to-Newton results: literature and Lean verification targets</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Quantum-to-Newton results: literature and Lean verification
+targets</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/lean-verification-quantum-newton.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/lean-verification-quantum-newton.pdf">PDF</a></p><p><strong>Result and verification specification, 2026-10-27.</strong>
+The recent 0+1 construction yields several precise propositions worth
+formal checking, but their being new to this repository is not evidence
+of publication priority. The strongest distinctive candidates are the
+specified <span class="math inline">\(C^{1,1}\)</span> product/packet
+package and its sharp-rate example, the explicitly rescaled wall
+stresses, and the Gaussian preparation test at a bounded <span
+class="math inline">\(C^1\)</span> cusp. Each has substantial close
+prior art. The universal constructive-lifting conjecture and an
+independent positive-action necessity theorem remain
+<strong>open</strong>.</p>
+<p>The targets below are exact mathematical specifications, <strong>not
+Lean declarations that have been compiled</strong>. Their written proofs
+are in the linked notes and are unrefereed; the <span
+class="math inline">\(C^{1,1}\)</span> lift received the internal Sol
+check recorded there. The targets state real quantifiers and
+boundary/domain conventions so a later Lean development can translate
+them without strengthening conclusions silently. A conditional theorem
+whose hypotheses include the conclusion, a placeholder quantum theory,
+or an unchecked imported axiom does not verify the corresponding
+concrete target.</p>
+<h2 id="what-is-already-in-the-literature">1. What is already in the
+literature</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Repository proposition</th>
+<th>Closest checked precedent</th>
+<th>Proper status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coherent packets follow classical flow; smooth-observable
+semiclassics</td>
+<td><a href="https://doi.org/10.1007/BF01646348">Hepp (1974)</a>,
+abstract and theorem statements in the maintained note</td>
+<td>Established mechanism, not a new proof of classical mechanics as
+such.</td>
+</tr>
+<tr class="even">
+<td>Uniform observable time-splitting estimates</td>
+<td><a href="https://arxiv.org/pdf/2208.07957">Borns–Weil–Fang, Theorem
+2 and §3.2</a> (passages read); <a
+href="https://arxiv.org/html/2507.02783v1">Fang–Qu, Theorem 1</a>
+(statement read)</td>
+<td>Prior uniform-in-<span class="math inline">\(\hbar\)</span>
+observable estimates. The former uses smooth bounded symbol classes; the
+latter treats periodic, spatially discretized polynomial observables and
+higher-order splittings. Neither passage alone establishes the exact
+<span class="math inline">\(C^{1,1}\)</span>, arbitrary-partition,
+coherent-packet package below.</td>
+</tr>
+<tr class="odd">
+<td>Reflected Gaussian and wall impulse</td>
+<td><a
+href="https://arxiv.org/pdf/quant-ph/0408182">Belloni–Doncheski–Robinett
+(2004), equations (8)–(11), (16)–(19)</a> (passages read); <a
+href="https://www.scielo.org.mx/scielo.php?pid=S1870-35422013000200001&amp;script=sci_arttext">De
+Vincenzo (2013), equations (38)–(39)</a> (passage read)</td>
+<td>The odd-image Gaussian and collision-force analysis already exist.
+The particular measure limit, scaled profile and Neumann comparison in
+Target D are precise specializations whose exact priority remains
+unverified.</td>
+</tr>
+<tr class="even">
+<td>Preparation-dependent singular-flow selection</td>
+<td><a href="https://arxiv.org/pdf/1011.1651">Athanassoulis–Paul,
+Theorem 2.1 and Lemma 5.3</a> (statements and relevant passages read)
+include cutoff <span class="math inline">\(-|x|^{1+\theta}\)</span>,
+including <span class="math inline">\(\theta=1/2\)</span>; <a
+href="https://arxiv.org/pdf/1608.03716">Chabu, Theorem 1.12 and §3</a>
+(statements and passages read) gives identical incoming and different
+outgoing limits for <span class="math inline">\(-|x|\)</span>.</td>
+<td>Neither selection failure nor this power-law cusp is new as such.
+Target E specifies pure Gaussian preparations, a common incoming
+trajectory and their explicit mixtures for the bounded <span
+class="math inline">\(C^1\)</span> cusp. In Chabu’s theorem the two
+profiles may also be chosen equal, so equality of initial position
+densities is not by itself a new general phenomenon. Exact coverage of
+Target E by prior results has not been settled.</td>
+</tr>
+<tr class="odd">
+<td>Tangent groupoid, its continuous field and strict quantization</td>
+<td><a href="https://arxiv.org/abs/math/9802102">Cariñena et
+al. (1998/99)</a>, including Rivero, and <a
+href="https://arxiv.org/abs/math-ph/0001005">Landsman–Ramazan (2000)</a>
+(abstracts and groupoid passages read)</td>
+<td>Established background; Target B is a particular state-level
+estimate on that field, not the invention of the groupoid or of strict
+quantization.</td>
+</tr>
+<tr class="even">
+<td>Normalized Euclidean tower</td>
+<td>Brownian-bridge/Feynman–Kac and martingale constructions; <a
+href="https://arxiv.org/abs/1108.1335">Dimock I</a> and <a
+href="https://arxiv.org/abs/1212.5562">II</a> (selected sections in the
+guide)</td>
+<td>Target G packages standard ingredients in a 0+1 illustration.
+Dimock’s papers treat three-dimensional scalar <span
+class="math inline">\(\phi^4\)</span>, not this quantum-mechanical
+theorem or a four-dimensional gauge construction.</td>
+</tr>
+<tr class="odd">
+<td>Relativistic one-particle limit</td>
+<td><a
+href="https://doi.org/10.1016/0022-1236(90)90049-Q">Carmona–Masters–Simon</a>
+and <a
+href="https://arxiv.org/abs/1109.5829">Hiroshima–Ichinose–Lőrinczi</a>
+(abstracts read)</td>
+<td>Known relativistic Schrödinger and subordinate-process framework.
+Target F is a particular joint estimate; no literature priority has been
+established.</td>
+</tr>
+</tbody>
+</table>
+<p>The table is a bounded search, not an exhaustive novelty
+determination. The primary proofs and their retained limitations remain
+in the <a href="lipschitz-certificate-quantum-lift.html">Lipschitz
+lift</a>, <a href="quantum-blocks-construct-newton.html">smooth
+construction</a>, <a href="groupoid-quantum-newton-states.html">groupoid
+note</a>, <a href="dirichlet-wall-impulse.html">wall note</a>, <a
+href="cusp-quantum-preparation-selection.html">cusp note</a>, and <a
+href="relativistic-dispersion-blocks.html">relativistic note</a>.</p>
+<h2 id="common-definitions-for-targets-ac">2. Common definitions for
+Targets A–C</h2>
+<p>Use <span class="math inline">\(\hbar&gt;0\)</span>, <span
+class="math inline">\(m,\omega&gt;0\)</span>, <span
+class="math inline">\(\mathcal H=L^2(\mathbb R,dq)\)</span>, <span
+class="math inline">\(Qf(q)=qf(q)\)</span>, <span
+class="math inline">\(P_\hbar=-i\hbar\partial_q\)</span>, and <span
+class="math inline">\(N_\hbar=1+Q^2+P_\hbar^2\)</span> as the closure of
+the oscillator operator on Schwartz space, with <span
+class="math inline">\(D(N_\hbar)=H^2(\mathbb R)\cap D(Q^2)\)</span>. Put
+<span class="math display">\[
+\|(q,p)\|_\omega=|q|+|p|/(m\omega),\quad
+K_s=e^{-isV(Q)/\hbar},\quad
+D_s=e^{-isP_\hbar^2/(2m\hbar)},\quad S_s=D_sK_s.
+\]</span> For a finite positive partition <span
+class="math inline">\(\pi=(0=t_0&lt;\cdots&lt;t_n=T)\)</span>, write
+<span class="math inline">\(s_j=t_{j+1}-t_j\)</span>, <span
+class="math inline">\(|\pi|=\max_j s_j\)</span>, and <span
+class="math inline">\(S_{\hbar,\pi}(t_j)=S_{s_{j-1}}\cdots
+S_{s_0}\)</span>, with the empty product at <span
+class="math inline">\(j=0\)</span>. The initial normalized Gaussian is
+<span class="math display">\[
+g_\hbar(q)=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+\exp\!\left[-\frac{m\omega(q-q_0)^2}{2\hbar}
+             +\frac{ip_0(q-q_0)}{\hbar}\right]. \tag{1}
+\]</span> The classical kick–drift vertices, starting at <span
+class="math inline">\(z_0=(q_0,p_0)\)</span>, obey <span
+class="math display">\[p^{\rm cl}_{j+1}=p^{\rm cl}_j-s_jV&#39;(q^{\rm
+cl}_j),\qquad
+q^{\rm cl}_{j+1}=q^{\rm cl}_j+s_jp^{\rm cl}_{j+1}/m. \tag{2}\]</span>
+When used below, <span class="math inline">\(z_{\hbar,\pi}(t)\)</span>
+is the piecewise-linear interpolation of the <strong>quantum means at
+the vertices</strong>; it is not asserted to be the expectation of a
+physical intermediate state.</p>
+<p>For the Weyl targets, use the Fourier convention <span
+class="math display">\[
+\widehat b(\xi,\eta)=\int_{\mathbb R^2}
+       e^{-i(\xi q+\eta p)}b(q,p)\,dq\,dp,\quad
+\operatorname{Op}^W_\hbar(b)=\frac1{(2\pi)^2}
+       \int\widehat b(\xi,\eta)e^{i(\xi Q+\eta P_\hbar)}d\xi d\eta.
+\tag{3}
+\]</span> This fixes the signs and factors needed by a
+formalization.</p>
+<h2 id="target-a-lipschitz-certificate-quantum-product-and-packet">3.
+Target A: Lipschitz certificate, quantum product, and packet</h2>
+<p><strong>Quantifiers and assumptions.</strong> Let <span
+class="math inline">\(V\in C^1(\mathbb R;\mathbb R)\)</span> and <span
+class="math inline">\(L\ge0\)</span> satisfy <span
+class="math inline">\(|V&#39;(x)-V&#39;(y)|\le L|x-y|\)</span> for every
+<span class="math inline">\(x,y\)</span>. There is no lower bound
+assumption on <span class="math inline">\(V\)</span>. For every <span
+class="math inline">\(m,\omega,\hbar&gt;0\)</span>, <span
+class="math inline">\(T&gt;0\)</span> and <span
+class="math inline">\(z_0\in\mathbb R^2\)</span>, the following are to
+be proved.</p>
+<ol type="1">
+<li>The operator <span
+class="math inline">\(H_\hbar=P_\hbar^2/(2m)+V(Q)\)</span> with initial
+domain <span class="math inline">\(\mathcal S(\mathbb R)\)</span> is
+essentially self-adjoint. Its closure generates <span
+class="math inline">\(U_\hbar(t)=e^{-it\overline
+H_\hbar/\hbar}\)</span>, and this group preserves <span
+class="math inline">\(D(N_\hbar)\)</span> and is strongly continuous
+there in the <span class="math inline">\(N_\hbar\)</span> graph norm. On
+Schwartz space <span class="math inline">\([Q,P_\hbar]=i\hbar
+I\)</span>; for all <span class="math inline">\(u,v\in\mathbb R\)</span>
+the bounded Weyl operators satisfy <span
+class="math inline">\(e^{iuQ}e^{ivP_\hbar}=e^{-i\hbar
+uv}e^{ivP_\hbar}e^{iuQ}\)</span>.</li>
+<li>There exists <span
+class="math inline">\(0&lt;C_{\hbar,T}&lt;\infty\)</span>, depending on
+the supplied model and fixed <span
+class="math inline">\(\hbar,T\)</span>, such that <strong>every</strong>
+positive partition satisfies <span class="math display">\[
+\|S_{\hbar,\pi}(T)f-U_\hbar(T)f\|_2
+   \le C_{\hbar,T}|\pi|\,\|N_\hbar f\|_2
+   \quad(f\in D(N_\hbar)). \tag{A1}
+\]</span> Consequently the product converges strongly on all of <span
+class="math inline">\(\mathcal H\)</span> as <span
+class="math inline">\(|\pi|\downarrow0\)</span> at each fixed <span
+class="math inline">\(\hbar\)</span>. For a general <span
+class="math inline">\(\psi\in\mathcal H\)</span> one precise modulus is
+the infimum over <span class="math inline">\(f\in D(N_\hbar)\)</span> of
+<span class="math inline">\(2\|\psi-f\|_2+C_{\hbar,T}\delta\|N_\hbar
+f\|_2\)</span>. The constant in (A1) is <strong>not</strong> asserted
+uniform in <span class="math inline">\(\hbar\)</span>.</li>
+<li>Let <span class="math inline">\(z_j^\hbar=(\langle
+Q\rangle_j,\langle P_\hbar\rangle_j)\)</span> in the state <span
+class="math inline">\(S_{\hbar,\pi}(t_j)g_\hbar\)</span>, and let <span
+class="math inline">\(W_j=\operatorname{sd}_jQ+\operatorname{sd}_jP_\hbar/(m\omega)\)</span>.
+Set <span class="math inline">\(C=\sqrt{2/(m\omega)}\)</span> and <span
+class="math inline">\(\beta=\omega+L/(m\omega)\)</span>. Then for every
+vertex, <span class="math display">\[
+W_j\le C\sqrt\hbar\,e^{\beta t_j},\qquad
+\|z_j^\hbar-z_j^{\rm cl}\|_\omega
+   \le \frac{LC}{m\omega}\,t_j e^{\beta t_j}\sqrt\hbar. \tag{A2}
+\]</span> The classical Lipschitz flow <span
+class="math inline">\(\Phi_t(z_0)\)</span> exists uniquely, and there is
+a finite classical constant <span class="math inline">\(R_T^{\rm
+cl}\)</span> such that <span class="math inline">\(\sup_{0\le t\le
+T}\|z_\pi^{\rm cl}(t)-\Phi_t(z_0)\|_\omega \le R_T^{\rm
+cl}|\pi|\)</span>. Hence the vertices converge to the flow for
+<strong>every</strong> joint limit <span
+class="math inline">\(\hbar,|\pi|\downarrow0\)</span>.</li>
+</ol>
+<p>For the conjecture’s bounded instance, the input is the
+<em>global</em> action/force and the classical polygon certificate. (A1)
+is proved from that model data plus the operator toolkit; it is not a
+consequence of the numerical error constant of a single orbit.
+Formalizing (A1) while assuming its self-adjointness or graph bounds
+should be reported as a conditional sublemma, not as the whole lift.</p>
+<h2 id="target-b-the-smooth-ohbarpi-state-estimate">4. Target B: the
+smooth <span class="math inline">\(O(\hbar+|\pi|)\)</span> state
+estimate</h2>
+<p>Assume in addition that <span class="math inline">\(V\ge0\)</span>,
+<span class="math inline">\(V\in C^\infty\)</span> and all its
+derivatives of order at least two are bounded. Fix <span
+class="math inline">\(h_0,T&gt;0\)</span>. Let <span
+class="math inline">\(0&lt;\hbar\le h_0\)</span> and let <span
+class="math inline">\(\pi\)</span> be any positive partition of <span
+class="math inline">\([0,T]\)</span>. In the notation above, write <span
+class="math display">\[
+\begin{gathered}
+a=\max\!\left(\omega,\frac L{m\omega}\right),\qquad
+G_T=(e^{aT}-1)/a,\\
+b_0=\frac{|V&#39;(0)|+LC\sqrt{h_0}e^{\beta T}}{m\omega},\quad
+R_T=e^{\beta T}(\|z_0\|_\omega+Tb_0),\\
+F_T=|V&#39;(0)|+L(R_T+C\sqrt{h_0}e^{\beta T}),\quad
+C_\delta=(F_T+LR_T)/m,\quad
+C_h=\frac{\|V&#39;&#39;&#39;\|_\infty C^2e^{2\beta T}}{2m\omega}.
+\end{gathered} \tag{B0}
+\]</span> The specification is <span class="math display">\[
+\sup_{0\le t\le T}\|z_{\hbar,\pi}(t)-\Phi_t(z_0)\|_\omega
+\le G_T(C_\delta|\pi|+C_h\hbar). \tag{B1}
+\]</span> The centering step responsible for the better rate is the
+separate lemma <span class="math display">\[
+|\langle V&#39;(Q)\rangle-V&#39;(\langle Q\rangle)|
+\le \tfrac12\|V&#39;&#39;&#39;\|_\infty\operatorname{Var}(Q). \tag{B2}
+\]</span> It requires a normalized state in the needed second-moment
+domain. The first derivative term cancels; the width itself remains
+<span class="math inline">\(O(\sqrt\hbar)\)</span>.</p>
+<p>For every <span class="math inline">\(b\in C_c^\infty(\mathbb
+R^2)\)</span> set <span class="math display">\[
+I_b=(2\pi)^{-2}\!\int|\widehat b|(|\xi|+m\omega|\eta|),\quad
+J_b=\frac1{2(2\pi)^2}\!\int|\widehat b|
+                         (|\xi|+m\omega|\eta|)^2. \tag{B3}
+\]</span> At every partition vertex the desired
+<strong>concrete</strong> result is <span class="math display">\[
+\left|\langle g_\hbar,S_{\hbar,\pi}(t_j)^*
+       \operatorname{Op}^W_\hbar(b)S_{\hbar,\pi}(t_j)g_\hbar\rangle
+       -b(\Phi_{t_j}(z_0))\right|
+\le J_b C^2e^{2\beta T}\hbar+
+      I_bG_T(C_\delta|\pi|+C_h\hbar). \tag{B4}
+\]</span> It follows for any joint schedule <span
+class="math inline">\(\hbar,|\pi|\to0\)</span>. An additional
+continuous-field corollary takes <span
+class="math inline">\(\hbar=\epsilon S_*\)</span>, <span
+class="math inline">\(S_*&gt;0\)</span>, and extends the limit to
+continuous sections of the established tangent groupoid field: for every
+continuous section <span class="math inline">\(A\)</span>, every family
+of partitions with <span
+class="math inline">\(\epsilon,|\pi_\epsilon|\to0\)</span>, and vertices
+<span class="math inline">\(t_{j(\epsilon)}\to t\in[0,T]\)</span>, the
+corresponding vector-state value on <span
+class="math inline">\(A(\epsilon)\)</span> converges to <span
+class="math inline">\(A(0)(\Phi_t(z_0))\)</span>. This corollary
+requires the continuous-field theorem and the identification of (3) with
+the chosen quantization section; (B4) alone does not construct that
+<span class="math inline">\(C^*\)</span>-field.</p>
+<h2 id="target-c-sharpness-of-the-square-root-rate">5. Target C:
+sharpness of the square-root rate</h2>
+<p>Set <span class="math inline">\(m=\omega=1\)</span>, <span
+class="math inline">\(V(q)=q|q|/2\)</span>, <span
+class="math inline">\(q_0=p_0=0\)</span>, and let <span
+class="math inline">\(g_\hbar\)</span> be (1). This potential is <span
+class="math inline">\(C^{1,1}\)</span> and <strong>unbounded
+below</strong>. The classical trajectory is identically <span
+class="math inline">\((0,0)\)</span>. Define <span
+class="math display">\[f(t)=\langle
+U_1(t)g_1,P_1U_1(t)g_1\rangle.\]</span> Prove, for every <span
+class="math inline">\(\hbar&gt;0\)</span> and real <span
+class="math inline">\(t\)</span>, <span class="math display">\[
+\langle U_\hbar(t)g_\hbar,P_\hbar U_\hbar(t)g_\hbar\rangle
+    =\sqrt\hbar\,f(t),\qquad f&#39;(0)=-1/\sqrt\pi. \tag{C1}
+\]</span> In particular, there exists <span
+class="math inline">\(t_0&gt;0\)</span> such that for all <span
+class="math inline">\(0&lt;t\le t_0\)</span> and every <span
+class="math inline">\(\hbar&gt;0\)</span>, the absolute momentum error
+is at least <span
+class="math inline">\(t\sqrt\hbar/(2\sqrt\pi)\)</span>. This refutes a
+uniform <span class="math inline">\(O(\hbar)\)</span> mean bound over
+the full class in Target A. It does not by itself establish sharpness
+under an additional lower-bound assumption on <span
+class="math inline">\(V\)</span>.</p>
+<h2 id="target-d-dirichlet-and-neumann-wall-stresses">6. Target D:
+Dirichlet and Neumann wall stresses</h2>
+<p>Let <span class="math inline">\(m,\omega,q_0&gt;0\)</span>, <span
+class="math inline">\(p_0&lt;0\)</span>, <span
+class="math inline">\(v=p_0/m\)</span>, <span
+class="math inline">\(t_*=-q_0/v\)</span>, <span
+class="math inline">\(A(t)=1+\omega^2t^2\)</span>, and <span
+class="math inline">\(\Lambda=|v|\sqrt{m\omega/A(t_*)}\)</span>. Let
+<span class="math inline">\(g_{\hbar,t}\)</span> be the free whole-line
+evolution of (1), and let <span class="math inline">\(R\)</span> reflect
+<span class="math inline">\(q\mapsto-q\)</span>. Put <span
+class="math display">\[
+\gamma_\hbar=e^{-[m\omega q_0^2+p_0^2/(m\omega)]/\hbar},\quad
+\psi_{\hbar,D/N}(q,t)=
+\frac{g_{\hbar,t}(q)\mp g_{\hbar,t}(-q)}
+      {\sqrt{1\mp\gamma_\hbar}}\quad(q&gt;0). \tag{D0}
+\]</span> The upper sign is Dirichlet, the lower Neumann. Define the
+real half-line current form and full boundary stress <span
+class="math display">\[
+J_\hbar(t)=\hbar\operatorname{Im}\!\int_0^\infty
+                 \overline\psi\,\partial_q\psi\,dq,\quad
+F_\hbar(t)=\frac{\hbar^2}{2m}
+  \left(|\psi&#39;(0,t)|^2-
+        \operatorname{Re}[\overline{\psi(0,t)}\psi&#39;&#39;(0,t)]\right).
+\tag{D1}
+\]</span> For both indicated wave families, prove <span
+class="math inline">\(J_\hbar&#39;=F_\hbar\)</span> and, for every
+bounded continuous <span class="math inline">\(\varphi:\mathbb
+R\to\mathbb R\)</span>, <span class="math display">\[
+\lim_{\hbar\downarrow0}\int_{\mathbb R}\varphi(t)F_{\hbar,D/N}(t)\,dt
+    =2|p_0|\varphi(t_*). \tag{D2}
+\]</span> The Neumann measures are finite <strong>signed</strong>
+measures; their Dirichlet-only derivative term vanishes. At each fixed
+<span class="math inline">\(s\in\mathbb R\)</span> also prove <span
+class="math display">\[
+\lim_{\hbar\downarrow0}\sqrt\hbar\,
+F_{\hbar,D/N}(t_*+\sqrt\hbar\,s)
+=\frac{2p_0^2}{m}\sqrt{\frac{m\omega}{\pi A(t_*)}}
+   e^{-\Lambda^2s^2},\quad
+J_{\hbar,D/N}(t_*+\sqrt\hbar\,s)\to
+|p_0|\operatorname{erf}(\Lambda s). \tag{D3}
+\]</span> This is weak convergence of measures, not convergence in total
+variation to the delta. <span class="math inline">\(J_\hbar\)</span> is
+a current form: the half-line operator <span
+class="math inline">\(-i\hbar\partial_q\)</span> is not being asserted
+self-adjoint. No general Robin packet limit is part of this target.</p>
+<h2 id="target-e-two-preparations-and-mixtures-at-a-c1-cusp">7. Target
+E: two preparations and mixtures at a <span
+class="math inline">\(C^1\)</span> cusp</h2>
+<p>In units <span class="math inline">\(m=1\)</span>, fix <span
+class="math inline">\(R&gt;0\)</span> and a smooth even cutoff <span
+class="math inline">\(\chi\)</span> equal to one on <span
+class="math inline">\([-R,R]\)</span> and zero outside <span
+class="math inline">\([-2R,2R]\)</span>. Set <span
+class="math display">\[V(q)=-\tfrac23|q|^{3/2}\chi(q),\quad
+F=-V&#39;,\quad
+H_\hbar=-\tfrac{\hbar^2}{2}\partial_q^2+V(Q),\quad
+F_*=\|F\|_\infty.\]</span> Choose <span
+class="math inline">\(T&gt;0\)</span> such that <span
+class="math inline">\(F_*T^2/2&lt;R/4\)</span>. Choose <span
+class="math inline">\(C_0&gt;0\)</span> with <span
+class="math inline">\(|F(x)|\le C_0\sqrt{|x|}\)</span> for all <span
+class="math inline">\(x\)</span>, and a fixed <span
+class="math inline">\(K&gt;0\)</span> such that <span
+class="math inline">\(K^2&gt;\max\{16\sqrt2C_0,16/3\}\)</span>. For
+<span class="math inline">\(0&lt;\hbar&lt;e^{-1}\)</span> put <span
+class="math inline">\(a_\hbar=1/\log(1/\hbar)\)</span> and <span
+class="math display">\[
+g_{\hbar,k}(q)=(\pi\hbar)^{-1/4}
+\exp\!\left[-\frac{(q-a_\hbar)^2}{2\hbar}
+             -\frac{ik a_\hbar^{3/4}(q-a_\hbar)}{\hbar}\right],
+\quad k\in\{0,K\}. \tag{E0}
+\]</span> These two states have exactly the same initial position
+density. Let <span
+class="math inline">\(\psi_{\hbar,k}(t)=e^{-itH_\hbar/\hbar}g_{\hbar,k}\)</span>
+and set <span class="math display">\[
+z_+(t)=(t^4/144,t^3/36),\qquad
+z_\times(t)=
+\begin{cases}z_+(t),&amp;t\le0,\\-z_+(t),&amp;t\ge0.\end{cases} \tag{E1}
+\]</span> The target is uniform on <span
+class="math inline">\([-T,T]\)</span>: <span class="math display">\[
+(\langle Q\rangle_{\hbar,0},\langle P_\hbar\rangle_{\hbar,0})\to z_+,
+\quad
+(\langle Q\rangle_{\hbar,K},\langle P_\hbar\rangle_{\hbar,K})\to
+z_\times,
+\quad
+\operatorname{sd}Q_{\hbar,k}+\operatorname{sd}P_{\hbar,k}\to0.
+\tag{E2}
+\]</span> For every <span class="math inline">\(\lambda\in[0,1]\)</span>
+and <span class="math inline">\(\theta\in\mathbb R\)</span>, normalize
+<span
+class="math inline">\(\sqrt\lambda\,g_{\hbar,0}  +e^{i\theta}\sqrt{1-\lambda}\,g_{\hbar,K}\)</span>.
+For every <span class="math inline">\(b\in C_c^\infty(\mathbb
+R^2)\)</span>, its evolved Weyl expectation must converge uniformly on
+<span class="math inline">\([-T,T]\)</span> to <span
+class="math display">\[\lambda b(z_+(t))+(1-\lambda)b(z_\times(t)).
+\tag{E3}\]</span> Thus both limiting incoming histories agree for <span
+class="math inline">\(t\le0\)</span> and can have different outgoing
+measures. The target neither asserts finite-<span
+class="math inline">\(\hbar\)</span> Wigner positivity nor classifies
+waiting-time branches.</p>
+<h2 id="target-f-a-relativistic-joint-limit">8. Target F: a relativistic
+joint limit</h2>
+<p>Let <span class="math inline">\(V\in C^\infty(\mathbb R;\mathbb
+R)\)</span> be bounded below with all derivatives of order at least two
+bounded, <span class="math inline">\(m,c_0,h_0,T&gt;0\)</span>, and
+<span class="math inline">\(z_0\in\mathbb R^2\)</span>. For <span
+class="math inline">\(c\ge c_0\)</span>, define <span
+class="math display">\[T_c(p)=\sqrt{m^2c^4+c^2p^2}-mc^2,\quad
+S_{\hbar,c,s}=e^{-isT_c(P_\hbar)/\hbar}e^{-isV(Q)/\hbar}.
+\tag{F0}\]</span> For the coherent packet (1), its piecewise-linear
+interpolated means, and the nonrelativistic Newton flow <span
+class="math inline">\(\Phi_t(z_0)\)</span>, prove that there exists
+<span class="math inline">\(C_T&lt;\infty\)</span>, independent of <span
+class="math inline">\(\hbar,c,\pi\)</span>, such that <span
+class="math display">\[
+\sup_{0\le t\le T}
+\|z_{\hbar,\pi,c}(t)-\Phi_t(z_0)\|_\omega
+\le C_T(\hbar+|\pi|+c^{-2}) \tag{F1}
+\]</span> for all <span class="math inline">\(0&lt;\hbar\le
+h_0\)</span>, <span class="math inline">\(c\ge c_0\)</span> and positive
+partitions of <span class="math inline">\([0,T]\)</span>. At fixed <span
+class="math inline">\(\hbar\)</span>, the self-adjoint <span
+class="math inline">\(T_c(P_\hbar)+V(Q)\)</span> converges in strong
+resolvent sense to <span
+class="math inline">\(P_\hbar^2/(2m)+V(Q)\)</span> as <span
+class="math inline">\(c\to\infty\)</span>, and its unitary groups
+converge strongly, uniformly on compact time intervals.</p>
+<p>The separate free wall target uses the <em>spectral</em> Dirichlet
+Hamiltonian <span
+class="math inline">\(T_c(\sqrt{-\hbar^2\Delta_D})\)</span>, not the
+generally different killed nonlocal process. For the odd packet (D0),
+its position expectation satisfies, for <span
+class="math inline">\(|t|\le T\)</span>, <span class="math display">\[
+\left|\langle Q\rangle^D_{\hbar,c}(t)-
+           |q_0+p_0t/m|\right|
+\le\sqrt{\frac2{1-\gamma_\hbar}}
+  \left[\sqrt{\frac{\hbar}{2m\omega}}+
+        \frac Tm\sqrt{\frac{\hbar m\omega}{2}}\right]
+       +\frac{T|p_0|^3}{2m^3c^2}. \tag{F2}
+\]</span> The positive-energy one-particle operator in an external
+potential is not a construction of a Lorentz-covariant interacting field
+theory.</p>
+<h2 id="target-g-an-exact-normalized-euclidean-tower">9. Target G: an
+exact normalized Euclidean tower</h2>
+<p>Let <span class="math inline">\(V:\mathbb R\to[0,\infty)\)</span> be
+continuous, <span class="math inline">\(m,\hbar,T&gt;0\)</span>, and
+<span class="math inline">\(x,y\in\mathbb R\)</span>. Let <span
+class="math inline">\(\mathbb P_0\)</span> be the Brownian bridge of
+variance parameter <span class="math inline">\(\hbar/m\)</span> from
+<span class="math inline">\(x\)</span> to <span
+class="math inline">\(y\)</span> on <span
+class="math inline">\([0,T]\)</span>. Define <span
+class="math display">\[
+W=\int_0^TV(B_t)\,dt,\quad
+Z=\mathbb E_0e^{-W/\hbar},\quad
+\rho=Z^{-1}e^{-W/\hbar},\quad
+\rho_n=\mathbb E_0[\rho\mid\mathcal F_n], \tag{G0}
+\]</span> where <span class="math inline">\(\mathcal F_n\)</span> is
+generated by dyadic evaluations of <span
+class="math inline">\(B\)</span>. The target is <span
+class="math inline">\(Z&gt;0\)</span> and, almost surely, <span
+class="math display">\[
+\mathbb E_0\rho_n=1,\quad 0&lt;\rho_n\le Z^{-1},\quad
+\rho_n=\mathbb E_0[\rho_{n+1}\mid\mathcal F_n],\quad
+\rho_n\to\rho\ \text{a.s. and in }L^1(\mathbb P_0). \tag{G1}
+\]</span> For arbitrary positive partitions with mesh tending to zero,
+the normalized densities obtained from the trapezoidal sums of <span
+class="math inline">\(V(B_t)\)</span> also converge to <span
+class="math inline">\(\rho\)</span> in <span
+class="math inline">\(L^1(\mathbb P_0)\)</span>; their polygonal
+pushforwards converge weakly on <span
+class="math inline">\(C([0,T])\)</span>. The pushforward measures are
+not claimed to converge in total variation. The <span
+class="math inline">\(\rho_n\)</span> are conditional expectations of
+the continuum density; they are not identified with the original bare
+finite-lattice density.</p>
+<h2 id="the-bridge-to-newtonlean">10. The bridge to newtonlean</h2>
+<p>The inspected newtonlean master commit is <a
+href="https://github.com/arivero/newtonlean/commit/8138e9449b4f961c4adbebcb6090acc0d2fd5aaf">8138e944</a>.
+Its toolchain is Lean 4.34.1 core/Std only, with no mathlib. The current
+session did not compile it. Its <a
+href="https://github.com/arivero/newtonlean/blob/8138e9449b4f961c4adbebcb6090acc0d2fd5aaf/BarrowLib/Polygon/FiniteEstimates.lean">FiniteEstimates.cell</a>
+uses <strong>drift then kick</strong>: <span
+class="math display">\[\operatorname{DK}_s(q,v)=(q+sv,\ v+sa(q+sv)),
+\tag{H0}\]</span> whereas (2), after <span
+class="math inline">\(v=p/m\)</span> and <span
+class="math inline">\(a=-V&#39;/m\)</span>, is <strong>kick then
+drift</strong>: <span
+class="math display">\[\operatorname{KD}_s(q,v)=(q+s[v+sa(q)],\
+v+sa(q)). \tag{H1}\]</span> Equality of the two cells is false. The
+following finite rational lemma is an exact interface target, requiring
+no quantum foundations.</p>
+<p><strong>Target H.</strong> Let <span class="math inline">\(a:\mathbb
+Q\to\mathbb Q\)</span> be <span
+class="math inline">\(\Lambda\)</span>-Lipschitz, with <span
+class="math inline">\(\Lambda\in\mathbb Q_{\ge0}\)</span>. Let <span
+class="math inline">\(s_0,\ldots,s_{n-1}\in\mathbb Q_{\ge0}\)</span>,
+<span class="math inline">\(\tau\in\mathbb Q_{&gt;0}\)</span>, and put
+<span class="math inline">\(\|(q,v)\|_\tau=|q|+\tau|v|\)</span>. Iterate
+KD and DK from the same rational state. Suppose the DK states <span
+class="math inline">\((\bar q_j,\bar v_j)\)</span> satisfy <span
+class="math inline">\(|a(\bar q_j)|\le A\)</span> and <span
+class="math inline">\(|\bar v_j|\le B\)</span> for <span
+class="math inline">\(j&lt;n\)</span>, with <span
+class="math inline">\(A,B\in\mathbb Q_{\ge0}\)</span>. Then <span
+class="math display">\[
+\|z_n^{KD}-z_n^{DK}\|_\tau
+\le(A+\tau\Lambda B)
+\sum_{j=0}^{n-1}s_j^2
+  \prod_{k=j+1}^{n-1}(1+s_k/\tau)(1+\tau\Lambda s_k). \tag{H2}
+\]</span> Indeed one cell differs by at most <span
+class="math inline">\((A+\tau\Lambda B)s_j^2\)</span>, and KD amplifies
+a previous discrepancy by at most <span
+class="math inline">\((1+s_j/\tau)(1+\tau\Lambda s_j)\)</span>. The
+empty product is one. The analogous statement for real data with <span
+class="math inline">\(\sum_js_j=T\)</span> implies <span
+class="math display">\[\|z_n^{KD}-z_n^{DK}\|_\tau
+\le(A+\tau\Lambda B)T|\pi|e^{(1/\tau+\tau\Lambda)T}. \tag{H3}\]</span>
+The rational statement is intended as a finite algebraic lemma; (H3)
+also uses real exponential bounds and is a separate completion step.</p>
+<p>The existing <a
+href="https://github.com/arivero/newtonlean/blob/8138e9449b4f961c4adbebcb6090acc0d2fd5aaf/ModernLib/Polygon/GeneralForcePolygonCurve.lean">GeneralForcePolygonCurve.polygonMap_uniform_convergence</a>
+constructs a uniformly convergent position polygon on its own binary
+time and Cauchy-quotient representations, under a regional
+CentralOracle, force-sampling, confinement and short-window conditions.
+It is not already the general one-dimensional global <span
+class="math inline">\(C^{1,1}\)</span> result in Target A: arbitrary
+partitions, external real-time identification and general noncentral
+forces remain separate. To connect the models one must additionally
+instantiate a compatible sample oracle, identify completed coordinates
+and velocities with real <span class="math inline">\(q,p/m\)</span>,
+prove that (H2)’s bounds hold, and show the two limits agree. The
+axis-embedded harmonic oscillator is a suitable special case; general
+<span class="math inline">\(V\)</span> need not define an inward central
+force.</p>
+<p>The <a
+href="https://github.com/arivero/newtonlean/blob/8138e9449b4f961c4adbebcb6090acc0d2fd5aaf/Reverse/Classical/ClassicalTrajectory.lean">Reverse/Classical/ClassicalTrajectory.lean</a>
+interfaces assume localized trajectories, free dynamics, the
+momentum–velocity relation and additive impulses; the <a
+href="https://github.com/arivero/newtonlean/blob/8138e9449b4f961c4adbebcb6090acc0d2fd5aaf/Reverse/Parent/QuantumKKFamily.lean">QuantumTheory</a>
+carrier has no Hilbert-space or operator structure. Targets A–F could
+provide evidence for restricted, explicitly embedded versions of some of
+these interfaces. They do not automatically discharge the interfaces for
+arbitrary composite bodies or prove a quantum gravity parent. Historical
+Newton propositions keep their given-trajectory premise; none of these
+modern targets is a historical premise.</p>
+<p>For context only, current mathlib documentation has <a
+href="https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/ODE/ExistUnique.html">Picard–Lindelöf</a>,
+<a
+href="https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Distribution/SchwartzSpace/Fourier.html">Schwartz
+Fourier analysis</a>, and <a
+href="https://leanprover-community.github.io/mathlib4_docs/Mathlib/Probability/BrownianMotion/Basic.html">Brownian-motion
+definitions</a>. Those pages are not a claim that this project has, or
+may import, the needed version or all operator-theoretic results. Under
+the present core-only rule, a full quantum development must construct
+its analytic foundations or remain explicitly conditional; a dependency
+expansion requires separate user direction. In either route, check the
+actual compiled theorem types and axiom dependencies at the pinned
+toolchain.</p>
+<h2 id="consequence-for-state">11. Consequence for STATE</h2>
+<p>These targets distinguish standard inputs, repository-specific
+statements and unknown publication priority. They expose a finite
+classical comparison that can be attempted under newtonlean’s present
+rules, and the substantial analytic foundations needed for an end-to-end
+quantum verification. The universal lifting conjecture, positive-action
+necessity and the four-dimensional gauge construction remain open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

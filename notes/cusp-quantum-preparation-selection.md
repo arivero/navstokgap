@@ -27,9 +27,12 @@ $\theta=1/2$, with detailed assumptions on phase-space preparations.
 [Chabu, Theorem 1.12 and Proposition 3.1](https://arxiv.org/pdf/1608.03716)
 (statements and surrounding discussion read) exhibit the same
 incoming semiclassical history with distinct outgoing histories, and
-mixtures, for the conical potential $-|q|$. The present calculation
+mixtures, for the conical potential $-|q|$. In Theorem 1.12 the two
+initial profiles can be chosen equal, so identical initial position
+densities also occur in that conical example. The present calculation
 uses the repository's smoother $C^1$ cusp and explicit Gaussian
-preparations; no literature priority is claimed.
+preparations; exact coverage by the cited rough-potential theorems is
+not settled and no literature priority is claimed.
 
 ## 1. Potential, initial data and target trajectories
 

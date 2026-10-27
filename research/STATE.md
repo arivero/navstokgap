@@ -51,6 +51,10 @@ and domain clarifications, while the universal conjecture remains open. The
 [cusp-selection calculation](../notes/cusp-quantum-preparation-selection.md)
 gives two quantum families with identical limiting incoming histories
 but distinct outgoing branches and explicit mixtures.
+The [Lean verification targets](../notes/lean-verification-quantum-newton.md)
+give exact specifications, close prior art and a finite comparison to
+newtonlean's oppositely ordered polygon cells; no quantum Lean proof is
+claimed.
 
 ## Goal
 

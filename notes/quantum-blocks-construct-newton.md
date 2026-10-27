@@ -364,8 +364,13 @@ The Cauchy estimate and its domain argument are the present assembly.
 The broader relation between coherent quantum packets and classical
 orbits is established prior work, including
 [Hepp, 1974](https://doi.org/10.1007/BF01646348)
-(introduction and theorem statements); no claim of literature novelty
-is made for this semiclassical mechanism.
+(introduction and theorem statements). For the time-splitting aspect,
+[Borns--Weil and Fang](https://arxiv.org/pdf/2208.07957), Theorem 2
+and §3.2 (relevant passages read), establish semiclassical uniform
+observable error bounds for smooth symbol classes; their operator
+comparison and the present coherent-state estimate have different
+hypotheses and conclusions. No claim of literature novelty is made for
+the semiclassical mechanism or uniform observable accuracy as such.
 
 ## 6. Quartic extension and the limits of the implication
 

@@ -790,8 +790,9 @@ bounded Newton cusp Summary: Two explicit Gaussian families have
 identical position densities and the same limiting incoming trajectory,
 yet converge to reflection or transmission through the C1 cusp; their
 superpositions give any mixture. Limit/reuse: Specified logarithmic
-preparation and local time interval; related rough and conical selection
-is established prior art. No universal selector, waiting-time law or
+preparation and local time interval; rough and conical selection,
+including equal position profiles in Chabu’s conical case, is
+established prior art. No universal selector, waiting-time law or
 positive-action necessity is proved.</p></li>
 <li><p><a href="cut-measure-newton.html">cut-measure-newton.md</a> |
 priority=3 | flags=surprising | role=result | status=result |
@@ -857,7 +858,8 @@ stress Summary: An exact odd-Gaussian Dirichlet boundary force converges
 to 2|p0| delta at impact, with an explicit Gaussian force and
 error-function current profile. The even Neumann packet has the same
 limit via the full boundary stress while its boundary derivative
-vanishes. Limit/reuse: Specified free half-line packets; arbitrary Robin
+vanishes; Belloni et al. already analyze the odd Gaussian and collision
+force. Limit/reuse: Specified free half-line packets; arbitrary Robin
 packet limits and nonlocal wall Hamiltonians are not proved.</p></li>
 <li><p><a
 href="discrete-substrate-actors.html">discrete-substrate-actors.md</a> |
@@ -1608,6 +1610,20 @@ generated interactions and controlled decimation/iteration remain. <a
 href="flow-before-decimation.html">Flow before decimation</a> rejects
 improvement of the projection criterion by smoothing alone.</p></li>
 <li><p><a
+href="lean-verification-quantum-newton.html">lean-verification-quantum-newton.md</a>
+| priority=3 | flags=none | role=synthesis,infrastructure |
+status=result | proof_status=mixed | value=synthesis,known-boundary |
+keys=Lean 4;newtonlean;constructive lifting;C1,1;Trotter;boundary
+impulse;cusp selection;relativistic;drift kick;literature priority |
+area=refinement/comparison Title: Quantum-to-Newton results: literature
+and Lean verification targets Summary: States concrete operator, packet,
+sharpness, wall, cusp, relativistic and Euclidean verification targets,
+compares close prior results, and gives a finite rational drift-kick
+versus kick-drift bound for newtonlean. Limit/reuse: specifications are
+not compiled Lean proofs; newtonlean is core-only and its constructed
+regional central-force polygons require an explicit model bridge;
+priority is not established.</p></li>
+<li><p><a
 href="leibniz-continuity-records.html">leibniz-continuity-records.md</a>
 | priority=3 | flags=surprising | role=result,historical |
 status=conditional | proof_status=proved-refereed |
@@ -2232,11 +2248,12 @@ multiscale quantum mechanics to Newton’s initial-value problem Summary:
 Normalized Euclidean time blocks and quantum products yield
 coherent-state means that construct the unique Newton trajectory with
 O(h+mesh) error; quartic classical trajectories follow from cutoff
-quantum families and energy conservation. Limit/reuse: This does not
-establish joint convergence for the uncut quartic quantum evolution. The
-sharper rate uses bounded V’’’ and was not in the earlier model-advisor
-check; widths remain O(sqrt(h)). The supplied h and Lipschitz/Gronwall
-stability remain essential.</p></li>
+quantum families and energy conservation. Borns-Weil and Fang give
+related uniform observable splitting estimates. Limit/reuse: This does
+not establish joint convergence for the uncut quartic quantum evolution.
+The sharper rate uses bounded V’’’ and was not in the earlier
+model-advisor check; widths remain O(sqrt(h)). The supplied h and
+Lipschitz/Gronwall stability remain essential.</p></li>
 <li><p><a
 href="quantum-exclusion-premises.html">quantum-exclusion-premises.md</a>
 | priority=1 | flags=none | role=historical,infrastructure |
