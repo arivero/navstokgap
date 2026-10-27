@@ -110,8 +110,11 @@ now controls a full convex insertion law and its one-halving large-field
 events, and distinguishes positive-$\hbar$ quartic stiffness from the
 regular classical envelope. The [ODE lesson](../notes/balaban-ode-lesson.md)
 constructs the nonlinear causal polygon limit and explains the weighted-law
-comparison. Next test branch competition and physical real-time/record
-reconstruction.
+comparison. The [branch-response test](../notes/newton-branch-response-action.md)
+gives a uniform positive action bound conditional on a calibrated response
+ceiling and the stated branch law, with classical memory and thermal
+countermodels explicit. Next seek an independent physical selector and
+test actual ODE incompleteness against a reversible full-state completion.
 Alpoge and Yang--Mills are deferred;
 this direction supersedes the ordering of the earlier queue below.
 

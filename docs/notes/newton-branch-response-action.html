@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Competing time-cell branches: a conditional positive-action bound</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Competing time-cell branches: a conditional positive-action bound</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/newton-branch-response-action.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-branch-response-action.pdf">PDF</a></p><p><strong>Result, 2026-10-27; written derivation, unrefereed.</strong>
+Within a positive-weight nonlinear Euclidean time-cell family with two
+competing minima, a finite ceiling on the normalized inserted-position
+response implies an explicit positive lower bound uniform over its
+action multipliers. The bound follows from an exact integration
+identity, with no small-action expansion. Positive action rounds a
+zero-action branch jump on a source scale proportional to <span
+class="math inline">\(\hbar\)</span>. Retaining a classical branch label
+avoids the jump, and a classical statistical weight can reproduce the
+response. These two controls identify the physical assumptions that
+still need justification.</p>
+<p><strong>Targeted check (GPT-6.1 Terra, 2026-10-27).</strong> Terra
+read the note and checked equations (6)–(14) without finding a
+mathematical error. Its scope refinements about the spinodal endpoint
+and the separately defined zero-action member are incorporated below.
+This was a targeted written check, not validation of the physical
+response premise.</p>
+<p>The point is to test a possible necessity mechanism beyond the convex
+cell, not to infer action from a failure of ordinary ODE existence. The
+real-time Newton equation for the smooth confining double well is well
+posed. The conditional equilibrium source response studied here is a
+different object.</p>
+<p>Retrieval before this calculation: the <a
+href="newton-nonlinear-time-cell.html">nonlinear cell</a> gives exact
+normalized elimination; the <a href="balaban-ode-lesson.html">ODE
+lesson</a> separates causal motion from endpoint projection; the <a
+href="leibniz-continuity-records.html">Leibniz records note</a>, section
+1, gives a related continuity selector for specified Gaussian recording
+protocols; and <a href="zero-branch-reachability.html">zero-branch
+reachability</a>, Theorem 5, requires that incoherent classical
+attachments be retained as controls. The calculations here are
+elementary quartic and exponential-family identities. No literature
+novelty is claimed.</p>
+<h2 id="the-nonlinear-cell-and-its-two-branches">1. The nonlinear cell
+and its two branches</h2>
+<p>Keep <span class="math inline">\(m,u,v&gt;0\)</span>, <span
+class="math inline">\(T=u+v\)</span>, <span
+class="math inline">\(a=mT/(uv)\)</span> and <span
+class="math inline">\(w=T/2\)</span> as in the nonlinear-cell note. Fix
+<span class="math inline">\(\lambda,b&gt;0\)</span> and use</p>
+<p><span class="math display">\[
+V(z)=\frac\lambda4(z^2-b^2)^2,\qquad
+F_\mu(z)=\frac a2(z-\mu)^2+wV(z).
+\tag{1}
+\]</span></p>
+<p>All these cell parameters are held fixed when the action multiplier
+is varied. Let</p>
+<p><span class="math display">\[
+\gamma=w\lambda,\qquad d=\gamma b^2-a&gt;0,
+\qquad r=\sqrt{d/\gamma}.
+\tag{2}
+\]</span></p>
+<p>At <span class="math inline">\(\mu=0\)</span>, up to an additive
+constant,</p>
+<p><span
+class="math display">\[F_0(z)=\frac\gamma4(z^2-r^2)^2+\text{constant}.\tag{3}\]</span></p>
+<p>The two minima are <span class="math inline">\(\pm r\)</span>, with
+second derivative <span class="math inline">\(2d\)</span>. The
+intervening barrier has action <span
+class="math inline">\(d^2/(4\gamma)\)</span>. For equal time pieces, the
+condition <span class="math inline">\(d&gt;0\)</span> is <span
+class="math inline">\(\lambda b^2T^2&gt;8m\)</span>. This is precisely
+where the two-cell Euclidean Hessian at the central point loses its
+short-interval positivity. It does not mark a singularity of the causal
+Newton flow.</p>
+<p>For <span class="math inline">\(\hbar&gt;0\)</span> define the
+normalized law</p>
+<p><span class="math display">\[
+d\nu_{\hbar,\mu}(z)=\frac{e^{-F_\mu(z)/\hbar}dz}
+                              {\int e^{-F_\mu/\hbar}dz},
+\qquad M_\hbar(\mu)=\mathbb E_{\nu_{\hbar,\mu}}Z.
+\tag{4}
+\]</span></p>
+<p>The quartic tail makes these quantities smooth in <span
+class="math inline">\(\mu\)</span>. The retained action is <span
+class="math inline">\(A_\hbar=-\hbar\log[\sqrt{a/(2\pi\hbar)}\int
+e^{-F_\mu/\hbar}dz]\)</span>. As before, the weighting is Euclidean. No
+real-time quantum law or <span class="math inline">\(c\)</span> is being
+derived from (4).</p>
+<h2
+id="a-finite-response-ceiling-forces-positive-action-in-this-model">2. A
+finite response ceiling forces positive action in this model</h2>
+<p>Differentiating the normalized law gives the exact identities</p>
+<p><span class="math display">\[
+M_\hbar&#39;(\mu)=\frac a\hbar\operatorname{Var}_{\nu_{\hbar,\mu}}(Z),
+\qquad
+A_\hbar&#39;&#39;(\mu)=a-aM_\hbar&#39;(\mu).
+\tag{5}
+\]</span></p>
+<p>At the symmetric point <span class="math inline">\(\mathbb
+EZ=0\)</span>. An integration by parts yields</p>
+<p><span class="math display">\[
+\mathbb E(F_0&#39;)^2=\hbar\mathbb EF_0&#39;&#39;
+       =\hbar(3\gamma\mathbb EZ^2-d)&gt;0.
+\tag{6}
+\]</span></p>
+<p>Hence <span
+class="math inline">\(\operatorname{Var}(Z)&gt;r^2/3\)</span> for every
+<span class="math inline">\(\hbar&gt;0\)</span>, and</p>
+<p><span class="math display">\[
+M_\hbar&#39;(0)&gt;\frac{ar^2}{3\hbar},\qquad
+A_\hbar&#39;&#39;(0)&lt;a-\frac{a^2r^2}{3\hbar}.
+\tag{7}
+\]</span></p>
+<p><strong>Conditional response theorem.</strong> Suppose an independent
+physical calibration or principle gives the ceiling <span
+class="math inline">\(M_\hbar&#39;(0)\le R_*\)</span>, with a fixed
+finite <span class="math inline">\(R_*&gt;0\)</span>, and the physical
+inserted-position law is (4). Then its action multiplier satisfies</p>
+<p><span
+class="math display">\[\hbar&gt;\frac{ar^2}{3R_*}&gt;0.\tag{8}\]</span></p>
+<p>Alternatively, <span class="math inline">\(|A_\hbar&#39;&#39;(0)|\le
+L\)</span> with fixed <span class="math inline">\(L\ge0\)</span>
+implies</p>
+<p><span
+class="math display">\[\hbar&gt;\frac{a^2r^2}{3(a+L)}.\tag{9}\]</span></p>
+<p><em>Proof.</em> Equations (5)–(7) imply (8) directly. The second
+ceiling implies <span
+class="math inline">\(M_\hbar&#39;(0)=1-A_\hbar&#39;&#39;(0)/a\le1+L/a\)</span>,
+giving (9). Equation (6) follows by integrating <span
+class="math inline">\((F_0&#39;e^{-F_0/\hbar})&#39;\)</span>; its strict
+positivity follows because the continuous law is not supported on the
+zeros of <span class="math inline">\(F_0&#39;\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The lower bounds have units of action: <span
+class="math inline">\(ar^2\)</span> is an action and <span
+class="math inline">\(R_*\)</span> is dimensionless. Merely observing
+that each member of a positive-action family has a finite derivative is
+weaker than supplying a fixed ceiling. The theorem needs the latter,
+independently of the unknown multiplier. It also needs (4) to be the
+physical response law. Neither requirement has been derived from
+Newton’s axioms or from time subdivision here.</p>
+<p>To state zero exclusion precisely, extend the family at <span
+class="math inline">\(\hbar=0\)</span> by global minimization for <span
+class="math inline">\(\mu\ne0\)</span> and any mean supported on the two
+minima at <span class="math inline">\(\mu=0\)</span>. Section 3 proves
+that this particular zero member is discontinuous. A physical
+requirement of a differentiable response with the same ceiling excludes
+that member, and (8) bounds all the surviving positive members away from
+zero. It does not exclude a different classical extension, such as the
+branch-labelled rule in section 4.</p>
+<h2 id="how-the-zero-action-jump-is-rounded">3. How the zero-action jump
+is rounded</h2>
+<p>At zero action, classical global minimization selects a positive
+minimum for <span class="math inline">\(\mu&gt;0\)</span> and a negative
+one for <span class="math inline">\(\mu&lt;0\)</span>. Their one-sided
+limits at zero are <span class="math inline">\(+r\)</span> and <span
+class="math inline">\(-r\)</span>. No choice of a single minimizing
+value at zero makes this global-minimum selector continuous.</p>
+<p>To verify the branch statement, write <span
+class="math inline">\(F_\mu=F_0-a\mu z+a\mu^2/2\)</span>. For <span
+class="math inline">\(\mu&gt;0\)</span> any negative candidate is
+improved by reflection, since <span
+class="math inline">\(F_\mu(z)-F_\mu(-z)=-2a\mu z\)</span> for <span
+class="math inline">\(z&gt;0\)</span>. The stationary cubic <span
+class="math inline">\(\gamma z^3-dz-a\mu=0\)</span> has exactly one
+positive root, beyond <span class="math inline">\(r\)</span>, which is
+the global minimum. Reflection handles <span
+class="math inline">\(\mu&lt;0\)</span>.</p>
+<p>The positive-action transition has a specific source profile. For
+fixed <span class="math inline">\(\xi\in\mathbb R\)</span>, set</p>
+<p><span
+class="math display">\[\mu_\hbar=\frac{\hbar\xi}{ar}.\tag{10}\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+\frac{M_\hbar(\mu_\hbar)}r\longrightarrow\tanh\xi,
+\qquad
+\frac{\operatorname{Var}_{\nu_{\hbar,\mu_\hbar}}Z}{r^2}
+       \longrightarrow\operatorname{sech}^2\xi,
+\qquad(\hbar\downarrow0).
+\tag{11}
+\]</span></p>
+<p><em>Proof.</em> At zero source, the law concentrates equally at <span
+class="math inline">\(\pm r\)</span>. For completeness, subtract the
+minimum of (3). On a fixed compact set outside neighborhoods of the two
+minima it is bounded below by a positive constant. Near each minimum it
+is bounded above and below by positive multiples of <span
+class="math inline">\(d(z\mp r)^2\)</span>. The normalization is
+therefore bounded below by a constant times <span
+class="math inline">\(\sqrt{\hbar/d}\)</span>, while the mass of the
+compact complement tends to zero exponentially. Quartic tails give the
+same conclusion outside the compact set and for first and second
+moments. Reflection fixes equal limiting masses.</p>
+<p>At (10) the source changes this density by the factor <span
+class="math inline">\(e^{\xi z/r}\)</span> and a normalization. Quartic
+decay still controls its tails for <span
+class="math inline">\(\xi\)</span> in any fixed bounded interval, so its
+masses converge to <span
+class="math inline">\(e^{\xi}/(2\cosh\xi)\)</span> at <span
+class="math inline">\(r\)</span> and <span
+class="math inline">\(e^{-\xi}/(2\cosh\xi)\)</span> at <span
+class="math inline">\(-r\)</span>. Their first two moments give (11).
+<span class="math inline">\(\square\)</span></p>
+<p>Using the exact derivative identity (5) before taking the moment
+limit,</p>
+<p><span class="math display">\[
+\frac{\hbar}{ar^2}M_\hbar&#39;(\mu_\hbar)
+       \longrightarrow\operatorname{sech}^2\xi.
+\tag{12}
+\]</span></p>
+<p>In particular the central slope is asymptotic to <span
+class="math inline">\(ar^2/\hbar\)</span>. This explains both the scale
+of (8) and the factor-three slack in its global finite bound. No
+differentiation of a weak-limit formula was used to obtain (12).</p>
+<h2 id="classical-branch-memory-is-a-decisive-control">4. Classical
+branch memory is a decisive control</h2>
+<p>Global minimization discards a possible state variable: which stable
+branch was prepared. The stationary branches <span
+class="math inline">\(z_\pm(\mu)\)</span> persist near zero and
+satisfy</p>
+<p><span class="math display">\[
+\gamma z_\pm^3-dz_\pm-a\mu=0,\qquad
+z_\pm(0)=\pm r,\qquad z_\pm&#39;(0)=\frac a{2d}.
+\tag{13}
+\]</span></p>
+<p>Both are smooth on the open interval <span
+class="math inline">\(|\mu|&lt;\mu_{\mathrm{sp}}\)</span>, where</p>
+<p><span class="math display">\[\mu_{\mathrm{sp}}=
+\frac{2d^{3/2}}{3a\sqrt{3\gamma}}.\tag{14}\]</span></p>
+<p>This follows by solving the stationary equation and its vanishing
+second derivative together. The disappearing branch extends continuously
+to its spinodal endpoint, but its derivative diverges there. A classical
+rule retaining the label <span class="math inline">\(\sigma=\pm\)</span>
+therefore has a finite local response with zero action multiplier. Even
+the mean with source-independent equal branch populations, <span
+class="math inline">\([z_+(\mu)+z_-(\mu)]/2\)</span>, is smooth near
+zero, with slope <span class="math inline">\(a/(2d)\)</span>.</p>
+<p>That rule is not the global-minimum selection used in section 3. The
+example shows why losing a branch in a coarse description cannot itself
+prove that all classical completions require positive action. A physical
+argument would have to justify the equilibrium weighting of branches,
+restrict accessible branch memory, or derive a different composition
+law. The causal Newton initial-value flow also stays regular for this
+smooth confining double-well potential, by the energy bounds discussed
+in the ODE lesson.</p>
+<h2 id="a-thermal-countertest-and-the-quantum-question">5. A thermal
+countertest and the quantum question</h2>
+<p>The one-cell response cannot identify its multiplier as Planck
+action. A classical system in the energy potential <span
+class="math inline">\(E_\mu(z)=F_\mu(z)/w\)</span> at bath temperature
+<span class="math inline">\(\Theta&gt;0\)</span> has the stipulated
+Boltzmann density</p>
+<p><span class="math display">\[
+e^{-E_\mu/(k_B\Theta)}
+       =e^{-F_\mu/\kappa},\qquad\kappa=wk_B\Theta.
+\tag{15}
+\]</span></p>
+<p>It reproduces every one-cell statistic above with <span
+class="math inline">\(\kappa\)</span> in place of <span
+class="math inline">\(\hbar\)</span>. This is an exact classical
+statistical countermodel to identification from the curvature or
+response alone. It is not an assertion that an arbitrary time-chain
+quantum propagator is a thermal classical process.</p>
+<p>The response theorem is nevertheless useful. Its independently
+testable inputs and its predicted rounded source profile are explicit.
+The physical work is to show why the relevant Newton body/apparatus has
+a specified branch law and a finite preparation/record-uniform response,
+and then connect the inferred action multiplier to real-time phase and
+to composition across bodies. The present calculation supplies neither
+an unrestricted universal response ceiling nor that identification.</p>
+<p>For Galileo’s constant force alone there is no such branch
+competition: the conditional mean is affine in its source, with a finite
+derivative at zero action. A successful nonlinear selector would have to
+transmit one common action coefficient to that experiment through
+independently justified composition. The existing universality arguments
+retain that logical distinction.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Branch competition gives a concrete conditional positivity theorem: a
+calibrated finite response ceiling for the stated nonlinear cell law
+forces the positive bound (8), and its transition width is proportional
+to the action multiplier. Classical branch memory and a thermal weight
+are explicit countertests. Next investigate whether a complete physical
+record law supplies the response/branch premises, or whether real-time
+interference provides a discriminator that the thermal cell lacks.
+Newton necessity remains active; this result has not established its
+physical premises or a universal Planck value.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
