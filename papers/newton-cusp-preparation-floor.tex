@@ -1,0 +1,377 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A bounded Newton force, reversible preparations and a conditional action floor},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\section{A bounded Newton force, reversible preparations and a
+conditional action
+floor}\label{a-bounded-newton-force-reversible-preparations-and-a-conditional-action-floor}
+
+\textbf{Result, 2026-10-27; written derivation, unrefereed.} A
+continuous bounded Newton force can send two different exact
+position--momentum states to the same state in finite time. Consequently
+it admits no reversible evolution on the original point-state space. If
+an admissible class of probability preparations is invariant under
+affine canonical maps, closed under weak limits, and has a reversible
+evolution agreeing with these incoming Newton trajectories, then its
+finite-covariance preparations have a strictly positive covariance
+action floor. No numerical floor is assumed in this implication.
+
+The closure and state-covariance premises are substantive physical
+assumptions. An explicit classical density-ceiling model satisfies them
+and has a sharp floor. Thus the result selects a positive preparation
+scale conditionally; it does not derive quantum mechanics, a universal
+Planck constant, or a floor on every classical action difference.
+
+\textbf{Targeted check (GPT-6.1 Terra, 2026-10-27).} Terra checked
+sections 1--4, including singular covariances and the classical witness,
+without finding a mathematical error. Its distinction between the
+\(C^1\) potential and the merely continuous force is retained. The check
+does not validate the physical preparation premises or a quantum
+identification.
+
+Retrieval: the \href{balaban-ode-lesson.md}{ODE lesson} constructs the
+Lipschitz causal limit; the
+\href{self-sufficiency-contrast.md}{self-sufficiency contrast} separates
+Kepler incompleteness from exclusion of classical completions; the
+\href{principia-fifth-postulate.md}{fifth-postulate note}, Theorem
+B\('\) (proof read), classifies covariant Gaussian restrictions but
+leaves their zero threshold available. The
+\href{necessity-unit-and-indeterminacy.md}{necessity note}, Theorem I
+(proof read), prevents treating an unread density ceiling as an
+automatic restriction on recorded posteriors. The present argument adds
+a different conditional selector: weak closure together with an actual
+point-state merger. No literature priority is claimed.
+
+\subsection{1. Existence without uniqueness, with no unbounded
+force}\label{existence-without-uniqueness-with-no-unbounded-force}
+
+Fix \(m,\gamma,R>0\), \(0<\alpha<1\), and a smooth even cutoff \(\chi\)
+with \(0\le\chi\le1\), \(\chi=1\) on \([-1,1]\) and \(\chi=0\) outside
+\([-2,2]\). Set
+
+\[
+ V(q)=-\frac{\gamma}{1+\alpha}|q|^{1+\alpha}\chi(q/R),
+ \qquad \dot q=p/m,\quad \dot p=-V'(q).
+ \tag{1}
+\]
+
+The potential is bounded and \(C^1\), and the force is continuous and
+bounded. Specifically,
+
+\[
+ \|V\|_\infty\le\frac{\gamma(2R)^{1+\alpha}}{1+\alpha},\qquad
+ \|V'\|_\infty\le\gamma(2R)^\alpha
+ \left(1+\frac{2\|\chi'\|_\infty}{1+\alpha}\right)=:F_*.
+ \tag{2}
+\]
+
+Inside \(|q|<R\), the acceleration is
+\(\ddot q=(\gamma/m)\operatorname{sgn}(q)|q|^\alpha\). Its derivative
+diverges at zero, so the Lipschitz hypothesis in the lesson fails.
+Nevertheless solutions exist globally. Here is the relevant existence
+argument without assuming uniqueness. Euler polygons on a fixed finite
+time interval have uniformly bounded momentum and position, and are
+equi-Lipschitz. On their common compact range the continuous vector
+field is uniformly continuous, so their integral-equation residual tends
+uniformly to zero with the mesh. A uniformly convergent subsequence
+therefore solves (1). The bounds
+
+\[
+ |p(t)|\le |p(0)|+F_*|t|,\qquad
+ |q(t)|\le |q(0)|+\frac{|p(0)|}{m}|t|+\frac{F_*t^2}{2m}
+ \tag{3}
+\]
+
+prevent finite-time escape and allow successive continuation in either
+time direction. This is an existence construction by compactness, rather
+than the Lipschitz lesson's Cauchy construction of a unique limit.
+
+Put
+
+\[
+ \beta=\frac{2}{1-\alpha}>2,\qquad
+ B=\left[\frac{\gamma(1-\alpha)^2}{2m(1+\alpha)}
+     \right]^{1/(1-\alpha)}.
+ \tag{4}
+\]
+
+The curves \(q(t)=\pm B(t-t_0)^\beta\), preceded by rest at zero, solve
+(1) while their positions remain inside \((-R,R)\). They join with two
+continuous derivatives at \(t_0\). Rest and an arbitrary delay before
+either departure are therefore all permitted by the same initial datum
+\((q,p)=(0,0)\). Direct substitution uses \(\beta-2=\alpha\beta\) and
+\(B^{1-\alpha}=\gamma/[m\beta(\beta-1)]\).
+
+More decisively, choose \(s>0\) with \(Bs^\beta<R\). The two different
+incoming states
+
+\[
+ z_\pm=(\pm Bs^\beta,\ \mp m\beta Bs^{\beta-1})
+ \tag{5}
+\]
+
+have the unique trajectories \(q_\pm(t)=\pm B(s-t)^\beta\),
+\(p_\pm=m\dot q_\pm\) for \(0\le t<s\): the vector field is locally
+Lipschitz wherever \(q\ne0\). Both reach \((0,0)\) at time \(s\). These
+are mergers of the full canonical state, rather than caustics of its
+position projection.
+
+\textbf{Point-state obstruction.} No injective evolution at time \(s\)
+on the original \((q,p)\) states can follow both trajectories through
+their arrival. A later choice of departure cannot undo the earlier
+merger. An extra arrival or branch label can retain the information, but
+is an enlargement of this state space.
+
+\subsection{2. A precise preparation
+theorem}\label{a-precise-preparation-theorem}
+
+Let \(\mathcal S\) be a nonempty subset of probability measures on the
+canonical plane, containing at least one measure with finite covariance.
+Assume the following three properties.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Canonical covariance of preparations.} Every affine symplectic
+  pushforward of a member of \(\mathcal S\) belongs to \(\mathcal S\).
+  In one canonical pair the linear matrices have determinant one. This
+  is a premise about admissible states, not a claim that the particular
+  potential (1) is invariant under all these maps.
+\item
+  \textbf{Weak closure.} A probability-valued weak limit of a sequence
+  in \(\mathcal S\) belongs to \(\mathcal S\).
+\item
+  \textbf{Reversible Newton compatibility.} The force (1) admits
+  bijective preparation evolutions \(\mathcal E_t\) on \(\mathcal S\),
+  with weakly continuous state curves. Whenever a point preparation is
+  admitted, its evolution follows its unique Newton trajectory before
+  arrival at the cusp. No affineness assumption on \(\mathcal E_t\) is
+  needed for the conclusion below.
+\end{enumerate}
+
+For a finite-covariance preparation write
+
+\[
+ \kappa(\mu)=\sqrt{\det\operatorname{Cov}_\mu(q,p)}.
+ \tag{6}
+\]
+
+This has action units. The theorem concerns covariance, including its
+cross term, rather than the coordinate product alone.
+
+\textbf{Theorem.} Under properties 1--3,
+
+\[
+ 0<\kappa_*:=\inf_{\substack{\mu\in\mathcal S\\
+                         \mu\text{ has finite covariance}}}
+                   \kappa(\mu)<\infty.
+ \tag{7}
+\]
+
+\emph{First step: point preparations are excluded.} If one Dirac measure
+belongs to \(\mathcal S\), affine translations supply every Dirac
+measure, in particular \(\delta_{z_+}\) and \(\delta_{z_-}\). Property 3
+and weak time continuity then give
+
+\[
+ \mathcal E_s\delta_{z_+}=\delta_{(0,0)}
+                        =\mathcal E_s\delta_{z_-},
+ \tag{8}
+\]
+
+contradicting injectivity. Thus \(\mathcal S\) contains no Dirac
+measure.
+
+\emph{Second step: arbitrarily small covariance action would supply a
+point.} For clarity fix arbitrary calibration units \(L_0,P_0>0\), with
+\(S_0=L_0P_0\), and use dimensionless coordinates
+\((Q,P)=(q/L_0,p/P_0)\). If (7) failed, choose preparations with
+dimensionless covariance matrices \(C_n\ge0\) and
+\(\sqrt{\det C_n}=\kappa(\mu_n)/S_0\to0\). Subtract each mean. Choose
+\(\epsilon_n>0\) so that
+
+\[
+ \sqrt{\det D_n}\longrightarrow0,\qquad D_n=C_n+\epsilon_n I>0,
+ \qquad A_n=(\det D_n)^{1/4}D_n^{-1/2}.
+ \tag{9}
+\]
+
+Such a choice follows from continuity of determinant at each \(C_n\); it
+also handles rank-deficient covariances. Then \(\det A_n=1\) and
+
+\[
+ A_nC_nA_n^{\mathsf T}\le\sqrt{\det D_n}\,I.
+ \tag{10}
+\]
+
+These dimensionless determinant-one maps represent physical canonical
+maps in the calibrated coordinates. By property 1 the centered,
+transformed preparations \(\widetilde\mu_n\) remain admissible. For
+every fixed \(r>0\), Chebyshev's inequality gives
+
+\[
+ \widetilde\mu_n\{Q^2+P^2>r^2\}
+ \le\frac{2\sqrt{\det D_n}}{r^2}\longrightarrow0.
+ \tag{11}
+\]
+
+Hence \(\widetilde\mu_n\) converges weakly to the point measure at zero.
+Property 2 admits that point, contrary to the first step. The assumed
+finite-covariance member also makes the infimum finite. \(\square\)
+
+No calibrated numerical value is hidden in \(L_0,P_0\): their positive
+values are arbitrary and (7) is unchanged by changing them. The state
+class supplies the value of \(\kappa_*\). The theorem does not establish
+that the infimum is attained, that Gaussian states are allowed, or that
+all states above the floor are allowed. It needs neither a Gaussian
+ansatz nor closure under adding Gaussian noise.
+
+One may define \(\hbar_{\rm prep}=2\kappa_*>0\) as a candidate reduced
+action scale. Identifying it with the phase constant \(\hbar\) needs a
+separate physical argument. In quantum mechanics the familiar
+Robertson--Schrödinger form is
+\(\det\operatorname{Cov}(q,p)\ge\hbar^2/4\); the equality of forms alone
+proves no identification. The full Planck constant would be
+\(h=2\pi\hbar\), not \(\hbar\).
+
+\subsection{3. Which assumptions do the
+work?}\label{which-assumptions-do-the-work}
+
+Without weak closure, excluding exact points leaves preparations with
+arbitrarily small covariance. For example, the class of all absolutely
+continuous phase-space probabilities is canonically invariant, has no
+Dirac members, and contains arbitrarily narrow Gaussians. Its weak
+closure includes points. Thus the conclusion is not obtained merely by
+replacing points with distributions.
+
+Without canonical squeezing, a class supported on a fixed line with a
+fixed nonzero extent may be weakly closed and contain no point while
+having zero covariance determinant. Canonical covariance rules out that
+degenerate evasion. Without the cusp-compatibility demand, all
+probabilities are weakly closed and canonically invariant and contain
+points; free and harmonic dynamics transport them reversibly.
+
+Weak closure is not a consequence of finite experimental resolution. It
+is an additional completion rule admitting concentration limits whenever
+they are weak probability limits. Requiring it while retaining all
+arbitrarily concentrated classical preparations is exactly what would
+reintroduce the forbidden point. Whether nature supplies this closure,
+the full canonical preparation class, and the exact cusp force is open.
+Restricting all forces to smooth Lipschitz laws removes this particular
+selector.
+
+\subsection{4. A classical model satisfies all three
+premises}\label{a-classical-model-satisfies-all-three-premises}
+
+Fix a finite density ceiling \(M>0\), of reciprocal-action units, and
+let
+
+\[
+ \mathcal S_M=\{\mu:\ d\mu=\rho\,dq\,dp,\quad 0\le\rho\le M,
+                                 \quad\int\rho\,dq\,dp=1\}.
+ \tag{12}
+\]
+
+This class is weakly closed: if its probabilities converge weakly, their
+limiting measure satisfies \(\int\phi\,d\mu\le M\int\phi\,dq\,dp\) for
+every nonnegative compactly supported continuous \(\phi\), which gives
+the same density bound. It is invariant under affine symplectic maps
+because they preserve canonical area.
+
+For (1), the energy-zero set is the union of the two graphs
+\(p=\pm\sqrt{-2mV(q)}\) and has canonical area zero. Outside it the
+Newton trajectory is unique and complete. Negative-energy paths cannot
+reach zero; positive-energy paths cross it with nonzero velocity and are
+uniquely continued by \(\dot q=\pm\sqrt{2(E-V(q))/m}\) near the
+crossing. Away from zero the field is smooth. This full-area flow
+preserves canonical area: where \(p\ne0\), energy--time coordinates give
+\(dq\,dp=dE\,dt\) up to orientation, and the flow translates \(t\);
+turning points away from zero have the usual smooth Hamiltonian charts.
+The resulting almost-everywhere group pushes \(\mathcal S_M\)
+bijectively to itself. Its state curves are weakly continuous by bounded
+convergence along the continuous trajectories. No member charges the
+exceptional zero-energy set, and no Dirac preparation is admitted.
+Property 3 is therefore satisfied, including its stated
+point-compatibility condition.
+
+The floor can be computed sharply:
+
+\[
+ \inf_{\mu\in\mathcal S_M\text{ with finite covariance}}
+             \sqrt{\det\operatorname{Cov}_\mu(q,p)}
+       =\frac{1}{4\pi M}.
+ \tag{13}
+\]
+
+To check it, center and canonically isotropize a positive covariance as
+in section 2, now without regularization. In the calibrated plane the
+density cap is \(M S_0\). Among probabilities with this cap the minimum
+of \(\mathbb E(Q^2+P^2)\) is attained by filling the disk about zero at
+maximum density: moving mass from a larger radius into any unfilled
+smaller radius reduces the expectation. The disk has radius
+\(a_0^2=1/(\pi M S_0)\) and mean square radius \(a_0^2/2\). Isotropy
+gives \(2\kappa/S_0\ge1/(2\pi M S_0)\), proving the bound. A uniform
+canonical ellipse, the image of this disk, attains equality. A singular
+covariance would concentrate a density on a line and is impossible in
+(12).
+
+Thus the conditional theorem is consistent and genuinely weaker than
+quantum kinematics. Its classical witness already carries a supplied
+scale \(1/M\); the theorem says that some positive scale must appear
+under its hypotheses, not how nature chooses it. It is an unread-state
+model. Unrestricted classical conditioning can violate its ceiling, as
+the necessity note's two-pointer construction proves. Claiming an
+operational completion would also require a physical law of instruments
+and records preserving its allowed states.
+
+\subsection{\texorpdfstring{5. A supplied positive \(\hbar\) gives a
+complete quantum
+comparison}{5. A supplied positive \textbackslash hbar gives a complete quantum comparison}}\label{a-supplied-positive-hbar-gives-a-complete-quantum-comparison}
+
+For every \(\hbar>0\), the same bounded real potential has
+
+\[
+ H_\hbar=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2}+V(q),\qquad
+ D(H_\hbar)=H^2(\mathbb R).
+ \tag{14}
+\]
+
+The free operator is self-adjoint on \(H^2\). Multiplication by \(V\) is
+bounded and symmetric, with relative bound zero. The Kato--Rellich
+theorem therefore makes (14) self-adjoint on this same domain, with
+\(H_\hbar\ge-\|V\|_\infty\). Its spectral calculus supplies the unique
+strongly continuous unitary group \(U_\hbar(t)=\exp(-itH_\hbar/\hbar)\)
+for every real time. These are {[}@Teschl2009, Theorem 6.4, printed
+p.135, and Theorem 5.1, pp.123--124; passages read in the held first
+edition{]}, with the free domain in Theorem 7.8, pp.167--168. See the
+\href{../docs/Teschl_QuantumMechanics_2009.md}{source companion}.
+
+This comparison needs neither an unbounded collision force nor a choice
+of singular boundary condition. It still supplies \(\hbar>0\); the
+classical model of section 4 prevents inferring that this is the only
+completion. The quantum state space also is not a class of positive
+joint canonical probabilities with unrestricted classical conditioning.
+No such identification was used in section 2. No relativistic premise
+enters, so no \(c\) is needed.
+
+\subsection{6. Consequence for STATE}\label{consequence-for-state}
+
+The link from Lipschitz control to Newton's polygons now has a
+complement: continuous bounded forces suffice for polygon existence but
+can merge full point states, obstructing reversibility there. Weak
+preparation closure and canonical covariance convert that obstruction
+into a conditional positive covariance action scale. The density-ceiling
+control leaves quantum identification and physical record closure open.
+Next test whether a record/composition principle can independently
+justify or replace these closure premises, rather than assuming a
+numerical floor or discarding classical enlarged-state completions.
+\end{document}

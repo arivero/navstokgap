@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A bounded Newton force, reversible preparations and a conditional action floor</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A bounded Newton force, reversible preparations and a conditional
+action floor</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/newton-cusp-preparation-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-cusp-preparation-floor.pdf">PDF</a></p><p><strong>Result, 2026-10-27; written derivation, unrefereed.</strong>
+A continuous bounded Newton force can send two different exact
+position–momentum states to the same state in finite time. Consequently
+it admits no reversible evolution on the original point-state space. If
+an admissible class of probability preparations is invariant under
+affine canonical maps, closed under weak limits, and has a reversible
+evolution agreeing with these incoming Newton trajectories, then its
+finite-covariance preparations have a strictly positive covariance
+action floor. No numerical floor is assumed in this implication.</p>
+<p>The closure and state-covariance premises are substantive physical
+assumptions. An explicit classical density-ceiling model satisfies them
+and has a sharp floor. Thus the result selects a positive preparation
+scale conditionally; it does not derive quantum mechanics, a universal
+Planck constant, or a floor on every classical action difference.</p>
+<p><strong>Targeted check (GPT-6.1 Terra, 2026-10-27).</strong> Terra
+checked sections 1–4, including singular covariances and the classical
+witness, without finding a mathematical error. Its distinction between
+the <span class="math inline">\(C^1\)</span> potential and the merely
+continuous force is retained. The check does not validate the physical
+preparation premises or a quantum identification.</p>
+<p>Retrieval: the <a href="balaban-ode-lesson.html">ODE lesson</a>
+constructs the Lipschitz causal limit; the <a
+href="self-sufficiency-contrast.html">self-sufficiency contrast</a>
+separates Kepler incompleteness from exclusion of classical completions;
+the <a href="principia-fifth-postulate.html">fifth-postulate note</a>,
+Theorem B<span class="math inline">\(&#39;\)</span> (proof read),
+classifies covariant Gaussian restrictions but leaves their zero
+threshold available. The <a
+href="necessity-unit-and-indeterminacy.html">necessity note</a>, Theorem
+I (proof read), prevents treating an unread density ceiling as an
+automatic restriction on recorded posteriors. The present argument adds
+a different conditional selector: weak closure together with an actual
+point-state merger. No literature priority is claimed.</p>
+<h2 id="existence-without-uniqueness-with-no-unbounded-force">1.
+Existence without uniqueness, with no unbounded force</h2>
+<p>Fix <span class="math inline">\(m,\gamma,R&gt;0\)</span>, <span
+class="math inline">\(0&lt;\alpha&lt;1\)</span>, and a smooth even
+cutoff <span class="math inline">\(\chi\)</span> with <span
+class="math inline">\(0\le\chi\le1\)</span>, <span
+class="math inline">\(\chi=1\)</span> on <span
+class="math inline">\([-1,1]\)</span> and <span
+class="math inline">\(\chi=0\)</span> outside <span
+class="math inline">\([-2,2]\)</span>. Set</p>
+<p><span class="math display">\[
+V(q)=-\frac{\gamma}{1+\alpha}|q|^{1+\alpha}\chi(q/R),
+\qquad \dot q=p/m,\quad \dot p=-V&#39;(q).
+\tag{1}
+\]</span></p>
+<p>The potential is bounded and <span
+class="math inline">\(C^1\)</span>, and the force is continuous and
+bounded. Specifically,</p>
+<p><span class="math display">\[
+\|V\|_\infty\le\frac{\gamma(2R)^{1+\alpha}}{1+\alpha},\qquad
+\|V&#39;\|_\infty\le\gamma(2R)^\alpha
+\left(1+\frac{2\|\chi&#39;\|_\infty}{1+\alpha}\right)=:F_*.
+\tag{2}
+\]</span></p>
+<p>Inside <span class="math inline">\(|q|&lt;R\)</span>, the
+acceleration is <span class="math inline">\(\ddot
+q=(\gamma/m)\operatorname{sgn}(q)|q|^\alpha\)</span>. Its derivative
+diverges at zero, so the Lipschitz hypothesis in the lesson fails.
+Nevertheless solutions exist globally. Here is the relevant existence
+argument without assuming uniqueness. Euler polygons on a fixed finite
+time interval have uniformly bounded momentum and position, and are
+equi-Lipschitz. On their common compact range the continuous vector
+field is uniformly continuous, so their integral-equation residual tends
+uniformly to zero with the mesh. A uniformly convergent subsequence
+therefore solves (1). The bounds</p>
+<p><span class="math display">\[
+|p(t)|\le |p(0)|+F_*|t|,\qquad
+|q(t)|\le |q(0)|+\frac{|p(0)|}{m}|t|+\frac{F_*t^2}{2m}
+\tag{3}
+\]</span></p>
+<p>prevent finite-time escape and allow successive continuation in
+either time direction. This is an existence construction by compactness,
+rather than the Lipschitz lesson’s Cauchy construction of a unique
+limit.</p>
+<p>Put</p>
+<p><span class="math display">\[
+\beta=\frac{2}{1-\alpha}&gt;2,\qquad
+B=\left[\frac{\gamma(1-\alpha)^2}{2m(1+\alpha)}
+     \right]^{1/(1-\alpha)}.
+\tag{4}
+\]</span></p>
+<p>The curves <span class="math inline">\(q(t)=\pm
+B(t-t_0)^\beta\)</span>, preceded by rest at zero, solve (1) while their
+positions remain inside <span class="math inline">\((-R,R)\)</span>.
+They join with two continuous derivatives at <span
+class="math inline">\(t_0\)</span>. Rest and an arbitrary delay before
+either departure are therefore all permitted by the same initial datum
+<span class="math inline">\((q,p)=(0,0)\)</span>. Direct substitution
+uses <span class="math inline">\(\beta-2=\alpha\beta\)</span> and <span
+class="math inline">\(B^{1-\alpha}=\gamma/[m\beta(\beta-1)]\)</span>.</p>
+<p>More decisively, choose <span class="math inline">\(s&gt;0\)</span>
+with <span class="math inline">\(Bs^\beta&lt;R\)</span>. The two
+different incoming states</p>
+<p><span class="math display">\[
+z_\pm=(\pm Bs^\beta,\ \mp m\beta Bs^{\beta-1})
+\tag{5}
+\]</span></p>
+<p>have the unique trajectories <span class="math inline">\(q_\pm(t)=\pm
+B(s-t)^\beta\)</span>, <span class="math inline">\(p_\pm=m\dot
+q_\pm\)</span> for <span class="math inline">\(0\le t&lt;s\)</span>: the
+vector field is locally Lipschitz wherever <span
+class="math inline">\(q\ne0\)</span>. Both reach <span
+class="math inline">\((0,0)\)</span> at time <span
+class="math inline">\(s\)</span>. These are mergers of the full
+canonical state, rather than caustics of its position projection.</p>
+<p><strong>Point-state obstruction.</strong> No injective evolution at
+time <span class="math inline">\(s\)</span> on the original <span
+class="math inline">\((q,p)\)</span> states can follow both trajectories
+through their arrival. A later choice of departure cannot undo the
+earlier merger. An extra arrival or branch label can retain the
+information, but is an enlargement of this state space.</p>
+<h2 id="a-precise-preparation-theorem">2. A precise preparation
+theorem</h2>
+<p>Let <span class="math inline">\(\mathcal S\)</span> be a nonempty
+subset of probability measures on the canonical plane, containing at
+least one measure with finite covariance. Assume the following three
+properties.</p>
+<ol type="1">
+<li><strong>Canonical covariance of preparations.</strong> Every affine
+symplectic pushforward of a member of <span
+class="math inline">\(\mathcal S\)</span> belongs to <span
+class="math inline">\(\mathcal S\)</span>. In one canonical pair the
+linear matrices have determinant one. This is a premise about admissible
+states, not a claim that the particular potential (1) is invariant under
+all these maps.</li>
+<li><strong>Weak closure.</strong> A probability-valued weak limit of a
+sequence in <span class="math inline">\(\mathcal S\)</span> belongs to
+<span class="math inline">\(\mathcal S\)</span>.</li>
+<li><strong>Reversible Newton compatibility.</strong> The force (1)
+admits bijective preparation evolutions <span
+class="math inline">\(\mathcal E_t\)</span> on <span
+class="math inline">\(\mathcal S\)</span>, with weakly continuous state
+curves. Whenever a point preparation is admitted, its evolution follows
+its unique Newton trajectory before arrival at the cusp. No affineness
+assumption on <span class="math inline">\(\mathcal E_t\)</span> is
+needed for the conclusion below.</li>
+</ol>
+<p>For a finite-covariance preparation write</p>
+<p><span class="math display">\[
+\kappa(\mu)=\sqrt{\det\operatorname{Cov}_\mu(q,p)}.
+\tag{6}
+\]</span></p>
+<p>This has action units. The theorem concerns covariance, including its
+cross term, rather than the coordinate product alone.</p>
+<p><strong>Theorem.</strong> Under properties 1–3,</p>
+<p><span class="math display">\[
+0&lt;\kappa_*:=\inf_{\substack{\mu\in\mathcal S\\
+                         \mu\text{ has finite covariance}}}
+                   \kappa(\mu)&lt;\infty.
+\tag{7}
+\]</span></p>
+<p><em>First step: point preparations are excluded.</em> If one Dirac
+measure belongs to <span class="math inline">\(\mathcal S\)</span>,
+affine translations supply every Dirac measure, in particular <span
+class="math inline">\(\delta_{z_+}\)</span> and <span
+class="math inline">\(\delta_{z_-}\)</span>. Property 3 and weak time
+continuity then give</p>
+<p><span class="math display">\[
+\mathcal E_s\delta_{z_+}=\delta_{(0,0)}
+                        =\mathcal E_s\delta_{z_-},
+\tag{8}
+\]</span></p>
+<p>contradicting injectivity. Thus <span class="math inline">\(\mathcal
+S\)</span> contains no Dirac measure.</p>
+<p><em>Second step: arbitrarily small covariance action would supply a
+point.</em> For clarity fix arbitrary calibration units <span
+class="math inline">\(L_0,P_0&gt;0\)</span>, with <span
+class="math inline">\(S_0=L_0P_0\)</span>, and use dimensionless
+coordinates <span class="math inline">\((Q,P)=(q/L_0,p/P_0)\)</span>. If
+(7) failed, choose preparations with dimensionless covariance matrices
+<span class="math inline">\(C_n\ge0\)</span> and <span
+class="math inline">\(\sqrt{\det C_n}=\kappa(\mu_n)/S_0\to0\)</span>.
+Subtract each mean. Choose <span
+class="math inline">\(\epsilon_n&gt;0\)</span> so that</p>
+<p><span class="math display">\[
+\sqrt{\det D_n}\longrightarrow0,\qquad D_n=C_n+\epsilon_n I&gt;0,
+\qquad A_n=(\det D_n)^{1/4}D_n^{-1/2}.
+\tag{9}
+\]</span></p>
+<p>Such a choice follows from continuity of determinant at each <span
+class="math inline">\(C_n\)</span>; it also handles rank-deficient
+covariances. Then <span class="math inline">\(\det A_n=1\)</span>
+and</p>
+<p><span class="math display">\[
+A_nC_nA_n^{\mathsf T}\le\sqrt{\det D_n}\,I.
+\tag{10}
+\]</span></p>
+<p>These dimensionless determinant-one maps represent physical canonical
+maps in the calibrated coordinates. By property 1 the centered,
+transformed preparations <span
+class="math inline">\(\widetilde\mu_n\)</span> remain admissible. For
+every fixed <span class="math inline">\(r&gt;0\)</span>, Chebyshev’s
+inequality gives</p>
+<p><span class="math display">\[
+\widetilde\mu_n\{Q^2+P^2&gt;r^2\}
+\le\frac{2\sqrt{\det D_n}}{r^2}\longrightarrow0.
+\tag{11}
+\]</span></p>
+<p>Hence <span class="math inline">\(\widetilde\mu_n\)</span> converges
+weakly to the point measure at zero. Property 2 admits that point,
+contrary to the first step. The assumed finite-covariance member also
+makes the infimum finite. <span
+class="math inline">\(\square\)</span></p>
+<p>No calibrated numerical value is hidden in <span
+class="math inline">\(L_0,P_0\)</span>: their positive values are
+arbitrary and (7) is unchanged by changing them. The state class
+supplies the value of <span class="math inline">\(\kappa_*\)</span>. The
+theorem does not establish that the infimum is attained, that Gaussian
+states are allowed, or that all states above the floor are allowed. It
+needs neither a Gaussian ansatz nor closure under adding Gaussian
+noise.</p>
+<p>One may define <span class="math inline">\(\hbar_{\rm
+prep}=2\kappa_*&gt;0\)</span> as a candidate reduced action scale.
+Identifying it with the phase constant <span
+class="math inline">\(\hbar\)</span> needs a separate physical argument.
+In quantum mechanics the familiar Robertson–Schrödinger form is <span
+class="math inline">\(\det\operatorname{Cov}(q,p)\ge\hbar^2/4\)</span>;
+the equality of forms alone proves no identification. The full Planck
+constant would be <span class="math inline">\(h=2\pi\hbar\)</span>, not
+<span class="math inline">\(\hbar\)</span>.</p>
+<h2 id="which-assumptions-do-the-work">3. Which assumptions do the
+work?</h2>
+<p>Without weak closure, excluding exact points leaves preparations with
+arbitrarily small covariance. For example, the class of all absolutely
+continuous phase-space probabilities is canonically invariant, has no
+Dirac members, and contains arbitrarily narrow Gaussians. Its weak
+closure includes points. Thus the conclusion is not obtained merely by
+replacing points with distributions.</p>
+<p>Without canonical squeezing, a class supported on a fixed line with a
+fixed nonzero extent may be weakly closed and contain no point while
+having zero covariance determinant. Canonical covariance rules out that
+degenerate evasion. Without the cusp-compatibility demand, all
+probabilities are weakly closed and canonically invariant and contain
+points; free and harmonic dynamics transport them reversibly.</p>
+<p>Weak closure is not a consequence of finite experimental resolution.
+It is an additional completion rule admitting concentration limits
+whenever they are weak probability limits. Requiring it while retaining
+all arbitrarily concentrated classical preparations is exactly what
+would reintroduce the forbidden point. Whether nature supplies this
+closure, the full canonical preparation class, and the exact cusp force
+is open. Restricting all forces to smooth Lipschitz laws removes this
+particular selector.</p>
+<h2 id="a-classical-model-satisfies-all-three-premises">4. A classical
+model satisfies all three premises</h2>
+<p>Fix a finite density ceiling <span
+class="math inline">\(M&gt;0\)</span>, of reciprocal-action units, and
+let</p>
+<p><span class="math display">\[
+\mathcal S_M=\{\mu:\ d\mu=\rho\,dq\,dp,\quad 0\le\rho\le M,
+                                 \quad\int\rho\,dq\,dp=1\}.
+\tag{12}
+\]</span></p>
+<p>This class is weakly closed: if its probabilities converge weakly,
+their limiting measure satisfies <span
+class="math inline">\(\int\phi\,d\mu\le M\int\phi\,dq\,dp\)</span> for
+every nonnegative compactly supported continuous <span
+class="math inline">\(\phi\)</span>, which gives the same density bound.
+It is invariant under affine symplectic maps because they preserve
+canonical area.</p>
+<p>For (1), the energy-zero set is the union of the two graphs <span
+class="math inline">\(p=\pm\sqrt{-2mV(q)}\)</span> and has canonical
+area zero. Outside it the Newton trajectory is unique and complete.
+Negative-energy paths cannot reach zero; positive-energy paths cross it
+with nonzero velocity and are uniquely continued by <span
+class="math inline">\(\dot q=\pm\sqrt{2(E-V(q))/m}\)</span> near the
+crossing. Away from zero the field is smooth. This full-area flow
+preserves canonical area: where <span
+class="math inline">\(p\ne0\)</span>, energy–time coordinates give <span
+class="math inline">\(dq\,dp=dE\,dt\)</span> up to orientation, and the
+flow translates <span class="math inline">\(t\)</span>; turning points
+away from zero have the usual smooth Hamiltonian charts. The resulting
+almost-everywhere group pushes <span class="math inline">\(\mathcal
+S_M\)</span> bijectively to itself. Its state curves are weakly
+continuous by bounded convergence along the continuous trajectories. No
+member charges the exceptional zero-energy set, and no Dirac preparation
+is admitted. Property 3 is therefore satisfied, including its stated
+point-compatibility condition.</p>
+<p>The floor can be computed sharply:</p>
+<p><span class="math display">\[
+\inf_{\mu\in\mathcal S_M\text{ with finite covariance}}
+             \sqrt{\det\operatorname{Cov}_\mu(q,p)}
+       =\frac{1}{4\pi M}.
+\tag{13}
+\]</span></p>
+<p>To check it, center and canonically isotropize a positive covariance
+as in section 2, now without regularization. In the calibrated plane the
+density cap is <span class="math inline">\(M S_0\)</span>. Among
+probabilities with this cap the minimum of <span
+class="math inline">\(\mathbb E(Q^2+P^2)\)</span> is attained by filling
+the disk about zero at maximum density: moving mass from a larger radius
+into any unfilled smaller radius reduces the expectation. The disk has
+radius <span class="math inline">\(a_0^2=1/(\pi M S_0)\)</span> and mean
+square radius <span class="math inline">\(a_0^2/2\)</span>. Isotropy
+gives <span class="math inline">\(2\kappa/S_0\ge1/(2\pi M S_0)\)</span>,
+proving the bound. A uniform canonical ellipse, the image of this disk,
+attains equality. A singular covariance would concentrate a density on a
+line and is impossible in (12).</p>
+<p>Thus the conditional theorem is consistent and genuinely weaker than
+quantum kinematics. Its classical witness already carries a supplied
+scale <span class="math inline">\(1/M\)</span>; the theorem says that
+some positive scale must appear under its hypotheses, not how nature
+chooses it. It is an unread-state model. Unrestricted classical
+conditioning can violate its ceiling, as the necessity note’s
+two-pointer construction proves. Claiming an operational completion
+would also require a physical law of instruments and records preserving
+its allowed states.</p>
+<h2 id="a-supplied-positive-hbar-gives-a-complete-quantum-comparison">5.
+A supplied positive <span class="math inline">\(\hbar\)</span> gives a
+complete quantum comparison</h2>
+<p>For every <span class="math inline">\(\hbar&gt;0\)</span>, the same
+bounded real potential has</p>
+<p><span class="math display">\[
+H_\hbar=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2}+V(q),\qquad
+D(H_\hbar)=H^2(\mathbb R).
+\tag{14}
+\]</span></p>
+<p>The free operator is self-adjoint on <span
+class="math inline">\(H^2\)</span>. Multiplication by <span
+class="math inline">\(V\)</span> is bounded and symmetric, with relative
+bound zero. The Kato–Rellich theorem therefore makes (14) self-adjoint
+on this same domain, with <span
+class="math inline">\(H_\hbar\ge-\|V\|_\infty\)</span>. Its spectral
+calculus supplies the unique strongly continuous unitary group <span
+class="math inline">\(U_\hbar(t)=\exp(-itH_\hbar/\hbar)\)</span> for
+every real time. These are [<span class="citation"
+data-cites="Teschl2009">@Teschl2009</span>, Theorem 6.4, printed p.135,
+and Theorem 5.1, pp.123–124; passages read in the held first edition],
+with the free domain in Theorem 7.8, pp.167–168. See the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Teschl_QuantumMechanics_2009.md">source
+companion</a>.</p>
+<p>This comparison needs neither an unbounded collision force nor a
+choice of singular boundary condition. It still supplies <span
+class="math inline">\(\hbar&gt;0\)</span>; the classical model of
+section 4 prevents inferring that this is the only completion. The
+quantum state space also is not a class of positive joint canonical
+probabilities with unrestricted classical conditioning. No such
+identification was used in section 2. No relativistic premise enters, so
+no <span class="math inline">\(c\)</span> is needed.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The link from Lipschitz control to Newton’s polygons now has a
+complement: continuous bounded forces suffice for polygon existence but
+can merge full point states, obstructing reversibility there. Weak
+preparation closure and canonical covariance convert that obstruction
+into a conditional positive covariance action scale. The density-ceiling
+control leaves quantum identification and physical record closure open.
+Next test whether a record/composition principle can independently
+justify or replace these closure premises, rather than assuming a
+numerical floor or discarding classical enlarged-state completions.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

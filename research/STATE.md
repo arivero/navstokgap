@@ -113,8 +113,12 @@ constructs the nonlinear causal polygon limit and explains the weighted-law
 comparison. The [branch-response test](../notes/newton-branch-response-action.md)
 gives a uniform positive action bound conditional on a calibrated response
 ceiling and the stated branch law, with classical memory and thermal
-countermodels explicit. Next seek an independent physical selector and
-test actual ODE incompleteness against a reversible full-state completion.
+countermodels explicit. The [bounded-cusp test](../notes/newton-cusp-preparation-floor.md)
+turns a full point-state merger into a positive covariance action floor
+under weak preparation closure, canonical covariance and reversible Newton
+compatibility; a classical density-ceiling completion meets these premises.
+Next test independent physical justification of preparation/record closure
+and whether composition identifies the scale with $\hbar$.
 Alpoge and Yang--Mills are deferred;
 this direction supersedes the ordering of the earlier queue below.
 

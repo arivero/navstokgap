@@ -22,6 +22,14 @@ three-dimensional spectrum in Theorem 8.5. M03 uses the one-dimensional
 construction and restores $m,\hbar$ from the source convention $m=1/2,\hbar=1$.
 Its full diagonal domain and completeness proof are written out in the manuscript.
 
+On 2026-10-27 the bounded-cusp comparison additionally read Theorem 5.1
+and its proof, printed pp.123–124 (self-adjoint generators give global
+strongly continuous unitary groups), and Theorem 6.4 and its proof,
+printed p.135 (Kato–Rellich). The bounded real cusp potential has relative
+bound zero with respect to the free operator, so no singular-potential
+domain theorem is needed for that comparison. The argument uses the
+held first edition, rather than substituting a later edition's numbering.
+
 Read-only source cache: `.build/m03-sources.Bhp3zY/Teschl_QuantumMechanics.pdf`.
 SHA-256: `8dc8de0b58aa0a3fedfe594a345f9b5875322e5526ea581cb640a98d55b82818`.
 
