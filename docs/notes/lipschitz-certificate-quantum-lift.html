@@ -108,6 +108,15 @@ class="math inline">\(V(q)=q|q|/2\)</span> has globally Lipschitz force,
 but a centered coherent packet has a momentum error of exact order <span
 class="math inline">\(\sqrt\hbar\)</span> at small fixed positive times.
 No claim of literature priority is made.</p>
+<p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27):
+ACCEPT.</strong> The advisor checked the <span
+class="math inline">\(C^{1,1}\)</span> domain and commutator estimates,
+the fixed-action product and packet bounds, the square-root example, and
+the connection to the conjecture. Following the check, explicit grounded
+graph estimates, bounded extensions, the Duhamel integral, the all-<span
+class="math inline">\(L^2\)</span> Cauchy modulus and the kick domain
+are included below. The review is an internal model check, not
+independent peer review.</p>
 <h2 id="the-input-certificate-and-quantum-target">1. The input
 certificate and quantum target</h2>
 <p>Let <span class="math inline">\(m&gt;0\)</span>, <span
@@ -159,9 +168,16 @@ units and put <span class="math inline">\(N=1+Q^2+P^2\)</span>. The
 input (1) implies <span class="math display">\[
 |V&#39;(q)|\le |V&#39;(0)|+L|q|,\qquad
 |V(q)|\le |V(0)|+|V&#39;(0)||q|+\tfrac L2q^2.\tag{5}
-\]</span> Using the harmonic-oscillator graph bounds for <span
-class="math inline">\(Q^2,P^2,QP,PQ\)</span>, these estimates and the
-almost-everywhere bound on <span
+\]</span> For <span class="math inline">\(f\in\mathcal S\)</span>,
+integration by parts gives <span class="math display">\[
+2\operatorname{Re}\langle Q^2f,P^2f\rangle
+  =2\|QPf\|^2-2\hbar^2\|f\|^2.\tag{5a}
+\]</span> Together with <span class="math inline">\(N\ge1\)</span> and
+<span class="math inline">\(PQ=QP-i\hbar\)</span>, this gives the
+harmonic-oscillator graph bounds <span class="math display">\[
+\|Q^2f\|+\|P^2f\|+\|QPf\|+\|PQf\|
+\le C_\hbar\|Nf\|.\tag{5b}
+\]</span> These estimates, (5), and the almost-everywhere bound on <span
 class="math inline">\(V&#39;&#39;\)</span> imply on <span
 class="math inline">\(\mathcal S(\mathbb R)\)</span> <span
 class="math display">\[
@@ -179,19 +195,30 @@ S\)</span>, <span class="math inline">\(H_\hbar f\in D(N)\)</span>, so
 (6) gives <span class="math display">\[
 |\langle H_\hbar f,N^2f\rangle-\langle N^2f,H_\hbar f\rangle|
 \le2C_\hbar\langle f,N^2f\rangle.\tag{8}
-\]</span> Schwartz space is a core for <span
-class="math inline">\(N^2\)</span>. Nelson’s commutator theorem
-therefore makes <span class="math inline">\(H_\hbar\)</span> essentially
-self-adjoint on <span class="math inline">\(\mathcal S\)</span>. With
-<span class="math inline">\(G=N^2-\inf\sigma(N^2)\)</span>, the same
-estimate and <a
+\]</span> Schwartz space is a core for both <span
+class="math inline">\(N\)</span> and <span
+class="math inline">\(N^2\)</span>. The first bound in (6), together
+with the closedness of the eventual closure, also gives <span
+class="math inline">\(D(N)\subset D(\overline H_\hbar)\)</span>. Apply
+Nelson’s commutator theorem with comparison operator <span
+class="math inline">\(N^2\)</span>: (6) gives its relative bound and (8)
+its form-commutator bound. It follows that <span
+class="math inline">\(H_\hbar\)</span> is essentially self-adjoint on
+<span class="math inline">\(\mathcal S\)</span>.</p>
+<p>Write <span class="math inline">\(c_\hbar=\inf\sigma(N^2)\)</span>
+and <span class="math inline">\(G=N^2-c_\hbar\ge0\)</span>. Applying the
+same estimate to the generator <span
+class="math inline">\(H_\hbar/\hbar\)</span> with <span
+class="math inline">\(E_0=c_\hbar\)</span>, using <a
 href="https://link.springer.com/article/10.1007/s00220-025-05282-w">Energy-Limited
-Quantum Dynamics, Theorems 3.7–3.8</a> (statements and hypotheses read)
-show that <span
+Quantum Dynamics, Theorems 3.7–3.8</a> (statements and hypotheses read),
+shows that <span
 class="math inline">\(U_\hbar(t)=e^{-itH_\hbar/\hbar}\)</span> preserves
 <span class="math inline">\(D(N)\)</span> and is strongly continuous in
-its <span class="math inline">\(N\)</span>-graph norm. The constants in
-(6)–(8) follow from <span
+its <span class="math inline">\(N\)</span>-graph norm. Indeed <span
+class="math inline">\(D(\sqrt G)=D(N)\)</span> and <span
+class="math inline">\(\|\sqrt G f\|^2+c_\hbar\|f\|^2=\|Nf\|^2\)</span>.
+The constants in (6)–(8) follow from <span
 class="math inline">\(m,\hbar,L,V(0),V&#39;(0)\)</span>; they are not
 additional assumptions on the mechanical model.</p>
 <h2 id="a-fixed-action-quantum-product-estimate">3. A fixed-action
@@ -218,19 +245,32 @@ constants <span class="math display">\[
 \eta_T=\hbar^{-1}\|[T_\hbar,N]N^{-1}\|,\quad
 \eta_V=\sup_n\hbar^{-1}\|[V_n(Q),N]N^{-1}\|,\quad
 B=\sup_n\|[T_\hbar,V_n(Q)]N^{-1}\|.\tag{11}
-\]</span> They are finite by (5) and the graph bounds above; their
-values can be bounded from the classical data <span
+\]</span> Each commutator is initially computed on <span
+class="math inline">\(\mathcal S\)</span>; the products with <span
+class="math inline">\(N^{-1}\)</span> mean their unique bounded
+extensions from that core. They are finite by (5) and the graph bounds
+above; their values can be bounded from the classical data <span
 class="math inline">\(m,L,V&#39;(0)\)</span> and the chosen <span
-class="math inline">\(\hbar\)</span> and units. The <span
-class="math inline">\(N\)</span>-graph norms of the kinetic, potential
-and full groups are bounded by <span
+class="math inline">\(\hbar\)</span> and units. Use <span
+class="math inline">\(\|Nf\|\)</span> as an equivalent <span
+class="math inline">\(N\)</span>-graph norm. The induced graph norms of
+the kinetic, potential and full groups are bounded by <span
 class="math inline">\(e^{\eta_T|t|}\)</span>, <span
 class="math inline">\(e^{\eta_V|t|}\)</span>, and <span
 class="math inline">\(e^{(\eta_T+\eta_V)|t|}\)</span>, respectively.</p>
 <p>For smooth <span class="math inline">\(V_n\)</span>, differentiation
 of <span class="math inline">\(U_n(s-r)D_rK_{n,r}\)</span> and a second
-Duhamel integration yield, on Schwartz vectors, <span
+Duhamel integration give, on Schwartz vectors, <span
 class="math display">\[
+\begin{aligned}
+(D_sK_{n,s}-U_n(s))f
+=-\frac1{\hbar^2}\int_0^s\!dr\int_0^r\!du\,
+U_n(s-r)D_{r-u}[T_\hbar,V_n(Q)]D_uK_{n,r}f.
+\end{aligned}\tag{11a}
+\]</span> For each <span class="math inline">\(n\)</span>, both finite
+factors preserve <span class="math inline">\(\mathcal S\)</span>, so the
+unbounded commutator here acts on a vector in its initial domain. Taking
+norms in (11a) yields <span class="math display">\[
 \|(D_sK_{n,s}-U_n(s))f\|
 \le\frac{Bs^2}{2\hbar^2}
        e^{(\eta_T+\eta_V)s}\|Nf\|.\tag{12}
@@ -252,11 +292,20 @@ class="math inline">\(n\)</span>, so (13) passes to <span
 class="math inline">\(V\)</span>. It proves arbitrary-partition strong
 convergence for <span class="math inline">\(f\in D(N)\)</span>; density
 and unitarity extend convergence to all <span
-class="math inline">\(L^2\)</span> vectors. In particular, the
-conjecture note’s fixed-<span class="math inline">\(\hbar\)</span>
-Cauchy criterion holds, with the explicit graph-domain rate in (13). The
-factor <span class="math inline">\(\hbar^{-2}B\)</span> need not remain
-bounded as <span class="math inline">\(\hbar\downarrow0\)</span>.</p>
+class="math inline">\(L^2\)</span> vectors. More explicitly, if <span
+class="math inline">\(C_{\hbar,T}\)</span> is the coefficient of <span
+class="math inline">\(|\pi|\|Nf\|\)</span> in (13), then for any <span
+class="math inline">\(\psi\in L^2\)</span> <span class="math display">\[
+r_{\hbar,T,\psi}(\delta):=
+\inf_{f\in D(N)}\left[2\|\psi-f\|
+              +C_{\hbar,T}\delta\|Nf\|\right]
+\longrightarrow0\quad(\delta\downarrow0).\tag{13a}
+\]</span> Unitarity and (13) bound each product-to-unitary difference by
+<span class="math inline">\(r_{\hbar,T,\psi}(|\pi|)\)</span>; the
+triangle inequality gives the conjecture note’s two-partition Cauchy
+criterion. The factor <span class="math inline">\(\hbar^{-2}B\)</span>
+need not remain bounded as <span
+class="math inline">\(\hbar\downarrow0\)</span>.</p>
 <h2 id="the-classical-and-quantum-polygons">4. The classical and quantum
 polygons</h2>
 <p>Use the coherent packet of the <a
@@ -267,7 +316,24 @@ cells. The exact identities <span class="math display">\[
 K_s^*PK_s=P-sV&#39;(Q),\qquad D_s^*QD_s=Q+sP/m\tag{14}
 \]</span> hold on the propagated states; the <span
 class="math inline">\(C^{1,1}\)</span> potential preserves the needed
-graph domain. Define <span class="math display">\[
+graph domain. In detail, <span class="math inline">\(D(N)=H^2(\mathbb
+R)\cap D(Q^2)\)</span>, and for <span class="math inline">\(f\in
+D(N)\)</span>, weak differentiation gives <span class="math display">\[
+\begin{aligned}
+(K_s f)&#39;&#39;=K_s\bigg(f&#39;&#39;-\frac{2is}{\hbar}V&#39;f&#39;
+-\frac{is}{\hbar}V&#39;&#39;f-\frac{s^2}{\hbar^2}(V&#39;)^2f\bigg).
+\end{aligned}\tag{14a}
+\]</span> Here <span class="math inline">\(V&#39;&#39;\in
+L^\infty\)</span>, <span class="math inline">\(V&#39;\)</span> grows at
+most linearly, and the oscillator graph bound gives <span
+class="math inline">\(qf&#39;,q^2f\in L^2\)</span>. Thus <span
+class="math inline">\(K_s f\in H^2\)</span> and <span
+class="math inline">\(Q^2K_s f=K_sQ^2f\in L^2\)</span>. The drift
+preserves <span class="math inline">\(D(N)\)</span> by its conjugation
+of <span class="math inline">\(Q\)</span> and the <span
+class="math inline">\(QP,PQ\)</span> graph bounds. Hence all finite
+products preserve <span class="math inline">\(D(N)\)</span>. Define
+<span class="math display">\[
 W_j=\operatorname{sd}Q_j+\frac{\operatorname{sd}P_j}{m\omega},
 \quad C=\sqrt{\frac2{m\omega}},\quad
 \beta=\omega+\frac{L}{m\omega}.\tag{15}
@@ -307,7 +373,10 @@ both the graph and packet estimates, while the certificate’s polygon
 error (3) controls recovery of the classical flow. The graph estimate
 (13) is a separate fixed-<span class="math inline">\(\hbar\)</span>
 quantum estimate derived using the declared operator toolkit; it is not
-assumed in (3).</p>
+assumed in (3). The input includes the global action and its force
+bound, not merely the numerical convergence rate of one orbit. A single
+trajectory need not determine <span class="math inline">\(V\)</span>
+elsewhere, so (13) is not claimed to follow from (3) alone.</p>
 <h2 id="why-the-square-root-rate-cannot-generally-be-improved">5. Why
 the square-root rate cannot generally be improved</h2>
 <p>Set <span class="math inline">\(m=1\)</span> and <span

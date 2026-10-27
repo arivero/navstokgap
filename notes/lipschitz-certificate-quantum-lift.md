@@ -26,6 +26,14 @@ regularity: $V(q)=q|q|/2$ has globally Lipschitz force, but a centered
 coherent packet has a momentum error of exact order $\sqrt\hbar$ at
 small fixed positive times. No claim of literature priority is made.
 
+**Targeted advisor check (GPT-6.1 Sol, 2026-10-27): ACCEPT.** The
+advisor checked the $C^{1,1}$ domain and commutator estimates, the
+fixed-action product and packet bounds, the square-root example,
+and the connection to the conjecture. Following the check, explicit
+grounded graph estimates, bounded extensions, the Duhamel integral,
+the all-$L^2$ Cauchy modulus and the kick domain are included below. The
+review is an internal model check, not independent peer review.
+
 ## 1. The input certificate and quantum target
 
 Let $m>0$, $V\in C^1(\mathbb R;\mathbb R)$, and suppose
@@ -70,8 +78,18 @@ $$
  |V'(q)|\le |V'(0)|+L|q|,\qquad
  |V(q)|\le |V(0)|+|V'(0)||q|+\tfrac L2q^2.\tag{5}
 $$
-Using the harmonic-oscillator graph bounds for $Q^2,P^2,QP,PQ$,
-these estimates and the almost-everywhere bound on $V''$ imply on
+For $f\in\mathcal S$, integration by parts gives
+$$
+ 2\operatorname{Re}\langle Q^2f,P^2f\rangle
+  =2\|QPf\|^2-2\hbar^2\|f\|^2.\tag{5a}
+$$
+Together with $N\ge1$ and $PQ=QP-i\hbar$, this gives the
+harmonic-oscillator graph bounds
+$$
+ \|Q^2f\|+\|P^2f\|+\|QPf\|+\|PQf\|
+ \le C_\hbar\|Nf\|.\tag{5b}
+$$
+These estimates, (5), and the almost-everywhere bound on $V''$ imply on
 $\mathcal S(\mathbb R)$
 $$
  \|H_\hbar f\|\le C_\hbar\|Nf\|,\qquad
@@ -90,13 +108,21 @@ $$
  |\langle H_\hbar f,N^2f\rangle-\langle N^2f,H_\hbar f\rangle|
  \le2C_\hbar\langle f,N^2f\rangle.\tag{8}
 $$
-Schwartz space is a core for $N^2$. Nelson's commutator theorem
-therefore makes $H_\hbar$ essentially self-adjoint on $\mathcal S$.
-With $G=N^2-\inf\sigma(N^2)$, the same estimate and
+Schwartz space is a core for both $N$ and $N^2$. The first bound in
+(6), together with the closedness of the eventual closure, also gives
+$D(N)\subset D(\overline H_\hbar)$. Apply Nelson's commutator theorem
+with comparison operator $N^2$: (6) gives its relative bound and (8)
+its form-commutator bound. It follows that $H_\hbar$ is essentially
+self-adjoint on $\mathcal S$.
+
+Write $c_\hbar=\inf\sigma(N^2)$ and $G=N^2-c_\hbar\ge0$. Applying the
+same estimate to the generator $H_\hbar/\hbar$ with $E_0=c_\hbar$,
+using
 [Energy-Limited Quantum Dynamics, Theorems 3.7--3.8](https://link.springer.com/article/10.1007/s00220-025-05282-w)
-(statements and hypotheses read) show that
+(statements and hypotheses read), shows that
 $U_\hbar(t)=e^{-itH_\hbar/\hbar}$ preserves $D(N)$ and is strongly
-continuous in its $N$-graph norm. The constants in (6)--(8) follow
+continuous in its $N$-graph norm. Indeed $D(\sqrt G)=D(N)$ and
+$\|\sqrt G f\|^2+c_\hbar\|f\|^2=\|Nf\|^2$. The constants in (6)--(8) follow
 from $m,\hbar,L,V(0),V'(0)$; they are not additional assumptions on
 the mechanical model.
 
@@ -122,15 +148,28 @@ $$
  \eta_V=\sup_n\hbar^{-1}\|[V_n(Q),N]N^{-1}\|,\quad
  B=\sup_n\|[T_\hbar,V_n(Q)]N^{-1}\|.\tag{11}
 $$
+Each commutator is initially computed on $\mathcal S$; the products
+with $N^{-1}$ mean their unique bounded extensions from that core.
 They are finite by (5) and the graph bounds above; their values can be
 bounded from the classical data $m,L,V'(0)$ and the chosen
-$\hbar$ and units. The $N$-graph norms of the kinetic, potential
+$\hbar$ and units. Use $\|Nf\|$ as an equivalent $N$-graph norm.
+The induced graph norms of the kinetic, potential
 and full groups are bounded by $e^{\eta_T|t|}$,
 $e^{\eta_V|t|}$, and $e^{(\eta_T+\eta_V)|t|}$, respectively.
 
 For smooth $V_n$, differentiation of
-$U_n(s-r)D_rK_{n,r}$ and a second Duhamel integration yield, on
+$U_n(s-r)D_rK_{n,r}$ and a second Duhamel integration give, on
 Schwartz vectors,
+$$
+ \begin{aligned}
+ (D_sK_{n,s}-U_n(s))f
+ =-\frac1{\hbar^2}\int_0^s\!dr\int_0^r\!du\,
+ U_n(s-r)D_{r-u}[T_\hbar,V_n(Q)]D_uK_{n,r}f.
+ \end{aligned}\tag{11a}
+$$
+For each $n$, both finite factors preserve $\mathcal S$, so the
+unbounded commutator here acts on a vector in its initial domain.
+Taking norms in (11a) yields
 $$
  \|(D_sK_{n,s}-U_n(s))f\|
  \le\frac{Bs^2}{2\hbar^2}
@@ -149,9 +188,18 @@ $U_{n,\pi}(T)\to U_{\hbar,\pi}(T)$ in operator norm for fixed
 $\hbar,T,\pi$, by the bounded-perturbation Duhamel estimate.
 The constants in (13) are uniform in $n$, so (13) passes to $V$.
 It proves arbitrary-partition strong convergence for $f\in D(N)$;
-density and unitarity extend convergence to all $L^2$ vectors.
-In particular, the conjecture note's fixed-$\hbar$ Cauchy criterion
-holds, with the explicit graph-domain rate in (13). The factor
+density and unitarity extend convergence to all $L^2$ vectors. More
+explicitly, if $C_{\hbar,T}$ is the coefficient of
+$|\pi|\|Nf\|$ in (13), then for any $\psi\in L^2$
+$$
+ r_{\hbar,T,\psi}(\delta):=
+ \inf_{f\in D(N)}\left[2\|\psi-f\|
+              +C_{\hbar,T}\delta\|Nf\|\right]
+ \longrightarrow0\quad(\delta\downarrow0).\tag{13a}
+$$
+Unitarity and (13) bound each product-to-unitary difference by
+$r_{\hbar,T,\psi}(|\pi|)$; the triangle inequality gives the
+conjecture note's two-partition Cauchy criterion. The factor
 $\hbar^{-2}B$ need not remain bounded as $\hbar\downarrow0$.
 
 ## 4. The classical and quantum polygons
@@ -164,7 +212,19 @@ $$
  K_s^*PK_s=P-sV'(Q),\qquad D_s^*QD_s=Q+sP/m\tag{14}
 $$
 hold on the propagated states; the $C^{1,1}$ potential preserves the
-needed graph domain. Define
+needed graph domain. In detail, $D(N)=H^2(\mathbb R)\cap D(Q^2)$,
+and for $f\in D(N)$, weak differentiation gives
+$$
+ \begin{aligned}
+ (K_s f)''=K_s\bigg(f''-\frac{2is}{\hbar}V'f'
+ -\frac{is}{\hbar}V''f-\frac{s^2}{\hbar^2}(V')^2f\bigg).
+ \end{aligned}\tag{14a}
+$$
+Here $V''\in L^\infty$, $V'$ grows at most linearly, and the
+oscillator graph bound gives $qf',q^2f\in L^2$. Thus $K_s f\in H^2$
+and $Q^2K_s f=K_sQ^2f\in L^2$. The drift preserves $D(N)$ by its
+conjugation of $Q$ and the $QP,PQ$ graph bounds. Hence all finite
+products preserve $D(N)$. Define
 $$
  W_j=\operatorname{sd}Q_j+\frac{\operatorname{sd}P_j}{m\omega},
  \quad C=\sqrt{\frac2{m\omega}},\quad
@@ -209,7 +269,10 @@ The proof uses the classical **input bound** (1) for both the graph
 and packet estimates, while the certificate's polygon error (3)
 controls recovery of the classical flow. The graph estimate (13) is a
 separate fixed-$\hbar$ quantum estimate derived using the declared
-operator toolkit; it is not assumed in (3).
+operator toolkit; it is not assumed in (3). The input includes the
+global action and its force bound, not merely the numerical convergence
+rate of one orbit. A single trajectory need not determine $V$
+elsewhere, so (13) is not claimed to follow from (3) alone.
 
 ## 5. Why the square-root rate cannot generally be improved
 

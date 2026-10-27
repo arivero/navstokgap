@@ -46,7 +46,8 @@ now distinguishes the universal claim from the established common-hypothesis
 construction. The [bounded lifting theorem](../notes/lipschitz-certificate-quantum-lift.md)
 derives product convergence and the observable limit from a specified
 conservative global-Lipschitz certificate and a named operator toolkit;
-the universal conjecture remains open. The
+the subsequent Sol advisor check accepts the stated scope with graph
+and domain clarifications, while the universal conjecture remains open. The
 [cusp-selection calculation](../notes/cusp-quantum-preparation-selection.md)
 gives two quantum families with identical limiting incoming histories
 but distinct outgoing branches and explicit mixtures.

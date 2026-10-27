@@ -24,6 +24,14 @@ proves the bounded test in §6 for a specified one-dimensional action
 class, using a named operator-theorem toolkit. The universal claim
 remains open.
 
+**Targeted advisor check (GPT-6.1 Sol, 2026-10-27): ACCEPT at the
+stated scope.** The advisor read this formulation and the bounded
+lifting proof. The latter uses the supplied global action and force
+bound for quantum refinement, and the classical polygon certificate
+for recovery of the classical flow. It does not derive quantum
+existence from an arbitrary classical proof. This is an internal model
+review, not independent peer review.
+
 ## 1. The meaning of containment
 
 A proof may contain mathematical information that its author never
