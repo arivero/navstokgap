@@ -1,0 +1,244 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A bounded Alpoge--Sussman peek: what returns to Newton in 0+1},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\section{A bounded Alpoge--Sussman peek: what returns to Newton in
+0+1}\label{a-bounded-alpogesussman-peek-what-returns-to-newton-in-01}
+
+\textbf{Result and source comparison, 2026-10-27.} The useful immediate
+imports are a connected-response test for interaction, retention of the
+complete density through blocking, and reflection positivity as a
+condition that survives limits. None of these alone selects a positive
+\(\hbar\). In our quartic insertion law, an exact moment identity gives
+a strictly negative fourth connected response at every positive
+\(\hbar\). Its raw magnitude vanishes as a time cell shrinks, while the
+correctly scaled quartic response retains the original interaction.
+
+The user authorized this bounded peek after the Newton work and status
+checkpoint were pushed. The source is
+\href{https://github.com/ethanwsussman/Yang--Mills-LLM-experiment}{ethanwsussman/Yang--Mills-LLM-experiment},
+pinned at \texttt{52cee131db140d7467cab4a263a1f04aa15a260f}. The
+\href{../docs/AlpogeSussman_YangMills_2026.md}{source companion} records
+the downloaded files and exact reading coverage. These are selected
+passages, not a proof review of QED3, YM3 or YM4. The repository itself
+labels the manuscripts tentative and not satisfactorily vetted.
+
+Retrieval for the calculation: the
+\href{newton-nonlinear-time-cell.md}{nonlinear time cell} supplies the
+normalized full insertion law and its moment bounds; the
+\href{balaban-newton-time-blocking.md}{time-blocking note} separates
+finite cell control from a continuum scale; and
+\href{refinement-composition-and-limit.md}{refinement composition} keeps
+surviving physical information distinct from geometric convergence. The
+finite identities below are written derivations, unrefereed, with no
+literature priority claim.
+
+\textbf{Targeted check (GPT-6.1 Terra, 2026-10-27).} Terra checked
+sections 2--4, including the strict cumulant sign, all \(\hbar\) powers,
+the \(T^5\) coefficient and the Gaussian reflection inequality at zero.
+Its test-function domain clarification is incorporated below. It did not
+review the external manuscripts or physical selection premises.
+
+\subsection{1. What is actually in the current
+source}\label{what-is-actually-in-the-current-source}
+
+The current README describes separate QED3 and YM3 manuscripts and a
+rotation argument called RP1. It continues to describe YM4 as work being
+developed and digested. This is an existence programme; this peek
+establishes no mass-gap claim. The following statements are the source's
+claims, at the indicated reading levels.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{RP1, statement and selected argument passages read.}
+  Translation invariance, an exponential moment bound, and reflection
+  positivity across coordinate and diagonal mirrors are claimed to imply
+  \(O(d)\) covariance of separated-point correlations for \(d\ge2\) and
+  tensor rotation weights of absolute value at most two. The conclusion
+  allows contact terms at coincident points. Its OS Hilbert-space
+  passage constructs a nonnegative time generator; the later rotation
+  argument uses a second direction, analytic continuation and angular
+  Fourier coefficients. It is not a theorem that positivity in time
+  alone produces spacetime rotation symmetry. The root README describes
+  RPM1 as a hybrid exposition partly written by Ethan Sussman and
+  completed by Astra; it does not specify an Astra version or attribute
+  all of the Yang--Mills work to that model.
+\item
+  \textbf{PR1, abstract and two theorem statements read.} A compact
+  probe has a positive fourth logarithmic determinant response. The
+  proposed lattice comparison separates a cutoff error, uniform in torus
+  size, from an exponentially small volume error. This is a concrete
+  nontriviality witness. Its sign belongs to its fermion determinant
+  observable; it is not the sign asserted for our scalar moment below.
+\item
+  \textbf{NL1, abstract, setup and selected theorem clauses read.} The
+  nonlinear step keeps local activities, the mass and vacuum terms, and
+  an independent external-source scalar term. It claims an exact
+  outgoing density and an unnormalized restricted marginal, under
+  explicit primitive and domain hypotheses. The methodological lesson is
+  to keep the source and scalar terms when differentiating or iterating
+  the block map.
+\end{itemize}
+
+The dated October 23 revision list was also read. It reports local
+corrections, including support conventions, normalization and the
+placement of folded cyclic traces. Its assertion that conclusions are
+unchanged is not an independent verification here.
+
+\subsection{2. A connected fourth response in the exact Newton
+cell}\label{a-connected-fourth-response-in-the-exact-newton-cell}
+
+Use the convex quartic cell at zero source, with
+
+\[
+ d\nu(z)=Z^{-1}\exp\left[-\frac1\hbar
+                 \left(\frac a2z^2+\frac b4z^4\right)\right]dz,
+ \qquad a,b,\hbar>0,
+ \qquad m_j=\mathbb E_\nu Z^j.
+ \tag{1}
+\]
+
+Here \(a=mT/(uv)\) and \(b=w\lambda\), with \(T=u+v\) and \(w=T/2\). The
+coefficient \(b\) has units action/length\(^4\). Symmetry gives zero odd
+moments, and the quartic tail justifies all differentiations and
+integrations by parts below.
+
+Integration by parts against \(z\) and \(z^3\) gives
+
+\[
+ a m_2+b m_4=\hbar,\qquad
+ a m_4+b m_6=3\hbar m_2.
+ \tag{2}
+\]
+
+Multiply the second identity by \(m_2\), the first by \(m_4\), and
+subtract:
+
+\[
+ \boxed{\quad m_4-3m_2^2
+       =-\frac b\hbar\left(m_2m_6-m_4^2\right)<0.\quad}
+ \tag{3}
+\]
+
+Cauchy--Schwarz gives \(m_4^2\le m_2m_6\) by comparing \(Z\) and
+\(Z^3\). Equality would require \(Z^3\) proportional to \(Z\) almost
+surely, which is impossible for this everywhere positive density. Thus
+(3) is a strict finite test of its departure from a Gaussian law. No
+small-\(b\) or small-\(\hbar\) expansion was used.
+
+For a source \(j\) of units action/length, let
+\(N(j)=\mathbb E e^{jZ/\hbar}\). Then
+
+\[
+ (\log N)^{(4)}(0)=\frac{m_4-3m_2^2}{\hbar^4},\qquad
+ N^{(4)}(0)=\frac{m_4}{\hbar^4}.
+ \tag{4}
+\]
+
+The subtraction matters: an ordinary fourth moment is nonzero even for a
+free Gaussian. A connected response removes the three Gaussian pairings.
+For the retained action of the insertion cell,
+
+\[
+ A_\hbar(\mu)-A_\hbar(0)
+    =\frac a2\mu^2-\hbar\log N(a\mu),\qquad
+ A_\hbar^{(4)}(0)
+    =-\frac{a^4}{\hbar^3}(m_4-3m_2^2)>0.
+ \tag{5}
+\]
+
+This uses the same normalization and source convention as the
+nonlinear-cell note. It is an additional full-law response identity, not
+an inference from the background trajectory alone.
+
+\subsection{3. Refinement can hide an interaction in an unscaled
+probe}\label{refinement-can-hide-an-interaction-in-an-unscaled-probe}
+
+Put \(g=b\hbar/a^2\) and \(Y=\sqrt{a/\hbar}\,Z\). The normalized law of
+\(Y\) is proportional to \(e^{-Y^2/2-gY^4/4}\). As \(g\downarrow0\),
+dominated convergence gives its second, fourth and sixth moments
+\(1,3,15\). Equation (3) therefore gives
+
+\[
+ m_4-3m_2^2\sim-\frac{6b\hbar^3}{a^4},\qquad
+ A_\hbar^{(4)}(0)\sim6b.
+ \tag{6}
+\]
+
+For equal time pieces \(u=v=T/2\), \(a=4m/T\), \(b=\lambda T/2\) and
+\(g=\lambda\hbar T^3/(32m^2)\). At fixed \(m,\lambda,\hbar>0\),
+shrinking the cell consequently gives
+
+\[
+ m_4-3m_2^2\sim-\frac{3\lambda\hbar^3}{256m^4}T^5,
+ \qquad \frac{A_\hbar^{(4)}(0)}w\longrightarrow6\lambda.
+ \tag{7}
+\]
+
+Thus the raw local cumulant tends to zero even though the retained
+potential's fourth derivative tends to the nonzero derivative of
+\(\lambda\mu^4/4\). Neither a finite nonzero cell cumulant nor its raw
+vanishing establishes the status of an interacting continuum theory. A
+fixed macroscopic observable and an estimate uniform in refinement are
+required. That is the useful parallel with PR1's cutoff and volume
+comparison, without importing its unreviewed field-theory proof.
+
+\subsection{4. The 0+1 reflection-positivity control, including zero
+action}\label{the-01-reflection-positivity-control-including-zero-action}
+
+RP1's rotation theorem needs \(d\ge2\). Its time-positivity ingredient
+has a direct \(0+1\) control. Fix \(m,\omega>0\) and consider a centered
+stationary Gaussian process with covariance
+
+\[
+ C_\hbar(t-s)=\frac{\hbar}{2m\omega}e^{-\omega|t-s|},
+ \qquad \hbar\ge0.
+ \tag{8}
+\]
+
+At zero multiplier this is the deterministic zero process. For real
+smooth compactly supported positive-time tests \(f_i\), write
+\(Q(f)=\iint f(t)C_\hbar(t-s)f(s)dt\,ds\) and
+\(u_i=\int_0^\infty f_i(t)e^{-\omega t}dt\). Time reflection is
+\((\theta f)(t)=f(-t)\). Its characteristic functional obeys
+
+\[
+ \Phi(f_i-\theta f_j)
+ =e^{-Q(f_i)/2}e^{-Q(f_j)/2}
+       \exp\left(\frac{\hbar}{2m\omega}u_i u_j\right).
+ \tag{9}
+\]
+
+For any finite collection, the last kernel is positive semidefinite:
+expand its exponential into the sum of rank-one kernels
+\([\hbar/(2m\omega)]^n u_i^n u_j^n/n!\). Multiplication by the displayed
+positive diagonal factors preserves positivity. This proves the full
+Gaussian exponential-observable reflection inequality, including at
+\(\hbar=0\), where every matrix entry is one.
+
+Hence reflection positivity and a time generator bounded below do not
+exclude a trivial zero-action member. Positive \(\hbar\) in (8) is a
+supplied covariance scale; the quartic witness (3) is nonzero for each
+positive value but collapses at zero. No universal positive action value
+or relativistic \(c\) follows from these tests.
+
+\subsection{5. Consequence for STATE}\label{consequence-for-state}
+
+The authorized Alpoge--Sussman peek is recorded at a fixed commit with
+selected source coverage. It contributes a concrete fourth-response test
+and a warning to preserve complete source-dependent densities. The main
+Newton queue remains physical justification of preparation and record
+closure and identification of its positive scale with \(\hbar\). The
+central-limit preparation test listed in STATE remains unstarted. No YM
+proof claim, gap construction or rotation theorem has been imported as
+an established result.
+\end{document}

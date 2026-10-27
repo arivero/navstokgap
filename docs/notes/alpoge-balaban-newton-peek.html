@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A bounded Alpoge–Sussman peek: what returns to Newton in 0+1</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A bounded Alpoge–Sussman peek: what returns to Newton in 0+1</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/alpoge-balaban-newton-peek.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/alpoge-balaban-newton-peek.pdf">PDF</a></p><p><strong>Result and source comparison, 2026-10-27.</strong> The useful
+immediate imports are a connected-response test for interaction,
+retention of the complete density through blocking, and reflection
+positivity as a condition that survives limits. None of these alone
+selects a positive <span class="math inline">\(\hbar\)</span>. In our
+quartic insertion law, an exact moment identity gives a strictly
+negative fourth connected response at every positive <span
+class="math inline">\(\hbar\)</span>. Its raw magnitude vanishes as a
+time cell shrinks, while the correctly scaled quartic response retains
+the original interaction.</p>
+<p>The user authorized this bounded peek after the Newton work and
+status checkpoint were pushed. The source is <a
+href="https://github.com/ethanwsussman/Yang--Mills-LLM-experiment">ethanwsussman/Yang–Mills-LLM-experiment</a>,
+pinned at <code>52cee131db140d7467cab4a263a1f04aa15a260f</code>. The <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/AlpogeSussman_YangMills_2026.md">source
+companion</a> records the downloaded files and exact reading coverage.
+These are selected passages, not a proof review of QED3, YM3 or YM4. The
+repository itself labels the manuscripts tentative and not
+satisfactorily vetted.</p>
+<p>Retrieval for the calculation: the <a
+href="newton-nonlinear-time-cell.html">nonlinear time cell</a> supplies
+the normalized full insertion law and its moment bounds; the <a
+href="balaban-newton-time-blocking.html">time-blocking note</a>
+separates finite cell control from a continuum scale; and <a
+href="refinement-composition-and-limit.html">refinement composition</a>
+keeps surviving physical information distinct from geometric
+convergence. The finite identities below are written derivations,
+unrefereed, with no literature priority claim.</p>
+<p><strong>Targeted check (GPT-6.1 Terra, 2026-10-27).</strong> Terra
+checked sections 2–4, including the strict cumulant sign, all <span
+class="math inline">\(\hbar\)</span> powers, the <span
+class="math inline">\(T^5\)</span> coefficient and the Gaussian
+reflection inequality at zero. Its test-function domain clarification is
+incorporated below. It did not review the external manuscripts or
+physical selection premises.</p>
+<h2 id="what-is-actually-in-the-current-source">1. What is actually in
+the current source</h2>
+<p>The current README describes separate QED3 and YM3 manuscripts and a
+rotation argument called RP1. It continues to describe YM4 as work being
+developed and digested. This is an existence programme; this peek
+establishes no mass-gap claim. The following statements are the source’s
+claims, at the indicated reading levels.</p>
+<ul>
+<li><strong>RP1, statement and selected argument passages read.</strong>
+Translation invariance, an exponential moment bound, and reflection
+positivity across coordinate and diagonal mirrors are claimed to imply
+<span class="math inline">\(O(d)\)</span> covariance of separated-point
+correlations for <span class="math inline">\(d\ge2\)</span> and tensor
+rotation weights of absolute value at most two. The conclusion allows
+contact terms at coincident points. Its OS Hilbert-space passage
+constructs a nonnegative time generator; the later rotation argument
+uses a second direction, analytic continuation and angular Fourier
+coefficients. It is not a theorem that positivity in time alone produces
+spacetime rotation symmetry. The root README describes RPM1 as a hybrid
+exposition partly written by Ethan Sussman and completed by Astra; it
+does not specify an Astra version or attribute all of the Yang–Mills
+work to that model.</li>
+<li><strong>PR1, abstract and two theorem statements read.</strong> A
+compact probe has a positive fourth logarithmic determinant response.
+The proposed lattice comparison separates a cutoff error, uniform in
+torus size, from an exponentially small volume error. This is a concrete
+nontriviality witness. Its sign belongs to its fermion determinant
+observable; it is not the sign asserted for our scalar moment
+below.</li>
+<li><strong>NL1, abstract, setup and selected theorem clauses
+read.</strong> The nonlinear step keeps local activities, the mass and
+vacuum terms, and an independent external-source scalar term. It claims
+an exact outgoing density and an unnormalized restricted marginal, under
+explicit primitive and domain hypotheses. The methodological lesson is
+to keep the source and scalar terms when differentiating or iterating
+the block map.</li>
+</ul>
+<p>The dated October 23 revision list was also read. It reports local
+corrections, including support conventions, normalization and the
+placement of folded cyclic traces. Its assertion that conclusions are
+unchanged is not an independent verification here.</p>
+<h2 id="a-connected-fourth-response-in-the-exact-newton-cell">2. A
+connected fourth response in the exact Newton cell</h2>
+<p>Use the convex quartic cell at zero source, with</p>
+<p><span class="math display">\[
+d\nu(z)=Z^{-1}\exp\left[-\frac1\hbar
+                 \left(\frac a2z^2+\frac b4z^4\right)\right]dz,
+\qquad a,b,\hbar&gt;0,
+\qquad m_j=\mathbb E_\nu Z^j.
+\tag{1}
+\]</span></p>
+<p>Here <span class="math inline">\(a=mT/(uv)\)</span> and <span
+class="math inline">\(b=w\lambda\)</span>, with <span
+class="math inline">\(T=u+v\)</span> and <span
+class="math inline">\(w=T/2\)</span>. The coefficient <span
+class="math inline">\(b\)</span> has units action/length<span
+class="math inline">\(^4\)</span>. Symmetry gives zero odd moments, and
+the quartic tail justifies all differentiations and integrations by
+parts below.</p>
+<p>Integration by parts against <span class="math inline">\(z\)</span>
+and <span class="math inline">\(z^3\)</span> gives</p>
+<p><span class="math display">\[
+a m_2+b m_4=\hbar,\qquad
+a m_4+b m_6=3\hbar m_2.
+\tag{2}
+\]</span></p>
+<p>Multiply the second identity by <span
+class="math inline">\(m_2\)</span>, the first by <span
+class="math inline">\(m_4\)</span>, and subtract:</p>
+<p><span class="math display">\[
+\boxed{\quad m_4-3m_2^2
+       =-\frac b\hbar\left(m_2m_6-m_4^2\right)&lt;0.\quad}
+\tag{3}
+\]</span></p>
+<p>Cauchy–Schwarz gives <span class="math inline">\(m_4^2\le
+m_2m_6\)</span> by comparing <span class="math inline">\(Z\)</span> and
+<span class="math inline">\(Z^3\)</span>. Equality would require <span
+class="math inline">\(Z^3\)</span> proportional to <span
+class="math inline">\(Z\)</span> almost surely, which is impossible for
+this everywhere positive density. Thus (3) is a strict finite test of
+its departure from a Gaussian law. No small-<span
+class="math inline">\(b\)</span> or small-<span
+class="math inline">\(\hbar\)</span> expansion was used.</p>
+<p>For a source <span class="math inline">\(j\)</span> of units
+action/length, let <span class="math inline">\(N(j)=\mathbb E
+e^{jZ/\hbar}\)</span>. Then</p>
+<p><span class="math display">\[
+(\log N)^{(4)}(0)=\frac{m_4-3m_2^2}{\hbar^4},\qquad
+N^{(4)}(0)=\frac{m_4}{\hbar^4}.
+\tag{4}
+\]</span></p>
+<p>The subtraction matters: an ordinary fourth moment is nonzero even
+for a free Gaussian. A connected response removes the three Gaussian
+pairings. For the retained action of the insertion cell,</p>
+<p><span class="math display">\[
+A_\hbar(\mu)-A_\hbar(0)
+    =\frac a2\mu^2-\hbar\log N(a\mu),\qquad
+A_\hbar^{(4)}(0)
+    =-\frac{a^4}{\hbar^3}(m_4-3m_2^2)&gt;0.
+\tag{5}
+\]</span></p>
+<p>This uses the same normalization and source convention as the
+nonlinear-cell note. It is an additional full-law response identity, not
+an inference from the background trajectory alone.</p>
+<h2 id="refinement-can-hide-an-interaction-in-an-unscaled-probe">3.
+Refinement can hide an interaction in an unscaled probe</h2>
+<p>Put <span class="math inline">\(g=b\hbar/a^2\)</span> and <span
+class="math inline">\(Y=\sqrt{a/\hbar}\,Z\)</span>. The normalized law
+of <span class="math inline">\(Y\)</span> is proportional to <span
+class="math inline">\(e^{-Y^2/2-gY^4/4}\)</span>. As <span
+class="math inline">\(g\downarrow0\)</span>, dominated convergence gives
+its second, fourth and sixth moments <span
+class="math inline">\(1,3,15\)</span>. Equation (3) therefore gives</p>
+<p><span class="math display">\[
+m_4-3m_2^2\sim-\frac{6b\hbar^3}{a^4},\qquad
+A_\hbar^{(4)}(0)\sim6b.
+\tag{6}
+\]</span></p>
+<p>For equal time pieces <span class="math inline">\(u=v=T/2\)</span>,
+<span class="math inline">\(a=4m/T\)</span>, <span
+class="math inline">\(b=\lambda T/2\)</span> and <span
+class="math inline">\(g=\lambda\hbar T^3/(32m^2)\)</span>. At fixed
+<span class="math inline">\(m,\lambda,\hbar&gt;0\)</span>, shrinking the
+cell consequently gives</p>
+<p><span class="math display">\[
+m_4-3m_2^2\sim-\frac{3\lambda\hbar^3}{256m^4}T^5,
+\qquad \frac{A_\hbar^{(4)}(0)}w\longrightarrow6\lambda.
+\tag{7}
+\]</span></p>
+<p>Thus the raw local cumulant tends to zero even though the retained
+potential’s fourth derivative tends to the nonzero derivative of <span
+class="math inline">\(\lambda\mu^4/4\)</span>. Neither a finite nonzero
+cell cumulant nor its raw vanishing establishes the status of an
+interacting continuum theory. A fixed macroscopic observable and an
+estimate uniform in refinement are required. That is the useful parallel
+with PR1’s cutoff and volume comparison, without importing its
+unreviewed field-theory proof.</p>
+<h2 id="the-01-reflection-positivity-control-including-zero-action">4.
+The 0+1 reflection-positivity control, including zero action</h2>
+<p>RP1’s rotation theorem needs <span
+class="math inline">\(d\ge2\)</span>. Its time-positivity ingredient has
+a direct <span class="math inline">\(0+1\)</span> control. Fix <span
+class="math inline">\(m,\omega&gt;0\)</span> and consider a centered
+stationary Gaussian process with covariance</p>
+<p><span class="math display">\[
+C_\hbar(t-s)=\frac{\hbar}{2m\omega}e^{-\omega|t-s|},
+\qquad \hbar\ge0.
+\tag{8}
+\]</span></p>
+<p>At zero multiplier this is the deterministic zero process. For real
+smooth compactly supported positive-time tests <span
+class="math inline">\(f_i\)</span>, write <span
+class="math inline">\(Q(f)=\iint f(t)C_\hbar(t-s)f(s)dt\,ds\)</span> and
+<span class="math inline">\(u_i=\int_0^\infty f_i(t)e^{-\omega
+t}dt\)</span>. Time reflection is <span class="math inline">\((\theta
+f)(t)=f(-t)\)</span>. Its characteristic functional obeys</p>
+<p><span class="math display">\[
+\Phi(f_i-\theta f_j)
+=e^{-Q(f_i)/2}e^{-Q(f_j)/2}
+       \exp\left(\frac{\hbar}{2m\omega}u_i u_j\right).
+\tag{9}
+\]</span></p>
+<p>For any finite collection, the last kernel is positive semidefinite:
+expand its exponential into the sum of rank-one kernels <span
+class="math inline">\([\hbar/(2m\omega)]^n u_i^n u_j^n/n!\)</span>.
+Multiplication by the displayed positive diagonal factors preserves
+positivity. This proves the full Gaussian exponential-observable
+reflection inequality, including at <span
+class="math inline">\(\hbar=0\)</span>, where every matrix entry is
+one.</p>
+<p>Hence reflection positivity and a time generator bounded below do not
+exclude a trivial zero-action member. Positive <span
+class="math inline">\(\hbar\)</span> in (8) is a supplied covariance
+scale; the quartic witness (3) is nonzero for each positive value but
+collapses at zero. No universal positive action value or relativistic
+<span class="math inline">\(c\)</span> follows from these tests.</p>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
+<p>The authorized Alpoge–Sussman peek is recorded at a fixed commit with
+selected source coverage. It contributes a concrete fourth-response test
+and a warning to preserve complete source-dependent densities. The main
+Newton queue remains physical justification of preparation and record
+closure and identification of its positive scale with <span
+class="math inline">\(\hbar\)</span>. The central-limit preparation test
+listed in STATE remains unstarted. No YM proof claim, gap construction
+or rotation theorem has been imported as an established result.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

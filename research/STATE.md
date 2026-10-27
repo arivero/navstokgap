@@ -9,6 +9,9 @@ gives the Newton/quantisation restart; the
 [September 23 handout](handoffs/HANDOFF-2026-09-23.md) records earlier
 reviews. This page carries the current direction.
 
+**Session paused at the user's request, 2026-10-27.** Resume from the
+unstarted bounded calculation in **Next** when the user resumes research.
+
 ## Goal
 
 User direction, 2026-09-26: one eventual paper on what survives
@@ -132,8 +135,11 @@ closure force a Gaussian sector by a central-limit argument. Then compare
 its recording restrictions with [Theorem F and its nonlinear-generator
 counterexample](../notes/newton-indeterminacy-routes.md#4-a-constructive-replacement-a-statistical-speed-theorem).
 Composition alone must not be represented as an identification with $\hbar$.
-Alpoge and Yang--Mills are deferred;
-this direction supersedes the ordering of the earlier queue below.
+The user subsequently authorized a bounded [Alpoge--Sussman peek](../notes/alpoge-balaban-newton-peek.md)
+after the checkpoint push. Its finite fourth-response calculation and
+zero-action reflection-positivity control are recorded; no YM proof was
+imported. Newton remains first, and the Yang--Mills construction remains
+deferred. This direction supersedes the ordering of the earlier queue below.
 
 **Diagnostic from the visual comparison (2026-10-02).** Geometric
 convergence and survival of a physical scale require separate estimates.

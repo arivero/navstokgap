@@ -34,6 +34,9 @@ history in which Newton carries interference from optics into mechanics.
   passage-level reading notes, useful RG mechanisms and thirteen older
   journal originals still awaiting full text. Distinguishes ultraviolet
   stability, continuum existence and the physical mass gap.
+- [Alpoge--Sussman experiment](AlpogeSussman_YangMills_2026.md): October
+  27 pinned source peek at RP1, positive probes and the nonlinear step;
+  selected statements and passages, with external proofs unreviewed.
 
 - [Lubetzky–Sly: Ising cutoff](LubetzkySly_IsingCutoff_0909.4320v1.md):
   established gap, clock convention and global mixing-time comparison;
