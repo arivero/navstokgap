@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A tangent-groupoid formulation of the quantum construction of Newton motion</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A tangent-groupoid formulation of the quantum construction of Newton
+motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/groupoid-quantum-newton-states.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/groupoid-quantum-newton-states.pdf">PDF</a></p><p><strong>Result, 2026-10-27.</strong> The tangent groupoid carries a
+continuous field of observable algebras whose positive-parameter fibers
+are quantum and whose zero fiber is classical. After fixing an action
+unit <span class="math inline">\(S_*\)</span> and setting <span
+class="math inline">\(h=\epsilon S_*\)</span>, the finite quantum
+products and classical initial-value construction of <a
+href="quantum-blocks-construct-newton.html">the first document</a>
+define compatible states on these fibers. On every compact time
+interval, their values on smooth Weyl observables converge to the
+classical point state with an explicit <span
+class="math inline">\(O(\sqrt h+|\pi|)\)</span> bound, for <strong>every
+joint schedule</strong> with <span
+class="math inline">\(h,|\pi|\to0\)</span>.</p>
+<p>The result is a state-level limit for the specified coherent
+preparations and globally bounded-Hessian potentials. The quartic
+extension in the first document uses cutoff Hamiltonians; it does not
+establish this estimate for uncut quartic quantum evolution. The result
+neither makes the finite-product propagator uniformly close to the exact
+quantum propagator as <span class="math inline">\(h\to0\)</span>, nor
+makes a quantum superposition a single classical trajectory. The
+groupoid parameter is a geometric deformation parameter until the
+identification <span class="math inline">\(h=\epsilon S_*\)</span> is
+chosen. The time mesh is an additional scale.</p>
+<p>The groupoid and strict quantization are established: in particular,
+Cariñena, Clemente-Gallardo, Follana, Gracia-Bondía, Rivero and Várilly,
+<a href="https://arxiv.org/abs/math/9802102">Connes’ Tangent Groupoid
+and Strict Quantization</a> (abstract and the prior repository
+companion), already includes the user’s work. Landsman–Ramazan’s <a
+href="https://arxiv.org/abs/math-ph/0001005">continuous-field
+construction</a> (abstract) supplies the general Lie-groupoid setting.
+The following state estimate applies the first document’s finite-slice
+bounds to that established structure; no literature priority claim is
+made.</p>
+<h2 id="what-the-parameter-joins">1. What the parameter joins</h2>
+<p>For <span class="math inline">\(M=\mathbb R\)</span>, the tangent
+groupoid is <span class="math display">\[
+\mathbb T M=(M\times M\times(0,1])\ \sqcup\ (TM\times\{0\}).
+\tag{1}
+\]</span> At <span class="math inline">\(\epsilon&gt;0\)</span>, pair
+arrows compose as <span
+class="math inline">\((x,y,\epsilon)(y,z,\epsilon)=(x,z,\epsilon)\)</span>;
+at zero, <span class="math inline">\((q,v,0)(q,w,0)=(q,v+w,0)\)</span>.
+A local chart near the zero fiber is <span class="math display">\[
+(q,v,\epsilon)\longmapsto
+\big(q+\epsilon v/2,\ q-\epsilon v/2,\ \epsilon\big).
+\tag{2}
+\]</span> Thus <span class="math inline">\(v=(x-y)/\epsilon\)</span> is
+a <strong>tangent coordinate</strong>, not automatically a physical
+velocity. A physical time interpretation requires a separate
+identification of units and scaling.</p>
+<p>The groupoid <span class="math inline">\(C^*\)</span>-algebra is a
+continuous field with fibers <span class="math display">\[
+\mathcal A_\epsilon\simeq\mathcal K(L^2(\mathbb R))
+\quad(\epsilon&gt;0),\qquad
+\mathcal A_0\simeq C_0(T^*\mathbb R).
+\tag{3}
+\]</span> At zero, Fourier transformation takes tangent-vector
+convolution to pointwise multiplication of functions of <span
+class="math inline">\((q,p)\)</span>. The positive fibers are abstractly
+isomorphic, but the continuous field specifies how families of their
+elements approach a classical observable.</p>
+<p>Choose an action unit <span class="math inline">\(S_*&gt;0\)</span>
+and set <span class="math display">\[h=\epsilon S_*.\tag{4}\]</span> For
+<span class="math inline">\(a\in C_c^\infty(T^*\mathbb R)\)</span>, Weyl
+quantization has kernel <span class="math display">\[
+K_\epsilon^a(x,y)=\frac1{2\pi\epsilon S_*}
+\int_{\mathbb R}e^{i(x-y)p/(\epsilon S_*)}
+       a\!\left(\frac{x+y}{2},p\right)dp.\tag{5}
+\]</span> In chart (2), <span class="math display">\[
+\epsilon K_\epsilon^a
+  \big(q+\epsilon v/2,q-\epsilon v/2\big)
+=\frac1{2\pi S_*}\int e^{ivp/S_*}a(q,p)dp.\tag{6}
+\]</span> The rescaled kernel is the inverse Fourier transform of the
+zero-fiber symbol. The established strict-quantization construction
+makes <span
+class="math inline">\(\epsilon\mapsto\operatorname{Op}_{\epsilon
+S_*}^W(a)\)</span>, together with <span class="math inline">\(a\)</span>
+at zero, a continuous section. Equation (6) displays the chart and
+normalization in this flat case; it is not a new proof of the general
+continuous-field theorem.</p>
+<h2 id="the-dynamics-and-the-unbounded-objects">2. The dynamics and the
+unbounded objects</h2>
+<p>For the potential and hypotheses of the first document define <span
+class="math display">\[
+H_h=P^2/(2m)+V(Q),\qquad U_h(t)=e^{-itH_h/h}.\tag{7}
+\]</span> The <span class="math inline">\(H_h\)</span> are unbounded
+operators and the <span class="math inline">\(U_h(t)\)</span> are
+generally multipliers, not elements of the compact-operator fibers. At
+<span class="math inline">\(h&gt;0\)</span> their adjoint action defines
+automorphisms of the compact operators: <span
+class="math display">\[\alpha_h^t(A)=U_h(t)^*AU_h(t).\tag{8}\]</span>
+The first document constructs the unique classical phase-space flow
+<span class="math inline">\(\Phi_t(q,p)\)</span> before it is used here.
+On the zero fiber put <span
+class="math display">\[\alpha_0^t(a)=a\circ\Phi_t.\tag{9}\]</span> This
+is classical Hamiltonian evolution with <span
+class="math inline">\(H_{\rm cl}=p^2/(2m)+V(q)\)</span>.</p>
+<p>For <span class="math inline">\(a\in C_c^\infty(T^*\mathbb
+R)\)</span>, Weyl–Egorov compatibility for the smooth subquadratic
+potentials of the first document gives, for fixed <span
+class="math inline">\(T\)</span>, <span class="math display">\[
+\sup_{|t|\le T}
+\|\alpha_h^t(\operatorname{Op}_h^W(a))
+      -\operatorname{Op}_h^W(a\circ\Phi_t)\|
+\le C_{a,T}h^2.\tag{10}
+\]</span> Here is the relevant estimate. The finite-time flow has
+bounded derivatives on compact sets under the stated hypotheses, so
+<span class="math inline">\(a_s=a\circ\Phi_s\)</span> is smooth,
+compactly supported, and has uniform symbol bounds for <span
+class="math inline">\(|s|\le T\)</span>. The kinetic commutator is
+exact. The potential-commutator remainder after removing its classical
+first-order term has kernel <span class="math display">\[
+\frac{i}{h}\left[V(x)-V(y)-(x-y)V&#39;\!\left(\frac{x+y}{2}\right)\right]
+K_h^{a_s}(x,y).\tag{10a}
+\]</span> The bracket is bounded by <span
+class="math inline">\(\|V&#39;&#39;&#39;\|_\infty|x-y|^3/24\)</span>.
+Rapid decay of the Fourier transform of <span
+class="math inline">\(a_s\)</span> in its momentum variable, the change
+<span class="math inline">\(x-y=hz\)</span>, and Schur’s test bound the
+operator norm by <span class="math inline">\(C_{a,T}h^2\)</span>.
+Integrating this commutator remainder by Duhamel’s formula gives (10).
+This uses the standard Weyl calculus and the flow already constructed in
+the first document; it is not being used to prove that flow exists.</p>
+<h2 id="a-quantitative-state-on-every-fiber">3. A quantitative state on
+every fiber</h2>
+<p>Use the coherent packet <span
+class="math inline">\(\psi_h^{q_0,p_0}\)</span> of equation (16) in the
+first document. For a partition <span
+class="math inline">\(\pi\)</span>, let <span
+class="math inline">\(\psi_{h,\pi,j}\)</span> be the state after its
+first <span class="math inline">\(j\)</span> kick–drift cells, and let
+<span class="math inline">\(z_{h,\pi}(t_j)=(q_j,p_j)\)</span> be its
+means. Denote the constructed classical state by <span
+class="math inline">\(z(t)=\Phi_t(q_0,p_0)\)</span>. Define <span
+class="math display">\[
+I_a=(2\pi)^{-2}\int_{\mathbb R^2}
+|\widehat a(\xi,\eta)|\big(|\xi|+m\omega|\eta|\big)
+\,d\xi\,d\eta&lt;\infty.\tag{11}
+\]</span> Here <span class="math inline">\(\widehat a\)</span> is the
+ordinary Fourier transform in <span
+class="math inline">\((q,p)\)</span>. Using the exact Fourier
+representation of Weyl quantization, <span
+class="math display">\[\operatorname{Op}_h^W(a)
+=(2\pi)^{-2}\int\widehat a(\xi,\eta)
+             e^{i(\xi Q+\eta P)}d\xi\,d\eta,\tag{12}\]</span> and the
+spectral bound <span
+class="math inline">\(\|(e^{iA}-1)\psi\|\le\|A\psi\|\)</span>, <span
+class="math display">\[
+|\langle\operatorname{Op}_h^W(a)\rangle_j-a(q_j,p_j)|
+\le I_a\!\left[
+\operatorname{sd}(Q)_j+\frac{\operatorname{sd}(P)_j}{m\omega}
+\right].\tag{13}
+\]</span> The phase factor <span class="math inline">\(e^{i(\xi q_j+\eta
+p_j)}\)</span> is removed before applying the inequality to the
+self-adjoint linear combination of centered <span
+class="math inline">\(Q,P\)</span>. Fourier inversion also gives <span
+class="math inline">\(|a(z)-a(z&#39;)|\le
+I_a\|z-z&#39;\|_\omega\)</span>.</p>
+<p>The first document’s estimates (19) and (26) therefore give, at every
+partition vertex <span class="math inline">\(t_j\in[0,T]\)</span>, <span
+class="math display">\[
+\left|\langle\psi_{h,\pi,j},\operatorname{Op}_h^W(a)
+                         \psi_{h,\pi,j}\rangle-a(z(t_j))\right|
+\le I_a\!\left[
+C e^{\beta T}\sqrt h+
+G_T(C_\delta|\pi|+C_h\sqrt h)\right].\tag{14}
+\]</span> The constants <span
+class="math inline">\(C,\beta,G_T,C_\delta,C_h\)</span> are explicitly
+defined in that document and depend on the common <span
+class="math inline">\(h_0,T,V,m,\omega\)</span> and initial data, not on
+<span class="math inline">\(h\)</span> or the number of cells. No
+differentiability of an unbounded quantum expectation is used in this
+step.</p>
+<p>With <span class="math inline">\(h=\epsilon S_*\)</span>, choose any
+<span class="math inline">\(\alpha&gt;0\)</span> and a time unit <span
+class="math inline">\(T_*&gt;0\)</span> so that <span
+class="math inline">\(|\pi_\epsilon|\le T_*\epsilon^\alpha\)</span>.
+Equation (14) yields <span class="math display">\[
+\langle\operatorname{Op}_{\epsilon S_*}^W(a)\rangle_{\pi_\epsilon}
+\longrightarrow a(\Phi_t(q_0,p_0))
+\quad\text{at vertices tending to }t,\tag{15}
+\]</span> with error <span
+class="math inline">\(O(\epsilon^{1/2}+\epsilon^\alpha)\)</span> at
+vertices equal to <span class="math inline">\(t\)</span>. Such a vertex
+can be inserted in each partition. There is no constraint here on <span
+class="math inline">\(|\pi_\epsilon|/h\)</span>.</p>
+<p>This means that the vector states on the positive fibers approach the
+point-evaluation state on the zero fiber, for the specified family of
+preparations. For an arbitrary continuous section <span
+class="math inline">\(A\)</span>, approximate <span
+class="math inline">\(A(0)\in C_0(T^*\mathbb R)\)</span> uniformly by
+compactly supported smooth symbols. Continuity of the field and the
+norm-one bound on states extend (15) from these symbols to <span
+class="math inline">\(A\)</span>. At fixed <span
+class="math inline">\(h\)</span>, taking the mesh limit recovers the
+exact unitary state as in the first document. Both routes thus reach the
+same zero-fiber state; equality or closeness of the two quantum vectors
+along an arbitrary joint schedule has <strong>not</strong> been
+established.</p>
+<h2 id="a-precise-two-scale-test-on-euclidean-increments">4. A precise
+two-scale test on Euclidean increments</h2>
+<p>The preceding theorem concerns real-time operator states. It does not
+claim that Euclidean sample paths are real-time trajectories. The
+following free Gaussian calculation shows why the groupoid coordinate,
+the action parameter and the duration must not be conflated.</p>
+<p>Consider a drifted free reference increment <span
+class="math display">\[Y-X=u\delta+\sqrt{\frac{h\delta}{m}}\,Z,
+\qquad Z\sim N(0,1).\tag{16}\]</span> Set <span
+class="math inline">\(h=\epsilon S_*\)</span> and <span
+class="math inline">\(\delta=T_*\epsilon^\alpha\)</span> with <span
+class="math inline">\(\alpha&gt;0\)</span>. The physical-time difference
+quotient is <span class="math display">\[\frac{Y-X}{\delta}
+=u+\sqrt{\frac{S_*}{mT_*}}\,
+       \epsilon^{(1-\alpha)/2}Z,\tag{17}\]</span> whereas the
+tangent-groupoid chart variable is <span
+class="math display">\[v_\epsilon=\frac{Y-X}{\epsilon}
+=uT_*\epsilon^{\alpha-1}
+  +\sqrt{\frac{S_*T_*}{m}}\,
+       \epsilon^{(\alpha-1)/2}Z.\tag{18}\]</span></p>
+<ul>
+<li>If <span class="math inline">\(0&lt;\alpha&lt;1\)</span>, the
+physical-time quotient concentrates at <span
+class="math inline">\(u\)</span>, but <span
+class="math inline">\(v_\epsilon\)</span> is not tight.</li>
+<li>If <span class="math inline">\(\alpha=1\)</span>, <span
+class="math inline">\(v_\epsilon\)</span> converges in law to a
+nondegenerate Gaussian of mean <span class="math inline">\(uT_*\)</span>
+and variance <span class="math inline">\(S_*T_*/m\)</span>.</li>
+<li>If <span class="math inline">\(\alpha&gt;1\)</span>, <span
+class="math inline">\(v_\epsilon\to0\)</span> in probability, while the
+physical-time quotient is not tight.</li>
+</ul>
+<p>This is an exact diagnostic for the Euclidean Gaussian reference, not
+a probability law for real-time Feynman paths. It also does not
+contradict (15): a groupoid observable is obtained after the Fourier and
+operator construction, whereas (18) examines a single sampled Euclidean
+increment.</p>
+<h2 id="where-blocking-sits-in-the-groupoid-picture">5. Where blocking
+sits in the groupoid picture</h2>
+<p>For each <span class="math inline">\(\epsilon&gt;0\)</span> the first
+document supplies a complete tower <span
+class="math inline">\(\rho_{\epsilon,n}\)</span> of normalized
+conditional densities on dyadic time samples. The relation <span
+class="math display">\[\rho_{\epsilon,n}
+=\mathbb E_{0,\epsilon}[
+          \rho_{\epsilon,n+1}\mid\mathcal F_n]\tag{19}\]</span> is exact
+and retains all generated interactions. The integer <span
+class="math inline">\(n\)</span> counts an integration/coarse-graining
+operation; <span class="math inline">\(\epsilon\)</span> labels the
+deformation field (4). The conditional maps are generally not
+invertible, so they are not automatically arrows of the tangent
+groupoid.</p>
+<p>Equation (15) connects these scales for the real-time
+<strong>observable states</strong> even when they are tied by a single
+chosen schedule. It does not follow from the <span
+class="math inline">\(1/Z_{\epsilon}\)</span> Euclidean bound, which
+need not be uniform in <span class="math inline">\(\epsilon\)</span>,
+and it does not promote Euclidean minimization into real-time Newton
+dynamics.</p>
+<p>The zoom action on the tangent groupoid is a geometric rescaling of
+near-diagonal arrows. It is useful for organizing a comparison with RG,
+but it is not by itself an integration of fluctuations or a theorem that
+the physical action constant runs. Likewise, the real-time Hamilton
+principal action composes by stationary elimination on a specified
+noncaustic branch; infimal convolution is appropriate for a genuine
+minimizing Euclidean problem or a separately proved special case. The
+older <a href="tangent-groupoid-trajectories.html">groupoid note</a> is
+to be read with these qualifications.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The constructed <span class="math inline">\(0+1\)</span> quantum
+family, the semiclassical Newton flow and the user’s tangent-groupoid
+framework now meet in a concrete state theorem with a joint mesh/action
+error bound. The strong operator product limit remains a fixed-<span
+class="math inline">\(h\)</span> theorem; the Euclidean density tower
+and the real-time coherent states have distinct roles. No positive
+universal action scale or four-dimensional Yang–Mills result
+follows.</p>
+<p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27).</strong> An
+internal mathematical review checked the chart and Fourier
+normalizations, the state and Gaussian-scale bounds, the extension to
+continuous sections, and the estimate (10). It is not independent peer
+review of the underlying continuous-field theorem or of the
+literature.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

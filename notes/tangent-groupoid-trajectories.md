@@ -1,5 +1,19 @@
 # The tangent groupoid, its zoom, and whole trajectories
 
+**Correction, 2026-10-27.** The earlier numbered summary below and
+corresponding passages are historical and their broad identifications
+are withdrawn. The groupoid zoom is a geometric rescaling; identifying
+it with integration of fluctuations or with a running physical action
+constant requires additional arguments. A real-time Hamilton principal
+function composes by stationary elimination on an appropriate branch,
+not by an unconditional global minimum. Euclidean Brownian scaling is
+not a probability law for real-time Feynman paths, and an unqualified
+claim that quantum paths have Hausdorff dimension two is not justified.
+The precise state-level construction, the different scales and a Gaussian
+scaling test are given in the later
+[tangent-groupoid formulation](groupoid-quantum-newton-states.md).
+The constant-force calculation remains a separately scoped example.
+
 **Result, 2026-09-27 (user's question: what Connes's tangent groupoid
 adds, beyond the user's 1998 and 2003 readings, and whether it extends
 to a whole trajectory).** Three statements.

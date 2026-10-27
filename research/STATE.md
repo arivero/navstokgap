@@ -17,6 +17,18 @@ $SU(2)$ matrix gap to its gauge-singlet sector. The Newton action
 constant is supplied. The central-limit calculation in **Next** remains
 unstarted; the four-dimensional gauge construction remains deferred.
 
+**User-directed quantum-to-Newton construction, 2026-10-27.** The
+[multiscale proof](../notes/quantum-blocks-construct-newton.md) builds
+a scoped $0+1$ quantum family and obtains the classical initial-value
+solution as the joint limit of finite-slice coherent-state means, with
+an explicit $O(\sqrt h+|\pi|)$ estimate. It uses the same
+Lipschitz/Gronwall stability as Cauchy--Lipschitz. The
+[tangent-groupoid formulation](../notes/groupoid-quantum-newton-states.md)
+places the observable states in a continuous field and distinguishes
+deformation, time mesh and blocking. The positive action scale remains
+supplied; neither document proves its necessity. The model-advisor
+checks recorded there are not independent peer review.
+
 ## Goal
 
 User direction, 2026-09-26: one eventual paper on what survives

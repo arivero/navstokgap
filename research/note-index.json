@@ -5,6 +5,51 @@
  "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
  "notes": [
   {
+   "path": "notes/groupoid-quantum-newton-states.md",
+   "title": "A tangent-groupoid formulation of the quantum construction of Newton motion",
+   "summary": "A continuous field joins quantum compact-operator fibers to classical phase-space functions; coherent finite-slice states converge to the Newton point state with O(sqrt(h)+mesh) error.",
+   "thematic_area": "refinement/comparison",
+   "strongest_result": "For a coherent preparation and a globally bounded-Hessian potential, the Weyl-observable state approaches the point state on any joint time-mesh and action-parameter schedule, with a quantitative bound. The deformation parameter, time mesh and coarse-graining are distinct.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "User-directed state-level implementation of the tangent-groupoid quantum-to-classical limit.",
+   "relations": [
+    {"type": "uses", "target": "notes/quantum-blocks-construct-newton.md", "reason": "Uses the constructed classical flow and finite-product coherent-state estimates."},
+    {"type": "corrects", "target": "notes/tangent-groupoid-trajectories.md", "reason": "Separates geometric zoom from blocking and corrects real-time and Euclidean path identifications."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["tangent groupoid", "continuous field", "coherent states", "Weyl quantization", "Egorov", "joint mesh action limit", "Euclidean scales"],
+   "role": "result,synthesis",
+   "value": "infrastructure,synthesis",
+   "limitations": "Positive action scale is supplied; the state bound has globally bounded-Hessian hypotheses and does not show quantum-propagator norm convergence along all joint schedules. Targeted model-advisor check is not independent peer review.",
+   "content_coverage": "full read and targeted advisor check, 2026-10-27"
+  },
+  {
+   "path": "notes/quantum-blocks-construct-newton.md",
+   "title": "From multiscale quantum mechanics to Newton's initial-value problem",
+   "summary": "Normalized Euclidean time blocks and a quantum product construction yield a coherent-state Cauchy family whose means construct the unique Newton trajectory with O(sqrt(h)+mesh) error, with a quartic classical cutoff extension.",
+   "thematic_area": "refinement/comparison",
+   "strongest_result": "For smooth nonnegative potentials with globally bounded higher derivatives, finite quantum packet means form a Cauchy family as action and mesh jointly vanish, giving the unique classical trajectory without assuming it in advance.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "User-directed Dimock–Balaban-inspired 0+1 existence and classical ODE comparison.",
+   "relations": [
+    {"type": "uses", "target": "notes/constructive-qft-one-time.md", "reason": "Builds on the earlier scoped 0+1 Euclidean and Hamiltonian construction."},
+    {"type": "uses", "target": "notes/balaban-ode-lesson.md", "reason": "Compares its direct polygon and Lipschitz route with the quantum packet route."},
+    {"type": "continues", "target": "notes/groupoid-quantum-newton-states.md", "reason": "The groupoid formulation builds on this proof and its explicit scale bounds."}
+   ],
+   "surprising": false,
+   "route_closure": false,
+   "keys": ["Dimock Balaban", "normalized density tower", "Brownian bridge", "quantum mechanics", "coherent states", "Newton ODE", "joint time mesh and action limit", "Cauchy Lipschitz"],
+   "role": "result,synthesis",
+   "value": "infrastructure,synthesis",
+   "limitations": "Lipschitz/Gronwall stability is required; h is supplied; the Dimock–Balaban connection is architectural, not their four-dimensional estimates. The quartic extension is classical via cutoff. Targeted model-advisor check is not independent peer review.",
+   "content_coverage": "full read and targeted advisor check, 2026-10-27"
+  },
+  {
    "path": "notes/abelian-misses-the-box.md",
    "title": "Strong coupling for abelian and non-abelian gauge theories: a shared existential gap",
    "summary": "Both compact U(1) and SU(3) have volume-uniform strong-coupling KS gaps by the group-general Yarotsky application with an existential threshold. The October 2 correction withdraws inherited explicit continuous-time rates and box location. A written U(1) finite-volume bound is 2g²−4P/g² in units ℏc/a on tori with sides at least four.",
@@ -6060,7 +6105,7 @@
    "title": "The tangent groupoid, its zoom, and whole trajectories",
    "thematic_area": "refinement/comparison",
    "status": "exploratory",
-   "current_relevance": "Geometric architecture for the current Newton/gauge refinement comparison; its quantum diffusion interpretation assumes an action unit.",
+   "current_relevance": "Historical geometric comparison, subject to the 2026-10-27 correction and the later groupoid state formulation.",
    "relations": [
     {
      "type": "uses",
@@ -6079,8 +6124,8 @@
     }
    ],
    "path": "notes/tangent-groupoid-trajectories.md",
-   "summary": "Relates tangent-groupoid zoom and principal symbols to single-step refinement, and time-graded composition to whole trajectories; constant-force action/kernel laws provide the explicit example.",
-   "strongest_result": "Relates tangent-groupoid zoom and principal symbols to single-step refinement, and time-graded composition to whole trajectories; constant-force action/kernel laws provide the explicit example. Limit/reuse: Geometric identifications are readings of established constructions. Diffusive quantum-path interpretation presupposes supplied positive ℏ and does not establish action necessity; uses [refinement construction](refinement-composition-and-limit.md) and [fifth postulate](principia-fifth-postulate.md).",
+   "summary": "Historical exploration of tangent-groupoid zoom and time-graded composition, with a constant-force example; broad identifications are withdrawn by the 2026-10-27 correction.",
+   "strongest_result": "The constant-force action and kernel furnish a separately scoped composition example. The correction distinguishes geometric zoom from RG integration, stationary real-time composition from global minimization, and Euclidean diffusion from real-time paths.",
    "proof_status": "mixed",
    "retrieval_priority": 3,
    "surprising": true,
@@ -6096,8 +6141,8 @@
    ],
    "role": "synthesis,result",
    "value": "synthesis,infrastructure",
-   "limitations": "Geometric identifications are readings of established constructions. Diffusive quantum-path interpretation presupposes supplied positive ℏ and does not establish action necessity; uses refinement construction and fifth postulate.",
-   "content_coverage": "full read including later corrections and appendices"
+   "limitations": "The introductory correction withdraws broad claims about RG, global action minimization and unqualified quantum trajectory dimension. Use groupoid-quantum-newton-states for the corrected state formulation.",
+   "content_coverage": "full read including the 2026-10-27 correction and prior appendices"
   },
   {
    "title": "A finite-speed return bridge: cuts and midpoint crossover",
