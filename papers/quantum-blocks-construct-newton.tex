@@ -24,15 +24,19 @@ unitary group of the reconstructed self-adjoint Hamiltonian.
 
 For every initial \((q_0,p_0)\), means of finite quantum time-slice
 products are a Cauchy family as both \(h\) and the time mesh tend to
-zero. An explicit estimate controls both scales simultaneously. Their
-limit solves \(\dot q=p/m\), \(\dot p=-V'(q)\); it is the unique
-solution. An explicit bound compares any two positive values of \(h\).
-The proof does not assume a classical trajectory in advance. Its
-stability hypothesis and Gronwall estimate are the same ingredients used
-by Cauchy--Lipschitz, so the construction is a different route, not a
-weakening of that theorem. Smooth confining potentials with locally
-Lipschitz force, including the positive quartic, follow by a cutoff and
-energy conservation.
+zero. An explicit \(O(h+|\pi|)\) estimate controls both scales
+simultaneously for the means, while the packet widths remain
+\(O(\sqrt h)\). Their limit solves \(\dot q=p/m\), \(\dot p=-V'(q)\); it
+is the unique solution. An explicit bound compares any two positive
+values of \(h\). The proof does not assume a classical trajectory in
+advance. Its stability hypothesis and Gronwall estimate are the same
+ingredients used by Cauchy--Lipschitz, so the construction is a
+different route, not a weakening of that theorem. For smooth confining
+potentials with locally Lipschitz force, including the positive quartic,
+a cutoff and energy conservation construct the classical trajectory from
+quantum families with cutoff potentials. This argument does not prove
+the joint approximation estimate for the uncut quartic quantum
+evolution.
 
 For a didactic entry point, see
 \href{newton-dimock-balaban-guide.md}{Newton, quantum mechanics and
@@ -53,7 +57,9 @@ follows only after this theorem.
 finite-step identities, constants, joint Cauchy estimate, domain
 argument, quartic energy barrier and cusp counterexample were checked in
 writing. This is not an independent proof audit of the imported Wiener,
-Feynman--Kac, self-adjointness or spectral theorems.
+Feynman--Kac, self-adjointness or spectral theorems. The centered
+\(O(h)\) improvement below follows a subsequent user-suggested
+calculation and is not covered by that earlier check.
 
 \hypertarget{hypotheses-and-the-quantum-theory-to-be-constructed}{%
 \subsection{1. Hypotheses and the quantum theory to be
@@ -268,7 +274,7 @@ The means obey \[p_{j+1}=p_j-s_j\langle V'(Q)\rangle_j,\qquad
  R_T=e^{\beta T}\big(\|(q_0,p_0)\|_\omega+Tb\big),\qquad
  F_T=|V'(0)|+L(R_T+C\sqrt{h_0}e^{\beta T}),\\
  C_\delta=\frac{F_T+LR_T}{m},\qquad
- C_h=\frac{LCe^{\beta T}}{m\omega},\qquad
+ C_h=\frac{\|V'''\|_\infty C^2e^{2\beta T}}{2m\omega},\qquad
  G_T=\frac{e^{aT}-1}{a}.
  \tag{21}
 \end{gathered}\] Equation (19) and (20) imply recursively that every
@@ -284,12 +290,21 @@ the residual are bounded by \[
  |\dot q_{h,\pi}-p_{h,\pi}/m|
      \le |\pi|F_T/m,\quad
  |\dot p_{h,\pi}+V'(q_{h,\pi})|
-     \le LC\sqrt h\,e^{\beta T}+L|\pi|\,\omega R_T.\tag{22}
+     \le \tfrac12\|V'''\|_\infty C^2h\,e^{2\beta T}
+       +L|\pi|\,\omega R_T.\tag{22}
 \] Consequently \[\|\dot z_{h,\pi}-\mathcal F(z_{h,\pi})\|_\omega
- \le C_\delta|\pi|+C_h\sqrt h.\tag{23}\] The first residual is the
-difference between the interpolated momentum and its post-kick value;
-the second is the sum of the packet's force variance and the motion of
-the interpolated position.
+ \le C_\delta|\pi|+C_h h.\tag{23}\] The first residual is the difference
+between the interpolated momentum and its post-kick value; the second is
+the sum of the packet's force bias and the motion of the interpolated
+position. For the bias, Taylor expand \(V'\) around the packet mean
+\(q_j=\langle Q\rangle_j\). Its linear term has zero expectation, so \[
+ |\langle V'(Q)\rangle_j-V'(q_j)|
+ \le\tfrac12\|V'''\|_\infty\operatorname{Var}_j(Q)
+ \le\tfrac12\|V'''\|_\infty C^2h\,e^{2\beta T}.\tag{23a}
+\] The bounded third derivative is part of the standing hypotheses. For
+quadratic potentials \(V'''=0\) and the force-bias term vanishes
+exactly. This improves the mean error; (19) still gives widths of order
+\(\sqrt h\).
 
 The vector field \(\mathcal F\) has Lipschitz constant at most \(a\) in
 this norm. Integrating the residuals of two products with common initial
@@ -297,7 +312,7 @@ data, and applying Gronwall, gives \[
  \sup_{t\le T}\|z_{h,\pi}(t)-z_{k,\sigma}(t)\|_\omega
  \le G_T\!\left[
  C_\delta(|\pi|+|\sigma|)
- +C_h(\sqrt h+\sqrt k)\right].\tag{24}
+ +C_h(h+k)\right].\tag{24}
 \] Thus the means are Cauchy in \(C([0,T],\mathbb R^2)\) as the two
 scales \(h\) and \(|\pi|\) tend to zero \textbf{in any joint order}. Let
 \(z=(q,p)\) be their limit. Equation (23) passes to the integral
@@ -311,7 +326,7 @@ replacing \(p\) by \(-p\) and reversing time.
 Letting \((k,|\sigma|)\to(0,0)\) in (24) yields the explicit joint bound
 \[
  \sup_{t\le T}\|z_{h,\pi}(t)-z(t)\|_\omega
- \le G_T\big(C_\delta|\pi|+C_h\sqrt h\big).\tag{26}
+ \le G_T\big(C_\delta|\pi|+C_h h\big).\tag{26}
 \] The constants are independent of the number of cells and of \(h\) in
 \((0,h_0]\). Equation (26) is an observable-level statement about the
 packet means; it is not an operator-norm estimate on real-time
@@ -332,7 +347,7 @@ upgrades to uniform convergence on \([0,T]\). Passing to the limit in
 (26) gives \[
  \sup_{t\le T}
  \left\|(\langle Q\rangle_t,\langle P\rangle_t)-z(t)\right\|_\omega
- \le G_T C_h\sqrt h.\tag{27}
+ \le G_T C_h h.\tag{27}
 \] This uses no differentiation of an unbounded quantum observable. It
 also proves the claimed consistency of the two limiting orders for these
 means. The construction assumes a semiclassical family \(h\downarrow0\);

@@ -21,7 +21,8 @@ conditionally in **Next**; the four-dimensional gauge construction remains defer
 [multiscale proof](../notes/quantum-blocks-construct-newton.md) builds
 a scoped $0+1$ quantum family and obtains the classical initial-value
 solution as the joint limit of finite-slice coherent-state means, with
-an explicit $O(\sqrt h+|\pi|)$ estimate. It uses the same
+an explicit $O(h+|\pi|)$ mean estimate while packet widths are
+$O(\sqrt h)$. It uses the same
 Lipschitz/Gronwall stability as Cauchy--Lipschitz. The
 [tangent-groupoid formulation](../notes/groupoid-quantum-newton-states.md)
 places the observable states in a continuous field and distinguishes

@@ -3,18 +3,20 @@
 **Result, 2026-10-27.** The finite-slice construction of
 [Newton motion](quantum-blocks-construct-newton.md) extends to a
 nonquadratic kinetic energy $T(P)$ whenever $T'$ and $V'$ are globally
-Lipschitz. For the positive-energy relativistic dispersion
+Lipschitz. The sharper mean rate stated below also uses the bounded
+third derivatives in §1. For the positive-energy relativistic dispersion
 $$T_c(p)=\sqrt{m^2c^4+c^2p^2}-mc^2,\qquad m,c>0,\tag{1}$$
 the constants in the packet estimates can be chosen independently of
-$c$. For fixed initial data and finite time, the finite-product
+$c\ge c_0>0$. For fixed initial data and finite time, the finite-product
 coherent-state means obey
 $$
  \sup_{0\le t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
- \le C_T\left(\sqrt\hbar+|\pi|+\frac1{c^2}\right).\tag{2}
+ \le C_T\left(\hbar+|\pi|+\frac1{c^2}\right).\tag{2}
 $$
 Here $z_{\rm N}$ is the Newton solution for the same $V$, $\pi$ is an
 arbitrary positive time partition and $\gamma>0$ fixes a phase-space
-norm. Thus $\hbar\downarrow0$, time refinement and $c\to\infty$ may
+norm. This is a mean bound; the packet widths remain $O(\sqrt\hbar)$.
+Thus $\hbar\downarrow0$, time refinement and $c\to\infty$ may
 be taken jointly at the level of these means. Explicit constants and
 a proof are given below.
 
@@ -41,6 +43,8 @@ general spin and magnetic setting.
 packet, domain, strong-resolvent and spectral-wall arguments were
 checked with corrections applied. This is not independent peer review
 of the result or of the imported operator and probability theorems.
+The centered $O(\hbar)$ improvement is a subsequent written derivation,
+not part of that earlier check.
 
 ## 1. A general dispersion and its quantum realization
 
@@ -50,6 +54,9 @@ $T,V\in C^\infty(\mathbb R)$ are bounded below and that all derivatives
 of order at least two are bounded. Add constants so that $T,V\ge0$,
 which affects only a phase. Write
 $$L=\|V''\|_\infty,\qquad M=\|T''\|_\infty.\tag{3}$$
+For the sharper mean estimate also write
+$L_3=\|V'''\|_\infty$ and $M_3=\|T'''\|_\infty$, which are finite under
+the standing smoothness assumptions.
 The finite-product estimates alone need only $C^1$ functions with
 globally Lipschitz derivatives; the smoother class makes the domain
 argument explicit. Define on Schwartz space
@@ -156,21 +163,25 @@ $\mathcal F_T(q,p)=(T'(p),-V'(q))$. Its Lipschitz constant in
 $\|\cdot\|_\gamma$ is at most $a$. On every cell,
 $$
  \|\dot z_{\hbar,\pi}-\mathcal F_T(z_{\hbar,\pi})\|_\gamma
- \le C_\delta|\pi|+C_h\sqrt\hbar,\qquad
+ \le C_\delta|\pi|+C_h\hbar,\qquad
  C_\delta=MF_T+\gamma LU_T,\quad
- C_h=\beta C e^{\beta T}.\tag{15}
+ C_h=\frac{C^2e^{2\beta T}}2
+             \left(\frac{M_3}{\gamma^2}+\gamma L_3\right).\tag{15}
 $$
-For example, the position residual is bounded by
-$M\operatorname{sd}P_{\rm kick}+M|p_{j+1}-p(t)|$; the momentum
-residual is bounded by
-$L\operatorname{sd}Q_j+L|q_j-q(t)|$.
+For each mean, expand $V'$ and $T'$ around its corresponding current
+mean; the linear terms have zero expectation. Thus the force bias is
+at most $\frac12L_3\operatorname{Var}_j(Q)$, and the post-kick velocity
+bias is at most $\frac12M_3\operatorname{Var}_{j,\rm kick}(P)$.
+Use (11), including the intermediate-state bound, and add the
+within-cell changes $M|p_{j+1}-p(t)|$ and $L|q_j-q(t)|$. This proves
+(15) without assuming the propagated state is Gaussian.
 
 Comparing two meshes and two positive values $\hbar,k$, integration and
 Gronwall give
 $$
  \sup_{t\le T}\|z_{\hbar,\pi}(t)-z_{k,\sigma}(t)\|_\gamma
  \le G_T\{C_\delta(|\pi|+|\sigma|)
-           +C_h(\sqrt\hbar+\sqrt k)\},\quad
+           +C_h(\hbar+k)\},\quad
  G_T=\frac{e^{aT}-1}{a}.\tag{16}
 $$
 The interpolants are therefore Cauchy as both scales tend to zero, and
@@ -192,8 +203,14 @@ $$
              \le\frac1m.\tag{18}
 $$
 All hypotheses above hold for every $c>0$, with common
-$M=1/m$ and $T_c'(0)=0$. In particular, (11)--(16) have constants
-independent of $c$. The finite-$c$ classical solution $z_c$ from
+$M=1/m$ and $T_c'(0)=0$. For $c\ge c_0>0$,
+$$
+ |T_c'''(p)|=\frac{3|p|}{m^3c^2}
+       \left(1+\frac{p^2}{m^2c^2}\right)^{-5/2}
+ \le\frac3{m^2c_0}.\tag{18a}
+$$
+Consequently all constants in (11)--(16) can be chosen independently
+of $c\ge c_0$. The finite-$c$ classical solution $z_c$ from
 (17) is the positive-energy relativistic particle with
 $$\dot q=\frac{pc^2}{\sqrt{m^2c^4+c^2p^2}},\qquad
  \dot p=-V'(q),\qquad |\dot q|<c.\tag{19}$$
@@ -215,30 +232,32 @@ Together with (15)--(16),
 $$
  \sup_{t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
  \le G_T\!\left[
- C_\delta|\pi|+C_h\sqrt\hbar
+ C_\delta|\pi|+C_h\hbar
  +\frac{(R/\gamma)^3}{2m^3c^2}\right].\tag{22}
 $$
 This proves (2). The bound is for fixed initial phase-space data and
 finite $T$; it is not uniform in momenta of order $mc$.
 
-For any compactly supported smooth phase-space symbol $b$, the Weyl
-Fourier argument in the
+For any compactly supported smooth phase-space symbol $b$, the centered
+second-order Weyl Fourier argument in the
 [groupoid companion](groupoid-quantum-newton-states.md) converts the
 spread and mean bounds into
 $$
  |\langle\operatorname{Op}_\hbar^W(b)\rangle_j-b(z_{\rm N}(t_j))|
- \le I_{b,\gamma}\!\left[
- Ce^{\beta T}\sqrt\hbar+G_T\!\left(
- C_\delta|\pi|+C_h\sqrt\hbar
- +\frac{(R/\gamma)^3}{2m^3c^2}\right)\right],\tag{23}
+ \le J_{b,\gamma}C^2e^{2\beta T}\hbar+
+ I_{b,\gamma}G_T\!\left(
+ C_\delta|\pi|+C_h\hbar
+ +\frac{(R/\gamma)^3}{2m^3c^2}\right),\tag{23}
 $$
 where
 $$I_{b,\gamma}=(2\pi)^{-2}\int|\widehat b(\xi,\eta)|
-            (|\xi|+|\eta|/\gamma)\,d\xi d\eta.\tag{24}$$
+            (|\xi|+|\eta|/\gamma)\,d\xi d\eta,\quad
+ J_{b,\gamma}=\frac1{2(2\pi)^2}\int|\widehat b(\xi,\eta)|
+            (|\xi|+|\eta|/\gamma)^2\,d\xi d\eta.\tag{24}$$
 Thus a chosen diagonal schedule
 $\hbar=S_*\epsilon$, $|\pi|\le T_*\epsilon^\alpha$ and
 $c\ge c_*\epsilon^{-\kappa}$, with $\alpha,\kappa>0$, gives
-$O(\epsilon^{1/2}+\epsilon^\alpha+\epsilon^{2\kappa})$ for those
+$O(\epsilon+\epsilon^\alpha+\epsilon^{2\kappa})$ for those
 observables at partition vertices. The groupoid deformation, mesh and
 $c$ remain distinct until this schedule is chosen.
 

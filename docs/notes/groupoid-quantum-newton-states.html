@@ -90,11 +90,12 @@ href="quantum-blocks-construct-newton.html">the first document</a>
 define compatible states on these fibers. On every compact time
 interval, their values on smooth Weyl observables converge to the
 classical point state with an explicit <span
-class="math inline">\(O(\sqrt h+|\pi|)\)</span> bound, for <strong>every
-joint schedule</strong> with <span
+class="math inline">\(O(h+|\pi|)\)</span> bound, for <strong>every joint
+schedule</strong> with <span
 class="math inline">\(h,|\pi|\to0\)</span>.</p>
 <p>The result is a state-level limit for the specified coherent
-preparations and globally bounded-Hessian potentials. The quartic
+preparations and smooth potentials with bounded derivatives of order at
+least two, including the third derivative used for the rate. The quartic
 extension in the first document uses cutoff Hamiltonians; it does not
 establish this estimate for uncut quartic quantum evolution. The result
 neither makes the finite-product propagator uniformly close to the exact
@@ -225,32 +226,39 @@ I_a=(2\pi)^{-2}\int_{\mathbb R^2}
 \,d\xi\,d\eta&lt;\infty.\tag{11}
 \]</span> Here <span class="math inline">\(\widehat a\)</span> is the
 ordinary Fourier transform in <span
-class="math inline">\((q,p)\)</span>. Using the exact Fourier
-representation of Weyl quantization, <span
-class="math display">\[\operatorname{Op}_h^W(a)
-=(2\pi)^{-2}\int\widehat a(\xi,\eta)
-             e^{i(\xi Q+\eta P)}d\xi\,d\eta,\tag{12}\]</span> and the
-spectral bound <span
-class="math inline">\(\|(e^{iA}-1)\psi\|\le\|A\psi\|\)</span>, <span
+class="math inline">\((q,p)\)</span>. Also put <span
 class="math display">\[
+J_a=\frac1{2(2\pi)^2}\int_{\mathbb R^2}
+|\widehat a(\xi,\eta)|\big(|\xi|+m\omega|\eta|\big)^2
+\,d\xi\,d\eta&lt;\infty.\tag{11a}
+\]</span> Using the exact Fourier representation of Weyl quantization,
+<span class="math display">\[\operatorname{Op}_h^W(a)
+=(2\pi)^{-2}\int\widehat a(\xi,\eta)
+             e^{i(\xi Q+\eta P)}d\xi\,d\eta,\tag{12}\]</span> set <span
+class="math inline">\(A=\xi(Q-q_j)+\eta(P-p_j)\)</span>. The scalar
+phase <span class="math inline">\(e^{i(\xi q_j+\eta p_j)}\)</span>
+factors out, <span class="math inline">\(\langle A\rangle_j=0\)</span>,
+and spectral calculus gives <span class="math inline">\(|\langle
+e^{iA}\rangle_j-1|  \le\tfrac12\langle A^2\rangle_j\)</span>.
+Consequently, <span class="math display">\[
 |\langle\operatorname{Op}_h^W(a)\rangle_j-a(q_j,p_j)|
-\le I_a\!\left[
+\le J_a\!\left[
 \operatorname{sd}(Q)_j+\frac{\operatorname{sd}(P)_j}{m\omega}
-\right].\tag{13}
-\]</span> The phase factor <span class="math inline">\(e^{i(\xi q_j+\eta
-p_j)}\)</span> is removed before applying the inequality to the
-self-adjoint linear combination of centered <span
-class="math inline">\(Q,P\)</span>. Fourier inversion also gives <span
-class="math inline">\(|a(z)-a(z&#39;)|\le
+\right]^2.\tag{13}
+\]</span> Indeed <span class="math inline">\(\langle
+A^2\rangle_j=\|A\psi_{h,\pi,j}\|^2\)</span> and the triangle inequality
+bounds <span class="math inline">\(\|A\psi_{h,\pi,j}\|\)</span> by the
+weighted sum of the two standard deviations. No Gaussian-shape
+assumption is needed after the first step. Fourier inversion also gives
+<span class="math inline">\(|a(z)-a(z&#39;)|\le
 I_a\|z-z&#39;\|_\omega\)</span>.</p>
 <p>The first document’s estimates (19) and (26) therefore give, at every
 partition vertex <span class="math inline">\(t_j\in[0,T]\)</span>, <span
 class="math display">\[
 \left|\langle\psi_{h,\pi,j},\operatorname{Op}_h^W(a)
                          \psi_{h,\pi,j}\rangle-a(z(t_j))\right|
-\le I_a\!\left[
-C e^{\beta T}\sqrt h+
-G_T(C_\delta|\pi|+C_h\sqrt h)\right].\tag{14}
+\le J_a C^2 e^{2\beta T}h+
+I_aG_T(C_\delta|\pi|+C_hh).\tag{14}
 \]</span> The constants <span
 class="math inline">\(C,\beta,G_T,C_\delta,C_h\)</span> are explicitly
 defined in that document and depend on the common <span
@@ -267,9 +275,9 @@ Equation (14) yields <span class="math display">\[
 \longrightarrow a(\Phi_t(q_0,p_0))
 \quad\text{at vertices tending to }t,\tag{15}
 \]</span> with error <span
-class="math inline">\(O(\epsilon^{1/2}+\epsilon^\alpha)\)</span> at
-vertices equal to <span class="math inline">\(t\)</span>. Such a vertex
-can be inserted in each partition. There is no constraint here on <span
+class="math inline">\(O(\epsilon+\epsilon^\alpha)\)</span> at vertices
+equal to <span class="math inline">\(t\)</span>. Such a vertex can be
+inserted in each partition. There is no constraint here on <span
 class="math inline">\(|\pi_\epsilon|/h\)</span>.</p>
 <p>This means that the vector states on the positive fibers approach the
 point-evaluation state on the zero fiber, for the specified family of
@@ -366,8 +374,10 @@ follows.</p>
 internal mathematical review checked the chart and Fourier
 normalizations, the state and Gaussian-scale bounds, the extension to
 continuous sections, and the estimate (10). It is not independent peer
-review of the underlying continuous-field theorem or of the
-literature.</p>
+review of the underlying continuous-field theorem or of the literature.
+The centered <span class="math inline">\(O(h)\)</span> state improvement
+in §3 is a subsequent written derivation and was not part of that
+earlier check.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -99,11 +99,11 @@ energy (2) is conserved. If \(V\) is bounded below, the same speed and
 position bounds as above prove global existence and uniqueness, even if
 \(B\) is not globally bounded.
 
-For instance, a constant field \(B=B_0\hat z\) rotates the transverse
-velocity with cyclotron frequency \(eB_0/m\) and leaves the longitudinal
-velocity constant. A velocity-dependent force is thus not an exception
-to the ODE theory; its dependence must be included in the phase-space
-vector field being estimated.
+For instance, if \(V\) is constant and \(B=B_0\hat z\), the field
+rotates the transverse velocity with cyclotron frequency \(eB_0/m\) and
+leaves the longitudinal velocity constant. A velocity-dependent force is
+thus not an exception to the ODE theory; its dependence must be included
+in the phase-space vector field being estimated.
 
 If \(B=\nabla\times A\) on \(\mathbb R^3\), the quantum Hamiltonian is
 \[H_{\hbar,A}=\frac1{2m}(-i\hbar\nabla-eA(q))^2+V(q).\tag{5}\] The
@@ -308,18 +308,23 @@ momentum spreads by \(C_T\sqrt\hbar\), uniformly over partitions of
 \([0,T]\).
 
 Let \(z_{\hbar,\pi}(t)\) interpolate the means after the finite cells.
-The spread bound and (16) imply the force-balance residual \[
+Under the detailed theorem's bounded \(V'''\) assumption, expand \(V'\)
+about the packet's mean. The linear term averages to zero, and the
+remaining force bias is bounded by
+\(\tfrac12\|V'''\|_\infty\operatorname{Var}(Q)=O(\hbar)\). Together with
+the spread bound and (16), this gives the force-balance residual \[
  \|\dot z_{\hbar,\pi}-\mathcal F(z_{\hbar,\pi})\|
-       \le C_T(\sqrt\hbar+|\pi|),
+       \le C_T(\hbar+|\pi|),
  \qquad \mathcal F(q,p)=(p/m,-V'(q)).\tag{17}
 \] Comparing two independently chosen \(\hbar\)'s and meshes, and
 applying Gronwall, shows that these interpolants form a Cauchy family.
 Its limit is the unique solution of (1), with
 \[\sup_{t\le T}\|z_{\hbar,\pi}(t)-z(t)\|
-        \le C_T(\sqrt\hbar+|\pi|).\tag{18}\] The
+        \le C_T(\hbar+|\pi|).\tag{18}\] The
 \href{quantum-blocks-construct-newton.md}{detailed proof} gives the
 weighted phase-space norm, constants, arbitrary-partition product limit
-and domains. The statement is about means; it does not assert that
+and domains. The packet's width still scales as \(O(\sqrt\hbar)\); the
+sharper estimate concerns its means. It does not assert that
 finite-product propagators converge uniformly in operator norm along
 arbitrary joint schedules.
 

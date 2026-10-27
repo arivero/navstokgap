@@ -29,7 +29,7 @@
   {
    "path": "notes/relativistic-dispersion-blocks.md",
    "title": "From quantum time slices to relativistic and Newtonian motion",
-   "summary": "Bounded dispersion curvature extends the packet construction and gives O(sqrt(h)+mesh+c^-2) joint convergence to Newton for the positive-energy relativistic particle; fixed h has strong-resolvent convergence, and a separate spectral Dirichlet wall has uniform position convergence through impact.",
+   "summary": "Bounded third derivatives give O(h+mesh+c^-2) mean and smooth Weyl convergence to Newton for the positive-energy relativistic particle; fixed h has strong-resolvent convergence, and a separate spectral Dirichlet wall has uniform position convergence through impact.",
    "thematic_area": "refinement/comparison",
    "strongest_result": "Finite products converge in their packet means as the action, mesh and inverse light speed vanish jointly; the spectral wall estimate is uniform through both relativistic and Newtonian impact times.",
    "status": "result",
@@ -45,8 +45,8 @@
    "keys": ["relativistic dispersion", "positive energy", "quantum time slices", "joint h mesh c limit", "strong resolvent", "subordinate Brownian", "spectral Dirichlet wall"],
    "role": "result,live",
    "value": "infrastructure,open-mechanism",
-   "limitations": "One-particle external potential in a fixed frame; action is supplied, time and initial momentum are fixed, and the spectral wall differs from killing the jump process. No interacting relativistic QFT or independent positive-action necessity is established.",
-   "content_coverage": "Full note and argument read; targeted advisor check and cited operator, subordination and boundary theorem statements checked, 2026-10-27. No independent peer review."
+   "limitations": "One-particle external potential in a fixed frame; action is supplied, time and initial momentum are fixed, c is bounded below, and the spectral wall differs from killing the jump process. No interacting relativistic QFT or independent positive-action necessity is established.",
+   "content_coverage": "Full note and argument read; targeted advisor check of the earlier bound and cited operator, subordination and boundary theorem statements checked, 2026-10-27. The sharper centered rate is a subsequent written derivation; no independent peer review."
   },
   {
    "path": "notes/classical-quantum-existence-conjecture.md",
@@ -77,7 +77,7 @@
   {
    "path": "notes/newton-dimock-balaban-guide.md",
    "title": "Newton, quantum mechanics and Dimock--Balaban: a guide through one time dimension",
-   "summary": "A source-specific guide relates normalized time blocks to Dimock I and II, explains classical existence and uniqueness for conservative and magnetic forces, and proves coherent-packet position convergence through a Dirichlet hard-wall bounce.",
+   "summary": "A source-specific guide relates normalized time blocks to Dimock I and II, explains classical existence and uniqueness for conservative and magnetic forces, and proves coherent-packet position convergence through a Dirichlet hard-wall bounce. The cyclotron example specifies a constant scalar potential; centered mean convergence is O(h+mesh).",
    "thematic_area": "refinement/comparison",
    "strongest_result": "Explicit odd-Gaussian estimates give position convergence uniformly through an elastic half-line impact and current-form momentum convergence uniformly away from the impact; the guide traces blocking, generated interactions, large fields and localization to specific Dimock statements.",
    "status": "result",
@@ -102,7 +102,7 @@
   {
    "path": "notes/groupoid-quantum-newton-states.md",
    "title": "A tangent-groupoid formulation of the quantum construction of Newton motion",
-   "summary": "A continuous field joins quantum compact-operator fibers to classical phase-space functions; coherent finite-slice states converge to the Newton point state with O(sqrt(h)+mesh) error.",
+   "summary": "A continuous field joins quantum compact-operator fibers to classical phase-space functions; centered finite-slice Weyl expectations converge to the Newton point state with O(h+mesh) error.",
    "thematic_area": "refinement/comparison",
    "strongest_result": "For a coherent preparation and a globally bounded-Hessian potential, the Weyl-observable state approaches the point state on any joint time-mesh and action-parameter schedule, with a quantitative bound. The deformation parameter, time mesh and coarse-graining are distinct.",
    "status": "result",
@@ -118,13 +118,13 @@
    "keys": ["tangent groupoid", "continuous field", "coherent states", "Weyl quantization", "Egorov", "joint mesh action limit", "Euclidean scales"],
    "role": "result,synthesis",
    "value": "infrastructure,synthesis",
-   "limitations": "Positive action scale is supplied; the state bound has globally bounded-Hessian hypotheses and does not show quantum-propagator norm convergence along all joint schedules. Targeted model-advisor check is not independent peer review.",
-   "content_coverage": "full read and targeted advisor check, 2026-10-27"
+   "limitations": "Positive action scale is supplied; the O(h) bound uses the bounded third derivative in the standing smoothness hypotheses and does not show quantum-propagator norm convergence along all joint schedules. Widths remain O(sqrt(h)).",
+   "content_coverage": "Full read and targeted advisor check of the earlier bound, 2026-10-27; the sharper centered rate is a subsequent written derivation, not part of that check."
   },
   {
    "path": "notes/quantum-blocks-construct-newton.md",
    "title": "From multiscale quantum mechanics to Newton's initial-value problem",
-   "summary": "Normalized Euclidean time blocks and a quantum product construction yield a coherent-state Cauchy family whose means construct the unique Newton trajectory with O(sqrt(h)+mesh) error, with a quartic classical cutoff extension.",
+   "summary": "Normalized Euclidean time blocks and a quantum product construction yield coherent-state means that construct the unique Newton trajectory with O(h+mesh) error; quartic classical trajectories use cutoff quantum families.",
    "thematic_area": "refinement/comparison",
    "strongest_result": "For smooth nonnegative potentials with globally bounded higher derivatives, finite quantum packet means form a Cauchy family as action and mesh jointly vanish, giving the unique classical trajectory without assuming it in advance.",
    "status": "result",
@@ -141,8 +141,8 @@
    "keys": ["Dimock Balaban", "normalized density tower", "Brownian bridge", "quantum mechanics", "coherent states", "Newton ODE", "joint time mesh and action limit", "Cauchy Lipschitz"],
    "role": "result,synthesis",
    "value": "infrastructure,synthesis",
-   "limitations": "Lipschitz/Gronwall stability is required; h is supplied; the Dimock–Balaban connection is architectural, not their four-dimensional estimates. The quartic extension is classical via cutoff. Targeted model-advisor check is not independent peer review.",
-   "content_coverage": "full read and targeted advisor check, 2026-10-27"
+   "limitations": "Lipschitz/Gronwall stability and bounded third derivative are required; h is supplied; the Dimock–Balaban connection is architectural. The quartic extension constructs classical motion from cutoff quantum families and does not establish joint convergence for uncut quartic evolution.",
+   "content_coverage": "Full read and targeted advisor check of the earlier bound, 2026-10-27; the sharper centered rate is a subsequent written derivation, not part of that check."
   },
   {
    "path": "notes/abelian-misses-the-box.md",
@@ -6220,8 +6220,8 @@
     }
    ],
    "path": "notes/tangent-groupoid-trajectories.md",
-   "summary": "Historical exploration of tangent-groupoid zoom and time-graded composition, with a constant-force example; broad identifications are withdrawn by the 2026-10-27 correction.",
-   "strongest_result": "The constant-force action and kernel furnish a separately scoped composition example. The correction distinguishes geometric zoom from RG integration, stationary real-time composition from global minimization, and Euclidean diffusion from real-time paths.",
+   "summary": "Constant-force actions form a min-plus kernel semigroup and quantum propagators compose as operators; a free-motion counterexample disproves the former groupoid-morphism claim.",
+   "strongest_result": "The constant-force endpoint action has an explicit min-plus convolution semigroup. The correction distinguishes that law from an additive groupoid morphism, geometric zoom from RG integration, stationary real-time composition from global minimization, and Euclidean diffusion from real-time paths.",
    "proof_status": "mixed",
    "retrieval_priority": 3,
    "surprising": true,
@@ -6237,7 +6237,7 @@
    ],
    "role": "synthesis,result",
    "value": "synthesis,infrastructure",
-   "limitations": "The introductory correction withdraws broad claims about RG, global action minimization and unqualified quantum trajectory dimension. Use groupoid-quantum-newton-states for the corrected state formulation.",
+   "limitations": "The introductory correction withdraws the former morphism claim and broad claims about RG, global action minimization and unqualified quantum trajectory dimension. Use groupoid-quantum-newton-states for the corrected state formulation.",
    "content_coverage": "full read including the 2026-10-27 correction and prior appendices"
   },
   {

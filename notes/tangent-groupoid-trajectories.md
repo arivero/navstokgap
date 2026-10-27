@@ -6,7 +6,10 @@ are withdrawn. The groupoid zoom is a geometric rescaling; identifying
 it with integration of fluctuations or with a running physical action
 constant requires additional arguments. A real-time Hamilton principal
 function composes by stationary elimination on an appropriate branch,
-not by an unconditional global minimum. Euclidean Brownian scaling is
+not by an unconditional global minimum. The separate claim that
+minimization is an ordinary groupoid-morphism property was also false:
+§3 replaces it by a min-plus kernel semigroup and gives a counterexample.
+Euclidean Brownian scaling is
 not a probability law for real-time Feynman paths, and an unqualified
 claim that quantum paths have Hausdorff dimension two is not justified.
 The precise state-level construction, the different scales and a Gaussian
@@ -32,15 +35,15 @@ to a whole trajectory).** Three statements.
    composes chords at one fixed $\varepsilon$, and at $\varepsilon=0$ it composes only
    vectors at one point. Refining a trajectory into more pieces is an
    operation on the groupoid $(x,y,u)\circ(y,z,v)=(x,z,u+v)$ that the user
-   introduced in 2003 as the "elementary school" groupoid. Refinement
-   consistency is a morphism property on it: classically
-   $\min_y[S(x,y,r)+S(y,z,u-r)]=S(x,z,u)$, satisfied by Hamilton's principal
-   function, the exact discrete Lagrangian of discrete mechanics, and for
-   Galileo's constant force by the corrected action $\ell_h$ of the
-   [refinement note](refinement-composition-and-limit.md), eq. (2)
-   (Proposition 1); quantum mechanically the convolution law
-   $K(u+v)=K(u)*K(v)$. The first is the $\hbar\to0$ tropical shadow of the
-   second (Maslov dequantization).
+   introduced in 2003 as the "elementary school" groupoid. When a
+   classical action actually minimizes, its endpoint kernels satisfy
+   $\inf_y[S_r(x,y)+S_v(y,z)]=S_{r+v}(x,z)$, a semigroup law under
+   min-plus convolution. This holds for Galileo's constant force in
+   Proposition 1 below; general real-time principal actions require
+   stationary elimination on a specified branch. Quantum kernels
+   compose by integration, interpreted as operator composition when
+   necessary. A Euclidean small-$\hbar$ Laplace limit can relate the
+   two kernel laws under additional hypotheses.
 3. **Along a quantum trajectory the ultimate velocity fails.** Quantum
    paths have Hausdorff dimension two: $\langle\Delta x^2\rangle\sim\hbar\tau/M$ over a step
    $\tau$, so $\Delta x/\tau$ diverges like $\tau^{-1/2}$. The tangent groupoid's
@@ -51,11 +54,9 @@ to a whole trajectory).** Three statements.
    of Itô's calculus. Newton's *velocitas ultima* is the ballistic
    boundary fibre, which quantum paths do not reach.
 
-The constructions are established; the identifications are readings,
-and Proposition 1 is elementary. The note gives the atlas's Newton row a
-geometric home: one step is an arrow of the tangent groupoid, a
-trajectory is a factorization in the time-graded groupoid, the zoom is
-the renormalization, and the principal symbol is what survives.
+The geometric constructions are established; the broader identifications
+are historical readings subject to the correction above. Proposition 1
+is the separately scoped constant-force kernel calculation.
 
 ## 1. Connes's construction
 
@@ -114,21 +115,35 @@ tangent groupoid, so the latter's algebra sits inside the former's
 arrow $(x,z,u)$ through intermediate points and times, which is Newton's
 insertion of $t_{2.6}$.
 
-**Proposition 1.** (a) A function $S(x,y,u)$ satisfies
-$\min_y[S(x,y,r)+S(y,z,u-r)]=S(x,z,u)$ for all $0<r<u$ exactly when it is
-a morphism of the time-graded groupoid into the $(\min,+)$ semiring. For
-Galileo's constant force $F$ on a mass $M$ this holds for
-$$S(x,y,u)=\frac{M(y-x)^2}{2u}+\frac{Fu}2(x+y)-\frac{F^2u^3}{24M},$$
-the corrected action $\ell_u$ of the refinement note, eq. (2), which is the
-action along the true path. (b) A kernel $K(x,y,u)$ satisfies
-$\int K(x,y,r)K(y,z,u-r)\,dy=K(x,z,u)$ exactly when it is a morphism into the
-convolution algebra; the constant-force propagator $U_u$ of the
-refinement note, eq. (3), does.
+For endpoint functions define min-plus convolution by
+$$
+ (A\otimes B)(x,z):=\inf_y\{A(x,y)+B(y,z)\}.
+$$
+It eliminates the intermediate endpoint; it does not add the action
+on each individual composable pair of arrows.
 
-*Proof.* (a) and (b) restate the morphism property. The displayed $S$ is
-the classical action of the path $q(s)=x+(y-x)s/u+\frac F{2M}s(s-u)$,
-which is the refinement note's $\ell_u$; its composition law is eq. (2)
-there, and $U_u$'s is eq. (3). $\square$
+**Proposition 1.** For $M>0$, constant force $F$, and $u>0$, set
+$$S_u(x,y)=\frac{M(y-x)^2}{2u}+\frac{Fu}2(x+y)-\frac{F^2u^3}{24M}.$$
+Then $(S_u)_{u>0}$ is a semigroup of kernels under min-plus convolution:
+$S_r\otimes S_v=S_{r+v}$ for $r,v>0$. This is the corrected action
+$\ell_u$ of [the refinement note](refinement-composition-and-limit.md),
+equation (2). The corresponding constant-force unitary propagators
+satisfy $U_{r+v}=U_rU_v$; their kernels compose by integration over
+the intermediate position, in the oscillatory/distributional sense
+where the real-time integrals are not absolutely convergent.
+
+*Proof.* The sum $S_r(x,y)+S_v(y,z)$ is a strictly convex quadratic in
+$y$ with unique minimizer
+$$y_*=\frac{vx+rz}{r+v}-\frac{Frv}{2M}.$$
+Substitution gives $S_{r+v}(x,z)$. Equivalently, $y_*$ is the value
+at time $r$ of the action-minimizing constant-force path joining $x$
+to $z$. The unitary law follows from the self-adjoint Hamiltonian;
+its kernel statement is operator composition. $\square$
+
+The min-plus law is not an ordinary groupoid morphism. For free motion
+with $M=1$, $S_1(0,1)+S_1(1,0)=1$, whereas $S_2(0,0)=0$.
+The equality holds only after minimizing over the intermediate point
+($y=0$ in this example).
 
 The displayed $S$ is the exact discrete Lagrangian of discrete mechanics
 ([Marsden and West 2001](https://doi.org/10.1017/S096249290100006X),
@@ -137,11 +152,12 @@ metadata), and discrete Lagrangian mechanics on groupoids is
 kick--drift--kick cell $S_h=K_{Fh/2}D_hK_{Fh/2}$ of the refinement note is
 the variational (Störmer--Verlet) integrator of the trapezoidal discrete
 Lagrangian $L_h$, and the cubic counterterm turns $L_h$ into the exact one.
-The two laws of Proposition 1 are related by Maslov dequantization: in
-Euclidean form, $-\hbar\log\int e^{-S/\hbar}\to\min S$ as $\hbar\to0$
-([Litvinov 2005](https://doi.org/10.1090/conm/377/06982), metadata). So
-refinement consistency of a whole trajectory is the morphism property,
-tropical in classical mechanics and convolutional in quantum mechanics.
+The laws of Proposition 1 can be related through a Euclidean Laplace
+limit: under coercivity and regularity conditions,
+$-\hbar\log\int e^{-S/\hbar}dy\to\inf_y S$ as $\hbar\to0$
+([Litvinov 2005](https://doi.org/10.1090/conm/377/06982), metadata).
+This does not turn an oscillatory real-time integral into a probability
+integral, nor make every stationary real-time branch a global minimum.
 
 ## 4. Quantum trajectories miss the ultimate velocity
 
@@ -164,12 +180,11 @@ ballistic limit.
 
 ## 5. Consequence for STATE
 
-The atlas's Newton row gains a geometric home: one step is an arrow of
-the tangent groupoid, a trajectory is a factorization in the
-time-graded groupoid, refinement consistency is the morphism property
-of Proposition 1, the zoom action is the renormalization, and the
-principal symbol is what survives $\varepsilon\to0$. A natural next question for
-the gauge atlas is the corresponding groupoid of the lattice: the
-holonomy groupoid for two dimensions, where series moves are
-compositions, and a higher (double) groupoid for the parallel moves of
-three and four dimensions.
+The tangent groupoid organizes geometric deformation, and trajectories
+can be factored in a time-graded arrow space. For the constant-force
+example, refinement gives a min-plus kernel semigroup classically and
+operator composition quantum mechanically; neither is an ordinary
+additive morphism of individual arrows. Identifying the geometric zoom
+with a particular RG integration remains a separate task. See the
+[later state formulation](groupoid-quantum-newton-states.md) for the
+controlled quantum/classical comparison.

@@ -157,11 +157,14 @@ assuming the classical trajectory in advance. Their limit is the unique
 Newton initial-value solution. The stated quantitative bound is
 $$
  \sup_{0\le t\le T}\|z_{h,\pi}(t)-\Phi_t(z_0)\|_\omega
- \le G_T\big(C_\delta|\pi|+C_h\sqrt h\big), \tag{3}
+ \le G_T\big(C_\delta|\pi|+C_hh\big), \tag{3}
 $$
 with the weighted phase-space norm and constants defined in that proof,
 equations (17) and (21). They are independent of the number of slices
-and of $h\in(0,h_0]$ for fixed $h_0,T$. The
+and of $h\in(0,h_0]$ for fixed $h_0,T$. The sharper $O(h)$ mean term
+uses the bounded third derivative already included in the hypotheses
+and cancellation of the centered linear force term; packet widths
+remain $O(\sqrt h)$. The
 [groupoid formulation](groupoid-quantum-newton-states.md), sections 1--3
 (maintained proof read), extends the comparison to smooth Weyl observables
 and continuous sections of the established quantum/classical field.

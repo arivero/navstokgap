@@ -8,11 +8,12 @@ initial-value construction of
 [the first document](quantum-blocks-construct-newton.md) define
 compatible states on these fibers. On every compact time interval,
 their values on smooth Weyl observables converge to the classical point
-state with an explicit $O(\sqrt h+|\pi|)$ bound, for **every joint
+state with an explicit $O(h+|\pi|)$ bound, for **every joint
 schedule** with $h,|\pi|\to0$.
 
 The result is a state-level limit for the specified coherent
-preparations and globally bounded-Hessian potentials. The quartic
+preparations and smooth potentials with bounded derivatives of order
+at least two, including the third derivative used for the rate. The quartic
 extension in the first document uses cutoff Hamiltonians; it does not
 establish this estimate for uncut quartic quantum evolution. The result
 neither makes the finite-product propagator uniformly
@@ -144,20 +145,31 @@ $$
  \,d\xi\,d\eta<\infty.\tag{11}
 $$
 Here $\widehat a$ is the ordinary Fourier transform in $(q,p)$.
+Also put
+$$
+ J_a=\frac1{2(2\pi)^2}\int_{\mathbb R^2}
+ |\widehat a(\xi,\eta)|\big(|\xi|+m\omega|\eta|\big)^2
+ \,d\xi\,d\eta<\infty.\tag{11a}
+$$
 Using the exact Fourier representation of Weyl quantization,
 $$\operatorname{Op}_h^W(a)
  =(2\pi)^{-2}\int\widehat a(\xi,\eta)
              e^{i(\xi Q+\eta P)}d\xi\,d\eta,\tag{12}$$
-and the spectral bound $\|(e^{iA}-1)\psi\|\le\|A\psi\|$,
+set $A=\xi(Q-q_j)+\eta(P-p_j)$. The scalar phase
+$e^{i(\xi q_j+\eta p_j)}$ factors out, $\langle A\rangle_j=0$, and
+spectral calculus gives
+$|\langle e^{iA}\rangle_j-1|
+ \le\tfrac12\langle A^2\rangle_j$. Consequently,
 $$
  |\langle\operatorname{Op}_h^W(a)\rangle_j-a(q_j,p_j)|
- \le I_a\!\left[
+ \le J_a\!\left[
  \operatorname{sd}(Q)_j+\frac{\operatorname{sd}(P)_j}{m\omega}
- \right].\tag{13}
+ \right]^2.\tag{13}
 $$
-The phase factor $e^{i(\xi q_j+\eta p_j)}$ is removed before applying
-the inequality to the self-adjoint linear combination of centered
-$Q,P$. Fourier inversion also gives
+Indeed $\langle A^2\rangle_j=\|A\psi_{h,\pi,j}\|^2$ and the triangle
+inequality bounds $\|A\psi_{h,\pi,j}\|$ by the weighted sum of the
+two standard deviations. No Gaussian-shape assumption is needed after
+the first step. Fourier inversion also gives
 $|a(z)-a(z')|\le I_a\|z-z'\|_\omega$.
 
 The first document's estimates (19) and (26) therefore give, at every
@@ -165,9 +177,8 @@ partition vertex $t_j\in[0,T]$,
 $$
  \left|\langle\psi_{h,\pi,j},\operatorname{Op}_h^W(a)
                          \psi_{h,\pi,j}\rangle-a(z(t_j))\right|
- \le I_a\!\left[
- C e^{\beta T}\sqrt h+
- G_T(C_\delta|\pi|+C_h\sqrt h)\right].\tag{14}
+ \le J_a C^2 e^{2\beta T}h+
+ I_aG_T(C_\delta|\pi|+C_hh).\tag{14}
 $$
 The constants $C,\beta,G_T,C_\delta,C_h$ are explicitly defined in
 that document and depend on the common $h_0,T,V,m,\omega$ and initial
@@ -181,7 +192,7 @@ $$
  \longrightarrow a(\Phi_t(q_0,p_0))
  \quad\text{at vertices tending to }t,\tag{15}
 $$
-with error $O(\epsilon^{1/2}+\epsilon^\alpha)$ at vertices equal to
+with error $O(\epsilon+\epsilon^\alpha)$ at vertices equal to
 $t$. Such a vertex can be inserted in each partition. There is no
 constraint here on $|\pi_\epsilon|/h$.
 
@@ -273,4 +284,6 @@ universal action scale or four-dimensional Yang--Mills result follows.
 mathematical review checked the chart and Fourier normalizations, the
 state and Gaussian-scale bounds, the extension to continuous sections,
 and the estimate (10). It is not independent peer review of the
-underlying continuous-field theorem or of the literature.
+underlying continuous-field theorem or of the literature. The centered
+$O(h)$ state improvement in §3 is a subsequent written derivation and
+was not part of that earlier check.

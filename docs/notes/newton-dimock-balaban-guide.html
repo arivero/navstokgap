@@ -177,9 +177,10 @@ is conserved. If <span class="math inline">\(V\)</span> is bounded
 below, the same speed and position bounds as above prove global
 existence and uniqueness, even if <span class="math inline">\(B\)</span>
 is not globally bounded.</p>
-<p>For instance, a constant field <span class="math inline">\(B=B_0\hat
-z\)</span> rotates the transverse velocity with cyclotron frequency
-<span class="math inline">\(eB_0/m\)</span> and leaves the longitudinal
+<p>For instance, if <span class="math inline">\(V\)</span> is constant
+and <span class="math inline">\(B=B_0\hat z\)</span>, the field rotates
+the transverse velocity with cyclotron frequency <span
+class="math inline">\(eB_0/m\)</span> and leaves the longitudinal
 velocity constant. A velocity-dependent force is thus not an exception
 to the ODE theory; its dependence must be included in the phase-space
 vector field being estimated.</p>
@@ -393,22 +394,29 @@ Gronwall estimate consequently bounds both position and momentum spreads
 by <span class="math inline">\(C_T\sqrt\hbar\)</span>, uniformly over
 partitions of <span class="math inline">\([0,T]\)</span>.</p>
 <p>Let <span class="math inline">\(z_{\hbar,\pi}(t)\)</span> interpolate
-the means after the finite cells. The spread bound and (16) imply the
-force-balance residual <span class="math display">\[
+the means after the finite cells. Under the detailed theorem’s bounded
+<span class="math inline">\(V&#39;&#39;&#39;\)</span> assumption, expand
+<span class="math inline">\(V&#39;\)</span> about the packet’s mean. The
+linear term averages to zero, and the remaining force bias is bounded by
+<span
+class="math inline">\(\tfrac12\|V&#39;&#39;&#39;\|_\infty\operatorname{Var}(Q)=O(\hbar)\)</span>.
+Together with the spread bound and (16), this gives the force-balance
+residual <span class="math display">\[
 \|\dot z_{\hbar,\pi}-\mathcal F(z_{\hbar,\pi})\|
-       \le C_T(\sqrt\hbar+|\pi|),
+       \le C_T(\hbar+|\pi|),
 \qquad \mathcal F(q,p)=(p/m,-V&#39;(q)).\tag{17}
 \]</span> Comparing two independently chosen <span
 class="math inline">\(\hbar\)</span>’s and meshes, and applying
 Gronwall, shows that these interpolants form a Cauchy family. Its limit
 is the unique solution of (1), with <span
 class="math display">\[\sup_{t\le T}\|z_{\hbar,\pi}(t)-z(t)\|
-        \le C_T(\sqrt\hbar+|\pi|).\tag{18}\]</span> The <a
+        \le C_T(\hbar+|\pi|).\tag{18}\]</span> The <a
 href="quantum-blocks-construct-newton.html">detailed proof</a> gives the
 weighted phase-space norm, constants, arbitrary-partition product limit
-and domains. The statement is about means; it does not assert that
-finite-product propagators converge uniformly in operator norm along
-arbitrary joint schedules.</p>
+and domains. The packet’s width still scales as <span
+class="math inline">\(O(\sqrt\hbar)\)</span>; the sharper estimate
+concerns its means. It does not assert that finite-product propagators
+converge uniformly in operator norm along arbitrary joint schedules.</p>
 <p>Cauchy–Lipschitz constructs the integral equation directly, usually
 by a contraction on a short interval. The route above constructs quantum
 operators first and their classical limit afterward. Both use the same

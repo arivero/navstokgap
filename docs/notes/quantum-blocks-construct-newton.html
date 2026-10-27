@@ -92,16 +92,21 @@ Hamiltonian.</p>
 <p>For every initial <span class="math inline">\((q_0,p_0)\)</span>,
 means of finite quantum time-slice products are a Cauchy family as both
 <span class="math inline">\(h\)</span> and the time mesh tend to zero.
-An explicit estimate controls both scales simultaneously. Their limit
-solves <span class="math inline">\(\dot q=p/m\)</span>, <span
+An explicit <span class="math inline">\(O(h+|\pi|)\)</span> estimate
+controls both scales simultaneously for the means, while the packet
+widths remain <span class="math inline">\(O(\sqrt h)\)</span>. Their
+limit solves <span class="math inline">\(\dot q=p/m\)</span>, <span
 class="math inline">\(\dot p=-V&#39;(q)\)</span>; it is the unique
 solution. An explicit bound compares any two positive values of <span
 class="math inline">\(h\)</span>. The proof does not assume a classical
 trajectory in advance. Its stability hypothesis and Gronwall estimate
 are the same ingredients used by Cauchy–Lipschitz, so the construction
-is a different route, not a weakening of that theorem. Smooth confining
-potentials with locally Lipschitz force, including the positive quartic,
-follow by a cutoff and energy conservation.</p>
+is a different route, not a weakening of that theorem. For smooth
+confining potentials with locally Lipschitz force, including the
+positive quartic, a cutoff and energy conservation construct the
+classical trajectory from quantum families with cutoff potentials. This
+argument does not prove the joint approximation estimate for the uncut
+quartic quantum evolution.</p>
 <p>For a didactic entry point, see <a
 href="newton-dimock-balaban-guide.html">Newton, quantum mechanics and
 Dimock–Balaban</a>: it traces the steps to specific source passages and
@@ -120,7 +125,10 @@ theorem.</p>
 The finite-step identities, constants, joint Cauchy estimate, domain
 argument, quartic energy barrier and cusp counterexample were checked in
 writing. This is not an independent proof audit of the imported Wiener,
-Feynman–Kac, self-adjointness or spectral theorems.</p>
+Feynman–Kac, self-adjointness or spectral theorems. The centered <span
+class="math inline">\(O(h)\)</span> improvement below follows a
+subsequent user-suggested calculation and is not covered by that earlier
+check.</p>
 <h2 id="hypotheses-and-the-quantum-theory-to-be-constructed">1.
 Hypotheses and the quantum theory to be constructed</h2>
 <p>Let <span class="math inline">\(m&gt;0\)</span> and let <span
@@ -375,7 +383,7 @@ b=\frac{|V&#39;(0)|+LC\sqrt{h_0}e^{\beta T}}{m\omega},\\
 R_T=e^{\beta T}\big(\|(q_0,p_0)\|_\omega+Tb\big),\qquad
 F_T=|V&#39;(0)|+L(R_T+C\sqrt{h_0}e^{\beta T}),\\
 C_\delta=\frac{F_T+LR_T}{m},\qquad
-C_h=\frac{LCe^{\beta T}}{m\omega},\qquad
+C_h=\frac{\|V&#39;&#39;&#39;\|_\infty C^2e^{2\beta T}}{2m\omega},\qquad
 G_T=\frac{e^{aT}-1}{a}.
 \tag{21}
 \end{gathered}\]</span> Equation (19) and (20) imply recursively that
@@ -394,13 +402,25 @@ the residual are bounded by <span class="math display">\[
 |\dot q_{h,\pi}-p_{h,\pi}/m|
      \le |\pi|F_T/m,\quad
 |\dot p_{h,\pi}+V&#39;(q_{h,\pi})|
-     \le LC\sqrt h\,e^{\beta T}+L|\pi|\,\omega R_T.\tag{22}
+     \le \tfrac12\|V&#39;&#39;&#39;\|_\infty C^2h\,e^{2\beta T}
+       +L|\pi|\,\omega R_T.\tag{22}
 \]</span> Consequently <span class="math display">\[\|\dot
 z_{h,\pi}-\mathcal F(z_{h,\pi})\|_\omega
-\le C_\delta|\pi|+C_h\sqrt h.\tag{23}\]</span> The first residual is the
+\le C_\delta|\pi|+C_h h.\tag{23}\]</span> The first residual is the
 difference between the interpolated momentum and its post-kick value;
-the second is the sum of the packet’s force variance and the motion of
-the interpolated position.</p>
+the second is the sum of the packet’s force bias and the motion of the
+interpolated position. For the bias, Taylor expand <span
+class="math inline">\(V&#39;\)</span> around the packet mean <span
+class="math inline">\(q_j=\langle Q\rangle_j\)</span>. Its linear term
+has zero expectation, so <span class="math display">\[
+|\langle V&#39;(Q)\rangle_j-V&#39;(q_j)|
+\le\tfrac12\|V&#39;&#39;&#39;\|_\infty\operatorname{Var}_j(Q)
+\le\tfrac12\|V&#39;&#39;&#39;\|_\infty C^2h\,e^{2\beta T}.\tag{23a}
+\]</span> The bounded third derivative is part of the standing
+hypotheses. For quadratic potentials <span
+class="math inline">\(V&#39;&#39;&#39;=0\)</span> and the force-bias
+term vanishes exactly. This improves the mean error; (19) still gives
+widths of order <span class="math inline">\(\sqrt h\)</span>.</p>
 <p>The vector field <span class="math inline">\(\mathcal F\)</span> has
 Lipschitz constant at most <span class="math inline">\(a\)</span> in
 this norm. Integrating the residuals of two products with common initial
@@ -408,7 +428,7 @@ data, and applying Gronwall, gives <span class="math display">\[
 \sup_{t\le T}\|z_{h,\pi}(t)-z_{k,\sigma}(t)\|_\omega
 \le G_T\!\left[
 C_\delta(|\pi|+|\sigma|)
-+C_h(\sqrt h+\sqrt k)\right].\tag{24}
++C_h(h+k)\right].\tag{24}
 \]</span> Thus the means are Cauchy in <span
 class="math inline">\(C([0,T],\mathbb R^2)\)</span> as the two scales
 <span class="math inline">\(h\)</span> and <span
@@ -425,7 +445,7 @@ class="math inline">\(-p\)</span> and reversing time.</p>
 <p>Letting <span class="math inline">\((k,|\sigma|)\to(0,0)\)</span> in
 (24) yields the explicit joint bound <span class="math display">\[
 \sup_{t\le T}\|z_{h,\pi}(t)-z(t)\|_\omega
-\le G_T\big(C_\delta|\pi|+C_h\sqrt h\big).\tag{26}
+\le G_T\big(C_\delta|\pi|+C_h h\big).\tag{26}
 \]</span> The constants are independent of the number of cells and of
 <span class="math inline">\(h\)</span> in <span
 class="math inline">\((0,h_0]\)</span>. Equation (26) is an
@@ -452,7 +472,7 @@ convergence on <span class="math inline">\([0,T]\)</span>. Passing to
 the limit in (26) gives <span class="math display">\[
 \sup_{t\le T}
 \left\|(\langle Q\rangle_t,\langle P\rangle_t)-z(t)\right\|_\omega
-\le G_T C_h\sqrt h.\tag{27}
+\le G_T C_h h.\tag{27}
 \]</span> This uses no differentiation of an unbounded quantum
 observable. It also proves the claimed consistency of the two limiting
 orders for these means. The construction assumes a semiclassical family

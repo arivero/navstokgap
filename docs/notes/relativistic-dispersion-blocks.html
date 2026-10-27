@@ -84,20 +84,22 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 to a nonquadratic kinetic energy <span
 class="math inline">\(T(P)\)</span> whenever <span
 class="math inline">\(T&#39;\)</span> and <span
-class="math inline">\(V&#39;\)</span> are globally Lipschitz. For the
-positive-energy relativistic dispersion <span
+class="math inline">\(V&#39;\)</span> are globally Lipschitz. The
+sharper mean rate stated below also uses the bounded third derivatives
+in §1. For the positive-energy relativistic dispersion <span
 class="math display">\[T_c(p)=\sqrt{m^2c^4+c^2p^2}-mc^2,\qquad
 m,c&gt;0,\tag{1}\]</span> the constants in the packet estimates can be
-chosen independently of <span class="math inline">\(c\)</span>. For
-fixed initial data and finite time, the finite-product coherent-state
-means obey <span class="math display">\[
+chosen independently of <span class="math inline">\(c\ge
+c_0&gt;0\)</span>. For fixed initial data and finite time, the
+finite-product coherent-state means obey <span class="math display">\[
 \sup_{0\le t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
-\le C_T\left(\sqrt\hbar+|\pi|+\frac1{c^2}\right).\tag{2}
+\le C_T\left(\hbar+|\pi|+\frac1{c^2}\right).\tag{2}
 \]</span> Here <span class="math inline">\(z_{\rm N}\)</span> is the
 Newton solution for the same <span class="math inline">\(V\)</span>,
 <span class="math inline">\(\pi\)</span> is an arbitrary positive time
 partition and <span class="math inline">\(\gamma&gt;0\)</span> fixes a
-phase-space norm. Thus <span
+phase-space norm. This is a mean bound; the packet widths remain <span
+class="math inline">\(O(\sqrt\hbar)\)</span>. Thus <span
 class="math inline">\(\hbar\downarrow0\)</span>, time refinement and
 <span class="math inline">\(c\to\infty\)</span> may be taken jointly at
 the level of these means. Explicit constants and a proof are given
@@ -125,7 +127,9 @@ general spin and magnetic setting.</p>
 The written packet, domain, strong-resolvent and spectral-wall arguments
 were checked with corrections applied. This is not independent peer
 review of the result or of the imported operator and probability
-theorems.</p>
+theorems. The centered <span class="math inline">\(O(\hbar)\)</span>
+improvement is a subsequent written derivation, not part of that earlier
+check.</p>
 <h2 id="a-general-dispersion-and-its-quantum-realization">1. A general
 dispersion and its quantum realization</h2>
 <p>Work on <span class="math inline">\(L^2(\mathbb R)\)</span> with
@@ -137,10 +141,14 @@ C^\infty(\mathbb R)\)</span> are bounded below and that all derivatives
 of order at least two are bounded. Add constants so that <span
 class="math inline">\(T,V\ge0\)</span>, which affects only a phase.
 Write <span class="math display">\[L=\|V&#39;&#39;\|_\infty,\qquad
-M=\|T&#39;&#39;\|_\infty.\tag{3}\]</span> The finite-product estimates
-alone need only <span class="math inline">\(C^1\)</span> functions with
-globally Lipschitz derivatives; the smoother class makes the domain
-argument explicit. Define on Schwartz space <span
+M=\|T&#39;&#39;\|_\infty.\tag{3}\]</span> For the sharper mean estimate
+also write <span
+class="math inline">\(L_3=\|V&#39;&#39;&#39;\|_\infty\)</span> and <span
+class="math inline">\(M_3=\|T&#39;&#39;&#39;\|_\infty\)</span>, which
+are finite under the standing smoothness assumptions. The finite-product
+estimates alone need only <span class="math inline">\(C^1\)</span>
+functions with globally Lipschitz derivatives; the smoother class makes
+the domain argument explicit. Define on Schwartz space <span
 class="math display">\[H_\hbar=T(P)+V(Q),\qquad
 U_\hbar(t)=e^{-itH_\hbar/\hbar}.\tag{4}\]</span></p>
 <p>To specify the domain, fix units for <span
@@ -257,20 +265,29 @@ class="math inline">\(\|\cdot\|_\gamma\)</span> is at most <span
 class="math inline">\(a\)</span>. On every cell, <span
 class="math display">\[
 \|\dot z_{\hbar,\pi}-\mathcal F_T(z_{\hbar,\pi})\|_\gamma
-\le C_\delta|\pi|+C_h\sqrt\hbar,\qquad
+\le C_\delta|\pi|+C_h\hbar,\qquad
 C_\delta=MF_T+\gamma LU_T,\quad
-C_h=\beta C e^{\beta T}.\tag{15}
-\]</span> For example, the position residual is bounded by <span
-class="math inline">\(M\operatorname{sd}P_{\rm
-kick}+M|p_{j+1}-p(t)|\)</span>; the momentum residual is bounded by
-<span
-class="math inline">\(L\operatorname{sd}Q_j+L|q_j-q(t)|\)</span>.</p>
+C_h=\frac{C^2e^{2\beta T}}2
+             \left(\frac{M_3}{\gamma^2}+\gamma L_3\right).\tag{15}
+\]</span> For each mean, expand <span
+class="math inline">\(V&#39;\)</span> and <span
+class="math inline">\(T&#39;\)</span> around its corresponding current
+mean; the linear terms have zero expectation. Thus the force bias is at
+most <span
+class="math inline">\(\frac12L_3\operatorname{Var}_j(Q)\)</span>, and
+the post-kick velocity bias is at most <span
+class="math inline">\(\frac12M_3\operatorname{Var}_{j,\rm
+kick}(P)\)</span>. Use (11), including the intermediate-state bound, and
+add the within-cell changes <span
+class="math inline">\(M|p_{j+1}-p(t)|\)</span> and <span
+class="math inline">\(L|q_j-q(t)|\)</span>. This proves (15) without
+assuming the propagated state is Gaussian.</p>
 <p>Comparing two meshes and two positive values <span
 class="math inline">\(\hbar,k\)</span>, integration and Gronwall give
 <span class="math display">\[
 \sup_{t\le T}\|z_{\hbar,\pi}(t)-z_{k,\sigma}(t)\|_\gamma
 \le G_T\{C_\delta(|\pi|+|\sigma|)
-           +C_h(\sqrt\hbar+\sqrt k)\},\quad
+           +C_h(\hbar+k)\},\quad
 G_T=\frac{e^{aT}-1}{a}.\tag{16}
 \]</span> The interpolants are therefore Cauchy as both scales tend to
 zero, and their limit solves uniquely <span class="math display">\[\dot
@@ -291,12 +308,18 @@ T_c&#39;(p)=\frac{p}{m\sqrt{1+p^2/(m^2c^2)}},\qquad
 \]</span> All hypotheses above hold for every <span
 class="math inline">\(c&gt;0\)</span>, with common <span
 class="math inline">\(M=1/m\)</span> and <span
-class="math inline">\(T_c&#39;(0)=0\)</span>. In particular, (11)–(16)
-have constants independent of <span class="math inline">\(c\)</span>.
-The finite-<span class="math inline">\(c\)</span> classical solution
-<span class="math inline">\(z_c\)</span> from (17) is the
-positive-energy relativistic particle with <span
-class="math display">\[\dot q=\frac{pc^2}{\sqrt{m^2c^4+c^2p^2}},\qquad
+class="math inline">\(T_c&#39;(0)=0\)</span>. For <span
+class="math inline">\(c\ge c_0&gt;0\)</span>, <span
+class="math display">\[
+|T_c&#39;&#39;&#39;(p)|=\frac{3|p|}{m^3c^2}
+       \left(1+\frac{p^2}{m^2c^2}\right)^{-5/2}
+\le\frac3{m^2c_0}.\tag{18a}
+\]</span> Consequently all constants in (11)–(16) can be chosen
+independently of <span class="math inline">\(c\ge c_0\)</span>. The
+finite-<span class="math inline">\(c\)</span> classical solution <span
+class="math inline">\(z_c\)</span> from (17) is the positive-energy
+relativistic particle with <span class="math display">\[\dot
+q=\frac{pc^2}{\sqrt{m^2c^4+c^2p^2}},\qquad
 \dot p=-V&#39;(q),\qquad |\dot q|&lt;c.\tag{19}\]</span> The external
 potential is specified in a chosen frame; (19) does not assert full
 interacting Poincaré covariance.</p>
@@ -314,30 +337,33 @@ Gronwall, <span class="math display">\[
 \]</span> Together with (15)–(16), <span class="math display">\[
 \sup_{t\le T}\|z_{\hbar,\pi,c}(t)-z_{\rm N}(t)\|_\gamma
 \le G_T\!\left[
-C_\delta|\pi|+C_h\sqrt\hbar
+C_\delta|\pi|+C_h\hbar
 +\frac{(R/\gamma)^3}{2m^3c^2}\right].\tag{22}
 \]</span> This proves (2). The bound is for fixed initial phase-space
 data and finite <span class="math inline">\(T\)</span>; it is not
 uniform in momenta of order <span class="math inline">\(mc\)</span>.</p>
 <p>For any compactly supported smooth phase-space symbol <span
-class="math inline">\(b\)</span>, the Weyl Fourier argument in the <a
-href="groupoid-quantum-newton-states.html">groupoid companion</a>
-converts the spread and mean bounds into <span class="math display">\[
+class="math inline">\(b\)</span>, the centered second-order Weyl Fourier
+argument in the <a href="groupoid-quantum-newton-states.html">groupoid
+companion</a> converts the spread and mean bounds into <span
+class="math display">\[
 |\langle\operatorname{Op}_\hbar^W(b)\rangle_j-b(z_{\rm N}(t_j))|
-\le I_{b,\gamma}\!\left[
-Ce^{\beta T}\sqrt\hbar+G_T\!\left(
-C_\delta|\pi|+C_h\sqrt\hbar
-+\frac{(R/\gamma)^3}{2m^3c^2}\right)\right],\tag{23}
+\le J_{b,\gamma}C^2e^{2\beta T}\hbar+
+I_{b,\gamma}G_T\!\left(
+C_\delta|\pi|+C_h\hbar
++\frac{(R/\gamma)^3}{2m^3c^2}\right),\tag{23}
 \]</span> where <span
 class="math display">\[I_{b,\gamma}=(2\pi)^{-2}\int|\widehat
 b(\xi,\eta)|
-            (|\xi|+|\eta|/\gamma)\,d\xi d\eta.\tag{24}\]</span> Thus a
+            (|\xi|+|\eta|/\gamma)\,d\xi d\eta,\quad
+J_{b,\gamma}=\frac1{2(2\pi)^2}\int|\widehat b(\xi,\eta)|
+            (|\xi|+|\eta|/\gamma)^2\,d\xi d\eta.\tag{24}\]</span> Thus a
 chosen diagonal schedule <span
 class="math inline">\(\hbar=S_*\epsilon\)</span>, <span
 class="math inline">\(|\pi|\le T_*\epsilon^\alpha\)</span> and <span
 class="math inline">\(c\ge c_*\epsilon^{-\kappa}\)</span>, with <span
 class="math inline">\(\alpha,\kappa&gt;0\)</span>, gives <span
-class="math inline">\(O(\epsilon^{1/2}+\epsilon^\alpha+\epsilon^{2\kappa})\)</span>
+class="math inline">\(O(\epsilon+\epsilon^\alpha+\epsilon^{2\kappa})\)</span>
 for those observables at partition vertices. The groupoid deformation,
 mesh and <span class="math inline">\(c\)</span> remain distinct until
 this schedule is chosen.</p>
