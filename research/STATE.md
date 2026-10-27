@@ -1,7 +1,7 @@
 # State
 
-Updated 2026-10-02 (Kepler localization, selection endpoints and lattice consumers corrected). Read this page and the
-[refinement note](../notes/refinement-composition-and-limit.md);
+Updated 2026-10-27 (Newton first; Balaban techniques in $0+1$). Read this page and the
+[time-blocking note](../notes/balaban-newton-time-blocking.md);
 AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
 gives the wider comparison.
 The [October 1 Claude handout](handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md)
@@ -98,6 +98,17 @@ fill its cells (open cells in its §5).
   mechanism. It supplies no new premise for the two main proof goals.
 
 ## Next
+
+**Active direction (user, 2026-10-27): Newton action necessity first.**
+Start with Balaban's techniques in $0+1$, keeping $\hbar$ explicit;
+use $c$ only with a stated relativistic premise. Connect arbitrary
+intermediate-time polygons to ODE existence, uniqueness, stability and
+continuation, and develop further useful links. The
+[first calculation](../notes/balaban-newton-time-blocking.md) is written,
+unrefereed. Next retain normalized fluctuation and large-field terms
+through time insertion and test their physical weighting independently
+of a supplied positive action. Alpoge and Yang--Mills are deferred;
+this direction supersedes the ordering of the earlier queue below.
 
 **Diagnostic from the visual comparison (2026-10-02).** Geometric
 convergence and survival of a physical scale require separate estimates.

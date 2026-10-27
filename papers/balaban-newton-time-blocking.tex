@@ -1,0 +1,482 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Time blocking, Newton polygons and explicit quantum action},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\section{Time blocking, Newton polygons and explicit quantum
+action}\label{time-blocking-newton-polygons-and-explicit-quantum-action}
+
+\textbf{First calculation, 2026-10-27; written derivation, unrefereed.}
+In one spatial coordinate and one time variable, the same discrete Green
+function controls three operations: constructing a Newton polygon on an
+arbitrary time partition, solving its nonlinear boundary-value problem,
+and bounding the inverse action Hessian used to integrate fluctuations.
+A force Lipschitz constant gives bounds uniform in the number and
+placement of inserted times. The quadratic fluctuation covariance
+contains an explicit factor of \(\hbar\); this first calculation does
+not derive its positivity.
+
+\textbf{Targeted second opinion (GPT-6.1 Terra, 2026-10-27).} Terra read
+this note and checked the Green row sum, Hessian/response bounds,
+Gaussian covariance, oscillator determinant and constant-force signs
+without finding an algebraic error. This was a targeted written check,
+not a full independent proof review. The arbitrary-cut interpretation
+below came from that pass.
+
+The user directs Newton action necessity first, beginning with Balaban's
+techniques in \(0+1\) dimensions. The comparison with Alpoge's work and
+Yang--Mills is deferred. Here \(0+1\) means a mechanical degree of
+freedom along time, not a field with spatial lattice sites. The
+construction is a modern force polygon; no identification with every
+historical Newton update is asserted. The Galileo observable remains the
+inertial-line / falling-parabola defect, not swept sectors.
+
+We assemble standard Green-function, contraction and
+Gaussian-elimination arguments. No literature novelty is claimed. The
+source ingredient is Balaban's controlled effective density under
+blocking, described in his
+\href{../docs/balaban/Balaban_UltravioletStability_ICM1986_1987.md}{ICM
+overview}, printed pp.~1260--1262 (text read), and Dimock's
+\href{../docs/balaban/Dimock_BalabanI_1108.1335v2.md}{small-field
+exposition}, sections 2.1, 2.4, 4.5 and Theorem 14 (selected passages
+read). The \href{refinement-composition-and-limit.md}{existing
+refinement note} constructs constant-force and harmonic limits. The
+\href{cut-measure-newton.md}{cut-measure note}, Proposition 7, already
+uses nodal exactness of the same one-dimensional Green function. The
+\href{rivero-1998-conjecture-central-forces.md}{Rivero test}, section 2,
+supplies the determinant/Schur identity and its branch caveat.
+
+\subsection{1. Actions and the constant to be
+investigated}\label{actions-and-the-constant-to-be-investigated}
+
+Let \(m,T>0\), \(x,y\in\mathbb R\), and \(\pi=(0=t_0<\cdots<t_N=T)\).
+Write \(\tau_j=t_{j+1}-t_j\) and \(w_j=(\tau_{j-1}+\tau_j)/2\) for
+interior vertices. For a potential \(V\) define
+
+\[
+ S_\pi^\sigma(q)=\sum_{j=0}^{N-1}
+ \frac{m(q_{j+1}-q_j)^2}{2\tau_j}
+ +\sigma\sum_{j=0}^{N-1}\frac{\tau_j}{2}
+       [V(q_j)+V(q_{j+1})],\qquad q_0=x,\ q_N=y.
+ \tag{1}
+\]
+
+The real-time Newton action is \(S_\pi^R=S_\pi^{-1}\), with weight
+\(e^{iS_\pi^R/\hbar}\) when \(\hbar>0\). The Euclidean action is
+\(S_\pi^E=S_\pi^{+1}\), with weight \(e^{-S_\pi^E/\hbar}\). Their
+stationary equations have opposite potential signs. They must not be
+interchanged when interpreting a background as a Newton trajectory. At
+\(\hbar=0\) these exponential expressions are not defined; the classical
+stationary equation is defined directly. No relativistic premise or
+\(c\) is used in this calculation. Ordinary Planck action is
+\(h_P=2\pi\hbar\).
+
+For real time put \(f=-V'/m\), the acceleration. Section 2 needs only a
+Lipschitz function \(f\), even without first specifying \(V\). A
+Lipschitz condition is a sufficient uniqueness and stability condition;
+continuity alone can give local existence. Neither statement alone
+guarantees continuation for all times or uniqueness of a two-endpoint
+problem.
+
+\subsection{2. Arbitrary intermediate
+times}\label{arbitrary-intermediate-times}
+
+Let \(\ell(t)=x+(y-x)t/T\) and
+
+\[
+ G(t,s)=\min(t,s)-\frac{ts}{T}.
+ \tag{2}
+\]
+
+This is the positive Dirichlet Green function of \(-d^2/dt^2\). Define
+the polygon map, with piecewise-linear output, by
+
+\[
+ (\mathcal T_\pi q)(t)=\ell(t)
+       -\sum_{j=1}^{N-1}w_jG(t,t_j)f(q(t_j)).
+ \tag{3}
+\]
+
+\textbf{Lemma 1 (the exact row sum).} At every vertex,
+
+\[
+ \sum_{j=1}^{N-1}w_jG(t_i,t_j)=\frac{t_i(T-t_i)}2.
+ \tag{4}
+\]
+
+At every \(t\in[0,T]\) the sum is at most \(T^2/8\).
+
+\emph{Proof.} For fixed \(t_i\), the function \(s\mapsto G(t_i,s)\) is
+linear on each partition interval and vanishes at the endpoints. Its
+trapezoidal integral is therefore exact, and its integral is
+\(t_i(T-t_i)/2\). As a function of \(t\), the sum in (4) is the linear
+interpolant of that concave quadratic. It lies below the quadratic,
+whose maximum is \(T^2/8\). This proof uses no ratio between consecutive
+time steps. \(\square\)
+
+Assume \(|f(u)-f(v)|\le\Lambda|u-v|\) for all \(u,v\), and put
+
+\[\theta=\frac{\Lambda T^2}{8}<1.\tag{5}\]
+
+\textbf{Proposition 2 (one bound for every polygon).} The map (3) has a
+unique fixed polygon. Its slopes \(v_j=(q_{j+1}-q_j)/\tau_j\) satisfy
+
+\[v_j-v_{j-1}=w_jf(q_j).\tag{6}\]
+
+The continuous map
+
+\[
+ (\mathcal Tq)(t)=\ell(t)-\int_0^T G(t,s)f(q(s))\,ds
+ \tag{7}
+\]
+
+has a unique fixed point, which is \(C^2\) and solves \(\ddot q=f(q)\)
+with the two prescribed endpoints. Every sequence of partitions with
+\(|\pi|\to0\) converges to this solution. Neither nesting nor equal
+intervals is required.
+
+\emph{Proof.} Lemma 1 bounds the Lipschitz constants of (3) and (7) in
+the supremum norm by \(\theta\). Repeated application converges because
+the successive differences form a geometric series. This proves
+existence and uniqueness in the complete polygon space or in
+\(C([0,T])\). The derivative of \(G(\cdot,t_j)\) jumps by \(-1\) at
+\(t_j\), giving (6). Differentiating (7) gives the continuous equation.
+
+Inserting a vertex changes its neighbours' weights \(w_j\) as well as
+the new solution. It does not add one kick while freezing the old force
+history. Retained vertices need not remain fixed when the trapezoidal
+action itself is refined.
+
+For a quantitative limit, write \(B=\|f(q)\|_\infty\) and
+\(U=\|\dot q\|_\infty\) for the continuous solution. For every fixed
+\(t\), \(s\mapsto G(t,s)f(q(s))\) is Lipschitz with constant at most
+\(B+T\Lambda U/4\). On an interval of length \(\tau\), replacing its
+integral by the endpoint trapezoid has error at most half that constant
+times \(\tau^2\). Hence
+
+\[
+ \|q_\pi-q\|_\infty\le
+ \frac{T|\pi|}{2(1-\theta)}
+       \left(B+\frac{T\Lambda U}{4}\right).
+ \tag{8}
+\]
+
+Indeed, subtract the two fixed-point equations and absorb the
+\(\theta\|q_\pi-q\|_\infty\) term. The constants in (8) belong to the
+fixed solution and interval, not to the partition. \(\square\)
+
+For a force Lipschitz only in a tube \(|q(t)-\ell(t)|\le r\), the same
+proof holds within that tube if \(\theta<1\) and
+
+\[
+ \frac{T^2}{8}\big(B_0+\Lambda r\big)\le r,
+ \qquad B_0=\sup_t|f(\ell(t))|.
+ \tag{9}
+\]
+
+This makes the closed tube invariant. Uniqueness is then asserted only
+inside it. Equation (9) is a finite version of a small-field domain that
+survives the construction; it cannot justify discarding paths outside it
+from a statistical or oscillatory integral.
+
+\subsection{3. The action Hessian and
+elimination}\label{the-action-hessian-and-elimination}
+
+Let \(\mathsf K_\pi\) be the Dirichlet stiffness matrix, with diagonal
+\(1/\tau_{j-1}+1/\tau_j\) and adjacent entries \(-1/\tau_j\), and let
+\(\mathsf W_\pi=\operatorname{diag}(w_j)\). The tent function (2) gives
+
+\[
+ (\mathsf K_\pi^{-1})_{ij}=G(t_i,t_j),\qquad
+ \|\mathsf K_\pi^{-1}\mathsf W_\pi\|_{\infty\to\infty}
+       \le\frac{T^2}{8}.
+ \tag{10}
+\]
+
+The first identity follows by taking the slope jump of that tent at each
+node; the second is Lemma 1. In particular, for \(V\in C^2\) with
+\(|V''|\le m\Lambda\), the Hessian of (1) obeys
+
+\[
+ \mathsf H_\pi^\sigma
+   =m\mathsf K_\pi+\sigma\mathsf W_\pi
+             \operatorname{diag}(V''(q_j))
+   \ \ge\ m(1-\theta)\mathsf K_\pi.
+ \tag{11}
+\]
+
+To see the quadratic-form inequality, the nonnegative matrix
+\(\mathsf K_\pi^{-1}\mathsf W_\pi\) has spectral radius at most its
+maximum row sum. It is similar to the positive symmetric matrix
+\(\mathsf W_\pi^{1/2}\mathsf K_\pi^{-1}\mathsf W_\pi^{1/2}\). Thus
+\(\mathsf W_\pi\le(T^2/8)\mathsf K_\pi\), which proves (11). The factor
+\(1-\theta\) is uniform over arbitrary partitions.
+
+For a physical force source \(J_j\), inserted as a linear action term
+\(\sum_jw_jJ_jq_j\), the stationary response therefore has the bound
+
+\[
+ \|\delta q\|_\infty\le
+ \frac{T^2}{8m(1-\theta)}\|\delta J\|_\infty.
+ \tag{12}
+\]
+
+Here the bound is for the differential response. It follows directly by
+factoring \(\mathsf H_\pi^\sigma\) as
+\(m\mathsf K_\pi(I+\mathsf K_\pi^{-1}\mathsf W_\pi
+\sigma\operatorname{diag}(V'')/m)\) and using a Neumann series.
+
+With the global curvature bound, (11) makes the finite action coercive
+and strictly convex in its interior vertices. Eliminating some vertices
+by minimization is then unambiguous, and its Hessian is the Schur
+complement
+
+\[
+ \mathsf H_{BB}-\mathsf H_{BA}\mathsf H_{AA}^{-1}\mathsf H_{AB}.
+ \tag{13}
+\]
+
+Successive eliminations associate. With only a local tube, this is a
+statement on the chosen nondegenerate branch. In particular, for the
+real-time positive quartic potential the unrestricted action is
+unbounded below, as the Rivero note already records; local control is
+not a global minimization theorem. Nor does the eliminated action
+generally retain only the original kinetic and potential terms.
+
+\subsection{\texorpdfstring{4. What the same inverse says when \(\hbar\)
+is
+present}{4. What the same inverse says when \textbackslash hbar is present}}\label{what-the-same-inverse-says-when-hbar-is-present}
+
+At a Euclidean background, its Gaussian fluctuation reference has
+density proportional to \(\exp[-\eta^T\mathsf H_\pi^E\eta/(2\hbar)]\)
+and covariance
+
+\[
+ \mathsf C_{\pi,\hbar}^E=\hbar(\mathsf H_\pi^E)^{-1},\qquad
+ (\mathsf C_{\pi,\hbar}^E)_{jj}
+ \le\frac{\hbar}{m(1-\theta)}\frac{t_j(T-t_j)}{T}
+ \le\frac{\hbar T}{4m(1-\theta)}.
+ \tag{14}
+\]
+
+These are exact Gaussian statements. For a nonlinear action they do not
+assert the covariance bound for its full measure without a further
+argument. In real time, normalized quadratic Fresnel integration gives
+the algebraic centered second moment \(i\hbar(\mathsf H_\pi^R)^{-1}\),
+which is not a probability covariance.
+
+For one block of Gaussian variables, integration retains both the Schur
+complement (13) and a determinant factor: respectively
+\((2\pi\hbar)^{|A|/2}(\det\mathsf H_{AA}^E)^{-1/2}\) in Euclidean time
+and \((2\pi i\hbar)^{|A|/2}(\det\mathsf H_{AA}^R)^{-1/2}\) when the real
+Hessian is positive. Determinants, normalization and any higher
+interactions must accompany the stationary action. These are the extra
+data that Balaban's effective-density viewpoint instructs us to retain.
+
+Equations (11)--(14) identify the connection to ODE control: the
+curvature constant that makes the background construction stable also
+controls the Gaussian fluctuations for every positive supplied
+\(\hbar\). They do not create the multiplier \(\hbar\) in (14).
+
+\subsection{5. Written controls: Galileo and the
+oscillator}\label{written-controls-galileo-and-the-oscillator}
+
+\textbf{Constant force.} For \(V(q)=-Fq\), \(\Lambda=0\). Equation (7)
+is exactly
+
+\[q(t)=\ell(t)+\frac{F}{2m}t(t-T).\tag{15}\]
+
+By (4), every polygon has these same vertex positions. The fluctuation
+Hessian is the free one for either action sign, and the Euclidean
+covariance is \((\hbar/m)G(t_i,t_j)\). For a single inserted midpoint of
+a cell of length \(T\), its variance is \(\hbar T/(4m)\); for an unequal
+cut at \(u\) it is \(\hbar u(T-u)/(mT)\). The deterministic vertex
+survives at \(\hbar=0\); the Gaussian width tends to zero. This uses
+precisely the Galileo comparison already normalized in the refinement
+note.
+
+\textbf{One arbitrary cut (Terra's connection).} Split \(T=u+v\) and let
+\(H_u\) be the piecewise-linear hat of height one at \(u\), zero at the
+cell endpoints. Then
+
+\[
+ \int_0^T(H_u')^2dt=\frac{T}{uv},\qquad
+ a_F=-\frac{Fuv}{2m},\qquad
+ \frac m2\int_0^T(a_FH_u')^2dt
+       =\frac{F^2uvT}{8m}=K_T-K_u-K_v.
+ \tag{15a}
+\]
+
+where \(K_s=F^2s^3/(24m)\). The free bridge's conditional
+inserted-vertex innovation has variance \(s_u^2=\hbar uv/(mT)\). For the
+two equal-variance Gaussian vertex laws, with means separated by
+\(a_F\), direct integration of their log-density ratio gives
+
+\[
+ D\big(N(a_F,s_u^2)\,\|\,N(0,s_u^2)\big)
+       =\frac{a_F^2}{2s_u^2}
+       =\frac{K_T-K_u-K_v}{\hbar}.
+ \tag{15b}
+\]
+
+Here \(D\) is relative entropy in nats. Successive bridge innovations
+factor into independent Gaussian hat coefficients: conditioned on a
+cell's endpoints, its inserted value has the variance above, and the two
+residual bridges are independent. The hats are also orthogonal in the
+Dirichlet energy because each finer hat has zero derivative integral
+inside a cell where an older hat has constant derivative.
+
+Thus classical vertex elimination, conditional Gaussian normalization
+and the cut energy are related by one Schur factorization. The
+cut-measure note already proves the additive action budget; the useful
+connection here is to the blocking variables. Equation (15b) assumes
+these Gaussian laws. It does not establish a physical bound on the
+information in complete apparatus records.
+
+\textbf{Oscillator and caustics.} Let \(V=m\omega^2q^2/2\),
+\(\omega>0\). Its initial-value equation has the unique explicit
+solution \(q(t)=q(0)\cos\omega t+\dot q(0)\sin\omega t/\omega\) for all
+times. Nevertheless its two-endpoint problem loses uniqueness at
+\(T=\pi/\omega\) when \(y=-x\); for other \(y\) it has no solution at
+that time. A singular boundary Hessian therefore need not mean a failure
+of initial-value mechanics.
+
+On a uniform \(N\)-cell partition, \(\tau=T/N\), \(N\ge2\), the first
+Dirichlet eigenvalue of the difference operator is
+\(4\tau^{-2}\sin^2(\pi/(2N))\). Its Hessian first becomes singular at
+
+\[
+ T_N=\frac{2N}{\omega}\sin\frac{\pi}{2N}
+       \longrightarrow\frac\pi\omega.
+ \tag{16}
+\]
+
+This checks the partition-independent sufficient window
+\(\omega^2T^2<8\): \(T_2=\sqrt8/\omega\), while the continuum caustic is
+later. An ODE Lipschitz constant cannot exclude those later caustics.
+
+For an exact Gaussian control, suppose \(T<\sqrt8/\omega\) and set
+\(\alpha=2\arcsin(\omega\tau/2)\). The determinant ratio is
+
+\[
+ R_N=\frac{\det\mathsf H_\pi^R}{\det(m\mathsf K_\pi)}
+     =\frac{\sin(N\alpha)}{N\sin\alpha}
+       \longrightarrow\frac{\sin(\omega T)}{\omega T}.
+ \tag{17}
+\]
+
+Indeed the determinant of the tridiagonal matrix with diagonal
+\(2-\omega^2\tau^2=2\cos\alpha\) and off-diagonal \(-1\) satisfies
+\(D_n=2\cos\alpha D_{n-1}-D_{n-2}\), with \(D_0=1,D_1=2\cos\alpha\).
+Thus \(D_{N-1}=\sin(N\alpha)/\sin\alpha\); the free determinant is
+\(N\). For \(N=2\), (17) gives \(R_2=1-\omega^2\tau^2/2\), also obtained
+by completing the single midpoint square.
+
+With the usual free normalization for each cell, finite Gaussian
+integration gives the real-time kernel
+
+\[
+ K^\pi_\hbar(y,x)=
+ \sqrt{\frac{m}{2\pi i\hbar T}}\,R_N^{-1/2}
+           e^{iS_\pi^R(q_\pi)/\hbar}.
+ \tag{18}
+\]
+
+The prefactor follows from \(\det\mathsf K_\pi=T/\prod_j\tau_j\) and
+completing the quadratic form. The determinant identity follows by the
+same tridiagonal recurrence, or by successive free one-vertex
+eliminations. Equation (18) retains the same \(\hbar\) at every depth.
+Reversing the sign of the oscillator term would put
+\(1+\omega^2\tau^2/2\) in the two-cell determinant and remove the
+real-time conjugate point. This sign test distinguishes the Euclidean
+and Newton constructions.
+
+\subsection{6. Large fields, continuation and the next scale
+question}\label{large-fields-continuation-and-the-next-scale-question}
+
+A local Lipschitz bound controls a local construction. To continue an
+initial-value solution, one also needs control preventing escape from
+every bounded phase-space region. In the confining example
+\(V(q)=\lambda q^4/4\), \(\lambda>0\), conservation of a fixed classical
+energy \(E>0\) gives
+
+\[
+ |q|\le R_E=(4E/\lambda)^{1/4},\qquad
+ |p|\le\sqrt{2mE},\qquad
+ |f'|\le\frac{3\lambda R_E^2}{m}.
+ \tag{19}
+\]
+
+These bounds permit continuation of the initial-value solution. Applying
+the local polygon lemma to a whole tube may require a larger radius than
+\(R_E\) and the invariance condition (9). For the inverted quartic,
+\(q(t)=q_0/[1-q_0\sqrt{\lambda/(2m)}t]\), \(q_0>0\), is instead a
+finite-time escape solution. Its force is locally Lipschitz everywhere.
+This is an explicit reason to distinguish local control from
+continuation. Balaban's large-field estimates address weighted integrals
+over all field regions; that is a statistical obligation distinct from
+trajectory continuation.
+
+Keeping \(\hbar\) explicit in the positive quartic Euclidean action, set
+\(t=Ts\) and \(q=\sqrt{\hbar T/m}\,z\). Then
+
+\[
+ \frac{S^E}{\hbar}
+ =\int_0^1\left[\frac{(z')^2}{2}+\frac g4z^4\right]ds,
+ \qquad g=\frac{\lambda\hbar T^3}{m^2}.
+ \tag{20}
+\]
+
+For the zero-endpoint free reference, the Brownian-bridge reflection
+bound is
+
+\[
+ \mathbb P\!\left(\sup|q|>b\sqrt{\hbar T/m}\right)
+       \le2e^{-2b^2},\qquad b>0.
+ \tag{21}
+\]
+
+It follows by applying the positive and negative one-sided reflection
+bounds and a union bound; the Rivero note, section 3, supplies the same
+calculation. On this small-field tube the real quartic curvature gives
+\(\theta\le3b^2g/8\). Thus the natural perturbation parameter combines
+force curvature, the observation interval and the explicitly supplied
+quantum width. For the interacting normalized measure, its denominator
+and its own large-field contribution still require control; (21) alone
+is not that result.
+
+The next useful test is to retain the normalized fluctuation and
+large-field terms through repeated time insertion, and determine which
+physical premise would fix their action multiplier independently of the
+weight \(e^{-S^E/\hbar}\) or \(e^{iS^R/\hbar}\). The existing
+\href{rivero-1998-conjecture-central-forces.md}{quartic zero-limit
+theorem} prevents treating refinement consistency alone as that premise.
+A loss of boundary invertibility also needs the oscillator countertest
+above before it is used to argue for completion of Newton's dynamics.
+
+A complementary construction suggested by Terra is to control the
+initial-value polygon flow and its tangent map under arbitrary
+insertion. Their composition is causal and remains meaningful through
+the oscillator's boundary caustics. Comparing that description with the
+endpoint action would separate loss of one coordinate description from
+an actual need for additional physical dynamics.
+
+\subsection{7. Consequence for STATE}\label{consequence-for-state}
+
+Newton action necessity is the active priority. This note gives the
+first \(0+1\) background construction: arbitrary unequal polygons
+converge on a stated Lipschitz-controlled interval; the same Green
+function controls source response and the Gaussian width proportional to
+\(\hbar\). Its oscillator example separates boundary caustics from
+initial-value failure. These are written, unrefereed calculations. Next
+retain the full weighted corrections and justify their physical
+weighting without importing the positive action constant to be derived.
+Alpoge and Yang--Mills remain for a later comparison.
+\end{document}
