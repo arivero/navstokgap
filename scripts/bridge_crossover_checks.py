@@ -50,7 +50,7 @@ def main():
         assert 0 < gg <= zz/4
         rows.append({"z":float(zz),"R":float(rz),"kappa_over_plateau":float(gg),
                      "second_moment_action_over_plateau":float(zz*rz/2)})
-    report = {"scope":"Finite identities and quadrature cross-checks; general proofs in notes/bridge-crossover.md",
+    report = {"scope":"Finite identities and quadrature cross-checks; general proofs in notes/telegraph-return-bridge.md",
               "exact_checks":checks,"quadrature_vs_count_series":rows}
     target = Path(__file__).resolve().parents[1]/"out"/"bridge-crossover-checks.json"
     target.write_text(json.dumps(report,indent=2)+"\n")

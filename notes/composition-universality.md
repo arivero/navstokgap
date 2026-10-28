@@ -107,6 +107,23 @@ equivalence premise, while preserving the earlier bath calculation. The
 comparison is between these specified experiments; dynamics of an actual
 bound composite require their own mechanical model.
 
+**Same mechanical scales, different preparations (C050--C051).** In the
+reviewed equal-mass hard-point gas, fix $m,\rho,u>0$. Independently marked
+Poisson streams yield reversal rate $\rho u$ and long-window coefficient
+$H_*=mu/\rho$. With two ordered counterpropagating streams of the same
+mass, speed, density, mean collision frequency and energy density, the
+Palm-tagged velocity is a uniformly phased square wave of period
+$2d$, $d=1/(\rho u)$. Its displacement cancels over each period and
+$$0\le\frac m\Delta\operatorname{Var}[X(t+\Delta)-X(t)]
+  \le\frac{m}{3\rho^2\Delta}\longrightarrow0.$$
+The preparations differ in their joint position--velocity correlations,
+including mark independence; the ordered process is not mixing. The
+[collision manuscript](../papers/collision-action-relaxation.tex), §§5--6,
+contains both proofs and the Palm residual-time calculation; see also its
+[PDF](../out/papers/collision-action-relaxation.pdf), [B26](../references/batches/B26.md)
+and the [review](../reviews/ordered-preparation-B26.md). This is a
+preparation-dependence countertest, not a universal action-floor theorem.
+
 ## 5. Scope, source chain and next test
 
 The theorem establishes a conditional universal positive **long-window

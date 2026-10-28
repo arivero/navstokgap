@@ -95,6 +95,35 @@ all interacting blocking maps or complete record instruments; compare
 the [free increment](groupoid-quantum-newton-states.md) and the
 [action-normalization identity](refinement-composition-and-limit.md).
 
+**The two-regulator bridge and a residual action.** For the free Gaussian
+endpoint bridge on a partition with $d=N-1$ interior points, whitening
+the quadratic action gives $2\Delta S/a\sim\chi_d^2$ and hence
+$$\mathbb E\Delta S=\frac{da}{2},\qquad
+  \operatorname{Var}(\Delta S)=\frac{da^2}{2}.$$
+If the maximum cell length and $a_N$ tend to zero while $d a_N\to\ell$,
+the bridges can be coupled to converge uniformly almost surely to the
+classical chord, while $\Delta S\to\ell/2$ in $L^2$. This uses one
+Brownian bridge and its polygonal interpolations. For equal cells
+$\tau=T/N$ and $a_N=b\tau$, the supplied $b$ has energy units and
+$\ell=bT$. The positive residual is selected by the scaling; at every
+finite mesh the action distribution has values arbitrarily near zero.
+
+The separately controlled reference family fixes $m_R,\kappa_R>0$ and
+chooses $m_B=\alpha_\pi m_R/\kappa_R$, so its normalized free kernels
+are preserved as $\alpha_\pi\to0$; the bare mass then tends to zero.
+This is different from the preceding fixed-mass limit and does not
+derive the reference action. The
+[regulator manuscript](../papers/regulator-limits.tex), Proposition 2
+and its running-coefficient section, contains the full arbitrary-partition
+proof and source reading; the [PDF](../out/papers/regulator-limits.pdf),
+[B08](../references/batches/B08.md) and its
+[review](../reviews/regulator-limits-B08.md) retain the detailed record.
+The manuscript also gives a bounded-speed shrinking sine example with a
+fixed action defect and growing acceleration, and a separate scalar
+stationary-phase/delta-weight calculation. Those examples motivate testing
+which independent force or derivative bounds suppress such a defect; they
+do not make the defect universal or identify it with $\hbar$.
+
 The open RG problem is to construct a compatible control or blocking map
 for the actual normalized kernels, states and generated interactions,
 including the increments and all required limits, and then determine
@@ -196,7 +225,7 @@ information. No finite-dimensional local symplectic apparatus realizing
 that access is constructed ([history model](cusp-history-records-continuity.md),
 Theorem 1).
 
-An earlier [three-body spring calculation](three-body-cut-memory.md)
+An earlier [three-body spring calculation](conservative-harmonic-receiver.md)
 gives a distinct, finite-dimensional Hamiltonian example: eliminating
 the receiver leaves reversible memory, and two nearby exact tagged-phase
 observations recover its hidden state. This makes state loss at a cut

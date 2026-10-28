@@ -11,7 +11,7 @@ autonomous implementation is the next mechanical obligation.
 ## 1. Instrument, state and supplied resources
 
 Use the fixed reduced three-body Hamiltonian and flow of
-[the R04 note](three-body-cut-memory.md): $z=(u,w)$, $u=(x,P)$,
+[the R04 note](conservative-harmonic-receiver.md): $z=(u,w)$, $u=(x,P)$,
 $w=(y,Q)$, $z_t=\Phi_tz_0$, with masses and stiffness fixed and
 $z_0$ on the compact positive-energy shell $H=E$. The physical tagged
 momentum is $p_1=2P/3$. Attach two fresh probes with canonical pairs

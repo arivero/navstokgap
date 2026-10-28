@@ -222,14 +222,14 @@ integrals. Next test beta=-Pi L^{-1}V(e_y): centre-to-endpoint curvature can
 survive the cancellation. Its nonvanishing and global risks remain open.
 Read [R33 handoff](handoffs/R33.md).
 
-**R03/B33 complete:** the [cut-state note](../notes/classical-cut-state.md)
+**R03/B33 complete:** the [cut-state note](../notes/conservative-harmonic-receiver.md)
 compares full evolution and stationary conditional resets in the fixed A10
 two-body receiver. Position kernels fail composition; independent direction
 resets freeze terminal position under refinement while preserving stationary
 one-time marginals. Full phase-state cuts compose exactly. C062–C063 have
 one Luna-low two-page audit and coordinator source/proof review.
 
-**R04/B34 complete:** [the three-body note](../notes/three-body-cut-memory.md)
+**R04/B34 complete:** [the three-body note](../notes/conservative-harmonic-receiver.md)
 derives exact receiver memory even with tagged momentum retained. Two nearby
 exact tagged-phase observations restore the full state; the inverse becomes
 ill-conditioned as their separation shrinks. Coupling fixes the memory kernel,
@@ -371,7 +371,7 @@ were built at that checkpoint. G01 then tested velocity susceptibility,
 spectral products and hidden slow modes. Parent A09 retains preparation independence and the physical
 identification of the classical plateau with the coherent action parameter.
 
-**A09a/B17 are complete.** [The crossover note](../notes/bridge-crossover.md)
+**A09a/B17 are complete.** [The crossover note](../notes/telegraph-return-bridge.md)
 gives the exact count-conditioned beta midpoint law and the full action-valued
 crossover $g(z)=zR(z)[1-R(z)]$, with cubic onset and limit one.
 It proves the common-finite-window obstruction to positive universality across
@@ -463,7 +463,7 @@ run successfully. The coordinator's
 [receding-centre draft](../notes/receding-centre-area-audit.md) and twelve exact
 checks are saved; claim acceptance awaits the resumed librarian audit.
 **M06** remains the force/acceleration and relativistic-action diagnostic from
-[the M05 note](../notes/two-regulator-audit.md).
+[the M05 note](../notes/newton-dimock-balaban-guide.md).
 **B07a** completed the Wilson–Kogut common-observable reading and test;
 **B07b** retains the tangent-groupoid theorem. Each source task should change
 a premise, calculation or proof obligation.

@@ -22,7 +22,7 @@ Proof status: C068–C069 accepted by written derivation and coordinator review,
 
 ## 1. Fixed class and autonomous Hamiltonian
 
-Use the reduced three-body receiver of [R04](three-body-cut-memory.md), with
+Use the reduced three-body receiver of [R04](conservative-harmonic-receiver.md), with
 $z=(x,P,y,Q)$, positive masses $\mu=3m/2$, $\nu=m/2$, and
 
 $$H_s(z)=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}

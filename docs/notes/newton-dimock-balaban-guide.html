@@ -192,6 +192,47 @@ instruments; compare the <a
 href="groupoid-quantum-newton-states.html">free increment</a> and the <a
 href="refinement-composition-and-limit.html">action-normalization
 identity</a>.</p>
+<p><strong>The two-regulator bridge and a residual action.</strong> For
+the free Gaussian endpoint bridge on a partition with <span
+class="math inline">\(d=N-1\)</span> interior points, whitening the
+quadratic action gives <span class="math inline">\(2\Delta
+S/a\sim\chi_d^2\)</span> and hence <span class="math display">\[\mathbb
+E\Delta S=\frac{da}{2},\qquad
+  \operatorname{Var}(\Delta S)=\frac{da^2}{2}.\]</span> If the maximum
+cell length and <span class="math inline">\(a_N\)</span> tend to zero
+while <span class="math inline">\(d a_N\to\ell\)</span>, the bridges can
+be coupled to converge uniformly almost surely to the classical chord,
+while <span class="math inline">\(\Delta S\to\ell/2\)</span> in <span
+class="math inline">\(L^2\)</span>. This uses one Brownian bridge and
+its polygonal interpolations. For equal cells <span
+class="math inline">\(\tau=T/N\)</span> and <span
+class="math inline">\(a_N=b\tau\)</span>, the supplied <span
+class="math inline">\(b\)</span> has energy units and <span
+class="math inline">\(\ell=bT\)</span>. The positive residual is
+selected by the scaling; at every finite mesh the action distribution
+has values arbitrarily near zero.</p>
+<p>The separately controlled reference family fixes <span
+class="math inline">\(m_R,\kappa_R&gt;0\)</span> and chooses <span
+class="math inline">\(m_B=\alpha_\pi m_R/\kappa_R\)</span>, so its
+normalized free kernels are preserved as <span
+class="math inline">\(\alpha_\pi\to0\)</span>; the bare mass then tends
+to zero. This is different from the preceding fixed-mass limit and does
+not derive the reference action. The <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/regulator-limits.tex">regulator
+manuscript</a>, Proposition 2 and its running-coefficient section,
+contains the full arbitrary-partition proof and source reading; the <a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/regulator-limits.pdf">PDF</a>,
+<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B08.md">B08</a>
+and its <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/regulator-limits-B08.md">review</a>
+retain the detailed record. The manuscript also gives a bounded-speed
+shrinking sine example with a fixed action defect and growing
+acceleration, and a separate scalar stationary-phase/delta-weight
+calculation. Those examples motivate testing which independent force or
+derivative bounds suppress such a defect; they do not make the defect
+universal or identify it with <span
+class="math inline">\(\hbar\)</span>.</p>
 <p>The open RG problem is to construct a compatible control or blocking
 map for the actual normalized kernels, states and generated
 interactions, including the increments and all required limits, and then
@@ -301,8 +342,8 @@ future-selection information. No finite-dimensional local symplectic
 apparatus realizing that access is constructed (<a
 href="cusp-history-records-continuity.html">history model</a>, Theorem
 1).</p>
-<p>An earlier <a href="three-body-cut-memory.html">three-body spring
-calculation</a> gives a distinct, finite-dimensional Hamiltonian
+<p>An earlier <a href="conservative-harmonic-receiver.html">three-body
+spring calculation</a> gives a distinct, finite-dimensional Hamiltonian
 example: eliminating the receiver leaves reversible memory, and two
 nearby exact tagged-phase observations recover its hidden state. This
 makes state loss at a cut concrete; it does not realize the cusp force

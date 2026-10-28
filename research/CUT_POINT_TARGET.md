@@ -52,7 +52,7 @@ its preparation at every mesh requires a physical justification.
 [Cut consistency](../notes/cut-point-consistency.md),
 [finite-speed cuts](../notes/physical-cut-speed.md),
 [return bridges](../notes/telegraph-return-bridge.md) and
-[classical cut state](../notes/classical-cut-state.md) retain proofs and audits.
+[classical cut state](../notes/conservative-harmonic-receiver.md) retain proofs and audits.
 The older double-limit/finite-propagation drafts remain under R02 review;
 they are not accepted quantum-necessity theorems.
 

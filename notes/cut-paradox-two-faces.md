@@ -23,7 +23,7 @@ the massive evolution has dispersion $\omega(k)=\sqrt{u^2k^2+\omega_0^2}$ with
 branch points at $k=\pm i\omega_0/u$, which at $u=c$, $\omega_0=mc^2/\hbar$ is
 $k=\pm imc/\hbar$. This is the reading of the user's remark 2 in I003 that the
 present calculation supports; remark 3, an $h$ that controls convergence, is
-the crossover $g(z)$ of the [coordinator's exact bridge note](bridge-crossover.md).
+the crossover $g(z)$ of the [coordinator's exact bridge note](telegraph-return-bridge.md).
 
 ## 1. The two paradoxes as slicing laws
 

@@ -67,7 +67,7 @@ formula or title remains a discovery lead until checked.
   to preparation, energy and interaction inputs; test quiet and rapidly
   decorrelating families inside the admitted class.
 - **Cut refinement or finite speed:** research/CUT_POINT_TARGET.md, then
-  notes/bridge-crossover.md or notes/bounded-acceleration-return.md. Distinguish
+  notes/telegraph-return-bridge.md or notes/bounded-acceleration-return.md. Distinguish
   sampling cuts, conditioned bridges and physical interventions, with their
   force, mass and speed bounds.
 - **Gap estimates:** notes/susceptibility-gap.md and the selected gap card.

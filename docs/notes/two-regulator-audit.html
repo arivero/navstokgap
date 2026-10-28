@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Two regulators: what survives when the paths shrink?</title>
+<title>Consolidated note — navstokgap</title><meta http-equiv="refresh" content="0; url=newton-dimock-balaban-guide.html#groupoid-scale-and-renormalization"><link rel="canonical" href="https://arivero.github.io/navstokgap/notes/newton-dimock-balaban-guide.html">
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,126 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Two regulators: what survives when the paths shrink?</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/two-regulator-audit.md">Markdown source</a></p><p>The completed M05 calculation gives a classical path limit with a
-finite action defect. Under the free Gaussian endpoint bridge, <span
-class="math inline">\(d=N-1\)</span> internal positions and action scale
-<span class="math inline">\(\kappa\)</span> give</p>
-<p><span class="math display">\[\mathbb E\Delta
-S=\frac{d\kappa}{2},\qquad
-\operatorname{Var}(\Delta S)=\frac{d\kappa^2}{2}.\]</span></p>
-<p>If <span class="math inline">\(\kappa_N\to0\)</span> and <span
-class="math inline">\(d\kappa_N\to\ell&gt;0\)</span>, the polygonal
-paths can converge uniformly almost surely to the straight classical
-path while their excess action converges in <span
-class="math inline">\(L^2\)</span> to <span
-class="math inline">\(\ell/2\)</span>. The <a
-href="https://github.com/arivero/navstokgap/blob/main/papers/regulator-limits.tex">paper</a>
-gives the arbitrary-partition determinant, covariance and proof; the <a
-href="https://github.com/arivero/navstokgap/blob/main/out/papers/regulator-limits.pdf">PDF</a>
-is the human-readable entry point.</p>
-<h2 id="source-inputs-and-the-calculations-they-generated">Source inputs
-and the calculations they generated</h2>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Source input</th>
-<th>Implemented test</th>
-<th>Result / next obligation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Rivero 1998, (5)–(9): two regulators and an unspecified control
-map</td>
-<td>Set the physical time step to <span
-class="math inline">\(\tau\)</span> and track the action coefficient
-<span class="math inline">\(\epsilon\)</span></td>
-<td>At fixed physical mass, <span
-class="math inline">\(\epsilon=b\tau\)</span> assigns energy units to
-<span class="math inline">\(b\)</span> and gives residual action <span
-class="math inline">\(bT/2\)</span> in the positive model</td>
-</tr>
-<tr>
-<td>Pitman–Yor, continuous bridge and Markov product</td>
-<td>Compute the full partition precision matrix and couple all
-partitions through one bridge</td>
-<td>Uniform path convergence coexists with a finite action defect</td>
-</tr>
-<tr>
-<td>Rindler, weak oscillations and Young measures</td>
-<td>Construct a shrinking sine displacement with fixed velocity
-amplitude</td>
-<td>A strict speed bound permits the defect; acceleration grows with
-frequency</td>
-</tr>
-<tr>
-<td>Guillemin–Sternberg, (14.7)</td>
-<td>Restore all Fourier and determinant factors in one quadratic
-critical-point calculation</td>
-<td>A scalar squared-amplitude limit gives the gradient-delta
-weight</td>
-</tr>
-<tr>
-<td>Wilson–Kogut §12.2</td>
-<td>Compare cutoffs at a fixed physical observable</td>
-<td>Running <span class="math inline">\(m_B=\epsilon
-m_R/\kappa_R\)</span> preserves the reference free kernel exactly</td>
-</tr>
-</tbody>
-</table>
-<p>The source companions record exact coverage. <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B08.md">B08</a>
-audits each mathematical result; <a
-href="https://github.com/arivero/navstokgap/blob/main/reviews/regulator-limits-B08.md">its
-review</a> checks the proofs separately from the literature
-classification.</p>
-<h2 id="the-three-quantities-to-keep-distinct">The three quantities to
-keep distinct</h2>
-<p><span class="math inline">\(\kappa\)</span> controls the Gaussian
-fluctuations and has action units. The product <span
-class="math inline">\(d\kappa\)</span> controls the total quadratic
-action in the joint limit. A hard action-value gap would instead be a
-positive infimum over an explicitly chosen admissible class. The current
-finite-dimensional action distribution has values arbitrarily close to
-zero; the residual limit is selected by a scaling rule.</p>
-<p>The constant <span class="math inline">\(\kappa_R\)</span> in the
-running-coefficient model is supplied by a reference bridge variance and
-a reference mass. Taking <span
-class="math inline">\(\epsilon\to0\)</span> then sends the bare kinetic
-coefficient to zero while preserving the reference family. This differs
-from the fixed-mass shrinking-bridge construction.</p>
-<h2 id="m06-test-a-physical-dynamical-premise">M06: test a physical
-dynamical premise</h2>
-<p>The next experiment should determine which control on forces or
-derivatives allows an action defect to survive. Start with the explicit
-sine sequence, fixed endpoints, fixed duration and its strict speed
-margin.</p>
-<ol type="1">
-<li>Impose uniform acceleration or force control and derive the
-corresponding compactness/action estimate. State the convergence
-topology and constants.</li>
-<li>Replace the quadratic kinetic action by the specified relativistic
-free action within the same strict speed margin. Calculate the
-oscillatory limit and its dependence on <span
-class="math inline">\(c\)</span>, amplitude and duration.</li>
-<li>Use those results to state the physical premise that a stochastic or
-additional-field model would need to retain a positive residual. Track
-whether that premise supplies a scale or derives one.</li>
-</ol>
-<p>Commission one bounded librarian audit after the calculation. Its
-role is to identify the established compactness/averaging results and
-supply the next construction. The stronger programme then asks for
-universality and a physical phase rule linking the surviving quantity to
-<span class="math inline">\(h=2\pi\hbar\)</span>.</p>
-<p>The tangent-groupoid theorem reading remains B07b. It addresses the
-separate quantum-completion branch; the present source reading has
-completed B07a’s common-observable scaling test.</p>
-
+<h1>Note consolidated</h1><p>This material is now part of <a href="newton-dimock-balaban-guide.html#groupoid-scale-and-renormalization">Newton, quantum mechanics and Dimock--Balaban: a guide through one time dimension</a>. The original source remains in repository history.</p>
 </main>
 <footer class="site"><div class="wrap">
 <p><strong>Comments, corrections and questions are welcome as repository

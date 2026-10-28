@@ -1,8 +1,9 @@
 # Chains that would benefit from synthesis
 
-2026-10-01. These are writing opportunities, not new research priorities.
-No source note is merged or replaced. The catalog and dependency map already
-provide routing; a future synthesis earns a place by stating the strongest
+Originally drafted 2026-10-01 as writing opportunities, not new research
+priorities. Later work consolidated selected receiver and regulator notes;
+the remaining proposals are guides to writing, with their source links and
+qualifications retained. A synthesis earns its place by stating the strongest
 common conclusion and its remaining premise.
 
 | Common question | Existing chain and what to summarize | Strongest supported conclusion | Remaining question / recommendation |

@@ -64,9 +64,8 @@ positive scale being inferred from consistency alone.
 Position alone generally loses momentum; eliminating another body can leave
 memory even after position and momentum are retained. Telegraph bridges give
 a constructive alternative to scalar convolution rigidity. Sources:
-[classical cut state](../notes/classical-cut-state.md),
+[two-body cut state and three-body memory, §§8–9](../notes/conservative-harmonic-receiver.md),
 [reachable composition](../notes/reachable-cut-composition.md),
-[three-body memory](../notes/three-body-cut-memory.md),
 [telegraph bridge](../notes/telegraph-return-bridge.md).
 Purpose: identify the closure data before taking a continuum limit.
 

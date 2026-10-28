@@ -69,7 +69,7 @@ separate preparation obligation.
 
 ## 2. Crossover and the conditioned midpoint (A09)
 
-Coordinator update, A09a/B17: [the exact crossover proof](bridge-crossover.md)
+Coordinator update, A09a/B17: [the exact crossover proof](telegraph-return-bridge.md)
 now gives the full beta mixture and plateau limit. It corrects the earlier
 unscaled-mean interpretation below; the sampler remains numerical evidence.
 

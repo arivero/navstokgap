@@ -8,6 +8,8 @@ their proofs, checks and countermodels. This page is the live queue;
 [dependencies](dependencies.md), [obstructions](obstructions.md), the
 [book map](book-map.md) and the full [catalog](../notes/index.md) route
 the wider corpus.
+The receiver compilation now contains the full R03/R04 cut and memory proofs;
+the Newton synthesis incorporates the two-regulator bridge result.
 
 ## Goal
 

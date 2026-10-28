@@ -374,99 +374,440 @@ velocities while supplying low-frequency response; its preparation
 dependence remains a separate selection test.</p>
 <h2 id="what-information-survives-a-cut">8. What information survives a
 cut?</h2>
-<p>The fixed-energy two-body receiver gives an exact cut-state
-countertest: position-only stationary conditional kernels fail
-composition, while retaining momentum restores it. Independently
-refreshing direction at every inserted cut preserves one-time position
-marginals but freezes terminal position as the mesh shrinks. These are
-C062–C063; the full maps and proof are in <a
-href="classical-cut-state.html">the cut-state note</a>, with the <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B33.md">B33
-audit</a>.</p>
-<p>With <span class="math inline">\(q=x-X\)</span>, <span
-class="math inline">\(\mu=mM/(m+M)\)</span>, <span
-class="math inline">\(\omega=\sqrt{k/\mu}\)</span> and <span
-class="math inline">\(A=\sqrt{2E/k}\)</span>, uniform phase on the
-energy ellipse gives the conditional one-segment positions</p>
+<p><strong>C062–C063; written derivation and B33/coordinator
+review.</strong></p>
+<p>A position-only cut loses the direction of motion of a fixed-energy
+spring receiver. Exact segment laws then fail the composition law;
+independently refreshing the missing direction at every cut converges to
+a frozen position. Retaining canonical momentum restores exact
+composition on every partition. The required datum has momentum units,
+and the available orbital action remains set by the prepared energy.</p>
+<h3 id="fixed-experiment-and-exact-maps">8.1. Fixed experiment and exact
+maps</h3>
+<p>Use A10’s two-body receiver with masses <span
+class="math inline">\(m,M&gt;0\)</span>, stiffness <span
+class="math inline">\(k&gt;0\)</span>, zero centre position and total
+momentum. Put <span class="math inline">\(q=x-X\)</span>, <span
+class="math inline">\(\mu=mM/(m+M)\)</span> and <span
+class="math inline">\(p=\mu\dot q\)</span>. The full internal phase
+state is <span class="math inline">\(z=(q,p)\)</span> and</p>
+<p><span class="math display">\[H=\frac{p^2}{2\mu}+\frac{kq^2}{2},\qquad
+\omega=\sqrt{k/\mu},\qquad
+\Phi_t=\begin{pmatrix}
+\cos\omega t&amp;\sin\omega t/(\mu\omega)\\
+-\mu\omega\sin\omega t&amp;\cos\omega t
+\end{pmatrix}.
+\]</span></p>
+<p>Fix <span class="math inline">\(E&gt;0\)</span>, <span
+class="math inline">\(A=\sqrt{2E/k}\)</span> and uniform phase on the
+ellipse <span class="math inline">\(H=E\)</span>: <span
+class="math inline">\(q=A\cos\phi\)</span>, <span
+class="math inline">\(p=-\mu\omega A\sin\phi\)</span>. This invariant
+preparation, the Hamiltonian and the observable <span
+class="math inline">\(q\)</span> stay fixed throughout refinement. The
+tagged position is <span class="math inline">\(x=Mq/(m+M)\)</span>, so
+all position conclusions transfer by this fixed factor. The maximum
+relative speed is <span class="math inline">\(A\omega\)</span>; choosing
+<span class="math inline">\(E\)</span> small enough enforces any
+prescribed positive particle-speed ceiling.</p>
+<p>Write <span class="math inline">\(P(q,p)=q\)</span>, and let <span
+class="math inline">\(L(q)\)</span> be the conditional phase-state law
+given position. For <span class="math inline">\(|q|&lt;A\)</span>, it
+gives equal weights to <span
+class="math inline">\(p=\pm\mu\omega\sqrt{A^2-q^2}\)</span>; at <span
+class="math inline">\(q=\pm A\)</span> it is the point mass at <span
+class="math inline">\(p=0\)</span>. This specifies a version even at the
+zero-probability endpoints. The stationary position density is <span
+class="math inline">\([\pi\sqrt{A^2-q^2}]^{-1}\)</span> on <span
+class="math inline">\((-A,A)\)</span>. On probability laws define <span
+class="math inline">\(U_t=(\Phi_t)_\#\)</span>, <span
+class="math inline">\(P_\#\nu\)</span> by projection, and <span
+class="math inline">\(L\rho=\int L(q)\rho(dq)\)</span>. The exact
+one-segment stationary conditional kernel is <span
+class="math inline">\(K_t=P_\#U_tL\)</span>; it is not a Markov
+transition semigroup for the position process. The following diagram
+names both procedures:</p>
+<p><span class="math display">\[
+\begin{array}{ccccc}
+L\delta_q&amp;\xrightarrow{U_s}&amp;U_sL\delta_q
+&amp;\xrightarrow{U_t}&amp;U_{t+s}L\delta_q\\
+&amp;&amp;\downarrow P_\#&amp;&amp;\downarrow P_\#\\
+&amp;&amp;K_s\delta_q&amp;\xrightarrow{K_t}&amp;K_tK_s\delta_q.
+\end{array}
+\]</span></p>
+<p>The upper route gives <span
+class="math inline">\(K_{t+s}\delta_q\)</span> after final projection.
+The lower route inserts the operation <span
+class="math inline">\(LP_\#\)</span> at the interface. This operation
+replaces the history-conditioned momentum law by its stationary
+conditional law. It is an additional reset, whereas an observational cut
+simply records <span class="math inline">\(q\)</span>. Marginalizing the
+true joint path law retains all its correlations and is
+restriction-consistent on every finite partition.</p>
+<h3 id="composition-defect-and-its-missing-information">8.2. Composition
+defect and its missing information</h3>
+<p>For a starting position <span class="math inline">\(q\)</span>, the
+exact kernel is the equally weighted pair</p>
 <p><span class="math display">\[q&#39;=q\cos\omega t\
-\pm\sqrt{A^2-q^2}\sin\omega t\]</span></p>
-<p>with equal weights. Thus the full mean after <span
-class="math inline">\(s+t\)</span> is <span
-class="math inline">\(q\cos\omega(s+t)\)</span>, whereas independent
-conditional composition gives <span class="math inline">\(q\cos\omega
-s\cos\omega t\)</span>. The missing interface variable is <span
-class="math inline">\(p_s=\mu\dot q_s\)</span> in <span
-class="math inline">\(q_{s+t}=q_s\cos\omega t+p_s\sin\omega
-t/(\mu\omega)\)</span>. It has momentum units. Keeping this full
-internal state composes exactly; marginalizing the true joint path law
-also preserves all cut restrictions.</p>
-<p>For <span class="math inline">\(N\)</span> independent resets at
-intervals <span class="math inline">\(T/N\)</span>, direct iteration
-gives</p>
-<p><span class="math display">\[\mathbb E Q_N=q[\cos(\omega
-T/N)]^N,\]</span> <span class="math display">\[\mathbb E
-Q_N^2=\frac{A^2}{2}
-+\left(q^2-\frac{A^2}{2}\right)[\cos(2\omega T/N)]^N.\]</span></p>
-<p>The first limit is <span class="math inline">\(q\)</span> and the
-second is <span class="math inline">\(q^2\)</span>, proving terminal
-conditional <span class="math inline">\(L^2\)</span> convergence to the
-starting position. Under the original stationary preparation the reset
-two-time correlation tends to <span
-class="math inline">\(A^2/2\)</span>, while the true value is <span
-class="math inline">\((A^2/2)\cos\omega T\)</span>. A cut that only
-observes the motion performs no reset and leaves the true correlation
-unchanged.</p>
-<p>The normalized orbital action is <span
-class="math inline">\(J=(2\pi)^{-1}\oint p\,dq=E/\omega\)</span>:
-integrating <span class="math inline">\(\mu\omega A^2\sin^2\phi\)</span>
-over a cycle proves the formula. Uniform-phase covariance also has
-square-root determinant <span class="math inline">\(E/\omega\)</span>.
-Cooling <span class="math inline">\(E\downarrow0\)</span> at fixed
-Hamiltonian closes both, with exact phase-state composition intact. R04
-extends this test to a third body, as follows.</p>
+\pm\sqrt{A^2-q^2}\sin\omega t.\]</span></p>
+<p>In particular <span class="math inline">\(\mathbb E[q_t\mid
+q_0=q]=q\cos\omega t\)</span>. Independently composing these kernels
+gives mean <span class="math inline">\(q\cos\omega s\cos\omega
+t\)</span>, while the full route gives <span
+class="math inline">\(q\cos\omega(s+t)\)</span>. Their difference (full
+minus reset) is <span class="math inline">\(-q\sin\omega s\sin\omega
+t\)</span>, which is generically nonzero. For example, at <span
+class="math inline">\(q=A/2\)</span> and <span
+class="math inline">\(s=t=\pi/(2\omega)\)</span> the full mean is <span
+class="math inline">\(-A/2\)</span> and the reset mean is zero. Thus
+these stationary two-time conditional kernels do not form a
+semigroup.</p>
+<p>The general block identity explains the missing term. Writing <span
+class="math inline">\(\Phi_t=\left(\begin{smallmatrix}a_t&amp;b_t\\c_t&amp;d_t\end{smallmatrix}\right)\)</span>,
+its retained-to-retained block obeys <span
+class="math inline">\(a_{t+s}=a_ta_s+b_tc_s\)</span>. Here <span
+class="math inline">\(b_tc_s=-\sin\omega t\sin\omega s\)</span>:
+propagation into momentum and back is lost by multiplying only the
+position blocks. The interface equation is <span
+class="math inline">\(q_{s+t}=a_tq_s+b_tp_s\)</span>. Momentum <span
+class="math inline">\(p_s\)</span> has units <span
+class="math inline">\(ML/T\)</span> and <span
+class="math inline">\(b_t\)</span> has units <span
+class="math inline">\(T/M\)</span>; their product supplies a length. No
+action parameter is needed to close this equation.</p>
+<p>On the fixed ellipse, position together with the sign of momentum
+suffices away from the turning points, where momentum is zero. Uniformly
+in time the phase state <span class="math inline">\((q,p)\)</span> gives
+the unambiguous completion. An equivalent history completion is two
+successive positions: if <span
+class="math inline">\(\sin\omega\delta\ne0\)</span>, then</p>
+<p><span
+class="math display">\[p_s=\mu\omega\frac{q_s\cos\omega\delta-q_{s-\delta}}
+{\sin\omega\delta}.\]</span></p>
+<p>It becomes singular at half-period sampling, and its sensitivity to
+observation error grows as <span
+class="math inline">\(\delta\downarrow0\)</span>. Exact mathematical
+recoverability therefore does not by itself establish a finite-precision
+physical readout.</p>
+<h3 id="refining-independent-resets-changes-the-motion">8.3. Refining
+independent resets changes the motion</h3>
+<p>Let <span class="math inline">\(T&gt;0\)</span> be fixed, <span
+class="math inline">\(\delta=T/N\)</span> and let <span
+class="math inline">\(Q_N\)</span> be the terminal position from <span
+class="math inline">\(N\)</span> independently composed <span
+class="math inline">\(K_\delta\)</span> kernels, starting at <span
+class="math inline">\(q\)</span>. Set <span
+class="math inline">\(c=\cos\omega\delta\)</span>. Conditional first and
+second moments give</p>
+<p><span class="math display">\[\mathbb E Q_N=q c^N,\qquad
+\mathbb E Q_N^2=\frac{A^2}{2}
++\left(q^2-\frac{A^2}{2}\right)[\cos(2\omega\delta)]^N.\]</span></p>
+<p>For the second formula, one step sends <span
+class="math inline">\(q^2\)</span> to <span
+class="math inline">\(q^2\cos(2\omega\delta)+A^2\sin^2\omega\delta\)</span>;
+subtract <span class="math inline">\(A^2/2\)</span> and iterate. Since
+<span class="math inline">\(N\delta^2=T^2/N\to0\)</span>, both cosine
+powers tend to one. Consequently <span class="math inline">\(\mathbb
+E[(Q_N-q)^2]\to0\)</span>. This is conditional terminal <span
+class="math inline">\(L^2\)</span> convergence to a frozen position, at
+fixed <span class="math inline">\(q,E,k,m,M,T\)</span>. The full
+observational route remains <span class="math inline">\(K_T\)</span>,
+independent of <span class="math inline">\(N\)</span>, and is
+nondegenerate for <span class="math inline">\(|q|&lt;A\)</span> and
+<span class="math inline">\(\sin\omega T\ne0\)</span>.</p>
+<p>A directly measurable distinction survives averaging over the same
+stationary preparation: the reset two-time correlation is <span
+class="math inline">\((A^2/2)[\cos(\omega T/N)]^N\to A^2/2\)</span>,
+while the true correlation is <span
+class="math inline">\((A^2/2)\cos\omega T\)</span>. Each reset kernel
+preserves the stationary one-time position law, so equal one-time
+marginals conceal the change of experiment. This limit concerns terminal
+and two-time observables; no path-topology limit is asserted here.</p>
+<h3 id="action-bookkeeping-and-the-selection-obligation">8.4. Action
+bookkeeping and the selection obligation</h3>
+<p>The canonical orbital action with <span
+class="math inline">\(1/(2\pi)\)</span> normalization is</p>
+<p><span class="math display">\[J=\frac1{2\pi}\oint p\,dq=\frac
+E\omega.\]</span></p>
+<p>Indeed <span class="math inline">\(p\,dq=\mu\omega
+A^2\sin^2\phi\,d\phi\)</span> for increasing dynamical phase, whose
+integral is <span class="math inline">\(2\pi E/\omega\)</span>. Also
+uniform phase gives <span class="math inline">\(\langle
+q^2\rangle=E/k\)</span>, <span class="math inline">\(\langle
+p^2\rangle=\mu E\)</span> and <span class="math inline">\(\langle
+qp\rangle=0\)</span>, so <span
+class="math inline">\(\sqrt{\det\operatorname{Cov}(q,p)}=E/\omega\)</span>.
+Both have units <span class="math inline">\(ML^2/T\)</span>. This
+normalization differs from A15’s twice-area estimator and is stated
+explicitly.</p>
+<p>Within the single fixed preparation <span
+class="math inline">\(J\)</span> is conserved. Across preparations <span
+class="math inline">\(E\downarrow0\)</span> at fixed Hamiltonian, <span
+class="math inline">\(J\downarrow0\)</span> and all the phase-state
+composition identities still hold; <span
+class="math inline">\(E=0\)</span> supplies the equilibrium endpoint.
+Thus exact classical cut composition in this experiment forces no
+positive preparation-independent lower action. The present calculation
+settles a candidate cut-state requirement and the classical-definition
+gate, while the selection of a positive universal quantum-role parameter
+remains open.</p>
+<h3 id="source-construction-and-next-experiment">8.5. Source
+construction and next experiment</h3>
+<p>I005’s classical readings motivate retaining transition information
+across cuts; its historical attributions remain in that idea entry. A10
+and B23 supply the explicit spring receiver. Ford–Kac–Mazur p. 505,
+(2)–(5), supplies the established harmonic propagator, and Zwanzig
+p. 219, (21)–(24), supplies the complementary elimination-to-memory
+construction. The present fixed-energy conditional kernels and reset
+limit are elementary consequences derived above. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B33.md">B33</a>
+records bounded literature coverage and <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/classical-cut-state-B33.md">the
+review</a> records proof acceptance.</p>
+<p>The next section retains tagged position <strong>and
+momentum</strong> while eliminating an independent receiver mode in a
+three-body spring system. It determines the receiver memory needed
+across a cut and when finite observable history restores composition,
+distinguishing omitted observed-body velocity from memory induced by a
+physical receiver. Hamiltonian and preparation remain fixed, so the
+action-valued observables can be traced to those inputs.</p>
 <h2 id="a-third-body-exact-memory-and-recoverable-history">9. A third
 body: exact memory and recoverable history</h2>
-<p>Retaining tagged momentum leaves receiver memory in the equal-mass
-open three-body chain. At zero centre position and momentum, let <span
-class="math inline">\(x=x_1\)</span>, <span
-class="math inline">\(y=x_2-x_3\)</span>, <span
-class="math inline">\(\mu=3m/2\)</span>, <span
-class="math inline">\(\nu=m/2\)</span>, <span
-class="math inline">\(P=\mu\dot x\)</span> and <span
-class="math inline">\(Q=\nu\dot y\)</span>. Physical tagged momentum is
-<span class="math inline">\(p_1=2P/3\)</span>. The internal Hamiltonian
-is</p>
-<p><span class="math display">\[H=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
-+\frac{9k}{8}x^2-\frac{3k}{4}xy+\frac{5k}{8}y^2.\]</span></p>
-<p>For fixed microcanonical energy <span
-class="math inline">\(E&gt;0\)</span>, eliminate <span
-class="math inline">\(y,Q\)</span> exactly. With <span
-class="math inline">\(g=3k/4\)</span>, <span
-class="math inline">\(d=5k/4\)</span> and <span
-class="math inline">\(\Omega^2=5k/(2m)\)</span>,</p>
-<p><span class="math display">\[\mu\ddot x+\frac{9k}{5}x
-+\int_0^t\frac{9k}{20}\cos\Omega(t-s)\dot x(s)\,ds=F_0(t),\]</span></p>
-<p><span class="math display">\[F_0(t)=g\left(y_0-\frac gd
-x_0\right)\cos\Omega t
-+\frac{gQ_0}{\nu\Omega}\sin\Omega t.\]</span></p>
-<p>These inherited quadratures carry the receiver information across a
-cut. The kernel has stiffness units; its convolution is a force. The
-full proof in <a href="three-body-cut-memory.html">R04</a> also recovers
-the hidden pair from tagged phase at two sufficiently close times. The
-relevant block determinant is <span
-class="math inline">\(g^2\delta^4/(12\mu\nu)+O(\delta^6)\)</span>;
-inverse entries grow up to <span
-class="math inline">\(\delta^{-3}\)</span>. Exact recovery and
-finite-precision physical readout therefore pose different
-requirements.</p>
-<p>The internal frequencies are <span
-class="math inline">\(\sqrt{k/m}\)</span> and <span
-class="math inline">\(\sqrt{3k/m}\)</span>, and modal actions are <span
-class="math inline">\(E_j/\omega_j\)</span>. Cooling scales the actions
-to zero while keeping the memory kernel fixed. C064–C065 and <a
+<p>An equal-mass three-body spring chain requires receiver information
+at a cut even when the tagged body’s position and momentum are retained.
+Eliminating the receiver gives an exact cosine memory kernel and two
+initial-data terms. Two sufficiently close exact tagged phase
+observations recover the missing state. This closes R04’s
+finite-receiver test: memory supplies classical interface information,
+while the available action scales remain preparation dependent.</p>
+<p>Proof status: C064–C065, accepted by written derivation and
+coordinator review, 2026-09-10. Literature status: established
+harmonic-bath elimination and observability ingredients; explicit
+finite-chain formulas are derived specializations. <a
 href="https://github.com/arivero/navstokgap/blob/main/references/batches/B34.md">B34</a>
-record this derived specialization of harmonic-bath elimination and
-observability. R05 supplies the following readout test.</p>
+records bounded coverage.</p>
+<h3 id="one-fixed-mechanical-experiment">9.1. One fixed mechanical
+experiment</h3>
+<p>Take three particles on the line with equal mass <span
+class="math inline">\(m&gt;0\)</span> and two springs of stiffness <span
+class="math inline">\(k&gt;0\)</span>:</p>
+<p><span class="math display">\[
+H=\sum_{i=1}^3\frac{p_i^2}{2m}
++\frac{k}{2}\big[(x_1-x_2)^2+(x_2-x_3)^2\big].
+\]</span></p>
+<p>Fix centre position and total momentum to zero. Write</p>
+<p><span class="math display">\[x=x_1,\qquad y=x_2-x_3,\qquad
+x_2=\frac{-x+y}{2},\quad x_3=\frac{-x-y}{2}.\]</span></p>
+<p>The restricted kinetic energy is <span class="math inline">\(3m\dot
+x^2/4+m\dot y^2/4\)</span>. Consequently the canonical momenta are <span
+class="math inline">\(P=\mu\dot x\)</span>, <span
+class="math inline">\(Q=\nu\dot y\)</span>, where <span
+class="math inline">\(\mu=3m/2\)</span> and <span
+class="math inline">\(\nu=m/2\)</span>. <strong>The physical tagged
+momentum is <span class="math inline">\(p_1=(2/3)P\)</span>.</strong>
+Retaining <span class="math inline">\((x,P)\)</span> therefore retains
+precisely the same information as <span
+class="math inline">\((x_1,p_1)\)</span>; the rescaling accounts for
+centre reduction.</p>
+<p>Put</p>
+<p><span class="math display">\[a=\frac{9k}{4},\quad
+g=\frac{3k}{4},\quad d=\frac{5k}{4}.
+\qquad
+H=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
++\frac a2x^2-gxy+\frac d2y^2.\]</span></p>
+<p>Here <span class="math inline">\(ad-g^2=9k^2/4&gt;0\)</span>, so the
+reduced quadratic Hamiltonian is positive definite. Its phase domain is
+<span class="math inline">\(\mathbb R^4\)</span> and all trajectories
+are global and smooth. Fix <span class="math inline">\(E&gt;0\)</span>
+and the normalized microcanonical Liouville measure <span
+class="math inline">\(\delta(H-E)\,dx\,dP\,dy\,dQ\)</span> throughout
+the cut experiment. This invariant preparation has compact support.
+Energy conservation gives <span class="math inline">\(|\dot
+x_i|\le\sqrt{2E/m}\)</span>; choosing <span
+class="math inline">\(E&lt;mc^2/2\)</span> supplies a hard particle
+speed ceiling in this frame. As in A10, this is a Newtonian spring
+model, with a speed-bounded preparation rather than a relativistic
+signal law.</p>
+<h3 id="exact-elimination-at-any-cut">9.2. Exact elimination at any
+cut</h3>
+<p>Hamilton’s equations give</p>
+<p><span class="math display">\[\mu\ddot x=-ax+gy,\qquad \nu\ddot
+y=gx-dy.\]</span></p>
+<p>Let <span class="math inline">\(\Omega^2=d/\nu=5k/(2m)\)</span>.
+Starting a segment at time zero,</p>
+<p><span class="math display">\[
+y(t)=y_0\cos\Omega t+\frac{Q_0}{\nu\Omega}\sin\Omega t
++\frac{g}{\nu\Omega}\int_0^t\sin\Omega(t-s)x(s)\,ds.
+\]</span></p>
+<p>Substitution gives the exact reduced equation</p>
+<p><span class="math display">\[
+\mu\ddot x(t)+ax(t)
+-\frac{g^2}{\nu\Omega}\int_0^t\sin\Omega(t-s)x(s)\,ds
+=g y_0\cos\Omega t+\frac{gQ_0}{\nu\Omega}\sin\Omega t.
+\]</span></p>
+<p>Integration by parts rewrites it as</p>
+<p><span class="math display">\[
+\boxed{\mu\ddot x(t)+a_{\rm eff}x(t)
++\int_0^t\Gamma(t-s)\dot x(s)\,ds=F_0(t)},
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+a_{\rm eff}=a-\frac{g^2}{d}=\frac{9k}{5},\qquad
+\Gamma(t)=\frac{g^2}{d}\cos\Omega t=\frac{9k}{20}\cos\Omega t,
+\]</span></p>
+<p><span class="math display">\[
+F_0(t)=g\left(y_0-\frac gd x_0\right)\cos\Omega t
++\frac{gQ_0}{\nu\Omega}\sin\Omega t.
+\]</span></p>
+<p>The kernel has stiffness units <span
+class="math inline">\(M/T^2\)</span>; its velocity convolution and <span
+class="math inline">\(F_0\)</span> have force units <span
+class="math inline">\(ML/T^2\)</span>. Under the chosen preparation
+<span class="math inline">\(F_0\)</span> is a random function determined
+by initial data, with its two quadratures correlated through the energy
+constraint. No independent noise is introduced at later cuts. The
+oscillatory memory is reversible, rather than a positive friction
+coefficient describing irreversible energy loss.</p>
+<p>At a cut <span class="math inline">\(\tau\)</span>, the same formulas
+hold with <span class="math inline">\(t\)</span> replaced by <span
+class="math inline">\(t-\tau\)</span> and <span
+class="math inline">\((x_0,y_0,Q_0)\)</span> by <span
+class="math inline">\((x_\tau,y_\tau,Q_\tau)\)</span>. The inherited
+<span class="math inline">\((y_\tau,Q_\tau)\)</span> encodes everything
+needed from earlier history. One may carry this pair or carry the
+equivalent memory and its initial quadratures.</p>
+<h3 id="what-fails-when-only-tagged-phase-is-carried">9.3. What fails
+when only tagged phase is carried</h3>
+<p>Write <span class="math inline">\(u=(x,P)\)</span>, <span
+class="math inline">\(w=(y,Q)\)</span> and block the exact linear flow
+as</p>
+<p><span class="math display">\[\binom{u_t}{w_t}
+=\Phi_t\binom{u_0}{w_0},\qquad
+\Phi_t=\begin{pmatrix}A_t&amp;B_t\\C_t&amp;D_t\end{pmatrix}.\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[u_{s+t}=A_tu_s+B_tw_s,\qquad
+A_{s+t}=A_tA_s+B_tC_s.\]</span></p>
+<p>Thus composing full segments and then projecting retains the
+excursion into the receiver and back. Multiplying only retained blocks
+discards <span class="math inline">\(B_tC_s\)</span>. At fixed energy,
+the states <span class="math inline">\(x=P=Q=0\)</span>, <span
+class="math inline">\(y=\pm\sqrt{2E/d}\)</span> have identical tagged
+phase but opposite tagged accelerations <span
+class="math inline">\(gy/\mu\)</span>. They establish that tagged phase
+alone cannot determine a unique future over the preparation’s
+support.</p>
+<p>For conditional laws, let <span class="math inline">\(L(u)\)</span>
+be a version of the microcanonical conditional receiver law given <span
+class="math inline">\(u\)</span>, and <span
+class="math inline">\(\mathcal P\)</span> the tagged projection. The
+exact one-segment conditional kernel is <span
+class="math inline">\(K_t=\mathcal P_\#(\Phi_t)_\#L\)</span>. Composing
+such kernels inserts <span class="math inline">\(L\mathcal P_\#\)</span>
+at a cut: it refreshes the receiver from its stationary conditional law
+instead of carrying the law conditioned on the full observed history.
+The deterministic block identity identifies the lost channel; no
+particular reset-refinement limit is claimed here. Marginalizing the
+true joint path law instead preserves every coarse observation on every
+partition.</p>
+<h3 id="finite-history-recovery">9.4. Finite-history recovery</h3>
+<p>The differential history gives a direct completion:</p>
+<p><span class="math display">\[y(t)=\frac{\mu\ddot x(t)+ax(t)}g,\qquad
+Q(t)=\frac\nu g\big[\mu x^{(3)}(t)+a\dot x(t)\big].\]</span></p>
+<p>There is also an exact two-time phase completion. For a separation
+<span class="math inline">\(\delta&gt;0\)</span>,</p>
+<p><span class="math display">\[u_t=A_\delta u_{t-\delta}+B_\delta
+w_{t-\delta}.\]</span></p>
+<p>If <span class="math inline">\(B_\delta\)</span> is invertible, solve
+this equation for <span class="math inline">\(w_{t-\delta}\)</span> and
+propagate to <span class="math inline">\(w_t=C_\delta
+u_{t-\delta}+D_\delta w_{t-\delta}\)</span>. Taylor expansion of the
+displayed Hamilton equations gives, in the row order <span
+class="math inline">\((x,P)\)</span> and column order <span
+class="math inline">\((y,Q)\)</span>,</p>
+<p><span class="math display">\[
+B_\delta=
+\begin{pmatrix}
+\dfrac{g}{2\mu}\delta^2+O(\delta^4)&amp;
+\dfrac{g}{6\mu\nu}\delta^3+O(\delta^5)\\
+g\delta+O(\delta^3)&amp;
+\dfrac{g}{2\nu}\delta^2+O(\delta^4)
+\end{pmatrix},
+\]</span></p>
+<p><span class="math display">\[\det
+B_\delta=\frac{g^2}{12\mu\nu}\delta^4+O(\delta^6).\]</span></p>
+<p>The leading coefficient is positive, so every sufficiently small
+positive <span class="math inline">\(\delta\)</span> permits exact
+recovery. Since <span class="math inline">\(\Phi_\delta\)</span> is
+analytic, exceptional sampling separations are isolated zeros of this
+determinant on finite intervals away from zero. For the local
+coefficients, differentiate <span class="math inline">\(\ddot
+x=(-ax+gy)/\mu\)</span> and <span class="math inline">\(\dot
+P=-ax+gy\)</span>: dependence on initial <span
+class="math inline">\(y\)</span> first enters <span
+class="math inline">\(x\)</span> at order two and <span
+class="math inline">\(P\)</span> at order one, while dependence on
+initial <span class="math inline">\(Q\)</span> enters one order later.
+This also verifies the remainder parities.</p>
+<p>Exact recovery becomes poorly conditioned as <span
+class="math inline">\(\delta\downarrow0\)</span>: the inverse block has
+entries growing as high as <span
+class="math inline">\(\delta^{-3}\)</span> in fixed physical units. The
+observed difference must be known with correspondingly increasing
+precision. This is an observability requirement, not a derived minimum
+action or minimum time. It gives R05 a concrete physical question: what
+receiver and back-reaction are required to obtain these observations at
+fixed precision?</p>
+<h3 id="what-survives-refinement-and-what-sets-its-scale">9.5. What
+survives refinement, and what sets its scale</h3>
+<p>Observational refinement leaves the full flow and the kernel <span
+class="math inline">\(\Gamma\)</span> unchanged. The surviving interface
+object is a receiver phase pair or its equivalent memory, with position
+and momentum units. Its existence follows from the nonzero spring
+coupling.</p>
+<p>For comparison with action, the chain Laplacian has eigenvalues <span
+class="math inline">\(0,k,3k\)</span>, with eigenvectors proportional to
+<span class="math inline">\((1,1,1)\)</span>, <span
+class="math inline">\((1,0,-1)\)</span> and <span
+class="math inline">\((1,-2,1)\)</span>. The two internal normal
+frequencies are therefore <span
+class="math inline">\(\omega_1=\sqrt{k/m}\)</span> and <span
+class="math inline">\(\omega_2=\sqrt{3k/m}\)</span>. In canonical normal
+coordinates each modal action, normalized by <span
+class="math inline">\(1/(2\pi)\)</span> around its own cycle on the
+invariant torus, is <span
+class="math inline">\(J_j=E_j/\omega_j\)</span>. Hence at total energy
+<span class="math inline">\(E\)</span>,</p>
+<p><span class="math display">\[\frac E{\omega_2}\le J_1+J_2\le\frac
+E{\omega_1}.\]</span></p>
+<p>The lower bound is a bound at supplied positive energy. Across
+preparations, scale every coordinate and momentum by <span
+class="math inline">\(b&gt;0\)</span> while keeping <span
+class="math inline">\(m,k\)</span> fixed. Energy and both actions scale
+by <span class="math inline">\(b^2\)</span>; the flow, memory kernel and
+sampling invertibility conditions remain the same. The force and speed
+amplitudes decrease with <span class="math inline">\(b\)</span>. Thus
+genuine receiver memory survives as a structural law while all these
+prepared action scales approach zero.</p>
+<p>The next selection test should address physical acquisition of
+interface information, rather than infer an action floor from memory
+alone. Specify a mechanical readout and its disturbance, then test
+whether arbitrary refinement at fixed useful accuracy remains possible
+under its independently stated resources. The present finite receiver
+supplies the exact baseline for that experiment.</p>
+<h3 id="source-route">9.6. Source route</h3>
+<p>Zwanzig (1973), printed p. 219, equations (21)–(24), supplies the
+established harmonic-bath elimination route; <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B23/harmonic-receiver-source-companion.md">B23’s
+companion</a> records the cached original and coverage. Section 8 (R03)
+supplies the projection/reset distinction. The finite-history
+reconstruction is a linear observability calculation, with the explicit
+block determinant derived above. Hermann–Krener (1977), printed p. 733,
+Theorem 3.1 supplies the general local weak observability framework,
+rather than the sampled determinant formula. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B34/receiver-memory-source-companion.md">B34’s
+companion</a> records three primary pages, and the <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/three-body-memory-B34.md">coordinator
+review</a> checks their scope and the derivation.</p>
 <h2 id="readout-precision-and-a-scalable-classical-instrument">10.
 Readout precision and a scalable classical instrument</h2>
 <p>Two sequential classical probes read the tagged pair with vanishing

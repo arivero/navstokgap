@@ -396,7 +396,7 @@ fixed positive clock mean energy while its measurement product closes.
 **R04/B34 capsule:** Zwanzig p. 219 supplies exact harmonic memory;
 Hermann–Krener p. 733 supplies local observability via a rank condition.
 Read [B34 companion](../docs/batches/B34/receiver-memory-source-companion.md)
-and [the three-body note](../notes/three-body-cut-memory.md). Two exact tagged
+and [the three-body note](../notes/conservative-harmonic-receiver.md). Two exact tagged
 phase samples recover the hidden receiver pair, with inverse entries up to
 order $\delta^{-3}$. R05 obtained such samples with ideal probes and tracked
 readout precision, disturbance and resources. The support action products
@@ -405,7 +405,7 @@ remain preparation dependent; R06 tests the physical implementation.
 **R03/B33 capsule:** Ford–Kac–Mazur p. 505 (2)–(5) supplies the full harmonic
 propagator; Zwanzig p. 219 (21)–(24) supplies elimination into a memory equation.
 Read [B33 companion](../docs/batches/B33/cut-state-source-companion.md) and
-[the R03 note](../notes/classical-cut-state.md). Position-conditioned independent
+[the R03 note](../notes/conservative-harmonic-receiver.md). Position-conditioned independent
 resets lose momentum correlation and freeze under refinement; retaining the
 full two-body phase state restores composition. R04 retained tagged position
 and momentum in a three-body receiver and eliminated an independent mode.
@@ -525,7 +525,7 @@ This connects a known quantum construction to the still-open selection gate.
 
 **Source construction:** Wilson–Kogut compare cutoff models at a common
 physical correlation length. Read [the companion](../docs/WilsonKogut_1974.md)
-for §12.2 coverage, then [the two-regulator audit](../notes/two-regulator-audit.md).
+for §12.2 coverage, then [the two-regulator audit](../notes/newton-dimock-balaban-guide.md).
 
 **Use next:** specify what measured quantity is held fixed as cuts are inserted,
 and compute which mechanical coefficients must run. Test whether force/energy

@@ -142,7 +142,7 @@ history in which Newton carries interference from optics into mechanics.
   results, including [Rindler's oscillations](batches/B08/Rindler2017.md) and
   [Guillemin–Sternberg stationary phase](batches/B08/GuilleminSternberg2010.md).
   [Wilson–Kogut §12.2](WilsonKogut_1974.md) supplies M05's common-observable
-  scaling construction; [model tests](../notes/two-regulator-audit.md).
+  scaling construction; [model tests](../notes/newton-dimock-balaban-guide.md).
 
 - [B01: six primary bibliography leads](../references/batches/B01.md): quantum reconstructions, path phases and distinguishability, with individual reading-coverage records.
 - [Lean documentation reading note](Lean_ProofValidation.md): the formalisation gate.

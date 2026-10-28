@@ -90,7 +90,7 @@ practice can then be tested against those records.
 ## Refinement milestone and continuation
 
 M05/B07a/B08 completed the quadratic normalization, exact scaling map and
-source audit. The new [two-regulator note](two-regulator-audit.md) records
+source audit. The [Newton synthesis](newton-dimock-balaban-guide.md) records
 the finite action-defect theorem and routes it into M06's dynamical test.
 B07b retains the tangent-groupoid theorem's hypotheses and limit topology;
 match these to the strong target's quantum-completion branch.
