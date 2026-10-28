@@ -186,6 +186,18 @@ even a two-copy mixer. A supplied entropy floor instead gives a classical
 model with actual cusp transport, copy-index mixing and $W_2$ closure,
 but not ordinary weak closure. Record closure, an independently selected
 scale and identification with $\hbar$ remain open.
+The [history and records test](../notes/cusp-history-records-continuity.md)
+constructs a reversible classical solution-space group with exact states;
+its Gaussian inputs have zero-action limits with preparation-dependent
+branch weights, so actual phase-law transport is not weakly continuous at
+the cusp. $W_2$ continuity, canonical mixing, closure and actual Gaussian
+transport force a positive action infimum without reversibility; the
+classical entropy-floor class supplies a witness with an imposed scale.
+Fine nondisturbing joint classical records contradict any positive
+covariance floor. These are written, unrefereed derivations; the
+history state retains future-selection data and has no constructed local
+symplectic apparatus. A uniform response law or quantum record-disturbance
+law remains to be justified independently.
 The user subsequently authorized a bounded [Alpoge--Sussman peek](../notes/alpoge-balaban-newton-peek.md)
 after the checkpoint push. Its finite fourth-response calculation and
 zero-action reflection-positivity control are recorded; no YM proof was
