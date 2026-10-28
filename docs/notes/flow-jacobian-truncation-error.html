@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The truncation error of a flow step is Gaussian times e2t\|G\|∞, so the renormalization step is small exactly on small-field configurations</title>
+<title>Gaussian tails for a covariant linearized flow; Hamiltonian truncation remains open</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,223 +79,386 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The truncation error of a flow step is Gaussian times <span
-class="math inline">\(e^{2t\|G\|_\infty}\)</span>, so the
-renormalization step is small exactly on small-field configurations</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-jacobian-truncation-error.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-jacobian-truncation-error.pdf">PDF</a></p><p>The linearization of the gradient flow is the covariant heat equation
-with a curvature term, <span class="math display">\[\partial_s\,\delta
-B_\mu=D^2\,\delta B_\mu+2\big[G_{\mu\nu},\delta B_\nu\big],
-\qquad D_\mu=\partial_\mu+[B_\mu,\cdot\,],\]</span> so the flow Jacobian
-<span class="math inline">\(D\Phi_t\)</span> is the kernel of that
-equation. Kato’s inequality dominates the covariant heat kernel by the
-free one pointwise, and the curvature term is a bounded multiplication
-operator, so Duhamel gives <span
-class="math display">\[\big|D\Phi_t(x,y)\big|\ \le\
-e^{2t\|G\|_\infty}\;\frac{1}{(4\pi t)^{3/2}}\,
-e^{-|x-y|^2/(4t)} .\]</span> Truncating the conjugated Hamiltonian of <a
-href="flow-conjugation-truncation.html">the flow-conjugation note</a> at
-range <span class="math inline">\(R\)</span> therefore costs a relative
-error of order <span class="math display">\[\varepsilon(R,t)\ \sim\
-\exp\Big[2t\|G\|_\infty-\frac{R^2}{4t}\Big],\]</span> and with <span
-class="math inline">\(R\)</span> of order the scale <span
-class="math inline">\(\sqrt{8t}\)</span> the exponent is <span
-class="math inline">\(2t\|G\|_\infty-2\)</span>: the truncation is small
-<strong>precisely when <span
-class="math inline">\(t\,\|G\|_\infty\lesssim1\)</span></strong>, that
-is when the flowed field strength is below the inverse square of the
-scale being integrated out. This is the small-field condition of
-constructive renormalization group, derived here from the flow rather
-than assumed, and it explains why Balaban’s programme splits
-configurations into small-field and large-field regions: on small fields
-the flow truncation is exponentially accurate, and on large fields the
-Jacobian bound degrades exponentially and no truncation of this kind is
-available. The flow’s own monotonicity controls <span
-class="math inline">\(\int|G|^2\)</span> and leaves <span
-class="math inline">\(\|G\|_\infty\)</span> open, so the missing
-estimate is a pointwise bound on the flowed field strength. Constants
-explicit; nothing promoted.</p>
+<h1>Gaussian tails for a covariant linearized flow; Hamiltonian
+truncation remains open</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-jacobian-truncation-error.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-jacobian-truncation-error.pdf">PDF</a></p><p>Later corrections: <a href="flow-instability-large-field.html">the
+instability note</a> withdraws exact sharpness; <a
+href="flow-conjugation-truncation.html">the lattice note</a> separates
+one lattice step from fixed-scale continuum bounds; <a
+href="large-field-operator-inequality.html">the operator-inequality
+note</a> supersedes the fixed-range competition in <a
+href="ground-state-measure-transfer.html">the transfer note</a>.</p>
 <blockquote>
-<p><strong>Sharpness.</strong> The factor <span
-class="math inline">\(e^{2t\|G\|_\infty}\)</span> below cannot be
-improved: the curvature operator is symmetric, its largest eigenvalue is
-attained by the Nielsen–Olesen mode, and that mode grows under the flow
-at exactly the rate <span class="math inline">\(2\|G\|\)</span>; see <a
-href="flow-instability-large-field.html">the instability note</a>.</p>
+<p><strong>Correction (2026-10-02).</strong> The original title, lead
+and Corollary 3 identified a Gaussian Jacobian-kernel tail with a
+relative error of the conjugated Hamiltonian and claimed it was small
+<strong>exactly</strong> on small fields. Those operator and only-if
+claims are <strong>withdrawn</strong>. The Nielsen–Olesen example grows
+at <span class="math inline">\(gB\)</span>, not <span
+class="math inline">\(2gB\)</span>, and supplies no spatial tail lower
+bound. Proposition 1 now retains the variation of Lüscher’s gauge term;
+the simple covariant heat equation is a separately specified
+background-covariant linear evolution, not the unrestricted Jacobian of
+that gauge-modified flow. Proposition 2 uses the full curvature
+block-operator norm and time-dependent propagators. Sections 3–4 give an
+absolute kernel-tail bound, with its prefactor, rather than an operator
+relative bound. The lattice-step claim at one flow radius, the scale
+substitution and the reversed free-smoothing comparison are corrected
+below. The claim that Hamiltonian methods have no access to
+configuration probabilities is also withdrawn.</p>
+</blockquote>
+<p>For a smooth compact-Lie-algebra connection on <span
+class="math inline">\(\mathbb R^3\)</span>, consider specifically the
+linear evolution <span class="math display">\[\partial_s
+u_\mu=D(s)^2u_\mu+2[G_{\mu\nu}(s),u_\nu],
+\qquad D_\mu=\partial_\mu+[B_\mu,\cdot].\]</span> It is obtained by
+adding a background-covariant gauge term to the ungauged linearization.
+Its propagator <span class="math inline">\(J(t,0)\)</span> has a
+Gaussian kernel majorant under the regularity and bounded-curvature
+hypotheses of Section 2. Define the pointwise curvature operator on
+vector fields by <span class="math display">\[(\mathcal
+C(s,x)u)_\mu=\sum_{\nu=1}^3[G_{\mu\nu}(s,x),u_\nu],
+\qquad \Gamma(s)=\sup_x\|\mathcal C(s,x)\|_{\rm op},
+\qquad A_t=2\int_0^t\Gamma(s)\,ds.\]</span> Then <span
+class="math display">\[\|J(t,0;x,y)\|_{\rm op}\le e^{A_t}
+\frac{e^{-|x-y|^2/(4t)}}{(4\pi t)^{3/2}}.\]</span> For <span
+class="math inline">\(R=\kappa\sqrt{8t}\)</span> the absolute discarded
+kernel mass is bounded by <span
+class="math display">\[e^{A_t}\left[\operatorname{erfc}(\sqrt2\kappa)
++\frac{2\sqrt2\kappa}{\sqrt\pi}e^{-2\kappa^2}\right].\]</span> This is a
+sufficient range/curvature budget for this linear evolution. It is not a
+necessary small-field condition, a bound on the actual Jacobian in every
+gauge, or a relative form estimate for a conjugated kinetic operator. No
+continuum construction or mass gap follows.</p>
+<blockquote>
+<p><strong>Sharpness corrected (2026-10-02).</strong> In the constant
+chromomagnetic model of <a href="flow-instability-large-field.html">the
+instability note</a>, §2 (full-read), <span
+class="math inline">\(\Gamma=b=gB\)</span>, the curvature term has
+eigenvalue <span class="math inline">\(2b\)</span>, but the covariant
+Laplacian contributes <span
+class="math inline">\(-b-k_\parallel^2\)</span> on that mode. The full
+growth rate is <span class="math inline">\(b-k_\parallel^2\)</span>.
+This does not saturate <span class="math inline">\(e^{2bt}\)</span> or
+prove a lower bound on the discarded spatial tail.</p>
 </blockquote>
 <blockquote>
-<p><strong>Corrected in part.</strong> The statements below are
-continuum statements at fixed physical scale. Within one lattice
-renormalization step the compactness of the gauge group bounds <span
-class="math inline">\(a^2\|G\|_\infty\)</span> by <span
-class="math inline">\(\pi\)</span> and the flow time of a doubling is
-<span class="math inline">\(a^2/2\)</span>, so the exponential factor is
-a pure number and the truncation error is uniformly small; see <a
-href="lattice-truncation-uniform.html">the lattice-truncation
-note</a>.</p>
+<p><strong>Lattice scope corrected (2026-10-02).</strong> Even granting
+the earlier schematic normalization <span
+class="math inline">\(a^2\Gamma\le\pi\)</span>, at <span
+class="math inline">\(t=a^2/2\)</span> and <span
+class="math inline">\(R=\sqrt{8t}\)</span> the exponent budget is <span
+class="math inline">\(\pi-2&gt;0\)</span>, not small. Compactness gives
+a finite coefficient budget, not accuracy at one flow radius. Increasing
+<span class="math inline">\(\kappa\)</span> controls the continuum
+majorant for any fixed finite budget; merely taking <span
+class="math inline">\(\kappa&gt;1\)</span> is not a specified accuracy
+guarantee. <a href="flow-conjugation-truncation.html">The lattice
+note</a>, §§1–4 (full-read), discusses bounded coefficients and longer
+lattice range. A plaquette-angle bound is not by itself a proof of the
+above continuum block-norm bound or a lattice Hamiltonian relative
+bound; those require their own normalization and operator estimates.</p>
 </blockquote>
-<h2 id="the-linearized-flow">1. The linearized flow</h2>
-<p>Take the continuum flow in the gauge-modified form <span
-class="math inline">\(\partial_sB_\mu=D_\nu G_{\nu\mu}+\lambda
-D_\mu\partial_\nu B_\nu\)</span> with <span
-class="math inline">\(\lambda=1\)</span> (Lüscher, arXiv:1006.4518v3,
-equations (1.1)–(1.2) and (2.2); passage level via the <a
+<h2 id="the-linearized-flow-and-its-gauge-convention">1. The linearized
+flow and its gauge convention</h2>
+<p>Take Lüscher’s gauge-modified continuum flow <span
+class="math display">\[\partial_sB_\mu=D_\nu G_{\nu\mu}+D_\mu q,
+\qquad q=\partial_\nu B_\nu.\]</span> The definition is from
+arXiv:1006.4518v3, equations (1.1)–(1.2) and (2.2), passage level via
+the <a
 href="https://github.com/arivero/navstokgap/blob/main/docs/Luscher_WilsonFlow_1006.4518v3.md">local
-companion</a>).</p>
-<p><strong>Proposition 1.</strong> The variation <span
-class="math inline">\(\delta B\)</span> of a solution obeys <span
-class="math display">\[\partial_s\,\delta B_\mu=D^2\,\delta
-B_\mu+2\big[G_{\mu\nu},\delta B_\nu\big].\]</span></p>
-<p><em>Proof.</em> Varying the first term, <span
-class="math display">\[\delta\big(D_\nu G_{\nu\mu}\big)
-=D_\nu\big(D_\nu\delta B_\mu-D_\mu\delta B_\nu\big)+\big[\delta
-B_\nu,G_{\nu\mu}\big]
-=D^2\delta B_\mu-D_\nu D_\mu\delta B_\nu+\big[\delta
-B_\nu,G_{\nu\mu}\big],\]</span> and <span class="math inline">\(D_\nu
-D_\mu\delta B_\nu=D_\mu D_\nu\delta B_\nu+[G_{\nu\mu},\delta
-B_\nu]\)</span>. Varying the gauge term gives <span
-class="math inline">\(D_\mu D_\nu\delta B_\nu\)</span> to the same
-order, which cancels the second piece, leaving <span
-class="math inline">\(D^2\delta B_\mu-2[G_{\nu\mu},\delta
-B_\nu]=D^2\delta B_\mu+2[G_{\mu\nu},\delta B_\nu]\)</span>. <span
-class="math inline">\(\square\)</span></p>
-<p>So <span class="math inline">\(D\Phi_t\)</span> is the solution
-kernel of a covariant heat equation with a zeroth-order term given by
-the curvature acting in the adjoint representation.</p>
+companion</a>. Repeated spatial indices are summed. Write <span
+class="math inline">\(u=\delta B\)</span>.</p>
+<p><strong>Proposition 1 (exact variation and auxiliary gauge
+choice).</strong> The Jacobian of this gauge-modified flow obeys <span
+class="math display">\[\partial_su_\mu=D^2u_\mu+2[G_{\mu\nu},u_\nu]
++D_\mu(\partial_\nu u_\nu-D_\nu u_\nu)+[u_\mu,q].\]</span> The ungauged
+flow instead has linearization <span
+class="math display">\[\partial_su_\mu=D^2u_\mu-D_\mu D_\nu u_\nu
++2[G_{\mu\nu},u_\nu].\]</span> Adding the <strong>linear
+background-covariant gauge term</strong> <span
+class="math inline">\(D_\mu D_\nu u_\nu\)</span> to the latter defines
+the auxiliary evolution used in Sections 2–4. Identifying it with
+another flow Jacobian requires an additional gauge comparison, not
+supplied here.</p>
+<p><em>Proof.</em> Since <span class="math inline">\(\delta
+D_\nu=[u_\nu,\cdot]\)</span> and <span class="math inline">\(\delta
+G_{\nu\mu}=D_\nu u_\mu-D_\mu u_\nu\)</span>, <span
+class="math display">\[\delta(D_\nu G_{\nu\mu})
+=D^2u_\mu-D_\nu D_\mu u_\nu+[u_\nu,G_{\nu\mu}]
+=D^2u_\mu-D_\mu D_\nu u_\nu+2[G_{\mu\nu},u_\nu].\]</span> Here <span
+class="math inline">\([D_\nu,D_\mu]u_\nu=[G_{\nu\mu},u_\nu]\)</span>.
+The gauge term has the exact variation <span
+class="math display">\[\delta(D_\mu q)=D_\mu\partial_\nu
+u_\nu+[u_\mu,q],\]</span> not <span class="math inline">\(D_\mu D_\nu
+u_\nu\)</span>. Adding these formulas proves the first identity;
+omitting the gauge term or adding the specified linear one proves the
+other assertions. <span class="math inline">\(\square\)</span></p>
+<p>Thus the original cancellation “to the same order” was unjustified:
+the omitted terms are themselves linear in <span
+class="math inline">\(u\)</span>. The propositions below are about <span
+class="math inline">\(J\)</span>, not about the full <span
+class="math inline">\(D\Phi_t\)</span> in Lüscher’s convention. At <span
+class="math inline">\(B=0\)</span> both equations reduce to the free
+heat equation. At a stationary background, background-transverse modes
+of the ungauged linearization also agree with the auxiliary generator;
+no general preservation of that transverse condition is asserted.</p>
 <h2 id="the-gaussian-bound">2. The Gaussian bound</h2>
-<p><strong>Proposition 2.</strong> Let <span
-class="math inline">\(\|G\|_\infty=\sup_{0\le s\le t,\
-x}\|G(s,x)\|\)</span> in the adjoint operator norm. Then the kernel of
-the linearized flow obeys <span
-class="math display">\[\big|D\Phi_t(x,y)\big|\ \le\
-e^{2t\|G\|_\infty}\,K^{\rm free}_t(x-y),
-\qquad K^{\rm free}_t(z)=\frac{e^{-|z|^2/(4t)}}{(4\pi t)^{3/2}}
-.\]</span></p>
-<p><em>Proof.</em> Write the equation as <span
-class="math inline">\(\partial_s u=D^2u+Mu\)</span> with <span
-class="math inline">\((Mu)_\mu=2[G_{\mu\nu},u_\nu]\)</span>, a
-multiplication operator of norm at most <span
-class="math inline">\(2\|G\|_\infty\)</span>. Duhamel gives <span
-class="math inline">\(u(t)=e^{tD^2}u(0)+\int_0^t
-e^{(t-s)D^2}Mu(s)\,ds\)</span>, and iterating, <span
-class="math inline">\(\|u(t)\|\le\sum_n\frac{(2t\|G\|_\infty)^n}{n!}\sup\|e^{\cdot
-D^2}\|\)</span>-type bounds; pointwise, Kato’s inequality gives <span
-class="math inline">\(|e^{sD^2}f|\le e^{s\Delta}|f|\)</span> for the
-covariant Laplacian in any representation (Simon, J. Funct. Anal. 32
-(1979) 97, metadata level), so each term is dominated by the free heat
-kernel and the series sums to <span
-class="math inline">\(e^{2t\|G\|_\infty}\)</span>. <span
+<p>Equip the compact Lie algebra with an invariant positive inner
+product, and its vector fields with <span
+class="math inline">\(|u|^2=\sum_\mu|u_\mu|^2\)</span>. The connection
+is metric-compatible because <span
+class="math inline">\(\operatorname{ad}(B_\mu)\)</span> is skew-adjoint.
+Assume <span class="math inline">\(B(s,x)\)</span> is smooth on <span
+class="math inline">\([0,t]\times\mathbb R^3\)</span>, with bounded
+coefficients and spatial derivatives sufficient for the covariant
+parabolic propagators and kernels below, and assume <span
+class="math inline">\(\Gamma\in L^1([0,t])\)</span>. These are
+hypotheses, not estimates derived from action monotonicity.</p>
+<p><strong>Proposition 2.</strong> Under these assumptions the auxiliary
+propagator satisfies <span class="math display">\[\|J(t,0;x,y)\|_{\rm
+op}\le e^{A_t}K_t^{\rm free}(x-y),
+\qquad K_t^{\rm free}(z)=(4\pi t)^{-3/2}e^{-|z|^2/(4t)}.\]</span> In
+particular, if <span class="math inline">\(\Gamma(s)\le\Gamma_*\)</span>
+then <span class="math inline">\(A_t\le2t\Gamma_*\)</span>.</p>
+<p><em>Proof.</em> First consider <span class="math inline">\(\partial_s
+v=D(s)^2v\)</span>. Metric compatibility gives <span
+class="math display">\[(\partial_s-\Delta)|v|^2=-2\sum_\alpha|D_\alpha
+v|^2.\]</span> Apply the chain rule to <span
+class="math inline">\(h_\epsilon=(|v|^2+\epsilon^2)^{1/2}\)</span> and
+use <span class="math inline">\(|\partial_\alpha|v|^2|\le2|v|\,|D_\alpha
+v|\)</span>. It follows that <span
+class="math inline">\((\partial_s-\Delta)h_\epsilon\le0\)</span>. Scalar
+comparison followed by <span
+class="math inline">\(\epsilon\downarrow0\)</span> yields, for the
+time-dependent covariant propagator <span
+class="math inline">\(U(t,r)\)</span>, <span
+class="math display">\[|U(t,r)f|(x)\le(e^{(t-r)\Delta}|f|)(x).\]</span>
+With the assumed kernels this also gives <span
+class="math inline">\(\|U(t,r;x,y)\|_{\rm op}\le K_{t-r}^{\rm
+free}(x-y)\)</span>, by testing localized initial data. This proves the
+needed Kato domination here; no bibliographic sharpness claim is
+used.</p>
+<p>Set <span class="math inline">\(M(s)=2\mathcal C(s)\)</span>. Duhamel
+uses the two-time propagator, <span
+class="math display">\[J(t,0)=U(t,0)+\int_0^t
+U(t,s)M(s)J(s,0)\,ds.\]</span> In the term with <span
+class="math inline">\(n\)</span> insertions, each multiplication factor
+has norm at most <span class="math inline">\(2\Gamma(s_i)\)</span> and
+scalar heat kernels convolve to <span class="math inline">\(K_t^{\rm
+free}(x-y)\)</span>. The ordered time integral is bounded by <span
+class="math inline">\(A_t^n/n!\)</span>. Summing this absolutely bounded
+series proves the result. <span
 class="math inline">\(\square\)</span></p>
-<p>The bound is saturated in the free case, where <span
-class="math inline">\(G=0\)</span> and <span
-class="math inline">\(D\Phi_t=e^{t\Delta}\)</span> exactly, in agreement
-with <a href="flowed-bound-free-field.html">the free-field note</a>
-§2.</p>
-<h2 id="the-truncation-error">3. The truncation error</h2>
-<p>The conjugated kinetic operator of <a
-href="flow-conjugation-truncation.html">the flow-conjugation note</a> §2
-is built from <span class="math inline">\(D\Phi_t\)</span>, which
-couples links at separation <span class="math inline">\(|x-y|\)</span>
-with weight bounded by Proposition 2. Truncating it to range <span
-class="math inline">\(R\)</span> discards the tail <span
-class="math inline">\(|x-y|&gt;R\)</span>, whose weight relative to the
-whole is <span class="math display">\[\varepsilon(R,t)\ \le\
-e^{2t\|G\|_\infty}\int_{|z|&gt;R}K^{\rm free}_t(z)\,d^3z
-\ \le\ C\,e^{2t\|G\|_\infty}\,e^{-R^2/(4t)}\Big(1+\frac{R}{\sqrt
-t}\Big),\]</span> by the standard Gaussian tail estimate. With the
-natural choice <span class="math inline">\(R=\sqrt{8t}\)</span>, the
-exponent is <span class="math inline">\(2t\|G\|_\infty-2\)</span>,
-so</p>
-<p><strong>Corollary 3.</strong> The flow-truncation step at scale <span
-class="math inline">\(\sqrt{8t}\)</span> has relative error <span
-class="math display">\[\varepsilon\ \lesssim\
-\exp\big[2t\|G\|_\infty-2\big],\]</span> small when <span
-class="math inline">\(t\|G\|_\infty\lesssim1\)</span> and exponentially
-large otherwise. Taking <span
-class="math inline">\(R=\kappa\sqrt{8t}\)</span> improves the exponent
-to <span class="math inline">\(2t\|G\|_\infty-2\kappa^2\)</span> at the
-cost of a longer-range effective Hamiltonian, so a fixed accuracy is
-available whenever <span class="math inline">\(\kappa^2\gtrsim
-t\|G\|_\infty\)</span>.</p>
-<h2 id="what-the-condition-says">4. What the condition says</h2>
-<p>Write <span class="math inline">\(\ell=\sqrt{8t}\)</span> for the
-scale being integrated out. The condition <span
-class="math inline">\(t\|G\|_\infty\lesssim1\)</span> reads <span
-class="math display">\[\|G\|_\infty\ \lesssim\
-\frac{8}{\ell^2},\]</span> that is, the field strength must be below the
-inverse square of the scale. In the units of <a
-href="mass-gap-obligations-lattice.html">the obligations map</a> the
-lattice field strength at spacing <span class="math inline">\(a\)</span>
-is at most of order <span class="math inline">\(1/a^2\)</span>, so at
-the first step, <span class="math inline">\(\ell\sim a\)</span>, the
-condition is marginal; after the field has been smoothed over <span
-class="math inline">\(\ell\gg a\)</span> the typical <span
-class="math inline">\(\|G\|\)</span> falls and the condition is
-comfortable on smooth configurations and violated on rough ones.</p>
-<p>This is the small-field condition of constructive renormalization
-group, obtained here as the condition for the flow truncation to be
-accurate, and it identifies the difficulty by name:</p>
-<ul>
-<li>on <strong>small-field</strong> configurations, <span
-class="math inline">\(\|G\|_\infty\le\eta/\ell^2\)</span> with <span
-class="math inline">\(\eta\)</span> small, the truncation error is <span
-class="math inline">\(e^{-2\kappa^2+2\eta}\)</span> and every step of
-the route of <a href="flow-conjugation-truncation.html">the
-flow-conjugation note</a> §6 is controlled;</li>
-<li>on <strong>large-field</strong> configurations the Jacobian bound
-degrades like <span class="math inline">\(e^{2t\|G\|_\infty}\)</span>
-and no truncation of this kind is available, so those regions must be
-handled by a different argument.</li>
-</ul>
-<p>The split is exactly the one Balaban’s programme makes (Commun. Math.
-Phys. 122 (1989) 355 and the accompanying series, metadata level), and
-the derivation above says why it is forced rather than chosen.</p>
-<h2 id="what-the-flow-itself-controls-and-what-it-leaves">5. What the
-flow itself controls, and what it leaves</h2>
-<p>The flow decreases the action monotonically, <span
-class="math inline">\(\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\le0\)</span> (<a
-href="comparison-and-bridges.html">comparison note</a> §4), so <span
-class="math display">\[\int|G(t,x)|^2\,d^3x\ \le\
-\int|G(0,x)|^2\,d^3x\]</span> for all <span
-class="math inline">\(t\)</span>: an <span
-class="math inline">\(L^2\)</span> bound, uniform in the flow time.
-Proposition 2 needs an <span class="math inline">\(L^\infty\)</span>
-bound, and the gap between them is the whole question. Two remarks fix
-its size.</p>
-<p><em>The free case is a parabolic smoothing estimate.</em> For <span
-class="math inline">\(G=0\)</span> the linearized flow is the heat
-semigroup and <span
-class="math inline">\(\|e^{t\Delta}f\|_\infty\le(4\pi
-t)^{-3/4}\|f\|_2\)</span>, so an <span
-class="math inline">\(L^2\)</span> bound on the initial curvature gives
-<span class="math inline">\(\|G(t)\|_\infty\lesssim
-t^{-3/4}\|G(0)\|_2\)</span>, which beats the required <span
-class="math inline">\(1/t\)</span> for large <span
-class="math inline">\(t\)</span> and fails for small <span
-class="math inline">\(t\)</span>. The interacting statement of this type
-is the a priori estimate that a construction must supply.</p>
-<p><em>Monotonicity is not enough by itself.</em> An <span
-class="math inline">\(L^2\)</span> bound permits a configuration with
-curvature concentrated on a small region at arbitrary height, which is
-precisely a large-field region; excluding it is a statement about the
-measure in the Euclidean formulation and about the state in the
-Hamiltonian one. In the Hamiltonian framework there is no integration
-over configurations to absorb such regions into a small probability,
-which makes the Hamiltonian route harder at exactly this point than the
-Euclidean one.</p>
+<p><strong>Norm convention.</strong> If instead <span
+class="math inline">\(g_*=\sup_{s,x,\mu,\nu}\|\operatorname{ad}(G_{\mu\nu}(s,x))\|_{\rm
+op}\)</span>, then <span class="math inline">\(\Gamma_*\le2g_*\)</span>
+in three dimensions, or <span
+class="math inline">\(\Gamma_*\le(d-1)g_*\)</span> in <span
+class="math inline">\(d\)</span> dimensions. Indeed <span
+class="math display">\[|(\mathcal Cu)_\mu|\le
+g_*\sum_{\nu\ne\mu}|u_\nu|,\]</span> and Cauchy–Schwarz, followed by
+summation over <span class="math inline">\(\mu\)</span>, gives <span
+class="math inline">\(|\mathcal Cu|^2\le(d-1)^2g_*^2|u|^2\)</span>. The
+former unspecified “adjoint operator norm” cannot silently omit this
+index factor.</p>
+<p>At <span class="math inline">\(B=0\)</span>, <span
+class="math inline">\(J=K_t^{\rm free}I\)</span> and the pointwise bound
+is attained. This free-case equality does not establish optimality of
+the curvature exponent for nonzero backgrounds.</p>
+<h2 id="absolute-kernel-tails-not-hamiltonian-relative-errors">3.
+Absolute kernel tails, not Hamiltonian relative errors</h2>
+<p>Define <span class="math inline">\(J_R\)</span> by cutting its kernel
+to <span class="math inline">\(|x-y|\le R\)</span>, and set <span
+class="math display">\[T_R=J-J_R,\qquad
+\delta(R,t)=e^{A_t}\int_{|z|&gt;R}K_t^{\rm free}(z)\,d^3z.\]</span>
+Proposition 2 bounds both row and column integrals of <span
+class="math inline">\(\|T_R(x,y)\|_{\rm op}\)</span> by <span
+class="math inline">\(\delta(R,t)\)</span>. Consequently the Schur test
+(or the scalar convolution majorant) gives the <strong>absolute</strong>
+bound <span class="math display">\[\|T_R\|_{L^2\to
+L^2}\le\delta(R,t).\]</span> It is not normalized by <span
+class="math inline">\(\|J\|\)</span> or by a kinetic quadratic form.</p>
+<p><strong>Corollary 3 (kernel-tail budget).</strong> Put <span
+class="math inline">\(q=R/(2\sqrt t)\)</span>. Then <span
+class="math display">\[\delta(R,t)=e^{A_t}
+\left[\operatorname{erfc}(q)+\frac{2q}{\sqrt\pi}e^{-q^2}\right]
+\le e^{A_t-q^2}\left(1+\frac{2q}{\sqrt\pi}\right).\]</span> Thus at
+<span class="math inline">\(R=\kappa\sqrt{8t}\)</span> a sufficient
+condition for <span
+class="math inline">\(\|J-J_R\|_{2\to2}\le\epsilon\)</span> is <span
+class="math display">\[2\kappa^2\ge A_t+
+\log\left(1+\frac{2\sqrt2\kappa}{\sqrt\pi}\right)
++\log(1/\epsilon),\qquad 0&lt;\epsilon&lt;1.\]</span> For every finite
+<span class="math inline">\(A_t\)</span> this is achieved at
+sufficiently large <span class="math inline">\(\kappa\)</span>. It is a
+sufficient condition only.</p>
+<p><em>Proof.</em> Radial integration and <span
+class="math inline">\(r=2\sqrt t\,v\)</span> give <span
+class="math display">\[\int_{|z|&gt;R}K_t^{\rm free}(z)\,d^3z
+=\frac4{\sqrt\pi}\int_q^\infty v^2e^{-v^2}dv
+=\operatorname{erfc}(q)+\frac{2q}{\sqrt\pi}e^{-q^2}.\]</span> For <span
+class="math inline">\(q\ge0\)</span>, <span
+class="math inline">\(\operatorname{erfc}(q)\le e^{-q^2}\)</span>: their
+difference is zero at zero, has derivative <span
+class="math inline">\(2e^{-q^2}(1/\sqrt\pi-q)\)</span>, and tends to
+zero at infinity. The stated inequality and logarithmic budget follow.
+<span class="math inline">\(\square\)</span></p>
+<p>At <span class="math inline">\(\kappa=1\)</span>, even the exact free
+discarded mass is <span
+class="math inline">\(\operatorname{erfc}(\sqrt2)+(2\sqrt2/\sqrt\pi)e^{-2}\)</span>.
+This is a fixed positive number, not a parameter tending to zero on
+small fields. A growing upper bound for <span
+class="math inline">\(A_t\)</span> implies neither a large actual tail
+nor a lower bound on a truncation error.</p>
+<p><strong>The Hamiltonian conversion remains open.</strong> The kinetic
+metric in <a href="flow-conjugation-truncation.html">the
+flow-conjugation note</a>, §§1–3 (full-read), involves quadratic
+Jacobian combinations and inverse metrics; the transformed operator also
+has density derivatives and lower-order terms. Already for bounded
+operators <span class="math inline">\(F\)</span> and <span
+class="math inline">\(F_R\)</span>, with <span
+class="math inline">\(E=F-F_R\)</span>, <span
+class="math display">\[\|F^*F-F_R^*F_R\|
+\le2\|F\|\,\|E\|+\|E\|^2.\]</span> This follows by expanding <span
+class="math inline">\(F_R=F-E\)</span>. It is an absolute estimate; a
+relative comparison additionally needs a positive lower bound on the
+relevant metric or a bound on its inverse. The free continuum heat
+multiplier <span class="math inline">\(e^{-t|k|^2}\)</span> has no
+bounded inverse on <span class="math inline">\(L^2\)</span>. The finite
+lattice has an invertible flow Jacobian, but uniform inverse,
+configuration-derivative and relative form estimates still need proof.
+The auxiliary <span class="math inline">\(J\)</span> above is not
+identified with that lattice Jacobian. Thus the original Hamiltonian
+interpretation of <span class="math inline">\(\delta\)</span> remains a
+<strong>heuristic motivation</strong>, not a proved relative truncation
+theorem.</p>
+<h2 id="the-sufficient-small-field-budget-and-its-limits">4. The
+sufficient small-field budget and its limits</h2>
+<p>Write <span class="math inline">\(\ell=\sqrt{8t}\)</span>. If the
+block norm satisfies <span
+class="math display">\[\Gamma(s)\le\frac\eta{\ell^2}\quad(0\le s\le
+t),\]</span> then <span class="math inline">\(A_t\le\eta/4\)</span> and
+Corollary 3 yields <span class="math display">\[\|J-J_R\|_{2\to2}
+\le\left(1+\frac{2\sqrt2\kappa}{\sqrt\pi}\right)
+\exp\left[\frac\eta4-2\kappa^2\right].\]</span> The original <span
+class="math inline">\(2\eta\)</span> growth exponent in this
+substitution was incorrect. In component norm, the hypothesis <span
+class="math inline">\(g_*\le\eta/\ell^2\)</span> gives instead <span
+class="math inline">\(A_t\le\eta/2\)</span> in three dimensions by the
+index bound of Section 2.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>regime or question</th>
+<th>supported conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bounded curvature budget <span class="math inline">\(A_t\)</span>,
+sufficiently long range</td>
+<td>absolute auxiliary kernel tail is below a prescribed tolerance</td>
+</tr>
+<tr class="even">
+<td>small <span class="math inline">\(\eta\)</span> at one fixed flow
+radius</td>
+<td>bounded tail, with no arbitrarily small accuracy implied</td>
+</tr>
+<tr class="odd">
+<td>large <span class="math inline">\(A_t\)</span> at fixed range</td>
+<td>this upper bound deteriorates; actual tail size remains
+undetermined</td>
+</tr>
+<tr class="even">
+<td>larger range at finite <span class="math inline">\(A_t\)</span></td>
+<td>the kernel majorant can be made small</td>
+</tr>
+<tr class="odd">
+<td>conjugated Hamiltonian or iterated RG</td>
+<td>relative form and iteration estimates remain open</td>
+</tr>
+</tbody>
+</table>
+<p>This budget motivates comparison with small/large-field splitting in
+constructive renormalization, but neither forces that split nor controls
+all steps of <a href="flow-conjugation-truncation.html">the
+flow-conjugation route</a>. The comparison to Balaban’s series (Commun.
+Math. Phys. 122 (1989) 355, metadata level) is context, not a derivation
+of its hypotheses. No unproved decay of a “typical” interacting
+curvature is used here.</p>
+<h2 id="what-action-monotonicity-controls">5. What action monotonicity
+controls</h2>
+<p>For smooth finite-action solutions of the ungauged gradient flow,
+with decay allowing integration by parts and the gradient normalization,
+<span class="math display">\[\frac{d}{ds}S(B_s)=-\|\nabla
+S(B_s)\|_2^2\le0.\]</span> The added gauge term is an infinitesimal
+gauge transformation and does not change this identity under the same
+boundary assumptions. Since <span class="math inline">\(S\)</span> is
+proportional to <span class="math inline">\(\int|G|^2\)</span>, it gives
+<span class="math display">\[\|G(t)\|_2^2\le\|G(0)\|_2^2.\]</span> It
+supplies no <span class="math inline">\(L^\infty\)</span> bound by
+itself, and Proposition 2 requires control over the <strong>whole flow
+interval</strong>, not just its endpoint.</p>
+<p><strong>Free or abelian smoothing, corrected.</strong> Around the
+zero connection <span class="math inline">\(J\)</span> is the heat
+semigroup. In an abelian theory the curvature itself obeys the heat
+equation, so Cauchy–Schwarz and the Gaussian convolution identity give
+<span class="math display">\[\|e^{t\Delta}f\|_\infty
+\le\|K_t^{\rm free}\|_2\,\|f\|_2
+=(8\pi t)^{-3/4}\|f\|_2.\]</span> For abelian initial curvature this
+bounds <span class="math inline">\(\|G(t)\|_\infty\)</span> by <span
+class="math inline">\((8\pi t)^{-3/4}\|G(0)\|_2\)</span> in the
+Euclidean component norm. For fixed nonzero initial norm its ratio to
+<span class="math inline">\(1/t\)</span> is proportional to <span
+class="math inline">\(t^{1/4}\|G(0)\|_2\)</span>: it tends to zero for
+small <span class="math inline">\(t\)</span> and grows for large <span
+class="math inline">\(t\)</span>, the reverse of the former remark.
+Integrating this estimate over <span
+class="math inline">\(0&lt;s&lt;t\)</span> also gives a finite budget
+proportional to <span class="math inline">\(t^{1/4}\|G(0)\|_2\)</span>,
+using the finite-dimensional conversion to the block norm. This is an
+abelian estimate, not an interacting theorem. The coefficient <span
+class="math inline">\((4\pi t)^{-3/4}\)</span> formerly displayed is a
+looser valid bound; the expression above is the exact heat-kernel <span
+class="math inline">\(L^2\)</span> norm.</p>
+<p><strong>Monotonicity alone does not supply the missing norm.</strong>
+A fixed <span class="math inline">\(L^2\)</span> curvature norm permits
+concentration in small regions with arbitrarily large height. For
+example rescale a smooth compactly supported abelian connection by <span
+class="math inline">\(B_\lambda(x)=\lambda^{1/2}B(\lambda x)\)</span>;
+its curvature is <span
+class="math inline">\(G_\lambda(x)=\lambda^{3/2}G(\lambda x)\)</span>,
+with constant <span class="math inline">\(L^2\)</span> norm and
+unbounded supremum as <span
+class="math inline">\(\lambda\to\infty\)</span>. This disproves a
+pointwise estimate from the action bound alone, not parabolic estimates
+using additional evolution information.</p>
+<p>The Hamiltonian formulation also has configuration probabilities, for
+example its ground-state density; see <a
+href="ground-state-measure-transfer.html">the transfer note</a>, §§1–2
+(full-read). Such measure estimates do not automatically give the signed
+operator comparisons needed for spectral stability. The distinction
+emphasized in <a href="large-field-operator-inequality.html">the
+operator-inequality note</a>, §3 (full-read), is relevant here; this
+note does not assume its claimed Hamiltonian truncation estimate or
+conclude that every Hamiltonian route fails.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
-<p>The truncation error of a flow-based renormalization step is now
-explicit: Gaussian in the ratio of the truncation range to the flow
-radius, multiplied by <span
-class="math inline">\(e^{2t\|G\|_\infty}\)</span>. The step is
-controlled exactly on configurations with <span
-class="math inline">\(\|G\|_\infty\lesssim\ell^{-2}\)</span>, which
-derives the small-field condition instead of assuming it. The missing
-estimate is pointwise control of the flowed field strength, an <span
-class="math inline">\(L^\infty\)</span> bound where the flow supplies
-only <span class="math inline">\(L^2\)</span>, and in the Hamiltonian
-framework there is no probabilistic route around it. That is the
-sharpest statement of the remaining obstacle this programme has reached,
-and it points at the Euclidean formulation as the place where the
-large-field regions can be given small weight.</p>
+<p>The surviving result is a Gaussian majorant and explicit absolute
+kernel-tail budget for the specified background-covariant linear
+parabolic evolution, with a full vector curvature norm and a
+flow-interval bound. Small fields give a sufficient budget at suitable
+range; neither necessity nor sharpness is proved. The identification
+with Lüscher’s unrestricted flow Jacobian and the conversion to a
+relative Hamiltonian truncation error remain open, as do lattice
+normalization, inverse-metric and density-derivative control and
+iteration. Single-step compact lattice bounds must be distinguished from
+fixed-scale continuum estimates. This correction supplies no continuum
+<span class="math inline">\(SU(3)\)</span> construction or mass gap.
+STATE and the catalogs are left to the caller, as requested.</p>
 
 </main>
 <footer class="site"><div class="wrap">

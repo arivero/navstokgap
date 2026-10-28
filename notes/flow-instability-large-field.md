@@ -1,6 +1,6 @@
 # A chromomagnetic saddle amplifies the linearized flow at rate $gB$: sharpness of the truncation bound remains unproved
 
-Later correction: [the operator-inequality note](large-field-operator-inequality.md) supersedes the fixed-range competition in [the transfer note](ground-state-measure-transfer.md); [the lattice note](lattice-truncation-uniform.md) separates a single lattice step from fixed-scale continuum estimates.
+Later correction: [the operator-inequality note](large-field-operator-inequality.md) supersedes the fixed-range competition in [the transfer note](ground-state-measure-transfer.md); [the lattice note](flow-conjugation-truncation.md) separates a single lattice step from fixed-scale continuum estimates.
 
 > **Correction (2026-10-02).** The original title and lead claimed that
 > the Nielsen--Olesen mode grows at $2gB$ and saturates the curvature-only
@@ -204,7 +204,7 @@ contraction claim for the linearized flow in this sector. It leaves
 open improved large-field kernel bounds, Hamiltonian truncation bounds
 and iteration. The earlier conclusion that every large-field region
 must be excluded is withdrawn. The
-[lattice note](lattice-truncation-uniform.md) separately discusses
+[lattice note](flow-conjugation-truncation.md) separately discusses
 bounded coefficients over one lattice doubling; its conclusions must
 not be inferred from this continuum saddle calculation.
 

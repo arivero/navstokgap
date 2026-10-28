@@ -40,17 +40,14 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 
 | PDF | Category | Current source / redirect |
 | --- | --- | --- |
-| [abelian-misses-the-box](../out/papers/abelian-misses-the-box.pdf) | current technical manuscript | [abelian-misses-the-box](../notes/abelian-misses-the-box.md) |
 | [action-floor-yang-mills-gap](../out/papers/action-floor-yang-mills-gap.pdf) | working manuscript | [action-floor-yang-mills-gap](../notes/action-floor-yang-mills-gap.md) |
 | [action-gap-foundations](../out/papers/action-gap-foundations.pdf) | orphan manuscript | No matching note; assessed above → [action-scale-obstructions](../notes/action-scale-obstructions.md) |
 | [action-scale-obstructions](../out/papers/action-scale-obstructions.pdf) | current synthesis | [action-scale-obstructions](../notes/action-scale-obstructions.md) |
 | [action-unit-dimensional-selection](../out/papers/action-unit-dimensional-selection.pdf) | current technical manuscript | [action-unit-dimensional-selection](../notes/action-unit-dimensional-selection.md) |
 | [additive-noise-marks](../out/papers/additive-noise-marks.pdf) | current technical manuscript | [additive-noise-marks](../notes/additive-noise-marks.md) |
-| [agmon-global-not-local](../out/papers/agmon-global-not-local.pdf) | current technical manuscript | [agmon-global-not-local](../notes/agmon-global-not-local.md) |
-| [agmon-ground-state-suppression](../out/papers/agmon-ground-state-suppression.pdf) | older version | [agmon-ground-state-suppression](../notes/agmon-ground-state-suppression.md) → [agmon-global-not-local](../notes/agmon-global-not-local.md) |
+| [agmon-ground-state-suppression](../out/papers/agmon-ground-state-suppression.pdf) | current technical manuscript | [agmon-ground-state-suppression](../notes/agmon-ground-state-suppression.md) |
 | [arrow-not-sling](../out/papers/arrow-not-sling.pdf) | historical research snapshot | Former note consolidated into [paper §9](../notes/planck-gap-paper.md#why-the-arrow-and-not-the-sling); PDF/TeX retained |
 | [blocking-criterion-monotone](../out/papers/blocking-criterion-monotone.pdf) | current technical manuscript | [blocking-criterion-monotone](../notes/blocking-criterion-monotone.md) |
-| [blocking-step-obstruction](../out/papers/blocking-step-obstruction.pdf) | older version | [blocking-step-obstruction](../notes/blocking-step-obstruction.md) → [blocking-criterion-monotone](../notes/blocking-criterion-monotone.md) |
 | [bounded-acceleration-return](../out/papers/bounded-acceleration-return.pdf) | current technical manuscript | [bounded-acceleration-return](../notes/bounded-acceleration-return.md) |
 | [checkerboard-dynamics](../out/papers/checkerboard-dynamics.pdf) | current technical manuscript | [checkerboard-dynamics](../notes/checkerboard-dynamics.md) |
 | [classical-action-field](../out/papers/classical-action-field.pdf) | orphan manuscript | No matching note; assessed above → [composition-universality](../notes/composition-universality.md) |
@@ -67,15 +64,12 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 | [energy-depot-action-selection](../out/papers/energy-depot-action-selection.pdf) | current technical manuscript | [energy-depot-action-selection](../notes/energy-depot-action-selection.md) |
 | [finite-depth-spin-gap](../out/papers/finite-depth-spin-gap.pdf) | current technical manuscript | [finite-depth-spin-gap](../notes/finite-depth-spin-gap.md) |
 | [finiteness-half-flowed-susceptibility](../out/papers/finiteness-half-flowed-susceptibility.pdf) | working manuscript | [finiteness-half-flowed-susceptibility](../notes/finiteness-half-flowed-susceptibility.md) |
-| [flow-before-decimation](../out/papers/flow-before-decimation.pdf) | current technical manuscript | [flow-before-decimation](../notes/flow-before-decimation.md) |
 | [flow-conjugation-truncation](../out/papers/flow-conjugation-truncation.pdf) | current technical manuscript | [flow-conjugation-truncation](../notes/flow-conjugation-truncation.md) |
 | [flow-instability-large-field](../out/papers/flow-instability-large-field.pdf) | working manuscript | [flow-instability-large-field](../notes/flow-instability-large-field.md) |
-| [flow-jacobian-truncation-error](../out/papers/flow-jacobian-truncation-error.pdf) | older version | [flow-jacobian-truncation-error](../notes/flow-jacobian-truncation-error.md) → [lattice-truncation-uniform](../notes/lattice-truncation-uniform.md) |
-| [flowed-bound-free-field](../out/papers/flowed-bound-free-field.pdf) | current technical manuscript | [flowed-bound-free-field](../notes/flowed-bound-free-field.md) |
+| [flow-jacobian-truncation-error](../out/papers/flow-jacobian-truncation-error.pdf) | older version | [flow-jacobian-truncation-error](../notes/flow-jacobian-truncation-error.md) → [lattice-truncation-uniform](../notes/flow-conjugation-truncation.md) |
 | [four-dimensional-composition](../out/papers/four-dimensional-composition.pdf) | working manuscript | [four-dimensional-composition](../notes/four-dimensional-composition.md) |
 | [four-dimensional-parallel-log](../out/papers/four-dimensional-parallel-log.pdf) | working manuscript | [four-dimensional-parallel-log](../notes/four-dimensional-parallel-log.md) |
 | [galileo-two-path-interference](../out/papers/galileo-two-path-interference.pdf) | current technical manuscript | [galileo-two-path-interference](../notes/galileo-two-path-interference.md) |
-| [gapped-set-critical-coupling](../out/papers/gapped-set-critical-coupling.pdf) | current technical manuscript | [gapped-set-critical-coupling](../notes/gapped-set-critical-coupling.md) |
 | [gaussian-blocking-coupling](../out/papers/gaussian-blocking-coupling.pdf) | current technical manuscript | [gaussian-blocking-coupling](../notes/gaussian-blocking-coupling.md) |
 | [ground-state-measure-transfer](../out/papers/ground-state-measure-transfer.pdf) | working manuscript | [ground-state-measure-transfer](../notes/ground-state-measure-transfer.md) |
 | [halving-atlas](../out/papers/halving-atlas.pdf) | current synthesis | [halving-atlas](../notes/halving-atlas.md) |
@@ -88,7 +82,6 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 | [large-field-entropy-count](../out/papers/large-field-entropy-count.pdf) | working manuscript | [large-field-entropy-count](../notes/large-field-entropy-count.md) |
 | [large-field-operator-inequality](../out/papers/large-field-operator-inequality.pdf) | current technical manuscript | [large-field-operator-inequality](../notes/large-field-operator-inequality.md) |
 | [lattice-gap-upper-bounds](../out/papers/lattice-gap-upper-bounds.pdf) | current technical manuscript | [lattice-gap-upper-bounds](../notes/lattice-gap-upper-bounds.md) |
-| [lattice-truncation-uniform](../out/papers/lattice-truncation-uniform.pdf) | current technical manuscript | [lattice-truncation-uniform](../notes/lattice-truncation-uniform.md) |
 | [leibniz-continuity-records](../out/papers/leibniz-continuity-records.pdf) | working manuscript | [leibniz-continuity-records](../notes/leibniz-continuity-records.md) |
 | [lieb-robinson-kogut-susskind](../out/papers/lieb-robinson-kogut-susskind.pdf) | current technical manuscript | [lieb-robinson-kogut-susskind](../notes/lieb-robinson-kogut-susskind.md) |
 | [local-detector-coincidences](../out/papers/local-detector-coincidences.pdf) | current technical manuscript | [local-detector-coincidences](../notes/local-detector-coincidences.md) |
@@ -126,7 +119,6 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 | [rivero-1998-conjecture-central-forces](../out/papers/rivero-1998-conjecture-central-forces.pdf) | current technical manuscript | [rivero-1998-conjecture-central-forces](../notes/rivero-1998-conjecture-central-forces.md) |
 | [rotation-composition-universality](../out/papers/rotation-composition-universality.pdf) | current technical manuscript | [rotation-composition-universality](../notes/rotation-composition-universality.md) |
 | [same-collisions-different-transport](../out/papers/same-collisions-different-transport.pdf) | orphan manuscript | No matching note; assessed above → [composition-universality](../notes/composition-universality.md) |
-| [schur-error-ultraviolet](../out/papers/schur-error-ultraviolet.pdf) | current technical manuscript | [schur-error-ultraviolet](../notes/schur-error-ultraviolet.md) |
 | [sed-closure-under-recording](../out/papers/sed-closure-under-recording.pdf) | working manuscript | [sed-closure-under-recording](../notes/sed-closure-under-recording.md) |
 | [sed-zeta-radiation-link](../out/papers/sed-zeta-radiation-link.pdf) | working manuscript | [sed-zeta-radiation-link](../notes/sed-zeta-radiation-link.md) |
 | [series-parallel-gauge-refinement](../out/papers/series-parallel-gauge-refinement.pdf) | current technical manuscript | [series-parallel-gauge-refinement](../notes/series-parallel-gauge-refinement.md) |
@@ -138,7 +130,6 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 | [stabilized-topology-action-scale](../out/papers/stabilized-topology-action-scale.pdf) | working manuscript | [stabilized-topology-action-scale](../notes/stabilized-topology-action-scale.md) |
 | [stochastic-route-velocitas-ultima](../out/papers/stochastic-route-velocitas-ultima.pdf) | working manuscript | [stochastic-route-velocitas-ultima](../notes/stochastic-route-velocitas-ultima.md) |
 | [strong-coupling-target-box](../out/papers/strong-coupling-target-box.pdf) | working manuscript | [strong-coupling-target-box](../notes/strong-coupling-target-box.md) |
-| [strong-coupling-threshold-explicit](../out/papers/strong-coupling-threshold-explicit.pdf) | current technical manuscript | [strong-coupling-threshold-explicit](../notes/strong-coupling-threshold-explicit.md) |
 | [strong-coupling-uniform-gap](../out/papers/strong-coupling-uniform-gap.pdf) | current technical manuscript | [strong-coupling-uniform-gap](../notes/strong-coupling-uniform-gap.md) |
 | [su2-midplane-order-t](../out/papers/su2-midplane-order-t.pdf) | working manuscript | [su2-midplane-order-t](../notes/su2-midplane-order-t.md) |
 | [su2-midplane-small-field](../out/papers/su2-midplane-small-field.pdf) | working manuscript | [su2-midplane-small-field](../notes/su2-midplane-small-field.md) |
@@ -156,9 +147,10 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 | [time-refinement](../out/papers/time-refinement.pdf) | orphan manuscript | No matching note; assessed above → [refinement-composition-and-limit](../notes/refinement-composition-and-limit.md) |
 | [topological-sector-action-selection](../out/papers/topological-sector-action-selection.pdf) | current technical manuscript | [topological-sector-action-selection](../notes/topological-sector-action-selection.md) |
 | [torus-valley-potential](../out/papers/torus-valley-potential.pdf) | working manuscript | [torus-valley-potential](../notes/torus-valley-potential.md) |
-| [typical-field-strength-window](../out/papers/typical-field-strength-window.pdf) | older version | [typical-field-strength-window](../notes/typical-field-strength-window.md) → [lattice-truncation-uniform](../notes/lattice-truncation-uniform.md) |
+| [typical-field-strength-window](../out/papers/typical-field-strength-window.pdf) | older version | [typical-field-strength-window](../notes/typical-field-strength-window.md) → [lattice-truncation-uniform](../notes/flow-conjugation-truncation.md) |
 | [uv-halving-ir-confinement](../out/papers/uv-halving-ir-confinement.pdf) | working manuscript | [uv-halving-ir-confinement](../notes/uv-halving-ir-confinement.md) |
-| [villain-monopole-refinement](../out/papers/villain-monopole-refinement.pdf) | current technical manuscript | [villain-monopole-refinement](../notes/villain-monopole-refinement.md) |
+| [villain-monopole-refinement](../out/papers/villain-monopole-refinement.pdf) | current technical manuscript | [uv-halving-ir-confinement](../out/papers/uv-halving-ir-confinement.pdf) | working manuscript | [uv-halving-ir-confinement](../notes/uv-halving-ir-confinement.md) |
+| [villain-monopole-refinement](../notes/villain-monopole-refinement.md) |
 | [weak-coupling-feshbach-reduction](../out/papers/weak-coupling-feshbach-reduction.pdf) | working manuscript | [weak-coupling-feshbach-reduction](../notes/weak-coupling-feshbach-reduction.md) |
 | [what-would-unblock](../out/papers/what-would-unblock.pdf) | older version | [what-would-unblock](../notes/what-would-unblock.md) → [reasons-to-stop-as-research](../notes/reasons-to-stop-as-research.md) |
 | [wilson-strong-coupling-explicit](../out/papers/wilson-strong-coupling-explicit.pdf) | current technical manuscript | [wilson-strong-coupling-explicit](../notes/wilson-strong-coupling-explicit.md) |

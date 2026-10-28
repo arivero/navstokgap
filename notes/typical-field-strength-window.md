@@ -31,12 +31,13 @@ and is labelled as such. Constants explicit; nothing promoted.
 > at fixed physical scale. Within one lattice renormalization step the
 > compactness of the gauge group bounds $a^2\|G\|_\infty$ by $\pi$ and the
 > flow time of a doubling is $a^2/2$, so the exponential factor is a pure
-> number and the truncation error is uniformly small; see
-> [the lattice-truncation note](lattice-truncation-uniform.md).
+> number. A Jacobian locality estimate does not itself prove a relative
+> Hamiltonian truncation bound; see
+> [the lattice-truncation note](flow-conjugation-truncation.md).
 
 ## 1. The flowed field strength in the free theory
 
-From [the free-field note](flowed-bound-free-field.md) §3, the flowed
+From [the free-field calculation](finiteness-half-flowed-susceptibility.md) §5c, the flowed
 magnetic two-point function at coincident points is
 $$\big\langle b_{t,i}(0)b_{t,i}(0)\big\rangle
 =\int\!\frac{d^3k}{(2\pi)^3}\sum_i\tilde G_{ii}(k)
@@ -120,7 +121,7 @@ earlier reading suggested: the flow step is limited by the **tail at any
 coupling**, and the cluster step by the coupling itself. A proof must
 therefore control the large-field tail at every scale where the cluster
 criterion has not yet taken over, which by
-[the blocking note](blocking-step-obstruction.md) §5 is a number of
+[the blocking note](blocking-criterion-monotone.md) §3 is a number of
 steps logarithmic in the scale ratio, of order thirty for $SU(2)$ from a
 bare coupling $g_{\rm UV}^2=1/2$.
 

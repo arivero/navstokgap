@@ -11,10 +11,11 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
+\hypertarget{the-mass-gap-current-position-of-this-programme}{%
 \section{The mass gap: current position of this
-programme}\label{the-mass-gap-current-position-of-this-programme}
+programme}\label{the-mass-gap-current-position-of-this-programme}}
 
-Later corrections: \href{gapped-set-critical-coupling.md}{the
+Later corrections: \href{mass-gap-obligations-lattice.md}{the
 critical-coupling note} withdraws the phase-transition equivalences of
 T2\('\); \href{ground-state-measure-transfer.md}{the transfer note}
 withdraws the verbatim transfer of Euclidean estimates;
@@ -74,9 +75,10 @@ form one labelled set. The changes, made in place below:
   gap rates are now printed exactly, and the former large-\(g^2\) forms,
   which slightly overstate them, are marked \(\simeq\). For the
   Kogut--Susskind Hamiltonian the volume-uniform gap rests on Yarotsky's
-  existential threshold, which his proof makes \(g_0^2\simeq10^{101}\);
-  the explicit \(g^2\ge388\) is withdrawn. The weak side carries two
-  labelled estimates: a necessary window \(1/g^2\gtrsim10^2\) with crude
+  existential threshold; a repository proof-extraction estimate of
+  \(g_0^2\) of order \(10^{102}\) is heuristic; the explicit
+  \(g^2\ge388\) is withdrawn. The weak side carries two labelled
+  estimates: a necessary window \(1/g^2\gtrsim10^2\) with crude
   constants, and a one-step remainder threshold \(g^2\sim10^{-12}\) that
   assumes an unproved order-one propagator decay rate (\(\sim10^{-35}\)
   at the proved rate).
@@ -116,7 +118,8 @@ are rigorous and explicit for the Wilson transfer matrix; the weak-side
 thresholds are labelled estimates; the large-field region remains open
 (§§5--6).
 
-\subsection{1. The decomposition}\label{the-decomposition}
+\hypertarget{the-decomposition}{%
+\subsection{1. The decomposition}\label{the-decomposition}}
 
 \href{mass-gap-obligations-lattice.md}{The obligations map} turns
 ``prove the mass gap'' into six statements about the Kogut--Susskind
@@ -126,9 +129,9 @@ Hamiltonian
 \qquad \Delta_{a,L}=\frac{\hbar c}{a}\,\delta(g;N_s,G).\]
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -170,16 +173,17 @@ in). For \(SU(N\ge5)\) the Wilson action shows a first-order bulk
 transition at intermediate coupling in numerical studies. That proves no
 hole in the gapped set of the Kogut--Susskind operator: the operators
 differ and the spectral comparison is missing
-(\href{gapped-set-critical-coupling.md}{critical-coupling note} §2,
+(\href{mass-gap-obligations-lattice.md}{critical-coupling note} §4b,
 correction of 2026-10-02). What
-\href{gapped-set-critical-coupling.md}{the critical-coupling note}
+\href{mass-gap-obligations-lattice.md}{the critical-coupling note}
 proves is that the finite-volume gap is continuous in \(g\), and that
 openness of the gapped set together with its closedness would give
 T2\('\) by connectedness. Its former identification of T2\('\) with the
 absence of a zero-temperature bulk transition, and with uniqueness of
 the continuum limit, is withdrawn.
 
-\subsection{2. What is proved here}\label{what-is-proved-here}
+\hypertarget{what-is-proved-here}{%
+\subsection{2. What is proved here}\label{what-is-proved-here}}
 
 \textbf{T1} (\href{mass-gap-obligations-lattice.md}{obligations map}
 §2): compact resolvent, a simple strictly positive ground state, a
@@ -193,10 +197,10 @@ bounded range-\(\{0,1\}^3\) perturbation with
 \(\beta=48N^2/[g^4(N^2-1)]\), so Yarotsky's theorem gives
 \(\Delta_{a,L}\ge\gamma(g^2/2)C_2\hbar c/a\) for \(g\ge g_0\), uniformly
 in the lattice size, with exponential clustering. The threshold \(g_0\)
-is existential; following Yarotsky's proof with numbers gives
-\(g_0^2\simeq10^{101}\) for \(SU(3)\)
-(\href{strong-coupling-threshold-explicit.md}{threshold note}), and the
-explicit threshold \(g^2\ge388\) of
+is existential; a conditional proof-extraction estimate suggests an
+order of \(10^{102}\) for \(g_0^2\) in \(SU(3)\) but is not a certified
+threshold (\href{kogut-susskind-strong-coupling-explicit.md}{threshold
+note}), and the explicit threshold \(g^2\ge388\) of
 \href{kogut-susskind-strong-coupling-explicit.md}{the continuous-time
 note} was withdrawn on 2026-10-02.
 
@@ -222,8 +226,9 @@ necessary condition on the Polyakov-loop susceptibility.
 \(m\le\hbar C_0(0)/\int_0^\infty C_0\), needs only T4 and
 \(C_0\not\equiv0\). The free-field value of the weakest member is
 \(4.26\,\hbar c/\sqrt{8t}\), computed in closed form and confirmed by an
-independent sum rule (\href{flowed-bound-free-field.md}{free-field
-note}).
+a second evaluation of the same sum rule
+(\href{finiteness-half-flowed-susceptibility.md}{free-field
+calculation}).
 
 \textbf{Exact structural identities}
 (\href{magnetic-energy-identities.md}{note}):
@@ -233,7 +238,7 @@ its Haar mean is a Laplacian eigenfunction; \(|\nabla V|^2\le16V\) for
 \(\operatorname{Var}_\Omega(V)\) to kinetic quantities.
 
 \textbf{Flow facts} (\href{flow-conjugation-truncation.md}{conjugation},
-\href{lattice-truncation-uniform.md}{lattice truncation}): the Wilson
+\href{flow-conjugation-truncation.md}{one-step locality}): the Wilson
 flow is a diffeomorphism of \(G^{\mathcal E}\), unitarily implemented,
 so conjugation preserves the spectrum; the lattice flow carries no
 coupling and a doubling is dimensionless flow time \(1/2\), so the
@@ -245,11 +250,12 @@ corrected \href{flow-jacobian-truncation-error.md}{Jacobian note}
 into a Hamiltonian truncation error open, so that conclusion is a target
 here.
 
-\subsection{3. Seven closed routes}\label{seven-closed-routes}
+\hypertarget{seven-closed-routes}{%
+\subsection{3. Seven closed routes}\label{seven-closed-routes}}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 route
@@ -264,10 +270,11 @@ variational upper bounds, for \(m>0\) & a spectral measure with all
 negative moments finite can have \(m=0\) \\
 expansion around the free theory & the bound reaches \(m\) only at the
 confinement scale, where its coefficient is nonperturbative \\
-blocking by projection & the boundary grows like \(M^2\) while the block
-gap does not; the criterion worsens by \(3M^2/8\) \\
-conjugation by the flow & the spectrum is invariant, so any gain is
-charged to truncating the nonlocal conjugated electric term \\
+blocking by projection & a surface-to-gap estimate worsens by \(3M^2/8\)
+in the stated strong-coupling asymptotic; all-coupling monotonicity is
+not proved \\
+conjugation by the flow & the spectrum is invariant; a changed local
+decomposition requires control of generated terms \\
 flow before decimation & sup norms are bijection-invariant and spectra
 conjugation-invariant \\
 Agmon estimate on the ground state & \(\|\nabla V\|_\infty\) is
@@ -286,13 +293,13 @@ with explicit constants.
 derived from \(-A'\Delta\Omega+(B'V-e_0)\Omega=0\) and compare the total
 potential with the total energy; \(e_0\) is extensive, so they separate
 configurations only by their global excess
-(\href{agmon-global-not-local.md}{global/local note}). The Euclidean
-weight \(e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}\) factorizes over plaquettes,
-so a local excess costs a local factor of the unnormalized weight. That
-is the structural advantage of a factorized weight over these two
-estimates. It falls short of local probability control, because
-plaquettes share links and the normalization involves all of them
-(\href{ground-state-measure-transfer.md}{transfer note} §2). The
+(\href{agmon-ground-state-suppression.md}{global/local note}). The
+Euclidean weight \(e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}\) factorizes over
+plaquettes, so a local excess costs a local factor of the unnormalized
+weight. That is the structural advantage of a factorized weight over
+these two estimates. It falls short of local probability control,
+because plaquettes share links and the normalization involves all of
+them (\href{ground-state-measure-transfer.md}{transfer note} §2). The
 Hamiltonian formulation has a configuration density too, \(|\Omega|^2\),
 with an exact slice identity
 (\href{ground-state-measure-transfer.md}{transfer note} §1); what is
@@ -301,14 +308,15 @@ not by themselves give the signed operator comparisons a Hamiltonian
 chain consumes (\href{flow-jacobian-truncation-error.md}{Jacobian note},
 correction of 2026-10-02).
 
+\hypertarget{where-the-non-abelian-structure-has-been-isolated}{%
 \subsection{4. Where the non-abelian structure has been
-isolated}\label{where-the-non-abelian-structure-has-been-isolated}
+isolated}\label{where-the-non-abelian-structure-has-been-isolated}}
 
 Three statements distinguish the groups. They are the places this series
 has isolated where a proof of T2\('\) could use structure that the
 abelian theory lacks. They have distinct scopes, and none is by itself a
 proof of a non-abelian gap
-(\href{gapped-set-critical-coupling.md}{critical-coupling note} §4).
+(\href{mass-gap-obligations-lattice.md}{critical-coupling note} §4d).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -332,11 +340,12 @@ proof of a non-abelian gap
   calculation (\href{torus-valley-potential.md}{valley note} §3b).
 \end{enumerate}
 
-\subsection{5. What remains}\label{what-remains}
+\hypertarget{what-remains}{%
+\subsection{5. What remains}\label{what-remains}}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 obligation
@@ -352,7 +361,7 @@ half; T2\('\) would suffice for positivity, and T2\('\) follows from
 openness together with closedness of the gapped set \\
 openness of the gapped set & unproved globally: needs volume-uniform gap
 stability; the stability route cited in the
-\href{gapped-set-critical-coupling.md}{critical-coupling note} §5 has
+\href{mass-gap-obligations-lattice.md}{critical-coupling note} §4e has
 hypotheses not verified for the Kogut--Susskind Hamiltonian, including
 frustration-freeness \\
 T3 & the conjecture, given that gap \\
@@ -380,7 +389,8 @@ renormalization in the continuum; the two ground-state estimates of §3
 are global because the eigenvalue equation they start from carries the
 extensive \(e_0\).
 
-\subsection{6. Assessment}\label{assessment}
+\hypertarget{assessment}{%
+\subsection{6. Assessment}\label{assessment}}
 
 The route that survives is the constructive one: conjugate by the flow,
 which is exact; truncate, where the kernel tails are cheap and their
@@ -423,9 +433,9 @@ show that every Hamiltonian route fails.
 \textbf{The coupling map for \(SU(3)\).} Three regions, with numbers:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 region
@@ -486,8 +496,8 @@ The width of the intermediate region in one-loop doublings,
 side:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 weak boundary
@@ -505,10 +515,10 @@ weak boundary
 \end{longtable}
 
 The first and last rows are from the
-\href{strong-coupling-threshold-explicit.md}{threshold note} §4; the
-middle row is the same formula. The Kogut--Susskind threshold from
-Yarotsky's theorem, made explicit, is \(g_0^2\sim10^{101}\) and plays no
-role in the map.
+\href{kogut-susskind-strong-coupling-explicit.md}{continuous-time note}
+§5; the middle row is the same formula. The Kogut--Susskind threshold
+from Yarotsky's theorem, made explicit, is \(g_0^2\sim10^{101}\) and
+plays no role in the map.
 
 \textbf{The map as a theorem.}
 \href{mass-gap-conditional-theorem.md}{The conditional theorem} states
@@ -564,7 +574,8 @@ its weak side. Several of the closures are corrections of claims made
 earlier in the same series, and each is recorded with the computation
 that forced it.
 
-\subsection{7. Where the map ends}\label{where-the-map-ends}
+\hypertarget{where-the-map-ends}{%
+\subsection{7. Where the map ends}\label{where-the-map-ends}}
 
 The mass gap for \(SU(3)\) in four dimensions is not proved here. The
 strong side of the confinement scale carries rigorous explicit
@@ -608,7 +619,8 @@ no expansion in any parameter. That is the mass-gap problem for
 new mathematics. The small-field steps at weaker coupling also lack
 explicit constants (§6), a quantitative deficit on the same trajectory.
 
-\subsection{8. Consequence for STATE}\label{consequence-for-state}
+\hypertarget{consequence-for-state}{%
+\subsection{8. Consequence for STATE}\label{consequence-for-state}}
 
 Correction of 2026-10-02. STATE and other notes citing this map should
 use the labelled thresholds of §6: \(g^2>444\) (Dobrushin) and

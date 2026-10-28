@@ -1,6 +1,6 @@
 # Gaussian tails for a covariant linearized flow; Hamiltonian truncation remains open
 
-Later corrections: [the instability note](flow-instability-large-field.md) withdraws exact sharpness; [the lattice note](lattice-truncation-uniform.md) separates one lattice step from fixed-scale continuum bounds; [the operator-inequality note](large-field-operator-inequality.md) supersedes the fixed-range competition in [the transfer note](ground-state-measure-transfer.md).
+Later corrections: [the instability note](flow-instability-large-field.md) withdraws exact sharpness; [the lattice note](flow-conjugation-truncation.md) separates one lattice step from fixed-scale continuum bounds; [the operator-inequality note](large-field-operator-inequality.md) supersedes the fixed-range competition in [the transfer note](ground-state-measure-transfer.md).
 
 > **Correction (2026-10-02).** The original title, lead and Corollary 3
 > identified a Gaussian Jacobian-kernel tail with a relative error of the
@@ -53,7 +53,7 @@ kinetic operator. No continuum construction or mass gap follows.
 > gives a finite coefficient budget, not accuracy at one flow radius.
 > Increasing $\kappa$ controls the continuum majorant for any fixed
 > finite budget; merely taking $\kappa>1$ is not a specified accuracy
-> guarantee. [The lattice note](lattice-truncation-uniform.md), §§1--4
+> guarantee. [The lattice note](flow-conjugation-truncation.md), §§1--4
 > (full-read), discusses bounded coefficients and longer lattice range.
 > A plaquette-angle bound is not by itself a proof of the above
 > continuum block-norm bound or a lattice Hamiltonian relative bound;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Strong coupling for abelian and non-abelian gauge theories: a shared existential gap</title>
+<title>Consolidated note — navstokgap</title><meta http-equiv="refresh" content="0; url=strong-coupling-uniform-gap.html#the-abelian-comparison-and-a-finite-volume-bound"><link rel="canonical" href="https://arivero.github.io/navstokgap/notes/strong-coupling-uniform-gap.html">
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,123 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Strong coupling for abelian and non-abelian gauge theories: a shared
-existential gap</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/abelian-misses-the-box.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/abelian-misses-the-box.pdf">PDF</a></p><p>Both compact <span class="math inline">\(U(1)\)</span> and <span
-class="math inline">\(SU(3)\)</span> have a volume-uniform
-strong-coupling Kogut–Susskind gap by the <a
-href="strong-coupling-uniform-gap.html">Yarotsky application</a>, with
-an existential threshold. The <a
-href="kogut-susskind-strong-coupling-explicit.html">continuous-time
-expansion</a> does not currently provide an explicit uniform threshold
-for either group. Their weak sides differ: for <span
-class="math inline">\(SU(3)\)</span>, <span
-class="math display">\[\frac{d\,g^2}{d\log a}=2b_0g^4+O(g^6),\qquad
-b_0=\frac{11}{16\pi^2}&gt;0,\]</span> whereas the continuum pure photon
-has no perturbative self-interaction, <span
-class="math inline">\(b_0=0\)</span>. A massless weak-coupling phase of
-compact lattice <span class="math inline">\(U(1)\)</span> is supported
-by Guth (Phys. Rev. D 21 (1980) 2291) and Fröhlich–Spencer (Commun.
-Math. Phys. 83 (1982) 411; both metadata level). The perturbative
-running does not determine the whole lattice phase diagram or establish
-a constructive arrival in the strong-coupling region.</p>
-<p><strong>Correction, 2026-10-02.</strong> The earlier uniform <span
-class="math inline">\(4\lambda\)</span> bound, an explicit threshold of
-the same size as for <span class="math inline">\(SU(3)\)</span>, and a
-target box at <span class="math inline">\(g^2\sim4\times10^2\)</span>
-depended on the withdrawn continuous-time count. They are withdrawn
-here. The finite-volume electric-loop result below survives; the
-volume-uniform theorem instead uses Yarotsky with an existential
-threshold. The earlier exact coupling-set and flow equivalences also
-exceeded the cited perturbative and phase results; <a
-href="gapped-set-critical-coupling.html">the corrected coupling-set
-note</a> separates them. The original text remains in Git history.</p>
-<h2 id="the-strong-coupling-region-does-not-distinguish-the-groups">1.
-The strong-coupling region does not distinguish the groups</h2>
-<p>For compact <span class="math inline">\(U(1)\)</span> take the
-magnetic term <span
-class="math inline">\((2/g^2)\sum_p(1-\cos\theta_p)\)</span> and
-electric term <span class="math inline">\((g^2/2)\sum_\ell
-n_\ell^2\)</span>. The least nonzero electric eigenvalue per link is
-<span class="math inline">\(\varepsilon=g^2/2\)</span>. The plaquette
-operator <span
-class="math inline">\(w_p=e^{i\theta_p}+e^{-i\theta_p}\)</span> has norm
-<span class="math inline">\(2\)</span> and shifts the four link charges
-by <span class="math inline">\(\pm1\)</span>. Gauss’s law allows
-decomposition of a nonzero charge network into closed charged cycles. On
-a periodic cubic lattice with <span
-class="math inline">\(N_s\ge4\)</span>, every nonempty support has at
-least four links. A plaquette loop attains this minimum, so the physical
-electric gap is exactly <span class="math inline">\(2g^2\)</span> in
-units <span class="math inline">\(\hbar c/a\)</span>.</p>
-<p>Writing <span class="math inline">\(P=3N_s^3\)</span>, the magnetic
-operator after removal of its scalar constant has norm at most <span
-class="math inline">\(2P/g^2\)</span>. The two-eigenvalue min–max
-argument of the corrected Kogut–Susskind note therefore gives <span
-class="math display">\[\left(2g^2-\frac{4P}{g^2}\right)\frac{\hbar c}{a}
-\le\Delta^{\rm phys}_{a,L}\le
-\left(2g^2+\frac{4P}{g^2}\right)\frac{\hbar c}{a},\qquad
-L=N_sa.\]</span> At fixed <span class="math inline">\(N_s\)</span>,
-<span class="math inline">\(\Delta^{\rm phys}_{a,L}/(g^2\hbar
-c/a)\to2\)</span>. The lower bound is extensive and supplies no
-volume-uniform threshold. A nonpositive lower bound is
-uninformative.</p>
-<p>The former adjacent-growth calculation controls a restricted history
-class. It misses histories reaching a test link later and does not
-establish true-vacuum decay; changing the gauge group does not repair
-those gaps. Uniformity at sufficiently strong coupling follows instead
-from the group-general Yarotsky application. Its constants depend on the
-chosen local interaction range.</p>
-<h2 id="what-differs-is-the-weak-side-flow">2. What differs is the
-weak-side flow</h2>
-<p>The <a href="strong-coupling-target-box.html">target-box note</a> now
-provides an existential strong-coupling region for a specified family of
-finite-range local corrections. Its edge and tolerance are not the
-former continuous-time numerical values. An effective Hamiltonian must
-satisfy its hypotheses before its gap can be transferred.</p>
-<p>For <span class="math inline">\(SU(3)\)</span>, perturbative
-asymptotic freedom gives <span
-class="math inline">\(g^2(2a)=g^2(a)+2b_0\log2\,g^4(a)+O(g^6)\)</span>
-at weak coupling, with <span
-class="math inline">\(2b_0\log2\simeq0.0966\)</span>. A proposed route
-is to control all generated corrections until the effective Hamiltonian
-enters that region. This requires a constructive reduction and spectral
-transfer; absence of an intermediate fixed point is not an equivalent
-proof. The <a href="mass-gap-position.html">position note</a> §6
-identifies the region where neither the perturbative expansion nor a
-strong-coupling theorem applies.</p>
-<p>For continuum pure <span class="math inline">\(U(1)\)</span>,
-perturbative running is absent to all orders. That is not an exact
-blocking identity for the compact lattice action at every coupling. The
-weak-coupling massless phase and the existential strong-coupling gap do
-not alone identify the entire gapped set as one interval or locate its
-boundary.</p>
-<h2 id="non-abelian-mechanisms-and-their-limits">3. Non-abelian
-mechanisms and their limits</h2>
-<p><a href="mass-gap-position.html">The position note</a> §4 isolates
-the commutator potential of the zero-mode sector, the absence of a
-gauge-invariant operator linear in the non-abelian electric field, and
-the one-loop valley potential. These are distinct mechanisms: a
-small-volume confining potential, a missing photon observable, and a
-perturbative correction. They motivate the non-abelian route but do not
-establish the full continuum gap from the beta function alone.</p>
-<h2 id="what-this-settles-and-what-it-leaves">4. What this settles and
-what it leaves</h2>
-<p>Both groups have a gap at sufficiently strong coupling by the
-existential theorem. Compact <span class="math inline">\(U(1)\)</span>
-also has a massless weak phase. For <span
-class="math inline">\(SU(3)\)</span> the perturbative slope is positive,
-but controlled arrival, scaling and continuum reconstruction remain
-open. The strong-coupling edge and tolerance in this Hamiltonian
-comparison are existential.</p>
-<h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>Use the group-general existential strong-coupling theorem and the
-explicit finite-volume bound above. Do not reuse the withdrawn uniform
-<span class="math inline">\(4\lambda\)</span> rate or numerical box
-location. A non-abelian continuum gap still requires controlled
-reduction, scaling and reconstruction; perturbative running alone is
-insufficient. This written correction supplies no new explicit
-volume-uniform threshold.</p>
-
+<h1>Note consolidated</h1><p>This material is now part of <a href="strong-coupling-uniform-gap.html#the-abelian-comparison-and-a-finite-volume-bound">The strong-coupling gap of the Kogut--Susskind Hamiltonian is uniform in the volume</a>. The original source remains in repository history.</p>
 </main>
 <footer class="site"><div class="wrap">
 <p><strong>Comments, corrections and questions are welcome as repository

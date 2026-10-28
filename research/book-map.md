@@ -229,7 +229,7 @@ an additional transfer obligation. Sources:
 [low-dimensional gap](../notes/low-dimensional-mass-gap.md),
 [Feshbach](../notes/weak-coupling-feshbach-reduction.md),
 [torus valley](../notes/torus-valley-potential.md),
-[UV Schur error](../notes/schur-error-ultraviolet.md).
+[UV Schur error](../notes/weak-coupling-feshbach-reduction.md).
 Purpose: distinguish finite positive spectral weight and an upper energy
 scale from a volume/cutoff-uniform positive lower edge.
 

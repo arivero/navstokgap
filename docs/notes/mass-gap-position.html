@@ -79,7 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The mass gap: current position of this programme</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-position.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-position.pdf">PDF</a></p><p>Later corrections: <a href="gapped-set-critical-coupling.html">the
+<h1>The mass gap: current position of this programme</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-position.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-position.pdf">PDF</a></p><p>Later corrections: <a href="mass-gap-obligations-lattice.html">the
 critical-coupling note</a> withdraws the phase-transition equivalences
 of T2<span class="math inline">\(&#39;\)</span>; <a
 href="ground-state-measure-transfer.html">the transfer note</a>
@@ -144,8 +144,9 @@ figure only. Their gap rates are now printed exactly, and the former
 large-<span class="math inline">\(g^2\)</span> forms, which slightly
 overstate them, are marked <span class="math inline">\(\simeq\)</span>.
 For the Kogut–Susskind Hamiltonian the volume-uniform gap rests on
-Yarotsky’s existential threshold, which his proof makes <span
-class="math inline">\(g_0^2\simeq10^{101}\)</span>; the explicit <span
+Yarotsky’s existential threshold; a repository proof-extraction estimate
+of <span class="math inline">\(g_0^2\)</span> of order <span
+class="math inline">\(10^{102}\)</span> is heuristic; the explicit <span
 class="math inline">\(g^2\ge388\)</span> is withdrawn. The weak side
 carries two labelled estimates: a necessary window <span
 class="math inline">\(1/g^2\gtrsim10^2\)</span> with crude constants,
@@ -206,20 +207,20 @@ c}{a}\Big[\frac{g^2}{2}\sum_{\ell}(-\Delta_\ell)
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th></th>
 <th>statement</th>
 <th>status</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>T1</td>
 <td>finite lattice: unique physical ground state, <span
 class="math inline">\(\delta&gt;0\)</span></td>
 <td><strong>proved here</strong></td>
 </tr>
-<tr>
+<tr class="even">
 <td>T2</td>
 <td><span class="math inline">\(\delta\ge\gamma(g^2/2)C_2\)</span> for
 <span class="math inline">\(g\ge g_0\)</span>, uniform in volume</td>
@@ -230,7 +231,7 @@ class="math inline">\(g_0^2\simeq10^{101}\)</span> for <span
 class="math inline">\(SU(3)\)</span>. The Wilson transfer matrix, a
 different operator, has explicit rigorous thresholds (§6)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>T2<span class="math inline">\(&#39;\)</span></td>
 <td><span class="math inline">\(\liminf_{N_s}\delta&gt;0\)</span> for
 every <span class="math inline">\(g&gt;0\)</span></td>
@@ -241,18 +242,18 @@ class="math inline">\(SU(N\ge5)\)</span>: numerical evidence of a
 first-order bulk transition for the Wilson action, a different
 operator</td>
 </tr>
-<tr>
+<tr class="even">
 <td>T3</td>
 <td><span class="math inline">\(\delta_\infty(g)/(a\Lambda_{\rm
 lat}(g))\to m/(\hbar c\Lambda)\in(0,\infty)\)</span></td>
 <td>open</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>T4</td>
 <td>continuum infinite-volume theory with the axioms</td>
 <td>finite-volume ultraviolet stability known</td>
 </tr>
-<tr>
+<tr class="even">
 <td>S</td>
 <td>small volume: <span
 class="math inline">\(\Delta=\delta_1g^{2/3}\hbar
@@ -272,9 +273,9 @@ class="math inline">\(SU(N\ge5)\)</span> the Wilson action shows a
 first-order bulk transition at intermediate coupling in numerical
 studies. That proves no hole in the gapped set of the Kogut–Susskind
 operator: the operators differ and the spectral comparison is missing
-(<a href="gapped-set-critical-coupling.html">critical-coupling note</a>
-§2, correction of 2026-10-02). What <a
-href="gapped-set-critical-coupling.html">the critical-coupling note</a>
+(<a href="mass-gap-obligations-lattice.html">critical-coupling note</a>
+§4b, correction of 2026-10-02). What <a
+href="mass-gap-obligations-lattice.html">the critical-coupling note</a>
 proves is that the finite-volume gap is continuous in <span
 class="math inline">\(g\)</span>, and that openness of the gapped set
 together with its closedness would give T2<span
@@ -301,14 +302,16 @@ theorem gives <span
 class="math inline">\(\Delta_{a,L}\ge\gamma(g^2/2)C_2\hbar c/a\)</span>
 for <span class="math inline">\(g\ge g_0\)</span>, uniformly in the
 lattice size, with exponential clustering. The threshold <span
-class="math inline">\(g_0\)</span> is existential; following Yarotsky’s
-proof with numbers gives <span
-class="math inline">\(g_0^2\simeq10^{101}\)</span> for <span
-class="math inline">\(SU(3)\)</span> (<a
-href="strong-coupling-threshold-explicit.html">threshold note</a>), and
-the explicit threshold <span class="math inline">\(g^2\ge388\)</span> of
-<a href="kogut-susskind-strong-coupling-explicit.html">the
-continuous-time note</a> was withdrawn on 2026-10-02.</p>
+class="math inline">\(g_0\)</span> is existential; a conditional
+proof-extraction estimate suggests an order of <span
+class="math inline">\(10^{102}\)</span> for <span
+class="math inline">\(g_0^2\)</span> in <span
+class="math inline">\(SU(3)\)</span> but is not a certified threshold
+(<a href="kogut-susskind-strong-coupling-explicit.html">threshold
+note</a>), and the explicit threshold <span
+class="math inline">\(g^2\ge388\)</span> of <a
+href="kogut-susskind-strong-coupling-explicit.html">the continuous-time
+note</a> was withdrawn on 2026-10-02.</p>
 <p><strong>A Lieb–Robinson bound</strong> (<a
 href="lieb-robinson-kogut-susskind.html">note</a>): velocity <span
 class="math inline">\(v\le32eNc/g^2\)</span>, uniform in volume, because
@@ -336,9 +339,10 @@ and the next one, <span class="math inline">\(m\le\hbar
 C_0(0)/\int_0^\infty C_0\)</span>, needs only T4 and <span
 class="math inline">\(C_0\not\equiv0\)</span>. The free-field value of
 the weakest member is <span class="math inline">\(4.26\,\hbar
-c/\sqrt{8t}\)</span>, computed in closed form and confirmed by an
-independent sum rule (<a href="flowed-bound-free-field.html">free-field
-note</a>).</p>
+c/\sqrt{8t}\)</span>, computed in closed form and confirmed by an a
+second evaluation of the same sum rule (<a
+href="finiteness-half-flowed-susceptibility.html">free-field
+calculation</a>).</p>
 <p><strong>Exact structural identities</strong> (<a
 href="magnetic-energy-identities.html">note</a>): <span
 class="math inline">\(\Delta V=4C_2(N|\mathcal P|-V)\)</span>, so the
@@ -349,7 +353,7 @@ tying <span class="math inline">\(\operatorname{Var}_\Omega(V)\)</span>
 to kinetic quantities.</p>
 <p><strong>Flow facts</strong> (<a
 href="flow-conjugation-truncation.html">conjugation</a>, <a
-href="lattice-truncation-uniform.html">lattice truncation</a>): the
+href="flow-conjugation-truncation.html">one-step locality</a>): the
 Wilson flow is a diffeomorphism of <span
 class="math inline">\(G^{\mathcal E}\)</span>, unitarily implemented, so
 conjugation preserves the spectrum; the lattice flow carries no coupling
@@ -370,45 +374,45 @@ is a target here.</p>
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>route</th>
 <th>why it closes</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>variational upper bounds, for <span
 class="math inline">\(m&gt;0\)</span></td>
 <td>a spectral measure with all negative moments finite can have <span
 class="math inline">\(m=0\)</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>expansion around the free theory</td>
 <td>the bound reaches <span class="math inline">\(m\)</span> only at the
 confinement scale, where its coefficient is nonperturbative</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>blocking by projection</td>
-<td>the boundary grows like <span class="math inline">\(M^2\)</span>
-while the block gap does not; the criterion worsens by <span
-class="math inline">\(3M^2/8\)</span></td>
+<td>a surface-to-gap estimate worsens by <span
+class="math inline">\(3M^2/8\)</span> in the stated strong-coupling
+asymptotic; all-coupling monotonicity is not proved</td>
 </tr>
-<tr>
+<tr class="even">
 <td>conjugation by the flow</td>
-<td>the spectrum is invariant, so any gain is charged to truncating the
-nonlocal conjugated electric term</td>
+<td>the spectrum is invariant; a changed local decomposition requires
+control of generated terms</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>flow before decimation</td>
 <td>sup norms are bijection-invariant and spectra
 conjugation-invariant</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Agmon estimate on the ground state</td>
 <td><span class="math inline">\(\|\nabla V\|_\infty\)</span> is
 extensive, so it bounds the global excess only</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>pointwise Gibbs domination</td>
 <td>the comparison function bites only above the extensive threshold
 <span class="math inline">\(V_*\simeq N|\mathcal P|\)</span></td>
@@ -426,8 +430,8 @@ class="math inline">\(-A&#39;\Delta\Omega+(B&#39;V-e_0)\Omega=0\)</span>
 and compare the total potential with the total energy; <span
 class="math inline">\(e_0\)</span> is extensive, so they separate
 configurations only by their global excess (<a
-href="agmon-global-not-local.html">global/local note</a>). The Euclidean
-weight <span
+href="agmon-ground-state-suppression.html">global/local note</a>). The
+Euclidean weight <span
 class="math inline">\(e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}\)</span>
 factorizes over plaquettes, so a local excess costs a local factor of
 the unnormalized weight. That is the structural advantage of a
@@ -450,8 +454,8 @@ series has isolated where a proof of T2<span
 class="math inline">\(&#39;\)</span> could use structure that the
 abelian theory lacks. They have distinct scopes, and none is by itself a
 proof of a non-abelian gap (<a
-href="gapped-set-critical-coupling.html">critical-coupling note</a>
-§4).</p>
+href="mass-gap-obligations-lattice.html">critical-coupling note</a>
+§4d).</p>
 <ol type="1">
 <li><em>The commutator potential</em> of the zero-momentum sector is
 identically zero for an abelian group; where present, the transverse
@@ -478,13 +482,13 @@ href="torus-valley-potential.html">valley note</a> §3b).</li>
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>obligation</th>
 <th>kind</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>a gap on <span class="math inline">\((0,g_1)\)</span> along the
 scaling curve</td>
 <td>the conjecture’s lattice half; T2<span
@@ -492,23 +496,23 @@ class="math inline">\(&#39;\)</span> would suffice for positivity, and
 T2<span class="math inline">\(&#39;\)</span> follows from openness
 together with closedness of the gapped set</td>
 </tr>
-<tr>
+<tr class="even">
 <td>openness of the gapped set</td>
 <td>unproved globally: needs volume-uniform gap stability; the stability
 route cited in the <a
-href="gapped-set-critical-coupling.html">critical-coupling note</a> §5
+href="mass-gap-obligations-lattice.html">critical-coupling note</a> §4e
 has hypotheses not verified for the Kogut–Susskind Hamiltonian,
 including frustration-freeness</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>T3</td>
 <td>the conjecture, given that gap</td>
 </tr>
-<tr>
+<tr class="even">
 <td>T4</td>
 <td>construction</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>local large-field control</td>
 <td>open. The slice identity is exact: <span
 class="math inline">\(\langle\Omega,F\Omega\rangle\)</span> is the
@@ -520,7 +524,7 @@ measure (<a href="ground-state-measure-transfer.html">transfer note</a>
 convergence, and no Euclidean large-field estimate transfers
 verbatim</td>
 </tr>
-<tr>
+<tr class="even">
 <td>the large-field region itself</td>
 <td>open; ingredients and obstruction in §6 (an action floor with
 sharpness open, a model mode count that bounds no entropy, and a crude
@@ -593,14 +597,14 @@ numbers:</p>
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>region</th>
 <th>statement</th>
 <th>source</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>strong, Wilson transfer matrix: <span
 class="math inline">\(g^2&gt;444\)</span> (Dobrushin) or <span
 class="math inline">\(g^2\ge1059\)</span> (polymer, all
@@ -615,7 +619,7 @@ c/a)\,4\log(g^2/1056)\)</span>, uniform in volume</td>
 <td><a href="dobrushin-uniqueness-wilson.html">Dobrushin note</a>, <a
 href="wilson-strong-coupling-explicit.html">polymer note</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td>strong, Kogut–Susskind: explicit threshold withdrawn 2026-10-02
 (formerly <span class="math inline">\(g^2\ge388\)</span>, <span
 class="math inline">\(79\)</span> adjacent)</td>
@@ -626,7 +630,7 @@ volume-uniform KS gap rests on Yarotsky’s existential threshold</td>
 href="kogut-susskind-strong-coupling-explicit.html">continuous-time
 note</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>weak: no coupling at which a step is proved with explicit
 constants</td>
 <td>necessary window <span class="math inline">\(C_1g\le\eta\le
@@ -641,7 +645,7 @@ class="math inline">\(g^2\sim10^{-35}\)</span> at the proved rate
 note</a> §4, <a href="small-field-step-decay-and-threshold.html">part
 1b</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td>intermediate, from the weak side’s reach (<span
 class="math inline">\(g^2\sim10^{-2}\)</span> at best, on the crude
 window) to <span class="math inline">\(g^2=444\)</span></td>
@@ -681,22 +685,22 @@ side:</p>
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>weak boundary</th>
 <th><span class="math inline">\(n\)</span></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><span class="math inline">\(1/g^2=10^2\)</span> (crude window)</td>
 <td><span class="math inline">\(\simeq10^3\)</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td><span class="math inline">\(g^2=10^{-12}\)</span> (one-step scaling
 estimate, order-one rate assumed)</td>
 <td><span class="math inline">\(\simeq10^{13}\)</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td><span class="math inline">\(g^2=1/2\)</span> (if a small-field
 expansion reached it)</td>
 <td><span class="math inline">\(\simeq21\)</span></td>
@@ -704,9 +708,9 @@ expansion reached it)</td>
 </tbody>
 </table>
 <p>The first and last rows are from the <a
-href="strong-coupling-threshold-explicit.html">threshold note</a> §4;
-the middle row is the same formula. The Kogut–Susskind threshold from
-Yarotsky’s theorem, made explicit, is <span
+href="kogut-susskind-strong-coupling-explicit.html">continuous-time
+note</a> §5; the middle row is the same formula. The Kogut–Susskind
+threshold from Yarotsky’s theorem, made explicit, is <span
 class="math inline">\(g_0^2\sim10^{101}\)</span> and plays no role in
 the map.</p>
 <p><strong>The map as a theorem.</strong> <a

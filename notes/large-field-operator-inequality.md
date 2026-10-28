@@ -187,4 +187,4 @@ expansion for $1/g^2\gtrsim C_1^2/(16C_2^2)$, strong-coupling theorem
 for $54/g^4\le\beta_*$, and the intermediate region between them, in which the gap forms and no
 expansion applies; its width in one-loop doublings is about $10^3$ with
 the crude constants above and about $20$ if the weak side reaches
-$g^2\sim1/2$ ([threshold note](strong-coupling-threshold-explicit.md) §4).
+$g^2\sim1/2$ ([continuous-time note](kogut-susskind-strong-coupling-explicit.md) §5).

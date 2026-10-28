@@ -1,6 +1,6 @@
 # An Agmon bound for the Kogut--Susskind ground state: finite-volume global magnetic-energy tails
 
-Later correction: [the global/local note](agmon-global-not-local.md) supersedes the original local-suppression interpretation; [the magnetic-energy identities note](magnetic-energy-identities.md), §4, records the limitation of the proposed Gibbs-comparison repair (both full-read).
+The global/local correction is incorporated below; [the magnetic-energy identities note](magnetic-energy-identities.md), §4, records the limitation of the proposed Gibbs-comparison repair (full-read).
 
 > **Correction (2026-10-02).** The original title and lead claimed
 > suppression at rate $1/g^2$ per locally excited plaquette and said this
@@ -8,7 +8,7 @@ Later correction: [the global/local note](agmon-global-not-local.md) supersedes 
 > are **withdrawn**. Section 2 estimated one relaxation path, which can
 > give only an upper bound on an infimum, whereas decay requires a lower
 > bound for every path. It is replaced below by the global-excess bound
-> of [the global/local note](agmon-global-not-local.md), with its volume
+> below, with its volume
 > dependence retained. The original pointwise estimate for $|\Omega(U)|^2$
 > is replaced by an integrated probability estimate. Sections 3--5 no
 > longer assert local exponential-moment control or a successful match
@@ -215,7 +215,7 @@ The original assertion that local large-field regions are exponentially
 rare at the required rate in the Hamiltonian ground state is withdrawn.
 The global estimate does not supply the local input sought in
 [the typical-field note](typical-field-strength-window.md) or
-[the flow-before-decimation note](flow-before-decimation.md).
+[the flow-before-decimation note](flow-conjugation-truncation.md).
 
 ## 4. Scope, excited states and the missing local input
 
@@ -268,8 +268,7 @@ Keep this note as a finite-lattice global-energy result: Lemma 1,
 Corollary 2 with explicit margins and prefactors, and Proposition 3's
 all-path lower bound and integrated tail. The original local
 per-plaquette rate, pointwise decay claim, local moment criterion and
-claim to supply the Hamiltonian decimation input are withdrawn. The
-[global/local correction](agmon-global-not-local.md) controls reuse;
+claim to supply the Hamiltonian decimation input are withdrawn. This corrected argument controls reuse;
 a local energy or measure estimate uniform in volume and cutoff remains
 an independent requirement. Excited-state identities survive with
 $|\psi_j|^2$, but uniform spectral-subspace and refinement estimates do

@@ -80,7 +80,65 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>An action floor on transverse phase-space area produces the
-Yang–Mills quantum-mechanical gap, and a gap forces an action unit</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/action-floor-yang-mills-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-floor-yang-mills-gap.pdf">PDF</a></p><p>In the Yang–Mills quantum-mechanical model of <a
+Yang–Mills quantum-mechanical gap, and a gap forces an action unit</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/action-floor-yang-mills-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/action-floor-yang-mills-gap.pdf">PDF</a></p><blockquote>
+<p><strong>Correction (2026-10-02).</strong> A referee report and the
+October 1 audit (<a href="corpus-audit-2026-10-01.html">corpus audit</a>
+§3) found an error in Proposition 5 and two weak points in the remarks.
+The changes, made in place below:</p>
+<ol type="1">
+<li><em>Four dimensions.</em> The former Proposition 5 listed the
+classical coupling <span class="math inline">\(1/g_{\rm cl}^2\)</span>
+among the constants and then dropped it from the <span
+class="math inline">\(d=4\)</span> row, concluding that four-dimensional
+Yang–Mills carries “no constant at all” besides <span
+class="math inline">\(c\)</span> and admits no action unit. With the
+gauge field as a connection, <span class="math inline">\(1/g_{\rm
+cl}^2\)</span> has the dimension of action in <span
+class="math inline">\(d=4\)</span>, and the repository’s dimensionless
+coupling is <span class="math inline">\(g^2=\hbar g_{\rm cl}^2\)</span>
+(<code>LLM.md</code> §2). The claims “no constant at all” and “no action
+unit in <span class="math inline">\(d=4\)</span>” are
+<strong>withdrawn</strong>. Corrected row: four dimensions carry exactly
+one classical constant besides <span class="math inline">\(c\)</span>,
+an action unit, and no length; the gap cannot enter any action monomial,
+and the action unit with <span class="math inline">\(c\)</span> (and
+<span class="math inline">\(\hbar\)</span>) yields no energy, length or
+time. The implication that fails in <span
+class="math inline">\(d=4\)</span> is “action unit <span
+class="math inline">\(\Rightarrow\)</span> gap”.</li>
+<li><em>Classical versus quantum.</em> An overall factor <span
+class="math inline">\(1/g_{\rm cl}^2\)</span> drops out of the classical
+field equations in every dimension. The former closing paragraph of
+Section 3 read the contrast between <span
+class="math inline">\(d=2,3\)</span> and <span
+class="math inline">\(d=4\)</span> as one between classical constants.
+The contrast becomes physical only in the quantum weight <span
+class="math inline">\(e^{-S_E/\hbar}\)</span>, whose coefficient <span
+class="math inline">\(1/(\hbar g_{\rm cl}^2)\)</span> has dimension
+length<span class="math inline">\(^{4-d}\)</span>; the lead, Section 3
+and Section 5 now say so.</li>
+<li><em>Counting (Remark 3).</em> The former count kept one valley and
+an arbitrary inner cutoff <span class="math inline">\(x_0\)</span>; its
+coefficient <span class="math inline">\(16\sqrt2\pi m/(3g)\)</span> of
+<span class="math inline">\(E^{3/2}\ln E\)</span> was two thirds of the
+correct one. The remark now computes the floor-admitted volume of both
+valleys up to a bounded remainder, <span
+class="math inline">\((8\sqrt2\pi
+m/g)E^{3/2}[\ln(E/\varepsilon)+O(1)]\)</span>, and compares its quotient
+by <span class="math inline">\(h^2\)</span> with Simon’s exact leading
+asymptotics, which it matches, constant included.</li>
+<li><em>Levels (Remark 4).</em> The Bohr–Sommerfeld estimate describes
+one channel. Counting both valleys doubles every level, the coupling
+near the origin is ignored, and the former claim of a positive first
+spacing is restricted to distinct levels.</li>
+<li><em>Citation.</em> The Simon page “p. 3” was a reprint page. The
+passages are on pp. 210 and 212 of Ann. Phys. 146 (1983) 209–220; the
+constant comes from J. Funct. Anal. 53 (1983) 84–98, pp. 85–86 (both
+passage read on 2026-10-02). Remark 1’s “Lemma 0” of G07 now points to
+the oscillator bound in the proof of G07, Theorem 5.</li>
+</ol>
+</blockquote>
+<p>In the Yang–Mills quantum-mechanical model of <a
 href="low-dimensional-mass-gap.html">G07</a> the two directions of the
 analogy between a positive action floor <span
 class="math inline">\(h&gt;0\)</span> and a mass gap can both be stated
@@ -88,16 +146,19 @@ and proved inside one solved system. Forward: classical mechanics plus
 the single postulate that no transverse oscillation has phase-space area
 below <span class="math inline">\(h/2\)</span> confines the escaping
 valley motion to <span class="math inline">\(|x|\le2\sqrt m\,E/(\hbar
-g)\)</span> at energy <span class="math inline">\(E\)</span>, makes the
-accessible phase-space volume finite with the growth <span
-class="math inline">\(E^{3/2}\ln E\)</span> that Simon records for the
-true eigenvalue counting function, and reproduces through
-Bohr–Sommerfeld quantization the energy unit <span
+g)\)</span> at energy <span class="math inline">\(E\)</span> and makes
+the admitted phase-space volume finite, <span
+class="math inline">\((8\sqrt2\pi
+m/g)E^{3/2}[\ln(E/\varepsilon)+O(1)]\)</span> with both valleys counted.
+Its quotient by <span class="math inline">\(h^2\)</span> has the leading
+term, constant included, of the eigenvalue counting function whose exact
+asymptotics Simon proved, for every positive floor value.
+Bohr–Sommerfeld quantization reproduces the energy unit <span
 class="math inline">\(\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3}\)</span> of
-the exact spectrum; the operator inequality behind G07’s Theorem 5 is
-this postulate made rigorous by the uncertainty inequality. The abelian
-model has no transverse oscillation, so the same floor constrains
-nothing and its spectrum stays continuous: with <span
+the exact spectrum, and the operator inequality behind G07’s Theorem 5
+is this postulate made rigorous by the uncertainty inequality. The
+abelian model has no transverse oscillation, so the same floor
+constrains nothing and its spectrum stays continuous: with <span
 class="math inline">\(h&gt;0\)</span> assumed, a commutative field still
 has no gap. Backward: in the classical model with constants <span
 class="math inline">\(m\)</span> and <span
@@ -105,16 +166,25 @@ class="math inline">\(g\)</span>, any positive finite gap <span
 class="math inline">\(\Delta\)</span>, whatever extra constant produces
 it, supplies the action unit <span
 class="math inline">\(\Delta^{3/4}m^{1/2}g^{-1/2}\)</span>, so within
-the model “gap” and “action unit” are dimensionally equivalent. The same
-equivalence holds for Yang–Mills in <span
-class="math inline">\(d=2\)</span> and <span
-class="math inline">\(d=3\)</span>, where the classical coupling is
-dimensionful, and fails exactly in <span
-class="math inline">\(d=4\)</span>, the action-critical dimension, where
-a mass gap together with <span class="math inline">\(c\)</span> admits
-no action unit. The floor postulate is a phase-space area statement; the
-necessity theorem sought in STATE item 1 is the derivation of such a
-floor. This is G08, exploratory, with no ledger promotion.</p>
+the model “gap” and “action unit” are dimensionally equivalent. For pure
+Yang–Mills the overall coupling <span class="math inline">\(1/g_{\rm
+cl}^2\)</span> drops out of the classical field equations in every
+dimension, so the comparison across dimensions concerns the quantum
+weight <span class="math inline">\(e^{-S_E/\hbar}\)</span>, whose
+coefficient <span class="math inline">\(1/(\hbar g_{\rm cl}^2)\)</span>
+has dimension length<span class="math inline">\(^{4-d}\)</span>. The
+equivalence holds in <span class="math inline">\(d=2\)</span> and <span
+class="math inline">\(d=3\)</span>, where that coefficient carries a
+length. It fails in <span class="math inline">\(d=4\)</span>, the
+action-critical dimension. There <span class="math inline">\(1/g_{\rm
+cl}^2\)</span> is itself an action and the weight carries only the pure
+number <span class="math inline">\(1/g^2\)</span>, with <span
+class="math inline">\(g^2=\hbar g_{\rm cl}^2\)</span>. An action unit
+therefore exists before any gap is given and determines no energy, and a
+gap needs a length that only dimensional transmutation generates. The
+floor postulate is a phase-space area statement; the necessity theorem
+sought in STATE item 1 is the derivation of such a floor. This is G08,
+exploratory; ledger row C132 cites Propositions 4–5 (Section 5).</p>
 <h2 id="the-transverse-phase-space-area-and-the-floor-postulate">1. The
 transverse phase-space area and the floor postulate</h2>
 <p>Take the scalar model of G07, Theorem 5, with classical Hamiltonian
@@ -187,10 +257,10 @@ The <span class="math inline">\(y\)</span> bound is symmetric. <span
 class="math inline">\(\square\)</span></p>
 <p><strong>Remarks.</strong></p>
 <ol type="1">
-<li><em>The floor is the quantum bound.</em> The inequality <span
+<li><p><em>The floor is the quantum bound.</em> The inequality <span
 class="math inline">\(E_y\ge\hbar g|x|/(2\sqrt m)\)</span> is word for
-word the oscillator bound of G07, Theorem 5 (Lemma 0 there): <span
-class="math inline">\(-\frac{\hbar^2}{2m}\partial_y^2
+word the oscillator bound of G07, Theorem 5 (the oscillator bound in its
+proof): <span class="math inline">\(-\frac{\hbar^2}{2m}\partial_y^2
 +\frac{g^2}{2}x^2y^2\ge\hbar g|x|/(2\sqrt m)\)</span>. The quantum
 theorem is the floor postulate enforced by the uncertainty inequality
 <span class="math inline">\(\int(\mu|\phi&#39;|^2+\nu
@@ -200,42 +270,121 @@ area below <span class="math inline">\(h/2\)</span>. So in this model
 the implication “<span class="math inline">\(h&gt;0\)</span> gives the
 gap” is exact, with <span class="math inline">\(h\)</span> entering only
 through the area floor, and the rest of quantum kinematics is not
-used.</li>
-<li><em>Self-consistency of the adiabatic reading.</em> The cutoff <span
-class="math inline">\(X(E)\)</span> lies in the adiabatic region: <span
-class="math inline">\(X(E)/x_{\rm
+used.</p></li>
+<li><p><em>Self-consistency of the adiabatic reading.</em> The cutoff
+<span class="math inline">\(X(E)\)</span> lies in the adiabatic region:
+<span class="math inline">\(X(E)/x_{\rm
 ad}(E)=2^{3/4}(E/\varepsilon)^{3/4}\)</span> with <span
 class="math inline">\(\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3}\)</span>,
 so for <span class="math inline">\(E\gg\varepsilon\)</span> the floor
 acts where <span class="math inline">\(J_y\)</span> is conserved, and
 near the ground state, <span
 class="math inline">\(E\sim\varepsilon\)</span>, the classical reading
-is only an estimate.</li>
-<li><em>Counting.</em> Without the floor the phase-space volume <span
-class="math inline">\(|\{H_{\rm cl}\le E\}|\)</span> is infinite for
-every <span class="math inline">\(E&gt;0\)</span> (G07, Theorem 5, proof
-of (iv)). With the floor, the transverse area at fixed <span
-class="math inline">\(x\)</span> and fixed <span
-class="math inline">\(p_x\)</span> is <span
-class="math inline">\(2\pi(E-p_x^2/2m)/\omega_x\)</span>; integrating
-over <span class="math inline">\(|p_x|\le\sqrt{2mE}\)</span> gives <span
-class="math inline">\((8\pi/3)\sqrt{2m}\,E^{3/2}\sqrt m/(g|x|)\)</span>
-per unit <span class="math inline">\(x\)</span>, and integrating <span
-class="math inline">\(|x|\)</span> from a fixed inner scale to <span
-class="math inline">\(X(E)\)</span> gives <span
-class="math display">\[|\{H_{\rm cl}\le E\}\cap\mathsf F(h)|
-=\frac{16\sqrt2\,\pi
-m}{3g}\,E^{3/2}\ln\frac{X(E)}{x_0}+O(E^{3/2}),\]</span> which grows like
-<span class="math inline">\(E^{3/2}\ln E\)</span>. Simon states (Ann.
-Phys. 146 (1983) 209, p. 3, passage read) that the true counting
-function <span class="math inline">\(N(E)\)</span> of <span
-class="math inline">\(-\Delta+x^2y^2\)</span> grows like <span
-class="math inline">\(E^{3/2}\ln E\)</span>, while the classical volume
-is infinite. The floor therefore reproduces the growth law of the exact
-spectrum; the identification <span
-class="math inline">\(N(E)\approx|\{\cdot\}|/h^2\)</span> is the Weyl
-heuristic, stated here as a consistency check and not as a theorem.</li>
-<li><em>Semiclassical levels.</em> With <span
+is only an estimate.</p></li>
+<li><p><em>Counting (corrected 2026-10-02).</em> Without the floor the
+phase-space volume <span class="math inline">\(|\{H_{\rm cl}\le
+E\}|\)</span> is infinite for every <span
+class="math inline">\(E&gt;0\)</span> (G07, §3.1, Mechanism; Simon, Ann.
+Phys. 146 (1983) 209–220, p. 210, passage read). With the floor it is
+finite, and it can be computed with both valleys included. Write <span
+class="math inline">\(R=\sqrt{2E}/g\)</span>, so that the potential is
+below <span class="math inline">\(E\)</span> exactly where <span
+class="math inline">\(|xy|\le R\)</span>; the momenta at <span
+class="math inline">\((x,y)\)</span> fill a disc of area <span
+class="math inline">\(2\pi m(E-\tfrac{g^2}{2}x^2y^2)\)</span>. By
+Theorem 2 every admitted state lies in the box <span
+class="math inline">\(|x|,|y|\le X(E)\)</span>. For <span
+class="math inline">\(X(E)^2\ge R\)</span>, that is <span
+class="math inline">\(E\ge\varepsilon/2\)</span>, the box carries the
+volume <span class="math display">\[P(E)=\iint_{|x|,|y|\le X}2\pi
+m\Big(E-\frac{g^2}{2}x^2y^2\Big)_+dx\,dy
+=8\pi m\,ER\Big[\frac89+\frac23\ln\frac{X^2}{R}\Big]:\]</span> in each
+quadrant the strip <span class="math inline">\(0\le x\le R/X\)</span>,
+where the <span class="math inline">\(y\)</span>-integral of <span
+class="math inline">\(E-\tfrac{g^2}2x^2y^2\)</span> runs to <span
+class="math inline">\(X\)</span>, contributes <span
+class="math inline">\(\tfrac89ER\)</span>, and the region <span
+class="math inline">\(R/X\le x\le X\)</span>, where it runs to <span
+class="math inline">\(R/x\)</span> and equals <span
+class="math inline">\(\tfrac23ER/x\)</span>, contributes <span
+class="math inline">\(\tfrac23ER\ln(X^2/R)\)</span>. Inside the box the
+floor removes, at each <span class="math inline">\((x,p_x)\)</span> with
+<span class="math inline">\(x\ne0\)</span>, the ellipse <span
+class="math inline">\(E_y&lt;\hbar\omega_x/2\)</span> of area <span
+class="math inline">\(\pi\hbar\)</span> in the <span
+class="math inline">\((y,p_y)\)</span> plane (Proposition 1), and at
+each <span class="math inline">\((y,p_y)\)</span> with <span
+class="math inline">\(y\ne0\)</span> the ellipse <span
+class="math inline">\(E_x&lt;\hbar\omega_y/2\)</span> of the same area.
+The admitted volume <span class="math inline">\(V(E)=|\{H_{\rm cl}\le
+E\}\cap\mathsf F(h)|\)</span> therefore obeys <span
+class="math inline">\(0\le
+P-V\le2\cdot\pi\hbar\cdot2X\cdot2\sqrt{2mE}=16\sqrt2\,\pi
+mE^{3/2}/g\)</span>. With <span
+class="math inline">\(ER=\sqrt2E^{3/2}/g\)</span> and <span
+class="math inline">\(X^2/R=2\sqrt2\,(E/\varepsilon)^{3/2}\)</span>,
+<span class="math display">\[V(E)=\frac{8\sqrt2\,\pi
+m}{g}\,E^{3/2}\Big[\ln\frac E\varepsilon+\theta(E)\Big],
+\qquad\ln2-\frac{10}9\le\theta(E)\le\ln2+\frac89 .\]</span> Since <span
+class="math inline">\(\sqrt R=x_{\rm ad}(E)\)</span>, the hyperbola
+<span class="math inline">\(|xy|=R\)</span> crosses the diagonal at the
+adiabatic scale of Remark 2. To leading order <span
+class="math inline">\(V\)</span> is twice the one-valley integral of
+<span class="math inline">\((8\pi/3)\sqrt2\,mE^{3/2}/(g|x|)\)</span>,
+the transverse ellipse area <span
+class="math inline">\(2\pi(E-p_x^2/2m)/\omega_x\)</span> integrated over
+<span class="math inline">\(|p_x|\le\sqrt{2mE}\)</span>, over <span
+class="math inline">\(x_{\rm ad}(E)\le|x|\le X(E)\)</span>. The former
+version of this remark integrated one valley from a fixed inner cutoff
+<span class="math inline">\(x_0\)</span> and found the coefficient <span
+class="math inline">\(16\sqrt2\pi m/(3g)\)</span> of <span
+class="math inline">\(E^{3/2}\ln E\)</span>, two thirds of the correct
+<span class="math inline">\(8\sqrt2\pi m/g\)</span>. A floor <span
+class="math inline">\(\kappa h\)</span> with any <span
+class="math inline">\(\kappa&gt;0\)</span> in place of <span
+class="math inline">\(h/2\)</span> replaces <span
+class="math inline">\(X\)</span> by <span
+class="math inline">\(X/(2\kappa)\)</span>, leaves the bound on <span
+class="math inline">\(P-V\)</span> unchanged (the excluded ellipses grow
+by <span class="math inline">\(2\kappa\)</span> as the box shrinks by
+<span class="math inline">\(1/(2\kappa)\)</span>) and shifts both bounds
+on <span class="math inline">\(\theta\)</span> by <span
+class="math inline">\(-\tfrac43\ln(2\kappa)\)</span>, so the coefficient
+of <span class="math inline">\(E^{3/2}\ln E\)</span> is independent of
+the floor value.</p>
+<p><em>Comparison with the exact count.</em> For the operator <span
+class="math inline">\(-\Delta+|xy|^\alpha\)</span>, Simon proves the
+limit <span class="math inline">\(E^{-1-1/\alpha}(\ln
+E)^{-1}N(E)\to\pi^{-1}\)</span> (J. Funct. Anal. 53</p>
+<ol start="1983" type="1">
+<li>84–98, Theorem 1.4 and the display after Theorem 1.5, pp. 85–86,
+passage read). At <span class="math inline">\(\alpha=2\)</span> this is
+<span class="math inline">\(N(E)\simeq\pi^{-1}E^{3/2}\ln E\)</span>, the
+growth also stated in Ann. Phys. 146, p. 212, end of Section 2. The
+dilation <span class="math inline">\(x\mapsto\ell x\)</span> with <span
+class="math inline">\(\ell^6=\hbar^2/(mg^2)\)</span> carries <span
+class="math inline">\(H=-\frac{\hbar^2}{2m}\Delta+\frac{g^2}{2}x^2y^2\)</span>
+to <span
+class="math inline">\(\frac\varepsilon2(-\Delta+x^2y^2)\)</span>,
+because both coefficients become <span
+class="math inline">\(\hbar^2/(2m\ell^2)=g^2\ell^4/2=\varepsilon/2\)</span>.
+Hence <span
+class="math inline">\(N_H(E)\simeq(2\sqrt2/\pi)(E/\varepsilon)^{3/2}\ln(E/\varepsilon)\)</span>,
+while the floor count gives <span
+class="math inline">\(V(E)/h^2=(2\sqrt2/\pi)(E/\varepsilon)^{3/2}[\ln(E/\varepsilon)+\theta(E)]\)</span>.
+The leading terms agree, constant included. The identification <span
+class="math inline">\(N\approx V/h^2\)</span> is the Weyl heuristic, and
+the agreement is a comparison of two computed leading terms; Simon’s
+proof runs through a Feynman–Kac lower bound and sliced-bread upper
+bounds. Because the coefficient is independent of the floor value, the
+agreement tests that a positive area floor exists and leaves the number
+<span class="math inline">\(h/2\)</span> untested. Simon (p. 86) calls a
+general geometric interpretation of the constant <span
+class="math inline">\(\pi^{-1}\)</span> an open question; no search was
+run for later literature that supplies one, and no novelty is
+claimed.</li>
+</ol></li>
+<li><p><em>Semiclassical levels.</em> With <span
 class="math inline">\(J_y=(n+\tfrac12)h\)</span> conserved, the valley
 motion has effective Hamiltonian <span
 class="math inline">\(p_x^2/2m+\kappa_n|x|\)</span>, <span
@@ -249,8 +398,29 @@ BS}_{n,N}=\varepsilon\Big[\frac{3\pi(2n+1)(2N+1)}{16\sqrt2}\Big]^{2/3},
 class="math inline">\(\varepsilon\)</span> is the exact one of G07,
 Theorem 5(4), as Theorem 1 of G07 requires; the pure numbers are
 semiclassical estimates of <span class="math inline">\(e_n\)</span> and
-are labelled as such. The lowest level and the first spacing are
-positive: the old quantum theory of this model already has a gap.</li>
+are labelled as such. The estimate describes one channel, the <span
+class="math inline">\(x\)</span>-axis with its two half-valleys. The
+<span class="math inline">\(y\)</span>-axis gives the same levels, so
+counting both channels doubles every level, and the coupling of the
+channels and of different <span class="math inline">\(n\)</span> near
+the origin, where the adiabatic reading fails (Remark 2), is ignored
+(corrected 2026-10-02). The estimate therefore shows a discrete spectrum
+with a positive lowest level and positive distances between distinct
+levels: in that sense the old quantum theory of this model already has a
+gap. The splitting of the doublets and the simplicity of the ground
+state, which the Jaffe–Witten conditions need, come from G07, Theorem
+5(3). As a consistency check, each channel and each <span
+class="math inline">\(n\)</span> contribute <span
+class="math inline">\(\frac{4\sqrt2}{3\pi}(E/\varepsilon)^{3/2}/(n+\tfrac12)\)</span>
+levels below <span class="math inline">\(E\)</span>; summed over both
+channels and over <span class="math inline">\(n\)</span> up to the
+adiabatic limit <span
+class="math inline">\(n_*\simeq2^{-1/4}(E/\varepsilon)^{3/4}\)</span>,
+where the turning point <span class="math inline">\(E/\kappa_n\)</span>
+reaches <span class="math inline">\(x_{\rm ad}(E)\)</span>, they give
+<span
+class="math inline">\((2\sqrt2/\pi)(E/\varepsilon)^{3/2}\ln(E/\varepsilon)\)</span>
+to leading order, the same leading term as Remark 3.</p></li>
 </ol>
 <p><strong>Corollary 3 (the commutative model).</strong> For the abelian
 matrix model, and for <span class="math inline">\(D=1\)</span>, the
@@ -269,9 +439,9 @@ class="math inline">\(E_\perp\ge\hbar g|\vec x_i|/\sqrt m\)</span>, the
 bound of G07, Theorem 6(1), and <span class="math inline">\(|\vec
 x_i|\le\sqrt m\,E/(\hbar g)\)</span> on the energy shell.</p>
 <h2
-id="backward-a-gap-forces-an-action-unit-except-in-the-action-critical-case">3.
-Backward: a gap forces an action unit, except in the action-critical
-case</h2>
+id="backward-a-gap-forces-an-action-unit-at-the-action-critical-dimension-the-unit-is-classical-and-fixes-no-scale">3.
+Backward: a gap forces an action unit; at the action-critical dimension
+the unit is classical and fixes no scale</h2>
 <p><strong>Proposition 4.</strong> Let the classical model with fixed
 constants <span class="math inline">\(m\)</span>, <span
 class="math inline">\(g\)</span> (dimension vectors <span
@@ -306,86 +476,205 @@ supplies the dynamical content, <span
 class="math inline">\(0&lt;\delta_1&lt;\infty\)</span>, that turns the
 unit into the number <span
 class="math inline">\(\Delta=\delta_1\varepsilon\)</span>.</p>
-<p><strong>Proposition 5 (which field theories share this
-equivalence).</strong> With the classical coupling <span
-class="math inline">\(1/g^2\)</span> of dimension action<span
-class="math inline">\(\cdot\)</span>length<span
-class="math inline">\(^{4-d}\)</span>, the speed <span
+<p><strong>Proposition 5 (which field theories share this equivalence;
+corrected 2026-10-02).</strong> Write the Euclidean Yang–Mills action
+with the gauge field as a connection, <span
+class="math inline">\(D=\partial+A\)</span>, <span
+class="math inline">\([A]={\rm length}^{-1}\)</span>, <span
+class="math inline">\(x_0=ct\)</span>: <span
+class="math display">\[S_E=\frac1{4g_{\rm cl}^2}\int
+F^a_{\mu\nu}F^a_{\mu\nu}\,d^dx,\qquad
+[1/g_{\rm cl}^2]={\rm action}\cdot{\rm length}^{4-d}.\]</span> The
+weight <span class="math inline">\(e^{-S_E/\hbar}\)</span> depends on
+the coupling through <span class="math inline">\(\lambda_d=\hbar g_{\rm
+cl}^2\)</span>, of dimension length<span
+class="math inline">\(^{d-4}\)</span>; in <span
+class="math inline">\(d=4\)</span> the repository writes <span
+class="math inline">\(g^2=\hbar g_{\rm cl}^2\)</span>, a pure number
+(<code>LLM.md</code> §2; G07, Proposition 10, uses the trace
+normalization of the same action). With the speed <span
 class="math inline">\(c\)</span> and a gap <span
-class="math inline">\(\Delta\)</span>, an action unit exists in <span
-class="math inline">\(d=2\)</span> and <span
-class="math inline">\(d=3\)</span> and does not exist in <span
-class="math inline">\(d=4\)</span>:</p>
+class="math inline">\(\Delta\)</span>:</p>
+<ol type="1">
+<li>In <span class="math inline">\(d=2\)</span> and <span
+class="math inline">\(d=3\)</span> the pair <span
+class="math inline">\((1/g_{\rm cl}^2,c)\)</span> contains neither an
+action unit nor an energy unit. Adjoining <span
+class="math inline">\(\Delta\)</span> gives exactly one action unit,
+adjoining <span class="math inline">\(\hbar\)</span> gives exactly one
+energy unit, and the equivalence of Proposition 4 holds.</li>
+<li>In <span class="math inline">\(d=4\)</span>, <span
+class="math inline">\(1/g_{\rm cl}^2\)</span> is itself an action unit.
+The constants <span class="math inline">\((1/g_{\rm
+cl}^2,c,\Delta)\)</span> are dimensionally independent and their only
+action monomial is <span class="math inline">\(1/g_{\rm cl}^2\)</span>,
+with <span class="math inline">\(\Delta\)</span> at exponent zero. The
+constants <span class="math inline">\((1/g_{\rm cl}^2,c,\hbar)\)</span>
+contain no energy, length or time unit. So “gap <span
+class="math inline">\(\Rightarrow\)</span> action unit” holds trivially
+and “action unit <span class="math inline">\(\Rightarrow\)</span> gap”
+fails.</li>
+</ol>
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th><span class="math inline">\(d\)</span></th>
-<th>fixed classical constants</th>
-<th>action unit from <span
-class="math inline">\((1/g^2,c,\Delta)\)</span></th>
+<th>classical constants (with <span class="math inline">\(c\)</span> for
+Yang–Mills)</th>
+<th>action unit with <span class="math inline">\(\Delta\)</span>
+adjoined</th>
+<th>energy unit with <span class="math inline">\(\hbar\)</span>
+adjoined</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>2</td>
-<td><span class="math inline">\(1/g^2\sim(1,4,-1)\)</span>, <span
-class="math inline">\(c\)</span></td>
-<td><span
-class="math inline">\((1/g^2)^{1/3}c^{-2/3}\Delta^{2/3}\)</span></td>
+<td><span class="math inline">\(1/g_{\rm cl}^2\sim(1,4,-1)\)</span></td>
+<td><span class="math inline">\((1/g_{\rm
+cl}^2)^{1/3}c^{-2/3}\Delta^{2/3}\)</span></td>
+<td><span class="math inline">\(\hbar^{3/2}g_{\rm cl}\,c=\hbar
+c\,\lambda_2^{1/2}\)</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>3</td>
-<td><span class="math inline">\(1/g^2\sim(1,3,-1)\)</span>, <span
-class="math inline">\(c\)</span></td>
-<td><span
-class="math inline">\((1/g^2)^{1/2}c^{-1/2}\Delta^{1/2}\)</span></td>
+<td><span class="math inline">\(1/g_{\rm cl}^2\sim(1,3,-1)\)</span></td>
+<td><span class="math inline">\((1/g_{\rm
+cl}^2)^{1/2}c^{-1/2}\Delta^{1/2}\)</span></td>
+<td><span class="math inline">\(\hbar^2g_{\rm cl}^2\,c=\hbar
+c\,\lambda_3\)</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>4</td>
-<td><span class="math inline">\(c\)</span> only</td>
-<td>none: <span
-class="math inline">\(a(0,1,-1)+b(1,2,-2)=(1,2,-1)\)</span> has no
-solution</td>
+<td><span class="math inline">\(1/g_{\rm cl}^2\sim(1,2,-1)\)</span>, an
+action</td>
+<td><span class="math inline">\(1/g_{\rm cl}^2\)</span> itself; <span
+class="math inline">\(\Delta\)</span> enters with exponent <span
+class="math inline">\(0\)</span></td>
+<td>none: <span class="math inline">\(\hbar g_{\rm cl}^2=g^2\)</span> is
+a pure number</td>
 </tr>
-<tr>
+<tr class="even">
 <td>mechanics, <span class="math inline">\(k=-2\)</span></td>
 <td><span class="math inline">\(m\)</span>, <span
 class="math inline">\(\lambda\sim(1,4,-2)\)</span></td>
 <td><span class="math inline">\(\sqrt{m\lambda}\)</span> already
 classical; <span class="math inline">\(\Delta\)</span> adds nothing</td>
+<td>none: <span class="math inline">\(2m\lambda/\hbar^2\)</span> is a
+pure number</td>
 </tr>
 </tbody>
 </table>
-<p><em>Proof.</em> Solve <span
-class="math inline">\(a\,d_{1/g^2}+b\,d_c+c&#39;\,(1,2,-2)=(1,2,-1)\)</span>:
-for <span class="math inline">\(d=3\)</span>, adding the length and time
-equations gives <span class="math inline">\(2a=1\)</span>, then <span
+<p><em>Proof.</em> Dimension vectors are over (mass, length, time);
+action is <span class="math inline">\((1,2,-1)\)</span>, energy <span
+class="math inline">\((1,2,-2)\)</span>, <span
+class="math inline">\(c\sim(0,1,-1)\)</span>. Solve <span
+class="math inline">\(a\,d_{1/g_{\rm
+cl}^2}+b\,d_c+c&#39;\,(1,2,-2)=(1,2,-1)\)</span>. For <span
+class="math inline">\(d=3\)</span>, adding the length and time equations
+gives <span class="math inline">\(2a=1\)</span>, then <span
 class="math inline">\(c&#39;=\tfrac12\)</span>, <span
 class="math inline">\(b=-\tfrac12\)</span>; for <span
-class="math inline">\(d=2\)</span>, <span
-class="math inline">\(3a=1\)</span>, <span
+class="math inline">\(d=2\)</span> the sum gives <span
+class="math inline">\(3a=1\)</span>, then <span
 class="math inline">\(c&#39;=\tfrac23\)</span>, <span
 class="math inline">\(b=-\tfrac23\)</span>; for <span
-class="math inline">\(d=4\)</span> the mass component forces <span
-class="math inline">\(b=1\)</span>, the length component then forces
-<span class="math inline">\(a=0\)</span>, and the time component reads
-<span class="math inline">\(-2=-1\)</span>. The <span
-class="math inline">\(k=-2\)</span> row is G07, Section 6. <span
+class="math inline">\(d=4\)</span> it gives <span
+class="math inline">\(a=1\)</span>, then the mass equation gives <span
+class="math inline">\(c&#39;=0\)</span> and the length equation <span
+class="math inline">\(b=0\)</span>. The determinants of the three
+dimension vectors are <span class="math inline">\(-3\)</span>, <span
+class="math inline">\(-2\)</span>, <span
+class="math inline">\(-1\)</span> for <span
+class="math inline">\(d=2,3,4\)</span>, so each solution is unique. With
+<span class="math inline">\(\hbar\sim(1,2,-1)\)</span> in place of <span
+class="math inline">\(\Delta\)</span> the determinants are <span
+class="math inline">\(-2\)</span> and <span
+class="math inline">\(-1\)</span> for <span
+class="math inline">\(d=2,3\)</span>, and the displayed energy monomials
+have vector <span class="math inline">\((1,2,-2)\)</span> by direct
+addition. In <span class="math inline">\(d=2,3\)</span> the pair <span
+class="math inline">\((1/g_{\rm cl}^2,c)\)</span> alone fails: the mass
+and length equations fix <span class="math inline">\(a=1\)</span> and
+<span class="math inline">\(b=-2\)</span> (respectively <span
+class="math inline">\(b=-1\)</span>), and the time component is then
+<span class="math inline">\(1\)</span> (respectively <span
+class="math inline">\(0\)</span>), never <span
+class="math inline">\(-1\)</span> or <span
+class="math inline">\(-2\)</span>. In <span
+class="math inline">\(d=4\)</span>, <span class="math inline">\(1/g_{\rm
+cl}^2\)</span> and <span class="math inline">\(\hbar\)</span> have the
+same vector, so the span is that of <span
+class="math inline">\((1,2,-1)\)</span> and <span
+class="math inline">\((0,1,-1)\)</span>; <span
+class="math inline">\(a(1,2,-1)+b(0,1,-1)=(1,2,-2)\)</span> forces <span
+class="math inline">\(a=1\)</span> (mass), <span
+class="math inline">\(b=0\)</span> (length) and then <span
+class="math inline">\(-1=-2\)</span> (time), and the targets <span
+class="math inline">\((0,1,0)\)</span> and <span
+class="math inline">\((0,0,1)\)</span> fail at the time component in the
+same way. The <span class="math inline">\(k=-2\)</span> row is G07,
+Section 6, Proposition 13. <span
 class="math inline">\(\square\)</span></p>
-<p>The equivalence “gap if and only if action unit” thus holds whenever
-the classical theory carries a dimensionful coupling, and fails exactly
-at the action-critical dimension, where the classical theory carries no
-constant at all and a mass gap with <span
-class="math inline">\(c\)</span> yields a length only after <span
-class="math inline">\(\hbar\)</span> is supplied. This is the
-dimensional reason the four-dimensional problem is one-directional: the
-gap needs a scale generated by transmutation, and that scale does not by
-itself return an action unit.</p>
+<p>In <span class="math inline">\(d=2,3\)</span> the quantum theory in
+infinite volume has the constants <span
+class="math inline">\((\hbar,c,\lambda_d)\)</span>, which are
+independent, so a gap that depends on them alone is <span
+class="math inline">\(\Delta=\kappa\,\hbar
+c\,\lambda_d^{1/(4-d)}\)</span> with a pure number <span
+class="math inline">\(\kappa\)</span> (G07, Theorem 1). The action unit
+of the table is then <span
+class="math inline">\(\kappa^{2/3}\hbar\)</span> in <span
+class="math inline">\(d=2\)</span> and <span
+class="math inline">\(\kappa^{1/2}\hbar\)</span> in <span
+class="math inline">\(d=3\)</span>: the gap returns <span
+class="math inline">\(\hbar\)</span> up to a pure number.</p>
+<p>Two facts fix the reading of the table. First, the overall factor
+<span class="math inline">\(1/g_{\rm cl}^2\)</span> drops out of the
+classical field equations <span class="math inline">\(D_\mu
+F_{\mu\nu}=0\)</span> in every dimension (G07, Proposition 10), and the
+dilation <span class="math inline">\(A\mapsto sA(sx)\)</span> maps
+solutions to solutions in every <span class="math inline">\(d\)</span>
+while multiplying the action by <span
+class="math inline">\(s^{4-d}\)</span>. Classical Yang–Mills therefore
+has no physical scale in any dimension, and <span
+class="math inline">\(1/g_{\rm cl}^2\)</span> only converts the geometry
+of a solution into action and energy. The difference between the rows
+becomes physical through the quantum weight <span
+class="math inline">\(e^{-S_E/\hbar}\)</span>, whose coefficient <span
+class="math inline">\(1/\lambda_d=1/(\hbar g_{\rm cl}^2)\)</span> has
+dimension length<span class="math inline">\(^{4-d}\)</span>. In <span
+class="math inline">\(d=2,3\)</span> the weight carries a length and,
+with <span class="math inline">\(c\)</span>, an energy, and a gap is a
+pure number times that energy. In <span
+class="math inline">\(d=4\)</span> the weight carries the pure number
+<span class="math inline">\(1/g^2\)</span> and no length. Second, <span
+class="math inline">\(d=4\)</span> is action-critical in the sense of
+G07, Section 6, and shares its row type with the inverse-square
+potential: the classical constants own an action unit and no energy
+unit. This is the dimensional reason the four-dimensional problem is
+one-directional. A gap needs a length that the constants of the weight
+do not contain; dimensional transmutation generates it from the
+regulator (G07, Proposition 10), and the gap then returns no action unit
+beyond the <span class="math inline">\(1/g_{\rm cl}^2=\hbar/g^2\)</span>
+already present. Along the continuum trajectory of asymptotic freedom
+<span class="math inline">\(g^2(a)\to0\)</span>, so this bare action
+unit grows without bound in units of <span
+class="math inline">\(\hbar\)</span>; the continuum theory keeps <span
+class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span> and the transmuted scale, the
+dimensionless coupling having been traded for that scale. The same
+remark applies to Proposition 4: the trajectories of <span
+class="math inline">\(H_{\rm cl}\)</span> depend on <span
+class="math inline">\(g^2/m\)</span> alone and <span
+class="math inline">\(m\)</span> normalizes the action, so the
+equivalence there is also a statement about the quantized model.</p>
 <h2 id="what-this-decides-for-the-positive-action-question">4. What this
 decides for the positive-action question</h2>
 <ul>
@@ -425,17 +714,37 @@ class="math inline">\(h\)</span> along a non-compact direction.</li>
 <h2 id="strategic-consequence">5. Strategic consequence</h2>
 <p>G08 closes the loop inside the Yang–Mills quantum-mechanical model:
 floor gives gap, gap gives unit, and the commutative model is inert
-under the floor. Two dimensional facts are retained for the programme:
-the equivalence of gap and action unit holds exactly when the classical
-theory has a dimensionful coupling, and fails at <span
-class="math inline">\(d=4\)</span>; and the phase-space area of a closed
-transverse orbit is the object a floor must bound. Neither changes STATE
-item 1’s target, which remains the derivation of the floor from
-consistency premises; N02 gains the phase-space form of the floor as the
-statement to aim at. No ledger claim is promoted; Theorem 2 and
-Propositions 1, 4, 5 are elementary and the semiclassical remarks are
-labelled estimates. Sources are in <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B79.md">B79</a>.</p>
+under the floor. Three facts are retained for the programme. First, the
+equivalence of gap and action unit holds when the coefficient of the
+quantum weight, <span class="math inline">\(1/(\hbar g_{\rm
+cl}^2)\)</span>, carries a length (<span
+class="math inline">\(d=2,3\)</span>, and the matrix model with its
+constants <span class="math inline">\(m\)</span>, <span
+class="math inline">\(g\)</span>). In <span
+class="math inline">\(d=4\)</span> the classical coupling is already an
+action unit, the weight carries a pure number, and a gap requires a
+transmuted length; the contrast between the dimensions is a quantum one,
+since <span class="math inline">\(1/g_{\rm cl}^2\)</span> drops out of
+the classical field equations in every dimension. (Corrected 2026-10-02:
+the earlier text said <span class="math inline">\(d=4\)</span> carries
+no classical constant and no action unit.) Second, the phase-space area
+of a closed transverse orbit is the object a floor must bound. Third,
+the floor-admitted classical volume divided by <span
+class="math inline">\(h^2\)</span> reproduces the leading eigenvalue
+asymptotics of the model, constant included, for every positive floor
+value (Remark 3). STATE item 1’s target stays the derivation of the
+floor from consistency premises; N02 gains the phase-space form of the
+floor as the statement to aim at. Ledger row C132 cites Propositions
+4–5; its clause “none in <span class="math inline">\(d=4\)</span>” needs
+the correction of Proposition 5: in <span
+class="math inline">\(d=4\)</span> the classical coupling is itself an
+action unit, the gap cannot enter it, and it yields no energy unit.
+Theorem 2, Propositions 1, 4, 5 and the volume formula of Remark 3 are
+elementary. The Weyl comparison of Remark 3 and the Bohr–Sommerfeld
+levels of Remark 4 are labelled estimates. Sources are in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B79.md">B79</a>;
+the J. Funct. Anal. passage of Remark 3 was read on 2026-10-02 and is
+cited inline.</p>
 
 </main>
 <footer class="site"><div class="wrap">

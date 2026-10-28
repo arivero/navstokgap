@@ -80,43 +80,21 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>The mass gap as a finite list of theorems: the Hamiltonian lattice
-route</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-obligations-lattice.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-obligations-lattice.pdf">PDF</a></p><p>On the Hamiltonian lattice route the Jaffe–Witten conjecture
-decomposes into four named statements, and their present status is: (T1)
-every finite periodic lattice has a positive gap <span
-class="math inline">\(\Delta_{a,L}\)</span> above a unique
-gauge-invariant ground state, proved below with all constants explicit;
-(T2) at strong coupling the gap stays bounded below uniformly in the
-volume, established in the Euclidean form by the Osterwalder–Seiler
-cluster expansion and cited here with its hypotheses, while the naive
-Kato bound fails because the magnetic term is extensive; (T2<span
-class="math inline">\(&#39;\)</span>) the gap of the infinite lattice
-stays positive for every coupling, which is the statement that
-four-dimensional non-abelian lattice gauge theory has no Coulomb phase,
-open, and false for the abelian group by Guth and Fröhlich–Spencer; (T3)
-along the asymptotic-freedom curve <span
-class="math inline">\(g(a)\)</span> the infinite-volume gap <span
-class="math inline">\(\Delta_a\)</span> satisfies <span
-class="math inline">\(\Delta_a/(\hbar c\Lambda(g(a)))\to
-m/\Lambda\in(0,\infty)\)</span>, open, and this single limit is the
-Millennium content once the theory exists; (T4) the continuum,
-infinite-volume theory with the Osterwalder–Schrader axioms, known in
-finite volume with an ultraviolet cutoff removed (Balaban;
-Magnen–Rivasseau–Sénéor) and open beyond. The small-volume expansion
-controls one corner: for <span class="math inline">\(L\ll\hbar
-c/\Lambda\)</span> the gap is <span
-class="math inline">\(\delta_1g(L)^{2/3}\hbar c/L\)</span> (C133,
-Lüscher), so the dimensionless gap <span
-class="math inline">\(z(L)=\Delta(L)L/(\hbar c)\)</span> must cross over
-from <span class="math inline">\(\propto g^{2/3}\)</span> at small <span
-class="math inline">\(L\)</span> to linear growth <span
-class="math inline">\(mL/(\hbar c)\)</span> at large <span
-class="math inline">\(L\)</span>. T2 in Hamiltonian form, a
-volume-uniform gap for <span class="math inline">\(g\ge g_0(N)\)</span>,
-is closed in <a href="strong-coupling-uniform-gap.html">the
-strong-coupling note</a>; the radius <span
-class="math inline">\(g_0\)</span> is the number the entire problem asks
-to push to zero. Sources are cited inline with reading labels; nothing
-here is promoted.</p>
+route</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-obligations-lattice.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-obligations-lattice.pdf">PDF</a></p><p>The Hamiltonian route has distinct steps. T1 gives a unique physical
+vacuum and positive gap on each finite lattice. T2 supplies an
+existential volume-uniform strong-coupling gap for the Kogut–Susskind
+operator; explicit Wilson-transfer estimates concern a different
+operator. T2<span class="math inline">\(&#39;\)</span> is the stronger
+all-coupling lower-bound property <span
+class="math inline">\(\liminf_{N_s\to\infty}\delta(g;N_s)&gt;0\)</span>,
+not an equivalence to absence of a bulk transition, and is not necessary
+at every bare coupling for a continuum limit. T3 requires controlled
+physical gap scaling along the weak-coupling trajectory, and T4 requires
+construction, nontriviality and the axioms. Spectral transfer between
+finite lattices and the specified limiting vacuum is an additional
+obligation. These latter steps remain open. All energies below are
+measured using <span class="math inline">\(\hbar c/a\)</span>; volume
+and cutoff limits are separate.</p>
 <h2 id="the-finite-lattice-hamiltonian">1. The finite-lattice
 Hamiltonian</h2>
 <p>Let <span class="math inline">\(G\)</span> be a compact connected
@@ -283,25 +261,26 @@ class="math inline">\(g^2K\)</span> dominates. Its ground state is the
 constant function, with eigenvalue <span
 class="math inline">\(0\)</span>, and its excitations are link
 representations. Gauge invariance excludes a single excited link: the
-lowest physical excitation of <span class="math inline">\(K\)</span> is
-a closed flux loop, at minimum the four links of one plaquette in the
-lowest nontrivial representation, with electric energy <span
+lowest physical excitation of <span class="math inline">\(K\)</span> for
+a periodic <span class="math inline">\(SU(N)\)</span> lattice with side
+at least four is a four-link plaquette loop in the fundamental
+representation, with electric energy <span
 class="math inline">\(4\cdot\tfrac12C_2(R_{\min})\,g^2\hbar
 c/a=2C_2(R_{\min})g^2\hbar c/a\)</span>; for <span
 class="math inline">\(SU(N)\)</span>, <span
 class="math inline">\(C_2(\text{fund})=(N^2-1)/(2N)\)</span>. So the
 unperturbed physical gap is <span class="math display">\[\gamma_{\rm
-phys}(g)=2C_2(R_{\min})\,g^2\,\frac{\hbar c}{a},\]</span> uniform in
-<span class="math inline">\(N\)</span> because a single plaquette loop
-costs the same on every lattice.</p>
+phys}(g)=2C_2(R_{\min})\,g^2\,\frac{\hbar c}{a},\]</span> uniform in the
+side length under this restriction. At shorter periodic sides winding
+cycles can be shorter; nonabelian networks can also branch.</p>
 <p><strong>The naive bound fails.</strong> The magnetic term satisfies
 <span class="math inline">\(0\le g^{-2}V\le2N|\mathcal P|g^{-2}\)</span>
 in operator norm, so Kato’s perturbation bound gives <span
 class="math inline">\(\Delta^{\rm phys}\ge\gamma_{\rm
-phys}-2\|g^{-2}V\|\hbar c/a
-=(2C_2g^2-4N|\mathcal P|g^{-2})\hbar c/a\)</span>, positive only when
-<span class="math inline">\(g^4&gt;2N|\mathcal P|/C_2\)</span>. The
-bound is extensive in the volume and useless as <span
+phys}-2\|g^{-2}V\|\hbar c/a =(2C_2g^2-4N|\mathcal P|g^{-2})\hbar
+c/a\)</span>, positive only when <span
+class="math inline">\(g^4&gt;2N|\mathcal P|/C_2\)</span>. The bound is
+extensive in the volume and useless as <span
 class="math inline">\(N\to\infty\)</span>. Volume uniformity therefore
 requires using that <span class="math inline">\(V\)</span> is a sum of
 <span class="math inline">\(|\mathcal P|\)</span> terms each of norm at
@@ -322,67 +301,375 @@ frustration-free Hamiltonians (Yarotsky, Commun. Math. Phys. 261 (2005)
 metadata): <span class="math inline">\(g^2K\)</span> is a sum of
 commuting link terms with a product ground state and a uniform local
 gap, and <span class="math inline">\(g^{-2}V\)</span> is a sum of
-bounded local terms. Their hypotheses assume finite-dimensional local
-spaces or bounded local terms, and <span
-class="math inline">\(-\Delta_\ell\)</span> is unbounded on the
-infinite-dimensional <span class="math inline">\(L^2(G)\)</span>, so a
-Hamiltonian proof of T2 must either truncate each link to the
-representations with <span class="math inline">\(C_2(R)\le
-C_{\max}\)</span> and control the truncation, or use the relative
-boundedness of <span class="math inline">\(V\)</span> with respect to
-<span class="math inline">\(K\)</span>. This is the first bounded
-theorem in the list:</p>
-<blockquote>
-<p><strong>T2 (Hamiltonian form, target).</strong> There exist <span
-class="math inline">\(g_0(N)&lt;\infty\)</span> and <span
-class="math inline">\(c(N)&gt;0\)</span> such that for all <span
-class="math inline">\(g\ge g_0\)</span> and all lattice sizes <span
-class="math inline">\(N\ge2\)</span>, <span
-class="math inline">\(\Delta^{\rm phys}_{a,L}\ge c(N)\,g^2\,\hbar
-c/a\)</span>.</p>
-</blockquote>
-<h2 id="t2-no-coulomb-phase-at-fixed-cutoff">4. T2<span
-class="math inline">\(&#39;\)</span>: no Coulomb phase at fixed
-cutoff</h2>
-<p>Fix <span class="math inline">\(a\)</span> and <span
-class="math inline">\(g\)</span> and let <span
-class="math inline">\(N\to\infty\)</span>. Define <span
-class="math inline">\(\delta_\infty(g)=\liminf_{N\to\infty}\delta(g;N,G)\)</span>.
-T2 says <span class="math inline">\(\delta_\infty(g)\ge
-c\,g^2&gt;0\)</span> for <span class="math inline">\(g\ge g_0\)</span>.
-The lattice form of the conjecture at fixed cutoff is</p>
-<blockquote>
-<p><strong>T2<span class="math inline">\(&#39;\)</span>.</strong> <span
-class="math inline">\(\delta_\infty(g)&gt;0\)</span> for every <span
-class="math inline">\(g&gt;0\)</span>.</p>
-</blockquote>
-<p>For <span class="math inline">\(G=U(1)\)</span> this is false: Guth
-(Phys. Rev. D 21 (1980) 2291) and Fröhlich–Spencer (Commun. Math. Phys.
-83 (1982) 411) prove a massless Coulomb phase at weak coupling
-(abstract, B78), so <span
-class="math inline">\(\delta_\infty(g)=0\)</span> below a critical
-coupling. T2<span class="math inline">\(&#39;\)</span> for a non-abelian
-<span class="math inline">\(G\)</span> is the statement that the
-transition the abelian theory undergoes does not occur, that is
-confinement at all couplings, which lattice computations support and no
-proof reaches. The heuristic of <a
-href="low-dimensional-mass-gap.html">G07</a> §3 locates the difference:
-the abelian theory is all valley, while the non-abelian potential has
-flat directions of measure zero along which a transverse zero-point
-energy grows. T2<span class="math inline">\(&#39;\)</span> is where that
-mechanism would have to be turned into an estimate at weak coupling.</p>
-<p><em>Precision, 2026-09-23.</em> T2<span
-class="math inline">\(&#39;\)</span> is a property of the lattice
-action. With the Wilson action, <span
-class="math inline">\(SU(N\ge5)\)</span> has a first-order bulk
-transition at intermediate coupling, where <span
-class="math inline">\(\delta_\infty\)</span> vanishes by vacuum
-coexistence, while the continuum gap is expected; for <span
-class="math inline">\(SU(3)\)</span> the Wilson action gives a
-crossover. What T3 needs is <span
-class="math inline">\(\delta_\infty(g)&gt;0\)</span> on an interval
-<span class="math inline">\((0,g_1)\)</span> along the scaling curve (<a
-href="mass-gap-openings.html">openings note</a>, §1).</p>
+bounded local terms. Yarotsky permits the infinite-dimensional local
+spaces and the relevant bounded perturbation. The full hypothesis check,
+with existential constants, is in <a
+href="strong-coupling-uniform-gap.html">the strong-coupling note</a>.
+The finite-volume physical loop estimate above does not itself give a
+volume-uniform threshold.</p>
+<h2 id="coupling-sets-finite-volume-and-spectral-limits">4. Coupling
+sets, finite volume and spectral limits</h2>
+<p>Define, for the Kogut–Susskind Hamiltonian of this note, with gauge
+group <span class="math inline">\(G\)</span>, lattice spacing <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(N_s\)</span> sites per side, <span
+class="math display">\[c(g)=\liminf_{N_s\to\infty}\delta(g;N_s,G),\qquad
+\mathcal G=\{g&gt;0:\ c(g)&gt;0\},\qquad
+\Delta_{a,L}=\frac{\hbar c}{a}\delta(g;N_s,G),\quad L=aN_s.\]</span>
+Here <span class="math inline">\(c(g)\)</span> is a dimensionless
+lower-gap function; the constant <span class="math inline">\(c\)</span>
+in <span class="math inline">\(\hbar c/a\)</span> is the speed of light.
+The volume limit is taken at fixed <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(g\)</span>. To retain the obligations map’s
+convention, <span class="math inline">\(\delta\)</span> is the gap on
+the <strong>full link Hilbert space</strong>. Its restriction to the
+Gauss-law space has a gap <span class="math inline">\(\delta^{\rm
+phys}\ge\delta\)</span>; closing of <span
+class="math inline">\(\delta\)</span> need not even close <span
+class="math inline">\(\delta^{\rm phys}\)</span>. An analogous gapped
+set can be defined using <span class="math inline">\(\delta^{\rm
+phys}\)</span>, but the two sets have not been identified here.</p>
+<p>T1 gives positivity at every finite volume; T2 gives <span
+class="math inline">\([g_0(G),\infty)\subset\mathcal G\)</span>; and
+T2<span class="math inline">\(&#39;\)</span>, as an all-coupling
+finite-volume lower-bound statement, is exactly <span
+class="math inline">\(\mathcal G=(0,\infty)\)</span>. Proposition 1
+proves finite-volume continuity. Proposition 2 identifies the slowest
+temporal correlation decay with the spectral threshold <strong>assuming
+a specified limiting vacuum theory</strong>; it does not identify that
+threshold with <span class="math inline">\(c(g)\)</span>. Global
+openness and closedness of <span class="math inline">\(\mathcal
+G\)</span> remain open. If openness is established, closedness and the
+known nonemptiness would imply T2<span
+class="math inline">\(&#39;\)</span> by connectedness. This is a
+sufficient route to a lattice statement, not an equivalence with the
+continuum mass-gap conjecture or with phase-transition absence.</p>
+<h3 id="a.-finite-volume-continuity">4a. Finite-volume continuity</h3>
+<p><strong>Proposition 1.</strong> For fixed <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(N_s\ge2\)</span> and a nontrivial compact
+connected Lie group <span class="math inline">\(G\)</span>, the map
+<span class="math inline">\(g\mapsto\delta(g;N_s,G)\)</span> is
+continuous and strictly positive on <span
+class="math inline">\((0,\infty)\)</span>, and locally piecewise
+real-analytic. The same holds for the physical gap.</p>
+<p><em>Proof.</em> Write <span
+class="math display">\[h(g):=\frac{aH(g)}{\hbar
+c}=\frac{g^2}{2}K+\frac{2}{g^2}V,\]</span> with <span
+class="math inline">\(K=\sum_\ell(-\Delta_\ell)\ge0\)</span> having
+compact resolvent and <span
+class="math inline">\(V=\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\)</span>
+bounded, with <span class="math inline">\(0\le V\le2N|\mathcal
+P|\)</span> for <span class="math inline">\(SU(N)\)</span> in the
+fundamental representation. For a general compact connected group, use
+the fixed faithful representation and replace <span
+class="math inline">\(N\)</span> by its dimension. In a complex
+neighbourhood of any <span class="math inline">\(g&gt;0\)</span>, this
+is a holomorphic family of type (A) on the common domain <span
+class="math inline">\(D(K)\)</span>. For real <span
+class="math inline">\(g\)</span> it is self-adjoint with compact
+resolvent. The local analytic eigenvalue-branch theorem for a
+self-adjoint analytic family (Kato/Rellich analytic perturbation theory,
+standard theorem used here) supplies finitely many real-analytic
+branches in an isolated spectral cluster. The ground branch is simple by
+T1. In a neighbourhood of each <span class="math inline">\(g\)</span>,
+the first excited eigenvalue is the minimum of the finitely many
+branches in its cluster, hence continuous. Distinct analytic branches
+have isolated crossings locally; identically coincident branches do not
+affect this conclusion. Thus the gap is locally piecewise analytic and
+continuous. T1 supplies its strict positivity. The gauge projection
+reduces both <span class="math inline">\(K\)</span> and <span
+class="math inline">\(V\)</span>, so the same argument applies on the
+fixed physical subspace. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Correction (2026-10-02).</strong> The original min–max
+explanation did not prove continuity: an infimum over subspaces of
+continuous functions need not be continuous. The analytic-branch
+argument above replaces it; no simplicity of the first excited
+eigenvalue is assumed.</p>
+<p>Finite-volume positivity supplies no positive volume-uniform lower
+bound. In particular <span class="math inline">\(c(g)\)</span> need not
+be continuous, and no regularity of <span class="math inline">\(\mathcal
+G\)</span> follows just from Proposition 1.</p>
+<h3 id="b.-spectral-limits-and-surviving-weight">4b. Spectral limits and
+surviving weight</h3>
+<p>If <span class="math inline">\(c(g)=0\)</span>, then <span
+class="math inline">\(\delta(g;N_s,G)\to0\)</span> along a subsequence
+of volumes. This is a statement about eigenvalues of different
+operators, not about the spectrum of a constructed infinite-volume
+operator. To discuss correlation length, first assume a limiting vacuum
+representation of the local gauge-invariant observable algebra, with
+cyclic vacuum <span class="math inline">\(\Omega\)</span>, nonnegative
+dimensionless Hamiltonian <span class="math inline">\(h_\infty\)</span>,
+and <span class="math inline">\(\ker h_\infty=\mathbb C\Omega\)</span>.
+The physical time generator is <span
+class="math inline">\(H_\infty=(\hbar c/a)h_\infty\)</span>. Existence
+of this representation and convergence of the relevant correlators are
+extra hypotheses here.</p>
+<p>For each bounded local gauge-invariant observable <span
+class="math inline">\(A\)</span>, set <span
+class="math inline">\(A_0=A-\langle\Omega,A\Omega\rangle I\)</span> and
+define its finite positive spectral measure and temporal connected
+autocorrelation by <span class="math display">\[\mu_A(B)=\langle
+A_0\Omega,\mathbf1_B(h_\infty)A_0\Omega\rangle,
+\qquad C_A(s)=\int_{[0,\infty)}e^{-s\lambda}\,d\mu_A(\lambda),
+\quad s=\frac{ct_E}{a}.\]</span> For <span
+class="math inline">\(\mu_A\ne0\)</span> define <span
+class="math inline">\(r_A=\inf\operatorname{supp}\mu_A\)</span> and
+<span class="math display">\[r=\inf_{A:\mu_A\ne0}r_A,\qquad
+\xi_t=\frac{a}{r},\]</span> with <span
+class="math inline">\(\xi_t=\infty\)</span> when <span
+class="math inline">\(r=0\)</span>. This takes the <strong>slowest rate
+over all local gauge-invariant observables</strong>, rather than the
+rate of an arbitrarily chosen observable. It is a temporal correlation
+length; no equality with a spatial correlation length at fixed
+Hamiltonian lattice spacing is asserted.</p>
+<p><strong>Proposition 2 (conditional replacement).</strong> In the
+vacuum representation just specified, with a nonzero excited subspace,
+<span class="math display">\[m_{\rm
+lat}:=\inf\sigma(h_\infty|_{\Omega^\perp})=r,
+\qquad \Delta_\infty=\frac{\hbar c}{a}m_{\rm lat}
+=\frac{\hbar c}{\xi_t}.\]</span> For every nonzero <span
+class="math inline">\(\mu_A\)</span>, <span
+class="math inline">\(-\lim_{s\to\infty}s^{-1}\log C_A(s)=r_A\)</span>.
+These assertions concern the assumed limit theory; they make no claim
+that <span class="math inline">\(m_{\rm lat}=c(g)\)</span>.</p>
+<p><em>Proof.</em> Positivity of the spectral measure gives <span
+class="math inline">\(C_A(s)\le\mu_A([0,\infty))e^{-sr_A}\)</span>. For
+every <span class="math inline">\(\varepsilon&gt;0\)</span>, the
+definition of support gives positive weight <span
+class="math inline">\(w_\varepsilon=\mu_A([r_A,r_A+\varepsilon])&gt;0\)</span>,
+whence <span class="math inline">\(C_A(s)\ge w_\varepsilon
+e^{-s(r_A+\varepsilon)}\)</span>. Taking logarithms, then <span
+class="math inline">\(s\to\infty\)</span> and <span
+class="math inline">\(\varepsilon\downarrow0\)</span>, proves the rate
+formula. Centered local vectors are dense in <span
+class="math inline">\(\Omega^\perp\)</span> by cyclicity of <span
+class="math inline">\(\Omega\)</span> for the local algebra. All their
+spectral supports lie above <span class="math inline">\(m_{\rm
+lat}\)</span>, so <span class="math inline">\(r\ge m_{\rm lat}\)</span>.
+For every <span class="math inline">\(\varepsilon&gt;0\)</span> the
+spectral projection on <span class="math inline">\([m_{\rm lat},m_{\rm
+lat}+\varepsilon)\)</span> in <span
+class="math inline">\(\Omega^\perp\)</span> is nonzero. Density implies
+that it has nonzero action on some centered local vector. That vector
+has <span class="math inline">\(r_A&lt;m_{\rm lat}+\varepsilon\)</span>,
+proving the reverse inequality after <span
+class="math inline">\(\varepsilon\downarrow0\)</span>. The physical-unit
+identity follows from the definition of <span
+class="math inline">\(H_\infty\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>An infimum of rates equal to zero need not be attained by a single
+observable: <span class="math inline">\(\xi_t=\infty\)</span> need not
+mean that <em>one</em> observable has slower-than-exponential decay. It
+can mean that there is no common positive exponential rate for the
+entire local algebra.</p>
+<p><strong>Why the original implication fails.</strong> Even convergence
+of an observable’s spectral measures does not preserve their lowest
+support points. With <span class="math inline">\(\mathrm d_x\)</span>
+denoting unit point mass at <span class="math inline">\(x\)</span>,
+consider <span class="math display">\[\mu_n=(1-e^{-n})\mathrm
+d_1+e^{-n}\mathrm d_{1/n}.
+\]</span> Its threshold tends to zero, but <span
+class="math inline">\(\mu_n\Rightarrow\mathrm d_1\)</span>, whose
+threshold is one. The soft mode loses all its observable weight. This is
+a spectral-measure illustration, not a counterexample constructed for
+the fixed Kogut–Susskind family. It identifies information that
+finite-volume eigenvalues alone lack. Nonlocal sectors and the
+full-space/physical-space distinction add further obstacles.</p>
+<p>A valid sufficient implication is available <strong>with surviving
+weight</strong>. Suppose centered finite-volume local spectral measures
+<span class="math inline">\(\mu_n\Rightarrow\mu_A\)</span> in the
+representation above and, for every <span
+class="math inline">\(\eta&gt;0\)</span>, there is <span
+class="math inline">\(w_\eta&gt;0\)</span> with <span
+class="math inline">\(\mu_n([0,\eta/2])\ge w_\eta\)</span> eventually.
+The closed-set inequality gives <span
+class="math inline">\(\mu_A([0,\eta/2])\ge w_\eta\)</span>. Uniqueness
+of the vacuum and centering give <span
+class="math inline">\(\mu_A(\{0\})=0\)</span>, so <span
+class="math inline">\(\mu_A((0,\eta))&gt;0\)</span> and <span
+class="math inline">\(m_{\rm lat}=0\)</span>. These are precisely the
+extra convergence and weight hypotheses of <a
+href="three-continuum-limits.html">three continuum limits, §5</a>
+(reading: passage). No such estimates are proved here for arbitrary
+<span class="math inline">\(g\)</span>.</p>
+<p><strong>Correction (2026-10-02): phase interpretation.</strong>
+Vacuum coexistence with small finite-volume tunnelling splittings and a
+gapless local phase are possible scenarios, not an exhaustive
+consequence of <span class="math inline">\(c(g)=0\)</span>. Distinct
+infinite-volume ground states may persist throughout a symmetry-broken
+interval, with a positive excitation gap in each selected vacuum
+representation. A massless phase can likewise occupy an interval.
+Neither every degeneracy nor every gapless coupling is an isolated
+first- or second-order transition; neither an exponential volume law for
+tunnelling nor transition order was proved by the original argument.</p>
+<p><strong>Corollary 3 (original equivalence withdrawn,
+2026-10-02).</strong> There is no proved equivalence here between <span
+class="math inline">\(\mathcal G=(0,\infty)\)</span> and absence of bulk
+phase transitions. T2<span class="math inline">\(&#39;\)</span> means
+only the all-coupling lower-bound property defined in the lead.
+Identifying it with phase behaviour needs a limit theory, a specified
+vacuum/sector and spectral comparison.</p>
+<p><em>Precision, 2026-09-23, corrected 2026-10-02.</em> The <a
+href="mass-gap-openings.html">openings note, §1</a> (reading: passage)
+records Wilson-action numerical evidence for first-order bulk
+transitions for <span class="math inline">\(SU(N\ge5)\)</span>, with
+source <a
+href="https://arxiv.org/abs/2306.14319">Rindlisbacher–Rummukainen–Salami</a>.
+It does not prove a hole in the <span class="math inline">\(\mathcal
+G\)</span> of this KS Hamiltonian: the Euclidean Wilson operator
+differs, and the spectral comparison is missing. Such
+intermediate-coupling lattice phenomena do not by themselves obstruct a
+continuum limit along <span class="math inline">\(g\to0\)</span>.
+All-coupling T2<span class="math inline">\(&#39;\)</span> is stronger
+than the weak-trajectory gap and scaling control needed for T3, together
+with continuum construction and nontriviality T4.</p>
+<h3 id="c.-what-a-second-order-point-could-mean">4c. What a second-order
+point could mean</h3>
+<p><strong>Correction (2026-10-02).</strong> A divergent correlation
+length is a necessary scaling signal for a continuum limit with a fixed
+nonzero physical mass, not a proof that a continuum theory exists. The
+original assertion that a second-order point automatically produces a
+continuum limit, and the equivalence with uniqueness of the
+asymptotically free limit, are withdrawn.</p>
+<p>If a positive dimensionless local spectral mass <span
+class="math inline">\(m_{\rm lat}(g)\)</span> tends to zero as <span
+class="math inline">\(g\to g_*&gt;0\)</span>, one can <em>choose</em>
+<span class="math inline">\(a(g)=m_{\rm lat}(g)/M\)</span> to keep the
+inverse-length scale <span class="math inline">\(M&gt;0\)</span> fixed.
+Then <span class="math inline">\(\Delta(g)=\hbar cM\)</span> and <span
+class="math inline">\(\xi_t/a=1/m_{\rm lat}\to\infty\)</span>. This
+choice supplies scale matching only. Convergence of renormalized
+correlators, positivity, axioms and nontriviality remain to be proved.
+Moreover, diverging length alone does not specify transition order.</p>
+<p>An asymptotically free trajectory instead approaches <span
+class="math inline">\(g=0\)</span> with <span
+class="math inline">\(a\Lambda_{\rm lat}(g)\to0\)</span> as described in
+§5 below. A possible finite-<span class="math inline">\(g_*\)</span>
+scaling limit would be a different trajectory; T2<span
+class="math inline">\(&#39;\)</span> alone classifies neither continuum
+limits nor universality classes. Numerically, the fundamental–adjoint
+plane of <span class="math inline">\(SU(3)\)</span> exhibits scalar
+softening consistent with a critical endpoint and a <span
+class="math inline">\(\phi^4\)</span> continuum interpretation (<a
+href="https://arxiv.org/abs/hep-lat/9508009">Heller 1995</a>, reading:
+abstract). This is evidence for that interpretation, not a constructed
+scalar continuum theory or a theorem for the Wilson axis.</p>
+<h3 id="d.-the-abelian-case-action-phase-and-transition-order">4d. The
+abelian case: action, phase and transition order</h3>
+<p>The strong-coupling theorem applies to compact <span
+class="math inline">\(U(1)\)</span>: in the normalization <span
+class="math inline">\(-\Delta\)</span> has eigenvalues <span
+class="math inline">\(n^2\)</span>, so <span
+class="math inline">\(C_2(R_{\min})=1\)</span> and the defining
+representation has dimension one. <a
+href="strong-coupling-uniform-gap.html">The T2 note</a> (reading:
+full-read) gives the KS bound <span
+class="math display">\[\delta(g;N_s,U(1))\ge\gamma\frac{g^2}{2},\qquad
+g^4\ge\frac{24}{\beta_*},\]</span> with existential constants <span
+class="math inline">\(\gamma,\beta_*&gt;0\)</span> independent of
+volume. This proves a strong-coupling half-line is contained in <span
+class="math inline">\(\mathcal G\)</span>, not that <span
+class="math inline">\(\mathcal G\)</span> is exactly a half-line.</p>
+<p>For four-dimensional Euclidean compact <span
+class="math inline">\(U(1)\)</span>, <a
+href="https://doi.org/10.1103/PhysRevD.21.2291">Guth</a> proves a
+nonconfining weak-coupling phase for the <strong>Villain</strong> action
+(reading: abstract); <a
+href="https://doi.org/10.1007/BF01213610">Fröhlich–Spencer</a>
+establishes a massless Coulomb phase in the setting recorded in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B78.md">B78</a>
+(reading: abstract). Those phase results do not determine transition
+order or a continuously vanishing confined-phase mass. They also do not
+establish the exact set <span class="math inline">\(\mathcal
+G_{U(1)}=(g_c,\infty)\)</span> for the KS operator defined here; that
+translation would need its own proof.</p>
+<p>For the standard four-dimensional <strong>Wilson</strong> action,
+numerical evidence supports a <strong>weakly first-order</strong>
+zero-temperature bulk transition (<a
+href="https://arxiv.org/html/hep-lat/0409135v2">Vettorazzo–de Forcrand
+2004, §§2–3</a>, reading: passage). This replaces the erroneous
+second-order assertion. The Maxwell description belongs to the
+weak-coupling massless phase; no Maxwell continuum construction at the
+transition endpoint is established here. A massless phase over an
+interval also defeats the original identification of every gapless
+coupling with a transition point.</p>
+<p>The abelian comparison remains useful: group-independent
+strong-coupling gap arguments alone do not supply weak-side control. The
+commutator potential of <a href="low-dimensional-mass-gap.html">G07,
+§3</a>, the local-observable restriction of <a
+href="lattice-gap-upper-bounds.html">the upper-bound note, Proposition
+6</a>, and the formal valley calculation of <a
+href="torus-valley-potential.html">the valley note, §3b</a> are distinct
+ingredients with distinct scopes. None is by itself a proof of a
+nonabelian infinite-volume or continuum gap, or of the global shape of
+either group’s gapped set.</p>
+<h3 id="e.-openness-and-closedness">4e. Openness and closedness</h3>
+<p>For any subset of the connected interval <span
+class="math inline">\((0,\infty)\)</span>, <span
+class="math display">\[\mathcal
+G=(0,\infty)\quad\Longleftrightarrow\quad
+\mathcal G\ne\varnothing\ \text{and}\ \mathcal G\text{ is open and
+closed}.\]</span> This is a topological fact, not a regularity theorem
+for <span class="math inline">\(c(g)\)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>property</th>
+<th>status</th>
+<th>what it would take</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal G\ne\varnothing\)</span></td>
+<td>proved by T2: <span
+class="math inline">\([g_0,\infty)\subset\mathcal G\)</span></td>
+<td><a href="strong-coupling-uniform-gap.html">strong-coupling
+theorem</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathcal G\)</span> open</td>
+<td>unproved globally; <span class="math inline">\((g_0,\infty)\)</span>
+is a known interior region</td>
+<td>volume-uniform stability under changes of <span
+class="math inline">\(g\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal G\)</span> closed</td>
+<td>unproved; sufficient for T2<span
+class="math inline">\(&#39;\)</span> if openness holds</td>
+<td>positivity at every finite limit point of gapped couplings, with
+control preventing lower bounds from collapsing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Correction (2026-10-02): later locality result.</strong> The
+original text left a Lieb–Robinson extension for the unbounded electric
+terms as the next obstacle. <a
+href="lieb-robinson-kogut-susskind.html">The later locality note,
+§§1–2</a> (reading: full-read) treats the commuting on-link electric
+terms in the interaction picture, leaving bounded finite-range plaquette
+interactions with unchanged support and norm. This addresses the
+locality ingredient; no numerical velocity or clustering-length estimate
+from that note is needed here. Its §5 also explains why locality alone
+does not prove gap stability: the cited stability route has additional
+hypotheses not verified at general finite KS coupling, including
+frustration-freeness. No universal assertion that every stability
+theorem requires that hypothesis is intended.</p>
+<p>Closedness alone is not T2<span class="math inline">\(&#39;\)</span>
+without openness, and excluding the two originally proposed scenarios
+would not establish either property. Finite-volume analytic dependence
+provides neither estimate. Even a proved T2<span
+class="math inline">\(&#39;\)</span> would still leave continuum
+scaling, construction and nontriviality to T3/T4.</p>
 <h2 id="t3-the-scaling-limit-as-one-asymptotic-statement">5. T3: the
 scaling limit, as one asymptotic statement</h2>
 <p>Along the continuum curve the bare coupling runs with the cutoff.
@@ -403,10 +690,11 @@ class="math inline">\(\displaystyle\frac{m}{\hbar c\,\Lambda_{\rm lat}}
 =\lim_{g\to0}\frac{\delta_\infty(g)}{a\Lambda_{\rm lat}(g)}\)</span>
 exists and lies in <span class="math inline">\((0,\infty)\)</span>.</p>
 </blockquote>
-<p>This is the Jaffe–Witten mass gap <span
-class="math inline">\(m\)</span> expressed on the lattice route: the
-dimensionless infinite-volume gap must vanish as <span
-class="math inline">\(g\to0\)</span> exactly like <span
+<p>This is a proposed lattice-route scaling condition for a mass
+parameter <span class="math inline">\(m\)</span>; identifying it with
+the gap of the reconstructed limit needs spectral transfer and surviving
+physical weight: the dimensionless infinite-volume gap must vanish as
+<span class="math inline">\(g\to0\)</span> exactly like <span
 class="math inline">\(e^{-1/(2b_0g^2)}\)</span> times the prescribed
 power, with a positive finite prefactor. Any weaker vanishing gives
 <span class="math inline">\(m=\infty\)</span> in the continuum (the
@@ -466,21 +754,21 @@ give a gap uniform in the volume.</p>
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Statement</th>
 <th>Content</th>
 <th>Status</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>T1</td>
 <td>finite lattice: unique physical ground state, gap <span
 class="math inline">\(\Delta_{a,L}=(\hbar
 c/a)\delta(g;N,G)&gt;0\)</span></td>
 <td>proved (Theorem 1)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>T2</td>
 <td><span class="math inline">\(\delta(g;N,G)\ge c(N)g^2\)</span> for
 <span class="math inline">\(g\ge g_0(N)\)</span>, uniformly in <span
@@ -490,24 +778,26 @@ as a corollary of Yarotsky’s theorem in <a
 href="strong-coupling-uniform-gap.html">the strong-coupling
 note</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>T2<span class="math inline">\(&#39;\)</span></td>
 <td><span class="math inline">\(\delta_\infty(g)&gt;0\)</span> for all
-<span class="math inline">\(g&gt;0\)</span> (no Coulomb phase)</td>
-<td>open; false for <span class="math inline">\(U(1)\)</span></td>
+<span class="math inline">\(g&gt;0\)</span></td>
+<td>open; the cited Euclidean U(1) phase does not by itself identify the
+KS gapped set</td>
 </tr>
-<tr>
+<tr class="even">
 <td>T3</td>
 <td><span class="math inline">\(\delta_\infty(g)/(a\Lambda_{\rm
 lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\in(0,\infty)\)</span></td>
-<td>open; the Millennium content given T4</td>
+<td>open; spectral transfer to the reconstructed theory is also
+required</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>T4</td>
 <td>continuum infinite-volume theory with the axioms</td>
 <td>finite-volume UV stability known; rest open</td>
 </tr>
-<tr>
+<tr class="even">
 <td>S</td>
 <td>small-volume corner <span
 class="math inline">\(z(L)=\delta_1g(L)^{2/3}[1+O(g^{2/3})]\)</span></td>
@@ -515,20 +805,19 @@ class="math inline">\(z(L)=\delta_1g(L)^{2/3}[1+O(g^{2/3})]\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Three of the six rows are theorems or established results; the
-conjecture is T2<span class="math inline">\(&#39;\)</span> together with
-T3, given T4. The list replaces “prove the mass gap” by “prove T2 in
-Hamiltonian form, then push <span class="math inline">\(g_0\)</span>
-down”.</p>
+<p>T2<span class="math inline">\(&#39;\)</span> is a stronger
+all-coupling route, not a necessary independent condition for the
+continuum goal. T3 and T4 still require physical spectral transfer,
+nontriviality and the stated limit order.</p>
 <h2 id="consequence-for-state">8. Consequence for STATE</h2>
 <p>T2 in Hamiltonian form is now closed in <a
 href="strong-coupling-uniform-gap.html">the strong-coupling note</a> as
 a corollary of Yarotsky’s gap-stability theorem, with threshold <span
 class="math inline">\(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\)</span>;
-every later step is an improvement of that threshold toward zero along
-the scaling curve. The <span class="math inline">\(d=3\)</span> target
-of STATE keeps its place as the case where T3 has no transmutation to
-perform.</p>
+the unresolved task is to control the weak-coupling scaling trajectory
+and transfer the physical spectrum to the reconstructed theory. The
+<span class="math inline">\(d=3\)</span> target of STATE keeps its place
+as the case where T3 has no transmutation to perform.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -25,9 +25,9 @@ says that the conjecture is T2$'$ together with T3, given T4, and the
 [obligations map](mass-gap-obligations-lattice.md) says that T3
 presupposes T2$'$. T3 needs less: a gap $\delta_\infty(g)>0$ on some
 interval $(0,g_1)$ along the scaling curve. T2$'$, a gap at every lattice
-coupling, is a property of a particular lattice action, and for the
-Wilson action it fails for $SU(N\ge5)$, where a first-order bulk
-transition occurs at intermediate coupling. For $SU(3)$ with the Wilson
+coupling, is a property of a particular lattice action, and numerical Wilson-action evidence for a first-order bulk
+transition at $SU(N\ge5)$ does not by itself identify the gapped set
+of the distinct Kogut--Susskind operator. For $SU(3)$ with the Wilson
 action the bulk behaviour is a crossover, so T2$'$ remains plausible
 there; the conditional theorem of the
 [conditional-theorem note](mass-gap-conditional-theorem.md), stated along
@@ -57,7 +57,7 @@ map ends, the control of about six blocking steps at order-one coupling.
 - **$U(1)$.** Four-dimensional compact $U(1)$ has a massless Coulomb
   phase at weak coupling (Guth, [PRD **21**, 2291, 1980](https://doi.org/10.1103/PhysRevD.21.2291);
   Fröhlich and Spencer, [CMP **83**, 411, 1982](https://doi.org/10.1007/BF01213610);
-  metadata), which is why the [abelian note](abelian-misses-the-box.md)
+  metadata), which is why the [abelian note](strong-coupling-uniform-gap.md)
   separates the groups by the running, $b_0=0$ against
   $b_0=11N/(48\pi^2)$. In three dimensions compact $U(1)$ is gapped at
   every coupling (Polyakov, [Nucl. Phys. B **120**, 429, 1977](https://doi.org/10.1016/0550-3213(77)90086-4);
@@ -73,11 +73,12 @@ for $N=3$ a negative adjoint term avoids the bulk phase altogether
 plane of fundamental and adjoint couplings, a line of first-order
 transitions ends at a critical point near the Wilson axis (Bhanot and
 Creutz, [PRD **24**, 3212, 1981](https://doi.org/10.1103/PhysRevD.24.3212),
-metadata). By Corollary 3 of the
-[gapped-set note](gapped-set-critical-coupling.md), a first-order
-transition at $g_b$ gives $\delta_\infty(g_b)=0$ through vacuum
-coexistence, so the gapped set $\mathcal G$ has a hole there while the
-physical gap, which lives at $g\to0$, is untouched. The statement the
+metadata). A first-order transition can involve finite-volume vacuum tunnelling
+splittings, but the cited Wilson-action evidence alone does not prove
+$\delta_\infty(g_b)=0$ for the Kogut--Susskind operator; see the
+[corrected coupling-set analysis](mass-gap-obligations-lattice.md) §4b.
+Such intermediate-coupling behaviour does not by itself rule out a
+continuum gap along $g\to0$. The statement the
 conjecture needs is $\mathcal G\supseteq(0,g_1)$ for some $g_1>0$, joined
 to T3 along the scaling curve.
 
@@ -108,11 +109,9 @@ For $SU(3)$ the endpoint matters twice.
   limit there being a $\phi^4$ theory with a diverging correlation length
   only in the $0^{++}$ channel" (Heller,
   [PLB **362**, 123, 1995](https://doi.org/10.1016/0370-2693(95)01186-T);
-  [hep-lat/9508009](https://arxiv.org/abs/hep-lat/9508009), abstract). So
-  lattice $SU(3)$ has a second continuum limit at a finite point of its
-  two-coupling plane, a scalar theory, and the statement that the
-  asymptotically free limit is the only one concerns families that avoid
-  that point, such as the Wilson axis.
+  [hep-lat/9508009](https://arxiv.org/abs/hep-lat/9508009), abstract). This is numerical evidence for a scalar critical-endpoint interpretation,
+  not a constructed second continuum limit or a proof of uniqueness on
+  families avoiding that point.
 - **It sits beside the point where the map places H2.** The
   [bands note](confinement-scale-bands.md) scaled the continuum ratio
   $r_0m_{0^{++}}=4.21$ to $\beta_W=5.7$ and found $\xi/a=0.70$. Near there
@@ -271,9 +270,9 @@ $\beta<6\pi$ ([CPAM **74**, 2020](https://doi.org/10.1002/cpa.21926);
 [arXiv:1907.12308](https://arxiv.org/abs/1907.12308), abstract). Its
 output is a spectral gap controlled at every scale, which is the form of
 hypothesis H1 in the conditional theorem. It also sits outside the family
-closed in [flow-before-decimation](flow-before-decimation.md): that note
-closes every criterion that depends on the perturbation through a norm,
-and a curvature bound is a lower bound on a Hessian.
+qualified in [flow-conjugation](flow-conjugation-truncation.md): that note
+shows invariance when the same decomposition is conjugated; a new splitting
+or a curvature bound needs a separate analysis.
 
 The risk is concrete. After a blocking step the effective action is a
 function on the coarse configuration manifold, and the criterion needs
@@ -354,7 +353,8 @@ and the answer on groups: the gap is expected for every compact simple
 non-abelian group, and $SU(3)$ is the group that fixes the constants. The
 map's statement that the conjecture is T2$'$ with T3 is too strong:
 T3, with a gap on an interval $(0,g_1)$ along the scaling curve, is what
-is needed, and T2$'$ fails for $SU(N\ge5)$ with the Wilson action. If one
+is needed, and numerical Wilson-action bulk evidence does not establish failure of
+the Kogut--Susskind T2$'$ property. If one
 opening is taken up next, it is the fourth, which uses the Planck-gap
 methods directly; the first carries the most promise, and its first
 check is the conversion of Shen, Zhu and Zhu's threshold to $g^2>32$.

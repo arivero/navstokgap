@@ -88,7 +88,7 @@ large-field measure bound $e^{-\eta^2/(4g^2)}$ of
 [the lower-bound note](large-field-action-lower-bound.md), the
 sharpness of the flow's growth
 ([instability note](flow-instability-large-field.md)), and the lattice
-truncation ([lattice-truncation note](lattice-truncation-uniform.md)).
+truncation ([lattice-truncation note](flow-conjugation-truncation.md)).
 The deliverable of the first step is the number $g_{\rm pert}^2$, the
 weak-side counterpart of the strong side's $0.0135$; the number of
 doublings between $g_{\rm pert}^2$ and $g^2\simeq1$ is then the honest

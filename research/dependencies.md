@@ -69,7 +69,7 @@ integral comparison, perturbed-action stability and iteration remain later
 obligations. Check group constants before transferring SU(2) results to SU(3).
 
 Keep these constraints within reach:
-[local/global Agmon](../notes/agmon-global-not-local.md),
+[local/global Agmon](../notes/agmon-ground-state-suppression.md),
 [blocking criterion](../notes/blocking-criterion-monotone.md),
 [flow versus coarse graining](../notes/flow-conjugation-truncation.md),
 [explicit weak-side thresholds](../notes/small-field-step-decay-and-threshold.md),
@@ -99,7 +99,7 @@ gauge-invariant spectral weight must each be supplied.
 For STATE's supporting small-volume bridge read
 [Feshbach reduction](../notes/weak-coupling-feshbach-reduction.md)
 → [torus valley](../notes/torus-valley-potential.md), together with the
-[UV Schur correction](../notes/schur-error-ultraviolet.md).
+[UV Schur correction](../notes/weak-coupling-feshbach-reduction.md).
 H3 is the effective zero-mode valley-gap estimate. The full transfer also
 needs H1's nonzero-mode separation and a renormalized/fibered H2 Schur bound;
 the bare-vacuum error is not uniform as the cutoff is removed. Spectral moment or trial-state upper

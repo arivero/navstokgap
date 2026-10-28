@@ -8,8 +8,8 @@ $$m\ \le\ \frac{g^2\hbar c}{2}\;\frac{\big\langle\,|D_\varphi|^2\,\big\rangle_0}
 \qquad
 D_\varphi=\int d^3y\;\frac{\delta\varphi(y)}{\delta A^a_i(0)},\qquad
 \chi_\varphi=\int d^3z\;\big\langle\varphi(z)\varphi(0)\big\rangle_0^{\rm c},$$
-in the continuum theory with a unique vacuum, whenever the finite-volume
-gaps and correlators converge. Both sides are intensive: the volume
+at fixed regularization, with $g=g(a)$. The continuum version requires
+a limit of the full weighted numerator and the susceptibility as below. Both sides are intensive: the volume
 cancels between the numerator and the denominator, which is what makes
 the zero-momentum operator the right trial excitation and the plaquette
 of [the upper-bound note](lattice-gap-upper-bounds.md) the wrong one.
@@ -19,15 +19,12 @@ local gauge-invariant observable has nonvanishing zero-momentum
 fluctuations in the vacuum, the theory has an excitation of finite
 energy.** Conversely $m=\infty$ forces every such susceptibility to
 vanish, that is, the vacuum is an eigenstate of every smeared
-gauge-invariant operator. The ultraviolet problem that defeated the
-plaquette is solved by smearing, and the natural smearing is the
-gradient flow, whose observables are renormalized; what is assumed, and
+gauge-invariant operator. Spatial gradient flow supplies a candidate smearing; its needed
+Hamiltonian equal-time continuum estimates remain hypotheses; what is assumed, and
 stated as hypothesis (F1), is that the equal-time flowed correlators
 have continuum limits, which is not Lüscher's four-dimensional theorem
-but its Hamiltonian counterpart. Dimensional analysis gives the
-perturbative behaviour $\langle|D|^2\rangle/\chi\simeq c_\varphi/\sqrt{8t}$
-at flow time $t$, so the bound reads $m\le C g^2\hbar c/\sqrt{8t}$ while
-perturbation theory applies; since the bound cannot fall below $m$, the
+but its Hamiltonian counterpart. In free Maxwell theory the explicit ratio carries $g^{-2}$, cancelling
+the prefactor in the bound, which is $4.26\hbar c/\sqrt{8t}$; since the bound cannot fall below $m$, the
 flow time at which that scaling must break down is the correlation
 length $\hbar c/m$. In free Maxwell theory the scaling persists for all
 $t$ and the bound correctly tends to $m=0$. The inequality itself is the
@@ -140,9 +137,11 @@ Hamiltonian correlator of the spatially flowed field, which his theorem
 does not cover. State it as a hypothesis:
 
 > **(F1)** For fixed flow time $t>0$, the equal-time ground-state
-> quantities $\chi_{\varphi_t}$ and $\langle|D_{\varphi_t}|^2\rangle_0$ of
-> the lattice theory converge, as $a\to0$ along the scaling curve, to
-> finite limits, with $\chi_{\varphi_t}>0$.
+> susceptibility $\chi_{\varphi_t,a}$ converges to a finite strictly
+> positive limit $\chi_t$, and the complete weighted numerator
+> $g(a)^2\langle|D_{\varphi_t,a}|^2\rangle_0$ converges to a finite
+> limit $K_t$, as $a\to0$ along the scaling curve (after the specified
+> volume limit).
 
 On any fixed lattice both quantities are finite and positive and
 Corollary 2 holds unconditionally, so (F1) is entirely a statement about
@@ -155,51 +154,125 @@ density.
 exists with a unique vacuum and translation invariance, that the
 finite-volume gaps converge to $m$, and (F1) for one flow time $t$.
 Then
-$$m\ \le\ \frac{g^2\hbar c}{2}\,\frac{\langle|D_{\varphi_t}|^2\rangle_0}{\chi_{\varphi_t}}\ <\ \infty .$$
+$$m\ \le\ \frac{\hbar c}{2}\,\frac{K_t}{\chi_t}\ <\ \infty .$$
 
-This is the $m<\infty$ clause of the Jaffe--Witten statement, reduced to
-the positivity of one susceptibility. The remaining clause, $m>0$, is
+This gives the $m<\infty$ clause conditional on the weighted numerator,
+the positive susceptibility and spectral-limit hypotheses. The remaining clause, $m>0$, is
 untouched: nothing above excludes $m=0$.
 
-## 5. The flow time, and where the perturbative scaling must fail
+## 5. The free Maxwell check and the coupling correction
 
-At flow time $t$ the only length in the smeared operator is
-$\sqrt{8t}$. In a regime where the flowed correlators are governed by
-that length alone, $[\varphi_t]=L^{-4}$ gives
-$\chi\simeq k_1t^{-5/2}$ and $\langle|D|^2\rangle\simeq k_2t^{-3}$, hence
-$$\frac{\langle|D_{\varphi_t}|^2\rangle}{\chi_{\varphi_t}}\simeq\frac{k_2}{k_1}\,\frac1{\sqrt{8t}},
-\qquad m\ \le\ C\,g^2\,\frac{\hbar c}{\sqrt{8t}} .$$
-The pure numbers $k_1,k_2$ are computed in
-[the free-field note](flowed-bound-free-field.md): $k_1\propto g^4$ and
-$k_2\propto g^2$, so the ratio carries $g^{-2}$ and **the factor $g^2$
-written above cancels**. The corrected free-field bound is
-$m\le\frac{16\sqrt2}{3\sqrt\pi}\hbar c/\sqrt{8t}\approx4.26\,\hbar c/\sqrt{8t}$,
-of order $g^0$. The $t$-dependence below is unaffected; the $g^2$ in the
-displayed inequality and in $\sqrt{8t_*}$ should be read as $O(1)$.
-Two readings.
+The coefficient $g^2$ in the variational bound is cancelled by the
+$g^{-2}$ dependence of the ratio of the two free-field observables.
+Dimensional analysis alone cannot determine this coupling dependence.
+The following is an exact Gaussian calibration; extending it to an
+interacting theory near its confinement scale requires nonperturbative
+control, and an upper bound cannot prove a positive gap.
 
-*Free theory.* In free Maxwell theory the scaling holds for every $t$
-because there is no other length, and the bound tends to $0=m$: correct,
-and the flow time is the only resolution scale.
+### 5a. Free ground state
 
-*Interacting theory.* A positive $m$ cannot be beaten by any $t$, so the
-perturbative scaling must fail once $C g^2(t)\hbar c/\sqrt{8t}$ reaches
-$m$, that is at
-$$\sqrt{8t_*}\ \simeq\ C g^2\,\frac{\hbar c}{m},$$
-the correlation length up to the coupling. The bound therefore contains
-its own consistency condition: the flow smooths the field only down to
-the confinement scale, beyond which the flowed correlators are no longer
-controlled by $\sqrt{8t}$. This is the Hamiltonian counterpart of the
-crossover recorded in [the valley note](torus-valley-potential.md), where
-the small-volume description fails when the zero-mode energy reaches
-$\hbar c/L$.
+Take the abelian case of the Hamiltonian of §1,
+$$H=\int d^3x\;\Big[\frac{g^2c}{2\hbar}\,\Pi_i\Pi_i+\frac{\hbar c}{2g^2}\,b_ib_i\Big],
+\qquad b_i=\varepsilon_{ijk}\partial_jA_k,
+\qquad[A_i(x),\Pi_j(y)]=i\hbar\delta_{ij}\delta^3(x-y),$$
+in Coulomb gauge $\partial_iA_i=0$, two transverse polarizations. In
+Fourier modes each transverse mode is an oscillator of mass
+$M=\hbar/(g^2c)$ and frequency $\omega_k=ck$, since
+$\tfrac12M\omega_k^2=\hbar ck^2/(2g^2)$ matches the magnetic term. Its
+ground-state width gives
+$$\big\langle\hat A_i(k)\hat A_j(k')\big\rangle_0=(2\pi)^3\delta^3(k+k')\,P^{\rm T}_{ij}(k)\,\frac{\hbar}{2M\omega_k}
+=(2\pi)^3\delta^3(k+k')\,P^{\rm T}_{ij}(k)\,\frac{g^2}{2k},$$
+with $P^{\rm T}_{ij}=\delta_{ij}-\hat k_i\hat k_j$. Dimensions:
+$[\hat A]=L^2$, $[(2\pi)^3\delta^3]=L^3$, and $g^2/2k$ is a length.
 
-*Approach to $m$.* As $t$ grows the smeared operator couples
-preferentially to states of spatial extent $\gtrsim\sqrt{8t}$, so the
-spectral weights of Section 3 concentrate on the lowest states and the
-bound is expected to decrease toward $m$. Monotonicity is not proved
-here; it would make the family of bounds a convergent sequence rather
-than a single estimate.
+### 5b. Equal-time flow
+
+For an abelian field the flow equation of §4
+reduces to $\partial_sB_i=\Delta B_i-\partial_i(\partial_jB_j)$, and a
+transverse initial field stays transverse, so
+$$\hat B_i(t,k)=e^{-tk^2}\hat A_i(k),\qquad
+\hat b_i(t,k)=i\varepsilon_{ijl}k_j\,e^{-tk^2}\hat A_l(k).$$
+The flow time has dimension of length squared; the conventional
+smearing radius is $\sqrt{8t}$. Set
+$\varphi_t=\tfrac12\big(b_t\!\cdot\!b_t-\langle b_t\!\cdot\!b_t\rangle_0\big)$,
+of dimension $L^{-4}$.
+
+### 5c. Susceptibility
+
+Write $G_{ij}(z)=\langle b_{t,i}(z)b_{t,j}(0)\rangle_0$. Using
+$\varepsilon_{iab}\varepsilon_{jcd}k_ak_cP^{\rm T}_{bd}(k)=k^2P^{\rm T}_{ij}(k)$
+(the longitudinal part of $P^{\rm T}$ drops because
+$\varepsilon_{iab}k_a\hat k_b=0$),
+$$\tilde G_{ij}(k)=k^2P^{\rm T}_{ij}(k)\,\frac{g^2}{2k}\,e^{-2tk^2}
+=\frac{g^2k}{2}\,e^{-2tk^2}\,P^{\rm T}_{ij}(k).$$
+For a Gaussian field Wick's theorem gives
+$\langle\varphi_t(z)\varphi_t(0)\rangle^{\rm c}_0=\tfrac12\sum_{ij}G_{ij}(z)^2$
+(two pairings), so by Parseval, with
+$\sum_{ij}[P^{\rm T}_{ij}]^2=\operatorname{tr}P^{\rm T}=2$,
+$$\chi_{\varphi_t}=\int d^3z\,\langle\varphi_t\varphi_t\rangle^{\rm c}
+=\frac12\int\frac{d^3k}{(2\pi)^3}\,\frac{g^4k^2}{2}\,e^{-4tk^2}
+=\frac{g^4}{4}\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^4e^{-4tk^2}.$$
+With $\int_0^\infty k^4e^{-\alpha k^2}dk=3\sqrt\pi/(8\alpha^{5/2})$ and
+$\alpha=4t$, so $(4t)^{5/2}=32t^{5/2}$,
+$$\chi_{\varphi_t}=\frac{g^4}{4}\cdot\frac1{2\pi^2}\cdot\frac{3\sqrt\pi}{256\,t^{5/2}}
+=\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}} .$$
+Dimension: $[\chi]=[\varphi]^2L^3=L^{-5}$ and $t^{5/2}\sim L^5$, as required.
+
+### 5d. Gradient term
+
+By Parseval $O=\int d^3y\,\varphi_t=\tfrac12\int\frac{d^3k}{(2\pi)^3}k^2e^{-2tk^2}|\hat A(k)|^2+\text{const}$,
+so
+$$D_i(x)=\frac{\delta O}{\delta A_i(x)}=\big(-\Delta\,e^{2t\Delta}A\big)_i(x)
+=\big(\nabla\times b_{2t}\big)_i(x),\qquad
+\hat D_i(k)=k^2e^{-2tk^2}\hat A_i(k),$$
+the curl of the magnetic field at twice the flow time. Hence
+$$\big\langle|D|^2\big\rangle_0=\int\frac{d^3k}{(2\pi)^3}k^4e^{-4tk^2}\cdot2\cdot\frac{g^2}{2k}
+=g^2\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^5e^{-4tk^2}
+=\frac{g^2}{2\pi^2}\cdot\frac1{64\,t^3}=\frac{g^2}{128\,\pi^2\,t^3},$$
+using $\int_0^\infty k^5e^{-\alpha k^2}dk=1/\alpha^3$. Dimension:
+$[\varphi]^2L^2=L^{-6}$ and $t^3\sim L^6$, as required.
+
+### 5e. The bound and coupling cancellation
+
+$$\frac{\langle|D|^2\rangle}{\chi}
+=\frac{g^2}{128\pi^2t^3}\cdot\frac{2048\,\pi^{3/2}t^{5/2}}{3g^4}
+=\frac{16}{3\,g^2\sqrt{\pi t}},$$
+$$m\ \le\ \frac{g^2\hbar c}{2}\cdot\frac{16}{3g^2\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}
+=\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt{8t}}\approx4.26\,\frac{\hbar c}{\sqrt{8t}} .$$
+
+**Correction.** The earlier version inferred
+$m\le Cg^2\hbar c/\sqrt{8t}$ from dimensional analysis, assigning the
+pure numbers $k_1,k_2$ no coupling dependence. The computation shows
+$\chi\propto g^4$ while $\langle|D|^2\rangle\propto g^2$, so the ratio
+carries $g^{-2}$ and the bound is of order $g^0$. The corrected
+statement is that the perturbative bound is
+$4.26\,\hbar c/\sqrt{8t}\,[1+O(g^2)]$, with the coupling entering only
+through the corrections. The $t$-dependence $1/\sqrt{8t}$ of the earlier
+note stands.
+
+### 5f. Two-photon sum-rule check
+
+By the spectral reading of §3, the
+bound equals the mean excitation energy weighted by the spectral weight
+of $O$. In the free theory $O$ is quadratic in $\hat A$ and creates two
+photons of momenta $k$ and $-k$, of total energy $2\hbar ck$, with
+weight proportional to
+$\big[k^2e^{-2tk^2}\big]^2\big[g^2/2k\big]^2\,k^2\,dk\propto k^4e^{-4tk^2}dk$
+after the phase-space factor. Therefore
+$$\frac{\int_0^\infty 2\hbar ck\cdot k^4e^{-4tk^2}dk}{\int_0^\infty k^4e^{-4tk^2}dk}
+=2\hbar c\,\frac{1/(64t^3)}{3\sqrt\pi/(256\,t^{5/2})}
+=2\hbar c\cdot\frac{4}{3\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t},$$
+the same number. The agreement checks Proposition 1, the intensive form
+of Corollary 2 and the Gaussian computation against each other, since
+both evaluate the same spectral sum rule by different arithmetic routes.
+
+
+In a weakly coupled regime the free value is a perturbative orientation,
+not a uniform confinement-scale bound. Its decrease at large flow time
+is consistent with a gapless photon; monotonic convergence of the
+interacting spectral mean to the lowest energy is not proved.
 
 ## 6. Status
 
@@ -211,7 +284,7 @@ than a single estimate.
 | finiteness of the lattice bound at fixed $a$ | proved |
 | (F1), continuum limit of the flowed equal-time correlators | hypothesis; the flow's renormalization in the Hamiltonian framework |
 | $\chi>0$ | hypothesis; nontriviality |
-| $\langle|D|^2\rangle/\chi\simeq c/\sqrt{8t}$ | dimensional, coefficients not computed |
+| Free Maxwell ratio and two-photon mean | exact calibration, §5 |
 | $m>0$ | untouched |
 
 The single-mode bound and the use of smeared operators as glueball
@@ -227,9 +300,7 @@ hypothesis for the continuum. The two hypotheses are different in kind.
 (F1) concerns flowed observables, which are expected to be renormalized
 by Lüscher's four-dimensional result and whose Hamiltonian counterpart
 is a bounded, self-contained question; the dressed-vacuum problem of
-[the Schur note](schur-error-ultraviolet.md) concerns the state itself.
-The next steps this suggests, in order: compute $k_1,k_2$ in free
-Maxwell theory to make Section 5 quantitative and check the free limit;
-then state the Hamiltonian flow-renormalization question as its own
+[the Schur note](weak-coupling-feshbach-reduction.md) concerns the state itself.
+The next steps this suggests, in order: use the explicit free-field calibration in §5; then state the Hamiltonian flow-renormalization question as its own
 target, since both the upper-side (F1) and the lower-side dressing are
 instances of it.

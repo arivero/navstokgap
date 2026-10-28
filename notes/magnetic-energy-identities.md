@@ -138,7 +138,7 @@ $\Omega\le C\,e^{-\lambda(V-V_*)/2}$ with $C$ determined on
 $\{V<V_*\}$, is again a statement about the global excess. A local
 excess of $n$ plaquettes leaves $V$ far below $V_*\simeq N|\mathcal P|$,
 so the bound says nothing about it, exactly as in
-[the global/local note](agmon-global-not-local.md).
+[the global/local note](agmon-ground-state-suppression.md).
 
 ## 5. The structural reason, stated once
 
@@ -166,7 +166,7 @@ takes.
 ## 6. Consequence for STATE
 
 The question named in
-[the global/local note](agmon-global-not-local.md) §5 is answered in the
+[the global/local note](agmon-ground-state-suppression.md) §4 is answered in the
 negative by Proposition 4: pointwise Gibbs domination of the
 Kogut--Susskind ground state does not follow from the eigenvalue
 equation, for the same extensivity reason as the Agmon bound. What the

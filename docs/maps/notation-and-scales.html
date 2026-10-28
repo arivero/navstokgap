@@ -91,101 +91,101 @@ physics.</p>
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Newton quantity</th>
 <th>Definition / units</th>
 <th>Conceptual role and caution</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>τ, partition mesh</td>
 <td>Cell duration; time</td>
 <td>Time regulator/refinement parameter; different from preparation
 width or observation horizon</td>
 </tr>
-<tr>
+<tr class="even">
 <td>F, m, v</td>
 <td>Force, mass, horizontal velocity</td>
 <td>Physical model parameters; m cancels from some scaled relations but
 controls the mechanical action at fixed force</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>A=vFτ³/(6m)</td>
 <td>Inertial–parabola spatial area</td>
 <td>Observable geometric area, not action; (3F/v)A=τΔE</td>
 </tr>
-<tr>
+<tr class="even">
 <td>ΔE=F²τ²/(2m)</td>
 <td>Kinetic-energy gain from rest in the forced direction</td>
 <td>Deterministic energy gain, not energy uncertainty</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>τΔE=F²τ³/(2m)</td>
 <td>Action</td>
 <td>Galileo comparison observable; equals 12Kτ in the constant-force
 convention</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Kτ=F²τ³/(24m)</td>
 <td>Action; Dirichlet chord-defect functional</td>
 <td>Matched-endpoint cell action; cut s spends 3s(1−s)Kτ. The inertial
 area and chord lens differ by endpoint convention</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>s, J</td>
 <td>s=Fτ²/(2m), J=Fτ in the record-cost trilogy</td>
 <td>Inertial sag/displacement and impulse; midpoint chord sagitta is
 Fτ²/(8m), four times smaller. Elsewhere s is a dimensionless cut
 fraction</td>
 </tr>
-<tr>
+<tr class="even">
 <td>κ</td>
 <td>Action in δΔ≥κ</td>
 <td>Supplied mark error/recoil constant. Quantum position probes give
 κ≥ℏ/2. A Brownian diffusion convention also calls mD κ, with different
 factors</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ζ</td>
 <td>√detΣ; action for a canonical pair</td>
 <td>Covariance-area ceiling/floor parameter; affine Gaussian
 statistical-speed result gives h*=2ζ. A prior restriction is not
 automatically posterior closure</td>
 </tr>
-<tr>
+<tr class="even">
 <td>h, ℏ=h/(2π), h*</td>
 <td>Action</td>
 <td>Planck phase unit, reduced phase unit, and classical
 statistical-speed coefficient respectively; equality requires a
 calibration theorem</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>h_rad, γ</td>
 <td>Action and dimensionless matching coefficient</td>
 <td>Radiation unit from thermodynamic scaling; conditional SED matching
 gives h*=γ h_rad. Positivity of the radiation unit does not prove
 apparatus closure</td>
 </tr>
-<tr>
+<tr class="even">
 <td>δ, σ; Δ</td>
 <td>Position resolution and impulse spread</td>
 <td>Apparatus/preparation resources. σ may be a Gaussian pointer width,
 not a cutoff; δ also denotes other errors in gauge notes</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>L, P; LP</td>
 <td>Position/momentum aperture; action product</td>
 <td>Bounds on body states used by a protocol; a balanced aspect ratio is
 extra input, so area alone is insufficient</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Statistical/Bures angle θ</td>
 <td>Dimensionless distance between laws/states</td>
 <td>Record distinguishability or information path length, not an action
 scale. Multiplication by a supplied h* or ℏ enters a speed bound</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ε</td>
 <td>Error probability, action resolution, or small perturbation
 depending on note</td>
@@ -209,103 +209,103 @@ unit</a>.</p>
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Gauge quantity</th>
 <th>Definition / units</th>
 <th>Conceptual role and caution</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>a, a0; L</td>
 <td>Spatial/temporal lattice spacing and physical box length</td>
 <td>UV regulators versus IR volume; limits and anisotropy must be
 stated</td>
 </tr>
-<tr>
+<tr class="even">
 <td>t</td>
 <td>Heat-kernel plaquette time, dimensionless</td>
 <td>Gauge weight parameter, not physical time; in the repository
 convention t=λD a^(4−D), up to explicitly stated action
 normalizations</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>λD=ℏ g_cl²</td>
 <td>Length^(D−4)</td>
 <td>Supplied dimensionful gauge coupling in D dimensions; D=4 gives g²
 containing ℏ</td>
 </tr>
-<tr>
+<tr class="even">
 <td>g², β</td>
 <td>Dimensionless bare coupling and Wilson coefficient</td>
 <td>Wilson convention β=2N/g², hence 6/g² for SU(3); heat-kernel and
 Wilson actions need explicit matching</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>n, b, a_n=b^n a</td>
 <td>Block depth, factor, coarse spacing</td>
 <td>RG schedule/regulator labels; a physical scale is held fixed through
 matching, not by keeping every bare coefficient fixed</td>
 </tr>
-<tr>
+<tr class="even">
 <td>ξ_lat, ξ_phys=aξ_lat</td>
 <td>Correlation length in lattice cells / length</td>
 <td>An exponential clustering scale; relation to a physical Hamiltonian
 gap needs reconstruction and admissible observables</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>δ_lat, Δ_phys</td>
 <td>Dimensionless spectral gap / energy</td>
 <td>Δ_phys=(ℏc/a)δ_lat when that transfer/Hamiltonian normalization
 applies. A relaxation clock or a physical inverse length has different
 units</td>
 </tr>
-<tr>
+<tr class="even">
 <td>m, m_gap</td>
 <td>Mass, energy, or inverse correlation length by local convention</td>
 <td>Translate explicitly: energy E, mass E/c², inverse length E/(ℏc).
 “m&gt;0” alone does not specify units</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Λ</td>
 <td>Inverse length from dimensional transmutation</td>
 <td>Dynamically generated scale relative to a calibrated trajectory;
 existence of Λ does not prove positive spectral weight or
 m_gap/Λ&gt;0</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Strong-coupling target</td>
 <td>Region of coupling plus bounds on generated local interactions</td>
 <td>Sufficient finish-line criterion for its transfer/Hamiltonian; an
 effective action must actually arrive there</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>ε_sf, t^α; k_t, p</td>
 <td>Chart size / heat-dependent small-field scale; moment order and
 rarity</td>
 <td>Technical control parameters; p is a probability majorant, not
 momentum</td>
 </tr>
-<tr>
+<tr class="even">
 <td>u, q=u^−1, r</td>
 <td>Source/response or recoupling parameters</td>
 <td>Their domains differ: (113)’s u and a weak-recoupling strip are not
 the physical coupling g²</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>c_C, b_H, a_H</td>
 <td>Good polymers, bad supports, dressed activities</td>
 <td>Expansion coefficients with specified support norms; activity bounds
 are not yet the full physical nonlinear integral</td>
 </tr>
-<tr>
+<tr class="even">
 <td>β_eff, generated vertices</td>
 <td>Coefficients after elimination</td>
 <td>Effective couplings, often including nonlocal or higher-order
 interactions. Keeping only one coefficient requires a controlled
 truncation</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>b0=11N/(48π²)</td>
 <td>Dimensionless one-loop coefficient</td>
 <td>Perturbative matching input in four dimensions; for SU(3),

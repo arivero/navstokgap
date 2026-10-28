@@ -108,7 +108,37 @@ For a general compact connected $G$ the same holds with
 $C_2=C_2(R_{\min})$ and the bound $N-\operatorname{Re}\operatorname{tr}U_p\le2\dim$
 in place of $2N$; the threshold is $g_0^4=24\dim/(C_2\beta_*)$.
 
-## 3. What the theorem does and does not give
+## 3. The abelian comparison and a finite-volume bound
+
+For compact $U(1)$ take magnetic term $(2/g^2)\sum_p(1-\cos\theta_p)$
+and electric term $(g^2/2)\sum_\ell n_\ell^2$. On a periodic cubic
+lattice with $N_s\ge4$, Gauss's law forces a nonzero charge network to
+contain a cycle, whose shortest length is four. A plaquette loop realizes
+it, so the physical electric gap is exactly $2g^2\hbar c/a$. With
+$P=3N_s^3$, subtracting the scalar magnetic constant leaves an operator
+of norm at most $2P/g^2$ in units $\hbar c/a$. Min--max bounds the two
+lowest eigenvalue shifts separately and therefore
+$$\left(2g^2-\frac{4P}{g^2}\right)\frac{\hbar c}{a}
+\le\Delta^{\rm phys}_{a,L}\le
+\left(2g^2+\frac{4P}{g^2}\right)\frac{\hbar c}{a},\qquad L=N_sa.$$
+At fixed $N_s$, the ratio to $g^2\hbar c/a$ tends to $2$ as $g\to\infty$;
+the lower bound gives no volume-uniform threshold. The corresponding
+$SU(3)$ finite-volume calculation and the incomplete continuous-time
+polymer count are in [the continuous-time note](kogut-susskind-strong-coupling-explicit.md).
+
+The existential Yarotsky theorem applies to both groups. Their weak
+sides differ: for $SU(3)$ the perturbative slope is
+$d g^2/d\log a=2b_0g^4+O(g^6)$, $b_0=11/(16\pi^2)$, while the continuum
+pure photon has no perturbative self-interaction. Guth (Phys. Rev. D 21
+(1980) 2291) and Fröhlich--Spencer (Commun. Math. Phys. 83 (1982) 411)
+are metadata-level sources for a weak-coupling massless phase of compact
+lattice $U(1)$. Perturbative running is not an exact compact-lattice
+blocking identity and does not establish a single gapped interval,
+controlled arrival at the target box or continuum reconstruction.
+The former uniform $4\lambda$ rate and numerical box location are
+withdrawn; [the target box](strong-coupling-target-box.md) is existential.
+
+## 4. What the theorem does and does not give
 
 - *Uniformity.* $\gamma$ depends only on $\nu=3$ and $\Lambda_0=\{0,1\}^3$,
   so the bound holds for every lattice size at once. The extensive Kato
@@ -130,10 +160,9 @@ in place of $2N$; the threshold is $g_0^4=24\dim/(C_2\beta_*)$.
   abelian gap closes (Guth; Fröhlich--Spencer) and the non-abelian one is
   conjectured to persist.
 - *Explicitness.* $\beta_*$ and $\gamma$ exist by the theorem and are not
-  given as numbers in its statement. Extracted from the proof
-  ([threshold note](strong-coupling-threshold-explicit.md)), the
-  time-discretized expansion gives $\beta_*\simeq e^{-465}$ and
-  $g_0^2\simeq10^{101}$ for $SU(3)$; the continuous-time expansion of
+  given as numbers in its statement. A heuristic extraction of the time-discretized expansion gives
+  $\beta\simeq e^{-465}$ and $g_0^2$ of order $10^{102}$ for $SU(3)$,
+  but the required support-weight bound is unproved; the continuous-time expansion of
   [the Kogut--Susskind note](kogut-susskind-strong-coupling-explicit.md)
   gave $g_0^2=388$ ($79$ in the adjacent-growth class) with
   $\gamma\to4$; that threshold was withdrawn on 2026-10-02 after its overlap
@@ -149,7 +178,7 @@ in place of $2N$; the threshold is $g_0^4=24\dim/(C_2\beta_*)$.
   ($g^{-4}$ and $g^{2/3}$); T2$'$ is the statement that the gap does not
   close between them.
 
-## 4. Consequence for STATE
+## 5. Consequence for STATE
 
 T2 is closed in Hamiltonian form as a corollary of an established
 theorem, with the threshold $g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}$. The

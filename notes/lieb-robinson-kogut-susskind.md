@@ -22,7 +22,7 @@ grows. The velocity diverges as $g\to0$, so the lattice light cone opens
 faster than $c$ at weak coupling, and the recovery of relativistic
 causality is one more statement that holds only along the scaling curve.
 And the bound supplies clustering while leaving the openness of the
-gapped set of [the critical-coupling note](gapped-set-critical-coupling.md)
+gapped set of [the critical-coupling note](mass-gap-obligations-lattice.md)
 open, because the available stability theorems additionally require
 frustration-freeness, which the Kogut--Susskind Hamiltonian lacks. The
 reduction to the standard theorem is the content here; the standard
@@ -157,7 +157,7 @@ that stood in the way, and names the remaining one precisely.
 ## 6. Consequence for STATE
 
 The Lieb--Robinson question raised in
-[the critical-coupling note](gapped-set-critical-coupling.md) §5 is
+[the critical-coupling note](mass-gap-obligations-lattice.md) §4e is
 settled: the bound holds with velocity $32eNc/g^2$ uniformly in volume,
 because the unbounded part of the Hamiltonian is single-link and
 commuting. Openness of the gapped set now rests on a single missing

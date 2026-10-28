@@ -36,6 +36,15 @@ SITE_URL = "https://arivero.github.io/navstokgap/"
 # Former public note URLs remain usable after their content is consolidated.
 # Values are the maintained note slug and its section anchor.
 NOTE_REDIRECTS = {
+    "flowed-bound-free-field": ("finiteness-half-flowed-susceptibility", "the-free-maxwell-check-and-the-coupling-correction"),
+    "schur-error-ultraviolet": ("weak-coupling-feshbach-reduction", "a.-schur-error-and-the-ultraviolet-obstruction"),
+    "gapped-set-critical-coupling": ("mass-gap-obligations-lattice", "coupling-sets-finite-volume-and-spectral-limits"),
+    "lattice-truncation-uniform": ("flow-conjugation-truncation", "one-lattice-step-coupling-cancellation-and-local-derivatives"),
+    "flow-before-decimation": ("flow-conjugation-truncation", "exact-invariances"),
+    "abelian-misses-the-box": ("strong-coupling-uniform-gap", "the-abelian-comparison-and-a-finite-volume-bound"),
+    "strong-coupling-threshold-explicit": ("kogut-susskind-strong-coupling-explicit", "what-remains-of-the-time-discretized-comparison"),
+    "agmon-global-not-local": ("agmon-ground-state-suppression", "a-lower-bound-over-all-paths-and-a-global-tail"),
+    "blocking-step-obstruction": ("blocking-criterion-monotone", "blocking-norms-and-the-schur-issue"),
     "arrow-not-sling": ("planck-gap-paper", "why-the-arrow-and-not-the-sling"),
     "bridge-crossover": ("telegraph-return-bridge", "midpoint-crossover-observables"),
     "classical-cut-state": ("conservative-harmonic-receiver", "what-information-survives-a-cut"),

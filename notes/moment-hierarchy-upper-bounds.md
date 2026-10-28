@@ -117,7 +117,7 @@ correlator, which is the sharpest form this programme has reached.
 ## 4. Free-field check of the monotonicity
 
 For free Maxwell theory with $\varphi_t$ the flowed magnetic energy
-density, [the free-field note](flowed-bound-free-field.md) gives the
+density, [the free-field note](finiteness-half-flowed-susceptibility.md) gives the
 spectral weight $d\rho\propto k^4e^{-4tk^2}dk$ at energy $E=2\hbar ck$.
 With $\int_0^\infty k^ne^{-4tk^2}dk$ evaluated by
 $\int_0^\infty k^{2j}e^{-\alpha k^2}dk=\frac{(2j-1)!!}{2(2\alpha)^j}\sqrt{\pi/\alpha}$
@@ -162,7 +162,7 @@ attempted on the lower side: an operator inequality
 $H\ge m\,(1-|\Omega\rangle\langle\Omega|)$, which is what the
 strong-coupling theorem of [the T2 note](strong-coupling-uniform-gap.md)
 achieves at fixed cutoff and what
-[the Schur note](schur-error-ultraviolet.md) shows is obstructed by
+[the Schur note](weak-coupling-feshbach-reduction.md) shows is obstructed by
 ultraviolet dressing in the continuum.
 
 ## 6. Consequence for STATE

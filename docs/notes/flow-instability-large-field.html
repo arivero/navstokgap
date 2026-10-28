@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The flow Jacobian&#x27;s growth factor is sharp: it is the Nielsen–Olesen mode, so the large-field region cannot be flowed</title>
+<title>A chromomagnetic saddle amplifies the linearized flow at rate gB: sharpness of the truncation bound remains unproved</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,169 +79,278 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The flow Jacobian’s growth factor is sharp: it is the Nielsen–Olesen
-mode, so the large-field region cannot be flowed</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-instability-large-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-instability-large-field.pdf">PDF</a></p><p>The question left by <a href="ground-state-measure-transfer.html">the
-transfer note</a> has a decisive answer. The factor <span
-class="math inline">\(e^{2t\|G\|_\infty}\)</span> in the Jacobian bound
-of <a href="flow-jacobian-truncation-error.html">the Jacobian note</a>
-cannot be improved, because the operator it bounds is symmetric with
-genuinely positive eigenvalues, and the largest of them is the
-Nielsen–Olesen mode. In the linearized flow <span
-class="math display">\[\partial_s\,\delta B_\mu=D^2\,\delta
-B_\mu+M\,\delta B,
-\qquad (M\,u)_\mu=2\big[G_{\mu\nu},u_\nu\big],\]</span> the operator
-<span class="math inline">\(M\)</span> is <strong>symmetric</strong>:
-transposing exchanges the two antisymmetries, that of <span
-class="math inline">\(\operatorname{ad}(G)\)</span> under the Killing
-form and that of <span class="math inline">\(G_{\mu\nu}\)</span> in its
-indices, and they cancel. A symmetric <span
-class="math inline">\(M\)</span> with <span
-class="math inline">\(\|M\|=2\|G\|_\infty\)</span> has an eigenvalue
-<span class="math inline">\(+2\|G\|_\infty\)</span>, and in a constant
-chromomagnetic background that eigenvector is exactly the charged gluon
-in the lowest Landau level with spin aligned, whose squared frequency is
-<span class="math inline">\(\omega^2=k_\parallel^2-2gB\)</span>
-(Nielsen–Olesen, Nucl. Phys. B144 (1978) 376; metadata level). Its
-growth rate under the gradient flow is <span
-class="math inline">\(+2gB=2\|G\|\)</span>, saturating the Duhamel
-bound. Two consequences. <strong>The flow amplifies fluctuations in a
-large-field region at exactly the rate the bound predicts</strong>, so
-no sharper estimate exists and the region cannot be handled by flowing
-it. And the growth is consistent with the flow decreasing the action,
-because a large coherent field sits near an unstable critical point,
-where neighbouring trajectories separate while each descends. The
-large-field region must therefore be excluded rather than smoothed,
-which is what the constructive programme does, and the reason is now a
-computation rather than a convention. Constants explicit; nothing
-promoted.</p>
+<h1>A chromomagnetic saddle amplifies the linearized flow at rate <span
+class="math inline">\(gB\)</span>: sharpness of the truncation bound
+remains unproved</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/flow-instability-large-field.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/flow-instability-large-field.pdf">PDF</a></p><p>Later correction: <a href="large-field-operator-inequality.html">the
+operator-inequality note</a> supersedes the fixed-range competition in
+<a href="ground-state-measure-transfer.html">the transfer note</a>; <a
+href="flow-conjugation-truncation.html">the lattice note</a> separates a
+single lattice step from fixed-scale continuum estimates.</p>
+<blockquote>
+<p><strong>Correction (2026-10-02).</strong> The original title and lead
+claimed that the Nielsen–Olesen mode grows at <span
+class="math inline">\(2gB\)</span> and saturates the curvature-only
+Duhamel exponent. This omitted the lowest Landau energy <span
+class="math inline">\(gB\)</span>: the full generator has growth rate
+<span class="math inline">\(gB-k_\parallel^2\)</span>, at most <span
+class="math inline">\(gB\)</span>. Symmetry alone also does not give a
+positive eigenvalue equal to the operator norm. The claimed lower bound
+on the spatial truncation error, the sharp crossover <span
+class="math inline">\(\eta_*=2g^2/c\)</span>, and the conclusion that
+large fields must be excluded from any flow argument are
+<strong>withdrawn</strong>. With <span
+class="math inline">\(\sqrt{8t}=\ell\)</span> and curvature norm <span
+class="math inline">\(\eta/\ell^2\)</span>, the Duhamel exponent is
+<span class="math inline">\(\eta/4\)</span>, not <span
+class="math inline">\(2\eta\)</span>. Sections 1–5 replace these claims
+in place; the symmetry proof and the existence of an unstable
+constant-field mode survive.</p>
+</blockquote>
+<p>The curvature multiplication operator <span
+class="math display">\[(Mu)_\mu=2[G_{\mu\nu},u_\nu]\]</span> is
+symmetric, but the growth of the full linearized generator <span
+class="math inline">\(L=D^2+M\)</span> includes the negative
+covariant-Laplacian contribution. In the constant abelian chromomagnetic
+example derived below, write <span
+class="math inline">\(b=gB&gt;0\)</span> for the curvature seen by a
+charge-one adjoint component. The lowest aligned Landau mode has <span
+class="math display">\[\omega^2=k_\parallel^2-b,\qquad
+u(s)=e^{(b-k_\parallel^2)s}u(0).\]</span> Thus gradient descent can
+amplify perturbations around a saddle while lowering the action. Its
+maximum growth rate in this model is <span
+class="math inline">\(b\)</span>, not <span
+class="math inline">\(2b\)</span>. This proves an instability,
+<strong>not</strong> saturation of the upper bound <span
+class="math inline">\(e^{2bt}\)</span>, a lower bound on its spatial
+tail, or an obstruction to all large-field flow estimates. No continuum
+construction or mass gap is proved here.</p>
 <h2 id="the-curvature-term-is-symmetric">1. The curvature term is
 symmetric</h2>
-<p>Let <span class="math inline">\(\mathfrak g\)</span> carry the
-invariant inner product <span class="math inline">\(\langle
-X,Y\rangle=-\operatorname{tr}(XY)\)</span>, under which <span
-class="math inline">\(\operatorname{ad}(Z)\)</span> is antisymmetric for
-every <span class="math inline">\(Z\in\mathfrak g\)</span>: <span
-class="math inline">\(\langle[Z,X],Y\rangle=-\langle
+<p>Let <span class="math inline">\(\mathfrak g\)</span> be a compact
+matrix Lie algebra with invariant inner product <span
+class="math inline">\(\langle
+X,Y\rangle=-\operatorname{tr}(XY)\)</span>. Then <span
+class="math inline">\(\operatorname{ad}(Z)\)</span> is antisymmetric:
+<span class="math inline">\(\langle[Z,X],Y\rangle=-\langle
 X,[Z,Y]\rangle\)</span>.</p>
-<p><strong>Proposition 1.</strong> On <span
-class="math inline">\(\mathfrak g\)</span>-valued vector fields with the
-inner product <span class="math inline">\(\sum_\mu\langle
+<p><strong>Proposition 1.</strong> At each point, on <span
+class="math inline">\(\mathfrak g\)</span>-valued vectors with inner
+product <span class="math inline">\(\sum_\mu\langle
 u_\mu,v_\mu\rangle\)</span>, the operator <span
 class="math inline">\((Mu)_\mu=2[G_{\mu\nu},u_\nu]\)</span> is
 symmetric.</p>
-<p><em>Proof.</em> <span class="math inline">\(\langle
-Mu,v\rangle=2\sum_{\mu\nu}\langle[G_{\mu\nu},u_\nu],v_\mu\rangle
+<p><em>Proof.</em> <span class="math display">\[\langle Mu,v\rangle
+=2\sum_{\mu\nu}\langle[G_{\mu\nu},u_\nu],v_\mu\rangle
 =-2\sum_{\mu\nu}\langle u_\nu,[G_{\mu\nu},v_\mu]\rangle
-=+2\sum_{\mu\nu}\langle u_\nu,[G_{\nu\mu},v_\mu]\rangle=\langle
-u,Mv\rangle\)</span>, using antisymmetry of <span
-class="math inline">\(\operatorname{ad}\)</span> in the second step and
-<span class="math inline">\(G_{\mu\nu}=-G_{\nu\mu}\)</span> in the
-third. <span class="math inline">\(\square\)</span></p>
-<p>A symmetric operator of norm <span
-class="math inline">\(2\|G\|_\infty\)</span> attains <span
-class="math inline">\(+2\|G\|_\infty\)</span> on some vector, so the
-Duhamel estimate <span class="math display">\[\big|D\Phi_t(x,y)\big|\le
-e^{2t\|G\|_\infty}K_t^{\rm free}(x-y)\]</span> of <a
-href="flow-jacobian-truncation-error.html">the Jacobian note</a>
-Proposition 2 cannot be improved by any argument that keeps <span
-class="math inline">\(\|G\|_\infty\)</span> as the only input: the
-exponential growth is attained in the direction of the largest
-eigenvalue of <span class="math inline">\(M\)</span>.</p>
-<h2 id="the-eigenvector-is-the-nielsenolesen-mode">2. The eigenvector is
-the Nielsen–Olesen mode</h2>
-<p>Take a constant abelian chromomagnetic background of magnitude <span
-class="math inline">\(B\)</span> in the third colour direction, <span
-class="math inline">\(G_{12}=B\,T^3\)</span>. The charged components
-<span class="math inline">\(u^\pm\)</span> see it as a magnetic field of
-charge <span class="math inline">\(\pm1\)</span>, so their transverse
-motion is Landau-quantized with levels <span
-class="math inline">\((2n+1)gB\)</span>, while the term <span
-class="math inline">\(M\)</span> contributes the spin coupling <span
-class="math inline">\(\mp2gB\)</span> to the two transverse
-polarizations. The frequencies are <span
-class="math display">\[\omega^2=k_\parallel^2+(2n+1)\,gB\mp2gB
-,\]</span> and the mode <span class="math inline">\(n=0\)</span> with
-aligned spin has <span class="math display">\[\omega^2=k_\parallel^2-gB\
-\big|_{\ \rm here}\ \longrightarrow\ \omega^2&lt;0
-\quad\text{for } k_\parallel^2&lt;gB,\]</span> the unstable mode of
-Nielsen and Olesen (Nucl. Phys. B144 (1978) 376; metadata level; the
-numerical factor depends on the normalization of <span
-class="math inline">\(B\)</span>, and in the convention of <a
-href="flow-jacobian-truncation-error.html">the Jacobian note</a> the
-eigenvalue of <span class="math inline">\(M\)</span> on this mode is
-<span class="math inline">\(+2\|G\|\)</span>).</p>
-<p>Under the gradient flow, whose linearization is <span
-class="math inline">\(\partial_s\delta B=D^2\delta B+M\delta B\)</span>
-and whose eigenvalues are <span class="math inline">\(-\omega^2\)</span>
-in the corresponding decomposition, this mode grows like <span
-class="math inline">\(e^{+2\|G\|s}\)</span>. The Duhamel bound is
-therefore <strong>saturated</strong>, and by a configuration that is not
-exotic: a constant chromomagnetic field, the simplest large-field
-configuration there is.</p>
-<h2 id="why-this-is-consistent-with-monotonicity">3. Why this is
-consistent with monotonicity</h2>
-<p>The flow decreases the action, <span
-class="math inline">\(\frac{d}{ds}S(B_s)=-\|D^*G\|_2^2\le0\)</span>, and
-simultaneously separates neighbouring trajectories at rate <span
-class="math inline">\(2\|G\|\)</span>. Both hold because a constant
-chromomagnetic field is a <strong>critical point</strong> of the action
-that is not a minimum: <span class="math inline">\(D^*G=0\)</span> for
-it, so it is stationary under the flow, while the Hessian of the action
-has a negative direction, along which neighbours run away. A gradient
-flow near a saddle does exactly this.</p>
-<p>The same statement in the language of <a
-href="torus-valley-potential.html">the valley note</a>: the abelian
-valley of the zero-momentum sector is flat at quadratic order and lifted
-by the zero-point energy, and a large constant field along it is a
-saddle rather than a minimum.</p>
-<h2 id="consequence-the-large-field-region-is-excluded-not-smoothed">4.
-Consequence: the large-field region is excluded, not smoothed</h2>
-<p>The flow-truncation step of <a
+=2\sum_{\mu\nu}\langle u_\nu,[G_{\nu\mu},v_\mu]\rangle
+=\langle u,Mv\rangle.\]</span> The two antisymmetries cancel. <span
+class="math inline">\(\square\)</span></p>
+<p>A finite-dimensional symmetric operator of norm <span
+class="math inline">\(N\)</span> has an eigenvalue of modulus <span
+class="math inline">\(N\)</span>; symmetry does not determine its sign.
+Moreover, positive eigenvalues of <span class="math inline">\(M\)</span>
+alone do not determine those of <span
+class="math inline">\(D^2+M\)</span>. For compactly supported fields,
+integration by parts gives <span class="math display">\[\langle
+u,Lu\rangle=-\sum_\alpha\|D_\alpha u\|_2^2
++\langle u,Mu\rangle.\]</span> The first term must be retained.</p>
+<p>For precision, let <span
+class="math inline">\(\Gamma=\frac12\sup_{s,x}\|M(s,x)\|_{\mathrm{op}}\)</span>
+on the flow interval. This is the curvature block-operator norm used in
+this note’s bounds; it is not an unspecified norm of individual tensor
+components. For a covariant heat equation with bounded <span
+class="math inline">\(M\)</span>, a free-heat-kernel majorant obtained
+by Duhamel has the form <span class="math display">\[|K_L(t;x,y)|\le
+e^{2t\Gamma}K_t^{\rm free}(x-y).\]</span> Indeed covariant diffusion is
+dominated in norm by scalar diffusion, and each iterated insertion of
+<span class="math inline">\(M\)</span> is bounded by <span
+class="math inline">\(2\Gamma\)</span>; scalar heat kernels compose, so
+the series sums to <span class="math inline">\(e^{2t\Gamma}\)</span>.
+This is an <strong>upper bound</strong>, under those heat-equation
+hypotheses. It does not establish its own optimality. In the charge-one
+constant-field example below, <span
+class="math inline">\(\|M\|_{\mathrm{op}}=2b\)</span> and <span
+class="math inline">\(\Gamma=b\)</span>.</p>
+<h2 id="the-constant-field-mode-and-its-full-growth-rate">2. The
+constant-field mode and its full growth rate</h2>
+<p>We work with the Yang–Mills flow linearized at a stationary
+background <span class="math inline">\(\bar A\)</span>, in
+<strong>background-covariant gauge</strong>. This specifies the operator
+rather than assuming that every gauge-modified flow has the same
+Jacobian. With <span class="math inline">\(D=\partial+[\bar
+A,\cdot]\)</span> and <span class="math inline">\(D_\nu
+G_{\nu\mu}=0\)</span>, variation of the ungauged flow gives <span
+class="math display">\[\partial_su_\mu=D^2u_\mu-D_\mu D_\nu u_\nu
++2[G_{\mu\nu},u_\nu].\]</span> Adding the linear background-gauge term
+<span class="math inline">\(D_\mu D_\nu u_\nu\)</span> gives <span
+class="math inline">\(L\)</span>. Equivalently, on a mode with <span
+class="math inline">\(D_\nu u_\nu=0\)</span>, the ungauged linearization
+already agrees with <span class="math inline">\(L\)</span>. This does
+not repair or identify the full Jacobian in every gauge convention of <a
+href="flow-jacobian-truncation-error.html">the Jacobian note</a>.</p>
+<p>Choose an <span class="math inline">\(SU(2)\)</span> colour sector
+with <span class="math inline">\([T^3,E_+]=iE_+\)</span>, and absorb the
+coupling into the connection, so <span
+class="math inline">\(G_{12}=bT^3\)</span>, <span
+class="math inline">\(b=gB&gt;0\)</span>. In symmetric gauge on the
+transverse plane, <span class="math display">\[\bar A_1=-\frac
+b2x_2T^3,\qquad
+\bar A_2=\frac b2x_1T^3.\]</span> On the <span
+class="math inline">\(E_+\)</span> component, <span
+class="math display">\[D_1=\partial_1-\frac{ibx_2}{2},\qquad
+D_2=\partial_2+\frac{ibx_1}{2}.\]</span> Writing <span
+class="math inline">\(Q=D_1-iD_2\)</span>, integration by parts and
+<span class="math inline">\([D_1,D_2]=ib\)</span> give <span
+class="math inline">\(Q^*Q=-(D_1^2+D_2^2)-b\)</span> and <span
+class="math inline">\([Q,Q^*]=2b\)</span>. Thus the oscillator ladder
+has transverse magnetic-Laplacian energies <span
+class="math inline">\((2n+1)b\)</span>, <span
+class="math inline">\(n=0,1,\ldots\)</span>. To fix the factor without
+relying on a bibliographic convention, its lowest mode can be checked
+directly: <span
+class="math display">\[f(x_1,x_2)=e^{-b(x_1^2+x_2^2)/4},\qquad
+(D_1-iD_2)f=0,\qquad (D_1^2+D_2^2)f=-bf.\]</span> On the two transverse
+vector components, <span
+class="math display">\[M=\begin{pmatrix}0&amp;2ib\\-2ib&amp;0\end{pmatrix},\qquad
+M\binom f{-if}=2b\binom f{-if}.\]</span> The charged complex notation
+represents real Lie-algebra fields by adding the conjugate charge
+sector. The vector <span
+class="math display">\[u=(f,-if,0,\ldots)e^{ik_\parallel\cdot
+x_\parallel}\]</span> is background-transverse, since <span
+class="math inline">\(D_1f-iD_2f=0\)</span>. Consequently <span
+class="math display">\[D^2u=-(b+k_\parallel^2)u,\qquad
+Lu=(b-k_\parallel^2)u.\]</span> This supplies both the positive
+eigenvalue of <span class="math inline">\(M\)</span> and the Laplacian
+cost on the same vector. The two transverse polarizations at general
+Landau level have the spectral values <span
+class="math display">\[\omega^2=k_\parallel^2+(2n+1)b\mp2b\]</span> for
+<span class="math inline">\(-L\)</span>. Here <span
+class="math inline">\(k_\parallel^2\)</span> is the sum of the squared
+momenta in directions outside the magnetic plane: one for spatial
+three-dimensional flow, two for four-dimensional Euclidean flow. The
+unstable branch is <span
+class="math display">\[\omega^2=k_\parallel^2-b&lt;0\quad\text{when
+}k_\parallel^2&lt;b,\]</span> and its gradient-flow growth is <span
+class="math display">\[e^{-\omega^2s}=e^{(b-k_\parallel^2)s}.\]</span>
+At <span class="math inline">\(k_\parallel=0\)</span> the rate is <span
+class="math inline">\(b\)</span>, half the exponent coefficient <span
+class="math inline">\(2b\)</span> in the Duhamel majorant. That example
+therefore <strong>does not saturate</strong> the majorant. Whether a
+better universal bound holds for other backgrounds is not settled by
+this calculation.</p>
+<p>On the whole space the longitudinal plane waves are generalized
+modes; wave packets supported in <span
+class="math inline">\(k_\parallel^2&lt;b\)</span> give growing <span
+class="math inline">\(L^2\)</span> perturbations, with rates approaching
+<span class="math inline">\(b\)</span>. Periodic longitudinal boundary
+conditions admit the zero-momentum mode. The constant field on the
+transverse plane has infinite total action; the calculation is a
+stationary-background spectral model, not a finite-action
+four-dimensional construction or a statement for arbitrary finite
+boxes.</p>
+<p>This is the instability historically associated with Nielsen and
+Olesen, <a href="https://doi.org/10.1016/0550-3213(78)90377-2">“An
+unstable Yang–Mills field mode,” Nucl. Phys. B144 (1978) 376–396</a>
+(abstract read; the original spectral passage was not read here). The
+numerical factors used above are supported by the displayed calculation,
+not by that abstract or a normalization left implicit.</p>
+<h2 id="why-growth-is-consistent-with-action-monotonicity">3. Why growth
+is consistent with action monotonicity</h2>
+<p>For the unmodified gradient flow with its gradient-metric
+normalization, <span class="math display">\[\frac{d}{ds}S(A_s)=-\|\nabla
+S(A_s)\|_2^2\le0.\]</span> A constant abelian curvature has <span
+class="math inline">\(D_\nu G_{\nu\mu}=0\)</span> and is stationary. Its
+transverse unstable modes give negative Hessian directions, <span
+class="math inline">\(\operatorname{Hess}S=-L\)</span> on the
+background-transverse sector in the normalization of Section 2. Nearby
+trajectories can separate at rate <span
+class="math inline">\(b-k_\parallel^2\)</span> while descending the
+action. For the infinite-action background these are statements about
+the local equation and quadratic variation on admissible perturbations,
+rather than differentiation of an infinite total action.</p>
+<p>The original comparison with <a
+href="torus-valley-potential.html">the valley note</a> is also
+corrected: constant commuting connections in its flat holonomy valley
+have <span class="math inline">\(G=0\)</span>. They are not the nonzero
+constant chromomagnetic background considered here. The valley’s
+zero-point potential is a different calculation and gives no
+justification for this saddle or its growth rate.</p>
+<h2
+id="consequence-instability-does-not-determine-the-truncation-tail">4.
+Consequence: instability does not determine the truncation tail</h2>
+<p>The Gaussian majorant in Section 1 gives a bound on the
+<strong>Jacobian kernel tail</strong>. Writing <span
+class="math inline">\(R=\kappa\sqrt{8t}\)</span> in three spatial
+dimensions, <span
+class="math display">\[\int_{|x-y|&gt;R}|K_L(t;x,y)|\,dy
+\le C(1+R/\sqrt t)\exp[2t\Gamma-2\kappa^2].\]</span> This is an upper
+bound with its polynomial prefactor retained. Converting it into a
+relative form bound for the conjugated Hamiltonian of <a
 href="flow-conjugation-truncation.html">the flow-conjugation note</a>
-has error <span
-class="math inline">\(\exp[2t\|G\|_\infty-2\kappa^2]\)</span> and
-Section 2 shows the first term is attained. Therefore:</p>
+requires additional operator estimates; this note proves no such
+conversion. A large upper bound does not imply a large actual error. Nor
+would sharpness of a global semigroup norm imply sharpness of a
+discarded spatial tail: the lowest Landau function above is localized on
+transverse length <span class="math inline">\(b^{-1/2}\)</span>. A tail
+lower bound would require a separate spatial calculation.</p>
+<p>The corrected scale and range implications are:</p>
 <ul>
-<li>inside a region with <span
-class="math inline">\(\|G\|\ge\eta/\ell^2\)</span> and flow radius <span
-class="math inline">\(\sqrt{8t}=\ell\)</span>, the error is at least
-<span class="math inline">\(e^{2\eta}\)</span> up to the truncation
-gain, and <strong>no refinement of the Jacobian estimate removes
-it</strong>;</li>
-<li>the competition of <a href="ground-state-measure-transfer.html">the
-transfer note</a> §4, gain <span
-class="math inline">\(e^{-c\eta^2/g^2}\)</span> against loss <span
-class="math inline">\(e^{2\eta}\)</span>, is therefore between two sharp
-quantities, and the crossover <span
-class="math inline">\(\eta_*=2g^2/c\)</span> is real rather than an
-artifact of a crude bound;</li>
-<li>so the region <span
-class="math inline">\(\{\|G\|\ge\eta_*/\ell^2\}\)</span> must be removed
-from the argument and treated by other means, which is precisely the
-large-field decomposition of Balaban’s programme.</li>
+<li>At <span class="math inline">\(\ell=\sqrt{8t}\)</span> and <span
+class="math inline">\(\Gamma=\eta/\ell^2\)</span>, the bound’s growth
+factor is <span class="math inline">\(e^{\eta/4}\)</span>, since <span
+class="math inline">\(2t\Gamma=\eta/4\)</span>; the example’s
+zero-momentum growth is <span
+class="math inline">\(e^{bt}=e^{\eta/8}\)</span> when <span
+class="math inline">\(b=\eta/\ell^2\)</span>. If <span
+class="math inline">\(\Gamma\le\eta/\ell^2\)</span>, the former is an
+upper bound. A lower threshold <span
+class="math inline">\(\Gamma\ge\eta/\ell^2\)</span> gives no lower bound
+on the tail.</li>
+<li>The earlier comparison of <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span> with <span
+class="math inline">\(e^{2\eta}\)</span> and its claimed sharp crossover
+<span class="math inline">\(2g^2/c\)</span> are withdrawn. Even if one
+<strong>assumes</strong> a normalized probability estimate <span
+class="math inline">\(e^{-c\eta^2/g^2}\)</span>, multiplying it by the
+corrected growth majorant yields only the schematic exponent <span
+class="math inline">\(-c\eta^2/g^2+\eta/4\)</span> at fixed range, with
+algebraic zero <span class="math inline">\(g^2/(4c)\)</span>. This is
+bookkeeping of assumed upper bounds, not a physical threshold or a sharp
+truncation theorem; an action cost alone does not prove the assumed
+probability bound.</li>
+<li>As already noted in <a href="ground-state-measure-transfer.html">the
+transfer note</a> and <a href="large-field-operator-inequality.html">the
+operator-inequality note</a>, the fixed-range competition is superseded
+in part. For a finite curvature upper bound, increasing <span
+class="math inline">\(\kappa\)</span> makes <span
+class="math inline">\(2t\Gamma-2\kappa^2\)</span> negative enough to
+control the kernel tail, including its prefactor. Whether the resulting
+range and operator errors permit an iterated construction is a further
+obligation.</li>
 </ul>
-<p><strong>What this settles.</strong> The question of STATE item 11,
-whether the truncation error inside the large-field region can be
-bounded by less than <span
-class="math inline">\(e^{2t\|G\|_\infty}\)</span>, is answered: no, and
-the obstruction has a name and a physical realization. The flow is a
-smoothing operation on small fields and an amplifier on large ones, and
-the boundary between the two behaviours is the Nielsen–Olesen
-threshold.</p>
+<p><strong>What this settles.</strong> The constant-field example rules
+out a universal contraction claim for the linearized flow in this
+sector. It leaves open improved large-field kernel bounds, Hamiltonian
+truncation bounds and iteration. The earlier conclusion that every
+large-field region must be excluded is withdrawn. The <a
+href="flow-conjugation-truncation.html">lattice note</a> separately
+discusses bounded coefficients over one lattice doubling; its
+conclusions must not be inferred from this continuum saddle
+calculation.</p>
 <h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>The programme’s flow-based line is now complete in both directions:
-conjugation is exact, truncation is cheap on small fields (<a
-href="lattice-truncation-uniform.html">lattice truncation</a>), and on
-large fields the error is sharp and unavoidable, saturated by the
-Nielsen–Olesen mode. The large-field region must be excluded, its
-measure is controlled by <a
-href="ground-state-measure-transfer.html">the transfer note</a> §3, and
-its treatment is the remaining constructive content. The next question,
-and the last one this line suggests, is what replaces the flow inside
-that region: the constructive answer is an expansion around the local
-minimum of the action in the region, and the question worth asking here
-is whether the Nielsen–Olesen instability makes that expansion divergent
-or merely slow.</p>
+<p>The surviving result is the symmetry of <span
+class="math inline">\(M\)</span> and a stationary-background instability
+with growth <span class="math inline">\(gB-k_\parallel^2\)</span>,
+compatible with gradient descent. This does not complete the flow-based
+route on large fields: sharpness of the curvature-only exponent and a
+lower bound on the truncation error remain unproved. The fixed-range
+crossover and the necessity of excluding large fields are withdrawn. The
+relevant open estimate is a spatial-tail and operator comparison with
+explicit curvature, range and lattice-step dependence, together with
+whatever normalized measure control its use requires. A convergent
+large-field expansion and the continuum <span
+class="math inline">\(SU(3)\)</span> mass gap are not consequences of
+this note.</p>
 
 </main>
 <footer class="site"><div class="wrap">

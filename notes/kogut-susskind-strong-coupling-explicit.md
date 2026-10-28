@@ -99,7 +99,8 @@ of their internal ordered integrals. A complete polymer construction
 must specify components and endpoint compatibility consistently with
 these insertion vertices. The hard-core representation
 $$Z(t)=\langle\Omega_0,e^{-t(H_E-W)}\Omega_0\rangle
-=\sum_{\{\gamma_i\}\ {m compatible}}\prod_iw(\gamma_i)$$
+=\sum_{\{\gamma_i\}\ {
+m compatible}}\prod_iw(\gamma_i)$$
 is the proposed organization. The finite-volume bound above does not
 require it. For §§2--3 assume such an organization with the history
 majorant, $|S_k|\ge4$ inside each polymer, and changes only on the four
@@ -301,8 +302,7 @@ here. Only the fixed-volume limit in §1 is proved.
 $10^{101}$” and “this beats it by giving $10^2$” were too strong.
 Yarotsky's theorem provides an existential smallness threshold, not
 that number; the latter is the repository's crude proof-extraction
-estimate in [strong-coupling-threshold-explicit](strong-coupling-threshold-explicit.md)
-§§1--2 (repository derivation read). Its assumptions are reproduced
+estimate in the former threshold calculation (now incorporated below). Its assumptions are reproduced
 below so the comparison is checkable, but the estimate is **heuristic**,
 not a certified sufficient threshold of this note.
 
@@ -339,6 +339,18 @@ is a positive volume-uniform gap, with unspecified constants. Retaining
 exact link decay in continuous time is a plausible way to improve
 constants, but the counts and boundary estimates missing above prevent
 any proved numerical improvement in this note.
+
+The older direct-expansion comparison used an illustrative coordination
+factor $12$ and $C\sim e$ to estimate
+$g^4\gtrsim54\cdot12e$, or $g^2$ of order $40$--$70$. No applicable
+Kirkwood--Thomas or Datta--Kennedy bound with these constants has been
+proved here; the papers were inspected at metadata level. The Wilson
+Euclidean character expansion concerns a different transfer operator.
+As a one-loop orientation, $n\simeq(g_{\rm weak}^{-2}-g_{\rm strong}^{-2})/0.0966$
+for $SU(3)$ gives about $10^3$ doublings if $g_{\rm weak}^{-2}=100$,
+whether the hypothetical strong boundary is $g^2=70$ or $10^{101}$,
+and about $21$ for $g_{\rm weak}^2=1/2$ and $g_{\rm strong}^2=70$.
+These are extrapolations, not certified boundaries or RG trajectories.
 
 ## 6. Consequence for STATE
 

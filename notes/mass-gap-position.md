@@ -1,6 +1,6 @@
 # The mass gap: current position of this programme
 
-Later corrections: [the critical-coupling note](gapped-set-critical-coupling.md) withdraws the phase-transition equivalences of T2$'$; [the transfer note](ground-state-measure-transfer.md) withdraws the verbatim transfer of Euclidean estimates; [the action lower-bound note](large-field-action-lower-bound.md) and [the entropy note](large-field-entropy-count.md) withdraw sharpness and the entropy reading of the mode count; [the instability note](flow-instability-large-field.md) and [the Jacobian note](flow-jacobian-truncation-error.md) withdraw sharp growth and the Hamiltonian truncation error; [the Kogut--Susskind note](kogut-susskind-strong-coupling-explicit.md) withdraws its explicit threshold; [the openings note](mass-gap-openings.md) §1 corrects the all-coupling requirement; [the October 1 audit](corpus-audit-2026-10-01.md) §3 lists this note's inconsistent numbers (relevant passages read).
+Later corrections: [the critical-coupling note](mass-gap-obligations-lattice.md) withdraws the phase-transition equivalences of T2$'$; [the transfer note](ground-state-measure-transfer.md) withdraws the verbatim transfer of Euclidean estimates; [the action lower-bound note](large-field-action-lower-bound.md) and [the entropy note](large-field-entropy-count.md) withdraw sharpness and the entropy reading of the mode count; [the instability note](flow-instability-large-field.md) and [the Jacobian note](flow-jacobian-truncation-error.md) withdraw sharp growth and the Hamiltonian truncation error; [the Kogut--Susskind note](kogut-susskind-strong-coupling-explicit.md) withdraws its explicit threshold; [the openings note](mass-gap-openings.md) §1 corrects the all-coupling requirement; [the October 1 audit](corpus-audit-2026-10-01.md) §3 lists this note's inconsistent numbers (relevant passages read).
 
 > **Correction (2026-10-02).** This map kept several claims after their
 > source notes corrected them, and it quoted thresholds that did not
@@ -38,8 +38,8 @@ Later corrections: [the critical-coupling note](gapped-set-critical-coupling.md)
 >    large-$g^2$ forms, which slightly overstate them, are marked
 >    $\simeq$. For the
 >    Kogut--Susskind Hamiltonian the volume-uniform gap rests on
->    Yarotsky's existential threshold, which his proof makes
->    $g_0^2\simeq10^{101}$; the explicit $g^2\ge388$ is withdrawn. The
+>    Yarotsky's existential threshold; a repository proof-extraction
+>    estimate of $g_0^2$ of order $10^{102}$ is heuristic; the explicit $g^2\ge388$ is withdrawn. The
 >    weak side carries two labelled estimates: a necessary window
 >    $1/g^2\gtrsim10^2$ with crude constants, and a one-step remainder
 >    threshold $g^2\sim10^{-12}$ that assumes an unproved order-one
@@ -102,9 +102,9 @@ $SU(N\ge5)$ the Wilson action shows a first-order bulk transition at
 intermediate coupling in numerical studies. That proves no hole in the
 gapped set of the Kogut--Susskind operator: the operators differ and
 the spectral comparison is missing
-([critical-coupling note](gapped-set-critical-coupling.md) §2,
+([critical-coupling note](mass-gap-obligations-lattice.md) §4b,
 correction of 2026-10-02). What
-[the critical-coupling note](gapped-set-critical-coupling.md) proves is
+[the critical-coupling note](mass-gap-obligations-lattice.md) proves is
 that the finite-volume gap is continuous in $g$, and that openness of
 the gapped set together with its closedness would give T2$'$ by
 connectedness. Its former identification of T2$'$ with the absence of a
@@ -124,9 +124,9 @@ magnetic term is a bounded range-$\{0,1\}^3$ perturbation with
 $\beta=48N^2/[g^4(N^2-1)]$, so Yarotsky's theorem gives
 $\Delta_{a,L}\ge\gamma(g^2/2)C_2\hbar c/a$ for $g\ge g_0$, uniformly in
 the lattice size, with exponential clustering. The threshold $g_0$ is
-existential; following Yarotsky's proof with numbers gives
-$g_0^2\simeq10^{101}$ for $SU(3)$
-([threshold note](strong-coupling-threshold-explicit.md)), and the
+existential; a conditional proof-extraction estimate suggests an order
+of $10^{102}$ for $g_0^2$ in $SU(3)$ but is not a certified threshold
+([threshold note](kogut-susskind-strong-coupling-explicit.md)), and the
 explicit threshold $g^2\ge388$ of
 [the continuous-time note](kogut-susskind-strong-coupling-explicit.md)
 was withdrawn on 2026-10-02.
@@ -152,7 +152,7 @@ weakest member and the next one,
 $m\le\hbar C_0(0)/\int_0^\infty C_0$, needs only T4 and
 $C_0\not\equiv0$. The free-field value of the weakest member is
 $4.26\,\hbar c/\sqrt{8t}$, computed in closed form and confirmed by an
-independent sum rule ([free-field note](flowed-bound-free-field.md)).
+a second evaluation of the same sum rule ([free-field calculation](finiteness-half-flowed-susceptibility.md)).
 
 **Exact structural identities**
 ([note](magnetic-energy-identities.md)): $\Delta V=4C_2(N|\mathcal P|-V)$,
@@ -162,7 +162,7 @@ ground-state sum rule tying $\operatorname{Var}_\Omega(V)$ to kinetic
 quantities.
 
 **Flow facts** ([conjugation](flow-conjugation-truncation.md),
-[lattice truncation](lattice-truncation-uniform.md)): the Wilson flow is
+[one-step locality](flow-conjugation-truncation.md)): the Wilson flow is
 a diffeomorphism of $G^{\mathcal E}$, unitarily implemented, so
 conjugation preserves the spectrum; the lattice flow carries no coupling
 and a doubling is dimensionless flow time $1/2$, so the coefficients of
@@ -179,8 +179,8 @@ truncation error open, so that conclusion is a target here.
 | --- | --- |
 | variational upper bounds, for $m>0$ | a spectral measure with all negative moments finite can have $m=0$ |
 | expansion around the free theory | the bound reaches $m$ only at the confinement scale, where its coefficient is nonperturbative |
-| blocking by projection | the boundary grows like $M^2$ while the block gap does not; the criterion worsens by $3M^2/8$ |
-| conjugation by the flow | the spectrum is invariant, so any gain is charged to truncating the nonlocal conjugated electric term |
+| blocking by projection | a surface-to-gap estimate worsens by $3M^2/8$ in the stated strong-coupling asymptotic; all-coupling monotonicity is not proved |
+| conjugation by the flow | the spectrum is invariant; a changed local decomposition requires control of generated terms |
 | flow before decimation | sup norms are bijection-invariant and spectra conjugation-invariant |
 | Agmon estimate on the ground state | $\|\nabla V\|_\infty$ is extensive, so it bounds the global excess only |
 | pointwise Gibbs domination | the comparison function bites only above the extensive threshold $V_*\simeq N|\mathcal P|$ |
@@ -195,7 +195,7 @@ computation with explicit constants.
 derived from $-A'\Delta\Omega+(B'V-e_0)\Omega=0$ and compare the total
 potential with the total energy; $e_0$ is extensive, so they separate
 configurations only by their global excess
-([global/local note](agmon-global-not-local.md)). The Euclidean weight
+([global/local note](agmon-ground-state-suppression.md)). The Euclidean weight
 $e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}$ factorizes over plaquettes, so a
 local excess costs a local factor of the unnormalized weight. That is
 the structural advantage of a factorized weight over these two
@@ -215,7 +215,7 @@ Three statements distinguish the groups. They are the places this
 series has isolated where a proof of T2$'$ could use structure that the
 abelian theory lacks. They have distinct scopes, and none is by itself
 a proof of a non-abelian gap
-([critical-coupling note](gapped-set-critical-coupling.md) §4).
+([critical-coupling note](mass-gap-obligations-lattice.md) §4d).
 
 1. *The commutator potential* of the zero-momentum sector is identically
    zero for an abelian group; where present, the transverse zero-point
@@ -237,7 +237,7 @@ a proof of a non-abelian gap
 | obligation | kind |
 | --- | --- |
 | a gap on $(0,g_1)$ along the scaling curve | the conjecture's lattice half; T2$'$ would suffice for positivity, and T2$'$ follows from openness together with closedness of the gapped set |
-| openness of the gapped set | unproved globally: needs volume-uniform gap stability; the stability route cited in the [critical-coupling note](gapped-set-critical-coupling.md) §5 has hypotheses not verified for the Kogut--Susskind Hamiltonian, including frustration-freeness |
+| openness of the gapped set | unproved globally: needs volume-uniform gap stability; the stability route cited in the [critical-coupling note](mass-gap-obligations-lattice.md) §4e has hypotheses not verified for the Kogut--Susskind Hamiltonian, including frustration-freeness |
 | T3 | the conjecture, given that gap |
 | T4 | construction |
 | local large-field control | open. The slice identity is exact: $\langle\Omega,F\Omega\rangle$ is the long-time limit of normalized heat-semigroup expectations of the Kogut--Susskind Hamiltonian, and the squared Perron vector of a transfer matrix at fixed temporal spacing is the slice marginal of its Euclidean measure ([transfer note](ground-state-measure-transfer.md) §1); the Wilson-to-Kogut--Susskind limit needs ground-state projector convergence, and no Euclidean large-field estimate transfers verbatim |
@@ -322,7 +322,7 @@ $2b_0\log2=0.0966$ for $SU(3)$, is set almost entirely by the weak side:
 | $g^2=1/2$ (if a small-field expansion reached it) | $\simeq21$ |
 
 The first and last rows are from the
-[threshold note](strong-coupling-threshold-explicit.md) §4; the middle
+[continuous-time note](kogut-susskind-strong-coupling-explicit.md) §5; the middle
 row is the same formula. The Kogut--Susskind threshold from Yarotsky's
 theorem, made explicit, is $g_0^2\sim10^{101}$ and plays no role in the
 map.

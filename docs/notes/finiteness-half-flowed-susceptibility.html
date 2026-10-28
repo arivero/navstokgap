@@ -91,9 +91,10 @@ c}{2}\;\frac{\big\langle\,|D_\varphi|^2\,\big\rangle_0}{\chi_\varphi},
 \qquad
 D_\varphi=\int d^3y\;\frac{\delta\varphi(y)}{\delta A^a_i(0)},\qquad
 \chi_\varphi=\int
-d^3z\;\big\langle\varphi(z)\varphi(0)\big\rangle_0^{\rm c},\]</span> in
-the continuum theory with a unique vacuum, whenever the finite-volume
-gaps and correlators converge. Both sides are intensive: the volume
+d^3z\;\big\langle\varphi(z)\varphi(0)\big\rangle_0^{\rm c},\]</span> at
+fixed regularization, with <span class="math inline">\(g=g(a)\)</span>.
+The continuum version requires a limit of the full weighted numerator
+and the susceptibility as below. Both sides are intensive: the volume
 cancels between the numerator and the denominator, which is what makes
 the zero-momentum operator the right trial excitation and the plaquette
 of <a href="lattice-gap-upper-bounds.html">the upper-bound note</a> the
@@ -105,18 +106,15 @@ zero-momentum fluctuations in the vacuum, the theory has an excitation
 of finite energy.</strong> Conversely <span
 class="math inline">\(m=\infty\)</span> forces every such susceptibility
 to vanish, that is, the vacuum is an eigenstate of every smeared
-gauge-invariant operator. The ultraviolet problem that defeated the
-plaquette is solved by smearing, and the natural smearing is the
-gradient flow, whose observables are renormalized; what is assumed, and
-stated as hypothesis (F1), is that the equal-time flowed correlators
-have continuum limits, which is not Lüscher’s four-dimensional theorem
-but its Hamiltonian counterpart. Dimensional analysis gives the
-perturbative behaviour <span
-class="math inline">\(\langle|D|^2\rangle/\chi\simeq
-c_\varphi/\sqrt{8t}\)</span> at flow time <span
-class="math inline">\(t\)</span>, so the bound reads <span
-class="math inline">\(m\le C g^2\hbar c/\sqrt{8t}\)</span> while
-perturbation theory applies; since the bound cannot fall below <span
+gauge-invariant operator. Spatial gradient flow supplies a candidate
+smearing; its needed Hamiltonian equal-time continuum estimates remain
+hypotheses; what is assumed, and stated as hypothesis (F1), is that the
+equal-time flowed correlators have continuum limits, which is not
+Lüscher’s four-dimensional theorem but its Hamiltonian counterpart. In
+free Maxwell theory the explicit ratio carries <span
+class="math inline">\(g^{-2}\)</span>, cancelling the prefactor in the
+bound, which is <span class="math inline">\(4.26\hbar
+c/\sqrt{8t}\)</span>; since the bound cannot fall below <span
 class="math inline">\(m\)</span>, the flow time at which that scaling
 must break down is the correlation length <span
 class="math inline">\(\hbar c/m\)</span>. In free Maxwell theory the
@@ -161,10 +159,9 @@ A^a_i(x)\)</span> and <span
 class="math display">\[\big[O,[\Pi^a_i\Pi^a_i,O]\big]=-2\big[\Pi^a_i,O\big]^2
 =2\hbar^2\Big|\frac{\delta O}{\delta A^a_i}\Big|^2,\]</span> so <span
 class="math inline">\([O,[H,O]]=\frac{g^2c}{2\hbar}\cdot2\hbar^2\int
-d^3x|\delta O/\delta A|^2
-=g^2\hbar c\int d^3x|\delta O/\delta A|^2\)</span>. Divide by <span
-class="math inline">\(2\langle O^2\rangle\)</span>. <span
-class="math inline">\(\square\)</span></p>
+d^3x|\delta O/\delta A|^2 =g^2\hbar c\int d^3x|\delta O/\delta
+A|^2\)</span>. Divide by <span class="math inline">\(2\langle
+O^2\rangle\)</span>. <span class="math inline">\(\square\)</span></p>
 <p>Only the electric term contributes: the bound measures how much the
 trial observable is disturbed by the conjugate field, which is the same
 quantity that Section 2 of <a
@@ -259,12 +256,14 @@ does not cover. State it as a hypothesis:</p>
 <blockquote>
 <p><strong>(F1)</strong> For fixed flow time <span
 class="math inline">\(t&gt;0\)</span>, the equal-time ground-state
-quantities <span class="math inline">\(\chi_{\varphi_t}\)</span> and
-<span class="math inline">\(\langle|D_{\varphi_t}|^2\rangle_0\)</span>
-of the lattice theory converge, as <span
-class="math inline">\(a\to0\)</span> along the scaling curve, to finite
-limits, with <span
-class="math inline">\(\chi_{\varphi_t}&gt;0\)</span>.</p>
+susceptibility <span class="math inline">\(\chi_{\varphi_t,a}\)</span>
+converges to a finite strictly positive limit <span
+class="math inline">\(\chi_t\)</span>, and the complete weighted
+numerator <span
+class="math inline">\(g(a)^2\langle|D_{\varphi_t,a}|^2\rangle_0\)</span>
+converges to a finite limit <span class="math inline">\(K_t\)</span>, as
+<span class="math inline">\(a\to0\)</span> along the scaling curve
+(after the specified volume limit).</p>
 </blockquote>
 <p>On any fixed lattice both quantities are finite and positive and
 Corollary 2 holds unconditionally, so (F1) is entirely a statement about
@@ -277,67 +276,148 @@ continuum theory exists with a unique vacuum and translation invariance,
 that the finite-volume gaps converge to <span
 class="math inline">\(m\)</span>, and (F1) for one flow time <span
 class="math inline">\(t\)</span>. Then <span class="math display">\[m\
-\le\ \frac{g^2\hbar
-c}{2}\,\frac{\langle|D_{\varphi_t}|^2\rangle_0}{\chi_{\varphi_t}}\ &lt;\
-\infty .\]</span></p>
-<p>This is the <span class="math inline">\(m&lt;\infty\)</span> clause
-of the Jaffe–Witten statement, reduced to the positivity of one
-susceptibility. The remaining clause, <span
-class="math inline">\(m&gt;0\)</span>, is untouched: nothing above
+\le\ \frac{\hbar c}{2}\,\frac{K_t}{\chi_t}\ &lt;\ \infty .\]</span></p>
+<p>This gives the <span class="math inline">\(m&lt;\infty\)</span>
+clause conditional on the weighted numerator, the positive
+susceptibility and spectral-limit hypotheses. The remaining clause,
+<span class="math inline">\(m&gt;0\)</span>, is untouched: nothing above
 excludes <span class="math inline">\(m=0\)</span>.</p>
-<h2 id="the-flow-time-and-where-the-perturbative-scaling-must-fail">5.
-The flow time, and where the perturbative scaling must fail</h2>
-<p>At flow time <span class="math inline">\(t\)</span> the only length
-in the smeared operator is <span
-class="math inline">\(\sqrt{8t}\)</span>. In a regime where the flowed
-correlators are governed by that length alone, <span
-class="math inline">\([\varphi_t]=L^{-4}\)</span> gives <span
-class="math inline">\(\chi\simeq k_1t^{-5/2}\)</span> and <span
-class="math inline">\(\langle|D|^2\rangle\simeq k_2t^{-3}\)</span>,
-hence <span
-class="math display">\[\frac{\langle|D_{\varphi_t}|^2\rangle}{\chi_{\varphi_t}}\simeq\frac{k_2}{k_1}\,\frac1{\sqrt{8t}},
-\qquad m\ \le\ C\,g^2\,\frac{\hbar c}{\sqrt{8t}} .\]</span> The pure
-numbers <span class="math inline">\(k_1,k_2\)</span> are computed in <a
-href="flowed-bound-free-field.html">the free-field note</a>: <span
-class="math inline">\(k_1\propto g^4\)</span> and <span
-class="math inline">\(k_2\propto g^2\)</span>, so the ratio carries
-<span class="math inline">\(g^{-2}\)</span> and <strong>the factor <span
-class="math inline">\(g^2\)</span> written above cancels</strong>. The
-corrected free-field bound is <span
-class="math inline">\(m\le\frac{16\sqrt2}{3\sqrt\pi}\hbar
-c/\sqrt{8t}\approx4.26\,\hbar c/\sqrt{8t}\)</span>, of order <span
-class="math inline">\(g^0\)</span>. The <span
-class="math inline">\(t\)</span>-dependence below is unaffected; the
-<span class="math inline">\(g^2\)</span> in the displayed inequality and
-in <span class="math inline">\(\sqrt{8t_*}\)</span> should be read as
-<span class="math inline">\(O(1)\)</span>. Two readings.</p>
-<p><em>Free theory.</em> In free Maxwell theory the scaling holds for
-every <span class="math inline">\(t\)</span> because there is no other
-length, and the bound tends to <span class="math inline">\(0=m\)</span>:
-correct, and the flow time is the only resolution scale.</p>
-<p><em>Interacting theory.</em> A positive <span
-class="math inline">\(m\)</span> cannot be beaten by any <span
-class="math inline">\(t\)</span>, so the perturbative scaling must fail
-once <span class="math inline">\(C g^2(t)\hbar c/\sqrt{8t}\)</span>
-reaches <span class="math inline">\(m\)</span>, that is at <span
-class="math display">\[\sqrt{8t_*}\ \simeq\ C g^2\,\frac{\hbar
-c}{m},\]</span> the correlation length up to the coupling. The bound
-therefore contains its own consistency condition: the flow smooths the
-field only down to the confinement scale, beyond which the flowed
-correlators are no longer controlled by <span
-class="math inline">\(\sqrt{8t}\)</span>. This is the Hamiltonian
-counterpart of the crossover recorded in <a
-href="torus-valley-potential.html">the valley note</a>, where the
-small-volume description fails when the zero-mode energy reaches <span
-class="math inline">\(\hbar c/L\)</span>.</p>
-<p><em>Approach to <span class="math inline">\(m\)</span>.</em> As <span
-class="math inline">\(t\)</span> grows the smeared operator couples
-preferentially to states of spatial extent <span
-class="math inline">\(\gtrsim\sqrt{8t}\)</span>, so the spectral weights
-of Section 3 concentrate on the lowest states and the bound is expected
-to decrease toward <span class="math inline">\(m\)</span>. Monotonicity
-is not proved here; it would make the family of bounds a convergent
-sequence rather than a single estimate.</p>
+<h2 id="the-free-maxwell-check-and-the-coupling-correction">5. The free
+Maxwell check and the coupling correction</h2>
+<p>The coefficient <span class="math inline">\(g^2\)</span> in the
+variational bound is cancelled by the <span
+class="math inline">\(g^{-2}\)</span> dependence of the ratio of the two
+free-field observables. Dimensional analysis alone cannot determine this
+coupling dependence. The following is an exact Gaussian calibration;
+extending it to an interacting theory near its confinement scale
+requires nonperturbative control, and an upper bound cannot prove a
+positive gap.</p>
+<h3 id="a.-free-ground-state">5a. Free ground state</h3>
+<p>Take the abelian case of the Hamiltonian of §1, <span
+class="math display">\[H=\int
+d^3x\;\Big[\frac{g^2c}{2\hbar}\,\Pi_i\Pi_i+\frac{\hbar
+c}{2g^2}\,b_ib_i\Big],
+\qquad b_i=\varepsilon_{ijk}\partial_jA_k,
+\qquad[A_i(x),\Pi_j(y)]=i\hbar\delta_{ij}\delta^3(x-y),\]</span> in
+Coulomb gauge <span class="math inline">\(\partial_iA_i=0\)</span>, two
+transverse polarizations. In Fourier modes each transverse mode is an
+oscillator of mass <span class="math inline">\(M=\hbar/(g^2c)\)</span>
+and frequency <span class="math inline">\(\omega_k=ck\)</span>, since
+<span class="math inline">\(\tfrac12M\omega_k^2=\hbar
+ck^2/(2g^2)\)</span> matches the magnetic term. Its ground-state width
+gives <span class="math display">\[\big\langle\hat A_i(k)\hat
+A_j(k&#39;)\big\rangle_0=(2\pi)^3\delta^3(k+k&#39;)\,P^{\rm
+T}_{ij}(k)\,\frac{\hbar}{2M\omega_k}
+=(2\pi)^3\delta^3(k+k&#39;)\,P^{\rm T}_{ij}(k)\,\frac{g^2}{2k},\]</span>
+with <span class="math inline">\(P^{\rm T}_{ij}=\delta_{ij}-\hat k_i\hat
+k_j\)</span>. Dimensions: <span class="math inline">\([\hat
+A]=L^2\)</span>, <span
+class="math inline">\([(2\pi)^3\delta^3]=L^3\)</span>, and <span
+class="math inline">\(g^2/2k\)</span> is a length.</p>
+<h3 id="b.-equal-time-flow">5b. Equal-time flow</h3>
+<p>For an abelian field the flow equation of §4 reduces to <span
+class="math inline">\(\partial_sB_i=\Delta
+B_i-\partial_i(\partial_jB_j)\)</span>, and a transverse initial field
+stays transverse, so <span class="math display">\[\hat
+B_i(t,k)=e^{-tk^2}\hat A_i(k),\qquad
+\hat b_i(t,k)=i\varepsilon_{ijl}k_j\,e^{-tk^2}\hat A_l(k).\]</span> The
+flow time has dimension of length squared; the conventional smearing
+radius is <span class="math inline">\(\sqrt{8t}\)</span>. Set <span
+class="math inline">\(\varphi_t=\tfrac12\big(b_t\!\cdot\!b_t-\langle
+b_t\!\cdot\!b_t\rangle_0\big)\)</span>, of dimension <span
+class="math inline">\(L^{-4}\)</span>.</p>
+<h3 id="c.-susceptibility">5c. Susceptibility</h3>
+<p>Write <span class="math inline">\(G_{ij}(z)=\langle
+b_{t,i}(z)b_{t,j}(0)\rangle_0\)</span>. Using <span
+class="math inline">\(\varepsilon_{iab}\varepsilon_{jcd}k_ak_cP^{\rm
+T}_{bd}(k)=k^2P^{\rm T}_{ij}(k)\)</span> (the longitudinal part of <span
+class="math inline">\(P^{\rm T}\)</span> drops because <span
+class="math inline">\(\varepsilon_{iab}k_a\hat k_b=0\)</span>), <span
+class="math display">\[\tilde G_{ij}(k)=k^2P^{\rm
+T}_{ij}(k)\,\frac{g^2}{2k}\,e^{-2tk^2}
+=\frac{g^2k}{2}\,e^{-2tk^2}\,P^{\rm T}_{ij}(k).\]</span> For a Gaussian
+field Wick’s theorem gives <span
+class="math inline">\(\langle\varphi_t(z)\varphi_t(0)\rangle^{\rm
+c}_0=\tfrac12\sum_{ij}G_{ij}(z)^2\)</span> (two pairings), so by
+Parseval, with <span class="math inline">\(\sum_{ij}[P^{\rm
+T}_{ij}]^2=\operatorname{tr}P^{\rm T}=2\)</span>, <span
+class="math display">\[\chi_{\varphi_t}=\int
+d^3z\,\langle\varphi_t\varphi_t\rangle^{\rm c}
+=\frac12\int\frac{d^3k}{(2\pi)^3}\,\frac{g^4k^2}{2}\,e^{-4tk^2}
+=\frac{g^4}{4}\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^4e^{-4tk^2}.\]</span>
+With <span class="math inline">\(\int_0^\infty k^4e^{-\alpha
+k^2}dk=3\sqrt\pi/(8\alpha^{5/2})\)</span> and <span
+class="math inline">\(\alpha=4t\)</span>, so <span
+class="math inline">\((4t)^{5/2}=32t^{5/2}\)</span>, <span
+class="math display">\[\chi_{\varphi_t}=\frac{g^4}{4}\cdot\frac1{2\pi^2}\cdot\frac{3\sqrt\pi}{256\,t^{5/2}}
+=\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}} .\]</span> Dimension: <span
+class="math inline">\([\chi]=[\varphi]^2L^3=L^{-5}\)</span> and <span
+class="math inline">\(t^{5/2}\sim L^5\)</span>, as required.</p>
+<h3 id="d.-gradient-term">5d. Gradient term</h3>
+<p>By Parseval <span class="math inline">\(O=\int
+d^3y\,\varphi_t=\tfrac12\int\frac{d^3k}{(2\pi)^3}k^2e^{-2tk^2}|\hat
+A(k)|^2+\text{const}\)</span>, so <span
+class="math display">\[D_i(x)=\frac{\delta O}{\delta
+A_i(x)}=\big(-\Delta\,e^{2t\Delta}A\big)_i(x)
+=\big(\nabla\times b_{2t}\big)_i(x),\qquad
+\hat D_i(k)=k^2e^{-2tk^2}\hat A_i(k),\]</span> the curl of the magnetic
+field at twice the flow time. Hence <span
+class="math display">\[\big\langle|D|^2\big\rangle_0=\int\frac{d^3k}{(2\pi)^3}k^4e^{-4tk^2}\cdot2\cdot\frac{g^2}{2k}
+=g^2\cdot\frac1{2\pi^2}\int_0^\infty\!dk\,k^5e^{-4tk^2}
+=\frac{g^2}{2\pi^2}\cdot\frac1{64\,t^3}=\frac{g^2}{128\,\pi^2\,t^3},\]</span>
+using <span class="math inline">\(\int_0^\infty k^5e^{-\alpha
+k^2}dk=1/\alpha^3\)</span>. Dimension: <span
+class="math inline">\([\varphi]^2L^2=L^{-6}\)</span> and <span
+class="math inline">\(t^3\sim L^6\)</span>, as required.</p>
+<h3 id="e.-the-bound-and-coupling-cancellation">5e. The bound and
+coupling cancellation</h3>
+<p><span class="math display">\[\frac{\langle|D|^2\rangle}{\chi}
+=\frac{g^2}{128\pi^2t^3}\cdot\frac{2048\,\pi^{3/2}t^{5/2}}{3g^4}
+=\frac{16}{3\,g^2\sqrt{\pi t}},\]</span> <span class="math display">\[m\
+\le\ \frac{g^2\hbar c}{2}\cdot\frac{16}{3g^2\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}
+=\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar
+c}{\sqrt{8t}}\approx4.26\,\frac{\hbar c}{\sqrt{8t}} .\]</span></p>
+<p><strong>Correction.</strong> The earlier version inferred <span
+class="math inline">\(m\le Cg^2\hbar c/\sqrt{8t}\)</span> from
+dimensional analysis, assigning the pure numbers <span
+class="math inline">\(k_1,k_2\)</span> no coupling dependence. The
+computation shows <span class="math inline">\(\chi\propto g^4\)</span>
+while <span class="math inline">\(\langle|D|^2\rangle\propto
+g^2\)</span>, so the ratio carries <span
+class="math inline">\(g^{-2}\)</span> and the bound is of order <span
+class="math inline">\(g^0\)</span>. The corrected statement is that the
+perturbative bound is <span class="math inline">\(4.26\,\hbar
+c/\sqrt{8t}\,[1+O(g^2)]\)</span>, with the coupling entering only
+through the corrections. The <span
+class="math inline">\(t\)</span>-dependence <span
+class="math inline">\(1/\sqrt{8t}\)</span> of the earlier note
+stands.</p>
+<h3 id="f.-two-photon-sum-rule-check">5f. Two-photon sum-rule check</h3>
+<p>By the spectral reading of §3, the bound equals the mean excitation
+energy weighted by the spectral weight of <span
+class="math inline">\(O\)</span>. In the free theory <span
+class="math inline">\(O\)</span> is quadratic in <span
+class="math inline">\(\hat A\)</span> and creates two photons of momenta
+<span class="math inline">\(k\)</span> and <span
+class="math inline">\(-k\)</span>, of total energy <span
+class="math inline">\(2\hbar ck\)</span>, with weight proportional to
+<span
+class="math inline">\(\big[k^2e^{-2tk^2}\big]^2\big[g^2/2k\big]^2\,k^2\,dk\propto
+k^4e^{-4tk^2}dk\)</span> after the phase-space factor. Therefore <span
+class="math display">\[\frac{\int_0^\infty 2\hbar ck\cdot
+k^4e^{-4tk^2}dk}{\int_0^\infty k^4e^{-4tk^2}dk}
+=2\hbar c\,\frac{1/(64t^3)}{3\sqrt\pi/(256\,t^{5/2})}
+=2\hbar c\cdot\frac{4}{3\sqrt{\pi t}}
+=\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t},\]</span> the same number.
+The agreement checks Proposition 1, the intensive form of Corollary 2
+and the Gaussian computation against each other, since both evaluate the
+same spectral sum rule by different arithmetic routes.</p>
+<p>In a weakly coupled regime the free value is a perturbative
+orientation, not a uniform confinement-scale bound. Its decrease at
+large flow time is consistent with a gapless photon; monotonic
+convergence of the interacting spectral mean to the lowest energy is not
+proved.</p>
 <h2 id="status">6. Status</h2>
 <table>
 <colgroup>
@@ -345,45 +425,44 @@ sequence rather than a single estimate.</p>
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>claim</th>
 <th>status</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Proposition 1, the bound with explicit constants</td>
 <td>proved</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Corollary 2, intensive zero-momentum form</td>
 <td>proved</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><span class="math inline">\(f\)</span>-sum rule reading,
 conserved-observable check</td>
 <td>proved</td>
 </tr>
-<tr>
+<tr class="even">
 <td>finiteness of the lattice bound at fixed <span
 class="math inline">\(a\)</span></td>
 <td>proved</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>(F1), continuum limit of the flowed equal-time correlators</td>
 <td>hypothesis; the flow’s renormalization in the Hamiltonian
 framework</td>
 </tr>
-<tr>
+<tr class="even">
 <td><span class="math inline">\(\chi&gt;0\)</span></td>
 <td>hypothesis; nontriviality</td>
 </tr>
-<tr>
-<td><span class="math inline">\(\langle|D|^2\rangle/\chi\simeq
-c/\sqrt{8t}\)</span></td>
-<td>dimensional, coefficients not computed</td>
+<tr class="odd">
+<td>Free Maxwell ratio and two-photon mean</td>
+<td>exact calibration, §5</td>
 </tr>
-<tr>
+<tr class="even">
 <td><span class="math inline">\(m&gt;0\)</span></td>
 <td>untouched</td>
 </tr>
@@ -401,12 +480,11 @@ hypothesis for the continuum. The two hypotheses are different in kind.
 (F1) concerns flowed observables, which are expected to be renormalized
 by Lüscher’s four-dimensional result and whose Hamiltonian counterpart
 is a bounded, self-contained question; the dressed-vacuum problem of <a
-href="schur-error-ultraviolet.html">the Schur note</a> concerns the
-state itself. The next steps this suggests, in order: compute <span
-class="math inline">\(k_1,k_2\)</span> in free Maxwell theory to make
-Section 5 quantitative and check the free limit; then state the
-Hamiltonian flow-renormalization question as its own target, since both
-the upper-side (F1) and the lower-side dressing are instances of it.</p>
+href="weak-coupling-feshbach-reduction.html">the Schur note</a> concerns
+the state itself. The next steps this suggests, in order: use the
+explicit free-field calibration in §5; then state the Hamiltonian
+flow-renormalization question as its own target, since both the
+upper-side (F1) and the lower-side dressing are instances of it.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -334,11 +334,10 @@ The box makes the finish line definite and existential: the flow has to
 arrive at couplings and correction sizes satisfying item 3. The formal
 count of §3 suggests, without proof, $g^2\sim10^2$ with corrections of
 local norm about $10^{-1}\,\hbar c/a$ for single-plaquette terms and below
-$10^{-2}\,\hbar c/a$ for two-plaquette terms. The repository's only
-extracted value of Yarotsky's constant, $\beta_*\simeq e^{-465}$ for the
+$10^{-2}\,\hbar c/a$ for two-plaquette terms. The repository's heuristic extraction, $\beta\simeq e^{-465}$ for the
 range $\{0,1\}^3$, is a heuristic proof extraction
-([strong-coupling-threshold-explicit](strong-coupling-threshold-explicit.md),
-labelled in the Kogut--Susskind note §5); $\beta^*_q$ for the larger range
+([Kogut--Susskind note](kogut-susskind-strong-coupling-explicit.md),
+§5); $\beta^*_q$ for the larger range
 $\Lambda_q$ has not been extracted.
 
 The one-loop distance from $g^2=1/2$ to $g^2=100$ is
@@ -361,7 +360,7 @@ existential. The location of the box is not explicit. The explicit table
 of §3 and the target $g^2\sim10^2$ are formal restricted estimates that
 inherit the gaps named in the Kogut--Susskind correction; downstream uses
 of the box location, including
-[abelian-misses-the-box](abelian-misses-the-box.md) and
+[abelian comparison](strong-coupling-uniform-gap.md) and
 [intermediate-region-finite-verification](intermediate-region-finite-verification.md),
 should read it existentially. An explicit box needs a complete marked
 general-history count with $q$-link insertions and a normalized

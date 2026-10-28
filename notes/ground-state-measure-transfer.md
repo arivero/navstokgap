@@ -1,6 +1,6 @@
 # Ground-state measure transfer: the slice identity is exact, the large-field estimate remains open
 
-Later corrections: [the operator-inequality note](large-field-operator-inequality.md) separates measure from operator control; [the corrected Jacobian note](flow-jacobian-truncation-error.md) and [instability note](flow-instability-large-field.md) withdraw the Hamiltonian truncation and sharp-crossover claims; [the lattice note](lattice-truncation-uniform.md) treats a different, single-step regime (relevant passages read).
+Later corrections: [the operator-inequality note](large-field-operator-inequality.md) separates measure from operator control; [the corrected Jacobian note](flow-jacobian-truncation-error.md) and [instability note](flow-instability-large-field.md) withdraw the Hamiltonian truncation and sharp-crossover claims; [the lattice note](flow-conjugation-truncation.md) treats a different, single-step regime (relevant passages read).
 
 > **Correction (2026-10-02).** The original title and lead claimed that
 > isotropic Wilson-measure estimates transfer verbatim to the
@@ -192,7 +192,7 @@ smearing and threshold. For a scalar Gaussian $X$ of variance
 $\sigma^2$, $\mathbb P(|X|\ge u)\le2e^{-u^2/(2\sigma^2)}$ by the
 exponential-moment bound. For the three-component, single-colour abelian
 magnetic field with Gaussian heat smearing used in
-[the free-field note](flowed-bound-free-field.md), §§1--3 (passages read),
+[the free-field calculation](finiteness-half-flowed-susceptibility.md), §§5a--5c (passages read),
 $$\widetilde G_{ij}(k)=\frac{g^2|k|}{2}e^{-2t|k|^2}
 (\delta_{ij}-\hat k_i\hat k_j).$$
 Taking its trace and radial integral gives
@@ -268,7 +268,7 @@ distinguish positive errors from negative wells. The later
 [instability correction](flow-instability-large-field.md), §§2 and 4
 (passages read), supplies no sharp lower bound on truncation tails.
 The separate single-lattice-step discussion in
-[the lattice note](lattice-truncation-uniform.md), §§1--2 (passages read),
+[the lattice note](flow-conjugation-truncation.md), §§1--2 (passages read),
 must not be read as a fixed-physical-scale continuum estimate or as a
 repair of these missing operator comparisons.
 

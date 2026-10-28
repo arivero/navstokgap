@@ -254,7 +254,49 @@ class="math inline">\(C_2=C_2(R_{\min})\)</span> and the bound <span
 class="math inline">\(N-\operatorname{Re}\operatorname{tr}U_p\le2\dim\)</span>
 in place of <span class="math inline">\(2N\)</span>; the threshold is
 <span class="math inline">\(g_0^4=24\dim/(C_2\beta_*)\)</span>.</p>
-<h2 id="what-the-theorem-does-and-does-not-give">3. What the theorem
+<h2 id="the-abelian-comparison-and-a-finite-volume-bound">3. The abelian
+comparison and a finite-volume bound</h2>
+<p>For compact <span class="math inline">\(U(1)\)</span> take magnetic
+term <span class="math inline">\((2/g^2)\sum_p(1-\cos\theta_p)\)</span>
+and electric term <span class="math inline">\((g^2/2)\sum_\ell
+n_\ell^2\)</span>. On a periodic cubic lattice with <span
+class="math inline">\(N_s\ge4\)</span>, Gauss’s law forces a nonzero
+charge network to contain a cycle, whose shortest length is four. A
+plaquette loop realizes it, so the physical electric gap is exactly
+<span class="math inline">\(2g^2\hbar c/a\)</span>. With <span
+class="math inline">\(P=3N_s^3\)</span>, subtracting the scalar magnetic
+constant leaves an operator of norm at most <span
+class="math inline">\(2P/g^2\)</span> in units <span
+class="math inline">\(\hbar c/a\)</span>. Min–max bounds the two lowest
+eigenvalue shifts separately and therefore <span
+class="math display">\[\left(2g^2-\frac{4P}{g^2}\right)\frac{\hbar c}{a}
+\le\Delta^{\rm phys}_{a,L}\le
+\left(2g^2+\frac{4P}{g^2}\right)\frac{\hbar c}{a},\qquad
+L=N_sa.\]</span> At fixed <span class="math inline">\(N_s\)</span>, the
+ratio to <span class="math inline">\(g^2\hbar c/a\)</span> tends to
+<span class="math inline">\(2\)</span> as <span
+class="math inline">\(g\to\infty\)</span>; the lower bound gives no
+volume-uniform threshold. The corresponding <span
+class="math inline">\(SU(3)\)</span> finite-volume calculation and the
+incomplete continuous-time polymer count are in <a
+href="kogut-susskind-strong-coupling-explicit.html">the continuous-time
+note</a>.</p>
+<p>The existential Yarotsky theorem applies to both groups. Their weak
+sides differ: for <span class="math inline">\(SU(3)\)</span> the
+perturbative slope is <span class="math inline">\(d g^2/d\log
+a=2b_0g^4+O(g^6)\)</span>, <span
+class="math inline">\(b_0=11/(16\pi^2)\)</span>, while the continuum
+pure photon has no perturbative self-interaction. Guth (Phys. Rev. D 21
+(1980) 2291) and Fröhlich–Spencer (Commun. Math. Phys. 83 (1982) 411)
+are metadata-level sources for a weak-coupling massless phase of compact
+lattice <span class="math inline">\(U(1)\)</span>. Perturbative running
+is not an exact compact-lattice blocking identity and does not establish
+a single gapped interval, controlled arrival at the target box or
+continuum reconstruction. The former uniform <span
+class="math inline">\(4\lambda\)</span> rate and numerical box location
+are withdrawn; <a href="strong-coupling-target-box.html">the target
+box</a> is existential.</p>
+<h2 id="what-the-theorem-does-and-does-not-give">4. What the theorem
 does and does not give</h2>
 <ul>
 <li><em>Uniformity.</em> <span class="math inline">\(\gamma\)</span>
@@ -293,19 +335,19 @@ class="math inline">\(&#39;\)</span>, where the abelian gap closes
 persist.</li>
 <li><em>Explicitness.</em> <span class="math inline">\(\beta_*\)</span>
 and <span class="math inline">\(\gamma\)</span> exist by the theorem and
-are not given as numbers in its statement. Extracted from the proof (<a
-href="strong-coupling-threshold-explicit.html">threshold note</a>), the
-time-discretized expansion gives <span
-class="math inline">\(\beta_*\simeq e^{-465}\)</span> and <span
-class="math inline">\(g_0^2\simeq10^{101}\)</span> for <span
-class="math inline">\(SU(3)\)</span>; the continuous-time expansion of
-<a href="kogut-susskind-strong-coupling-explicit.html">the
-Kogut–Susskind note</a> gives <span
-class="math inline">\(g_0^2=388\)</span> rigorously (<span
+are not given as numbers in its statement. A heuristic extraction of the
+time-discretized expansion gives <span class="math inline">\(\beta\simeq
+e^{-465}\)</span> and <span class="math inline">\(g_0^2\)</span> of
+order <span class="math inline">\(10^{102}\)</span> for <span
+class="math inline">\(SU(3)\)</span>, but the required support-weight
+bound is unproved; the continuous-time expansion of <a
+href="kogut-susskind-strong-coupling-explicit.html">the Kogut–Susskind
+note</a> gave <span class="math inline">\(g_0^2=388\)</span> (<span
 class="math inline">\(79\)</span> in the adjacent-growth class) with
-<span class="math inline">\(\gamma\to4\)</span>. The descent problem
-does not depend on that number, only on the structure of the
-expansion.</li>
+<span class="math inline">\(\gamma\to4\)</span>; that threshold was
+withdrawn on 2026-10-02 after its overlap count was found incomplete, so
+no explicit KS number stands. The descent problem does not depend on
+that number, only on the structure of the expansion.</li>
 <li><em>Relation to the small-volume end.</em> Yarotsky’s expansion is
 in the electric basis, where the ground state at <span
 class="math inline">\(g=\infty\)</span> is the constant function. At
@@ -319,7 +361,7 @@ and <span class="math inline">\(g^{2/3}\)</span>); T2<span
 class="math inline">\(&#39;\)</span> is the statement that the gap does
 not close between them.</li>
 </ul>
-<h2 id="consequence-for-state">4. Consequence for STATE</h2>
+<h2 id="consequence-for-state">5. Consequence for STATE</h2>
 <p>T2 is closed in Hamiltonian form as a corollary of an established
 theorem, with the threshold <span
 class="math inline">\(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\)</span>.

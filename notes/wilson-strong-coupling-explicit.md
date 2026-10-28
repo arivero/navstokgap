@@ -54,7 +54,7 @@ $$\Delta_W\ \ge\ \frac{\hbar c}{a}\,4\log\frac{1}{176\,(e^{6/g^2}-1)}
 \qquad(g^2\ge1059),$$
 uniformly in the volume. The threshold that Yarotsky's theorem supplies
 for the Kogut--Susskind Hamiltonian is $g_0^2\sim10^{101}$
-([threshold note](strong-coupling-threshold-explicit.md)). The Wilson
+([threshold note](kogut-susskind-strong-coupling-explicit.md)). The Wilson
 statement has an explicit threshold because the Euclidean character
 expansion is a polymer gas of plaquette sets covering each of their
 links at least twice, with no time discretization to pay for. Every

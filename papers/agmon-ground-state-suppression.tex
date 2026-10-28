@@ -10,15 +10,15 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
+\hypertarget{an-agmon-bound-for-the-kogutsusskind-ground-state-finite-volume-global-magnetic-energy-tails}{%
 \section{An Agmon bound for the Kogut--Susskind ground state:
 finite-volume global magnetic-energy
-tails}\label{an-agmon-bound-for-the-kogutsusskind-ground-state-finite-volume-global-magnetic-energy-tails}
+tails}\label{an-agmon-bound-for-the-kogutsusskind-ground-state-finite-volume-global-magnetic-energy-tails}}
 
-Later correction: \href{agmon-global-not-local.md}{the global/local
-note} supersedes the original local-suppression interpretation;
+The global/local correction is incorporated below;
 \href{magnetic-energy-identities.md}{the magnetic-energy identities
 note}, §4, records the limitation of the proposed Gibbs-comparison
-repair (both full-read).
+repair (full-read).
 
 \begin{quote}
 \textbf{Correction (2026-10-02).} The original title and lead claimed
@@ -27,15 +27,15 @@ this supplied the Hamiltonian large-field input for decimation. Those
 claims are \textbf{withdrawn}. Section 2 estimated one relaxation path,
 which can give only an upper bound on an infimum, whereas decay requires
 a lower bound for every path. It is replaced below by the global-excess
-bound of \href{agmon-global-not-local.md}{the global/local note}, with
-its volume dependence retained. The original pointwise estimate for
-\(|\Omega(U)|^2\) is replaced by an integrated probability estimate.
-Sections 3--5 no longer assert local exponential-moment control or a
-successful match to the flow Jacobian. Lemma 1 and Corollary 2 survive;
-their application now states the weight margin and prefactor explicitly.
-The threshold \(e_0/B'\) is not the mean magnetic energy. Excited-state
-extensions use \(|\psi|^2\) and do not assume positivity. This paragraph
-records the correction rather than silently removing the earlier claims.
+bound below, with its volume dependence retained. The original pointwise
+estimate for \(|\Omega(U)|^2\) is replaced by an integrated probability
+estimate. Sections 3--5 no longer assert local exponential-moment
+control or a successful match to the flow Jacobian. Lemma 1 and
+Corollary 2 survive; their application now states the weight margin and
+prefactor explicitly. The threshold \(e_0/B'\) is not the mean magnetic
+energy. Excited-state extensions use \(|\psi|^2\) and do not assume
+positivity. This paragraph records the correction rather than silently
+removing the earlier claims.
 \end{quote}
 
 On a fixed finite spatial lattice, Agmon's weighted eigenfunction
@@ -59,8 +59,9 @@ volume-uniform local large-field estimate, spectral gap or continuum
 claim follows. The written proofs below establish these finite-lattice
 statements without the original relaxation-path heuristic.
 
+\hypertarget{setting-and-the-weighted-identity}{%
 \subsection{1. Setting and the weighted
-identity}\label{setting-and-the-weighted-identity}
+identity}\label{setting-and-the-weighted-identity}}
 
 Let \(G=SU(N)\), \(N\ge2\), \(g>0\), \(a>0\), and let
 \(\mathcal M=G^{\mathcal E}\) carry the product bi-invariant metric with
@@ -139,8 +140,9 @@ attainable and \(e_0\ge0\)). This is not a uniform constant in volume or
 coupling. No pointwise bound on \(\Omega\) follows just by dropping the
 gradient term in this identity.
 
+\hypertarget{a-lower-bound-over-all-paths-and-a-global-tail}{%
 \subsection{2. A lower bound over all paths and a global
-tail}\label{a-lower-bound-over-all-paths-and-a-global-tail}
+tail}\label{a-lower-bound-over-all-paths-and-a-global-tail}}
 
 The threshold \(\bar v=e_0/B'\) satisfies
 \[\bar v=\langle V\rangle_\Omega+
@@ -208,8 +210,9 @@ event need not imply even this total excess, since the complementary
 plaquettes can lower \(V\). The argument supplies no volume-uniform
 local estimate.
 
+\hypertarget{comparison-with-the-euclidean-weight}{%
 \subsection{3. Comparison with the Euclidean
-weight}\label{comparison-with-the-euclidean-weight}
+weight}\label{comparison-with-the-euclidean-weight}}
 
 The Wilson action is \[S_w=\frac{2N}{g_E^2}\sum_p\left(1-\frac1N
 \operatorname{Re}\operatorname{tr}U_p\right)=\frac{2}{g_E^2}V.\] An
@@ -228,10 +231,11 @@ The original assertion that local large-field regions are exponentially
 rare at the required rate in the Hamiltonian ground state is withdrawn.
 The global estimate does not supply the local input sought in
 \href{typical-field-strength-window.md}{the typical-field note} or
-\href{flow-before-decimation.md}{the flow-before-decimation note}.
+\href{flow-conjugation-truncation.md}{the flow-before-decimation note}.
 
+\hypertarget{scope-excited-states-and-the-missing-local-input}{%
 \subsection{4. Scope, excited states and the missing local
-input}\label{scope-excited-states-and-the-missing-local-input}
+input}\label{scope-excited-states-and-the-missing-local-input}}
 
 The surviving statements are the weighted identity, the forbidden-set
 estimate and the global integrated tail. At finite volume all
@@ -276,17 +280,17 @@ is impossible. The
 there must survive the temporal-continuum and vacuum limits with its
 constants controlled. No such local estimate is established here.
 
-\subsection{5. Consequence for STATE}\label{consequence-for-state}
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
 
 Keep this note as a finite-lattice global-energy result: Lemma 1,
 Corollary 2 with explicit margins and prefactors, and Proposition 3's
 all-path lower bound and integrated tail. The original local
 per-plaquette rate, pointwise decay claim, local moment criterion and
-claim to supply the Hamiltonian decimation input are withdrawn. The
-\href{agmon-global-not-local.md}{global/local correction} controls
-reuse; a local energy or measure estimate uniform in volume and cutoff
-remains an independent requirement. Excited-state identities survive
-with \(|\psi_j|^2\), but uniform spectral-subspace and refinement
-estimates do not follow from them. No mass gap or continuum construction
-is claimed.
+claim to supply the Hamiltonian decimation input are withdrawn. This
+corrected argument controls reuse; a local energy or measure estimate
+uniform in volume and cutoff remains an independent requirement.
+Excited-state identities survive with \(|\psi_j|^2\), but uniform
+spectral-subspace and refinement estimates do not follow from them. No
+mass gap or continuum construction is claimed.
 \end{document}

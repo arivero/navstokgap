@@ -10,9 +10,10 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
+\hypertarget{the-strong-coupling-gap-of-the-kogutsusskind-hamiltonian-is-uniform-in-the-volume}{%
 \section{The strong-coupling gap of the Kogut--Susskind Hamiltonian is
 uniform in the
-volume}\label{the-strong-coupling-gap-of-the-kogutsusskind-hamiltonian-is-uniform-in-the-volume}
+volume}\label{the-strong-coupling-gap-of-the-kogutsusskind-hamiltonian-is-uniform-in-the-volume}}
 
 Statement T2 of \href{mass-gap-obligations-lattice.md}{the obligations
 map} holds in Hamiltonian form: for every compact connected gauge group
@@ -38,8 +39,9 @@ abelian from non-abelian groups; that distinction is T2\('\), and the
 rest of the problem is the descent of \(g_0\) to zero along the scaling
 curve. No claim is promoted.
 
+\hypertarget{the-hamiltonian-in-yarotskys-normalization}{%
 \subsection{1. The Hamiltonian in Yarotsky's
-normalization}\label{the-hamiltonian-in-yarotskys-normalization}
+normalization}\label{the-hamiltonian-in-yarotskys-normalization}}
 
 Notation as in \href{mass-gap-obligations-lattice.md}{the obligations
 map} §1: periodic cubic lattice \(\Lambda=(\mathbb Z/N_s\mathbb Z)^3\),
@@ -59,7 +61,8 @@ where \(p(x,i,j)\) is the plaquette with corner \(x\) spanned by
 plaquette to exactly one \(\phi_x\), so the two sums reproduce
 \(H/\varepsilon_0\).
 
-\subsection{2. Hypothesis check}\label{hypothesis-check}
+\hypertarget{hypothesis-check}{%
+\subsection{2. Hypothesis check}\label{hypothesis-check}}
 
 Yarotsky's setting (Section 1 of the paper): a lattice
 \(\mathbb Z^\nu\), site spaces \(\mathcal H_x\) possibly
@@ -143,8 +146,45 @@ For a general compact connected \(G\) the same holds with
 \(N-\operatorname{Re}\operatorname{tr}U_p\le2\dim\) in place of \(2N\);
 the threshold is \(g_0^4=24\dim/(C_2\beta_*)\).
 
-\subsection{3. What the theorem does and does not
-give}\label{what-the-theorem-does-and-does-not-give}
+\hypertarget{the-abelian-comparison-and-a-finite-volume-bound}{%
+\subsection{3. The abelian comparison and a finite-volume
+bound}\label{the-abelian-comparison-and-a-finite-volume-bound}}
+
+For compact \(U(1)\) take magnetic term
+\((2/g^2)\sum_p(1-\cos\theta_p)\) and electric term
+\((g^2/2)\sum_\ell n_\ell^2\). On a periodic cubic lattice with
+\(N_s\ge4\), Gauss's law forces a nonzero charge network to contain a
+cycle, whose shortest length is four. A plaquette loop realizes it, so
+the physical electric gap is exactly \(2g^2\hbar c/a\). With
+\(P=3N_s^3\), subtracting the scalar magnetic constant leaves an
+operator of norm at most \(2P/g^2\) in units \(\hbar c/a\). Min--max
+bounds the two lowest eigenvalue shifts separately and therefore
+\[\left(2g^2-\frac{4P}{g^2}\right)\frac{\hbar c}{a}
+\le\Delta^{\rm phys}_{a,L}\le
+\left(2g^2+\frac{4P}{g^2}\right)\frac{\hbar c}{a},\qquad L=N_sa.\] At
+fixed \(N_s\), the ratio to \(g^2\hbar c/a\) tends to \(2\) as
+\(g\to\infty\); the lower bound gives no volume-uniform threshold. The
+corresponding \(SU(3)\) finite-volume calculation and the incomplete
+continuous-time polymer count are in
+\href{kogut-susskind-strong-coupling-explicit.md}{the continuous-time
+note}.
+
+The existential Yarotsky theorem applies to both groups. Their weak
+sides differ: for \(SU(3)\) the perturbative slope is
+\(d g^2/d\log a=2b_0g^4+O(g^6)\), \(b_0=11/(16\pi^2)\), while the
+continuum pure photon has no perturbative self-interaction. Guth (Phys.
+Rev.~D 21 (1980) 2291) and Fröhlich--Spencer (Commun. Math. Phys. 83
+(1982) 411) are metadata-level sources for a weak-coupling massless
+phase of compact lattice \(U(1)\). Perturbative running is not an exact
+compact-lattice blocking identity and does not establish a single gapped
+interval, controlled arrival at the target box or continuum
+reconstruction. The former uniform \(4\lambda\) rate and numerical box
+location are withdrawn; \href{strong-coupling-target-box.md}{the target
+box} is existential.
+
+\hypertarget{what-the-theorem-does-and-does-not-give}{%
+\subsection{4. What the theorem does and does not
+give}\label{what-the-theorem-does-and-does-not-give}}
 
 \begin{itemize}
 \tightlist
@@ -175,16 +215,16 @@ give}\label{what-the-theorem-does-and-does-not-give}
   the non-abelian one is conjectured to persist.
 \item
   \emph{Explicitness.} \(\beta_*\) and \(\gamma\) exist by the theorem
-  and are not given as numbers in its statement. Extracted from the
-  proof (\href{strong-coupling-threshold-explicit.md}{threshold note}),
-  the time-discretized expansion gives \(\beta_*\simeq e^{-465}\) and
-  \(g_0^2\simeq10^{101}\) for \(SU(3)\); the continuous-time expansion
-  of \href{kogut-susskind-strong-coupling-explicit.md}{the
-  Kogut--Susskind note} gave \(g_0^2=388\) (\(79\) in the
-  adjacent-growth class) with \(\gamma\to4\); that threshold was
-  withdrawn on 2026-10-02 after its overlap count was found incomplete,
-  so no explicit KS number stands. The descent problem does not depend
-  on that number, only on the structure of the expansion.
+  and are not given as numbers in its statement. A heuristic extraction
+  of the time-discretized expansion gives \(\beta\simeq e^{-465}\) and
+  \(g_0^2\) of order \(10^{102}\) for \(SU(3)\), but the required
+  support-weight bound is unproved; the continuous-time expansion of
+  \href{kogut-susskind-strong-coupling-explicit.md}{the Kogut--Susskind
+  note} gave \(g_0^2=388\) (\(79\) in the adjacent-growth class) with
+  \(\gamma\to4\); that threshold was withdrawn on 2026-10-02 after its
+  overlap count was found incomplete, so no explicit KS number stands.
+  The descent problem does not depend on that number, only on the
+  structure of the expansion.
 \item
   \emph{Relation to the small-volume end.} Yarotsky's expansion is in
   the electric basis, where the ground state at \(g=\infty\) is the
@@ -197,7 +237,8 @@ give}\label{what-the-theorem-does-and-does-not-give}
   does not close between them.
 \end{itemize}
 
-\subsection{4. Consequence for STATE}\label{consequence-for-state}
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
 
 T2 is closed in Hamiltonian form as a corollary of an established
 theorem, with the threshold \(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\).
