@@ -179,7 +179,22 @@ href="action-scale-obstructions.html">action-scale synthesis §5</a> and
 the foundations manuscript linked there;
 <code>two-regulator-audit</code> → <a
 href="newton-dimock-balaban-guide.html">Newton synthesis, groupoid and
-RG</a>.</p>
+RG</a>. The early <code>composition-crossover-gap-checks</code> is
+covered by <a href="composition-universality.html">composition</a>, <a
+href="telegraph-return-bridge.html">telegraph crossover</a>, <a
+href="checkerboard-dynamics.html">checkerboard continuation</a> and <a
+href="susceptibility-gap.html">spectral gap</a>;
+<code>i003-double-limit-rigidity</code> and
+<code>cone-time-refinement</code> → <a
+href="cut-paradox-two-faces.html">cut paradox, matrix/readout and source
+trail</a>, with the <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/time-refinement.tex">free-kernel
+manuscript</a> retaining the full normalization proof;
+<code>arrow-not-sling</code> → <a
+href="planck-gap-paper.html#why-the-arrow-and-not-the-sling">paper
+§9</a> and its <a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/arrow-not-sling.pdf">historical
+PDF</a>.</p>
 <h2 id="alphabetical-catalog">Alphabetical catalog</h2>
 <p>Retrieval priorities follow the user’s independent analysis
 (2026-10-01): <code>priority=3</code> (★★★) is the current spine or a
@@ -406,19 +421,6 @@ marginal composition are distinct; no ancient path-integral or
 Newton-transmission claim is supported. <a
 href="cut-point-consistency.html">cut-point-consistency</a> treats fixed
 surrounding endpoints only.</p></li>
-<li><p><a href="arrow-not-sling.html">arrow-not-sling.md</a> |
-priority=0 | flags=none | role=historical,synthesis | status=historical
-| proof_status=reading | value=source-guardrail | keys=Zeno
-arrow;Plutarch 923C;sling moon;alātacakra;Vaiśeṣika;inertia;first second
-rung | area=historical/sources Title: Why the ancients argued about the
-arrow and not the sling Summary: Reads ancient arrow arguments as
-first-order motion questions, Newton’s sling as second-order deviation
-under inertia, and the firebrand circle as sampling/appearance.
-Limit/reuse: The corrected note explicitly retains Plutarch’s sling–moon
-witness; any claim that ancient philosophical sling arguments are absent
-is false. The force-rung analogy uses <a
-href="planck-gap-paper.html">planck-gap-paper</a>, not a historical
-transmission proof.</p></li>
 <li><p><a
 href="autonomous-finite-readout.html">autonomous-finite-readout.md</a> |
 priority=1 | flags=surprising | role=result,calibration | status=result
@@ -720,50 +722,21 @@ href="three-continuum-limits.html">three-continuum-limits</a> and <a
 href="mass-gap-obligations-lattice.html">mass-gap-obligations-lattice</a>
 carry the current programme.</p></li>
 <li><p><a
-href="composition-crossover-gap-checks.html">composition-crossover-gap-checks.md</a>
-| priority=0 | flags=none | role=calibration,infrastructure |
-status=result | proof_status=mixed |
-value=used-calibration,infrastructure | keys=P02;A08;A09;G01;product
-chain;telegraph midpoint;slow hidden mode;historical scripts |
-area=infrastructure Title: Composition, crossover and gap product:
-verified calculations for A08, A09 and G01 Summary: Early working
-calculations cover independent composition, telegraph bridge crossover,
-auxiliary spectral bounds and analytic continuation. Hidden slow modes
-preserve a velocity plateau while closing the full relaxation gap.
-Limit/reuse: Historical script/sampler evidence and uncompiled Lean are
-not active verification instructions. Retrieve maintained <a
-href="composition-universality.html">composition-universality</a>, <a
-href="telegraph-return-bridge.html">telegraph-return-bridge</a>, <a
-href="checkerboard-dynamics.html">checkerboard-dynamics</a> and <a
-href="susceptibility-gap.html">susceptibility-gap</a> for durable
-statements.</p></li>
-<li><p><a
 href="composition-universality.html">composition-universality.md</a> |
 priority=2 | flags=none | role=result | status=conditional |
 proof_status=mixed | value=known-boundary | keys=A08;C035;C036;mass
 composition;nonnegative additive function;Green–Kubo;reference reversal
 rate;preparation equivalence;C050;C051;ordered-beam-preparation;Palm
-residual | area=Newton/action Title: A shared action coefficient from
-classical composition Summary: Nonnegative mass-only fluctuation
-coefficients preserved by independent centre-of-mass composition over
-every positive mass are constant K≥0. A supplied positive reference
-gives K&gt;0 within its class; Poisson and ordered beams with matching
+residual;composition-crossover-gap-checks;mass-orthogonal coordinate |
+area=Newton/action Title: A shared action coefficient from classical
+composition Summary: Nonnegative mass-only fluctuation coefficients
+preserved by independent centre-of-mass composition over every positive
+mass are constant K≥0. A general independent linear coordinate has the
+mass-weighted average coefficient. A supplied positive reference gives
+K&gt;0 within its class; Poisson and ordered beams with matching
 mechanical scales have different long-window coefficients. Limit/reuse:
 Preparation equivalence and independence are essential; the beam
 countertest does not establish a universal action floor.</p></li>
-<li><p><a href="cone-time-refinement.html">cone-time-refinement.md</a> |
-priority=1 | flags=none | role=synthesis,routing | status=result |
-proof_status=mixed | value=synthesis,known-boundary | keys=M05;Gaussian
-kernel;time convolution;cone sections;Rivero 1998;tangent groupoid;zero
-deterministic branch | area=refinement/comparison Title: From cone
-sections to time refinement Summary: Connects source-inspired spatial
-cutting to Gaussian time-kernel composition: convolution preserves any
-supplied variance coefficient κ/m, including the deterministic zero
-member. Limit/reuse: Positivity and oscillatory analytic continuation
-are separate physical premises. Historical source tasks and old
-next-step instructions are context; <a
-href="refinement-composition-and-limit.html">refinement-composition-and-limit</a>
-develops the maintained insertion framework.</p></li>
 <li><p><a
 href="confinement-scale-bands.html">confinement-scale-bands.md</a> |
 priority=2 | flags=none | role=synthesis,obstruction |
@@ -906,19 +879,27 @@ action/scale ratios. Limit/reuse: Proposition 7’s sharp value is a
 supremum, never attained by finite end marks. Cell floors and cut-share
 floors differ; noise/action scales remain supplied.</p></li>
 <li><p><a href="cut-paradox-two-faces.html">cut-paradox-two-faces.md</a>
-| priority=1 | flags=none | role=result,synthesis | status=result |
-proof_status=proved-unrefereed | value=known-boundary |
-keys=I003;C032;scalar rigidity;ballistic support;Paley–Wiener;unitary
-translation;internal velocity;Compton branch points |
+| priority=1 | flags=route-closure | role=result,synthesis,obstruction |
+status=result | proof_status=mixed |
+value=known-boundary,decisive-obstruction | keys=I003;C032;scalar
+rigidity;ballistic support;Paley–Wiener;unitary translation;internal
+velocity;Compton branch points;matrix semigroup conjecture;telegraph
+commutator;hidden slow mode;independent additive readout noise;double
+limit;probability conservation;cone sections;Xylander 1570;Rivero
+1998;time refinement;deterministic zero
+branch;i003-double-limit-rigidity;cone-time-refinement |
 area=refinement/comparison Title: The cut paradox in two signatures:
-sections of a solid and instants of a motion Summary: Ballistic-support
-scalar convolution probability semigroups are deterministic drifts;
-scalar translation-invariant strongly continuous unitary groups with
-compact light-cone kernels are translations times a phase. Limit/reuse:
-The unitary proposition is a working unrefereed derivation; nontrivial
-telegraph/Dirac dynamics retain internal state. Cone/arrow comparisons
-are modern heuristics, and the supplied crossover scale does not
-establish action positivity.</p></li>
+sections of a solid and instants of a motion Summary: Scalar
+ballistic-support laws are deterministic; the matrix finite-propagation
+extension remains unproved. Independent readout errors add mε²/(6Δ) to a
+bounded-speed variance coefficient, selecting any joint-limit value by a
+supplied noise scaling; cone sources and the zero-action free Gaussian
+family are routed here. Limit/reuse: The scalar unitary proposition
+remains an unrefereed working derivation; matrix classification is
+conjectural, and independent readout noise creates no intrinsic floor.
+The free-kernel proof is retained in <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/time-refinement.tex">time-refinement</a>;
+no physical ℏ is selected.</p></li>
 <li><p><a href="cut-point-consistency.html">cut-point-consistency.md</a>
 | priority=2 | flags=none | role=result | status=result |
 proof_status=proved-refereed | value=known-boundary |
@@ -1518,22 +1499,6 @@ confining infrared cap. Limit/reuse: references are metadata-level and
 holographic interpretations are orientation; large-N capped geometries
 prove no SU(3) theorem. The usable standard marginal identity is in <a
 href="ground-state-measure-transfer.html">measure transfer</a>.</p></li>
-<li><p><a
-href="i003-double-limit-rigidity.html">i003-double-limit-rigidity.md</a>
-| priority=0 | flags=route-closure | role=superseded,synthesis |
-status=obstruction | proof_status=mixed | value=known-boundary |
-keys=I003;finite propagation;matrix semigroup classification;telegraph
-commutator;hidden slow modes;additive readout noise;double
-limit;probability conservation | area=Newton/action Title: I003: finite
-propagation, internal state and resolution Summary: Corrected
-exploratory draft retains exact two-state commutator scales and a
-specified additive-noise double-limit calculation, while withdrawing
-general zero-response and classification claims. Limit/reuse: the matrix
-finite-propagation classification is still conjectural; Markov
-conservation is an additional premise, and commutator norms can miss
-slow modes. Noise-selected limits do not force a physical floor. <a
-href="cut-paradox-two-faces.html">Two faces</a> holds the scalar
-result.</p></li>
 <li><p><a
 href="indistinguishable-phase-bound.html">indistinguishable-phase-bound.md</a>
 | priority=2 | flags=none | role=result | status=result |
@@ -2221,25 +2186,25 @@ instruments;polygon phase;Opticks fits;ancient division;Kepler
 localization;selection-dependent endpoints;coherence premise;incoherent
 classical countercase;h versus hbar;closed Schur form;critical
 angular-channel counterexample;supplied positive action;universality and
-necessity open | area=Newton/action Title: The cost of a mark: Newton’s
-vanishing sagitta and a floor of order <span
-class="math inline">\(\hbar\)</span> Summary: Newton/ancient-source
-synthesis combines conditional Gaussian recording bounds, general
-disturbance costs and polygon phases. The October 2 opening states
-supplied quantum action, coherence and domain-selection premises;
-section 10a integrates fixed-interval Kepler localization and centroids,
-the incoherent classical countercase, and reduced-phase Coulomb
-thresholds. Limit/reuse: Quantum states, instruments and positive hbar
-are premises. The full Planck constant is h=2 pi hbar; Coulomb
-selections use reduced hbar. Coherent-stream contrast requires coherence
-and a record topology; the incoherent-mixture countercase is exact for
-quadratic forces. Dirac finite-potential and critical-form selections
-have different endpoints; the KG radial endpoint does not prove full
-critical dynamics. The critical Dirac domain uses the original form
-closure and excludes the problematic compact source rewrite. Classical
-completions are not excluded. Independent necessity, universal
-calibration and historical submission obligations remain open. New
-additions are unrefereed; earlier reviews do not certify them, and
+necessity open;arrow-not-sling;Plutarch 923C;firebrand circle |
+area=Newton/action Title: The cost of a mark: Newton’s vanishing sagitta
+and a floor of order <span class="math inline">\(\hbar\)</span> Summary:
+Newton/ancient-source synthesis combines conditional Gaussian recording
+bounds, general disturbance costs and polygon phases. The October 2
+opening states supplied quantum action, coherence and domain-selection
+premises; section 10a integrates fixed-interval Kepler localization and
+centroids, the incoherent classical countercase, and reduced-phase
+Coulomb thresholds. Limit/reuse: Quantum states, instruments and
+positive hbar are premises. The full Planck constant is h=2 pi hbar;
+Coulomb selections use reduced hbar. Coherent-stream contrast requires
+coherence and a record topology; the incoherent-mixture countercase is
+exact for quadratic forces. Dirac finite-potential and critical-form
+selections have different endpoints; the KG radial endpoint does not
+prove full critical dynamics. The critical Dirac domain uses the
+original form closure and excludes the problematic compact source
+rewrite. Classical completions are not excluded. Independent necessity,
+universal calibration and historical submission obligations remain open.
+New additions are unrefereed; earlier reviews do not certify them, and
 literature priority is unestablished.</p></li>
 <li><p><a
 href="planck-gap-probabilistic.html">planck-gap-probabilistic.md</a> |

@@ -86,10 +86,11 @@ drafted 2026-09-08 by the independent Claude Fable 5.1 session. Earlier
 scripts are historical artifacts; current verification uses written
 proof and source review. The proposition below is a working derivation
 awaiting review and a prior-art audit; no claim ID is assigned. The
-2026-09-09 review preserves the scalar rigidity candidate and routes
-proof and source review to R02. The cone/arrow connection below is a
-modern heuristic; analytic continuation relates the specified evolution
-equations, rather than establishing a historical identity.</p>
+2026-09-09 review preserves the scalar rigidity candidate; the matrix
+extension and readout-noise test below retain the corrected I003
+boundaries. The cone/arrow connection below is a modern heuristic;
+analytic continuation relates the specified evolution equations, rather
+than establishing a historical identity.</p>
 <p><strong>Result.</strong> The Euclidean statement C032, that a
 position-only law with ballistic support and independent stationary
 increments is a deterministic drift, has a Lorentzian counterpart: a
@@ -236,20 +237,132 @@ class="math inline">\(\lambda\)</span>, the window observable obeys
 H_*\Delta/\Delta_*\)</span> (P02), and the conditioned midpoint obeys
 the exact law <span class="math inline">\(\kappa_{\rm mid}/H_*=g(\lambda
 T)=zR(z)[1-R(z)]\)</span> of the bridge-crossover note, with cubic
-onset. A window-independent coefficient therefore exists only above
-<span class="math inline">\(\Delta_*=K/(mu^2)\)</span>, and the joint
-limit of mesh and resolution to zero leaves no coefficient unless the
-speed bound is removed, which is the Gaussian class. The surviving
-constant is the plateau, and <span class="math inline">\(g\)</span> is
-the rate it controls. Which premise makes that plateau positive and
-common to all bodies is A08’s question, and this note adds nothing to
-it.</p>
-<h2 id="review-and-next-step">5. Review and next step</h2>
-<p>R02 will audit the scalar proof and its Paley–Wiener/harmonic-growth
-ingredients, then examine the matrix extension in <a
-href="i003-double-limit-rigidity.html">the revised I003 note</a>. The
-historical analogy remains available for idea generation. Its
-mathematical content must be established model by model.</p>
+onset. The fixed-preparation short-window intrinsic coefficient vanishes
+under a speed ceiling; the specified crossover window <span
+class="math inline">\(\Delta_*=K/(mu^2)\)</span> concerns a long-window
+plateau, and <span class="math inline">\(g\)</span> describes its
+approach. This does not assert a limit for noisy records whose error
+scale changes with the cut. Which premise makes the plateau positive and
+common to all bodies is <a href="composition-universality.html">A08’s
+question</a>, not a consequence of scalar finite propagation.</p>
+<h2 id="the-matrix-boundary-and-a-specified-noisy-double-limit">5. The
+matrix boundary and a specified noisy double limit</h2>
+<p>The scalar proposition is <strong>not</strong> a classification of
+matrix-valued finite-speed semigroups. A candidate, still unproved, says
+that a translation-invariant, strongly continuous contraction semigroup
+on <span class="math inline">\(L^2(\mathbb R;\mathbb C^n)\)</span> whose
+convolution kernels have support in <span
+class="math inline">\([-ut,ut]\)</span> has Fourier multipliers <span
+class="math inline">\(e^{t(B-ikA)}\)</span>, where <span
+class="math inline">\(A=A^\dagger\)</span>, <span
+class="math inline">\(\|A\|\le u\)</span> and <span
+class="math inline">\(B+B^\dagger\le0\)</span>. The missing steps
+include pointwise time continuity from strong operator continuity, a
+justified matrix logarithm and differentiation of its generator.
+Positivity alone does not make <span class="math inline">\(B\)</span> a
+conservative Markov switching generator: <span
+class="math inline">\(T_tf=e^{-t}f\)</span> is positive and has zero
+propagation but loses mass. Conservation must be required separately.
+The scalar proof above does not discharge these obligations.</p>
+<p>For the symmetric two-state telegraph generator <span
+class="math inline">\(Q=\lambda(\sigma_x-I)\)</span> and <span
+class="math inline">\(V=u\sigma_z\)</span>, the exact matrix identity is
+<span class="math inline">\(\|[V,Q]\|=2u\lambda\)</span>, while the
+stationary velocity plateau is <span
+class="math inline">\(H_*=mu^2/\lambda=2mu^3/\|[V,Q]\|\)</span>. A
+coherent two-component model with <span
+class="math inline">\(A=c\sigma_z\)</span>, <span
+class="math inline">\(B_H=\omega_0\sigma_x\)</span> similarly has <span
+class="math inline">\(\|[A,B_H]\|=2c\omega_0\)</span>. Converting
+frequency into rest energy uses a <strong>supplied</strong> action <span
+class="math inline">\(K\)</span>, <span
+class="math inline">\(m=K\omega_0/c^2\)</span>; physical <span
+class="math inline">\(\hbar\)</span> enters only if separately
+identified with <span class="math inline">\(K\)</span>. A commutator
+norm does not see every slow mode: <a
+href="susceptibility-gap.html#fixed-plateau-with-a-closing-full-gap-c041">the
+four-state counterexample</a> keeps the plateau fixed as an independent
+hidden label’s relaxation gap closes. For <span
+class="math inline">\(Q=0\)</span>, a random constant velocity <span
+class="math inline">\(\pm u\)</span> instead has <span
+class="math inline">\(\operatorname{Var}(X_\Delta-X_0)=u^2\Delta^2\)</span>;
+a deterministic velocity has zero variance. Commuting velocity sectors
+therefore do not justify the old general zero-response claim.</p>
+<p>There is also an <strong>exact, model-dependent readout
+effect</strong>. Define <span class="math inline">\(\mathsf
+h(\Delta)=m\operatorname{Var}(X_\Delta-X_0)/\Delta\)</span> for a fixed
+bounded-speed motion. At the two endpoints add independent centered
+errors, independent of the motion, each of variance <span
+class="math inline">\(\varepsilon^2/12\)</span>. The observed increment
+then satisfies</p>
+<p><span class="math display">\[\mathsf h_\varepsilon(\Delta)
+=\mathsf h(\Delta)+\frac{m\varepsilon^2}{6\Delta}.
+\tag{I003}\]</span></p>
+<p>For fixed <span class="math inline">\(\varepsilon&gt;0\)</span>, the
+<span class="math inline">\(\Delta\downarrow0\)</span> limit is
+infinite; for fixed <span class="math inline">\(\Delta&gt;0\)</span>,
+removing the readout error first and then refining gives zero by finite
+speed. Along <span
+class="math inline">\(\varepsilon^2=6\kappa_0\Delta/m\)</span>, the
+observed coefficient tends to any chosen <span
+class="math inline">\(\kappa_0\ge0\)</span>. Independent dither or
+additive-noise measurement is a premise here; fixed-lattice
+deterministic rounding need not satisfy it. On a uniform <span
+class="math inline">\(N\)</span>-cell partition, pin endpoint errors to
+zero and give the <span class="math inline">\(N-1\)</span> interior
+errors this variance. Expanding the kinetic-action squares, the expected
+added action is <span
+class="math inline">\(m(N-1)\varepsilon^2/(12\Delta)\)</span>, with
+correlated neighboring increment errors accounted for in the
+expectation. This scaling selects a <strong>readout bias</strong>, not a
+lower bound on intrinsic action and not physical <span
+class="math inline">\(\hbar\)</span>.</p>
+<h2 id="cone-source-trail-and-the-free-kernel-comparison">6. Cone source
+trail and the free-kernel comparison</h2>
+<p>The historical <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/H04/H04.md">H04
+witness</a> locates the cone dilemma in Xylander’s 1570
+<em>Moralia</em>, pp. 823–824. Its reception search did not verify a
+specific early-modern mathematician using that passage in work on
+indivisibles; Auffret’s separate rolling-cone/Leibniz example does not
+prove that transmission. Rivero’s <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Rivero_Cone_1999.md">1999
+cone essay</a> motivates keeping the finite separation and rescaled
+difference apart. Rivero’s <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Rivero_FeynmanFormula_1998.md">1998
+path-integral proposal</a> motivates eliminating intermediate
+coordinates; Brouder’s rooted-tree algebra and Cariñena et al.’s
+tangent-groupoid proposal are separate nonlinear and quantum-completion
+leads. The retained <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/time-refinement.tex">time-refinement
+manuscript</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/time-refinement.pdf">PDF</a>
+give their source reading and the full normalized free-kernel proof.</p>
+<p>In that proof a positive Gaussian kernel of variance <span
+class="math inline">\(\kappa t/m\)</span> composes exactly under
+integration over an inserted position for every <span
+class="math inline">\(\kappa&gt;0\)</span>. Weak continuity and Gaussian
+time homogeneity permit every <span
+class="math inline">\(\kappa=ma\ge0\)</span>; <span
+class="math inline">\(a=0\)</span> is the deterministic Dirac member.
+Requiring a positive density rules out zero by premise. Passing from
+positive kernels to oscillatory unitary propagation is another chosen
+step, and neither step identifies <span
+class="math inline">\(\kappa\)</span> with physical <span
+class="math inline">\(\hbar\)</span>. The <a
+href="newton-dimock-balaban-guide.html#groupoid-scale-and-renormalization">Newton
+synthesis</a> distinguishes this free fixed-line result from the
+two-regulator RG question.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>Finite-speed scalar rigidity, a corrected matrix conjecture and the
+specified readout double limit are distinct statements. Intrinsic
+fluctuations vanish under fine bounded-speed cuts; independent errors
+can create an arbitrary resolution-dependent coefficient. Neither
+phenomenon supplies a universal positive physical action. The scalar
+proof remains a working unrefereed derivation pending its stated
+Paley–Wiener and harmonic-growth audit; the matrix claim remains open.
+The ancient parallel is a modern heuristic, not a transmission claim or
+a quantum reconstruction.</p>
 
 </main>
 <footer class="site"><div class="wrap">

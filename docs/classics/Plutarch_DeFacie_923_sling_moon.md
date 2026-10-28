@@ -20,7 +20,7 @@ be diverted by something else."
 This bears on the programme in three ways.
 
 - **It answers the question of the missing sling.** The
-  [arrow-and-sling note](../../notes/arrow-not-sling.md) observes that the
+  [paper's arrow-and-sling section](../../notes/planck-gap-paper.md#why-the-arrow-and-not-the-sling) observes that the
   ancient debate on motion is almost entirely rectilinear while Newton
   defines centripetal force with a stone in a sling at Definition V. Plutarch
   is the exception, and he applies the sling to exactly the case Newton

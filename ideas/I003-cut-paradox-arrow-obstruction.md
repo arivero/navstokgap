@@ -37,7 +37,7 @@ during the H08 source session. Sources are collected in
 ## The proposed reading
 
 **Review, 2026-09-09:** retain the following as the originating heuristic.
-The repaired [matrix note](../notes/i003-double-limit-rigidity.md) separates
+The consolidated [matrix and readout section](../notes/cut-paradox-two-faces.md#the-matrix-boundary-and-a-specified-noisy-double-limit) separates
 finite propagation, probability conservation, a two-state commutator identity
 and a specified resolution-noise model. Commuting random velocities can have
 ballistic variance; positivity of evolution alone allows killing. R02 owns
@@ -59,7 +59,7 @@ observable approach their limits, as in the cubic onset $H_*z^3/6$.
 Status 2026-09-08: test 1 is drafted in
 [`notes/cut-paradox-two-faces.md`](../notes/cut-paradox-two-faces.md) with nine
 checks. Tests 2 and 3, and the general form of test 1, are drafted in
-[`notes/i003-double-limit-rigidity.md`](../notes/i003-double-limit-rigidity.md):
+[the consolidated I003 section](../notes/cut-paradox-two-faces.md#the-matrix-boundary-and-a-specified-noisy-double-limit):
 light-cone rigidity to first-order systems, the commutator scale, and the
 rounding-model double limit; test 4 is listed there as prior art to audit.
 
@@ -81,4 +81,4 @@ rounding-model double limit; test 4 is listed there as prior art to audit.
 
 Related: [I001](I001-action-field.md), [I002](I002-newton-polygon-threshold.md),
 the [cut-point target](../research/CUT_POINT_TARGET.md) and the
-[six-direction checks](../notes/composition-crossover-gap-checks.md).
+[maintained composition result](../notes/composition-universality.md).

@@ -48,7 +48,7 @@ The TeX-only spectral-gap-laboratory draft remains outside the accepted PDF set 
 | [additive-noise-marks](../out/papers/additive-noise-marks.pdf) | current technical manuscript | [additive-noise-marks](../notes/additive-noise-marks.md) |
 | [agmon-global-not-local](../out/papers/agmon-global-not-local.pdf) | current technical manuscript | [agmon-global-not-local](../notes/agmon-global-not-local.md) |
 | [agmon-ground-state-suppression](../out/papers/agmon-ground-state-suppression.pdf) | older version | [agmon-ground-state-suppression](../notes/agmon-ground-state-suppression.md) → [agmon-global-not-local](../notes/agmon-global-not-local.md) |
-| [arrow-not-sling](../out/papers/arrow-not-sling.pdf) | historical research snapshot | [arrow-not-sling](../notes/arrow-not-sling.md) |
+| [arrow-not-sling](../out/papers/arrow-not-sling.pdf) | historical research snapshot | Former note consolidated into [paper §9](../notes/planck-gap-paper.md#why-the-arrow-and-not-the-sling); PDF/TeX retained |
 | [blocking-criterion-monotone](../out/papers/blocking-criterion-monotone.pdf) | current technical manuscript | [blocking-criterion-monotone](../notes/blocking-criterion-monotone.md) |
 | [blocking-step-obstruction](../out/papers/blocking-step-obstruction.pdf) | older version | [blocking-step-obstruction](../notes/blocking-step-obstruction.md) → [blocking-criterion-monotone](../notes/blocking-criterion-monotone.md) |
 | [bounded-acceleration-return](../out/papers/bounded-acceleration-return.pdf) | current technical manuscript | [bounded-acceleration-return](../notes/bounded-acceleration-return.md) |

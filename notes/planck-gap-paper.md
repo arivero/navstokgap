@@ -937,13 +937,16 @@ short of making a straight continuation free and a curved one costly.
 
 Indian sources do supply one whirled object, and use it for a third
 purpose again. The firebrand circle, *alātacakra*, appears in Vasubandhu
-(Pradhan 189.23--24, cited from the GRETIL text and not yet held in a
-companion here) to argue that because contact with the parts is
+([GRETIL source companion](../docs/classics/Abhidharmakosabhasya_motion_atoms_GRETIL.md),
+Pradhan 189.23--24) to argue that because contact with the parts is
 successive, the awareness of a whole is really of the parts, and at
 Pradhan 33.9 with *āśuvṛttyā*, by rapid action. That is an argument about
 sampling, and it is the ancient form of what Theorem 9 says about records:
 within a window below the mesh a succession is indistinguishable from the
-continuous thing it mimics. The [companion note](arrow-not-sling.md) sets this out.
+continuous thing it mimics. The historical qualification for Plutarch's
+exception is in the [source companion](../docs/classics/Plutarch_DeFacie_923_sling_moon.md);
+the fuller arrow-and-sling discussion remains in the
+[archived manuscript](../out/papers/arrow-not-sling.pdf).
 
 ### What each ancient premise buys
 

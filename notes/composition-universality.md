@@ -24,6 +24,12 @@ $\operatorname{Cov}(\Delta R,\Delta r)=\Delta(\kappa_1-\kappa_2)/M$.
 For independent Gaussian bridges replace $\Delta$ by their common covariance
 kernel; the same coefficient transformation holds. In that Gaussian setting,
 centre/relative process independence is equivalent to $\kappa_1=\kappa_2$.
+More generally, for independent coordinates and
+$y=\sum_i c_iX_i$, choose the kinetic mass
+$\mu_y=(\sum_i c_i^2/m_i)^{-1}$. Then the corresponding coefficient is
+$$\kappa_y=
+\frac{\sum_i(c_i^2/m_i)\kappa_i}{\sum_i c_i^2/m_i}.$$
+It is a weighted average, not a mechanism selecting a positive value.
 
 For independent stationary finite irreducible reversible chains $J^i$, take
 centered velocities $v_i(J^i)$ and $X_i(t)=\int_0^t v_i(J^i_s)ds$.
@@ -130,11 +136,14 @@ The theorem establishes a conditional universal positive **long-window
 coefficient**, with action units and a specified preparation class. Its role
 as a quantum phase constant and its physical-time attraction are subsequent
 obligations. At bounded speed the microscopic variance coefficient still tends
-to zero by C018. The next A09 calculation connects these separate windows to
-the real telegraph and complex checkerboard propagators.
+to zero by C018. The [exact A09 return bridge](telegraph-return-bridge.md)
+connects these windows within one prepared path law, while
+[checkerboard continuation](checkerboard-dynamics.md) makes the distinct
+coherent-propagator premise explicit.
 
 This note develops the user's composition suggestion and the independent P02
-product-chain calculation. C019–C020 supply the reviewed correlation input;
+product-chain calculation (its original working note is retained in Git history).
+C019–C020 supply the reviewed correlation input;
 [Pavliotis (2010)](https://arxiv.org/abs/1002.4103v1) gives its Poisson-equation
 source, and [Pitman–Yor (2018)](https://arxiv.org/abs/1802.09679v1) the
 Gaussian covariance background. Per-result prior-art status belongs to B16.

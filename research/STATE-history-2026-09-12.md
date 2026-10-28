@@ -403,7 +403,7 @@ a supporting force-control calculation. The review changes priorities; C001–C0
 retain their existing acceptance status, and prospective results await their
 dedicated prior-art audits. See [selection target](ACTION_FIELD_TARGET.md).
 An independent session then verified the A08/A09/G01 starting calculations
-in [the six-direction checks note](../notes/composition-crossover-gap-checks.md):
+in [the six-direction checks note](../notes/composition-universality.md):
 product-chain composition, the cubic midpoint onset of the C033 bridge, the
 slow-mode gap test and both continuation routes, with 28 exact checks.
 

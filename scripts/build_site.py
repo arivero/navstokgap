@@ -36,8 +36,12 @@ SITE_URL = "https://arivero.github.io/navstokgap/"
 # Former public note URLs remain usable after their content is consolidated.
 # Values are the maintained note slug and its section anchor.
 NOTE_REDIRECTS = {
+    "arrow-not-sling": ("planck-gap-paper", "why-the-arrow-and-not-the-sling"),
     "bridge-crossover": ("telegraph-return-bridge", "midpoint-crossover-observables"),
     "classical-cut-state": ("conservative-harmonic-receiver", "what-information-survives-a-cut"),
+    "composition-crossover-gap-checks": ("composition-universality", "observable-and-independent-composition"),
+    "cone-time-refinement": ("cut-paradox-two-faces", "cone-source-trail-and-the-free-kernel-comparison"),
+    "i003-double-limit-rigidity": ("cut-paradox-two-faces", "the-matrix-boundary-and-a-specified-noisy-double-limit"),
     "three-body-cut-memory": ("conservative-harmonic-receiver", "a-third-body-exact-memory-and-recoverable-history"),
     "ordered-beam-preparation": ("composition-universality", "preparation-and-correlation-tests"),
     "jacobi-kernels-distinguishability": ("action-scale-obstructions", "quantum-necessity-and-mass-gap-require-different-next-arguments"),

@@ -124,7 +124,7 @@ history in which Newton carries interference from optics into mechanics.
   [Cinque](batches/B09/Cinque_Telegraph_2022.md),
   [Nelson's abstract](batches/B09/Nelson_APS_1966.md) and
   [Hall–Reginatto](batches/B09/Hall_Reginatto_2002.md).
-- [Cone and time-refinement source-to-model map](../notes/cone-time-refinement.md):
+- [Cone and time-refinement source-to-model map](../notes/cut-paradox-two-faces.md#cone-source-trail-and-the-free-kernel-comparison):
   [Rivero 1998](Rivero_FeynmanFormula_1998.md), [Rivero 1999](Rivero_Cone_1999.md),
   [Brouder](Brouder_RungeKutta_1999.md), and
   [Cariñena et al.](CarinenaEtAl_TangentGroupoid_1999.md).
