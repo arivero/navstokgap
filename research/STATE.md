@@ -1,307 +1,143 @@
 # State
 
-Updated 2026-10-28 (Newton first; Balaban techniques in $0+1$). Read this page and the
-[time-blocking note](../notes/balaban-newton-time-blocking.md);
-AGENTS.md governs. The [joint-paper plan](../notes/three-continuum-limits.md)
-gives the wider comparison.
-The [October 1 Claude handout](handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md)
-gives the Newton/quantisation restart; the
-[September 23 handout](handoffs/HANDOFF-2026-09-23.md) records earlier
-reviews. This page carries the current direction.
-
-**User-directed 0+1 existence check, 2026-10-27.** The
-[construction](../notes/constructive-qft-one-time.md) assembles the
-standard quartic vacuum, reflection-positive bounded-cylinder process,
-non-Gaussianity and continuum refinement, and connects the existing
-$SU(2)$ matrix gap to its gauge-singlet sector. The Newton action
-constant is supplied. The central-limit calculation is addressed
-conditionally in **Next**; the four-dimensional gauge construction remains deferred.
-
-**User-directed quantum-to-Newton construction, 2026-10-27.** The
-[multiscale proof](../notes/quantum-blocks-construct-newton.md) builds
-a scoped $0+1$ quantum family and obtains the classical initial-value
-solution as the joint limit of finite-slice coherent-state means, with
-an explicit $O(h+|\pi|)$ mean estimate while packet widths are
-$O(\sqrt h)$. It uses the same
-Lipschitz/Gronwall stability as Cauchy--Lipschitz. The
-[tangent-groupoid formulation](../notes/groupoid-quantum-newton-states.md)
-places the observable states in a continuous field and distinguishes
-deformation, time mesh and blocking. The positive action scale remains
-supplied; neither document proves its necessity. The model-advisor
-checks recorded there are not independent peer review.
-
-The [Newton–Dimock guide](../notes/newton-dimock-balaban-guide.md)
-now gives source-specific pedagogy, classical magnetic continuation,
-and a Dirichlet hard-wall packet limit through an elastic bounce. The
-[wall-force calculation](../notes/dirichlet-wall-impulse.md) resolves the
-impact layer and gives the impulse $2|p_0|$; the Neumann stress has the
-same limit although its boundary derivative vanishes. The wall calculation
-is separate from the whole-line groupoid and scalar-potential theorem.
-The [relativistic extension](../notes/relativistic-dispersion-blocks.md)
-adds a joint positive-energy and Newton limit, plus a separate spectral
-Dirichlet hard-wall construction.
-
-The [classical-to-quantum existence conjecture](../notes/classical-quantum-existence-conjecture.md)
-now distinguishes the universal claim from the established common-hypothesis
-construction. The [bounded lifting theorem](../notes/lipschitz-certificate-quantum-lift.md)
-derives product convergence and the observable limit from a specified
-conservative global-Lipschitz certificate and a named operator toolkit;
-the subsequent Sol advisor check accepts the stated scope with graph
-and domain clarifications, while the universal conjecture remains open. The
-[cusp-selection calculation](../notes/cusp-quantum-preparation-selection.md)
-gives two quantum families with identical limiting incoming histories
-but distinct outgoing branches and explicit mixtures.
-The [Lean verification targets](../notes/lean-verification-quantum-newton.md)
-give exact specifications, close prior art and a finite comparison to
-newtonlean's oppositely ordered polygon cells; no quantum Lean proof is
-claimed. Its constant-force calculation separates fixed-action ordering
-independence from possible joint-limit quantum ray separation; a
-variable-mass example exhibits a separate factor-ordering ambiguity.
+Updated 2026-10-28. **Active direction: Newton action necessity.** Read
+[AGENTS.md](../AGENTS.md), then the
+[recent Newton synthesis](../notes/newton-dimock-balaban-guide.md#recent-newton-synthesis).
+The synthesis consolidates the October 27--28 calculations and links to
+their proofs, checks and countermodels. This page is the live queue;
+[dependencies](dependencies.md), [obstructions](obstructions.md), the
+[book map](book-map.md) and the full [catalog](../notes/index.md) route
+the wider corpus.
 
 ## Goal
 
-User direction, 2026-09-26: one eventual paper on what survives
-refinement. The two main proof goals are **a positive action scale in
-Newton's Galileo comparison, from independently justified physical
-premises**, and **the continuum existence and mass gap of pure $SU(3)$
-Yang--Mills**. QCD pions at zero and nonzero quark mass provide orientation
-and inspiration; constructing fermionic QCD is outside the active queue.
-The foundational reconstruction from classical limits is judged by its
-use for those two goals; explaining the RG transformation itself is a
-useful intermediate result (user, 2026-09-30).
-**Thesis (user, 2026-10-01, restated at night).** Newton's mechanics
-is the large-action regime of a theory with $h>0$. It is recovered
-where every imprecision action exceeds $h$ (a record of the
-preparation, a record resolution or preparation thickness above $h$ in
-action, or no crossing streams: [reachability note](../notes/zero-branch-reachability.md),
-Theorems 1, 2(ii), 5 and the large-action proposition of §3c); it is
-not the $h\to0$ limit of that theory with exact preparations and
-records where streams cross (Theorems 2--4); and the theory with $h>0$
-has global dynamics where Newton's axioms leave motion undefined
-(Kato's self-adjointness for Coulomb and Kepler; the quartic Theorem
-2(b) of the 1998-conjecture note against its Theorem 1). Newton
-therefore needs $h$, not as a parameter his mechanics contains, but as
-the scale that defines the regime in which it holds and the theory
-whose regime it is. Two theories must be kept apart (user, 2026-10-01 night).
-Theorem 5 shows that nineteenth-century classical mechanics, the
-Liouville transport of swarms along smooth complete flows, is reached
-from the $h>0$ theory along recorded or imprecise preparations. The
-strong form of the thesis concerns Newton's mechanics itself, the
-theory of motion from his axioms with determinate bodies and exact
-ultimate ratios, which is known to be incomplete (collisions,
-non-unique continuations, the branch rule of the classical-first
-construction): that Newton's mechanics requires $h>0$ to exist as a
-theory, its only completion being the large-action regime of the
-$h>0$ theory. This strong form is open, and the self-sufficiency
-contrast is its first evidence. Proof
-obligations: (i) extend the necessity of the conditions beyond
-quadratic forces, keeping the fixed-interval Kepler centroid result
-distinct from necessity of the record and coherence premises; (ii) show that no condition statable within classical
-mechanics replaces them, the coherence of unrecorded launch points
-being non-classical (Theorem 5); (iii) make the self-sufficiency
-contrast a theorem in the paper, global quantum dynamics against
-classical singularities and branch rules; (iv) keep the readout-law
-and Leibniz-continuity routes for the physical origin of coherence.
-Deformation families (Moyal, Fisher, sheet realizations) are
-continuous in the constant by construction and are admissible only as
-checks, after stating which premise a calculation would establish or
-exclude.
-The latest direction is to build the limit from local insertion laws:
-an intermediate Newtonian time, an edge or cell in gauge theory, and
-their lower-dimensional counterparts. The modern leg remains primary; formal and textual
-Principia work lives in the sibling `newtonlean` repository.
+Determine whether a consistent completion of Newtonian mechanics requires
+a nonzero physical $\hbar$, from independently justified premises. Test
+the strong thesis that Newton's theory is only a large-action regime of
+a positive-$\hbar$ theory against classical completions, full records and
+reversible dynamics. A conditional covariance floor, a constructed quantum
+family, and an identification of its action scale with physical $\hbar$
+are three distinct claims. **The general necessity and uniqueness claims
+remain open.**
 
-**Mid-term goal (user, 2026-09-27):** a collective understanding of the
-halving of the lattice and what emerges in each case and dimension. The
-[atlas of halving](../notes/halving-atlas.md) is the shared map; results
-fill its cells (open cells in its §5).
+Keep $\hbar$ explicit. For a specified characteristic action $S_0$,
+$\epsilon=\hbar/S_0\to0$ is a separate limit from time refinement and
+record resolution; a large-$S_0$ physical family must be specified.
+
+The other main proof goal is continuum existence and a positive finite
+physical mass gap for pure $SU(3)$ Yang--Mills on $\mathbb R^4$. The
+eventual comparison includes QCD with zero and nonzero quark masses as a
+symmetry benchmark, not a third full construction programme
+([three continuum limits](../notes/three-continuum-limits.md)). The gauge
+frontier is retained below; Newton is first in the current queue.
 
 ## In hand
 
-- [The Planck paper](../notes/planck-gap-paper.md) is the developed Newton
-  component, with sharp conditional mark bounds, the general disturbance
-  bound and polygon phase identities. It supplies their proof links.
-  Positive quantum action is an input to those quantum results; the
-  independent necessity argument remains open. All three September 23
-  adversarial review batches are complete.
-- [The mass-gap position](../notes/mass-gap-position.md) and
-  [conditional theorem](../notes/mass-gap-conditional-theorem.md) hold
-  the pure-gauge map: finite-lattice and strong-coupling results,
-  with H1/H2 blocking and mixing estimates open. Continuum construction
-  and nontriviality (T4) remain explicit obligations.
-- [The joint synthesis](../notes/three-continuum-limits.md) now integrates
-  the Kepler and selection results, coherence countercase and corrected
-  lattice inputs; §5 retains the spectral criteria and surviving-weight premise.
-- [The refinement note](../notes/refinement-composition-and-limit.md)
-  constructs the arbitrary-partition constant-force limit, gives exact
-  two-dimensional gauge subdivision and a sufficient summable-error
-  criterion, and distinguishes these from a surviving physical gap.
-- [The corpus audit of 2026-10-01](../notes/corpus-audit-2026-10-01.md) scores every
-  note for interest and correctness (Opus, reviewed by Fable). Its 24
-  flagged notes and numerical summaries are a historical snapshot;
-  subsequent dated corrections in the maintained notes govern current claims.
-
-- The user-directed [Galilei continuous-spin comparison](../notes/galilei-continuous-spin-classical.md)
-  records the mechanical meaning of the label and a conditional spectral-gap
-  uncertainty bound; use it before proposing zero central mass as a necessity
-  mechanism. It supplies no new premise for the two main proof goals.
+- **Refinement and quantum construction.** Arbitrary-partition Newton
+  polygons construct a unique causal solution under the stated Lipschitz
+  certificate. Smooth coherent-packet means converge at
+  $O(\hbar+|\pi|)$, with widths $O(\sqrt\hbar)$, to that solution. A
+  specified $C^{1,1}$ lift gives an $O(\sqrt\hbar)$ comparison with a
+  supplied quantum parameter. These are scoped constructions, not a
+  universal classical-to-quantum theorem or a proof of necessity
+  ([synthesis](../notes/newton-dimock-balaban-guide.md#recent-newton-synthesis)).
+- **Cusp, stability and floors.** Reversible phase-state dynamics with
+  affine-canonical and closure premises, or a different $W_2$-continuity
+  and canonical-copy premise with actual Gaussian cusp transport, each
+  force a positive covariance-action infimum. Both have classical
+  witnesses with supplied scales; the first theorem's point compatibility
+  may be vacuous when points are excluded. Fine nondisturbing joint
+  classical records force the infimum to zero
+  ([history and continuity](../notes/cusp-history-records-continuity.md)).
+- **Classical countermodels and records.** The reversible full-history
+  model retains branch-selection information. The entropy-floor witness
+  survives the canonical copy mixer and actual cusp flow but fails one
+  selective Gaussian-meter test. Its Gaussian-mixture repair survives
+  that meter and copying but fails a nonlinear canonical shear. The meter
+  counterexample uses increasingly large preparation apertures; the
+  history model has no constructed finite-dimensional local apparatus
+  ([meter](../notes/gaussian-meter-entropy-floor.md),
+  [history](../notes/cusp-history-records-continuity.md)). These written
+  results are unrefereed; selective internal checks are identified in
+  their individual notes.
+- **Earlier Newton results.** The [Planck paper](../notes/planck-gap-paper.md)
+  gives quantum record and disturbance bounds under supplied quantum
+  kinematics. The [reachability proof](../notes/zero-branch-reachability.md)
+  shows that the coherent-stream contrast needs a coherence premise: an
+  incoherent packet attachment recovers the classical swarm for quadratic
+  forces. Kepler and relativistic thresholds retain their fixed-interval
+  and domain-selection qualifications
+  ([self-sufficiency](../notes/self-sufficiency-contrast.md)).
+- **Gauge and comparison.** The [mass-gap position](../notes/mass-gap-position.md)
+  separates finite-lattice and strong-coupling results from the open
+  continuum construction, nontriviality and physical gap. The
+  [refinement synthesis](../notes/refinement-composition-and-limit.md)
+  and [halving atlas](../notes/halving-atlas.md) supply common insertion
+  laws and the dimension-by-dimension map.
 
 ## Next
 
-**Active direction (user, 2026-10-27): Newton action necessity first.**
-Start with Balaban's techniques in $0+1$, keeping $\hbar$ explicit;
-use $c$ only with a stated relativistic premise. Connect arbitrary
-intermediate-time polygons to ODE existence, uniqueness, stability and
-continuation, and develop further useful links. The
-[first calculation](../notes/balaban-newton-time-blocking.md) is written,
-with a targeted Terra check. The [nonlinear cell](../notes/newton-nonlinear-time-cell.md)
-now controls a full convex insertion law and its one-halving large-field
-events, and distinguishes positive-$\hbar$ quartic stiffness from the
-regular classical envelope. The [ODE lesson](../notes/balaban-ode-lesson.md)
-constructs the nonlinear causal polygon limit and explains the weighted-law
-comparison. The [branch-response test](../notes/newton-branch-response-action.md)
-gives a uniform positive action bound conditional on a calibrated response
-ceiling and the stated branch law, with classical memory and thermal
-countermodels explicit. The [bounded-cusp test](../notes/newton-cusp-preparation-floor.md)
-turns a full point-state merger into a positive covariance action floor
-under weak preparation closure, canonical covariance and reversible
-point-trajectory compatibility; this premise constrains point states
-only if admitted. A classical density-ceiling completion meets these
-premises using the actual almost-everywhere flow.
-The [continuity calculation](../notes/newton-continuity-time-scales.md)
-sharpens the force criterion: logarithmic unbounded slopes retain unique
-motion through exponent two; zero-energy annulus times, not slope alone,
-decide finite-time mergers. Their action still tends to zero.
-**Checkpoint, 2026-10-27:** independent Newton action necessity is still
-open. The new positive floor is conditional on preparation closure and
-force compatibility; its quantum identification, universality and
-preservation by physical records have not been proved. Targeted Terra
-checks cover the stated written calculations, not those physical premises.
-The [central-limit calculation](../notes/central-limit-canonical-gaussian-sector.md)
-shows that independent copies, canonical copy-index mixers, discarding
-outputs and either weak or $W_2$ closure force an admissible Gaussian
-with each admissible covariance; with a positive infimum they determine
-the entire Gaussian sector. The earlier density-ceiling witness fails
-even a two-copy mixer. A supplied entropy floor instead gives a classical
-model with actual cusp transport, copy-index mixing and $W_2$ closure,
-but not ordinary weak closure. The [Gaussian-meter test](../notes/gaussian-meter-entropy-floor.md)
-shows that this witness fails selective closure under one canonical
-position meter with a minimum-action Gaussian pointer: a positive-probability
-coarse record yields arbitrarily small posterior covariance action. The
-construction uses increasingly large apertures. Gaussian input states pass
-the same meter test, while an explicit Wigner-overlap bound excludes the
-counterexample inputs from quantum states at $\hbar=2S_0\zeta$. The
-$W_2$-closed Gaussian-mixture repair survives the meter and copy mixers but
-fails a classical nonlinear shear by a three-point Wigner kernel test. These
-calculations are unrefereed; an independently selected scale and physical
-record closure remain open.
-The [history and records test](../notes/cusp-history-records-continuity.md)
-constructs a reversible classical solution-space group with exact states;
-its Gaussian inputs have zero-action limits with preparation-dependent
-branch weights, so actual phase-law transport is not weakly continuous at
-the cusp. $W_2$ continuity, canonical mixing, closure and actual Gaussian
-transport force a positive action infimum without reversibility; the
-classical entropy-floor class supplies a witness with an imposed scale.
-Fine nondisturbing joint classical records contradict any positive
-covariance floor. These are written, unrefereed derivations; the
-history state retains future-selection data and has no constructed local
-symplectic apparatus. A uniform response law or quantum record-disturbance
-law remains to be justified independently.
-The user subsequently authorized a bounded [Alpoge--Sussman peek](../notes/alpoge-balaban-newton-peek.md)
-after the checkpoint push. Its finite fourth-response calculation and
-zero-action reflection-positivity control are recorded; no YM proof was
-imported. Newton remains first, and the Yang--Mills construction remains
-deferred. This direction supersedes the ordering of the earlier queue below.
+1. **Independent physical premises.** Test whether a specified apparatus
+   and its complete retained records justify a preparation, terminal
+   readout or uniform response law without assuming the desired floor.
+   Account for memory, calibration, apertures, energy and limiting order.
+   Compare any proposed law with the exact classical history, fine-record,
+   entropy and Gaussian-meter countermodels in the recent synthesis.
+2. **Groupoid control and renormalization.** Test the scale relation in
+   Rivero's [1997 toy RG triangle](https://arxiv.org/pdf/dg-ga/9710026)
+   and [1998 two-regulator proposal](https://arxiv.org/pdf/quant-ph/9803035)
+   by specifying the actual normalized blocking/control maps, increments,
+   generated interactions and observables. The
+   [synthesis dictionary](../notes/newton-dimock-balaban-guide.md#recent-newton-synthesis)
+   separates the groupoid deformation, a bare action regulator, mesh and
+   effective $\hbar$. Its exactly normalized free Gaussian block-and-scale
+   test retains every nonnegative action parameter, including zero. Derive
+   rather than assume any physical scale selection or running law for an
+   interacting or record-sensitive construction.
+3. **From a floor to quantum structure.** Determine what further
+   independently motivated composition and nonlinear-dynamics premises
+   distinguish a commutative state restriction from quantum states and
+   instruments, and whether any selected scale is universal and equals
+   $\hbar/2$ in covariance action. The existing Gaussian central limit
+   fixes a conditional Gaussian sector, not arbitrary states or dynamics.
+   The earlier [recording notebook](../notes/sed-closure-under-recording.md)
+   and [score-constrained model](../notes/score-constrained-ensemble.md)
+   retain their complete-controller and branch-dependent protocol tests;
+   composition closure there selects no positive coefficient by itself.
+4. **Construction and verification.** The universal
+   [classical-to-quantum lifting conjecture](../notes/classical-quantum-existence-conjecture.md)
+   remains open beyond its specified Lipschitz class. The
+   [Lean targets](../notes/lean-verification-quantum-newton.md) are written
+   specifications, not compiled quantum proofs; fixed-$\hbar$ product
+   convergence, joint-limit ray separation and operator ordering are
+   different claims.
+5. **Retained gauge frontier.** For the SU(2) mid-plane, extend the
+   retained-barrier weak-strip estimates (116) and (112), and the centered
+   quadratic source test (177), to the nonlinear source bound (113),
+   physical recoupling, group comparison, SU(3) constants and stable
+   iteration ([small-field notebook](../notes/su2-midplane-small-field.md)).
+   For four dimensions prove depth-uniform generated-action matching and
+   remainder control ([composition](../notes/four-dimensional-composition.md),
+   §7). Continuum reconstruction, physical spectral weight and the
+   renormalized H1--H3 small-volume bridge remain separate
+   ([Feshbach](../notes/weak-coupling-feshbach-reduction.md)); a gap at
+   every bare coupling is not assumed necessary
+   ([scaling correction](../notes/mass-gap-openings.md)).
 
-**Diagnostic from the visual comparison (2026-10-02).** Geometric
-convergence and survival of a physical scale require separate estimates.
-Use the quadratic coherent/incoherent countercase as a control: fix the
-classical smeared limit, specify the finer physical record, and ask which
-independently justified law selects its required coherence. This is a
-proposed test, with the preparation and record premises retained.
-
-1. **A local gauge refinement estimate.** The
-   [series/parallel note](../notes/series-parallel-gauge-refinement.md)
-   factors one directional halving exactly: series moves close in every
-   dimension, and the parallel insertion $\Psi$ (Prop. 1) carries the
-   renormalization in $\binom{D-1}{2}$ transverse planes. The free-field
-   defect is exact (Prop. 2); for unperturbed $U(1)$ one step is proved (Thm 5:
-   free-field step up to density $e^{-\pi^2/(8\lambda_3a)}$). $SU(2)$
-   midpoint: exact structure and leading curvature term (Prop. 6); the
-   finite-cube bound assumes full normalized Laplace estimates (Prop. 7).
-   Measure level for $U(1)$: [monopole note](../notes/villain-monopole-refinement.md),
-   TV distance $\le2(L/a)^3e^{-\pi^2/(6\lambda_3a)}$ in $D=3$; the route fails in
-   $D=4$ (loop density per cell fixed by $g$). The $SU(2)$ midpoint character
-   is exact for every spin ([closed form](../notes/su2-midpoint-exact.md)).
-   [All-group cut identities and centre torsion](../notes/sun-midpoint-centre.md)
-   are refereed (Round 5B A); its §5b displays the fundamental SU(3)
-   trisection (5B B, written). Image-to-volume control remains open.
-   Diagonal entries and cube sectors are exact through spin 1 (Theorem 4 there); §14 extends the barriered comparison to unequal layers (refereed by Claude). Cell 2: §§26--34 give response trees, decoupling and marked attachment norms. §35 gives (116) at all orders in the weak strip. [§36](../notes/su2-midplane-small-field.md#36-exact-dressed-activities-in-the-weak-recoupling-strip) gives exact dressed activities satisfying (112). [§37](../notes/su2-midplane-small-field.md#37-moving-means-with-a-fixed-barrier-an-exact-quadratic-source-test) gives a fixed moving-mean source radius and the subtracted barrier norm (177) in a centered quadratic model (Sol/Astra, refereed). Next gauge lemma: complex centered nonlinear bounds and the moving saddle's decaying source dependence; reject barrier differentiation, amplification on every good connector or assumed contact cancellation. Full (113), physical recoupling, group-integral comparison, $SU(3)$ constants and iteration remain open. Current research emphasis is Newton's action necessity and continuum existence.
-   The [zero-spacing note](../notes/zero-spacing-any-action.md) extends it
-   to any action and dimension: all 2D limits (Lévy exponents), and the
-   conditional per-volume error budget, with the strict 4D threshold $c>2/b_0$.
-   Atlas cell 4: [composition, §7](../notes/four-dimensional-composition.md) gives explicit vertices, finite one-step subtracted matching bounds and iteration hypotheses (Round 10, formal, unrefereed); next, prove depth-uniform (14) and remainder control. Theorems 1--4 are refereed by Claude.
-2. **Newton gap and necessity.** [Which limits reach zero](../notes/zero-branch-reachability.md) (Fable, 2026-10-01; refereed by GPT-6.1 Sol via Codex, corrections applied): Galileo's comparison with Gaussian preparations and marks reaches the zero branch (Thm 1); for determinate preparations the complete record has an $h\to0$ limit only where signed cross amplitudes cancel, while smeared records converge to the classical branch sum (Thm 2), exactly for inertia with graded velocity inside its fold interval (Thm 3) and for a Kepler swarm whose windings overlap, where Hooke's anomaly record stays rigid (Thm 4). The invariant discontinuous at zero is the leading fringe visibility of crossing streams, a contrast, not a spectral gap, full when the record and preparation imprecision actions are small compared with $h$ (§§3b--3c); the thesis is the order of limits with the record limit first, and the second premise is an $h$-independent coherence length between the launch points of crossing streams (partial contrast $e^{-\Delta q_0^2/(8\sigma^2)}$, the same for every $h>0$), which remains a premise. Thm 5 (exact for quadratic forces): the same swarm attached as an incoherent mixture of coherent states with widths vanishing with $h$ has a complete record converging to Newton's branch-weighted density at every fixed time, so the gap requires the coherence premise (refereed ACCEPT by GPT-6.1 Sol via Codex, third pass, reports in `reviews/`). No universal late-time persistence and no positive Newtonian action scale are proved; a single body's packet has action spread of order $h$ and reaches the zero branch at any fixed time, so the thesis concerns swarms of $h$-independent extent.
-   [Self-sufficiency contrast](../notes/self-sufficiency-contrast.md),
-   revised October 2: §5a proves (L) and both Kepler first-moment limits
-   for fixed collision-free intervals and smooth bounded regularizations.
-   Proposition 2 replaces the unqualified h interval by selection-dependent
-   sets: Dirac finite-potential $(k/c,\infty)$ versus closed Schur-form/cutoff
-   $[k/c,\infty)$; KG strict energy $(2k/c,\infty)$, with only its principal
-   radial Friedrichs endpoint included. Full critical KG dynamics and
-   independent justification of the selections remain open. The October 1
-   referee acceptance covers the original theorem; these additions are
-   written derivations, not independently verified. The
-   [paper revision](../notes/planck-gap-paper.md) §10a states these limits.
-   Next: justify a selection premise independently of the desired gap,
-   then address the exclusion of completions without h.
-
-GOAL MET (2026-10-01, original scope): self-sufficiency contrast theorem refereed ACCEPT
-
-   (Session goal of 2026-10-01, second: Theorem 1 of the self-sufficiency note, refereed ACCEPT on its second pass, committed and pushed with both catalogs.)
-
-GOAL MET: coherence-necessity theorem refereed ACCEPT
-
-   (Session goal of 2026-10-01: Theorem 5 of the reachability note, refereed ACCEPT on its third pass, committed and pushed with both catalogs.) [Routes and conditional theorem](../notes/newton-indeterminacy-routes.md): Gaussian record closure yields the disturbance floor with $h_*=2\zeta$; the radiation unit is explicit.
-   [Recording notebook](../notes/sed-closure-under-recording.md): Gaussian body--record limits and nonlinear/coherence countertests; §§8.22--8.23 realize score correction and Gaussian switching transport, with full-pointer and preparation-dependent-force obstructions. [Score-constrained ensembles](../notes/score-constrained-ensemble.md) gives the restricted action and reservoir-aware population momentum, a fixed-shape obstruction, and an exact positive non-Gaussian forward completion. Nonlinear recording generates a quartic tail outside its finite modes, with unread recoil energy retained (Sol/Astra, written, internally checked). Its §§6--8 (Fable; refereed by GPT-6.1 Sol via Codex, corrections applied): the two-sheet realization exists on every positive solution and for all forward time on that orbit, with exact mean cancellation of force and switch power (Props. 7--8); its controller is the field pair within this architecture and, after records, the record-dependent data of its family (Prop. 9, Cor. 10); branch controllers pass the two-unread-width test while the marginal-score replacement is refuted by the variance witness $\kappa^2\Delta t^2/m^2$ (Prop. 11); closure under coordinate copies holds at every $\kappa\ge0$ under a branch-dependent protocol (Prop. 12). Decision: composition closure selects no $\kappa$, so the apparatus-closure route to positivity is closed; $\kappa=0$ admits a preparation-independent body law and $\kappa>0$ none for all Gaussian preparations. Next Newton lemma: the premise that fails at $\kappa=0$, dependence of individual motion on the preparation's statistical state, through the terminal readout bound or the record reading of Leibniz continuity; reject further realizations of the field law offered as closure. Terminal access, phase reunion, positivity, universality and radiation calibration remain separate. [All zooming schedules, §§3c--3d](../notes/refinement-composition-and-limit.md#3c-all-refinement-sequences-and-two-microscopic-kick-orders) constructs the harmonic curve; refinement and complete-record continuity still admit zero action.
-   [Shared-bath recording test](../notes/sed-closure-under-recording.md): sharp two-pointer posteriors survive at fixed cutoff; the premise that restores closure is a bound on every terminal readout, which at $\kappa=\hbar/2$ is Gaussian quantum measurement theory (refereed).
-   Thermodynamic records give only $\eta\ge A_0e^{-W/k_BT}$
-   ([no floor](../notes/thermodynamic-records-no-floor.md)). The statement to
-   change is joint determinacy ([fifth postulate](../notes/principia-fifth-postulate.md)):
-   Within SED, conditionally on its disputed Planck derivation and for
-   resonant variables, $2\zeta=h_P/2\pi\approx0.297\,h_{\rm rad}$
-   ([SED link](../notes/sed-zeta-radiation-link.md)); its scale identification retains those conditions.
-   Newton's *velocitas ultima*; Laws independent of it, one action constant
-   under covariance (Gutt), floor for $\hbar\ne0$; reviewed: the analogy is
-   partial, since a commutative state restriction also floors.
-   [Rivero 1998 test](../notes/rivero-1998-conjecture-central-forces.md): quartic interference, convergent fixed-$h$ refinement and angular/EBK consistency leave scale selection open.
-   [Rotation composition](../notes/rotation-composition-universality.md): mechanical generator closure forces one constant per connected class; the common zero branch remains admissible.
-   [Galileo two-path interference](../notes/galileo-two-path-interference.md): exact cubic-action error law; contrasting limits require averaging or calibrated control, with positive scale still supplied.
-   [Cut measure](../notes/cut-measure-newton.md) (refereed): any cut sequence spends $K_\tau$ additively (Cameron--Martin energy of Schauder hats; the rod of *Zhuangzi* 33 spends $\frac67$); a floor bounds the number of exhibited cuts and supplies none.
-   [Stochastic route](../notes/stochastic-route-velocitas-ultima.md) and
-   cut-measure Prop. 6 are refereed (Round 5B A): continuous independent
-   increments, mass composition and additive-noise testing give the
-   conditional Planck mesh. Positivity and the physical noise law remain
-   premises; Nelson supplies a separate mean-dynamics framework.
-   [Leibniz continuity](../notes/leibniz-continuity-records.md) (refereed by Fable): the best verdict of Newton's comparison, $\Phi(-\frac12\sqrt{K_\tau/\kappa})$, is continuous in $F$ at zero iff $\kappa>0$, so Leibniz's 1687 law of continuity read on records selects the floor for motions; the geometric reading keeps the zero branch.
-3. **Spectral bridge:** the H3 small-volume $SU(3)$ estimate in the
-   [Feshbach note](../notes/weak-coupling-feshbach-reduction.md) remains
-   the valley-lifting task to connect to the refinement construction.
-   Use the pion benchmark where it tests the symmetry of a proposed
-   mechanism; carry successful bounds toward reconstruction and the
-   joint paper.
-
-Attainment of the existing disturbance bounds and the Planck paper's
-§11 historical/submission obligations remain open. Other mass-gap
-[openings](../notes/mass-gap-openings.md) remain available; the proposed
-curvature threshold conversion is still unverified.
+Thermodynamic cost, phase consistency, radiation calibration and
+Leibniz-continuity arguments retain their own assumptions; none alone
+has selected a universal positive action. Their exact failures and
+surviving statements are in [obstructions](obstructions.md). The
+[October 1 handout](handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md),
+[September 23 handout](handoffs/HANDOFF-2026-09-23.md) and
+[October 1 corpus audit](../notes/corpus-audit-2026-10-01.md) are dated
+historical snapshots; maintained notes and their corrections govern reuse.
 
 ## Constraints
 
-No numerical or symbolic verification scripts. Build only changed notes
-with `make paper NOTE=<slug>`. Concentrate mostly on Newton (user,
-October 1); retain the gauge frontier for later bounded units. At most
-one sequential bounded worker or referee when useful, under the current
-user plan. The user requests removal of bulky Lean tools and generated
-build files before the machine upgrade; inspect sister-repository sources
-without reinstalling tools. Commit and push completed work.
+No numerical or symbolic verification scripts. Build only changed
+scientific notes with `make paper NOTE=<slug>`; never perform a routine
+full paper rebuild. Do not use subagents under the current user direction.
+Keep physical $\hbar$ explicit. Do not reinstall bulky Lean tooling;
+consult sister-repository sources as needed. Commit and push completed
+work with the requested model attribution.

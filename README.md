@@ -38,6 +38,15 @@ positive quantum action; classical-limit and completion results do not
 derive its necessity. The [provisional book](research/book-map.md) organizes
 the proofs and physical premises into proposed chapters.
 
+**Start with a question, not a filename.** The
+[October 27--28 Newton synthesis](notes/newton-dimock-balaban-guide.md#recent-newton-synthesis)
+collects the recent constructions, conditional floors and classical
+countermodels in one argument, with links to their original proofs.
+The [subject index](notes/index.md#subject-entry-points) routes the wider
+repository; [dependencies](research/dependencies.md) gives reading paths
+and [obstructions](research/obstructions.md) records where tempting
+arguments stop. [STATE](research/STATE.md) is the short live queue.
+
 ## The organizing idea: local insertion laws
 
 We compare laws for inserting one variable and eliminating it, then ask

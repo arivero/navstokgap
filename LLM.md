@@ -26,6 +26,11 @@ For complete note coverage use the [retrieval catalog](notes/index.md)
 priorities, proof status, roles and explicit route closures. The claim
 map below remains the established-result guide at its stated date; later
 results and corrections live in the linked notes and current STATE.
+The [October 27--28 Newton synthesis](notes/newton-dimock-balaban-guide.md#recent-newton-synthesis)
+collects the recent quantum constructions, conditional action floors,
+classical histories and record countermodels. It supersedes this dated
+map as the entry point for that work; it does not turn those conditional
+results into a proof that physical $\hbar$ is necessary.
 Before each research unit, follow AGENTS.md's keyword-retrieval rule
 across notes, ideas, references and the other source directories.
 
@@ -45,23 +50,20 @@ Goal one is **Newton action necessity**: a logical argument, from
 independently justified physical premises, that the comparison Newton
 takes to zero in *Principia* Book I (inertial line against constant-force
 parabola, Lemmas X--XI, Proposition I) carries a positive action floor once
-it must be recorded. Since 2026-10-01 (night) the goal is
-restated: Newton's mechanics is the large-action regime of a theory
-with $h>0$, recovered where every imprecision action exceeds $h$ and
-absent as the $h\to0$ limit with exact preparations and records where
-streams cross ([zero-branch-reachability](notes/zero-branch-reachability.md),
-Theorems 1--5 and the large-action proposition); the theory with $h>0$
-has global dynamics where Newton's axioms leave motion undefined (Kato
-1951; quartic Theorem 2(b) of the 1998-conjecture note). Newton needs
-$h$ as the scale that defines his regime, not as a parameter his
-mechanics contains. Two theories are kept apart: Theorem 5 shows that
-nineteenth-century classical mechanics (Liouville transport along
-smooth complete flows) is reached from the $h>0$ theory along recorded
-or imprecise preparations; the strong form, that Newton's mechanics
-itself, the incomplete theory of motion from his axioms, requires
-$h>0$ to exist as a theory with the large-action regime as its only
-completion, is open, with the self-sufficiency contrast as its first
-evidence. Goal two is the **continuum existence and mass gap of
+it must be recorded. The user's October 1 thesis asks whether Newton's
+mechanics is the large-action regime of a theory with $\hbar>0$ and
+whether a quantum completion is necessary where classical point-state
+motion fails. The specific crossing-stream record contrast requires
+coherent preparations and its stated record and limit hypotheses;
+incoherent packet mixtures recover the classical swarm for quadratic
+forces ([zero-branch-reachability](notes/zero-branch-reachability.md),
+Theorems 1--5). Global quantum dynamics for specified singular or
+confining models, and the scoped classical limits, supply comparisons
+rather than exclusion of every classical completion. The strong form,
+including the necessity of $\hbar>0$ and uniqueness of a quantum
+completion, remains open; see the current
+[Newton synthesis](notes/newton-dimock-balaban-guide.md#recent-newton-synthesis).
+Goal two is the **continuum existence and mass gap of
 pure $SU(3)$ Yang--Mills** on $\mathbb R^4$, in the Jaffe--Witten sense
 ([digest](notes/millennium-problem-definitions.md)). QCD pions are a
 benchmark for which symmetries a mechanism preserves, and no fermionic

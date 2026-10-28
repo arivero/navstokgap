@@ -6,6 +6,25 @@ This catalog is a research retrieval aid for the maintained notes. Use
 The full notes retain proofs, assumptions, later corrections and reading
 levels; an index entry is a lead into that evidence.
 
+## Subject entry points
+
+Use this map to choose an argument; the alphabetical catalog below covers
+every maintained note and preserves detailed status and search terms.
+
+| Catalog area | Question | Start here |
+| --- | --- | --- |
+| Newton/action | Does a physical action floor follow, and which preparations or records select it? | [Recent Newton synthesis](newton-dimock-balaban-guide.md#recent-newton-synthesis); [quantum record bounds](planck-gap-paper.md); [classical and quantum limit comparison](zero-branch-reachability.md) |
+| Yang–Mills/gauge | Which estimates construct the continuum and give a physical gap? | [Mass-gap position](mass-gap-position.md); [halving atlas](halving-atlas.md); [current dependency path](../research/dependencies.md#gauge-the-next-calculation) |
+| Refinement/comparison | What do insertion and elimination preserve, and how do the two programmes relate? | [Refinement synthesis](refinement-composition-and-limit.md); [three continuum limits](three-continuum-limits.md); [book map](../research/book-map.md) |
+| Apparatus/reconstruction | What can a classical receiver or a complete record determine? | [Receiver compilation](conservative-harmonic-receiver.md); [recording tests](sed-closure-under-recording.md); [Gaussian meter](gaussian-meter-entropy-floor.md) |
+| Historical/sources | What do Newton, Galileo and the ancient sources actually say? | [Newton synthesis](planck-gap-paper.md); [classics catalogue](../docs/classics/README.md) |
+| Infrastructure | Where are the proof status, prior art and closed routes? | [Live state](../research/STATE.md); [dependency paths](../research/dependencies.md); [obstruction map](../research/obstructions.md); [dated result map](../LLM.md) |
+
+Retrieval priorities and thematic areas below are navigation metadata, not
+new mathematical claims. The source note and any linked correction govern.
+
+## Alphabetical catalog
+
 Retrieval priorities follow the user's independent analysis (2026-10-01):
 `priority=3` (★★★) is the current spine or a map to consult immediately;
 `priority=2` (★★) is a durable dependency or important obstruction;
@@ -529,9 +548,9 @@ use [the provisional book](../research/book-map.md).
   Title: A bounded Newton force, reversible preparations and a conditional action floor
   Summary: A continuous bounded cusp force merges two distinct full point states. Weakly closed affine-canonical preparations with reversible point-trajectory compatibility have a positive covariance action infimum; a bounded-density a.e. cusp flow realizes the literal premises with sharp floor 1/(4 pi M). Limit/reuse: Point-trajectory compatibility constrains points only if admitted and does not require nonpoint Liouville transport; the density ceiling fails a two-copy canonical mixer. See [central-limit calculation](central-limit-canonical-gaussian-sector.md); records, universal calibration and quantum identification remain open.
 
-- [newton-dimock-balaban-guide.md](newton-dimock-balaban-guide.md) | priority=3 | flags=none | role=synthesis,result | status=result | proof_status=proved-unrefereed | value=synthesis,infrastructure | keys=Dimock Balaban source guide;Newton existence uniqueness;magnetic force;hard wall;Dirichlet reflection;coherent bounce;normalized blocking;generated interaction;tangent groupoid | area=refinement/comparison
+- [newton-dimock-balaban-guide.md](newton-dimock-balaban-guide.md) | priority=3 | flags=none | role=synthesis,result | status=result | proof_status=mixed | value=synthesis,infrastructure | keys=October 27 28 synthesis;Newton quantum completion;conditional action floor;classical histories;Gaussian meter;record closure;Dimock Balaban;groupoid;renormalization;bare regulator;hard wall;quantum lift;refinement;ordering | area=refinement/comparison
   Title: Newton, quantum mechanics and Dimock--Balaban: a guide through one time dimension
-  Summary: A source-specific guide relates normalized time blocks to Dimock I and II, explains classical existence and uniqueness for conservative and magnetic forces, proves coherent-packet position convergence through a Dirichlet hard-wall bounce, and links the later [wall impulse](dirichlet-wall-impulse.md) and [cusp-selection](cusp-quantum-preparation-selection.md) results. Limit/reuse: The cyclotron example assumes constant scalar potential; the guide's original current bound is away from impact; magnetic quantum evolution is not covered by the scalar theorem.
+  Summary: The opening synthesis consolidates October 27--28 Newton refinement, supplied-action quantum constructions, conditional floors, classical histories and record countertests, and relates the scales to Rivero's 1997 groupoid RG triangle and 1998 two-regulator proposal. An exact normalized free-Gaussian block-and-scale test retains every nonnegative action parameter. The guide retains Dimock blocks, classical motion and the Dirichlet packet bounce. Limit/reuse: Interacting RG control and physical hbar selection remain open; the meter example has unbounded preparation aperture, the history model lacks a constructed local apparatus, and the guide's current bound is away from impact. Status and source reading levels are inherited from the linked proofs.
 
 - [newton-indeterminacy-routes.md](newton-indeterminacy-routes.md) | priority=3 | flags=none | role=result,live | status=conditional | proof_status=conditional | value=open-mechanism,infrastructure | keys=Premise F;Theorem F;classical statistical angle;Hamiltonian translation speed;Gaussian symplectic covariance;h star 2 zeta;nonlinear generator escape;inflexion | area=Newton/action
   Title: Newton indeterminacy routes: the physical premise a record floor needs

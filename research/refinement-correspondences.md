@@ -1,6 +1,6 @@
 # Newton–Yang–Mills correspondence test
 
-2026-10-01. An exact formula in each theory is not automatically an exact
+Begun 2026-10-01; groupoid/RG reading updated 2026-10-28. An exact formula in each theory is not automatically an exact
 identification between the theories. The classifications below keep the
 objects and the map explicit. Sources retain their stated reading levels;
 this document introduces no new physical premise.
@@ -98,15 +98,27 @@ gap and c alone do not reconstruct an action unit.
 ## 7. Tangent groupoid and “all zoomings”: exact ingredients, open synthesis
 
 The tangent groupoid relates pair-groupoid arrows at nonzero scale to tangent
-vectors at zero. Time-graded trajectory refinement and the harmonic
-arbitrary-partition construction have their own exact composition laws.
-Quantum diffusive paths and Newton's ballistic ultimate-velocity fibre have
-different scaling. Sources: [groupoid trajectories](../notes/tangent-groupoid-trajectories.md),
-[refinement §§3c–3d](../notes/refinement-composition-and-limit.md).
+vectors at zero. Rivero's [1997 appendix](https://arxiv.org/pdf/dg-ga/9710026)
+(pp. 7–8, passages read) already develops a toy renormalization triangle
+from its dilations: a bare sequence is rescaled to a chosen positive
+reference slice. His [1998 proposal](https://arxiv.org/pdf/quant-ph/9803035)
+(pp. 2–3, equations (5)–(10), passages read) describes a controlled
+two-regulator limit with bare, renormalized and dressed series; its control
+map is left unspecified. These are substantive predecessors of the
+groupoid/RG question, not a new analogy introduced by this map.
+
+Time-graded trajectory refinement and the harmonic arbitrary-partition
+construction have their own exact composition laws. A free **Euclidean**
+Gaussian increment illustrates distinct scaling of the physical-time
+quotient and groupoid chart variable; it is not a probability law for
+real-time Feynman paths. The [1998 control-map test](../notes/rivero-1998-conjecture-central-forces.md)
+and [groupoid states](../notes/groupoid-quantum-newton-states.md) separate
+geometric zoom, a bare phase regulator, physical $\hbar$, mesh, and
+conditional-density blocking. Constructing a map relating them is an
+open RG problem; a zoom alone does not integrate fluctuations or select
+a universal action. Read the [corrected groupoid trajectories](../notes/tangent-groupoid-trajectories.md)
+and [refinement §§3c–3d](../notes/refinement-composition-and-limit.md).
 A gauge double-groupoid organizing parallel moves is proposed, not proved.
-Use the language when it names state, composition and topology. The rhetorical
-claim that all these limits are one mechanism adds no theorem and should be
-omitted from the main narrative.
 
 ## Consequence for the book
 

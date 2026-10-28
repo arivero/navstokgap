@@ -1,6 +1,6 @@
 # Provisional book architecture
 
-Proposed 2026-10-01; updated from the maintained notes, 2026-10-02.
+Proposed 2026-10-01; Newton reading path updated 2026-10-28.
 The chapters below remain a reading and writing plan.
 The test question is: **what survives refinement, and under what conditions
 can a positive physical scale survive with it?** The repository establishes
@@ -13,6 +13,13 @@ inputs keep Wilson transfer bounds, KS finite-volume bounds and
 existential volume-uniform theorems separate.
 The [reading paths](dependencies.md) organize the established inputs and
 their open extensions.
+
+For an already written account of the recent Newton work, begin with the
+[October 27--28 synthesis](../notes/newton-dimock-balaban-guide.md#recent-newton-synthesis).
+It organizes the proof records by refinement, conditional floors,
+classical histories and records, and supplied-action quantum constructions.
+The chapters below remain a proposed longer architecture rather than a
+second copy of that synthesis.
 
 ## Choosing a spine
 
@@ -92,6 +99,16 @@ belongs in a correction box.
 
 ### 6. A unit, a classical limit, and a selection rule
 
+The recent [history and continuity theorem](../notes/cusp-history-records-continuity.md)
+adds a reversible trajectory-space classical alternative and a separate
+conditional $W_2$-continuity floor. Both the enlarged history state and
+the supplied entropy scale of the classical witness must be stated.
+The [recent synthesis](../notes/newton-dimock-balaban-guide.md#recent-newton-synthesis)
+also places Rivero's 1997 groupoid RG triangle and 1998 controlled
+two-regulator proposal before the present scale dictionary: actual
+blocking and a physical identification of its action constant remain
+to be established.
+
 Separate dimensional availability, radiation calibration, composition
 universality, quantum role and positivity. Newton-compatible deformations
 and covariant state restrictions expose alternatives to joint determinacy;
@@ -115,6 +132,13 @@ The October 2 additions are unrefereed written derivations; an independent
 physical necessity argument and universal calibration remain open.
 
 ### 7. Can a physical apparatus keep the restriction?
+
+The [Gaussian-meter test](../notes/gaussian-meter-entropy-floor.md)
+postselects the entropy-floor witness below its covariance floor. The
+Gaussian-mixture repair withstands that meter but fails a nonlinear
+classical shear; this is a comparison of specified models, not a general
+classical no-go theorem. See the recent synthesis for the aperture and
+quantum-positivity qualifications.
 
 Use the two-pointer escape and exact Gaussian posteriors as reference cases,
 then physical feedback, adaptive records, nonlinear generators and weak

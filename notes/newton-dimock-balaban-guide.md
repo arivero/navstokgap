@@ -8,21 +8,285 @@ to a constructive $0+1$ quantum theory and to the multiscale organization
 of Dimock's exposition of Bałaban's renormalization group. The simple
 model is not a solution of the four-dimensional Yang--Mills problem.
 
-The detailed [quantum-to-Newton proof](quantum-blocks-construct-newton.md)
-constructs a family of one-dimensional quantum Hamiltonians with a
-supplied $\hbar>0$. For smooth $V\ge0$ with bounded derivatives of order
-two and higher, coherent packet means on finite time partitions form a
-Cauchy family as $\hbar$ and the mesh vanish jointly. The limit is the
-unique Newton solution; no solution is assumed before the limit. The
-[companion groupoid formulation](groupoid-quantum-newton-states.md)
-places the corresponding observable states on the quantum and classical
-fibers of the tangent groupoid. Here we explain why these constructions
-work, how they relate to the original sources, and where additional
-classical examples need new assumptions.
+The opening synthesis collects the recent results and their proof links.
+Sections 1--8 explain the constructions, their sources and the assumptions
+needed for classical examples. Source-reading labels distinguish cited
+statements from analogies or calculations made here; no priority claim is
+made for standard ODE, Gaussian, semigroup or semiclassical methods.
 
-Reading labels below distinguish the actual statements in the cited
-papers from an analogy or a calculation made here. No priority claim
-is made for standard ODE, Gaussian, semigroup or semiclassical methods.
+## Recent Newton synthesis
+
+This section consolidates the work of **27--28 October 2026**. The
+individual notes remain the proof records: their hypotheses, source
+reading labels, corrections and checks govern the statements below.
+The newer calculations are written derivations, some with targeted
+internal model checks; they are not independent peer review. Neither
+the existence of a quantum construction nor any conditional floor here
+establishes that a nonzero physical $\hbar$ is necessary for every
+consistent completion of Newtonian mechanics.
+
+We keep physical $\hbar$ explicit. A formal classical limit may be
+written $\epsilon=\hbar/S_0\to0$ for a specified characteristic action
+$S_0$; the deformation parameter $\epsilon$, the time mesh and the
+resolution of a record can be related by a specified control map. If
+physical $\hbar$ is held fixed, the first limit requires a family with
+increasing characteristic action, not merely a change of units.
+
+### 0. Groupoid scale and renormalization
+
+The connection is already part of Rivero's work. The appendix to his
+[1997 tangent-groupoid note](https://arxiv.org/pdf/dg-ga/9710026)
+(pp. 7--8, passages read) constructs a **toy RG triangle**: a dilation
+rescales a bare sequence approaching the tangent boundary to a chosen
+nonzero reference slice, with limits at different slices related by
+rescalings. His [1998 Feynman-formula proposal](https://arxiv.org/pdf/quant-ph/9803035)
+(pp. 2--3, equations (5)--(10), passages read) similarly distinguishes
+two regulators and calls its controlled objects bare, renormalized and
+dressed series. Its control transformation is left unspecified; its
+control constant is arbitrary. The
+[1999 strict-quantization paper](../docs/CarinenaEtAl_TangentGroupoid_1999.md)
+with Rivero and coauthors supplies the groupoid quantization framework.
+These are the provenance of the present question, not a claim that the
+recent calculation invented the groupoid/RG connection.
+
+The different appearances of epsilon need an explicit dictionary. Let
+$\epsilon_G$ be a dimensionless groupoid deformation parameter; in the
+specified [state formulation](groupoid-quantum-newton-states.md), choosing
+$\epsilon_G=\hbar/S_0$ assigns the dimensionful phase constant to that
+parameter. Let $\eta=|\pi|/T_0$ be a dimensionless mesh scale, and let
+$\alpha_\pi$ be an action-dimensional bare phase regulator. A possible
+control map, already recorded in the
+[1998 test](rivero-1998-conjecture-central-forces.md), is
+$$
+ S_\pi^{\rm bare}=Z_S(\eta)S_\pi,\qquad
+ \hbar_{\rm eff}=\frac{\alpha_\pi}{Z_S(\eta)}.
+$$
+For example, the *specified* choices $Z_S(\eta)=\eta$ and
+$\alpha_\pi=\eta\hbar$ give
+$e^{iS_\pi^{\rm bare}/\alpha_\pi}=e^{iS_\pi/\hbar}$ at every mesh.
+This algebra illustrates how a vanishing bare regulator can coexist
+with a fixed positive effective action; substituting the same regulator
+into an unscaled action would give a different phase.
+
+**An exact Gaussian blocking test.** Let $m>0$, $u\in\mathbb R$ and
+let $a\ge0$ be an action-dimensional parameter. Define a normalized
+transition kernel by
+$$K^u_{a,t}(x,dy)=\mathcal N(x+ut,at/m)(dy),\qquad t>0,$$
+with zero variance interpreted as a Dirac measure. For $a=\hbar>0$
+and $u=0$ this is the free Euclidean quantum kernel; arbitrary $u$
+gives the drifted Gaussian reference, not a real-time path measure.
+Integrating out an intermediate position preserves $a$ exactly:
+$$K^u_{a,t}K^u_{a,v}=K^u_{a,t+v}.$$
+If time and position are then rescaled by $t_{\rm old}=r t_{\rm new}$,
+$x_{\rm old}=s x_{\rm new}$ with $r,s>0$, the normalized kernel obeys
+$$
+ K^u_{a,rt}(sx,sB)=K^{ru/s}_{ra/s^2,t}(x,B)
+ \quad\text{for every Borel set }B.
+$$
+These identities follow from adding independent Gaussian increments and
+rescaling their means and variances; they include $a=0$. Under the
+diffusive choice $r=b$, $s=\sqrt b$, the action coefficient stays
+fixed. When $u=0$, every $a\ge0$ is a fixed point of this particular
+normalized block-and-rescale map. At $a=0$, retaining $u$ gives the
+deterministic free Newton motion $x(t)=x(0)+ut$. Thus this exact free
+RG control neither selects a positive action nor excludes the classical
+branch. It is an illustrative Gaussian comparison, not a result about
+all interacting blocking maps or complete record instruments; compare
+the [free increment](groupoid-quantum-newton-states.md) and the
+[action-normalization identity](refinement-composition-and-limit.md).
+
+The open RG problem is to construct a compatible control or blocking map
+for the actual normalized kernels, states and generated interactions,
+including the increments and all required limits, and then determine
+whether its effective action has a universal physical identification.
+Geometric zoom, coarse-graining and running parameters can participate
+in one construction, but a geometric dilation alone does not establish
+that construction or force $\hbar$ to run. The
+[corrected groupoid comparison](tangent-groupoid-trajectories.md) and
+[scale correspondence](../research/refinement-correspondences.md)
+keep these claims and their corrections distinct.
+
+### 1. Refinement builds motion; it does not select an action unit
+
+For a globally Lipschitz acceleration with constant $\Lambda$, the
+causal kick--drift polygons on any positive partitions, even with the
+order chosen independently in each cell, converge as the maximum cell
+length tends to zero to the unique initial-value solution. Their
+stability constants do not depend on the number of cells
+([ODE lesson](balaban-ode-lesson.md), §§1--3). The separate two-endpoint
+problem has a unique polygon and a unique continuous solution under
+the sufficient condition $\Lambda T^2/8<1$; this is a short-time
+boundary-value condition, not a restriction on causal continuation
+([time blocking](balaban-newton-time-blocking.md), §2).
+
+Lipschitz regularity is sufficient, not necessary. In the specified
+repelling logarithmic family, forces behaving near zero like
+$q[\log(\ell/|q|)]^\beta$ have a unique resting solution for
+$0<\beta\le2$, but permit waiting and departures for $\beta>2$. The
+zero-energy arrival-time integral distinguishes the cases; action on
+shrinking annuli tends to zero on both sides
+([time scales](newton-continuity-time-scales.md), §§1--4).
+
+One normalized Euclidean time cell with a convex potential gives
+explicit fluctuation and effective-curvature bounds. At a quartic flat
+centre its positive-action integral generates curvature while classical
+minimization has zero quadratic curvature. This is a consequence of a
+supplied positive weight, not a selection of its action multiplier
+([nonlinear cell](newton-nonlinear-time-cell.md), §§2--5). The
+[Alpoge--Sussman comparison](alpoge-balaban-newton-peek.md) records a
+fourth-response and reflection-positivity check in $0+1$; it imports no
+four-dimensional Yang--Mills proof.
+
+### 2. Conditional routes to a floor
+
+**Response ceiling.** In the specified double-well Euclidean cell, write
+$a=m(u+v)/(uv)$ and let $r>0$ be the location of the two symmetric
+minima. If the physical normalized response has exactly the stated
+positive-weight form with action multiplier $\eta>0$, and an independently
+fixed finite ceiling $M_\eta'(0)\le R_*$ holds, then
+$$\eta>\frac{ar^2}{3R_*}>0.$$
+The particular zero-action minimization rule has a branch jump, but a
+classical retained branch label avoids that jump and a classical
+statistical weight can reproduce the response. The response law, ceiling
+and identification of $\eta$ with physical $\hbar$ are additional
+premises ([branch-response theorem](newton-branch-response-action.md),
+§§2--5).
+
+**Cusp and reversible phase states.** A bounded continuous force has
+two distinct point trajectories that merge in finite time. Let a
+nonempty preparation class have a finite-covariance member, be invariant
+under affine canonical transformations and weakly closed, and admit
+reversible evolution with weakly continuous state curves, compatible
+with the incoming point trajectories when those points are admitted.
+Then the infimum of
+$$\kappa(\mu)=\sqrt{\det\operatorname{Cov}_\mu(q,p)}$$
+over its finite-covariance preparations is strictly positive
+([cusp floor](newton-cusp-preparation-floor.md), §2). Compatibility can
+be vacuous when no point state is admitted. A classical density-ceiling
+model with actual almost-everywhere cusp flow realizes the premises and
+has a supplied scale; it fails closure under a two-copy canonical mixer.
+
+**Continuity instead of reversibility.** A later theorem assumes a
+$W_2$-closed affine-canonical class with a positive-definite covariance
+member, independent-copy orthogonal canonical mixers and retained
+marginals. At one specified sufficiently short positive time, require a
+map continuous from $W_2$ inputs to weak outputs that agrees with the
+actual cusp flow on every admitted nondegenerate Gaussian. Its covariance-action infimum is
+positive even without injectivity, a semigroup law or state-space
+invariance of the output ([history and continuity](cusp-history-records-continuity.md),
+Theorem 3). An entropy-floor classical class realizes these assumptions
+with its scale imposed. Neither floor is identified with $\hbar/2$.
+
+With affine-canonical invariance, independent copies, canonical mixing,
+marginalization and either weak or $W_2$ closure also admit the Gaussian
+with each admissible mean and covariance. If a positive covariance
+infimum is supplied or separately proved, the entire Gaussian sector
+above that floor follows; this does not determine its non-Gaussian sector
+or make it quantum
+([canonical central limit](central-limit-canonical-gaussian-sector.md),
+§§2--4).
+
+### 3. Classical histories and complete records change the question
+
+The cusp admits a reversible, time-reversal-symmetric classical group on
+the space of **complete trajectories**, with Dirac states and classical
+conditioning. Its instantaneous phase point does not determine the
+shifted trajectory: the enlarged state retains future-selection
+information. No finite-dimensional local symplectic apparatus realizing
+that access is constructed ([history model](cusp-history-records-continuity.md),
+Theorem 1).
+
+An earlier [three-body spring calculation](three-body-cut-memory.md)
+gives a distinct, finite-dimensional Hamiltonian example: eliminating
+the receiver leaves reversible memory, and two nearby exact tagged-phase
+observations recover its hidden state. This makes state loss at a cut
+concrete; it does not realize the cusp force or select cusp histories.
+
+In calibrated variables, take independent standard Gaussians $X,Y$ and
+initial data $Q_0=\delta(u+X)$, $P_0=\delta Y$. As $\delta\to0$, all
+initial laws tend to the same point, but their laws on a fixed short
+positive-time interval tend to a mixture of the two departing cusp
+paths with weights $\Phi(u)$ and $\Phi(-u)$. Thus actual classical
+phase-law transport cannot be weakly continuous at that point for all
+these preparations; these are classical branch probabilities, not a
+demonstration of quantum coherence ([history model](cusp-history-records-continuity.md),
+Theorem 2).
+
+If every positive-probability arbitrarily small joint position--momentum
+ball can be read without disturbance and its conditional law is an
+admissible preparation, then the covariance-action infimum is zero.
+Weak closure additionally admits a point state. This is an ideal
+classical instrument postulate, not a property proved for physical
+apparatus ([history model](cusp-history-records-continuity.md),
+Theorem 4; see also the earlier
+[two-pointer test](necessity-unit-and-indeterminacy.md)).
+
+The classical entropy-floor witness passes actual cusp transport,
+copy mixers and $W_2$ closure, but a single Gaussian position meter
+and a coarse outcome of probability at least $9/32$ can produce
+arbitrarily small posterior covariance action. The example's preparation
+aperture grows without bound. Gaussian inputs pass that meter test.
+The $W_2$-closed class of mixtures of admissible Gaussians repairs the
+meter and mixer closure, but a specified nonlinear classical canonical
+shear carries a member outside that class. A Wigner-positivity test
+also excludes the meter counterexample inputs from the quantum state
+space when the meter scale is identified with $\hbar/(2S_0)$. These are
+scoped tests, not a no-go theorem for
+every other classical completion ([Gaussian meter](gaussian-meter-entropy-floor.md),
+Theorems 1--3).
+
+### 4. What the quantum constructions establish
+
+For the stated smooth one-dimensional scalar potentials, a supplied
+$\hbar>0$ defines a self-adjoint Hamiltonian and finite-slice products.
+On coherent initial packets, means on a fixed time interval have an
+$O(\hbar+|\pi|)$ bound and widths are $O(\sqrt\hbar)$; any joint
+vanishing schedule for the parameter and mesh recovers the unique
+Newton solution. The $O(\hbar)$ mean rate uses bounded third
+derivatives. This is an observable estimate, not uniform propagator or
+wavefunction convergence ([construction](quantum-blocks-construct-newton.md),
+§5; [groupoid state limit](groupoid-quantum-newton-states.md)).
+
+A conservative global-Lipschitz force certificate also supports a
+noncommutative quantum lift with a supplied positive action parameter
+and an $O(\sqrt\hbar)$ packet comparison, using the stated operator
+toolkit. This weaker rate is sharp in the specified $C^{1,1}$ example.
+The assertion that *every* classical existence proof contains a quantum
+construction remains a conjecture; a classical Koopman unitary group
+alone does not supply noncommuting observables
+([bounded lift](lipschitz-certificate-quantum-lift.md),
+[conjecture](classical-quantum-existence-conjecture.md)).
+
+For the bounded cusp, two quantum Gaussian preparation families have
+the same limiting incoming history but different outgoing branches; the
+limit does not select a unique classical continuation without specifying
+the preparation ([quantum cusp](cusp-quantum-preparation-selection.md)).
+For the specified free half-line packet, the Dirichlet boundary-force
+measure converges to the elastic impulse $2|p_0|\delta_{t_*}$; Neumann
+stress has the same limit through a different term
+([wall impulse](dirichlet-wall-impulse.md)). The separate
+[relativistic extension](relativistic-dispersion-blocks.md) gives a
+one-particle, positive-energy joint limit, not an interacting
+Lorentz-covariant field theory.
+
+At fixed $\hbar$, both cell orders converge to the same specified
+quantum Hamiltonian. Along some joint action/mesh limits their rays can
+remain separated even when both means reach the same classical point;
+factor ordering is another, distinct ambiguity. The corresponding Lean
+items are specifications, not compiled quantum proofs
+([verification and ordering](lean-verification-quantum-newton.md), §11).
+The [quartic $0+1$ construction](constructive-qft-one-time.md) assembles
+standard Euclidean and spectral ingredients into a positive-gap model
+at supplied $\hbar$; it does not prove four-dimensional Yang--Mills or
+the necessity of that input.
+
+The unifying open issue is therefore physical: which independently
+motivated preparation, continuity, record and composition laws are
+actually mandatory, and do they rule out the classical alternatives or
+specify genuinely quantum structure and a universal nonzero action?
+The [dependency paths](../research/dependencies.md) and
+[obstruction map](../research/obstructions.md) route the competing
+premises and their countertests without duplicating the proofs.
 
 ## 1. What must exist, and in what sense?
 
@@ -423,6 +687,11 @@ converge to $2|p_0|\delta_{t_*}$, while the full Neumann boundary
 stress has the same limit even though its boundary derivative vanishes.
 
 ## 9. Consequence for STATE
+
+The recent synthesis at the start consolidates the October 27--28 proof
+records and their classical countertests into the live Newton entry point.
+It keeps the physical premises, the comparison with quantum state
+positivity, and the universal nonzero-action question separate.
 
 The requested didactic bridge now includes explicit source locations,
 the normalized one-cell operation, generated terms and the limitation
